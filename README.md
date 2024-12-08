@@ -48,7 +48,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>A React Native mobile app for offline data collection and field operations with real-time synchronization capabilities.</p>
+        <p>📱 Offline-First Field Data Collection App | React Native | 🔄 Real-time Sync | 📊 Field Ops Made Easy</p>
       </div>
     </td>
     <td width="20%">

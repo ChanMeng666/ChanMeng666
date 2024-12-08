@@ -99,7 +99,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>🇨🇳 Chinese-First NLP | 🎯 Sentiment & Topics | 📈 Interactive Viz</p>
+        <p>📊 Customer Review Analytics | Python & Streamlit | 🇨🇳 Chinese-First NLP | 🎯 Sentiment & Topics | 📈 Interactive Viz</p>
       </div>
     </td>
     <td width="20%">
@@ -116,7 +116,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Chrome Extension, Webpack</strong></p>
+        <p>📽️ Tencent Meeting Video Downloader | Chrome Extension | ⚡ One-Click Download | 💾 Save Recordings Locally</p>
       </div>
     </td>
   </tr>

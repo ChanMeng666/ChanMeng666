@@ -245,7 +245,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Docusaurus, React</strong></p>
+        <p align="left">
+          • Minimalist Living Blog Platform<br>
+          • Docusaurus & 3D Visualizations<br>
+          • Curated Lifestyle Content
+        </p>
       </div>
     </td>
   </tr>

@@ -285,8 +285,8 @@ while (isAwake) {
 </details>
 
 
-
 <!-- AI & Machine Learning Section -->
+
 <details>
 <summary><h3>🤖 AI & Machine Learning</h3></summary>
 <table>
@@ -357,6 +357,23 @@ while (isAwake) {
           </a>
         </p>
         <p><strong>Gemini AI, SVG Export</strong></p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Water Quality Analysis</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="100%" alt="Water Quality Analysis"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p><strong>Python, Sklearn, Pandas</strong></p>
       </div>
     </td>
   </tr>

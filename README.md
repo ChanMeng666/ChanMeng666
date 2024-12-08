@@ -65,7 +65,13 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>Friendship Analytics Platform | Next.js & TS | Scientific Assessment | Privacy-First | Smart Insights</p>
+        <p>
+          Friendship Analytics Platform<br>
+          Next.js & TS<br>
+          Scientific Assessment<br>
+          Privacy-First<br>
+          Smart Insights
+        </p>
       </div>
     </td>
     <td width="20%">

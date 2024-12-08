@@ -212,6 +212,8 @@ while (isAwake) {
         <p><strong>Docusaurus, React</strong></p>
       </div>
     </td>
+  </tr>
+  <tr>
     <td width="20%">
       <h3 align="center">Forward with Her</h3>
       <div align="center">  

@@ -154,14 +154,18 @@ while (isAwake) {
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/3D-Portfolio" target="_blank">
+          <a href="https://github.com/ChanMeng666/2d-portfolio" target="_blank">
             <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chanmeng.live/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>React, Three.js</strong></p>
+        <p align="left">
+          • Minimalist Personal Portfolio<br>
+          • Next.js & React<br>
+          • Animated UI & Responsive Design
+        </p>
       </div>
     </td>
     <td width="20%">

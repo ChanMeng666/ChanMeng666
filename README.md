@@ -128,7 +128,7 @@ while (isAwake) {
 <table>
   <tr>
     <td width="20%">
-      <h3 align="center">Personal Portfolio</h3>
+      <h3 align="center">Chan's Portfolio v2.0.0</h3>
       <div align="center">  
         <a href="https://chanmeng.live/" target="_blank"><img src="/public/brands/portfolio.svg" width="100%" alt="Portfolio Website"></a>
         <br>
@@ -138,6 +138,23 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chanmeng.live/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p><strong>React, Three.js</strong></p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Chan's Portfolio v1.0.0</h3>
+      <div align="center">  
+        <a href="https://3d-portfolio-blond-eight.vercel.app/" target="_blank"><img src="/public/brands/portfolio.svg" width="100%" alt="Portfolio Website"></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/3D-Portfolio" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://3d-portfolio-blond-eight.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>

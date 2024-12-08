@@ -99,7 +99,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Streamlit, Text Analysis</strong></p>
+        <p>🇨🇳 Chinese-First NLP | 🎯 Sentiment & Topics | 📈 Interactive Viz</p>
       </div>
     </td>
     <td width="20%">

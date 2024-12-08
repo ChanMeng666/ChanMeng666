@@ -182,7 +182,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>React, Three.js</strong></p>
+        <p align="left">
+          • Interactive 3D Portfolio Website<br>
+          • Three.js & Framer Motion<br>
+          • React, Vite & TailwindCSS
+        </p>
       </div>
     </td>
     <td width="20%">
@@ -199,13 +203,17 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Next.js, TypeScript</strong></p>
+        <p align="left">
+          • Friendship Analytics Platform<br>
+          • Next.js & TS<br>
+          • Scientific Assessment
+        </p>
       </div>
     </td>
     <td width="20%">
       <h3 align="center">AgriHire Solutions</h3>
       <div align="center">  
-        <a href="https://agrihireaq.pythonanywhere.com/" target="_blank"><img src="/public/brands/AgriHire_Solutions.svg" width="50%" alt="AgriHire Solutions"/></a>
+        <a href="https://agrihireaq.pythonanywhere.com/" target="_blank"><img src="/public/brands/AgriHire_Solutions.svg" width="100%" alt="AgriHire Solutions"/></a>
         <br>
         <br>
         <p>
@@ -216,7 +224,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Flask, ECharts</strong></p>
+        <p align="left">
+          • Auto Repair Shop Management System<br>
+          • Flask & MySQL<br>
+          • Tech & Admin Dashboards
+        </p>
       </div>
     </td>
     <td width="20%">

@@ -268,20 +268,24 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Next.js, Three.js</strong></p>
+        <p align="left">
+          • Mentorship Program Website<br>
+          • Bilingual Support (EN/CN)<br>
+          • Next.js 15, React 19 & Three.js
+        </p>
       </div>
     </td>
     <td width="20%">
       <h3 align="center">Reincarnation Journey</h3>
       <div align="center">  
-        <a href="https://journey-of-reincarnation2.vercel.app" target="_blank"><img src="/public/brands/journey-of-reincarnation2.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
+        <a href="https://journey-of-reincarnation.vercel.app" target="_blank"><img src="/public/brands/journey-of-reincarnation2.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/journey-of-reincarnation2" target="_blank">
+          <a href="https://github.com/ChanMeng666/journey-of-reincarnation" target="_blank">
             <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://journey-of-reincarnation2.vercel.app" target="_blank">
+          <a href="https://journey-of-reincarnation.vercel.app" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>

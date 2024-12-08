@@ -123,7 +123,7 @@ while (isAwake) {
 </table>
 
 <!-- Web Applications Section -->
-<details open>
+<details>
 <summary><h3>🌐 Web Applications</h3></summary>
 <table>
   <tr>

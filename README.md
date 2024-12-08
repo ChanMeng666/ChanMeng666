@@ -37,7 +37,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">CORDE Mobile</h3>
       <div align="center">  
-        <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/CORDE.svg" width="100%" alt="CORDE Mobile App"/></a>
+        <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/CORDE.svg" width="50%" alt="CORDE Mobile App"/></a>
         <br>
         <br>
         <p>
@@ -58,7 +58,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">FriendScope</h3>
       <div align="center">  
-        <a href="https://friendscope.vercel.app/" target="_blank"><img src="/public/brands/friendscope.svg" width="100%" alt="FriendScope Website"/></a>
+        <a href="https://friendscope.vercel.app/" target="_blank"><img src="/public/brands/friendscope.svg" width="50%" alt="FriendScope Website"/></a>
         <br>
         <br>
         <p>
@@ -100,7 +100,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">CustomerInsight</h3>
       <div align="center">  
-        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/streamlit_hero.jpg" width="100%" alt="Streamlit Logo"/></a>
+        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/streamlit_hero.jpg" width="50%" alt="Streamlit Logo"/></a>
         <br>
         <br>
         <p>
@@ -121,7 +121,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Tencent Meeting Video Downloader</h3>
       <div align="center">  
-        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader.svg" width="100%" alt="Tencent Meeting Video Downloader Releases"/></a>
+        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
         <br>
         <br>
         <p>

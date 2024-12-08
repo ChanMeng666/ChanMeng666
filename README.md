@@ -50,9 +50,8 @@ while (isAwake) {
         </p>
         <p align="left">
           • Offline-First Field Data Collection App<br>
-          • React Native<br>
-          • Real-time Sync<br>
-          • Field Ops Made Easy
+          • React Native & SQLite<br>
+          • Real-time Sync
         </p>
       </div>
     </td>
@@ -73,9 +72,7 @@ while (isAwake) {
         <p align="left">
           • Friendship Analytics Platform<br>
           • Next.js & TS<br>
-          • Scientific Assessment<br>
-          • Privacy-First<br>
-          • Smart Insights
+          • Scientific Assessment
         </p>
       </div>
     </td>
@@ -93,7 +90,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>Auto Repair Shop Management System | Flask & MySQL | Tech & Admin Dashboards | Inventory | Billing</p>
+        <p align="left">
+          • Auto Repair Shop Management System<br>
+          • Flask & MySQL<br>
+          • Tech & Admin Dashboards
+        </p>
       </div>
     </td>
     <td width="20%">
@@ -110,7 +111,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>Customer Review Analytics | Python & Streamlit | Chinese-First NLP | Sentiment & Topics | Interactive Viz</p>
+        <p align="left">
+          • Customer Review Analytics<br>
+          • Python & Streamlit<br>
+          • Chinese-First NLP
+        </p>
       </div>
     </td>
     <td width="20%">
@@ -127,7 +132,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>Chrome Extension | One-Click Download | Save Recordings Locally</p>
+        <p align="left">
+          • Chrome Extension<br>
+          • One-Click Download<br>
+          • Save Recordings Locally
+        </p>
       </div>
     </td>
   </tr>

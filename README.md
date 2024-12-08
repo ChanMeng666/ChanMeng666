@@ -48,7 +48,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>📱 Offline-First Field Data Collection App | React Native | 🔄 Real-time Sync | 📊 Field Ops Made Easy</p>
+        <p>Offline-First Field Data Collection App | React Native | Real-time Sync | Field Ops Made Easy</p>
       </div>
     </td>
     <td width="20%">
@@ -65,7 +65,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>🤝 Friendship Analytics Platform | Next.js & TS | 📊 Scientific Assessment | 🔒 Privacy-First | 💡 Smart Insights</p>
+        <p>Friendship Analytics Platform | Next.js & TS | Scientific Assessment | Privacy-First | Smart Insights</p>
       </div>
     </td>
     <td width="20%">
@@ -82,9 +82,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>🚗 Auto Repair Shop Management System</p>
-        <p>Flask & MySQL</p>
-        <p>🔧 Tech & Admin Dashboards</p>
+        <p>Auto Repair Shop Management System | Flask & MySQL | Tech & Admin Dashboards | Inventory | Billing</p>
       </div>
     </td>
     <td width="20%">
@@ -101,7 +99,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>📊 Customer Review Analytics | Python & Streamlit | 🇨🇳 Chinese-First NLP | 🎯 Sentiment & Topics | 📈 Interactive Viz</p>
+        <p>Customer Review Analytics | Python & Streamlit | Chinese-First NLP | Sentiment & Topics | Interactive Viz</p>
       </div>
     </td>
     <td width="20%">
@@ -118,7 +116,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>📽️ Tencent Meeting Video Downloader | Chrome Extension | ⚡ One-Click Download | 💾 Save Recordings Locally</p>
+        <p>Chrome Extension | One-Click Download | Save Recordings Locally</p>
       </div>
     </td>
   </tr>

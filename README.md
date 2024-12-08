@@ -373,7 +373,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">CustomerInsight</h3>
       <div align="center">  
-        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/streamlit_hero.jpg" width="100%" alt="Streamlit Logo"/></a>
+        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/streamlit_hero.jpg" width="50%" alt="Streamlit Logo"/></a>
         <br>
         <br>
         <p>
@@ -384,13 +384,17 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Streamlit, Text Analysis</strong></p>
+        <p align="left">
+          • Customer Review Analytics<br>
+          • Python & Streamlit<br>
+          • Chinese-First NLP
+        </p>
       </div>
     </td>
     <td width="20%">
       <h3 align="center">AI Image Generator</h3>
       <div align="center">  
-        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator.svg" width="100%" alt="AI Image Generator Logo"/></a>
+        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator.svg" width="50%" alt="AI Image Generator Logo"/></a>
         <br>
         <br>
         <p>
@@ -401,13 +405,17 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Image Generation, Together AI</strong></p>
+        <p align="left">
+          • AI Image Generation App<br>
+          • Next.js & Together AI<br>
+          • Mondrian-Inspired Design
+        </p>
       </div>
     </td>
     <td width="20%">
       <h3 align="center">English Redefine</h3>
       <div align="center">  
-        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine.svg" width="100%" alt="English Redefine"/></a>
+        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine.svg" width="50%" alt="English Redefine"/></a>
         <br>
         <br>
         <p>
@@ -418,13 +426,17 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Next.js, Tailwind</strong></p>
+        <p align="left">
+          • Modern Dictionary Platform<br>
+          • Powered by Gemini AI<br>
+          • Contemporary Word Definitions
+        </p>
       </div>
     </td>
     <td width="20%">
       <h3 align="center">Chinese Redefine</h3>
       <div align="center">  
-        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine.svg" width="100%" alt="Chinese Redefine Logo"/></a>
+        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine.svg" width="50%" alt="Chinese Redefine Logo"/></a>
         <br>
         <br>
         <p>
@@ -435,13 +447,17 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Gemini AI, SVG Export</strong></p>
+        <p align="left">
+          • Modern Chinese Dictionary<br>
+          • Next.js & Gemini AI<br>
+          • Contemporary Word Analysis
+        </p>
       </div>
     </td>
     <td width="20%">
       <h3 align="center">Water Quality Analysis</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="100%" alt="Water Quality Analysis"/></a>
+        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="50%" alt="Water Quality Analysis"/></a>
         <br>
         <br>
         <p>
@@ -452,7 +468,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Python, Sklearn, Pandas</strong></p>
+        <p align="left">
+          • Water Quality Analysis Toolkit<br>
+          • Python-based Monitoring System<br>
+          • Multi-Parameter Prediction
+        </p>
       </div>
     </td>
   </tr>

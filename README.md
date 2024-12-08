@@ -82,8 +82,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p>🚗 Auto Repair Shop Management System | Flask & MySQL
-🔧 Tech & Admin Dashboards | 📦 Inventory | 💰 Billing</p>
+        <p>🚗 Auto Repair Shop Management System | Flask & MySQL | 🔧 Tech & Admin Dashboards | 📦 Inventory | 💰 Billing</p>
       </div>
     </td>
     <td width="20%">

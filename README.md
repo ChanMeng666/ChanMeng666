@@ -289,7 +289,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Next.js, Chart.js</strong></p>
+        <p align="left">
+          • Interactive Reincarnation Simulator<br>
+          • Multi-Cultural Life Journeys<br>
+          • Immersive User Experience
+        </p>
       </div>
     </td>
     <td width="20%">
@@ -306,7 +310,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>FemTech, Independent Website</strong></p>
+        <p align="left">
+          • Sustainable Menstrual Care Platform<br>
+          • Multilingual & Location Services<br>
+          • Next.js, React & Impact Tracking
+        </p>
       </div>
     </td>
     <td width="20%">
@@ -323,7 +331,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Next.js, Supabase</strong></p>
+        <p align="left">
+          • Library Management System<br>
+          • Next.js 15 & Supabase<br>
+          • Real-time Book Tracking & Auth
+        </p>
       </div>
     </td>
     <td width="20%">
@@ -340,7 +352,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Bootstrap, Javascript</strong></p>
+        <p align="left">
+          • Fishing Club Management System<br>
+          • Python & Flask Backend<br>
+          • Events & Scheduling Features
+        </p>
       </div>
     </td>
   </tr>

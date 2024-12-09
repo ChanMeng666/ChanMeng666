@@ -406,7 +406,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Swimming Club Management System</h3>
       <div align="center">  
-        <a href="https://countryside-community-sw-6wqr4e1.gamma.site/" target="_blank"><img src="/public/brands/FreePeriodLogo.png" width="50%" alt="Swimming Club Management System"/></a>
+        <a href="https://countryside-community-sw-6wqr4e1.gamma.site/" target="_blank"><img src="/public/brands/SwimmingClubManagementSystem.svg" width="50%" alt="Swimming Club Management System"/></a>
         <br>
         <br>
         <p>

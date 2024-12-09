@@ -541,23 +541,23 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">Chinese Redefine</h3>
+      <h3 align="center">MNIST Neural Network Analysis</h3>
       <div align="center">  
-        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine.svg" width="50%" alt="Chinese Redefine Logo"/></a>
+        <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank"><img src="/public/brands/mnist-handwritten-digit-recognition-project.png" width="100%" alt="Chinese Redefine Logo"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/chinese-redefine" target="_blank">
+          <a href="https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project" target="_blank">
             <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://chinese-redefine.vercel.app/" target="_blank">
+          <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
         <p align="left">
-          • Modern Chinese Dictionary<br>
-          • Next.js & Gemini AI<br>
-          • Contemporary Word Analysis
+          • MNIST Digit Recognition<br>
+          • Multiple Neural Networks<br>
+          • CNN & MLP Implementation
         </p>
       </div>
     </td>

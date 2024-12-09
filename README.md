@@ -659,7 +659,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Python, Web Scraping</strong></p>
+        <p align="left">
+          • Douban Posts Archiver<br>
+          • Python Web Scraper<br>
+          • Markdown Generation
+        </p>
       </div>
     </td>
     <td width="20%">
@@ -676,7 +680,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Python, Web Scraping</strong></p>
+        <p align="left">
+          • Douban Movie Reviews<br>
+          • Python Web Scraper<br>
+          • Data Analysis Tool
+        </p>
       </div>
     </td>
   </tr>

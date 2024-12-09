@@ -476,6 +476,113 @@ while (isAwake) {
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Advanced Neural Network Applications</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank"><img src="/public/brands/advanced-neural-network-applications.png" width="50%" alt="Streamlit Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/advanced-neural-network-applications" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Neural Network Education Demo<br>
+          • Python & Jupyter Notebooks<br>
+          • Perceptron Classification & Linear Prediction
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">AI Image Generator</h3>
+      <div align="center">  
+        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator.svg" width="50%" alt="AI Image Generator Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/image-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://image-generator-sable-tau.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI Image Generation App<br>
+          • Next.js & Together AI<br>
+          • Mondrian-Inspired Design
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">English Redefine</h3>
+      <div align="center">  
+        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine.svg" width="50%" alt="English Redefine"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/english-redefine" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://english-redefine.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Modern Dictionary Platform<br>
+          • Powered by Gemini AI<br>
+          • Contemporary Word Definitions
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Chinese Redefine</h3>
+      <div align="center">  
+        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine.svg" width="50%" alt="Chinese Redefine Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/chinese-redefine" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chinese-redefine.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Modern Chinese Dictionary<br>
+          • Next.js & Gemini AI<br>
+          • Contemporary Word Analysis
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Water Quality Analysis</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="50%" alt="Water Quality Analysis"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Water Quality Analysis Toolkit<br>
+          • Python-based Monitoring System<br>
+          • Multi-Parameter Prediction
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

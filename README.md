@@ -575,7 +575,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">AI Programming Education</h3>
       <div align="center">  
-        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming.svg" width="100%" alt="AI Programming Education Platform"/></a>
+        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming.svg" width="50%" alt="AI Programming Education Platform"/></a>
         <br>
         <br>
         <p>
@@ -586,13 +586,17 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>React, JavaScript</strong></p>
+        <p align="left">
+          • AI Programming Education<br>
+          • Docusaurus Platform<br>
+          • Bilingual Interactive Tutorials
+        </p>
       </div>
     </td>
     <td width="20%">
       <h3 align="center">README Template</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_13_44Z.gif" width="100%" alt="README Template"/></a>
+        <a href="https://github.com/ChanMeng666" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_13_44Z.gif" width="50%" alt="README Template"/></a>
         <br>
         <br>
         <p>
@@ -603,7 +607,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Markdown, HTML</strong></p>
+        <p align="left">
+          • GitHub Profile Template<br>
+          • Tech Stack Showcase<br>
+          • Portfolio & Stats Display
+        </p>
       </div>
     </td>
   </tr>

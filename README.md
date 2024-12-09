@@ -360,6 +360,92 @@ while (isAwake) {
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Selwyn Panel Beaters Online Service</h3>
+      <div align="center">  
+        <a href="https://chanmeng.pythonanywhere.com/" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T09_48_45Z.gif" width="100%" alt="Selwyn Panel Beaters Online Service"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/automotive-repair-management-system" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chanmeng.pythonanywhere.com/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Auto Repair Management<br>
+          • Flask & MySQL<br>
+          • Multi-Role System
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Biosecurity</h3>
+      <div align="center">  
+        <a href="https://1160210.pythonanywhere.com/" target="_blank"><img src="/public/brands/journey-of-reincarnation2.svg" width="50%" alt="Biosecurity"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/biosecurity" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://1160210.pythonanywhere.com/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • NZ Biosecurity Guide<br>
+          • Flask Web Platform<br>
+          • Multi-Role Agriculture System
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Swimming Club Management System</h3>
+      <div align="center">  
+        <a href="https://countryside-community-sw-6wqr4e1.gamma.site/" target="_blank"><img src="/public/brands/FreePeriodLogo.png" width="50%" alt="Swimming Club Management System"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/countryside-community-swimming-club" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://countryside-community-sw-6wqr4e1.gamma.site/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Swimming Club Manager<br>
+          • Flask & MySQL<br>
+          • Booking & Payment System
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Job Value Assessment Tool</h3>
+      <div align="center">  
+        <a href="https://job-valuation.vercel.app/assessment/start" target="_blank"><img src="/public/brands/library-management-system.svg" width="50%" alt="Job Value Assessment Tool"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/job-valuation" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://job-valuation.vercel.app/assessment/start" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Job Assessment Tool<br>
+          • Next.js Application<br>
+          • Multi-dimension Analysis
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

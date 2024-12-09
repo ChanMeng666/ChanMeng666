@@ -100,7 +100,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">CustomerInsight</h3>
       <div align="center">  
-        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/streamlit_hero.jpg" width="50%" alt="Streamlit Logo"/></a>
+        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight.svg" width="50%" alt="Streamlit Logo"/></a>
         <br>
         <br>
         <p>
@@ -459,7 +459,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">CustomerInsight</h3>
       <div align="center">  
-        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/streamlit_hero.jpg" width="50%" alt="Streamlit Logo"/></a>
+        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight.svg" width="50%" alt="Streamlit Logo"/></a>
         <br>
         <br>
         <p>

@@ -364,7 +364,11 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Selwyn Panel Beaters Online Service</h3>
       <div align="center">  
-        <a href="https://chanmeng.pythonanywhere.com/" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T09_48_45Z.gif" width="100%" alt="Selwyn Panel Beaters Online Service"/></a>
+        <a href="https://chanmeng.pythonanywhere.com/" target="_blank">
+          <div style="width: 50%; margin: auto;">
+            <span style="font-size: min(10vw, 100px);">🚗</span>
+          </div>
+        </a>
         <br>
         <br>
         <p>

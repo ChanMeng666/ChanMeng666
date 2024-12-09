@@ -427,7 +427,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Job Value Assessment Tool</h3>
       <div align="center">  
-        <a href="https://job-valuation.vercel.app/assessment/start" target="_blank"><img src="/public/brands/library-management-system.svg" width="50%" alt="Job Value Assessment Tool"/></a>
+        <a href="https://job-valuation.vercel.app/assessment/start" target="_blank"><img src="/public/brands/job-valuation.svg" width="50%" alt="Job Value Assessment Tool"/></a>
         <br>
         <br>
         <p>

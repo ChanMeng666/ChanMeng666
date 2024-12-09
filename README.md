@@ -543,7 +543,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">MNIST Neural Network Analysis</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank"><img src="/public/brands/mnist-handwritten-digit-recognition-project.png" width="100%" alt="Chinese Redefine Logo"/></a>
+        <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank"><img src="/public/brands/mnist-handwritten-digit-recognition-project.png" width="100%" alt="MNIST Neural Network Analysis"/></a>
         <br>
         <br>
         <p>
@@ -669,7 +669,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Douban Review Scraper</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/DoubanReviewScraper" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_11_17Z.gif" width="100%" alt="Douban Elite Scraper"/></a>
+        <a href="https://github.com/ChanMeng666/DoubanReviewScraper" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_11_17Z.gif" width="100%" alt="Douban Review Scraper"/></a>
         <br>
         <br>
         <p>
@@ -684,6 +684,27 @@ while (isAwake) {
           • Douban Movie Reviews<br>
           • Python Web Scraper<br>
           • Data Analysis Tool
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Lottie Edit</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_11_17Z.gif" width="100%" alt="Lottie Edit"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Lottie Theme Converter<br>
+          • Light/Dark Mode Switch<br>
+          • Python Animation Tool
         </p>
       </div>
     </td>

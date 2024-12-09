@@ -364,8 +364,8 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Selwyn Panel Beaters Online Service</h3>
       <div align="center">  
-        <a href="https://chanmeng.pythonanywhere.com/" target="_blank">
-          <h1 style="font-size: 500%;">
+        <a href="https://chanmeng.pythonanywhere.com/" target="_blank" style="text-decoration: none;">
+          <h1 style="font-size: 500%; margin: 0;">
             🚗
           </h1>
         </a>

@@ -690,7 +690,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Lottie Edit</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_11_17Z.gif" width="100%" alt="Lottie Edit"/></a>
+        <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_01_04Z.gif" width="100%" alt="Lottie Edit"/></a>
         <br>
         <br>
         <p>

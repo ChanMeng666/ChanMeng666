@@ -457,7 +457,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Water Quality Analysis</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="50%" alt="Water Quality Analysis"/></a>
+        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="100%" alt="Water Quality Analysis"/></a>
         <br>
         <br>
         <p>
@@ -480,7 +480,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Advanced Neural Network Applications</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank"><img src="/public/brands/advanced-neural-network-applications.png" width="50%" alt="Streamlit Logo"/></a>
+        <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank"><img src="/public/brands/advanced-neural-network-applications.png" width="100%" alt="Streamlit Logo"/></a>
         <br>
         <br>
         <p>

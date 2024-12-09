@@ -520,23 +520,23 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">English Redefine</h3>
+      <h3 align="center">Heat Flux Perceptrons Neural Networks</h3>
       <div align="center">  
-        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine.svg" width="50%" alt="English Redefine"/></a>
+        <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/Assignment2_part1.ipynb" target="_blank"><img src="/public/brands/heat-flux-perceptrons-neural-networks.png" width="100%" alt="Heat Flux Perceptrons Neural Networks"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/english-redefine" target="_blank">
+          <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks" target="_blank">
             <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://english-redefine.vercel.app/" target="_blank">
+          <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/Assignment2_part1.ipynb" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
         <p align="left">
-          • Modern Dictionary Platform<br>
-          • Powered by Gemini AI<br>
-          • Contemporary Word Definitions
+          • Neural Network Implementation<br>
+          • Heat Influx Prediction<br>
+          • Architecture Design Tool
         </p>
       </div>
     </td>

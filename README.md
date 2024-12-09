@@ -385,7 +385,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Biosecurity</h3>
       <div align="center">  
-        <a href="https://1160210.pythonanywhere.com/" target="_blank"><img src="/public/brands/journey-of-reincarnation2.svg" width="50%" alt="Biosecurity"/></a>
+        <a href="https://1160210.pythonanywhere.com/" target="_blank"><img src="/public/brands/Biosecurity.svg" width="50%" alt="Biosecurity"/></a>
         <br>
         <br>
         <p>

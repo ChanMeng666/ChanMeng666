@@ -720,7 +720,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">CORDE Mobile</h3>
       <div align="center">  
-        <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/CORDE.svg" width="100%" alt="CORDE Mobile App"/></a>
+        <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/CORDE.svg" width="50%" alt="CORDE Mobile App"/></a>
         <br>
         <br>
         <p>
@@ -731,13 +731,17 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>React Native, SQLite</strong></p>
+        <p align="left">
+          • Offline-First Field Data Collection App<br>
+          • React Native & SQLite<br>
+          • Real-time Sync
+        </p>
       </div>
     </td>
     <td width="20%">
       <h3 align="center">FemTracker Mobile App</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/FemTracker" target="_blank"><img src="/public/brands/FemTracker.svg" width="100%" alt="FemTracker"/></a>
+        <a href="https://github.com/ChanMeng666/FemTracker" target="_blank"><img src="/public/brands/FemTracker.svg" width="50%" alt="FemTracker"/></a>
         <br>
         <br>
         <p>
@@ -748,13 +752,17 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Expo, FemTech</strong></p>
+        <p align="left">
+          • Period Care Tracker<br>
+          • React Native App<br>
+          • Smart Timer & Reminders
+        </p>
       </div>
     </td>
     <td width="20%">
       <h3 align="center">Brick Breaker Game</h3>
       <div align="center">  
-        <a href="https://chanmeng666.github.io/html-brick-game/" target="_blank"><img src="/public/brands/html-brick-game.svg" width="100%" alt="Brick Breaker Game"/></a>
+        <a href="https://chanmeng666.github.io/html-brick-game/" target="_blank"><img src="/public/brands/html-brick-game.svg" width="50%" alt="Brick Breaker Game"/></a>
         <br>
         <br>
         <p>
@@ -765,7 +773,11 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
-        <p><strong>Javascript, HTML5 Canvas</strong></p>
+        <p align="left">
+          • Artistic Brick Breaker<br>
+          • JavaScript & Canvas<br>
+          • Particle Animations
+        </p>
       </div>
     </td>
   </tr>

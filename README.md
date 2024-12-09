@@ -480,7 +480,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Advanced Neural Network Applications</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank"><img src="/public/brands/advanced-neural-network-applications.png" width="100%" alt="Streamlit Logo"/></a>
+        <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank"><img src="/public/brands/advanced-neural-network-applications.png" width="100%" alt="Advanced Neural Network Applications"/></a>
         <br>
         <br>
         <p>
@@ -499,23 +499,23 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">AI Image Generator</h3>
+      <h3 align="center">Body Fat Prediction</h3>
       <div align="center">  
-        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator.svg" width="50%" alt="AI Image Generator Logo"/></a>
+        <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/Assignment2_Part3_(i).ipynb" target="_blank"><img src="/public/brands/bodyfat-estimation-mlp.png" width="100%" alt="Body Fat Prediction"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/image-generator" target="_blank">
+          <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp" target="_blank">
             <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://image-generator-sable-tau.vercel.app/" target="_blank">
+          <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/Assignment2_Part3_(i).ipynb" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
         <p align="left">
-          • AI Image Generation App<br>
-          • Next.js & Together AI<br>
-          • Mondrian-Inspired Design
+          • Body Fat Prediction AI<br>
+          • Deep Learning Models<br>
+          • Anthropometric Analysis
         </p>
       </div>
     </td>

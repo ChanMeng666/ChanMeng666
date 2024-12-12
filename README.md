@@ -919,7 +919,7 @@ while (isAwake) {
   </table>
 </div>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=150&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&stroke=4169E1)
+![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=70&rotate=13&fontAlignY=25&desc=Download%20my%20CV&descAlign=60&descAlignY=44)
 
 <div align="center">
   <a href="/public/ChanMeng_CV.pdf" target="_blank">

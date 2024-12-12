@@ -80,7 +80,7 @@ while (isAwake) {
         <br>
         <p>
           <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
-            <img src="https://img.shields.io/badge/Buy_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+            <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>

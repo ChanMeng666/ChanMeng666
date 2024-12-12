@@ -927,7 +927,7 @@ while (isAwake) {
   </a>
 </div>
 
-<h2 align="center">💻 Tech Stack</h2>
+![](https://capsule-render.vercel.app/api?type=venom&height=150&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 
 <details open>
   <summary><h3>🎯 Core Expertise</h3></summary>
@@ -1026,7 +1026,7 @@ while (isAwake) {
 
 </details>
 
-<h2 align="center">📊 GitHub Stats</h2>
+![](https://capsule-render.vercel.app/api?type=venom&height=150&text=📊%20GitHub%20Stats&fontSize=40&color=0:32CD32,100:006400&stroke=006400)
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=ChanMeng666&show_icons=true&theme=graywhite" alt="ChanMeng's GitHub Stats" height="170"/>

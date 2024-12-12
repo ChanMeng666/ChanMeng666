@@ -31,7 +31,7 @@ while (isAwake) {
 ```
 </details>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=70&text=🚀%20Featured%20Projects&fontSize=40&color=0:8871e5,100:b678c4&stroke=b678c4)
+![](https://capsule-render.vercel.app/api?type=venom&height=30&text=🚀%20Featured%20Projects&fontSize=40&color=0:8871e5,100:b678c4&stroke=b678c4)
 
 <!-- Primary Projects (Always Visible) -->
 <table>

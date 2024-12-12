@@ -1,9 +1,9 @@
-
+![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=The%20Journey%20of%20Growing&fontSize=90&animation=scaleIn&fontAlignY=38&desc=Exploring%20Technology,%20One%20Line%20at%20Time&descAlignY=51&descAlign=62)
 
 <div align="center">
   <img src="/public/brands/chan_monkey_logo_black.svg" width="100" height="100" alt="Chan Meng Logo">
 
-  # Hi there, I'm Chan Meng 👋🏻
+  # I'm Chan Meng 👋🏻
 
   <p>
     <em>🌿 A minimalist</em> <br>
@@ -1081,3 +1081,6 @@ while (isAwake) {
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
 
 </div>
+
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=200&section=footer)

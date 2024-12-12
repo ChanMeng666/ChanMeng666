@@ -457,6 +457,27 @@ while (isAwake) {
 <table>
   <tr>
     <td width="20%">
+      <h3 align="center">Interactive Story Generator</h3>
+      <div align="center">  
+        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo.svg" width="50%" alt="Interactive Story Generator"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/interactive-story-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Powered Interactive Storytelling<br>
+          • Multiple Themes & Genre Support<br>
+          • Advanced Story Customization
+        </p>
+      </div>
+    </td>
+    <td width="20%">
       <h3 align="center">CustomerInsight</h3>
       <div align="center">  
         <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight.svg" width="50%" alt="Streamlit Logo"/></a>
@@ -537,27 +558,6 @@ while (isAwake) {
           • Modern Chinese Dictionary<br>
           • Next.js & Gemini AI<br>
           • Contemporary Word Analysis
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Water Quality Analysis</h3>
-      <div align="center">  
-        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="100%" alt="Water Quality Analysis"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis" target="_blank">
-            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-        </p>
-        <p align="left">
-          • Water Quality Analysis Toolkit<br>
-          • Python-based Monitoring System<br>
-          • Multi-Parameter Prediction
         </p>
       </div>
     </td>
@@ -644,6 +644,27 @@ while (isAwake) {
           • MNIST Digit Recognition<br>
           • Multiple Neural Networks<br>
           • CNN & MLP Implementation
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Water Quality Analysis</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="100%" alt="Water Quality Analysis"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Water Quality Analysis Toolkit<br>
+          • Python-based Monitoring System<br>
+          • Multi-Parameter Prediction
         </p>
       </div>
     </td>

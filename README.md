@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=header">
-    <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=header">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=header">
+    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:3498db,50:8e44ad,100:3498db&height=150&section=header&animation=twinkling">
+    <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:3498db,50:8e44ad,100:3498db&height=150&section=header&animation=twinkling">
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3498db,50:8e44ad,100:3498db&height=150&section=header&animation=twinkling">
   </picture>
 </p>
 

@@ -927,7 +927,7 @@ while (isAwake) {
   </a>
 </div>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=150&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 
 <details open>
   <summary><h3>🎯 Core Expertise</h3></summary>

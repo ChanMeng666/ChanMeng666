@@ -27,6 +27,7 @@ while (isAwake) {
 ![](https://capsule-render.vercel.app/api?type=venom&height=150&text=🚀%20Featured%20Projects&fontSize=40&color=0:8871e5,100:b678c4&stroke=b678c4)
 
 <!-- Primary Projects (Always Visible) -->
+
 <table>
   <tr>
     <td width="20%">
@@ -79,7 +80,7 @@ while (isAwake) {
         <br>
         <p>
           <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
-            <img src="https://img.shields.io/badge/Buy_Me_A_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+            <img src="https://img.shields.io/badge/Buy_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>

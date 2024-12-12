@@ -1065,7 +1065,7 @@ while (isAwake) {
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light" alt="Random Dev Quote"/>
 </div>
 
-<h2 align="center">👩‍💻 Chan Meng</h2>
+![](https://capsule-render.vercel.app/api?type=venom&height=150&text=👩‍💻%20Chan%20Meng&fontSize=40&color=0:FF69B4,100:9370DB&stroke=9370DB)
 
 <div align="center">
   <img src="/public/chan_by_the_sea.JPG" width="100%" alt="Chan Meng by the sea">

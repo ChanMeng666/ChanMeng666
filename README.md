@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=Hi%2C%20I%27m%20Chan%20Meng%20👋🏻&fontSize=50&animation=scaleIn&fontAlignY=35&desc=*🌿%20A%20minimalist*-nl-*➖%20Subtraction%20for%20life*-nl-*➕%20Addition%20for%20thought*&descSize=20&descAlignY=55&descAlign=50)
+![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=200&section=header&text=Hi%2C%20I%27m%20Chan%20Meng%20👋🏻&fontSize=50&animation=scaleIn&fontAlignY=35&desc=🌿%20A%20minimalist➖%20Subtraction%20for%20life➕%20Addition%20for%20thought&descSize=20&descAlignY=55&descAlign=50)
 
 <div align="center">
   <img src="/public/brands/chan_monkey_logo_black.svg" width="100" height="100" alt="Chan Meng Logo">

@@ -1,10 +1,4 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:3498db,50:8e44ad,100:3498db&height=150&section=header&animation=twinkling">
-    <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:3498db,50:8e44ad,100:3498db&height=150&section=header&animation=twinkling">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=0:3498db,50:8e44ad,100:3498db&height=150&section=header&animation=twinkling">
-  </picture>
-</p>
+
 
 <div align="center">
   <img src="/public/brands/chan_monkey_logo_black.svg" width="100" height="100" alt="Chan Meng Logo">

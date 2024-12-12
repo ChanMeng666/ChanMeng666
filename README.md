@@ -488,7 +488,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Repo-lightgrey?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=streamlit"/>
           </a>
         </p>
         <p align="left">

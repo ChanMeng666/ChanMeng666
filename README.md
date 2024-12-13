@@ -217,7 +217,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/5_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -345,7 +345,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://groupac.pythonanywhere.com/login" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -368,7 +368,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chanmeng.pythonanywhere.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -389,7 +389,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://1160210.pythonanywhere.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -410,7 +410,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://countryside-community-sw-6wqr4e1.gamma.site/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
           </a>
         </p>
         <p align="left">

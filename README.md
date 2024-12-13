@@ -85,16 +85,6 @@ while (isAwake) {
           <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere"/>
           </a>
-          <style>
-            @media (prefers-color-scheme: dark) {
-              .theme-adaptive-badge {
-                filter: invert(1);
-              }
-            }
-          </style>
-          <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
-            <img class="theme-adaptive-badge" src="https://img.shields.io/badge/Live-black?style=for-the-badge&logo=pythonanywhere&logoColor=black&labelColor=transparent"/>
-          </a>
         </p>
         <p align="left">
           • Auto Repair Shop Management System<br>

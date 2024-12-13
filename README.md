@@ -717,7 +717,6 @@ while (isAwake) {
         </p>
       </div>
     </td>
-
     <td width="20%">
       <h3 align="center">README Generator</h3>
       <div align="center">  

@@ -591,7 +591,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/Assignment2_Part3_(i).ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
           </a>
         </p>
         <p align="left">
@@ -612,7 +612,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/Assignment2_part1.ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
           </a>
         </p>
         <p align="left">
@@ -633,7 +633,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
           </a>
         </p>
         <p align="left">
@@ -654,7 +654,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
           </a>
         </p>
         <p align="left">
@@ -686,7 +686,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus"/>
           </a>
         </p>
         <p align="left">
@@ -707,7 +707,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github.com/ChanMeng666" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=markdown"/>
           </a>
         </p>
         <p align="left">
@@ -759,7 +759,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github.com/ChanMeng666/Douban-elite-scraper" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=python"/>
           </a>
         </p>
         <p align="left">
@@ -780,7 +780,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github.com/ChanMeng666/DoubanReviewScraper" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=python"/>
           </a>
         </p>
         <p align="left">
@@ -801,7 +801,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=python"/>
           </a>
         </p>
         <p align="left">
@@ -831,7 +831,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=android"/>
           </a>
         </p>
         <p align="left">
@@ -852,7 +852,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github.com/ChanMeng666/FemTracker" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=android"/>
           </a>
         </p>
         <p align="left">
@@ -873,7 +873,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chanmeng666.github.io/html-brick-game/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=githubpages"/>
           </a>
         </p>
         <p align="left">

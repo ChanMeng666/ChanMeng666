@@ -717,6 +717,28 @@ while (isAwake) {
         </p>
       </div>
     </td>
+
+    <td width="20%">
+      <h3 align="center">README Generator</h3>
+      <div align="center">  
+        <a href="https://huggingface.co/spaces/ChanMeng666/readme-profile-generator" target="_blank"><img src="/public/brands/readme-profile-generator-logo.svg" width="50%" alt="README Generator"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
+            <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+          </a>
+          <a href="https://huggingface.co/spaces/ChanMeng666/readme-profile-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Live_Demo-brightgreen?style=for-the-badge&logo=streamlit"/>
+          </a>
+        </p>
+        <p align="left">
+          • Interactive Visual README Editor<br>
+          • Real-time Preview & Stats Integration<br>
+          • One-Click Profile Enhancement
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

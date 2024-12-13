@@ -41,7 +41,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=gamma"/>
           </a>
         </p>
         <p align="left">

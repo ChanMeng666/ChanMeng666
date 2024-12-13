@@ -41,7 +41,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=gamma"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=android&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -83,7 +83,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
           </a>
         </p>
         <p align="left">

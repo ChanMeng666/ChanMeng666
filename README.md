@@ -698,7 +698,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=streamlit"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
           </a>
         </p>
         <p align="left">
@@ -772,7 +772,7 @@ while (isAwake) {
             <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://huggingface.co/spaces/ChanMeng666/readme-profile-generator" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=streamlit"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
           </a>
         </p>
         <p align="left">

@@ -686,6 +686,29 @@ while (isAwake) {
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Emoji Story Generator</h3>
+      <div align="center">  
+        <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank"><img src="/public/brands/emoji-story-generator.svg" width="50%" alt="Emoji Story Generator"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
+            <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+          </a>
+          <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=streamlit"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Powered Story Generation from Emojis<br>
+          • Interactive Category-Based Emoji Selection<br>
+          • Community Story Sharing & Voting System
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

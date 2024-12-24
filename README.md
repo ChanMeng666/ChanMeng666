@@ -1040,24 +1040,12 @@ while (isAwake) {
 </details>
 
 <details>
-  <summary><h3>📱 Mobile Development</h3></summary>
+  <summary><h3>🤖 AI & Data</h3></summary>
 
-  ![React Native](https://img.shields.io/badge/-React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-  ![Expo](https://img.shields.io/badge/-Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-  ![Android](https://img.shields.io/badge/-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-  ![iOS](https://img.shields.io/badge/-iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
-
-</details>
-
-<details>
-  <summary><h3>🤖 AI & Machine Learning</h3></summary>
-
-  ![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-  ![Keras](https://img.shields.io/badge/-Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
-  ![scikit-learn](https://img.shields.io/badge/-scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-  ![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-  ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-  ![Pandas](https://img.shields.io/badge/-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-20232A?style=for-the-badge&logo=tensorflow&logoColor=FF6F00)
+![Pandas](https://img.shields.io/badge/Pandas-20232A?style=for-the-badge&logo=pandas&logoColor=150458)
+![NumPy](https://img.shields.io/badge/NumPy-20232A?style=for-the-badge&logo=numpy&logoColor=013243)
+![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-20232A?style=for-the-badge&logo=scikit-learn&logoColor=F7931E)
 
 </details>
 

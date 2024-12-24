@@ -1052,22 +1052,19 @@ while (isAwake) {
 <details>
   <summary><h3>🎨 Design & Visualization</h3></summary>
 
-  ![Figma](https://img.shields.io/badge/-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-  ![Chart.js](https://img.shields.io/badge/-Chart.js-FF6384?style=for-the-badge&logo=chart.js&logoColor=white)
-  ![D3.js](https://img.shields.io/badge/-D3.js-F9A03C?style=for-the-badge&logo=d3.js&logoColor=white)
-  ![ECharts](https://img.shields.io/badge/-ECharts-AA344D?style=for-the-badge&logo=apache-echarts&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=F24E1E)
+![D3.js](https://img.shields.io/badge/D3.js-20232A?style=for-the-badge&logo=d3.js&logoColor=F9A03C)
+![Chart.js](https://img.shields.io/badge/Chart.js-20232A?style=for-the-badge&logo=chart.js&logoColor=FF6384)
 
 </details>
 
 <details>
   <summary><h3>🛠️ DevOps & Tools</h3></summary>
 
-  ![Git](https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-  ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-  ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-  ![VS Code](https://img.shields.io/badge/-VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-  ![Vercel](https://img.shields.io/badge/-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-  ![Chrome Extension](https://img.shields.io/badge/-Chrome_Extension-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)
+![Git](https://img.shields.io/badge/Git-20232A?style=for-the-badge&logo=git&logoColor=F05032)
+![GitHub](https://img.shields.io/badge/GitHub-20232A?style=for-the-badge&logo=github&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-20232A?style=for-the-badge&logo=docker&logoColor=2496ED)
+![VS Code](https://img.shields.io/badge/VS_Code-20232A?style=for-the-badge&logo=visual-studio-code&logoColor=007ACC)
 
 </details>
 

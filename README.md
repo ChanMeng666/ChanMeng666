@@ -1215,7 +1215,7 @@ while (isAwake) {
 </details>
 
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📝%20Articles&fontSize=40&color=0:FF6347,100:FF4500&stroke=FF4500)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📝%20Articles&fontSize=40&color=0:FFA500,100:DC143C&stroke=DC143C)
 
 <details>
 <summary><h3>📰 Technical Articles</h3></summary>

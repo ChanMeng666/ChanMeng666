@@ -1237,8 +1237,8 @@ while (isAwake) {
     </td>
     <td width="20%">
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
-          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+        <a href="https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng-tzakc/" target="_blank">
+          <img src="/public/articles/HowtoAddaGitHubContributionSnaketoYourProfileREADME.png" width="100%" alt="How to Add a GitHub Contribution Snake to Your Profile README"/>
         </a>
       </div>
     </td>

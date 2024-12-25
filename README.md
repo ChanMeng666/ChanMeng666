@@ -1083,7 +1083,7 @@ while (isAwake) {
 </details>
 
 <details>
-<summary><h3>🏆 Microsoft & LinkedIn Career Certifications</h3></summary>
+<summary><h3>🏆 Microsoft Career Certifications</h3></summary>
 <table>
   <tr>
     <td align="center" width="20%">
@@ -1129,7 +1129,7 @@ while (isAwake) {
 </details>
 
 <details>
-<summary><h3>🏆 GitHub & LinkedIn Career Certifications</h3></summary>
+<summary><h3>🏆 GitHub Career Certifications</h3></summary>
 <table>
   <tr>
     <td align="center" width="20%">
@@ -1144,7 +1144,7 @@ while (isAwake) {
 
 <details open>
   <summary><h3>💎 Core Expertise</h3></summary>
-  
+
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
 ![Next.js](https://img.shields.io/badge/Next.js-20232A?style=for-the-badge&logo=next.js&logoColor=white)

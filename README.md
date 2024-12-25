@@ -1247,6 +1247,63 @@ while (isAwake) {
   <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
 </div>
 
+
+![](https://capsule-render.vercel.app/api?type=venom&height=150&text=📊%20GitHub%20Stats&fontSize=40&color=0:32CD32,100:006400&stroke=006400)
+
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <h3 align="center">GitHub Stats</h3>
+      <div align="center">
+        <img src="https://github-readme-stats.vercel.app/api?username=ChanMeng666&show_icons=true&theme=graywhite" alt="ChanMeng's GitHub Stats" height="170"/>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">Most Used Languages</h3>
+      <div align="center">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanMeng666&layout=compact&theme=graywhite" alt="Top Languages" height="170"/>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Latest Project</h3>
+      <div align="center">
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=ChanMeng666&theme=graywhite" alt="GitHub Streak" height="170"/>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">Top Contributions</h3>
+      <div align="center">
+        <img src="https://github-contributor-stats.vercel.app/api?username=ChanMeng666&limit=5&theme=flat&combine_all_yearly_contributions=true" alt="Top Contributed Repositories"/>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<h3 align="center">🏆 GitHub Trophies</h3>
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=ChanMeng666&theme=flat&column=7&margin-w=10" alt="GitHub Trophies" />
+</div>
+
+<h3 align="center">📈 Contribution Graph</h3>
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal" border-radius="15">
+</div>
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake.svg">
+</picture>
+</div>
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
+</div>
+
+
 <h2 align="center">💡 Random Dev Quote</h2>
 
 <div align="center">

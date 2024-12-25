@@ -1188,10 +1188,6 @@ while (isAwake) {
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinGitHubProfessionalCertificate.jpg" width="100%" alt="GitHub Professional Certificate"/>
-      <p><strong>GitHub Professional</strong></p>
-    </td>
-    <td align="center" width="20%">
       <img src="/public/certificates/CareerEssentialsinBusinessAnalysisbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Business Analysis"/>
       <p><strong>Business Analysis</strong></p>
     </td>
@@ -1211,6 +1207,17 @@ while (isAwake) {
 </table>
 </details>
 
+<details>
+<summary><h3>📚 GitHub & LinkedIn Career Certifications</h3></summary>
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinGitHubProfessionalCertificate.jpg" width="100%" alt="GitHub Professional Certificate"/>
+      <p><strong>GitHub Professional</strong></p>
+    </td>
+  </tr>
+</table>
+</details>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 

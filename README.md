@@ -1267,15 +1267,15 @@ while (isAwake) {
     </td>
     <td width="20%">
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
-          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+        <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng-kkale/" target="_blank">
+          <img src="/public/articles/HowtoDeployYourReactProjecttoVercel.png" width="100%" alt="How to Deploy Your React Project to Vercel A Complete Guide"/>
         </a>
       </div>
     </td>
     <td width="20%">
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
-          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+        <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/" target="_blank">
+          <img src="/public/articles/ThePowerofIndexFiles.png" width="100%" alt="The Power of Index Files A Guide to Better Code Organization in React Projects"/>
         </a>
       </div>
     </td>

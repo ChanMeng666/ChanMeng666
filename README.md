@@ -1287,30 +1287,25 @@ while (isAwake) {
 <summary><h3>🎙️ Featured Interviews</h3></summary>
 <table>
   <tr>
-    <td width="50%">
-      <h3 align="center">A Glimpse of My Minimalist Home</h3>
+    <td width="20%">
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/glimpse-my-minimalist-home-chan-meng" target="_blank">
-          <img src="/public/brands/minimalist-home.svg" width="50%" alt="Minimalist Home Article"/>
+        <a href="https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q" target="_blank">
+          <img src="/public/articles/AGlimpseofMyMinimalistHome.webp" width="100%" alt="A Glimpse of My Minimalist Home"/>
         </a>
-        <p align="left">
-          • Featured on Douban's Daily Feature<br>
-          • 6,400+ likes and 14,000+ shares<br>
-          • Personal journey in minimalism
-        </p>
       </div>
     </td>
-    <td width="50%">
-      <h3 align="center">Minimalist to the End</h3>
+    <td width="20%">
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/minimalist-end-i-threw-away-my-old-name-chan-meng" target="_blank">
-          <img src="/public/brands/minimalist-journey.svg" width="50%" alt="Minimalist Journey"/>
+        <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng-kkale/" target="_blank">
+          <img src="/public/articles/HowtoDeployYourReactProjecttoVercel.png" width="100%" alt="How to Deploy Your React Project to Vercel A Complete Guide"/>
         </a>
-        <p align="left">
-          • Personal transformation story<br>
-          • Impact of minimalism on career<br>
-          • Technology and simplicity
-        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/" target="_blank">
+          <img src="/public/articles/ThePowerofIndexFiles.png" width="100%" alt="The Power of Index Files A Guide to Better Code Organization in React Projects"/>
+        </a>
       </div>
     </td>
   </tr>

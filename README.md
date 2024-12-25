@@ -24,6 +24,22 @@ while (isAwake) {
 ```
 </details>
 
+
+
+<details>
+<summary><h2>${\Large \textbf{\color[rgb]{0.12941,0.48235,0.99608}🤞 \color[rgb]{0.57647,0.60392,1}My \color[rgb]{0.91765,0.47843,0.72157}Promise}}$</h2></summary>
+
+```java
+while (${\color[rgb]{0.12941,0.48235,0.99608}isAwake}$) {
+    ${\color[rgb]{0.57647,0.60392,1}code()}$;
+    ${\color[rgb]{0.91765,0.47843,0.72157}eat()}$;
+    ${\color[rgb]{0.93333,0.30196,0.36471}sleep()}$;
+    ${\color[rgb]{0.12941,0.48235,0.99608}repeat()}$;
+}
+```
+</details>
+
+
 ![](https://capsule-render.vercel.app/api?type=venom&height=150&text=🌟%20Featured%20Projects&fontSize=40&color=0:8871e5,100:b678c4&stroke=b678c4)
 
 <!-- Primary Projects (Always Visible) -->

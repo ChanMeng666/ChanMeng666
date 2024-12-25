@@ -1225,7 +1225,7 @@ while (isAwake) {
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ChanMeng666&theme=graywhite" alt="GitHub Streak" height="170"/>
 </div>
 
-<h3 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"  style="vertical-align:bottom; margin-bottom: 1px"/>GitHub Trophies</h3>
+<h3 align="center" style="display: flex; align-items: center; justify-content: center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/>GitHub Trophies</h3>
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=ChanMeng666&theme=flat&column=7&margin-w=10" alt="GitHub Trophies" />
 </div>

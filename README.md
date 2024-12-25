@@ -1040,8 +1040,8 @@ while (isAwake) {
       <p><strong>R (Intermediate)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Csharp(Basic)Certificate.png" width="100%" alt="HackerRank C Sharp (Basic) Certificate"/>
-      <p><strong>C# (Basic)</strong></p>
+      <img src="/public/certificates/ProblemSolving(Intermediate)Certificate.png" width="100%" alt="HackerRank Problem Solving (Intermediate) Certificate"/>
+      <p><strong>Problem Solving (Intermediate)</strong></p>
     </td>
   </tr>
   <tr>
@@ -1062,8 +1062,8 @@ while (isAwake) {
       <p><strong>CSS (Basic)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/ProblemSolving(Intermediate)Certificate.png" width="100%" alt="HackerRank Problem Solving (Intermediate) Certificate"/>
-      <p><strong>Problem Solving (Intermediate)</strong></p>
+      <img src="/public/certificates/Csharp(Basic)Certificate.png" width="100%" alt="HackerRank C Sharp (Basic) Certificate"/>
+      <p><strong>C# (Basic)</strong></p>
     </td>
   </tr>
 </table>

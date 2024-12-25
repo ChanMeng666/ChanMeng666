@@ -1221,17 +1221,38 @@ while (isAwake) {
 <summary><h3>📰 Technical Articles</h3></summary>
 <table>
   <tr>
-    <td width="50%">
+    <td width="20%">
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/" target="_blank">
           <img src="/public/articles/EssentialFilesforaProfessionalGitHubRepository.png" width="100%" alt="Essential Files for a Professional GitHub Repository"/>
         </a>
       </div>
     </td>
-    <td width="50%">
+    <td width="20%">
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
-          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="50%" alt="Solution for MCP Servers Connection Issues"/>
+          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
+          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
+          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
+          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
         </a>
       </div>
     </td>

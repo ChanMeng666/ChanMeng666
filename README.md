@@ -1052,64 +1052,36 @@ while (isAwake) {
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/Data-Analytics-for-Business-Decision-Making.png" width="100%" alt="Data Analytics for Business Decision Making"/>
+      <img src="/public/certificates/CareerEssentialsinSoftwareDevelopmentbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Software Development by Microsoft and LinkedIn"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Data-Visualization-with-Python.png" width="100%" alt="Data Visualization with Python"/>
+      <img src="/public/certificates/CareerEssentialsinSystemAdministrationbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in System Administration by Microsoft and LinkedIn"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Excel-Data-Analysis-Fundamentals.png" width="100%" alt="Excel Data Analysis Fundamentals"/>
+      <img src="/public/certificates/CareerEssentialsinProjectManagementbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Project Management by Microsoft and LinkedIn"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Google-Analytics-Certificate.png" width="100%" alt="Google Analytics"/>
+      <img src="/public/certificates/CareerEssentialsinCybersecuritybyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Cybersecurity by Microsoft and LinkedIn"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Google-Project-Management-Professional-Certificate.png" width="100%" alt="Google Project Management Professional Certificate"/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Introduction-to-Artificial-Intelligence-(AI).png" width="100%" alt="Introduction to Artificial Intelligence (AI)"/>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/JavaScript-Programming-Language-Certification.png" width="100%" alt="JavaScript Programming Language Certification"/>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Meta-Front-End-Developer-Professional-Certificate.png" width="100%" alt="Meta Front-End Developer Professional Certificate"/>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Microsoft-Certified-Technology-Specialist-(MCTS).png" width="100%" alt="Microsoft Certified Technology Specialist (MCTS)"/>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Python-for-Data-Science,-AI-&-Development.png" width="100%" alt="Python for Data Science, AI & Development"/>
+      <img src="/public/certificates/CareerEssentialsinDataAnalysisbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Data Analysis by Microsoft and LinkedIn"/>
     </td>
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/Python-Programming-Language-Certification.png" width="100%" alt="Python Programming Language Certification"/>
+      <img src="/public/certificates/CareerEssentialsinGitHubProfessionalCertificate.jpg" width="100%" alt="Career Essentials in GitHub Professional Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/React-Native-Development-with-Expo.png" width="100%" alt="React Native Development with Expo"/>
+      <img src="/public/certificates/CareerEssentialsinBusinessAnalysisbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Business Analysis by Microsoft and LinkedIn"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/SAS-Programming-1:-Essentials.png" width="100%" alt="SAS Programming 1: Essentials"/>
+      <img src="/public/certificates/GenerativeAICareerSkillsFundamentals.jpg" width="100%" alt="Generative AI Career Skills Fundamentals"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/SQL-for-Data-Science.png" width="100%" alt="SQL for Data Science"/>
+      <img src="/public/certificates/CareerEssentialsinAdministrativeAssistancebyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Administrative Assistance by Microsoft and LinkedIn"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Statistics-for-Business-Analytics-and-Data-Science-A-Z™.png" width="100%" alt="Statistics for Business Analytics and Data Science A-Z™"/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="20%">
-      <img src="/public/certificates/The-Complete-2023-Software-Testing-Bootcamp.png" width="100%" alt="The Complete 2023 Software Testing Bootcamp"/>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/The-Complete-SQL-Bootcamp:-From-Zero-to-Hero.png" width="100%" alt="The Complete SQL Bootcamp: From Zero to Hero"/>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Unconscious-Bias:-From-Awareness-to-Action.png" width="100%" alt="Unconscious Bias: From Awareness to Action"/>
+      <img src="/public/certificates/CareerEssentialsinSustainableTechbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Sustainable Tech by Microsoft and LinkedIn"/>
     </td>
   </tr>
 </table>

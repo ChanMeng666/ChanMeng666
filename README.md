@@ -1286,6 +1286,10 @@ while (isAwake) {
   <br>
 </div>
 
+<p align='center'>
+<img src='https://github-widgetbox.vercel.app/api/profile?username=ChanMeng666&data=followers,repositories,stars,commits'>
+</p>
+
 <div align="center">
 
   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/chanmeng66u)

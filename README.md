@@ -986,6 +986,14 @@ while (isAwake) {
   </a>
 </div>
 
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?weight=900&size=15&pause=1000&color=0093FF&center=true&vCenter=true&width=500&separator=%3C&lines=Simplify%2C+simplify.%3CI+wanted+to+live+deep+and+suck+out+all+the+marrow+of+life.%3CRather+than+love%2C+than+money%2C+than+fame%2C+give+me+truth.%3CTime+is+but+the+stream+I+go+a-fishing+in.%3CAll+good+things+are+wild+and+free.%3CThings+do+not+change;+we+change.%3CThe+universe+is+wider+than+our+views+of+it.%3CHeaven+is+under+our+feet+as+well+as+over+our+heads.%3CMoney+is+not+required+to+buy+one+necessary+of+the+soul.%3CLive+the+life+you+have+imagined.)](https://git.io/typing-svg)
+
+</div>
+
+![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&desc=Download%20my%20CV&descAlign=40&descAlignY=92&reversal=true&section=footer)
+
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎓%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
 
 <details>
@@ -1002,15 +1010,15 @@ while (isAwake) {
       <img src="/public/certificates/SQL(Advanced)Certificate.png" width="100%" alt="HackerRank SQL (Advanced) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Advanced-Google-Analytics-Certificate.png" width="100%" alt="Advanced Google Analytics"/>
+      <img src="/public/certificates/JavaScript(Intermediate)Certificate.png" width="100%" alt="HackerRank JavaScript (Intermediate) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/JavaScript(Intermediate)Certificate.png" width="100%" alt="HackerRank JavaScript (Intermediate) Certificate"/>
+      <img src="/public/certificates/RestAPI(Intermediate)Certificate.png" width="100%" alt="HackerRank Rest API (Intermediate) Certificate"/>
     </td>
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/RestAPI(Intermediate)Certificate.png" width="100%" alt="HackerRank Rest API (Intermediate) Certificate"/>
+      <img src="/public/certificates/Nodejs(Intermediate)Certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
     </td>
     <td align="center" width="20%">
       <img src="/public/certificates/Nodejs(Intermediate)Certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
@@ -1106,14 +1114,6 @@ while (isAwake) {
   </tr>
 </table>
 </details>
-
-<div align="center">
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?weight=900&size=15&pause=1000&color=0093FF&center=true&vCenter=true&width=500&separator=%3C&lines=Simplify%2C+simplify.%3CI+wanted+to+live+deep+and+suck+out+all+the+marrow+of+life.%3CRather+than+love%2C+than+money%2C+than+fame%2C+give+me+truth.%3CTime+is+but+the+stream+I+go+a-fishing+in.%3CAll+good+things+are+wild+and+free.%3CThings+do+not+change;+we+change.%3CThe+universe+is+wider+than+our+views+of+it.%3CHeaven+is+under+our+feet+as+well+as+over+our+heads.%3CMoney+is+not+required+to+buy+one+necessary+of+the+soul.%3CLive+the+life+you+have+imagined.)](https://git.io/typing-svg)
-
-</div>
-
-![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&desc=Download%20my%20CV&descAlign=40&descAlignY=92&reversal=true&section=footer)
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 

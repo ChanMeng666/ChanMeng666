@@ -1253,7 +1253,7 @@ while (isAwake) {
   <img src="https://github-profile-trophy.vercel.app/?username=ChanMeng666&theme=flat&column=7&margin-w=10" alt="GitHub Trophies" />
 </div>
 
-<h3 align="center">📈 Contribution Graph</h3>
+
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal" border-radius="15">
 </div>

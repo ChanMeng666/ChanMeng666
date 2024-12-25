@@ -1296,13 +1296,15 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h3 align="center">Girl on Mattress</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng-kkale/" target="_blank">
-          <img src="/public/articles/HowtoDeployYourReactProjecttoVercel.png" width="100%" alt="How to Deploy Your React Project to Vercel A Complete Guide"/>
+        <a href="https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ" target="_blank">
+          <img src="/public/articles/GirlonMattress.jpg" width="100%" alt="Girl on Mattress"/>
         </a>
       </div>
     </td>
     <td width="20%">
+      <h3 align="center">A Glimpse of My Minimalist Home</h3>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/" target="_blank">
           <img src="/public/articles/ThePowerofIndexFiles.png" width="100%" alt="The Power of Index Files A Guide to Better Code Organization in React Projects"/>

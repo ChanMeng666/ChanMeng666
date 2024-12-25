@@ -1281,7 +1281,7 @@ while (isAwake) {
   </tr>
 </table>
 
-<h3 align="center">🏆 GitHub Trophies</h3>
+<h3 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="50"/> GitHub Trophies</h3>
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=ChanMeng666&theme=flat&column=7&margin-w=10" alt="GitHub Trophies" />
 </div>

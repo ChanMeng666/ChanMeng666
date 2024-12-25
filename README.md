@@ -1087,6 +1087,135 @@ while (isAwake) {
 </table>
 </details>
 
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎓%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
+
+<details>
+<summary><h3>Professional Certificates & Achievements</h3></summary>
+
+<details>
+<summary><h4>🏆 HackerRank Professional Certifications</h4></summary>
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/SoftwareEngineerCertificate.png" width="100%" alt="HackerRank Software Engineer Certificate"/>
+      <p><strong>Software Engineer Certificate</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/FrontendDeveloper(React)Certificate.png" width="100%" alt="HackerRank Frontend Developer (React) Certificate"/>
+      <p><strong>Frontend Developer (React)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/SQL(Advanced)Certificate.png" width="100%" alt="HackerRank SQL (Advanced) Certificate"/>
+      <p><strong>SQL (Advanced)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/JavaScript(Intermediate)Certificate.png" width="100%" alt="HackerRank JavaScript (Intermediate) Certificate"/>
+      <p><strong>JavaScript (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/RestAPI(Intermediate)Certificate.png" width="100%" alt="HackerRank Rest API (Intermediate) Certificate"/>
+      <p><strong>Rest API (Intermediate)</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Nodejs(Intermediate)Certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
+      <p><strong>Node.js (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Angular(Intermediate)Certificate.png" width="100%" alt="HackerRank Angular (Intermediate) Certificate"/>
+      <p><strong>Angular (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Go(Intermediate)Certificate.png" width="100%" alt="HackerRank Go (Intermediate) Certificate"/>
+      <p><strong>Go (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/R(Intermediate)Certificate.png" width="100%" alt="HackerRank R (Intermediate) Certificate"/>
+      <p><strong>R (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Csharp(Basic)Certificate.png" width="100%" alt="HackerRank C Sharp (Basic) Certificate"/>
+      <p><strong>C# (Basic)</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Java(Basic)Certificate.png" width="100%" alt="HackerRank Java (Basic) Certificate"/>
+      <p><strong>Java (Basic)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Python(Basic)Certificate.png" width="100%" alt="HackerRank Python (Basic) Certificate"/>
+      <p><strong>Python (Basic)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/React(Basic)Certificate.png" width="100%" alt="HackerRank React (Basic) Certificate"/>
+      <p><strong>React (Basic)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CSS(Basic)Certificate.png" width="100%" alt="HackerRank CSS (Basic) Certificate"/>
+      <p><strong>CSS (Basic)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/ProblemSolving(Intermediate)Certificate.png" width="100%" alt="HackerRank Problem Solving (Intermediate) Certificate"/>
+      <p><strong>Problem Solving (Intermediate)</strong></p>
+    </td>
+  </tr>
+</table>
+</details>
+
+<details>
+<summary><h4>📚 Microsoft & LinkedIn Career Certifications</h4></summary>
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinSoftwareDevelopmentbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Software Development"/>
+      <p><strong>Software Development</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinSystemAdministrationbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in System Administration"/>
+      <p><strong>System Administration</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinProjectManagementbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Project Management"/>
+      <p><strong>Project Management</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinCybersecuritybyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Cybersecurity"/>
+      <p><strong>Cybersecurity</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinDataAnalysisbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Data Analysis"/>
+      <p><strong>Data Analysis</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinGitHubProfessionalCertificate.jpg" width="100%" alt="GitHub Professional Certificate"/>
+      <p><strong>GitHub Professional</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinBusinessAnalysisbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Business Analysis"/>
+      <p><strong>Business Analysis</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/GenerativeAICareerSkillsFundamentals.jpg" width="100%" alt="Generative AI Career Skills"/>
+      <p><strong>Generative AI Fundamentals</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinAdministrativeAssistancebyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Administrative Assistance"/>
+      <p><strong>Administrative Assistance</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CareerEssentialsinSustainableTechbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Sustainable Tech"/>
+      <p><strong>Sustainable Tech</strong></p>
+    </td>
+  </tr>
+</table>
+</details>
+
+</details>
+
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 
 <details open>

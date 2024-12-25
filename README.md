@@ -1030,7 +1030,7 @@ while (isAwake) {
       <img src="/public/certificates/R(Intermediate)Certificate.png" width="100%" alt="HackerRank R (Intermediate) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/C#(Basic)Certificate.png" width="100%" alt="HackerRank C# (Basic) Certificate"/>
+      <img src="/public/certificates/Csharp(Basic)Certificate.png" width="100%" alt="HackerRank C Sharp (Basic) Certificate"/>
     </td>
   </tr>
   <tr>

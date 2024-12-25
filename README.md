@@ -14,16 +14,16 @@
 
 <details>
 <summary><h2>${\Large \textbf{
-\color[rgb]{1,0.59,0.59}🤞 
-\color[rgb]{1,0.75,0.55}M
-\color[rgb]{1,0.9,0.71}y 
-\color[rgb]{0.71,0.9,0.71}P
-\color[rgb]{0.59,0.78,1}r
-\color[rgb]{0.71,0.71,0.9}o
-\color[rgb]{0.78,0.71,0.9}m
-\color[rgb]{1,0.59,0.59}i
-\color[rgb]{1,0.75,0.55}s
-\color[rgb]{1,0.9,0.71}e}}$
+\color[rgb]{1,0.39,0.39}🤞 
+\color[rgb]{1,0.63,0.31}M
+\color[rgb]{1,0.78,0.31}y 
+\color[rgb]{0.47,0.86,0.47}P
+\color[rgb]{0.31,0.63,1}r
+\color[rgb]{0.51,0.51,0.94}o
+\color[rgb]{0.71,0.47,0.94}m
+\color[rgb]{1,0.39,0.39}i
+\color[rgb]{1,0.63,0.31}s
+\color[rgb]{1,0.78,0.31}e}}$
 </h2></summary>
 
 ```java

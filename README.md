@@ -1222,7 +1222,6 @@ while (isAwake) {
 <table>
   <tr>
     <td width="50%">
-      <h3 align="center">Essential Files for a Professional GitHub Repository: A Comprehensive Guide</h3>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/" target="_blank">
           <img src="/public/articles/EssentialFilesforaProfessionalGitHubRepository.png" width="100%" alt="Essential Files for a Professional GitHub Repository"/>
@@ -1230,7 +1229,6 @@ while (isAwake) {
       </div>
     </td>
     <td width="50%">
-      <h3 align="center">The Power of Index Files in React Projects</h3>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng" target="_blank">
           <img src="/public/brands/react-organization.svg" width="50%" alt="React Code Organization"/>
@@ -1240,7 +1238,6 @@ while (isAwake) {
   </tr>
   <tr>
     <td width="50%">
-      <h3 align="center">Adding GitHub Contribution Snake</h3>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng" target="_blank">
           <img src="/public/brands/contribution-snake.svg" width="50%" alt="GitHub Contribution Snake Guide"/>
@@ -1248,7 +1245,6 @@ while (isAwake) {
       </div>
     </td>
     <td width="50%">
-      <h3 align="center">React Project Deployment to Vercel</h3>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng" target="_blank">
           <img src="/public/brands/vercel-deployment.svg" width="50%" alt="Vercel Deployment Guide"/>

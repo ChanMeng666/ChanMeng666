@@ -1291,7 +1291,7 @@ while (isAwake) {
       <h3 align="center">A Glimpse of My Minimalist Home</h3>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q" target="_blank">
-          <img src="/public/articles/AGlimpseofMyMinimalistHome.webp" width="100%" alt="A Glimpse of My Minimalist Home"/>
+          <img src="/public/articles/AGlimpseofMyMinimalistHome.webp" width="50%" alt="A Glimpse of My Minimalist Home"/>
         </a>
       </div>
     </td>
@@ -1299,15 +1299,15 @@ while (isAwake) {
       <h3 align="center">Girl on Mattress</h3>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ" target="_blank">
-          <img src="/public/articles/GirlonMattress.jpg" width="100%" alt="Girl on Mattress"/>
+          <img src="/public/articles/GirlonMattress.jpg" width="50%" alt="Girl on Mattress"/>
         </a>
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">A Glimpse of My Minimalist Home</h3>
+      <h3 align="center">Minimalist to the end, I threw away my old name</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/" target="_blank">
-          <img src="/public/articles/ThePowerofIndexFiles.png" width="100%" alt="The Power of Index Files A Guide to Better Code Organization in React Projects"/>
+        <a href="https://mp.weixin.qq.com/s/Jk9I8ONA6vsyvHz7d4dkfw" target="_blank">
+          <img src="/public/articles/KanKeinSight.jpg" width="50%" alt="Minimalist to the end I threw away my old name"/>
         </a>
       </div>
     </td>

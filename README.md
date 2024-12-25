@@ -1145,9 +1145,6 @@ while (isAwake) {
 <details open>
   <summary><h3>💎 Core Expertise</h3></summary>
   
-[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?languages=javascript,typescript,python,java&includeNames=true)](https://github.com/ChanMeng666)
-[![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/skills?frameworks=react,next,flask,tailwind&includeNames=true)](https://github.com/ChanMeng666)
-
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
 ![Next.js](https://img.shields.io/badge/Next.js-20232A?style=for-the-badge&logo=next.js&logoColor=white)

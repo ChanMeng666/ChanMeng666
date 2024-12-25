@@ -1021,13 +1021,13 @@ while (isAwake) {
       <img src="/public/certificates/Nodejs(Intermediate)Certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Nodejs(Intermediate)Certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
+      <img src="/public/certificates/Angular(Intermediate)Certificate.png" width="100%" alt="HackerRank Angular (Intermediate) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Android-Development-with-Jetpack-Compose.png" width="100%" alt="Android Development with Jetpack Compose"/>
+      <img src="/public/certificates/Go(Intermediate)Certificate.png" width="100%" alt="HackerRank Go (Intermediate) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Azure-AI-Fundamentals.png" width="100%" alt="Azure AI Fundamentals"/>
+      <img src="/public/certificates/R(Intermediate)Certificate.png" width="100%" alt="HackerRank R (Intermediate) Certificate"/>
     </td>
     <td align="center" width="20%">
       <img src="/public/certificates/Azure-Data-Fundamentals.png" width="100%" alt="Azure Data Fundamentals"/>

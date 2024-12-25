@@ -1230,8 +1230,8 @@ while (isAwake) {
     </td>
     <td width="50%">
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng" target="_blank">
-          <img src="/public/brands/react-organization.svg" width="50%" alt="React Code Organization"/>
+        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
+          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="50%" alt="Solution for MCP Servers Connection Issues"/>
         </a>
       </div>
     </td>
@@ -1240,14 +1240,14 @@ while (isAwake) {
     <td width="50%">
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng" target="_blank">
-          <img src="/public/brands/contribution-snake.svg" width="50%" alt="GitHub Contribution Snake Guide"/>
+          <img src="/public/articles/contribution-snake.svg" width="50%" alt="GitHub Contribution Snake Guide"/>
         </a>
       </div>
     </td>
     <td width="50%">
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng" target="_blank">
-          <img src="/public/brands/vercel-deployment.svg" width="50%" alt="Vercel Deployment Guide"/>
+          <img src="/public/articles/vercel-deployment.svg" width="50%" alt="Vercel Deployment Guide"/>
         </a>
       </div>
     </td>

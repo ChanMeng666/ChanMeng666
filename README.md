@@ -986,6 +986,127 @@ while (isAwake) {
   </a>
 </div>
 
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎓%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
+
+<details>
+<summary><h3>Professional Certificates & Achievements</h3></summary>
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/SoftwareEngineerCertificate.png" width="100%" alt="HackerRank Software Engineer Certificate"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/FrontendDeveloper(React)Certificate.png" width="100%" alt="HackerRank Frontend Developer (React) Certificate"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/SQL(Advanced)Certificate.png" width="100%" alt="HackerRank SQL (Advanced) Certificate"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Advanced-Google-Analytics-Certificate.png" width="100%" alt="Advanced Google Analytics"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/JavaScript(Intermediate)Certificate.png" width="100%" alt="HackerRank JavaScript (Intermediate) Certificate"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/RestAPI(Intermediate)Certificate.png" width="100%" alt="HackerRank Rest API (Intermediate) Certificate"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Nodejs(Intermediate)Certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Android-Development-with-Jetpack-Compose.png" width="100%" alt="Android Development with Jetpack Compose"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Azure-AI-Fundamentals.png" width="100%" alt="Azure AI Fundamentals"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Azure-Data-Fundamentals.png" width="100%" alt="Azure Data Fundamentals"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Azure-Fundamentals.png" width="100%" alt="Azure Fundamentals"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Building-Modern-Python-Applications-on-AWS.png" width="100%" alt="Building Modern Python Applications on AWS"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/C-Programming-Language-Certification.png" width="100%" alt="C Programming Language Certification"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/C++-Programming-Language-Certification.png" width="100%" alt="C++ Programming Language Certification"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Complete-2023-Web-Development-Bootcamp.png" width="100%" alt="Complete 2023 Web Development Bootcamp"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Data-Analytics-for-Business-Decision-Making.png" width="100%" alt="Data Analytics for Business Decision Making"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Data-Visualization-with-Python.png" width="100%" alt="Data Visualization with Python"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Excel-Data-Analysis-Fundamentals.png" width="100%" alt="Excel Data Analysis Fundamentals"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Google-Analytics-Certificate.png" width="100%" alt="Google Analytics"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Google-Project-Management-Professional-Certificate.png" width="100%" alt="Google Project Management Professional Certificate"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Introduction-to-Artificial-Intelligence-(AI).png" width="100%" alt="Introduction to Artificial Intelligence (AI)"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/JavaScript-Programming-Language-Certification.png" width="100%" alt="JavaScript Programming Language Certification"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Meta-Front-End-Developer-Professional-Certificate.png" width="100%" alt="Meta Front-End Developer Professional Certificate"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Microsoft-Certified-Technology-Specialist-(MCTS).png" width="100%" alt="Microsoft Certified Technology Specialist (MCTS)"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Python-for-Data-Science,-AI-&-Development.png" width="100%" alt="Python for Data Science, AI & Development"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Python-Programming-Language-Certification.png" width="100%" alt="Python Programming Language Certification"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/React-Native-Development-with-Expo.png" width="100%" alt="React Native Development with Expo"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/SAS-Programming-1:-Essentials.png" width="100%" alt="SAS Programming 1: Essentials"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/SQL-for-Data-Science.png" width="100%" alt="SQL for Data Science"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Statistics-for-Business-Analytics-and-Data-Science-A-Z™.png" width="100%" alt="Statistics for Business Analytics and Data Science A-Z™"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/The-Complete-2023-Software-Testing-Bootcamp.png" width="100%" alt="The Complete 2023 Software Testing Bootcamp"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/The-Complete-SQL-Bootcamp:-From-Zero-to-Hero.png" width="100%" alt="The Complete SQL Bootcamp: From Zero to Hero"/>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Unconscious-Bias:-From-Awareness-to-Action.png" width="100%" alt="Unconscious Bias: From Awareness to Action"/>
+    </td>
+  </tr>
+</table>
+</details>
+
 <div align="center">
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?weight=900&size=15&pause=1000&color=0093FF&center=true&vCenter=true&width=500&separator=%3C&lines=Simplify%2C+simplify.%3CI+wanted+to+live+deep+and+suck+out+all+the+marrow+of+life.%3CRather+than+love%2C+than+money%2C+than+fame%2C+give+me+truth.%3CTime+is+but+the+stream+I+go+a-fishing+in.%3CAll+good+things+are+wild+and+free.%3CThings+do+not+change;+we+change.%3CThe+universe+is+wider+than+our+views+of+it.%3CHeaven+is+under+our+feet+as+well+as+over+our+heads.%3CMoney+is+not+required+to+buy+one+necessary+of+the+soul.%3CLive+the+life+you+have+imagined.)](https://git.io/typing-svg)

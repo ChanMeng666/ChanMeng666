@@ -1225,13 +1225,8 @@ while (isAwake) {
       <h3 align="center">Essential Files for a Professional GitHub Repository: A Comprehensive Guide</h3>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/" target="_blank">
-          <img src="/public/brands/github-essentials.svg" width="50%" alt="GitHub Repository Guide"/>
+          <img src="/public/articles/EssentialFilesforaProfessionalGitHubRepository.png" width="100%" alt="Essential Files for a Professional GitHub Repository"/>
         </a>
-        <p align="left">
-          • Comprehensive guide to repository structure<br>
-          • Best practices for file organization<br>
-          • Professional repository setup
-        </p>
       </div>
     </td>
     <td width="50%">
@@ -1240,11 +1235,6 @@ while (isAwake) {
         <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng" target="_blank">
           <img src="/public/brands/react-organization.svg" width="50%" alt="React Code Organization"/>
         </a>
-        <p align="left">
-          • Strategic code organization<br>
-          • Clean codebase maintenance<br>
-          • React project structure optimization
-        </p>
       </div>
     </td>
   </tr>
@@ -1255,11 +1245,6 @@ while (isAwake) {
         <a href="https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng" target="_blank">
           <img src="/public/brands/contribution-snake.svg" width="50%" alt="GitHub Contribution Snake Guide"/>
         </a>
-        <p align="left">
-          • Profile README enhancement<br>
-          • Dynamic contribution visualization<br>
-          • Step-by-step setup guide
-        </p>
       </div>
     </td>
     <td width="50%">
@@ -1268,11 +1253,6 @@ while (isAwake) {
         <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng" target="_blank">
           <img src="/public/brands/vercel-deployment.svg" width="50%" alt="Vercel Deployment Guide"/>
         </a>
-        <p align="left">
-          • Streamlined deployment process<br>
-          • Performance optimization tips<br>
-          • Production environment setup
-        </p>
       </div>
     </td>
   </tr>

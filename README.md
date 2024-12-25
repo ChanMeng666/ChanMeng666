@@ -37,7 +37,7 @@ while (isAwake) {
 </details>
 
 
-![](https://capsule-render.vercel.app/api?type=venom&height=150&text=🌟%20Featured%20Projects&fontSize=40&color=0:8871e5,100:b678c4&stroke=b678c4)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🌟%20Featured%20Projects&fontSize=40&color=0:8871e5,100:b678c4&stroke=b678c4)
 
 <!-- Primary Projects (Always Visible) -->
 
@@ -1215,7 +1215,7 @@ while (isAwake) {
 </details>
 
 
-![](https://capsule-render.vercel.app/api?type=venom&height=150&text=📊%20GitHub%20Stats&fontSize=40&color=0:32CD32,100:006400&stroke=006400)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📊%20GitHub%20Stats&fontSize=40&color=0:32CD32,100:006400&stroke=006400)
 
 <table width="100%">
   <tr>
@@ -1277,7 +1277,7 @@ while (isAwake) {
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light" alt="Random Dev Quote"/>
 </div>
 
-![](https://capsule-render.vercel.app/api?type=transparent&height=100&text=👩‍💻%20Chan%20Meng&fontSize=50&fontColor=9370DB&desc=A%20minimalist&descSize=20&descAlignY=75&descAlign=60)
+![](https://capsule-render.vercel.app/api?type=transparent&height=200&text=👩‍💻%20Chan%20Meng&fontSize=50&fontColor=9370DB&desc=A%20minimalist&descSize=20&descAlignY=75&descAlign=60)
 
 <div align="center">
   <img src="/public/chan_by_the_sea.JPG" width="100%" alt="Chan Meng by the sea">

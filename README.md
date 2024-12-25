@@ -1090,10 +1090,7 @@ while (isAwake) {
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎓%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
 
 <details>
-<summary><h3>Professional Certificates & Achievements</h3></summary>
-
-<details>
-<summary><h4>🏆 HackerRank Professional Certifications</h4></summary>
+<summary><h3>🏆 HackerRank Professional Certifications</h3></summary>
 <table>
   <tr>
     <td align="center" width="20%">
@@ -1165,7 +1162,7 @@ while (isAwake) {
 </details>
 
 <details>
-<summary><h4>📚 Microsoft & LinkedIn Career Certifications</h4></summary>
+<summary><h3>📚 Microsoft & LinkedIn Career Certifications</h3></summary>
 <table>
   <tr>
     <td align="center" width="20%">
@@ -1214,7 +1211,6 @@ while (isAwake) {
 </table>
 </details>
 
-</details>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 

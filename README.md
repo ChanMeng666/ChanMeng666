@@ -13,7 +13,18 @@
 
 
 <details>
-<summary><h2>${\Large \textbf{\color[rgb]{0.12941,0.48235,0.99608}🤞 \color[rgb]{0.57647,0.60392,1}My \color[rgb]{0.91765,0.47843,0.72157}Promise}}$</h2></summary>
+<summary><h2>${\Large \textbf{
+\color[rgb]{1,0,0}🤞 
+\color[rgb]{1,0.5,0}M
+\color[rgb]{1,1,0}y 
+\color[rgb]{0,1,0}P
+\color[rgb]{0,0,1}r
+\color[rgb]{0.29,0,0.51}o
+\color[rgb]{0.58,0,0.83}m
+\color[rgb]{1,0,0}i
+\color[rgb]{1,0.5,0}s
+\color[rgb]{1,1,0}e}}$
+</h2></summary>
 
 ```java
 while (isAwake) {

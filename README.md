@@ -1030,24 +1030,24 @@ while (isAwake) {
       <img src="/public/certificates/R(Intermediate)Certificate.png" width="100%" alt="HackerRank R (Intermediate) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Azure-Data-Fundamentals.png" width="100%" alt="Azure Data Fundamentals"/>
+      <img src="/public/certificates/C#(Basic)Certificate.png" width="100%" alt="HackerRank C# (Basic) Certificate"/>
     </td>
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/Azure-Fundamentals.png" width="100%" alt="Azure Fundamentals"/>
+      <img src="/public/certificates/Java(Basic)Certificate.png" width="100%" alt="HackerRank Java (Basic) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Building-Modern-Python-Applications-on-AWS.png" width="100%" alt="Building Modern Python Applications on AWS"/>
+      <img src="/public/certificates/Python(Basic)Certificate.png" width="100%" alt="HackerRank Python (Basic) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/C-Programming-Language-Certification.png" width="100%" alt="C Programming Language Certification"/>
+      <img src="/public/certificates/React(Basic)Certificate.png" width="100%" alt="HackerRank React (Basic) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/C++-Programming-Language-Certification.png" width="100%" alt="C++ Programming Language Certification"/>
+      <img src="/public/certificates/CSS(Basic)Certificate.png" width="100%" alt="HackerRank CSS (Basic) Certificate"/>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Complete-2023-Web-Development-Bootcamp.png" width="100%" alt="Complete 2023 Web Development Bootcamp"/>
+      <img src="/public/certificates/ProblemSolving(Intermediate)Certificate.png" width="100%" alt="HackerRank Problem Solving (Intermediate) Certificate"/>
     </td>
   </tr>
   <tr>

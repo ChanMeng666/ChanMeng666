@@ -1291,7 +1291,7 @@ while (isAwake) {
       <h3 align="center">A Glimpse of My Minimalist Home</h3>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q" target="_blank">
-          <img src="/public/articles/AGlimpseofMyMinimalistHome.webp" width="50%" alt="A Glimpse of My Minimalist Home"/>
+          <img src="/public/articles/Douban.jpg" width="50%" alt="A Glimpse of My Minimalist Home"/>
         </a>
       </div>
     </td>

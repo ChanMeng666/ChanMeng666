@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=200&section=header&text=Hi%2C%20I%27m%20Chan%20Meng%20👋🏻&fontSize=50&animation=scaleIn&fontAlignY=35&desc=🌿%20A%20minimalist%20%20%20➖%20Subtraction%20for%20life%20%20%20➕%20Addition%20for%20thought&descSize=20&descAlignY=55&descAlign=50)
+![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=200&section=header&text=Hi%2C%20I%27m%20Chan%20Meng%20👋&fontSize=50&animation=scaleIn&fontAlignY=35&desc=🌿%20A%20minimalist%20%20%20➖%20Subtraction%20for%20life%20%20%20➕%20Addition%20for%20thought&descSize=20&descAlignY=55&descAlign=50)
 
 <div align="center">
   <img src="/public/brands/chan_monkey_logo_black.svg" width="100" height="100" alt="Chan Meng Logo">
@@ -24,7 +24,7 @@ while (isAwake) {
 ```
 </details>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=150&text=🚀%20Featured%20Projects&fontSize=40&color=0:8871e5,100:b678c4&stroke=b678c4)
+![](https://capsule-render.vercel.app/api?type=venom&height=150&text=🌟%20Featured%20Projects&fontSize=40&color=0:8871e5,100:b678c4&stroke=b678c4)
 
 <!-- Primary Projects (Always Visible) -->
 
@@ -140,7 +140,7 @@ while (isAwake) {
 <!-- Web Applications Section -->
 
 <details>
-<summary><h3>🌐 Web Applications</h3></summary>
+<summary><h3>🎨 Web Applications</h3></summary>
 <table>
   <tr>
     <td width="20%">
@@ -470,7 +470,7 @@ while (isAwake) {
 <!-- AI & Machine Learning Section -->
 
 <details>
-<summary><h3>🤖 AI & Machine Learning</h3></summary>
+<summary><h3>🧠 AI & Machine Learning</h3></summary>
 <table>
   <tr>
     <td width="20%">
@@ -1070,7 +1070,7 @@ while (isAwake) {
 </details>
 
 <details>
-<summary><h3>📚 Microsoft & LinkedIn Career Certifications</h3></summary>
+<summary><h3>🏆 Microsoft & LinkedIn Career Certifications</h3></summary>
 <table>
   <tr>
     <td align="center" width="20%">
@@ -1116,7 +1116,7 @@ while (isAwake) {
 </details>
 
 <details>
-<summary><h3>📚 GitHub & LinkedIn Career Certifications</h3></summary>
+<summary><h3>🏆 GitHub & LinkedIn Career Certifications</h3></summary>
 <table>
   <tr>
     <td align="center" width="20%">
@@ -1130,7 +1130,7 @@ while (isAwake) {
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 
 <details open>
-  <summary><h3>🎯 Core Expertise</h3></summary>
+  <summary><h3>💎 Core Expertise</h3></summary>
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
@@ -1143,7 +1143,7 @@ while (isAwake) {
 </details>
 
 <details>
-  <summary><h3>🌐 Frontend Development</h3></summary>
+  <summary><h3>🎪 Frontend Development</h3></summary>
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Angular](https://img.shields.io/badge/Angular-20232A?style=for-the-badge&logo=angular&logoColor=DD0031)
@@ -1154,7 +1154,7 @@ while (isAwake) {
 </details>
 
 <details>
-  <summary><h3>🔙 Backend Development</h3></summary>
+  <summary><h3>🏗️ Backend Development</h3></summary>
 
 ![Node.js](https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=node.js&logoColor=339933)
 ![Flask](https://img.shields.io/badge/Flask-20232A?style=for-the-badge&logo=flask&logoColor=white)
@@ -1164,7 +1164,7 @@ while (isAwake) {
 </details>
 
 <details>
-  <summary><h3>📊 Database</h3></summary>
+  <summary><h3>💾 Database</h3></summary>
 
 ![MySQL](https://img.shields.io/badge/MySQL-20232A?style=for-the-badge&logo=mysql&logoColor=4479A1)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=316192)
@@ -1183,7 +1183,7 @@ while (isAwake) {
 </details>
 
 <details>
-  <summary><h3>🎨 Design & Visualization</h3></summary>
+  <summary><h3>💫 Design & Visualization</h3></summary>
 
 ![Figma](https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=F24E1E)
 ![D3.js](https://img.shields.io/badge/D3.js-20232A?style=for-the-badge&logo=d3.js&logoColor=F9A03C)
@@ -1192,7 +1192,7 @@ while (isAwake) {
 </details>
 
 <details>
-  <summary><h3>🛠️ DevOps & Tools</h3></summary>
+  <summary><h3>🔧 DevOps & Tools</h3></summary>
 
 ![Git](https://img.shields.io/badge/Git-20232A?style=for-the-badge&logo=git&logoColor=F05032)
 ![GitHub](https://img.shields.io/badge/GitHub-20232A?style=for-the-badge&logo=github&logoColor=white)

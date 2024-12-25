@@ -11,8 +11,9 @@
   <img src="/public/chan_snorkelling.gif" width="100%" alt="Chan Meng Snorkelling">
 </div>
 
+
 <details>
-<summary><h2>🤞 My Promise</h2></summary>
+<summary><h2>${\Large \textbf{\color[rgb]{0.12941,0.48235,0.99608}🤞 \color[rgb]{0.57647,0.60392,1}My \color[rgb]{0.91765,0.47843,0.72157}Promise}}$</h2></summary>
 
 ```java
 while (isAwake) {
@@ -20,21 +21,6 @@ while (isAwake) {
     eat();
     sleep();
     repeat();
-}
-```
-</details>
-
-
-
-<details>
-<summary><h2>${\Large \textbf{\color[rgb]{0.12941,0.48235,0.99608}🤞 \color[rgb]{0.57647,0.60392,1}My \color[rgb]{0.91765,0.47843,0.72157}Promise}}$</h2></summary>
-
-```java
-while (${\color[rgb]{0.12941,0.48235,0.99608}isAwake}$) {
-    ${\color[rgb]{0.57647,0.60392,1}code()}$;
-    ${\color[rgb]{0.91765,0.47843,0.72157}eat()}$;
-    ${\color[rgb]{0.93333,0.30196,0.36471}sleep()}$;
-    ${\color[rgb]{0.12941,0.48235,0.99608}repeat()}$;
 }
 ```
 </details>

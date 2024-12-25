@@ -1215,6 +1215,105 @@ while (isAwake) {
 </details>
 
 
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📔%20Articles%20%26%20Media&fontSize=40&color=0:4B0082,100:8A2BE2&stroke=8A2BE2)
+
+<details>
+<summary><h3>📰 Technical Articles</h3></summary>
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Essential Files for a Professional GitHub Repository: A Comprehensive Guide</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/" target="_blank">
+          <img src="/public/brands/github-essentials.svg" width="50%" alt="GitHub Repository Guide"/>
+        </a>
+        <p align="left">
+          • Comprehensive guide to repository structure<br>
+          • Best practices for file organization<br>
+          • Professional repository setup
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">The Power of Index Files in React Projects</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng" target="_blank">
+          <img src="/public/brands/react-organization.svg" width="50%" alt="React Code Organization"/>
+        </a>
+        <p align="left">
+          • Strategic code organization<br>
+          • Clean codebase maintenance<br>
+          • React project structure optimization
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Adding GitHub Contribution Snake</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng" target="_blank">
+          <img src="/public/brands/contribution-snake.svg" width="50%" alt="GitHub Contribution Snake Guide"/>
+        </a>
+        <p align="left">
+          • Profile README enhancement<br>
+          • Dynamic contribution visualization<br>
+          • Step-by-step setup guide
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">React Project Deployment to Vercel</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng" target="_blank">
+          <img src="/public/brands/vercel-deployment.svg" width="50%" alt="Vercel Deployment Guide"/>
+        </a>
+        <p align="left">
+          • Streamlined deployment process<br>
+          • Performance optimization tips<br>
+          • Production environment setup
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+</details>
+
+<details>
+<summary><h3>🎙️ Featured Interviews</h3></summary>
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">A Glimpse of My Minimalist Home</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/glimpse-my-minimalist-home-chan-meng" target="_blank">
+          <img src="/public/brands/minimalist-home.svg" width="50%" alt="Minimalist Home Article"/>
+        </a>
+        <p align="left">
+          • Featured on Douban's Daily Feature<br>
+          • 6,400+ likes and 14,000+ shares<br>
+          • Personal journey in minimalism
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">Minimalist to the End</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/minimalist-end-i-threw-away-my-old-name-chan-meng" target="_blank">
+          <img src="/public/brands/minimalist-journey.svg" width="50%" alt="Minimalist Journey"/>
+        </a>
+        <p align="left">
+          • Personal transformation story<br>
+          • Impact of minimalism on career<br>
+          • Technology and simplicity
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+</details>
+
+
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📊%20GitHub%20Stats&fontSize=40&color=0:32CD32,100:006400&stroke=006400)
 
 <table width="100%">

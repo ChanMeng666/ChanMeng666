@@ -1287,10 +1287,6 @@ while (isAwake) {
 </div>
 
 <div align="center">
-  <img src='https://github-widgetbox.vercel.app/api/profile?username=ChanMeng666&data=followers,repositories,stars,commits'>
-</div>
-
-<div align="center">
   <img src="https://github-widgetbox.vercel.app/api/profile?username=ChanMeng666&data=followers,repositories,stars,commits&theme=default" alt="GitHub Profile Stats" />
 </div>
 

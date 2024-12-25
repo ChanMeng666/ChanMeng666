@@ -140,7 +140,7 @@ while (isAwake) {
 <!-- Web Applications Section -->
 
 <details>
-<summary><h3>🎨 Web Applications</h3></summary>
+<summary><h3>🌐 Web Applications</h3></summary>
 <table>
   <tr>
     <td width="20%">
@@ -1183,7 +1183,7 @@ while (isAwake) {
 </details>
 
 <details>
-  <summary><h3>💫 Design & Visualization</h3></summary>
+  <summary><h3>🎨 Design & Visualization</h3></summary>
 
 ![Figma](https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=F24E1E)
 ![D3.js](https://img.shields.io/badge/D3.js-20232A?style=for-the-badge&logo=d3.js&logoColor=F9A03C)

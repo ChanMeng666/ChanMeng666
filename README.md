@@ -973,7 +973,7 @@ while (isAwake) {
   </a>
 </div>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=☕%20Support%20My%20Work&fontSize=40&color=0:F1C27D,100:995C34&stroke=995C34)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=☕%20Support%20My%20Work&fontSize=40&color=0:FFDD00,100:A65D37&stroke=A65D37)
 
 <div align="center">
   <table>

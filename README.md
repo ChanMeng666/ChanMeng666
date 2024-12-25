@@ -1253,15 +1253,15 @@ while (isAwake) {
   <tr>
     <td width="20%">
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
-          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+        <a href="https://www.linkedin.com/pulse/building-web-scraper-douban-group-posts-chan-meng-pn6oc/" target="_blank">
+          <img src="/public/articles/BuildingaWebScraperforDoubanGroupPosts.png" width="100%" alt="Building a Web Scraper for Douban Group Posts"/>
         </a>
       </div>
     </td>
     <td width="20%">
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
-          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+        <a href="https://www.linkedin.com/pulse/from-git-log-insights-evaluating-team-contributions-github-chan-meng-qdtpc/" target="_blank">
+          <img src="/public/articles/FromGitLogtoInsights.png" width="100%" alt="From Git Log to Insights Evaluating Team Contributions in GitHub Projects"/>
         </a>
       </div>
     </td>

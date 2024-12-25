@@ -1244,27 +1244,13 @@ while (isAwake) {
     </td>
     <td width="20%">
       <div align="center">  
-        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
-          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
-        </a>
-      </div>
-    </td>
-    <td width="20%">
-      <div align="center">  
-        <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
-          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+        <a href="https://www.linkedin.com/pulse/how-download-videos-from-web-pages-step-by-step-guide-chan-meng-mp5pc/" target="_blank">
+          <img src="/public/articles/TencentMeetingScreenRecordingDownloadGuide.png" width="100%" alt="Tencent Meeting Screen Recording Download Guide"/>
         </a>
       </div>
     </td>
   </tr>
   <tr>
-    <td width="20%">
-      <div align="center">  
-        <a href="https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/" target="_blank">
-          <img src="/public/articles/EssentialFilesforaProfessionalGitHubRepository.png" width="100%" alt="Essential Files for a Professional GitHub Repository"/>
-        </a>
-      </div>
-    </td>
     <td width="20%">
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">

@@ -1001,6 +1001,18 @@ while (isAwake) {
 </div>
 
 <div align="center">
+  <!-- 直接下载CV -->
+  <a href="https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng.pdf">
+    <img src="https://img.shields.io/badge/Download_CV-📄_PDF-FF6B6B?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download CV" />
+  </a>
+  
+  <!-- 在线预览CV -->
+  <a href="https://github.com/ChanMeng666/ChanMeng666/blob/main/public/ChanMeng.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/View_CV-👀_Preview-4CAF50?style=for-the-badge&logo=github&logoColor=white" alt="View CV" />
+  </a>
+</div>
+
+<div align="center">
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?weight=900&size=15&pause=1000&color=0093FF&center=true&vCenter=true&width=500&separator=%3C&lines=Simplify%2C+simplify.%3CI+wanted+to+live+deep+and+suck+out+all+the+marrow+of+life.%3CRather+than+love%2C+than+money%2C+than+fame%2C+give+me+truth.%3CTime+is+but+the+stream+I+go+a-fishing+in.%3CAll+good+things+are+wild+and+free.%3CThings+do+not+change;+we+change.%3CThe+universe+is+wider+than+our+views+of+it.%3CHeaven+is+under+our+feet+as+well+as+over+our+heads.%3CMoney+is+not+required+to+buy+one+necessary+of+the+soul.%3CLive+the+life+you+have+imagined.)](https://git.io/typing-svg)
 

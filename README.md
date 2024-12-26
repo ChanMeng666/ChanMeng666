@@ -1288,9 +1288,9 @@ while (isAwake) {
 <table>
   <tr>
     <td width="20%">
-      <a href="https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q" target="_blank">
-        <h3 align="center">A Glimpse of My Minimalist Home</h3>
-      </a>
+        <a href="https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q" target="_blank">
+          <h3>A Glimpse of My Minimalist Home</h3>
+        </a>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q" target="_blank">
           <img src="/public/articles/Douban.jpg" width="50%" alt="A Glimpse of My Minimalist Home"/>

@@ -1321,13 +1321,11 @@ while (isAwake) {
 <table width="100%">
   <tr>
     <td width="50%">
-      <h3 align="center">GitHub Stats</h3>
       <div align="center">
         <img src="https://github-readme-stats.vercel.app/api?username=ChanMeng666&show_icons=true&theme=graywhite" alt="ChanMeng's GitHub Stats" height="170"/>
       </div>
     </td>
     <td width="50%">
-      <h3 align="center">Most Used Languages</h3>
       <div align="center">
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanMeng666&layout=compact&theme=graywhite" alt="Top Languages" height="170"/>
       </div>
@@ -1335,13 +1333,11 @@ while (isAwake) {
   </tr>
   <tr>
     <td width="50%">
-      <h3 align="center">Latest Project</h3>
       <div align="center">
         <img src="https://github-readme-streak-stats.herokuapp.com/?user=ChanMeng666&theme=graywhite" alt="GitHub Streak" height="170"/>
       </div>
     </td>
     <td width="50%">
-      <h3 align="center">Top Contributions</h3>
       <div align="center">
         <img src="https://github-contributor-stats.vercel.app/api?username=ChanMeng666&limit=5&theme=flat&combine_all_yearly_contributions=true" alt="Top Contributed Repositories"/>
       </div>

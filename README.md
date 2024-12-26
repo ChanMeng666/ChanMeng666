@@ -7,6 +7,7 @@
   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/chanmeng66u)
   [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=yellow)](https://chanmeng.live/)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
+  [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
 
   <img src="/public/chan_snorkelling.gif" width="100%" alt="Chan Meng Snorkelling">
 </div>
@@ -1392,6 +1393,7 @@ while (isAwake) {
   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/chanmeng66u)
   [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=yellow)](https://chanmeng.live/)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
+  [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
 
 </div>
 

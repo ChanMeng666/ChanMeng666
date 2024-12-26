@@ -992,23 +992,17 @@ while (isAwake) {
   </table>
 </div>
 
-![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=70&rotate=13&fontAlignY=25&desc=Download%20my%20CV&descAlign=60&descAlignY=44)
-
-<div align="center">
-  <a href="/public/ChanMeng.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Download_CV-📄_PDF-FF6B6B?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download CV" />
-  </a>
-</div>
+![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=70&rotate=13&fontAlignY=25)
 
 <div align="center">
   <!-- 直接下载CV -->
   <a href="https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng.pdf">
-    <img src="https://img.shields.io/badge/Download_CV-📄_PDF-FF6B6B?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download CV" />
+    <img src="https://img.shields.io/badge/Download-📄_PDF-FF6B6B?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white" alt="Download CV" />
   </a>
   
   <!-- 在线预览CV -->
   <a href="https://github.com/ChanMeng666/ChanMeng666/blob/main/public/ChanMeng.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/View_CV-👀_Preview-4CAF50?style=for-the-badge&logo=github&logoColor=white" alt="View CV" />
+    <img src="https://img.shields.io/badge/View-👀_Preview-4CAF50?style=for-the-badge&logo=github&logoColor=white" alt="View CV" />
   </a>
 </div>
 
@@ -1018,7 +1012,7 @@ while (isAwake) {
 
 </div>
 
-![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&desc=Download%20my%20CV&descAlign=40&descAlignY=92&reversal=true&section=footer)
+![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&reversal=true&section=footer)
 
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎓%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)

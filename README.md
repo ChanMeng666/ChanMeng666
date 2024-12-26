@@ -996,8 +996,8 @@ while (isAwake) {
 
 <div align="center">
 
-  [![Download Resume](https://img.shields.io/badge/Download%20CV-FF6B6B?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng.pdf)
-  [![View Resume](https://img.shields.io/badge/View%20CV-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/blob/main/public/ChanMeng.pdf)
+  [![Download Resume](https://img.shields.io/badge/Download%20Resume-FF6B6B?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng.pdf)
+  [![View Resume](https://img.shields.io/badge/View%20Resume-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/blob/main/public/ChanMeng.pdf)
   
 </div>
 

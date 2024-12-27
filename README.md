@@ -151,6 +151,7 @@ while (isAwake) {
     </td>
   </tr>
 </table>
+
 <!-- Web Applications Section -->
 
 <details>
@@ -480,7 +481,6 @@ while (isAwake) {
 </table>
 </details>
 
-
 <!-- AI & Machine Learning Section -->
 
 <details>
@@ -726,9 +726,8 @@ while (isAwake) {
 </table>
 </details>
 
-
-
 <!-- Educational Tools Section -->
+
 <details>
 <summary><h3>📚 Educational Tools</h3></summary>
 <table>
@@ -800,8 +799,8 @@ while (isAwake) {
 </table>
 </details>
 
-
 <!-- Tools & Extensions Section -->
+
 <details>
 <summary><h3>🛠️ Tools & Extensions</h3></summary>
 <table>
@@ -895,6 +894,7 @@ while (isAwake) {
 </details>
 
 <!-- Mobile & Games Section -->
+
 <details>
 <summary><h3>📱 Mobile & Games</h3></summary>
 <table>
@@ -967,11 +967,18 @@ while (isAwake) {
 </details>
 
 <!-- More Projects Button -->
+
 <div align="center">
   <h3>More Projects</h3>
   <a href="https://github.com/ChanMeng666?tab=repositories" target="_blank">
     <img src="https://img.shields.io/badge/View%20All-My%20Repositories-blue?style=for-the-badge&logo=github"/>
   </a>
+</div>
+
+<div align="center">
+
+[![Chan Meng - Ask Me Anything](https://img.shields.io/static/v1?label=GitHub%20Discussions&message=Ask%20Me%20Anything&color=green&style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/discussions)
+
 </div>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=☕%20Support%20My%20Work&fontSize=40&color=0:FFDD00,100:A65D37&stroke=A65D37)

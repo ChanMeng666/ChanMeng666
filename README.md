@@ -978,7 +978,7 @@ while (isAwake) {
 <div align="center">
   <h3>Ask Me Anything</h3>
   <a href="https://github.com/ChanMeng666/ChanMeng666/discussions" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub%20Discussions-Ask%20Me%20Anything-green?style=for-the-badge&logo=github"/>
+    <img src="https://img.shields.io/badge/Discussions-Ask%20Me%20Anything-green?style=for-the-badge&logo=github"/>
   </a>
 </div>
 

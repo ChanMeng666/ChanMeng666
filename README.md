@@ -976,6 +976,13 @@ while (isAwake) {
 </div>
 
 <div align="center">
+  <h3>Ask Me Anything</h3>
+  <a href="https://github.com/ChanMeng666/ChanMeng666/discussions" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub%20Discussions-Ask%20Me%20Anything-blue?style=for-the-badge&logo=github"/>
+  </a>
+</div>
+
+<div align="center">
 
 [![Chan Meng - Ask Me Anything](https://img.shields.io/static/v1?label=GitHub%20Discussions&message=Ask%20Me%20Anything&color=green&style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/discussions)
 

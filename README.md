@@ -1405,7 +1405,7 @@ while (isAwake) {
 
 <div align="center">
 
-[![Chan Meng - Ask Me Anything](https://img.shields.io/static/v1?label=GitHub%20Discussions&message=Ask%20Me%20Anything&color=green&style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/discussions)
+[![Chan Meng - Ask Me Anything](https://img.shields.io/static/v1?label=Discussions&message=Ask%20Me%20Anything&color=green&style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/discussions)
 
 </div>
 

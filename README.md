@@ -1291,6 +1291,15 @@ while (isAwake) {
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/protecting-your-open-source-project-comprehensive-guide-chan-meng-u77wc/" target="_blank">
+          <img src="/public/articles/ProtectingYourOpenSourceProject.png" width="100%" alt="Protecting Your Open Source Project"/>
+        </a>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

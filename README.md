@@ -998,7 +998,7 @@ while (isAwake) {
 
   [![Download Resume](https://img.shields.io/badge/Download%20Resume-FF6B6B?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng.pdf)
   [![View Resume](https://img.shields.io/badge/View%20Resume-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/blob/main/public/ChanMeng.pdf)
-  
+
 </div>
 
 <div align="center">
@@ -1386,7 +1386,9 @@ while (isAwake) {
 </div>
 
 <div align="center">
-  <img src="https://github-widgetbox.vercel.app/api/profile?username=ChanMeng666&data=followers,repositories,stars,commits&theme=default" alt="GitHub Profile Stats" />
+
+[![Chan Meng - Ask Me Anything](https://img.shields.io/static/v1?label=GitHub%20Discussions&message=Ask%20Me%20Anything&color=green&style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/discussions)
+
 </div>
 
 <div align="center">

@@ -93,8 +93,8 @@ while (isAwake) {
         <br>
         <br>
         <p>
-          <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
-            <img src="https://img.shields.io/badge/5_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+          <a href="https://github.com/ChanMeng666/agrihire-solutions" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
@@ -228,8 +228,8 @@ while (isAwake) {
         <br>
         <br>
         <p>
-          <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
-            <img src="https://img.shields.io/badge/5_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+          <a href="https://github.com/ChanMeng666/agrihire-solutions" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
@@ -249,8 +249,8 @@ while (isAwake) {
         <br>
         <br>
         <p>
-          <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
-            <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+          <a href="https://github.com/ChanMeng666/minimalist-good-post" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://minimalist-good-post.vercel.app" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
@@ -293,8 +293,8 @@ while (isAwake) {
         <br>
         <br>
         <p>
-          <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
-            <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+          <a href="https://github.com/ChanMeng666/journey-of-reincarnation" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://journey-of-reincarnation.vercel.app" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
@@ -356,8 +356,8 @@ while (isAwake) {
         <br>
         <br>
         <p>
-          <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
-            <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+          <a href="https://github.com/ChanMeng666/fishing-club-project" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://groupac.pythonanywhere.com/login" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>

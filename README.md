@@ -781,8 +781,8 @@ while (isAwake) {
         <br>
         <br>
         <p>
-          <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
-            <img src="https://img.shields.io/badge/3_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
+          <a href="https://github.com/ChanMeng666/readme-profile-generator" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://huggingface.co/spaces/ChanMeng666/readme-profile-generator" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>

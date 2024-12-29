@@ -806,6 +806,27 @@ while (isAwake) {
 <table>
   <tr>
     <td width="20%">
+      <h3 align="center">Google News MCP Server</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/server-google-news" target="_blank"><img src="/public/brands/server-google-news.svg" width="50%" alt="Google News MCP Server"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/server-google-news" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/server-google-news" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=nodejs"/>
+          </a>
+        </p>
+        <p align="left">
+          • Multi-Language Support<br>
+          • Auto News Categorization<br>
+          • Flexible Search Options
+        </p>
+      </div>
+    </td>
+    <td width="20%">
       <h3 align="center">Tencent Meeting Video Downloader</h3>
       <div align="center">  
         <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>

@@ -1299,6 +1299,13 @@ while (isAwake) {
         </a>
       </div>
     </td>
+    <td width="20%">
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/creating-comprehensive-file-list-documentation-system-chan-meng-njjxc/?trackingId=a7k%2F2YF1ToWixSz%2BYnZq7A%3D%3D" target="_blank">
+          <img src="/public/articles/CreatingaComprehensiveFileListDocumentationSystem.png" width="100%" alt="Creating a Comprehensive File List Documentation System"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

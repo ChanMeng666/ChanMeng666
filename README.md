@@ -808,14 +808,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Google News MCP Server</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/server-google-news" target="_blank"><img src="/public/brands/server-google-news.svg" width="50%" alt="Google News MCP Server"/></a>
+        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news.svg" width="50%" alt="Google News MCP Server"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/server-google-news" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://github.com/ChanMeng666/server-google-news" target="_blank">
+          <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
           </a>
         </p>
@@ -907,6 +907,29 @@ while (isAwake) {
           • Lottie Theme Converter<br>
           • Light/Dark Mode Switch<br>
           • Python Animation Tool
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Google Jobs MCP Server</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank"><img src="/public/brands/server-google-jobs.svg" width="50%" alt="Google Jobs MCP Server"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
+          </a>
+        </p>
+        <p align="left">
+          • Multi-Language Support<br>
+          • Rich Job Details<br>
+          • Advanced Search Features
         </p>
       </div>
     </td>

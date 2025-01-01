@@ -1350,6 +1350,13 @@ while (isAwake) {
         </a>
       </div>
     </td>
+    <td width="20%">
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/complete-guide-publishing-your-first-npm-package-chan-meng-srrec/" target="_blank">
+          <img src="/public/articles/PublishYourFirstnpmPackage.png" width="100%" alt="A Complete Guide to Publishing Your First npm Package"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

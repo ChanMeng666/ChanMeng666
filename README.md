@@ -935,29 +935,22 @@ while (isAwake) {
     </td>
     <td width="20%">
       <h3 align="center">Gradient SVG Generator</h3>
-      <div align="center">
-        <a href="https://gradient-svg-generator.vercel.app/" target="_blank">
-          <img src="https://gradient-svg-generator.vercel.app/?text=Gradient%20SVG&template=aurora&height=150" width="50%" alt="Gradient SVG Generator"/>
-        </a>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/gradient-svg-generator" target="_blank"><img src="/public/brands/gradient-svg-generator.svg" width="50%" alt="Gradient SVG Generator"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/gradient-svg-generator" target="_blank">
-            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://gradient-svg-generator.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live_Demo-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
           </a>
-        </p>
-        <p>
-          <img src="https://img.shields.io/badge/node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white"/>
-          <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"/>
-          <img src="https://img.shields.io/badge/SVG-%23FFB13B.svg?style=for-the-badge&logo=svg&logoColor=black"/>
         </p>
         <p align="left">
           • Animated gradient SVG generation<br>
           • Customizable text and colors<br>
-          • Multiple gradient templates<br>
+          • Multiple gradient templates
         </p>
       </div>
     </td>

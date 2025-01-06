@@ -944,7 +944,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://gradient-svg-generator.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
         <p align="left">

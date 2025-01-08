@@ -287,27 +287,6 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">Reincarnation Journey</h3>
-      <div align="center">  
-        <a href="https://journey-of-reincarnation.vercel.app" target="_blank"><img src="/public/brands/journey-of-reincarnation2.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/journey-of-reincarnation" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://journey-of-reincarnation.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-        </p>
-        <p align="left">
-          • Interactive Reincarnation Simulator<br>
-          • Multi-Cultural Life Journeys<br>
-          • Immersive User Experience
-        </p>
-      </div>
-    </td>
-    <td width="20%">
       <h3 align="center">FreePeriod Official</h3>
       <div align="center">  
         <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/brands/FreePeriodLogo.png" width="50%" alt="FreePeriod Official Logo"/></a>
@@ -367,6 +346,27 @@ while (isAwake) {
           • Fishing Club Management System<br>
           • Python & Flask Backend<br>
           • Events & Scheduling Features
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">LinkedIn Jobs Search</h3>
+      <div align="center">  
+        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/linkedin-jobs-search" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://linkedin-jobs-search.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Advanced job search with multiple filters<br>
+          • Real-time search results<br>
+          • Modern responsive UI design
         </p>
       </div>
     </td>
@@ -453,27 +453,6 @@ while (isAwake) {
           • Job Assessment Tool<br>
           • Next.js Application<br>
           • Multi-dimension Analysis
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">LinkedIn Jobs Search</h3>
-      <div align="center">  
-        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/linkedin-jobs-search" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://linkedin-jobs-search.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
-          </a>
-        </p>
-        <p align="left">
-          • Advanced job search with multiple filters<br>
-          • Real-time search results<br>
-          • Modern responsive UI design
         </p>
       </div>
     </td>
@@ -1018,6 +997,27 @@ while (isAwake) {
           • Period Care Tracker<br>
           • React Native App<br>
           • Smart Timer & Reminders
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Reincarnation Journey</h3>
+      <div align="center">  
+        <a href="https://journey-of-reincarnation.vercel.app" target="_blank"><img src="/public/brands/journey-of-reincarnation2.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/journey-of-reincarnation" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://journey-of-reincarnation.vercel.app" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Interactive Reincarnation Simulator<br>
+          • Multi-Cultural Life Journeys<br>
+          • Immersive User Experience
         </p>
       </div>
     </td>

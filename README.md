@@ -823,11 +823,12 @@ while (isAwake) {
 
 <div align="center">
 
-![Header](https://gradient-svg-generator.vercel.app/?text=Create+Beautiful+Gradients&height=150&template=progress-pride)
+[![Header](https://gradient-svg-generator.vercel.app/?text=Create+Beautiful+Gradients&height=150&template=progress-pride)](https://github.com/ChanMeng666/gradient-svg-generator)
 
-### ✨ Gradient SVG Generator - Add stunning animated gradients to your GitHub profile!
+🌈 Gradient SVG Generator - Add stunning animated gradients to your GitHub profile!
 
 [![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/?text=Try+It+Now!&height=40&template=pride-rainbow)](https://github.com/ChanMeng666/gradient-svg-generator)
+
 ⭐ Star this project if you find it useful!
 
 </div>

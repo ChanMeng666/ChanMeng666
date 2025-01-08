@@ -329,23 +329,23 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">East Coast Anglers Club</h3>
+      <h3 align="center">Job Value Assessment</h3>
       <div align="center">  
-        <a href="https://groupac.pythonanywhere.com/" target="_blank"><img src="/public/brands/shipfishing.svg" width="50%" alt="East Coast Anglers Club"/></a>
+        <a href="https://job-valuation.vercel.app/assessment/start" target="_blank"><img src="/public/brands/job-valuation.svg" width="50%" alt="Job Value Assessment Tool"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/fishing-club-project" target="_blank">
+          <a href="https://github.com/ChanMeng666/job-valuation" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://groupac.pythonanywhere.com/login" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
+          <a href="https://job-valuation.vercel.app/assessment/start" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
         <p align="left">
-          • Fishing Club Management System<br>
-          • Python & Flask Backend<br>
-          • Events & Scheduling Features
+          • Job Assessment Tool<br>
+          • Next.js Application<br>
+          • Multi-dimension Analysis
         </p>
       </div>
     </td>
@@ -436,23 +436,23 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">Job Value Assessment</h3>
+      <h3 align="center">East Coast Anglers Club</h3>
       <div align="center">  
-        <a href="https://job-valuation.vercel.app/assessment/start" target="_blank"><img src="/public/brands/job-valuation.svg" width="50%" alt="Job Value Assessment Tool"/></a>
+        <a href="https://groupac.pythonanywhere.com/" target="_blank"><img src="/public/brands/shipfishing.svg" width="50%" alt="East Coast Anglers Club"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/job-valuation" target="_blank">
+          <a href="https://github.com/ChanMeng666/fishing-club-project" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://job-valuation.vercel.app/assessment/start" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          <a href="https://groupac.pythonanywhere.com/login" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
           </a>
         </p>
         <p align="left">
-          • Job Assessment Tool<br>
-          • Next.js Application<br>
-          • Multi-dimension Analysis
+          • Fishing Club Management System<br>
+          • Python & Flask Backend<br>
+          • Events & Scheduling Features
         </p>
       </div>
     </td>

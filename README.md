@@ -1085,8 +1085,8 @@ while (isAwake) {
 
 <div align="center">
 
-  [![Download Resume](https://img.shields.io/badge/Download%20Resume-FF6B6B?style=for-the-badge&logo=box&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng.pdf)
-  [![View Resume](https://img.shields.io/badge/View%20Resume-4CAF50?style=for-the-badge&logo=file&logoColor=white)](https://media.licdn.com/dms/document/media/v2/D562DAQEwxYgaDI2t5g/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1736504731391?e=1737590400&v=beta&t=iCv6gP46v8cyeq3WlPNCgenn3Dv_Fd-E4fP0kAOOYIU)
+  [![Download Resume](https://img.shields.io/badge/Download%20Resume-FF6B6B?style=for-the-badge&logo=mega&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng.pdf)
+  [![View Resume](https://img.shields.io/badge/View%20Resume-4CAF50?style=for-the-badge&logo=adobe&logoColor=white)](https://media.licdn.com/dms/document/media/v2/D562DAQEwxYgaDI2t5g/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1736504731391?e=1737590400&v=beta&t=iCv6gP46v8cyeq3WlPNCgenn3Dv_Fd-E4fP0kAOOYIU)
 
 </div>
 

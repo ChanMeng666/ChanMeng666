@@ -777,14 +777,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Gradient SVG Generator</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/gradient-svg-generator" target="_blank"><img src="/public/brands/gradient-svg-generator.svg" width="50%" alt="Gradient SVG Generator"/></a>
+        <a href="https://gradient-svg-generator.vercel.app/settings" target="_blank"><img src="/public/brands/gradient-svg-generator.svg" width="50%" alt="Gradient SVG Generator"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/gradient-svg-generator" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://gradient-svg-generator.vercel.app/" target="_blank">
+          <a href="https://gradient-svg-generator.vercel.app/settings" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>

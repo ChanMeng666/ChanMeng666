@@ -1414,6 +1414,13 @@ while (isAwake) {
         </a>
       </div>
     </td>
+    <td width="20%">
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/apifox-api-testing-tool-guide-from-beginner-chan-meng-ekqjc/" target="_blank">
+          <img src="/public/articles/ApifoxAPITestingToolGuide.png" width="100%" alt="Apifox API Testing Tool Guide"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

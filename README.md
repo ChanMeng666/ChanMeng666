@@ -1342,6 +1342,7 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Solution for MCP Servers Connection Issues with NVM/NPM</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
           <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
@@ -1349,6 +1350,7 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">How to Add a GitHub Contribution Snake to Your Profile README</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng-tzakc/" target="_blank">
           <img src="/public/articles/HowtoAddaGitHubContributionSnaketoYourProfileREADME.png" width="100%" alt="How to Add a GitHub Contribution Snake to Your Profile README"/>
@@ -1356,6 +1358,7 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Tencent Meeting Screen Recording Download Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-download-videos-from-web-pages-step-by-step-guide-chan-meng-mp5pc/" target="_blank">
           <img src="/public/articles/TencentMeetingScreenRecordingDownloadGuide.png" width="100%" alt="Tencent Meeting Screen Recording Download Guide"/>

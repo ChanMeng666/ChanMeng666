@@ -1402,6 +1402,7 @@ while (isAwake) {
   </tr>
   <tr>
     <td width="20%">
+      <h5 align="center">Protecting Your Open Source Project: A Comprehensive Guide to Combating Code Plagiarism</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/protecting-your-open-source-project-comprehensive-guide-chan-meng-u77wc/" target="_blank">
           <img src="/public/articles/ProtectingYourOpenSourceProject.png" width="100%" alt="Protecting Your Open Source Project"/>
@@ -1409,6 +1410,7 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Creating a Comprehensive File List Documentation System: A Technical Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/creating-comprehensive-file-list-documentation-system-chan-meng-njjxc/?trackingId=a7k%2F2YF1ToWixSz%2BYnZq7A%3D%3D" target="_blank">
           <img src="/public/articles/CreatingaComprehensiveFileListDocumentationSystem.png" width="100%" alt="Creating a Comprehensive File List Documentation System"/>
@@ -1416,6 +1418,7 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">A Complete Guide to Publishing Your First npm Package</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/complete-guide-publishing-your-first-npm-package-chan-meng-srrec/" target="_blank">
           <img src="/public/articles/PublishYourFirstnpmPackage.png" width="100%" alt="A Complete Guide to Publishing Your First npm Package"/>
@@ -1423,6 +1426,7 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Apifox API Testing Tool Guide: From Beginner to Practitioner</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/apifox-api-testing-tool-guide-from-beginner-chan-meng-ekqjc/" target="_blank">
           <img src="/public/articles/ApifoxAPITestingToolGuide.png" width="100%" alt="Apifox API Testing Tool Guide"/>

@@ -1334,6 +1334,7 @@ while (isAwake) {
 <table>
   <tr>
     <td width="20%">
+      <h5 align="center">Essential Files for a Professional GitHub Repository: A Comprehensive Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/" target="_blank">
           <img src="/public/articles/EssentialFilesforaProfessionalGitHubRepository.png" width="100%" alt="Essential Files for a Professional GitHub Repository"/>

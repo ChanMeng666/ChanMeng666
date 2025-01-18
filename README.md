@@ -1368,6 +1368,7 @@ while (isAwake) {
   </tr>
   <tr>
     <td width="20%">
+      <h5 align="center">Building a Web Scraper for Douban Group Posts</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-web-scraper-douban-group-posts-chan-meng-pn6oc/" target="_blank">
           <img src="/public/articles/BuildingaWebScraperforDoubanGroupPosts.png" width="100%" alt="Building a Web Scraper for Douban Group Posts"/>
@@ -1375,6 +1376,7 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">From Git Log to Insights: Evaluating Team Contributions in GitHub Projects</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/from-git-log-insights-evaluating-team-contributions-github-chan-meng-qdtpc/" target="_blank">
           <img src="/public/articles/FromGitLogtoInsights.png" width="100%" alt="From Git Log to Insights Evaluating Team Contributions in GitHub Projects"/>
@@ -1382,6 +1384,7 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">How to Deploy Your React Project to Vercel: A Complete Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng-kkale/" target="_blank">
           <img src="/public/articles/HowtoDeployYourReactProjecttoVercel.png" width="100%" alt="How to Deploy Your React Project to Vercel A Complete Guide"/>
@@ -1389,6 +1392,7 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">The Power of Index Files: A Guide to Better Code Organization in React Projects</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/" target="_blank">
           <img src="/public/articles/ThePowerofIndexFiles.png" width="100%" alt="The Power of Index Files A Guide to Better Code Organization in React Projects"/>

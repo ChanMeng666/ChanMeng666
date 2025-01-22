@@ -1464,6 +1464,14 @@ while (isAwake) {
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Conventional Commits: A Comprehensive Guide</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/conventional-commits-comprehensive-guide-chan-meng-n9psc/" target="_blank">
+          <img src="/public/articles/ConventionalCommits.png" width="100%" alt="Conventional Commits: A Comprehensive Guide"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

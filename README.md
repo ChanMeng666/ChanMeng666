@@ -1455,6 +1455,16 @@ while (isAwake) {
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h5 align="center">Git Branch Management and Project Initialization: A Comprehensive Guide</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/git-branch-management-project-initialization-guide-chan-meng-9oewc/" target="_blank">
+          <img src="/public/articles/GitBranchManagementandProjectInitialization.png" width="100%" alt="Git Branch Management and Project Initialization"/>
+        </a>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

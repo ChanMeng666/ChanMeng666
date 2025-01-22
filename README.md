@@ -1472,6 +1472,14 @@ while (isAwake) {
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Creating a Python MCP Server: A Step-by-Step Guide</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/creating-python-mcp-server-step-by-step-guide-chan-meng-olwmc/" target="_blank">
+          <img src="/public/articles/CreatingaPythonMCPServer.png" width="100%" alt="Creating a Python MCP Server: A Step-by-Step Guide"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

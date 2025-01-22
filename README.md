@@ -1469,6 +1469,31 @@ while (isAwake) {
 </details>
 
 <details>
+<summary><h3>🫧 Lifestyle Articles</h3></summary>
+<table>
+  <tr>
+    <td width="20%">
+      <h5 align="center">My Home's Minimalist Transformation: Before and After</h5>
+      <div align="center">  
+        <a href="https://www.douban.com/group/topic/309627759/?_dtcc=1&_i=75245459vsCiSF" target="_blank">
+          <img src="https://img9.doubanio.com/view/group_topic/l/public/p658085706.webp" width="100%" alt="My Home's Minimalist Transformation: Before and After"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <h5 align="center">A Complete Guide to Legally Changing Your Name as an Adult</h5>
+      <div align="center">  
+        <a href="https://www.douban.com/group/topic/310015982/?_dtcc=1&_i=75245459vsCiSF" target="_blank">
+          <img src="https://img3.doubanio.com/view/group_topic/l/public/p658175277.webp" width="100%" alt="A Complete Guide to Legally Changing Your Name as an Adult"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+</details>
+
+
+<details>
 <summary><h3>🎙️ Featured Interviews</h3></summary>
 <table>
   <tr>

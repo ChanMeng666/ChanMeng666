@@ -1480,6 +1480,14 @@ while (isAwake) {
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Spring Boot Project Database Configuration Guide for Local and Cloud Environments</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/spring-boot-project-database-configuration-guide-local-chan-meng-cuiqc/?trackingId=40yawZV0u6dyjo%2F2HfB3cg%3D%3D" target="_blank">
+          <img src="/public/articles/SpringBootProjectDatabaseConfigurationGuide.png" width="100%" alt="Spring Boot Project Database Configuration Guide for Local and Cloud Environments"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

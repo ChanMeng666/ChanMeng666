@@ -1,3 +1,5 @@
+<a id="readme-top"></a>
+
 ![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=200&section=header&text=Hi%2C%20I%27m%20Chan%20Meng%20👋&fontSize=50&animation=scaleIn&fontAlignY=35&desc=🌿%20A%20minimalist%20%20%20➖%20Subtraction%20for%20life%20%20%20➕%20Addition%20for%20thought&descSize=20&descAlignY=55&descAlign=50)
 
 <div align="center">
@@ -1103,6 +1105,13 @@ while (isAwake) {
     <img src="https://img.shields.io/badge/Discussions-Ask%20Me%20Anything-green?style=for-the-badge&logo=github"/>
   </a>
 </div>
+
+<p align="right">
+  <a href="#readme-top">
+    <img src="https://cdn.simpleicons.org/arrow-up/4285F4" width="16" height="16" alt="back to top" align="center"/>
+    Back to Top
+  </a>
+</p>
 
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=☕%20Support%20My%20Work&fontSize=40&color=0:FFDD00,100:A65D37&stroke=A65D37)

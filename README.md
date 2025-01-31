@@ -1283,6 +1283,14 @@ while (isAwake) {
 </table>
 </details>
 
+<br />
+
+<div align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
+
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 
 <details open>
@@ -1357,6 +1365,13 @@ while (isAwake) {
 
 </details>
 
+<br />
+
+<div align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📝%20Articles&fontSize=40&color=0:FFA500,100:DC143C&stroke=DC143C)
 
@@ -1559,6 +1574,13 @@ while (isAwake) {
 </table>
 </details>
 
+<br />
+
+<div align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📊%20GitHub%20Stats&fontSize=40&color=0:32CD32,100:006400&stroke=006400)
 
@@ -1640,6 +1662,14 @@ while (isAwake) {
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
 
+</div>
+
+<br />
+
+<div align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
 </div>
 
 

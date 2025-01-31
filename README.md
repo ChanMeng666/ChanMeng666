@@ -1108,7 +1108,7 @@ while (isAwake) {
 
 <p align="right">
   <a href="#readme-top">
-    <img src="https://cdn.simpleicons.org/arrow-up/4285F4" width="16" height="16" alt="back to top" align="center"/>
+    <img src="https://cdn.simpleicons.org/circleci/343434" width="16" height="16" alt="back to top" align="center"/>
     Back to Top
   </a>
 </p>

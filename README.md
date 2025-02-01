@@ -1225,42 +1225,6 @@ while (isAwake) {
       </div>
     </td>
   </tr>
-  <tr>
-    <td width="50%">
-      <h3 align="center">Forward with Her</h3>
-      <div align="center">  
-        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/ForwardwithHer_logo.jpg" width="50%" alt="Forward with Her Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <strong>Technology & Professional Development Mentor</strong><br>
-          Oct 2024 - Present · Remote
-        </p>
-        <p align="left">
-          • One-on-one mentorship for women in STEM<br>
-          • Group mentoring sessions and knowledge sharing<br>
-          • Part of 360+ mentor network supporting 800+ mentees
-        </p>
-      </div>
-    </td>
-    <td width="50%">
-      <h3 align="center">CORDE</h3>
-      <div align="center">  
-        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <strong>Full Stack Developer</strong><br>
-          Jun 2024 - Nov 2024 · Hybrid
-        </p>
-        <p align="left">
-          • Developed offline-capable mobile app with React Native<br>
-          • Implemented data encryption and authentication<br>
-          • Built robust SQLite data architecture
-        </p>
-      </div>
-    </td>
-  </tr>
 </table>
 
 <br />

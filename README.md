@@ -1160,6 +1160,8 @@ while (isAwake) {
       <h3 align="center">ByteDance</h3>
       <div align="center">  
         <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
+        <br>
+        <br>
         <p>
           <strong>Backend Developer</strong><br>
           Nov 2024 - Present · Remote

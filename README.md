@@ -1176,6 +1176,9 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">FreePeriod</h3>
       <div align="center">  
+        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
+        <br>
+        <br>
         <p>
           <strong>Chief Technology Officer (CTO)</strong><br>
           Nov 2024 - Present · Remote
@@ -1192,6 +1195,9 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Forward with Her</h3>
       <div align="center">  
+        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
+        <br>
+        <br>
         <p>
           <strong>Technology & Professional Development Mentor</strong><br>
           Oct 2024 - Present · Remote
@@ -1206,6 +1212,9 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">CORDE</h3>
       <div align="center">  
+        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
+        <br>
+        <br>
         <p>
           <strong>Full Stack Developer</strong><br>
           Jun 2024 - Nov 2024 · Hybrid

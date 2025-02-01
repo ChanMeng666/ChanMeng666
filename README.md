@@ -1467,7 +1467,7 @@ while (isAwake) {
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📜%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
 
 <details>
-<summary><h3>🏆 HackerRank Professional Certifications</h3></summary>
+<summary><h3>🐱‍👤 HackerRank Professional Certifications</h3></summary>
 <table>
   <tr>
     <td align="center" width="20%">
@@ -1539,7 +1539,7 @@ while (isAwake) {
 </details>
 
 <details>
-<summary><h3>🏆 Microsoft Career Certifications</h3></summary>
+<summary><h3>🐱‍👤 Microsoft Career Certifications</h3></summary>
 <table>
   <tr>
     <td align="center" width="20%">
@@ -1585,7 +1585,7 @@ while (isAwake) {
 </details>
 
 <details>
-<summary><h3>🏆 GitHub Career Certifications</h3></summary>
+<summary><h3>🐱‍👤 GitHub Career Certifications</h3></summary>
 <table>
   <tr>
     <td align="center" width="20%">

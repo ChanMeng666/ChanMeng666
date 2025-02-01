@@ -1151,6 +1151,8 @@ while (isAwake) {
 ![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&reversal=true&section=footer)
 
 
+<details>
+<summary><h1>💼 Work Experience</h1></summary>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💼%20Work%20Experience&fontSize=40&color=0:87CEEB,100:4169E1&stroke=4169E1)
 
@@ -1225,6 +1227,7 @@ while (isAwake) {
   </a>
 </div>
 
+</details>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎓%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
 

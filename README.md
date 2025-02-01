@@ -1158,6 +1158,7 @@ while (isAwake) {
   <tr>
     <td width="50%">
       <h3 align="center">ByteDance</h3>
+      <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
       <div align="center">  
         <p>
           <strong>Backend Developer</strong><br>

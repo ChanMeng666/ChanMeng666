@@ -1152,7 +1152,7 @@ while (isAwake) {
 
 
 <details>
-<summary><h1>💼 Work Experience</h1></summary>
+<summary><h1>💼 Experience</h1></summary>
 
 <table>
   <tr>

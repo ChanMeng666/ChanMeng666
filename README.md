@@ -1151,80 +1151,6 @@ while (isAwake) {
 ![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&reversal=true&section=footer)
 
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎓%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
-
-<details>
-<summary><h3>🏆 HackerRank Professional Certifications</h3></summary>
-<table>
-  <tr>
-    <td align="center" width="20%">
-      <img src="/public/certificates/SoftwareEngineerCertificate.png" width="100%" alt="HackerRank Software Engineer Certificate"/>
-      <p><strong>Software Engineer Certificate</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/FrontendDeveloper(React)Certificate.png" width="100%" alt="HackerRank Frontend Developer (React) Certificate"/>
-      <p><strong>Frontend Developer (React)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/SQL(Advanced)Certificate.png" width="100%" alt="HackerRank SQL (Advanced) Certificate"/>
-      <p><strong>SQL (Advanced)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/JavaScript(Intermediate)Certificate.png" width="100%" alt="HackerRank JavaScript (Intermediate) Certificate"/>
-      <p><strong>JavaScript (Intermediate)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/RestAPI(Intermediate)Certificate.png" width="100%" alt="HackerRank Rest API (Intermediate) Certificate"/>
-      <p><strong>Rest API (Intermediate)</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Nodejs(Intermediate)Certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
-      <p><strong>Node.js (Intermediate)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Angular(Intermediate)Certificate.png" width="100%" alt="HackerRank Angular (Intermediate) Certificate"/>
-      <p><strong>Angular (Intermediate)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Go(Intermediate)Certificate.png" width="100%" alt="HackerRank Go (Intermediate) Certificate"/>
-      <p><strong>Go (Intermediate)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/R(Intermediate)Certificate.png" width="100%" alt="HackerRank R (Intermediate) Certificate"/>
-      <p><strong>R (Intermediate)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/ProblemSolving(Intermediate)Certificate.png" width="100%" alt="HackerRank Problem Solving (Intermediate) Certificate"/>
-      <p><strong>Problem Solving (Intermediate)</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Java(Basic)Certificate.png" width="100%" alt="HackerRank Java (Basic) Certificate"/>
-      <p><strong>Java (Basic)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Python(Basic)Certificate.png" width="100%" alt="HackerRank Python (Basic) Certificate"/>
-      <p><strong>Python (Basic)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/React(Basic)Certificate.png" width="100%" alt="HackerRank React (Basic) Certificate"/>
-      <p><strong>React (Basic)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/CSS(Basic)Certificate.png" width="100%" alt="HackerRank CSS (Basic) Certificate"/>
-      <p><strong>CSS (Basic)</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="/public/certificates/Csharp(Basic)Certificate.png" width="100%" alt="HackerRank C Sharp (Basic) Certificate"/>
-      <p><strong>C# (Basic)</strong></p>
-    </td>
-  </tr>
-</table>
-</details>
-
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💼%20Work%20Experience&fontSize=40&color=0:87CEEB,100:4169E1&stroke=4169E1)
 
@@ -1303,6 +1229,80 @@ while (isAwake) {
   </a>
 </div>
 
+
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎓%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
+
+<details>
+<summary><h3>🏆 HackerRank Professional Certifications</h3></summary>
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/SoftwareEngineerCertificate.png" width="100%" alt="HackerRank Software Engineer Certificate"/>
+      <p><strong>Software Engineer Certificate</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/FrontendDeveloper(React)Certificate.png" width="100%" alt="HackerRank Frontend Developer (React) Certificate"/>
+      <p><strong>Frontend Developer (React)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/SQL(Advanced)Certificate.png" width="100%" alt="HackerRank SQL (Advanced) Certificate"/>
+      <p><strong>SQL (Advanced)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/JavaScript(Intermediate)Certificate.png" width="100%" alt="HackerRank JavaScript (Intermediate) Certificate"/>
+      <p><strong>JavaScript (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/RestAPI(Intermediate)Certificate.png" width="100%" alt="HackerRank Rest API (Intermediate) Certificate"/>
+      <p><strong>Rest API (Intermediate)</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Nodejs(Intermediate)Certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
+      <p><strong>Node.js (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Angular(Intermediate)Certificate.png" width="100%" alt="HackerRank Angular (Intermediate) Certificate"/>
+      <p><strong>Angular (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Go(Intermediate)Certificate.png" width="100%" alt="HackerRank Go (Intermediate) Certificate"/>
+      <p><strong>Go (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/R(Intermediate)Certificate.png" width="100%" alt="HackerRank R (Intermediate) Certificate"/>
+      <p><strong>R (Intermediate)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/ProblemSolving(Intermediate)Certificate.png" width="100%" alt="HackerRank Problem Solving (Intermediate) Certificate"/>
+      <p><strong>Problem Solving (Intermediate)</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Java(Basic)Certificate.png" width="100%" alt="HackerRank Java (Basic) Certificate"/>
+      <p><strong>Java (Basic)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Python(Basic)Certificate.png" width="100%" alt="HackerRank Python (Basic) Certificate"/>
+      <p><strong>Python (Basic)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/React(Basic)Certificate.png" width="100%" alt="HackerRank React (Basic) Certificate"/>
+      <p><strong>React (Basic)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/CSS(Basic)Certificate.png" width="100%" alt="HackerRank CSS (Basic) Certificate"/>
+      <p><strong>CSS (Basic)</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Csharp(Basic)Certificate.png" width="100%" alt="HackerRank C Sharp (Basic) Certificate"/>
+      <p><strong>C# (Basic)</strong></p>
+    </td>
+  </tr>
+</table>
+</details>
 
 <details>
 <summary><h3>🏆 Microsoft Career Certifications</h3></summary>

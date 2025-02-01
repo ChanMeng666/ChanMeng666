@@ -1164,10 +1164,9 @@ while (isAwake) {
           Nov 2024 - Present · Remote
         </p>
         <p align="left">
-          • Completed 15 AI-powered coding challenges on MarsCode platform<br>
           • Hands-on experience with microservices architecture<br>
           • Expertise in SQL and data center infrastructure<br>
-          • Advanced backend development training from ByteDance experts
+          • Advanced backend development mentored by ByteDance experts
         </p>
       </div>
     </td>
@@ -1181,7 +1180,6 @@ while (isAwake) {
         <p align="left">
           • Leading technical development of smart vending solutions<br>
           • Architecting web and mobile applications<br>
-          • Building and leading technical team<br>
           • Establishing development processes and standards
         </p>
       </div>
@@ -1196,7 +1194,6 @@ while (isAwake) {
           Oct 2024 - Present · Remote
         </p>
         <p align="left">
-          • Selected from 200+ applicants (40% acceptance rate)<br>
           • One-on-one mentorship for women in STEM<br>
           • Group mentoring sessions and knowledge sharing<br>
           • Part of 360+ mentor network supporting 800+ mentees
@@ -1212,7 +1209,6 @@ while (isAwake) {
         </p>
         <p align="left">
           • Developed offline-capable mobile app with React Native<br>
-          • Integrated GIS functionalities using ArcGIS<br>
           • Implemented data encryption and authentication<br>
           • Built robust SQLite data architecture
         </p>

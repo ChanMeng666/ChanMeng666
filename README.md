@@ -1290,6 +1290,60 @@ while (isAwake) {
 
 
 <details>
+<summary><h1>🏆 Honors & Awards</h1></summary>
+<table>
+  <tr>
+    <td width="33%">
+      <h3 align="center">Dean's List</h3>
+      <div align="center">  
+        <p>
+          <strong>Top 5% Academic Performance</strong><br>
+          Faculty of Environment, Society & Design<br>
+          Jan 2025
+        </p>
+        <p align="left">
+          Recognized for outstanding academic excellence in Semester 2, 2024, placing among the top 5% of students. Demonstrated exceptional achievement and commitment to scholarly excellence.
+        </p>
+      </div>
+    </td>
+    <td width="33%">
+      <h3 align="center">FemTech Excellence Award</h3>
+      <div align="center">  
+        <p>
+          <strong>Women's Health Technology Challenge</strong><br>
+          FemTech China<br>
+          Dec 2024
+        </p>
+        <p align="left">
+          Award-winning team member at China's inaugural FemTech Weekend. Led product development through intensive workshops and mentoring sessions, creating innovative solutions for women's healthcare.
+        </p>
+      </div>
+    </td>
+    <td width="33%">
+      <h3 align="center">Master's with Distinction</h3>
+      <div align="center">  
+        <p>
+          <strong>Applied Computing</strong><br>
+          Lincoln University<br>
+          Dec 2024
+        </p>
+        <p align="left">
+          Awarded Distinction for achieving an average of 80%+ across all courses in the Master of Applied Computing program at New Zealand's specialist land-based university.
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+<br />
+<div align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
+</details>
+
+
+<details>
 <summary><h1>👍 Recommendations</h1></summary>
 <table>
   <tr>

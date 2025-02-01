@@ -1239,7 +1239,57 @@ while (isAwake) {
 
 </details>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎓%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
+
+<details>
+<summary><h1>🎓 Education</h1></summary>
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Lincoln University</h3>
+      <div align="center">  
+        <a href="https://www.lincoln.ac.nz/" target="_blank"><img src="/public/education/lincolnuni_logo.jpg" width="50%" alt="Lincoln University Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Master's Degree in Applied Computing</strong><br>
+          Nov 2023 - Nov 2024 · Distinction · Dean's List
+        </p>
+        <p align="left">
+          • Specialized in GIS and Information Technology<br>
+          • Developed enterprise software solutions using OOP & Agile<br>
+          • Mastered advanced database management and NoSQL systems
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">Jiangsu Normal University</h3>
+      <div align="center">  
+        <a href="http://www.jsnu.edu.cn/main.htm" target="_blank"><img src="/public/education/jsnu.jpg" width="50%" alt="Jiangsu Normal University Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Bachelor's Degree in Geography Science</strong><br>
+          Sep 2012 - Jun 2016 · Distinction
+        </p>
+        <p align="left">
+          • Specialized in GIS and Remote Sensing<br>
+          • Top scores in Programming and Software Development<br>
+          • Hands-on experience through field practice and internships
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+<br />
+<div align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
+</details>
+
+
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📜%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
 
 <details>
 <summary><h3>🏆 HackerRank Professional Certifications</h3></summary>

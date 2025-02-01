@@ -1111,7 +1111,7 @@ while (isAwake) {
 
 <div align="right">
   <a href="#readme-projects">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Projects-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 
@@ -1151,6 +1151,7 @@ while (isAwake) {
 
 ![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&reversal=true&section=footer)
 
+<a id="readme-top"></a>
 
 <details>
 <summary><h1>💼 Experience</h1></summary>
@@ -1240,6 +1241,7 @@ while (isAwake) {
 
 </details>
 
+<a id="readme-top"></a>
 
 <details>
 <summary><h1>🎓 Education</h1></summary>
@@ -1289,6 +1291,7 @@ while (isAwake) {
 </div>
 </details>
 
+<a id="readme-top"></a>
 
 <details>
 <summary><h1>🏆 Honors & Awards</h1></summary>
@@ -1343,6 +1346,7 @@ while (isAwake) {
 </div>
 </details>
 
+<a id="readme-top"></a>
 
 <details>
 <summary><h1>👍 Recommendations</h1></summary>
@@ -1464,6 +1468,7 @@ while (isAwake) {
 </div>
 </details>
 
+<a id="readme-top"></a>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📜%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
 
@@ -1605,6 +1610,8 @@ while (isAwake) {
   </a>
 </div>
 
+<a id="readme-top"></a>
+
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 
 <details open>
@@ -1686,6 +1693,8 @@ while (isAwake) {
     <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
+
+<a id="readme-top"></a>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📝%20Articles&fontSize=40&color=0:FFA500,100:DC143C&stroke=DC143C)
 

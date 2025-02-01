@@ -1154,8 +1154,6 @@ while (isAwake) {
 <details>
 <summary><h1>💼 Work Experience</h1></summary>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💼%20Work%20Experience&fontSize=40&color=0:87CEEB,100:4169E1&stroke=4169E1)
-
 <table>
   <tr>
     <td width="50%">

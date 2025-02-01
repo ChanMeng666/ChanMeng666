@@ -1159,7 +1159,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">ByteDance</h3>
       <div align="center">  
-        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
+        <a href="https://www.bytedance.com/en/" target="_blank"><img src="/public/experience/ByteDance.png" width="50%" alt="ByteDance Logo"/></a>
         <br>
         <br>
         <p>
@@ -1176,7 +1176,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">FreePeriod</h3>
       <div align="center">  
-        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
+        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/FreePeriodLogo.png" width="50%" alt="FreePeriod Logo"/></a>
         <br>
         <br>
         <p>
@@ -1195,7 +1195,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Forward with Her</h3>
       <div align="center">  
-        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
+        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/ForwardwithHer_logo.jpg" width="50%" alt="Forward with Her Logo"/></a>
         <br>
         <br>
         <p>

@@ -1315,13 +1315,30 @@ while (isAwake) {
       </div>
     </td>
     <td width="50%">
-      <h3 align="center">Shiyu Fang</h3>
+      <h3 align="center">Robin Lee</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/shiyu-fang/" target="_blank"><img src="/public/recommendations/Shiyu.jpg" width="50%" alt="Shiyu Fang"/></a>
+        <a href="https://www.linkedin.com/in/%E4%BA%A6%E5%98%89-%E6%9D%8E-710674278/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQEAIQXcY6PfDg/profile-displayphoto-shrink_400_400/B56ZRygEJmGsAk-/0/1737087797522?e=1743638400&v=beta&t=P3dv8m1rJwkYa_d5psrNXT3PhdRAZwhNcH0ess8XxuQ" width="50%" alt="Robin Lee"/></a>
         <br>
         <br>
         <p>
-          <strong>Web Developer</strong><br>
+          <strong>Student at Tianjin Normal University</strong><br>
+          Mentee
+        </p>
+        <p align="left">
+          "I’m so fortunate to have Chan as my mentor! Her passion, expertise, and patience have helped me gain more technical skills and cultivate innovative thinking abilities. Thanks for opening the door to the future of the technology!"
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Shiyu Fang</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/shiyu-fang1/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D03AQGdWmMyuMl7eQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694119437054?e=1743638400&v=beta&t=lILSuOkTIMeJJR2St4jZbMltBFIahFnA6Q-l1qFYGlE" width="50%" alt="Shiyu Fang"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Web Developer at GDS Communication</strong><br>
           Mentee
         </p>
         <p align="left">
@@ -1329,35 +1346,56 @@ while (isAwake) {
         </p>
       </div>
     </td>
-  </tr>
-  <tr>
     <td width="50%">
       <h3 align="center">Jixuan Jessie Wan</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/jixuan-jessie-wan/" target="_blank"><img src="/public/recommendations/Jessie.jpg" width="50%" alt="Jixuan Jessie Wan"/></a>
+        <a href="https://www.linkedin.com/in/jixuan-wan-7422962050/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C5603AQHh9V2ONRrt9A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1525811115918?e=1743638400&v=beta&t=DHRozmM_ftOA__Arp_I2ynCW6BW_zumO-5jUAPswUpM" width="50%" alt="Jixuan Jessie Wan"/></a>
         <br>
         <br>
         <p>
           <strong>Data Analyst at Deloitte</strong><br>
-          Course Participant
+          Mentee
         </p>
         <p align="left">
-          "With Chan's step-by-step guidance, I not only overcame technical challenges but also successfully created a website. Her teaching style is meticulous and thorough, with patient and in-depth explanations for each tool. She not only enhanced my skills but also greatly boosted my confidence."
+          "I am delighted to have the opportunity to recommend Chan Meng on LinkedIn. Having just completed Chan's exceptional course, I am eager to share my learning experience. Chan's teaching style is meticulous and thorough, with patient and in-depth explanations for the use of each tool.
+        </p>
+        <p align="left">
+          Previously, I often found myself stuck at the configuration stage with tools, but with Chan's step-by-step guidance, I not only overcame these challenges but also successfully created a website. This is a significant achievement for me and has filled me with immense excitement and pride. All of this is thanks to Chan's professional instruction and generous sharing of knowledge.
+        </p>
+        <p align="left">
+          I am sincerely grateful to Chan for not only enhancing my skills but also greatly boosting my confidence. I wholeheartedly recommend Chan Meng to anyone seeking professional guidance and looking to advance in the technical field."
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Di Peng</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/di-peng-25636033b/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQHv7SvX_ToUcA/company-logo_200_200/company-logo_200_200/0/1631320271211?e=1746662400&v=beta&t=cVav8haEx5oxTMfirGO9gT1rGBcnXP5GwmN1548W0vc" width="50%" alt="Di Peng"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Student at ShanghaiTech University</strong><br>
+          Mentee
+        </p>
+        <p align="left">
+          "I recently had the opportunity to join Chan's AI-assisted development course through Forward with Her, where I created my first personal website using the Cursor editor, incorporating my own curated media elements. The experience introduced me to the fascinating world of web and app development. Chan's hands-on teaching approach and technical expertise made complex concepts approachable, particularly through interactive problem-solving sessions. I'm excited to see more of her innovative work in the tech space!"
         </p>
       </div>
     </td>
     <td width="50%">
       <h3 align="center">Qiao Jun</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/qiao-jun/" target="_blank"><img src="/public/recommendations/Qiao.jpg" width="50%" alt="Qiao Jun"/></a>
+        <a href="https://www.linkedin.com/in/qiao-jun-78a1b1282/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4D0BAQFJU3_2fIeNWw/company-logo_200_200/company-logo_200_200/0/1631309794782?e=1746662400&v=beta&t=-yN1A3BwSgHGBjeFNZqPNX4RBps0NIow0ReG08L_L0c" width="50%" alt="Qiao Jun"/></a>
         <br>
         <br>
         <p>
           <strong>Student at Tsinghua University</strong><br>
-          Team Member
+          Mentee
         </p>
         <p align="left">
-          "Chan is not only meticulous but also enthusiastic about exploring new technologies. Her passion for coding is contagious—working with her made me realize that programming can be both fun and immensely rewarding. I wholeheartedly recommend her for any role where innovation, collaboration, and technical expertise are valued."
+          "I had the pleasure of working alongside Chan, who is not only meticulous but also enthusiastic about exploring new technologies. She introduced me to the fascinating world of AI programming and showed me how creating personal web pages could be both simple and enjoyable. Her patience in debugging and her willingness to share the plugins and websites she developed greatly benefited our team. Chan’s passion for coding is contagious—working with her made me realize that programming can be both fun and immensely rewarding. I wholeheartedly recommend her for any role where innovation, collaboration, and technical expertise are valued."
         </p>
       </div>
     </td>

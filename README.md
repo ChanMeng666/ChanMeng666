@@ -1225,6 +1225,85 @@ while (isAwake) {
 </table>
 </details>
 
+
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💼%20Work%20Experience&fontSize=40&color=0:87CEEB,100:4169E1&stroke=4169E1)
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">ByteDance</h3>
+      <div align="center">  
+        <p>
+          <strong>Backend Developer</strong><br>
+          Nov 2024 - Present · Remote
+        </p>
+        <p align="left">
+          • Completed 15 AI-powered coding challenges on MarsCode platform<br>
+          • Hands-on experience with microservices architecture<br>
+          • Expertise in SQL and data center infrastructure<br>
+          • Advanced backend development training from ByteDance experts
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">FreePeriod</h3>
+      <div align="center">  
+        <p>
+          <strong>Chief Technology Officer (CTO)</strong><br>
+          Nov 2024 - Present · Remote
+        </p>
+        <p align="left">
+          • Leading technical development of smart vending solutions<br>
+          • Architecting web and mobile applications<br>
+          • Building and leading technical team<br>
+          • Establishing development processes and standards
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Forward with Her</h3>
+      <div align="center">  
+        <p>
+          <strong>Technology & Professional Development Mentor</strong><br>
+          Oct 2024 - Present · Remote
+        </p>
+        <p align="left">
+          • Selected from 200+ applicants (40% acceptance rate)<br>
+          • One-on-one mentorship for women in STEM<br>
+          • Group mentoring sessions and knowledge sharing<br>
+          • Part of 360+ mentor network supporting 800+ mentees
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">CORDE</h3>
+      <div align="center">  
+        <p>
+          <strong>Full Stack Developer</strong><br>
+          Jun 2024 - Nov 2024 · Hybrid
+        </p>
+        <p align="left">
+          • Developed offline-capable mobile app with React Native<br>
+          • Integrated GIS functionalities using ArcGIS<br>
+          • Implemented data encryption and authentication<br>
+          • Built robust SQLite data architecture
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<div align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
+
+
 <details>
 <summary><h3>🏆 Microsoft Career Certifications</h3></summary>
 <table>

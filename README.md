@@ -1151,7 +1151,7 @@ while (isAwake) {
 
 ![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&reversal=true&section=footer)
 
-<a id="readme-top"></a>
+<a id="readme-experience"></a>
 
 <details>
 <summary><h1>💼 Experience</h1></summary>
@@ -1234,14 +1234,14 @@ while (isAwake) {
 <br />
 
 <div align="right">
-  <a href="#readme-top">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  <a href="#readme-experience">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Experience-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 
 </details>
 
-<a id="readme-top"></a>
+<a id="readme-education"></a>
 
 <details>
 <summary><h1>🎓 Education</h1></summary>
@@ -1285,13 +1285,13 @@ while (isAwake) {
 </table>
 <br />
 <div align="right">
-  <a href="#readme-top">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  <a href="#readme-education">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Education-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 </details>
 
-<a id="readme-top"></a>
+<a id="readme-awards"></a>
 
 <details>
 <summary><h1>🏆 Honors & Awards</h1></summary>
@@ -1340,13 +1340,13 @@ while (isAwake) {
 </table>
 <br />
 <div align="right">
-  <a href="#readme-top">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  <a href="#readme-awards">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Honors%20&%20Awards-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 </details>
 
-<a id="readme-top"></a>
+<a id="readme-recommendations"></a>
 
 <details>
 <summary><h1>👍 Recommendations</h1></summary>
@@ -1462,13 +1462,13 @@ while (isAwake) {
 </table>
 <br />
 <div align="right">
-  <a href="#readme-top">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  <a href="#readme-recommendations">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Recommendations-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 </details>
 
-<a id="readme-top"></a>
+<a id="readme-certifications"></a>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📜%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
 
@@ -1605,12 +1605,12 @@ while (isAwake) {
 <br />
 
 <div align="right">
-  <a href="#readme-top">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  <a href="#readme-certifications">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Certifications-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 
-<a id="readme-top"></a>
+<a id="readme-tech-stack"></a>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 
@@ -1689,12 +1689,12 @@ while (isAwake) {
 <br />
 
 <div align="right">
-  <a href="#readme-top">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  <a href="#readme-tech-stack">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Tech%20Stack-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 
-<a id="readme-top"></a>
+<a id="readme-articles"></a>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📝%20Articles&fontSize=40&color=0:FFA500,100:DC143C&stroke=DC143C)
 
@@ -1900,8 +1900,8 @@ while (isAwake) {
 <br />
 
 <div align="right">
-  <a href="#readme-top">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  <a href="#readme-articles">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Articles-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 

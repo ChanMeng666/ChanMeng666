@@ -1289,6 +1289,83 @@ while (isAwake) {
 </details>
 
 
+<details>
+<summary><h1>👍 Recommendations</h1></summary>
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Patricia Anthony</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/patricia-anthony-90b877327/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQGddNKFm7kWiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725833893884?e=1743638400&v=beta&t=fAu7H-vwwSWV2wxkLiMzQiQZMV5FOr6OrKHRQ0dAs9w" width="50%" alt="Patricia Anthony"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Associate Professor at Lincoln University</strong><br>
+          Academic Advisor
+        </p>
+        <p align="left">
+          "Chan Meng demonstrated excellent technical skills, a strong work ethic, and an inquisitive nature. She consistently excelled in both coursework and practical projects, approaching challenges with critical thinking and creativity. Her ability to work independently and collaboratively, along with her excellent problem-solving skills, makes her a valuable asset in any setting."
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">Shiyu Fang</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/shiyu-fang/" target="_blank"><img src="/public/recommendations/Shiyu.jpg" width="50%" alt="Shiyu Fang"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Web Developer</strong><br>
+          Mentee
+        </p>
+        <p align="left">
+          "Chan's innovative approach to combining AI with web development is truly inspiring! Her enthusiasm is contagious, and she opened my eyes to exciting new ways of coding. A fantastic mentor who makes tech learning fun!"
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Jixuan Jessie Wan</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/jixuan-jessie-wan/" target="_blank"><img src="/public/recommendations/Jessie.jpg" width="50%" alt="Jixuan Jessie Wan"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Data Analyst at Deloitte</strong><br>
+          Course Participant
+        </p>
+        <p align="left">
+          "With Chan's step-by-step guidance, I not only overcame technical challenges but also successfully created a website. Her teaching style is meticulous and thorough, with patient and in-depth explanations for each tool. She not only enhanced my skills but also greatly boosted my confidence."
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">Qiao Jun</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/qiao-jun/" target="_blank"><img src="/public/recommendations/Qiao.jpg" width="50%" alt="Qiao Jun"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Student at Tsinghua University</strong><br>
+          Team Member
+        </p>
+        <p align="left">
+          "Chan is not only meticulous but also enthusiastic about exploring new technologies. Her passion for coding is contagious—working with her made me realize that programming can be both fun and immensely rewarding. I wholeheartedly recommend her for any role where innovation, collaboration, and technical expertise are valued."
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+<br />
+<div align="right">
+  <a href="#readme-top">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
+</details>
+
+
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📜%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
 
 <details>

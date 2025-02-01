@@ -1156,7 +1156,7 @@ while (isAwake) {
 
 <table>
   <tr>
-    <td width="20%">
+    <td width="50%">
       <h3 align="center">ByteDance</h3>
       <div align="center">  
         <a href="https://www.bytedance.com/en/" target="_blank"><img src="/public/experience/ByteDance.png" width="50%" alt="ByteDance Logo"/></a>
@@ -1173,7 +1173,7 @@ while (isAwake) {
         </p>
       </div>
     </td>
-    <td width="20%">
+    <td width="50%">
       <h3 align="center">FreePeriod</h3>
       <div align="center">  
         <a href="https://corde.nz/" target="_blank"><img src="/public/experience/FreePeriodLogo.png" width="50%" alt="FreePeriod Logo"/></a>
@@ -1190,7 +1190,9 @@ while (isAwake) {
         </p>
       </div>
     </td>
-    <td width="20%">
+  </tr>
+  <tr>
+    <td width="50%">
       <h3 align="center">Forward with Her</h3>
       <div align="center">  
         <a href="https://corde.nz/" target="_blank"><img src="/public/experience/ForwardwithHer_logo.jpg" width="50%" alt="Forward with Her Logo"/></a>
@@ -1207,7 +1209,7 @@ while (isAwake) {
         </p>
       </div>
     </td>
-    <td width="20%">
+    <td width="50%">
       <h3 align="center">CORDE</h3>
       <div align="center">  
         <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>

@@ -1252,7 +1252,7 @@ while (isAwake) {
         <br>
         <p>
           <strong>Master's Degree in Applied Computing</strong><br>
-          Nov 2023 - Nov 2024 · Distinction · Dean's List
+          Nov 2023 - Dec 2024 · Distinction · Dean's List
         </p>
         <p align="left">
           • Specialized in GIS and Information Technology<br>

@@ -1304,13 +1304,13 @@ while (isAwake) {
           Academic Advisor
         </p>
         <p align="left">
-          "I am pleased to recommend Chan Meng, who recently completed Master of Applied Computing with distinction at Lincoln Univesity, NZ. Throughout her studies, Chan Meng demonstrated excellent technical skills, a strong work ethic, and an inquisitive nature. She consistently excelled in both coursework and practical projects, approaching challenges with critical thinking and creativity."
+          "I am pleased to recommend Chan Meng, who recently completed Master of Applied Computing with distinction at Lincoln Univesity, NZ. Throughout her studies, Chan Meng demonstrated excellent technical skills, a strong work ethic, and an inquisitive nature. She consistently excelled in both coursework and practical projects, approaching challenges with critical thinking and creativity.
         </p>
         <p align="left">
-          "Chan Meng is hardworking, detail-oriented, and highly motivated to expand her knowledge. Her ability to work independently and collaboratively, along with her excellent problem-solving skills, makes her a valuable asset in any setting."
+          Chan Meng is hardworking, detail-oriented, and highly motivated to expand her knowledge. Her ability to work independently and collaboratively, along with her excellent problem-solving skills, makes her a valuable asset in any setting.
         </p>
         <p align="left">
-          "I have no doubt that Chan Meng will succeed in her future endeavours and I highly recommend her for any job opportunity in computing."
+          I have no doubt that Chan Meng will succeed in her future endeavours and I highly recommend her for any job opportunity in computing."
         </p>
       </div>
     </td>

@@ -1642,19 +1642,19 @@ while (isAwake) {
     </td>
     <td align="center" width="20%">
       <img src="https://media.licdn.com/dms/image/v2/D5622AQGEaVPPxxdJPg/feedshare-shrink_1280/B56ZTvueCSHEAk-/0/1739188724126?e=1742428800&v=beta&t=JogR3MzX8ZAkO35ykPa9VE3mbuKtoEcgbCAaQZL1Hb0" width="100%" alt="Docker Foundations Professional Certificate"/>
-      <p><strong>Docker Foundations Professional Certificate</strong></p>
+      <p><strong>Docker Professional</strong></p>
     </td>
     <td align="center" width="20%">
       <img src="https://media.licdn.com/dms/image/v2/D5622AQGWjrRq-ij90Q/feedshare-shrink_1280/B56ZT0NvLRHEAo-/0/1739264029656?e=1742428800&v=beta&t=uSvHSDs99cRi2Yei09cx3Wc6Ao8fKeeE7cvPeCl3vtQ" width="100%" alt="Ubuntu Linux Professional Certificate"/>
-      <p><strong>Ubuntu Linux Professional Certificate</strong></p>
+      <p><strong>Ubuntu Linux Professional</strong></p>
     </td>
     <td align="center" width="20%">
       <img src="https://media.licdn.com/dms/image/v2/D5622AQFF7ZF5eHoqMg/feedshare-shrink_1280/B56ZT1Lu4_GsAk-/0/1739280281416?e=1742428800&v=beta&t=h9qYmVGiX2_HMJlQOF-l-zVR5aCVrp_EwkeTogArPkg" width="100%" alt="Anaconda Python for Data Science Professional Certificate"/>
-      <p><strong>Anaconda Python for Data Science Professional Certificate</strong></p>
+      <p><strong>Anaconda Python for Data Science Professional</strong></p>
     </td>
     <td align="center" width="20%">
       <img src="https://media.licdn.com/dms/image/v2/D5622AQH8NzMY_0RfwQ/feedshare-shrink_1280/B56ZT3im35GsAk-/0/1739319832464?e=1742428800&v=beta&t=EwW2xp8jVpzKls_hOybilHL5v8m7mTQnS2rqaAQJQyY" width="100%" alt="Atlassian Agile Project Management Professional Certificate"/>
-      <p><strong>Atlassian Agile Project Management Professional Certificate</strong></p>
+      <p><strong>Atlassian Agile Project Management Professional</strong></p>
     </td>
   </tr>
 </table>

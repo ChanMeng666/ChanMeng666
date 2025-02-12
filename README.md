@@ -1657,6 +1657,16 @@ while (isAwake) {
       <p><strong>Atlassian Agile Project Management Professional</strong></p>
     </td>
   </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="https://media.licdn.com/dms/image/v2/D5622AQGfCQxRqhgBVw/feedshare-shrink_1280/B56ZT1TrNvGoAo-/0/1739282363582?e=1742428800&v=beta&t=7WGzlIy7dy47SvcX-3xEI78IRBNFPgrlejOHilarfyk" width="100%" alt="C++ Programming Professional"/>
+      <p><strong>C++ Programming Professional</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="https://media.licdn.com/dms/image/v2/D5622AQGHnU41qAmeWg/feedshare-shrink_1280/B56ZTy3Tt3GsAk-/0/1739241372862?e=1742428800&v=beta&t=NDhixQeFcrxlwWisClT-5t9LRKV0oxt_3E0sRYhec_g" width="100%" alt="Java Professional"/>
+      <p><strong>Java Professional</strong></p>
+    </td>
+  </tr>
 </table>
 </details>
 

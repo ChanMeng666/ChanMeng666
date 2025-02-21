@@ -1809,7 +1809,7 @@ while (isAwake) {
 <details>
   <summary><h3>☁️ Cloud & Deployment</h3></summary>
   
-![AWS](https://img.shields.io/badge/AWS-20232A?style=for-the-badge&logo=amazon-aws&logoColor=FF9900)
+![AWS](https://img.shields.io/badge/AWS-20232A?style=for-the-badge&logo=amazon&logoColor=FF9900)
 ![Google Cloud](https://img.shields.io/badge/Google_Cloud-20232A?style=for-the-badge&logo=google-cloud&logoColor=4285F4)
 ![Hugging Face](https://img.shields.io/badge/Hugging_Face-20232A?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
 ![Serverless](https://img.shields.io/badge/Serverless-20232A?style=for-the-badge&logo=serverless&logoColor=FD5750)

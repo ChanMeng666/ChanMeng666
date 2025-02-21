@@ -1683,83 +1683,6 @@ while (isAwake) {
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
 
 <details open>
-  <summary><h3>💎 Core Expertise</h3></summary>
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
-![Next.js](https://img.shields.io/badge/Next.js-20232A?style=for-the-badge&logo=next.js&logoColor=white)
-![Python](https://img.shields.io/badge/Python-20232A?style=for-the-badge&logo=python&logoColor=3776AB)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Three.js](https://img.shields.io/badge/Three.js-20232A?style=for-the-badge&logo=three.js&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-20232A?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC)
-
-</details>
-
-<details>
-  <summary><h3>🎪 Frontend Development</h3></summary>
-
-![JavaScript](https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Angular](https://img.shields.io/badge/Angular-20232A?style=for-the-badge&logo=angular&logoColor=DD0031)
-![HTML5](https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26)
-![CSS3](https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=css3&logoColor=1572B6)
-![Redux](https://img.shields.io/badge/Redux-20232A?style=for-the-badge&logo=redux&logoColor=764ABC)
-
-</details>
-
-<details>
-  <summary><h3>🏗️ Backend Development</h3></summary>
-
-![Node.js](https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=node.js&logoColor=339933)
-![Flask](https://img.shields.io/badge/Flask-20232A?style=for-the-badge&logo=flask&logoColor=white)
-![Go](https://img.shields.io/badge/Go-20232A?style=for-the-badge&logo=go&logoColor=00ADD8)
-![Java](https://img.shields.io/badge/Java-20232A?style=for-the-badge&logo=openjdk&logoColor=ED8B00)
-
-</details>
-
-<details>
-  <summary><h3>💾 Database</h3></summary>
-
-![MySQL](https://img.shields.io/badge/MySQL-20232A?style=for-the-badge&logo=mysql&logoColor=4479A1)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=316192)
-![SQLite](https://img.shields.io/badge/SQLite-20232A?style=for-the-badge&logo=sqlite&logoColor=003B57)
-
-</details>
-
-<details>
-  <summary><h3>🤖 AI & Data</h3></summary>
-
-![TensorFlow](https://img.shields.io/badge/TensorFlow-20232A?style=for-the-badge&logo=tensorflow&logoColor=FF6F00)
-![Pandas](https://img.shields.io/badge/Pandas-20232A?style=for-the-badge&logo=pandas&logoColor=150458)
-![NumPy](https://img.shields.io/badge/NumPy-20232A?style=for-the-badge&logo=numpy&logoColor=013243)
-![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-20232A?style=for-the-badge&logo=scikit-learn&logoColor=F7931E)
-
-</details>
-
-<details>
-  <summary><h3>🎨 Design & Visualization</h3></summary>
-
-![Figma](https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=F24E1E)
-![D3.js](https://img.shields.io/badge/D3.js-20232A?style=for-the-badge&logo=d3.js&logoColor=F9A03C)
-![Chart.js](https://img.shields.io/badge/Chart.js-20232A?style=for-the-badge&logo=chart.js&logoColor=FF6384)
-
-</details>
-
-<details>
-  <summary><h3>🔧 DevOps & Tools</h3></summary>
-
-![Git](https://img.shields.io/badge/Git-20232A?style=for-the-badge&logo=git&logoColor=F05032)
-![GitHub](https://img.shields.io/badge/GitHub-20232A?style=for-the-badge&logo=github&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-20232A?style=for-the-badge&logo=docker&logoColor=2496ED)
-![VS Code](https://img.shields.io/badge/VS_Code-20232A?style=for-the-badge&logo=visual-studio-code&logoColor=007ACC)
-
-</details>
-
-
-
-
-
-
-<details open>
   <summary><h3>💎 Core Full-Stack Expertise</h3></summary>
   
 ![TypeScript](https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
@@ -1878,7 +1801,6 @@ while (isAwake) {
 ![UI/UX](https://img.shields.io/badge/UI/UX_Design-20232A?style=for-the-badge&logo=design&logoColor=white)
 
 </details>
-
 
 <br />
 

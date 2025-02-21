@@ -1847,6 +1847,18 @@ while (isAwake) {
 ![yarn](https://img.shields.io/badge/yarn-20232A?style=for-the-badge&logo=yarn&logoColor=2C8EBB)
 
 </details>
+<details>
+  <summary><h3>🎯 Professional Skills</h3></summary>
+  
+![Agile](https://img.shields.io/badge/Agile_Development-20232A?style=for-the-badge&logo=agile&logoColor=white)
+![Cross Browser](https://img.shields.io/badge/Cross_Browser_Compatibility-20232A?style=for-the-badge&logo=firefox&logoColor=FF7139)
+![Performance](https://img.shields.io/badge/Performance_Optimization-20232A?style=for-the-badge&logo=speedtest&logoColor=white)
+![Responsive](https://img.shields.io/badge/Responsive_Design-20232A?style=for-the-badge&logo=responsive&logoColor=white)
+![SEO](https://img.shields.io/badge/SEO_Optimization-20232A?style=for-the-badge&logo=googlesearchconsole&logoColor=458CF5)
+![Documentation](https://img.shields.io/badge/Technical_Documentation-20232A?style=for-the-badge&logo=markdown&logoColor=white)
+![UI/UX](https://img.shields.io/badge/UI/UX_Design-20232A?style=for-the-badge&logo=design&logoColor=white)
+
+</details>
 
 
 <br />

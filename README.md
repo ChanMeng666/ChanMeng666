@@ -1757,47 +1757,52 @@ while (isAwake) {
 
 
 
+
+
 <details open>
-  <summary><h3>💎 Core Expertise</h3></summary>
+  <summary><h3>💎 Core Full-Stack Expertise</h3></summary>
   
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
-![Next.js](https://img.shields.io/badge/Next.js-20232A?style=for-the-badge&logo=next.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Python](https://img.shields.io/badge/Python-20232A?style=for-the-badge&logo=python&logoColor=3776AB)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Three.js](https://img.shields.io/badge/Three.js-20232A?style=for-the-badge&logo=three.js&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-20232A?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-20232A?style=for-the-badge&logo=next.js&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=node.js&logoColor=339933)
+![Express](https://img.shields.io/badge/Express-20232A?style=for-the-badge&logo=express&logoColor=white)
 
 </details>
+
 <details>
-  <summary><h3>🎪 Frontend Development</h3></summary>
+  <summary><h3>🎨 Frontend Ecosystem</h3></summary>
   
-![JavaScript](https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Angular](https://img.shields.io/badge/Angular-20232A?style=for-the-badge&logo=angular&logoColor=DD0031)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-20232A?style=for-the-badge&logo=framer&logoColor=0055FF)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![HTML5](https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26)
 ![CSS3](https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=css3&logoColor=1572B6)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-20232A?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC)
 ![Material UI](https://img.shields.io/badge/Material_UI-20232A?style=for-the-badge&logo=mui&logoColor=007FFF)
-![Recharts](https://img.shields.io/badge/Recharts-20232A?style=for-the-badge&logo=recharts&logoColor=22B5BF)
-![Redux](https://img.shields.io/badge/Redux-20232A?style=for-the-badge&logo=redux&logoColor=764ABC)
 ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-20232A?style=for-the-badge&logo=shadcnui&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-20232A?style=for-the-badge&logo=redux&logoColor=764ABC)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-20232A?style=for-the-badge&logo=framer&logoColor=0055FF)
 
 </details>
+
 <details>
-  <summary><h3>🏗️ Backend Development</h3></summary>
+  <summary><h3>⚡ Backend & APIs</h3></summary>
   
-![Express](https://img.shields.io/badge/Express-20232A?style=for-the-badge&logo=express&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-20232A?style=for-the-badge&logo=fastapi&logoColor=009688)
 ![Flask](https://img.shields.io/badge/Flask-20232A?style=for-the-badge&logo=flask&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-20232A?style=for-the-badge&logo=go&logoColor=00ADD8)
 ![Java](https://img.shields.io/badge/Java-20232A?style=for-the-badge&logo=openjdk&logoColor=ED8B00)
-![Node.js](https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=node.js&logoColor=339933)
+![C#](https://img.shields.io/badge/C%23-20232A?style=for-the-badge&logo=c-sharp&logoColor=239120)
+![C++](https://img.shields.io/badge/C++-20232A?style=for-the-badge&logo=cplusplus&logoColor=00599C)
 ![REST APIs](https://img.shields.io/badge/REST_APIs-20232A?style=for-the-badge&logo=fastapi&logoColor=009688)
 ![WebSocket](https://img.shields.io/badge/WebSocket-20232A?style=for-the-badge&logo=socket.io&logoColor=white)
 
 </details>
+
 <details>
-  <summary><h3>💾 Database</h3></summary>
+  <summary><h3>🛢️ Database & Storage</h3></summary>
   
 ![MongoDB](https://img.shields.io/badge/MongoDB-20232A?style=for-the-badge&logo=mongodb&logoColor=47A248)
 ![MySQL](https://img.shields.io/badge/MySQL-20232A?style=for-the-badge&logo=mysql&logoColor=4479A1)
@@ -1806,54 +1811,68 @@ while (isAwake) {
 ![Supabase](https://img.shields.io/badge/Supabase-20232A?style=for-the-badge&logo=supabase&logoColor=3FCF8E)
 
 </details>
-<details>
-  <summary><h3>☁️ Cloud & Deployment</h3></summary>
-  
-![AWS](https://img.shields.io/badge/AWS-20232A?style=for-the-badge&logo=amazon&logoColor=FF9900)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-20232A?style=for-the-badge&logo=google-cloud&logoColor=4285F4)
-![Hugging Face](https://img.shields.io/badge/Hugging_Face-20232A?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
-![Serverless](https://img.shields.io/badge/Serverless-20232A?style=for-the-badge&logo=serverless&logoColor=FD5750)
-![Vercel](https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=white)
 
-</details>
 <details>
-  <summary><h3>🤖 AI & Data</h3></summary>
+  <summary><h3>🤖 AI, ML & Data Science</h3></summary>
   
-![Jupyter](https://img.shields.io/badge/Jupyter-20232A?style=for-the-badge&logo=jupyter&logoColor=F37626)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-20232A?style=for-the-badge&logo=tensorflow&logoColor=FF6F00)
 ![Keras](https://img.shields.io/badge/Keras-20232A?style=for-the-badge&logo=keras&logoColor=D00000)
+![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-20232A?style=for-the-badge&logo=scikit-learn&logoColor=F7931E)
+![Anaconda](https://img.shields.io/badge/Anaconda-20232A?style=for-the-badge&logo=anaconda&logoColor=44A833)
 ![NumPy](https://img.shields.io/badge/NumPy-20232A?style=for-the-badge&logo=numpy&logoColor=013243)
 ![Pandas](https://img.shields.io/badge/Pandas-20232A?style=for-the-badge&logo=pandas&logoColor=150458)
-![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-20232A?style=for-the-badge&logo=scikit-learn&logoColor=F7931E)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-20232A?style=for-the-badge&logo=tensorflow&logoColor=FF6F00)
+![R](https://img.shields.io/badge/R-20232A?style=for-the-badge&logo=r&logoColor=276DC3)
+![Jupyter](https://img.shields.io/badge/Jupyter-20232A?style=for-the-badge&logo=jupyter&logoColor=F37626)
 
 </details>
+
 <details>
-  <summary><h3>🎨 Design & Visualization</h3></summary>
+  <summary><h3>📊 Data Visualization</h3></summary>
   
 ![Chart.js](https://img.shields.io/badge/Chart.js-20232A?style=for-the-badge&logo=chart.js&logoColor=FF6384)
 ![D3.js](https://img.shields.io/badge/D3.js-20232A?style=for-the-badge&logo=d3.js&logoColor=F9A03C)
+![Three.js](https://img.shields.io/badge/Three.js-20232A?style=for-the-badge&logo=three.js&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-20232A?style=for-the-badge&logo=recharts&logoColor=22B5BF)
 ![Figma](https://img.shields.io/badge/Figma-20232A?style=for-the-badge&logo=figma&logoColor=F24E1E)
 
 </details>
+
 <details>
-  <summary><h3>🔧 DevOps & Tools</h3></summary>
+  <summary><h3>🔧 DevOps & System Administration</h3></summary>
   
 ![Docker](https://img.shields.io/badge/Docker-20232A?style=for-the-badge&logo=docker&logoColor=2496ED)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-20232A?style=for-the-badge&logo=ubuntu&logoColor=E95420)
 ![Git](https://img.shields.io/badge/Git-20232A?style=for-the-badge&logo=git&logoColor=F05032)
 ![GitHub](https://img.shields.io/badge/GitHub-20232A?style=for-the-badge&logo=github&logoColor=white)
-![npm](https://img.shields.io/badge/npm-20232A?style=for-the-badge&logo=npm&logoColor=CB3837)
-![pip](https://img.shields.io/badge/pip-20232A?style=for-the-badge&logo=pypi&logoColor=3775A9)
 ![VS Code](https://img.shields.io/badge/VS_Code-20232A?style=for-the-badge&logo=visual-studio-code&logoColor=007ACC)
+![npm](https://img.shields.io/badge/npm-20232A?style=for-the-badge&logo=npm&logoColor=CB3837)
 ![yarn](https://img.shields.io/badge/yarn-20232A?style=for-the-badge&logo=yarn&logoColor=2C8EBB)
+![pip](https://img.shields.io/badge/pip-20232A?style=for-the-badge&logo=pypi&logoColor=3775A9)
 
 </details>
+
+<details>
+  <summary><h3>☁️ Cloud & Infrastructure</h3></summary>
+  
+![AWS](https://img.shields.io/badge/AWS-20232A?style=for-the-badge&logo=amazon-aws&logoColor=FF9900)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-20232A?style=for-the-badge&logo=google-cloud&logoColor=4285F4)
+![Vercel](https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging_Face-20232A?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
+![Serverless](https://img.shields.io/badge/Serverless-20232A?style=for-the-badge&logo=serverless&logoColor=FD5750)
+
+</details>
+
 <details>
   <summary><h3>🎯 Professional Skills</h3></summary>
   
-![Agile](https://img.shields.io/badge/Agile_Development-20232A?style=for-the-badge&logo=agile&logoColor=white)
-![Cross Browser](https://img.shields.io/badge/Cross_Browser_Compatibility-20232A?style=for-the-badge&logo=firefox&logoColor=FF7139)
+![Agile](https://img.shields.io/badge/Agile_Development-20232A?style=for-the-badge&logo=atlassian&logoColor=0052CC)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-20232A?style=for-the-badge&logo=shield&logoColor=white)
+![Sustainable Tech](https://img.shields.io/badge/Sustainable_Tech-20232A?style=for-the-badge&logo=leaf&logoColor=4CAF50)
+![Project Management](https://img.shields.io/badge/Project_Management-20232A?style=for-the-badge&logo=task&logoColor=white)
+![System Administration](https://img.shields.io/badge/System_Administration-20232A?style=for-the-badge&logo=terminal&logoColor=white)
+![Business Analysis](https://img.shields.io/badge/Business_Analysis-20232A?style=for-the-badge&logo=analytics&logoColor=white)
+![Data Analysis](https://img.shields.io/badge/Data_Analysis-20232A?style=for-the-badge&logo=chartmogul&logoColor=white)
 ![Performance](https://img.shields.io/badge/Performance_Optimization-20232A?style=for-the-badge&logo=speedtest&logoColor=white)
-![Responsive](https://img.shields.io/badge/Responsive_Design-20232A?style=for-the-badge&logo=responsive&logoColor=white)
 ![SEO](https://img.shields.io/badge/SEO_Optimization-20232A?style=for-the-badge&logo=googlesearchconsole&logoColor=458CF5)
 ![Documentation](https://img.shields.io/badge/Technical_Documentation-20232A?style=for-the-badge&logo=markdown&logoColor=white)
 ![UI/UX](https://img.shields.io/badge/UI/UX_Design-20232A?style=for-the-badge&logo=design&logoColor=white)

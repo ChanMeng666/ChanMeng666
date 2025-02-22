@@ -1666,6 +1666,15 @@ while (isAwake) {
       <img src="https://media.licdn.com/dms/image/v2/D5622AQGHnU41qAmeWg/feedshare-shrink_1280/B56ZTy3Tt3GsAk-/0/1739241372862?e=1742428800&v=beta&t=NDhixQeFcrxlwWisClT-5t9LRKV0oxt_3E0sRYhec_g" width="100%" alt="Java Professional"/>
       <p><strong>Java Professional</strong></p>
     </td>
+    <td align="center" width="20%">
+      <div style="position: relative; margin-bottom: 10px;">
+        <img src="/public/certificates/SoftwareEngineerCertificate.png" width="100%" alt="HackerRank Software Engineer Certificate"/>
+        <img src="https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1748476800&v=beta&t=SwqL2mWZM3vKWgZlKg3RFE7VJap-2yUoKbx7ZwUo6MM" 
+             style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+             alt="HackerRank Logo"/>
+      </div>
+      <p><strong>Software Engineer Certificate</strong></p>
+    </td>
   </tr>
 </table>
 </details>
@@ -1684,7 +1693,7 @@ while (isAwake) {
 
 <details open>
   <summary><h3>💎 Core Full-Stack Expertise</h3></summary>
-  
+
 ![TypeScript](https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6)
 ![JavaScript](https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Python](https://img.shields.io/badge/Python-20232A?style=for-the-badge&logo=python&logoColor=3776AB)
@@ -1697,7 +1706,7 @@ while (isAwake) {
 
 <details>
   <summary><h3>🎨 Frontend Ecosystem</h3></summary>
-  
+
 ![Angular](https://img.shields.io/badge/Angular-20232A?style=for-the-badge&logo=angular&logoColor=DD0031)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![HTML5](https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26)
@@ -1712,7 +1721,7 @@ while (isAwake) {
 
 <details>
   <summary><h3>⚡ Backend & APIs</h3></summary>
-  
+
 ![FastAPI](https://img.shields.io/badge/FastAPI-20232A?style=for-the-badge&logo=fastapi&logoColor=009688)
 ![Flask](https://img.shields.io/badge/Flask-20232A?style=for-the-badge&logo=flask&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-20232A?style=for-the-badge&logo=go&logoColor=00ADD8)
@@ -1726,7 +1735,7 @@ while (isAwake) {
 
 <details>
   <summary><h3>🛢️ Database & Storage</h3></summary>
-  
+
 ![MongoDB](https://img.shields.io/badge/MongoDB-20232A?style=for-the-badge&logo=mongodb&logoColor=47A248)
 ![MySQL](https://img.shields.io/badge/MySQL-20232A?style=for-the-badge&logo=mysql&logoColor=4479A1)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=316192)
@@ -1737,7 +1746,7 @@ while (isAwake) {
 
 <details>
   <summary><h3>🤖 AI, ML & Data Science</h3></summary>
-  
+
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-20232A?style=for-the-badge&logo=tensorflow&logoColor=FF6F00)
 ![Keras](https://img.shields.io/badge/Keras-20232A?style=for-the-badge&logo=keras&logoColor=D00000)
 ![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-20232A?style=for-the-badge&logo=scikit-learn&logoColor=F7931E)
@@ -1751,7 +1760,7 @@ while (isAwake) {
 
 <details>
   <summary><h3>📊 Data Visualization</h3></summary>
-  
+
 ![Chart.js](https://img.shields.io/badge/Chart.js-20232A?style=for-the-badge&logo=chart.js&logoColor=FF6384)
 ![D3.js](https://img.shields.io/badge/D3.js-20232A?style=for-the-badge&logo=d3.js&logoColor=F9A03C)
 ![Three.js](https://img.shields.io/badge/Three.js-20232A?style=for-the-badge&logo=three.js&logoColor=white)
@@ -1762,7 +1771,7 @@ while (isAwake) {
 
 <details>
   <summary><h3>🔧 DevOps & System Administration</h3></summary>
-  
+
 ![Docker](https://img.shields.io/badge/Docker-20232A?style=for-the-badge&logo=docker&logoColor=2496ED)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-20232A?style=for-the-badge&logo=ubuntu&logoColor=E95420)
 ![Git](https://img.shields.io/badge/Git-20232A?style=for-the-badge&logo=git&logoColor=F05032)
@@ -1776,7 +1785,7 @@ while (isAwake) {
 
 <details>
   <summary><h3>☁️ Cloud & Infrastructure</h3></summary>
-  
+
 ![AWS](https://img.shields.io/badge/AWS-20232A?style=for-the-badge&logo=amazon-aws&logoColor=FF9900)
 ![Google Cloud](https://img.shields.io/badge/Google_Cloud-20232A?style=for-the-badge&logo=google-cloud&logoColor=4285F4)
 ![Vercel](https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=white)
@@ -1787,7 +1796,7 @@ while (isAwake) {
 
 <details>
   <summary><h3>🎯 Professional Skills</h3></summary>
-  
+
 ![Agile](https://img.shields.io/badge/Agile_Development-20232A?style=for-the-badge&logo=atlassian&logoColor=0052CC)
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-20232A?style=for-the-badge&logo=shield&logoColor=white)
 ![Sustainable Tech](https://img.shields.io/badge/Sustainable_Tech-20232A?style=for-the-badge&logo=leaf&logoColor=4CAF50)

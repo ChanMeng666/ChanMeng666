@@ -1669,11 +1669,13 @@ while (isAwake) {
     <td align="center" width="20%">
       <div style="position: relative; margin-bottom: 10px;">
         <img src="/public/certificates/SoftwareEngineerCertificate.png" width="100%" alt="HackerRank Software Engineer Certificate"/>
-        <img src="https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1748476800&v=beta&t=SwqL2mWZM3vKWgZlKg3RFE7VJap-2yUoKbx7ZwUo6MM" 
-             style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
-             alt="HackerRank Logo"/>
       </div>
-      <p><strong>Software Engineer Certificate</strong></p>
+      <p>
+          <img src="https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1748476800&v=beta&t=SwqL2mWZM3vKWgZlKg3RFE7VJap-2yUoKbx7ZwUo6MM" 
+         style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+         alt="HackerRank Logo"/>
+          <strong>Software Engineer Certificate</strong>
+      </p>
     </td>
   </tr>
 </table>

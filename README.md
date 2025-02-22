@@ -2053,6 +2053,14 @@ alt="Wolfram Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">[Podcast] From Math Teacher to Full-Stack Developer</h3>
+      <div align="center">  
+        <a href="https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2?s=eyJ1IjoiNjA5OWNhNmNlMGY1ZTcyM2JiYTA4NDc0In0%3D" target="_blank">
+          <img src="/public/articles/FromMathTeachertoFull-StackDeveloper.jpg" width="50%" alt="From Math Teacher to Full-Stack Developer"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

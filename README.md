@@ -1643,7 +1643,30 @@ while (isAwake) {
 </details>
 
 <details>
-<summary><h3>🐱‍👤 Other Professional Certifications</h3></summary>
+<summary>
+    <h3>🐱‍👤 Other Professional Certifications</h3>
+    <img src="https://media.licdn.com/dms/image/v2/C560BAQFmuLSyL1nlPA/company-logo_100_100/company-logo_100_100/0/1678231359044/github_logo?e=1748476800&v=beta&t=p0nB14CE7SFdCN6p-XZiypnT_iTQKhi_Fh2Beiyu1qQ" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="GitHub Logo"/>
+    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFWt4Tl53wjZQ/company-logo_100_100/company-logo_100_100/0/1705960989383/docker_logo?e=1748476800&v=beta&t=vU84PKYYfqmgVMruZKRoXx_x_ySVHvG4-iT33rh5uMQ" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="Docker Logo"/>
+    <img src="https://media.licdn.com/dms/image/v2/C560BAQEbIYAkAURcYw/company-logo_100_100/company-logo_100_100/0/1650566107463/canonical_logo?e=1748476800&v=beta&t=VLzi_hxTcoSWKAPt9u-QNRfYLAQ2bKgtVVjn_aB4tyE" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="Canonical Logo"/>
+    <img src="https://media.licdn.com/dms/image/v2/D560BAQHm8gCQMydp7g/company-logo_100_100/company-logo_100_100/0/1719847870864/anacondainc_logo?e=1748476800&v=beta&t=QNG5XwU1_QDNhd_0LuJ3AmYQ20aHy2yFQx78fYDOg1k" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="Anaconda Logo"/>
+    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGeyLL6crkJKg/company-logo_100_100/company-logo_100_100/0/1735593604612/atlassian_logo?e=1748476800&v=beta&t=WWquEADSG16mB2HFL8HOaWkFEiJA9wTfW3xPqPlzung" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="Atlassian Logo"/>
+    <img src="https://media.licdn.com/dms/image/v2/D4D0BAQE_07XlODFojw/company-logo_100_100/company-logo_100_100/0/1702546323323/cppinstitute_logo?e=1748476800&v=beta&t=Ac3-mty-tBQRvMfVJCvTmcl8ocgtj7Gds8_UXxYWtZI" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="C++ Institute Logo"/>
+    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFIxLcCtbdBEw/company-logo_100_100/company-logo_100_100/0/1715703491195/jetbrains_logo?e=1748476800&v=beta&t=yDzRo0yLBXTQPiyuxE4bdTgOyK4kvbkKzDQvSdST3iM" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="JetBrains Logo"/>
+</summary>
 <table>
   <tr>
     <td align="center" width="20%">
@@ -1675,17 +1698,6 @@ while (isAwake) {
     <td align="center" width="20%">
       <img src="https://media.licdn.com/dms/image/v2/D5622AQGHnU41qAmeWg/feedshare-shrink_1280/B56ZTy3Tt3GsAk-/0/1739241372862?e=1742428800&v=beta&t=NDhixQeFcrxlwWisClT-5t9LRKV0oxt_3E0sRYhec_g" width="100%" alt="Java Professional"/>
       <p><strong>Java Professional</strong></p>
-    </td>
-    <td align="center" width="20%">
-      <div style="position: relative; margin-bottom: 10px;">
-        <img src="/public/certificates/SoftwareEngineerCertificate.png" width="100%" alt="HackerRank Software Engineer Certificate"/>
-      </div>
-      <p>
-          <img src="https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1748476800&v=beta&t=SwqL2mWZM3vKWgZlKg3RFE7VJap-2yUoKbx7ZwUo6MM" 
-         style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
-         alt="HackerRank Logo"/>
-          <strong>Software Engineer Certificate</strong>
-      </p>
     </td>
   </tr>
 </table>

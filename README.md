@@ -1516,7 +1516,7 @@ while (isAwake) {
 
 <details>
 <summary>
-    <img src="https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1748476800&v=beta&t=SwqL2mWZM3vKWgZlKg3RFE7VJap-2yUoKbx7ZwUo6MM" alt="HackerRank Logo"/>
+    <img src="https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_100_100/company-logo_100_100/0/1705561459405/hackerrank_logo?e=1748476800&v=beta&t=SwqL2mWZM3vKWgZlKg3RFE7VJap-2yUoKbx7ZwUo6MM" width="50%" alt="HackerRank Logo"/>
     <h3>HackerRank Professional Certifications</h3>
 </summary>
 <table>

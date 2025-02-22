@@ -1638,6 +1638,10 @@ while (isAwake) {
       <img src="/public/certificates/CareerEssentialsinSustainableTechbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Sustainable Tech"/>
       <p><strong>Sustainable Tech</strong></p>
     </td>
+    <td align="center" width="20%">
+      <img src="https://media.licdn.com/dms/image/v2/D5622AQEi7fYxyCSIJw/feedshare-shrink_1280/B56ZUrTA1DGoAk-/0/1740188159573?e=1743033600&v=beta&t=8ozZIn2PkNAGqjI38NAWJV0Sl89Ju_ebE0ggjc8nrDA" width="100%" alt="Azure AI Essentials Professional Certificate"/>
+      <p><strong>Azure AI Essentials</strong></p>
+    </td>
   </tr>
 </table>
 </details>

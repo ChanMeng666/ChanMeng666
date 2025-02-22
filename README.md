@@ -1670,6 +1670,9 @@ alt="C++ Institute Logo"/>
     <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFIxLcCtbdBEw/company-logo_100_100/company-logo_100_100/0/1715703491195/jetbrains_logo?e=1748476800&v=beta&t=yDzRo0yLBXTQPiyuxE4bdTgOyK4kvbkKzDQvSdST3iM" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="JetBrains Logo"/>
+    <img src="https://media.licdn.com/dms/image/v2/C4D0BAQH0-xEV33mp1A/company-logo_100_100/company-logo_100_100/0/1631301014132?e=1748476800&v=beta&t=QSYVxyK-7pbowUYcetnVRxUOJ-56-1n7BO28NIZe24w" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="Wolfram Logo"/>
 </summary>
 <table>
   <tr>
@@ -1702,6 +1705,10 @@ alt="JetBrains Logo"/>
     <td align="center" width="20%">
       <img src="https://media.licdn.com/dms/image/v2/D5622AQGHnU41qAmeWg/feedshare-shrink_1280/B56ZTy3Tt3GsAk-/0/1739241372862?e=1742428800&v=beta&t=NDhixQeFcrxlwWisClT-5t9LRKV0oxt_3E0sRYhec_g" width="100%" alt="Java Professional"/>
       <p><strong>Java Professional</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="https://media.licdn.com/dms/image/v2/D5622AQFk50J4Kq7iMg/feedshare-shrink_1280/B56ZUsO3erHEAk-/0/1740203849891?e=1743033600&v=beta&t=GGfPxpQUQBdtsT_Sm6mF98Y_H9VMufo9ECNBpB5VJW0" width="100%" alt="Machine Learning Statistical Foundations"/>
+      <p><strong>Machine Learning Statistical Foundations</strong></p>
     </td>
   </tr>
 </table>

@@ -2054,6 +2054,16 @@ alt="Wolfram Logo"/>
       </div>
     </td>
     <td width="20%">
+      <h3 align="center">A Genderless Girl</h3>
+      <div align="center">  
+        <a href="https://mp.weixin.qq.com/s/E0tR5syP1Wa6We60ipd0Vg" target="_blank">
+          <img src="/public/articles/AGenderlessGirl.jpg" width="50%" alt="A Genderless Girl"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%">
       <h3 align="center">[Podcast] From Math Teacher to Full-Stack Developer</h3>
       <div align="center">  
         <a href="https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2?s=eyJ1IjoiNjA5OWNhNmNlMGY1ZTcyM2JiYTA4NDc0In0%3D" target="_blank">

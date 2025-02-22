@@ -1592,7 +1592,12 @@ while (isAwake) {
 </details>
 
 <details>
-<summary><h3>🐱‍👤 Microsoft Career Certifications</h3></summary>
+<summary>
+    <h3>🐱‍👤 Microsoft Career Certifications</h3>
+    <img src="https://media.licdn.com/dms/image/v2/C560BAQE88xCsONDULQ/company-logo_100_100/company-logo_100_100/0/1630652622688/microsoft_logo?e=1748476800&v=beta&t=dUKu-TGEtkXXJlRWkIFBYhE1kb7JVzO5iaM-4L9VFIc" 
+ style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+ alt="Microsoft Logo"/>
+</summary>
 <table>
   <tr>
     <td align="center" width="20%">

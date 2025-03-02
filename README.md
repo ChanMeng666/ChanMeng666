@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=200&section=header&text=Hi%2C%20I%27m%20Chan%20Meng%20👋&fontSize=50&animation=scaleIn&fontAlignY=35&desc=🌿%20A%20minimalist%20%20%20➖%20Subtraction%20for%20life%20%20%20➕%20Addition%20for%20thought&descSize=20&descAlignY=55&descAlign=50)
+[![SVG Banners](https://svg-banners.vercel.app/api?type=rainbow&text1=Chan Meng%20%20🐵&width=800&height=210)](https://github.com/Akshay090/svg-banners)
 
 <div align="center">
   <img src="/public/brands/chan_monkey_logo_black.svg" width="100" height="100" alt="Chan Meng Logo">

@@ -1,6 +1,6 @@
-<a id="readme-top"></a>
-
 [![SVG Banners](https://svg-banners.vercel.app/api?type=rainbow&text1=Chan Meng%20%20🐵&width=800&height=210)](https://github.com/Akshay090/svg-banners)
+
+<a id="readme-top"></a>
 
 <div align="center">
   <img src="/public/brands/chan_monkey_logo_black.svg" width="100" height="100" alt="Chan Meng Logo">

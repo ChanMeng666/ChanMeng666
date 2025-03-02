@@ -4,7 +4,7 @@
 
 <div align="center">
   <img src="/public/brands/chan_monkey_logo_black.svg" width="100" height="100" alt="Chan Meng Logo">
-  
+
   <p>
     <em>🌿 A minimalist</em> <br>
     <em>➖ Subtraction for life</em> <br>
@@ -16,6 +16,7 @@
   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/chanmeng66u)
   [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=yellow)](https://chanmeng.live/)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
+  [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://chanmeng666.medium.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
 
   <img src="/public/chan_snorkelling.gif" width="100%" alt="Chan Meng Snorkelling">

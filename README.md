@@ -14,7 +14,7 @@
 <br />
 
   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/chanmeng66u)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=yellow)](https://chanmeng.live/)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-4F46E5?style=for-the-badge&logo=vercel&logoColor=white)](https://chanmeng.live/)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
   [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://chanmeng666.medium.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)

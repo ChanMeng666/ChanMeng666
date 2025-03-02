@@ -4,6 +4,12 @@
 
 <div align="center">
   <img src="/public/brands/chan_monkey_logo_black.svg" width="100" height="100" alt="Chan Meng Logo">
+  
+  <p>
+    <em>🌿 A minimalist</em> <br>
+    <em>➖ Subtraction for life</em> <br>
+    <em>➕ Addition for thought</em>
+  </p>
 
 <br />
 

@@ -1659,7 +1659,7 @@ while (isAwake) {
     <img src="https://media.licdn.com/dms/image/v2/C560BAQFmuLSyL1nlPA/company-logo_100_100/company-logo_100_100/0/1678231359044/github_logo?e=1748476800&v=beta&t=p0nB14CE7SFdCN6p-XZiypnT_iTQKhi_Fh2Beiyu1qQ" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="GitHub Logo"/>
-    <img src="https://media.licdn.com/dms/image/v2/D4D0DAQF90DKG2X_n0w/img_200_trans/img_200_trans/0/1711400061528?e=1740798000&v=beta&t=RanDFJZXB0DK2Rkrf5HXpzmJkLsS8nncrXgE27nW6aI" 
+    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFWt4Tl53wjZQ/company-logo_200_200/company-logo_200_200/0/1705960989383/docker_logo?e=1749081600&v=beta&t=FoiIC1nMVWuP2sywnxBxmGOMY5k232fNB9vmK6H7eeA" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Docker Logo"/>
     <img src="https://media.licdn.com/dms/image/v2/C560BAQEbIYAkAURcYw/company-logo_100_100/company-logo_100_100/0/1650566107463/canonical_logo?e=1748476800&v=beta&t=VLzi_hxTcoSWKAPt9u-QNRfYLAQ2bKgtVVjn_aB4tyE" 

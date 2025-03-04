@@ -2011,6 +2011,16 @@ alt="Mozilla Logo"/>
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h5 align="center">Creating Educational Animations with Manim: From Script to Final Video</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/creating-educational-animations-manim-from-script-final-chan-meng-9x3lc/" target="_blank">
+          <img src="/public/articles/creating-educational-animations-with-manim.png" width="100%" alt="Creating Educational Animations with Manim"/>
+        </a>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

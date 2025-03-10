@@ -2020,6 +2020,14 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Bug Report: Authentication Redirect Issue</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/bug-report-authentication-redirect-issue-chan-meng-ejmne/" target="_blank">
+          <img src="/public/articles/BugReportAuthenticationRedirectIssue.png" width="100%" alt="Bug Report Authentication Redirect Issue"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

@@ -733,6 +733,27 @@ while (isAwake) {
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Sanicle.AI</h3>
+      <div align="center">  
+        <a href="https://sanicle-ai.vercel.app/" target="_blank"><img src="/public/brands/sanicle_logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://sanicle-ai.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Women's Health Platform for Workplace Wellness<br>
+          • Redis & Neon & Blob<br>
+          • Dual Dashboard System for Employees & HR
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

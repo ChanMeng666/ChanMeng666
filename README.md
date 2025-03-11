@@ -501,7 +501,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/Backend-2ea44f?style=for-the-badge&logo=springboot"/>
           </a>
           <a href="https://github.com/ChanMeng666/douyin-mall-frontend" target="_blank">
-            <img src="https://img.shields.io/badge/Frontend-blue?style=for-the-badge&logo=vue&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Frontend-blue?style=for-the-badge&logo=vue3&logoColor=white"/>
           </a>
         </p>
         <p align="left">

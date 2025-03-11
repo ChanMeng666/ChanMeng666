@@ -98,23 +98,23 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">AgriHire Solutions</h3>
+      <h3 align="center">Sanicle.AI</h3>
       <div align="center">  
-        <a href="https://agrihireaq.pythonanywhere.com/" target="_blank"><img src="/public/brands/AgriHire_Solutions.svg" width="100%" alt="AgriHire Solutions"/></a>
+        <a href="https://sanicle-ai.vercel.app/" target="_blank"><img src="/public/brands/sanicle_logo.png" width="50%" alt="Sanicle.AI Platform"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/agrihire-solutions" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://sanicle-ai.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
         <p align="left">
-          • Auto Repair Shop Management System<br>
-          • Flask & MySQL<br>
-          • Tech & Admin Dashboards
+          • Women's Health Platform for Workplace Wellness<br>
+          • Next.js 15, TypeScript & PostgreSQL<br>
+          • Dual Dashboard System for Employees & HR
         </p>
       </div>
     </td>

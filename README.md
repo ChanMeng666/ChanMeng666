@@ -505,7 +505,7 @@ while (isAwake) {
           </a>
         </p>
         <p align="left">
-          • Full-Stack E-commerce Platform<br>
+          • Separate Frontend and Backend Development<br>
           • Spring Boot & Vue 3<br>
           • AI-Powered Shopping Assistant
         </p>

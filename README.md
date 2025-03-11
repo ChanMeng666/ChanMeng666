@@ -113,7 +113,7 @@ while (isAwake) {
         </p>
         <p align="left">
           • Women's Health Platform for Workplace Wellness<br>
-          • Next.js 15, TypeScript & PostgreSQL<br>
+          • Redis & Neon & Blob<br>
           • Dual Dashboard System for Employees & HR
         </p>
       </div>

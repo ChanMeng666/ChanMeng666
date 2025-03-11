@@ -489,6 +489,29 @@ while (isAwake) {
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">TikTok E-commerce Mall</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/douyin-mall" target="_blank"><img src="/public/brands/TikTokShop.svg" width="50%" alt="TikTok E-commerce Mall"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/douyin-mall" target="_blank">
+           <img src="https://img.shields.io/badge/Backend-2ea44f?style=for-the-badge&logo=springboot"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/douyin-mall-frontend" target="_blank">
+            <img src="https://img.shields.io/badge/Frontend-blue?style=for-the-badge&logo=vue&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Full-Stack E-commerce Platform<br>
+          • Spring Boot & Vue 3<br>
+          • AI-Powered Shopping Assistant
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

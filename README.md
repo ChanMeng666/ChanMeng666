@@ -2250,5 +2250,6 @@ alt="Mozilla Logo"/>
   </a>
 </div>
 
+[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31hsm7bssr42rz4okrtess5stlwq&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false)](https://github.com/kittinan/spotify-github-profile)
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=100&section=footer)

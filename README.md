@@ -2244,12 +2244,12 @@ alt="Mozilla Logo"/>
 
 <br />
 
+[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31hsm7bssr42rz4okrtess5stlwq&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false)](https://github.com/kittinan/spotify-github-profile)
+
 <div align="right">
   <a href="#readme-top">
     <img src="https://img.shields.io/badge/⬆️Back%20to%20Top-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
-
-[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31hsm7bssr42rz4okrtess5stlwq&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false)](https://github.com/kittinan/spotify-github-profile)
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=100&section=footer)

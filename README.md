@@ -68,6 +68,9 @@ while (isAwake) {
           <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=android&logoColor=white"/>
           </a>
+          <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white"/>
+          </a>
         </p>
         <p align="left">
           • Offline-First Field Data Collection App<br>

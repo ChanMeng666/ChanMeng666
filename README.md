@@ -113,6 +113,9 @@ while (isAwake) {
           <a href="https://sanicle-ai.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
+          <a href="https://chanmeng666.github.io/reveal.js/" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
         </p>
         <p align="left">
           • Women's Health Platform for Workplace Wellness<br>

@@ -633,6 +633,27 @@ while (isAwake) {
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">FemTech Weekend</h3>
+      <div align="center">  
+        <a href="https://femtech-weekend.vercel.app/" target="_blank"><img src="/public/brands/femtech-weekend.svg" width="50%" alt="FemTech Weekend Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://femtech-weekend.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Women's Tech Innovation Platform<br>
+          • Multilingual Support (EN/CN)<br>
+          • Next.js 15, React 18 & GSAP Animation
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

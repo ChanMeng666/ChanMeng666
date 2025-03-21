@@ -125,44 +125,44 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">CustomerInsight</h3>
+      <h3 align="center">Gradient SVG Generator</h3>
       <div align="center">  
-        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight.svg" width="50%" alt="Streamlit Logo"/></a>
+        <a href="https://gradient-svg-generator.vercel.app/settings" target="_blank"><img src="/public/brands/gradient-svg-generator.svg" width="50%" alt="Gradient SVG Generator"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/CustomerInsight" target="_blank">
+          <a href="https://github.com/ChanMeng666/gradient-svg-generator" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=streamlit"/>
+          <a href="https://gradient-svg-generator.vercel.app/settings" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
         <p align="left">
-          • Customer Review Analytics<br>
-          • Python & Streamlit<br>
-          • Chinese-First NLP
+          • Animated gradient SVG generation<br>
+          • Customizable text and colors<br>
+          • Multiple gradient templates
         </p>
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">Tencent Meeting Video Downloader</h3>
+      <h3 align="center">Google News MCP Server</h3>
       <div align="center">  
-        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
+        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news.svg" width="50%" alt="Google News MCP Server"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/tencent-meeting-video-downloader" target="_blank">
+          <a href="https://github.com/ChanMeng666/server-google-news" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=googlechrome"/>
+          <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
           </a>
         </p>
         <p align="left">
-          • Chrome Extension<br>
-          • One-Click Download<br>
-          • Save Recordings Locally
+          • Multi-Language Support<br>
+          • Auto News Categorization<br>
+          • Flexible Search Options
         </p>
       </div>
     </td>

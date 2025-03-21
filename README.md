@@ -1402,9 +1402,9 @@ while (isAwake) {
           Mar 2025 - Present · Remote
         </p>
         <p align="left">
-          • Platform connecting female tech enthusiasts, entrepreneurs, and industry experts<br>
-          • Built with Next.js 15, React 18, and Tailwind CSS for responsive design<br>
-          • Features event showcase, community networking, and mentor matching
+          • Platform for women in tech to connect, learn, and showcase projects<br>
+          • Modern tech stack with Next.js, React, and responsive design<br>
+          • Features event registration, mentorship matching, and learning resources
         </p>
       </div>
     </td>

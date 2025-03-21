@@ -1375,6 +1375,42 @@ while (isAwake) {
 <table>
   <tr>
     <td width="50%">
+      <h3 align="center">Sanicle.Cloud</h3>
+      <div align="center">  
+        <a href="https://sanicle.cloud/" target="_blank"><img src="/public/experience/sanicle_logo.png" width="50%" alt="Sanicle.Cloud Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Full Stack Software Engineer</strong><br>
+          Mar 2025 - Present · Remote
+        </p>
+        <p align="left">
+          • Comprehensive health tracking with personalized menstrual calendar<br>
+          • AI-powered health assistant (Sani) for personalized guidance<br>
+          • Dual dashboard system for employees and HR departments
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">FemTech Weekend</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/company/femtech-weekend/posts/?feedView=all" target="_blank"><img src="/public/experience/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Full Stack Developer</strong><br>
+          Mar 2025 - Present · Remote
+        </p>
+        <p align="left">
+          • Platform connecting female tech enthusiasts, entrepreneurs, and industry experts<br>
+          • Built with Next.js 15, React 18, and Tailwind CSS for responsive design<br>
+          • Features event showcase, community networking, and mentor matching
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
       <h3 align="center">ByteDance</h3>
       <div align="center">  
         <a href="https://www.bytedance.com/en/" target="_blank"><img src="/public/experience/ByteDance.png" width="50%" alt="ByteDance Logo"/></a>
@@ -1382,7 +1418,7 @@ while (isAwake) {
         <br>
         <p>
           <strong>Backend Developer</strong><br>
-          Nov 2024 - Present · Remote
+          Nov 2024 - Mar 2025 · Remote
         </p>
         <p align="left">
           • Hands-on experience with microservices architecture<br>
@@ -1418,7 +1454,7 @@ while (isAwake) {
         <br>
         <p>
           <strong>Technology & Professional Development Mentor</strong><br>
-          Oct 2024 - Present · Remote
+          Oct 2024 - Feb 2025 · Remote
         </p>
         <p align="left">
           • One-on-one mentorship for women in STEM<br>

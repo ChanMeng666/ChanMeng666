@@ -1566,7 +1566,7 @@ while (isAwake) {
           Mar 2025
         </p>
         <p align="left">
-          Recognized for exceptional performance as part of the CHAN team during the 2025 UN Women FemTech Hackathon in Beijing. Contributed to innovative solutions addressing women's health challenges in professional environments through collaborative work with multiple organizations including Sanicle and NGO CSW Forum.
+          Recognized for exceptional performance as independent developer during the 2025 UN Women FemTech Hackathon in Beijing. Contributed to innovative solutions addressing women's health challenges in professional environments through collaborative work with multiple organizations including Sanicle and NGO CSW Forum.
         </p>
       </div>
     </td>

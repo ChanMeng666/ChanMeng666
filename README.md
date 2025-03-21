@@ -1985,9 +1985,9 @@ alt="Mozilla Logo"/>
   <summary><h3>🛢️ Database & Storage</h3></summary>
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-20232A?style=for-the-badge&logo=mongodb&logoColor=47A248)
-![MySQL](https://img.shields.io/badge/MySQL-20232A?style=for-the-badge&logo=mysql&logoColor=4479A1)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=316192)
-![SQLite](https://img.shields.io/badge/SQLite-20232A?style=for-the-badge&logo=sqlite&logoColor=003B57)
+![MySQL](https://img.shields.io/badge/MySQL-20232A?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-20232A?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-20232A?style=for-the-badge&logo=supabase&logoColor=3FCF8E)
 
 </details>
@@ -1999,8 +1999,8 @@ alt="Mozilla Logo"/>
 ![Keras](https://img.shields.io/badge/Keras-20232A?style=for-the-badge&logo=keras&logoColor=D00000)
 ![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-20232A?style=for-the-badge&logo=scikit-learn&logoColor=F7931E)
 ![Anaconda](https://img.shields.io/badge/Anaconda-20232A?style=for-the-badge&logo=anaconda&logoColor=44A833)
-![NumPy](https://img.shields.io/badge/NumPy-20232A?style=for-the-badge&logo=numpy&logoColor=013243)
-![Pandas](https://img.shields.io/badge/Pandas-20232A?style=for-the-badge&logo=pandas&logoColor=150458)
+![NumPy](https://img.shields.io/badge/NumPy-20232A?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-20232A?style=for-the-badge&logo=pandas&logoColor=white)
 ![R](https://img.shields.io/badge/R-20232A?style=for-the-badge&logo=r&logoColor=276DC3)
 ![Jupyter](https://img.shields.io/badge/Jupyter-20232A?style=for-the-badge&logo=jupyter&logoColor=F37626)
 

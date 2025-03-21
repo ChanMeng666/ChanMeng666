@@ -1563,7 +1563,7 @@ while (isAwake) {
         <p>
           <strong>Beyond Beijing 30 Conference</strong><br>
           United Nations Headquarters, New York<br>
-          March 14, 2025
+          Mar 14, 2025
         </p>
         <p align="left">
           Invited as a featured speaker to present Sanicle AI—an innovative women's workplace health management platform—at the historic UN CSW 69 conference marking the 30th anniversary of the Beijing Declaration. Demonstrated how AI technology effectively addresses workplace gender inequities through practical health solutions to an audience of international delegates, UN officials, and global leaders. Presentation highlighted tangible impacts of Sanicle AI, received enthusiastic recognition from the commission's international bureau members, and generated multiple collaboration requests from NGOs and member states. This achievement validates the platform's significant contribution to women's economic empowerment and workplace health innovation, key themes of this milestone global summit.
@@ -1576,7 +1576,7 @@ while (isAwake) {
         <p>
           <strong>Women's Workplace Health Innovation</strong><br>
           FemTech Weekend<br>
-          Mar 2025
+          Mar 10, 2025
         </p>
         <p align="left">
           Recognized for exceptional performance as independent developer during the 2025 UN Women FemTech Hackathon in Beijing. Contributed to innovative solutions addressing women's health challenges in professional environments through collaborative work with multiple organizations including Sanicle and NGO CSW Forum.
@@ -1591,7 +1591,7 @@ while (isAwake) {
         <p>
           <strong>Top 5% Academic Performance</strong><br>
           Faculty of Environment, Society & Design<br>
-          Jan 2025
+          Jan 23, 2025
         </p>
         <p align="left">
           Recognized for outstanding academic excellence in Semester 2, 2024, placing among the top 5% of students. Demonstrated exceptional achievement and commitment to scholarly excellence.
@@ -1604,7 +1604,7 @@ while (isAwake) {
         <p>
           <strong>Women's Health Technology Challenge</strong><br>
           FemTech China<br>
-          Dec 2024
+          Dec 14, 2024
         </p>
         <p align="left">
           Award-winning team member at China's inaugural FemTech Weekend. Led product development through intensive workshops and mentoring sessions, creating innovative solutions for women's healthcare.
@@ -1619,7 +1619,7 @@ while (isAwake) {
         <p>
           <strong>Applied Computing</strong><br>
           Lincoln University<br>
-          Dec 2024
+          Dec 18, 2024
         </p>
         <p align="left">
           Awarded Distinction for achieving an average of 80%+ across all courses in the Master of Applied Computing program at New Zealand's specialist land-based university.

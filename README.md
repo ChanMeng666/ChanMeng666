@@ -166,6 +166,27 @@ while (isAwake) {
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Interactive Story Generator</h3>
+      <div align="center">  
+        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo.svg" width="50%" alt="Interactive Story Generator"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/interactive-story-generator" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Powered Interactive Storytelling<br>
+          • Multiple Themes & Genre Support<br>
+          • Advanced Story Customization
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 

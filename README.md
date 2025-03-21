@@ -1599,21 +1599,6 @@ while (isAwake) {
       </div>
     </td>
     <td width="33%">
-      <h3 align="center">FemTech Excellence Award</h3>
-      <div align="center">  
-        <p>
-          <strong>Women's Health Technology Challenge</strong><br>
-          FemTech China<br>
-          Dec 14, 2024
-        </p>
-        <p align="left">
-          Award-winning team member at China's inaugural FemTech Weekend. Led product development through intensive workshops and mentoring sessions, creating innovative solutions for women's healthcare.
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td width="33%">
       <h3 align="center">Master's with Distinction</h3>
       <div align="center">  
         <p>
@@ -1623,6 +1608,21 @@ while (isAwake) {
         </p>
         <p align="left">
           Awarded Distinction for achieving an average of 80%+ across all courses in the Master of Applied Computing program at New Zealand's specialist land-based university.
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <h3 align="center">FemTech Excellence Award</h3>
+      <div align="center">  
+        <p>
+          <strong>Women's Health Technology Challenge</strong><br>
+          FemTech China<br>
+          Dec 1, 2024
+        </p>
+        <p align="left">
+          Award-winning team member at China's inaugural FemTech Weekend. Led product development through intensive workshops and mentoring sessions, creating innovative solutions for women's healthcare.
         </p>
       </div>
     </td>

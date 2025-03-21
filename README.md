@@ -1558,6 +1558,19 @@ while (isAwake) {
 <table>
   <tr>
     <td width="33%">
+      <h3 align="center">United Nations CSW 69 Speaker</h3>
+      <div align="center">
+        <p>
+          <strong>Beyond Beijing 30 Conference</strong><br>
+          United Nations Headquarters, New York<br>
+          March 14, 2025
+        </p>
+        <p align="left">
+          Invited as a featured speaker to present Sanicle AI—an innovative women's workplace health management platform—at the historic UN CSW 69 conference marking the 30th anniversary of the Beijing Declaration. Demonstrated how AI technology effectively addresses workplace gender inequities through practical health solutions to an audience of international delegates, UN officials, and global leaders. Presentation highlighted tangible impacts of Sanicle AI, received enthusiastic recognition from the commission's international bureau members, and generated multiple collaboration requests from NGOs and member states. This achievement validates the platform's significant contribution to women's economic empowerment and workplace health innovation, key themes of this milestone global summit.
+        </p>
+      </div>
+    </td>
+    <td width="33%">
       <h3 align="center">UN Women FemTech Hackathon Outstanding Performer</h3>
       <div align="center">  
         <p>

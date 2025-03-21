@@ -1413,7 +1413,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">ByteDance</h3>
       <div align="center">  
-        <a href="https://www.bytedance.com/en/" target="_blank"><img src="/public/experience/ByteDance.png" width="50%" alt="ByteDance Logo"/></a>
+        <a href="https://www.bytedance.com/en/" target="_blank"><img src="/public/experience/bytedance-brand-color.svg" width="50%" alt="ByteDance Logo"/></a>
         <br>
         <br>
         <p>

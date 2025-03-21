@@ -1583,6 +1583,8 @@ while (isAwake) {
         </p>
       </div>
     </td>
+  </tr>
+  <tr>
     <td width="33%">
       <h3 align="center">Dean's List</h3>
       <div align="center">  
@@ -1609,6 +1611,8 @@ while (isAwake) {
         </p>
       </div>
     </td>
+  </tr>
+  <tr>
     <td width="33%">
       <h3 align="center">Master's with Distinction</h3>
       <div align="center">  

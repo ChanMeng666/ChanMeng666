@@ -316,6 +316,9 @@ while (isAwake) {
           <a href="https://free-period-website.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
+          <a href="https://github.com/user-attachments/assets/2820ff83-e6cf-4cd4-804c-002bc7631260" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
         </p>
         <p align="left">
           • Sustainable Menstrual Care Platform<br>

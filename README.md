@@ -1513,7 +1513,9 @@ while (isAwake) {
         <br>
         <p>
           <strong>Master's Degree in Applied Computing</strong><br>
-          Nov 2023 - Dec 2024 · Distinction · Dean's List
+          Nov 2023 - Dec 2024<br>
+          Distinction<br>
+          Dean's List
         </p>
         <p align="left">
           • Specialized in GIS and Information Technology<br>
@@ -1530,7 +1532,8 @@ while (isAwake) {
         <br>
         <p>
           <strong>Bachelor's Degree in Geography Science</strong><br>
-          Sep 2012 - Jun 2016 · Distinction
+          Sep 2012 - Jun 2016<br>
+          Distinction
         </p>
         <p align="left">
           • Specialized in GIS and Remote Sensing<br>

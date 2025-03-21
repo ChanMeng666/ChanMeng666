@@ -1558,6 +1558,19 @@ while (isAwake) {
 <table>
   <tr>
     <td width="33%">
+      <h3 align="center">UN Women FemTech Hackathon Outstanding Performer</h3>
+      <div align="center">  
+        <p>
+          <strong>Women's Workplace Health Innovation</strong><br>
+          FemTech Weekend<br>
+          Mar 2025
+        </p>
+        <p align="left">
+          Recognized for exceptional performance as part of the CHAN team during the 2025 UN Women FemTech Hackathon in Beijing. Contributed to innovative solutions addressing women's health challenges in professional environments through collaborative work with multiple organizations including Sanicle and NGO CSW Forum.
+        </p>
+      </div>
+    </td>
+    <td width="33%">
       <h3 align="center">Dean's List</h3>
       <div align="center">  
         <p>

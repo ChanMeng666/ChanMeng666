@@ -1383,7 +1383,7 @@ while (isAwake) {
         <p>
           <strong>Full Stack Software Engineer</strong><br>
           Mar 2025 - Present<br>
-          Remote
+          Remote · United States
         </p>
         <p align="left">
           • Comprehensive health tracking with personalized menstrual calendar<br>
@@ -1401,7 +1401,7 @@ while (isAwake) {
         <p>
           <strong>Full Stack Developer</strong><br>
           Mar 2025 - Present<br>
-          Remote
+          Remote · China
         </p>
         <p align="left">
           • Platform for women in tech to connect, learn, and showcase projects<br>
@@ -1421,7 +1421,7 @@ while (isAwake) {
         <p>
           <strong>Backend Developer</strong><br>
           Nov 2024 - Mar 2025<br>
-          Remote
+          Remote · China
         </p>
         <p align="left">
           • Hands-on experience with microservices architecture<br>
@@ -1439,7 +1439,7 @@ while (isAwake) {
         <p>
           <strong>Chief Technology Officer (CTO)</strong><br>
           Nov 2024 - Present<br>
-          Remote
+          Remote · China
         </p>
         <p align="left">
           • Leading technical development of smart vending solutions<br>
@@ -1459,7 +1459,7 @@ while (isAwake) {
         <p>
           <strong>Technology & Professional Development Mentor</strong><br>
           Oct 2024 - Feb 2025<br>
-          Remote
+          Remote · China
         </p>
         <p align="left">
           • One-on-one mentorship for women in STEM<br>
@@ -1477,7 +1477,7 @@ while (isAwake) {
         <p>
           <strong>Full Stack Developer</strong><br>
           Jun 2024 - Nov 2024<br>
-          Hybrid
+          Hybrid · New Zealand
         </p>
         <p align="left">
           • Developed offline-capable mobile app with React Native<br>

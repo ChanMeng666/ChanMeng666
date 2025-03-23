@@ -2485,7 +2485,7 @@ alt="Mozilla Logo"/>
 <!--START_SECTION_WEEKLY_COMMIT:readme-info-->
 <!--END_SECTION_WEEKLY_COMMIT:readme-info-->
 
-### Latest Activity...
+### Latest Activity
 
 <!--START_SECTION:activity-->
 

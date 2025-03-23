@@ -2525,7 +2525,20 @@ Go                       1 repo              ░░░░░░░░░░░�
 <!-- 添加最新博客文章 -->
 <h2 align="center">📝 最新博客文章</h2>
 
-<!-- BLOG-POST-LIST:START -->[My CV Download and Online Viewing](https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2)[Bug Report: Authentication Redirect Issue in Sanicle-AI Platform](https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2)[Creating Educational Animations with Manim: From Script to Final Video](https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2)[To the Extreme of Minimalism: I Threw Away My Old Name](https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2)[Spring Boot Project Database Configuration Guide for Local and Cloud Environments](https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2)<!-- BLOG-POST-LIST:END -->
+<div align="center">
+  <img src="/public/icons/medium.svg" width="25" alt="Medium Icon"> <strong>来自Medium的最新文章</strong>
+</div>
+
+<br>
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+<div align="right">
+  <a href="https://chanmeng666.medium.com" target="_blank">
+    <img src="https://img.shields.io/badge/查看所有文章-%23000000.svg?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/>
+  </a>
+</div>
 
 <h2 align="center">💡 Random Dev Quote</h2>
 

@@ -2531,7 +2531,27 @@ Go                       1 repo              ░░░░░░░░░░░�
 
 <br>
 
-<!-- BLOG-POST-LIST:START --><table width="100%" border="0" cellspacing="0" cellpadding="10"><tr><td><h3><a href="https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2" target="_blank">My CV Download and Online Viewing</a></h3><blockquote><i>...</i></blockquote><div align="right"><sup>📅 Sat Mar 22 2025 5:10 AM</sup> &nbsp;&nbsp;<a href="https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2" target="_blank"><b>阅读全文 →</b></a></div></td></tr></table><hr><table width="100%" border="0" cellspacing="0" cellpadding="10"><tr><td><h3><a href="https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2" target="_blank">Bug Report: Authentication Redirect Issue in Sanicle-AI Platform</a></h3><blockquote><i>...</i></blockquote><div align="right"><sup>📅 Mon Mar 10 2025 6:27 AM</sup> &nbsp;&nbsp;<a href="https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2" target="_blank"><b>阅读全文 →</b></a></div></td></tr></table><hr><table width="100%" border="0" cellspacing="0" cellpadding="10"><tr><td><h3><a href="https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2" target="_blank">Creating Educational Animations with Manim: From Script to Final Video</a></h3><blockquote><i>...</i></blockquote><div align="right"><sup>📅 Tue Mar 04 2025 7:44 AM</sup> &nbsp;&nbsp;<a href="https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2" target="_blank"><b>阅读全文 →</b></a></div></td></tr></table><hr><table width="100%" border="0" cellspacing="0" cellpadding="10"><tr><td><h3><a href="https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2" target="_blank">To the Extreme of Minimalism: I Threw Away My Old Name</a></h3><blockquote><i>...</i></blockquote><div align="right"><sup>📅 Sat Feb 22 2025 11:52 AM</sup> &nbsp;&nbsp;<a href="https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2" target="_blank"><b>阅读全文 →</b></a></div></td></tr></table><hr><table width="100%" border="0" cellspacing="0" cellpadding="10"><tr><td><h3><a href="https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2" target="_blank">Spring Boot Project Database Configuration Guide for Local and Cloud Environments</a></h3><blockquote><i>...</i></blockquote><div align="right"><sup>📅 Sat Feb 22 2025 4:36 AM</sup> &nbsp;&nbsp;<a href="https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2" target="_blank"><b>阅读全文 →</b></a></div></td></tr></table><hr><!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->### 📄 [My CV Download and Online Viewing](https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2)
+
+<div align="right">📅 2025年10月22日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
+
+---### 📄 [Bug Report: Authentication Redirect Issue in Sanicle-AI Platform](https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2)
+
+<div align="right">📅 2025年27月10日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
+
+---### 📄 [Creating Educational Animations with Manim: From Script to Final Video](https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2)
+
+<div align="right">📅 2025年44月04日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
+
+---### 📄 [To the Extreme of Minimalism: I Threw Away My Old Name](https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2)
+
+<div align="right">📅 2025年52月22日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
+
+---### 📄 [Spring Boot Project Database Configuration Guide for Local and Cloud Environments](https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2)
+
+<div align="right">📅 2025年36月22日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
+
+---<!-- BLOG-POST-LIST:END -->
 
 <div align="right">
   <a href="https://chanmeng666.medium.com" target="_blank">

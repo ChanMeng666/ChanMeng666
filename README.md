@@ -2526,17 +2526,21 @@ Go                       1 repo              ░░░░░░░░░░░�
 <h2 align="center">📝 最新博客文章</h2>
 
 <div align="center">
-  <img src="/public/icons/medium.svg" width="25" alt="Medium Icon"> <strong>来自Medium的最新文章</strong>
+  <strong>来自Medium的精选文章</strong>
 </div>
 
 <br>
 
+<div>
+
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
 
+</div>
+
 <div align="right">
   <a href="https://chanmeng666.medium.com" target="_blank">
-    <img src="https://img.shields.io/badge/查看所有文章-%23000000.svg?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/>
+    <img src="https://img.shields.io/badge/查看更多文章-%23000000.svg?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/>
   </a>
 </div>
 

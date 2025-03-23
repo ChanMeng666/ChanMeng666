@@ -2531,37 +2531,14 @@ Go                       1 repo              ░░░░░░░░░░░�
 
 <br>
 
-<!-- 使用github-readme-medium-recent-article显示带图片的Medium文章 -->
-<table>
-  <tr>
-    <td width="33%">
-      <a href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" target="_blank">
-        <img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" alt="Medium文章1">
-      </a>
-    </td>
-    <td width="33%">
-      <a href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1" target="_blank">
-        <img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1" alt="Medium文章2">
-      </a>
-    </td>
-    <td width="33%">
-      <a href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2" target="_blank">
-        <img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2" alt="Medium文章3">
-      </a>
-    </td>
-  </tr>
-</table>
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
 <div align="right">
   <a href="https://chanmeng666.medium.com" target="_blank">
     <img src="https://img.shields.io/badge/查看更多文章-%23000000.svg?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/>
   </a>
 </div>
-
-<h3 align="center">所有文章列表</h3>
-
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
 
 <h2 align="center">💡 Random Dev Quote</h2>
 

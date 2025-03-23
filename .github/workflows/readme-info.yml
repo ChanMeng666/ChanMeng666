@@ -9,8 +9,14 @@ jobs:
   update-readme:
     name: GitHub README Generator
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: th3c0d3br34ker/github-readme-info@master
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Generate README
+        uses: th3c0d3br34ker/github-readme-info@master
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           TIMEZONE: "Europe/Berlin"

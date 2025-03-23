@@ -16,11 +16,12 @@ jobs:
           feed_list: "https://chanmeng666.medium.com/feed" # 替换为您的Medium feed URL
           max_post_count: 5
           comment_tag_name: "BLOG-POST-LIST"
-          template: "### 📄 [$title]($url)\n\n<div align=\"right\">📅 $date &nbsp;|&nbsp; <a href=\"$url\"><b>阅读全文 →</b></a></div>\n\n---\n"
+          template: "* 📄 **[$title]($url)** - 📅 $date | [阅读全文 →]($url)"
           commit_message: "更新README中的最新博客文章"
           committer_username: "blog-post-bot"
           committer_email: "bot@example.com"
           disable_sort: false
           remove_duplicates: true
-          date_format: "yyyy年MM月dd日"
-          output_only: false 
+          date_format: "yyyy-MM-dd"
+          output_only: false
+          catch_all_error_fail: false 

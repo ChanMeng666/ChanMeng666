@@ -2476,25 +2476,6 @@ alt="Mozilla Logo"/>
 [![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31hsm7bssr42rz4okrtess5stlwq&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false)](https://github.com/kittinan/spotify-github-profile)
 
 
-<!--START_SECTION_PROFILE_VIEWS:readme-info-->
-<!--END_SECTION_PROFILE_VIEWS:readme-info-->
-
-<!--START_SECTION_DAILY_COMMIT:readme-info-->
-<!--END_SECTION_DAILY_COMMIT:readme-info-->
-
-<!--START_SECTION_WEEKLY_COMMIT:readme-info-->
-<!--END_SECTION_WEEKLY_COMMIT:readme-info-->
-
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
-
-### Latest Activity
-
-<!--START_SECTION:activity-->
-
-<!--END_SECTION:activity-->
-
-
 
 <div align="right">
   <a href="#readme-top">

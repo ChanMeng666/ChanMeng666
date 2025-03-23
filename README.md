@@ -2531,19 +2531,37 @@ Go                       1 repo              ░░░░░░░░░░░�
 
 <br>
 
-
-<div>
-
-<!-- BLOG-POST-LIST:START --><table><tr><td width="30%"><a href="https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2" target="_blank"><img width="100%" src="$img" alt="My CV Download and Online Viewing"></a></td><td width="70%"><a href="https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2" target="_blank"><b>My CV Download and Online Viewing</b></a><br/><i></i><br/><sub>Sat Mar 22 2025 5:10 AM</sub></td></tr></table><table><tr><td width="30%"><a href="https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2" target="_blank"><img width="100%" src="$img" alt="Bug Report: Authentication Redirect Issue in Sanicle-AI Platform"></a></td><td width="70%"><a href="https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2" target="_blank"><b>Bug Report: Authentication Redirect Issue in Sanicle-AI Platform</b></a><br/><i></i><br/><sub>Mon Mar 10 2025 6:27 AM</sub></td></tr></table><table><tr><td width="30%"><a href="https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2" target="_blank"><img width="100%" src="$img" alt="Creating Educational Animations with Manim: From Script to Final Video"></a></td><td width="70%"><a href="https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2" target="_blank"><b>Creating Educational Animations with Manim: From Script to Final Video</b></a><br/><i></i><br/><sub>Tue Mar 04 2025 7:44 AM</sub></td></tr></table><table><tr><td width="30%"><a href="https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2" target="_blank"><img width="100%" src="$img" alt="To the Extreme of Minimalism: I Threw Away My Old Name"></a></td><td width="70%"><a href="https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2" target="_blank"><b>To the Extreme of Minimalism: I Threw Away My Old Name</b></a><br/><i></i><br/><sub>Sat Feb 22 2025 11:52 AM</sub></td></tr></table><table><tr><td width="30%"><a href="https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2" target="_blank"><img width="100%" src="$img" alt="Spring Boot Project Database Configuration Guide for Local and Cloud Environments"></a></td><td width="70%"><a href="https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2" target="_blank"><b>Spring Boot Project Database Configuration Guide for Local and Cloud Environments</b></a><br/><i></i><br/><sub>Sat Feb 22 2025 4:36 AM</sub></td></tr></table><!-- BLOG-POST-LIST:END -->
-
-
-</div>
+<!-- 使用github-readme-medium-recent-article显示带图片的Medium文章 -->
+<table>
+  <tr>
+    <td width="33%">
+      <a href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" target="_blank">
+        <img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" alt="Medium文章1">
+      </a>
+    </td>
+    <td width="33%">
+      <a href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1" target="_blank">
+        <img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1" alt="Medium文章2">
+      </a>
+    </td>
+    <td width="33%">
+      <a href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2" target="_blank">
+        <img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2" alt="Medium文章3">
+      </a>
+    </td>
+  </tr>
+</table>
 
 <div align="right">
   <a href="https://chanmeng666.medium.com" target="_blank">
     <img src="https://img.shields.io/badge/查看更多文章-%23000000.svg?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/>
   </a>
 </div>
+
+<h3 align="center">所有文章列表</h3>
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
 <h2 align="center">💡 Random Dev Quote</h2>
 

@@ -2531,27 +2531,7 @@ Go                       1 repo              ░░░░░░░░░░░�
 
 <br>
 
-<!-- BLOG-POST-LIST:START -->### 📄 [My CV Download and Online Viewing](https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2)
-
-<div align="right">📅 2025年10月22日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
-
----### 📄 [Bug Report: Authentication Redirect Issue in Sanicle-AI Platform](https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2)
-
-<div align="right">📅 2025年27月10日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
-
----### 📄 [Creating Educational Animations with Manim: From Script to Final Video](https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2)
-
-<div align="right">📅 2025年44月04日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
-
----### 📄 [To the Extreme of Minimalism: I Threw Away My Old Name](https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2)
-
-<div align="right">📅 2025年52月22日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
-
----### 📄 [Spring Boot Project Database Configuration Guide for Local and Cloud Environments](https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2)
-
-<div align="right">📅 2025年36月22日 &nbsp;|&nbsp; <a href="https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2"><b>阅读全文 →</b></a></div>
-
----<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->* 📄 **[My CV Download and Online Viewing](https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2)** - 📅 2025-10-22 | [阅读全文 →](https://chanmeng666.medium.com/my-cv-download-and-online-viewing-cdfa1bae2224?source=rss-3a918d78aa73------2)* 📄 **[Bug Report: Authentication Redirect Issue in Sanicle-AI Platform](https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2)** - 📅 2025-27-10 | [阅读全文 →](https://chanmeng666.medium.com/bug-report-authentication-redirect-issue-in-sanicle-ai-platform-fedbf7c84862?source=rss-3a918d78aa73------2)* 📄 **[Creating Educational Animations with Manim: From Script to Final Video](https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2)** - 📅 2025-44-04 | [阅读全文 →](https://chanmeng666.medium.com/creating-educational-animations-with-manim-from-script-to-final-video-589656181386?source=rss-3a918d78aa73------2)* 📄 **[To the Extreme of Minimalism: I Threw Away My Old Name](https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2)** - 📅 2025-52-22 | [阅读全文 →](https://chanmeng666.medium.com/to-the-extreme-of-minimalism-i-threw-away-my-old-name-a8d0508b888f?source=rss-3a918d78aa73------2)* 📄 **[Spring Boot Project Database Configuration Guide for Local and Cloud Environments](https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2)** - 📅 2025-36-22 | [阅读全文 →](https://chanmeng666.medium.com/spring-boot-project-database-configuration-guide-for-local-and-cloud-environments-aa500dfafb49?source=rss-3a918d78aa73------2)<!-- BLOG-POST-LIST:END -->
 
 <div align="right">
   <a href="https://chanmeng666.medium.com" target="_blank">

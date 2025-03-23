@@ -2439,12 +2439,6 @@ alt="Mozilla Logo"/>
   <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
 </div>
 
-<!-- 添加GitHub Metrics展示 -->
-<h2 align="center">📊 详细统计指标</h2>
-<div align="center">
-  <img src="https://github.com/ChanMeng666/ChanMeng666/blob/main/github-metrics.svg" alt="Metrics" width="100%">
-</div>
-
 <!-- 添加WakaTime编程时间统计 -->
 <h2 align="center">⏱️ 我的编程时间</h2>
 

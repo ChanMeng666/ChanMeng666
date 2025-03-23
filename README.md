@@ -1706,7 +1706,7 @@ while (isAwake) {
           Mentee
         </p>
         <p align="left">
-          "I’m so fortunate to have Chan as my mentor! Her passion, expertise, and patience have helped me gain more technical skills and cultivate innovative thinking abilities. Thanks for opening the door to the future of the technology!"
+          "I'm so fortunate to have Chan as my mentor! Her passion, expertise, and patience have helped me gain more technical skills and cultivate innovative thinking abilities. Thanks for opening the door to the future of the technology!"
         </p>
       </div>
     </td>
@@ -1776,7 +1776,7 @@ while (isAwake) {
           Mentee
         </p>
         <p align="left">
-          "I had the pleasure of working alongside Chan, who is not only meticulous but also enthusiastic about exploring new technologies. She introduced me to the fascinating world of AI programming and showed me how creating personal web pages could be both simple and enjoyable. Her patience in debugging and her willingness to share the plugins and websites she developed greatly benefited our team. Chan’s passion for coding is contagious—working with her made me realize that programming can be both fun and immensely rewarding. I wholeheartedly recommend her for any role where innovation, collaboration, and technical expertise are valued."
+          "I had the pleasure of working alongside Chan, who is not only meticulous but also enthusiastic about exploring new technologies. She introduced me to the fascinating world of AI programming and showed me how creating personal web pages could be both simple and enjoyable. Her patience in debugging and her willingness to share the plugins and websites she developed greatly benefited our team. Chan's passion for coding is contagious—working with her made me realize that programming can be both fun and immensely rewarding. I wholeheartedly recommend her for any role where innovation, collaboration, and technical expertise are valued."
         </p>
       </div>
     </td>
@@ -2439,6 +2439,23 @@ alt="Mozilla Logo"/>
   <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
 </div>
 
+<!-- 添加GitHub Metrics展示 -->
+<h2 align="center">📊 详细统计指标</h2>
+<div align="center">
+  <img src="https://github.com/ChanMeng666/ChanMeng666/blob/main/github-metrics.svg" alt="Metrics" width="100%">
+</div>
+
+<!-- 添加WakaTime编程时间统计 -->
+<h2 align="center">⏱️ 我的编程时间</h2>
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
+<!-- 添加最新博客文章 -->
+<h2 align="center">📝 最新博客文章</h2>
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
 <h2 align="center">💡 Random Dev Quote</h2>
 

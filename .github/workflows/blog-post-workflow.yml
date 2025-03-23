@@ -1,0 +1,21 @@
+name: Latest Blog Posts
+
+on:
+  schedule:
+    - cron: '0 */24 * * *' # 每24小时运行一次
+  workflow_dispatch:
+
+jobs:
+  update-readme-with-blog:
+    name: Update README with latest blog posts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/blog-post-workflow@master
+        with:
+          feed_list: "https://chanmeng666.medium.com/feed" # 替换为您的Medium feed URL
+          max_post_count: 5
+          template: "[$title]($url)"
+          commit_message: "更新README中的最新博客文章"
+          committer_username: "blog-post-bot"
+          committer_email: "bot@example.com" 

@@ -17,7 +17,7 @@ jobs:
           user: ChanMeng666
           template: classic
           base: header, activity, community, repositories, metadata
-          config_timezone: Asia/Shanghai
+          config_timezone: Pacific/Auckland
           
           # 个性化统计内容
           plugin_isocalendar: yes
@@ -43,4 +43,5 @@ jobs:
           plugin_people_types: followers, following
           
           plugin_calendar: yes
-          plugin_calendar_limit: 14 
+          plugin_calendar_limit: 14
+          plugin_calendar_from: 2023 

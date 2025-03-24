@@ -2318,6 +2318,16 @@ alt="Mozilla Logo"/>
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h5 align="center">Building an AI Dialogue System: A Comprehensive Guide</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/building-ai-dialogue-system-comprehensive-guide-chan-meng-d3dsc/" target="_blank">
+          <img src="/public/articles/BuildinganAIDialogueSystem.png" width="100%" alt="Building an AI Dialogue System: A Comprehensive Guide"/>
+        </a>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

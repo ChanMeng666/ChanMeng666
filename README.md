@@ -2301,6 +2301,22 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Planning Overseas Education and Career Development</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/planning-overseas-education-career-development-chan-meng-vfhic/" target="_blank">
+          <img src="/public/articles/PlanningOverseasEducationandCareerDevelopment.png" width="100%" alt="Planning Overseas Education and Career Development"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <h5 align="center">📺 My Video Tutorial Resources Collection</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/my-video-tutorial-resources-collection-chan-meng-udkfc/" target="_blank">
+          <img src="/public/articles/MyVideoTutorialResourcesCollection.png" width="100%" alt="My Video Tutorial Resources Collection"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

@@ -1925,7 +1925,7 @@ while (isAwake) {
       <p><strong>Sustainable Tech</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQEi7fYxyCSIJw/feedshare-shrink_1280/B56ZUrTA1DGoAk-/0/1740188159573?e=1743033600&v=beta&t=8ozZIn2PkNAGqjI38NAWJV0Sl89Ju_ebE0ggjc8nrDA" width="100%" alt="Azure AI Essentials Professional Certificate"/>
+      <img src="/public/certificates/MicrosoftAzureAIEssentialsProfessionalCertificate.jpg" width="100%" alt="Azure AI Essentials Professional Certificate"/>
       <p><strong>Azure AI Essentials</strong></p>
     </td>
   </tr>
@@ -2000,7 +2000,7 @@ alt="Mozilla Logo"/>
       <p><strong>Machine Learning Statistical Foundations</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQEFdVIbeQw8Iw/feedshare-shrink_1280/B56ZU3Nnh.HsAo-/0/1740388071811?e=1743033600&v=beta&t=kiHe6BEzG_C2cXCc-BlJFIqgOm6m1_dKQj1e2KwMWw4" width="100%" alt="JavaScript Foundations Professional Certificate by Mozilla"/>
+      <img src="/public/certificates/JavaScriptFoundationsProfessionalCertificatebyMozilla.jpg" width="100%" alt="JavaScript Foundations Professional Certificate by Mozilla"/>
       <p><strong>JavaScript Foundations</strong></p>
     </td>
   </tr>

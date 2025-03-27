@@ -1353,7 +1353,7 @@ while (isAwake) {
 <div align="center">
 
   [![Download Resume](https://img.shields.io/badge/Download%20Resume-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng.pdf)
-  [![View Resume](https://img.shields.io/badge/View%20Resume-4CAF50?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://media.licdn.com/dms/document/media/v2/D562DAQGGgzxQukCaSQ/profile-treasury-document-pdf-analyzed/B56ZW8E7ypHEAc-/0/1742617167221?e=1743638400&v=beta&t=ETNADuvn4pKyq_WKl4tDMvJ4M1MRYgKQxCZ0CjbwxZ0)
+  [![View Resume](https://img.shields.io/badge/View%20Resume-4CAF50?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://media.licdn.com/dms/document/media/v2/D562DAQGLoz2uIiOoIg/profile-treasury-document-pdf-analyzed/B56ZXXBXBjGcAk-/0/1743069214884?e=1744243200&v=beta&t=XY-LarRp2O8qp5Xe3v8NQeNR4HlLO6kpYCzgnAPcqz8)
 
 </div>
 

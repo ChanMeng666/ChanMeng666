@@ -1387,7 +1387,7 @@ while (isAwake) {
         <br>
         <br>
         <p>
-          <strong>Full Stack Software Engineer</strong><br>
+          <strong>Senior AI/ML Infrastructure Engineer</strong><br>
           Mar 2025 - Present<br>
           Remote • United States
         </p>

@@ -1666,7 +1666,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Shushu Qin</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/shushu-q-278a93316/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D35AQFBSt93WWvY8Q/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1735942938004?e=1742529600&v=beta&t=dfj3eDnu61jLqptZ3rI3WBxqIqJFQVIZpBGgIGWk8Zo" width="50%" alt="Shushu Qin"/></a>
+        <a href="https://www.linkedin.com/in/shushu-q-278a93316/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D35AQFBSt93WWvY8Q/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1735942938004?e=1743656400&v=beta&t=d_uukAou_7Bci-SNO53levg_g9qYRTDhIicmp7wRyrg" width="50%" alt="Shushu Qin"/></a>
         <br>
         <br>
         <p>

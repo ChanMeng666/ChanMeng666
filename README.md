@@ -2333,6 +2333,17 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Weekly Pulse: Remote MCP, Images, Screen Recording</h5>
+      <div align="center">  
+        <a href="https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording" target="_blank">
+          <img src="/public/articles/WeeklyPulseRemoteMCP.png" width="100%" alt="Weekly Pulse: Remote MCP, Images, Screen Recording"/>
+        </a>
+        <p align="center">
+          <i>The MCP Server I developed was featured in this article by <a href="https://www.pulsemcp.com/authors/tadas-antanavicius">Tadas Antanavicius</a></i>
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

@@ -2344,6 +2344,14 @@ alt="Mozilla Logo"/>
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Building a Website with Notion Integration: Form Submission and Content Display</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/building-website-notion-integration-form-submission-content-chan-meng-rptac/?trackingId=9bW%2BHK%2Bs%2FBXC9m0mpBGODg%3D%3D" target="_blank">
+          <img src="/public/articles/BuildingaWebsitewithNotionIntegration.png" width="100%" alt="Building a Website with Notion Integration"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

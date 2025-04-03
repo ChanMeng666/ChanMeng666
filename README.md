@@ -2352,6 +2352,14 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Solving Language Switching in Next.js: A Guide to Client-Server Component Architecture</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/solving-language-switching-nextjs-guide-client-server-chan-meng-pyudc/" target="_blank">
+          <img src="/public/articles/SolvingLanguageSwitchinginNextjs.png" width="100%" alt="Solving Language Switching in Next.js"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

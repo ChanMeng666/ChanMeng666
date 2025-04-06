@@ -670,7 +670,7 @@ while (isAwake) {
           <a href="https://sanicle-cloud.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
           </a>
-          <a href="https://github.com/user-attachments/assets/1cc71c27-f840-4c94-9ab5-460d84ba4779" target="_blank">
+          <a href="https://github.com/user-attachments/assets/d64a35c1-3ef1-4d5d-9584-869ecb99b1fc" target="_blank">
             <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
           </a>
         </p>

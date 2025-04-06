@@ -657,6 +657,30 @@ while (isAwake) {
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Sanicle Cloud</h3>
+      <div align="center">  
+        <a href="https://sanicle-cloud.vercel.app/" target="_blank"><img src="public/brands/sanicle_logo.svg" width="50%" alt="Sanicle Cloud Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://sanicle-cloud.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
+          </a>
+          <a href="https://github.com/user-attachments/assets/1cc71c27-f840-4c94-9ab5-460d84ba4779" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Women's Health Platform<br>
+          • Next.js & React 19<br>
+          • Workplace Wellness Solution
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

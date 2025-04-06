@@ -660,7 +660,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Sanicle Cloud</h3>
       <div align="center">  
-        <a href="https://sanicle-cloud.vercel.app/" target="_blank"><img src="public/brands/sanicle_logo.svg" width="50%" alt="Sanicle Cloud Logo"/></a>
+        <a href="https://sanicle-cloud.vercel.app/" target="_blank"><img src="public/brands/sanicle_logo.svg" width="100%" alt="Sanicle Cloud Logo"/></a>
         <br>
         <br>
         <p>

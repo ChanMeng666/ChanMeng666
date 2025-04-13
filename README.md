@@ -1745,7 +1745,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Shiyu Fang</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/shiyu-fang1/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C5603AQHh9V2ONRrt9A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1525811115918?e=1750291200&v=beta&t=EaXs0XSf6ERi4kW_7w-5aCc1qtPYaWQMlStk3o_A6us" width="50%" alt="Shiyu Fang"/></a>
+        <a href="https://www.linkedin.com/in/shiyu-fang1/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D03AQGdWmMyuMl7eQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694119437054?e=1750291200&v=beta&t=bS0_JknfWG_AmmJdlO3LjkfHWNr6Q8NuHdsEjPqf1r4" width="50%" alt="Shiyu Fang"/></a>
         <br>
         <br>
         <p>
@@ -1760,7 +1760,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Jixuan Jessie Wan</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/jixuan-wan-7422962050/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C5603AQHh9V2ONRrt9A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1525811115918?e=1743638400&v=beta&t=DHRozmM_ftOA__Arp_I2ynCW6BW_zumO-5jUAPswUpM" width="50%" alt="Jixuan Jessie Wan"/></a>
+        <a href="https://www.linkedin.com/in/jixuan-wan-7422962050/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C5603AQHh9V2ONRrt9A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1525811115918?e=1750291200&v=beta&t=EaXs0XSf6ERi4kW_7w-5aCc1qtPYaWQMlStk3o_A6us" width="50%" alt="Jixuan Jessie Wan"/></a>
         <br>
         <br>
         <p>

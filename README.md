@@ -1690,7 +1690,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Shushu Qin</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/shushu-q-278a93316/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D35AQFBSt93WWvY8Q/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1735942938004?e=1743656400&v=beta&t=d_uukAou_7Bci-SNO53levg_g9qYRTDhIicmp7wRyrg" width="50%" alt="Shushu Qin"/></a>
+        <a href="https://www.linkedin.com/in/shushu-q-278a93316/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D03AQH1TDdE4sv2yA/profile-displayphoto-shrink_400_400/B4DZQuQfGRGkAk-/0/1735942861966?e=1750291200&v=beta&t=xg1IJQEvkYrz3hr8I35GNRPvR_61e_nmEkr7SvWbvjo" width="50%" alt="Shushu Qin"/></a>
         <br>
         <br>
         <p>
@@ -1707,7 +1707,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Patricia Anthony</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/patricia-anthony-90b877327/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQGddNKFm7kWiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725833893884?e=1743638400&v=beta&t=fAu7H-vwwSWV2wxkLiMzQiQZMV5FOr6OrKHRQ0dAs9w" width="50%" alt="Patricia Anthony"/></a>
+        <a href="https://www.linkedin.com/in/patricia-anthony-90b877327/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQGddNKFm7kWiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725833893884?e=1750291200&v=beta&t=AZSyx6mJQ-vZqzH7SVmlYkEnpoN4qQx6cN2YFe5tRWQ" width="50%" alt="Patricia Anthony"/></a>
         <br>
         <br>
         <p>
@@ -1728,7 +1728,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Robin Lee</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/%E4%BA%A6%E5%98%89-%E6%9D%8E-710674278/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQEAIQXcY6PfDg/profile-displayphoto-shrink_400_400/B56ZRygEJmGsAk-/0/1737087797522?e=1743638400&v=beta&t=P3dv8m1rJwkYa_d5psrNXT3PhdRAZwhNcH0ess8XxuQ" width="50%" alt="Robin Lee"/></a>
+        <a href="https://www.linkedin.com/in/%E4%BA%A6%E5%98%89-%E6%9D%8E-710674278/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQEAIQXcY6PfDg/profile-displayphoto-shrink_400_400/B56ZRygEJmGsAk-/0/1737087797522?e=1750291200&v=beta&t=VfholuPPpCje351YiRyW36nQ1W34leigHd0cs1O6LlM" width="50%" alt="Robin Lee"/></a>
         <br>
         <br>
         <p>
@@ -1745,7 +1745,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Shiyu Fang</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/shiyu-fang1/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D03AQGdWmMyuMl7eQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694119437054?e=1743638400&v=beta&t=lILSuOkTIMeJJR2St4jZbMltBFIahFnA6Q-l1qFYGlE" width="50%" alt="Shiyu Fang"/></a>
+        <a href="https://www.linkedin.com/in/shiyu-fang1/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C5603AQHh9V2ONRrt9A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1525811115918?e=1750291200&v=beta&t=EaXs0XSf6ERi4kW_7w-5aCc1qtPYaWQMlStk3o_A6us" width="50%" alt="Shiyu Fang"/></a>
         <br>
         <br>
         <p>

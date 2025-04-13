@@ -1376,8 +1376,8 @@ while (isAwake) {
 
 <div align="center">
 
-  [![Download Resume](https://img.shields.io/badge/Download%20Resume-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng.pdf)
-  [![View Resume](https://img.shields.io/badge/View%20Resume-4CAF50?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://media.licdn.com/dms/document/media/v2/D562DAQGLoz2uIiOoIg/profile-treasury-document-pdf-analyzed/B56ZXXBXBjGcAk-/0/1743069214884?e=1744243200&v=beta&t=XY-LarRp2O8qp5Xe3v8NQeNR4HlLO6kpYCzgnAPcqz8)
+  [![Download Resume](https://img.shields.io/badge/Download%20Resume-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng_CV.pdf)
+  [![View Resume](https://img.shields.io/badge/View%20Resume-4CAF50?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf)
 
 </div>
 

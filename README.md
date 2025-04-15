@@ -1405,9 +1405,9 @@ while (isAwake) {
 <table>
   <tr>
     <td width="50%">
-      <h3 align="center">Sanicle.Cloud</h3>
+      <h3 align="center">Sanicle</h3>
       <div align="center">  
-        <a href="https://sanicle.cloud/" target="_blank"><img src="/public/experience/sanicle_logo.svg" width="50%" alt="Sanicle.Cloud Logo"/></a>
+        <a href="https://sanicle.cloud/" target="_blank"><img src="/public/experience/sanicle_logo.svg" width="50%" alt="Sanicle Logo"/></a>
         <br>
         <br>
         <p>

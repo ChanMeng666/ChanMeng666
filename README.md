@@ -2560,17 +2560,17 @@ alt="Mozilla Logo"/>
   [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://chanmeng666.medium.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
   
-  <br/>
+<br/>
 
-    <!-- Social badges section -->
-    <p align="center">
-      <a href="https://github.com/ChanMeng666?tab=repositories&sort=stargazers">
-        <img alt="total stars" title="Total stars on GitHub" src="https://custom-icon-badges.demolab.com/github/stars/ChanMeng666?color=55960c&style=for-the-badge&labelColor=488207&logo=star"/></a>
-      <a href="https://github.com/ChanMeng666?tab=followers">
-        <img alt="followers" title="Follow me on Github" src="https://custom-icon-badges.demolab.com/github/followers/ChanMeng666?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Follow&logoColor=white"/></a>
-    </p>
+<!-- Social badges section -->
+<p align="center">
+  <a href="https://github.com/ChanMeng666?tab=repositories&sort=stargazers">
+    <img alt="total stars" title="Total stars on GitHub" src="https://custom-icon-badges.demolab.com/github/stars/ChanMeng666?color=55960c&style=for-the-badge&labelColor=488207&logo=star"/></a>
+  <a href="https://github.com/ChanMeng666?tab=followers">
+    <img alt="followers" title="Follow me on Github" src="https://custom-icon-badges.demolab.com/github/followers/ChanMeng666?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Follow&logoColor=white"/></a>
+</p>
 
-  <br/>
+<br/>
 
 </div>
 

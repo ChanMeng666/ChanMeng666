@@ -2179,7 +2179,9 @@ alt="Mozilla Logo"/>
 
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/4"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/4" alt="Recent Article 0">
 
-<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/6"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/6" alt="Recent Article 0">
+<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/9"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/9" alt="Recent Article 0">
+
+<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/23"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/23" alt="Recent Article 0">
 
 <details>
 <summary><h3>📰 Technical Articles</h3></summary>

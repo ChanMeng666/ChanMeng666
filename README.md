@@ -2176,7 +2176,7 @@ alt="Mozilla Logo"/>
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📝%20Articles&fontSize=40&color=0:FFA500,100:DC143C&stroke=DC143C)
 
 <details open>
-  <summary><h3>💎 Core Full-Stack Expertise</h3></summary>
+  <summary><h3>📌 Pinned Articles</h3></summary>
 
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2" alt="Recent Article 2">
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/4"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/4" alt="Recent Article 4">

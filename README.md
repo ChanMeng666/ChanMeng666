@@ -18,7 +18,7 @@
   [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
   [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://chanmeng666.medium.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
-  
+
   <img src="/public/chan_snorkelling.gif" width="100%" alt="Chan Meng Snorkelling">
 </div>
 
@@ -2394,6 +2394,20 @@ alt="Mozilla Logo"/>
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h5 align="center">FemTech Weekend x UN Women CSW69 | Women's Health Innovation</h5>
+      <div align="center">  
+        <a href="https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg" target="_blank">
+          <img src="/public/articles/UNWomenCSW69.jpeg" width="100%" alt="FemTech Weekend x UN Women CSW69 Feature"/>
+        </a>
+        <p align="center">
+          <i>My AI solution for women's workplace health was featured in this article by <a href="https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg">FemTech Weekend</a></i>
+          The presentation received significant attention from corporate leaders, including representatives from IBM who expressed interest in pilot collaboration, as well as government officials like the Minister of Gender and Children's Affairs from Sierra Leone, who praised the platform as the first comprehensive solution connecting menstrual cycle data to actionable workplace policies through AI analysis.
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 
@@ -2559,7 +2573,7 @@ alt="Mozilla Logo"/>
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
   [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://chanmeng666.medium.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
-  
+
 <br/>
 
 <!-- Social badges section -->

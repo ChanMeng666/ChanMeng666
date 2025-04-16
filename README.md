@@ -2403,6 +2403,8 @@ alt="Mozilla Logo"/>
         </a>
         <p align="center">
           <i>My AI solution for women's workplace health was featured in this article by <a href="https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg">FemTech Weekend</a></i>
+        </p>
+        <p align="center">
           The presentation received significant attention from corporate leaders, including representatives from IBM who expressed interest in pilot collaboration, as well as government officials like the Minister of Gender and Children's Affairs from Sierra Leone, who praised the platform as the first comprehensive solution connecting menstrual cycle data to actionable workplace policies through AI analysis.
         </p>
       </div>

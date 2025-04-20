@@ -2433,6 +2433,32 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Getting Started with Minimalism - A Beginner's Guide</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/getting-started-minimalism-beginners-guide-chan-meng-jbioc/?trackingId=FpK6ngBydV7aCUIe8h%2Fryg%3D%3D" target="_blank">
+          <img src="/public/articles/GettingStartedwithMinimalism.png" width="100%" alt="Getting Started with Minimalism"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <h5 align="center">Digital Minimalism - Technology as a Tool, Not a Master</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/digital-minimalism-technology-tool-master-chan-meng-lkz0c/?trackingId=SyA0VAd1NYFJE8i4kd4M0A%3D%3D" target="_blank">
+          <img src="/public/articles/DigitalMinimalism.png" width="100%" alt="Digital Minimalism Technology as a Tool, Not a Master"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%">
+      <h5 align="center">Creating a Minimalist Living Space - Lessons from The Art of Discarding</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/creating-minimalist-living-space-lessons-from-art-discarding-meng-wwdrc/?trackingId=4E9Xkp4kgHGoFA55wqWjtQ%3D%3D" target="_blank">
+          <img src="/public/articles/CreatingaMinimalistLivingSpace.png" width="100%" alt="Creating a Minimalist Living Space"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>
@@ -2481,6 +2507,14 @@ alt="Mozilla Logo"/>
       <div align="center">  
         <a href="https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2?s=eyJ1IjoiNjA5OWNhNmNlMGY1ZTcyM2JiYTA4NDc0In0%3D" target="_blank">
           <img src="/public/articles/FromMathTeachertoFull-StackDeveloper.jpg" width="50%" alt="From Math Teacher to Full-Stack Developer"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">[Podcast] Femtech At Work - Greater China Edition (Episode 21)</h3>
+      <div align="center">  
+        <a href="https://open.spotify.com/show/0h6KFmu8JjA6Rde0KfGxon?si=XsdMWaukRSappPF3mzraKA&nd=1&dlsi=4bf1bf35164c4e90" target="_blank">
+          <img src="/public/articles/FemtechAtWork.png" width="50%" alt="Femtech At Work - Greater China Edition (Episode 21)"/>
         </a>
       </div>
     </td>

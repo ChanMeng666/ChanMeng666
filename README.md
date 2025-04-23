@@ -2503,7 +2503,7 @@ alt="Mozilla Logo"/>
   </tr>
   <tr>
     <td width="20%">
-      <h3 align="center">[Podcast] From Math Teacher to Full-Stack Developer</h3>
+      <h3 align="center">[Podcast] 码农姐妹 - From Math Teacher to Full-Stack Developer</h3>
       <div align="center">  
         <a href="https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2?s=eyJ1IjoiNjA5OWNhNmNlMGY1ZTcyM2JiYTA4NDc0In0%3D" target="_blank">
           <img src="/public/articles/FromMathTeachertoFull-StackDeveloper.jpg" width="50%" alt="From Math Teacher to Full-Stack Developer"/>
@@ -2511,9 +2511,9 @@ alt="Mozilla Logo"/>
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">[Podcast] Femtech At Work - Greater China Edition (Episode 21)</h3>
+      <h3 align="center">[Podcast] Femtech At Work - From Math Teacher to FemTech CTO: Chan Meng on AI and Women's Health Innovation (Greater China Edition Episode 21)</h3>
       <div align="center">  
-        <a href="https://open.spotify.com/show/0h6KFmu8JjA6Rde0KfGxon?si=XsdMWaukRSappPF3mzraKA&nd=1&dlsi=4bf1bf35164c4e90" target="_blank">
+        <a href="https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2?si=2OperrV6TSyI5yMTQblOcQ" target="_blank">
           <img src="/public/articles/FemtechAtWork.png" width="50%" alt="Femtech At Work - Greater China Edition (Episode 21)"/>
         </a>
       </div>

@@ -1994,7 +1994,7 @@ alt="Mozilla Logo"/>
       <p><strong>GitHub Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQGEaVPPxxdJPg/feedshare-shrink_1280/B56ZTvueCSHEAk-/0/1739188724126?e=1745452800&v=beta&t=Vkc6Afoh8EQleUNoOrj1uOiUSsmTAJiGyUg0cVqGUv8" width="100%" alt="Docker Foundations Professional Certificate"/>
+      <img src="/public/certificates/DockerFoundationsProfessionalCertificate.jpg" width="100%" alt="Docker Foundations Professional Certificate"/>
       <p><strong>Docker Professional</strong></p>
     </td>
     <td align="center" width="20%">

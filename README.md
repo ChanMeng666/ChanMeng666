@@ -1998,29 +1998,29 @@ alt="Mozilla Logo"/>
       <p><strong>Docker Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQGWjrRq-ij90Q/feedshare-shrink_1280/B56ZT0NvLRHEAo-/0/1739264029656?e=1745452800&v=beta&t=vmdujh-exJv8_J6iMNGrIh0QAMi9XKcPt9aRcyvDsoA" width="100%" alt="Ubuntu Linux Professional Certificate"/>
+      <img src="/public/certificates/CertificateOfCompletion_UbuntuLinuxProfessionalCertificatebyCanonical.jpg" width="100%" alt="Ubuntu Linux Professional Certificate"/>
       <p><strong>Ubuntu Linux Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQFF7ZF5eHoqMg/feedshare-shrink_1280/B56ZT1Lu4_GsAk-/0/1739280281416?e=1745452800&v=beta&t=nW3aWblz_bOuO0kONSFVAIk7P7TcLPJtqtEwLkznEN8" width="100%" alt="Anaconda Python for Data Science Professional Certificate"/>
+      <img src="/public/certificates/CertificateOfCompletion_AnacondaPythonforDataScienceProfessionalCertificate.jpg" width="100%" alt="Anaconda Python for Data Science Professional Certificate"/>
       <p><strong>Anaconda Python for Data Science Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQH8NzMY_0RfwQ/feedshare-shrink_1280/B56ZT3im35GsAk-/0/1739319832464?e=1745452800&v=beta&t=QNiOwedU9XwRBurhkKzBB2aHJiYVsYeSckx2M1leoIg" width="100%" alt="Atlassian Agile Project Management Professional Certificate"/>
+      <img src="/public/certificates/CertificateOfCompletion_AtlassianAgileProjectManagementProfessionalCertificate.jpg" width="100%" alt="Atlassian Agile Project Management Professional Certificate"/>
       <p><strong>Atlassian Agile Project Management Professional</strong></p>
     </td>
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQGfCQxRqhgBVw/feedshare-shrink_1280/B56ZT1TrNvGoAo-/0/1739282363582?e=1745452800&v=beta&t=NLGgcQDz4PHraX3SV33hG3JKL6_6BMnshLrXJTRqaOo" width="100%" alt="C++ Programming Professional"/>
+      <img src="/public/certificates/CertificateOfCompletion_CProgrammingProfessionalCertificatebyOpenEDGCInstitute.jpg" width="100%" alt="C++ Programming Professional"/>
       <p><strong>C++ Programming Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQGHnU41qAmeWg/feedshare-shrink_1280/B56ZTy3Tt3GsAk-/0/1739241372862?e=1745452800&v=beta&t=LBu3_ZzZHtpHpkGXqZoYvey9sbOd1RKelPPOlXyrIY8" width="100%" alt="Java Professional"/>
+      <img src="/public/certificates/CertificateOfCompletion_JavaFoundationsProfessionalCertificatebyJetBrains.jpg" width="100%" alt="Java Professional"/>
       <p><strong>Java Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="https://media.licdn.com/dms/image/v2/D5622AQFk50J4Kq7iMg/feedshare-shrink_1280/B56ZUsO3erHEAk-/0/1740203849891?e=1745452800&v=beta&t=A_Zh13PcdpaHslSa_JQLe6rS0tWyMd9dEqkZGiHg9ek" width="100%" alt="Machine Learning Statistical Foundations"/>
+      <img src="/public/certificates/CertificateOfCompletion_MachineLearningStatisticalFoundationsProfessionalCertificatebyWolframResearch.jpg" width="100%" alt="Machine Learning Statistical Foundations"/>
       <p><strong>Machine Learning Statistical Foundations</strong></p>
     </td>
     <td align="center" width="20%">

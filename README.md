@@ -2641,6 +2641,10 @@ alt="Mozilla Logo"/>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📈%20GitHub%20Stats&fontSize=40&color=0:FF85B3,100:D65DB1&stroke=D65DB1)
 
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
+</div>
+
 <table width="100%">
   <tr>
     <td width="50%">
@@ -2684,10 +2688,6 @@ alt="Mozilla Logo"/>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake.svg">
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake.svg">
 </picture>
-</div>
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
 </div>
 
 <br />

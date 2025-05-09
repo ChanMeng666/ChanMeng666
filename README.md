@@ -1401,7 +1401,7 @@ while (isAwake) {
 
 <a id="readme-about-me"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=😄%20About%20Me&fontSize=40&color=0:FFDD00,100:A65D37&stroke=A65D37)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=✨%20About%20Me&fontSize=40&color=0:9D4EDD,100:6A0DAD&stroke=6A0DAD)
 
 <a id="readme-experience"></a>
 
@@ -1836,7 +1836,7 @@ while (isAwake) {
 
 <a id="readme-certifications"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📜%20Certifications&fontSize=40&color=0:FF8C00,100:FFA500&stroke=FFA500)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🏆%20Certifications&fontSize=40&color=0:00C2A8,100:008B8B&stroke=008B8B)
 
 <details>
 <summary>
@@ -2055,7 +2055,7 @@ alt="Mozilla Logo"/>
 
 <a id="readme-tech-stack"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=💻%20Tech%20Stack&fontSize=40&color=0:00FFFF,100:1E90FF&stroke=1E90FF)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=⚙️%20Tech%20Stack&fontSize=40&color=0:2ECC71,100:27AE60&stroke=27AE60)
 
 <details open>
   <summary><h3>💎 Core Full-Stack Expertise</h3></summary>
@@ -2187,7 +2187,7 @@ alt="Mozilla Logo"/>
 
 <a id="readme-articles"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📝%20Articles&fontSize=40&color=0:FFA500,100:DC143C&stroke=DC143C)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📚%20Articles&fontSize=40&color=0:FF6B6B,100:FF2E63&stroke=FF2E63)
 
 <details open>
   <summary><h3>📌 Latest Articles</h3></summary>
@@ -2495,7 +2495,7 @@ alt="Mozilla Logo"/>
 
 <a id="readme-interviews"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎤%20Media%20Appearances%20and%20Interviews&fontSize=40&color=0:9146FF,100:772CE8&stroke=772CE8)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📺%20Media%20Appearances%20and%20Interviews&fontSize=40&color=0:F9C80E,100:F86624&stroke=F86624)
 
 <table>
   <tr>
@@ -2576,7 +2576,7 @@ alt="Mozilla Logo"/>
 
 <a id="readme-podcasts"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎙️%20Podcasts&fontSize=40&color=0:1DB954,100:191414&stroke=191414)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎧%20Podcasts&fontSize=40&color=0:43BCCD,100:2F58CD&stroke=2F58CD)
 
 <table>
   <tr>
@@ -2637,7 +2637,7 @@ alt="Mozilla Logo"/>
   </a>
 </div>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📊%20GitHub%20Stats&fontSize=40&color=0:32CD32,100:006400&stroke=006400)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📈%20GitHub%20Stats&fontSize=40&color=0:FF85B3,100:D65DB1&stroke=D65DB1)
 
 <table width="100%">
   <tr>

@@ -2560,14 +2560,9 @@ alt="Mozilla Logo"/>
   </a>
 </div>
 
-
-
 <a id="readme-podcasts"></a>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎙️%20Podcasts&fontSize=40&color=0:1DB954,100:191414&stroke=191414)
-
-<details>
-  <summary><h3>🎧 My Tech Podcasts</h3></summary>
 
 <table>
   <tr>
@@ -2620,8 +2615,6 @@ alt="Mozilla Logo"/>
   </tr>
 </table>
 
-</details>
-
 <br />
 
 <div align="right">
@@ -2629,8 +2622,6 @@ alt="Mozilla Logo"/>
     <img src="https://img.shields.io/badge/⬆️Back%20to%20Podcasts-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
-
-
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📊%20GitHub%20Stats&fontSize=40&color=0:32CD32,100:006400&stroke=006400)
 

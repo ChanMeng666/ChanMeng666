@@ -2620,7 +2620,7 @@ alt="Mozilla Logo"/>
 
 <div align="right">
   <a href="#readme-podcasts">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Podcasts-%234B5563.svg?style=for-the-badge&logoColor=white&color=1DB954" alt="Back to Top"/>
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Podcasts-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 

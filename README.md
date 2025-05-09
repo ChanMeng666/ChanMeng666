@@ -2604,6 +2604,8 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+  </tr>
+  <tr>
     <td width="50%">
       <h3 align="center">Praxis and Pages 知行书话</h3>
       <div align="center">  

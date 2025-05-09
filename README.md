@@ -1783,7 +1783,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Di Peng</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/di-peng-25636033b/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQHv7SvX_ToUcA/company-logo_200_200/company-logo_200_200/0/1631320271211?e=1746662400&v=beta&t=cVav8haEx5oxTMfirGO9gT1rGBcnXP5GwmN1548W0vc" width="50%" alt="Di Peng"/></a>
+        <a href="https://www.linkedin.com/in/di-peng-25636033b/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQHv7SvX_ToUcA/company-logo_200_200/company-logo_200_200/0/1631320271211?e=1752105600&v=beta&t=d0o2FN89O8Gw2blsa5sz-hoVMxqEGotXsxiFohyYslA" width="50%" alt="Di Peng"/></a>
         <br>
         <br>
         <p>

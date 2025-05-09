@@ -2596,6 +2596,9 @@ alt="Mozilla Logo"/>
         <a href="https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2?si=b6JDpG46RjqCZLA3P188qg" target="_blank">
           <img src="/public/articles/FemtechAtWork.png" width="80%" alt="Femtech At Work - Greater China Edition (Episode 21)"/>
         </a>
+        <p align="center" style="font-size: 0.8em;">
+          <i>Chan Meng on AI and Women's Health Innovation (Greater China Edition Episode 21)</i>
+        </p>
       </div>
     </td>
     <td width="25%">

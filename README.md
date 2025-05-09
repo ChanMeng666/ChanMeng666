@@ -1354,7 +1354,7 @@ while (isAwake) {
 
 <a id="readme-support"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=☕%20Support%20My%20Work&fontSize=40&color=0:FFDD00,100:A65D37&stroke=A65D37)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎁%20Support%20My%20Work&fontSize=40&color=0:FF7F50,100:FF5252&stroke=FF5252)
 
 <div align="center">
   <table>

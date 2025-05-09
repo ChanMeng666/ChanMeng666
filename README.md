@@ -2604,6 +2604,18 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+    <td width="50%">
+      <h3 align="center">Praxis and Pages 知行书话</h3>
+      <div align="center">  
+        <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=3040cb1dc3494a00" target="_blank">
+          <img src="/public/podcasts/Praxis-and-Pages.png" width="70%" alt="Praxis and Pages"/>
+        </a>
+        <p>欢迎来到「Praxis and Pages 知行书话」！这是一个借助 NotebookLM 工具，与你一同探索人文社科书籍魅力的中文播客。我将利用 NotebookLM 辅助我对书籍内容进行梳理、提炼和思考，并把这些精华内容转化为生动的语言分享给你。</p>
+        <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=25d9e23a4a8c4456" target="_blank">
+          <img src="https://img.shields.io/badge/Listen%20on-Spotify-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen on Spotify"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 

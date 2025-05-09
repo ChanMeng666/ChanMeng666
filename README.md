@@ -2481,10 +2481,8 @@ alt="Mozilla Logo"/>
 
 <a id="readme-interviews"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎤%20Media%20Appearances%20&%20Interviews&fontSize=40&color=0:9146FF,100:772CE8&stroke=772CE8)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎤%20Media%20Appearances%20and%20Interviews&fontSize=40&color=0:9146FF,100:772CE8&stroke=772CE8)
 
-<details>
-  <summary><h3>🎤 Media Appearances & Interviews</h3></summary>
 <table>
   <tr>
     <td width="25%">
@@ -2553,7 +2551,6 @@ alt="Mozilla Logo"/>
     </td>
   </tr>
 </table>
-</details>
 
 <br />
 

@@ -2593,14 +2593,14 @@ alt="Mozilla Logo"/>
       </div>
     </td>
     <td width="50%">
-      <h3 align="center">未来图灵 (Future Turing)</h3>
+      <h3 align="center">Future Turing 未来图灵</h3>
       <div align="center">  
         <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
           <img src="/public/podcasts/decoding-the-future-cover-cn.png" width="70%" alt="未来图灵 Podcast"/>
         </a>
         <p>智能的边界在哪里？未来将如何被代码塑造？欢迎来到《未来图灵》！本节目专注于解读人工智能（AI）、大语言模型（LLMs）等尖端领域的关键研究论文。每一期，我们精选一篇具有影响力的论文，为你剖析其核心思想、技术突破和深远影响，用清晰的语言勾勒智能科技的发展脉络。洞察算法背后的智慧，理解正在发生的未来。</p>
         <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
-          <img src="https://img.shields.io/badge/Listen%20on-Spotify-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="收听于 Spotify"/>
+          <img src="https://img.shields.io/badge/Listen%20on-Spotify-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen on Spotify"/>
         </a>
       </div>
     </td>

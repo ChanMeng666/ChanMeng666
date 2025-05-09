@@ -1380,6 +1380,8 @@ while (isAwake) {
   </a>
 </div>
 
+<br />
+
 ![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=70&rotate=13&fontAlignY=25)
 
 <div align="center">

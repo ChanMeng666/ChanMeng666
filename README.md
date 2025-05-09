@@ -2540,6 +2540,96 @@ alt="Mozilla Logo"/>
 
 
 
+<a id="readme-interviews"></a>
+
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎙️%20Featured%20Interviews&fontSize=40&color=0:9146FF,100:772CE8&stroke=772CE8)
+
+<details open>
+  <summary><h3>🎤 Media Appearances & Interviews</h3></summary>
+<table>
+  <tr>
+    <td width="25%">
+      <h5 align="center">A Glimpse of My Minimalist Home</h5>
+      <div align="center">  
+        <a href="https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q" target="_blank">
+          <img src="/public/articles/Douban.jpg" width="80%" alt="A Glimpse of My Minimalist Home"/>
+        </a>
+      </div>
+    </td>
+    <td width="25%">
+      <h5 align="center">Girl on Mattress</h5>
+      <div align="center">  
+        <a href="https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ" target="_blank">
+          <img src="/public/articles/GirlonMattress.jpg" width="80%" alt="Girl on Mattress"/>
+        </a>
+      </div>
+    </td>
+    <td width="25%">
+      <h5 align="center">Minimalist to the end, I threw away my old name</h5>
+      <div align="center">  
+        <a href="https://mp.weixin.qq.com/s/Jk9I8ONA6vsyvHz7d4dkfw" target="_blank">
+          <img src="/public/articles/KanKeinSight.jpg" width="80%" alt="Minimalist to the end I threw away my old name"/>
+        </a>
+      </div>
+    </td>
+    <td width="25%">
+      <h5 align="center">A Genderless Girl</h5>
+      <div align="center">  
+        <a href="https://mp.weixin.qq.com/s/E0tR5syP1Wa6We60ipd0Vg" target="_blank">
+          <img src="/public/articles/AGenderlessGirl.jpg" width="80%" alt="A Genderless Girl"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="25%">
+      <h5 align="center">[Podcast] 码农姐妹 - From Math Teacher to Full-Stack Developer</h5>
+      <div align="center">  
+        <a href="https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2?s=eyJ1IjoiNjA5OWNhNmNlMGY1ZTcyM2JiYTA4NDc0In0%3D" target="_blank">
+          <img src="/public/articles/FromMathTeachertoFull-StackDeveloper.jpg" width="80%" alt="From Math Teacher to Full-Stack Developer"/>
+        </a>
+      </div>
+    </td>
+    <td width="25%">
+      <h5 align="center">[Podcast] Femtech At Work - From Math Teacher to FemTech CTO</h5>
+      <div align="center">  
+        <a href="https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2?si=b6JDpG46RjqCZLA3P188qg" target="_blank">
+          <img src="/public/articles/FemtechAtWork.png" width="80%" alt="Femtech At Work - Greater China Edition (Episode 21)"/>
+        </a>
+      </div>
+    </td>
+    <td width="25%">
+      <h5 align="center">FemTech Weekend x UN Women CSW69</h5>
+      <div align="center">  
+        <a href="https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg" target="_blank">
+          <img src="/public/articles/UNWomenCSW69.jpeg" width="80%" alt="FemTech Weekend x UN Women CSW69 Feature"/>
+        </a>
+        <p align="center" style="font-size: 0.8em;">
+          <i>My AI solution for women's workplace health was featured</i>
+        </p>
+      </div>
+    </td>
+    <td width="25%">
+      <div align="center">
+        <a href="https://www.youtube.com/your-channel" target="_blank">
+          <img src="https://img.shields.io/badge/See%20All%20Interviews-%23FF0000.svg?style=for-the-badge&logo=youtube&logoColor=white" alt="See All Interviews"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+</details>
+
+<br />
+
+<div align="right">
+  <a href="#readme-interviews">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Interviews-%234B5563.svg?style=for-the-badge&logoColor=white&color=9146FF" alt="Back to Top"/>
+  </a>
+</div>
+
+
+
 <a id="readme-podcasts"></a>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎙️%20Podcasts&fontSize=40&color=0:1DB954,100:191414&stroke=191414)

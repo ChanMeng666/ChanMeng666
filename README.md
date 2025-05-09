@@ -2544,7 +2544,7 @@ alt="Mozilla Logo"/>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎙️%20Podcasts&fontSize=40&color=0:1DB954,100:191414&stroke=191414)
 
-<details open>
+<details>
   <summary><h3>🎧 My Tech Podcasts</h3></summary>
 
 <table>
@@ -2585,24 +2585,8 @@ alt="Mozilla Logo"/>
           <tr>
             <td width="33%">
               <div align="center">
-                <h4>The Evolution of LLMs</h4>
-                <a href="https://open.spotify.com/episode/your-episode-id" target="_blank">
-                  <img src="https://img.shields.io/badge/Listen%20Now-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen Now"/>
-                </a>
-              </div>
-            </td>
-            <td width="33%">
-              <div align="center">
-                <h4>Diffusion Models Explained</h4>
-                <a href="https://open.spotify.com/episode/your-episode-id" target="_blank">
-                  <img src="https://img.shields.io/badge/Listen%20Now-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen Now"/>
-                </a>
-              </div>
-            </td>
-            <td width="33%">
-              <div align="center">
-                <h4>The Future of AI Alignment</h4>
-                <a href="https://open.spotify.com/episode/your-episode-id" target="_blank">
+                <h4>Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks</h4>
+                <a href="https://open.spotify.com/episode/5xEMm3tBJGNqZXXrLk5XPX?si=9qkMkjmsSYCqxZXlwCBZOA" target="_blank">
                   <img src="https://img.shields.io/badge/Listen%20Now-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen Now"/>
                 </a>
               </div>

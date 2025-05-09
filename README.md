@@ -2409,6 +2409,14 @@ alt="Mozilla Logo"/>
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Setting Up Algolia DocSearch in Docusaurus</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/setting-up-algolia-docsearch-docusaurus-chan-meng-yxeqc/?trackingId=HhQYljM%2BOyEsyWxh2jdzRg%3D%3D" target="_blank">
+          <img src="/public/articles/SettingUpAlgoliaDocSearchinDocusaurus.png" width="100%" alt="Setting Up Algolia DocSearch in Docusaurus"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

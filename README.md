@@ -1380,10 +1380,6 @@ while (isAwake) {
   </a>
 </div>
 
-<a id="readme-about-me"></a>
-
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=😄%20About%20Me&fontSize=40&color=0:FFDD00,100:A65D37&stroke=A65D37)
-
 ![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=70&rotate=13&fontAlignY=25)
 
 <div align="center">
@@ -1401,6 +1397,9 @@ while (isAwake) {
 
 ![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&reversal=true&section=footer)
 
+<a id="readme-about-me"></a>
+
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=😄%20About%20Me&fontSize=40&color=0:FFDD00,100:A65D37&stroke=A65D37)
 
 <a id="readme-experience"></a>
 

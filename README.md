@@ -49,7 +49,7 @@ while (isAwake) {
 
 <a id="readme-projects"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🚀%20Featured%20Projects&fontSize=40&color=0:8871e5,100:b678c4&stroke=b678c4)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🌟%20Featured%20Projects&fontSize=40&color=0:3DB2FF,100:4D96FF&stroke=4D96FF)
 
 <!-- Primary Projects (Always Visible) -->
 

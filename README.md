@@ -2637,6 +2637,8 @@ alt="Mozilla Logo"/>
   </a>
 </div>
 
+<a id="readme-stats"></a>
+
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📈%20GitHub%20Stats&fontSize=40&color=0:FF85B3,100:D65DB1&stroke=D65DB1)
 
 <table width="100%">
@@ -2686,6 +2688,14 @@ alt="Mozilla Logo"/>
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
+</div>
+
+<br />
+
+<div align="right">
+  <a href="#readme-stats">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Stats-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
 </div>
 
 <h2 align="center">💡 Random Dev Quote</h2>

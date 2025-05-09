@@ -2471,65 +2471,6 @@ alt="Mozilla Logo"/>
 </table>
 </details>
 
-
-<details>
-<summary><h3>🎙️ Featured Interviews</h3></summary>
-<table>
-  <tr>
-    <td width="20%">
-      <h3 align="center">A Glimpse of My Minimalist Home</h3>
-      <div align="center">  
-        <a href="https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q" target="_blank">
-          <img src="/public/articles/Douban.jpg" width="50%" alt="A Glimpse of My Minimalist Home"/>
-        </a>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Girl on Mattress</h3>
-      <div align="center">  
-        <a href="https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ" target="_blank">
-          <img src="/public/articles/GirlonMattress.jpg" width="50%" alt="Girl on Mattress"/>
-        </a>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Minimalist to the end, I threw away my old name</h3>
-      <div align="center">  
-        <a href="https://mp.weixin.qq.com/s/Jk9I8ONA6vsyvHz7d4dkfw" target="_blank">
-          <img src="/public/articles/KanKeinSight.jpg" width="50%" alt="Minimalist to the end I threw away my old name"/>
-        </a>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">A Genderless Girl</h3>
-      <div align="center">  
-        <a href="https://mp.weixin.qq.com/s/E0tR5syP1Wa6We60ipd0Vg" target="_blank">
-          <img src="/public/articles/AGenderlessGirl.jpg" width="50%" alt="A Genderless Girl"/>
-        </a>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%">
-      <h3 align="center">[Podcast] 码农姐妹 - From Math Teacher to Full-Stack Developer</h3>
-      <div align="center">  
-        <a href="https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2?s=eyJ1IjoiNjA5OWNhNmNlMGY1ZTcyM2JiYTA4NDc0In0%3D" target="_blank">
-          <img src="/public/articles/FromMathTeachertoFull-StackDeveloper.jpg" width="50%" alt="From Math Teacher to Full-Stack Developer"/>
-        </a>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">[Podcast] Femtech At Work - From Math Teacher to FemTech CTO: Chan Meng on AI and Women's Health Innovation (Greater China Edition Episode 21)</h3>
-      <div align="center">  
-        <a href="https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2?si=b6JDpG46RjqCZLA3P188qg" target="_blank">
-          <img src="/public/articles/FemtechAtWork.png" width="50%" alt="Femtech At Work - Greater China Edition (Episode 21)"/>
-        </a>
-      </div>
-    </td>
-  </tr>
-</table>
-</details>
-
 <br />
 
 <div align="right">

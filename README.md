@@ -1798,7 +1798,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Qiao Jun</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/qiao-jun-78a1b1282/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4D0BAQFJU3_2fIeNWw/company-logo_200_200/company-logo_200_200/0/1631309794782?e=1746662400&v=beta&t=-yN1A3BwSgHGBjeFNZqPNX4RBps0NIow0ReG08L_L0c" width="50%" alt="Qiao Jun"/></a>
+        <a href="https://www.linkedin.com/in/qiao-jun-78a1b1282/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4D0BAQFJU3_2fIeNWw/company-logo_200_200/company-logo_200_200/0/1631309794782?e=1752105600&v=beta&t=q29fxfuxaGMd6xh2DoetMecKx7VrR-2W7HkO79h2Wbw" width="50%" alt="Qiao Jun"/></a>
         <br>
         <br>
         <p>

@@ -2609,13 +2609,6 @@ alt="Mozilla Logo"/>
         </p>
       </div>
     </td>
-    <td width="25%">
-      <div align="center">
-        <a href="https://www.youtube.com/your-channel" target="_blank">
-          <img src="https://img.shields.io/badge/See%20All%20Interviews-%23FF0000.svg?style=for-the-badge&logo=youtube&logoColor=white" alt="See All Interviews"/>
-        </a>
-      </div>
-    </td>
   </tr>
 </table>
 </details>
@@ -2624,7 +2617,7 @@ alt="Mozilla Logo"/>
 
 <div align="right">
   <a href="#readme-interviews">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Interviews-%234B5563.svg?style=for-the-badge&logoColor=white&color=9146FF" alt="Back to Top"/>
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Interviews-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 

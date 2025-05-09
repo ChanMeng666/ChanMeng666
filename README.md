@@ -2538,6 +2538,94 @@ alt="Mozilla Logo"/>
   </a>
 </div>
 
+
+
+<a id="readme-podcasts"></a>
+
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎙️%20Podcasts&fontSize=40&color=0:1DB954,100:191414&stroke=191414)
+
+<details open>
+  <summary><h3>🎧 My Tech Podcasts</h3></summary>
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Decoding the Future</h3>
+      <div align="center">  
+        <a href="https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj?si=41e856e179dd4007" target="_blank">
+          <img src="/public/podcasts/decoding-the-future-cover-en.png" width="70%" alt="Decoding the Future Podcast"/>
+        </a>
+        <p>How is technology really evolving? Join us on Decoding the Future, where we explore the landmark research papers driving innovation in Artificial Intelligence, LLMs, and beyond. Each episode focuses on a single paper, translating complex methodologies and findings into engaging insights about where technology is headed. We connect the dots between research and reality, helping you grasp the future being built today.</p>
+        <a href="https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj?si=d5801a1e49c0497c" target="_blank">
+          <img src="https://img.shields.io/badge/Listen%20on-Spotify-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen on Spotify"/>
+        </a>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">未来图灵 (Future Turing)</h3>
+      <div align="center">  
+        <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
+          <img src="/public/podcasts/decoding-the-future-cover-cn.png" width="70%" alt="未来图灵 Podcast"/>
+        </a>
+        <p>智能的边界在哪里？未来将如何被代码塑造？欢迎来到《未来图灵》！本节目专注于解读人工智能（AI）、大语言模型（LLMs）等尖端领域的关键研究论文。每一期，我们精选一篇具有影响力的论文，为你剖析其核心思想、技术突破和深远影响，用清晰的语言勾勒智能科技的发展脉络。洞察算法背后的智慧，理解正在发生的未来。</p>
+        <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
+          <img src="https://img.shields.io/badge/Listen%20on-Spotify-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="收听于 Spotify"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td width="100%">
+      <h3 align="center">Featured Episodes</h3>
+      <div align="center">
+        <table>
+          <tr>
+            <td width="33%">
+              <div align="center">
+                <h4>The Evolution of LLMs</h4>
+                <a href="https://open.spotify.com/episode/your-episode-id" target="_blank">
+                  <img src="https://img.shields.io/badge/Listen%20Now-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen Now"/>
+                </a>
+              </div>
+            </td>
+            <td width="33%">
+              <div align="center">
+                <h4>Diffusion Models Explained</h4>
+                <a href="https://open.spotify.com/episode/your-episode-id" target="_blank">
+                  <img src="https://img.shields.io/badge/Listen%20Now-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen Now"/>
+                </a>
+              </div>
+            </td>
+            <td width="33%">
+              <div align="center">
+                <h4>The Future of AI Alignment</h4>
+                <a href="https://open.spotify.com/episode/your-episode-id" target="_blank">
+                  <img src="https://img.shields.io/badge/Listen%20Now-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen Now"/>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</details>
+
+<br />
+
+<div align="right">
+  <a href="#readme-podcasts">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Podcasts-%234B5563.svg?style=for-the-badge&logoColor=white&color=1DB954" alt="Back to Top"/>
+  </a>
+</div>
+
+
+
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📊%20GitHub%20Stats&fontSize=40&color=0:32CD32,100:006400&stroke=006400)
 
 <table width="100%">

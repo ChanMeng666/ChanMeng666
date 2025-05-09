@@ -2618,6 +2618,18 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+    <td width="50%">
+      <h3 align="center">Beyond Thirty 不止三十</h3>
+      <div align="center">  
+        <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=3040cb1dc3494a00" target="_blank">
+          <img src="/public/podcasts/Beyond-Thirty.png" width="70%" alt="Beyond Thirty"/>
+        </a>
+        <p>欢迎收听「Beyond Thirty 不止三十」！这是一档由我主持的对话类播客节目。作为一名30+岁的女性，我将邀请年龄在30至40岁之间的、来自各行各业的女性朋友们，进行轻松、真实的对谈。</p>
+        <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=25d9e23a4a8c4456" target="_blank">
+          <img src="https://img.shields.io/badge/Listen%20on-Spotify-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen on Spotify"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 

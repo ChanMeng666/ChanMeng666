@@ -2642,8 +2642,24 @@ alt="Mozilla Logo"/>
           <tr>
             <td width="33%">
               <div align="center">
-                <h4>Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks</h4>
+                <h4>EP1 - Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks</h4>
                 <a href="https://open.spotify.com/episode/5xEMm3tBJGNqZXXrLk5XPX?si=9qkMkjmsSYCqxZXlwCBZOA" target="_blank">
+                  <img src="https://img.shields.io/badge/Listen%20Now-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen Now"/>
+                </a>
+              </div>
+            </td>
+            <td width="33%">
+              <div align="center">
+                <h4>EP3 - Breaking the illusion of employment in the age of AI</h4>
+                <a href="https://open.spotify.com/episode/6LlZEqZWZceOQrW7LjxHip?si=iLemTSB4Qm6xF1aoN1HDcQ" target="_blank">
+                  <img src="https://img.shields.io/badge/Listen%20Now-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen Now"/>
+                </a>
+              </div>
+            </td>
+            <td width="33%">
+              <div align="center">
+                <h4>EP4 - AI and Future Career Prospects</h4>
+                <a href="https://open.spotify.com/episode/7teJvl5PImK8nNcyNXwPrb?si=QFlh5DTcSgGTAo-W7kH7BA" target="_blank">
                   <img src="https://img.shields.io/badge/Listen%20Now-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen Now"/>
                 </a>
               </div>

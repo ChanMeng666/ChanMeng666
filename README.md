@@ -2431,6 +2431,14 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Implementing Internationalization in a Docusaurus Website: Experience and Lessons Learned</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/implementing-internationalization-docusaurus-website-experience-meng-ppfgc/?trackingId=ADxvRKyscP0fCHyQdZF12g%3D%3D" target="_blank">
+          <img src="/public/articles/Implementing-Internationalization-in-a-Docusaurus.png" width="100%" alt="Implementing Internationalization in a Docusaurus Website"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

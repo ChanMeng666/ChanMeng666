@@ -1678,7 +1678,7 @@ while (isAwake) {
 <summary><h1>👍 Recommendations</h1></summary>
 <table>
   <tr>
-    <td width="100%">
+    <td width="50%">
       <h3 align="center">Gabby Hurst</h3>
       <div align="center">  
         <a href="https://www.linkedin.com/in/gabby-h-159141202/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQGDkkXwj5kG4g/profile-displayphoto-shrink_800_800/B56ZYOv3JaGcAc-/0/1744004153155?e=1753920000&v=beta&t=f_Ex-TMkzKPDszkg75-oEj3Zgs_bVw6aHgEpWMb6RDI" width="50%" alt="Gabby Hurst"/></a>

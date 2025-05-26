@@ -1679,9 +1679,88 @@ while (isAwake) {
 <table>
   <tr>
     <td width="50%">
+      <h3 align="center">Gabby Hurst</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/gabby-h-159141202/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQGDkkXwj5kG4g/profile-displayphoto-shrink_800_800/B56ZYOv3JaGcAc-/0/1744004153155?e=1753920000&v=beta&t=f_Ex-TMkzKPDszkg75-oEj3Zgs_bVw6aHgEpWMb6RDI" width="50%" alt="Gabby Hurst"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Sanicle</strong><br>
+          Chief Experience Officer
+        </p>
+        <p align="left">
+          "Chan Meng is an outstanding Senior AI/ML Infrastructure Engineer whose work consistently combines speed, security, and strategic foresight. 
+        </p>
+        <p align="left">
+          She delivers complex, high-impact systems with precision and grace. She’s integrated enterprise AI tools like IBM’s watsonx, refining vector databases, or optimizing UX flows for production readiness.
+        </p>
+        <p align="left">
+          What truly sets Chan apart is her principled approach to software engineering. She embeds data privacy into the core architecture, ensuring that client agency, trust, and resilience are never afterthoughts. 
+        </p>
+        <p align="left">
+          Chan brings structure and calm to ambiguity, advocates for documentation and transparency, and fosters a culture of accountability and focus. 
+        </p>
+        <p align="left">
+          Despite operating across time zones, she remains fully present, responsive, and proactive—turning potential collaboration friction into a model of asynchronous excellence.
+        </p>
+        <p align="left">
+          In every sense, Chan is the kind of engineer who elevates those around her."
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Chaste Christopher Inegbedion</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/chastechrisinegbedion/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQFikwPjU-0CoQ/profile-displayphoto-shrink_400_400/B56ZSWpOsyGUAg-/0/1737694178468?e=1753920000&v=beta&t=07gQx7pJgyeZsTMpfxTSuFZJG2yIBsM7iLSMovYnjQM" width="50%" alt="Chaste Christopher Inegbedion"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Sanicle</strong><br>
+          Chief Period Officer
+        </p>
+        <p align="left">
+          "I highly recommend Chan Meng. Since joining Sanicle, her hands-on experience, deep understanding of our AI technology, and exceptional willingness to learn and collaborate have been absolutely instrumental. She played a pivotal role in securing our IBM MVP and its successful deployment, a testament to her dedication and expertise.
+        </p>
+        <p align="left">
+          Chan is truly the best hand when it comes to workplace health, consistently demonstrating a remarkable ability to translate complex concepts into actionable strategies. I am confident that she will continue to drive significant impact wherever her journey leads."
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">Daryll Hall</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/daryll-hall-167435310/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D03AQGX6bmahl4jSQ/profile-displayphoto-shrink_400_400/B4DZWrjvLXHYAg-/0/1742340028426?e=1753920000&v=beta&t=ioqgshknAxCbDl8JX2nW5I1F1NgGnFusEvOHQyJtNDM" width="50%" alt="Daryll Hall"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Sanicle</strong><br>
+          Chief AI Officer
+        </p>
+        <p align="left">
+          "I have the pleasure of working with Chan at Sanicle, where she serves as our Senior AI/ML Infrastructure Engineer—and I can confidently say she’s one of the most talented and reliable professionals I’ve worked with.
+        </p>
+        <p align="left">
+          Chan has done a fantastic job leading the technical development of our web application, playing a key role in integrating cutting-edge AI features. Her deep understanding of infrastructure and AI systems, combined with her hands-on approach, has been crucial to our progress.
+        </p>
+        <p align="left">
+          What sets Chan apart is not only her technical expertise but also her responsiveness and professionalism. She consistently delivers on modification requests quickly and thoughtfully, ensuring the product continues to evolve in the right direction. She's always open to feedback, listens carefully, and adapts with precision and care.
+        </p>
+        <p align="left">
+          Beyond her technical contributions, Chan brings a positive, optimistic energy to every team interaction. She’s incredibly easy to work with—friendly, collaborative, and always looking for ways to support the team.
+        </p>
+        <p align="left">
+          Any organization would be lucky to have Chan on board. I can’t recommend her highly enough."
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
       <h3 align="center">Mi Su</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/%E7%B1%B3-%E8%8B%8F-8b24881a4/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQHO54yAmjXtJw/company-logo_200_200/company-logo_200_200/0/1631328869325?e=1747267200&v=beta&t=n6GwkUJnTDJ9GHZV7xg_tca6RTVlUmGTSikIdsTeElM" width="50%" alt="Mi Su"/></a>
+        <a href="https://www.linkedin.com/in/%E7%B1%B3-%E8%8B%8F-8b24881a4/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQHO54yAmjXtJw/company-logo_200_200/company-logo_200_200/0/1631328869325?e=1753920000&v=beta&t=pLk6ikEd5oaUMENMdjZJMJeqJcqXs4f5HTCIFutkr-k" width="50%" alt="Mi Su"/></a>
         <br>
         <br>
         <p>

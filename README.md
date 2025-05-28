@@ -2518,6 +2518,14 @@ alt="Mozilla Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Building a PDF Download Form with Notion Integration in Docusaurus: A Complete Guide</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/building-pdf-download-form-notion-integration-docusaurus-chan-meng-oodrc/?trackingId=R%2FHPf4AgeL5jzJc9LB41rA%3D%3D" target="_blank">
+          <img src="/public/articles/Building-a-PDF-Download-Form-with-Notion-Integration-in-Docusaurus.png" width="100%" alt="Building a PDF Download Form with Notion Integration in Docusaurus"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

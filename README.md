@@ -945,6 +945,9 @@ while (isAwake) {
           <a href="https://chanmeng666.github.io/sanicle-ai-mobile/" target="_blank">
             <img src="https://img.shields.io/badge/Mobile-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
           </a>
+          <a href="https://sanicle-wellness-agent-2lxj5uw.gamma.site/" target="_blank">
+            <img src="https://img.shields.io/badge/AI-Agent-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
         </p>
         <p align="left">
           • Women's Health Platform for Workplace Wellness<br>

@@ -639,7 +639,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">FemTech Weekend</h3>
       <div align="center">  
-        <a href="https://femtech-weekend.vercel.app/" target="_blank"><img src="/public/brands/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
+        <a href="https://www.femtechweekend.com/" target="_blank"><img src="/public/brands/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
         <br>
         <br>
         <p>

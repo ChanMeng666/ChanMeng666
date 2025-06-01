@@ -2055,31 +2055,31 @@ while (isAwake) {
 <details>
 <summary>
     <h3>🐱‍👤 Other Professional Certifications</h3>
-    <img src="https://media.licdn.com/dms/image/v2/C560BAQFmuLSyL1nlPA/company-logo_100_100/company-logo_100_100/0/1678231359044/github_logo?e=1748476800&v=beta&t=p0nB14CE7SFdCN6p-XZiypnT_iTQKhi_Fh2Beiyu1qQ" 
+    <img src="/public/certificates/brands/github_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="GitHub Logo"/>
-    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFWt4Tl53wjZQ/company-logo_200_200/company-logo_200_200/0/1705960989383/docker_logo?e=1749081600&v=beta&t=FoiIC1nMVWuP2sywnxBxmGOMY5k232fNB9vmK6H7eeA" 
+    <img src="/public/certificates/brands/docker_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Docker Logo"/>
-    <img src="https://media.licdn.com/dms/image/v2/C560BAQEbIYAkAURcYw/company-logo_100_100/company-logo_100_100/0/1650566107463/canonical_logo?e=1748476800&v=beta&t=VLzi_hxTcoSWKAPt9u-QNRfYLAQ2bKgtVVjn_aB4tyE" 
+    <img src="/public/certificates/brands/canonical_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Canonical Logo"/>
-    <img src="https://media.licdn.com/dms/image/v2/D560BAQHm8gCQMydp7g/company-logo_100_100/company-logo_100_100/0/1719847870864/anacondainc_logo?e=1748476800&v=beta&t=QNG5XwU1_QDNhd_0LuJ3AmYQ20aHy2yFQx78fYDOg1k" 
+    <img src="/public/certificates/brands/anacondainc_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Anaconda Logo"/>
-    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQGeyLL6crkJKg/company-logo_100_100/company-logo_100_100/0/1735593604612/atlassian_logo?e=1748476800&v=beta&t=WWquEADSG16mB2HFL8HOaWkFEiJA9wTfW3xPqPlzung" 
+    <img src="/public/certificates/brands/atlassian_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Atlassian Logo"/>
-    <img src="https://media.licdn.com/dms/image/v2/D4D0BAQE_07XlODFojw/company-logo_100_100/company-logo_100_100/0/1702546323323/cppinstitute_logo?e=1748476800&v=beta&t=Ac3-mty-tBQRvMfVJCvTmcl8ocgtj7Gds8_UXxYWtZI" 
+    <img src="/public/certificates/brands/cppinstitute_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="C++ Institute Logo"/>
-    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFIxLcCtbdBEw/company-logo_100_100/company-logo_100_100/0/1715703491195/jetbrains_logo?e=1748476800&v=beta&t=yDzRo0yLBXTQPiyuxE4bdTgOyK4kvbkKzDQvSdST3iM" 
+    <img src="/public/certificates/brands/jetbrains_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="JetBrains Logo"/>
-    <img src="https://media.licdn.com/dms/image/v2/C4D0BAQH0-xEV33mp1A/company-logo_100_100/company-logo_100_100/0/1631301014132?e=1748476800&v=beta&t=QSYVxyK-7pbowUYcetnVRxUOJ-56-1n7BO28NIZe24w" 
+    <img src="/public/certificates/brands/1631301014132.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Wolfram Logo"/>
-    <img src="https://media.licdn.com/dms/image/v2/D560BAQEd2Es3SH2hIQ/company-logo_100_100/company-logo_100_100/0/1733347563365/mozilla_corporation_logo?e=1748476800&v=beta&t=hTwNMmFk8yL5yuIJU-yn9HxspZOaK9u4TCaSHrfwlE8" 
+    <img src="/public/certificates/brands/mozilla_corporation_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Mozilla Logo"/>
 </summary>

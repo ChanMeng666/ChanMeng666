@@ -1924,7 +1924,7 @@ while (isAwake) {
 
 <a id="readme-certifications"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🏆%20Certifications&fontSize=40&color=0:03acd3,100:1d2ecb&stroke=03acd3&fontColor=FFFFFF)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📜%20Certifications&fontSize=40&color=0:03acd3,100:1d2ecb&stroke=03acd3&fontColor=FFFFFF)
 
 <details>
 <summary>

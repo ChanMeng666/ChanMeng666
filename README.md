@@ -2668,6 +2668,10 @@ alt="Mozilla Logo"/>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎧%20Podcasts&fontSize=40&color=0:2C8FC5,100:F74BF3&stroke=2C8FC5&fontColor=FFFFFF)
 
+<div align="center">
+  <img src="/public/github-cover-image.svg" width="100%" alt="github cover image">
+</div>
+
 <table>
   <tr>
     <td width="50%">

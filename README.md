@@ -566,7 +566,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">East Coast Anglers Club</h3>
       <div align="center">  
-        <a href="https://groupac.pythonanywhere.com/" target="_blank"><img src="/public/brands/shipfishing.svg" width="50%" alt="East Coast Anglers Club"/></a>
+        <a href="https://groupac.pythonanywhere.com/" target="_blank"><img src="/public/brands/shipfishing-1.svg" width="50%" alt="East Coast Anglers Club"/></a>
         <br>
         <br>
         <p>
@@ -587,7 +587,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Personal Introduction Website</h3>
       <div align="center">  
-        <a href="https://who-i-am-nine.vercel.app/" target="_blank"><img src="/public/brands/who-i-am.svg" width="50%" alt="Portfolio Website"></a>
+        <a href="https://who-i-am-nine.vercel.app/" target="_blank"><img src="/public/brands/who-i-am-1.svg" width="50%" alt="Portfolio Website"></a>
         <br>
         <br>
         <p>
@@ -610,7 +610,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">TikTok E-commerce Mall</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/douyin-mall" target="_blank"><img src="/public/brands/TikTokShop.svg" width="50%" alt="TikTok E-commerce Mall"/></a>
+        <a href="https://github.com/ChanMeng666/douyin-mall" target="_blank"><img src="/public/brands/TikTokShop-1.svg" width="50%" alt="TikTok E-commerce Mall"/></a>
         <br>
         <br>
         <p>
@@ -686,7 +686,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Interactive Story Generator</h3>
       <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo.svg" width="50%" alt="Interactive Story Generator"/></a>
+        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo-1.svg" width="50%" alt="Interactive Story Generator"/></a>
         <br>
         <br>
         <p>

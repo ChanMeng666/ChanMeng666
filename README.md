@@ -2849,8 +2849,15 @@ alt="Mozilla Logo"/>
 
 <div align="center">
 
-[![Chan Meng - Ask Me Anything](https://img.shields.io/static/v1?label=Discussions&message=Ask%20Me%20Anything&color=green&style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/discussions)
+[![Chan Meng - Ask Me Anything](https://img.shields.io/static/v1?label=Discussions&message=Ask%20Me%20Anything&color=2C8FC5&style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/discussions)
 
+</div>
+
+<div align="center">
+  <h3>Ask Me Anything</h3>
+  <a href="https://github.com/ChanMeng666/ChanMeng666/discussions" target="_blank">
+    <img src="https://img.shields.io/badge/Discussions-Ask%20Me%20Anything-2C8FC5?style=for-the-badge&logo=github&logoColor=FFFFFF"/>
+  </a>
 </div>
 
 <div align="center">

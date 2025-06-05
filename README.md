@@ -1328,14 +1328,14 @@ while (isAwake) {
 <div align="center">
   <h3>More Projects</h3>
   <a href="https://github.com/ChanMeng666?tab=repositories" target="_blank">
-    <img src="https://img.shields.io/badge/View%20More-My%20Repositories-blue?style=for-the-badge&logo=github"/>
+    <img src="https://img.shields.io/badge/View%20More-My%20Repositories-E52473?style=for-the-badge&logo=github&logoColor=FFFFFF"/>
   </a>
 </div>
 
 <div align="center">
   <h3>Ask Me Anything</h3>
   <a href="https://github.com/ChanMeng666/ChanMeng666/discussions" target="_blank">
-    <img src="https://img.shields.io/badge/Discussions-Ask%20Me%20Anything-green?style=for-the-badge&logo=github"/>
+    <img src="https://img.shields.io/badge/Discussions-Ask%20Me%20Anything-2C8FC5?style=for-the-badge&logo=github&logoColor=FFFFFF"/>
   </a>
 </div>
 
@@ -1343,7 +1343,7 @@ while (isAwake) {
 
 <div align="right">
   <a href="#readme-projects">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Projects-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Projects-E52473.svg?style=for-the-badge&logoColor=FFFFFF" alt="Back to Top"/>
   </a>
 </div>
 

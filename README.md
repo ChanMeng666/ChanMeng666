@@ -2771,7 +2771,7 @@ alt="Mozilla Logo"/>
 
 <a id="readme-stats"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📈%20GitHub%20Stats&fontSize=40&color=0:2C8FC5,100:FFB277&stroke=2C8FC5&fontColor=2A2A2A)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📈%20GitHub%20Stats&fontSize=40&color=0:2C8FC5,100:FFB277&stroke=2C8FC5&fontColor=2A2A2A&fontColor=FFFFFF)
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">

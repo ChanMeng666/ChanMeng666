@@ -328,7 +328,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">FriendScope</h3>
       <div align="center">  
-        <a href="https://friendscope.vercel.app/" target="_blank"><img src="/public/brands/friendscope.svg" width="50%" alt="FriendScope Website"/></a>
+        <a href="https://friendscope.vercel.app/" target="_blank"><img src="/public/brands/friendscope-1.svg" width="50%" alt="FriendScope Website"/></a>
         <br>
         <br>
         <p>
@@ -349,7 +349,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">AgriHire Solutions</h3>
       <div align="center">  
-        <a href="https://agrihireaq.pythonanywhere.com/" target="_blank"><img src="/public/brands/AgriHire_Solutions.svg" width="100%" alt="AgriHire Solutions"/></a>
+        <a href="https://agrihireaq.pythonanywhere.com/" target="_blank"><img src="/public/brands/AgriHire_Solutions-1.svg" width="100%" alt="AgriHire Solutions"/></a>
         <br>
         <br>
         <p>
@@ -459,7 +459,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Job Value Assessment</h3>
       <div align="center">  
-        <a href="https://job-valuation.vercel.app/assessment/start" target="_blank"><img src="/public/brands/job-valuation.svg" width="50%" alt="Job Value Assessment Tool"/></a>
+        <a href="https://job-valuation.vercel.app/assessment/start" target="_blank"><img src="/public/brands/job-valuation-1.svg" width="50%" alt="Job Value Assessment Tool"/></a>
         <br>
         <br>
         <p>
@@ -480,7 +480,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">LinkedIn Jobs Search</h3>
       <div align="center">  
-        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
+        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search-1.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
         <br>
         <br>
         <p>
@@ -503,7 +503,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Selwyn Panel Beaters Online Service</h3>
       <div align="center">  
-        <a href="https://chanmeng.pythonanywhere.com/" target="_blank"><img src="/public/brands/selwyn-panel-beaters-online.svg" width="50%" alt="Selwyn Panel Beaters Online Service"/></a>
+        <a href="https://chanmeng.pythonanywhere.com/" target="_blank"><img src="/public/brands/selwyn-panel-beaters-online-1.svg" width="50%" alt="Selwyn Panel Beaters Online Service"/></a>
         <br>
         <br>
         <p>
@@ -524,7 +524,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Biosecurity</h3>
       <div align="center">  
-        <a href="https://1160210.pythonanywhere.com/" target="_blank"><img src="/public/brands/Biosecurity.svg" width="50%" alt="Biosecurity"/></a>
+        <a href="https://1160210.pythonanywhere.com/" target="_blank"><img src="/public/brands/Biosecurity-1.svg" width="50%" alt="Biosecurity"/></a>
         <br>
         <br>
         <p>
@@ -545,7 +545,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Swimming Club Management System</h3>
       <div align="center">  
-        <a href="https://countryside-community-sw-6wqr4e1.gamma.site/" target="_blank"><img src="/public/brands/SwimmingClubManagementSystem.svg" width="50%" alt="Swimming Club Management System"/></a>
+        <a href="https://countryside-community-sw-6wqr4e1.gamma.site/" target="_blank"><img src="/public/brands/SwimmingClubManagementSystem-1.svg" width="50%" alt="Swimming Club Management System"/></a>
         <br>
         <br>
         <p>

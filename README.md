@@ -26,7 +26,7 @@
 
 <details>
 <summary>
-  <h2>🤞 My Promis</h2>
+  <h2>🤞 My Promise</h2>
 </summary>
 
 ```java

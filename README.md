@@ -961,7 +961,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">AI Programming Education</h3>
       <div align="center">  
-        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming.svg" width="50%" alt="AI Programming Education Platform"/></a>
+        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
         <br>
         <br>
         <p>
@@ -1003,7 +1003,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">README Generator</h3>
       <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/readme-profile-generator" target="_blank"><img src="/public/brands/readme-profile-generator-logo.svg" width="50%" alt="README Generator"/></a>
+        <a href="https://huggingface.co/spaces/ChanMeng666/readme-profile-generator" target="_blank"><img src="/public/brands/readme-profile-generator-logo-1.svg" width="50%" alt="README Generator"/></a>
         <br>
         <br>
         <p>
@@ -1024,7 +1024,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Gradient SVG Generator</h3>
       <div align="center">  
-        <a href="https://gradient-svg-generator.vercel.app/settings" target="_blank"><img src="/public/brands/gradient-svg-generator.svg" width="50%" alt="Gradient SVG Generator"/></a>
+        <a href="https://gradient-svg-generator.vercel.app/settings" target="_blank"><img src="/public/brands/gradient-svg-generator-1.svg" width="50%" alt="Gradient SVG Generator"/></a>
         <br>
         <br>
         <p>
@@ -1045,7 +1045,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Easy Resume</h3>
       <div align="center">  
-        <a href="https://easy-resume-theta.vercel.app/" target="_blank"><img src="/public/brands/easy-resume.svg" width="50%" alt="Easy Resume Logo"/></a>
+        <a href="https://easy-resume-theta.vercel.app/" target="_blank"><img src="/public/brands/easy-resume-1.svg" width="50%" alt="Easy Resume Logo"/></a>
         <br>
         <br>
         <p>
@@ -1091,7 +1091,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Google News MCP Server</h3>
       <div align="center">  
-        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news.svg" width="50%" alt="Google News MCP Server"/></a>
+        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news-1.svg" width="50%" alt="Google News MCP Server"/></a>
         <br>
         <br>
         <p>
@@ -1115,7 +1115,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Tencent Meeting Video Downloader</h3>
       <div align="center">  
-        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
+        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader-1.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
         <br>
         <br>
         <p>
@@ -1204,7 +1204,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Google Jobs MCP Server</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank"><img src="/public/brands/server-google-jobs.svg" width="50%" alt="Google Jobs MCP Server"/></a>
+        <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank"><img src="/public/brands/server-google-jobs-1.svg" width="50%" alt="Google Jobs MCP Server"/></a>
         <br>
         <br>
         <p>
@@ -1259,7 +1259,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">FemTracker Mobile App</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/FemTracker" target="_blank"><img src="/public/brands/FemTracker.svg" width="50%" alt="FemTracker"/></a>
+        <a href="https://github.com/ChanMeng666/FemTracker" target="_blank"><img src="/public/brands/FemTracker-1.svg" width="50%" alt="FemTracker"/></a>
         <br>
         <br>
         <p>
@@ -1280,7 +1280,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Reincarnation Journey</h3>
       <div align="center">  
-        <a href="https://journey-of-reincarnation.vercel.app" target="_blank"><img src="/public/brands/journey-of-reincarnation2.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
+        <a href="https://journey-of-reincarnation.vercel.app" target="_blank"><img src="/public/brands/journey-of-reincarnation2-1.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
         <br>
         <br>
         <p>

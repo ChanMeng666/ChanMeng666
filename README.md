@@ -1396,7 +1396,7 @@ while (isAwake) {
 
 <a id="readme-about-me"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=✨%20About%20Me&fontSize=40&color=0:9D4EDD,100:6A0DAD&stroke=6A0DAD)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=✨%20About%20Me&fontSize=40&color=0:c81abd,100:1d2ecb&stroke=c81abd)
 
 <a id="readme-experience"></a>
 
@@ -1910,7 +1910,7 @@ while (isAwake) {
 
 <a id="readme-certifications"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🏆%20Certifications&fontSize=40&color=0:00C2A8,100:008B8B&stroke=008B8B)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🏆%20Certifications&fontSize=40&color=0:03acd3,100:1d2ecb&stroke=03acd3)
 
 <details>
 <summary>

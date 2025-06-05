@@ -2854,13 +2854,6 @@ alt="Mozilla Logo"/>
 </div>
 
 <div align="center">
-  <h3>Ask Me Anything</h3>
-  <a href="https://github.com/ChanMeng666/ChanMeng666/discussions" target="_blank">
-    <img src="https://img.shields.io/badge/Discussions-Ask%20Me%20Anything-2C8FC5?style=for-the-badge&logo=github&logoColor=FFFFFF"/>
-  </a>
-</div>
-
-<div align="center">
 
   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/chanmeng66u)
   [![Portfolio](https://img.shields.io/badge/Portfolio-FF69B4?style=for-the-badge&logo=vercel&logoColor=white)](https://2d-portfolio-eta.vercel.app/)

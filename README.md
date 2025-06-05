@@ -74,7 +74,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">FriendScope</h3>
       <div align="center">  
-        <a href="https://friendscope.vercel.app/" target="_blank"><img src="/public/brands/friendscope.svg" width="50%" alt="FriendScope Website"/></a>
+        <a href="https://friendscope.vercel.app/" target="_blank"><img src="/public/brands/friendscope-1.svg" width="50%" alt="FriendScope Website"/></a>
         <br>
         <br>
         <p>
@@ -122,7 +122,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Gradient SVG Generator</h3>
       <div align="center">  
-        <a href="https://gradient-svg-generator.vercel.app/settings" target="_blank"><img src="/public/brands/gradient-svg-generator.svg" width="50%" alt="Gradient SVG Generator"/></a>
+        <a href="https://gradient-svg-generator.vercel.app/settings" target="_blank"><img src="/public/brands/gradient-svg-generator-1.svg" width="50%" alt="Gradient SVG Generator"/></a>
         <br>
         <br>
         <p>
@@ -143,7 +143,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Google News MCP Server</h3>
       <div align="center">  
-        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news.svg" width="50%" alt="Google News MCP Server"/></a>
+        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news-1.svg" width="50%" alt="Google News MCP Server"/></a>
         <br>
         <br>
         <p>
@@ -169,7 +169,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Interactive Story Generator</h3>
       <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo.svg" width="50%" alt="Interactive Story Generator"/></a>
+        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo-1.svg" width="50%" alt="Interactive Story Generator"/></a>
         <br>
         <br>
         <p>
@@ -190,7 +190,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">AI Programming Education</h3>
       <div align="center">  
-        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming.svg" width="50%" alt="AI Programming Education Platform"/></a>
+        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
         <br>
         <br>
         <p>
@@ -211,7 +211,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Tencent Meeting Video Downloader</h3>
       <div align="center">  
-        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
+        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader-1.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
         <br>
         <br>
         <p>
@@ -235,7 +235,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">LinkedIn Jobs Search</h3>
       <div align="center">  
-        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
+        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search-1.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
         <br>
         <br>
         <p>

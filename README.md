@@ -41,8 +41,6 @@ while (isAwake) {
 
 <a id="readme-projects"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🌟%20Featured%20Projects&fontSize=40&color=0:3DB2FF,100:4D96FF&stroke=4D96FF)
-
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🌟%20Featured%20Projects&fontSize=40&color=0:E52473,100:F96252&stroke=E52473&fontColor=FFFFFF)
 
 <!-- Primary Projects (Always Visible) -->
@@ -1351,8 +1349,6 @@ while (isAwake) {
 
 <a id="readme-support"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎁%20Support%20My%20Work&fontSize=40&color=0:FF7F50,100:FF5252&stroke=FF5252)
-
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎁%20Support%20My%20Work&fontSize=40&color=0:F74BF3,100:E52473&stroke=F74BF3&fontColor=FFFFFF)
 
 <div align="center">
@@ -1399,8 +1395,6 @@ while (isAwake) {
 ![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&reversal=true&section=footer)
 
 <a id="readme-about-me"></a>
-
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=✨%20About%20Me&fontSize=40&color=0:c81abd,100:1d2ecb&stroke=c81abd)
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=✨%20About%20Me&fontSize=40&color=0:E52473,100:2C8FC5&stroke=E52473&fontColor=FFFFFF)
 
@@ -1916,9 +1910,7 @@ while (isAwake) {
 
 <a id="readme-certifications"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🏆%20Certifications&fontSize=40&color=0:03acd3,100:1d2ecb&stroke=03acd3)
-
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🏆%20Certifications&fontSize=40&color=0:F96252,100:FFB277&stroke=F96252&fontColor=2A2A2A)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🏆%20Certifications&fontSize=40&color=0:03acd3,100:1d2ecb&stroke=03acd3&fontColor=FFFFFF)
 
 <details>
 <summary>
@@ -2137,9 +2129,7 @@ alt="Mozilla Logo"/>
 
 <a id="readme-tech-stack"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=⚙️%20Tech%20Stack&fontSize=40&color=0:2ECC71,100:27AE60&stroke=27AE60)
-
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=⚙️%20Tech%20Stack&fontSize=40&color=0:2B2B2D,100:4A4A4A&stroke=2B2B2D&fontColor=FFFFFF)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=⚙️%20Tech%20Stack&fontSize=40&color=0:2ECC71,100:27AE60&stroke=27AE60&fontColor=FFFFFF)
 
 <details open>
   <summary><h3>💎 Core Full-Stack Expertise</h3></summary>
@@ -2270,8 +2260,6 @@ alt="Mozilla Logo"/>
 </div>
 
 <a id="readme-articles"></a>
-
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📚%20Articles&fontSize=40&color=0:FF6B6B,100:FF2E63&stroke=FF2E63)
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📚%20Articles&fontSize=40&color=0:E52473,100:F7B0D0&stroke=E52473&fontColor=FFFFFF)
 
@@ -2597,7 +2585,7 @@ alt="Mozilla Logo"/>
 
 <a id="readme-interviews"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📺%20Media%20Appearances%20and%20Interviews&fontSize=40&color=0:F9C80E,100:F86624&stroke=F86624)
+![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📺%20Media%20Appearances%20and%20Interviews&fontSize=40&color=0:F9C80E,100:F86624&stroke=F86624&fontColor=FFFFFF)
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📺%20Media%20Appearances%20and%20Interviews&fontSize=40&color=0:F96252,100:F74BF3&stroke=F96252&fontColor=FFFFFF)
 
@@ -2679,10 +2667,6 @@ alt="Mozilla Logo"/>
 </div>
 
 <a id="readme-podcasts"></a>
-
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎧%20Podcasts&fontSize=40&color=0:43BCCD,100:2F58CD&stroke=2F58CD)
-
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎧%20Podcasts&fontSize=40&color=0:03acd3,100:1d2ecb&stroke=03acd3)
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎧%20Podcasts&fontSize=40&color=0:2C8FC5,100:F74BF3&stroke=2C8FC5&fontColor=FFFFFF)
 
@@ -2788,8 +2772,6 @@ alt="Mozilla Logo"/>
 </div>
 
 <a id="readme-stats"></a>
-
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📈%20GitHub%20Stats&fontSize=40&color=0:FF85B3,100:D65DB1&stroke=D65DB1)
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📈%20GitHub%20Stats&fontSize=40&color=0:2C8FC5,100:FFB277&stroke=2C8FC5&fontColor=2A2A2A)
 

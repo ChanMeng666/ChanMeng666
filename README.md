@@ -2587,8 +2587,6 @@ alt="Mozilla Logo"/>
 
 ![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📺%20Media%20Appearances%20and%20Interviews&fontSize=40&color=0:F9C80E,100:F86624&stroke=F86624&fontColor=FFFFFF)
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📺%20Media%20Appearances%20and%20Interviews&fontSize=40&color=0:F96252,100:F74BF3&stroke=F96252&fontColor=FFFFFF)
-
 <table>
   <tr>
     <td width="25%">

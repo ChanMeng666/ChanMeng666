@@ -2695,7 +2695,7 @@ alt="Mozilla Logo"/>
       <h3 align="center">Future Turing 未来图灵</h3>
       <div align="center">  
         <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
-          <img src="/public/podcasts/decoding-the-future-cover-cn-1.png" width="70%" alt="未来图灵 Podcast"/>
+          <img src="/public/podcasts/decoding-the-future-cover-cn-1.jpg" width="70%" alt="未来图灵 Podcast"/>
         </a>
         <p>智能的边界在哪里？未来将如何被代码塑造？欢迎来到「Future Turing 未来图灵」！本节目专注于解读人工智能（AI）、大语言模型（LLMs）等尖端领域的关键研究论文。</p>
         <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
@@ -2709,7 +2709,7 @@ alt="Mozilla Logo"/>
       <h3 align="center">Praxis and Pages 知行书话</h3>
       <div align="center">  
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=3040cb1dc3494a00" target="_blank">
-          <img src="/public/podcasts/Praxis-and-Pages-1.png" width="70%" alt="Praxis and Pages"/>
+          <img src="/public/podcasts/Praxis-and-Pages-1.jpg" width="70%" alt="Praxis and Pages"/>
         </a>
         <p>欢迎来到「Praxis and Pages 知行书话」！这是一个借助 NotebookLM 工具，与你一同探索人文社科书籍魅力的中文播客。我将利用 NotebookLM 辅助我对书籍内容进行梳理、提炼和思考，并把这些精华内容转化为生动的语言分享给你。</p>
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=25d9e23a4a8c4456" target="_blank">

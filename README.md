@@ -707,7 +707,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">CustomerInsight</h3>
       <div align="center">  
-        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight.svg" width="50%" alt="Streamlit Logo"/></a>
+        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight-1.svg" width="50%" alt="Streamlit Logo"/></a>
         <br>
         <br>
         <p>
@@ -728,7 +728,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">AI Image Generator</h3>
       <div align="center">  
-        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator.svg" width="50%" alt="AI Image Generator Logo"/></a>
+        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator-1.svg" width="50%" alt="AI Image Generator Logo"/></a>
         <br>
         <br>
         <p>
@@ -749,7 +749,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">English Redefine</h3>
       <div align="center">  
-        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine.svg" width="50%" alt="English Redefine"/></a>
+        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine-1.svg" width="50%" alt="English Redefine"/></a>
         <br>
         <br>
         <p>
@@ -770,7 +770,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Chinese Redefine</h3>
       <div align="center">  
-        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine.svg" width="50%" alt="Chinese Redefine Logo"/></a>
+        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine-1.svg" width="50%" alt="Chinese Redefine Logo"/></a>
         <br>
         <br>
         <p>
@@ -900,7 +900,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Emoji Story Generator</h3>
       <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank"><img src="/public/brands/emoji-story-generator.svg" width="50%" alt="Emoji Story Generator"/></a>
+        <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank"><img src="/public/brands/emoji-story-generator-1.svg" width="50%" alt="Emoji Story Generator"/></a>
         <br>
         <br>
         <p>

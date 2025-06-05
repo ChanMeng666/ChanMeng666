@@ -3,7 +3,7 @@
 [![SVG Banners](https://svg-banners.vercel.app/api?type=rainbow&text1=Chan%20Meng%20%20🐵&width=1000&height=200)](https://github.com/ChanMeng666)
 
 <div align="center">
-  <img src="/public/brands/chan_monkey_logo_black.svg" width="100" height="100" alt="Chan Meng Logo">
+  <img src="/public/brands/chan_monkey_logo_black-1.svg" width="100" height="100" alt="Chan Meng Logo">
 
   <p>
     <em>🌿 A minimalist</em> <br>
@@ -25,18 +25,9 @@
 
 
 <details>
-<summary><h2>${\Large \textbf{
-\color[rgb]{1,0.39,0.39}🤞 
-\color[rgb]{1,0.63,0.31}M
-\color[rgb]{1,0.78,0.31}y 
-\color[rgb]{0.47,0.86,0.47}P
-\color[rgb]{0.31,0.63,1}r
-\color[rgb]{0.51,0.51,0.94}o
-\color[rgb]{0.71,0.47,0.94}m
-\color[rgb]{1,0.39,0.39}i
-\color[rgb]{1,0.63,0.31}s
-\color[rgb]{1,0.78,0.31}e}}$
-</h2></summary>
+<summary>
+  <h2>🤞 My Promis</h2>
+</summary>
 
 ```java
 while (isAwake) {

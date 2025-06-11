@@ -1743,7 +1743,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Chaste Christopher Inegbedion</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/chastechrisinegbedion/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQFikwPjU-0CoQ/profile-displayphoto-shrink_400_400/B56ZSWpOsyGUAg-/0/1737694178468?e=1753920000&v=beta&t=07gQx7pJgyeZsTMpfxTSuFZJG2yIBsM7iLSMovYnjQM" width="50%" alt="Chaste Christopher Inegbedion"/></a>
+        <a href="https://www.linkedin.com/in/chastechrisinegbedion/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D5603AQEbzBRq8ZdX2g/profile-displayphoto-shrink_400_400/B56Zc73vrHH8Ak-/0/1749056158788?e=1755129600&v=beta&t=Mmba7gMyGJfb4N03u5ZCs_XB2UXXhXCrEWRgz1y0Lgw" width="50%" alt="Chaste Christopher Inegbedion"/></a>
         <br>
         <br>
         <p>

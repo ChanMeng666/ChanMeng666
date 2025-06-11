@@ -1458,6 +1458,24 @@ while (isAwake) {
   </tr>
   <tr>
     <td width="50%">
+      <h3 align="center">FreePeriod</h3>
+      <div align="center">  
+        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/experience/FreePeriodLogo.png" width="50%" alt="FreePeriod Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Chief Technology Officer (CTO)</strong><br>
+          Nov 2024 - Jun 2025<br>
+          Remote • China
+        </p>
+        <p align="left">
+          • Leading technical development of smart vending solutions<br>
+          • Architecting web and mobile applications<br>
+          • Establishing development processes and standards
+        </p>
+      </div>
+    </td>
+    <td width="50%">
       <h3 align="center">ByteDance</h3>
       <div align="center">  
         <a href="https://www.bytedance.com/en/" target="_blank"><img src="/public/experience/ByteDance_logo_English.svg" width="50%" alt="ByteDance Logo"/></a>
@@ -1472,24 +1490,6 @@ while (isAwake) {
           • Hands-on experience with microservices architecture<br>
           • Expertise in SQL and data center infrastructure<br>
           • Advanced backend development mentored by ByteDance experts
-        </p>
-      </div>
-    </td>
-    <td width="50%">
-      <h3 align="center">FreePeriod</h3>
-      <div align="center">  
-        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/experience/FreePeriodLogo.png" width="50%" alt="FreePeriod Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <strong>Chief Technology Officer (CTO)</strong><br>
-          Nov 2024 - Present<br>
-          Remote • China
-        </p>
-        <p align="left">
-          • Leading technical development of smart vending solutions<br>
-          • Architecting web and mobile applications<br>
-          • Establishing development processes and standards
         </p>
       </div>
     </td>
@@ -1687,6 +1687,27 @@ while (isAwake) {
 <summary><h1>👍 Recommendations</h1></summary>
 <table>
   <tr>
+    <td width="50%">
+      <h3 align="center">Omopeju Afanu</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/peju-afanu-7b9367110/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D03AQEg4BO61lph2A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731009900505?e=1755129600&v=beta&t=Vv4WYkcwKE2Y3DcqRG_07432uq_6DKawUqW0LcdwTtE" width="50%" alt="Omopeju Afanu"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Sanicle</strong><br>
+          Chief Executive Officer
+        </p>
+        <p align="left">
+          "I had the pleasure of working with Chan Meng on the website and application development for Sanicle.cloud, where she showcased her exceptional technical expertise. As a solo developer, she took on the monumental task of coding the entire website and parts of the platform from scratch, demonstrating not only her deep technical skills but also her ability to manage complex projects independently. 
+        </p>
+        <p align="left">
+          Chan’s problem-solving abilities and attention to detail are remarkable. She consistently delivered high-quality work, and her coding proficiency was evident in every stage of the development process. She is also incredibly intelligent and driven, always eager to explore new technologies and methodologies, including the latest AI tools and AI agents, which speaks to her commitment to continuous learning and innovation.
+        </p>
+        <p align="left">
+          Her passion for technology and her ability to tackle challenging projects make her a valuable asset to any team or initiative. I highly recommend Chan for any opportunity that requires technical excellence and a forward-thinking approach to development."
+        </p>
+      </div>
+    </td>
     <td width="50%">
       <h3 align="center">Gabby Hurst</h3>
       <div align="center">  

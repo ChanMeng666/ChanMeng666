@@ -48,6 +48,99 @@ while (isAwake) {
 <table>
   <tr>
     <td width="20%">
+      <h3 align="center">FemTracker Agent</h3>
+      <div align="center">  
+        <a href="https://femtracker-agent.vercel.app/" target="_blank"><img src="/public/brands/chanmeng-ai-agent-logo-with-white-bg.svg" width="50%" alt="FemTracker Agent"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/femtracker-agent" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://femtracker-agent.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+          <a href="https://youtu.be/VVCQKmeEtRs" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Powered Women's Health Companion<br>
+          • 8 Specialized AI Agents & LangGraph<br>
+          • WHO-Standard Health Analytics
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Sanicle.AI</h3>
+      <div align="center">  
+        <a href="https://sanicle-ai.vercel.app/" target="_blank"><img src="/public/brands/sanicle_logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://sanicle-ai.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+          <a href="https://chanmeng666.github.io/reveal.js/" target="_blank">
+            <img src="https://img.shields.io/badge/Web-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
+          <a href="https://chanmeng666.github.io/sanicle-ai-mobile/" target="_blank">
+            <img src="https://img.shields.io/badge/Mobile-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Women's Health Platform for Workplace Wellness<br>
+          • Redis & Neon & Blob<br>
+          • Dual Dashboard System for Employees & HR
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">AI Programming Education</h3>
+      <div align="center">  
+        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/ai-programming-teaching-project" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI Programming Education<br>
+          • Docusaurus Platform<br>
+          • Bilingual Interactive Tutorials
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Interactive Story Generator</h3>
+      <div align="center">  
+        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo-1.svg" width="50%" alt="Interactive Story Generator"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/interactive-story-generator" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Powered Interactive Storytelling<br>
+          • Multiple Themes & Genre Support<br>
+          • Advanced Story Customization
+        </p>
+      </div>
+    </td>
+    <td width="20%">
       <h3 align="center">CORDE Mobile</h3>
       <div align="center">  
         <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/CORDE.svg" width="50%" alt="CORDE Mobile App"/></a>
@@ -89,33 +182,6 @@ while (isAwake) {
           • Friendship Analytics Platform<br>
           • Next.js & TS<br>
           • Scientific Assessment
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Sanicle.AI</h3>
-      <div align="center">  
-        <a href="https://sanicle-ai.vercel.app/" target="_blank"><img src="/public/brands/sanicle_logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
-        <br>
-        <br>
-        <p>
-          <span>
-            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
-          </span>
-          <a href="https://sanicle-ai.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-          <a href="https://chanmeng666.github.io/reveal.js/" target="_blank">
-            <img src="https://img.shields.io/badge/Web-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
-          </a>
-          <a href="https://chanmeng666.github.io/sanicle-ai-mobile/" target="_blank">
-            <img src="https://img.shields.io/badge/Mobile-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
-          </a>
-        </p>
-        <p align="left">
-          • Women's Health Platform for Workplace Wellness<br>
-          • Redis & Neon & Blob<br>
-          • Dual Dashboard System for Employees & HR
         </p>
       </div>
     </td>
@@ -167,48 +233,6 @@ while (isAwake) {
   </tr>
   <tr>
     <td width="20%">
-      <h3 align="center">Interactive Story Generator</h3>
-      <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo-1.svg" width="50%" alt="Interactive Story Generator"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/interactive-story-generator" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
-          </a>
-        </p>
-        <p align="left">
-          • AI-Powered Interactive Storytelling<br>
-          • Multiple Themes & Genre Support<br>
-          • Advanced Story Customization
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">AI Programming Education</h3>
-      <div align="center">  
-        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/ai-programming-teaching-project" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
-          </a>
-        </p>
-        <p align="left">
-          • AI Programming Education<br>
-          • Docusaurus Platform<br>
-          • Bilingual Interactive Tutorials
-        </p>
-      </div>
-    </td>
-    <td width="20%">
       <h3 align="center">Tencent Meeting Video Downloader</h3>
       <div align="center">  
         <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader-1.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
@@ -250,30 +274,6 @@ while (isAwake) {
           • Advanced job search with multiple filters<br>
           • Real-time search results<br>
           • Modern responsive UI design
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">FemTracker Agent</h3>
-      <div align="center">  
-        <a href="https://femtracker-agent.vercel.app/" target="_blank"><img src="/public/brands/chanmeng-ai-agent-logo-with-white-bg.svg" width="50%" alt="FemTracker Agent"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/femtracker-agent" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://femtracker-agent.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-          <a href="https://youtu.be/VVCQKmeEtRs" target="_blank">
-            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
-          </a>
-        </p>
-        <p align="left">
-          • AI-Powered Women's Health Companion<br>
-          • 8 Specialized AI Agents & LangGraph<br>
-          • WHO-Standard Health Analytics
         </p>
       </div>
     </td>

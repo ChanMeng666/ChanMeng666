@@ -968,7 +968,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">FemTracker Agent</h3>
       <div align="center">  
-        <a href="https://femtracker-agent.vercel.app/" target="_blank"><img src="/public/brands/FemTracker-1.svg" width="50%" alt="FemTracker Agent"/></a>
+        <a href="https://femtracker-agent.vercel.app/" target="_blank"><img src="/public/brands/chanmeng-ai-agent-logo-with-white-bg.svg" width="50%" alt="FemTracker Agent"/></a>
         <br>
         <br>
         <p>

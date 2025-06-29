@@ -254,30 +254,9 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">Minimalist Living</h3>
-      <div align="center">  
-        <a href="https://minimalist-good-post.vercel.app" target="_blank"><img src="/public/brands/minimalist-good-post.svg" width="50%" alt="Minimalist Living Platform"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/minimalist-good-post" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://minimalist-good-post.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
-          </a>
-        </p>
-        <p align="left">
-          • Minimalist Living Blog Platform<br>
-          • Docusaurus & 3D Visualizations<br>
-          • Curated Lifestyle Content
-        </p>
-      </div>
-    </td>
-    <td width="20%">
       <h3 align="center">FemTracker Agent</h3>
       <div align="center">  
-        <a href="https://femtracker-agent.vercel.app/" target="_blank"><img src="/public/brands/FemTracker-1.svg" width="50%" alt="FemTracker Agent"/></a>
+        <a href="https://femtracker-agent.vercel.app/" target="_blank"><img src="/public/brands/chanmeng-ai-agent-logo-with-white-bg.svg" width="50%" alt="FemTracker Agent"/></a>
         <br>
         <br>
         <p>
@@ -295,27 +274,6 @@ while (isAwake) {
           • AI-Powered Women's Health Companion<br>
           • 8 Specialized AI Agents & LangGraph<br>
           • WHO-Standard Health Analytics
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Wellness Support Agent</h3>
-      <div align="center">  
-        <a href="https://sanicle-wellness-agent-2lxj5uw.gamma.site/" target="_blank"><img src="/public/brands/chanmeng-ai-agent-logo-with-white-bg.svg" width="50%" alt="Wellness Support Agent"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/wellness-agent" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://sanicle-wellness-agent-2lxj5uw.gamma.site/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-        </p>
-        <p align="left">
-          • AI-Powered Workplace Wellness Platform<br>
-          • Google ADK Multi-Agent System<br>
-          • Privacy-First Role-Based Access
         </p>
       </div>
     </td>

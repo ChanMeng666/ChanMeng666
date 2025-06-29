@@ -141,6 +141,32 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h3 align="center">Google News MCP Server</h3>
+      <div align="center">  
+        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news-1.svg" width="50%" alt="Google News MCP Server"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/server-google-news" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
+          </a>
+          <a href="https://github.com/user-attachments/assets/1cc71c27-f840-4c94-9ab5-460d84ba4779" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Multi-Language Support<br>
+          • Auto News Categorization<br>
+          • Flexible Search Options
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%">
       <h3 align="center">CORDE Mobile</h3>
       <div align="center">  
         <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/CORDE.svg" width="50%" alt="CORDE Mobile App"/></a>
@@ -206,32 +232,6 @@ while (isAwake) {
         </p>
       </div>
     </td>
-    <td width="20%">
-      <h3 align="center">Google News MCP Server</h3>
-      <div align="center">  
-        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news-1.svg" width="50%" alt="Google News MCP Server"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/server-google-news" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
-          </a>
-          <a href="https://github.com/user-attachments/assets/1cc71c27-f840-4c94-9ab5-460d84ba4779" target="_blank">
-            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
-          </a>
-        </p>
-        <p align="left">
-          • Multi-Language Support<br>
-          • Auto News Categorization<br>
-          • Flexible Search Options
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
     <td width="20%">
       <h3 align="center">Tencent Meeting Video Downloader</h3>
       <div align="center">  

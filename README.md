@@ -704,220 +704,6 @@ while (isAwake) {
 <table>
   <tr>
     <td width="20%">
-      <h3 align="center">Interactive Story Generator</h3>
-      <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo-1.svg" width="50%" alt="Interactive Story Generator"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/interactive-story-generator" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
-          </a>
-        </p>
-        <p align="left">
-          • AI-Powered Interactive Storytelling<br>
-          • Multiple Themes & Genre Support<br>
-          • Advanced Story Customization
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">CustomerInsight</h3>
-      <div align="center">  
-        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight-1.svg" width="50%" alt="Streamlit Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/CustomerInsight" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=streamlit"/>
-          </a>
-        </p>
-        <p align="left">
-          • Customer Review Analytics<br>
-          • Python & Streamlit<br>
-          • Chinese-First NLP
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">AI Image Generator</h3>
-      <div align="center">  
-        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator-1.svg" width="50%" alt="AI Image Generator Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/image-generator" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://image-generator-sable-tau.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-        </p>
-        <p align="left">
-          • AI Image Generation App<br>
-          • Next.js & Together AI<br>
-          • Mondrian-Inspired Design
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">English Redefine</h3>
-      <div align="center">  
-        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine-1.svg" width="50%" alt="English Redefine"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/english-redefine" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://english-redefine.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-        </p>
-        <p align="left">
-          • Modern Dictionary Platform<br>
-          • Powered by Gemini AI<br>
-          • Contemporary Word Definitions
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Chinese Redefine</h3>
-      <div align="center">  
-        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine-1.svg" width="50%" alt="Chinese Redefine Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/chinese-redefine" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://chinese-redefine.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-        </p>
-        <p align="left">
-          • Modern Chinese Dictionary<br>
-          • Next.js & Gemini AI<br>
-          • Contemporary Word Analysis
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%">
-      <h3 align="center">Advanced Neural Network Applications</h3>
-      <div align="center">  
-        <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank"><img src="/public/brands/advanced-neural-network-applications.png" width="100%" alt="Advanced Neural Network Applications"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/advanced-neural-network-applications" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
-          </a>
-        </p>
-        <p align="left">
-          • Neural Network Education Demo<br>
-          • Python & Jupyter Notebooks<br>
-          • Perceptron Classification & Linear Prediction
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Body Fat Prediction</h3>
-      <div align="center">  
-        <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/Assignment2_Part3_(i).ipynb" target="_blank"><img src="/public/brands/bodyfat-estimation-mlp.png" width="100%" alt="Body Fat Prediction"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/Assignment2_Part3_(i).ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
-          </a>
-        </p>
-        <p align="left">
-          • Body Fat Prediction AI<br>
-          • Deep Learning Models<br>
-          • Anthropometric Analysis
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Heat Flux Perceptrons Neural Networks</h3>
-      <div align="center">  
-        <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/Assignment2_part1.ipynb" target="_blank"><img src="/public/brands/heat-flux-perceptrons-neural-networks.png" width="100%" alt="Heat Flux Perceptrons Neural Networks"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/Assignment2_part1.ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
-          </a>
-        </p>
-        <p align="left">
-          • Neural Network Implementation<br>
-          • Heat Influx Prediction<br>
-          • Architecture Design Tool
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">MNIST Neural Network Analysis</h3>
-      <div align="center">  
-        <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank"><img src="/public/brands/mnist-handwritten-digit-recognition-project.png" width="100%" alt="MNIST Neural Network Analysis"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
-          </a>
-        </p>
-        <p align="left">
-          • MNIST Digit Recognition<br>
-          • Multiple Neural Networks<br>
-          • CNN & MLP Implementation
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Water Quality Analysis</h3>
-      <div align="center">  
-        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="100%" alt="Water Quality Analysis"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
-          </a>
-        </p>
-        <p align="left">
-          • Water Quality Analysis Toolkit<br>
-          • Python-based Monitoring System<br>
-          • Multi-Parameter Prediction
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%">
       <h3 align="center">Emoji Story Generator</h3>
       <div align="center">  
         <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank"><img src="/public/brands/emoji-story-generator-1.svg" width="50%" alt="Emoji Story Generator"/></a>
@@ -1034,6 +820,220 @@ while (isAwake) {
           • AI-Powered Hospital Staff Scheduling System<br>
           • CopilotKit & Natural Language Processing<br>
           • Interactive Calendar & Spreadsheet Management
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Advanced Neural Network Applications</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank"><img src="/public/brands/advanced-neural-network-applications.png" width="100%" alt="Advanced Neural Network Applications"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/advanced-neural-network-applications" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/advanced-neural-network-applications/blob/main/Part1_1.ipynb" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
+          </a>
+        </p>
+        <p align="left">
+          • Neural Network Education Demo<br>
+          • Python & Jupyter Notebooks<br>
+          • Perceptron Classification & Linear Prediction
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Body Fat Prediction</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/Assignment2_Part3_(i).ipynb" target="_blank"><img src="/public/brands/bodyfat-estimation-mlp.png" width="100%" alt="Body Fat Prediction"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/Assignment2_Part3_(i).ipynb" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
+          </a>
+        </p>
+        <p align="left">
+          • Body Fat Prediction AI<br>
+          • Deep Learning Models<br>
+          • Anthropometric Analysis
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Heat Flux Perceptrons Neural Networks</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/Assignment2_part1.ipynb" target="_blank"><img src="/public/brands/heat-flux-perceptrons-neural-networks.png" width="100%" alt="Heat Flux Perceptrons Neural Networks"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/Assignment2_part1.ipynb" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
+          </a>
+        </p>
+        <p align="left">
+          • Neural Network Implementation<br>
+          • Heat Influx Prediction<br>
+          • Architecture Design Tool
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">MNIST Neural Network Analysis</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank"><img src="/public/brands/mnist-handwritten-digit-recognition-project.png" width="100%" alt="MNIST Neural Network Analysis"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
+          </a>
+        </p>
+        <p align="left">
+          • MNIST Digit Recognition<br>
+          • Multiple Neural Networks<br>
+          • CNN & MLP Implementation
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Water Quality Analysis</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="100%" alt="Water Quality Analysis"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
+          </a>
+        </p>
+        <p align="left">
+          • Water Quality Analysis Toolkit<br>
+          • Python-based Monitoring System<br>
+          • Multi-Parameter Prediction
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Interactive Story Generator</h3>
+      <div align="center">  
+        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo-1.svg" width="50%" alt="Interactive Story Generator"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/interactive-story-generator" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Powered Interactive Storytelling<br>
+          • Multiple Themes & Genre Support<br>
+          • Advanced Story Customization
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">CustomerInsight</h3>
+      <div align="center">  
+        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight-1.svg" width="50%" alt="Streamlit Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/CustomerInsight" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=streamlit"/>
+          </a>
+        </p>
+        <p align="left">
+          • Customer Review Analytics<br>
+          • Python & Streamlit<br>
+          • Chinese-First NLP
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">AI Image Generator</h3>
+      <div align="center">  
+        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator-1.svg" width="50%" alt="AI Image Generator Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/image-generator" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://image-generator-sable-tau.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI Image Generation App<br>
+          • Next.js & Together AI<br>
+          • Mondrian-Inspired Design
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">English Redefine</h3>
+      <div align="center">  
+        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine-1.svg" width="50%" alt="English Redefine"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/english-redefine" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://english-redefine.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Modern Dictionary Platform<br>
+          • Powered by Gemini AI<br>
+          • Contemporary Word Definitions
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Chinese Redefine</h3>
+      <div align="center">  
+        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine-1.svg" width="50%" alt="Chinese Redefine Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/chinese-redefine" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chinese-redefine.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Modern Chinese Dictionary<br>
+          • Next.js & Gemini AI<br>
+          • Contemporary Word Analysis
         </p>
       </div>
     </td>

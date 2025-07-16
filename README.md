@@ -669,14 +669,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Sanicle Cloud</h3>
       <div align="center">  
-        <a href="https://sanicle-cloud.vercel.app/" target="_blank"><img src="public/brands/sanicle_logo.svg" width="100%" alt="Sanicle Cloud Logo"/></a>
+        <a href="https://sanicle.cloud/" target="_blank"><img src="public/brands/sanicle_logo.svg" width="100%" alt="Sanicle Cloud Logo"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://sanicle-cloud.vercel.app/" target="_blank">
+          <a href="https://sanicle.cloud/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
           </a>
           <a href="https://github.com/user-attachments/assets/d64a35c1-3ef1-4d5d-9584-869ecb99b1fc" target="_blank">

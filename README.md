@@ -995,7 +995,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Wellness Support Agent</h3>
       <div align="center">  
-        <a href="https://sanicle-wellness-agent-2lxj5uw.gamma.site/" target="_blank"><img src="/public/brands/chanmeng-ai-agent-logo-with-white-bg.svg" width="50%" alt="Wellness Support Agent"/></a>
+        <a href="https://sanicle-wellness-agent-2lxj5uw.gamma.site/" target="_blank"><img src="/public/brands/sanicle-leave-logo.svg" width="50%" alt="Wellness Support Agent"/></a>
         <br>
         <br>
         <p>

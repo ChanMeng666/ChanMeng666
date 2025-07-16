@@ -1010,8 +1010,6 @@ while (isAwake) {
         </p>
       </div>
     </td>
-  </tr>
-  <tr>
     <td width="20%">
       <h3 align="center">Hospital Roster Agent</h3>
       <div align="center">  

@@ -1223,6 +1223,27 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h3 align="center">GitHub Visitor Counter</h3>
+      <div align="center">  
+        <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank"><img src="/public/brands/github-visitor-counter-logo.svg" width="50%" alt="GitHub Visitor Counter"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/github-visitor-counter" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Display Visitor Country Flags<br>
+          • Real-time Configuration Tool<br>
+          • Multiple Themes & Customization
+        </p>
+      </div>
+    </td>
+    <td width="20%">
       <h3 align="center">Douban Elite Scraper</h3>
       <div align="center">  
         <a href="https://github.com/ChanMeng666/Douban-elite-scraper" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T09_53_54Z.gif" width="100%" alt="Douban Elite Scraper"/></a>
@@ -1264,27 +1285,6 @@ while (isAwake) {
         </p>
       </div>
     </td>
-    <td width="20%">
-      <h3 align="center">Lottie Edit</h3>
-      <div align="center">  
-        <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_01_04Z.gif" width="100%" alt="Lottie Edit"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=python"/>
-          </a>
-        </p>
-        <p align="left">
-          • Lottie Theme Converter<br>
-          • Light/Dark Mode Switch<br>
-          • Python Animation Tool
-        </p>
-      </div>
-    </td>
   </tr>
   <tr>
     <td width="20%">
@@ -1312,23 +1312,23 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">GitHub Visitor Counter</h3>
+      <h3 align="center">Lottie Edit</h3>
       <div align="center">  
-        <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank"><img src="/public/brands/github-visitor-counter-logo.svg" width="50%" alt="GitHub Visitor Counter"/></a>
+        <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_01_04Z.gif" width="100%" alt="Lottie Edit"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/github-visitor-counter" target="_blank">
+          <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=python"/>
           </a>
         </p>
         <p align="left">
-          • Display Visitor Country Flags<br>
-          • Real-time Configuration Tool<br>
-          • Multiple Themes & Customization
+          • Lottie Theme Converter<br>
+          • Light/Dark Mode Switch<br>
+          • Python Animation Tool
         </p>
       </div>
     </td>

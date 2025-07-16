@@ -1339,6 +1339,11 @@ while (isAwake) {
 
 <div align="center">
 
+<p>
+  🚀 Love this project? Give it a ⭐ on GitHub and help it grow! <br>
+  Your support means the world! 🌍✨
+</p>
+
 ![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
 
 </div>

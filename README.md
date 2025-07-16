@@ -1334,6 +1334,15 @@ while (isAwake) {
     </td>
   </tr>
 </table>
+
+<!-- The Promotional Section -- GitHub Visitor Counter -->
+
+<div align="center">
+
+![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
+
+</div>
+
 </details>
 
 <!-- Mobile & Games Section -->

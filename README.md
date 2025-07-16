@@ -2967,6 +2967,12 @@ alt="Mozilla Logo"/>
   </a>
 </div>
 
+<br />
+
+![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
+
+<br />
+
 <h2 align="center">💡 Random Dev Quote</h2>
 
 <div align="center">

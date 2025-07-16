@@ -1005,6 +1005,9 @@ while (isAwake) {
           <a href="https://sanicle-wellness-agent-2lxj5uw.gamma.site/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
+          <a href="https://youtu.be/rv4CiozCNmo" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
+          </a>
         </p>
         <p align="left">
           • AI-Powered Workplace Wellness Platform<br>

@@ -74,14 +74,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Sanicle.AI</h3>
       <div align="center">  
-        <a href="https://sanicle-ai.vercel.app/" target="_blank"><img src="/public/brands/sanicle_logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
+        <a href="https://ai.sanicle.cloud/login" target="_blank"><img src="/public/brands/sanicle_logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://sanicle-ai.vercel.app/" target="_blank">
+          <a href="https://ai.sanicle.cloud/login" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
           <a href="https://chanmeng666.github.io/reveal.js/" target="_blank">
@@ -89,6 +89,9 @@ while (isAwake) {
           </a>
           <a href="https://chanmeng666.github.io/sanicle-ai-mobile/" target="_blank">
             <img src="https://img.shields.io/badge/Mobile-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
+          <a href="https://sanicle-wellness-agent-2lxj5uw.gamma.site/" target="_blank">
+            <img src="https://img.shields.io/badge/AIagent-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -938,14 +941,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Sanicle.AI</h3>
       <div align="center">  
-        <a href="https://sanicle-ai.vercel.app/" target="_blank"><img src="/public/brands/sanicle_logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
+        <a href="https://ai.sanicle.cloud/login" target="_blank"><img src="/public/brands/sanicle_logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://sanicle-ai.vercel.app/" target="_blank">
+          <a href="https://ai.sanicle.cloud/login" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
           <a href="https://chanmeng666.github.io/reveal.js/" target="_blank">

@@ -2961,15 +2961,15 @@ alt="Mozilla Logo"/>
 
 <br />
 
+![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
+
+<br />
+
 <div align="right">
   <a href="#readme-stats">
     <img src="https://img.shields.io/badge/⬆️Back%20to%20Stats-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
-
-<br />
-
-![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
 
 <br />
 

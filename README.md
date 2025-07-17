@@ -291,7 +291,7 @@ while (isAwake) {
 
 🌈 Gradient SVG Generator - Add stunning animated gradients to your GitHub profile!
 
-[![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try%20It%20Now!&color=000000&height=60&gradientType=radial&duration=6s&color0=ffffff&template=pride-rainbow)](https://gradient-svg-generator.vercel.app/settings)
+[![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try%20It%20Now!&color=000000&height=60&gradientType=radial&duration=6s&color0=ffffff&template=pride-rainbow)](https://gradient-svg-generator.vercel.app/)
 
 ⭐ Star this project if you find it useful!
 
@@ -1163,7 +1163,7 @@ while (isAwake) {
 
 🌈 Gradient SVG Generator - Add stunning animated gradients to your GitHub profile!
 
-[![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try%20It%20Now!&color=000000&height=60&gradientType=radial&duration=6s&color0=ffffff&template=pride-rainbow)](https://gradient-svg-generator.vercel.app/settings)
+[![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try%20It%20Now!&color=000000&height=60&gradientType=radial&duration=6s&color0=ffffff&template=pride-rainbow)](https://gradient-svg-generator.vercel.app/)
 
 ⭐ Star this project if you find it useful!
 

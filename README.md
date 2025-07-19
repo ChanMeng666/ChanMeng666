@@ -2852,7 +2852,11 @@ alt="Mozilla Logo"/>
 
 <a id="readme-podcasts"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎧%20Podcasts&fontSize=40&color=0:2C8FC5,100:F74BF3&stroke=2C8FC5&fontColor=FFFFFF)
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![🎧 Podcasts](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8E%A7+Podcasts&height=200&template=rainbow-layer)
 
 <div align="center">
   <img src="/public/github-cover-image.svg" width="100%" alt="github cover image">

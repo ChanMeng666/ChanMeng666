@@ -2303,7 +2303,11 @@ alt="Mozilla Logo"/>
 
 <a id="readme-tech-stack"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=⚙️%20Tech%20Stack&fontSize=40&color=0:2ECC71,100:27AE60&stroke=27AE60&fontColor=FFFFFF)
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![⚙️ Tech Stack](https://gradient-svg-generator.vercel.app/api/svg?text=%E2%9A%99%EF%B8%8F+Tech+Stack&height=200&gradientType=bioMorphing&duration=6s&color0=00ff80&color1=40ff40&color2=80ff80&color3=00ff00)
 
 <details open>
   <summary><h3>💎 Core Full-Stack Expertise</h3></summary>

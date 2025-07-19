@@ -6,6 +6,8 @@
   <em><small>Powered by <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a> - Create stunning animated gradients effortlessly</small></em>
 </div>
 
+<br />
+
 <div align="center">
   <img src="/public/brands/chan_monkey_logo_black-1.svg" width="100" height="100" alt="Chan Meng Logo">
 

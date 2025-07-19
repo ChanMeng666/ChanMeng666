@@ -705,6 +705,27 @@ while (isAwake) {
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Design Pages</h3>
+      <div align="center">  
+        <a href="https://chanmeng666.github.io/design-pages" target="_blank"><img src="/public/brands/design-pages-logos.svg" width="50%" alt="Design Pages"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/design-pages" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chanmeng666.github.io/design-pages" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Interactive Digital Design Portfolio<br>
+          • CSS3 Animations & 3D Effects<br>
+          • Pure HTML/CSS/JavaScript
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

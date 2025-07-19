@@ -1352,8 +1352,7 @@ while (isAwake) {
 <div align="center">
 
 <div align="right">
-  <em><small>✨ Designed with <a href="https://github.com/ChanMeng666/github-visitor-counter">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em><br>
-  <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank">🌍 Get started now &rarr;</a>
+  <em><small>✨ Designed with <a href="https://github.com/ChanMeng666/github-visitor-counter">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em><a href="https://github-visitor-counter-zeta.vercel.app" target="_blank">🌍 Get started now &rarr;</a>
 </div>
 
 ![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)

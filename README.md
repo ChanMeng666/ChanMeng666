@@ -1539,7 +1539,11 @@ while (isAwake) {
 
 <a id="readme-about-me"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=✨%20About%20Me&fontSize=40&color=0:E52473,100:2C8FC5&stroke=E52473&fontColor=FFFFFF)
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![✨ About Me](https://gradient-svg-generator.vercel.app/api/svg?text=%E2%9C%A8+About+Me&height=100&gradientType=typewriter&duration=15s&color0=000000&color1=00ff00&color2=008000&color3=333333)
 
 <a id="readme-experience"></a>
 

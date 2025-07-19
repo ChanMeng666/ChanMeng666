@@ -47,6 +47,10 @@ while (isAwake) {
 
 <a id="readme-projects"></a>
 
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
 ![🌟 Featured Projects](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%9F+Featured+Projects&height=200&gradientType=pixelArt&duration=10s&color0=FF0080&color1=00FF80&color2=8080FF&color3=FFFF00)
 
 <!-- Primary Projects (Always Visible) -->

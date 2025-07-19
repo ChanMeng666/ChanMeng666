@@ -1482,6 +1482,8 @@ while (isAwake) {
   </a>
 </div>
 
+<br />
+
 <a id="readme-support"></a>
 
 <div align="right">

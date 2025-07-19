@@ -1484,7 +1484,11 @@ while (isAwake) {
 
 <a id="readme-support"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=🎁%20Support%20My%20Work&fontSize=40&color=0:F74BF3,100:E52473&stroke=F74BF3&fontColor=FFFFFF)
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![🎁 Support My Work](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8E%81+Support+My+Work&height=200&gradientType=circular&duration=15s&color0=ff6b6b&color1=feca57&color2=48dbfb&color3=0abde3&color4=ee5a24)
 
 <div align="center">
   <table>

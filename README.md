@@ -1520,7 +1520,11 @@ while (isAwake) {
 
 <br />
 
-![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=70&rotate=13&fontAlignY=25)
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![📄 My Resume](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%84+My+Resume&height=100&gradientType=star&duration=15s&color0=000033&color1=191970&color2=ffd700&color3=ffffff)
 
 <div align="center">
 
@@ -1534,8 +1538,6 @@ while (isAwake) {
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?weight=900&size=15&pause=1000&color=0093FF&center=true&vCenter=true&width=500&separator=%3C&lines=Simplify%2C+simplify.%3CI+wanted+to+live+deep+and+suck+out+all+the+marrow+of+life.%3CRather+than+love%2C+than+money%2C+than+fame%2C+give+me+truth.%3CTime+is+but+the+stream+I+go+a-fishing+in.%3CAll+good+things+are+wild+and+free.%3CThings+do+not+change;+we+change.%3CThe+universe+is+wider+than+our+views+of+it.%3CHeaven+is+under+our+feet+as+well+as+over+our+heads.%3CMoney+is+not+required+to+buy+one+necessary+of+the+soul.%3CLive+the+life+you+have+imagined.)](https://git.io/typing-svg)
 
 </div>
-
-![](https://capsule-render.vercel.app/api?type=slice&height=200&text=📄%20My%20Resume&fontSize=40&color=0:4169E1,100:87CEEB&fontAlign=30&rotate=13&fontAlignY=75&reversal=true&section=footer)
 
 <a id="readme-about-me"></a>
 

@@ -1171,11 +1171,11 @@ while (isAwake) {
 
 <div align="center">
 
-[![Header](https://gradient-svg-generator.vercel.app/api/svg?text=Create%20Beautiful%20Gradients&color=000000&height=120&gradientType=radial&duration=6s&color0=ffffff&template=progress-pride)](https://github.com/ChanMeng666/gradient-svg-generator)
+[![Create Beautiful Gradients](https://gradient-svg-generator.vercel.app/api/svg?text=Create+Beautiful+Gradients&height=100&gradientType=reflection&duration=10s&color0=ff9a9e&color1=fecfef&color2=fecfef&color3=ff9a9e)](https://github.com/ChanMeng666/gradient-svg-generator)
 
 🌈 Gradient SVG Generator - Add stunning animated gradients to your GitHub profile!
 
-[![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try%20It%20Now!&color=000000&height=60&gradientType=radial&duration=6s&color0=ffffff&template=pride-rainbow)](https://gradient-svg-generator.vercel.app/)
+[![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try+It+Now%21&height=100&template=wisdom-depth)](https://gradient-svg-generator.vercel.app/)
 
 ⭐ Star this project if you find it useful!
 

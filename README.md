@@ -2439,7 +2439,11 @@ alt="Mozilla Logo"/>
 
 <a id="readme-articles"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📚%20Articles&fontSize=40&color=0:E52473,100:F7B0D0&stroke=E52473&fontColor=FFFFFF)
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![📚 Articles](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%9A+Articles&height=200&template=text-box-popup)
 
 <details open>
   <summary><h3>📌 Latest Articles</h3></summary>

@@ -2767,7 +2767,11 @@ alt="Mozilla Logo"/>
 
 <a id="readme-interviews"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📺%20Media%20Appearances%20and%20Interviews&fontSize=40&color=0:F9C80E,100:F86624&stroke=F86624&fontColor=FFFFFF)
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![📺 Media Appearances and Interviews](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%BA+Media+Appearances+and+Interviews&height=200&template=burning-flame)
 
 <table>
   <tr>

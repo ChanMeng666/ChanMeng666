@@ -2965,7 +2965,11 @@ alt="Mozilla Logo"/>
 
 <a id="readme-stats"></a>
 
-![](https://capsule-render.vercel.app/api?type=venom&height=200&text=📈%20GitHub%20Stats&fontSize=40&color=0:2C8FC5,100:FFB277&stroke=2C8FC5&fontColor=FFFFFF)
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![📈 GitHub Stats](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%88+GitHub+Stats&height=200&gradientType=luminance&duration=15s&color0=ff4500&color1=ff8c00&color2=ffd700&color3=ffffff)
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">

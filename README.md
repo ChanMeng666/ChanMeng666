@@ -3013,6 +3013,11 @@ alt="Mozilla Logo"/>
 </div>
 
 <div align="center">
+
+<div align="right">
+  <em><small>🐍 Want to add this snake animation to your profile? Check out <a href="https://github.com/ChanMeng666/ChanMeng666/blob/main/public/How%20to%20Add%20a%20GitHub%20Contribution%20Snake%20to%20Your%20Profile.md">my step-by-step guide</a> for easy setup instructions</small></em>
+</div>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake.svg">

@@ -1351,14 +1351,9 @@ while (isAwake) {
 
 <div align="center">
 
-<p>
-  🌍 Want to showcase your global visitors on your GitHub profile? <br>
-  Try the <a href="https://github.com/ChanMeng666/github-visitor-counter" target="_blank"><strong>GitHub Visitor Counter</strong></a> – display real-time visitor flags and stats with a single line of Markdown!<br>
-  <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank">🌟 Get started now &rarr;</a>
-</p>
-
 <div align="right">
-  <em><small>✨ Designed with <a href="https://github.com/ChanMeng666/github-visitor-counter">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em>
+  <em><small>✨ Designed with <a href="https://github.com/ChanMeng666/github-visitor-counter">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em><br>
+  <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank">🌍 Get started now &rarr;</a>
 </div>
 
 ![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)

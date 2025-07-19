@@ -45,6 +45,8 @@ while (isAwake) {
 ```
 </details>
 
+<br />
+
 <a id="readme-projects"></a>
 
 <div align="right">

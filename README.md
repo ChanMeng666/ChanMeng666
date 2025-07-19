@@ -1,10 +1,10 @@
 <a id="readme-top"></a>
 
-[![SVG Banners](https://gradient-svg-generator.vercel.app/api/svg?text=Chan+Meng+%F0%9F%90%B5&height=300&gradientType=holographicUI&duration=10s&color0=00ffff&color1=40e0d0&color2=87ceeb&color3=add8e6&color4=b0e0e6&color5=f0f8ff)](https://github.com/ChanMeng666)
-
 <div align="right">
   <em><small>Powered by <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a> - Create stunning animated gradients effortlessly</small></em>
 </div>
+
+[![SVG Banners](https://gradient-svg-generator.vercel.app/api/svg?text=Chan+Meng+%F0%9F%90%B5&height=300&gradientType=holographicUI&duration=10s&color0=00ffff&color1=40e0d0&color2=87ceeb&color3=add8e6&color4=b0e0e6&color5=f0f8ff)](https://github.com/ChanMeng666)
 
 <br />
 

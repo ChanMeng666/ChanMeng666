@@ -2991,7 +2991,9 @@ alt="Mozilla Logo"/>
 ![📈 GitHub Stats](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%88+GitHub+Stats&height=200&gradientType=luminance&duration=15s&color0=ff4500&color1=ff8c00&color2=ffd700&color3=ffffff)
 
 <div align="center">
+  <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30" height="30" style="margin-right: 10px;">
   <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
+  <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30" height="30" style="margin-right: 10px;">
 </div>
 
 <br />

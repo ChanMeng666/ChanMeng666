@@ -3060,6 +3060,14 @@ alt="Mozilla Logo"/>
 
 <br />
 
+<div align="center">
+  <a href="https://gitroll.io/profile/u2gafRrkhsHeHB2BSvxDbcJD4nIB2" target="_blank">
+    <img src="https://gitroll.io/api/badges/profiles/v1/u2gafRrkhsHeHB2BSvxDbcJD4nIB2?theme=darkEmerald" alt="GitRoll Profile Badge"/>
+  </a>
+</div>
+
+<br />
+
 <div align="right">
   <a href="#readme-stats">
     <img src="https://img.shields.io/badge/⬆️Back%20to%20Stats-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>

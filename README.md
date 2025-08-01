@@ -2267,6 +2267,9 @@ alt="Wolfram Logo"/>
     <img src="/public/certificates/brands/mozilla_corporation_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Mozilla Logo"/>
+    <img src="/public/certificates/brands/google_logo.jpeg" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="Google Logo"/>
 </summary>
 <table>
   <tr>
@@ -2307,6 +2310,10 @@ alt="Mozilla Logo"/>
     <td align="center" width="20%">
       <img src="/public/certificates/JavaScriptFoundationsProfessionalCertificatebyMozilla.jpg" width="100%" alt="JavaScript Foundations Professional Certificate by Mozilla"/>
       <p><strong>JavaScript Foundations</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Google-AI-Essentials.jpg" width="100%" alt="Google AI Essentials"/>
+      <p><strong>Google AI Essentials</strong></p>
     </td>
   </tr>
 </table>

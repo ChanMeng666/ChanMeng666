@@ -116,14 +116,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">AI Programming Education</h3>
       <div align="center">  
-        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
+        <a href="https://programming.chanmeng.org/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/ai-programming-teaching-project" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank">
+          <a href="https://programming.chanmeng.org/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
           </a>
         </p>
@@ -1083,14 +1083,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">AI Programming Education</h3>
       <div align="center">  
-        <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
+        <a href="https://programming.chanmeng.org/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/ai-programming-teaching-project" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://ai-programming-teaching-project.vercel.app/" target="_blank">
+          <a href="https://programming.chanmeng.org/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
           </a>
         </p>
@@ -2719,6 +2719,16 @@ alt="Mozilla Logo"/>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-pdf-download-form-notion-integration-docusaurus-chan-meng-oodrc/?trackingId=R%2FHPf4AgeL5jzJc9LB41rA%3D%3D" target="_blank">
           <img src="/public/articles/Building-a-PDF-Download-Form-with-Notion-Integration-in-Docusaurus.png" width="100%" alt="Building a PDF Download Form with Notion Integration in Docusaurus"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%">
+      <h5 align="center">AI Chatbot Integration Guide for Website</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/ai-chatbot-integration-guide-website-chan-meng-itgsc/" target="_blank">
+          <img src="/public/articles/ai-chatbot-integration-guide-for-website.png" width="100%" alt="AI Chatbot Integration Guide for Website"/>
         </a>
       </div>
     </td>

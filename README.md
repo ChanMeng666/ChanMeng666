@@ -65,17 +65,15 @@ while (isAwake) {
         <p><strong>"We Can Do It!"</strong> - Join our global community of women developers committed to excellence, collaboration, and innovation in technology.</p>
         <p><strong>🎯 We:</strong> Build Open Source • Mentor Each Other • Share Knowledge • Grow Together</p>
         <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
-          <img src="https://img.shields.io/badge/🌹_JOIN_TECHROSIE-FF1493?style=for-the-badge&logo=github&logoColor=white" alt="Join TechRosie"/>
+          <img src="https://img.shields.io/badge/JOIN_TECHROSIE-FF1493?style=for-the-badge&logo=github&logoColor=white" alt="Join TechRosie"/>
         </a>
         <br><sub>✨ <em>From beginners to experts - all women developers welcome!</em></sub>
-        <details style="margin-top: 10px;">
-        <summary><strong>💡 How to Join (3 simple steps)</strong></summary>
+        <strong>💡 How to Join (3 simple steps)</strong>
         
-        1. **📝 Apply** → Click button above  
-        2. **📧 Wait** → Get email invitation  
-        3. **🎉 Join** → Accept & [go public](https://github.com/orgs/TechRosie/people)
+1. **📝 Apply** → Click button above  
+2. **📧 Wait** → Get email invitation  
+3. **🎉 Join** → Accept & [go public](https://github.com/orgs/TechRosie/people)
 
-        </details>
       </td>
     </tr>
   </table>

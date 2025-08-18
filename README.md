@@ -49,8 +49,6 @@ while (isAwake) {
 
 <a id="readme-techrosie"></a>
 
-![🌹 TechRosie](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+TechRosie+Community&height=150&gradientType=holographicUI&duration=8s&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
-
 <div align="center">
   <img src="/public/organization/TechRosie-logo.jpg" width="80" height="103" alt="TechRosie Logo" style="border-radius: 10px; border: 2px solid #FF69B4; margin: 10px 0;">
   
@@ -76,15 +74,6 @@ while (isAwake) {
 **Perfect for:** Beginners • Professionals • Mentors • Tech Leaders
 
 </details>
-
----
-
-<div align="center">
-  <strong>Ready to code with amazing women developers worldwide? 🌍</strong><br>
-  <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
-    <img src="https://img.shields.io/badge/🌹_START_NOW-FF1493?style=for-the-badge&logo=rocket&logoColor=white" alt="Start Now" />
-  </a>
-</div>
 
 <br />
 

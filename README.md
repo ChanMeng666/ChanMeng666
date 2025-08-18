@@ -47,14 +47,6 @@ while (isAwake) {
 
 <br />
 
-<div align="right">
-  <a href="#readme-techrosie">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20TechRosie-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to TechRosie"/>
-  </a>
-</div>
-
-<br />
-
 <a id="readme-projects"></a>
 
 <div align="right">
@@ -3038,6 +3030,14 @@ alt="Google Logo"/>
       </td>
     </tr>
   </table>
+</div>
+
+<br />
+
+<div align="right">
+  <a href="#readme-techrosie">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20TechRosie-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to TechRosie"/>
+  </a>
 </div>
 
 <br />

@@ -1,0 +1,55 @@
+name: 🌹 TechRosie Auto Invite
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  invite_to_techrosie:
+    runs-on: ubuntu-latest
+    if: contains(github.event.label.name, 'Invitation')
+    steps:
+      - name: 🌹 Invite to TechRosie Organization
+        uses: vj-abigo/invite-on-label@v1.2
+        with:
+          organization: TechRosie
+          label: Invitation
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          comment: |
+            ## 🌹 Welcome to TechRosie - Where Women Code Together! 🌹
+            
+            **Congratulations and welcome to our community!** 🎉
+            
+            Inspired by Rosie the Riveter's "We Can Do It!" spirit, you're now part of a global community of women developers committed to excellence in programming, mutual support, and innovation in technology.
+            
+            ### 📧 Next Steps:
+            1. **✅ Check your email** - You should receive a GitHub organization invitation
+            2. **🔗 Accept the invitation** - Click the accept button in the email
+            3. **🌟 Make your membership public** - [Visit here](https://github.com/orgs/TechRosie/people) and set your membership to public
+            4. **💬 Join our community discussions** - Start engaging with fellow women developers
+            5. **🚀 Explore our projects** - Check out our [repositories](https://github.com/TechRosie) and find ways to contribute
+            
+            ### 🎯 Team Opportunities:
+            Based on your interests, consider joining one of our teams:
+            - 💻 **Core Development** - Lead technical projects and maintain code quality
+            - 🤝 **Community Outreach** - Organize events and coordinate mentorship programs  
+            - 📚 **Education & Resources** - Create learning materials and support new members
+            - 📊 **Project Management** - Coordinate projects and facilitate collaboration
+            
+            ### 🌟 Community Resources:
+            - 📖 **Code of Conduct**: Please familiarize yourself with our community guidelines
+            - 🤝 **Mentorship**: Connect with experienced developers or become a mentor yourself
+            - 💡 **Project Ideas**: Browse our repositories for contribution opportunities
+            - 🗣️ **Discussions**: Join conversations and share your expertise
+            
+            ### 🎉 Welcome Message:
+            > *"We believe that diverse perspectives and collaborative spirit drive the best innovations in technology. Your unique background, experiences, and skills are exactly what make our community stronger. Whether you're here to learn, teach, build, or all of the above - you belong here!"*
+            
+            ---
+            
+            **Questions?** Feel free to reach out to our community maintainers or start a discussion in our repositories.
+            
+            **Together, we're building the future of tech - one commit at a time!** 💪
+            
+            Welcome aboard! 🚀
+        env:
+          INVITE_TOKEN: ${{ secrets.TECHROSIE_INVITE_TOKEN }}

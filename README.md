@@ -47,6 +47,151 @@ while (isAwake) {
 
 <br />
 
+<a id="readme-techrosie"></a>
+
+<div align="right">
+  <em><small>💻 Empowering women in tech, one commit at a time</small></em>
+</div>
+
+![🌹 Join TechRosie Community](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+Join+TechRosie+Community&height=200&gradientType=holographicUI&duration=10s&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
+
+<div align="center">
+  <img src="/public/organization/TechRosie-logo.jpg" width="120" height="120" alt="TechRosie Logo" style="border-radius: 50%; margin: 20px 0;">
+  
+  <h3>🌹 TechRosie - Women Developers Community</h3>
+  <p><em>Inspired by Rosie the Riveter's "We Can Do It!" spirit</em></p>
+  
+  <p>
+    <strong>TechRosie is a global community of women developers committed to excellence in programming, mutual support, and innovation in technology.</strong>
+  </p>
+  
+  <!-- Quick Apply Button -->
+  <div style="margin: 20px 0;">
+    <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
+      <img src="https://img.shields.io/badge/🌹_Apply_to_Join_TechRosie-FF69B4?style=for-the-badge&logo=github&logoColor=white" alt="Apply to Join TechRosie" />
+    </a>
+  </div>
+</div>
+
+<details>
+<summary><h3>🚀 What We Do</h3></summary>
+
+<div align="center">
+  
+| 💻 **Create & Build** | 🤝 **Mentor & Support** | 🌟 **Share & Learn** | 📈 **Grow & Thrive** |
+|:---:|:---:|:---:|:---:|
+| Develop open-source projects | Guide emerging women developers | Share technical knowledge | Support career advancement |
+| Collaborate on innovative solutions | Provide mentorship programs | Create learning resources | Build professional networks |
+| Maintain high code quality | Foster inclusive environment | Host workshops & events | Celebrate achievements |
+
+</div>
+</details>
+
+<details>
+<summary><h3>🎯 Perfect For</h3></summary>
+
+<div align="center">
+
+| 🌱 **New Developers** | 💪 **Experienced Pros** | 🎓 **Mentors** | 🚀 **Tech Enthusiasts** |
+|:---:|:---:|:---:|:---:|
+| Starting coding journey | Seeking supportive community | Wanting to guide others | Passionate about women in tech |
+| Learning programming basics | Sharing expertise | Building leadership skills | Advocating for inclusion |
+| Building first projects | Contributing to open source | Making positive impact | Creating lasting change |
+
+</div>
+</details>
+
+<details>
+<summary><h3>📝 How to Join TechRosie</h3></summary>
+
+<div align="center">
+
+### Step-by-Step Process
+
+| Step | Action | Description |
+|:---:|:---:|:---|
+| **1️⃣** | **Apply** | [Click here to create an application issue](https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization) |
+| **2️⃣** | **Wait** | Our team reviews applications and sends email invitations |
+| **3️⃣** | **Accept** | Accept the GitHub organization invitation from your email |
+| **4️⃣** | **Go Public** | Set your [membership to public](https://github.com/orgs/TechRosie/people) to show your TechRosie pride! |
+| **5️⃣** | **Engage** | Start exploring repositories, join discussions, and contribute! |
+
+</div>
+
+<div align="center">
+  <h4>🎉 What You'll Get</h4>
+  
+  <p>
+    ✨ <strong>Community Access</strong> - Join our GitHub organization<br>
+    🤝 <strong>Mentorship</strong> - Connect with experienced developers<br>
+    📚 <strong>Learning Resources</strong> - Access educational materials<br>
+    💼 <strong>Career Support</strong> - Professional development opportunities<br>
+    🌍 <strong>Global Network</strong> - Connect with women developers worldwide<br>
+    🚀 <strong>Project Collaboration</strong> - Work on meaningful open-source projects
+  </p>
+</div>
+</details>
+
+<details>
+<summary><h3>👥 Team Structure</h3></summary>
+
+<div align="center">
+
+| Team | Focus | Join If You... |
+|:---:|:---:|:---|
+| **💻 Core Development** | Technical projects, code reviews, quality | Love coding and want to lead technical initiatives |
+| **🤝 Community Outreach** | Events, social media, mentorship coordination | Enjoy connecting people and building relationships |
+| **📚 Education & Resources** | Learning materials, documentation, member support | Passionate about teaching and helping others learn |
+| **📊 Project Management** | Coordination, milestones, collaboration facilitation | Excel at organization and project coordination |
+
+<p><em>Don't worry if you're not sure yet - you can explore and join multiple teams later!</em></p>
+
+</div>
+</details>
+
+<details>
+<summary><h3>🌟 Community Values</h3></summary>
+
+<div align="center">
+
+### Our Core Principles
+
+| 💪 **Empowerment** | 🌈 **Inclusivity** | ⭐ **Excellence** | 🤝 **Support** | 🚀 **Innovation** |
+|:---:|:---:|:---:|:---:|:---:|
+| Lift each other up | Welcome all backgrounds | Strive for quality | Create safe spaces | Think creatively |
+| Share knowledge | Embrace diversity | Continuous learning | Learn from mistakes | Build the future |
+| Build confidence | Respect differences | Professional growth | Celebrate together | Lead with purpose |
+
+</div>
+
+<div align="center">
+  <h4>💬 "We Can Do It!" - Together</h4>
+  <p>
+    <em>Just like Rosie the Riveter showed that women could excel in traditionally male-dominated fields,<br>
+    TechRosie proves that women developers can lead, innovate, and transform the tech industry.</em>
+  </p>
+</div>
+</details>
+
+<div align="center">
+  <h4>🌍 Join Our Global Movement</h4>
+  <p>
+    <strong>Ready to be part of something bigger?</strong><br>
+    Whether you're debugging your first "Hello World" or architecting enterprise systems,<br>
+    there's a place for you in TechRosie.
+  </p>
+  
+  <div style="margin: 20px 0;">
+    <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
+      <img src="https://img.shields.io/badge/🌹_Start_Your_Application-FF69B4?style=for-the-badge&logo=github&logoColor=white" alt="Start Your Application" />
+    </a>
+  </div>
+  
+  <p><em>Together, we're building the future of tech - one commit at a time! 💻✨</em></p>
+</div>
+
+<br />
+
 <a id="readme-projects"></a>
 
 <div align="right">

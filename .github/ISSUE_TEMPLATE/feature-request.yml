@@ -1,0 +1,122 @@
+name: ✨ Feature Request
+description: Suggest an idea or enhancement for TechRosie
+title: "[FEATURE] <brief description>"
+labels: [enhancement, feature-request]
+body:
+  - type: textarea
+    id: feature_description
+    attributes:
+      label: Feature Description
+      description: A clear and concise description of the feature you'd like to see
+      placeholder: Describe your feature idea...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: Problem or Need
+      description: What problem does this feature solve? What need does it address?
+      placeholder: |
+        Is your feature request related to a problem? Please describe.
+        Example: I'm always frustrated when [...]
+    validations:
+      required: true
+      
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see implemented
+      placeholder: A clear and concise description of what you want to happen...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or features you've considered
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature to you?
+      options:
+        - Low - Nice to have
+        - Medium - Would be helpful
+        - High - Important for my workflow
+        - Critical - Blocking my work
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: feature_category
+    attributes:
+      label: Feature Category (Select all that apply)
+      options:
+        - label: User Interface/User Experience
+        - label: Community Features
+        - label: Project Management
+        - label: Documentation
+        - label: Mentorship Tools
+        - label: Learning Resources
+        - label: Accessibility
+        - label: Integration/API
+        - label: Performance
+        - label: Other
+        
+  - type: textarea
+    id: use_cases
+    attributes:
+      label: Use Cases
+      description: How would you and others use this feature? Provide specific examples
+      placeholder: |
+        Example use cases:
+        1. As a mentor, I would use this to...
+        2. As a new member, this would help me...
+        3. For project collaboration, this would enable...
+    validations:
+      required: false
+      
+  - type: textarea
+    id: mockups_attachments
+    attributes:
+      label: Mockups or Examples
+      description: If applicable, add mockups, screenshots, or links to examples that illustrate your idea
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context, research, or references about the feature request here
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: contribution_willingness
+    attributes:
+      label: Contribution
+      description: Would you be willing to help implement this feature?
+      options:
+        - label: I'd like to help implement this feature
+        - label: I can help with design/planning
+        - label: I can help with documentation
+        - label: I can help with testing
+        - label: I'm interested but would need guidance
+        
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for your feature suggestion! 🌟
+        
+        **TechRosie thrives on community input and collaboration.** Your ideas help us build better tools for women developers worldwide.
+        
+        Our team will review your suggestion and discuss its feasibility. We may reach out for more details or to explore collaboration opportunities.
+        
+        **Together, we're building the future of tech! 💪**

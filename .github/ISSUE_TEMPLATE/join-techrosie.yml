@@ -1,0 +1,127 @@
+name: 🌹 Join TechRosie - Women Developers Community
+description: Apply to join our global community of women developers committed to excellence in programming
+title: "🌹 Please invite me to the TechRosie GitHub Organization"
+labels: [Invitation, TechRosie]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Full Name
+      placeholder: Enter your full name
+    validations:
+      required: true
+      
+  - type: input
+    id: pronouns
+    attributes:
+      label: Preferred Pronouns (optional)
+      placeholder: she/her, they/them, etc.
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: experience_level
+    attributes:
+      label: Programming Experience Level
+      description: Select your current programming experience level
+      options:
+        - Beginner (0-1 years)
+        - Intermediate (2-5 years) 
+        - Advanced (5+ years)
+        - Expert (10+ years)
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: tech_interests
+    attributes:
+      label: Technical Interests (Select all that apply)
+      description: Choose your areas of interest in technology
+      options:
+        - label: Frontend Development (React, Vue, Angular, etc.)
+        - label: Backend Development (Node.js, Python, Java, etc.)
+        - label: Mobile Development (iOS, Android, React Native, etc.)
+        - label: Data Science/AI/ML
+        - label: DevOps/Cloud Computing
+        - label: Cybersecurity
+        - label: Open Source Projects
+        - label: Mentorship & Teaching
+        - label: UI/UX Design
+        - label: Quality Assurance/Testing
+        
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why do you want to join TechRosie?
+      description: Tell us about your goals and how you'd like to contribute to our community of women developers
+      placeholder: |
+        Share your story, goals, and what excites you about joining TechRosie...
+        
+        Examples:
+        - Looking for mentorship opportunities
+        - Want to contribute to open source projects
+        - Seeking a supportive community of women in tech
+        - Interested in collaborative learning
+        - Want to help mentor other women developers
+    validations:
+      required: true
+      
+  - type: textarea
+    id: contribution_ideas
+    attributes:
+      label: How would you like to contribute? (optional)
+      description: Any ideas for projects, mentorship, documentation, or community activities?
+      placeholder: |
+        Feel free to share any ideas such as:
+        - Project ideas you'd like to work on
+        - Skills you can share with the community
+        - Areas where you'd like to help
+        - Experience you can contribute
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: team_interest
+    attributes:
+      label: Which team would you be most interested in joining?
+      description: Choose the team that aligns with your interests (you can join multiple teams later)
+      options:
+        - Core Development (Lead technical projects, code reviews)
+        - Community Outreach (Events, social media, mentorship coordination)
+        - Education & Resources (Learning materials, documentation, member support)
+        - Project Management (Coordinate projects, track milestones)
+        - Not sure yet (I'd like to explore first)
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: agreements
+    attributes:
+      label: Community Agreements
+      description: Please confirm your understanding and agreement
+      options:
+        - label: I agree to follow TechRosie's Code of Conduct and community guidelines
+          required: true
+        - label: I commit to contributing positively to our inclusive community of women developers
+          required: true
+        - label: I understand that TechRosie is focused on empowering women in technology
+          required: true
+          
+  - type: markdown
+    attributes:
+      value: |
+        ## 🌹 Welcome to TechRosie!
+        
+        **Inspired by Rosie the Riveter's "We Can Do It!" spirit**, TechRosie is a global community of women developers committed to excellence in programming, mutual support, and innovation in technology.
+        
+        **What happens next:**
+        1. 📧 You'll receive an email invitation to join our GitHub organization
+        2. ✅ Accept the invitation and set your membership to public
+        3. 🌟 Start exploring our repositories and join discussions
+        4. 🤝 Connect with other amazing women developers!
+        
+        ---
+        
+        **Questions?** Feel free to reach out to our community maintainers.
+        
+        **Thank you for your interest in joining TechRosie! 💪**

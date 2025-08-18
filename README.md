@@ -64,7 +64,7 @@ while (isAwake) {
       <td width="70%">
         <p>Join our global community of women developers committed to excellence, collaboration, and innovation in technology.</p>
         <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
-          <img src="https://img.shields.io/badge/JOIN_TECHROSIE-f6e702?style=for-the-badge&logo=github&logoColor=white" alt="Join TechRosie"/>
+          <img src="https://img.shields.io/badge/JOIN_TECHROSIE-f6e702?style=for-the-badge&logo=github&logoColor=black" alt="Join TechRosie"/>
         </a>
         <details style="margin-top: 10px;">
 <summary><strong>💡 How to Join (3 simple steps)</strong></summary>

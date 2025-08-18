@@ -47,39 +47,6 @@ while (isAwake) {
 
 <br />
 
-<a id="readme-techrosie"></a>
-
-<div align="right">
-  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
-</div>
-
-![🌹 TechRosie](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+TechRosie&template=cyber-symbiosis&height=200&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="30%">
-        <img src="/public/organization/TechRosie-logo.jpg" width="150px" alt="TechRosie Logo"/>
-      </td>
-      <td width="70%">
-        <p>Join our global community of women developers committed to excellence, collaboration, and innovation in technology.</p>
-        <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
-          <img src="https://img.shields.io/badge/JOIN_TECHROSIE-f6e702?style=for-the-badge&logo=github&logoColor=black" alt="Join TechRosie"/>
-        </a>
-        <details style="margin-top: 10px;">
-<summary><strong>💡 How to Join (3 simple steps)</strong></summary>
-        
-1. **📝 Apply** → Click button above  
-2. **📧 Wait** → Get email invitation  
-3. **🎉 Join** → Accept & [go public](https://github.com/orgs/TechRosie/people)
-        </details>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<br />
-
 <div align="right">
   <a href="#readme-techrosie">
     <img src="https://img.shields.io/badge/⬆️Back%20to%20TechRosie-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to TechRosie"/>
@@ -3039,6 +3006,41 @@ alt="Google Logo"/>
     <img src="https://img.shields.io/badge/⬆️Back%20to%20Podcasts-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
+
+<br />
+
+<a id="readme-techrosie"></a>
+
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![🌹 TechRosie](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+TechRosie&template=cyber-symbiosis&height=200&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="30%">
+        <img src="/public/organization/TechRosie-logo.jpg" width="150px" alt="TechRosie Logo"/>
+      </td>
+      <td width="70%">
+        <p>Join our global community of women developers committed to excellence, collaboration, and innovation in technology.</p>
+        <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
+          <img src="https://img.shields.io/badge/JOIN_TECHROSIE-f6e702?style=for-the-badge&logo=github&logoColor=black" alt="Join TechRosie"/>
+        </a>
+        <details style="margin-top: 10px;">
+<summary><strong>💡 How to Join (3 simple steps)</strong></summary>
+        
+1. **📝 Apply** → Click button above  
+2. **📧 Wait** → Get email invitation  
+3. **🎉 Join** → Accept & [go public](https://github.com/orgs/TechRosie/people)
+        </details>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br />
 
 <a id="readme-stats"></a>
 

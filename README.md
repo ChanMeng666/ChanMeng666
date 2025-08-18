@@ -49,147 +49,41 @@ while (isAwake) {
 
 <a id="readme-techrosie"></a>
 
-<div align="right">
-  <em><small>💻 Empowering women developers, one commit at a time</small></em>
-</div>
-
-![🌹 TechRosie Community](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+TechRosie+Community&height=180&gradientType=holographicUI&duration=8s&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
+![🌹 TechRosie](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+TechRosie+Community&height=150&gradientType=holographicUI&duration=8s&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <img src="/public/organization/TechRosie-logo.jpg" width="100" height="100" alt="TechRosie Logo" style="border-radius: 50%; border: 3px solid #FF69B4;">
-      </td>
-      <td align="left" width="50%">
-        <h3 style="margin: 0; color: #FF69B4;">🌹 TechRosie</h3>
-        <p style="margin: 5px 0; font-style: italic;">"We Can Do It!" - Global women developers community</p>
-        <p style="margin: 5px 0; font-size: 14px;">Excellence • Collaboration • Innovation</p>
-      </td>
-    </tr>
-  </table>
+  <img src="/public/organization/TechRosie-logo.jpg" width="80" height="103" alt="TechRosie Logo" style="border-radius: 10px; border: 2px solid #FF69B4; margin: 10px 0;">
   
-  <div style="margin: 20px 0; padding: 15px; background: linear-gradient(135deg, #FFE4E1, #FFF0F5); border-radius: 10px; border: 1px solid #FFB6C1;">
+  <h3>🌹 <em>"We Can Do It!"</em> - Global Women Developers Community</h3>
+  
+  <div style="margin: 15px 0; padding: 12px; background: linear-gradient(135deg, #FFE4E1, #FFF0F5); border-radius: 8px;">
     <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
-      <img src="https://img.shields.io/badge/🌹_JOIN_TECHROSIE-FF69B4?style=for-the-badge&logo=github&logoColor=white&labelColor=FF1493" alt="Join TechRosie" />
+      <img src="https://img.shields.io/badge/🌹_JOIN_TECHROSIE-FF1493?style=for-the-badge&logo=github&logoColor=white" alt="Join TechRosie" />
     </a>
-    <br>
-    <sub>✨ <em>From beginners to experts - all women developers welcome!</em></sub>
+    <br><sub>✨ All experience levels welcome!</sub>
   </div>
 </div>
 
-<!-- Core Info Grid -->
-<table align="center" width="100%">
-  <tr>
-    <td align="center" width="25%">
-      <h4>💻<br>BUILD</h4>
-      <sub>Open-source projects<br>Code excellence<br>Innovation</sub>
-    </td>
-    <td align="center" width="25%">
-      <h4>🤝<br>MENTOR</h4>
-      <sub>Guide newcomers<br>Share expertise<br>Support growth</sub>
-    </td>
-    <td align="center" width="25%">
-      <h4>🌟<br>LEARN</h4>
-      <sub>Tech knowledge<br>Best practices<br>Career skills</sub>
-    </td>
-    <td align="center" width="25%">
-      <h4>🚀<br>THRIVE</h4>
-      <sub>Global network<br>Opportunities<br>Leadership</sub>
-    </td>
-  </tr>
-</table>
+**🎯 We:** `Build Open Source` • `Mentor Each Other` • `Share Knowledge` • `Grow Together`
 
 <details>
-<summary>📋 <strong>Quick Join Guide</strong></summary>
-<br>
+<summary><strong>💡 How to Join (3 simple steps)</strong></summary>
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <div style="padding: 10px; border-radius: 8px; background: #FFF0F5;">
-        <strong>1️⃣ APPLY</strong><br>
-        <sub>Click button above</sub>
-      </div>
-    </td>
-    <td align="center">➜</td>
-    <td align="center">
-      <div style="padding: 10px; border-radius: 8px; background: #FFE4E1;">
-        <strong>2️⃣ WAIT</strong><br>
-        <sub>Email invitation</sub>
-      </div>
-    </td>
-    <td align="center">➜</td>
-    <td align="center">
-      <div style="padding: 10px; border-radius: 8px; background: #FFCCCB;">
-        <strong>3️⃣ JOIN</strong><br>
-        <sub>Accept & go public</sub>
-      </div>
-    </td>
-  </tr>
-</table>
+1. **📝 Apply** → Click button above
+2. **📧 Wait** → Get email invitation  
+3. **🎉 Join** → Accept & [go public](https://github.com/orgs/TechRosie/people)
 
-**🎯 Perfect for:**
-- 🌱 **Beginners** starting their coding journey
-- 💪 **Professionals** seeking community & growth  
-- 🎓 **Mentors** passionate about helping others
-- 🚀 **Leaders** driving tech innovation
+**Perfect for:** Beginners • Professionals • Mentors • Tech Leaders
 
-**🎁 What you get:**
-`Community Access` • `Mentorship` • `Learning Resources` • `Career Support` • `Global Network` • `Project Collaboration`
-
-</details>
-
-<details>
-<summary>👥 <strong>Teams & Opportunities</strong></summary>
-<br>
-
-<div align="center">
-
-| Team | Focus | Perfect If You... |
-|:---:|:---|:---|
-| 💻 **Core Dev** | Technical leadership, code reviews | Love coding & technical challenges |
-| 🤝 **Outreach** | Events, social media, mentorship | Enjoy connecting & relationship building |
-| 📚 **Education** | Learning materials, documentation | Passionate about teaching & helping |
-| 📊 **Project Mgmt** | Coordination, milestones, workflows | Excel at organization & planning |
-
-<sub><em>💡 Not sure? Join and explore - you can participate in multiple teams!</em></sub>
-
-</div>
-</details>
-
-<details>
-<summary>🌟 <strong>Our Values & Impact</strong></summary>
-<br>
-
-<div align="center">
-
-**💪 Empowerment • 🌈 Inclusivity • ⭐ Excellence • 🤝 Support • 🚀 Innovation**
-
-<div style="background: linear-gradient(135deg, #FFF0F5, #FFE4E1); padding: 15px; border-radius: 10px; margin: 10px 0;">
-  <h4>💬 "We Can Do It!" - Together</h4>
-  <em>Inspired by Rosie the Riveter, TechRosie proves that women developers can lead, innovate, and transform the tech industry.</em>
-</div>
-
-</div>
 </details>
 
 ---
 
 <div align="center">
-  <h4>🌍 Ready to Code Together?</h4>
-  <p>
-    From your first "Hello World" to enterprise architecture<br>
-    <strong>There's a place for you in TechRosie! 🌹</strong>
-  </p>
-  
-  <div style="margin: 15px 0;">
-    <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
-      <img src="https://img.shields.io/badge/🌹_START_APPLICATION-FF1493?style=for-the-badge&logo=rocket&logoColor=white" alt="Start Application" />
-    </a>
-  </div>
-  
-  <sub><em>Building tomorrow's tech, together! 💻✨</em></sub>
+  <strong>Ready to code with amazing women developers worldwide? 🌍</strong><br>
+  <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
+    <img src="https://img.shields.io/badge/🌹_START_NOW-FF1493?style=for-the-badge&logo=rocket&logoColor=white" alt="Start Now" />
+  </a>
 </div>
 
 <br />

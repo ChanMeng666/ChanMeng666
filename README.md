@@ -62,12 +62,11 @@ while (isAwake) {
         <img src="/public/organization/TechRosie-logo.jpg" width="120px" alt="TechRosie Logo" style="border-radius: 15px; border: 3px solid #FF69B4;"/>
       </td>
       <td width="70%">
-        <p><strong>"We Can Do It!"</strong> - Join our global community of women developers committed to excellence, collaboration, and innovation in technology.</p>
-        <p><strong>🎯 We:</strong> Build Open Source • Mentor Each Other • Share Knowledge • Grow Together</p>
+        <p>Join our global community of women developers committed to excellence, collaboration, and innovation in technology.</p>
+        <br><sub>✨ <em>From beginners to experts - all women developers welcome!</em></sub>
         <a href="https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml&title=%F0%9F%8C%B9+Please+invite+me+to+the+TechRosie+GitHub+Organization" target="_blank">
           <img src="https://img.shields.io/badge/JOIN_TECHROSIE-FF1493?style=for-the-badge&logo=github&logoColor=white" alt="Join TechRosie"/>
         </a>
-        <br><sub>✨ <em>From beginners to experts - all women developers welcome!</em></sub>
         <details style="margin-top: 10px;">
 <summary><strong>💡 How to Join (3 simple steps)</strong></summary>
         

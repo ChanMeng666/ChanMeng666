@@ -3009,6 +3009,8 @@ alt="Google Logo"/>
 
 ![🌹 TechRosie](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+TechRosie%20GitHub%20Organization&template=cyber-symbiosis&height=200&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
 
+![🌹 TechRosie](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%88+TechRosie+GitHub+Organization&height=200&gradientType=luminance&duration=15s&color0=ff4500&color1=ff8c00&color2=ffd700&color3=ffffff)
+
 <div align="center">
   <table>
     <tr>
@@ -3049,6 +3051,8 @@ alt="Google Logo"/>
 </div>
 
 ![📈 GitHub Stats](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%88+GitHub+Stats&height=200&gradientType=luminance&duration=15s&color0=ff4500&color1=ff8c00&color2=ffd700&color3=ffffff)
+
+![🌹 TechRosie](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+TechRosie%20GitHub%20Organization&template=cyber-symbiosis&height=200&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
 
 <div align="center">
   <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30" height="30" style="margin-right: 10px;">

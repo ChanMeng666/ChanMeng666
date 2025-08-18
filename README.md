@@ -68,12 +68,13 @@ while (isAwake) {
           <img src="https://img.shields.io/badge/JOIN_TECHROSIE-FF1493?style=for-the-badge&logo=github&logoColor=white" alt="Join TechRosie"/>
         </a>
         <br><sub>✨ <em>From beginners to experts - all women developers welcome!</em></sub>
-        <strong>💡 How to Join (3 simple steps)</strong>
+        <details style="margin-top: 10px;">
+<summary><strong>💡 How to Join (3 simple steps)</strong></summary>
         
 1. **📝 Apply** → Click button above  
 2. **📧 Wait** → Get email invitation  
 3. **🎉 Join** → Accept & [go public](https://github.com/orgs/TechRosie/people)
-
+        </details>
       </td>
     </tr>
   </table>

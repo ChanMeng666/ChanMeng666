@@ -59,7 +59,7 @@ while (isAwake) {
   <table>
     <tr>
       <td align="center" width="30%">
-        <img src="/public/organization/TechRosie-logo.jpg" width="120px" alt="TechRosie Logo" style="border-radius: 15px; border: 3px solid #FF69B4;"/>
+        <img src="/public/organization/TechRosie-logo.jpg" width="150px" alt="TechRosie Logo"/>
       </td>
       <td width="70%">
         <p>Join our global community of women developers committed to excellence, collaboration, and innovation in technology.</p>

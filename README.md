@@ -50,10 +50,10 @@ while (isAwake) {
 <a id="readme-techrosie"></a>
 
 <div align="right">
-  <em><small>💻 Empowering women in tech, one commit at a time</small></em>
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
 </div>
 
-![🌹 Join TechRosie](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+Join+TechRosie&height=200&gradientType=circular&duration=12s&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
+![🌹 TechRosie](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%B9+TechRosie&template=cyber-symbiosis&height=120&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
 
 <div align="center">
   <table>
@@ -82,12 +82,8 @@ while (isAwake) {
 
 <div align="right">
   <a href="#readme-techrosie">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20TechRosie-%234B5563.svg?style=for-the-badge&logoColor=white&color=FF69B4" alt="Back to TechRosie"/>
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20TechRosie-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to TechRosie"/>
   </a>
-</div>
-
-<div align="right">
-  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
 </div>
 
 <br />

@@ -3096,6 +3096,10 @@ alt="Google Logo"/>
 </div>
 
 <div align="center">
+  <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%" height="100px">
+</div>
+
+<div align="center">
 
 <div align="right">
   <em><small>🐍 Want to add this snake animation to your profile? Check out <a href="https://github.com/ChanMeng666/ChanMeng666/blob/main/public/How%20to%20Add%20a%20GitHub%20Contribution%20Snake%20to%20Your%20Profile.md">my step-by-step guide</a> for easy setup instructions</small></em>
@@ -3106,6 +3110,7 @@ alt="Google Logo"/>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake.svg">
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake.svg">
 </picture>
+
 </div>
 
 <br />

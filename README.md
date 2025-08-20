@@ -3013,7 +3013,9 @@ alt="Google Logo"/>
   <table>
     <tr>
       <td align="center" width="30%">
-        <img src="/public/organization/TechRosie-logo.jpg" width="150px" alt="TechRosie Logo"/>
+        <a href="https://github.com/TechRosie" target="_blank">
+          <img src="/public/organization/TechRosie-logo.jpg" width="150px" alt="TechRosie Logo"/>
+        </a>
       </td>
       <td width="70%">
         <p>Join our global community of women developers committed to excellence, collaboration, and innovation in technology.</p>

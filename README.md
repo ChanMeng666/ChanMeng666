@@ -3101,6 +3101,8 @@ alt="Google Logo"/>
   <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4">
 </a>
 
+![GitHub Trophies](https://github-trophies-nine.vercel.app/?username=ChanMeng666)
+
 <br />
 
 <div align="center">

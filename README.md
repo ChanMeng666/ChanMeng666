@@ -3103,9 +3103,6 @@ alt="Google Logo"/>
 
 ![GitHub Trophies](https://github-trophies-nine.vercel.app/?username=ChanMeng666)
 
-<a href="https://hacked-github-stat-trophies.vercel.app/?username=ChanMeng666" target="_blank">
-  <img src="https://hacked-github-stat-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4">
-</a>
 
 <br />
 

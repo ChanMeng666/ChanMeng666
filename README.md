@@ -3094,17 +3094,11 @@ alt="Google Logo"/>
 
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal" border-radius="15">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" border-radius="15">
 </div>
 
 <a href="https://github-trophies.vercel.app/?username=ChanMeng666" target="_blank">
   <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4">
-</a>
-
-![GitHub Trophies](https://github-trophies-nine.vercel.app/?username=ChanMeng666)
-
-<a href="https://github-trophies-nine.vercel.app/?username=ChanMeng666" target="_blank">
-  <img src="https://github-trophies-nine.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4">
 </a>
 
 

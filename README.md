@@ -3089,17 +3089,18 @@ alt="Google Logo"/>
 
 <h3 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="50"/> GitHub Trophies<sup><sup>⭐</sup></sup></h3>
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ChanMeng666&theme=flat&column=7&margin-w=10" alt="GitHub Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=ChanMeng666&theme=flat&column=7&margin-w=4&margin-h=4" alt="GitHub Trophies" />
 </div>
 
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal" border-radius="15">
 </div>
 
 <a href="https://github-trophies.vercel.app/?username=ChanMeng666" target="_blank">
   <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4">
 </a>
+
 
 
 <br />

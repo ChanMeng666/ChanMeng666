@@ -3092,6 +3092,10 @@ alt="Google Logo"/>
   <img src="https://github-profile-trophy.vercel.app/?username=ChanMeng666&theme=flat&column=7&margin-w=4&margin-h=4" alt="GitHub Trophies" />
 </div>
 
+<div align="center">
+  <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=flat&column=7&margin-w=4&margin-h=4" alt="GitHub Trophies" />
+</div>
+
 
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal" border-radius="15">

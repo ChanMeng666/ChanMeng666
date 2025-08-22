@@ -3097,6 +3097,10 @@ alt="Google Logo"/>
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal" border-radius="15">
 </div>
 
+<a href="https://github-trophies.vercel.app/?username=ChanMeng666" target="_blank">
+  <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4">
+</a>
+
 <br />
 
 <div align="center">

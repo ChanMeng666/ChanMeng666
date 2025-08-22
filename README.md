@@ -3093,7 +3093,7 @@ alt="Google Logo"/>
 </div>
 
 <div align="center">
-  <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=flat&column=7&margin-w=4&margin-h=4" alt="GitHub Trophies" />
+  <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies" />
 </div>
 
 

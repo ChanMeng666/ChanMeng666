@@ -2334,7 +2334,7 @@ alt="Anthropic Logo"/>
       <p><strong>Claude Code in Action</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Anthropic_AI-Fluency-Framework-and-Foundations" width="100%" alt="AI Fluency Framework and Foundations"/>
+      <img src="/public/certificates/Anthropic_AI-Fluency-Framework-and-Foundations.jpg" width="100%" alt="AI Fluency Framework and Foundations"/>
       <p><strong>AI Fluency Framework and Foundations</strong></p>
     </td>
   </tr>

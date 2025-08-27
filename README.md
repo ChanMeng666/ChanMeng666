@@ -1591,7 +1591,7 @@ while (isAwake) {
         <p>
           <strong>Full Stack Developer</strong><br>
           Jul 2025 - Present<br>
-          Auckland Central, Auckland, New Zealand • Hybrid
+          Hybrid • New Zealand
         </p>
         <p align="left">
           • Leading official website development for NZ registered charity (CC57025) bridging STEM gender gap<br>

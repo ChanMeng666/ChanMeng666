@@ -1594,9 +1594,9 @@ while (isAwake) {
           Hybrid • New Zealand
         </p>
         <p align="left">
-          • Leading official website development for NZ registered charity (CC57025) bridging STEM gender gap<br>
-          • Architected transition from Webflow to Next.js 15 with App Router, Tailwind CSS v4, and shadcn/ui<br>
-          • Empowering 2200+ women in technology through improved digital infrastructure and user experience
+          • Leading official website development for NZ registered charity (CC57025)<br>
+          • Architected migration from Webflow to Next.js 15 with App Router and Tailwind CSS v4<br>
+          • Supporting 2200+ women in STEM through improved digital infrastructure
         </p>
       </div>
     </td>

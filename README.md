@@ -1585,7 +1585,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">She Sharp</h3>
       <div align="center">  
-        <a href="https://www.shesharp.org.nz/" target="_blank"><img src="/public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp Logo"/></a>
+        <a href="https://she-sharp.vercel.app/" target="_blank"><img src="/public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp Logo"/></a>
         <br>
         <br>
         <p>

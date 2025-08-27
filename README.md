@@ -2279,6 +2279,9 @@ alt="Mozilla Logo"/>
     <img src="/public/certificates/brands/google_logo.jpeg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Google Logo"/>
+    <img src="/public/certificates/brands/anthropicresearch_logo.jpeg" 
+style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
+alt="Anthropic Logo"/>
 </summary>
 <table>
   <tr>
@@ -2323,6 +2326,16 @@ alt="Google Logo"/>
     <td align="center" width="20%">
       <img src="/public/certificates/Google-AI-Essentials.jpg" width="100%" alt="Google AI Essentials"/>
       <p><strong>Google AI Essentials</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Anthropic_Claude-Code-in-Action.jpg" width="100%" alt="Claude Code in Action"/>
+      <p><strong>Claude Code in Action</strong></p>
+    </td>
+    <td align="center" width="20%">
+      <img src="/public/certificates/Anthropic_AI-Fluency-Framework-and-Foundations" width="100%" alt="AI Fluency Framework and Foundations"/>
+      <p><strong>AI Fluency Framework and Foundations</strong></p>
     </td>
   </tr>
 </table>

@@ -1627,7 +1627,7 @@ while (isAwake) {
         <br>
         <br>
         <p>
-          <strong>Full Stack Developer</strong><br>
+          <strong>Chief Technology Officer (CTO)</strong><br>
           Mar 2025 - Present<br>
           Remote • China
         </p>

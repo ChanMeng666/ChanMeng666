@@ -1583,6 +1583,26 @@ while (isAwake) {
 <table>
   <tr>
     <td width="50%">
+      <h3 align="center">She Sharp</h3>
+      <div align="center">  
+        <a href="https://www.shesharp.org.nz/" target="_blank"><img src="/public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Full Stack Developer</strong><br>
+          Jul 2025 - Present<br>
+          Auckland Central, Auckland, New Zealand • Hybrid
+        </p>
+        <p align="left">
+          • Leading official website development for NZ registered charity (CC57025) bridging STEM gender gap<br>
+          • Architected transition from Webflow to Next.js 15 with App Router, Tailwind CSS v4, and shadcn/ui<br>
+          • Empowering 2200+ women in technology through improved digital infrastructure and user experience
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
       <h3 align="center">Sanicle</h3>
       <div align="center">  
         <a href="https://sanicle.cloud/" target="_blank"><img src="/public/experience/sanicle_logo.svg" width="50%" alt="Sanicle Logo"/></a>

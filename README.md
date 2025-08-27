@@ -1853,7 +1853,7 @@ while (isAwake) {
     <td width="50%">
       <h3 align="center">Omopeju Afanu</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/in/peju-afanu-7b9367110/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4D03AQEg4BO61lph2A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731009900505?e=1755129600&v=beta&t=Vv4WYkcwKE2Y3DcqRG_07432uq_6DKawUqW0LcdwTtE" width="50%" alt="Omopeju Afanu"/></a>
+        <a href="https://www.linkedin.com/in/peju-afanu-7b9367110/" target="_blank"><img src="/public/recommendations/Omopeju-Afanu.jpg" width="50%" alt="Omopeju Afanu"/></a>
         <br>
         <br>
         <p>

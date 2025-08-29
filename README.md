@@ -2515,8 +2515,10 @@ alt="Anthropic Logo"/>
 
 <div align="center" style="margin: 20px 0;">
   <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
-    <img src="https://img.shields.io/badge/📬%20Subscribe%20to%20My%20Newsletter-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2" alt="Subscribe to Newsletter"/>
+    <img src="https://img.shields.io/badge/🔬%20Decoding%20the%20Future-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=667eea&color=764ba2" alt="Decoding the Future Newsletter"/>
   </a>
+  <br>
+  <em style="color: #666; font-size: 0.9em;">Exploring landmark AI research papers & LLM innovations</em>
 </div>
 
 <details open>

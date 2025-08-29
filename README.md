@@ -2513,13 +2513,25 @@ alt="Anthropic Logo"/>
 
 ![📚 Articles](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%9A+Articles&height=200&template=text-box-popup)
 
+<details open>
+  <summary><h3>📬 Newsletter Subscription</h3></summary>
+
 <div align="center" style="margin: 20px 0;">
   <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
     <img src="https://img.shields.io/badge/🔬%20Decoding%20the%20Future-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=667eea&color=764ba2" alt="Decoding the Future Newsletter"/>
   </a>
   <br>
-  <em style="color: #666; font-size: 0.9em;">Exploring landmark AI research papers & LLM innovations</em>
+  <em style="color: #666; font-size: 0.9em;">📧 Stay updated with cutting-edge AI research papers & LLM innovations</em>
+  <br><br>
+  <p align="center">
+    🚀 <strong>Join 500+ tech enthusiasts</strong> exploring the future of AI<br>
+    📖 Weekly deep-dives into breakthrough research<br>
+    🔍 Simplified explanations of complex AI concepts<br>
+    💡 Practical insights for developers and researchers
+  </p>
 </div>
+
+</details>
 
 <details open>
   <summary><h3>📌 Latest Articles</h3></summary>

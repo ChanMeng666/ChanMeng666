@@ -2524,10 +2524,7 @@ alt="Anthropic Logo"/>
   <em style="color: #666; font-size: 0.9em;">📧 Stay updated with cutting-edge AI research papers & LLM innovations</em>
   <br><br>
   <p align="center">
-    🚀 <strong>Join 500+ tech enthusiasts</strong> exploring the future of AI<br>
-    📖 Weekly deep-dives into breakthrough research<br>
-    🔍 Simplified explanations of complex AI concepts<br>
-    💡 Practical insights for developers and researchers
+    🚀 <strong>Join 800+ tech enthusiasts</strong> exploring the future of AI
   </p>
 </div>
 

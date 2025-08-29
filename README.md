@@ -2513,6 +2513,12 @@ alt="Anthropic Logo"/>
 
 ![📚 Articles](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%9A+Articles&height=200&template=text-box-popup)
 
+<div align="center" style="margin: 20px 0;">
+  <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
+    <img src="https://img.shields.io/badge/📬%20Subscribe%20to%20My%20Newsletter-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2" alt="Subscribe to Newsletter"/>
+  </a>
+</div>
+
 <details open>
   <summary><h3>📌 Latest Articles</h3></summary>
 

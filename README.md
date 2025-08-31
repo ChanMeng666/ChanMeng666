@@ -2522,7 +2522,7 @@ alt="Anthropic Logo"/>
 
 <div align="center" style="margin: 20px 0;">
   <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
-    <img src="https://gradient-svg-generator.vercel.app/api/svg?text=🔬%20Decoding%20the%20Future&template=hologram-matrix&height=120" alt="Decoding the Future Newsletter"/>
+    <img src="https://gradient-svg-generator.vercel.app/api/svg?text=🔬%20Decoding%20the%20Future&template=hologram-matrix&height=150" alt="Decoding the Future Newsletter"/>
   </a>
   <br>
   <em style="color: #666; font-size: 0.9em;">📧 Stay updated with cutting-edge AI research papers & LLM innovations</em>

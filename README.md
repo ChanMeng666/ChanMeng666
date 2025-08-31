@@ -2516,25 +2516,25 @@ alt="Anthropic Logo"/>
 <details open>
   <summary><h3>📬 Newsletter Subscription</h3></summary>
 
-<table width="100%">
-<tr>
-<td align="center" valign="middle">
-
-<div align="center" style="margin: 20px 0;">
-  <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
-    <img src="https://gradient-svg-generator.vercel.app/api/svg?text=🔬%20Decoding%20the%20Future&template=hologram-matrix&height=150" alt="Decoding the Future Newsletter"/>
-  </a>
-  <br>
-  <em style="color: #666; font-size: 0.9em;">📧 Stay updated with cutting-edge AI research papers & LLM innovations</em>
-  <br><br>
-  <p align="center">
-    🚀 <strong>Join 800+ tech enthusiasts</strong> exploring the future of AI
-  </p>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="80%">
+        <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=🔬%20Decoding%20the%20Future&template=hologram-matrix&height=150" alt="Decoding the Future Newsletter"/>
+        </a>
+      </td>
+      <td width="20%">
+        <p>📧 Stay updated with cutting-edge AI research papers & LLM innovations. Join our community of tech enthusiasts exploring the future of artificial intelligence!</p>
+        <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
+          <img src="https://img.shields.io/badge/Subscribe%20Newsletter-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Subscribe to Newsletter"/>
+        </a>
+        <br><br>
+        <p>🚀 <strong>Join 800+ tech enthusiasts</strong> exploring the future of AI</p>
+      </td>
+    </tr>
+  </table>
 </div>
-
-</td>
-</tr>
-</table>
 
 </details>
 

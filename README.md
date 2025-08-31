@@ -2519,12 +2519,12 @@ alt="Anthropic Logo"/>
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="80%">
+      <td align="center" width="30%">
         <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=🔬%20Decoding%20the%20Future&template=hologram-matrix&height=150" alt="Decoding the Future Newsletter"/>
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=🔬%20Decoding%20the%20Future&template=hologram-matrix&height=200" alt="Decoding the Future Newsletter"/>
         </a>
       </td>
-      <td width="20%">
+      <td width="70%">
         <p>📧 Stay updated with cutting-edge AI research papers & LLM innovations. Join our community of tech enthusiasts exploring the future of artificial intelligence!</p>
         <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
           <img src="https://img.shields.io/badge/Subscribe%20Newsletter-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Subscribe to Newsletter"/>

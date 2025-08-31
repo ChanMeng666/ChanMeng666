@@ -2525,7 +2525,7 @@ alt="Anthropic Logo"/>
         </a>
       </td>
       <td width="30%">
-        <p>📧 Stay updated with cutting-edge AI research papers & LLM innovations. Join our community of tech enthusiasts exploring the future of artificial intelligence!</p>
+        <p>📧 Stay updated with cutting-edge AI research papers & LLM innovations</p>
         <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
           <img src="https://img.shields.io/badge/Subscribe%20Newsletter-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Subscribe to Newsletter"/>
         </a>

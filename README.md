@@ -1717,6 +1717,21 @@ while (isAwake) {
   </tr>
 </table>
 
+<br />
+
+<div align="right">
+  <a href="#readme-experience">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Experience-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
+
+</details>
+
+<a id="readme-photo-gallery"></a>
+
+<details>
+<summary><h1>📸 Photo Gallery</h1></summary>
+
 <table>
   <tr>
     <td width="100%">
@@ -1764,8 +1779,8 @@ while (isAwake) {
 <br />
 
 <div align="right">
-  <a href="#readme-experience">
-    <img src="https://img.shields.io/badge/⬆️Back%20to%20Experience-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  <a href="#readme-photo-gallery">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Photo%20Gallery-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
   </a>
 </div>
 

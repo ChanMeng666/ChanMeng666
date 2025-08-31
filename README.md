@@ -2516,6 +2516,10 @@ alt="Anthropic Logo"/>
 <details open>
   <summary><h3>📬 Newsletter Subscription</h3></summary>
 
+<table>
+<tr>
+<td>
+
 <div align="center" style="margin: 20px 0;">
   <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
     <img src="https://img.shields.io/badge/🔬%20Decoding%20the%20Future-FF6600?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=FF8800&color=FF4400" alt="Decoding the Future Newsletter"/>
@@ -2527,6 +2531,10 @@ alt="Anthropic Logo"/>
     🚀 <strong>Join 800+ tech enthusiasts</strong> exploring the future of AI
   </p>
 </div>
+
+</td>
+</tr>
+</table>
 
 </details>
 

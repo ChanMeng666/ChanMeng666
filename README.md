@@ -1735,7 +1735,6 @@ while (isAwake) {
 <table>
   <tr>
     <td width="100%">
-      <h3 align="center">Photo Gallery</h3>
       <div align="center">
         <table>
           <tr>

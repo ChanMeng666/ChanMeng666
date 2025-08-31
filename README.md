@@ -1724,24 +1724,34 @@ while (isAwake) {
       <div align="center">
         <table>
           <tr>
-            <td width="25%">
+            <td width="16.66%">
               <div align="center">
-                <img src="/public/chan_by_the_tree.jpg" width="80%" alt="Chan by the tree"/>
+                <img src="/public/photo-gallery/gallery-1.png" width="80%" alt="Gallery 1"/>
               </div>
             </td>
-            <td width="25%">
+            <td width="16.66%">
               <div align="center">
-                <img src="/public/chan_by_the_tree.jpg" width="80%" alt="Chan by the sea"/>
+                <img src="/public/photo-gallery/gallery-2.png" width="80%" alt="Gallery 2"/>
               </div>
             </td>
-            <td width="25%">
+            <td width="16.66%">
               <div align="center">
-                <img src="/public/chan_by_the_tree.jpg" width="80%" alt="Chan by the sea"/>
+                <img src="/public/photo-gallery/gallery-3.png" width="80%" alt="Gallery 3"/>
               </div>
             </td>
-            <td width="25%">
+            <td width="16.66%">
               <div align="center">
-                <img src="/public/chan_by_the_tree.jpg" width="80%" alt="Chan by the sea"/>
+                <img src="/public/photo-gallery/gallery-4.png" width="80%" alt="Gallery 4"/>
+              </div>
+            </td>
+            <td width="16.66%">
+              <div align="center">
+                <img src="/public/photo-gallery/gallery-5.png" width="80%" alt="Gallery 5"/>
+              </div>
+            </td>
+            <td width="16.66%">
+              <div align="center">
+                <img src="/public/photo-gallery/gallery-6.png" width="80%" alt="Gallery 6"/>
               </div>
             </td>
           </tr>

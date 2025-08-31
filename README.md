@@ -2516,9 +2516,9 @@ alt="Anthropic Logo"/>
 <details open>
   <summary><h3>📬 Newsletter Subscription</h3></summary>
 
-<table>
+<table width="100%">
 <tr>
-<td>
+<td align="center" valign="middle">
 
 <div align="center" style="margin: 20px 0;">
   <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">

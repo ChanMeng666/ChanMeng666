@@ -1717,6 +1717,30 @@ while (isAwake) {
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td width="100%">
+      <h3 align="center">Photo Gallery</h3>
+      <div align="center">
+        <table>
+          <tr>
+            <td width="50%">
+              <div align="center">
+                <img src="/public/chan_by_the_tree.jpg" width="80%" alt="Chan by the tree"/>
+              </div>
+            </td>
+            <td width="50%">
+              <div align="center">
+                <img src="/public/chan_by_the_sea.jpg" width="80%" alt="Chan by the sea"/>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>
+
 <br />
 
 <div align="right">

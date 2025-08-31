@@ -2526,11 +2526,12 @@ alt="Anthropic Logo"/>
       </td>
       <td width="30%">
         <p>📧 Stay updated with cutting-edge AI research papers & LLM innovations</p>
+        <p>🚀 <strong>Join 800+ tech enthusiasts</strong> exploring the future of AI</p>
+        <br>
         <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
           <img src="https://img.shields.io/badge/Subscribe%20Newsletter-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Subscribe to Newsletter"/>
         </a>
-        <br><br>
-        <p>🚀 <strong>Join 800+ tech enthusiasts</strong> exploring the future of AI</p>
+        <br>
       </td>
     </tr>
   </table>

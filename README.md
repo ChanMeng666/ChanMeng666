@@ -1741,32 +1741,32 @@ while (isAwake) {
           <tr>
             <td width="16.66%">
               <div align="center">
-                <img src="/public/photo-gallery/gallery-1.png" width="80%" alt="Gallery 1"/>
+                <img src="/public/photo-gallery/gallery-1.png" width="50%" alt="Gallery 1"/>
               </div>
             </td>
             <td width="16.66%">
               <div align="center">
-                <img src="/public/photo-gallery/gallery-2.png" width="80%" alt="Gallery 2"/>
+                <img src="/public/photo-gallery/gallery-2.png" width="50%" alt="Gallery 2"/>
               </div>
             </td>
             <td width="16.66%">
               <div align="center">
-                <img src="/public/photo-gallery/gallery-3.png" width="80%" alt="Gallery 3"/>
+                <img src="/public/photo-gallery/gallery-3.png" width="50%" alt="Gallery 3"/>
               </div>
             </td>
             <td width="16.66%">
               <div align="center">
-                <img src="/public/photo-gallery/gallery-4.png" width="80%" alt="Gallery 4"/>
+                <img src="/public/photo-gallery/gallery-4.png" width="50%" alt="Gallery 4"/>
               </div>
             </td>
             <td width="16.66%">
               <div align="center">
-                <img src="/public/photo-gallery/gallery-5.png" width="80%" alt="Gallery 5"/>
+                <img src="/public/photo-gallery/gallery-5.png" width="50%" alt="Gallery 5"/>
               </div>
             </td>
             <td width="16.66%">
               <div align="center">
-                <img src="/public/photo-gallery/gallery-6.png" width="80%" alt="Gallery 6"/>
+                <img src="/public/photo-gallery/gallery-6.png" width="50%" alt="Gallery 6"/>
               </div>
             </td>
           </tr>

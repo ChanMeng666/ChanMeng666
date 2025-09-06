@@ -24,6 +24,7 @@
   [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
   [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://chanmeng666.medium.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
+  [![Discord](https://img.shields.io/badge/AI%20Programming%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/T3NJG5n98a)
   [![Book a Meeting](https://img.shields.io/badge/Book%20a%20Meeting-4CAF50?style=for-the-badge&logo=google-calendar&logoColor=white)](https://cal.com/chan-meng/30min)
 
   <img src="/public/chan_snorkelling.gif" width="100%" alt="Chan Meng Snorkelling">
@@ -134,6 +135,9 @@ while (isAwake) {
           </a>
           <a href="https://programming.chanmeng.org/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
+          </a>
+          <a href="https://discord.gg/T3NJG5n98a" target="_blank">
+            <img src="https://img.shields.io/badge/Join_Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -1101,6 +1105,9 @@ while (isAwake) {
           </a>
           <a href="https://programming.chanmeng.org/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
+          </a>
+          <a href="https://discord.gg/T3NJG5n98a" target="_blank">
+            <img src="https://img.shields.io/badge/Join_Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -3302,6 +3309,7 @@ alt="Anthropic Logo"/>
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
   [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://chanmeng666.medium.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
+  [![Discord](https://img.shields.io/badge/AI%20Programming%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/T3NJG5n98a)
   [![Book a Meeting](https://img.shields.io/badge/Book%20a%20Meeting-4CAF50?style=for-the-badge&logo=google-calendar&logoColor=white)](https://cal.com/chan-meng/30min)
 
 <br/>

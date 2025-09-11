@@ -1241,9 +1241,7 @@ Add stunning animated gradients to your GitHub profile!
 [![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try+It+Now%21&height=100&template=wisdom-depth)](https://gradient-svg-generator.vercel.app/)
 
 ⭐ Star this project if you find it useful!
-
-  </td>
-
+    </td>
   </tr>
   <tr>
     <td>

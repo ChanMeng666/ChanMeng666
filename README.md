@@ -1227,31 +1227,39 @@ while (isAwake) {
   </tr>
 </table>
 
-<!-- The Promotional Section -- Gradient SVG Generator -->
+<!-- The Promotional Sections -->
 
-<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <h4>🌈 Gradient SVG Generator</h4>
+      
+      [![Create Beautiful Gradients](https://gradient-svg-generator.vercel.app/api/svg?text=Create+Beautiful+Gradients&height=100&gradientType=reflection&duration=10s&color0=ff9a9e&color1=fecfef&color2=fecfef&color3=ff9a9e)](https://github.com/ChanMeng666/gradient-svg-generator)
 
-[![Create Beautiful Gradients](https://gradient-svg-generator.vercel.app/api/svg?text=Create+Beautiful+Gradients&height=100&gradientType=reflection&duration=10s&color0=ff9a9e&color1=fecfef&color2=fecfef&color3=ff9a9e)](https://github.com/ChanMeng666/gradient-svg-generator)
+      Add stunning animated gradients to your GitHub profile!
 
-🌈 Gradient SVG Generator - Add stunning animated gradients to your GitHub profile!
+      [![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try+It+Now%21&height=100&template=wisdom-depth)](https://gradient-svg-generator.vercel.app/)
 
-[![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try+It+Now%21&height=100&template=wisdom-depth)](https://gradient-svg-generator.vercel.app/)
+      ⭐ Star this project if you find it useful!
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <hr style="border: 1px solid #ddd; margin: 20px 0;">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <h4>📊 GitHub Visitor Counter</h4>
+      
+      <div align="right">
+        <em><small>✨ Designed with <a href="https://github-visitor-counter-zeta.vercel.app/">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em>
+      </div>
 
-⭐ Star this project if you find it useful!
-
-</div>
-
-<!-- The Promotional Section -- GitHub Visitor Counter -->
-
-<div align="center">
-
-<div align="right">
-  <em><small>✨ Designed with <a href="https://github-visitor-counter-zeta.vercel.app/">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em>
-</div>
-
-![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
-
-</div>
+      ![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
+    </td>
+  </tr>
+</table>
 
 </details>
 

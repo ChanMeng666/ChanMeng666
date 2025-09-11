@@ -1181,6 +1181,29 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
+      <h3 align="center">GitHub Visitor Counter</h3>
+      <div align="center">  
+        <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank"><img src="/public/brands/github-visitor-counter-logo.svg" width="50%" alt="GitHub Visitor Counter"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/github-visitor-counter" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Display Visitor Country Flags<br>
+          • Real-time Configuration Tool<br>
+          • Multiple Themes & Customization
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%">
       <h3 align="center">Easy Resume</h3>
       <div align="center">  
         <a href="https://easy-resume-theta.vercel.app/" target="_blank"><img src="/public/brands/easy-resume-1.svg" width="50%" alt="Easy Resume Logo"/></a>
@@ -1215,6 +1238,18 @@ while (isAwake) {
 [![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try+It+Now%21&height=100&template=wisdom-depth)](https://gradient-svg-generator.vercel.app/)
 
 ⭐ Star this project if you find it useful!
+
+</div>
+
+<!-- The Promotional Section -- GitHub Visitor Counter -->
+
+<div align="center">
+
+<div align="right">
+  <em><small>✨ Designed with <a href="https://github-visitor-counter-zeta.vercel.app/">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em>
+</div>
+
+![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
 
 </div>
 
@@ -1272,23 +1307,26 @@ while (isAwake) {
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">GitHub Visitor Counter</h3>
+      <h3 align="center">Tencent Meeting Video Downloader</h3>
       <div align="center">  
-        <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank"><img src="/public/brands/github-visitor-counter-logo.svg" width="50%" alt="GitHub Visitor Counter"/></a>
+        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader-1.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/github-visitor-counter" target="_blank">
+          <a href="https://github.com/ChanMeng666/tencent-meeting-video-downloader" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=googlechrome"/>
+          </a>
+          <a href="https://github.com/user-attachments/assets/2834ab2e-fb79-4df5-b662-b236d57ba89c" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
           </a>
         </p>
         <p align="left">
-          • Display Visitor Country Flags<br>
-          • Real-time Configuration Tool<br>
-          • Multiple Themes & Customization
+          • Chrome Extension<br>
+          • One-Click Download<br>
+          • Save Recordings Locally
         </p>
       </div>
     </td>
@@ -1337,30 +1375,6 @@ while (isAwake) {
   </tr>
   <tr>
     <td width="20%">
-      <h3 align="center">Tencent Meeting Video Downloader</h3>
-      <div align="center">  
-        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader-1.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/tencent-meeting-video-downloader" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=googlechrome"/>
-          </a>
-          <a href="https://github.com/user-attachments/assets/2834ab2e-fb79-4df5-b662-b236d57ba89c" target="_blank">
-            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
-          </a>
-        </p>
-        <p align="left">
-          • Chrome Extension<br>
-          • One-Click Download<br>
-          • Save Recordings Locally
-        </p>
-      </div>
-    </td>
-    <td width="20%">
       <h3 align="center">Lottie Edit</h3>
       <div align="center">  
         <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_01_04Z.gif" width="100%" alt="Lottie Edit"/></a>
@@ -1383,18 +1397,6 @@ while (isAwake) {
     </td>
   </tr>
 </table>
-
-<!-- The Promotional Section -- GitHub Visitor Counter -->
-
-<div align="center">
-
-<div align="right">
-  <em><small>✨ Designed with <a href="https://github-visitor-counter-zeta.vercel.app/">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em>
-</div>
-
-![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
-
-</div>
 
 </details>
 

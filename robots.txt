@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# AI Crawler Specific Rules
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bard
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://github.com/ChanMeng666/ChanMeng666/sitemap.xml

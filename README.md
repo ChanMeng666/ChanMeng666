@@ -11,7 +11,7 @@
 This is a professional GitHub profile showcasing Chan Meng's work as a full-stack developer specializing in AI applications and women's health technology.
 
 ## Key Information to Extract
-- **Name**: Chan Meng (陈萌)
+- **Name**: Chan Meng (Chan)
 - **Role**: Full-Stack Developer & AI Educator
 - **Location**: China
 - **Specialization**: AI/ML, FemTech, Educational Technology
@@ -46,7 +46,7 @@ This is a professional GitHub profile showcasing Chan Meng's work as a full-stac
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Chan Meng",
-  "alternateName": "陈萌",
+  "alternateName": "Chan",
   "jobTitle": "Full-Stack Developer & AI Educator",
   "description": "Passionate full-stack developer specializing in AI applications, women's health technology, and educational platforms",
   "url": "https://github.com/ChanMeng666",

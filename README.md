@@ -1254,11 +1254,11 @@ Add stunning animated gradients to your GitHub profile!
     <td align="center">
       <h4>📊 GitHub Visitor Counter</h4>
       
-      <div align="right">
-        <em><small>✨ Designed with <a href="https://github-visitor-counter-zeta.vercel.app/">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em>
-      </div>
+  <div align="right">
+          <em><small>✨ Designed with <a href="https://github-visitor-counter-zeta.vercel.app/">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em>
+  </div>
 
-      ![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
+  ![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
     </td>
   </tr>
 </table>

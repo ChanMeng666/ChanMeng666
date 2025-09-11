@@ -1233,15 +1233,17 @@ while (isAwake) {
   <tr>
     <td align="center">
       <h4>🌈 Gradient SVG Generator</h4>
-      
-      [![Create Beautiful Gradients](https://gradient-svg-generator.vercel.app/api/svg?text=Create+Beautiful+Gradients&height=100&gradientType=reflection&duration=10s&color0=ff9a9e&color1=fecfef&color2=fecfef&color3=ff9a9e)](https://github.com/ChanMeng666/gradient-svg-generator)
 
-      Add stunning animated gradients to your GitHub profile!
+[![Create Beautiful Gradients](https://gradient-svg-generator.vercel.app/api/svg?text=Create+Beautiful+Gradients&height=100&gradientType=reflection&duration=10s&color0=ff9a9e&color1=fecfef&color2=fecfef&color3=ff9a9e)](https://github.com/ChanMeng666/gradient-svg-generator)
 
-      [![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try+It+Now%21&height=100&template=wisdom-depth)](https://gradient-svg-generator.vercel.app/)
+Add stunning animated gradients to your GitHub profile!
 
-      ⭐ Star this project if you find it useful!
-    </td>
+[![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try+It+Now%21&height=100&template=wisdom-depth)](https://gradient-svg-generator.vercel.app/)
+
+⭐ Star this project if you find it useful!
+
+  </td>
+
   </tr>
   <tr>
     <td>

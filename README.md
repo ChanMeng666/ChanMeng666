@@ -934,33 +934,12 @@ while (isAwake) {
 </table>
 </details>
 
-<!-- AI & Machine Learning Section -->
+<!-- AI Applications & Agents Section -->
 
 <details>
-<summary><h3>🧠 AI & Machine Learning</h3></summary>
+<summary><h3>🤖 AI Applications & Agents</h3></summary>
 <table>
   <tr>
-    <td width="20%">
-      <h3 align="center">Emoji Story Generator</h3>
-      <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank"><img src="/public/brands/emoji-story-generator-1.svg" width="50%" alt="Emoji Story Generator"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/emoji-story-generator" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
-          </a>
-        </p>
-        <p align="left">
-          • AI-Powered Story Generation from Emojis<br>
-          • Interactive Category-Based Emoji Selection<br>
-          • Community Story Sharing & Voting System
-        </p>
-      </div>
-    </td>
     <td width="20%">
       <h3 align="center">Sanicle.AI</h3>
       <div align="center">  
@@ -1060,7 +1039,151 @@ while (isAwake) {
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">CustomerInsight</h3>
+      <div align="center">  
+        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight-1.svg" width="50%" alt="Streamlit Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/CustomerInsight" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=streamlit"/>
+          </a>
+        </p>
+        <p align="left">
+          • Customer Review Analytics<br>
+          • Python & Streamlit<br>
+          • Chinese-First NLP
+        </p>
+      </div>
+    </td>
   </tr>
+</table>
+</details>
+
+<!-- Creative AI & Language Tools Section -->
+
+<details>
+<summary><h3>🎨 Creative AI & Language Tools</h3></summary>
+<table>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Emoji Story Generator</h3>
+      <div align="center">  
+        <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank"><img src="/public/brands/emoji-story-generator-1.svg" width="50%" alt="Emoji Story Generator"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/emoji-story-generator" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Powered Story Generation from Emojis<br>
+          • Interactive Category-Based Emoji Selection<br>
+          • Community Story Sharing & Voting System
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Interactive Story Generator</h3>
+      <div align="center">  
+        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo-1.svg" width="50%" alt="Interactive Story Generator"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/interactive-story-generator" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Powered Interactive Storytelling<br>
+          • Multiple Themes & Genre Support<br>
+          • Advanced Story Customization
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">AI Image Generator</h3>
+      <div align="center">  
+        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator-1.svg" width="50%" alt="AI Image Generator Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/image-generator" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://image-generator-sable-tau.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI Image Generation App<br>
+          • Next.js & Together AI<br>
+          • Mondrian-Inspired Design
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">English Redefine</h3>
+      <div align="center">  
+        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine-1.svg" width="50%" alt="English Redefine"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/english-redefine" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://english-redefine.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Modern Dictionary Platform<br>
+          • Powered by Gemini AI<br>
+          • Contemporary Word Definitions
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Chinese Redefine</h3>
+      <div align="center">  
+        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine-1.svg" width="50%" alt="Chinese Redefine Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/chinese-redefine" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chinese-redefine.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Modern Chinese Dictionary<br>
+          • Next.js & Gemini AI<br>
+          • Contemporary Word Analysis
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+</details>
+
+<!-- Machine Learning Research Section -->
+
+<details>
+<summary><h3>🔬 Machine Learning Research</h3></summary>
+<table>
   <tr>
     <td width="20%">
       <h3 align="center">Advanced Neural Network Applications</h3>
@@ -1164,113 +1287,6 @@ while (isAwake) {
           • Water Quality Analysis Toolkit<br>
           • Python-based Monitoring System<br>
           • Multi-Parameter Prediction
-        </p>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td width="20%">
-      <h3 align="center">Interactive Story Generator</h3>
-      <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo-1.svg" width="50%" alt="Interactive Story Generator"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/interactive-story-generator" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=huggingface"/>
-          </a>
-        </p>
-        <p align="left">
-          • AI-Powered Interactive Storytelling<br>
-          • Multiple Themes & Genre Support<br>
-          • Advanced Story Customization
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">CustomerInsight</h3>
-      <div align="center">  
-        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight-1.svg" width="50%" alt="Streamlit Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/CustomerInsight" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=streamlit"/>
-          </a>
-        </p>
-        <p align="left">
-          • Customer Review Analytics<br>
-          • Python & Streamlit<br>
-          • Chinese-First NLP
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">AI Image Generator</h3>
-      <div align="center">  
-        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator-1.svg" width="50%" alt="AI Image Generator Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/image-generator" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://image-generator-sable-tau.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-        </p>
-        <p align="left">
-          • AI Image Generation App<br>
-          • Next.js & Together AI<br>
-          • Mondrian-Inspired Design
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">English Redefine</h3>
-      <div align="center">  
-        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine-1.svg" width="50%" alt="English Redefine"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/english-redefine" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://english-redefine.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-        </p>
-        <p align="left">
-          • Modern Dictionary Platform<br>
-          • Powered by Gemini AI<br>
-          • Contemporary Word Definitions
-        </p>
-      </div>
-    </td>
-    <td width="20%">
-      <h3 align="center">Chinese Redefine</h3>
-      <div align="center">  
-        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine-1.svg" width="50%" alt="Chinese Redefine Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/chinese-redefine" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://chinese-redefine.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
-          </a>
-        </p>
-        <p align="left">
-          • Modern Chinese Dictionary<br>
-          • Next.js & Gemini AI<br>
-          • Contemporary Word Analysis
         </p>
       </div>
     </td>

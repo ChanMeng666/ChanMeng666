@@ -1480,6 +1480,8 @@ Transform your GitHub profile and resume into powerful career assets!
   </tr>
 </table>
 
+<br />
+
 <div align="right">
   <a href="#readme-personal-branding-tools">
     <img src="https://img.shields.io/badge/⬆️Back%20to%20Personal%20Branding%20Tools-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Personal Branding Tools"/>

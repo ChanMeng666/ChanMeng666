@@ -488,7 +488,7 @@ while (isAwake) {
 
 [![Explore Gradient SVG Generator](https://gradient-svg-generator.vercel.app/api/svg?text=Try%20It%20Now!&color=000000&height=60&gradientType=radial&duration=6s&color0=ffffff&template=pride-rainbow)](https://gradient-svg-generator.vercel.app/)
 
-⭐ Star this project if you find it useful!
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="20" height="20" /> Star this project if you find it useful!
 
 </div>
 
@@ -1445,7 +1445,7 @@ while (isAwake) {
 <table>
   <tr>
     <td align="center">
-      <h4>🚀 Boost Your Professional Image</h4>
+      <h4><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" /> Boost Your Professional Image</h4>
 
 [![Create Beautiful Gradients](https://gradient-svg-generator.vercel.app/api/svg?text=Create+Beautiful+Gradients&height=100&gradientType=reflection&duration=10s&color0=ff9a9e&color1=fecfef&color2=fecfef&color3=ff9a9e)](https://github.com/ChanMeng666/gradient-svg-generator)
 
@@ -1459,7 +1459,7 @@ Transform your GitHub profile and resume into powerful career assets!
 - ✅ **Professional Results** - Industry-standard quality
 - ✅ **Community Support** - Active community backing
 
-⭐ Star these projects if they help boost your career!
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="20" height="20" /> Star these projects if they help boost your career!
     </td>
   </tr>
   <tr>
@@ -1974,7 +1974,7 @@ Transform your GitHub profile and resume into powerful career assets!
 <a id="readme-photo-gallery"></a>
 
 <details>
-<summary><h1>📸 Photo Gallery</h1></summary>
+<summary><h1><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Camera%20with%20Flash.png" alt="Camera with Flash" width="30" height="30" /> Photo Gallery</h1></summary>
 
 <table>
   <tr>
@@ -2505,7 +2505,7 @@ Transform your GitHub profile and resume into powerful career assets!
 
 <details>
 <summary>
-    <h3>🐱‍👤 HackerRank Professional Certifications</h3>
+    <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="Waving Hand" width="25" height="25" /> HackerRank Professional Certifications</h3>
     <img src="/public/certificates/brands/hackerrank_logo.jpg" 
      style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
      alt="HackerRank Logo"/>
@@ -2582,7 +2582,7 @@ Transform your GitHub profile and resume into powerful career assets!
 
 <details>
 <summary>
-    <h3>🐱‍👤 Microsoft Career Certifications</h3>
+    <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="Waving Hand" width="25" height="25" /> Microsoft Career Certifications</h3>
     <img src="/public/certificates/brands/microsoft_logo.jpg" 
  style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
  alt="Microsoft Logo"/>
@@ -2637,7 +2637,7 @@ Transform your GitHub profile and resume into powerful career assets!
 
 <details>
 <summary>
-    <h3>🐱‍👤 Other Professional Certifications</h3>
+    <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="Waving Hand" width="25" height="25" /> Other Professional Certifications</h3>
     <img src="/public/certificates/brands/github_logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="GitHub Logo"/>
@@ -2894,8 +2894,8 @@ alt="Anthropic Logo"/>
         </a>
       </td>
       <td width="30%">
-        <p>📧 Stay updated with cutting-edge AI research papers & LLM innovations</p>
-        <p>🚀 <strong>Join 800+ tech enthusiasts</strong> exploring the future of AI</p>
+        <p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Envelope.png" alt="Envelope" width="20" height="20" /> Stay updated with cutting-edge AI research papers & LLM innovations</p>
+        <p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="20" height="20" /> <strong>Join 800+ tech enthusiasts</strong> exploring the future of AI</p>
         <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896" target="_blank">
           <img src="https://img.shields.io/badge/Subscribe%20Newsletter-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Subscribe to Newsletter"/>
         </a>
@@ -3522,7 +3522,7 @@ alt="Anthropic Logo"/>
   </tr>
 </table>
 
-<h3 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="50"/> GitHub Trophies<sup><sup>⭐</sup></sup></h3>
+<h3 align="center"><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="50"/> GitHub Trophies<sup><sup><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="15" height="15" /></sup></sup></h3>
 
 <div align="center">
   <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies" />

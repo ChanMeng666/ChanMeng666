@@ -157,7 +157,7 @@ while (isAwake) {
   <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
 </div>
 
-![🌟 Featured Projects](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%9F+Featured+Projects&height=200&gradientType=pixelArt&duration=10s&color0=FF0080&color1=00FF80&color2=8080FF&color3=FFFF00)
+![<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="30" height="30" /> Featured Projects](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8C%9F+Featured+Projects&height=200&gradientType=pixelArt&duration=10s&color0=FF0080&color1=00FF80&color2=8080FF&color3=FFFF00)
 
 <!-- Primary Projects (Always Visible) -->
 
@@ -1067,7 +1067,7 @@ while (isAwake) {
 <!-- Creative AI & Language Tools Section -->
 
 <details>
-<summary><h3>🎨 Creative AI & Language Tools</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Artist%20Palette.png" alt="Artist Palette" width="25" height="25" /> Creative AI & Language Tools</h3></summary>
 <table>
   <tr>
     <td width="20%">
@@ -1182,7 +1182,7 @@ while (isAwake) {
 <!-- Machine Learning Research Section -->
 
 <details>
-<summary><h3>🔬 Machine Learning Research</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Microscope.png" alt="Microscope" width="25" height="25" /> Machine Learning Research</h3></summary>
 <table>
   <tr>
     <td width="20%">
@@ -1299,7 +1299,7 @@ while (isAwake) {
 <a id="readme-personal-branding-tools"></a>
 
 <details>
-<summary><h3>🎯 Personal Branding Tools</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Direct%20Hit.png" alt="Direct Hit" width="25" height="25" /> Personal Branding Tools</h3></summary>
 
 > **Empower Your Professional Presence** - Transform your GitHub profile and resume into powerful career assets
 > 
@@ -1469,7 +1469,7 @@ Transform your GitHub profile and resume into powerful career assets!
   </tr>
   <tr>
     <td align="center">
-      <h4>📊 GitHub Visitor Counter</h4>
+      <h4><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Bar Chart" width="25" height="25" /> GitHub Visitor Counter</h4>
       
   <div align="right">
           <em><small>✨ Powered by <a href="https://github-visitor-counter-zeta.vercel.app/">GitHub Visitor Counter</a> - Showcase your global impact and professional reach</small></em>
@@ -1493,7 +1493,7 @@ Transform your GitHub profile and resume into powerful career assets!
 <!-- MCP Servers & Extensions Section -->
 
 <details>
-<summary><h3>🛠️ MCP Servers & Extensions</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="Hammer and Wrench" width="25" height="25" /> MCP Servers & Extensions</h3></summary>
 <table>
   <tr>
     <td width="20%">
@@ -1638,7 +1638,7 @@ Transform your GitHub profile and resume into powerful career assets!
 <!-- Mobile & Games Section -->
 
 <details>
-<summary><h3>📱 Mobile & Games</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Mobile%20Phone.png" alt="Mobile Phone" width="25" height="25" /> Mobile & Games</h3></summary>
 <table>
   <tr>
     <td width="20%">
@@ -1764,7 +1764,7 @@ Transform your GitHub profile and resume into powerful career assets!
   <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
 </div>
 
-![🎁 Support My Work](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8E%81+Support+My+Work&height=200&gradientType=circular&duration=15s&color0=ff6b6b&color1=feca57&color2=48dbfb&color3=0abde3&color4=ee5a24)
+![<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Wrapped%20Gift.png" alt="Wrapped Gift" width="30" height="30" /> Support My Work](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8E%81+Support+My+Work&height=200&gradientType=circular&duration=15s&color0=ff6b6b&color1=feca57&color2=48dbfb&color3=0abde3&color4=ee5a24)
 
 <div align="center">
   <table>
@@ -2744,7 +2744,7 @@ alt="Anthropic Logo"/>
   <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
 </div>
 
-![⚙️ Tech Stack](https://gradient-svg-generator.vercel.app/api/svg?text=%E2%9A%99%EF%B8%8F+Tech+Stack&height=200&gradientType=bioMorphing&duration=6s&color0=00ff80&color1=40ff40&color2=80ff80&color3=00ff00)
+![<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" alt="Gear" width="30" height="30" /> Tech Stack](https://gradient-svg-generator.vercel.app/api/svg?text=%E2%9A%99%EF%B8%8F+Tech+Stack&height=200&gradientType=bioMorphing&duration=6s&color0=00ff80&color1=40ff40&color2=80ff80&color3=00ff00)
 
 <details open>
   <summary><h3>💎 Core Full-Stack Expertise</h3></summary>
@@ -2760,7 +2760,7 @@ alt="Anthropic Logo"/>
 </details>
 
 <details>
-  <summary><h3>🎨 Frontend Ecosystem</h3></summary>
+  <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Artist%20Palette.png" alt="Artist Palette" width="25" height="25" /> Frontend Ecosystem</h3></summary>
 
 ![Angular](https://img.shields.io/badge/Angular-20232A?style=for-the-badge&logo=angular&logoColor=DD0031)
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -2775,7 +2775,7 @@ alt="Anthropic Logo"/>
 </details>
 
 <details>
-  <summary><h3>⚡ Backend & APIs</h3></summary>
+  <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Lightning.png" alt="Lightning" width="25" height="25" /> Backend & APIs</h3></summary>
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-20232A?style=for-the-badge&logo=fastapi&logoColor=009688)
 ![Flask](https://img.shields.io/badge/Flask-20232A?style=for-the-badge&logo=flask&logoColor=white)
@@ -2814,7 +2814,7 @@ alt="Anthropic Logo"/>
 </details>
 
 <details>
-  <summary><h3>📊 Data Visualization</h3></summary>
+  <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Bar Chart" width="25" height="25" /> Data Visualization</h3></summary>
 
 ![Chart.js](https://img.shields.io/badge/Chart.js-20232A?style=for-the-badge&logo=chart.js&logoColor=FF6384)
 ![D3.js](https://img.shields.io/badge/D3.js-20232A?style=for-the-badge&logo=d3.js&logoColor=F9A03C)
@@ -2825,7 +2825,7 @@ alt="Anthropic Logo"/>
 </details>
 
 <details>
-  <summary><h3>🔧 DevOps & System Administration</h3></summary>
+  <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="Hammer and Wrench" width="25" height="25" /> DevOps & System Administration</h3></summary>
 
 ![Docker](https://img.shields.io/badge/Docker-20232A?style=for-the-badge&logo=docker&logoColor=2496ED)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-20232A?style=for-the-badge&logo=ubuntu&logoColor=E95420)
@@ -2839,7 +2839,7 @@ alt="Anthropic Logo"/>
 </details>
 
 <details>
-  <summary><h3>☁️ Cloud & Infrastructure</h3></summary>
+  <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud.png" alt="Cloud" width="25" height="25" /> Cloud & Infrastructure</h3></summary>
 
 ![AWS](https://img.shields.io/badge/AWS-20232A?style=for-the-badge&logo=amazon-aws&logoColor=FF9900)
 ![Google Cloud](https://img.shields.io/badge/Google_Cloud-20232A?style=for-the-badge&logo=google-cloud&logoColor=4285F4)
@@ -2850,7 +2850,7 @@ alt="Anthropic Logo"/>
 </details>
 
 <details>
-  <summary><h3>🎯 Professional Skills</h3></summary>
+  <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Direct%20Hit.png" alt="Direct Hit" width="25" height="25" /> Professional Skills</h3></summary>
 
 ![Agile](https://img.shields.io/badge/Agile_Development-20232A?style=for-the-badge&logo=atlassian&logoColor=0052CC)
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-20232A?style=for-the-badge&logo=shield&logoColor=white)
@@ -2880,7 +2880,7 @@ alt="Anthropic Logo"/>
   <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
 </div>
 
-![📚 Articles](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%9A+Articles&height=200&template=text-box-popup)
+![<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" alt="Books" width="30" height="30" /> Articles](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%9A+Articles&height=200&template=text-box-popup)
 
 <details open>
   <summary><h3>📬 Newsletter Subscription</h3></summary>
@@ -2907,7 +2907,7 @@ alt="Anthropic Logo"/>
 </details>
 
 <details open>
-  <summary><h3>📌 Latest Articles</h3></summary>
+  <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="25" height="25" /> Latest Articles</h3></summary>
 
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" alt="Recent Article 0">
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1" alt="Recent Article 1">
@@ -3327,7 +3327,7 @@ alt="Anthropic Logo"/>
   <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
 </div>
 
-![🎧 Podcasts](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8E%A7+Podcasts&height=200&template=rainbow-layer)
+![<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Headphones.png" alt="Headphones" width="30" height="30" /> Podcasts](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8E%A7+Podcasts&height=200&template=rainbow-layer)
 
 <div align="center">
   <img src="/public/github-cover-image.svg" width="100%" alt="github cover image">
@@ -3458,11 +3458,11 @@ alt="Anthropic Logo"/>
           <img src="https://img.shields.io/badge/JOIN_TECHROSIE-f6e702?style=for-the-badge&logo=github&logoColor=black" alt="Join TechRosie"/>
         </a>
         <details style="margin-top: 10px;">
-<summary><strong>💡 How to Join (3 simple steps)</strong></summary>
+<summary><strong><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" alt="Light Bulb" width="20" height="20" /> How to Join (3 simple steps)</strong></summary>
         
 1. **📝 Apply** → Click button above  
 2. **📧 Wait** → Get email invitation  
-3. **🎉 Join** → Accept & [go public](https://github.com/orgs/TechRosie/people)
+3. **<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png" alt="Party Popper" width="20" height="20" /> Join** → Accept & [go public](https://github.com/orgs/TechRosie/people)
         </details>
       </td>
     </tr>
@@ -3585,7 +3585,7 @@ alt="Anthropic Logo"/>
 
 <br />
 
-<h2 align="center">💡 Random Dev Quote</h2>
+<h2 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" alt="Light Bulb" width="30" height="30" /> Random Dev Quote</h2>
 
 <div align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light" alt="Random Dev Quote"/>

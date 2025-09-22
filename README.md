@@ -1299,7 +1299,7 @@ while (isAwake) {
 <a id="readme-personal-branding-tools"></a>
 
 <details>
-<summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Direct%20Hit.png" alt="Direct Hit" width="25" height="25" /> Personal Branding Tools</h3></summary>
+  <summary><h3>🎯 Personal Branding Tools</h3></summary>
 
 > **Empower Your Professional Presence** - Transform your GitHub profile and resume into powerful career assets
 > 
@@ -2775,7 +2775,7 @@ alt="Anthropic Logo"/>
 </details>
 
 <details>
-  <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Lightning.png" alt="Lightning" width="25" height="25" /> Backend & APIs</h3></summary>
+  <summary><h3>⚡ Backend & APIs</h3></summary>
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-20232A?style=for-the-badge&logo=fastapi&logoColor=009688)
 ![Flask](https://img.shields.io/badge/Flask-20232A?style=for-the-badge&logo=flask&logoColor=white)
@@ -2850,7 +2850,7 @@ alt="Anthropic Logo"/>
 </details>
 
 <details>
-  <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Direct%20Hit.png" alt="Direct Hit" width="25" height="25" /> Professional Skills</h3></summary>
+  <summary><h3>🎯 Professional Skills</h3></summary>
 
 ![Agile](https://img.shields.io/badge/Agile_Development-20232A?style=for-the-badge&logo=atlassian&logoColor=0052CC)
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-20232A?style=for-the-badge&logo=shield&logoColor=white)

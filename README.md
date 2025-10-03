@@ -1074,6 +1074,32 @@ npx chan-meng
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%" colspan="5">
+      <h3 align="center">Tam-AI-ti Web Application</h3>
+      <div align="center">  
+        <a href="https://tam-ai-ti.vercel.app/" target="_blank"><img src="/public/brands/tam-ai-ti-logo-with-brand.svg" width="50%" alt="Tam-AI-ti Web Application"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://tam-ai-ti.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+          <a href="https://youtu.be/NtT7_q6xhlk?si=NAtuFNxBfSqbK4WP" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Māori Wisdom + AI Financial Wellness Platform<br>
+          • 88 AI Actions with CopilotKit & GPT-4o<br>
+          • Te Whare Tapa Whā Holistic Wellbeing Model
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

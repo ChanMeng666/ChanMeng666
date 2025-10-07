@@ -1435,14 +1435,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">GitHub Visitor Counter</h3>
       <div align="center">  
-        <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank"><img src="/public/brands/github-visitor-counter-logo.svg" width="50%" alt="GitHub Visitor Counter"/></a>
+        <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank"><img src="/public/brands/github-visitor-counter-logo.svg" width="50%" alt="GitHub Visitor Counter"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/github-visitor-counter" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://github-visitor-counter-zeta.vercel.app" target="_blank">
+          <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
@@ -1511,10 +1511,10 @@ Transform your GitHub profile and resume into powerful career assets!
       <h4><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Bar Chart" width="25" height="25" /> GitHub Visitor Counter</h4>
       
   <div align="right">
-          <em><small>✨ Powered by <a href="https://github-visitor-counter-zeta.vercel.app/">GitHub Visitor Counter</a> - Showcase your global impact and professional reach</small></em>
+          <em><small>✨ Powered by <a href="https://github-visitor-counter-tau.vercel.app/">GitHub Visitor Counter</a> - Showcase your global impact and professional reach</small></em>
   </div>
 
-  ![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
+  ![](https://github-visitor-counter-tau.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
     </td>
   </tr>
 </table>
@@ -3599,10 +3599,10 @@ alt="Anthropic Logo"/>
 <div align="center">
 
 <div align="right">
-  <em><small>✨ Designed with <a href="https://github-visitor-counter-zeta.vercel.app/">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em>
+  <em><small>✨ Designed with <a href="https://github-visitor-counter-tau.vercel.app/">GitHub Visitor Counter</a> - My open source project for showcasing global visitor statistics</small></em>
 </div>
 
-![](https://github-visitor-counter-zeta.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
+![](https://github-visitor-counter-tau.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
 
 </div>
 

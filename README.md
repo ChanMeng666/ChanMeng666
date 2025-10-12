@@ -3360,6 +3360,35 @@ alt="Anthropic Logo"/>
   </a>
 </div>
 
+<a id="readme-youtube"></a>
+
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Television.png" alt="Television" width="30" height="30" /> YouTube Videos](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%BA+YouTube+Videos&height=200&template=digital-ocean)
+
+<div align="center">
+  <p>Check out my latest YouTube videos where I share tutorials, project demos, and tech insights!</p>
+  
+  <a href="https://www.youtube.com/channel/UCNfqqzosj2J6bBRVgz7qbJQ?sub_confirmation=1">
+    <img src="https://img.shields.io/badge/Subscribe-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="Subscribe to YouTube"/>
+  </a>
+</div>
+
+<br />
+
+<!-- BEGIN YOUTUBE-CARDS -->
+<!-- END YOUTUBE-CARDS -->
+
+<br />
+
+<div align="right">
+  <a href="#readme-youtube">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20YouTube-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
+
 <a id="readme-podcasts"></a>
 
 <div align="right">

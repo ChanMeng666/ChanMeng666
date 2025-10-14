@@ -2221,31 +2221,15 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Sanicle</strong><br>
           Chief Executive Officer
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "I had the pleasure of working with Chan Meng on the website and application development for Sanicle.cloud, where she showcased her exceptional technical expertise. As a solo developer, she took on the monumental task of coding the entire website and parts of the platform from scratch, demonstrating not only her deep technical skills but also her ability to manage complex projects independently. 
         </p>
         <p align="left">
-          Chan's problem-solving abilities and attention to detail are remarkable. She consistently delivered high-quality work, and her coding proficiency was evident in every stage of the development process. She is also incredibly intelligent and driven, always eager to explore new technologies and methodologies, including the latest AI tools and AI agents, which speaks to her commitment to continuous learning and innovation.
+          Chan’s problem-solving abilities and attention to detail are remarkable. She consistently delivered high-quality work, and her coding proficiency was evident in every stage of the development process. She is also incredibly intelligent and driven, always eager to explore new technologies and methodologies, including the latest AI tools and AI agents, which speaks to her commitment to continuous learning and innovation.
         </p>
         <p align="left">
           Her passion for technology and her ability to tackle challenging projects make her a valuable asset to any team or initiative. I highly recommend Chan for any opportunity that requires technical excellence and a forward-thinking approach to development."
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
     <td width="50%">
@@ -2258,20 +2242,11 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Sanicle</strong><br>
           Chief Experience Officer
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "Chan Meng is an outstanding Senior AI/ML Infrastructure Engineer whose work consistently combines speed, security, and strategic foresight. 
         </p>
         <p align="left">
-          She delivers complex, high-impact systems with precision and grace. She's integrated enterprise AI tools like IBM's watsonx, refining vector databases, or optimizing UX flows for production readiness.
+          She delivers complex, high-impact systems with precision and grace. She’s integrated enterprise AI tools like IBM’s watsonx, refining vector databases, or optimizing UX flows for production readiness.
         </p>
         <p align="left">
           What truly sets Chan apart is her principled approach to software engineering. She embeds data privacy into the core architecture, ensuring that client agency, trust, and resilience are never afterthoughts. 
@@ -2285,13 +2260,6 @@ Transform your GitHub profile and resume into powerful career assets!
         <p align="left">
           In every sense, Chan is the kind of engineer who elevates those around her."
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
   </tr>
@@ -2306,28 +2274,12 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Sanicle</strong><br>
           Chief Period Officer
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "I highly recommend Chan Meng. Since joining Sanicle, her hands-on experience, deep understanding of our AI technology, and exceptional willingness to learn and collaborate have been absolutely instrumental. She played a pivotal role in securing our IBM MVP and its successful deployment, a testament to her dedication and expertise.
         </p>
         <p align="left">
           Chan is truly the best hand when it comes to workplace health, consistently demonstrating a remarkable ability to translate complex concepts into actionable strategies. I am confident that she will continue to drive significant impact wherever her journey leads."
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
     <td width="50%">
@@ -2340,17 +2292,8 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Sanicle</strong><br>
           Chief AI Officer
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
-          "I have the pleasure of working with Chan at Sanicle, where she serves as our Senior AI/ML Infrastructure Engineer—and I can confidently say she's one of the most talented and reliable professionals I've worked with.
+          "I have the pleasure of working with Chan at Sanicle, where she serves as our Senior AI/ML Infrastructure Engineer—and I can confidently say she’s one of the most talented and reliable professionals I’ve worked with.
         </p>
         <p align="left">
           Chan has done a fantastic job leading the technical development of our web application, playing a key role in integrating cutting-edge AI features. Her deep understanding of infrastructure and AI systems, combined with her hands-on approach, has been crucial to our progress.
@@ -2359,18 +2302,11 @@ Transform your GitHub profile and resume into powerful career assets!
           What sets Chan apart is not only her technical expertise but also her responsiveness and professionalism. She consistently delivers on modification requests quickly and thoughtfully, ensuring the product continues to evolve in the right direction. She's always open to feedback, listens carefully, and adapts with precision and care.
         </p>
         <p align="left">
-          Beyond her technical contributions, Chan brings a positive, optimistic energy to every team interaction. She's incredibly easy to work with—friendly, collaborative, and always looking for ways to support the team.
+          Beyond her technical contributions, Chan brings a positive, optimistic energy to every team interaction. She’s incredibly easy to work with—friendly, collaborative, and always looking for ways to support the team.
         </p>
         <p align="left">
-          Any organization would be lucky to have Chan on board. I can't recommend her highly enough."
+          Any organization would be lucky to have Chan on board. I can’t recommend her highly enough."
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
   </tr>
@@ -2385,25 +2321,9 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Student at Guangxi University</strong><br>
           Mentee
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "Chan Meng is a mentor who is committed to others. Even when there are professional differences, she will put herself in others' shoes to seek help and communicate patiently. When working on code, she is always able to actively grasp the latest technological developments and capture the results in various forms of communication, making her a great full-stack engineer."
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
     <td width="50%">
@@ -2416,25 +2336,9 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Master of Computational Science at Laurentian University (Université Laurentienne)</strong><br>
           Mentee
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "Chan Meng is an inspiring mentor whose passion for coding deeply influenced me. Her enthusiasm for writing clean and efficient code made me appreciate the beauty of problem-solving through programming. She not only provided technical guidance but also encouraged me to think critically and continuously improve. Her patience, support, and deep expertise make her an outstanding mentor, and I highly recommend her to anyone seeking guidance in technology!"
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
   </tr>
@@ -2449,15 +2353,6 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Associate Professor at Lincoln University</strong><br>
           Academic Advisor
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "I am pleased to recommend Chan Meng, who recently completed Master of Applied Computing with distinction at Lincoln Univesity, NZ. Throughout her studies, Chan Meng demonstrated excellent technical skills, a strong work ethic, and an inquisitive nature. She consistently excelled in both coursework and practical projects, approaching challenges with critical thinking and creativity.
         </p>
@@ -2467,13 +2362,6 @@ Transform your GitHub profile and resume into powerful career assets!
         <p align="left">
           I have no doubt that Chan Meng will succeed in her future endeavours and I highly recommend her for any job opportunity in computing."
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
     <td width="50%">
@@ -2486,25 +2374,9 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Student at Tianjin Normal University</strong><br>
           Mentee
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "I'm so fortunate to have Chan as my mentor! Her passion, expertise, and patience have helped me gain more technical skills and cultivate innovative thinking abilities. Thanks for opening the door to the future of the technology!"
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
   </tr>
@@ -2519,25 +2391,9 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Web Developer at GDS Communication</strong><br>
           Mentee
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "Chan's innovative approach to combining AI with web development is truly inspiring! Her enthusiasm is contagious, and she opened my eyes to exciting new ways of coding. A fantastic mentor who makes tech learning fun!"
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
     <td width="50%">
@@ -2550,15 +2406,6 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Data Analyst at Deloitte</strong><br>
           Mentee
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "I am delighted to have the opportunity to recommend Chan Meng on LinkedIn. Having just completed Chan's exceptional course, I am eager to share my learning experience. Chan's teaching style is meticulous and thorough, with patient and in-depth explanations for the use of each tool.
         </p>
@@ -2568,13 +2415,6 @@ Transform your GitHub profile and resume into powerful career assets!
         <p align="left">
           I am sincerely grateful to Chan for not only enhancing my skills but also greatly boosting my confidence. I wholeheartedly recommend Chan Meng to anyone seeking professional guidance and looking to advance in the technical field."
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
   </tr>
@@ -2589,25 +2429,9 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Student at ShanghaiTech University</strong><br>
           Mentee
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "I recently had the opportunity to join Chan's AI-assisted development course through Forward with Her, where I created my first personal website using the Cursor editor, incorporating my own curated media elements. The experience introduced me to the fascinating world of web and app development. Chan's hands-on teaching approach and technical expertise made complex concepts approachable, particularly through interactive problem-solving sessions. I'm excited to see more of her innovative work in the tech space!"
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
     <td width="50%">
@@ -2620,25 +2444,9 @@ Transform your GitHub profile and resume into powerful career assets!
           <strong>Student at Tsinghua University</strong><br>
           Mentee
         </p>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Read Full Recommendation</strong></summary><br>
-        
         <p align="left">
           "I had the pleasure of working alongside Chan, who is not only meticulous but also enthusiastic about exploring new technologies. She introduced me to the fascinating world of AI programming and showed me how creating personal web pages could be both simple and enjoyable. Her patience in debugging and her willingness to share the plugins and websites she developed greatly benefited our team. Chan's passion for coding is contagious—working with her made me realize that programming can be both fun and immensely rewarding. I wholeheartedly recommend her for any role where innovation, collaboration, and technical expertise are valued."
         </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
   </tr>
@@ -3151,829 +2959,258 @@ alt="Anthropic Logo"/>
 <table>
   <tr>
     <td width="20%">
+      <h5 align="center">Essential Files for a Professional GitHub Repository: A Comprehensive Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/" target="_blank">
           <img src="/public/articles/EssentialFilesforaProfessionalGitHubRepository.png" width="100%" alt="Essential Files for a Professional GitHub Repository"/>
         </a>
-        <br>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        
-        <h5 align="center">Essential Files for a Professional GitHub Repository: A Comprehensive Guide</h5>
-        
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Repository structure & setup<br>
-        • Documentation best practices<br>
-        • Professional development standards
-        </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Solution for MCP Servers Connection Issues with NVM/NPM</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
           <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
         </a>
-        <br>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        
-        <h5 align="center">Solution for MCP Servers Connection Issues with NVM/NPM</h5>
-        
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • MCP Server troubleshooting<br>
-        • NVM/NPM configuration<br>
-        • Connection issue resolution
-        </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">How to Add a GitHub Contribution Snake to Your Profile README</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng-tzakc/" target="_blank">
           <img src="/public/articles/HowtoAddaGitHubContributionSnaketoYourProfileREADME.png" width="100%" alt="How to Add a GitHub Contribution Snake to Your Profile README"/>
         </a>
-        <br>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        
-        <h5 align="center">How to Add a GitHub Contribution Snake to Your Profile README</h5>
-        
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • GitHub Profile customization<br>
-        • Animated contribution graph<br>
-        • Step-by-step setup guide
-        </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Tencent Meeting Screen Recording Download Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-download-videos-from-web-pages-step-by-step-guide-chan-meng-mp5pc/" target="_blank">
           <img src="/public/articles/TencentMeetingScreenRecordingDownloadGuide.png" width="100%" alt="Tencent Meeting Screen Recording Download Guide"/>
         </a>
-        <br>
-        
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        
-        <h5 align="center">Tencent Meeting Screen Recording Download Guide</h5>
-        
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Video download techniques<br>
-        • Chrome Extension development<br>
-        • Screen recording management
-        </p>
-        
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        
       </div>
     </td>
   </tr>
   <tr>
     <td width="20%">
+      <h5 align="center">Building a Web Scraper for Douban Group Posts</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-web-scraper-douban-group-posts-chan-meng-pn6oc/" target="_blank">
           <img src="/public/articles/BuildingaWebScraperforDoubanGroupPosts.png" width="100%" alt="Building a Web Scraper for Douban Group Posts"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Building a Web Scraper for Douban Group Posts</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Web scraping techniques<br>
-        • Python automation<br>
-        • Data extraction
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">From Git Log to Insights: Evaluating Team Contributions in GitHub Projects</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/from-git-log-insights-evaluating-team-contributions-github-chan-meng-qdtpc/" target="_blank">
           <img src="/public/articles/FromGitLogtoInsights.png" width="100%" alt="From Git Log to Insights Evaluating Team Contributions in GitHub Projects"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">From Git Log to Insights: Evaluating Team Contributions in GitHub Projects</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Git analytics<br>
-        • Team collaboration metrics<br>
-        • Contribution evaluation
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">How to Deploy Your React Project to Vercel: A Complete Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng-kkale/" target="_blank">
           <img src="/public/articles/HowtoDeployYourReactProjecttoVercel.png" width="100%" alt="How to Deploy Your React Project to Vercel A Complete Guide"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">How to Deploy Your React Project to Vercel: A Complete Guide</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Vercel deployment<br>
-        • React project setup<br>
-        • CI/CD best practices
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">The Power of Index Files: A Guide to Better Code Organization in React Projects</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/" target="_blank">
           <img src="/public/articles/ThePowerofIndexFiles.png" width="100%" alt="The Power of Index Files A Guide to Better Code Organization in React Projects"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">The Power of Index Files: A Guide to Better Code Organization in React Projects</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Code organization<br>
-        • React file structure<br>
-        • Import optimization
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
   </tr>
   <tr>
     <td width="20%">
+      <h5 align="center">Protecting Your Open Source Project: A Comprehensive Guide to Combating Code Plagiarism</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/protecting-your-open-source-project-comprehensive-guide-chan-meng-u77wc/" target="_blank">
           <img src="/public/articles/ProtectingYourOpenSourceProject.png" width="100%" alt="Protecting Your Open Source Project"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Protecting Your Open Source Project: A Comprehensive Guide to Combating Code Plagiarism</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • License management<br>
-        • Code protection strategies<br>
-        • Plagiarism prevention
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Creating a Comprehensive File List Documentation System: A Technical Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/creating-comprehensive-file-list-documentation-system-chan-meng-njjxc/?trackingId=a7k%2F2YF1ToWixSz%2BYnZq7A%3D%3D" target="_blank">
           <img src="/public/articles/CreatingaComprehensiveFileListDocumentationSystem.png" width="100%" alt="Creating a Comprehensive File List Documentation System"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Creating a Comprehensive File List Documentation System: A Technical Guide</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Documentation automation<br>
-        • File system management<br>
-        • Project structure
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">A Complete Guide to Publishing Your First npm Package</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/complete-guide-publishing-your-first-npm-package-chan-meng-srrec/" target="_blank">
           <img src="/public/articles/PublishYourFirstnpmPackage.png" width="100%" alt="A Complete Guide to Publishing Your First npm Package"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">A Complete Guide to Publishing Your First npm Package</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • npm package creation<br>
-        • Package publishing workflow<br>
-        • Version management
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Apifox API Testing Tool Guide: From Beginner to Practitioner</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/apifox-api-testing-tool-guide-from-beginner-chan-meng-ekqjc/" target="_blank">
           <img src="/public/articles/ApifoxAPITestingToolGuide.png" width="100%" alt="Apifox API Testing Tool Guide"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Apifox API Testing Tool Guide: From Beginner to Practitioner</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • API testing tools<br>
-        • Testing automation<br>
-        • Development workflow
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
   </tr>
   <tr>
     <td width="20%">
+      <h5 align="center">Git Branch Management and Project Initialization: A Comprehensive Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/git-branch-management-project-initialization-guide-chan-meng-9oewc/" target="_blank">
           <img src="/public/articles/GitBranchManagementandProjectInitialization.png" width="100%" alt="Git Branch Management and Project Initialization"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Git Branch Management and Project Initialization: A Comprehensive Guide</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Git workflow<br>
-        • Branch strategies<br>
-        • Project setup
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Conventional Commits: A Comprehensive Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/conventional-commits-comprehensive-guide-chan-meng-n9psc/" target="_blank">
           <img src="/public/articles/ConventionalCommits.png" width="100%" alt="Conventional Commits: A Comprehensive Guide"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Conventional Commits: A Comprehensive Guide</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Commit conventions<br>
-        • Version control best practices<br>
-        • Semantic versioning
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Creating a Python MCP Server: A Step-by-Step Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/creating-python-mcp-server-step-by-step-guide-chan-meng-olwmc/" target="_blank">
           <img src="/public/articles/CreatingaPythonMCPServer.png" width="100%" alt="Creating a Python MCP Server: A Step-by-Step Guide"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Creating a Python MCP Server: A Step-by-Step Guide</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • MCP server development<br>
-        • Python backend<br>
-        • Server configuration
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Spring Boot Project Database Configuration Guide for Local and Cloud Environments</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/spring-boot-project-database-configuration-guide-local-chan-meng-cuiqc/?trackingId=40yawZV0u6dyjo%2F2HfB3cg%3D%3D" target="_blank">
           <img src="/public/articles/SpringBootProjectDatabaseConfigurationGuide.png" width="100%" alt="Spring Boot Project Database Configuration Guide for Local and Cloud Environments"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Spring Boot Project Database Configuration Guide for Local and Cloud Environments</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Spring Boot configuration<br>
-        • Database management<br>
-        • Cloud deployment
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
   </tr>
   <tr>
     <td width="20%">
+      <h5 align="center">Creating Educational Animations with Manim: From Script to Final Video</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/creating-educational-animations-manim-from-script-final-chan-meng-9x3lc/" target="_blank">
           <img src="/public/articles/creating-educational-animations-with-manim.png" width="100%" alt="Creating Educational Animations with Manim"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Creating Educational Animations with Manim: From Script to Final Video</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Manim animation<br>
-        • Educational content creation<br>
-        • Video production workflow
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Bug Report: Authentication Redirect Issue</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/bug-report-authentication-redirect-issue-chan-meng-ejmne/" target="_blank">
           <img src="/public/articles/BugReportAuthenticationRedirectIssue.png" width="100%" alt="Bug Report Authentication Redirect Issue"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Bug Report: Authentication Redirect Issue</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Bug tracking<br>
-        • Authentication issues<br>
-        • Debugging strategies
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Planning Overseas Education and Career Development</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/planning-overseas-education-career-development-chan-meng-vfhic/" target="_blank">
           <img src="/public/articles/PlanningOverseasEducationandCareerDevelopment.png" width="100%" alt="Planning Overseas Education and Career Development"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Planning Overseas Education and Career Development</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Career planning<br>
-        • International education<br>
-        • Professional development
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">📺 My Video Tutorial Resources Collection</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/my-video-tutorial-resources-collection-chan-meng-udkfc/" target="_blank">
           <img src="/public/articles/MyVideoTutorialResourcesCollection.png" width="100%" alt="My Video Tutorial Resources Collection"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">📺 My Video Tutorial Resources Collection</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Learning resources<br>
-        • Video tutorials<br>
-        • Educational content curation
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
   </tr>
   <tr>
     <td width="20%">
+      <h5 align="center">Building an AI Dialogue System: A Comprehensive Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-ai-dialogue-system-comprehensive-guide-chan-meng-d3dsc/" target="_blank">
           <img src="/public/articles/BuildinganAIDialogueSystem.png" width="100%" alt="Building an AI Dialogue System: A Comprehensive Guide"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Building an AI Dialogue System: A Comprehensive Guide</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • AI chatbot development<br>
-        • Natural language processing<br>
-        • Conversation design
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Weekly Pulse: Remote MCP, Images, Screen Recording</h5>
       <div align="center">  
         <a href="https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording" target="_blank">
           <img src="/public/articles/WeeklyPulseRemoteMCP.png" width="100%" alt="Weekly Pulse: Remote MCP, Images, Screen Recording"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Weekly Pulse: Remote MCP, Images, Screen Recording</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • MCP Server featured article<br>
-        • Remote development<br>
-        • Screen recording techniques
-        </p>
         <p align="center">
           <i>The MCP Server I developed was featured in this article by <a href="https://www.pulsemcp.com/authors/tadas-antanavicius">Tadas Antanavicius</a></i>
         </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Building a Website with Notion Integration: Form Submission and Content Display</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-website-notion-integration-form-submission-content-chan-meng-rptac/?trackingId=9bW%2BHK%2Bs%2FBXC9m0mpBGODg%3D%3D" target="_blank">
           <img src="/public/articles/BuildingaWebsitewithNotionIntegration.png" width="100%" alt="Building a Website with Notion Integration"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Building a Website with Notion Integration: Form Submission and Content Display</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Notion API integration<br>
-        • Form handling<br>
-        • Content management
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Solving Language Switching in Next.js: A Guide to Client-Server Component Architecture</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/solving-language-switching-nextjs-guide-client-server-chan-meng-pyudc/" target="_blank">
           <img src="/public/articles/SolvingLanguageSwitchinginNextjs.png" width="100%" alt="Solving Language Switching in Next.js"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Solving Language Switching in Next.js: A Guide to Client-Server Component Architecture</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Next.js internationalization<br>
-        • Client-server architecture<br>
-        • Language switching implementation
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
   </tr>
   <tr>
     <td width="20%">
+      <h5 align="center">FemTech Weekend x UN Women CSW69 | Women's Health Innovation</h5>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg" target="_blank">
           <img src="/public/articles/UNWomenCSW69.jpeg" width="100%" alt="FemTech Weekend x UN Women CSW69 Feature"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">FemTech Weekend x UN Women CSW69 | Women's Health Innovation</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • FemTech innovation<br>
-        • AI workplace health solutions<br>
-        • UN Women CSW69 featured
-        </p>
         <p align="center">
           <i>My AI solution for women's workplace health was featured in this article by <a href="https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg">FemTech Weekend</a></i>
         </p>
         <p align="center">
           The presentation received significant attention from corporate leaders, including representatives from IBM who expressed interest in pilot collaboration, as well as government officials like the Minister of Gender and Children's Affairs from Sierra Leone, who praised the platform as the first comprehensive solution connecting menstrual cycle data to actionable workplace policies through AI analysis.
         </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Setting Up Algolia DocSearch in Docusaurus</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/setting-up-algolia-docsearch-docusaurus-chan-meng-yxeqc/?trackingId=HhQYljM%2BOyEsyWxh2jdzRg%3D%3D" target="_blank">
           <img src="/public/articles/SettingUpAlgoliaDocSearchinDocusaurus.png" width="100%" alt="Setting Up Algolia DocSearch in Docusaurus"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Setting Up Algolia DocSearch in Docusaurus</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Algolia search integration<br>
-        • Docusaurus configuration<br>
-        • Search functionality
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Implementing Internationalization in a Docusaurus Website: Experience and Lessons Learned</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/implementing-internationalization-docusaurus-website-experience-meng-ppfgc/?trackingId=ADxvRKyscP0fCHyQdZF12g%3D%3D" target="_blank">
           <img src="/public/articles/Implementing-Internationalization-in-a-Docusaurus.png" width="100%" alt="Implementing Internationalization in a Docusaurus Website"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Implementing Internationalization in a Docusaurus Website: Experience and Lessons Learned</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • i18n implementation<br>
-        • Docusaurus multilingual setup<br>
-        • Best practices
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
     <td width="20%">
+      <h5 align="center">Building a PDF Download Form with Notion Integration in Docusaurus: A Complete Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-pdf-download-form-notion-integration-docusaurus-chan-meng-oodrc/?trackingId=R%2FHPf4AgeL5jzJc9LB41rA%3D%3D" target="_blank">
           <img src="/public/articles/Building-a-PDF-Download-Form-with-Notion-Integration-in-Docusaurus.png" width="100%" alt="Building a PDF Download Form with Notion Integration in Docusaurus"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">Building a PDF Download Form with Notion Integration in Docusaurus: A Complete Guide</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • PDF generation<br>
-        • Notion API integration<br>
-        • Form handling in Docusaurus
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
   </tr>
   <tr>
     <td width="20%">
+      <h5 align="center">AI Chatbot Integration Guide for Website</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/ai-chatbot-integration-guide-website-chan-meng-itgsc/" target="_blank">
           <img src="/public/articles/ai-chatbot-integration-guide-for-website.png" width="100%" alt="AI Chatbot Integration Guide for Website"/>
         </a>
-        <br>
-        <table>
-        <tbody>
-        <tr></tr>
-        <tr>
-        <td>
-        <details>
-        <summary>&nbsp;&nbsp;<strong>Show Article Details</strong></summary><br>
-        <h5 align="center">AI Chatbot Integration Guide for Website</h5>
-        <p align="left">
-        📝 <strong>Key Topics:</strong><br>
-        • Chatbot implementation<br>
-        • Website integration<br>
-        • User experience optimization
-        </p>
-        </details>
-        </td>
-        </tr>
-        </tbody>
-        </table>
       </div>
     </td>
   </tr>

@@ -2183,6 +2183,19 @@ Transform your GitHub profile and resume into powerful career assets!
   </tr>
   <tr>
     <td width="33%">
+      <h3 align="center">Outstanding Mentor Award</h3>
+      <div align="center">  
+        <p>
+          <strong>AI Hackathon Festival 2025</strong><br>
+          AI Forum NZ, She Sharp, Auckland University of Technology<br>
+          Aug 2025
+        </p>
+        <p align="left">
+          Recognized as an Outstanding Mentor at the AI Hackathon Festival 2025, co-organized by AI Forum NZ, She Sharp, and Auckland University of Technology. Served as one of 14 expert mentors guiding 11 teams comprising 80+ participants in developing AI-powered solutions aligned with UN Sustainable Development Goals. During the intensive 2-day hackathon, provided comprehensive technical guidance and strategic support to diverse participants including students from Westlake Girls High School and other competitors from various professional backgrounds. Helped teams tackle real-world challenges in areas including food insecurity, digital accessibility, workforce upskilling, and indigenous environmental stewardship.
+        </p>
+      </div>
+    </td>
+    <td width="33%">
       <h3 align="center">FemTech Excellence Award</h3>
       <div align="center">  
         <p>

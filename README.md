@@ -3226,6 +3226,48 @@ alt="Anthropic Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Steal these Brand Secrets from Linear's CEO</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/steal-brand-secrets-from-linears-ceo-chan-meng-dgaac/" target="_blank">
+          <img src="/public/articles/Steal-these-Brand-Secrets.png" width="100%" alt="Steal these Brand Secrets from Linear's CEO"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <h5 align="center">The Future is Small: Why Small Language Models (SLMs) Are Powering the Next Wave of AI Agents</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/future-small-why-language-models-slms-powering-next-wave-chan-meng-hddsc/" target="_blank">
+          <img src="/public/articles/The-Future-is-Small.png" width="100%" alt="The Future is Small"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <h5 align="center">The AI Fluency Framework</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/ai-fluency-framework-chan-meng-4taxc/" target="_blank">
+          <img src="/public/articles/The-AI-Fluency-Framework.png" width="100%" alt="The AI Fluency Framework"/>
+        </a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%">
+      <h5 align="center">Fixing Google Fonts in Next.js 13+: A Pixel-Perfect Guide</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/fixing-google-fonts-nextjs-13-pixel-perfect-guide-chan-meng-iw3sc/" target="_blank">
+          <img src="/public/articles/stop-using--import-for-fonts-in-next-js.png" width="100%" alt="Fixing Google Fonts in Next.js 13+"/>
+        </a>
+      </div>
+    </td>
+    <td width="20%">
+      <h5 align="center">AI Conversation Implementation Tutorial</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/ai-conversation-implementation-tutorial-chan-meng-4pg7c/" target="_blank">
+          <img src="/public/articles/ai-conversation-implementation-tutorial.jpg" width="100%" alt="AI Conversation Implementation Tutorial"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

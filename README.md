@@ -1952,27 +1952,17 @@ Transform your GitHub profile and resume into powerful career assets!
         <p>
           <strong>Chief Technology Officer (CTO)</strong><br>
           Sep 2025 - Present<br>
-          Remote • United States
-        </p>
-        <p align="left">
-          • Direct overall technology strategy and system architecture for Sanicle.Cloud<br>
-          • Lead full-stack engineering teams in developing scalable healthcare platforms<br>
-          • Drive integration of advanced AI/ML technologies and LLMs for reproductive health
-        </p>
-      </div>
-    </td>
-    <td width="50%">
-      <h3 align="center">Sanicle</h3>
-      <div align="center">  
-        <a href="https://sanicle.cloud/" target="_blank"><img src="/public/experience/sanicle_logo.svg" width="50%" alt="Sanicle Logo"/></a>
-        <br>
-        <br>
-        <p>
           <strong>Senior AI/ML Infrastructure Engineer</strong><br>
           Mar 2025 - Oct 2025<br>
           Remote • United States
         </p>
         <p align="left">
+          <strong>As CTO:</strong><br>
+          • Direct overall technology strategy and system architecture for Sanicle.Cloud<br>
+          • Lead full-stack engineering teams in developing scalable healthcare platforms<br>
+          • Drive integration of advanced AI/ML technologies and LLMs for reproductive health<br>
+          <br>
+          <strong>As Senior AI/ML Infrastructure Engineer:</strong><br>
           • Led development of enterprise-grade women's health platforms<br>
           • Instrumental in achieving IBM Silver Partner certification<br>
           • Architected Sanicle.Cloud SaaS platform with IBM Cloud watsonx AI integration

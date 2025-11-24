@@ -1866,6 +1866,26 @@ Transform your GitHub profile and resume into powerful career assets!
 <table>
   <tr>
     <td width="50%">
+      <h3 align="center">Gavigo</h3>
+      <div align="center">  
+        <a href="https://gavigo.com/" target="_blank"><img src="/public/experience/gavigo_logo.jpg" width="50%" alt="Gavigo Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Core Engineer (M1 Prototype) - Consultant</strong><br>
+          Oct 2025 - Present<br>
+          Remote • United States
+        </p>
+        <p align="left">
+          • Leading end-to-end development of IRE visualization prototype for "Instant Reality Exchange" platform<br>
+          • Architecting microservices-based system with Kubernetes, Docker, Next.js/React, and Python<br>
+          • Implementing rule-based AI orchestration engine with cross-domain recommendation logic<br>
+          • Developing real-time WebSocket communication between frontend and backend predictive systems<br>
+          • Creating investor-facing visualization dashboard for AI decision-making processes
+        </p>
+      </div>
+    </td>
+    <td width="50%">
       <h3 align="center">She Sharp</h3>
       <div align="center">  
         <a href="https://she-sharp.vercel.app/" target="_blank"><img src="/public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp Logo"/></a>
@@ -1886,6 +1906,62 @@ Transform your GitHub profile and resume into powerful career assets!
   </tr>
   <tr>
     <td width="50%">
+      <h3 align="center">CopilotKit</h3>
+      <div align="center">  
+        <a href="https://www.copilotkit.ai/" target="_blank"><img src="/public/experience/copilot-kit-logo.svg" width="50%" alt="CopilotKit Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Open Source Contributor</strong><br>
+          Jun 2025 - Present<br>
+          Remote • United States
+        </p>
+        <p align="left">
+          • Contributed to CopilotKit (24.6k+ GitHub stars) AI copilot framework<br>
+          • Developed FemTracker Agent Demo with 8 specialized AI agents<br>
+          • Enhanced developer documentation with MCP server integration guide
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">Aotearoa Infinite Academy</h3>
+      <div align="center">  
+        <a href="#" target="_blank"><img src="/public/experience/aotearoa-infinite-academy.svg" width="50%" alt="Aotearoa Infinite Academy Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Software Developer</strong><br>
+          Oct 2025 - Nov 2025<br>
+          Remote • New Zealand
+        </p>
+        <p align="left">
+          • Developed software solutions for educational technology initiatives<br>
+          • Collaborated with cross-functional teams on innovative educational platforms<br>
+          • Delivered scalable solutions for the education sector
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Sanicle</h3>
+      <div align="center">  
+        <a href="https://sanicle.cloud/" target="_blank"><img src="/public/experience/sanicle_logo.svg" width="50%" alt="Sanicle Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Chief Technology Officer (CTO)</strong><br>
+          Sep 2025 - Present<br>
+          Remote • United States
+        </p>
+        <p align="left">
+          • Direct overall technology strategy and system architecture for Sanicle.Cloud<br>
+          • Lead full-stack engineering teams in developing scalable healthcare platforms<br>
+          • Drive integration of advanced AI/ML technologies and LLMs for reproductive health
+        </p>
+      </div>
+    </td>
+    <td width="50%">
       <h3 align="center">Sanicle</h3>
       <div align="center">  
         <a href="https://sanicle.cloud/" target="_blank"><img src="/public/experience/sanicle_logo.svg" width="50%" alt="Sanicle Logo"/></a>
@@ -1893,16 +1969,18 @@ Transform your GitHub profile and resume into powerful career assets!
         <br>
         <p>
           <strong>Senior AI/ML Infrastructure Engineer</strong><br>
-          Mar 2025 - Present<br>
+          Mar 2025 - Oct 2025<br>
           Remote • United States
         </p>
         <p align="left">
-          • Comprehensive health tracking with personalized menstrual calendar<br>
-          • AI-powered health assistant (Sani) for personalized guidance<br>
-          • Dual dashboard system for employees and HR departments
+          • Led development of enterprise-grade women's health platforms<br>
+          • Instrumental in achieving IBM Silver Partner certification<br>
+          • Architected Sanicle.Cloud SaaS platform with IBM Cloud watsonx AI integration
         </p>
       </div>
     </td>
+  </tr>
+  <tr>
     <td width="50%">
       <h3 align="center">FemTech Weekend</h3>
       <div align="center">  
@@ -1921,8 +1999,6 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
-  </tr>
-  <tr>
     <td width="50%">
       <h3 align="center">FreePeriod</h3>
       <div align="center">  
@@ -1941,6 +2017,8 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+  </tr>
+  <tr>
     <td width="50%">
       <h3 align="center">ByteDance</h3>
       <div align="center">  
@@ -1959,8 +2037,6 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
-  </tr>
-  <tr>
     <td width="50%">
       <h3 align="center">Forward with Her</h3>
       <div align="center">  
@@ -1979,6 +2055,8 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+  </tr>
+  <tr>
     <td width="50%">
       <h3 align="center">CORDE</h3>
       <div align="center">  

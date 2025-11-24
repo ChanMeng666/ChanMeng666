@@ -2225,6 +2225,71 @@ Transform your GitHub profile and resume into powerful career assets!
 <table>
   <tr>
     <td width="50%">
+      <h3 align="center">Siyu Xing</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/siyu-xing-4a003a356/" target="_blank"><img src="/public/recommendations/Siyu-Xing.jpg" width="50%" alt="Siyu Xing"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>University of Chinese Academy of Sciences</strong><br>
+          Ph.D. Candidate in CS (AIGC)
+        </p>
+        <p align="left">
+          "很开心在她行能遇到Chan Meng。我参加了Chan老师的AI编程公开课。Chan关于身份认同的观点让我很有收获。我还旁听了Chan与其她姐妹的Office Hour，听Chan分享的个人故事和认知也让我看待很多事物时有了不同的角度。向想要在技术领域取得进步的人强烈推荐Chan Meng老师。
+        </p>
+        <p align="left">
+          I'm very glad to have met Chan Meng through Forward with Her 她行 Mentorship. I attended Chan's AI programming course. Her insights on identity and self-awareness deeply inspired me. I also joined her Office Hours with other sisters, and hearing Chan share her personal stories and perspectives helped me broaden my way of thinking. I highly recommend Chan to anyone who wants to grow and advance in the technology field."
+        </p>
+      </div>
+    </td>
+    <td width="50%">
+      <h3 align="center">Cecilia Yin</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/cecilia-yin/" target="_blank"><img src="/public/recommendations/Cecilia-Yin.jpg" width="50%" alt="Cecilia Yin"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>AWS</strong><br>
+          Solutions Architect
+        </p>
+        <p align="left">
+          "I had the pleasure of mentoring Chan through the AWS SheBuilds program. She has a great mix of technical skills and a genuine passion for AI that shines through in everything she does. I always enjoyed our chats. She brings curiosity, positivity, and a genuine drive to grow. I'm excited to see where her journey takes her and wish her all the best for what's ahead."
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Amy Li</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/in/amy-li-780142382/" target="_blank"><img src="/public/recommendations/Amy-Li.jpg" width="50%" alt="Amy Li"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Student at China West Normal University</strong><br>
+          Mentee
+        </p>
+        <p align="left">
+          "很幸运在她行活动中遇到了Chan老师作为我的mentor。和Chan老师连线了两次，也旁听了一次Chan与其她姐妹们的茶话会，从Chan老师这里能够感受到很强大、很有主体性的精神力量。Chan老师讲话的风格随和又幽默，很感谢老师，在帮助我答疑解惑时毫无保留地分享了她的经验与方法，让我了解到许多新的信息渠道，也让我理清了思路，未来的路径规划变得更清晰了。
+        </p>
+        <p align="left">
+          Chan老师对我来说也不只是mentor，同时也是我的role model，她的超强行动力和清晰的表达输出能力是我想要学习的，对于具体问题的理性分析与解答也能给人很多启发。
+        </p>
+        <p align="left">
+          向大家强烈推荐Chan，与她交流你会有许多收获。
+        </p>
+        <p align="left">
+          I am very lucky to have met Chan Meng as my mentor in Forward with Her. I have connected with her twice, and I have also listened to a tea party between Chan and her sisters, from which I can feel a very powerful and subjective spiritual power. Chan's style of speech is easy-going and humorous, and I am very grateful to her for sharing her experience and methodology unreservedly when she helped me to answer my questions. She shared her experience and methods, which allowed me to learn many new channels of information, and allowed me to clarify my thoughts, and my future path planning became clearer.
+        </p>
+        <p align="left">
+          Chan is not only a mentor to me, but also my role model. Her strong motivation and clear expression and output ability are what I want to learn, and her rational analysis and answers to specific questions can also give people a lot of inspiration.
+        </p>
+        <p align="left">
+          I highly recommend Chan to everyone, you will gain a lot from talking to her."
+        </p>
+      </div>
+    </td>
+    <td width="50%">
       <h3 align="center">Omopeju Afanu</h3>
       <div align="center">  
         <a href="https://www.linkedin.com/in/peju-afanu-7b9367110/" target="_blank"><img src="/public/recommendations/Omopeju-Afanu.jpg" width="50%" alt="Omopeju Afanu"/></a>
@@ -2238,13 +2303,15 @@ Transform your GitHub profile and resume into powerful career assets!
           "I had the pleasure of working with Chan Meng on the website and application development for Sanicle.cloud, where she showcased her exceptional technical expertise. As a solo developer, she took on the monumental task of coding the entire website and parts of the platform from scratch, demonstrating not only her deep technical skills but also her ability to manage complex projects independently. 
         </p>
         <p align="left">
-          Chan’s problem-solving abilities and attention to detail are remarkable. She consistently delivered high-quality work, and her coding proficiency was evident in every stage of the development process. She is also incredibly intelligent and driven, always eager to explore new technologies and methodologies, including the latest AI tools and AI agents, which speaks to her commitment to continuous learning and innovation.
+          Chan's problem-solving abilities and attention to detail are remarkable. She consistently delivered high-quality work, and her coding proficiency was evident in every stage of the development process. She is also incredibly intelligent and driven, always eager to explore new technologies and methodologies, including the latest AI tools and AI agents, which speaks to her commitment to continuous learning and innovation.
         </p>
         <p align="left">
           Her passion for technology and her ability to tackle challenging projects make her a valuable asset to any team or initiative. I highly recommend Chan for any opportunity that requires technical excellence and a forward-thinking approach to development."
         </p>
       </div>
     </td>
+  </tr>
+  <tr>
     <td width="50%">
       <h3 align="center">Gabby Hurst</h3>
       <div align="center">  
@@ -2259,7 +2326,7 @@ Transform your GitHub profile and resume into powerful career assets!
           "Chan Meng is an outstanding Senior AI/ML Infrastructure Engineer whose work consistently combines speed, security, and strategic foresight. 
         </p>
         <p align="left">
-          She delivers complex, high-impact systems with precision and grace. She’s integrated enterprise AI tools like IBM’s watsonx, refining vector databases, or optimizing UX flows for production readiness.
+          She delivers complex, high-impact systems with precision and grace. She's integrated enterprise AI tools like IBM's watsonx, refining vector databases, or optimizing UX flows for production readiness.
         </p>
         <p align="left">
           What truly sets Chan apart is her principled approach to software engineering. She embeds data privacy into the core architecture, ensuring that client agency, trust, and resilience are never afterthoughts. 
@@ -2275,7 +2342,6 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
-  </tr>
   <tr>
     <td width="50%">
       <h3 align="center">Chaste Christopher Inegbedion</h3>

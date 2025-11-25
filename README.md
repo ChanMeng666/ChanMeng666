@@ -1990,6 +1990,26 @@ Transform your GitHub profile and resume into powerful career assets!
       </div>
     </td>
     <td width="50%">
+      <h3 align="center">Forward with Her</h3>
+      <div align="center">  
+        <a href="https://www.linkedin.com/company/taxing-mentorship/" target="_blank"><img src="/public/experience/ForwardwithHer_logo.jpg" width="50%" alt="Forward with Her Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <strong>Technology & Professional Development Mentor</strong><br>
+          Oct 2024 - Sep 2025<br>
+          Remote • China
+        </p>
+        <p align="left">
+          • One-on-one mentorship for women in STEM<br>
+          • Group mentoring sessions and knowledge sharing<br>
+          • Part of 360+ mentor network supporting 800+ mentees
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
       <h3 align="center">FreePeriod</h3>
       <div align="center">  
         <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/experience/FreePeriodLogo.png" width="50%" alt="FreePeriod Logo"/></a>
@@ -2007,8 +2027,6 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
-  </tr>
-  <tr>
     <td width="50%">
       <h3 align="center">ByteDance</h3>
       <div align="center">  
@@ -2024,24 +2042,6 @@ Transform your GitHub profile and resume into powerful career assets!
           • Hands-on experience with microservices architecture<br>
           • Expertise in SQL and data center infrastructure<br>
           • Advanced backend development mentored by ByteDance experts
-        </p>
-      </div>
-    </td>
-    <td width="50%">
-      <h3 align="center">Forward with Her</h3>
-      <div align="center">  
-        <a href="https://www.linkedin.com/company/taxing-mentorship/" target="_blank"><img src="/public/experience/ForwardwithHer_logo.jpg" width="50%" alt="Forward with Her Logo"/></a>
-        <br>
-        <br>
-        <p>
-          <strong>Technology & Professional Development Mentor</strong><br>
-          Oct 2024 - Feb 2025<br>
-          Remote • China
-        </p>
-        <p align="left">
-          • One-on-one mentorship for women in STEM<br>
-          • Group mentoring sessions and knowledge sharing<br>
-          • Part of 360+ mentor network supporting 800+ mentees
         </p>
       </div>
     </td>

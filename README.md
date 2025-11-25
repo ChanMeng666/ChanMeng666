@@ -1888,7 +1888,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">She Sharp</h3>
       <div align="center">  
-        <a href="https://she-sharp.vercel.app/" target="_blank"><img src="/public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp Logo"/></a>
+        <a href="https://www.shesharp.org.nz/" target="_blank"><img src="/public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp Logo"/></a>
         <br>
         <br>
         <p>
@@ -1926,7 +1926,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">Aotearoa Infinite Academy</h3>
       <div align="center">  
-        <a href="#" target="_blank"><img src="/public/experience/aotearoa-infinite-academy.svg" width="50%" alt="Aotearoa Infinite Academy Logo"/></a>
+        <a href="https://www.aotearoainfiniteacademy.school/" target="_blank"><img src="/public/experience/aotearoa-infinite-academy.svg" width="50%" alt="Aotearoa Infinite Academy Logo"/></a>
         <br>
         <br>
         <p>
@@ -1974,7 +1974,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">FemTech Weekend</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/company/femtech-weekend/posts/?feedView=all" target="_blank"><img src="/public/experience/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
+        <a href="https://www.femtechweekend.com/" target="_blank"><img src="/public/experience/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
         <br>
         <br>
         <p>

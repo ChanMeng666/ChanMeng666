@@ -164,6 +164,128 @@ npx chan-meng
 
 <br />
 
+<a id="readme-commercial-apps"></a>
+
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![🚀 Live Commercial Products](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%9A%80+Live+Commercial+Products&height=200&gradientType=pixelArt&duration=10s&color0=FF6B35&color1=F7931E&color2=FFD700&color3=FF4500)
+
+<!-- Commercial Applications (Always Visible) -->
+
+<table>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Project Name 1</h3>
+      <div align="center">  
+        <a href="#" target="_blank"><img src="/public/brands/placeholder.svg" width="50%" alt="Project Name 1"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="#" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Feature 1<br>
+          • Feature 2<br>
+          • Feature 3
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Project Name 2</h3>
+      <div align="center">  
+        <a href="#" target="_blank"><img src="/public/brands/placeholder.svg" width="50%" alt="Project Name 2"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="#" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Feature 1<br>
+          • Feature 2<br>
+          • Feature 3
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Project Name 3</h3>
+      <div align="center">  
+        <a href="#" target="_blank"><img src="/public/brands/placeholder.svg" width="50%" alt="Project Name 3"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="#" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Feature 1<br>
+          • Feature 2<br>
+          • Feature 3
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Project Name 4</h3>
+      <div align="center">  
+        <a href="#" target="_blank"><img src="/public/brands/placeholder.svg" width="50%" alt="Project Name 4"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="#" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Feature 1<br>
+          • Feature 2<br>
+          • Feature 3
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Project Name 5</h3>
+      <div align="center">  
+        <a href="#" target="_blank"><img src="/public/brands/placeholder.svg" width="50%" alt="Project Name 5"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="#" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Feature 1<br>
+          • Feature 2<br>
+          • Feature 3
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<br />
+
 <a id="readme-projects"></a>
 
 <div align="right">
@@ -3470,7 +3592,7 @@ alt="Anthropic Logo"/>
   <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
 </div>
 
-![📺 Media Appearances and Interviews](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%BA+Media+Appearances+and+Interviews&height=200&template=burning-flame)
+![🎙️ Media Appearances and Interviews](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%8E%99%EF%B8%8F+Media+Appearances+and+Interviews&height=200&template=burning-flame)
 
 <table>
   <tr>

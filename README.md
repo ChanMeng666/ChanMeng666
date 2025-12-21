@@ -208,7 +208,7 @@ npx chan-meng
         <br>
         <p>
           <span>
-            <img src="https://img.shields.io/badge/SaaS-Ready-FF6B6B?style=for-the-badge"/>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://www.vitex.org.nz/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
@@ -239,6 +239,30 @@ npx chan-meng
           • Leading NZ nonprofit with 1000+ members, 50+ partners, and 84+ events since 2014<br>
           • AI-powered smart matching for intelligent mentor-mentee pairing<br>
           • Revolutionary dual-role system allowing users to be mentor and mentee simultaneously
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">CORDE Mobile</h3>
+      <div align="center">  
+        <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/CORDE.svg" width="50%" alt="CORDE Mobile App"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=android&logoColor=white"/>
+          </a>
+          <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Offline-First Field Data Collection App<br>
+          • React Native & SQLite<br>
+          • Real-time Sync
         </p>
       </div>
     </td>

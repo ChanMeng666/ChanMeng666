@@ -194,9 +194,9 @@ npx chan-meng
           </a>
         </p>
         <p align="left">
-          • Culturally-Integrated Platform: Deep Māori Wisdom (Hauora, Maramataka, Whakatauki)<br>
-          • AI-Powered: 88+ Actions with CopilotKit, GPT-4o & Voice Coach<br>
-          • Community-Centered: Built with & for Māori Communities
+          • Deep Māori Wisdom integrated throughout (Hauora, Maramataka, Whakatauki)<br>
+          • 88+ AI Actions powered by CopilotKit, GPT-4o & Voice Coach<br>
+          • Built with & for Māori Communities
         </p>
       </div>
     </td>

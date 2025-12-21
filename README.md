@@ -170,7 +170,7 @@ npx chan-meng
   <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
 </div>
 
-![🚀 Live Commercial Products](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%9A%80+Live+Commercial+Products&height=200&gradientType=pixelArt&duration=10s&color0=FF6B35&color1=F7931E&color2=FFD700&color3=FF4500)
+![🚀 Live Commercial Products](https://gradient-svg-generator.vercel.app/api/svg?text=Live+Commercial+Products&height=200&template=bold-rounded)
 
 <!-- Commercial Applications (Always Visible) -->
 

@@ -200,6 +200,27 @@ npx chan-meng
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Vitex</h3>
+      <div align="center">  
+        <a href="https://www.vitex.org.nz/" target="_blank"><img src="/public/brands/vitex.svg" width="50%" alt="Vitex - Professional LaTeX Resume Generator"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/SaaS-Ready-FF6B6B?style=for-the-badge"/>
+          </span>
+          <a href="https://www.vitex.org.nz/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-powered conversational resume building with real-time preview<br>
+          • Professional templates with instant PDF compilation<br>
+          • Commercial SaaS-ready: Cloud storage, sharing & version history
+        </p>
+      </div>
+    </td>
 
   </tr>
 </table>

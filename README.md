@@ -156,7 +156,7 @@ while (isAwake) {
 npx chan-meng
 ```
 
- • **🎭 One-click interactive introduction** • **📱 No installation required** • **⚡ < 5s startup time**
+**🎭 One-click interactive introduction** **📱 No installation required** **⚡ < 5s startup time**
 
 </div>
 

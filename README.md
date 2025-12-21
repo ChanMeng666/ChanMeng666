@@ -177,23 +177,26 @@ npx chan-meng
 <table>
   <tr>
     <td width="20%">
-      <h3 align="center">Project Name 1</h3>
+      <h3 align="center">Tam-AI-ti Web Application</h3>
       <div align="center">  
-        <a href="#" target="_blank"><img src="/public/brands/placeholder.svg" width="50%" alt="Project Name 1"/></a>
+        <a href="https://tam-ai-ti.vercel.app/" target="_blank"><img src="/public/brands/tam-ai-ti-logo-with-brand.svg" width="50%" alt="Tam-AI-ti Web Application"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="#" target="_blank">
+          <a href="https://tam-ai-ti.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+          <a href="https://youtu.be/NtT7_q6xhlk?si=NAtuFNxBfSqbK4WP" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
           </a>
         </p>
         <p align="left">
-          • Feature 1<br>
-          • Feature 2<br>
-          • Feature 3
+          • Culturally-Integrated Platform: Deep Māori Wisdom (Hauora, Maramataka, Whakatauki)<br>
+          • AI-Powered: 88+ Actions with CopilotKit, GPT-4o & Voice Coach<br>
+          • Community-Centered: Built with & for Māori Communities
         </p>
       </div>
     </td>

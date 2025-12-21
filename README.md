@@ -150,7 +150,7 @@ while (isAwake) {
 
 <div align="center">
 
-**Experience my philosophy through an interactive CLI journey**
+**👇 Experience my philosophy through an interactive CLI journey 👇**
 
 ```bash
 npx chan-meng

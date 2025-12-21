@@ -1218,9 +1218,9 @@ npx chan-meng
           </a>
         </p>
         <p align="left">
-          • Māori Wisdom + AI Financial Wellness Platform<br>
-          • 88 AI Actions with CopilotKit & GPT-4o<br>
-          • Te Whare Tapa Whā Holistic Wellbeing Model
+          • Deep Māori Wisdom integrated throughout (Hauora, Maramataka, Whakatauki)<br>
+          • 88+ AI Actions powered by CopilotKit, GPT-4o & Voice Coach<br>
+          • Built with & for Māori Communities
         </p>
       </div>
     </td>

@@ -1519,23 +1519,23 @@ npx chan-meng
   </tr>
   <tr>
     <td width="20%">
-      <h3 align="center">Easy Resume</h3>
+      <h3 align="center">Vitex</h3>
       <div align="center">  
-        <a href="https://easy-resume-theta.vercel.app/" target="_blank"><img src="/public/brands/easy-resume-1.svg" width="50%" alt="Easy Resume Logo"/></a>
+        <a href="https://www.vitex.org.nz/" target="_blank"><img src="/public/brands/vitex.svg" width="50%" alt="Vitex - Professional LaTeX Resume Generator"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/easy-resume" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://easy-resume-theta.vercel.app/" target="_blank">
+          <span>
+            <img src="https://img.shields.io/badge/SaaS-Ready-FF6B6B?style=for-the-badge"/>
+          </span>
+          <a href="https://www.vitex.org.nz/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
         <p align="left">
-          • Build a Winning Resume in Minutes<br>
-          • Professional Design Templates<br>
-          • Stand Out to Employers
+          • AI-powered conversational resume building with real-time preview<br>
+          • Professional templates with instant PDF compilation<br>
+          • Commercial SaaS-ready: Cloud storage, sharing & version history
         </p>
       </div>
     </td>

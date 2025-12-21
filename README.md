@@ -221,7 +221,27 @@ npx chan-meng
         </p>
       </div>
     </td>
-
+    <td width="20%">
+      <h3 align="center">She Sharp</h3>
+      <div align="center">
+        <a href="https://she-sharp.vercel.app/" target="_blank"><img src="public/brands/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://she-sharp.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Leading NZ nonprofit with 1000+ members, 50+ partners, and 84+ events since 2014<br>
+          • AI-powered smart matching for intelligent mentor-mentee pairing<br>
+          • Revolutionary dual-role system allowing users to be mentor and mentee simultaneously
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 
@@ -1000,9 +1020,9 @@ npx chan-meng
           </a>
         </p>
         <p align="left">
-          • Community platform for women in tech<br>
-          • AI-powered mentorship & networking<br>
-          • Dual mentor/mentee role system
+          • Leading NZ nonprofit with 1000+ members, 50+ partners, and 84+ events since 2014<br>
+          • AI-powered smart matching for intelligent mentor-mentee pairing<br>
+          • Revolutionary dual-role system allowing users to be mentor and mentee simultaneously
         </p>
       </div>
     </td>

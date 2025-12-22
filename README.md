@@ -266,6 +266,27 @@ npx chan-meng
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Claude Code Audio Hooks</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/claude-code-audio-hooks-logo.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Open_Source-green?style=for-the-badge"/>
+          </span>
+          <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank">
+            <img src="https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Intelligent audio notifications for Claude Code CLI with 9 notification types<br>
+          • Cross-platform support: Windows, Linux, macOS with one-command installation<br>
+          • Customizable audio files with dual-mode configuration (interactive & programmatic)
+        </p>
+      </div>
+    </td>
 
   </tr>
 </table>

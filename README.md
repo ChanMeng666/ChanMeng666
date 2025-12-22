@@ -273,11 +273,14 @@ npx chan-meng
         <br>
         <br>
         <p>
-          <span>
-            <img src="https://img.shields.io/badge/Open_Source-green?style=for-the-badge"/>
-          </span>
           <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank">
-            <img src="https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white"/>
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/claude-code-audio-hooks/releases" target="_blank">
+            <img src="https://img.shields.io/badge/Releases-brightgreen?style=for-the-badge&logo=tag"/>
+          </a>
+          <a href="https://github.com/user-attachments/assets/a9919363-f76c-4dd2-9141-e1c681573d75" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
           </a>
         </p>
         <p align="left">

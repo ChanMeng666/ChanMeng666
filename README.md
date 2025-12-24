@@ -335,6 +335,74 @@ npx chan-meng
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">FemTech Weekend</h3>
+      <div align="center">  
+        <a href="https://www.femtechweekend.com/" target="_blank"><img src="/public/brands/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://www.femtechweekend.com/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Women's Tech Innovation Platform<br>
+          • Multilingual Support (EN/CN)<br>
+          • Next.js 15, React 18 & GSAP Animation
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">FreePeriod Official</h3>
+      <div align="center">  
+        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/brands/FreePeriodLogo.png" width="50%" alt="FreePeriod Official Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://free-period-website.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+          <a href="https://github.com/user-attachments/assets/2820ff83-e6cf-4cd4-804c-002bc7631260" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Sustainable Menstrual Care Platform<br>
+          • Multilingual & Location Services<br>
+          • Next.js, React & Impact Tracking
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Forward with Her</h3>
+      <div align="center">  
+        <a href="https://forward-with-her.vercel.app/" target="_blank"><img src="/public/brands/forward-with-her.svg" width="50%" alt="Forward with Her Website"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/3d-model-viewer" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://forward-with-her.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Mentorship Program Website<br>
+          • Bilingual Support (EN/CN)<br>
+          • Next.js 15, React 19 & Three.js
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 
 <br />

@@ -334,6 +334,27 @@ npx chan-meng
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">GitHub Visitor Counter</h3>
+      <div align="center">  
+        <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank"><img src="/public/brands/github-visitor-counter-logo-1.svg" width="50%" alt="GitHub Visitor Counter"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/github-visitor-counter" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Show Global Reach & Impact<br>
+          • Real-time Visitor Analytics<br>
+          • Professional Statistics Display
+        </p>
+      </div>
+    </td>
   </tr>
   <tr>
     <td width="20%">
@@ -1678,7 +1699,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">GitHub Visitor Counter</h3>
       <div align="center">  
-        <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank"><img src="/public/brands/github-visitor-counter-logo.svg" width="50%" alt="GitHub Visitor Counter"/></a>
+        <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank"><img src="/public/brands/github-visitor-counter-logo-1.svg" width="50%" alt="GitHub Visitor Counter"/></a>
         <br>
         <br>
         <p>

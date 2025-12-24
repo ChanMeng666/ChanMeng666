@@ -387,7 +387,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">AI Programming Education</h3>
       <div align="center">  
-        <a href="https://programming.chanmeng.org/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
+        <a href="https://programming.chanmeng.org/" target="_blank"><img src="/public/brands/ai-programming-logo.svg" width="50%" alt="AI Programming Education Platform"/></a>
         <br>
         <br>
         <p>
@@ -1502,7 +1502,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">AI Programming Education</h3>
       <div align="center">  
-        <a href="https://programming.chanmeng.org/" target="_blank"><img src="/public/brands/AI-programming-1.svg" width="50%" alt="AI Programming Education Platform"/></a>
+        <a href="https://programming.chanmeng.org/" target="_blank"><img src="/public/brands/ai-programming-logo.svg" width="50%" alt="AI Programming Education Platform"/></a>
         <br>
         <br>
         <p>

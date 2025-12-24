@@ -503,7 +503,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Gradient SVG Generator</h3>
       <div align="center">  
-        <a href="https://gradient-svg-generator.vercel.app/" target="_blank"><img src="/public/brands/gradient-svg-generator-1.svg" width="50%" alt="Gradient SVG Generator"/></a>
+        <a href="https://gradient-svg-generator.vercel.app/" target="_blank"><img src="/public/brands/gradient-svg-generator-logo.svg" width="50%" alt="Gradient SVG Generator"/></a>
         <br>
         <br>
         <p>
@@ -1568,7 +1568,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Gradient SVG Generator</h3>
       <div align="center">  
-        <a href="https://gradient-svg-generator.vercel.app/" target="_blank"><img src="/public/brands/gradient-svg-generator-1.svg" width="50%" alt="Gradient SVG Generator"/></a>
+        <a href="https://gradient-svg-generator.vercel.app/" target="_blank"><img src="/public/brands/gradient-svg-generator-logo.svg" width="50%" alt="Gradient SVG Generator"/></a>
         <br>
         <br>
         <p>

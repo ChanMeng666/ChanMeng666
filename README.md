@@ -491,6 +491,43 @@ npx chan-meng
 
 <br />
 
+<div align="right">
+  <a href="#readme-commercial-apps">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Commercial%20Apps-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
+
+<br />
+
+<a id="readme-non-commercial-apps"></a>
+
+<div align="right">
+  <em><small>Designed with <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a></small></em>
+</div>
+
+![Non-commercial Open-source Tools](https://gradient-svg-generator.vercel.app/api/svg?text=Non-commercial+Open-source+Tools&height=150&template=energy-teeth)
+
+<!-- Non-commercial Applications (Always Visible) -->
+
+<table>
+  <tr>
+
+  </tr>
+  <tr>
+
+  </tr>
+</table>
+
+<br />
+
+<div align="right">
+  <a href="#readme-non-commercial-apps">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Non%20Commercial%20Apps-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>
+  </a>
+</div>
+
+<br />
+
 <a id="readme-projects"></a>
 
 <div align="right">

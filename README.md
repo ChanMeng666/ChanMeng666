@@ -474,7 +474,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Library Management</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/library-management-system" target="_blank"><img src="/public/brands/library-management-system.svg" width="50%" alt="Library Management System"/></a>
+        <a href="https://github.com/ChanMeng666/library-management-system" target="_blank"><img src="/public/brands/library-management-system-logo.svg" width="50%" alt="Library Management System"/></a>
         <br>
         <br>
         <p>
@@ -901,7 +901,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Library Management</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/library-management-system" target="_blank"><img src="/public/brands/library-management-system.svg" width="50%" alt="Library Management System"/></a>
+        <a href="https://github.com/ChanMeng666/library-management-system" target="_blank"><img src="/public/brands/library-management-system-logo.svg" width="50%" alt="Library Management System"/></a>
         <br>
         <br>
         <p>

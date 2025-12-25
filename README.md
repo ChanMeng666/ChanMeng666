@@ -492,6 +492,30 @@ npx chan-meng
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">AI Programming Education</h3>
+      <div align="center">  
+        <a href="https://programming.chanmeng.org/" target="_blank"><img src="/public/brands/ai-programming-logo.svg" width="50%" alt="AI Programming Education Platform"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/ai-programming-teaching-project" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://programming.chanmeng.org/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
+          </a>
+          <a href="https://discord.gg/T3NJG5n98a" target="_blank">
+            <img src="https://img.shields.io/badge/Join_Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI Programming Education<br>
+          • Docusaurus Platform<br>
+          • Bilingual Interactive Tutorials
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 

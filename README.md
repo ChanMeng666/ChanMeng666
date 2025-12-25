@@ -385,7 +385,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">LinkedIn Jobs Search</h3>
       <div align="center">  
-        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search-1.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
+        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search-logo.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
         <br>
         <br>
         <p>
@@ -943,7 +943,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">LinkedIn Jobs Search</h3>
       <div align="center">  
-        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search-1.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
+        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search-logo.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
         <br>
         <br>
         <p>

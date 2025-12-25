@@ -266,30 +266,7 @@ npx chan-meng
         </p>
       </div>
     </td>
-    <td width="20%">
-      <h3 align="center">Claude Code Audio Hooks</h3>
-      <div align="center">  
-        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/claude-code-audio-hooks-logo.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
-        <br>
-        <br>
-        <p>
-          <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
-          <a href="https://github.com/ChanMeng666/claude-code-audio-hooks/releases" target="_blank">
-            <img src="https://img.shields.io/badge/Releases-brightgreen?style=for-the-badge&logo=svg&logoColor=white"/>
-          </a>
-          <a href="https://github.com/user-attachments/assets/a9919363-f76c-4dd2-9141-e1c681573d75" target="_blank">
-            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
-          </a>
-        </p>
-        <p align="left">
-          • Intelligent audio notifications for Claude Code CLI with 9 notification types<br>
-          • Cross-platform support: Windows, Linux, macOS with one-command installation<br>
-          • Customizable audio files with dual-mode configuration (interactive & programmatic)
-        </p>
-      </div>
-    </td>
+
   </tr>
   <tr>
     <td width="20%">
@@ -511,7 +488,30 @@ npx chan-meng
 
 <table>
   <tr>
-
+    <td width="20%">
+      <h3 align="center">Claude Code Audio Hooks</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/claude-code-audio-hooks-logo.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/claude-code-audio-hooks/releases" target="_blank">
+            <img src="https://img.shields.io/badge/Releases-brightgreen?style=for-the-badge&logo=svg&logoColor=white"/>
+          </a>
+          <a href="https://github.com/user-attachments/assets/a9919363-f76c-4dd2-9141-e1c681573d75" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Intelligent audio notifications for Claude Code CLI with 9 notification types<br>
+          • Cross-platform support: Windows, Linux, macOS with one-command installation<br>
+          • Customizable audio files with dual-mode configuration (interactive & programmatic)
+        </p>
+      </div>
+    </td>
   </tr>
   <tr>
 

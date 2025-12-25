@@ -565,6 +565,51 @@ npx chan-meng
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Google News MCP Server</h3>
+      <div align="center">  
+        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news-1.svg" width="50%" alt="Google News MCP Server"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/server-google-news" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
+          </a>
+          <a href="https://github.com/user-attachments/assets/1cc71c27-f840-4c94-9ab5-460d84ba4779" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Multi-Language Support<br>
+          • Auto News Categorization<br>
+          • Flexible Search Options
+        </p>
+      </div>
+    </td>
+    <td width="20%">
+      <h3 align="center">Google Jobs MCP Server</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank"><img src="/public/brands/server-google-jobs-1.svg" width="50%" alt="Google Jobs MCP Server"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
+          </a>
+        </p>
+        <p align="left">
+          • Multi-Language Support<br>
+          • Rich Job Details<br>
+          • Advanced Search Features
+        </p>
+      </div>
+    </td>
   </tr>
   <tr>
 

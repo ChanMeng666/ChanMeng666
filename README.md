@@ -2030,6 +2030,40 @@ Transform your GitHub profile and resume into powerful career assets!
 </table>
 </details>
 
+<!-- Open Source Contributions Section -->
+
+<details>
+<summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Handshake.png" alt="Handshake" width="25" height="25" /> Open Source Contributions</h3></summary>
+<table>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Claude Code Plugins</h3>
+      <div align="center">  
+        <a href="https://github.com/wshobson/agents" target="_blank"><img src="https://github.com/wshobson/agents/raw/main/.github/logo.png" width="50%" alt="Claude Code Plugins" onerror="this.onerror=null; this.src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/wshobson/agents" target="_blank">
+           <img src="https://img.shields.io/badge/Contributor-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/wshobson/agents" target="_blank">
+            <img src="https://img.shields.io/badge/Stars-⭐-brightgreen?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://smithery.ai/skills?ns=wshobson" target="_blank">
+            <img src="https://img.shields.io/badge/Marketplace-blue?style=for-the-badge&logo=claude"/>
+          </a>
+        </p>
+        <p align="left">
+          • 99 Specialized AI Agents<br>
+          • 67 Focused Plugins<br>
+          • 107 Agent Skills & 15 Workflow Orchestrators
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+</details>
+
 <!-- More Projects Button -->
 
 <div align="center">

@@ -1334,6 +1334,27 @@ npx chan-meng
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">AI Hackathon Festival 2025 Assistant</h3>
+      <div align="center">  
+        <a href="https://ai-hackathon-assistant-2025.vercel.app/" target="_blank"><img src="/public/brands/AI-Hackathon-logo-full.svg" width="50%" alt="AI Hackathon Festival 2025 Assistant"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
+          <a href="https://ai-hackathon-assistant-2025.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • Commercial-grade AI platform for Auckland University of Technology, AI Forum NZ and She Sharp<br>
+          • Full-screen AI chat with Google Gemini 2.5 Flash & community-driven FAQ voting system<br>
+          • Production-ready deployment with Notion backend integration & responsive design
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

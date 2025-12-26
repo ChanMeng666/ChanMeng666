@@ -2047,6 +2047,27 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">AI vs Human Game</h3>
+      <div align="center">  
+        <a href="https://ai-human-game.vercel.app/" target="_blank"><img src="/public/brands/ai-human-game.svg" width="50%" alt="AI vs Human Guessing Game"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/ai-human-game" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://ai-human-game.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI vs Human Content Detection<br>
+          • Multi-Category Testing (Text/Image/Audio/Video)<br>
+          • Interactive Gameplay & Real-time Scoring
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

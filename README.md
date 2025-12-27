@@ -1712,6 +1712,27 @@ npx chan-meng
   </tr>
   <tr>
     <td width="20%">
+      <h3 align="center">Chan Meng CLI</h3>
+      <div align="center">  
+        <a href="https://www.npmjs.com/package/chan-meng" target="_blank"><img src="/public/brands/chan-meng-cli.svg" width="50%" alt="Chan Meng CLI - Interactive Terminal Experience"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/chan-meng" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://www.npmjs.com/package/chan-meng" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=npm"/>
+          </a>
+        </p>
+        <p align="left">
+          • Interactive Story-Driven Terminal Experience<br>
+          • One-Click NPX Execution - No Installation<br>
+          • Minimalist Philosophy Showcase
+        </p>
+      </div>
+    </td>
+    <td width="20%">
       <h3 align="center">Vitex</h3>
       <div align="center">  
         <a href="https://www.vitex.org.nz/" target="_blank"><img src="/public/brands/vitex.svg" width="50%" alt="Vitex - Professional LaTeX Resume Generator"/></a>

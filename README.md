@@ -521,17 +521,17 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">ESOL Platform</h3>
       <div align="center">  
-        <a href="https://www.crimsoneducation.org/us" target="_blank"><img src="/public/brands/nzcel-prep-logo.svg" width="50%" alt="ESOL Platform Logo"/></a>
+        <a href="https://nzcel-prep.vercel.app" target="_blank"><img src="/public/brands/nzcel-prep-logo.svg" width="50%" alt="ESOL Platform Logo"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Commercial-FF6B35?style=for-the-badge&logo=business&logoColor=white"/>
           </span>
-          <span>
-            <img src="https://img.shields.io/badge/Crimson_Partnership-8B0000?style=for-the-badge&logo=graduation-cap&logoColor=white"/>
-          </span>
           <a href="https://www.crimsoneducation.org/us" target="_blank">
+            <img src="https://img.shields.io/badge/Crimson_Education_Partnership-8B0000?style=for-the-badge&logo=graduation-cap&logoColor=white"/>
+          </a>
+          <a href="https://nzcel-prep.vercel.app" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>

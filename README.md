@@ -1160,7 +1160,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Design Pages</h3>
       <div align="center">  
-        <a href="https://chanmeng666.github.io/design-pages" target="_blank"><img src="/public/brands/design-pages-logos.svg" width="50%" alt="Design Pages"/></a>
+        <a href="https://chanmeng666.github.io/design-pages" target="_blank"><img src="/public/brands/design-pages-logo.svg" width="50%" alt="Design Pages"/></a>
         <br>
         <br>
         <p>
@@ -1172,9 +1172,11 @@ npx chan-meng
           </a>
         </p>
         <p align="left">
-          • Interactive Digital Design Portfolio<br>
-          • CSS3 Animations & 3D Effects<br>
-          • Pure HTML/CSS/JavaScript
+          • Interactive Digital Design Portfolio & Visual Experiments<br>
+          • Full-Screen Infinite Scrolling Gallery with GSAP<br>
+          • 16 Unique Design Experiments<br>
+          • Advanced CSS3 Animations, 3D Effects & Geometric Patterns<br>
+          • Pure HTML/CSS/JavaScript + GSAP
         </p>
       </div>
     </td>

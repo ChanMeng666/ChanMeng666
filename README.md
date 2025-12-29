@@ -389,9 +389,9 @@ npx chan-meng
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/linkedin-jobs-search" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
           <a href="https://linkedin-jobs-search.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
           </a>
@@ -968,9 +968,9 @@ npx chan-meng
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/linkedin-jobs-search" target="_blank">
-           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
-          </a>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
+          </span>
           <a href="https://linkedin-jobs-search.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
           </a>

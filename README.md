@@ -2134,6 +2134,29 @@ Transform your GitHub profile and resume into powerful career assets!
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Sanicle FemTech Mobile</h3>
+      <div align="center">  
+        <a href="https://chanmeng666.github.io/sanicle-ai-mobile/" target="_blank"><img src="/public/brands/sanicle-leave-logo.svg" width="50%" alt="Sanicle FemTech Mobile"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Prototype-orange?style=for-the-badge"/>
+          </span>
+          <a href="https://chanmeng666.github.io/sanicle-ai-mobile/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=githubpages&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Workplace Female Health Management<br>
+          • AI-Powered Health Assistant<br>
+          • Period Tracking & Health Analytics
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

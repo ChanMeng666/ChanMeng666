@@ -2233,6 +2233,27 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Otherworld God-Farmer</h3>
+      <div align="center">  
+        <a href="https://otherworld-god-farmer.vercel.app/" target="_blank"><img src="/public/brands/otherworld-god-farmer-logo.svg" width="50%" alt="Otherworld God-Farmer"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/otherworld-god-farmer" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://otherworld-god-farmer.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • 2D Pixel-Style Farm Simulation Game<br>
+          • Angular 19 & Pixi.js 8<br>
+          • Farming, Building & Social Systems
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

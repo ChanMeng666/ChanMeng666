@@ -2168,6 +2168,34 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">CopilotKit</h3>
+      <div align="center">  
+        <a href="https://github.com/copilotkit/copilotkit" target="_blank"><img src="/public/brands/copilot-kit-logo.svg" width="50%" alt="CopilotKit"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/copilotkit/copilotkit" target="_blank">
+            <img src="https://img.shields.io/github/stars/copilotkit/copilotkit?style=for-the-badge&logo=github&logoColor=white"/>
+          </a>
+          <a href="https://www.npmjs.com/package/@copilotkit/react-core" target="_blank">
+            <img src="https://img.shields.io/npm/v/%40copilotkit%2Freact-core?style=for-the-badge&logo=npm&logoColor=white&label=NPM"/>
+          </a>
+          <a href="https://discord.gg/6dffbvGU3D" target="_blank">
+            <img src="https://img.shields.io/discord/1122926057641742418?style=for-the-badge&logo=discord&logoColor=white&label=Discord"/>
+          </a>
+          <a href="https://docs.copilotkit.ai" target="_blank">
+            <img src="https://img.shields.io/badge/Docs-blue?style=for-the-badge&logo=readthedocs"/>
+          </a>
+        </p>
+        <p align="left">
+          • Framework agnostic (React, Next.js, AGUI)<br>
+          • Production-ready UI components<br>
+          • Built-in security & prompt injection protection<br>
+          • Open source with MIT License
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

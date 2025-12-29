@@ -2159,6 +2159,30 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Podcast App Prototype</h3>
+      <div align="center">  
+        <a href="https://chanmeng666.github.io/podcast-app-prototype/" target="_blank"><img src="/public/brands/portfolio.svg" width="50%" alt="Podcast App Prototype"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Prototype-orange?style=for-the-badge"/>
+          </span>
+          <a href="https://github.com/ChanMeng666/podcast-app-prototype" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chanmeng666.github.io/podcast-app-prototype/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=githubpages&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Mental Wellness Podcast Experience<br>
+          • AI-Powered Mental Coach<br>
+          • Immersive Audio Player Interface
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

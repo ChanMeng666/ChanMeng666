@@ -2176,16 +2176,13 @@ Transform your GitHub profile and resume into powerful career assets!
         <br>
         <p>
           <a href="https://github.com/copilotkit/copilotkit" target="_blank">
-            <img src="https://img.shields.io/github/stars/copilotkit/copilotkit?style=for-the-badge&logo=github&logoColor=white"/>
+           <img src="https://img.shields.io/badge/Contributor-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://www.npmjs.com/package/@copilotkit/react-core" target="_blank">
-            <img src="https://img.shields.io/npm/v/%40copilotkit%2Freact-core?style=for-the-badge&logo=npm&logoColor=white&label=NPM"/>
+          <a href="https://github.com/copilotkit/copilotkit" target="_blank">
+            <img src="https://img.shields.io/github/stars/copilotkit/copilotkit?style=for-the-badge&logo=github&logoColor=white"/>
           </a>
           <a href="https://discord.gg/6dffbvGU3D" target="_blank">
             <img src="https://img.shields.io/discord/1122926057641742418?style=for-the-badge&logo=discord&logoColor=white&label=Discord"/>
-          </a>
-          <a href="https://docs.copilotkit.ai" target="_blank">
-            <img src="https://img.shields.io/badge/Docs-blue?style=for-the-badge&logo=readthedocs"/>
           </a>
           <a href="https://github.com/copilotkit/copilotkit/pull/2529" target="_blank">
             <img src="https://img.shields.io/badge/PR%232529-Contributor-blue?style=for-the-badge&logo=github"/>

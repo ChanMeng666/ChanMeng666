@@ -2145,7 +2145,7 @@ Transform your GitHub profile and resume into powerful career assets!
           <span>
             <img src="https://img.shields.io/badge/Prototype-orange?style=for-the-badge"/>
           </span>
-          <a href="https://chanmeng666.github.io/sanicle-ai-mobile/" target="_blank">
+          <a href="https://github.com/ChanMeng666/sanicle-ai-mobile" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chanmeng666.github.io/sanicle-ai-mobile/" target="_blank">

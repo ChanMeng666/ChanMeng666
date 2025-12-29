@@ -2187,6 +2187,12 @@ Transform your GitHub profile and resume into powerful career assets!
           <a href="https://docs.copilotkit.ai" target="_blank">
             <img src="https://img.shields.io/badge/Docs-blue?style=for-the-badge&logo=readthedocs"/>
           </a>
+          <a href="https://github.com/copilotkit/copilotkit/pull/2529" target="_blank">
+            <img src="https://img.shields.io/badge/PR%232529-Contributor-blue?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/copilotkit/copilotkit/pull/2068" target="_blank">
+            <img src="https://img.shields.io/badge/PR%232068-Contributor-blue?style=for-the-badge&logo=github"/>
+          </a>
         </p>
         <p align="left">
           • Framework agnostic (React, Next.js, AGUI)<br>

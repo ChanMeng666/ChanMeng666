@@ -1309,13 +1309,13 @@ npx chan-meng
       </div>
     </td>
     <td width="20%">
-      <h3 align="center">CustomerInsight</h3>
+      <h3 align="center">Customer Insight</h3>
       <div align="center">  
         <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight-1.svg" width="50%" alt="Streamlit Logo"/></a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ChanMeng666/CustomerInsight" target="_blank">
+          <a href="https://github.com/ChanMeng666/customer-insight" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank">

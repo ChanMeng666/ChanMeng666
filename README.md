@@ -1441,7 +1441,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Emoji Story Generator</h3>
       <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank"><img src="/public/brands/emoji-story-generator-1.svg" width="50%" alt="Emoji Story Generator"/></a>
+        <a href="https://huggingface.co/spaces/ChanMeng666/emoji-story-generator" target="_blank"><img src="/public/brands/emoji-story-generator-logo.svg" width="50%" alt="Emoji Story Generator"/></a>
         <br>
         <br>
         <p>

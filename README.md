@@ -4335,11 +4335,11 @@ alt="Anthropic Logo"/>
 
 <div align="center">
 
+  <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
+
 [![committers.top badge](https://user-badge.committers.top/new_zealand/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand/ChanMeng666)
 
 [![committers.top badge](https://user-badge.committers.top/new_zealand_public/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand_public/ChanMeng666)
-
-  <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
 
 <br />
 

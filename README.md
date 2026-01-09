@@ -519,6 +519,27 @@ npx chan-meng
   </tr>
   <tr>
     <td width="20%">
+      <h3 align="center">FanFic Lab</h3>
+      <div align="center">  
+        <a href="https://fanfic-lab.vercel.app/" target="_blank"><img src="/public/brands/fanfic-lab-logo.svg" width="50%" alt="FanFic Lab Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/fanfic-lab" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://fanfic-lab.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Powered Fanfiction Writing Platform<br>
+          • Smart Editor, Creative Wizard & Fandom Research<br>
+          • Next.js 16, CopilotKit & LangGraph.js
+        </p>
+      </div>
+    </td>
+    <td width="20%">
       <h3 align="center">ESOL Platform</h3>
       <div align="center">  
         <a href="https://nzcel-prep.vercel.app" target="_blank"><img src="/public/brands/nzcel-prep-logo.svg" width="50%" alt="ESOL Platform Logo"/></a>

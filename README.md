@@ -2322,6 +2322,34 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">MCP Servers</h3>
+      <div align="center">  
+        <a href="https://github.com/modelcontextprotocol/servers" target="_blank"><img src="/public/brands/Claude_AI.svg" width="50%" alt="MCP Servers"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/modelcontextprotocol/servers" target="_blank">
+           <img src="https://img.shields.io/badge/Early%20Contributor-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://github.com/modelcontextprotocol/servers" target="_blank">
+            <img src="https://img.shields.io/github/stars/modelcontextprotocol/servers?style=for-the-badge&logo=github&logoColor=white"/>
+          </a>
+          <a href="https://github.com/modelcontextprotocol/servers/issues/75#issuecomment-2502877979" target="_blank">
+            <img src="https://img.shields.io/badge/Issue%2375-Solution-blue?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://modelcontextprotocol.io" target="_blank">
+            <img src="https://img.shields.io/badge/MCP-Protocol-blueviolet?style=for-the-badge&logo=anthropic"/>
+          </a>
+        </p>
+        <p align="left">
+          • Early Windows NVM/NPM configuration solution<br>
+          • Comprehensive MCP servers setup guide<br>
+          • Helped establish Windows compatibility patterns<br>
+          • Official Anthropic MCP reference implementations
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

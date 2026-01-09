@@ -4334,10 +4334,12 @@ alt="Anthropic Logo"/>
 ![📈 GitHub Stats](https://gradient-svg-generator.vercel.app/api/svg?text=%F0%9F%93%88+GitHub%20Stats&template=cyber-symbiosis&height=200&color0=FF69B4&color1=FFB6C1&color2=FFC0CB&color3=FFCCCB&color4=FFE4E1&color5=FFF0F5)
 
 <div align="center">
-  <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30" height="30" style="margin-right: 10px;">
+
+[![committers.top badge](https://user-badge.committers.top/new_zealand/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand/ChanMeng666)
+
+[![committers.top badge](https://user-badge.committers.top/new_zealand_public/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand_public/ChanMeng666)
+
   <img src="https://komarev.com/ghpvc/?username=ChanMeng666&style=flat-square&color=blue" alt="visitors">
-  <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30" height="30" style="margin-right: 10px;">
-</div>
 
 <br />
 

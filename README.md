@@ -570,7 +570,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Claude Code Audio Hooks</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/claude-code-audio-hooks-logo.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
+        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/Claude_AI.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
         <br>
         <br>
         <p>
@@ -2043,7 +2043,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Claude Code Audio Hooks</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/claude-code-audio-hooks-logo.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
+        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/Claude_AI.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
         <br>
         <br>
         <p>

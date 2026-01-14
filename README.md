@@ -670,6 +670,9 @@ npx chan-meng
           <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
           </a>
+          <a href="https://github.com/user-attachments/assets/8f6739e1-7db7-4171-88b4-59c6290a4c72" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
         </p>
         <p align="left">
           • Multi-Language Support<br>
@@ -1984,6 +1987,9 @@ Transform your GitHub profile and resume into powerful career assets!
           </a>
           <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=claude"/>
+          </a>
+          <a href="https://github.com/user-attachments/assets/8f6739e1-7db7-4171-88b4-59c6290a4c72" target="_blank">
+            <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
           </a>
         </p>
         <p align="left">

@@ -4033,6 +4033,14 @@ alt="Anthropic Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">Docusaurus Navbar Styling Guide: Lessons Learned</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/docusaurus-navbar-styling-guide-lessons-learned-chan-meng-ss8he/" target="_blank">
+          <img src="/public/articles/Docusaurus-Navbar-Styling-Guide.png" width="100%" alt="Docusaurus Navbar Styling Guide"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

@@ -4041,6 +4041,14 @@ alt="Anthropic Logo"/>
         </a>
       </div>
     </td>
+    <td width="20%">
+      <h5 align="center">CopilotKit + LangGraph.js HITL Integration Guide</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/copilotkit-langgraphjs-hitl-integration-guide-chan-meng-tjzoe/" target="_blank">
+          <img src="/public/articles/CopilotKit-LangGraph-Integration-Guide.png" width="100%" alt="CopilotKit + LangGraph.js HITL Integration Guide"/>
+        </a>
+      </div>
+    </td>
   </tr>
 </table>
 </details>

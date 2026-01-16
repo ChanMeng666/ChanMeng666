@@ -4050,6 +4050,16 @@ alt="Anthropic Logo"/>
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h5 align="center">The Developer’s Guide: Configuring AWS SES for Bulk Email</h5>
+      <div align="center">  
+        <a href="https://www.linkedin.com/pulse/developers-guide-configuring-aws-ses-bulk-email-chan-meng-79ele/" target="_blank">
+          <img src="/public/articles/configuring-aws-ses-for-bulk-email.png" width="100%" alt="Configuring AWS SES for Bulk Email"/>
+        </a>
+      </div>
+    </td>
+  </tr>
 </table>
 </details>
 

@@ -385,14 +385,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">LinkedIn Jobs Search</h3>
       <div align="center">  
-        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search-logo.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
+        <a href="https://linkedin-jobs-search.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/linkedin-jobs-search-logo.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://linkedin-jobs-search.vercel.app/" target="_blank">
+          <a href="https://linkedin-jobs-search.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
           </a>
         </p>
@@ -1014,14 +1014,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">LinkedIn Jobs Search</h3>
       <div align="center">  
-        <a href="https://linkedin-jobs-search.vercel.app/" target="_blank"><img src="/public/brands/linkedin-jobs-search-logo.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
+        <a href="https://linkedin-jobs-search.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/linkedin-jobs-search-logo.svg" width="50%" alt="LinkedIn Jobs Search"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://linkedin-jobs-search.vercel.app/" target="_blank">
+          <a href="https://linkedin-jobs-search.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
           </a>
         </p>

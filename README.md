@@ -545,14 +545,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FanFic Lab</h3>
       <div align="center">  
-        <a href="https://fanfic-lab.vercel.app/" target="_blank"><img src="/public/brands/fanfic-lab-logo.svg" width="50%" alt="FanFic Lab Logo"/></a>
+        <a href="https://web-production-01677.up.railway.app" target="_blank"><img src="/public/brands/fanfic-lab-logo.svg" width="50%" alt="FanFic Lab Logo"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/fanfic-lab" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://fanfic-lab.vercel.app/" target="_blank">
+          <a href="https://web-production-01677.up.railway.app" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
@@ -1455,14 +1455,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FanFic Lab</h3>
       <div align="center">  
-        <a href="https://fanfic-lab.vercel.app/" target="_blank"><img src="/public/brands/fanfic-lab-logo.svg" width="50%" alt="FanFic Lab Logo"/></a>
+        <a href="https://web-production-01677.up.railway.app" target="_blank"><img src="/public/brands/fanfic-lab-logo.svg" width="50%" alt="FanFic Lab Logo"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/fanfic-lab" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://fanfic-lab.vercel.app/" target="_blank">
+          <a href="https://web-production-01677.up.railway.app" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>

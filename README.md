@@ -1268,6 +1268,8 @@ npx chan-meng
 
 <!-- AI Applications & Agents Section -->
 
+<a id="readme-ai-applications"></a>
+
 <details>
 <summary><h3>🤖 AI Applications & Agents</h3></summary>
 <table>
@@ -1486,9 +1488,18 @@ npx chan-meng
     </td>
   </tr>
 </table>
+
+<div align="right">
+  <a href="#readme-ai-applications">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20AI%20Applications%20%26%20Agents-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to AI Applications & Agents"/>
+  </a>
+</div>
+
 </details>
 
 <!-- Creative AI & Language Tools Section -->
+
+<a id="readme-creative-ai"></a>
 
 <details>
 <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Artist%20Palette.png" alt="Artist Palette" width="25" height="25" /> Creative AI & Language Tools</h3></summary>
@@ -1601,9 +1612,18 @@ npx chan-meng
     </td>
   </tr>
 </table>
+
+<div align="right">
+  <a href="#readme-creative-ai">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Creative%20AI%20%26%20Language%20Tools-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Creative AI & Language Tools"/>
+  </a>
+</div>
+
 </details>
 
 <!-- Machine Learning Research Section -->
+
+<a id="readme-machine-learning-research"></a>
 
 <details>
 <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Microscope.png" alt="Microscope" width="25" height="25" /> Machine Learning Research</h3></summary>
@@ -1716,6 +1736,13 @@ npx chan-meng
     </td>
   </tr>
 </table>
+
+<div align="right">
+  <a href="#readme-machine-learning-research">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Machine%20Learning%20Research-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Machine Learning Research"/>
+  </a>
+</div>
+
 </details>
 
 <!-- Personal Branding Tools Section -->
@@ -1958,6 +1985,8 @@ Transform your GitHub profile and resume into powerful career assets!
 
 <!-- MCP Servers & Extensions Section -->
 
+<a id="readme-mcp-servers"></a>
+
 <details>
 <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="Hammer and Wrench" width="25" height="25" /> MCP Servers & Extensions</h3></summary>
 <table>
@@ -2126,9 +2155,17 @@ Transform your GitHub profile and resume into powerful career assets!
   </tr>
 </table>
 
+<div align="right">
+  <a href="#readme-mcp-servers">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20MCP%20Servers%20%26%20Extensions-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to MCP Servers & Extensions"/>
+  </a>
+</div>
+
 </details>
 
 <!-- Mobile & Games Section -->
+
+<a id="readme-mobile-games"></a>
 
 <details>
 <summary><h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Mobile%20Phone.png" alt="Mobile Phone" width="25" height="25" /> Mobile & Games</h3></summary>
@@ -2315,9 +2352,18 @@ Transform your GitHub profile and resume into powerful career assets!
     </td>
   </tr>
 </table>
+
+<div align="right">
+  <a href="#readme-mobile-games">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Mobile%20%26%20Games-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Mobile & Games"/>
+  </a>
+</div>
+
 </details>
 
 <!-- Open Source Contributions Section -->
+
+<a id="readme-open-source-contributions"></a>
 
 <details>
 <summary><h3>🤝 Open Source Contributions</h3></summary>
@@ -2411,6 +2457,13 @@ Transform your GitHub profile and resume into powerful career assets!
     </td>
   </tr>
 </table>
+
+<div align="right">
+  <a href="#readme-open-source-contributions">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Open%20Source%20Contributions-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Open Source Contributions"/>
+  </a>
+</div>
+
 </details>
 
 <!-- More Projects Button -->

@@ -815,6 +815,8 @@ npx chan-meng
 
 <!-- Web Applications Section -->
 
+<a id="readme-web-applications"></a>
+
 <details>
 <summary><h3>🌐 Web Applications</h3></summary>
 <table>
@@ -1255,6 +1257,13 @@ npx chan-meng
     </td>
   </tr>
 </table>
+
+<div align="right">
+  <a href="#readme-web-applications">
+    <img src="https://img.shields.io/badge/⬆️Back%20to%20Web%20Applications-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Web Applications"/>
+  </a>
+</div>
+
 </details>
 
 <!-- AI Applications & Agents Section -->

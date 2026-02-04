@@ -301,14 +301,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">AI Hackathon Festival 2025 Assistant</h3>
       <div align="center">  
-        <a href="https://ai-hackathon-assistant-2025.vercel.app/" target="_blank"><img src="/public/brands/AI-Hackathon-logo-full.svg" width="50%" alt="AI Hackathon Festival 2025 Assistant"/></a>
+        <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/AI-Hackathon-logo-full.svg" width="50%" alt="AI Hackathon Festival 2025 Assistant"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://ai-hackathon-assistant-2025.vercel.app/" target="_blank">
+          <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
@@ -615,14 +615,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">SendJoy</h3>
       <div align="center">  
-        <a href="https://send-joy.vercel.app/" target="_blank"><img src="/public/brands/send-joy-logo.svg" width="50%" alt="SendJoy - Visual Email Template Platform"/></a>
+        <a href="https://sendjoy.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/send-joy-logo.svg" width="50%" alt="SendJoy - Visual Email Template Platform"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/send-joy" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://send-joy.vercel.app/" target="_blank">
+          <a href="https://sendjoy.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
@@ -1423,14 +1423,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">AI Hackathon Festival 2025 Assistant</h3>
       <div align="center">  
-        <a href="https://ai-hackathon-assistant-2025.vercel.app/" target="_blank"><img src="/public/brands/AI-Hackathon-logo-full.svg" width="50%" alt="AI Hackathon Festival 2025 Assistant"/></a>
+        <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/AI-Hackathon-logo-full.svg" width="50%" alt="AI Hackathon Festival 2025 Assistant"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://ai-hackathon-assistant-2025.vercel.app/" target="_blank">
+          <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
@@ -1912,14 +1912,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">SendJoy</h3>
       <div align="center">  
-        <a href="https://send-joy.vercel.app/" target="_blank"><img src="/public/brands/send-joy-logo.svg" width="50%" alt="SendJoy - Visual Email Template Platform"/></a>
+        <a href="https://sendjoy.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/send-joy-logo.svg" width="50%" alt="SendJoy - Visual Email Template Platform"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/send-joy" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://send-joy.vercel.app/" target="_blank">
+          <a href="https://sendjoy.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>

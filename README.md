@@ -125,10 +125,19 @@ This is a professional GitHub profile showcasing Chan Meng's work as a full-stac
 </div>
 
 
+## 🤞 My Promise
+
+> [!TIP]
+> I live by a simple loop: code, eat, sleep, repeat. Experience this philosophy through an interactive CLI—no install, one command, under 5 seconds.
+
+<table>
+<tbody>
+<tr></tr>
+<tr>
+<td width="10000">
 <details>
-<summary>
-  <h2>🤞 My Promise</h2>
-</summary>
+
+<summary>&nbsp;&nbsp;<strong>Life in Code</strong></summary><br>
 
 ```java
 while (isAwake) {
@@ -139,7 +148,17 @@ while (isAwake) {
 }
 ```
 
-```ascii
+</details>
+</td>
+</tr>
+<tr></tr>
+<tr>
+<td width="10000">
+<details>
+
+<summary>&nbsp;&nbsp;<strong>CHAN MENG</strong></summary><br>
+
+```
  ██████╗██╗  ██╗ █████╗ ███╗   ██╗    ███╗   ███╗███████╗███╗   ██╗ ██████╗ 
 ██╔════╝██║  ██║██╔══██╗████╗  ██║    ████╗ ████║██╔════╝████╗  ██║██╔════╝ 
 ██║     ███████║███████║██╔██╗ ██║    ██╔████╔██║█████╗  ██╔██╗ ██║██║  ███╗
@@ -147,6 +166,16 @@ while (isAwake) {
 ╚██████╗██║  ██║██║  ██║██║ ╚████║    ██║ ╚═╝ ██║███████╗██║ ╚████║╚██████╔╝
  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝    ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝ ╚═════╝ 
 ```
+
+</details>
+</td>
+</tr>
+<tr></tr>
+<tr>
+<td width="10000">
+<details>
+
+<summary>&nbsp;&nbsp;<strong>Interactive CLI Introduction</strong></summary><br>
 
 <div align="center">
 
@@ -161,6 +190,11 @@ npx chan-meng
 </div>
 
 </details>
+</td>
+</tr>
+<tr></tr>
+</tbody>
+</table>
 
 <br />
 

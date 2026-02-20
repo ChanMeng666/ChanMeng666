@@ -177,11 +177,9 @@ while (isAwake) {
 <div align="center">
 
 **👇 Experience my philosophy through an interactive CLI journey 👇**
-
 ```bash
 npx chan-meng
 ```
-
 **🎭 One-click interactive introduction** **📱 No installation required** **⚡ < 5s startup time**
 
 </div>

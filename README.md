@@ -127,9 +127,6 @@ This is a professional GitHub profile showcasing Chan Meng's work as a full-stac
 
 ## 🤞 My Promise
 
-> [!TIP]
-> I live by a simple loop: code, eat, sleep, repeat. Experience this philosophy through an interactive CLI—no install, one command, under 5 seconds.
-
 <table>
 <tbody>
 <tr></tr>
@@ -156,7 +153,7 @@ while (isAwake) {
 <td width="10000">
 <details>
 
-<summary>&nbsp;&nbsp;<strong>CHAN MENG</strong></summary><br>
+<summary>&nbsp;&nbsp;<strong>ASCII Art</strong></summary><br>
 
 ```
  ██████╗██╗  ██╗ █████╗ ███╗   ██╗    ███╗   ███╗███████╗███╗   ██╗ ██████╗ 

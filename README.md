@@ -129,9 +129,8 @@ This is a professional GitHub profile showcasing Chan Meng's work as a full-stac
 
 <table>
 <tbody>
-<tr></tr>
 <tr>
-<td width="10000">
+<td width="100%">
 <details>
 
 <summary>&nbsp;&nbsp;<strong>Life in Code</strong></summary><br>
@@ -148,9 +147,8 @@ while (isAwake) {
 </details>
 </td>
 </tr>
-<tr></tr>
 <tr>
-<td width="10000">
+<td width="100%">
 <details>
 
 <summary>&nbsp;&nbsp;<strong>ASCII Art</strong></summary><br>
@@ -167,9 +165,8 @@ while (isAwake) {
 </details>
 </td>
 </tr>
-<tr></tr>
 <tr>
-<td width="10000">
+<td width="100%">
 <details>
 
 <summary>&nbsp;&nbsp;<strong>Interactive CLI Introduction</strong></summary><br>
@@ -187,7 +184,6 @@ while (isAwake) {
 </details>
 </td>
 </tr>
-<tr></tr>
 </tbody>
 </table>
 
@@ -734,9 +730,6 @@ while (isAwake) {
         </p>
       </div>
     </td>
-  </tr>
-  <tr>
-
   </tr>
 </table>
 

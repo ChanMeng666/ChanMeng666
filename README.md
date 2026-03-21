@@ -867,14 +867,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Chan's Portfolio v1.0.0</h3>
       <div align="center">  
-        <a href="https://3d-portfolio-blond-eight.vercel.app/" target="_blank"><img src="/public/brands/portfolio.svg" width="50%" alt="Portfolio Website"></a>
+        <a href="https://3d-portfolio-3bb.pages.dev/" target="_blank"><img src="/public/brands/portfolio.svg" width="50%" alt="Portfolio Website"></a>
         <br>
         <br>
         <p>
           <a href="https://buymeacoffee.com/chanmeng66u" target="_blank">
             <img src="https://img.shields.io/badge/5_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
-          <a href="https://3d-portfolio-blond-eight.vercel.app/" target="_blank">
+          <a href="https://3d-portfolio-3bb.pages.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>

@@ -1063,7 +1063,7 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Selwyn Panel Beaters Online Service</h3>
       <div align="center">  
-        <a href="https://repairos.chanmeng.org/" target="_blank"><img src="/public/brands/selwyn-panel-beaters-online-1.svg" width="50%" alt="Selwyn Panel Beaters Online Service"/></a>
+        <a href="https://repairos.chanmeng.org/" target="_blank"><img src="/public/brands/RepairOS-logo.svg" width="50%" alt="Selwyn Panel Beaters Online Service"/></a>
         <br>
         <br>
         <p>
@@ -1071,7 +1071,7 @@ while (isAwake) {
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://repairos.chanmeng.org/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=heroku&logoColor=white"/>
           </a>
         </p>
         <p align="left">

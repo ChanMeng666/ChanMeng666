@@ -909,14 +909,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">AgriHire Solutions</h3>
       <div align="center">  
-        <a href="https://agrihireaq.pythonanywhere.com/" target="_blank"><img src="/public/brands/AgriHire_Solutions-1.svg" width="100%" alt="AgriHire Solutions"/></a>
+        <a href="https://agrihire-solutions-fa6d9a841bd4.herokuapp.com/" target="_blank"><img src="/public/brands/AgriHire_Solutions-1.svg" width="100%" alt="AgriHire Solutions"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/agrihire-solutions" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://agrihireaq.pythonanywhere.com/" target="_blank">
+          <a href="https://agrihire-solutions-fa6d9a841bd4.herokuapp.com/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
           </a>
         </p>
@@ -1084,14 +1084,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Biosecurity</h3>
       <div align="center">  
-        <a href="https://1160210.pythonanywhere.com/" target="_blank"><img src="/public/brands/Biosecurity-1.svg" width="50%" alt="Biosecurity"/></a>
+        <a href="https://biosecurity-guide-app-a582c65bb9ec.herokuapp.com/" target="_blank"><img src="/public/brands/Biosecurity-1.svg" width="50%" alt="Biosecurity"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/biosecurity" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://1160210.pythonanywhere.com/" target="_blank">
+          <a href="https://biosecurity-guide-app-a582c65bb9ec.herokuapp.com/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
           </a>
         </p>

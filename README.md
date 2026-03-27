@@ -4303,7 +4303,7 @@ alt="Anthropic Logo"/>
 <div align="center">
   <p>Check out my latest YouTube videos where I share tutorials, project demos, and tech insights!</p>
   
-  <a href="https://www.youtube.com/channel/UCNfqqzosj2J6bBRVgz7qbJQ?sub_confirmation=1">
+  <a href="https://www.youtube.com/@ChanMeng666?sub_confirmation=1">
     <img src="https://img.shields.io/badge/Subscribe-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="Subscribe to YouTube"/>
   </a>
 </div>

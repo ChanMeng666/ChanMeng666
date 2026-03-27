@@ -1,67 +1,67 @@
-# YouTube 视频卡片配置指南
+# YouTube Video Cards Setup Guide
 
-## 📋 配置清单
+## 📋 Setup Checklist
 
-### ✅ 已完成
-- [x] 在 `.github/workflows/youtube-cards.yml` 创建了 GitHub Actions 工作流
-- [x] 在 README.md 中添加了 YouTube 视频展示板块
-- [x] 添加了必要的 HTML 注释标记 `<!-- BEGIN YOUTUBE-CARDS -->` 和 `<!-- END YOUTUBE-CARDS -->`
+### ✅ Already Done
+- [x] Created GitHub Actions workflow at `.github/workflows/youtube-cards.yml`
+- [x] Added YouTube video showcase section to README.md
+- [x] Added required HTML comment markers `<!-- BEGIN YOUTUBE-CARDS -->` and `<!-- END YOUTUBE-CARDS -->`
 
-### 🔧 需要你完成的配置
+### 🔧 Steps You Need to Complete
 
-## 步骤 1: 获取你的 YouTube 频道 ID
+## Step 1: Get Your YouTube Channel ID
 
-有以下几种方法获取频道 ID：
+There are several ways to find your channel ID:
 
-### 方法 1: 从频道 URL 获取
-如果你的频道 URL 是这样的格式：
+### Method 1: From the Channel URL
+If your channel URL looks like this:
 ```
 https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxxxxxx
 ```
-那么 `UCxxxxxxxxxxxxxxxxxxxxxx` 就是你的频道 ID。
+Then `UCxxxxxxxxxxxxxxxxxxxxxx` is your channel ID.
 
-### 方法 2: 使用 YouTube 设置页面
-1. 登录 YouTube
-2. 点击右上角的头像
-3. 选择 "YouTube Studio"
-4. 在左侧菜单选择 "设置" > "频道" > "高级设置"
-5. 在 "频道 ID" 字段找到你的 ID
+### Method 2: Via YouTube Settings
+1. Sign in to YouTube
+2. Click your avatar in the top-right corner
+3. Select "YouTube Studio"
+4. Choose "Settings" > "Channel" > "Advanced settings" from the left menu
+5. Find your ID in the "Channel ID" field
 
-### 方法 3: 从任意视频获取
-1. 打开你频道的任意一个视频
-2. 右键点击频道名称，选择 "复制链接地址"
-3. 链接中包含的 `UCxxxxxxxxxxxxxxxxxxxxxx` 就是频道 ID
+### Method 3: From Any Video
+1. Open any video on your channel
+2. Right-click the channel name and select "Copy link address"
+3. The `UCxxxxxxxxxxxxxxxxxxxxxx` part in the link is your channel ID
 
-## 步骤 2: 更新工作流配置文件
+## Step 2: Update the Workflow Configuration File
 
-打开 `.github/workflows/youtube-cards.yml` 文件，找到这一行：
+Open `.github/workflows/youtube-cards.yml` and find this line:
 ```yaml
 channel_id: UCYOUR_CHANNEL_ID_HERE
 ```
 
-将 `UCYOUR_CHANNEL_ID_HERE` 替换为你的实际频道 ID，例如：
+Replace `UCYOUR_CHANNEL_ID_HERE` with your actual channel ID, for example:
 ```yaml
 channel_id: UCipSxT7a3rn81vGLw9lqRkg
 ```
 
-## 步骤 3: 更新 README 中的订阅链接
+## Step 3: Update the Subscribe Link in README
 
-在 README.md 中找到这一行：
+Find this line in README.md:
 ```html
 <a href="https://www.youtube.com/@YourChannelHandle?sub_confirmation=1">
 ```
 
-将 `@YourChannelHandle` 替换为你的频道句柄（handle），例如：
+Replace `@YourChannelHandle` with your channel handle, for example:
 ```html
 <a href="https://www.youtube.com/@ChanMeng?sub_confirmation=1">
 ```
 
-💡 **提示**: 频道句柄是以 @ 开头的用户名，可以在你的频道页面 URL 中找到。
+💡 **Tip**: Your channel handle is the username starting with @, which you can find in your channel page URL.
 
-## 步骤 4: 提交更改
+## Step 4: Commit Your Changes
 
-1. 提交 `.github/workflows/youtube-cards.yml` 和 `README.md` 的更改
-2. 推送到 GitHub
+1. Commit the changes to `.github/workflows/youtube-cards.yml` and `README.md`
+2. Push to GitHub
 
 ```bash
 git add .github/workflows/youtube-cards.yml README.md
@@ -69,102 +69,101 @@ git commit -m "feat: add YouTube video cards integration"
 git push origin main
 ```
 
-## 步骤 5: 手动触发工作流（第一次运行）
+## Step 5: Manually Trigger the Workflow (First Run)
 
-1. 访问你的 GitHub 仓库
-2. 点击顶部的 "Actions" 标签
-3. 在左侧选择 "GitHub Readme YouTube Cards" 工作流
-4. 点击右侧的 "Run workflow" 按钮
-5. 选择分支（通常是 main）并点击绿色的 "Run workflow" 按钮
+1. Go to your GitHub repository
+2. Click the "Actions" tab at the top
+3. Select the "GitHub Readme YouTube Cards" workflow on the left
+4. Click the "Run workflow" button on the right
+5. Choose your branch (usually main) and click the green "Run workflow" button
 
-等待几秒钟，工作流会自动：
-- 获取你最新的 6 个视频
-- 生成 SVG 卡片
-- 更新你的 README.md
-- 自动提交更改
+After a few seconds, the workflow will automatically:
+- Fetch your latest 6 videos
+- Generate SVG cards
+- Update your README.md
+- Commit the changes
 
-## 🎨 高级配置选项
+## 🎨 Advanced Configuration Options
 
-### 修改显示的视频数量
-在 `youtube-cards.yml` 中修改：
+### Change the Number of Videos Displayed
+Edit in `youtube-cards.yml`:
 ```yaml
-max_videos: 6  # 改为你想要的数量，如 8 或 10
+max_videos: 6  # change to your preferred number, e.g. 8 or 10
 ```
 
-### 调整卡片宽度
+### Adjust Card Width
 ```yaml
-card_width: 250  # 默认 250px，可以调整
+card_width: 250  # default 250px, adjustable
 ```
 
-### 修改标题行数
+### Change Title Line Count
 ```yaml
-max_title_lines: 2  # 标题最多显示的行数
+max_title_lines: 2  # maximum number of lines for the title
 ```
 
-### 更改运行频率
-在 `youtube-cards.yml` 中修改 cron 表达式：
+### Change Run Frequency
+Edit the cron expression in `youtube-cards.yml`:
 ```yaml
 schedule:
-  - cron: "0 */6 * * *"  # 每 6 小时运行一次
-  # 或
-  - cron: "0 0 * * *"    # 每天运行一次
+  - cron: "0 */6 * * *"  # runs every 6 hours
+  # or
+  - cron: "0 0 * * *"    # runs every day
 ```
 
-## 🔑 可选：启用视频时长显示
+## 🔑 Optional: Enable Video Duration Display
 
-如果你想显示视频时长，需要：
+If you want to show video duration, you need to:
 
-1. 获取 YouTube API 密钥：
-   - 访问 [Google Cloud Console](https://console.cloud.google.com/)
-   - 创建新项目或选择现有项目
-   - 启用 "YouTube Data API v3"
-   - 创建 API 密钥
+1. Get a YouTube API key:
+   - Visit [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a new project or select an existing one
+   - Enable "YouTube Data API v3"
+   - Create an API key
 
-2. 在 GitHub 仓库中添加密钥：
-   - 进入仓库 Settings > Secrets and variables > Actions
-   - 点击 "New repository secret"
+2. Add the secret to your GitHub repository:
+   - Go to repository Settings > Secrets and variables > Actions
+   - Click "New repository secret"
    - Name: `YOUTUBE_API_KEY`
-   - Value: 粘贴你的 API 密钥
+   - Value: paste your API key
 
-3. 在 `youtube-cards.yml` 中启用：
+3. Enable it in `youtube-cards.yml`:
    ```yaml
    youtube_api_key: ${{ secrets.YOUTUBE_API_KEY }}
    show_duration: true
    ```
 
-## 📝 注意事项
+## 📝 Notes
 
-1. **自动更新**: 工作流默认每小时运行一次，自动更新你的视频卡片
-2. **提交权限**: 工作流需要 `contents: write` 权限才能自动提交更改
-3. **分支保护**: 如果你的 main 分支启用了保护规则，可能需要调整设置以允许 GitHub Actions 提交
+1. **Auto-update**: The workflow runs every hour by default and automatically refreshes your video cards
+2. **Write permission**: The workflow requires `contents: write` permission to auto-commit changes
+3. **Branch protection**: If your main branch has protection rules enabled, you may need to adjust settings to allow GitHub Actions to commit
 
-## 🐛 常见问题排查
+## 🐛 Troubleshooting
 
-### 问题：工作流运行失败
-**解决方案**: 
-- 检查频道 ID 是否正确
-- 确认工作流有写入权限
-- 查看 Actions 日志获取详细错误信息
+### Issue: Workflow run fails
+**Solution**:
+- Verify the channel ID is correct
+- Confirm the workflow has write permission
+- Check the Actions logs for detailed error messages
 
-### 问题：视频没有更新
-**解决方案**:
-- 手动触发工作流测试
-- 检查 cron 表达式是否正确
-- 确认你的频道有公开视频
+### Issue: Videos are not updating
+**Solution**:
+- Manually trigger the workflow to test
+- Check that the cron expression is correct
+- Confirm your channel has public videos
 
-### 问题：卡片显示不正常
-**解决方案**:
-- 检查 HTML 注释标记是否完整
-- 确认 README.md 路径配置正确
-- 查看生成的提交是否成功
+### Issue: Cards display incorrectly
+**Solution**:
+- Check that the HTML comment markers are intact
+- Confirm the README.md path is configured correctly
+- Verify that the generated commit succeeded
 
-## 📚 更多资源
+## 📚 More Resources
 
-- [官方文档](https://github.com/DenverCoder1/github-readme-youtube-cards)
+- [Official Documentation](https://github.com/DenverCoder1/github-readme-youtube-cards)
 - [Wiki](https://github.com/DenverCoder1/github-readme-youtube-cards/wiki)
-- [常见问题](https://github.com/DenverCoder1/github-readme-youtube-cards/wiki)
+- [FAQ](https://github.com/DenverCoder1/github-readme-youtube-cards/wiki)
 
 ---
 
-完成配置后，你的 README 将自动展示你最新的 YouTube 视频！🎉
-
+Once the setup is complete, your README will automatically showcase your latest YouTube videos! 🎉

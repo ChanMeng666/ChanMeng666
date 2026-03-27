@@ -2,7 +2,7 @@ name: GitHub Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # 每天运行一次
+    - cron: "0 0 * * *"  # runs every day
   workflow_dispatch:
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Pacific/Auckland
           
-          # 个性化统计内容
+          # personalized statistics
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           

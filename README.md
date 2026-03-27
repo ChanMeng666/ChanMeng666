@@ -4357,9 +4357,9 @@ alt="Anthropic Logo"/>
       <h3 align="center">Future Turing 未来图灵</h3>
       <div align="center">  
         <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
-          <img src="/public/podcasts/decoding-the-future-cover-cn-1.jpg" width="70%" alt="未来图灵 Podcast"/>
+          <img src="/public/podcasts/decoding-the-future-cover-cn-1.jpg" width="70%" alt="Future Turing 未来图灵 Podcast"/>
         </a>
-        <p>智能的边界在哪里？未来将如何被代码塑造？欢迎来到「Future Turing 未来图灵」！本节目专注于解读人工智能（AI）、大语言模型（LLMs）等尖端领域的关键研究论文。</p>
+        <p>Where is the boundary of intelligence? How will the future be shaped by code? Welcome to Future Turing! This show focuses on decoding landmark research papers in Artificial Intelligence, LLMs, and other cutting-edge fields.</p>
         <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
           <img src="https://img.shields.io/badge/Listen%20on-Spotify-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen on Spotify"/>
         </a>
@@ -4373,7 +4373,7 @@ alt="Anthropic Logo"/>
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=3040cb1dc3494a00" target="_blank">
           <img src="/public/podcasts/Praxis-and-Pages-1.jpg" width="70%" alt="Praxis and Pages"/>
         </a>
-        <p>欢迎来到「Praxis and Pages 知行书话」！这是一个借助 NotebookLM 工具，与你一同探索人文社科书籍魅力的中文播客。我将利用 NotebookLM 辅助我对书籍内容进行梳理、提炼和思考，并把这些精华内容转化为生动的语言分享给你。</p>
+        <p>Welcome to Praxis and Pages! This podcast explores the world of humanities and social science books with the help of NotebookLM. I use NotebookLM to organize, distill, and reflect on book content, then share those insights with you in vivid, engaging conversations.</p>
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=25d9e23a4a8c4456" target="_blank">
           <img src="https://img.shields.io/badge/Listen%20on-Spotify-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen on Spotify"/>
         </a>
@@ -4385,7 +4385,7 @@ alt="Anthropic Logo"/>
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=3040cb1dc3494a00" target="_blank">
           <img src="/public/podcasts/Beyond-Thirty-1.png" width="70%" alt="Beyond Thirty"/>
         </a>
-        <p>欢迎收听「Beyond Thirty 不止三十」！这是一档由我主持的对话类播客节目。作为一名30+岁的女性，我将邀请年龄在30至40岁之间的、来自各行各业的女性朋友们，进行轻松、真实的对谈。</p>
+        <p>Welcome to Beyond Thirty! This is a conversational podcast hosted by me. As a woman in her 30s, I invite women between the ages of 30 and 40 from all walks of life for open, authentic conversations.</p>
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=25d9e23a4a8c4456" target="_blank">
           <img src="https://img.shields.io/badge/Listen%20on-Spotify-%231DB954.svg?style=for-the-badge&logo=spotify&logoColor=white" alt="Listen on Spotify"/>
         </a>

@@ -171,23 +171,20 @@ while (isAwake) {
 
 <summary>&nbsp;&nbsp;<strong>Interactive CLI Introduction</strong></summary><br>
 
-<table>
-  <tr>
-    <td valign="middle">
-      <p><strong>👇 Experience my philosophy through an interactive CLI journey 👇</strong></p>
-      <pre><code>npx chan-meng</code></pre>
-      <p>
-        🎭 One-click interactive introduction<br/>
-        📱 No installation required<br/>
-        ⚡ &lt; 5s startup time<br/>
-        🔗 <a href="https://github.com/ChanMeng666/chan-meng-cli">Open Source · chan-meng-cli</a>
-      </p>
-    </td>
-    <td valign="middle" align="center">
-      <img src="https://private-user-images.githubusercontent.com/150320866/497057494-b9fb2214-4132-4d88-97f2-cc7c42e71655.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQ4NjUzOTgsIm5iZiI6MTc3NDg2NTA5OCwicGF0aCI6Ii8xNTAzMjA4NjYvNDk3MDU3NDk0LWI5ZmIyMjE0LTQxMzItNGQ4OC05N2YyLWNjN2M0MmU3MTY1NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMzMFQxMDA0NThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05NmEyOTYxODk2NzI3NzYwYmUyMmUzY2M2OWM1MzMwMDM4MWI3Mzg0OTAwYmFlN2FhOTM2Y2RiMmJiYjU2MjM4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.e4pNLGPJSY79WLniyQwjR9cZgZUOySN-47sRMJLaYzU" alt="CLI screenshot" width="360" />
-    </td>
-  </tr>
-</table>
+<img align="right" src="https://private-user-images.githubusercontent.com/150320866/497057494-b9fb2214-4132-4d88-97f2-cc7c42e71655.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzQ4NjUzOTgsIm5iZiI6MTc3NDg2NTA5OCwicGF0aCI6Ii8xNTAzMjA4NjYvNDk3MDU3NDk0LWI5ZmIyMjE0LTQxMzItNGQ4OC05N2YyLWNjN2M0MmU3MTY1NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMzMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDMzMFQxMDA0NThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05NmEyOTYxODk2NzI3NzYwYmUyMmUzY2M2OWM1MzMwMDM4MWI3Mzg0OTAwYmFlN2FhOTM2Y2RiMmJiYjU2MjM4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.e4pNLGPJSY79WLniyQwjR9cZgZUOySN-47sRMJLaYzU" alt="CLI screenshot" width="400" />
+
+**👇 Experience my philosophy through an interactive CLI journey 👇**
+
+```
+npx chan-meng
+```
+
+🎭 One-click interactive introduction
+📱 No installation required
+⚡ < 5s startup time
+🔗 [Open Source · chan-meng-cli](https://github.com/ChanMeng666/chan-meng-cli)
+
+<br clear="right"/>
 
 </details>
 </td>

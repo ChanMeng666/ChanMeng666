@@ -603,9 +603,9 @@ while (isAwake) {
           </a>
         </p>
         <p align="left">
-          • Modern Chinese Dictionary<br>
-          • Next.js & Gemini AI<br>
-          • Contemporary Word Analysis
+          • AI-Powered Chinese Word Redefinition<br>
+          • Next.js 15, TypeScript & Gemini AI<br>
+          • SVG Card Export, Animations & Responsive UI
         </p>
       </div>
     </td>
@@ -1668,9 +1668,9 @@ while (isAwake) {
           </a>
         </p>
         <p align="left">
-          • Modern Chinese Dictionary<br>
-          • Next.js & Gemini AI<br>
-          • Contemporary Word Analysis
+          • AI-Powered Chinese Word Redefinition<br>
+          • Next.js 15, TypeScript & Gemini AI<br>
+          • SVG Card Export, Animations & Responsive UI
         </p>
       </div>
     </td>

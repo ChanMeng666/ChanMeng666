@@ -1230,6 +1230,12 @@ npx chan-meng
           <a href="https://github.com/ChanMeng666/douyin-mall-frontend" target="_blank">
             <img src="https://img.shields.io/badge/Frontend-blue?style=for-the-badge&logo=vue3&logoColor=white"/>
           </a>
+          <a href="https://github.com/ChanMeng666/douyin-mall-go-template" target="_blank">
+            <img src="https://img.shields.io/badge/GO-template-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
+          <a href="https://github.com/ChanMeng666/douyin-mall-java-template" target="_blank">
+            <img src="https://img.shields.io/badge/JAVA-template-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
+          </a>
         </p>
         <p align="left">
           • Separate Frontend and Backend Development<br>

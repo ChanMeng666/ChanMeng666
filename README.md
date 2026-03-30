@@ -1593,14 +1593,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">English Redefine</h3>
       <div align="center">  
-        <a href="https://english-redefine.vercel.app/" target="_blank"><img src="/public/brands/EnglishRedefine-1.svg" width="50%" alt="English Redefine"/></a>
+        <a href="https://english-redefine.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/EnglishRedefine-1.svg" width="50%" alt="English Redefine"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/english-redefine" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://english-redefine.vercel.app/" target="_blank">
+          <a href="https://english-redefine.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>
@@ -1614,14 +1614,14 @@ while (isAwake) {
     <td width="20%">
       <h3 align="center">Chinese Redefine</h3>
       <div align="center">  
-        <a href="https://chinese-redefine.vercel.app/" target="_blank"><img src="/public/brands/ChineseRedefine-1.svg" width="50%" alt="Chinese Redefine Logo"/></a>
+        <a href="https://chinese-redefine.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/ChineseRedefine-v2-1.svg" width="50%" alt="Chinese Redefine Logo"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/chinese-redefine" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://chinese-redefine.vercel.app/" target="_blank">
+          <a href="https://chinese-redefine.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
           </a>
         </p>

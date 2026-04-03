@@ -103,7 +103,7 @@ This is a professional GitHub profile showcasing Chan Meng's work as a full-stac
 <br />
 
 <div align="center">
-  <img src="/public/brands/chan_monkey_logo_black-1.svg" width="100" height="100" alt="Chan Meng Logo">
+  <img src="/public/brands/chan-monkey-logo-black.svg" width="100" height="100" alt="Chan Meng Logo">
 
   <p>
     <em>🌿 A minimalist</em> <br>
@@ -121,7 +121,7 @@ This is a professional GitHub profile showcasing Chan Meng's work as a full-stac
   [![Discord](https://img.shields.io/badge/AI%20Programming%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/T3NJG5n98a)
   [![Book a Meeting](https://img.shields.io/badge/Book%20a%20Meeting-4CAF50?style=for-the-badge&logo=google-calendar&logoColor=white)](https://cal.com/chan-meng/30min)
 
-  <img src="/public/chan_snorkelling.gif" width="100%" alt="Chan Meng Snorkelling">
+  <img src="/public/chan-snorkelling.gif" width="100%" alt="Chan Meng Snorkelling">
 </div>
 
 
@@ -171,7 +171,7 @@ while (isAwake) {
 
 <summary>&nbsp;&nbsp;<strong>Interactive CLI Introduction</strong></summary><br>
 
-<img align="right" src="./public/screenshot/chan-meng-cli-screenshot.png" alt="CLI screenshot" width="400" />
+<img align="right" src="./public/screenshots/chan-meng-cli-screenshot.png" alt="CLI screenshot" width="400" />
 
 **👇 Experience my philosophy through an interactive CLI journey 👇**
 
@@ -254,7 +254,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">She Sharp</h3>
       <div align="center">
-        <a href="https://she-sharp.vercel.app/" target="_blank"><img src="public/brands/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp"/></a>
+        <a href="https://she-sharp.vercel.app/" target="_blank"><img src="public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp"/></a>
         <br>
         <br>
         <p>
@@ -275,7 +275,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">CORDE Mobile</h3>
       <div align="center">  
-        <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/CORDE.svg" width="50%" alt="CORDE Mobile App"/></a>
+        <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/corde.svg" width="50%" alt="CORDE Mobile App"/></a>
         <br>
         <br>
         <p>
@@ -299,7 +299,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Sanicle.AI</h3>
       <div align="center">  
-        <a href="https://ai.sanicle.cloud/login" target="_blank"><img src="/public/brands/sanicle_logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
+        <a href="https://ai.sanicle.cloud/login" target="_blank"><img src="/public/experience/sanicle-logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
         <br>
         <br>
         <p>
@@ -331,7 +331,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">AI Hackathon Festival 2025 Assistant</h3>
       <div align="center">  
-        <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/AI-Hackathon-logo-full.svg" width="50%" alt="AI Hackathon Festival 2025 Assistant"/></a>
+        <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/ai-hackathon-logo-full.svg" width="50%" alt="AI Hackathon Festival 2025 Assistant"/></a>
         <br>
         <br>
         <p>
@@ -373,7 +373,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">GitHub Visitor Counter</h3>
       <div align="center">  
-        <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank"><img src="/public/brands/github-visitor-counter-logo-1.svg" width="50%" alt="GitHub Visitor Counter"/></a>
+        <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank"><img src="/public/brands/github-visitor-counter-logo.svg" width="50%" alt="GitHub Visitor Counter"/></a>
         <br>
         <br>
         <p>
@@ -394,7 +394,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FriendScope</h3>
       <div align="center">  
-        <a href="https://friendscope.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/friendscope-1.svg" width="50%" alt="FriendScope Website"/></a>
+        <a href="https://friendscope.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/friendscope.svg" width="50%" alt="FriendScope Website"/></a>
         <br>
         <br>
         <p>
@@ -438,7 +438,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FemTech Weekend</h3>
       <div align="center">  
-        <a href="https://www.femtechweekend.com/" target="_blank"><img src="/public/brands/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
+        <a href="https://www.femtechweekend.com/" target="_blank"><img src="/public/experience/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
         <br>
         <br>
         <p>
@@ -459,7 +459,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FreePeriod Official</h3>
       <div align="center">  
-        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/brands/FreePeriodLogo.png" width="50%" alt="FreePeriod Official Logo"/></a>
+        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/brands/free-period-logo.png" width="50%" alt="FreePeriod Official Logo"/></a>
         <br>
         <br>
         <p>
@@ -504,7 +504,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">LibraryOS</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/library-os" target="_blank"><img src="/public/brands/LibraryOS-logo.svg" width="50%" alt="Library Management System"/></a>
+        <a href="https://github.com/ChanMeng666/library-os" target="_blank"><img src="/public/brands/library-os-logo.svg" width="50%" alt="Library Management System"/></a>
         <br>
         <br>
         <p>
@@ -596,7 +596,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Chinese Redefine</h3>
       <div align="center">  
-        <a href="https://chinese-redefine.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/ChineseRedefine-v2-1.svg" width="50%" alt="Chinese Redefine Logo"/></a>
+        <a href="https://chinese-redefine.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/chinese-redefine-v2.svg" width="50%" alt="Chinese Redefine Logo"/></a>
         <br>
         <br>
         <p>
@@ -663,7 +663,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Claude Code Audio Hooks</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/Claude_AI.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
+        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/claude-ai.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
         <br>
         <br>
         <p>
@@ -708,7 +708,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Google News MCP Server</h3>
       <div align="center">  
-        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news-1.svg" width="50%" alt="Google News MCP Server"/></a>
+        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news.svg" width="50%" alt="Google News MCP Server"/></a>
         <br>
         <br>
         <p>
@@ -732,7 +732,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Google Jobs MCP Server</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank"><img src="/public/brands/server-google-jobs-1.svg" width="50%" alt="Google Jobs MCP Server"/></a>
+        <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank"><img src="/public/brands/server-google-jobs.svg" width="50%" alt="Google Jobs MCP Server"/></a>
         <br>
         <br>
         <p>
@@ -756,7 +756,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Tencent Meeting Video Downloader</h3>
       <div align="center">  
-        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader-1.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
+        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
         <br>
         <br>
         <p>
@@ -935,7 +935,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FriendScope</h3>
       <div align="center">  
-        <a href="https://friendscope.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/friendscope-1.svg" width="50%" alt="FriendScope Website"/></a>
+        <a href="https://friendscope.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/friendscope.svg" width="50%" alt="FriendScope Website"/></a>
         <br>
         <br>
         <p>
@@ -956,7 +956,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">AgriHire Solutions</h3>
       <div align="center">  
-        <a href="https://agrihire-solutions-fa6d9a841bd4.herokuapp.com/" target="_blank"><img src="/public/brands/AgriHire_Solutions-1.svg" width="100%" alt="AgriHire Solutions"/></a>
+        <a href="https://agrihire-solutions-fa6d9a841bd4.herokuapp.com/" target="_blank"><img src="/public/brands/agri-hire-solutions.svg" width="100%" alt="AgriHire Solutions"/></a>
         <br>
         <br>
         <p>
@@ -1021,7 +1021,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FreePeriod Official</h3>
       <div align="center">  
-        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/brands/FreePeriodLogo.png" width="50%" alt="FreePeriod Official Logo"/></a>
+        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/brands/free-period-logo.png" width="50%" alt="FreePeriod Official Logo"/></a>
         <br>
         <br>
         <p>
@@ -1045,7 +1045,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">LibraryOS</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/library-os" target="_blank"><img src="/public/brands/LibraryOS-logo.svg" width="50%" alt="Library Management System"/></a>
+        <a href="https://github.com/ChanMeng666/library-os" target="_blank"><img src="/public/brands/library-os-logo.svg" width="50%" alt="Library Management System"/></a>
         <br>
         <br>
         <p>
@@ -1066,7 +1066,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Job Value Assessment</h3>
       <div align="center">  
-        <a href="https://job-valuation.vercel.app/assessment/start" target="_blank"><img src="/public/brands/job-valuation-1.svg" width="50%" alt="Job Value Assessment Tool"/></a>
+        <a href="https://job-valuation.vercel.app/assessment/start" target="_blank"><img src="/public/brands/job-valuation.svg" width="50%" alt="Job Value Assessment Tool"/></a>
         <br>
         <br>
         <p>
@@ -1110,7 +1110,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Selwyn Panel Beaters Online Service</h3>
       <div align="center">  
-        <a href="https://repairos.chanmeng.org/" target="_blank"><img src="/public/brands/RepairOS-logo.svg" width="50%" alt="Selwyn Panel Beaters Online Service"/></a>
+        <a href="https://repairos.chanmeng.org/" target="_blank"><img src="/public/brands/repair-os-logo.svg" width="50%" alt="Selwyn Panel Beaters Online Service"/></a>
         <br>
         <br>
         <p>
@@ -1131,7 +1131,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Biosecurity</h3>
       <div align="center">  
-        <a href="https://biosecurity-guide-app-a582c65bb9ec.herokuapp.com/" target="_blank"><img src="/public/brands/Biosecurity-1.svg" width="50%" alt="Biosecurity"/></a>
+        <a href="https://biosecurity-guide-app-a582c65bb9ec.herokuapp.com/" target="_blank"><img src="/public/brands/biosecurity.svg" width="50%" alt="Biosecurity"/></a>
         <br>
         <br>
         <p>
@@ -1152,7 +1152,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Swimming Club Management System</h3>
       <div align="center">  
-        <a href="https://scms-countryside-50e91aae3add.herokuapp.com/" target="_blank"><img src="/public/brands/SwimmingClubManagementSystem-1.svg" width="50%" alt="Swimming Club Management System"/></a>
+        <a href="https://scms-countryside-50e91aae3add.herokuapp.com/" target="_blank"><img src="/public/brands/swimming-club-management-system.svg" width="50%" alt="Swimming Club Management System"/></a>
         <br>
         <br>
         <p>
@@ -1176,7 +1176,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">East Coast Anglers Club</h3>
       <div align="center">  
-        <a href="https://groupac.pythonanywhere.com/" target="_blank"><img src="/public/brands/shipfishing-1.svg" width="50%" alt="East Coast Anglers Club"/></a>
+        <a href="https://groupac.pythonanywhere.com/" target="_blank"><img src="/public/brands/shipfishing.svg" width="50%" alt="East Coast Anglers Club"/></a>
         <br>
         <br>
         <p>
@@ -1197,7 +1197,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Personal Introduction Website</h3>
       <div align="center">  
-        <a href="https://who-i-am-nine.vercel.app/" target="_blank"><img src="/public/brands/who-i-am-1.svg" width="50%" alt="Portfolio Website"></a>
+        <a href="https://who-i-am-nine.vercel.app/" target="_blank"><img src="/public/brands/who-i-am.svg" width="50%" alt="Portfolio Website"></a>
         <br>
         <br>
         <p>
@@ -1220,7 +1220,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">TikTok E-commerce Mall</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/douyin-mall" target="_blank"><img src="/public/brands/TikTokShop-1.svg" width="50%" alt="TikTok E-commerce Mall"/></a>
+        <a href="https://github.com/ChanMeng666/douyin-mall" target="_blank"><img src="/public/brands/tiktok-shop.svg" width="50%" alt="TikTok E-commerce Mall"/></a>
         <br>
         <br>
         <p>
@@ -1247,7 +1247,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FemTech Weekend</h3>
       <div align="center">  
-        <a href="https://www.femtechweekend.com/" target="_blank"><img src="/public/brands/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
+        <a href="https://www.femtechweekend.com/" target="_blank"><img src="/public/experience/femtech-weekend-logo.svg" width="50%" alt="FemTech Weekend Logo"/></a>
         <br>
         <br>
         <p>
@@ -1268,7 +1268,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Sanicle Cloud</h3>
       <div align="center">  
-        <a href="https://sanicle.cloud/" target="_blank"><img src="public/brands/sanicle_logo.svg" width="100%" alt="Sanicle Cloud Logo"/></a>
+        <a href="https://sanicle.cloud/" target="_blank"><img src="public/experience/sanicle-logo.svg" width="100%" alt="Sanicle Cloud Logo"/></a>
         <br>
         <br>
         <p>
@@ -1315,7 +1315,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">She Sharp</h3>
       <div align="center">
-        <a href="https://she-sharp.vercel.app/" target="_blank"><img src="public/brands/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp"/></a>
+        <a href="https://she-sharp.vercel.app/" target="_blank"><img src="public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp"/></a>
         <br>
         <br>
         <p>
@@ -1355,7 +1355,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Sanicle.AI</h3>
       <div align="center">  
-        <a href="https://ai.sanicle.cloud/login" target="_blank"><img src="/public/brands/sanicle_logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
+        <a href="https://ai.sanicle.cloud/login" target="_blank"><img src="/public/experience/sanicle-logo.svg" width="100%" alt="Sanicle.AI Platform"/></a>
         <br>
         <br>
         <p>
@@ -1454,7 +1454,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Customer Insight</h3>
       <div align="center">  
-        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/CustomerInsight-1.svg" width="50%" alt="Streamlit Logo"/></a>
+        <a href="https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/" target="_blank"><img src="/public/brands/customer-insight.svg" width="50%" alt="Streamlit Logo"/></a>
         <br>
         <br>
         <p>
@@ -1501,7 +1501,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">AI Hackathon Festival 2025 Assistant</h3>
       <div align="center">  
-        <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/AI-Hackathon-logo-full.svg" width="50%" alt="AI Hackathon Festival 2025 Assistant"/></a>
+        <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/ai-hackathon-logo-full.svg" width="50%" alt="AI Hackathon Festival 2025 Assistant"/></a>
         <br>
         <br>
         <p>
@@ -1607,7 +1607,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Interactive Story Generator</h3>
       <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo-1.svg" width="50%" alt="Interactive Story Generator"/></a>
+        <a href="https://huggingface.co/spaces/ChanMeng666/interactive-story-generator" target="_blank"><img src="/public/brands/interactive-story-generator-logo.svg" width="50%" alt="Interactive Story Generator"/></a>
         <br>
         <br>
         <p>
@@ -1628,7 +1628,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">AI Image Generator</h3>
       <div align="center">  
-        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator-1.svg" width="50%" alt="AI Image Generator Logo"/></a>
+        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator.svg" width="50%" alt="AI Image Generator Logo"/></a>
         <br>
         <br>
         <p>
@@ -1649,7 +1649,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">English Redefine</h3>
       <div align="center">  
-        <a href="https://english-redefine.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/EnglishRedefine-1.svg" width="50%" alt="English Redefine"/></a>
+        <a href="https://english-redefine.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/english-redefine.svg" width="50%" alt="English Redefine"/></a>
         <br>
         <br>
         <p>
@@ -1670,7 +1670,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Chinese Redefine</h3>
       <div align="center">  
-        <a href="https://chinese-redefine.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/ChineseRedefine-v2-1.svg" width="50%" alt="Chinese Redefine Logo"/></a>
+        <a href="https://chinese-redefine.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/chinese-redefine-v2.svg" width="50%" alt="Chinese Redefine Logo"/></a>
         <br>
         <br>
         <p>
@@ -1862,7 +1862,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">README Template</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_13_44Z.gif" width="100%" alt="README Template"/></a>
+        <a href="https://github.com/ChanMeng666" target="_blank"><img src="/public/brands/vidu-readme-template-demo.gif" width="100%" alt="README Template"/></a>
         <br>
         <br>
         <p>
@@ -1883,7 +1883,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">README Generator</h3>
       <div align="center">  
-        <a href="https://huggingface.co/spaces/ChanMeng666/readme-profile-generator" target="_blank"><img src="/public/brands/readme-profile-generator-logo-1.svg" width="50%" alt="README Generator"/></a>
+        <a href="https://huggingface.co/spaces/ChanMeng666/readme-profile-generator" target="_blank"><img src="/public/brands/readme-profile-generator-logo.svg" width="50%" alt="README Generator"/></a>
         <br>
         <br>
         <p>
@@ -1925,7 +1925,7 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">GitHub Visitor Counter</h3>
       <div align="center">  
-        <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank"><img src="/public/brands/github-visitor-counter-logo-1.svg" width="50%" alt="GitHub Visitor Counter"/></a>
+        <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank"><img src="/public/brands/github-visitor-counter-logo.svg" width="50%" alt="GitHub Visitor Counter"/></a>
         <br>
         <br>
         <p>
@@ -2072,7 +2072,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Google News MCP Server</h3>
       <div align="center">  
-        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news-1.svg" width="50%" alt="Google News MCP Server"/></a>
+        <a href="https://glama.ai/mcp/servers/dbx6imq4ef" target="_blank"><img src="/public/brands/server-google-news.svg" width="50%" alt="Google News MCP Server"/></a>
         <br>
         <br>
         <p>
@@ -2096,7 +2096,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Google Jobs MCP Server</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank"><img src="/public/brands/server-google-jobs-1.svg" width="50%" alt="Google Jobs MCP Server"/></a>
+        <a href="https://github.com/ChanMeng666/server-google-jobs" target="_blank"><img src="/public/brands/server-google-jobs.svg" width="50%" alt="Google Jobs MCP Server"/></a>
         <br>
         <br>
         <p>
@@ -2120,7 +2120,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Tencent Meeting Video Downloader</h3>
       <div align="center">  
-        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader-1.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
+        <a href="https://chromewebstore.google.com/detail/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E5%BD%95%E5%B1%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/gdajdfngeonjmcclghkmeoacopnnfpnc?hl=zh-CN&utm_source=ext_sidebar" target="_blank"><img src="/public/brands/tencent-meeting-video-downloader.svg" width="50%" alt="Tencent Meeting Video Downloader Releases"/></a>
         <br>
         <br>
         <p>
@@ -2144,7 +2144,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Douban Elite Scraper</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/Douban-elite-scraper" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T09_53_54Z.gif" width="100%" alt="Douban Elite Scraper"/></a>
+        <a href="https://github.com/ChanMeng666/Douban-elite-scraper" target="_blank"><img src="/public/brands/vidu-douban-elite-scraper-demo.gif" width="100%" alt="Douban Elite Scraper"/></a>
         <br>
         <br>
         <p>
@@ -2165,7 +2165,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Douban Review Scraper</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/DoubanReviewScraper" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_11_17Z.gif" width="100%" alt="Douban Review Scraper"/></a>
+        <a href="https://github.com/ChanMeng666/DoubanReviewScraper" target="_blank"><img src="/public/brands/vidu-douban-review-scraper-demo.gif" width="100%" alt="Douban Review Scraper"/></a>
         <br>
         <br>
         <p>
@@ -2188,7 +2188,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Lottie Edit</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank"><img src="/public/brands/vidu--4-2024-11-22T10_01_04Z.gif" width="100%" alt="Lottie Edit"/></a>
+        <a href="https://github.com/ChanMeng666/lottie-edit" target="_blank"><img src="/public/brands/vidu-lottie-edit-demo.gif" width="100%" alt="Lottie Edit"/></a>
         <br>
         <br>
         <p>
@@ -2209,7 +2209,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Claude Code Audio Hooks</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/Claude_AI.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
+        <a href="https://github.com/ChanMeng666/claude-code-audio-hooks" target="_blank"><img src="/public/brands/claude-ai.svg" width="50%" alt="Claude Code Audio Hooks"/></a>
         <br>
         <br>
         <p>
@@ -2252,7 +2252,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">CORDE Mobile</h3>
       <div align="center">  
-        <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/CORDE.svg" width="50%" alt="CORDE Mobile App"/></a>
+        <a href="https://corde-mobile-application-4yw7mtt.gamma.site/" target="_blank"><img src="/public/brands/corde.svg" width="50%" alt="CORDE Mobile App"/></a>
         <br>
         <br>
         <p>
@@ -2276,7 +2276,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">FemTracker Mobile App</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/FemTracker" target="_blank"><img src="/public/brands/FemTracker-1.svg" width="50%" alt="FemTracker"/></a>
+        <a href="https://github.com/ChanMeng666/FemTracker" target="_blank"><img src="/public/brands/femtracker.svg" width="50%" alt="FemTracker"/></a>
         <br>
         <br>
         <p>
@@ -2297,7 +2297,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Reincarnation Journey</h3>
       <div align="center">  
-        <a href="https://journey-of-reincarnation.vercel.app" target="_blank"><img src="/public/brands/journey-of-reincarnation2-1.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
+        <a href="https://journey-of-reincarnation.vercel.app" target="_blank"><img src="/public/brands/journey-of-reincarnation-2.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
         <br>
         <br>
         <p>
@@ -2471,7 +2471,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Claude Code Plugins</h3>
       <div align="center">  
-        <a href="https://github.com/wshobson/agents" target="_blank"><img src="/public/brands/Claude_AI.svg" width="50%" alt="Claude Code Plugins"/></a>
+        <a href="https://github.com/wshobson/agents" target="_blank"><img src="/public/brands/claude-ai.svg" width="50%" alt="Claude Code Plugins"/></a>
         <br>
         <br>
         <p>
@@ -2529,7 +2529,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">MCP Servers</h3>
       <div align="center">  
-        <a href="https://github.com/modelcontextprotocol/servers" target="_blank"><img src="/public/brands/Claude_AI.svg" width="50%" alt="MCP Servers"/></a>
+        <a href="https://github.com/modelcontextprotocol/servers" target="_blank"><img src="/public/brands/claude-ai.svg" width="50%" alt="MCP Servers"/></a>
         <br>
         <br>
         <p>
@@ -2603,7 +2603,7 @@ Transform your GitHub profile and resume into powerful career assets!
   <table>
     <tr>
       <td align="center" width="30%">
-        <img src="/public/bmc_qr.png" width="150px" alt="Buy Me a Coffee QR Code"/>
+        <img src="/public/bmc-qr.png" width="150px" alt="Buy Me a Coffee QR Code"/>
       </td>
       <td width="70%">
         <p>Your support helps me continue creating better solutions and open-source projects. If you find my work valuable, consider buying me a coffee!</p>
@@ -2633,7 +2633,7 @@ Transform your GitHub profile and resume into powerful career assets!
 
 <div align="center">
 
-  [![Download Resume](https://img.shields.io/badge/Download%20Resume-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/ChanMeng_CV.pdf)
+  [![Download Resume](https://img.shields.io/badge/Download%20Resume-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf)
   [![View Resume](https://img.shields.io/badge/View%20Resume-4CAF50?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf)
 
 </div>
@@ -2662,7 +2662,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">Gavigo</h3>
       <div align="center">  
-        <a href="https://gavigo.com/" target="_blank"><img src="/public/experience/gavigo_logo.jpg" width="50%" alt="Gavigo Logo"/></a>
+        <a href="https://gavigo.com/" target="_blank"><img src="/public/experience/gavigo-logo.jpg" width="50%" alt="Gavigo Logo"/></a>
         <br>
         <br>
         <p>
@@ -2740,7 +2740,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">Sanicle</h3>
       <div align="center">  
-        <a href="https://sanicle.cloud/" target="_blank"><img src="/public/experience/sanicle_logo.svg" width="50%" alt="Sanicle Logo"/></a>
+        <a href="https://sanicle.cloud/" target="_blank"><img src="/public/experience/sanicle-logo.svg" width="50%" alt="Sanicle Logo"/></a>
         <br>
         <br>
         <p>
@@ -2786,7 +2786,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">Forward with Her</h3>
       <div align="center">  
-        <a href="https://www.linkedin.com/company/taxing-mentorship/" target="_blank"><img src="/public/experience/ForwardwithHer_logo.jpg" width="50%" alt="Forward with Her Logo"/></a>
+        <a href="https://www.linkedin.com/company/taxing-mentorship/" target="_blank"><img src="/public/experience/forward-with-her-logo.jpg" width="50%" alt="Forward with Her Logo"/></a>
         <br>
         <br>
         <p>
@@ -2806,7 +2806,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">FreePeriod</h3>
       <div align="center">  
-        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/experience/FreePeriodLogo.png" width="50%" alt="FreePeriod Logo"/></a>
+        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/experience/free-period-logo.png" width="50%" alt="FreePeriod Logo"/></a>
         <br>
         <br>
         <p>
@@ -2824,7 +2824,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">ByteDance</h3>
       <div align="center">  
-        <a href="https://www.bytedance.com/en/" target="_blank"><img src="/public/experience/ByteDance_logo_English.svg" width="50%" alt="ByteDance Logo"/></a>
+        <a href="https://www.bytedance.com/en/" target="_blank"><img src="/public/experience/bytedance-logo-english.svg" width="50%" alt="ByteDance Logo"/></a>
         <br>
         <br>
         <p>
@@ -2844,7 +2844,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">CORDE</h3>
       <div align="center">  
-        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/CORDE_logo.jpg" width="50%" alt="CORDE Logo"/></a>
+        <a href="https://corde.nz/" target="_blank"><img src="/public/experience/corde-logo.jpg" width="50%" alt="CORDE Logo"/></a>
         <br>
         <br>
         <p>
@@ -2939,7 +2939,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">Lincoln University</h3>
       <div align="center">  
-        <a href="https://www.lincoln.ac.nz/" target="_blank"><img src="/public/education/lincolnuni_logo.jpg" width="50%" alt="Lincoln University Logo"/></a>
+        <a href="https://www.lincoln.ac.nz/" target="_blank"><img src="/public/education/lincoln-uni-logo.jpg" width="50%" alt="Lincoln University Logo"/></a>
         <br>
         <br>
         <p>
@@ -3486,74 +3486,74 @@ Transform your GitHub profile and resume into powerful career assets!
 <details>
 <summary>
     <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="Waving Hand" width="25" height="25" /> HackerRank Professional Certifications</h3>
-    <img src="/public/certificates/brands/hackerrank_logo.jpg" 
+    <img src="/public/certificates/issuers/hackerrank-logo.jpg" 
      style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
      alt="HackerRank Logo"/>
 </summary>
 <table>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/SoftwareEngineerCertificate.png" width="100%" alt="HackerRank Software Engineer Certificate"/>
+      <img src="/public/certificates/software-engineer-certificate.png" width="100%" alt="HackerRank Software Engineer Certificate"/>
       <p><strong>Software Engineer Certificate</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/FrontendDeveloper(React)Certificate.png" width="100%" alt="HackerRank Frontend Developer (React) Certificate"/>
+      <img src="/public/certificates/frontend-developer-react-certificate.png" width="100%" alt="HackerRank Frontend Developer (React) Certificate"/>
       <p><strong>Frontend Developer (React)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/SQL(Advanced)Certificate.png" width="100%" alt="HackerRank SQL (Advanced) Certificate"/>
+      <img src="/public/certificates/sql-advanced-certificate.png" width="100%" alt="HackerRank SQL (Advanced) Certificate"/>
       <p><strong>SQL (Advanced)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/JavaScript(Intermediate)Certificate.png" width="100%" alt="HackerRank JavaScript (Intermediate) Certificate"/>
+      <img src="/public/certificates/javascript-intermediate-certificate.png" width="100%" alt="HackerRank JavaScript (Intermediate) Certificate"/>
       <p><strong>JavaScript (Intermediate)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/RestAPI(Intermediate)Certificate.png" width="100%" alt="HackerRank Rest API (Intermediate) Certificate"/>
+      <img src="/public/certificates/rest-api-intermediate-certificate.png" width="100%" alt="HackerRank Rest API (Intermediate) Certificate"/>
       <p><strong>Rest API (Intermediate)</strong></p>
     </td>
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/Nodejs(Intermediate)Certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
+      <img src="/public/certificates/nodejs-intermediate-certificate.png" width="100%" alt="HackerRank Nodejs (Intermediate) Certificate"/>
       <p><strong>Node.js (Intermediate)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Angular(Intermediate)Certificate.png" width="100%" alt="HackerRank Angular (Intermediate) Certificate"/>
+      <img src="/public/certificates/angular-intermediate-certificate.png" width="100%" alt="HackerRank Angular (Intermediate) Certificate"/>
       <p><strong>Angular (Intermediate)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Go(Intermediate)Certificate.png" width="100%" alt="HackerRank Go (Intermediate) Certificate"/>
+      <img src="/public/certificates/go-intermediate-certificate.png" width="100%" alt="HackerRank Go (Intermediate) Certificate"/>
       <p><strong>Go (Intermediate)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/R(Intermediate)Certificate.png" width="100%" alt="HackerRank R (Intermediate) Certificate"/>
+      <img src="/public/certificates/r-intermediate-certificate.png" width="100%" alt="HackerRank R (Intermediate) Certificate"/>
       <p><strong>R (Intermediate)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/ProblemSolving(Intermediate)Certificate.png" width="100%" alt="HackerRank Problem Solving (Intermediate) Certificate"/>
+      <img src="/public/certificates/problem-solving-intermediate-certificate.png" width="100%" alt="HackerRank Problem Solving (Intermediate) Certificate"/>
       <p><strong>Problem Solving (Intermediate)</strong></p>
     </td>
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/Java(Basic)Certificate.png" width="100%" alt="HackerRank Java (Basic) Certificate"/>
+      <img src="/public/certificates/java-basic-certificate.png" width="100%" alt="HackerRank Java (Basic) Certificate"/>
       <p><strong>Java (Basic)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Python(Basic)Certificate.png" width="100%" alt="HackerRank Python (Basic) Certificate"/>
+      <img src="/public/certificates/python-basic-certificate.png" width="100%" alt="HackerRank Python (Basic) Certificate"/>
       <p><strong>Python (Basic)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/React(Basic)Certificate.png" width="100%" alt="HackerRank React (Basic) Certificate"/>
+      <img src="/public/certificates/react-basic-certificate.png" width="100%" alt="HackerRank React (Basic) Certificate"/>
       <p><strong>React (Basic)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CSS(Basic)Certificate.png" width="100%" alt="HackerRank CSS (Basic) Certificate"/>
+      <img src="/public/certificates/css-basic-certificate.png" width="100%" alt="HackerRank CSS (Basic) Certificate"/>
       <p><strong>CSS (Basic)</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Csharp(Basic)Certificate.png" width="100%" alt="HackerRank C Sharp (Basic) Certificate"/>
+      <img src="/public/certificates/csharp-basic-certificate.png" width="100%" alt="HackerRank C Sharp (Basic) Certificate"/>
       <p><strong>C# (Basic)</strong></p>
     </td>
   </tr>
@@ -3563,52 +3563,52 @@ Transform your GitHub profile and resume into powerful career assets!
 <details>
 <summary>
     <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="Waving Hand" width="25" height="25" /> Microsoft Career Certifications</h3>
-    <img src="/public/certificates/brands/microsoft_logo.jpg" 
+    <img src="/public/certificates/issuers/microsoft-logo.jpg" 
  style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
  alt="Microsoft Logo"/>
 </summary>
 <table>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinSoftwareDevelopmentbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Software Development"/>
+      <img src="/public/certificates/career-essentials-software-development-microsoft-linkedin.jpg" width="100%" alt="Career Essentials in Software Development"/>
       <p><strong>Software Development</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinSystemAdministrationbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in System Administration"/>
+      <img src="/public/certificates/career-essentials-system-administration-microsoft-linkedin.jpg" width="100%" alt="Career Essentials in System Administration"/>
       <p><strong>System Administration</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinProjectManagementbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Project Management"/>
+      <img src="/public/certificates/career-essentials-project-management-microsoft-linkedin.jpg" width="100%" alt="Career Essentials in Project Management"/>
       <p><strong>Project Management</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinCybersecuritybyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Cybersecurity"/>
+      <img src="/public/certificates/career-essentials-cybersecurity-microsoft-linkedin.jpg" width="100%" alt="Career Essentials in Cybersecurity"/>
       <p><strong>Cybersecurity</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinDataAnalysisbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Data Analysis"/>
+      <img src="/public/certificates/career-essentials-data-analysis-microsoft-linkedin.jpg" width="100%" alt="Career Essentials in Data Analysis"/>
       <p><strong>Data Analysis</strong></p>
     </td>
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinBusinessAnalysisbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Business Analysis"/>
+      <img src="/public/certificates/career-essentials-business-analysis-microsoft-linkedin.jpg" width="100%" alt="Career Essentials in Business Analysis"/>
       <p><strong>Business Analysis</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/GenerativeAICareerSkillsFundamentals.jpg" width="100%" alt="Generative AI Career Skills"/>
+      <img src="/public/certificates/generative-ai-career-skills-fundamentals.jpg" width="100%" alt="Generative AI Career Skills"/>
       <p><strong>Generative AI Fundamentals</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinAdministrativeAssistancebyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Administrative Assistance"/>
+      <img src="/public/certificates/career-essentials-administrative-assistance-microsoft-linkedin.jpg" width="100%" alt="Career Essentials in Administrative Assistance"/>
       <p><strong>Administrative Assistance</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinSustainableTechbyMicrosoftandLinkedIn.jpg" width="100%" alt="Career Essentials in Sustainable Tech"/>
+      <img src="/public/certificates/career-essentials-sustainable-tech-microsoft-linkedin.jpg" width="100%" alt="Career Essentials in Sustainable Tech"/>
       <p><strong>Sustainable Tech</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/MicrosoftAzureAIEssentialsProfessionalCertificate.jpg" width="100%" alt="Azure AI Essentials Professional Certificate"/>
+      <img src="/public/certificates/microsoft-azure-ai-essentials-professional-certificate.jpg" width="100%" alt="Azure AI Essentials Professional Certificate"/>
       <p><strong>Azure AI Essentials</strong></p>
     </td>
   </tr>
@@ -3618,78 +3618,78 @@ Transform your GitHub profile and resume into powerful career assets!
 <details>
 <summary>
     <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" alt="Waving Hand" width="25" height="25" /> Other Professional Certifications</h3>
-    <img src="/public/certificates/brands/github_logo.jpg" 
+    <img src="/public/certificates/issuers/github-logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="GitHub Logo"/>
-    <img src="/public/certificates/brands/docker_logo.jpg" 
+    <img src="/public/certificates/issuers/docker-logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Docker Logo"/>
-    <img src="/public/certificates/brands/canonical_logo.jpg" 
+    <img src="/public/certificates/issuers/canonical-logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Canonical Logo"/>
-    <img src="/public/certificates/brands/anacondainc_logo.jpg" 
+    <img src="/public/certificates/issuers/anacondainc-logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Anaconda Logo"/>
-    <img src="/public/certificates/brands/atlassian_logo.jpg" 
+    <img src="/public/certificates/issuers/atlassian-logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Atlassian Logo"/>
-    <img src="/public/certificates/brands/cppinstitute_logo.jpg" 
+    <img src="/public/certificates/issuers/cppinstitute-logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="C++ Institute Logo"/>
-    <img src="/public/certificates/brands/jetbrains_logo.jpg" 
+    <img src="/public/certificates/issuers/jetbrains-logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="JetBrains Logo"/>
-    <img src="/public/certificates/brands/1631301014132.jpg" 
+    <img src="/public/certificates/issuers/1631301014132.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Wolfram Logo"/>
-    <img src="/public/certificates/brands/mozilla_corporation_logo.jpg" 
+    <img src="/public/certificates/issuers/mozilla-corporation-logo.jpg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Mozilla Logo"/>
-    <img src="/public/certificates/brands/google_logo.jpeg" 
+    <img src="/public/certificates/issuers/google-logo.jpeg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Google Logo"/>
-    <img src="/public/certificates/brands/anthropicresearch_logo.jpeg" 
+    <img src="/public/certificates/issuers/anthropicresearch-logo.jpeg" 
 style="position: absolute; bottom: -15px; right: -15px; width: 40px; height: 40px; border-radius: 50%; background: white; padding: 2px;"
 alt="Anthropic Logo"/>
 </summary>
 <table>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/CareerEssentialsinGitHubProfessionalCertificate.jpg" width="100%" alt="GitHub Professional Certificate"/>
+      <img src="/public/certificates/career-essentials-github-professional-certificate.jpg" width="100%" alt="GitHub Professional Certificate"/>
       <p><strong>GitHub Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/DockerFoundationsProfessionalCertificate.jpg" width="100%" alt="Docker Foundations Professional Certificate"/>
+      <img src="/public/certificates/docker-foundations-professional-certificate.jpg" width="100%" alt="Docker Foundations Professional Certificate"/>
       <p><strong>Docker Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CertificateOfCompletion_UbuntuLinuxProfessionalCertificatebyCanonical.jpg" width="100%" alt="Ubuntu Linux Professional Certificate"/>
+      <img src="/public/certificates/completion-ubuntu-linux-professional-certificate-canonical.jpg" width="100%" alt="Ubuntu Linux Professional Certificate"/>
       <p><strong>Ubuntu Linux Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CertificateOfCompletion_AnacondaPythonforDataScienceProfessionalCertificate.jpg" width="100%" alt="Anaconda Python for Data Science Professional Certificate"/>
+      <img src="/public/certificates/completion-anaconda-python-data-science-professional-certificate.jpg" width="100%" alt="Anaconda Python for Data Science Professional Certificate"/>
       <p><strong>Anaconda Python for Data Science Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CertificateOfCompletion_AtlassianAgileProjectManagementProfessionalCertificate.jpg" width="100%" alt="Atlassian Agile Project Management Professional Certificate"/>
+      <img src="/public/certificates/completion-atlassian-agile-project-management-professional-certificate.jpg" width="100%" alt="Atlassian Agile Project Management Professional Certificate"/>
       <p><strong>Atlassian Agile Project Management Professional</strong></p>
     </td>
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/CertificateOfCompletion_CProgrammingProfessionalCertificatebyOpenEDGCInstitute.jpg" width="100%" alt="C++ Programming Professional"/>
+      <img src="/public/certificates/completion-c-programming-professional-certificate-openedgc.jpg" width="100%" alt="C++ Programming Professional"/>
       <p><strong>C++ Programming Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CertificateOfCompletion_JavaFoundationsProfessionalCertificatebyJetBrains.jpg" width="100%" alt="Java Professional"/>
+      <img src="/public/certificates/completion-java-foundations-professional-certificate-jetbrains.jpg" width="100%" alt="Java Professional"/>
       <p><strong>Java Professional</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/CertificateOfCompletion_MachineLearningStatisticalFoundationsProfessionalCertificatebyWolframResearch.jpg" width="100%" alt="Machine Learning Statistical Foundations"/>
+      <img src="/public/certificates/completion-machine-learning-statistical-foundations-wolfram-research.jpg" width="100%" alt="Machine Learning Statistical Foundations"/>
       <p><strong>Machine Learning Statistical Foundations</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/JavaScriptFoundationsProfessionalCertificatebyMozilla.jpg" width="100%" alt="JavaScript Foundations Professional Certificate by Mozilla"/>
+      <img src="/public/certificates/javascript-foundations-professional-certificate-mozilla.jpg" width="100%" alt="JavaScript Foundations Professional Certificate by Mozilla"/>
       <p><strong>JavaScript Foundations</strong></p>
     </td>
     <td align="center" width="20%">
@@ -3699,11 +3699,11 @@ alt="Anthropic Logo"/>
   </tr>
   <tr>
     <td align="center" width="20%">
-      <img src="/public/certificates/Anthropic_Claude-Code-in-Action.jpg" width="100%" alt="Claude Code in Action"/>
+      <img src="/public/certificates/anthropic-claude-code-in-action.jpg" width="100%" alt="Claude Code in Action"/>
       <p><strong>Claude Code in Action</strong></p>
     </td>
     <td align="center" width="20%">
-      <img src="/public/certificates/Anthropic_AI-Fluency-Framework-and-Foundations.jpg" width="100%" alt="AI Fluency Framework and Foundations"/>
+      <img src="/public/certificates/anthropic-ai-fluency-framework-and-foundations.jpg" width="100%" alt="AI Fluency Framework and Foundations"/>
       <p><strong>AI Fluency Framework and Foundations</strong></p>
     </td>
   </tr>
@@ -3903,7 +3903,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Essential Files for a Professional GitHub Repository: A Comprehensive Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/" target="_blank">
-          <img src="/public/articles/EssentialFilesforaProfessionalGitHubRepository.png" width="100%" alt="Essential Files for a Professional GitHub Repository"/>
+          <img src="/public/articles/essential-files-for-a-professional-github-repository.png" width="100%" alt="Essential Files for a Professional GitHub Repository"/>
         </a>
       </div>
     </td>
@@ -3911,7 +3911,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Solution for MCP Servers Connection Issues with NVM/NPM</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/" target="_blank">
-          <img src="/public/articles/SolutionforMCPServersConnectionIssues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
+          <img src="/public/articles/solution-for-mcp-servers-connection-issues.png" width="100%" alt="Solution for MCP Servers Connection Issues"/>
         </a>
       </div>
     </td>
@@ -3919,7 +3919,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">How to Add a GitHub Contribution Snake to Your Profile README</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng-tzakc/" target="_blank">
-          <img src="/public/articles/HowtoAddaGitHubContributionSnaketoYourProfileREADME.png" width="100%" alt="How to Add a GitHub Contribution Snake to Your Profile README"/>
+          <img src="/public/articles/how-to-add-a-github-contribution-snake-to-your-profile-readme.png" width="100%" alt="How to Add a GitHub Contribution Snake to Your Profile README"/>
         </a>
       </div>
     </td>
@@ -3927,7 +3927,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Tencent Meeting Screen Recording Download Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-download-videos-from-web-pages-step-by-step-guide-chan-meng-mp5pc/" target="_blank">
-          <img src="/public/articles/TencentMeetingScreenRecordingDownloadGuide.png" width="100%" alt="Tencent Meeting Screen Recording Download Guide"/>
+          <img src="/public/articles/tencent-meeting-screen-recording-download-guide.png" width="100%" alt="Tencent Meeting Screen Recording Download Guide"/>
         </a>
       </div>
     </td>
@@ -3937,7 +3937,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Building a Web Scraper for Douban Group Posts</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-web-scraper-douban-group-posts-chan-meng-pn6oc/" target="_blank">
-          <img src="/public/articles/BuildingaWebScraperforDoubanGroupPosts.png" width="100%" alt="Building a Web Scraper for Douban Group Posts"/>
+          <img src="/public/articles/building-a-web-scraper-for-douban-group-posts.png" width="100%" alt="Building a Web Scraper for Douban Group Posts"/>
         </a>
       </div>
     </td>
@@ -3945,7 +3945,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">From Git Log to Insights: Evaluating Team Contributions in GitHub Projects</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/from-git-log-insights-evaluating-team-contributions-github-chan-meng-qdtpc/" target="_blank">
-          <img src="/public/articles/FromGitLogtoInsights.png" width="100%" alt="From Git Log to Insights Evaluating Team Contributions in GitHub Projects"/>
+          <img src="/public/articles/from-git-log-to-insights.png" width="100%" alt="From Git Log to Insights Evaluating Team Contributions in GitHub Projects"/>
         </a>
       </div>
     </td>
@@ -3953,7 +3953,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">How to Deploy Your React Project to Vercel: A Complete Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng-kkale/" target="_blank">
-          <img src="/public/articles/HowtoDeployYourReactProjecttoVercel.png" width="100%" alt="How to Deploy Your React Project to Vercel A Complete Guide"/>
+          <img src="/public/articles/how-to-deploy-your-react-project-to-vercel.png" width="100%" alt="How to Deploy Your React Project to Vercel A Complete Guide"/>
         </a>
       </div>
     </td>
@@ -3961,7 +3961,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">The Power of Index Files: A Guide to Better Code Organization in React Projects</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/" target="_blank">
-          <img src="/public/articles/ThePowerofIndexFiles.png" width="100%" alt="The Power of Index Files A Guide to Better Code Organization in React Projects"/>
+          <img src="/public/articles/the-power-of-index-files.png" width="100%" alt="The Power of Index Files A Guide to Better Code Organization in React Projects"/>
         </a>
       </div>
     </td>
@@ -3971,7 +3971,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Protecting Your Open Source Project: A Comprehensive Guide to Combating Code Plagiarism</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/protecting-your-open-source-project-comprehensive-guide-chan-meng-u77wc/" target="_blank">
-          <img src="/public/articles/ProtectingYourOpenSourceProject.png" width="100%" alt="Protecting Your Open Source Project"/>
+          <img src="/public/articles/protecting-your-open-source-project.png" width="100%" alt="Protecting Your Open Source Project"/>
         </a>
       </div>
     </td>
@@ -3979,7 +3979,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Creating a Comprehensive File List Documentation System: A Technical Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/creating-comprehensive-file-list-documentation-system-chan-meng-njjxc/?trackingId=a7k%2F2YF1ToWixSz%2BYnZq7A%3D%3D" target="_blank">
-          <img src="/public/articles/CreatingaComprehensiveFileListDocumentationSystem.png" width="100%" alt="Creating a Comprehensive File List Documentation System"/>
+          <img src="/public/articles/creating-a-comprehensive-file-list-documentation-system.png" width="100%" alt="Creating a Comprehensive File List Documentation System"/>
         </a>
       </div>
     </td>
@@ -3987,7 +3987,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">A Complete Guide to Publishing Your First npm Package</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/complete-guide-publishing-your-first-npm-package-chan-meng-srrec/" target="_blank">
-          <img src="/public/articles/PublishYourFirstnpmPackage.png" width="100%" alt="A Complete Guide to Publishing Your First npm Package"/>
+          <img src="/public/articles/publish-your-first-npm-package.png" width="100%" alt="A Complete Guide to Publishing Your First npm Package"/>
         </a>
       </div>
     </td>
@@ -3995,7 +3995,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Apifox API Testing Tool Guide: From Beginner to Practitioner</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/apifox-api-testing-tool-guide-from-beginner-chan-meng-ekqjc/" target="_blank">
-          <img src="/public/articles/ApifoxAPITestingToolGuide.png" width="100%" alt="Apifox API Testing Tool Guide"/>
+          <img src="/public/articles/apifox-api-testing-tool-guide.png" width="100%" alt="Apifox API Testing Tool Guide"/>
         </a>
       </div>
     </td>
@@ -4005,7 +4005,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Git Branch Management and Project Initialization: A Comprehensive Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/git-branch-management-project-initialization-guide-chan-meng-9oewc/" target="_blank">
-          <img src="/public/articles/GitBranchManagementandProjectInitialization.png" width="100%" alt="Git Branch Management and Project Initialization"/>
+          <img src="/public/articles/git-branch-management-and-project-initialization.png" width="100%" alt="Git Branch Management and Project Initialization"/>
         </a>
       </div>
     </td>
@@ -4013,7 +4013,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Conventional Commits: A Comprehensive Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/conventional-commits-comprehensive-guide-chan-meng-n9psc/" target="_blank">
-          <img src="/public/articles/ConventionalCommits.png" width="100%" alt="Conventional Commits: A Comprehensive Guide"/>
+          <img src="/public/articles/conventional-commits.png" width="100%" alt="Conventional Commits: A Comprehensive Guide"/>
         </a>
       </div>
     </td>
@@ -4021,7 +4021,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Creating a Python MCP Server: A Step-by-Step Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/creating-python-mcp-server-step-by-step-guide-chan-meng-olwmc/" target="_blank">
-          <img src="/public/articles/CreatingaPythonMCPServer.png" width="100%" alt="Creating a Python MCP Server: A Step-by-Step Guide"/>
+          <img src="/public/articles/creating-a-python-mcp-server.png" width="100%" alt="Creating a Python MCP Server: A Step-by-Step Guide"/>
         </a>
       </div>
     </td>
@@ -4029,7 +4029,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Spring Boot Project Database Configuration Guide for Local and Cloud Environments</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/spring-boot-project-database-configuration-guide-local-chan-meng-cuiqc/?trackingId=40yawZV0u6dyjo%2F2HfB3cg%3D%3D" target="_blank">
-          <img src="/public/articles/SpringBootProjectDatabaseConfigurationGuide.png" width="100%" alt="Spring Boot Project Database Configuration Guide for Local and Cloud Environments"/>
+          <img src="/public/articles/spring-boot-project-database-configuration-guide.png" width="100%" alt="Spring Boot Project Database Configuration Guide for Local and Cloud Environments"/>
         </a>
       </div>
     </td>
@@ -4047,7 +4047,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Bug Report: Authentication Redirect Issue</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/bug-report-authentication-redirect-issue-chan-meng-ejmne/" target="_blank">
-          <img src="/public/articles/BugReportAuthenticationRedirectIssue.png" width="100%" alt="Bug Report Authentication Redirect Issue"/>
+          <img src="/public/articles/bug-report-authentication-redirect-issue.png" width="100%" alt="Bug Report Authentication Redirect Issue"/>
         </a>
       </div>
     </td>
@@ -4055,7 +4055,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Planning Overseas Education and Career Development</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/planning-overseas-education-career-development-chan-meng-vfhic/" target="_blank">
-          <img src="/public/articles/PlanningOverseasEducationandCareerDevelopment.png" width="100%" alt="Planning Overseas Education and Career Development"/>
+          <img src="/public/articles/planning-overseas-education-and-career-development.png" width="100%" alt="Planning Overseas Education and Career Development"/>
         </a>
       </div>
     </td>
@@ -4063,7 +4063,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">📺 My Video Tutorial Resources Collection</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/my-video-tutorial-resources-collection-chan-meng-udkfc/" target="_blank">
-          <img src="/public/articles/MyVideoTutorialResourcesCollection.png" width="100%" alt="My Video Tutorial Resources Collection"/>
+          <img src="/public/articles/my-video-tutorial-resources-collection.png" width="100%" alt="My Video Tutorial Resources Collection"/>
         </a>
       </div>
     </td>
@@ -4073,7 +4073,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Building an AI Dialogue System: A Comprehensive Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-ai-dialogue-system-comprehensive-guide-chan-meng-d3dsc/" target="_blank">
-          <img src="/public/articles/BuildinganAIDialogueSystem.png" width="100%" alt="Building an AI Dialogue System: A Comprehensive Guide"/>
+          <img src="/public/articles/building-an-ai-dialogue-system.png" width="100%" alt="Building an AI Dialogue System: A Comprehensive Guide"/>
         </a>
       </div>
     </td>
@@ -4081,7 +4081,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Weekly Pulse: Remote MCP, Images, Screen Recording</h5>
       <div align="center">  
         <a href="https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording" target="_blank">
-          <img src="/public/articles/WeeklyPulseRemoteMCP.png" width="100%" alt="Weekly Pulse: Remote MCP, Images, Screen Recording"/>
+          <img src="/public/articles/weekly-pulse-remote-mcp.png" width="100%" alt="Weekly Pulse: Remote MCP, Images, Screen Recording"/>
         </a>
         <p align="center">
           <i>The MCP Server I developed was featured in this article by <a href="https://www.pulsemcp.com/authors/tadas-antanavicius">Tadas Antanavicius</a></i>
@@ -4092,7 +4092,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Building a Website with Notion Integration: Form Submission and Content Display</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-website-notion-integration-form-submission-content-chan-meng-rptac/?trackingId=9bW%2BHK%2Bs%2FBXC9m0mpBGODg%3D%3D" target="_blank">
-          <img src="/public/articles/BuildingaWebsitewithNotionIntegration.png" width="100%" alt="Building a Website with Notion Integration"/>
+          <img src="/public/articles/building-a-website-with-notion-integration.png" width="100%" alt="Building a Website with Notion Integration"/>
         </a>
       </div>
     </td>
@@ -4100,7 +4100,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Solving Language Switching in Next.js: A Guide to Client-Server Component Architecture</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/solving-language-switching-nextjs-guide-client-server-chan-meng-pyudc/" target="_blank">
-          <img src="/public/articles/SolvingLanguageSwitchinginNextjs.png" width="100%" alt="Solving Language Switching in Next.js"/>
+          <img src="/public/articles/solving-language-switching-in-nextjs.png" width="100%" alt="Solving Language Switching in Next.js"/>
         </a>
       </div>
     </td>
@@ -4110,7 +4110,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">FemTech Weekend x UN Women CSW69 | Women's Health Innovation</h5>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg" target="_blank">
-          <img src="/public/articles/UNWomenCSW69.jpeg" width="100%" alt="FemTech Weekend x UN Women CSW69 Feature"/>
+          <img src="/public/articles/un-women-csw69.jpeg" width="100%" alt="FemTech Weekend x UN Women CSW69 Feature"/>
         </a>
         <p align="center">
           <i>My AI solution for women's workplace health was featured in this article by <a href="https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg">FemTech Weekend</a></i>
@@ -4124,7 +4124,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Setting Up Algolia DocSearch in Docusaurus</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/setting-up-algolia-docsearch-docusaurus-chan-meng-yxeqc/?trackingId=HhQYljM%2BOyEsyWxh2jdzRg%3D%3D" target="_blank">
-          <img src="/public/articles/SettingUpAlgoliaDocSearchinDocusaurus.png" width="100%" alt="Setting Up Algolia DocSearch in Docusaurus"/>
+          <img src="/public/articles/setting-up-algolia-doc-search-in-docusaurus.png" width="100%" alt="Setting Up Algolia DocSearch in Docusaurus"/>
         </a>
       </div>
     </td>
@@ -4132,7 +4132,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Implementing Internationalization in a Docusaurus Website: Experience and Lessons Learned</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/implementing-internationalization-docusaurus-website-experience-meng-ppfgc/?trackingId=ADxvRKyscP0fCHyQdZF12g%3D%3D" target="_blank">
-          <img src="/public/articles/Implementing-Internationalization-in-a-Docusaurus.png" width="100%" alt="Implementing Internationalization in a Docusaurus Website"/>
+          <img src="/public/articles/implementing-internationalization-in-a-docusaurus.png" width="100%" alt="Implementing Internationalization in a Docusaurus Website"/>
         </a>
       </div>
     </td>
@@ -4140,7 +4140,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Building a PDF Download Form with Notion Integration in Docusaurus: A Complete Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/building-pdf-download-form-notion-integration-docusaurus-chan-meng-oodrc/?trackingId=R%2FHPf4AgeL5jzJc9LB41rA%3D%3D" target="_blank">
-          <img src="/public/articles/Building-a-PDF-Download-Form-with-Notion-Integration-in-Docusaurus.png" width="100%" alt="Building a PDF Download Form with Notion Integration in Docusaurus"/>
+          <img src="/public/articles/building-a-pdf-download-form-with-notion-integration-in-docusaurus.png" width="100%" alt="Building a PDF Download Form with Notion Integration in Docusaurus"/>
         </a>
       </div>
     </td>
@@ -4158,7 +4158,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Steal these Brand Secrets from Linear's CEO</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/steal-brand-secrets-from-linears-ceo-chan-meng-dgaac/" target="_blank">
-          <img src="/public/articles/Steal-these-Brand-Secrets.png" width="100%" alt="Steal these Brand Secrets from Linear's CEO"/>
+          <img src="/public/articles/steal-these-brand-secrets.png" width="100%" alt="Steal these Brand Secrets from Linear's CEO"/>
         </a>
       </div>
     </td>
@@ -4166,7 +4166,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">The Future is Small: Why Small Language Models (SLMs) Are Powering the Next Wave of AI Agents</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/future-small-why-language-models-slms-powering-next-wave-chan-meng-hddsc/" target="_blank">
-          <img src="/public/articles/The-Future-is-Small.png" width="100%" alt="The Future is Small"/>
+          <img src="/public/articles/the-future-is-small.png" width="100%" alt="The Future is Small"/>
         </a>
       </div>
     </td>
@@ -4174,7 +4174,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">The AI Fluency Framework</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/ai-fluency-framework-chan-meng-4taxc/" target="_blank">
-          <img src="/public/articles/The-AI-Fluency-Framework.png" width="100%" alt="The AI Fluency Framework"/>
+          <img src="/public/articles/the-ai-fluency-framework.png" width="100%" alt="The AI Fluency Framework"/>
         </a>
       </div>
     </td>
@@ -4200,7 +4200,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Docusaurus Navbar Styling Guide: Lessons Learned</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/docusaurus-navbar-styling-guide-lessons-learned-chan-meng-ss8he/" target="_blank">
-          <img src="/public/articles/Docusaurus-Navbar-Styling-Guide.png" width="100%" alt="Docusaurus Navbar Styling Guide"/>
+          <img src="/public/articles/docusaurus-navbar-styling-guide.png" width="100%" alt="Docusaurus Navbar Styling Guide"/>
         </a>
       </div>
     </td>
@@ -4208,7 +4208,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">CopilotKit + LangGraph.js HITL Integration Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/copilotkit-langgraphjs-hitl-integration-guide-chan-meng-tjzoe/" target="_blank">
-          <img src="/public/articles/CopilotKit-LangGraph-Integration-Guide.png" width="100%" alt="CopilotKit + LangGraph.js HITL Integration Guide"/>
+          <img src="/public/articles/copilotkit-langgraph-integration-guide.png" width="100%" alt="CopilotKit + LangGraph.js HITL Integration Guide"/>
         </a>
       </div>
     </td>
@@ -4250,7 +4250,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Getting Started with Minimalism - A Beginner's Guide</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/getting-started-minimalism-beginners-guide-chan-meng-jbioc/?trackingId=FpK6ngBydV7aCUIe8h%2Fryg%3D%3D" target="_blank">
-          <img src="/public/articles/GettingStartedwithMinimalism.png" width="100%" alt="Getting Started with Minimalism"/>
+          <img src="/public/articles/getting-started-with-minimalism.png" width="100%" alt="Getting Started with Minimalism"/>
         </a>
       </div>
     </td>
@@ -4258,7 +4258,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Digital Minimalism - Technology as a Tool, Not a Master</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/digital-minimalism-technology-tool-master-chan-meng-lkz0c/?trackingId=SyA0VAd1NYFJE8i4kd4M0A%3D%3D" target="_blank">
-          <img src="/public/articles/DigitalMinimalism.png" width="100%" alt="Digital Minimalism Technology as a Tool, Not a Master"/>
+          <img src="/public/articles/digital-minimalism.png" width="100%" alt="Digital Minimalism Technology as a Tool, Not a Master"/>
         </a>
       </div>
     </td>
@@ -4268,7 +4268,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Creating a Minimalist Living Space - Lessons from The Art of Discarding</h5>
       <div align="center">  
         <a href="https://www.linkedin.com/pulse/creating-minimalist-living-space-lessons-from-art-discarding-meng-wwdrc/?trackingId=4E9Xkp4kgHGoFA55wqWjtQ%3D%3D" target="_blank">
-          <img src="/public/articles/CreatingaMinimalistLivingSpace.png" width="100%" alt="Creating a Minimalist Living Space"/>
+          <img src="/public/articles/creating-a-minimalist-living-space.png" width="100%" alt="Creating a Minimalist Living Space"/>
         </a>
       </div>
     </td>
@@ -4298,7 +4298,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">A Glimpse of My Minimalist Home</h5>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q" target="_blank">
-          <img src="/public/articles/Douban.jpg" width="80%" alt="A Glimpse of My Minimalist Home"/>
+          <img src="/public/articles/douban.jpg" width="80%" alt="A Glimpse of My Minimalist Home"/>
         </a>
       </div>
     </td>
@@ -4306,7 +4306,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Girl on Mattress</h5>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ" target="_blank">
-          <img src="/public/articles/GirlonMattress.jpg" width="80%" alt="Girl on Mattress"/>
+          <img src="/public/articles/girl-on-mattress.jpg" width="80%" alt="Girl on Mattress"/>
         </a>
       </div>
     </td>
@@ -4314,7 +4314,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">Minimalist to the end, I threw away my old name</h5>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/Jk9I8ONA6vsyvHz7d4dkfw" target="_blank">
-          <img src="/public/articles/KanKeinSight.jpg" width="80%" alt="Minimalist to the end I threw away my old name"/>
+          <img src="/public/articles/kan-kein-sight.jpg" width="80%" alt="Minimalist to the end I threw away my old name"/>
         </a>
       </div>
     </td>
@@ -4322,7 +4322,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">A Genderless Girl</h5>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/E0tR5syP1Wa6We60ipd0Vg" target="_blank">
-          <img src="/public/articles/AGenderlessGirl.jpg" width="80%" alt="A Genderless Girl"/>
+          <img src="/public/articles/a-genderless-girl.jpg" width="80%" alt="A Genderless Girl"/>
         </a>
       </div>
     </td>
@@ -4332,7 +4332,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">[Podcast] 码农姐妹 - From Math Teacher to Full-Stack Developer</h5>
       <div align="center">  
         <a href="https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2?s=eyJ1IjoiNjA5OWNhNmNlMGY1ZTcyM2JiYTA4NDc0In0%3D" target="_blank">
-          <img src="/public/articles/FromMathTeachertoFull-StackDeveloper.jpg" width="80%" alt="From Math Teacher to Full-Stack Developer"/>
+          <img src="/public/articles/from-math-teacher-to-full-stack-developer.jpg" width="80%" alt="From Math Teacher to Full-Stack Developer"/>
         </a>
       </div>
     </td>
@@ -4340,7 +4340,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">[Podcast] Femtech At Work - From Math Teacher to FemTech CTO</h5>
       <div align="center">  
         <a href="https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2?si=b6JDpG46RjqCZLA3P188qg" target="_blank">
-          <img src="/public/articles/FemtechAtWork.png" width="80%" alt="Femtech At Work - Greater China Edition (Episode 21)"/>
+          <img src="/public/articles/femtech-at-work.png" width="80%" alt="Femtech At Work - Greater China Edition (Episode 21)"/>
         </a>
         <p align="center" style="font-size: 0.8em;">
           <i>Chan Meng on AI and Women's Health Innovation (Greater China Edition Episode 21)</i>
@@ -4351,7 +4351,7 @@ alt="Anthropic Logo"/>
       <h5 align="center">FemTech Weekend x UN Women CSW69</h5>
       <div align="center">  
         <a href="https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg" target="_blank">
-          <img src="/public/articles/UNWomenCSW69.jpeg" width="80%" alt="FemTech Weekend x UN Women CSW69 Feature"/>
+          <img src="/public/articles/un-women-csw69.jpeg" width="80%" alt="FemTech Weekend x UN Women CSW69 Feature"/>
         </a>
         <p align="center" style="font-size: 0.8em;">
           <i>My AI solution for women's workplace health was featured</i>
@@ -4422,7 +4422,7 @@ alt="Anthropic Logo"/>
       <h3 align="center">Decoding the Future</h3>
       <div align="center">  
         <a href="https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj?si=41e856e179dd4007" target="_blank">
-          <img src="/public/podcasts/decoding-the-future-cover-en-1.png" width="70%" alt="Decoding the Future Podcast"/>
+          <img src="/public/podcasts/decoding-the-future-cover-en.png" width="70%" alt="Decoding the Future Podcast"/>
         </a>
         <p>How is technology really evolving? Join us on Decoding the Future, where we explore the landmark research papers driving innovation in Artificial Intelligence, LLMs, and beyond.</p>
         <a href="https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj?si=d5801a1e49c0497c" target="_blank">
@@ -4434,7 +4434,7 @@ alt="Anthropic Logo"/>
       <h3 align="center">Future Turing 未来图灵</h3>
       <div align="center">  
         <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
-          <img src="/public/podcasts/decoding-the-future-cover-cn-1.jpg" width="70%" alt="Future Turing 未来图灵 Podcast"/>
+          <img src="/public/podcasts/decoding-the-future-cover-cn.jpg" width="70%" alt="Future Turing 未来图灵 Podcast"/>
         </a>
         <p>Where is the boundary of intelligence? How will the future be shaped by code? Welcome to Future Turing! This show focuses on decoding landmark research papers in Artificial Intelligence, LLMs, and other cutting-edge fields.</p>
         <a href="https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4?si=44c45d9211d849b2" target="_blank">
@@ -4448,7 +4448,7 @@ alt="Anthropic Logo"/>
       <h3 align="center">Praxis and Pages 知行书话</h3>
       <div align="center">  
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=3040cb1dc3494a00" target="_blank">
-          <img src="/public/podcasts/Praxis-and-Pages-1.jpg" width="70%" alt="Praxis and Pages"/>
+          <img src="/public/podcasts/praxis-and-pages.jpg" width="70%" alt="Praxis and Pages"/>
         </a>
         <p>Welcome to Praxis and Pages! This podcast explores the world of humanities and social science books with the help of NotebookLM. I use NotebookLM to organize, distill, and reflect on book content, then share those insights with you in vivid, engaging conversations.</p>
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=25d9e23a4a8c4456" target="_blank">
@@ -4460,7 +4460,7 @@ alt="Anthropic Logo"/>
       <h3 align="center">Beyond Thirty 不止三十</h3>
       <div align="center">  
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=3040cb1dc3494a00" target="_blank">
-          <img src="/public/podcasts/Beyond-Thirty-1.png" width="70%" alt="Beyond Thirty"/>
+          <img src="/public/podcasts/beyond-thirty.png" width="70%" alt="Beyond Thirty"/>
         </a>
         <p>Welcome to Beyond Thirty! This is a conversational podcast hosted by me. As a woman in her 30s, I invite women between the ages of 30 and 40 from all walks of life for open, authentic conversations.</p>
         <a href="https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL?si=25d9e23a4a8c4456" target="_blank">
@@ -4532,7 +4532,7 @@ alt="Anthropic Logo"/>
     <tr>
       <td align="center" width="30%">
         <a href="https://github.com/TechRosie" target="_blank">
-          <img src="/public/organization/TechRosie-logo.jpg" width="150px" alt="TechRosie Logo"/>
+          <img src="/public/organization/tech-rosie-logo.jpg" width="150px" alt="TechRosie Logo"/>
         </a>
       </td>
       <td width="70%">
@@ -4635,7 +4635,7 @@ alt="Anthropic Logo"/>
 <div align="center">
 
 <div align="right">
-  <em><small>🐍 Want to add this snake animation to your profile? Check out <a href="https://github.com/ChanMeng666/ChanMeng666/blob/main/public/How%20to%20Add%20a%20GitHub%20Contribution%20Snake%20to%20Your%20Profile.md">my step-by-step guide</a> for easy setup instructions</small></em>
+  <em><small>🐍 Want to add this snake animation to your profile? Check out <a href="https://github.com/ChanMeng666/ChanMeng666/blob/main/docs/github-contribution-snake-guide.md">my step-by-step guide</a> for easy setup instructions</small></em>
 </div>
 
 <picture>
@@ -4685,7 +4685,7 @@ alt="Anthropic Logo"/>
 ![](https://capsule-render.vercel.app/api?type=transparent&height=200&text=👩‍💻%20Chan%20Meng&fontSize=50&fontColor=9370DB&desc=A%20minimalist&descSize=20&descAlignY=75&descAlign=60)
 
 <div align="center">
-  <img src="/public/chan_by_the_sea.JPG" width="100%" alt="Chan Meng by the sea">
+  <img src="/public/chan-by-the-sea.jpg" width="100%" alt="Chan Meng by the sea">
   <br><br>
   <p><i>Thanks for visiting my GitHub profile! Feel free to connect or check out my projects.</i></p>
   <br>

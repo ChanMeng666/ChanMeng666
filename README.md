@@ -3881,6 +3881,21 @@ alt="Anthropic Logo"/>
         </a>
       </td>
     </tr>
+    <tr>
+      <td align="center" width="70%">
+        <a href="https://chanmeng.org/#newsletter" target="_blank">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=🚀%20What's%20Shipping%20in%20AI&template=neon-glow&height=200" alt="What's Shipping in AI Newsletter"/>
+        </a>
+      </td>
+      <td width="30%">
+        <p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="20" height="20" /> <strong>Every Monday</strong> — curated picks from the hottest new AI tools on Product Hunt</p>
+        <p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pushpin.png" alt="Pushpin" width="20" height="20" /> No hype. No fluff. Just a <strong>3-minute read</strong> to keep you in the loop on what's trending in AI</p>
+        <p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Free.png" alt="Free" width="20" height="20" /> Free · 5 seconds to subscribe · Unsubscribe anytime</p>
+        <a href="https://chanmeng.org/#newsletter" target="_blank">
+          <img src="https://img.shields.io/badge/Subscribe%20Weekly%20AI%20Digest-DA552F?style=for-the-badge&logo=producthunt&logoColor=white" alt="Subscribe to Weekly AI Digest"/>
+        </a>
+      </td>
+    </tr>
   </table>
 </div>
 

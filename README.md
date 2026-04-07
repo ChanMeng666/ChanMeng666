@@ -114,7 +114,7 @@ This is a professional GitHub profile showcasing Chan Meng's work as a full-stac
 <br />
 
   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/chanmeng66u)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-FF69B4?style=for-the-badge&logo=vercel&logoColor=white)](https://chanmeng.org/)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-FF69B4?style=for-the-badge&logo=cloudflare&logoColor=white)](https://chanmeng.org/)
   [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
   [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://chanmeng666.medium.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)
@@ -217,7 +217,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://tam-ai-ti.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://youtu.be/NtT7_q6xhlk?si=NAtuFNxBfSqbK4WP" target="_blank">
             <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
@@ -241,7 +241,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://www.vitex.org.nz/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -262,7 +262,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://she-sharp.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -307,7 +307,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://ai.sanicle.cloud/login" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://chanmeng666.github.io/reveal.js/" target="_blank">
             <img src="https://img.shields.io/badge/Web-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
@@ -339,7 +339,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -360,7 +360,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://gradient-svg-generator.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -381,7 +381,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -423,7 +423,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://linkedin-jobs-search.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -446,7 +446,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://www.femtechweekend.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -467,7 +467,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://free-period-website.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://github.com/user-attachments/assets/2820ff83-e6cf-4cd4-804c-002bc7631260" target="_blank">
             <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
@@ -491,7 +491,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://forward-with-her.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -512,7 +512,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://libraryos.live/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -562,7 +562,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Crimson_Education_Partnership-8B0000?style=for-the-badge&logo=graduation-cap&logoColor=white"/>
           </a>
           <a href="https://nzcel-prep.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -583,7 +583,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://fanfic-lab.tech/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -604,7 +604,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chinese-redefine.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -625,7 +625,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://towerdefense.chanmeng.org/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -695,7 +695,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://sendjoy.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -901,7 +901,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/10_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://chanmeng.org/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -922,7 +922,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/5_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://3d-portfolio-3bb.pages.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -943,7 +943,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://friendscope.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1008,7 +1008,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://forward-with-her.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1029,7 +1029,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://free-period-website.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://github.com/user-attachments/assets/2820ff83-e6cf-4cd4-804c-002bc7631260" target="_blank">
             <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
@@ -1053,7 +1053,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://libraryos.live/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1074,7 +1074,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://job-valuation.vercel.app/assessment/start" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1095,7 +1095,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://linkedin-jobs-search.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -1205,7 +1205,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/5_Coffee_For_Source_Code-yellow?style=for-the-badge&logo=buymeacoffee"/>
           </a>
           <a href="https://who-i-am-nine.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1255,7 +1255,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://www.femtechweekend.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1276,7 +1276,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://sanicle.cloud/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare&logoColor=white"/>
           </a>
           <a href="https://github.com/user-attachments/assets/d64a35c1-3ef1-4d5d-9584-869ecb99b1fc" target="_blank">
             <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
@@ -1300,7 +1300,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chanmeng666.github.io/design-pages" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1323,7 +1323,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://she-sharp.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1363,7 +1363,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://ai.sanicle.cloud/login" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://chanmeng666.github.io/reveal.js/" target="_blank">
             <img src="https://img.shields.io/badge/Web-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
@@ -1393,7 +1393,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://femtracker-agent.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://youtu.be/VVCQKmeEtRs" target="_blank">
             <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
@@ -1417,7 +1417,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://sanicle-wellness-agent-2lxj5uw.gamma.site/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://youtu.be/rv4CiozCNmo" target="_blank">
             <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
@@ -1441,7 +1441,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://roster.chanmeng.org/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1485,7 +1485,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://tam-ai-ti.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://youtu.be/NtT7_q6xhlk?si=NAtuFNxBfSqbK4WP" target="_blank">
             <img src="https://img.shields.io/badge/Demo-blue?style=for-the-badge&logo=youtube&logoColor=white"/>
@@ -1509,7 +1509,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
           <a href="https://ai-hackathon-assistant.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1533,7 +1533,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Crimson_Education_Partnership-8B0000?style=for-the-badge&logo=graduation-cap&logoColor=white"/>
           </a>
           <a href="https://nzcel-prep.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1554,7 +1554,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://fanfic-lab.tech/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1636,7 +1636,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://image-generator-sable-tau.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1657,7 +1657,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://english-redefine.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1678,7 +1678,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chinese-redefine.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1912,7 +1912,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://gradient-svg-generator.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1933,7 +1933,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://github-visitor-counter-tau.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1977,7 +1977,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/SaaS-Ready-FF6B6B?style=for-the-badge"/>
           </span>
           <a href="https://www.vitex.org.nz/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -1998,7 +1998,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://sendjoy.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -2305,7 +2305,7 @@ Transform your GitHub profile and resume into powerful career assets!
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://journey-of-reincarnation.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -2347,7 +2347,7 @@ Transform your GitHub profile and resume into powerful career assets!
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://ai-human-game.chanmeng-dev.workers.dev/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -2418,7 +2418,7 @@ Transform your GitHub profile and resume into powerful career assets!
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://otherworld-god-farmer.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -2439,7 +2439,7 @@ Transform your GitHub profile and resume into powerful career assets!
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://towerdefense.chanmeng.org/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=vercel"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
         <p align="left">
@@ -3823,7 +3823,7 @@ alt="Anthropic Logo"/>
 
 ![AWS](https://img.shields.io/badge/AWS-20232A?style=for-the-badge&logo=amazon-aws&logoColor=FF9900)
 ![Google Cloud](https://img.shields.io/badge/Google_Cloud-20232A?style=for-the-badge&logo=google-cloud&logoColor=4285F4)
-![Vercel](https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=cloudflare&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/Hugging_Face-20232A?style=for-the-badge&logo=huggingface&logoColor=FFD21E)
 ![Serverless](https://img.shields.io/badge/Serverless-20232A?style=for-the-badge&logo=serverless&logoColor=FD5750)
 
@@ -4715,7 +4715,7 @@ alt="Anthropic Logo"/>
 <div align="center">
 
   [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/chanmeng66u)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-FF69B4?style=for-the-badge&logo=vercel&logoColor=white)](https://chanmeng.org/)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-FF69B4?style=for-the-badge&logo=cloudflare&logoColor=white)](https://chanmeng.org/)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chanmeng666/)
   [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://chanmeng666.medium.com/)
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/ChanMeng666)

@@ -459,14 +459,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FreePeriod Official</h3>
       <div align="center">  
-        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/brands/free-period-logo.png" width="50%" alt="FreePeriod Official Logo"/></a>
+        <a href="https://free-period-website.pages.dev/" target="_blank"><img src="/public/brands/free-period-logo.png" width="50%" alt="FreePeriod Official Logo"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://free-period-website.vercel.app/" target="_blank">
+          <a href="https://free-period-website.pages.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://github.com/user-attachments/assets/2820ff83-e6cf-4cd4-804c-002bc7631260" target="_blank">
@@ -483,14 +483,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Forward with Her</h3>
       <div align="center">  
-        <a href="https://forward-with-her.vercel.app/" target="_blank"><img src="/public/brands/forward-with-her.svg" width="50%" alt="Forward with Her Website"/></a>
+        <a href="https://forward-with-her-mentorship-program.pages.dev/" target="_blank"><img src="/public/brands/forward-with-her.svg" width="50%" alt="Forward with Her Website"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/3d-model-viewer" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://forward-with-her.vercel.app/" target="_blank">
+          <a href="https://forward-with-her-mentorship-program.pages.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
@@ -1000,14 +1000,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Forward with Her</h3>
       <div align="center">  
-        <a href="https://forward-with-her.vercel.app/" target="_blank"><img src="/public/brands/forward-with-her.svg" width="50%" alt="Forward with Her Website"/></a>
+        <a href="https://forward-with-her-mentorship-program.pages.dev/" target="_blank"><img src="/public/brands/forward-with-her.svg" width="50%" alt="Forward with Her Website"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/3d-model-viewer" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://forward-with-her.vercel.app/" target="_blank">
+          <a href="https://forward-with-her-mentorship-program.pages.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
@@ -1021,14 +1021,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">FreePeriod Official</h3>
       <div align="center">  
-        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/brands/free-period-logo.png" width="50%" alt="FreePeriod Official Logo"/></a>
+        <a href="https://free-period-website.pages.dev/" target="_blank"><img src="/public/brands/free-period-logo.png" width="50%" alt="FreePeriod Official Logo"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://free-period-website.vercel.app/" target="_blank">
+          <a href="https://free-period-website.pages.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://github.com/user-attachments/assets/2820ff83-e6cf-4cd4-804c-002bc7631260" target="_blank">
@@ -2806,7 +2806,7 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="50%">
       <h3 align="center">FreePeriod</h3>
       <div align="center">  
-        <a href="https://free-period-website.vercel.app/" target="_blank"><img src="/public/experience/free-period-logo.png" width="50%" alt="FreePeriod Logo"/></a>
+        <a href="https://free-period-website.pages.dev/" target="_blank"><img src="/public/experience/free-period-logo.png" width="50%" alt="FreePeriod Logo"/></a>
         <br>
         <br>
         <p>

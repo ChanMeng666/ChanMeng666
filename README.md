@@ -1758,14 +1758,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Body Fat Prediction</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/Assignment2_Part3_(i).ipynb" target="_blank"><img src="/public/brands/bodyfat-estimation-mlp.png" width="100%" alt="Body Fat Prediction"/></a>
+        <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/notebooks/01_qualitative_analysis.ipynb" target="_blank"><img src="/public/brands/bodyfat-estimation-mlp.png" width="100%" alt="Body Fat Prediction"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/Assignment2_Part3_(i).ipynb" target="_blank">
+          <a href="https://github.com/ChanMeng666/bodyfat-estimation-mlp/blob/main/notebooks/01_qualitative_analysis.ipynb" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
           </a>
         </p>
@@ -1779,14 +1779,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Heat Flux Perceptrons Neural Networks</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/Assignment2_part1.ipynb" target="_blank"><img src="/public/brands/heat-flux-perceptrons-neural-networks.png" width="100%" alt="Heat Flux Perceptrons Neural Networks"/></a>
+        <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/notebooks/01_manual_backpropagation.ipynb" target="_blank"><img src="/public/brands/heat-flux-perceptrons-neural-networks.png" width="100%" alt="Heat Flux Perceptrons Neural Networks"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/Assignment2_part1.ipynb" target="_blank">
+          <a href="https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks/blob/main/notebooks/01_manual_backpropagation.ipynb" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
           </a>
         </p>

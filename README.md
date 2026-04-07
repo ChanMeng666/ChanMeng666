@@ -2008,6 +2008,27 @@ npx chan-meng
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Flip Book</h3>
+      <div align="center">  
+        <a href="https://chanmeng666.github.io/flip-book-template/" target="_blank"><img src="/public/brands/flip-book-logo.svg" width="50%" alt="Flip Book - Universal E-Book Template"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/flip-book-template" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chanmeng666.github.io/flip-book-template/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=github"/>
+          </a>
+        </p>
+        <p align="left">
+          • Realistic 3D Page-Flip Animation<br>
+          • Chapter-Based Background Music<br>
+          • Configuration-Driven: Only 2 Files to Edit
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 

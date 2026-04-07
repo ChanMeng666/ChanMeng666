@@ -1800,14 +1800,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">MNIST Neural Network Analysis</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank"><img src="/public/brands/mnist-handwritten-digit-recognition-project.png" width="100%" alt="MNIST Neural Network Analysis"/></a>
+        <a href="https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project/blob/main/notebooks/demo.ipynb" target="_blank"><img src="/public/brands/mnist-handwritten-digit-recognition-project.png" width="100%" alt="MNIST Neural Network Analysis"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://github.com/ChanMeng666/MNIST-Handwritten-Digit-Recognition-Project/blob/main/hand-written-digit-recognition_final.ipynb" target="_blank">
+          <a href="https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project/blob/main/notebooks/demo.ipynb" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
           </a>
         </p>

@@ -1821,14 +1821,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Water Quality Analysis</h3>
       <div align="center">  
-        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="100%" alt="Water Quality Analysis"/></a>
+        <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/notebooks/water_quality_analysis.ipynb" target="_blank"><img src="/public/brands/water-quality-analysis.png" width="100%" alt="Water Quality Analysis"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/my_notebook.ipynb" target="_blank">
+          <a href="https://github.com/ChanMeng666/water-quality-testing-data-analysis/blob/main/notebooks/water_quality_analysis.ipynb" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=jupyter"/>
           </a>
         </p>

@@ -636,6 +636,32 @@ npx chan-meng
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">HER WAKA</h3>
+      <div align="center">  
+        <a href="https://herwaka.shesharp.org.nz/" target="_blank"><img src="/public/brands/her-waka.jpg" width="50%" alt="HER WAKA Programme Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Commercial-FF6B35?style=for-the-badge&logo=business&logoColor=white"/>
+          </span>
+          <a href="https://www.shesharp.org.nz" target="_blank">
+            <img src="https://img.shields.io/badge/SheSharp_Partnership-c846ab?style=for-the-badge&logo=heart&logoColor=white"/>
+          </a>
+          <a href="https://herwaka.shesharp.org.nz/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
+          </a>
+        </p>
+        <p align="left">
+          • Employment Programme for Women in Auckland<br>
+          • SheSharp & MSD Partnership<br>
+          • Mintlify Documentation Platform
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 
 <br />

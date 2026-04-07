@@ -964,7 +964,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://agrihire-solutions-fa6d9a841bd4.herokuapp.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -1139,7 +1139,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://biosecurity-guide-app-a582c65bb9ec.herokuapp.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare&logoColor=white"/>
           </a>
         </p>
         <p align="left">
@@ -1160,7 +1160,7 @@ npx chan-meng
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://scms-countryside-50e91aae3add.herokuapp.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare&logoColor=white"/>
           </a>
           <a href="https://countryside-community-sw-6wqr4e1.gamma.site/" target="_blank">
             <img src="https://img.shields.io/badge/Slides-Demo-blue?style=for-the-badge&logo=slideshare&logoColor=white"/>
@@ -1176,15 +1176,15 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">East Coast Anglers Club</h3>
       <div align="center">  
-        <a href="https://groupac.pythonanywhere.com/" target="_blank"><img src="/public/brands/shipfishing.svg" width="50%" alt="East Coast Anglers Club"/></a>
+        <a href="https://fishing-club.pages.dev/" target="_blank"><img src="/public/brands/shipfishing.svg" width="50%" alt="East Coast Anglers Club"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/fishing-club-project" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://groupac.pythonanywhere.com/login" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=pythonanywhere&logoColor=white"/>
+          <a href="https://fishing-club.pages.dev/login" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare&logoColor=white"/>
           </a>
         </p>
         <p align="left">

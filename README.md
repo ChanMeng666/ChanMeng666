@@ -209,14 +209,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Tam-AI-ti Web Application</h3>
       <div align="center">  
-        <a href="https://tam-ai-ti.vercel.app/" target="_blank"><img src="/public/brands/tam-ai-ti-logo-with-brand.svg" width="50%" alt="Tam-AI-ti Web Application"/></a>
+        <a href="https://tamaiti.whiri-ai.com/" target="_blank"><img src="/public/brands/tam-ai-ti-logo-with-brand.svg" width="50%" alt="Tam-AI-ti Web Application"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://tam-ai-ti.vercel.app/" target="_blank">
+          <a href="https://tamaiti.whiri-ai.com/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://youtu.be/NtT7_q6xhlk?si=NAtuFNxBfSqbK4WP" target="_blank">
@@ -1504,14 +1504,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Tam-AI-ti Web Application</h3>
       <div align="center">  
-        <a href="https://tam-ai-ti.vercel.app/" target="_blank"><img src="/public/brands/tam-ai-ti-logo-with-brand.svg" width="50%" alt="Tam-AI-ti Web Application"/></a>
+        <a href="https://tamaiti.whiri-ai.com/" target="_blank"><img src="/public/brands/tam-ai-ti-logo-with-brand.svg" width="50%" alt="Tam-AI-ti Web Application"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://tam-ai-ti.vercel.app/" target="_blank">
+          <a href="https://tamaiti.whiri-ai.com/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
           <a href="https://youtu.be/NtT7_q6xhlk?si=NAtuFNxBfSqbK4WP" target="_blank">

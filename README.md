@@ -2543,6 +2543,29 @@ Transform your GitHub profile and resume into powerful career assets!
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Memory Rush / 记忆狂奔</h3>
+      <div align="center">  
+        <a href="https://chanmeng666.itch.io/memory-rush" target="_blank"><img src="/public/brands/memory-rush.png" width="50%" alt="Memory Rush / 记忆狂奔"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge&logo=github"/>
+          </span>
+          <a href="https://chanmeng666.itch.io/memory-rush" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=itchdotio&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Nostalgic 2000s Chinese Arcade Platformer<br>
+          • LÖVE (Love2D) & Pure Lua<br>
+          • 5 Themed Levels, 60s Timer & Combo System
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 
 <div align="right">

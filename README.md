@@ -2369,14 +2369,14 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Reincarnation Journey</h3>
       <div align="center">  
-        <a href="https://journey-of-reincarnation.vercel.app" target="_blank"><img src="/public/brands/journey-of-reincarnation-2.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
+        <a href="https://journey-of-reincarnation.pages.dev" target="_blank"><img src="/public/brands/journey-of-reincarnation-2.svg" width="50%" alt="Journey of Reincarnation Website"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/journey-of-reincarnation" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://journey-of-reincarnation.vercel.app" target="_blank">
+          <a href="https://journey-of-reincarnation.pages.dev" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>

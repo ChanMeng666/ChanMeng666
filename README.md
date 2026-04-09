@@ -2521,6 +2521,27 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Kaboom RPG Adventure</h3>
+      <div align="center">  
+        <a href="https://chanmeng666.github.io/kaboom-rpg-adventure/" target="_blank"><img src="/public/brands/kaboom-rpg-adventure.svg" width="50%" alt="Kaboom RPG Adventure"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/kaboom-rpg-adventure" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chanmeng666.github.io/kaboom-rpg-adventure/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=githubpages&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • 2D Pixel-Style RPG Adventure Game<br>
+          • Kaboom.js & Vite<br>
+          • NPC Dialogues, Quests & Turn-Based Combat
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 

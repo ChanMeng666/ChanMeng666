@@ -2302,6 +2302,27 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Typst Skill for Claude Code</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/typst-claude-skill" target="_blank"><img src="/public/brands/claude-ai.svg" width="50%" alt="Typst Skill for Claude Code"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/typst-claude-skill" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://typst.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Typst-239DAD?style=for-the-badge&logo=typst&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Professional PDF generation via Claude Code with 9 ready-to-use templates<br>
+          • Full Typst language & CLI reference with CJK support<br>
+          • Academic papers, resumes, slides, invoices & technical reports
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 

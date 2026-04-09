@@ -1655,14 +1655,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">AI Image Generator</h3>
       <div align="center">  
-        <a href="https://image-generator-sable-tau.vercel.app/" target="_blank"><img src="/public/brands/image-generator.svg" width="50%" alt="AI Image Generator Logo"/></a>
+        <a href="https://image-generator.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/image-generator.svg" width="50%" alt="AI Image Generator Logo"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/image-generator" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://image-generator-sable-tau.vercel.app/" target="_blank">
+          <a href="https://image-generator.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>

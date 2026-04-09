@@ -1004,14 +1004,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">Minimalist Living</h3>
       <div align="center">  
-        <a href="https://minimalist-good-post.vercel.app" target="_blank"><img src="/public/brands/minimalist-good-post.svg" width="50%" alt="Minimalist Living Platform"/></a>
+        <a href="https://minimalist-good-post.pages.dev" target="_blank"><img src="/public/brands/minimalist-good-post.svg" width="50%" alt="Minimalist Living Platform"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/minimalist-good-post" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://minimalist-good-post.vercel.app" target="_blank">
+          <a href="https://minimalist-good-post.pages.dev" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=docusaurus&logoColor=white"/>
           </a>
         </p>
@@ -2503,14 +2503,14 @@ Transform your GitHub profile and resume into powerful career assets!
     <td width="20%">
       <h3 align="center">Otherworld God-Farmer</h3>
       <div align="center">  
-        <a href="https://otherworld-god-farmer.vercel.app/" target="_blank"><img src="/public/brands/otherworld-god-farmer-logo.svg" width="50%" alt="Otherworld God-Farmer"/></a>
+        <a href="https://otherworld-god-farmer.pages.dev/" target="_blank"><img src="/public/brands/otherworld-god-farmer-logo.svg" width="50%" alt="Otherworld God-Farmer"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/otherworld-god-farmer" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://otherworld-god-farmer.vercel.app/" target="_blank">
+          <a href="https://otherworld-god-farmer.pages.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>

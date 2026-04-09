@@ -2545,9 +2545,9 @@ Transform your GitHub profile and resume into powerful career assets!
   </tr>
   <tr>
     <td width="20%">
-      <h3 align="center">Memory Rush / 记忆狂奔</h3>
+      <h3 align="center">Memory Rush</h3>
       <div align="center">  
-        <a href="https://chanmeng666.itch.io/memory-rush" target="_blank"><img src="/public/brands/memory-rush.png" width="50%" alt="Memory Rush / 记忆狂奔"/></a>
+        <a href="https://chanmeng666.itch.io/memory-rush" target="_blank"><img src="/public/brands/memory-rush.png" width="50%" alt="Memory Rush"/></a>
         <br>
         <br>
         <p>

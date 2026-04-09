@@ -2565,6 +2565,27 @@ Transform your GitHub profile and resume into powerful career assets!
         </p>
       </div>
     </td>
+    <td width="20%">
+      <h3 align="center">Slime Split</h3>
+      <div align="center">  
+        <a href="https://chanmeng666.itch.io/slime-split" target="_blank"><img src="/public/brands/slime-split.png" width="50%" alt="Slime Split"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/slime-split" target="_blank">
+            <img src="https://img.shields.io/badge/Source-black?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chanmeng666.itch.io/slime-split" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=itchdotio&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Physics-Based Puzzle Platformer<br>
+          • LÖVE (Love2D) & Lua / Box2D<br>
+          • Split & Merge Slimes Across 5 Handcrafted Levels
+        </p>
+      </div>
+    </td>
   </tr>
 </table>
 

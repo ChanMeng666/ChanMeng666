@@ -853,6 +853,12 @@ npx chan-meng
 
 <br />
 
+### 🎬 Claude Code Audio Hooks — Promotional Video
+
+https://github.com/user-attachments/assets/3504d214-efac-4e01-84c0-426430b842d6
+
+<br />
+
 <div align="right">
   <a href="#readme-non-commercial-apps">
     <img src="https://img.shields.io/badge/⬆️Back%20to%20Non%20Commercial%20Apps-%234B5563.svg?style=for-the-badge&logoColor=white&color=4F46E5" alt="Back to Top"/>

@@ -805,6 +805,29 @@ npx chan-meng
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Typst Skill for Claude Code</h3>
+      <div align="center">  
+        <a href="https://github.com/ChanMeng666/typst-claude-skill" target="_blank"><img src="/public/brands/claude-ai.svg" width="50%" alt="Typst Skill for Claude Code"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/typst-claude-skill" target="_blank">
+           <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://typst.app/" target="_blank">
+            <img src="https://img.shields.io/badge/Typst-239DAD?style=for-the-badge&logo=typst&logoColor=white"/>
+          </a>
+        </p>
+        <p align="left">
+          • Professional PDF generation via Claude Code with 9 ready-to-use templates<br>
+          • Full Typst language & CLI reference with CJK support<br>
+          • Academic papers, resumes, slides, invoices & technical reports
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 
 <br />
@@ -4561,7 +4584,12 @@ alt="Anthropic Logo"/>
 <br />
 
 <!-- BEGIN YOUTUBE-CARDS -->
-
+[![GAVIGO IRE - Feature Showcase](https://ytcards.demolab.com/?id=LFFML4zqHu0&title=GAVIGO+IRE+-+Feature+Showcase&lang=en&timestamp=1773659945&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "GAVIGO IRE - Feature Showcase")](https://www.youtube.com/watch?v=LFFML4zqHu0#gh-dark-mode-only)[![GAVIGO IRE - Feature Showcase](https://ytcards.demolab.com/?id=LFFML4zqHu0&title=GAVIGO+IRE+-+Feature+Showcase&lang=en&timestamp=1773659945&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "GAVIGO IRE - Feature Showcase")](https://www.youtube.com/watch?v=LFFML4zqHu0#gh-light-mode-only)
+[![Website Building Agent Demo](https://ytcards.demolab.com/?id=D3T-kCkdzzQ&title=Website+Building+Agent+Demo&lang=en&timestamp=1768199020&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "Website Building Agent Demo")](https://www.youtube.com/watch?v=D3T-kCkdzzQ#gh-dark-mode-only)[![Website Building Agent Demo](https://ytcards.demolab.com/?id=D3T-kCkdzzQ&title=Website+Building+Agent+Demo&lang=en&timestamp=1768199020&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "Website Building Agent Demo")](https://www.youtube.com/watch?v=D3T-kCkdzzQ#gh-light-mode-only)
+[![Resend Bulk Custom Email Automation Workflow](https://ytcards.demolab.com/?id=Y9l7Wz9kLRA&title=Resend+Bulk+Custom+Email+Automation+Workflow&lang=en&timestamp=1767324316&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "Resend Bulk Custom Email Automation Workflow")](https://www.youtube.com/watch?v=Y9l7Wz9kLRA#gh-dark-mode-only)[![Resend Bulk Custom Email Automation Workflow](https://ytcards.demolab.com/?id=Y9l7Wz9kLRA&title=Resend+Bulk+Custom+Email+Automation+Workflow&lang=en&timestamp=1767324316&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "Resend Bulk Custom Email Automation Workflow")](https://www.youtube.com/watch?v=Y9l7Wz9kLRA#gh-light-mode-only)
+[![The end of year thank you video](https://ytcards.demolab.com/?id=saBoG1HCvfY&title=The+end+of+year+thank+you+video&lang=en&timestamp=1765348402&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "The end of year thank you video")](https://www.youtube.com/watch?v=saBoG1HCvfY#gh-dark-mode-only)[![The end of year thank you video](https://ytcards.demolab.com/?id=saBoG1HCvfY&title=The+end+of+year+thank+you+video&lang=en&timestamp=1765348402&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "The end of year thank you video")](https://www.youtube.com/watch?v=saBoG1HCvfY#gh-light-mode-only)
+[![Claude Code Audio Hooks Demo](https://ytcards.demolab.com/?id=IZi3EJLEpb4&title=Claude+Code+Audio+Hooks+Demo&lang=en&timestamp=1762242544&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "Claude Code Audio Hooks Demo")](https://www.youtube.com/watch?v=IZi3EJLEpb4#gh-dark-mode-only)[![Claude Code Audio Hooks Demo](https://ytcards.demolab.com/?id=IZi3EJLEpb4&title=Claude+Code+Audio+Hooks+Demo&lang=en&timestamp=1762242544&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "Claude Code Audio Hooks Demo")](https://www.youtube.com/watch?v=IZi3EJLEpb4#gh-light-mode-only)
+[![Gradient SVG Generator](https://ytcards.demolab.com/?id=EXIh1f7vk30&title=Gradient+SVG+Generator&lang=en&timestamp=1750824008&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "Gradient SVG Generator")](https://www.youtube.com/watch?v=EXIh1f7vk30#gh-dark-mode-only)[![Gradient SVG Generator](https://ytcards.demolab.com/?id=EXIh1f7vk30&title=Gradient+SVG+Generator&lang=en&timestamp=1750824008&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "Gradient SVG Generator")](https://www.youtube.com/watch?v=EXIh1f7vk30#gh-light-mode-only)
 <!-- END YOUTUBE-CARDS -->
 
 <br />

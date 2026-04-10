@@ -853,7 +853,7 @@ npx chan-meng
 
 <br />
 
-### 🎬 Claude Code Audio Hooks — Promotional Video
+### 🎬 [Claude Code Audio Hooks](https://github.com/ChanMeng666/claude-code-audio-hooks) — Promotional Video
 
 https://github.com/user-attachments/assets/3504d214-efac-4e01-84c0-426430b842d6
 

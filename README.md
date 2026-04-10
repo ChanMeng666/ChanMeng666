@@ -672,7 +672,7 @@ npx chan-meng
             <img src="https://img.shields.io/badge/Commercial-FF6B35?style=for-the-badge&logo=business&logoColor=white"/>
           </span>
           <a href="https://ire.gavigo.com/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=googlecloud&logoColor=white"/>
           </a>
         </p>
         <p align="left">

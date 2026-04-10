@@ -661,6 +661,27 @@ npx chan-meng
     </td>
   </tr>
   <tr>
+    <td width="20%">
+      <h3 align="center">GAVIGO IRE</h3>
+      <div align="center">  
+        <a href="https://ire.gavigo.com/" target="_blank"><img src="/public/experience/gavigo-logo.jpg" width="50%" alt="GAVIGO IRE Logo"/></a>
+        <br>
+        <br>
+        <p>
+          <span>
+            <img src="https://img.shields.io/badge/Commercial-FF6B35?style=for-the-badge&logo=business&logoColor=white"/>
+          </span>
+          <a href="https://ire.gavigo.com/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
+          </a>
+        </p>
+        <p align="left">
+          • AI-Driven Container Orchestration Visualization<br>
+          • TikTok-Style Feed, Social Features & Real-Time Dashboard<br>
+          • Go, React, React Native/Expo & Google Kubernetes Engine
+        </p>
+      </div>
+    </td>
 
   </tr>
 </table>

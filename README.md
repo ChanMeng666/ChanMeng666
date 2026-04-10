@@ -254,14 +254,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">She Sharp</h3>
       <div align="center">
-        <a href="https://she-sharp.vercel.app/" target="_blank"><img src="public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp"/></a>
+        <a href="https://she-sharp-zeta.vercel.app/" target="_blank"><img src="public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://she-sharp.vercel.app/" target="_blank">
+          <a href="https://she-sharp-zeta.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>
@@ -1365,14 +1365,14 @@ npx chan-meng
     <td width="20%">
       <h3 align="center">She Sharp</h3>
       <div align="center">
-        <a href="https://she-sharp.vercel.app/" target="_blank"><img src="public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp"/></a>
+        <a href="https://she-sharp-zeta.vercel.app/" target="_blank"><img src="public/experience/she-sharp-logo-purple-dark.svg" width="50%" alt="She Sharp"/></a>
         <br>
         <br>
         <p>
           <span>
             <img src="https://img.shields.io/badge/Confidential-red?style=for-the-badge"/>
           </span>
-          <a href="https://she-sharp.vercel.app/" target="_blank">
+          <a href="https://she-sharp-zeta.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
           </a>
         </p>

@@ -1229,14 +1229,14 @@ https://github.com/user-attachments/assets/3504d214-efac-4e01-84c0-426430b842d6
     <td width="20%">
       <h3 align="center">Swimming Club Management System</h3>
       <div align="center">  
-        <a href="https://scms-countryside-50e91aae3add.herokuapp.com/" target="_blank"><img src="/public/brands/swimming-club-management-system.svg" width="50%" alt="Swimming Club Management System"/></a>
+        <a href="https://countryside-swimming-club.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/swimming-club-management-system.svg" width="50%" alt="Swimming Club Management System"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/countryside-community-swimming-club" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://scms-countryside-50e91aae3add.herokuapp.com/" target="_blank">
+          <a href="https://countryside-swimming-club.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare&logoColor=white"/>
           </a>
           <a href="https://countryside-community-sw-6wqr4e1.gamma.site/" target="_blank">

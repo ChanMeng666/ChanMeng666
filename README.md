@@ -1033,14 +1033,14 @@ https://github.com/user-attachments/assets/3504d214-efac-4e01-84c0-426430b842d6
     <td width="20%">
       <h3 align="center">AgriHire Solutions</h3>
       <div align="center">  
-        <a href="https://agrihire-solutions-fa6d9a841bd4.herokuapp.com/" target="_blank"><img src="/public/brands/agri-hire-solutions.svg" width="100%" alt="AgriHire Solutions"/></a>
+        <a href="https://agrihire-solutions.chanmeng-dev.workers.dev/" target="_blank"><img src="/public/brands/agri-hire-solutions.svg" width="100%" alt="AgriHire Solutions"/></a>
         <br>
         <br>
         <p>
           <a href="https://github.com/ChanMeng666/agrihire-solutions" target="_blank">
            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
-          <a href="https://agrihire-solutions-fa6d9a841bd4.herokuapp.com/" target="_blank">
+          <a href="https://agrihire-solutions.chanmeng-dev.workers.dev/" target="_blank">
             <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare&logoColor=white"/>
           </a>
         </p>

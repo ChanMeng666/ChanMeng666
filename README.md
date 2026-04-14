@@ -1423,7 +1423,7 @@ https://github.com/user-attachments/assets/3504d214-efac-4e01-84c0-426430b842d6
             <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
           </a>
           <a href="https://chanmeng666.github.io/chanmeng-knowledge-base/" target="_blank">
-            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=githubpages"/>
           </a>
         </p>
         <p align="left">

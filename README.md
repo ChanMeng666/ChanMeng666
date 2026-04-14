@@ -1411,6 +1411,29 @@ https://github.com/user-attachments/assets/3504d214-efac-4e01-84c0-426430b842d6
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="20%">
+      <h3 align="center">Chan Meng's Knowledge Base</h3>
+      <div align="center">
+        <a href="https://chanmeng666.github.io/chanmeng-knowledge-base/" target="_blank"><img src="/public/brands/portfolio.svg" width="50%" alt="Chan Meng's Knowledge Base"/></a>
+        <br>
+        <br>
+        <p>
+          <a href="https://github.com/ChanMeng666/chanmeng-knowledge-base" target="_blank">
+            <img src="https://img.shields.io/badge/My_Open_Source_Project-2ea44f?style=for-the-badge&logo=github"/>
+          </a>
+          <a href="https://chanmeng666.github.io/chanmeng-knowledge-base/" target="_blank">
+            <img src="https://img.shields.io/badge/Live-brightgreen?style=for-the-badge&logo=cloudflare"/>
+          </a>
+        </p>
+        <p align="left">
+          • Technical guides & integration playbooks from real-world projects<br>
+          • Covers Auth, Payments, AI, Architecture, Frontend, SEO & DevOps<br>
+          • Built with Quartz 4, authored in Obsidian, deployed via GitHub Pages
+        </p>
+      </div>
+    </td>
+  </tr>
 </table>
 
 <div align="right">

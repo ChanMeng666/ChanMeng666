@@ -186,7 +186,7 @@ Email: chanmeng.dev@gmail.com
 </a>
 
 Building at the intersection of AI, cultural technology, and women's health.<br>
-Based between China and New Zealand.
+Based in New Zealand.
 
 <br>
 

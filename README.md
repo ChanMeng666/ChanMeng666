@@ -517,13 +517,11 @@ Based between China and New Zealand.
 | Master of Applied Computing (Distinction, Dean's List) | [Lincoln University, NZ](https://www.lincoln.ac.nz/) | Nov 2023 -- Dec 2024 |
 | Bachelor of Geography Science (Distinction) | [Jiangsu Normal University, China](http://www.jsnu.edu.cn/) | Sep 2012 -- Jun 2016 |
 
-**Latest Articles** -- auto-updated from [Medium](https://chanmeng666.medium.com/)
+**Latest Articles** -- read more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://www.linkedin.com/in/chanmeng666/recent-activity/articles/)
 
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" alt="Recent Article 0"></a>
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1" alt="Recent Article 1"></a>
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2" alt="Recent Article 2"></a>
-
-Read more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://www.linkedin.com/in/chanmeng666/recent-activity/articles/)
 
 **Podcasts I Host**
 

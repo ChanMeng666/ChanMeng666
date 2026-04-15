@@ -476,7 +476,7 @@ Based in New Zealand.
 
 - **[UN Women CSW69](https://www.linkedin.com/posts/chanmeng666_womenintech-aiforgood-genderequality-activity-7306391777895141376-bUOl)** -- Featured for AI and gender equality work
 - **[Master of Applied Computing with Distinction](https://www.lincoln.ac.nz/)** -- Lincoln University, New Zealand (Dean's List)
-- **[CopilotKit Contributor](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)** -- Core contributions to open-source AI framework ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=flat-square&labelColor=1a1a1a)
+- **[CopilotKit Contributor](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)** -- Core contributions to open-source AI framework
 - **[MCP Servers Pioneer](https://github.com/modelcontextprotocol/servers/pulls?q=is%3Apr+author%3AChanMeng666)** -- Early Windows contributor to Anthropic's Model Context Protocol
 
 <br>

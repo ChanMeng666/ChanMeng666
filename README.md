@@ -517,34 +517,11 @@ Based between China and New Zealand.
 | Master of Applied Computing (Distinction, Dean's List) | [Lincoln University, NZ](https://www.lincoln.ac.nz/) | Nov 2023 -- Dec 2024 |
 | Bachelor of Geography Science (Distinction) | [Jiangsu Normal University, China](http://www.jsnu.edu.cn/) | Sep 2012 -- Jun 2016 |
 
-**Articles & Publications**
+**Latest Articles** -- auto-updated from [Medium](https://chanmeng666.medium.com/)
 
-| Title |
-|-------|
-| [Essential Files for a Professional GitHub Repository](https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/) |
-| [Solution for MCP Servers Connection Issues with NVM/NPM](https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/) |
-| [How to Add a GitHub Contribution Snake to Your Profile README](https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng-tzakc/) |
-| [Tencent Meeting Screen Recording Download Guide](https://www.linkedin.com/pulse/how-download-videos-from-web-pages-step-by-step-guide-chan-meng-mp5pc/) |
-| [Building a Web Scraper for Douban Group Posts](https://www.linkedin.com/pulse/building-web-scraper-douban-group-posts-chan-meng-pn6oc/) |
-| [From Git Log to Insights: Evaluating Team Contributions](https://www.linkedin.com/pulse/from-git-log-insights-evaluating-team-contributions-github-chan-meng-qdtpc/) |
-| [How to Deploy Your React Project to Vercel](https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng-kkale/) |
-| [The Power of Index Files in React Projects](https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/) |
-| [Protecting Your Open Source Project](https://www.linkedin.com/pulse/protecting-your-open-source-project-comprehensive-guide-chan-meng-u77wc/) |
-| [Publishing Your First npm Package](https://www.linkedin.com/pulse/complete-guide-publishing-your-first-npm-package-chan-meng-srrec/) |
-| [Git Branch Management and Project Initialization](https://www.linkedin.com/pulse/git-branch-management-project-initialization-guide-chan-meng-9oewc/) |
-| [Conventional Commits: A Comprehensive Guide](https://www.linkedin.com/pulse/conventional-commits-comprehensive-guide-chan-meng-n9psc/) |
-| [Creating a Python MCP Server](https://www.linkedin.com/pulse/creating-python-mcp-server-step-by-step-guide-chan-meng-olwmc/) |
-| [Spring Boot Database Configuration Guide](https://www.linkedin.com/pulse/spring-boot-project-database-configuration-guide-local-chan-meng-cuiqc/) |
-| [Creating Educational Animations with Manim](https://www.linkedin.com/pulse/creating-educational-animations-manim-from-script-final-chan-meng-9x3lc/) |
-| [Building an AI Dialogue System](https://www.linkedin.com/pulse/building-ai-dialogue-system-comprehensive-guide-chan-meng-d3dsc/) |
-| [Building a Website with Notion Integration](https://www.linkedin.com/pulse/building-website-notion-integration-form-submission-content-chan-meng-rptac/) |
-| [Solving Language Switching in Next.js](https://www.linkedin.com/pulse/solving-language-switching-nextjs-guide-client-server-chan-meng-pyudc/) |
-| [Apifox API Testing Tool Guide](https://www.linkedin.com/pulse/apifox-api-testing-tool-guide-from-beginner-chan-meng-ekqjc/) |
-| [File List Documentation System](https://www.linkedin.com/pulse/creating-comprehensive-file-list-documentation-system-chan-meng-njjxc/) |
-| [Planning Overseas Education and Career Development](https://www.linkedin.com/pulse/planning-overseas-education-career-development-chan-meng-vfhic/) |
-| [Bug Report: Authentication Redirect Issue](https://www.linkedin.com/pulse/bug-report-authentication-redirect-issue-chan-meng-ejmne/) |
-| [My Video Tutorial Resources Collection](https://www.linkedin.com/pulse/my-video-tutorial-resources-collection-chan-meng-udkfc/) |
-| [Featured in Weekly Pulse: Remote MCP Newsletter](https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording) |
+<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" alt="Recent Article 0"></a>
+<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1" alt="Recent Article 1"></a>
+<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2" alt="Recent Article 2"></a>
 
 Read more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://www.linkedin.com/in/chanmeng666/recent-activity/articles/)
 
@@ -557,16 +534,16 @@ Read more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://ww
 | Praxis and Pages (知行书话) -- Humanities and social science | [Spotify](https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL) |
 | Beyond Thirty (不止三十) -- Conversations with women 30-40 | [Spotify](https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL) |
 
-**YouTube**
+**YouTube** -- [Subscribe @ChanMeng666](https://www.youtube.com/@ChanMeng666?sub_confirmation=1)
 
-| Video | Watch |
-|-------|-------|
-| GAVIGO IRE - Feature Showcase | [YouTube](https://www.youtube.com/watch?v=LFFML4zqHu0) |
-| Website Building Agent Demo | [YouTube](https://www.youtube.com/watch?v=D3T-kCkdzzQ) |
-| Resend Bulk Email Automation | [YouTube](https://www.youtube.com/watch?v=Y9l7Wz9kLRA) |
-| Tam-AI-Ti Demo | [YouTube](https://youtu.be/NtT7_q6xhlk) |
-
-More videos on [YouTube @ChanMeng666](https://www.youtube.com/@ChanMeng666)
+<!-- BEGIN YOUTUBE-CARDS -->
+[![GAVIGO IRE - Feature Showcase](https://ytcards.demolab.com/?id=LFFML4zqHu0&title=GAVIGO+IRE+-+Feature+Showcase&lang=en&timestamp=1773659945&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "GAVIGO IRE - Feature Showcase")](https://www.youtube.com/watch?v=LFFML4zqHu0#gh-dark-mode-only)[![GAVIGO IRE - Feature Showcase](https://ytcards.demolab.com/?id=LFFML4zqHu0&title=GAVIGO+IRE+-+Feature+Showcase&lang=en&timestamp=1773659945&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "GAVIGO IRE - Feature Showcase")](https://www.youtube.com/watch?v=LFFML4zqHu0#gh-light-mode-only)
+[![Website Building Agent Demo](https://ytcards.demolab.com/?id=D3T-kCkdzzQ&title=Website+Building+Agent+Demo&lang=en&timestamp=1768199020&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "Website Building Agent Demo")](https://www.youtube.com/watch?v=D3T-kCkdzzQ#gh-dark-mode-only)[![Website Building Agent Demo](https://ytcards.demolab.com/?id=D3T-kCkdzzQ&title=Website+Building+Agent+Demo&lang=en&timestamp=1768199020&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "Website Building Agent Demo")](https://www.youtube.com/watch?v=D3T-kCkdzzQ#gh-light-mode-only)
+[![Resend Bulk Custom Email Automation Workflow](https://ytcards.demolab.com/?id=Y9l7Wz9kLRA&title=Resend+Bulk+Custom+Email+Automation+Workflow&lang=en&timestamp=1767324316&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "Resend Bulk Custom Email Automation Workflow")](https://www.youtube.com/watch?v=Y9l7Wz9kLRA#gh-dark-mode-only)[![Resend Bulk Custom Email Automation Workflow](https://ytcards.demolab.com/?id=Y9l7Wz9kLRA&title=Resend+Bulk+Custom+Email+Automation+Workflow&lang=en&timestamp=1767324316&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "Resend Bulk Custom Email Automation Workflow")](https://www.youtube.com/watch?v=Y9l7Wz9kLRA#gh-light-mode-only)
+[![The end of year thank you video](https://ytcards.demolab.com/?id=saBoG1HCvfY&title=The+end+of+year+thank+you+video&lang=en&timestamp=1765348402&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "The end of year thank you video")](https://www.youtube.com/watch?v=saBoG1HCvfY#gh-dark-mode-only)[![The end of year thank you video](https://ytcards.demolab.com/?id=saBoG1HCvfY&title=The+end+of+year+thank+you+video&lang=en&timestamp=1765348402&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "The end of year thank you video")](https://www.youtube.com/watch?v=saBoG1HCvfY#gh-light-mode-only)
+[![Claude Code Audio Hooks Demo](https://ytcards.demolab.com/?id=IZi3EJLEpb4&title=Claude+Code+Audio+Hooks+Demo&lang=en&timestamp=1762242544&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "Claude Code Audio Hooks Demo")](https://www.youtube.com/watch?v=IZi3EJLEpb4#gh-dark-mode-only)[![Claude Code Audio Hooks Demo](https://ytcards.demolab.com/?id=IZi3EJLEpb4&title=Claude+Code+Audio+Hooks+Demo&lang=en&timestamp=1762242544&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "Claude Code Audio Hooks Demo")](https://www.youtube.com/watch?v=IZi3EJLEpb4#gh-light-mode-only)
+[![Gradient SVG Generator](https://ytcards.demolab.com/?id=EXIh1f7vk30&title=Gradient+SVG+Generator&lang=en&timestamp=1750824008&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=250&border_radius=5 "Gradient SVG Generator")](https://www.youtube.com/watch?v=EXIh1f7vk30#gh-dark-mode-only)[![Gradient SVG Generator](https://ytcards.demolab.com/?id=EXIh1f7vk30&title=Gradient+SVG+Generator&lang=en&timestamp=1750824008&background_color=%23ffffff&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5 "Gradient SVG Generator")](https://www.youtube.com/watch?v=EXIh1f7vk30#gh-light-mode-only)
+<!-- END YOUTUBE-CARDS -->
 
 **More Recommendations**
 

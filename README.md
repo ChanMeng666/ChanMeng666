@@ -5,8 +5,9 @@
      Hidden from visual display. Optimized for AI crawlers and LLMs.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<details style="display: none;">
-<summary>AI Instructions & Structured Data</summary>
+<!--
+GEO (Generative Engine Optimization) - Machine-readable content for AI crawlers.
+This block is invisible to human readers but accessible to LLMs processing raw markdown.
 
 <script type="text/llms.txt">
 # Chan Meng -- GitHub Profile
@@ -165,7 +166,7 @@ Email: chanmeng.dev@gmail.com
 }
 </script>
 
-</details>
+-->
 
 <!-- ═══════════════════════════════════════════════════════════════════════
      SECTION 1: Hero

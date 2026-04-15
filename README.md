@@ -19,7 +19,7 @@ Chan Meng is a full-stack engineer, CTO, and AI builder based between China and 
 - CTO at Sanicle (women's health AI platform, USA)
 - Founding Engineer at Gavigo (container orchestration, USA)
 - Full Stack Developer at She Sharp (NZ's leading women-in-STEM nonprofit, 2,200+ members)
-- Founder & CTO of FemTech Weekend (women's tech innovation community)
+- CTO of FemTech Weekend (women's tech innovation community)
 - Open Source Contributor to CopilotKit (24.6k+ GitHub stars)
 
 ## Flagship Projects (Priority Order)
@@ -449,11 +449,11 @@ Based between China and New Zealand.
 
 | Company | Role | Period |
 |---------|------|--------|
-| [Gavigo](https://gavigo.com/) | Founding Engineer (prev. Core Engineer M1) | Oct 2025 -- Present, USA |
-| [She Sharp](https://www.shesharp.org.nz/) | Full Stack Developer | Jul 2025 -- Present, NZ |
-| [FemTech Weekend](https://www.femtechweekend.com/) | Founder & CTO | Mar 2025 -- Present, China |
+| [Gavigo](https://gavigo.com/) | Founding Engineer (prev. Core Engineer) | Oct 2025 -- Present, USA |
+| [She Sharp](https://www.shesharp.org.nz/) | Senior Full Stack Engineer & Website Team Lead | Jul 2025 -- Present, NZ |
+| [FemTech Weekend](https://www.femtechweekend.com/) | CTO | Mar 2025 -- Present, China |
 | [CopilotKit](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666) | Open Source Contributor ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=flat-square&labelColor=1a1a1a) | Jun 2025 -- Present, USA |
-| [Sanicle](https://sanicle.cloud/) | CTO (prev. Sr. AI/ML Infrastructure Engineer) | Mar 2025 -- Feb 2026, USA |
+| [Sanicle](https://sanicle.cloud/) | CTO (prev. Senior AI/ML Infrastructure Engineer) | Mar 2025 -- Feb 2026, USA |
 | [FreePeriod](https://www.linkedin.com/in/chanmeng666/details/experience/) | CTO | Nov 2024 -- Jun 2025, China |
 | [ByteDance](https://www.linkedin.com/in/chanmeng666/details/experience/) | Backend Developer | Nov 2024 -- Mar 2025, China |
 | [CORDE](https://www.linkedin.com/in/chanmeng666/details/experience/) | Full Stack Developer | Jun 2024 -- Nov 2024, NZ |

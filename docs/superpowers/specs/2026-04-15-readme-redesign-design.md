@@ -142,13 +142,13 @@ Not collapsible -- visible by default. Clean timeline format:
 Gavigo          Core Engineer (M1 Prototype) Consultant    2025-Present
                 Remote, United States
 
-She Sharp       Full Stack Developer                       2025-Present
+She Sharp       Senior Full Stack Engineer & Website Team Lead    2025-Present
                 Hybrid, New Zealand
 
 Sanicle         CTO / Sr. AI/ML Infrastructure Engineer    2025-Present
                 Remote, United States
 
-FemTech Weekend Founder & CTO                              2025-Present
+FemTech Weekend CTO                              2025-Present
                 Remote, China
 
 ByteDance       Developer                                  Previous

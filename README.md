@@ -175,13 +175,13 @@ Email: chanmeng.dev@gmail.com
 <div align="center">
 
 <a href="https://github.com/ChanMeng666">
-  <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Chan+Meng&template=obsidian-black&height=250" width="100%" alt="Chan Meng">
+  <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Chan+Meng&template=pastel-dream&height=250" width="100%" alt="Chan Meng">
 </a>
 
 <img src="/public/brands/chan-monkey-logo-black.svg" width="70" height="70" alt="Chan Meng">
 
 <a href="https://chanmeng.org/">
-  <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Full-stack+Engineer+%7C+CTO+%7C+AI+Builder&template=terminal-green&height=80" width="100%" alt="Full-stack Engineer | CTO | AI Builder">
+  <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Full-stack+Engineer+%7C+CTO+%7C+AI+Builder&template=terminal-green&height=80" width="500" alt="Full-stack Engineer | CTO | AI Builder">
 </a>
 
 Building at the intersection of AI, cultural technology, and women's health.<br>

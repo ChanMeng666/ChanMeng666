@@ -365,8 +365,9 @@ Based between China and New Zealand.
 |---------|------|--------|
 | [Gavigo](https://gavigo.com/) | Founding Engineer (prev. Core Engineer M1) | Oct 2025 -- Present, USA |
 | [She Sharp](https://www.shesharp.org.nz/) | Full Stack Developer | Jul 2025 -- Present, NZ |
-| [Sanicle](https://sanicle.cloud/) | CTO (prev. Sr. AI/ML Infrastructure Engineer) | Mar 2025 -- Feb 2026, USA |
+| [FemTech Weekend](https://www.femtechweekend.com/) | Founder & CTO | Mar 2025 -- Present, China |
 | [CopilotKit](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666) | Open Source Contributor (24.6k+ stars) | Jun 2025 -- Present |
+| [Sanicle](https://sanicle.cloud/) | CTO (prev. Sr. AI/ML Infrastructure Engineer) | Mar 2025 -- Feb 2026, USA |
 | [FreePeriod](https://www.linkedin.com/in/chanmeng666/details/experience/) | CTO | Nov 2024 -- Jun 2025, China |
 | [ByteDance](https://www.linkedin.com/in/chanmeng666/details/experience/) | Backend Developer | Nov 2024 -- Mar 2025, China |
 | [CORDE](https://www.linkedin.com/in/chanmeng666/details/experience/) | Full Stack Developer | Jun 2024 -- Nov 2024, NZ |

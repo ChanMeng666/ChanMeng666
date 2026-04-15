@@ -352,6 +352,87 @@ Based between China and New Zealand.
   </a>
 </p>
 
+<details>
+<summary>More projects: Web Apps, AI Agents, Creative Tools, ML Research, Games...</summary>
+
+<br>
+
+**Web Applications**
+
+| Project | Live |
+|---------|------|
+| [Chan's Portfolio v2](https://github.com/ChanMeng666) | [chanmeng.org](https://chanmeng.org/) |
+| [AgriHire Solutions](https://github.com/ChanMeng666/agrihire-solutions) | [Live](https://agrihire.chanmeng.org/) |
+| [LibraryOS](https://github.com/ChanMeng666/library-os) | [Live](https://libraryos.live/) |
+| [FriendScope](https://github.com/ChanMeng666/friendscope) | [Live](https://friendscope.chanmeng-dev.workers.dev/) |
+| [Selwyn Panel Beaters](https://github.com/ChanMeng666/automotive-repair-management-system) | [Live](https://repairos.chanmeng.org/) |
+| [Swimming Club Management](https://github.com/ChanMeng666/countryside-community-swimming-club) | [Live](https://countryside-swimming-club.chanmeng-dev.workers.dev/) |
+| [Job Value Assessment](https://github.com/ChanMeng666/job-valuation) | [Live](https://job-valuation.chanmeng-dev.workers.dev/assessment/start) |
+| [Biosecurity](https://github.com/ChanMeng666/biosecurity) | [Live](https://biosecurity.chanmeng-dev.workers.dev/) |
+| [Design Pages](https://github.com/ChanMeng666/design-pages) | [Live](https://chanmeng666.github.io/design-pages) |
+| [Knowledge Base](https://github.com/ChanMeng666/chanmeng-knowledge-base) | [Live](https://chanmeng666.github.io/chanmeng-knowledge-base/) |
+
+**AI Applications & Agents**
+
+| Project | Live |
+|---------|------|
+| [FemTracker Agent](https://github.com/ChanMeng666/femtracker-agent) | [Live](https://femtracker-agent.vercel.app/) |
+| [Wellness Support Agent](https://github.com/ChanMeng666/wellness-agent) | -- |
+| [Hospital Roster Agent](https://github.com/ChanMeng666/hospital-roster-agent) | -- |
+| [Customer Insight](https://github.com/ChanMeng666/customer-insight) | -- |
+| [FanFic Lab](https://github.com/ChanMeng666/fanfic-lab) | [Live](https://fanfic-lab.tech/) |
+| [ESOL Platform](https://www.linkedin.com/in/chanmeng666/details/experience/) | [Live](https://nzcel-prep.vercel.app) |
+
+**Creative AI & Language Tools**
+
+| Project | Live |
+|---------|------|
+| [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) | -- |
+| [Emoji Story Generator](https://github.com/ChanMeng666/emoji-story-generator) | -- |
+| [AI Image Generator](https://github.com/ChanMeng666/image-generator) | [Live](https://image-generator.chanmeng-dev.workers.dev/) |
+| [English Redefine](https://github.com/ChanMeng666/english-redefine) | [Live](https://english-redefine.chanmeng-dev.workers.dev/) |
+| [Chinese Redefine](https://github.com/ChanMeng666/chinese-redefine) | [Live](https://chinese-redefine.chanmeng-dev.workers.dev/) |
+
+**Machine Learning Research**
+
+| Project |
+|---------|
+| [Advanced Neural Network Applications](https://github.com/ChanMeng666/advanced-neural-network-applications) |
+| [Body Fat Prediction (MLP)](https://github.com/ChanMeng666/bodyfat-estimation-mlp) |
+| [Heat Flux Neural Networks](https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks) |
+| [MNIST Digit Recognition](https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project) |
+| [Water Quality Analysis](https://github.com/ChanMeng666/water-quality-testing-data-analysis) |
+
+**Personal Branding Tools**
+
+| Project | Live |
+|---------|------|
+| [AI Programming Education](https://github.com/ChanMeng666/ai-programming-teaching-project) | [Live](https://programming.chanmeng.org/) |
+| [README Profile Generator](https://github.com/ChanMeng666/readme-profile-generator) | [HuggingFace](https://huggingface.co/spaces/ChanMeng666/readme-profile-generator) |
+| [Chan Meng CLI](https://github.com/ChanMeng666/chan-meng) | [npm](https://www.npmjs.com/package/chan-meng) |
+| [GitHub Visitor Counter](https://github.com/ChanMeng666/github-visitor-counter) | [Live](https://github-visitor-counter-tau.vercel.app/) |
+| [Lottie Edit](https://github.com/ChanMeng666/lottie-edit) | -- |
+
+**Games & Interactive**
+
+| Project | Live |
+|---------|------|
+| [CSS Tower Defense](https://github.com/ChanMeng666/css-tower-defense) | [Live](https://towerdefense.chanmeng.org/) |
+| [AI vs Human Game](https://github.com/ChanMeng666/ai-human-game) | [Live](https://ai-human-game.chanmeng-dev.workers.dev/) |
+| [Otherworld God-Farmer](https://github.com/ChanMeng666/otherworld-god-farmer) | -- |
+| [Brick Breaker](https://github.com/ChanMeng666/html-brick-game) | -- |
+| [Journey of Reincarnation](https://github.com/ChanMeng666/journey-of-reincarnation) | -- |
+| [Podcast App Prototype](https://github.com/ChanMeng666/podcast-app-prototype) | -- |
+
+**Scrapers & Extensions**
+
+| Project |
+|---------|
+| [Douban Elite Scraper](https://github.com/ChanMeng666/Douban-elite-scraper) |
+| [Douban Review Scraper](https://github.com/ChanMeng666/DoubanReviewScraper) |
+
+</details>
+
 <br>
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -413,6 +494,104 @@ Based between China and New Zealand.
 > *"What truly sets Chan apart is her principled approach to software engineering. She embeds data privacy into the core architecture, ensuring that client agency, trust, and resilience are never afterthoughts."*
 >
 > -- [Gabby Hurst](https://www.linkedin.com/in/gabby-h-159141202/), Chief Experience Officer at [Sanicle](https://sanicle.cloud/)
+
+<details>
+<summary>More: Awards, Education, Articles, Podcasts, Media, Recommendations...</summary>
+
+<br>
+
+**Awards & Honors**
+
+| Award | Organization | Date |
+|-------|-------------|------|
+| Outstanding Mentor Award | [AI Hackathon Festival 2025](https://www.linkedin.com/in/chanmeng666/details/experience/) (AI Forum NZ, She Sharp, AUT) | Aug 2025 |
+| UN CSW 69 Speaker | [Beyond Beijing 30 Conference](https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg), UN Headquarters NYC | Mar 2025 |
+| UN Women FemTech Hackathon Outstanding Performer | [FemTech Weekend](https://www.femtechweekend.com/) | Mar 2025 |
+| Dean's List (Top 5%) | [Lincoln University](https://www.lincoln.ac.nz/) | Jan 2025 |
+| Master's with Distinction | [Lincoln University](https://www.lincoln.ac.nz/), Applied Computing | Dec 2024 |
+
+**Education**
+
+| Degree | University | Period |
+|--------|-----------|--------|
+| Master of Applied Computing (Distinction, Dean's List) | [Lincoln University, NZ](https://www.lincoln.ac.nz/) | Nov 2023 -- Dec 2024 |
+| Bachelor of Geography Science (Distinction) | [Jiangsu Normal University, China](http://www.jsnu.edu.cn/) | Sep 2012 -- Jun 2016 |
+
+**Articles & Publications**
+
+| Title |
+|-------|
+| [Essential Files for a Professional GitHub Repository](https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/) |
+| [Solution for MCP Servers Connection Issues with NVM/NPM](https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/) |
+| [How to Add a GitHub Contribution Snake to Your Profile README](https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng-tzakc/) |
+| [Tencent Meeting Screen Recording Download Guide](https://www.linkedin.com/pulse/how-download-videos-from-web-pages-step-by-step-guide-chan-meng-mp5pc/) |
+| [Building a Web Scraper for Douban Group Posts](https://www.linkedin.com/pulse/building-web-scraper-douban-group-posts-chan-meng-pn6oc/) |
+| [From Git Log to Insights: Evaluating Team Contributions](https://www.linkedin.com/pulse/from-git-log-insights-evaluating-team-contributions-github-chan-meng-qdtpc/) |
+| [How to Deploy Your React Project to Vercel](https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng-kkale/) |
+| [The Power of Index Files in React Projects](https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/) |
+| [Protecting Your Open Source Project](https://www.linkedin.com/pulse/protecting-your-open-source-project-comprehensive-guide-chan-meng-u77wc/) |
+| [Publishing Your First npm Package](https://www.linkedin.com/pulse/complete-guide-publishing-your-first-npm-package-chan-meng-srrec/) |
+| [Git Branch Management and Project Initialization](https://www.linkedin.com/pulse/git-branch-management-project-initialization-guide-chan-meng-9oewc/) |
+| [Conventional Commits: A Comprehensive Guide](https://www.linkedin.com/pulse/conventional-commits-comprehensive-guide-chan-meng-n9psc/) |
+| [Creating a Python MCP Server](https://www.linkedin.com/pulse/creating-python-mcp-server-step-by-step-guide-chan-meng-olwmc/) |
+| [Spring Boot Database Configuration Guide](https://www.linkedin.com/pulse/spring-boot-project-database-configuration-guide-local-chan-meng-cuiqc/) |
+| [Creating Educational Animations with Manim](https://www.linkedin.com/pulse/creating-educational-animations-manim-from-script-final-chan-meng-9x3lc/) |
+| [Building an AI Dialogue System](https://www.linkedin.com/pulse/building-ai-dialogue-system-comprehensive-guide-chan-meng-d3dsc/) |
+| [Building a Website with Notion Integration](https://www.linkedin.com/pulse/building-website-notion-integration-form-submission-content-chan-meng-rptac/) |
+| [Solving Language Switching in Next.js](https://www.linkedin.com/pulse/solving-language-switching-nextjs-guide-client-server-chan-meng-pyudc/) |
+| [Apifox API Testing Tool Guide](https://www.linkedin.com/pulse/apifox-api-testing-tool-guide-from-beginner-chan-meng-ekqjc/) |
+| [File List Documentation System](https://www.linkedin.com/pulse/creating-comprehensive-file-list-documentation-system-chan-meng-njjxc/) |
+| [Planning Overseas Education and Career Development](https://www.linkedin.com/pulse/planning-overseas-education-career-development-chan-meng-vfhic/) |
+| [Bug Report: Authentication Redirect Issue](https://www.linkedin.com/pulse/bug-report-authentication-redirect-issue-chan-meng-ejmne/) |
+| [My Video Tutorial Resources Collection](https://www.linkedin.com/pulse/my-video-tutorial-resources-collection-chan-meng-udkfc/) |
+| [Featured in Weekly Pulse: Remote MCP Newsletter](https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording) |
+
+Read more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://www.linkedin.com/in/chanmeng666/recent-activity/articles/)
+
+**Podcasts I Host**
+
+| Podcast | Listen |
+|---------|--------|
+| Decoding the Future -- AI research papers and innovation | [Spotify](https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj) |
+| Future Turing (未来图灵) -- AI innovation (Chinese) | [Spotify](https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4) |
+| Praxis and Pages (知行书话) -- Humanities and social science | [Spotify](https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL) |
+| Beyond Thirty (不止三十) -- Conversations with women 30-40 | [Spotify](https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL) |
+
+**YouTube**
+
+| Video | Watch |
+|-------|-------|
+| GAVIGO IRE - Feature Showcase | [YouTube](https://www.youtube.com/watch?v=LFFML4zqHu0) |
+| Website Building Agent Demo | [YouTube](https://www.youtube.com/watch?v=D3T-kCkdzzQ) |
+| Resend Bulk Email Automation | [YouTube](https://www.youtube.com/watch?v=Y9l7Wz9kLRA) |
+| Tam-AI-Ti Demo | [YouTube](https://youtu.be/NtT7_q6xhlk) |
+
+More videos on [YouTube @ChanMeng666](https://www.youtube.com/@ChanMeng666)
+
+**More Recommendations**
+
+> *"Chan Meng is an outstanding Senior AI/ML Infrastructure Engineer whose work consistently combines speed, security, and strategic foresight. In every sense, Chan is the kind of engineer who elevates those around her."*
+> -- [Daryll Hall](https://www.linkedin.com/in/daryll-hall-ms-csm-cspo-167435310/), Chief AI Officer at [Sanicle](https://sanicle.cloud/)
+
+> *"She played a pivotal role in securing our IBM MVP and its successful deployment, a testament to her dedication and expertise."*
+> -- [Chaste Christopher Inegbedion](https://www.linkedin.com/in/chastechrisinegbedion/), Chief Period Officer at [Sanicle](https://sanicle.cloud/)
+
+> *"Chan's strong motivation and clear expression and output ability are what I want to learn. I highly recommend Chan to everyone."*
+> -- [Amy Li](https://www.linkedin.com/in/amy-li-780142382/), Mentee
+
+> *"Her insights on identity and self-awareness deeply inspired me. I highly recommend Chan to anyone who wants to grow and advance in the technology field."*
+> -- [Siyu Xing](https://www.linkedin.com/in/siyu-xing-4a003a356/), Ph.D. Candidate at University of Chinese Academy of Sciences
+
+> *"Chan Meng has done a fantastic job leading the technical development of our web application. She consistently delivers on modification requests quickly and thoughtfully."*
+> -- [Daryll Hall](https://www.linkedin.com/in/daryll-hall-ms-csm-cspo-167435310/), Chief AI Officer at [Sanicle](https://sanicle.cloud/)
+
+All recommendations verified on [LinkedIn](https://www.linkedin.com/in/chanmeng666/details/recommendations/)
+
+**TechRosie Community**
+
+A global community of women developers committed to excellence, collaboration, and innovation in technology. [Join TechRosie](https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml) | [GitHub Organization](https://github.com/TechRosie)
+
+</details>
 
 <br>
 
@@ -515,6 +694,22 @@ Based between China and New Zealand.
 <div align="center">
 
 ---
+
+<details>
+<summary>Connect, Subscribe, Support...</summary>
+
+<br>
+
+| | |
+|---|---|
+| [Medium](https://chanmeng666.medium.com/) | Read my latest articles on full-stack development and AI |
+| [Hugging Face](https://huggingface.co/ChanMeng666) | Explore my ML models and Spaces |
+| [Discord](https://discord.gg/T3NJG5n98a) | Join the AI Programming community |
+| [YouTube](https://www.youtube.com/@ChanMeng666) | Watch project demos and tutorials |
+| [Book a Meeting](https://cal.com/chan-meng/30min) | Schedule a 30-minute chat |
+| [Buy Me a Coffee](https://buymeacoffee.com/chanmeng66u) | Support my open-source work |
+
+</details>
 
 <br>
 

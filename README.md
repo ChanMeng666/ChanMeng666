@@ -182,7 +182,7 @@ Email: chanmeng.dev@gmail.com
 <br>
 
 <a href="https://chanmeng.org/">
-  <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Full-stack+Engineer+%7C+CTO+%7C+AI+Builder&template=terminal-green&height=80" width="380" alt="Full-stack Engineer | CTO | AI Builder">
+  <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Full-stack+Engineer+%7C+CTO+%7C+AI+Builder&template=terminal-green&height=60" width="380" alt="Full-stack Engineer | CTO | AI Builder">
 </a>
 
 Building at the intersection of AI, cultural technology, and women's health.<br>

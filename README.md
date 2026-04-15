@@ -583,6 +583,7 @@ Based in New Zealand.<br>
 | Getting Started with Minimalism -- A Beginner's Guide | [LinkedIn](https://www.linkedin.com/pulse/getting-started-minimalism-beginners-guide-chan-meng-jbioc/) |
 | Digital Minimalism -- Technology as a Tool, Not a Master | [LinkedIn](https://www.linkedin.com/pulse/digital-minimalism-technology-tool-master-chan-meng-lkz0c/) |
 | Creating a Minimalist Living Space -- Lessons from The Art of Discarding | [LinkedIn](https://www.linkedin.com/pulse/creating-minimalist-living-space-lessons-from-art-discarding-meng-wwdrc/) |
+| A Complete Guide to Legally Changing Your Name as an Adult | [Douban](https://www.douban.com/group/topic/310015982/?_dtcc=1&_i=75245459vsCiSF) |
 | Minimalist Living Blog | [Live](https://minimalist-good-post.pages.dev) |
 
 **YouTube** -- [Subscribe @ChanMeng666](https://www.youtube.com/@ChanMeng666?sub_confirmation=1)
@@ -767,7 +768,20 @@ Try my interactive CLI: `npx chan-meng`
 
 <br>
 
+[![committers.top badge](https://user-badge.committers.top/new_zealand/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand/ChanMeng666)
+[![committers.top badge](https://user-badge.committers.top/new_zealand_public/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand_public/ChanMeng666)
+
+<a href="https://gitroll.io/profile/u2gafRrkhsHeHB2BSvxDbcJD4nIB2">
+  <img src="https://gitroll.io/api/badges/profiles/v1/u2gafRrkhsHeHB2BSvxDbcJD4nIB2?theme=darkEmerald" alt="GitRoll Profile Badge"/>
+</a>
+
+<br>
+
 [![Portfolio](https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template=shimmer-dark&height=28)](https://chanmeng.org/)&nbsp;&nbsp;[![LinkedIn](https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template=shimmer-dark&height=28)](https://www.linkedin.com/in/chanmeng666/)&nbsp;&nbsp;[![GitHub](https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template=shimmer-dark&height=28)](https://github.com/ChanMeng666)&nbsp;&nbsp;[![Buy Me a Coffee](https://gradient-svg-generator.vercel.app/api/svg?text=Buy+Me+a+Coffee&template=shimmer-gold&height=28)](https://buymeacoffee.com/chanmeng66u)
+
+<br>
+
+<img src="/public/chan-by-the-sea.jpg" width="100%" alt="Chan Meng by the sea">
 
 <br>
 

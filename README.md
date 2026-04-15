@@ -513,18 +513,11 @@ Based between China and New Zealand.
 
 <br>
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=ChanMeng666&show_icons=true&theme=graywhite" alt="GitHub Stats" height="160">
-    </td>
-    <td align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanMeng666&layout=compact&theme=graywhite" alt="Top Languages" height="160">
-    </td>
-  </tr>
-</table>
-
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=ChanMeng666&theme=graywhite" alt="GitHub Streak" height="160">
+
+<br>
+
+<img src="https://github-contributor-stats.vercel.app/api?username=ChanMeng666&limit=5&theme=flat&combine_all_yearly_contributions=true" alt="Top Contributed Repositories">
 
 <br><br>
 

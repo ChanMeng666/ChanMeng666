@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# AI Crawler Specific Rules
+# AI Crawler Access -- Explicitly permitted
 User-agent: GPTBot
 Allow: /
 Crawl-delay: 1
@@ -10,13 +10,30 @@ User-agent: ChatGPT-User
 Allow: /
 Crawl-delay: 1
 
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 1
+
 User-agent: Claude-Web
 Allow: /
 Crawl-delay: 1
 
-User-agent: Bard
+User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# Sitemap
-Sitemap: https://github.com/ChanMeng666/ChanMeng666/sitemap.xml
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Amazonbot
+Allow: /
+Crawl-delay: 2
+
+# LLM-friendly content
+# See llms.txt in repository root for AI instructions
+# See README.md for inline <script type="text/llms.txt"> block

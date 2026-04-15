@@ -683,10 +683,6 @@ A global community of women developers committed to excellence, collaboration, a
 
 <br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=ChanMeng666&theme=graywhite" alt="GitHub Streak" height="160">
-
-<br>
-
 <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies">
 
 <br>

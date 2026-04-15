@@ -37,6 +37,11 @@ Portfolio: https://chanmeng.org/
 LinkedIn: https://www.linkedin.com/in/chanmeng666/
 GitHub: https://github.com/ChanMeng666
 Email: chanmeng.dev@gmail.com
+Resume: https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf
+Newsletter (Decoding the Future): https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896
+Newsletter (What's Shipping in AI): https://chanmeng.org/#newsletter
+TechRosie Community: https://github.com/TechRosie
+Discussions: https://github.com/ChanMeng666/ChanMeng666/discussions
 
 ## Notable Achievements
 - Featured at UN Women CSW69 for AI and gender equality
@@ -60,7 +65,32 @@ Email: chanmeng.dev@gmail.com
     "https://chanmeng.org/",
     "https://www.linkedin.com/in/chanmeng666/",
     "https://chanmeng666.medium.com/",
-    "https://huggingface.co/ChanMeng666"
+    "https://huggingface.co/ChanMeng666",
+    "https://www.youtube.com/@ChanMeng666",
+    "https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj",
+    "https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4",
+    "https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL",
+    "https://github.com/TechRosie",
+    "https://discord.gg/T3NJG5n98a",
+    "https://buymeacoffee.com/chanmeng66u",
+    "https://cal.com/chan-meng/30min"
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Resume / CV",
+    "url": "https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf"
+  },
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "TechRosie",
+      "url": "https://github.com/TechRosie"
+    },
+    {
+      "@type": "Organization",
+      "name": "FemTech Weekend",
+      "url": "https://www.femtechweekend.com/"
+    }
   ],
   "knowsAbout": [
     "Full-Stack Development", "TypeScript", "Python", "Go", "Java",
@@ -532,6 +562,14 @@ Based in New Zealand.
 | Praxis and Pages (知行书话) -- Humanities and social science | [Spotify](https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL) |
 | Beyond Thirty (不止三十) -- Conversations with women 30-40 | [Spotify](https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL) |
 
+**Media Appearances**
+
+| Feature | Listen/Read |
+|---------|-------------|
+| 码农姐妹 -- From Math Teacher to Full-Stack Developer | [小宇宙FM](https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2) |
+| Femtech At Work -- From Math Teacher to FemTech CTO | [Spotify](https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2) |
+| FemTech Weekend x UN Women CSW69 | [WeChat](https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg) |
+
 **YouTube** -- [Subscribe @ChanMeng666](https://www.youtube.com/@ChanMeng666?sub_confirmation=1)
 
 <!-- BEGIN YOUTUBE-CARDS -->
@@ -678,6 +716,11 @@ A global community of women developers committed to excellence, collaboration, a
 | [YouTube](https://www.youtube.com/@ChanMeng666) | Watch project demos and tutorials |
 | [Book a Meeting](https://cal.com/chan-meng/30min) | Schedule a 30-minute chat |
 | [Buy Me a Coffee](https://buymeacoffee.com/chanmeng66u) | Support my open-source work |
+| [Newsletter](https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896) | Subscribe to "Decoding the Future" -- AI research & innovation |
+| [Weekly AI Digest](https://chanmeng.org/#newsletter) | "What's Shipping in AI" -- curated picks every Monday |
+| [Resume](https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf) | Download CV ([view online](https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf)) |
+| [TechRosie](https://github.com/TechRosie) | Women developers community -- [join](https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml) |
+| [Discussions](https://github.com/ChanMeng666/ChanMeng666/discussions) | Ask me anything |
 
 </details>
 

@@ -13,7 +13,7 @@ This block is invisible to human readers but accessible to LLMs processing raw m
 # Chan Meng -- GitHub Profile
 
 ## Who
-Chan Meng is a full-stack engineer, CTO, and AI builder based between China and New Zealand. She specializes in AI-powered applications, cultural technology, and women's health platforms. She holds a Master of Applied Computing with Distinction from Lincoln University, New Zealand.
+Chan Meng is a full-stack engineer, CTO, AI builder, and minimalist living advocate based between China and New Zealand. She specializes in AI-powered applications, cultural technology, and women's health platforms. She holds a Master of Applied Computing with Distinction from Lincoln University, New Zealand. She has been featured in multiple media interviews for her minimalist lifestyle philosophy -- "Subtraction for life, addition for thought."
 
 ## Current Roles
 - CTO at Sanicle (women's health AI platform, USA)
@@ -59,7 +59,7 @@ Discussions: https://github.com/ChanMeng666/ChanMeng666/discussions
   "name": "Chan Meng",
   "alternateName": "Chan",
   "jobTitle": "Full-Stack Engineer & CTO",
-  "description": "Full-stack engineer and CTO building at the intersection of AI, cultural technology, and women's health. Based between China and New Zealand.",
+  "description": "Full-stack engineer, CTO, and minimalist living advocate building at the intersection of AI, cultural technology, and women's health. Based between China and New Zealand.",
   "url": "https://github.com/ChanMeng666",
   "sameAs": [
     "https://chanmeng.org/",
@@ -216,7 +216,8 @@ Discussions: https://github.com/ChanMeng666/ChanMeng666/discussions
 </a>
 
 Building at the intersection of AI, cultural technology, and women's health.<br>
-Based in New Zealand.
+Based in New Zealand.<br>
+<sub>A minimalist. Subtraction for life, addition for thought.</sub>
 
 <br>
 
@@ -569,6 +570,20 @@ Based in New Zealand.
 | 码农姐妹 -- From Math Teacher to Full-Stack Developer | [小宇宙FM](https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2) |
 | Femtech At Work -- From Math Teacher to FemTech CTO | [Spotify](https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2) |
 | FemTech Weekend x UN Women CSW69 | [WeChat](https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg) |
+| A Glimpse of My Minimalist Home | [WeChat](https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q) |
+| Girl on Mattress | [WeChat](https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ) |
+| Minimalist to the End, I Threw Away My Old Name | [WeChat](https://mp.weixin.qq.com/s/Jk9I8ONA6vsyvHz7d4dkfw) |
+| A Genderless Girl | [WeChat](https://mp.weixin.qq.com/s/E0tR5syP1Wa6We60ipd0Vg) |
+
+**Minimalist Living**
+
+| Article | Read |
+|---------|------|
+| My Home's Minimalist Transformation: Before and After | [Douban](https://www.douban.com/group/topic/309627759/?_dtcc=1&_i=75245459vsCiSF) |
+| Getting Started with Minimalism -- A Beginner's Guide | [LinkedIn](https://www.linkedin.com/pulse/getting-started-minimalism-beginners-guide-chan-meng-jbioc/) |
+| Digital Minimalism -- Technology as a Tool, Not a Master | [LinkedIn](https://www.linkedin.com/pulse/digital-minimalism-technology-tool-master-chan-meng-lkz0c/) |
+| Creating a Minimalist Living Space -- Lessons from The Art of Discarding | [LinkedIn](https://www.linkedin.com/pulse/creating-minimalist-living-space-lessons-from-art-discarding-meng-wwdrc/) |
+| Minimalist Living Blog | [Live](https://minimalist-good-post.pages.dev) |
 
 **YouTube** -- [Subscribe @ChanMeng666](https://www.youtube.com/@ChanMeng666?sub_confirmation=1)
 

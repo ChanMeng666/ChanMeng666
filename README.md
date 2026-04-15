@@ -190,7 +190,7 @@ Based between China and New Zealand.
 
 <br>
 
-[![Portfolio](https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template=shimmer-dark&height=28)](https://chanmeng.org/)&nbsp;&nbsp;[![LinkedIn](https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template=shimmer-dark&height=28)](https://www.linkedin.com/in/chanmeng666/)&nbsp;&nbsp;[![GitHub](https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template=shimmer-dark&height=28)](https://github.com/ChanMeng666)&nbsp;&nbsp;[![Email](https://gradient-svg-generator.vercel.app/api/svg?text=Email&template=shimmer-dark&height=28)](mailto:chanmeng.dev@gmail.com)
+[![Portfolio](https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template=pills-dark&height=28)](https://chanmeng.org/)&nbsp;&nbsp;[![LinkedIn](https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template=pills-dark&height=28)](https://www.linkedin.com/in/chanmeng666/)&nbsp;&nbsp;[![GitHub](https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template=pills-dark&height=28)](https://github.com/ChanMeng666)&nbsp;&nbsp;[![Email](https://gradient-svg-generator.vercel.app/api/svg?text=Email&template=pills-dark&height=28)](mailto:chanmeng.dev@gmail.com)
 
 </div>
 
@@ -206,7 +206,7 @@ Based between China and New Zealand.
 
 <div align="center">
 
-[![Featured Work](https://gradient-svg-generator.vercel.app/api/svg?text=Featured+Work&template=text-shimmer-gold&height=50)](https://github.com/ChanMeng666?tab=repositories)
+[![Featured Work](https://gradient-svg-generator.vercel.app/api/svg?text=Featured+Work&template=text-pills-gold&height=50)](https://github.com/ChanMeng666?tab=repositories)
 
 </div>
 
@@ -224,13 +224,13 @@ Based between China and New Zealand.
         </a>
         <br><br>
         <a href="https://tamaiti.whiri-ai.com/">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template=shimmer-green&height=24" alt="Live">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template=pills-green&height=24" alt="Live">
         </a>&nbsp;
         <a href="https://youtu.be/NtT7_q6xhlk">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Demo&template=shimmer-blue&height=24" alt="Demo">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Demo&template=pills-blue&height=24" alt="Demo">
         </a>&nbsp;
         <a href="https://github.com/Whiri-AI/tam-ai-ti-web">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=pills-blue&height=24" alt="Source">
         </a>
       </div>
       <br>
@@ -251,13 +251,13 @@ Based between China and New Zealand.
         </a>
         <br><br>
         <a href="https://she-sharp-zeta.vercel.app/">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template=shimmer-green&height=24" alt="Live">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template=pills-green&height=24" alt="Live">
         </a>&nbsp;
         <a href="https://github.com/NZ-SheSharp/she-sharp">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=pills-blue&height=24" alt="Source">
         </a>&nbsp;
         <a href="https://www.shesharp.org.nz/">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Organization&template=shimmer-blue&height=24" alt="Organization">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Organization&template=pills-blue&height=24" alt="Organization">
         </a>
       </div>
       <br>
@@ -280,10 +280,10 @@ Based between China and New Zealand.
         </a>
         <br><br>
         <a href="https://github.com/ChanMeng666/gavigo">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=pills-blue&height=24" alt="Source">
         </a>&nbsp;
         <a href="https://gavigo.com/">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Company&template=shimmer-blue&height=24" alt="Company">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Company&template=pills-blue&height=24" alt="Company">
         </a>
       </div>
       <br>
@@ -304,7 +304,7 @@ Based between China and New Zealand.
         </a>
         <br><br>
         <a href="https://github.com/ChanMeng666/server-google-news">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=pills-blue&height=24" alt="Source">
         </a>&nbsp;
         <a href="https://github.com/ChanMeng666/server-google-news/stargazers">
           <img src="https://img.shields.io/github/stars/ChanMeng666/server-google-news?style=flat-square&color=f1c40f&labelColor=1a1a1a" alt="Stars">
@@ -332,7 +332,7 @@ Based between China and New Zealand.
 
 <div align="center">
 
-[![Open Source](https://gradient-svg-generator.vercel.app/api/svg?text=Open+Source&template=text-shimmer-blue&height=50)](https://github.com/ChanMeng666?tab=repositories)
+[![Open Source](https://gradient-svg-generator.vercel.app/api/svg?text=Open+Source&template=text-pills-blue&height=50)](https://github.com/ChanMeng666?tab=repositories)
 
 </div>
 
@@ -441,7 +441,7 @@ Based between China and New Zealand.
 
 <div align="center">
 
-[![Experience](https://gradient-svg-generator.vercel.app/api/svg?text=Experience&template=text-shimmer-purple&height=50)](#)
+[![Experience](https://gradient-svg-generator.vercel.app/api/svg?text=Experience&template=text-pills-purple&height=50)](#)
 
 </div>
 
@@ -466,7 +466,7 @@ Based between China and New Zealand.
 
 <div align="center">
 
-[![Recognition](https://gradient-svg-generator.vercel.app/api/svg?text=Recognition&template=text-shimmer-gold&height=50)](#)
+[![Recognition](https://gradient-svg-generator.vercel.app/api/svg?text=Recognition&template=text-pills-gold&height=50)](#)
 
 </div>
 
@@ -718,7 +718,7 @@ Try my interactive CLI: `npx chan-meng`
 
 <br>
 
-[![Portfolio](https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template=shimmer-dark&height=28)](https://chanmeng.org/)&nbsp;&nbsp;[![LinkedIn](https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template=shimmer-dark&height=28)](https://www.linkedin.com/in/chanmeng666/)&nbsp;&nbsp;[![GitHub](https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template=shimmer-dark&height=28)](https://github.com/ChanMeng666)&nbsp;&nbsp;[![Buy Me a Coffee](https://gradient-svg-generator.vercel.app/api/svg?text=Buy+Me+a+Coffee&template=shimmer-gold&height=28)](https://buymeacoffee.com/chanmeng66u)
+[![Portfolio](https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template=pills-dark&height=28)](https://chanmeng.org/)&nbsp;&nbsp;[![LinkedIn](https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template=pills-dark&height=28)](https://www.linkedin.com/in/chanmeng666/)&nbsp;&nbsp;[![GitHub](https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template=pills-dark&height=28)](https://github.com/ChanMeng666)&nbsp;&nbsp;[![Buy Me a Coffee](https://gradient-svg-generator.vercel.app/api/svg?text=Buy+Me+a+Coffee&template=pills-gold&height=28)](https://buymeacoffee.com/chanmeng66u)
 
 <br>
 

@@ -443,24 +443,58 @@ Based between China and New Zealand.
 
 <br>
 
-<p>
-  <img src="/public/certificates/issuers/hackerrank-logo.jpg" width="60" alt="HackerRank">&nbsp;&nbsp;
-  <img src="/public/certificates/issuers/microsoft-logo.jpg" width="60" alt="Microsoft">&nbsp;&nbsp;
-  <img src="/public/certificates/issuers/github-logo.jpg" width="60" alt="GitHub">&nbsp;&nbsp;
-  <img src="/public/certificates/issuers/docker-logo.jpg" width="60" alt="Docker">&nbsp;&nbsp;
-  <img src="/public/certificates/issuers/google-logo.jpeg" width="60" alt="Google">&nbsp;&nbsp;
-  <img src="/public/certificates/issuers/anthropicresearch-logo.jpeg" width="60" alt="Anthropic">
-</p>
+<details>
+<summary><strong>HackerRank Professional Certifications</strong>&nbsp;&nbsp;<img src="/public/certificates/issuers/hackerrank-logo.jpg" width="24" alt="HackerRank"></summary>
+<table>
+  <tr>
+    <td align="center" width="20%"><img src="/public/certificates/software-engineer-certificate.png" width="100%" alt="Software Engineer"/><p><strong>Software Engineer</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/frontend-developer-react-certificate.png" width="100%" alt="Frontend Developer (React)"/><p><strong>Frontend Developer (React)</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/sql-advanced-certificate.png" width="100%" alt="SQL (Advanced)"/><p><strong>SQL (Advanced)</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/javascript-intermediate-certificate.png" width="100%" alt="JavaScript (Intermediate)"/><p><strong>JavaScript</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/nodejs-intermediate-certificate.png" width="100%" alt="Node.js (Intermediate)"/><p><strong>Node.js</strong></p></td>
+  </tr>
+  <tr>
+    <td align="center" width="20%"><img src="/public/certificates/go-intermediate-certificate.png" width="100%" alt="Go (Intermediate)"/><p><strong>Go</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/angular-intermediate-certificate.png" width="100%" alt="Angular (Intermediate)"/><p><strong>Angular</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/python-basic-certificate.png" width="100%" alt="Python (Basic)"/><p><strong>Python</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/java-basic-certificate.png" width="100%" alt="Java (Basic)"/><p><strong>Java</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/react-basic-certificate.png" width="100%" alt="React (Basic)"/><p><strong>React</strong></p></td>
+  </tr>
+</table>
+</details>
 
-| Issuer | Certifications |
-|--------|---------------|
-| **HackerRank** | Software Engineer, Frontend Developer (React), SQL (Advanced), JavaScript, Node.js, Go, Python, Java |
-| **Microsoft** | Software Development, Cybersecurity, Data Analysis, Azure AI Essentials, Project Management |
-| **GitHub** | GitHub Foundations Professional |
-| **Docker** | Docker Foundations Professional |
-| **Google** | AI Essentials |
-| **Anthropic** | Claude Code in Action, AI Fluency Framework |
-| **Others** | Ubuntu Linux, Anaconda Data Science, Atlassian Agile, C++, Machine Learning |
+<details>
+<summary><strong>Microsoft Career Certifications</strong>&nbsp;&nbsp;<img src="/public/certificates/issuers/microsoft-logo.jpg" width="24" alt="Microsoft"></summary>
+<table>
+  <tr>
+    <td align="center" width="20%"><img src="/public/certificates/career-essentials-software-development-microsoft-linkedin.jpg" width="100%" alt="Software Development"/><p><strong>Software Development</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/career-essentials-cybersecurity-microsoft-linkedin.jpg" width="100%" alt="Cybersecurity"/><p><strong>Cybersecurity</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/career-essentials-data-analysis-microsoft-linkedin.jpg" width="100%" alt="Data Analysis"/><p><strong>Data Analysis</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/career-essentials-project-management-microsoft-linkedin.jpg" width="100%" alt="Project Management"/><p><strong>Project Management</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/microsoft-azure-ai-essentials-professional-certificate.jpg" width="100%" alt="Azure AI Essentials"/><p><strong>Azure AI Essentials</strong></p></td>
+  </tr>
+</table>
+</details>
+
+<details>
+<summary><strong>Other Professional Certifications</strong>&nbsp;&nbsp;<img src="/public/certificates/issuers/github-logo.jpg" width="24" alt="GitHub">&nbsp;<img src="/public/certificates/issuers/docker-logo.jpg" width="24" alt="Docker">&nbsp;<img src="/public/certificates/issuers/google-logo.jpeg" width="24" alt="Google">&nbsp;<img src="/public/certificates/issuers/anthropicresearch-logo.jpeg" width="24" alt="Anthropic"></summary>
+<table>
+  <tr>
+    <td align="center" width="20%"><img src="/public/certificates/career-essentials-github-professional-certificate.jpg" width="100%" alt="GitHub Professional"/><p><strong>GitHub Professional</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/docker-foundations-professional-certificate.jpg" width="100%" alt="Docker Professional"/><p><strong>Docker Professional</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/Google-AI-Essentials.jpg" width="100%" alt="Google AI Essentials"/><p><strong>Google AI Essentials</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/anthropic-claude-code-in-action.jpg" width="100%" alt="Claude Code in Action"/><p><strong>Claude Code in Action</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/anthropic-ai-fluency-framework-and-foundations.jpg" width="100%" alt="AI Fluency Framework"/><p><strong>AI Fluency Framework</strong></p></td>
+  </tr>
+  <tr>
+    <td align="center" width="20%"><img src="/public/certificates/completion-ubuntu-linux-professional-certificate-canonical.jpg" width="100%" alt="Ubuntu Linux"/><p><strong>Ubuntu Linux</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/completion-anaconda-python-data-science-professional-certificate.jpg" width="100%" alt="Anaconda Data Science"/><p><strong>Anaconda Data Science</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/completion-atlassian-agile-project-management-professional-certificate.jpg" width="100%" alt="Atlassian Agile"/><p><strong>Atlassian Agile</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/completion-machine-learning-statistical-foundations-wolfram-research.jpg" width="100%" alt="Machine Learning"/><p><strong>Machine Learning</strong></p></td>
+    <td align="center" width="20%"><img src="/public/certificates/javascript-foundations-professional-certificate-mozilla.jpg" width="100%" alt="JavaScript Foundations"/><p><strong>JavaScript Foundations</strong></p></td>
+  </tr>
+</table>
+</details>
 
 </details>
 

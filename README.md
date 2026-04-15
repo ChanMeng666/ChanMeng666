@@ -517,7 +517,11 @@ Based between China and New Zealand.
 
 <br>
 
-<img src="https://github-contributor-stats.vercel.app/api?username=ChanMeng666&limit=5&theme=flat&combine_all_yearly_contributions=true" alt="Top Contributed Repositories">
+<img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies">
+
+<br>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal" width="100%" alt="Activity Graph">
 
 <br><br>
 

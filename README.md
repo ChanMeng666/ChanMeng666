@@ -307,12 +307,15 @@ Based between China and New Zealand.
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
         </a>&nbsp;
         <a href="https://github.com/ChanMeng666/server-google-news/stargazers">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=121+Stars&template=shimmer-gold&height=24" alt="Stars">
+          <img src="https://img.shields.io/github/stars/ChanMeng666/server-google-news?style=flat-square&color=f1c40f&labelColor=1a1a1a" alt="Stars">
+        </a>&nbsp;
+        <a href="https://github.com/ChanMeng666/server-google-news/network/members">
+          <img src="https://img.shields.io/github/forks/ChanMeng666/server-google-news?style=flat-square&color=3b82f6&labelColor=1a1a1a" alt="Forks">
         </a>
       </div>
       <br>
       <p>
-        Most-adopted project in Anthropic's <strong>Model Context Protocol</strong> ecosystem for Google News search. <a href="https://github.com/ChanMeng666/server-google-news/stargazers">121 stars</a>, <a href="https://github.com/ChanMeng666/server-google-news/network/members">21 forks</a> -- real community adoption with multi-language support and structured news aggregation.
+        Most-adopted project in Anthropic's <strong>Model Context Protocol</strong> ecosystem for Google News search. Real community adoption with multi-language support and structured news aggregation.
       </p>
       <p align="center">
         <img src="https://gradient-svg-generator.vercel.app/api/svg?text=TypeScript+%7C+MCP+%7C+SerpAPI+%7C+Node.js&template=pills-dark&height=28" alt="Tech stack">
@@ -337,14 +340,16 @@ Based between China and New Zealand.
 
 | Project | Description | Traction |
 |---------|-------------|----------|
-| [claude-code-audio-hooks](https://github.com/ChanMeng666/claude-code-audio-hooks) | Audio notification system for Claude Code CLI | 45 stars |
-| [douyin-mall-go-template](https://github.com/ChanMeng666/douyin-mall-go-template) | Production e-commerce template with Gin + MySQL + Redis | 54 stars |
-| [server-google-jobs](https://github.com/ChanMeng666/server-google-jobs) | MCP server for Google Jobs multi-language search | 19 stars, 11 forks |
-| [tencent-meeting-video-downloader](https://github.com/ChanMeng666/tencent-meeting-video-downloader) | Chrome extension for Tencent Meeting recordings | 18 stars |
-| [gradient-svg-generator](https://github.com/ChanMeng666/gradient-svg-generator) | 330+ animated SVG templates -- [powers every visual on this page](https://gradient-svg-generator.vercel.app/) | [Live tool](https://gradient-svg-generator.vercel.app/) |
+| [claude-code-audio-hooks](https://github.com/ChanMeng666/claude-code-audio-hooks) | Audio notification system for Claude Code CLI | ![Stars](https://img.shields.io/github/stars/ChanMeng666/claude-code-audio-hooks?style=flat-square&labelColor=1a1a1a) |
+| [douyin-mall-go-template](https://github.com/ChanMeng666/douyin-mall-go-template) | Production e-commerce template with Gin + MySQL + Redis | ![Stars](https://img.shields.io/github/stars/ChanMeng666/douyin-mall-go-template?style=flat-square&labelColor=1a1a1a) |
+| [server-google-jobs](https://github.com/ChanMeng666/server-google-jobs) | MCP server for Google Jobs multi-language search | ![Stars](https://img.shields.io/github/stars/ChanMeng666/server-google-jobs?style=flat-square&labelColor=1a1a1a) ![Forks](https://img.shields.io/github/forks/ChanMeng666/server-google-jobs?style=flat-square&labelColor=1a1a1a) |
+| [tencent-meeting-video-downloader](https://github.com/ChanMeng666/tencent-meeting-video-downloader) | Chrome extension for Tencent Meeting recordings | ![Stars](https://img.shields.io/github/stars/ChanMeng666/tencent-meeting-video-downloader?style=flat-square&labelColor=1a1a1a) |
+| [gradient-svg-generator](https://github.com/ChanMeng666/gradient-svg-generator) | 330+ animated SVG templates -- [powers every visual on this page](https://gradient-svg-generator.vercel.app/) | [![Live](https://img.shields.io/badge/Live-tool-2ea44f?style=flat-square)](https://gradient-svg-generator.vercel.app/) |
 
 <p align="center">
-  <a href="https://github.com/ChanMeng666?tab=repositories">View all 95+ repositories</a>
+  <a href="https://github.com/ChanMeng666?tab=repositories">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FChanMeng666&query=%24.public_repos&label=View%20all%20repositories&style=flat-square&color=1a1a1a" alt="View all repositories">
+  </a>
 </p>
 
 <br>
@@ -366,7 +371,7 @@ Based between China and New Zealand.
 | [Gavigo](https://gavigo.com/) | Founding Engineer (prev. Core Engineer M1) | Oct 2025 -- Present, USA |
 | [She Sharp](https://www.shesharp.org.nz/) | Full Stack Developer | Jul 2025 -- Present, NZ |
 | [FemTech Weekend](https://www.femtechweekend.com/) | Founder & CTO | Mar 2025 -- Present, China |
-| [CopilotKit](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666) | Open Source Contributor (24.6k+ stars) | Jun 2025 -- Present |
+| [CopilotKit](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666) | Open Source Contributor ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=flat-square&labelColor=1a1a1a) | Jun 2025 -- Present |
 | [Sanicle](https://sanicle.cloud/) | CTO (prev. Sr. AI/ML Infrastructure Engineer) | Mar 2025 -- Feb 2026, USA |
 | [FreePeriod](https://www.linkedin.com/in/chanmeng666/details/experience/) | CTO | Nov 2024 -- Jun 2025, China |
 | [ByteDance](https://www.linkedin.com/in/chanmeng666/details/experience/) | Backend Developer | Nov 2024 -- Mar 2025, China |
@@ -390,7 +395,7 @@ Based between China and New Zealand.
 
 - **[UN Women CSW69](https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg)** -- Featured for AI and gender equality work ([LinkedIn](https://www.linkedin.com/posts/chanmeng666_womenintech-aiforgood-genderequality-activity-7306391777895141376-bUOl))
 - **[Master of Applied Computing with Distinction](https://www.lincoln.ac.nz/)** -- Lincoln University, New Zealand (Dean's List)
-- **[CopilotKit Contributor](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)** -- Core contributions to 24.6k+ star open-source AI framework
+- **[CopilotKit Contributor](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)** -- Core contributions to open-source AI framework ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=flat-square&labelColor=1a1a1a)
 - **[MCP Servers Pioneer](https://github.com/modelcontextprotocol/servers/pulls?q=is%3Apr+author%3AChanMeng666)** -- Early Windows contributor to Anthropic's Model Context Protocol
 
 <br>

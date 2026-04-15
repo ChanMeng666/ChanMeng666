@@ -379,7 +379,7 @@ Based between China and New Zealand.
 | [FemTracker Agent](https://github.com/ChanMeng666/femtracker-agent) | [Live](https://femtracker-agent.vercel.app/) |
 | [Wellness Support Agent](https://github.com/ChanMeng666/wellness-agent) | -- |
 | [Hospital Roster Agent](https://github.com/ChanMeng666/hospital-roster-agent) | -- |
-| [Customer Insight](https://github.com/ChanMeng666/customer-insight) | -- |
+| [Customer Insight](https://github.com/ChanMeng666/customer-insight) | [Live](https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/) |
 | [FanFic Lab](https://github.com/ChanMeng666/fanfic-lab) | [Live](https://fanfic-lab.tech/) |
 | [ESOL Platform](https://www.linkedin.com/in/chanmeng666/details/experience/) | [Live](https://nzcel-prep.vercel.app) |
 
@@ -387,8 +387,8 @@ Based between China and New Zealand.
 
 | Project | Live |
 |---------|------|
-| [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) | -- |
-| [Emoji Story Generator](https://github.com/ChanMeng666/emoji-story-generator) | -- |
+| [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) | [Live](https://huggingface.co/spaces/ChanMeng666/interactive-story-generator) |
+| [Emoji Story Generator](https://github.com/ChanMeng666/emoji-story-generator) | [Live](https://huggingface.co/spaces/ChanMeng666/emoji-story-generator) |
 | [AI Image Generator](https://github.com/ChanMeng666/image-generator) | [Live](https://image-generator.chanmeng-dev.workers.dev/) |
 | [English Redefine](https://github.com/ChanMeng666/english-redefine) | [Live](https://english-redefine.chanmeng-dev.workers.dev/) |
 | [Chinese Redefine](https://github.com/ChanMeng666/chinese-redefine) | [Live](https://chinese-redefine.chanmeng-dev.workers.dev/) |
@@ -419,10 +419,10 @@ Based between China and New Zealand.
 |---------|------|
 | [CSS Tower Defense](https://github.com/ChanMeng666/css-tower-defense) | [Live](https://towerdefense.chanmeng.org/) |
 | [AI vs Human Game](https://github.com/ChanMeng666/ai-human-game) | [Live](https://ai-human-game.chanmeng-dev.workers.dev/) |
-| [Otherworld God-Farmer](https://github.com/ChanMeng666/otherworld-god-farmer) | -- |
-| [Brick Breaker](https://github.com/ChanMeng666/html-brick-game) | -- |
-| [Journey of Reincarnation](https://github.com/ChanMeng666/journey-of-reincarnation) | -- |
-| [Podcast App Prototype](https://github.com/ChanMeng666/podcast-app-prototype) | -- |
+| [Otherworld God-Farmer](https://github.com/ChanMeng666/otherworld-god-farmer) | [Live](https://otherworld-god-farmer.pages.dev/) |
+| [Brick Breaker](https://github.com/ChanMeng666/html-brick-game) | [Live](https://chanmeng666.github.io/html-brick-game/) |
+| [Journey of Reincarnation](https://github.com/ChanMeng666/journey-of-reincarnation) | [Live](https://journey-of-reincarnation.pages.dev/) |
+| [Podcast App Prototype](https://github.com/ChanMeng666/podcast-app-prototype) | [Live](https://chanmeng666.github.io/podcast-app-prototype/) |
 
 **Scrapers & Extensions**
 

@@ -17,7 +17,7 @@ Chan Meng is a full-stack engineer, CTO, and AI builder based between China and 
 
 ## Current Roles
 - CTO at Sanicle (women's health AI platform, USA)
-- Core Engineer (M1 Prototype) Consultant at Gavigo (container orchestration, USA)
+- Founding Engineer at Gavigo (container orchestration, USA)
 - Full Stack Developer at She Sharp (NZ's leading women-in-STEM nonprofit, 2,200+ members)
 - Founder & CTO of FemTech Weekend (women's tech innovation community)
 - Open Source Contributor to CopilotKit (24.6k+ GitHub stars)
@@ -92,7 +92,7 @@ Email: chanmeng.dev@gmail.com
       "@type": "Organization",
       "name": "Gavigo",
       "url": "https://gavigo.com/",
-      "jobTitle": "Core Engineer Consultant"
+      "jobTitle": "Founding Engineer"
     },
     {
       "@type": "Organization",
@@ -288,7 +288,7 @@ Based between China and New Zealand.
       </div>
       <br>
       <p>
-        Distributed visualization system for <a href="https://gavigo.com/">Gavigo</a>'s Instant Reality Exchange platform. Go microservice backend, React dashboard, React Native mobile app, orchestrated on <strong>Google Kubernetes Engine</strong>. 11 languages, 272 commits, with measured p50/p95 latency benchmarks and 84.6% warm pool hit rate.
+        Built as Founding Engineer at <a href="https://gavigo.com/">Gavigo</a>. Architected the Instant Reality Exchange platform from M1 prototype to production -- a post-app system eliminating friction between user intent and digital experience. Go microservice backend, React dashboard, React Native mobile app, orchestrated on <strong>Google Kubernetes Engine</strong>. 11 languages, 272 commits.
       </p>
       <p align="center">
         <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Go+%7C+Kubernetes+%7C+React+Native+%7C+WebSocket+%7C+Redis&template=pills-dark&height=28" alt="Tech stack">
@@ -363,12 +363,13 @@ Based between China and New Zealand.
 
 | Company | Role | Period |
 |---------|------|--------|
-| [Gavigo](https://gavigo.com/) | Core Engineer (M1 Prototype) -- Consultant | 2025 -- Present, USA |
-| [She Sharp](https://www.shesharp.org.nz/) | Full Stack Developer | 2025 -- Present, NZ |
-| [Sanicle](https://sanicle.cloud/) | CTO / Sr. AI/ML Infrastructure Engineer | 2025 -- Present, USA |
-| [FemTech Weekend](https://www.femtechweekend.com/) | Founder & CTO | 2025 -- Present, China |
-| [CopilotKit](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666) | Open Source Contributor (24.6k+ stars) | 2025 -- Present |
-| [ByteDance](https://www.linkedin.com/in/chanmeng666/details/experience/) | Developer | Previous |
+| [Gavigo](https://gavigo.com/) | Founding Engineer (prev. Core Engineer M1) | Oct 2025 -- Present, USA |
+| [She Sharp](https://www.shesharp.org.nz/) | Full Stack Developer | Jul 2025 -- Present, NZ |
+| [Sanicle](https://sanicle.cloud/) | CTO (prev. Sr. AI/ML Infrastructure Engineer) | Mar 2025 -- Feb 2026, USA |
+| [CopilotKit](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666) | Open Source Contributor (24.6k+ stars) | Jun 2025 -- Present |
+| [FreePeriod](https://www.linkedin.com/in/chanmeng666/details/experience/) | CTO | Nov 2024 -- Jun 2025, China |
+| [ByteDance](https://www.linkedin.com/in/chanmeng666/details/experience/) | Backend Developer | Nov 2024 -- Mar 2025, China |
+| [CORDE](https://www.linkedin.com/in/chanmeng666/details/experience/) | Full Stack Developer | Jun 2024 -- Nov 2024, NZ |
 
 <br>
 

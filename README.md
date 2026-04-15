@@ -371,7 +371,7 @@ Based between China and New Zealand.
 | [Gavigo](https://gavigo.com/) | Founding Engineer (prev. Core Engineer M1) | Oct 2025 -- Present, USA |
 | [She Sharp](https://www.shesharp.org.nz/) | Full Stack Developer | Jul 2025 -- Present, NZ |
 | [FemTech Weekend](https://www.femtechweekend.com/) | Founder & CTO | Mar 2025 -- Present, China |
-| [CopilotKit](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666) | Open Source Contributor ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=flat-square&labelColor=1a1a1a) | Jun 2025 -- Present |
+| [CopilotKit](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666) | Open Source Contributor ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=flat-square&labelColor=1a1a1a) | Jun 2025 -- Present, USA |
 | [Sanicle](https://sanicle.cloud/) | CTO (prev. Sr. AI/ML Infrastructure Engineer) | Mar 2025 -- Feb 2026, USA |
 | [FreePeriod](https://www.linkedin.com/in/chanmeng666/details/experience/) | CTO | Nov 2024 -- Jun 2025, China |
 | [ByteDance](https://www.linkedin.com/in/chanmeng666/details/experience/) | Backend Developer | Nov 2024 -- Mar 2025, China |
@@ -393,7 +393,7 @@ Based between China and New Zealand.
 
 **Credentials**
 
-- **[UN Women CSW69](https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg)** -- Featured for AI and gender equality work ([LinkedIn](https://www.linkedin.com/posts/chanmeng666_womenintech-aiforgood-genderequality-activity-7306391777895141376-bUOl))
+- **[UN Women CSW69](https://www.linkedin.com/posts/chanmeng666_womenintech-aiforgood-genderequality-activity-7306391777895141376-bUOl)** -- Featured for AI and gender equality work
 - **[Master of Applied Computing with Distinction](https://www.lincoln.ac.nz/)** -- Lincoln University, New Zealand (Dean's List)
 - **[CopilotKit Contributor](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)** -- Core contributions to open-source AI framework ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=flat-square&labelColor=1a1a1a)
 - **[MCP Servers Pioneer](https://github.com/modelcontextprotocol/servers/pulls?q=is%3Apr+author%3AChanMeng666)** -- Early Windows contributor to Anthropic's Model Context Protocol

@@ -206,6 +206,8 @@ Discussions: https://github.com/ChanMeng666/ChanMeng666/discussions
 
 <em><sub>All visuals on this page powered by <a href="https://github.com/ChanMeng666/gradient-svg-generator">Gradient SVG Generator</a> -- my open-source animated SVG tool</sub></em>
 
+<br>
+
 <a href="https://github.com/ChanMeng666">
   <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Chan+Meng&gradientType=circular&height=250&duration=16s&color0=FFB6C1&color1=E0BBE4&color2=C3E5AE&color3=B8D4E3" width="100%" alt="Chan Meng">
 </a>

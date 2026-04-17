@@ -202,6 +202,13 @@ Discussions: https://github.com/ChanMeng666/ChanMeng666/discussions
      SECTION 1: Hero
      ═══════════════════════════════════════════════════════════════════════ -->
 
+
+<br>
+
+<em><sub>All visuals on this page powered by <a href="https://github.com/ChanMeng666/gradient-svg-generator">Gradient SVG Generator</a> -- my open-source animated SVG tool</sub></em>
+
+<br>
+
 <div align="center">
 
 <a href="https://github.com/ChanMeng666">
@@ -223,10 +230,6 @@ Based in New Zealand.<br>
 
 [![Portfolio](https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template=shimmer-dark&height=28)](https://chanmeng.org/)&nbsp;&nbsp;[![LinkedIn](https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template=shimmer-dark&height=28)](https://www.linkedin.com/in/chanmeng666/)&nbsp;&nbsp;[![GitHub](https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template=shimmer-dark&height=28)](https://github.com/ChanMeng666)&nbsp;&nbsp;[![Email](https://gradient-svg-generator.vercel.app/api/svg?text=Email&template=shimmer-dark&height=28)](mailto:chanmeng.dev@gmail.com)
 
-</div>
-
-<div align="right">
-  <em><sub>All visuals on this page powered by <a href="https://github.com/ChanMeng666/gradient-svg-generator">Gradient SVG Generator</a> -- my open-source animated SVG tool</sub></em>
 </div>
 
 <br>

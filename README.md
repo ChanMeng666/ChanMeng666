@@ -744,10 +744,6 @@ A global community of women developers committed to excellence, collaboration, a
 
 <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies">
 
-<br>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=ChanMeng666&theme=minimal" width="100%" alt="Activity Graph">
-
 <br><br>
 
 <picture>

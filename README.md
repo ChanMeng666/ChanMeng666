@@ -748,15 +748,9 @@ A global community of women developers committed to excellence, collaboration, a
 
 <br>
 
-<img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies">
-
-<br>
-
 <em><sub>Powered by <a href="https://github-readme-suno-cards.vercel.app/">Suno Cards</a> -- my open-source Suno music card tool</sub></em>
 
 [![My Suno Music](https://github-readme-suno-cards.vercel.app/api/cards?handle=chanmeng&sort=play_count&max=3)](https://suno.com/@chanmeng)
-
-**[Suno Cards](https://github-readme-suno-cards.vercel.app)** — Display your Suno AI music as dynamic, animated SVG cards in your GitHub README. Zero setup needed: just paste a URL. Auto-syncs via GitHub Action. &nbsp;**[Live Demo](https://github-readme-suno-cards.vercel.app)** · **[Gallery](https://github-readme-suno-cards.vercel.app/gallery)** · **[Build Your Card](https://github-readme-suno-cards.vercel.app/builder)** · **[Source](https://github.com/ChanMeng666/github-readme-suno-cards)**
 
 <br>
 
@@ -770,11 +764,6 @@ Try my interactive CLI: `npx chan-meng`
 
 <br>
 
-[![committers.top badge](https://user-badge.committers.top/new_zealand/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand/ChanMeng666)
-[![committers.top badge](https://user-badge.committers.top/new_zealand_public/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand_public/ChanMeng666)
-
-<br>
-
 [![Portfolio](https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template=shimmer-dark&height=28)](https://chanmeng.org/)&nbsp;&nbsp;[![LinkedIn](https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template=shimmer-dark&height=28)](https://www.linkedin.com/in/chanmeng666/)&nbsp;&nbsp;[![GitHub](https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template=shimmer-dark&height=28)](https://github.com/ChanMeng666)&nbsp;&nbsp;[![Buy Me a Coffee](https://gradient-svg-generator.vercel.app/api/svg?text=Buy+Me+a+Coffee&template=shimmer-gold&height=28)](https://buymeacoffee.com/chanmeng66u)
 
 <br>
@@ -784,6 +773,15 @@ Try my interactive CLI: `npx chan-meng`
 <br>
 
 Building tools that matter. [Let's connect.](https://www.linkedin.com/in/chanmeng666/)
+
+<br>
+
+[![committers.top badge](https://user-badge.committers.top/new_zealand/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand/ChanMeng666)
+[![committers.top badge](https://user-badge.committers.top/new_zealand_public/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand_public/ChanMeng666)
+
+<br>
+
+<img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies">
 
 <br>
 

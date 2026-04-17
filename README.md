@@ -754,20 +754,7 @@ A global community of women developers committed to excellence, collaboration, a
 
 <em><sub>Powered by <a href="https://github-readme-suno-cards.vercel.app/">Suno Cards</a> -- my open-source Suno music card tool</sub></em>
 
-<table>
-<tr>
-<td align="center">
-
-[![Classic card](https://github-readme-suno-cards.vercel.app/api/card?id=a885e43c-6918-456f-a5f0-0e8e29e61066&theme=dark)](https://github-readme-suno-cards.vercel.app)
-
-</td>
-<td align="center">
-
-[![Player card](https://github-readme-suno-cards.vercel.app/api/card?id=a885e43c-6918-456f-a5f0-0e8e29e61066&layout=player&preset=suno&theme=dark)](https://github-readme-suno-cards.vercel.app)
-
-</td>
-</tr>
-</table>
+[![My Suno Music](https://github-readme-suno-cards.vercel.app/api/cards?handle=chanmeng&sort=play_count&max=3)](https://suno.com/@chanmeng)
 
 **[Suno Cards](https://github-readme-suno-cards.vercel.app)** — Display your Suno AI music as dynamic, animated SVG cards in your GitHub README. Zero setup needed: just paste a URL. Auto-syncs via GitHub Action. &nbsp;**[Live Demo](https://github-readme-suno-cards.vercel.app)** · **[Gallery](https://github-readme-suno-cards.vercel.app/gallery)** · **[Build Your Card](https://github-readme-suno-cards.vercel.app/builder)** · **[Source](https://github.com/ChanMeng666/github-readme-suno-cards)**
 

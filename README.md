@@ -427,7 +427,6 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
 |---------|------|
 | [AI Programming Education](https://github.com/ChanMeng666/ai-programming-teaching-project) | [Live](https://programming.chanmeng.org/) |
 | [README Profile Generator](https://github.com/ChanMeng666/readme-profile-generator) | [HuggingFace](https://huggingface.co/spaces/ChanMeng666/readme-profile-generator) |
-| [GitHub Visitor Counter](https://github.com/ChanMeng666/github-visitor-counter) | [Live](https://github-visitor-counter-tau.vercel.app/) |
 
 **Games & Interactive**
 

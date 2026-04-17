@@ -393,37 +393,23 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
 
 | Project | Live |
 |---------|------|
-| [Chan's Portfolio v2](https://github.com/ChanMeng666) | [chanmeng.org](https://chanmeng.org/) |
-| [AgriHire Solutions](https://github.com/ChanMeng666/agrihire-solutions) | [Live](https://agrihire.chanmeng.org/) |
 | [LibraryOS](https://github.com/ChanMeng666/library-os) | [Live](https://libraryos.live/) |
 | [FriendScope](https://github.com/ChanMeng666/friendscope) | [Live](https://friendscope.chanmeng-dev.workers.dev/) |
-| [Selwyn Panel Beaters](https://github.com/ChanMeng666/automotive-repair-management-system) | [Live](https://repairos.chanmeng.org/) |
-| [Swimming Club Management](https://github.com/ChanMeng666/countryside-community-swimming-club) | [Live](https://countryside-swimming-club.chanmeng-dev.workers.dev/) |
-| [Job Value Assessment](https://github.com/ChanMeng666/job-valuation) | [Live](https://job-valuation.chanmeng-dev.workers.dev/assessment/start) |
-| [Biosecurity](https://github.com/ChanMeng666/biosecurity) | [Live](https://biosecurity.chanmeng-dev.workers.dev/) |
-| [Design Pages](https://github.com/ChanMeng666/design-pages) | [Live](https://chanmeng666.github.io/design-pages) |
-| [Knowledge Base](https://github.com/ChanMeng666/chanmeng-knowledge-base) | [Live](https://chanmeng666.github.io/chanmeng-knowledge-base/) |
 
 **AI Applications & Agents**
 
 | Project | Live |
 |---------|------|
-| [FemTracker Agent](https://github.com/ChanMeng666/femtracker-agent) | [Live](https://femtracker-agent.vercel.app/) |
-| [Wellness Support Agent](https://github.com/ChanMeng666/wellness-agent) | -- |
-| [Hospital Roster Agent](https://github.com/ChanMeng666/hospital-roster-agent) | -- |
-| [Customer Insight](https://github.com/ChanMeng666/customer-insight) | [Live](https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/) |
 | [FanFic Lab](https://github.com/ChanMeng666/fanfic-lab) | [Live](https://fanfic-lab.tech/) |
-| [ESOL Platform](https://www.linkedin.com/in/chanmeng666/details/experience/) | [Live](https://nzcel-prep.vercel.app) |
 
 **Creative AI & Language Tools**
 
 | Project | Live |
 |---------|------|
+| [AI Image Generator](https://github.com/ChanMeng666/image-generator) | [Live](https://image-generator.chanmeng-dev.workers.dev/) |
+| [Chinese Redefine](https://github.com/ChanMeng666/chinese-redefine) | [Live](https://chinese-redefine.chanmeng-dev.workers.dev/) |
 | [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) | [Live](https://huggingface.co/spaces/ChanMeng666/interactive-story-generator) |
 | [Emoji Story Generator](https://github.com/ChanMeng666/emoji-story-generator) | [Live](https://huggingface.co/spaces/ChanMeng666/emoji-story-generator) |
-| [AI Image Generator](https://github.com/ChanMeng666/image-generator) | [Live](https://image-generator.chanmeng-dev.workers.dev/) |
-| [English Redefine](https://github.com/ChanMeng666/english-redefine) | [Live](https://english-redefine.chanmeng-dev.workers.dev/) |
-| [Chinese Redefine](https://github.com/ChanMeng666/chinese-redefine) | [Live](https://chinese-redefine.chanmeng-dev.workers.dev/) |
 
 **Machine Learning Research**
 
@@ -441,27 +427,14 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
 |---------|------|
 | [AI Programming Education](https://github.com/ChanMeng666/ai-programming-teaching-project) | [Live](https://programming.chanmeng.org/) |
 | [README Profile Generator](https://github.com/ChanMeng666/readme-profile-generator) | [HuggingFace](https://huggingface.co/spaces/ChanMeng666/readme-profile-generator) |
-| [Chan Meng CLI](https://github.com/ChanMeng666/chan-meng) | [npm](https://www.npmjs.com/package/chan-meng) |
 | [GitHub Visitor Counter](https://github.com/ChanMeng666/github-visitor-counter) | [Live](https://github-visitor-counter-tau.vercel.app/) |
-| [Lottie Edit](https://github.com/ChanMeng666/lottie-edit) | -- |
 
 **Games & Interactive**
 
 | Project | Live |
 |---------|------|
 | [CSS Tower Defense](https://github.com/ChanMeng666/css-tower-defense) | [Live](https://towerdefense.chanmeng.org/) |
-| [AI vs Human Game](https://github.com/ChanMeng666/ai-human-game) | [Live](https://ai-human-game.chanmeng-dev.workers.dev/) |
-| [Otherworld God-Farmer](https://github.com/ChanMeng666/otherworld-god-farmer) | [Live](https://otherworld-god-farmer.pages.dev/) |
 | [Brick Breaker](https://github.com/ChanMeng666/html-brick-game) | [Live](https://chanmeng666.github.io/html-brick-game/) |
-| [Journey of Reincarnation](https://github.com/ChanMeng666/journey-of-reincarnation) | [Live](https://journey-of-reincarnation.pages.dev/) |
-| [Podcast App Prototype](https://github.com/ChanMeng666/podcast-app-prototype) | [Live](https://chanmeng666.github.io/podcast-app-prototype/) |
-
-**Scrapers & Extensions**
-
-| Project |
-|---------|
-| [Douban Elite Scraper](https://github.com/ChanMeng666/Douban-elite-scraper) |
-| [Douban Review Scraper](https://github.com/ChanMeng666/DoubanReviewScraper) |
 
 </details>
 

@@ -776,11 +776,6 @@ Building tools that matter. [Let's connect.](https://www.linkedin.com/in/chanmen
 
 <br>
 
-[![committers.top badge](https://user-badge.committers.top/new_zealand/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand/ChanMeng666)
-[![committers.top badge](https://user-badge.committers.top/new_zealand_public/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand_public/ChanMeng666)
-
-<br>
-
 <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies">
 
 <br>

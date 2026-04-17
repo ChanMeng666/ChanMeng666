@@ -751,14 +751,6 @@ A global community of women developers committed to excellence, collaboration, a
 
 <br><br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake.svg">
-  <img alt="GitHub contribution grid snake animation" src="https://raw.githubusercontent.com/ChanMeng666/ChanMeng666/output/github-contribution-grid-snake.svg">
-</picture>
-
-<br><br>
-
 <em><sub>Powered by <a href="https://github-visitor-counter-tau.vercel.app/">GitHub Visitor Counter</a> -- my open-source visitor analytics tool</sub></em>
 
 ![Visitor Counter](https://github-visitor-counter-tau.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)

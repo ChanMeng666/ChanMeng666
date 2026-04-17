@@ -1,8 +1,8 @@
 name: Generate Snake
 
 on:
-  schedule:
-    - cron: "0 */12 * * *"  # runs every 12 hours
+  # schedule:
+  #   - cron: "0 */12 * * *"  # runs every 12 hours (disabled - snake animation removed from README)
   workflow_dispatch:
 
 permissions:

@@ -204,7 +204,7 @@ Discussions: https://github.com/ChanMeng666/ChanMeng666/discussions
 
 <div align="center">
 
-<em><sub>All visuals on this page powered by <a href="https://github.com/ChanMeng666/gradient-svg-generator">Gradient SVG Generator</a> -- my open-source animated SVG tool</sub></em>
+<em><sub>All visuals on this page powered by <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a> -- my open-source animated SVG tool</sub></em>
 
 <br>
 

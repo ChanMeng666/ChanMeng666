@@ -771,10 +771,6 @@ Try my interactive CLI: `npx chan-meng`
 [![committers.top badge](https://user-badge.committers.top/new_zealand/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand/ChanMeng666)
 [![committers.top badge](https://user-badge.committers.top/new_zealand_public/ChanMeng666.svg)](https://user-badge.committers.top/new_zealand_public/ChanMeng666)
 
-<a href="https://gitroll.io/profile/u2gafRrkhsHeHB2BSvxDbcJD4nIB2">
-  <img src="https://gitroll.io/api/badges/profiles/v1/u2gafRrkhsHeHB2BSvxDbcJD4nIB2?theme=darkEmerald" alt="GitRoll Profile Badge"/>
-</a>
-
 <br>
 
 [![Portfolio](https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template=shimmer-dark&height=28)](https://chanmeng.org/)&nbsp;&nbsp;[![LinkedIn](https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template=shimmer-dark&height=28)](https://www.linkedin.com/in/chanmeng666/)&nbsp;&nbsp;[![GitHub](https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template=shimmer-dark&height=28)](https://github.com/ChanMeng666)&nbsp;&nbsp;[![Buy Me a Coffee](https://gradient-svg-generator.vercel.app/api/svg?text=Buy+Me+a+Coffee&template=shimmer-gold&height=28)](https://buymeacoffee.com/chanmeng66u)

@@ -371,6 +371,7 @@ Based in New Zealand.<br>
 
 | Project | Description | Traction |
 |---------|-------------|----------|
+| [github-readme-suno-cards](https://github.com/ChanMeng666/github-readme-suno-cards) | Display your Suno AI music as dynamic, animated SVG cards in your GitHub README -- [gallery](https://github-readme-suno-cards.vercel.app/gallery) · [builder](https://github-readme-suno-cards.vercel.app/builder) | [![Live](https://img.shields.io/badge/Live-tool-2ea44f?style=flat-square)](https://github-readme-suno-cards.vercel.app) |
 | [claude-code-audio-hooks](https://github.com/ChanMeng666/claude-code-audio-hooks) | Audio notification system for Claude Code CLI | ![Stars](https://img.shields.io/github/stars/ChanMeng666/claude-code-audio-hooks?style=flat-square&labelColor=1a1a1a) |
 | [douyin-mall-go-template](https://github.com/ChanMeng666/douyin-mall-go-template) | Production e-commerce template with Gin + MySQL + Redis | ![Stars](https://img.shields.io/github/stars/ChanMeng666/douyin-mall-go-template?style=flat-square&labelColor=1a1a1a) |
 | [server-google-jobs](https://github.com/ChanMeng666/server-google-jobs) | MCP server for Google Jobs multi-language search | ![Stars](https://img.shields.io/github/stars/ChanMeng666/server-google-jobs?style=flat-square&labelColor=1a1a1a) ![Forks](https://img.shields.io/github/forks/ChanMeng666/server-google-jobs?style=flat-square&labelColor=1a1a1a) |
@@ -749,7 +750,28 @@ A global community of women developers committed to excellence, collaboration, a
 
 <img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies">
 
-<br><br>
+<br>
+
+<em><sub>Powered by <a href="https://github-readme-suno-cards.vercel.app/">Suno Cards</a> -- my open-source Suno music card tool</sub></em>
+
+<table>
+<tr>
+<td align="center">
+
+[![Classic card](https://github-readme-suno-cards.vercel.app/api/card?id=a885e43c-6918-456f-a5f0-0e8e29e61066&theme=dark)](https://github-readme-suno-cards.vercel.app)
+
+</td>
+<td align="center">
+
+[![Player card](https://github-readme-suno-cards.vercel.app/api/card?id=a885e43c-6918-456f-a5f0-0e8e29e61066&layout=player&preset=suno&theme=dark)](https://github-readme-suno-cards.vercel.app)
+
+</td>
+</tr>
+</table>
+
+**[Suno Cards](https://github-readme-suno-cards.vercel.app)** — Display your Suno AI music as dynamic, animated SVG cards in your GitHub README. Zero setup needed: just paste a URL. Auto-syncs via GitHub Action. &nbsp;**[Live Demo](https://github-readme-suno-cards.vercel.app)** · **[Gallery](https://github-readme-suno-cards.vercel.app/gallery)** · **[Build Your Card](https://github-readme-suno-cards.vercel.app/builder)** · **[Source](https://github.com/ChanMeng666/github-readme-suno-cards)**
+
+<br>
 
 <em><sub>Powered by <a href="https://github-visitor-counter-tau.vercel.app/">GitHub Visitor Counter</a> -- my open-source visitor analytics tool</sub></em>
 

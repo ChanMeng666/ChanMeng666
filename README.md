@@ -535,7 +535,7 @@ Based in New Zealand.<br>
 
 | Award | Organization | Date |
 |-------|-------------|------|
-| Outstanding Mentor Award | [AI Hackathon Festival 2025](https://www.linkedin.com/in/chanmeng666/details/experience/) (AI Forum NZ, She Sharp, AUT) | Aug 2025 |
+| Outstanding Mentor Award | [AI Hackathon Festival 2025](https://www.linkedin.com/in/chanmeng666/details/honors/) (AI Forum NZ, She Sharp, AUT) | Aug 2025 |
 | UN CSW 69 Speaker | [Beyond Beijing 30 Conference](https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg), UN Headquarters NYC | Mar 2025 |
 | UN Women FemTech Hackathon Outstanding Performer | [FemTech Weekend](https://www.femtechweekend.com/) | Mar 2025 |
 | Dean's List (Top 5%) | [Lincoln University](https://www.lincoln.ac.nz/) | Jan 2025 |

@@ -11,24 +11,45 @@ jobs:
     # Allow the job to commit to the repository
     permissions:
       contents: write
-    # Run the GitHub Readme YouTube Cards action
     steps:
-      - uses: DenverCoder1/github-readme-youtube-cards@main
-        with:
-          channel_id: UCNfqqzosj2J6bBRVgz7qbJQ
-          lang: en
-          comment_tag_name: YOUTUBE-CARDS
-          max_videos: 6
-          card_width: 250
-          border_radius: 5
-          background_color: "#0d1117"
-          title_color: "#ffffff"
-          stats_color: "#dedede"
-          theme_context_light: '{ "background_color": "#ffffff", "title_color": "#24292f", "stats_color": "#57606a" }'
-          theme_context_dark: '{ "background_color": "#0d1117", "title_color": "#ffffff", "stats_color": "#dedede" }'
-          max_title_lines: 2
-          author_name: GitHub Actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          commit_message: "docs(readme): Update YouTube cards"
-          readme_path: README.md
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Checkout youtube-cards action
+        uses: actions/checkout@v4
+        with:
+          repository: DenverCoder1/github-readme-youtube-cards
+          ref: main
+          path: .youtube-cards-action
+
+      - name: Install Python dependencies
+        run: cd .youtube-cards-action && pip install '.[action]'
+
+      - name: Generate README update
+        run: |
+          python .youtube-cards-action/action.py \
+            --channel "UCNfqqzosj2J6bBRVgz7qbJQ" \
+            --lang "en" \
+            --comment-tag-name "YOUTUBE-CARDS" \
+            --max-videos 6 \
+            --card-width 250 \
+            --border-radius 5 \
+            --background-color "#0d1117" \
+            --title-color "#ffffff" \
+            --stats-color "#dedede" \
+            --theme-context-light '{ "background_color": "#ffffff", "title_color": "#24292f", "stats_color": "#57606a" }' \
+            --theme-context-dark '{ "background_color": "#0d1117", "title_color": "#ffffff", "stats_color": "#dedede" }' \
+            --max-title-lines 2 \
+            --readme-path "README.md"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || (git commit -m "docs(readme): Update YouTube cards" && git push)

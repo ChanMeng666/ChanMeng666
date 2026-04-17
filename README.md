@@ -221,7 +221,6 @@ Discussions: https://github.com/ChanMeng666/ChanMeng666/discussions
 </a>
 
 Building at the intersection of AI, cultural technology, and women's health.<br>
-Based in New Zealand.<br>
 <sub>A minimalist. Subtraction for life, addition for thought.</sub>
 
 <br>

@@ -256,10 +256,10 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
         <br><br>
         <a href="https://tamaiti.whiri-ai.com/">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template=shimmer-green&height=24" alt="Live">
-        </a>
+        </a>&nbsp;
         <a href="https://youtu.be/NtT7_q6xhlk">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Demo&template=shimmer-blue&height=24" alt="Demo">
-        </a>
+        </a>&nbsp;
       </div>
       <br>
       <p>
@@ -308,7 +308,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
         </a>
         <br><br>
         <a href="https://ire.gavigo.com/">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template=shimmer-green&height=24" alt="Live">
         </a>&nbsp;
         <a href="https://gavigo.com/">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Company&template=shimmer-blue&height=24" alt="Company">

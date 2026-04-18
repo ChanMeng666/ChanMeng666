@@ -259,7 +259,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
         </a>&nbsp;
         <a href="https://youtu.be/NtT7_q6xhlk">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Demo&template=shimmer-blue&height=24" alt="Demo">
-        </a>&nbsp;
+        </a>
       </div>
       <br>
       <p>

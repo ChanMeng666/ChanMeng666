@@ -400,6 +400,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
 
 | Project | Live |
 |---------|------|
+| [Vitex](https://github.com/ChanMeng666/easy-resume) | [Live](https://www.vitex.org.nz/) |
 | [FanFic Lab](https://github.com/ChanMeng666/fanfic-lab) | [Live](https://fanfic-lab.tech/) |
 | [ArchCanvas](https://archcanvas.chanmeng.org/) | [Live](https://archcanvas.chanmeng.org/) |
 

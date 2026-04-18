@@ -393,6 +393,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
 
 | Project | Live |
 |---------|------|
+| [FemTech Weekend Platform](https://www.femtechweekend.com/) | [Live](https://www.femtechweekend.com/) |
 | [LibraryOS](https://github.com/ChanMeng666/library-os) | [Live](https://libraryos.live/) |
 | [FriendScope](https://github.com/ChanMeng666/friendscope) | [Live](https://friendscope.chanmeng-dev.workers.dev/) |
 

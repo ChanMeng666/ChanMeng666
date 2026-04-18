@@ -401,6 +401,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
 | Project | Live |
 |---------|------|
 | [FanFic Lab](https://github.com/ChanMeng666/fanfic-lab) | [Live](https://fanfic-lab.tech/) |
+| [ArchCanvas](https://archcanvas.chanmeng.org/) | [Live](https://archcanvas.chanmeng.org/) |
 
 **Creative AI & Language Tools**
 

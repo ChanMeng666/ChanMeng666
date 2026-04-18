@@ -430,6 +430,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
 | Project | Live |
 |---------|------|
 | [CSS Tower Defense](https://github.com/ChanMeng666/css-tower-defense) | [Live](https://towerdefense.chanmeng.org/) |
+| [The Birth of Leviathan](https://github.com/ChanMeng666/leviathan) | [Live](https://leviathan-client.vercel.app/) |
 | [Brick Breaker](https://github.com/ChanMeng666/html-brick-game) | [Live](https://chanmeng666.github.io/html-brick-game/) |
 
 </details>

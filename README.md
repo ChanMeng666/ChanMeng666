@@ -300,7 +300,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
         <a href="https://ire.gavigo.com/">GAVIGO IRE</a>
       </h3>
       <div align="center">
-        <a href="https://gavigo.com/">
+        <a href="https://ire.gavigo.com/">
           <img src="/public/experience/gavigo-logo.jpg" width="120" alt="GAVIGO">
         </a>
         <br><br>

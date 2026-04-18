@@ -303,14 +303,14 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
   <tr>
     <td width="50%" valign="top">
       <h3 align="center">
-        <a href="https://github.com/ChanMeng666/gavigo">GAVIGO IRE</a>
+        <a href="https://ire.gavigo.com/">GAVIGO IRE</a>
       </h3>
       <div align="center">
         <a href="https://gavigo.com/">
           <img src="/public/experience/gavigo-logo.jpg" width="120" alt="GAVIGO">
         </a>
         <br><br>
-        <a href="https://github.com/ChanMeng666/gavigo">
+        <a href="https://ire.gavigo.com/">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
         </a>&nbsp;
         <a href="https://gavigo.com/">

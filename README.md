@@ -256,12 +256,9 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
         <br><br>
         <a href="https://tamaiti.whiri-ai.com/">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template=shimmer-green&height=24" alt="Live">
-        </a>&nbsp;
+        </a>
         <a href="https://youtu.be/NtT7_q6xhlk">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Demo&template=shimmer-blue&height=24" alt="Demo">
-        </a>&nbsp;
-        <a href="https://github.com/Whiri-AI/tam-ai-ti-web">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
         </a>
       </div>
       <br>

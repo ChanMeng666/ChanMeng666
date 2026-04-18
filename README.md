@@ -391,6 +391,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
 | [LibraryOS](https://github.com/ChanMeng666/library-os) | [Live](https://libraryos.live/) |
 | [LinkedIn Jobs Search](https://linkedin-jobs-search.chanmeng-dev.workers.dev/) | [Live](https://linkedin-jobs-search.chanmeng-dev.workers.dev/) |
 | [FriendScope](https://github.com/ChanMeng666/friendscope) | [Live](https://friendscope.chanmeng-dev.workers.dev/) |
+| [SendJoy](https://github.com/ChanMeng666/send-joy) | [Live](https://sendjoy.chanmeng-dev.workers.dev/) |
 
 **AI Applications & Agents**
 

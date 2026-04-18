@@ -274,7 +274,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
         <a href="https://she-sharp-zeta.vercel.app/">She Sharp</a>
       </h3>
       <div align="center">
-        <a href="https://www.shesharp.org.nz/">
+        <a href="https://she-sharp-zeta.vercel.app/">
           <img src="/public/experience/she-sharp-logo-purple-dark.svg" width="120" alt="She Sharp">
         </a>
         <br><br>
@@ -283,9 +283,6 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
         </a>&nbsp;
         <a href="https://github.com/NZ-SheSharp/she-sharp">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
-        </a>&nbsp;
-        <a href="https://www.shesharp.org.nz/">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Organization&template=shimmer-blue&height=24" alt="Organization">
         </a>
       </div>
       <br>

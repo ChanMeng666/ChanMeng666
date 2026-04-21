@@ -620,9 +620,7 @@ A global community of women developers committed to excellence, collaboration, a
 <div align="center">
 
 <details>
-<summary>
-  <img src="https://gradient-svg-generator.vercel.app/api/svg?text=50%2B+Professional+Certifications&template=gold-luxury&height=36" alt="50+ Professional Certifications">
-</summary>
+<summary><h3>🏆 50+ Professional Certifications&nbsp;&nbsp;<em>(click to expand)</em></h3></summary>
 
 <br>
 

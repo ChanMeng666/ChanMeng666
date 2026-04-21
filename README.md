@@ -722,12 +722,6 @@ A global community of women developers committed to excellence, collaboration, a
 
 <br>
 
-<em><sub>Powered by <a href="https://github-visitor-counter-tau.vercel.app/">GitHub Visitor Counter</a> -- my open-source visitor analytics tool</sub></em>
-
-![Visitor Counter](https://github-visitor-counter-tau.vercel.app/api?username=ChanMeng666&columns=8&maxflags=250&visitortype=number&showlabels=true&bg=E6CCFF&border=FFF838)
-
-<br>
-
 Try my interactive CLI: `npx chan-meng`
 
 <br>

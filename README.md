@@ -454,6 +454,7 @@ Building at the intersection of AI, cultural technology, and women's health.<br>
 
 | Company | Role | Period |
 |---------|------|--------|
+| [TechNest Community](https://www.technestcommunity.com/) | AI Instructor & Mentor | Apr 2026 -- Present, Canada |
 | [Gavigo](https://gavigo.com/) | Founding Engineer (prev. Core Engineer) | Oct 2025 -- Present, USA |
 | [She Sharp](https://www.shesharp.org.nz/) | Senior Full Stack Engineer & Website Team Lead | Jul 2025 -- Present, NZ |
 | [FemTech Weekend](https://www.femtechweekend.com/) | CTO | Mar 2025 -- Present, China |

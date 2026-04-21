@@ -625,7 +625,7 @@ A global community of women developers committed to excellence, collaboration, a
 <div align="center">
 
 <details>
-<summary><h3>🏆 50+ Professional Certifications&nbsp;&nbsp;<em>(click to expand)</em></h3></summary>
+<summary><h3>🏆 50+ Professional Certifications</h3></summary>
 
 <br>
 

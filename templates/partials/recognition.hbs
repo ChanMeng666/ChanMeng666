@@ -45,6 +45,13 @@
 {{#each education}}| {{studyType}} | [{{institution}}]({{url}}) | {{dateRange startDate endDate}} |
 {{/each}}
 
+**Volunteer Experience**
+
+| Role | Organisation | Period | Focus |
+|------|--------------|--------|-------|
+{{#each volunteer}}| {{position}} | {{#if url}}[{{name}}]({{url}}){{else}}{{name}}{{/if}} | {{dateRange startDate endDate}} | {{location}} |
+{{/each}}
+
 **Latest Articles** -- read more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://www.linkedin.com/in/chanmeng666/recent-activity/articles/)
 
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" alt="Recent Article 0"></a>

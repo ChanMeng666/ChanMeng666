@@ -53,6 +53,19 @@
 {{/if}}
 {{/each}}
 
+## Volunteer Experience
+
+{{#each volunteer}}### {{position}} at {{name}}
+
+- **Period:** {{dateRange startDate endDate}}
+{{#if location}}- **Location:** {{location}}
+{{/if}}{{#if url}}- **URL:** {{url}}
+{{/if}}{{#if keywords.length}}- **Keywords:** {{join keywords ", "}}
+{{/if}}{{#if summary}}
+{{trim summary}}
+{{/if}}
+{{/each}}
+
 ## Flagship Projects
 
 {{#each _flagshipProjects}}### {{inc @index}}. {{name}}{{#if tagline}} — {{tagline}}{{/if}}

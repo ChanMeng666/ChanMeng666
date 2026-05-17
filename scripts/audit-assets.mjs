@@ -35,6 +35,21 @@ function walk(node) {
 }
 walk(data);
 
+// In addition to YAML, scan the rendered build outputs for /public/ paths.
+// Rendered outputs are ground truth: they cover template-hardcoded assets
+// (e.g. hero logo) and dynamically-composed paths (e.g. cert-issuer logos
+// keyed by category) without needing the audit to understand template logic.
+// This requires `npm run build` to have run first; `npm run check` does that.
+const renderedOutputs = ["README.md", "llms.txt", "llms-full.txt", "dist/profile.json"];
+for (const rel of renderedOutputs) {
+  const abs = path.join(repoRoot, rel);
+  if (!fs.existsSync(abs)) continue;
+  const txt = fs.readFileSync(abs, "utf8");
+  for (const m of txt.matchAll(/\/public\/[^"'<>\s)}{,\\]+/g)) {
+    referenced.add(m[0]);
+  }
+}
+
 // Walk the actual /public directory
 const publicDir = path.join(repoRoot, "public");
 const filesOnDisk = new Set();

@@ -1,0 +1,39 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 3: Open Source
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+[![Open Source](https://gradient-svg-generator.vercel.app/api/svg?text=Open+Source&template=text-shimmer-blue&height=50)](https://github.com/ChanMeng666?tab=repositories)
+
+</div>
+
+<br>
+
+| Project | Description | Traction |
+|---------|-------------|----------|
+{{#each _openSourcePrimary}}| [{{name}}]({{default repoUrl url}}){{#each extraLinks}} -- [{{label}}]({{url}}){{/each}} | {{flatten publicSummary}} | {{#if url}}{{#unless (eq url repoUrl)}}[![Live](https://img.shields.io/badge/Live-tool-2ea44f?style=flat-square)]({{url}}){{/unless}}{{/if}}{{#if repoUrl}}{{#if (eq url repoUrl)}}![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/if}}{{#unless (eq url repoUrl)}}{{#unless url}}![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/unless}}{{/unless}}{{/if}} |
+{{/each}}
+
+<p align="center">
+  <a href="https://github.com/ChanMeng666?tab=repositories">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FChanMeng666&query=%24.public_repos&label=View%20all%20repositories&style=flat-square&color=1a1a1a" alt="View all repositories">
+  </a>
+</p>
+
+<details>
+<summary>More projects: Web Apps, AI Agents, Creative Tools, ML Research, Games...</summary>
+
+<br>
+
+{{#each _openSourceByCategory}}**{{#if (eq category "web-apps")}}Web Applications{{else}}{{#if (eq category "ai-apps")}}AI Applications & Agents{{else}}{{#if (eq category "creative")}}Creative AI & Language Tools{{else}}{{#if (eq category "ml-research")}}Machine Learning Research{{else}}{{#if (eq category "branding")}}Personal Branding Tools{{else}}{{#if (eq category "games")}}Games & Interactive{{else}}{{category}}{{/if}}{{/if}}{{/if}}{{/if}}{{/if}}{{/if}}**
+
+{{#if (eq category "ml-research")}}| Project |
+|---------|
+{{#each items}}| [{{name}}]({{default repoUrl url}}) |
+{{/each}}{{else}}| Project | Live |
+|---------|------|
+{{#each items}}| [{{name}}]({{default repoUrl url}}) | {{#if url}}{{#unless (eq url repoUrl)}}[Live]({{url}}){{/unless}}{{#if (eq url repoUrl)}}[Source]({{repoUrl}}){{/if}}{{/if}} |
+{{/each}}{{/if}}
+{{/each}}
+</details>

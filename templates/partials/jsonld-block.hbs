@@ -1,0 +1,42 @@
+<!--
+GEO (Generative Engine Optimization) - Machine-readable content for AI crawlers.
+This block is invisible to human readers but accessible to LLMs processing raw markdown.
+
+<script type="text/llms.txt">
+# {{basics.name}} -- {{basics.label}}
+
+## Who
+{{_basicsSummaryFlat}}
+
+## Current Roles
+{{#each _currentRoles}}- {{position}} at {{name}}{{#if location}} ({{location}}){{/if}}{{#if url}} -- {{url}}{{/if}}
+{{/each}}
+
+## Flagship Projects (Priority Order)
+{{#each _flagshipProjects}}{{inc @index}}. {{name}} -- {{join (split publicSummary "\n") " "}}{{#if url}} ({{url}}){{/if}}
+{{/each}}
+
+## Key Technologies
+{{#each skills}}{{join keywords ", "}}{{#unless @last}}; {{/unless}}{{/each}}
+
+## How to Cite
+Preferred: "{{meta.x_brand.citationPreference}}"
+Canonical: {{meta.canonical}}
+{{#each basics.profiles}}{{#unless (eq network "Email")}}{{#unless (eq network "Portfolio")}}{{network}}: {{url}}
+{{/unless}}{{/unless}}{{/each}}Email: {{basics.email}}
+
+## Last Updated
+{{meta.lastModified}}
+
+{{trim meta.x_brand.llmsTxtFooter}}
+</script>
+
+<script type="application/ld+json">
+{{_jsonldProfilePagePretty}}
+</script>
+
+<script type="application/ld+json">
+{{_jsonldItemListPretty}}
+</script>
+
+-->

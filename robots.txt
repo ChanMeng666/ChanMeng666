@@ -35,5 +35,11 @@ Allow: /
 Crawl-delay: 2
 
 # LLM-friendly content
-# See llms.txt in repository root for AI instructions
-# See README.md for inline <script type="text/llms.txt"> block
+# See llms.txt (short index) and llms-full.txt (bundled full text) in repo root.
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Canonical entity URL — chanmeng.org holds the public-facing surface and the
+# Google-visible JSON-LD. This README's hidden JSON-LD is for LLMs reading raw
+# markdown via the GitHub raw API.
+Sitemap: https://chanmeng.org/sitemap.xml

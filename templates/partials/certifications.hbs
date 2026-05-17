@@ -1,0 +1,24 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 7: Certifications (collapsible)
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+<details>
+<summary><h3>🏆 50+ Professional Certifications</h3></summary>
+
+<br>
+
+{{#each _certsByCategory}}<details>
+<summary><strong>{{label}}</strong>{{#each items}}{{#if @first}}&nbsp;&nbsp;<img src="{{#if issuerLogo}}{{issuerLogo}}{{else}}/public/certificates/issuers/{{../category}}-logo.jpg{{/if}}" width="24" alt="{{issuer}}">{{/if}}{{/each}}</summary>
+<table>
+{{#each items}}{{#if (eq (mod @index 5) 0)}}  <tr>
+{{/if}}    <td align="center" width="20%"><img src="{{image}}" width="100%" alt="{{name}}"/><p><strong>{{name}}</strong></p></td>
+{{#if (eq (mod (inc @index) 5) 0)}}  </tr>
+{{else}}{{#if @last}}  </tr>
+{{/if}}{{/if}}{{/each}}</table>
+</details>
+
+{{/each}}</details>
+
+</div>

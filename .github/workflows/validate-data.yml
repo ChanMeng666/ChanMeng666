@@ -1,0 +1,38 @@
+name: Validate Profile Data
+
+# Schema-validate data/profile.yaml on every PR. Prevents broken data from
+# reaching main and triggering a failed rebuild.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "schema/**"
+      - "scripts/validate.mjs"
+      - "package.json"
+      - "package-lock.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - run: npm run validate
+      - run: npm run build
+      - name: Check that committed outputs match what build would generate
+        run: |
+          if git diff --quiet README.md llms.txt llms-full.txt dist/profile.json; then
+            echo "✓ Committed outputs are in sync with data/."
+          else
+            echo "✗ Committed README.md / llms.txt / llms-full.txt / dist/profile.json"
+            echo "  are stale relative to data/profile.yaml. Run 'npm run build'"
+            echo "  locally and commit the regenerated files, or rely on the"
+            echo "  build-readme.yml workflow to do it after merge."
+            git diff --stat README.md llms.txt llms-full.txt dist/profile.json
+          fi

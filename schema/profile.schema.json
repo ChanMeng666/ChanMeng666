@@ -1,0 +1,474 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ChanMeng666/ChanMeng666/schema/profile.schema.json",
+  "title": "ChanMeng666 Profile Data Schema",
+  "description": "Extended JSON Resume v1.0.0 schema with meta.x_brand namespace and structured narrative blocks for projects and work. Validates data/profile.yaml.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["basics", "meta"],
+  "properties": {
+    "basics": {
+      "type": "object",
+      "required": ["name", "label", "email", "url", "summary"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "alternateName": { "type": "string" },
+        "label": { "type": "string" },
+        "image": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "summary": { "type": "string", "minLength": 10 },
+        "location": {
+          "type": "object",
+          "properties": {
+            "address": { "type": "string" },
+            "postalCode": { "type": "string" },
+            "city": { "type": "string" },
+            "countryCode": { "type": "string" },
+            "region": { "type": "string" }
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["network", "url"],
+            "properties": {
+              "network": { "type": "string" },
+              "username": { "type": "string" },
+              "label": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          }
+        },
+        "taglines": {
+          "type": "object",
+          "description": "Custom field: hero taglines surfaced on the README.",
+          "properties": {
+            "primary": { "type": "string" },
+            "secondary": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "work": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/workEntry" }
+    },
+
+    "volunteer": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/workEntry" }
+    },
+
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["institution"],
+        "properties": {
+          "id": { "type": "string" },
+          "institution": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "area": { "type": "string" },
+          "studyType": { "type": "string" },
+          "startDate": { "$ref": "#/$defs/loosePartialDate" },
+          "endDate": { "$ref": "#/$defs/loosePartialDate" },
+          "score": { "type": "string" },
+          "courses": { "type": "array", "items": { "type": "string" } },
+          "image": { "type": "string" },
+          "location": { "type": "string" },
+          "highlights": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+
+    "awards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title"],
+        "properties": {
+          "title": { "type": "string" },
+          "date": { "$ref": "#/$defs/loosePartialDate" },
+          "awarder": { "type": "string" },
+          "summary": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+
+    "certificates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "issuer"],
+        "properties": {
+          "name": { "type": "string" },
+          "date": { "$ref": "#/$defs/loosePartialDate" },
+          "issuer": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "credentialId": { "type": "string" },
+          "image": { "type": "string" },
+          "category": {
+            "type": "string",
+            "description": "Display grouping: hackerrank | microsoft | other | etc."
+          },
+          "issuerLogo": { "type": "string" }
+        }
+      }
+    },
+
+    "publications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "publisher": { "type": "string" },
+          "releaseDate": { "$ref": "#/$defs/loosePartialDate" },
+          "url": { "type": "string", "format": "uri" },
+          "summary": { "type": "string" },
+          "image": { "type": "string" },
+          "meta": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "x_brand": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "description": "article | podcast | podcastShow | podcastEpisode | newsletter | interview | press | blog",
+                    "enum": ["article", "podcast", "podcastShow", "podcastEpisode", "newsletter", "interview", "press", "blog"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "level": { "type": "string" },
+          "keywords": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": { "type": "string" },
+          "fluency": { "type": "string" }
+        }
+      }
+    },
+
+    "interests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "keywords": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "reference"],
+        "properties": {
+          "name": { "type": "string" },
+          "reference": { "type": "string" },
+          "meta": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "x_brand": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "image": { "type": "string" },
+                  "relationship": { "type": "string" },
+                  "linkedinUrl": { "type": "string", "format": "uri" },
+                  "verified": { "type": "boolean" },
+                  "featured": { "type": "boolean" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "projects": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/projectEntry" }
+    },
+
+    "meta": {
+      "type": "object",
+      "required": ["canonical", "version"],
+      "properties": {
+        "canonical": { "type": "string", "format": "uri" },
+        "version": { "type": "string" },
+        "lastModified": { "type": "string" },
+        "x_brand": { "$ref": "#/$defs/xBrandMeta" }
+      }
+    }
+  },
+
+  "$defs": {
+    "loosePartialDate": {
+      "description": "ISO date (YYYY-MM-DD), partial (YYYY-MM, YYYY), or null/empty for present.",
+      "oneOf": [
+        { "type": "string", "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$" },
+        { "type": "string", "enum": ["", "present"] },
+        { "type": "null" }
+      ]
+    },
+
+    "narrativeProject": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Structured narrative for a project. Business and product logic lead; tech depth supports.",
+      "properties": {
+        "problem": { "type": "string", "description": "User pain or market gap addressed." },
+        "audience": { "type": "string", "description": "Who it serves — persona, segment, scale, geography." },
+        "productLogic": { "type": "string", "description": "How the product works at a user level; engagement loop." },
+        "businessLogic": { "type": "string", "description": "Revenue model or theory of change; why viable." },
+        "technicalApproach": { "type": "string", "description": "Architecture and hard problems solved, framed around impact." },
+        "outcomes": { "type": "string", "description": "Real-world impact with verifiable numbers and sources." },
+        "myRole": { "type": "string", "description": "Specific scope and contribution, with evidence." }
+      }
+    },
+
+    "narrativeWork": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Structured narrative for a work experience.",
+      "properties": {
+        "companyContext": { "type": "string" },
+        "mission": { "type": "string" },
+        "myMandate": { "type": "string" },
+        "impactDelivered": { "type": "string" },
+        "technicalHighlights": { "type": "string" }
+      }
+    },
+
+    "metricsItem": {
+      "type": "object",
+      "required": ["label", "value"],
+      "properties": {
+        "label": { "type": "string" },
+        "value": { "type": "string" },
+        "source": { "type": "string", "format": "uri" }
+      }
+    },
+
+    "workEntry": {
+      "type": "object",
+      "required": ["id", "name", "position"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "position": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "startDate": { "$ref": "#/$defs/loosePartialDate" },
+        "endDate": { "$ref": "#/$defs/loosePartialDate" },
+        "summary": { "type": "string" },
+        "highlights": { "type": "array", "items": { "type": "string" } },
+        "location": { "type": "string" },
+        "logo": { "type": "string" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "narrative": { "$ref": "#/$defs/narrativeWork" },
+        "publicSummary": { "type": "string" },
+        "featured": { "type": "boolean", "description": "Show in compact README experience table." }
+      }
+    },
+
+    "projectEntry": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "priority": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "1-4 = flagship card; 5+ = open-source listing."
+        },
+        "category": {
+          "type": "string",
+          "description": "For open-source grouping: web-apps | ai-apps | creative | ml-research | branding | games | infra | etc."
+        },
+        "tagline": { "type": "string" },
+        "description": { "type": "string", "description": "JSON Resume short description (optional; we prefer narrative.*)." },
+        "url": { "type": "string", "format": "uri" },
+        "repoUrl": { "type": "string", "format": "uri" },
+        "demoUrl": { "type": "string", "format": "uri" },
+        "logo": { "type": "string" },
+        "techStack": { "type": "array", "items": { "type": "string" } },
+        "metrics": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/metricsItem" }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["production", "live", "active", "maintained", "archived", "draft"]
+        },
+        "startDate": { "$ref": "#/$defs/loosePartialDate" },
+        "endDate": { "$ref": "#/$defs/loosePartialDate" },
+        "narrative": { "$ref": "#/$defs/narrativeProject" },
+        "publicSummary": { "type": "string" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "roles": { "type": "array", "items": { "type": "string" } },
+        "entity": { "type": "string" },
+        "type": { "type": "string" },
+        "highlights": { "type": "array", "items": { "type": "string" } },
+        "extraLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "url"],
+            "properties": {
+              "label": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          }
+        }
+      }
+    },
+
+    "xBrandMeta": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "GEO and brand-specific metadata. Stripped from dist/profile.json (canonical JSON Resume artifact).",
+      "properties": {
+        "flagshipProjectIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Ordered IDs of projects rendered as flagship cards."
+        },
+        "openSourceCategoryOrder": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "openSourcePrimaryIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "IDs of projects in the primary Open Source table (the visible-by-default ones)."
+        },
+        "statisticsClaims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["claim"],
+            "properties": {
+              "claim": { "type": "string" },
+              "source": { "type": "string", "format": "uri" },
+              "verifiedAt": { "type": "string" }
+            }
+          }
+        },
+        "citationPreference": { "type": "string" },
+        "primarySocialBadges": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "additionalSameAs": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "llmsTxtFooter": { "type": "string" },
+        "yamlComments": { "type": "string" },
+        "minimalistArticles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title", "url"],
+            "properties": {
+              "title": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "platform": { "type": "string" }
+            }
+          }
+        },
+        "mediaAppearances": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title", "url"],
+            "properties": {
+              "title": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "platform": { "type": "string" }
+            }
+          }
+        },
+        "podcastsHosted": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "url"],
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "language": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "footerLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "url", "description"],
+            "properties": {
+              "label": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "cli": {
+          "type": "object",
+          "properties": {
+            "command": { "type": "string" },
+            "description": { "type": "string" }
+          }
+        },
+        "agentInteractionStatistic": {
+          "type": "object",
+          "properties": {
+            "publicRepos": { "type": "integer" },
+            "followers": { "type": "integer" },
+            "verifiedAt": { "type": "string" }
+          }
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Stable cross-surface entity ID emitted into JSON-LD."
+        }
+      }
+    }
+  }
+}

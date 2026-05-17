@@ -1,0 +1,46 @@
+# {{basics.name}} -- {{basics.label}}
+
+> {{trim basics.summary}}
+
+Last updated: {{meta.lastModified}}
+Canonical: {{meta.canonical}}
+Preferred citation: "{{meta.x_brand.citationPreference}}"
+
+## Current Roles
+{{#each _currentRoles}}- {{position}} at {{name}}{{#if location}} ({{location}}){{/if}}{{#if url}} -- {{url}}{{/if}}
+{{/each}}
+
+## Flagship Projects (Priority Order)
+{{#each _flagshipProjects}}{{inc @index}}. **{{name}}** -- {{flatten publicSummary}}{{#if url}} ({{url}}){{/if}}
+{{/each}}
+
+## Notable Open Source
+{{#each _openSourcePrimary}}- **{{name}}** -- {{flatten publicSummary}}{{#if url}} ({{url}}){{else}}{{#if repoUrl}} ({{repoUrl}}){{/if}}{{/if}}
+{{/each}}
+
+## Core Expertise
+{{#each skills}}- **{{name}}**: {{join keywords ", "}}
+{{/each}}
+
+## Achievements
+{{#each awards}}- **{{title}}** ({{awarder}}{{#if date}}, {{date}}{{/if}}){{#if url}} -- {{url}}{{/if}}
+{{/each}}
+
+## Education
+{{#each education}}- **{{studyType}}** -- {{institution}}{{#if startDate}} ({{dateRange startDate endDate}}){{/if}}
+{{/each}}
+
+## Languages
+{{#each languages}}- {{language}}: {{fluency}}
+{{/each}}
+
+## How to Cite
+Preferred title: "{{meta.x_brand.citationPreference}}"
+{{#each basics.profiles}}{{network}}: {{url}}
+{{/each}}
+
+## Verified Statistics
+{{#each meta.x_brand.statisticsClaims}}- {{claim}}{{#if source}} (source: {{source}}{{#if verifiedAt}}, verified {{verifiedAt}}{{/if}}){{/if}}
+{{/each}}
+
+{{trim meta.x_brand.llmsTxtFooter}}

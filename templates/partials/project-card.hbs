@@ -1,0 +1,36 @@
+    <td width="50%" valign="top">
+      <h3 align="center">
+        <a href="{{default url repoUrl}}">{{name}}</a>
+      </h3>
+      <div align="center">
+        <a href="{{default url repoUrl}}">
+          <img src="{{logo}}" width="120" alt="{{name}}">
+        </a>
+        <br><br>
+{{#if url}}{{#unless (eq url repoUrl)}}        <a href="{{url}}">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template=shimmer-green&height=24" alt="Live">
+        </a>&nbsp;
+{{/unless}}{{/if}}{{#if demoUrl}}        <a href="{{demoUrl}}">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Demo&template=shimmer-blue&height=24" alt="Demo">
+        </a>&nbsp;
+{{/if}}{{#if repoUrl}}        <a href="{{repoUrl}}">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source">
+        </a>&nbsp;
+{{/if}}{{#each extraLinks}}        <a href="{{url}}">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode label}}&template=shimmer-blue&height=24" alt="{{label}}">
+        </a>&nbsp;
+{{/each}}{{#if repoUrl}}{{#if (eq url repoUrl)}}        <a href="{{repoUrl}}/stargazers">
+          <img src="https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&color=f1c40f&labelColor=1a1a1a" alt="Stars">
+        </a>&nbsp;
+        <a href="{{repoUrl}}/network/members">
+          <img src="https://img.shields.io/github/forks/{{repoPath repoUrl}}?style=flat-square&color=3b82f6&labelColor=1a1a1a" alt="Forks">
+        </a>
+{{/if}}{{/if}}      </div>
+      <br>
+      <p>
+        {{flatten publicSummary}}
+      </p>
+{{#if techStack}}      <p align="center">
+        <img src="https://gradient-svg-generator.vercel.app/api/svg?text={{pillsParam techStack}}&template=pills-dark&height=28" alt="Tech stack">
+      </p>
+{{/if}}    </td>

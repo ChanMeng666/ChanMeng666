@@ -2604,6 +2604,7 @@ projects:
     category: web-apps
     tagline: Production-shape Go + Gin + MySQL + Redis e-commerce backend template — clean architecture, JWT auth, bilingual; distilled from ByteDance Youth Training Camp learnings
     repoUrl: https://github.com/ChanMeng666/douyin-mall-go-template
+    logo: /public/brands/tiktok-shop.svg
     techStack: [Go, Gin, MySQL, Redis, JWT, REST, Clean Architecture]
     status: active
     publicSummary: Production-shape Go + Gin + MySQL + Redis e-commerce backend template with clean architecture, JWT auth, and paired React frontend — built solo as a teaching artefact from the ByteDance Youth Training Camp capstone.
@@ -2767,6 +2768,7 @@ projects:
     priority: 40
     category: creative
     repoUrl: https://github.com/ChanMeng666/image-generator
+    logo: /public/brands/image-generator.svg
     url: https://image-generator.chanmeng-dev.workers.dev/
     status: live
   - id: chinese-redefine
@@ -2774,6 +2776,7 @@ projects:
     priority: 41
     category: creative
     repoUrl: https://github.com/ChanMeng666/chinese-redefine
+    logo: /public/brands/chinese-redefine-v2.svg
     url: https://chinese-redefine.chanmeng-dev.workers.dev/
     status: live
   - id: interactive-story-generator
@@ -2823,6 +2826,7 @@ projects:
     priority: 54
     category: ml-research
     repoUrl: https://github.com/ChanMeng666/water-quality-testing-data-analysis
+    logo: /public/brands/water-quality-analysis.png
 
   # Personal Branding Tools
   - id: ai-programming-teaching-project
@@ -2831,6 +2835,7 @@ projects:
     category: branding
     tagline: Bilingual Docusaurus teaching platform with versioned cohort docs, in-course RAG AI assistant, and Notion-backed message board + capstone voting — hosts the 2026 TechNest AI Track
     repoUrl: https://github.com/ChanMeng666/ai-programming-teaching-project
+    logo: /public/brands/ai-programming-logo.svg
     url: https://programming.chanmeng.org/
     techStack: [Docusaurus, React, Cloudflare Pages, Cloudflare Workers, Notion API, Algolia DocSearch, Typst, Mermaid]
     status: live
@@ -2857,6 +2862,7 @@ projects:
     priority: 70
     category: games
     repoUrl: https://github.com/ChanMeng666/css-tower-defense
+    logo: /public/brands/tower-defense-logo.svg
     url: https://towerdefense.chanmeng.org/
     status: live
   - id: leviathan
@@ -2890,6 +2896,7 @@ projects:
     category: games
     tagline: Interactive reincarnation simulator with multi-cultural life journeys and immersive UX
     repoUrl: https://github.com/ChanMeng666/journey-of-reincarnation
+    logo: /public/brands/journey-of-reincarnation-2.svg
     url: https://journey-of-reincarnation.pages.dev/
     techStack: [Next.js, Cloudflare Pages]
     status: live
@@ -2960,6 +2967,7 @@ projects:
     category: web-apps
     tagline: Commercial-grade AI platform for Auckland University of Technology, AI Forum NZ, and She Sharp — full-screen AI chat with Google Gemini 2.5 Flash, community-driven FAQ voting, Notion backend
     url: https://ai-hackathon-assistant.chanmeng-dev.workers.dev/
+    logo: /public/brands/ai-hackathon-logo-full.svg
     techStack: [Next.js, "Google Gemini 2.5 Flash", "Notion API", "Cloudflare Workers"]
     status: live
   - id: nzcel-prep
@@ -2995,6 +3003,7 @@ projects:
     category: web-apps
     tagline: Auto-repair-shop management system with technician and admin dashboards
     repoUrl: https://github.com/ChanMeng666/agrihire-solutions
+    logo: /public/brands/agri-hire-solutions.svg
     url: https://agrihire.chanmeng.org/
     techStack: [Flask, MySQL]
     status: live
@@ -3004,6 +3013,7 @@ projects:
     category: web-apps
     tagline: Minimalist personal portfolio with animated UI and responsive design (current portfolio at chanmeng.org)
     url: https://chanmeng.org/
+    logo: /public/brands/portfolio.svg
     techStack: ["Next.js", React]
     status: live
   - id: portfolio-v1
@@ -3063,6 +3073,132 @@ projects:
     repoUrl: https://github.com/ChanMeng666/github-visitor-counter
     logo: /public/brands/github-visitor-counter-logo.svg
     url: https://github-visitor-counter-tau.vercel.app/
+    status: live
+  - id: customer-insight
+    name: Customer Insight
+    priority: 33
+    category: ai-apps
+    tagline: Python AI sentiment + topic modeling platform for customer-review analysis — live on Streamlit
+    repoUrl: https://github.com/ChanMeng666/customer-insight
+    url: https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/
+    logo: /public/brands/customer-insight.svg
+    techStack: [Python, Streamlit, "Sentiment analysis", "Topic modeling", "Anomaly detection"]
+    status: live
+  - id: hospital-roster-agent
+    name: Hospital Roster Agent
+    priority: 34
+    category: ai-apps
+    tagline: AI-powered hospital staff scheduling — Next.js + CopilotKit interactive calendar with natural-language operations
+    repoUrl: https://github.com/ChanMeng666/hospital-roster-agent
+    url: https://roster.chanmeng.org/
+    logo: /public/brands/hospital-roster-agent-logo.svg
+    techStack: ["Next.js", TypeScript, CopilotKit]
+    status: live
+  - id: design-pages
+    name: Design Pages
+    priority: 44
+    category: creative
+    tagline: 14+ interactive digital design experiments — pure CSS3 / HTML5 / JavaScript with 3D effects, geometric patterns, gradient systems
+    repoUrl: https://github.com/ChanMeng666/design-pages
+    url: https://chanmeng666.github.io/design-pages/
+    logo: /public/brands/design-pages-logo.svg
+    techStack: [CSS3, HTML5, JavaScript]
+    status: live
+  - id: english-redefine
+    name: English Redefine
+    priority: 45
+    category: creative
+    tagline: Modern redefinition of English words from a contemporary perspective via Google Gemini — sister project to Chinese Redefine
+    repoUrl: https://github.com/ChanMeng666/english-redefine
+    url: https://english-redefine.chanmeng-dev.workers.dev/
+    logo: /public/brands/english-redefine.svg
+    techStack: [TypeScript, "Google Gemini", "Cloudflare Workers"]
+    status: live
+  - id: biosecurity
+    name: NZ Biosecurity Guide
+    priority: 35
+    category: web-apps
+    tagline: Flask web app — biosecurity guide for NZ agricultural pests and weeds with role-based access for agronomists, staff, administrators
+    repoUrl: https://github.com/ChanMeng666/biosecurity
+    logo: /public/brands/biosecurity.svg
+    techStack: [Python, Flask, MySQL]
+    status: live
+  - id: job-valuation
+    name: Job Valuation
+    priority: 36
+    category: web-apps
+    tagline: Next.js quantitative job-evaluation tool — assess current roles across 10 dimensions (time, skill match, compensation, growth, environment)
+    repoUrl: https://github.com/ChanMeng666/job-valuation
+    url: https://job-valuation.vercel.app/
+    logo: /public/brands/job-valuation.svg
+    techStack: ["Next.js", TypeScript]
+    status: live
+  - id: flip-book-template
+    name: Flip Book Template
+    priority: 37
+    category: web-apps
+    tagline: Universal e-book template with realistic page-flip effects, chapter-based music, and easy configuration — interactive digital book in minutes
+    repoUrl: https://github.com/ChanMeng666/flip-book-template
+    url: https://chanmeng666.github.io/flip-book-template/
+    logo: /public/brands/flip-book-logo.svg
+    techStack: [TypeScript, "Page-flip", "Web Audio API"]
+    status: live
+  - id: countryside-community-swimming-club
+    name: Swimming Club Management System
+    priority: 38
+    category: web-apps
+    tagline: Flask + MySQL community swimming-club platform — members, class scheduling, facility bookings, payment processing, reporting
+    repoUrl: https://github.com/ChanMeng666/countryside-community-swimming-club
+    logo: /public/brands/swimming-club-management-system.svg
+    techStack: [Python, Flask, MySQL]
+    status: live
+  - id: automotive-repair-management-system
+    name: RepairOS (Automotive Repair Management)
+    priority: 39
+    category: web-apps
+    tagline: Flask + MySQL automotive repair-shop platform — separate technician and admin interfaces, parts inventory, billing (11 community forks)
+    repoUrl: https://github.com/ChanMeng666/automotive-repair-management-system
+    url: https://repairos.chanmeng.org/
+    logo: /public/brands/repair-os-logo.svg
+    techStack: [Python, Flask, MySQL]
+    status: live
+  - id: fishing-club-project
+    name: Fishing Club Management
+    priority: 40
+    category: web-apps
+    tagline: Flask + Python + Bootstrap fishing-club operations — members, event bookings, guide scheduling
+    repoUrl: https://github.com/ChanMeng666/fishing-club-project
+    url: https://fishing-club.pages.dev/
+    logo: /public/brands/shipfishing.svg
+    techStack: [Python, Flask, Bootstrap]
+    status: live
+  - id: who-i-am
+    name: Who I Am (Personal Intro Site)
+    priority: 41
+    category: web-apps
+    tagline: Next.js 14 personal introduction site — responsive bento-grid layout with elegant animations
+    repoUrl: https://github.com/ChanMeng666/who-i-am
+    url: https://who-i-am-nine.vercel.app/
+    logo: /public/brands/who-i-am.svg
+    techStack: ["Next.js 14", TypeScript]
+    status: live
+  - id: douban-elite-scraper
+    name: Douban Elite Posts Scraper
+    priority: 65
+    category: branding
+    tagline: Streamlined Python scraper for archiving elite posts from Douban groups into Markdown with images — content preservation for offline reading
+    repoUrl: https://github.com/ChanMeng666/douban-elite-scraper
+    logo: /public/brands/vidu-douban-elite-scraper-demo.gif
+    techStack: [Python, "Web scraping", Markdown]
+    status: live
+  - id: douban-review-scraper
+    name: Douban Review Scraper
+    priority: 66
+    category: branding
+    tagline: Python scraper for Douban movie reviews — comprehensive collection with data processing and analysis
+    repoUrl: https://github.com/ChanMeng666/douban-review-scraper
+    logo: /public/brands/vidu-douban-review-scraper-demo.gif
+    techStack: [Python, "Data analysis"]
     status: live
 
 # =============================================================================
@@ -3191,11 +3327,13 @@ certificates:
   - { name: "Google AI Essentials",         issuer: Google,     category: other,      image: /public/certificates/Google-AI-Essentials.jpg,                                         issuerLogo: /public/certificates/issuers/google-logo.jpeg }
   - { name: "Claude Code in Action",        issuer: Anthropic,  category: other,      image: /public/certificates/anthropic-claude-code-in-action.jpg,                              issuerLogo: /public/certificates/issuers/anthropicresearch-logo.jpeg }
   - { name: "AI Fluency Framework",         issuer: Anthropic,  category: other,      image: /public/certificates/anthropic-ai-fluency-framework-and-foundations.jpg }
-  - { name: "Ubuntu Linux",                 issuer: Canonical,  category: other,      image: /public/certificates/completion-ubuntu-linux-professional-certificate-canonical.jpg }
-  - { name: "Anaconda Data Science",        issuer: Anaconda,   category: other,      image: /public/certificates/completion-anaconda-python-data-science-professional-certificate.jpg }
-  - { name: "Atlassian Agile",              issuer: Atlassian,  category: other,      image: /public/certificates/completion-atlassian-agile-project-management-professional-certificate.jpg }
+  - { name: "Ubuntu Linux",                 issuer: Canonical,  category: other,      image: /public/certificates/completion-ubuntu-linux-professional-certificate-canonical.jpg,        issuerLogo: /public/certificates/issuers/canonical-logo.jpg }
+  - { name: "Anaconda Data Science",        issuer: Anaconda,   category: other,      image: /public/certificates/completion-anaconda-python-data-science-professional-certificate.jpg, issuerLogo: /public/certificates/issuers/anacondainc-logo.jpg }
+  - { name: "Atlassian Agile",              issuer: Atlassian,  category: other,      image: /public/certificates/completion-atlassian-agile-project-management-professional-certificate.jpg, issuerLogo: /public/certificates/issuers/atlassian-logo.jpg }
   - { name: "Machine Learning",             issuer: Wolfram Research, category: other, image: /public/certificates/completion-machine-learning-statistical-foundations-wolfram-research.jpg }
-  - { name: "JavaScript Foundations",       issuer: Mozilla,    category: other,      image: /public/certificates/javascript-foundations-professional-certificate-mozilla.jpg }
+  - { name: "JavaScript Foundations",       issuer: Mozilla,    category: other,      image: /public/certificates/javascript-foundations-professional-certificate-mozilla.jpg,           issuerLogo: /public/certificates/issuers/mozilla-corporation-logo.jpg }
+  - { name: "C Programming Professional",   issuer: "CPP Institute / OpenEDG", category: other, image: /public/certificates/completion-c-programming-professional-certificate-openedgc.jpg,         issuerLogo: /public/certificates/issuers/cppinstitute-logo.jpg }
+  - { name: "Java Foundations Professional", issuer: JetBrains,  category: other,      image: /public/certificates/completion-java-foundations-professional-certificate-jetbrains.jpg,             issuerLogo: /public/certificates/issuers/jetbrains-logo.jpg }
 
 # =============================================================================
 # PUBLICATIONS — articles, podcast episodes, press features

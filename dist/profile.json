@@ -1611,16 +1611,49 @@
     },
     {
       "id": "css-tower-defense",
-      "tier": "archive",
-      "recency": "historical",
+      "tier": "primary",
+      "recency": "recent",
       "lastUpdated": "2026-05-18",
-      "name": "CSS Tower Defense",
-      "priority": 70,
+      "name": "Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa)",
+      "priority": 15,
       "category": "games",
+      "tagline": "A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Maori mythology of Aotearoa, with a full Cloudflare Workers + Hono + Neon Postgres backend (auth, leaderboards, cloud saves, anti-cheat)",
       "repoUrl": "https://github.com/ChanMeng666/css-tower-defense",
       "logo": "/public/brands/tower-defense-logo.svg",
       "url": "https://towerdefense.chanmeng.org/",
-      "status": "live"
+      "extraLinks": [
+        {
+          "label": "Play now",
+          "url": "https://towerdefense.chanmeng.org/"
+        },
+        {
+          "label": "GitHub repo",
+          "url": "https://github.com/ChanMeng666/css-tower-defense"
+        }
+      ],
+      "techStack": [
+        "CSS 3D Transforms",
+        "Vanilla JavaScript (ES6)",
+        "LESS preprocessor",
+        "Gulp 4 build pipeline",
+        "Cloudflare Workers",
+        "Hono",
+        "Neon Postgres",
+        "Web Audio API",
+        "Howler.js",
+        "DOM object pooling"
+      ],
+      "status": "live",
+      "publicSummary": "A full **3D isometric tower-defense game** rendered entirely through\nCSS 3D transforms on real DOM elements — no `<canvas>`, no WebGL,\nno game engine. Every tower, enemy, projectile, particle, and\nweather effect is a styled DOM node at a 45-degree isometric\nperspective. Themed end-to-end on **Maori mythology and culture of\nAotearoa**: six towers named after Maori weapons and atua (Taiaha,\nMere, Tangaroa, Tohunga, Tawhiri, Mahuika), six enemies from\nMaori legend (Kehua, Patupaiarehe, Toa, Wairua, Tipua, Taniwha),\nthree maps (Te Awa, Te Maunga, Te Moana), three taonga materials\n(Pipi, Koiwi, Pounamu). Backed by Cloudflare Workers + Hono +\nNeon Postgres for auth, leaderboards, cloud saves (3 slots),\ndaily challenges, and server-side anti-cheat. 84 commits over\n~2 months (Feb–Mar 2026), executed in disciplined P0–P4 phases.\n",
+      "narrative": {
+        "problem": "Two prevailing pictures of \"a portfolio game project\" are both\nwrong: (a) a trivial Canvas + JS toy that lasts one weekend\nand looks it; (b) a Unity-shaped engine project that's\nimpressive but says nothing about web-platform fluency. There\nis a third position the portfolio market doesn't routinely\nproduce: a **production-shaped game shipped end-to-end on raw\nweb primitives** — DOM + CSS — that proves both deep browser\nengineering and design discipline. There is also a fourth\ngap: a NZ-based developer's portfolio should *show*\nengagement with Aotearoa rather than just claim residence,\nand Maori mythology deserves more interactive cultural\nrepresentation than it usually gets.\n",
+        "audience": "Three concentric audiences. **Game players** — anyone who\nclicks Play Now on towerdefense.chanmeng.org and can play\nwithout an account thanks to fully-supported guest mode.\n**Engineering recruiters and architects** evaluating the\nportfolio: the game is proof of CSS-engine fluency, vanilla\nES6 architecture discipline, full-stack ops (Workers + Hono +\nNeon), and the kind of phased product execution\n(P0 → P1 → P2 → P3 → P4) usually only seen in shipped\nproducts. **The Aotearoa cultural audience**: locals, the\nMaori community, NZ tech employers — anyone for whom\nrespectful engagement with te reo and Maori cosmology is a\nmeaningful signal alongside the technical work.\n",
+        "productLogic": "Players load the game in-browser, optionally sign in for\ncloud progression (or stay in guest mode), pick a difficulty\n(Normal / Hard / Expert), choose a map (Te Awa, Te Maunga,\nor Te Moana), and play through **10 progressive waves**\ndefending against six Maori-legend enemy archetypes plus\nfour variant tiers (Rangatira elite, Pakanga armored, Tere\nswift, Mate deadly). Players place towers, gather **taonga**\n(treasures: Pipi, Koiwi, Pounamu) dropped by enemies, craft\nconsumables from six recipes, build XP through a Tech Tree\nof 10 upgrades, attempt **daily challenges** drawn from 20+\ntemplates across six categories, and chase rank on\n**leaderboards** (global and per-challenge). Endless mode\nkeeps wave 11+ available after victory. Server-side\nanti-cheat validates submitted scores against expected\nranges. Cloud saves persist across 3 slots; guest mode keeps\nprogress in localStorage.\n",
+        "businessLogic": "Theory of differentiation for a non-commercial portfolio\nartefact: be **specifically uncopyable**. A Canvas tower\ndefense is a five-page tutorial; a CSS-3D tower defense is\na multi-month engineering bet that signals *exactly* what\nthe candidate can do. Pair that with cultural engagement\nmost portfolios don't attempt — six towers and six enemies\nwhose names and roles draw on te reo Maori — and the\nproject becomes a single-sentence portfolio differentiator\nin NZ-relevant interviews. The free, guest-playable web\ndeployment maximises the surface area: anyone reading the\nportfolio can click Play and *experience* the engineering,\nnot just read about it.\n",
+        "technicalApproach": "**Rendering — 100% CSS 3D.** Every tower, enemy, projectile,\nexplosion, particle, weather effect is a real DOM element.\nThe world is a 45-degree isometric scene built with\n`transform-style: preserve-3d` and 1200px CSS perspective.\nTowers and enemies are constructed from `clip-path`,\n`border-radius`, and pseudo-elements — *no emoji, no\nimages*. Visual style is comic / pop-art: halftone dot\npatterns, hard-offset pop shadows, thick comic borders, a\nwarm `#FFF8F0` palette. **DOM object pooling** via\n`Pool.acquire()` / `Pool.release()` recycles elements so\nthe scene stays at 60 FPS through dense wave combat.\n**Dynamic theming** via CSS custom properties driven from\nJS produces day/night, weather, and seasonal palette\ntransitions — same DOM, different CSS variables.\n\n**Game logic — vanilla ES6.** No framework, no engine. The\ncodebase is organised as IIFE modules communicating\nthrough an event-driven bus. Core systems include the\nwave director, enemy AI, tower targeting, projectile\nphysics, the combo system (chain kills within 1.5s),\ncritical-hit probability, the mana ability system with\ncooldowns, the Terraria-inspired **reforging** engine\n(Common → Uncommon → Rare → Epic → Legendary prefixes),\nand **tower synergies** that activate when adjacent towers\ncombine (Freeze Lightning, Fire Blast, Blessing, Array).\n\n**Maori cultural integration is structural, not decorative.**\nTowers carry the abilities their te reo names imply:\nTangaroa (ocean atua) slows enemies with ice, Mahuika (fire\ngoddess) deals damage-over-time, Tawhiri (storm god) chains\nlightning. The Taniwha boss has three signature skills —\nKaranga (call / summon minions), Kaitiaki (guardian /\nshield), Te Riri (anger / enrage). Maps are place-words:\nTe Awa (the river), Te Maunga (the mountain), Te Moana\n(the ocean). Materials are taonga (treasures): Pipi\n(shellfish), Koiwi (bone), Pounamu (greenstone). The\nnaming isn't surface skin — each mechanic is selected to\nmatch the mythological meaning.\n\n**Cloud backend.** Cloudflare Workers running the **Hono**\nweb framework, backed by **Neon serverless Postgres**.\nEndpoints cover auth, leaderboards (global + per-challenge),\ncloud saves (3 slots per user), stats tracking, and\ndaily-challenge rotation. **Server-side score validation**\nrejects submissions outside expected ranges to defend the\nleaderboard against cheating. **Guest mode is a\nfirst-class path** — the entire game works without an\naccount; cloud sync activates the moment a player signs in.\n\n**Audio.** **Web Audio API** synth generates SFX in real\ntime (firing, impact, death, level-up); **Howler.js**\nhandles music and longer samples. Music is *dynamic* — the\nsoundtrack adapts to game state (menu, playing, boss,\nvictory, defeat).\n\n**Build pipeline.** **LESS** preprocessor for CSS modules,\n**Gulp 4** for the build/watch pipeline, deployment via\nWrangler to Cloudflare Workers with the static assets\nserved from the same edge.\n",
+        "outcomes": "Live at **towerdefense.chanmeng.org**. **84 commits across\n~2 months** (2026-02-06 → 2026-03-30), ~99% Chan-authored\nacross two GitHub identities. Execution followed an\nexplicit **P0 → P4 phase plan** visible in the commit log:\nP0 (game feel — damage numbers, death bursts, firing\nanimations, wave transitions), P1 (onboarding & UX —\ntutorial with spotlight cutout, hints, cooldown UI),\nP2 (retention — expanded achievements, leaderboard filters,\ncelebrations), P3-P4 (deep systems — mana abilities, dynamic\nmusic, endless mode). Plus the full content build:\nsynergies, new enemies, multi-map, daily-challenge overhaul,\ncloud backend integration. Anti-cheat is in production and\nactively rejecting out-of-range submissions. The 3D\nisometric CSS rendering holds 60 FPS through dense\nWave-10 combat thanks to object pooling.\n",
+        "myRole": "Sole designer, sole engineer, sole audio architect. Designed\nthe CSS-3D rendering technique end-to-end (perspective,\npreserve-3d, the comic/pop-art visual language, the DOM\nobject pool), wrote every game system (waves, AI,\nphysics, towers, enemies, synergies, reforging, combo,\nmana, achievements, daily challenges, tech tree, crafting,\ninventory), shipped the entire **Maori cultural design** —\nchoosing which te reo name maps to which mechanic so\nmeaning and gameplay reinforce each other — built the\nCloudflare Workers + Hono + Neon backend including\nserver-side anti-cheat validation, composed the dynamic\nmusic state machine and the Web Audio synth effects,\nwrote the Gulp + LESS build pipeline, and authored the\n4-step interactive tutorial with spotlight overlays.\n"
+      }
     },
     {
       "id": "leviathan",
@@ -3838,6 +3871,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T11:08:08.558Z"
+    "buildTimestamp": "2026-05-18T11:14:44.298Z"
   }
 }

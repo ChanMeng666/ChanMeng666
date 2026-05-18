@@ -1443,16 +1443,117 @@
     },
     {
       "id": "send-joy",
-      "tier": "secondary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "name": "SendJoy",
-      "priority": 24,
+      "tier": "primary",
+      "recency": "recent",
+      "lastUpdated": "2026-05-19",
+      "name": "SendJoy — Visual Email Platform",
+      "priority": 17,
       "category": "web-apps",
+      "tagline": "No-code visual abstraction layer over the Resend API — drag-and-drop block editor, 5-step send wizard, Resend Audiences sync, and onboarding designed explicitly for non-technical users. Born as a Christmas-greeting CLI; pivoted into a full visual platform in 4 days.",
       "repoUrl": "https://github.com/ChanMeng666/send-joy",
       "logo": "/public/brands/send-joy-logo.svg",
       "url": "https://sendjoy.chanmeng-dev.workers.dev/",
-      "status": "live"
+      "extraLinks": [
+        {
+          "label": "Live app",
+          "url": "https://sendjoy.chanmeng-dev.workers.dev/"
+        },
+        {
+          "label": "Tutorial",
+          "url": "https://github.com/ChanMeng666/send-joy/blob/main/TUTORIAL.md"
+        },
+        {
+          "label": "CF Workers migration commit",
+          "url": "https://github.com/ChanMeng666/send-joy/commit/e9ace8a"
+        },
+        {
+          "label": "CLI->visual pivot commit",
+          "url": "https://github.com/ChanMeng666/send-joy/commit/fe16fdd"
+        },
+        {
+          "label": "Non-tech UX commit",
+          "url": "https://github.com/ChanMeng666/send-joy/commit/782731c"
+        }
+      ],
+      "techStack": [
+        "Next.js 15.1.2 (App Router)",
+        "React 19.0",
+        "TypeScript 5.7",
+        "Tailwind CSS 3.4 + custom Neobrutalism shadow utilities",
+        "Resend SDK 4.0",
+        "React Email 0.0.31 (rendering) + @react-email/render 1.0.3",
+        "@dnd-kit/core 6.1 + @dnd-kit/sortable 8.0 (drag-and-drop editor)",
+        "Zustand 5.0 (state + 50-state undo/redo history)",
+        "shadcn/ui + 10 Radix primitives",
+        "react-colorful (theme color pickers)",
+        "Lucide React (icon library)",
+        "@opennextjs/cloudflare adapter",
+        "Cloudflare Workers deployment (migrated from Vercel, Feb 2026)",
+        "GitHub Actions CI/CD auto-deploy",
+        "wrangler v4",
+        "localStorage state persistence (all user data lives in the browser)"
+      ],
+      "keywords": [
+        "No-code platform",
+        "Non-technical user UX",
+        "Resend API wrapper",
+        "Email template visual editor",
+        "Neobrutalism design",
+        "Drag-and-drop",
+        "Privacy-first (zero server-side storage)",
+        "Cloudflare Workers",
+        "GEO-optimized"
+      ],
+      "metrics": [
+        {
+          "label": "First commit",
+          "value": "2025-12-23 (Christmas-greeting CLI release)"
+        },
+        {
+          "label": "CLI->Visual pivot",
+          "value": "2025-12-27 — commit fe16fdd: 'transform CLI tool into visual web application platform'"
+        },
+        {
+          "label": "Non-tech UX milestone",
+          "value": "2025-12-27 — commit 782731c: 'comprehensive onboarding and help system for non-technical users'"
+        },
+        {
+          "label": "CF Workers migration",
+          "value": "2026-02-04 (commits e9ace8a + a970c1a)"
+        },
+        {
+          "label": "Total commits",
+          "value": "43 (solo) across 6 weeks of active development"
+        },
+        {
+          "label": "Block types",
+          "value": "7 (Header, Text, Image, Button, Wishes List, Divider, Footer)"
+        },
+        {
+          "label": "Preset templates",
+          "value": "6 (Classic Christmas, New Year 2025, Chinese New Year, Birthday, Product Launch, Weekly Newsletter)"
+        },
+        {
+          "label": "Send wizard steps",
+          "value": "5 (Template -> Recipients -> Variables -> Preview -> Send & Track)"
+        },
+        {
+          "label": "Resend API surfaces wrapped",
+          "value": "4 (/emails, /templates, /audiences, /audiences/.../contacts)"
+        }
+      ],
+      "status": "live",
+      "startDate": "2025-12-23",
+      "publicSummary": "A **no-code visual abstraction layer over the Resend API**, built\nso that **non-technical users never have to read Resend's docs,\nopen Resend's dashboard, or learn merge-field syntax** to send\nbeautiful personalised email campaigns. Started life on Christmas\nEve 2025 as a one-shot CLI for sending Christmas greetings; four\ndays later, on Dec 27 2025, the codebase pivoted in a single\ncommit (`fe16fdd`: *\"transform CLI tool into visual web\napplication platform\"*) into a full Next.js 15 web app with a\ndrag-and-drop block-based template editor (7 block types,\n`@dnd-kit`), a 5-step sending wizard, a Resend Audiences sync,\nand a deliberately authored **onboarding + context-aware help\nsystem \"for non-technical users\"** (commit `782731c`). Wraps four\nResend API surfaces — `/emails`, `/templates`, `/audiences`, and\n`/audiences/.../contacts` — behind a unified UI so the user\nnever sees a request body. Ships **6 Neobrutalism preset\ntemplates**, real-time desktop/mobile preview, undo/redo with\n50-state history, and CSV-import contact management.\nPrivacy-first: all user data (templates, contacts, settings)\nlives in browser localStorage, and the Resend API key is passed\nper-request rather than persisted on any server. Live at\n[sendjoy.chanmeng-dev.workers.dev](https://sendjoy.chanmeng-dev.workers.dev/),\nmigrated from Vercel to Cloudflare Workers in Feb 2026 with\nGitHub Actions auto-deploy.\n",
+      "narrative": {
+        "problem": "Resend is the modern transactional-email API of choice for\ndevelopers — clean SDK, fast onboarding, MX-record sanity — but\nthe gap it leaves wide open is **non-technical users**.\nMarketers, community managers, school teachers, holiday-card\nsenders, small-business owners, and event organisers want\nexactly what Resend provides (high deliverability, real\nsender domains, real bounce handling) but **cannot get\nthrough the API on-ramp**. To send one campaign through\nvanilla Resend, a non-technical user has to (1) read SDK docs,\n(2) write Node code with the `Resend` client, (3) hand-author\nHTML or React Email JSX, (4) understand merge-field syntax\ndifferences between Resend's native templates and their own\ntemplating, (5) manage `Audiences` and `Contacts` through the\nREST API directly, and (6) deploy a serverless function or\nrun scripts locally. Every one of these steps is a wall.\nTools that **do** cater to non-technical users — Mailchimp,\nConvertKit, Substack — are either expensive at small list\nsizes, lock the user into their templating, or don't expose\nthe underlying mail infrastructure (custom domains, API key\nrotation, deliverability metrics) that Resend gives away\ncheaply.\n",
+        "audience": "Explicitly **non-technical or semi-technical Resend users**.\nThe persona stack: (a) marketers and community managers who\nwant to send a polished campaign through Resend's\ndeliverability stack but don't write Next.js; (b) holiday\nsenders who want to send Christmas / Lunar New Year / Birthday\ngreetings to dozens of friends with personalised names baked\nin; (c) small-business owners running newsletters out of\ntheir own domain who don't want Mailchimp branding or pricing;\n(d) developers who *can* code but want a visual editor for\nspeed because they're authoring one-off campaigns rather than\nbuilding a templated system. Secondary audience: other\ndevelopers who want to study a worked example of wrapping a\ncommercial API into a no-code platform — the codebase ships\nMIT-licensed as a study artefact.\n",
+        "productLogic": "The product replaces six pieces of Resend's developer\nworkflow with visual surfaces. **(1) HTML authoring** becomes\na drag-and-drop block editor with 7 block types — Header,\nText, Image, Button, Wishes List, Divider, Footer — each with\na focused property panel; React Email renders to real\nemail-client-safe HTML on the server. **(2) Templating** is\nthe visual canvas plus a theme panel with 9+ colour pickers\n(`react-colorful`), 600px/375px device preview toggle, and\n50-state undo/redo. **(3) Recipient management** becomes a\nContacts page with three import modes — manual entry, CSV\nbulk import (Email/FirstName/LastName columns), and a\none-click sync from a Resend Audience (`audienceId` selected\nfrom a dropdown). **(4) Merge fields** become four named\nvariables — `{{recipientName}}`, `{{senderName}}`,\n`{{currentYear}}`, `{{nextYear}}` — with the server-side\nrenderer normalising between local camelCase syntax and\nResend native UPPER_SNAKE_CASE so a template can use either.\n**(5) Sending** becomes a 5-step wizard: pick template -> pick\nrecipients -> customise variables -> preview the actual\nrendered HTML (not a mockup) -> send-and-track with a real\nper-recipient success/failure result table; the server hits\nResend per recipient with progress streamed back. **(6) API\ninfrastructure** is replaced by a Settings page where the\nuser pastes their Resend API key and verified sender email\nonce; the key never leaves the browser except as a\nper-request header. A welcome-modal **onboarding flow**\n(commit `782731c`, *\"comprehensive onboarding and help\nsystem for non-technical users\"*) walks first-time visitors\nthrough these six surfaces step by step, and every screen\nhas a context-aware help modal pinned to it.\n",
+        "businessLogic": "Open source under MIT. The product is **free to self-host**\n(deploy to Cloudflare Workers in under a minute via the\n`npm run deploy` script and `@opennextjs/cloudflare`) and\nfree to use on the public instance at\nsendjoy.chanmeng-dev.workers.dev (the user supplies their own\nResend API key, so Chan bears no email-delivery cost). The\ncommercial premise is asymmetric: Resend already monetises\nthrough their own free tier (3,000 emails/month) plus paid\nplans for higher volume; SendJoy makes their funnel reachable\nto a customer segment Resend can't service directly, which\nmakes it a complementary product rather than a competing\none. The build-in-public value for Chan: a portfolio-grade\nworked example of **\"abstract a developer API into a no-code\nproduct\"** — a pattern the agentic-AI economy will need\nrepeatedly as more APIs ship without UX layers. The codebase\nis deliberately reusable as a template for wrapping any\nother Resend-shaped API (transactional SMS, push\nnotifications, file delivery).\n",
+        "technicalApproach": "Next.js 15.1.2 App Router with React 19 and TypeScript 5.7,\ndeployed on **Cloudflare Workers via\n`@opennextjs/cloudflare`** (migrated from Vercel on\n2026-02-04, commit `e9ace8a`, with a follow-up GitHub\nActions auto-deploy workflow in commit `a970c1a`). Four\nResend-wrapping API routes form the entire backend surface:\n**`POST /api/send`** takes `{apiKey, from, to, subject,\nhtml}` and forwards to the Resend SDK, returning\n`{success, data: {id}, error?}`; **`POST /api/preview`**\ntakes `{blocks, theme, variables}` and runs\n`@react-email/render` to produce email-client-safe HTML\nwith merge fields substituted; **`GET/POST/DELETE\n/api/contacts`** wraps the Resend Audiences contact CRUD;\n**`GET /api/resend-templates`** plus its `[id]/duplicate`\nand `[id]/publish` sub-routes wrap Resend's cloud\ntemplates. **State management** uses Zustand 5.0 with a\n50-state undo/redo history stack — every block move, edit,\ndelete, or theme change is reversible. **Templates and\ncontacts persist to browser localStorage** under six\nnamespaced keys (`email-platform-templates`,\n`email-platform-contacts`, `email-platform-settings`,\n`email-platform-onboarding`, `email-platform-emails-sent`,\n`email-platform-sidebar-collapsed`) — there is no\nserver-side database, no auth layer, and no telemetry. The\neditor itself uses **`@dnd-kit/core` + `@dnd-kit/sortable`**\nfor accessible drag-and-drop (commit `1dadb76`, *\"implement\ndrag-and-drop block reordering\"*). The visual language is a\ncustom **Neobrutalism design system** — 4px solid black\nborders, 8px hard-offset shadows (no blur), three brand\ncolours (`#DC2626` red, `#16A34A` green, `#F59E0B` gold),\ncustom Tailwind `shadow-neo-*` utilities — that signals\n\"approachable / playful\" while still feeling polished.\nPerformance: 95+ Lighthouse, <1s TTFB, <100ms API. **GEO\noptimisation** (commit `04fc131`, *\"add Generative Engine\nOptimization for AI discoverability\"*) ships\nmachine-readable metadata for LLM-driven discovery, same\npattern as Chan's other public projects.\n",
+        "outcomes": "Live and functional at\n[sendjoy.chanmeng-dev.workers.dev](https://sendjoy.chanmeng-dev.workers.dev/)\nsince end of December 2025; 43 solo commits across roughly\n6 weeks of active development with subsequent maintenance\nthrough April 2026. The defining engineering moment is the\n**4-day arc from CLI to visual platform**: Dec 23 ships\ncommit `16c7026` *\"initial release of Christmas greeting\nemail sender\"* (a CLI script using `tsx` and `dotenv` to\nsend one templated greeting via Resend), Dec 27 ships\ncommit `fe16fdd` *\"transform CLI tool into visual web\napplication platform\"*, and Dec 27–28 layers the visual\neditor, the 5-step wizard, the Resend cloud-templates\nintegration, the Resend Audiences sync, and the onboarding\nflow for non-technical users on top — all before the\nproduct gets its final name `send-joy` (commit `dba12bc`,\nDec 29) and brand identity (`0798540`). The Feb 2026\nCloudflare Workers migration cuts hosting cost to zero and\nadds GitHub Actions auto-deploy. The codebase serves as\nChan's worked example of the \"wrap a developer API into a\nno-code product for non-technical users\" pattern — directly\ncited in conversations with founders and recruiters as a\ndemonstration of full-stack product judgement (not just\nengineering): identifying the non-technical-user gap in a\ndeveloper-first API, then closing it in a week.\n",
+        "myRole": "Sole product designer, sole developer, sole maintainer. Made\nthe call to pivot from a one-off Christmas CLI into a\ngeneral-purpose visual platform after the CLI's 6th commit;\ndesigned the Neobrutalism visual language; designed the\n7-block schema; designed the 5-step wizard; designed the\nonboarding flow specifically for non-technical users (the\nexplicit framing in commit `782731c`); implemented every\nResend API wrapper route; engineered the localStorage\npersistence model with zero server-side state; executed the\nVercel -> Cloudflare Workers migration with GitHub Actions\nauto-deploy; authored the README, TUTORIAL.md, and GEO\nmetadata. Maintains the live deployment today.\n"
+      }
     },
     {
       "id": "sunostats",
@@ -4107,6 +4208,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T12:39:12.044Z"
+    "buildTimestamp": "2026-05-18T12:43:54.925Z"
   }
 }

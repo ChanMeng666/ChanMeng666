@@ -629,11 +629,11 @@
       "id": "tam-ai-ti",
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-05-19",
       "name": "Tam-AI-Ti",
       "priority": 1,
       "category": "ai-apps",
-      "tagline": "AI Financial Wellness Coach grounded in Te Whare Tapa Whā — built solo for Māori financial-prosperity researcher Riria (Missy) Te Kanawa",
+      "tagline": "AI Financial Wellness Coach grounded in Te Whare Tapa Whā — built solo for Māori financial-prosperity researcher Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead). 351 commits, 48-table schema (10 modules, 22 migrations) where every cultural concept is a typed column not a UI sticker, three-model OpenAI composition (GPT-4o-mini for cheap tool actions · GPT-4o for prose quality · gpt-4o-realtime-preview \"verse\" voice for the Financial Coach with server-side VAD + 500ms silence detection), bilingual te reo Māori with macron-correct translation, and a deliberate CopilotKit optimisation from 8 AI-enabled routes down to 3 focused ones.",
       "url": "https://tamaiti.whiri-ai.com/",
       "demoUrl": "https://youtu.be/NtT7_q6xhlk",
       "logo": "/public/brands/tam-ai-ti-logo-with-brand.svg",
@@ -643,26 +643,70 @@
         "Full-Stack Engineer",
         "Maintainer"
       ],
+      "extraLinks": [
+        {
+          "label": "Live app",
+          "url": "https://tamaiti.whiri-ai.com/"
+        },
+        {
+          "label": "YouTube demo",
+          "url": "https://youtu.be/NtT7_q6xhlk"
+        },
+        {
+          "label": "Client organisation",
+          "url": "https://whiri-ai.com/"
+        },
+        {
+          "label": "About Riria (Missy) Te Kanawa",
+          "url": "https://www.linkedin.com/in/riria-missy-te-kanawa/"
+        },
+        {
+          "label": "KPMG Maui Rau report (research origin)",
+          "url": "https://kpmg.com/nz/en/home/insights/2024/02/maui-rau.html"
+        },
+        {
+          "label": "Te Whare Tapa Whā (Māori health model)",
+          "url": "https://www.health.govt.nz/our-work/populations/maori-health/maori-health-models/maori-health-models-te-whare-tapa-wha"
+        },
+        {
+          "label": "Maramataka (Māori lunar calendar)",
+          "url": "https://teara.govt.nz/en/te-mahi-kai-food-production-economics/page-2"
+        },
+        {
+          "label": "She Sharp (intro path)",
+          "url": "https://www.shesharp.org.nz/"
+        }
+      ],
       "techStack": [
-        "Next.js 15",
-        "TypeScript",
-        "Drizzle ORM",
-        "Neon Postgres",
-        "pgVector",
-        "CopilotKit",
-        "GPT-4o",
-        "GPT-4o Realtime API",
-        "Auth.js",
-        "Vercel"
+        "Next.js 15.5 (App Router + Turbopack build + Edge Runtime AI endpoints)",
+        "React 19.1 + TypeScript 5 (100% strict typing across 48 tables / 494 columns)",
+        "Drizzle ORM 0.44 + drizzle-kit 0.31 (10 schema files: users · assessments · goals · daily-engagement · ai-coach · whanau · maramataka · whakatauki · financial-coach · index; 22 hand-written SQL migrations 0000-0021)",
+        "Neon Postgres (HTTP serverless adapter `@neondatabase/serverless` 1.0)",
+        "pgVector — 1536-dim `text-embedding-3-small` embeddings on 4 tables (goals · goal_progress · journal_entries · ai_coach_messages)",
+        "CopilotKit 1.10 (backend + runtime + react-core/react-ui/react-textarea) — deliberately optimised from 8 AI-enabled routes down to 3 focused ones (Dashboard CRUD wellness + Journal fill + Journal History search)",
+        "OpenAI 6 SDK — three-model composition: `gpt-4o-mini-2024-07-18` for CopilotKit actions (temp 0.3, deterministic), `gpt-4o-2024-11-20` for journal enhance/translate/insights (temp 0.5-0.8), `gpt-4o-realtime-preview` (\"verse\" voice) for the Financial Coach with server-side VAD + 500ms silence detection",
+        "@openai/agents 0.1 (OpenAI Agents SDK)",
+        "NextAuth v5 (beta 29) + @auth/drizzle-adapter 1.10 — Google OAuth 2.0, database sessions (30-day duration, not JWT)",
+        "react-hook-form 7.62 + @hookform/resolvers 5 + Zod 3.25 validation across all API inputs",
+        "@vercel/blob 2.0 — avatar storage; ioredis 5.7 — Redis session cache; Resend 6 + @react-email/components 0.5 — transactional email",
+        "react-easy-crop 5.5 — avatar crop preview; recharts 3.2 — Hauora trend charts; @lottiefiles/dotlottie-react 0.17 — animated illustrations; date-fns 4 NZ-time-aware day boundaries",
+        "Radix UI primitives (17 packages: Dialog, AlertDialog, NavigationMenu, Popover, Tabs, RadioGroup, Slider, Switch, Tooltip, ScrollArea, Avatar, Checkbox, DropdownMenu, Label, Progress, Select, Separator)",
+        "Tailwind CSS v4 + tw-animate-css 1.3 + Sonner 2 toasts + next-themes (light-only by deliberate design)",
+        "Vercel hosting (auto-deploy, Edge Runtime, Blob storage, KV Redis) — migrated from developer's personal Hobby plan to client's Pro team in March 2026 with a zero-downtime cutover documented as a reusable playbook",
+        "Custom React Server Components CVE patches applied within hours of Vercel/Snyk PRs (PR #2, Dec 2025)"
       ],
       "keywords": [
-        "Māori cultural technology",
-        "Te Whare Tapa Whā",
-        "Financial wellness",
-        "Voice AI",
-        "Bilingual te reo Māori",
-        "Solo full-stack build",
-        "Research pilot"
+        "Māori cultural technology (culture-in-schema, not UI decoration)",
+        "Te Whare Tapa Whā 5-dimension Hauora framework",
+        "26Q × 9-factor psychological assessment",
+        "7 SMART action plans (Options A-G) with type-specific tracking",
+        "Voice-first AI Financial Coach (gpt-4o-realtime-preview)",
+        "Bilingual te reo Māori with macron-correct translation",
+        "pgVector semantic search across 4 tables",
+        "Solo full-stack build for an ASB Bank research commission",
+        "4-month research-cohort engagement signal",
+        "Production Vercel-to-client-team migration playbook",
+        "Deliberate CopilotKit optimisation: 8 routes → 3 (anti-bloat UX discipline)"
       ],
       "metrics": [
         {
@@ -671,31 +715,67 @@
         },
         {
           "label": "Journal entries",
-          "value": "181"
+          "value": "181 bilingual (EN + te reo Māori)"
         },
         {
           "label": "Voice sessions",
-          "value": "35"
+          "value": "35 (gpt-4o-realtime, text transcripts only — audio deliberately not stored)"
         },
         {
-          "label": "AI coach msgs",
+          "label": "AI coach messages",
           "value": "146"
         },
         {
-          "label": "Hauora check-ins",
+          "label": "Hauora daily check-ins",
           "value": "74"
         },
         {
-          "label": "AI actions",
-          "value": "88+"
+          "label": "Active financial goals",
+          "value": "18"
         },
         {
-          "label": "DB tables",
-          "value": "48 (494 cols)"
+          "label": "AI actions defined",
+          "value": "88+ across 8 hooks (1,936 lines); CopilotKit live on 3 routes after optimisation"
+        },
+        {
+          "label": "DB schema scale",
+          "value": "48 tables · 494 columns · 10 schema modules · 22 migrations (0000-0021)"
+        },
+        {
+          "label": "9 psychological factors",
+          "value": "self_belief · long_term_focus · resilience · self_control · growth_mindset · financial_confidence · social_comparison · mindfulness · gratitude (one is reverse-coded as Present Bias)"
+        },
+        {
+          "label": "5 Hauora dimensions",
+          "value": "Wairua (spiritual, 3 metrics) · Tinana (physical, 4 metrics) · Whānau (family, 2 metrics) · Hinengaro (mental, 2 metrics) · Whenua (environmental, integrated in Wairua)"
+        },
+        {
+          "label": "4 Maramataka activities",
+          "value": "Toitoi (spiritual/cultural) · Hi ika (water harvesting) · Pouraka (hunting/gathering) · Mahi māra (gardening/planting) — across 30-day lunar cycle + 8 main moon phases"
+        },
+        {
+          "label": "7 SMART action plans",
+          "value": "Option A Spending Reduction · B Savings Increase · C Savings Rate · D Debt Reduction · E Income Growth · F Budget Review · G Accountability Partner (each with dedicated React component family — 38 goal components total)"
+        },
+        {
+          "label": "5 Whānau permission tiers",
+          "value": "canSeeGoals · canSeeProgress · canSeeMood · canSeeAchievements · canSendMessages"
+        },
+        {
+          "label": "Whakatauki library",
+          "value": "74 Māori proverbs across 37+ categories, AI-driven contextual delivery, bilingual"
+        },
+        {
+          "label": "Pages · API routes · components",
+          "value": "38 pages · 76 API route files · 100+ endpoints across 20 modules · 115+ components (44 main · 38 goal-specific · 28 shadcn/ui · 5+ cultural)"
         },
         {
           "label": "Commits (solo)",
-          "value": "349"
+          "value": "351 (2025-09-19 → 2026-03-29)"
+        },
+        {
+          "label": "Production migration",
+          "value": "Vercel personal Hobby → client Whiri-AI Pro team executed March 2026 with zero downtime; documented as `docs/implementation/PROJECT_MIGRATION_GUIDE.md` — a reusable playbook covering GH org transfer, Blob/KV recreation, OAuth re-config, DNS cutover, blob-data migration, and `NEXTAUTH_SECRET` preservation for session survival"
         }
       ],
       "status": "production",
@@ -704,11 +784,11 @@
       "narrative": {
         "problem": "Mainstream FinTech treats money as decontextualized numbers — budgets,\nbalances, projections. For Māori users, that framing is culturally\nmismatched: money is inseparable from whānau wellbeing, spiritual purpose,\nand holistic health. Generic budgeting apps strip out the very framework\nthat makes financial decisions meaningful, and Māori communities — who\nface disproportionate financial stress in Aotearoa — are left choosing\nbetween tools that work for their wallets but not their worldview, or no\ntools at all. Tam-AI-Ti exists to test whether an AI financial coach built\nnatively on Māori cultural wisdom — rather than retrofitted with cultural\ndecoration — can engage a population that mainstream FinTech systematically\nunderserves.\n",
         "audience": "Māori adults engaging with personal financial wellbeing, served along two\naccount types: individual goal-setters (Full Account) and whānau supporters\nwho can witness and encourage from the sidelines through a five-tier\npermission system (view profile, view goals, view journal, send messages,\nreceive celebrations). Pilot cohort to date: 19 verified research\nparticipants recruited by Missy Te Kanawa, active over a four-month window\n(Oct 2025 – Mar 2026), producing 181 bilingual journal entries, 35 voice\ncoaching sessions, 146 AI coach messages, and 74 daily Hauora check-ins.\nTe reo Māori and English are first-class throughout the experience.\nFuture audience: the broader Māori adult population — rangatahi entering\nworking life, parents managing whānau finances, kaumātua passing on\nfinancial wisdom — for whom culturally-rooted tools are scarce.\n",
-        "productLogic": "The product is architected on Te Whare Tapa Whā, the Māori model of\nholistic wellness with four walls (Wairua/spiritual, Tinana/physical,\nHinengaro/mental, Whānau/family) standing on a foundation (Whenua/land).\nEvery feature traces back to this house.\n\nA user starts with the 26Q assessment mapping nine psychological factors\n— locus of control, self-efficacy, resilience, and others — to\npersonalized recommendations. They set financial goals through one of\nseven SMART action plans: reduce spending, increase savings, hit a\nsavings-rate target, reduce debt, adjust income, review budget, or\npartner with someone for accountability. Each plan is tracked with\ntype-specific fields rather than a generic note column.\n\nThey check in daily across eleven Hauora dimensions mapped directly to\nthe four walls: sleep, water, food, exercise for Tinana; karakia, human\nconnection, Taiao (environment) connection for Wairua; mindfulness and\nlearning for Hinengaro; whānau check-in and quality time for Whānau.\nThey journal morning intentions and evening reflections in te reo or\nEnglish, with GPT-4o enhancement and translation.\n\nThey meet an AI Financial Coach via GPT-4o Realtime voice — a\nconversation partner that never reduces money to numbers but consistently\nframes every financial decision through all four walls of the Hauora\nmodel. The AI surfaces Whakatauki (74 curated Māori proverbs) by theme,\nreferences the Maramataka (30-day lunar calendar) for cultural timing,\nand ties financial decisions back to family and spiritual purpose.\nWhānau members can be invited with the five-tier permission system to\nencourage and witness without intruding.\n",
+        "productLogic": "The product is architected on Te Whare Tapa Whā, the Māori model of\nholistic wellness with four walls (Wairua/spiritual, Tinana/physical,\nHinengaro/mental, Whānau/family) standing on a foundation (Whenua/land).\nEvery feature traces back to this house.\n\nA user starts with the **26Q assessment over nine named psychological\nfactors** — `self_belief`, `long_term_focus`, `resilience`,\n`self_control`, `growth_mindset`, `financial_confidence`,\n`social_comparison`, `mindfulness`, `gratitude` (with `mindfulness`\nreverse-coded to capture Present Bias) — mapped to personalised\nrecommendations. They then select up to three focus areas, choose one\nof three account types (Full / Supporter / Both), and proceed to set\nfinancial goals through one of **seven SMART action plans (Options\nA-G)**: A Spending Reduction, B Savings Increase, C Savings Rate, D\nDebt Reduction, E Income Growth, F Budget Review, G Accountability\nPartner. Each plan has its own dedicated React component family\n(SpendingTracker / SavingsTracker / DebtCalculator / IncomeTracker /\nBudgetReviewCalendar / MeetingsTracker etc. — 38 goal components\ntotal) and its own type-specific tracking fields in the schema,\nrather than a generic JSON-note column. A `GoalCardFactory` /\n`ProgressTrackerFactory` / `OverviewFactory` pattern dispatches the\nright component for each goal's `option` field.\n\nThey check in daily across **eleven Hauora dimensions** mapped directly\nto the four walls: `sleep_hours`, `water_litres`, `food_quality`,\n`exercise_hours` for Tinana; `wairua_time_spent`,\n`wairua_human_connection`, `wairua_taia_connection` for Wairua (Whenua\nintegrated through Taiao/environment connection); `hinengaro_mauri_tau`\n(mindfulness), `hinengaro_ako` (learning) for Hinengaro;\n`whanau_check_in`, `whanau_quality_time` for Whānau. Each metric is a\ntyped integer-scale column with a Māori-language identifier — not a\nUI label sitting on top of a culturally-neutral schema. They journal\nmorning intentions (Hauora intentions across all 5 dimensions + 3\ngratitude items + financial reflections) and evening reflections\nthrough the Kūmete framework (what you contributed + what you received,\nTahi-Rua-Toru tomorrow goals, emotional check-in), all bilingually in\nte reo or English, with real GPT-4o enhancement (4 enhancement types ×\n3 intensity levels), translation (macron-correct ā/ē/ī/ō/ū), and\n5-dimensional AI insight extraction (Emotions / Themes / Hauora /\nPatterns / Growth).\n\nThey meet an **AI Financial Coach via gpt-4o-realtime-preview** voice\n(\"verse\" voice, server-side VAD + 500ms silence detection) — a\nconversation partner that never reduces money to numbers but\nconsistently frames every financial decision through all four walls\nof the Hauora model. Audio is deliberately *not* stored; only text\ntranscripts persist (a cost optimisation that preserves searchability\nwithout per-minute audio storage). The AI surfaces **74 Whakatauki\nproverbs across 37+ categories** by theme via `/api/whakatauki/search`,\nreferences the **Maramataka 30-day lunar calendar with 4 traditional\nactivity types** — *Toitoi* (spiritual/cultural: karakia, whakapapa,\nwānanga), *Hi ika* (water-based: ocean/river fishing, shellfish,\nseaweed), *Pouraka* (hunting: bird hunting, forest foraging, game\ntracking), *Mahi māra* (gardening/planting) — for cultural timing,\nand ties financial decisions back to family and spiritual purpose.\nWhānau members can be invited via email-token-based invitations with\na **5-tier permission system** (`canSeeGoals` · `canSeeProgress` ·\n`canSeeMood` · `canSeeAchievements` · `canSendMessages`) to encourage\nand witness without intruding.\n",
         "businessLogic": "Currently a research-pilot product, not yet commercial. Funded directly\nby the researcher as an independent contracted build. The theory of\nchange: if a financial wellness tool authentically reflects Māori\ncultural frameworks — rather than skinning generic FinTech with cultural\ndecoration — it can drive engagement and outcomes for a population that\nmainstream products systematically miss.\n\nThe hypothesis sits inside Riria (Missy) Te Kanawa's broader body of work\non Māori economic prosperity. She is lead author of KPMG New Zealand's\nMaui Rau report series on how Māori can advance prosperity for their\npeople, has spoken at the National Māori Governance Summit, contributes\nto The Spinoff, and brings two decades of experience as a Chartered\nAccountant and management consultant. Former Partner at KPMG NZ leading\nthe National Māori Sector; now at ASB Bank. Tam-AI-Ti is the working\nartifact for that thesis — a product proving culturally-native technology\ncan serve where culturally-decorated technology cannot.\n\nCommercialization paths remain open: iwi partnerships, Māori community\norganizations, financial institutions seeking to authentically serve the\nMāori sector.\n",
-        "technicalApproach": "Solo full-stack build on Next.js 15 with Turbopack and TypeScript.\nDrizzle ORM over Neon Postgres with pgVector for 1536-dimension semantic\nsearch across goals, journal entries, and coach conversations.\nAuthentication via Auth.js with the Drizzle adapter.\n\nThe AI layer is a deliberate three-model composition chosen for\ncost-and-quality fit. CopilotKit drives in-app tool actions on\ngpt-4o-mini at temperature 0.3 — deterministic and cheap for tool calls.\nGPT-4o full handles high-quality journal enhancement and te reo Māori\ntranslation where prose quality matters. OpenAI's Realtime API\n(gpt-4o-realtime-preview, \"verse\" voice) powers the voice Financial\nCoach with server-side VAD and 500ms silence detection. Voice sessions\nstore text transcripts only — a cost optimization that preserves\nsearchability without per-minute audio storage.\n\nCulture is in the schema, not the UI. Every one of the 11 Hauora\ndimensions is a typed column with a Māori-language identifier\n(`wairuaTaiaConnection`, `hinengaro_mauri_tau`, `whanauCheckIn`); the\nseven SMART action plans are first-class types `a`–`g` with type-specific\ntracking fields rather than a generic JSON blob; the 74 Whakatauki\nproverbs are an indexed, embedded library searchable by theme. 48\ntables, 494 columns, 76 API routes, 38 pages, 115+ React components.\nEdge-runtime endpoints on Vercel.\n",
-        "outcomes": "Production-deployed at tamaiti.whiri-ai.com, in active operation since\nOctober 2025. Research cohort engagement (Oct 2025 – Mar 2026,\napproximately four months): 19 verified users, 181 bilingual journal\nentries, 18 active financial goals, 146 AI coach messages, 35 voice\ncoaching sessions, 74 daily Hauora check-ins. Sustained multi-month\nengagement on a pre-commercial product with no marketing channel — a\nmeaningful early signal for a research-pilot product. Project status:\nfully developed, deployed, and in operating phase. Sits within Missy\nTe Kanawa's wider body of published work on Māori economic prosperity\n(KPMG Maui Rau report series, Māori Governance Summit talks, The\nSpinoff contributing author).\n",
-        "myRole": "Solo independent developer with full ownership of the entire stack and\nlifecycle. Introduced to the project by Dr Mahsa McCauley (Mohaghegh),\nfounder of She Sharp (New Zealand's leading women-in-STEM nonprofit) —\nMissy approached Mahsa for a developer recommendation and Mahsa referred\nme from the She Sharp engineering team, where I serve as Senior Full\nStack Engineer and Website Team Lead.\n\nEngagement model: Missy as client, directing the product structurally\n(feature requests, surveys, \"include the Maramataka lunar calendar,\"\n\"add a Financial Coach feature\") and funding the work directly; I\ndesigned, built, deployed, and maintained the entire system, and ran\nthe data analysis. Throughout development I sent feature-demo videos at\nevery milestone so Missy could review progress without needing a\ntechnical background. Post-launch, I produced teaching videos enabling\nMissy to use Cursor to do her own database reads and basic data\nanalysis — transferring practical operational ownership while remaining\nthe technical lead. 349 commits, solo authorship throughout.\n"
+        "technicalApproach": "Solo full-stack build on Next.js 15.5 with Turbopack and TypeScript 5\n(100% strict typing across the entire 48-table / 494-column schema).\nDrizzle ORM 0.44 over Neon serverless Postgres with pgVector for\n1536-dimension `text-embedding-3-small` semantic search across four\nembedded tables (`goals.goal_embedding`,\n`goal_progress.note_embedding`, `journal_entries.content_embedding`,\n`ai_coach_messages.content_embedding`). Authentication via NextAuth\nv5 (beta 29) with `@auth/drizzle-adapter` 1.10 — Google OAuth 2.0,\ndatabase sessions (30-day duration, not JWT), CSRF protection,\nrole-based access control across three account types (full / supporter\n/ both).\n\n**The schema is deliberately split across 10 module files** —\n`users.ts`, `assessments.ts`, `goals.ts`, `daily-engagement.ts`,\n`ai-coach.ts`, `whanau.ts`, `maramataka.ts`, `whakatauki.ts`,\n`financial-coach.ts`, and `index.ts` — totalling ~924 lines, each\nfile owning a domain boundary. **22 hand-written SQL migrations\n(0000-0021)** track every schema change: 0015 restructured the\nHauora metrics from mixed data types to consistent integer scales\n(better alignment with Māori wellness philosophy: removed\n`exercise_minutes` / `calm_minutes` / `outside_minutes` and added 7\nnew Hauora-aligned integer fields); 0020 added the financial coach\ntables (`financial_coach_sessions` 8 cols + `financial_coach_messages`\n5 cols); 0021 added period-based tracking (`current_period_start`,\n`current_period_end`) so Options F (Budget Review) and G\n(Accountability Partner) operate as recurring rather than one-shot\ngoals.\n\nThe AI layer is a deliberate **three-model composition** chosen for\ncost-and-quality fit:\n- **CopilotKit 1.10** drives in-app tool actions on\n  `gpt-4o-mini-2024-07-18` at temperature 0.3 — deterministic and\n  cheap for tool calls (88+ AI actions defined across 8 hooks /\n  1,936 lines).\n- **`gpt-4o-2024-11-20`** handles high-quality journal enhancement\n  (`enhanceJournalContent`: 4 enhancement types × 3 intensity levels\n  at temp 0.6-0.8, max 1500-3000 tokens), bilingual translation\n  (`translateJournalContent`: EN ↔ te reo Māori with macron-correct\n  ā/ē/ī/ō/ū preservation at temp 0.5, max 2000 tokens), AI insight\n  extraction (`extractJournalInsights`: 5-dimensional analysis at\n  temp 0.3, structured JSON), reflection-question generation\n  (`generateReflectionQuestions`: 5 question types at temp 0.7), and\n  semantic similarity search (`findSimilarEntriesAI`).\n- **OpenAI Realtime API** (`gpt-4o-realtime-preview`, \"verse\" voice)\n  powers the voice Financial Coach with server-side VAD and 500ms\n  silence detection. Voice sessions store text transcripts only — a\n  cost optimisation that preserves searchability without per-minute\n  audio storage.\n\n**CopilotKit was deliberately optimised from 8 AI-enabled routes\ndown to 3** (Dashboard with 4 CRUD wellness actions; Journal with\nthe fill-journal action; Journal History with search + analysis).\nGoals / Maramataka / Resources / Onboarding / Auth routes were\nintentionally *disabled* for the AI assistant — security on auth,\nperformance on cultural pages, and cleaner UX on goal management.\nThat's anti-feature-bloat discipline: removing AI surface area was\ntreated as a feature.\n\n**Culture is in the schema, not the UI.** Every one of the eleven\nHauora dimensions is a typed column with a Māori-language identifier\n(`wairuaTaiaConnection`, `hinengaroMauriTau`, `whanauCheckIn`,\n`wairuaTimeSpent`, `whanauQualityTime`, etc.); the seven SMART action\nplans are first-class types `a`–`g` with **15 type-specific tracking\nfields** in `goal_progress` rather than a generic JSON blob; the 74\nWhakatauki proverbs are an indexed, embedded library searchable by\ntheme through `/api/whakatauki/search?q=...&category=...`. The\nMaramataka schema (6 tables, 49+ columns) models the 30-day lunar\ncycle, 8 main moon phases, the 4-activity key system, daily energy\nlevels, and Gregorian-to-Maramataka calendar mapping. **48 tables,\n494 columns, 76 API route files, 100+ endpoints across 20 modules,\n38 pages, 115+ React components** (44 main + 38 goal-specific + 28\nshadcn/ui + 5 cultural). Edge-runtime endpoints on Vercel; Vercel\nBlob for avatar storage with `react-easy-crop` 5.5 client-side crop\npreview; Redis (ioredis 5.7) for session cache; Resend 6 +\n`@react-email/components` for transactional email; `recharts` 3.2\nfor Hauora trend charts.\n",
+        "outcomes": "Production-deployed at **tamaiti.whiri-ai.com**, in active operation\nsince October 2025. **Research cohort engagement (Oct 2025 – Mar 2026,\napproximately four months)**: 19 verified users, 181 bilingual journal\nentries, 18 active financial goals, 146 AI coach messages, 35 voice\ncoaching sessions, 74 daily Hauora check-ins. Sustained multi-month\nengagement on a pre-commercial product with no marketing channel — a\nmeaningful early signal for a research-pilot product.\n\n**March 2026 production migration**: executed a zero-downtime cutover\nfrom my personal Vercel Hobby account to the client's Whiri-AI Pro\nteam account, including GitHub repo transfer, Vercel Blob + KV\nre-creation, Google OAuth re-config, custom-domain DNS cutover\nthrough Cloudflare, blob-data migration, Resend sender-domain\nre-verification, and `NEXTAUTH_SECRET` preservation so existing user\nsessions survived the move. The whole migration was documented as a\nreusable artifact at `docs/implementation/PROJECT_MIGRATION_GUIDE.md`\n— a 12-step playbook covering every component, the\nwhat-transfers-and-what-doesn't matrix, and the rationale for *not*\nusing Vercel's built-in Project Transfer feature.\n\n**22 schema migrations shipped** in lock-step with feature work, none\nrolled back; the most consequential being 0015 (Hauora-metrics\nrestructure from mixed types to consistent integer scales), 0020\n(Financial Coach voice tables) and 0021 (period-based tracking for\nOptions F/G converting them from one-shot to recurring goals). React\nServer Components CVE patches landed within hours of Vercel/Snyk\nautomated PRs (PR #2, Dec 2025).\n\nProject status: fully developed, deployed, in active operating phase,\nand transferred to client operational ownership. Sits within Missy\nTe Kanawa's wider body of published work on Māori economic prosperity\n— KPMG NZ **Maui Rau** report series (lead author), Māori Governance\nSummit talks, The Spinoff contributing author — and is the working\nartifact for the thesis that culturally-native technology can serve\nMāori communities where culturally-decorated technology cannot.\n",
+        "myRole": "Solo independent developer with full ownership of the entire stack and\nlifecycle. Introduced to the project by Dr Mahsa McCauley (Mohaghegh),\nfounder of She Sharp (New Zealand's leading women-in-STEM nonprofit) —\nMissy approached Mahsa for a developer recommendation and Mahsa referred\nme from the She Sharp engineering team, where I serve as Senior Full\nStack Engineer and Website Team Lead.\n\nEngagement model: Missy as client, directing the product structurally\n(feature requests, surveys, \"include the Maramataka lunar calendar,\"\n\"add a Financial Coach feature\") and funding the work directly; I\ndesigned, built, deployed, and maintained the entire system, and ran\nthe data analysis. Throughout development I sent feature-demo videos at\nevery milestone so Missy could review progress without needing a\ntechnical background. Post-launch, I produced teaching videos enabling\nMissy to use Cursor to do her own database reads and basic data\nanalysis — transferring practical operational ownership while remaining\nthe technical lead. **351 commits, solo authorship throughout**\n(2025-09-19 → 2026-03-29), including the March 2026 zero-downtime\nproduction migration from my personal Vercel to the client's\nWhiri-AI Pro team that I designed, executed, and documented as a\nreusable `PROJECT_MIGRATION_GUIDE.md` playbook for future client\nengagements.\n"
       }
     },
     {
@@ -5341,6 +5421,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T14:13:10.368Z"
+    "buildTimestamp": "2026-05-18T14:26:28.622Z"
   }
 }

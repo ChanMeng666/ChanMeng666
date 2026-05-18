@@ -1557,14 +1557,126 @@
     },
     {
       "id": "sunostats",
-      "tier": "secondary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "name": "SunoStats",
-      "priority": 25,
+      "tier": "primary",
+      "recency": "recent",
+      "lastUpdated": "2026-05-19",
+      "name": "SunoStats — The Analyst Suno Never Shipped",
+      "priority": 18,
       "category": "web-apps",
+      "tagline": "Closed a gap in Suno's official platform that creators couldn't fix themselves — discovered that Suno's serializer leaks unredacted parent->child lineage UUIDs only on /api/trending + persona sub-trees, built the industry's first public Suno lineage explorer on that finding. Three free lenses + three pay-per-result reports ($1-$2, no subscription). Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.",
       "url": "https://sunostats.chanmeng.org/",
-      "status": "live"
+      "repoUrl": "https://github.com/ChanMeng666/sunostats",
+      "extraLinks": [
+        {
+          "label": "Live app",
+          "url": "https://sunostats.chanmeng.org/"
+        },
+        {
+          "label": "Public trending (no auth)",
+          "url": "https://sunostats.chanmeng.org/trending"
+        },
+        {
+          "label": "Data sources & compliance",
+          "url": "https://sunostats.chanmeng.org/legal/data-sources"
+        },
+        {
+          "label": "Init commit (2026-04-12)",
+          "url": "https://github.com/ChanMeng666/sunostats/commit/f2f9f80"
+        },
+        {
+          "label": "Architecture docs",
+          "url": "https://github.com/ChanMeng666/sunostats/blob/master/docs/architecture.md"
+        }
+      ],
+      "techStack": [
+        "Next.js 16.2 (App Router, Webpack pin)",
+        "React 19.2",
+        "TypeScript 5",
+        "Tailwind CSS 4 + GSAP 3.15 scroll motion",
+        "Neon Postgres (serverless HTTP driver)",
+        "Drizzle ORM 0.45 + Drizzle Kit 0.31",
+        "NextAuth v5 beta + Neon Auth (Better Auth)",
+        "Google OAuth (no password flow)",
+        "Stripe 22 (webhook-verified credit ledger, auto test/live switch)",
+        "Resend 6 (insight email delivery)",
+        "@suno-cards/parser workspace package (Valibot validators + typed Suno error hierarchy)",
+        "WITH RECURSIVE Postgres CTEs (lineage graph traversal)",
+        "Biome 2.4 (lint + format)",
+        "Docker multi-stage + Node 20 slim runner",
+        "GitHub Container Registry (GHCR)",
+        "VPS deployment behind Traefik + Let's Encrypt TLS",
+        "GitHub Actions CI/CD (typecheck + lint + build + deploy)",
+        "Linux crontab (collect-trending 04:00 UTC, sync-all 04:05 UTC)",
+        "next-themes (light/dark)",
+        "i18n: EN / 简体中文 / 日本語 (cookie-driven, server-resolved)"
+      ],
+      "keywords": [
+        "Reverse-engineered domain insight",
+        "oEmbed-discovered API compliance",
+        "Pay-per-result billing",
+        "Industry-unique lineage explorer",
+        "Suno creator analytics",
+        "VPS + Traefik production deployment",
+        "Trilingual SaaS"
+      ],
+      "metrics": [
+        {
+          "label": "First commit",
+          "value": "2026-04-12 (commit f2f9f80, full monolith scaffolded same-day with auth + data pipeline + landing)"
+        },
+        {
+          "label": "Total commits",
+          "value": "46 (solo) across ~1 month of active development"
+        },
+        {
+          "label": "Live URL",
+          "value": "https://sunostats.chanmeng.org"
+        },
+        {
+          "label": "Free lenses",
+          "value": "3 (portfolio at /@handle, lineage explorer at /lineage/[id], watched playlists with pulse view up to 10/user)"
+        },
+        {
+          "label": "Paid lenses",
+          "value": "3 ($1 Tag Optimization, $1 Performance Snapshot, $1 Method Mix Analysis, $2 weekly Trend Brief)"
+        },
+        {
+          "label": "Free signup credits",
+          "value": "3"
+        },
+        {
+          "label": "Stripe tiers",
+          "value": "Starter 5 credits / Pro 20 / Bulk 50"
+        },
+        {
+          "label": "Cron pipelines",
+          "value": "4 (collect-trending, collect-watched-playlists, sync-all, generate-insights)"
+        },
+        {
+          "label": "Locales",
+          "value": "3 (English, Simplified Chinese, Japanese)"
+        },
+        {
+          "label": "Tag classifier",
+          "value": "9 buckets (drives insight engine + portfolio filter)"
+        },
+        {
+          "label": "Method-mix enum",
+          "value": "10 Suno metadata.type values (gen / concat / studio_export / edit_v3_export / edit_crop / edit_speed / edit_fade / upsample / concat_infilling / upload)"
+        }
+      ],
+      "status": "live",
+      "startDate": "2026-04-12",
+      "publicSummary": "Production third-party analytics layer for **Suno creators** —\nbuilt to close an opportunity Chan identified by **technical\nresearch** rather than market survey. The Suno UI shows a total\nplay count and a like count, and that's it: no time series, no\ntag-level breakdowns, no view of which tracks are climbing or\nstalling, no exposure of the parent->child remix lineage that\nSuno's own data model encodes. Reverse-engineering the public\nSuno API surface revealed two specific gaps: (1) Suno's\nserializer **leaks unredacted lineage UUIDs only on\n`/api/trending` and persona-clip sub-trees** — nowhere else,\nnot even on the page that lets you remix a clip — making it\npossible (and industry-unique) to build a public lineage\nexplorer by ingesting Trending daily and walking the graph\nserver-side via `WITH RECURSIVE` CTEs; (2) Suno **advertises\nits public-read API surface via W3C oEmbed** (the same\nprotocol Discord and Slack use for link previews), which is\nanonymous + CORS-enabled by design — making a compliant\nanalytics product possible without scraping, headless\nbrowsers, or asking users for their Suno password. SunoStats\nships **6 lenses on a Suno career** — 3 free (portfolio at\n`/@handle`, the lineage explorer, watched playlists with\ndaily pulse view) + 3 pay-per-result ($1 Tag Optimization,\n$1 Performance Snapshot, $1 Method Mix Analysis, $2 weekly\nTrend Brief). **No subscription**, no card stored unless the\nuser wants it, **3 free credits on signup**. Stack:\nNext.js 16.2 + React 19.2 + Drizzle + Neon Postgres + Neon\nAuth + Stripe webhook-verified credit ledger + Resend\ninsight delivery, deployed as a Docker container on a VPS\nbehind Traefik with GHCR + GitHub Actions CI/CD. Trilingual\nEN / 简体中文 / 日本語. Live at\n[sunostats.chanmeng.org](https://sunostats.chanmeng.org).\n",
+      "narrative": {
+        "problem": "Suno is one of the most prolific music platforms on the\ninternet — millions of generated tracks, an Explore chart\nthat turns over daily — but its creators operate **almost\ncompletely blind**. Suno's UI shows one total play count\nper song, one total like count, and absolutely nothing\nelse: no play-history time series, no breakdown by tag, no\nsignal on which tracks are climbing or stalling, no\ncomparison against what's trending on Explore, no view of\nwhich other creators have built on (remixed, concatenated,\ncovered, or edited) your clips. Adjacent platforms\n(Spotify for Artists, YouTube Studio, SoundCloud Pro)\nhave shipped this baseline for a decade; Suno hasn't.\nWorse: Suno's own data model **encodes the remix lineage\nbetween clips** (every clip has a `parent_clip_id`, every\ngeneration method has a `metadata.type` tag, every\nupsample / concat / edit produces a typed edge in a\ndirected graph) — but none of that surfaces in the UI.\nA creator has no idea their concat clips outperform their\ngen clips 2.4x; no idea which of their tracks have been\nremixed by others; no idea their work just hit a milestone\nthreshold. The gap is at the platform level, and Suno\ncannot or will not close it.\n",
+        "audience": "Three concentric audiences. (1) **Suno creators** —\nbedroom musicians, label A&R staff, indie producers, and\ncreator-economy professionals who release on Suno and\nneed actual signal to make tag, format, and timing\ndecisions. (2) **Suno-adjacent industry observers** — AI\nmusic trend-watchers, journalists, content marketers who\ncite Suno data, and other AI-music platforms benchmarking\nagainst Suno's Explore chart. (3) **Engineers studying\nthe project as a worked example** of (a) reverse-engineering\na partial public API surface into a usable third-party\nproduct, (b) compliance-first data sourcing via W3C\noEmbed, (c) pay-per-result Stripe billing without a\nsubscription wall.\n",
+        "productLogic": "Six lenses, deliberately tiered into three free + three\npaid so a new user can value the product before paying.\n**Free lens 1 — Portfolio at `/@handle`**: a shareable,\npublic, account-free page with an auto-generated OG\nimage, a grayscale-to-colour-on-hover cover grid,\ntag-filterable and sortable by plays/likes/created date.\n`middleware.ts` rewrites `/@handle` -> `/profile/[handle]`\nso creators can share the prettier short form. **Free\nlens 2 — Lineage Explorer at `/lineage/[clipId]`**: the\nindustry-unique core, built on the lineage-UUID research\nfinding. Renders the parent->descendant graph of any\nSuno clip that has ever appeared on Explore, as a\nclickable SVG. Private clips appear anonymised (no\ntitle, no handle) so listing-level visibility is\nrespected. **Free lens 3 — Watched playlists with daily\npulse view (up to 10 per user)**: each cycle classifies\na playlist's entries into **new entries / risers /\nfallers / drop-outs / holders** — useful for tracking\ncontest playlists, label-curated channels, or genre\nplaylists creators want their tracks placed in.\n**Paid lens 4 — Tag Optimization Report ($1)**: compares\na creator's library tag distribution against the tags\nwinning on Explore right now, returns three priority\nbuckets (Add / Increase / Maintain). **Paid lens 5 —\nPerformance Snapshot ($1)**: time-series analysis of\nthe creator's own catalog with **milestone tracking\n(100/500/1K/5K/10K plays)**, **movers / stalls /\ndecliners** by play velocity, and **per-Suno-model-version\nbreakdown** (v3 / v4 / v4.5+ average plays per song).\n**Paid lens 5b — Method Mix Analysis ($1)**: distribution\nacross the **10-value `metadata.type` enum**\n(`gen`/`concat`/`studio_export`/`edit_v3_export`/\n`edit_crop`/`edit_speed`/`edit_fade`/`upsample`/\n`concat_infilling`/`upload`) vs. the trending corpus,\nplus per-method average plays, surfacing claims like\n\"your concat clips outperform gen clips by 2.4x\".\n**Paid lens 6 — Weekly Trend Brief ($2)**: cross-week\ndelta analysis on Explore, emailed via Resend with the\nfull writeup. Sign-up grants **3 free credits**, no\ncard required. Each insight is **inline-debited from\nthe `creditTransactions` ledger** with automatic refund\n+ status `failed` if the generator throws.\n",
+        "businessLogic": "**Pay-per-result, no subscription**, no card stored\nunless the user chooses to. The model is structurally\nimportant: SunoStats serves a creator population whose\nwillingness-to-pay is non-uniform across the year\n(release cycles, contest pushes), and a subscription\nwall would price out the long tail of dabblers. $1 per\nreport makes the unit economics legible: the user knows\nthey're paying $1 for one Tag Report, and they can\ninstantly compare that to the value they'd get from a\nMailchimp-style $30/month tier they'd use sparingly.\nStripe Checkout is one-click; live and test modes\n**auto-switch based on the `STRIPE_SECRET_KEY` prefix**\nso demos can run without touching production data. The\nwebhook signs every transaction into the\n`creditTransactions` ledger before the credit is usable.\nTier ladder is **Starter (5 credits) / Pro (20) / Bulk\n(50)**. Portfolios and the Lineage Explorer are\npermanently free — they're the network-effect surface\n(creators share their `/@handle` URL on socials, lineage\nURLs link out from any Suno discussion) that pulls new\nsignups into the funnel. The product's competitive moat\nis the lineage research itself: no other Suno analytics\nproduct surfaces parent->child remix graphs, because\nnobody else has discovered the data leaks through\n`/api/trending` and persona-clip sub-trees.\n",
+        "technicalApproach": "**The discovery and the engineering it enables.** Chan\nreverse-engineered Suno's public JSON surface and found\nthat Suno's response serializer **leaks unredacted\n`parent_clip_id` fields only when a clip is included in\nthe `/api/trending` snapshot or when it appears as a\ndescendant of a persona clip** — never on the standard\nclip-detail endpoint, never on the profile listing\nendpoint, never in the remix UI itself. The\n`collect-trending` cron job (04:00 UTC daily) walks\nevery clip in Trending, ingests the leaked lineage\nUUIDs, deduplicates them into a `clipLineageEdges`\ntable, and serves the resulting graph via Postgres\n`WITH RECURSIVE` CTEs through `/api/lineage/[clipId]`\n(public, no auth, configurable `hopsUp`/`hopsDown`\nquery params capped at 5/3). Private clips appear as\nanonymised nodes so listing-level visibility is\nrespected. **Compliance posture**: every Suno read goes\nthrough endpoints **Suno itself advertises via the W3C\noEmbed protocol** (the same\n`<link rel=\"alternate\" type=\"application/json+oembed\">`\nany reader software follows), making the data plane\nanonymous, CORS-enabled, and public-by-design. No HTML\nscraping, no headless browsers, no authenticated\nrequests, no proxying user sessions. The full\nposture lives at\n`/legal/data-sources`.\n**Suno parser package**: `packages/parser`\n(`@suno-cards/parser`) is a workspace-local Valibot\nvalidator + typed-error hierarchy (`SunoNotFoundError`,\n`SunoNetworkError`, `SunoSchemaError`, …) consumed by\n`src/lib/suno/*` — every external Suno call returns\ntyped errors mapped to user-facing API codes. Small\nreverse-engineered details get their own utils: e.g.\nSuno's CDN `cdn2.suno.ai/image_*.jpeg?width=N` only\naccepts widths `{100, 256, 360, 720}`, so\n`resizeSunoCover` snaps automatically. **Insight\ngeneration pipeline**: each report is an idempotent\nper-user-per-day pure async function (`tag-optimization`,\n`performance-snapshot`, `method-mix`) in\n`src/lib/insights/*`; an i18n-aware `headline()`\nfunction returns `{eyebrow, headline, subtitle}` for\nthe report card; the React Server Component dispatcher\nat `/dashboard/insights/[id]` selects the right\nrenderer by `kind`. Adding a new insight type requires\nexactly **8 touchpoints** (engine + payload type +\nheadline + 3-locale translations + report component +\nregistration in both the on-demand and cron-batch\nroutes + dispatcher case + dashboard button) —\ndeliberately friction'd so each concern stays separated.\n**Deployment**: Docker multi-stage build (Node 20 slim\nrunner with non-root `nextjs` user); GitHub Actions\npushes images to `ghcr.io/chanmeng666/sunostats/web`,\nSSHes to the VPS, restarts the container with Traefik\nlabels for `sunostats.chanmeng.org` (Let's Encrypt TLS),\nand rewrites `/etc/cron.d/sunostats` to re-schedule\nthe 4 cron endpoints with the fresh `CRON_SECRET`.\nCron-protected internal routes 401 anything without\nthe `x-cron-secret` header. **i18n**: trilingual\nEN/简体中文/日本語 with cookie-driven server-resolved\nlocale plus Accept-Language fallback. The translation\ndictionary is a TypeScript type, so adding a key fails\nthe build if any locale is missing — guaranteeing\ncoverage without runtime drift.\n",
+        "outcomes": "Built and shipped April 2026, with a same-day\nscaffold-to-live trajectory: the initial commit\n`f2f9f80` (2026-04-12) is *\"scaffold SunoStats monolith\n— Next.js 15 + Drizzle + Tailwind 4\"*, followed within\nhours by Neon Auth (`2c243dd`), Google OAuth\n(`2ff764f`), the data collection pipeline (`40707ec`),\nand the portfolio + landing + OG image generator\n(`b5d1e1d`). Total of **46 solo commits across the first\nmonth** taking the project from blank repo to the\nproduction system live at sunostats.chanmeng.org —\nwith auth, Stripe billing, Resend email, 4 cron\npipelines, the lineage explorer with `WITH RECURSIVE`\ngraph queries, the 3 paid insight engines, the\nwatched-playlist pulse view, the Docker + Traefik VPS\ndeploy, and trilingual i18n all wired end-to-end.\nMost recent commit `d36ddfb` (2026-05-10) tunes\nproduction container env handling. The lineage\nresearch finding remains the project's competitive\nmoat — no other Suno analytics product surfaces the\nparent->child remix graph, because the discovery\ndepends on noticing which API endpoints leak the\nUUIDs versus which redact them. Demonstrated to\nfounders and recruiters as Chan's worked example of\n**identifying a gap by technical research, then\nclosing it with a fully production-shape full-stack\nproduct in 4–5 weeks**.\n",
+        "myRole": "Sole product designer, sole engineer, sole maintainer.\nDid the reverse-engineering research that found the\nlineage-UUID leak surface; designed the\noEmbed-discovered compliance posture and the public\ndata-sources legal page; designed the 3-free + 3-paid\nlens taxonomy; designed the\ncredit-ledger-with-auto-refund Stripe billing model;\ndesigned the 8-touchpoint extension pattern for new\ninsight types; built every Suno parser in\n`@suno-cards/parser`; engineered the 4 cron pipelines\nwith `x-cron-secret`-gated internal routes; built the\nlineage `WITH RECURSIVE` CTE graph traversal; built\nthe Docker+Traefik+GHCR deployment pipeline with\ncrontab auto-install via GitHub Actions; authored the\ntrilingual EN/简中/日本語 i18n dictionary; wrote the\npublic-facing README + the internal AGENTS.md and\narchitecture/data-model/i18n docs. Maintains the live\ndeployment today.\n"
+      }
     },
     {
       "id": "douyin-mall-java-template",
@@ -4208,6 +4320,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T12:49:05.739Z"
+    "buildTimestamp": "2026-05-18T12:55:06.850Z"
   }
 }

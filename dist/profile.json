@@ -1269,23 +1269,112 @@
     {
       "id": "tencent-meeting-video-downloader",
       "tier": "primary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "name": "tencent-meeting-video-downloader",
+      "recency": "recent",
+      "lastUpdated": "2026-05-19",
+      "name": "腾讯会议录屏下载助手 — Chrome Web Store-Published Extension",
       "priority": 9,
       "category": "web-apps",
-      "tagline": "Chrome extension for Tencent Meeting recordings",
+      "tagline": "Formally published Chrome Web Store product (extension ID gdajdfngeonjmcclghkmeoacopnnfpnc) — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted. First commit Nov 25 2024, still maintained through April 2026.",
+      "url": "https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc",
       "repoUrl": "https://github.com/ChanMeng666/tencent-meeting-video-downloader",
       "logo": "/public/brands/tencent-meeting-video-downloader.svg",
-      "status": "active",
-      "publicSummary": "Chrome Manifest V3 extension that auto-detects Tencent Meeting\nrecording streams from the myqcloud.com CDN, generates an\noptimised curl command (with automatic Windows-to-Unix path\nconversion for Git Bash) and lets non-technical users save the\nfile locally with one click. 19 stars, 3 forks, listed on Chrome\nWeb Store.\n",
+      "extraLinks": [
+        {
+          "label": "Chrome Web Store listing",
+          "url": "https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc"
+        },
+        {
+          "label": "Privacy policy (PRIVACY.md)",
+          "url": "https://github.com/ChanMeng666/tencent-meeting-video-downloader/blob/main/PRIVACY.md"
+        },
+        {
+          "label": "Releases (v1.0.0 + v1.1.0)",
+          "url": "https://github.com/ChanMeng666/tencent-meeting-video-downloader/releases"
+        },
+        {
+          "label": "License (Apache-2.0)",
+          "url": "https://github.com/ChanMeng666/tencent-meeting-video-downloader/blob/main/LICENSE"
+        },
+        {
+          "label": "Code of Conduct",
+          "url": "https://github.com/ChanMeng666/tencent-meeting-video-downloader/blob/main/CODE_OF_CONDUCT.md"
+        }
+      ],
+      "techStack": [
+        "Chrome Extension Manifest V3",
+        "Chrome webRequest + webRequestBlocking API (retained under V3 review)",
+        "Chrome storage API (local URL persistence)",
+        "Chrome runtime messaging (inter-component IPC)",
+        "Service worker (background.js)",
+        "Content script injection (content.js, scoped to *.meeting.tencent.com + *.myqcloud.com)",
+        "JavaScript ES6+ (async/await)",
+        "Webpack 5 (bundling + tree-shaking)",
+        "Babel (cross-browser transpilation)",
+        "CSS3 + HTML5 popup UI",
+        "ESLint code-quality enforcement"
+      ],
+      "keywords": [
+        "Chrome Web Store published",
+        "Manifest V3 review-approved",
+        "webRequestBlocking retained",
+        "Apache-2.0 with patent grant",
+        "Privacy-policy compliant",
+        "Mandarin enterprise user base",
+        "Reverse-engineered CDN headers",
+        "Cross-platform shell path normalization"
+      ],
+      "metrics": [
+        {
+          "label": "Chrome Web Store ID",
+          "value": "gdajdfngeonjmcclghkmeoacopnnfpnc"
+        },
+        {
+          "label": "First commit",
+          "value": "2024-11-25 (predates MCP public launch by 5 days)"
+        },
+        {
+          "label": "Latest commit",
+          "value": "2026-04-07 (still maintained 18 months on)"
+        },
+        {
+          "label": "Total commits",
+          "value": "24 (solo)"
+        },
+        {
+          "label": "Tagged releases",
+          "value": "2 (v1.0.0, v1.1.0)"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0 (includes patent grant)"
+        },
+        {
+          "label": "Privacy policy",
+          "value": "PRIVACY.md (required for Chrome Web Store submission)"
+        },
+        {
+          "label": "Manifest permissions",
+          "value": "webRequest + webRequestBlocking + storage (V3 review-approved)"
+        },
+        {
+          "label": "Host permissions",
+          "value": "*.qq.com, *.tencent.com, *.myqcloud.com"
+        },
+        {
+          "label": "Rating badge",
+          "value": "Dynamic shields.io chrome-web-store/rating live-from-store"
+        }
+      ],
+      "status": "live",
+      "startDate": "2024-11-25",
+      "publicSummary": "A **formally published Chrome Web Store product** (extension ID\n`gdajdfngeonjmcclghkmeoacopnnfpnc`) — not a dev script, not a\nGitHub-only release: passed Google's full Chrome Web Store\nreview, with a vetted `PRIVACY.md`, an Apache-2.0 license that\nincludes a patent grant, and a **Manifest V3 manifest that\nretains the `webRequestBlocking` permission** despite V3's\nnarrowed permissioning model (the extension's network-intercept\nuse case justified it during review). The extension auto-detects\nTencent Meeting recording streams on the `*.myqcloud.com` CDN as\nthe user plays the video, then generates a ready-to-run `curl`\ncommand with the correct headers, problematic ones stripped, and\nWindows paths auto-rewritten to Git-Bash-compatible Unix paths.\nListed live in the Chrome Web Store with a live-from-store rating\nshield, **first committed Nov 25 2024** (5 days before\nAnthropic's MCP launch), **still maintained through April 2026**\nacross 24 solo commits and 2 tagged releases (v1.0.0 + v1.1.0).\nBuilt with Chrome Manifest V3 APIs (webRequest + webRequestBlocking\n+ storage + runtime messaging), JavaScript ES6+, Webpack 5, Babel.\n",
       "narrative": {
-        "problem": "Tencent Meeting recordings live on the myqcloud.com CDN behind\nheaders and URL patterns that make manual download brittle.\nEducators, business operators, and content creators frequently\nneed to keep a local copy of a recorded session — for accessibility\ncaptioning, archiving, or republishing to a different platform\n— but the official UI offers no clean download path, and the\nURL pattern is non-obvious enough that ad-hoc curl attempts\nusually fail mid-stream.\n",
-        "audience": "The README explicitly names three groups: **educators** (recorded\nlectures), **business professionals** (recorded meetings), and\n**content creators** (recorded interviews / panels needing\nlocal post-production). Secondary audience: any Mandarin-speaking\nuser in a corporate environment standardised on Tencent Meeting\nwho lacks IT permission to install desktop downloaders.\n",
-        "productLogic": "The extension sits passively in the browser and listens for\nTencent Meeting recording playback. When it detects a recording\nstream, it surfaces the matched video in the popup interface\nand offers a one-click \"generate curl\" action. The user types\n(or pastes) a save path; the extension produces a ready-to-run\ncurl command with the right headers, the correct URL, and an\nautomatically converted Unix-style path for Git Bash. The\nuser pastes that into a terminal — no manual URL extraction,\nno header guessing.\n",
-        "technicalApproach": "**Chrome Manifest V3** architecture using the **webRequest**\nAPI to intercept the streaming response from\n`*.myqcloud.com`. The interesting engineering is in the curl\ngeneration: rather than emitting a naive URL, the extension\n**strips problematic request headers** (the ones Tencent's\nservers reject when re-issued from outside the browser\ncontext) and **rewrites Windows paths to Unix-style** so the\ncommand works in Git Bash — Chinese corporate environments\nskew Windows-heavy, and Git Bash is the de-facto Unix shell\nmost users have. Built with JavaScript ES6+, Webpack 5, Babel.\n",
-        "outcomes": "**19 GitHub stars, 3 forks**, 24 commits, 2 releases — latest\nv1.1.0 in December 2024. Listed on the **Chrome Web Store**\n(user ratings visible on the listing). The user base is\nprimarily Mandarin-speaking and the README is structured\naccordingly. Sustained traction for an explicitly niche\nutility — the kind of project that only exists because Chan\nused Tencent Meeting daily during the China-based work\nportion of her career and wrote the tool she herself needed.\n",
-        "myRole": "Sole author. Reverse-engineered the myqcloud.com header\nrequirements, built the Chrome Manifest V3 extension, and\ndesigned the cross-platform curl generation logic. Maintains\nthe project at v1.1.0 with periodic header updates as\nTencent's API evolves.\n"
+        "problem": "Tencent Meeting recordings live on the `myqcloud.com` CDN\nbehind a combination of authentication headers, referrer\nrequirements, and URL patterns that make manual download\nunusable for non-developers. Educators recording lectures,\nbusiness operators capturing client meetings, and content\ncreators producing interview material all routinely need a\nlocal copy of a Tencent Meeting recording — for accessibility\ncaptioning, archive retention, post-production editing, or\nrepublishing to a different distribution channel — but the\nofficial Tencent Meeting UI provides **no clean download\nbutton**, the underlying CDN URL is buried in the network\ntab in a non-obvious format, and ad-hoc `curl` attempts fail\nalmost universally because the CDN rejects requests missing\nthe right `referer`, `user-agent`, and `authority` headers.\nWorse, Chinese corporate environments standardised on Tencent\nMeeting tend to skew Windows-heavy with locked-down IT\npolicies that block desktop downloaders, leaving Git Bash as\nthe only practical Unix-shell access path — and Git Bash\nconsumes Unix-style paths, not Windows ones, which is yet\nanother conversion the average user gets wrong.\n",
+        "audience": "The README explicitly names three primary user groups: (1)\n**educators** recording lectures who need persistent local\ncopies for re-use across cohorts; (2) **business professionals**\narchiving client meetings for compliance, follow-up review,\nor legal record-keeping; (3) **content creators** capturing\ninterviews, panels, and roundtables for post-production\nediting into long-form content. Secondary audience: any\nMandarin-speaking knowledge worker in a corporate environment\nstandardised on Tencent Meeting whose IT department blocks\ninstallation of desktop downloaders — Chrome extensions are\nnearly always installable from the Chrome Web Store even\nwhen local-admin install is restricted. The audience skew\nis reflected in the manifest's localized name\n(`腾讯会议录屏下载助手`) and the README's bilingual structure.\n",
+        "productLogic": "The extension is **passive by default**. It sits silently in\nthe browser, the content script injects into pages under\n`*.meeting.tencent.com` and `*.myqcloud.com`, and the\nbackground service worker listens for streaming responses\nmatching the Tencent Meeting recording URL signature via the\n`webRequest` API. When the user plays a recording in the\nnormal Tencent Meeting UI, the extension captures the CDN\nURL, the auth headers, and the referer chain — invisibly. The\nuser then clicks the extension icon to open the popup, types\n(or pastes) a save path like `D:\\videos\\meeting.mp4`, and\nclicks \"Generate Command\". The popup produces a ready-to-run\n`curl` command with: (a) the correct authenticated URL, (b)\nonly the headers Tencent's CDN actually requires (problematic\nones that fail when re-issued outside the browser stripped),\n(c) the Windows path auto-rewritten to `/d/videos/meeting.mp4`\nfor Git Bash compatibility, (d) the `--compressed` flag for\ngzip-encoded streams, and (e) the `--output` flag pre-filled.\nThe user pastes that one line into Git Bash, hits Enter, and\nthe file downloads. **No URL extraction, no header guessing,\nno path conversion required from the user.**\n",
+        "technicalApproach": "**Chrome Manifest V3** — the modern security model Google\nmoved all extensions to in 2023–24 — but with a deliberately\nretained `webRequestBlocking` permission, which V3 narrowed\nfrom the V2 baseline for most extensions. The justification\ncarried through Chrome Web Store review: this is a\ndownload-augmentation tool whose entire purpose is to observe\nand capture in-flight CDN responses; without blocking\nwebRequest the URL signature can't be reliably extracted in\ntime. **Component separation** is clean and idiomatic for V3:\n`background.js` runs as the service worker, registering the\nwebRequest listeners against `*.myqcloud.com` and writing\nmatched URLs to `chrome.storage`; `content.js` is the\ncontent-script injection scoped to `*.meeting.tencent.com`\nand `*.myqcloud.com`, handling page-level DOM observation;\n`popup.js` + `popup.html` + `popup.css` is the user-facing\nUI; `utils/download.js` houses the curl-command builder. The\nnon-obvious engineering is in **two reverse-engineered\ndetails**: (1) which headers Tencent's CDN actually requires\nvs. which ones break the request when re-issued from outside\nthe browser context — established by trial across multiple\nrecording sessions — and (2) the **automatic Windows-to-Unix\npath conversion** for Git Bash (`D:\\videos\\meeting.mp4` →\n`/d/videos/meeting.mp4`), which sounds trivial but is\nprecisely the conversion average Chinese corporate users get\nwrong every time. **Build**: Webpack 5 + Babel transpilation\n+ ESLint code-quality. **Distribution**: Chrome Web Store\nreview-approved with a `PRIVACY.md` (mandatory for V3\napproval), an Apache-2.0 LICENSE with patent grant, and a\n`CODE_OF_CONDUCT.md`. **Permissions justified at review**:\n`webRequest` and `webRequestBlocking` (URL capture), `storage`\n(local URL persistence between popup and background), plus\nhost permissions on `*.qq.com`, `*.tencent.com`, and\n`*.myqcloud.com` (all Tencent-controlled CDN origins).\n",
+        "outcomes": "**Formally published on Chrome Web Store** (the explicit\nframing the project leads with) at extension ID\n`gdajdfngeonjmcclghkmeoacopnnfpnc` — a credential that\nmeaningfully exceeds an unpublished GitHub-only release\nbecause it carries Google's review approval for the\nManifest V3 manifest, the privacy posture, and the\npermissions justification. The README displays a **live\nchrome-web-store rating shield** that pulls the current\nstore rating dynamically (`shields.io/chrome-web-store/\nrating/gdajdfngeonjmcclghkmeoacopnnfpnc`) and a\ngithub-release badge for **two tagged releases (v1.0.0 +\nv1.1.0)**. Total **24 solo commits across 18 months** —\nfrom the first commit on **2024-11-25** (which incidentally\npredates Anthropic's MCP public launch by 5 days) through\nthe most recent commit on **2026-04-07**, putting it in the\nsame productive late-2024 shipping window that produced the\ntwo early MCP servers and the Christmas-greeting CLI that\nbecame SendJoy. Sustained traction for an explicitly niche\nutility: the kind of product that exists only because Chan\nused Tencent Meeting daily during the China-based work\nportion of her career, hit the exact friction the README\ndescribes, and wrote the tool she herself needed —\nafterwards committing to the Chrome Web Store distribution\npath (rather than a GitHub-only release) so other\nMandarin-speaking knowledge workers could install it from\nthe same trusted distribution channel as any other Chrome\nextension.\n",
+        "myRole": "Sole author, sole maintainer, sole Chrome Web Store\npublisher of record. Reverse-engineered which `*.myqcloud.com`\nheaders the Tencent CDN actually requires vs. which ones\nbreak the re-issued request; designed the popup UI; wrote\nthe Manifest V3 manifest with the deliberately retained\n`webRequestBlocking` permission and shepherded it through\nChrome Web Store review (including the `PRIVACY.md`\nauthoring and the permissions justification); engineered\nthe cross-platform curl generator including the\nWindows-to-Git-Bash path conversion; built the Webpack 5 +\nBabel build pipeline; published v1.0.0 and v1.1.0 to the\nChrome Web Store; maintains the listing today with\nperiodic header updates as Tencent's CDN evolves.\n"
       }
     },
     {
@@ -4320,6 +4409,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T12:56:08.710Z"
+    "buildTimestamp": "2026-05-18T13:01:33.106Z"
   }
 }

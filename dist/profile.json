@@ -1867,16 +1867,134 @@
     },
     {
       "id": "ai-image-generator",
-      "tier": "secondary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "name": "AI Image Generator",
-      "priority": 40,
-      "category": "creative",
+      "tier": "primary",
+      "recency": "recent",
+      "lastUpdated": "2026-05-19",
+      "name": "AI Image Generator — Full-Stack Text-to-Image SaaS",
+      "priority": 19,
+      "category": "ai-apps",
+      "tagline": "Full-stack text-to-image SaaS pivoted onto Cloudflare Workers AI's FLUX.1 Schnell free tier (100k req/day) — auth + credits ledger + Stripe billing + image storage + gallery, deployed on Cloudflare Workers via OpenNext. Two architectural pivots (Vercel->CF Workers free-AI 2026-04-09, then full SaaS layer one day later) turned a 2024 demo into a production product.",
       "repoUrl": "https://github.com/ChanMeng666/image-generator",
       "logo": "/public/brands/image-generator.svg",
       "url": "https://image-generator.chanmeng-dev.workers.dev/",
-      "status": "live"
+      "extraLinks": [
+        {
+          "label": "Live app",
+          "url": "https://image-generator.chanmeng-dev.workers.dev/"
+        },
+        {
+          "label": "Pivot commit (Vercel->CF)",
+          "url": "https://github.com/ChanMeng666/image-generator/commit/3aec6ce"
+        },
+        {
+          "label": "SaaS-layer commit",
+          "url": "https://github.com/ChanMeng666/image-generator/commit/8626be4"
+        },
+        {
+          "label": "License (Apache-2.0)",
+          "url": "https://github.com/ChanMeng666/image-generator/blob/main/LICENSE"
+        }
+      ],
+      "techStack": [
+        "Next.js 15.5 (App Router with (auth) + (protected) route groups)",
+        "React 19.2 + TypeScript 5",
+        "Tailwind CSS 3.3 + tailwindcss-animate",
+        "Cloudflare Workers AI (env.AI binding, no API key)",
+        "FLUX.1 Schnell 12B-parameter model (@cf/black-forest-labs/flux-1-schnell, steps=4)",
+        "Cloudflare Workers (edge runtime, 300+ POPs)",
+        "@opennextjs/cloudflare 1.18 adapter",
+        "wrangler 4.81 CI/CD",
+        "Neon Postgres (serverless HTTP driver)",
+        "Drizzle ORM 0.45 + Drizzle Kit 0.31",
+        "Neon Auth (Better Auth, 0.2.0-beta with better-auth-migration.sql)",
+        "Stripe 22 (webhook-verified credit ledger, auto test/live mode switch)",
+        "@paralleldrive/cuid2 (collision-resistant IDs)",
+        "@opentelemetry/api (observability)",
+        "react-hot-toast (notifications)",
+        "Radix UI primitives (Label, Slot)",
+        "Mondrian-inspired UI (geometric background + minimalist grayscale aesthetic)",
+        "Apache-2.0 license (with patent grant)"
+      ],
+      "keywords": [
+        "Text-to-image AI SaaS",
+        "Cloudflare Workers AI FLUX.1 Schnell free tier",
+        "Edge-deployed full-stack",
+        "Two-pivot architectural evolution",
+        "Stripe credits ledger",
+        "Neon Auth + Drizzle",
+        "Mondrian-inspired UI",
+        "17-month sustained development"
+      ],
+      "metrics": [
+        {
+          "label": "First commit",
+          "value": "2024-11-27 (started as Vercel-hosted Next.js demo)"
+        },
+        {
+          "label": "Pivot 1 (free-AI move)",
+          "value": "2026-04-09 commit 3aec6ce: 'migrate from Vercel to Cloudflare Workers with free AI image generation'"
+        },
+        {
+          "label": "Pivot 2 (full SaaS)",
+          "value": "2026-04-10 commit 8626be4: 'add authentication, credits, payments, and image storage'"
+        },
+        {
+          "label": "Latest commit",
+          "value": "2026-04-21 (ca5c63e, brand-logo refresh)"
+        },
+        {
+          "label": "Development span",
+          "value": "~17 months across 24 solo commits"
+        },
+        {
+          "label": "AI provider",
+          "value": "Cloudflare Workers AI (FLUX.1 Schnell @cf/black-forest-labs/flux-1-schnell, no API key, env.AI binding)"
+        },
+        {
+          "label": "Free tier ceiling",
+          "value": "100,000 image-generation requests/day (Workers AI free tier)"
+        },
+        {
+          "label": "Generation steps",
+          "value": "4 (1-8 range — higher = better quality, balanced for speed)"
+        },
+        {
+          "label": "Auth provider",
+          "value": "Neon Auth (Better Auth, beta) with better-auth-migration.sql"
+        },
+        {
+          "label": "Payment provider",
+          "value": "Stripe 22 (webhook-verified, auto test/live mode switching on key prefix)"
+        },
+        {
+          "label": "Database",
+          "value": "Neon Postgres via serverless HTTP driver + Drizzle ORM"
+        },
+        {
+          "label": "Storage surface",
+          "value": "Persistent image storage + gallery (post-pivot SaaS layer)"
+        },
+        {
+          "label": "Deployment platform",
+          "value": "Cloudflare Workers global edge (300+ POPs) via @opennextjs/cloudflare adapter"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0 (includes patent grant)"
+        }
+      ],
+      "status": "live",
+      "startDate": "2024-11-27",
+      "publicSummary": "Production **full-stack text-to-image SaaS** — image generation\npowered by **Cloudflare Workers AI's FLUX.1 Schnell** 12B-parameter\nmodel accessed through the in-platform `env.AI` binding (no\nexternal API key, 100k requests/day on the free tier), wrapped in\na complete SaaS surface: **Neon Auth + Stripe credits ledger +\nNeon Postgres image storage + gallery + (auth) and (protected)\nNext.js route groups**. The interesting story is the **two\narchitectural pivots** the project went through to get here:\nit started 2024-11-27 as a Vercel-hosted Next.js demo using a\npaid AI provider, ran in that shape for ~16 months gathering\niteration ideas, then on **2026-04-09 pivoted to Cloudflare\nWorkers with free-tier FLUX.1 Schnell** (commit `3aec6ce`,\n*\"migrate from Vercel to Cloudflare Workers with free AI image\ngeneration\"*), and on **2026-04-10** — one day later —\ntransformed from \"free demo\" to **full SaaS in a single commit**\n`8626be4` *\"add authentication, credits, payments, and image\nstorage\"*. UI is a deliberate **Mondrian-inspired** geometric\ncomposition (later refined to minimalist grayscale on\n2026-04-20). Stack: Next.js 15.5 + React 19.2 + Drizzle ORM +\nNeon Postgres + Better Auth + Stripe 22 + OpenTelemetry +\n`@opennextjs/cloudflare` adapter. Live at\n[image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/).\nApache-2.0 with patent grant. 24 solo commits across ~17 months\nof sustained iteration.\n",
+      "narrative": {
+        "problem": "Text-to-image AI tools sit in an awkward economic position:\nthe model inference (DALL-E, Stable Diffusion XL, Midjourney\nAPI) costs real money per image, so every demo on the\ninternet is either rate-limited to single-digit images per\nuser, hidden behind a sign-up wall, or quietly burning\nsomeone's API budget on every public generation. Building a\nconsumer-facing image generator that's **actually free at\nmeaningful volume** requires either subsidising the inference\ncost out of pocket or finding a provider whose free tier is\nlarge enough to underwrite a public deployment. At the same\ntime, the few \"free\" public image generators that do exist\ncap at a few hundred generations per day and ship as\nsingle-page demos with no persistence — you can't see your\nhistory, can't save generations to an account, can't share\na gallery, can't upgrade to higher volume even if you\nwanted to pay. The product gap is **a full-stack image SaaS\nwhose unit economics work because the inference layer is\nactually free at the volumes hobbyists need, with an upgrade\npath for users who want persistence + paid credits**.\n",
+        "audience": "Three concentric audiences. (1) **Casual creators**\n(designers, content makers, hobbyists) who want to generate\nimages for blog headers, social posts, mood boards, or\ndecoration without paying $20+/month for Midjourney or\nwrestling with self-hosted Stable Diffusion — the free tier\ncovers them. (2) **Power users** who hit the free tier ceiling\nand want a credit-based top-up path with persistent gallery\nand account-tied image history — Stripe credits ledger\ncovers them. (3) **Engineers studying the project as a worked\nexample** of (a) discovering a free-AI free-tier large enough\nto underwrite a public product, (b) layering a full SaaS on\ntop in 48 hours, (c) the @opennextjs/cloudflare adapter\npattern for Next.js 15 App Router on Cloudflare Workers.\n",
+        "productLogic": "The product surface is intentionally split between **free\nanonymous mode** and **authenticated SaaS mode** through\nNext.js 15 route groups. The default `/` route is\nunauthenticated: a Mondrian-inspired geometric background\nwith a single text-area prompt input, generate button, and\nimage display. Anyone can generate images via the\n`/api/generate` POST endpoint which routes to the\nCloudflare Workers AI binding (`env.AI.run('@cf/black-\nforest-labs/flux-1-schnell', { prompt, steps: 4 })`), returns\na base64-encoded PNG, and the client renders it via a\n`data:image/png;base64,…` URI. **Free tier ceiling**:\n100,000 image-generation requests per day, enforced by\nCloudflare's Workers AI quota — that's enough to underwrite\na public deployment indefinitely for hobbyist traffic. Sign\nin (via the `(auth)/` route group) and the same prompt\ninput now lives in the `(protected)/` route group with\nadded persistence: every generation goes through the\n`/api/images` endpoint to write metadata + the base64 blob\nto Neon Postgres via Drizzle ORM, indexed by a `cuid2`\ncollision-resistant ID, and shows up in the `/gallery`\nview. Credits work as a usage cap on the authenticated\npath — `/api/credits` reads the user's ledger, `/api/stripe/\ncheckout` creates a Stripe Checkout session for the chosen\ncredit pack, and the `/api/stripe/webhook` route receives\nthe signed event from Stripe (using the `stripe:listen`\nand `stripe:trigger` dev scripts for local testing) and\natomically debits/credits the ledger. **The auto test/live\nStripe mode switch** (commit `00791c0`) detects the\n`STRIPE_SECRET_KEY` prefix and routes traffic accordingly\nso demos can run against test keys without environment\nre-config.\n",
+        "businessLogic": "The economic insight that makes the project viable: **the\nCloudflare Workers AI free tier underwrites the inference\ncost on the public path**. 100,000 generations/day at zero\nmarginal cost is the load-bearing constraint that lets\nthe project be free at the surface AND have a credit-based\nupgrade path for power users. Without that free-tier\nceiling Chan would have had to pick: charge everyone, or\nburn money on every public generation, or rate-limit so\naggressively that the demo isn't useful. The pivot to\nCloudflare Workers AI (commit `3aec6ce`) was the\nunit-economics decision that made the entire SaaS\nstructurally workable. Above the free tier: Stripe\ncredit packs (test/live mode auto-switching, webhook-\nverified ledger) provide the upgrade path. Storage is on\nNeon's free tier serverless Postgres so the persistence\nlayer is also zero marginal cost for typical hobbyist\nvolume. Net: the product is **free for the long-tail\nmajority of users**, **paid only for the small minority\nwho exhaust free-tier credits**, and **costs Chan\napproximately zero to operate** at current traffic levels.\nApache-2.0 with patent grant — explicitly licensed for\ncommercial use, fork, and re-deployment.\n",
+        "technicalApproach": "**AI layer.** Cloudflare Workers AI is accessed through\nthe **in-platform `env.AI` binding** declared in\n`wrangler.jsonc` (`{\"ai\": {\"binding\": \"AI\"}}`) — no\nexternal API key required, no network hop to a third-party\nprovider, all inference runs inside Cloudflare's edge.\nThe model is **FLUX.1 Schnell** (12B parameters,\n`@cf/black-forest-labs/flux-1-schnell`) called with\n`steps: 4` (1-8 range — fewer steps = faster, more\nsteps = higher quality). Response is base64-encoded PNG\nreturned as a JSON string, rendered client-side via a\n`data:image/png;base64,…` URI for zero-additional-request\ndisplay. **Full-stack SaaS layer.** Next.js 15.5 App\nRouter with `(auth)/` and `(protected)/` **route groups**\nfor clean separation of unauth/auth surfaces;\n`/api/generate` (free public path), `/api/auth/[...path]`\n(Neon Auth handler), `/api/credits` (ledger reads),\n`/api/images` (gallery persistence), `/api/gallery`\n(public gallery), `/api/stripe/checkout` + `/api/stripe/\nwebhook` (billing). **Database**: Neon Postgres via the\n`@neondatabase/serverless` HTTP driver (better fit for\nWorkers' stateless runtime than connection-pooled drivers\n— no pool exhaustion, no pgbouncer hop), schema in\nDrizzle ORM. **Auth**: Neon Auth (Better Auth beta) with\na committed `better-auth-migration.sql` for schema setup.\n**IDs**: `@paralleldrive/cuid2` for collision-resistant\nURL-safe identifiers (better than UUIDs for public-facing\nimage gallery URLs). **Observability**: `@opentelemetry/\napi` instrumentation hooks. **Deployment**: standard\n`@opennextjs/cloudflare` 1.18 adapter — `npm run deploy`\nruns `opennextjs-cloudflare build && opennextjs-cloudflare\ndeploy`, building the Next.js app and bundling it through\nthe OpenNext compiler into a Workers-compatible\nsingle-file bundle. Same deployment pattern Chan uses on\nsunostats, send-joy, chinese-redefine, and the event-qa\ntemplate — the pattern is now a portable skill. **UI**:\ndeliberate **Mondrian-inspired geometric composition** in\nthe initial design phase (`MondrianBackground.tsx` is a\nfirst-class component), later refined to a **minimalist\ngrayscale aesthetic** on 2026-04-20 (commit `10c5a0d`).\nBoth layers are intentional design choices, not\naccidental theming. **Build**: `npm run cf-typegen` runs\n`wrangler types --env-interface CloudflareEnv` to\nregenerate the TypeScript bindings file for the AI\nbinding, keeping the type system in sync with the live\nCloudflare environment.\n",
+        "outcomes": "Live at\n[image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/)\nwith the full SaaS surface active and operating on the\nCloudflare Workers free tier across both inference (Workers\nAI 100k/day) and database (Neon free tier). **17 months of\nsustained development across 24 solo commits**, with the\ndefining narrative being the **two architectural pivots in\n48 hours**: 2026-04-09 (`3aec6ce`) migrated the inference\nlayer from Vercel + paid provider to Cloudflare Workers +\nfree FLUX.1 Schnell — cutting unit cost to zero; 2026-04-10\n(`8626be4`) added the entire SaaS layer (auth + credits +\nStripe + image storage) in a single commit, transforming a\nfree demo into a fully-monetisable product with an upgrade\npath. The Mondrian-inspired design layer was added across\nthe 2024-12 window (commits including `7717b8f` \"Add logo\")\nand refined to minimalist grayscale on 2026-04-20\n(`10c5a0d` *\"redesign UI/UX with minimalist grayscale\naesthetic\"*). Stripe test/live auto-mode-switching\n(`00791c0`) followed the next day. **Apache-2.0 with\npatent grant** licensing makes the codebase explicitly\nfork-and-deploy-able as a worked example for engineers\nwanting to ship their own free-tier AI SaaS on Cloudflare\nWorkers — the entire deployment fits inside Cloudflare's\nand Neon's free tiers for typical hobbyist volume.\n",
+        "myRole": "Sole product designer, sole engineer, sole maintainer.\nIdentified the Cloudflare Workers AI free-tier free-FLUX\nopportunity in early 2026 and executed the pivot from\nVercel + paid AI provider to Workers + free Workers AI\nbinding within a single commit (`3aec6ce`); designed the\nSaaS layer extension (auth + credits + Stripe + image\nstorage) and shipped it the next day (`8626be4`);\ndesigned the dual-surface UX with Next.js 15\n`(auth)/`/`(protected)/` route groups so anonymous users\nkeep the free generation path; designed the\nMondrian-inspired geometric UI and the subsequent\nminimalist-grayscale refinement; engineered the Drizzle\nORM + Neon Postgres + Neon Auth (Better Auth)\npersistence stack; wrote the Stripe test/live auto-mode\nswitching logic; configured the @opennextjs/cloudflare\ndeployment pipeline. Maintains the live deployment today.\n"
+      }
     },
     {
       "id": "chinese-redefine",
@@ -4409,6 +4527,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T13:02:41.586Z"
+    "buildTimestamp": "2026-05-18T13:07:32.232Z"
   }
 }

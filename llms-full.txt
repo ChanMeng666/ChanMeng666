@@ -3996,6 +3996,213 @@ trilingual EN/简中/日本語 i18n dictionary; wrote the
 public-facing README + the internal AGENTS.md and
 architecture/data-model/i18n docs. Maintains the live
 deployment today.
+### AI Image Generator — Full-Stack Text-to-Image SaaS — Full-stack text-to-image SaaS pivoted onto Cloudflare Workers AI's FLUX.1 Schnell free tier (100k req/day) — auth + credits ledger + Stripe billing + image storage + gallery, deployed on Cloudflare Workers via OpenNext. Two architectural pivots (Vercel->CF Workers free-AI 2026-04-09, then full SaaS layer one day later) turned a 2024 demo into a production product.
+[tier=primary · recency=recent · updated=2026-05-19]
+- **URL:** https://image-generator.chanmeng-dev.workers.dev/
+- **Repository:** https://github.com/ChanMeng666/image-generator
+- **Tech stack:** Next.js 15.5 (App Router with (auth) + (protected) route groups), React 19.2 + TypeScript 5, Tailwind CSS 3.3 + tailwindcss-animate, Cloudflare Workers AI (env.AI binding, no API key), FLUX.1 Schnell 12B-parameter model (@cf/black-forest-labs/flux-1-schnell, steps=4), Cloudflare Workers (edge runtime, 300+ POPs), @opennextjs/cloudflare 1.18 adapter, wrangler 4.81 CI/CD, Neon Postgres (serverless HTTP driver), Drizzle ORM 0.45 + Drizzle Kit 0.31, Neon Auth (Better Auth, 0.2.0-beta with better-auth-migration.sql), Stripe 22 (webhook-verified credit ledger, auto test/live mode switch), @paralleldrive/cuid2 (collision-resistant IDs), @opentelemetry/api (observability), react-hot-toast (notifications), Radix UI primitives (Label, Slot), Mondrian-inspired UI (geometric background + minimalist grayscale aesthetic), Apache-2.0 license (with patent grant)
+
+**Summary:** Production **full-stack text-to-image SaaS** — image generation
+powered by **Cloudflare Workers AI's FLUX.1 Schnell** 12B-parameter
+model accessed through the in-platform `env.AI` binding (no
+external API key, 100k requests/day on the free tier), wrapped in
+a complete SaaS surface: **Neon Auth + Stripe credits ledger +
+Neon Postgres image storage + gallery + (auth) and (protected)
+Next.js route groups**. The interesting story is the **two
+architectural pivots** the project went through to get here:
+it started 2024-11-27 as a Vercel-hosted Next.js demo using a
+paid AI provider, ran in that shape for ~16 months gathering
+iteration ideas, then on **2026-04-09 pivoted to Cloudflare
+Workers with free-tier FLUX.1 Schnell** (commit `3aec6ce`,
+*"migrate from Vercel to Cloudflare Workers with free AI image
+generation"*), and on **2026-04-10** — one day later —
+transformed from "free demo" to **full SaaS in a single commit**
+`8626be4` *"add authentication, credits, payments, and image
+storage"*. UI is a deliberate **Mondrian-inspired** geometric
+composition (later refined to minimalist grayscale on
+2026-04-20). Stack: Next.js 15.5 + React 19.2 + Drizzle ORM +
+Neon Postgres + Better Auth + Stripe 22 + OpenTelemetry +
+`@opennextjs/cloudflare` adapter. Live at
+[image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/).
+Apache-2.0 with patent grant. 24 solo commits across ~17 months
+of sustained iteration.
+
+**Problem:** Text-to-image AI tools sit in an awkward economic position:
+the model inference (DALL-E, Stable Diffusion XL, Midjourney
+API) costs real money per image, so every demo on the
+internet is either rate-limited to single-digit images per
+user, hidden behind a sign-up wall, or quietly burning
+someone's API budget on every public generation. Building a
+consumer-facing image generator that's **actually free at
+meaningful volume** requires either subsidising the inference
+cost out of pocket or finding a provider whose free tier is
+large enough to underwrite a public deployment. At the same
+time, the few "free" public image generators that do exist
+cap at a few hundred generations per day and ship as
+single-page demos with no persistence — you can't see your
+history, can't save generations to an account, can't share
+a gallery, can't upgrade to higher volume even if you
+wanted to pay. The product gap is **a full-stack image SaaS
+whose unit economics work because the inference layer is
+actually free at the volumes hobbyists need, with an upgrade
+path for users who want persistence + paid credits**.
+
+**Audience:** Three concentric audiences. (1) **Casual creators**
+(designers, content makers, hobbyists) who want to generate
+images for blog headers, social posts, mood boards, or
+decoration without paying $20+/month for Midjourney or
+wrestling with self-hosted Stable Diffusion — the free tier
+covers them. (2) **Power users** who hit the free tier ceiling
+and want a credit-based top-up path with persistent gallery
+and account-tied image history — Stripe credits ledger
+covers them. (3) **Engineers studying the project as a worked
+example** of (a) discovering a free-AI free-tier large enough
+to underwrite a public product, (b) layering a full SaaS on
+top in 48 hours, (c) the @opennextjs/cloudflare adapter
+pattern for Next.js 15 App Router on Cloudflare Workers.
+
+**Product logic:** The product surface is intentionally split between **free
+anonymous mode** and **authenticated SaaS mode** through
+Next.js 15 route groups. The default `/` route is
+unauthenticated: a Mondrian-inspired geometric background
+with a single text-area prompt input, generate button, and
+image display. Anyone can generate images via the
+`/api/generate` POST endpoint which routes to the
+Cloudflare Workers AI binding (`env.AI.run('@cf/black-
+forest-labs/flux-1-schnell', { prompt, steps: 4 })`), returns
+a base64-encoded PNG, and the client renders it via a
+`data:image/png;base64,…` URI. **Free tier ceiling**:
+100,000 image-generation requests per day, enforced by
+Cloudflare's Workers AI quota — that's enough to underwrite
+a public deployment indefinitely for hobbyist traffic. Sign
+in (via the `(auth)/` route group) and the same prompt
+input now lives in the `(protected)/` route group with
+added persistence: every generation goes through the
+`/api/images` endpoint to write metadata + the base64 blob
+to Neon Postgres via Drizzle ORM, indexed by a `cuid2`
+collision-resistant ID, and shows up in the `/gallery`
+view. Credits work as a usage cap on the authenticated
+path — `/api/credits` reads the user's ledger, `/api/stripe/
+checkout` creates a Stripe Checkout session for the chosen
+credit pack, and the `/api/stripe/webhook` route receives
+the signed event from Stripe (using the `stripe:listen`
+and `stripe:trigger` dev scripts for local testing) and
+atomically debits/credits the ledger. **The auto test/live
+Stripe mode switch** (commit `00791c0`) detects the
+`STRIPE_SECRET_KEY` prefix and routes traffic accordingly
+so demos can run against test keys without environment
+re-config.
+
+**Business logic:** The economic insight that makes the project viable: **the
+Cloudflare Workers AI free tier underwrites the inference
+cost on the public path**. 100,000 generations/day at zero
+marginal cost is the load-bearing constraint that lets
+the project be free at the surface AND have a credit-based
+upgrade path for power users. Without that free-tier
+ceiling Chan would have had to pick: charge everyone, or
+burn money on every public generation, or rate-limit so
+aggressively that the demo isn't useful. The pivot to
+Cloudflare Workers AI (commit `3aec6ce`) was the
+unit-economics decision that made the entire SaaS
+structurally workable. Above the free tier: Stripe
+credit packs (test/live mode auto-switching, webhook-
+verified ledger) provide the upgrade path. Storage is on
+Neon's free tier serverless Postgres so the persistence
+layer is also zero marginal cost for typical hobbyist
+volume. Net: the product is **free for the long-tail
+majority of users**, **paid only for the small minority
+who exhaust free-tier credits**, and **costs Chan
+approximately zero to operate** at current traffic levels.
+Apache-2.0 with patent grant — explicitly licensed for
+commercial use, fork, and re-deployment.
+
+**Technical approach:** **AI layer.** Cloudflare Workers AI is accessed through
+the **in-platform `env.AI` binding** declared in
+`wrangler.jsonc` (`{"ai": {"binding": "AI"}}`) — no
+external API key required, no network hop to a third-party
+provider, all inference runs inside Cloudflare's edge.
+The model is **FLUX.1 Schnell** (12B parameters,
+`@cf/black-forest-labs/flux-1-schnell`) called with
+`steps: 4` (1-8 range — fewer steps = faster, more
+steps = higher quality). Response is base64-encoded PNG
+returned as a JSON string, rendered client-side via a
+`data:image/png;base64,…` URI for zero-additional-request
+display. **Full-stack SaaS layer.** Next.js 15.5 App
+Router with `(auth)/` and `(protected)/` **route groups**
+for clean separation of unauth/auth surfaces;
+`/api/generate` (free public path), `/api/auth/[...path]`
+(Neon Auth handler), `/api/credits` (ledger reads),
+`/api/images` (gallery persistence), `/api/gallery`
+(public gallery), `/api/stripe/checkout` + `/api/stripe/
+webhook` (billing). **Database**: Neon Postgres via the
+`@neondatabase/serverless` HTTP driver (better fit for
+Workers' stateless runtime than connection-pooled drivers
+— no pool exhaustion, no pgbouncer hop), schema in
+Drizzle ORM. **Auth**: Neon Auth (Better Auth beta) with
+a committed `better-auth-migration.sql` for schema setup.
+**IDs**: `@paralleldrive/cuid2` for collision-resistant
+URL-safe identifiers (better than UUIDs for public-facing
+image gallery URLs). **Observability**: `@opentelemetry/
+api` instrumentation hooks. **Deployment**: standard
+`@opennextjs/cloudflare` 1.18 adapter — `npm run deploy`
+runs `opennextjs-cloudflare build && opennextjs-cloudflare
+deploy`, building the Next.js app and bundling it through
+the OpenNext compiler into a Workers-compatible
+single-file bundle. Same deployment pattern Chan uses on
+sunostats, send-joy, chinese-redefine, and the event-qa
+template — the pattern is now a portable skill. **UI**:
+deliberate **Mondrian-inspired geometric composition** in
+the initial design phase (`MondrianBackground.tsx` is a
+first-class component), later refined to a **minimalist
+grayscale aesthetic** on 2026-04-20 (commit `10c5a0d`).
+Both layers are intentional design choices, not
+accidental theming. **Build**: `npm run cf-typegen` runs
+`wrangler types --env-interface CloudflareEnv` to
+regenerate the TypeScript bindings file for the AI
+binding, keeping the type system in sync with the live
+Cloudflare environment.
+
+**Outcomes:** Live at
+[image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/)
+with the full SaaS surface active and operating on the
+Cloudflare Workers free tier across both inference (Workers
+AI 100k/day) and database (Neon free tier). **17 months of
+sustained development across 24 solo commits**, with the
+defining narrative being the **two architectural pivots in
+48 hours**: 2026-04-09 (`3aec6ce`) migrated the inference
+layer from Vercel + paid provider to Cloudflare Workers +
+free FLUX.1 Schnell — cutting unit cost to zero; 2026-04-10
+(`8626be4`) added the entire SaaS layer (auth + credits +
+Stripe + image storage) in a single commit, transforming a
+free demo into a fully-monetisable product with an upgrade
+path. The Mondrian-inspired design layer was added across
+the 2024-12 window (commits including `7717b8f` "Add logo")
+and refined to minimalist grayscale on 2026-04-20
+(`10c5a0d` *"redesign UI/UX with minimalist grayscale
+aesthetic"*). Stripe test/live auto-mode-switching
+(`00791c0`) followed the next day. **Apache-2.0 with
+patent grant** licensing makes the codebase explicitly
+fork-and-deploy-able as a worked example for engineers
+wanting to ship their own free-tier AI SaaS on Cloudflare
+Workers — the entire deployment fits inside Cloudflare's
+and Neon's free tiers for typical hobbyist volume.
+
+**My role:** Sole product designer, sole engineer, sole maintainer.
+Identified the Cloudflare Workers AI free-tier free-FLUX
+opportunity in early 2026 and executed the pivot from
+Vercel + paid AI provider to Workers + free Workers AI
+binding within a single commit (`3aec6ce`); designed the
+SaaS layer extension (auth + credits + Stripe + image
+storage) and shipped it the next day (`8626be4`);
+designed the dual-surface UX with Next.js 15
+`(auth)/`/`(protected)/` route groups so anonymous users
+keep the free generation path; designed the
+Mondrian-inspired geometric UI and the subsequent
+minimalist-grayscale refinement; engineered the Drizzle
+ORM + Neon Postgres + Neon Auth (Better Auth)
+persistence stack; wrote the Stripe test/live auto-mode
+switching logic; configured the @opennextjs/cloudflare
+deployment pipeline. Maintains the live deployment today.
 ### FemTracker Agent — 8-agent CopilotKit + LangGraph women's-health companion (merged into CopilotKit's official demos_2025)
 [tier=primary · recency=recent · updated=2026-05-18]
 - **URL:** https://femtracker-agent.vercel.app/
@@ -4472,7 +4679,6 @@ regression breaks visible branding immediately.
 - [Customer Insight](https://github.com/ChanMeng666/customer-insight) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/
 - [Hospital Roster Agent](https://github.com/ChanMeng666/hospital-roster-agent) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://roster.chanmeng.org/
 **creative:**
-- [AI Image Generator](https://github.com/ChanMeng666/image-generator) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://image-generator.chanmeng-dev.workers.dev/
 - [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://huggingface.co/spaces/ChanMeng666/interactive-story-generator
 - [Emoji Story Generator](https://github.com/ChanMeng666/emoji-story-generator) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://huggingface.co/spaces/ChanMeng666/emoji-story-generator
 - [Design Pages](https://github.com/ChanMeng666/design-pages) [tier=archive · recency=historical · updated=2026-05-18] -- live: https://chanmeng666.github.io/design-pages/

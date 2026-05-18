@@ -2967,81 +2967,190 @@ projects:
     tier: primary
     recency: active
     lastUpdated: "2026-05-18"
-    name: echook
+    name: echook (Echo + Hook)
     priority: 6
     category: ai-apps
-    tagline: AI-operated audio notification system for Claude Code, Cursor IDE, and Codex CLI
+    tagline: AI-operated audio notification system for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only
     repoUrl: https://github.com/ChanMeng666/echook
     status: active
+    extraLinks:
+      - { label: "Promo video repo (Remotion)", url: "https://github.com/ChanMeng666/echook-promo-video" }
+      - { label: "Claude Code Marketplace listing", url: "https://github.com/ChanMeng666/echook#install-in-60-seconds" }
+    techStack:
+      - Python 3.6+
+      - "Claude Code Plugin SDK"
+      - "Cursor IDE 3.2.16+ third-party hooks"
+      - "Codex CLI hooks API"
+      - "hooks.json native matcher routing"
+      - "NDJSON structured logging (schema audio-hooks.v1)"
+      - "ElevenLabs TTS API"
+      - "Slack / Discord / Teams / ntfy webhooks"
+      - "PowerShell MediaPlayer (Windows)"
+      - "afplay (macOS)"
+      - "mpg123 / ffplay / paplay / aplay (Linux auto-detect)"
+      - "GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13)"
+      - "Remotion 4 (promo video)"
+      - "React 19 (promo video)"
+      - "Suno (background music generation)"
     publicSummary: |
       AI-operated audio notification system for Claude Code, Cursor IDE, and
-      Codex CLI (26 hook events, 2 audio themes, rate-limit alerts, webhooks,
-      TTS, context monitor). 63 GitHub stars, 42 releases, 139 unittest cases
-      validated across Ubuntu/Windows/macOS and Python 3.9–3.13. Rebranded
-      from `claude-code-audio-hooks` at v5.2.1; carved out as Chan's preserved
-      IP in the Engram Architect Cohort Engagement Letter (May 2026).
+      Codex CLI. The defining product idea: the **human never learns the
+      tool**. The user talks to their AI agent in plain English ("install
+      audio-hooks", "switch to chimes", "snooze for 30 minutes", "send alerts
+      to my Slack"), and the agent runs every shell command, reads every JSON
+      output, and reports back. Install reduces to **1 shell command + 2
+      natural-language prompts + 1 slash command = 4 things**; everything
+      after that is conversation. Ships 26 hook events, 2 audio themes,
+      rate-limit alerts (5h/7d quota windows), webhooks (Slack/Discord/Teams/
+      ntfy), TTS that speaks Claude's actual reply, and a context-window
+      status line. 63 GitHub stars, 42 releases, 139 unittest cases on
+      Ubuntu/Windows/macOS × Python 3.9–3.13. A sister repo,
+      **echook-promo-video**, ships the 88-second 1080p product film built
+      entirely in code (Remotion + Claude Code + ElevenLabs + Suno).
+      Carved out as Chan's preserved IP in the Engram Architect Cohort
+      Engagement Letter (May 2026).
     narrative:
       problem: |
         Developers running long-form AI coding workflows on Claude Code,
         Cursor IDE, and Codex CLI have no way to *hear* what their agent
         is doing — they alt-tab to check progress, miss rate-limit
         warnings, and only discover stuck sessions on visual inspection.
-        Bolt-on notification tools exist but treat humans as the
-        controller: they require memorising CLI flags, fail to compose
-        with the agent itself, and don't share state across the three
-        major coding agents a serious user actually rotates between.
+        Bolt-on notification tools exist but they all carry the same
+        anti-pattern: **the human is downstream of the CLI**. The user
+        has to read docs, memorise flags, copy commands, and re-learn the
+        same surface every time it changes. That model collapses the
+        moment a serious user starts rotating between Claude Code, Cursor,
+        and Codex — three editors, three configuration languages, three
+        sets of muscle memory. The mismatch isn't audio; it's the
+        contract between humans, AI agents, and developer tooling.
       audience: |
         Software engineers operating Claude Code / Cursor IDE / Codex CLI
-        at the "AI-first" level — comfortable telling Claude to install,
-        theme, snooze, or reconfigure the notification system in plain
-        English rather than memorising subcommands. Also: power users
-        debugging long-running workflows where audio cues are faster
-        than visual polling.
+        at the "AI-first" level — comfortable telling their coding agent
+        to install, theme, snooze, webhook, or reconfigure infrastructure
+        in plain English rather than memorising subcommands. Also: power
+        users debugging long-running workflows where audio cues are faster
+        than visual polling; teams rolling out shared notification
+        defaults across multiple developers; researchers building on the
+        AI-first plugin contract as a reference implementation.
       productLogic: |
-        Each editor fires hook events as structured JSON; native matchers
-        in `hooks.json` route every event to `hook_runner.py`, which
-        consults snooze state, rate-limit thresholds, and debounce timers
-        before fanning out to audio playback, desktop notifications,
-        TTS, and webhooks. The human-facing control surface is a single
-        `/audio-hooks` Claude Code skill: a user says *"switch to chimes"*
-        or *"snooze for 30 minutes"* in plain English, the skill invokes
-        the right CLI subcommand, and the CLI reports back machine-readable
-        status that Claude can summarise.
+        echook inverts the relationship: **the human is upstream of
+        Claude Code, the AI agent learns the tool on the human's behalf.**
+        A one-line install prompt — *"install the audio-hooks plugin from
+        github.com/ChanMeng666/echook"* — kicks off the entire flow. Claude
+        Code runs `claude plugin marketplace add` and `claude plugin
+        install`, the user types `/reload-plugins` exactly once (the only
+        manual slash command in the entire lifetime of the tool, because
+        Claude Code's reload has no CLI equivalent), and from that moment
+        forward every interaction is conversation. *"Switch to chimes."*
+        *"Snooze for 8 hours."* *"Send alerts to my Slack at this webhook
+        URL and test it."* *"Disable everything except stop and
+        permission_request."* The `/audio-hooks` skill parses intent,
+        invokes the right `audio-hooks` CLI subcommand, reads its JSON
+        output, and narrates the result. The user memorises **nothing**.
+        Cross-editor parity is part of the same contract: every prompt
+        works identically on Cursor's agent and on Codex CLI because they
+        all drive the same Python binary against the same JSON API.
+      businessLogic: |
+        Open source under MIT — no paywall, no premium tier, no telemetry.
+        The business value is **build-in-public credibility**: echook is
+        the demonstration artifact for Chan's AI-first product philosophy
+        and shows up in every Engram-cohort interview, every recruiter
+        conversation, and the public README of every downstream client
+        project. The 42-release cadence, the cross-platform CI matrix,
+        and the 139-test bridge-contract suite make it visible production
+        engineering — not a weekend script. The Remotion promo video
+        sister repo extends the same proof: it shows Chan can ship not
+        just the product but the marketing artifact for the product, end
+        to end, programmatically, with zero Adobe-suite licensing or
+        third-party video production overhead.
       technicalApproach: |
-        AI-first design at every layer. The CLI ships a stable JSON API
-        with no prompts or spinners, versioned NDJSON event logging
-        (schema `audio-hooks.v1`), 27 stable subcommands, and explicit
-        error codes so an agent can recover autonomously without
-        screen-scraping. Hook coverage is 26 events spanning session
-        start/end, tool execution, permission requests, file changes,
-        and rate-limit warnings (5-hour and 7-day quota windows with
-        configurable 80%/95% thresholds). Two audio themes: ElevenLabs
-        **Jessica** voice or modern UI chimes. Webhooks fan out to Slack,
-        Discord, Teams, and ntfy via fire-and-forget subprocess. The
-        status line displays real-time context-window and API-quota bars
-        with colour-coded warnings. Crucially, the codebase keeps
-        **canonical sources** under `/hooks/`, `/bin/`, `/audio/` and
-        synchronises them into the three plugin layouts (Claude Code,
-        Cursor, Codex) via `build-plugin.sh` — single source of truth,
-        not three forked codebases.
+        AI-first design at every layer. The `audio-hooks` CLI ships a
+        stable JSON-only API with **27 subcommands, no prompts, no
+        spinners**, versioned NDJSON event logging (schema
+        `audio-hooks.v1`, 5 MB rotation × 3 files), and a **stable error
+        code enum** (`AUDIO_FILE_MISSING`, `WEBHOOK_TIMEOUT`,
+        `DUAL_INSTALL_DETECTED`, etc.) where each error carries a
+        `suggested_command` field so an agent can recover autonomously
+        without screen-scraping. Hook coverage is **26 events** spanning
+        session start/end, tool execution, permission requests, file
+        changes, worktree creation, elicitation, and rate-limit warnings
+        (5-hour and 7-day quota windows with configurable 80%/95%
+        thresholds; each `(window, threshold, resets_at)` fires exactly
+        once via debounce markers). Two audio themes: ElevenLabs
+        **Jessica** voice or modern UI chimes; rebuilds are declarative
+        via `config/audio_manifest.json` + the ElevenLabs generator.
+        Webhooks fan out to Slack, Discord, Teams, and ntfy via
+        fire-and-forget subprocess with a versioned
+        `audio-hooks.webhook.v1` payload — they never block the hook.
+        The status line ships **10 customisable segments** including
+        color-coded context-window and API-quota bars with absolute
+        token counts (e.g. `Context: 83% (166K/200K)`) so users see the
+        "agent dumb zone" before they enter it. Cross-editor architecture
+        is the deepest piece: canonical sources live in `/hooks/`,
+        `/bin/`, `/audio/`, `/cursor-hooks/`, `/codex-hooks/`, and
+        `build-plugin.sh` syncs them into the Claude Code plugin layout
+        — **one source of truth, three editor targets**, with CI
+        enforcing in-sync via `build-plugin.sh --check`. The Cursor path
+        leverages Cursor 3.2.16+'s auto-bridge so 99% of users get
+        Cursor support for free; Cursor-only installs go through a
+        native `~/.cursor/hooks.json` registration with a
+        `DUPLICATE_BRIDGE` error guard that aborts if both paths would
+        be active. The Codex CLI path goes further: install handles
+        OpenAI's required `[features]\ncodex_hooks = true` feature flag
+        by **authoring a fresh `~/.codex/config.toml` when none exists**
+        and emitting machine-readable `next_steps` for the calling AI
+        agent to add the flag with its Edit tool when one does — we
+        never round-trip user TOML because that destroys comments and
+        formatting. **18 canonical events with no Codex equivalent
+        no-op cleanly under the codex invoker** with a debug NDJSON
+        event, never blocking the session. The whole bridge contract is
+        validated by 139 unittest cases across Ubuntu/Windows/macOS ×
+        Python 3.9/3.12/3.13 in GitHub Actions CI.
       outcomes: |
         63 GitHub stars, 6 forks, **42 releases** shipped, **139 unittest
-        cases** covering Cursor + Codex bridge contracts. CI validates on
-        Ubuntu, Windows, and macOS across Python 3.9 → 3.13. Native Codex
-        CLI support landed at v5.2.0; the project then rebranded from
-        `claude-code-audio-hooks` to **echook** at v5.2.1 — a "door-only"
-        GitHub rename that preserved every existing install via the
-        platform's redirect. The Engram Architect Cohort Engagement
-        Letter (May 9, 2026) explicitly names *claude-code-audio-hooks*
-        among Chan's preserved IP — formal recognition by a paid agentic
-        infrastructure firm that this is portfolio-grade work, not a
-        hobby script.
+        cases**. The defining release sequence: v5.0 (Jan 2026) shipped
+        the AI-first redesign — JSON CLI, `/audio-hooks` skill, NDJSON
+        logging, plugin-native install; v5.2.0 (May 2026) added native
+        Codex CLI support with +33 bridge-contract tests; v5.2.1 (May
+        2026) executed the **echook rebrand** — a "door-only" GitHub
+        rename from `claude-code-audio-hooks` → `echook` (because leading
+        with "Claude Code" became misleading once native Cursor and
+        Codex paths shipped) that preserved every existing install via
+        GitHub's repo redirect, kept the `audio-hooks` CLI name, the
+        `chanmeng-audio-hooks` marketplace name, and all state
+        directories unchanged. The Engram Architect Cohort Engagement
+        Letter (May 9, 2026) explicitly names
+        *claude-code-audio-hooks* among Chan's preserved IP — formal
+        recognition by a paid agentic infrastructure firm that this is
+        portfolio-grade engineering, not a hobby script. The sister
+        repo **echook-promo-video** then closed the loop on the
+        AI-first thesis: an 88.7-second 1920×1080 @ 30fps product film
+        composed of 9 sections (Intro → Problem → Solution → Features →
+        Advanced → Demo → Ecosystem → Cross-Platform → CTA) connected
+        by `@remotion/transitions` (wipe/fade/slide) with a layered
+        audio mix (Suno-generated BGM with auto volume ducking + 8
+        ElevenLabs SFX cues + 3 ElevenLabs voiceover tracks) — built
+        entirely in React + Remotion + AI-generated audio, **zero
+        Adobe Premiere, zero After Effects, zero human voice actors**.
+        The whole video pipeline is reproducible: one
+        `npm run generate-audio` regenerates every voice and effect from
+        the ElevenLabs API; one `npm run render` produces the MP4.
       myRole: |
-        Sole author. Designed the AI-first contract (JSON API + NDJSON
-        log + stable subcommands), wrote every hook event integration,
-        engineered the three-editor synchronisation pipeline, and
-        executed the rebrand without breaking compatibility. Maintains
-        the project today through the 5.x line.
+        Sole author of both repos. On echook proper: designed the
+        AI-first contract (JSON API + NDJSON log + stable error codes +
+        `suggested_command` recovery), wrote every hook event
+        integration, engineered the three-editor synchronisation
+        pipeline (canonical → plugin layout sync via
+        `build-plugin.sh`, with CI enforcement), authored the Codex
+        TOML-feature-flag bootstrap pattern, and executed the 5.2.1
+        rebrand without breaking compatibility. On echook-promo-video:
+        designed the 9-section narrative arc with Claude Code, built
+        the reusable visual primitives (TypewriterText, Terminal,
+        SoundWave, GreenGrid, CounterNumber, GlowText), orchestrated
+        the Remotion `TransitionSeries`, wrote the ElevenLabs
+        audio-generation script, and tuned the volume-ducking
+        envelopes so BGM ducks during VO + demo playback. Maintains
+        both repos today through the 5.x line.
 
   - id: douyin-mall-go-template
     tier: primary

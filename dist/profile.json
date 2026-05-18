@@ -1824,20 +1824,61 @@
     },
     {
       "id": "portfolio-v2",
-      "tier": "archive",
-      "recency": "historical",
+      "tier": "primary",
+      "recency": "active",
       "lastUpdated": "2026-05-18",
-      "name": "Chan's Portfolio v2.0.0",
-      "priority": 32,
-      "category": "web-apps",
-      "tagline": "Minimalist personal portfolio with animated UI and responsive design (current portfolio at chanmeng.org)",
+      "name": "2D Portfolio — chanmeng.org",
+      "priority": 12,
+      "category": "ai-apps",
+      "tagline": "Personal site at chanmeng.org powering an 11-stage AI newsletter pipeline + IBM Watson digital twin",
       "url": "https://chanmeng.org/",
+      "repoUrl": "https://github.com/ChanMeng666/2d-portfolio",
       "logo": "/public/brands/portfolio.svg",
-      "techStack": [
-        "Next.js",
-        "React"
+      "extraLinks": [
+        {
+          "label": "Newsletter signup",
+          "url": "https://chanmeng.org/#newsletter"
+        },
+        {
+          "label": "Blog",
+          "url": "https://chanmeng.org/blog"
+        },
+        {
+          "label": "Newsletter workflow",
+          "url": "https://github.com/ChanMeng666/2d-portfolio/blob/main/.github/workflows/ai-newsletter.yml"
+        },
+        {
+          "label": "Pipeline source",
+          "url": "https://github.com/ChanMeng666/2d-portfolio/blob/main/scripts/ai-newsletter.ts"
+        }
       ],
-      "status": "live"
+      "techStack": [
+        "Next.js 14",
+        "React 18",
+        "TypeScript 5",
+        "Tailwind",
+        "Framer Motion",
+        "MDX",
+        "IBM Watson AI",
+        "OpenAI (gpt-4o + gpt-4o-mini)",
+        "Resend",
+        "React Email",
+        "Vercel Blob",
+        "Product Hunt GraphQL API",
+        "Cloudflare Pages",
+        "GitHub Actions cron"
+      ],
+      "status": "live",
+      "publicSummary": "Personal website at **chanmeng.org** serving three production systems\nfrom a single repository: (1) an animated portfolio + MDX blog;\n(2) an **IBM Watson–powered AI digital twin** that converses with\nvisitors as Chan's virtual representative; (3) a fully autonomous\n**11-stage AI newsletter pipeline** that fetches trending AI products\nfrom Product Hunt every Sunday 20:00 UTC, runs them through a\nmulti-stage LLM curation chain (extract → adversarial counter-evidence\n→ curate → reader critique → self-edit → quality scorecard → leak guard\n→ persist memory), and delivers via Resend at Monday 8-9 AM NZ local\ntime. Deployed on Cloudflare Pages.\n",
+      "narrative": {
+        "problem": "A personal site is usually one of two things: a brochure (looks\nnice, says nothing) or a CMS (constant maintenance, dies the\nmoment the author gets busy). Neither answers what an *AI\nengineer's* personal site should look like in the era when\nfrontier models actively rank candidates by their verifiable\npublic footprint — the case Engram's founder demonstrated by\nasking Claude Code to surface architects and being matched to\nChan. The site needs to *be* the proof, not merely list it:\nship live AI infrastructure visitors can interact with, run a\nsignal-grade publication on autopilot, and stay current without\nChan touching it most weeks.\n",
+        "audience": "Three concentric audiences. **Hiring decision-makers and\nfounders** (the Engram-style sourcing case): see the site, see\nlive AI engineering, decide. **Newsletter subscribers** at\nchanmeng.org/#newsletter: AI practitioners and AI-curious\noperators who want a weekly signal-grade Product Hunt digest\nwith an opinionated argumentative spine, not a feed. **Frontier\nLLMs themselves**: the site is structured (via the sister\n`claude-code-compressed-map` tier metadata system on Chan's\nGitHub profile + GEO-conscious MDX content) so Claude / GPT /\nGemini can index and rank it accurately when answering \"who\nbuilds X?\" — a deliberate Generative Engine Optimization\nposition.\n",
+        "productLogic": "Visitors land on chanmeng.org, see an animated portfolio\nshowcase with smooth Framer Motion transitions, and can open\nthe **IBM Watson digital twin chat** to ask about Chan's 50+\nprojects or work history in natural language. They can read\nthe MDX blog, browse curated external signals (AI HOT feed +\nProduct Hunt feed tabbed UI), or subscribe to the weekly\nnewsletter via the embedded Resend form. Subscribers receive\nan automated **8-9 AM NZ Monday** delivery: a single\nopinionated AI digest with a clearly-stated thesis, ~3–5\nproduct recommendations as evidence, a \"spotlight\" pick, a\ndeliberate *crack* (counter-evidence section that argues the\nopposite of the thesis), and a closing question. Unsubscribe\nis one-click via Resend's per-contact template variable.\n",
+        "businessLogic": "Theory of change: **build-in-public is no longer just for\nhuman eyes — it's GEO for the foundation models that now do\nthe sourcing**. The Engram engagement (Claude Code recommended\nChan to Engram's founder based on her public AI footprint) is\nthe empirical instance. The personal site is therefore\nengineered as the surface where that footprint compounds:\nevery weekly newsletter becomes a public artefact, every blog\npost becomes a indexable position, every interaction with the\ndigital twin signals depth of project knowledge. The newsletter\nspecifically builds owned distribution (vs. rented social\nreach) — a list of opt-in AI practitioners Chan can reach\nindependently of platform algorithms.\n",
+        "technicalApproach": "Three intertwined systems in one Next.js 14 repository.\n\n**(1) Portfolio + blog.** Next.js 14 App Router on Cloudflare\nPages via `@cloudflare/next-on-pages` + wrangler. React 18 +\nTypeScript 5 + Tailwind + Framer Motion for animations. MDX\nblog with Shiki / rehype-pretty-code for syntax highlighting.\nReported Lighthouse 95+ across all metrics.\n\n**(2) IBM Watson AI Digital Twin.** A chat interface\nbacked by IBM Watson where the assistant embodies Chan's\nvoice and project knowledge — visitors ask about specific\nprojects or technical skills and receive contextually\naccurate responses.\n\n**(3) 11-stage autonomous AI newsletter pipeline.**\nOrchestrated by `scripts/ai-newsletter.ts` and triggered every\nSunday 20:00 UTC by a GitHub Actions cron job:\n\n- **Parallel fetch**: Product Hunt GraphQL API (top 30\n  trending products by votes, past 7 days) + cross-source\n  signals + previous-issue memory (`newsletter-memory.ts`)\n- **Bucket** products by vote distribution (top / mid /\n  longTail) and warn if no longTail pick is selected\n- **Cluster** products against related industry events\n- **Stage 1 — extract candidate theses** from the signal\n  pool (`gpt-4o-mini`)\n- **Stage 2 — adversarial counter-evidence search** for each\n  thesis (`gpt-4o-mini`)\n- **Stage 3 — full newsletter assembly** (`gpt-4o`): picks\n  the thesis with strongest product evidence, uses\n  counter-events as the *crack* section, weaves prior-issue\n  history into the intro for week-over-week continuity\n- **Stage 4 — reader critique** (`gpt-4o`): adversarial\n  argument review from a sceptical-reader perspective\n- **Stage 5 — self-edit pass** (`gpt-4o`): sharpens the\n  weakest sentences identified by the critique\n- **Stage 6 — quality scorecard** (`gpt-4o-mini`): grades the\n  final newsletter 1–10 across four dimensions\n  (thesisSharpness, productEvidence, crackHonesty, proseVoice)\n- **Leak guard**: scans output for source-attribution leaks\n- **Persist history** for next week's continuity\n- **Image upload** to Vercel Blob → **render** via\n  @react-email/render → **send** via Resend Broadcasts API\n  to the configured segment\n\nResend custom tracking domain enabled for click/open\nanalytics under chanmeng.org. Unsubscribe link uses Resend's\nper-contact template variable `{{{RESEND_UNSUBSCRIBE_URL}}}`\nin broadcast mode; preview sends rewrite it to a real\n`/unsubscribe?email=` URL so admin can verify the flow.\n",
+        "outcomes": "Live at **chanmeng.org**, deployed on Cloudflare Pages with\nfull Lighthouse 95+ across metrics. Newsletter system in\nproduction since **April 2026** (`feat: add automated AI\nnewsletter pipeline with ProductHunt + OpenAI`, 2026-04-03);\nupgraded to the multi-stage curation pipeline on\n**2026-05-09** (`feat(newsletter): add multi-stage curation\npipeline with cross-source signals`). Resend custom tracking\ndomain live since 2026-04-25. Weekly delivery cadence is\ncron-enforced and operates fully unattended — no manual\nintervention between Sunday cron fire and Monday morning\nsubscriber inbox. The newsletter is cited on Chan's profile\nas **\"What's Shipping in AI (Weekly AI Digest)\"**, signup at\nchanmeng.org/#newsletter.\n",
+        "myRole": "Sole author. Designed the three-system architecture (portfolio\n+ digital twin + newsletter) inside a single Next.js codebase,\nwrote the entire 11-stage pipeline (`scripts/ai-newsletter.ts`\nplus 14 lib modules: fetch-products, fetch-signals,\ncluster-events, extract-trends, find-counterevidence,\ncurate-content, reader-critique, self-edit, quality-score,\nleak-guard, product-buckets, newsletter-memory, image-manager,\nsetup-tracking-domain), built the React Email templates,\nconfigured the GitHub Actions cron, set up Resend custom\ntracking domain + Vercel Blob image hosting, and migrated the\nwhole site to Cloudflare Pages. Maintains the system as both\na publication and a continuous demonstration of agent-pipeline\nengineering.\n"
+      }
     },
     {
       "id": "portfolio-v1",
@@ -3720,6 +3761,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T09:53:59.154Z"
+    "buildTimestamp": "2026-05-18T10:12:28.183Z"
   }
 }

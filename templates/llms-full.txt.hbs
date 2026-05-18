@@ -105,7 +105,28 @@
 
 ## Notable Open Source Projects
 
-{{#each _openSourcePrimary}}- **{{name}}** {{tierBadge this}} -- {{trim publicSummary}}{{#if url}} ({{url}}){{else}}{{#if repoUrl}} ({{repoUrl}}){{/if}}{{/if}}
+{{#each _openSourcePrimary}}### {{name}}{{#if tagline}} — {{tagline}}{{/if}}
+{{#if (or tier recency lastUpdated)}}{{tierBadge this}}
+{{/if}}{{#if url}}- **URL:** {{url}}
+{{/if}}{{#if repoUrl}}{{#unless (eq url repoUrl)}}- **Repository:** {{repoUrl}}
+{{/unless}}{{/if}}{{#if techStack}}- **Tech stack:** {{join techStack ", "}}
+{{/if}}{{#if publicSummary}}
+**Summary:** {{trim publicSummary}}
+{{/if}}{{#if narrative.problem}}
+**Problem:** {{trim narrative.problem}}
+{{/if}}{{#if narrative.audience}}
+**Audience:** {{trim narrative.audience}}
+{{/if}}{{#if narrative.productLogic}}
+**Product logic:** {{trim narrative.productLogic}}
+{{/if}}{{#if narrative.businessLogic}}
+**Business logic:** {{trim narrative.businessLogic}}
+{{/if}}{{#if narrative.technicalApproach}}
+**Technical approach:** {{trim narrative.technicalApproach}}
+{{/if}}{{#if narrative.outcomes}}
+**Outcomes:** {{trim narrative.outcomes}}
+{{/if}}{{#if narrative.myRole}}
+**My role:** {{trim narrative.myRole}}
+{{/if}}
 {{/each}}
 
 ### More Open Source Projects (by category)

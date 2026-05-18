@@ -17,7 +17,15 @@ const repoRoot = path.resolve(__dirname, "..");
 
 const data = yaml.load(fs.readFileSync(path.join(repoRoot, "data", "profile.yaml"), "utf8"));
 
-const referenced = new Set();
+// Files that are intentionally used outside the README pipeline (e.g. GitHub
+// repo Settings → Social Preview consumes /public/github-cover-image.svg via
+// the GitHub UI, not via README content). Treat as referenced so they don't
+// surface as orphans.
+const EXTERNAL_REFERENCES = new Set([
+  "/public/github-cover-image.svg",
+]);
+
+const referenced = new Set(EXTERNAL_REFERENCES);
 
 function walk(node) {
   if (node == null) return;

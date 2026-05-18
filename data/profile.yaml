@@ -3248,6 +3248,7 @@ projects:
     tagline: Interactive CLI introduction — `npx chan-meng` for a 5-second one-click introduction to Chan's philosophy and work
     repoUrl: https://github.com/ChanMeng666/chan-meng-cli
     logo: /public/brands/chan-meng-cli.svg
+    image: /public/screenshots/chan-meng-cli-screenshot.png
     techStack: [Node.js, "npx-installable"]
     status: live
   - id: github-visitor-counter
@@ -4558,3 +4559,16 @@ meta:
     cli:
       command: "npx chan-meng"
       description: "Try my interactive CLI."
+      screenshot: /public/screenshots/chan-meng-cli-screenshot.png
+      repoUrl: https://github.com/ChanMeng666/chan-meng-cli
+
+    # Personal photo gallery — surfaced inside the collapsed "More..." details
+    # block in the Recognition section. Six curated shots + one portrait.
+    photoGallery:
+      - { src: /public/photo-gallery/gallery-1.png, alt: "Chan Meng — gallery 1" }
+      - { src: /public/photo-gallery/gallery-2.png, alt: "Chan Meng — gallery 2" }
+      - { src: /public/photo-gallery/gallery-3.png, alt: "Chan Meng — gallery 3" }
+      - { src: /public/photo-gallery/gallery-4.png, alt: "Chan Meng — gallery 4" }
+      - { src: /public/photo-gallery/gallery-5.png, alt: "Chan Meng — gallery 5" }
+      - { src: /public/photo-gallery/gallery-6.png, alt: "Chan Meng — gallery 6" }
+      - { src: /public/chanmeng-portrait.jpg,       alt: "Chan Meng — portrait by the tree" }

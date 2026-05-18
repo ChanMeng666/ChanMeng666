@@ -326,6 +326,7 @@
         "repoUrl": { "type": "string", "format": "uri" },
         "demoUrl": { "type": "string", "format": "uri" },
         "logo": { "type": "string" },
+        "image": { "type": "string", "description": "Optional screenshot or hero image for the project." },
         "techStack": { "type": "array", "items": { "type": "string" } },
         "metrics": {
           "type": "array",

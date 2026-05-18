@@ -2738,6 +2738,142 @@ the localised `目录` TOC label). Migrated production from
 Vercel to Cloudflare Pages in 2026-04. Continues to ship
 the current cohort's lecture recordings and lab content
 each week.
+### Chinese Redefine 汉语新解 — AI Word Redefinition — Full-stack AI app that reinterprets traditional Chinese vocabulary through Google Gemini, exports shareable SVG cards, gated by a two-layer rate-limit quota system, deployed on Cloudflare Workers via OpenNext
+[tier=primary · recency=recent · updated=2026-05-18]
+- **URL:** https://chinese-redefine.chanmeng-dev.workers.dev/
+- **Repository:** https://github.com/ChanMeng666/chinese-redefine
+- **Tech stack:** Next.js 15 (App Router), React 18, TypeScript 5, Tailwind, shadcn/ui, Framer Motion, Google Gemini API, Neon Auth, Neon Postgres (serverless), Drizzle ORM, Resend (OTP email), @opennextjs/cloudflare, Cloudflare Workers, Wrangler
+
+**Summary:** Full-stack AI application that reinterprets traditional Chinese
+vocabulary through Google Gemini and exports the results as
+shareable, vermillion-seal-themed SVG cards. Production deployment
+includes user authentication (Neon Auth, migrated from self-hosted
+Better Auth), Neon Postgres + Drizzle ORM for cards and quota
+persistence, a two-tier rate-limit system (per-user free/pro quotas
+plus a global daily/monthly circuit breaker), public gallery,
+"My Cards" private collection, Resend-powered OTP email
+verification, and Cloudflare Workers deployment via
+`@opennextjs/cloudflare`. Modern Chinese Ink aesthetic UI
+redesigned March 2026.
+
+**Problem:** Generic LLM chat windows are bad at *creative cultural
+reinterpretation*: ask Gemini directly to "redefine 婚姻" and
+you get a paragraph of generic prose with no shape, no
+shareability, no persistence, and no protection against
+adversarial users burning through API quota. The
+Chinese-language ecosystem in particular needs a tool that
+treats vocabulary as a *cultural object* — produces a result
+worth screenshotting, saves it for the user to revisit, and
+lets the curated best ones surface to a public gallery — all
+while staying within a sustainable cost envelope for a solo
+operator.
+
+**Audience:** Three groups. **Chinese language learners and cultural
+researchers** who want fresh perspectives on traditional
+vocabulary — the core product use case. **Content creators
+and designers** who want a one-tap path from word → AI
+interpretation → exportable shareable visual card. **Engineering
+portfolio audiences** (recruiters, founders, the Engram-style
+Claude-Code-sourcing case) who use the project as proof that
+Chan ships full-stack AI applications end-to-end — not just
+prompts, but the auth + DB + quota + deployment scaffolding
+around them.
+
+**Product logic:** A user lands on the site, types a Chinese word in the input
+form, and sees a real-time Gemini-generated reinterpretation
+rendered as a stylised card. They can preview the SVG version,
+download it as a high-resolution shareable image, or — once
+signed in via OAuth or email-OTP — save it to their personal
+"My Cards" collection. The public **Gallery** surfaces curated
+community cards. A live **Quota Display** widget shows the
+user's remaining daily and monthly allowance, with clear
+upgrade paths from free → pro tier. Authentication uses Neon
+Auth's pre-built flows (login, register, email verification
+via Resend-sent OTP, forgot-password, OAuth callback).
+
+**Business logic:** Theory of change for a solo-operator AI product: build the
+cost-control layer *into the application* from the start, not
+after the bill arrives. The two-layer quota system —
+per-user tier (free: 1/min · 3/day · 30/month; pro: 5/min ·
+30/day · 300/month) plus a **global circuit breaker** (150
+generations/day · 1,500/month across all users) — means the
+Gemini bill is bounded by code, not by trust. The product
+itself is free to play with so the gallery accumulates real
+content; paid tiers exist as the upgrade surface for power
+users; the global cap prevents a single bad actor (or a viral
+moment) from triggering runaway cost. The architecture is the
+business model.
+
+**Technical approach:** **Next.js 15 App Router** with grouped routes:
+`(auth)` — login, register, verify-email (OTP input),
+forgot-password, debug; `(protected)` — account / cards (the
+signed-in dashboard); top-level `gallery` (public). API routes
+under `app/api/`: `generate` (Gemini call), `cards`,
+`gallery`, `auth`, `debug`. UI built with **shadcn/ui** atop
+Radix primitives + **Framer Motion** animations + a
+deliberate **Modern Chinese Ink aesthetic** (vermillion seal
+logo, ink-wash typography, redesigned end-to-end March 2026).
+
+**Persistence layer**: **Drizzle ORM** over **Neon serverless
+Postgres** with three core tables — `cards` (the saved AI
+outputs), `userUsage` (per-user daily/monthly counters keyed
+by date), `globalUsage` (the circuit-breaker counters).
+Drizzle Kit for migrations. CUID2 (`@paralleldrive/cuid2`)
+for ID generation — collision-resistant, sortable, shorter
+than UUIDs.
+
+**Auth layer**: **Neon Auth**, migrated from a self-hosted
+Better Auth implementation in March 2026. The migration
+rewrote middleware whitelists (callback URLs for OAuth,
+verification-flow query parameters, static assets like
+`icon.svg`), formalised the email-OTP flow with explicit
+success guidance and resend capability, and switched social
+OAuth to absolute callback URLs to work correctly under
+Cloudflare Workers' edge-runtime constraints.
+
+**AI layer**: Google **Gemini API** for generation, fronted by
+the two-layer rate-limit module in `lib/rate-limit.ts`. Every
+generation request: (1) checks user tier limits against
+`userUsage`; (2) checks the **global circuit breaker** against
+`globalUsage`; (3) only if both pass, calls Gemini; (4) writes
+the result to `cards` and increments both counters atomically.
+
+**Email**: **Resend** for transactional OTP delivery during
+email verification and password reset.
+
+**Deployment**: **Cloudflare Workers** via
+**`@opennextjs/cloudflare`** + **Wrangler** — a non-trivial
+migration from the original Vercel deployment, because Workers'
+edge runtime requires absolute URLs for OAuth callbacks and
+differs from Node-runtime assumptions in subtle ways (every
+edge-runtime crash during the migration is in the commit log
+as a separate fix).
+
+**Outcomes:** Live at **chinese-redefine.chanmeng-dev.workers.dev**. Solo
+development: **60 commits, ~95% Chan-authored** across two
+GitHub identities. The Vercel → Cloudflare Workers migration
+and the Better Auth → Neon Auth migration were both completed
+in a focused March 30, 2026 sprint — the commit log captures
+each edge-runtime crash and OAuth callback bug in sequence as
+they were fixed. Modern Chinese Ink aesthetic redesign
+(vermillion seal logo, ink-wash typography) shipped the same
+day. The gallery serves as a living portfolio of AI-generated
+Chinese-word reinterpretations.
+
+**My role:** Sole engineer and sole designer. Architected the Next.js App
+Router structure, wrote the two-layer rate-limit / quota
+engine, designed the three-table Drizzle schema, executed the
+Better Auth → Neon Auth migration (including middleware
+whitelists, OAuth callback rewriting, OTP verification flow,
+and email-passing via URL params to the verify-email page),
+executed the Vercel → Cloudflare Workers migration via
+`@opennextjs/cloudflare`, built every shadcn/ui component
+composition (`CardGenerator`, `CardThumbnail`, `ResultCard`,
+`SVGPreview`, `DownloadButton`, `GalleryGrid`, `AuthForm`,
+`QuotaDisplay`, `InputForm`, `DeveloperSection`, `Navbar`),
+designed and implemented the SVG generation system in
+`lib/svgGenerator.ts`, and shipped the Modern Chinese Ink
+aesthetic redesign end-to-end.
 ### FemTracker Agent — 8-agent CopilotKit + LangGraph women's-health companion (merged into CopilotKit's official demos_2025)
 [tier=primary · recency=recent · updated=2026-05-18]
 - **URL:** https://femtracker-agent.vercel.app/
@@ -3088,7 +3224,6 @@ regression breaks visible branding immediately.
 - [Hospital Roster Agent](https://github.com/ChanMeng666/hospital-roster-agent) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://roster.chanmeng.org/
 **creative:**
 - [AI Image Generator](https://github.com/ChanMeng666/image-generator) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://image-generator.chanmeng-dev.workers.dev/
-- [Chinese Redefine](https://github.com/ChanMeng666/chinese-redefine) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://chinese-redefine.chanmeng-dev.workers.dev/
 - [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://huggingface.co/spaces/ChanMeng666/interactive-story-generator
 - [Emoji Story Generator](https://github.com/ChanMeng666/emoji-story-generator) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://huggingface.co/spaces/ChanMeng666/emoji-story-generator
 - [Design Pages](https://github.com/ChanMeng666/design-pages) [tier=archive · recency=historical · updated=2026-05-18] -- live: https://chanmeng666.github.io/design-pages/

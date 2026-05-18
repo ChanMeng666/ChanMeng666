@@ -1476,23 +1476,130 @@
       "id": "gradient-svg-generator",
       "tier": "primary",
       "recency": "active",
-      "lastUpdated": "2026-05-18",
-      "name": "gradient-svg-generator",
+      "lastUpdated": "2026-05-19",
+      "name": "gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs",
       "priority": 10,
       "category": "creative",
-      "tagline": "340+ animated SVG templates — powers every visual on this profile",
+      "tagline": "340+ parametric animated SVG templates served as live XML via Vercel Edge — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 273-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name \"Chromaflow\".",
       "url": "https://gradient-svg-generator.vercel.app/",
       "repoUrl": "https://github.com/ChanMeng666/gradient-svg-generator",
       "logo": "/public/brands/gradient-svg-generator-logo.svg",
+      "extraLinks": [
+        {
+          "label": "Visual editor (/create)",
+          "url": "https://gradient-svg-generator.vercel.app/create"
+        },
+        {
+          "label": "Template gallery",
+          "url": "https://gradient-svg-generator.vercel.app/templates"
+        },
+        {
+          "label": "API docs",
+          "url": "https://gradient-svg-generator.vercel.app/api-docs"
+        },
+        {
+          "label": "Architecture doc",
+          "url": "https://github.com/ChanMeng666/gradient-svg-generator/blob/main/docs/architecture.md"
+        },
+        {
+          "label": "Adding-an-effect guide",
+          "url": "https://github.com/ChanMeng666/gradient-svg-generator/blob/main/docs/adding-an-effect.md"
+        },
+        {
+          "label": "Truth-up-numbers commit",
+          "url": "https://github.com/ChanMeng666/gradient-svg-generator/commit/fdcb7dd"
+        }
+      ],
+      "techStack": [
+        "Next.js 16.2 (App Router + Vercel Edge runtime)",
+        "React 19.2 + TypeScript 5.4 (gradual JS->TS migration through Phase 7)",
+        "Tailwind CSS 4.2 + @tailwindcss/typography + @tailwindcss/forms",
+        "Zustand 5.0 (template gallery state)",
+        "@tanstack/react-query 5.83 (data fetching)",
+        "@tanstack/react-virtual 3.13 (virtualized template grid for 340+ entries)",
+        "Zod 3.23 (runtime validation of /api/svg query params, 400-on-bad-input)",
+        "fuse.js 7.1 (fuzzy template search)",
+        "framer-motion 12.23 (visual editor micro-interactions)",
+        "SVG <animate> / <animateTransform> (SMIL animation primitives)",
+        "CSS @keyframes embedded in <style> inside the streamed SVG",
+        "Animated linearGradient / radialGradient stop offsets",
+        "SVG filters: <feTurbulence>, <feDisplacementMap>, <feGaussianBlur>, <feColorMatrix>",
+        "<textPath> for text-following-path animations",
+        "@vercel/node 2.15 serverless function (/api/svg endpoint streams XML)",
+        "Vitest 1.6 + @testing-library/* (tests/contract/ + tests/unit/)",
+        "ESLint 9 + TypeScript-ESLint 8 + Prettier 3 + Husky 9 + lint-staged 15",
+        "web-vitals 5.0 (production performance telemetry)",
+        "ISC license"
+      ],
+      "keywords": [
+        "Streaming SVG-as-service",
+        "Parametric template system",
+        "SVG animation principles (SMIL + CSS + filters)",
+        "URL-parameterised banner generator",
+        "340+ template catalog",
+        "Virtualized template gallery",
+        "JS->TS gradual migration",
+        "Anti-LLM-hype marketing-number discipline",
+        "Multi-phase refactor (5/6/7/8)",
+        "Profile dogfooding"
+      ],
+      "metrics": [
+        {
+          "label": "Internal product name",
+          "value": "Chromaflow (package.json) — public URL retains the descriptive 'gradient-svg-generator' for discoverability"
+        },
+        {
+          "label": "First commit",
+          "value": "2025-01-06 (commit 782c6f1)"
+        },
+        {
+          "label": "Latest commit",
+          "value": "2026-04-21 (commit 4ee9829, still actively iterating)"
+        },
+        {
+          "label": "Total commits",
+          "value": "273 (solo, ~18 months sustained)"
+        },
+        {
+          "label": "Template count",
+          "value": "340+ across 16 categories (Pride 20, Tech, Nature, Material, Text-FX, Gaming, Weather 12, Light&Shadow 12, Art Movements 12, Culinary 12, Patterns 8, Metallic 8, Path-Text 12, Shapes 25, Experimental 29, GitHub-Profile 30)"
+        },
+        {
+          "label": "Refactor phases",
+          "value": "4 documented phases (5: extract svgPrimitives factory + _shared/palettes; 6: truth-up-marketing-numbers + docs/architecture.md; 7: JS->TS migration + Zod validation; 8: gallery virtualization)"
+        },
+        {
+          "label": "URL parameters",
+          "value": "10 (text, template, height, duration, color0-N, gradientType, stroke, strokeWidth, rotate, textBg)"
+        },
+        {
+          "label": "API endpoint",
+          "value": "GET /api/svg — streams XML with Content-Type: image/svg+xml"
+        },
+        {
+          "label": "Anti-hype commit",
+          "value": "fdcb7dd 'truth up marketing numbers across the codebase' + db724e0 'drop 50+ Effects claim'"
+        },
+        {
+          "label": "Dogfooding",
+          "value": "Powers every visual badge / banner in every Chan-authored README — including this profile"
+        },
+        {
+          "label": "License",
+          "value": "ISC"
+        }
+      ],
       "status": "live",
-      "publicSummary": "340+ animated gradient SVG banners delivered as URL-parameterised\nstreaming SVG — paste a single `<img>` link, no install required.\nPowers every visual on this profile. 273 commits, Vercel-deployed,\nCI via GitHub Actions, Vitest test suite.\n",
+      "startDate": "2025-01-06",
+      "publicSummary": "Production **streaming-SVG service** that delivers **340+ animated\ngradient banner templates** as live XML over a parameterised URL —\npaste one Markdown image link, no install, the browser animates\nthe gradient locally using a combination of three SVG-animation\nprinciples: **SMIL `<animate>` and `<animateTransform>` elements**\n(animating gradient stop offsets, transforms, opacities),\n**CSS `@keyframes` embedded in a `<style>` block inside the\nstreamed SVG document** (driving blur, glow, text effects), and\n**SVG filter primitives** (`<feTurbulence>`,\n`<feDisplacementMap>`, `<feGaussianBlur>`, `<feColorMatrix>`)\nfor organic distortions (turbulent waves, liquid mercury,\ncaustic underwater). The codebase carries the internal product\nname **Chromaflow** (per `package.json`) while keeping the\ndescriptive `gradient-svg-generator` repo and URL for\ndiscoverability. Built up over **18 months / 273 solo commits**\nthrough a documented **4-phase refactor saga**: Phase 5 extracted\n`svgPrimitives` factory + `_shared/palettes.js`; Phase 6\ndeliberately *\"truthed up marketing numbers\"* (commit `fdcb7dd`\nfollowed by `db724e0` *\"drop 50+ Effects claim\"* — the kind of\nanti-LLM-hype discipline you don't usually see in solo OSS);\nPhase 7 was the gradual JavaScript->TypeScript migration with\nZod-validated `/api/svg` query params; Phase 8 added\n`@tanstack/react-virtual` virtualization for the 340+ template\ngallery so the visual editor scrolls smoothly. Powers **every\nvisual badge in every Chan-authored README**, including the\nprofile that ships this entry — continuous dogfooding means any\nrendering regression breaks visible branding immediately.\n",
       "narrative": {
-        "problem": "Adding a striking animated banner to a GitHub profile or\ndocumentation site requires either bespoke SVG authorship,\nthird-party paid services, or static images that look dated\nwithin months. There is no zero-install service that lets a\ndeveloper drop a parameterised URL into Markdown and get a\nlive, animated, on-brand banner that updates without\nre-rendering.\n",
-        "audience": "Developers, open-source maintainers, technical writers, and\ncommunity organisers who want their READMEs, profiles, and\nlanding pages to differentiate visually without dependency\nsprawl. Specific subgroups served by template categories:\npride communities (20 dedicated pride-flag templates),\nDevOps/full-stack practitioners (30 GitHub Profile templates),\ncreative technologists (29 experimental dimensional-portal\ntemplates).\n",
-        "productLogic": "Single-URL contract: append parameters (`text=`, `template=`,\n`height=`, `duration=`, plus colour stops `color0=`, `color1=`,\n...) to the API endpoint, embed that URL as a Markdown image,\ndone. Users who don't want to handwrite parameters use the\n`/create` visual editor — a GUI composer that previews changes\nlive and produces the final URL for copy-paste.\n",
-        "technicalApproach": "The service streams **dynamic SVG with embedded CSS animations**\nrather than rasterising images — every banner is a small, live\nXML document the browser animates locally, so file sizes stay\ntiny and animations stay sharp at any zoom. Template\norganisation is the architectural bet: 340+ templates split\ninto gradient types (horizontal / vertical / holographic /\nradial), animation effects (morphing shapes, fluid dynamics,\nconsciousness streams), text rendering (path animation, glitch\neffects), and background patterns (quantum tunnels,\nelectromagnetic fields, memory fragments) — each template a\nself-contained parametric generator rather than a monolithic\nswitch. CI/CD: GitHub Actions; tests: Vitest; deploy: Vercel.\n",
-        "outcomes": "273 sustained commits. Production-grade availability via\nVercel's global edge. Apache-licensed for broad reuse. **Powers\nevery section header and visual badge in this very profile** —\nthe project is its own dogfooding evidence: if you can see\nanimated gradient banners on the README that generated this\npage, you're looking at gradient-svg-generator output.\n",
-        "myRole": "Sole author. Designed the URL-parameterised streaming-SVG\ncontract, authored every template category, built the live\nbuilder at `/create`, and wired the Vercel + GitHub Actions\n+ Vitest production pipeline. Uses the service across every\npersonal repo as continuous integration: any rendering\nregression breaks visible branding immediately.\n"
+        "problem": "Adding striking animated visuals to a GitHub profile, project\nREADME, or documentation site requires either bespoke SVG\nauthorship (a multi-day yak-shave per banner), third-party\npaid services (most of which lock you into a watermark or a\nnarrow style palette), or static rasterised images that look\ndated within months. None of these scale to the modern open-\nsource norm of *hundreds* of repos per developer, each with\ndifferentiated branding. The specific technical gap: there's\nno zero-install service that lets a developer drop a\nparameterised URL into Markdown and get **a live, animated,\non-brand SVG banner** that the browser renders standalone\n(no JS dependency, no Lottie player, no canvas) and that\nsurvives GitHub's Camo proxy stripping. The product gap\nwidens for **specific identity-coded communities** — pride\ncreators wanting accurate flag palettes, technical writers\nwanting consistent capsule shapes across docs, niche\naesthetic communities (cyberpunk / art deco / impressionist)\nwith no off-the-shelf template gallery.\n",
+        "audience": "Three concentric audiences. (1) **Open-source maintainers\nand developer-builders** who want their READMEs and profile\npages to look polished without dependency sprawl — the\nprimary daily-active user segment. (2) **Identity-coded\ncommunities** with template subsets specifically authored\nfor them: **20 dedicated pride flag templates** (Progress,\nTrans, Bi, Pan, Lesbian, Nonbinary, Ace, Genderfluid,\nAromantic, Rainbow, etc.); **30 GitHub Profile templates**\noriented around DevOps/full-stack practitioner branding;\n**29 experimental dimensional-portal templates** for\ncreative technologists. (3) **Engineers studying the\nproject as a worked example** of (a) parametric SVG\nanimation built without a heavy graphics framework, (b) a\ndeliberately documented multi-phase refactor saga, (c) the\nanti-LLM-hype \"truth up marketing numbers\" discipline.\n",
+        "productLogic": "Single-URL contract. The user pastes one Markdown image line:\n`![banner](https://gradient-svg-generator.vercel.app/api/svg?text=Hello&template=neural-network&height=120)`\nand GitHub (or any Markdown renderer) embeds the live\nanimated SVG. **10 URL parameters** control everything:\n`text=` (display string, `;`-separated for skill-pill grids),\n`template=` (any of the 340+ template names from the\ngallery), `height=` (1–10000 pixels), `duration=` (animation\nloop time), `color0=` through `colorN=` (gradient stop\noverrides, hex without `#`), `gradientType=` (effect-style\noverride that bypasses the template default), `stroke=`,\n`strokeWidth=`, `rotate=`, `textBg=`. Users who don't want\nto handwrite parameters open the\n**[/create visual editor](https://gradient-svg-generator.vercel.app/create)**:\na GUI composer with live preview that emits the final URL\nfor copy-paste. Users who want to browse first hit\n**[/templates](https://gradient-svg-generator.vercel.app/templates)**\n— a `@tanstack/react-virtual`-virtualized gallery (Phase 8\ncommit `45cb01f`) with `fuse.js` fuzzy search across\nnames + categories + tags, so 340+ entries scroll smoothly\non every device.\n",
+        "businessLogic": "Free, ISC-licensed, no paywall, no API key, no watermark —\nthe entire service runs on Vercel's free tier with the SVG\ngeneration done in a serverless function that streams XML\ndirectly back to the client (`Content-Type: image/svg+xml`),\ncached at Vercel's edge. The build-in-public value: the\nproject is **infrastructure for Chan's other projects** —\nevery visual badge across every Chan-authored repo's README\npulls from this service, so the service becomes its own\ncontinuous-integration signal (any rendering regression\nbreaks visible branding immediately on her own portfolio,\nforcing same-day fix). This is also the project that\nsurvived the most explicit **anti-LLM-hype audit**: Phase 6\ncommit `fdcb7dd` *\"truth up marketing numbers across the\ncodebase\"* + the follow-up `db724e0` *\"drop 50+ Effects\nclaim\"* + `8fd7886` *\"catch older stale counts (216+/22\ncategories)\"* — Chan went through and corrected every\nexaggerated count in the README and documentation, replacing\nthem with the true template count. The kind of engineering\ndiscipline that flips marketing claims into verifiable\nstatistics rather than letting LLM-generated copy inflate\nthem.\n",
+        "technicalApproach": "**The SVG-animation technical principle is the load-bearing\nengineering of this project.** Every banner is a small,\nlive XML document — typically 2-8KB — that the browser\nanimates locally without any JavaScript runtime. The\nanimation is composed from three orthogonal SVG primitives,\nused in combination:\n\n**(1) SMIL animation elements** (`<animate>`,\n`<animateTransform>`, `<animateMotion>`) animate XML\nattributes over time. The two most-used patterns: animating\na `<linearGradient>` or `<radialGradient>`'s stop `offset`\nvalues to make colors flow (rainbow-wave, hologram-blue,\nnorthern-aurora templates), and `<animateTransform>`\nrotating a pattern (zigzag-energy, cyber-matrix). SMIL is\nthe **declarative** animation channel — the entire timeline\nis encoded as XML attributes, no scripting.\n\n**(2) CSS `@keyframes` embedded in a `<style>` block inside\nthe SVG document**. Where SMIL is limited (e.g. animating\n`filter` strength, animating `stroke-dasharray` for path\nreveals), CSS keyframes pick up the slack. The\ntypewriter-terminal, glitch-cyber, neon-flicker,\nluminance-glow, and chrome-flow templates all use a\n`<defs><style>@keyframes ...</style></defs>` block at the\ntop of the SVG with selectors targeting elements inside\nthe document. This is the **same technique** Chan uses in\nthe [github-readme-suno-cards](https://github.com/ChanMeng666/github-readme-suno-cards)\nsister project to drive the equalizer animation through\nGitHub's Camo proxy — CSS keyframes survive Camo's SVG\nsanitization pass.\n\n**(3) SVG filter primitives** for organic effects that\nneither SMIL nor CSS can produce. The interesting templates\n— turbulent-waves, liquid-mercury, plasma-blob,\nelectromagnetic-field, caustic-underwater, fog-rolling,\nforest-mist — all rely on **`<feTurbulence>`** (Perlin/\nfractal noise generation) feeding **`<feDisplacementMap>`**\n(which uses one image's color channels to displace another\nimage's pixels) for organic distortion, plus\n**`<feGaussianBlur>`** and **`<feColorMatrix>`** for\nbloom/glow effects (god-rays, lens-flare, bokeh-blur).\nPath-text-animation templates layer **`<textPath>`** on top\nof an animated `<path>` so the text follows a moving curve\n(curved-flow, spiral-text, typing-path-reveal).\n\n**Template organisation is the architectural bet.** 340+\ntemplates are split into **16 named categories** (Pride,\nTech, Nature, Material, Text-FX, Gaming, Weather,\nLight&Shadow, Art Movements, Culinary, Patterns, Metallic,\nPath-Text, Shapes, Experimental, GitHub-Profile) plus 4\ngradient base types (horizontal, vertical, holographic,\nradial). Phase 5 of the refactor saga extracted the shared\nprimitives — `svgPrimitives` factory functions for animated\nlinear/radial gradients (commit `0dedfb5`), `_shared/\npalettes.js` for named color palettes (commit `43e7774`),\nand feature-folder organisation (`features/specialty/`,\n`features/fluids/`, etc.) replacing the original flat\nstructure. Phase 7 was the **JavaScript->TypeScript\nmigration in seven sub-phases** (7.1 through 7.8) plus\ncommit `4c7d14b` *\"Zod-validate /api/svg query params +\n400 on bad height\"* — runtime validation against a Zod\nschema so a request like `?height=99999999999` returns a\nclean 400 with a typed error message rather than crashing\nthe function.\n\n**Deployment**: Vercel Edge runtime via `@vercel/node` 2.15\nserverless function at `/api/svg`. **Testing**: Vitest 1.6\nwith both `tests/contract/` (API surface contract tests\nguarding the URL-parameter contract — invariant across\nrefactors) and `tests/unit/`. **Code quality discipline**:\nHusky 9 pre-commit hooks running `eslint --fix` +\n`prettier --write` via `lint-staged`, so no lint or\nformatting regression reaches the remote. **Performance**:\n`web-vitals` 5.0 telemetry in production. **State** in the\nvisual editor: Zustand 5.0 for store shape, React Query for\ntemplate metadata fetching, `@tanstack/react-virtual` for\nthe 340+ template gallery (Phase 8 fix `4626dfd`\n*\"eliminate bottom whitespace by using window\nvirtualizer\"*).\n",
+        "outcomes": "**273 solo commits across 18 months** (first commit\n2025-01-06, latest `4ee9829` 2026-04-21), production-grade\navailability on Vercel's global edge, ISC-licensed for\nbroad reuse. **Dogfooded across every Chan-authored repo**:\nthe badges, banners, and section headers in every public\nREADME (including the README that ships this profile entry)\ncome from `gradient-svg-generator.vercel.app/api/svg` URLs\n— which means any rendering regression on the service breaks\nvisible branding immediately, forcing a same-day fix and\nmaking the dogfooding loop continuous. The **4-phase\nrefactor saga** is itself the outcome to surface: Phase 5\n(extract svgPrimitives + palettes + feature-folders),\nPhase 6 (truth up marketing numbers + author `docs/\narchitecture.md` and `docs/adding-an-effect.md`\nwalkthrough), Phase 7 (JS->TS migration in 7 sub-phases +\nZod runtime validation), Phase 8 (template-gallery\nvirtualization with react-virtual). The **anti-LLM-hype\nmarketing-number discipline** (commits `fdcb7dd` +\n`db724e0` + `8fd7886`) is rare enough in solo OSS that it's\nworth flagging on its own — Chan deliberately went through\nthe codebase and corrected exaggerated effect counts rather\nthan letting LLM-generated copy inflate them. Roadmap:\ncontinued template additions, additional gradient-type\nvariants, broader category coverage.\n",
+        "myRole": "Sole author. Designed the URL-parameterised streaming-SVG\ncontract; authored every one of the 340+ template\ngenerators across 16 categories; designed the parametric\ntemplate system so each template is a self-contained\nfunction rather than a monolithic switch; engineered the\nSVG-animation toolkit combining SMIL + CSS keyframes + SVG\nfilters; built the `/create` visual editor with live\npreview; built the `/templates` virtualized gallery; ran\nthe entire 4-phase refactor saga (Phase 5 primitive\nextraction, Phase 6 truth-up-the-marketing-numbers + docs\nauthoring, Phase 7 JS->TS migration + Zod validation,\nPhase 8 react-virtual gallery); set up the Vercel + GitHub\nActions + Vitest + Husky pre-commit pipeline. Uses the\nservice across every personal repo as a continuous-\nintegration signal for the project itself.\n"
       }
     },
     {
@@ -4755,6 +4862,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T13:22:30.080Z"
+    "buildTimestamp": "2026-05-18T13:28:38.866Z"
   }
 }

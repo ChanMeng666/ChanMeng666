@@ -4678,17 +4678,241 @@ projects:
 
   # ------- Commercial / Partnership Web Applications -------
   - id: ai-hackathon-assistant
-    tier: secondary
-    recency: historical
-    lastUpdated: "2026-05-18"
-    name: AI Hackathon Festival 2025 Assistant
-    priority: 27
-    category: web-apps
-    tagline: Commercial-grade AI platform for Auckland University of Technology, AI Forum NZ, and She Sharp — full-screen AI chat with Google Gemini 2.5 Flash, community-driven FAQ voting, Notion backend
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-19"
+    name: Event Q&A AI Template — AI Hackathon Festival 2025 Assistant
+    priority: 14
+    category: ai-apps
+    tagline: Industry-partnered AI event platform (AUT × AI Forum NZ × She Sharp) — interactive 3D quantum-orb sprite mascot with 6-tier affection gamification, OpenAI GPT-4o-mini streaming chat, Notion-as-database community FAQ, deployed on Cloudflare Workers
     url: https://ai-hackathon-assistant.chanmeng-dev.workers.dev/
+    repoUrl: https://github.com/ChanMeng666/event-qa-ai-template
     logo: /public/brands/ai-hackathon-logo-full.svg
-    techStack: [Next.js, "Google Gemini 2.5 Flash", "Notion API", "Cloudflare Workers"]
+    extraLinks:
+      - { label: "Hackathon partner — AI Forum NZ", url: "https://aiforum.org.nz/hackathon" }
+      - { label: "Partner — AUT (host venue)", url: "https://www.aut.ac.nz/" }
+      - { label: "Partner — She Sharp", url: "https://www.shesharp.org.nz/" }
+      - { label: "Template setup guide", url: "https://github.com/ChanMeng666/event-qa-ai-template/blob/main/docs/TEMPLATE-SETUP.md" }
+      - { label: "Notion integration docs", url: "https://github.com/ChanMeng666/event-qa-ai-template/blob/main/docs/NOTION-INTEGRATION.md" }
+    techStack:
+      - "Next.js 16.1 (App Router)"
+      - "React 18 + TypeScript 5"
+      - "Tailwind CSS v3 + Framer Motion v12"
+      - "Vercel AI SDK v4.3"
+      - "@ai-sdk/openai (GPT-4o-mini-2024-07-18 streaming)"
+      - "Three.js 0.182 + @react-three/fiber 8.16"
+      - "Custom Quantum Orb 3D mascot (CSS 3D transforms + Three.js particles)"
+      - "Sprite affection gamification engine (gesture detection, mood weighting, time-of-day bias)"
+      - "Notion REST API (raw fetch, CF Workers compatible — replaced @notionhq/client SDK)"
+      - "shadcn/ui + Radix primitives"
+      - "@opennextjs/cloudflare adapter"
+      - "Cloudflare Workers deployment (migrated from Vercel)"
+      - "wrangler v4 CI/CD"
+      - "localStorage state persistence (50-msg chat history + sprite affection state)"
+      - "5-min FAQ client cache + optimistic vote/view updates"
     status: live
+    publicSummary: |
+      Real industry-partnered AI event assistant built for the **AI
+      Hackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised
+      by **Auckland University of Technology**, **AI Forum New Zealand**,
+      and **She Sharp**, with **UN Sustainable Development Goals** as
+      the innovation brief. The platform serves participants and mentors
+      through three interlocking systems: (1) an **interactive 3D sprite
+      mascot** with a 6-tier "Stranger → Soulmate" affection system,
+      7-state dynamic mood engine, 17 emotion categories, gesture
+      recognition (circle/pat/swipe), negative-behaviour penalties,
+      streak bonuses, and time-of-day emotion biases — a fully gamified
+      personality layer that responds to how users actually touch the
+      page; (2) a **Notion-as-database community FAQ** with up/downvote
+      ranking, view tracking, 5-minute client cache, and graceful static
+      fallback when Notion is unreachable; (3) an **OpenAI GPT-4o-mini
+      streaming chat** with markdown-rendered responses and one-click
+      FAQ-to-chat hand-off. After the live deployment, the codebase was
+      generalised into a reusable open-source template
+      (`event-qa-ai-template` on GitHub, MIT) so any future hackathon /
+      conference can fork-and-config the same stack. Chan was
+      subsequently recognised among the **14 expert mentors** at the
+      festival.
+    narrative:
+      problem: |
+        Hackathons and conferences generate the same Q&A surface every
+        year: participants ask the same 30 questions ("how do I form a
+        team", "what counts as AI", "when do I have to be on site",
+        "what's the prize structure", "where do I find a mentor"), and
+        organisers answer them via static PDFs that go stale the moment
+        the schedule shifts. Bolt-on chatbots exist but they treat
+        humans as passive consumers — a popup widget in the corner, a
+        knowledge base scraped at build time, no memory of what the
+        community itself finds helpful. Three structural gaps stack up:
+        (1) the FAQ is **authored once** rather than **curated by the
+        community**, so quality drifts; (2) the AI is a generic
+        wrapper around a chat API, with no event-specific personality
+        or theme tie-in; (3) organisers cannot update content without
+        a code redeploy, so the platform calcifies the moment the
+        original developer hands it off. The AI Hackathon Festival
+        2025 organisers needed a platform that solved all three on the
+        timeline of a real event with 80+ participants and three
+        co-organising institutions reviewing every word on screen.
+      audience: |
+        Direct users were the **80+ participants and 14 expert mentors**
+        of AI Hackathon Festival 2025 — students from Auckland
+        universities, **Westlake Girls High School** secondary students,
+        and AI Forum NZ industry mentors all asking the same FAQ-style
+        questions across a 26-hour residential event. Secondary
+        audience: the **three co-organising institutions** (AUT, AI
+        Forum NZ, She Sharp) who use the platform as a public-facing
+        artefact of their joint programme. Tertiary audience: future
+        hackathon and conference organisers in NZ and abroad who can
+        fork the open-source template (`event-qa-ai-template`) and
+        deploy their own event Q&A AI in under an hour by editing four
+        configuration files — `site.config.ts`, `ai.config.ts`,
+        `content.config.ts`, `branding.config.ts` — without touching
+        component code.
+      productLogic: |
+        The product is structured as three layers that compose
+        independently. Layer one is the **3D welcoming surface**: the
+        landing page renders a particle sphere with a "WELCOME TO AI
+        HACKATHON!" greeting set against a `CosmicBackground` Three.js
+        scene, with `Calendar` / `MapPin` event-info widgets, sponsor
+        logos for the three co-organisers, and a glassmorphism Google
+        Maps modal showing AUT WG Building. Layer two is the **chat
+        page** — a 70/30 desktop split between a full-screen OpenAI
+        chat (with `react-markdown` + `rehype-highlight` for
+        code-block syntax highlighting) and a community FAQ sidebar.
+        Layer three — the differentiator — is the **interactive sprite
+        mascot** that lives alongside the chat: a CSS-3D **Quantum
+        Singularity Orb** (accretion disk + photon ring + event
+        horizon + energy jets, all built from layered divs with
+        `transform-style: preserve-3d` and `rotateX(60deg)`) that
+        becomes a fully gamified personality. The user can **circle**,
+        **swipe vertically/horizontally**, **pat**, or **click** the
+        orb; the gesture detection engine tracks each interaction and
+        feeds it through an affection/mood scoring system. Five
+        gestures grant affection (circle x5 = +10 affection / "Wheee~!
+        So dizzy but fun!"), five negative behaviours penalise it
+        (`roughMovement`, `spamClick`, `suddenLeave`, `longIgnore`,
+        `excessiveCircle`), and the resulting state drives which of
+        17 emotions the sprite expresses — including three **rare**
+        emotions (`devoted`, `starry`, `mischievous`) only unlocked
+        at the top affection tiers. The result: users do not just chat
+        with an AI, they **build a relationship with a tiny digital
+        creature** while doing so — a memorable, shareable layer that
+        turns a Q&A bot into a piece of event identity.
+      businessLogic: |
+        Three intertwined value propositions. For the **organising
+        institutions**, the platform is a public-facing demonstration
+        artefact of the joint AUT × AI Forum NZ × She Sharp programme,
+        running on Cloudflare Workers (free tier covers an event-week
+        traffic spike with zero cost) with a Notion database that
+        **non-developer event staff can edit live** during the event —
+        adding new FAQ entries through the Notion UI, watching them
+        appear within the 5-minute client cache window. For **future
+        event organisers**, after the live event, the codebase was
+        deliberately generalised into a **reusable MIT template**
+        (`event-qa-ai-template`) with all event-specific content
+        extracted into `config/*.ts` files and full setup
+        documentation, so the same stack ships any hackathon /
+        conference / community event Q&A platform in under an hour of
+        configuration. For **Chan**, the project established a
+        verifiable, AI-Forum-NZ-endorsed track record of shipping
+        commercial-grade AI infrastructure for an industry partner —
+        a credential cited in the public LinkedIn announcement of the
+        14-mentor cohort and in the Engram Architect Cohort
+        Engagement Letter narrative.
+      technicalApproach: |
+        **AI layer.** OpenAI GPT-4o-mini-2024-07-18 served through
+        Vercel AI SDK v4.3's `streamText` with `convertToCoreMessages`,
+        returning `toDataStreamResponse()` for character-by-character
+        SSE streaming. The system prompt is **generated from
+        siteConfig at runtime** so any organiser fork inherits an
+        event-specific prompt without code edits — it embeds event
+        name, dates, venue, theme (UN SDGs), team-formation rules
+        (3-6 members, Hacker/Hipster/Hustler composition), schedule
+        (Friday 8 PM venue close, Discord for mentor requests), and
+        prize tiers ($250 venue, $1,000 national, $5,000 national
+        Agentic AI winner) plus Markdown formatting guidelines. The
+        codebase pivoted from Google Gemini 2.5 Flash to OpenAI
+        GPT-4o-mini mid-build (commit `5eb3e70`) for cost + Cloudflare
+        Workers compatibility reasons; the system prompt generator
+        remained provider-agnostic. **3D sprite gamification.** A
+        ~960-line `sprite-affection.config.ts` declaratively encodes
+        the entire gameplay model: 5 gestures, 5 negative behaviours,
+        7 mood states (`ecstatic` 80–100 → `upset` -100 to -80),
+        17 emotions with per-emotion ear-colour RGB, glow-colour,
+        particle-colour, animation type (`bounce` / `shake` / `pulse`
+        / `spin` / `wobble` / `tremble` / `droop`) and eye shape
+        (`sphere` / `arc` / `star` / `heart` / `crescent` / `spiral`
+        / `teardrop`), 6 affection tiers (Stranger 0–9 → Acquaintance
+        10–29 → Friend 30–59 → Good Friend 60–99 → Best Friend
+        100–149 → Soulmate 150+), 7 time-of-day biases (late-night
+        boosts `sleepy` x3, evening boosts `love` x1.3), and 5 streak
+        bonus levels (1/3/7/14/30 days, 30-day streak unlocks the
+        `devoted` rare emotion). Two relational systems link mood
+        and affection: a **mood multiplier** scales affection gains
+        from 0.5x (depressed) to 1.5x (euphoric), and **affection
+        mood protection** sets a floor that rises with tier (Soulmate
+        gets a -10 floor + 5 mood/min recovery toward +20). All state
+        persists to `localStorage` under `sprite-affection-data`.
+        The Quantum Orb itself is rendered with **CSS-only 3D**
+        (preserve-3d transforms + rotateX) + Three.js particle
+        accents — no GLB / heavy 3D pipeline — so the bundle stays
+        small enough for Cloudflare Workers. **Notion backend.** A
+        non-obvious engineering call: the project initially used
+        `@notionhq/client`, but migrating to Cloudflare Workers
+        (commit `5b1dc7e`) broke the Node-dependent SDK; the fix
+        (commit `20eaf2e`) replaced it with **direct REST calls
+        against `api.notion.com/v1` using native `fetch`** — version
+        header `Notion-Version: 2022-06-28`, filter by
+        `IsActive` checkbox, parse `Title` / `RichText` / `Select` /
+        `Number` properties via small typed getters. Four API routes
+        — `/api/chat`, `/api/faq/questions`, `/api/faq/vote`,
+        `/api/faq/view` — wrap the same client. **Deployment.**
+        Migrated from Vercel to Cloudflare Workers using
+        `@opennextjs/cloudflare` v1.3 + wrangler v4; the entire stack
+        now ships on Cloudflare's free tier including the AI streaming
+        endpoint. The build command `opennextjs-cloudflare build &&
+        opennextjs-cloudflare deploy` handles the Next.js → Workers
+        adapter step.
+      outcomes: |
+        Delivered live for the **AI Hackathon Festival 2025** at AUT
+        City Campus WG Building, **15–16 August 2025**. Used by **11
+        teams and 80+ participants** during the residential event —
+        AI Forum NZ's public LinkedIn cohort announcement (with full
+        Westlake Girls High School student attendance) cites Chan as
+        **1 of 14 expert mentors**, recognised at the event. The
+        teams shipped solutions across the UN SDG brief — food
+        insecurity, digital accessibility, workforce upskilling, and
+        indigenous environmental stewardship — with national-tier
+        prizes flowing through the AI Forum NZ pipeline (AI Summit
+        entry worth $1,499, $1,000 national winner, $5,000 national
+        Agentic AI winner, ArcGIS licences). Post-event, the codebase
+        was **refactored into a reusable MIT template** (commit
+        `948bdf0` "transform project into reusable event Q&A
+        template"), documented in `docs/TEMPLATE-SETUP.md`,
+        `docs/NOTION-INTEGRATION.md`, and `docs/UI-DESIGN-SYSTEM.md`,
+        with the live deployment retained as the canonical worked
+        example. Listed alongside Chan's other commercial-grade AI
+        platforms (echook, vitex, chinese-redefine,
+        ai-programming-teaching-project) as portfolio evidence of
+        end-to-end industry-partner delivery — design, AI integration,
+        gameplay engineering, database, deployment, and post-delivery
+        productisation as a reusable open-source artefact.
+      myRole: |
+        Sole developer end-to-end. Owned the discovery phase with the
+        three co-organising institutions, designed the dual-layer
+        product (chat surface + gamified mascot + Notion FAQ), built
+        every component, authored both the Gemini and the OpenAI
+        provider implementations, designed the entire ~960-line
+        affection / mood / emotion gameplay schema, engineered the
+        CSS-3D Quantum Orb visualisation, migrated the deployment
+        from Vercel to Cloudflare Workers when free-tier economics
+        and Notion-SDK incompatibility forced the move, refactored
+        the codebase into a reusable open-source template after the
+        live event, and authored the three setup-documentation files.
+        On the mentorship side: served as one of the 14 expert
+        mentors during the 26-hour event itself, guiding teams on
+        prompt design, SDG framing, and product narrative —
+        simultaneously building the platform and using it.
   - id: nzcel-prep
     tier: secondary
     recency: historical
@@ -6343,6 +6567,7 @@ meta:
       - chinese-redefine
       - css-tower-defense
       - vitex
+      - ai-hackathon-assistant
       - femtracker-agent
       - douyin-mall-go-template
       - server-google-jobs

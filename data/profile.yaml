@@ -2941,76 +2941,238 @@ projects:
   - id: github-readme-suno-cards
     tier: primary
     recency: active
-    lastUpdated: "2026-05-18"
-    name: github-readme-suno-cards
+    lastUpdated: "2026-05-19"
+    name: github-readme-suno-cards — Suno Music Cards for GitHub READMEs
     priority: 5
     category: branding
-    tagline: Display your Suno AI music as dynamic, animated SVG cards
+    tagline: GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 8 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with SunoStats.
     url: https://github-readme-suno-cards.vercel.app
     repoUrl: https://github.com/ChanMeng666/github-readme-suno-cards
     extraLinks:
-      - { label: "gallery", url: "https://github-readme-suno-cards.vercel.app/gallery" }
-      - { label: "builder", url: "https://github-readme-suno-cards.vercel.app/builder" }
+      - { label: "Live service",         url: "https://github-readme-suno-cards.vercel.app" }
+      - { label: "Gallery",              url: "https://github-readme-suno-cards.vercel.app/gallery" }
+      - { label: "Visual builder",       url: "https://github-readme-suno-cards.vercel.app/builder" }
+      - { label: "Public v0.1 commit",   url: "https://github.com/ChanMeng666/github-readme-suno-cards/commit/73f4fa8" }
+      - { label: "Internal-ref cleanup", url: "https://github.com/ChanMeng666/github-readme-suno-cards/commit/295756e" }
+      - { label: "Companion: SunoStats", url: "https://github.com/ChanMeng666/sunostats" }
+    techStack:
+      - "pnpm 9.12 monorepo (apps/ + packages/ + action/)"
+      - "Next.js 15.1 (Vercel Edge runtime)"
+      - "TypeScript 5.6"
+      - "@suno-cards/parser workspace package (Valibot-validated Suno oEmbed parser — shared kernel with SunoStats)"
+      - "@suno-cards/render workspace package (pure-function SVG renderer)"
+      - "Valibot (strict TypeScript schema validation against studio-api-prod.suno.com oEmbed)"
+      - "SVG <foreignObject> + inline HTML <span> (CJK text shaping)"
+      - "CSS @keyframes (equalizer-bar animation driven by HTML spans inside the SVG)"
+      - "GitHub Actions composite action (Node 20 runner with esbuild-bundled dist)"
+      - "Biome 1.9 (lint + format)"
+      - "Vitest (parser tests inside action/test/)"
+      - "Vercel Data Cache (upstream, 3600s TTL for single cards)"
+      - "HTTP Cache-Control headers (downstream, drives GitHub Camo proxy)"
+      - "esbuild (action bundle build via action/build.ts)"
+      - "MIT license"
+    keywords:
+      - "GitHub README enhancement"
+      - "GitHub Marketplace Action"
+      - "Suno creator tooling"
+      - "Animated SVG"
+      - "CJK-safe text rendering"
+      - "oEmbed compliance"
+      - "Cross-project parser kernel"
+      - "Public extract from internal monorepo"
+      - "Auto-updating README"
+    metrics:
+      - { label: "Public v0.1 commit",    value: "2026-04-13 (commit 73f4fa8 — 'initial commit github-readme-suno-cards v0.1', extracted as a clean public-facing repo)" }
+      - { label: "Internal cleanup",      value: "2026-04-13 commit 295756e — 'clean remaining internal reference' (post-extraction sanitization)" }
+      - { label: "Latest commit",         value: "2026-04-21 (2f894c9, still iterating ~1 month in)" }
+      - { label: "Total commits",         value: "21 (solo, public history; the underlying renderer is older inside the private origin repo)" }
+      - { label: "Live service",          value: "https://github-readme-suno-cards.vercel.app (Vercel Edge runtime)" }
+      - { label: "GitHub Action",         value: "uses: ChanMeng666/github-readme-suno-cards@v0.1 (composite action, 'music' icon, purple branding)" }
+      - { label: "Action inputs",         value: "8 (handle, manifest_path, song_ids, sort, max, include_tags, exclude_tags, min/max_duration)" }
+      - { label: "Card combinations",     value: "12 base (2 layouts x 2 presets x 3 themes)" }
+      - { label: "Customization toggles", value: "11 element show/hide flags + hex color overrides" }
+      - { label: "id input formats",      value: "3 (UUID / suno.com URL / suno.com/s/<shortcode>) — parser-normalized" }
+      - { label: "Sister project",        value: "SunoStats shares the @suno-cards/parser workspace kernel (parser extracted between the two repos)" }
+      - { label: "License",               value: "MIT" }
     status: live
+    startDate: "2026-04-13"
     publicSummary: |
-      Display your Suno AI music as dynamic, animated SVG cards in your GitHub
-      README — gallery + builder. Two layouts (classic, player), two colour
-      presets, three theme modes, eleven element toggles, hex colour overrides;
-      bilingual CJK-friendly text via SVG `<foreignObject>` plus CSS keyframe
-      animation on inline HTML spans.
+      A **GitHub Marketplace Action + Vercel-hosted SVG card service**
+      that lets any Suno creator surface their music catalog in their
+      GitHub README — either as a single embedded card (zero-setup
+      Markdown line) or as an auto-syncing card grid kept in sync by a
+      scheduled GitHub Action (`uses: ChanMeng666/github-readme-suno-cards@v0.1`).
+      The current public repo was **extracted from a longer-lived
+      internal monorepo on 2026-04-13** (commit `73f4fa8`
+      *"initial commit — github-readme-suno-cards v0.1"* followed
+      immediately by `295756e` *"clean remaining internal reference"*)
+      and now ships as a clean, focused, MIT-licensed open-source
+      package. **Architectural insight**: the `@suno-cards/parser`
+      workspace package is **shared with SunoStats** (Chan's separate
+      Suno analytics SaaS) — the parser was distilled out as the common
+      kernel between the two projects, so a single Valibot-validated
+      Suno-oEmbed contract underwrites both products. Ships 12 base
+      card combinations (2 layouts × 2 presets × 3 themes), 11
+      customization toggles, hex color overrides, 3 different `id`
+      input formats (raw UUID / `suno.com/song/<uuid>` URL /
+      `suno.com/s/<shortcode>` short code), and 8 GitHub Action inputs
+      including tag filtering and duration filtering. Stack: pnpm
+      monorepo + Next.js 15.1 on Vercel Edge + Valibot schemas + an
+      SVG renderer that uses `<foreignObject>` + inline HTML `<span>`
+      for CJK-safe text shaping with CSS `@keyframes` animations
+      driving the equalizer bars.
     narrative:
       problem: |
-        Musicians using Suno AI have no elegant way to surface their
-        catalogue on GitHub profiles or developer portfolios. Either they
-        link out (and lose the visual hook), screenshot the player (and
-        lose every update), or hand-edit Markdown (and re-do it every
-        time they publish a new track). None of these scale beyond a
-        single song.
+        Suno AI creators have no graceful way to surface their music
+        catalog on the surfaces where developer audiences actually
+        congregate: GitHub READMEs, personal portfolio sites, technical
+        blog footers, project documentation. Three escape hatches all
+        fail: (1) link out to suno.com — loses the visual hook and
+        breaks if Suno changes URL shapes; (2) screenshot the player —
+        stale the moment you publish a new song; (3) hand-edit
+        Markdown — fine for one song, completely unmanageable beyond
+        three. Worse: many Suno creators are bilingual or multilingual
+        and produce songs with CJK (Chinese/Japanese/Korean) titles,
+        which pure SVG `<text>` doesn't shape properly because SVG
+        text layout never properly inherited the rich text-shaping
+        rules of HTML. The gap that needs filling: a service that
+        renders animated, visually-rich Suno music cards as embeddable
+        SVG, handles CJK text correctly, supports both zero-setup
+        single embeds and CI-driven auto-syncing card grids, and
+        works in both directions (browse-and-build via a hosted UI,
+        or fully programmatic via a GitHub Action).
       audience: |
-        Developer-musicians using Suno AI who want their GitHub README,
-        portfolio site, or documentation to display a live, auto-updating
-        catalogue of their generated music — including CJK-named tracks
-        and animated visual indicators rather than static thumbnails.
+        Three concentric audiences. (1) **Developer-musicians** using
+        Suno AI who want their GitHub profile README, portfolio site,
+        or project documentation to display a live, auto-updating
+        catalog of their music — including CJK-named tracks. (2)
+        **Music creators** more broadly who maintain a GitHub-shaped
+        public web presence (devrel folks, indie-game developers,
+        bedroom electronic producers with side-projects, AI
+        researchers releasing music under handles) and want a polished
+        visual surface for their Suno output. (3) **Engineers
+        studying the project as a worked example** of (a) extracting
+        a public clean repo from a larger internal monorepo,
+        (b) sharing a single Valibot-validated parser kernel across
+        two independent products (SunoStats + this), (c) the
+        SVG `<foreignObject>` + CSS-keyframes technique for animated,
+        CJK-safe SVG that pure SVG can't render.
       productLogic: |
-        Two paths. (1) Direct embedding: paste a card URL containing the
-        Suno song UUID into Markdown — zero setup. (2) GitHub Action
-        sync: a scheduled workflow fetches the user's public Suno
-        catalogue, sorts it, and writes a grid of cards between
-        configurable markers in the README. The hosted builder at
-        `/builder` provides a live-preview editor over layout, preset,
-        theme, and element toggles, generating the embed URL for direct
-        copy-paste.
+        Two complementary usage paths. **Path 1 — Direct Embed (zero
+        setup).** A user pastes one Markdown line referencing the
+        hosted card endpoint:
+        `[![](https://github-readme-suno-cards.vercel.app/api/card?id=YOUR_SONG_ID)](https://suno.com/song/YOUR_SONG_ID)`.
+        The `id` parameter accepts **three normalized input formats**:
+        a raw UUID, a full `suno.com/song/<uuid>` URL, or a
+        `suno.com/s/<shortcode>` short code — the parser canonicalises
+        all three into a single internal ID. The hosted
+        [`/builder`](https://github-readme-suno-cards.vercel.app/builder)
+        visual editor lets users preview the 12 base card
+        combinations (2 layouts × 2 presets × 3 themes), toggle 11
+        element flags, override individual colors with hex codes, and
+        copy out the resulting embed URL. **Path 2 — GitHub Action
+        Auto-Sync.** A user adds `<!-- SUNO-CARDS:START -->` and
+        `<!-- SUNO-CARDS:END -->` markers to their README, then drops
+        a workflow file at `.github/workflows/suno-cards.yml` with
+        `uses: ChanMeng666/github-readme-suno-cards@v0.1` and a `cron`
+        trigger (typically every 6 hours). The Action takes any of
+        **8 inputs** — `handle` (auto-discovery of all public songs
+        for a Suno creator), `manifest_path` (YAML file listing
+        explicit song IDs), `song_ids` (CSV alternative),
+        `sort` (`created_at` / `play_count` / `upvote_count` /
+        `name`), `max` (1–20), `include_tags`, `exclude_tags`,
+        and `min_duration` / `max_duration` filters — fetches the
+        matched songs, sorts them, and surgically replaces only the
+        content between the markers in the README. A companion
+        `EndBug/add-and-commit@v9` step commits the diff. The two
+        paths share the same parser + renderer so the cards look
+        identical regardless of origin path.
       technicalApproach: |
-        pnpm monorepo split into three layers: (a) **Suno API parser**
-        using Valibot schemas — strict TypeScript validation against
-        the public `studio-api-prod.suno.com` oEmbed endpoints (no
-        scraping, no auth, no rate-limit landmines); (b) **SVG rendering
-        engine** built as pure functions so renders are deterministic
-        and cacheable; (c) **Next.js 15 frontend** deployed on Vercel
-        Edge Runtime. The interesting rendering trick: SVG
-        `<foreignObject>` carries inline HTML `<span>` elements so CJK
-        text wraps and shapes correctly, with CSS `@keyframes`
-        animations applied to the spans to drive the equaliser bars —
-        a layout that pure SVG can't produce cleanly. Two-level caching:
-        Vercel Data Cache upstream (3600s for single cards) and HTTP
-        `Cache-Control` headers downstream, letting GitHub's Camo proxy
-        manage the SVG distribution layer. Builder UI: 11 element
-        toggles, hex colour overrides, two layouts (classic / player),
-        two presets (default purple / Suno navy-gold), three theme
-        modes (auto / dark / light).
+        **pnpm monorepo** with three top-level workspaces: `apps/`
+        (the Next.js 15.1 frontend), `packages/` (the two reusable
+        kernels), and `action/` (the GitHub Marketplace Action). The
+        two reusable packages are the architecturally important ones.
+        **`@suno-cards/parser`** is a Valibot-validated parser for
+        Suno's public oEmbed-style API surface
+        (`studio-api-prod.suno.com`) — anonymous, CORS-enabled,
+        public-by-design endpoints that Suno advertises via the W3C
+        oEmbed protocol; no scraping, no auth, no rate-limit
+        landmines, no headless browsers. **Critical architectural
+        decision**: the same `@suno-cards/parser` package is **shared
+        with Chan's other Suno project, SunoStats** — Chan's separate
+        analytics SaaS for Suno creators
+        ([github.com/ChanMeng666/sunostats](https://github.com/ChanMeng666/sunostats)).
+        Extracting the parser as a workspace package means a single
+        Valibot schema definition + a single typed-error hierarchy
+        (`SunoNotFoundError`, `SunoNetworkError`, `SunoSchemaError`,
+        etc.) underwrites both products — fix a Suno API drift once,
+        both products benefit. **`@suno-cards/render`** is the pure-
+        function SVG rendering engine — deterministic, cacheable,
+        and platform-independent (Vercel Edge can serve it, the
+        GitHub Action's Node 20 runner can also call it locally).
+        **The defining rendering technique**: SVG `<foreignObject>`
+        carries inline HTML `<span>` elements so CJK text shapes
+        correctly (SVG `<text>` doesn't), with **CSS `@keyframes`
+        animations** applied to those spans to drive the **animated
+        equalizer bars** below the song info — a hybrid layout that
+        pure SVG can't produce cleanly because SVG's animation
+        primitives can't compose with proper rich-text shaping. The
+        equalizer animation runs even inside GitHub's Camo proxy
+        (which strips most interactivity) because CSS keyframes
+        survive the SVG sanitization pass. **Two-level caching**:
+        Vercel Data Cache upstream (3600s TTL for single-card
+        requests) and HTTP `Cache-Control` headers downstream,
+        letting GitHub's Camo proxy manage the SVG distribution
+        layer transparently. **GitHub Action build**:
+        `action/build.ts` runs an esbuild bundle that emits a
+        `dist/index.js` (Node 20 runtime) plus the `action.yml`
+        manifest with composite action metadata (icon: `music`,
+        color: `purple`) — committed alongside the source so the
+        Action consumes the bundled artifact directly, no install
+        step needed at workflow runtime. **Quality**: Biome 1.9
+        for lint + format, Vitest tests inside `action/test/`, CI
+        via GitHub Actions workflow.
       outcomes: |
-        Live production service at github-readme-suno-cards.vercel.app
-        with gallery and builder routes. MIT licensed for broad reuse.
-        Build pipeline is esbuild + CI verification + dual render modes
-        (live service or local pre-rendering for users who want full
-        control). Roadmap: waveform variants, lyrics excerpts, playlist
-        cards, PNG export via `@resvg/resvg`.
+        Live production service at
+        [github-readme-suno-cards.vercel.app](https://github-readme-suno-cards.vercel.app)
+        with `/gallery` and `/builder` routes. The current public
+        repository is the **clean-extract** version — first commit
+        `73f4fa8` *"feat: initial commit — github-readme-suno-cards
+        v0.1"* on 2026-04-13, immediately followed by `295756e`
+        *"chore: clean remaining internal reference"* (the
+        post-extraction sanitization sweep). The actual product is
+        older inside the private origin monorepo where the parser
+        was first developed; the v0.1 extraction was the moment Chan
+        cleaned it up and shipped it as a focused MIT-licensed
+        open-source release. Continuing iteration through 2026-04-21
+        (latest commit `2f894c9`). **The shared parser kernel with
+        SunoStats** (Chan's separate Suno analytics SaaS at
+        [sunostats.chanmeng.org](https://sunostats.chanmeng.org)) is
+        the architecturally important outcome: rather than two
+        independent Suno API integrations drifting apart over time,
+        the two products are pinned to a single Valibot contract
+        with a single typed-error hierarchy. **Roadmap**: waveform
+        layout variants, lyrics-excerpt blocks, playlist cards,
+        PNG export via `@resvg/resvg` for users who can't embed
+        SVG directly.
       myRole: |
-        Sole author. Designed the monorepo split, wrote the Valibot
-        schemas against Suno's oEmbed contract, engineered the
-        `<foreignObject>` + CSS-keyframes rendering technique, and
-        built the live builder UI plus the GitHub Action distribution
-        path.
+        Sole author across both the original private monorepo and
+        the public v0.1 extraction. Designed the pnpm monorepo
+        split with the parser + renderer extracted as reusable
+        workspace packages; wrote the Valibot schemas against
+        Suno's oEmbed API contract; designed the typed Suno error
+        hierarchy; engineered the `<foreignObject>` + CSS-keyframes
+        rendering technique that handles CJK text + animated
+        equalizers in a single SVG; built the GitHub Marketplace
+        Action with esbuild-bundled dist; designed the 8-input
+        Action surface with three id-format normalization;
+        designed the `<!-- SUNO-CARDS:START/END -->` marker-based
+        surgical README replacement; built the visual `/builder`
+        UI with live preview over all 12 base combinations + 11
+        toggle flags + hex color overrides; executed the
+        2026-04-13 public-extract release sequence (`73f4fa8` +
+        `295756e`); coordinates parser updates across both this
+        project and the SunoStats sibling repo.
 
   - id: echook
     tier: primary

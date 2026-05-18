@@ -1494,16 +1494,149 @@
     },
     {
       "id": "library-os",
-      "tier": "secondary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "name": "LibraryOS",
-      "priority": 21,
+      "tier": "primary",
+      "recency": "recent",
+      "lastUpdated": "2026-05-19",
+      "name": "LibraryOS — Multi-Tenant Library SaaS",
+      "priority": 20,
       "category": "web-apps",
+      "tagline": "18-month / 80-commit production multi-tenant SaaS on its own libraryos.live domain — 4-tier Stripe subscription pricing with Africa-friendly tier, 4-role RBAC, Supabase row-level security + keep-alive cron, survived two architectural pivots (single-tenant->multi-tenant Dec 2025, Vercel->Cloudflare Workers Feb 2026) and a 12-commit Stripe-SDK-on-Workers debugging saga that ended by switching the Stripe client to fetch-based HTTP.",
       "repoUrl": "https://github.com/ChanMeng666/library-os",
       "logo": "/public/brands/library-os-logo.svg",
       "url": "https://libraryos.live/",
-      "status": "live"
+      "extraLinks": [
+        {
+          "label": "Live app (custom domain)",
+          "url": "https://libraryos.live/"
+        },
+        {
+          "label": "Multi-tenant SaaS pivot",
+          "url": "https://github.com/ChanMeng666/library-os/commit/5e7e8c5"
+        },
+        {
+          "label": "LibraryOS rebrand commit",
+          "url": "https://github.com/ChanMeng666/library-os/commit/4bd58b5"
+        },
+        {
+          "label": "Vercel->CF Workers migration",
+          "url": "https://github.com/ChanMeng666/library-os/commit/14c42fc"
+        },
+        {
+          "label": "Stripe-on-Workers fix commit",
+          "url": "https://github.com/ChanMeng666/library-os/commit/e1ab824"
+        },
+        {
+          "label": "Supabase keep-alive commit",
+          "url": "https://github.com/ChanMeng666/library-os/commit/17344d6"
+        }
+      ],
+      "techStack": [
+        "Next.js 16.1 (App Router)",
+        "React 19.2",
+        "TypeScript 5.9",
+        "Tailwind CSS 4 + tailwindcss-animate",
+        "shadcn/ui + 10 Radix UI primitives (Dialog, Dropdown, Select, Tabs, Toast, Progress, etc.)",
+        "Supabase PostgreSQL (auth + RLS policies + stored procedures + migrations)",
+        "Supabase keep-alive cron (prevent 7-day free-tier auto-pause)",
+        "Stripe 20 (Checkout + Customer Portal + webhooks + signature verification)",
+        "Stripe with fetch-based HTTP client (Cloudflare Workers compatibility)",
+        "Stripe price IDs read from database (per-tier/per-region dynamic pricing)",
+        "Resend 6 (transactional emails for team invitations)",
+        "React Hook Form + Zod 4 (typed form validation)",
+        "React Context (AuthContext, OrganizationContext for tenant switching)",
+        "date-fns 4 (loan/return date arithmetic)",
+        "@opennextjs/cloudflare 1.16 adapter",
+        "Cloudflare Workers deployment (migrated from Vercel)",
+        "wrangler 4.61 CI/CD",
+        "libraryos.live custom domain (purchased, not default subdomain)",
+        "Apache-2.0 license"
+      ],
+      "keywords": [
+        "Multi-tenant SaaS",
+        "Row-level security (RLS)",
+        "4-tier Stripe subscriptions",
+        "Africa-friendly pricing",
+        "Stripe-SDK-on-Workers fetch fix",
+        "Supabase free-tier keep-alive",
+        "Two-pivot architectural evolution",
+        "Custom domain SaaS",
+        "RBAC (Owner/Admin/Librarian/Member)",
+        "React Server Components CVE patched"
+      ],
+      "metrics": [
+        {
+          "label": "First commit",
+          "value": "2024-10-30 (started as library-management-system on Vercel)"
+        },
+        {
+          "label": "Pivot 1 (multi-tenant SaaS)",
+          "value": "2025-12-30 commit 5e7e8c5: 'add multi-tenant support with Stripe billing and Resend emails'"
+        },
+        {
+          "label": "Rebrand commit",
+          "value": "2025-12-31 commit 4bd58b5: 'rebrand project to LibraryOS'"
+        },
+        {
+          "label": "Pivot 2 (CF Workers)",
+          "value": "2026-02-03 commit 14c42fc: 'migrate from Vercel to Cloudflare Workers'"
+        },
+        {
+          "label": "Custom domain commit",
+          "value": "2026-02-03 commit ecf6c14: 'Switch site to libraryos.live'"
+        },
+        {
+          "label": "Stripe-on-Workers fix",
+          "value": "2026-03-06 commit e1ab824: 'use fetch HTTP client for Stripe SDK on Cloudflare Workers' (after 5 debug commits)"
+        },
+        {
+          "label": "Stripe price-ID DB fix",
+          "value": "2026-03-05 commit 85b6244: 'read Stripe price IDs from database instead of env vars'"
+        },
+        {
+          "label": "Supabase keep-alive",
+          "value": "2025-12-31 commit 17344d6 + 2026-01-25 commit 64b03d0 (prevent 7-day free-tier auto-pause)"
+        },
+        {
+          "label": "Total commits",
+          "value": "80 across 18 months (solo, plus 2 Vercel CVE-patch PRs auto-applied)"
+        },
+        {
+          "label": "Latest commit",
+          "value": "2026-04-07 (still maintained)"
+        },
+        {
+          "label": "Subscription tiers",
+          "value": "4 (Free/Basic $29/Pro $99/Enterprise custom)"
+        },
+        {
+          "label": "Role hierarchy",
+          "value": "4 (Owner/Admin/Librarian/Member with granular permission matrix)"
+        },
+        {
+          "label": "Free-tier quotas",
+          "value": "100 books, 5 users, 3 loans/user (paid tiers scale to unlimited)"
+        },
+        {
+          "label": "Live URL",
+          "value": "https://libraryos.live (purchased custom domain)"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        }
+      ],
+      "status": "live",
+      "startDate": "2024-10-30",
+      "publicSummary": "Production **multi-tenant library management SaaS** with its own\npurchased custom domain ([libraryos.live](https://libraryos.live)),\nbuilt over **18 months across 80 solo commits** spanning **two\nmajor architectural pivots and one infamous debugging saga**. The\nproduct offers 4-tier Stripe subscription billing\n(Free/Basic $29/mo/Pro $99/mo/Enterprise), 4-role RBAC\n(Owner/Admin/Librarian/Member), per-tenant data isolation via\nSupabase row-level security policies, team invitations via Resend\ntransactional emails, multi-organization membership (users can\nbelong to multiple libraries and switch between them), and an\n**Africa-friendly pricing tier** explicitly designed for lower-\nincome markets. **Defining engineering moments**: (1) the\nsingle-tenant -> multi-tenant SaaS rebuild on 2025-12-30 (commit\n`5e7e8c5`); (2) the same-week rebrand from\n`library-management-system` -> `LibraryOS` (commit `4bd58b5`);\n(3) the **Supabase keep-alive cron** to prevent the free-tier\ndatabase from auto-pausing after 7 days of inactivity (commits\n`17344d6` + `64b03d0`); (4) the **Vercel -> Cloudflare Workers\nmigration** (commit `14c42fc`, 2026-02-03) with the custom\n`libraryos.live` domain switch (`ecf6c14`); (5) the\n**12-commit Stripe-SDK-on-Cloudflare-Workers debugging saga**\nending with the architectural fix in commit `e1ab824`\n*\"use fetch HTTP client for Stripe SDK on Cloudflare Workers\"*\nand the companion `85b6244` *\"read Stripe price IDs from database\ninstead of env vars\"*. Stack: Next.js 16.1 + React 19.2 +\nTailwind 4 + Supabase + Stripe 20 + Resend 6 + shadcn/ui +\nZod 4 + @opennextjs/cloudflare. Apache-2.0.\n",
+      "narrative": {
+        "problem": "Small libraries — community libraries, school libraries,\nstartup-office book collections, niche-genre clubs, university\nresidence hall libraries — are stuck between two bad options\nfor managing their book collections. Option A: enterprise-grade\nIntegrated Library Systems (Koha, Evergreen, ExLibris Alma)\nthat cost thousands per year, require dedicated IT staff to\noperate, and ship with UX patterns from 2005. Option B:\nspreadsheets and shared Google Sheets, which silently break\nthe moment two librarians edit at once, give no role-based\npermissions, can't handle email invitations or membership\nscoping, and offer no path to monetisation if the library\nwants to recover operational costs from members. Both options\nalso assume **one library per installation** — none of them\nhandle the case where a single platform should serve hundreds\nof independent organisations, each with its own books, members,\nloans, and billing. That's the gap LibraryOS fills: a\n**multi-tenant library SaaS** with per-organisation data\nisolation, tiered Stripe subscriptions including an\nAfrica-friendly pricing tier for lower-income markets, and a\nmodern Next.js 16 + React 19 frontend that any community\nlibrarian can navigate without training.\n",
+        "audience": "Three primary audiences. (1) **Community library operators**:\nchurches, residence halls, makerspaces, co-working spaces,\nsmall private schools, niche-genre clubs — anyone running a\nbook collection serving 50–5,000 members who outgrew\nspreadsheets but can't justify Koha's TCO. (2) **Multi-branch\norganisations**: parent organisations operating multiple\nlibraries (school districts, library networks, NGOs running\nmulti-site book-donation programmes) who need\nper-organisation isolation but unified administration. (3)\n**Engineers studying the project as a worked example** of\n(a) Supabase row-level security policies for multi-tenant\ndata isolation, (b) Stripe Checkout + Customer Portal +\nwebhooks with database-stored price IDs for per-tier and\nper-region dynamic pricing, (c) the @opennextjs/cloudflare\nadapter pattern with non-trivial third-party SDK integration\n(the Stripe-on-Workers fetch-HTTP-client workaround is the\nkind of production issue a project ships through, not\naround).\n",
+        "productLogic": "The product surface is structured around three concentric\nnouns: **users** (one person, one auth identity), **organisations**\n(one library entity with its own books, members, settings),\nand **memberships** (the join between user and organisation\ncarrying a role). A user signs up once and can belong to\nmany organisations — switching between them via the\n`OrganizationContext` provider in the React tree, which\nmirrors the same pattern Slack and Linear use. Within an\norganisation, four roles compose a granular permission\nmatrix: **Owners** can delete the organisation and manage\nbilling; **Admins** can manage members but not delete the\norg; **Librarians** can add/edit books and manage loans;\n**Members** can browse, borrow, return, and review books.\nPer-tenant data isolation is enforced **at the database\nlayer** via Supabase row-level security (RLS) policies on\nevery table — `books`, `loans`, `members`, `reviews`,\n`categories` — so even a SQL injection in application code\ncan't leak across tenants. **Billing**: the Free tier covers\n100 books / 5 users / 3 loans-per-user, Basic ($29/mo) scales\nto 1,000 / 20 / 5, Pro ($99/mo) to 10,000 / 100 / 10, and\nEnterprise is unlimited with custom pricing. Stripe Checkout\nhandles initial subscription, Customer Portal handles\nupgrades / downgrades / cancellations, and the\n`/api/stripe/webhook` endpoint atomically updates the\n`organizations.subscription_status` field based on signed\nStripe events. **Team invitations**: an Admin invites a new\nmember by email; Resend sends a transactional invite with a\nscoped token; the recipient clicks through, authenticates,\nand joins the organisation with the pre-assigned role.\n**The Africa-friendly tier** is a deliberate pricing\ndecision (commit `16e81c1` *\"add live mode pricing for\nAfrica-friendly subscriptions\"*) — lower-income markets need\nan entry tier below $29/mo for the product to be reachable.\n",
+        "businessLogic": "The unit economics are structurally favourable: Supabase free\ntier covers the database for typical small-library volume\n(the Supabase keep-alive cron — commit `17344d6` — prevents\nthe free-tier database from auto-pausing after 7 days of\nzero queries, which is the single load-bearing infrastructure\ndecision); Cloudflare Workers free tier handles edge\ncompute; Stripe takes 2.9% + 30c on paid transactions; Resend\nprovides 3,000 free transactional emails/month. The\ncost-per-tenant on the Free tier is effectively zero. Above\nthe Free tier, Stripe subscription revenue scales linearly\nwith paid tenants. The Africa-friendly pricing tier is the\nnon-obvious decision: rather than ignoring lower-income\nmarkets, LibraryOS deliberately ships a region-aware entry\ntier so the product reaches global communities that the\nKoha / Alma incumbents have priced out entirely.\n**Apache-2.0** with patent grant licensing makes the\ncodebase explicitly fork-and-deploy-able as a worked\nexample for engineers wanting to ship their own\nmulti-tenant SaaS — particularly useful given the\nStripe-on-Workers compatibility solution baked in.\n",
+        "technicalApproach": "**Multi-tenant SaaS architecture.** Single Supabase\nPostgres instance with strict row-level security policies\non every domain table — a policy like `organization_id =\nauth.jwt() ->> 'org_id'` enforces tenant isolation\nregardless of application bugs. Stored procedures for the\nnon-trivial loan-lifecycle logic (loan -> due-date\ncalculation -> return -> overdue triggers). The schema is\ndocumented as an ERD in the README covering\n`organizations`, `organization_members`, `books`, `loans`,\n`reviews`, `categories`, and the subscription-state\ncolumns on `organizations`. **The Stripe-on-Cloudflare-\nWorkers fight (March 2026).** The Stripe Node SDK uses the\nNode `https` module by default — which Workers don't have.\nFirst symptom: checkout endpoint times out silently.\nInitial debug attempts (commits `fdd1103` \"add visible\ndebug panel\", `2b54c48` \"add /api/stripe/debug endpoint\",\n`991af90` \"step-by-step server logging\") progressively\nisolated the failure to the Stripe SDK's HTTP client\nlayer. Final fix (commit `e1ab824`): configure the Stripe\nconstructor with `httpClient: Stripe.createFetchHttpClient()`\nso it uses the standard `fetch` API instead of `https`,\nmaking it Workers-compatible. The companion fix (commit\n`85b6244`): move Stripe price IDs from environment\nvariables to a database lookup, so the same deployment can\nserve different prices for different tenants or regions\nwithout env-var sprawl. The whole episode is a real\nproduction-debugging artefact, documented in the\nStripe + Cloudflare Workers integration guide (commit\n`12ddaef`). **Supabase keep-alive system** (commit\n`17344d6`, optimised in `64b03d0`). Supabase's free tier\nauto-pauses any database with 7 consecutive days of zero\nqueries. For a low-traffic SaaS this would silently break\nthe production deployment. The keep-alive system is a\nscheduled cron that pings the database with a no-op query\nevery few days, keeping it active without consuming\nmeaningful free-tier quota. **Custom domain\ninfrastructure**: registered `libraryos.live` (a purchased\ndomain, not a default Workers subdomain) on 2026-02-03\n(commit `ecf6c14`), wired DNS through Cloudflare, and\nco-located the Stripe live-mode account on the same\ndomain to keep the production billing surface\nsingle-origin. **Frontend stack**: Next.js 16.1 App Router\nwith React 19.2 + TypeScript 5.9, Tailwind 4 with custom\nbrand-gradient colours (#02FF73 / #09ADAA), shadcn/ui\ncomponent library on top of 10 Radix UI primitives,\nReact Hook Form with Zod 4 schema validation for typed\nforms end-to-end. **State**: two React Context providers\n— `AuthContext` for user/auth and `OrganizationContext`\nfor the currently-selected tenant — so component code\nreads the current tenant without prop drilling.\n**Security responsiveness**: Vercel's automated CVE\npatching system flagged two React Server Components +\nReact Flight RCE vulnerabilities in late 2025\n(`vercel/react-server-components-cve-vu-64tvuo` and\n`vercel/react-flight-and-nextjs-rce-ad-i38an0`); both PRs\nmerged within hours of discovery\n(commits `85fa6aa` + `101568a`).\n",
+        "outcomes": "Live and operational at\n[libraryos.live](https://libraryos.live) — a **purchased\ncustom domain**, not the default `*.workers.dev`\nsubdomain, signaling a commitment beyond a hobby\ndeployment. **80 solo commits across 18 months** from the\nfirst commit on 2024-10-30 through the most recent on\n2026-04-07 (commit `5c8d8e7`). The defining timeline is\nthe **Dec 2025 multi-tenant rebuild**: commit `2ad43de`\n(2025-12-30) upgrades the entire dependency stack to\nlatest tech (React 19, Next.js 16, Tailwind 4), commit\n`5e7e8c5` (same day) ships *\"add multi-tenant support\nwith Stripe billing and Resend emails\"* — the rebuild\nthat transformed a single-tenant library tool into a\nSaaS, followed by 10 more commits across Dec 30–31 wiring\nup Stripe live mode + auth + UI brand redesign + the\nrename to LibraryOS (`4bd58b5`) — a full multi-tenant\nSaaS shipped in ~36 hours. The **Feb 2026 Vercel ->\nCloudflare Workers migration** (commit `14c42fc`) cut\nproduction hosting cost to zero (Workers free tier).\nThe **March 2026 Stripe-SDK-on-Workers debugging saga**\nis documented across 12 commits and resolved with\n`e1ab824` — the kind of production issue that\ndemonstrates engineering ability to **debug across\nplatform boundaries**, not just ship features. Continuing\nmaintenance through April 2026 with README polish\n(`5c8d8e7`). The project serves as Chan's worked example\nof full-stack solo SaaS execution — multi-tenant\narchitecture, payment integration, security\nresponsiveness, cost-optimisation infrastructure\n(Supabase keep-alive), and globalisation (Africa-friendly\npricing) — all on a purchased custom domain that\nsignals \"this is a real product\".\n",
+        "myRole": "Sole product designer, sole engineer, sole maintainer\nacross all 80 commits and 18 months. Designed the\nmulti-tenant schema with row-level security; designed the\n4-tier subscription pricing including the Africa-friendly\nregional pricing decision; designed the 4-role RBAC\npermission matrix; built every API route under\n`/api/auth`, `/api/email`, `/api/stripe`, and `/api/health`;\nengineered the Supabase keep-alive cron preventing\nfree-tier auto-pause; executed the December 2025 single-\ntenant -> multi-tenant rebuild as a ~36-hour sprint;\nexecuted the February 2026 Vercel -> Cloudflare Workers\nmigration with the libraryos.live custom-domain switch;\ndebugged and fixed the March 2026 Stripe-SDK-on-Workers\ncompatibility issue (5 debug commits + 1 architectural\nfix moving price IDs from env to DB + 1 final fix\nswitching to fetch HTTP client + integration-guide docs);\napplied two React Server Components CVE patches within\nhours of Vercel-automated PRs; purchased and configured\nthe `libraryos.live` custom domain. Maintains the live\ndeployment today.\n"
+      }
     },
     {
       "id": "linkedin-jobs-search",
@@ -4527,6 +4660,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T13:08:30.566Z"
+    "buildTimestamp": "2026-05-18T13:14:01.036Z"
   }
 }

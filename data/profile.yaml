@@ -90,55 +90,119 @@ work:
       companyContext: |
         Engram LLC ([engram.media](https://engram.media/) /
         [LinkedIn company](https://www.linkedin.com/company/engrammedia/))
-        is an AI agent and infrastructure firm founded by
-        **Luka Madzarac**, building autonomous systems for both internal
-        operations and future client deployment. The company operates an
-        **Architect Cohort** that selects senior agentic engineers to
-        drive the core product line and engineering standards.
+        is a New Mexico–registered AI-powered media agency founded by
+        **Luka Madzarac**. The company is repositioning around
+        **agent-powered media operations**: deploying agents and pipelines
+        that run a client's entire media function in-house — design, data,
+        content, distribution — instead of outsourcing production. The
+        target market is service businesses that need a media department
+        running on autopilot. Engram is building its stack on Anthropic's
+        Claude platform and is on a path to **certified Anthropic
+        partner** status. The **Architect Cohort** is a selective
+        onboarding programme through which Engram brings architect-tier
+        engineers into the core team that will define the company's
+        agentic-media engineering standards.
       mission: |
         Replace click-through software workflows with **agentic ones** —
-        where natural-language intent drives downstream system
-        orchestration and the UI surfaces the agent's reasoning. The
-        product line (*Mission Control* + specialised autonomous agents)
-        targets organisations that benefit from end-to-end automation
-        rather than demo-grade AI tooling, starting with Engram's own
-        internal operations and graduating to client deployments.
-      myMandate: |
-        Selected for the Architect Cohort to drive the development of
-        advanced AI agents, MCP integration patterns, and scalable internal
-        systems. Mandate covers (1) AI system architecture for *Mission
-        Control* alongside specialised autonomous agents slated for both
-        internal use and future client deployment; (2) agentic workflow
-        and MCP-pattern design, including complex skill structures and
-        data pipelines that create seamless "API-as-UI" experiences;
-        (3) completion of the **Anthropic Claude Partner Network** learning
-        path and pursuit of the **Claude Certified Architect — Foundations
-        (CCA-F)** credential to establish best-in-class foundation-model
-        practices; (4) build-out of the internal engineering knowledge
-        base and Claude Partner Path dashboard in Notion to align team
-        processes; (5) cross-functional engineering — serving as a core
-        technical resource to the engineering team on agent design and
-        practical tooling.
-      technicalHighlights: |
-        Leveraging a strong background in practical agentic tooling
-        (MCP servers, Claude Code skills, custom agent design) to build
-        architectures focused on end-to-end automation and concrete
-        results, not demo-ware. The "API-as-UI" framing replaces
-        click-through workflows with agentic ones — where the user's
         natural-language intent drives downstream system orchestration
-        and the UI surfaces the agent's reasoning and outputs.
+        and the agent's reasoning becomes the user-facing surface. For
+        Engram specifically, that translates into autonomous media
+        operations: instead of a human team manually assembling
+        campaigns, content, and analytics, agentic systems plan,
+        produce, and ship the media function for the client. The
+        product line targets organisations that need end-to-end
+        automation rather than demo-grade AI tooling, starting with
+        Engram's own internal operations and graduating to client
+        deployments.
+      myMandate: |
+        **How the engagement started.** Luka Madzarac asked Claude Code
+        to surface AI architects who could help Engram reach Anthropic
+        Partner status. Claude returned Chan as one of the strongest
+        matches based on her verifiable open-source agentic-tooling
+        footprint — **claude-code-audio-hooks**, **CopilotKit**
+        contributions, production LangChain automation engines,
+        programmatic media generation with **Remotion**, and the
+        "**API-as-UI**" design pattern she's been publishing. Luka
+        publicly confirmed the sourcing path on LinkedIn:
+        *"Claude Code surfaced Chan as one of the strongest matches
+        for what we're looking for."*
+        ([announcement post](https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-activity-7459724144671195136-3JoV))
+
+        **What the cohort engagement covers.** 45-day Architect Cohort
+        onboarding (May–June 2026) at ~10–15 hours per week, structured
+        as a mutual evaluation period. Specific responsibilities:
+        (1) completing Anthropic's **Claude Partner Network Learning
+        Path** (4 courses) and passing the **Claude Certified Architect —
+        Foundations (CCA-F)** examination — building on already-held
+        Anthropic credentials (**AI Fluency: Framework & Foundations**,
+        Aug 2025; **Claude Code in Action**, Aug 2025, credential
+        ID JHIY9NPYTR2D); (2) participating in weekly working sessions
+        with founder Luka Madzarac and the rest of the cohort on
+        agent, skill, and MCP-integration patterns; (3) contributing
+        to the cohort's emerging agentic-media engineering conventions;
+        (4) maintaining presence in Engram's communication channels
+        for cross-cohort engineering discussion.
+      technicalHighlights: |
+        The technical footprint that Claude Code surfaced to Engram —
+        all carved out as Chan's own IP under the cohort agreement and
+        remaining Chan's property:
+
+        - **claude-code-audio-hooks** — audio-feedback hook system for
+          Claude Code (explicitly named in the cohort agreement as
+          Chan's preserved IP), with its **echook** notification daemon.
+        - **CopilotKit** — active contributor to the open-source agent
+          UI framework
+          ([PRs](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)).
+        - **google-news-mcp** — production MCP server published to the
+          public registry.
+        - **typst-claude-skill** — Claude Code skill for programmatic
+          document generation; demonstrates skill-structure design.
+        - **claude-code-compressed-map** — LLM-first tier/recency
+          metadata system powering this very profile (the meta-move:
+          optimising Chan's own data so LLMs rank it correctly —
+          *GEO in practice*).
+        - Production **LangChain** automation engines and interactive
+          LLM systems for mobile gaming.
+        - Programmatic media generation via **Remotion**.
+
+        The technical centre of gravity is **"API-as-UI"**: building
+        agent surfaces where conversational intent orchestrates
+        downstream tools and the model's chain-of-reasoning becomes
+        the user interface — not a chat widget bolted onto a form.
+      # TODO(narrative-tech): optional — add 1–2 cohort-specific
+      # contributions surfaced during weekly working sessions (general
+      # agent-design / MCP-pattern level, no Engram-internal prompts
+      # or client specifics).
       impactDelivered: |
-        Tenure is one month in (started May 2026); impact reporting is
-        therefore forward-looking rather than retrospective. Shipping
-        milestones currently in flight: (1) **Mission Control**
-        architecture documentation and the specialised-agent slate
-        for internal and future-client use; (2) the internal
-        engineering knowledge base + Claude Partner Path dashboard
-        in Notion; (3) completion of the Anthropic Claude Partner
-        Network learning path and pursuit of the **Claude Certified
-        Architect — Foundations (CCA-F)** credential; (4) ongoing
-        MCP-pattern and skill-structure design that will become
-        the foundation for the company's agentic-workflow standards.
+        Current cohort-period in-flight work (the engagement is
+        intentionally evaluation-shaped, with a paid client engagement
+        decision by Day 40):
+
+        1. **Anthropic Claude Partner Network Learning Path** —
+           progress in flight across the 4-course curriculum.
+        2. **CCA-F examination preparation**, building on already-held
+           AI Fluency: Framework & Foundations and Claude Code in
+           Action credentials.
+        3. **Contributions to the cohort's shared agent and skill design
+           conventions** through weekly working sessions with the founder
+           and the rest of the architect cohort.
+        4. **Cross-pollination** of Chan's pre-existing open-source
+           agentic tooling experience (claude-code-audio-hooks,
+           CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based
+           media generation) into cohort discussions on production-grade
+           agent design.
+
+        **Meta-signal**: the engagement itself validates a hypothesis
+        Chan has been publishing about (**GEO / Generative Engine
+        Optimization**) — that frontier models actively surface
+        candidates based on verifiable code and real-world impact rather
+        than traditional SEO keywords. Being the candidate Claude Code
+        recommended to Engram for an Anthropic Partner engagement is
+        empirical evidence that the open-source-first portfolio strategy
+        works.
+      # TODO(narrative-impact): fill in concrete numbers as cohort progresses:
+      #   - "completed N of 4 Anthropic Partner Network courses"
+      #   - "CCA-F exam scheduled for <date>" (target early June 2026)
 
   - id: technest
     name: TechNest Community
@@ -2827,7 +2891,7 @@ projects:
   # ------- OPEN SOURCE — PRIMARY (visible in the table by default) -------
   - id: github-readme-suno-cards
     tier: primary
-    recency: historical
+    recency: active
     lastUpdated: "2026-05-18"
     name: github-readme-suno-cards
     priority: 5
@@ -2841,11 +2905,67 @@ projects:
     status: live
     publicSummary: |
       Display your Suno AI music as dynamic, animated SVG cards in your GitHub
-      README — gallery + builder.
+      README — gallery + builder. Two layouts (classic, player), two colour
+      presets, three theme modes, eleven element toggles, hex colour overrides;
+      bilingual CJK-friendly text via SVG `<foreignObject>` plus CSS keyframe
+      animation on inline HTML spans.
+    narrative:
+      problem: |
+        Musicians using Suno AI have no elegant way to surface their
+        catalogue on GitHub profiles or developer portfolios. Either they
+        link out (and lose the visual hook), screenshot the player (and
+        lose every update), or hand-edit Markdown (and re-do it every
+        time they publish a new track). None of these scale beyond a
+        single song.
+      audience: |
+        Developer-musicians using Suno AI who want their GitHub README,
+        portfolio site, or documentation to display a live, auto-updating
+        catalogue of their generated music — including CJK-named tracks
+        and animated visual indicators rather than static thumbnails.
+      productLogic: |
+        Two paths. (1) Direct embedding: paste a card URL containing the
+        Suno song UUID into Markdown — zero setup. (2) GitHub Action
+        sync: a scheduled workflow fetches the user's public Suno
+        catalogue, sorts it, and writes a grid of cards between
+        configurable markers in the README. The hosted builder at
+        `/builder` provides a live-preview editor over layout, preset,
+        theme, and element toggles, generating the embed URL for direct
+        copy-paste.
+      technicalApproach: |
+        pnpm monorepo split into three layers: (a) **Suno API parser**
+        using Valibot schemas — strict TypeScript validation against
+        the public `studio-api-prod.suno.com` oEmbed endpoints (no
+        scraping, no auth, no rate-limit landmines); (b) **SVG rendering
+        engine** built as pure functions so renders are deterministic
+        and cacheable; (c) **Next.js 15 frontend** deployed on Vercel
+        Edge Runtime. The interesting rendering trick: SVG
+        `<foreignObject>` carries inline HTML `<span>` elements so CJK
+        text wraps and shapes correctly, with CSS `@keyframes`
+        animations applied to the spans to drive the equaliser bars —
+        a layout that pure SVG can't produce cleanly. Two-level caching:
+        Vercel Data Cache upstream (3600s for single cards) and HTTP
+        `Cache-Control` headers downstream, letting GitHub's Camo proxy
+        manage the SVG distribution layer. Builder UI: 11 element
+        toggles, hex colour overrides, two layouts (classic / player),
+        two presets (default purple / Suno navy-gold), three theme
+        modes (auto / dark / light).
+      outcomes: |
+        Live production service at github-readme-suno-cards.vercel.app
+        with gallery and builder routes. MIT licensed for broad reuse.
+        Build pipeline is esbuild + CI verification + dual render modes
+        (live service or local pre-rendering for users who want full
+        control). Roadmap: waveform variants, lyrics excerpts, playlist
+        cards, PNG export via `@resvg/resvg`.
+      myRole: |
+        Sole author. Designed the monorepo split, wrote the Valibot
+        schemas against Suno's oEmbed contract, engineered the
+        `<foreignObject>` + CSS-keyframes rendering technique, and
+        built the live builder UI plus the GitHub Action distribution
+        path.
 
   - id: echook
     tier: primary
-    recency: historical
+    recency: active
     lastUpdated: "2026-05-18"
     name: echook
     priority: 6
@@ -2856,7 +2976,72 @@ projects:
     publicSummary: |
       AI-operated audio notification system for Claude Code, Cursor IDE, and
       Codex CLI (26 hook events, 2 audio themes, rate-limit alerts, webhooks,
-      TTS, context monitor).
+      TTS, context monitor). 63 GitHub stars, 42 releases, 139 unittest cases
+      validated across Ubuntu/Windows/macOS and Python 3.9–3.13. Rebranded
+      from `claude-code-audio-hooks` at v5.2.1; carved out as Chan's preserved
+      IP in the Engram Architect Cohort Engagement Letter (May 2026).
+    narrative:
+      problem: |
+        Developers running long-form AI coding workflows on Claude Code,
+        Cursor IDE, and Codex CLI have no way to *hear* what their agent
+        is doing — they alt-tab to check progress, miss rate-limit
+        warnings, and only discover stuck sessions on visual inspection.
+        Bolt-on notification tools exist but treat humans as the
+        controller: they require memorising CLI flags, fail to compose
+        with the agent itself, and don't share state across the three
+        major coding agents a serious user actually rotates between.
+      audience: |
+        Software engineers operating Claude Code / Cursor IDE / Codex CLI
+        at the "AI-first" level — comfortable telling Claude to install,
+        theme, snooze, or reconfigure the notification system in plain
+        English rather than memorising subcommands. Also: power users
+        debugging long-running workflows where audio cues are faster
+        than visual polling.
+      productLogic: |
+        Each editor fires hook events as structured JSON; native matchers
+        in `hooks.json` route every event to `hook_runner.py`, which
+        consults snooze state, rate-limit thresholds, and debounce timers
+        before fanning out to audio playback, desktop notifications,
+        TTS, and webhooks. The human-facing control surface is a single
+        `/audio-hooks` Claude Code skill: a user says *"switch to chimes"*
+        or *"snooze for 30 minutes"* in plain English, the skill invokes
+        the right CLI subcommand, and the CLI reports back machine-readable
+        status that Claude can summarise.
+      technicalApproach: |
+        AI-first design at every layer. The CLI ships a stable JSON API
+        with no prompts or spinners, versioned NDJSON event logging
+        (schema `audio-hooks.v1`), 27 stable subcommands, and explicit
+        error codes so an agent can recover autonomously without
+        screen-scraping. Hook coverage is 26 events spanning session
+        start/end, tool execution, permission requests, file changes,
+        and rate-limit warnings (5-hour and 7-day quota windows with
+        configurable 80%/95% thresholds). Two audio themes: ElevenLabs
+        **Jessica** voice or modern UI chimes. Webhooks fan out to Slack,
+        Discord, Teams, and ntfy via fire-and-forget subprocess. The
+        status line displays real-time context-window and API-quota bars
+        with colour-coded warnings. Crucially, the codebase keeps
+        **canonical sources** under `/hooks/`, `/bin/`, `/audio/` and
+        synchronises them into the three plugin layouts (Claude Code,
+        Cursor, Codex) via `build-plugin.sh` — single source of truth,
+        not three forked codebases.
+      outcomes: |
+        63 GitHub stars, 6 forks, **42 releases** shipped, **139 unittest
+        cases** covering Cursor + Codex bridge contracts. CI validates on
+        Ubuntu, Windows, and macOS across Python 3.9 → 3.13. Native Codex
+        CLI support landed at v5.2.0; the project then rebranded from
+        `claude-code-audio-hooks` to **echook** at v5.2.1 — a "door-only"
+        GitHub rename that preserved every existing install via the
+        platform's redirect. The Engram Architect Cohort Engagement
+        Letter (May 9, 2026) explicitly names *claude-code-audio-hooks*
+        among Chan's preserved IP — formal recognition by a paid agentic
+        infrastructure firm that this is portfolio-grade work, not a
+        hobby script.
+      myRole: |
+        Sole author. Designed the AI-first contract (JSON API + NDJSON
+        log + stable subcommands), wrote every hook event integration,
+        engineered the three-editor synchronisation pipeline, and
+        executed the rebrand without breaking compatibility. Maintains
+        the project today through the 5.x line.
 
   - id: douyin-mall-go-template
     tier: primary
@@ -2870,7 +3055,58 @@ projects:
     logo: /public/brands/tiktok-shop.svg
     techStack: [Go, Gin, MySQL, Redis, JWT, REST, Clean Architecture]
     status: active
-    publicSummary: Production-shape Go + Gin + MySQL + Redis e-commerce backend template with clean architecture, JWT auth, and paired React frontend — built solo as a teaching artefact from the ByteDance Youth Training Camp capstone.
+    publicSummary: |
+      Production-shape Go + Gin + MySQL + Redis e-commerce backend template
+      with clean architecture, JWT auth, and paired React frontend — built
+      solo as a teaching artefact from the ByteDance Youth Training Camp
+      capstone. 52 GitHub stars, 7 forks, < 50 ms average API response time.
+    narrative:
+      problem: |
+        Developers learning Go web development have access to plenty of
+        toy hello-world tutorials and plenty of opaque production
+        codebases, but very little **in between** — no template that
+        demonstrates a complete e-commerce backend with the directory
+        layout, build pipeline, and documentation discipline a Chinese
+        big-tech team would actually ship.
+      audience: |
+        Two layered audiences. Primary: Go beginners progressing from
+        toy projects to "ship-shaped" architecture — students from the
+        ByteDance Youth Training Camp and similar bootcamps. Secondary:
+        experienced developers needing a clean starter for an
+        e-commerce backend who don't want to assemble Gin + MyBatis +
+        JWT + Redis + Docker themselves.
+      technicalApproach: |
+        Full stack: **Go 1.23 + Gin** for the backend, **MySQL 8.0** for
+        persistence, **React 18** + Vite for the frontend, **JWT
+        authentication**, **RESTful APIs**, **Redis** caching. Directory
+        layout follows the Go community's production-correct convention:
+        `cmd/server/` (entry points), `internal/` (core business logic),
+        `api/v1/` (handlers and route definitions), `pkg/` (reusable
+        packages), `configs/` (YAML-based config), `docs/` (API specs +
+        schema diagrams), `frontend/` (React/Vite). The repo also ships
+        a **dual frontend implementation**: a React SPA and a vanilla
+        HTML/JavaScript version side by side, so learners can compare
+        architectural approaches against the same backend. Deployment
+        guides cover Docker, Railway, Render, and Fly.io. Bilingual
+        (EN + 简体中文) README at production quality.
+      outcomes: |
+        **52 GitHub stars, 7 forks**, 27 sustained commits — the
+        strongest external traction of any project in Chan's open-source
+        catalogue under "primary" tier. Featured as one of the eight
+        primary projects on Chan's GitHub Open Source table. **< 50 ms**
+        average API response time. Apache-2.0 license to permit
+        commercial reuse while encouraging community contribution.
+        Doubles as the worked-example artefact accompanying Chan's
+        ByteDance Youth Training Camp narrative — the same engineering
+        practices that scored Chan as the #2-most-prolific committer on
+        the Team-115 capstone, packaged as a public learning resource.
+      myRole: |
+        Sole author. Designed the directory layout, wrote both backend
+        and frontend implementations, authored the bilingual
+        documentation, and packaged the multi-platform deployment
+        guides. The repo is its own pedagogical statement: students can
+        read the instructor's commits to see how patterns they're being
+        taught compose into a real production-shape service.
 
   - id: server-google-jobs
     tier: primary
@@ -2888,8 +3124,61 @@ projects:
       MCP server for Google Jobs multi-language search (English, Simplified
       Chinese, Japanese, Korean — 30+ translated strings per locale). Built
       Dec 31 2024 as the companion to the Google News MCP server (first
-      commit one day earlier). Published as `@chanmeng666/google-jobs-server`
-      on npm; listed on Smithery and Glama. 71 solo commits.
+      commit one day earlier). 21 stars, 10 forks, 71 solo commits. Published
+      as `@chanmeng666/google-jobs-server` on npm; registered on the MCP
+      Registry; installable through Smithery (`npx -y @smithery/cli install
+      @chanmeng666/google-jobs-server --client claude`); security badges
+      from MseeP.ai and Glama.ai.
+    narrative:
+      problem: |
+        At launch (Dec 31 2024), MCP was weeks old as a public protocol
+        and there was no canonical way for an AI assistant to query
+        **multilingual job listings**. Job seekers in non-English markets
+        — particularly Greater China, Japan, and Korea — couldn't ask
+        Claude Desktop for relevant openings without falling back to
+        manually translating queries and hand-pasting URL parameters.
+      audience: |
+        Three groups. (a) Developers integrating job search into AI
+        applications. (b) Multilingual job-seekers using Claude Desktop
+        and similar MCP-aware tools. (c) Other early-era MCP server
+        authors wanting a reference implementation of locale-aware
+        third-party API integration.
+      productLogic: |
+        The server exposes Google Jobs (via SerpAPI) as a composable MCP
+        capability. Clients call `search` with parameters `query`,
+        `location`, `employment_type`, `salary`, `radius`, `sort_by` —
+        and a `locale` parameter that maps onto English / Simplified
+        Chinese / Japanese / Korean. The server returns up to 10 results
+        per page with all error messages, status labels, and suggestion
+        prompts translated into the requested locale (30+ strings each).
+        Input is locale-agnostic: a user writing "part-time" or "兼职"
+        or "アルバイト" all map to the same SerpAPI employment code.
+      technicalApproach: |
+        TypeScript on Node.js, compiled to a single executable for MCP
+        clients. The hardest design problem was **locale-agnostic
+        parameter handling** — rather than hard-coding language-specific
+        branches, the server maintains a 4-locale translation matrix
+        keyed against canonical SerpAPI codes, so input in any supported
+        language collapses to the same internal query and output
+        rehydrates into the user's chosen locale. Distribution surface
+        is unusually wide for an early MCP: **npm** (`@chanmeng666/google-jobs-server`),
+        **Smithery** (one-command install via `npx -y @smithery/cli`),
+        a **Dockerfile** for containerised deployment, and a `.mcpb`
+        compiled binary for frictionless install on the MCP Registry.
+      outcomes: |
+        **21 stars, 10 forks, 71 solo commits**. Registered on the
+        official MCP Registry; security-assessment badges from MseeP.ai
+        and Glama.ai validating runtime reliability. The companion piece
+        to Chan's **google-news-mcp** server (first commit one day
+        earlier, 2024-12-30) — together these two represent **one of
+        the earliest public sets of locale-aware MCP servers**, predating
+        most enterprise MCP adoption by months.
+      myRole: |
+        Sole author. Designed the locale-agnostic parameter handling,
+        authored every translation table, wrote the multi-channel
+        distribution pipeline (npm + Smithery + Docker + .mcpb), and
+        maintains the project as part of the matched Google News /
+        Google Jobs MCP pair.
 
   - id: tencent-meeting-video-downloader
     tier: primary
@@ -2902,26 +3191,140 @@ projects:
     repoUrl: https://github.com/ChanMeng666/tencent-meeting-video-downloader
     logo: /public/brands/tencent-meeting-video-downloader.svg
     status: active
-    publicSummary: Chrome extension for Tencent Meeting recordings.
+    publicSummary: |
+      Chrome Manifest V3 extension that auto-detects Tencent Meeting
+      recording streams from the myqcloud.com CDN, generates an
+      optimised curl command (with automatic Windows-to-Unix path
+      conversion for Git Bash) and lets non-technical users save the
+      file locally with one click. 19 stars, 3 forks, listed on Chrome
+      Web Store.
+    narrative:
+      problem: |
+        Tencent Meeting recordings live on the myqcloud.com CDN behind
+        headers and URL patterns that make manual download brittle.
+        Educators, business operators, and content creators frequently
+        need to keep a local copy of a recorded session — for accessibility
+        captioning, archiving, or republishing to a different platform
+        — but the official UI offers no clean download path, and the
+        URL pattern is non-obvious enough that ad-hoc curl attempts
+        usually fail mid-stream.
+      audience: |
+        The README explicitly names three groups: **educators** (recorded
+        lectures), **business professionals** (recorded meetings), and
+        **content creators** (recorded interviews / panels needing
+        local post-production). Secondary audience: any Mandarin-speaking
+        user in a corporate environment standardised on Tencent Meeting
+        who lacks IT permission to install desktop downloaders.
+      productLogic: |
+        The extension sits passively in the browser and listens for
+        Tencent Meeting recording playback. When it detects a recording
+        stream, it surfaces the matched video in the popup interface
+        and offers a one-click "generate curl" action. The user types
+        (or pastes) a save path; the extension produces a ready-to-run
+        curl command with the right headers, the correct URL, and an
+        automatically converted Unix-style path for Git Bash. The
+        user pastes that into a terminal — no manual URL extraction,
+        no header guessing.
+      technicalApproach: |
+        **Chrome Manifest V3** architecture using the **webRequest**
+        API to intercept the streaming response from
+        `*.myqcloud.com`. The interesting engineering is in the curl
+        generation: rather than emitting a naive URL, the extension
+        **strips problematic request headers** (the ones Tencent's
+        servers reject when re-issued from outside the browser
+        context) and **rewrites Windows paths to Unix-style** so the
+        command works in Git Bash — Chinese corporate environments
+        skew Windows-heavy, and Git Bash is the de-facto Unix shell
+        most users have. Built with JavaScript ES6+, Webpack 5, Babel.
+      outcomes: |
+        **19 GitHub stars, 3 forks**, 24 commits, 2 releases — latest
+        v1.1.0 in December 2024. Listed on the **Chrome Web Store**
+        (user ratings visible on the listing). The user base is
+        primarily Mandarin-speaking and the README is structured
+        accordingly. Sustained traction for an explicitly niche
+        utility — the kind of project that only exists because Chan
+        used Tencent Meeting daily during the China-based work
+        portion of her career and wrote the tool she herself needed.
+      myRole: |
+        Sole author. Reverse-engineered the myqcloud.com header
+        requirements, built the Chrome Manifest V3 extension, and
+        designed the cross-platform curl generation logic. Maintains
+        the project at v1.1.0 with periodic header updates as
+        Tencent's API evolves.
 
   - id: gradient-svg-generator
     tier: primary
-    recency: historical
+    recency: active
     lastUpdated: "2026-05-18"
     name: gradient-svg-generator
     priority: 10
     category: creative
-    tagline: 330+ animated SVG templates — powers every visual on this page
+    tagline: 340+ animated SVG templates — powers every visual on this profile
     url: https://gradient-svg-generator.vercel.app/
     repoUrl: https://github.com/ChanMeng666/gradient-svg-generator
     logo: /public/brands/gradient-svg-generator-logo.svg
     status: live
     publicSummary: |
-      330+ animated SVG templates — powers every visual on this page.
+      340+ animated gradient SVG banners delivered as URL-parameterised
+      streaming SVG — paste a single `<img>` link, no install required.
+      Powers every visual on this profile. 273 commits, Vercel-deployed,
+      CI via GitHub Actions, Vitest test suite.
+    narrative:
+      problem: |
+        Adding a striking animated banner to a GitHub profile or
+        documentation site requires either bespoke SVG authorship,
+        third-party paid services, or static images that look dated
+        within months. There is no zero-install service that lets a
+        developer drop a parameterised URL into Markdown and get a
+        live, animated, on-brand banner that updates without
+        re-rendering.
+      audience: |
+        Developers, open-source maintainers, technical writers, and
+        community organisers who want their READMEs, profiles, and
+        landing pages to differentiate visually without dependency
+        sprawl. Specific subgroups served by template categories:
+        pride communities (20 dedicated pride-flag templates),
+        DevOps/full-stack practitioners (30 GitHub Profile templates),
+        creative technologists (29 experimental dimensional-portal
+        templates).
+      productLogic: |
+        Single-URL contract: append parameters (`text=`, `template=`,
+        `height=`, `duration=`, plus colour stops `color0=`, `color1=`,
+        ...) to the API endpoint, embed that URL as a Markdown image,
+        done. Users who don't want to handwrite parameters use the
+        `/create` visual editor — a GUI composer that previews changes
+        live and produces the final URL for copy-paste.
+      technicalApproach: |
+        The service streams **dynamic SVG with embedded CSS animations**
+        rather than rasterising images — every banner is a small, live
+        XML document the browser animates locally, so file sizes stay
+        tiny and animations stay sharp at any zoom. Template
+        organisation is the architectural bet: 340+ templates split
+        into gradient types (horizontal / vertical / holographic /
+        radial), animation effects (morphing shapes, fluid dynamics,
+        consciousness streams), text rendering (path animation, glitch
+        effects), and background patterns (quantum tunnels,
+        electromagnetic fields, memory fragments) — each template a
+        self-contained parametric generator rather than a monolithic
+        switch. CI/CD: GitHub Actions; tests: Vitest; deploy: Vercel.
+      outcomes: |
+        273 sustained commits. Production-grade availability via
+        Vercel's global edge. Apache-licensed for broad reuse. **Powers
+        every section header and visual badge in this very profile** —
+        the project is its own dogfooding evidence: if you can see
+        animated gradient banners on the README that generated this
+        page, you're looking at gradient-svg-generator output.
+      myRole: |
+        Sole author. Designed the URL-parameterised streaming-SVG
+        contract, authored every template category, built the live
+        builder at `/create`, and wired the Vercel + GitHub Actions
+        + Vitest production pipeline. Uses the service across every
+        personal repo as continuous integration: any rendering
+        regression breaks visible branding immediately.
 
   - id: femtracker-agent
     tier: primary
-    recency: historical
+    recency: recent
     lastUpdated: "2026-05-18"
     name: FemTracker Agent
     priority: 11
@@ -2945,6 +3348,66 @@ projects:
       persistence. Merged into CopilotKit's official `demos_2025` showcase
       via [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)
       (publicly thanked by maintainer Tyler Slaton).
+    narrative:
+      problem: |
+        Existing women's-health apps treat menstrual cycle, fertility,
+        symptoms, nutrition, exercise, and lifestyle as **disconnected
+        verticals** — each one a separate dashboard, no shared model of
+        the user, no agent to reason across them. Users asking
+        "should I push my workout today given where I am in my cycle?"
+        get four sub-apps with no answer. Add the privacy concerns of
+        sensitive health data being aggregated by ad-funded apps and
+        the category is overdue for an agent-native rebuild.
+      audience: |
+        Health-conscious women managing cycle-related symptoms,
+        planning conception, or pursuing holistic wellness — and the
+        secondary audience of agent-framework practitioners studying
+        what production-grade multi-agent coordination looks like
+        under HIPAA-aligned constraints. CopilotKit's maintainers
+        themselves are an audience: the project shipped into their
+        official `demos_2025` showcase.
+      productLogic: |
+        Single conversational surface (CopilotKit) routes the user's
+        intent to one of eight specialised agents: **Main Coordinator**
+        + **Cycle Tracker** + **Fertility Tracker** + **Symptom Mood**
+        + **Nutrition Guide** + **Exercise Coach** + **Lifestyle
+        Manager** + **Health Insights**. Each agent has its own
+        domain logic and prompt scaffolding but shares the same
+        Supabase-backed user model, so a question that crosses two
+        domains ("am I dehydrated today?", which touches nutrition +
+        cycle + exercise) gets routed through the Coordinator and
+        answered with WHO-standard scoring rather than three
+        disconnected guesses.
+      technicalApproach: |
+        The architectural bet is **CopilotKit on the frontend +
+        LangGraph on the backend**, communicating through a CopilotKit
+        runtime adapter. Next.js 15 + React 19 + TypeScript on the
+        frontend; Python 3.12 + LangGraph for agent orchestration;
+        Supabase PostgreSQL with **Row Level Security** for
+        privacy-preserving multi-tenant persistence; Redis caching
+        achieving 90%+ hit rates on hot read paths. The health-scoring
+        engine implements WHO-standard algorithms across six dimensions:
+        exercise (150 min/week benchmark), hydration (2 000 mL daily),
+        cycle regularity (21–35 day window), mood patterns, lifestyle
+        factors, fertility indicators — each 0–100, composited into
+        actionable insights. Codebase is 83.2% TypeScript for type
+        safety in a medical-domain product.
+      outcomes: |
+        **Merged into CopilotKit's official `demos_2025` showcase**
+        via [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068),
+        publicly thanked by maintainer Tyler Slaton — external
+        recognition of production-grade quality from the framework's
+        own maintainers, not just a self-published demo. Live demo at
+        femtracker-agent.vercel.app: reported 95+ Lighthouse score,
+        sub-second TTFB, 99.9% uptime. Demo video at the linked YouTube
+        URL. 90 sustained commits.
+      myRole: |
+        Sole author of the agent architecture, the WHO-scoring engine,
+        the Supabase schema with Row Level Security, and the CopilotKit
+        runtime adapter. Drove the project into CopilotKit's official
+        demo set — a path that required not just shipping but
+        demonstrating reference-implementation-grade quality to a
+        third-party maintainer team.
 
   # ------- OPEN SOURCE — COLLAPSIBLE BY CATEGORY -------
 
@@ -3313,20 +3776,36 @@ projects:
 
   # ------- AI Applications & Agents (continued) -------
   - id: claude-code-audio-hooks
-    tier: primary
-    recency: historical
+    tier: archive
+    recency: deprecated
     lastUpdated: "2026-05-18"
-    name: Claude Code Audio Hooks
+    name: Claude Code Audio Hooks (legacy name → echook)
     priority: 9
     category: ai-apps
-    tagline: Intelligent audio notifications for Claude Code CLI with 9 notification types, cross-platform (Windows/Linux/macOS), one-command install
+    tagline: Original name of the project now published as `echook` — repo URL still resolves via GitHub redirect for backward compatibility
     repoUrl: https://github.com/ChanMeng666/claude-code-audio-hooks
     logo: /public/brands/claude-code-audio-hooks-logo.svg
     techStack: ["Claude Code", CLI, "Cross-platform"]
-    status: live
+    status: archived
+    publicSummary: |
+      Historical / legacy entry. The project was renamed to **echook** at
+      v5.2.1 — a "door-only" rename to reflect expanded support for
+      Cursor IDE and Codex CLI alongside Claude Code. All stars, releases,
+      issues, and existing installs transferred via GitHub's repository
+      redirect; the old URL is still cited here because the **Engram
+      Architect Cohort Engagement Letter** (May 2026) explicitly carves
+      out *claude-code-audio-hooks* by name as Chan's preserved IP. See
+      the `echook` entry for the current canonical project narrative.
+    narrative:
+      problem: |
+        Historical naming. The substantive project narrative lives on
+        the `echook` entry.
+      myRole: |
+        Sole author; renamed the repository to `echook` at v5.2.1
+        without breaking any existing user installation.
   - id: typst-claude-skill
     tier: primary
-    recency: historical
+    recency: active
     lastUpdated: "2026-05-18"
     name: Typst Skill for Claude Code
     priority: 10
@@ -3336,6 +3815,69 @@ projects:
     url: https://typst.app/
     techStack: [Typst, "Claude Code Skill"]
     status: live
+    publicSummary: |
+      Claude Code skill that embeds the Typst typesetting engine into the
+      agent's workflow: a user describes the document they need in plain
+      English, Claude generates a `.typ` file from one of nine production
+      templates, and `typst compile` produces a PDF. Demonstrates
+      skill-structure design at the level needed for the agent design
+      pattern work in the Engram Architect Cohort engagement.
+    narrative:
+      problem: |
+        Claude Code has no built-in path to professional document output.
+        Users who need an academic paper, a typographic resume, a slide
+        deck, an invoice, or a CJK-friendly report fall back to MS Word,
+        LaTeX, or Markdown-to-PDF chains — none of which Claude can drive
+        natively, and none of which produce typographic-grade output.
+      audience: |
+        Two distinct groups: (a) Claude Code users who need
+        production-quality PDFs without leaving the agent — academics,
+        job seekers, technical teams, anyone generating invoices or
+        presentations; (b) other agent-skill authors who want a worked
+        example of correct Claude Code skill structure (SKILL.md decision
+        trees, references loaded on demand, environment validation
+        scripts).
+      productLogic: |
+        Install the skill once (four supported methods: marketplace
+        plugin, git clone, manual ZIP, or per-project `.claude/skills/typst/`
+        deployment), then describe the document in plain English. The
+        skill matches intent to one of nine bundled templates — general
+        document, CJK document, academic paper, simple resume,
+        typographic two-column resume, letter, technical report,
+        presentation slides, invoice — fills the template parameters
+        from the conversation, and runs `typst compile` to produce the
+        PDF. A `references/` folder holds the Typst language reference,
+        CLI documentation, template patterns, and design system; the
+        skill loads them on demand rather than dumping everything into
+        context.
+      technicalApproach: |
+        Skill structure is the differentiator. The repository root
+        contains `skills/typst/` as the actual loadable artefact,
+        enabling **both** marketplace plugin distribution **and** direct
+        skill-folder installation without code duplication. `SKILL.md`
+        is the decision tree + workflow patterns + recovery procedures
+        — the spine Claude actually reads when invoking the skill.
+        `references/` is split into language reference, CLI docs,
+        templates, and design patterns so Claude can pull only the
+        relevant slice. `scripts/verify-typst.sh` runs as a precondition
+        check (Typst v0.14+, CJK font availability) so the skill fails
+        loudly and early rather than half-way through compilation.
+        Advanced patterns embedded: theme systems with cascading defaults,
+        scope-based show rules, modular component functions, multi-column
+        layouts, circular image clipping, typography hierarchy, native
+        CJK fallback chains.
+      outcomes: |
+        Released v0.3.0 in April 2026, currently early adoption. The
+        deeper value isn't downloads — it's that this is the worked
+        example of "how to structure a Claude Code skill" that Chan
+        brings into the Engram Architect Cohort agent-design discussions
+        and that other skill authors can reference as a clean reference
+        implementation.
+      myRole: |
+        Sole author. Designed the dual-distribution architecture
+        (marketplace plugin layout AND installable skill folder from a
+        single repo), authored all nine templates, wrote the SKILL.md
+        decision tree, and built the verify-typst.sh precondition system.
 
   # ------- Commercial / Partnership Web Applications -------
   - id: ai-hackathon-assistant

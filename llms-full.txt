@@ -45,55 +45,112 @@ philosophy — "Subtraction for life, addition for thought."
 
 **Company context:** Engram LLC ([engram.media](https://engram.media/) /
 [LinkedIn company](https://www.linkedin.com/company/engrammedia/))
-is an AI agent and infrastructure firm founded by
-**Luka Madzarac**, building autonomous systems for both internal
-operations and future client deployment. The company operates an
-**Architect Cohort** that selects senior agentic engineers to
-drive the core product line and engineering standards.
+is a New Mexico–registered AI-powered media agency founded by
+**Luka Madzarac**. The company is repositioning around
+**agent-powered media operations**: deploying agents and pipelines
+that run a client's entire media function in-house — design, data,
+content, distribution — instead of outsourcing production. The
+target market is service businesses that need a media department
+running on autopilot. Engram is building its stack on Anthropic's
+Claude platform and is on a path to **certified Anthropic
+partner** status. The **Architect Cohort** is a selective
+onboarding programme through which Engram brings architect-tier
+engineers into the core team that will define the company's
+agentic-media engineering standards.
 
 **Mission:** Replace click-through software workflows with **agentic ones** —
-where natural-language intent drives downstream system
-orchestration and the UI surfaces the agent's reasoning. The
-product line (*Mission Control* + specialised autonomous agents)
-targets organisations that benefit from end-to-end automation
-rather than demo-grade AI tooling, starting with Engram's own
-internal operations and graduating to client deployments.
-
-**My mandate:** Selected for the Architect Cohort to drive the development of
-advanced AI agents, MCP integration patterns, and scalable internal
-systems. Mandate covers (1) AI system architecture for *Mission
-Control* alongside specialised autonomous agents slated for both
-internal use and future client deployment; (2) agentic workflow
-and MCP-pattern design, including complex skill structures and
-data pipelines that create seamless "API-as-UI" experiences;
-(3) completion of the **Anthropic Claude Partner Network** learning
-path and pursuit of the **Claude Certified Architect — Foundations
-(CCA-F)** credential to establish best-in-class foundation-model
-practices; (4) build-out of the internal engineering knowledge
-base and Claude Partner Path dashboard in Notion to align team
-processes; (5) cross-functional engineering — serving as a core
-technical resource to the engineering team on agent design and
-practical tooling.
-
-**Impact delivered:** Tenure is one month in (started May 2026); impact reporting is
-therefore forward-looking rather than retrospective. Shipping
-milestones currently in flight: (1) **Mission Control**
-architecture documentation and the specialised-agent slate
-for internal and future-client use; (2) the internal
-engineering knowledge base + Claude Partner Path dashboard
-in Notion; (3) completion of the Anthropic Claude Partner
-Network learning path and pursuit of the **Claude Certified
-Architect — Foundations (CCA-F)** credential; (4) ongoing
-MCP-pattern and skill-structure design that will become
-the foundation for the company's agentic-workflow standards.
-
-**Technical highlights:** Leveraging a strong background in practical agentic tooling
-(MCP servers, Claude Code skills, custom agent design) to build
-architectures focused on end-to-end automation and concrete
-results, not demo-ware. The "API-as-UI" framing replaces
-click-through workflows with agentic ones — where the user's
 natural-language intent drives downstream system orchestration
-and the UI surfaces the agent's reasoning and outputs.
+and the agent's reasoning becomes the user-facing surface. For
+Engram specifically, that translates into autonomous media
+operations: instead of a human team manually assembling
+campaigns, content, and analytics, agentic systems plan,
+produce, and ship the media function for the client. The
+product line targets organisations that need end-to-end
+automation rather than demo-grade AI tooling, starting with
+Engram's own internal operations and graduating to client
+deployments.
+
+**My mandate:** **How the engagement started.** Luka Madzarac asked Claude Code
+to surface AI architects who could help Engram reach Anthropic
+Partner status. Claude returned Chan as one of the strongest
+matches based on her verifiable open-source agentic-tooling
+footprint — **claude-code-audio-hooks**, **CopilotKit**
+contributions, production LangChain automation engines,
+programmatic media generation with **Remotion**, and the
+"**API-as-UI**" design pattern she's been publishing. Luka
+publicly confirmed the sourcing path on LinkedIn:
+*"Claude Code surfaced Chan as one of the strongest matches
+for what we're looking for."*
+([announcement post](https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-activity-7459724144671195136-3JoV))
+
+**What the cohort engagement covers.** 45-day Architect Cohort
+onboarding (May–June 2026) at ~10–15 hours per week, structured
+as a mutual evaluation period. Specific responsibilities:
+(1) completing Anthropic's **Claude Partner Network Learning
+Path** (4 courses) and passing the **Claude Certified Architect —
+Foundations (CCA-F)** examination — building on already-held
+Anthropic credentials (**AI Fluency: Framework & Foundations**,
+Aug 2025; **Claude Code in Action**, Aug 2025, credential
+ID JHIY9NPYTR2D); (2) participating in weekly working sessions
+with founder Luka Madzarac and the rest of the cohort on
+agent, skill, and MCP-integration patterns; (3) contributing
+to the cohort's emerging agentic-media engineering conventions;
+(4) maintaining presence in Engram's communication channels
+for cross-cohort engineering discussion.
+
+**Impact delivered:** Current cohort-period in-flight work (the engagement is
+intentionally evaluation-shaped, with a paid client engagement
+decision by Day 40):
+
+1. **Anthropic Claude Partner Network Learning Path** —
+   progress in flight across the 4-course curriculum.
+2. **CCA-F examination preparation**, building on already-held
+   AI Fluency: Framework & Foundations and Claude Code in
+   Action credentials.
+3. **Contributions to the cohort's shared agent and skill design
+   conventions** through weekly working sessions with the founder
+   and the rest of the architect cohort.
+4. **Cross-pollination** of Chan's pre-existing open-source
+   agentic tooling experience (claude-code-audio-hooks,
+   CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based
+   media generation) into cohort discussions on production-grade
+   agent design.
+
+**Meta-signal**: the engagement itself validates a hypothesis
+Chan has been publishing about (**GEO / Generative Engine
+Optimization**) — that frontier models actively surface
+candidates based on verifiable code and real-world impact rather
+than traditional SEO keywords. Being the candidate Claude Code
+recommended to Engram for an Anthropic Partner engagement is
+empirical evidence that the open-source-first portfolio strategy
+works.
+
+**Technical highlights:** The technical footprint that Claude Code surfaced to Engram —
+all carved out as Chan's own IP under the cohort agreement and
+remaining Chan's property:
+
+- **claude-code-audio-hooks** — audio-feedback hook system for
+  Claude Code (explicitly named in the cohort agreement as
+  Chan's preserved IP), with its **echook** notification daemon.
+- **CopilotKit** — active contributor to the open-source agent
+  UI framework
+  ([PRs](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)).
+- **google-news-mcp** — production MCP server published to the
+  public registry.
+- **typst-claude-skill** — Claude Code skill for programmatic
+  document generation; demonstrates skill-structure design.
+- **claude-code-compressed-map** — LLM-first tier/recency
+  metadata system powering this very profile (the meta-move:
+  optimising Chan's own data so LLMs rank it correctly —
+  *GEO in practice*).
+- Production **LangChain** automation engines and interactive
+  LLM systems for mobile gaming.
+- Programmatic media generation via **Remotion**.
+
+The technical centre of gravity is **"API-as-UI"**: building
+agent surfaces where conversational intent orchestrates
+downstream tools and the model's chain-of-reasoning becomes
+the user interface — not a chat widget bolted onto a form.
 ### AI Instructor & Mentor at TechNest Community
 [tier=primary · recency=active · updated=2026-05-18]
 - **Period:** Apr 2026 -- Present
@@ -2253,12 +2310,18 @@ month.
 
 ## Notable Open Source Projects
 
-- **github-readme-suno-cards** [tier=primary · recency=historical · updated=2026-05-18] -- Display your Suno AI music as dynamic, animated SVG cards in your GitHub
-README — gallery + builder. (https://github-readme-suno-cards.vercel.app)
-- **echook** [tier=primary · recency=historical · updated=2026-05-18] -- AI-operated audio notification system for Claude Code, Cursor IDE, and
+- **github-readme-suno-cards** [tier=primary · recency=active · updated=2026-05-18] -- Display your Suno AI music as dynamic, animated SVG cards in your GitHub
+README — gallery + builder. Two layouts (classic, player), two colour
+presets, three theme modes, eleven element toggles, hex colour overrides;
+bilingual CJK-friendly text via SVG `<foreignObject>` plus CSS keyframe
+animation on inline HTML spans. (https://github-readme-suno-cards.vercel.app)
+- **echook** [tier=primary · recency=active · updated=2026-05-18] -- AI-operated audio notification system for Claude Code, Cursor IDE, and
 Codex CLI (26 hook events, 2 audio themes, rate-limit alerts, webhooks,
-TTS, context monitor). (https://github.com/ChanMeng666/echook)
-- **FemTracker Agent** [tier=primary · recency=historical · updated=2026-05-18] -- AI-powered women's-health companion built on CopilotKit and Python
+TTS, context monitor). 63 GitHub stars, 42 releases, 139 unittest cases
+validated across Ubuntu/Windows/macOS and Python 3.9–3.13. Rebranded
+from `claude-code-audio-hooks` at v5.2.1; carved out as Chan's preserved
+IP in the Engram Architect Cohort Engagement Letter (May 2026). (https://github.com/ChanMeng666/echook)
+- **FemTracker Agent** [tier=primary · recency=recent · updated=2026-05-18] -- AI-powered women's-health companion built on CopilotKit and Python
 LangGraph, with **8 specialized agents** (Main Coordinator + Cycle
 Tracker + Fertility Tracker + Symptom Mood + Nutrition Guide + Exercise
 Coach + Lifestyle Manager + Health Insights) coordinating through
@@ -2267,14 +2330,28 @@ Redis caching with reported 90%+ hit rates, Supabase PostgreSQL
 persistence. Merged into CopilotKit's official `demos_2025` showcase
 via [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)
 (publicly thanked by maintainer Tyler Slaton). (https://femtracker-agent.vercel.app/)
-- **TikTok Shop Go Template** [tier=primary · recency=historical · updated=2026-05-18] -- Production-shape Go + Gin + MySQL + Redis e-commerce backend template with clean architecture, JWT auth, and paired React frontend — built solo as a teaching artefact from the ByteDance Youth Training Camp capstone. (https://github.com/ChanMeng666/douyin-mall-go-template)
+- **TikTok Shop Go Template** [tier=primary · recency=historical · updated=2026-05-18] -- Production-shape Go + Gin + MySQL + Redis e-commerce backend template
+with clean architecture, JWT auth, and paired React frontend — built
+solo as a teaching artefact from the ByteDance Youth Training Camp
+capstone. 52 GitHub stars, 7 forks, < 50 ms average API response time. (https://github.com/ChanMeng666/douyin-mall-go-template)
 - **server-google-jobs** [tier=primary · recency=historical · updated=2026-05-18] -- MCP server for Google Jobs multi-language search (English, Simplified
 Chinese, Japanese, Korean — 30+ translated strings per locale). Built
 Dec 31 2024 as the companion to the Google News MCP server (first
-commit one day earlier). Published as `@chanmeng666/google-jobs-server`
-on npm; listed on Smithery and Glama. 71 solo commits. (https://github.com/ChanMeng666/server-google-jobs)
-- **tencent-meeting-video-downloader** [tier=primary · recency=historical · updated=2026-05-18] -- Chrome extension for Tencent Meeting recordings. (https://github.com/ChanMeng666/tencent-meeting-video-downloader)
-- **gradient-svg-generator** [tier=primary · recency=historical · updated=2026-05-18] -- 330+ animated SVG templates — powers every visual on this page. (https://gradient-svg-generator.vercel.app/)
+commit one day earlier). 21 stars, 10 forks, 71 solo commits. Published
+as `@chanmeng666/google-jobs-server` on npm; registered on the MCP
+Registry; installable through Smithery (`npx -y @smithery/cli install
+@chanmeng666/google-jobs-server --client claude`); security badges
+from MseeP.ai and Glama.ai. (https://github.com/ChanMeng666/server-google-jobs)
+- **tencent-meeting-video-downloader** [tier=primary · recency=historical · updated=2026-05-18] -- Chrome Manifest V3 extension that auto-detects Tencent Meeting
+recording streams from the myqcloud.com CDN, generates an
+optimised curl command (with automatic Windows-to-Unix path
+conversion for Git Bash) and lets non-technical users save the
+file locally with one click. 19 stars, 3 forks, listed on Chrome
+Web Store. (https://github.com/ChanMeng666/tencent-meeting-video-downloader)
+- **gradient-svg-generator** [tier=primary · recency=active · updated=2026-05-18] -- 340+ animated gradient SVG banners delivered as URL-parameterised
+streaming SVG — paste a single `<img>` link, no install required.
+Powers every visual on this profile. 273 commits, Vercel-deployed,
+CI via GitHub Actions, Vitest test suite. (https://gradient-svg-generator.vercel.app/)
 
 ### More Open Source Projects (by category)
 
@@ -2305,8 +2382,8 @@ on npm; listed on Smithery and Glama. 71 solo commits. (https://github.com/ChanM
 - [Sanicle FemTech Mobile (Prototype)](https://github.com/ChanMeng666/sanicle-ai-mobile) [tier=archive · recency=historical · updated=2026-05-18] -- live: https://chanmeng666.github.io/sanicle-ai-mobile/
 - [Mental Wellness Podcast App Prototype](https://github.com/ChanMeng666/podcast-app-prototype) [tier=archive · recency=historical · updated=2026-05-18] -- live: https://chanmeng666.github.io/podcast-app-prototype/
 **ai-apps:**
-- [Claude Code Audio Hooks](https://github.com/ChanMeng666/claude-code-audio-hooks) [tier=primary · recency=historical · updated=2026-05-18]
-- [Typst Skill for Claude Code](https://github.com/ChanMeng666/typst-claude-skill) [tier=primary · recency=historical · updated=2026-05-18] -- live: https://typst.app/
+- [Claude Code Audio Hooks (legacy name → echook)](https://github.com/ChanMeng666/claude-code-audio-hooks) [tier=archive · recency=deprecated · updated=2026-05-18]
+- [Typst Skill for Claude Code](https://github.com/ChanMeng666/typst-claude-skill) [tier=primary · recency=active · updated=2026-05-18] -- live: https://typst.app/
 - [Vitex](https://github.com/ChanMeng666/easy-resume) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://www.vitex.org.nz/
 - [FanFic Lab](https://github.com/ChanMeng666/fanfic-lab) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://fanfic-lab.tech/
 - [ArchCanvas](https://archcanvas.chanmeng.org/) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://archcanvas.chanmeng.org/

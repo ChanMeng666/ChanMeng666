@@ -912,17 +912,33 @@
       "id": "google-news-mcp",
       "tier": "flagship",
       "recency": "recent",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-05-19",
       "name": "Google News MCP Server",
       "priority": 4,
       "category": "ai-apps",
-      "tagline": "Early-ecosystem Google News MCP server (shipped Dec 30, 2024) — listed across 10+ MCP catalogs, npm-published, with companion server-google-jobs",
+      "tagline": "Early-ecosystem MCP server (shipped 5 weeks after Anthropic's Nov 25 2024 MCP launch) — PulseMCP \"Top Pick\", featured in Skywork AI deep-dive review, distributed across 15+ MCP catalogs",
       "url": "https://github.com/ChanMeng666/server-google-news",
       "repoUrl": "https://github.com/ChanMeng666/server-google-news",
       "extraLinks": [
         {
           "label": "Jobs MCP",
           "url": "https://github.com/ChanMeng666/server-google-jobs"
+        },
+        {
+          "label": "Skywork review (News)",
+          "url": "https://skywork.ai/skypage/en/google-news-ai-integration/1978665953022038016"
+        },
+        {
+          "label": "Skywork deep-dive",
+          "url": "https://skywork.ai/skypage/en/google-news-ai-engineer-dive/1978706891771256832"
+        },
+        {
+          "label": "AgentSkillsHub guide",
+          "url": "https://agentskillshub.dev/skills/google-news/"
+        },
+        {
+          "label": "PulseMCP (Top Pick)",
+          "url": "https://www.pulsemcp.com/servers/chanmeng666-google-news"
         },
         {
           "label": "Smithery",
@@ -933,8 +949,16 @@
           "url": "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news"
         },
         {
-          "label": "PulseMCP",
-          "url": "https://www.pulsemcp.com/servers/chanmeng666-google-news"
+          "label": "mcp.so",
+          "url": "https://mcp.so/server/server-google-news/ChanMeng666"
+        },
+        {
+          "label": "Awesome MCP Servers",
+          "url": "https://mcpservers.org/servers/ChanMeng666/server-google-news"
+        },
+        {
+          "label": "Archestra",
+          "url": "https://archestra.ai/mcp-catalog/chanmeng666__server-google-news"
         },
         {
           "label": "Issue #76",
@@ -960,7 +984,9 @@
       ],
       "keywords": [
         "Model Context Protocol",
-        "Early MCP developer (Dec 2024)",
+        "Early MCP developer (Dec 2024 — 5 weeks post-launch)",
+        "PulseMCP Top Pick",
+        "Skywork AI featured review",
         "Anthropic MCP ecosystem",
         "Multi-registry distributed",
         "AI-agent tooling",
@@ -971,7 +997,7 @@
       "metrics": [
         {
           "label": "First commit",
-          "value": "2024-12-30 (within 1 month of MCP launch)"
+          "value": "2024-12-30 — 35 days after MCP's Nov 25 2024 public launch"
         },
         {
           "label": "npm package",
@@ -979,11 +1005,23 @@
         },
         {
           "label": "Registry listings",
-          "value": "10+ MCP catalogs"
+          "value": "15+ MCP catalogs (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, MCP Server Finder, MCP Archive, Playbooks, mcpservers.org, Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides)"
+        },
+        {
+          "label": "PulseMCP badge",
+          "value": "Top Pick · 26.1k visitors · #1,105 global rank"
+        },
+        {
+          "label": "Glama quality",
+          "value": "A (license) · 122 stars"
+        },
+        {
+          "label": "Skywork review",
+          "value": "Dedicated Oct 2025 deep-dive article + AI-Engineer's Guide companion piece"
         },
         {
           "label": "Stars",
-          "value": "121+ (dynamic badge)"
+          "value": "122 (Glama) / 121+ (dynamic badge)"
         },
         {
           "label": "Forks",
@@ -1000,14 +1038,14 @@
       ],
       "status": "production",
       "startDate": "2024-12-30",
-      "publicSummary": "An early-ecosystem MCP server — first commit Dec 30 2024, within a\nmonth of MCP's public launch by Anthropic in November 2024. Brings\nGoogle News search to AI assistants like Claude Desktop, Cline, and\nCursor through SerpAPI, with automatic topical categorization (AI &\nTechnology, Business, Science & Research, Healthcare, General) and\nmulti-language / multi-region support. Listed across **10+ MCP\ncatalogs and registries** (Smithery, mcp.so, Glama, PulseMCP top-pick,\nAwesome MCP Servers, MCP Server Finder, MCP Archive, Playbooks,\nmcpservers.org, Archestra), npm-published as\n`@chanmeng666/google-news-server`. Paired with a companion early\nserver, `server-google-jobs` (first commit Dec 31 2024) — together\n169 solo commits across the two servers. Beyond shipping code, I\ncontributed early ecosystem troubleshooting via\n[modelcontextprotocol/servers issue #76](https://github.com/modelcontextprotocol/servers/issues/76)\n(opened Nov 27 2024) — the Windows + NVM PATH workaround referenced\nin both server READMEs as primary troubleshooting guidance.\n",
+      "publicSummary": "An early-ecosystem MCP server — first commit **Dec 30 2024, just\n35 days after Anthropic's public launch of the Model Context\nProtocol on Nov 25 2024**. Brings Google News search to AI\nassistants like Claude Desktop, Cline, and Cursor through SerpAPI,\nwith automatic topical categorization (AI & Technology, Business,\nScience & Research, Healthcare, General) and multi-language /\nmulti-region support. Carries the **PulseMCP \"Top Pick\" badge**\nwith 26.1k estimated visitors and a #1,105 global popularity rank.\nFeatured in three independent deep-dive write-ups: Skywork AI's\n*\"Chan Meng's Google News MCP Server: The AI Engineer's Guide to\nReal-Time News Integration\"*, Skywork's *\"Google News & Trends\nMCP Server: The AI Engineer's Deep Dive\"*, and AgentSkillsHub's\n*\"Install Guide & Security Review\"*. Distributed across **15+\nMCP catalogs and registries** — Smithery, mcp.so, Glama (A\nlicense rating, 122 stars), PulseMCP, Awesome MCP Servers,\nMCP Server Finder, MCP Archive, Playbooks, mcpservers.org,\nArchestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub,\nMagicSlides — and npm-published as\n`@chanmeng666/google-news-server`. Paired with a companion early\nserver, `server-google-jobs` (first commit Dec 31 2024) —\ntogether 169 solo commits across the two servers. Beyond shipping\ncode, I contributed early ecosystem troubleshooting via\n[modelcontextprotocol/servers issue #76](https://github.com/modelcontextprotocol/servers/issues/76)\n(opened Nov 27 2024) — the Windows + NVM PATH workaround\nreferenced in both server READMEs as primary troubleshooting\nguidance.\n",
       "narrative": {
         "problem": "Anthropic published the Model Context Protocol specification in\nNovember 2024 as the open standard for connecting AI assistants\nlike Claude to external tools and data sources — but in the first\nweeks after launch, the ecosystem had only a handful of reference\nservers and no real way for AI assistants to search current news.\nGenerative engines (ChatGPT, Claude, Perplexity) were increasingly\nbeing asked \"what's happening with X today\" — questions an LLM\ncannot answer from training data alone. The gap was concrete:\nClaude Desktop users wanted current-events search; the MCP server\ncatalog had nothing for Google News.\n\nA second, related friction surfaced almost immediately: Windows\nusers running Node Version Manager couldn't get any npm-based MCP\nserver (filesystem, github, postgres, brave-search, google-maps,\netc.) to connect to Claude Desktop, because PATH resolution\nthrough NVM's shim layer broke the desktop client's process\nspawn. This blocked a large fraction of early Windows adopters\nfrom using MCP at all.\n",
         "audience": "AI assistants and the developers integrating them. Direct\nconsumers: Claude Desktop, Cline, Cursor's agent mode, Continue,\nany MCP-compliant client running a system prompt that includes\nnews-search capability. Downstream consumers: end-users asking\ntheir AI assistant about current events, journalists / analysts\nusing AI workflows to monitor coverage, developers building\nresearch agents and content workflows. The multi-registry\ndistribution surface (10+ catalogs) was designed for *discovery*:\nAI developers find MCP servers by browsing registries, not by\nsearching GitHub.\n",
         "productLogic": "A user asks their AI assistant something like \"what's happening\nwith [topic] in [region] this week\"; the assistant invokes the\nMCP server's `google_news_search` tool with `query`, optional\n`gl` (country code), and `hl` (language code) parameters; the\nserver relays the request to SerpAPI's `google_news` engine and\nreturns structured JSON; the server then post-processes the\nresults with regex-based topic categorization (AI & Technology,\nBusiness, Science & Research, Healthcare, General) and formats\nthe output with source attribution, dates, snippets, and links\nintact.\n\nThe companion `server-google-jobs` follows the same pattern with\na richer parameter set — `query` plus `location`, `posted_age`\n(today / 3 days / week / month), `employment_type`\n(FULLTIME / PARTTIME / CONTRACTOR / INTERN), `salary`, `radius`,\n`hl`, `page`, `sort_by` — and ships with **full localization\nfor English, Simplified Chinese, Japanese, and Korean**\n(30+ translated strings per locale).\n\nBoth servers run over MCP's `stdio` transport — the default\nchannel for desktop AI clients — and are installable in one\ncommand via Smithery's CLI:\n`npx -y @smithery/cli install @chanmeng666/google-news-server --client claude`.\n",
         "businessLogic": "Open source, MIT licensed, no direct monetization. The strategic\nintent is **ecosystem positioning**: be the canonical Google\nNews / Google Jobs MCP server during the formative months of the\nModel Context Protocol so the project compounds discovery for\nadjacent work. Multi-registry distribution (Smithery, mcp.so,\nGlama, PulseMCP, Awesome MCP Servers, mcpservers.org, MCP\nArchive, MCP Server Finder, Playbooks, Archestra) makes the\nproject surface anywhere a developer looks for an MCP tool.\nThe README's structured JSON-LD `SoftwareApplication` metadata\nand `<script type=\"text/llms.txt\">` section take the same\napproach to LLM-driven discovery that the rest of my work uses:\nAI agents themselves should be able to read the server's\nidentity, parameters, and use cases without parsing prose.\n",
         "technicalApproach": "TypeScript on Node.js, built against `@modelcontextprotocol/sdk`\nv1.0.0 (Google News) and v1.25.1 (Google Jobs — the newer SDK\npin reflects ongoing maintenance). ES module target, packaged\nas a CLI binary (`google-news-server`, `google-jobs-server`)\nexported in `package.json`. Transport is stdio — the default\nchannel for desktop AI clients, where the server runs as a\nspawned subprocess of Claude Desktop or equivalent. HTTP is\nhandled with axios on the News server and node-fetch on the\nJobs server (deliberately leaner — no axios, no dotenv\noverhead, environment read directly from `process.env`).\n\nSerpAPI ($75/mo paid tier for 5,000 News searches, $50/mo for\n5,000 Jobs searches; 2 req/sec rate limit, 5 concurrent, 1 h\ncache) is the underlying data plane. The servers add a thin\nintelligence layer on top: query parameter validation,\ncategorization post-processing, multi-language formatting,\nerror handling with localized messages. Both READMEs are 320-335\nlines and structured with badges, video demos, MseeP.ai\nsecurity badges, JSON-LD `SoftwareApplication` schema, and an\nexplicit \"AI Assistant Instructions & GEO Optimization\"\ncollapsible section — the same GEO-aware authoring pattern I\nuse across all my work.\n\nBeyond shipping code, the third technical contribution is\ncommunity: my **issue #76** (opened Nov 27 2024, three weeks\nafter MCP's launch) documented the Windows + NVM `PATH`\nresolution failure that blocked Claude Desktop from spawning\nnpm-based MCP servers. The fix — point Claude Desktop's config\nat the absolute path of `node.exe` rather than relying on PATH\n— is referenced as primary troubleshooting guidance in both my\nown server READMEs and (per the README's own claim) became\nguidance in the broader MCP ecosystem.\n",
-        "outcomes": "Both servers are production-deployed via npm and listed across\nthe major MCP discovery surfaces:\n- **server-google-news** (`@chanmeng666/google-news-server`):\n  121+ stars, 21+ forks (GitHub badges), listed in 10+ MCP\n  catalogs (Smithery, mcp.so, Glama, PulseMCP top-pick,\n  Awesome MCP Servers, MCP Server Finder, MCP Archive,\n  Playbooks, mcpservers.org, Archestra)\n- **server-google-jobs** (`@chanmeng666/google-jobs-server`):\n  19+ stars, 11+ forks, listed on Smithery and Glama\n\nCombined: 169 commits across two servers, both authored solo,\nactively maintained through 2025-26. Both also serve as\nartifacts for the early-MCP-developer narrative — first\ncommits Dec 30 and Dec 31 2024, within five weeks of MCP's\npublic launch. Issue #76 remains visible in the official\n`modelcontextprotocol/servers` repository as institutional\nmemory of an early ecosystem contribution.\n",
+        "outcomes": "Both servers are production-deployed via npm and listed across\n**15+ MCP discovery surfaces**, with independent third-party\nvalidation that this is treated as portfolio-grade MCP work:\n\n**Catalog distribution & quality signals (server-google-news,\n`@chanmeng666/google-news-server`):**\n- **PulseMCP \"Top Pick\" badge** + 26.1k estimated visitors,\n  #1,105 global popularity rank\n  ([listing](https://www.pulsemcp.com/servers/chanmeng666-google-news))\n- **Glama A-grade license rating** + 122 stars\n  ([listing](https://glama.ai/mcp/servers/@ChanMeng666/server-google-news))\n- Smithery one-command install\n- Listed across mcp.so, Awesome MCP Servers (mcpservers.org),\n  MCP Server Finder, MCP Archive, Playbooks, Archestra, serp.ai,\n  mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides\n\n**Catalog distribution (server-google-jobs,\n`@chanmeng666/google-jobs-server`):**\n- PulseMCP listing — 4.6k visitors, registered Jan 1 2025\n- Glama listed (A license rating)\n- AI Toolhouse, mcp.so, AIBase, MagicSlides, serp.ly\n\n**Independent media coverage:** three dedicated deep-dive\narticles by third-party reviewers in 2025:\n- Skywork AI: *\"The Ultimate Guide to Chan Meng's Google Jobs\n  MCP Server\"* (Oct 27, 2025) — describes the project as *\"one\n  of the most elegant, production-ready solutions I've found\n  for a very specific, very common problem\"* and benchmarks it\n  favourably against generic SerpAPI wrappers, custom scrapers,\n  and manual API integrations\n- Skywork AI: *\"Chan Meng's Google News MCP Server: The AI\n  Engineer's Guide to Real-Time News Integration\"*\n- Skywork AI: *\"Google News & Trends MCP Server: The AI\n  Engineer's Deep Dive\"*\n- AgentSkillsHub: *\"Google News MCP Server — Install Guide &\n  Security Review\"*\n\n**Combined engineering footprint:** 169 commits across the two\nservers, both authored solo, actively maintained through\n2025–26. Both serve as concrete artefacts for the\nearly-MCP-developer narrative — **first commits Dec 30 and\nDec 31 2024, within 5–6 weeks of MCP's Nov 25 2024 public\nlaunch**. Issue #76 remains visible in the official\n`modelcontextprotocol/servers` repository as institutional\nmemory of an early ecosystem contribution.\n",
         "myRole": "Sole author, sole maintainer, sole responder to issues and PRs.\nBoth servers, both READMEs, both npm publishes, both registry\nsubmissions, the issue #76 troubleshooting contribution.\n\nThe broader signal: these two servers + the early issue #76\ncontribution position me as an immediately-active MCP\necosystem participant — not a theoretical early adopter, but\nsomeone who shipped, distributed, documented, and supported\nproduction MCP infrastructure within the protocol's first\nmonth.\n"
       }
     },
@@ -1125,24 +1163,107 @@
     {
       "id": "server-google-jobs",
       "tier": "primary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "recent",
+      "lastUpdated": "2026-05-19",
       "name": "server-google-jobs",
       "priority": 8,
       "category": "ai-apps",
-      "tagline": "Companion early-MCP Google Jobs server, 4-language localized",
+      "tagline": "Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs",
       "url": "https://github.com/ChanMeng666/server-google-jobs",
       "repoUrl": "https://github.com/ChanMeng666/server-google-jobs",
       "logo": "/public/brands/server-google-jobs.svg",
-      "status": "active",
-      "publicSummary": "MCP server for Google Jobs multi-language search (English, Simplified\nChinese, Japanese, Korean — 30+ translated strings per locale). Built\nDec 31 2024 as the companion to the Google News MCP server (first\ncommit one day earlier). 21 stars, 10 forks, 71 solo commits. Published\nas `@chanmeng666/google-jobs-server` on npm; registered on the MCP\nRegistry; installable through Smithery (`npx -y @smithery/cli install\n@chanmeng666/google-jobs-server --client claude`); security badges\nfrom MseeP.ai and Glama.ai.\n",
+      "extraLinks": [
+        {
+          "label": "Skywork review",
+          "url": "https://skywork.ai/skypage/en/google-jobs-mcp-server/1981237070002356224"
+        },
+        {
+          "label": "PulseMCP listing",
+          "url": "https://www.pulsemcp.com/servers/chanmeng666-google-jobs"
+        },
+        {
+          "label": "Glama",
+          "url": "https://glama.ai/mcp/servers/@ChanMeng666/server-google-jobs"
+        },
+        {
+          "label": "mcp.so",
+          "url": "https://mcp.so/server/server-google-jobs/ChanMeng666"
+        },
+        {
+          "label": "AI Toolhouse",
+          "url": "https://www.aitoolhouse.com/mcp-servers/chanmeng666-google-jobs"
+        },
+        {
+          "label": "MagicSlides",
+          "url": "https://www.magicslides.app/mcps/chanmeng666-google-jobs"
+        },
+        {
+          "label": "Companion News MCP",
+          "url": "https://github.com/ChanMeng666/server-google-news"
+        }
+      ],
+      "techStack": [
+        "TypeScript",
+        "Node.js",
+        "@modelcontextprotocol/sdk 1.25.1",
+        "stdio transport",
+        "SerpAPI",
+        "node-fetch",
+        "ES modules",
+        "npm (scoped @chanmeng666)",
+        "Dockerfile",
+        ".mcpb compiled binary",
+        "mcp-evals (v2.0.0 early adoption)"
+      ],
+      "keywords": [
+        "Model Context Protocol",
+        "Early MCP developer (Dec 2024 — 5 weeks post-launch)",
+        "Locale-aware MCP",
+        "Multi-language job search",
+        "Skywork AI featured review",
+        "MCP Registry",
+        "Anthropic MCP ecosystem"
+      ],
+      "metrics": [
+        {
+          "label": "First commit",
+          "value": "2024-12-31 — 36 days after MCP's Nov 25 2024 public launch"
+        },
+        {
+          "label": "npm package",
+          "value": "@chanmeng666/google-jobs-server"
+        },
+        {
+          "label": "PulseMCP",
+          "value": "4.6k visitors · registered Jan 1 2025"
+        },
+        {
+          "label": "Skywork review",
+          "value": "\"one of the most elegant, production-ready solutions\" (Oct 27 2025)"
+        },
+        {
+          "label": "Glama quality",
+          "value": "A (license) · MIT"
+        },
+        {
+          "label": "Locales",
+          "value": "English, Simplified Chinese, Japanese, Korean (30+ strings each)"
+        },
+        {
+          "label": "Commits",
+          "value": "71 (solo)"
+        }
+      ],
+      "status": "live",
+      "startDate": "2024-12-31",
+      "publicSummary": "MCP server for Google Jobs multi-language search (English, Simplified\nChinese, Japanese, Korean — 30+ translated strings per locale). Built\n**Dec 31 2024, 36 days after Anthropic's Nov 25 2024 launch of the\nModel Context Protocol** — companion to `server-google-news` (one\nday earlier). **The subject of a dedicated Skywork AI deep-dive\nreview** *(\"The Ultimate Guide to Chan Meng's Google Jobs MCP\nServer\"*, Oct 27 2025) that calls it *\"one of the most elegant,\nproduction-ready solutions I've found for a very specific, very\ncommon problem\"* and benchmarks it favourably against generic\nSerpAPI wrappers, custom scrapers, and manual API integrations.\nListed on **PulseMCP** (4.6k visitors, registered Jan 1 2025),\n**Glama** (A license rating), Smithery, mcp.so, AI Toolhouse,\nAIBase, MagicSlides, and serp.ly — 10+ catalogs total.\nPublished as `@chanmeng666/google-jobs-server` on npm; installable\nthrough Smithery (`npx -y @smithery/cli install\n@chanmeng666/google-jobs-server --client claude`); ships a\nDockerfile and a `.mcpb` compiled binary for frictionless install\non the MCP Registry; security badges from MseeP.ai and Glama.ai.\n",
       "narrative": {
         "problem": "At launch (Dec 31 2024), MCP was weeks old as a public protocol\nand there was no canonical way for an AI assistant to query\n**multilingual job listings**. Job seekers in non-English markets\n— particularly Greater China, Japan, and Korea — couldn't ask\nClaude Desktop for relevant openings without falling back to\nmanually translating queries and hand-pasting URL parameters.\n",
-        "audience": "Three groups. (a) Developers integrating job search into AI\napplications. (b) Multilingual job-seekers using Claude Desktop\nand similar MCP-aware tools. (c) Other early-era MCP server\nauthors wanting a reference implementation of locale-aware\nthird-party API integration.\n",
-        "productLogic": "The server exposes Google Jobs (via SerpAPI) as a composable MCP\ncapability. Clients call `search` with parameters `query`,\n`location`, `employment_type`, `salary`, `radius`, `sort_by` —\nand a `locale` parameter that maps onto English / Simplified\nChinese / Japanese / Korean. The server returns up to 10 results\nper page with all error messages, status labels, and suggestion\nprompts translated into the requested locale (30+ strings each).\nInput is locale-agnostic: a user writing \"part-time\" or \"兼职\"\nor \"アルバイト\" all map to the same SerpAPI employment code.\n",
-        "technicalApproach": "TypeScript on Node.js, compiled to a single executable for MCP\nclients. The hardest design problem was **locale-agnostic\nparameter handling** — rather than hard-coding language-specific\nbranches, the server maintains a 4-locale translation matrix\nkeyed against canonical SerpAPI codes, so input in any supported\nlanguage collapses to the same internal query and output\nrehydrates into the user's chosen locale. Distribution surface\nis unusually wide for an early MCP: **npm** (`@chanmeng666/google-jobs-server`),\n**Smithery** (one-command install via `npx -y @smithery/cli`),\na **Dockerfile** for containerised deployment, and a `.mcpb`\ncompiled binary for frictionless install on the MCP Registry.\n",
-        "outcomes": "**21 stars, 10 forks, 71 solo commits**. Registered on the\nofficial MCP Registry; security-assessment badges from MseeP.ai\nand Glama.ai validating runtime reliability. The companion piece\nto Chan's **google-news-mcp** server (first commit one day\nearlier, 2024-12-30) — together these two represent **one of\nthe earliest public sets of locale-aware MCP servers**, predating\nmost enterprise MCP adoption by months.\n",
-        "myRole": "Sole author. Designed the locale-agnostic parameter handling,\nauthored every translation table, wrote the multi-channel\ndistribution pipeline (npm + Smithery + Docker + .mcpb), and\nmaintains the project as part of the matched Google News /\nGoogle Jobs MCP pair.\n"
+        "audience": "Three groups. (a) Developers integrating job search into AI\napplications. (b) Multilingual job-seekers using Claude Desktop\nand similar MCP-aware tools. (c) Other early-era MCP server\nauthors wanting a reference implementation of locale-aware\nthird-party API integration — explicitly recognised in\nSkywork AI's *\"The Ultimate Guide\"* review as a production-grade\nreference pattern in the early MCP ecosystem.\n",
+        "productLogic": "The server exposes Google Jobs (via SerpAPI) as a composable MCP\ncapability. Clients call `search` with parameters `query`,\n`location`, `employment_type`, `salary`, `radius`, `sort_by` —\nand a `locale` parameter that maps onto English / Simplified\nChinese / Japanese / Korean. The server returns up to 10 results\nper page with all error messages, status labels, and suggestion\nprompts translated into the requested locale (30+ strings each).\nInput is locale-agnostic: a user writing \"part-time\" or \"兼职\"\nor \"アルバイト\" all map to the same SerpAPI employment code.\nSkywork's review specifically highlights the **AI-optimized\nstructured output** as eliminating downstream parsing work and\nthe **smart fallback mechanisms** as production-ready error\nhandling.\n",
+        "technicalApproach": "TypeScript on Node.js, built against `@modelcontextprotocol/sdk\n1.25.1` (kept current with the official SDK release line). The\nhardest design problem was **locale-agnostic parameter\nhandling** — rather than hard-coding language-specific branches,\nthe server maintains a 4-locale translation matrix keyed\nagainst canonical SerpAPI codes, so input in any supported\nlanguage collapses to the same internal query and output\nrehydrates into the user's chosen locale. Distribution surface\nis unusually wide for an early MCP: **npm**\n(`@chanmeng666/google-jobs-server`), **Smithery** (one-command\ninstall via `npx -y @smithery/cli`), a **Dockerfile** for\ncontainerised deployment, a `.mcpb` compiled binary for\nfrictionless install on the official MCP Registry, and\n`mcp-evals 2.0.0` as an early adopter of the MCP evaluation\nframework. The `package.json` carries a structured `ai:` block\nwith use cases, capabilities, target audience, and primary use\ncases declared in JSON for LLM-driven discovery — the same\nGEO-aware authoring pattern used across all of Chan's MCP work.\n",
+        "outcomes": "**71 solo commits**. Registered on the official MCP Registry;\nsecurity-assessment badges from MseeP.ai and Glama.ai validating\nruntime reliability. Listed across **10+ MCP discovery\nsurfaces** — PulseMCP (4.6k visitors, registered Jan 1 2025),\nGlama (A license rating), Smithery, mcp.so, AI Toolhouse,\nAIBase, MagicSlides, serp.ly, MCP Server Finder, MCP Archive.\n**Subject of an independently authored deep-dive review** by\nSkywork AI (Oct 27 2025) — *\"The Ultimate Guide to Chan Meng's\nGoogle Jobs MCP Server\"* — which calls it *\"one of the most\nelegant, production-ready solutions\"* and includes a\ncomparison table showing it as superior to generic SerpAPI\nwrappers in setup complexity, maintenance overhead, and\nAI-specific optimisation. The companion piece to Chan's\n**google-news-mcp** server (first commit one day earlier,\n2024-12-30) — together these two represent **one of the\nearliest public sets of locale-aware MCP servers**, predating\nmost enterprise MCP adoption by months.\n",
+        "myRole": "Sole author. Designed the locale-agnostic parameter handling,\nauthored every translation table, wrote the multi-channel\ndistribution pipeline (npm + Smithery + Docker + .mcpb), and\nmaintains the project as part of the matched Google News /\nGoogle Jobs MCP pair. The Skywork review specifically\nattributes the production-ready design and intelligent\nerror-handling architecture to Chan as creator.\n"
       }
     },
     {
@@ -3986,6 +4107,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T12:24:25.918Z"
+    "buildTimestamp": "2026-05-18T12:38:13.445Z"
   }
 }

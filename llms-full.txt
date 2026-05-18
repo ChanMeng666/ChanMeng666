@@ -2149,34 +2149,47 @@ Recognized in the contract record as "a core long-term technical
 builder of the Company's interactive workload platform" with
 founder-level equity participation. 98% solo commit authorship
 on the active codebase.
-### 4. Google News MCP Server — Early-ecosystem Google News MCP server (shipped Dec 30, 2024) — listed across 10+ MCP catalogs, npm-published, with companion server-google-jobs
-[tier=flagship · recency=recent · updated=2026-05-18]
+### 4. Google News MCP Server — Early-ecosystem MCP server (shipped 5 weeks after Anthropic's Nov 25 2024 MCP launch) — PulseMCP "Top Pick", featured in Skywork AI deep-dive review, distributed across 15+ MCP catalogs
+[tier=flagship · recency=recent · updated=2026-05-19]
 - **URL:** https://github.com/ChanMeng666/server-google-news
 - **Repository:** https://github.com/ChanMeng666/server-google-news
 - **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk, stdio transport, SerpAPI, axios, ES modules, npm (scoped @chanmeng666)
-- **First commit:** 2024-12-30 (within 1 month of MCP launch)
+- **First commit:** 2024-12-30 — 35 days after MCP's Nov 25 2024 public launch
 - **npm package:** @chanmeng666/google-news-server
-- **Registry listings:** 10+ MCP catalogs
-- **Stars:** 121+ (dynamic badge)
+- **Registry listings:** 15+ MCP catalogs (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, MCP Server Finder, MCP Archive, Playbooks, mcpservers.org, Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides)
+- **PulseMCP badge:** Top Pick · 26.1k visitors · #1,105 global rank
+- **Glama quality:** A (license) · 122 stars
+- **Skywork review:** Dedicated Oct 2025 deep-dive article + AI-Engineer's Guide companion piece
+- **Stars:** 122 (Glama) / 121+ (dynamic badge)
 - **Forks:** 21+ (dynamic badge)
 - **Commits:** 98 (Google News) + 71 (Google Jobs) = 169
 - **Early MCP contrib:** Issue #76 (Nov 27 2024 — Windows/NVM workaround)
-**Summary:** An early-ecosystem MCP server — first commit Dec 30 2024, within a
-month of MCP's public launch by Anthropic in November 2024. Brings
-Google News search to AI assistants like Claude Desktop, Cline, and
-Cursor through SerpAPI, with automatic topical categorization (AI &
-Technology, Business, Science & Research, Healthcare, General) and
-multi-language / multi-region support. Listed across **10+ MCP
-catalogs and registries** (Smithery, mcp.so, Glama, PulseMCP top-pick,
-Awesome MCP Servers, MCP Server Finder, MCP Archive, Playbooks,
-mcpservers.org, Archestra), npm-published as
+**Summary:** An early-ecosystem MCP server — first commit **Dec 30 2024, just
+35 days after Anthropic's public launch of the Model Context
+Protocol on Nov 25 2024**. Brings Google News search to AI
+assistants like Claude Desktop, Cline, and Cursor through SerpAPI,
+with automatic topical categorization (AI & Technology, Business,
+Science & Research, Healthcare, General) and multi-language /
+multi-region support. Carries the **PulseMCP "Top Pick" badge**
+with 26.1k estimated visitors and a #1,105 global popularity rank.
+Featured in three independent deep-dive write-ups: Skywork AI's
+*"Chan Meng's Google News MCP Server: The AI Engineer's Guide to
+Real-Time News Integration"*, Skywork's *"Google News & Trends
+MCP Server: The AI Engineer's Deep Dive"*, and AgentSkillsHub's
+*"Install Guide & Security Review"*. Distributed across **15+
+MCP catalogs and registries** — Smithery, mcp.so, Glama (A
+license rating, 122 stars), PulseMCP, Awesome MCP Servers,
+MCP Server Finder, MCP Archive, Playbooks, mcpservers.org,
+Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub,
+MagicSlides — and npm-published as
 `@chanmeng666/google-news-server`. Paired with a companion early
-server, `server-google-jobs` (first commit Dec 31 2024) — together
-169 solo commits across the two servers. Beyond shipping code, I
-contributed early ecosystem troubleshooting via
+server, `server-google-jobs` (first commit Dec 31 2024) —
+together 169 solo commits across the two servers. Beyond shipping
+code, I contributed early ecosystem troubleshooting via
 [modelcontextprotocol/servers issue #76](https://github.com/modelcontextprotocol/servers/issues/76)
-(opened Nov 27 2024) — the Windows + NVM PATH workaround referenced
-in both server READMEs as primary troubleshooting guidance.
+(opened Nov 27 2024) — the Windows + NVM PATH workaround
+referenced in both server READMEs as primary troubleshooting
+guidance.
 
 **Problem:** Anthropic published the Model Context Protocol specification in
 November 2024 as the open standard for connecting AI assistants
@@ -2280,20 +2293,48 @@ own server READMEs and (per the README's own claim) became
 guidance in the broader MCP ecosystem.
 
 **Outcomes:** Both servers are production-deployed via npm and listed across
-the major MCP discovery surfaces:
-- **server-google-news** (`@chanmeng666/google-news-server`):
-  121+ stars, 21+ forks (GitHub badges), listed in 10+ MCP
-  catalogs (Smithery, mcp.so, Glama, PulseMCP top-pick,
-  Awesome MCP Servers, MCP Server Finder, MCP Archive,
-  Playbooks, mcpservers.org, Archestra)
-- **server-google-jobs** (`@chanmeng666/google-jobs-server`):
-  19+ stars, 11+ forks, listed on Smithery and Glama
+**15+ MCP discovery surfaces**, with independent third-party
+validation that this is treated as portfolio-grade MCP work:
 
-Combined: 169 commits across two servers, both authored solo,
-actively maintained through 2025-26. Both also serve as
-artifacts for the early-MCP-developer narrative — first
-commits Dec 30 and Dec 31 2024, within five weeks of MCP's
-public launch. Issue #76 remains visible in the official
+**Catalog distribution & quality signals (server-google-news,
+`@chanmeng666/google-news-server`):**
+- **PulseMCP "Top Pick" badge** + 26.1k estimated visitors,
+  #1,105 global popularity rank
+  ([listing](https://www.pulsemcp.com/servers/chanmeng666-google-news))
+- **Glama A-grade license rating** + 122 stars
+  ([listing](https://glama.ai/mcp/servers/@ChanMeng666/server-google-news))
+- Smithery one-command install
+- Listed across mcp.so, Awesome MCP Servers (mcpservers.org),
+  MCP Server Finder, MCP Archive, Playbooks, Archestra, serp.ai,
+  mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides
+
+**Catalog distribution (server-google-jobs,
+`@chanmeng666/google-jobs-server`):**
+- PulseMCP listing — 4.6k visitors, registered Jan 1 2025
+- Glama listed (A license rating)
+- AI Toolhouse, mcp.so, AIBase, MagicSlides, serp.ly
+
+**Independent media coverage:** three dedicated deep-dive
+articles by third-party reviewers in 2025:
+- Skywork AI: *"The Ultimate Guide to Chan Meng's Google Jobs
+  MCP Server"* (Oct 27, 2025) — describes the project as *"one
+  of the most elegant, production-ready solutions I've found
+  for a very specific, very common problem"* and benchmarks it
+  favourably against generic SerpAPI wrappers, custom scrapers,
+  and manual API integrations
+- Skywork AI: *"Chan Meng's Google News MCP Server: The AI
+  Engineer's Guide to Real-Time News Integration"*
+- Skywork AI: *"Google News & Trends MCP Server: The AI
+  Engineer's Deep Dive"*
+- AgentSkillsHub: *"Google News MCP Server — Install Guide &
+  Security Review"*
+
+**Combined engineering footprint:** 169 commits across the two
+servers, both authored solo, actively maintained through
+2025–26. Both serve as concrete artefacts for the
+early-MCP-developer narrative — **first commits Dec 30 and
+Dec 31 2024, within 5–6 weeks of MCP's Nov 25 2024 public
+launch**. Issue #76 remains visible in the official
 `modelcontextprotocol/servers` repository as institutional
 memory of an early ecosystem contribution.
 
@@ -3639,18 +3680,29 @@ documentation, and packaged the multi-platform deployment
 guides. The repo is its own pedagogical statement: students can
 read the instructor's commits to see how patterns they're being
 taught compose into a real production-shape service.
-### server-google-jobs — Companion early-MCP Google Jobs server, 4-language localized
-[tier=primary · recency=historical · updated=2026-05-18]
+### server-google-jobs — Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
+[tier=primary · recency=recent · updated=2026-05-19]
 - **URL:** https://github.com/ChanMeng666/server-google-jobs
+- **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk 1.25.1, stdio transport, SerpAPI, node-fetch, ES modules, npm (scoped @chanmeng666), Dockerfile, .mcpb compiled binary, mcp-evals (v2.0.0 early adoption)
 
 **Summary:** MCP server for Google Jobs multi-language search (English, Simplified
 Chinese, Japanese, Korean — 30+ translated strings per locale). Built
-Dec 31 2024 as the companion to the Google News MCP server (first
-commit one day earlier). 21 stars, 10 forks, 71 solo commits. Published
-as `@chanmeng666/google-jobs-server` on npm; registered on the MCP
-Registry; installable through Smithery (`npx -y @smithery/cli install
-@chanmeng666/google-jobs-server --client claude`); security badges
-from MseeP.ai and Glama.ai.
+**Dec 31 2024, 36 days after Anthropic's Nov 25 2024 launch of the
+Model Context Protocol** — companion to `server-google-news` (one
+day earlier). **The subject of a dedicated Skywork AI deep-dive
+review** *("The Ultimate Guide to Chan Meng's Google Jobs MCP
+Server"*, Oct 27 2025) that calls it *"one of the most elegant,
+production-ready solutions I've found for a very specific, very
+common problem"* and benchmarks it favourably against generic
+SerpAPI wrappers, custom scrapers, and manual API integrations.
+Listed on **PulseMCP** (4.6k visitors, registered Jan 1 2025),
+**Glama** (A license rating), Smithery, mcp.so, AI Toolhouse,
+AIBase, MagicSlides, and serp.ly — 10+ catalogs total.
+Published as `@chanmeng666/google-jobs-server` on npm; installable
+through Smithery (`npx -y @smithery/cli install
+@chanmeng666/google-jobs-server --client claude`); ships a
+Dockerfile and a `.mcpb` compiled binary for frictionless install
+on the MCP Registry; security badges from MseeP.ai and Glama.ai.
 
 **Problem:** At launch (Dec 31 2024), MCP was weeks old as a public protocol
 and there was no canonical way for an AI assistant to query
@@ -3663,7 +3715,9 @@ manually translating queries and hand-pasting URL parameters.
 applications. (b) Multilingual job-seekers using Claude Desktop
 and similar MCP-aware tools. (c) Other early-era MCP server
 authors wanting a reference implementation of locale-aware
-third-party API integration.
+third-party API integration — explicitly recognised in
+Skywork AI's *"The Ultimate Guide"* review as a production-grade
+reference pattern in the early MCP ecosystem.
 
 **Product logic:** The server exposes Google Jobs (via SerpAPI) as a composable MCP
 capability. Clients call `search` with parameters `query`,
@@ -3674,32 +3728,55 @@ per page with all error messages, status labels, and suggestion
 prompts translated into the requested locale (30+ strings each).
 Input is locale-agnostic: a user writing "part-time" or "兼职"
 or "アルバイト" all map to the same SerpAPI employment code.
+Skywork's review specifically highlights the **AI-optimized
+structured output** as eliminating downstream parsing work and
+the **smart fallback mechanisms** as production-ready error
+handling.
 
-**Technical approach:** TypeScript on Node.js, compiled to a single executable for MCP
-clients. The hardest design problem was **locale-agnostic
-parameter handling** — rather than hard-coding language-specific
-branches, the server maintains a 4-locale translation matrix
-keyed against canonical SerpAPI codes, so input in any supported
+**Technical approach:** TypeScript on Node.js, built against `@modelcontextprotocol/sdk
+1.25.1` (kept current with the official SDK release line). The
+hardest design problem was **locale-agnostic parameter
+handling** — rather than hard-coding language-specific branches,
+the server maintains a 4-locale translation matrix keyed
+against canonical SerpAPI codes, so input in any supported
 language collapses to the same internal query and output
 rehydrates into the user's chosen locale. Distribution surface
-is unusually wide for an early MCP: **npm** (`@chanmeng666/google-jobs-server`),
-**Smithery** (one-command install via `npx -y @smithery/cli`),
-a **Dockerfile** for containerised deployment, and a `.mcpb`
-compiled binary for frictionless install on the MCP Registry.
+is unusually wide for an early MCP: **npm**
+(`@chanmeng666/google-jobs-server`), **Smithery** (one-command
+install via `npx -y @smithery/cli`), a **Dockerfile** for
+containerised deployment, a `.mcpb` compiled binary for
+frictionless install on the official MCP Registry, and
+`mcp-evals 2.0.0` as an early adopter of the MCP evaluation
+framework. The `package.json` carries a structured `ai:` block
+with use cases, capabilities, target audience, and primary use
+cases declared in JSON for LLM-driven discovery — the same
+GEO-aware authoring pattern used across all of Chan's MCP work.
 
-**Outcomes:** **21 stars, 10 forks, 71 solo commits**. Registered on the
-official MCP Registry; security-assessment badges from MseeP.ai
-and Glama.ai validating runtime reliability. The companion piece
-to Chan's **google-news-mcp** server (first commit one day
-earlier, 2024-12-30) — together these two represent **one of
-the earliest public sets of locale-aware MCP servers**, predating
+**Outcomes:** **71 solo commits**. Registered on the official MCP Registry;
+security-assessment badges from MseeP.ai and Glama.ai validating
+runtime reliability. Listed across **10+ MCP discovery
+surfaces** — PulseMCP (4.6k visitors, registered Jan 1 2025),
+Glama (A license rating), Smithery, mcp.so, AI Toolhouse,
+AIBase, MagicSlides, serp.ly, MCP Server Finder, MCP Archive.
+**Subject of an independently authored deep-dive review** by
+Skywork AI (Oct 27 2025) — *"The Ultimate Guide to Chan Meng's
+Google Jobs MCP Server"* — which calls it *"one of the most
+elegant, production-ready solutions"* and includes a
+comparison table showing it as superior to generic SerpAPI
+wrappers in setup complexity, maintenance overhead, and
+AI-specific optimisation. The companion piece to Chan's
+**google-news-mcp** server (first commit one day earlier,
+2024-12-30) — together these two represent **one of the
+earliest public sets of locale-aware MCP servers**, predating
 most enterprise MCP adoption by months.
 
 **My role:** Sole author. Designed the locale-agnostic parameter handling,
 authored every translation table, wrote the multi-channel
 distribution pipeline (npm + Smithery + Docker + .mcpb), and
 maintains the project as part of the matched Google News /
-Google Jobs MCP pair.
+Google Jobs MCP pair. The Skywork review specifically
+attributes the production-ready design and intelligent
+error-handling architecture to Chan as creator.
 ### tencent-meeting-video-downloader — Chrome extension for Tencent Meeting recordings
 [tier=primary · recency=historical · updated=2026-05-18]
 - **Repository:** https://github.com/ChanMeng666/tencent-meeting-video-downloader
@@ -4340,7 +4417,7 @@ recommend her highly enough.
 - **GAVIGO IRE: 360 total commits, 353 solo (98%), production-deployed at ire.gavigo.com** (source: https://github.com/ChanMeng666/gavigo, verified 2026-05-16)
 - **Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud** (source: https://ire.gavigo.com/, verified 2026-05-16)
 - **Early-ecosystem MCP developer: opened modelcontextprotocol/servers issue #76 on 2024-11-27 (three weeks after MCP's public launch) documenting the Windows + NVM PATH workaround that became reference troubleshooting guidance for early Claude Desktop adopters** (source: https://github.com/modelcontextprotocol/servers/issues/76, verified 2026-05-16)
-- **Authored two early-ecosystem MCP servers — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, listed across 10+ MCP catalogs including Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`) — both shipped within the first month of MCP's November 2024 public launch** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-05-16)
+- **Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with 26.1k visitors and #1,105 global popularity rank, Glama A license rating + 122 stars, listed across 15+ MCP catalogs including Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, Archestra, serp.ai, AIBase, AgentSkillsHub, MagicSlides) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); both servers covered in three independent media write-ups (Skywork AI x2, AgentSkillsHub)** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-05-16)
 - **As CTO at Sanicle, the IBM Cloud watsonx AI integration I built into employee dashboards — AI-powered health consultations and automated leave requests — anchored Sanicle's entry into the IBM Business Partner Network and IBM Silver Partner certification; Sanicle.Cloud now listed in IBM's official PartnerPlus Solution Directory** (source: https://www.ibm.com/partnerplus/directory/solution/0638, verified 2026-05-16)
 - **Published a community write-up on the Vercel forum solving a production Next.js 15 + NextAuth 5 auth-redirect failure encountered during the Sanicle-AI build; publicly acknowledged by Vercel Staff (Amy Egan)** (source: https://community.vercel.com/t/solved-bug-authentication-redirect-issue-in-sanicle-ai-platform/6818, verified 2026-05-16)
 - **Built five production codebases for Sanicle as solo CTO — sanicle-cloud (Next.js company site replacing legacy Bubble no-code), sanicle-ai (multi-tenant FemTech platform with dual-AI architecture: IBM watsonx llama-3-405b + Google Gemini fallback), sanicle-ai-mobile (PWA prototype), reveal.js presentation deck, and a documented internal work archive — totalling ~350+ commits with ~98% solo authorship** (source: https://sanicle.cloud/, verified 2026-05-16)

@@ -6,6 +6,8 @@ Last updated: {{meta.lastModified}}
 Canonical: {{meta.canonical}}
 Preferred citation: "{{meta.x_brand.citationPreference}}"
 
+> This is the compact LLM index. Only `tier=flagship` and `tier=primary` material is surfaced here. For the full dossier including secondary entries and archive history, read `llms-full.txt`.
+
 ## Current Roles
 {{#each _currentRoles}}- {{position}} at {{name}}{{#if location}} ({{location}}){{/if}}{{#if url}} -- {{url}}{{/if}}
 {{/each}}
@@ -23,11 +25,11 @@ Preferred citation: "{{meta.x_brand.citationPreference}}"
 {{/each}}
 
 ## Achievements
-{{#each awards}}- **{{title}}** ({{awarder}}{{#if date}}, {{date}}{{/if}}){{#if url}} -- {{url}}{{/if}}
+{{#each _top.awards}}- **{{title}}** ({{awarder}}{{#if date}}, {{date}}{{/if}}){{#if url}} -- {{url}}{{/if}}
 {{/each}}
 
 ## Education
-{{#each education}}- **{{studyType}}** -- {{institution}}{{#if startDate}} ({{dateRange startDate endDate}}){{/if}}
+{{#each _top.education}}- **{{studyType}}** -- {{institution}}{{#if startDate}} ({{dateRange startDate endDate}}){{/if}}
 {{/each}}
 
 ## Languages

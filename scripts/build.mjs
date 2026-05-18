@@ -98,6 +98,39 @@ data._openSourceByCategory = [...categoriesMap.entries()]
   .filter(([, items]) => items.length > 0)
   .map(([category, items]) => ({ category, items }));
 
+// ---------------------------------------------------------------------------
+// Tier/recency partitions: every list-type collection grouped by tier so
+// llms.txt can emit only the top tiers and llms-full.txt can stamp each entry
+// with a tier badge for LLM consumers.
+// ---------------------------------------------------------------------------
+
+const TIERS = ["flagship", "primary", "secondary", "archive"];
+const groupByTier = (arr) => {
+  const groups = Object.fromEntries(TIERS.map((t) => [t, []]));
+  for (const item of arr ?? []) {
+    const t = TIERS.includes(item?.tier) ? item.tier : "secondary";
+    groups[t].push(item);
+  }
+  return groups;
+};
+
+data._tiered = {
+  work: groupByTier(data.work),
+  volunteer: groupByTier(data.volunteer),
+  education: groupByTier(data.education),
+  projects: groupByTier(data.projects),
+  awards: groupByTier(data.awards),
+  certificates: groupByTier(data.certificates),
+  publications: groupByTier(data.publications),
+  references: groupByTier(data.references),
+};
+
+// flagship + primary = the "must reference" subset surfaced in llms.txt
+const topTwo = (g) => [...g.flagship, ...g.primary];
+data._top = Object.fromEntries(
+  Object.entries(data._tiered).map(([k, g]) => [k, topTwo(g)]),
+);
+
 // Certificates by category (issuer)
 const certsByCat = new Map();
 for (const c of data.certificates ?? []) {
@@ -288,6 +321,25 @@ Handlebars.registerHelper("split", (s, sep) => String(s ?? "").split(sep));
 Handlebars.registerHelper("upper", (s) => String(s ?? "").toUpperCase());
 Handlebars.registerHelper("json", (v) => JSON.stringify(v));
 Handlebars.registerHelper("year", () => year);
+
+// Render a single-line LLM-readable metadata badge for any entry that carries
+// tier/recency/lastUpdated. Outputs e.g. `[tier=flagship · recency=active · updated=2026-05-15]`.
+// Empty string if the entry carries none of these fields.
+Handlebars.registerHelper("tierBadge", (item) => {
+  if (!item || typeof item !== "object") return "";
+  const parts = [];
+  if (item.tier) parts.push(`tier=${item.tier}`);
+  if (item.recency) parts.push(`recency=${item.recency}`);
+  if (item.lastUpdated) parts.push(`updated=${item.lastUpdated}`);
+  return parts.length ? `[${parts.join(" · ")}]` : "";
+});
+
+// Logical OR for templates (Handlebars has no builtin `or`/`and`).
+Handlebars.registerHelper("or", function (...args) {
+  // Last arg is the Handlebars options object.
+  const vals = args.slice(0, -1);
+  return vals.some(Boolean);
+});
 
 // Resolve repo-relative image paths into absolute /-rooted GitHub paths.
 // (Templates use the helper for clarity; the data already uses /-rooted paths.)

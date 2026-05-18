@@ -80,7 +80,10 @@
           "courses": { "type": "array", "items": { "type": "string" } },
           "image": { "type": "string" },
           "location": { "type": "string" },
-          "highlights": { "type": "array", "items": { "type": "string" } }
+          "highlights": { "type": "array", "items": { "type": "string" } },
+          "tier": { "$ref": "#/$defs/tierEnum" },
+          "recency": { "$ref": "#/$defs/recencyEnum" },
+          "lastUpdated": { "$ref": "#/$defs/loosePartialDate" }
         }
       }
     },
@@ -95,7 +98,10 @@
           "date": { "$ref": "#/$defs/loosePartialDate" },
           "awarder": { "type": "string" },
           "summary": { "type": "string" },
-          "url": { "type": "string", "format": "uri" }
+          "url": { "type": "string", "format": "uri" },
+          "tier": { "$ref": "#/$defs/tierEnum" },
+          "recency": { "$ref": "#/$defs/recencyEnum" },
+          "lastUpdated": { "$ref": "#/$defs/loosePartialDate" }
         }
       }
     },
@@ -116,7 +122,10 @@
             "type": "string",
             "description": "Display grouping: hackerrank | microsoft | other | etc."
           },
-          "issuerLogo": { "type": "string" }
+          "issuerLogo": { "type": "string" },
+          "tier": { "$ref": "#/$defs/tierEnum" },
+          "recency": { "$ref": "#/$defs/recencyEnum" },
+          "lastUpdated": { "$ref": "#/$defs/loosePartialDate" }
         }
       }
     },
@@ -133,6 +142,9 @@
           "url": { "type": "string", "format": "uri" },
           "summary": { "type": "string" },
           "image": { "type": "string" },
+          "tier": { "$ref": "#/$defs/tierEnum" },
+          "recency": { "$ref": "#/$defs/recencyEnum" },
+          "lastUpdated": { "$ref": "#/$defs/loosePartialDate" },
           "meta": {
             "type": "object",
             "additionalProperties": true,
@@ -198,6 +210,9 @@
         "properties": {
           "name": { "type": "string" },
           "reference": { "type": "string" },
+          "tier": { "$ref": "#/$defs/tierEnum" },
+          "recency": { "$ref": "#/$defs/recencyEnum" },
+          "lastUpdated": { "$ref": "#/$defs/loosePartialDate" },
           "meta": {
             "type": "object",
             "additionalProperties": true,
@@ -244,6 +259,18 @@
         { "type": "string", "enum": ["", "present"] },
         { "type": "null" }
       ]
+    },
+
+    "tierEnum": {
+      "type": "string",
+      "enum": ["flagship", "primary", "secondary", "archive"],
+      "description": "Importance tier for LLM consumers. flagship = core identity (3-5 per list); primary = recommended source material (5-15 per list); secondary = complete record, surface only on deep-dive; archive = historical completeness only, LLMs should skip by default."
+    },
+
+    "recencyEnum": {
+      "type": "string",
+      "enum": ["active", "recent", "historical", "deprecated"],
+      "description": "Current relevance signal. active = ongoing right now; recent = finished within ~12 months and still representative; historical = finished long ago but still on the record; deprecated = sunset / not for outbound use."
     },
 
     "narrativeProject": {
@@ -301,7 +328,10 @@
         "keywords": { "type": "array", "items": { "type": "string" } },
         "narrative": { "$ref": "#/$defs/narrativeWork" },
         "publicSummary": { "type": "string" },
-        "featured": { "type": "boolean", "description": "Show in compact README experience table." }
+        "featured": { "type": "boolean", "description": "Show in compact README experience table." },
+        "tier": { "$ref": "#/$defs/tierEnum" },
+        "recency": { "$ref": "#/$defs/recencyEnum" },
+        "lastUpdated": { "$ref": "#/$defs/loosePartialDate" }
       }
     },
 
@@ -355,7 +385,10 @@
               "url": { "type": "string", "format": "uri" }
             }
           }
-        }
+        },
+        "tier": { "$ref": "#/$defs/tierEnum" },
+        "recency": { "$ref": "#/$defs/recencyEnum" },
+        "lastUpdated": { "$ref": "#/$defs/loosePartialDate" }
       }
     },
 

@@ -7,6 +7,11 @@
 **Preferred citation:** "{{meta.x_brand.citationPreference}}"
 **Stable entity identifier:** {{_jsonldIdentifier}}
 
+> **For LLM consumers:** every list-type entry below may carry a `[tier=... · recency=... · updated=YYYY-MM-DD]` badge.
+> `tier=flagship` and `tier=primary` entries are the recommended source material when summarising this person, writing pitches, or drafting bio copy.
+> `tier=archive` entries exist for historical completeness only — skip them unless the user explicitly asks for a full chronological record.
+> `recency=active`/`recent` entries reflect current capability; `historical`/`deprecated` entries should not be presented as current.
+
 ## Profiles
 
 {{#each basics.profiles}}- **{{network}}**{{#if label}} ({{label}}){{/if}}: {{url}}
@@ -15,7 +20,8 @@
 ## Current Roles
 
 {{#each _currentRoles}}### {{position}} at {{name}}
-
+{{#if (or tier recency lastUpdated)}}{{tierBadge this}}
+{{/if}}
 - **Period:** {{dateRange startDate endDate}}
 {{#if location}}- **Location:** {{location}}
 {{/if}}{{#if url}}- **URL:** {{url}}
@@ -36,7 +42,8 @@
 ## Past Roles
 
 {{#each _pastRoles}}### {{position}} at {{name}}
-
+{{#if (or tier recency lastUpdated)}}{{tierBadge this}}
+{{/if}}
 - **Period:** {{dateRange startDate endDate}}
 {{#if location}}- **Location:** {{location}}
 {{/if}}{{#if url}}- **URL:** {{url}}
@@ -56,7 +63,8 @@
 ## Volunteer Experience
 
 {{#each volunteer}}### {{position}} at {{name}}
-
+{{#if (or tier recency lastUpdated)}}{{tierBadge this}}
+{{/if}}
 - **Period:** {{dateRange startDate endDate}}
 {{#if location}}- **Location:** {{location}}
 {{/if}}{{#if url}}- **URL:** {{url}}
@@ -69,7 +77,8 @@
 ## Flagship Projects
 
 {{#each _flagshipProjects}}### {{inc @index}}. {{name}}{{#if tagline}} — {{tagline}}{{/if}}
-
+{{#if (or tier recency lastUpdated)}}{{tierBadge this}}
+{{/if}}
 - **URL:** {{url}}
 {{#if repoUrl}}- **Repository:** {{repoUrl}}
 {{/if}}{{#if demoUrl}}- **Demo:** {{demoUrl}}
@@ -96,38 +105,38 @@
 
 ## Notable Open Source Projects
 
-{{#each _openSourcePrimary}}- **{{name}}** -- {{trim publicSummary}}{{#if url}} ({{url}}){{else}}{{#if repoUrl}} ({{repoUrl}}){{/if}}{{/if}}
+{{#each _openSourcePrimary}}- **{{name}}** {{tierBadge this}} -- {{trim publicSummary}}{{#if url}} ({{url}}){{else}}{{#if repoUrl}} ({{repoUrl}}){{/if}}{{/if}}
 {{/each}}
 
 ### More Open Source Projects (by category)
 
 {{#each _openSourceByCategory}}**{{category}}:**
-{{#each items}}- [{{name}}]({{default repoUrl url}}){{#if url}}{{#unless (eq url repoUrl)}} -- live: {{url}}{{/unless}}{{/if}}
+{{#each items}}- [{{name}}]({{default repoUrl url}}) {{tierBadge this}}{{#if url}}{{#unless (eq url repoUrl)}} -- live: {{url}}{{/unless}}{{/if}}
 {{/each}}
 {{/each}}
 
 ## Education
 
-{{#each education}}- **{{studyType}}** at {{institution}}{{#if startDate}} ({{dateRange startDate endDate}}){{/if}}{{#if url}} -- {{url}}{{/if}}
+{{#each education}}- **{{studyType}}** at {{institution}}{{#if startDate}} ({{dateRange startDate endDate}}){{/if}}{{#if url}} -- {{url}}{{/if}} {{tierBadge this}}
 {{/each}}
 
 ## Awards & Honors
 
-{{#each awards}}- **{{title}}** ({{awarder}}{{#if date}}, {{date}}{{/if}}){{#if url}} -- {{url}}{{/if}}{{#if summary}}: {{trim summary}}{{/if}}
+{{#each awards}}- **{{title}}** ({{awarder}}{{#if date}}, {{date}}{{/if}}){{#if url}} -- {{url}}{{/if}}{{#if summary}}: {{trim summary}}{{/if}} {{tierBadge this}}
 {{/each}}
 
 ## Certifications (50+)
 
 {{#each _certsByCategory}}### {{label}}
 
-{{#each items}}- {{name}}{{#if credentialId}} (ID: {{credentialId}}){{/if}}{{#if url}} -- {{url}}{{/if}}
+{{#each items}}- {{name}}{{#if credentialId}} (ID: {{credentialId}}){{/if}}{{#if url}} -- {{url}}{{/if}} {{tierBadge this}}
 {{/each}}
 
 {{/each}}
 
 ## Publications, Podcast Episodes, Press Features
 
-{{#each publications}}- **{{name}}** -- {{publisher}}{{#if releaseDate}} ({{releaseDate}}){{/if}}{{#if url}} -- {{url}}{{/if}}
+{{#each publications}}- **{{name}}** -- {{publisher}}{{#if releaseDate}} ({{releaseDate}}){{/if}}{{#if url}} -- {{url}}{{/if}} {{tierBadge this}}
 {{/each}}
 
 ## Podcasts Hosted
@@ -158,7 +167,8 @@
 ## Testimonials
 
 {{#each references}}### {{name}}{{#if meta.x_brand.relationship}} ({{meta.x_brand.relationship}}){{/if}}
-{{#if meta.x_brand.linkedinUrl}}LinkedIn: {{meta.x_brand.linkedinUrl}}
+{{#if (or tier recency lastUpdated)}}{{tierBadge this}}
+{{/if}}{{#if meta.x_brand.linkedinUrl}}LinkedIn: {{meta.x_brand.linkedinUrl}}
 {{/if}}
 > {{trim reference}}
 

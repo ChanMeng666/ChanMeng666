@@ -1480,27 +1480,63 @@
     },
     {
       "id": "ai-programming-teaching-project",
-      "tier": "archive",
-      "recency": "historical",
+      "tier": "primary",
+      "recency": "active",
       "lastUpdated": "2026-05-18",
-      "name": "AI Programming Education",
-      "priority": 60,
-      "category": "branding",
-      "tagline": "Bilingual Docusaurus teaching platform with versioned cohort docs, in-course RAG AI assistant, and Notion-backed message board + capstone voting — hosts the 2026 TechNest AI Track",
+      "name": "AI Programming Education Platform (programming.chanmeng.org)",
+      "priority": 13,
+      "category": "ai-apps",
+      "tagline": "Bilingual Docusaurus teaching platform hosting four cohort versions side-by-side, an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts — the active home for the 2026 TechNest AI Track",
       "repoUrl": "https://github.com/ChanMeng666/ai-programming-teaching-project",
       "logo": "/public/brands/ai-programming-logo.svg",
       "url": "https://programming.chanmeng.org/",
-      "techStack": [
-        "Docusaurus",
-        "React",
-        "Cloudflare Pages",
-        "Cloudflare Workers",
-        "Notion API",
-        "Algolia DocSearch",
-        "Typst",
-        "Mermaid"
+      "extraLinks": [
+        {
+          "label": "2026 TechNest cohort",
+          "url": "https://programming.chanmeng.org/docs/2026-technest/intro"
+        },
+        {
+          "label": "2026 Her Waka cohort",
+          "url": "https://programming.chanmeng.org/docs/2026-her-waka/intro"
+        },
+        {
+          "label": "DeepWiki AI doc Q&A",
+          "url": "https://deepwiki.com/ChanMeng666/ai-programming-teaching-project"
+        },
+        {
+          "label": "GitHub repo",
+          "url": "https://github.com/ChanMeng666/ai-programming-teaching-project"
+        }
       ],
-      "status": "live"
+      "techStack": [
+        "Docusaurus 3.8.1",
+        "@docusaurus/faster",
+        "React 18",
+        "MDX",
+        "Cloudflare Workers",
+        "Workers AI (Llama 3.1 8B Instruct)",
+        "Cloudflare Vectorize",
+        "BGE Base EN v1.5 (768-dim embeddings)",
+        "Cloudflare KV",
+        "Cloudflare Pages",
+        "Notion API",
+        "Algolia DocSearch (contextual)",
+        "Typst",
+        "Mermaid (dual-view)",
+        "i18next (EN + 简体中文)",
+        "Server-Sent Events"
+      ],
+      "status": "live",
+      "publicSummary": "Production teaching platform at **programming.chanmeng.org** hosting\nfour cohort versions side-by-side (2024-winter, 2025-summer,\n2026-her-waka, 2026-technest) through Docusaurus versioned docs.\nBacked by an **in-course RAG AI assistant** running on Cloudflare\nWorkers AI (Llama 3.1 8B Instruct), with ~4,800 indexed document\nchunks served from Cloudflare Vectorize via BGE Base EN v1.5\nembeddings and conversation memory in Cloudflare KV. Bilingual\nEN + 简体中文 throughout, with Typst-generated downloadable PDF\nhandouts, Notion-backed Capstone voting, Mermaid dual-view\ndiagrams, and Algolia contextual search. 199 of 208 commits solo\n(95.7%). Actively maintained — new course recordings shipped\nweekly through the 2026 TechNest cohort.\n",
+      "narrative": {
+        "problem": "AI-programming cohort programmes typically die between cohorts:\nthe lecture deck is rebuilt from scratch each round, students\nfrom the previous cohort lose access to their materials, and\nthe \"AI tutor\" experience — when it exists at all — is a\nChatGPT tab the student opens separately, with no awareness of\nwhich cohort's curriculum they're studying. Meanwhile, the\ninstructor has no way to make older cohorts permanently\nretrievable without disturbing the live one. The result: every\ncohort feels like a one-shot, course content compounds nowhere,\nand the AI-assisted-development experience is itself\nunassisted by AI.\n",
+        "audience": "Three concentric layers. **Active cohort students** — currently\nthe 2026 TechNest AI Track and the 2026 academyEX Her Waka\nprogramme — who consume video recordings, lab guides,\ndownloadable PDF handouts, and ask the in-site AI tutor\nversion-aware questions. **Past cohort alumni** (2024-winter,\n2025-summer, Forward with Her 她行 cohorts) who retain stable\nURLs to their original materials. **Public learners and\nprospective employers** who hit programming.chanmeng.org from\nthe LinkedIn profile and use it as proof that Chan ships\nproduction-grade EdTech with native AI integration, not just\nslides.\n",
+        "productLogic": "Visitors land on programming.chanmeng.org and the docs default\nto the **2026 TechNest** version (the active cohort), but the\nversion switcher exposes 2026-her-waka, 2025-summer, and\n2024-winter side-by-side — alumni of any cohort hit a stable\npermalink. Each version ships its own Video Tutorials sidebar\nsection, weekly lab guides as both web docs and downloadable\nTypst-generated PDFs, and a per-version Mermaid dual-view\ndiagram (the same diagram in two presentations so visual and\ntextual learners both succeed). A floating **AI Chat Assistant**\nwidget answers questions in natural language by retrieving the\ncurrent cohort's content first (version-aware retrieval), then\nfalling back to other cohorts and the blog. Capstone 2026 has\nits own public showcase page where invited guests vote on\nteams' demos via a Notion-backed voting flow.\n",
+        "businessLogic": "Theory of change: a single teaching platform that compounds\ncohort-over-cohort instead of resetting each round. Once\n2024-winter cohort materials are versioned in, they stay\naccessible forever at the same URL; the next cohort's\nmaterials sit alongside them without conflict. The AI tutor\nmeans a student writing code at midnight gets context-aware\nhelp against their own cohort's syllabus, not generic ChatGPT\nanswers. For Chan personally: the platform demonstrates\nproduction-grade EdTech engineering (Cloudflare Workers AI +\nVectorize + i18n + versioned docs + PDF pipeline) while doing\nactual paid teaching work — every commit is both portfolio\nartefact and student value.\n",
+        "technicalApproach": "Built on **Docusaurus 3.8.1** with the experimental\n`@docusaurus/faster` build pipeline. Four cohort versions\ncoexist through Docusaurus's versioned-docs feature — each\nversion is its own self-contained doc tree with its own\nsidebar, blog feed, and tag taxonomy. Bilingual i18n is\nend-to-end: EN primary, 简体中文 secondary, with Algolia\nDocSearch configured for **contextual** locale + version\nfiltering so a Mandarin-speaking 2026 TechNest student gets\n2026 TechNest results in Chinese by default.\n\n**RAG AI assistant on Cloudflare Workers AI.** A separate\nCloudflare Worker (`worker/src/index.ts`) handles `POST /api/chat`:\n- Worker calls **Cloudflare Vectorize** with the user query\n  embedded via **BGE Base EN v1.5** (768-dim)\n- Vectorize returns the top relevant chunks from ~4,800\n  MDX-derived document embeddings (all four cohort versions\n  + blog, indexed with **stable hash chunk IDs** so re-indexing\n  is idempotent and version-aware retrieval works)\n- Worker passes the context window to **Workers AI Llama 3.1\n  8B Instruct** which generates the response\n- Response streams back to the in-site ChatWidget via\n  **Server-Sent Events** for incremental rendering\n- Per-session conversation history persists in **Cloudflare KV**\n- Secure seeding flow so the embedding index can be\n  rebuilt on demand without exposing data\n- Vector retrieval is **version-aware**: a 2026-technest\n  student gets 2026-technest results by default, with\n  older cohorts available on explicit ask\n\n**Typst PDF handout pipeline.** The same Typst skill taught\nin Week 8 of the curriculum is the build tool that produces\nthe printable curriculum outline, capstone spec, and\nper-week lab guides — the pedagogical loop is intentional:\nstudents see in production the artefact they're being\ntaught to build. **Mermaid dual-view component** renders\nevery diagram in two synchronised presentations\n(rendered + source) so both visual and textual learners\nsucceed.\n\n**Capstone classroom infrastructure.** Cloudflare Worker\nbackend proxies writes into Notion so the cohort owners\nmoderate inside the tool they already use. The Capstone 2026\npublic showcase page lists every team's demo with live\nNotion-backed voting open to invited guests — also bilingual.\n\nDeployed end-to-end on Cloudflare's edge: **Cloudflare Pages**\nfor the static Docusaurus build, **Cloudflare Workers** for\nthe chat backend, **Cloudflare Vectorize** for the vector\nindex, **Cloudflare KV** for sessions.\n",
+        "outcomes": "Live at **programming.chanmeng.org**, in active use as the\nofficial platform for the 2026 TechNest AI Track and the 2026\nacademyEX Her Waka programme. **199 of 208 commits (95.7%)\nsolo across Chan's two GitHub identities**; remainder is\nAI auto-review + Dependabot. Four cohort versions running\nsimultaneously without interfering with each other. RAG\nindex covers all four cohort versions + the blog as of\n2026-05-02; version-aware retrieval and stable hash chunk\nIDs landed the same day. New course recordings continue to\nship weekly — Week 3 video added 2026-05-17. DeepWiki\nprovides an external AI doc-Q&A surface at\ndeepwiki.com/ChanMeng666/ai-programming-teaching-project.\n",
+        "myRole": "Sole engineer and sole author. Designed and built the entire\nplatform end-to-end: Docusaurus configuration, the versioned\ndocs taxonomy across four cohorts, every cohort's curriculum\ncontent, the Cloudflare Worker RAG backend (worker entry,\nchat handler, RAG module, Vectorize seeding, KV session\nstore), the BGE-Base embeddings ingestion pipeline, the\nTypst PDF handout build, the Mermaid dual-view component,\nthe Notion-Worker proxy for Capstone voting, the Algolia\ncontextual-search configuration, and the bilingual i18n\nacross every surface (including Mermaid toolbar labels and\nthe localised `目录` TOC label). Migrated production from\nVercel to Cloudflare Pages in 2026-04. Continues to ship\nthe current cohort's lecture recordings and lab content\neach week.\n"
+      }
     },
     {
       "id": "readme-profile-generator",
@@ -3761,6 +3797,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T10:13:10.428Z"
+    "buildTimestamp": "2026-05-18T10:23:41.098Z"
   }
 }

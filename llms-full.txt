@@ -2590,6 +2590,154 @@ tracking domain + Vercel Blob image hosting, and migrated the
 whole site to Cloudflare Pages. Maintains the system as both
 a publication and a continuous demonstration of agent-pipeline
 engineering.
+### AI Programming Education Platform (programming.chanmeng.org) — Bilingual Docusaurus teaching platform hosting four cohort versions side-by-side, an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts — the active home for the 2026 TechNest AI Track
+[tier=primary · recency=active · updated=2026-05-18]
+- **URL:** https://programming.chanmeng.org/
+- **Repository:** https://github.com/ChanMeng666/ai-programming-teaching-project
+- **Tech stack:** Docusaurus 3.8.1, @docusaurus/faster, React 18, MDX, Cloudflare Workers, Workers AI (Llama 3.1 8B Instruct), Cloudflare Vectorize, BGE Base EN v1.5 (768-dim embeddings), Cloudflare KV, Cloudflare Pages, Notion API, Algolia DocSearch (contextual), Typst, Mermaid (dual-view), i18next (EN + 简体中文), Server-Sent Events
+
+**Summary:** Production teaching platform at **programming.chanmeng.org** hosting
+four cohort versions side-by-side (2024-winter, 2025-summer,
+2026-her-waka, 2026-technest) through Docusaurus versioned docs.
+Backed by an **in-course RAG AI assistant** running on Cloudflare
+Workers AI (Llama 3.1 8B Instruct), with ~4,800 indexed document
+chunks served from Cloudflare Vectorize via BGE Base EN v1.5
+embeddings and conversation memory in Cloudflare KV. Bilingual
+EN + 简体中文 throughout, with Typst-generated downloadable PDF
+handouts, Notion-backed Capstone voting, Mermaid dual-view
+diagrams, and Algolia contextual search. 199 of 208 commits solo
+(95.7%). Actively maintained — new course recordings shipped
+weekly through the 2026 TechNest cohort.
+
+**Problem:** AI-programming cohort programmes typically die between cohorts:
+the lecture deck is rebuilt from scratch each round, students
+from the previous cohort lose access to their materials, and
+the "AI tutor" experience — when it exists at all — is a
+ChatGPT tab the student opens separately, with no awareness of
+which cohort's curriculum they're studying. Meanwhile, the
+instructor has no way to make older cohorts permanently
+retrievable without disturbing the live one. The result: every
+cohort feels like a one-shot, course content compounds nowhere,
+and the AI-assisted-development experience is itself
+unassisted by AI.
+
+**Audience:** Three concentric layers. **Active cohort students** — currently
+the 2026 TechNest AI Track and the 2026 academyEX Her Waka
+programme — who consume video recordings, lab guides,
+downloadable PDF handouts, and ask the in-site AI tutor
+version-aware questions. **Past cohort alumni** (2024-winter,
+2025-summer, Forward with Her 她行 cohorts) who retain stable
+URLs to their original materials. **Public learners and
+prospective employers** who hit programming.chanmeng.org from
+the LinkedIn profile and use it as proof that Chan ships
+production-grade EdTech with native AI integration, not just
+slides.
+
+**Product logic:** Visitors land on programming.chanmeng.org and the docs default
+to the **2026 TechNest** version (the active cohort), but the
+version switcher exposes 2026-her-waka, 2025-summer, and
+2024-winter side-by-side — alumni of any cohort hit a stable
+permalink. Each version ships its own Video Tutorials sidebar
+section, weekly lab guides as both web docs and downloadable
+Typst-generated PDFs, and a per-version Mermaid dual-view
+diagram (the same diagram in two presentations so visual and
+textual learners both succeed). A floating **AI Chat Assistant**
+widget answers questions in natural language by retrieving the
+current cohort's content first (version-aware retrieval), then
+falling back to other cohorts and the blog. Capstone 2026 has
+its own public showcase page where invited guests vote on
+teams' demos via a Notion-backed voting flow.
+
+**Business logic:** Theory of change: a single teaching platform that compounds
+cohort-over-cohort instead of resetting each round. Once
+2024-winter cohort materials are versioned in, they stay
+accessible forever at the same URL; the next cohort's
+materials sit alongside them without conflict. The AI tutor
+means a student writing code at midnight gets context-aware
+help against their own cohort's syllabus, not generic ChatGPT
+answers. For Chan personally: the platform demonstrates
+production-grade EdTech engineering (Cloudflare Workers AI +
+Vectorize + i18n + versioned docs + PDF pipeline) while doing
+actual paid teaching work — every commit is both portfolio
+artefact and student value.
+
+**Technical approach:** Built on **Docusaurus 3.8.1** with the experimental
+`@docusaurus/faster` build pipeline. Four cohort versions
+coexist through Docusaurus's versioned-docs feature — each
+version is its own self-contained doc tree with its own
+sidebar, blog feed, and tag taxonomy. Bilingual i18n is
+end-to-end: EN primary, 简体中文 secondary, with Algolia
+DocSearch configured for **contextual** locale + version
+filtering so a Mandarin-speaking 2026 TechNest student gets
+2026 TechNest results in Chinese by default.
+
+**RAG AI assistant on Cloudflare Workers AI.** A separate
+Cloudflare Worker (`worker/src/index.ts`) handles `POST /api/chat`:
+- Worker calls **Cloudflare Vectorize** with the user query
+  embedded via **BGE Base EN v1.5** (768-dim)
+- Vectorize returns the top relevant chunks from ~4,800
+  MDX-derived document embeddings (all four cohort versions
+  + blog, indexed with **stable hash chunk IDs** so re-indexing
+  is idempotent and version-aware retrieval works)
+- Worker passes the context window to **Workers AI Llama 3.1
+  8B Instruct** which generates the response
+- Response streams back to the in-site ChatWidget via
+  **Server-Sent Events** for incremental rendering
+- Per-session conversation history persists in **Cloudflare KV**
+- Secure seeding flow so the embedding index can be
+  rebuilt on demand without exposing data
+- Vector retrieval is **version-aware**: a 2026-technest
+  student gets 2026-technest results by default, with
+  older cohorts available on explicit ask
+
+**Typst PDF handout pipeline.** The same Typst skill taught
+in Week 8 of the curriculum is the build tool that produces
+the printable curriculum outline, capstone spec, and
+per-week lab guides — the pedagogical loop is intentional:
+students see in production the artefact they're being
+taught to build. **Mermaid dual-view component** renders
+every diagram in two synchronised presentations
+(rendered + source) so both visual and textual learners
+succeed.
+
+**Capstone classroom infrastructure.** Cloudflare Worker
+backend proxies writes into Notion so the cohort owners
+moderate inside the tool they already use. The Capstone 2026
+public showcase page lists every team's demo with live
+Notion-backed voting open to invited guests — also bilingual.
+
+Deployed end-to-end on Cloudflare's edge: **Cloudflare Pages**
+for the static Docusaurus build, **Cloudflare Workers** for
+the chat backend, **Cloudflare Vectorize** for the vector
+index, **Cloudflare KV** for sessions.
+
+**Outcomes:** Live at **programming.chanmeng.org**, in active use as the
+official platform for the 2026 TechNest AI Track and the 2026
+academyEX Her Waka programme. **199 of 208 commits (95.7%)
+solo across Chan's two GitHub identities**; remainder is
+AI auto-review + Dependabot. Four cohort versions running
+simultaneously without interfering with each other. RAG
+index covers all four cohort versions + the blog as of
+2026-05-02; version-aware retrieval and stable hash chunk
+IDs landed the same day. New course recordings continue to
+ship weekly — Week 3 video added 2026-05-17. DeepWiki
+provides an external AI doc-Q&A surface at
+deepwiki.com/ChanMeng666/ai-programming-teaching-project.
+
+**My role:** Sole engineer and sole author. Designed and built the entire
+platform end-to-end: Docusaurus configuration, the versioned
+docs taxonomy across four cohorts, every cohort's curriculum
+content, the Cloudflare Worker RAG backend (worker entry,
+chat handler, RAG module, Vectorize seeding, KV session
+store), the BGE-Base embeddings ingestion pipeline, the
+Typst PDF handout build, the Mermaid dual-view component,
+the Notion-Worker proxy for Capstone voting, the Algolia
+contextual-search configuration, and the bilingual i18n
+across every surface (including Mermaid toolbar labels and
+the localised `目录` TOC label). Migrated production from
+Vercel to Cloudflare Pages in 2026-04. Continues to ship
+the current cohort's lecture recordings and lab content
+each week.
 ### FemTracker Agent — 8-agent CopilotKit + LangGraph women's-health companion (merged into CopilotKit's official demos_2025)
 [tier=primary · recency=recent · updated=2026-05-18]
 - **URL:** https://femtracker-agent.vercel.app/
@@ -2952,7 +3100,6 @@ regression breaks visible branding immediately.
 - [MNIST Digit Recognition](https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project) [tier=archive · recency=historical · updated=2026-05-18]
 - [Water Quality Analysis](https://github.com/ChanMeng666/water-quality-testing-data-analysis) [tier=archive · recency=historical · updated=2026-05-18]
 **branding:**
-- [AI Programming Education](https://github.com/ChanMeng666/ai-programming-teaching-project) [tier=archive · recency=historical · updated=2026-05-18] -- live: https://programming.chanmeng.org/
 - [README Profile Generator](https://github.com/ChanMeng666/readme-profile-generator) [tier=archive · recency=historical · updated=2026-05-18] -- live: https://huggingface.co/spaces/ChanMeng666/readme-profile-generator
 - [Juejin Algorithm Practice](https://github.com/ChanMeng666/juejin-algorithm-practice) [tier=archive · recency=historical · updated=2026-05-18]
 - [chan-meng-cli](https://github.com/ChanMeng666/chan-meng-cli) [tier=archive · recency=historical · updated=2026-05-18]

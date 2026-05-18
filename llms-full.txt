@@ -3040,6 +3040,179 @@ server-side anti-cheat validation, composed the dynamic
 music state machine and the Web Audio synth effects,
 wrote the Gulp + LESS build pipeline, and authored the
 4-step interactive tutorial with spotlight overlays.
+### Vitex — AI Career Agent (vitex.org.nz) — 7-step AI agent that turns a job description + free-text background into a tailored ATS-optimized resume PDF + cover letter in ~30 seconds — Vercel AI SDK + GPT-4o + Typst local compile (<100ms), shipped on a DigitalOcean VPS via Docker + Traefik + GitHub Actions, paid tier via Stripe
+[tier=primary · recency=recent · updated=2026-05-18]
+- **URL:** https://www.vitex.org.nz/
+- **Repository:** https://github.com/ChanMeng666/easy-resume
+- **Tech stack:** Next.js 15, React 19, TypeScript 5, Vercel AI SDK v6, @ai-sdk/openai, OpenAI GPT-4o, Zod schemas, Typst (local binary), Neon Postgres, Drizzle ORM, Upstash Redis, Stack Auth, Stripe, Cloudinary, shadcn/ui + Neobrutalism, Framer Motion, Docker, Traefik, DigitalOcean VPS, GitHub Actions CI/CD
+
+**Summary:** AI Career Agent live at **vitex.org.nz**. A user pastes a job
+description, describes their background in free text, and a
+**7-step AI pipeline** (JD parsing → background parsing → match
+analysis → resume tailoring → ATS scoring → cover letter →
+Typst document generation) streams the result via SSE into a
+tailored, ATS-optimized resume PDF + matching cover letter in
+~30 seconds. Typst compiles PDFs locally in under 100 ms across
+14 AI-auto-selected professional templates — no external
+document-generation API. Stripe-powered credit system, public
+shareable links via unique tokens. Production deployment runs
+as a Docker container on a **DigitalOcean VPS** behind
+**Traefik** (reverse proxy + TLS), shipped continuously by
+**GitHub Actions**. 168 commits, ~95% solo, three deployment
+migrations and a LaTeX → Typst engine swap on the path to
+current production.
+
+**Problem:** Most AI resume tools are one of two failure modes: (a) a
+thin GPT wrapper that hands you a paragraph and calls it a
+resume — no PDF, no ATS-aware structure, no template
+intelligence; or (b) a SaaS that lets you fill out a form
+and burns 90 seconds spinning a hosted Chromium to render
+the same template every other user gets. Both miss the
+actual job: the candidate needs the resume *tailored to the
+specific JD they're applying to*, the document needs to
+survive ATS parsing, the visual template needs to match the
+target industry/role, and the round-trip needs to feel
+instant. None of those are true of "paste your CV into
+ChatGPT."
+
+**Audience:** Three groups. **Job seekers in real applications** —
+especially in NZ / Australia / Asia-Pacific markets where
+Chan personally needed the tool and where vitex.org.nz lives
+(the NZ domain is deliberate). **Career-change candidates**
+who need every application tailored — the people for whom
+re-writing a resume per JD is the actual bottleneck.
+**AI-engineering portfolio reviewers** evaluating Chan's
+ability to ship a production-grade multi-step AI agent with
+real users, real billing, and real DevOps — not a demo.
+
+**Product logic:** User flow is intentionally short: (1) **Homepage** — paste
+a job description + describe your professional background
+in free text. No CV upload, no form filling, no field-by-field
+data entry. (2) **Generate** — click run; the 7-step AI
+pipeline streams progress via SSE, the user watches each
+stage complete (parsing JD → parsing background → matching
+→ tailoring → ATS scoring → cover letter → Typst compile),
+and arrives at the **Editor** view with the PDF preview,
+ATS score with actionable feedback, the matching cover
+letter, and a **natural-language refinement box**
+("make the leadership section stronger" / "shorten the
+intro paragraph" — the AI regenerates that slice).
+(3) **Refine & export** — download the PDF or generate a
+public share link with a unique token. Persistent **resume
+management dashboard** and **credit display** for paid users.
+
+**Business logic:** Stripe-powered subscription tiers gate AI generation credits.
+Free tier exists for trial; paid plans buy more credits per
+month. The cost structure aligns the right incentive — each
+generation runs a 7-step OpenAI pipeline plus Typst compile,
+so the unit economics need a credit fence rather than
+all-you-can-eat. Public **share links via unique tokens**
+give the product organic distribution: a candidate who lands
+a job credits Vitex on LinkedIn, the share link becomes
+social proof, the referenced resume itself is a working
+landing page demonstrating the product. The whole stack —
+Auth + DB + Cache + Payments + AI + PDF rendering — is
+production-shaped for a paying user base, not a demo.
+
+**Technical approach:** **AI agent layer.** The pipeline is **Vercel AI SDK v6**
+with the OpenAI provider (`@ai-sdk/openai`) calling **GPT-4o**
+across seven sequential stages, each producing a
+**Zod-validated** structured output:
+1. **JD Parsing** — extract role, seniority, must-have
+   skills, nice-to-haves, company signals
+2. **Background Parsing** — convert the user's free-text
+   description into a structured skill / experience model
+3. **Match Analysis** — compute the candidate↔JD fit profile
+4. **Resume Tailoring** — reorder, rewrite, and emphasise
+   the candidate's history toward the parsed JD
+5. **ATS Scoring** — assess parse-ability against ATS rules,
+   emit actionable feedback
+6. **Cover Letter Generation** — produce a matching cover
+   letter from the same parsed pair
+7. **Document Generation** — render to Typst, compile to PDF
+
+Each stage streams progress to the client via **Server-Sent
+Events** so the user sees the agent thinking instead of a
+spinner. The system disables OpenAI strict JSON schema
+mode where Zod uses `.optional()` (commit log captures the
+diagnosis), and reads JD + background from `sessionStorage`
+instead of URL params so deep links don't leak input data.
+
+**Document engine — Typst, not LaTeX.** PDF generation runs
+a **local Typst binary** in the Docker image, compiling
+each document in **under 100 ms** without calling any
+external API. The project originally rendered with LaTeX
+and migrated to Typst on 2026-04-06 — the same day as the
+Cloudflare Workers → DigitalOcean VPS migration — because
+Typst compiles in milliseconds where LaTeX needs seconds
+and Workers couldn't run the binary at all. The Docker
+image pre-populates the Typst package cache for FontAwesome
+so cold container starts don't pay the package-fetch cost.
+**14 professional templates** are AI-auto-selected based
+on parsed industry / role signals; the renderer also ships
+FontAwesome 6 contact icons (replacing the emoji icons of
+an earlier iteration).
+
+**Persistence + product stack.**
+- **Neon serverless Postgres** with **Drizzle ORM** for
+  user resumes, generation history, and credit ledgers
+- **Upstash Redis** for short-lived cache + rate-control
+  state
+- **Stack Auth** for the authentication surface
+- **Stripe** for subscription billing and the credit system
+- **Cloudinary** for user uploads and rendered-PDF storage
+- **nanoid** for the shareable-token URL scheme
+
+**UI.** Next.js 15 App Router + React 19 + TypeScript. The
+**Neobrutalism design system** (hard shadows, thick borders,
+high contrast) is the deliberate visual identity — chosen
+and refined in the Phase 3 UI/UX overhaul branded
+internally as *"sell results, not tools"*. shadcn/ui +
+Tailwind for primitives; Framer Motion for transitions;
+react-hook-form + Zod resolvers for input validation.
+
+**Deployment — three migrations, one production.** Started
+on **Railway**, migrated to **Cloudflare Workers**
+(2026-02-22), then migrated again to a **DigitalOcean VPS**
+(2026-04-06) because the Typst binary needs a real
+filesystem and a long-lived container. Production now runs
+as a single **Docker container** on the VPS behind
+**Traefik** (reverse proxy + automatic TLS), continuously
+deployed by **GitHub Actions** on every push to the
+deployment branch. The Dockerfile uses `curl` (not `wget`)
+and `xz-utils` for the Typst tarball — both fixes captured
+in the commit log as real edge-case failures during the
+VPS migration.
+
+**Outcomes:** Live and operational at **vitex.org.nz**, serving real users
+with the full free + paid credit flow. **168 commits over
+~3 months** (2026-02-21 → 2026-05-09), **~95% Chan-authored**
+across two GitHub identities (8 commits from Claude
+co-author, 1 from Vercel deploy bot, rest solo). Three
+deployment migrations and a LaTeX → Typst document-engine
+swap shipped without service outage — every migration step
+is in the commit log including the specific Docker
+fixes (`xz-utils`, `curl`, FontAwesome package pre-cache),
+the strict-JSON-schema regression diagnosis, and the
+`sessionStorage` migration for sensitive input. Mobile
+reliability + responsive UI pass shipped 2026-05-09 after
+the production hardening phase.
+
+**My role:** Sole engineer, sole designer, sole product owner. Designed
+the 7-step agent pipeline with Zod-validated stages
+(migrating the editor from CopilotKit to Vercel AI SDK
+agent chat along the way), wrote every API route, built
+the Stripe credit system, configured Stack Auth, designed
+the Drizzle schema for resumes / credits / share tokens,
+executed all three deployment migrations (Railway → CF
+Workers → DigitalOcean VPS), executed the LaTeX → Typst
+engine swap (including the Dockerfile fixes for `xz-utils`
+and the Typst FontAwesome package pre-cache), designed the
+Neobrutalism UI in the "sell results, not tools" Phase 3
+overhaul, built the natural-language refinement loop in
+the Editor, and continues to operate the production
+service as recently as the May 2026 mobile reliability
+pass.
 ### FemTracker Agent — 8-agent CopilotKit + LangGraph women's-health companion (merged into CopilotKit's official demos_2025)
 [tier=primary · recency=recent · updated=2026-05-18]
 - **URL:** https://femtracker-agent.vercel.app/
@@ -3383,7 +3556,6 @@ regression breaks visible branding immediately.
 **ai-apps:**
 - [Claude Code Audio Hooks (legacy name → echook)](https://github.com/ChanMeng666/claude-code-audio-hooks) [tier=archive · recency=deprecated · updated=2026-05-18]
 - [Typst Skill for Claude Code](https://github.com/ChanMeng666/typst-claude-skill) [tier=primary · recency=active · updated=2026-05-18] -- live: https://typst.app/
-- [Vitex](https://github.com/ChanMeng666/easy-resume) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://www.vitex.org.nz/
 - [FanFic Lab](https://github.com/ChanMeng666/fanfic-lab) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://fanfic-lab.tech/
 - [ArchCanvas](https://archcanvas.chanmeng.org/) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://archcanvas.chanmeng.org/
 - [Customer Insight](https://github.com/ChanMeng666/customer-insight) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/

@@ -1336,16 +1336,59 @@
     },
     {
       "id": "vitex",
-      "tier": "secondary",
-      "recency": "historical",
+      "tier": "primary",
+      "recency": "recent",
       "lastUpdated": "2026-05-18",
-      "name": "Vitex",
-      "priority": 30,
+      "name": "Vitex — AI Career Agent (vitex.org.nz)",
+      "priority": 16,
       "category": "ai-apps",
+      "tagline": "7-step AI agent that turns a job description + free-text background into a tailored ATS-optimized resume PDF + cover letter in ~30 seconds — Vercel AI SDK + GPT-4o + Typst local compile (<100ms), shipped on a DigitalOcean VPS via Docker + Traefik + GitHub Actions, paid tier via Stripe",
       "repoUrl": "https://github.com/ChanMeng666/easy-resume",
       "logo": "/public/brands/vitex.svg",
       "url": "https://www.vitex.org.nz/",
-      "status": "live"
+      "extraLinks": [
+        {
+          "label": "Live product",
+          "url": "https://www.vitex.org.nz/"
+        },
+        {
+          "label": "GitHub repo",
+          "url": "https://github.com/ChanMeng666/easy-resume"
+        }
+      ],
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript 5",
+        "Vercel AI SDK v6",
+        "@ai-sdk/openai",
+        "OpenAI GPT-4o",
+        "Zod schemas",
+        "Typst (local binary)",
+        "Neon Postgres",
+        "Drizzle ORM",
+        "Upstash Redis",
+        "Stack Auth",
+        "Stripe",
+        "Cloudinary",
+        "shadcn/ui + Neobrutalism",
+        "Framer Motion",
+        "Docker",
+        "Traefik",
+        "DigitalOcean VPS",
+        "GitHub Actions CI/CD"
+      ],
+      "status": "live",
+      "publicSummary": "AI Career Agent live at **vitex.org.nz**. A user pastes a job\ndescription, describes their background in free text, and a\n**7-step AI pipeline** (JD parsing → background parsing → match\nanalysis → resume tailoring → ATS scoring → cover letter →\nTypst document generation) streams the result via SSE into a\ntailored, ATS-optimized resume PDF + matching cover letter in\n~30 seconds. Typst compiles PDFs locally in under 100 ms across\n14 AI-auto-selected professional templates — no external\ndocument-generation API. Stripe-powered credit system, public\nshareable links via unique tokens. Production deployment runs\nas a Docker container on a **DigitalOcean VPS** behind\n**Traefik** (reverse proxy + TLS), shipped continuously by\n**GitHub Actions**. 168 commits, ~95% solo, three deployment\nmigrations and a LaTeX → Typst engine swap on the path to\ncurrent production.\n",
+      "narrative": {
+        "problem": "Most AI resume tools are one of two failure modes: (a) a\nthin GPT wrapper that hands you a paragraph and calls it a\nresume — no PDF, no ATS-aware structure, no template\nintelligence; or (b) a SaaS that lets you fill out a form\nand burns 90 seconds spinning a hosted Chromium to render\nthe same template every other user gets. Both miss the\nactual job: the candidate needs the resume *tailored to the\nspecific JD they're applying to*, the document needs to\nsurvive ATS parsing, the visual template needs to match the\ntarget industry/role, and the round-trip needs to feel\ninstant. None of those are true of \"paste your CV into\nChatGPT.\"\n",
+        "audience": "Three groups. **Job seekers in real applications** —\nespecially in NZ / Australia / Asia-Pacific markets where\nChan personally needed the tool and where vitex.org.nz lives\n(the NZ domain is deliberate). **Career-change candidates**\nwho need every application tailored — the people for whom\nre-writing a resume per JD is the actual bottleneck.\n**AI-engineering portfolio reviewers** evaluating Chan's\nability to ship a production-grade multi-step AI agent with\nreal users, real billing, and real DevOps — not a demo.\n",
+        "productLogic": "User flow is intentionally short: (1) **Homepage** — paste\na job description + describe your professional background\nin free text. No CV upload, no form filling, no field-by-field\ndata entry. (2) **Generate** — click run; the 7-step AI\npipeline streams progress via SSE, the user watches each\nstage complete (parsing JD → parsing background → matching\n→ tailoring → ATS scoring → cover letter → Typst compile),\nand arrives at the **Editor** view with the PDF preview,\nATS score with actionable feedback, the matching cover\nletter, and a **natural-language refinement box**\n(\"make the leadership section stronger\" / \"shorten the\nintro paragraph\" — the AI regenerates that slice).\n(3) **Refine & export** — download the PDF or generate a\npublic share link with a unique token. Persistent **resume\nmanagement dashboard** and **credit display** for paid users.\n",
+        "businessLogic": "Stripe-powered subscription tiers gate AI generation credits.\nFree tier exists for trial; paid plans buy more credits per\nmonth. The cost structure aligns the right incentive — each\ngeneration runs a 7-step OpenAI pipeline plus Typst compile,\nso the unit economics need a credit fence rather than\nall-you-can-eat. Public **share links via unique tokens**\ngive the product organic distribution: a candidate who lands\na job credits Vitex on LinkedIn, the share link becomes\nsocial proof, the referenced resume itself is a working\nlanding page demonstrating the product. The whole stack —\nAuth + DB + Cache + Payments + AI + PDF rendering — is\nproduction-shaped for a paying user base, not a demo.\n",
+        "technicalApproach": "**AI agent layer.** The pipeline is **Vercel AI SDK v6**\nwith the OpenAI provider (`@ai-sdk/openai`) calling **GPT-4o**\nacross seven sequential stages, each producing a\n**Zod-validated** structured output:\n1. **JD Parsing** — extract role, seniority, must-have\n   skills, nice-to-haves, company signals\n2. **Background Parsing** — convert the user's free-text\n   description into a structured skill / experience model\n3. **Match Analysis** — compute the candidate↔JD fit profile\n4. **Resume Tailoring** — reorder, rewrite, and emphasise\n   the candidate's history toward the parsed JD\n5. **ATS Scoring** — assess parse-ability against ATS rules,\n   emit actionable feedback\n6. **Cover Letter Generation** — produce a matching cover\n   letter from the same parsed pair\n7. **Document Generation** — render to Typst, compile to PDF\n\nEach stage streams progress to the client via **Server-Sent\nEvents** so the user sees the agent thinking instead of a\nspinner. The system disables OpenAI strict JSON schema\nmode where Zod uses `.optional()` (commit log captures the\ndiagnosis), and reads JD + background from `sessionStorage`\ninstead of URL params so deep links don't leak input data.\n\n**Document engine — Typst, not LaTeX.** PDF generation runs\na **local Typst binary** in the Docker image, compiling\neach document in **under 100 ms** without calling any\nexternal API. The project originally rendered with LaTeX\nand migrated to Typst on 2026-04-06 — the same day as the\nCloudflare Workers → DigitalOcean VPS migration — because\nTypst compiles in milliseconds where LaTeX needs seconds\nand Workers couldn't run the binary at all. The Docker\nimage pre-populates the Typst package cache for FontAwesome\nso cold container starts don't pay the package-fetch cost.\n**14 professional templates** are AI-auto-selected based\non parsed industry / role signals; the renderer also ships\nFontAwesome 6 contact icons (replacing the emoji icons of\nan earlier iteration).\n\n**Persistence + product stack.**\n- **Neon serverless Postgres** with **Drizzle ORM** for\n  user resumes, generation history, and credit ledgers\n- **Upstash Redis** for short-lived cache + rate-control\n  state\n- **Stack Auth** for the authentication surface\n- **Stripe** for subscription billing and the credit system\n- **Cloudinary** for user uploads and rendered-PDF storage\n- **nanoid** for the shareable-token URL scheme\n\n**UI.** Next.js 15 App Router + React 19 + TypeScript. The\n**Neobrutalism design system** (hard shadows, thick borders,\nhigh contrast) is the deliberate visual identity — chosen\nand refined in the Phase 3 UI/UX overhaul branded\ninternally as *\"sell results, not tools\"*. shadcn/ui +\nTailwind for primitives; Framer Motion for transitions;\nreact-hook-form + Zod resolvers for input validation.\n\n**Deployment — three migrations, one production.** Started\non **Railway**, migrated to **Cloudflare Workers**\n(2026-02-22), then migrated again to a **DigitalOcean VPS**\n(2026-04-06) because the Typst binary needs a real\nfilesystem and a long-lived container. Production now runs\nas a single **Docker container** on the VPS behind\n**Traefik** (reverse proxy + automatic TLS), continuously\ndeployed by **GitHub Actions** on every push to the\ndeployment branch. The Dockerfile uses `curl` (not `wget`)\nand `xz-utils` for the Typst tarball — both fixes captured\nin the commit log as real edge-case failures during the\nVPS migration.\n",
+        "outcomes": "Live and operational at **vitex.org.nz**, serving real users\nwith the full free + paid credit flow. **168 commits over\n~3 months** (2026-02-21 → 2026-05-09), **~95% Chan-authored**\nacross two GitHub identities (8 commits from Claude\nco-author, 1 from Vercel deploy bot, rest solo). Three\ndeployment migrations and a LaTeX → Typst document-engine\nswap shipped without service outage — every migration step\nis in the commit log including the specific Docker\nfixes (`xz-utils`, `curl`, FontAwesome package pre-cache),\nthe strict-JSON-schema regression diagnosis, and the\n`sessionStorage` migration for sensitive input. Mobile\nreliability + responsive UI pass shipped 2026-05-09 after\nthe production hardening phase.\n",
+        "myRole": "Sole engineer, sole designer, sole product owner. Designed\nthe 7-step agent pipeline with Zod-validated stages\n(migrating the editor from CopilotKit to Vercel AI SDK\nagent chat along the way), wrote every API route, built\nthe Stripe credit system, configured Stack Auth, designed\nthe Drizzle schema for resumes / credits / share tokens,\nexecuted all three deployment migrations (Railway → CF\nWorkers → DigitalOcean VPS), executed the LaTeX → Typst\nengine swap (including the Dockerfile fixes for `xz-utils`\nand the Typst FontAwesome package pre-cache), designed the\nNeobrutalism UI in the \"sell results, not tools\" Phase 3\noverhaul, built the natural-language refinement loop in\nthe Editor, and continues to operate the production\nservice as recently as the May 2026 mobile reliability\npass.\n"
+      }
     },
     {
       "id": "fanfic-lab",
@@ -3871,6 +3914,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-18T11:15:27.744Z"
+    "buildTimestamp": "2026-05-18T11:21:01.707Z"
   }
 }

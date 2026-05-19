@@ -664,17 +664,25 @@ work:
         shesharp.org.nz that identified the high-priority mobile-vs-desktop
         ranking gap on "women in tech New Zealand."
       technicalHighlights: |
-        Architected and built every layer of the platform: Next.js 15.4 +
-        React 19.1 + TypeScript on Drizzle over Neon Postgres, NextAuth 5
-        with bcrypt + OAuth, Tailwind 4 + shadcn/ui, Resend transactional
-        email, Cloudinary image pipeline, Stripe billing, Vercel edge
-        deployment. Schema runs 1,392 lines / 45 enums — every business
-        concept is a typed enum so invalid states are unrepresentable.
+        Architected and built every layer of the platform: Next.js 15.6
+        canary + React 19.1.2 + TypeScript 5.8 on Drizzle 0.43 over Neon
+        Postgres, NextAuth 5 with bcrypt + Google/GitHub OAuth, Tailwind 4
+        + shadcn/ui, Resend transactional email, Cloudinary image pipeline,
+        Stripe billing (NZD subscription mode), Vercel edge deployment +
+        3 Vercel Cron jobs. Schema runs 1,392 lines / 30 pgEnums / 34
+        pgTables / 27 SQL migrations — every business concept is a typed
+        enum so invalid states are unrepresentable. 95 API routes, 53
+        pages, 145 components.
 
         The AI matching engine is a deliberate two-stage pipeline:
-        rule-based pre-filter for cost control, then GPT-4o-mini scoring on
-        promising pairs along five dimensions with explainable natural-
-        language justifications, gated by admin approval. The Slack agent
+        rule-based pre-filter for cost control, then GPT-4o-mini at
+        temp 0.3 / max_tokens 1000 / JSON-object response_format scoring on
+        promising pairs along five **explicitly weighted** dimensions
+        (MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%)
+        with explainable natural-language justifications, Upstash Redis
+        cache by pair, exponential-backoff retries, deterministic rule-
+        based fallback when AI is unavailable, and admin human-in-the-loop
+        approval as the final gate. The Slack agent
         skill composes existing CLI tools (Slack fetch, image download,
         docx parse, JSON validate, git commit) into a single intent-driven
         workflow with dry-run preview and CI gating — collapsing event
@@ -2334,52 +2342,101 @@ projects:
   - id: she-sharp
     tier: flagship
     recency: recent
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-05-19"
     name: She Sharp
     priority: 2
     category: web-apps
-    tagline: Solo-built production member platform + AI mentor matching + Slack ecosystem for NZ's leading women-in-STEM nonprofit
+    tagline: |
+      Solo-built production member platform for NZ's leading women-in-STEM
+      nonprofit (Auckland-headquartered registered charitable trust CC57025,
+      founded 2014 by AUT researcher Dr Mahsa Mohaghegh/McCauley). 648/748
+      commits (86.6%) authored solo across 10 months. GPT-4o-mini AI mentor
+      matching with explicit 5-weight scoring (MBTI 15 / Skill 35 / Goal 30 /
+      Industry 10 / Logistics 10) + Upstash Redis cache + rule-based fallback
+      + admin human-in-the-loop. Three role-permissioned dashboards
+      (mentor / mentee / admin) with native dual-role support, Stripe NZD
+      subscription billing wired into a unique payment→invitation-code
+      activation flow, custom Slack ecosystem (event-collector bot, weekly
+      mentorship-stats digest, weekly NZ funding-opportunities crawler over
+      6 government RSS/HTML sources), a Claude agent skill
+      `sync-event-from-slack` that replaces hours of manual event publication
+      with a single dry-run-default command.
     url: https://she-sharp-zeta.vercel.app/
     repoUrl: https://github.com/NZ-SheSharp/she-sharp
     extraLinks:
       - { label: "She Sharp", url: "https://www.shesharp.org.nz/" }
       - { label: "Her Waka", url: "https://herwaka.shesharp.org.nz/" }
+      - { label: "GitHub org (NZ-SheSharp)", url: "https://github.com/NZ-SheSharp" }
+      - { label: "NZ Charities Register (CC57025)", url: "https://register.charities.govt.nz/Charity/CC57025" }
+      - { label: "Founder Dr Mahsa Mohaghegh (LinkedIn)", url: "https://www.linkedin.com/in/mahsamohaghegh/" }
+      - { label: "She Sharp LinkedIn", url: "https://www.linkedin.com/company/shesharpnz/" }
     logo: /public/experience/she-sharp-logo-purple-dark.svg
-    entity: "She Sharp (charitable trust, founded by Dr Mahsa Mohaghegh / McCauley)"
+    entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
     roles: ["Senior Full Stack Engineer", "Website Team Lead", "Solo Architect of New Platform"]
     techStack:
-      - "Next.js 15.4"
-      - "React 19.1"
-      - TypeScript
-      - "Drizzle ORM"
-      - "Neon Postgres"
-      - "NextAuth 5"
-      - "GPT-4o-mini"
-      - Stripe
-      - Slack
-      - "Claude agent skills"
-      - Resend
-      - Cloudinary
-      - "Tailwind 4"
-      - shadcn/ui
-      - Vercel
+      - "Next.js 15.6 canary (App Router, Turbopack dev)"
+      - "React 19.1.2"
+      - "TypeScript 5.8"
+      - "Drizzle ORM 0.43"
+      - "Neon Postgres (serverless pool)"
+      - "NextAuth 5 beta (Google + GitHub OAuth + bcrypt credentials)"
+      - "@auth/drizzle-adapter"
+      - "OpenAI GPT-4o-mini (temp 0.3, max_tokens 1000, JSON-object response_format)"
+      - "Upstash Redis (AI match cache + queue)"
+      - "Stripe 20 (subscription mode, NZD, Customer Portal)"
+      - "@slack/web-api (event-collector + interactive handlers)"
+      - "@octokit/rest (Slack-skill auto-commits)"
+      - "Claude agent skill: sync-event-from-slack"
+      - "Resend (transactional email)"
+      - "Cloudinary (image hosting + transformations)"
+      - "Tailwind CSS 4.1"
+      - "shadcn/ui + Radix UI (20+ primitives)"
+      - "@dnd-kit (kanban-style admin workflows)"
+      - "Recharts 3 + @number-flow/react (dashboard analytics)"
+      - "Framer Motion + Lenis (landing-page polish)"
+      - "Three.js + OGL (hero shader effects)"
+      - "Zod 3 (validation everywhere — Slack-bot LLM output gating, form schemas)"
+      - "React Hook Form + @hookform/resolvers"
+      - "Vercel Edge Network + Vercel Cron"
     keywords:
-      - Women in STEM
-      - Member platform
-      - AI mentor matching
-      - Slack ecosystem
-      - Agent skills
-      - Stripe billing
-      - Migration from Webflow
-      - Solo full-stack build
+      - Women in STEM nonprofit (NZ registered charitable trust CC57025)
+      - Solo full-stack build (648 of 748 commits, 86.6% solo)
+      - Three role-permissioned dashboards (mentor / mentee / admin) with native dual-role schema
+      - AI mentor-mentee matching (GPT-4o-mini, explicit-weight 5-dimensional scoring)
+      - Two-stage matching pipeline (rule-based pre-filter → GPT-4o-mini → admin human-in-the-loop)
+      - Rule-based fallback scoring (deterministic, same dimensions, same weights — when AI unavailable)
+      - Upstash Redis AI match cache (keyed by mentor:mentee pair)
+      - Mentee matching queue (priority order, re-evaluates on capacity open via Vercel Cron)
+      - Stripe NZD subscription billing with payment→invitation-code activation flow
+      - Custom Slack ecosystem (read-only event-collector bot, interactive handlers, 3 weekly Cron digests)
+      - NZ government funding-opportunities crawler (6 sources, deduped → Slack)
+      - Claude agent skill `sync-event-from-slack` (dry-run default, replaces manual publication)
+      - Zod-validated LLM structured output (last line of defense before any git write)
+      - Webflow → Next.js migration via Python crawler (she-sharp-crawl)
+      - Her Waka MSD-funded teaching site authored solo (4 workshops + 8 tutorials)
     metrics:
-      - { label: "Total commits",       value: "748" }
-      - { label: "Solo commits",        value: "648 (86.6%)" }
-      - { label: "Members",             value: "2,200+ registered / 1,000+ active" }
-      - { label: "Women supported",     value: "8,000+ lifetime" }
-      - { label: "Corporate partners",  value: "50+" }
-      - { label: "Events since 2014",   value: "84+" }
-      - { label: "Schema",              value: "1,392 lines, 45 enums" }
+      - { label: "Total commits",            value: "748" }
+      - { label: "Solo commits",             value: "648 (86.6%) — Lesley Gao authored ~100 frontend commits (13.4%)" }
+      - { label: "Commits since 2026-01-01", value: "345 (intensive H1 build-out)" }
+      - { label: "Build window",             value: "2025-07-22 → 2026-05-11 (~10 months active)" }
+      - { label: "API routes",               value: "95 (app/api/**/route.ts)" }
+      - { label: "Pages",                    value: "53 (app/**/page.tsx)" }
+      - { label: "Components",               value: "145 (components/**/*.tsx)" }
+      - { label: "Database schema",          value: "1,392 lines, 30 pgEnums, 34 pgTables" }
+      - { label: "SQL migrations",           value: "27 (0000_soft_the_anarchist → 0026_brief_invisible_woman)" }
+      - { label: "Lib modules",              value: "matching, slack-bot, stripe, funding, programmes, recruitment, invitations, mentorship, email, auth, db (11 namespaced)" }
+      - { label: "Cron jobs",                value: "3 (process-queue, weekly-funding-crawl, weekly-mentorship-stats)" }
+      - { label: "Funding crawler sources",  value: "6 NZ government feeds (beehive RSS, data.govt CKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML)" }
+      - { label: "AI matching weights",      value: "MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%" }
+      - { label: "AI matching score range",  value: "0-100 overall + 5 per-dimension subscores + confidence (high/medium/low)" }
+      - { label: "AI retry policy",          value: "3 attempts with exponential backoff (1s × 2^n), batch concurrency 5, 100ms inter-batch delay" }
+      - { label: "Members",                  value: "2,200+ registered / 1,000+ active" }
+      - { label: "Women supported",          value: "8,000+ lifetime" }
+      - { label: "Corporate partners",       value: "50+" }
+      - { label: "Events since 2014",        value: "84+" }
+      - { label: "Industry mentors",         value: "18" }
+      - { label: "Mentorship success rate",  value: "85% (5-6× higher promotion likelihood for mentees per She Sharp's outcomes data)" }
+      - { label: "Migration crawler assets", value: "1,748 images / 707 MB / 11 JSON files / 85 events + 50 Humanitix tickets + 15 podcasts + 121 photo galleries + 7 press articles + 118 pages" }
     status: production
     startDate: "2025-07"
     publicSummary: |
@@ -2435,44 +2492,117 @@ projects:
       productLogic: |
         The new platform replaces the old Webflow site with a real member
         system anchored on three coexisting dashboards. A user signs up via
-        email or OAuth, then independently activates any combination of
-        mentor, mentee, or admin roles — duality is the design principle, not
-        a special case.
+        email/password (bcrypt) or OAuth (Google + GitHub), then independently
+        activates any combination of mentor, mentee, or admin roles — duality
+        is the **schema-level design principle**, not a special case. The
+        `user_roles` table has one row per (user, role_type) tuple with its
+        own `is_active`, `verified_at`, and `activation_step` columns, so a
+        mid-career engineer can simultaneously mentor juniors and be mentored
+        by a senior with zero special-cased data modelling. The dashboard
+        layer (`(dashboard)/dashboard/{mentor-profile,mentee-profile,
+        mentorship,meetings,admin,account}`) reads the active-roles set and
+        composes role-specific cards into a single unified view.
 
-        The headline feature is AI-powered mentor-mentee matching, a
-        two-stage pipeline. Stage one is a rule-based pre-filter (~30-point
-        threshold) that rapidly scores candidate pairs on basic compatibility.
-        Stage two passes promising pairs to GPT-4o-mini for evaluation along
-        five dimensions: professional alignment, skill complementarity,
-        communication style fit, availability overlap, and growth potential.
-        Each match returns a 0-100 compatibility score with an AI-generated
-        natural-language justification. Matches above threshold surface to an
-        admin for human approval before pairing — conservative human-in-the-
-        loop automation, not speculative. A mentee matching queue holds
-        unmatched mentees in priority order when mentor capacity is full,
-        re-evaluating as slots open. Meetings are typed (intro / regular /
-        milestone / final), tracked with action items, notes, feedback, and
-        ratings.
+        **The headline feature is the AI mentor-mentee matching engine**,
+        implemented as a two-stage pipeline in `lib/matching/`. Stage one is
+        a rule-based pre-filter that rapidly scores candidate pairs on basic
+        compatibility (skill set intersection, industry overlap, location/
+        meeting-format compatibility). Stage two passes promising pairs to
+        GPT-4o-mini at `temperature: 0.3`, `max_tokens: 1000`, with
+        `response_format: { type: 'json_object' }`, against an explicit
+        scoring rubric defined in `lib/matching/prompts.ts`:
+
+          - **MBTI Compatibility — 15%** (cognitive function complementarity,
+            communication style)
+          - **Skill Alignment — 35%** (mentor's expert skills vs mentee's
+            learning goals, expertise depth vs learning breadth)
+          - **Goal Alignment — 30%** (career trajectory compatibility, mentor's
+            ability to guide toward stated goals, shared values)
+          - **Industry Match — 10%** (direct + adjacent + transferable industry
+            knowledge)
+          - **Logistics — 10%** (meeting format, location proximity, time
+            availability)
+
+        Each call returns a 0-100 overall + per-dimension subscores +
+        natural-language explanation + recommendation + confidence (high /
+        medium / low) + matchingFactors (strengths / challenges /
+        growthOpportunities), Zod-validated against `AIMatchResponseSchema`
+        before persistence. **Three production-hardness layers wrap the
+        OpenAI call**: (1) **Upstash Redis cache** keyed by mentor:mentee
+        pair so repeat scoring is free; (2) **exponential-backoff retries**
+        (3 attempts, 1000ms × 2^attempt, with rate-limit/timeout
+        classification); (3) a **deterministic rule-based fallback** with
+        the same weighted formula that activates when OpenAI is unavailable,
+        explicitly marking `confidenceLevel: 'low'` and
+        `recommendation: 'manual review'` so admins know to look closer.
+        Batch processing caps at 5 concurrent calls with 100ms inter-batch
+        delay to respect API limits.
+
+        Matches above threshold surface to admin (`/api/admin/matching`)
+        for human approval before pairing — conservative human-in-the-loop
+        automation, not speculative auto-pairing. A **mentee matching queue**
+        (`lib/matching/queue-service.ts` + Vercel Cron at
+        `/api/cron/process-queue`) holds unmatched mentees in priority order
+        when mentor capacity is full and re-evaluates as slots open.
+        Meetings are typed (intro / regular / milestone / final), tracked
+        with action items (JSONB), notes, feedback, and 1-5 ratings.
+
+        **Stripe billing is novel in its activation flow**: it doesn't
+        instantly grant access. The architecture is **form → checkout →
+        invitation code → activation**. A prospective mentee fills the
+        public mentee form (`/api/forms/mentee/public`), which creates a
+        `mentee_form_submissions` row. They get redirected to Stripe
+        Checkout (`/api/stripe/checkout`, NZD subscription mode, annual
+        recurring). On `checkout.session.completed` webhook, the system
+        creates a `membership_purchases` record AND generates a unique
+        `invitation_code` (`createPaymentInvitationCode`) which is emailed
+        via Resend. The user must redeem the code to activate their account,
+        guaranteeing email ↔ payment ↔ account linkage and preventing
+        orphaned subscriptions. Self-service via Stripe Customer Portal.
+        Webhook signature verification on every event. Subscription
+        cancellation and renewal both update `user_memberships` +
+        `activity_logs` atomically.
 
         The platform also runs She Sharp's events infrastructure (workshops,
         training, networking, social, THRIVE programmes — online, in-person,
-        or hybrid, with capacity, waitlist, and QR check-in), Stripe-billed
-        membership tiers (free / basic / premium), a tiered resource library,
-        transactional email via Resend, and comprehensive audit logging
-        (JSONB change diffs on every admin action).
+        or hybrid, with capacity, waitlist, and QR check-in via `/api/qr`),
+        membership tiers (free / basic / premium), a tiered resource library
+        with download access control + access logs, transactional email via
+        Resend, AI-screened volunteer recruitment (`lib/recruitment/
+        ai-screening.ts` against `/api/admin/recruitment/[id]/ai-screen`),
+        sponsor inquiries with inline forms, and comprehensive audit logging
+        (JSONB diffs via `deep-diff` on every admin action).
 
-        A custom Slack ecosystem is deeply integrated: an event-collector
-        bot, volunteer notification webhooks, a weekly mentorship stats
-        digest, a weekly NZ funding-opportunities crawler that posts grant
-        opportunities to a Slack channel, and interactive event handlers.
-        The most distinctive piece is a Claude agent skill named
-        `sync-event-from-slack` that automates the previously-manual work of
-        turning a Slack event channel into a published event page: it reads
-        channel messages, pinned items, bookmarks, speaker .docx bios, cover
-        posters, and headshots; downloads images and extracts text; composes
-        a structured JSON entry; runs a dry-run preview; and on approval
-        commits the change to git. Event publication has gone from hours of
-        manual editing to a single command.
+        **A custom Slack ecosystem is deeply integrated** through three
+        coordinated surfaces. (1) **Read-only event-collector bot** with
+        scoped tokens (`channels:history`, `channels:read`, `groups:history`,
+        `groups:read`, `files:read`, `users:read`, `pins:read`,
+        `bookmarks:read`) — no destructive scopes by design. (2) **Three
+        Vercel Cron jobs**: `weekly-mentorship-stats` posts engagement
+        digest to `#mentorships` (recently hardened to survive cold Neon
+        connection pools), `weekly-funding-crawl` runs the NZ government
+        funding crawler over **6 official sources** (Beehive RSS, data.govt
+        CKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML) with
+        dedup + relevance scoring + keyword filtering, posting a curated
+        Slack digest, and `process-queue` re-evaluates the matching queue.
+        (3) **Interactive Slack event handlers** at `/api/slack/events` and
+        `/api/slack/events/interactive` for in-Slack workflows.
+
+        **The most distinctive Slack-side piece** is a Claude agent skill
+        named `sync-event-from-slack` living at
+        `.claude/skills/sync-event-from-slack/`. It automates the previously-
+        manual work of turning a Slack event channel into a published event
+        page: it reads channel messages, thread replies, pinned items,
+        bookmarks, speaker `.docx` bios (via `mammoth`), cover posters, and
+        speaker headshots; downloads images and renames them per convention;
+        composes a structured `EventV3Schema` JSON entry against a strict
+        Zod schema; runs `verify-image-paths` as a CI gate; and on approval
+        commits to git or opens a PR. **The skill defaults to dry-run** —
+        no file writes, no git, no network side-effects beyond reading
+        Slack — unless the user explicitly says "go ahead and apply". Event
+        publication has gone from hours of manual editing to a single
+        command, with the AI bot's structured output Zod-validated as the
+        last line of defense before any git write.
       businessLogic: |
         She Sharp is a registered New Zealand charitable trust. Revenue and
         sustainability flow through three channels that the platform now
@@ -2493,70 +2623,140 @@ projects:
         ago, toward the 2,200+ registered base today and beyond) depends
         directly on this technical capability.
       technicalApproach: |
-        Next.js 15.4 + React 19.1.2 + TypeScript over Drizzle ORM on Neon
-        Postgres, authenticated via NextAuth 5 with bcrypt and OAuth providers,
+        Next.js 15.6 canary (App Router, Turbopack dev) + React 19.1.2 +
+        TypeScript 5.8 over Drizzle ORM 0.43 on Neon Postgres (serverless
+        connection pool), authenticated via NextAuth 5 beta with bcrypt
+        credentials and Google + GitHub OAuth (via `@auth/drizzle-adapter`),
         deployed on Vercel's edge network with documented sub-second TTFB.
-        Tailwind 4 + shadcn/ui + Radix primitives for the UI.
+        Tailwind CSS 4.1 + shadcn/ui + Radix UI (20+ primitives) for the UI;
+        Framer Motion + Lenis + Three.js/OGL for landing-page polish;
+        @dnd-kit for admin kanban workflows; Recharts 3 + @number-flow/react
+        for dashboard analytics.
 
-        The schema runs to 1,392 lines and 45 enums — a deliberate choice.
-        Membership tiers, mentorship-relationship states (pending / active /
-        paused / completed / rejected), meeting types (intro / regular /
-        milestone / final), event types, career stages (undergraduate →
-        postgraduate → early_career → mid_career → senior → career_transition),
-        MBTI personality types, recruitment stages — every business concept
-        is a typed enum rather than a string column, so invalid states are
-        unrepresentable.
+        **The schema runs to 1,392 lines, 30 pgEnums, and 34 pgTables** —
+        a deliberate type-safety investment. Membership tiers (free / basic /
+        premium), mentorship-relationship states (pending / active / paused /
+        completed / rejected), meeting types (intro / regular / milestone /
+        final), event types (workshop / networking / training / social /
+        thrive), location types (online / in_person / hybrid), career stages
+        (undergraduate → postgraduate → early_career → mid_career → senior →
+        career_transition), MBTI 16 personality types, recruitment stages,
+        invitation-code redemption states, activity-log action types — every
+        business concept is a typed enum rather than a string column, so
+        invalid states are unrepresentable at the database level. **27 SQL
+        migrations** (0000_soft_the_anarchist → 0026_brief_invisible_woman)
+        applied via a custom safe-migration wrapper with pre-deployment
+        snapshots and rollback SQL generation.
 
-        The AI matching engine combines a deterministic rule-based pre-filter
-        with GPT-4o-mini for high-potential pairs only — keeping cost
-        predictable and outputs explainable, with admin override as the final
-        gate. Slack integration uses scoped read-only tokens plus targeted
-        webhooks. The `sync-event-from-slack` agent skill composes existing
-        CLI tools (Slack fetch, image download, docx parse, JSON validate,
-        git commit) into a single intent-driven workflow with dry-run preview
-        and CI gating. Image storage on Cloudinary, transactional email via
-        Resend, payments via Stripe.
+        **95 API routes** across `app/api/**/route.ts` covering auth (11
+        routes including OAuth callbacks, password reset, email
+        verification), admin (21 routes for matching/mentee-mentor reviews/
+        recruitment/programmes/users/permissions/analytics/zombie-cleanup),
+        mentorship lifecycle (apply / approve / relationships / meetings),
+        events (browse / register / my-registrations / QR check-in), forms
+        (mentee / mentor / volunteer with public-vs-authenticated variants),
+        Stripe (checkout / donate / webhook), Slack (events / interactive),
+        cron (process-queue / weekly-funding-crawl / weekly-mentorship-stats),
+        resources (download with access control), notifications, file
+        uploads (CV + profile photo via Cloudinary). **53 pages, 145
+        components.**
+
+        **The AI matching engine** combines a deterministic rule-based
+        pre-filter with GPT-4o-mini for high-potential pairs only. The
+        `lib/matching/` namespace has clear separation: `prompts.ts` holds
+        the system rubric and per-pair prompt builder, `openai-service.ts`
+        owns the LLM call with retry/cache/fallback, `cache.ts` interfaces
+        Upstash Redis, `queue-service.ts` manages the FIFO/priority queue
+        for over-capacity scenarios, `service.ts` orchestrates the full
+        match flow, and `types.ts` defines `AIMatchResponseSchema` (Zod)
+        that every LLM output must satisfy. Cost stays predictable because
+        Stage 1 filters out incompatible pairs before they reach the LLM;
+        outputs stay explainable because the rubric is explicit;
+        availability stays high because the rule-based fallback uses the
+        same weighted formula. Admin override is the final gate.
+
+        **Slack integration** uses **scoped read-only tokens** by design
+        (`channels:history`, `channels:read`, `groups:history`,
+        `groups:read`, `files:read`, `users:read`, `pins:read`,
+        `bookmarks:read` — never `chat:write` from the collector). The
+        `sync-event-from-slack` agent skill composes existing CLI tools
+        (Slack fetch → image download with rename → docx parse via
+        `mammoth` → JSON validate against `EventV3Schema` Zod → git commit
+        via `@octokit/rest` or local) into a single intent-driven workflow.
+        **Strict Zod validation is the last line of defense before any
+        git write** — an invalid LLM patch is rejected with a Slack-
+        friendly error, never persisted. The `weekly-funding-crawl` cron
+        runs `lib/funding/{fetcher,dedup,scoring,keywords}.ts` over 6
+        government RSS/HTML sources, scores by relevance keywords, dedups
+        across sources, and posts a curated Slack digest. The recent
+        `weekly-mentorship-stats` hardening (`84f788f`) is a small but
+        revealing detail: Neon's serverless pool can return stale
+        connections to a cold Vercel Cron worker, so the cron now retries
+        once on the specific `ECONNRESET`/`Connection terminated` error
+        class before failing the run.
+
+        **Image storage on Cloudinary** with on-the-fly transformations;
+        **transactional email via Resend** with role-specific templates
+        (mentorship-emails.ts + recruitment-emails.ts + payment
+        confirmation); **payments via Stripe** in subscription mode, NZD,
+        with Customer Portal for self-service cancellation; **audit
+        logging** uses `deep-diff` to capture JSONB before/after on every
+        admin mutation.
 
         The role spans beyond the main platform. Three supporting projects
         round out the contribution. **she-sharp-crawl** — a Python crawler
-        (BeautifulSoup4, Requests) that migrated content from the old Webflow
-        site: 1,748 images totaling 707 MB across 11 modular JSON files,
-        covering 85 SheSharp events, 50 Humanitix ticketed events (with banner
-        images upgraded 500 px → 1,600 px), 15 podcasts, 121 photo galleries,
-        7 news / press articles, and 118 site pages. Image deduplication and
-        Wayback Machine fallback for dead links. **her-waka** — the Mintlify-
-        powered teaching site at herwaka.shesharp.org.nz for the MSD-funded
-        Her Waka programme; I authored both the platform and the curriculum
-        (four workshops covering AI & Future of Work, #IAmRemarkable + Vibe
-        Coding, Cybersecurity, Personal Branding, plus 8+ self-paced
-        tutorials at three difficulty tiers). **serpdata-api-test** — a
-        professional SEO audit on shesharp.org.nz built on Node 22 native
-        fetch over the SerpData API, running ~20 live Google queries across
-        eight analysis sections (brand visibility, topical keyword rankings,
-        NZ competitor matrix, mobile-vs-desktop gap, cross-market reach,
-        SERP feature inventory) plus a 10-point prioritized recommendations
-        report (e.g., "SheSharp ranks #4 desktop / not in mobile top 10 for
-        'women in tech New Zealand' — high-priority technical SEO gap").
+        (BeautifulSoup4, Requests) that migrated content from the old
+        Webflow site: 1,748 images totaling 707 MB across 11 modular JSON
+        files, covering 85 SheSharp events, 50 Humanitix ticketed events
+        (with banner images upgraded 500 px → 1,600 px), 15 podcasts, 121
+        photo galleries, 7 news / press articles, and 118 site pages. Image
+        deduplication and Wayback Machine fallback for dead links.
+        **her-waka** — the Mintlify-powered teaching site at
+        herwaka.shesharp.org.nz for the MSD-funded Her Waka programme; I
+        authored both the platform and the curriculum (four workshops
+        covering AI & Future of Work, #IAmRemarkable + Vibe Coding,
+        Cybersecurity, Personal Branding, plus 8+ self-paced tutorials at
+        three difficulty tiers). **serpdata-api-test** — a professional SEO
+        audit on shesharp.org.nz built on Node 22 native fetch over the
+        SerpData API, running ~20 live Google queries across eight analysis
+        sections (brand visibility, topical keyword rankings, NZ competitor
+        matrix, mobile-vs-desktop gap, cross-market reach, SERP feature
+        inventory) plus a 10-point prioritized recommendations report
+        (e.g., "SheSharp ranks #4 desktop / not in mobile top 10 for 'women
+        in tech New Zealand' — high-priority technical SEO gap").
       outcomes: |
-        Production-deployed and operating She Sharp's full member lifecycle.
-        Commit volume: **748 total commits, 648 (86.6%) authored solo by
-        Chan Meng**, with the remaining ~100 commits by Lesley Gao on
-        frontend design and code. The platform now runs She Sharp's
-        membership, mentorship, events, sponsor relationships, volunteer
-        recruitment pipeline, and internal team operations — the technical
-        infrastructure for an organization with 2,200+ registered members,
-        1,000+ active, 8,000+ women supported lifetime, 50+ corporate
-        partners, 84+ events since 2014, 18 industry mentors, and a reported
-        85% mentorship success rate (mentees achieve 5-6× higher promotion
-        likelihood per She Sharp's own outcomes data).
+        Production-deployed and operating She Sharp's full member lifecycle
+        for ~10 months (first commit 2025-07-22, latest 2026-05-11). Commit
+        volume: **748 total commits, 648 (86.6%) authored solo by Chan
+        Meng**, with the remaining ~100 commits by Lesley Gao on frontend
+        design and code. **345 of those commits landed in 2026 H1 alone** —
+        the platform is in active build-out, not in maintenance mode. The
+        platform now runs She Sharp's membership, mentorship, events,
+        sponsor relationships, volunteer recruitment pipeline, and internal
+        team operations across **95 API routes, 53 pages, 145 components,
+        27 SQL migrations, and an 11-namespace `lib/` library** (matching,
+        slack-bot, stripe, funding, programmes, recruitment, invitations,
+        mentorship, email, auth, db) — the technical infrastructure for an
+        organization with 2,200+ registered members, 1,000+ active, 8,000+
+        women supported lifetime, 50+ corporate partners, 84+ events since
+        2014, 18 industry mentors, and a reported 85% mentorship success
+        rate (mentees achieve 5-6× higher promotion likelihood per She
+        Sharp's own outcomes data).
 
-        The Her Waka programme launched in March 2026 with MSD funding, using
-        the dedicated teaching site I built and the curriculum I authored.
-        The SEO audit identified actionable competitive gaps — notably the
-        desktop/mobile ranking disparity on the core query "women in tech
-        New Zealand" — and informed near-term content strategy. The
-        migration crawler enabled a clean cutover from Webflow without
-        losing institutional knowledge.
+        **The Her Waka programme launched in March 2026** with NZ Ministry
+        of Social Development funding, using the dedicated teaching site I
+        built (herwaka.shesharp.org.nz) and the curriculum I authored —
+        4 workshops + 8 tutorials in 3 tiers. **The SEO audit** identified
+        actionable competitive gaps — notably the desktop/mobile ranking
+        disparity on the core query "women in tech New Zealand" — and
+        informed near-term content strategy. **The migration crawler** enabled
+        a clean cutover from Webflow without losing institutional knowledge.
+        **The Slack-bot + agent-skill pairing** replaced an hours-long
+        manual event-publication workflow with a single dry-run-default
+        command; the most-recent cron-hardening commit (`84f788f`, "make
+        weekly-mentorship-stats survive cold Neon pools") is the kind of
+        small production-resilience detail that only emerges from operating
+        the system, not just building it.
       myRole: |
         Senior Full Stack Engineer and Website Team Lead. Recruited directly
         by founder Dr Mahsa Mohaghegh (McCauley) — AI/NLP researcher and
@@ -2565,18 +2765,24 @@ projects:
         the She Sharp team didn't have in-house.
 
         Solo full-stack ownership of the main platform: product architecture,
-        database schema (1,392 lines, 45 enums), AI matching pipeline, Slack
-        ecosystem, agent skills, Stripe integration, admin systems,
-        deployments, observability, and operational support. Lesley Gao
-        contributed some frontend design and frontend code (~100 commits,
-        13.4% of total); the remaining 648 commits (86.6%) are mine. Beyond
-        the main platform I also designed and built the data migration
-        crawler that bootstrapped the launch (she-sharp-crawl), the Her Waka
-        teaching site (her-waka) and its complete four-workshop + 8-tutorial
-        curriculum, and the professional SEO audit and recommendations
-        report (serpdata-api-test) on shesharp.org.nz — operating across
-        engineering, instructional design, and strategic analysis under one
-        role.
+        database schema (1,392 lines, 30 pgEnums, 34 pgTables, 27 SQL
+        migrations), AI matching pipeline (5-weight rubric + Upstash Redis
+        cache + rule-based fallback + admin human-in-the-loop), Stripe
+        billing with the form→checkout→invitation-code activation flow,
+        Slack ecosystem (read-only event-collector, 3 weekly Cron digests,
+        interactive event handlers), the `sync-event-from-slack` Claude
+        agent skill with strict Zod validation and dry-run default, admin
+        systems, deployments, observability, and operational support.
+        Lesley Gao contributed some frontend design and frontend code
+        (~100 commits, 13.4% of total); the remaining 648 commits (86.6%)
+        are mine. Beyond the main platform I also designed and built the
+        data migration crawler that bootstrapped the launch
+        (she-sharp-crawl), the Her Waka teaching site (her-waka) and its
+        complete four-workshop + 8-tutorial curriculum, and the
+        professional SEO audit and recommendations report
+        (serpdata-api-test) on shesharp.org.nz — operating across
+        engineering, instructional design, and strategic analysis under
+        one role.
 
   - id: gavigo-ire
     tier: flagship
@@ -8758,7 +8964,7 @@ meta:
       - { claim: "She Sharp NZ: 2,200+ registered members, 1,000+ active, 8,000+ women supported lifetime, 50+ corporate partners, 84+ events since 2014, 85% mentorship success rate (5-6x higher promotion likelihood for mentees)",
           source: "https://www.shesharp.org.nz/about-us",
           verifiedAt: "2026-05-16" }
-      - { claim: "Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini, five-dimensional scoring with human review), three role-permissioned dashboards (mentor/mentee/admin) with dual-role support, custom Slack ecosystem (event-collector bot, weekly stats digest, NZ funding-opportunities crawler), a Claude agent skill `sync-event-from-slack` that automates event-page publication, Stripe tier billing, and 1,392-line schema with 45 enums",
+      - { claim: "Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,392-line schema with 30 pgEnums + 34 pgTables + 27 SQL migrations across 95 API routes / 53 pages / 145 components",
           source: "https://github.com/NZ-SheSharp/she-sharp",
           verifiedAt: "2026-05-16" }
       - { claim: "She Sharp data migration crawler bootstrapped the new platform with 1,748 images / 707 MB / 11 JSON files / 85 events / 50 Humanitix tickets / 15 podcasts / 121 photo galleries from the old Webflow site",

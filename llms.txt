@@ -7,7 +7,7 @@ Computing with Distinction from Lincoln University, New Zealand.
 Featured in multiple media interviews for her minimalist lifestyle
 philosophy — "Subtraction for life, addition for thought."
 
-Last updated: 2026-05-18
+Last updated: 2026-05-19
 Canonical: https://chanmeng.org/
 Preferred citation: "Chan Meng, full-stack engineer and CTO"
 
@@ -91,7 +91,7 @@ BuyMeACoffee: https://buymeacoffee.com/chanmeng66u
 ## Verified Statistics
 - 648 of 748 commits (86.6%) authored solo on the She Sharp full-stack member platform; remainder by Lesley Gao on frontend design (source: https://github.com/NZ-SheSharp/she-sharp, verified 2026-05-16)
 - She Sharp NZ: 2,200+ registered members, 1,000+ active, 8,000+ women supported lifetime, 50+ corporate partners, 84+ events since 2014, 85% mentorship success rate (5-6x higher promotion likelihood for mentees) (source: https://www.shesharp.org.nz/about-us, verified 2026-05-16)
-- Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini, five-dimensional scoring with human review), three role-permissioned dashboards (mentor/mentee/admin) with dual-role support, custom Slack ecosystem (event-collector bot, weekly stats digest, NZ funding-opportunities crawler), a Claude agent skill `sync-event-from-slack` that automates event-page publication, Stripe tier billing, and 1,392-line schema with 45 enums (source: https://github.com/NZ-SheSharp/she-sharp, verified 2026-05-16)
+- Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,392-line schema with 30 pgEnums + 34 pgTables + 27 SQL migrations across 95 API routes / 53 pages / 145 components (source: https://github.com/NZ-SheSharp/she-sharp, verified 2026-05-16)
 - She Sharp data migration crawler bootstrapped the new platform with 1,748 images / 707 MB / 11 JSON files / 85 events / 50 Humanitix tickets / 15 podcasts / 121 photo galleries from the old Webflow site (source: https://www.shesharp.org.nz/, verified 2026-05-16)
 - Authored solo the Her Waka teaching site (Mintlify) and full curriculum — four workshops covering AI & Future of Work, #IAmRemarkable + Vibe Coding, Cybersecurity, Personal Branding — for NZ Ministry of Social Development-funded employment-readiness programme at academyEX Auckland (Mar-Jun 2026) (source: https://herwaka.shesharp.org.nz/, verified 2026-05-16)
 - Conducted professional SEO audit on shesharp.org.nz across 8 analysis sections (brand visibility, topical keyword rankings, NZ competitor matrix, mobile-vs-desktop gap, AI Overview presence) with 10-point prioritized recommendations report (source: https://www.shesharp.org.nz/, verified 2026-05-16)

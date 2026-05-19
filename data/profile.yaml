@@ -4947,6 +4947,451 @@ projects:
         - **CLI published to npm as `@chanmeng666/linkedin-jobs-search-cli`** (renamed from `@linkedin-jobs-search/cli` in commit `2026-05-05 20:05:57`), `lja` binary, both `LJA_API_KEY` + `LJA_BASE_URL` required at v0.x (a deliberate choice not to bake the personal `*.workers.dev` URL into the published package — bumps to v1.0 when a project-owned domain is provisioned).
       myRole: |
         Sole author, designer, and operator. Every one of the 259 commits is mine. The unique architectural commitment — *humans and agents are equal first-class citizens, not a primary audience plus a developer afterthought* — is my product call, and it's the call that organises every sub-project below it. I designed and wrote the 4-surface monolith (single Hono app + MCP server + CLI workspace + React SPA all sharing the same routes); designed the 11-MCP-tool catalog with explicit `LOCKED` contract semantics so renames are breaking changes; designed the `lja_<keyId>_<secret>` key format (ULID keyId + 32-byte URL-safe-base64 secret, only the sha256 stored server-side); designed the cookie-vs-Bearer auth precedence (cookies ignored when any Authorization header is present, MCP requires Bearer, key-management requires cookie — so agents can't mint their own keys); designed the 10-stable-error-code catalogue + 0-12 CLI exit-code mapping; wrote the OpenAPIHono migration across every `/api/*` route (sub-project A.5); ran the design-doc → implementation-plan → ticketed-commit workflow that produced the 8 sub-projects A→H in the final 2-week sprint (each with a paired design spec at `docs/superpowers/<letter>-spec.md` + implementation plan at `docs/superpowers/<letter>-plan.md`); wrote the Pulumi TypeScript IaC + the 4-policy CrossGuard pack including the deliberate pivot from rejection-based to structural `protect: true` enforcement; wrote the contract test harness using in-process `app.fetch` dispatch; wrote the dual-track `/guide` page + the dual-track feature-catalog homepage that visually mirrors the same dichotomy; published the CLI to npm under my own scope; and operate the production deployment. The "humans and agents are equal" framing has since influenced subsequent projects in my portfolio — the CLI-first agent-friendly response contract reappears in `lighthouse-as-a-service` style projects, and the MCP-tools-mirror-HTTP-routes pattern is reused in other tooling work.
+  - id: femtech-weekend-website
+    tier: primary
+    recency: active
+    lastUpdated: "2026-05-19"
+    name: FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, currently delivering Shanghai Summit 2026
+    priority: 17
+    category: web-apps
+    tagline: |
+      Solo-built (97.2% of 544 commits across ~1 year) Gen-2 platform for
+      FemTech Weekend — China's first women's-health-technology
+      organisation, founded 2024 by Zhu Yihan in Chengdu. Docusaurus 3.9
+      editorial spine + Drizzle ORM on Neon serverless Postgres for form
+      data + 15 Cloudflare Pages Functions (~3,800 LOC) for the entire
+      server side, deployed on Cloudflare Pages for low-latency
+      cross-border edge delivery. Currently powering Shanghai Summit 2026
+      (June 22-25, 16 confirmed speakers headlined by Ida Tin — Clue
+      co-founder who coined the term "FemTech" in 2016): 10-section
+      summit homepage + 3 sub-pages, 4 application pipelines
+      (programme/speaker/pitch/ecosystem) writing to typed Postgres
+      tables, double-opt-in newsletter wired to a Resend segment, admin
+      dashboard with batch review + brand-styled approval/rejection email
+      automation, Gemini-powered chatbot, bilingual EN/简体中文 across
+      every surface.
+    url: https://www.femtechweekend.com/
+    repoUrl: https://github.com/ChanMeng666/femtech-weekend-website
+    extraLinks:
+      - { label: "Shanghai Summit 2026", url: "https://www.femtechweekend.com/shanghai-summit" }
+      - { label: "FemTech Market Map for Greater China (report)", url: "https://www.femtechweekend.com/blog/femtech-market-map-greater-china" }
+      - { label: "FemmeHealth Ventures Alliance (partnership)", url: "https://www.femtechweekend.com/blog/femmehealth-ventures-alliance" }
+      - { label: "Insights hub", url: "https://www.femtechweekend.com/insights" }
+      - { label: "Stories", url: "https://www.femtechweekend.com/stories" }
+      - { label: "Opinions", url: "https://www.femtechweekend.com/opinions" }
+      - { label: "Founder Zhu Yihan (organisation)", url: "https://www.femtechweekend.com/about-us" }
+    logo: /public/experience/femtech-weekend-logo.svg
+    entity: "FemTech Weekend (Chengdu, China; founded 2024 by Zhu Yihan; positioned publicly as China's representative for cross-border women's-health initiatives)"
+    roles: ["Chief Technology Officer", "Solo Engineer (97.2% of 544 commits)", "Sole Architect of Gen-1 and Gen-2 platforms"]
+    techStack:
+      - "Docusaurus 3.9.2 (classic preset + @docusaurus/theme-mermaid)"
+      - "React 18.2 + TypeScript 5.6 (typecheck via `tsc --noEmit` in CI)"
+      - "Drizzle ORM 0.45 + drizzle-kit 0.31 (3 migrations: 0000_luxuriant_riptide → 0001_programme_overhaul → 0002_speaker_overhaul)"
+      - "Neon serverless Postgres (@neondatabase/serverless 1.0)"
+      - "Cloudflare Pages + Cloudflare Pages Functions (15 endpoints, ~3,839 LOC of server-side .js)"
+      - "Wrangler 4.0 (deployment + local dev via `wrangler pages dev build`)"
+      - "@notionhq/client v3 (Notion-as-CMS for non-technical founder editorial workflow)"
+      - "Resend REST API (Contacts API with segment assignment + transactional email)"
+      - "Google Generative AI 0.24 (Gemini-powered /api/chat-stream)"
+      - "Cloudinary (image uploads: headshots, company overview PDFs, pitch decks)"
+      - "Radix UI primitives (Accordion, Avatar, Checkbox, Collapsible, Dialog, Label, Select, Separator, Slot)"
+      - "Tailwind CSS 3.4 + tailwindcss-animate + class-variance-authority"
+      - "Framer Motion 12.35 + GSAP 3.13 (scroll + reveal animations)"
+      - "earth-flyline 1.6 (interactive 2D world-map with count-up statistics)"
+      - "i18n-iso-countries (country-code rendering across speaker/partner data)"
+      - "gray-matter (MDX frontmatter parsing)"
+      - "Docusaurus i18n (EN + 简体中文 across every page from day one)"
+      - "Node 22.x (pinned in engines)"
+    keywords:
+      - China's first women's-health-tech organisation (FemTech Weekend, founded 2024, Chengdu)
+      - Solo-built Gen-2 platform (529 of 544 commits = 97.2% solo; 17 commits from one occasional contributor)
+      - Docusaurus 3.9 as editorial spine (deliberate rewrite from Gen-1 Next.js — chosen for research-publication centre of gravity)
+      - Cloudflare Pages global edge delivery (matters for cross-border China ↔ international audience)
+      - 15 Cloudflare Pages Functions (~3,839 LOC) — entire server side without a Node backend
+      - Drizzle ORM + Neon serverless Postgres (typed schema for application/subscription submissions, not Notion)
+      - Notion-as-CMS retained for editorial content (founder edits directly in Notion, no developer-in-the-loop)
+      - Shanghai Summit 2026 (June 22-25; Ida Tin / Clue co-founder headlines; 16 confirmed speakers; 10 homepage sections + 3 sub-pages)
+      - 4-pipeline application system (pitch, programme, speaker, ecosystem — each typed Postgres table with reference numbers + admin status workflow)
+      - Double-opt-in newsletter with Resend Contacts API + segment assignment + brand-styled HTML welcome email
+      - Admin dashboard with ADMIN_API_KEY-protected batch review + approval/rejection email automation
+      - 4 file-upload endpoints to Cloudinary (headshot, image, company-overview PDF, pitch-deck)
+      - Bilingual EN / 简体中文 as a first-class routing + content-model constraint
+      - Gemini-powered /api/chat-stream chatbot
+      - 2 original research reports (FemTech Market Map for Greater China 2025-05, FemmeHealth Ventures Alliance 2025-06)
+      - Two-generation architectural evolution (Gen-1 Next.js + Notion → Gen-2 Docusaurus + Drizzle/Neon)
+    metrics:
+      - { label: "Total commits",              value: "544 (Gen-2 only; Gen-1 was a separate repo with 58 commits)" }
+      - { label: "Solo commits",               value: "529 (97.2%); ~15 from one occasional contributor" }
+      - { label: "Build window",               value: "2025-05-08 → 2026-05-13 (~12 months active development)" }
+      - { label: "Cloudflare Pages Functions", value: "15 endpoints (~3,839 LOC of server-side .js)" }
+      - { label: "Application pipelines",      value: "4 (pitch / programme / speaker / ecosystem) — each typed Postgres table with reference numbers + admin status workflow" }
+      - { label: "Newsletter system",          value: "Resend Contacts API + segment 7ed0369b-… + double-opt-in confirm + brand-styled welcome email" }
+      - { label: "Admin endpoints",            value: "3 (admin/applications, admin/batch-review, admin/send-approval — ADMIN_API_KEY-protected)" }
+      - { label: "Email automation",           value: "Brand-styled HTML + plain-text (newsletter welcome, approval, rejection) — primary #AA7C52, success #10b981" }
+      - { label: "File upload endpoints",      value: "4 (headshot, image, company-overview PDF, pitch-deck) → Cloudinary" }
+      - { label: "Database tables",            value: "3 (pitch_applications + programme_applications + speaker_applications) — ~20 cols each with status / statusUpdatedAt / adminNotes / referenceNumber" }
+      - { label: "SQL migrations",             value: "3 (0000_luxuriant_riptide → 0001_programme_overhaul → 0002_speaker_overhaul)" }
+      - { label: "Shanghai Summit homepage",   value: "10 sections (SummitHero / FABGlobeSection / PartnersGrid / SpeakersGrid / AgendaTimeline / WhoShouldAttend / VenueShowcase / WhyDifferent / GlobalEcosystem / SponsorsSection) + SummitCTA" }
+      - { label: "Shanghai Summit sub-pages",  value: "3 (programme / pitch / agenda — each with its own hero + form/timeline)" }
+      - { label: "Confirmed speakers (2026-05)", value: "16 — Ida Tin (Clue co-founder, coined 'FemTech' 2016) headlines; Alice Zheng, Dominnique Karetsos, Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike Steinebach, Stella Fu, Peixian Lu, Sandy Lv, Chai Ke 柴可, Chen Jian, Jazmin Seregi, Judy Lux, Abraham Morse, Ira Evdokimova" }
+      - { label: "Editorial content directories", value: "3 (blog/ research reports, opinions/ commentary, stories/ founder profiles) — Docusaurus blog plugin instances" }
+      - { label: "Bilingual locales",          value: "2 (en + zh-Hans) across every page from day one — not retrofit" }
+      - { label: "Image performance pass",     value: "14 images compressed; social-card 6 MB → 240 KB; site image weight reduced ~67% (`19d3e71`)" }
+    status: production
+    startDate: "2025-05"
+    publicSummary: |
+      Solo-built Gen-2 platform (97.2% of 544 commits across ~1 year) for
+      FemTech Weekend, China's first women's-health-technology
+      organisation. Docusaurus 3.9 editorial spine + Drizzle ORM on Neon
+      Postgres + 15 Cloudflare Pages Functions deployed on Cloudflare
+      Pages. Currently powering Shanghai Summit 2026 (June 22-25, Ida Tin
+      headlines, 16 confirmed speakers) with a 10-section summit homepage,
+      3 sub-pages, 4 typed application pipelines (pitch / programme /
+      speaker / ecosystem), a double-opt-in newsletter wired to a Resend
+      segment, an admin dashboard with ADMIN_API_KEY-protected batch
+      review and brand-styled approval/rejection email automation, a
+      Gemini-powered chatbot, and bilingual EN / 简体中文 across every
+      surface. Built CTO-side under founder Zhu Yihan.
+    narrative:
+      problem: |
+        FemTech Weekend is China's first organisation built specifically
+        around women's-health technology — a community, research outfit,
+        and event producer rolled into one, headquartered in Chengdu,
+        founded 2024 by Zhu Yihan, with a 2-10-person core team. Its
+        remit is to take the international FemTech movement (a category
+        coined in 2016 by Ida Tin, the Clue co-founder who headlines the
+        2026 Shanghai Summit) and ground it in the Greater China
+        market: connect founders, investors, healthcare professionals,
+        and academic researchers across the China-global divide,
+        positioned publicly as the "China representative for
+        cross-border women's-health initiatives." The organisation runs
+        ecosystem partnerships with Bayer and PwC, hosts quarterly
+        updates on China FemTech innovation, collaborates with FemTech
+        Across Borders on international programmes, and publishes
+        original market research (FemTech Market Map for Greater China,
+        FemmeHealth Ventures Alliance reports).
+
+        Two website generations have lived inside this 12-month window.
+        Gen-1 (femtechweekend.com, separate repo, 58 commits, 100%
+        solo) was a Next.js 15 + Notion-CMS marketing site. Gen-2 —
+        the entry described here — was a deliberate rewrite, not a
+        refactor, after the organisation's centre of gravity shifted
+        from "marketing site that publishes the occasional report" to
+        "research publication and multi-event hub with deep editorial
+        content," and culminating in the **Shanghai Summit 2026** —
+        a four-day flagship event running June 22-25, 2026 with the
+        theme *Where Global Women's Health Meets China*. The summit
+        requires its own first-class digital infrastructure: a
+        sizeable speaker lineup, multi-track agenda, four distinct
+        application pipelines, an ecosystem partner directory, a
+        sponsor programme, and a press-ready editorial surface — all
+        of it bilingual EN / 简体中文, all of it edge-delivered
+        across the China-global divide, and all of it operable by a
+        non-technical founder when I am not in the loop.
+      audience: |
+        Three concentric audiences. **Founders, investors, and
+        ecosystem operators** in women's-health technology — the
+        people who apply to the programme, pitch competition, speaker
+        pool, or ecosystem directory; subscribe to the newsletter;
+        and read the research reports. They span both Chinese and
+        international markets, so every primary surface ships
+        bilingually. **Shanghai Summit 2026 attendees and prospective
+        attendees** — 16 confirmed speakers including Ida Tin, plus
+        partners (AVPN among them), sponsors across multiple tiers,
+        and a delegate audience drawn from the femtech community
+        globally. **The FemTech Weekend internal team** — primarily
+        founder Zhu Yihan, who edits Notion content directly without
+        developer involvement, and who reviews applications through
+        the ADMIN_API_KEY-protected admin dashboard and approves
+        ecosystem applicants via the brand-styled email automation
+        I built into the platform.
+      productLogic: |
+        The platform is organised around **four parallel surfaces**
+        that the founder operates independently, plus a fifth
+        founder-only surface (the admin backend).
+
+        **Surface 1 — the editorial spine.** Docusaurus 3.9 with three
+        blog-plugin instances: `blog/` (research reports, currently
+        2 published — FemTech Market Map for Greater China 2025-05,
+        and the FemmeHealth Ventures Alliance partnership 2025-06),
+        `opinions/` (industry commentary), and `stories/` (founder
+        profiles). Each surface has its own authors and tags. The
+        choice of Docusaurus over keeping Next.js was deliberate: for
+        a research-publication-plus-event hub, the gain in
+        MDX-native editorial ergonomics outweighed the loss of
+        Next.js's rendering flexibility.
+
+        **Surface 2 — the Shanghai Summit 2026 event site.** A 10-
+        section homepage at `/shanghai-summit/` composed of
+        SummitHero → FABGlobeSection → PartnersGrid → SpeakersGrid →
+        AgendaTimeline → WhoShouldAttend → VenueShowcase → WhyDifferent →
+        GlobalEcosystem → SponsorsSection, with SummitCTA bookending
+        the page. Three sub-pages: `/shanghai-summit/programme` (8-week
+        leadership-development programme application), `/shanghai-
+        summit/pitch` (pitch-competition application with deck upload),
+        and `/shanghai-summit/agenda` (hour-by-hour DetailedAgendaDay
+        timeline across the four event days). Speaker data lives in a
+        typed `src/data/shanghai-summit.ts` module so non-technical
+        edits go through a single source of truth.
+
+        **Surface 3 — the four application pipelines.** Each pipeline
+        is a typed Drizzle table on Neon Postgres with its own
+        Cloudflare Pages Function endpoint:
+
+          - **pitch_applications** (~18 cols incl. company_name,
+            company_website, role_title, company_type, health_focus,
+            work_areas, business_model, annual_revenue,
+            pitch_deck_url, market_served, status, status_updated_at,
+            admin_notes, reference_number)
+          - **programme_applications** (~22 cols including the
+            China-engagement nuances: china_objectives,
+            target_customer, china_relevance, china_engagement,
+            china_concerns, worthwhile_outcome, consent_data)
+          - **speaker_applications** (~16 cols including headshot_url,
+            bio, speaking_topics, session_format, interested_events,
+            previous_experience)
+          - **ecosystem submissions** (handled inline through
+            `submit-ecosystem.js`)
+
+        Every submission gets a `reference_number`, defaults to
+        `status: 'submitted'`, and is reviewable in the admin
+        dashboard. **PDFs (pitch decks, company overviews) and images
+        (headshots) upload to Cloudinary** through four dedicated
+        `upload-*.js` endpoints — keeping object storage cost
+        predictable and detached from Postgres row size.
+
+        **Surface 4 — the newsletter system.** `subscribe-newsletter.js`
+        creates a contact in Resend via the Contacts API with
+        explicit segment assignment (segment ID
+        `7ed0369b-5209-4a19-a99b-1decde318083`), handling the 409
+        "contact already exists" path by falling back to the
+        contact-to-segment join endpoint. The endpoint then sends a
+        brand-styled HTML welcome email (primary `#AA7C52`, paired
+        with a plain-text fallback for accessibility) explaining what
+        the subscriber will receive — research, ecosystem updates,
+        event invitations, exclusive resources. **A second endpoint
+        `/api/confirm-subscription` handles the double-opt-in
+        confirmation flow** so subscribers explicitly verify intent
+        before getting added to the active segment. All emails carry
+        XSS-escaped subscriber identity, an unsubscribe foothold, and
+        the canonical from-address `noreply@femtechweekend.com` (or
+        whichever address `RESEND_FROM_EMAIL` resolves to in the
+        Cloudflare environment binding).
+
+        **Surface 5 — the admin backend.** `src/pages/admin/
+        applications.tsx` is the founder-facing dashboard, backed by
+        three protected Cloudflare Pages Functions:
+        `admin/applications.js` (list/filter all four pipelines),
+        `admin/batch-review.js` (batch status updates), and
+        `admin/send-approval.js` (sends a brand-styled
+        approval-or-rejection email — success-green `#10b981`
+        gradient for approvals; the email template enumerates what
+        the ecosystem member now gets: directory listing, exclusive
+        networking events, early access to research reports,
+        investor introductions). **All admin endpoints check
+        `X-Admin-Key` against the `ADMIN_API_KEY` environment binding
+        before any database mutation.** XSS-escaping is enforced on
+        every interpolated field of the email templates as a
+        defensive default.
+
+        Two cross-cutting capabilities: **a Gemini-powered chatbot**
+        (`/api/chat-stream` over `@google/generative-ai`) for visitor
+        Q&A about the organisation and summit, and **an interactive
+        2D world-map** built with `earth-flyline` carrying the
+        visual weight of the summit's "global meets China" thesis
+        on the front page, with count-up statistics rendered
+        responsively across screen sizes and theming-aware
+        light/dark mode.
+      businessLogic: |
+        FemTech Weekend is a private organisation; revenue and
+        sustainability flow through three channels that the platform
+        directly operationalises: **(1) ecosystem partnerships**
+        (Bayer, PwC, AVPN, FemTech Across Borders) where the
+        platform's directory listing + visibility is part of the
+        partner offer; **(2) the Shanghai Summit 2026 itself** —
+        ticketed delegate access plus a multi-tier sponsor programme
+        where the platform's homepage SponsorsSection + dedicated
+        sponsor logos are part of the sponsor deliverable; and
+        **(3) research-report distribution + thought leadership** —
+        the published reports (FemTech Market Map for Greater China,
+        FemmeHealth Ventures Alliance) function as lead-generation
+        artefacts that feed the ecosystem and newsletter pipelines.
+
+        The platform's job in this economy is to be the
+        **trust-signal-bearing public surface** that lets a Western
+        founder, a Chinese investor, a corporate partner, or a
+        prospective speaker take the organisation seriously inside
+        15 seconds of arrival — and the **operational substrate** that
+        lets the 2-10-person core team triage applications, publish
+        editorial, and run the summit without scaling headcount.
+        Every architectural choice on Gen-2 is downstream of those
+        two demands.
+      technicalApproach: |
+        **Docusaurus 3.9 as editorial spine, Drizzle/Neon for typed
+        application data, Cloudflare Pages Functions for the entire
+        server side.** No Node backend, no container, no separate
+        admin app — the whole platform is one Docusaurus site with
+        15 colocated `functions/api/*.js` Pages Functions handling
+        every server-side concern.
+
+        **15 Cloudflare Pages Functions, ~3,839 LOC of server-side
+        JavaScript**, organised by intent:
+
+          - **4 application submitters**: `submit-programme.js`,
+            `submit-speaker.js`, `submit-pitch.js`,
+            `submit-ecosystem.js` — each validates input, persists to
+            its typed Drizzle table, assigns a reference number, and
+            triggers a confirmation email.
+          - **2 newsletter endpoints**: `subscribe-newsletter.js` and
+            `confirm-subscription.js` — Resend Contacts API with
+            explicit segment assignment, 409-conflict fallback to
+            contact-to-segment join, double-opt-in confirmation,
+            brand-styled welcome email.
+          - **4 Cloudinary uploaders**: `upload-headshot.js`,
+            `upload-image.js`, `upload-company-overview.js`,
+            `upload-pitch-deck.js` — each enforces accepted MIME types
+            and produces a Cloudinary public URL written back to the
+            corresponding Postgres row.
+          - **3 admin endpoints**: `admin/applications.js` (filtered
+            list), `admin/batch-review.js` (bulk status updates),
+            `admin/send-approval.js` (approval / rejection email
+            sender) — every one checks `X-Admin-Key` against
+            `ADMIN_API_KEY` env binding before touching the DB.
+          - **1 chatbot**: `chat-stream.js` over
+            `@google/generative-ai` (Gemini), streamed response.
+          - **1 PDF intake**: `pdf-form-submit.js`.
+
+        **Drizzle schema, 3 tables, ~3 migrations**:
+        `0000_luxuriant_riptide` (initial pitch + programme +
+        speaker tables) → `0001_programme_overhaul` (programme-form
+        restructure including the China-engagement column family) →
+        `0002_speaker_overhaul` (speaker-form refinement). All
+        tables share a common pattern: identifying fields → typed
+        domain fields → uploaded asset URLs → admin lifecycle
+        (`status` defaulting to `'submitted'`, `status_updated_at`,
+        `admin_notes`, `reference_number`), with `created_at`
+        defaulted via Drizzle's `defaultNow()`. Schema lives at
+        `src/db/schema.ts` (81 lines); CLI access via `drizzle-kit
+        0.31` (`drizzle.config.ts`).
+
+        **Email automation discipline.** Every transactional template
+        is hand-authored HTML + plain-text twin, with brand colours
+        baked in (`#AA7C52` primary, `#996F49` dark, `#10b981`
+        success, `#ef4444` error) and a consistent header / body /
+        footer table-based layout that renders cleanly in Outlook
+        and Gmail's quirkier modes. Every interpolated string passes
+        through an `escapeHtml(str)` helper before reaching the
+        template — a defensive default against any future
+        admin-input contamination. Resend REST API is called
+        directly (no SDK), so the same code runs unchanged on the
+        Cloudflare Workers runtime.
+
+        **Notion-as-CMS for editorial content** in both generations
+        — articles, ecosystem profiles, event reports edit directly
+        inside Notion and render live. Implemented in Gen-2 with
+        the modern `@notionhq/client v3` SDK pulling structured
+        content into Docusaurus pages. This is the single most
+        important UX decision in the system: it removes me from the
+        publishing critical path and gives the founder full
+        editorial control without needing to learn markdown or any
+        custom CMS.
+
+        **Bilingual everything, from day one.** Both generations
+        ship in EN and 简体中文 — not as an afterthought, but as a
+        first-class architectural constraint that shapes routing,
+        content models, speaker data structures, agenda time-zone
+        rendering, and editorial copy. Docusaurus's native i18n
+        plugin handles the routing; the Gen-2 content layer is
+        built so that every speaker, partner, agenda block, and
+        editorial piece has parallel locales rather than fall-
+        through defaults.
+
+        **Image performance discipline.** The summit content is
+        image-heavy (speaker headshots, venue photography, partner
+        logos), so I ran a deliberate pass (commit `19d3e71`,
+        2026-05-12) that compressed and optimised 14 large images
+        and shrank the social-card image from 6 MB to 240 KB —
+        overall reducing site image weight by roughly 67% without
+        losing visual fidelity. TypeScript checks (`tsc --noEmit`)
+        plus Docusaurus's build warnings treated as errors form the
+        CI safety net.
+
+        **Cloudflare Pages + Wrangler 4.0** for global edge
+        delivery. Local dev composes `docusaurus start` with
+        `wrangler pages dev build --port 3001` via `concurrently`
+        so functions are testable against the same edge runtime
+        they'll run on in production. Node 22.x pinned in
+        `engines`. Drizzle migrations applied via `drizzle-kit
+        push` against the Neon serverless connection.
+      outcomes: |
+        Production-deployed at femtechweekend.com and operating the
+        full organisational pipeline (ecosystem applications,
+        newsletter, summit registration, research distribution)
+        across both EN and 简体中文 audiences. **544 commits, 529
+        (97.2%) authored solo by Chan Meng** across ~12 months
+        (2025-05-08 → 2026-05-13). **Shanghai Summit 2026 launches
+        June 22-25, 2026** with the platform as its sole
+        operational substrate.
+
+        Recent commit cadence shows the platform is in active
+        delivery, not maintenance: the last week of recorded
+        activity alone includes speaker-lineup rotation (`6b0b780`,
+        rotating the speaker grid and refreshing Ida Tin's title),
+        sponsor-tier restructuring (`6f33496`), the image-weight
+        67%-reduction pass (`19d3e71`), and an ongoing speaker-card
+        and modal refinement series — all of it solo, all of it on
+        a live site marketing a flagship event two months out.
+
+        The platform demonstrates a design call worth flagging:
+        **Generation 2 was a deliberate rewrite, not a refactor**.
+        I admitted that the centre of gravity had shifted from
+        "marketing site that publishes the occasional report" to
+        "research-publication and multi-event hub with deep
+        editorial content," and rebuilt on Docusaurus 3.9 — not
+        the default choice for a brand website, but the right one
+        for an editorial platform whose long-term value lives in
+        its market research, opinion pieces, founder stories, and
+        event archives. The Gen-1 → Gen-2 cutover happened
+        without losing institutional knowledge and is now the
+        primary public-facing surface for the organisation.
+
+        Two original research reports have been published through
+        the platform: **FemTech Market Map for Greater China**
+        (2025-05) and the **FemmeHealth Ventures Alliance**
+        partnership announcement (2025-06). Both function as
+        lead-generation artefacts feeding the ecosystem and
+        newsletter pipelines, and as thought-leadership
+        positioning for the organisation in both Chinese and
+        international markets.
+      myRole: |
+        Chief Technology Officer, hired 2025-03 by founder Zhu
+        Yihan with full ownership of every digital surface the
+        organisation operates. Solo engineering team (with one
+        occasional contributor of ~15 commits out of 544).
+        End-to-end authority over architecture, vendor choice,
+        deployment infrastructure, content management workflow,
+        application and subscription pipelines, and the live
+        digital infrastructure for the Shanghai Summit 2026.
+
+        Specifically: designed and built both website generations
+        from scratch (Gen-1 Next.js + Notion at 100% solo across
+        58 commits in a separate repo; Gen-2 — this entry — at
+        97.2% solo across 544 commits over ~12 months). Wrote the
+        entire Drizzle schema, every migration, all 15 Cloudflare
+        Pages Functions, every email template (HTML + plain-text
+        twins, brand-coloured, XSS-defended), the admin dashboard,
+        the four application-pipeline forms, the Shanghai Summit
+        10-section homepage + 3 sub-pages, the Notion-as-CMS
+        integration, the bilingual EN/简体中文 routing + content
+        layer, the Gemini chatbot integration, the earth-flyline
+        global-network visualisation, and the image-performance
+        optimisation pass. Operate the production Cloudflare
+        Pages deployment and every speaker-lineup / sponsor / agenda
+        update directly on `main`. Reporting line: directly to
+        founder Zhu Yihan; collaboration with the broader 2-10-
+        person core team on editorial calendar, summit programming,
+        and ecosystem partnerships.
+
   - id: friendscope
     tier: primary
     recency: recent
@@ -8945,6 +9390,7 @@ meta:
       - friendscope
       - fanfic-lab
       - linkedin-jobs-search
+      - femtech-weekend-website
     openSourceCategoryOrder: [web-apps, ai-apps, creative, ml-research, branding, games]
 
     # Hero badges shown in the README hero/footer

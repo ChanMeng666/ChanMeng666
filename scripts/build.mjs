@@ -487,6 +487,31 @@ Handlebars.registerHelper("split", (s, sep) => String(s ?? "").split(sep));
 Handlebars.registerHelper("slice", (arr, start, end) =>
   Array.isArray(arr) ? arr.slice(Number(start) || 0, Number(end) || arr.length) : [],
 );
+
+// Brief one-line tagline for tight table cells. Falls back through:
+//   1. text before the first " — " (em-dash) -- typical natural break point
+//   2. text before the first ". " (sentence boundary)
+//   3. character truncation at ~160 chars on a word boundary
+// Used by the Open Source primary table where every row must stay scannable.
+Handlebars.registerHelper("briefTagline", (s) => {
+  const raw = String(s ?? "").replace(/\s+/g, " ").trim();
+  if (!raw) return "";
+  // Split on em-dash, en-dash, or hyphen surrounded by spaces.
+  const dashSplit = raw.split(/\s+[—–-]\s+/);
+  let first = dashSplit[0];
+  // If first segment is still huge, take first sentence.
+  if (first.length > 200) {
+    const sentSplit = first.split(/(?<=[.!?])\s+/);
+    first = sentSplit[0];
+  }
+  // Final hard cap on length, on word boundary.
+  if (first.length > 200) {
+    const cut = first.substring(0, 200);
+    const lastSpace = cut.lastIndexOf(" ");
+    first = (lastSpace > 120 ? cut.substring(0, lastSpace) : cut) + "…";
+  }
+  return first;
+});
 Handlebars.registerHelper("upper", (s) => String(s ?? "").toUpperCase());
 Handlebars.registerHelper("json", (v) => JSON.stringify(v));
 Handlebars.registerHelper("year", () => year);

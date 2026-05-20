@@ -1,44 +1,14 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
      SECTION 1: Hero
+     One H1, two italic positioning lines, one prose sentence, one line of
+     em-dash-separated inline links. No gradient SVGs, no centred chrome.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<div align="center">
+# {{basics.name}}
 
-<em><sub>All visuals on this page powered by <a href="https://gradient-svg-generator.vercel.app/">Gradient SVG Generator</a> -- my open-source animated SVG tool</sub></em>
+*{{#each (split basics.taglines.heroLabel "|")}}{{trim this}}{{#unless @last}} · {{/unless}}{{/each}}.*
+*{{default basics.location.region "Between China and New Zealand"}}.*
 
-<br>
+{{_valueProposition.tagline}} {{basics.taglines.primary}}
 
-<a href="https://github.com/ChanMeng666">
-  <img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode basics.name}}&gradientType=circular&height=250&duration=16s&color0=FFB6C1&color1=E0BBE4&color2=C3E5AE&color3=B8D4E3" width="100%" alt="{{basics.name}}">
-</a>
-
-<img src="/public/brands/chan-monkey-logo-black.svg" width="70" height="70" alt="{{basics.name}}">
-
-<br><br>
-
-<a href="{{meta.canonical}}">
-  <img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode (default basics.taglines.heroLabel basics.label)}}&template=terminal-green&height=60" width="380" alt="{{default basics.taglines.heroLabel basics.label}}">
-</a>
-
-{{basics.taglines.primary}}<br>
-<sub>{{basics.taglines.secondary}}</sub>
-
-{{#if _valueProposition.tagline}}
-<br>
-
-**{{_valueProposition.tagline}}**
-{{/if}}
-
-<br>
-
-<sub>Last updated: <strong>{{meta.lastModified}}</strong></sub>
-
-<br>
-
-{{#each _primaryBadges}}[![{{network}}](https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode network}}&template=shimmer-dark&height=28)]({{url}}){{#unless @last}}&nbsp;&nbsp;{{/unless}}{{/each}}{{#if _engagementAvailability.cta.primary}}&nbsp;&nbsp;[![{{_engagementAvailability.cta.primary.label}}](https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode _engagementAvailability.cta.primary.label}}&template=shimmer-green&height=28)]({{_engagementAvailability.cta.primary.url}}){{/if}}
-
-<br>
-
-<sub><em>For AI agents:</em> <a href="./llms.txt">llms.txt</a> · <a href="./llms-full.txt">llms-full.txt</a> · <a href="./dist/profile.json">profile.json</a></sub>
-
-</div>
+{{#each _primaryBadges}}[{{network}}]({{url}}){{#unless @last}} — {{/unless}}{{/each}}

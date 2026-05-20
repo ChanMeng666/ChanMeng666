@@ -1,39 +1,61 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     SECTION 3: Open Source
+     Open source — 2 visible H4 sub-buckets + <details> overflow.
+     Same 3-col HTML table with explicit colgroup as commissioned.hbs.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<div align="center">
+## Open source
 
-[![Open Source](https://gradient-svg-generator.vercel.app/api/svg?text=Open+Source&template=text-shimmer-blue&height=50)](https://github.com/ChanMeng666?tab=repositories)
+#### AI agents & tooling
 
-</div>
+<table>
+  <colgroup>
+    <col style="width:72px">
+    <col style="width:200px">
+    <col>
+  </colgroup>
+{{#each _aiAgentProjects}}  <tr>
+    <td>{{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="48" alt="{{name}}"></a>{{else}}&nbsp;{{/if}}</td>
+    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _contextLogo.length}}<br><sub>{{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"></a>{{#unless @last}} {{/unless}}{{/each}}</sub>{{/if}}</td>
+    <td>{{briefTagline tagline}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}{{#if repoUrl}} ![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/if}}</td>
+  </tr>
+{{/each}}</table>
 
-<br>
+#### Craft & open-source products
 
-| | Project | What it is | |
-|---|---------|------------|---|
-{{#each _openSourcePrimary}}| {{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="40" alt="{{name}}"></a>{{else}}&nbsp;{{/if}} | **[{{name}}]({{default url repoUrl}})** | {{briefTagline tagline}} | {{#if url}}{{#unless (eq url repoUrl)}}[![Live](https://img.shields.io/badge/Live-tool-2ea44f?style=flat-square)]({{url}}){{/unless}}{{/if}}{{#if repoUrl}}{{#if (eq url repoUrl)}}![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/if}}{{#unless (eq url repoUrl)}}{{#unless url}}![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/unless}}{{/unless}}{{/if}} |
-{{/each}}
-
-<p align="center">
-  <a href="https://github.com/ChanMeng666?tab=repositories">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FChanMeng666&query=%24.public_repos&label=View%20all%20repositories&style=flat-square&color=1a1a1a" alt="View all repositories">
-  </a>
-</p>
+<table>
+  <colgroup>
+    <col style="width:72px">
+    <col style="width:200px">
+    <col>
+  </colgroup>
+{{#each _openSourceCraftProjects}}  <tr>
+    <td>{{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="48" alt="{{name}}"></a>{{else}}&nbsp;{{/if}}</td>
+    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
+    <td>{{briefTagline tagline}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}{{#if repoUrl}} ![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/if}}</td>
+  </tr>
+{{/each}}</table>
 
 <details>
-<summary>More projects: Web Apps, AI Agents, Creative Tools, ML Research, Games...</summary>
+<summary>More projects — teaching artifacts, templates, smaller commissions, experiments</summary>
 
 <br>
 
-{{#each _openSourceByCategory}}**{{#if (eq category "web-apps")}}Web Applications{{else}}{{#if (eq category "ai-apps")}}AI Applications & Agents{{else}}{{#if (eq category "creative")}}Creative AI & Language Tools{{else}}{{#if (eq category "ml-research")}}Machine Learning Research{{else}}{{#if (eq category "branding")}}Personal Branding Tools{{else}}{{#if (eq category "games")}}Games & Interactive{{else}}{{category}}{{/if}}{{/if}}{{/if}}{{/if}}{{/if}}{{/if}}**
+{{#each _moreProjectsByGroup}}#### {{heading}}
 
-{{#if (eq category "ml-research")}}| Project |
-|---------|
-{{#each items}}| [{{name}}]({{default repoUrl url}}) |
-{{/each}}{{else}}| Project | Live |
-|---------|------|
-{{#each items}}| [{{name}}]({{default repoUrl url}}) | {{#if url}}{{#unless (eq url repoUrl)}}[Live]({{url}}){{/unless}}{{#if (eq url repoUrl)}}[Source]({{repoUrl}}){{/if}}{{/if}} |
-{{/each}}{{/if}}
+<table>
+  <colgroup>
+    <col style="width:64px">
+    <col style="width:240px">
+    <col>
+  </colgroup>
+{{#each items}}  <tr>
+    <td>{{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="36" alt="{{name}}"></a>{{else}}&nbsp;{{/if}}</td>
+    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
+    <td>{{briefTagline tagline}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}{{#if repoUrl}}{{#if (eq url repoUrl)}} <a href="{{repoUrl}}">Source →</a>{{else}}{{#unless url}} <a href="{{repoUrl}}">Source →</a>{{/unless}}{{/if}}{{/if}}</td>
+  </tr>
+{{/each}}</table>
+
 {{/each}}
+<p><a href="https://github.com/ChanMeng666?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FChanMeng666&query=%24.public_repos&label=View%20all%20repositories&style=flat-square&color=1a1a1a" alt="View all repositories"></a></p>
+
 </details>

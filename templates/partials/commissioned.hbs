@@ -1,0 +1,19 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     Commissioned work — 4 client/org engagements. 3-col HTML table with
+     explicit colgroup widths so descriptions don't get squeezed.
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+## Commissioned work
+
+<table>
+  <colgroup>
+    <col style="width:72px">
+    <col style="width:200px">
+    <col>
+  </colgroup>
+{{#each _commissionedProjects}}  <tr>
+    <td>{{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="48" alt="{{name}}"></a>{{else}}&nbsp;{{/if}}</td>
+    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _affiliationOrg}}<br><sub><a href="{{_affiliationOrg.url}}"><img src="{{_affiliationOrg.logoLight}}" height="20" alt="{{_affiliationOrg.name}}"> {{_affiliationOrg.name}}</a></sub>{{/if}}</td>
+    <td>{{briefTagline tagline}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}</td>
+  </tr>
+{{/each}}</table>

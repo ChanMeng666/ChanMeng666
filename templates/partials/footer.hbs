@@ -1,62 +1,18 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     SECTION 8: Footer
+     Footer — quiet em-dash separator + availability prose + AI-agent file
+     refs + <details>More from Chan</details> with the personal flair stuff.
      ═══════════════════════════════════════════════════════════════════════ -->
-
-<div align="center">
 
 ---
 
-{{#if _engagementAvailability}}
-<sub>{{_engagementAvailability.current}}{{#if _engagementAvailability.cta.primary}} &nbsp;·&nbsp; <a href="{{_engagementAvailability.cta.primary.url}}"><strong>{{_engagementAvailability.cta.primary.label}}</strong></a>{{/if}}</sub>
+*{{basics.taglines.secondary}}*
 
-<br><br>
-{{/if}}
+{{#if _engagementAvailability}}{{_engagementAvailability.current}}{{#if _engagementAvailability.cta.primary}} — [{{_engagementAvailability.cta.primary.label}}]({{_engagementAvailability.cta.primary.url}}){{/if}}{{#if _engagementAvailability.cta.secondary}} or [{{_engagementAvailability.cta.secondary.label}}]({{_engagementAvailability.cta.secondary.url}}){{/if}}.{{/if}}
 
-<details>
-<summary>Connect, Subscribe, Support...</summary>
+Try the interactive CLI: `{{meta.x_brand.cli.command}}`.
 
-<br>
+For AI agents: [llms.txt](./llms.txt) — [llms-full.txt](./llms-full.txt) — [profile.json](./dist/profile.json).
 
-| | |
-|---|---|
-{{#each meta.x_brand.footerLinks}}| [{{label}}]({{url}}) | {{description}} |
-{{/each}}
-</details>
+{{> footer-more}}
 
-<br>
-
-<em><sub>Powered by <a href="https://github-readme-suno-cards.vercel.app/">Suno Cards</a> -- my open-source Suno music card tool</sub></em>
-
-[![My Suno Music](https://github-readme-suno-cards.vercel.app/api/cards?handle=chanmeng&sort=play_count&max=3)](https://suno.com/@chanmeng)
-
-<br>
-
-Try my interactive CLI: `{{meta.x_brand.cli.command}}`
-
-{{#if meta.x_brand.cli.screenshot}}
-<a href="{{default meta.x_brand.cli.repoUrl 'https://github.com/ChanMeng666/chan-meng-cli'}}"><img src="{{meta.x_brand.cli.screenshot}}" width="420" alt="{{meta.x_brand.cli.command}} interactive preview"></a>
-
-<br>
-{{/if}}
-
-<br>
-
-{{#each _primaryBadges}}[![{{network}}](https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode network}}&template=shimmer-dark&height=28)]({{url}}){{#unless @last}}&nbsp;&nbsp;{{/unless}}{{/each}}&nbsp;&nbsp;[![Buy Me a Coffee](https://gradient-svg-generator.vercel.app/api/svg?text=Buy+Me+a+Coffee&template=shimmer-gold&height=28)](https://buymeacoffee.com/chanmeng66u)
-
-<br>
-
-<img src="/public/chan-by-the-sea.jpg" width="100%" alt="{{basics.name}} by the sea">
-
-<br>
-
-Building tools that matter. [Let's connect.](https://www.linkedin.com/in/chanmeng666/)
-
-<br>
-
-<img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies">
-
-<br>
-
-<a href="#readme-top">Back to top</a>
-
-</div>
+<sub>Built from <code>data/profile.yaml</code>. Last updated <strong>{{meta.lastModified}}</strong>. [Back to top](#readme-top).</sub>

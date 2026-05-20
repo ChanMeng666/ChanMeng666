@@ -2019,6 +2019,9 @@ projects:
     recency: active
     lastUpdated: "2026-05-19"
     name: Tam-AI-Ti
+    meta:
+      x_brand:
+        featuredStack: [openai, anthropic, copilotkit, drizzle, supabase]
     priority: 1
     category: ai-apps
     tagline: AI Financial Wellness Coach grounded in Te Whare Tapa Whā — built solo for Māori financial-prosperity researcher Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead). 351 commits, 48-table schema (10 modules, 22 migrations) where every cultural concept is a typed column not a UI sticker, three-model OpenAI composition (GPT-4o-mini for cheap tool actions · GPT-4o for prose quality · gpt-4o-realtime-preview "verse" voice for the Financial Coach with server-side VAD + 500ms silence detection), bilingual te reo Māori with macron-correct translation, and a deliberate CopilotKit optimisation from 8 AI-enabled routes down to 3 focused ones.
@@ -2342,6 +2345,9 @@ projects:
   - id: she-sharp
     tier: flagship
     recency: recent
+    meta:
+      x_brand:
+        featuredStack: [nextjs, drizzle, supabase, stripe, vercel]
     lastUpdated: "2026-05-19"
     name: She Sharp
     priority: 2
@@ -2787,6 +2793,9 @@ projects:
   - id: gavigo-ire
     tier: flagship
     recency: active
+    meta:
+      x_brand:
+        featuredStack: [kubernetes, nvidia, google-cloud, docker, typescript]
     lastUpdated: "2026-05-18"
     name: GAVIGO IRE
     priority: 3
@@ -3042,6 +3051,9 @@ projects:
   - id: google-news-mcp
     tier: flagship
     recency: recent
+    meta:
+      x_brand:
+        featuredStack: [mcp, anthropic, npm, typescript, nodejs]
     lastUpdated: "2026-05-19"
     name: Google News MCP Server
     priority: 4
@@ -3288,6 +3300,9 @@ projects:
   - id: github-readme-suno-cards
     tier: primary
     recency: active
+    meta:
+      x_brand:
+        featuredStack: [github, vercel, typescript]
     lastUpdated: "2026-05-19"
     name: github-readme-suno-cards — Suno Music Cards for GitHub READMEs
     priority: 5
@@ -3524,6 +3539,19 @@ projects:
   - id: echook
     tier: primary
     recency: active
+    meta:
+      x_brand:
+        featuredStack: [npm, nodejs, typescript]
+        contextLogo:
+          - src: /public/tech-logos/claude-code.svg
+            alt: "Claude Code"
+            url: "https://claude.com/claude-code"
+          - src: /public/tech-logos/cursor.svg
+            alt: "Cursor"
+            url: "https://cursor.com"
+          - src: /public/tech-logos/codex.svg
+            alt: "OpenAI Codex"
+            url: "https://github.com/openai/codex"
     lastUpdated: "2026-05-18"
     name: echook (Echo + Hook)
     priority: 6
@@ -4128,6 +4156,9 @@ projects:
   - id: gradient-svg-generator
     tier: primary
     recency: active
+    meta:
+      x_brand:
+        featuredStack: [vercel, typescript, react]
     lastUpdated: "2026-05-19"
     name: gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs
     priority: 10
@@ -4420,6 +4451,9 @@ projects:
   - id: femtracker-agent
     tier: primary
     recency: recent
+    meta:
+      x_brand:
+        featuredStack: [copilotkit, langgraph, nextjs, supabase]
     lastUpdated: "2026-05-18"
     name: FemTracker Agent
     priority: 11
@@ -4522,6 +4556,9 @@ projects:
   - id: free-period-website
     tier: secondary
     recency: historical
+    meta:
+      x_brand:
+        featuredStack: [nextjs, vercel, react, typescript]
     lastUpdated: "2026-05-18"
     name: FreePeriod Website
     priority: 22
@@ -4534,6 +4571,9 @@ projects:
   - id: library-os
     tier: primary
     recency: recent
+    meta:
+      x_brand:
+        featuredStack: [cloudflare-workers, opennext, supabase, stripe]
     lastUpdated: "2026-05-19"
     name: LibraryOS — Multi-Tenant Library SaaS
     priority: 20
@@ -4838,6 +4878,9 @@ projects:
   - id: linkedin-jobs-search
     tier: primary
     recency: recent
+    meta:
+      x_brand:
+        featuredStack: [cloudflare-workers, mcp, scalar, npm]
     lastUpdated: "2026-05-19"
     name: LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI)
     priority: 16
@@ -4951,6 +4994,9 @@ projects:
   - id: femtech-weekend-website
     tier: primary
     recency: active
+    meta:
+      x_brand:
+        featuredStack: [docusaurus, drizzle, neon, cloudflare-pages, react]
     lastUpdated: "2026-05-19"
     name: FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, currently delivering Shanghai Summit 2026
     priority: 17
@@ -5396,6 +5442,9 @@ projects:
   - id: eatropolis-website
     tier: primary
     recency: active
+    meta:
+      x_brand:
+        featuredStack: [nextjs, opennext, cloudflare-workers, react, typescript]
     lastUpdated: "2026-05-19"
     name: Eatropolis Website — Production-grade Next.js 16 + OpenNext-on-Cloudflare-Workers event platform for Auckland's award-winning culinary festival (2026-10-10, Shed 10)
     priority: 18
@@ -6669,6 +6718,9 @@ projects:
   - id: vitex
     tier: primary
     recency: recent
+    meta:
+      x_brand:
+        featuredStack: [vercel-ai-sdk, typst, stripe, digitalocean, docker]
     lastUpdated: "2026-05-18"
     name: Vitex — AI Career Agent (vitex.org.nz)
     priority: 16
@@ -6874,6 +6926,13 @@ projects:
   - id: fanfic-lab
     tier: primary
     recency: recent
+    meta:
+      x_brand:
+        featuredStack: [langgraph, postgresql, docker, coolify, cloudflare]
+        contextLogo:
+          - src: /public/tech-logos/honkai-star-rail.svg
+            alt: "Honkai: Star Rail (HoYoverse)"
+            url: "https://hsr.hoyoverse.com/"
     lastUpdated: "2026-05-19"
     name: FanFic Lab — HSR DreamWriter, an Adaptive LangGraph Agent Powering a Gaming Fan-Creation Community
     priority: 15
@@ -8351,6 +8410,9 @@ projects:
   - id: her-waka
     tier: secondary
     recency: historical
+    meta:
+      x_brand:
+        featuredStack: [mintlify, typescript, react]
     lastUpdated: "2026-05-18"
     name: HER WAKA — Employment Programme for Women in Auckland
     priority: 30
@@ -10393,6 +10455,73 @@ meta:
       - linkedin-jobs-search
       - femtech-weekend-website
     openSourceCategoryOrder: [web-apps, ai-apps, creative, ml-research, branding, games]
+
+    # =========================================================================
+    # README v2 — provenance-based project buckets (4 visible + 4 overflow)
+    # The original tier-based openSourcePrimaryIds above is retained for
+    # backwards-compat with anything that still consumes it; the v2 templates
+    # render from the bucket lists below instead.
+    # =========================================================================
+    commissionedProjectIds:    [femtech-weekend-website, eatropolis-website, her-waka, free-period-website]
+    aiAgentProjectIds:         [fanfic-lab, vitex, femtracker-agent, echook]
+    openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, linkedin-jobs-search, library-os]
+    # Overflow buckets — rendered inside <details>More projects</details>
+    moreAiAgentProjectIds:        [ai-image-generator, typst-claude-skill, chinese-redefine, ai-programming-teaching-project, ai-hackathon-assistant]
+    moreOpenSourceProjectIds:     [sunostats, friendscope, send-joy, server-google-jobs, tencent-meeting-video-downloader]
+    moreCommissionedProjectIds:   [femtech-weekend-platform, forward-with-her-website, agrihire-solutions, nzcel-prep, customer-insight, hospital-roster-agent]
+    moreCreativeProjectIds:       [portfolio-v2, css-tower-defense, douyin-mall-go-template, douyin-mall-java-template]
+
+    # =========================================================================
+    # Tech-stack icon registry — maps short keys to SVG logos on disk.
+    # Used by per-project meta.x_brand.featuredStack arrays. The build-script
+    # resolver gracefully skips entries whose file is missing on disk, so
+    # adding a key here without a file is harmless until the file lands.
+    # Most SVGs come from https://simpleicons.org (MIT, brand-color rendering).
+    # =========================================================================
+    techIconMap:
+      # AI / agents
+      openai:             /public/tech-logos/openai.svg
+      anthropic:          /public/org-logos/anthropic-light.svg   # reuse existing
+      claude-code:        /public/tech-logos/claude-code.svg
+      cursor:             /public/tech-logos/cursor.svg
+      codex:              /public/tech-logos/codex.svg
+      mcp:                /public/tech-logos/mcp.svg
+      langgraph:          /public/tech-logos/langgraph.svg
+      copilotkit:         /public/experience/copilot-kit-logo.svg # reuse existing
+      vercel-ai-sdk:      /public/tech-logos/vercel-ai-sdk.svg
+      # Languages / runtimes
+      typescript:         /public/tech-logos/typescript.svg
+      nodejs:             /public/tech-logos/nodejs.svg
+      typst:              /public/tech-logos/typst.svg
+      # Frontend
+      react:              /public/tech-logos/react.svg
+      nextjs:             /public/tech-logos/nextjs.svg
+      tailwindcss:        /public/tech-logos/tailwindcss.svg
+      # Backend / data
+      postgresql:         /public/tech-logos/postgresql.svg
+      supabase:           /public/tech-logos/supabase.svg
+      drizzle:            /public/tech-logos/drizzle.svg
+      neon:               /public/tech-logos/neon.svg
+      # Infra / hosting
+      docker:             /public/tech-logos/docker.svg
+      kubernetes:         /public/tech-logos/kubernetes.svg
+      coolify:            /public/tech-logos/coolify.svg
+      vercel:             /public/tech-logos/vercel.svg
+      cloudflare:         /public/tech-logos/cloudflare.svg
+      cloudflare-workers: /public/tech-logos/cloudflare-workers.svg
+      cloudflare-pages:   /public/tech-logos/cloudflare-pages.svg
+      opennext:           /public/tech-logos/opennext.svg
+      digitalocean:       /public/tech-logos/digitalocean.svg
+      google-cloud:       /public/tech-logos/google-cloud.svg
+      nvidia:             /public/tech-logos/nvidia.svg
+      # SaaS / commerce / publishing
+      stripe:             /public/tech-logos/stripe.svg
+      scalar:             /public/tech-logos/scalar.svg
+      docusaurus:         /public/tech-logos/docusaurus.svg
+      mintlify:           /public/tech-logos/mintlify.svg
+      # Distribution
+      npm:                /public/tech-logos/npm.svg
+      github:             /public/tech-logos/github.svg
 
     # Hero badges shown in the README hero/footer
     primarySocialBadges: [Portfolio, LinkedIn, GitHub, Email]

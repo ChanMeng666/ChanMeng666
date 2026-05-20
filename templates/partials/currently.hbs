@@ -1,0 +1,14 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     Currently — short prose. Replaces what-i-take-on + ai-mentor in main flow.
+     The 4 engagement archetypes still live in JSON-LD as Service objects.
+     The full teaching-cohort grid lives in the Recognition archive details.
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+## Currently
+
+{{#each _currentRolesFeatured}}{{position}} at **[{{name}}]({{url}})**{{#if location}} — {{location}}{{/if}}.{{#unless @last}}
+{{/unless}}{{/each}}
+
+Lead instructor for {{_teachingImpact.cohortCount}} AI-programming cohorts since 2024 — [programming.chanmeng.org](https://programming.chanmeng.org).
+
+{{#if _engagementAvailability}}{{_engagementAvailability.current}}{{#if _engagementAvailability.cta.primary}} → [{{_engagementAvailability.cta.primary.label}}]({{_engagementAvailability.cta.primary.url}}){{/if}}{{/if}}

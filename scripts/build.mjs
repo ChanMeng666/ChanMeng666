@@ -78,25 +78,31 @@ for (let i = 0; i < data._flagshipProjects.length; i += 2) {
   data._flagshipProjectRows.push(data._flagshipProjects.slice(i, i + 2));
 }
 
-const primaryIds = data.meta?.x_brand?.openSourcePrimaryIds ?? [];
-data._openSourcePrimary = primaryIds
-  .map((id) => data._index.projects[id])
-  .filter(Boolean);
+// ---------------------------------------------------------------------------
+// README v2 — provenance-based project buckets resolved from meta.x_brand
+// editorial ID lists. Each visible project appears in exactly one bucket.
+// Archive-tier projects stay in data + JSON-LD + llms-full.txt but are
+// excluded from these visible buckets.
+// ---------------------------------------------------------------------------
 
-// Open-source-by-category for the <details> block, in declared order
-const categoryOrder = data.meta?.x_brand?.openSourceCategoryOrder ?? [];
-const primaryIdSet = new Set(primaryIds);
-const categoriesMap = new Map();
-for (const cat of categoryOrder) categoriesMap.set(cat, []);
-for (const p of openSource) {
-  if (primaryIdSet.has(p.id)) continue;
-  if (!p.category) continue;
-  if (!categoriesMap.has(p.category)) categoriesMap.set(p.category, []);
-  categoriesMap.get(p.category).push(p);
-}
-data._openSourceByCategory = [...categoriesMap.entries()]
-  .filter(([, items]) => items.length > 0)
-  .map(([category, items]) => ({ category, items }));
+const resolveIds = (ids) =>
+  (ids ?? []).map((id) => data._index.projects[id]).filter(Boolean);
+
+data._commissionedProjects     = resolveIds(data.meta?.x_brand?.commissionedProjectIds);
+data._aiAgentProjects          = resolveIds(data.meta?.x_brand?.aiAgentProjectIds);
+data._openSourceCraftProjects  = resolveIds(data.meta?.x_brand?.openSourceCraftProjectIds);
+
+data._moreProjectsByGroup = [
+  { heading: "More AI agents & tools",     items: resolveIds(data.meta?.x_brand?.moreAiAgentProjectIds) },
+  { heading: "More open-source products",  items: resolveIds(data.meta?.x_brand?.moreOpenSourceProjectIds) },
+  { heading: "More commissioned work",     items: resolveIds(data.meta?.x_brand?.moreCommissionedProjectIds) },
+  { heading: "Creative & experiments",     items: resolveIds(data.meta?.x_brand?.moreCreativeProjectIds) },
+].filter((g) => g.items.length > 0);
+
+// Legacy openSourcePrimaryIds is retained for backwards-compat consumers but
+// is no longer rendered by the v2 templates.
+const primaryIds = data.meta?.x_brand?.openSourcePrimaryIds ?? [];
+data._openSourcePrimary = resolveIds(primaryIds);
 
 // ---------------------------------------------------------------------------
 // Tier/recency partitions: every list-type collection grouped by tier so
@@ -131,14 +137,20 @@ data._top = Object.fromEntries(
   Object.entries(data._tiered).map(([k, g]) => [k, topTwo(g)]),
 );
 
-// Certificates by category (issuer)
+// Certificates by category (issuer) — drop tier=archive (HackerRank pile) from
+// the visible grid; they remain in llms-full.txt + dist/profile.json + JSON-LD.
+// Tier=flagship certs surface above the <details> grid as anchor credentials.
+data._certsFlagship = (data.certificates ?? []).filter((c) => c.tier === "flagship");
+
 const certsByCat = new Map();
 for (const c of data.certificates ?? []) {
+  if (c.tier === "archive") continue;          // HackerRank pile — text-only mention
+  if (c.tier === "flagship") continue;         // surfaced separately above the grid
   const k = c.category ?? "other";
   if (!certsByCat.has(k)) certsByCat.set(k, []);
   certsByCat.get(k).push(c);
 }
-data._certsByCategory = ["hackerrank", "microsoft", "other"]
+data._certsByCategory = ["microsoft", "other", "hackerrank"]
   .filter((k) => certsByCat.has(k))
   .map((k) => ({
     category: k,
@@ -146,10 +158,19 @@ data._certsByCategory = ["hackerrank", "microsoft", "other"]
       k === "hackerrank"
         ? "HackerRank Professional Certifications"
         : k === "microsoft"
-          ? "Microsoft Career Certifications"
+          ? "Microsoft Career Essentials"
           : "Other Professional Certifications",
     items: certsByCat.get(k),
   }));
+
+// Media Appearances — only third-party press / interviews / podcast episodes
+// where Chan is the subject. Drops the ~20 LinkedIn Pulse articles (covered by
+// the Medium widget), the 4 podcastShow entries (rendered separately as
+// "Podcasts I Host"), and the 2 newsletter entries.
+data._mediaAppearances = (data.publications ?? []).filter((p) => {
+  const type = p?.meta?.x_brand?.type;
+  return type === "press" || type === "interview" || type === "podcastEpisode";
+});
 
 // Featured testimonials (3 visible, rest in collapsible)
 data._featuredReferences = (data.references ?? []).filter(
@@ -186,6 +207,14 @@ data._currentRoles = (data.work ?? []).filter(
 data._pastRoles = (data.work ?? []).filter(
   (w) => w.endDate != null && w.endDate !== "" && w.endDate !== "present",
 );
+
+// Editorial subset of _currentRoles for the README "Currently" section.
+// Limit to flagship + primary tiers so the section stays calm; the full
+// current-roles list still surfaces in llms.txt and JSON-LD worksFor[].
+const CURRENTLY_TIERS = new Set(["flagship", "primary"]);
+data._currentRolesFeatured = data._currentRoles.filter(
+  (w) => CURRENTLY_TIERS.has(w.tier),
+).slice(0, 4);
 
 // Flat (single-line) form of basics.summary for use inside JSON-LD and similar
 // inline-string contexts where multi-line YAML blocks would break formatting.
@@ -256,6 +285,64 @@ if (data._organisationsMissingLogos.length) {
   );
   for (const o of data._organisationsMissingLogos) {
     console.warn(`    ${o.id.padEnd(32)} ${o.name}  ← ${o.expectedPath}`);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Logo-hierarchy resolver — attach to each visible project:
+//   _featuredStackResolved : tech-stack mini-icons (18px in templates)
+//   _contextLogo           : array of IP / platform context logos (22px)
+//   _affiliationOrg        : commissioning-org logo (22px) from existing lookup
+// Each tier gracefully skips entries whose underlying file is missing on disk,
+// so the build never fails because a tech-logo SVG hasn't landed yet.
+// ---------------------------------------------------------------------------
+
+const techIconMap = data.meta?.x_brand?.techIconMap ?? {};
+const missingTechLogos = new Set();
+const fileExistsCache = new Map();
+const fileExists = (relPath) => {
+  if (!relPath) return false;
+  if (fileExistsCache.has(relPath)) return fileExistsCache.get(relPath);
+  const ok = fs.existsSync(path.join(repoRoot, String(relPath).replace(/^\/+/, "")));
+  fileExistsCache.set(relPath, ok);
+  return ok;
+};
+const resolveStack = (names) =>
+  (names ?? [])
+    .map((name) => {
+      const src = techIconMap[name];
+      if (!src) { missingTechLogos.add(name); return null; }
+      if (!fileExists(src)) { missingTechLogos.add(name); return null; }
+      return { name, src };
+    })
+    .filter(Boolean)
+    .slice(0, 5);    // cap at 5 — keeps rows visually quiet
+
+const normalizeContextLogo = (raw) => {
+  if (!raw) return [];
+  const arr = Array.isArray(raw) ? raw : [raw];
+  return arr.filter((c) => c?.src && fileExists(c.src));
+};
+
+const visibleProjects = [
+  ...data._flagshipProjects,
+  ...data._commissionedProjects,
+  ...data._aiAgentProjects,
+  ...data._openSourceCraftProjects,
+];
+for (const p of visibleProjects) {
+  const xb = p?.meta?.x_brand ?? {};
+  p._featuredStackResolved = resolveStack(xb.featuredStack);
+  p._contextLogo           = normalizeContextLogo(xb.contextLogo);
+  p._affiliationOrg        = data._orgByProjectId[p.id] ?? null;
+}
+
+if (missingTechLogos.size) {
+  console.warn(
+    `\n⚠ ${missingTechLogos.size} tech-stack logo files are missing — featured-stack icons will skip them until logos land in public/tech-logos/:`,
+  );
+  for (const name of [...missingTechLogos].sort()) {
+    console.warn(`    ${name.padEnd(24)} ← ${techIconMap[name] ?? "(no entry in techIconMap)"}`);
   }
 }
 

@@ -1,18 +1,28 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     SECTION: Certifications (compact summary; full list in llms-full.txt)
+     Certifications — 2 flagship Anthropic images visible + <details> grid.
+     HackerRank pile (tier=archive) is collapsed to one prose line in the
+     details summary. Full credential list lives in llms-full.txt.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<div align="center">
+## Certifications
+
+{{#each _certsFlagship}}<a href="https://www.linkedin.com/learning/certificates/" title="{{name}} — {{issuer}}"><img src="{{image}}" height="140" alt="{{name}}"></a> {{/each}}
+
+<sub>Two flagship Anthropic credentials anchoring the AI Architect identity.</sub>
 
 <details>
-<summary><h3>🏆 {{certificates.length}}+ Professional Certifications</h3></summary>
+<summary>{{certificates.length}}+ professional certifications — Microsoft Career Essentials, Google AI Essentials, GitHub Professional, Docker, HackerRank, more</summary>
 
 <br>
 
-<p>Across <strong>HackerRank</strong> (Software Engineer, Frontend React, SQL Advanced, JavaScript, REST API, Node.js, Go, Angular, Problem Solving), <strong>Microsoft</strong> (Software Development, System Admin, Project Mgmt, Cybersecurity, Data Analysis, Generative AI Fundamentals, Azure AI Essentials), and others including <a href="https://www.linkedin.com/learning/certificates/JHIY9NPYTR2D">Anthropic Claude Code in Action</a>, Anthropic AI Fluency Framework, GitHub Professional, Docker Professional, and Google AI Essentials.</p>
+{{#each _certsByCategory}}**{{label}}**
 
-<p><sub>Full credential list with images, issuers, and credential IDs in <a href="./llms-full.txt">llms-full.txt</a> · <a href="./dist/profile.json">profile.json</a>.</sub></p>
+<p>
+{{#each items}}<a href="#cert-{{@index}}" title="{{name}} — {{issuer}}"><img src="{{image}}" height="100" alt="{{name}} — {{issuer}}"></a>&nbsp;
+{{/each}}</p>
+
+{{/each}}**HackerRank Professional Certifications**
+
+<sub>15 certifications across Software Engineer, Frontend Developer (React), SQL (Advanced), JavaScript, REST API, Node.js, Go, Angular, R, Problem Solving, Python, Java, React, CSS, C#. Full credential list with images and IDs in <a href="./llms-full.txt">llms-full.txt</a> and <a href="./dist/profile.json">profile.json</a>.</sub>
 
 </details>
-
-</div>

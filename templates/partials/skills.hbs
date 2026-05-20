@@ -1,10 +1,21 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     SECTION 6: Skills
+     What I can do — 6 project-anchored capability paragraphs + compact
+     Stack line. Hand-curated editorial copy; the final Stack line iterates
+     skills[*].keywords so the raw tech inventory stays auto-updated.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<div align="center">
+## What I can do
 
-{{#each skills}}![{{name}}](https://gradient-svg-generator.vercel.app/api/svg?text={{pillsParam keywords}}&template=pills-dark&height=32)
+**Architect production AI agents.** Multi-model orchestration with bilingual cultural framing — 3-model OpenAI composition (gpt-4o-mini · gpt-4o · gpt-4o-realtime "verse" voice) with server-side VAD, 48-table schema where Te Whare Tapa Whā concepts are typed columns not UI stickers. — *[Tam-AI-Ti](https://tamaiti.whiri-ai.com/), 351 solo commits.*
 
-{{/each}}
-</div>
+**Ship full-stack platforms end-to-end.** Next.js + Supabase + Stripe + Drizzle SaaS that survives architectural pivots (single → multi-tenant, Vercel → Cloudflare Workers) — 4-tier subscription with Africa-friendly pricing, 4-role RBAC, row-level security. — *[LibraryOS](https://libraryos.live), 18 months, 80 commits.*
+
+**Engineer multi-surface backends.** One Cloudflare Worker serving four interfaces over a single backend — React SPA, HTTP API with OpenAPI 3.1 + Scalar docs, MCP Streamable HTTP with 11 locked tools, and an `lja` CLI on npm — all with feature parity and a unified API-key scheme. — *[linkedin-jobs-search](https://github.com/ChanMeng666/linkedin-jobs-search).*
+
+**Build LangGraph multi-agent systems.** 7-node adaptive agent (intent parser → architect → writer → quality guard → revision loop → summarizer → delivery) with self-revising quality loops, RAG over pgvector, two Docker services self-hosted via Coolify behind Cloudflare. — *[FanFic Lab](https://github.com/ChanMeng666/fanfic-lab).*
+
+**Run production AI infrastructure.** AI-orchestrated container pre-warming, Kubernetes cross-cloud deployment, sub-millisecond p50 latency. Backed by Google for Startups Cloud Program and NVIDIA Inception. — *[GAVIGO IRE](https://www.gavigo.com).*
+
+**Lead AI-programming education.** {{_teachingImpact.cohortCount}} cohorts since 2024 — beginner blog-builders through multi-user AI-SaaS capstones. Doctrine: *natural language is the source code*. — *[programming.chanmeng.org](https://programming.chanmeng.org).*
+
+**Stack.** {{#each skills}}{{join keywords ", "}}{{#unless @last}} · {{/unless}}{{/each}}.

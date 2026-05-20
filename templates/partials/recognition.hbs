@@ -1,32 +1,26 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     SECTION 5: Recognition
+     Recognition — 3 credential bullets + 1 featured quote + full archive
+     in <details>. Beyond-the-Code photo gallery removed. Publications filtered
+     to _mediaAppearances (press / interview / podcastEpisode only — LinkedIn
+     Pulse articles stay in data + llms-full.txt + JSON-LD but not in visible).
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<div align="center">
-
-[![Recognition](https://gradient-svg-generator.vercel.app/api/svg?text=Recognition&template=text-shimmer-gold&height=50)](#)
-
-</div>
-
-<br>
+## Recognition
 
 **Credentials**
 
-- **[UN Women CSW 69 Speaker](https://www.linkedin.com/posts/chanmeng666_womenintech-aiforgood-genderequality-activity-7306391777895141376-bUOl)** -- Beyond Beijing 30 Conference, UN Headquarters NYC (Mar 14, 2025)
-- **[Master of Applied Computing with Distinction](https://www.lincoln.ac.nz/)** -- Lincoln University, New Zealand (Dean's List, top 5%)
-- **[Outstanding Mentor Award](https://www.linkedin.com/in/chanmeng666/details/honors/)** -- AI Hackathon Festival 2025 (AI Forum NZ × She Sharp × AUT)
+- **[UN Women CSW 69 Speaker](https://www.linkedin.com/posts/chanmeng666_womenintech-aiforgood-genderequality-activity-7306391777895141376-bUOl)** — Beyond Beijing 30 Conference, UN Headquarters NYC (Mar 14, 2025)
+- **[Master of Applied Computing with Distinction](https://www.lincoln.ac.nz/)** — Lincoln University, New Zealand (Dean's List, top 5%)
+- **[Outstanding Mentor Award](https://www.linkedin.com/in/chanmeng666/details/honors/)** — AI Hackathon Festival 2025 (AI Forum NZ × She Sharp × AUT)
 
-<br>
-
-**What people say**
-
-{{#each _featuredReferences}}{{#if @first}}> *"{{flatten reference}}"*
+{{#each _featuredReferences}}{{#if @first}}
+> *"{{flatten reference}}"*
 >
-> -- {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
+> — {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
 {{/if}}{{/each}}
 
 <details>
-<summary>Resume archive -- awards, education, volunteer, podcasts, articles, media, more references, photos...</summary>
+<summary>Resume archive — awards, education, volunteer, teaching cohorts, podcasts, articles, media, more references</summary>
 
 <br>
 
@@ -44,70 +38,56 @@
 {{#each education}}| {{studyType}} | [{{institution}}]({{url}}) | {{dateRange startDate endDate}} |
 {{/each}}
 
-**Volunteer Experience**
+**Volunteer**
 
 | | Role | Organisation | Period | Focus |
 |---|------|--------------|--------|-------|
 {{#each volunteer}}| {{#with (lookup ../_orgByVolunteerId id)}}<a href="{{url}}" title="{{name}}"><img src="{{logoLight}}" height="24" alt="{{name}}"></a>{{else}}&nbsp;{{/with}} | {{position}} | {{#if url}}[{{name}}]({{url}}){{else}}{{name}}{{/if}} | {{dateRange startDate endDate}} | {{location}} |
 {{/each}}
 
-**Latest Articles** -- read more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://www.linkedin.com/in/chanmeng666/recent-activity/articles/)
+**Teaching cohorts**
+
+| Cohort | Programme | Partner | Period | Outcome |
+|---|---|---|---|---|
+{{#each _teachingCohorts}}| {{cohortLabel}} | [{{programName}}]({{curriculumUrl}}) | {{partnerOrg}} | {{dateRange}} | {{keyOutcome}} |
+{{/each}}
+
+**Podcasts I host**
+
+| Podcast | Listen |
+|---------|--------|
+{{#each meta.x_brand.podcastsHosted}}| {{name}}{{#if description}} — {{description}}{{/if}} | [Spotify]({{url}}) |
+{{/each}}
+
+**Media appearances**
+
+| Feature | Publisher |
+|---------|-----------|
+{{#each _mediaAppearances}}| [{{name}}]({{url}}) | {{publisher}} |
+{{/each}}
+
+**Latest articles** — more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://www.linkedin.com/in/chanmeng666/recent-activity/articles/)
 
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" alt="Recent Article 0"></a>
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1" alt="Recent Article 1"></a>
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2" alt="Recent Article 2"></a>
 
-**Podcasts I Host**
-
-| Podcast | Listen |
-|---------|--------|
-{{#each meta.x_brand.podcastsHosted}}| {{name}}{{#if description}} -- {{description}}{{/if}} | [Spotify]({{url}}) |
-{{/each}}
-
-**Media Appearances**
-
-| Feature | Listen/Read |
-|---------|-------------|
-{{#each publications}}| {{name}} | [{{publisher}}]({{url}}) |
-{{/each}}
-
-**Minimalist Living**
+**Minimalist living**
 
 | Article | Read |
 |---------|------|
 {{#each meta.x_brand.minimalistArticles}}| {{title}} | [{{platform}}]({{url}}) |
 {{/each}}
 
-**YouTube** -- [Subscribe @ChanMeng666](https://www.youtube.com/@ChanMeng666?sub_confirmation=1)
-
-<!-- BEGIN YOUTUBE-CARDS -->
-
-<!-- END YOUTUBE-CARDS -->
-
-**More Recommendations**
+**More recommendations**
 
 {{#each _featuredReferences}}{{#unless @first}}> *"{{flatten reference}}"*
-> -- {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
+> — {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
 
 {{/unless}}{{/each}}{{#each _otherReferences}}> *"{{flatten reference}}"*
-> -- {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
+> — {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
 
 {{/each}}
-All recommendations verified on [LinkedIn](https://www.linkedin.com/in/chanmeng666/details/recommendations/)
-
-**TechRosie Community** &nbsp;<img src="/public/organization/tech-rosie-logo.jpg" width="24" alt="TechRosie">
-
-A global community of women developers committed to excellence, collaboration, and innovation in technology. [Join TechRosie](https://github.com/ChanMeng666/ChanMeng666/issues/new?assignees=&labels=Invitation%2CTechRosie&template=join-techrosie.yml) | [GitHub Organization](https://github.com/TechRosie)
-
-{{#if meta.x_brand.photoGallery.length}}
-<br>
-
-**Beyond the Code**
-
-<p align="center">
-{{#each meta.x_brand.photoGallery}}<img src="{{src}}" width="140" alt="{{alt}}">&nbsp;
-{{/each}}
-</p>
-{{/if}}
+All recommendations verified on [LinkedIn](https://www.linkedin.com/in/chanmeng666/details/recommendations/).
 
 </details>

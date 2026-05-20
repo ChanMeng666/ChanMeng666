@@ -1,16 +1,26 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     SECTION 2: Featured Work
+     Selected work — 4 hero cards, vertical stack, left-aligned editorial.
+     Per-card: project logo (right-float, 80px) · H3 + name · context/
+     affiliation line · tagline · 18px tech-stack icons · plain links.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<div align="center">
+## Selected work
 
-[![Featured Work](https://gradient-svg-generator.vercel.app/api/svg?text=Featured+Work&template=text-shimmer-gold&height=50)](https://github.com/ChanMeng666?tab=repositories)
+{{#each _flagshipProjects}}{{#if logo}}<a href="{{default url repoUrl}}"><img src="{{logo}}" align="right" height="80" alt="{{name}}"></a>
+{{/if}}
+### [{{briefTagline name}}]({{default url repoUrl}})
 
-</div>
+{{#if _affiliationOrg}}<sub>For <a href="{{_affiliationOrg.url}}"><img src="{{_affiliationOrg.logoLight}}" height="22" alt="{{_affiliationOrg.name}}" style="vertical-align:middle"> {{_affiliationOrg.name}}</a>{{#if _affiliationOrg.context}} — {{_affiliationOrg.context}}{{/if}}.</sub>
+{{else}}{{#if _contextLogo.length}}<sub>For {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="22" alt="{{alt}}" style="vertical-align:middle"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}.</sub>
+{{else}}{{#if entity}}<sub>For {{entity}}.</sub>
+{{/if}}{{/if}}{{/if}}
 
-<br>
+{{briefTagline tagline}}
 
-<table>
-{{#each _flagshipProjectRows}}  <tr>
-{{#each this}}{{> project-card}}{{/each}}  </tr>
-{{/each}}</table>
+{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
+{{/if}}
+{{#if url}}{{#unless (eq url repoUrl)}}[Live]({{url}}){{#if repoUrl}} — [Source]({{repoUrl}}){{/if}}{{/unless}}{{/if}}{{#if (eq url repoUrl)}}[Source]({{repoUrl}}){{/if}}{{#unless url}}{{#if repoUrl}}[Source]({{repoUrl}}){{/if}}{{/unless}} — [Case study](./llms-full.txt)
+
+<br clear="all">
+
+{{/each}}

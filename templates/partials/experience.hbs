@@ -1,12 +1,16 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     SECTION 4: Experience
+     Experience — short prose preamble + full table in <details>.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<div align="center">
+## Experience
 
-[![Experience](https://gradient-svg-generator.vercel.app/api/svg?text=Experience&template=text-shimmer-purple&height=50)](#)
+{{#each _currentRoles}}{{position}} at **[{{name}}]({{url}})** — {{dateRange startDate endDate}}.
+{{/each}}
 
-</div>
+Previously CTO at Sanicle, full-stack engineer for FreePeriod, ByteDance Youth Training Camp, mathematics teacher in Shandong. {{work.length}} roles across China, New Zealand, and the United States.
+
+<details>
+<summary>Full work history</summary>
 
 <br>
 
@@ -14,3 +18,5 @@
 |---|---------|------|--------|
 {{#each work}}| {{#with (lookup ../_orgByWorkId id)}}<a href="{{url}}" title="{{name}}"><img src="{{logoLight}}" height="28" alt="{{name}}"></a>{{else}}&nbsp;{{/with}} | [{{name}}]({{url}}) | {{position}}{{#if (eq id "copilotkit")}} ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=flat-square&labelColor=1a1a1a){{/if}} | {{dateRange startDate endDate}}{{#if location}}, {{location}}{{/if}} |
 {{/each}}
+
+</details>

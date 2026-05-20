@@ -9,11 +9,8 @@
         <sub><em>For {{entity}}</em></sub>
 {{/if}}      </div>
       <br>
-      <p>{{flatten publicSummary}}</p>
-{{#if techStack}}      <p align="center">
-        <img src="https://gradient-svg-generator.vercel.app/api/svg?text={{pillsParam (slice techStack 0 8)}}&template=pills-dark&height=28" alt="Tech stack">
-      </p>
-{{/if}}      <p align="center">
+      <p>{{briefTagline tagline}}</p>
+      <p align="center">
 {{#if url}}{{#unless (eq url repoUrl)}}        <a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template=shimmer-green&height=24" alt="Live"></a>&nbsp;
 {{/unless}}{{/if}}{{#if demoUrl}}        <a href="{{demoUrl}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Demo&template=shimmer-blue&height=24" alt="Demo"></a>&nbsp;
 {{/if}}{{#if repoUrl}}        <a href="{{repoUrl}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=shimmer-blue&height=24" alt="Source"></a>&nbsp;

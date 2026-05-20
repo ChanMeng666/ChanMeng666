@@ -1,8 +1,11 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
      SECTION 1: Hero
-     One H1, two italic positioning lines, one prose sentence, one line of
-     em-dash-separated inline links. No gradient SVGs, no centred chrome.
+     Right-floated portrait + H1 + 2 italic positioning lines + prose tagline
+     + "Featured in" byline (sub) + em-dash inline links + clear + centered
+     <kbd>-styled proof-line metric row anchoring credibility.
      ═══════════════════════════════════════════════════════════════════════ -->
+
+<a href="{{basics.url}}"><img src="{{basics.image}}" align="right" width="160" alt="{{basics.name}}"></a>
 
 # {{basics.name}}
 
@@ -11,4 +14,17 @@
 
 {{_valueProposition.tagline}} {{basics.taglines.primary}}
 
+{{#if _mediaAppearances.length}}<sub>Featured in {{#each (slice _mediaAppearances 0 4)}}[{{publisher}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
+{{/if}}
+
 {{#each _primaryBadges}}[{{network}}]({{url}}){{#unless @last}} — {{/unless}}{{/each}}
+
+<br clear="all">
+
+{{#if _valueProposition.proofLine}}
+<div align="center">
+
+{{#each (split _valueProposition.proofLine " · ")}}<kbd>&nbsp;{{trim this}}&nbsp;</kbd>{{#unless @last}}&nbsp;&nbsp;{{/unless}}{{/each}}
+
+</div>
+{{/if}}

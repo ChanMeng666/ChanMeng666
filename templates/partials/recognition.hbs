@@ -14,9 +14,9 @@
 - **[Outstanding Mentor Award](https://www.linkedin.com/in/chanmeng666/details/honors/)** — AI Hackathon Festival 2025 (AI Forum NZ × She Sharp × AUT)
 
 {{#each _featuredReferences}}{{#if @first}}
-> *"{{flatten reference}}"*
+> ❝ &nbsp; *{{flatten reference}}* &nbsp; ❞
 >
-> — {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
+> <sub>— **{{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}** &nbsp;·&nbsp; {{meta.x_brand.relationship}}</sub>
 {{/if}}{{/each}}
 
 <details>
@@ -42,7 +42,7 @@
 
 | | Role | Organisation | Period | Focus |
 |---|------|--------------|--------|-------|
-{{#each volunteer}}| {{#with (lookup ../_orgByVolunteerId id)}}<a href="{{url}}" title="{{name}}"><img src="{{logoLight}}" height="24" alt="{{name}}"></a>{{else}}&nbsp;{{/with}} | {{position}} | {{#if url}}[{{name}}]({{url}}){{else}}{{name}}{{/if}} | {{dateRange startDate endDate}} | {{location}} |
+{{#each volunteer}}| {{#with (lookup ../_orgByVolunteerId id)}}<a href="{{url}}" title="{{name}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="24" alt="{{name}}"></picture></a>{{else}}&nbsp;{{/with}} | {{position}} | {{#if url}}[{{name}}]({{url}}){{else}}{{name}}{{/if}} | {{dateRange startDate endDate}} | {{location}} |
 {{/each}}
 
 **Teaching cohorts**

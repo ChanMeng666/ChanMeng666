@@ -10,7 +10,7 @@
 {{/if}}
 ### [{{briefTagline name}}]({{default url repoUrl}})
 
-{{#if _affiliationOrg}}<sub>For <a href="{{_affiliationOrg.url}}"><img src="{{_affiliationOrg.logoLight}}" height="22" alt="{{_affiliationOrg.name}}" style="vertical-align:middle"> {{_affiliationOrg.name}}</a>{{#if _affiliationOrg.context}} — {{_affiliationOrg.context}}{{/if}}.</sub>
+{{#if _affiliationOrg}}<sub>For <a href="{{_affiliationOrg.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default _affiliationOrg.logoDark _affiliationOrg.logoLight}}"><img src="{{_affiliationOrg.logoLight}}" height="22" alt="{{_affiliationOrg.name}}"></picture> {{_affiliationOrg.name}}</a>{{#if _affiliationOrg.context}} — {{_affiliationOrg.context}}{{/if}}.</sub>
 {{else}}{{#if _contextLogo.length}}<sub>For {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="22" alt="{{alt}}" style="vertical-align:middle"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}.</sub>
 {{else}}{{#if entity}}<sub>For {{entity}}.</sub>
 {{/if}}{{/if}}{{/if}}

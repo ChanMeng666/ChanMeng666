@@ -1398,10 +1398,6 @@ Building tools that matter. [Let's connect.](https://www.linkedin.com/in/chanmen
 
 <br>
 
-<img src="https://github-trophies.vercel.app/?username=ChanMeng666&theme=minimal&margin-w=4&margin-h=4" alt="GitHub Trophies">
-
-<br>
-
 <a href="#readme-top">Back to top</a>
 
 </div>

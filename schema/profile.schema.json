@@ -598,6 +598,7 @@
               "cohortLabel":    { "type": "string", "description": "Short badge, e.g. 'Winter 2024'." },
               "programName":    { "type": "string" },
               "partnerOrg":     { "type": "string" },
+              "partnerOrgIds":  { "type": "array", "items": { "type": "string" }, "description": "Optional org ids whose logos render inline on the cohort card." },
               "audience":       { "type": "string" },
               "format":         { "type": "string" },
               "dateRange":      { "type": "string" },

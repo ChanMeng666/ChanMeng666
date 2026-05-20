@@ -46,9 +46,9 @@
 
 **Volunteer Experience**
 
-| Role | Organisation | Period | Focus |
-|------|--------------|--------|-------|
-{{#each volunteer}}| {{position}} | {{#if url}}[{{name}}]({{url}}){{else}}{{name}}{{/if}} | {{dateRange startDate endDate}} | {{location}} |
+| | Role | Organisation | Period | Focus |
+|---|------|--------------|--------|-------|
+{{#each volunteer}}| {{#with (lookup ../_orgByVolunteerId id)}}<a href="{{url}}" title="{{name}}"><img src="{{logoLight}}" height="24" alt="{{name}}"></a>{{else}}&nbsp;{{/with}} | {{position}} | {{#if url}}[{{name}}]({{url}}){{else}}{{name}}{{/if}} | {{dateRange startDate endDate}} | {{location}} |
 {{/each}}
 
 **Latest Articles** -- read more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://www.linkedin.com/in/chanmeng666/recent-activity/articles/)

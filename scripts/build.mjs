@@ -236,6 +236,20 @@ data._organisationsMissingLogos = allOrgs
   .filter((o) => !orgHasRenderableLogo(o))
   .map((o) => ({ id: o.id, name: o.name, expectedPath: o.logoLight ?? "(none specified)" }));
 
+// Inverse lookups: org-by-{id, workId, volunteerId, projectId}. Only orgs whose
+// logo file exists on disk are surfaced — partials that show inline logos use
+// these to decide whether to render an <img>. Orgs without renderable logos
+// still appear in llms.txt / JSON-LD `affiliation` for AI ingestion.
+data._orgById = Object.fromEntries(orgsRenderable.map((o) => [o.id, o]));
+data._orgByWorkId = {};
+data._orgByVolunteerId = {};
+data._orgByProjectId = {};
+for (const o of orgsRenderable) {
+  if (o.relatedWorkId)      data._orgByWorkId[o.relatedWorkId] = o;
+  if (o.relatedVolunteerId) data._orgByVolunteerId[o.relatedVolunteerId] = o;
+  if (o.relatedProjectId)   data._orgByProjectId[o.relatedProjectId] = o;
+}
+
 if (data._organisationsMissingLogos.length) {
   console.warn(
     `\n⚠ ${data._organisationsMissingLogos.length} organisations have no renderable logo yet — band will skip them until logo files land:`,
@@ -245,7 +259,14 @@ if (data._organisationsMissingLogos.length) {
   }
 }
 
-data._teachingCohorts = data.meta?.x_brand?.teachingCohorts ?? [];
+data._teachingCohorts = (data.meta?.x_brand?.teachingCohorts ?? []).map((c) => ({
+  ...c,
+  // Resolve partnerOrgIds to renderable org objects (skipping ones without a
+  // logo file on disk) so the cohort card can iterate inline logos directly.
+  _partnerOrgs: (c.partnerOrgIds ?? [])
+    .map((id) => data._orgById[id])
+    .filter(Boolean),
+}));
 data._teachingImpact = data.meta?.x_brand?.teachingImpact ?? null;
 // 2×2 grid rows for the AI Mentor partial
 data._teachingCohortRows = [];

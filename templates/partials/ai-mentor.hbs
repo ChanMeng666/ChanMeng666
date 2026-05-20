@@ -25,7 +25,8 @@
 {{#each _teachingCohortRows}}  <tr>
 {{#each this}}    <td width="50%" valign="top">
       <h3>{{cohortLabel}} -- {{programName}}</h3>
-      <p><strong>{{partnerOrg}}</strong></p>
+      <p>{{#each _partnerOrgs}}<a href="{{url}}" title="{{name}} -- {{context}}"><img src="{{logoLight}}" height="28" alt="{{name}}"></a>&nbsp;{{/each}}<br>
+         <strong>{{partnerOrg}}</strong></p>
       <p><em>Audience:</em> {{audience}}<br>
          <em>Dates:</em> {{this.dateRange}}<br>
          <em>Format:</em> {{format}}</p>

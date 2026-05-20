@@ -10012,7 +10012,7 @@ meta:
         proofProjectId: ai-programming-teaching-project
         proofProjectName: AI Programming Teaching Platform
         proofUrl: https://programming.chanmeng.org
-        proofWorkId: technest-ai-track
+        proofWorkId: technest
 
     # ---------------------------------------------------------------------
     # ENGAGEMENT AVAILABILITY — current open-to-work signal. Update the
@@ -10094,7 +10094,7 @@ meta:
         logoDark: /public/experience/technest-community-logo.jpg
         url: https://technest.community
         context: "AI Instructor & Mentor — 2026 AI Track Cohort 3"
-        relatedWorkId: technest-ai-track
+        relatedWorkId: technest
       - id: she-sharp
         name: She Sharp
         displayTier: primary
@@ -10104,6 +10104,7 @@ meta:
         url: https://www.shesharp.org.nz
         context: "Senior Full-Stack + Ambassador (May 2023 — present)"
         relatedWorkId: she-sharp
+        relatedVolunteerId: she-sharp-ambassador
       - id: femtech-weekend
         name: FemTech Weekend
         displayTier: primary
@@ -10122,6 +10123,7 @@ meta:
         url: https://www.linkedin.com/company/taxing-mentorship/
         context: "Tech & Professional Development Mentor (Oct 2024 — Sep 2025)"
         relatedWorkId: forward-with-her
+        relatedVolunteerId: forward-with-her-mentor
       - id: lincoln-university
         name: Lincoln University, NZ
         displayTier: primary
@@ -10148,6 +10150,7 @@ meta:
         logoDark: /public/experience/copilot-kit-logo.svg
         url: https://copilotkit.ai
         context: "Open-source contributor — 2 merged PRs into a 24.6k★ repo"
+        relatedWorkId: copilotkit
       - id: bytedance
         name: ByteDance
         displayTier: primary
@@ -10234,12 +10237,13 @@ meta:
         context: "Mentee school — AI Hackathon Festival 2025"
       - id: aotearoa-infinite-academy
         name: Aotearoa Infinite Academy
-        displayTier: secondary
-        category: partner
+        displayTier: primary
+        category: employer
         logoLight: /public/experience/aotearoa-infinite-academy.svg
         logoDark: /public/experience/aotearoa-infinite-academy.svg
-        url: https://www.aotearoainfinite.com
-        context: "Education partner"
+        url: https://www.aotearoainfiniteacademy.school
+        context: "Software Developer (Oct — Nov 2025)"
+        relatedWorkId: aotearoa-infinite-academy
       - id: anthropic
         name: Anthropic
         displayTier: secondary
@@ -10301,6 +10305,7 @@ meta:
         cohortLabel: Winter 2024
         programName: "Forward with Her — AI Programming Cohort 1"
         partnerOrg: "Forward with Her (她行)"
+        partnerOrgIds: [forward-with-her]
         audience: "Beginner-friendly; designers & professionals upskilling"
         format: "Multi-module course series with student showcases"
         dateRange: "Winter 2024"
@@ -10312,6 +10317,7 @@ meta:
         cohortLabel: Summer 2025
         programName: "AI Programming Open Course (Cohort 2)"
         partnerOrg: "Forward with Her (她行)"
+        partnerOrgIds: [forward-with-her]
         audience: "Zero-foundation; designers, working professionals, freelancers"
         format: "2-course open series + recorded video tutorials + mentor Q&A"
         dateRange: "Summer 2025"
@@ -10323,6 +10329,7 @@ meta:
         cohortLabel: Her Waka 2026
         programName: "AI × Career Empowerment Programme"
         partnerOrg: "MSD × SheSharp × academyEX (Auckland, NZ)"
+        partnerOrgIds: [msd-nz, she-sharp, academyex]
         audience: "Women returning to the workforce (25 ppl / session cap)"
         format: "4 in-person workshops + 10 self-paced AI tutorials + job-search library"
         dateRange: "Mar — Jun 2026"
@@ -10335,12 +10342,13 @@ meta:
         cohortLabel: TechNest 2026
         programName: "TechNest AI Track — Cohort 3"
         partnerOrg: "TechNest Community (Newfoundland nonprofit)"
+        partnerOrgIds: [technest]
         audience: "Youth & newcomers with zero ChatGPT experience"
         format: "12 weeks (8 teaching + 4-week multi-user AI SaaS capstone)"
         dateRange: "Apr 25 — Jul 17 2026"
         keyOutcome: '"Natural language is the source code" doctrine; live capstone demos'
         curriculumUrl: https://programming.chanmeng.org/docs/2026-technest/curriculum-outline
-        relatedWorkId: technest-ai-track
+        relatedWorkId: technest
         relatedProjectId: ai-programming-teaching-project
 
     teachingImpact:

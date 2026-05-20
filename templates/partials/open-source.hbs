@@ -10,9 +10,9 @@
 
 <br>
 
-| Project | Description | Traction |
-|---------|-------------|----------|
-{{#each _openSourcePrimary}}| [{{name}}]({{default repoUrl url}}){{#each extraLinks}} -- [{{label}}]({{url}}){{/each}} | {{flatten publicSummary}} | {{#if url}}{{#unless (eq url repoUrl)}}[![Live](https://img.shields.io/badge/Live-tool-2ea44f?style=flat-square)]({{url}}){{/unless}}{{/if}}{{#if repoUrl}}{{#if (eq url repoUrl)}}![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/if}}{{#unless (eq url repoUrl)}}{{#unless url}}![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/unless}}{{/unless}}{{/if}} |
+| | Project | Description | Traction |
+|---|---------|-------------|----------|
+{{#each _openSourcePrimary}}| {{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="28" alt="{{name}}"></a>{{else}}&nbsp;{{/if}} | [{{name}}]({{default repoUrl url}}){{#each extraLinks}} -- [{{label}}]({{url}}){{/each}} | {{flatten publicSummary}} | {{#if url}}{{#unless (eq url repoUrl)}}[![Live](https://img.shields.io/badge/Live-tool-2ea44f?style=flat-square)]({{url}}){{/unless}}{{/if}}{{#if repoUrl}}{{#if (eq url repoUrl)}}![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/if}}{{#unless (eq url repoUrl)}}{{#unless url}}![Stars](https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a){{/unless}}{{/unless}}{{/if}} |
 {{/each}}
 
 <p align="center">

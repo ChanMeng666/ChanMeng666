@@ -3530,6 +3530,7 @@ projects:
     category: ai-apps
     tagline: AI-operated audio notification system for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only
     repoUrl: https://github.com/ChanMeng666/echook
+    logo: /public/brands/echook-logo.svg
     status: active
     extraLinks:
       - { label: "Promo video repo (Remotion)", url: "https://github.com/ChanMeng666/echook-promo-video" }
@@ -6353,6 +6354,7 @@ projects:
     tagline: Closed a gap in Suno's official platform that creators couldn't fix themselves — discovered that Suno's serializer leaks unredacted parent->child lineage UUIDs only on /api/trending + persona sub-trees, built the industry's first public Suno lineage explorer on that finding. Three free lenses + three pay-per-result reports ($1-$2, no subscription). Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.
     url: https://sunostats.chanmeng.org/
     repoUrl: https://github.com/ChanMeng666/sunostats
+    logo: /public/brands/sunostats-logo.svg
     extraLinks:
       - { label: "Live app",                url: "https://sunostats.chanmeng.org/" }
       - { label: "Public trending (no auth)", url: "https://sunostats.chanmeng.org/trending" }
@@ -10169,6 +10171,15 @@ meta:
         url: https://www.facebook.com/CebuInternationalAcademy
         context: "Volunteer Educator (Mar — Aug 2023)"
         relatedVolunteerId: cebu-international-academy
+      - id: corde
+        name: CORDE
+        displayTier: primary
+        category: employer
+        logoLight: /public/brands/corde-transparent.svg
+        logoDark: /public/brands/corde-transparent.svg
+        url: https://corde.nz/
+        context: "Full Stack Developer & Lead Documenter — Lincoln University COMP693 industry placement (Jun — Nov 2024)"
+        relatedWorkId: corde
 
       # ---- SECONDARY (their named partners + flagship tech vendors) ----
       - id: msd-nz

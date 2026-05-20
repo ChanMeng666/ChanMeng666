@@ -12,22 +12,21 @@
 
 **Credentials**
 
-- **[UN Women CSW69](https://www.linkedin.com/posts/chanmeng666_womenintech-aiforgood-genderequality-activity-7306391777895141376-bUOl)** -- Featured for AI and gender equality work
-- **[Master of Applied Computing with Distinction](https://www.lincoln.ac.nz/)** -- Lincoln University, New Zealand (Dean's List)
-- **[CopilotKit Contributor](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)** -- Core contributions to open-source AI framework
-- **[MCP Servers Pioneer](https://github.com/modelcontextprotocol/servers/pulls?q=is%3Apr+author%3AChanMeng666)** -- Early Windows contributor to Anthropic's Model Context Protocol
+- **[UN Women CSW 69 Speaker](https://www.linkedin.com/posts/chanmeng666_womenintech-aiforgood-genderequality-activity-7306391777895141376-bUOl)** -- Beyond Beijing 30 Conference, UN Headquarters NYC (Mar 14, 2025)
+- **[Master of Applied Computing with Distinction](https://www.lincoln.ac.nz/)** -- Lincoln University, New Zealand (Dean's List, top 5%)
+- **[Outstanding Mentor Award](https://www.linkedin.com/in/chanmeng666/details/honors/)** -- AI Hackathon Festival 2025 (AI Forum NZ × She Sharp × AUT)
 
 <br>
 
 **What people say**
 
-{{#each _featuredReferences}}> *"{{flatten reference}}"*
+{{#each _featuredReferences}}{{#if @first}}> *"{{flatten reference}}"*
 >
 > -- {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
+{{/if}}{{/each}}
 
-{{/each}}
 <details>
-<summary>More: Awards, Education, Articles, Podcasts, Media, Recommendations...</summary>
+<summary>Resume archive -- awards, education, volunteer, podcasts, articles, media, more references, photos...</summary>
 
 <br>
 
@@ -87,7 +86,10 @@
 
 **More Recommendations**
 
-{{#each _otherReferences}}> *"{{flatten reference}}"*
+{{#each _featuredReferences}}{{#unless @first}}> *"{{flatten reference}}"*
+> -- {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
+
+{{/unless}}{{/each}}{{#each _otherReferences}}> *"{{flatten reference}}"*
 > -- {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
 
 {{/each}}

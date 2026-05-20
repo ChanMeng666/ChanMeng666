@@ -1,24 +1,18 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     SECTION 7: Certifications (collapsible)
+     SECTION: Certifications (compact summary; full list in llms-full.txt)
      ═══════════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
 <details>
-<summary><h3>🏆 50+ Professional Certifications</h3></summary>
+<summary><h3>🏆 {{certificates.length}}+ Professional Certifications</h3></summary>
 
 <br>
 
-{{#each _certsByCategory}}<details>
-<summary><strong>{{label}}</strong>{{#each items}}{{#if @first}}&nbsp;&nbsp;<img src="{{#if issuerLogo}}{{issuerLogo}}{{else}}/public/certificates/issuers/{{../category}}-logo.jpg{{/if}}" width="24" alt="{{issuer}}">{{/if}}{{/each}}</summary>
-<table>
-{{#each items}}{{#if (eq (mod @index 5) 0)}}  <tr>
-{{/if}}    <td align="center" width="20%"><img src="{{image}}" width="100%" alt="{{name}}"/><p><strong>{{name}}</strong></p></td>
-{{#if (eq (mod (inc @index) 5) 0)}}  </tr>
-{{else}}{{#if @last}}  </tr>
-{{/if}}{{/if}}{{/each}}</table>
-</details>
+<p>Across <strong>HackerRank</strong> (Software Engineer, Frontend React, SQL Advanced, JavaScript, REST API, Node.js, Go, Angular, Problem Solving), <strong>Microsoft</strong> (Software Development, System Admin, Project Mgmt, Cybersecurity, Data Analysis, Generative AI Fundamentals, Azure AI Essentials), and others including <a href="https://www.linkedin.com/learning/certificates/JHIY9NPYTR2D">Anthropic Claude Code in Action</a>, Anthropic AI Fluency Framework, GitHub Professional, Docker Professional, and Google AI Essentials.</p>
 
-{{/each}}</details>
+<p><sub>Full credential list with images, issuers, and credential IDs in <a href="./llms-full.txt">llms-full.txt</a> · <a href="./dist/profile.json">profile.json</a>.</sub></p>
+
+</details>
 
 </div>

@@ -1,0 +1,43 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION: AI Mentor & Educator (4 cohort cards in a 2×2 grid)
+     Sourced from meta.x_brand.teachingCohorts[]; canonical record lives
+     at https://programming.chanmeng.org (versioned per cohort).
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+{{#if _teachingCohorts.length}}
+<div align="center">
+
+[![AI Mentor and Educator](https://gradient-svg-generator.vercel.app/api/svg?text=AI+Mentor+%26+Educator&template=text-shimmer-purple&height=50)](https://programming.chanmeng.org)
+
+<em>Four cohorts of prompt-first AI engineering since 2024 -- beginner blog-builders through multi-user AI-SaaS capstones.<br>The doctrine: natural language is the source code.</em>
+
+{{#if _teachingImpact}}
+<br>
+
+<sub><strong>{{_teachingImpact.cohortCount}} cohorts</strong> &nbsp;·&nbsp; {{_teachingImpact.learnerReachClaim}} &nbsp;·&nbsp; {{_teachingImpact.menteeRefsClaim}} &nbsp;·&nbsp; {{_teachingImpact.flagshipAwardClaim}}</sub>
+{{/if}}
+
+</div>
+
+<br>
+
+<table>
+{{#each _teachingCohortRows}}  <tr>
+{{#each this}}    <td width="50%" valign="top">
+      <h3>{{cohortLabel}} -- {{programName}}</h3>
+      <p><strong>{{partnerOrg}}</strong></p>
+      <p><em>Audience:</em> {{audience}}<br>
+         <em>Dates:</em> {{this.dateRange}}<br>
+         <em>Format:</em> {{format}}</p>
+      <p><strong>Outcome.</strong> {{keyOutcome}}</p>
+      <p>→ <a href="{{curriculumUrl}}"><strong>View curriculum</strong></a></p>
+    </td>
+{{/each}}  </tr>
+{{/each}}</table>
+
+<div align="center">
+
+→ Full teaching platform: <a href="https://programming.chanmeng.org"><strong>programming.chanmeng.org</strong></a>
+
+</div>
+{{/if}}

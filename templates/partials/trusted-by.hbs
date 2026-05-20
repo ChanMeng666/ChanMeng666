@@ -1,0 +1,28 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION: Trusted by (organisation logo band)
+     Renders nothing when no primary logos resolve on disk (graceful empty).
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+{{#if _organisationsPrimary.length}}
+<div align="center">
+
+[![Trusted by](https://gradient-svg-generator.vercel.app/api/svg?text=Trusted+by+teams+shipping+at+scale&template=text-shimmer-gold&height=50)](#)
+
+<br>
+
+{{#each _organisationsPrimary}}<a href="{{url}}" title="{{name}} -- {{context}}"><img src="{{logoLight}}" height="56" alt="{{name}}"></a>&nbsp;&nbsp;
+{{/each}}
+
+{{#if _organisationsSecondary.length}}
+<br><br>
+
+{{#each _organisationsSecondary}}<a href="{{url}}" title="{{name}} -- {{context}}"><img src="{{logoLight}}" height="32" alt="{{name}}"></a>&nbsp;
+{{/each}}
+{{/if}}
+
+<br>
+
+<sub><em>Roles & partnerships detailed in <a href="./llms-full.txt">llms-full.txt</a> · <a href="./dist/profile.json">profile.json</a></em></sub>
+
+</div>
+{{/if}}

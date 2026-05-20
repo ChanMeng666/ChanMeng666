@@ -9966,6 +9966,389 @@ meta:
     identifier: https://chanmeng.org/#person
     citationPreference: "Chan Meng, full-stack engineer and CTO"
 
+    # ---------------------------------------------------------------------
+    # BRAND POSITIONING — drives the hero identity line and the llms.txt /
+    # JSON-LD "who am I" surface. Edit these to update the showcase voice.
+    # ---------------------------------------------------------------------
+    valueProposition:
+      identity: "AI Agent Architect · Founding-engineer · AI Educator"
+      tagline: "I architect AI agents, ship full-stack platforms end-to-end, and teach others to do the same."
+      proofLine: "12 companies · 4 teaching cohorts · 72 shipped projects · Master's with Distinction"
+
+    # ---------------------------------------------------------------------
+    # WHAT I TAKE ON — the four engagement archetypes surfaced as a 2×2
+    # panel in the README, as Service[] entries in JSON-LD, and as the
+    # "## What I take on" section of llms.txt. Each role links to its
+    # strongest proof project via proofProjectId (anchor into Featured
+    # Work) — the proofProjectName is shown verbatim as the link text.
+    # ---------------------------------------------------------------------
+    engagementRoles:
+      - id: founding-principal-engineer
+        title: "Founding / Principal engineer"
+        scope: "Embed early. Set engineering direction. Ship to production solo or as the first hire on a small team."
+        format: "Full-time · Founding-team equity"
+        proofProjectId: gavigo-ire
+        proofProjectName: GAVIGO IRE
+        proofWorkId: gavigo
+      - id: ai-agent-architect
+        title: "AI Agent Architect"
+        scope: "Architect agentic systems end-to-end — retrieval, memory, tool use, eval. Build the spine, hand off the gloss."
+        format: "Fractional or full-time"
+        proofProjectId: tam-ai-ti
+        proofProjectName: Tam-AI-Ti
+        proofWorkId: engram
+      - id: cto-class-operator
+        title: "CTO-class operator"
+        scope: "Own the tech for an early-stage product company. Hiring plan, architecture, ship velocity."
+        format: "Full-time · Equity"
+        proofProjectId: sanicle-ai-mobile
+        proofProjectName: Sanicle
+        proofUrl: https://sanicle.com
+        proofWorkId: sanicle
+      - id: ai-programming-instructor
+        title: "Lead AI-programming instructor"
+        scope: "Design and deliver cohort-based AI engineering programs. Curriculum, teaching platform, mentorship."
+        format: "Cohort engagement · Corporate L&D / nonprofit / university"
+        proofProjectId: ai-programming-teaching-project
+        proofProjectName: AI Programming Teaching Platform
+        proofUrl: https://programming.chanmeng.org
+        proofWorkId: technest-ai-track
+
+    # ---------------------------------------------------------------------
+    # ENGAGEMENT AVAILABILITY — current open-to-work signal. Update the
+    # `current` string as availability shifts; the GitHub Action rebuilds
+    # the README daily so changes land within ~24 hours.
+    # ---------------------------------------------------------------------
+    engagementAvailability:
+      current: "Open to founding-team / staff-IC / AI architecture engagements starting Q3 2026."
+      preferred:
+        - "Founding engineer at AI-native company"
+        - "AI architecture lead at series-A+"
+        - "Lead instructor cohort"
+      timezone: "NZST (UTC+12) / CST (UTC+8) overlap-friendly"
+      cta:
+        primary:  { label: "Book a 30-min intro", url: "https://cal.com/chan-meng/30min" }
+        secondary: { label: "Email",                url: "mailto:chanmeng.dev@gmail.com" }
+
+    # ---------------------------------------------------------------------
+    # FAQ — employer-facing Q&A surfaced as schema.org FAQPage (single
+    # highest-leverage GEO move — AI agents quote acceptedAnswer.text
+    # verbatim in hiring-query responses).
+    # ---------------------------------------------------------------------
+    faq:
+      - question: "Is Chan available for hire?"
+        answer: "Open to founding-team, staff-IC, and AI architecture engagements starting Q3 2026. Prefers full-time founding-engineer roles, fractional AI architecture, and cohort-based teaching engagements. Book a 30-min intro at https://cal.com/chan-meng/30min."
+      - question: "What kinds of roles does Chan take on?"
+        answer: "Founding / Principal engineer, AI Agent Architect (fractional or full-time), CTO-class operator at early-stage product companies, and Lead AI-programming instructor for corporate L&D / nonprofit / university cohorts."
+      - question: "What is Chan's strongest specialty?"
+        answer: "End-to-end AI-native product engineering — from agentic-system architecture through full-stack platform delivery to teaching the doctrine that natural language is the source code. Strongest at solo-or-small-team shipping at startup velocity."
+      - question: "Where is Chan based and what timezones does she cover?"
+        answer: "Between New Zealand and China. Comfortable with NZ / AU / SEA / CN / NA timezones; remote-first."
+      - question: "What is Chan's biggest shipped result?"
+        answer: "GAVIGO IRE — 353 of 360 commits solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — 2,200+ registered members, 1,000+ active, 95 API routes, 1,392-line schema, 86.6% commits solo."
+
+    # ---------------------------------------------------------------------
+    # ORGANISATIONS — the "trusted by" credibility band roster. Two tiers:
+    #   primary   = Chan's direct employers / clients (larger logos)
+    #   secondary = their named industry partners + flagship tech vendors
+    #               Chan integrated (smaller logos, ~0.75 opacity).
+    # logoLight may be null while the file is being sourced — the build
+    # script filters to entries whose logo file exists on disk, so the
+    # band gracefully grows as new logos land in /public/org-logos/ or
+    # /public/experience/.
+    # ---------------------------------------------------------------------
+    organisations:
+      # ---- PRIMARY (direct employers/clients) ----
+      - id: engram
+        name: Engram LLC
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/engram-logo.jpg
+        logoDark: /public/experience/engram-logo.jpg
+        url: https://www.engramhq.xyz
+        context: "Current — AI Agent Architect (May 2026 — present)"
+        relatedWorkId: engram
+      - id: gavigo
+        name: GAVIGO Inc.
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/gavigo-logo.jpg
+        logoDark: /public/experience/gavigo-logo.jpg
+        url: https://gavigo.com
+        context: "Founding Principal Engineer (Oct 2025 — present)"
+        relatedWorkId: gavigo
+      - id: sanicle
+        name: Sanicle Inc.
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/sanicle-logo.svg
+        logoDark: /public/experience/sanicle-logo.svg
+        url: https://sanicle.com
+        context: "CTO (Mar 2025 — Feb 2026)"
+        relatedWorkId: sanicle
+      - id: technest
+        name: TechNest Community
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/technest-community-logo.jpg
+        logoDark: /public/experience/technest-community-logo.jpg
+        url: https://technest.community
+        context: "AI Instructor & Mentor — 2026 AI Track Cohort 3"
+        relatedWorkId: technest-ai-track
+      - id: she-sharp
+        name: She Sharp
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/she-sharp-logo-purple-dark.svg
+        logoDark: /public/experience/she-sharp-logo-purple-dark.svg
+        url: https://www.shesharp.org.nz
+        context: "Senior Full-Stack + Ambassador (May 2023 — present)"
+        relatedWorkId: she-sharp
+      - id: femtech-weekend
+        name: FemTech Weekend
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/femtech-weekend-logo.svg
+        logoDark: /public/experience/femtech-weekend-logo.svg
+        url: https://femtechweekend.com
+        context: "CTO, Chengdu chapter (Mar 2025 — Feb 2026)"
+        relatedWorkId: femtech-weekend
+      - id: forward-with-her
+        name: Forward with Her (她行)
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/forward-with-her-logo.jpg
+        logoDark: /public/experience/forward-with-her-logo.jpg
+        url: https://www.linkedin.com/company/taxing-mentorship/
+        context: "Tech & Professional Development Mentor (Oct 2024 — Sep 2025)"
+        relatedWorkId: forward-with-her
+      - id: lincoln-university
+        name: Lincoln University, NZ
+        displayTier: primary
+        category: employer
+        logoLight: /public/education/lincoln-uni-logo.jpg
+        logoDark: /public/education/lincoln-uni-logo.jpg
+        url: https://www.lincoln.ac.nz
+        context: "Master of Applied Computing (Distinction) + Full-Stack Developer"
+        relatedWorkId: lincoln
+      - id: freeperiod
+        name: FreePeriod
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/free-period-logo.png
+        logoDark: /public/experience/free-period-logo.png
+        url: https://www.freeperiod.org
+        context: "Full-Stack Engineer (Oct — Dec 2024)"
+        relatedWorkId: freeperiod
+      - id: copilotkit
+        name: CopilotKit
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/copilot-kit-logo.svg
+        logoDark: /public/experience/copilot-kit-logo.svg
+        url: https://copilotkit.ai
+        context: "Open-source contributor — 2 merged PRs into a 24.6k★ repo"
+      - id: bytedance
+        name: ByteDance
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/bytedance-logo-english.svg
+        logoDark: /public/experience/bytedance-logo-english.svg
+        url: https://www.bytedance.com
+        context: "Backend Developer, Youth Training Camp (Jun — Aug 2024)"
+        relatedWorkId: bytedance
+      - id: cebu-international-academy
+        name: Cebu International Academy
+        displayTier: primary
+        category: employer
+        logoLight: /public/experience/cia.jpg
+        logoDark: /public/experience/cia.jpg
+        url: https://www.facebook.com/CebuInternationalAcademy
+        context: "Volunteer Educator (Mar — Aug 2023)"
+        relatedVolunteerId: cebu-international-academy
+
+      # ---- SECONDARY (their named partners + flagship tech vendors) ----
+      - id: msd-nz
+        name: NZ Ministry of Social Development
+        displayTier: secondary
+        category: partner
+        logoLight: /public/org-logos/msd-nz-light.svg
+        logoDark: /public/org-logos/msd-nz-light.svg
+        url: https://www.msd.govt.nz
+        context: "Funder — Her Waka 2026 employment-readiness programme"
+      - id: academyex
+        name: academyEX
+        displayTier: secondary
+        category: partner
+        logoLight: /public/org-logos/academyex-light.svg
+        logoDark: /public/org-logos/academyex-light.svg
+        url: https://academyex.com
+        context: "Host — Her Waka 2026 workshops, Auckland"
+      - id: rcsa
+        name: RCSA
+        displayTier: secondary
+        category: partner
+        logoLight: /public/org-logos/rcsa-light.svg
+        logoDark: /public/org-logos/rcsa-light.svg
+        url: https://www.rcsa.com.au
+        context: "Industry insights partner — Her Waka 2026"
+      - id: aut
+        name: Auckland University of Technology
+        displayTier: secondary
+        category: partner
+        logoLight: /public/org-logos/aut-light.svg
+        logoDark: /public/org-logos/aut-light.svg
+        url: https://www.aut.ac.nz
+        context: "Co-organiser — AI Hackathon Festival 2025"
+      - id: ai-forum-nz
+        name: AI Forum NZ
+        displayTier: secondary
+        category: partner
+        logoLight: /public/org-logos/ai-forum-nz-light.svg
+        logoDark: /public/org-logos/ai-forum-nz-light.svg
+        url: https://aiforum.org.nz
+        context: "Co-organiser — AI Hackathon Festival 2025"
+      - id: un-women
+        name: UN Women
+        displayTier: secondary
+        category: partner
+        logoLight: /public/org-logos/un-women-light.png
+        logoDark: /public/org-logos/un-women-light.png
+        url: https://www.unwomen.org
+        context: "CSW 69 speaker — UN HQ NYC, Mar 14 2025"
+      - id: united-nations
+        name: United Nations Headquarters
+        displayTier: secondary
+        category: partner
+        logoLight: /public/org-logos/united-nations-light.svg
+        logoDark: /public/org-logos/united-nations-light.svg
+        url: https://www.un.org
+        context: "Beyond Beijing 30 Conference speaker (CSW 69)"
+      - id: westlake-girls
+        name: Westlake Girls High School
+        displayTier: secondary
+        category: partner
+        logoLight: /public/org-logos/westlake-girls-light.svg
+        logoDark: /public/org-logos/westlake-girls-light.svg
+        url: https://www.westlakegirls.school.nz
+        context: "Mentee school — AI Hackathon Festival 2025"
+      - id: aotearoa-infinite-academy
+        name: Aotearoa Infinite Academy
+        displayTier: secondary
+        category: partner
+        logoLight: /public/experience/aotearoa-infinite-academy.svg
+        logoDark: /public/experience/aotearoa-infinite-academy.svg
+        url: https://www.aotearoainfinite.com
+        context: "Education partner"
+      - id: anthropic
+        name: Anthropic
+        displayTier: secondary
+        category: vendor
+        logoLight: /public/org-logos/anthropic-light.svg
+        logoDark: /public/org-logos/anthropic-light.svg
+        url: https://www.anthropic.com
+        context: "Claude Code in Action + AI Fluency certified; Claude across daily build flow"
+      - id: ibm-watsonx
+        name: IBM watsonx
+        displayTier: secondary
+        category: vendor
+        logoLight: /public/org-logos/ibm-watsonx-light.svg
+        logoDark: /public/org-logos/ibm-watsonx-light.svg
+        url: https://www.ibm.com/watsonx
+        context: "Sanicle multi-tenant FemTech platform integration"
+      - id: google-ai
+        name: Google AI (Gemini)
+        displayTier: secondary
+        category: vendor
+        logoLight: /public/org-logos/google-ai-light.png
+        logoDark: /public/org-logos/google-ai-light.png
+        url: https://ai.google
+        context: "Sanicle, TechNest curriculum, Cloudflare Workers AI integrations"
+      - id: vercel
+        name: Vercel
+        displayTier: secondary
+        category: vendor
+        logoLight: /public/org-logos/vercel-light.svg
+        logoDark: /public/org-logos/vercel-light.svg
+        url: https://vercel.com
+        context: "Primary deploy target — every flagship project"
+      - id: cloudflare
+        name: Cloudflare
+        displayTier: secondary
+        category: vendor
+        logoLight: /public/org-logos/cloudflare-light.png
+        logoDark: /public/org-logos/cloudflare-light.png
+        url: https://www.cloudflare.com
+        context: "Workers AI + Vectorize + KV — teaching platform RAG"
+      - id: neon
+        name: Neon
+        displayTier: secondary
+        category: vendor
+        logoLight: /public/org-logos/neon-light.svg
+        logoDark: /public/org-logos/neon-light.svg
+        url: https://neon.tech
+        context: "Postgres backbone — She Sharp, FemTech Weekend"
+
+    # ---------------------------------------------------------------------
+    # TEACHING COHORTS — the four AI-programming cohorts Chan has led
+    # since 2024. Canonical record is the ai-programming-teaching-project
+    # repo (versioned_docs/version-*/). Surfaced as the AI Mentor 2×2
+    # grid in the README, as an ItemList<EducationalOccupationalProgram>
+    # in JSON-LD, and as the "## AI Mentor & Educator" llms.txt section.
+    # ---------------------------------------------------------------------
+    teachingCohorts:
+      - id: forward-with-her-2024-winter
+        cohortLabel: Winter 2024
+        programName: "Forward with Her — AI Programming Cohort 1"
+        partnerOrg: "Forward with Her (她行)"
+        audience: "Beginner-friendly; designers & professionals upskilling"
+        format: "Multi-module course series with student showcases"
+        dateRange: "Winter 2024"
+        keyOutcome: "2 documented student showcases (Sasa's blog, Stella's homepage)"
+        curriculumUrl: https://programming.chanmeng.org/docs/2024-winter/intro
+        relatedVolunteerId: forward-with-her-mentor
+        relatedProjectId: ai-programming-teaching-project
+      - id: forward-with-her-2025-summer
+        cohortLabel: Summer 2025
+        programName: "AI Programming Open Course (Cohort 2)"
+        partnerOrg: "Forward with Her (她行)"
+        audience: "Zero-foundation; designers, working professionals, freelancers"
+        format: "2-course open series + recorded video tutorials + mentor Q&A"
+        dateRange: "Summer 2025"
+        keyOutcome: "Mentor Group Q&A on identity & multi-lens worldview (Jul 27 2025)"
+        curriculumUrl: https://programming.chanmeng.org/docs/2025-summer/intro
+        relatedVolunteerId: forward-with-her-mentor
+        relatedProjectId: ai-programming-teaching-project
+      - id: her-waka-2026
+        cohortLabel: Her Waka 2026
+        programName: "AI × Career Empowerment Programme"
+        partnerOrg: "MSD × SheSharp × academyEX (Auckland, NZ)"
+        audience: "Women returning to the workforce (25 ppl / session cap)"
+        format: "4 in-person workshops + 10 self-paced AI tutorials + job-search library"
+        dateRange: "Mar — Jun 2026"
+        keyOutcome: "NZ Ministry of Social Development-funded; full curriculum authored solo"
+        curriculumUrl: https://programming.chanmeng.org/docs/2026-her-waka/programme/about-her-waka
+        relatedWorkId: she-sharp
+        relatedVolunteerId: she-sharp-ambassador
+        relatedProjectId: her-waka
+      - id: technest-2026
+        cohortLabel: TechNest 2026
+        programName: "TechNest AI Track — Cohort 3"
+        partnerOrg: "TechNest Community (Newfoundland nonprofit)"
+        audience: "Youth & newcomers with zero ChatGPT experience"
+        format: "12 weeks (8 teaching + 4-week multi-user AI SaaS capstone)"
+        dateRange: "Apr 25 — Jul 17 2026"
+        keyOutcome: '"Natural language is the source code" doctrine; live capstone demos'
+        curriculumUrl: https://programming.chanmeng.org/docs/2026-technest/curriculum-outline
+        relatedWorkId: technest-ai-track
+        relatedProjectId: ai-programming-teaching-project
+
+    teachingImpact:
+      cohortCount: 4
+      learnerReachClaim: "100+ direct learners across 4 cohorts since 2024"
+      menteeRefsClaim: "7 LinkedIn references from Forward with Her mentees"
+      flagshipAwardClaim: "Outstanding Mentor Award — AI Hackathon Festival 2025"
+
     # Project ordering for README
     flagshipProjectIds: [tam-ai-ti, she-sharp, gavigo-ire, google-news-mcp]
     openSourcePrimaryIds:

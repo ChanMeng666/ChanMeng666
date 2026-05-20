@@ -195,6 +195,64 @@ const flatten = (s) =>
     .trim();
 data._basicsSummaryFlat = flatten(data.basics?.summary);
 
+// ---------------------------------------------------------------------------
+// Personal-brand showcase: value proposition, engagement roles, availability,
+// FAQ, organisations (trusted-by band), teaching cohorts (AI Mentor section).
+// All derived from meta.x_brand additions; null-safe so partials render
+// gracefully when a block is absent.
+// ---------------------------------------------------------------------------
+
+data._valueProposition = data.meta?.x_brand?.valueProposition ?? null;
+
+const engagementRoles = data.meta?.x_brand?.engagementRoles ?? [];
+data._engagementRoles = {
+  all: engagementRoles,
+  firstRow: engagementRoles.slice(0, 2),
+  secondRow: engagementRoles.slice(2, 4),
+};
+
+data._engagementAvailability = data.meta?.x_brand?.engagementAvailability ?? null;
+data._faq = data.meta?.x_brand?.faq ?? [];
+
+// Organisations: split by displayTier; entries whose logoLight file doesn't
+// exist on disk are filtered out of the rendered band but still surface in
+// llms.txt / llms-full.txt and in `_organisationsMissingLogos` (a sourcing
+// to-do list printed during build for transparency).
+const allOrgs = data.meta?.x_brand?.organisations ?? [];
+const orgHasRenderableLogo = (o) => {
+  if (!o?.logoLight) return false;
+  const rel = String(o.logoLight).replace(/^\/+/, "");
+  return fs.existsSync(path.join(repoRoot, rel));
+};
+const orgsRenderable = allOrgs.filter(orgHasRenderableLogo);
+data._organisationsAll = allOrgs;
+data._organisationsPrimary = orgsRenderable.filter((o) => o.displayTier === "primary");
+data._organisationsSecondary = orgsRenderable.filter((o) => o.displayTier === "secondary");
+data._organisationsByTier = {
+  primary: allOrgs.filter((o) => o.displayTier === "primary"),
+  secondary: allOrgs.filter((o) => o.displayTier === "secondary"),
+};
+data._organisationsMissingLogos = allOrgs
+  .filter((o) => !orgHasRenderableLogo(o))
+  .map((o) => ({ id: o.id, name: o.name, expectedPath: o.logoLight ?? "(none specified)" }));
+
+if (data._organisationsMissingLogos.length) {
+  console.warn(
+    `\n⚠ ${data._organisationsMissingLogos.length} organisations have no renderable logo yet — band will skip them until logo files land:`,
+  );
+  for (const o of data._organisationsMissingLogos) {
+    console.warn(`    ${o.id.padEnd(32)} ${o.name}  ← ${o.expectedPath}`);
+  }
+}
+
+data._teachingCohorts = data.meta?.x_brand?.teachingCohorts ?? [];
+data._teachingImpact = data.meta?.x_brand?.teachingImpact ?? null;
+// 2×2 grid rows for the AI Mentor partial
+data._teachingCohortRows = [];
+for (let i = 0; i < data._teachingCohorts.length; i += 2) {
+  data._teachingCohortRows.push(data._teachingCohorts.slice(i, i + 2));
+}
+
 // Pre-built JSON-LD objects — stringify here so we never template-build JSON
 // (which is fragile with quotes and newlines in the content).
 data._jsonldProfilePage = {
@@ -230,10 +288,30 @@ data._jsonldProfilePage = {
       ...(w.url ? { url: w.url } : {}),
       jobTitle: w.position,
     })),
-    hasOccupation: {
-      "@type": "Occupation",
-      name: data.basics?.label,
-    },
+    affiliation: data._organisationsByTier.primary.map((o) => ({
+      "@type": "Organization",
+      name: o.name,
+      url: o.url,
+      ...(o.logoLight ? { logo: `https://github.com/ChanMeng666/ChanMeng666/raw/main${o.logoLight}` } : {}),
+      description: o.context,
+    })),
+    hasOccupation: [
+      {
+        "@type": "Occupation",
+        name: data.basics?.label,
+      },
+      {
+        "@type": "Occupation",
+        name: "AI Programming Educator",
+        description: data._valueProposition?.tagline ?? "Lead instructor for AI-programming cohorts.",
+        occupationLocation: [
+          { "@type": "Country", name: "New Zealand" },
+          { "@type": "Country", name: "Canada" },
+          { "@type": "Country", name: "China" },
+        ],
+        educationRequirements: "https://programming.chanmeng.org",
+      },
+    ],
   },
 };
 
@@ -256,8 +334,75 @@ data._jsonldItemList = {
   })),
 };
 
+// ---------------------------------------------------------------------------
+// Additional JSON-LD for the personal-brand showcase frame:
+//   - Services (4 engagement role archetypes Chan offers)
+//   - FAQPage (5 employer-facing Q&A pairs — highest-leverage GEO surface)
+//   - Cohort ItemList (4 AI-programming cohorts as EducationalOccupationalProgram)
+// All three reference back to the Person via @id so crawlers can stitch the graph.
+// ---------------------------------------------------------------------------
+
+data._jsonldServices = (data._engagementRoles.all ?? []).map((role) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${data._jsonldIdentifier}#service-${role.id}`,
+  serviceType: role.title,
+  name: role.title,
+  description: role.scope,
+  termsOfService: role.format,
+  areaServed: "Worldwide",
+  provider: {
+    "@type": "Person",
+    "@id": data._jsonldIdentifier,
+    name: data.basics?.name,
+  },
+}));
+
+data._jsonldFAQPage = data._faq.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: data._faq.map((qa) => ({
+        "@type": "Question",
+        name: qa.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: qa.answer,
+        },
+      })),
+    }
+  : null;
+
+data._jsonldCohortItemList = data._teachingCohorts.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: `${data.basics?.name}'s AI Programming Cohorts Taught`,
+      dateModified: `${isoDate}T00:00:00+00:00`,
+      itemListElement: data._teachingCohorts.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "EducationalOccupationalProgram",
+          name: c.programName,
+          description: `${c.cohortLabel} · ${c.audience} · ${c.format}`,
+          provider: {
+            "@type": "Organization",
+            name: c.partnerOrg,
+          },
+          educationalLevel: "Adult / Professional",
+          url: c.curriculumUrl,
+          startDate: c.dateRange,
+        },
+      })),
+    }
+  : null;
+
 data._jsonldProfilePagePretty = JSON.stringify(data._jsonldProfilePage, null, 2);
 data._jsonldItemListPretty = JSON.stringify(data._jsonldItemList, null, 2);
+data._jsonldServicesPretty = data._jsonldServices.map((s) => JSON.stringify(s, null, 2));
+data._jsonldFAQPagePretty = data._jsonldFAQPage ? JSON.stringify(data._jsonldFAQPage, null, 2) : "";
+data._jsonldCohortItemListPretty = data._jsonldCohortItemList ? JSON.stringify(data._jsonldCohortItemList, null, 2) : "";
 
 // ---------------------------------------------------------------------------
 // Handlebars setup
@@ -318,6 +463,9 @@ Handlebars.registerHelper("hasNarrative", (n) =>
 Handlebars.registerHelper("trim", (s) => String(s ?? "").trim());
 Handlebars.registerHelper("flatten", (s) => String(s ?? "").replace(/\s+/g, " ").trim());
 Handlebars.registerHelper("split", (s, sep) => String(s ?? "").split(sep));
+Handlebars.registerHelper("slice", (arr, start, end) =>
+  Array.isArray(arr) ? arr.slice(Number(start) || 0, Number(end) || arr.length) : [],
+);
 Handlebars.registerHelper("upper", (s) => String(s ?? "").toUpperCase());
 Handlebars.registerHelper("json", (v) => JSON.stringify(v));
 Handlebars.registerHelper("year", () => year);

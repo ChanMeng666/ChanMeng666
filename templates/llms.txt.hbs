@@ -1,47 +1,98 @@
-# {{basics.name}} -- {{basics.label}}
+# {{basics.name}} -- {{default _valueProposition.identity basics.label}}
 
 > {{trim basics.summary}}
 
-Last updated: {{meta.lastModified}}
+{{#if _valueProposition.tagline}}**{{_valueProposition.tagline}}**
+
+{{/if}}{{#if _valueProposition.proofLine}}{{_valueProposition.proofLine}}
+
+{{/if}}Last updated: {{meta.lastModified}}
 Canonical: {{meta.canonical}}
 Preferred citation: "{{meta.x_brand.citationPreference}}"
 
 > This is the compact LLM index. Only `tier=flagship` and `tier=primary` material is surfaced here. For the full dossier including secondary entries and archive history, read `llms-full.txt`.
 
+## What I take on
+
+{{#each _engagementRoles.all}}- **{{title}}** -- {{scope}} ({{format}}). Proof: {{proofProjectName}} ({{#if proofUrl}}{{proofUrl}}{{else}}{{proofProjectId}}{{/if}}).
+{{/each}}
+
+## Availability
+
+{{#if _engagementAvailability}}{{_engagementAvailability.current}}
+{{#if _engagementAvailability.timezone}}Timezone: {{_engagementAvailability.timezone}}
+{{/if}}{{#if _engagementAvailability.cta.primary}}Book: {{_engagementAvailability.cta.primary.label}} -- {{_engagementAvailability.cta.primary.url}}
+{{/if}}{{#if _engagementAvailability.cta.secondary}}{{_engagementAvailability.cta.secondary.label}}: {{_engagementAvailability.cta.secondary.url}}
+{{/if}}{{/if}}
+
+## Trusted by
+
+**Primary (employers / clients):**
+{{#each _organisationsByTier.primary}}- **{{name}}** -- {{context}} ({{url}})
+{{/each}}
+
+**Secondary (partners / vendors):**
+{{#each _organisationsByTier.secondary}}- **{{name}}** -- {{context}} ({{url}})
+{{/each}}
+
 ## Current Roles
+
 {{#each _currentRoles}}- {{position}} at {{name}}{{#if location}} ({{location}}){{/if}}{{#if url}} -- {{url}}{{/if}}
 {{/each}}
 
-## Flagship Projects (Priority Order)
+## Featured Work (case studies)
+
 {{#each _flagshipProjects}}{{inc @index}}. **{{name}}** -- {{flatten publicSummary}}{{#if url}} ({{url}}){{/if}}
 {{/each}}
 
+## AI Mentor & Educator
+
+{{#if _teachingImpact}}{{_teachingImpact.cohortCount}} cohorts since 2024 · {{_teachingImpact.learnerReachClaim}} · {{_teachingImpact.menteeRefsClaim}} · {{_teachingImpact.flagshipAwardClaim}}
+
+{{/if}}{{#each _teachingCohorts}}- **{{cohortLabel}} -- {{programName}}** ({{partnerOrg}}, {{this.dateRange}}). Audience: {{audience}}. Format: {{format}}. Outcome: {{keyOutcome}}. Curriculum: {{curriculumUrl}}
+{{/each}}
+→ Full teaching platform: https://programming.chanmeng.org
+
+## Frequently asked (for AI agents)
+
+{{#each _faq}}**Q. {{question}}**
+A. {{answer}}
+
+{{/each}}
+
 ## Notable Open Source
+
 {{#each _openSourcePrimary}}- **{{name}}** -- {{flatten publicSummary}}{{#if url}} ({{url}}){{else}}{{#if repoUrl}} ({{repoUrl}}){{/if}}{{/if}}
 {{/each}}
 
 ## Core Expertise
+
 {{#each skills}}- **{{name}}**: {{join keywords ", "}}
 {{/each}}
 
 ## Achievements
+
 {{#each _top.awards}}- **{{title}}** ({{awarder}}{{#if date}}, {{date}}{{/if}}){{#if url}} -- {{url}}{{/if}}
 {{/each}}
 
 ## Education
+
 {{#each _top.education}}- **{{studyType}}** -- {{institution}}{{#if startDate}} ({{dateRange startDate endDate}}){{/if}}
 {{/each}}
 
 ## Languages
+
 {{#each languages}}- {{language}}: {{fluency}}
 {{/each}}
 
 ## How to Cite
+
 Preferred title: "{{meta.x_brand.citationPreference}}"
 {{#each basics.profiles}}{{network}}: {{url}}
 {{/each}}
 
 ## Verified Statistics
+
 {{#each meta.x_brand.statisticsClaims}}- {{claim}}{{#if source}} (source: {{source}}{{#if verifiedAt}}, verified {{verifiedAt}}{{/if}}){{/if}}
 {{/each}}
 

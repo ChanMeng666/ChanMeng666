@@ -1,0 +1,44 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION: What I take on (4 engagement-role archetypes + availability CTA)
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+{{#if _engagementRoles.all.length}}
+<div align="center">
+
+[![What I take on](https://gradient-svg-generator.vercel.app/api/svg?text=What+I+take+on&template=text-shimmer-blue&height=50)](#)
+
+</div>
+
+<br>
+
+<table>
+  <tr>
+{{#each _engagementRoles.firstRow}}    <td width="50%" valign="top">
+      <h3>{{title}}</h3>
+      <p>{{scope}}</p>
+      <p><em>{{format}}</em></p>
+      <p>→ proof: <a href="{{#if proofUrl}}{{proofUrl}}{{else}}#{{proofProjectId}}{{/if}}"><strong>{{proofProjectName}}</strong></a></p>
+    </td>
+{{/each}}  </tr>
+  <tr>
+{{#each _engagementRoles.secondRow}}    <td width="50%" valign="top">
+      <h3>{{title}}</h3>
+      <p>{{scope}}</p>
+      <p><em>{{format}}</em></p>
+      <p>→ proof: <a href="{{#if proofUrl}}{{proofUrl}}{{else}}#{{proofProjectId}}{{/if}}"><strong>{{proofProjectName}}</strong></a></p>
+    </td>
+{{/each}}  </tr>
+</table>
+
+{{#if _engagementAvailability}}
+<div align="center">
+
+<sub>{{_engagementAvailability.current}}</sub>
+
+<br>
+
+{{#if _engagementAvailability.cta.primary}}[![{{_engagementAvailability.cta.primary.label}}](https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode _engagementAvailability.cta.primary.label}}&template=shimmer-green&height=28)]({{_engagementAvailability.cta.primary.url}}){{/if}}{{#if _engagementAvailability.cta.secondary}}&nbsp;&nbsp;[![{{_engagementAvailability.cta.secondary.label}}](https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode _engagementAvailability.cta.secondary.label}}&template=shimmer-dark&height=28)]({{_engagementAvailability.cta.secondary.url}}){{/if}}
+
+</div>
+{{/if}}
+{{/if}}

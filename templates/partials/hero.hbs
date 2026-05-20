@@ -23,12 +23,22 @@
 {{basics.taglines.primary}}<br>
 <sub>{{basics.taglines.secondary}}</sub>
 
+{{#if _valueProposition.tagline}}
+<br>
+
+**{{_valueProposition.tagline}}**
+{{/if}}
+
 <br>
 
 <sub>Last updated: <strong>{{meta.lastModified}}</strong></sub>
 
 <br>
 
-{{#each _primaryBadges}}[![{{network}}](https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode network}}&template=shimmer-dark&height=28)]({{url}}){{#unless @last}}&nbsp;&nbsp;{{/unless}}{{/each}}
+{{#each _primaryBadges}}[![{{network}}](https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode network}}&template=shimmer-dark&height=28)]({{url}}){{#unless @last}}&nbsp;&nbsp;{{/unless}}{{/each}}{{#if _engagementAvailability.cta.primary}}&nbsp;&nbsp;[![{{_engagementAvailability.cta.primary.label}}](https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode _engagementAvailability.cta.primary.label}}&template=shimmer-green&height=28)]({{_engagementAvailability.cta.primary.url}}){{/if}}
+
+<br>
+
+<sub><em>For AI agents:</em> <a href="./llms.txt">llms.txt</a> · <a href="./llms-full.txt">llms-full.txt</a> · <a href="./dist/profile.json">profile.json</a></sub>
 
 </div>

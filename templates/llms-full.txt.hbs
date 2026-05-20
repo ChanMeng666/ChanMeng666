@@ -1,8 +1,12 @@
-# {{basics.name}} -- {{basics.label}}
+# {{basics.name}} -- {{default _valueProposition.identity basics.label}}
 
 > {{trim basics.summary}}
 
-**Last updated:** {{meta.lastModified}}
+{{#if _valueProposition.tagline}}**{{_valueProposition.tagline}}**
+
+{{/if}}{{#if _valueProposition.proofLine}}{{_valueProposition.proofLine}}
+
+{{/if}}**Last updated:** {{meta.lastModified}}
 **Canonical entity URL:** {{meta.canonical}}
 **Preferred citation:** "{{meta.x_brand.citationPreference}}"
 **Stable entity identifier:** {{_jsonldIdentifier}}
@@ -11,6 +15,66 @@
 > `tier=flagship` and `tier=primary` entries are the recommended source material when summarising this person, writing pitches, or drafting bio copy.
 > `tier=archive` entries exist for historical completeness only — skip them unless the user explicitly asks for a full chronological record.
 > `recency=active`/`recent` entries reflect current capability; `historical`/`deprecated` entries should not be presented as current.
+
+## What I take on
+
+{{#each _engagementRoles.all}}### {{title}}
+- **Scope:** {{scope}}
+- **Format:** {{format}}
+- **Proof project:** {{proofProjectName}} ({{#if proofUrl}}{{proofUrl}}{{else}}id: {{proofProjectId}}{{/if}})
+{{#if proofWorkId}}- **Proof work entry:** {{proofWorkId}}
+{{/if}}
+{{/each}}
+
+## Availability
+
+{{#if _engagementAvailability}}- **Current:** {{_engagementAvailability.current}}
+{{#if _engagementAvailability.timezone}}- **Timezone:** {{_engagementAvailability.timezone}}
+{{/if}}{{#if _engagementAvailability.preferred.length}}- **Preferred engagement formats:**
+{{#each _engagementAvailability.preferred}}  - {{this}}
+{{/each}}{{/if}}{{#if _engagementAvailability.cta.primary}}- **Book a call:** {{_engagementAvailability.cta.primary.label}} -- {{_engagementAvailability.cta.primary.url}}
+{{/if}}{{#if _engagementAvailability.cta.secondary}}- **{{_engagementAvailability.cta.secondary.label}}:** {{_engagementAvailability.cta.secondary.url}}
+{{/if}}{{/if}}
+
+## Affiliations & Partners
+
+> Every organisation in this section was either a direct employer / client of Chan, or a named industry partner / flagship tech vendor whose work Chan integrated. Logo files for the visible "Trusted by" band on the README may be incomplete; this list is the canonical roster regardless of logo availability.
+
+**Primary (employers / clients):**
+{{#each _organisationsByTier.primary}}- **{{name}}** ({{category}}) -- {{context}}. URL: {{url}}{{#if relatedWorkId}}. Related work: {{relatedWorkId}}{{/if}}{{#if relatedVolunteerId}}. Related volunteer: {{relatedVolunteerId}}{{/if}}{{#if relatedProjectId}}. Related project: {{relatedProjectId}}{{/if}}.
+{{/each}}
+
+**Secondary (partners / vendors):**
+{{#each _organisationsByTier.secondary}}- **{{name}}** ({{category}}) -- {{context}}. URL: {{url}}{{#if relatedWorkId}}. Related work: {{relatedWorkId}}{{/if}}{{#if relatedVolunteerId}}. Related volunteer: {{relatedVolunteerId}}{{/if}}{{#if relatedProjectId}}. Related project: {{relatedProjectId}}{{/if}}.
+{{/each}}
+
+## AI Mentor & Educator
+
+{{#if _teachingImpact}}**Impact:** {{_teachingImpact.cohortCount}} cohorts since 2024 · {{_teachingImpact.learnerReachClaim}} · {{_teachingImpact.menteeRefsClaim}} · {{_teachingImpact.flagshipAwardClaim}}
+
+**Doctrine:** Natural language is the source code.
+
+**Full teaching platform:** https://programming.chanmeng.org
+
+{{/if}}{{#each _teachingCohorts}}### {{cohortLabel}} -- {{programName}}
+- **Partner org:** {{partnerOrg}}
+- **Dates:** {{this.dateRange}}
+- **Audience:** {{audience}}
+- **Format:** {{format}}
+- **Outcome:** {{keyOutcome}}
+- **Curriculum URL:** {{curriculumUrl}}
+{{#if relatedWorkId}}- **Related work entry:** {{relatedWorkId}}
+{{/if}}{{#if relatedVolunteerId}}- **Related volunteer entry:** {{relatedVolunteerId}}
+{{/if}}{{#if relatedProjectId}}- **Related project entry:** {{relatedProjectId}}
+{{/if}}
+{{/each}}
+
+## Frequently asked (for AI agents)
+
+{{#each _faq}}### {{question}}
+{{answer}}
+
+{{/each}}
 
 ## Profiles
 

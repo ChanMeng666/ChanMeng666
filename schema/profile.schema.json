@@ -501,7 +501,135 @@
         "identifier": {
           "type": "string",
           "description": "Stable cross-surface entity ID emitted into JSON-LD."
+        },
+
+        "valueProposition": {
+          "type": "object",
+          "description": "Brand positioning surfaced in hero, llms.txt header, and JSON-LD Person.description.",
+          "required": ["identity", "tagline"],
+          "properties": {
+            "identity": { "type": "string", "description": "Three-pillar role badge, e.g. 'AI Agent Architect · Founding-engineer · AI Educator'." },
+            "tagline": { "type": "string", "description": "One-sentence value proposition." },
+            "proofLine": { "type": "string", "description": "Optional inline proof stats." }
+          }
+        },
+
+        "engagementRoles": {
+          "type": "array",
+          "description": "Four role archetypes Chan takes on. Surfaced as the 2×2 'What I take on' panel + Service[] in JSON-LD + ## section in llms.txt.",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "scope", "format", "proofProjectId", "proofProjectName"],
+            "properties": {
+              "id":               { "type": "string", "pattern": "^[a-z0-9-]+$" },
+              "title":            { "type": "string" },
+              "scope":            { "type": "string" },
+              "format":           { "type": "string" },
+              "proofProjectId":   { "type": "string", "description": "ID of the project that best demonstrates this role; used to deep-link from the panel into Featured Work when the project is flagship-tier." },
+              "proofProjectName": { "type": "string", "description": "Display name shown in the proof link." },
+              "proofUrl":         { "type": "string", "format": "uri", "description": "Optional external URL — wins over in-page anchor when set. Use for non-flagship proof projects whose anchor isn't on the page." },
+              "proofWorkId":      { "type": ["string", "null"] }
+            }
+          }
+        },
+
+        "engagementAvailability": {
+          "type": "object",
+          "description": "Open-to-work signal + preferred engagement formats + CTA links.",
+          "required": ["current", "cta"],
+          "properties": {
+            "current":   { "type": "string" },
+            "preferred": { "type": "array", "items": { "type": "string" } },
+            "timezone":  { "type": "string" },
+            "cta": {
+              "type": "object",
+              "required": ["primary"],
+              "properties": {
+                "primary":   { "$ref": "#/$defs/ctaLink" },
+                "secondary": { "$ref": "#/$defs/ctaLink" }
+              }
+            }
+          }
+        },
+
+        "faq": {
+          "type": "array",
+          "description": "Employer-facing Q&A pairs. Emitted as schema.org FAQPage in JSON-LD + ## Frequently asked section in llms.txt / llms-full.txt.",
+          "items": {
+            "type": "object",
+            "required": ["question", "answer"],
+            "properties": {
+              "question": { "type": "string" },
+              "answer":   { "type": "string" }
+            }
+          }
+        },
+
+        "organisations": {
+          "type": "array",
+          "description": "Roster for the 'Trusted by' logo band. Two display tiers + three categories. logoLight may be null while the file is being sourced — build script filters to entries whose logo file exists on disk.",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "displayTier", "category", "url", "context"],
+            "properties": {
+              "id":           { "type": "string", "pattern": "^[a-z0-9-]+$" },
+              "name":         { "type": "string" },
+              "displayTier":  { "type": "string", "enum": ["primary", "secondary"] },
+              "category":     { "type": "string", "enum": ["employer", "partner", "vendor"] },
+              "logoLight":    { "type": ["string", "null"] },
+              "logoDark":     { "type": ["string", "null"] },
+              "url":          { "type": "string", "format": "uri" },
+              "context":      { "type": "string", "description": "One-line role-of-this-org-in-Chan's-story; surfaced as hover-tooltip on the logo." },
+              "relatedWorkId":      { "type": ["string", "null"] },
+              "relatedVolunteerId": { "type": ["string", "null"] },
+              "relatedProjectId":   { "type": ["string", "null"] }
+            }
+          }
+        },
+
+        "teachingCohorts": {
+          "type": "array",
+          "description": "Four AI-programming cohorts Chan has led since 2024. Surfaced as the AI Mentor 2×2 grid + ItemList<EducationalOccupationalProgram> in JSON-LD + ## section in llms.txt.",
+          "items": {
+            "type": "object",
+            "required": ["id", "cohortLabel", "programName", "partnerOrg", "audience", "format", "dateRange", "keyOutcome", "curriculumUrl"],
+            "properties": {
+              "id":             { "type": "string", "pattern": "^[a-z0-9-]+$" },
+              "cohortLabel":    { "type": "string", "description": "Short badge, e.g. 'Winter 2024'." },
+              "programName":    { "type": "string" },
+              "partnerOrg":     { "type": "string" },
+              "audience":       { "type": "string" },
+              "format":         { "type": "string" },
+              "dateRange":      { "type": "string" },
+              "keyOutcome":     { "type": "string" },
+              "curriculumUrl":  { "type": "string", "format": "uri" },
+              "relatedWorkId":      { "type": ["string", "null"] },
+              "relatedVolunteerId": { "type": ["string", "null"] },
+              "relatedProjectId":   { "type": ["string", "null"] }
+            }
+          }
+        },
+
+        "teachingImpact": {
+          "type": "object",
+          "description": "Pre-aggregated teaching-reach stats surfaced under the AI Mentor section header.",
+          "required": ["cohortCount"],
+          "properties": {
+            "cohortCount":         { "type": "integer", "minimum": 0 },
+            "learnerReachClaim":   { "type": "string" },
+            "menteeRefsClaim":     { "type": "string" },
+            "flagshipAwardClaim":  { "type": "string" }
+          }
         }
+      }
+    },
+
+    "ctaLink": {
+      "type": "object",
+      "required": ["label", "url"],
+      "properties": {
+        "label": { "type": "string" },
+        "url":   { "type": "string" }
       }
     }
   }

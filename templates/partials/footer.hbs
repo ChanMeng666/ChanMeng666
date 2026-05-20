@@ -6,6 +6,12 @@
 
 ---
 
+{{#if _engagementAvailability}}
+<sub>{{_engagementAvailability.current}}{{#if _engagementAvailability.cta.primary}} &nbsp;·&nbsp; <a href="{{_engagementAvailability.cta.primary.url}}"><strong>{{_engagementAvailability.cta.primary.label}}</strong></a>{{/if}}</sub>
+
+<br><br>
+{{/if}}
+
 <details>
 <summary>Connect, Subscribe, Support...</summary>
 

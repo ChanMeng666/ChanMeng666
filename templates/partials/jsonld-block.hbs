@@ -39,4 +39,23 @@ Canonical: {{meta.canonical}}
 {{_jsonldItemListPretty}}
 </script>
 
+{{#if _jsonldFAQPagePretty}}
+<script type="application/ld+json">
+{{_jsonldFAQPagePretty}}
+</script>
+{{/if}}
+
+{{#if _jsonldCohortItemListPretty}}
+<script type="application/ld+json">
+{{_jsonldCohortItemListPretty}}
+</script>
+{{/if}}
+
+{{#each _jsonldServicesPretty}}
+<script type="application/ld+json">
+{{this}}
+</script>
+
+{{/each}}
+
 -->

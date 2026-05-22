@@ -444,11 +444,27 @@ data._jsonldProfilePage = {
     url: data.basics?.url,
     email: data.basics?.email,
     sameAs: data._sameAs,
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      name: "Resume / CV",
-      url: "https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf",
-    },
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Resume / CV",
+        url: "https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf",
+      },
+      ...(data.certificates ?? [])
+        .filter((c) => (c.tier === "flagship" || c.tier === "primary") && c.url)
+        .map((c) => ({
+          "@type": "EducationalOccupationalCredential",
+          name: c.name,
+          ...(c.credentialId ? { credentialId: c.credentialId } : {}),
+          credentialCategory: "certificate",
+          url: c.url,
+          recognizedBy: {
+            "@type": "Organization",
+            name: c.issuer,
+          },
+          ...(c.date ? { datePublished: c.date } : {}),
+        })),
+    ],
     knowsAbout: (data.skills ?? []).flatMap((s) => s.keywords ?? []),
     alumniOf: (data.education ?? []).map((e) => ({
       "@type": "CollegeOrUniversity",

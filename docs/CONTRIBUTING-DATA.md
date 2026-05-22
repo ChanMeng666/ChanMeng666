@@ -29,7 +29,7 @@ work:
     endDate: null
     location: Remote
     url: https://example.com/
-    logo: /public/experience/new-company-logo.svg
+    logo: /public/organizations/new-company-logo.svg
     keywords: [TypeScript, Kubernetes]
     narrative:
       companyContext: |

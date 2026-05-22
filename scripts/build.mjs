@@ -54,8 +54,52 @@ const byId = (arr) => Object.fromEntries((arr ?? []).map((x) => [x.id, x]));
 data._index = {
   projects: byId(data.projects),
   work: byId(data.work),
+  volunteer: byId(data.volunteer),
   education: byId(data.education),
+  collaborators: byId(data.collaborators),
 };
+
+// ---------------------------------------------------------------------------
+// Collaborator cross-reference validation + privacy scrub
+// (collaborators[] is the entity-graph index that drives JSON-LD Person.knows[])
+// ---------------------------------------------------------------------------
+
+const orgRoster = data.organizations ?? data.meta?.x_brand?.organisations ?? [];
+const orgIds = new Set(orgRoster.map((o) => o.id));
+const workIds = new Set((data.work ?? []).map((w) => w.id));
+const volunteerIds = new Set((data.volunteer ?? []).map((v) => v.id));
+const projectIds = new Set((data.projects ?? []).map((p) => p.id));
+
+const xrefWarnings = [];
+for (const c of data.collaborators ?? []) {
+  if (c.currentOrgId && !orgIds.has(c.currentOrgId)) {
+    xrefWarnings.push(`collaborator '${c.id}'.currentOrgId='${c.currentOrgId}' not in organisations roster`);
+  }
+  for (const w of c.worksTogether ?? []) {
+    const pool = w.contextType === "project" ? projectIds
+               : w.contextType === "work" ? workIds
+               : w.contextType === "volunteer" ? volunteerIds
+               : null;
+    if (pool && !pool.has(w.contextId)) {
+      xrefWarnings.push(`collaborator '${c.id}'.worksTogether[].contextId='${w.contextId}' not in ${w.contextType}[]`);
+    }
+  }
+  // Privacy scrub — strip private contact from every rendered surface.
+  if (c.meta?.x_brand?.privateContact) {
+    delete c.meta.x_brand.privateContact;
+  }
+}
+if (xrefWarnings.length) {
+  console.warn("⚠ collaborator cross-reference warnings:");
+  for (const w of xrefWarnings) console.warn(`  ${w}`);
+}
+
+// Derived caches: visible (publicListing !== false) and tier-filtered slices.
+const visibleCollaborators = (data.collaborators ?? []).filter((c) => c.publicListing !== false);
+data._collaboratorsFlagshipPrimary = visibleCollaborators.filter(
+  (c) => c.tier === "flagship" || c.tier === "primary",
+);
+data._collaboratorsAll = visibleCollaborators;
 
 // Sort projects by priority for stable rendering
 const projectsSorted = [...(data.projects ?? [])].sort(
@@ -247,7 +291,28 @@ data._faq = data.meta?.x_brand?.faq ?? [];
 // exist on disk are filtered out of the rendered band but still surface in
 // llms.txt / llms-full.txt and in `_organisationsMissingLogos` (a sourcing
 // to-do list printed during build for transparency).
-const allOrgs = data.meta?.x_brand?.organisations ?? [];
+//
+// Source-of-truth moved from meta.x_brand.organisations (display-only roster)
+// to top-level data.organizations[] (full Organization entity records). The
+// legacy roster is still accepted as fallback during the migration window.
+// We project each top-level entry into the legacy roster shape here so the
+// downstream caches (_orgByWorkId etc.) and existing templates work unchanged.
+const sourceOrgs = data.organizations ?? data.meta?.x_brand?.organisations ?? [];
+const allOrgs = sourceOrgs.map((o) => ({
+  id: o.id,
+  name: o.name,
+  url: o.url,
+  logoLight: o.logo ?? o.logoLight ?? null,
+  logoDark:  o.logoDark ?? o.logo ?? o.logoLight ?? null,
+  displayTier:        o.meta?.x_brand?.displayTier        ?? o.displayTier        ?? (o.tier === "secondary" ? "secondary" : "primary"),
+  category:           o.meta?.x_brand?.category           ?? o.category           ?? "employer",
+  context:            o.meta?.x_brand?.context            ?? o.context            ?? (o.description ? String(o.description).split("\n")[0] : ""),
+  relatedWorkId:      o.meta?.x_brand?.relatedWorkId      ?? o.relatedWorkId      ?? null,
+  relatedVolunteerId: o.meta?.x_brand?.relatedVolunteerId ?? o.relatedVolunteerId ?? null,
+  relatedProjectId:   o.meta?.x_brand?.relatedProjectId   ?? o.relatedProjectId   ?? null,
+  // Carry the enriched record through for JSON-LD Organization emission.
+  _enriched: o,
+}));
 const orgHasRenderableLogo = (o) => {
   if (!o?.logoLight) return false;
   const rel = String(o.logoLight).replace(/^\/+/, "");
@@ -396,13 +461,54 @@ data._jsonldProfilePage = {
       ...(w.url ? { url: w.url } : {}),
       jobTitle: w.position,
     })),
-    affiliation: data._organisationsByTier.primary.map((o) => ({
-      "@type": "Organization",
-      name: o.name,
-      url: o.url,
-      ...(o.logoLight ? { logo: `https://github.com/ChanMeng666/ChanMeng666/raw/main${o.logoLight}` } : {}),
-      description: o.context,
-    })),
+    affiliation: data._organisationsByTier.primary.map((o) => {
+      const e = o._enriched ?? {};
+      const sameAs = (e.sameAs ?? []).filter(Boolean);
+      const desc = e.description ? String(e.description).replace(/\s+/g, " ").trim() : o.context;
+      return {
+        "@type": "Organization",
+        ...(sameAs[0] ? { "@id": sameAs[0] } : {}),
+        name: o.name,
+        url: o.url,
+        ...(o.logoLight ? { logo: `https://github.com/ChanMeng666/ChanMeng666/raw/main${o.logoLight}` } : {}),
+        ...(desc ? { description: desc } : {}),
+        ...(sameAs.length ? { sameAs } : {}),
+        ...(e.founded ? { foundingDate: String(e.founded) } : {}),
+        ...(e.hq?.city || e.hq?.countryCode ? {
+          location: {
+            "@type": "Place",
+            address: {
+              "@type": "PostalAddress",
+              ...(e.hq?.city ? { addressLocality: e.hq.city } : {}),
+              ...(e.hq?.region ? { addressRegion: e.hq.region } : {}),
+              ...(e.hq?.countryCode ? { addressCountry: e.hq.countryCode } : {}),
+            },
+          },
+        } : {}),
+      };
+    }),
+    knows: data._collaboratorsFlagshipPrimary.map((c) => {
+      const orgEntry = c.currentOrgId ? orgRoster.find((o) => o.id === c.currentOrgId) : null;
+      const sameAs = [c.linkedin, c.github, c.website, ...(c.sameAs ?? [])].filter(Boolean);
+      return {
+        "@type": "Person",
+        ...(c.linkedin ? { "@id": c.linkedin } : {}),
+        name: c.name,
+        ...(c.currentTitle ? { jobTitle: c.currentTitle } : {}),
+        ...(c.linkedin ? { url: c.linkedin } : {}),
+        ...(sameAs.length ? { sameAs } : {}),
+        ...(orgEntry ? {
+          worksFor: {
+            "@type": "Organization",
+            ...(orgEntry.sameAs?.[0] ? { "@id": orgEntry.sameAs[0] } : {}),
+            name: orgEntry.name,
+            url: orgEntry.url,
+            ...(orgEntry.sameAs?.length ? { sameAs: orgEntry.sameAs } : {}),
+          },
+        } : {}),
+        ...(c.note ? { description: c.note } : {}),
+      };
+    }),
     hasOccupation: [
       {
         "@type": "Occupation",

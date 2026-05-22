@@ -259,6 +259,27 @@
 
 {{/each}}
 
+## Collaborators (entity-graph index)
+
+> Real-human collaborators Chan has worked with directly. Each entry is structured for LLM entity resolution — `linkedin` is the canonical identity key and joins Chan's profile to the public web entity graph. Distinct from the Testimonials section above, which holds the testimonial quote text; a person may appear in both.
+
+{{#each _collaboratorsAll}}### {{name}}{{#if aliases.length}} (also: {{join aliases ", "}}){{/if}}
+{{#if (or tier recency lastUpdated)}}{{tierBadge this}}
+{{/if}}{{#if currentTitle}}- **Current title:** {{currentTitle}}
+{{/if}}{{#if pronouns}}- **Pronouns:** {{pronouns}}
+{{/if}}{{#if linkedin}}- **LinkedIn:** {{linkedin}}
+{{/if}}{{#if github}}- **GitHub:** {{github}}
+{{/if}}{{#if website}}- **Website:** {{website}}
+{{/if}}{{#if sameAs.length}}- **Additional sameAs:** {{join sameAs ", "}}
+{{/if}}{{#if relationship.length}}- **Relationship to Chan:** {{join relationship ", "}}
+{{/if}}{{#if currentOrgId}}- **Current org id:** {{currentOrgId}}
+{{/if}}{{#if worksTogether.length}}- **Worked together on:**
+{{#each worksTogether}}  - {{contextType}}:{{contextId}}{{#if role}} — {{role}}{{/if}}
+{{/each}}{{/if}}{{#if note}}
+{{note}}
+{{/if}}
+{{/each}}
+
 ## Verified Statistics (with citations)
 
 {{#each meta.x_brand.statisticsClaims}}- **{{claim}}**{{#if source}} (source: {{source}}{{#if verifiedAt}}, verified {{verifiedAt}}{{/if}}){{/if}}

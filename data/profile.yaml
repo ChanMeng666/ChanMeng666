@@ -10019,6 +10019,883 @@ references:
         image: /public/recommendations/Daryll-Hall.jpeg
 
 # =============================================================================
+# ORGANIZATIONS — Top-level entity-graph index. Replaces the legacy
+# meta.x_brand.organisations[] roster. Drives JSON-LD Organization nodes
+# (with sameAs/description/hq/founded) and the README "Trusted by" band.
+# Display-band fields (displayTier, category, context, relatedWorkId) live
+# under meta.x_brand so existing template lookups (_orgByWorkId etc.) keep
+# working unchanged — only the data source moved.
+# =============================================================================
+organizations:
+  # ---- PRIMARY (direct employers/clients) ----
+  - id: engram
+    name: Engram LLC
+    aliases: ["Engram", "engrammedia"]
+    url: https://engram.media
+    logo: /public/experience/engram-logo.jpg
+    type: agency
+    industry: AI-powered media agency / Marketing Services
+    hq: { city: Albuquerque, region: New Mexico, countryCode: US }
+    founded: "2023"
+    description: |
+      Full-stack media systems helping companies reach, engage, and convert
+      audiences through design, content, and AI-powered tools. Premium
+      learning products, marketing automation, and AI-in-marketing
+      specialization. Founded by Luka Madzarac.
+    sameAs:
+      - https://www.linkedin.com/company/engrammedia/
+      - https://www.engramhq.xyz
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Current — AI Agent Architect (May 2026 — present)"
+        relatedWorkId: engram
+
+  - id: gavigo
+    name: GAVIGO Inc.
+    aliases: ["Gavigo"]
+    url: https://gavigo.com
+    logo: /public/experience/gavigo-logo.jpg
+    type: startup
+    industry: Software Development — Activation & Execution Layer for Interactive Software
+    hq: { city: Wilmington, region: Delaware, countryCode: US }
+    founded: "2025"
+    description: |
+      Building an activation and execution layer for interactive software —
+      turning user intent into live interaction without installs, store
+      redirects, or waiting screens. Delaware C-Corp; NVIDIA Inception
+      Program + Google for Startups Cloud Program member; patent-pending
+      architecture. Founded by Saba Gecgil.
+    sameAs:
+      - https://www.linkedin.com/company/gavigo/
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Founding Principal Engineer (Oct 2025 — present)"
+        relatedWorkId: gavigo
+
+  - id: sanicle
+    name: Sanicle Inc.
+    aliases: ["Sanicle.cloud"]
+    url: https://www.sanicle.cloud
+    logo: /public/experience/sanicle-logo.svg
+    type: startup
+    industry: Wellness & Fitness Services — FemTech workplace platform
+    hq: { city: Tulsa, region: Oklahoma, countryCode: US }
+    founded: "2021"
+    description: |
+      AI-powered FemTech platform for menstrual and menopausal health in
+      the workplace. Personalized wellness experiences (hormone-health
+      nutrition plans, streaming workouts, cycle-based insights), AI
+      matching to OBGYN consultations in under five minutes, and an
+      employer dashboard automating period-supply benefits via FSA-HSA at
+      CVS. Founded by Paige Afanu.
+    sameAs: []
+    tier: flagship
+    recency: recent
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "CTO (Mar 2025 — Feb 2026)"
+        relatedWorkId: sanicle
+
+  - id: technest
+    name: TechNest Community
+    url: https://technest.community
+    logo: /public/experience/technest-community-logo.jpg
+    type: nonprofit
+    industry: Non-profit Organizations — Tech upskilling community
+    hq: { city: "St. John's", region: Newfoundland, countryCode: CA }
+    founded: "2024"
+    description: |
+      Inclusive hub for tech enthusiasts, learners, and professionals in
+      Newfoundland — workshops, career-development programmes,
+      hackathons, and community-driven events for both new and seasoned
+      tech professionals. AI Track Cohort 3 underway in 2026.
+    sameAs:
+      - https://www.linkedin.com/company/technestcommunity/
+      - https://technestcommunity.com
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "AI Instructor & Mentor — 2026 AI Track Cohort 3"
+        relatedWorkId: technest
+
+  - id: she-sharp
+    name: She Sharp
+    aliases: ["She#", "SheSharp", "She Sharp NZ"]
+    url: https://shesharp.org.nz
+    logo: /public/experience/she-sharp-logo-purple-dark.svg
+    type: nonprofit
+    industry: Women-in-tech community nonprofit
+    hq: { city: Auckland, region: North Island, countryCode: NZ }
+    founded: "2014"
+    description: |
+      Auckland-based women-in-tech nonprofit bridging the STEM gender gap
+      — networking, mentorship, skill-building for women in computer
+      science, IT, and tech-related fields; inspires young girls via
+      workshops and role models. 2,200+ registered members, 1,000+ active.
+      Founded by Dr Mahsa McCauley (Mohaghegh).
+    sameAs:
+      - https://www.linkedin.com/company/shesharpnz/
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Senior Full-Stack + Ambassador (May 2023 — present)"
+        relatedWorkId: she-sharp
+        relatedVolunteerId: she-sharp-ambassador
+
+  - id: femtech-weekend
+    name: FemTech Weekend
+    url: https://www.femtechweekend.com
+    logo: /public/experience/femtech-weekend-logo.svg
+    type: community
+    industry: Business Consulting & Services — FemTech ecosystem platform
+    hq: { city: Chengdu, region: Sichuan, countryCode: CN }
+    founded: "2024"
+    description: |
+      Global, tech-driven Women's Health Innovation and FemTech ecosystem
+      in Mainland China. Connects the Chinese FemTech scene with global
+      ecosystems via manufacturers, industry leaders, academic
+      researchers, entrepreneurs, investors, and multinationals. Founded
+      by Zhu Yihan.
+    sameAs:
+      - https://www.linkedin.com/company/femtech-weekend/
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "CTO, Chengdu chapter (Mar 2025 — Feb 2026)"
+        relatedWorkId: femtech-weekend
+
+  - id: forward-with-her
+    name: Forward with Her 她行 Mentorship
+    aliases: ["Forward with Her", "她行", "她行 FWH"]
+    url: https://www.linkedin.com/company/taxing-mentorship/
+    logo: /public/experience/forward-with-her-logo.jpg
+    type: community
+    industry: Civic & Social Organizations — Women-in-STEM mentorship
+    hq: { countryCode: CN }
+    founded: "2020"
+    description: |
+      Mentorship programme and community for Chinese college women in
+      STEM — connects and centres women's experience and knowledge;
+      400+ mentees and 100+ mentors as of 2022. UN Women-sponsored since
+      2021.
+    sameAs:
+      - https://www.linkedin.com/company/taxing-mentorship/
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Tech & Professional Development Mentor (Oct 2024 — Sep 2025)"
+        relatedWorkId: forward-with-her
+        relatedVolunteerId: forward-with-her-mentor
+
+  - id: lincoln-university
+    name: Lincoln University, NZ
+    aliases: ["Te Whare Wānaka o Aoraki", "Lincoln Uni"]
+    url: https://www.lincoln.ac.nz
+    logo: /public/education/lincoln-uni-logo.jpg
+    type: university
+    industry: Higher Education — specialist land-based-sectors university
+    hq: { city: Lincoln, region: Canterbury, countryCode: NZ }
+    founded: "1878"
+    description: |
+      NZ specialist university focused on land-based sectors —
+      agriculture, horticulture, environment, food science, supply chain,
+      conservation, landscape architecture.
+    sameAs:
+      - https://www.linkedin.com/school/lincolnuninz/
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Master of Applied Computing (Distinction) + Full-Stack Developer"
+        relatedWorkId: lincoln
+
+  - id: freeperiod
+    name: FreePeriod
+    aliases: ["自在月行", "FreePeriod (HKUST-GZ)"]
+    url: https://www.freeperiod.org
+    logo: /public/experience/free-period-logo.png
+    type: nonprofit
+    industry: Public Health — period-equity hardware
+    hq: { city: Guangzhou, region: Guangdong, countryCode: CN }
+    founded: "2024"
+    description: |
+      Period-equity hardware nonprofit based at HKUST-Guangzhou's Lab of
+      Future Technology — designs compact emergency sanitary-pad stations
+      and advocates free pads in women-friendly public places. Awards
+      include the Best Award at the 12th International Conference on
+      Social Sciences and Humanities (Fukuoka 2024) and the 3rd Tencent
+      Technology Venture Capital Program.
+    sameAs:
+      - https://www.linkedin.com/company/free-period/
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Full-Stack Engineer (Oct — Dec 2024)"
+        relatedWorkId: freeperiod
+
+  - id: copilotkit
+    name: CopilotKit
+    url: https://www.copilotkit.ai
+    logo: /public/experience/copilot-kit-logo.svg
+    type: startup
+    industry: Technology & Internet — open-source agentic UI framework
+    hq: { city: Seattle, region: Washington, countryCode: US }
+    founded: "2023"
+    description: |
+      Full-stack framework for building user-interactive agents and
+      copilots. The company behind the AG-UI Protocol. Open-source (MIT)
+      with a 24k+★ flagship repo.
+    sameAs:
+      - https://www.linkedin.com/company/copilotkit/
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Open-source contributor — 2 merged PRs into a 24.6k★ repo"
+        relatedWorkId: copilotkit
+
+  - id: bytedance
+    name: ByteDance
+    url: https://www.bytedance.com
+    logo: /public/experience/bytedance-logo-english.svg
+    type: enterprise
+    industry: Software Development — global internet & AI conglomerate
+    hq: { city: Beijing, countryCode: CN }
+    founded: "2012"
+    description: |
+      Global incubator of platforms across commerce, content,
+      entertainment, and enterprise services — products including TikTok
+      reach 2.5B+ people. 110K+ employees across 30+ countries.
+    sameAs:
+      - https://www.linkedin.com/company/bytedance/
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Backend Developer, Youth Training Camp (Jun — Aug 2024)"
+        relatedWorkId: bytedance
+
+  - id: cebu-international-academy
+    name: Cebu International Academy
+    aliases: ["CIA"]
+    url: http://cebucia.com
+    logo: /public/experience/cia.jpg
+    type: agency
+    industry: Education Management — ESL training (IELTS / TOEIC / Cambridge)
+    hq: { city: Mandaue, region: Central Visayas, countryCode: PH }
+    founded: "2003"
+    description: |
+      Cebu-based language institution offering IELTS, TOEIC, and Cambridge
+      preparation — aspires to be the leading language school in Cebu and
+      Asia.
+    sameAs:
+      - https://www.linkedin.com/company/cebucia/
+      - https://www.facebook.com/CebuInternationalAcademy
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Volunteer Educator (Mar — Aug 2023)"
+        relatedVolunteerId: cebu-international-academy
+
+  - id: corde
+    name: CORDE
+    aliases: ["CORDE Ltd"]
+    url: https://corde.nz
+    logo: /public/brands/corde-transparent.svg
+    type: enterprise
+    industry: Construction — parks & reserves, water services, three waters, roading
+    hq: { city: Rolleston, region: Canterbury, countryCode: NZ }
+    description: |
+      Canterbury construction company (201–500 employees) specializing in
+      parks & reserves, resource recovery, water services, three waters,
+      and roading. Hosted Chan's Lincoln University COMP693 industry
+      placement.
+    sameAs:
+      - https://www.linkedin.com/company/corde-ltd/
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Full Stack Developer & Lead Documenter — Lincoln University COMP693 industry placement (Jun — Nov 2024)"
+        relatedWorkId: corde
+
+  - id: aotearoa-infinite-academy
+    name: Aotearoa Infinite Academy
+    url: https://www.aotearoainfiniteacademy.school
+    logo: /public/experience/aotearoa-infinite-academy.svg
+    type: startup
+    industry: Education — online high school (NZ's first registered online HS + charter school)
+    hq: { countryCode: NZ }
+    founded: "2025"
+    description: |
+      Pioneer of New Zealand's first registered online high school and
+      first online charter school. Tuition-free, world-class education
+      for high schoolers across Aotearoa. 2026 Year 9–12 enrolments open
+      Nov 12 2025.
+    sameAs:
+      - https://www.linkedin.com/company/aotearoa-infinite-academy/
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: primary
+        category: employer
+        context: "Software Developer (Oct — Nov 2025)"
+        relatedWorkId: aotearoa-infinite-academy
+
+  # ---- SECONDARY (named partners / sponsors / collaborating institutions) ----
+  - id: msd-nz
+    name: NZ Ministry of Social Development
+    aliases: ["MSD", "Ministry of Social Development (MSD)"]
+    url: https://www.msd.govt.nz
+    logo: /public/org-logos/msd-nz-light.svg
+    type: gov
+    industry: Government Administration — NZ social services & employment
+    hq: { city: Wellington, countryCode: NZ }
+    founded: "2001"
+    description: |
+      NZ government ministry helping New Zealanders be safe, strong, and
+      independent — Work and Income, Policy, and Students/Seniors/
+      Integrity Services across 300+ locations; touches 1M+ lives. Funder
+      of Her Waka 2026.
+    sameAs:
+      - https://www.linkedin.com/company/ministry-of-social-development-in-wellington-new-zealand/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: partner
+        context: "Funder — Her Waka 2026 employment-readiness programme"
+
+  - id: academyex
+    name: academyEX
+    url: https://academyex.com
+    logo: /public/org-logos/academyex-light.svg
+    type: enterprise
+    industry: Higher Education — postgraduate professional education (EdTech)
+    hq: { city: Auckland, countryCode: NZ }
+    founded: "2013"
+    description: |
+      NZQA-registered tertiary provider with three faculties — The Mind
+      Lab, Tech Futures Lab, Earth Futures Lab. Future-of-work programmes
+      including the Master of Technological Futures.
+    sameAs:
+      - https://www.linkedin.com/company/academyex/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: partner
+        context: "Host — Her Waka 2026 workshops, Auckland"
+
+  - id: rcsa
+    name: RCSA Australia and New Zealand
+    aliases: ["RCSA"]
+    url: https://www.rcsa.com.au
+    logo: /public/org-logos/rcsa-light.svg
+    type: nonprofit
+    industry: Non-profit Organizations — recruitment & staffing industry association
+    hq: { city: "Collins Street West", region: Victoria, countryCode: AU }
+    founded: "1997"
+    description: |
+      Peak body for the recruitment and staffing industry in Australia
+      and New Zealand — sets standards, runs accreditation, provides
+      education and dispute resolution for member firms.
+    sameAs:
+      - https://www.linkedin.com/company/rcsa-australia-and-new-zealand/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: partner
+        context: "Industry insights partner — Her Waka 2026"
+
+  - id: aut
+    name: Auckland University of Technology
+    aliases: ["AUT", "AUT University"]
+    url: https://www.aut.ac.nz
+    logo: /public/org-logos/aut-light.svg
+    type: university
+    industry: Higher Education — public university (the "University for the Changing World")
+    hq: { city: Auckland, countryCode: NZ }
+    founded: "2000"
+    description: |
+      NZ's second-largest university; strong engineering, computer
+      sciences, and AI research programmes. AUT School of Engineering,
+      Computer and Mathematical Sciences (ECMS) is where Dr Mahsa
+      McCauley leads Computer and Information Sciences.
+    sameAs:
+      - https://www.linkedin.com/school/autuni/
+      - https://www.linkedin.com/company/aut-ecms/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: partner
+        context: "Co-organiser — AI Hackathon Festival 2025"
+
+  - id: ai-forum-nz
+    name: AI Forum New Zealand
+    aliases: ["AI Forum NZ", "Te Kāhui Atamai Iahiko o Aotearoa"]
+    url: https://aiforum.org.nz
+    logo: /public/org-logos/ai-forum-nz-light.svg
+    type: nonprofit
+    industry: Non-profit Organizations — NZ AI ecosystem advocacy
+    hq: { city: Auckland, countryCode: NZ }
+    founded: "2017"
+    description: |
+      AI Forum NZ — 280+ industry, academia, and government members
+      advancing the NZ AI ecosystem since 2017; 8 Working Groups cover AI
+      governance, generative AI, the AI Blueprint for Aotearoa, AI for
+      the environment, and sector adoption. Runs the Aotearoa AI Summit
+      and NZ AI Hackathon Festivals. Chairperson: Dr Mahsa McCauley.
+    sameAs:
+      - https://www.linkedin.com/company/aiforumnz/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: partner
+        context: "Co-organiser — AI Hackathon Festival 2025"
+
+  - id: un-women
+    name: UN Women
+    url: https://www.unwomen.org
+    logo: /public/org-logos/un-women-light.png
+    type: nonprofit
+    industry: International Affairs — UN agency for gender equality
+    hq: { city: New York, region: New York, countryCode: US }
+    founded: "2010"
+    description: |
+      United Nations agency for women's rights, gender equality, and
+      women's empowerment. Sets global standards; supports Member States
+      with laws, policies, and programmes across five priority areas
+      including leadership, ending violence, and economic empowerment.
+    sameAs:
+      - https://www.linkedin.com/company/un-women/
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: partner
+        context: "CSW 69 speaker — UN HQ NYC, Mar 14 2025"
+
+  - id: united-nations
+    name: United Nations Headquarters
+    aliases: ["UN", "United Nations"]
+    url: https://www.un.org
+    logo: /public/org-logos/united-nations-light.svg
+    type: gov
+    industry: International Affairs — intergovernmental organization
+    hq: { city: New York, region: New York, countryCode: US }
+    founded: "1945"
+    description: |
+      Intergovernmental organization of 193 Member States — peacekeeping,
+      humanitarian assistance, development, human rights, climate action;
+      Charter signed 1945.
+    sameAs:
+      - https://www.linkedin.com/company/united-nations/
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: partner
+        context: "Beyond Beijing 30 Conference speaker (CSW 69)"
+
+  - id: westlake-girls
+    name: Westlake Girls High School
+    url: https://www.westlakegirls.school.nz
+    logo: /public/org-logos/westlake-girls-light.svg
+    type: gov
+    industry: Primary & Secondary Education — NZ state girls' school
+    hq: { city: Auckland, countryCode: NZ }
+    founded: "1962"
+    description: |
+      One of New Zealand's leading state girls' schools, empowering young
+      women since 1962. Academic excellence with extensive co-curricular
+      programme.
+    sameAs:
+      - https://www.linkedin.com/school/westlake-girls-high-school/
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: partner
+        context: "Mentee school — AI Hackathon Festival 2025"
+
+  # ---- VENDOR (integrated SaaS / tech vendors) ----
+  - id: anthropic
+    name: Anthropic
+    url: https://www.anthropic.com
+    logo: /public/org-logos/anthropic-light.svg
+    type: enterprise
+    industry: AI research & products
+    hq: { city: San Francisco, region: California, countryCode: US }
+    founded: "2021"
+    sameAs:
+      - https://www.linkedin.com/company/anthropicresearch/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: vendor
+        context: "Claude Code in Action + AI Fluency certified; Claude across daily build flow"
+
+  - id: ibm-watsonx
+    name: IBM watsonx
+    url: https://www.ibm.com/watsonx
+    logo: /public/org-logos/ibm-watsonx-light.svg
+    type: enterprise
+    industry: Enterprise AI platform
+    hq: { city: Armonk, region: New York, countryCode: US }
+    founded: "2023"
+    sameAs:
+      - https://www.linkedin.com/showcase/ibm-watsonx/
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: vendor
+        context: "Sanicle multi-tenant FemTech platform integration"
+
+  - id: google-ai
+    name: Google AI (Gemini)
+    aliases: ["Google Gemini AI"]
+    url: https://ai.google
+    logo: /public/org-logos/google-ai-light.png
+    type: enterprise
+    industry: AI research & products (Google)
+    hq: { city: Mountain View, region: California, countryCode: US }
+    founded: "2023"
+    sameAs:
+      - https://www.linkedin.com/company/google-gemini-ai/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: vendor
+        context: "Sanicle, TechNest curriculum, Cloudflare Workers AI integrations"
+
+  - id: vercel
+    name: Vercel
+    url: https://vercel.com
+    logo: /public/org-logos/vercel-light.svg
+    type: startup
+    industry: Frontend cloud platform
+    hq: { city: San Francisco, region: California, countryCode: US }
+    founded: "2015"
+    sameAs:
+      - https://www.linkedin.com/company/vercel/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: vendor
+        context: "Primary deploy target — every flagship project"
+
+  - id: cloudflare
+    name: Cloudflare
+    url: https://www.cloudflare.com
+    logo: /public/org-logos/cloudflare-light.png
+    type: enterprise
+    industry: Edge networking & developer platform
+    hq: { city: San Francisco, region: California, countryCode: US }
+    founded: "2009"
+    sameAs:
+      - https://www.linkedin.com/company/cloudflare/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: vendor
+        context: "Workers AI + Vectorize + KV — teaching platform RAG"
+
+  - id: neon
+    name: Neon
+    url: https://neon.tech
+    logo: /public/org-logos/neon-light.svg
+    type: startup
+    industry: Serverless Postgres
+    hq: { city: San Francisco, region: California, countryCode: US }
+    founded: "2021"
+    sameAs:
+      - https://www.linkedin.com/company/neon-inc/
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: vendor
+        context: "Postgres backbone — She Sharp, FemTech Weekend"
+
+  - id: chow-luck-club
+    name: Chow Luck Club Ltd
+    url: https://www.linkedin.com/company/chowluckclub/
+    logo: null
+    type: enterprise
+    industry: Events & Hospitality (Auckland)
+    hq: { city: Auckland, countryCode: NZ }
+    description: |
+      Auckland-based events and hospitality company — commissioned the
+      eatropolis-website build. Director (Events & Marketing) Bee Keng
+      Koh and Creative Producer Armand Bentigan were client-side
+      contacts.
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-05-22"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: employer
+        context: "Commissioning client for eatropolis-website (Auckland, NZ)"
+        relatedProjectId: eatropolis-website
+
+# =============================================================================
+# COLLABORATORS — Real-human entity-graph index. Distinct from references[]:
+# references[] holds LinkedIn testimonial quotes; collaborators[] is the broader
+# Person index that drives JSON-LD `Person.knows[]` and the "Built with" surface.
+# A person may appear in both (their LinkedIn URL is the cross-link key).
+# =============================================================================
+collaborators:
+  # ---- FLAGSHIP — current direct clients/sponsors most central to identity ----
+  - id: luka-madzarac
+    name: Luka Madzarac
+    pronouns: he/him
+    currentTitle: Founder, Engram LLC
+    currentOrgId: engram
+    linkedin: https://www.linkedin.com/in/omgluka/
+    website: https://engram.media/
+    relationship: [client, sponsor]
+    worksTogether:
+      - { contextType: work, contextId: engram, role: "Founder; sourced Chan via Claude Code recommendation for Architect Cohort" }
+    note: "Engram founder; public sourcing path validated GEO-first portfolio strategy."
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+  - id: saba-gecgil
+    name: Saba Gecgil
+    pronouns: she/her
+    currentTitle: Founder & CEO, GAVIGO Inc.
+    currentOrgId: gavigo
+    linkedin: https://www.linkedin.com/in/saba-gecgil/
+    website: https://gavigo.com/
+    relationship: [client, sponsor]
+    worksTogether:
+      - { contextType: work, contextId: gavigo, role: "Founder & CEO; reports-to relationship for Founding Principal Engineer role" }
+    note: "GAVIGO founder & CEO; formalized Chan's Founding Principal Engineer role across three contract iterations (Oct 2025 / Feb 2026 / Apr 2026)."
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+  - id: mahsa-mccauley
+    name: Dr Mahsa McCauley
+    aliases: ["Mahsa Mohaghegh", "Mahsa"]
+    pronouns: she/her
+    currentTitle: Head of Computer and Information Sciences, AUT; Founder & Director, She Sharp
+    currentOrgId: aut
+    linkedin: https://www.linkedin.com/in/mahsamohaghegh/
+    website: https://www.mahsamccauley.com/
+    relationship: [mentor, sponsor, reference]
+    worksTogether:
+      - { contextType: work, contextId: she-sharp, role: "She Sharp founder — recruited Chan as Senior Full Stack Engineer + Website Team Lead" }
+      - { contextType: project, contextId: tam-ai-ti, role: "Referred Chan to Riria (Missy) Te Kanawa for the Tam-AI-Ti research-pilot commission" }
+    note: "AUT Head of Computer and Information Sciences (May 2026—); She Sharp founder (2014—); routes Chan into NZ FemTech, AI-education, and Māori-tech opportunities."
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+  - id: missy-te-kanawa
+    name: Riria (Missy) Te Kanawa
+    aliases: ["Missy Te Kanawa", "Riria Te Kanawa"]
+    pronouns: she/her
+    currentTitle: Māori Executive Lead — Strategy & Governance, ASB Bank
+    linkedin: https://www.linkedin.com/in/riria-missy-te-kanawa-6137528b/
+    sameAs:
+      - https://www.linkedin.com/in/missy-te-kanawa-95a64a224/
+    relationship: [client]
+    worksTogether:
+      - { contextType: project, contextId: tam-ai-ti, role: "Independent research-commission client; directed product structurally and emotionally" }
+    note: "Tam-AI-Ti commissioner; former KPMG NZ National Māori Sector lead and Maui Rau report-series author; now Māori Executive Lead at ASB Bank."
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+  - id: zhu-yihan
+    name: Zhu Yihan
+    aliases: ["朱依含"]
+    pronouns: she/her
+    currentTitle: Founder, FemTech Weekend; Tech Brews Chapter Lead (Johannesburg & Shenzhen)
+    currentOrgId: femtech-weekend
+    linkedin: https://www.linkedin.com/in/yihanzhu/
+    relationship: [client, sponsor]
+    worksTogether:
+      - { contextType: work, contextId: femtech-weekend, role: "Founder; engaged Chan as CTO of the FemTech Weekend Chengdu chapter" }
+      - { contextType: project, contextId: femtech-weekend-website, role: "Commissioned the official FemTech Weekend website build" }
+    note: "FemTech Weekend founder (Sep 2024—); engaged Chan as CTO for the Chengdu chapter; commissioned the official site. Ex Co-Founder of FemTech China; ex Barclays UK New Product Development Manager."
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+  # ---- SECONDARY — confirmed collaborators on specific projects ----
+  - id: lesley-gao
+    name: Lesley Gao
+    pronouns: she/her
+    currentTitle: Frontend Designer & Developer
+    currentOrgId: she-sharp
+    linkedin: https://www.linkedin.com/in/lesley-gao/
+    github: https://github.com/lesley-gao
+    relationship: [collaborator]
+    worksTogether:
+      - { contextType: work, contextId: she-sharp, role: "UI/UX optimization partner on the She Sharp full-stack member platform; authored ~100 of 748 commits (13.4%) on frontend design & code while Chan led core development" }
+    note: "She Sharp platform UI/UX & frontend collaborator; ~100 commits (13.4%) in the design + code partnership."
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+  - id: armand-bentigan
+    name: Armand Bentigan
+    pronouns: he/him
+    currentTitle: Creative Producer; MTF Student
+    currentOrgId: chow-luck-club
+    linkedin: https://www.linkedin.com/in/armand-bentigan-5b614137/
+    relationship: [client]
+    worksTogether:
+      - { contextType: project, contextId: eatropolis-website, role: "Chow Luck Club client-side contact" }
+    note: "Chow Luck Club client-side contact for the eatropolis-website build."
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+  - id: bee-keng-koh
+    name: Bee Keng Koh
+    currentTitle: Director — Events and Marketing, Chow Luck Club Ltd
+    currentOrgId: chow-luck-club
+    linkedin: https://www.linkedin.com/in/bee-keng-koh-32312449/
+    relationship: [client]
+    worksTogether:
+      - { contextType: project, contextId: eatropolis-website, role: "Chow Luck Club Director, Events & Marketing — client-side contact" }
+    note: "Chow Luck Club Director (Events & Marketing); client-side contact for the eatropolis-website build."
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+  - id: paige-afanu
+    name: Paige Afanu
+    aliases: ["Omopeju Afanu", "Peju Afanu"]
+    currentTitle: Product Management Lead, HandyQServe; Sanicle founder
+    currentOrgId: sanicle
+    linkedin: https://www.linkedin.com/in/peju-afanu-7b9367110/
+    relationship: [client, reference]
+    worksTogether:
+      - { contextType: work, contextId: sanicle, role: "Sanicle founder; collaborated with Chan during CTO tenure (Mar 2025 — Feb 2026)" }
+    note: "Sanicle founder; LinkedIn-recommended Chan. Now Product Management Lead at HandyQServe (Toronto)."
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+  - id: chaste-inegbedion
+    name: Chaste Christopher Inegbedion
+    pronouns: he/him
+    currentTitle: Director of Special Events, ConcordeApp
+    currentOrgId: sanicle
+    linkedin: https://www.linkedin.com/in/chastechrisinegbedion/
+    relationship: [colleague, reference]
+    worksTogether:
+      - { contextType: work, contextId: sanicle, role: "Director of Program Operations during Chan's CTO tenure (Jan 2020 — Dec 2024)" }
+    note: "Sanicle Director of Program Operations 2020–2024; Chan's colleague during her Sanicle CTO tenure. Now Director of Special Events at ConcordeApp."
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-22"
+    publicListing: true
+
+# =============================================================================
 # META — version, canonical URL, last-modified, GEO extension fields
 # =============================================================================
 meta:
@@ -10110,261 +10987,6 @@ meta:
         answer: "Between New Zealand and China. Comfortable with NZ / AU / SEA / CN / NA timezones; remote-first."
       - question: "What is Chan's biggest shipped result?"
         answer: "GAVIGO IRE — 353 of 360 commits solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — 2,200+ registered members, 1,000+ active, 95 API routes, 1,392-line schema, 86.6% commits solo."
-
-    # ---------------------------------------------------------------------
-    # ORGANISATIONS — the "trusted by" credibility band roster. Two tiers:
-    #   primary   = Chan's direct employers / clients (larger logos)
-    #   secondary = their named industry partners + flagship tech vendors
-    #               Chan integrated (smaller logos, ~0.75 opacity).
-    # logoLight may be null while the file is being sourced — the build
-    # script filters to entries whose logo file exists on disk, so the
-    # band gracefully grows as new logos land in /public/org-logos/ or
-    # /public/experience/.
-    # ---------------------------------------------------------------------
-    organisations:
-      # ---- PRIMARY (direct employers/clients) ----
-      - id: engram
-        name: Engram LLC
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/engram-logo.jpg
-        logoDark: /public/experience/engram-logo.jpg
-        url: https://www.engramhq.xyz
-        context: "Current — AI Agent Architect (May 2026 — present)"
-        relatedWorkId: engram
-      - id: gavigo
-        name: GAVIGO Inc.
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/gavigo-logo.jpg
-        logoDark: /public/experience/gavigo-logo.jpg
-        url: https://gavigo.com
-        context: "Founding Principal Engineer (Oct 2025 — present)"
-        relatedWorkId: gavigo
-      - id: sanicle
-        name: Sanicle Inc.
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/sanicle-logo.svg
-        logoDark: /public/experience/sanicle-logo.svg
-        url: https://sanicle.com
-        context: "CTO (Mar 2025 — Feb 2026)"
-        relatedWorkId: sanicle
-      - id: technest
-        name: TechNest Community
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/technest-community-logo.jpg
-        logoDark: /public/experience/technest-community-logo.jpg
-        url: https://technest.community
-        context: "AI Instructor & Mentor — 2026 AI Track Cohort 3"
-        relatedWorkId: technest
-      - id: she-sharp
-        name: She Sharp
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/she-sharp-logo-purple-dark.svg
-        logoDark: /public/experience/she-sharp-logo-purple-dark.svg
-        url: https://www.shesharp.org.nz
-        context: "Senior Full-Stack + Ambassador (May 2023 — present)"
-        relatedWorkId: she-sharp
-        relatedVolunteerId: she-sharp-ambassador
-      - id: femtech-weekend
-        name: FemTech Weekend
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/femtech-weekend-logo.svg
-        logoDark: /public/experience/femtech-weekend-logo.svg
-        url: https://femtechweekend.com
-        context: "CTO, Chengdu chapter (Mar 2025 — Feb 2026)"
-        relatedWorkId: femtech-weekend
-      - id: forward-with-her
-        name: Forward with Her (她行)
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/forward-with-her-logo.jpg
-        logoDark: /public/experience/forward-with-her-logo.jpg
-        url: https://www.linkedin.com/company/taxing-mentorship/
-        context: "Tech & Professional Development Mentor (Oct 2024 — Sep 2025)"
-        relatedWorkId: forward-with-her
-        relatedVolunteerId: forward-with-her-mentor
-      - id: lincoln-university
-        name: Lincoln University, NZ
-        displayTier: primary
-        category: employer
-        logoLight: /public/education/lincoln-uni-logo.jpg
-        logoDark: /public/education/lincoln-uni-logo.jpg
-        url: https://www.lincoln.ac.nz
-        context: "Master of Applied Computing (Distinction) + Full-Stack Developer"
-        relatedWorkId: lincoln
-      - id: freeperiod
-        name: FreePeriod
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/free-period-logo.png
-        logoDark: /public/experience/free-period-logo.png
-        url: https://www.freeperiod.org
-        context: "Full-Stack Engineer (Oct — Dec 2024)"
-        relatedWorkId: freeperiod
-      - id: copilotkit
-        name: CopilotKit
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/copilot-kit-logo.svg
-        logoDark: /public/experience/copilot-kit-logo.svg
-        url: https://copilotkit.ai
-        context: "Open-source contributor — 2 merged PRs into a 24.6k★ repo"
-        relatedWorkId: copilotkit
-      - id: bytedance
-        name: ByteDance
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/bytedance-logo-english.svg
-        logoDark: /public/experience/bytedance-logo-english.svg
-        url: https://www.bytedance.com
-        context: "Backend Developer, Youth Training Camp (Jun — Aug 2024)"
-        relatedWorkId: bytedance
-      - id: cebu-international-academy
-        name: Cebu International Academy
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/cia.jpg
-        logoDark: /public/experience/cia.jpg
-        url: https://www.facebook.com/CebuInternationalAcademy
-        context: "Volunteer Educator (Mar — Aug 2023)"
-        relatedVolunteerId: cebu-international-academy
-      - id: corde
-        name: CORDE
-        displayTier: primary
-        category: employer
-        logoLight: /public/brands/corde-transparent.svg
-        logoDark: /public/brands/corde-transparent.svg
-        url: https://corde.nz/
-        context: "Full Stack Developer & Lead Documenter — Lincoln University COMP693 industry placement (Jun — Nov 2024)"
-        relatedWorkId: corde
-
-      # ---- SECONDARY (their named partners + flagship tech vendors) ----
-      - id: msd-nz
-        name: NZ Ministry of Social Development
-        displayTier: secondary
-        category: partner
-        logoLight: /public/org-logos/msd-nz-light.svg
-        logoDark: /public/org-logos/msd-nz-light.svg
-        url: https://www.msd.govt.nz
-        context: "Funder — Her Waka 2026 employment-readiness programme"
-      - id: academyex
-        name: academyEX
-        displayTier: secondary
-        category: partner
-        logoLight: /public/org-logos/academyex-light.svg
-        logoDark: /public/org-logos/academyex-light.svg
-        url: https://academyex.com
-        context: "Host — Her Waka 2026 workshops, Auckland"
-      - id: rcsa
-        name: RCSA
-        displayTier: secondary
-        category: partner
-        logoLight: /public/org-logos/rcsa-light.svg
-        logoDark: /public/org-logos/rcsa-light.svg
-        url: https://www.rcsa.com.au
-        context: "Industry insights partner — Her Waka 2026"
-      - id: aut
-        name: Auckland University of Technology
-        displayTier: secondary
-        category: partner
-        logoLight: /public/org-logos/aut-light.svg
-        logoDark: /public/org-logos/aut-light.svg
-        url: https://www.aut.ac.nz
-        context: "Co-organiser — AI Hackathon Festival 2025"
-      - id: ai-forum-nz
-        name: AI Forum NZ
-        displayTier: secondary
-        category: partner
-        logoLight: /public/org-logos/ai-forum-nz-light.svg
-        logoDark: /public/org-logos/ai-forum-nz-light.svg
-        url: https://aiforum.org.nz
-        context: "Co-organiser — AI Hackathon Festival 2025"
-      - id: un-women
-        name: UN Women
-        displayTier: secondary
-        category: partner
-        logoLight: /public/org-logos/un-women-light.png
-        logoDark: /public/org-logos/un-women-light.png
-        url: https://www.unwomen.org
-        context: "CSW 69 speaker — UN HQ NYC, Mar 14 2025"
-      - id: united-nations
-        name: United Nations Headquarters
-        displayTier: secondary
-        category: partner
-        logoLight: /public/org-logos/united-nations-light.svg
-        logoDark: /public/org-logos/united-nations-light.svg
-        url: https://www.un.org
-        context: "Beyond Beijing 30 Conference speaker (CSW 69)"
-      - id: westlake-girls
-        name: Westlake Girls High School
-        displayTier: secondary
-        category: partner
-        logoLight: /public/org-logos/westlake-girls-light.svg
-        logoDark: /public/org-logos/westlake-girls-light.svg
-        url: https://www.westlakegirls.school.nz
-        context: "Mentee school — AI Hackathon Festival 2025"
-      - id: aotearoa-infinite-academy
-        name: Aotearoa Infinite Academy
-        displayTier: primary
-        category: employer
-        logoLight: /public/experience/aotearoa-infinite-academy.svg
-        logoDark: /public/experience/aotearoa-infinite-academy.svg
-        url: https://www.aotearoainfiniteacademy.school
-        context: "Software Developer (Oct — Nov 2025)"
-        relatedWorkId: aotearoa-infinite-academy
-      - id: anthropic
-        name: Anthropic
-        displayTier: secondary
-        category: vendor
-        logoLight: /public/org-logos/anthropic-light.svg
-        logoDark: /public/org-logos/anthropic-light.svg
-        url: https://www.anthropic.com
-        context: "Claude Code in Action + AI Fluency certified; Claude across daily build flow"
-      - id: ibm-watsonx
-        name: IBM watsonx
-        displayTier: secondary
-        category: vendor
-        logoLight: /public/org-logos/ibm-watsonx-light.svg
-        logoDark: /public/org-logos/ibm-watsonx-light.svg
-        url: https://www.ibm.com/watsonx
-        context: "Sanicle multi-tenant FemTech platform integration"
-      - id: google-ai
-        name: Google AI (Gemini)
-        displayTier: secondary
-        category: vendor
-        logoLight: /public/org-logos/google-ai-light.png
-        logoDark: /public/org-logos/google-ai-light.png
-        url: https://ai.google
-        context: "Sanicle, TechNest curriculum, Cloudflare Workers AI integrations"
-      - id: vercel
-        name: Vercel
-        displayTier: secondary
-        category: vendor
-        logoLight: /public/org-logos/vercel-light.svg
-        logoDark: /public/org-logos/vercel-light.svg
-        url: https://vercel.com
-        context: "Primary deploy target — every flagship project"
-      - id: cloudflare
-        name: Cloudflare
-        displayTier: secondary
-        category: vendor
-        logoLight: /public/org-logos/cloudflare-light.png
-        logoDark: /public/org-logos/cloudflare-light.png
-        url: https://www.cloudflare.com
-        context: "Workers AI + Vectorize + KV — teaching platform RAG"
-      - id: neon
-        name: Neon
-        displayTier: secondary
-        category: vendor
-        logoLight: /public/org-logos/neon-light.svg
-        logoDark: /public/org-logos/neon-light.svg
-        url: https://neon.tech
-        context: "Postgres backbone — She Sharp, FemTech Weekend"
 
     # ---------------------------------------------------------------------
     # TEACHING COHORTS — the four AI-programming cohorts Chan has led

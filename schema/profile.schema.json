@@ -239,6 +239,18 @@
       "items": { "$ref": "#/$defs/projectEntry" }
     },
 
+    "collaborators": {
+      "type": "array",
+      "description": "Real-human collaborator index — the entity-graph source-of-truth for JSON-LD Person.knows[]. Distinct from references[] (which holds LinkedIn-testimonial-quote records); a collaborator may or may not have written a testimonial.",
+      "items": { "$ref": "#/$defs/collaboratorEntry" }
+    },
+
+    "organizations": {
+      "type": "array",
+      "description": "Organization entity index — promotes the legacy meta.x_brand.organisations[] roster to a top-level structured record so JSON-LD can emit one Organization node per entity with sameAs / description / founded / hq fields. The display-band logic (displayTier/category/context/relatedWorkId etc.) is preserved under meta.x_brand to keep existing templates unchanged.",
+      "items": { "$ref": "#/$defs/organizationEntry" }
+    },
+
     "meta": {
       "type": "object",
       "required": ["canonical", "version"],
@@ -271,6 +283,120 @@
       "type": "string",
       "enum": ["active", "recent", "historical", "deprecated"],
       "description": "Current relevance signal. active = ongoing right now; recent = finished within ~12 months and still representative; historical = finished long ago but still on the record; deprecated = sunset / not for outbound use."
+    },
+
+    "organizationEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "url", "type", "tier"],
+      "description": "An organization Chan has worked with, partnered with, or integrated. Drives JSON-LD Organization nodes and the README 'Trusted by' band. Replaces the legacy meta.x_brand.organisations[] roster; the display-band fields (displayTier, category, context, relatedWorkId/VolunteerId/ProjectId) live under meta.x_brand for template-stability.",
+      "properties": {
+        "id":           { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name":         { "type": "string", "minLength": 1 },
+        "aliases":      { "type": "array", "items": { "type": "string" } },
+        "url":          { "type": "string", "format": "uri" },
+        "logo":         { "type": ["string", "null"], "description": "Path under /public/. Legacy roster used 'logoLight' — preserved as alias on the build-time cache." },
+        "logoDark":     { "type": ["string", "null"] },
+        "type":         { "type": "string", "enum": ["startup", "nonprofit", "enterprise", "community", "agency", "university", "gov"] },
+        "industry":     { "type": "string", "description": "Free-form one-line industry: 'AI media agency', 'FemTech nonprofit', 'Public university'." },
+        "hq": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "city":        { "type": "string" },
+            "region":      { "type": "string" },
+            "countryCode": { "type": "string", "pattern": "^[A-Z]{2}$" }
+          }
+        },
+        "founded":      { "$ref": "#/$defs/loosePartialDate" },
+        "description":  { "type": "string", "description": "1-2 sentences. Renders into JSON-LD Organization.description." },
+        "sameAs":       { "type": "array", "items": { "type": "string", "format": "uri" }, "description": "Public-web sameAs URLs — LinkedIn company page is the most important entry; Crunchbase / Wikipedia / X also welcome." },
+        "tier":         { "$ref": "#/$defs/tierEnum" },
+        "recency":      { "$ref": "#/$defs/recencyEnum" },
+        "lastUpdated":  { "$ref": "#/$defs/loosePartialDate" },
+        "meta": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "x_brand": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "displayTier":         { "type": "string", "enum": ["primary", "secondary"] },
+                "category":            { "type": "string", "enum": ["employer", "partner", "vendor"] },
+                "context":             { "type": "string" },
+                "relatedWorkId":       { "type": ["string", "null"] },
+                "relatedVolunteerId":  { "type": ["string", "null"] },
+                "relatedProjectId":    { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "collaboratorEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "relationship", "tier"],
+      "description": "A real human Chan has worked with. Surfaces as Schema.org Person nodes inside Person.knows[] in JSON-LD, anchoring Chan to known professional identities on the open entity graph. The optional meta.x_brand.privateContact block is stripped from every rendered output by the build pipeline.",
+      "properties": {
+        "id":            { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name":          { "type": "string", "minLength": 1 },
+        "aliases":       { "type": "array", "items": { "type": "string" } },
+        "pronouns":      { "type": "string" },
+        "currentTitle":  { "type": "string" },
+        "currentOrgId":  { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "References meta.x_brand.organisations[].id (or future top-level organizations[].id). May be omitted when the collaborator's current employer is not in our org index." },
+        "linkedin":      { "type": "string", "format": "uri", "description": "PUBLIC contact channel — rendered into JSON-LD Person.url and Person.sameAs[]." },
+        "github":        { "type": "string", "format": "uri" },
+        "website":       { "type": "string", "format": "uri" },
+        "sameAs":        { "type": "array", "items": { "type": "string", "format": "uri" }, "description": "Additional public profile URLs for JSON-LD Person.sameAs[] beyond linkedin/github/website." },
+        "relationship":  {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "enum": ["mentor", "mentee", "client", "cofounder", "sponsor", "panelist", "student", "advisor", "reference", "collaborator", "colleague"] }
+        },
+        "worksTogether": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["contextType", "contextId"],
+            "additionalProperties": false,
+            "properties": {
+              "contextType": { "type": "string", "enum": ["project", "work", "volunteer", "talk", "event", "cohort"] },
+              "contextId":   { "type": "string", "pattern": "^[a-z0-9-]+$" },
+              "role":        { "type": "string", "description": "Their role in this specific context, not their global title." }
+            }
+          }
+        },
+        "note":          { "type": "string", "maxLength": 280, "description": "One-line context for renders / hover tooltip." },
+        "tier":          { "$ref": "#/$defs/tierEnum" },
+        "recency":       { "$ref": "#/$defs/recencyEnum" },
+        "lastUpdated":   { "$ref": "#/$defs/loosePartialDate" },
+        "publicListing": { "type": "boolean", "description": "Default true. When false, the collaborator is included in dist/profile.json + llms-full.txt only, not in the public README." },
+        "meta": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "x_brand": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "image": { "type": "string", "description": "Optional headshot path under /public/." },
+                "privateContact": {
+                  "type": "object",
+                  "description": "NEVER rendered. Schema-allowed for personal recordkeeping only; stripped from every output (README, llms*, dist/profile.json) by the build.",
+                  "additionalProperties": false,
+                  "properties": {
+                    "email": { "type": "string", "format": "email" },
+                    "phone": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     },
 
     "narrativeProject": {

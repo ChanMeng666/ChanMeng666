@@ -24,7 +24,7 @@ basics:
   name: Chan Meng
   alternateName: Chan
   label: AI Agent Architect & Full-Stack Engineer
-  image: /public/photos/chan-by-the-tree.jpg
+  image: /public/brands/chan-monkey-logo-black.svg
   email: chanmeng.dev@gmail.com
   url: https://chanmeng.org/
   summary: |
@@ -3549,7 +3549,7 @@ projects:
       x_brand:
         featuredStack: [npm, nodejs, typescript]
         contextLogo:
-          - src: /public/tech-logos/claude-code.svg
+          - src: /public/tech-logos/claude.svg
             alt: "Claude Code"
             url: "https://claude.com/claude-code"
           - src: /public/tech-logos/cursor.svg
@@ -11375,7 +11375,7 @@ organizations:
   - id: anthropic
     name: Anthropic
     url: https://www.anthropic.com
-    logo: /public/organizations/anthropic-light.svg
+    logo: /public/tech-logos/anthropic-icon.svg
     type: enterprise
     industry: AI research & products
     hq: { city: San Francisco, region: California, countryCode: US }
@@ -11885,8 +11885,9 @@ meta:
     techIconMap:
       # AI / agents
       openai:             /public/tech-logos/openai.svg
-      anthropic:          /public/organizations/anthropic-light.svg   # reuse existing
-      claude-code:        /public/tech-logos/claude-code.svg
+      anthropic:          /public/tech-logos/anthropic-icon.svg
+      claude:             /public/tech-logos/claude.svg
+      langchain:          /public/tech-logos/langchain.svg
       cursor:             /public/tech-logos/cursor.svg
       codex:              /public/tech-logos/codex.svg
       mcp:                /public/tech-logos/mcp.svg

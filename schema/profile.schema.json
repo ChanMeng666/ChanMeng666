@@ -175,7 +175,44 @@
         "properties": {
           "name": { "type": "string" },
           "level": { "type": "string" },
-          "keywords": { "type": "array", "items": { "type": "string" } }
+          "keywords": { "type": "array", "items": { "type": "string" } },
+          "expertise": {
+            "type": "array",
+            "description": "Structured per-tool expertise: when adopted, depth, framework variants, supporting notes. Drives the Skills section richer rendering + JSON-LD knowsAbout enrichment.",
+            "items": {
+              "type": "object",
+              "required": ["tool"],
+              "additionalProperties": false,
+              "properties": {
+                "tool":       { "type": "string", "description": "Canonical tool/lang name; should match an existing entry in keywords[]." },
+                "since":      { "type": "string", "pattern": "^[0-9]{4}(-[0-9]{2})?$", "description": "Adoption year (YYYY or YYYY-MM)." },
+                "depth":      { "type": "string", "enum": ["expert", "intermediate", "learning"], "description": "Self-rated proficiency. expert = production-shipped + can teach; intermediate = shipped but not deeply; learning = active onboarding." },
+                "frameworks": { "type": "array", "items": { "type": "string" }, "description": "Specific framework variants / libraries / patterns within this tool." },
+                "notes":      { "type": "string", "description": "Optional one-line context: which project proves this, what's distinctive." }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "domains": {
+      "type": "array",
+      "description": "Domain expertise (industry / problem-area specialization) — distinct from technical skills. Drives JSON-LD knowsAbout enrichment with verticals (e.g. Maori cultural technology, women's health, education technology, minimalist UX) so LLMs surface Chan for domain-shaped queries beyond raw tech stack.",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "additionalProperties": false,
+        "properties": {
+          "id":                 { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "name":               { "type": "string", "minLength": 1 },
+          "since":              { "type": "string", "pattern": "^[0-9]{4}(-[0-9]{2})?$" },
+          "summary":            { "type": "string", "description": "1-2 sentences explaining what this domain means in Chan's practice and why she's a credible voice in it." },
+          "evidenceProjectIds": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "description": "Project ids that prove this domain expertise." },
+          "evidenceWorkIds":    { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "description": "Work entry ids that prove this domain expertise." },
+          "tier":               { "$ref": "#/$defs/tierEnum" },
+          "recency":            { "$ref": "#/$defs/recencyEnum" },
+          "lastUpdated":        { "$ref": "#/$defs/loosePartialDate" }
         }
       }
     },

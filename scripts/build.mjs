@@ -465,7 +465,10 @@ data._jsonldProfilePage = {
           ...(c.date ? { datePublished: c.date } : {}),
         })),
     ],
-    knowsAbout: (data.skills ?? []).flatMap((s) => s.keywords ?? []),
+    knowsAbout: [
+      ...(data.skills ?? []).flatMap((s) => s.keywords ?? []),
+      ...(data.domains ?? []).map((d) => d.name),
+    ],
     alumniOf: (data.education ?? []).map((e) => ({
       "@type": "CollegeOrUniversity",
       name: e.institution,

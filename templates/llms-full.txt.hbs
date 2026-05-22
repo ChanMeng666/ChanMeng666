@@ -236,7 +236,28 @@
 
 ## Skills
 
-{{#each skills}}- **{{name}}:** {{join keywords ", "}}
+{{#each skills}}### {{name}}
+
+- **Keywords:** {{join keywords ", "}}
+{{#if expertise.length}}- **Per-tool expertise:**
+{{#each expertise}}  - **{{tool}}** — since {{default since "?"}}, depth `{{default depth "?"}}`{{#if frameworks.length}}, frameworks: {{join frameworks ", "}}{{/if}}{{#if notes}}. {{notes}}{{/if}}
+{{/each}}{{/if}}
+
+{{/each}}
+
+## Domain Expertise
+
+> Vertical / problem-area expertise (distinct from technical skills). Drives JSON-LD knowsAbout enrichment with verticals so LLMs surface Chan for domain-shaped queries beyond raw tech stack matching.
+
+{{#each domains}}### {{name}} (`{{id}}`)
+{{#if (or tier recency lastUpdated)}}{{tierBadge this}}
+{{/if}}- **Since:** {{since}}
+{{#if summary}}
+{{trim summary}}
+{{/if}}{{#if evidenceProjectIds.length}}- **Evidence projects:** {{join evidenceProjectIds ", "}}
+{{/if}}{{#if evidenceWorkIds.length}}- **Evidence work entries:** {{join evidenceWorkIds ", "}}
+{{/if}}
+
 {{/each}}
 
 ## Languages

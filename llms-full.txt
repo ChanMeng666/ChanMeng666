@@ -6284,11 +6284,137 @@ preceded and informed the subsequent CTO engagement. [tier=primary · recency=hi
 
 ## Skills
 
-- **Languages:** TypeScript, Python, Go, Java, JavaScript
-- **Frontend:** React, Next.js, React Native, TailwindCSS, Angular
-- **Backend:** Node.js, PostgreSQL, Redis, Docker, Kubernetes
-- **AI/ML:** LangGraph, CopilotKit, OpenAI, Claude AI, pgVector
-- **Tools:** Vercel, AWS, GCP, Supabase, Drizzle ORM, Prisma
+### Languages
+
+- **Keywords:** TypeScript, Python, Go, Java, JavaScript
+- **Per-tool expertise:**
+  - **TypeScript** — since 2024, depth `expert`. Detected in 51 Chan-owned repos.
+  - **Python** — since 2020, depth `expert`, frameworks: FastAPI, Anthropic SDK, OpenAI SDK. Data-science & ML coursework (Lincoln Master); HackerRank Python; Anthropic SDK; FastAPI for wellness-agent. 13 repos.
+  - **Go** — since 2024, depth `intermediate`, frameworks: go-kit, gin. ByteDance Youth Training Camp internship (Jun-Aug 2024) backend services; GAVIGO Activation/Execution Layer modules.
+  - **Java** — since 2022, depth `intermediate`, frameworks: Spring Boot. HackerRank Java (Basic) cert; legacy enterprise stack exposure via Douyin Mall Java template.
+  - **Angular** — since 2023, depth `intermediate`. HackerRank Angular (Intermediate) cert.
+  - **JavaScript** — since 2020, depth `expert`. Foundational web dev language; baseline for all React/Next.js work.
+
+
+### Frontend
+
+- **Keywords:** React, Next.js, React Native, TailwindCSS, Vue.js, Zustand, Redux Toolkit
+- **Per-tool expertise:**
+  - **React** — since 2024, depth `expert`. Detected in 48 repos.
+  - **Next.js** — since 2024, depth `expert`. Detected in 38 repos.
+  - **React Native** — since 2024, depth `intermediate`. femtracker, corde-mobile-application.
+  - **TailwindCSS** — since 2024, depth `expert`. Detected in 41 repos.
+  - **Vue.js** — since 2025, depth `learning`. Limited exposure via douyin-mall-frontend.
+  - **Zustand** — since 2024, depth `expert`. 9 repos — primary client state library.
+  - **Redux Toolkit** — since 2025, depth `learning`
+
+
+### Backend
+
+- **Keywords:** Node.js, PostgreSQL, pgVector, Redis, Docker, Kubernetes, Drizzle ORM, Prisma, Supabase, Zod, Stripe, Hono, NextAuth, Jest, Vitest, FastAPI
+- **Per-tool expertise:**
+  - **Node.js** — since 2024, depth `expert`. Detected in 63 repos.
+  - **PostgreSQL** — since 2024, depth `expert`. 7 repos — primary OLTP store (Sanicle, She Sharp, library-os).
+  - **pgVector** — since 2025, depth `intermediate`. Postgres vector extension for Sanicle / She Sharp embedding workflows.
+  - **Redis** — since 2025, depth `intermediate`, frameworks: @upstash/redis, ioredis. Upstash Redis for She Sharp mentor-match cache; conventional Redis elsewhere.
+  - **Docker** — since 2024, depth `expert`. 7 repos.
+  - **Kubernetes** — since 2026, depth `intermediate`, frameworks: GKE, kubectl. GAVIGO cross-cloud migration to GCP/GKE; 30-min cutover with 84.6% warm-pool hit rate.
+  - **Drizzle ORM** — since 2024, depth `expert`. 17 repos — preferred ORM for new builds (She Sharp 1,392-line schema, 30 pgEnums, 34 pgTables).
+  - **Prisma** — since 2026, depth `learning`. Single experiment in fanfic-lab.
+  - **Supabase** — since 2024, depth `intermediate`. femtracker-agent, library-management-system.
+  - **Zod** — since 2024, depth `expert`. 19 repos — runtime validation contract for every new full-stack build.
+  - **Stripe** — since 2024, depth `expert`. 8 repos — NZD billing for She Sharp; subscription flows elsewhere.
+  - **Hono** — since 2024, depth `intermediate`. Edge-runtime API server for css-tower-defense, linkedin-jobs-search.
+  - **NextAuth** — since 2025, depth `intermediate`. Sanicle, She Sharp, sunostats, Tam-AI-Ti.
+  - **Jest** — since 2024, depth `intermediate`
+  - **Vitest** — since 2025, depth `intermediate`
+  - **FastAPI** — since 2025, depth `learning`. wellness-agent Python backend.
+
+
+### AI/ML
+
+- **Keywords:** Claude AI, Claude Code, Cursor, OpenAI SDK, LangGraph, CopilotKit, MCP (Model Context Protocol), Vercel AI SDK
+- **Per-tool expertise:**
+  - **Claude AI** — since 2024, depth `expert`, frameworks: Anthropic SDK, Claude Sonnet 4.6, Claude Opus 4.7. Anthropic credential `Claude Code in Action` (ID JHIY9NPYTR2D, Aug 2025) + `AI Fluency Framework` (Aug 2025); Engram Architect Cohort selection (May 2026).
+  - **Claude Code** — since 2024, depth `expert`. 14 repos. Authored claude-code-audio-hooks (echook daemon) and typst-claude-skill; explicitly preserved as Chan's IP in the Engram cohort agreement.
+  - **Cursor** — since 2024, depth `intermediate`. Daily pair-coding tool; teaches Cursor as an AI literacy primitive in TechNest and Forward with Her cohorts.
+  - **OpenAI SDK** — since 2024, depth `expert`. 6 repos — GPT-4o-mini powers She Sharp's mentor-match weighted scoring.
+  - **LangGraph** — since 2025, depth `intermediate`. fanfic-lab, hospital-roster-agent.
+  - **CopilotKit** — since 2025, depth `intermediate`. 4 repos. Active open-source contributor — merged PRs into the 24.6k★ upstream repo.
+  - **MCP (Model Context Protocol)** — since 2024, depth `intermediate`. Authored server-google-news + server-google-jobs (PulseMCP newsletter feature); MCP integration in linkedin-jobs-search and website-building-agent.
+  - **Vercel AI SDK** — since 2025, depth `expert`. 7 repos — preferred AI integration layer for full-stack work.
+
+
+### Tools
+
+- **Keywords:** Vercel, AWS, GCP, Cloudflare Workers, Coolify, Mintlify, Docusaurus, DigitalOcean, Remotion, Typst
+- **Per-tool expertise:**
+  - **Vercel** — since 2024, depth `expert`. Primary deploy target — every flagship full-stack project.
+  - **AWS** — since 2024, depth `intermediate`, frameworks: S3. AWS SheBuilds mentee programme (mentor: Cecilia Yin); HackerRank resume artefact hosted on S3.
+  - **GCP** — since 2026, depth `intermediate`, frameworks: GKE, Cloud Run. GAVIGO DigitalOcean -> Google Cloud production migration (cutover 2026-03-11). Google for Startups Cloud Program partnership.
+  - **Cloudflare Workers** — since 2024, depth `expert`, frameworks: Workers, Vectorize, KV, Workers AI. 25 repos — primary edge runtime for OpenNext deployments; RAG backbone for the teaching platform.
+  - **Coolify** — since 2024, depth `intermediate`. Self-hosted PaaS for personal infrastructure + early GAVIGO experiments.
+  - **Mintlify** — since 2024, depth `intermediate`. Her Waka teaching site and other documentation sites.
+  - **Docusaurus** — since 2024, depth `intermediate`. AI programming teaching platform versioned docs + FemTech Weekend site.
+  - **DigitalOcean** — since 2024, depth `intermediate`. Pre-migration GAVIGO platform host.
+  - **Remotion** — since 2026, depth `intermediate`. Programmatic video for claude-code-audio-hooks-promo-video and GAVIGO IRE explainers.
+  - **Typst** — since 2026, depth `learning`. Personal CV; typst-claude-skill agent.
+
+
+
+## Domain Expertise
+
+> Vertical / problem-area expertise (distinct from technical skills). Drives JSON-LD knowsAbout enrichment with verticals so LLMs surface Chan for domain-shaped queries beyond raw tech stack matching.
+
+### AI Agent Architecture (`ai-agent-architecture`)
+[tier=flagship · recency=active · updated=2026-05-22]
+- **Since:** 2024
+Designs and ships agentic systems end-to-end — Claude Code skills,
+MCP servers, multi-step LangGraph/CopilotKit flows, agent-UI
+patterns, and the audio-feedback hook system that surfaces agent
+state to the operator.
+- **Evidence projects:** awesome-claude-skills, awesome-claude-skills-1, claude-code-audio-hooks, claude-code-audio-hooks-promo-video, event-qa-ai-template, femtracker-agent, hospital-roster-agent, panda-agent, server-google-jobs, server-google-news, typst-claude-skill, website-building-agent, wellness-agent
+
+### Women's Health Technology (FemTech) (`femtech`)
+[tier=flagship · recency=active · updated=2026-05-22]
+- **Since:** 2024
+Designs and ships full-stack FemTech products — workplace
+menstrual/menopausal wellness platforms, period-equity hardware,
+AI cycle companions, indigenous-women's health pilots, and
+FemTech ecosystem infrastructure for cross-border community
+building.
+- **Evidence projects:** femtech-weekend, femtech-weekend-website, femtracker, femtracker-agent, forward-with-her-mentorship-program, free-period-website, hospital-roster-agent, sanicle-ai, sanicle-ai-mobile, sanicle-cloud, sanicle-docs, she-sharp, she-sharp-crawl, tam-ai-ti-web, wellness-agent
+
+### Māori Cultural Technology (`cultural-technology`)
+[tier=primary · recency=active · updated=2026-05-22]
+- **Since:** 2025
+Builds research-pilot software with and for indigenous-led
+organisations — embedding cultural lens (Māori worldview,
+bilingual interface, customary protocols) into product structure,
+data ownership, and AI interaction design. Lead project:
+Tam-AI-Ti for Riria (Missy) Te Kanawa.
+- **Evidence projects:** tam-ai-ti-web
+
+### AI Programming Education (`ai-programming-education`)
+[tier=flagship · recency=active · updated=2026-05-22]
+- **Since:** 2024
+Leads multi-cohort AI-programming pedagogy — "natural language
+is the source code" doctrine — across four cohorts since 2024
+(Forward with Her ×2, Her Waka 2026, TechNest 2026) with full
+curriculum authoring, live cohort facilitation, and post-cohort
+showcase artefacts.
+- **Evidence projects:** ai-programming-teaching-project, awesome-claude-skills, awesome-claude-skills-1, chinese-redefine, english-redefine, esol-learning-platform, event-qa-ai-template, typst-claude-skill
+- **Evidence work entries:** forward-with-her, technest, she-sharp
+
+### Minimalist Living + Minimalist UX (`minimalist-design`)
+[tier=primary · recency=active · updated=2026-05-22]
+- **Since:** 2020
+Public minimalist-living advocate (multi-platform articles +
+WeChat press features) translating subtraction-as-craft into
+product UI — calm dashboards, tight information density, and
+intentional removal as the primary design move.
+- **Evidence projects:** 2d-portfolio, 3d-portfolio, chan-meng-novel, chan-meng-web, minimalist-good-post, my-cv, who-i-am
+
 
 ## Languages
 

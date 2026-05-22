@@ -5,12 +5,14 @@
      <kbd>-styled proof-line metric row anchoring credibility.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<a href="{{basics.url}}"><img src="{{basics.image}}" align="right" width="160" alt="{{basics.name}}"></a>
+<a href="{{basics.url}}"><img src="{{basics.image}}" align="right" width="160" alt="{{basics.name}} — {{basics.label}} · {{default basics.location.region "Between China and New Zealand"}}"></a>
 
 # {{basics.name}}
 
 *{{#each (split basics.taglines.heroLabel "|")}}{{trim this}}{{#unless @last}} · {{/unless}}{{/each}}.*
 *{{default basics.location.region "Between China and New Zealand"}}.*
+
+> **Canonical profile:** [{{meta.canonical}}]({{meta.canonical}}) &nbsp;·&nbsp; **Last updated:** {{meta.lastModified}}
 
 {{_valueProposition.tagline}} {{basics.taglines.primary}}
 

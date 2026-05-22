@@ -731,28 +731,6 @@
           }
         },
 
-        "organisations": {
-          "type": "array",
-          "description": "Roster for the 'Trusted by' logo band. Two display tiers + three categories. logoLight may be null while the file is being sourced — build script filters to entries whose logo file exists on disk.",
-          "items": {
-            "type": "object",
-            "required": ["id", "name", "displayTier", "category", "url", "context"],
-            "properties": {
-              "id":           { "type": "string", "pattern": "^[a-z0-9-]+$" },
-              "name":         { "type": "string" },
-              "displayTier":  { "type": "string", "enum": ["primary", "secondary"] },
-              "category":     { "type": "string", "enum": ["employer", "partner", "vendor"] },
-              "logoLight":    { "type": ["string", "null"] },
-              "logoDark":     { "type": ["string", "null"] },
-              "url":          { "type": "string", "format": "uri" },
-              "context":      { "type": "string", "description": "One-line role-of-this-org-in-Chan's-story; surfaced as hover-tooltip on the logo." },
-              "relatedWorkId":      { "type": ["string", "null"] },
-              "relatedVolunteerId": { "type": ["string", "null"] },
-              "relatedProjectId":   { "type": ["string", "null"] }
-            }
-          }
-        },
-
         "teachingCohorts": {
           "type": "array",
           "description": "Four AI-programming cohorts Chan has led since 2024. Surfaced as the AI Mentor 2×2 grid + ItemList<EducationalOccupationalProgram> in JSON-LD + ## section in llms.txt.",

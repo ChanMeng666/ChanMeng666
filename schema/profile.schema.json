@@ -26,7 +26,8 @@
             "postalCode": { "type": "string" },
             "city": { "type": "string" },
             "countryCode": { "type": "string" },
-            "region": { "type": "string" }
+            "region": { "type": "string" },
+            "timezone": { "type": "string", "description": "IANA timezone identifier (e.g. 'Pacific/Auckland'). Used by JSON-LD ProfilePage and human-readable footer." }
           }
         },
         "profiles": {

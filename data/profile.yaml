@@ -1976,6 +1976,8 @@ education:
       - Master's with Distinction
       - "Dean's List (Top 5%)"
     courses: []
+    credentialId: "170086552"
+    credentialUrl: "https://www2.nzqa.govt.nz/qualifications-and-standards/access-your-results/verify/"
 
   - id: jsnu
     tier: secondary
@@ -8966,54 +8968,492 @@ awards:
 # Phase 4 will add credential IDs, issue dates, and verification URLs.
 # =============================================================================
 certificates:
-  # ---- HackerRank ----
-  # All HackerRank certs (HackerRank user ID 27897555) share the public resume PDF as
-  # the verification artifact: https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf
-  # (Mjc4OTc1NTU= is base64("27897555"). Per-cert verification hashes can replace
-  # the shared resume URL whenever Chan exports them from her HackerRank profile.)
-  - { name: "Software Engineer",            issuer: HackerRank, category: hackerrank, image: /public/certificates/software-engineer-certificate.png,            issuerLogo: /public/certificates/issuers/hackerrank-logo.jpg, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Frontend Developer (React)",   issuer: HackerRank, category: hackerrank, image: /public/certificates/frontend-developer-react-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "SQL (Advanced)",               issuer: HackerRank, category: hackerrank, image: /public/certificates/sql-advanced-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "JavaScript (Intermediate)",    issuer: HackerRank, category: hackerrank, image: /public/certificates/javascript-intermediate-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "REST API (Intermediate)",      issuer: HackerRank, category: hackerrank, image: /public/certificates/rest-api-intermediate-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Node.js (Intermediate)",       issuer: HackerRank, category: hackerrank, image: /public/certificates/nodejs-intermediate-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Go (Intermediate)",            issuer: HackerRank, category: hackerrank, image: /public/certificates/go-intermediate-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Angular (Intermediate)",       issuer: HackerRank, category: hackerrank, image: /public/certificates/angular-intermediate-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "R (Intermediate)",             issuer: HackerRank, category: hackerrank, image: /public/certificates/r-intermediate-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Problem Solving (Intermediate)", issuer: HackerRank, category: hackerrank, image: /public/certificates/problem-solving-intermediate-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Python (Basic)",               issuer: HackerRank, category: hackerrank, image: /public/certificates/python-basic-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Java (Basic)",                 issuer: HackerRank, category: hackerrank, image: /public/certificates/java-basic-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "React (Basic)",                issuer: HackerRank, category: hackerrank, image: /public/certificates/react-basic-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "CSS (Basic)",                  issuer: HackerRank, category: hackerrank, image: /public/certificates/css-basic-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "C# (Basic)",                   issuer: HackerRank, category: hackerrank, image: /public/certificates/csharp-basic-certificate.png, url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf", tier: archive, recency: historical, lastUpdated: "2026-05-22" }
+  # =========================================================================
+  # All 46 certificates carry a direct per-cert verification URL + credentialId,
+  # exported from Chan's LinkedIn certifications page on 2026-05-22:
+  #   https://www.linkedin.com/in/chanmeng666/details/certifications/
+  # =========================================================================
 
-  # ---- Microsoft (LinkedIn Learning Career Essentials series) ----
-  # All Microsoft + Other LinkedIn-Learning certs verify via Chan's LinkedIn certifications page:
-  # https://www.linkedin.com/in/chanmeng666/details/certifications/
-  - { name: "Software Development",         issuer: Microsoft,  category: microsoft,  image: /public/certificates/career-essentials-software-development-microsoft-linkedin.jpg, issuerLogo: /public/certificates/issuers/microsoft-logo.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "System Administration",        issuer: Microsoft,  category: microsoft,  image: /public/certificates/career-essentials-system-administration-microsoft-linkedin.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Project Management",           issuer: Microsoft,  category: microsoft,  image: /public/certificates/career-essentials-project-management-microsoft-linkedin.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Cybersecurity",                issuer: Microsoft,  category: microsoft,  image: /public/certificates/career-essentials-cybersecurity-microsoft-linkedin.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Data Analysis",                issuer: Microsoft,  category: microsoft,  image: /public/certificates/career-essentials-data-analysis-microsoft-linkedin.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Business Analysis",            issuer: Microsoft,  category: microsoft,  image: /public/certificates/career-essentials-business-analysis-microsoft-linkedin.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Generative AI Fundamentals",   issuer: Microsoft,  category: microsoft,  image: /public/certificates/generative-ai-career-skills-fundamentals.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: primary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Administrative Assistance",    issuer: Microsoft,  category: microsoft,  image: /public/certificates/career-essentials-administrative-assistance-microsoft-linkedin.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Sustainable Tech",             issuer: Microsoft,  category: microsoft,  image: /public/certificates/career-essentials-sustainable-tech-microsoft-linkedin.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Azure AI Essentials",          issuer: Microsoft,  category: microsoft,  image: /public/certificates/microsoft-azure-ai-essentials-professional-certificate.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: primary, recency: historical, lastUpdated: "2026-05-22" }
+  # ---- HackerRank (23 — all Dec 2024, credential URLs at hackerrank.com/certificates/<id>) ----
+  - name: "Software Engineer"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/software-engineer-certificate.png
+    issuerLogo: /public/certificates/issuers/hackerrank-logo.jpg
+    date: "2024-12"
+    credentialId: "929C61379016"
+    url: "https://www.hackerrank.com/certificates/929c61379016"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Software Engineer Intern"
+    issuer: HackerRank
+    category: hackerrank
+    date: "2024-12"
+    credentialId: "8C2B34A73C1E"
+    url: "https://www.hackerrank.com/certificates/8c2b34a73c1e"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Frontend Developer (React)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/frontend-developer-react-certificate.png
+    date: "2024-12"
+    credentialId: "CFCAF3276EF6"
+    url: "https://www.hackerrank.com/certificates/cfcaf3276ef6"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Problem Solving (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/problem-solving-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "92C8E2648264"
+    url: "https://www.hackerrank.com/certificates/92c8e2648264"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Problem Solving (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    date: "2024-12"
+    credentialId: "B4535E195051"
+    url: "https://www.hackerrank.com/certificates/b4535e195051"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "REST API (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/rest-api-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "B71BEC8F3BCE"
+    url: "https://www.hackerrank.com/certificates/b71bec8f3bce"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "SQL (Advanced)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/sql-advanced-certificate.png
+    date: "2024-12"
+    credentialId: "77A6D9183C77"
+    url: "https://www.hackerrank.com/certificates/77a6d9183c77"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "SQL (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    date: "2024-12"
+    credentialId: "82CD89877A17"
+    url: "https://www.hackerrank.com/certificates/82cd89877a17"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "SQL (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    date: "2024-12"
+    credentialId: "1604ADEBD057"
+    url: "https://www.hackerrank.com/certificates/1604adebd057"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Node.js (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/nodejs-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "FAD3DC5626D1"
+    url: "https://www.hackerrank.com/certificates/fad3dc5626d1"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "JavaScript (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/javascript-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "829C5CB9023F"
+    url: "https://www.hackerrank.com/certificates/829c5cb9023f"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "JavaScript (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    date: "2024-12"
+    credentialId: "83E393B81C8B"
+    url: "https://www.hackerrank.com/certificates/83e393b81c8b"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Go (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/go-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "1528BFA4886B"
+    url: "https://www.hackerrank.com/certificates/1528bfa4886b"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Go (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    date: "2024-12"
+    credentialId: "36BD7EE1CABC"
+    url: "https://www.hackerrank.com/certificates/36bd7ee1cabc"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Angular (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/angular-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "03146D2BE2BE"
+    url: "https://www.hackerrank.com/certificates/03146d2be2be"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Angular (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    date: "2024-12"
+    credentialId: "D7F06CA7345E"
+    url: "https://www.hackerrank.com/certificates/d7f06ca7345e"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "React (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/react-basic-certificate.png
+    date: "2024-12"
+    credentialId: "F31DC3770D34"
+    url: "https://www.hackerrank.com/certificates/f31dc3770d34"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "R (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/r-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "15F33A7DC11A"
+    url: "https://www.hackerrank.com/certificates/15f33a7dc11a"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "R (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    date: "2024-12"
+    credentialId: "F5D0DC5DB53A"
+    url: "https://www.hackerrank.com/certificates/f5d0dc5db53a"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Python (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/python-basic-certificate.png
+    date: "2024-12"
+    credentialId: "AB7FE9567088"
+    url: "https://www.hackerrank.com/certificates/ab7fe9567088"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Java (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/java-basic-certificate.png
+    date: "2024-12"
+    credentialId: "62E985054B0B"
+    url: "https://www.hackerrank.com/certificates/62e985054b0b"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "CSS (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/css-basic-certificate.png
+    date: "2024-12"
+    credentialId: "46C95BC8F25D"
+    url: "https://www.hackerrank.com/certificates/46c95bc8f25d"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "C# (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/csharp-basic-certificate.png
+    date: "2024-12"
+    credentialId: "F342EE2DF441"
+    url: "https://www.hackerrank.com/certificates/f342ee2df441"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
 
-  # ---- Other (LinkedIn Learning + Anthropic + Coursera) ----
-  - { name: "GitHub Professional",          issuer: GitHub,     category: other,      image: /public/certificates/career-essentials-github-professional-certificate.jpg,           issuerLogo: /public/certificates/issuers/github-logo.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: primary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Docker Professional",          issuer: Docker,     category: other,      image: /public/certificates/docker-foundations-professional-certificate.jpg,                  issuerLogo: /public/certificates/issuers/docker-logo.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: primary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Google AI Essentials",         issuer: Google,     category: other,      image: /public/certificates/Google-AI-Essentials.jpg,                                         issuerLogo: /public/certificates/issuers/google-logo.jpeg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: primary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Claude Code in Action",        issuer: Anthropic,  category: other,      image: /public/certificates/anthropic-claude-code-in-action.jpg,                              issuerLogo: /public/certificates/issuers/anthropicresearch-logo.jpeg, credentialId: "JHIY9NPYTR2D", url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", date: "2025-08", tier: flagship, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "AI Fluency Framework",         issuer: Anthropic,  category: other,      image: /public/certificates/anthropic-ai-fluency-framework-and-foundations.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", date: "2025-08", tier: flagship, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Ubuntu Linux",                 issuer: Canonical,  category: other,      image: /public/certificates/completion-ubuntu-linux-professional-certificate-canonical.jpg,        issuerLogo: /public/certificates/issuers/canonical-logo.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Anaconda Data Science",        issuer: Anaconda,   category: other,      image: /public/certificates/completion-anaconda-python-data-science-professional-certificate.jpg, issuerLogo: /public/certificates/issuers/anacondainc-logo.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Atlassian Agile",              issuer: Atlassian,  category: other,      image: /public/certificates/completion-atlassian-agile-project-management-professional-certificate.jpg, issuerLogo: /public/certificates/issuers/atlassian-logo.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Machine Learning",             issuer: Wolfram Research, category: other, image: /public/certificates/completion-machine-learning-statistical-foundations-wolfram-research.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "JavaScript Foundations",       issuer: Mozilla,    category: other,      image: /public/certificates/javascript-foundations-professional-certificate-mozilla.jpg,           issuerLogo: /public/certificates/issuers/mozilla-corporation-logo.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "C Programming Professional",   issuer: "CPP Institute / OpenEDG", category: other, image: /public/certificates/completion-c-programming-professional-certificate-openedgc.jpg,         issuerLogo: /public/certificates/issuers/cppinstitute-logo.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
-  - { name: "Java Foundations Professional", issuer: JetBrains,  category: other,      image: /public/certificates/completion-java-foundations-professional-certificate-jetbrains.jpg,             issuerLogo: /public/certificates/issuers/jetbrains-logo.jpg, url: "https://www.linkedin.com/in/chanmeng666/details/certifications/", tier: secondary, recency: historical, lastUpdated: "2026-05-22" }
+  # ---- Microsoft Career Essentials series (10 — Dec 2024 + Feb 2025; LinkedIn Learning direct URLs) ----
+  - name: "Azure AI Essentials"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/microsoft-azure-ai-essentials-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/microsoft-logo.jpg
+    date: "2025-02"
+    credentialId: "92C0764F9B4CEA702B1C1CA5D0E2585392F34109F720AFEBA2A74E7A34706290"
+    url: "https://www.linkedin.com/learning/certificates/92c0764f9b4cea702b1c1ca5d0e2585392f34109f720afeba2a74e7a34706290/"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Generative AI Fundamentals"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/generative-ai-career-skills-fundamentals.jpg
+    date: "2024-12"
+    credentialId: "187ECAD3ED6CB0BE31706C413B5F38AE1BD1D58272AD950E4FD19B5636AD5747"
+    url: "https://www.linkedin.com/learning/certificates/187ecad3ed6cb0be31706c413b5f38ae1bd1d58272ad950e4fd19b5636ad5747/"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Software Development"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-software-development-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "7ACFE44A99F9E575A3CB2BF5C05902C197D7782CA4A14A9765DD8C41DF1AA848"
+    url: "https://www.linkedin.com/learning/certificates/7acfe44a99f9e575a3cb2bf5c05902c197d7782ca4a14a9765dd8c41df1aa848/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "System Administration"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-system-administration-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "442E34701E88D7F12D5CC82B6FC6CBDDCDA2F1C6F9F6DE77103C9BEFBE354982"
+    url: "https://www.linkedin.com/learning/certificates/442e34701e88d7f12d5cc82b6fc6cbddcda2f1c6f9f6de77103c9befbe354982/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Project Management"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-project-management-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "9D9F22F0E7E87C3B6375D1294F8C97B10CC505EC24E8FAE4D670573D55A9938C"
+    url: "https://www.linkedin.com/learning/certificates/9d9f22f0e7e87c3b6375d1294f8c97b10cc505ec24e8fae4d670573d55a9938c/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Cybersecurity"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-cybersecurity-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "A5436B52459256A59BFFE778A3DFFFCA6853124D22E6F88B704FBEC0CA39FE09"
+    url: "https://www.linkedin.com/learning/certificates/a5436b52459256a59bffe778a3dfffca6853124d22e6f88b704fbec0ca39fe09/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Data Analysis"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-data-analysis-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "EA775058BE5D0BEC5E46DFDC14D4E9C64F54D6709A3A23ED3DC85CD3907FCED6"
+    url: "https://www.linkedin.com/learning/certificates/ea775058be5d0bec5e46dfdc14d4e9c64f54d6709a3a23ed3dc85cd3907fced6/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Business Analysis"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-business-analysis-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "16558615A397548E131BA55A2F9108F54CB8D7F7DCC84419B6C2E644A98F75A2"
+    url: "https://www.linkedin.com/learning/certificates/16558615a397548e131ba55a2f9108f54cb8d7f7dcc84419b6c2e644a98f75a2/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Administrative Assistance"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-administrative-assistance-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "5AC9921894297B67EB03727C2549EE8A9376D0446E80FE0294FB0A7CA417B3EF"
+    url: "https://www.linkedin.com/learning/certificates/5ac9921894297b67eb03727c2549ee8a9376d0446e80fe0294fb0a7ca417b3ef/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Sustainable Tech"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-sustainable-tech-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "210641FCD656696D2FE451C6D70D051ADC35A26416E1EE16E107B5247ECAAA26"
+    url: "https://www.linkedin.com/learning/certificates/210641fcd656696d2fe451c6d70d051adc35a26416e1ee16e107b5247ecaaa26/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+
+  # ---- Other (12 — Anthropic + Google + 9 LinkedIn Learning) ----
+  - name: "Claude Code in Action"
+    issuer: Anthropic
+    category: other
+    image: /public/certificates/anthropic-claude-code-in-action.jpg
+    issuerLogo: /public/certificates/issuers/anthropicresearch-logo.jpeg
+    date: "2025-08"
+    credentialId: "JHIY9NPYTR2D"
+    url: "https://verify.skilljar.com/c/jhiy9npytr2d"
+    tier: flagship
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "AI Fluency Framework"
+    issuer: Anthropic
+    category: other
+    image: /public/certificates/anthropic-ai-fluency-framework-and-foundations.jpg
+    date: "2025-08"
+    credentialId: "v3hv657p3ygc"
+    url: "https://verify.skilljar.com/c/v3hv657p3ygc"
+    tier: flagship
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Google AI Essentials"
+    issuer: Google
+    category: other
+    image: /public/certificates/Google-AI-Essentials.jpg
+    issuerLogo: /public/certificates/issuers/google-logo.jpeg
+    date: "2025-08"
+    credentialId: "ZR0B96QLZXDM"
+    url: "https://www.coursera.org/account/accomplishments/specialization/ZR0B96QLZXDM"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "GitHub Professional"
+    issuer: GitHub
+    category: other
+    image: /public/certificates/career-essentials-github-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/github-logo.jpg
+    date: "2024-12"
+    credentialId: "EDD123D9420DDBBDF2078C97C306975F88F1AC637A5BF6B46B104340D8B469A1"
+    url: "https://www.linkedin.com/learning/certificates/edd123d9420ddbbdf2078c97c306975f88f1ac637a5bf6b46b104340d8b469a1/"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Docker Professional"
+    issuer: Docker
+    category: other
+    image: /public/certificates/docker-foundations-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/docker-logo.jpg
+    date: "2025-02"
+    credentialId: "9EC9F12BD8974EF2AB60810D9D8C2790843862A9CA9E82AB1DF93FF78BD2FFA0"
+    url: "https://www.linkedin.com/learning/certificates/9ec9f12bd8974ef2ab60810d9d8c2790843862a9ca9e82ab1df93ff78bd2ffa0/"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Ubuntu Linux"
+    issuer: Canonical
+    category: other
+    image: /public/certificates/completion-ubuntu-linux-professional-certificate-canonical.jpg
+    issuerLogo: /public/certificates/issuers/canonical-logo.jpg
+    date: "2025-02"
+    credentialId: "3C7B2CCAE529721034F83B944C6F781E8FB3C305DD7859C269E0E42DB20C16FA"
+    url: "https://www.linkedin.com/learning/certificates/3c7b2ccae529721034f83b944c6f781e8fb3c305dd7859c269e0e42db20c16fa/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Anaconda Data Science"
+    issuer: Anaconda
+    category: other
+    image: /public/certificates/completion-anaconda-python-data-science-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/anacondainc-logo.jpg
+    date: "2025-02"
+    credentialId: "866BA89BFBB2A495BDD9CB5953555DFB7F41A9BD2E8B9B30A206EDEED8A60188"
+    url: "https://www.linkedin.com/learning/certificates/866ba89bfbb2a495bdd9cb5953555dfb7f41a9bd2e8b9b30a206edeed8a60188/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Atlassian Agile"
+    issuer: Atlassian
+    category: other
+    image: /public/certificates/completion-atlassian-agile-project-management-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/atlassian-logo.jpg
+    date: "2025-02"
+    credentialId: "9A542712E3361965C339E439885AECC684F23EEE22A0A695541C57137DDEDD84"
+    url: "https://www.linkedin.com/learning/certificates/9a542712e3361965c339e439885aecc684f23eee22a0a695541c57137ddedd84/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Machine Learning"
+    issuer: Wolfram Research
+    category: other
+    image: /public/certificates/completion-machine-learning-statistical-foundations-wolfram-research.jpg
+    date: "2025-02"
+    credentialId: "2864BEBB120159DA61988309D16EF29418AD598F330499E580DDA4D5B979F742"
+    url: "https://www.linkedin.com/learning/certificates/2864bebb120159da61988309d16ef29418ad598f330499e580dda4d5b979f742/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "JavaScript Foundations"
+    issuer: Mozilla
+    category: other
+    image: /public/certificates/javascript-foundations-professional-certificate-mozilla.jpg
+    issuerLogo: /public/certificates/issuers/mozilla-corporation-logo.jpg
+    date: "2025-02"
+    credentialId: "F045AF6F4D485DA35B748AF33062DC24F8A275D3B66AF8E0D18A410F67D587D9"
+    url: "https://www.linkedin.com/learning/certificates/f045af6f4d485da35b748af33062dc24f8a275d3b66af8e0d18a410f67d587d9/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "C Programming Professional"
+    issuer: "CPP Institute / OpenEDG"
+    category: other
+    image: /public/certificates/completion-c-programming-professional-certificate-openedgc.jpg
+    issuerLogo: /public/certificates/issuers/cppinstitute-logo.jpg
+    date: "2025-02"
+    credentialId: "22A8638F0A1646E6B5B12E4EAB7492583E9DFEB3B15519A6FAD26C9438243335"
+    url: "https://www.linkedin.com/learning/certificates/22a8638f0a1646e6b5b12e4eab7492583e9dfeb3b15519a6fad26c9438243335/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Java Foundations Professional"
+    issuer: JetBrains
+    category: other
+    image: /public/certificates/completion-java-foundations-professional-certificate-jetbrains.jpg
+    issuerLogo: /public/certificates/issuers/jetbrains-logo.jpg
+    date: "2025-02"
+    credentialId: "DBB63917D9AABE179405102FE44C567749A59CF090F05390100D9B8C841F8A04"
+    url: "https://www.linkedin.com/learning/certificates/dbb63917d9aabe179405102fe44c567749a59cf090f05390100d9b8c841f8a04/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+
+  # ---- Academic (1 — NZ Record of Achievement, the formal Master verification) ----
+  - name: "Master of Applied Computing (Level 9)"
+    issuer: "New Zealand Qualifications Authority | Mana Tohu Mātauranga o Aotearoa"
+    category: academic
+    date: "2025-08"
+    credentialId: "170086552"
+    url: "https://www2.nzqa.govt.nz/qualifications-and-standards/access-your-results/verify/"
+    tier: flagship
+    recency: historical
+    lastUpdated: "2026-05-22"
+
+  # ---- Community / Athletic (1 — non-technical credential that humanises the profile) ----
+  - name: "Southern Cross Round the Bays Auckland 2026 — 8.4km Finisher"
+    issuer: Stuff
+    category: community
+    date: "2026-03"
+    credentialId: "26073"
+    tier: archive
+    recency: recent
+    lastUpdated: "2026-05-22"
 
 # =============================================================================
 # PUBLICATIONS — articles, podcast episodes, press features

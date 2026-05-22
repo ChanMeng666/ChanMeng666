@@ -82,6 +82,8 @@
           "image": { "type": "string" },
           "location": { "type": "string" },
           "highlights": { "type": "array", "items": { "type": "string" } },
+          "credentialId":  { "type": "string", "description": "Issuer-side unique identifier for the academic credential (e.g. NZ Record of Achievement number)." },
+          "credentialUrl": { "type": "string", "format": "uri", "description": "Public verification URL for the academic credential." },
           "tier": { "$ref": "#/$defs/tierEnum" },
           "recency": { "$ref": "#/$defs/recencyEnum" },
           "lastUpdated": { "$ref": "#/$defs/loosePartialDate" }

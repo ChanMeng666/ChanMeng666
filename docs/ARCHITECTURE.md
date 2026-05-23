@@ -37,7 +37,6 @@ Data flows outward only. Nothing imports into this repo from external sources.
 ├── .github/workflows/
 │   ├── build-readme.yml        # rebuild outputs on data change + daily cron
 │   ├── validate-data.yml       # schema-validate PRs
-│   ├── youtube-cards.yml       # (existing) hourly YouTube cards refresh
 │   ├── metrics.yml             # (existing) daily metrics image
 │   ├── techrosie-auto-invite.yml
 │   └── wakatime.yml
@@ -89,7 +88,6 @@ Templates can shorten or omit. They never add substance.
 - **Inbound:** nothing. No Medium API import, no LinkedIn import, no auto-sync of GitHub stars into the YAML. The user is the sole input.
 - **Outbound:** everything. README, `llms.txt`, `llms-full.txt`, `dist/profile.json`, plus future Typst CV, LinkedIn rebuilds, and chanmeng.org all consume from this one file.
 - **Live metrics** like GitHub stars/forks render via dynamic shields.io badges at *view time*. They never write back into `profile.yaml`.
-- **Auto-generated zones inside README** (YouTube cards via existing `youtube-cards.yml`, Medium article embeds via the vercel service) live inside the template at their original marker positions and continue to work unchanged.
 
 ## Adding new content
 

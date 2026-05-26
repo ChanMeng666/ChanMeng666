@@ -279,6 +279,12 @@
       "items": { "$ref": "#/$defs/projectEntry" }
     },
 
+    "openSourceContributions": {
+      "type": "array",
+      "description": "Upstream OSS contributions — PRs, issues, and notable solution comments authored by Chan on repos she does not own. Distinct from projects[] (owned work). Source of truth for cross-surface 'Open Source Contributions' rendering and JSON-LD Person.contributor[] enrichment.",
+      "items": { "$ref": "#/$defs/contributionEntry" }
+    },
+
     "collaborators": {
       "type": "array",
       "description": "Real-human collaborator index — the entity-graph source-of-truth for JSON-LD Person.knows[]. Distinct from references[] (which holds LinkedIn-testimonial-quote records); a collaborator may or may not have written a testimonial.",
@@ -555,6 +561,35 @@
         "tier": { "$ref": "#/$defs/tierEnum" },
         "recency": { "$ref": "#/$defs/recencyEnum" },
         "lastUpdated": { "$ref": "#/$defs/loosePartialDate" }
+      }
+    },
+
+    "contributionEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "repo", "type", "url", "title", "date", "tier"],
+      "description": "Upstream open-source contribution Chan has made to a repo she does not own. Each entry maps to a single PR, issue, or solution comment with a verifiable URL. Used by JSON-LD Person.contributor[] and renderable as an 'Open Source Contributions' section in the README.",
+      "properties": {
+        "id":               { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "repo":             { "type": "string", "description": "owner/repo, e.g. 'wshobson/agents'." },
+        "repoUrl":          { "type": "string", "format": "uri" },
+        "type":             { "type": "string", "enum": ["pull-request", "issue", "comment", "listing"], "description": "pull-request = code/docs PR; issue = bug/feature report filed; comment = solution comment on someone else's thread; listing = awesome-list registration of Chan's own tool." },
+        "number":           { "type": "integer", "minimum": 1, "description": "PR or issue number (for type=comment this is the parent issue number)." },
+        "url":              { "type": "string", "format": "uri", "description": "Direct link to the PR, issue, or comment anchor." },
+        "title":            { "type": "string" },
+        "state":            { "type": "string", "enum": ["open", "merged", "closed"] },
+        "date":             { "$ref": "#/$defs/loosePartialDate", "description": "Created date (ISO YYYY-MM-DD)." },
+        "mergedAt":         { "$ref": "#/$defs/loosePartialDate" },
+        "closedAt":         { "$ref": "#/$defs/loosePartialDate" },
+        "summary":          { "type": "string", "description": "One-line description of what the contribution did." },
+        "impact":           { "type": "string", "description": "Why it mattered — reactions, downstream usage, community thanks, maintainer approval." },
+        "reactions":        { "type": "integer", "minimum": 0, "description": "Total reaction count on the artifact (hearts + thumbs + etc.) at lastUpdated." },
+        "comments":         { "type": "integer", "minimum": 0, "description": "Discussion comment count on the artifact at lastUpdated." },
+        "relatedProjectId": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Optional FK to projects[].id when this contribution supports an owned project." },
+        "category":         { "type": "string", "description": "Free-form grouping: ai-tooling | mcp-ecosystem | dev-portfolio | i18n | bug-report | feature-request | listing." },
+        "tier":             { "$ref": "#/$defs/tierEnum" },
+        "recency":          { "$ref": "#/$defs/recencyEnum" },
+        "lastUpdated":      { "$ref": "#/$defs/loosePartialDate" }
       }
     },
 

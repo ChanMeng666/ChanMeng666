@@ -18,7 +18,7 @@ Previously CTO at Sanicle, full-stack engineer for FreePeriod, ByteDance Youth T
 
 | | Company | Role | Period |
 |---|---------|------|--------|
-{{#each work}}| {{#with (lookup ../_orgByWorkId id)}}<a href="{{url}}" title="{{name}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="28" alt="{{name}}"></picture></a>{{else}}&nbsp;{{/with}} | [{{name}}]({{url}}) | {{position}}{{#if (eq id "copilotkit")}} ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=flat-square&labelColor=1a1a1a){{/if}} | {{dateRange startDate endDate}}{{#if location}}, {{location}}{{/if}} |
+{{#each work}}| {{#with (lookup ../_orgByWorkId id)}}<a href="{{url}}" title="{{name}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="28" alt="{{name}}"></picture></a>{{else}}&nbsp;{{/with}} | [{{name}}]({{url}}) | {{position}} | {{dateRange startDate endDate}}{{#if location}}, {{location}}{{/if}} |
 {{/each}}
 
 </details>

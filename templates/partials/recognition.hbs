@@ -1,8 +1,8 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     Recognition — 3 credential bullets + 1 featured quote + full archive
-     in <details>. Beyond-the-Code photo gallery removed. Publications filtered
-     to _mediaAppearances (press / interview / podcastEpisode only — LinkedIn
-     Pulse articles stay in data + llms-full.txt + JSON-LD but not in visible).
+     Recognition — 3 credential bullets + 1 featured quote + a 3-link
+     media row + pointer to the full archive in llms-full.txt / profile.json.
+     Long-tail tables (awards, education, volunteer, teaching cohorts,
+     podcasts, articles, more references) live in those artifacts now.
      ═══════════════════════════════════════════════════════════════════════ -->
 
 ## Recognition
@@ -19,75 +19,6 @@
 > <sub>— **{{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}** &nbsp;·&nbsp; {{meta.x_brand.relationship}}</sub>
 {{/if}}{{/each}}
 
-<details>
-<summary><kbd>&nbsp;Resume archive &nbsp;·&nbsp; awards &nbsp;·&nbsp; education &nbsp;·&nbsp; volunteer &nbsp;·&nbsp; teaching cohorts &nbsp;·&nbsp; podcasts &nbsp;·&nbsp; articles &nbsp;·&nbsp; media &nbsp;·&nbsp; more references&nbsp;</kbd></summary>
+**Media appearances** — {{#each (slice _mediaAppearances 0 3)}}[{{name}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.
 
-<br>
-
-**Awards & Honors**
-
-| Award | Organization | Date |
-|-------|-------------|------|
-{{#each awards}}| {{title}} | [{{awarder}}]({{url}}) | {{formatDate date}} |
-{{/each}}
-
-**Education**
-
-| Degree | University | Period |
-|--------|-----------|--------|
-{{#each education}}| {{studyType}} | [{{institution}}]({{url}}) | {{dateRange startDate endDate}} |
-{{/each}}
-
-**Volunteer**
-
-| | Role | Organisation | Period | Focus |
-|---|------|--------------|--------|-------|
-{{#each volunteer}}| {{#with (lookup ../_orgByVolunteerId id)}}<a href="{{url}}" title="{{name}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="24" alt="{{name}}"></picture></a>{{else}}&nbsp;{{/with}} | {{position}} | {{#if url}}[{{name}}]({{url}}){{else}}{{name}}{{/if}} | {{dateRange startDate endDate}} | {{location}} |
-{{/each}}
-
-**Teaching cohorts**
-
-| Cohort | Programme | Partner | Period | Outcome |
-|---|---|---|---|---|
-{{#each _teachingCohorts}}| {{cohortLabel}} | [{{programName}}]({{curriculumUrl}}) | {{partnerOrg}} | {{dateRange}} | {{keyOutcome}} |
-{{/each}}
-
-**Podcasts I host**
-
-| Podcast | Listen |
-|---------|--------|
-{{#each meta.x_brand.podcastsHosted}}| {{name}}{{#if description}} — {{description}}{{/if}} | [Spotify]({{url}}) |
-{{/each}}
-
-**Media appearances**
-
-| Feature | Publisher |
-|---------|-----------|
-{{#each _mediaAppearances}}| [{{name}}]({{url}}) | {{publisher}} |
-{{/each}}
-
-**Latest articles** — more on [Medium](https://chanmeng666.medium.com/) and [LinkedIn](https://www.linkedin.com/in/chanmeng666/recent-activity/articles/)
-
-<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/0" alt="Recent Article 0"></a>
-<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/1" alt="Recent Article 1"></a>
-<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@chanmeng666/2" alt="Recent Article 2"></a>
-
-**Minimalist living**
-
-| Article | Read |
-|---------|------|
-{{#each meta.x_brand.minimalistArticles}}| {{title}} | [{{platform}}]({{url}}) |
-{{/each}}
-
-**More recommendations**
-
-{{#each _featuredReferences}}{{#unless @first}}> *"{{flatten reference}}"*
-> — {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
-
-{{/unless}}{{/each}}{{#each _otherReferences}}> *"{{flatten reference}}"*
-> — {{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}, {{meta.x_brand.relationship}}
-
-{{/each}}
-All recommendations verified on [LinkedIn](https://www.linkedin.com/in/chanmeng666/details/recommendations/).
-
-</details>
+<sub>Awards, education, volunteer history, teaching cohorts, podcasts, articles, and the full recommendation archive live in [llms-full.txt](./llms-full.txt) and [profile.json](./dist/profile.json).</sub>

@@ -297,6 +297,69 @@
       "items": { "$ref": "#/$defs/organizationEntry" }
     },
 
+    "decorations": {
+      "type": "object",
+      "description": "Centralised configuration for the three home-grown README decoration projects (gradient-svg-generator banners, github-visitor-counter, github-readme-suno-cards). Lets templates pull all SVG endpoint params from one place — swap a banner template by editing one YAML line.",
+      "additionalProperties": false,
+      "properties": {
+        "banners": {
+          "type": "object",
+          "description": "Named gradient-svg-generator banner configs. Each value is a banner spec consumed by templates/partials/banner.hbs.",
+          "additionalProperties": { "$ref": "#/$defs/bannerSpec" }
+        },
+        "visitorCounter": {
+          "type": "object",
+          "description": "github-visitor-counter config. One username; two embed modes (miniCounter for hero, flagMap or topCountries for the standalone visitor section).",
+          "required": ["username"],
+          "additionalProperties": false,
+          "properties": {
+            "username": { "type": "string", "minLength": 1 },
+            "miniCounter": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "theme": { "type": "string" },
+                "maxflags": { "type": "integer", "minimum": 1, "maximum": 250 },
+                "displayMode": { "type": "string" }
+              }
+            },
+            "flagMap": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "theme": { "type": "string" },
+                "mapSize": { "type": "string", "enum": ["small", "medium", "large"] },
+                "displayMode": { "type": "string" },
+                "columns": { "type": "integer", "minimum": 1, "maximum": 8 },
+                "maxflags": { "type": "integer", "minimum": 1, "maximum": 250 },
+                "showlabels": { "type": "boolean" }
+              }
+            }
+          }
+        },
+        "sunoCards": {
+          "type": "object",
+          "description": "github-readme-suno-cards config. handle is the Suno username; profile + cards endpoints render the music section in templates/partials/suno-cards.hbs.",
+          "required": ["handle"],
+          "additionalProperties": false,
+          "properties": {
+            "handle": { "type": "string", "minLength": 1 },
+            "showProfileCard": { "type": "boolean" },
+            "cardsSort": { "type": "string", "enum": ["play_count", "created", "likes"] },
+            "cardsMax": { "type": "integer", "minimum": 1, "maximum": 12 },
+            "theme": { "type": "string", "enum": ["auto", "dark", "light"] },
+            "preset": { "type": "string", "enum": ["default", "suno"] }
+          }
+        }
+      }
+    },
+
+    "builderTools": {
+      "type": "array",
+      "description": "Free tools Chan built for the community — rendered as a 3-card subsection inside Open Source. Distinct from projects[] (portfolio depth) by audience contract: builderTools optimise for try-it-now CTAs, projects[] optimise for storytelling depth.",
+      "items": { "$ref": "#/$defs/builderToolEntry" }
+    },
+
     "meta": {
       "type": "object",
       "required": ["canonical", "version"],
@@ -812,6 +875,39 @@
       "properties": {
         "label": { "type": "string" },
         "url":   { "type": "string" }
+      }
+    },
+
+    "bannerSpec": {
+      "type": "object",
+      "description": "A single gradient-svg-generator banner config consumed by templates/partials/banner.hbs.",
+      "required": ["template", "height", "text", "duration"],
+      "additionalProperties": false,
+      "properties": {
+        "template": { "type": "string", "minLength": 1, "description": "Template name from gradient-svg-generator (e.g. 'gold-luxury', 'neural-network', 'ocean-depths', 'northern-aurora', 'luminance-glow')." },
+        "height":   { "type": "integer", "minimum": 10, "maximum": 400 },
+        "text":     { "type": "string" },
+        "duration": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?s$", "description": "CSS animation duration with unit, e.g. '6s', '10s', '0.5s'." }
+      }
+    },
+
+    "builderToolEntry": {
+      "type": "object",
+      "description": "A free tool card surfaced in the README 'Free tools I built for the community' subsection.",
+      "required": ["id", "name", "tagline", "primaryCta"],
+      "additionalProperties": false,
+      "properties": {
+        "id":          { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "name":        { "type": "string", "minLength": 1 },
+        "tagline":     { "type": "string", "minLength": 1, "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 400 },
+        "primaryCta":  { "$ref": "#/$defs/ctaLink" },
+        "secondaryCta":{ "$ref": "#/$defs/ctaLink" },
+        "techBadges":  {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "audience":    { "type": "string", "description": "Internal note about who this card targets — not rendered." }
       }
     }
   }

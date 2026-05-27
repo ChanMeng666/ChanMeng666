@@ -660,6 +660,20 @@ skill `sync-event-from-slack` that automates event-page publication
 from Slack content, comprehensive audit logging, and a database
 version-control system.
 
+**Custom Slack ecosystem for the She Sharp workspace.** Beyond
+the admin-side Claude Code skill, I shipped a portfolio of
+integrations that run inside the She Sharp Slack workspace
+itself: an event-collector endpoint (`/api/slack/events`) that
+ingests workspace activity for the database; a **weekly
+mentorship-stats digest bot** that auto-publishes engagement
+numbers each Monday; and a **weekly NZ funding-opportunities
+digest bot** that crawls 6 government RSS/HTML sources, scores
+each opportunity for member relevance (60+ threshold), and
+posts the top 10 to a dedicated `#funding-opportunities`
+channel via Incoming Webhook. Together these collapse work
+that previously consumed volunteer-team hours each week into
+background automation members notice as "the Slack just knows."
+
 Beyond the main platform, I shipped three supporting projects: the
 Python migration crawler (1,748 images / 707 MB / 11 JSON files
 bootstrapping the new platform from the old Webflow site), the Her
@@ -744,6 +758,17 @@ platform current, the application and subscription pipelines that
 capture every inbound lead, and the live digital infrastructure
 for the Shanghai Summit 2026 — the organisation's largest event
 to date.
+
+The arrangement is best described as **co-designing technical
+strategy with the founder, then executing solo**: regular
+working sessions with Zhu Yihan to align platform direction,
+partner integrations, and editorial cadence, followed by my
+own end-to-end engineering delivery. Shanghai Summit 2026 in
+particular runs through this loop — speakers, multi-tier
+sponsor partners, NGO collaborators (AVPN among them), and
+policy/academic partners are all reflected through the same
+infrastructure I built, with content updates landing hours
+after founder-side decisions.
 
 **Impact delivered:** Built and shipped **two complete generations of the FemTech Weekend
 website from scratch, solo**, across roughly a year of work.
@@ -1296,6 +1321,23 @@ Community AI Track curriculum (2026) and the AI Programming
 Education teaching platform that's now my open-source
 teaching repository.
 
+**The AI Programming Education teaching platform
+(`programming.chanmeng.org`) was first built specifically for
+this Forward with Her cohort.** Its earliest cohort version
+(`2024-winter`) exists precisely because I needed a structured
+place to host the tutorials, lecture recordings, and exercises
+I was delivering live to mentees. It has since grown into the
+open-source teaching platform now serving 4 coexisting cohort
+versions across TechNest, HER WAKA, and the original Forward
+with Her audience — but its origin is here.
+
+I also built and shipped a dedicated **bilingual EN/CN promo
+site** for the programme
+(`forward-with-her-mentorship-program.pages.dev`) — a
+3D-rendered Next.js 15 + Three.js landing page on Cloudflare
+Pages that supported the programme's external visibility
+while I was in the cohort.
+
 **Technical highlights:** The substance of this role is **pedagogical and relational
 rather than technical-implementation**, but the technical
 content of the mentorship was concrete: students learned to
@@ -1462,6 +1504,23 @@ commit; the Cloudflare Pages migration was executed without
 downtime; i18n strings stayed current with footer attribution
 changes; and locations data continued to track installations
 as the company rolled out.
+
+**Software-meets-hardware integration as a deliberate
+skill surface.** FreePeriod is not a pure-software play —
+the product is a vending-machine-class hardware deployment
+for emergency sanitary pads, with solar-powered variants
+for lower-grid-access locations, deployed across public
+spaces and partner institutions. My engineering job was
+to make the software side of that combined operation
+legible and useful: the live Google Maps dispenser
+directory that lets users locate the nearest installation;
+the bilingual advocacy document distribution flow; the
+live product-demo interface; and the locations dataset
+that tracks each rollout. This was an explicit exercise
+in shipping software that is judged not on technical
+novelty but on whether it makes physical-world deployments
+visible, addressable, and trustworthy to non-technical
+audiences.
 ### Backend Developer — Youth Training Camp (青训营) at ByteDance
 [tier=flagship · recency=recent · updated=2026-05-18]
 - **Period:** Nov 2024 -- Mar 2025
@@ -1742,6 +1801,16 @@ linker compliance, husky + lint-staged pre-commit hooks,
 and dependency upgrades — keeping the repository a usable
 portfolio piece rather than an archived snapshot of
 mid-2024 React Native conventions.
+
+**The application remains in active use today by CORDE's
+field crews** for offline data collection — GPS-tagged
+photos and structured form data captured on water-
+infrastructure and civil-construction sites where mobile
+coverage drops out, then syncing back when crews return
+to coverage. The codebase-currency commits aren't archive
+maintenance; they're keeping a production tool aligned
+with the platform conventions of the year the crews are
+actually running it on.
 
 **Technical highlights:** **React Native 0.83 + TypeScript + Native Base** on the
 client, deliberately chosen over Expo because the project's

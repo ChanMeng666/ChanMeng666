@@ -22,7 +22,11 @@
 {{#if _mediaAppearances.length}}<sub>Featured in {{#each (slice _mediaAppearances 0 4)}}[{{publisher}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
 {{/if}}
 
-{{#each _primaryBadges}}[{{network}}]({{url}}){{#unless @last}} — {{/unless}}{{/each}}
+<p>
+{{#each _primaryBadges}}{{#if (eq network "Portfolio")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template={{@root.decorations.buttons.badgePortfolio.template}}&height={{@root.decorations.buttons.badgePortfolio.height}}&duration={{@root.decorations.buttons.badgePortfolio.duration}}" alt="Portfolio"></a>{{/if}}{{#if (eq network "LinkedIn")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template={{@root.decorations.buttons.badgeLinkedin.template}}&height={{@root.decorations.buttons.badgeLinkedin.height}}&duration={{@root.decorations.buttons.badgeLinkedin.duration}}" alt="LinkedIn"></a>{{/if}}{{#if (eq network "GitHub")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template={{@root.decorations.buttons.badgeGithub.template}}&height={{@root.decorations.buttons.badgeGithub.height}}&duration={{@root.decorations.buttons.badgeGithub.duration}}" alt="GitHub"></a>{{/if}}{{#if (eq network "Email")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Email&template={{@root.decorations.buttons.badgeEmail.template}}&height={{@root.decorations.buttons.badgeEmail.height}}&duration={{@root.decorations.buttons.badgeEmail.duration}}" alt="Email"></a>{{/if}}{{#unless @last}} {{/unless}}{{/each}}
+</p>
+
+<sub><em>Animated badges crafted with <a href="https://github.com/ChanMeng666/gradient-svg-generator">gradient-svg-generator</a> — my open-source decoration project ↗</em></sub>
 
 <br clear="all">
 

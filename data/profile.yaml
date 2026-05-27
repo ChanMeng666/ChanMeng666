@@ -82,12 +82,16 @@ decorations:
     visitorsHeader: { template: text-shimmer-gold,   height: 60,  text: "Visitors from around the world",         duration: 6s }
     footerDivider:  { template: cotton-candy,        height: 240, text: "Thanks for visiting",                    duration: 8s }
   buttons:
-    primary:    { template: pills-rainbow,           height: 28, duration: 8s }
-    secondary:  { template: social-achievement-blue, height: 24, duration: 6s }
-    accent:     { template: banner-orange,           height: 26, duration: 6s }
-    live:       { template: pills-blue,              height: 22, duration: 6s }
-    source:     { template: pills-dark,              height: 22, duration: 6s }
-    caseStudy:  { template: pills-purple,            height: 22, duration: 6s }
+    primary:        { template: pills-rainbow,           height: 28, duration: 8s }
+    secondary:      { template: social-achievement-blue, height: 24, duration: 6s }
+    accent:         { template: banner-orange,           height: 26, duration: 6s }
+    live:           { template: pills-blue,              height: 22, duration: 6s }
+    source:         { template: pills-dark,              height: 22, duration: 6s }
+    caseStudy:      { template: pills-purple,            height: 22, duration: 6s }
+    badgePortfolio: { template: gold-luxury,             height: 40, duration: 8s }
+    badgeLinkedin:  { template: sapphire-blue,           height: 40, duration: 8s }
+    badgeGithub:    { template: obsidian-black,          height: 40, duration: 8s }
+    badgeEmail:     { template: copper-bronze,           height: 40, duration: 8s }
   visitorCounter:
     username: ChanMeng666
     miniCounter: { theme: transparent, maxflags: 5, displayMode: miniCounter }

@@ -705,6 +705,14 @@ Handlebars.registerHelper("slice", (arr, start, end) =>
 //   2. text before the first ". " (sentence boundary)
 //   3. character truncation at ~160 chars on a word boundary
 // Used by the Open Source primary table where every row must stay scannable.
+Handlebars.registerHelper("firstSentences", (s, n) => {
+  const raw = String(s ?? "").replace(/\s+/g, " ").trim();
+  if (!raw) return "";
+  const num = Math.max(1, Number(n) || 1);
+  const sentences = raw.match(/[^.!?]+[.!?]+(\s|$)/g);
+  if (!sentences || !sentences.length) return raw;
+  return sentences.slice(0, num).join("").trim();
+});
 Handlebars.registerHelper("briefTagline", (s) => {
   const raw = String(s ?? "").replace(/\s+/g, " ").trim();
   if (!raw) return "";

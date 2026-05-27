@@ -14,9 +14,9 @@
 - **[Outstanding Mentor Award](https://www.linkedin.com/in/chanmeng666/details/honors/)** — AI Hackathon Festival 2025 (AI Forum NZ × She Sharp × AUT)
 
 {{#each _featuredReferences}}{{#if @first}}
-> ❝ &nbsp; *{{flatten reference}}* &nbsp; ❞
+> ❝ &nbsp; *{{firstSentences (flatten reference) 2}}* &nbsp; ❞
 >
-> <sub>— **{{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}** &nbsp;·&nbsp; {{meta.x_brand.relationship}}</sub>
+> <sub>— **{{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}** &nbsp;·&nbsp; {{meta.x_brand.relationship}} &nbsp;·&nbsp; [read full recommendation →](https://www.linkedin.com/in/chanmeng666/details/recommendations/)</sub>
 {{/if}}{{/each}}
 
 **Media appearances** — {{#each (slice _mediaAppearances 0 3)}}[{{name}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.

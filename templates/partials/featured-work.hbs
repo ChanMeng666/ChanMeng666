@@ -6,8 +6,6 @@
 
 {{> banner decorations.banners.featuredWork}}
 
-<p align="center"><sub><em>via <a href="https://github.com/ChanMeng666/gradient-svg-generator">gradient-svg-generator ↗</a></em></sub></p>
-
 ## Selected work
 
 {{#each _flagshipProjects}}{{#if logo}}<a href="{{default url repoUrl}}"><img src="{{logo}}" align="right" height="80" alt="{{name}}"></a>
@@ -19,9 +17,9 @@
 {{else}}{{#if entity}}<sub>For {{entity}}.</sub>
 {{/if}}{{/if}}{{/if}}
 
-{{briefTagline tagline}}
+{{#if narrative.impactHeadline}}{{narrative.impactHeadline}}
 
-{{#if narrative.impactHeadline}}**Impact** — {{narrative.impactHeadline}}
+{{else}}{{briefTagline tagline}}
 
 {{/if}}{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
 {{/if}}

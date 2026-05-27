@@ -20,7 +20,7 @@
 {{#each _aiAgentProjects}}  <tr>
     <td>{{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="48" alt="{{name}}"></a>{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _contextLogo.length}}<br><sub>{{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"></a>{{#unless @last}} {{/unless}}{{/each}}</sub>{{/if}}</td>
-    <td>{{briefTagline tagline}}{{#if narrative.impactHeadline}}<br><em>{{narrative.impactHeadline}}</em>{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}</td>
+    <td>{{briefTagline tagline}}{{#if narrative.impactHeadline}}<br><em>{{narrative.impactHeadline}}</em>{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template={{@root.decorations.buttons.live.template}}&height={{@root.decorations.buttons.live.height}}&duration={{@root.decorations.buttons.live.duration}}" alt="Live"></a>{{/unless}}{{/if}}</td>
   </tr>
 {{/each}}</table>
 
@@ -35,7 +35,7 @@
 {{#each _openSourceCraftProjects}}  <tr>
     <td>{{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="48" alt="{{name}}"></a>{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{briefTagline tagline}}{{#if narrative.impactHeadline}}<br><em>{{narrative.impactHeadline}}</em>{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}</td>
+    <td>{{briefTagline tagline}}{{#if narrative.impactHeadline}}<br><em>{{narrative.impactHeadline}}</em>{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template={{@root.decorations.buttons.live.template}}&height={{@root.decorations.buttons.live.height}}&duration={{@root.decorations.buttons.live.duration}}" alt="Live"></a>{{/unless}}{{/if}}</td>
   </tr>
 {{/each}}</table>
 
@@ -55,7 +55,7 @@
 {{#each items}}  <tr>
     <td>{{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="36" alt="{{name}}"></a>{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{briefTagline tagline}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}{{#if repoUrl}}{{#if (eq url repoUrl)}} <a href="{{repoUrl}}">Source →</a>{{else}}{{#unless url}} <a href="{{repoUrl}}">Source →</a>{{/unless}}{{/if}}{{/if}}</td>
+    <td>{{briefTagline tagline}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&template={{@root.decorations.buttons.live.template}}&height={{@root.decorations.buttons.live.height}}&duration={{@root.decorations.buttons.live.duration}}" alt="Live"></a>{{/unless}}{{/if}}{{#if repoUrl}}{{#if (eq url repoUrl)}} <a href="{{repoUrl}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template={{@root.decorations.buttons.source.template}}&height={{@root.decorations.buttons.source.height}}&duration={{@root.decorations.buttons.source.duration}}" alt="Source"></a>{{else}}{{#unless url}} <a href="{{repoUrl}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template={{@root.decorations.buttons.source.template}}&height={{@root.decorations.buttons.source.height}}&duration={{@root.decorations.buttons.source.duration}}" alt="Source"></a>{{/unless}}{{/if}}{{/if}}</td>
   </tr>
 {{/each}}</table>
 

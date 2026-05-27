@@ -13,8 +13,6 @@
 *{{#each (split basics.taglines.heroLabel "|")}}{{trim this}}{{#unless @last}} · {{/unless}}{{/each}}.*
 *{{default basics.location.region "Auckland, New Zealand"}}.*
 
-> **Canonical profile:** [{{meta.canonical}}]({{meta.canonical}})
-
 {{_valueProposition.tagline}} {{basics.taglines.primary}}
 
 {{#if _mediaAppearances.length}}<sub>Featured in {{#each (slice _mediaAppearances 0 4)}}[{{publisher}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>

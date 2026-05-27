@@ -13265,15 +13265,15 @@ meta:
       - { title: "A Complete Guide to Legally Changing Your Name as an Adult",             url: "https://www.douban.com/group/topic/310015982/?_dtcc=1&_i=75245459vsCiSF",  platform: Douban }
       - { title: "Minimalist Living Blog",                                                  url: "https://minimalist-good-post.pages.dev",                                  platform: "Cloudflare Pages" }
 
-    # Footer link table — 5 core contact paths. Decorative profiles
-    # (Medium, Hugging Face, Discord, YouTube, Weekly AI Digest,
-    # TechRosie, Discussions) live in llms-full.txt and dist/profile.json.
+    # Footer inline links — only items unique to the README footer.
+    # Cal "Book a Meeting" is already in the Currently NOTE engagement
+    # block; Email is already in the hero badges. Decorative profiles
+    # (Medium, HF, Discord, YouTube, Weekly AI Digest, TechRosie,
+    # Discussions) live in llms-full.txt and dist/profile.json.
     footerLinks:
-      - { label: Book a Meeting,     url: "https://cal.com/chan-meng/30min",                                                      description: "Schedule a 30-minute chat" }
-      - { label: Email,              url: "mailto:chanmeng.dev@gmail.com",                                                       description: "Direct email" }
-      - { label: Buy Me a Coffee,    url: "https://buymeacoffee.com/chanmeng66u",                                                  description: "Support my open-source work" }
       - { label: Newsletter,         url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896", description: "Subscribe to 'Decoding the Future' — AI research & innovation" }
       - { label: Resume,             url: "https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf",          description: "Download CV" }
+      - { label: Buy Me a Coffee,    url: "https://buymeacoffee.com/chanmeng66u",                                                  description: "Support my open-source work" }
 
     # Interactive CLI
     cli:

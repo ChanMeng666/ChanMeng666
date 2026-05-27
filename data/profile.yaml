@@ -3406,6 +3406,7 @@ projects:
       for CJK-safe text shaping with CSS `@keyframes` animations
       driving the equalizer bars.
     narrative:
+      impactHeadline: "GitHub Marketplace Action for Suno music cards — CJK-safe animated SVG with 12 design combinations, parses three ID formats, shares a Valibot kernel with SunoStats analytics, extracted from monorepo as a clean MIT-licensed release."
       problem: |
         Suno AI creators have no graceful way to surface their music
         catalog on the surfaces where developer audiences actually
@@ -3619,6 +3620,7 @@ projects:
       Carved out as Chan's preserved IP in the Engram Architect Cohort
       Engagement Letter (May 2026).
     narrative:
+      impactHeadline: "Audio-feedback hook system for Claude Code / Cursor / Codex — 26 hook events, 2 themes, context-window status line with quota bars, 42 releases, 139 tests on triple-platform CI, plus a Remotion-built promo video shipped entirely in code."
       problem: |
         Developers running long-form AI coding workflows on Claude Code,
         Cursor IDE, and Codex CLI have no way to *hear* what their agent
@@ -4501,6 +4503,7 @@ projects:
       via [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)
       (publicly thanked by maintainer Tyler Slaton).
     narrative:
+      impactHeadline: "8-agent women's-health companion merged into CopilotKit's official demos_2025 — intelligent routing across specialists, WHO-standard scoring, 90%+ Redis cache hit rates, publicly thanked by CopilotKit maintainers as a reference implementation."
       problem: |
         Existing women's-health apps treat menstrual cycle, fertility,
         symptoms, nutrition, exercise, and lifestyle as **disconnected
@@ -4590,6 +4593,8 @@ projects:
     url: https://free-period-website.pages.dev/
     repoUrl: https://github.com/ChanMeng666/free-period-website
     techStack: [Next.js, TypeScript, Tailwind CSS, Radix UI, Framer Motion, Recharts, Zustand, Google Maps API, Cloudflare Pages]
+    narrative:
+      impactHeadline: "Bilingual period-poverty advocacy site for a Guangzhou HKUST(GZ)-incubated startup — integrated Google Maps dispenser directory helping end-users locate menstrual-access resources in underserved markets."
     status: live
   - id: library-os
     tier: primary
@@ -5593,6 +5598,7 @@ projects:
       reveal on one coherent build (Phase 1 teaser 2026-05-22 → Phase
       2 full site 2026-06-05).
     narrative:
+      impactHeadline: "Production culinary-festival event site for Auckland's Eatropolis — engineered for 1,000 concurrent visitors, WCAG 2.2 AA-compliant with council review gates, delivered solo in 9 days under a signed NZD $3,000 fixed-fee contract."
       problem: |
         Auckland-based **Chow Luck Club Ltd** — production partner
         for the **Eatropolis** culinary festival, supported by
@@ -6797,6 +6803,7 @@ projects:
       migrations and a LaTeX → Typst engine swap on the path to
       current production.
     narrative:
+      impactHeadline: "AI career agent that generates a tailored ATS-optimised resume + cover letter in ~30 seconds from a job description and free-text background — 7-step Vercel AI SDK pipeline, Typst local PDF compile under 100 ms, on its third production architecture."
       problem: |
         Most AI resume tools are one of two failure modes: (a) a
         thin GPT wrapper that hands you a paragraph and calls it a
@@ -7037,6 +7044,7 @@ projects:
     publicSummary: |
       FanFic Lab (live at https://fanfic-lab.tech) is a full-stack AI co-creation community built specifically for the *Honkai: Star Rail* (崩坏：星穹铁道) fandom — the most popular HoYoverse game in China during the project window. The 182-commit codebase compresses three usually-separate things into one product: (1) **an adaptive LangGraph.js agent named "DreamWriter"** that takes a Chinese natural-language prompt like "想看砂金和藿藿的现代AU虐转甜" and runs it through a 7-node graph (intent parser → story architect → writer → quality guard → conditional revision loop → summarizer → delivery), where the quality-guard node uses GPT-4o-mini to score the draft 1-10 against an HSR canon knowledge prompt and either passes the story through or sends it back to the writer for up to MAX_REVISIONS=2 self-corrections; (2) **a hand-curated fandom knowledge pack** at `src/knowledge/hsr/` containing 5 deeply-modeled HSR characters (砂金 / 藿藿 / 丹恒 / 景元 / 花火) with personality / speech-pattern / emotional-trigger / relationship maps + 4 relationship dynamics + 5 world-rule categories (命途体系, etc.) + 5 trope templates (现代AU, ABO, Hurt/Comfort, 豆花/甜饼, 前世今生/命运轮回), composed into a system prompt by a `toSystemPrompt()` method and combined at runtime with **RAG over a `KnowledgeChunk` pgvector table** (1536-dim `text-embedding-3-small` vectors, retrieved by the writer node before drafting); and (3) **a UGC community layer** with Stack-Auth identities, public follows, public author pages, nested-reply comments + comment likes + spam protection, in-app notifications with a bell + page, per-reader font/line-height/scroll-position preferences, dark mode, per-story view tracking, pgvector-cosine related-story recommendations, pg_trgm GIN-indexed search, and SEO/OG tags + sitemap. The whole thing is split into **two Docker services** — `web` (Next.js 16 frontend + API routes) and `agent` (LangGraph CLI runtime on port 8123) — wired together via Docker Compose internal networking, self-hosted on a **DigitalOcean VPS via Coolify** behind Cloudflare proxy-mode SSL, with GitHub Actions building both images to GHCR and SSH-deploying on every `git push master`. The migration from Railway to DigitalOcean+Coolify (commit `734e69c`, 2026-04-03) is documented in a 600+-line `docs/MIGRATION_RAILWAY_TO_DIGITALOCEAN.md` playbook that doubles as a reusable Claude-Code automation reference. Before the HSR DreamWriter pivot in commit `a288e25` (2026-03-23), the project shipped as a more generic CopilotKit + LangGraph fandom-agnostic editor with HITL approval cards, Tavily fandom research, and a creative wizard — that earlier work survives in `docs/COPILOTKIT_LANGGRAPH_HITL_GUIDE.md` and informed the current agent design. The pivot commit `b5baf34` the same day deliberately removed the old editor/wizard/generator code, demonstrating willingness to delete working code when a sharper product direction emerges.
     narrative:
+      impactHeadline: "Adaptive LangGraph agent for Chinese fanfiction creators — 7-node quality-loop graph over a hand-curated Honkai: Star Rail canon + pgvector RAG, plus a follower/comment/recommendation community shipped as a $12/month two-service Docker stack."
       problem: |
         The Chinese gaming fanfiction (同人文) scene around HoYoverse titles — and *Honkai: Star Rail* / 崩坏：星穹铁道 in particular — has two structural problems that generic AI writing tools don't solve. **First**, generic LLM creative writing assistants (CopilotKit-style autosuggest, ChatGPT, Claude) have no deep grounding in HSR canon: they default to surface-level character clichés ("cold prince" / "shy boy"), get the speech patterns and emotional triggers wrong (e.g., they don't know that 砂金 stops speaking softly when 黑天鹅 is threatened, or that 藿藿's stutter is canon-specific), and routinely produce OOC (out-of-character) drafts that any serious fanwriter rejects. **Second**, existing fanfiction platforms (LOFTER / AO3 / 长佩) are *reading* communities, not *creation* communities — they host finished work, but they don't lower the activation energy for the much larger group of fans who want to consume CP (couple/ship) content but find a blank page intimidating. The opportunity: build a platform where any fan can type "I want to read 砂金 × 藿藿 现代AU 虐转甜 HE" in Chinese, get back a canon-respecting 3000-word draft in 60 seconds, edit it, publish it, and have other fans like/comment/follow them. That requires solving the OOC problem at the agent level (canon knowledge baked in, plus a self-revising quality loop) and the activation-energy problem at the product level (one-shot prompt → finished story → save → publish). FanFic Lab is the answer.
       audience: |
@@ -8448,6 +8456,8 @@ projects:
     url: https://herwaka.shesharp.org.nz/
     logo: /public/brands/her-waka.jpg
     techStack: [Mintlify, MDX, "She Sharp × MSD partnership"]
+    narrative:
+      impactHeadline: "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
     status: live
   - id: agrihire-solutions
     tier: secondary

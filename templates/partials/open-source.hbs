@@ -16,7 +16,7 @@
 {{#each _aiAgentProjects}}  <tr>
     <td>{{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="48" alt="{{name}}"></a>{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _contextLogo.length}}<br><sub>{{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"></a>{{#unless @last}} {{/unless}}{{/each}}</sub>{{/if}}</td>
-    <td>{{briefTagline tagline}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}{{#if repoUrl}} <img src="https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a" alt="Stars">{{/if}}</td>
+    <td>{{briefTagline tagline}}{{#if narrative.impactHeadline}}<br><em>{{narrative.impactHeadline}}</em>{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}{{#if repoUrl}} <img src="https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a" alt="Stars">{{/if}}</td>
   </tr>
 {{/each}}</table>
 
@@ -31,7 +31,7 @@
 {{#each _openSourceCraftProjects}}  <tr>
     <td>{{#if logo}}<a href="{{default url repoUrl}}" title="{{name}}"><img src="{{logo}}" height="48" alt="{{name}}"></a>{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{briefTagline tagline}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}{{#if repoUrl}} <img src="https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a" alt="Stars">{{/if}}</td>
+    <td>{{briefTagline tagline}}{{#if narrative.impactHeadline}}<br><em>{{narrative.impactHeadline}}</em>{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if url}}{{#unless (eq url repoUrl)}} <a href="{{url}}">Live →</a>{{/unless}}{{/if}}{{#if repoUrl}} <img src="https://img.shields.io/github/stars/{{repoPath repoUrl}}?style=flat-square&labelColor=1a1a1a" alt="Stars">{{/if}}</td>
   </tr>
 {{/each}}</table>
 

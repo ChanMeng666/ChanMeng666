@@ -6,22 +6,20 @@
 
 ## Certifications
 
-{{#each _certsFlagship}}<a href="https://www.linkedin.com/learning/certificates/" title="{{name}} — {{issuer}}"><img src="{{image}}" height="140" alt="{{name}}"></a> {{/each}}
-
-<sub>Two flagship Anthropic credentials anchoring the AI Architect identity.</sub>
+{{#each _certsFlagship}}<a href="{{default url "https://www.linkedin.com/learning/certificates/"}}" title="{{name}} — {{issuer}}"><img src="{{image}}" height="140" alt="{{name}}"></a> {{/each}}
 
 <details>
 <summary><kbd>&nbsp;{{certificates.length}}+ professional certifications &nbsp;·&nbsp; Microsoft Career Essentials &nbsp;·&nbsp; Google AI Essentials &nbsp;·&nbsp; GitHub &nbsp;·&nbsp; Docker &nbsp;·&nbsp; HackerRank &nbsp;·&nbsp; more&nbsp;</kbd></summary>
 
 <br>
 
-{{#each _certsByCategory}}**{{label}}**
+{{#each _certsByCategory}}{{#unless (eq label "HackerRank Professional Certifications")}}**{{label}}**
 
 <p>
 {{#each items}}<a href="#cert-{{@index}}" title="{{name}} — {{issuer}}"><img src="{{image}}" height="100" alt="{{name}} — {{issuer}}"></a>&nbsp;
 {{/each}}</p>
 
-{{/each}}**HackerRank Professional Certifications**
+{{/unless}}{{/each}}**HackerRank Professional Certifications**
 
 <sub>15 certifications across Software Engineer, Frontend Developer (React), SQL (Advanced), JavaScript, REST API, Node.js, Go, Angular, R, Problem Solving, Python, Java, React, CSS, C#. Full credential list with images and IDs in <a href="./llms-full.txt">llms-full.txt</a> and <a href="./dist/profile.json">profile.json</a>.</sub>
 

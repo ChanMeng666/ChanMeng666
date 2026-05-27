@@ -4,9 +4,8 @@
 
 ## Experience
 
-{{#each _currentRoles}}{{position}} at **[{{name}}]({{url}})** — {{dateRange startDate endDate}}.{{#if narrative.impactHeadline}}
-<sub>{{narrative.impactHeadline}}</sub>
-{{/if}}
+{{#each _currentRoles}}
+- **{{position}}** at **[{{name}}]({{url}})** &nbsp;·&nbsp; {{dateRange startDate endDate}}{{#if narrative.impactHeadline}}<br>&nbsp;&nbsp;<sub>{{narrative.impactHeadline}}</sub>{{/if}}
 {{/each}}
 
 {{work.length}} roles across China, New Zealand, and the United States.

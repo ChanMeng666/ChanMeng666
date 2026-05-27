@@ -1,32 +1,27 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     More from Chan — Suno cards, social-link table, sea photo.
-     All kept content; just folded into an opt-in <details> block so
-     the main flow stays calm.
+     More from Chan — opt-in <details> block with the CLI preview + the
+     full connect link table. Suno cards moved to the Open Source section
+     (templates/partials/suno-cards.hbs). Sea photo moved to the Hero
+     (templates/partials/hero.hbs). Both used to live here folded; the
+     redesign promotes them up so they're always visible.
      ═══════════════════════════════════════════════════════════════════════ -->
 
 <details>
-<summary><kbd>&nbsp;More from Chan &nbsp;·&nbsp; music &nbsp;·&nbsp; milestones &nbsp;·&nbsp; connect&nbsp;</kbd></summary>
+<summary><kbd>&nbsp;More from Chan &nbsp;·&nbsp; CLI preview &nbsp;·&nbsp; connect&nbsp;</kbd></summary>
 
 <br>
-
-**My Suno music** — powered by <a href="https://github-readme-suno-cards.vercel.app/">Suno Cards</a>, my open-source Suno card tool.
-
-<a href="https://suno.com/@chanmeng666"><img src="https://github-readme-suno-cards.vercel.app/api/cards?handle=chanmeng666&sort=play_count&max=3" alt="My Suno Music"></a>
 
 {{#if meta.x_brand.cli.screenshot}}
 **Interactive CLI** — run `{{meta.x_brand.cli.command}}` in your terminal.
 
 <a href="{{default meta.x_brand.cli.repoUrl 'https://github.com/ChanMeng666/chan-meng-cli'}}"><img src="{{meta.x_brand.cli.screenshot}}" width="420" alt="{{meta.x_brand.cli.command}} interactive preview"></a>
 
-{{/if}}
-**Connect, subscribe, support**
+{{/if}}**Connect, subscribe, support**
 
 | | |
 |---|---|
 {{#each meta.x_brand.footerLinks}}| [{{label}}]({{url}}) | {{description}} |
 {{/each}}
-
-<img src="/public/photos/chan-by-the-sea.jpg" width="100%" alt="{{basics.name}} by the sea">
 
 Building tools that matter. [Let's connect.](https://www.linkedin.com/in/chanmeng666/)
 

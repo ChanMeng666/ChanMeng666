@@ -14,24 +14,75 @@
 
 {{> jsonld-block}}
 
+<!-- ═══════════════════════════════════════════════════════════════════════
+     VISIBLE STORY (above the fold)
+     Hero (home-grown banner + sea photo + visitor counter) → Currently →
+     Featured Work → Open Source (with builder-tools + Suno sub-blocks) →
+     Skills → Visitor map.
+     ═══════════════════════════════════════════════════════════════════════ -->
+
 {{> hero}}
 
 {{> currently}}
 
 {{> featured-work}}
 
-{{> commissioned}}
-
 {{> open-source}}
 
 {{> skills}}
 
-{{> certifications}}
+{{> visitor-map}}
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     LONG-TAIL CONTENT (folded into <details>)
+     Commissioned engagements, full work history, 50+ certifications,
+     recognition & media, FAQ — preserved at full depth for LLM crawlers
+     and engaged readers but folded so the main flow stays scannable.
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+<details>
+<summary><kbd>&nbsp;Commissioned engagements &nbsp;·&nbsp; expand for details&nbsp;</kbd></summary>
+
+<br>
+
+{{> commissioned}}
+
+</details>
+
+<details>
+<summary><kbd>&nbsp;Full work history &nbsp;·&nbsp; 12 roles &nbsp;·&nbsp; expand for details&nbsp;</kbd></summary>
+
+<br>
 
 {{> experience}}
 
+</details>
+
+<details>
+<summary><kbd>&nbsp;Certifications &nbsp;·&nbsp; 50+ credentials &nbsp;·&nbsp; expand for details&nbsp;</kbd></summary>
+
+<br>
+
+{{> certifications}}
+
+</details>
+
+<details>
+<summary><kbd>&nbsp;Recognition &nbsp;·&nbsp; media &nbsp;·&nbsp; testimonials &nbsp;·&nbsp; expand for details&nbsp;</kbd></summary>
+
+<br>
+
 {{> recognition}}
 
+</details>
+
+<details>
+<summary><kbd>&nbsp;FAQ &nbsp;·&nbsp; expand for details&nbsp;</kbd></summary>
+
+<br>
+
 {{> faq}}
+
+</details>
 
 {{> footer}}

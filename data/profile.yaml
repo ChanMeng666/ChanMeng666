@@ -66,6 +66,89 @@ basics:
     - { network: BuyMeACoffee, url: "https://buymeacoffee.com/chanmeng66u" }
 
 # =============================================================================
+# DECORATIONS — centralised config for the three home-grown README
+# decoration projects (gradient-svg-generator banners, github-visitor-counter,
+# github-readme-suno-cards). Templates pull all SVG endpoint params from here
+# so swapping a banner template is one YAML line, not a hunt through partials.
+# =============================================================================
+decorations:
+  banners:
+    hero:           { template: gold-luxury,     height: 120, text: "Chan Meng",      duration: 8s }
+    featuredWork:   { template: neural-network,  height: 90,  text: "Featured Work",  duration: 8s }
+    openSource:     { template: ocean-depths,    height: 90,  text: "Open Source",    duration: 10s }
+    skills:         { template: northern-aurora, height: 90,  text: "What I can do",  duration: 10s }
+    freeTools:      { template: luminance-glow,  height: 40,  text: "Free tools I built for the community", duration: 6s }
+    soundIMake:     { template: luminance-glow,  height: 40,  text: "Sound I make",   duration: 6s }
+    visitorsHeader: { template: luminance-glow,  height: 30,  text: "Visitors from around the world", duration: 6s }
+    footerDivider:  { template: luminance-glow,  height: 20,  text: "",               duration: 4s }
+  visitorCounter:
+    username: ChanMeng666
+    miniCounter: { theme: transparent, maxflags: 5, displayMode: miniCounter }
+    flagMap:     { theme: github_dark, mapSize: medium, displayMode: flagMap }
+  sunoCards:
+    handle: chanmeng666
+    showProfileCard: true
+    cardsSort: play_count
+    cardsMax: 3
+    theme: dark
+    preset: suno
+
+# =============================================================================
+# BUILDER TOOLS — free tools Chan built for the community, rendered as a
+# 3-card subsection inside Open Source. Distinct from projects[] by audience
+# contract: optimised for try-it-now CTAs, not storytelling depth.
+# =============================================================================
+builderTools:
+  - id: readme-profile-generator
+    name: README Profile Generator
+    tagline: Build a stunning GitHub profile in minutes — zero coding
+    description: >
+      Real-time visual editor with smart skill badges, dynamic GitHub stats
+      integration, and one-click copy-to-clipboard. Privacy-focused — all
+      processing happens client-side.
+    primaryCta:
+      label: Try live
+      url: https://huggingface.co/spaces/ChanMeng666/readme-profile-generator
+    secondaryCta:
+      label: GitHub
+      url: https://github.com/ChanMeng666/readme-profile-generator
+    techBadges: [Streamlit, Python]
+    audience: "GitHub users who want a polished profile without manual markdown editing"
+
+  - id: chan-meng-cli
+    name: Chan Meng — Interactive CLI
+    tagline: Meet me in 3 minutes — minimalism in your terminal
+    description: >
+      One-command npx execution. Four interactive modules: The Journey,
+      Philosophy, Practical Minimalism, Connect. Saves progress, resumes
+      where you left off. Beautiful ASCII art with gradient colours.
+    primaryCta:
+      label: "npx chan-meng"
+      url: https://www.npmjs.com/package/chan-meng
+    secondaryCta:
+      label: GitHub
+      url: https://github.com/ChanMeng666/chan-meng
+    techBadges: [Node.js, TypeScript]
+    audience: "Recruiters / visitors who want to understand Chan's story without scrolling a long README"
+
+  - id: ai-programming-teaching-project
+    name: AI Programming Teaching Hub
+    tagline: Learn AI-assisted coding from beginner to advanced
+    description: >
+      Bilingual (CN/EN) Docusaurus platform with RAG-powered chat assistant
+      (Llama 3.1 8B via Cloudflare Workers AI + Vectorize). Progressive
+      curriculum: prompt engineering, Cursor/v0 tool mastery, real-world
+      project implementations.
+    primaryCta:
+      label: Visit site
+      url: https://programming.chanmeng.org/
+    secondaryCta:
+      label: GitHub
+      url: https://github.com/ChanMeng666/ai-programming-teaching-project
+    techBadges: [Docusaurus, Cloudflare]
+    audience: "Engineers learning AI-assisted development, especially the Chinese-speaking community"
+
+# =============================================================================
 # WORK — career roles, in chronological-relevance order (most recent first).
 # Phase 3 will fill in `narrative.*` for each role one at a time.
 # =============================================================================

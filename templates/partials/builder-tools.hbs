@@ -1,0 +1,25 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     Builder tools — "Free tools I built for the community" sub-block
+     inside Open Source. Renders builderTools[] as a 3-card row.
+     ═══════════════════════════════════════════════════════════════════════ -->
+{{> banner decorations.banners.freeTools}}
+
+<table>
+  <colgroup>
+    <col style="width:33%">
+    <col style="width:33%">
+    <col style="width:33%">
+  </colgroup>
+  <tr>
+{{#each builderTools}}    <td align="center" valign="top">
+      <h4><a href="{{primaryCta.url}}">{{name}}</a></h4>
+      <p><em>{{tagline}}</em></p>
+      <p>{{flatten description}}</p>
+      <p>
+        <a href="{{primaryCta.url}}"><strong>{{primaryCta.label}} →</strong></a>
+        {{#if secondaryCta}}<br><a href="{{secondaryCta.url}}">{{secondaryCta.label}} →</a>{{/if}}
+      </p>
+{{#if techBadges}}      <p><sub>{{join techBadges " · "}}</sub></p>
+{{/if}}    </td>
+{{/each}}  </tr>
+</table>

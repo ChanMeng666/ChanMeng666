@@ -16,9 +16,10 @@
       <p><em>{{tagline}}</em></p>
       <p>{{flatten description}}</p>
       <p>
-        <a href="{{primaryCta.url}}"><strong>{{primaryCta.label}} →</strong></a>
-        {{#if secondaryCta}}<br><a href="{{secondaryCta.url}}">{{secondaryCta.label}} →</a>{{/if}}
-      </p>
+        <a href="{{primaryCta.url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode primaryCta.label}}&template={{@root.decorations.buttons.primary.template}}&height={{@root.decorations.buttons.primary.height}}&duration={{@root.decorations.buttons.primary.duration}}" alt="{{primaryCta.label}}" /></a>
+{{#if secondaryCta}}        <br>
+        <a href="{{secondaryCta.url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode secondaryCta.label}}&template={{@root.decorations.buttons.secondary.template}}&height={{@root.decorations.buttons.secondary.height}}&duration={{@root.decorations.buttons.secondary.duration}}" alt="{{secondaryCta.label}}" /></a>
+{{/if}}      </p>
 {{#if techBadges}}      <p><sub>{{join techBadges " · "}}</sub></p>
 {{/if}}    </td>
 {{/each}}  </tr>

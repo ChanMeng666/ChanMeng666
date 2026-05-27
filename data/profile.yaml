@@ -73,14 +73,18 @@ basics:
 # =============================================================================
 decorations:
   banners:
-    hero:           { template: gold-luxury,     height: 120, text: "Chan Meng",      duration: 8s }
-    featuredWork:   { template: neural-network,  height: 90,  text: "Featured Work",  duration: 8s }
-    openSource:     { template: ocean-depths,    height: 90,  text: "Open Source",    duration: 10s }
-    skills:         { template: northern-aurora, height: 90,  text: "What I can do",  duration: 10s }
-    freeTools:      { template: luminance-glow,  height: 40,  text: "Free tools I built for the community", duration: 6s }
-    soundIMake:     { template: luminance-glow,  height: 40,  text: "Sound I make",   duration: 6s }
-    visitorsHeader: { template: luminance-glow,  height: 30,  text: "Visitors from around the world", duration: 6s }
-    footerDivider:  { template: luminance-glow,  height: 20,  text: "",               duration: 4s }
+    hero:           { template: hologram-interface, height: 120, text: "Chan Meng",                              duration: 8s }
+    featuredWork:   { template: text-shimmer-gold,   height: 30,  text: "Featured Work",                          duration: 8s }
+    openSource:     { template: text-shimmer-blue,   height: 30,  text: "Open Source",                            duration: 8s }
+    skills:         { template: text-shimmer-purple, height: 30,  text: "What I can do",                          duration: 8s }
+    freeTools:      { template: text-shimmer-purple, height: 30,  text: "Free tools I built for the community",  duration: 6s }
+    soundIMake:     { template: text-shimmer-blue,   height: 30,  text: "Sound I make",                           duration: 6s }
+    visitorsHeader: { template: text-shimmer-gold,   height: 30,  text: "Visitors from around the world",         duration: 6s }
+    footerDivider:  { template: text-shimmer-purple, height: 20,  text: "",                                       duration: 4s }
+  buttons:
+    primary:   { template: pills-rainbow,           height: 40, duration: 8s }
+    secondary: { template: social-achievement-blue, height: 30, duration: 6s }
+    accent:    { template: banner-orange,           height: 30, duration: 6s }
   visitorCounter:
     username: ChanMeng666
     miniCounter: { theme: transparent, maxflags: 5, displayMode: miniCounter }

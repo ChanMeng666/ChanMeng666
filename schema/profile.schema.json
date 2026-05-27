@@ -307,6 +307,11 @@
           "description": "Named gradient-svg-generator banner configs. Each value is a banner spec consumed by templates/partials/banner.hbs.",
           "additionalProperties": { "$ref": "#/$defs/bannerSpec" }
         },
+        "buttons": {
+          "type": "object",
+          "description": "Named gradient-svg-generator button configs (template + height + duration only; text + URL come from each call site). Used to render visual CTAs inside builder-tools cards and other call-to-action surfaces.",
+          "additionalProperties": { "$ref": "#/$defs/buttonSpec" }
+        },
         "visitorCounter": {
           "type": "object",
           "description": "github-visitor-counter config. One username; two embed modes (miniCounter for hero, flagMap or topCountries for the standalone visitor section).",
@@ -884,10 +889,22 @@
       "required": ["template", "height", "text", "duration"],
       "additionalProperties": false,
       "properties": {
-        "template": { "type": "string", "minLength": 1, "description": "Template name from gradient-svg-generator (e.g. 'gold-luxury', 'neural-network', 'ocean-depths', 'northern-aurora', 'luminance-glow')." },
+        "template": { "type": "string", "minLength": 1, "description": "Template name from gradient-svg-generator (e.g. 'hologram-interface', 'text-shimmer-purple', 'text-shimmer-gold', 'text-shimmer-blue')." },
         "height":   { "type": "integer", "minimum": 10, "maximum": 400 },
         "text":     { "type": "string" },
         "duration": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?s$", "description": "CSS animation duration with unit, e.g. '6s', '10s', '0.5s'." }
+      }
+    },
+
+    "buttonSpec": {
+      "type": "object",
+      "description": "A single gradient-svg-generator button config. Text and URL come from each call site; template + height + duration define the visual style.",
+      "required": ["template", "height", "duration"],
+      "additionalProperties": false,
+      "properties": {
+        "template": { "type": "string", "minLength": 1, "description": "Template name (e.g. 'pills-rainbow', 'social-achievement-blue', 'banner-orange')." },
+        "height":   { "type": "integer", "minimum": 10, "maximum": 200 },
+        "duration": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?s$" }
       }
     },
 

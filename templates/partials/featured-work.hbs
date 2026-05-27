@@ -17,7 +17,9 @@
 
 {{briefTagline tagline}}
 
-{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
+{{#if narrative.impactHeadline}}**Impact** — {{narrative.impactHeadline}}
+
+{{/if}}{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
 {{/if}}
 {{#if url}}{{#unless (eq url repoUrl)}}[Live]({{url}}){{#if repoUrl}} — [Source]({{repoUrl}}){{/if}}{{/unless}}{{/if}}{{#if (eq url repoUrl)}}[Source]({{repoUrl}}){{/if}}{{#unless url}}{{#if repoUrl}}[Source]({{repoUrl}}){{/if}}{{/unless}} — [Case study](./llms-full.txt)
 

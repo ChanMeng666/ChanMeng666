@@ -4,7 +4,9 @@
 
 ## Experience
 
-{{#each _currentRoles}}{{position}} at **[{{name}}]({{url}})** — {{dateRange startDate endDate}}.
+{{#each _currentRoles}}{{position}} at **[{{name}}]({{url}})** — {{dateRange startDate endDate}}.{{#if narrative.impactHeadline}}
+<sub>{{narrative.impactHeadline}}</sub>
+{{/if}}
 {{/each}}
 
 Previously CTO at Sanicle, full-stack engineer for FreePeriod, ByteDance Youth Training Camp, mathematics teacher in Shandong. {{work.length}} roles across China, New Zealand, and the United States.

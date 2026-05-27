@@ -450,6 +450,7 @@
       "additionalProperties": false,
       "description": "Structured narrative for a project. Business and product logic lead; tech depth supports.",
       "properties": {
+        "impactHeadline": { "type": "string", "maxLength": 280, "description": "Single-line non-technical business-impact summary rendered under the project tagline in README. Plain language understandable to non-engineers; 1–2 sentences, ≤280 chars; prefer verifiable numbers." },
         "problem": { "type": "string", "description": "User pain or market gap addressed." },
         "audience": { "type": "string", "description": "Who it serves — persona, segment, scale, geography." },
         "productLogic": { "type": "string", "description": "How the product works at a user level; engagement loop." },
@@ -465,6 +466,7 @@
       "additionalProperties": false,
       "description": "Structured narrative for a work experience.",
       "properties": {
+        "impactHeadline": { "type": "string", "maxLength": 280, "description": "Single-line non-technical business-impact summary rendered under the role title in README. Plain language understandable to non-engineers; 1–2 sentences, ≤280 chars; prefer verifiable numbers." },
         "companyContext": { "type": "string" },
         "mission": { "type": "string" },
         "myMandate": { "type": "string" },

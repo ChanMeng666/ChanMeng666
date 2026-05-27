@@ -3664,6 +3664,8 @@ verification, and Cloudflare Workers deployment via
 `@opennextjs/cloudflare`. Modern Chinese Ink aesthetic UI
 redesigned March 2026.
 
+**Impact:** Full-stack AI app reinterpreting traditional Chinese vocabulary through Google Gemini — exports shareable SVG cards, gated by a two-layer rate-limit quota system, ~95% solo across 60 commits, deployed on Cloudflare Workers via OpenNext.
+
 **Problem:** Generic LLM chat windows are bad at *creative cultural
 reinterpretation*: ask Gemini directly to "redefine 婚姻" and
 you get a paragraph of generic prose with no shape, no
@@ -3801,6 +3803,8 @@ three maps (Te Awa, Te Maunga, Te Moana), three taonga materials
 Neon Postgres for auth, leaderboards, cloud saves (3 slots),
 daily challenges, and server-side anti-cheat. 84 commits over
 ~2 months (Feb–Mar 2026), executed in disciplined P0–P4 phases.
+
+**Impact:** 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Māori mythology of Aotearoa, with full Cloudflare Workers + Hono + Neon Postgres backend. 84 commits / ~99% solo over 2 months.
 
 **Problem:** Two prevailing pictures of "a portfolio game project" are both
 wrong: (a) a trivial Canvas + JS toy that lasts one weekend
@@ -4151,6 +4155,8 @@ conference can fork-and-config the same stack. Chan was
 subsequently recognised among the **14 expert mentors** at the
 festival.
 
+**Impact:** Industry-partnered AI event platform (AUT × AI Forum NZ × She Sharp) — 3D quantum-orb mascot with 6-tier gamification, GPT-4o-mini streaming chat, Notion-as-database FAQ; used live by 11 teams / 80+ participants at AI Hackathon Festival 2025.
+
 **Problem:** Hackathons and conferences generate the same Q&A surface every
 year: participants ask the same 30 questions ("how do I form a
 team", "what counts as AI", "when do I have to be on site",
@@ -4359,6 +4365,8 @@ per-request rather than persisted on any server. Live at
 migrated from Vercel to Cloudflare Workers in Feb 2026 with
 GitHub Actions auto-deploy.
 
+**Impact:** No-code visual abstraction layer over the Resend API — drag-and-drop block editor, 5-step send wizard, Audiences sync, onboarding designed for non-technical users. Born as a Christmas-greeting CLI, pivoted to a full visual platform in 4 days across 43 commits.
+
 **Problem:** Resend is the modern transactional-email API of choice for
 developers — clean SDK, fast onboarding, MX-record sanity — but
 the gap it leaves wide open is **non-technical users**.
@@ -4559,7 +4567,9 @@ behind Traefik with GHCR + GitHub Actions CI/CD. Trilingual
 EN / 简体中文 / 日本語. Live at
 [sunostats.chanmeng.org](https://sunostats.chanmeng.org).
 
-**Problem:** Suno is one of the most prolific music platforms on the
+**Impact:** Industry's first Suno music lineage explorer — closed a gap in Suno's own platform that creators couldn't fix themselves by discovering an unredacted parent→child UUID leak; 46 solo commits, same-day scaffold-to-live, $1 paid analytics lenses.
+
+**Problem:** Suno is one of the most prolific music platforms onthe
 internet — millions of generated tracks, an Explore chart
 that turns over daily — but its creators operate **almost
 completely blind**. Suno's UI shows one total play count
@@ -4804,6 +4814,8 @@ Neon Postgres + Better Auth + Stripe 22 + OpenTelemetry +
 [image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/).
 Apache-2.0 with patent grant. 24 solo commits across ~17 months
 of sustained iteration.
+
+**Impact:** Full-stack text-to-image SaaS pivoted onto Cloudflare Workers AI's FLUX.1 Schnell free tier (100k req/day) — auth, credits ledger, Stripe billing, image storage, gallery; 17 months of sustained development from Vercel demo to free-tier production SaaS.
 
 **Problem:** Text-to-image AI tools sit in an awkward economic position:
 the model inference (DALL-E, Stable Diffusion XL, Midjourney
@@ -5310,6 +5322,8 @@ with clean architecture, JWT auth, and paired React frontend — built
 solo as a teaching artefact from the ByteDance Youth Training Camp
 capstone. 52 GitHub stars, 7 forks, < 50 ms average API response time.
 
+**Impact:** Production-shape Go + Gin + MySQL + Redis e-commerce backend template — 52 stars / 7 forks (Chan's most-starred primary OSS project), clean architecture with JWT auth and bilingual READMEs, sub-50ms average API response.
+
 **Problem:** Developers learning Go web development have access to plenty of
 toy hello-world tutorials and plenty of opaque production
 codebases, but very little **in between** — no template that
@@ -5378,6 +5392,8 @@ through Smithery (`npx -y @smithery/cli install
 @chanmeng666/google-jobs-server --client claude`); ships a
 Dockerfile and a `.mcpb` compiled binary for frictionless install
 on the MCP Registry; security badges from MseeP.ai and Glama.ai.
+
+**Impact:** Companion early-MCP Google Jobs server (36 days after MCP launch) — on the official MCP Registry, listed across 10+ MCP discovery surfaces with Glama A-rating; Skywork AI deep-dive review called it 'one of the most elegant production-ready solutions.'
 
 **Problem:** At launch (Dec 31 2024), MCP was weeks old as a public protocol
 and there was no canonical way for an AI assistant to query
@@ -5476,6 +5492,8 @@ Anthropic's MCP launch), **still maintained through April 2026**
 across 24 solo commits and 2 tagged releases (v1.0.0 + v1.1.0).
 Built with Chrome Manifest V3 APIs (webRequest + webRequestBlocking
 + storage + runtime messaging), JavaScript ES6+, Webpack 5, Babel.
+
+**Impact:** Formally Chrome Web Store-published browser extension for downloading Tencent Meeting recordings — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted; still maintained 18 months after first ship.
 
 **Problem:** Tencent Meeting recordings live on the `myqcloud.com` CDN
 behind a combination of authentication headers, referrer
@@ -5850,6 +5868,8 @@ integration signal for the project itself.
 - **Tech stack:** Next.js 15.0 (App Router, RSC, dynamic-imports for Lottie SSR safety), React 18.2 (production runtime; README badge says React 19 but package.json pins ^18.2.0), TypeScript 5.9 (full type-safe assessment plugin contracts), Tailwind CSS 3.4 + tailwindcss-animate + shadcn/ui design system, Radix UI primitives (Dialog, DropdownMenu, RadioGroup, Tabs, Toast, Progress, Label), Framer Motion 11 (centralized variants library: fadeInUp, staggerContainer, pageTransition, cardHover, spring transitions), Lottie animations: lottie-react 2.4 + react-lottie 1.2 + @lottiefiles/dotlottie-wc — 17 hand-curated `.json` files in `public/Lottie/`, Recharts 2.13 + ApexCharts 3.54 (10-axis radar + trend + comparison charts), Zustand 5.0 with persist middleware (assessment state + history-store + achievement-store), jsPDF 2.5 (downloadable PDF report) + html2canvas 1.4 (PNG share-card capture), Hand-rolled SVG generator in `lib/svg-generator.ts` (XML-escape-safe, server-free), uuid v11 (assessment IDs) + date-fns 4.1 (timeline formatting), Plugin-registry assessment engine: `lib/assessments/{friendship,family,romantic,workplace}/{config,questions,categories}.ts` + central `registry.ts`, Generic weighted-scoring core: `lib/core/scoring.ts` (single algorithm runs all 4 assessment domains via `AssessmentConfig.scoringAlgorithm` interface), Gamification layer: `lib/gamification/achievements.ts` (15 achievements across 5 categories × 4 rarities) + `achievement-store.ts` (Set-optimised O(n+m) unlock checks), GEO (Generative Engine Optimization) layer: `lib/geo-analytics.ts` + `components/GEOHead.tsx` + `components/GEODashboard.tsx` + `public/llms.txt` (AI-agent usage guide), Cloudflare Workers deployment via @opennextjs/cloudflare 1.16 + wrangler 4.61 (migrated from Vercel Feb 2026), GPL-3.0 license, Zero analytics, zero cookies, zero backend — privacy is enforced by the architecture, not by policy
 
 **Summary:** FriendScope is a 4-domain psychological relationship assessment tool — friendship, family, romantic, and workplace — designed around an unusual constraint: zero data should ever leave the user's browser. The architecture enforces this rather than promising it. Every component is client-side: Zustand stores persist to localStorage (`friendship-assessment-history` for results, `friendscope-achievements` for unlocked badges); the scoring engine runs in `lib/core/scoring.ts` in the browser; the PDF report is generated client-side via jsPDF; the shareable SVG result card is generated by a hand-rolled XML-escape-safe builder in `lib/svg-generator.ts`; and the PNG share card uses html2canvas to capture DOM. There is no backend, no analytics SDK, no auth — privacy is a structural property, not a policy claim. Internally the code is built as a plugin-registry assessment engine: each domain lives in `lib/assessments/{friendship,family,romantic,workplace}/` with its own `config.ts` declaring questions, categories with per-dimension weights (e.g., Trust & Honesty = 1.5×, Communication = 1.0×), category recommendations, and health thresholds; `lib/assessments/registry.ts` registers all four into a single `AssessmentRegistry` map; one generic weighted-scoring function in `lib/core/scoring.ts` handles every domain via the shared `AssessmentConfig` interface. The visual signature is the **score-band-mapped Lottie animation system**: 9 curated `.json` files in `public/Lottie/` (`10-point-friendship.json` through `90-point-friendship.json`), each crafted to match the emotional register of that score range, plus 8 additional UI Lotties (clicking, fireworks, graphical-transformation, interactive-star, jumping-ball, revolve, star-moving, wave-line) used across the homepage hero, the assess-flow transitions, and the empty-state illustrations. Lottie loading is wrapped in `components/LottieAnimation.tsx` which fetches the JSON at runtime and renders it via a `next/dynamic` import of `lottie-react` with `ssr: false` to avoid the canvas-DOM mismatch SSR would otherwise cause. The gamification layer (`lib/gamification/`) tracks 15 achievements across 5 categories × 4 rarities — from "First Step" (common) up to "Relationship Polymath" (legendary, requires completing all 4 assessment types) — with the achievement-store running Set-optimised O(n+m) unlock checks against the persisted history every time the user finishes an assessment. The project also ships a deliberate **Generative Engine Optimization (GEO) layer** — `public/llms.txt` with AI-agent usage instructions, `components/GEOHead.tsx` injecting page-specific AI directives, `lib/geo-analytics.ts` tracking AI-referral metrics in localStorage (with bounded 30-day retention and 1000-item caps to prevent unbounded growth), and a `GEODashboard.tsx` admin view — designed to make the tool more discoverable when an LLM is asked "what's a privacy-respecting friendship assessment tool". Deployment moved from Vercel to Cloudflare Workers in Feb 2026 via the `@opennextjs/cloudflare` adapter. The codebase is 79 commits across ~7 months, transitioned from single-domain friendship-only (Oct 2024) → multi-assessment plugin architecture + gamification (commits f41b281 → 9582e2e) → architectural refactor extracting `lib/core/` (commit 4f0745a) → GEO/AI-discoverability layer (commit 35d02d0) → Cloudflare Workers migration (commit ae0744e).
+
+**Impact:** Evidence-based 4-domain relationship-assessment tool where 100% of user data stays in the browser — Zustand-on-localStorage architecture, plugin engine across 72 questions / 36 weighted dimensions, 17 Lottie animations, 79 commits over 7 months on Cloudflare Workers.
 
 **Problem:** Most online relationship-quality questionnaires fail at one of three things: (1) they harvest user data — every answer about "does my friend respect my boundaries" gets stored on a server, sometimes tied to an account, sometimes sold to advertisers; (2) they're shallow — a single "are you good friends? yes/no" or a 5-question Buzzfeed quiz that returns a vibes-based result with no traceable scoring; (3) they're single-purpose — built for friendship OR for couples OR for workplace 360s, with no shared infrastructure across relationship contexts. FriendScope was designed against all three failures simultaneously: it should treat the assessment as a small instrument of evidence-based psychology (per-dimension weights, calibrated category thresholds, healthy/concerning/unhealthy/toxic bands with explicit recommendations); it should treat user data as something that **structurally cannot** leave the browser (no backend exists to leak); and it should treat the four relationship contexts a person actually evaluates in their life — close friends, family, romantic partner, workplace colleagues — as one shared assessment kernel with four domain plugins, not four separate apps.
 

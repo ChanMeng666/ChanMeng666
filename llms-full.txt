@@ -74,7 +74,7 @@ philosophy — "Subtraction for life, addition for thought."
 - **ByteDance** (employer) -- Backend Developer, Youth Training Camp (Jun — Aug 2024). URL: https://www.bytedance.com. Related work: bytedance.
 - **Cebu International Academy** (employer) -- Volunteer Educator (Mar — Aug 2023). URL: http://cebucia.com. Related volunteer: cebu-international-academy.
 - **CORDE** (employer) -- Full Stack Developer & Lead Documenter — Lincoln University COMP693 industry placement (Jun — Nov 2024). URL: https://corde.nz. Related work: corde.
-- **Aotearoa Infinite Academy** (employer) -- Software Developer (Oct — Nov 2025). URL: https://www.aotearoainfiniteacademy.school. Related work: aotearoa-infinite-academy.
+- **Aotearoa Infinite Academy** (employer) -- Software Engineer · Bandicoot squad (Oct — Nov 2025). URL: https://www.aotearoainfiniteacademy.school. Related work: aotearoa-infinite-academy.
 
 **Secondary (partners / vendors):**
 - **NZ Ministry of Social Development** (partner) -- Funder — Her Waka 2026 employment-readiness programme. URL: https://www.msd.govt.nz.
@@ -946,35 +946,132 @@ of a 24.6k-star project.
 
 ## Past Roles
 
-### Software Developer at Aotearoa Infinite Academy
-[tier=secondary · recency=historical · updated=2026-05-18]
+### Software Engineer (Bandicoot squad · Crimson Academies) at Aotearoa Infinite Academy
+[tier=primary · recency=historical · updated=2026-05-27]
 - **Period:** Oct 2025 -- Nov 2025
-- **Location:** New Zealand (remote)
+- **Location:** New Zealand (remote, Christchurch-anchored team)
 - **URL:** https://www.aotearoainfiniteacademy.school/
 
-**Company context:** Aotearoa Infinite Academy is a New Zealand educational-technology
-initiative building software products and learning platforms for
-the Aotearoa education sector.
+**Company context:** **Aotearoa Infinite Academy (AIA)** is **New Zealand's first
+free online charter high school** — Y9–12, fully remote,
+officially confirmed as a charter school on 14 October 2025
+and opening Term 1 2026 (27 January 2026). AIA is part of
+the **Crimson Academies** group (sister schools: Crimson Global
+Academy / CGA, Mt Hobson Academy / MHA, Crimson AGE School)
+and shares IT, finance, HR, and engineering with the group.
+Founder/CEO **Penelope ("Pene") Barton**; founding principal
+**Saira Sharif**. Chan joined Crimson Academies' newly-formed
+engineering squad **"Bandicoot"** — initially Pene, Olivia Dyet,
+Peter Joe, Chan — joined shortly afterwards by **Tom Rivett**
+(CGA engineering lead, Christchurch).
 
-**Mission:** Build accessible, scalable educational technology that serves the
-New Zealand education community.
+**Mission:** Stand up the full digital stack — Learning Management System,
+AI grading, ESOL learning support, AI agents, internal employee
+platform (Bright) — that lets AIA open Term 1 2026 as a fully
+online charter school. Replace fragmented existing systems
+(Canvas, CGA Home, Teams, Webflow-driven enrollment) with a
+unified codebase that serves both Emi (the existing Crimson
+Academies LMS) and Infinite (the new AIA high-school LMS) while
+feeding a shared SIS, parent portal, and analytics layer.
 
-**My mandate:** Short-term software-development contract (October–November 2025)
-focused on building scalable solutions for the education sector
-and collaborating with cross-functional teams on educational
-platform initiatives.
+**My mandate:** Hired as **Software Engineer** for the Bandicoot squad with
+a focused remit across four projects, all assigned directly
+by Pene Barton:
+1. **Design and ship the ESOL learning platform end-to-end**
+   — from blank slate to v2 deployment, including database,
+   role model, dashboard, and audio/AI-dialogue features.
+2. **Work the LMS backlog for Infinite-Learn (AIA)** —
+   and ultimately refactor both Emi and Infinite into a
+   single multi-tenant codebase.
+3. **Build the AI Grading system** — pending teacher
+   mark schemes and example submissions to inform design.
+4. **Act as the squad's AI-tools knowledge lead** — share
+   Claude Code, Claude Skills, Specification-Driven
+   Development, Wispr Flow, Mermaid, and other AI-augmented
+   workflows across the engineering team.
+Reporting line: directly to Pene Barton (CEO/founder), with
+parallel collaboration on architecture decisions with Tom
+Rivett (CGA engineering lead) and Peter Joe (fellow engineer).
+Engagement ran ~three weeks of focused delivery (22 October –
+9 November 2025), in parallel with the early GAVIGO ramp-up.
 
-**Impact delivered:** Delivered software solutions for educational technology
-initiatives over a two-month focused engagement; collaborated
-with cross-functional teams on innovative educational-platform
-work and scalable delivery for the education sector. The
-engagement ran in parallel with the GAVIGO consulting work that
-began the same month.
+**Impact delivered:** Three weeks of focused delivery across four parallel tracks:
 
-**Technical highlights:** Standard New Zealand educational-technology stack engagement —
-full-stack development, integration work, and collaborative
-cross-functional delivery within the constraints of a short
-contract window.
+**ESOL Learning Platform** (designed and shipped solo,
+end-to-end). Built from a blank slate to v2 deployment in
+the first weekend; database structure + 6-role user dashboard
+(System Admin · School Admin · Department Head · Teacher
+· Student · Parent); conversation transcription storage,
+audio recording storage, and playback for AI dialogue
+interactions; iterated on UI/UX and role logic based on
+user-testing feedback from **Becky Hancock** (CGA Director
+of Curriculum & Pedagogy) routed via Brittanie Bates.
+
+**LMS monorepo refactor (Emi → Infinite, multi-tenant)**.
+Refactored the Firestore-backed Emi prototype into a
+professional monorepo at `github.com/ChanMeng6/infinite-lms`
+with clean separation between Emi and AIA subprojects.
+Migrated from Firestore to **Firebase DataConnect with
+PostgreSQL** (Cloud SQL instance `lms-dataconnect-dev`) —
+modelled 6 core tables (user · course · lesson · assignment
+· enrollment · submission). Deployed multi-tenant on a
+single Firebase instance with separate domains
+(`infinite-lms-emi.web.app` + `infinite-lms-aia.web.app`),
+shared auth (added Google email login as a new sign-in
+option), and architecture documentation for team reference
+and onboarding.
+
+**Cross-team AI-tools enablement**. Led the **AI Tools
+Training Session** on 29 October 2025 for the full Bandicoot
+squad (Pene, Tom, Dan Clark, Sarah Yock, Peter Joe, Zhiyu),
+covering Wispr Flow, Claude Skills, Claude Code productivity
+tips, Spec Kit (Specification-Driven Development), and
+Mermaid diagrams. Comprehensive write-up published in the
+all-aotearoa-infinite-academy Slack group. Attended the
+International Java Developers Conference and **ChurConf 2025**;
+distilled the SDD methodology talk *"The Chasm, the Craft,
+and the Chain of AI-Assisted Code"* into a team-shareable
+document.
+
+**Integration research**: comprehensive SMS/email solution
+comparison (Twilio for SMS, Resend for email automation) with
+pricing analysis and implementation recommendations for the
+EMI project, delivered to Pene.
+
+**Open-source IP launched during this engagement**:
+`claude-code-audio-hooks` — an audio-feedback hook system for
+Claude Code that emerged from multitasking across LMS + ESOL
++ GAVIGO workloads. Later evolved into the `echook` daemon
+and is explicitly preserved as Chan's IP in the subsequent
+Engram Architect Cohort engagement letter (May 2026).
+
+**Technical highlights:** **ESOL platform**: full-stack TypeScript on Firebase with
+role-based access control across 6 distinct user types; audio
+recording / transcription pipeline integrated into the AI
+dialogue flow.
+
+**LMS refactor — the key architectural decision**: chose
+**Firebase DataConnect** over staying on Firestore to give
+the LMS a relational backbone (Cloud SQL PostgreSQL) while
+keeping Firebase's hosting, auth, and storage primitives
+intact. **Multi-tenant pattern**: one Firebase project hosting
+two distinct app deployments (Emi Primary + Infinite-Learn)
+sharing the same database schema and auth, but with separate
+domains. This was the explicit alternative to forking two
+codebases or running two Firebase projects — preserving
+cross-team collaboration on a single source-of-truth repo
+and shared infrastructure cost.
+
+**Architecture documentation**: converted Pene's hand-drawn
+architecture diagrams into Mermaid code for the squad's
+living documentation set.
+
+**AI-augmented engineering practice**: brought Claude Code,
+Specification-Driven Development (Spec Kit), Wispr Flow, and
+Claude Skills into Bandicoot's everyday workflow — the
+squad's first systematic AI-tools onboarding session, and
+the basis for ongoing developer-productivity gains across
+the team.
 ### CTO (prev. Senior AI/ML Infrastructure Engineer) at Sanicle
 [tier=primary · recency=recent · updated=2026-05-18]
 - **Period:** Mar 2025 -- Feb 2026

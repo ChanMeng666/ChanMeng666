@@ -205,29 +205,37 @@
     {
       "id": "aotearoa-infinite-academy",
       "name": "Aotearoa Infinite Academy",
-      "position": "Software Developer",
+      "position": "Software Engineer (Bandicoot squad · Crimson Academies)",
       "startDate": "2025-10",
       "endDate": "2025-11",
-      "location": "New Zealand (remote)",
+      "location": "New Zealand (remote, Christchurch-anchored team)",
       "url": "https://www.aotearoainfiniteacademy.school/",
       "logo": "/public/organizations/aotearoa-infinite-academy.svg",
-      "featured": false,
-      "tier": "secondary",
+      "featured": true,
+      "tier": "primary",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-05-27",
       "keywords": [
         "EdTech",
-        "Full-stack"
+        "Charter school launch",
+        "Bandicoot dev squad",
+        "ESOL learning platform",
+        "Multi-tenant LMS",
+        "Firebase DataConnect",
+        "Cloud SQL (PostgreSQL)",
+        "Specification-Driven Development",
+        "AI-augmented engineering practice",
+        "Claude Code knowledge sharing"
       ],
       "narrative": {
-        "impactHeadline": "Architected the multi-tenant LMS unifying Crimson Academies' EMI + AIA learning platforms — refactored a Firestore prototype into a production monorepo with Firebase DataConnect + Cloud SQL, deployed both apps live, presented at ChurConf 2025 on AI-assisted code.",
-        "companyContext": "Aotearoa Infinite Academy is a New Zealand educational-technology\ninitiative building software products and learning platforms for\nthe Aotearoa education sector.\n",
-        "mission": "Build accessible, scalable educational technology that serves the\nNew Zealand education community.\n",
-        "myMandate": "Short-term software-development contract (October–November 2025)\nfocused on building scalable solutions for the education sector\nand collaborating with cross-functional teams on educational\nplatform initiatives.\n",
-        "impactDelivered": "Delivered software solutions for educational technology\ninitiatives over a two-month focused engagement; collaborated\nwith cross-functional teams on innovative educational-platform\nwork and scalable delivery for the education sector. The\nengagement ran in parallel with the GAVIGO consulting work that\nbegan the same month.\n",
-        "technicalHighlights": "Standard New Zealand educational-technology stack engagement —\nfull-stack development, integration work, and collaborative\ncross-functional delivery within the constraints of a short\ncontract window.\n"
+        "impactHeadline": "Joined Crimson Academies' Bandicoot dev squad as engineer for AIA — NZ's first free online charter school. Shipped the ESOL platform end-to-end, refactored Emi into a multi-tenant LMS monorepo on Firebase DataConnect + Cloud SQL, and led the team's AI-tools training.",
+        "companyContext": "**Aotearoa Infinite Academy (AIA)** is **New Zealand's first\nfree online charter high school** — Y9–12, fully remote,\nofficially confirmed as a charter school on 14 October 2025\nand opening Term 1 2026 (27 January 2026). AIA is part of\nthe **Crimson Academies** group (sister schools: Crimson Global\nAcademy / CGA, Mt Hobson Academy / MHA, Crimson AGE School)\nand shares IT, finance, HR, and engineering with the group.\nFounder/CEO **Penelope (\"Pene\") Barton**; founding principal\n**Saira Sharif**. Chan joined Crimson Academies' newly-formed\nengineering squad **\"Bandicoot\"** — initially Pene, Olivia Dyet,\nPeter Joe, Chan — joined shortly afterwards by **Tom Rivett**\n(CGA engineering lead, Christchurch).\n",
+        "mission": "Stand up the full digital stack — Learning Management System,\nAI grading, ESOL learning support, AI agents, internal employee\nplatform (Bright) — that lets AIA open Term 1 2026 as a fully\nonline charter school. Replace fragmented existing systems\n(Canvas, CGA Home, Teams, Webflow-driven enrollment) with a\nunified codebase that serves both Emi (the existing Crimson\nAcademies LMS) and Infinite (the new AIA high-school LMS) while\nfeeding a shared SIS, parent portal, and analytics layer.\n",
+        "myMandate": "Hired as **Software Engineer** for the Bandicoot squad with\na focused remit across four projects, all assigned directly\nby Pene Barton:\n1. **Design and ship the ESOL learning platform end-to-end**\n   — from blank slate to v2 deployment, including database,\n   role model, dashboard, and audio/AI-dialogue features.\n2. **Work the LMS backlog for Infinite-Learn (AIA)** —\n   and ultimately refactor both Emi and Infinite into a\n   single multi-tenant codebase.\n3. **Build the AI Grading system** — pending teacher\n   mark schemes and example submissions to inform design.\n4. **Act as the squad's AI-tools knowledge lead** — share\n   Claude Code, Claude Skills, Specification-Driven\n   Development, Wispr Flow, Mermaid, and other AI-augmented\n   workflows across the engineering team.\nReporting line: directly to Pene Barton (CEO/founder), with\nparallel collaboration on architecture decisions with Tom\nRivett (CGA engineering lead) and Peter Joe (fellow engineer).\nEngagement ran ~three weeks of focused delivery (22 October –\n9 November 2025), in parallel with the early GAVIGO ramp-up.\n",
+        "impactDelivered": "Three weeks of focused delivery across four parallel tracks:\n\n**ESOL Learning Platform** (designed and shipped solo,\nend-to-end). Built from a blank slate to v2 deployment in\nthe first weekend; database structure + 6-role user dashboard\n(System Admin · School Admin · Department Head · Teacher\n· Student · Parent); conversation transcription storage,\naudio recording storage, and playback for AI dialogue\ninteractions; iterated on UI/UX and role logic based on\nuser-testing feedback from **Becky Hancock** (CGA Director\nof Curriculum & Pedagogy) routed via Brittanie Bates.\n\n**LMS monorepo refactor (Emi → Infinite, multi-tenant)**.\nRefactored the Firestore-backed Emi prototype into a\nprofessional monorepo at `github.com/ChanMeng6/infinite-lms`\nwith clean separation between Emi and AIA subprojects.\nMigrated from Firestore to **Firebase DataConnect with\nPostgreSQL** (Cloud SQL instance `lms-dataconnect-dev`) —\nmodelled 6 core tables (user · course · lesson · assignment\n· enrollment · submission). Deployed multi-tenant on a\nsingle Firebase instance with separate domains\n(`infinite-lms-emi.web.app` + `infinite-lms-aia.web.app`),\nshared auth (added Google email login as a new sign-in\noption), and architecture documentation for team reference\nand onboarding.\n\n**Cross-team AI-tools enablement**. Led the **AI Tools\nTraining Session** on 29 October 2025 for the full Bandicoot\nsquad (Pene, Tom, Dan Clark, Sarah Yock, Peter Joe, Zhiyu),\ncovering Wispr Flow, Claude Skills, Claude Code productivity\ntips, Spec Kit (Specification-Driven Development), and\nMermaid diagrams. Comprehensive write-up published in the\nall-aotearoa-infinite-academy Slack group. Attended the\nInternational Java Developers Conference and **ChurConf 2025**;\ndistilled the SDD methodology talk *\"The Chasm, the Craft,\nand the Chain of AI-Assisted Code\"* into a team-shareable\ndocument.\n\n**Integration research**: comprehensive SMS/email solution\ncomparison (Twilio for SMS, Resend for email automation) with\npricing analysis and implementation recommendations for the\nEMI project, delivered to Pene.\n\n**Open-source IP launched during this engagement**:\n`claude-code-audio-hooks` — an audio-feedback hook system for\nClaude Code that emerged from multitasking across LMS + ESOL\n+ GAVIGO workloads. Later evolved into the `echook` daemon\nand is explicitly preserved as Chan's IP in the subsequent\nEngram Architect Cohort engagement letter (May 2026).\n",
+        "technicalHighlights": "**ESOL platform**: full-stack TypeScript on Firebase with\nrole-based access control across 6 distinct user types; audio\nrecording / transcription pipeline integrated into the AI\ndialogue flow.\n\n**LMS refactor — the key architectural decision**: chose\n**Firebase DataConnect** over staying on Firestore to give\nthe LMS a relational backbone (Cloud SQL PostgreSQL) while\nkeeping Firebase's hosting, auth, and storage primitives\nintact. **Multi-tenant pattern**: one Firebase project hosting\ntwo distinct app deployments (Emi Primary + Infinite-Learn)\nsharing the same database schema and auth, but with separate\ndomains. This was the explicit alternative to forking two\ncodebases or running two Firebase projects — preserving\ncross-team collaboration on a single source-of-truth repo\nand shared infrastructure cost.\n\n**Architecture documentation**: converted Pene's hand-drawn\narchitecture diagrams into Mermaid code for the squad's\nliving documentation set.\n\n**AI-augmented engineering practice**: brought Claude Code,\nSpecification-Driven Development (Spec Kit), Wispr Flow, and\nClaude Skills into Bandicoot's everyday workflow — the\nsquad's first systematic AI-tools onboarding session, and\nthe basis for ongoing developer-productivity gains across\nthe team.\n"
       },
-      "publicSummary": "Software Developer at Aotearoa Infinite Academy — a New Zealand\neducational-technology initiative — on a short two-month\nengagement (October–November 2025) delivering full-stack software\nsolutions for the education sector.\n"
+      "publicSummary": "Software Engineer at **Aotearoa Infinite Academy (AIA)** —\nNew Zealand's first free online charter high school, part of\nthe **Crimson Academies** group, opening Term 1 2026. Joined\nthe newly-formed **Bandicoot** engineering squad for a focused\nthree-week delivery (22 October – 9 November 2025) under\nfounder/CEO Penelope Barton. Designed and shipped the ESOL\nlearning platform end-to-end; refactored the existing Emi LMS\ninto a multi-tenant monorepo on Firebase DataConnect +\nPostgreSQL (Cloud SQL) serving both Emi (primary) and\nInfinite-Learn (AIA high school) on a single codebase; led\nthe squad's first systematic AI-tools training session and\nseeded Specification-Driven Development practice across the\nteam. Open-source IP `claude-code-audio-hooks` (now `echook`)\nlaunched during this engagement and explicitly preserved as\nChan's IP in subsequent contract negotiations.\n"
     },
     {
       "id": "she-sharp",
@@ -8083,23 +8091,23 @@
       "url": "https://www.aotearoainfiniteacademy.school",
       "logo": "/public/organizations/aotearoa-infinite-academy.svg",
       "type": "startup",
-      "industry": "Education — online high school (NZ's first registered online HS + charter school)",
+      "industry": "Education — online high school (NZ's first free online charter school; Crimson Academies group)",
       "hq": {
         "countryCode": "NZ"
       },
       "founded": "2025",
-      "description": "Pioneer of New Zealand's first registered online high school and\nfirst online charter school. Tuition-free, world-class education\nfor high schoolers across Aotearoa. 2026 Year 9–12 enrolments open\nNov 12 2025.\n",
+      "description": "New Zealand's first free online charter high school (Y9–12,\nTerm 1 2026 / 27 January opening). Part of the **Crimson\nAcademies** group alongside Crimson Global Academy, Mt Hobson\nAcademy, and Crimson AGE School. Founder/CEO Penelope Barton,\nfounding principal Saira Sharif. 2026 Y9–12 enrolments opened\n12 November 2025; charter school status officially confirmed\n14 October 2025.\n",
       "sameAs": [
         "https://www.linkedin.com/company/aotearoa-infinite-academy/"
       ],
       "tier": "primary",
       "recency": "recent",
-      "lastUpdated": "2026-05-22",
+      "lastUpdated": "2026-05-27",
       "meta": {
         "x_brand": {
           "displayTier": "primary",
           "category": "employer",
-          "context": "Software Developer (Oct — Nov 2025)",
+          "context": "Software Engineer · Bandicoot squad (Oct — Nov 2025)",
           "relatedWorkId": "aotearoa-infinite-academy"
         }
       }
@@ -8806,6 +8814,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-05-27",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-27T04:25:02.453Z"
+    "buildTimestamp": "2026-05-27T04:32:54.401Z"
   }
 }

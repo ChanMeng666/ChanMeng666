@@ -90,6 +90,8 @@
 {{#if location}}- **Location:** {{location}}
 {{/if}}{{#if url}}- **URL:** {{url}}
 {{/if}}{{#if keywords.length}}- **Keywords:** {{join keywords ", "}}
+{{/if}}{{#if narrative.impactHeadline}}
+**Impact:** {{trim narrative.impactHeadline}}
 {{/if}}{{#if narrative.companyContext}}
 **Company context:** {{trim narrative.companyContext}}
 {{/if}}{{#if narrative.mission}}
@@ -111,6 +113,8 @@
 - **Period:** {{dateRange startDate endDate}}
 {{#if location}}- **Location:** {{location}}
 {{/if}}{{#if url}}- **URL:** {{url}}
+{{/if}}{{#if narrative.impactHeadline}}
+**Impact:** {{trim narrative.impactHeadline}}
 {{/if}}{{#if narrative.companyContext}}
 **Company context:** {{trim narrative.companyContext}}
 {{/if}}{{#if narrative.mission}}
@@ -150,6 +154,8 @@
 {{/if}}{{#each metrics}}- **{{label}}:** {{value}}
 {{/each}}
 {{#if publicSummary}}**Summary:** {{trim publicSummary}}
+{{/if}}{{#if narrative.impactHeadline}}
+**Impact:** {{trim narrative.impactHeadline}}
 {{/if}}{{#if narrative.problem}}
 **Problem:** {{trim narrative.problem}}
 {{/if}}{{#if narrative.audience}}
@@ -176,6 +182,8 @@
 {{/unless}}{{/if}}{{#if techStack}}- **Tech stack:** {{join techStack ", "}}
 {{/if}}{{#if publicSummary}}
 **Summary:** {{trim publicSummary}}
+{{/if}}{{#if narrative.impactHeadline}}
+**Impact:** {{trim narrative.impactHeadline}}
 {{/if}}{{#if narrative.problem}}
 **Problem:** {{trim narrative.problem}}
 {{/if}}{{#if narrative.audience}}

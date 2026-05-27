@@ -4696,6 +4696,8 @@ projects:
     url: https://www.femtechweekend.com/
     repoUrl: https://github.com/ChanMeng666/femtech-weekend-website
     techStack: [Docusaurus, React, TypeScript, Drizzle ORM, Neon Postgres, Notion API, Cloudflare Pages, Tailwind CSS, Radix UI, earth-flyline]
+    narrative:
+      impactHeadline: "Bilingual editorial + event platform for FemTech Weekend — China's first women's-health-tech organisation; the historical production codebase that carried the org's events before the Docusaurus Gen-2 rewrite for editorial focus."
     status: live
   - id: free-period-website
     tier: secondary
@@ -6862,6 +6864,8 @@ projects:
     tagline: Spring Boot + Maven counterpart to the Go template — bilingual e-commerce backend starter from the ByteDance Youth Training Camp capstone
     repoUrl: https://github.com/ChanMeng666/douyin-mall-java-template
     techStack: [Java, Spring Boot, Maven, MySQL]
+    narrative:
+      impactHeadline: "Spring Boot + Maven open-source e-commerce backend template — the Java counterpart to the Go template Chan published from her ByteDance Youth Training Camp capstone, scaffold for later cohorts learning Spring backend architecture."
     status: live
 
   # AI Applications & Agents
@@ -7203,6 +7207,8 @@ projects:
     priority: 32
     category: ai-apps
     url: https://archcanvas.chanmeng.org/
+    narrative:
+      impactHeadline: "AI design agent for architects that 'sells results, not subscriptions' — GPT-4o + DALL-E 3 generate SVG floor plans and photorealistic renderings on an infinite zoomable canvas, billed pay-per-generation via Stripe credits."
     status: live
 
   # Creative AI & Language Tools
@@ -7643,6 +7649,8 @@ projects:
     repoUrl: https://github.com/ChanMeng666/interactive-story-generator
     logo: /public/brands/interactive-story-generator-logo.svg
     url: https://huggingface.co/spaces/ChanMeng666/interactive-story-generator
+    narrative:
+      impactHeadline: "AI-powered collaborative storytelling platform on Hugging Face Spaces — Gradio + PyTorch demo for multi-genre, character-driven branching narratives. One of Chan's early ML portfolio pieces, MIT-licensed for one-click deployment."
     status: live
   - id: emoji-story-generator
     tier: secondary
@@ -7654,6 +7662,8 @@ projects:
     repoUrl: https://github.com/ChanMeng666/emoji-story-generator
     logo: /public/brands/emoji-story-generator-logo.svg
     url: https://huggingface.co/spaces/ChanMeng666/emoji-story-generator
+    narrative:
+      impactHeadline: "AI emoji-to-story generator on Hugging Face Spaces — 200+ emojis across 8 categories powered by Llama-3.1-8B-Instruct, with a community-driven story library and voting system. MIT-licensed and one-click deployable."
     status: live
 
   # Machine Learning Research
@@ -8547,6 +8557,8 @@ projects:
     url: https://nzcel-prep.vercel.app/
     logo: /public/brands/nzcel-prep-logo.svg
     techStack: ["Next.js 15", CopilotKit, "OpenAI Realtime API"]
+    narrative:
+      impactHeadline: "Commercial AI-powered English-language prep for the NZ Certificate in English Language (NZCEL) — Crimson Education US partnership built on Next.js 15 + CopilotKit + OpenAI Realtime API for spoken-conversation practice."
     status: live
   - id: forward-with-her-website
     tier: secondary
@@ -8559,6 +8571,8 @@ projects:
     repoUrl: https://github.com/ChanMeng666/3d-model-viewer
     url: https://forward-with-her-mentorship-program.pages.dev/
     techStack: ["Next.js 15", "React 19", "Three.js", "Cloudflare Pages"]
+    narrative:
+      impactHeadline: "Bilingual EN/CN promo site for the Forward with Her mentorship programme — 3D-rendered landing page (Three.js + Cloudflare Pages) supporting the 360+-mentor / 800+-mentee cohort that produced 7 of Chan's LinkedIn testimonials."
     status: live
   - id: her-waka
     tier: secondary
@@ -8584,11 +8598,13 @@ projects:
     name: AgriHire Solutions
     priority: 31
     category: web-apps
-    tagline: Auto-repair-shop management system with technician and admin dashboards
+    tagline: "Equipment-rental management SaaS for NZ agricultural businesses — Next.js 16 + Neon Postgres on Cloudflare Workers (OpenNext), multi-store operations with role-based access, tiered pricing, and real-time analytics dashboards"
     repoUrl: https://github.com/ChanMeng666/agrihire-solutions
     logo: /public/brands/agri-hire-solutions.svg
     url: https://agrihire.chanmeng.org/
-    techStack: [Flask, MySQL]
+    techStack: ["Next.js 16", "React 19", TypeScript, "Tailwind CSS 4", "Neon Postgres", "Drizzle ORM", "Better Auth", "Cloudflare Workers", OpenNext]
+    narrative:
+      impactHeadline: "Equipment-rental management SaaS for NZ agricultural businesses — Next.js 16 monorepo on Cloudflare Workers (OpenNext), multi-store operations with role-based access, tiered pricing, and real-time analytics dashboards."
     status: live
   - id: portfolio-v2
     tier: primary
@@ -8855,6 +8871,8 @@ projects:
     url: https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/
     logo: /public/brands/customer-insight.svg
     techStack: [Python, Streamlit, "Sentiment analysis", "Topic modeling", "Anomaly detection"]
+    narrative:
+      impactHeadline: "Python AI sentiment + topic-modeling platform for customer-review analytics on Streamlit — BERT-based bilingual (EN/中文) sentiment classification, TF-IDF keyword extraction, anomaly detection, all from a single deployable Python app."
     status: live
   - id: hospital-roster-agent
     tier: secondary
@@ -8868,6 +8886,8 @@ projects:
     url: https://roster.chanmeng.org/
     logo: /public/brands/hospital-roster-agent-logo.svg
     techStack: ["Next.js", TypeScript, CopilotKit]
+    narrative:
+      impactHeadline: "AI-powered hospital staff scheduling — Next.js + CopilotKit interactive calendar where natural-language commands (e.g. 'move Smith's Tuesday shift to Wednesday') drive the underlying schedule, demonstrating agentic UI patterns for healthcare."
     status: live
   - id: design-pages
     tier: archive

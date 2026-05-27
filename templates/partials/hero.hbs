@@ -24,16 +24,6 @@
 
 <br clear="all">
 
-{{#if _valueProposition.proofLine}}
-<div align="center">
-
-{{#each (split _valueProposition.proofLine " · ")}}<kbd>&nbsp;{{trim this}}&nbsp;</kbd>{{#unless @last}}&nbsp;&nbsp;{{/unless}}{{/each}}
-
-</div>
-{{/if}}
-
 <p align="center">
   <img src="/public/photos/chan-by-the-sea.jpg" width="100%" alt="{{basics.name}} by the sea in Auckland">
 </p>
-
-{{> visitor-mini}}

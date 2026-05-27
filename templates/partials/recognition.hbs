@@ -1,8 +1,7 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     Recognition — 3 credential bullets + 1 featured quote + a 3-link
-     media row + pointer to the full archive in llms-full.txt / profile.json.
-     Long-tail tables (awards, education, volunteer, teaching cohorts,
-     podcasts, articles, more references) live in those artifacts now.
+     Recognition — 3 credential bullets + 1 featured quote (trimmed via
+     firstSentences helper) + a 3-link media row. The footer's "For AI
+     agents" tip is the canonical pointer to llms-full.txt / profile.json.
      ═══════════════════════════════════════════════════════════════════════ -->
 
 ## Recognition
@@ -18,7 +17,3 @@
 >
 > <sub>— **{{#if meta.x_brand.linkedinUrl}}[{{name}}]({{meta.x_brand.linkedinUrl}}){{else}}{{name}}{{/if}}** &nbsp;·&nbsp; {{meta.x_brand.relationship}} &nbsp;·&nbsp; [read full recommendation →](https://www.linkedin.com/in/chanmeng666/details/recommendations/)</sub>
 {{/if}}{{/each}}
-
-**Media appearances** — {{#each (slice _mediaAppearances 0 3)}}[{{name}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.
-
-<sub>Awards, education, volunteer history, teaching cohorts, podcasts, articles, and the full recommendation archive live in [llms-full.txt](./llms-full.txt) and [profile.json](./dist/profile.json).</sub>

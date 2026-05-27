@@ -8,16 +8,4 @@
 - **{{position}}** at **[{{name}}]({{url}})** &nbsp;·&nbsp; {{dateRange startDate endDate}}{{#if narrative.impactHeadline}}<br>&nbsp;&nbsp;<sub>{{narrative.impactHeadline}}</sub>{{/if}}
 {{/each}}
 
-{{work.length}} roles across China, New Zealand, and the United States.
-
-<details>
-<summary><kbd>&nbsp;Full work history&nbsp;</kbd></summary>
-
-<br>
-
-| | Company | Role | Period |
-|---|---------|------|--------|
-{{#each work}}| {{#with (lookup ../_orgByWorkId id)}}<a href="{{url}}" title="{{name}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="28" alt="{{name}}"></picture></a>{{else}}&nbsp;{{/with}} | [{{name}}]({{url}}) | {{position}} | {{dateRange startDate endDate}}{{#if location}}, {{location}}{{/if}} |
-{{/each}}
-
-</details>
+<sub>Previously: Sanicle (CTO), FreePeriod (CTO), Forward With Her (mentor), ByteDance (青训营), CORDE (Lincoln industry placement), Aotearoa Infinite Academy.</sub>

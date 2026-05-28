@@ -2762,7 +2762,7 @@ projects:
       site (Mintlify, curriculum authored solo), and a professional SEO
       audit on shesharp.org.nz with a 10-point recommendations report.
     narrative:
-      impactHeadline: "Production member engine for NZ's leading women-in-STEM nonprofit — 86.6% solo-built across 10 months with AI mentor matching, membership-flow automation, and Slack-automated events replacing hours of volunteer toil."
+      impactHeadline: "The production member engine for NZ's leading women-in-STEM nonprofit (charitable trust CC57025, community since 2014) — 86.6% solo-built across 10 months with AI mentor matching, membership-flow automation, and Slack-automated events replacing hours of volunteer toil."
       problem: |
         She Sharp is New Zealand's leading women-in-STEM nonprofit — a
         registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
@@ -13265,15 +13265,21 @@ meta:
       - { title: "A Complete Guide to Legally Changing Your Name as an Adult",             url: "https://www.douban.com/group/topic/310015982/?_dtcc=1&_i=75245459vsCiSF",  platform: Douban }
       - { title: "Minimalist Living Blog",                                                  url: "https://minimalist-good-post.pages.dev",                                  platform: "Cloudflare Pages" }
 
-    # Footer inline links — only items unique to the README footer.
-    # Cal "Book a Meeting" is already in the Currently NOTE engagement
-    # block; Email is already in the hero badges. Decorative profiles
-    # (Medium, HF, Discord, YouTube, Weekly AI Digest, TechRosie,
-    # Discussions) live in llms-full.txt and dist/profile.json.
+    # Footer link table (11 rows). The README footer renders a curated
+    # subset (see _footerLinksReadme cache in scripts/build.mjs); the
+    # complete list flows into llms-full.txt and dist/profile.json.
     footerLinks:
-      - { label: Newsletter,         url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896", description: "Subscribe to 'Decoding the Future' — AI research & innovation" }
-      - { label: Resume,             url: "https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf",          description: "Download CV" }
+      - { label: Medium,             url: "https://chanmeng666.medium.com/",                                                      description: "Read my latest articles on full-stack development and AI" }
+      - { label: Hugging Face,       url: "https://huggingface.co/ChanMeng666",                                                   description: "Explore my ML models and Spaces" }
+      - { label: Discord,            url: "https://discord.gg/T3NJG5n98a",                                                        description: "Join the AI Programming community" }
+      - { label: YouTube,            url: "https://www.youtube.com/@ChanMeng666",                                                 description: "Watch project demos and tutorials" }
+      - { label: Book a Meeting,     url: "https://cal.com/chan-meng/30min",                                                      description: "Schedule a 30-minute chat" }
       - { label: Buy Me a Coffee,    url: "https://buymeacoffee.com/chanmeng66u",                                                  description: "Support my open-source work" }
+      - { label: Newsletter,         url: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896", description: "Subscribe to 'Decoding the Future' — AI research & innovation" }
+      - { label: Weekly AI Digest,   url: "https://chanmeng.org/#newsletter",                                                     description: "'What's Shipping in AI' — curated picks every Monday" }
+      - { label: Resume,             url: "https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf",          description: "Download CV (view online via HackerRank)" }
+      - { label: TechRosie,          url: "https://github.com/TechRosie",                                                         description: "Women developers community — join via issue template" }
+      - { label: Discussions,        url: "https://github.com/ChanMeng666/ChanMeng666/discussions",                               description: "Ask me anything" }
 
     # Interactive CLI
     cli:

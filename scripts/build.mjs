@@ -420,6 +420,17 @@ data._teachingCohorts = (data.meta?.x_brand?.teachingCohorts ?? []).map((c) => (
     .filter(Boolean),
 }));
 data._teachingImpact = data.meta?.x_brand?.teachingImpact ?? null;
+
+// README footer renders a curated subset of meta.x_brand.footerLinks.
+// The full list still flows into llms-full.txt and dist/profile.json,
+// so personal links (Medium, HF, Discord, YouTube, etc.) stay reachable
+// for AI agents and other surfaces without crowding the visible README.
+{
+  const readmeOrder = ["Newsletter", "Resume", "Buy Me a Coffee"];
+  const all = data.meta?.x_brand?.footerLinks ?? [];
+  const byLabel = new Map(all.map((l) => [l.label, l]));
+  data._footerLinksReadme = readmeOrder.map((label) => byLabel.get(label)).filter(Boolean);
+}
 // 2×2 grid rows for the AI Mentor partial
 data._teachingCohortRows = [];
 for (let i = 0; i < data._teachingCohorts.length; i += 2) {

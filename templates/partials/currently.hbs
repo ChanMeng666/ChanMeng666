@@ -8,5 +8,9 @@
 
 {{#if _engagementAvailability}}
 > [!NOTE]
-> **{{_engagementAvailability.current}}**{{#if _engagementAvailability.cta.primary}} → [{{_engagementAvailability.cta.primary.label}}]({{_engagementAvailability.cta.primary.url}}){{/if}}.
-{{/if}}
+> **{{_engagementAvailability.current}}**
+
+{{#if _engagementAvailability.cta.primary}}<p><a href="{{_engagementAvailability.cta.primary.url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode _engagementAvailability.cta.primary.label}}&template={{decorations.buttons.badgeBook.template}}&height={{decorations.buttons.badgeBook.height}}&duration={{decorations.buttons.badgeBook.duration}}" alt="{{_engagementAvailability.cta.primary.label}}"></a></p>
+
+<sub><em>↑ Pill made with my <a href="https://gradient-svg-generator.vercel.app/">gradient-svg-generator</a>.</em></sub>
+{{/if}}{{/if}}

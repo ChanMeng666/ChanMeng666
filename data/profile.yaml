@@ -92,13 +92,17 @@ decorations:
     badgeLinkedin:  { template: pills-blue,              height: 40, duration: 8s }
     badgeGithub:    { template: pills-dark,              height: 40, duration: 8s }
     badgeEmail:     { template: pills-purple,            height: 40, duration: 8s }
+    badgeBook:      { template: pills-green,             height: 40, duration: 8s }
+    badgeNewsletter: { template: pills-teal,             height: 40, duration: 8s }
+    badgeResume:    { template: pills-dark,              height: 40, duration: 8s }
+    badgeCoffee:    { template: pills-orange,            height: 40, duration: 8s }
   visitorCounter:
     username: ChanMeng666
     miniCounter: { theme: transparent, maxflags: 5, displayMode: miniCounter }
     flagMap:     { theme: github_dark, mapSize: medium, displayMode: flagMap }
   sunoCards:
     handle: chanmeng666
-    showProfileCard: true
+    showProfileCard: false
     cardsSort: play_count
     cardsMax: 3
     theme: dark

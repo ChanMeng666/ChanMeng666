@@ -9,12 +9,12 @@
 
 <table>
   <colgroup>
-    <col style="width:72px">
+    <col style="width:120px">
     <col style="width:200px">
     <col>
   </colgroup>
 {{#each _aiAgentProjects}}  <tr>
-    <td>{{#if logo}}<img src="{{logo}}" height="48" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
+    <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _contextLogo.length}}<br><sub>{{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"></a>{{#unless @last}} {{/unless}}{{/each}}</sub>{{/if}}</td>
     <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}</td>
   </tr>
@@ -24,12 +24,12 @@
 
 <table>
   <colgroup>
-    <col style="width:72px">
+    <col style="width:120px">
     <col style="width:200px">
     <col>
   </colgroup>
 {{#each _openSourceCraftProjects}}  <tr>
-    <td>{{#if logo}}<img src="{{logo}}" height="48" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
+    <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
     <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}</td>
   </tr>
@@ -44,12 +44,12 @@
 
 <table>
   <colgroup>
-    <col style="width:64px">
+    <col style="width:88px">
     <col style="width:240px">
     <col>
   </colgroup>
 {{#each items}}  <tr>
-    <td>{{#if logo}}<img src="{{logo}}" height="36" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
+    <td>{{#if logo}}<img src="{{logo}}" height="56" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
     <td>{{briefTagline tagline}}</td>
   </tr>

@@ -22,8 +22,6 @@
 
 {{/if}}{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
 {{/if}}
-{{#if url}}{{#if repoUrl}}{{#unless (eq url repoUrl)}}<a href="{{repoUrl}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template={{@root.decorations.buttons.source.template}}&height={{@root.decorations.buttons.source.height}}&duration={{@root.decorations.buttons.source.duration}}" alt="Source"></a>{{/unless}}{{/if}}{{/if}}
-
 <br clear="all">
 
 {{/each}}

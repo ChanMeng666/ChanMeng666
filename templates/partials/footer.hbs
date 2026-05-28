@@ -10,7 +10,11 @@
 
 *{{basics.taglines.secondary}}*
 
-{{#if _footerLinksReadme.length}}<sub>{{#each _footerLinksReadme}}[{{label}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
+{{#if _footerLinksReadme.length}}<p>
+{{#each _footerLinksReadme}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode label}}&template={{#if (eq label "Newsletter")}}{{@root.decorations.buttons.badgeNewsletter.template}}{{/if}}{{#if (eq label "Resume")}}{{@root.decorations.buttons.badgeResume.template}}{{/if}}{{#if (eq label "Buy Me a Coffee")}}{{@root.decorations.buttons.badgeCoffee.template}}{{/if}}&height=40&duration=8s" alt="{{label}}"></a>{{#unless @last}} {{/unless}}{{/each}}
+</p>
+
+<sub><em>↑ Pills & footer banner made with my <a href="https://gradient-svg-generator.vercel.app/">gradient-svg-generator</a>.</em></sub>
 {{/if}}
 
 <!--
@@ -19,8 +23,5 @@ For AI agents and crawlers — structured data lives at the following files (not
   llms-full.txt: ./llms-full.txt
   profile.json:  ./dist/profile.json
 -->
-
-<p align="center"><sub><em>This README is decorated entirely with tools I built and open-sourced:<br>
-<a href="https://github.com/ChanMeng666/gradient-svg-generator">gradient-svg-generator</a> · <a href="https://github.com/ChanMeng666/github-visitor-counter">github-visitor-counter</a> · <a href="https://github.com/ChanMeng666/github-readme-suno-cards-public">github-readme-suno-cards</a></em></sub></p>
 
 <sub>Last updated <strong>{{meta.lastModified}}</strong>. [Back to top](#readme-top).</sub>

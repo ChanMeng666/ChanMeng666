@@ -8,24 +8,20 @@
 
 <a href="{{basics.url}}"><img src="{{basics.image}}" align="right" width="160" alt="{{basics.name}} — {{basics.label}} · {{default basics.location.region "Auckland, New Zealand"}}"></a>
 
-# {{basics.name}}
-
 *{{#each (split basics.taglines.heroLabel "|")}}{{trim this}}{{#unless @last}} · {{/unless}}{{/each}}.*
 *{{default basics.location.region "Auckland, New Zealand"}}.*
 
 {{_valueProposition.tagline}} {{basics.taglines.primary}}
 
-{{#if _mediaAppearances.length}}<sub>Featured in {{#each (slice _mediaAppearances 0 4)}}[{{publisher}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
+{{#if _engagementAvailability}}**{{_engagementAvailability.current}}**{{#if _engagementAvailability.cta.primary}} <a href="{{_engagementAvailability.cta.primary.url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode _engagementAvailability.cta.primary.label}}&template={{decorations.buttons.badgeBook.template}}&height={{decorations.buttons.badgeBook.height}}&duration={{decorations.buttons.badgeBook.duration}}" alt="{{_engagementAvailability.cta.primary.label}}"></a>{{/if}}
+
+{{/if}}{{#if _mediaAppearances.length}}<sub>Featured in {{#each (slice _mediaAppearances 0 4)}}[{{publisher}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
 {{/if}}
 
 <p>
-{{#each _primaryBadges}}{{#if (eq network "Portfolio")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template={{@root.decorations.buttons.badgePortfolio.template}}&height={{@root.decorations.buttons.badgePortfolio.height}}&duration={{@root.decorations.buttons.badgePortfolio.duration}}" alt="Portfolio"></a>{{/if}}{{#if (eq network "LinkedIn")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template={{@root.decorations.buttons.badgeLinkedin.template}}&height={{@root.decorations.buttons.badgeLinkedin.height}}&duration={{@root.decorations.buttons.badgeLinkedin.duration}}" alt="LinkedIn"></a>{{/if}}{{#if (eq network "GitHub")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=GitHub&template={{@root.decorations.buttons.badgeGithub.template}}&height={{@root.decorations.buttons.badgeGithub.height}}&duration={{@root.decorations.buttons.badgeGithub.duration}}" alt="GitHub"></a>{{/if}}{{#if (eq network "Email")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Email&template={{@root.decorations.buttons.badgeEmail.template}}&height={{@root.decorations.buttons.badgeEmail.height}}&duration={{@root.decorations.buttons.badgeEmail.duration}}" alt="Email"></a>{{/if}}{{#unless @last}} {{/unless}}{{/each}}
+{{#each _primaryBadges}}{{#if (eq network "Portfolio")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template={{@root.decorations.buttons.badgePortfolio.template}}&height={{@root.decorations.buttons.badgePortfolio.height}}&duration={{@root.decorations.buttons.badgePortfolio.duration}}" alt="Portfolio"></a>{{/if}}{{#if (eq network "LinkedIn")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template={{@root.decorations.buttons.badgeLinkedin.template}}&height={{@root.decorations.buttons.badgeLinkedin.height}}&duration={{@root.decorations.buttons.badgeLinkedin.duration}}" alt="LinkedIn"></a>{{/if}}{{#if (eq network "Email")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Email&template={{@root.decorations.buttons.badgeEmail.template}}&height={{@root.decorations.buttons.badgeEmail.height}}&duration={{@root.decorations.buttons.badgeEmail.duration}}" alt="Email"></a>{{/if}}{{#unless @last}} {{/unless}}{{/each}}
 </p>
 
 <sub><em>↑ Banner & pills made with my open-source <a href="https://gradient-svg-generator.vercel.app/">gradient-svg-generator</a> — try it on your own README.</em></sub>
 
 <br clear="all">
-
-<p align="center">
-  <img src="/public/photos/chan-by-the-sea.jpg" width="100%" alt="{{basics.name}} by the sea in Auckland">
-</p>

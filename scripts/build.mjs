@@ -136,12 +136,16 @@ data._commissionedProjects     = resolveIds(data.meta?.x_brand?.commissionedProj
 data._aiAgentProjects          = resolveIds(data.meta?.x_brand?.aiAgentProjectIds);
 data._openSourceCraftProjects  = resolveIds(data.meta?.x_brand?.openSourceCraftProjectIds);
 
+// Open Source overflow (rendered inside the Open Source <details>):
+// excludes commissioned overflow, which now lives under Commissioned work.
 data._moreProjectsByGroup = [
   { heading: "More AI agents & tools",     items: resolveIds(data.meta?.x_brand?.moreAiAgentProjectIds) },
   { heading: "More open-source products",  items: resolveIds(data.meta?.x_brand?.moreOpenSourceProjectIds) },
-  { heading: "More commissioned work",     items: resolveIds(data.meta?.x_brand?.moreCommissionedProjectIds) },
   { heading: "Creative & experiments",     items: resolveIds(data.meta?.x_brand?.moreCreativeProjectIds) },
 ].filter((g) => g.items.length > 0);
+
+// Commissioned overflow (rendered inside the Commissioned work <details>).
+data._moreCommissionedProjects = resolveIds(data.meta?.x_brand?.moreCommissionedProjectIds);
 
 // Legacy openSourcePrimaryIds is retained for backwards-compat consumers but
 // is no longer rendered by the v2 templates.

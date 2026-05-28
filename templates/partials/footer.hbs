@@ -13,10 +13,14 @@
 {{#if _footerLinksReadme.length}}<sub>{{#each _footerLinksReadme}}[{{label}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
 {{/if}}
 
-> [!TIP]
-> **For AI agents** — [llms.txt](./llms.txt) · [llms-full.txt](./llms-full.txt) · [profile.json](./dist/profile.json).
+<!--
+For AI agents and crawlers — structured data lives at the following files (not embedded in this README to keep the human surface clean):
+  llms.txt:      ./llms.txt
+  llms-full.txt: ./llms-full.txt
+  profile.json:  ./dist/profile.json
+-->
 
 <p align="center"><sub><em>This README is decorated entirely with tools I built and open-sourced:<br>
 <a href="https://github.com/ChanMeng666/gradient-svg-generator">gradient-svg-generator</a> · <a href="https://github.com/ChanMeng666/github-visitor-counter">github-visitor-counter</a> · <a href="https://github.com/ChanMeng666/github-readme-suno-cards-public">github-readme-suno-cards</a></em></sub></p>
 
-<sub>Built from <code>data/profile.yaml</code>. Last updated <strong>{{meta.lastModified}}</strong>. [Back to top](#readme-top).</sub>
+<sub>Last updated <strong>{{meta.lastModified}}</strong>. [Back to top](#readme-top).</sub>

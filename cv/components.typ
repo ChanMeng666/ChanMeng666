@@ -1,0 +1,288 @@
+// Reusable components, styled after my-cv reference.
+
+#import "theme.typ": *
+
+// ─── Skill pill (rounded, light-blue) ────────────────────────────────────────
+#let pill(label, fill: pill-bg, stroke-color: pill-edge) = box(
+  fill: fill,
+  stroke: 0.5pt + stroke-color,
+  radius: 3pt,
+  inset: (x: 5pt, y: 2pt),
+  outset: (y: 0.4pt),
+  text(size: size-pill, fill: ink, label),
+)
+
+// ─── Skill / tooling category (bold label + wrapped pills) ───────────────────
+#let skill-category(category, items) = {
+  text(
+    weight: "bold",
+    size: size-meta,
+    font: sans-display,
+    fill: primary,
+    tracking: 0.06em,
+    upper(category),
+  )
+  v(3pt)
+  for (i, it) in items.enumerate() {
+    pill(it)
+    if i < items.len() - 1 { h(space-pill-row) }
+  }
+  v(8pt)
+}
+
+// ─── Inline italic label (e.g. for the architect-grade paragraph header) ────
+#let inline-label(label) = text(
+  weight: "bold",
+  size: size-meta,
+  font: sans-display,
+  fill: primary,
+  tracking: 0.06em,
+  upper(label),
+)
+
+// ─── Section header ──────────────────────────────────────────────────────────
+#let section(title, body) = {
+  v(space-section)
+  text(
+    font: sans-display,
+    weight: "bold",
+    size: size-h2,
+    fill: primary,
+    tracking: 0.08em,
+    upper(title),
+  )
+  v(3pt)
+  line(stroke: 1pt + accent, length: 100%)
+  v(space-after-rule)
+  body
+}
+
+// ─── Accent divider between entries ──────────────────────────────────────────
+#let cv-divider() = {
+  v(6pt)
+  line(stroke: 0.4pt + accent.lighten(60%), length: 100%)
+  v(6pt)
+}
+
+// ─── Tight divider (for experience list — many entries) ─────────────────────
+#let cv-divider-tight() = {
+  v(4pt)
+  line(stroke: 0.4pt + accent.lighten(60%), length: 100%)
+  v(4pt)
+}
+
+// ─── Work / experience entry ─────────────────────────────────────────────────
+//   title           ← bold, ink
+//   org · location  ← italic, primary
+//   dates           ← muted, small
+//   summary         ← optional one-line lead (may be `none`)
+//   bullets         ← optional content body (already formatted as list)
+#let cv-event(
+  title: "",
+  org: "",
+  org-url: "",
+  dates: "",
+  location: "",
+  summary: none,
+  bullets: none,
+) = block(
+  above: 0pt,
+  below: 0pt,
+  {
+    text(weight: "bold", size: size-h3, fill: ink, title)
+    linebreak()
+    {
+      set text(style: "italic", size: size-meta, fill: primary)
+      if org-url != "" { link(org-url, org) } else { org }
+      if location != "" {
+        text(fill: muted)[ — ]
+        text(weight: "regular", fill: muted, location)
+      }
+    }
+    linebreak()
+    text(weight: "regular", size: size-tiny, fill: muted, dates)
+    if summary != none {
+      v(3pt)
+      text(size: size-body, fill: ink, summary)
+    }
+    if bullets != none {
+      v(2pt)
+      bullets
+    }
+  },
+)
+
+// ─── Project card (logo + name + url + impact + bullets) ────────────────────
+#let project-card(
+  logo: none,
+  name: "",
+  url: "",
+  context-line: none,
+  bullets: (),
+) = block(
+  above: 0pt,
+  below: 0pt,
+  {
+    grid(
+      columns: (44pt, 1fr),
+      column-gutter: 0.7em,
+      align: (center + top, left + top),
+      // ─ Logo cell ────────────────────────────────────────────────────────
+      if logo != none {
+        box(image(logo, height: 36pt))
+      } else { [] },
+      // ─ Text cell ────────────────────────────────────────────────────────
+      {
+        // Name line
+        text(weight: "bold", size: size-h3, fill: ink, name)
+        if url != "" {
+          h(6pt)
+          text(size: size-tiny, fill: muted)[#link(url, url.replace("https://", ""))]
+        }
+        linebreak()
+        if context-line != none {
+          text(style: "italic", size: size-meta, fill: primary, context-line)
+          v(3pt)
+        }
+        // Bullets — solid dot, human-readable spacing
+        set text(size: size-body, fill: ink)
+        set par(leading: 0.62em)
+        set list(
+          marker: text(fill: accent)[•],
+          spacing: 5pt,
+          indent: 0pt,
+          body-indent: 6pt,
+        )
+        for b in bullets {
+          list.item(b)
+        }
+      },
+    )
+  },
+)
+
+// ─── Compact 3-line role entry (experience list) ───────────────────────────
+//   Line 1:  Title              ← bold, ink (visual anchor)
+//   Line 2:  Org · Dates        ← italic primary + muted dates (subline, bound to title)
+//   v(2.5pt)
+//   Line 3+: Summary (wraps)    ← size-tiny ink
+//   below: 9pt                  ← clear inter-entry gap (≫ intra-entry gap)
+//
+// Visual hierarchy: inter-entry gap (9pt) >> intra-entry gap (~3pt), so the
+// reader's eye binds each title to its own summary, not to the previous one.
+#let role-line(
+  title: "",
+  org: "",
+  org-url: "",
+  dates: "",
+  summary: none,
+) = block(
+  above: 0pt,
+  below: 7pt,
+  breakable: false,
+  {
+    set par(leading: 0.5em)
+    // ── Line 1: Title (bold) ─────────────────────────────────────────────
+    text(weight: "bold", size: 9pt, fill: ink, title)
+    linebreak()
+    // ── Line 2: Org · Dates (italic + muted, bound to title) ────────────
+    {
+      set text(size: size-meta, style: "italic", fill: primary)
+      if org-url != "" { link(org-url, org) } else { org }
+    }
+    text(fill: muted, style: "italic")[ · ]
+    text(size: size-tiny, fill: muted, dates)
+    if summary != none {
+      v(2.5pt, weak: true)
+      block(above: 0pt, below: 0pt, {
+        set par(leading: 0.6em, justify: false)
+        text(size: size-tiny, fill: ink, summary)
+      })
+    }
+  },
+)
+
+// ─── Compact entry (Education, certs, etc.) ─────────────────────────────────
+#let compact-entry(
+  title: "",
+  org: "",
+  org-url: "",
+  dates: "",
+  location: "",
+  note: "",
+) = {
+  text(weight: "bold", size: size-meta, fill: ink, title)
+  linebreak()
+  {
+    set text(style: "italic", size: size-tiny, fill: primary)
+    if org-url != "" { link(org-url, org) } else { org }
+    if location != "" {
+      text(fill: muted)[ — ]
+      text(weight: "regular", fill: muted, location)
+    }
+  }
+  linebreak()
+  text(size: size-tiny, fill: muted, dates)
+  if note != "" {
+    linebreak()
+    text(size: size-tiny, fill: ink, note)
+  }
+}
+
+// ─── Cert / award group ──────────────────────────────────────────────────────
+#let cert-group(group, items) = {
+  text(weight: "bold", size: size-meta, fill: primary, group)
+  v(2pt)
+  set text(size: size-tiny, fill: ink)
+  set par(leading: leading-tight)
+  set list(
+    marker: text(fill: accent, size: 5.5pt)[•],
+    spacing: 3pt,
+    indent: 0pt,
+    body-indent: 5pt,
+  )
+  for it in items {
+    list.item(it)
+  }
+  v(7pt)
+}
+
+// ─── Bullet list inside an entry (consistent style) ─────────────────────────
+#let cv-bullets(items) = {
+  set text(size: size-body, fill: ink)
+  set par(leading: 0.55em)
+  set list(
+    marker: text(fill: accent, weight: "bold")[›],
+    spacing: 3pt,
+    indent: 0pt,
+    body-indent: 5pt,
+  )
+  for it in items {
+    list.item(it)
+  }
+}
+
+// ─── Anti-pattern footnote-style line ────────────────────────────────────────
+#let anti-pattern-line(items) = {
+  set text(size: size-tiny, fill: muted, style: "italic")
+  text(weight: "bold")[Avoided: ] + items.join([ · ])
+}
+
+// ─── Quote callout ──────────────────────────────────────────────────────────
+#let quote-block(body, source: "") = block(
+  fill: quote-bg,
+  inset: (x: 8pt, y: 6pt),
+  radius: 3pt,
+  width: 100%,
+  above: 4pt,
+  below: 0pt,
+  stroke: (left: 2pt + accent),
+  {
+    set par(leading: 0.55em)
+    text(style: "italic", size: size-meta, fill: ink)[« #body »]
+    if source != "" {
+      v(3pt)
+      text(size: size-tiny, fill: muted)[— #source]
+    }
+  },
+)

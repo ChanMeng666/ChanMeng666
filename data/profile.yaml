@@ -8732,7 +8732,14 @@ projects:
   - id: forward-with-her-website
     tier: secondary
     recency: historical
-    lastUpdated: "2026-05-18"
+    meta:
+      x_brand:
+        # Verified from package.json at D:/github_repository/forward-with-her-mentorship-program:
+        # next 15.0.2 + react 19 RC + typescript 5 + three 0.149 + tailwindcss 3.4 +
+        # wrangler (deploy → Cloudflare Pages). Capped at 5 (build.mjs slice);
+        # typescript dropped as the least distinctive of the six.
+        featuredStack: [nextjs, react, threejs, tailwindcss, cloudflare-pages]
+    lastUpdated: "2026-05-30"
     name: Forward with Her Mentorship Programme Website
     priority: 29
     category: web-apps
@@ -13082,6 +13089,7 @@ meta:
       react:              /public/tech-logos/react.svg
       nextjs:             /public/tech-logos/nextjs.svg
       tailwindcss:        /public/tech-logos/tailwindcss.svg
+      threejs:            /public/tech-logos/threejs.svg
       # Backend / data
       postgresql:         /public/tech-logos/postgresql.svg
       supabase:           /public/tech-logos/supabase.svg

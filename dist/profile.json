@@ -881,10 +881,10 @@
         "x_brand": {
           "featuredStack": [
             "openai",
-            "anthropic",
             "copilotkit",
             "drizzle",
-            "supabase"
+            "neon",
+            "nextjs"
           ]
         }
       },
@@ -1054,10 +1054,6 @@
           "src": "/public/tech-logos/openai.svg"
         },
         {
-          "name": "anthropic",
-          "src": "/public/tech-logos/anthropic-icon.svg"
-        },
-        {
           "name": "copilotkit",
           "src": "/public/organizations/copilot-kit-logo.svg"
         },
@@ -1066,8 +1062,12 @@
           "src": "/public/tech-logos/drizzle.svg"
         },
         {
-          "name": "supabase",
-          "src": "/public/tech-logos/supabase.svg"
+          "name": "neon",
+          "src": "/public/tech-logos/neon.svg"
+        },
+        {
+          "name": "nextjs",
+          "src": "/public/tech-logos/nextjs.svg"
         }
       ],
       "_contextLogo": [],
@@ -1082,7 +1082,7 @@
           "featuredStack": [
             "nextjs",
             "drizzle",
-            "supabase",
+            "neon",
             "stripe",
             "vercel"
           ]
@@ -1284,8 +1284,8 @@
           "src": "/public/tech-logos/drizzle.svg"
         },
         {
-          "name": "supabase",
-          "src": "/public/tech-logos/supabase.svg"
+          "name": "neon",
+          "src": "/public/tech-logos/neon.svg"
         },
         {
           "name": "stripe",
@@ -1619,8 +1619,10 @@
         "x_brand": {
           "featuredStack": [
             "github",
+            "nextjs",
             "vercel",
-            "typescript"
+            "typescript",
+            "react"
           ]
         }
       },
@@ -1753,12 +1755,20 @@
           "src": "/public/tech-logos/github.svg"
         },
         {
+          "name": "nextjs",
+          "src": "/public/tech-logos/nextjs.svg"
+        },
+        {
           "name": "vercel",
           "src": "/public/tech-logos/vercel.svg"
         },
         {
           "name": "typescript",
           "src": "/public/tech-logos/typescript.svg"
+        },
+        {
+          "name": "react",
+          "src": "/public/tech-logos/react.svg"
         }
       ],
       "_contextLogo": [],
@@ -1771,9 +1781,10 @@
       "meta": {
         "x_brand": {
           "featuredStack": [
-            "npm",
-            "nodejs",
-            "typescript"
+            "claude",
+            "cursor",
+            "codex",
+            "python"
           ],
           "contextLogo": [
             {
@@ -1842,16 +1853,20 @@
       },
       "_featuredStackResolved": [
         {
-          "name": "npm",
-          "src": "/public/tech-logos/npm.svg"
+          "name": "claude",
+          "src": "/public/tech-logos/claude.svg"
         },
         {
-          "name": "nodejs",
-          "src": "/public/tech-logos/nodejs.svg"
+          "name": "cursor",
+          "src": "/public/tech-logos/cursor.svg"
         },
         {
-          "name": "typescript",
-          "src": "/public/tech-logos/typescript.svg"
+          "name": "codex",
+          "src": "/public/tech-logos/codex.svg"
+        },
+        {
+          "name": "python",
+          "src": "/public/tech-logos/python.svg"
         }
       ],
       "_contextLogo": [
@@ -2130,9 +2145,11 @@
       "meta": {
         "x_brand": {
           "featuredStack": [
-            "vercel",
+            "nextjs",
+            "react",
             "typescript",
-            "react"
+            "tailwindcss",
+            "vercel"
           ]
         }
       },
@@ -2264,16 +2281,24 @@
       },
       "_featuredStackResolved": [
         {
-          "name": "vercel",
-          "src": "/public/tech-logos/vercel.svg"
+          "name": "nextjs",
+          "src": "/public/tech-logos/nextjs.svg"
+        },
+        {
+          "name": "react",
+          "src": "/public/tech-logos/react.svg"
         },
         {
           "name": "typescript",
           "src": "/public/tech-logos/typescript.svg"
         },
         {
-          "name": "react",
-          "src": "/public/tech-logos/react.svg"
+          "name": "tailwindcss",
+          "src": "/public/tech-logos/tailwindcss.svg"
+        },
+        {
+          "name": "vercel",
+          "src": "/public/tech-logos/vercel.svg"
         }
       ],
       "_contextLogo": [],
@@ -2288,6 +2313,7 @@
           "featuredStack": [
             "copilotkit",
             "langgraph",
+            "python",
             "nextjs",
             "supabase"
           ]
@@ -2342,6 +2368,10 @@
           "src": "/public/tech-logos/langgraph.svg"
         },
         {
+          "name": "python",
+          "src": "/public/tech-logos/python.svg"
+        },
+        {
           "name": "nextjs",
           "src": "/public/tech-logos/nextjs.svg"
         },
@@ -2389,9 +2419,10 @@
         "x_brand": {
           "featuredStack": [
             "nextjs",
-            "vercel",
             "react",
-            "typescript"
+            "typescript",
+            "tailwindcss",
+            "cloudflare-pages"
           ]
         }
       },
@@ -2423,16 +2454,20 @@
           "src": "/public/tech-logos/nextjs.svg"
         },
         {
-          "name": "vercel",
-          "src": "/public/tech-logos/vercel.svg"
-        },
-        {
           "name": "react",
           "src": "/public/tech-logos/react.svg"
         },
         {
           "name": "typescript",
           "src": "/public/tech-logos/typescript.svg"
+        },
+        {
+          "name": "tailwindcss",
+          "src": "/public/tech-logos/tailwindcss.svg"
+        },
+        {
+          "name": "cloudflare-pages",
+          "src": "/public/tech-logos/cloudflare-pages.svg"
         }
       ],
       "_contextLogo": [],
@@ -2445,6 +2480,7 @@
       "meta": {
         "x_brand": {
           "featuredStack": [
+            "nextjs",
             "cloudflare-workers",
             "opennext",
             "supabase",
@@ -2595,6 +2631,10 @@
         "myRole": "Sole product designer, sole engineer, sole maintainer\nacross all 80 commits and 18 months. Designed the\nmulti-tenant schema with row-level security; designed the\n4-tier access model including the Africa-friendly regional\naccessibility decision; designed the 4-role RBAC\npermission matrix; built every API route under\n`/api/auth`, `/api/email`, `/api/stripe`, and `/api/health`;\nengineered the Supabase keep-alive cron preventing\nfree-tier auto-pause; executed the December 2025 single-\ntenant -> multi-tenant rebuild as a ~36-hour sprint;\nexecuted the February 2026 Vercel -> Cloudflare Workers\nmigration with the libraryos.live custom-domain switch;\ndebugged and fixed the March 2026 Stripe-SDK-on-Workers\ncompatibility issue (5 debug commits + 1 architectural\nfix moving price IDs from env to DB + 1 final fix\nswitching to fetch HTTP client + integration-guide docs);\napplied two React Server Components CVE patches within\nhours of Vercel-automated PRs; purchased and configured\nthe `libraryos.live` custom domain. Maintains the live\ndeployment today.\n"
       },
       "_featuredStackResolved": [
+        {
+          "name": "nextjs",
+          "src": "/public/tech-logos/nextjs.svg"
+        },
         {
           "name": "cloudflare-workers",
           "src": "/public/tech-logos/cloudflare-workers.svg"
@@ -3774,10 +3814,10 @@
         "x_brand": {
           "featuredStack": [
             "langgraph",
-            "postgresql",
+            "nextjs",
+            "neon",
             "docker",
-            "coolify",
-            "cloudflare"
+            "coolify"
           ],
           "contextLogo": [
             {
@@ -3968,8 +4008,12 @@
           "src": "/public/tech-logos/langgraph.svg"
         },
         {
-          "name": "postgresql",
-          "src": "/public/tech-logos/postgresql.svg"
+          "name": "nextjs",
+          "src": "/public/tech-logos/nextjs.svg"
+        },
+        {
+          "name": "neon",
+          "src": "/public/tech-logos/neon.svg"
         },
         {
           "name": "docker",
@@ -3978,10 +4022,6 @@
         {
           "name": "coolify",
           "src": "/public/tech-logos/coolify.svg"
-        },
-        {
-          "name": "cloudflare",
-          "src": "/public/tech-logos/cloudflare.svg"
         }
       ],
       "_contextLogo": [
@@ -4725,8 +4765,7 @@
         "x_brand": {
           "featuredStack": [
             "mintlify",
-            "typescript",
-            "react"
+            "github"
           ]
         }
       },
@@ -4752,12 +4791,8 @@
           "src": "/public/tech-logos/mintlify.svg"
         },
         {
-          "name": "typescript",
-          "src": "/public/tech-logos/typescript.svg"
-        },
-        {
-          "name": "react",
-          "src": "/public/tech-logos/react.svg"
+          "name": "github",
+          "src": "/public/tech-logos/github.svg"
         }
       ],
       "_contextLogo": [],
@@ -9131,8 +9166,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-05-29",
+    "lastModified": "2026-05-30",
     "buildYear": "2026",
-    "buildTimestamp": "2026-05-29T19:31:09.612Z"
+    "buildTimestamp": "2026-05-30T05:54:08.641Z"
   }
 }

@@ -147,6 +147,42 @@ data._moreProjectsByGroup = [
 // Commissioned overflow (rendered inside the Commissioned work <details>).
 data._moreCommissionedProjects = resolveIds(data.meta?.x_brand?.moreCommissionedProjectIds);
 
+// ---------------------------------------------------------------------------
+// README-only visibility filter — projects listed here stay fully present in
+// data/profile.yaml, llms.txt, llms-full.txt, and dist/profile.json (so AI
+// agents and the JSON-LD entity graph still see them); they are simply
+// omitted from the visible README buckets. Add/remove ids here to retune
+// what the human surface shows without touching the data file.
+// ---------------------------------------------------------------------------
+const README_HIDDEN_PROJECT_IDS = new Set([
+  "femtracker-agent",
+  "github-readme-suno-cards",
+  "tencent-meeting-video-downloader",
+  "portfolio-v2",
+  "douyin-mall-java-template",
+]);
+const stripHidden = (arr) =>
+  arr.filter((p) => !README_HIDDEN_PROJECT_IDS.has(p.id));
+
+data._commissionedProjects    = stripHidden(data._commissionedProjects);
+data._aiAgentProjects         = stripHidden(data._aiAgentProjects);
+data._openSourceCraftProjects = stripHidden(data._openSourceCraftProjects);
+data._moreProjectsByGroup = data._moreProjectsByGroup
+  .map((g) => ({ ...g, items: stripHidden(g.items) }))
+  .filter((g) => g.items.length > 0);
+
+// Promote forward-with-her-website from the "More commissioned work"
+// overflow into the visible Commissioned work table, then collapse the
+// overflow entirely (so the <details> block no longer renders).
+const COMMISSIONED_PROMOTE_IDS = ["forward-with-her-website"];
+const promoted = COMMISSIONED_PROMOTE_IDS
+  .map((id) => data._moreCommissionedProjects.find((p) => p.id === id))
+  .filter(Boolean);
+if (promoted.length) {
+  data._commissionedProjects = [...data._commissionedProjects, ...promoted];
+}
+data._moreCommissionedProjects = [];
+
 // Legacy openSourcePrimaryIds is retained for backwards-compat consumers but
 // is no longer rendered by the v2 templates.
 const primaryIds = data.meta?.x_brand?.openSourcePrimaryIds ?? [];

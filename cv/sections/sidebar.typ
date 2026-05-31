@@ -44,12 +44,18 @@
   ]
 })
 
-// ─── 2. Claude Code & Codex mastery ─────────────────────────────────────────
-// Positions Chan as a power-user of BOTH coding agents — fluent in every
-// extension surface for Claude Code, fluent in Codex CLI's daily workflow,
-// and using these tools for non-development work too (Typst typesetting,
-// research, data, translation). HR / recruiter readable.
-#let claude-code-codex() = section("Claude Code & Codex", {
+// ─── 2. AI engineering & tooling (merged) ────────────────────────────────────
+// Single unified block covering BOTH "tools Chan uses to build AI systems"
+// and "AI agents Chan operates daily" — the previous CLAUDE CODE & CODEX
+// and AI DEVELOPMENT TOOLING sections were thematically the same surface
+// (AI tools / AI frameworks / using AI for dev + productivity).
+//
+// Subcategory ordering: coding-agent mastery first (Claude Code → Codex CLI
+// → cross-IDE dev work), then engineering substrate (SDKs/protocols),
+// finally production discipline (quality + observability — populated from
+// the tools that actually appear in data/profile.yaml; the previous
+// Braintrust/Langfuse/Inspect AI list was inaccurate).
+#let ai-engineering-toolkit() = section("AI Engineering & Tooling", {
   skill-category("Claude Code — every extension surface shipped", (
     "CLAUDE.md",
     "MCP servers",
@@ -66,15 +72,6 @@
     "MCP",
     "Resume",
   ))
-  // Six dev-adjacent tasks shipped via Claude Code / Codex headless mode +
-  // GitHub Actions + Anthropic Interactive Apps + Agent Teams (Opus 4.6).
-  // Every pill maps to a documented capability of one or both agents:
-  //   - Typst PDFs       → claude-skill-based typesetting (this CV)
-  //   - CI/CD pipelines  → anthropics/claude-code-action, openai/codex-action
-  //   - Slack apps       → Anthropic Interactive Apps + Slack MCP
-  //   - Agent teams      → shared subagents with their own context windows
-  //   - Code review      → claude-code-action `/review`, codex `/review`
-  //   - Internal CLIs    → claude -p headless mode + custom skills/MCP
   skill-category("Beyond pure coding — AI-leveraged dev work", (
     "Typst PDFs",
     "CI/CD pipelines",
@@ -83,14 +80,6 @@
     "Code review",
     "Internal CLIs",
   ))
-})
-
-// ─── 3. AI development tooling ───────────────────────────────────────────────
-// Productivity layer that complements the Claude Code & Codex section above:
-// agent-runtime SDKs + inter-agent protocols + eval/observability. IDEs and
-// code agents themselves now live in the Claude Code & Codex section to
-// avoid duplication.
-#let ai-tooling() = section("AI Development Tooling", {
   skill-category("Agent SDKs & protocols", (
     "Claude Agent SDK",
     "OpenAI Agents SDK",
@@ -99,11 +88,18 @@
     "AGNTCY",
     "ACP",
   ))
-  skill-category("Eval & observability", (
-    "Braintrust",
-    "Langfuse",
-    "Inspect AI",
+  // Real tools from profile.yaml: Vitest (multiple projects), Cypress
+  // (Douyin Mall Vue 3 supplement), mcp-evals 2.0.0 (early adopter, line
+  // 4148), Lighthouse (95+ scores cited in 4 projects), OpenTelemetry
+  // (via @opentelemetry/api, line 7407), web-vitals 5.0 (production
+  // perf telemetry, line 4508).
+  skill-category("Quality & observability", (
+    "Vitest",
+    "Cypress",
+    "mcp-evals",
+    "Lighthouse",
     "OpenTelemetry",
+    "web-vitals",
   ))
 })
 
@@ -193,8 +189,7 @@
 // of the LEFT column (sidebar-no-education) to balance vertical fill.
 #let sidebar-no-education() = {
   what-i-bring()
-  claude-code-codex()
-  ai-tooling()
+  ai-engineering-toolkit()
   stack()
   certifications()
   recognition-and-reference()

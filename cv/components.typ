@@ -139,9 +139,11 @@
           h(6pt)
           text(size: size-tiny, fill: muted)[#link(url, url.replace("https://", ""))]
         }
-        linebreak()
         if context-line != none {
-          text(style: "italic", size: size-meta, fill: primary, context-line)
+          v(3pt, weak: true)
+          block(above: 0pt, below: 0pt, {
+            text(style: "italic", size: size-meta, fill: primary, context-line)
+          })
           v(3pt)
         }
         // Bullets — solid dot, human-readable spacing
@@ -193,7 +195,7 @@
     text(fill: muted, style: "italic")[ · ]
     text(size: size-tiny, fill: muted, dates)
     if summary != none {
-      v(2.5pt, weak: true)
+      v(3.5pt, weak: true)
       block(above: 0pt, below: 0pt, {
         set par(leading: 0.6em, justify: false)
         text(size: size-tiny, fill: ink, summary)
@@ -271,17 +273,17 @@
 // ─── Quote callout ──────────────────────────────────────────────────────────
 #let quote-block(body, source: "") = block(
   fill: quote-bg,
-  inset: (x: 8pt, y: 6pt),
+  inset: (x: 7pt, y: 4pt),
   radius: 3pt,
   width: 100%,
   above: 4pt,
   below: 0pt,
   stroke: (left: 2pt + accent),
   {
-    set par(leading: 0.55em)
-    text(style: "italic", size: size-meta, fill: ink)[« #body »]
+    set par(leading: 0.5em)
+    text(style: "italic", size: size-tiny, fill: ink)[« #body »]
     if source != "" {
-      v(3pt)
+      v(2pt)
       text(size: size-tiny, fill: muted)[— #source]
     }
   },

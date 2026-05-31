@@ -11,8 +11,7 @@
 #import "sections/header.typ": header
 #import "sections/projects.typ": introduction, projects
 #import "sections/experience.typ": experience
-#import "sections/voice.typ": voice-and-writing
-#import "sections/sidebar.typ": sidebar, education
+#import "sections/sidebar.typ": sidebar, sidebar-no-education, education
 #import "sections/footer.typ": footer
 
 // ── PDF metadata (GEO surface) ────────────────────────────────────────────────
@@ -84,17 +83,19 @@
   align: (left + top, left + top),
 
   // ─ LEFT COLUMN — narrative
-  //   Order: introduction → experience → projects → voice & writing.
-  //   Education sits at the bottom of the right column as a non-headline closer.
+  //   Order: introduction → experience → projects → education.
+  //   Education tucked at the bottom of the LEFT column fills the slack and
+  //   keeps the right column light enough that the recognition quotes don't
+  //   spill onto a third page.
   {
     introduction()
     experience()
     projects()
-    voice-and-writing()
+    education()
   },
 
-  // ─ RIGHT COLUMN — value statements + stack + credentials
-  sidebar(),
+  // ─ RIGHT COLUMN — value statements + stack + credentials + recognition
+  sidebar-no-education(),
 )
 
 // PDF carries an invisible-to-humans GEO surface via metadata only — see

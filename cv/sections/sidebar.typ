@@ -60,21 +60,27 @@
   // Agent protocols; Hooks lives only in Claude Code; LangGraph/LangChain/
   // CopilotKit/Vercel AI SDK live only in Agent SDKs & frameworks (removed
   // from Stack to dedup).
+  // Each Claude Code pill is backed by production work — echook ships
+  // CLAUDE.md/hooks/status-line/plugins; typst-claude-skill packages a
+  // reusable Skill on the awesome-skills lists; subagents drive Chan's
+  // multi-agent demos. No built-in-feature filler ("Slash commands",
+  // etc.) — quality over quantity.
   skill-category("Claude Code — every extension surface shipped", (
     "CLAUDE.md",
     "Skills",
     "Subagents",
     "Hooks",
     "Status line",
-    "Slash commands",
+    "Plugins",
   ))
+  // Codex CLI row deliberately short — only architectural / automation
+  // capabilities. Built-in conveniences (Goal mode, /review, Session
+  // resume) removed; AGENTS.md + sandbox/approval architecture + headless
+  // mode are the surfaces a senior agent engineer actually configures.
   skill-category("Codex CLI — daily-driver fluency", (
     "AGENTS.md",
-    "Goal mode",
-    "Sandbox modes",
-    "/review command",
+    "Sandbox + approvals",
     "Headless mode",
-    "Session resume",
   ))
   skill-category("Beyond pure coding — AI-leveraged dev work", (
     "Typst PDFs",
@@ -132,12 +138,17 @@
     "FastAPI",
     "Drizzle ORM",
   ))
+  // Vercel + Stripe removed (brand names, not engineering depth). Docker
+  // + Traefik comes from the Vitex production VPS stack (Railway →
+  // Cloudflare Workers → DigitalOcean migration); Redis comes from
+  // multiple production projects (GAVIGO activation pool, Sanicle, She
+  // Sharp mentor cache, ByteDance backend) — both backed by profile.yaml.
   skill-category("Infra & data", (
     "Kubernetes GKE",
     "Cloudflare Workers + Vectorize",
     "Neon Postgres + pgvector",
-    "Vercel",
-    "Stripe",
+    "Docker + Traefik",
+    "Redis",
   ))
   skill-category("Languages", (
     "TypeScript",

@@ -56,21 +56,25 @@
 // the tools that actually appear in data/profile.yaml; the previous
 // Braintrust/Langfuse/Inspect AI list was inaccurate).
 #let ai-engineering-toolkit() = section("AI Engineering & Tooling", {
+  // Each surface listed below appears in EXACTLY ONE row. MCP lives only in
+  // Agent protocols; Hooks lives only in Claude Code; LangGraph/LangChain/
+  // CopilotKit/Vercel AI SDK live only in Agent SDKs & frameworks (removed
+  // from Stack to dedup).
   skill-category("Claude Code — every extension surface shipped", (
     "CLAUDE.md",
-    "MCP servers",
     "Skills",
     "Subagents",
     "Hooks",
     "Status line",
+    "Slash commands",
   ))
   skill-category("Codex CLI — daily-driver fluency", (
     "AGENTS.md",
     "Goal mode",
     "Sandbox modes",
-    "Hooks API",
-    "MCP",
-    "Resume",
+    "/review command",
+    "Headless mode",
+    "Session resume",
   ))
   skill-category("Beyond pure coding — AI-leveraged dev work", (
     "Typst PDFs",
@@ -80,9 +84,15 @@
     "Code review",
     "Internal CLIs",
   ))
-  skill-category("Agent SDKs & protocols", (
+  skill-category("Agent SDKs & frameworks", (
     "Claude Agent SDK",
     "OpenAI Agents SDK",
+    "LangGraph",
+    "LangChain",
+    "CopilotKit",
+    "Vercel AI SDK",
+  ))
+  skill-category("Agent protocols", (
     "MCP",
     "A2A",
     "AGNTCY",
@@ -104,22 +114,16 @@
 })
 
 // ─── 4. Stack ────────────────────────────────────────────────────────────────
-// Engineering substrate: the LLMs, the composition frameworks, the app
-// frameworks, the production infra, the languages. Base provider SDKs
-// (Anthropic SDK / OpenAI SDK) intentionally omitted — they are subsumed
-// by the Claude Agent SDK / OpenAI Agents SDK in the AI Tooling section,
-// and listing both creates a duplicated-skills illusion.
+// Engineering substrate: the LLMs, the app frameworks, the production
+// infra, the languages. The previous "AI frameworks" row (LangGraph,
+// CopilotKit, Vercel AI SDK) moved to AI Engineering & Tooling's "Agent
+// SDKs & frameworks" row — each surface appears exactly once.
 #let stack() = section("Stack", {
   skill-category("Models", (
     "Anthropic Opus / Sonnet / Haiku",
     "OpenAI GPT-4o + realtime",
     "Gemini 2.x",
     "Llama 3.x",
-  ))
-  skill-category("AI frameworks", (
-    "LangGraph",
-    "CopilotKit",
-    "Vercel AI SDK",
   ))
   skill-category("App frameworks", (
     "Next.js 16",

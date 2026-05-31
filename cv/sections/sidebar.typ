@@ -57,13 +57,24 @@
 })
 
 // ─── 3. AI development tooling ───────────────────────────────────────────────
+// Positioned as the daily-life toolkit of an AI-native engineer:
+// IDEs+code agents · SDKs+protocols for building agentic systems ·
+// evals+observability for shipping them responsibly.
 #let ai-tooling() = section("AI Development Tooling", {
-  skill-category("Daily drivers", (
+  skill-category("IDEs & code agents", (
     "Claude Code",
     "Codex CLI",
     "Cursor",
     "Claude Design",
     "GitHub Copilot",
+  ))
+  skill-category("Agent SDKs & protocols", (
+    "Claude Agent SDK",
+    "OpenAI Agents SDK",
+    "MCP",
+    "A2A",
+    "AGNTCY",
+    "ACP",
   ))
   skill-category("Eval & observability", (
     "Braintrust",
@@ -71,15 +82,12 @@
     "Inspect AI",
     "OpenTelemetry",
   ))
-  skill-category("Inter-agent protocols", (
-    "MCP (tools)",
-    "A2A (inter-agent)",
-    "AGNTCY",
-    "ACP",
-  ))
 })
 
 // ─── 4. Stack ────────────────────────────────────────────────────────────────
+// Grouped to expose the AI-engineering depth first (Models, then orchestration
+// frameworks), then the production substrate, then the language base. Java is
+// listed because the ByteDance backend + full-stack work used Spring Boot 3.
 #let stack() = section("Stack", {
   skill-category("Models", (
     "Anthropic Opus / Sonnet / Haiku",
@@ -87,16 +95,23 @@
     "Gemini 2.x",
     "Llama 3.x",
   ))
-  skill-category("Frameworks", (
+  skill-category("AI frameworks & SDKs", (
     "LangGraph",
     "CopilotKit",
     "Vercel AI SDK",
-    "Drizzle ORM",
-    "Next.js 16",
+    "Anthropic SDK",
+    "OpenAI SDK",
   ))
-  skill-category("Infra", (
+  skill-category("App frameworks", (
+    "Next.js 16",
+    "Vue 3",
+    "Spring Boot 3",
+    "FastAPI",
+    "Drizzle ORM",
+  ))
+  skill-category("Infra & data", (
     "Kubernetes GKE",
-    "Cloudflare Workers + OpenNext",
+    "Cloudflare Workers + Vectorize",
     "Neon Postgres + pgvector",
     "Vercel",
     "Stripe",
@@ -105,6 +120,7 @@
     "TypeScript",
     "Python",
     "Go",
+    "Java",
     "SQL",
     "Typst",
   ))
@@ -114,11 +130,11 @@
 #let certifications() = section("Certifications & Training", {
   cert-group("Anthropic (6)", (
     [*Building with the Claude API* · *Introduction to Model Context Protocol* · *Introduction to Agent Skills* (all May 2026)],
-    [*Claude Code in Action* (May 2026 & Aug 2025) · *AI Fluency: Framework & Foundations* (Aug 2025, `v3hv657p3ygc`)],
+    [*Claude Code in Action* (May 2026 & Aug 2025) · *AI Fluency: Framework & Foundations* (Aug 2025)],
     [*Claude Certified Architect — Foundations* curriculum completed (on Anthropic Partner Network track via Engram)],
   ))
   cert-group("Other AI / Cloud", (
-    [*Google AI Essentials* (Coursera, Aug 2025, `ZR0B96QLZXDM`) · *Microsoft Azure AI Essentials* (Feb 2025) · *Generative AI Career Skills* (Dec 2024) · *Wolfram Machine Learning Foundations* (Feb 2025)],
+    [*Google AI Essentials* (Coursera, Aug 2025) · *Microsoft Azure AI Essentials* (Feb 2025) · *Generative AI Career Skills* (Dec 2024) · *Wolfram Machine Learning Foundations* (Feb 2025)],
     [*GitHub Professional* (Dec 2024) · *Docker Professional* (Feb 2025) · *Microsoft Software Development* (Dec 2024)],
   ))
   cert-group("HackerRank", (

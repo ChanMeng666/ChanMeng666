@@ -34,9 +34,16 @@
 #let col-gutter = 1.4em
 
 // ─── Spacing scale (generous — breathing room is the priority) ──────────────
-#let space-section    = 10pt   // above each section-header
-#let space-after-rule = 6pt    // between section accent rule and first content
-#let space-entry      = 6pt    // between entries within a section
+#let space-section    = 12pt   // above each section-header
+#let space-after-rule = 7pt    // between section accent rule and first content
+#let space-entry      = 12pt   // between entries within a section
 #let space-pill-row   = 3pt    // horizontal pill gap
-#let leading-body     = 0.65em // base paragraph leading
-#let leading-tight    = 0.55em // for compact lists (sidebar pills, certs)
+#let leading-body     = 0.78em // base paragraph leading — airy for human readers
+#let leading-summary  = 0.85em // summary blocks inside role/project entries
+#let leading-tight    = 0.65em // for compact lists (sidebar pills, certs)
+
+// ─── Inter / intra entry gaps (named so designers can find them) ────────────
+#let gap-inter-entry  = 12pt   // between consecutive role-lines / experience entries
+#let gap-intra-entry  = 7pt    // between meta line (org/dates) and summary inside one entry
+#let gap-card-meta    = 6pt    // project-card: between title row and italic context line
+#let gap-card-body    = 5pt    // project-card: between italic context line and bullets

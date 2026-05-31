@@ -44,8 +44,11 @@
     summary: [Sole technical leader across two platform generations (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite) · *operates the 2026 Shanghai Summit with 16 confirmed speakers including FemTech-term originator Ida Tin*.],
   )
 
-  v(5pt)
-  text(size: size-tiny, fill: muted, style: "italic")[
-    *Previously:* Founding Junior Full-Stack Engineer at Sanicle (*earned the company its IBM Silver Partner certification + PartnerPlus listing through Chan's solo build* · 350+ commits · 180+ beta users · Nov 2023 — Nov 2024) · ByteDance 青训营 Backend (Jun–Aug 2024) · Lincoln industry placement at CORDE Christchurch · Forward With Her mentor *(programme of 360 mentors / 800 mentees — 7 of Chan's 18 LinkedIn recommendations come from this cohort)* · CopilotKit OSS contributor (2 merged PRs in official examples, 24.6k★).
-  ]
+  v(4pt)
+  block(above: 0pt, below: 0pt, {
+    set par(leading: 0.78em, justify: false)
+    text(size: size-tiny, fill: muted, style: "italic")[
+      *Previously:* Founding Junior Full-Stack Engineer at *Sanicle* — earned the company its *IBM Silver Partner* certification + PartnerPlus listing through a solo build (350+ commits, 180+ beta users, Nov 2023 — Nov 2024) · *ByteDance 青训营 Backend* (Jun–Aug 2024) · Lincoln industry placement at *CORDE Christchurch* · *Forward With Her mentor* (360 mentors / 800 mentees programme · 7 of 18 LinkedIn recommendations come from this cohort) · *CopilotKit* OSS contributor (2 merged PRs, 24.6k★).
+    ]
+  })
 })

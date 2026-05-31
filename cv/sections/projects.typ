@@ -6,13 +6,9 @@
 // and Selected Projects respectively.
 #let introduction() = section("Introduction", {
   set text(size: size-body, fill: ink)
-  set par(leading: leading-body, justify: true)
+  set par(leading: 0.78em, justify: true)
   [
     Agentic engineer and orchestrator of agents — ships *MCP servers, sub-agents, and agent skills* to production. Building at the intersection of *AI, cultural technology, and women's health*, with a minimalist's bias for removing friction so the work that remains can compound.
-  ]
-  v(6pt)
-  [
-    Recruited by Claude itself onto the Anthropic Partner Network track — empirical proof that an open-source portfolio and a body of writing can surface a candidate to AI sourcer agents before any recruiter sees the file.
   ]
 })
 

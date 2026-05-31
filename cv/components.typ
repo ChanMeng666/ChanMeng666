@@ -27,7 +27,7 @@
     pill(it)
     if i < items.len() - 1 { h(space-pill-row) }
   }
-  v(8pt)
+  v(9pt)
 }
 
 // ─── Inline italic label (e.g. for the architect-grade paragraph header) ────
@@ -59,16 +59,16 @@
 
 // ─── Accent divider between entries ──────────────────────────────────────────
 #let cv-divider() = {
-  v(6pt)
+  v(8pt)
   line(stroke: 0.4pt + accent.lighten(60%), length: 100%)
-  v(6pt)
+  v(8pt)
 }
 
 // ─── Tight divider (for experience list — many entries) ─────────────────────
 #let cv-divider-tight() = {
-  v(4pt)
+  v(6pt)
   line(stroke: 0.4pt + accent.lighten(60%), length: 100%)
-  v(4pt)
+  v(6pt)
 }
 
 // ─── Work / experience entry ─────────────────────────────────────────────────
@@ -140,18 +140,19 @@
           text(size: size-tiny, fill: muted)[#link(url, url.replace("https://", ""))]
         }
         if context-line != none {
-          v(3pt, weak: true)
+          v(gap-card-meta)
           block(above: 0pt, below: 0pt, {
+            set par(leading: 0.7em)
             text(style: "italic", size: size-meta, fill: primary, context-line)
           })
-          v(3pt)
+          v(gap-card-body)
         }
         // Bullets — solid dot, human-readable spacing
         set text(size: size-body, fill: ink)
-        set par(leading: 0.62em)
+        set par(leading: 0.78em)
         set list(
           marker: text(fill: accent)[•],
-          spacing: 5pt,
+          spacing: 6pt,
           indent: 0pt,
           body-indent: 6pt,
         )
@@ -180,13 +181,14 @@
   summary: none,
 ) = block(
   above: 0pt,
-  below: 7pt,
+  below: gap-inter-entry,
   breakable: false,
   {
-    set par(leading: 0.5em)
+    set par(leading: 0.55em)
     // ── Line 1: Title (bold) ─────────────────────────────────────────────
-    text(weight: "bold", size: 9pt, fill: ink, title)
+    text(weight: "bold", size: 9.5pt, fill: ink, title)
     linebreak()
+    v(2pt, weak: true)
     // ── Line 2: Org · Dates (italic + muted, bound to title) ────────────
     {
       set text(size: size-meta, style: "italic", fill: primary)
@@ -195,10 +197,10 @@
     text(fill: muted, style: "italic")[ · ]
     text(size: size-tiny, fill: muted, dates)
     if summary != none {
-      v(3.5pt, weak: true)
+      v(gap-intra-entry)
       block(above: 0pt, below: 0pt, {
-        set par(leading: 0.6em, justify: false)
-        text(size: size-tiny, fill: ink, summary)
+        set par(leading: leading-summary, justify: false)
+        text(size: 7.4pt, fill: ink, summary)
       })
     }
   },
@@ -212,11 +214,13 @@
   dates: "",
   location: "",
   note: "",
-) = {
-  text(weight: "bold", size: size-meta, fill: ink, title)
+) = block(above: 0pt, below: 0pt, {
+  set par(leading: 0.6em)
+  text(weight: "bold", size: 9.5pt, fill: ink, title)
   linebreak()
+  v(2pt, weak: true)
   {
-    set text(style: "italic", size: size-tiny, fill: primary)
+    set text(style: "italic", size: size-meta, fill: primary)
     if org-url != "" { link(org-url, org) } else { org }
     if location != "" {
       text(fill: muted)[ — ]
@@ -226,27 +230,27 @@
   linebreak()
   text(size: size-tiny, fill: muted, dates)
   if note != "" {
-    linebreak()
-    text(size: size-tiny, fill: ink, note)
+    v(3pt, weak: true)
+    block(above: 0pt, below: 0pt, text(size: size-tiny, fill: ink, note))
   }
-}
+})
 
 // ─── Cert / award group ──────────────────────────────────────────────────────
 #let cert-group(group, items) = {
   text(weight: "bold", size: size-meta, fill: primary, group)
-  v(2pt)
+  v(3pt)
   set text(size: size-tiny, fill: ink)
-  set par(leading: leading-tight)
+  set par(leading: 0.7em)
   set list(
     marker: text(fill: accent, size: 5.5pt)[•],
-    spacing: 3pt,
+    spacing: 5pt,
     indent: 0pt,
     body-indent: 5pt,
   )
   for it in items {
     list.item(it)
   }
-  v(7pt)
+  v(8pt)
 }
 
 // ─── Bullet list inside an entry (consistent style) ─────────────────────────
@@ -273,14 +277,15 @@
 // ─── Quote callout ──────────────────────────────────────────────────────────
 #let quote-block(body, source: "") = block(
   fill: quote-bg,
-  inset: (x: 7pt, y: 4pt),
+  inset: (x: 7pt, y: 5pt),
   radius: 3pt,
   width: 100%,
   above: 4pt,
   below: 0pt,
   stroke: (left: 2pt + accent),
+  breakable: false,
   {
-    set par(leading: 0.5em)
+    set par(leading: 0.55em)
     text(style: "italic", size: size-tiny, fill: ink)[« #body »]
     if source != "" {
       v(2pt)

@@ -18,10 +18,10 @@
 // one concrete signal.
 #let what-i-bring() = section("What I Bring to a Team", {
   set text(size: size-meta, fill: ink)
-  set par(leading: leading-body)
+  set par(leading: 0.78em)
   set list(
     marker: text(fill: accent)[•],
-    spacing: 6pt,
+    spacing: 8pt,
     indent: 0pt,
     body-indent: 6pt,
   )
@@ -127,10 +127,10 @@
 // ─── 6. Recognition + reference quotes ───────────────────────────────────────
 #let recognition-and-reference() = section("Recognition", {
   set text(size: size-tiny, fill: ink)
-  set par(leading: leading-tight)
+  set par(leading: 0.7em)
   set list(
     marker: text(fill: accent, size: 5.5pt)[•],
-    spacing: 4pt,
+    spacing: 6pt,
     indent: 0pt,
     body-indent: 5pt,
   )
@@ -139,18 +139,16 @@
   list.item[*FemTech Excellence Award* — FemTech China (inaugural FemTech Weekend).]
   list.item[*UN Women FemTech Hackathon — Outstanding Performer* (Beijing, Mar 2025) · independent-developer recognition for cross-org collaboration with Sanicle and the NGO CSW Forum.]
 
-  v(6pt)
+  v(8pt)
   quote-block(
     [Not only his technical ability, but the way he turns ambiguous founder-level direction into working systems, measurable proof, and reliable product surfaces.],
     source: [Saba Gecgil · Founder & CEO, GAVIGO Inc.],
   )
-
-  v(3pt)
-  quote-block(
-    [Chan is someone you feel genuinely confident working with — she naturally becomes the technical backbone of the team.],
-    source: [Lesley Gao · She Sharp design team (May 2026)],
-  )
 })
+
+// Kept as a no-op so the import in chan-meng-cv.typ stays valid even though
+// endorsements now live inline in the right-column Recognition section.
+#let endorsements() = []
 
 // ─── Assemble entire right column ────────────────────────────────────────────
 // Order: value statements (HR-facing) → core toolset → stack → credentials →

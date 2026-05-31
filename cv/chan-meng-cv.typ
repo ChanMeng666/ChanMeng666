@@ -11,7 +11,7 @@
 #import "sections/header.typ": header
 #import "sections/projects.typ": introduction, projects
 #import "sections/experience.typ": experience
-#import "sections/sidebar.typ": sidebar, sidebar-no-education, education
+#import "sections/sidebar.typ": sidebar, sidebar-no-education, education, endorsements
 #import "sections/footer.typ": footer
 
 // ── PDF metadata (GEO surface) ────────────────────────────────────────────────
@@ -83,15 +83,16 @@
   align: (left + top, left + top),
 
   // ─ LEFT COLUMN — narrative
-  //   Order: introduction → experience → projects → education.
-  //   Education tucked at the bottom of the LEFT column fills the slack and
-  //   keeps the right column light enough that the recognition quotes don't
-  //   spill onto a third page.
+  //   Order: introduction → experience → projects → education → endorsements.
+  //   Education + endorsements tucked at the bottom of the LEFT column balance
+  //   vertical fill against the structured RIGHT column; the right column ends
+  //   cleanly with Recognition's 4 award bullets.
   {
     introduction()
     experience()
     projects()
     education()
+    endorsements()
   },
 
   // ─ RIGHT COLUMN — value statements + stack + credentials + recognition

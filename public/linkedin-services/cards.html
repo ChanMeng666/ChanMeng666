@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chan Meng — LinkedIn Testimonial Cards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #1E2D7D; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+  html { scrollbar-width: none; -ms-overflow-style: none; }
+  html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+  .card {
+    width: 1128px;
+    height: 376px;
+    position: relative;
+    background: #1E2D7D;
+    overflow: hidden;
+  }
+
+  .card-inner {
+    position: absolute;
+    left: 80px;
+    top: 32px;
+    width: 1008px;
+    height: 312px;
+    background: #FFFFFF;
+    border-radius: 32px;
+  }
+
+  .avatar {
+    position: absolute;
+    left: 24px;
+    top: 88px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #C8D0E8;
+    box-shadow: 0 0 0 6px #FFFFFF, 0 8px 24px rgba(0,0,0,0.18);
+    z-index: 2;
+  }
+
+  .quote-glyph {
+    position: absolute;
+    left: 244px;
+    top: 16px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 120px;
+    line-height: 1;
+    color: #2BB1A6;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    user-select: none;
+  }
+
+  .quote-text {
+    position: absolute;
+    left: 252px;
+    top: 92px;
+    width: 800px;
+    color: #1E2D7D;
+    font-weight: 700;
+    line-height: 1.38;
+    padding-right: 24px;
+  }
+
+  .quote-text.size-lg { font-size: 26px; top: 96px; }
+  .quote-text.size-md { font-size: 24px; top: 100px; }
+  .quote-text.size-sm { font-size: 22px; top: 104px; line-height: 1.42; }
+
+  .attribution {
+    position: absolute;
+    right: 56px;
+    bottom: 56px;
+    text-align: right;
+    color: #F37856;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .attribution .name {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+  }
+
+  .attribution .role {
+    font-size: 14px;
+    margin-top: 2px;
+    opacity: 0.95;
+  }
+
+  /* Card spacer for clean screenshot capture */
+  .spacer { width: 1128px; height: 24px; background: #0D1640; }
+</style>
+</head>
+<body>
+
+<!-- Card 1: Saba Gecgil -->
+<div class="card" id="card-1">
+  <div class="card-inner"></div>
+  <div class="avatar" style="background-image: url('../recommendations/Saba-Gecgil.png');"></div>
+  <div class="quote-glyph">&#8220;</div>
+  <div class="quote-text size-lg">
+    He combines speed with discipline. Chan ships quickly, but he also documents, tests, and pushes for technical honesty.
+  </div>
+  <div class="attribution">
+    <div class="name">Saba Gecgil</div>
+    <div class="role">Founder &amp; CEO, GAVIGO</div>
+  </div>
+</div>
+<div class="spacer"></div>
+
+<!-- Card 2: Gabrielle J. Hurst -->
+<div class="card" id="card-2">
+  <div class="card-inner"></div>
+  <div class="avatar" style="background-image: url('../recommendations/Gabby-Hurst.jpeg');"></div>
+  <div class="quote-glyph">&#8220;</div>
+  <div class="quote-text size-md">
+    Chan Meng is an outstanding Senior AI/ML Infrastructure Engineer whose work consistently combines speed, security, and strategic foresight. Chan is the kind of engineer who elevates those around her.
+  </div>
+  <div class="attribution">
+    <div class="name">Gabrielle J. Hurst</div>
+    <div class="role">Former CXO, Sanicle Inc.</div>
+  </div>
+</div>
+<div class="spacer"></div>
+
+<!-- Card 3: Patricia Anthony -->
+<div class="card" id="card-3">
+  <div class="card-inner"></div>
+  <div class="avatar" style="background-image: url('../recommendations/Patricia-Anthony.jpeg');"></div>
+  <div class="quote-glyph">&#8220;</div>
+  <div class="quote-text size-md">
+    Chan Meng demonstrated excellent technical skills, a strong work ethic, and an inquisitive nature. She consistently excelled in both coursework and practical projects, approaching challenges with critical thinking and creativity.
+  </div>
+  <div class="attribution">
+    <div class="name">Patricia Anthony</div>
+    <div class="role">Associate Professor, Lincoln University NZ</div>
+  </div>
+</div>
+<div class="spacer"></div>
+
+<!-- Card 4: Cecilia Yin -->
+<div class="card" id="card-4">
+  <div class="card-inner"></div>
+  <div class="avatar" style="background-image: url('../recommendations/Cecilia-Yin.jpg');"></div>
+  <div class="quote-glyph">&#8220;</div>
+  <div class="quote-text size-md">
+    She has a great mix of technical skills and a genuine passion for AI that shines through in everything she does. She brings curiosity, positivity, and a genuine drive to grow.
+  </div>
+  <div class="attribution">
+    <div class="name">Cecilia Yin</div>
+    <div class="role">Solutions Architect, AWS</div>
+  </div>
+</div>
+<div class="spacer"></div>
+
+<!-- Card 5: Lesley Gao -->
+<div class="card" id="card-5">
+  <div class="card-inner"></div>
+  <div class="avatar" style="background-image: url('../recommendations/Lesley-Gao.jpg');"></div>
+  <div class="quote-glyph">&#8220;</div>
+  <div class="quote-text size-lg">
+    A PR merged at 12:30am? You didn't see it wrong, that's pretty normal for Chan. What stands out most to me is her passion for technology.
+  </div>
+  <div class="attribution">
+    <div class="name">Lesley Gao</div>
+    <div class="role">Product Designer / Web Developer, She Sharp</div>
+  </div>
+</div>
+<div class="spacer"></div>
+
+<!-- Card 6: Siyu Xing -->
+<div class="card" id="card-6">
+  <div class="card-inner"></div>
+  <div class="avatar" style="background-image: url('../recommendations/Siyu-Xing.jpg');"></div>
+  <div class="quote-glyph">&#8220;</div>
+  <div class="quote-text size-md">
+    Her insights on identity and self-awareness deeply inspired me. I highly recommend Chan to anyone who wants to grow and advance in the technology field.
+  </div>
+  <div class="attribution">
+    <div class="name">Siyu Xing</div>
+    <div class="role">Ph.D. Candidate, UCAS</div>
+  </div>
+</div>
+
+</body>
+</html>

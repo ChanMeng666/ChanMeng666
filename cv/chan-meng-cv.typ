@@ -83,20 +83,19 @@
   align: (left + top, left + top),
 
   // ─ LEFT COLUMN — narrative
-  //   Order: introduction → experience → projects → education → endorsements.
-  //   Education + endorsements tucked at the bottom of the LEFT column balance
-  //   vertical fill against the structured RIGHT column; the right column ends
-  //   cleanly with Recognition's 4 award bullets.
+  //   Order: introduction → experience → projects → endorsements.
+  //   Education moved to RIGHT column (after the L1 plain-English layer was
+  //   added to projects/experience, LEFT became heavier than RIGHT; rebalanced
+  //   by putting Education at the foot of the sidebar instead).
   {
     introduction()
     experience()
     projects()
-    education()
     endorsements()
   },
 
-  // ─ RIGHT COLUMN — value statements + stack + credentials + recognition
-  sidebar-no-education(),
+  // ─ RIGHT COLUMN — value statements + stack + credentials + recognition + education
+  sidebar(),
 )
 
 // PDF carries an invisible-to-humans GEO surface via metadata only — see

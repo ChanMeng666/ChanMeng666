@@ -163,15 +163,11 @@
 // ─── 5. Certifications & training ────────────────────────────────────────────
 #let certifications() = section("Certifications & Training", {
   cert-group("Anthropic (6)", (
-    [*Building with the Claude API* · *Intro to MCP* · *Intro to Agent Skills* · *Claude Code in Action* (all May 2026; *Claude Code in Action* also Aug 2025) · *AI Fluency: Framework & Foundations* (Aug 2025)],
+    [*Building with the Claude API · Intro to MCP · Intro to Agent Skills · Claude Code in Action* (all May 2026; *Claude Code in Action* originally Aug 2025) · *AI Fluency: Framework & Foundations* (Aug 2025)],
     [*Claude Certified Architect — Foundations* curriculum completed (on Anthropic Partner Network track via Engram)],
   ))
   cert-group("Other AI / Cloud", (
-    [*Google AI Essentials* (Coursera, Aug 2025) · *Microsoft Azure AI Essentials* (Feb 2025) · *Generative AI Career Skills* (Dec 2024) · *Wolfram Machine Learning Foundations* (Feb 2025)],
-    [*GitHub Professional* (Dec 2024) · *Docker Professional* (Feb 2025) · *Microsoft Software Development* (Dec 2024)],
-  ))
-  cert-group("HackerRank", (
-    [*Software Engineer* · *Frontend Developer (React)* · *SQL Advanced* · *Problem Solving Intermediate* · *REST API Intermediate* · *Node.js* · *JavaScript* · *Go* · *Angular* (all Intermediate)],
+    [*Google AI Essentials · Microsoft Azure AI Essentials · Generative AI Career Skills · Wolfram Machine Learning Foundations · GitHub Professional · Docker Professional · Microsoft Software Development* (Aug 2025 — Feb 2025)],
   ))
 })
 

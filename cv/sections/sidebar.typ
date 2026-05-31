@@ -18,10 +18,12 @@
 // one concrete signal.
 #let what-i-bring() = section("What I Bring to a Team", {
   set text(size: size-meta, fill: ink)
-  set par(leading: 0.78em)
+  // Within-bullet leading is tight; between-bullet spacing is ~2.2× wider so
+  // the eye binds each bullet as a single unit.
+  set par(leading: 0.7em)
   set list(
     marker: text(fill: accent)[•],
-    spacing: 8pt,
+    spacing: 13pt,
     indent: 0pt,
     body-indent: 6pt,
   )
@@ -127,10 +129,11 @@
 // ─── 6. Recognition + reference quotes ───────────────────────────────────────
 #let recognition-and-reference() = section("Recognition", {
   set text(size: size-tiny, fill: ink)
-  set par(leading: 0.7em)
+  // Tight within-bullet (4.55pt baseline gap); ~2× wider between bullets.
+  set par(leading: 0.65em)
   set list(
     marker: text(fill: accent, size: 5.5pt)[•],
-    spacing: 6pt,
+    spacing: 9pt,
     indent: 0pt,
     body-indent: 5pt,
   )
@@ -138,16 +141,13 @@
   list.item[*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors · guided 11 teams / 80+ participants.]
   list.item[*FemTech Excellence Award* — FemTech China (inaugural FemTech Weekend).]
   list.item[*UN Women FemTech Hackathon — Outstanding Performer* (Beijing, Mar 2025) · independent-developer recognition for cross-org collaboration with Sanicle and the NGO CSW Forum.]
-
-  v(8pt)
-  quote-block(
-    [Not only his technical ability, but the way he turns ambiguous founder-level direction into working systems, measurable proof, and reliable product surfaces.],
-    source: [Saba Gecgil · Founder & CEO, GAVIGO Inc.],
-  )
 })
 
-// Kept as a no-op so the import in chan-meng-cv.typ stays valid even though
-// endorsements now live inline in the right-column Recognition section.
+// ─── 7. Endorsements — removed ──────────────────────────────────────────────
+// Testimonial quote dropped in this iteration to make room for the wider
+// inter-bullet / inter-entry spacing the user requested. Most professional
+// CVs do not carry testimonials; full quote remains available in
+// data/profile.yaml::references for reference-check stages.
 #let endorsements() = []
 
 // ─── Assemble entire right column ────────────────────────────────────────────

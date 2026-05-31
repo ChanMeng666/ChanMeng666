@@ -147,12 +147,14 @@
           })
           v(gap-card-body)
         }
-        // Bullets — solid dot, human-readable spacing
+        // Bullets — solid dot. Within-bullet leading 0.7em (6.3pt at 9pt
+        // text); between-bullets 11pt (~1.75×) so each bullet reads as a
+        // distinct paragraph, not a continuation of the line above.
         set text(size: size-body, fill: ink)
-        set par(leading: 0.78em)
+        set par(leading: 0.7em)
         set list(
           marker: text(fill: accent)[•],
-          spacing: 6pt,
+          spacing: 11pt,
           indent: 0pt,
           body-indent: 6pt,
         )
@@ -184,18 +186,20 @@
   below: gap-inter-entry,
   breakable: false,
   {
-    set par(leading: 0.55em)
-    // ── Line 1: Title (bold) ─────────────────────────────────────────────
-    text(weight: "bold", size: 9.5pt, fill: ink, title)
-    linebreak()
-    v(2pt, weak: true)
-    // ── Line 2: Org · Dates (italic + muted, bound to title) ────────────
-    {
+    // ── Line 1: Title (own block so `below` is real — linebreak + v(weak)
+    //           was being collapsed inside a single paragraph) ─────────────
+    block(above: 0pt, below: 5pt, breakable: false, {
+      text(weight: "bold", size: 9.5pt, fill: ink, title)
+    })
+
+    // ── Line 2: Org · Dates (italic + muted, sits below the title block) ─
+    block(above: 0pt, below: 0pt, breakable: false, {
       set text(size: size-meta, style: "italic", fill: primary)
       if org-url != "" { link(org-url, org) } else { org }
-    }
-    text(fill: muted, style: "italic")[ · ]
-    text(size: size-tiny, fill: muted, dates)
+      text(fill: muted, style: "italic")[ · ]
+      text(size: size-tiny, fill: muted, dates)
+    })
+
     if summary != none {
       v(gap-intra-entry)
       block(above: 0pt, below: 0pt, {
@@ -215,23 +219,27 @@
   location: "",
   note: "",
 ) = block(above: 0pt, below: 0pt, {
-  set par(leading: 0.6em)
-  text(weight: "bold", size: 9.5pt, fill: ink, title)
-  linebreak()
-  v(2pt, weak: true)
-  {
+  // Title — own block so `below` actually renders
+  block(above: 0pt, below: 4pt, breakable: false, {
+    text(weight: "bold", size: 9.5pt, fill: ink, title)
+  })
+  // Org · Location — italic
+  block(above: 0pt, below: 2pt, breakable: false, {
     set text(style: "italic", size: size-meta, fill: primary)
     if org-url != "" { link(org-url, org) } else { org }
     if location != "" {
       text(fill: muted)[ — ]
       text(weight: "regular", fill: muted, location)
     }
-  }
-  linebreak()
-  text(size: size-tiny, fill: muted, dates)
+  })
+  // Dates — muted
+  block(above: 0pt, below: 3pt, breakable: false, {
+    text(size: size-tiny, fill: muted, dates)
+  })
   if note != "" {
-    v(3pt, weak: true)
-    block(above: 0pt, below: 0pt, text(size: size-tiny, fill: ink, note))
+    block(above: 0pt, below: 0pt, breakable: false, {
+      text(size: size-tiny, fill: ink, note)
+    })
   }
 })
 
@@ -240,10 +248,11 @@
   text(weight: "bold", size: size-meta, fill: primary, group)
   v(3pt)
   set text(size: size-tiny, fill: ink)
-  set par(leading: 0.7em)
+  // Within-item leading 0.65em (4.55pt at 7pt text); between-items 9pt (~2×).
+  set par(leading: 0.65em)
   set list(
     marker: text(fill: accent, size: 5.5pt)[•],
-    spacing: 5pt,
+    spacing: 9pt,
     indent: 0pt,
     body-indent: 5pt,
   )

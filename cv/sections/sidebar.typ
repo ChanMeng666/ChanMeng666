@@ -66,13 +66,22 @@
     "MCP",
     "Resume",
   ))
-  skill-category("Beyond coding — AI-leveraged daily work", (
+  // Six dev-adjacent tasks shipped via Claude Code / Codex headless mode +
+  // GitHub Actions + Anthropic Interactive Apps + Agent Teams (Opus 4.6).
+  // Every pill maps to a documented capability of one or both agents:
+  //   - Typst PDFs       → claude-skill-based typesetting (this CV)
+  //   - CI/CD pipelines  → anthropics/claude-code-action, openai/codex-action
+  //   - Slack apps       → Anthropic Interactive Apps + Slack MCP
+  //   - Agent teams      → shared subagents with their own context windows
+  //   - Code review      → claude-code-action `/review`, codex `/review`
+  //   - Internal CLIs    → claude -p headless mode + custom skills/MCP
+  skill-category("Beyond pure coding — AI-leveraged dev work", (
     "Typst PDFs",
-    "Research",
-    "Data analysis",
+    "CI/CD pipelines",
+    "Slack apps",
+    "Agent teams",
     "Code review",
-    "Translation",
-    "Planning",
+    "Internal CLIs",
   ))
 })
 

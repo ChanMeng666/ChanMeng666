@@ -70,3 +70,7 @@ The Anthropic Forward Deployed Engineer JD phrase `shipped MCP servers, sub-agen
 ## Regenerating
 
 Whenever `data/profile.yaml` changes (work entries, recommendations, project metrics), rerun `pwsh cv/build.ps1` to refresh `public/chan-meng-cv.pdf` + the JSON-LD and llms.txt siblings.
+
+## Before editing any `.typ` file — read [`TYPST_PITFALLS.md`](./TYPST_PITFALLS.md)
+
+That file documents eight non-obvious Typst layout bugs that have already been fixed in this CV and **must not be reintroduced**. Notable: `v(N, weak: true)` after `linebreak()` silently renders as zero (use `block(below: ...)` instead); `block` margins are max-not-sum; list `spacing` must be ≥ 1.7× of within-item leading or bullets blur into one paragraph. Every entry / project / bullet in the CV depends on these rules.

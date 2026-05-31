@@ -123,7 +123,7 @@ const projects = [
   },
   {
     name: "Google News MCP Server",
-    url: "https://github.com/ChanMeng666/server-google-news",
+    url: "https://glama.ai/mcp/servers/ChanMeng666/server-google-news",
     role: "Solo author & maintainer (MIT)",
     summary:
       "Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch. Skywork AI featured it as 'one of the most elegant, production-ready solutions' · listed across 15+ MCP catalogs · PulseMCP 'Top Pick' · Glama A-rating · 122 stars · @chanmeng666/google-news-server on npm.",
@@ -139,11 +139,10 @@ for (const p of projects) {
 
 sect("Developer-leverage tooling (builds for self and team)");
 W("- echook (Claude Code / Cursor / Codex audio hooks — above)");
-W("- Vitex (https://www.vitex.org.nz/) — AI career agent · tool_use + JSON Schema · retry-with-error-feedback");
-W("- gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 340+ animated-SVG templates · live XML via Vercel Edge");
-W("- typst-claude-skill — official Typst skill for Claude Code (9 templates)");
-W("- github-readme-suno-cards · github-visitor-counter — own decoration-as-a-service");
-W("- chan-meng-cli · readme-profile-generator · ai-programming-teaching");
+W("- gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 340+ animated-SVG templates · 273 solo commits");
+W("- typst-claude-skill — official Typst skill for Claude Code (typesets this CV)");
+W("- SunoStats (https://sunostats.chanmeng.org/) — industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese · Docker + Traefik VPS");
+W("- FanFic Lab (https://fanfic-lab.tech/) — 7-node LangGraph agent");
 
 sect("Experience (most recent)");
 const roles = [

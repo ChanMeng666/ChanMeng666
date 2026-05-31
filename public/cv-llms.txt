@@ -85,7 +85,7 @@ AI agent architect, full-stack engineer, and minimalist living advocate building
 - Noise-control system for AI coding assistants — turns down their constant audio chatter during deep work, alerts only on the things that matter. Reference implementation of the Claude Agent SDK hooks lifecycle — PreToolUse · PostToolUse · status line · context-window quota. 26 hook events · 42 releases · 139 tests on triple-platform CI (Linux/macOS/Windows). Cross-tool by design — single hook system, three IDE surfaces: Claude Code, Cursor, OpenAI Codex. Started as an internal noise-fix for long-running background agents; open-sourced after teammates asked for it; now community-adopted across all three IDEs.
 
 ### Google News MCP Server
-- URL: https://github.com/ChanMeng666/server-google-news
+- URL: https://glama.ai/mcp/servers/ChanMeng666/server-google-news
 - Role: Solo author & maintainer (MIT)
 - Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch. Skywork AI featured it as 'one of the most elegant, production-ready solutions' · listed across 15+ MCP catalogs · PulseMCP 'Top Pick' · Glama A-rating · 122 stars · @chanmeng666/google-news-server on npm.
 
@@ -93,11 +93,10 @@ AI agent architect, full-stack engineer, and minimalist living advocate building
 # Developer-leverage tooling (builds for self and team)
 
 - echook (Claude Code / Cursor / Codex audio hooks — above)
-- Vitex (https://www.vitex.org.nz/) — AI career agent · tool_use + JSON Schema · retry-with-error-feedback
-- gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 340+ animated-SVG templates · live XML via Vercel Edge
-- typst-claude-skill — official Typst skill for Claude Code (9 templates)
-- github-readme-suno-cards · github-visitor-counter — own decoration-as-a-service
-- chan-meng-cli · readme-profile-generator · ai-programming-teaching
+- gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 340+ animated-SVG templates · 273 solo commits
+- typst-claude-skill — official Typst skill for Claude Code (typesets this CV)
+- SunoStats (https://sunostats.chanmeng.org/) — industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese · Docker + Traefik VPS
+- FanFic Lab (https://fanfic-lab.tech/) — 7-node LangGraph agent
 
 # Experience (most recent)
 

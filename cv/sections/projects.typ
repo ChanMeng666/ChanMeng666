@@ -54,7 +54,7 @@
     (
       logo: "/public/brands/server-google-news.svg",
       name: "Google News MCP Server",
-      url: "https://github.com/ChanMeng666/server-google-news",
+      url: "https://glama.ai/mcp/servers/ChanMeng666/server-google-news",
       context-line: [Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch.],
       bullets: (
         [*Skywork AI featured it as "one of the most elegant, production-ready solutions"* — listed across *15+ MCP catalogs* · PulseMCP "Top Pick" · Glama A-rating · 122 stars · `@chanmeng666/google-news-server` on npm.],
@@ -82,7 +82,7 @@
       set text(size: size-tiny, fill: muted, style: "italic")
       set par(leading: leading-body, justify: true)
       [
-        *Also open-sourced:* #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (340+ animated-SVG templates, 273 solo commits) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (official Typst skill for Claude Code — typesets this CV) · #link("https://sunostats.chanmeng.org/")[SunoStats] · #link("https://github.com/ChanMeng666/fanfic-lab")[FanFic Lab] (7-node LangGraph agent) · chan-meng-cli, readme-profile-generator, github-readme-suno-cards, github-visitor-counter.
+        *Also open-sourced:* #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (340+ animated-SVG templates, 273 solo commits) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (official Typst skill for Claude Code — typesets this CV) · #link("https://sunostats.chanmeng.org/")[SunoStats] (industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese) · #link("https://fanfic-lab.tech/")[FanFic Lab] (7-node LangGraph agent).
       ]
     },
   )

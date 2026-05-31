@@ -33,7 +33,7 @@
     "Lighthouse", "OpenTelemetry", "web-vitals",
     "prompt caching", "model routing", "tail latency", "multi-tenant isolation",
     "LangGraph", "LangChain", "CopilotKit", "Vercel AI SDK",
-    "Next.js", "Docusaurus", "Webflow", "Vue 3", "Spring Boot 3", "FastAPI",
+    "Next.js", "Docusaurus", "Webflow", "Vue 3", "Spring Boot 3", "FastAPI", "React Native",
     "Drizzle ORM", "pgvector", "Neon Postgres",
     "Cloudflare Workers", "Cloudflare Vectorize", "Cloudflare KV", "OpenNext",
     "Kubernetes", "GKE", "GCP", "AWS", "Docker", "Traefik", "Redis",

@@ -44,9 +44,13 @@
   ]
 })
 
-// ─── 2. Claude Code stack (no echook footnote — dedup) ──────────────────────
-#let claude-code-stack() = section("Claude Code Stack", {
-  skill-category("Layers shipped to production", (
+// ─── 2. Claude Code & Codex mastery ─────────────────────────────────────────
+// Positions Chan as a power-user of BOTH coding agents — fluent in every
+// extension surface for Claude Code, fluent in Codex CLI's daily workflow,
+// and using these tools for non-development work too (Typst typesetting,
+// research, data, translation). HR / recruiter readable.
+#let claude-code-codex() = section("Claude Code & Codex", {
+  skill-category("Claude Code — every extension surface shipped", (
     "CLAUDE.md",
     "MCP servers",
     "Skills",
@@ -54,20 +58,30 @@
     "Hooks",
     "Status line",
   ))
+  skill-category("Codex CLI — daily-driver fluency", (
+    "AGENTS.md",
+    "Goal mode",
+    "Sandbox modes",
+    "Hooks API",
+    "MCP",
+    "Resume",
+  ))
+  skill-category("Beyond coding — AI-leveraged daily work", (
+    "Typst PDFs",
+    "Research",
+    "Data analysis",
+    "Code review",
+    "Translation",
+    "Planning",
+  ))
 })
 
 // ─── 3. AI development tooling ───────────────────────────────────────────────
-// Positioned as the daily-life toolkit of an AI-native engineer:
-// IDEs+code agents · SDKs+protocols for building agentic systems ·
-// evals+observability for shipping them responsibly.
+// Productivity layer that complements the Claude Code & Codex section above:
+// agent-runtime SDKs + inter-agent protocols + eval/observability. IDEs and
+// code agents themselves now live in the Claude Code & Codex section to
+// avoid duplication.
 #let ai-tooling() = section("AI Development Tooling", {
-  skill-category("IDEs & code agents", (
-    "Claude Code",
-    "Codex CLI",
-    "Cursor",
-    "Claude Design",
-    "GitHub Copilot",
-  ))
   skill-category("Agent SDKs & protocols", (
     "Claude Agent SDK",
     "OpenAI Agents SDK",
@@ -85,9 +99,11 @@
 })
 
 // ─── 4. Stack ────────────────────────────────────────────────────────────────
-// Grouped to expose the AI-engineering depth first (Models, then orchestration
-// frameworks), then the production substrate, then the language base. Java is
-// listed because the ByteDance backend + full-stack work used Spring Boot 3.
+// Engineering substrate: the LLMs, the composition frameworks, the app
+// frameworks, the production infra, the languages. Base provider SDKs
+// (Anthropic SDK / OpenAI SDK) intentionally omitted — they are subsumed
+// by the Claude Agent SDK / OpenAI Agents SDK in the AI Tooling section,
+// and listing both creates a duplicated-skills illusion.
 #let stack() = section("Stack", {
   skill-category("Models", (
     "Anthropic Opus / Sonnet / Haiku",
@@ -95,12 +111,10 @@
     "Gemini 2.x",
     "Llama 3.x",
   ))
-  skill-category("AI frameworks & SDKs", (
+  skill-category("AI frameworks", (
     "LangGraph",
     "CopilotKit",
     "Vercel AI SDK",
-    "Anthropic SDK",
-    "OpenAI SDK",
   ))
   skill-category("App frameworks", (
     "Next.js 16",
@@ -129,8 +143,7 @@
 // ─── 5. Certifications & training ────────────────────────────────────────────
 #let certifications() = section("Certifications & Training", {
   cert-group("Anthropic (6)", (
-    [*Building with the Claude API* · *Introduction to Model Context Protocol* · *Introduction to Agent Skills* (all May 2026)],
-    [*Claude Code in Action* (May 2026 & Aug 2025) · *AI Fluency: Framework & Foundations* (Aug 2025)],
+    [*Building with the Claude API* · *Intro to MCP* · *Intro to Agent Skills* · *Claude Code in Action* (all May 2026; *Claude Code in Action* also Aug 2025) · *AI Fluency: Framework & Foundations* (Aug 2025)],
     [*Claude Certified Architect — Foundations* curriculum completed (on Anthropic Partner Network track via Engram)],
   ))
   cert-group("Other AI / Cloud", (
@@ -153,10 +166,9 @@
     indent: 0pt,
     body-indent: 5pt,
   )
-  list.item[*UN CSW 69 Speaker* — Beyond Beijing 30 Conference, UN HQ NYC (Mar 2025). Attracted *IBM pilot interest* and a public endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
+  list.item[*UN CSW 69 Speaker* — UN HQ NYC, Mar 2025 · attracted *IBM pilot interest* and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
   list.item[*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors · guided 11 teams / 80+ participants.]
-  list.item[*FemTech Excellence Award* — FemTech China (inaugural FemTech Weekend).]
-  list.item[*UN Women FemTech Hackathon — Outstanding Performer* (Beijing, Mar 2025) · independent-developer recognition for cross-org collaboration with Sanicle and the NGO CSW Forum.]
+  list.item[*FemTech Excellence Award* — FemTech China (inaugural FemTech Weekend) · *UN Women FemTech Hackathon Outstanding Performer* (Beijing, Mar 2025).]
 })
 
 // ─── 7. Endorsements — removed ──────────────────────────────────────────────
@@ -172,7 +184,7 @@
 // of the LEFT column (sidebar-no-education) to balance vertical fill.
 #let sidebar-no-education() = {
   what-i-bring()
-  claude-code-stack()
+  claude-code-codex()
   ai-tooling()
   stack()
   certifications()

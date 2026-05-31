@@ -27,7 +27,7 @@
     pill(it)
     if i < items.len() - 1 { h(space-pill-row) }
   }
-  v(7pt)
+  v(5pt)
 }
 
 // ─── Inline italic label (e.g. for the architect-grade paragraph header) ────

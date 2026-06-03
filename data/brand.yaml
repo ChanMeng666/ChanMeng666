@@ -382,12 +382,15 @@ signatures:
   # (goldEyebrow, monogramDivider). Banners render regardless of this flag.
   adoptedInReadme: false
 
-  # 1. Hero band — once per page, top only. Pixelated orange/violet/glare.
+  # 1. Hero band — once per page, top only. Holographic orange/violet/glare.
+  # Uses the brand-coloured gradient-svg-generator templates (brand-*), which
+  # reuse the original animation effects in the Caldera palette. The colours
+  # live in the template definition, so no color params are needed here.
   heroBand:
     type: "gradient-svg"
-    template: "pixel-art-retro"
+    template: "brand-hero"
     height: 200
-    duration: "4s"
+    duration: "8s"
     useWhen: "Top of any long-form surface."
     doNotUseWhen: "Internal sections. Multiple per page. Cards."
 
@@ -416,38 +419,39 @@ signatures:
     doNotUseWhen: "Between sibling cards or list items."
 
   # 5. Pill gradient rotation — the CTA / badge button vocabulary.
-  #    Recoloured to the Caldera palette via the pixelArt gradientType.
+  #    Brand-coloured skillPills/badge/banner templates (colours baked in).
   pillRotation:
     type: "gradient-svg"
     templates:
-      primary:        { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "070607"],          height: 40, duration: "4s" }
-      secondary:      { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["524AE9", "070607"],          height: 40, duration: "4s" }
-      accent:         { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "524AE9"],          height: 40, duration: "4s" }
-      live:           { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "F5F28E"],          height: 40, duration: "4s" }
-      source:         { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["070607", "524AE9"],          height: 40, duration: "4s" }
-      caseStudy:      { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["524AE9", "F5F28E"],          height: 40, duration: "4s" }
-      badgePortfolio: { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "524AE9", "F5F28E"], height: 40, duration: "4s" }
-      badgeLinkedin:  { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["524AE9", "070607"],          height: 40, duration: "4s" }
-      badgeGithub:    { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["070607", "FC5000"],          height: 40, duration: "4s" }
-      badgeEmail:     { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "070607"],          height: 40, duration: "4s" }
-      badgeBook:      { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "524AE9"],          height: 40, duration: "4s" }
-      badgeNewsletter: { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["524AE9", "F5F28E"],         height: 40, duration: "4s" }
-      badgeResume:    { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["070607", "FC5000"],          height: 40, duration: "4s" }
-      badgeCoffee:    { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "F5F28E"],          height: 40, duration: "4s" }
+      primary:         { template: "brand-pill-mixed",  height: 28, duration: "8s" }
+      secondary:       { template: "brand-badge",        height: 24, duration: "6s" }
+      accent:          { template: "brand-banner",       height: 26, duration: "6s" }
+      live:            { template: "brand-pill-violet",  height: 22, duration: "6s" }
+      source:          { template: "brand-pill-ink",     height: 22, duration: "6s" }
+      caseStudy:       { template: "brand-pill-violet",  height: 22, duration: "6s" }
+      badgePortfolio:  { template: "brand-pill-mixed",   height: 40, duration: "8s" }
+      badgeLinkedin:   { template: "brand-pill-violet",  height: 40, duration: "8s" }
+      badgeGithub:     { template: "brand-pill-ink",     height: 40, duration: "8s" }
+      badgeEmail:      { template: "brand-pill-violet",  height: 40, duration: "8s" }
+      badgeBook:       { template: "brand-pill-ink",     height: 40, duration: "8s" }
+      badgeNewsletter: { template: "brand-pill-violet",  height: 40, duration: "8s" }
+      badgeResume:     { template: "brand-pill-ink",     height: 40, duration: "8s" }
+      badgeCoffee:     { template: "brand-pill-orange",  height: 40, duration: "8s" }
     useWhen: "CTAs, social badges, action pills."
     doNotUseWhen: "Inside body prose. As decoration. Outside Chan's own tools."
 
   # Banner registry — gradient-svg-generator banner configs used in
-  # templates/partials/banner.hbs. Two-tone pixelated orange/violet, Caldera palette.
+  # templates/partials/banner.hbs. Original animation styles, Caldera palette
+  # (brand-* templates). Colours are baked into each template definition.
   banners:
-    hero:           { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "524AE9", "F5F28E", "070607"], height: 200, text: "Chan Meng",                              duration: "4s" }
-    featuredWork:   { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "070607"],                     height: 80,  text: "Featured Work",                           duration: "4s" }
-    openSource:     { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["524AE9", "070607"],                     height: 80,  text: "Open Source",                             duration: "4s" }
-    skills:         { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "524AE9"],                     height: 80,  text: "What I can do",                           duration: "4s" }
-    freeTools:      { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "F5F28E"],                     height: 60,  text: "Free tools I built for the community",   duration: "4s" }
-    soundIMake:     { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["524AE9", "F5F28E"],                     height: 60,  text: "Sound I make",                            duration: "4s" }
-    visitorsHeader: { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["FC5000", "524AE9"],                     height: 60,  text: "Visitors from around the world",          duration: "4s" }
-    footerDivider:  { template: "pixel-art-retro", gradientType: "pixelArt", colors: ["070607", "FC5000", "524AE9"],          height: 240, text: "Thanks for visiting",                     duration: "4s" }
+    hero:           { template: "brand-hero",            height: 200, text: "Chan Meng",                             duration: "8s" }
+    featuredWork:   { template: "brand-shimmer-orange",  height: 80,  text: "Featured Work",                          duration: "8s" }
+    openSource:     { template: "brand-shimmer-violet",  height: 80,  text: "Open Source",                            duration: "8s" }
+    skills:         { template: "brand-shimmer-glare",   height: 80,  text: "What I can do",                          duration: "8s" }
+    freeTools:      { template: "brand-shimmer-glare",   height: 60,  text: "Free tools I built for the community",  duration: "6s" }
+    soundIMake:     { template: "brand-shimmer-violet",  height: 60,  text: "Sound I make",                           duration: "6s" }
+    visitorsHeader: { template: "brand-shimmer-orange",  height: 60,  text: "Visitors from around the world",         duration: "6s" }
+    footerDivider:  { template: "brand-footer",          height: 240, text: "Thanks for visiting",                    duration: "8s" }
 
   # External own-tools (gradient-svg-generator / github-visitor-counter / github-readme-suno-cards).
   visitorCounter:

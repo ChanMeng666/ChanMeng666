@@ -53,16 +53,19 @@
 #let cv-radius-card = 6pt
 
 // ─── Spacing scale (print-tuned, CV-specific) ───────────────────────────────
-#let space-section    = 12pt   // above each section-header
-#let space-after-rule = 7pt    // between section accent rule and first content
-#let space-entry      = 12pt   // between entries within a section
+// Tightened in the v2 Caldera pass so the whole CV settles into TWO pages while
+// keeping airy human-readable leading inside paragraphs (density comes out of
+// the inter-section / inter-entry gaps, not the line-height).
+#let space-section    = 10pt   // above each section-header
+#let space-after-rule = 5pt    // between section accent rule and first content
+#let space-entry      = 10pt   // between entries within a section
 #let space-pill-row   = 3pt    // horizontal pill gap
 #let leading-body     = 0.78em // base paragraph leading — airy for human readers
 #let leading-summary  = 0.85em // summary blocks inside role/project entries
 #let leading-tight    = 0.65em // for compact lists (sidebar pills, certs)
 
 // ─── Inter / intra entry gaps (named so designers can find them) ────────────
-#let gap-inter-entry  = 12pt   // between consecutive role-lines / experience entries
+#let gap-inter-entry  = 9pt    // between consecutive role-lines / experience entries
 #let gap-intra-entry  = 7pt    // between meta line (org/dates) and summary inside one entry
 #let gap-card-meta    = 6pt    // project-card: between title row and italic context line
 #let gap-card-body    = 5pt    // project-card: between italic context line and bullets

@@ -27,7 +27,7 @@
     pill(it)
     if i < items.len() - 1 { h(space-pill-row) }
   }
-  v(5pt)
+  v(3.5pt)
 }
 
 // ─── Inline italic label (e.g. for the architect-grade paragraph header) ────
@@ -41,6 +41,10 @@
 )
 
 // ─── Section header ──────────────────────────────────────────────────────────
+// Caldera motif: the accent (Digital Orange) is a color BLOCK; the ink is the
+// structural RULE. So the section underline is two-tone — a short solid orange
+// lead-block, then a thin ink hairline filling the rest of the width. Reads more
+// intentional than a flat full-width orange line and ties the CV to the brand.
 #let section(title, body) = {
   v(space-section)
   text(
@@ -52,23 +56,31 @@
     upper(title),
   )
   v(3pt)
-  line(stroke: 1.5pt + accent, length: 100%)   // Digital Orange accent rule
+  grid(
+    columns: (34pt, 1fr),
+    align: (left + horizon, left + horizon),
+    line(stroke: 2.2pt + accent, length: 100%),         // orange lead block
+    line(stroke: 0.5pt + rule.lighten(20%), length: 100%), // ink structural hairline
+  )
   v(space-after-rule)
   body
 }
 
 // ─── Accent divider between entries ──────────────────────────────────────────
+// A short, left-aligned orange tab — the Caldera color-block motif, sized down
+// for the page. Lighter footprint than a full-width rule and more distinctive
+// than the old washed-out pale line.
 #let cv-divider() = {
-  v(8pt)
-  line(stroke: 0.4pt + accent.lighten(60%), length: 100%)
-  v(8pt)
+  v(6pt)
+  line(stroke: 2pt + accent, length: 22pt)
+  v(6pt)
 }
 
 // ─── Tight divider (for experience list — many entries) ─────────────────────
 #let cv-divider-tight() = {
-  v(6pt)
-  line(stroke: 0.4pt + accent.lighten(60%), length: 100%)
-  v(6pt)
+  v(5pt)
+  line(stroke: 2pt + accent, length: 22pt)
+  v(5pt)
 }
 
 // ─── Work / experience entry ─────────────────────────────────────────────────
@@ -154,7 +166,7 @@
         set par(leading: 0.7em)
         set list(
           marker: text(fill: accent)[•],
-          spacing: 11pt,
+          spacing: 9pt,
           indent: 0pt,
           body-indent: 6pt,
         )
@@ -259,7 +271,7 @@
   for it in items {
     list.item(it)
   }
-  v(8pt)
+  v(6pt)
 }
 
 // ─── Bullet list inside an entry (consistent style) ─────────────────────────

@@ -23,7 +23,7 @@
   set par(leading: 0.7em)
   set list(
     marker: text(fill: accent)[•],
-    spacing: 13pt,
+    spacing: 10pt,
     indent: 0pt,
     body-indent: 6pt,
   )

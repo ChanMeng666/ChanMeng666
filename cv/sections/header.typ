@@ -41,15 +41,15 @@
       text(
         font: sans-display,
         size: size-h1,
-        weight: "bold",
+        weight: "regular",   // Bebas Neue is intrinsically ultra-bold; avoid faux-bold
         fill: primary,
-        tracking: -0.2pt,
+        tracking: 0.02em,    // Caldera display tracking
       )[Chan Meng]
       linebreak()
       v(2pt)
       text(
         size: size-role,
-        fill: accent,
+        fill: primary,       // ink — role line is key copy, must stay readable
         weight: "medium",
       )[AI Agent Architect · Full-stack Engineer · AI-Tooling Expert]
       linebreak()

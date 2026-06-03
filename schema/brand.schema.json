@@ -1,0 +1,365 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ChanMeng666/ChanMeng666/schema/brand.schema.json",
+  "title": "ChanMeng666 Brand System Schema",
+  "description": "Validates data/brand.yaml — the personal visual + verbal design system for Chan Meng. Drives scripts/build-brand.mjs emitters (CSS, Typst, JSON, DESIGN.md token tables, brand-system.html). Templates consume color.semantic.* only; color.raw.* is the paint inventory referenced from semantic tokens.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "identity", "color", "typography", "spacing", "radius", "shadow", "motion", "layout", "logo", "voice", "signatures"],
+  "properties": {
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "lastUpdated": { "$ref": "#/$defs/isoDate" },
+
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "tagline", "philosophy", "voiceSummary"],
+      "properties": {
+        "name":            { "type": "string", "minLength": 1 },
+        "tagline":         { "type": "string", "minLength": 1 },
+        "philosophy":      { "type": "string", "minLength": 1 },
+        "voiceSummary":    { "type": "string", "minLength": 1 },
+        "signaturePhrase": { "type": "string" },
+        "audiences":       { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "color": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["raw", "semantic"],
+      "properties": {
+        "raw": {
+          "type": "object",
+          "description": "Named hex swatches. Each must be a 6-digit hex.",
+          "additionalProperties": { "$ref": "#/$defs/hexColor" }
+        },
+        "semantic": {
+          "type": "object",
+          "description": "Role-based color tokens that reference raw.* by name. Templates consume these.",
+          "additionalProperties": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+
+    "typography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["families", "scale", "principles"],
+      "properties": {
+        "families": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/fontFamily" }
+        },
+        "scale": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/typeStyle" }
+        },
+        "principles": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        }
+      }
+    },
+
+    "spacing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["base", "scale"],
+      "properties": {
+        "base": { "type": "integer", "minimum": 1 },
+        "scale": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "rhythm": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+
+    "radius": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+
+    "shadow": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["duration", "easing"],
+      "properties": {
+        "duration": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0, "maximum": 5000 }
+        },
+        "easing": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "golden": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "main":   { "type": "string" },
+            "side":   { "type": "string" },
+            "gutter": { "type": "string" }
+          }
+        },
+        "container": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "max":             { "type": "integer", "minimum": 320 },
+            "paddingMobile":   { "type": "integer", "minimum": 0 },
+            "paddingDesktop":  { "type": "integer", "minimum": 0 }
+          }
+        },
+        "breakpoints": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+
+    "logo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary"],
+      "properties": {
+        "primary":  { "$ref": "#/$defs/logoVariant" },
+        "monogram": { "$ref": "#/$defs/logoVariant" },
+        "variants": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "minLength": 1 }
+        },
+        "doNot": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "voice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["principles"],
+      "properties": {
+        "principles": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "rule"],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "rule": { "type": "string", "minLength": 1 },
+              "why":  { "type": "string" }
+            }
+          }
+        },
+        "vocabulary": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "prefer": { "type": "array", "items": { "type": "string" } },
+            "avoid":  { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "examples": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "do":   { "type": "array", "items": { "type": "string" } },
+            "dont": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+
+    "signatures": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["adoptedInReadme"],
+      "properties": {
+        "adoptedInReadme": { "type": "boolean" },
+        "heroBand":        { "$ref": "#/$defs/signatureGradient" },
+        "goldEyebrow":     { "$ref": "#/$defs/signatureTypographic" },
+        "monoDatestamp":   { "$ref": "#/$defs/signatureTypographic" },
+        "monogramDivider": { "$ref": "#/$defs/signatureComposite" },
+        "pillRotation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "templates"],
+          "properties": {
+            "type": { "const": "gradient-svg" },
+            "templates": {
+              "type": "object",
+              "additionalProperties": { "$ref": "#/$defs/bannerSpec" }
+            },
+            "useWhen": { "type": "string" },
+            "doNotUseWhen": { "type": "string" }
+          }
+        },
+        "banners": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/bannerSpec" }
+        },
+        "visitorCounter": {
+          "type": "object",
+          "required": ["username"],
+          "additionalProperties": false,
+          "properties": {
+            "username":    { "type": "string", "minLength": 1 },
+            "miniCounter": { "type": "object", "additionalProperties": true },
+            "flagMap":     { "type": "object", "additionalProperties": true }
+          }
+        },
+        "sunoCards": {
+          "type": "object",
+          "required": ["handle"],
+          "additionalProperties": true,
+          "properties": {
+            "handle": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+
+    "imagery": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "direction": { "type": "string" },
+        "approved":  { "type": "array", "items": { "type": "string" } },
+        "forbidden": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "surfaces": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    }
+  },
+
+  "$defs": {
+    "hexColor": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "6-digit hex color, e.g. #1A3C5E"
+    },
+    "isoDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "fontFamily": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stack", "weights", "role"],
+      "properties": {
+        "stack":       { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "weights":     { "type": "array", "minItems": 1, "items": { "type": "integer", "minimum": 100, "maximum": 900 } },
+        "role":        { "type": "string", "minLength": 1 },
+        "licenseNote": { "type": "string" },
+        "features":    { "type": "array", "items": { "type": "string" }, "description": "OpenType feature tags (e.g. ss06). Degrades gracefully when the chosen font lacks them." }
+      }
+    },
+    "typeStyle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sizeWeb", "sizePrint", "lineHeight", "tracking", "weight", "family"],
+      "properties": {
+        "sizeWeb":    { "type": "string", "pattern": "^[0-9.]+(px|rem|em)$" },
+        "sizePrint":  { "type": "string", "pattern": "^[0-9.]+pt$" },
+        "lineHeight": { "type": "number", "minimum": 0.5, "maximum": 3 },
+        "tracking":   { "type": "string" },
+        "weight":     { "type": "integer", "minimum": 100, "maximum": 900 },
+        "family":     { "type": "string", "minLength": 1 },
+        "transform":  { "type": "string", "enum": ["uppercase", "lowercase", "capitalize", "none"] },
+        "note":       { "type": "string" }
+      }
+    },
+    "logoVariant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path"],
+      "properties": {
+        "path":               { "type": "string", "minLength": 1 },
+        "recommendedSizes":   {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 1 }
+        },
+        "clearspaceMultiple": { "type": "number", "minimum": 0 },
+        "note":               { "type": "string" }
+      }
+    },
+    "signatureGradient": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "template"],
+      "properties": {
+        "type":     { "const": "gradient-svg" },
+        "template": { "type": "string", "minLength": 1 },
+        "height":   { "type": "integer", "minimum": 10, "maximum": 400 },
+        "duration": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?s$" },
+        "useWhen":      { "type": "string" },
+        "doNotUseWhen": { "type": "string" }
+      }
+    },
+    "signatureTypographic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "rule"],
+      "properties": {
+        "type":         { "const": "typographic" },
+        "rule":         { "type": "string", "minLength": 1 },
+        "useWhen":      { "type": "string" },
+        "doNotUseWhen": { "type": "string" }
+      }
+    },
+    "signatureComposite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type":         { "const": "composite" },
+        "logoPath":     { "type": "string" },
+        "logoSizePx":   { "type": "integer", "minimum": 1 },
+        "ruleColor":    { "type": "string" },
+        "ruleStyle":    { "type": "string", "enum": ["dotted", "solid", "dashed"] },
+        "useWhen":      { "type": "string" },
+        "doNotUseWhen": { "type": "string" }
+      }
+    },
+    "bannerSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["template", "height", "duration"],
+      "properties": {
+        "template":     { "type": "string", "minLength": 1 },
+        "height":       { "type": "integer", "minimum": 10, "maximum": 400 },
+        "text":         { "type": "string" },
+        "duration":     { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?s$" },
+        "gradientType": { "type": "string", "minLength": 1, "description": "Optional gradient-svg-generator effect override (e.g. pixelArt)." },
+        "colors":       { "type": "array", "items": { "type": "string", "pattern": "^[0-9A-Fa-f]{6}$" }, "description": "Optional custom gradient stop colors (hex WITHOUT '#'), mapped to color0..colorN." }
+      }
+    }
+  }
+}

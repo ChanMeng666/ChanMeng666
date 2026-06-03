@@ -20,7 +20,10 @@ Push-Location $repoRoot
 
 try {
     Write-Host "→ Compiling cv/chan-meng-cv.typ → public/chan-meng-cv.pdf"
-    typst compile --root . cv/chan-meng-cv.typ public/chan-meng-cv.pdf
+    # --font-path vendors the OFL brand fonts (Bebas Neue, DM Sans, JetBrains
+    # Mono) from cv/fonts so the PDF renders deterministically on any machine /
+    # CI, independent of what's installed in the OS font book.
+    typst compile --root . --font-path cv/fonts cv/chan-meng-cv.typ public/chan-meng-cv.pdf
 
     Write-Host "→ Emitting public/cv.jsonld (schema.org JSON-LD for recruiter LLMs)"
     node cv/build-jsonld.mjs data/profile.yaml | Out-File -Encoding utf8 public/cv.jsonld

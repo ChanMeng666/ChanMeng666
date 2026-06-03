@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chan Meng — Brand System</title>
+  <meta name="description" content="Personal visual + verbal design system for Chan Meng — a Caldera-style pixelated cyber-playground. Generated from data/brand.yaml.">
+  <link rel="stylesheet" href="../dist/brand/tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--color-canvas-page);
+      color: var(--color-ink-primary);
+      font-family: var(--font-body-sans);
+      font-size: var(--text-body-size);
+      line-height: var(--text-body-line-height);
+      font-weight: var(--text-body-weight);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: var(--color-ink-primary); }
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: var(--container-padding-mobile);
+    }
+    @media (min-width: 768px) {
+      .container { padding: var(--container-padding-desktop); }
+    }
+
+    /* ── Display / headings — Bebas Neue, compact, tight tracking ───────────── */
+    .eyebrow {
+      font-family: var(--font-body-sans);
+      font-size: var(--text-eyebrow-size);
+      line-height: var(--text-eyebrow-line-height);
+      letter-spacing: var(--text-eyebrow-tracking);
+      font-weight: var(--text-eyebrow-weight);
+      text-transform: var(--text-eyebrow-transform);
+      color: var(--color-ink-primary);
+      margin: 0 0 var(--space-1);
+    }
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 28px; height: 6px;
+      background: var(--color-accent-primary);
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    h1.display {
+      font-family: var(--font-display);
+      font-size: var(--text-display-size);
+      line-height: var(--text-display-line-height);
+      letter-spacing: var(--text-display-tracking);
+      font-weight: var(--text-display-weight);
+      color: var(--color-ink-strong);
+      margin: 0;
+    }
+    h2.section {
+      font-family: var(--font-display);
+      font-size: var(--text-h-1-size);
+      line-height: 1.0;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--color-ink-strong);
+      margin: var(--rhythm-section) 0 var(--space-3);
+      padding-bottom: var(--space-2);
+      border-bottom: 4px solid var(--color-accent-primary);
+    }
+    .lead {
+      font-family: var(--font-body-sans);
+      font-size: var(--text-body-lead-size);
+      line-height: var(--text-body-lead-line-height);
+      color: var(--color-ink-primary);
+      max-width: 64ch;
+      margin: var(--space-2) 0 0;
+    }
+    .meta { font-family: var(--font-body-sans); font-size: var(--text-meta-size); color: var(--color-ink-primary); }
+    .mono { font-family: var(--font-mono); font-size: var(--text-mono-size); color: var(--color-ink-primary); }
+
+    /* ── Hero — pixelated banner over a basalt canvas ──────────────────────── */
+    .hero { padding: var(--space-6) 0 var(--space-5); }
+    .hero-banner {
+      width: 100%; height: 200px;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      margin-bottom: var(--space-4);
+      display: block;
+      object-fit: cover;
+      background: var(--color-surface-decor);
+    }
+    .hero-row { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+    .hero img.mark { width: 96px; height: 96px; }
+
+    /* ── Color chips — flat 40px cards ─────────────────────────────────────── */
+    .chips {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--space-2);
+      margin: var(--space-3) 0;
+    }
+    .chip {
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--color-canvas-surface);
+    }
+    .chip .swatch { height: 96px; width: 100%; }
+    .chip .label { padding: var(--space-2) var(--space-2) var(--space-1); font-family: var(--font-mono); font-size: var(--text-mono-size); }
+    .chip .name { color: var(--color-ink-primary); font-weight: 500; }
+    .chip .hex { color: var(--color-ink-primary); display: block; opacity: 0.7; }
+    .chip .use { font-family: var(--font-body-sans); font-size: 12px; color: var(--color-ink-primary); padding: 0 var(--space-2) var(--space-2); line-height: 1.4; opacity: 0.8; }
+    .chip.semantic .swatch { position: relative; }
+    .chip.semantic .swatch::after {
+      content: attr(data-ref);
+      position: absolute; bottom: 6px; right: 8px;
+      font-family: var(--font-mono); font-size: 10px;
+      color: rgba(255,255,255,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+
+    /* ── Type specimen ─────────────────────────────────────────────────────── */
+    .specimen { border-radius: var(--radius-card); padding: var(--space-4); margin: var(--space-2) 0; background: var(--color-canvas-surface); }
+    .specimen .label { font-family: var(--font-mono); font-size: 11px; color: var(--color-ink-primary); opacity: 0.7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--space-2); }
+    .specimen .preview-display { font-family: var(--font-display); font-size: var(--text-display-size); line-height: var(--text-display-line-height); letter-spacing: var(--text-display-tracking); color: var(--color-ink-strong); }
+    .specimen .preview-h1 { font-family: var(--font-display); font-size: var(--text-h-1-size); line-height: var(--text-h-1-line-height); letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-ink-strong); }
+    .specimen .preview-body { font-family: var(--font-body-sans); font-size: var(--text-body-size); line-height: var(--text-body-line-height); color: var(--color-ink-primary); }
+    .specimen .preview-mono { font-family: var(--font-mono); font-size: var(--text-mono-size); color: var(--color-ink-primary); }
+
+    /* ── Components: buttons + cards ───────────────────────────────────────── */
+    .btn-row { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; margin: var(--space-3) 0; }
+    .btn {
+      font-family: var(--font-body-sans); font-weight: 500; font-size: 16px;
+      padding: 12px 24px; border: none; cursor: pointer; text-decoration: none;
+      display: inline-block; line-height: 1;
+    }
+    .btn-primary { background: var(--color-surface-accent); color: var(--color-on-accent); border-radius: var(--radius-pill); }
+    .btn-ghost { background: transparent; color: var(--color-ink-primary); border: 1px solid var(--color-edge-pill); border-radius: var(--radius-pill); }
+    .btn-nav { background: var(--color-canvas-surface); color: var(--color-ink-primary); border-radius: var(--radius-card); }
+
+    .card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--rhythm-element-gap, 10px); margin: var(--space-3) 0; }
+    @media (max-width: 768px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .card-grid { grid-template-columns: 1fr; } }
+    .card { background: var(--color-canvas-surface); border-radius: var(--radius-card); padding: var(--card-padding, 40px); }
+    .card--accent { background: var(--color-surface-accent); color: var(--color-on-accent); }
+    .card--decor { background: var(--color-surface-decor); color: var(--color-on-accent); }
+    .card .stat { font-family: var(--font-display); font-size: 56px; line-height: 0.94; letter-spacing: 0.02em; }
+    .card .stat-label { font-family: var(--font-body-sans); font-size: 14px; margin-top: 8px; }
+
+    /* ── Spacing ruler ─────────────────────────────────────────────────────── */
+    .ruler { display: grid; gap: var(--space-1); margin: var(--space-2) 0; }
+    .ruler-row { display: grid; grid-template-columns: 90px 60px 1fr; align-items: center; gap: var(--space-2); font-family: var(--font-mono); font-size: var(--text-mono-size); }
+    .ruler-row .name { color: var(--color-ink-primary); font-weight: 500; }
+    .ruler-row .px { color: var(--color-ink-primary); opacity: 0.7; }
+    .ruler-row .bar { height: 10px; background: var(--color-accent-primary); border-radius: var(--radius-pill); max-width: 100%; }
+
+    /* ── Signature gallery ─────────────────────────────────────────────────── */
+    .sig-gallery { display: grid; gap: var(--space-3); margin: var(--space-3) 0; }
+    .sig-card { border-radius: var(--radius-card); padding: var(--space-4); background: var(--color-canvas-surface); }
+    .sig-card h3 { font-family: var(--font-display); font-size: 26px; letter-spacing: 0.02em; text-transform: uppercase; font-weight: 400; color: var(--color-ink-strong); margin: 0 0 var(--space-2); }
+    .sig-card .preview { margin: var(--space-2) 0; padding: var(--space-2); background: var(--color-canvas-page); border-radius: var(--radius-card); text-align: center; }
+    .sig-card .preview img { max-width: 100%; height: auto; border-radius: var(--radius-card); }
+    .sig-card .meta { display: flex; gap: var(--space-2); margin-top: var(--space-1); flex-wrap: wrap; }
+
+    /* ── Do / Don't ────────────────────────────────────────────────────────── */
+    .dodont { display: grid; grid-template-columns: 1fr; gap: var(--space-2); margin: var(--space-2) 0; }
+    @media (min-width: 640px) { .dodont { grid-template-columns: 1fr 1fr; } }
+    .dodont .pair { padding: var(--space-3); border-radius: var(--radius-card); background: var(--color-canvas-surface); }
+    .dodont .pair.do { border-top: 6px solid var(--color-accent-primary); }
+    .dodont .pair.dont { border-top: 6px solid var(--color-ink-primary); }
+    .dodont .label { font-family: var(--font-body-sans); font-size: var(--text-eyebrow-size); letter-spacing: var(--text-eyebrow-tracking); text-transform: uppercase; font-weight: 700; margin-bottom: var(--space-1); }
+    .dodont .pair.do .label { color: var(--color-accent-primary); }
+    .dodont .pair.dont .label { color: var(--color-ink-primary); }
+
+    /* ── Voice ─────────────────────────────────────────────────────────────── */
+    .voice-list { display: grid; gap: var(--space-2); margin: var(--space-2) 0; }
+    .voice-rule { padding: var(--space-3); background: var(--color-canvas-surface); border-radius: var(--radius-card); border-left: 6px solid var(--color-accent-primary); }
+    .voice-rule .name { font-weight: 700; color: var(--color-ink-strong); margin-bottom: 4px; }
+    .voice-rule .why { font-size: var(--text-meta-size); color: var(--color-ink-primary); opacity: 0.75; margin-top: 4px; }
+
+    /* ── Footer ────────────────────────────────────────────────────────────── */
+    footer { margin-top: var(--rhythm-section); padding: var(--space-4) 0 var(--space-6); border-top: 4px solid var(--color-accent-primary); text-align: center; }
+    footer a { color: var(--color-ink-primary); text-decoration: underline; text-decoration-color: var(--color-accent-primary); text-underline-offset: 3px; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <header class="hero">
+    <img class="hero-banner" src="https://gradient-svg-generator.vercel.app/api/svg?text=Chan%20Meng&gradientType=pixelArt&color0=FC5000&color1=524AE9&color2=F5F28E&color3=070607&height=200&duration=4s" alt="Pixelated hero banner — Chan Meng">
+    <div class="hero-row">
+      <img class="mark" src="../public/brands/chan-monkey-logo-black.svg" alt="Chan Meng monogram">
+      <div>
+        <p class="eyebrow">Personal Brand System</p>
+        <h1 class="display">{{identity.name}}</h1>
+        <p class="lead">{{identity.tagline}}</p>
+        <p class="mono" style="margin-top: var(--space-2);">v{{version}} · {{lastUpdated}} · Pixelated Cyber-Playground</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- IDENTITY -->
+  <section>
+    <h2 class="section">Identity</h2>
+    <p class="lead"><strong>Philosophy:</strong> <em>{{identity.philosophy}}</em></p>
+    <p class="lead"><strong>Voice in one breath:</strong> {{identity.voiceSummary}}</p>
+  </section>
+
+  <!-- COLOR — RAW -->
+  <section>
+    <h2 class="section">Color · raw palette</h2>
+    <p class="lead">Seven Caldera swatches. Templates never reference these directly — they reference semantic tokens, which point here. One loud orange accent; violet and glare are decorative-only.</p>
+    <div class="chips">
+      {{#each colorRawList}}
+      <div class="chip">
+        <div class="swatch" style="background: {{hex}};"></div>
+        <div class="label">
+          <span class="name">{{name}}</span>
+          <span class="hex">{{hex}}</span>
+        </div>
+        <div class="use">{{role}}</div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- COLOR — SEMANTIC -->
+  <section>
+    <h2 class="section">Color · semantic tokens</h2>
+    <p class="lead">The API surface. Templates consume <code class="mono">--color-*</code> tokens; this layer points back into the raw palette.</p>
+    <div class="chips">
+      {{#each colorSemanticList}}
+      <div class="chip semantic">
+        <div class="swatch" style="background: {{hex}};" data-ref="→ {{ref}}"></div>
+        <div class="label">
+          <span class="name">--color-{{name}}</span>
+          <span class="hex">{{hex}}</span>
+        </div>
+        <div class="use">{{use}}</div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section>
+    <h2 class="section">Typography</h2>
+    <p class="lead">Display is ultra-bold compact (Bebas Neue) for the name, headings, and stat numbers. DM Sans 500 is the body workhorse. Mono is reserved for data signatures.</p>
+
+    <div class="specimen">
+      <div class="label">--text-display · Bebas Neue · 96px / 0.02em</div>
+      <div class="preview-display">SUBTRACTION FOR LIFE,<br>ADDITION FOR THOUGHT.</div>
+    </div>
+
+    <div class="specimen">
+      <div class="label">--text-h-1 · Bebas Neue · 56px uppercase</div>
+      <div class="preview-h1">Building at the intersection of AI, cultural tech & women's health</div>
+    </div>
+
+    <div class="specimen">
+      <div class="label">--text-body · DM Sans 500 · 16px / 9pt</div>
+      <div class="preview-body">I architect AI agents, ship full-stack platforms end-to-end, and teach others to do the same. Featured in multiple media interviews for the minimalist lifestyle philosophy — <em>subtraction for life, addition for thought</em>.</div>
+    </div>
+
+    <div class="specimen">
+      <div class="label">--text-eyebrow · DM Sans 700 uppercase · 0.08em tracking</div>
+      <div class="eyebrow">Editorial eyebrow — the only uppercased label</div>
+    </div>
+
+    <div class="specimen">
+      <div class="label">--text-mono · JetBrains Mono 400 · 13px / 8pt</div>
+      <div class="preview-mono">last updated · {{lastUpdated}} · build N · data/brand.yaml v{{version}}</div>
+    </div>
+  </section>
+
+  <!-- COMPONENTS -->
+  <section>
+    <h2 class="section">Components</h2>
+    <p class="lead">Flat, friendly geometry: pill buttons at 800px, cards at 40px, no shadows. Orange fills carry the primary action; everything else is ash on basalt.</p>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#">Primary action</a>
+      <a class="btn btn-ghost" href="#">Ghost button</a>
+      <a class="btn btn-nav" href="#">Nav link</a>
+    </div>
+
+    <div class="card-grid">
+      <div class="card card--accent">
+        <div class="stat">86.6%</div>
+        <div class="stat-label">solo-built platforms in production</div>
+      </div>
+      <div class="card">
+        <div class="stat" style="color: var(--color-accent-primary);">72</div>
+        <div class="stat-label">open-source projects shipped</div>
+      </div>
+      <div class="card">
+        <div class="stat" style="color: var(--color-accent-primary);">4</div>
+        <div class="stat-label">AI-programming cohorts taught</div>
+      </div>
+      <div class="card card--decor">
+        <div class="stat">∞</div>
+        <div class="stat-label">decorative violet block (background-only)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPACING -->
+  <section>
+    <h2 class="section">Spacing · 8px base</h2>
+    <p class="lead">Named scale with a 10px element gap and a 40px section rhythm (<code class="mono">--rhythm-section</code>).</p>
+    <div class="ruler">
+      {{#each spacingList}}
+      <div class="ruler-row">
+        <span class="name">--space-{{name}}</span>
+        <span class="px">{{value}}px</span>
+        <span class="bar" style="width: {{value}}px;"></span>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- SIGNATURES -->
+  <section>
+    <h2 class="section">Decorative signatures</h2>
+    <p class="lead">All built on assets Chan owns: gradient-svg-generator (pixelated orange/violet banners + pills), the monogram, and the datestamp. External services (shields.io, trophies, wakatime, streaks) are forbidden.</p>
+    <div class="sig-gallery">
+
+      <div class="sig-card">
+        <h3>1. Hero band — heroBand</h3>
+        <p class="meta"><span>Template: <code class="mono">{{signatures.heroBand.template}}</code></span><span>Height: {{signatures.heroBand.height}}px</span><span>Duration: {{signatures.heroBand.duration}}</span></p>
+        <div class="preview">
+          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Chan%20Meng&gradientType=pixelArt&color0=FC5000&color1=524AE9&color2=F5F28E&color3=070607&height={{signatures.heroBand.height}}&duration={{signatures.heroBand.duration}}" alt="Hero band preview" loading="lazy">
+        </div>
+        <p class="meta"><strong>Use:</strong> {{signatures.heroBand.useWhen}}</p>
+        <p class="meta"><strong>Don't:</strong> {{signatures.heroBand.doNotUseWhen}}</p>
+      </div>
+
+      <div class="sig-card">
+        <h3>2. Accent eyebrow — goldEyebrow</h3>
+        <div class="preview" style="text-align: left;">
+          <p class="eyebrow">Featured Work</p>
+          <h3 style="font-family: var(--font-display); font-size: var(--text-h-1-size); letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-ink-strong); margin: 0;">Sample display heading</h3>
+        </div>
+        <p class="meta"><strong>Rule:</strong> {{signatures.goldEyebrow.rule}}</p>
+        <p class="meta"><strong>Use:</strong> {{signatures.goldEyebrow.useWhen}}</p>
+      </div>
+
+      <div class="sig-card">
+        <h3>3. Mono datestamp — monoDatestamp</h3>
+        <div class="preview" style="text-align: left;">
+          <span class="mono">last updated · {{lastUpdated}} · build 47</span>
+        </div>
+        <p class="meta"><strong>Use:</strong> {{signatures.monoDatestamp.useWhen}}</p>
+      </div>
+
+      <div class="sig-card">
+        <h3>4. Monogram divider — monogramDivider</h3>
+        <div class="preview">
+          <div style="display: flex; align-items: center; gap: 12px; justify-content: center;">
+            <span style="flex: 1; height: 2px; background: var(--color-ink-primary); opacity: 0.4;"></span>
+            <img src="../public/brands/chan-monkey-logo-black.svg" alt="" style="width: 24px; height: 24px;">
+            <span style="flex: 1; height: 2px; background: var(--color-ink-primary); opacity: 0.4;"></span>
+          </div>
+        </div>
+        <p class="meta"><strong>Use:</strong> {{signatures.monogramDivider.useWhen}}</p>
+      </div>
+
+      <div class="sig-card">
+        <h3>5. Pill rotation — pillRotation</h3>
+        <div class="preview">
+          <p class="meta">Recoloured to the Caldera palette ({{pillRotationCount}} configured)</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 12px;">
+            <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Primary&gradientType=pixelArt&color0=FC5000&color1=070607&height=40&duration=4s" alt="" height="40">
+            <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Accent&gradientType=pixelArt&color0=FC5000&color1=524AE9&height=40&duration=4s" alt="" height="40">
+            <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&gradientType=pixelArt&color0=070607&color1=524AE9&height=40&duration=4s" alt="" height="40">
+            <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Live&gradientType=pixelArt&color0=FC5000&color1=F5F28E&height=40&duration=4s" alt="" height="40">
+          </div>
+        </div>
+        <p class="meta"><strong>Use:</strong> {{signatures.pillRotation.useWhen}}</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VOICE -->
+  <section>
+    <h2 class="section">Voice principles</h2>
+    <div class="voice-list">
+      {{#each voice.principles}}
+      <div class="voice-rule">
+        <div class="name">{{name}}</div>
+        <div>{{rule}}</div>
+        {{#if why}}<div class="why">— {{why}}</div>{{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- DO / DON'T -->
+  <section>
+    <h2 class="section">Voice in practice · Do vs Don't</h2>
+    <div class="dodont">
+      <div class="pair do">
+        <div class="label">Do</div>
+        <ul style="margin: 0; padding-left: 1.2em;">
+          {{#each voice.examples.do}}<li>{{this}}</li>{{/each}}
+        </ul>
+      </div>
+      <div class="pair dont">
+        <div class="label">Don't</div>
+        <ul style="margin: 0; padding-left: 1.2em;">
+          {{#each voice.examples.dont}}<li>{{this}}</li>{{/each}}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="mono">Generated {{lastUpdated}} from data/brand.yaml v{{version}}</p>
+    <p class="meta"><a href="https://github.com/ChanMeng666/ChanMeng666">Source on GitHub</a> · <a href="../dist/brand/DESIGN.md">DESIGN.md</a> · <a href="../dist/brand/design-tokens.json">design-tokens.json</a> · <a href="../dist/brand/theme.css">theme.css</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

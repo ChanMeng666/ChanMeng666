@@ -1,39 +1,58 @@
-// Design tokens — restrained-academic, paced like my-cv reference.
+// Design tokens for the CV — thin adapter over cv/tokens.typ (generated from
+// data/brand.yaml). Colors and font stacks come from the brand system so the
+// CV stays in sync with README, llms, and the future webpage.
+//
+// CV PRINT is "tuned-for-print": it adopts the Caldera palette + the ultra-bold
+// compact display face (Bebas Neue) for the NAME and section headers, and uses
+// Digital Orange as an accent RULE / eyebrow only — never as orange-filled
+// blocks or 800px pills, which would hurt recruiter / ATS readability. Print
+// sizes, the desaturated meta-grey, and the small pill radius stay LOCAL to
+// this file because they are print-only and not part of the cross-surface scale.
+//
+// Regenerate brand tokens via:   npm run build:brand
 
-// ─── Palette ─────────────────────────────────────────────────────────────────
-#let primary   = rgb("#1A3C5E")  // deep navy — name, section headers
-#let accent    = rgb("#2E86AB")  // medium blue — underlines, pill borders, links
-#let ink       = rgb("#2A2F36")  // body text
-#let muted     = rgb("#6B7280")  // dates, captions
-#let rule      = rgb("#D6DCE2")  // hairline rules
-#let pill-bg   = rgb("#EAF2F7")  // skill pill background (accent.lighten 85%)
-#let pill-edge = rgb("#B7D2DE")  // skill pill border (accent.lighten 50%)
-#let quote-bg  = rgb("#F4F7FA")
+#import "tokens.typ": *
 
-// ─── Typography ──────────────────────────────────────────────────────────────
-// System-available Windows fonts (the user's machine ships these; Typst auto-finds them).
-// Segoe UI on Windows provides Semibold via weight; one family covers display + body.
-#let sans-display = ("Segoe UI", "Arial")
-#let sans         = ("Segoe UI", "Arial")
-#let mono         = ("Consolas", "Courier New")
+// ─── Palette (back-compat aliases — section files import these names) ────────
+#let primary   = ink-strong         // abyssal ink — name, section headers
+#let accent    = accent-primary     // digital orange — accent RULE / eyebrow ONLY
+#let ink       = ink-primary        // body text
+#let muted     = rgb("#5B5B59")     // CV-LOCAL desaturated ink — dates, captions
+                                    //   (Caldera has no grey ink; pure ink is too
+                                    //    heavy on a dense PDF. ≈4.7:1 on basalt → AA.)
+#let rule      = rule-hairline      // abyssal ink — strong borders / rules
+#let pill-bg   = surface-pill       // ash white — skill pill background
+#let pill-edge = edge-pill          // abyssal ink — skill pill / ghost border
+#let quote-bg  = surface-quote      // ash white — pull-quote background
+#let on-accent = on-accent          // pure white — text on a single orange chip
 
-#let size-h1      = 24pt
-#let size-h2      = 9.8pt       // section header
-#let size-h3      = 10pt        // entry title
-#let size-role    = 11pt        // role line under name
+// ─── Typography (back-compat aliases) ───────────────────────────────────────
+#let sans-display = font-display    // Bebas Neue — NAME + section headers
+#let sans         = font-body-sans  // DM Sans — body, meta, labels
+#let mono         = font-mono       // JetBrains Mono — datestamp only
+
+// ─── Type sizes — print-tuned, CV-specific (NOT in brand.yaml web scale) ────
+// Bebas Neue is a compact condensed face and reads SMALLER than a normal sans
+// at the same point size, so the display sizes are pushed up vs the old serif.
+#let size-h1      = 30pt        // NAME — Bebas Neue, all-caps by design
+#let size-h2      = 12pt        // section header — Bebas Neue, uppercased
+#let size-h3      = 10pt        // entry title — DM Sans bold
+#let size-role    = 10.5pt      // role line under name — DM Sans
 #let size-body    = 9pt
 #let size-meta    = 8pt
 #let size-pill    = 7.6pt
 #let size-tiny    = 7pt
 
-// ─── Geometry ────────────────────────────────────────────────────────────────
-// Reference uses 60/40 with narrative on LEFT. We use the inverse golden ratio
-// (0.618 / 0.382) and put narrative on LEFT, structured lists on RIGHT.
-#let col-main = 61.8%
-#let col-side = 38.2%
-#let col-gutter = 1.4em
+// ─── Geometry (golden-ratio aliases from brand.yaml) ────────────────────────
+#let col-main = golden-main
+#let col-side = golden-side
+#let col-gutter = golden-gutter
 
-// ─── Spacing scale (generous — breathing room is the priority) ──────────────
+// ─── Print radii — deliberately small. Do NOT inherit the 800px web pill. ───
+#let cv-radius-pill = 4pt      // skill pills stay subtle on the page
+#let cv-radius-card = 6pt
+
+// ─── Spacing scale (print-tuned, CV-specific) ───────────────────────────────
 #let space-section    = 12pt   // above each section-header
 #let space-after-rule = 7pt    // between section accent rule and first content
 #let space-entry      = 12pt   // between entries within a section

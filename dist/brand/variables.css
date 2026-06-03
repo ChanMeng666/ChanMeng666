@@ -1,0 +1,88 @@
+/* GENERATED FROM data/brand.yaml — DO NOT EDIT.
+ * Regenerate with: npm run build:brand
+ * Source of truth: data/brand.yaml v2.0.0
+ * Last updated:    2026-06-03
+ */
+
+:root {
+  /* Colors */
+  --color-basalt-canvas: #e2e2df;
+  --color-ash-white: #f7f6f2;
+  --color-pure-white: #ffffff;
+  --color-abyssal-ink: #070607;
+  --color-digital-orange: #fc5000;
+  --color-cyber-violet: #524ae9;
+  --color-pixel-glare: #f5f28e;
+
+  /* Typography — families */
+  --font-display: 'Bebas Neue', Anton, Oswald, Impact, sans-serif;
+  --font-body-sans: 'DM Sans', Inter, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, ui-monospace, monospace;
+
+  /* Typography — scale */
+  --text-display: 96px;
+  --leading-display: 0.94;
+  --tracking-display: 0.02em;
+  --text-h-1: 56px;
+  --leading-h-1: 0.94;
+  --tracking-h-1: 0.02em;
+  --text-h-2: 32px;
+  --leading-h-2: 0.95;
+  --tracking-h-2: 0.02em;
+  --text-h-3: 30px;
+  --leading-h-3: 1.11;
+  --text-body: 16px;
+  --leading-body: 1.55;
+  --text-body-lead: 18px;
+  --leading-body-lead: 1.5;
+  --text-meta: 14px;
+  --leading-meta: 1.25;
+  --text-eyebrow: 14px;
+  --leading-eyebrow: 1.2;
+  --tracking-eyebrow: 0.08em;
+  --text-mono: 13px;
+  --leading-mono: 1.5;
+
+  /* Typography — weights */
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+
+  /* Spacing */
+  --spacing-0: 0px;
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 40px;
+  --spacing-6: 48px;
+  --spacing-7: 56px;
+  --spacing-8: 64px;
+  --spacing-10: 80px;
+  --spacing-0-5: 4px;
+  --spacing-1-25: 10px;
+  --spacing-1-5: 12px;
+  --spacing-2-5: 20px;
+
+  /* Layout */
+  --page-max-width: 1200px;
+  --section-gap: 40px;
+  --card-padding: 40px;
+  --element-gap: 10px;
+
+  /* Border Radius */
+  --radius-none: 0px;
+  --radius-sm: 8px;
+  --radius-card: 40px;
+  --radius-default: 40px;
+  --radius-input: 100px;
+  --radius-pill: 800px;
+  --radius-cards: 40px;
+  --radius-inputs: 100px;
+  --radius-buttons: 800px;
+
+  /* Surfaces */
+  --surface-canvas: #e2e2df;
+  --surface-card: #f7f6f2;
+  --surface-accent: #fc5000;
+}

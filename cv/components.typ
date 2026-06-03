@@ -2,11 +2,11 @@
 
 #import "theme.typ": *
 
-// ─── Skill pill (rounded, light-blue) ────────────────────────────────────────
+// ─── Skill pill (ash fill, ink border) ───────────────────────────────────────
 #let pill(label, fill: pill-bg, stroke-color: pill-edge) = box(
   fill: fill,
   stroke: 0.5pt + stroke-color,
-  radius: 3pt,
+  radius: cv-radius-pill,
   inset: (x: 5pt, y: 2pt),
   outset: (y: 0.4pt),
   text(size: size-pill, fill: ink, label),
@@ -17,7 +17,7 @@
   text(
     weight: "bold",
     size: size-meta,
-    font: sans-display,
+    font: sans,          // DM Sans — Bebas is too cramped at 8pt; keep labels legible
     fill: primary,
     tracking: 0.06em,
     upper(category),
@@ -34,7 +34,7 @@
 #let inline-label(label) = text(
   weight: "bold",
   size: size-meta,
-  font: sans-display,
+  font: sans,          // DM Sans — keep small labels legible
   fill: primary,
   tracking: 0.06em,
   upper(label),
@@ -44,15 +44,15 @@
 #let section(title, body) = {
   v(space-section)
   text(
-    font: sans-display,
-    weight: "bold",
+    font: sans-display,    // Bebas Neue — compact ultrabold section headers
+    weight: "regular",     // Bebas is intrinsically bold; avoid faux-bold
     size: size-h2,
     fill: primary,
     tracking: 0.08em,
     upper(title),
   )
   v(3pt)
-  line(stroke: 1pt + accent, length: 100%)
+  line(stroke: 1.5pt + accent, length: 100%)   // Digital Orange accent rule
   v(space-after-rule)
   body
 }
@@ -287,11 +287,11 @@
 #let quote-block(body, source: "") = block(
   fill: quote-bg,
   inset: (x: 7pt, y: 5pt),
-  radius: 3pt,
+  radius: cv-radius-card,
   width: 100%,
   above: 4pt,
   below: 0pt,
-  stroke: (left: 2pt + accent),
+  stroke: (left: 2.5pt + accent),
   breakable: false,
   {
     set par(leading: 0.55em)

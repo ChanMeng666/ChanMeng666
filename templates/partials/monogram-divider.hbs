@@ -1,0 +1,15 @@
+{{!--
+  Monogram divider — replaces bare `---` between major narrative shifts.
+  Gated by brand.signatures.adoptedInReadme so the visible README is unchanged
+  until the flag is flipped in data/brand.yaml. See docs/brand/DESIGN.md §8.4.
+
+  GitHub strips most inline styles, so this renders as a centered monogram
+  image only — no dotted hairlines on either side. The full version (with
+  hairlines + dotted rules) lives in the brand-system.html preview, where
+  CSS is honoured.
+--}}
+{{#if @root.brand.signatures.adoptedInReadme}}
+<p align="center">
+  <img src="/public/brands/chan-monkey-logo-black.svg" width="24" height="24" alt="—">
+</p>
+{{/if}}

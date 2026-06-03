@@ -8,8 +8,9 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "validate": "node scripts/validate.mjs",
+    "build": "npm run build:brand && node scripts/build.mjs",
+    "build:brand": "node scripts/build-brand.mjs",
+    "validate": "node scripts/validate.mjs && node scripts/validate-brand.mjs",
     "audit": "node scripts/audit-assets.mjs",
     "check": "npm run validate && npm run build && npm run audit",
     "refresh-metrics": "node scripts/refresh-github-metrics.mjs"

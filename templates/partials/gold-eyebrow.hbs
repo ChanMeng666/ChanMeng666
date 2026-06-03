@@ -1,0 +1,14 @@
+{{!--
+  Accent editorial eyebrow — a small pixelated orange SVG label above a section
+  that doesn't already carry a full-width banner. Pass `text` as a block param.
+
+  Gated by brand.signatures.adoptedInReadme.
+
+  Usage:
+    {{#> gold-eyebrow text="Currently"}}{{/gold-eyebrow}}
+--}}
+{{#if @root.brand.signatures.adoptedInReadme}}
+<p align="center">
+  <img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode text}}&gradientType=pixelArt&color0=FC5000&color1=070607&height=24&duration=4s" alt="— {{text}} —" height="24">
+</p>
+{{/if}}

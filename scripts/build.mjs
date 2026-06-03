@@ -37,6 +37,31 @@ if (!validate(data)) {
 }
 
 // ---------------------------------------------------------------------------
+// Load brand tokens (dist/brand/tokens.json must exist — run `npm run build:brand`
+// first if missing). Templates reference data.decorations.* as before; the
+// adapter below reshapes brand.signatures into the legacy decorations shape so
+// no template changes were required when migrating from profile.yaml.
+// ---------------------------------------------------------------------------
+const brandTokensPath = path.join(repoRoot, "dist", "brand", "tokens.json");
+if (!fs.existsSync(brandTokensPath)) {
+  console.error("✗ dist/brand/tokens.json missing. Run `npm run build:brand` first.");
+  process.exit(1);
+}
+const brand = JSON.parse(fs.readFileSync(brandTokensPath, "utf8"));
+data.brand = brand;
+
+// Adapter: reshape brand.signatures.* into the legacy data.decorations.* shape
+// so templates/partials/{banner,featured-work,builder-tools,suno-cards,...}.hbs
+// keep working unchanged. profile.yaml's decorations: block is no longer the
+// source of truth.
+data.decorations = {
+  banners: brand.signatures.banners,
+  buttons: brand.signatures.pillRotation?.templates ?? {},
+  visitorCounter: brand.signatures.visitorCounter,
+  sunoCards: brand.signatures.sunoCards,
+};
+
+// ---------------------------------------------------------------------------
 // Augment runtime state
 // ---------------------------------------------------------------------------
 
@@ -707,6 +732,17 @@ Handlebars.registerHelper("join", (arr, sep) =>
 Handlebars.registerHelper("pillsParam", (arr) =>
   Array.isArray(arr) ? encodeURIComponent(arr.join(" | ")) : "",
 );
+// Build the gradient-svg-generator color/effect query suffix from a button or
+// banner config (brand.signatures.pillRotation.templates.* / banners.*). Lets
+// the inline badge URLs in hero/footer inherit the Caldera palette without
+// duplicating the color list. Returns e.g. "&gradientType=pixelArt&color0=FC5000&color1=070607".
+Handlebars.registerHelper("pillParams", (cfg) => {
+  if (!cfg || typeof cfg !== "object") return "";
+  let s = "";
+  if (cfg.gradientType) s += `&gradientType=${cfg.gradientType}`;
+  for (const [i, c] of (cfg.colors ?? []).entries()) s += `&color${i}=${c}`;
+  return s;
+});
 const fmtDate = (d) => {
   if (!d) return "";
   const s = String(d);
@@ -876,6 +912,10 @@ if (canonical.meta) {
 if (canonical.basics?.taglines) {
   delete canonical.basics.taglines;
 }
+// strip design-system fields — they belong to data/brand.yaml + dist/brand/
+// and aren't part of the JSON Resume canonical contract for external consumers.
+delete canonical.brand;
+delete canonical.decorations;
 
 fs.writeFileSync(
   path.join(distDir, "profile.json"),

@@ -1,0 +1,611 @@
+{
+  "_meta": {
+    "generatedBy": "scripts/build-brand.mjs",
+    "sourceOfTruth": "data/brand.yaml",
+    "version": "1.0.0",
+    "lastUpdated": "2026-06-03"
+  },
+  "identity": {
+    "name": "Chan Meng",
+    "tagline": "Building at the intersection of AI, cultural technology, and women's health.",
+    "philosophy": "Subtraction for life, addition for thought.",
+    "voiceSummary": "Architecture-grade vocabulary, evidence-first claims, restraint as a statement. Cross-cultural fluency without translation.",
+    "signaturePhrase": "Subtraction for life, addition for thought.",
+    "audiences": [
+      "Founders evaluating an AI agent architect / fractional CTO",
+      "Recruiters and hiring managers in AI / full-stack / FemTech",
+      "Engineers and learners following the open-source craft",
+      "Chinese-speaking developer communities (中文社区)",
+      "Te Ao Māori partners and cultural-technology collaborators"
+    ]
+  },
+  "color": {
+    "raw": {
+      "paper50": "#FAF7F2",
+      "paper100": "#F3EEE5",
+      "ink900": "#1B1F26",
+      "ink700": "#2A2F36",
+      "ink500": "#5B6470",
+      "ink300": "#8D96A2",
+      "navy900": "#0F2640",
+      "navy700": "#1A3C5E",
+      "navy500": "#2E86AB",
+      "navy100": "#EAF2F7",
+      "gold700": "#8E6324",
+      "gold500": "#B8843E",
+      "gold200": "#EBD9B8",
+      "edgePill": "#B7D2DE",
+      "ruleHairline": "#D6DCE2",
+      "quoteBg": "#F4F7FA"
+    },
+    "semantic": {
+      "canvasPage": "paper50",
+      "canvasSurface": "paper100",
+      "inkPrimary": "ink700",
+      "inkStrong": "navy700",
+      "inkMuted": "ink500",
+      "inkSubtle": "ink300",
+      "accentPrimary": "navy500",
+      "accentEditorial": "gold500",
+      "surfacePill": "navy100",
+      "surfaceQuote": "quoteBg",
+      "edgePill": "edgePill",
+      "ruleHairline": "ruleHairline"
+    },
+    "semanticResolved": {
+      "canvasPage": "#FAF7F2",
+      "canvasSurface": "#F3EEE5",
+      "inkPrimary": "#2A2F36",
+      "inkStrong": "#1A3C5E",
+      "inkMuted": "#5B6470",
+      "inkSubtle": "#8D96A2",
+      "accentPrimary": "#2E86AB",
+      "accentEditorial": "#B8843E",
+      "surfacePill": "#EAF2F7",
+      "surfaceQuote": "#F4F7FA",
+      "edgePill": "#B7D2DE",
+      "ruleHairline": "#D6DCE2"
+    }
+  },
+  "typography": {
+    "families": {
+      "displaySerif": {
+        "stack": [
+          "Fraunces",
+          "Source Serif Pro",
+          "Georgia",
+          "serif"
+        ],
+        "weights": [
+          400,
+          600
+        ],
+        "role": "Hero displays, pull-quotes — at most once per page.",
+        "licenseNote": "Fraunces is OFL — free for web embed and self-host."
+      },
+      "bodySans": {
+        "stack": [
+          "Inter",
+          "Segoe UI",
+          "system-ui",
+          "sans-serif"
+        ],
+        "weights": [
+          400,
+          500,
+          600
+        ],
+        "role": "Body text, headings h2-h3, UI labels — the workhorse.",
+        "licenseNote": "Inter is OFL. Segoe UI is the Windows fallback (system font, no license risk)."
+      },
+      "mono": {
+        "stack": [
+          "JetBrains Mono",
+          "Consolas",
+          "ui-monospace",
+          "monospace"
+        ],
+        "weights": [
+          400,
+          500
+        ],
+        "role": "Data signatures — datestamps, paths, version numbers, code.",
+        "licenseNote": "JetBrains Mono is OFL. Consolas is the Windows fallback."
+      }
+    },
+    "scale": {
+      "display": {
+        "sizeWeb": "56px",
+        "sizePrint": "28pt",
+        "lineHeight": 1.05,
+        "tracking": "-0.01em",
+        "weight": 600,
+        "family": "displaySerif",
+        "note": "Hero only. At most once per page."
+      },
+      "h1": {
+        "sizeWeb": "36px",
+        "sizePrint": "18pt",
+        "lineHeight": 1.15,
+        "tracking": "-0.005em",
+        "weight": 600,
+        "family": "displaySerif",
+        "note": "Major section headings on long-form surfaces."
+      },
+      "h2": {
+        "sizeWeb": "24px",
+        "sizePrint": "12pt",
+        "lineHeight": 1.25,
+        "tracking": "0",
+        "weight": 600,
+        "family": "bodySans",
+        "note": "Section headers (CV/README — preserves existing CV behaviour)."
+      },
+      "h3": {
+        "sizeWeb": "18px",
+        "sizePrint": "10pt",
+        "lineHeight": 1.35,
+        "tracking": "0",
+        "weight": 600,
+        "family": "bodySans",
+        "note": "Entry / card titles."
+      },
+      "body": {
+        "sizeWeb": "16px",
+        "sizePrint": "9pt",
+        "lineHeight": 1.55,
+        "tracking": "0",
+        "weight": 400,
+        "family": "bodySans",
+        "note": "Default body. Never below this size."
+      },
+      "bodyLead": {
+        "sizeWeb": "18px",
+        "sizePrint": "10pt",
+        "lineHeight": 1.55,
+        "tracking": "0",
+        "weight": 400,
+        "family": "bodySans",
+        "note": "Lead paragraphs, hero subhead."
+      },
+      "meta": {
+        "sizeWeb": "13px",
+        "sizePrint": "8pt",
+        "lineHeight": 1.45,
+        "tracking": "0",
+        "weight": 400,
+        "family": "bodySans",
+        "note": "Dates, captions, footnote-like text."
+      },
+      "eyebrow": {
+        "sizeWeb": "11px",
+        "sizePrint": "7.5pt",
+        "lineHeight": 1.4,
+        "tracking": "0.08em",
+        "weight": 600,
+        "family": "bodySans",
+        "transform": "uppercase",
+        "note": "The ONLY uppercased element in the system."
+      },
+      "mono": {
+        "sizeWeb": "13px",
+        "sizePrint": "8pt",
+        "lineHeight": 1.5,
+        "tracking": "0",
+        "weight": 400,
+        "family": "mono",
+        "note": "Datestamps, paths, version numbers, code."
+      }
+    },
+    "principles": [
+      "Eyebrow is the ONLY uppercased element in the system.",
+      "Display serif appears at most once per page (hero, OR pull-quote, never both).",
+      "Mono is reserved for data signatures — datestamps, paths, version numbers, code.",
+      "Body never sits below 16px on web or 9pt in print.",
+      "Negative tracking on display only (never on body)."
+    ]
+  },
+  "spacing": {
+    "base": 8,
+    "scale": {
+      "0": 0,
+      "1": 8,
+      "2": 16,
+      "3": 24,
+      "4": 32,
+      "6": 48,
+      "8": 64,
+      "12": 96,
+      "16": 128,
+      "0.5": 4
+    },
+    "rhythm": {
+      "section": 96,
+      "sectionTight": 64,
+      "sectionLarge": 128,
+      "paragraph": 16,
+      "columnGutter": 24,
+      "columnGutterMobile": 16
+    }
+  },
+  "radius": {
+    "none": 0,
+    "xs": 2,
+    "sm": 4,
+    "md": 8,
+    "lg": 16,
+    "pill": 999
+  },
+  "shadow": {
+    "ambient": "0 1px 2px rgba(27, 31, 38, 0.05), 0 4px 12px rgba(27, 31, 38, 0.04)",
+    "focusRing": "0 0 0 3px rgba(46, 134, 171, 0.35)"
+  },
+  "motion": {
+    "duration": {
+      "fast": 120,
+      "base": 200,
+      "slow": 360
+    },
+    "easing": {
+      "standard": "cubic-bezier(0.2, 0, 0, 1)",
+      "entrance": "cubic-bezier(0.0, 0, 0.2, 1)",
+      "exit": "cubic-bezier(0.4, 0, 1, 1)"
+    }
+  },
+  "layout": {
+    "golden": {
+      "main": "61.8%",
+      "side": "38.2%",
+      "gutter": "1.4em"
+    },
+    "container": {
+      "max": 1280,
+      "paddingMobile": 24,
+      "paddingDesktop": 64
+    },
+    "breakpoints": {
+      "sm": 640,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1280
+    }
+  },
+  "logo": {
+    "primary": {
+      "path": "/public/brands/chan-monkey-logo-black.svg",
+      "recommendedSizes": {
+        "heroPx": 160,
+        "cardPx": 96,
+        "inlinePx": 24
+      },
+      "clearspaceMultiple": 0.5
+    },
+    "monogram": {
+      "path": "/public/brands/chan-monkey-logo-black.svg",
+      "note": "Used as section divider mark — see signatures.monogramDivider.",
+      "recommendedSizes": {
+        "dividerPx": 24,
+        "sealPx": 48
+      }
+    },
+    "variants": {
+      "black": "/public/brands/chan-monkey-logo-black.svg"
+    },
+    "doNot": [
+      "Do not recolor the logo — black on warm paper is canonical.",
+      "Do not place the logo on photographic backgrounds without a paper mat.",
+      "Do not skew, rotate, or apply effects (shadows, glows, gradients).",
+      "Do not pair the logo with a generated wordmark — the SVG IS the wordmark."
+    ]
+  },
+  "voice": {
+    "principles": [
+      {
+        "name": "Architecture-grade vocabulary",
+        "rule": "Prefer engineering nouns (orchestration, dispatch, hub-and-spoke) over marketing adjectives (powerful, robust, world-class).",
+        "why": "Chan's existing CV uses precise nouns; recruiters who matter recognise them."
+      },
+      {
+        "name": "Evidence-first",
+        "rule": "Every claim links to one proof point (PR, repo, live URL, paper). Adjectives without links get cut.",
+        "why": "Established by the README redesign spec; carry forward."
+      },
+      {
+        "name": "Subtraction for life, addition for thought",
+        "rule": "At most one gold mark per visual unit; remove decoration until what is left is the idea.",
+        "why": "Chan's stated personal philosophy; the brand must enact it."
+      },
+      {
+        "name": "Cross-cultural fluency without translation",
+        "rule": "Te reo Māori, 中文, English appear in their own forms — italicised once, then treated as first-class vocabulary. No parenthetical glosses unless the audience demonstrably needs them.",
+        "why": "Existing CV does this with 'Te Whare Tapa Whā'; codify."
+      },
+      {
+        "name": "Pace by white space",
+        "rule": "Visual rhythm beats density. The 61.8/38.2 ratio in the CV is canonical; default to it elsewhere too.",
+        "why": "Existing theme.typ already chose this; promote it from CV-only to system-wide."
+      },
+      {
+        "name": "Never apologise for restraint",
+        "rule": "No 'sorry it's plain', no 'minimal-but-' qualifiers. The restraint is the statement.",
+        "why": "Restraint loses its meaning the moment it is hedged."
+      }
+    ],
+    "vocabulary": {
+      "prefer": [
+        "orchestration",
+        "dispatch",
+        "hub-and-spoke",
+        "agentic",
+        "evidence-first",
+        "shipped",
+        "open-sourced",
+        "production",
+        "end-to-end"
+      ],
+      "avoid": [
+        "leverage",
+        "robust",
+        "world-class",
+        "best-in-class",
+        "cutting-edge",
+        "synergy",
+        "rockstar",
+        "ninja"
+      ]
+    },
+    "examples": {
+      "do": [
+        "Recruited by Anthropic for the Claude residency programme.",
+        "86.6% solo-built; AI mentor matching and membership-flow automation in production.",
+        "Replaces click-through workflows with agentic ones: natural-language intent drives downstream orchestration."
+      ],
+      "dont": [
+        "Leveraged cutting-edge AI to deliver robust, world-class solutions.",
+        "I'm a passionate, results-driven full-stack rockstar.",
+        "Minimal-but-powerful design that just works."
+      ]
+    }
+  },
+  "signatures": {
+    "adoptedInReadme": false,
+    "heroBand": {
+      "type": "gradient-svg",
+      "template": "hologram-interface",
+      "height": 200,
+      "duration": "8s",
+      "useWhen": "Top of any long-form surface.",
+      "doNotUseWhen": "Internal sections. Multiple per page. Cards."
+    },
+    "goldEyebrow": {
+      "type": "typographic",
+      "rule": "eyebrow scale + accent.editorial color + ' — ' (em-dash, not en-dash) before display heading",
+      "useWhen": "Above any section that opens with display serif. Above the hero subhead.",
+      "doNotUseWhen": "Inline body. After the section already used a gold mark this page."
+    },
+    "monoDatestamp": {
+      "type": "typographic",
+      "rule": "mono scale 13px in ink.muted; format: 'last updated · YYYY-MM-DD · build N'",
+      "useWhen": "Footer of every long-form surface (README, CV, brand-system, future webpages).",
+      "doNotUseWhen": "Short surfaces (social cards, single-screen pages)."
+    },
+    "monogramDivider": {
+      "type": "composite",
+      "logoPath": "/public/brands/chan-monkey-logo-black.svg",
+      "logoSizePx": 24,
+      "ruleColor": "ruleHairline",
+      "ruleStyle": "dotted",
+      "useWhen": "Between major narrative shifts (e.g. between 'Featured work' and 'Open source').",
+      "doNotUseWhen": "Between sibling cards or list items."
+    },
+    "pillRotation": {
+      "type": "gradient-svg",
+      "templates": {
+        "primary": {
+          "template": "pills-rainbow",
+          "height": 28,
+          "duration": "8s"
+        },
+        "secondary": {
+          "template": "social-achievement-blue",
+          "height": 24,
+          "duration": "6s"
+        },
+        "accent": {
+          "template": "banner-orange",
+          "height": 26,
+          "duration": "6s"
+        },
+        "live": {
+          "template": "pills-blue",
+          "height": 22,
+          "duration": "6s"
+        },
+        "source": {
+          "template": "pills-dark",
+          "height": 22,
+          "duration": "6s"
+        },
+        "caseStudy": {
+          "template": "pills-purple",
+          "height": 22,
+          "duration": "6s"
+        },
+        "badgePortfolio": {
+          "template": "pills-rainbow",
+          "height": 40,
+          "duration": "8s"
+        },
+        "badgeLinkedin": {
+          "template": "pills-blue",
+          "height": 40,
+          "duration": "8s"
+        },
+        "badgeGithub": {
+          "template": "pills-dark",
+          "height": 40,
+          "duration": "8s"
+        },
+        "badgeEmail": {
+          "template": "pills-purple",
+          "height": 40,
+          "duration": "8s"
+        },
+        "badgeBook": {
+          "template": "pills-dark",
+          "height": 40,
+          "duration": "8s"
+        },
+        "badgeNewsletter": {
+          "template": "pills-blue",
+          "height": 40,
+          "duration": "8s"
+        },
+        "badgeResume": {
+          "template": "pills-dark",
+          "height": 40,
+          "duration": "8s"
+        },
+        "badgeCoffee": {
+          "template": "pills-purple",
+          "height": 40,
+          "duration": "8s"
+        }
+      },
+      "useWhen": "CTAs, social badges, action pills.",
+      "doNotUseWhen": "Inside body prose. As decoration. Outside Chan's own tools."
+    },
+    "banners": {
+      "hero": {
+        "template": "hologram-interface",
+        "height": 200,
+        "text": "Chan Meng",
+        "duration": "8s"
+      },
+      "featuredWork": {
+        "template": "text-shimmer-gold",
+        "height": 80,
+        "text": "Featured Work",
+        "duration": "8s"
+      },
+      "openSource": {
+        "template": "text-shimmer-blue",
+        "height": 80,
+        "text": "Open Source",
+        "duration": "8s"
+      },
+      "skills": {
+        "template": "text-shimmer-purple",
+        "height": 80,
+        "text": "What I can do",
+        "duration": "8s"
+      },
+      "freeTools": {
+        "template": "text-shimmer-purple",
+        "height": 60,
+        "text": "Free tools I built for the community",
+        "duration": "6s"
+      },
+      "soundIMake": {
+        "template": "text-shimmer-blue",
+        "height": 60,
+        "text": "Sound I make",
+        "duration": "6s"
+      },
+      "visitorsHeader": {
+        "template": "text-shimmer-gold",
+        "height": 60,
+        "text": "Visitors from around the world",
+        "duration": "6s"
+      },
+      "footerDivider": {
+        "template": "cotton-candy",
+        "height": 240,
+        "text": "Thanks for visiting",
+        "duration": "8s"
+      }
+    },
+    "visitorCounter": {
+      "username": "ChanMeng666",
+      "miniCounter": {
+        "theme": "transparent",
+        "maxflags": 5,
+        "displayMode": "miniCounter"
+      },
+      "flagMap": {
+        "theme": "github_dark",
+        "mapSize": "medium",
+        "displayMode": "flagMap"
+      }
+    },
+    "sunoCards": {
+      "handle": "chanmeng666",
+      "showProfileCard": false,
+      "cardsSort": "play_count",
+      "cardsMax": 3,
+      "theme": "dark",
+      "preset": "suno"
+    }
+  },
+  "imagery": {
+    "direction": "Editorial restraint. Real assets over stock. When portrait photography appears, prefer working-context over posed. When project screenshots appear, frame them in a warm-paper mat with hairline rule — let the UI be protagonist.",
+    "approved": [
+      "/public/brands/ (curated project + organization logos Chan controls)",
+      "/public/certificates/ (verified credential scans)",
+      "/public/tech-logos/ (third-party tech stack marks — used in pill-row context only)"
+    ],
+    "forbidden": [
+      "AI-generated portraits of Chan",
+      "Stock photography of generic 'tech' / 'business' scenes",
+      "Trophy / shields.io / wakatime / GitHub-streak badges (external decoration services)"
+    ]
+  },
+  "surfaces": {
+    "readme": {
+      "canvas": "GitHub renders white; warm-paper canvas applies only to images we control",
+      "fontHint": "GitHub controls typography — semantic tokens here are advisory for img/SVG only",
+      "signatures": [
+        "heroBand",
+        "monoDatestamp",
+        "monogramDivider",
+        "pillRotation"
+      ]
+    },
+    "cv": {
+      "canvas": "canvasPage warm paper",
+      "fontFamilies": [
+        "bodySans",
+        "mono"
+      ],
+      "signatures": [
+        "monoDatestamp"
+      ]
+    },
+    "webpage": {
+      "canvas": "canvasPage warm paper",
+      "fontFamilies": [
+        "displaySerif",
+        "bodySans",
+        "mono"
+      ],
+      "signatures": [
+        "heroBand",
+        "goldEyebrow",
+        "monoDatestamp",
+        "monogramDivider",
+        "pillRotation"
+      ]
+    },
+    "socialCard": {
+      "canvas": "canvasPage warm paper",
+      "fontFamilies": [
+        "displaySerif",
+        "bodySans"
+      ],
+      "signatures": [
+        "goldEyebrow"
+      ],
+      "note": "Square / 1.91:1 export. Eyebrow + display serif only."
+    }
+  }
+}

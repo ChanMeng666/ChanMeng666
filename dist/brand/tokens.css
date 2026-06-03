@@ -1,0 +1,139 @@
+/* GENERATED FROM data/brand.yaml — DO NOT EDIT.
+ * Regenerate with: npm run build:brand
+ * Source of truth: data/brand.yaml v2.0.0
+ * Last updated:    2026-06-03
+ */
+
+:root {
+  /* Color — raw palette (paint inventory) */
+  --color-raw-basalt-canvas: #E2E2DF;
+  --color-raw-ash-white: #F7F6F2;
+  --color-raw-pure-white: #FFFFFF;
+  --color-raw-abyssal-ink: #070607;
+  --color-raw-digital-orange: #FC5000;
+  --color-raw-cyber-violet: #524AE9;
+  --color-raw-pixel-glare: #F5F28E;
+
+  /* Color — semantic tokens (templates use these) */
+  --color-canvas-page: var(--color-raw-basalt-canvas);
+  --color-canvas-surface: var(--color-raw-ash-white);
+  --color-surface-accent: var(--color-raw-digital-orange);
+  --color-surface-decor: var(--color-raw-cyber-violet);
+  --color-surface-glare: var(--color-raw-pixel-glare);
+  --color-ink-primary: var(--color-raw-abyssal-ink);
+  --color-ink-strong: var(--color-raw-abyssal-ink);
+  --color-ink-muted: var(--color-raw-abyssal-ink);
+  --color-ink-subtle: var(--color-raw-abyssal-ink);
+  --color-on-accent: var(--color-raw-pure-white);
+  --color-accent-primary: var(--color-raw-digital-orange);
+  --color-accent-editorial: var(--color-raw-digital-orange);
+  --color-surface-pill: var(--color-raw-ash-white);
+  --color-surface-quote: var(--color-raw-ash-white);
+  --color-edge-pill: var(--color-raw-abyssal-ink);
+  --color-rule-hairline: var(--color-raw-abyssal-ink);
+
+  /* Typography — font stacks */
+  --font-display: "Bebas Neue", Anton, Oswald, Impact, sans-serif;
+  --font-body-sans: "DM Sans", Inter, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", Consolas, ui-monospace, monospace;
+
+  /* Typography — scale */
+  --text-display-size: 96px;
+  --text-display-line-height: 0.94;
+  --text-display-tracking: 0.02em;
+  --text-display-weight: 400;
+  --text-display-family: var(--font-display);
+  --text-h-1-size: 56px;
+  --text-h-1-line-height: 0.94;
+  --text-h-1-tracking: 0.02em;
+  --text-h-1-weight: 400;
+  --text-h-1-family: var(--font-display);
+  --text-h-2-size: 32px;
+  --text-h-2-line-height: 0.95;
+  --text-h-2-tracking: 0.02em;
+  --text-h-2-weight: 400;
+  --text-h-2-family: var(--font-display);
+  --text-h-3-size: 30px;
+  --text-h-3-line-height: 1.11;
+  --text-h-3-tracking: 0;
+  --text-h-3-weight: 500;
+  --text-h-3-family: var(--font-body-sans);
+  --text-body-size: 16px;
+  --text-body-line-height: 1.55;
+  --text-body-tracking: 0;
+  --text-body-weight: 500;
+  --text-body-family: var(--font-body-sans);
+  --text-body-lead-size: 18px;
+  --text-body-lead-line-height: 1.5;
+  --text-body-lead-tracking: 0;
+  --text-body-lead-weight: 500;
+  --text-body-lead-family: var(--font-body-sans);
+  --text-meta-size: 14px;
+  --text-meta-line-height: 1.25;
+  --text-meta-tracking: 0;
+  --text-meta-weight: 500;
+  --text-meta-family: var(--font-body-sans);
+  --text-eyebrow-size: 14px;
+  --text-eyebrow-line-height: 1.2;
+  --text-eyebrow-tracking: 0.08em;
+  --text-eyebrow-weight: 700;
+  --text-eyebrow-family: var(--font-body-sans);
+  --text-eyebrow-transform: uppercase;
+  --text-mono-size: 13px;
+  --text-mono-line-height: 1.5;
+  --text-mono-tracking: 0;
+  --text-mono-weight: 400;
+  --text-mono-family: var(--font-mono);
+
+  /* Spacing */
+  --space-0: 0px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-0-5: 4px;
+  --space-1-25: 10px;
+  --space-1-5: 12px;
+  --space-2-5: 20px;
+  --rhythm-section: 40px;
+  --rhythm-section-tight: 24px;
+  --rhythm-section-large: 80px;
+  --rhythm-card-padding: 40px;
+  --rhythm-element-gap: 10px;
+  --rhythm-paragraph: 16px;
+  --rhythm-column-gutter: 24px;
+  --rhythm-column-gutter-mobile: 16px;
+
+  /* Radius */
+  --radius-none: 0px;
+  --radius-sm: 8px;
+  --radius-card: 40px;
+  --radius-default: 40px;
+  --radius-input: 100px;
+  --radius-pill: 800px;
+
+  /* Shadow */
+  --shadow-ambient: none;
+  --shadow-focus-ring: 0 0 0 3px rgba(252, 80, 0, 0.40);
+
+  /* Motion */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 360ms;
+  --easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --easing-entrance: cubic-bezier(0.0, 0, 0.2, 1);
+  --easing-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  /* Layout */
+  --layout-golden-main: 61.8%;
+  --layout-golden-side: 38.2%;
+  --layout-golden-gutter: 1.4em;
+  --container-max: 1200px;
+  --container-padding-mobile: 24px;
+  --container-padding-desktop: 40px;
+}

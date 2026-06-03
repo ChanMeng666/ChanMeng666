@@ -16,6 +16,10 @@ const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, "..");
 
 const data = yaml.load(fs.readFileSync(path.join(repoRoot, "data", "profile.yaml"), "utf8"));
+const brandPath = path.join(repoRoot, "data", "brand.yaml");
+const brand = fs.existsSync(brandPath)
+  ? yaml.load(fs.readFileSync(brandPath, "utf8"))
+  : null;
 
 // Files that are intentionally used outside the README pipeline (e.g. GitHub
 // repo Settings → Social Preview consumes /public/github-cover-image.svg via
@@ -27,10 +31,15 @@ const EXTERNAL_REFERENCES = new Set([
 
 const referenced = new Set(EXTERNAL_REFERENCES);
 
+// Look-like-a-real-path filter: starts with /public/, no spaces, no parens.
+// Avoids tracking documentation strings (e.g. brand.yaml imagery.approved
+// entries that read "/public/brands/ (curated logos...)" as if they were
+// referenced assets).
+const PATH_RE = /^\/public\/[^\s()]+$/;
 function walk(node) {
   if (node == null) return;
   if (typeof node === "string") {
-    if (node.startsWith("/public/")) referenced.add(node);
+    if (PATH_RE.test(node)) referenced.add(node);
     return;
   }
   if (Array.isArray(node)) {
@@ -42,6 +51,7 @@ function walk(node) {
   }
 }
 walk(data);
+if (brand) walk(brand);
 
 // In addition to YAML, scan the rendered build outputs for /public/ paths.
 // Rendered outputs are ground truth: they cover template-hardcoded assets

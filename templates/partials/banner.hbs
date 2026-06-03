@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode this.text}}&template={{this.template}}&height={{this.height}}&duration={{this.duration}}" alt="{{this.text}}" />
+  <img src="https://gradient-svg-generator.vercel.app/api/svg?text={{urlencode this.text}}&template={{this.template}}{{#if this.gradientType}}&gradientType={{this.gradientType}}{{/if}}{{#each this.colors}}&color{{@index}}={{this}}{{/each}}&height={{this.height}}&duration={{this.duration}}" alt="{{this.text}}" />
 </p>

@@ -2,190 +2,165 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Chan Meng — LinkedIn Testimonial Cards</title>
+<title>Chan Meng — LinkedIn Testimonial Cards (Caldera)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: #1E2D7D; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
-  html { scrollbar-width: none; -ms-overflow-style: none; }
-  html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; height: 0; }
+  :root{
+    --basalt:#E2E2DF; --ash:#F7F6F2; --white:#FFFFFF; --ink:#070607;
+    --orange:#FC5000; --violet:#524AE9; --glare:#F5F28E; --muted:#5B5B59;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:var(--basalt); font-family:'DM Sans',-apple-system,'Segoe UI',sans-serif; -webkit-font-smoothing:antialiased; }
+  html{ scrollbar-width:none; }
+  html::-webkit-scrollbar,body::-webkit-scrollbar{ display:none; width:0; height:0; }
 
-  .card {
-    width: 1128px;
-    height: 376px;
-    position: relative;
-    background: #1E2D7D;
-    overflow: hidden;
+  .card{
+    width:1128px; height:376px; position:relative;
+    background:var(--basalt); overflow:hidden;
   }
 
-  .card-inner {
-    position: absolute;
-    left: 80px;
-    top: 32px;
-    width: 1008px;
-    height: 312px;
-    background: #FFFFFF;
-    border-radius: 32px;
+  /* Flat ash card with a crisp ink hairline — no soft elevation (Caldera is flat). */
+  .card-inner{
+    position:absolute; left:92px; top:26px; width:1010px; height:324px;
+    background:var(--white); border-radius:40px;
+    border:1.5px solid var(--ink);
   }
 
-  .avatar {
-    position: absolute;
-    left: 24px;
-    top: 88px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-color: #C8D0E8;
-    box-shadow: 0 0 0 6px #FFFFFF, 0 8px 24px rgba(0,0,0,0.18);
-    z-index: 2;
+  /* Avatar straddles the left edge of the card; flat ink ring, no drop shadow. */
+  .avatar{
+    position:absolute; left:18px; top:80px; width:204px; height:204px;
+    border-radius:50%; background-size:cover; background-position:center top;
+    background-repeat:no-repeat; background-color:#C8D0E8;
+    box-shadow:0 0 0 6px var(--ink);
+    z-index:3;
   }
 
-  .quote-glyph {
-    position: absolute;
-    left: 244px;
-    top: 16px;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 120px;
-    line-height: 1;
-    color: #2BB1A6;
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    user-select: none;
+  /* The single deliberate orange accent: the quote mark. */
+  .quote-glyph{
+    position:absolute; left:250px; top:30px;
+    font-family:Georgia,'Times New Roman',serif; font-size:128px; line-height:1;
+    color:var(--orange); font-weight:700; letter-spacing:-0.04em; user-select:none;
+    z-index:2;
   }
 
-  .quote-text {
-    position: absolute;
-    left: 252px;
-    top: 92px;
-    width: 800px;
-    color: #1E2D7D;
-    font-weight: 700;
-    line-height: 1.38;
-    padding-right: 24px;
+  .quote-text{
+    position:absolute; left:252px; top:104px; width:780px;
+    color:var(--ink); font-weight:600; line-height:1.4; z-index:2;
+  }
+  .quote-text.size-lg{ font-size:27px; top:108px; }
+  .quote-text.size-md{ font-size:24px; top:110px; }
+  .quote-text.size-sm{ font-size:22px; top:114px; line-height:1.44; }
+
+  /* Attribution — name in Bebas (loud, on-brand), role in DM Sans muted. */
+  .attribution{ position:absolute; right:50px; bottom:46px; text-align:right; z-index:2; }
+  .attribution .name{
+    font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:32px;
+    letter-spacing:0.03em; color:var(--ink); line-height:1;
+  }
+  .attribution .rule{
+    width:46px; height:3px; background:var(--orange); margin:8px 0 8px auto;
+  }
+  .attribution .role{
+    font-family:'DM Sans',sans-serif; font-size:15px; font-weight:500;
+    color:var(--muted); line-height:1.3;
   }
 
-  .quote-text.size-lg { font-size: 26px; top: 96px; }
-  .quote-text.size-md { font-size: 24px; top: 100px; }
-  .quote-text.size-sm { font-size: 22px; top: 104px; line-height: 1.42; }
+  /* Decorative pixel cluster — top-right, the "cyber-playground" signature. */
+  .pixels{ position:absolute; right:44px; top:44px; z-index:2; }
 
-  .attribution {
-    position: absolute;
-    right: 56px;
-    bottom: 56px;
-    text-align: right;
-    color: #F37856;
-    font-weight: 600;
-    line-height: 1.3;
-  }
-
-  .attribution .name {
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.01em;
-  }
-
-  .attribution .role {
-    font-size: 14px;
-    margin-top: 2px;
-    opacity: 0.95;
-  }
-
-  /* Card spacer for clean screenshot capture */
-  .spacer { width: 1128px; height: 24px; background: #0D1640; }
+  /* Spacer for clean multi-card capture (not part of any screenshot). */
+  .spacer{ width:1128px; height:22px; background:var(--basalt); }
 </style>
 </head>
 <body>
 
 <!-- Card 1: Saba Gecgil -->
-<div class="card" id="card-1">
+<div class="card" data-out="testimonial-01-saba.png">
   <div class="card-inner"></div>
-  <div class="avatar" style="background-image: url('../recommendations/Saba-Gecgil.png');"></div>
+  <svg class="pixels" width="60" height="24" viewBox="0 0 60 24"><rect x="0" y="0" width="16" height="16" fill="#524AE9"/><rect x="22" y="4" width="12" height="12" fill="#F5F28E"/><rect x="42" y="0" width="16" height="16" fill="#FC5000"/></svg>
+  <div class="avatar" style="background-image:url('../recommendations/Saba-Gecgil.png');"></div>
   <div class="quote-glyph">&#8220;</div>
-  <div class="quote-text size-lg">
-    He combines speed with discipline. Chan ships quickly, but he also documents, tests, and pushes for technical honesty.
-  </div>
+  <div class="quote-text size-lg">He combines speed with discipline. Chan ships quickly, but he also documents, tests, and pushes for technical honesty.</div>
   <div class="attribution">
     <div class="name">Saba Gecgil</div>
+    <div class="rule"></div>
     <div class="role">Founder &amp; CEO, GAVIGO</div>
   </div>
 </div>
 <div class="spacer"></div>
 
 <!-- Card 2: Gabrielle J. Hurst -->
-<div class="card" id="card-2">
+<div class="card" data-out="testimonial-02-gabrielle.png">
   <div class="card-inner"></div>
-  <div class="avatar" style="background-image: url('../recommendations/Gabby-Hurst.jpeg');"></div>
+  <svg class="pixels" width="60" height="24" viewBox="0 0 60 24"><rect x="0" y="0" width="16" height="16" fill="#524AE9"/><rect x="22" y="4" width="12" height="12" fill="#F5F28E"/><rect x="42" y="0" width="16" height="16" fill="#FC5000"/></svg>
+  <div class="avatar" style="background-image:url('../recommendations/Gabby-Hurst.jpeg');"></div>
   <div class="quote-glyph">&#8220;</div>
-  <div class="quote-text size-md">
-    Chan Meng is an outstanding Senior AI/ML Infrastructure Engineer whose work consistently combines speed, security, and strategic foresight. Chan is the kind of engineer who elevates those around her.
-  </div>
+  <div class="quote-text size-md">Chan Meng is an outstanding Senior AI/ML Infrastructure Engineer whose work consistently combines speed, security, and strategic foresight. Chan is the kind of engineer who elevates those around her.</div>
   <div class="attribution">
     <div class="name">Gabrielle J. Hurst</div>
+    <div class="rule"></div>
     <div class="role">Former CXO, Sanicle Inc.</div>
   </div>
 </div>
 <div class="spacer"></div>
 
 <!-- Card 3: Patricia Anthony -->
-<div class="card" id="card-3">
+<div class="card" data-out="testimonial-03-patricia.png">
   <div class="card-inner"></div>
-  <div class="avatar" style="background-image: url('../recommendations/Patricia-Anthony.jpeg');"></div>
+  <svg class="pixels" width="60" height="24" viewBox="0 0 60 24"><rect x="0" y="0" width="16" height="16" fill="#524AE9"/><rect x="22" y="4" width="12" height="12" fill="#F5F28E"/><rect x="42" y="0" width="16" height="16" fill="#FC5000"/></svg>
+  <div class="avatar" style="background-image:url('../recommendations/Patricia-Anthony.jpeg');"></div>
   <div class="quote-glyph">&#8220;</div>
-  <div class="quote-text size-md">
-    Chan Meng demonstrated excellent technical skills, a strong work ethic, and an inquisitive nature. She consistently excelled in both coursework and practical projects, approaching challenges with critical thinking and creativity.
-  </div>
+  <div class="quote-text size-sm">Chan Meng demonstrated excellent technical skills, a strong work ethic, and an inquisitive nature. She consistently excelled in both coursework and practical projects, approaching challenges with critical thinking and creativity.</div>
   <div class="attribution">
     <div class="name">Patricia Anthony</div>
+    <div class="rule"></div>
     <div class="role">Associate Professor, Lincoln University NZ</div>
   </div>
 </div>
 <div class="spacer"></div>
 
 <!-- Card 4: Cecilia Yin -->
-<div class="card" id="card-4">
+<div class="card" data-out="testimonial-04-cecilia.png">
   <div class="card-inner"></div>
-  <div class="avatar" style="background-image: url('../recommendations/Cecilia-Yin.jpg');"></div>
+  <svg class="pixels" width="60" height="24" viewBox="0 0 60 24"><rect x="0" y="0" width="16" height="16" fill="#524AE9"/><rect x="22" y="4" width="12" height="12" fill="#F5F28E"/><rect x="42" y="0" width="16" height="16" fill="#FC5000"/></svg>
+  <div class="avatar" style="background-image:url('../recommendations/Cecilia-Yin.jpg');"></div>
   <div class="quote-glyph">&#8220;</div>
-  <div class="quote-text size-md">
-    She has a great mix of technical skills and a genuine passion for AI that shines through in everything she does. She brings curiosity, positivity, and a genuine drive to grow.
-  </div>
+  <div class="quote-text size-md">She has a great mix of technical skills and a genuine passion for AI that shines through in everything she does. She brings curiosity, positivity, and a genuine drive to grow.</div>
   <div class="attribution">
     <div class="name">Cecilia Yin</div>
+    <div class="rule"></div>
     <div class="role">Solutions Architect, AWS</div>
   </div>
 </div>
 <div class="spacer"></div>
 
 <!-- Card 5: Lesley Gao -->
-<div class="card" id="card-5">
+<div class="card" data-out="testimonial-05-lesley.png">
   <div class="card-inner"></div>
-  <div class="avatar" style="background-image: url('../recommendations/Lesley-Gao.jpg');"></div>
+  <svg class="pixels" width="60" height="24" viewBox="0 0 60 24"><rect x="0" y="0" width="16" height="16" fill="#524AE9"/><rect x="22" y="4" width="12" height="12" fill="#F5F28E"/><rect x="42" y="0" width="16" height="16" fill="#FC5000"/></svg>
+  <div class="avatar" style="background-image:url('../recommendations/Lesley-Gao.jpg');"></div>
   <div class="quote-glyph">&#8220;</div>
-  <div class="quote-text size-lg">
-    A PR merged at 12:30am? You didn't see it wrong, that's pretty normal for Chan. What stands out most to me is her passion for technology.
-  </div>
+  <div class="quote-text size-lg">A PR merged at 12:30am? You didn't see it wrong, that's pretty normal for Chan. What stands out most to me is her passion for technology.</div>
   <div class="attribution">
     <div class="name">Lesley Gao</div>
+    <div class="rule"></div>
     <div class="role">Product Designer / Web Developer, She Sharp</div>
   </div>
 </div>
 <div class="spacer"></div>
 
 <!-- Card 6: Siyu Xing -->
-<div class="card" id="card-6">
+<div class="card" data-out="testimonial-06-siyu.png">
   <div class="card-inner"></div>
-  <div class="avatar" style="background-image: url('../recommendations/Siyu-Xing.jpg');"></div>
+  <svg class="pixels" width="60" height="24" viewBox="0 0 60 24"><rect x="0" y="0" width="16" height="16" fill="#524AE9"/><rect x="22" y="4" width="12" height="12" fill="#F5F28E"/><rect x="42" y="0" width="16" height="16" fill="#FC5000"/></svg>
+  <div class="avatar" style="background-image:url('../recommendations/Siyu-Xing.jpg');"></div>
   <div class="quote-glyph">&#8220;</div>
-  <div class="quote-text size-md">
-    Her insights on identity and self-awareness deeply inspired me. I highly recommend Chan to anyone who wants to grow and advance in the technology field.
-  </div>
+  <div class="quote-text size-md">Her insights on identity and self-awareness deeply inspired me. I highly recommend Chan to anyone who wants to grow and advance in the technology field.</div>
   <div class="attribution">
     <div class="name">Siyu Xing</div>
+    <div class="rule"></div>
     <div class="role">Ph.D. Candidate, UCAS</div>
   </div>
 </div>

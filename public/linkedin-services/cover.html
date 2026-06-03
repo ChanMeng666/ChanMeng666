@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chan Meng — LinkedIn Cover (Caldera)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --basalt:#E2E2DF; --ash:#F7F6F2; --white:#FFFFFF; --ink:#070607;
+    --orange:#FC5000; --violet:#524AE9; --glare:#F5F28E; --muted:#5B5B59;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#aaa; font-family:'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+
+  .cover{
+    width:1584px; height:396px; position:relative;
+    background:var(--basalt); overflow:hidden;
+  }
+
+  /* ── Text block — kept in the upper/centre-left, clear of the bottom-left
+        zone where LinkedIn overlays the round profile photo on desktop. ── */
+  .eyebrow{
+    position:absolute; left:96px; top:84px;
+    font-weight:600; font-size:19px; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--ink); display:flex; align-items:center; gap:12px;
+  }
+  .eyebrow .dot{ width:13px; height:13px; background:var(--orange); display:inline-block; }
+
+  .name{
+    position:absolute; left:92px; top:118px;
+    font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:150px;
+    line-height:0.86; letter-spacing:0.02em; color:var(--ink);
+  }
+
+  .rule{ position:absolute; left:98px; top:286px; width:132px; height:7px; background:var(--orange); }
+
+  .role{
+    position:absolute; left:98px; top:306px; white-space:nowrap;
+    font-weight:600; font-size:23px; letter-spacing:0.005em; color:var(--ink); line-height:1.35;
+  }
+  .tagline{
+    position:absolute; left:98px; top:344px; white-space:nowrap;
+    font-style:italic; font-weight:400; font-size:18px; color:var(--muted);
+  }
+
+  /* ── Right-side color-block composition — flat squares + logo lockup. ── */
+  .block{ position:absolute; }
+  .b-violet{ left:1126px; top:60px;  width:86px;  height:86px;  background:var(--violet); }
+  .b-ink{    left:1202px; top:80px;  width:244px; height:244px; background:var(--ink); }
+  .b-orange{ left:1402px; top:236px; width:132px; height:132px; background:var(--orange); }
+  .b-glare{  left:1170px; top:300px; width:62px;  height:62px;  background:var(--glare); }
+
+  .logo{
+    position:absolute; left:1238px; top:116px; width:172px; height:172px;
+    /* black monkey SVG → white on the ink block */
+    filter:invert(1) brightness(2.2);
+    z-index:2;
+  }
+
+  /* Scattered pixel accents — the cyber-playground signature. */
+  .px{ position:absolute; width:18px; height:18px; }
+  .p1{ left:1096px; top:178px; background:var(--ink); }
+  .p2{ left:1456px; top:118px; background:var(--violet); }
+  .p3{ left:1492px; top:188px; background:var(--glare); }
+  .p4{ left:1360px; top:330px; background:var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="cover" data-out="linkedin-cover.png">
+  <div class="eyebrow"><span class="dot"></span>AI Agent Architect · Full-stack Engineer</div>
+  <div class="name">CHAN MENG</div>
+  <div class="rule"></div>
+  <div class="role">Production AI systems · Open-source agent &amp; AI-tooling · Auckland, New Zealand</div>
+  <div class="tagline">« Subtraction for life, addition for thought. »</div>
+
+  <!-- right composition -->
+  <div class="block b-violet"></div>
+  <div class="block b-ink"></div>
+  <div class="block b-orange"></div>
+  <div class="block b-glare"></div>
+  <img class="logo" src="../brands/chan-monkey-logo-black.svg" alt="">
+  <div class="px p1"></div>
+  <div class="px p2"></div>
+  <div class="px p3"></div>
+  <div class="px p4"></div>
+</div>
+
+</body>
+</html>

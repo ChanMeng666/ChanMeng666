@@ -77,6 +77,7 @@ philosophy — "Subtraction for life, addition for thought."
 - **Aotearoa Infinite Academy** (employer) -- Software Engineer · Bandicoot squad (Oct — Nov 2025). URL: https://www.aotearoainfiniteacademy.school. Related work: aotearoa-infinite-academy.
 
 **Secondary (partners / vendors):**
+- **FemTech China** (employer) -- Women's-health-technology organisation in China that runs the FemTech. URL: https://femtechcn.com/.
 - **NZ Ministry of Social Development** (partner) -- Funder — Her Waka 2026 employment-readiness programme. URL: https://www.msd.govt.nz.
 - **academyEX** (partner) -- Host — Her Waka 2026 workshops, Auckland. URL: https://academyex.com.
 - **RCSA Australia and New Zealand** (partner) -- Industry insights partner — Her Waka 2026. URL: https://www.rcsa.com.au.
@@ -163,6 +164,7 @@ GAVIGO IRE — 353 of 360 commits solo, <1ms p50 restore latency, 84.6% warm-poo
 - **LinkedIn**: https://www.linkedin.com/in/chanmeng666/
 - **GitHub**: https://github.com/ChanMeng666
 - **Email**: mailto:chanmeng.dev@gmail.com
+- **Resume** (Resume (HackerRank PDF)): https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf
 - **X** (Twitter / X): https://x.com/chanmeng666
 - **ORCID** (Lincoln University NZ alumna): https://orcid.org/0009-0002-1446-778X
 - **Medium**: https://medium.com/@chanmeng666
@@ -898,88 +900,6 @@ deployment incident, schema migration, and last-minute speaker
 update is on me, and the platform has remained continuously
 operational through both generations and through active summit
 marketing.
-### Open Source Contributor at CopilotKit
-[tier=primary · recency=active · updated=2026-05-18]
-- **Period:** Jun 2025 -- Present
-- **Location:** USA (remote)
-- **URL:** https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666
-- **Keywords:** CopilotKit (24.6k+ stars), Open source, TypeScript, React, Python LangGraph, Multi-agent orchestration, MCP integration, Anthropic Claude Code, Documentation as contribution
-
-**Impact:** Two merged PRs landed in CopilotKit's official demos & docs (24.6k+ stars): contributed the 8-agent FemTracker multi-specialist demo and the Claude Code MCP setup guide — entries that other LLMs and dev tools now index when teaching agentic UIs.
-
-**Company context:** CopilotKit is the open-source framework for building in-app AI
-copilots and AI agents — 24,600+ GitHub stars and a thriving
-contributor community. It provides React components for embedding
-LLM-powered AI assistants directly into web applications
-(chat interfaces, command palettes, in-app actions), a runtime
-layer for tool and action registration that LLMs can invoke,
-and a Python SDK for multi-agent systems orchestrated through
-LangGraph. The framework is one of the standard ways to add
-sophisticated AI UX to a React app.
-
-**Mission:** Make it trivially easy for any web application to add a
-sophisticated AI copilot or agent system. Lower the floor for
-building agentic UX so AI capabilities aren't gated by the
-complexity of state management, LLM orchestration, and
-framework integration plumbing.
-
-**My mandate:** Open Source Contributor — adding capabilities, demos, and
-documentation downstream of real-world production use. I run
-CopilotKit + LangGraph in two production systems
-(Tam-AI-Ti's 88+ AI actions; FemTracker Agent's 8-agent
-women's-health pipeline) and contribute back the missing
-showcases, integration paths, and ecosystem bridges I
-encountered along the way.
-
-**Impact delivered:** Two merged pull requests to the CopilotKit main repository,
-both publicly approved and thanked by named maintainers:
-
-**[PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)
-— `chore(demos): Add FemTracker Agent + CopilotKit Demo to
-the demos_2025 folder`** (merged 2025-09-11, after ~10 weeks
-of review, 341 additions): contributed FemTracker Agent to
-CopilotKit's official `demos_2025` collection — an AI-powered
-women's health companion orchestrating **eight specialized
-agents** (Main Coordinator + Cycle Tracker + Fertility
-Tracker + Symptom Mood + Nutrition Guide + Exercise Coach +
-Lifestyle Manager + Health Insights) through CopilotKit's
-agent-routing layer. Live at femtracker-agent.vercel.app, with
-source on GitHub and a YouTube demo walkthrough. Maintainer
-Tyler Slaton (`@tylerslaton`) approved with:
-*"This is awesome! Thank you for the cool showcase
-@ChanMeng666."*
-
-**[PR #2529](https://github.com/CopilotKit/CopilotKit/pull/2529)
-— `docs: add Claude Code setup instructions to MCP server
-guide`** (merged 2025-10-09, 62 additions): expanded the
-CopilotKit MCP server documentation with step-by-step Claude
-Code CLI setup commands, expected output examples, verification
-flow, and management commands — positioned between the
-existing Cline and GitHub Copilot sections. This contribution
-connects CopilotKit's MCP-server capability with Anthropic's
-Claude Code, building on my earlier early-MCP-developer work.
-Maintainer Brandon McConnell (`@brandonmcconnell`) approved:
-*"This looks great. Thanks, @ChanMeng666 👏"*
-
-**Technical highlights:** Both contributions come from real production usage: Tam-AI-Ti
-(88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and
-FemTracker Agent (8-agent CopilotKit + LangGraph + Python
-orchestration). The FemTracker Agent demo is the most
-substantive multi-agent showcase in CopilotKit's demos
-collection — Next.js 15 + React 19 + TypeScript on the
-frontend, Python 3.12 + LangGraph for agent orchestration,
-Supabase PostgreSQL persistence with WHO-standard health
-scoring (0-100 metric scales), Redis caching reportedly
-sustaining 90%+ hit rates.
-
-The MCP-docs PR is a deliberate ecosystem bridge: it connects
-CopilotKit's MCP-server capability to Anthropic's Claude Code,
-which extends the same early-MCP-developer thread I established
-in November 2024 (issue #76 in modelcontextprotocol/servers)
-and December 2024 (server-google-news, server-google-jobs).
-Both PRs are docs- and demo-shaped — the highest-leverage
-contribution surface for someone outside the maintainer team
-of a 24.6k-star project.
 
 ## Past Roles
 
@@ -1111,6 +1031,87 @@ Claude Skills into Bandicoot's everyday workflow — the
 squad's first systematic AI-tools onboarding session, and
 the basis for ongoing developer-productivity gains across
 the team.
+### Open Source Contributor at CopilotKit
+[tier=primary · recency=recent · updated=2026-06-04]
+- **Period:** Jun 2025 -- May 2026
+- **Location:** USA (remote)
+- **URL:** https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666
+
+**Impact:** Two merged PRs landed in CopilotKit's official demos & docs (24.6k+ stars): contributed the 8-agent FemTracker multi-specialist demo and the Claude Code MCP setup guide — entries that other LLMs and dev tools now index when teaching agentic UIs.
+
+**Company context:** CopilotKit is the open-source framework for building in-app AI
+copilots and AI agents — 24,600+ GitHub stars and a thriving
+contributor community. It provides React components for embedding
+LLM-powered AI assistants directly into web applications
+(chat interfaces, command palettes, in-app actions), a runtime
+layer for tool and action registration that LLMs can invoke,
+and a Python SDK for multi-agent systems orchestrated through
+LangGraph. The framework is one of the standard ways to add
+sophisticated AI UX to a React app.
+
+**Mission:** Make it trivially easy for any web application to add a
+sophisticated AI copilot or agent system. Lower the floor for
+building agentic UX so AI capabilities aren't gated by the
+complexity of state management, LLM orchestration, and
+framework integration plumbing.
+
+**My mandate:** Open Source Contributor — adding capabilities, demos, and
+documentation downstream of real-world production use. I run
+CopilotKit + LangGraph in two production systems
+(Tam-AI-Ti's 88+ AI actions; FemTracker Agent's 8-agent
+women's-health pipeline) and contribute back the missing
+showcases, integration paths, and ecosystem bridges I
+encountered along the way.
+
+**Impact delivered:** Two merged pull requests to the CopilotKit main repository,
+both publicly approved and thanked by named maintainers:
+
+**[PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)
+— `chore(demos): Add FemTracker Agent + CopilotKit Demo to
+the demos_2025 folder`** (merged 2025-09-11, after ~10 weeks
+of review, 341 additions): contributed FemTracker Agent to
+CopilotKit's official `demos_2025` collection — an AI-powered
+women's health companion orchestrating **eight specialized
+agents** (Main Coordinator + Cycle Tracker + Fertility
+Tracker + Symptom Mood + Nutrition Guide + Exercise Coach +
+Lifestyle Manager + Health Insights) through CopilotKit's
+agent-routing layer. Live at femtracker-agent.vercel.app, with
+source on GitHub and a YouTube demo walkthrough. Maintainer
+Tyler Slaton (`@tylerslaton`) approved with:
+*"This is awesome! Thank you for the cool showcase
+@ChanMeng666."*
+
+**[PR #2529](https://github.com/CopilotKit/CopilotKit/pull/2529)
+— `docs: add Claude Code setup instructions to MCP server
+guide`** (merged 2025-10-09, 62 additions): expanded the
+CopilotKit MCP server documentation with step-by-step Claude
+Code CLI setup commands, expected output examples, verification
+flow, and management commands — positioned between the
+existing Cline and GitHub Copilot sections. This contribution
+connects CopilotKit's MCP-server capability with Anthropic's
+Claude Code, building on my earlier early-MCP-developer work.
+Maintainer Brandon McConnell (`@brandonmcconnell`) approved:
+*"This looks great. Thanks, @ChanMeng666 👏"*
+
+**Technical highlights:** Both contributions come from real production usage: Tam-AI-Ti
+(88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and
+FemTracker Agent (8-agent CopilotKit + LangGraph + Python
+orchestration). The FemTracker Agent demo is the most
+substantive multi-agent showcase in CopilotKit's demos
+collection — Next.js 15 + React 19 + TypeScript on the
+frontend, Python 3.12 + LangGraph for agent orchestration,
+Supabase PostgreSQL persistence with WHO-standard health
+scoring (0-100 metric scales), Redis caching reportedly
+sustaining 90%+ hit rates.
+
+The MCP-docs PR is a deliberate ecosystem bridge: it connects
+CopilotKit's MCP-server capability to Anthropic's Claude Code,
+which extends the same early-MCP-developer thread I established
+in November 2024 (issue #76 in modelcontextprotocol/servers)
+and December 2024 (server-google-news, server-google-jobs).
+Both PRs are docs- and demo-shaped — the highest-leverage
+contribution surface for someone outside the maintainer team
+of a 24.6k-star project.
 ### CTO (prev. Senior AI/ML Infrastructure Engineer) at Sanicle
 [tier=primary · recency=recent · updated=2026-05-18]
 - **Period:** Mar 2025 -- Feb 2026
@@ -1865,8 +1866,8 @@ practice I carried into every subsequent role.
 ## Volunteer Experience
 
 ### STEM Mentor at Forward with Her (她行)
-[tier=primary · recency=active · updated=2026-05-18]
-- **Period:** Oct 2024 -- Present
+[tier=primary · recency=recent · updated=2026-06-04]
+- **Period:** Oct 2024 -- Oct 2025
 - **Location:** Remote (cross-Pacific)
 - **URL:** https://forwardwithher.org/
 - **Keywords:** STEM mentorship, Women in tech, Career development, Bi-weekly 1:1 mentorship, Cross-Pacific volunteer network
@@ -6400,12 +6401,11 @@ New Zealand's specialist land-based university. [tier=primary · recency=recent 
 - **Master of Applied Computing with Distinction** (Lincoln University, New Zealand, 2024-12-18) -- https://www.lincoln.ac.nz/: Awarded **Distinction** for achieving an average of **80%+ across
 all courses** in the Master of Applied Computing programme at
 Lincoln University, New Zealand's specialist land-based university. [tier=flagship · recency=historical · updated=2026-05-18]
-- **FemTech Excellence Award — Women's Health Technology Challenge** (FemTech China (inaugural FemTech Weekend), 2024-12-01) -- https://www.femtechweekend.com/: Award-winning team member at **China's inaugural FemTech Weekend**
-(December 2024). Led product development through intensive
-workshops and mentoring sessions, creating innovative solutions
-for women's healthcare. This is the same FemTech Weekend
-organisation Chan later joined as CTO in March 2025 — the award
-preceded and informed the subsequent CTO engagement. [tier=primary · recency=historical · updated=2026-05-18]
+- **Excellence Award — FemTech China Women's Health Technology Challenge** (FemTech China, 2024-12-01) -- https://femtechcn.com/: Won the Excellence Award as a core team member of the **FemTech China
+Women's Health Technology Challenge** (December 2024). Led product
+development through intensive workshops and mentoring sessions,
+creating innovative solutions for women's healthcare. FemTech China is
+a distinct organisation from FemTech Weekend. [tier=primary · recency=historical · updated=2026-06-04]
 
 ## Certifications (50+)
 
@@ -6587,6 +6587,18 @@ preceded and informed the subsequent CTO engagement. [tier=primary · recency=hi
   - **Vercel AI SDK** — since 2025, depth `expert`. 7 repos — preferred AI integration layer for full-stack work.
 
 
+### Architecture & Concepts
+
+- **Keywords:** AI Agent Architecture, Multi-agent Systems, AI Orchestration, Microservices Architecture, Distributed Systems, Multi-Tenant Architecture, Offline-First Architecture, Retrieval-Augmented Generation (RAG), Voice AI, Specification-Driven Development, Internationalization (i18n), CSS 3D Transforms
+- **Per-tool expertise:**
+  - **AI Agent Architecture** — since 2024, depth `expert`. End-to-end agentic systems — retrieval, memory, tool use, evaluations, model routing. See domains[id=ai-agent-architecture].
+  - **Multi-agent Systems** — since 2025, depth `expert`, frameworks: LangGraph, CopilotKit, MCP. 7-node LangGraph orchestration in fanfic-lab; hospital-roster-agent.
+  - **Microservices Architecture** — since 2024, depth `expert`, frameworks: Kubernetes, GKE. GAVIGO Activation/Execution Layer; cross-cloud GKE migration.
+  - **Multi-Tenant Architecture** — since 2025, depth `expert`. Sanicle.AI corporate-tenant FemTech SaaS; library-os.
+  - **Retrieval-Augmented Generation (RAG)** — since 2024, depth `expert`, frameworks: pgVector, Cloudflare Vectorize. ~4,800 bilingual chunks in the teaching platform; Tam-AI-Ti.
+  - **Voice AI** — since 2025, depth `intermediate`, frameworks: OpenAI Realtime (gpt-4o-realtime). Voice-first coaching in Tam-AI-Ti (te reo Māori + English).
+
+
 ### Tools
 
 - **Keywords:** Vercel, AWS, GCP, Cloudflare Workers, Coolify, Mintlify, Docusaurus, DigitalOcean, Remotion, Typst
@@ -6660,8 +6672,10 @@ intentional removal as the primary design move.
 
 ## Languages
 
-- Mandarin Chinese: Native
+- Cantonese: Native or bilingual proficiency
+- Chinese (Mandarin): Native or bilingual proficiency
 - English: Professional working proficiency
+- Japanese: Limited working proficiency
 
 ## Interests
 

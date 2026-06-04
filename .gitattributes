@@ -1,0 +1,22 @@
+# Normalize all text files to LF in the repo and working tree.
+# The build runs on Linux CI and all generators (scripts/*.mjs) write LF,
+# so enforcing LF stops the Windows autocrlf churn that made generated
+# files (linkedin/*.md, llms*.txt, dist/*.json) show as modified with no
+# real content change.
+* text=auto eol=lf
+
+# Explicit binaries — never normalize.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.pdf  binary
+*.woff  binary
+*.woff2 binary
+*.ttf  binary
+*.otf  binary
+*.eot  binary
+*.mp4  binary
+*.webm binary

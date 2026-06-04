@@ -230,6 +230,12 @@
       }
     },
 
+    "linkedin": {
+      "type": "object",
+      "description": "LinkedIn-specific narrative/curation copy. Source for the generated linkedin/linkedin-profile.json (via scripts/build-linkedin-json.mjs). Drift-prone facts are injected by the generator from the canonical main sections, so this block is kept permissive.",
+      "additionalProperties": true
+    },
+
     "interests": {
       "type": "array",
       "items": {

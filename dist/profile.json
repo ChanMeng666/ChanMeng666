@@ -2,7 +2,9 @@
   "basics": {
     "name": "Chan Meng",
     "alternateName": "Chan",
+    "pronouns": "She/Her",
     "label": "AI Agent Architect & Full-Stack Engineer",
+    "headline": "AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Creator of Tam-AI-Ti (Te Whare Tapa Whā AI Coach) | Cultural tech & women's health | Auckland, NZ",
     "image": "/public/brands/chan-monkey-logo-black.svg",
     "email": "chanmeng.dev@gmail.com",
     "url": "https://chanmeng.org/",
@@ -30,6 +32,11 @@
       {
         "network": "Email",
         "url": "mailto:chanmeng.dev@gmail.com"
+      },
+      {
+        "network": "Resume",
+        "label": "Resume (HackerRank PDF)",
+        "url": "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf"
       },
       {
         "network": "X",
@@ -372,14 +379,14 @@
       "name": "CopilotKit",
       "position": "Open Source Contributor",
       "startDate": "2025-06",
-      "endDate": null,
+      "endDate": "2026-05",
       "location": "USA (remote)",
       "url": "https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666",
       "logo": "/public/organizations/copilot-kit-logo.svg",
       "featured": true,
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-05-18",
+      "recency": "recent",
+      "lastUpdated": "2026-06-04",
       "keywords": [
         "CopilotKit (24.6k+ stars)",
         "Open source",
@@ -585,13 +592,13 @@
       "name": "Forward with Her (她行)",
       "position": "STEM Mentor",
       "startDate": "2024-10",
-      "endDate": null,
+      "endDate": "2025-10",
       "location": "Remote (cross-Pacific)",
       "url": "https://forwardwithher.org/",
       "logo": "/public/organizations/forward-with-her-logo.jpg",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-05-18",
+      "recency": "recent",
+      "lastUpdated": "2026-06-04",
       "keywords": [
         "STEM mentorship",
         "Women in tech",
@@ -5575,14 +5582,14 @@
       "summary": "Awarded **Distinction** for achieving an average of **80%+ across\nall courses** in the Master of Applied Computing programme at\nLincoln University, New Zealand's specialist land-based university.\n"
     },
     {
-      "title": "FemTech Excellence Award — Women's Health Technology Challenge",
+      "title": "Excellence Award — FemTech China Women's Health Technology Challenge",
       "tier": "primary",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-06-04",
       "date": "2024-12-01",
-      "awarder": "FemTech China (inaugural FemTech Weekend)",
-      "url": "https://www.femtechweekend.com/",
-      "summary": "Award-winning team member at **China's inaugural FemTech Weekend**\n(December 2024). Led product development through intensive\nworkshops and mentoring sessions, creating innovative solutions\nfor women's healthcare. This is the same FemTech Weekend\norganisation Chan later joined as CTO in March 2025 — the award\npreceded and informed the subsequent CTO engagement.\n"
+      "awarder": "FemTech China",
+      "url": "https://femtechcn.com/",
+      "summary": "Won the Excellence Award as a core team member of the **FemTech China\nWomen's Health Technology Challenge** (December 2024). Led product\ndevelopment through intensive workshops and mentoring sessions,\ncreating innovative solutions for women's healthcare. FemTech China is\na distinct organisation from FemTech Weekend.\n"
     }
   ],
   "certificates": [
@@ -7333,6 +7340,77 @@
       ]
     },
     {
+      "name": "Architecture & Concepts",
+      "keywords": [
+        "AI Agent Architecture",
+        "Multi-agent Systems",
+        "AI Orchestration",
+        "Microservices Architecture",
+        "Distributed Systems",
+        "Multi-Tenant Architecture",
+        "Offline-First Architecture",
+        "Retrieval-Augmented Generation (RAG)",
+        "Voice AI",
+        "Specification-Driven Development",
+        "Internationalization (i18n)",
+        "CSS 3D Transforms"
+      ],
+      "expertise": [
+        {
+          "tool": "AI Agent Architecture",
+          "since": "2024",
+          "depth": "expert",
+          "notes": "End-to-end agentic systems — retrieval, memory, tool use, evaluations, model routing. See domains[id=ai-agent-architecture]."
+        },
+        {
+          "tool": "Multi-agent Systems",
+          "since": "2025",
+          "depth": "expert",
+          "frameworks": [
+            "LangGraph",
+            "CopilotKit",
+            "MCP"
+          ],
+          "notes": "7-node LangGraph orchestration in fanfic-lab; hospital-roster-agent."
+        },
+        {
+          "tool": "Microservices Architecture",
+          "since": "2024",
+          "depth": "expert",
+          "frameworks": [
+            "Kubernetes",
+            "GKE"
+          ],
+          "notes": "GAVIGO Activation/Execution Layer; cross-cloud GKE migration."
+        },
+        {
+          "tool": "Multi-Tenant Architecture",
+          "since": "2025",
+          "depth": "expert",
+          "notes": "Sanicle.AI corporate-tenant FemTech SaaS; library-os."
+        },
+        {
+          "tool": "Retrieval-Augmented Generation (RAG)",
+          "since": "2024",
+          "depth": "expert",
+          "frameworks": [
+            "pgVector",
+            "Cloudflare Vectorize"
+          ],
+          "notes": "~4,800 bilingual chunks in the teaching platform; Tam-AI-Ti."
+        },
+        {
+          "tool": "Voice AI",
+          "since": "2025",
+          "depth": "intermediate",
+          "frameworks": [
+            "OpenAI Realtime (gpt-4o-realtime)"
+          ],
+          "notes": "Voice-first coaching in Tam-AI-Ti (te reo Māori + English)."
+        }
+      ]
+    },
+    {
       "name": "Tools",
       "keywords": [
         "Vercel",
@@ -7531,12 +7609,20 @@
   ],
   "languages": [
     {
-      "language": "Mandarin Chinese",
-      "fluency": "Native"
+      "language": "Cantonese",
+      "fluency": "Native or bilingual proficiency"
+    },
+    {
+      "language": "Chinese (Mandarin)",
+      "fluency": "Native or bilingual proficiency"
     },
     {
       "language": "English",
       "fluency": "Professional working proficiency"
+    },
+    {
+      "language": "Japanese",
+      "fluency": "Limited working proficiency"
     }
   ],
   "interests": [
@@ -8079,6 +8165,23 @@
           "relatedWorkId": "femtech-weekend"
         }
       }
+    },
+    {
+      "id": "femtech-china",
+      "name": "FemTech China",
+      "url": "https://femtechcn.com/",
+      "type": "community",
+      "industry": "Women's health technology — challenge & community organiser",
+      "hq": {
+        "city": "",
+        "region": "",
+        "countryCode": "CN"
+      },
+      "founded": "",
+      "description": "Women's-health-technology organisation in China that runs the FemTech\nChina Women's Health Technology Challenge. A distinct organisation from\nFemTech Weekend; Chan won its Excellence Award (December 2024) as a core\nteam member.\n",
+      "tier": "secondary",
+      "recency": "historical",
+      "lastUpdated": "2026-06-04"
     },
     {
       "id": "forward-with-her",
@@ -9029,6 +9132,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-06-04",
     "buildYear": "2026",
-    "buildTimestamp": "2026-06-04T04:50:34.643Z"
+    "buildTimestamp": "2026-06-04T08:12:38.782Z"
   }
 }

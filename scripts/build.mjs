@@ -916,6 +916,10 @@ if (canonical.basics?.taglines) {
 // and aren't part of the JSON Resume canonical contract for external consumers.
 delete canonical.brand;
 delete canonical.decorations;
+// strip the linkedin block — it's the source for the dedicated
+// linkedin/linkedin-profile.json artifact (via scripts/build-linkedin-json.mjs)
+// and isn't part of the JSON Resume canonical contract for external consumers.
+delete canonical.linkedin;
 
 fs.writeFileSync(
   path.join(distDir, "profile.json"),

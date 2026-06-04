@@ -25,52 +25,37 @@
   /* Pixel accents inside the panel — cyber-playground texture. */
   .panel .px{ position:absolute; width:22px; height:22px; opacity:0.9; }
 
-  /* ── Left content ── */
+  /* ── Left content — eyebrow + big action label only, vertically centred. ── */
   .eyebrow{
-    position:absolute; left:88px; top:104px;
-    font-weight:600; font-size:21px; letter-spacing:0.18em; text-transform:uppercase;
+    position:absolute; left:88px; top:226px;
+    font-weight:600; font-size:22px; letter-spacing:0.18em; text-transform:uppercase;
     display:flex; align-items:center; gap:14px;
   }
   .eyebrow .tab{ width:34px; height:7px; display:inline-block; }
 
   .headline{
-    position:absolute; left:84px; top:148px; width:660px;
-    font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:104px;
+    position:absolute; left:84px; top:276px; width:680px;
+    font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:116px;
     line-height:0.9; letter-spacing:0.012em; color:var(--ink);
+    display:flex; align-items:baseline; gap:24px; flex-wrap:wrap;
   }
-  .sub{
-    position:absolute; left:88px; top:362px; width:600px;
-    font-weight:500; font-size:22px; line-height:1.5; color:var(--ink);
+  /* The arrow is the click cue — one accent mark per card. */
+  .headline .arrow{
+    font-family:'DM Sans',sans-serif; font-weight:700; font-size:72px; line-height:1;
   }
-
-  /* CTA pill — 800px radius (brand button vocabulary). */
-  .cta{
-    position:absolute; left:88px; top:472px;
-    display:inline-flex; align-items:center; gap:14px;
-    padding:18px 34px; border-radius:800px;
-    font-weight:700; font-size:24px; letter-spacing:0.01em;
-  }
-  .cta .arrow{ font-size:26px; line-height:1; }
-
-  /* Brand lockup, bottom-left. */
-  .lockup{
-    position:absolute; left:88px; bottom:46px; display:flex; align-items:center; gap:12px;
-    font-weight:600; font-size:18px; color:var(--muted); letter-spacing:0.02em;
-  }
-  .lockup img{ width:26px; height:26px; }
 
   /* ── Per-card accent theming ── */
   .cv     .panel{ background:var(--orange); }
   .cv     .eyebrow{ color:var(--orange); } .cv .eyebrow .tab{ background:var(--orange); }
-  .cv     .cta{ background:var(--orange); color:var(--ink); }
+  .cv     .headline .arrow{ color:var(--orange); }
 
   .github .panel{ background:var(--ink); }
   .github .eyebrow{ color:var(--ink); } .github .eyebrow .tab{ background:var(--ink); }
-  .github .cta{ background:var(--ink); color:var(--white); }
+  .github .headline .arrow{ color:var(--ink); }
 
   .book   .panel{ background:var(--violet); }
   .book   .eyebrow{ color:var(--violet); } .book .eyebrow .tab{ background:var(--violet); }
-  .book   .cta{ background:var(--violet); color:var(--white); }
+  .book   .headline .arrow{ color:var(--violet); }
 </style>
 </head>
 <body>
@@ -82,7 +67,7 @@
     <span class="px" style="left:386px; top:120px; background:#070607;"></span>
     <span class="px" style="left:64px; top:520px; background:#070607;"></span>
     <span class="px" style="left:380px; top:480px; background:#F5F28E;"></span>
-    <svg width="190" height="190" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="212" height="212" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
       <path d="M14 2v6h6"/>
       <line x1="8" y1="13" x2="16" y2="13"/>
@@ -91,10 +76,7 @@
     </svg>
   </div>
   <div class="eyebrow"><span class="tab"></span>Curriculum Vitae</div>
-  <div class="headline">READ THE<br>FULL CV</div>
-  <div class="sub">Two-page CV — AI Agent Architect on Anthropic's Partner Network track, production AI systems, open-source proof.</div>
-  <div class="cta">View CV <span class="arrow">&#8594;</span></div>
-  <div class="lockup"><img src="../../public/brands/chan-monkey-logo-black.svg" alt="">chanmeng.org</div>
+  <div class="headline">VIEW CV <span class="arrow">&#8594;</span></div>
 </div>
 
 <!-- ═══ Card 2 — Visit GitHub ═══ -->
@@ -104,15 +86,12 @@
     <span class="px" style="left:386px; top:120px; background:#524AE9;"></span>
     <span class="px" style="left:64px; top:520px; background:#F5F28E;"></span>
     <span class="px" style="left:380px; top:480px; background:#FC5000;"></span>
-    <svg width="186" height="186" viewBox="0 0 24 24" fill="#FFFFFF">
+    <svg width="208" height="208" viewBox="0 0 24 24" fill="#FFFFFF">
       <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
     </svg>
   </div>
   <div class="eyebrow"><span class="tab"></span>Open Source</div>
-  <div class="headline">SEE THE<br>CODE</div>
-  <div class="sub">MCP servers, Claude Code tooling, 340+ animated-SVG templates — shipped, starred, and adopted across the ecosystem.</div>
-  <div class="cta">Visit GitHub <span class="arrow">&#8594;</span></div>
-  <div class="lockup"><img src="../../public/brands/chan-monkey-logo-black.svg" alt="">github.com/ChanMeng666</div>
+  <div class="headline">SEE THE CODE <span class="arrow">&#8594;</span></div>
 </div>
 
 <!-- ═══ Card 3 — Book a call ═══ -->
@@ -122,7 +101,7 @@
     <span class="px" style="left:386px; top:120px; background:#F5F28E;"></span>
     <span class="px" style="left:64px; top:520px; background:#FFFFFF;"></span>
     <span class="px" style="left:380px; top:480px; background:#FC5000;"></span>
-    <svg width="184" height="184" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="206" height="206" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
       <rect x="3" y="4" width="18" height="18" rx="2"/>
       <line x1="16" y1="2" x2="16" y2="6"/>
       <line x1="8" y1="2" x2="8" y2="6"/>
@@ -131,10 +110,7 @@
     </svg>
   </div>
   <div class="eyebrow"><span class="tab"></span>Let's Talk</div>
-  <div class="headline">BOOK A<br>30-MIN CALL</div>
-  <div class="sub">Hiring, collaboration, or AI-tooling advice — pick a slot that suits you and let's get into the detail.</div>
-  <div class="cta">Book a time <span class="arrow">&#8594;</span></div>
-  <div class="lockup"><img src="../../public/brands/chan-monkey-logo-black.svg" alt="">cal.com/chan-meng/30min</div>
+  <div class="headline">BOOK A CALL <span class="arrow">&#8594;</span></div>
 </div>
 
 </body>

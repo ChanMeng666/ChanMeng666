@@ -34,15 +34,16 @@
     line-height:0.86; letter-spacing:0.02em; color:var(--ink);
   }
 
-  .rule{ position:absolute; left:98px; top:286px; width:132px; height:7px; background:var(--orange); }
-
-  .role{
-    position:absolute; left:98px; top:306px; white-space:nowrap;
-    font-weight:600; font-size:23px; letter-spacing:0.005em; color:var(--ink); line-height:1.35;
+  /* ── Single signature line — set in the lower-centre band, well clear of the
+        round profile avatar that LinkedIn overlays on the bottom-left. ── */
+  .signature{
+    position:absolute; left:500px; top:300px; white-space:nowrap;
+    display:flex; align-items:center; gap:18px;
   }
-  .tagline{
-    position:absolute; left:98px; top:344px; white-space:nowrap;
-    font-style:italic; font-weight:400; font-size:18px; color:var(--muted);
+  .signature .mark{ width:30px; height:6px; background:var(--orange); flex:none; }
+  .signature .text{
+    font-style:italic; font-weight:400; font-size:23px; letter-spacing:0.005em;
+    color:var(--ink);
   }
 
   /* ── Right-side color-block composition — flat squares + logo lockup. ── */
@@ -72,9 +73,10 @@
 <div class="cover" data-out="linkedin-cover.png">
   <div class="eyebrow"><span class="dot"></span>AI Agent Architect · Full-stack Engineer</div>
   <div class="name">CHAN MENG</div>
-  <div class="rule"></div>
-  <div class="role">Production AI systems · Open-source agent &amp; AI-tooling · Auckland, New Zealand</div>
-  <div class="tagline">« Subtraction for life, addition for thought. »</div>
+  <div class="signature">
+    <span class="mark"></span>
+    <span class="text">Subtraction for life, addition for thought.</span>
+  </div>
 
   <!-- right composition -->
   <div class="block b-violet"></div>

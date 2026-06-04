@@ -19,7 +19,7 @@ const { chromium } = require(
 );
 
 const repoRoot = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
-const dir = path.join(repoRoot, "public", "linkedin-services");
+const dir = path.join(repoRoot, "linkedin", "linkedin-services");
 
 const SOURCES = ["cards.html", "cover.html", "featured.html"];
 
@@ -54,4 +54,4 @@ for (const file of SOURCES) {
 
 await context.close();
 await browser.close();
-console.log(`\nExported ${total} image(s) to public/linkedin-services/`);
+console.log(`\nExported ${total} image(s) to linkedin/linkedin-services/`);

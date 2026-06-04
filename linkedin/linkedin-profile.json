@@ -1,0 +1,2264 @@
+{
+  "_meta": {
+    "description": "Structured snapshot of Chan Meng's live LinkedIn profile copy. Canonical store for LinkedIn section text; markdown companions in this folder are kept in sync with it.",
+    "profileUrl": "https://www.linkedin.com/in/chanmeng666/",
+    "capturedAt": "2026-06-04",
+    "source": "Live LinkedIn page text, finalised and confirmed by Chan Meng. Facts trace to data/profile.yaml; live-only details (engagement stats, credential IDs, media captions) captured here.",
+    "notes": {
+      "skills": "Flat list mirroring the live Skills 'All' view (order preserved). Each skill records its associated experiences/projects/certificates and any endorsement signals. LinkedIn groups skills under the tabs in skills.categories, but the 'All' view does not expose which tab each skill belongs to, so per-skill category is not recorded.",
+      "honorsAndAwards": "Six entries in live display order (newest first), captured verbatim from the live profile (all six now live, UN CSW 69 Speaker included). FemTech Weekend and FemTech China are DISTINCT organisations: the Excellence Award (Dec 2024) is issued by FemTech China; the UN Women FemTech Hackathon Outstanding Performer award (Mar 2025) is from FemTech Weekend. All 'issuer' and 'associatedWith' values are taken exactly as shown on the live page.",
+      "publications": "Mirrors the live Publications section (12 entries, newest first, with the dates LinkedIn displays). The 3 flagship LinkedIn Pulse technical articles from the earlier curated draft are NOT on the live page and are omitted here.",
+      "recommendations": "Received recommendations only (18), newest first, captured verbatim including bilingual (Chinese + English) text where the recommender wrote both."
+    },
+    "sections": [
+      "banner",
+      "about",
+      "services",
+      "featured",
+      "experience",
+      "education",
+      "licensesAndCertifications",
+      "skills",
+      "projects",
+      "volunteering",
+      "honorsAndAwards",
+      "recommendations",
+      "publications",
+      "languages"
+    ]
+  },
+  "banner": {
+    "name": "Chan Meng",
+    "pronouns": "She/Her",
+    "headline": "AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Creator of Tam-AI-Ti (Te Whare Tapa Whā AI Coach) | Cultural tech & women's health | Auckland, NZ",
+    "location": "Auckland, Auckland, New Zealand",
+    "currentEmployerBadge": "Engram",
+    "educationBadge": "Lincoln University (NZ)",
+    "websiteLabel": "My Website",
+    "connections": "500+",
+    "openToWork": true,
+    "websiteUrl": "https://chanmeng.org/"
+  },
+  "about": {
+    "lead": "Building at the intersection of AI, cultural technology, and women's health.\n\nI architect AI agents that survive production and build the platforms around them — for founders who need to move fast, teams who need depth, and products whose users aren't the default Silicon Valley persona.",
+    "sections": [
+      {
+        "emoji": "🤖",
+        "heading": "AI Agent Engineering",
+        "body": "Agentic systems designed end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, and model routing across Claude, OpenAI, and Llama. Earliest-ecosystem MCP server author — Google News MCP (PulseMCP Top Pick, Glama A-rating). FemTracker Agent merged into CopilotKit's official demos repo (24.6k★)."
+      },
+      {
+        "emoji": "💻",
+        "heading": "Full-Stack Foundations",
+        "body": "Next.js, TypeScript, Drizzle/Postgres, Stripe, Kubernetes. I've shipped voice-first interfaces (gpt-4o-realtime), bilingual UX, and zero-downtime cloud migrations. GAVIGO IRE — p50 < 1 ms activation, production-validated by Google for Startups + NVIDIA Inception."
+      },
+      {
+        "emoji": "🌿",
+        "heading": "Cultural-First Technology",
+        "body": "When your audience isn't the default Silicon Valley user, the framework belongs in the schema, not in UI decoration. Tam-AI-Ti — an AI Financial Wellness Coach for Māori communities — encodes Te Whare Tapa Whā as a first-class domain model. 351 solo commits, 48-table schema, voice-first coaching in te reo Māori and English."
+      },
+      {
+        "emoji": "🚀",
+        "heading": "Current & Recent Work",
+        "body": "AI Agent Architect @ Engram (Anthropic Partner Network Architect Cohort) · former CTO @ Sanicle Inc. → IBM Silver Partner via watsonx integration · Senior Engineer & Ambassador @ She Sharp (2,200+ member NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest (4 cohorts, bilingual platform built solo)."
+      },
+      {
+        "emoji": "🎓",
+        "heading": "Credentials & Earlier Journey",
+        "body": "Master of Applied Computing with Distinction, Lincoln University, New Zealand · pursuing Claude Certified Architect — Foundations · former Backend Engineer @ ByteDance (Go services) · UN CSW 69 Speaker recognized by UN Women · 12 companies, 72 shipped projects across the journey."
+      },
+      {
+        "emoji": "🎙️",
+        "heading": "Public Voice",
+        "body": "Host of three Spotify shows: Decoding the Future, Future Turing, and Praxis and Pages. Media-featured for the minimalist lifestyle philosophy: \"Subtraction for life, addition for thought.\""
+      },
+      {
+        "emoji": "📍",
+        "heading": "Now",
+        "body": "Based in Auckland, Aotearoa New Zealand. Open to founding-team, staff-IC, AI architecture, and AI-engineering instruction engagements starting Q3 2026."
+      }
+    ],
+    "topSkills": [
+      "AI Agent Architecture",
+      "Model Context Protocol (MCP)",
+      "Multi-agent Systems",
+      "Kubernetes",
+      "AI Integration"
+    ]
+  },
+  "services": {
+    "pageTitle": "Chan's Services",
+    "openToWork": true,
+    "overview": "I take AI ideas from \"we should build that\" to systems production users actually rely on. Agentic infrastructure — retrieval, memory, tool use, evaluations — designed in from day one. Production-rigorous: load tests, zero-downtime migrations, privacy by default. Solo end-to-end when speed matters; paired with your team when continuity does. I document what I build and train your engineers to keep shipping after I leave.",
+    "reviews": "No reviews yet",
+    "availability": "Remote or in person (Auckland)",
+    "pricing": "Contact for pricing",
+    "servicesProvided": [
+      "IT Consulting",
+      "Mobile Application Development",
+      "Web Development",
+      "Custom Software Development"
+    ]
+  },
+  "featured": [
+    {
+      "type": "Link",
+      "title": "View my resume ❤",
+      "url": "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf"
+    },
+    {
+      "type": "Link",
+      "title": "View my projects 👩‍💻",
+      "site": "GitHub",
+      "url": "https://github.com/ChanMeng666"
+    },
+    {
+      "type": "Link",
+      "title": "Let's chat! 📞",
+      "site": "Cal.com",
+      "url": "https://cal.com/chan-meng/30min"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Engram",
+      "links": [
+        "https://engram.media/"
+      ],
+      "positions": [
+        {
+          "title": "AI Agent Architect",
+          "employmentType": "Contract",
+          "dateRange": "May 2026 - Present",
+          "duration": "2 mos",
+          "location": "Albuquerque, New Mexico, United States · Remote",
+          "foundViaLinkedIn": true,
+          "description": "Selected as AI Architect for Engram — a US AI-media agency rebuilding itself around AI agents that run a client's entire media department end-to-end.\n\nHow I was hired: founder Luka Madzarac asked Claude AI itself to recommend top AI engineers as the company entered Anthropic's Partner Network. My open-source portfolio came back as Claude's top recommendation. Luka confirmed publicly: \"Claude Code surfaced Chan as one of the strongest matches.\"\n\nWhat I work on:\n\n• Designing Mission Control plus specialised agents that run a client's media operation — natural language in, finished campaigns out.\n• MCP (Model Context Protocol) integration patterns — Anthropic's open standard for letting AI agents safely use real tools, APIs, and data.\n• \"API-as-UI\" design — products where the AI's reasoning IS the interface, not a chat widget bolted onto a form.\n• Anthropic Partner Network curriculum + Claude Certified Architect — Foundations (CCA-F) exam, on top of held credentials in AI Fluency and Claude Code in Action.",
+          "skills": [
+            "Model Context Protocol (MCP)",
+            "Anthropic Claude"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "Engram Media"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "TechNest Community",
+      "links": [
+        "https://programming.chanmeng.org/",
+        "https://www.technestcommunity.com/"
+      ],
+      "positions": [
+        {
+          "title": "AI Instructor & Mentor",
+          "dateRange": "Apr 2026 - Present",
+          "duration": "3 mos",
+          "location": "St John's, Newfoundland and Labrador, Canada · Remote",
+          "description": "Designed and sole-teach TechNest Community's first AI engineering mentorship track — the only AI cohort the Canadian nonprofit is running in 2026. Reports directly to TechNest leadership Abiodun Oyedele and Afolasade Bello.\n\nProgramme: 12 weeks, April 25 – July 17, 2026. Curriculum thesis: \"natural language is now the source code.\" Students don't write code by hand — they direct AI assistants (Cursor, Claude Code, Gemini CLI) to ship real applications.\n\n• Week 8 outcome: each student owns a live AI-powered personal site — portfolio + AI-clone chatbot + blog + auto-generated CV — on Next.js + Neon Postgres + Drizzle + Vercel.\n• Week 12 outcome: each team of 2–4 ships a deployed multi-user AI SaaS — habit coaches, AI story studios, dorm chore splitters. Public Demo Day with audience voting.\n• Built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, 95.7% solo (198 of 207 commits). Hosts 4 cohorts side-by-side with a version-aware RAG assistant — students query their cohort's own materials and get answers from inside the course content.\n• Fully bilingual EN / CN.",
+          "skills": [
+            "Curriculum Development",
+            "AI-Assisted Development"
+          ],
+          "moreSkillsCount": 2,
+          "media": [
+            "AI Programming Learning Platform - Master AI Programming"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Gavigo",
+      "companyDuration": "9 mos",
+      "companyLocation": "Remote",
+      "links": [
+        "https://ire.gavigo.com/",
+        "https://gavigo.com/"
+      ],
+      "positions": [
+        {
+          "title": "Founding Engineer",
+          "dateRange": "Feb 2026 - Present",
+          "duration": "5 mos",
+          "location": "1007 N Orange St, 4th Floor, 4785, Wilmington, Delaware 19801, USA",
+          "foundViaLinkedIn": true,
+          "description": "Promoted from Core Engineer to Founding Principal Engineer at Gavigo across three formalised contracts in 6 months. I own the Intelligence Layer of Gavigo IRE — Gavigo's \"Instant Reality Exchange\" platform, which lets users open straight into a game without an app-store install. Reports to founder & CEO Saba Gecgil.\n\nWhat \"instant\" means in production:\n\n• Users get into the experience in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel. Warm-pool hit rate 84.6%; 0 errors at 100 concurrent live users under load.\n• 360 total platform commits, 353 (98%) authored solo.\n\nExternal validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com.\n\nHardest work shipped:\n\n• Sub-millisecond restore via a 5-state engine with atomic Redis transitions and timestamped proof signals — every speed claim is auditable in production logs, not asserted.\n• Cross-cloud migration: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single 30-minute zero-downtime cutover.\n• 7-trigger AI rules engine deciding which games to pre-load, for whom, when.\n\nStack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, GPT-4o-mini.",
+          "skills": [
+            "Go (Programming Language)",
+            "Kubernetes"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "GAVIGO IRE - AI Container Orchestration Dashboard"
+          ]
+        },
+        {
+          "title": "Core Engineer (M1 Prototype)",
+          "dateRange": "Oct 2025 - Feb 2026",
+          "duration": "5 mos",
+          "location": "Wilmington, Delaware, United States",
+          "foundViaLinkedIn": true,
+          "description": "Original consulting engagement at Gavigo (signed October 17, 2025) to architect and ship the M1 prototype for Gavigo's Instant Reality Exchange (IRE) platform — the foundational system for eliminating friction between user intent and digital experience in the \"post-app world.\" The prototype shipped here is what led Gavigo to amend my contract twice and promote me to Founding Principal Engineer with founder-level equity.\n\nWhat I built:\n\n• End-to-end M1 visualisation prototype demonstrating cross-domain content switching, AI-driven orchestration, and zero-latency \"Instant Interaction Points\" — the artefact Gavigo took into investor and partner conversations.\n• Microservices architecture on Kubernetes + Docker, Next.js / React frontend with Python AI services — simulating intelligent workload management and proactive scaling.\n• Rule-based AI orchestration engine — the early ancestor of today's production 7-trigger Rules Engine.\n• Real-time WebSocket protocol with millisecond-precision timestamps so investors could see the \"decide → patch → respond\" chain happen live.\n• Investor-facing dashboard exposing AI decision-making and resource allocation in real time.",
+          "skills": [
+            "Microservices Architecture",
+            "Kubernetes"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "GAVIGO - Skip the Store. Start the Play | Instant Mobile Gaming Revolution"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "She Sharp",
+      "links": [
+        "https://shesharp.org.nz/",
+        "https://she-sharp-zeta.vercel.app/"
+      ],
+      "positions": [
+        {
+          "title": "Senior Full Stack Engineer & Website Team Lead",
+          "dateRange": "Jul 2025 - Present",
+          "duration": "1 yr",
+          "location": "Auckland Central, Auckland, New Zealand · Hybrid",
+          "foundViaLinkedIn": true,
+          "description": "Recruited directly by founder Dr Mahsa Mohaghegh (Head of Computer and Information Sciences, School of Engineering, Computer and Mathematical Sciences at AUT) as the senior AI + full-stack engineer She Sharp didn't have in-house. She Sharp is New Zealand's leading women-in-STEM community — registered charitable trust (CC57025), 2,200+ members, 1,000+ active, 8,000+ women supported lifetime, 50+ corporate partners, 84+ events since 2014.\n\nMandate: replace the no-code Webflow site with a real engineering platform, and own it operationally.\n\nWhat shipped (648 of 748 commits solo — 86.6% — across 10 months):\n\n• AI mentor-mentee matching engine — GPT-4o-mini scoring potential pairs across 5 weighted dimensions (skill, goal, personality, industry, logistics) with explainable natural-language reasons, rule-based fallback, Redis caching, and human admin approval as the final gate.\n• Three role-permissioned dashboards (mentor / mentee / admin), Stripe membership billing, audit logging.\n• Custom Slack ecosystem: weekly stats digest, NZ funding-opportunities crawler (6 sources scored for member relevance, top 10 posted weekly), event-page publisher via Claude Code agent skill. Each automation removes hours of weekly volunteer work.\n• Python migration crawler preserved 10+ years of legacy content with zero broken links.\n\nStack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Tailwind 4, Vercel.",
+          "skills": [
+            "Next.js",
+            "Full-Stack Development"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "She Sharp - Connecting Women in Technology",
+            "1755385997508.jpeg",
+            "1755253595927.jpeg"
+          ],
+          "mediaTotal": 4
+        }
+      ]
+    },
+    {
+      "company": "FemTech Weekend",
+      "links": [
+        "https://www.femtechweekend.com/"
+      ],
+      "positions": [
+        {
+          "title": "Chief Technology Officer (CTO)",
+          "dateRange": "Mar 2025 - Present",
+          "duration": "1 yr 4 mos",
+          "location": "Shanghai, China · Remote",
+          "foundViaLinkedIn": true,
+          "description": "Sole technical leader and co-architect with founder Zhu Yihan at FemTech Weekend — China's first organisation built around women's health technology (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders). Currently delivering all engineering for the 2026 Shanghai Summit.\n\nBuilt and shipped two complete platform generations from scratch, solo:\n\n• Generation 1 — femtechweekend.com (Mar 2025–). Next.js 15 with Notion as the CMS so the non-technical founder could publish directly inside Notion (a tool she already used daily) and the website rendered it live. Bilingual EN / CN from day one. 58 commits, 100% solo.\n• Generation 2 — current platform (May 2025–). Deliberate rebuild on Docusaurus when the site's centre of gravity shifted from \"marketing site with CMS\" to \"research publication and multi-event hub.\" Adds Drizzle + Neon Postgres for typed application data, deployed on Cloudflare Pages for global edge delivery. 544 commits, 529 solo (97.2%).\n\nShanghai Summit 2026 (June 22–25): 16 confirmed speakers headlined by Ida Tin — the Clue co-founder who coined the term \"FemTech\" in 2016. Multi-tier sponsorship; AVPN among named partners. Every page rendered through infrastructure I designed and operate solo.\n\nTwo original research reports published through the platform: FemTech Market Map for Greater China (May 2025), FemmeHealth Ventures Alliance announcement (June 2025).",
+          "skills": [
+            "Technical Leadership",
+            "Bilingual Web Development"
+          ],
+          "moreSkillsCount": 2,
+          "media": [
+            "FemTech Weekend | Femtech Weekend"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "CopilotKit",
+      "links": [
+        "https://www.copilotkit.ai/",
+        "https://github.com/CopilotKit/CopilotKit/pull/2529",
+        "https://github.com/CopilotKit/CopilotKit/pull/2068"
+      ],
+      "positions": [
+        {
+          "title": "Open Source Contributor",
+          "dateRange": "Jun 2025 - May 2026",
+          "duration": "1 yr",
+          "location": "Seattle, Washington, United States · Remote",
+          "description": "Two merged PRs in CopilotKit (24,600+ GitHub stars) — the open-source framework for building in-app AI copilots and agents — both publicly approved by named maintainers. Both contributions came directly from production systems I run.\n\nPR #2068 — FemTracker Agent demo (merged September 2025, after 10 weeks of review). Contributed an 8-agent women's-health companion to CopilotKit's official demos_2025 collection: a Main Coordinator routes requests to specialists in cycle tracking, fertility, symptoms, nutrition, exercise, lifestyle, and health insights, using WHO-standard scoring scales.\n\nMaintainer Tyler Slaton: \"This is awesome! Thank you for the cool showcase @ChanMeng666.\"\n\nPR #2529 — Claude Code MCP setup guide (merged October 2025). Expanded CopilotKit's MCP (Model Context Protocol — Anthropic's open standard for AI agents to safely use tools and data) documentation with step-by-step Claude Code setup — bridging CopilotKit's React framework with Anthropic's Claude Code CLI.\n\nMaintainer Brandon McConnell: \"This looks great. Thanks, @ChanMeng666 👏\"\n\nStack of the FemTracker demo: Next.js 15 + React 19 + TypeScript on the frontend; Python 3.12 + LangGraph for multi-agent orchestration; Supabase Postgres; Redis caching at 90%+ hit rate.",
+          "skills": [
+            "Model Context Protocol (MCP)",
+            "Open Source Contribution"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "docs: add Claude Code setup instructions to MCP server guide by ChanMeng666 · Pull Request #2529 · CopilotKit/CopilotKit",
+            "chore(demos): Add FemTracker Agent + CopilotKit Demo to the demos_2025 folder by ChanMeng666 · Pull Request #2068 · CopilotKit/CopilotKit",
+            "screencapture-github-CopilotKit-CopilotKit-pull-2529-2025-10-22-23_10_45.png"
+          ],
+          "mediaTotal": 4
+        }
+      ]
+    },
+    {
+      "company": "Sanicle",
+      "companyDuration": "1 yr",
+      "companyLocation": "Tulsa, Oklahoma, United States · Remote",
+      "links": [
+        "https://sanicle-wellness-agent-2lxj5uw.gamma.site/",
+        "https://www.ibm.com/partnerplus/directory/solution/0638",
+        "https://www.ibm.com/partnerplus/directory/company/9542"
+      ],
+      "positions": [
+        {
+          "title": "Chief Technology Officer (CTO)",
+          "dateRange": "Sep 2025 - Feb 2026",
+          "duration": "6 mos",
+          "foundViaLinkedIn": true,
+          "description": "CTO of Sanicle.Cloud — a US-based FemTech B2B SaaS tackling menstrual and menopause workplace wellness. Direct managers: CEO Paige Afanu (Omopeju Afanu) and Chief Period Officer Chaste Christopher Inegbedion. Peers: CXO Gabrielle J. Hurst, Chief AI Officer Daryll Hall.\n\nHeadline business outcome: IBM Silver Partner certification for Sanicle. My integration of IBM watsonx AI (running Llama 3.1 405B) inside employee dashboards was the engineering work that anchored Sanicle's entry into the IBM Business Partner Network. Sanicle.Cloud is now listed in IBM's official PartnerPlus Solution Directory. The same partnership positioned Sanicle for strategic conversations with Google for investment.\n\nWhat I owned (5 production codebases, ~350+ commits, ~98% solo):\n\n• Sanicle.Cloud corporate site (migrated off legacy Bubble no-code after I recommended it).\n• Sanicle.AI — multi-tenant FemTech platform with role-separated dashboards (Employee / HR Manager / Org Admin), cycle tracking, AI consultations, leave-request workflows, HR analytics.\n• Dual-AI resilience: IBM watsonx primary, Google Gemini fallback when watsonx exceeds Vercel's timeout ceiling.\n• Mobile PWA prototype + executive demo deck used in IBM partner conversations.\n\nPublic Next.js contribution: published a multi-cause production fix for a NextAuth 5 + Next.js 15 auth-redirect failure on the Vercel community forum. Publicly thanked by Vercel Staff (Amy Egan). Featured in THISDAYLIVE (May 2025) on FemTech founders.",
+          "skills": [
+            "Technology Leadership",
+            "IBM watsonx"
+          ],
+          "moreSkillsCount": 3,
+          "media": []
+        },
+        {
+          "title": "Senior AI/ML Infrastructure Engineer",
+          "dateRange": "Mar 2025 - Oct 2025",
+          "duration": "8 mos",
+          "description": "Hired as Senior AI/ML Infrastructure Engineer in February 2025. The role covered Sanicle's intense active-build phase — 14 weeks of solo development that took the company from a legacy Bubble no-code site to a production B2B SaaS platform.\n\nTwo flagship products designed and shipped:\n\n• Sanicle.Cloud corporate website (Next.js 15 + React 19) — replaced the legacy no-code site after I recommended the migration. Integrated IBM watsonx AI as a conversational customer-service assistant driving visitor engagement.\n• Sanicle.AI — core multi-tenant FemTech SaaS with role-separated dashboards for employees and HR. Includes predictive absenteeism alerts (so HR can plan around health-driven leave patterns) and HRIS integration.\n\nEngineering achievements that translated directly to business outcomes:\n\n• Integrated IBM Cloud watsonx AI inside employee dashboards — AI health consultations and automated leave requests. Anchored Sanicle's IBM Silver Partner certification.\n• Built secure multi-tenant architecture (one platform serving multiple employer organisations safely) with end-to-end encryption and GDPR compliance — PostgreSQL + Drizzle, NextAuth 5 with bcrypt + OAuth, Employee / HR Manager / Org Admin roles.\n• Designed Vercel + Upstash Redis infrastructure for enterprise-scale tenants.\n\nThis is the work that carried Sanicle into formal partnership conversations with IBM and Google.",
+          "skills": [
+            "IBM watsonx",
+            "Next.js"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "Sanicle Wellness Agent",
+            "Sanicle.Cloud",
+            "Sanicle.cloud is an AI-powered SaaS platform helping employers scale menstrual and menopause wellness benefits for healthier workplaces."
+          ],
+          "mediaTotal": 8
+        }
+      ]
+    },
+    {
+      "company": "Aotearoa Infinite Academy",
+      "links": [
+        "https://www.aotearoainfiniteacademy.school/"
+      ],
+      "positions": [
+        {
+          "title": "Software Developer",
+          "dateRange": "Oct 2025 - Nov 2025",
+          "duration": "2 mos",
+          "location": "Auckland Central, Auckland, New Zealand · Remote",
+          "description": "Joined Crimson Academies' newly-formed Bandicoot engineering squad as Software Engineer for Aotearoa Infinite Academy (AIA) — New Zealand's first free online charter high school, confirmed October 14, 2025, opening Term 1 2026. Reports directly to founder/CEO Penelope Barton.\n\nFour parallel tracks:\n\n• ESOL learning platform — designed and shipped solo, end-to-end. Blank slate to v2 deployment in the first weekend. 6-role dashboard (System Admin / School Admin / Department Head / Teacher / Student / Parent), conversation transcription, audio recording for AI dialogue practice. UI/UX iterated against feedback from CGA Director of Curriculum & Pedagogy Becky Hancock.\n• LMS monorepo refactor (Emi → Infinite, multi-tenant). Took the existing Firestore-based Emi LMS and refactored it onto Firebase DataConnect + PostgreSQL (Cloud SQL) — one Firebase project safely hosting two distinct school deployments (Emi Primary + AIA's Infinite-Learn) with shared auth and a single source-of-truth database.\n• Led Bandicoot's first systematic AI Tools Training Session (Wispr Flow, Claude Skills, Claude Code, Specification-Driven Development via Spec Kit, Mermaid).\n• SMS/email vendor analysis (Twilio + Resend) with pricing breakdown for the Emi project.\n\nOpen-source artefact launched here: claude-code-audio-hooks — explicitly preserved as my IP in the subsequent Engram Architect Cohort engagement letter.",
+          "skills": [
+            "Firebase",
+            "Multi-Tenant Architecture"
+          ],
+          "moreSkillsCount": 3,
+          "media": []
+        }
+      ]
+    },
+    {
+      "company": "Forward with Her 她行",
+      "links": [
+        "https://www.linkedin.com/company/taxing-mentorship/"
+      ],
+      "positions": [
+        {
+          "title": "Mentor - Technology & Professional Development",
+          "dateRange": "Oct 2024 - Sep 2025",
+          "duration": "1 yr",
+          "location": "Beijing, China · Remote",
+          "description": "Technology & Professional Development Mentor for one full annual cycle inside Forward with Her (她行 / taxing-mentorship) — a women-in-STEM mentor-mentee network connecting 360+ mentors with 800+ mentees globally across software engineering, data, product, and AI.\n\nIndependently-attested impact: seven of the eighteen public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.\n\nWhat I delivered: 1:1 mentorship across software engineering, AI tooling, and career navigation; group Office Hours; public lectures on AI programming, identity formation in tech, and career navigation for early-career women; a bilingual EN/CN promo site for the programme (3D Next.js 15 + Three.js, Cloudflare Pages).\n\nThe teaching doctrine I built here — \"natural language is the source code\"; ship a real production site by Week 8 — later became the foundation for the 2026 TechNest AI Track curriculum.",
+          "skills": [
+            "Technical Mentorship",
+            "AI-Assisted Development"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "Screenshot_2025-02-11-19-34-08-434_com.tencent.mm.jpg",
+            "IMG_20250215_130218.jpg",
+            "IMG_20250214_233035.jpg"
+          ],
+          "mediaTotal": 5
+        }
+      ]
+    },
+    {
+      "company": "FreePeriod",
+      "links": [
+        "https://free-period-website.pages.dev/"
+      ],
+      "positions": [
+        {
+          "title": "Chief Technology Officer (CTO)",
+          "dateRange": "Nov 2024 - Jun 2025",
+          "duration": "8 mos",
+          "location": "Guangzhou, Guangdong, China · Remote",
+          "description": "Solo CTO at FreePeriod — a Guangzhou-based public-health startup tackling period poverty through emergency sanitary-pad dispensers, reproductive-health education, and policy advocacy. Founded 2024 by Julia Zhu, incubated at HKUST(Guangzhou) Lab of Future Technology. The product combines software with off-grid solar-powered hardware deployed in public spaces.\n\nJoined during the company's external-validation cycle. Six named awards in 2024–2025, with the website I built as the public artefact every judging panel was clicking through:\n\n• Best Award — Japan's 12th International Conference on Social Sciences and Humanities\n• Third Prize — HKUST Sustainable Smart Living Competition\n• Best Social Media — China's inaugural FemTech Weekend Challenge\n• First Prize — Shenzhen Nanshan District Philanthropic Creative Star Contest\n• Selected — Tencent Technology Venture Capital Program\n• Selected — Tsinghua University SDG Open Innovation Marathon\n• HKUST Entrepreneurship Bridge Grant\n\nBuilt and shipped the official site end-to-end, solo — 53 commits, 100% authored by me.\n\nWhat the site does:\n\n• Interactive Google Maps directory of dispenser locations — visitors find free menstrual products near them; each rollout is one git commit with full audit history.\n• Fully bilingual (EN / CN) — serving domestic Chinese policy partners and international academic/grant audiences.\n• Document and video preview pipelines for advocacy briefs and partnership decks.\n\nStayed on post-tenure as long-term technical custodian; executed Vercel → Cloudflare Pages migration in April 2026 without rebuilding the app.",
+          "skills": [
+            "Next.js",
+            "TypeScript"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "FreePeriod Official",
+            "Business Plan",
+            "20241201155453.jpg"
+          ],
+          "mediaTotal": 8
+        }
+      ]
+    },
+    {
+      "company": "ByteDance",
+      "links": [
+        "https://juejin.cn/post/7437020309973155849",
+        "https://www.bytedance.com/en/"
+      ],
+      "positions": [
+        {
+          "title": "Backend Developer",
+          "dateRange": "Nov 2024 - Mar 2025",
+          "duration": "5 mos",
+          "location": "Shanghai, China · Remote",
+          "description": "Selected into ByteDance's Youth Training Camp — in the Team 115. ByteDance is the parent of Douyin (China's TikTok), TikTok, Toutiao, CapCut, Lark, and Doubao. One of the most competitive training entry points into China's consumer-internet stack.\n\nDelivered a deliberately overcomplete portfolio (most trainees deliver the algorithm submissions and team capstone; I added three artefacts beyond scope):\n\n• Algorithm curriculum — solved every problem in ByteDance MarsCode's Juejin track. 81 problems, fully written up with statement, approach, complexity analysis, and tested Python implementation (juejin-algorithm-practice, 66 commits, 100% solo).\n• Team 115 capstone — Spring Boot 3 e-commerce platform (Douyin Mall): user management, products, cart, orders, AI customer service. #2-most-prolific committer on an 8-person team (45 of 174 commits, ~26%), behind only the team lead. Stack: Java 17 + Spring Boot 3 + MyBatis + MySQL + Redis + Alibaba Cloud + Docker.\n• Solo Vue 3 frontend supplement (beyond scope) — built to integrate against the team backend, Cypress + Vitest coverage.\n• Two open-source teaching templates (beyond scope), both bilingual EN + CN: Go + Gin (douyin-mall-go-template — 52 stars / 7 forks, my most-starred OSS project) and Spring Boot + Maven. Both now used by later camp cohorts as scaffolding.",
+          "skills": [
+            "Go (Programming Language)",
+            "Spring Boot"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "Certificate of Completion",
+            "Front-end, Back-end, Big data -- MarsCode Youth Camp",
+            "2025-01-07 213705.png"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "CORDE",
+      "links": [
+        "https://corde.nz/"
+      ],
+      "positions": [
+        {
+          "title": "Full Stack Developer",
+          "dateRange": "Jun 2024 - Nov 2024",
+          "duration": "6 mos",
+          "location": "Christchurch City, Canterbury, New Zealand · Hybrid",
+          "description": "CORDE — a 30+-year-old, 164-staff Canterbury infrastructure and civil-construction company (CCNZ Canterbury Contractor of the Year; Construction Excellence National Award). Five months on-site at CORDE's Rolleston head office, reporting to Barry Clark (business sponsor) with Kullum Ladley as Workbench API specification author.\n\nThe business problem: CORDE's field crews work in rural Canterbury where mobile coverage drops out, but the company's central operations platform assumes connectivity. They needed a mobile app that could become the system of record for the moment of work and reconcile cleanly when connectivity returned.\n\nWhat I built and shipped:\n\n• Production-quality React Native offline-first mobile app — the field worker's tablet captures text, photos, and GPS coordinates simultaneously, stores them locally with integrity guarantees, and syncs back to Workbench on reconnection. Handles real conflict cases: duplicate IDs, partial sync, mid-batch connectivity drops.\n• #1-most-prolific contributor — 227 of 539 commits (42%).\n• Effectively sole author of the team documentation repository (140 of 143 commits, 97.9%).\n• The app remains in active use today by CORDE's field crews — kept current with React Native upgrades and Android 16 KB page-size compliance.\n\nStack: React Native 0.83 + TypeScript + Native Base + SQLite + native geolocation/camera/maps.",
+          "skills": [
+            "React Native",
+            "TypeScript"
+          ],
+          "moreSkillsCount": 3,
+          "media": [
+            "Weekly Mobile App Development Sprint Meetings",
+            "Weekly Mobile App Development Sprint Meetings",
+            "CORDE | Full Stack Developer"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Lincoln University (NZ)",
+      "degree": "Level 9 - Master of Applied Computing",
+      "fieldOfStudy": "Applied Computing (GIS + IT specialisation)",
+      "dateRange": "Nov 2023 – Dec 2024",
+      "grade": "Distinction · Dean's List (Top 5%)",
+      "activitiesAndSocieties": "COMP693 Industry Placement at CORDE (NZ infrastructure & civil construction) — five-month on-site capstone, #1-most-prolific contributor on the team's React Native offline-first field-operations app, still in active production use by CORDE's field crews.",
+      "description": "Master of Applied Computing with Distinction (top grade band) and Dean's List (top 5% of cohort) from Lincoln University, NZ. The programme bridged my geography/GIS foundation into modern software engineering — the same pivot I now make in every AI and cultural-tech project I ship.\n\nWhat the programme covered:\n\n• Studio model — enterprise software shipped to real industry clients using object-oriented design and agile workflows. The practice that prepared me to run solo CTO and Founding Engineer work.\n• Advanced database systems — transaction processing, security, NoSQL, schema design and optimisation. The foundation behind every multi-tenant Postgres + Drizzle system I've shipped since.\n• Applied neural networks — model calibration, data visualisation, real-world problem framing.\n• Geographic Information Systems (GIS) + IT specialisation, building directly on my Geography Science Bachelor's.\n\nNZQA-verifiable credential ID: 170086552.",
+      "credentialId": "170086552",
+      "media": [
+        "Academic Award: Distinction",
+        "image001.png",
+        "image002.png"
+      ],
+      "mediaTotal": 8,
+      "url": "https://www.lincoln.ac.nz/"
+    },
+    {
+      "school": "Jiangsu Normal University",
+      "degree": "Level 7 - Bachelor of Geography Science",
+      "fieldOfStudy": "Geography Science (GIS + Remote Sensing specialisation)",
+      "dateRange": "Sep 2012 – Jun 2016",
+      "grade": "Distinction",
+      "activitiesAndSocieties": "Field Practice in Geology · Regional Geography internships · spatial-data analysis projects on university-grade GIS facilities.",
+      "description": "Bachelor of Geography Science with Distinction from Jiangsu Normal University, China. Specialised in Geographic Information Systems (GIS) and Remote Sensing — the spatial-data foundation that later carried me into software engineering, AI, and the GIS + IT specialisation of my Lincoln Master's.\n\nCore coursework:\n\n• GIS + Remote Sensing — spatial data analysis, cartography, working with university-grade GIS facilities and faculty.\n• Computer Applications and Programming (Visual Basic) — top scores of 96 and 86 on practical software-build exams; my first formal programming credentials.\n• Advanced Mathematics, Economic Geography, Urban Planning — first-principles reasoning across environmental, economic, and built-environment systems.\n\nWhy this matters for an AI engineer: spatial reasoning and bridging numerical models with real-world systems are the same muscles I apply to multi-agent AI architecture today.",
+      "media": [
+        "Jiangsu Normal University"
+      ],
+      "url": "https://www.linkedin.com/school/jiangsu-normal-university/"
+    },
+    {
+      "school": "Nanning No.2 High School",
+      "degree": "Level 3 - High School Diploma",
+      "fieldOfStudy": "Science (Mathematics, Physics, Chemistry, Biology)",
+      "dateRange": "Sep 2008 – Jun 2011",
+      "grade": "A+",
+      "activitiesAndSocieties": "Student Council — leadership roles, inter-class academic competitions, and cross-disciplinary science-track collaborative projects across multiple years.",
+      "description": "Founded in 1906, Nanning No.2 High School is one of Guangxi's flagship secondary schools and ranks among China's top 100 — a rigorous environment with nationally-recognised teachers and a long science-track tradition.\n\nI studied the science stream (Mathematics, Physics, Chemistry, Biology) and graduated A+. This is where the first-principles analytical mindset that later anchored my Geographic Information Systems work, my software engineering, and now my AI-agent architecture practice was first formed.\n\nActive in Student Council across multiple years — leadership, inter-class competitions, and collaborative projects that sharpened the working habits I still rely on every day as a solo CTO and Founding Engineer.",
+      "media": [
+        "Nanning No.2 High School"
+      ],
+      "url": "http://www.nnez.cn/"
+    }
+  ],
+  "licensesAndCertifications": [
+    {
+      "name": "Introduction to Model Context Protocol",
+      "issuer": "Anthropic",
+      "issued": "May 2026",
+      "credentialId": "ocwksk2fwt2e",
+      "showCredential": true,
+      "credentialUrl": "https://verify.skilljar.com/c/ocwksk2fwt2e"
+    },
+    {
+      "name": "Certificate of completion: Introduction to agent skills",
+      "issuer": "Anthropic",
+      "issued": "May 2026",
+      "credentialId": "66thfskid4eu",
+      "showCredential": true,
+      "credentialUrl": "https://verify.skilljar.com/c/66thfskid4eu"
+    },
+    {
+      "name": "Claude Code in Action",
+      "issuer": "Anthropic",
+      "issued": "May 2026",
+      "credentialId": "8yz7o8sxvicp",
+      "showCredential": true,
+      "credentialUrl": "https://verify.skilljar.com/c/8yz7o8sxvicp"
+    },
+    {
+      "name": "Building with the Claude API",
+      "issuer": "Anthropic",
+      "issued": "May 2026",
+      "credentialId": "c4v3j3vdcxxe",
+      "showCredential": true,
+      "credentialUrl": "https://verify.skilljar.com/c/c4v3j3vdcxxe"
+    },
+    {
+      "name": "Southern Cross Round the Bays Auckland 2026 - 8.4km Finisher",
+      "issuer": "Stuff",
+      "issued": "Mar 2026",
+      "credentialId": "26073"
+    },
+    {
+      "name": "AI Fluency: Framework & Foundations",
+      "issuer": "Anthropic",
+      "issued": "Aug 2025",
+      "showCredential": true,
+      "credentialUrl": "https://verify.skilljar.com/c/v3hv657p3ygc"
+    },
+    {
+      "name": "Claude Code in Action",
+      "issuer": "Anthropic",
+      "issued": "Aug 2025",
+      "credentialId": "JHIY9NPYTR2D",
+      "showCredential": true,
+      "credentialUrl": "https://verify.skilljar.com/c/jhiy9npytr2d"
+    },
+    {
+      "name": "Master of Applied Computing (Level 9)",
+      "issuer": "New Zealand Qualifications Authority | Mana Tohu Mātauranga o Aotearoa",
+      "issued": "Aug 2025",
+      "credentialId": "170086552",
+      "showCredential": true,
+      "note": "New Zealand Record of Achievement",
+      "credentialUrl": "https://www2.nzqa.govt.nz/qualifications-and-standards/access-your-results/verify/"
+    },
+    {
+      "name": "Google AI Essentials",
+      "issuer": "Google",
+      "issued": "Aug 2025",
+      "credentialId": "ZR0B96QLZXDM",
+      "showCredential": true,
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/specialization/ZR0B96QLZXDM"
+    },
+    {
+      "name": "JavaScript Foundations Professional Certificate by Mozilla",
+      "issuer": "Mozilla",
+      "issued": "Feb 2025",
+      "credentialId": "F045AF6F4D485DA35B748AF33062DC24F8A275D3B66AF8E0D18A410F67D587D9",
+      "showCredential": true,
+      "skills": [
+        "Web Development"
+      ],
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/f045af6f4d485da35b748af33062dc24f8a275d3b66af8e0d18a410f67d587d9/"
+    },
+    {
+      "name": "Machine Learning Statistical Foundations Professional Certificate by Wolfram Research",
+      "issuer": "Wolfram",
+      "issued": "Feb 2025",
+      "credentialId": "2864BEBB120159DA61988309D16EF29418AD598F330499E580DDA4D5B979F742",
+      "showCredential": true,
+      "skills": [
+        "Machine Learning"
+      ],
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/2864bebb120159da61988309d16ef29418ad598f330499e580dda4d5b979f742/"
+    },
+    {
+      "name": "Microsoft Azure AI Essentials Professional Certificate by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issued": "Feb 2025",
+      "credentialId": "92C0764F9B4CEA702B1C1CA5D0E2585392F34109F720AFEBA2A74E7A34706290",
+      "showCredential": true,
+      "skills": [
+        "Machine Learning"
+      ],
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/92c0764f9b4cea702b1c1ca5d0e2585392f34109f720afeba2a74e7a34706290/"
+    },
+    {
+      "name": "Atlassian Agile Project Management Professional Certificate",
+      "issuer": "Atlassian",
+      "issued": "Feb 2025",
+      "credentialId": "9A542712E3361965C339E439885AECC684F23EEE22A0A695541C57137DDEDD84",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/9a542712e3361965c339e439885aecc684f23eee22a0a695541c57137ddedd84/"
+    },
+    {
+      "name": "C++ Programming Professional Certificate by OpenEDG C++ Institute",
+      "issuer": "C++ Institute",
+      "issued": "Feb 2025",
+      "credentialId": "22A8638F0A1646E6B5B12E4EAB7492583E9DFEB3B15519A6FAD26C9438243335",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/22a8638f0a1646e6b5b12e4eab7492583e9dfeb3b15519a6fad26c9438243335/"
+    },
+    {
+      "name": "Anaconda Python for Data Science Professional Certificate",
+      "issuer": "Anaconda, Inc.",
+      "issued": "Feb 2025",
+      "credentialId": "866BA89BFBB2A495BDD9CB5953555DFB7F41A9BD2E8B9B30A206EDEED8A60188",
+      "showCredential": true,
+      "skills": [
+        "Data Analysis"
+      ],
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/866ba89bfbb2a495bdd9cb5953555dfb7f41a9bd2e8b9b30a206edeed8a60188/"
+    },
+    {
+      "name": "Ubuntu Linux Professional Certificate by Canonical",
+      "issuer": "Canonical",
+      "issued": "Feb 2025",
+      "credentialId": "3C7B2CCAE529721034F83B944C6F781E8FB3C305DD7859C269E0E42DB20C16FA",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/3c7b2ccae529721034f83b944c6f781e8fb3c305dd7859c269e0e42db20c16fa/"
+    },
+    {
+      "name": "Java Foundations Professional Certificate by JetBrains",
+      "issuer": "JetBrains",
+      "issued": "Feb 2025",
+      "credentialId": "DBB63917D9AABE179405102FE44C567749A59CF090F05390100D9B8C841F8A04",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/dbb63917d9aabe179405102fe44c567749a59cf090f05390100d9b8c841f8a04/"
+    },
+    {
+      "name": "Docker Foundations Professional Certificate",
+      "issuer": "Docker, Inc",
+      "issued": "Feb 2025",
+      "credentialId": "9EC9F12BD8974EF2AB60810D9D8C2790843862A9CA9E82AB1DF93FF78BD2FFA0",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/9ec9f12bd8974ef2ab60810d9d8c2790843862a9ca9e82ab1df93ff78bd2ffa0/"
+    },
+    {
+      "name": "Go (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "1528BFA4886B",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/1528bfa4886b"
+    },
+    {
+      "name": "Angular (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "03146D2BE2BE",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/03146d2be2be"
+    },
+    {
+      "name": "R (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "15F33A7DC11A",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/15f33a7dc11a"
+    },
+    {
+      "name": "Go (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "36BD7EE1CABC",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/36bd7ee1cabc"
+    },
+    {
+      "name": "R (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "F5D0DC5DB53A",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/f5d0dc5db53a"
+    },
+    {
+      "name": "C# (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "F342EE2DF441",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/f342ee2df441"
+    },
+    {
+      "name": "Angular (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "D7F06CA7345E",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/d7f06ca7345e"
+    },
+    {
+      "name": "Problem Solving (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "92C8E2648264",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/92c8e2648264"
+    },
+    {
+      "name": "Problem Solving (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "B4535E195051",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/b4535e195051"
+    },
+    {
+      "name": "Rest API (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "B71BEC8F3BCE",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/b71bec8f3bce"
+    },
+    {
+      "name": "React (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "F31DC3770D34",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/f31dc3770d34"
+    },
+    {
+      "name": "Python (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "AB7FE9567088",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/ab7fe9567088"
+    },
+    {
+      "name": "Node.js (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "FAD3DC5626D1",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/fad3dc5626d1"
+    },
+    {
+      "name": "JavaScript (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "829C5CB9023F",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/829c5cb9023f"
+    },
+    {
+      "name": "SQL (Advanced) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "77A6D9183C77",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/77a6d9183c77"
+    },
+    {
+      "name": "SQL (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "82CD89877A17",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/82cd89877a17"
+    },
+    {
+      "name": "SQL (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "1604ADEBD057",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/1604adebd057"
+    },
+    {
+      "name": "JavaScript (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "83E393B81C8B",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/83e393b81c8b"
+    },
+    {
+      "name": "Software Engineer Intern Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "8C2B34A73C1E",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/8c2b34a73c1e"
+    },
+    {
+      "name": "Java (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "62E985054B0B",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/62e985054b0b"
+    },
+    {
+      "name": "CSS (Basic) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "46C95BC8F25D",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/46c95bc8f25d"
+    },
+    {
+      "name": "Software Engineer Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "929C61379016",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/929c61379016"
+    },
+    {
+      "name": "Frontend Developer (React) Certificate",
+      "issuer": "HackerRank",
+      "issued": "Dec 2024",
+      "credentialId": "CFCAF3276EF6",
+      "showCredential": true,
+      "credentialUrl": "https://www.hackerrank.com/certificates/cfcaf3276ef6"
+    },
+    {
+      "name": "Career Essentials in Sustainable Tech by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "210641FCD656696D2FE451C6D70D051ADC35A26416E1EE16E107B5247ECAAA26",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/210641fcd656696d2fe451c6d70d051adc35a26416e1ee16e107b5247ecaaa26/"
+    },
+    {
+      "name": "Career Essentials in Administrative Assistance by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "5AC9921894297B67EB03727C2549EE8A9376D0446E80FE0294FB0A7CA417B3EF",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/5ac9921894297b67eb03727c2549ee8a9376d0446e80fe0294fb0a7ca417b3ef/"
+    },
+    {
+      "name": "Career Essentials in System Administration by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "442E34701E88D7F12D5CC82B6FC6CBDDCDA2F1C6F9F6DE77103C9BEFBE354982",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/442e34701e88d7f12d5cc82b6fc6cbddcda2f1c6f9f6de77103c9befbe354982/"
+    },
+    {
+      "name": "Career Essentials in Business Analysis by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "16558615A397548E131BA55A2F9108F54CB8D7F7DCC84419B6C2E644A98F75A2",
+      "showCredential": true,
+      "skills": [
+        "Project Management"
+      ],
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/16558615a397548e131ba55a2f9108f54cb8d7f7dcc84419b6c2e644a98f75a2/"
+    },
+    {
+      "name": "Career Essentials in Cybersecurity by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "A5436B52459256A59BFFE778A3DFFFCA6853124D22E6F88B704FBEC0CA39FE09",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/a5436b52459256a59bffe778a3dfffca6853124d22e6f88b704fbec0ca39fe09/"
+    },
+    {
+      "name": "Career Essentials in Software Development by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "7ACFE44A99F9E575A3CB2BF5C05902C197D7782CA4A14A9765DD8C41DF1AA848",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/7acfe44a99f9e575a3cb2bf5c05902c197d7782ca4a14a9765dd8c41df1aa848/"
+    },
+    {
+      "name": "Career Essentials in GitHub Professional Certificate",
+      "issuer": "GitHub",
+      "issued": "Dec 2024",
+      "credentialId": "EDD123D9420DDBBDF2078C97C306975F88F1AC637A5BF6B46B104340D8B469A1",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/edd123d9420ddbbdf2078c97c306975f88f1ac637a5bf6b46b104340d8b469a1/"
+    },
+    {
+      "name": "Career Essentials in Project Management by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "9D9F22F0E7E87C3B6375D1294F8C97B10CC505EC24E8FAE4D670573D55A9938C",
+      "showCredential": true,
+      "skills": [
+        "Project Management"
+      ],
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/9d9f22f0e7e87c3b6375d1294f8c97b10cc505ec24e8fae4d670573d55a9938c/"
+    },
+    {
+      "name": "Career Essentials in Data Analysis by Microsoft and LinkedIn",
+      "issuer": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "EA775058BE5D0BEC5E46DFDC14D4E9C64F54D6709A3A23ED3DC85CD3907FCED6",
+      "showCredential": true,
+      "skills": [
+        "Data Analysis"
+      ],
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/ea775058be5d0bec5e46dfdc14d4e9c64f54d6709a3a23ed3dc85cd3907fced6/"
+    },
+    {
+      "name": "Generative AI Career Skills Fundamentals",
+      "issuer": "Microsoft",
+      "issued": "Dec 2024",
+      "credentialId": "187ECAD3ED6CB0BE31706C413B5F38AE1BD1D58272AD950E4FD19B5636AD5747",
+      "showCredential": true,
+      "credentialUrl": "https://www.linkedin.com/learning/certificates/187ecad3ed6cb0be31706c413b5f38ae1bd1d58272ad950e4fd19b5636ad5747/"
+    }
+  ],
+  "skills": {
+    "categories": [
+      "Industry Knowledge",
+      "Tools & Technologies",
+      "Interpersonal Skills",
+      "Other Skills"
+    ],
+    "items": [
+      {
+        "name": "AI Agent Architecture",
+        "associations": [
+          "AI Agent Architect at Engram"
+        ]
+      },
+      {
+        "name": "Multi-agent Systems",
+        "associations": [
+          "Open Source Contributor at CopilotKit",
+          "FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom"
+        ]
+      },
+      {
+        "name": "AI/ML Engineering",
+        "endorsements": {
+          "count": 1
+        }
+      },
+      {
+        "name": "AI Integration",
+        "associations": [
+          "Chief Technology Officer (CTO) at Sanicle"
+        ]
+      },
+      {
+        "name": "AI/ML Infrastructure",
+        "associations": [
+          "Senior AI/ML Infrastructure Engineer at Sanicle"
+        ]
+      },
+      {
+        "name": "AI System Design",
+        "associations": [
+          "AI Agent Architect at Engram"
+        ]
+      },
+      {
+        "name": "Claude Code Plugins",
+        "associations": [
+          "echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI"
+        ]
+      },
+      {
+        "name": "Claude Code Subagents",
+        "associations": [
+          "Software Developer at Aotearoa Infinite Academy"
+        ]
+      },
+      {
+        "name": "Codex CLI Integration",
+        "associations": [
+          "echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI"
+        ]
+      },
+      {
+        "name": "Vercel AI SDK",
+        "associations": [
+          "Vitex — AI Career Agent SaaS (vitex.org.nz)"
+        ]
+      },
+      {
+        "name": "Conversational AI",
+        "associations": [
+          "Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant"
+        ]
+      },
+      {
+        "name": "Voice AI (OpenAI Realtime)",
+        "associations": [
+          "Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)"
+        ]
+      },
+      {
+        "name": "PostgreSQL Recursive CTEs",
+        "associations": [
+          "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
+        ]
+      },
+      {
+        "name": "Reverse Engineering",
+        "associations": [
+          "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
+        ]
+      },
+      {
+        "name": "CSS 3D Transforms",
+        "associations": [
+          "Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)"
+        ]
+      },
+      {
+        "name": "Game Design",
+        "associations": [
+          "Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)"
+        ]
+      },
+      {
+        "name": "Cursor IDE Hooks",
+        "associations": [
+          "echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI"
+        ]
+      },
+      {
+        "name": "Cross-Platform CI",
+        "associations": [
+          "echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI"
+        ]
+      },
+      {
+        "name": "Python (Programming Language)",
+        "associations": [
+          "echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI"
+        ]
+      },
+      {
+        "name": "ATS-Optimised Resume Generation",
+        "associations": [
+          "Vitex — AI Career Agent SaaS (vitex.org.nz)"
+        ]
+      },
+      {
+        "name": "Typst",
+        "associations": [
+          "Vitex — AI Career Agent SaaS (vitex.org.nz)"
+        ]
+      },
+      {
+        "name": "Web Accessibility (WCAG 2.2 AA)",
+        "associations": [
+          "Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)"
+        ]
+      },
+      {
+        "name": "OpenAI Streaming Chat",
+        "associations": [
+          "Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)"
+        ]
+      },
+      {
+        "name": "Cloudflare Workers AI",
+        "associations": [
+          "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
+        ]
+      },
+      {
+        "name": "Open Source Maintenance",
+        "associations": [
+          "Google News MCP Server — Early-Ecosystem AI Tool-Use Server"
+        ]
+      },
+      {
+        "name": "SerpAPI",
+        "associations": [
+          "Google News MCP Server — Early-Ecosystem AI Tool-Use Server"
+        ]
+      },
+      {
+        "name": "Node.js",
+        "associations": [
+          "Google News MCP Server — Early-Ecosystem AI Tool-Use Server"
+        ],
+        "endorsements": {
+          "notes": [
+            "Endorsed by Lutfullah Ugurer who is highly skilled at this",
+            "Endorsed by 1 person in the last 6 months"
+          ],
+          "detailsTotal": 4
+        }
+      },
+      {
+        "name": "Cultural Tech",
+        "associations": [
+          "Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)"
+        ]
+      },
+      {
+        "name": "Bilingual AI",
+        "associations": [
+          "Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)"
+        ]
+      },
+      {
+        "name": "pgVector",
+        "associations": [
+          "Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)",
+          "FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom"
+        ]
+      },
+      {
+        "name": "Docusaurus",
+        "associations": [
+          "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages",
+          "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
+        ]
+      },
+      {
+        "name": "Migration Strategy",
+        "associations": [
+          "Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant"
+        ]
+      },
+      {
+        "name": "Drizzle ORM",
+        "associations": [
+          "Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx",
+          "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages",
+          "Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)"
+        ],
+        "endorsements": {
+          "detailsTotal": 6
+        }
+      },
+      {
+        "name": "Offline-First Architecture",
+        "associations": [
+          "Full Stack Developer at CORDE",
+          "CORDE Mobile — Offline-First Field-Operations App (React Native)"
+        ]
+      },
+      {
+        "name": "Java",
+        "associations": [
+          "Backend Developer at ByteDance"
+        ]
+      },
+      {
+        "name": "Algorithms",
+        "associations": [
+          "Backend Developer at ByteDance"
+        ]
+      },
+      {
+        "name": "Spring Boot",
+        "associations": [
+          "Backend Developer at ByteDance"
+        ],
+        "endorsements": {
+          "count": 1
+        }
+      },
+      {
+        "name": "Back-End Web Development",
+        "associations": [
+          "Backend Developer at ByteDance"
+        ]
+      },
+      {
+        "name": "Google Maps API",
+        "associations": [
+          "Chief Technology Officer (CTO) at FreePeriod",
+          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)"
+        ]
+      },
+      {
+        "name": "Women in STEM",
+        "associations": [
+          "Mentor - Technology & Professional Development at Forward with Her 她行 Mentorship"
+        ]
+      },
+      {
+        "name": "Career Development Coaching",
+        "associations": [
+          "Mentor - Technology & Professional Development at Forward with Her 她行 Mentorship"
+        ]
+      },
+      {
+        "name": "Public Speaking",
+        "associations": [
+          "Mentor - Technology & Professional Development at Forward with Her 她行 Mentorship"
+        ]
+      },
+      {
+        "name": "Edtech",
+        "associations": [
+          "Software Developer at Aotearoa Infinite Academy"
+        ]
+      },
+      {
+        "name": "Firebase",
+        "associations": [
+          "Software Developer at Aotearoa Infinite Academy"
+        ]
+      },
+      {
+        "name": "Specification-Driven Development",
+        "associations": [
+          "Software Developer at Aotearoa Infinite Academy"
+        ]
+      },
+      {
+        "name": "NextAuth",
+        "associations": [
+          "Senior AI/ML Infrastructure Engineer at Sanicle",
+          "Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx",
+          "She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community"
+        ]
+      },
+      {
+        "name": "Multi-Tenant Architecture",
+        "associations": [
+          "2 experiences at Aotearoa Infinite Academy and 1 other company",
+          "Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx"
+        ]
+      },
+      {
+        "name": "IBM watsonx",
+        "associations": [
+          "2 experiences at Sanicle",
+          "Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx",
+          "Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant"
+        ]
+      },
+      {
+        "name": "FemTech",
+        "associations": [
+          "Chief Technology Officer (CTO) at Sanicle"
+        ]
+      },
+      {
+        "name": "Multi-Tenant SaaS",
+        "associations": [
+          "Chief Technology Officer (CTO) at Sanicle"
+        ]
+      },
+      {
+        "name": "Technology Leadership",
+        "associations": [
+          "Chief Technology Officer (CTO) at Sanicle"
+        ]
+      },
+      {
+        "name": "Technical Documentation",
+        "associations": [
+          "Open Source Contributor at CopilotKit"
+        ]
+      },
+      {
+        "name": "LangGraph",
+        "associations": [
+          "Open Source Contributor at CopilotKit",
+          "FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom"
+        ]
+      },
+      {
+        "name": "Open Source Contribution",
+        "associations": [
+          "Open Source Contributor at CopilotKit"
+        ]
+      },
+      {
+        "name": "Bilingual Web Development",
+        "associations": [
+          "Chief Technology Officer (CTO) at FemTech Weekend",
+          "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages",
+          "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
+        ]
+      },
+      {
+        "name": "Notion API",
+        "associations": [
+          "Chief Technology Officer (CTO) at FemTech Weekend"
+        ]
+      },
+      {
+        "name": "Event Platform Engineering",
+        "associations": [
+          "Chief Technology Officer (CTO) at FemTech Weekend",
+          "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages"
+        ]
+      },
+      {
+        "name": "Technical Leadership",
+        "associations": [
+          "Chief Technology Officer (CTO) at FemTech Weekend"
+        ]
+      },
+      {
+        "name": "Slack Integrations",
+        "associations": [
+          "Senior Full Stack Engineer & Website Team Lead at She Sharp",
+          "She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community"
+        ]
+      },
+      {
+        "name": "AI Matching Systems",
+        "associations": [
+          "Senior Full Stack Engineer & Website Team Lead at She Sharp",
+          "She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community"
+        ]
+      },
+      {
+        "name": "Prototyping",
+        "associations": [
+          "Core Engineer (M1 Prototype) at GAVIGO"
+        ]
+      },
+      {
+        "name": "Distributed Systems",
+        "associations": [
+          "Founding Engineer at GAVIGO"
+        ]
+      },
+      {
+        "name": "WebSocket",
+        "associations": [
+          "2 experiences at GAVIGO"
+        ]
+      },
+      {
+        "name": "AI-Assisted Development",
+        "associations": [
+          "2 experiences at TechNest Community and 1 other company"
+        ]
+      },
+      {
+        "name": "Retrieval-Augmented Generation (RAG)",
+        "associations": [
+          "AI Instructor & Mentor at TechNest Community",
+          "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
+        ]
+      },
+      {
+        "name": "Curriculum Development",
+        "associations": [
+          "AI Instructor & Mentor at TechNest Community"
+        ]
+      },
+      {
+        "name": "Technical Mentorship",
+        "associations": [
+          "2 experiences at TechNest Community and 1 other company"
+        ]
+      },
+      {
+        "name": "Cloudflare Pages / Workers",
+        "associations": [
+          "Chief Technology Officer (CTO) at FreePeriod",
+          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)",
+          "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages"
+        ],
+        "endorsements": {
+          "detailsTotal": 5
+        }
+      },
+      {
+        "name": "Anthropic Claude",
+        "associations": [
+          "AI Agent Architect at Engram"
+        ],
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "Model Context Protocol (MCP)",
+        "associations": [
+          "2 experiences at Engram and 1 other company",
+          "Google News MCP Server — Early-Ecosystem AI Tool-Use Server"
+        ]
+      },
+      {
+        "name": "Agentic Workflows",
+        "associations": [
+          "AI Agent Architect at Engram"
+        ]
+      },
+      {
+        "name": "AI Orchestration",
+        "associations": [
+          "2 experiences at GAVIGO"
+        ],
+        "endorsements": {
+          "notes": [
+            "Endorsed by 2 colleagues at GAVIGO",
+            "Endorsed by 4 people in the last 6 months"
+          ],
+          "detailsTotal": 4
+        }
+      },
+      {
+        "name": "Kubernetes",
+        "associations": [
+          "2 experiences at GAVIGO"
+        ],
+        "endorsements": {
+          "notes": [
+            "Endorsed by 2 colleagues at GAVIGO",
+            "Endorsed by 4 people in the last 6 months"
+          ],
+          "detailsTotal": 4
+        }
+      },
+      {
+        "name": "Microservices Architecture",
+        "associations": [
+          "Core Engineer (M1 Prototype) at GAVIGO"
+        ],
+        "endorsements": {
+          "notes": [
+            "Endorsed by 2 colleagues at GAVIGO",
+            "Endorsed by 4 people in the last 6 months"
+          ],
+          "detailsTotal": 4
+        }
+      },
+      {
+        "name": "Docker",
+        "endorsements": {
+          "count": 3,
+          "notes": [
+            "Endorsed by 2 colleagues at GAVIGO",
+            "Endorsed by 3 people in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "Healthcare Information Technology (HIT)",
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "System Architecture",
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "Educational Technology",
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "Full-Stack Development",
+        "associations": [
+          "Senior Full Stack Engineer & Website Team Lead at She Sharp"
+        ]
+      },
+      {
+        "name": "Go (Programming Language)",
+        "associations": [
+          "2 experiences at GAVIGO and 1 other company"
+        ],
+        "endorsements": {
+          "count": 1
+        }
+      },
+      {
+        "name": "RESTful APIs",
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "REST APIs",
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "PostgreSQL",
+        "associations": [
+          "Senior Full Stack Engineer & Website Team Lead at She Sharp"
+        ]
+      },
+      {
+        "name": "HTML5 Canvas",
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "Next.js",
+        "associations": [
+          "3 experiences at She Sharp and 2 other companies",
+          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)",
+          "Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx"
+        ],
+        "endorsements": {
+          "detailsTotal": 8
+        }
+      },
+      {
+        "name": "Chart.js",
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "Internationalization (i18n)",
+        "associations": [
+          "Chief Technology Officer (CTO) at FreePeriod",
+          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)",
+          "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
+        ]
+      },
+      {
+        "name": "Mobile Application Development",
+        "associations": [
+          "Full Stack Developer at CORDE",
+          "CORDE Mobile — Offline-First Field-Operations App (React Native)"
+        ]
+      },
+      {
+        "name": "MongoDB",
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "HTML",
+        "endorsements": {
+          "count": 1,
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ]
+        }
+      },
+      {
+        "name": "React Native",
+        "associations": [
+          "Full Stack Developer at CORDE",
+          "CORDE Mobile — Offline-First Field-Operations App (React Native)"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "associations": [
+          "2 experiences at FreePeriod and 1 other company",
+          "CORDE Mobile — Offline-First Field-Operations App (React Native)",
+          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)"
+        ],
+        "endorsements": {
+          "detailsTotal": 4
+        }
+      },
+      {
+        "name": "SQLite",
+        "associations": [
+          "Full Stack Developer at CORDE",
+          "CORDE Mobile — Offline-First Field-Operations App (React Native)"
+        ],
+        "endorsements": {
+          "notes": [
+            "Endorsed by 1 person in the last 6 months"
+          ],
+          "detailsTotal": 4
+        }
+      },
+      {
+        "name": "Data Analysis",
+        "associations": [
+          "Career Essentials in Data Analysis by Microsoft and LinkedIn",
+          "Anaconda Python for Data Science Professional Certificate"
+        ]
+      },
+      {
+        "name": "Project Management",
+        "associations": [
+          "Career Essentials in Project Management by Microsoft and LinkedIn",
+          "Career Essentials in Business Analysis by Microsoft and LinkedIn"
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "associations": [
+          "Microsoft Azure AI Essentials Professional Certificate by Microsoft and LinkedIn",
+          "Machine Learning Statistical Foundations Professional Certificate by Wolfram Research"
+        ]
+      },
+      {
+        "name": "Web Development",
+        "associations": [
+          "JavaScript Foundations Professional Certificate by Mozilla"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)",
+      "dateRange": "May 2026 – Present",
+      "description": "The official event website for Eatropolis — Auckland's award-winning culinary festival, at Shed 10 on Queens Wharf on 10 October 2026. Visitors buy tickets, browse the chef lineup, read the programme, and can ask a streaming AI host on the page for guidance instead of digging through nav.\n\nSolo-built freelance commission under a signed 4 May 2026 agreement with Chow Luck Club Ltd (Director Bee Keng Koh; PM Armand Bentigan). Event partner: Tātaki Auckland Unlimited (Auckland Council).\n\n• Engineered for 1,000 concurrent visitors under k6 load testing per contract.\n• Hardened to NZ Government Web Accessibility Standard 1.2 (WCAG 2.2 AA) with Tātaki Auckland Unlimited review gates before each launch phase.\n• Streaming OpenAI chat + Whisper + TTS gated behind Cloudflare Turnstile and per-IP KV rate-limiting.\n• GitHub-as-CMS so the non-technical client edits MDX directly in-browser via one-click web-editor links.\n• 115 solo commits in 9 days.\n\nStack: Next.js 16, OpenNext-on-Cloudflare-Workers, Drizzle + Neon Postgres, Resend, OpenAI streaming.",
+      "skills": [
+        "Next.js",
+        "Cloudflare Pages / Workers"
+      ],
+      "moreSkillsCount": 3,
+      "hasOtherContributors": true
+    },
+    {
+      "name": "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)",
+      "dateRange": "Apr 2026 – Present",
+      "description": "SunoStats is the first public tool that maps how a Suno-generated song's lineage descends from its parent. Suno is the AI music platform; its own product doesn't expose lineage to creators. SunoStats does, because the research behind it discovered that Suno's API serializer leaks the parent→child UUID chain only on the trending feed and persona sub-trees — nowhere else, not even on the remix page.\n\n• Three free public lenses (creator profiles, trending, lineage view) + three single-purchase deep-dive reports — no recurring subscription.\n• Lineage traversal uses WITH RECURSIVE CTEs in Postgres so the graph walk happens at the database, not the application layer.\n• Trilingual EN / CN / JP with cookie-driven server-resolved locale.\n• oEmbed-discovered compliance posture; no scraping, no headless browsers.\n• 46 solo commits across one month — same-day scaffold-to-live, then production hardening: Stripe webhook verification and a credits ledger that auto-switches keys by STRIPE_SECRET_KEY prefix.\n\nStack: Next.js 16, Drizzle + Neon Postgres, Stripe, Resend, Docker + Traefik VPS.",
+      "skills": [
+        "Drizzle ORM",
+        "Internationalization (i18n)"
+      ],
+      "moreSkillsCount": 2
+    },
+    {
+      "name": "Vitex — AI Career Agent SaaS (vitex.org.nz)",
+      "dateRange": "Feb 2026 – Present",
+      "description": "Vitex turns a job description plus a candidate's background into an ATS-optimised resume PDF and matching cover letter in about 30 seconds. The user pastes a job ad, uploads their existing CV, and a seven-step AI pipeline streams the tailored documents back. A natural-language refinement box then lets them iterate — \"make the leadership section stronger\" — and the AI regenerates just that slice.\n\n• Pipeline: JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → Typst document generation, streamed via SSE.\n• Typst compiles each PDF locally in under 100ms — the user sees the document before finishing the reasoning summary.\n• Three production migrations (including a LaTeX → Typst engine swap) shipped with zero outage.\n• 168 commits over ~3 months, ~95% solo. Stripe credit ledger; public shareable links via per-document tokens for organic distribution.\n\nStack: Next.js 15, Vercel AI SDK + GPT-4o, Typst, Stripe, Neon Postgres + Drizzle, Docker + Traefik on DigitalOcean.",
+      "skills": [
+        "Vercel AI SDK",
+        "Typst"
+      ],
+      "moreSkillsCount": 1
+    },
+    {
+      "name": "FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom",
+      "dateRange": "Jan 2026 – Present",
+      "description": "A full-stack AI co-creation platform for fans of Honkai: Star Rail. Users describe a story (a character pairing, a vibe, a scenario); a multi-agent backend negotiates with itself — parse intent, architect plot, write, quality-check, revise, summarise, deliver — and returns a chapter that respects the canon of five named HSR characters and four relationship dynamics.\n\n• 7-node LangGraph (intent_parser → story_architect → writer → quality_guard → revision_counter → summarize → delivery) with a quality-loop revision budget of MAX_REVISIONS = 2 so the agent doesn't loop forever.\n• Hand-curated HSR knowledge pack — 5 characters × 4 dynamics × 5 world-rule categories × 5 trope templates — RAG-indexed so the writer agent grounds in canon, not training-data hallucinations.\n• Community layer: follows, nested replies, pgVector recommendations.\n• 182 solo commits over 16 weeks. Self-hosted Docker (web + agent) on DigitalOcean via Coolify, behind Cloudflare.\n\nStack: Next.js 16 + LangGraph.js + OpenAI + Prisma + Neon Postgres + pgVector.",
+      "skills": [
+        "LangGraph",
+        "Multi-agent Systems"
+      ],
+      "moreSkillsCount": 2
+    },
+    {
+      "name": "echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI",
+      "dateRange": "Nov 2025 – Present",
+      "description": "echook adds audio cues to AI coding assistants so you stop staring at the terminal waiting for them to finish. Twenty-six hook events — task started, permission needed, build failed, agent stopped, rate-limit hit, context nearing 100% — each play a sound and optionally fire Slack / Discord / Teams / ntfy webhooks. Same product on Claude Code, Cursor IDE, and Codex CLI. Install via natural language (\"install echook with the Focus Flow theme\").\n\n• 42 releases, 139 tests on triple-platform CI (Ubuntu / Windows / macOS × Python 3.9 / 3.12 / 3.13). 26 hook events, 2 themes.\n• Context-window status line with live quota bars — see remaining budget without alt-tabbing.\n• Explicitly preserved as the author's IP in the Engram Architect Cohort Engagement Letter (9 May 2026); Engram is in Anthropic's Partner Network.\n• Sister repo echook-promo-video: 88.7-second product film built in React + Remotion + AI-generated audio — zero Premiere, zero voice actors.\n\nStack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Actions CI.",
+      "skills": [
+        "Claude Code Plugins",
+        "Cursor IDE Hooks"
+      ],
+      "moreSkillsCount": 3
+    },
+    {
+      "name": "She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community",
+      "dateRange": "Jul 2025 – Present",
+      "associatedWith": "She Sharp",
+      "description": "The member-lifecycle platform that now runs She Sharp — NZ's largest women-in-tech community (charitable trust CC57025; 2,200+ members, 1,000+ active, 50+ corporate partners, 84+ events since 2014). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.\n\n• AI mentor–mentee matcher: GPT-4o-mini scoring pairs across five weighted dimensions (Skill 35%, Goal 30%, MBTI 15%, Industry 10%, Logistics 10%) with explainable reasons and a rule-based fallback; admin as final gate.\n• 648 of 748 commits solo (86.6%) across 10 months. Frontend designer Lesley Gao authored ~100 (13.4%).\n• Slack ecosystem: weekly stats digest, NZ funding-opportunities crawler over six government sources, Claude Code skill that publishes new events with one dry-run-default command.\n\nStack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.",
+      "skills": [
+        "AI Matching Systems",
+        "Drizzle ORM"
+      ],
+      "moreSkillsCount": 2,
+      "hasOtherContributors": true
+    },
+    {
+      "name": "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages",
+      "dateRange": "Mar 2025 – Present",
+      "description": "The official site and submissions hub for FemTech Weekend — China's first women's-health-technology organisation — currently powering Shanghai Summit 2026 (June 22–25). 16 confirmed speakers are headlined by Ida Tin, the Clue co-founder who coined the term \"FemTech\" in 2016.\n\nGen-2 was a deliberate rewrite from Next.js to Docusaurus when the site's centre of gravity shifted from \"marketing site\" to \"research publication and multi-event hub\". Visitors today read original research reports (FemTech Market Map for Greater China; FemmeHealth Ventures Alliance), browse the speaker programme, and submit pitches / programme entries / speaker applications / ecosystem partnerships through four review pipelines.\n\n• 529 of 544 commits solo (97.2%) over one year.\n• Bilingual EN / CN from day one — the non-technical founder Zhu Yihan edits the live site directly.\n• 15 Cloudflare Pages Functions (~3,839 LOC) replace a separate backend; submissions + email + admin review run on edge serverless.\n\nStack: Docusaurus 3.9, React 18, Drizzle + Neon Postgres, Cloudflare Pages, Resend, Notion-as-CMS.",
+      "skills": [
+        "Bilingual Web Development",
+        "Cloudflare Pages / Workers"
+      ],
+      "moreSkillsCount": 3,
+      "hasOtherContributors": true
+    },
+    {
+      "name": "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant",
+      "dateRange": "Oct 2024 – Present",
+      "associatedWith": "TechNest Community",
+      "description": "The bilingual teaching site behind every AI programming cohort I've run since late 2024 — Forward with Her (2024-winter, 2025-summer), Her Waka 2026 (NZ Ministry of Social Development funded, at academyEX Auckland), and TechNest 2026 (Canada). All four cohorts coexist on one platform; each student gets their own version-aware course.\n\n• In-course AI assistant: ~4,800 bilingual document chunks indexed with RAG (retrieval-augmented generation — the AI looks up the cohort's actual materials before answering, so students don't get hallucinations from the wrong version).\n• 198 of 207 commits solo (95.7%); the remainder are bot commits (Claude code-review automation + Dependabot).\n• Notion-as-CMS classroom: course-wide message board, capstone-showcase page with live audience voting, Typst PDF handouts auto-built from MDX.\n• Bilingual EN / CN with Algolia contextual search.\n\nStack: Docusaurus 3.8, Cloudflare Pages, Llama 3.1 8B via Cloudflare Workers AI + Vectorize, Notion API, Algolia, Typst.",
+      "skills": [
+        "Docusaurus",
+        "Retrieval-Augmented Generation (RAG)"
+      ],
+      "moreSkillsCount": 2
+    },
+    {
+      "name": "Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)",
+      "dateRange": "Sep 2025 – Apr 2026",
+      "description": "Tam-AI-Ti is a voice-first AI financial-wellness coach grounded in Te Whare Tapa Whā — the Māori model of holistic health where physical, mental, spiritual, and family wellbeing are inseparable from financial decisions. Users talk to the coach in te reo Māori or English; the coach reflects back in the same cultural frame, not as a Western budgeting app with a cultural wrapper.\n\nCommissioned by Riria (Missy) Te Kanawa — former KPMG NZ Māori Sector Partner, now ASB Bank Māori Executive Lead — introduced by Dr Mahsa Mohaghegh.\n\n• 351 solo commits over six months. 48-table / 494-column schema across 10 modules where every Hauora dimension is a typed column, not UI decoration: culture is in the schema.\n• 19-user research cohort (Oct 2025 – Mar 2026): 181 bilingual journal entries, 35 voice sessions, 146 AI coach messages — sustained engagement on a pre-commercial product with zero marketing.\n• Voice via GPT-4o-realtime with server-side VAD.\n\nStack: Next.js 15.5, React 19.1, Drizzle + Neon Postgres + pgVector (1536-dim), OpenAI (gpt-4o-mini / gpt-4o / gpt-4o-realtime), CopilotKit.",
+      "skills": [
+        "Voice AI (OpenAI Realtime)",
+        "pgVector"
+      ],
+      "moreSkillsCount": 3,
+      "hasOtherContributors": true
+    },
+    {
+      "name": "Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)",
+      "dateRange": "Feb 2026 – Mar 2026",
+      "description": "A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on the Māori mythology of Aotearoa. The constraint is the point: every tower, enemy, projectile, and explosion is a real DOM element animated by the browser's CSS engine.\n\n• Six towers named after Māori weapons and atua (Taiaha, Mere, Tangaroa, Tohunga, Tāwhiri, Mahuika); six enemies from Māori legend; three maps as place-words (Te Awa, Te Maunga, Te Moana). Cultural integration is structural, not decorative: Tangaroa (ocean atua) slows with ice, Mahuika (fire goddess) deals damage-over-time, Tāwhiri (storm god) chains lightning.\n• DOM object pooling holds 60 FPS through dense Wave-10 combat.\n• Full cloud backend — leaderboards, daily challenges, tech tree, crafting, endless mode — with server-side anti-cheat validating submitted scores.\n• 84 commits over 2 months, ~99% solo; explicit P0 → P4 phase plan visible in the commit log.\n\nStack: CSS 3D + ES6 + LESS + Gulp 4; Cloudflare Workers + Hono + Neon Postgres; Web Audio API + Howler.js.",
+      "skills": [
+        "CSS 3D Transforms",
+        "Cloudflare Pages / Workers"
+      ],
+      "moreSkillsCount": 1
+    },
+    {
+      "name": "Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx",
+      "dateRange": "Feb 2025 – Feb 2026",
+      "associatedWith": "Sanicle",
+      "description": "Sanicle.AI is the multi-tenant FemTech platform that lets US employers offer menstrual and menopause workplace-wellness support without forcing employees to expose anything personal to HR. Employees get a private dashboard for cycle tracking, AI consultations, and leave requests; HR Managers see only de-identified, aggregate analytics so they can plan around real health patterns instead of guesses.\n\n• Integrated IBM watsonx (running Llama 3.1 405B) inside the employee dashboard — the engineering work that anchored Sanicle's IBM Silver Partner certification and PartnerPlus directory listing.\n• Dual-AI resilience: watsonx primary, Google Gemini fallback when watsonx exceeds Vercel's function-timeout ceiling — no user sees a stalled assistant.\n• ~98% solo across ~350 commits over 12 months. A NextAuth 5 auth-redirect production fix I published was acknowledged by Vercel Staff Amy Egan on the Vercel community forum.\n\nStack: Next.js 15, React 19, NextAuth 5, Drizzle + Neon Postgres, Upstash Redis, Vercel AI SDK, IBM watsonx + Google Gemini fallback.",
+      "skills": [
+        "Multi-Tenant Architecture",
+        "IBM watsonx"
+      ],
+      "moreSkillsCount": 3,
+      "hasOtherContributors": true,
+      "media": [
+        "Sanicle-AI: Women's Health Platform for Workplace Wellness",
+        "screencapture-sanicle-ai-vercel-app-chat-36a2b38e-be71-4c62-a459-ff43cb6d5c7c-2025-03-10-21_31_22.png",
+        "screencapture-sanicle-ai-vercel-app-employee-dashboard-f13eaf10-0a5b-49cf-b943-c35de5f631b4-events-2025-03-10-21_29_11.png"
+      ],
+      "mediaTotal": 10
+    },
+    {
+      "name": "Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant",
+      "dateRange": "Apr 2025 – Feb 2026",
+      "associatedWith": "Sanicle",
+      "description": "Sanicle.Cloud is the public-facing website that introduces Sanicle's workplace-wellness products to employers, HR brokers, and journalists covering FemTech. Visitors can click through the standard sections (platform, solutions, team, ROI calculator, demo request) or just ask an embedded IBM watsonx-powered assistant in natural language and skip the navigation entirely.\n\n• Recommended and executed the migration off Sanicle's legacy Bubble no-code site — the case was that no-code couldn't support enterprise authentication, multi-tenant data, watsonx integration, or Vercel-native CI/CD. The team accepted; the migration shipped solo.\n• Built on Next.js 15 with watsonx (Llama 3.1 405B) as the conversational layer. The watsonx integration carried Sanicle into IBM's Business Partner Network and the PartnerPlus directory listing.\n\nStack: Next.js 15, React 19, TypeScript, Tailwind, IBM watsonx, Vercel.",
+      "skills": [
+        "Next.js",
+        "IBM watsonx"
+      ],
+      "moreSkillsCount": 2,
+      "hasOtherContributors": true,
+      "media": [
+        "screencapture-sanicle-cloud-2025-04-18-16_24_26.png",
+        "screencapture-sanicle-cloud-team-chan-meng-2025-04-18-16_28_20.png",
+        "screencapture-sanicle-cloud-demo-2025-04-18-16_27_59.png"
+      ],
+      "mediaTotal": 13
+    },
+    {
+      "name": "Google News MCP Server — Early-Ecosystem AI Tool-Use Server",
+      "dateRange": "Dec 2024 – Dec 2024",
+      "description": "A Model Context Protocol (MCP — Anthropic's open standard that lets AI agents safely use real tools and data) server that gives AI assistants live access to Google News with topical categorisation, region/language targeting, and full-coverage drill-down. Used by people whose AI assistant needs to know what happened today, not what was true at the training cutoff.\n\n• Shipped Dec 30, 2024 — 35 days after Anthropic's Nov 25, 2024 MCP launch. One of the earliest community MCP servers in existence.\n• Carries the PulseMCP \"Top Pick\" badge with 26.1k visitors and a #1,105 global popularity rank; Glama gives it an A license rating.\n• Listed across 15+ MCP catalogs (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, MCP Server Finder, mcpservers.org, AgentSkillsHub, and more) and featured in three independent deep-dives, including Skywork AI's \"AI Engineer's Guide\".\n\nStack: TypeScript + Node.js + @modelcontextprotocol/sdk + SerpAPI; published as @chanmeng666/google-news-server on npm.",
+      "skills": [
+        "Model Context Protocol (MCP)",
+        "TypeScript"
+      ],
+      "moreSkillsCount": 3,
+      "media": [
+        "GitHub - ChanMeng666/server-google-news",
+        "2024-12-30 021446.png",
+        "2024-12-30 021524.png"
+      ],
+      "mediaTotal": 5
+    },
+    {
+      "name": "CORDE Mobile — Offline-First Field-Operations App (React Native)",
+      "dateRange": "Jun 2024 – Nov 2024",
+      "associatedWith": "CORDE",
+      "description": "A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Canterbury civil-construction contractor whose crews work in rural areas where mobile coverage drops out. The tablet becomes the system of record at the moment of work: text + photos + GPS + timestamps captured locally, integrity-checked, and reconciled to CORDE's central Workbench platform on reconnection — including the awkward cases: duplicate IDs, partial sync, mid-batch drops.\n\n• #1-most-prolific contributor on the codebase: 227 of 539 commits (42%), ahead of teammates Luke Shi (28.6%) and Xue Zheng (25.8%).\n• Sole author of the team documentation repository (140 of 143 commits, 97.9%), built against 15 Workbench API specifications authored by Kullum Ladley.\n• Still in active use today by CORDE's field crews; kept current through React Native upgrades and Android 16 KB page-size compliance.\n\nStack: React Native 0.83, TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.",
+      "skills": [
+        "React Native",
+        "Offline-First Architecture"
+      ],
+      "moreSkillsCount": 3,
+      "hasOtherContributors": true,
+      "media": [
+        "CORDE Mobile Application: Revolutionizing Field Operations",
+        "1-1-LoginScreen.png",
+        "1-2-3-LoginScreen.png"
+      ],
+      "mediaTotal": 9
+    },
+    {
+      "name": "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)",
+      "dateRange": "Nov 2024 – Nov 2024",
+      "description": "The public site for FreePeriod — a Guangzhou-incubated startup tackling period poverty through solar-powered emergency sanitary-pad dispensers, reproductive-health education, and policy advocacy. Visitors land on a bilingual page, locate the nearest free-pad dispenser on an interactive Google Maps directory, and read FreePeriod's policy briefs and partnership decks.\n\nThe site was the public artefact every judging panel clicked through during FreePeriod's six-award streak in 2024–25:\n\n• Best Award, Japan 12th Int'l Conference on Social Sciences & Humanities\n• Third Prize, HKUST Sustainable Smart Living Competition\n• Best Social Media, China's inaugural FemTech Weekend Challenge\n• First Prize, Shenzhen Nanshan Philanthropic Creative Star Contest\n• Selected, Tencent Technology Venture Capital Program\n• Selected, Tsinghua University SDG Open Innovation Marathon\n\n53 commits, 100% solo. Stayed on after CTO tenure as long-term custodian and executed the Vercel → Cloudflare Pages migration in April 2026.\n\nStack: Next.js 15, TypeScript, Tailwind, Google Maps API, Cloudflare Pages.",
+      "skills": [
+        "Next.js",
+        "Internationalization (i18n)"
+      ],
+      "moreSkillsCount": 3,
+      "hasOtherContributors": true,
+      "media": [
+        "screencapture-free-period-website-vercel-app-2024-12-01-20_11_54.png",
+        "screencapture-free-period-website-vercel-app-products-2024-12-01-19_38_55.png",
+        "screencapture-free-period-website-vercel-app-impact-2024-12-01-19_39_15.png"
+      ],
+      "mediaTotal": 5
+    }
+  ],
+  "volunteering": [
+    {
+      "role": "STEM Mentor",
+      "organization": "Forward with Her 她行 Mentorship",
+      "dateRange": "Oct 2024 - Oct 2025",
+      "duration": "1 yr 1 mo",
+      "cause": "Science and Technology",
+      "description": "Volunteer STEM Mentor at Forward with Her (她行) — a women-in-STEM nonprofit founded in 2020 connecting 1,000+ members worldwide through one-on-one and group mentorship, with the \"Her Voice\" podcast amplifying women's voices in technology.\n\nWhat I do as a volunteer mentor:\n\n• Bi-weekly 1:1 meetings with assigned early-career women in technology, covering career development, personal growth, and practical problem-solving in STEM environments.\n• Group mentoring sessions and shared Office Hours alongside cohort sisters across software engineering, data, product, and AI.\n• Coordinated through a dedicated volunteer liaison so mentee assignments, communication, and certification stay organised end-to-end.\n• Holds 2024 and 2025 official Forward with Her mentor certificates.\n\nIndependently-attested impact: seven of the eighteen public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions for their learning — making this the single-largest source of attested mentorship outcomes across my career.\n\nThe teaching doctrine I developed here — \"natural language is the source code\"; ship a real production site by Week 8; screenshot-as-evidence assessment — later became the foundation for the 2026 TechNest Community AI Track curriculum I now teach as the sole AI Instructor.",
+      "media": [
+        "2025-mentor-certificate.pdf",
+        "2024-mentor-certificate.pdf",
+        "My Acceptance Email from Forward with Her (她行) as an Official Mentor"
+      ],
+      "mediaTotal": 5,
+      "url": "https://www.linkedin.com/company/taxing-mentorship/"
+    },
+    {
+      "role": "Festival Translator & Cultural Exchange Volunteer",
+      "organization": "Art Committee of Guilin Festival",
+      "dateRange": "Sep 2023 - Nov 2023",
+      "duration": "3 mos",
+      "cause": "Arts and Culture",
+      "description": "Volunteer translator and cultural-exchange facilitator for a Māori dance troupe from New Zealand performing at the 2023 Guilin Arts Festival (Guangxi, China). Provided live translation support across traditional dance, music, and language — facilitating deeper cultural exchange between the performers and local audiences.\n\nWhat the three-month placement covered:\n\n• Live translation between the visiting Māori troupe and Guilin Festival organisers, audiences, and partner organisations.\n• Direct engagement with Māori cultural practice — traditional dance, music, te reo Māori language, and ceremonial protocol — through immersive exposure rather than textbook study.\n• Cross-cultural communication and cultural representation in international settings, using IT tools to enrich how Māori culture was presented to diverse Chinese audiences.\n\nWhy this matters to my current work: the immersive exposure to Māori culture I gained at Guilin in 2023 became the experiential foundation that later anchored Tam-AI-Ti — the AI Financial Wellness Coach I built solo on the Te Whare Tapa Whā holistic-health framework for Māori financial-prosperity research at ASB Bank (commissioned by Riria \"Missy\" Te Kanawa, former KPMG NZ National Māori Sector lead). What started as festival volunteer work two years earlier became the cultural grounding behind one of my flagship AI projects.",
+      "media": [
+        "Volunteer at the Maori Song and Dance Troupe performance",
+        "Volunteer at the Maori Song and Dance Troupe performance",
+        "IMG_20231031_160043.jpg"
+      ],
+      "mediaTotal": 6,
+      "url": "https://en.chinaculture.org/a/202307/18/WS64b5ceb2a31035260b816e7c_2.html"
+    },
+    {
+      "role": "Volunteer Educator",
+      "organization": "Cebu International Academy",
+      "dateRange": "Mar 2023 - Aug 2023",
+      "duration": "6 mos",
+      "cause": "Poverty Alleviation",
+      "description": "Volunteer Educator with Cebu International Academy (CIA) — the Philippines-based language and professional-skills academy where I completed IELTS and Business English programmes in focused small-group training as an alumna.\n\nWhile in Cebu, I led community outreach programmes in rural areas across multiple villages, organising events and distributing essential supplies to children, women, and the elderly — extending CIA's reach beyond classroom walls into the surrounding communities where the academy operates.\n\nWhat the six-month engagement reinforced:\n\n• Business communication skills, sharpened daily by English-immersion teaching, small-group facilitation, and direct cross-cultural exchange with learners across multiple Filipino communities.\n• Event organisation muscle — coordinating volunteer teams, supply logistics, and community-engagement schedules across rural sites.\n• A commitment to driving positive social impact through technology. This is the orientation that later anchored my work in women's-health tech (CTO at Sanicle, FemTech Weekend, and FreePeriod) and in culturally-grounded AI (Tam-AI-Ti — my Māori financial-wellness coach built for ASB Bank research).",
+      "media": [
+        "20241031100639.jpg",
+        "Regular Volunteer",
+        "Regular Volunteer"
+      ],
+      "mediaTotal": 12,
+      "url": "https://www.cebucia.com/en/"
+    }
+  ],
+  "honorsAndAwards": [
+    {
+      "title": "Outstanding Mentor Award - AI Hackathon Festival 2025",
+      "associatedWith": "She Sharp",
+      "issuer": "AI Forum NZ, She Sharp, and Auckland University of Technology",
+      "issueDate": "Aug 2025",
+      "onLiveProfile": true,
+      "media": [
+        "Technical guidance to Westlake Girls High School students",
+        "1755253595927.jpeg"
+      ],
+      "description": "Named an Outstanding Mentor at the AI Hackathon Festival 2025 — a two-day event co-organised by AI Forum NZ, She Sharp, and Auckland University of Technology that challenged teams to build AI solutions aligned with the UN Sustainable Development Goals.\n\nServed as one of 14 expert mentors guiding 11 teams and 80+ participants through the full build, from idea to working prototype inside a 24-hour window. The participants ranged from Westlake Girls High School students to working professionals across multiple industries.\n\nWhat the mentoring covered:\n• Helping high-school students use AI tools effectively and understand where they genuinely help\n• Guiding adult competitors in turning a rough concept into a functional Minimum Viable Product under time pressure\n• Hands-on support across AI/ML implementation, full-stack engineering, and system architecture\n• Ethical-AI considerations and user-centred design, so the solutions were responsible as well as working\n\nWorked alongside teams tackling real problems — food insecurity, digital accessibility, workforce upskilling, and indigenous environmental stewardship — giving each the technical depth to ship something demonstrable by the deadline."
+    },
+    {
+      "title": "Outstanding Performer — UN Women FemTech Hackathon 2025",
+      "associatedWith": "Sanicle",
+      "issuer": "FemTech Weekend",
+      "issueDate": "Mar 2025",
+      "onLiveProfile": true,
+      "media": [
+        "20250313155203_FemTech_Sanicle.jpg"
+      ],
+      "description": "Recognised as an Outstanding Performer at the 2025 UN Women FemTech Hackathon in Beijing — an event focused on empowering women's workplace health, run in collaboration with Sanicle and the NGO CSW Forum.\n\nCompeted as an independent developer, contributing innovative solutions to women's health challenges in professional environments and standing out in a field built around team entries. The recognition reflected both the technical quality of the build and its real-world fit for the workplace-health brief that the hackathon set."
+    },
+    {
+      "title": "UN CSW 69 Speaker — Beyond Beijing 30 Conference",
+      "associatedWith": "Sanicle",
+      "issuer": "United Nations Headquarters, New York",
+      "issueDate": "Mar 2025",
+      "onLiveProfile": true,
+      "media": [
+        "Commission on the Status of Women",
+        "CSW69 / Beijing+30 (2025)",
+        "I gave an online speech at the United Nations Headquarters in New York"
+      ],
+      "mediaTotal": 6,
+      "description": "Invited as a featured speaker to present Sanicle AI — a women's workplace-health management platform — at the UN CSW 69 conference marking the 30th anniversary of the Beijing Declaration, held at United Nations Headquarters in New York on 14 March 2025.\n\nPresented to an audience of international delegates, UN officials, and global leaders, demonstrating how AI can address workplace gender inequities through practical, privacy-respecting health solutions rather than policy alone.\n\nThe presentation drew direct response from senior figures:\n• IBM representatives expressed interest in a pilot collaboration\n• The Minister of Gender and Children's Affairs from Sierra Leone praised the platform as the first comprehensive solution connecting menstrual-cycle data to actionable workplace policy through AI analysis\n• Multiple NGOs and member-state representatives followed up with collaboration requests\n\nSpeaking at a UN forum of this stature placed an independently built FemTech platform in front of the people who shape global gender-equity policy — and turned a technical demo into concrete partnership interest.",
+      "links": [
+        "https://www.unwomen.org/en/how-we-work/commission-on-the-status-of-women",
+        "https://www.unwomen.org/en/how-we-work/commission-on-the-status-of-women/csw69-2025"
+      ]
+    },
+    {
+      "title": "Dean's List - Top 5% Academic Performance",
+      "associatedWith": "Lincoln University (NZ)",
+      "issuer": "Lincoln University, Faculty of Environment, Society & Design",
+      "issueDate": "Jan 2025",
+      "onLiveProfile": true,
+      "media": [
+        "Congratulatory Email"
+      ],
+      "description": "Named to the Dean's List for academic excellence in Semester 2, 2024, placing among the top 5% of students in the Faculty of Environment, Society & Design at Lincoln University — New Zealand's specialist land-based university.\n\nThe recognition came during the Master of Applied Computing programme, alongside full-time engineering work — evidence of sustained academic performance maintained in parallel with shipping production software.",
+      "links": [
+        "https://www.lincoln.ac.nz/"
+      ]
+    },
+    {
+      "title": "Excellence Award — FemTech China Women's Health Technology Challenge",
+      "associatedWith": "Lincoln University (NZ)",
+      "issuer": "FemTech China",
+      "issueDate": "Dec 2024",
+      "onLiveProfile": true,
+      "media": [
+        "HONOR CERTIFICATE",
+        "FemTech China"
+      ],
+      "description": "Won the Excellence Award at China's inaugural FemTech Weekend Women's Health Technology Challenge as a core member of Team BuXun.\n\nRun in partnership with C2C Startups, the competition set out to advance technological innovation in women's healthcare. Led product development through intensive workshops, mentoring sessions, and collaborative team work, culminating in a complete pitch deck and prototype addressing a specific women's-health challenge.\n\nEntries were judged on product potential, technical innovation, commercial viability, and team collaboration by a panel of industry experts and Chengdu Regional Science and Technology Consulting Co., Ltd.\n\nThis is the same FemTech Weekend organisation later joined as CTO in March 2025 — the award preceded and directly informed that subsequent leadership engagement.",
+      "links": [
+        "https://femtechcn.com/"
+      ]
+    },
+    {
+      "title": "Master of Applied Computing with Distinction",
+      "associatedWith": "Lincoln University (NZ)",
+      "issuer": "Lincoln University (Te Whare Wānaka o Aoraki)",
+      "issueDate": "Dec 2024",
+      "onLiveProfile": true,
+      "media": [
+        "Congratulatory Email",
+        "image001.png",
+        "image002.png"
+      ],
+      "mediaTotal": 4,
+      "description": "Awarded Distinction for the Master of Applied Computing at Lincoln University — New Zealand's specialist land-based university — for achieving an average of 80% or above across every course in the programme.\n\nDistinction is the programme's highest classification, marking consistent top-tier performance across advanced computing coursework and research rather than a single strong result.",
+      "links": [
+        "https://www.lincoln.ac.nz/"
+      ]
+    }
+  ],
+  "recommendations": {
+    "received": [
+      {
+        "recommender": "Prasanth Pavithran (MBA)",
+        "headline": "Driving Business Transformation | Building Better Communities | Investor | She Sharp Mentor | AI Evangelist | Storyteller",
+        "date": "May 28, 2026",
+        "relationship": "Prasanth worked with Chan on the same team",
+        "text": "Chan stands out from the crowd. She is driven to solve real business problems, bringing outstanding technical skills from concept through to production. She is a powerhouse of talent, paired with a genuinely great attitude.\n\nI have had the pleasure of working with Chan through She Sharp, where we served as Ambassadors and mentors supporting women in STEM. She is a strong collaborator who knows when to lead, when to contribute, and when to support others. Chan would be an asset to any team.",
+        "profileUrl": "https://www.linkedin.com/in/prasanth-pavithran-mba-a54ab912/"
+      },
+      {
+        "recommender": "Lesley Gao",
+        "headline": "Product Designer | Web Developer",
+        "date": "May 25, 2026",
+        "relationship": "Lesley worked with Chan on the same team",
+        "text": "A PR merged at 12:30am? You didn't see it wrong, that's pretty normal for Chan.\n\nI've really enjoyed working with Chan as a She Sharp ambassador and collaborating on the new website together. Since this is a project that requires commitment outside of work hours, it's not unusual to see PRs being merged late at night in the GitHub repo.\n\nChan is someone you feel genuinely confident working with. She naturally becomes the technical backbone of the team, and whenever technical support is needed, she's always one of the first to step up.\n\nShe is also proactive in proposing automation tools that improve efficiency and reduce costs for the team. Beyond that, she often goes out of her way to build things that genuinely help others learn. For example, during this year's MSD workshops, she independently created a website that brought together workshop resources and additional AI learning materials, giving participants more opportunities to continue exploring and learning beyond the sessions. To me, that is what true empowerment looks like.\n\nFrom a communication perspective, Chan is very open to feedback. She acts quickly on reasonable suggestions, while also being confident enough to push back on ideas that may not make sense, always with thoughtful explanations or better alternatives.\n\nAbove all, what stands out most to me is her passion for technology. It's something I genuinely admire. I would wholeheartedly recommend Chan to any employer looking for a reliable, technically strong, and genuinely passionate developer.",
+        "profileUrl": "https://www.linkedin.com/in/lesley-gao/"
+      },
+      {
+        "recommender": "Saba Gecgil",
+        "headline": "Founder & CEO @ GAVIGO | Activation & Execution Layer for Interactive Software",
+        "date": "May 25, 2026",
+        "relationship": "Saba managed Chan directly",
+        "text": "Chan has been one of the most important engineering contributors to GAVIGO during a demanding early stage.\n\nWhat stands out about Chan is not only his technical ability, but the way he turns ambiguous founder-level direction into working systems, measurable proof, and reliable product surfaces.\n\nAt GAVIGO, Chan has led critical work across our activation and execution pipeline, orchestration behavior, telemetry, demo reliability, public/investor/operator surfaces, and compute-backed proof systems. He consistently brings clarity to hard systems questions: what needs to run at activation time, what can be prepared, what can be reused, where state can be preserved, and where the boundary needs to be measured rather than assumed.\n\nHe combines speed with discipline. Chan ships quickly, but he also documents, tests, and pushes for technical honesty. If something is unsafe to expose, he says it clearly. If a fast fix is enough, he executes it. If a deeper system boundary appears, he helps turn it into a measured engineering question instead of hand-waving around it.\n\nHe has also been an excellent founder-engineer collaborator. In an early-stage company, priorities change, constraints are real, and the path is rarely linear. Chan has handled that environment with ownership, patience, and maturity. He cares not only about writing code, but about making the system demonstrable, explainable, and credible for investors, partners, and the team.\n\nChan played a major role in helping GAVIGO move from an early technical concept into a controlled proof system with real product behavior, measured infrastructure signals, and a much clearer activation/execution architecture.\n\nI would strongly recommend Chan for any ambitious technical team building low-latency systems, activation infrastructure, orchestration, AI/compute-backed product surfaces, or early-stage deep technology. He is the kind of engineer who makes a hard system more real, more measurable, and more shippable.",
+        "profileUrl": "https://www.linkedin.com/in/saba-gecgil/"
+      },
+      {
+        "recommender": "Nirmala Chinnappan",
+        "headline": "Project Coordinator | ITIL | Change Management | Event Manager | Master of IT Project Management @ AUT",
+        "date": "May 25, 2026",
+        "relationship": "Nirmala worked with Chan on the same team",
+        "text": "I have had the pleasure of working alongside Chan Meng through her outstanding volunteer contributions at She Sharp, where she has taken a leading role in driving the organisation's website development initiative. Her dedication to advancing She Sharp's mission of bridging the gender gap in STEM is reflected not only in her technical expertise, but also in her commitment to creating meaningful impact for the community.\nChan Meng demonstrated exceptional leadership in spearheading the transition from a no-code Webflow platform to a modern full-stack development environment. She architected and developed the new She Sharp website using technologies such as Next.js 15, Tailwind CSS, PostgreSQL, and Drizzle ORM, while also implementing secure authentication systems and Stripe payment integration to support membership and event management. Her ability to combine technical innovation with practical, scalable solutions has significantly strengthened She Sharp's digital infrastructure and user experience.\nBeyond her technical capabilities, Chan Meng is highly collaborative, detail-oriented, and proactive in her approach. She consistently brings thoughtful problem-solving, clear documentation practices, and a strong sense of ownership to every aspect of her work. Her contributions have helped create a scalable and professional platform that supports the She Sharp community.\nI highly recommend Chan Meng for her technical excellence, leadership, and dedication to using technology to create positive social impact. She is a valuable contributor to any team, and I look forward to seeing her continued success in the tech industry.",
+        "profileUrl": "https://www.linkedin.com/in/nirmalachinnappan/"
+      },
+      {
+        "recommender": "Yesha Kaniyawala",
+        "headline": "AI Engineer at Possibl.ai",
+        "date": "May 25, 2026",
+        "relationship": "Yesha worked with Chan on the same team",
+        "text": "It is rare to come across someone who combines technical excellence with genuine dedication but Chan embodies both effortlessly. Having had the privilege of working alongside her at SheSharp, she is without doubt one of the most accomplished and conscientious professionals I have had the pleasure of knowing.\n\nAs the driving force behind website management at SheSharp, Chan goes far beyond simply maintaining operations. She demonstrates remarkable foresight in identifying challenges, implements strategic solutions with precision and ensures the organization's digital presence consistently reflects the highest standards it stands for.\n\nWhat truly distinguishes her is her profound commitment to the mission. Her dependability, professionalism, and uplifting presence make her an invaluable pillar of the team.\n\nAny organization would be exceptionally fortunate to have Chan among their ranks. She is not merely a talented professional, she is the kind of individual who elevates everyone around her. I recommend her with the utmost enthusiasm and without the slightest reservation.",
+        "profileUrl": "https://www.linkedin.com/in/yeshakaniyawalasoftwareengineer/"
+      },
+      {
+        "recommender": "Siyu Xing",
+        "headline": "Ph.D. Candidate in CS (AIGC) | University of Chinese Academy of Sciences",
+        "date": "November 10, 2025",
+        "relationship": "Siyu reported to Chan directly",
+        "text": "很开心在她行能遇到Chan Meng。我参加了Chan老师的AI编程公开课。Chan关于身份认同的观点让我很有收获。我还旁听了Chan与其她姐妹的Office Hour，听Chan分享的个人故事和认知也让我看待很多事物时有了不同的角度。向想要在技术领域取得进步的人强烈推荐Chan Meng老师。\n\nI'm very glad to have met Chan Meng through Forward with Her 她行 Mentorship. I attended Chan's AI programming course. Her insights on identity and self-awareness deeply inspired me. I also joined her Office Hours with other sisters, and hearing Chan share her personal stories and perspectives helped me broaden my way of thinking. I highly recommend Chan to anyone who wants to grow and advance in the technology field.",
+        "profileUrl": "https://www.linkedin.com/in/siyu-x-4a003a356/"
+      },
+      {
+        "recommender": "Cecilia Yin",
+        "headline": "Solutions Architect at AWS",
+        "date": "November 3, 2025",
+        "relationship": "Cecilia was senior to Chan but didn't manage Chan directly",
+        "text": "I had the pleasure of mentoring Chan through the AWS SheBuilds program. She has a great mix of technical skills and a genuine passion for AI that shines through in everything she does. I always enjoyed our chats. She brings curiosity, positivity, and a genuine drive to grow. I'm excited to see where her journey takes her and wish her all the best for what's ahead.",
+        "profileUrl": "https://www.linkedin.com/in/cecilia-yin/"
+      },
+      {
+        "recommender": "Amy Li",
+        "headline": "西华师范大学学生",
+        "date": "September 3, 2025",
+        "relationship": "Amy reported to Chan directly",
+        "text": "很幸运在她行活动中遇到了Chan老师作为我的mentor。和Chan老师连线了两次，也旁听了一次Chan与其她姐妹们的茶话会，从Chan老师这里能够感受到很强大、很有主体性的精神力量。Chan老师讲话的风格随和又幽默，很感谢老师，在帮助我答疑解惑时毫无保留地分享了她的经验与方法，让我了解到许多新的信息渠道，也让我理清了思路，未来的路径规划变得更清晰了。\n\nChan老师对我来说也不只是mentor，同时也是我的role model，她的超强行动力和清晰的表达输出能力是我想要学习的，对于具体问题的理性分析与解答也能给人很多启发。\n\n向大家强烈推荐Chan，与她交流你会有许多收获。\n\nI am very lucky to have met Chan Meng as my mentor in Forward with Her. I have connected with her twice, and I have also listened to a tea party between Chan and her sisters, from which I can feel a very powerful and subjective spiritual power. Chan's style of speech is easy-going and humorous, and I am very grateful to her for sharing her experience and methodology unreservedly when she helped me to answer my questions. She shared her experience and methods, which allowed me to learn many new channels of information, and allowed me to clarify my thoughts, and my future path planning became clearer.\n\nChan is not only a mentor to me, but also my role model. Her strong motivation and clear expression and output ability are what I want to learn, and her rational analysis and answers to specific questions can also give people a lot of inspiration.\n\nI highly recommend Chan to everyone, you will gain a lot from talking to her.",
+        "profileUrl": "https://www.linkedin.com/in/amy-li-780142382/"
+      },
+      {
+        "recommender": "Paige Afanu",
+        "headline": "ICP-ACC POPM SSM CMC FIMC CMP | GRC Analyst | Cybersecurity Analyst | Product Owner | Business Analyst | Agile Coach | Development Expert | Expert Resource for Government | Business Management",
+        "date": "June 10, 2025",
+        "relationship": "Paige managed Chan directly",
+        "text": "I had the pleasure of working with Chan Meng on the website and application development for Sanicle.cloud, where she showcased her exceptional technical expertise. As a solo developer, she took on the monumental task of coding the entire website and parts of the platform from scratch, demonstrating not only her deep technical skills but also her ability to manage complex projects independently.\n\nChan's problem-solving abilities and attention to detail are remarkable. She consistently delivered high-quality work, and her coding proficiency was evident in every stage of the development process. She is also incredibly intelligent and driven, always eager to explore new technologies and methodologies, including the latest AI tools and AI agents, which speaks to her commitment to continuous learning and innovation.\n\nHer passion for technology and her ability to tackle challenging projects make her a valuable asset to any team or initiative. I highly recommend Chan for any opportunity that requires technical excellence and a forward-thinking approach to development.",
+        "profileUrl": "https://www.linkedin.com/in/peju-afanu-7b9367110/"
+      },
+      {
+        "recommender": "Gabrielle J. Hurst",
+        "headline": "Remote Pilot & Product Marketing Manager @ Houston Robotics",
+        "date": "May 25, 2025",
+        "relationship": "Gabrielle J. worked with Chan on the same team",
+        "text": "Chan Meng is an outstanding Senior AI/ML Infrastructure Engineer whose work consistently combines speed, security, and strategic foresight.\n\nShe delivers complex, high-impact systems with precision and grace. She's integrated enterprise AI tools like IBM's watsonx, refining vector databases, or optimizing UX flows for production readiness.\n\nWhat truly sets Chan apart is her principled approach to software engineering. She embeds data privacy into the core architecture, ensuring that client agency, trust, and resilience are never afterthoughts.\n\nChan brings structure and calm to ambiguity, advocates for documentation and transparency, and fosters a culture of accountability and focus.\n\nDespite operating across time zones, she remains fully present, responsive, and proactive—turning potential collaboration friction into a model of asynchronous excellence.\n\nIn every sense, Chan is the kind of engineer who elevates those around her.",
+        "profileUrl": "https://www.linkedin.com/in/gabrielle-j-h-159141202/"
+      },
+      {
+        "recommender": "Chaste Christopher Inegbedion",
+        "headline": "Event & Program Ops Leader | Creator & Journalist | 50+ Events, 5+ Markets | $1M+ Budgets | $750K+ Saved | Vendor & Stakeholder Leadership | Connecting Brands at High-Impact Events 🔜 Cannes 🇫🇷",
+        "date": "May 23, 2025",
+        "relationship": "Chaste Christopher managed Chan directly",
+        "text": "I highly recommend Chan Meng. Since joining Sanicle, her hands-on experience, deep understanding of our AI technology, and exceptional willingness to learn and collaborate have been absolutely instrumental. She played a pivotal role in securing our IBM MVP and its successful deployment, a testament to her dedication and expertise.\n\nChan is truly the best hand when it comes to workplace health, consistently demonstrating a remarkable ability to translate complex concepts into actionable strategies. I am confident that she will continue to drive significant impact wherever her journey leads.",
+        "profileUrl": "https://www.linkedin.com/in/chastechrisinegbedion/"
+      },
+      {
+        "recommender": "苏米",
+        "headline": "设计师",
+        "date": "February 10, 2025",
+        "relationship": "苏米 reported to Chan directly",
+        "text": "Chan Meng is a mentor who is committed to others. Even when there are professional differences, she will put herself in others' shoes to seek help and communicate patiently. When working on code, she is always able to actively grasp the latest technological developments and capture the results in various forms of communication, making her a great full-stack engineer.",
+        "profileUrl": "https://www.linkedin.com/in/%E7%B1%B3-%E8%8B%8F-8b24881a4/"
+      },
+      {
+        "recommender": "Shushu Qin",
+        "headline": "Software Developer | AWS Certified (SAA + ML) | Experienced in Java, Spring Boot, JUnit, Functional & Unit Testing, Redis, RESTful APIs",
+        "date": "February 10, 2025",
+        "relationship": "Shushu reported to Chan directly",
+        "text": "Chan Meng is an inspiring mentor whose passion for coding deeply influenced me. Her enthusiasm for writing clean and efficient code made me appreciate the beauty of problem-solving through programming. She not only provided technical guidance but also encouraged me to think critically and continuously improve. Her patience, support, and deep expertise make her an outstanding mentor, and I highly recommend her to anyone seeking guidance in technology！",
+        "profileUrl": "https://www.linkedin.com/in/shushu-q-278a93316/"
+      },
+      {
+        "recommender": "Patricia Anthony",
+        "headline": "Associate Professor at Lincoln University (NZ)",
+        "date": "January 22, 2025",
+        "relationship": "Patricia was Chan's teacher",
+        "text": "I am pleased to recommend Chan Meng, who recently completed Master of Applied Computing with distinction at Lincoln Univesity, NZ. Throughout her studies, Chan Meng demonstrated excellent technical skills, a strong work ethic, and an inquisitive nature. She consistently excelled in both coursework and practical projects, approaching challenges with critical thinking and creativity.\n\nChan Meng is hardworking, detail-oriented, and highly motivated to expand her knowledge. Her ability to work independently and collaboratively, along with her excellent problem-solving skills, makes her a valuable asset in any setting.\n\nI have no doubt that Chan Meng will succeed in her future endeavours and I highly recommend her for any job opportunity in computing.\n\nSincerely,\nPatricia Anthony\nAsscociate Professor in Applied Computing\nLincoln University",
+        "profileUrl": "https://www.linkedin.com/in/patricia-anthony-90b877327/"
+      },
+      {
+        "recommender": "Yijia(Robin) Lee",
+        "headline": "--",
+        "date": "January 13, 2025",
+        "relationship": "Yijia(Robin) reported to Chan directly",
+        "text": "I'm so fortunate to have Chan as my mentor! Her passion, expertise, and patience have helped me gain more technical skills and cultivate innovative thinking abilities. Thanks for opening the door to the future of the technology!",
+        "profileUrl": "https://www.linkedin.com/in/yijia-robin-lee-710674278/"
+      },
+      {
+        "recommender": "shiyu fang",
+        "headline": "Frontend Developer | UI/UX Design | Full-Stack Capable",
+        "date": "January 12, 2025",
+        "relationship": "shiyu reported to Chan directly",
+        "text": "Chan's innovative approach to combining AI with web development is truly inspiring! Her enthusiasm is contagious, and she opened my eyes to exciting new ways of coding. A fantastic mentor who makes tech learning fun!",
+        "profileUrl": "https://www.linkedin.com/in/shiyu-fang1/"
+      },
+      {
+        "recommender": "Jixuan Jessie Wan",
+        "headline": "Deloitte - Data Analyst",
+        "date": "December 14, 2024",
+        "relationship": "Jixuan Jessie worked with Chan but they were at different companies",
+        "text": "终于找到了推荐入口！我很高兴有机会向您推荐Chan Meng老师。我完成了Chan老师的精彩课程，迫不及待想要分享我的学习体验。Chan老师的教学风格认真且细致，她对于每个工具的使用讲解都极具耐心和深度。\n\n过去，我在配置工具时常常遇到困难，但在Chan老师逐步详尽的指导下，我不仅克服了这些挑战，还成功地创建了一个网站。这对我来说是一个巨大的成就，让我感到无比兴奋和自豪。这一切都要归功于Chan老师的专业指导和无私分享。\n\n我衷心感谢Chan老师，她的课程不仅提升了我的技能，也极大地增强了我的自信心。我强烈推荐Chan Meng老师给任何寻求专业指导和想要在技术领域取得进步的人。\n\nI am delighted to have the opportunity to recommend Chan Meng on LinkedIn. Having just completed Chan's exceptional course, I am eager to share my learning experience. Chan's teaching style is meticulous and thorough, with patient and in-depth explanations for the use of each tool.\n\nPreviously, I often found myself stuck at the configuration stage with tools, but with Chan's step-by-step guidance, I not only overcame these challenges but also successfully created a website. This is a significant achievement for me and has filled me with immense excitement and pride. All of this is thanks to Chan's professional instruction and generous sharing of knowledge.\n\nI am sincerely grateful to Chan for not only enhancing my skills but also greatly boosting my confidence. I wholeheartedly recommend Chan Meng to anyone seeking professional guidance and looking to advance in the technical field.",
+        "profileUrl": "https://www.linkedin.com/in/jixuan-wan/"
+      },
+      {
+        "recommender": "Qiao Jun",
+        "headline": "清华学生",
+        "date": "November 26, 2024",
+        "relationship": "Qiao worked with Chan on the same team",
+        "text": "I had the pleasure of working alongside Chan, who is not only meticulous but also enthusiastic about exploring new technologies. She introduced me to the fascinating world of AI programming and showed me how creating personal web pages could be both simple and enjoyable. Her patience in debugging and her willingness to share the plugins and websites she developed greatly benefited our team. Chan's passion for coding is contagious—working with her made me realize that programming can be both fun and immensely rewarding. I wholeheartedly recommend her for any role where innovation, collaboration, and technical expertise are valued.",
+        "profileUrl": "https://www.linkedin.com/in/qiao-jun-78a1b1282/"
+      }
+    ]
+  },
+  "publications": [
+    {
+      "title": "[Weekly AI Digest] What's Shipping in AI",
+      "publisher": "Chan's Weekly AI Newsletter",
+      "publicationDate": "Apr 6, 2026",
+      "author": "Chan Meng (author)",
+      "group": "Newsletters",
+      "description": "A weekly newsletter I write — every Monday, curated picks from the hottest new AI tools on Product Hunt, condensed into a three-minute read that keeps subscribers current on what's trending in AI.\n\nFree, with a five-second subscribe. It's the lightweight, tools-focused counterpart to the deeper research breakdowns in Decoding the Future.",
+      "url": "https://chanmeng.org/#newsletter"
+    },
+    {
+      "title": "[LinkedIn Newsletter] Decoding the Future",
+      "publisher": "Chan's LinkedIn newsletter",
+      "publicationDate": "Oct 10, 2025",
+      "author": "Chan Meng (author)",
+      "group": "Newsletters",
+      "description": "The companion LinkedIn newsletter to my Decoding the Future podcast — covering cutting-edge AI research papers and LLM innovations in written form.\n\n800+ tech enthusiasts subscribe, giving the research breakdowns a steady reading audience alongside the podcast's listeners.",
+      "url": "https://www.linkedin.com/build-relation/newsletter-follow/?entityUrn=7359054938187984896"
+    },
+    {
+      "title": "Meet the FemTech Founders Redefining Women's Health at Work",
+      "publisher": "THISDAYLIVE",
+      "publicationDate": "May 28, 2025",
+      "author": "THISDAYLIVE editorial — Chan Meng featured",
+      "hasOtherAuthors": true,
+      "group": "Press features about Chan",
+      "description": "A press feature profiling the founding team behind Sanicle and its mission to redefine women's health in the workplace, published during my tenure as CTO at Sanicle.\n\nThe article situates Sanicle's work within the wider FemTech movement — building technology that treats women's workplace health as core infrastructure rather than an afterthought — and features the people driving it. Being profiled here put the platform's engineering and product vision in front of an international readership focused on health innovation.",
+      "url": "https://www.thisdaylive.com/2025/05/28/meet-the-femtech-founders-redefining-womens-health-at-work/"
+    },
+    {
+      "title": "[Podcast — host] Decoding the Future",
+      "publisher": "Spotify",
+      "publicationDate": "May 4, 2025",
+      "author": "Chan Meng (host)",
+      "group": "Hosted podcasts",
+      "description": "An English-language podcast I host, exploring the landmark research papers driving innovation in Artificial Intelligence, Large Language Models, and beyond — translating dense research into something a working engineer or curious listener can actually use.\n\nThe show runs alongside a companion LinkedIn newsletter of the same name, with 800+ subscribers, so each episode reaches both audio and reading audiences.",
+      "url": "https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj"
+    },
+    {
+      "title": "[Podcast — host] Future Turing 未来图灵",
+      "publisher": "Spotify",
+      "publicationDate": "May 4, 2025",
+      "author": "Chan Meng (host)",
+      "group": "Hosted podcasts",
+      "description": "The Chinese-language counterpart to Decoding the Future — a podcast I host that decodes landmark research papers in Artificial Intelligence, LLMs, and other cutting-edge fields for a Chinese audience.\n\nThe framing question of the show: \"Where is the boundary of intelligence? How will the future be shaped by code?\" Running parallel English and Chinese editions lets the same research reach listeners across both language communities.",
+      "url": "https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4"
+    },
+    {
+      "title": "[Podcast] From Math Teacher to FemTech CTO: Chan Meng on AI and Women's Health Innovation",
+      "publisher": "Femtech At Work",
+      "publicationDate": "Apr 22, 2025",
+      "author": "Femtech At Work (host) — Chan Meng (guest)",
+      "hasOtherAuthors": true,
+      "group": "Podcast guest appearances",
+      "description": "Greater China Edition, Episode 21 of the Femtech At Work podcast — a conversation about my path into FemTech and how AI is being used to understand and improve women's health.\n\nWhat the episode covers:\n• My journey from teaching mathematics to becoming a CTO in tech — proof you can follow a non-linear path into the field\n• Where the real innovations are happening in women's health technology\n• How AI is being applied to women's health, and the considerations that come with it — data privacy chief among them\n• The specific challenges of discussing and addressing women's health in a Chinese cultural context\n• Down-to-earth advice for anyone thinking about starting their own venture in the women's-health space",
+      "url": "https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2"
+    },
+    {
+      "title": "AI-Driven Health Solutions for Women in the Workplace — UN CSW69 & Columbia University SIPA",
+      "publisher": "FemTech Weekend",
+      "publicationDate": "Apr 2, 2025",
+      "author": "FemTech Weekend editorial — Chan Meng featured",
+      "hasOtherAuthors": true,
+      "group": "Press features about Chan",
+      "description": "A feature in FemTech Weekend's publication on my work as an independent developer presenting at the UN Commission on the Status of Women (CSW69) and Columbia University SIPA's international forum on technology and women's health.\n\nI presented \"Sani,\" an AI health assistant that delivers personalised health recommendations for women in the workplace. The solution pairs a privacy-first architecture — protecting employee data while still surfacing actionable insight — with a dual-view dashboard that serves both employees and HR teams.\n\nThe presentation drew direct response from senior figures:\n• IBM representatives expressed interest in a pilot collaboration\n• The Minister of Gender and Children's Affairs from Sierra Leone praised it as the first comprehensive solution connecting menstrual-cycle data to actionable workplace policy through AI analysis\n\nThe feature reflects a consistent approach to FemTech: minimalist architecture and end-to-end full-stack delivery in service of women's health — \"Less is More\" applied to a hard problem.",
+      "url": "https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg"
+    },
+    {
+      "title": "From Math Teacher to Full-Stack Developer",
+      "publisher": "小宇宙FM — 码农姐妹 (Xiaoyuzhou FM, \"Coder Sisters\")",
+      "publicationDate": "Feb 22, 2025",
+      "author": "码农姐妹 (host) — Chan Meng (guest)",
+      "group": "Podcast guest appearances",
+      "description": "A guest appearance on 《码农姐妹》(Coder Sisters), a podcast from Xiaoyuzhou FM, where I shared my career transition from teaching maths to working as a full-stack developer.\n\nWe also talked about my minimalist lifestyle and my observations on the job markets in China, the US, and New Zealand, and I explained how I use AI to learn programming and how it accelerated my move into engineering — a practical look at retraining into tech rather than an abstract one.",
+      "url": "https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2"
+    },
+    {
+      "title": "Weekly Pulse: Remote MCP, Images, Screen Recording",
+      "publisher": "PulseMCP",
+      "publicationDate": "Jan 4, 2025",
+      "author": "Tadas Antanavicius (PulseMCP) — Chan Meng's MCP servers featured",
+      "group": "Press features about Chan",
+      "description": "Third-party coverage in the PulseMCP newsletter, where the Model Context Protocol (MCP) servers I built — server-google-news and server-google-jobs — were featured among the week's notable ecosystem contributions. MCP is Anthropic's open standard that lets AI agents safely use real tools and data.\n\nBeing picked up by an independent MCP-ecosystem newsletter, written by Tadas Antanavicius, is external validation of an early contribution to the agent-tooling space — the servers were useful enough that a curator chose to surface them to a specialist audience.",
+      "url": "https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording"
+    },
+    {
+      "title": "Minimalist to the End, I Threw Away My Old Name",
+      "publisher": "NetEase — Kan Ke inSight (网易看客 inSight)",
+      "publicationDate": "Oct 18, 2024",
+      "author": "Chan Meng",
+      "group": "Minimalism / lifestyle press",
+      "engagement": "29,000+ reads · 534 audio listens · 569 likes · 1,118 shares · 136 bookmarks · 106 comments",
+      "description": "A personal narrative on radical minimalism that goes well beyond ordinary decluttering — showing how extreme simplification of possessions, relationships, and daily habits can drive genuine personal transformation. Drawing on firsthand experience, it offers practical insight into living minimally in modern life, from an empty room to reimagined social connections and even personal identity.\n\nEngagement: 29,000+ reads · 534 audio listens · 569 likes · 1,118 shares · 136 bookmarks · 106 comments.",
+      "url": "https://mp.weixin.qq.com/s/Jk9I8ONA6vsyvHz7d4dkfw"
+    },
+    {
+      "title": "Girl on Mattress",
+      "publisher": "The Most People (最人物)",
+      "publicationDate": "Sep 23, 2024",
+      "author": "The Most People editorial — Chan Meng featured",
+      "group": "Minimalism / lifestyle press",
+      "engagement": "100,000+ reads · 2,234 audio listens · 1,779 likes · 3,864 shares · 454 bookmarks · 74 comments",
+      "description": "A feature article sharing my experience and reflections as a practitioner of radical minimalism. The piece explores how simplifying life — from possessions to relationships to digital presence — can lead to greater freedom and authenticity, using concrete examples and philosophical reflection to show how minimalist principles apply to modern urban life and personal growth.\n\nEngagement: 100,000+ reads · 2,234 audio listens · 1,779 likes · 3,864 shares · 454 bookmarks · 74 comments.",
+      "url": "https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ"
+    },
+    {
+      "title": "A Glimpse of My Minimalist Home",
+      "publisher": "Douban — Daily Douban Feature",
+      "publicationDate": "Aug 14, 2024",
+      "author": "Chan Meng",
+      "group": "Minimalism / lifestyle press",
+      "engagement": "100,000+ reads · 960 audio listens · 6,520 likes · 14,000+ shares · 795 bookmarks · 508 comments",
+      "description": "A look at minimalist living from 2018 to 2024, showing how decluttering physical space improves both personal life and professional focus. Selected as a Daily Douban weekly highlight, the piece reflects the same instinct I bring to engineering — stripping away what isn't needed so the essential works better, whether that's a living space or a software system.\n\nEngagement: 100,000+ reads · 960 audio listens · 6,520 likes · 14,000+ shares · 795 bookmarks · 508 comments.",
+      "url": "https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Cantonese",
+      "proficiency": "Native or bilingual proficiency"
+    },
+    {
+      "language": "Chinese",
+      "proficiency": "Native or bilingual proficiency"
+    },
+    {
+      "language": "English",
+      "proficiency": "Professional working proficiency"
+    },
+    {
+      "language": "Japanese",
+      "proficiency": "Limited working proficiency"
+    }
+  ]
+}

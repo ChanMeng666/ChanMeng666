@@ -44,7 +44,16 @@ const work = (id) => (profile.work ?? []).find((w) => w.id === id);
 const volunteer = (id) => (profile.volunteer ?? []).find((v) => v.id === id);
 const education = (id) => (profile.education ?? []).find((e) => e.id === id);
 const project = (id) => (profile.projects ?? []).find((p) => p.id === id);
-const reference = (name) => (profile.references ?? []).find((r) => r.name === name);
+const referenceById = (id) => (profile.references ?? []).find((r) => r.id === id);
+
+// Format a YYYY-MM-DD date as the LinkedIn display form "Month D, YYYY"
+// (full month name, no leading zero on the day) — e.g. "2026-05-28" -> "May 28, 2026".
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const fmtRecDate = (ymd) => {
+  if (!ymd) return null;
+  const [y, m, d] = String(ymd).split("-");
+  return `${MONTH_NAMES[Number(m) - 1]} ${Number(d)}, ${y}`;
+};
 
 // Replace a value in-place on an object while preserving key order: if the key
 // already exists it is overwritten in place; otherwise it is inserted before the
@@ -259,6 +268,27 @@ for (const p of ln.projects) {
   // guard re-derives and asserts agreement. Golden order: name, dateRange, then
   // associatedWith? / description — anchor before whichever comes first.
   setInOrder(p, "dateRange", dateRangeEn(ym(src.startDate), ym(src.endDate)), ["associatedWith", "description"]);
+}
+
+// --- inject: recommendations text + date from references[] (matched by `ref` id) ---
+// Each block recommendation carries a `ref` id pointing to a references[] entry.
+// `text` is injected verbatim from references[].reference (the canonical, now
+// LinkedIn-faithful copy) and `date` from references[].meta.x_brand.givenAt
+// (YYYY-MM-DD -> "Month D, YYYY"). `profileUrl` is injected from references[]
+// only when it is byte-equal to the value the block already carries (i.e. the
+// canonical store has the same URL); otherwise the block value is kept.
+// `recommender`, `headline`, `relationship` are LinkedIn display-specific and
+// stay in the block. The `ref` marker itself is removed from the output.
+// Golden key order: recommender, headline, date, relationship, text, profileUrl.
+for (const r of ln.recommendations?.received ?? []) {
+  if (!r.ref) throw new Error(`recommendation has no ref: ${r.recommender}`);
+  const src = referenceById(r.ref);
+  if (!src) throw new Error(`recommendation ref not found in references[]: ${r.ref}`);
+  const refUrl = src.meta?.x_brand?.linkedinUrl ?? src.meta?.x_brand?.profileUrl;
+  delete r.ref;
+  setInOrder(r, "date", fmtRecDate(src.meta?.x_brand?.givenAt), "relationship");
+  setInOrder(r, "text", src.reference, "profileUrl");
+  if (refUrl && refUrl === r.profileUrl) setInOrder(r, "profileUrl", refUrl);
 }
 
 const outPath = path.join(repoRoot, "linkedin", "linkedin-profile.json");

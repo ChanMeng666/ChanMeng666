@@ -33,6 +33,8 @@ const fmtMonth = (ym) => { if (!ym) return null; const [y, m] = String(ym).split
 const ym = (d) => (d ? String(d).slice(0, 7) : d);
 const dateRange = (s, e) => `${fmtMonth(s)} - ${e ? fmtMonth(e) : "Present"}`;
 const dateRangeEn = (s, e) => `${fmtMonth(s)} – ${e ? fmtMonth(e) : "Present"}`;
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const fmtRecDate = (ymd) => { if (!ymd) return null; const [y, m, d] = String(ymd).split("-"); return `${MONTH_NAMES[Number(m) - 1]} ${Number(d)}, ${y}`; };
 
 const errors = [];
 const warnings = [];
@@ -129,17 +131,27 @@ for (const [name, pid] of Object.entries(projNameToId)) {
     err(`project "${name}" dateRange drift: projects[] derives "${derived}" but published "${pub}".`);
 }
 
-// --- recommendations: these are left verbatim in the block (text is reflowed
-// differently from references[], date format differs). Confirm each block
-// recommender still has a matching references[] entry by normalised name, so the
-// two stores stay in lock-step on WHO recommended. Report how many matched. ---
-const norm = (s) => s.replace(/\([^)]*\)/g, "").trim().toLowerCase();
-const refByName = {};
-for (const r of profile.references ?? []) refByName[norm(r.name)] = r;
-let recMatched = 0, recUnmatched = 0;
+// --- recommendations: `text` and `date` are single-sourced from references[],
+// matched by the explicit `ref` id (robust against display-name differences).
+// Assert every ref resolves, and that references[].reference + the formatted
+// givenAt reproduce the published recommendation text/date verbatim. ---
+const refById = {};
+for (const r of profile.references ?? []) if (r.id) refById[r.id] = r;
+const genRec = (recommender) => generated?.recommendations?.received?.find((x) => x.recommender === recommender);
+let recMatched = 0;
 for (const r of ln?.recommendations?.received ?? []) {
-  if (refByName[norm(r.recommender)]) recMatched++;
-  else { recUnmatched++; warnings.push(`recommendation "${r.recommender}" has no references[] match (kept block-only).`); }
+  if (!r.ref) { err(`recommendation "${r.recommender}" has no \`ref\` (cannot single-source from references[]).`); continue; }
+  const src = refById[r.ref];
+  if (!src) { err(`recommendation "${r.recommender}" ref "${r.ref}" not found in references[].`); continue; }
+  recMatched++;
+  const pub = genRec(r.recommender);
+  if (pub) {
+    if (typeof src.reference === "string" && src.reference !== pub.text)
+      err(`recommendation "${r.recommender}" text drift: references[id=${r.ref}] no longer matches published text.`);
+    const wantDate = fmtRecDate(src.meta?.x_brand?.givenAt);
+    if (wantDate && wantDate !== pub.date)
+      err(`recommendation "${r.recommender}" date drift: references[id=${r.ref}] givenAt formats to "${wantDate}" but published "${pub.date}".`);
+  }
 }
 
 // --- languages: block must NOT carry a `languages` array (it is fully injected
@@ -156,4 +168,4 @@ if (errors.length) {
   process.exit(1);
 }
 console.log("✓ LinkedIn block is in sync with the canonical main sections.");
-console.log(`  honors w/ award source = ${honorsChecked} · experience companies = ${Object.keys(expCompanyToWork).length} · certs resolved = ${certsChecked} · recommendations matched = ${recMatched}/${recMatched + recUnmatched}`);
+console.log(`  honors w/ award source = ${honorsChecked} · experience companies = ${Object.keys(expCompanyToWork).length} · certs resolved = ${certsChecked} · recommendations single-sourced = ${recMatched}/${ln?.recommendations?.received?.length ?? 0}`);

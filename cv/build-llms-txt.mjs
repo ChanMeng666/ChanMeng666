@@ -98,14 +98,14 @@ const projects = [
     url: "https://ire.gavigo.com/",
     role: "Founding Principal Engineer, Activation/Execution/AI Systems",
     summary:
-      "Sub-millisecond app activation platform — lets users open straight into a game without an app-store install. Tail-latency-aware: p50 < 1 ms · 84.6% warm-pool hit rate. Structured error propagation with errorCategory + isRetryable. Cross-cloud AWS → GCP GKE migration in ~30 min zero-downtime cutover. Promoted Core Engineer → Founding Principal Engineer across three contract iterations · 98% solo on 353 commits.",
+      "Sub-millisecond app activation platform — lets users open straight into a game without an app-store install. Tail-latency-aware: p50 < 1 ms · 84.6% warm-pool hit rate. Structured error propagation with errorCategory + isRetryable. Cross-cloud DigitalOcean → GCP GKE migration in ~30 min zero-downtime cutover. Promoted Core Engineer → Founding Principal Engineer across three contract iterations · 98% solo on 353 commits.",
   },
   {
     name: "She Sharp Platform",
     url: "https://she-sharp-zeta.vercel.app/",
     role: "Senior Full-Stack Engineer & Website Team Lead — recruited by founder Dr Mahsa Mohaghegh",
     summary:
-      "Rebuilt New Zealand's leading women-in-STEM platform (2,200+ active members, 8,000+ women supported lifetime). 86.6% solo across 10 months · Webflow → Next.js cutover via custom crawler preserving 10+ years of legacy content with zero broken inbound links. AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top. 1,392-line schema · 34 pgTables · multi-tenant isolation. PostToolUse normalisation hook for heterogeneous Stripe / Slack / Webflow webhook timestamps.",
+      "Rebuilt New Zealand's leading women-in-STEM platform (2,200+ registered members, 8,000+ women supported lifetime). 86.6% solo across 10 months · Webflow → Next.js cutover via custom crawler preserving 10+ years of legacy content with zero broken inbound links. AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top. 1,392-line schema · 34 pgTables · multi-tenant isolation. PostToolUse normalisation hook for heterogeneous Stripe / Slack / Webflow webhook timestamps.",
   },
   {
     name: "Vitex — AI Career Agent",
@@ -126,7 +126,7 @@ const projects = [
     url: "https://glama.ai/mcp/servers/ChanMeng666/server-google-news",
     role: "Solo author & maintainer (MIT)",
     summary:
-      "Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch. Skywork AI featured it as 'one of the most elegant, production-ready solutions' · listed across 15+ MCP catalogs · PulseMCP 'Top Pick' · Glama A-rating · 122 stars · @chanmeng666/google-news-server on npm.",
+      "Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch. Featured in Skywork AI's AI-engineer deep-dive guide · listed across 15+ MCP catalogs · PulseMCP 'Top Pick' · Glama A-rating · 122 stars · @chanmeng666/google-news-server on npm.",
   },
 ];
 for (const p of projects) {
@@ -148,12 +148,12 @@ sect("Experience (most recent)");
 const roles = [
   ["AI Agent Architect", "Engram", "May 2026 — Present", "Recruited onto Anthropic's Partner Network architect track — Engram's founder used his own Claude agent to surface candidates, publicly confirmed Chan's open-source portfolio as the recommendation. 45-day Architect Cohort: Claude Certified Architect — Foundations curriculum."],
   ["AI Instructor & Mentor", "TechNest Community", "Apr 2026 — Present", "Built and sole-teaches TechNest's first AI-specialised mentorship track — 12-week prompt-first curriculum, students ship portfolio-grade AI apps by week 8. Bilingual teaching platform built 95.7% solo, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV)."],
-  ["Founding Principal Engineer (Activation, Execution & AI Systems)", "Gavigo", "Oct 2025 — Present", "Promoted Core Engineer → Founding Principal Engineer across three contract iterations · owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install) · p50 < 1 ms · 84.6% warm-pool hit rate · cross-cloud AWS → GCP GKE migration in 30-minute zero-downtime cutover · 98% solo on 353 commits."],
-  ["Senior Full-Stack Engineer & Website Team Lead", "She Sharp", "Jul 2025 — Present", "Recruited by founder Dr Mahsa Mohaghegh to rebuild NZ's leading women-in-STEM platform (2,200+ active members, 8,000+ women supported lifetime) · Webflow → Next.js cutover 86.6% solo across 10 months with zero broken inbound links · AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top."],
+  ["Founding Principal Engineer (Activation, Execution & AI Systems)", "Gavigo", "Oct 2025 — Present", "Promoted Core Engineer → Founding Principal Engineer across three contract iterations · owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install) · p50 < 1 ms · 84.6% warm-pool hit rate · cross-cloud DigitalOcean → GCP GKE migration in 30-minute zero-downtime cutover · 98% solo on 353 commits."],
+  ["Senior Full-Stack Engineer & Website Team Lead", "She Sharp", "Jul 2025 — Present", "Recruited by founder Dr Mahsa Mohaghegh to rebuild NZ's leading women-in-STEM platform (2,200+ registered members, 8,000+ women supported lifetime) · Webflow → Next.js cutover 86.6% solo across 10 months with zero broken inbound links · AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top."],
   ["Chief Technology Officer", "FemTech Weekend", "Mar 2025 — Present", "Sole technical lead for China's first FemTech organisation since its inaugural conference — Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite · operates the 2026 Shanghai Summit (16 confirmed speakers including FemTech-term originator Ida Tin)."],
   ["Open Source Contributor", "CopilotKit (24.6k★)", "Jun 2025 — Present", "2 merged PRs · 8-agent FemTracker demo + Claude Code MCP setup guide"],
-  ["Founding Junior Full-Stack Engineer", "Sanicle", "Nov 2023 — Nov 2024", "Founding team · earned the company its IBM Silver Partner certification through a solo build (350+ commits, 180+ beta users) · OpenAI + pgvector"],
-  ["Backend & Full-Stack Engineer (Douyin Mall capstone)", "ByteDance", "—", "Spring Boot 3 + solo Vue 3 build · #2 of 8 contributors"],
+  ["CTO (prev. Senior AI/ML Infrastructure Engineer)", "Sanicle", "Mar 2025 — Feb 2026", "earned the company its IBM Silver Partner certification through a solo build (350+ commits) · OpenAI + pgvector"],
+  ["Full-Stack Engineer (Douyin Mall capstone)", "ByteDance", "—", "Spring Boot 3 + solo Vue 3 build · #2 of 8 contributors"],
 ];
 for (const [role, org, dates, detail] of roles) {
   W(`- ${role} · ${org} · ${dates} — ${detail}`);
@@ -166,8 +166,8 @@ W("- Bachelor of Geography Science, Distinction — Jiangsu Normal University, C
 sect("Recognition & training");
 W("- UN CSW 69 Speaker (Beyond Beijing 30) — UN HQ NYC, Mar 14 2025 · attracted IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs");
 W("- Outstanding Mentor Award — AI Hackathon Festival 2025 (1 of 14 expert mentors · guided 11 teams / 80+ participants)");
-W("- FemTech Excellence Award — FemTech China (inaugural FemTech Weekend)");
-W("- UN Women FemTech Hackathon Outstanding Performer — Beijing, Mar 2025");
+W("- FemTech Excellence Award — FemTech China (Dec 2024)");
+W("- UN Women FemTech Hackathon Outstanding Performer — FemTech Weekend (Beijing, Mar 2025)");
 W("- Claude Certified Architect — Foundations curriculum completed (Agent SDK · MCP · Claude Code · Claude API · on Anthropic Partner Network track via Engram)");
 W("- Anthropic certificates (6): Building with the Claude API · Intro to MCP · Intro to Agent Skills · Claude Code in Action (all May 2026; Claude Code in Action originally Aug 2025) · AI Fluency: Framework & Foundations (Aug 2025, JHIY9NPYTR2D)");
 W("- Featured in THISDAYLIVE · PulseMCP · 小宇宙FM (Xiaoyuzhou) · WeChat (FemTech Weekend)");

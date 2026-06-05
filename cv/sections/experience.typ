@@ -27,14 +27,14 @@
     org: "GAVIGO Inc.",
     org-url: "https://gavigo.com/",
     dates: "Oct 2025 — Present",
-    summary: [Promoted *Core Engineer → Founding Principal Engineer across three contract iterations* — owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install). *p50 < 1 ms activation latency · 84.6% warm-pool hit rate* · cross-cloud AWS → GCP GKE migration in a *30-minute zero-downtime cutover* · *98% solo on 353 commits*.],
+    summary: [Promoted *Core Engineer → Founding Principal Engineer across three contract iterations* — owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install). *p50 < 1 ms activation latency · 84.6% warm-pool hit rate* · cross-cloud DigitalOcean → GCP GKE migration in a *30-minute zero-downtime cutover* · *98% solo on 353 commits*.],
   )
   role-line(
     title: "Senior Full-Stack Engineer & Website Team Lead",
     org: "She Sharp",
     org-url: "https://www.shesharp.org.nz/",
     dates: "Jul 2025 — Present",
-    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild *New Zealand's leading women-in-STEM platform* (*2,200+ active members, 8,000+ women supported lifetime*) · Webflow → Next.js cutover *86.6% solo across 10 months*, 10+ years of legacy content preserved with *zero broken inbound links*, AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top.],
+    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild *New Zealand's leading women-in-STEM platform* (*2,200+ registered members, 8,000+ women supported lifetime*) · Webflow → Next.js cutover *86.6% solo across 10 months*, 10+ years of legacy content preserved with *zero broken inbound links*, AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top.],
   )
   role-line(
     title: "Chief Technology Officer",
@@ -48,7 +48,7 @@
   block(above: 0pt, below: 0pt, {
     set par(leading: 0.78em, justify: false)
     text(size: size-tiny, fill: muted, style: "italic")[
-      *Previously:* Founding Junior Full-Stack Engineer at *#link("https://www.ibm.com/partnerplus/directory/company/9542")[Sanicle]* — earned the company its *IBM Silver Partner* certification through a solo build (350+ commits, 180+ beta users) · *#link("https://www.bytedance.com/en/")[ByteDance] Backend & Full-Stack Engineer* on the Douyin Mall capstone (Spring Boot 3 + solo Vue 3, #2 of 8 contributors) · *React Native full-stack mobile dev at #link("https://corde.nz/")[CORDE Christchurch]* · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (7 of 18 LinkedIn recs from this cohort) · *#link("https://www.copilotkit.ai/")[CopilotKit]* OSS contributor (2 merged PRs, 24.6k★).
+      *Previously:* *CTO at #link("https://www.ibm.com/partnerplus/directory/company/9542")[Sanicle]* (prev. Senior AI/ML Infrastructure Engineer) — earned the company its *IBM Silver Partner* certification through a solo build (350+ commits) · *#link("https://www.bytedance.com/en/")[ByteDance] Full-Stack Engineer* on the Douyin Mall capstone (Spring Boot 3 + solo Vue 3, #2 of 8 contributors) · *React Native full-stack mobile dev at #link("https://corde.nz/")[CORDE Christchurch]* · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (7 of 18 LinkedIn recs from this cohort) · *#link("https://www.copilotkit.ai/")[CopilotKit]* OSS contributor (2 merged PRs, 24.6k★).
     ]
   })
 })

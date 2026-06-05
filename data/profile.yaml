@@ -68,6 +68,19 @@ basics:
     - { network: Cal,         label: "Book a meeting",                 url: "https://cal.com/chan-meng/30min" }
     - { network: BuyMeACoffee, url: "https://buymeacoffee.com/chanmeng66u" }
 
+  # Headline reach / social-proof metrics — point-in-time counts surfaced as
+  # pills at the top of the CV (cv/sections/header.typ) and reusable by other
+  # derivatives. Refresh the values + `asOf` when updated. NOTE: the chanmeng.org
+  # personal newsletter below is DISTINCT from the "Decoding the Future" LinkedIn
+  # newsletter (800+ subscribers; recorded under media[]/podcasts).
+  reach:
+    asOf: "2026-06"
+    metrics:
+      - { label: "newsletter subscribers",  value: "1,103", source: "https://chanmeng.org/#newsletter" }
+      - { label: "LinkedIn followers",       value: "5,594", source: "https://www.linkedin.com/in/chanmeng666/" }
+      - { label: "LinkedIn recommendations", value: "18",    source: "https://www.linkedin.com/in/chanmeng666/", note: "public recommendations; 7 from the Forward With Her cohort" }
+      - { label: "GitHub followers",         value: "210",   source: "https://github.com/ChanMeng666" }
+
 # =============================================================================
 # DECORATIONS — moved to data/brand.yaml (signatures.banners,
 # signatures.pillRotation.templates, signatures.visitorCounter,

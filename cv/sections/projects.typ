@@ -57,7 +57,7 @@
       url: "https://glama.ai/mcp/servers/ChanMeng666/server-google-news",
       context-line: [Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch.],
       bullets: (
-        [*Skywork AI featured it as "one of the most elegant, production-ready solutions"* — listed across *15+ MCP catalogs* · PulseMCP "Top Pick" · Glama A-rating · 122 stars · `@chanmeng666/google-news-server` on npm.],
+        [*Featured in Skywork AI's AI-engineer deep-dive guide* — listed across *15+ MCP catalogs* · PulseMCP "Top Pick" · Glama A-rating · 122 stars · `@chanmeng666/google-news-server` on npm.],
         [*Shipped before MCP had a registry* — built own discovery story (PulseMCP + Glama + npm submissions), compounding into first-mover index advantage as catalogs came online.],
       ),
     ),
@@ -82,7 +82,7 @@
       set text(size: size-tiny, fill: muted, style: "italic")
       set par(leading: leading-body, justify: true)
       [
-        *Also open-sourced:* #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (340+ animated-SVG templates, 273 solo commits) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (official Typst skill for Claude Code — typesets this CV) · #link("https://sunostats.chanmeng.org/")[SunoStats] (industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese) · #link("https://fanfic-lab.tech/")[FanFic Lab] (7-node LangGraph agent).
+        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (solo 9-day commercial event platform for Chow Luck Club × Tātaki Auckland Unlimited / Auckland Council) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (340+ animated-SVG templates, 273 solo commits) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (official Typst skill for Claude Code — typesets this CV) · #link("https://sunostats.chanmeng.org/")[SunoStats] (industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese) · #link("https://fanfic-lab.tech/")[FanFic Lab] (7-node LangGraph agent).
       ]
     },
   )

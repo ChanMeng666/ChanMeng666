@@ -167,7 +167,7 @@
     [*Claude Certified Architect — Foundations* curriculum completed (on Anthropic Partner Network track via Engram)],
   ))
   cert-group("Other AI / Cloud", (
-    [*Google AI Essentials · Microsoft Azure AI Essentials · Generative AI Career Skills · Wolfram Machine Learning Foundations · GitHub Professional · Docker Professional · Microsoft Software Development* (Aug 2025 — Feb 2025)],
+    [*Google AI Essentials · Microsoft Azure AI Essentials · Generative AI Career Skills · Wolfram Machine Learning Foundations · GitHub Professional · Docker Professional · Microsoft Software Development* (Dec 2024 — Aug 2025)],
   ))
 })
 
@@ -184,7 +184,7 @@
   )
   list.item[*UN CSW 69 Speaker* — UN HQ NYC, Mar 2025 · attracted *IBM pilot interest* and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
   list.item[*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors · guided 11 teams / 80+ participants.]
-  list.item[*FemTech Excellence Award* — FemTech China (inaugural FemTech Weekend) · *UN Women FemTech Hackathon Outstanding Performer* (Beijing, Mar 2025).]
+  list.item[*FemTech Excellence Award* — FemTech China (Dec 2024) · *UN Women FemTech Hackathon Outstanding Performer* — FemTech Weekend (Beijing, Mar 2025).]
 })
 
 // ─── 7. Endorsements — removed ──────────────────────────────────────────────

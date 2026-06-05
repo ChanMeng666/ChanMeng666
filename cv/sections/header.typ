@@ -59,6 +59,16 @@
         fill: muted,
         style: "italic",
       )[« Subtraction for life, addition for thought. »]
+      linebreak()
+      v(4pt)
+      // ── Social-proof stat row — reach metrics as eye-catching pills ──────
+      stat-pill("1,103", "newsletter subscribers")
+      h(space-pill-row)
+      stat-pill("5,594", "LinkedIn followers")
+      h(space-pill-row)
+      stat-pill("18", "LinkedIn recommendations")
+      h(space-pill-row)
+      stat-pill("210", "GitHub followers")
     },
 
     // ── Contact items (stacked, LEFT-aligned within the right slot) ────────

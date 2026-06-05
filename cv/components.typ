@@ -12,6 +12,22 @@
   text(size: size-pill, fill: ink, label),
 )
 
+// ─── Social-proof stat pill (accent number + muted label) ────────────────────
+// Eye-catching but ATS-safe: real text (not an image), ash fill + thin accent
+// border, and the NUMBER in Digital Orange so reach metrics pop without using a
+// solid orange block. Used in the header social-proof row.
+#let stat-pill(value, label) = box(
+  fill: pill-bg,
+  stroke: 0.6pt + accent,
+  radius: cv-radius-pill,
+  inset: (x: 5.5pt, y: 2pt),
+  outset: (y: 0.4pt),
+  {
+    text(size: size-pill, weight: "bold", fill: accent)[#value]
+    text(size: size-pill, fill: muted)[ #label]
+  },
+)
+
 // ─── Skill / tooling category (bold label + wrapped pills) ───────────────────
 #let skill-category(category, items) = {
   text(

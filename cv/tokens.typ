@@ -1,13 +1,14 @@
 // GENERATED FROM data/brand.yaml — DO NOT EDIT.
 // Regenerate with: npm run build:brand
-// Source of truth: data/brand.yaml v2.0.0
-// Last updated:    2026-06-03
+// Source of truth: data/brand.yaml v2.1.1
+// Last updated:    2026-06-07
 
 // ─── Raw palette ─────────────────────────────────────────────────────────
 #let raw-basalt-canvas = rgb("#E2E2DF")
 #let raw-ash-white = rgb("#F7F6F2")
 #let raw-pure-white = rgb("#FFFFFF")
 #let raw-abyssal-ink = rgb("#070607")
+#let raw-pure-black = rgb("#000000")
 #let raw-digital-orange = rgb("#FC5000")
 #let raw-cyber-violet = rgb("#524AE9")
 #let raw-pixel-glare = rgb("#F5F28E")
@@ -18,6 +19,7 @@
 #let surface-accent = rgb("#FC5000")
 #let surface-decor = rgb("#524AE9")
 #let surface-glare = rgb("#F5F28E")
+#let surface-tag = rgb("#F5F28E")
 #let ink-primary = rgb("#070607")
 #let ink-strong = rgb("#070607")
 #let ink-muted = rgb("#070607")
@@ -31,11 +33,17 @@
 #let rule-hairline = rgb("#070607")
 
 // ─── Typography ──────────────────────────────────────────────────────────
-#let font-display = ("Bebas Neue", "Anton", "Oswald", "Impact")
+#let font-display = ("Anton", "Oswald", "Bebas Neue", "Impact")
 #let font-body-sans = ("DM Sans", "Inter", "Segoe UI")
 #let font-mono = ("JetBrains Mono", "Consolas")
 
 // ─── Type scale (print sizes in pt) ──────────────────────────────────────
+#let text-display-xl-size = 48pt
+#let text-display-xl-leading = 0.94em
+#let text-display-xl-tracking = 0.02em
+#let text-display-lg-size = 28pt
+#let text-display-lg-leading = 0.95em
+#let text-display-lg-tracking = 0.02em
 #let text-display-size = 32pt
 #let text-display-leading = 0.94em
 #let text-display-tracking = 0.02em

@@ -351,6 +351,7 @@ function emitDtcgJson() {
       "ash-white": "Ash White — primary card surfaces, button backgrounds",
       "pure-white": "Pure White — text/icon fills on dark or orange",
       "abyssal-ink": "Abyssal Ink — heading + body text, strong borders",
+      "pure-black": "Pure Black — icon strokes, densest border work",
       "digital-orange": "Digital Orange — primary buttons, feature cards, brand accent",
       "cyber-violet": "Cyber Violet — decorative background shapes only",
       "pixel-glare": "Pixel Glare — highlight overlays, graphic accents",
@@ -428,12 +429,13 @@ function emitCalderaDesignMd(variablesCss, themeCss) {
   const radiusRows = Object.entries(brand.radius)
     .map(([n, v]) => `| ${n} | ${v}px |`).join("\n");
 
+  const displayFont = brand.typography.families.display.stack[0];
   return `# ${brand.identity.name} — Style Reference
-> Pixelated Cyber-Playground (Caldera clone)
+> Caldera clone — risograph zine on warm concrete
 
 **Theme:** light
 
-${brand.identity.name}'s personal brand embraces a high-contrast digital-arcade aesthetic: a muted basalt-grey canvas is a stark backdrop for vivid, pixelated orange/violet gradient forms and ultra-bold, tightly tracked display type. Cards and buttons use generous rounded corners for a friendly, almost toy-like solidity. The atmosphere is playful yet authoritative — color is used sparingly for impact, hierarchy comes from solid color blocks, and the system stays flat (no shadows, no elevation gradients).
+${brand.identity.name}'s personal brand is a faithful clone of the Caldera system: a warm basalt-grey concrete canvas is the backdrop for risograph halftone-dot gradient forms (Digital Orange → Cyber Violet) and a heavy, mixed-case, tightly tracked compact-grotesque display face (${displayFont}). Cards and buttons use generous rounded corners for a friendly, almost toy-like solidity. The atmosphere is editorial yet bold — color is rationed for impact, hierarchy comes from solid color blocks and type weight, and the system stays flat (no shadows, no elevation gradients).
 
 ## Tokens — Colors
 
@@ -495,11 +497,61 @@ Transparent background, \`Abyssal Ink (${lc(R.inkPrimary)})\` border and text (D
 ### Content Card — Ash
 \`Ash White (${lc(R.canvasSurface)})\` background, \`${brand.radius.card}px\` radius, ${brand.spacing.rhythm.cardPadding}px padding, ink text. No shadow.
 
+### Button System
+One flat pill system — hierarchy by **fill, not size**. Every variant shares the \`--radius-pill\` (${brand.radius.pill}px) shape, a DM Sans label, and a 1.5px (transparent-by-default) border so heights line up. Flat: a state is a colour shift + a 1px press, never a shadow.
+
+- **Primary** — solid \`Digital Orange\` fill, **ink** label (weight 700). The orange fill ALWAYS carries an \`Abyssal Ink\` label (#070607 → 6:1 AA). Caldera's own button uses a cream label (~3.2:1, which fails AA) — a deliberate, documented deviation for accessibility.
+- **Secondary** — transparent with a solid \`Abyssal Ink\` hairline (1.5px).
+- **Tertiary** — a **2px DOTTED** ink edge (signatures.dottedEdge); also used for collapsed accordion rows + carousel controls.
+- **Quiet** — \`Ash White\` fill, no visible edge; low-emphasis (e.g. nav).
+- **Icon** — a circle (44px; \`sm\` 36 / \`lg\` 56). Ash by default; \`--accent\` is orange with an ink glyph.
+
+Sizes: \`sm\` (8×16, 14px) · md (12×24, 16px — default) · \`lg\` (16×34, 18px). Disabled: 40% opacity, non-interactive. Any button may carry a leading/trailing inline SVG that inherits the label colour.
+
+### Connected Stat Cards
+A row of **CREAM** (\`${brand.radius.card}px\`) metric cards — a black-\`Abyssal Ink\` number plus an orange CIRCULAR icon badge top-left — JOINED into one unit by a **cream "dog-bone" connector** (identical fill to the cards) that flares to full width at each card edge and pinches to a thin waist where the grey \`Basalt Canvas\` halftone bites through (two smooth radius-8 concave fillets; SVG \`<path>\` copied verbatim from caldera.xyz — use the path alone, NO centre \`<rect>\`, which would protrude as a square sliver). Never fill these cards orange — orange lives only in the badge. The bones PERSIST at every breakpoint (verified on the live site): row + vertical bones → 2×2 **centre cross-junction** (vertical bones link the top + bottom pairs, horizontal bones link the left + right pairs) → single column with a horizontal bone between every stacked pair. The interlocking-metric motif — reserve for a tight row of closely-related stats.
+
+### Dot-Grid Background
+A grey halftone dot field under most sections: a CSS radial-gradient tile of \`Abyssal Ink\` dots (~2px, ~13% opacity, ~20px spacing) over the \`Basalt Canvas\`, matching the live caldera.xyz ground. The printed paper that cards float on — never run it at full strength behind body text.
+
+### Circular Icon Badge
+\`Digital Orange\` **circle** (50% radius, ~64px) with a white glyph centred — Caldera's stat / channel mark, anchored top-left of a card. (Caldera uses a full circle, not a squircle.)
+
+### Nested Thumbnail Card
+A \`${brand.radius.card}px\` ash card with ${brand.spacing.rhythm.cardPadding}px padding holding an inset image at the smaller \`--radius-card-sm\` (${brand.radius.cardSm ?? 24}px) — the rounded-image-inside-rounded-card nesting. Thumbnails carry the orange halftone treatment. Cards stay cream; the active/inactive split is a solid cream card vs. dotted-outline ghost rows (an accordion), **not** an orange fill.
+
+### Pill Input + Arrow
+\`Paper White\` (or transparent on a colored panel) field, 1px ink border, \`--radius-input\` (${brand.radius.input}px) full pill, with a circular submit button (▸) seated at the right end. No focus glow — the border thickens to 2px on focus.
+
+## Interaction & States
+
+Flat-consistent: every state change is a **color shift or a tiny translate — never a shadow**. Transitions use the motion tokens (\`--duration-base\` ${brand.motion.duration.base}ms / \`--easing-standard\` for color & border; \`--duration-fast\` ${brand.motion.duration.fast}ms for transform).
+
+| Element | Hover | Active / Selected | Focus (keyboard) |
+|---|---|---|---|
+| Primary · accent-icon · CTA | darken orange ~12% toward ink | \`translateY(1px)\` press | orange focus ring |
+| Secondary (ink hairline) | invert to a solid ink fill, label → canvas | \`translateY(1px)\` | orange focus ring |
+| Tertiary (dotted) | edge solidifies to an orange fill + ink label | \`translateY(1px)\` | orange focus ring |
+| Quiet (ash) | ash deepens toward ink | \`translateY(1px)\` | orange focus ring |
+| Ash icon button | fills orange, glyph inverts to ink | \`translateY(1px)\` | orange focus ring |
+| Nav / footer link | label → ink + orange underline | — | orange focus ring |
+| Content card | lift 3px (\`translateY\`) | — | — |
+| Connected stat card | no lift (would tear it off its cream bone) | — | — |
+| Accordion item | ghost row firms to a cream fill + ink border | selected = solid cream card, description expands | — |
+| Carousel arrow | button fills orange, ink arrow inverts to white | — | orange focus ring |
+| Pill input | — | — | border thickens to 2px (no glow) |
+
+The focus ring is \`--shadow-focus-ring\` (\`${brand.shadow.focusRing}\`). All motion is disabled under \`prefers-reduced-motion: reduce\`.
+
+## Accessibility — ${brand.accessibility?.standard ?? "WCAG 2.2 Level AA"}
+
+${(brand.accessibility?.rules ?? []).map((r) => `- ${r}`).join("\n")}
+
 ## Do's and Don'ts
 
 ### Do
 - Use \`Digital Orange (${lc(R.surfaceAccent)})\` as the exclusive fill for primary CTAs and key feature cards.
-- Apply the display face (Bebas Neue) to the name, all headings, and stat numbers, with 0.02em tracking.
+- Apply the display face (${displayFont}) to the name, all headings, and stat numbers in MIXED case, with 0.02em tracking.
 - Use \`Basalt Canvas (${lc(R.canvasPage)})\` as the page background so accent colors pop.
 - Keep pill buttons at \`${brand.radius.pill}px\` and cards at \`${brand.radius.card}px\` for consistent friendly geometry.
 - Render text in \`Abyssal Ink (${lc(R.inkPrimary)})\` on ash / basalt surfaces.
@@ -549,6 +601,7 @@ ${themeCss.trim()}
       "ash-white": "Primary card surfaces, button backgrounds",
       "pure-white": "Text/icon fills on dark or orange",
       "abyssal-ink": "Heading + body text, strong borders",
+      "pure-black": "Icon strokes, densest border work",
       "digital-orange": "Primary buttons, feature cards, brand accent",
       "cyber-violet": "Decorative background shapes only",
       "pixel-glare": "Highlight overlays, graphic accents",
@@ -609,6 +662,7 @@ if (fs.existsSync(docPath)) {
       "ash-white": "Card / button surface",
       "pure-white": "Text/icon on dark or orange fills",
       "abyssal-ink": "Text, headings, strong borders",
+      "pure-black": "Icon strokes, densest border work",
       "digital-orange": "Primary accent — buttons, feature cards, rules",
       "cyber-violet": "Decorative background shapes ONLY",
       "pixel-glare": "Highlight overlay / graphic accent",
@@ -623,6 +677,7 @@ if (fs.existsSync(docPath)) {
       "surface-accent": "Feature / stat cards, button fill",
       "surface-decor": "Decorative graphic blocks ONLY",
       "surface-glare": "Highlight overlay / graphic accent",
+      "surface-tag": "Category-tag / chip background (Hazard Yellow)",
       "ink-primary": "Body text",
       "ink-strong": "Name, section headers",
       "ink-muted": "Secondary text, meta",
@@ -718,6 +773,7 @@ if (fs.existsSync(previewTemplatePath)) {
     "surface-accent": "Feature / stat cards, button fill",
     "surface-decor": "Decorative graphic blocks ONLY",
     "surface-glare": "Highlight overlay / graphic accent",
+    "surface-tag": "Category-tag / chip background",
     "ink-primary": "Body text",
     "ink-strong": "Name, section headers",
     "ink-muted": "Secondary text, meta",
@@ -735,6 +791,7 @@ if (fs.existsSync(previewTemplatePath)) {
     "ash-white": "Card / button surface",
     "pure-white": "On dark / orange fills",
     "abyssal-ink": "Text, headings, borders",
+    "pure-black": "Icon strokes, dense borders",
     "digital-orange": "Primary accent",
     "cyber-violet": "Decorative only",
     "pixel-glare": "Highlight accent",

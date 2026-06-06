@@ -250,6 +250,16 @@
       }
     },
 
+    "accessibility": {
+      "type": "object",
+      "description": "Accessibility commitments for every surface generated from this system.",
+      "additionalProperties": true,
+      "properties": {
+        "standard": { "type": "string" },
+        "rules":    { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
     "surfaces": {
       "type": "object",
       "additionalProperties": {

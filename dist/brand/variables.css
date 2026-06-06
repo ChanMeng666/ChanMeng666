@@ -1,7 +1,7 @@
 /* GENERATED FROM data/brand.yaml — DO NOT EDIT.
  * Regenerate with: npm run build:brand
- * Source of truth: data/brand.yaml v2.0.0
- * Last updated:    2026-06-03
+ * Source of truth: data/brand.yaml v2.1.1
+ * Last updated:    2026-06-07
  */
 
 :root {
@@ -10,16 +10,23 @@
   --color-ash-white: #f7f6f2;
   --color-pure-white: #ffffff;
   --color-abyssal-ink: #070607;
+  --color-pure-black: #000000;
   --color-digital-orange: #fc5000;
   --color-cyber-violet: #524ae9;
   --color-pixel-glare: #f5f28e;
 
   /* Typography — families */
-  --font-display: 'Bebas Neue', Anton, Oswald, Impact, sans-serif;
+  --font-display: Anton, Oswald, 'Bebas Neue', Impact, sans-serif;
   --font-body-sans: 'DM Sans', Inter, 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', Consolas, ui-monospace, monospace;
 
   /* Typography — scale */
+  --text-display-xl: 189px;
+  --leading-display-xl: 0.94;
+  --tracking-display-xl: 0.02em;
+  --text-display-lg: 64px;
+  --leading-display-lg: 0.95;
+  --tracking-display-lg: 0.02em;
   --text-display: 96px;
   --leading-display: 0.94;
   --tracking-display: 0.02em;
@@ -73,6 +80,9 @@
   /* Border Radius */
   --radius-none: 0px;
   --radius-sm: 8px;
+  --radius-badge: 16px;
+  --radius-tag: 20px;
+  --radius-card-sm: 24px;
   --radius-card: 40px;
   --radius-default: 40px;
   --radius-input: 100px;

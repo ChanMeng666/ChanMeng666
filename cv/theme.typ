@@ -2,9 +2,9 @@
 // data/brand.yaml). Colors and font stacks come from the brand system so the
 // CV stays in sync with README, llms, and the future webpage.
 //
-// CV PRINT is "tuned-for-print": it adopts the Caldera palette + the ultra-bold
-// compact display face (Bebas Neue) for the NAME and section headers, and uses
-// Digital Orange as an accent RULE / eyebrow only — never as orange-filled
+// CV PRINT is "tuned-for-print": it adopts the Caldera palette + the heavy
+// compact-grotesque display face (Anton) for the NAME and section headers, and
+// uses Digital Orange as an accent RULE / eyebrow only — never as orange-filled
 // blocks or 800px pills, which would hurt recruiter / ATS readability. Print
 // sizes, the desaturated meta-grey, and the small pill radius stay LOCAL to
 // this file because they are print-only and not part of the cross-surface scale.
@@ -27,15 +27,16 @@
 #let on-accent = on-accent          // pure white — text on a single orange chip
 
 // ─── Typography (back-compat aliases) ───────────────────────────────────────
-#let sans-display = font-display    // Bebas Neue — NAME + section headers
+#let sans-display = font-display    // Anton — NAME + section headers
 #let sans         = font-body-sans  // DM Sans — body, meta, labels
 #let mono         = font-mono       // JetBrains Mono — datestamp only
 
 // ─── Type sizes — print-tuned, CV-specific (NOT in brand.yaml web scale) ────
-// Bebas Neue is a compact condensed face and reads SMALLER than a normal sans
+// Anton is a heavy compact-grotesque face and reads SMALLER than a normal sans
 // at the same point size, so the display sizes are pushed up vs the old serif.
-#let size-h1      = 30pt        // NAME — Bebas Neue, all-caps by design
-#let size-h2      = 12pt        // section header — Bebas Neue, uppercased
+#let size-h1      = 28pt        // NAME — Anton, mixed-case (heavier/wider than Bebas)
+#let size-h2      = 11pt        // section header — Anton, uppercased (Anton's heavier
+                                //   cut needs a hair less size than Bebas to hold 2 pages)
 #let size-h3      = 10pt        // entry title — DM Sans bold
 #let size-role    = 10.5pt      // role line under name — DM Sans
 #let size-body    = 9pt
@@ -56,7 +57,7 @@
 // Tightened in the v2 Caldera pass so the whole CV settles into TWO pages while
 // keeping airy human-readable leading inside paragraphs (density comes out of
 // the inter-section / inter-entry gaps, not the line-height).
-#let space-section    = 10pt   // above each section-header
+#let space-section    = 8pt    // above each section-header
 #let space-after-rule = 5pt    // between section accent rule and first content
 #let space-entry      = 10pt   // between entries within a section
 #let space-pill-row   = 3pt    // horizontal pill gap

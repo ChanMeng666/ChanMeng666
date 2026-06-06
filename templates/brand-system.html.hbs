@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chan Meng — Brand System</title>
-  <meta name="description" content="Personal visual + verbal design system for Chan Meng — a Caldera-style pixelated cyber-playground. Generated from data/brand.yaml.">
+  <meta name="description" content="Personal visual + verbal design system for Chan Meng — a faithful Caldera clone: warm basalt concrete, heavy mixed-case Anton display, risograph halftone gradients. Generated from data/brand.yaml.">
   <link rel="stylesheet" href="../dist/brand/tokens.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
-      background: var(--color-canvas-page);
+      /* Halftone dot-grid texture (signatures.dotGrid) — grey printed dot field
+         on the basalt canvas, matching caldera.xyz; cards float over it. */
+      background-color: var(--color-canvas-page);
+      background-image: radial-gradient(color-mix(in srgb, var(--color-ink-primary) 13%, transparent) 2px, transparent 2.2px);
+      background-size: 20px 20px;
       color: var(--color-ink-primary);
       font-family: var(--font-body-sans);
       font-size: var(--text-body-size);
@@ -33,7 +37,7 @@
       .container { padding: var(--container-padding-desktop); }
     }
 
-    /* ── Display / headings — Bebas Neue, compact, tight tracking ───────────── */
+    /* ── Display / headings — Anton, heavy compact grotesque, MIXED case ─────── */
     .eyebrow {
       font-family: var(--font-body-sans);
       font-size: var(--text-eyebrow-size);
@@ -42,7 +46,7 @@
       font-weight: var(--text-eyebrow-weight);
       text-transform: var(--text-eyebrow-transform);
       color: var(--color-ink-primary);
-      margin: 0 0 var(--space-1);
+      margin: 0 0 var(--space-2);
     }
     .eyebrow::before {
       content: "";
@@ -63,13 +67,12 @@
     }
     h2.section {
       font-family: var(--font-display);
-      font-size: var(--text-h-1-size);
-      line-height: 1.0;
-      letter-spacing: 0.02em;
+      font-size: var(--text-display-lg-size);
+      line-height: var(--text-display-lg-line-height);
+      letter-spacing: var(--text-display-lg-tracking);
       font-weight: 400;
-      text-transform: uppercase;
       color: var(--color-ink-strong);
-      margin: var(--rhythm-section) 0 var(--space-3);
+      margin: var(--rhythm-section-large) 0 var(--space-3);
       padding-bottom: var(--space-2);
       border-bottom: 4px solid var(--color-accent-primary);
     }
@@ -84,19 +87,178 @@
     .meta { font-family: var(--font-body-sans); font-size: var(--text-meta-size); color: var(--color-ink-primary); }
     .mono { font-family: var(--font-mono); font-size: var(--text-mono-size); color: var(--color-ink-primary); }
 
-    /* ── Hero — pixelated banner over a basalt canvas ──────────────────────── */
-    .hero { padding: var(--space-6) 0 var(--space-5); }
-    .hero-banner {
-      width: 100%; height: 200px;
-      border-radius: var(--radius-card);
-      overflow: hidden;
-      margin-bottom: var(--space-4);
-      display: block;
-      object-fit: cover;
-      background: var(--color-surface-decor);
+    /* ── Floating pill nav (detached from page edges) ──────────────────────── */
+    .navwrap { display: flex; justify-content: center; padding-top: var(--space-3); }
+    .nav {
+      display: flex; align-items: center; gap: var(--space-3);
+      background: var(--color-canvas-surface);
+      border-radius: var(--radius-pill);
+      padding: 8px 8px 8px 18px;
     }
-    .hero-row { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
-    .hero img.mark { width: 96px; height: 96px; }
+    .nav .mark { width: 26px; height: 26px; display: block; }
+    .nav .vrule { align-self: center; height: 20px; border-left: 2px dotted var(--color-ink-primary); opacity: 0.5; }
+    .nav .links { display: flex; gap: var(--space-2); }
+    .nav .links a { font-size: var(--text-meta-size); text-decoration: none; font-weight: 500; padding: 6px 8px; }
+    .nav .cta {
+      background: var(--color-surface-accent); color: var(--color-ink-strong);
+      border-radius: var(--radius-pill); padding: 8px 16px;
+      font-size: var(--text-meta-size); font-weight: 700; text-decoration: none;
+    }
+    @media (max-width: 640px) { .nav .links { display: none; } }
+
+    /* ── Hero — asymmetric: headline left, halftone panel right ────────────── */
+    .hero { display: grid; grid-template-columns: 1fr; gap: var(--space-5); padding: var(--space-6) 0 var(--rhythm-section-large); align-items: center; }
+    @media (min-width: 900px) { .hero { grid-template-columns: 42% 1fr; } }
+    .hero .panel { width: 100%; height: auto; display: block; border-radius: var(--radius-card); }
+    .hero .cta-row { display: flex; gap: var(--space-2); margin-top: var(--space-4); flex-wrap: wrap; }
+
+    /* ── Buttons — one flat pill system ─────────────────────────────────────────
+          Hierarchy by FILL, not size: orange = primary · solid ink hairline =
+          secondary · dotted ink edge = tertiary/structural · ash fill = quiet ·
+          circle = icon-only. Labels are DM Sans. The orange fill always carries an
+          INK label (#070607 on orange = 6:1, AA-pass). Caldera's own button uses a
+          CREAM label (~3.2:1) which fails AA — a deliberate, documented deviation.
+          Flat: depth is a colour shift + a 1px press, never a shadow. All buttons
+          share one height via a 1.5px (transparent-by-default) border + the global
+          transition. */
+    .btn-row { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; margin: var(--space-2) 0 var(--space-3); }
+    .comp-title { font-family: var(--font-display); font-size: 28px; font-weight: 400; letter-spacing: 0.02em; color: var(--color-ink-strong); margin: var(--rhythm-section, 32px) 0 var(--space-1); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      font-family: var(--font-body-sans); font-weight: 500; font-size: 16px; line-height: 1;
+      padding: 12px 24px; border: 1.5px solid transparent; border-radius: var(--radius-pill);
+      cursor: pointer; text-decoration: none; white-space: nowrap;
+      color: var(--color-ink-primary); background: transparent;
+    }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    /* Primary — solid orange, ink label */
+    .btn-primary { background: var(--color-surface-accent); border-color: var(--color-surface-accent); color: var(--color-ink-strong); font-weight: 700; }
+    /* Secondary — transparent with a solid ink hairline */
+    .btn-ghost, .btn-secondary { background: transparent; border-color: var(--color-edge-pill); color: var(--color-ink-primary); }
+    /* Tertiary / structural — a dotted ink edge (signatures.dottedEdge) */
+    .btn-dotted { background: transparent; border: 2px dotted var(--color-edge-pill); color: var(--color-ink-primary); padding: 10.5px 22.5px; }
+    /* Quiet — ash fill, no visible edge (low-emphasis, e.g. nav) */
+    .btn-quiet, .btn-nav { background: var(--color-canvas-surface); border-color: var(--color-canvas-surface); color: var(--color-ink-primary); }
+    /* Icon-only — a circle. Ash by default; --accent is orange w/ ink glyph. */
+    .btn-icon { width: 44px; height: 44px; padding: 0; border-radius: 50%; background: var(--color-canvas-surface); border-color: var(--color-canvas-surface); color: var(--color-ink-primary); }
+    .btn-icon svg { width: 20px; height: 20px; }
+    .btn-icon.btn-icon--accent { background: var(--color-surface-accent); border-color: var(--color-surface-accent); color: var(--color-ink-strong); }
+    /* Sizes — md is the base */
+    .btn-sm { padding: 8px 16px; font-size: 14px; }
+    .btn-lg { padding: 16px 34px; font-size: 18px; }
+    .btn-icon.btn-sm { width: 36px; height: 36px; padding: 0; }
+    .btn-icon.btn-sm svg { width: 16px; height: 16px; }
+    .btn-icon.btn-lg { width: 56px; height: 56px; padding: 0; }
+    .btn-icon.btn-lg svg { width: 26px; height: 26px; }
+    /* Disabled — flattened, non-interactive */
+    .btn:disabled, .btn[aria-disabled="true"] { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+
+    /* ── Connected stat cards (signatures.connectedCards) — faithful caldera.xyz
+          CREAM cards (never orange) with a black-ink number and an orange CIRCULAR
+          icon badge top-left, joined by CREAM "dog-bone" SVG connectors that merge
+          into the cards: full-width flares at each card edge pinched to a thin waist
+          where the grey halftone canvas bites through (smooth radius-8 fillets). The
+          connector <path> is copied verbatim from caldera.xyz. The bones PERSIST at
+          every breakpoint (verified live): 4-across (vertical bones) → 2×2 (a centre
+          cross-junction: vertical bones top+bottom pairs, horizontal bones left+right
+          pairs) → single column (a horizontal bone between every stacked pair). */
+    .stat-connected { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: var(--space-3) 0; }
+    .stat-connected .card {
+      position: relative; border-radius: var(--radius-card); min-height: 232px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .stat-connected .stat { font-family: var(--font-display); font-size: 56px; line-height: 1; letter-spacing: 0.01em; color: var(--color-ink-strong); margin: 0; }
+    .stat-connected .stat-label { margin-top: 6px; color: var(--color-ink-primary); opacity: 0.85; }
+    /* orange circular icon badge — the card's only accent (matches Caldera) */
+    .badge-icon {
+      width: 64px; height: 64px; border-radius: 50%; flex: none;
+      background: var(--color-surface-accent); color: var(--color-on-accent);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 28px; line-height: 1;
+    }
+    .badge-icon svg { width: 30px; height: 30px; display: block; }
+    /* connectors: cream SVG bones, identical fill to the cards (currentColor).
+       Every visibility rule is qualified by :nth-child so all share one specificity
+       (0,4,0) — the LATER (smaller-viewport) media block then wins by source order,
+       no !important needed. The bones PERSIST at every breakpoint (Caldera does the
+       same): they only re-orient as the grid reflows. */
+    .stat-connected .conn { position: absolute; color: var(--color-canvas-surface); z-index: 1; pointer-events: none; display: none; }
+    .stat-connected .conn path { fill: currentColor; }
+    .stat-connected .conn-r { top: 50%; left: 100%; transform: translateY(-50%); width: 16px; height: 141px; }  /* vertical bone — fills a column gap */
+    .stat-connected .conn-b { left: 50%; top: 100%; transform: translateX(-50%); width: 141px; height: 16px; } /* horizontal bone — fills a row gap */
+    /* desktop · 4-in-a-row → vertical bones after cards 1·2·3 */
+    .stat-connected .card:nth-child(1) .conn-r,
+    .stat-connected .card:nth-child(2) .conn-r,
+    .stat-connected .card:nth-child(3) .conn-r { display: block; }
+    /* tablet · 2×2 with a CENTRE CROSS-JUNCTION (verified on caldera.xyz @ ~880px):
+       vertical bones link the top pair (1→2) & bottom pair (3→4); horizontal bones
+       link the left pair (1→3) & right pair (2→4) — four bones round the centre. */
+    @media (max-width: 900px) {
+      .stat-connected { grid-template-columns: repeat(2, 1fr); }
+      .stat-connected .card:nth-child(1) .conn-r { display: block; }
+      .stat-connected .card:nth-child(2) .conn-r { display: none; }   /* 2 & 3 are no longer side-by-side */
+      .stat-connected .card:nth-child(3) .conn-r { display: block; }
+      .stat-connected .card:nth-child(1) .conn-b { display: block; }
+      .stat-connected .card:nth-child(2) .conn-b { display: block; }
+    }
+    /* mobile · single column → a horizontal bone between every stacked pair (1·2·3) */
+    @media (max-width: 560px) {
+      .stat-connected { grid-template-columns: 1fr; }
+      .stat-connected .card:nth-child(1) .conn-r,
+      .stat-connected .card:nth-child(3) .conn-r { display: none; }
+      .stat-connected .card:nth-child(1) .conn-b,
+      .stat-connected .card:nth-child(2) .conn-b,
+      .stat-connected .card:nth-child(3) .conn-b { display: block; }
+    }
+
+    /* ── Ecosystem accordion — active item is a solid CREAM card; inactive items
+          are dotted-outline ghost rows (signatures.dottedEdge). Caldera's real
+          active/inactive pattern — there is no orange "active" card. ──────────── */
+    .accordion { display: grid; gap: 12px; margin: var(--space-3) 0; }
+    .accordion .item-active { background: var(--color-canvas-surface); border-radius: var(--radius-card); padding: var(--space-4); }
+    .accordion .item-active h3 { font-family: var(--font-display); font-size: 28px; font-weight: 400; letter-spacing: 0.02em; color: var(--color-ink-strong); margin: 0 0 var(--space-1); }
+    .accordion .item-active p { margin: 0; color: var(--color-ink-primary); max-width: 52ch; }
+    .accordion .item-ghost {
+      background: transparent; border: 2px dotted var(--color-edge-pill); border-radius: var(--radius-card);
+      padding: var(--space-3) var(--space-4); font-family: var(--font-display); font-size: 28px;
+      letter-spacing: 0.02em; color: var(--color-ink-strong);
+      transition: border-color var(--duration-base) var(--easing-standard), background var(--duration-base) var(--easing-standard);
+    }
+    .accordion .item-ghost:hover { background: var(--color-canvas-surface); border-color: var(--color-ink-primary); }
+
+    /* ── Carousel controls — circular buttons w/ the reference arrow SVGs ───── */
+    .carousel-ctrls { display: inline-flex; align-items: center; gap: var(--space-2); border: 2px dotted var(--color-edge-pill); border-radius: var(--radius-pill); padding: 6px 10px; }
+    .carousel-ctrls button {
+      width: 40px; height: 40px; border-radius: 50%; border: none;
+      background: var(--color-canvas-surface); cursor: pointer; padding: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: background var(--duration-base) var(--easing-standard);
+    }
+    .carousel-ctrls button img { width: 28px; height: 28px; display: block; transition: filter var(--duration-base) var(--easing-standard); }
+    .carousel-ctrls .sep { border-left: 2px dotted var(--color-ink-primary); align-self: stretch; opacity: 0.45; }
+    /* hover → orange button, arrow inverts to white */
+    .carousel-ctrls button:hover { background: var(--color-surface-accent); }
+    .carousel-ctrls button:hover img { filter: invert(1) brightness(2); }
+
+    /* ── Newsletter pill input + circular arrow ────────────────────────────── */
+    .signup { background: var(--color-surface-decor); color: var(--color-on-accent); border-radius: var(--radius-card); padding: var(--space-6); margin: var(--space-3) 0; }
+    .signup .field-pill { display: flex; align-items: center; background: transparent; border: 1px solid color-mix(in srgb, var(--color-paper-white, #fff) 60%, transparent); border-radius: var(--radius-input); padding: 6px 6px 6px 20px; max-width: 520px; }
+    .signup .field-pill input { flex: 1; background: transparent; border: none; outline: none; color: var(--color-on-accent); font-family: var(--font-body-sans); font-size: 16px; }
+    .signup .field-pill input::placeholder { color: color-mix(in srgb, var(--color-paper-white, #fff) 70%, transparent); }
+    .signup .field-pill .go { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--color-surface-accent); color: var(--color-ink-strong); cursor: pointer; font-size: 16px; font-weight: 700; }
+
+    /* ── Stat grid — four equal orange cards ───────────────────────────────── */
+    .card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--rhythm-element-gap, 10px); margin: var(--space-3) 0; }
+    @media (max-width: 768px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .card-grid { grid-template-columns: 1fr; } }
+    .card { background: var(--color-canvas-surface); border-radius: var(--radius-card); padding: var(--card-padding, 40px); }
+    .card--accent { background: var(--color-surface-accent); color: var(--color-on-accent); }
+    .card--decor { background: var(--color-surface-decor); color: var(--color-on-accent); }
+    .card .stat-label { font-family: var(--font-body-sans); font-size: 14px; font-weight: 500; }
+    .card .stat { font-family: var(--font-display); font-size: 56px; line-height: 0.94; letter-spacing: 0.02em; margin-top: var(--space-5); }
+    /* AA: small label text on the orange fill is INK (6:1); the big number stays
+       white (large text, 3.3:1 ≥ 3:1). On the violet fill small text stays white (5.9:1). */
+    .card--accent .stat-label { color: var(--color-ink-strong); }
 
     /* ── Color chips — flat 40px cards ─────────────────────────────────────── */
     .chips {
@@ -105,11 +267,7 @@
       gap: var(--space-2);
       margin: var(--space-3) 0;
     }
-    .chip {
-      border-radius: var(--radius-card);
-      overflow: hidden;
-      background: var(--color-canvas-surface);
-    }
+    .chip { border-radius: var(--radius-card); overflow: hidden; background: var(--color-canvas-surface); }
     .chip .swatch { height: 96px; width: 100%; }
     .chip .label { padding: var(--space-2) var(--space-2) var(--space-1); font-family: var(--font-mono); font-size: var(--text-mono-size); }
     .chip .name { color: var(--color-ink-primary); font-weight: 500; }
@@ -127,29 +285,65 @@
     .specimen { border-radius: var(--radius-card); padding: var(--space-4); margin: var(--space-2) 0; background: var(--color-canvas-surface); }
     .specimen .label { font-family: var(--font-mono); font-size: 11px; color: var(--color-ink-primary); opacity: 0.7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--space-2); }
     .specimen .preview-display { font-family: var(--font-display); font-size: var(--text-display-size); line-height: var(--text-display-line-height); letter-spacing: var(--text-display-tracking); color: var(--color-ink-strong); }
-    .specimen .preview-h1 { font-family: var(--font-display); font-size: var(--text-h-1-size); line-height: var(--text-h-1-line-height); letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-ink-strong); }
+    .specimen .preview-h1 { font-family: var(--font-display); font-size: var(--text-display-lg-size); line-height: var(--text-display-lg-line-height); letter-spacing: 0.02em; color: var(--color-ink-strong); }
     .specimen .preview-body { font-family: var(--font-body-sans); font-size: var(--text-body-size); line-height: var(--text-body-line-height); color: var(--color-ink-primary); }
     .specimen .preview-mono { font-family: var(--font-mono); font-size: var(--text-mono-size); color: var(--color-ink-primary); }
 
-    /* ── Components: buttons + cards ───────────────────────────────────────── */
-    .btn-row { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; margin: var(--space-3) 0; }
-    .btn {
-      font-family: var(--font-body-sans); font-weight: 500; font-size: 16px;
-      padding: 12px 24px; border: none; cursor: pointer; text-decoration: none;
-      display: inline-block; line-height: 1;
+    /* ── Blog / content card (halftone thumb + Hazard-Yellow tag) ──────────── */
+    .blog-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-3); margin: var(--space-3) 0; }
+    @media (min-width: 720px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
+    .blog-card { background: var(--color-canvas-surface); border-radius: var(--radius-card); padding: var(--space-3); }
+    /* Nested rounded image — smaller radius inside the 40px card (rounded-in-rounded) */
+    .blog-card .thumb { width: 100%; height: auto; display: block; border-radius: var(--radius-card-sm); margin-bottom: var(--space-3); }
+    .tag {
+      display: inline-block; background: var(--color-surface-tag); color: var(--color-ink-strong);
+      font-family: var(--font-body-sans); font-size: 12px; font-weight: 500;
+      padding: 3px 10px; border-radius: var(--radius-tag); margin-bottom: var(--space-2);
     }
-    .btn-primary { background: var(--color-surface-accent); color: var(--color-on-accent); border-radius: var(--radius-pill); }
-    .btn-ghost { background: transparent; color: var(--color-ink-primary); border: 1px solid var(--color-edge-pill); border-radius: var(--radius-pill); }
-    .btn-nav { background: var(--color-canvas-surface); color: var(--color-ink-primary); border-radius: var(--radius-card); }
+    .blog-card h3 { font-family: var(--font-display); font-size: var(--text-heading-sm-size, 26px); line-height: 1.1; letter-spacing: 0.02em; font-weight: 400; color: var(--color-ink-strong); margin: 0 0 var(--space-1); }
+    .blog-card .date { font-family: var(--font-body-sans); font-size: 14px; color: var(--color-ink-primary); opacity: 0.7; }
 
-    .card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--rhythm-element-gap, 10px); margin: var(--space-3) 0; }
-    @media (max-width: 768px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 480px) { .card-grid { grid-template-columns: 1fr; } }
-    .card { background: var(--color-canvas-surface); border-radius: var(--radius-card); padding: var(--card-padding, 40px); }
-    .card--accent { background: var(--color-surface-accent); color: var(--color-on-accent); }
-    .card--decor { background: var(--color-surface-decor); color: var(--color-on-accent); }
-    .card .stat { font-family: var(--font-display); font-size: 56px; line-height: 0.94; letter-spacing: 0.02em; }
-    .card .stat-label { font-family: var(--font-body-sans); font-size: 14px; margin-top: 8px; }
+    /* ── Logo strip — responsive grid (6 → 3×2 → 2×3) with partial-length dotted
+          dividers on BOTH axes (signatures.dottedEdge). ───────────────────────── */
+    .logo-strip {
+      background: var(--color-paper-white, #fff); border-radius: var(--radius-card);
+      display: grid; grid-template-columns: repeat(6, 1fr); margin: var(--space-3) 0; overflow: hidden;
+    }
+    .logo-strip .cell { padding: var(--space-4); display: flex; align-items: center; justify-content: center; position: relative; min-height: 84px; }
+    /* vertical dotted divider (right edge), partial height + horizontal (bottom), partial width */
+    .logo-strip .cell::after {
+      content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+      height: 46%; border-right: 2px dotted color-mix(in srgb, var(--color-ink-primary) 32%, transparent);
+    }
+    .logo-strip .cell::before {
+      content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 78%; border-bottom: 2px dotted color-mix(in srgb, var(--color-ink-primary) 32%, transparent);
+      display: none;
+    }
+    .logo-strip .cell:nth-child(6n)::after { display: none; }      /* desktop: no vrule after col 6 */
+    @media (max-width: 900px) {                                    /* tablet: 3 cols × 2 rows */
+      .logo-strip { grid-template-columns: repeat(3, 1fr); }
+      .logo-strip .cell:nth-child(n)::after { display: block; }
+      .logo-strip .cell:nth-child(3n)::after { display: none; }    /* no vrule after col 3, 6 */
+      .logo-strip .cell:nth-child(-n+3)::before { display: block; }/* hrule under row 1 */
+    }
+    @media (max-width: 560px) {                                    /* mobile: 2 cols × 3 rows */
+      .logo-strip { grid-template-columns: repeat(2, 1fr); }
+      .logo-strip .cell:nth-child(n)::after { display: block; }
+      .logo-strip .cell:nth-child(2n)::after { display: none; }    /* no vrule after even cols */
+      .logo-strip .cell:nth-child(n)::before { display: none; }
+      .logo-strip .cell:nth-child(-n+4)::before { display: block; }/* hrule under rows 1 & 2 */
+    }
+    .logo-strip .cell img { max-height: 40px; max-width: 100%; }
+
+    /* ── Pill input ────────────────────────────────────────────────────────── */
+    .field { display: flex; gap: var(--space-2); flex-wrap: wrap; margin: var(--space-3) 0; }
+    .field input {
+      background: var(--color-paper-white, #fff); border: 1px solid var(--color-ink-primary);
+      border-radius: var(--radius-input); padding: 12px 20px; font-family: var(--font-body-sans);
+      font-size: 16px; color: var(--color-ink-primary); min-width: 240px;
+    }
+    .field input:focus { outline: none; border-width: 2px; }
 
     /* ── Spacing ruler ─────────────────────────────────────────────────────── */
     .ruler { display: grid; gap: var(--space-1); margin: var(--space-2) 0; }
@@ -161,7 +355,7 @@
     /* ── Signature gallery ─────────────────────────────────────────────────── */
     .sig-gallery { display: grid; gap: var(--space-3); margin: var(--space-3) 0; }
     .sig-card { border-radius: var(--radius-card); padding: var(--space-4); background: var(--color-canvas-surface); }
-    .sig-card h3 { font-family: var(--font-display); font-size: 26px; letter-spacing: 0.02em; text-transform: uppercase; font-weight: 400; color: var(--color-ink-strong); margin: 0 0 var(--space-2); }
+    .sig-card h3 { font-family: var(--font-display); font-size: 26px; letter-spacing: 0.02em; font-weight: 400; color: var(--color-ink-strong); margin: 0 0 var(--space-2); }
     .sig-card .preview { margin: var(--space-2) 0; padding: var(--space-2); background: var(--color-canvas-page); border-radius: var(--radius-card); text-align: center; }
     .sig-card .preview img { max-width: 100%; height: auto; border-radius: var(--radius-card); }
     .sig-card .meta { display: flex; gap: var(--space-2); margin-top: var(--space-1); flex-wrap: wrap; }
@@ -170,39 +364,139 @@
     .dodont { display: grid; grid-template-columns: 1fr; gap: var(--space-2); margin: var(--space-2) 0; }
     @media (min-width: 640px) { .dodont { grid-template-columns: 1fr 1fr; } }
     .dodont .pair { padding: var(--space-3); border-radius: var(--radius-card); background: var(--color-canvas-surface); }
-    .dodont .pair.do { border-top: 6px solid var(--color-accent-primary); }
-    .dodont .pair.dont { border-top: 6px solid var(--color-ink-primary); }
+    /* Do vs Don't is carried by the label chip (orange vs ink) — no side accent bar. */
     .dodont .label { font-family: var(--font-body-sans); font-size: var(--text-eyebrow-size); letter-spacing: var(--text-eyebrow-tracking); text-transform: uppercase; font-weight: 700; margin-bottom: var(--space-1); }
-    .dodont .pair.do .label { color: var(--color-accent-primary); }
-    .dodont .pair.dont .label { color: var(--color-ink-primary); }
+    /* Orange as a BLOCK (not text): the DO label is an orange chip w/ ink text (AA 6:1). */
+    .dodont .label { display: inline-block; padding: 2px 10px; border-radius: var(--radius-tag); }
+    .dodont .pair.do .label { background: var(--color-surface-accent); color: var(--color-ink-strong); }
+    .dodont .pair.dont .label { background: var(--color-ink-primary); color: var(--color-canvas-page); }
 
     /* ── Voice ─────────────────────────────────────────────────────────────── */
     .voice-list { display: grid; gap: var(--space-2); margin: var(--space-2) 0; }
-    .voice-rule { padding: var(--space-3); background: var(--color-canvas-surface); border-radius: var(--radius-card); border-left: 6px solid var(--color-accent-primary); }
+    .voice-rule { padding: var(--space-3); background: var(--color-canvas-surface); border-radius: var(--radius-card); }
     .voice-rule .name { font-weight: 700; color: var(--color-ink-strong); margin-bottom: 4px; }
     .voice-rule .why { font-size: var(--text-meta-size); color: var(--color-ink-primary); opacity: 0.75; margin-top: 4px; }
 
     /* ── Footer ────────────────────────────────────────────────────────────── */
-    footer { margin-top: var(--rhythm-section); padding: var(--space-4) 0 var(--space-6); border-top: 4px solid var(--color-accent-primary); text-align: center; }
+    footer { margin-top: var(--rhythm-section-large); padding: var(--space-4) 0 var(--space-6); border-top: 4px solid var(--color-accent-primary); text-align: center; }
     footer a { color: var(--color-ink-primary); text-decoration: underline; text-decoration-color: var(--color-accent-primary); text-underline-offset: 3px; }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       INTERACTION & MOTION — hover / active / focus states.
+       Flat-consistent: depth comes from COLOR shifts + tiny translates, never
+       shadows. Timing/easing from the brand motion tokens. (signatures.interaction)
+       ═══════════════════════════════════════════════════════════════════════ */
+    a, button, input, .btn, .card, .blog-card, .nav .links a, .logo-strip .cell, .badge-icon, .cta {
+      transition: background var(--duration-base) var(--easing-standard),
+                  color var(--duration-base) var(--easing-standard),
+                  border-color var(--duration-base) var(--easing-standard),
+                  transform var(--duration-fast) var(--easing-standard);
+    }
+    /* Keyboard focus — orange focus ring (a11y); no glow on mouse interaction. */
+    a:focus-visible, button:focus-visible, input:focus-visible, .btn:focus-visible {
+      outline: none; box-shadow: var(--shadow-focus-ring);
+    }
+    /* Primary / accent-icon / CTA — darken the orange ~12% on hover. */
+    .btn-primary:hover, .btn-icon--accent:hover, .nav .cta:hover, .signup .field-pill .go:hover {
+      background: color-mix(in srgb, var(--color-surface-accent) 88%, #000);
+      border-color: color-mix(in srgb, var(--color-surface-accent) 88%, #000);
+    }
+    /* Secondary / ghost — inverts to a solid ink fill, label flips to canvas. */
+    .btn-ghost:hover, .btn-secondary:hover { background: var(--color-ink-primary); border-color: var(--color-ink-primary); color: var(--color-canvas-page); }
+    /* Tertiary dotted — fills to a solid orange block with INK label (AA 6:1).
+       (Orange text on the light canvas would only be ~2.6:1 — never do that.) */
+    .btn-dotted:hover { background: var(--color-surface-accent); border-style: solid; border-color: var(--color-surface-accent); color: var(--color-ink-strong); }
+    /* Quiet — deepen the ash slightly toward ink. */
+    .btn-quiet:hover, .btn-nav:hover { background: color-mix(in srgb, var(--color-canvas-surface) 84%, var(--color-ink-primary)); border-color: color-mix(in srgb, var(--color-canvas-surface) 84%, var(--color-ink-primary)); }
+    /* Ash icon — fills orange, glyph inverts to ink. */
+    .btn-icon:not(.btn-icon--accent):hover { background: var(--color-surface-accent); border-color: var(--color-surface-accent); color: var(--color-ink-strong); }
+    /* Every button presses down 1px on active (flat — translate, never a shadow). */
+    .btn:active, .nav .cta:active, .signup .field-pill .go:active { transform: translateY(1px); }
+    /* Demo-only classes so the showcase can render hover / active / focus statically. */
+    .btn-primary.is-hover { background: color-mix(in srgb, var(--color-surface-accent) 88%, #000); border-color: color-mix(in srgb, var(--color-surface-accent) 88%, #000); }
+    .btn-primary.is-active { background: color-mix(in srgb, var(--color-surface-accent) 88%, #000); transform: translateY(1px); }
+    .btn.is-focus { box-shadow: var(--shadow-focus-ring); }
+    /* Nav + footer links — stay ink (AA), gain an orange underline accent on hover. */
+    .nav .links a:hover, footer a:hover { color: var(--color-ink-strong); text-decoration: underline; text-decoration-color: var(--color-accent-primary); text-underline-offset: 4px; }
+    /* Content cards lift slightly (flat — translate, never a shadow). Connected
+       stat cards are NOT lifted — that would tear them off their cream bones. */
+    .blog-card:hover { transform: translateY(-3px); }
+    /* Pill input — the PILL shows focus (its border firms up to white). The bare
+       inner <input> has no radius, so the global orange focus-ring would render as
+       a square-cornered orange box around it — suppress it; the pill is the focus
+       surface. */
+    .signup .field-pill:focus-within { border-color: var(--color-paper-white, #fff); }
+    .signup .field-pill input:focus-visible { box-shadow: none; outline: none; }
+    /* Respect reduced-motion. */
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
   </style>
 </head>
 <body>
+
+<!-- FLOATING PILL NAV -->
+<div class="container">
+  <div class="navwrap">
+    <nav class="nav">
+      <img class="mark" src="../public/brands/chan-monkey-logo-black.svg" alt="Chan Meng monogram">
+      <span class="vrule"></span>
+      <span class="links">
+        <a href="#color">Color</a>
+        <a href="#type">Type</a>
+        <a href="#components">Components</a>
+        <a href="#voice">Voice</a>
+      </span>
+      <span class="vrule"></span>
+      <a class="cta" href="https://chanmeng.org/">Visit Site</a>
+    </nav>
+  </div>
+</div>
+
 <div class="container">
 
-  <!-- HERO -->
+  <!-- HERO — asymmetric magazine cover -->
   <header class="hero">
-    <img class="hero-banner" src="https://gradient-svg-generator.vercel.app/api/svg?text=Chan%20Meng&template=brand-hero&height=200&duration=8s" alt="Brand hero banner — Chan Meng">
-    <div class="hero-row">
-      <img class="mark" src="../public/brands/chan-monkey-logo-black.svg" alt="Chan Meng monogram">
-      <div>
-        <p class="eyebrow">Personal Brand System</p>
-        <h1 class="display">{{identity.name}}</h1>
-        <p class="lead">{{identity.tagline}}</p>
-        <p class="mono" style="margin-top: var(--space-2);">v{{version}} · {{lastUpdated}} · Pixelated Cyber-Playground</p>
+    <div>
+      <p class="eyebrow">Personal Brand System</p>
+      <h1 class="display" style="font-size: var(--text-display-xl-size); line-height: var(--text-display-xl-line-height); letter-spacing: var(--text-display-xl-tracking);">{{identity.name}}</h1>
+      <p class="lead">{{identity.tagline}}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="../dist/brand/DESIGN.md">Read the spec</a>
+        <a class="btn btn-dotted" href="#components">Explore the system</a>
+      </div>
+      <p class="mono" style="margin-top: var(--space-3);">v{{version}} · {{lastUpdated}} · Caldera clone</p>
+    </div>
+    <img class="panel" src="../public/brand/halftone-hero.svg" alt="Halftone gradient hero panel — Digital Orange to Cyber Violet">
+  </header>
+
+  <!-- STAT GRID — interconnected cards (signatures.connectedCards) -->
+  <section>
+    <div class="stat-connected">
+      <div class="card">
+        <span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+        <div><div class="stat">70+</div><div class="stat-label">Open-source projects</div></div>
+        <svg class="conn conn-r" viewBox="0 0 16 141" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 0.5V35.5C0 39.9183 3.58172 43.5 8 43.5C12.4183 43.5 16 39.9183 16 35.5V0.5V140.5V103C16 98.5817 12.4183 95 8 95C3.58172 95 0 98.5817 0 103V140.5V0.5Z"/></svg>
+        <svg class="conn conn-b" viewBox="0 0 141 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.5 0H35.5C39.9183 0 43.5 3.58172 43.5 8C43.5 12.4183 39.9183 16 35.5 16H0.5H140.5H103C98.5817 16 95 12.4183 95 8C95 3.58172 98.5817 0 103 0H140.5H0.5Z"/></svg>
+      </div>
+      <div class="card">
+        <span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></span>
+        <div><div class="stat">1,103</div><div class="stat-label">Newsletter subscribers</div></div>
+        <svg class="conn conn-r" viewBox="0 0 16 141" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 0.5V35.5C0 39.9183 3.58172 43.5 8 43.5C12.4183 43.5 16 39.9183 16 35.5V0.5V140.5V103C16 98.5817 12.4183 95 8 95C3.58172 95 0 98.5817 0 103V140.5V0.5Z"/></svg>
+        <svg class="conn conn-b" viewBox="0 0 141 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.5 0H35.5C39.9183 0 43.5 3.58172 43.5 8C43.5 12.4183 39.9183 16 35.5 16H0.5H140.5H103C98.5817 16 95 12.4183 95 8C95 3.58172 98.5817 0 103 0H140.5H0.5Z"/></svg>
+      </div>
+      <div class="card">
+        <span class="badge-icon" aria-hidden="true">in</span>
+        <div><div class="stat">5,594</div><div class="stat-label">LinkedIn followers</div></div>
+        <svg class="conn conn-r" viewBox="0 0 16 141" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 0.5V35.5C0 39.9183 3.58172 43.5 8 43.5C12.4183 43.5 16 39.9183 16 35.5V0.5V140.5V103C16 98.5817 12.4183 95 8 95C3.58172 95 0 98.5817 0 103V140.5V0.5Z"/></svg>
+        <svg class="conn conn-b" viewBox="0 0 141 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.5 0H35.5C39.9183 0 43.5 3.58172 43.5 8C43.5 12.4183 39.9183 16 35.5 16H0.5H140.5H103C98.5817 16 95 12.4183 95 8C95 3.58172 98.5817 0 103 0H140.5H0.5Z"/></svg>
+      </div>
+      <div class="card">
+        <span class="badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L21.8 9l-5.2 4.64L18.1 21 12 17.27 5.9 21l1.5-7.36L2.2 9l6.9-.74z"/></svg></span>
+        <div><div class="stat">210</div><div class="stat-label">GitHub followers</div></div>
+        <svg class="conn conn-r" viewBox="0 0 16 141" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 0.5V35.5C0 39.9183 3.58172 43.5 8 43.5C12.4183 43.5 16 39.9183 16 35.5V0.5V140.5V103C16 98.5817 12.4183 95 8 95C3.58172 95 0 98.5817 0 103V140.5V0.5Z"/></svg>
+        <svg class="conn conn-b" viewBox="0 0 141 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.5 0H35.5C39.9183 0 43.5 3.58172 43.5 8C43.5 12.4183 39.9183 16 35.5 16H0.5H140.5H103C98.5817 16 95 12.4183 95 8C95 3.58172 98.5817 0 103 0H140.5H0.5Z"/></svg>
       </div>
     </div>
-  </header>
+  </section>
 
   <!-- IDENTITY -->
   <section>
@@ -212,9 +506,9 @@
   </section>
 
   <!-- COLOR — RAW -->
-  <section>
+  <section id="color">
     <h2 class="section">Color · raw palette</h2>
-    <p class="lead">Seven Caldera swatches. Templates never reference these directly — they reference semantic tokens, which point here. One loud orange accent; violet and glare are decorative-only.</p>
+    <p class="lead">Eight Caldera swatches. Templates never reference these directly — they reference semantic tokens, which point here. One loud orange accent; violet and glare are decorative-only.</p>
     <div class="chips">
       {{#each colorRawList}}
       <div class="chip">
@@ -248,18 +542,23 @@
   </section>
 
   <!-- TYPOGRAPHY -->
-  <section>
+  <section id="type">
     <h2 class="section">Typography</h2>
-    <p class="lead">Display is ultra-bold compact (Bebas Neue) for the name, headings, and stat numbers. DM Sans 500 is the body workhorse. Mono is reserved for data signatures.</p>
+    <p class="lead">Display is a heavy compact grotesque (Anton — the OFL stand-in for PP Neue Corp Compact Ultrabold) for the name, headings, and stat numbers, set in MIXED case. DM Sans 500 is the body workhorse. Mono is reserved for data signatures.</p>
 
     <div class="specimen">
-      <div class="label">--text-display · Bebas Neue · 96px / 0.02em</div>
-      <div class="preview-display">SUBTRACTION FOR LIFE,<br>ADDITION FOR THOUGHT.</div>
+      <div class="label">--text-display-xl · Anton · 189px / 0.02em · mixed case</div>
+      <div class="preview-display" style="font-size: var(--text-display-xl-size); line-height: var(--text-display-xl-line-height);">More Is More.</div>
     </div>
 
     <div class="specimen">
-      <div class="label">--text-h-1 · Bebas Neue · 56px uppercase</div>
-      <div class="preview-h1">Building at the intersection of AI, cultural tech & women's health</div>
+      <div class="label">--text-display · Anton · 96px / 0.02em</div>
+      <div class="preview-display">Subtraction for life,<br>addition for thought.</div>
+    </div>
+
+    <div class="specimen">
+      <div class="label">--text-display-lg · Anton · 64px mixed case</div>
+      <div class="preview-h1">Building at the intersection of AI, cultural tech &amp; women's health</div>
     </div>
 
     <div class="specimen">
@@ -279,32 +578,120 @@
   </section>
 
   <!-- COMPONENTS -->
-  <section>
+  <section id="components">
     <h2 class="section">Components</h2>
-    <p class="lead">Flat, friendly geometry: pill buttons at 800px, cards at 40px, no shadows. Orange fills carry the primary action; everything else is ash on basalt.</p>
+    <p class="lead">Flat, friendly geometry: pill buttons at 800px, cards at 40px, tags at 20px, no shadows. Orange fills carry the primary action; everything else is ash on basalt.</p>
 
+    <!-- BUTTONS — the full pill system -->
+    <h3 class="comp-title">Buttons</h3>
+    <p class="meta" style="margin:0 0 var(--space-1);">Variants — hierarchy by fill: orange primary, ink-hairline secondary, dotted tertiary, ash quiet, and a circular icon button.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="#">Primary action</a>
-      <a class="btn btn-ghost" href="#">Ghost button</a>
-      <a class="btn btn-nav" href="#">Nav link</a>
+      <a class="btn btn-ghost" href="#">Secondary</a>
+      <a class="btn btn-dotted" href="#">Tertiary</a>
+      <a class="btn btn-quiet" href="#">Quiet</a>
+      <button class="btn btn-icon btn-icon--accent" type="button" aria-label="Submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <button class="btn btn-icon" type="button" aria-label="More options"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button>
     </div>
 
-    <div class="card-grid">
-      <div class="card card--accent">
-        <div class="stat">86.6%</div>
-        <div class="stat-label">solo-built platforms in production</div>
+    <p class="meta" style="margin:var(--space-2) 0 var(--space-1);">Sizes — small · medium (default) · large.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary btn-sm" href="#">Small</a>
+      <a class="btn btn-primary" href="#">Medium</a>
+      <a class="btn btn-primary btn-lg" href="#">Large</a>
+    </div>
+
+    <p class="meta" style="margin:var(--space-2) 0 var(--space-1);">With icons — leading or trailing, inheriting the label colour.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>View the repo</a>
+      <a class="btn btn-ghost" href="#">Read the spec<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+
+    <p class="meta" style="margin:var(--space-2) 0 var(--space-1);">States — default · hover · active · focus · disabled (a colour shift + a 1px press; flat, never a shadow).</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#">Default</a>
+      <a class="btn btn-primary is-hover" href="#">Hover</a>
+      <a class="btn btn-primary is-active" href="#">Active</a>
+      <a class="btn btn-primary is-focus" href="#">Focus</a>
+      <button class="btn btn-primary" type="button" disabled>Disabled</button>
+    </div>
+
+    <div class="field">
+      <input type="text" placeholder="Pill input — fully rounded, 1px ink border">
+    </div>
+
+    <!-- Dotted accordion rows (collapsed) — Caldera's dotted-edge motif -->
+    <div style="display:grid; gap:var(--space-2); max-width:520px; margin:var(--space-3) 0;">
+      <div class="card" style="padding:var(--space-3) var(--space-4);">
+        <span style="font-family:var(--font-display); font-size:30px; letter-spacing:0.02em;">Expanded</span>
+        <p class="meta" style="margin:var(--space-1) 0 0;">Solid ash card — the open accordion panel.</p>
       </div>
-      <div class="card">
-        <div class="stat" style="color: var(--color-accent-primary);">72</div>
-        <div class="stat-label">open-source projects shipped</div>
+      <div class="btn-dotted" style="display:block; border-radius:var(--radius-card); padding:var(--space-3) var(--space-4);">
+        <span style="font-family:var(--font-display); font-size:30px; letter-spacing:0.02em;">Collapsed</span>
       </div>
-      <div class="card">
-        <div class="stat" style="color: var(--color-accent-primary);">4</div>
-        <div class="stat-label">AI-programming cohorts taught</div>
+      <div class="btn-dotted" style="display:block; border-radius:var(--radius-card); padding:var(--space-3) var(--space-4);">
+        <span style="font-family:var(--font-display); font-size:30px; letter-spacing:0.02em;">Collapsed</span>
       </div>
-      <div class="card card--decor">
-        <div class="stat">∞</div>
-        <div class="stat-label">decorative violet block (background-only)</div>
+    </div>
+
+    <!-- Blog cards: halftone thumb + Hazard-Yellow category tag + Anton title -->
+    <div class="blog-grid">
+      <div class="blog-card">
+        <img class="thumb" src="../public/brand/halftone-thumb.svg" alt="">
+        <span class="tag">Announcement</span>
+        <h3>Shipping agentic workflows in production</h3>
+        <span class="date">{{lastUpdated}}</span>
+      </div>
+      <div class="blog-card">
+        <img class="thumb" src="../public/brand/halftone-thumb.svg" alt="">
+        <span class="tag">Open Source</span>
+        <h3>Free tools I built for the community</h3>
+        <span class="date">{{lastUpdated}}</span>
+      </div>
+      <div class="blog-card">
+        <img class="thumb" src="../public/brand/halftone-thumb.svg" alt="">
+        <span class="tag">FemTech</span>
+        <h3>Cultural technology and women's health</h3>
+        <span class="date">{{lastUpdated}}</span>
+      </div>
+    </div>
+
+    <!-- Logo strip: monochrome marks on white, dotted dividers; reflows 6 → 3×2 → 2×3 -->
+    <div class="logo-strip">
+      <div class="cell"><img src="../public/brands/gradient-svg-generator-logo.svg" alt="gradient-svg-generator"></div>
+      <div class="cell"><img src="../public/brands/github-visitor-counter-logo.svg" alt="github-visitor-counter"></div>
+      <div class="cell"><img src="../public/brands/github-readme-suno-cards-logo.svg" alt="github-readme-suno-cards"></div>
+      <div class="cell"><img src="../public/brands/echook-logo.svg" alt="echook"></div>
+      <div class="cell"><img src="../public/brands/sunostats-logo.svg" alt="SunoStats"></div>
+      <div class="cell"><img src="../public/brands/typst-claude-skill-logo.svg" alt="typst-claude-skill"></div>
+    </div>
+
+    <!-- Accordion — active item = solid cream card; inactive = dotted ghost rows -->
+    <div class="accordion">
+      <div class="item-active">
+        <h3>AI &amp; RAG systems</h3>
+        <p>The expanded item is a solid cream card with its description shown; siblings collapse to dotted-outline ghost rows.</p>
+      </div>
+      <div class="item-ghost">Accessibility &amp; inclusive design</div>
+      <div class="item-ghost">Developer tooling</div>
+    </div>
+
+    <!-- Carousel controls — circular dotted-edge arrows -->
+    <div style="display:flex; align-items:center; gap:var(--space-3); margin:var(--space-3) 0;">
+      <span class="meta">Carousel controls</span>
+      <div class="carousel-ctrls">
+        <button aria-label="Previous"><img src="../public/brand/arrow-prev.svg" alt=""></button>
+        <span class="sep"></span>
+        <button aria-label="Next"><img src="../public/brand/arrow-next.svg" alt=""></button>
+      </div>
+    </div>
+
+    <!-- Newsletter signup — violet panel, pill input + circular arrow -->
+    <div class="signup">
+      <h3 style="font-family:var(--font-display); font-size:var(--text-display-lg-size); line-height:0.95; letter-spacing:0.02em; margin:0 0 var(--space-3);">Sign up to follow the build.</h3>
+      <div class="field-pill">
+        <input type="email" placeholder="Type your email here">
+        <button class="go" aria-label="Submit">▸</button>
       </div>
     </div>
   </section>
@@ -312,7 +699,7 @@
   <!-- SPACING -->
   <section>
     <h2 class="section">Spacing · 8px base</h2>
-    <p class="lead">Named scale with a 10px element gap and a 40px section rhythm (<code class="mono">--rhythm-section</code>).</p>
+    <p class="lead">Named scale with a 10px element gap and an 80px section rhythm (<code class="mono">--rhythm-section-large</code>).</p>
     <div class="ruler">
       {{#each spacingList}}
       <div class="ruler-row">
@@ -327,31 +714,40 @@
   <!-- SIGNATURES -->
   <section>
     <h2 class="section">Decorative signatures</h2>
-    <p class="lead">All built on assets Chan owns: gradient-svg-generator (pixelated orange/violet banners + pills), the monogram, and the datestamp. External services (shields.io, trophies, wakatime, streaks) are forbidden.</p>
+    <p class="lead">All built on assets Chan owns: the risograph halftone panels (public/brand/), gradient-svg-generator banners + pills, the monogram, and the datestamp. External services (shields.io, trophies, wakatime, streaks) are forbidden.</p>
     <div class="sig-gallery">
 
       <div class="sig-card">
-        <h3>1. Hero band — heroBand</h3>
+        <h3>1. Halftone panel — halftone</h3>
+        <div class="preview">
+          <img src="../public/brand/halftone-hero.svg" alt="Halftone hero panel" loading="lazy" style="max-height: 220px;">
+        </div>
+        <p class="meta"><strong>Colors:</strong> Digital Orange → Cyber Violet</p>
+        <p class="meta"><strong>Use:</strong> {{signatures.halftone.useWhen}}</p>
+        <p class="meta"><strong>Don't:</strong> {{signatures.halftone.doNotUseWhen}}</p>
+      </div>
+
+      <div class="sig-card">
+        <h3>2. Hero band — heroBand</h3>
         <p class="meta"><span>Template: <code class="mono">{{signatures.heroBand.template}}</code></span><span>Height: {{signatures.heroBand.height}}px</span><span>Duration: {{signatures.heroBand.duration}}</span></p>
         <div class="preview">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Chan%20Meng&template={{signatures.heroBand.template}}&height={{signatures.heroBand.height}}&duration={{signatures.heroBand.duration}}" alt="Hero band preview" loading="lazy">
         </div>
         <p class="meta"><strong>Use:</strong> {{signatures.heroBand.useWhen}}</p>
-        <p class="meta"><strong>Don't:</strong> {{signatures.heroBand.doNotUseWhen}}</p>
       </div>
 
       <div class="sig-card">
-        <h3>2. Accent eyebrow — goldEyebrow</h3>
+        <h3>3. Accent eyebrow — goldEyebrow</h3>
         <div class="preview" style="text-align: left;">
           <p class="eyebrow">Featured Work</p>
-          <h3 style="font-family: var(--font-display); font-size: var(--text-h-1-size); letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-ink-strong); margin: 0;">Sample display heading</h3>
+          <h3 style="font-family: var(--font-display); font-size: var(--text-display-lg-size); letter-spacing: 0.02em; color: var(--color-ink-strong); margin: 0;">Sample display heading</h3>
         </div>
         <p class="meta"><strong>Rule:</strong> {{signatures.goldEyebrow.rule}}</p>
         <p class="meta"><strong>Use:</strong> {{signatures.goldEyebrow.useWhen}}</p>
       </div>
 
       <div class="sig-card">
-        <h3>3. Mono datestamp — monoDatestamp</h3>
+        <h3>4. Mono datestamp — monoDatestamp</h3>
         <div class="preview" style="text-align: left;">
           <span class="mono">last updated · {{lastUpdated}} · build 47</span>
         </div>
@@ -359,7 +755,7 @@
       </div>
 
       <div class="sig-card">
-        <h3>4. Monogram divider — monogramDivider</h3>
+        <h3>5. Monogram divider — monogramDivider</h3>
         <div class="preview">
           <div style="display: flex; align-items: center; gap: 12px; justify-content: center;">
             <span style="flex: 1; height: 2px; background: var(--color-ink-primary); opacity: 0.4;"></span>
@@ -371,7 +767,7 @@
       </div>
 
       <div class="sig-card">
-        <h3>5. Pill rotation — pillRotation</h3>
+        <h3>6. Pill rotation — pillRotation</h3>
         <div class="preview">
           <p class="meta">Recoloured to the Caldera palette ({{pillRotationCount}} configured)</p>
           <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 12px;">
@@ -388,7 +784,7 @@
   </section>
 
   <!-- VOICE -->
-  <section>
+  <section id="voice">
     <h2 class="section">Voice principles</h2>
     <div class="voice-list">
       {{#each voice.principles}}

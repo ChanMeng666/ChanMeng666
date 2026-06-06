@@ -1,7 +1,7 @@
 /* GENERATED FROM data/brand.yaml — DO NOT EDIT.
  * Regenerate with: npm run build:brand
- * Source of truth: data/brand.yaml v2.0.0
- * Last updated:    2026-06-03
+ * Source of truth: data/brand.yaml v2.1.1
+ * Last updated:    2026-06-07
  */
 
 :root {
@@ -10,6 +10,7 @@
   --color-raw-ash-white: #F7F6F2;
   --color-raw-pure-white: #FFFFFF;
   --color-raw-abyssal-ink: #070607;
+  --color-raw-pure-black: #000000;
   --color-raw-digital-orange: #FC5000;
   --color-raw-cyber-violet: #524AE9;
   --color-raw-pixel-glare: #F5F28E;
@@ -20,6 +21,7 @@
   --color-surface-accent: var(--color-raw-digital-orange);
   --color-surface-decor: var(--color-raw-cyber-violet);
   --color-surface-glare: var(--color-raw-pixel-glare);
+  --color-surface-tag: var(--color-raw-pixel-glare);
   --color-ink-primary: var(--color-raw-abyssal-ink);
   --color-ink-strong: var(--color-raw-abyssal-ink);
   --color-ink-muted: var(--color-raw-abyssal-ink);
@@ -33,11 +35,21 @@
   --color-rule-hairline: var(--color-raw-abyssal-ink);
 
   /* Typography — font stacks */
-  --font-display: "Bebas Neue", Anton, Oswald, Impact, sans-serif;
+  --font-display: Anton, Oswald, "Bebas Neue", Impact, sans-serif;
   --font-body-sans: "DM Sans", Inter, "Segoe UI", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", Consolas, ui-monospace, monospace;
 
   /* Typography — scale */
+  --text-display-xl-size: 189px;
+  --text-display-xl-line-height: 0.94;
+  --text-display-xl-tracking: 0.02em;
+  --text-display-xl-weight: 400;
+  --text-display-xl-family: var(--font-display);
+  --text-display-lg-size: 64px;
+  --text-display-lg-line-height: 0.95;
+  --text-display-lg-tracking: 0.02em;
+  --text-display-lg-weight: 400;
+  --text-display-lg-family: var(--font-display);
   --text-display-size: 96px;
   --text-display-line-height: 0.94;
   --text-display-tracking: 0.02em;
@@ -112,6 +124,9 @@
   /* Radius */
   --radius-none: 0px;
   --radius-sm: 8px;
+  --radius-badge: 16px;
+  --radius-tag: 20px;
+  --radius-card-sm: 24px;
   --radius-card: 40px;
   --radius-default: 40px;
   --radius-input: 100px;

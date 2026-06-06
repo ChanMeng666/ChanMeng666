@@ -5,11 +5,14 @@
 # data/profile.yaml (which holds CONTENT — work, projects, narrative).
 # This file holds FORM — color, type, spacing, decoration, voice rules.
 #
-# v2.0.0 — "Caldera" re-skin. A high-contrast digital-arcade identity cloned
-# from the Caldera "Pixelated Cyber-Playground" system: a muted basalt-grey
-# canvas, ash-white flat cards, near-black ink, ONE loud Digital Orange accent,
-# violet + glare strictly decorative, ultra-bold compact display type (Bebas
-# Neue), DM Sans body, huge friendly radii, and flat color-block hierarchy.
+# v2.1.0 — "Caldera" re-skin, faithful pass. A high-contrast editorial identity
+# cloned from the Caldera system: a warm basalt-grey concrete canvas, ash-white
+# flat cards, near-black ink, ONE loud Digital Orange accent, violet + glare
+# strictly decorative, a heavy MIXED-CASE compact-grotesque display face (Anton —
+# the OFL stand-in for PP Neue Corp Compact Ultrabold), DM Sans body, huge
+# friendly radii, risograph halftone-dot decorative art, and flat color-block
+# hierarchy. v2.1.0 closes the three gaps vs. the reference: display font
+# (Bebas → Anton), halftone imagery (was pixel-art), and the 189px hero scale.
 #
 # Pipeline (see scripts/build-brand.mjs):
 #   data/brand.yaml
@@ -34,8 +37,8 @@
 #   - Flat: depth comes from solid color blocks, never shadows or gradients.
 # =============================================================================
 
-version: "2.0.0"
-lastUpdated: "2026-06-03"
+version: "2.1.1"
+lastUpdated: "2026-06-07"
 
 # -----------------------------------------------------------------------------
 # IDENTITY — who the brand is, in one place. Single-paragraph summaries each.
@@ -68,6 +71,7 @@ color:
 
     # Ink — near-black. Text, headings, strong borders, ghost outlines, links.
     abyssalInk:    "#070607"
+    pureBlack:     "#000000"   # icon strokes / densest border work (Caldera pure-black)
 
     # Accent — the whole personality. ONE loud orange.
     digitalOrange: "#FC5000"   # primary buttons, feature cards, accent rules
@@ -83,6 +87,7 @@ color:
     surfaceAccent:     "digitalOrange"  # feature / stat cards, primary button fill
     surfaceDecor:      "cyberViolet"    # decorative graphic blocks ONLY
     surfaceGlare:      "pixelGlare"     # highlight overlay / graphic accent
+    surfaceTag:        "pixelGlare"     # Hazard-Yellow category-tag background (Caldera blog tags)
 
     # ink — text colors by role. Caldera carries hierarchy by weight/size, so
     # every text role resolves to the same near-black ink.
@@ -106,16 +111,15 @@ color:
 
 # -----------------------------------------------------------------------------
 # TYPOGRAPHY — two voices + a mono house-extension.
-# Display = ultra-bold compact (Bebas Neue). Body = DM Sans. Mono = datestamps.
+# Display = heavy compact grotesque (Anton). Body = DM Sans. Mono = datestamps.
 # -----------------------------------------------------------------------------
 typography:
   families:
     display:
-      stack: ["Bebas Neue", "Anton", "Oswald", "Impact", "sans-serif"]
+      stack: ["Anton", "Oswald", "Bebas Neue", "Impact", "sans-serif"]
       weights: [400]
-      role: "Display, headings, and stat numbers — ultra-bold compact, tight."
-      licenseNote: "Bebas Neue & Anton are OFL (Google Fonts). Substitute for the commercial PP Neue Corp Compact Ultrabold."
-      features: ["ss06", "ss10"]
+      role: "Display, headings, and stat numbers — heavy MIXED-CASE compact grotesque, tight. The magazine-cover voice."
+      licenseNote: "Anton is OFL (Google Fonts) and the closest free match to the commercial PP Neue Corp Compact Ultrabold — heavy, condensed, mixed-case. Oswald 700 / Bebas Neue are deeper fallbacks. Single weight (400) renders intrinsically ultra-bold; never faux-bold."
     bodySans:
       stack: ["DM Sans", "Inter", "Segoe UI", "system-ui", "sans-serif"]
       weights: [400, 500, 700]
@@ -128,6 +132,22 @@ typography:
       licenseNote: "JetBrains Mono is OFL. Consolas is the Windows fallback."
 
   scale:
+    displayXl:
+      sizeWeb: "189px"
+      sizePrint: "48pt"
+      lineHeight: 0.94
+      tracking: "0.02em"
+      weight: 400
+      family: "display"
+      note: "Magazine-cover hero headline (web only). Anton, full-width, mixed-case."
+    displayLg:
+      sizeWeb: "64px"
+      sizePrint: "28pt"
+      lineHeight: 0.95
+      tracking: "0.02em"
+      weight: 400
+      family: "display"
+      note: "Large section / sub-hero headline. Anton, mixed-case."
     display:
       sizeWeb: "96px"
       sizePrint: "32pt"
@@ -135,7 +155,7 @@ typography:
       tracking: "0.02em"
       weight: 400
       family: "display"
-      note: "Hero / page name. Bebas Neue compact ultrabold."
+      note: "Hero / page name. Anton compact ultrabold, mixed-case."
     h1:
       sizeWeb: "56px"
       sizePrint: "22pt"
@@ -203,7 +223,7 @@ typography:
       note: "Datestamps, paths, version numbers."
 
   principles:
-    - "Display is ultra-bold compact (Bebas Neue) — the name, every heading, and stat numbers; 0.02em tracking on display only."
+    - "Display is heavy compact grotesque (Anton) — the name, every heading, and stat numbers; MIXED case (not all-caps), 0.02em tracking on display only."
     - "Orange is a BLOCK background or accent rule, never small body or link text — links and labels are ink."
     - "Violet is decorative-only — large background shapes and cards, never text or UI."
     - "Flat by default: hierarchy comes from solid color blocks, not shadows or gradients."
@@ -246,6 +266,9 @@ spacing:
 radius:
   none: 0
   sm:   8
+  badge: 16      # squircle icon badges (orange rounded-square + white glyph)
+  tag:  20       # category tags / chips (Caldera tag radius)
+  cardSm: 24     # tight-grid cards + NESTED images inside a 40px card
   card: 40       # all cards / content blocks
   default: 40
   input: 100     # pill inputs
@@ -418,6 +441,82 @@ signatures:
     useWhen: "Between major narrative shifts (e.g. between 'Featured work' and 'Open source')."
     doNotUseWhen: "Between sibling cards or list items."
 
+  # 4b. Halftone panels — the Caldera signature decorative art. Risograph
+  #     orange→violet dot-gradient SVGs generated by scripts/build-halftone.mjs
+  #     into public/brand/. Static assets (render as <img> on GitHub) so they
+  #     work everywhere the animated gradient banners cannot.
+  halftone:
+    type: "static-svg"
+    hero: "/public/brand/halftone-hero.svg"
+    thumb: "/public/brand/halftone-thumb.svg"
+    colors: ["digitalOrange", "cyberViolet"]
+    radiusPx: 40
+    useWhen: "Hero decorative panel; blog / project card thumbnails."
+    doNotUseWhen: "Behind body text. As a button fill. More than one hero panel per surface."
+
+  # 4c. Dot-grid ambient texture — the faint printed dot field Caldera lays under
+  #     most sections. A CSS radial-gradient tile (no asset), ink at low opacity.
+  dotGrid:
+    type: "css-pattern"
+    dotColor: "abyssalInk"
+    dotOpacity: 0.08
+    dotSizePx: 2
+    spacingPx: 22
+    useWhen: "Section / page backgrounds behind cards — the printed-paper ground."
+    doNotUseWhen: "Directly behind body text at full strength; inside cards."
+
+  # 4d. Dotted edge — Caldera's secondary affordance. A 2px DOTTED ink border on
+  #     ghost buttons, collapsed accordion items, dividers, and carousel controls.
+  #     Solid orange = primary/act; dotted ink = secondary/inactive/structural.
+  dottedEdge:
+    type: "border-style"
+    style: "dotted"
+    widthPx: 2
+    color: "abyssalInk"
+    useWhen: "Secondary buttons, collapsed accordion rows, vertical dividers, carousel arrows."
+    doNotUseWhen: "Primary actions (those are a solid orange fill, never a dotted outline)."
+
+  # 4e. Connected cards — the interlocking-metric motif (faithful to the live
+  #     caldera.xyz stat row, inspected 2026-06-07). The cards are CREAM (never
+  #     orange): a black-ink number + an orange CIRCULAR icon badge top-left.
+  #     Adjacent cards are JOINED by a CREAM "dog-bone" connector — identical fill
+  #     to the cards — that flares to full width where it meets each card and
+  #     pinches to a thin waist in the middle, where the grey halftone canvas
+  #     bites through (two radius-8 concave fillets + a ~5px centre sliver). The
+  #     connector is an SVG <path> copied verbatim from caldera.xyz.
+  connectedCards:
+    type: "layout"
+    cardFill: "canvasSurface"          # cards are cream — NOT the orange accent
+    numberColor: "abyssalInk"      # the big stat number is black ink
+    iconBadge: "orange circle, white glyph, top-left (64px)"
+    connectorFill: "canvasSurface"     # the bone is the same cream as the cards
+    connectorShape: "dog-bone SVG path (smooth radius-8 concave fillets, no centre rect — a square sliver protrudes); 16px wide in the gap, ~47% of card height; rotates 90° when cards stack"
+    bridgePx: 16
+    gapPx: 16
+    responsive: "bones PERSIST at every breakpoint (verified live) — row + vertical bones → 2×2 CENTRE CROSS-JUNCTION (vertical bones link the top+bottom pairs, horizontal bones link the left+right pairs) → single column + a horizontal bone between every stacked pair"
+    useWhen: "A tight row of closely-related metric / stat cards."
+    doNotUseWhen: "Unrelated cards; single cards; content cards with long copy. Never fill these cards orange — orange lives only in the icon badge."
+
+  # 4f. Interaction — the system's hover / active / focus / motion vocabulary.
+  #     Flat-consistent: depth comes from COLOR shifts + tiny translates, never
+  #     shadows. Timing/easing reference the motion.* tokens.
+  interaction:
+    type: "states"
+    transition: "duration.base (200ms) · easing.standard for color/border; duration.fast (120ms) for transform"
+    hover:
+      primary: "darken the orange ~14% toward ink"
+      ghost: "invert to a solid ink fill, label flips to canvas"
+      dotted: "border solidifies to orange + orange label"
+      navLink: "label turns orange"
+      card: "lift 3px (translateY) — never a shadow"
+      carouselArrow: "button fills orange, the ink arrow inverts to white"
+    active:
+      pressable: "translateY(1px) on :active"
+      card: "selected/active tile flips to a solid Digital Orange fill with white text"
+    focus:
+      rule: "keyboard :focus-visible shows the orange focus ring (shadow.focusRing); pill inputs thicken the border to 2px — no glow on mouse interaction"
+    reducedMotion: "honour prefers-reduced-motion: reduce — disable all transitions/animation"
+
   # 5. Pill gradient rotation — the CTA / badge button vocabulary.
   #    Brand-coloured skillPills/badge/banner templates (colours baked in).
   pillRotation:
@@ -471,10 +570,14 @@ signatures:
 # -----------------------------------------------------------------------------
 imagery:
   direction: >-
-    Functional and abstract. Large, bold, two-tone pixelated graphics in
-    Digital Orange and Cyber Violet as hero / module backgrounds. Product
-    screenshots and logos render as monochrome ink outlines or white fills
-    inside ash-white cards — let the UI be protagonist. Real assets over stock.
+    Functional and abstract, with a risograph print feel. The signature
+    treatment is a HALFTONE DOT GRADIENT — a two-stop ramp from Digital Orange
+    (#FC5000) to Cyber Violet (#524AE9) rendered as a field of dots whose radius
+    scales across the gradient, clipped to a 40px-rounded panel. Used for hero
+    panels and card thumbnails (see public/brand/halftone-*.svg). Product
+    screenshots and logos render as monochrome ink outlines or white fills inside
+    ash-white cards — let the UI be protagonist. Flat and printed, never glossy;
+    depth comes from surface color shifts, not shadows. Real assets over stock.
   approved:
     - "/public/brands/ (curated project + organization logos Chan controls)"
     - "/public/certificates/ (verified credential scans)"
@@ -485,13 +588,29 @@ imagery:
     - "Trophy / shields.io / wakatime / GitHub-streak badges (external decoration services)"
 
 # -----------------------------------------------------------------------------
+# ACCESSIBILITY — the contrast / interaction contract every generated surface
+# must honour. WCAG 2.2 Level AA. The key gotcha: Citra Orange #FC5000 only
+# clears AA against WHITE at LARGE sizes (3.3:1) — so small text on orange is
+# always INK (#070607 → 6:1), white is reserved for large/bold numbers.
+# -----------------------------------------------------------------------------
+accessibility:
+  standard: "WCAG 2.2 Level AA"
+  rules:
+    - "Body / small text must clear 4.5:1; large text (≥24px, or ≥18.66px bold) and UI/graphics must clear 3:1."
+    - "Small text on the Digital Orange fill is Abyssal Ink (#070607 on #FC5000 = 6.06:1). Pure White on orange is 3.34:1 — use it ONLY for large/bold stat numbers."
+    - "Small text on the Cyber Violet fill is Pure White (#FFFFFF on #524AE9 = 5.97:1); never ink (ink on violet is only 3.4:1)."
+    - "Digital Orange is NEVER a text colour on a light surface (≤2.7:1) — only a block fill, a rule, or an underline/border accent."
+    - "Keyboard focus is always visible via the orange focus ring (shadow.focusRing); state is never conveyed by colour alone (border-style, fill, and underline carry it too)."
+    - "Honour prefers-reduced-motion: reduce — disable transitions and animation."
+
+# -----------------------------------------------------------------------------
 # SURFACES — what each output surface inherits and what it overrides.
 # -----------------------------------------------------------------------------
 surfaces:
   readme:
     canvas: "GitHub renders white; the basalt canvas applies only to images we control"
     fontHint: "GitHub controls typography — semantic tokens here are advisory for img/SVG only"
-    signatures: ["heroBand", "monoDatestamp", "monogramDivider", "pillRotation"]
+    signatures: ["heroBand", "halftone", "monoDatestamp", "monogramDivider", "pillRotation"]
   cv:
     canvas: "canvasPage basalt grey (print-tuned, recruiter-safe)"
     fontFamilies: ["display", "bodySans", "mono"]   # Bebas name + DM Sans body
@@ -499,7 +618,7 @@ surfaces:
   webpage:
     canvas: "canvasPage basalt grey"
     fontFamilies: ["display", "bodySans", "mono"]
-    signatures: ["heroBand", "goldEyebrow", "monoDatestamp", "monogramDivider", "pillRotation"]
+    signatures: ["heroBand", "halftone", "goldEyebrow", "monoDatestamp", "monogramDivider", "pillRotation"]
   socialCard:
     canvas: "canvasPage basalt grey"
     fontFamilies: ["display", "bodySans"]

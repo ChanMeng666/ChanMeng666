@@ -55,6 +55,7 @@ Caldera palette: a muted basalt canvas, ash-white surfaces, near-black ink, and 
 | `ash-white` | `#F7F6F2` | Card / button surface |
 | `pure-white` | `#FFFFFF` | Text/icon on dark or orange fills |
 | `abyssal-ink` | `#070607` | Text, headings, strong borders |
+| `pure-black` | `#000000` | Icon strokes, densest border work |
 | `digital-orange` | `#FC5000` | Primary accent — buttons, feature cards, rules |
 | `cyber-violet` | `#524AE9` | Decorative background shapes ONLY |
 | `pixel-glare` | `#F5F28E` | Highlight overlay / graphic accent |
@@ -68,6 +69,7 @@ Caldera palette: a muted basalt canvas, ash-white surfaces, near-black ink, and 
 | `--color-surface-accent` | `digital-orange` | `#FC5000` | Feature / stat cards, button fill |
 | `--color-surface-decor` | `cyber-violet` | `#524AE9` | Decorative graphic blocks ONLY |
 | `--color-surface-glare` | `pixel-glare` | `#F5F28E` | Highlight overlay / graphic accent |
+| `--color-surface-tag` | `pixel-glare` | `#F5F28E` | Category-tag / chip background (Hazard Yellow) |
 | `--color-ink-primary` | `abyssal-ink` | `#070607` | Body text |
 | `--color-ink-strong` | `abyssal-ink` | `#070607` | Name, section headers |
 | `--color-ink-muted` | `abyssal-ink` | `#070607` | Secondary text, meta |
@@ -99,7 +101,7 @@ Two voices plus a mono house-extension. Display is ultra-bold compact (**Bebas N
 <!-- AUTO:typography-families -->
 | Family | Stack | Weights | Role |
 |---|---|---|---|
-| `--font-display` | Bebas Neue, Anton, Oswald, Impact, sans-serif | 400 | Display, headings, and stat numbers — ultra-bold compact, tight. |
+| `--font-display` | Anton, Oswald, Bebas Neue, Impact, sans-serif | 400 | Display, headings, and stat numbers — heavy MIXED-CASE compact grotesque, tight. The magazine-cover voice. |
 | `--font-body-sans` | DM Sans, Inter, Segoe UI, system-ui, sans-serif | 400, 500, 700 | Body, navigation, labels — DM Sans 500, the workhorse. |
 | `--font-mono` | JetBrains Mono, Consolas, ui-monospace, monospace | 400, 500 | Data signatures only — datestamps, paths, version numbers. House extension (Caldera has no mono). |
 <!-- /AUTO:typography-families -->
@@ -107,6 +109,8 @@ Two voices plus a mono house-extension. Display is ultra-bold compact (**Bebas N
 <!-- AUTO:typography-scale -->
 | Token | Web | Print | LH | Tracking | Weight | Family |
 |---|---|---|---|---|---|---|
+| `--text-display-xl-*` | 189px | 48pt | 0.94 | 0.02em | 400 | display |
+| `--text-display-lg-*` | 64px | 28pt | 0.95 | 0.02em | 400 | display |
 | `--text-display-*` | 96px | 32pt | 0.94 | 0.02em | 400 | display |
 | `--text-h-1-*` | 56px | 22pt | 0.94 | 0.02em | 400 | display |
 | `--text-h-2-*` | 32px | 12pt | 0.95 | 0.02em | 400 | display |
@@ -212,6 +216,9 @@ Web layout is a **1200 px contained** flow with a **40 px section rhythm** and a
 |---|---|
 | `--radius-none` | 0 |
 | `--radius-sm` | 8 |
+| `--radius-badge` | 16 |
+| `--radius-tag` | 20 |
+| `--radius-card-sm` | 24 |
 | `--radius-card` | 40 |
 | `--radius-default` | 40 |
 | `--radius-input` | 100 |

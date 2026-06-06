@@ -33,7 +33,7 @@
   text(
     weight: "bold",
     size: size-meta,
-    font: sans,          // DM Sans — Bebas is too cramped at 8pt; keep labels legible
+    font: sans,          // DM Sans — Anton is too cramped at 8pt; keep labels legible
     fill: primary,
     tracking: 0.06em,
     upper(category),
@@ -64,8 +64,8 @@
 #let section(title, body) = {
   v(space-section)
   text(
-    font: sans-display,    // Bebas Neue — compact ultrabold section headers
-    weight: "regular",     // Bebas is intrinsically bold; avoid faux-bold
+    font: sans-display,    // Anton — heavy compact-grotesque section headers
+    weight: "regular",     // Anton is intrinsically bold; avoid faux-bold
     size: size-h2,
     fill: primary,
     tracking: 0.08em,

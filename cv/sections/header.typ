@@ -41,7 +41,7 @@
       text(
         font: sans-display,
         size: size-h1,
-        weight: "regular",   // Bebas Neue is intrinsically ultra-bold; avoid faux-bold
+        weight: "regular",   // Anton is intrinsically ultra-bold; avoid faux-bold
         fill: primary,
         tracking: 0.02em,    // Caldera display tracking
       )[Chan Meng]

@@ -20,6 +20,11 @@
       "$type": "color",
       "$description": "Abyssal Ink — heading + body text, strong borders"
     },
+    "pure-black": {
+      "$value": "#000000",
+      "$type": "color",
+      "$description": "Pure Black — icon strokes, densest border work"
+    },
     "digital-orange": {
       "$value": "#fc5000",
       "$type": "color",
@@ -38,9 +43,9 @@
   },
   "font": {
     "display": {
-      "$value": "Bebas Neue",
+      "$value": "Anton",
       "$type": "fontFamily",
-      "$description": "Display, headings, and stat numbers — ultra-bold compact, tight."
+      "$description": "Display, headings, and stat numbers — heavy MIXED-CASE compact grotesque, tight. The magazine-cover voice."
     },
     "body-sans": {
       "$value": "DM Sans",
@@ -54,20 +59,42 @@
     }
   },
   "typography": {
+    "display-xl": {
+      "$value": {
+        "fontFamily": "Anton",
+        "fontSize": "189px",
+        "fontWeight": 400,
+        "lineHeight": 0.94,
+        "letterSpacing": "0.02em"
+      },
+      "$type": "typography",
+      "$description": "Magazine-cover hero headline (web only). Anton, full-width, mixed-case."
+    },
+    "display-lg": {
+      "$value": {
+        "fontFamily": "Anton",
+        "fontSize": "64px",
+        "fontWeight": 400,
+        "lineHeight": 0.95,
+        "letterSpacing": "0.02em"
+      },
+      "$type": "typography",
+      "$description": "Large section / sub-hero headline. Anton, mixed-case."
+    },
     "display": {
       "$value": {
-        "fontFamily": "Bebas Neue",
+        "fontFamily": "Anton",
         "fontSize": "96px",
         "fontWeight": 400,
         "lineHeight": 0.94,
         "letterSpacing": "0.02em"
       },
       "$type": "typography",
-      "$description": "Hero / page name. Bebas Neue compact ultrabold."
+      "$description": "Hero / page name. Anton compact ultrabold, mixed-case."
     },
     "h-1": {
       "$value": {
-        "fontFamily": "Bebas Neue",
+        "fontFamily": "Anton",
         "fontSize": "56px",
         "fontWeight": 400,
         "lineHeight": 0.94,
@@ -78,7 +105,7 @@
     },
     "h-2": {
       "$value": {
-        "fontFamily": "Bebas Neue",
+        "fontFamily": "Anton",
         "fontSize": "32px",
         "fontWeight": 400,
         "lineHeight": 0.95,
@@ -232,6 +259,21 @@
       "$type": "dimension",
       "$description": "Border radius sm"
     },
+    "badge": {
+      "$value": "16px",
+      "$type": "dimension",
+      "$description": "Border radius badge"
+    },
+    "tag": {
+      "$value": "20px",
+      "$type": "dimension",
+      "$description": "Border radius tag"
+    },
+    "card-sm": {
+      "$value": "24px",
+      "$type": "dimension",
+      "$description": "Border radius card-sm"
+    },
     "card": {
       "$value": "40px",
       "$type": "dimension",
@@ -274,8 +316,8 @@
     "org.chanmeng.brand": {
       "source": "data/brand.yaml",
       "reference": "Caldera — Pixelated Cyber-Playground",
-      "version": "2.0.0",
-      "generatedAt": "2026-06-03"
+      "version": "2.1.1",
+      "generatedAt": "2026-06-07"
     }
   }
 }

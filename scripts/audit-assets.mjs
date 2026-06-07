@@ -21,13 +21,12 @@ const brand = fs.existsSync(brandPath)
   ? yaml.load(fs.readFileSync(brandPath, "utf8"))
   : null;
 
-// Files that are intentionally used outside the README pipeline (e.g. GitHub
-// repo Settings → Social Preview consumes /public/github-cover-image.svg via
-// the GitHub UI, not via README content). Treat as referenced so they don't
-// surface as orphans.
-const EXTERNAL_REFERENCES = new Set([
-  "/public/github-cover-image.svg",
-]);
+// Files that are intentionally used outside the README pipeline. Add a path
+// here only for assets referenced OUTSIDE the rendered README — e.g. a GitHub
+// repo Settings → Social Preview image consumed via the GitHub UI. (The animated
+// hero public/github-cover.svg is embedded in the README, so the rendered-README
+// scan below already covers it.)
+const EXTERNAL_REFERENCES = new Set([]);
 
 const referenced = new Set(EXTERNAL_REFERENCES);
 

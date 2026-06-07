@@ -4,7 +4,9 @@
      + proof line → personal sea photo with caption → mini visitor counter.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-{{> banner decorations.banners.hero}}
+<p align="center">
+  <img src="/public/github-cover.svg" width="100%" alt="{{basics.name}} — {{basics.label}} · « Subtraction for life, addition for thought. »">
+</p>
 
 <a href="{{basics.url}}"><img src="{{basics.image}}" align="right" width="160" alt="{{basics.name}} — {{basics.label}} · {{default basics.location.region "Auckland, New Zealand"}}"></a>
 
@@ -22,7 +24,7 @@
 {{#each _primaryBadges}}{{#if (eq network "Portfolio")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Portfolio&template={{@root.decorations.buttons.badgePortfolio.template}}{{pillParams @root.decorations.buttons.badgePortfolio}}&height={{@root.decorations.buttons.badgePortfolio.height}}&duration={{@root.decorations.buttons.badgePortfolio.duration}}" alt="Portfolio"></a>{{/if}}{{#if (eq network "LinkedIn")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=LinkedIn&template={{@root.decorations.buttons.badgeLinkedin.template}}{{pillParams @root.decorations.buttons.badgeLinkedin}}&height={{@root.decorations.buttons.badgeLinkedin.height}}&duration={{@root.decorations.buttons.badgeLinkedin.duration}}" alt="LinkedIn"></a>{{/if}}{{#if (eq network "Email")}}<a href="{{url}}"><img src="https://gradient-svg-generator.vercel.app/api/svg?text=Email&template={{@root.decorations.buttons.badgeEmail.template}}{{pillParams @root.decorations.buttons.badgeEmail}}&height={{@root.decorations.buttons.badgeEmail.height}}&duration={{@root.decorations.buttons.badgeEmail.duration}}" alt="Email"></a>{{/if}}{{#unless @last}} {{/unless}}{{/each}}
 </p>
 
-<sub><em>↑ Banner & pills made with my open-source <a href="https://gradient-svg-generator.vercel.app/">gradient-svg-generator</a> — try it on your own README.</em></sub>
+<sub><em>↑ Animated cover built with my open-source <a href="https://github.com/ChanMeng666/svg-animation-studio">svg-animation-studio</a> · pills with my <a href="https://gradient-svg-generator.vercel.app/">gradient-svg-generator</a> — both yours to try.</em></sub>
 
 <br clear="all">
 

@@ -14,50 +14,56 @@
   *,*::before,*::after{ box-sizing:border-box; }
   html,body{ margin:0; padding:0; background:#aaa; font-family:'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
 
+  /* Flat basalt ground — clean, lets the color-block composition pop. */
   .cover{
     width:1584px; height:396px; position:relative;
     background:var(--basalt); overflow:hidden;
   }
 
-  /* ── Text block — kept in the upper/centre-left, clear of the bottom-left
-        zone where LinkedIn overlays the round profile photo on desktop. ── */
+  /* ── Text — upper/centre-left, clear of the bottom-left zone where LinkedIn
+        overlays the round profile photo on desktop. ── */
   .eyebrow{
-    position:absolute; left:96px; top:84px;
+    position:absolute; left:96px; top:72px;
     font-weight:600; font-size:19px; letter-spacing:0.16em; text-transform:uppercase;
     color:var(--ink); display:flex; align-items:center; gap:12px;
   }
   .eyebrow .dot{ width:13px; height:13px; background:var(--orange); display:inline-block; }
 
   .name{
-    position:absolute; left:92px; top:118px;
+    position:absolute; left:92px; top:106px;
     font-family:'Anton',sans-serif; font-weight:400; font-size:132px;
     line-height:0.88; letter-spacing:0.02em; color:var(--ink);
   }
 
-  /* ── Single signature line — set in the lower-centre band, well clear of the
-        round profile avatar that LinkedIn overlays on the bottom-left. ── */
+  /* ── Tagline + contact — lower-centre band, well clear of the avatar. ── */
   .signature{
-    position:absolute; left:500px; top:300px; white-space:nowrap;
+    position:absolute; left:430px; top:270px; white-space:nowrap;
     display:flex; align-items:center; gap:18px;
   }
   .signature .mark{ width:30px; height:6px; background:var(--orange); flex:none; }
   .signature .text{
-    font-style:italic; font-weight:400; font-size:23px; letter-spacing:0.005em;
-    color:var(--ink);
+    font-style:italic; font-weight:400; font-size:23px; letter-spacing:0.005em; color:var(--ink);
   }
+  .contact{
+    position:absolute; left:430px; top:324px;
+    display:flex; align-items:center; gap:36px;
+    font-weight:500; font-size:21px; letter-spacing:0.005em; color:var(--ink);
+  }
+  .contact span{ display:flex; align-items:center; gap:11px; }
+  .contact .ic{ width:12px; height:12px; background:var(--orange); flex:none; }
 
-  /* ── Right-side color-block composition — flat squares + logo lockup. ── */
+  /* ── Right-side color-block composition — flat squares + monkey lockup. ── */
   .block{ position:absolute; }
   .b-violet{ left:1126px; top:60px;  width:86px;  height:86px;  background:var(--violet); }
   .b-ink{    left:1202px; top:80px;  width:244px; height:244px; background:var(--ink); }
   .b-orange{ left:1402px; top:236px; width:132px; height:132px; background:var(--orange); }
   .b-glare{  left:1170px; top:300px; width:62px;  height:62px;  background:var(--glare); }
 
+  /* Monkey mark on the ink block — invert flips the black art to white; the
+     screen blend drops the SVG's white background square cleanly into the ink. */
   .logo{
     position:absolute; left:1238px; top:116px; width:172px; height:172px;
-    /* black monkey SVG → white on the ink block */
-    filter:invert(1) brightness(2.2);
-    z-index:2;
+    filter:invert(1); mix-blend-mode:screen; z-index:2;
   }
 
   /* Scattered pixel accents — the cyber-playground signature. */
@@ -76,6 +82,10 @@
   <div class="signature">
     <span class="mark"></span>
     <span class="text">Subtraction for life, addition for thought.</span>
+  </div>
+  <div class="contact">
+    <span><span class="ic"></span>chanmeng.career@gmail.com</span>
+    <span><span class="ic"></span>chanmeng.org</span>
   </div>
 
   <!-- right composition -->

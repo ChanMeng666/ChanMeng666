@@ -14,18 +14,19 @@
   *,*::before,*::after{ box-sizing:border-box; }
   html,body{ margin:0; padding:0; background:#aaa; font-family:'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
 
+  /* Flat basalt ground — clean split with a bold accent panel on the right. */
   .fcard{
     width:1200px; height:628px; position:relative;
     background:var(--basalt); overflow:hidden; margin-bottom:22px;
   }
 
-  /* ── Right accent panel (color block) holding a big white glyph. ── */
+  /* ── Right accent panel (solid color block) holding a big white glyph. ── */
   .panel{ position:absolute; right:0; top:0; width:452px; height:628px; }
   .panel svg{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); }
   /* Pixel accents inside the panel — cyber-playground texture. */
   .panel .px{ position:absolute; width:22px; height:22px; opacity:0.9; }
 
-  /* ── Left content — eyebrow + big action label only, vertically centred. ── */
+  /* ── Left content — eyebrow + big action label, vertically centred. ── */
   .eyebrow{
     position:absolute; left:88px; top:226px;
     font-weight:600; font-size:22px; letter-spacing:0.18em; text-transform:uppercase;

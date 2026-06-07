@@ -46,9 +46,9 @@
 
   v(4pt)
   block(above: 0pt, below: 0pt, {
-    set par(leading: 0.78em, justify: false)
+    set par(leading: 0.7em, justify: false)
     text(size: size-tiny, fill: muted, style: "italic")[
-      *Previously:* *CTO at #link("https://www.ibm.com/partnerplus/directory/company/9542")[Sanicle]* (prev. Senior AI/ML Infrastructure Engineer) — earned the company its *IBM Silver Partner* certification through a solo build (350+ commits) · *#link("https://www.bytedance.com/en/")[ByteDance] Full-Stack Engineer* on the Douyin Mall capstone (Spring Boot 3 + solo Vue 3, #2 of 8 contributors) · *React Native full-stack mobile dev at #link("https://corde.nz/")[CORDE Christchurch]* · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (7 of 18 LinkedIn recs from this cohort) · *#link("https://www.copilotkit.ai/")[CopilotKit]* OSS contributor (2 merged PRs, 24.6k★).
+      *Previously:* *CTO at #link("https://www.ibm.com/partnerplus/directory/company/9542")[Sanicle]* (prev. Senior AI/ML Infrastructure Engineer) — earned the company its *IBM Silver Partner* certification through a solo build (350+ commits) · *#link("https://www.bytedance.com/en/")[ByteDance] Full-Stack Engineer* on the Douyin Mall capstone (Spring Boot 3 + solo Vue 3, #2 of 8 contributors) · *React Native full-stack mobile dev at #link("https://corde.nz/")[CORDE Christchurch]* · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (7 of 18 LinkedIn recs from this cohort).
     ]
   })
 })

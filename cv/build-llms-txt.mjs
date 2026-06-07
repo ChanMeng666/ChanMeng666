@@ -52,6 +52,18 @@ W("- Domains of focus: women's health, cultural technology, early-stage startup 
 W("- On Anthropic Partner Network architect track via Engram — Claude Certified Architect — Foundations curriculum.");
 W("- Senior AI programming mentor · orchestrator of agents.");
 
+// Verified reach metrics with per-stat source URLs — the "statistics with
+// citations" GEO tactic (highest-impact signal per docs/GEO-STRATEGY.md).
+// Rendered from data/profile.yaml::basics.reach so it never drifts.
+if (b.reach?.metrics?.length) {
+  sect(`Reach & social proof (verified ${b.reach.asOf ?? ""})`.trim());
+  for (const m of b.reach.metrics) {
+    const note = m.note ? ` — ${m.note}` : "";
+    const src = m.source ? ` · ${m.source}` : "";
+    W(`- ${m.value} ${m.label}${note}${src}`);
+  }
+}
+
 sect("Claude Code stack (canonical 5-layer vocabulary)");
 W("- CLAUDE.md");
 W("- MCP servers");
@@ -151,7 +163,7 @@ const roles = [
   ["Founding Principal Engineer (Activation, Execution & AI Systems)", "Gavigo", "Oct 2025 — Present", "Promoted Core Engineer → Founding Principal Engineer across three contract iterations · owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install) · p50 < 1 ms · 84.6% warm-pool hit rate · cross-cloud DigitalOcean → GCP GKE migration in 30-minute zero-downtime cutover · 98% solo on 353 commits."],
   ["Senior Full-Stack Engineer & Website Team Lead", "She Sharp", "Jul 2025 — Present", "Recruited by founder Dr Mahsa Mohaghegh to rebuild NZ's leading women-in-STEM platform (2,200+ registered members, 8,000+ women supported lifetime) · Webflow → Next.js cutover 86.6% solo across 10 months with zero broken inbound links · AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top."],
   ["Chief Technology Officer", "FemTech Weekend", "Mar 2025 — Present", "Sole technical lead for China's first FemTech organisation since its inaugural conference — Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite · operates the 2026 Shanghai Summit (16 confirmed speakers including FemTech-term originator Ida Tin)."],
-  ["Open Source Contributor", "CopilotKit (24.6k★)", "Jun 2025 — Present", "2 merged PRs · 8-agent FemTracker demo + Claude Code MCP setup guide"],
+  ["Open Source Contributor", "CopilotKit (24.6k stars)", "Jun 2025 — Present", "2 merged PRs · 8-agent FemTracker demo + Claude Code MCP setup guide"],
   ["CTO (prev. Senior AI/ML Infrastructure Engineer)", "Sanicle", "Mar 2025 — Feb 2026", "earned the company its IBM Silver Partner certification through a solo build (350+ commits) · OpenAI + pgvector"],
   ["Full-Stack Engineer (Douyin Mall capstone)", "ByteDance", "—", "Spring Boot 3 + solo Vue 3 build · #2 of 8 contributors"],
 ];

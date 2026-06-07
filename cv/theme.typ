@@ -25,6 +25,7 @@
 #let pill-edge = edge-pill          // abyssal ink — skill pill / ghost border
 #let quote-bg  = surface-quote      // ash white — pull-quote background
 #let on-accent = on-accent          // pure white — text on a single orange chip
+#let glare     = raw-pixel-glare    // Hazard-Yellow — restrained highlight (ink-on-yellow only)
 
 // ─── Typography (back-compat aliases) ───────────────────────────────────────
 #let sans-display = font-display    // Anton — NAME + section headers
@@ -49,24 +50,35 @@
 #let col-side = golden-side
 #let col-gutter = golden-gutter
 
-// ─── Print radii — deliberately small. Do NOT inherit the 800px web pill. ───
-#let cv-radius-pill = 4pt      // skill pills stay subtle on the page
-#let cv-radius-card = 6pt
+// ─── Print radii — friendly but restrained. Do NOT inherit the 800px web pill;
+//     bumped a touch in the v2.1 polish so pills/cards read as the brand's
+//     rounded geometry without ballooning on a dense page. ───
+#let cv-radius-pill = 6pt      // skill pills — gently rounded
+#let cv-radius-card = 9pt      // quote / callout cards
 
 // ─── Spacing scale (print-tuned, CV-specific) ───────────────────────────────
-// Tightened in the v2 Caldera pass so the whole CV settles into TWO pages while
-// keeping airy human-readable leading inside paragraphs (density comes out of
-// the inter-section / inter-entry gaps, not the line-height).
-#let space-section    = 8pt    // above each section-header
-#let space-after-rule = 5pt    // between section accent rule and first content
-#let space-entry      = 10pt   // between entries within a section
+// v2.1.2 readability pass: the scale is built on a clear THREE-TIER rhythm so a
+// human reader's eye instantly parses structure —
+//   section gap (12pt)  ≫  inter-entry gap (12pt)  >  intra-entry gap (5pt)  >  line leading
+// Density is bought back from the intra-entry gaps (tight, so a title binds to
+// its own body) and spent on the section / inter-entry gaps (generous, so the
+// blocks separate cleanly). Net height is ~neutral but the hierarchy reads far
+// more clearly than the old flat, evenly-packed rhythm.
+#let space-section    = 9pt    // above each section-header — top structural cue
+#let space-after-rule = 6pt    // between section accent rule and first content — a little air
+#let space-entry      = 11pt   // between entries within a section
 #let space-pill-row   = 3pt    // horizontal pill gap
-#let leading-body     = 0.78em // base paragraph leading — airy for human readers
-#let leading-summary  = 0.85em // summary blocks inside role/project entries
-#let leading-tight    = 0.65em // for compact lists (sidebar pills, certs)
+#let leading-body     = 0.82em // base paragraph leading — airy for human readers
+#let leading-summary  = 0.88em // summary blocks inside role/project entries
+#let leading-tight    = 0.68em // for compact lists (sidebar pills, certs)
 
 // ─── Inter / intra entry gaps (named so designers can find them) ────────────
-#let gap-inter-entry  = 9pt    // between consecutive role-lines / experience entries
+// Three-tier rhythm INSIDE Experience so a job reads as one airy unit and jobs
+// separate cleanly: title→org (≈4pt, see role-line) < org→summary (intra 7pt) ≪
+// between-jobs (inter 16pt). The intra gap is deliberately NON-tiny — the three
+// lines of one job are distinct paragraphs and need to breathe — while inter is
+// well over 2× intra so the eye never binds a title to the job above.
+#let gap-inter-entry  = 13pt   // between consecutive role-lines / experience entries (≈2× intra)
 #let gap-intra-entry  = 7pt    // between meta line (org/dates) and summary inside one entry
-#let gap-card-meta    = 6pt    // project-card: between title row and italic context line
-#let gap-card-body    = 5pt    // project-card: between italic context line and bullets
+#let gap-card-meta    = 4pt    // project-card: between title row and italic context line
+#let gap-card-body    = 3pt    // project-card: between italic context line and bullets

@@ -6,7 +6,7 @@
 // and Selected Projects respectively.
 #let introduction() = section("Introduction", {
   set text(size: size-body, fill: ink)
-  set par(leading: 0.78em, justify: true)
+  set par(leading: 0.82em, justify: true)
   [
     Builds production AI systems used by real teams every day — handling paying customers, sensitive data, and regulated workflows, not demos. Focus areas: *women's health, cultural technology, and early-stage startup infrastructure*. Daily-driver of the same *Claude Agent SDK, MCP, and agent-skills* stack used inside Anthropic's Partner Network — already shipping these as open-source reference implementations.
   ]
@@ -75,12 +75,14 @@
   }
 
   // ── Italic closer line — absorbs all other open-source tools so each ────
-  //    project appears exactly once across the entire CV.
-  v(8pt)
+  //    project appears exactly once across the entire CV. A clear gap (≈ the
+  //    inter-card rhythm) separates it from the last project card above so it
+  //    doesn't read as part of the Google News MCP entry.
+  v(12pt)
   block(
     {
       set text(size: size-tiny, fill: muted, style: "italic")
-      set par(leading: leading-body, justify: true)
+      set par(leading: 0.68em, justify: true)
       [
         *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (solo 9-day commercial event platform for Chow Luck Club × Tātaki Auckland Unlimited / Auckland Council) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (340+ animated-SVG templates, 273 solo commits) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (official Typst skill for Claude Code — typesets this CV) · #link("https://sunostats.chanmeng.org/")[SunoStats] (industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese) · #link("https://fanfic-lab.tech/")[FanFic Lab] (7-node LangGraph agent).
       ]

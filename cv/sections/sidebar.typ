@@ -18,14 +18,14 @@
 // one concrete signal.
 #let what-i-bring() = section("What I Bring to a Team", {
   set text(size: size-meta, fill: ink)
-  // Within-bullet leading is tight; between-bullet spacing is ~2.2× wider so
-  // the eye binds each bullet as a single unit.
-  set par(leading: 0.7em)
+  // Within-bullet leading is tight; between-bullet spacing ~2× wider so the eye
+  // binds each bullet as a single unit and the list still breathes.
+  set par(leading: 0.72em)
   set list(
     marker: text(fill: accent)[•],
-    spacing: 10pt,
+    spacing: 9pt,
     indent: 0pt,
-    body-indent: 6pt,
+    body-indent: 7pt,
   )
   list.item[
     *Ship production AI agents that don't fall over.* Multi-agent systems with hard guardrails enforced in code — not just prompts — for compliance and financial steps.
@@ -133,10 +133,13 @@
   ))
   skill-category("App frameworks", (
     "Next.js 16",
+    "React",
     "Vue 3",
     "Spring Boot 3",
     "FastAPI",
+    "TailwindCSS",
     "Drizzle ORM",
+    "Zod",
   ))
   // Vercel + Stripe removed (brand names, not engineering depth). Docker
   // + Traefik comes from the Vitex production VPS stack (Railway →
@@ -147,8 +150,11 @@
     "Kubernetes GKE",
     "Cloudflare Workers + Vectorize",
     "Neon Postgres + pgvector",
+    "Supabase",
     "Docker + Traefik",
     "Redis",
+    "Stripe",
+    "NextAuth",
   ))
   skill-category("Languages", (
     "TypeScript",
@@ -169,22 +175,32 @@
   cert-group("Other AI / Cloud", (
     [*Google AI Essentials · Microsoft Azure AI Essentials · Generative AI Career Skills · Wolfram Machine Learning Foundations · GitHub Professional · Docker Professional · Microsoft Software Development* (Dec 2024 — Aug 2025)],
   ))
+  // Engineering breadth — verified skill certifications (50+ total across issuers,
+  // mostly Dec 2024). Surfaces the depth behind the headline AI/Cloud credentials.
+  cert-group("Engineering & platforms (50+ total)", (
+    [*HackerRank Software Engineer* + 22 skill certifications — *SQL (Advanced)* · Problem Solving · Go · Node.js · React · Angular],
+    [*Microsoft* (Azure · System Administration · Project Management) · *C++ Institute* · *Anaconda Python* · *Atlassian Agile* · *Mozilla*],
+  ))
 })
 
 // ─── 6. Recognition + reference quotes ───────────────────────────────────────
 #let recognition-and-reference() = section("Recognition", {
   set text(size: size-tiny, fill: ink)
-  // Tight within-bullet (4.55pt baseline gap); ~2× wider between bullets.
-  set par(leading: 0.65em)
+  // Tight within-bullet leading; ~2.5× wider between bullets so each recognition
+  // reads as its own airy line.
+  set par(leading: 0.7em)
   set list(
     marker: text(fill: accent, size: 5.5pt)[•],
     spacing: 9pt,
     indent: 0pt,
-    body-indent: 5pt,
+    body-indent: 6pt,
   )
   list.item[*UN CSW 69 Speaker* — UN HQ NYC, Mar 2025 · attracted *IBM pilot interest* and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
   list.item[*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors · guided 11 teams / 80+ participants.]
-  list.item[*FemTech Excellence Award* — FemTech China (Dec 2024) · *UN Women FemTech Hackathon Outstanding Performer* — FemTech Weekend (Beijing, Mar 2025).]
+  // FemTech China and FemTech Weekend are TWO DISTINCT organisations — separate
+  // events, separate awards. Never combine them. (See data/profile.yaml awards[].)
+  list.item[*Excellence Award* — FemTech China (Women's Health Technology Challenge, Dec 2024).]
+  list.item[*UN Women FemTech Hackathon — Outstanding Performer* — FemTech Weekend, Beijing (Mar 2025).]
 })
 
 // ─── 7. Endorsements — removed ──────────────────────────────────────────────

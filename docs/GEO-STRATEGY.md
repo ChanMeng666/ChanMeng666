@@ -69,7 +69,7 @@ The README's footer and JSON-LD point to chanmeng.org as the canonical entity UR
 ## What we do NOT implement
 
 - **Hidden text or cloaking.** All visible content is real human-readable content. The JSON-LD is hidden from visual display but is honest metadata, not deceptive content. No spammy SEO tricks.
-- **Auto-import from external sources.** GitHub stars/forks render as dynamic badges, never written into `profile.yaml`. The user is the sole input source. This preserves the integrity of `dist/profile.json` as a hand-curated record.
+- **Auto-import from external sources.** Live GitHub stars/forks render as dynamic badges in the README, never auto-scraped into `profile.yaml`. The user is the sole input source. This preserves the integrity of `dist/profile.json` as a hand-curated record. *(Exception: `basics.reach` holds a small, manually-verified point-in-time **snapshot** — e.g. "451 GitHub stars as of 2026-06" — each entry carrying its own `source` URL and `asOf` date. This is a curated record refreshed by hand, not an auto-import, and is what feeds the "statistics-with-citations" prose in `cv-llms.txt`.)*
 - **GitHub Pages for this repo.** chanmeng.org is the canonical Google-visible entity URL. Adding a second canonical surface would risk entity duplication; better to centralize the public HTML surface on one domain.
 
 ## How to measure

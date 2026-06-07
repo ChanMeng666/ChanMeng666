@@ -61,22 +61,24 @@
       )[« Subtraction for life, addition for thought. »]
       linebreak()
       v(4pt)
-      // ── Social-proof stat row — reach metrics as eye-catching pills ──────
+      // ── Social-proof stat row — the six metrics merged into FOUR source-
+      //    grouped pills (LinkedIn · Newsletter · GitHub · CopilotKit) so the
+      //    header reads concise; every number is preserved + bold-accented. ──
+      stat-pill-multi[#snum[5,594] LinkedIn followers · #snum[18] recommendations]
+      h(space-pill-row)
       stat-pill("1,103", "newsletter subscribers")
       h(space-pill-row)
-      stat-pill("5,594", "LinkedIn followers")
+      stat-pill-multi[#snum[451] GitHub stars · #snum[210] followers]
       h(space-pill-row)
-      stat-pill("18", "LinkedIn recommendations")
-      h(space-pill-row)
-      stat-pill("210", "GitHub followers")
+      stat-pill-multi[CopilotKit contributor · #snum[2] merged PRs · #snum[24.6k] stars]
     },
 
     // ── Contact items (stacked, LEFT-aligned within the right slot) ────────
     {
       set text(size: size-tiny, fill: ink)
       set par(leading: 0.85em)
-      contact-line("mail", "chanmeng.dev\u{0040}gmail.com",
-        target: "mailto:chanmeng.dev@gmail.com")
+      contact-line("mail", "chanmeng.career\u{0040}gmail.com",
+        target: "mailto:chanmeng.career@gmail.com")
       linebreak()
       contact-line("phone", "+64 028 8510 9245",
         target: "tel:+6402885109245")
@@ -98,6 +100,14 @@
   )
 
   v(10pt)
-  line(stroke: 1.8pt + accent, length: 100%)
+  // Header rule mirrors the section motif: a short orange color-block lead + an
+  // ink structural hairline (the accent is a BLOCK, the ink is the RULE).
+  grid(
+    columns: (46pt, 1fr),
+    column-gutter: 7pt,
+    align: (left + horizon, left + horizon),
+    line(stroke: 2.6pt + accent, length: 100%),            // orange lead block
+    line(stroke: 0.7pt + rule.lighten(15%), length: 100%), // ink structural hairline
+  )
   v(8pt)
 }

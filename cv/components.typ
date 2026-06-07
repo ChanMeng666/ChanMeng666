@@ -28,6 +28,37 @@
   },
 )
 
+// ─── Highlight stat pill (Hazard-Yellow fill, ink text) ──────────────────────
+// One restrained use of the brand's Pixel-Glare yellow as a "highlighter" on the
+// single most important metric. Ink-on-yellow is high-contrast (AA-safe); yellow
+// is a decorative FILL here, never a text color.
+#let stat-pill-hl(value, label) = box(
+  fill: glare,
+  stroke: 0.6pt + ink,
+  radius: cv-radius-pill,
+  inset: (x: 5.5pt, y: 2pt),
+  outset: (y: 0.4pt),
+  {
+    text(size: size-pill, weight: "bold", fill: ink)[#value]
+    text(size: size-pill, fill: ink)[ #label]
+  },
+)
+
+// ─── Grouped stat pill (several metrics from ONE source in a single pill) ─────
+// Lets the header read as a few SOURCE-grouped tags (LinkedIn · Newsletter ·
+// GitHub · CopilotKit) instead of many single-metric tags — fewer, more refined
+// pills with the same information. `snum()` marks each number bold-accent inside
+// the otherwise-muted body; separate metrics with " · ".
+#let snum(value) = text(weight: "bold", fill: accent)[#value]
+#let stat-pill-multi(body) = box(
+  fill: pill-bg,
+  stroke: 0.6pt + accent,
+  radius: cv-radius-pill,
+  inset: (x: 5.5pt, y: 2pt),
+  outset: (y: 0.4pt),
+  text(size: size-pill, fill: muted, body),
+)
+
 // ─── Skill / tooling category (bold label + wrapped pills) ───────────────────
 #let skill-category(category, items) = {
   text(
@@ -38,12 +69,18 @@
     tracking: 0.06em,
     upper(category),
   )
-  v(3pt)
-  for (i, it) in items.enumerate() {
-    pill(it)
-    if i < items.len() - 1 { h(space-pill-row) }
-  }
-  v(3.5pt)
+  v(4pt)
+  // Tags WITHIN a category cluster tightly (small wrapped-row leading + small
+  // horizontal gap) so the group reads as one unit; the big gap is RESERVED for
+  // BETWEEN categories (v(11pt) below) — that contrast is the section's rhythm.
+  block(above: 0pt, below: 0pt, {
+    set par(leading: 0.8em, justify: false)
+    for (i, it) in items.enumerate() {
+      pill(it)
+      if i < items.len() - 1 { h(space-pill-row) }
+    }
+  })
+  v(10pt)   // clear gap to the next category label — the in-section rhythm cue
 }
 
 // ─── Inline italic label (e.g. for the architect-grade paragraph header) ────
@@ -68,10 +105,10 @@
     weight: "regular",     // Anton is intrinsically bold; avoid faux-bold
     size: size-h2,
     fill: primary,
-    tracking: 0.08em,
-    upper(title),
+    tracking: 0.03em,      // MIXED-case (brand voice) — relaxed tracking, not all-caps
+    title,
   )
-  v(3pt)
+  v(3.5pt)
   grid(
     columns: (34pt, 1fr),
     align: (left + horizon, left + horizon),
@@ -83,19 +120,19 @@
 }
 
 // ─── Accent divider between entries ──────────────────────────────────────────
-// A short, left-aligned orange tab — the Caldera color-block motif, sized down
-// for the page. Lighter footprint than a full-width rule and more distinctive
-// than the old washed-out pale line.
+// A short, left-aligned DOTTED orange tab — the Caldera dotted-edge motif, sized
+// down for the page. Lighter footprint than a full-width rule and ties the CV to
+// the brand's dotted secondary affordance.
 #let cv-divider() = {
-  v(6pt)
-  line(stroke: 2pt + accent, length: 22pt)
-  v(6pt)
+  v(5pt)
+  line(stroke: (paint: accent, thickness: 2pt, dash: "dotted"), length: 30pt)
+  v(5pt)
 }
 
 // ─── Tight divider (for experience list — many entries) ─────────────────────
 #let cv-divider-tight() = {
   v(5pt)
-  line(stroke: 2pt + accent, length: 22pt)
+  line(stroke: (paint: accent, thickness: 2pt, dash: "dotted"), length: 30pt)
   v(5pt)
 }
 
@@ -175,14 +212,14 @@
           })
           v(gap-card-body)
         }
-        // Bullets — solid dot. Within-bullet leading 0.7em (6.3pt at 9pt
-        // text); between-bullets 11pt (~1.75×) so each bullet reads as a
-        // distinct paragraph, not a continuation of the line above.
+        // Bullets — solid orange dot. Within-bullet leading 0.74em; between
+        // bullets 11pt (~2×) so each bullet reads as a distinct paragraph with
+        // air around it, not a continuation of the line above.
         set text(size: size-body, fill: ink)
         set par(leading: 0.7em)
         set list(
           marker: text(fill: accent)[•],
-          spacing: 9pt,
+          spacing: 7.5pt,
           indent: 0pt,
           body-indent: 6pt,
         )
@@ -215,8 +252,9 @@
   breakable: false,
   {
     // ── Line 1: Title (own block so `below` is real — linebreak + v(weak)
-    //           was being collapsed inside a single paragraph) ─────────────
-    block(above: 0pt, below: 5pt, breakable: false, {
+    //           was being collapsed inside a single paragraph). A small gap to
+    //           its org·dates subtitle — distinct lines, not crammed. ───────
+    block(above: 0pt, below: 4pt, breakable: false, {
       text(weight: "bold", size: 9.5pt, fill: ink, title)
     })
 
@@ -247,12 +285,13 @@
   location: "",
   note: "",
 ) = block(above: 0pt, below: 0pt, {
-  // Title — own block so `below` actually renders
-  block(above: 0pt, below: 4pt, breakable: false, {
+  // Title — own block so `below` actually renders. Stacked lines breathe so
+  // title / org·location / dates / note each read as a distinct line.
+  block(above: 0pt, below: 5pt, breakable: false, {
     text(weight: "bold", size: 9.5pt, fill: ink, title)
   })
   // Org · Location — italic
-  block(above: 0pt, below: 2pt, breakable: false, {
+  block(above: 0pt, below: 3pt, breakable: false, {
     set text(style: "italic", size: size-meta, fill: primary)
     if org-url != "" { link(org-url, org) } else { org }
     if location != "" {
@@ -261,7 +300,7 @@
     }
   })
   // Dates — muted
-  block(above: 0pt, below: 3pt, breakable: false, {
+  block(above: 0pt, below: 4pt, breakable: false, {
     text(size: size-tiny, fill: muted, dates)
   })
   if note != "" {
@@ -274,20 +313,21 @@
 // ─── Cert / award group ──────────────────────────────────────────────────────
 #let cert-group(group, items) = {
   text(weight: "bold", size: size-meta, fill: primary, group)
-  v(3pt)
+  v(3.5pt)
   set text(size: size-tiny, fill: ink)
-  // Within-item leading 0.65em (4.55pt at 7pt text); between-items 9pt (~2×).
-  set par(leading: 0.65em)
+  // Within-item leading 0.7em; between-items 10pt so each grouped item reads as
+  // a distinct, airy unit.
+  set par(leading: 0.7em)
   set list(
     marker: text(fill: accent, size: 5.5pt)[•],
-    spacing: 9pt,
+    spacing: 10pt,
     indent: 0pt,
-    body-indent: 5pt,
+    body-indent: 6pt,
   )
   for it in items {
     list.item(it)
   }
-  v(6pt)
+  v(4pt)
 }
 
 // ─── Bullet list inside an entry (consistent style) ─────────────────────────

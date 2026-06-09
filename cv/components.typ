@@ -234,6 +234,8 @@
 // ─── Compact 3-line role entry (experience list) ───────────────────────────
 //   Line 1:  Title              ← bold, ink (visual anchor)
 //   Line 2:  Org · Dates        ← italic primary + muted dates (subline, bound to title)
+//   Line 2b: Location · Mode    ← optional muted italic line (city/state/country +
+//                                 *bolded* remote/hybrid) — international + remote signal
 //   v(2.5pt)
 //   Line 3+: Summary (wraps)    ← size-tiny ink
 //   below: 9pt                  ← clear inter-entry gap (≫ intra-entry gap)
@@ -245,6 +247,7 @@
   org: "",
   org-url: "",
   dates: "",
+  location: none,
   summary: none,
 ) = block(
   above: 0pt,
@@ -265,6 +268,17 @@
       text(fill: muted, style: "italic")[ · ]
       text(size: size-tiny, fill: muted, dates)
     })
+
+    // ── Line 2b: Location · arrangement (optional, tight to the org line) ─
+    //   The arrangement word is *bolded* by the caller — the remote/hybrid +
+    //   international footprint is the signal recruiters scan for.
+    if location != none {
+      v(2.5pt)
+      block(above: 0pt, below: 0pt, breakable: false, {
+        set text(size: size-tiny, style: "italic", fill: muted)
+        location
+      })
+    }
 
     if summary != none {
       v(gap-intra-entry)

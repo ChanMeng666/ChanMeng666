@@ -78,7 +78,7 @@
 // between-jobs (inter 16pt). The intra gap is deliberately NON-tiny — the three
 // lines of one job are distinct paragraphs and need to breathe — while inter is
 // well over 2× intra so the eye never binds a title to the job above.
-#let gap-inter-entry  = 13pt   // between consecutive role-lines / experience entries (≈2× intra)
-#let gap-intra-entry  = 7pt    // between meta line (org/dates) and summary inside one entry
+#let gap-inter-entry  = 9pt    // between consecutive role-lines / experience entries (≈2× intra)
+#let gap-intra-entry  = 5pt    // between meta line (org/dates) and summary inside one entry
 #let gap-card-meta    = 4pt    // project-card: between title row and italic context line
 #let gap-card-body    = 3pt    // project-card: between italic context line and bullets

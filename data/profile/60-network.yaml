@@ -73,7 +73,9 @@ organizations:
   - id: sanicle
     name: Sanicle Inc.
     aliases: ["Sanicle.cloud"]
-    url: https://www.sanicle.cloud
+    # sanicle.cloud is permanently offline (domain/TLS not being renewed);
+    # LinkedIn company page is the reachable canonical link.
+    url: https://www.linkedin.com/company/sanicleofficial/
     logo: /public/organizations/sanicle-logo.svg
     type: startup
     industry: Wellness & Fitness Services — FemTech workplace platform

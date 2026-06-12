@@ -7,8 +7,12 @@ name: Monthly Review Queue
 #   - repo health (404s, renames, archived-but-active, activity gaps)
 #   - CV anchor-fact drift
 # Findings are upserted into ONE issue labelled `review-queue` (edited in
-# place each month, never spammed). No commits are made here, so the
-# build-readme.yml auto-commit loop is untouched.
+# place each month, never spammed). When a scan comes back fully clean
+# (freshness, links, repo health, and CV anchors all green) the open issue is
+# auto-closed with a comment instead of being kept open — so an open
+# review-queue issue always means "there is something to act on". A later
+# scan that finds something actionable opens a fresh issue. No commits are
+# made here, so the build-readme.yml auto-commit loop is untouched.
 
 on:
   schedule:
@@ -59,16 +63,38 @@ jobs:
           } > "$R"
           echo "report written: $(wc -l < "$R") lines"
 
-      - name: Upsert review-queue issue
+      - name: Decide clean/dirty and act on the issue
         run: |
+          R="$RUNNER_TEMP/report.md"
           gh label create review-queue --color D93F0B \
             --description "Monthly truth-maintenance review queue" 2>/dev/null || true
           NUM=$(gh issue list --label review-queue --state open --json number --jq '.[0].number // empty')
+
+          # CLEAN only if every section's success marker is present. Fail-safe:
+          # any missing/renamed marker => clean=false => keep the issue open, so
+          # we never auto-close on a false "all good".
+          clean=true
+          grep -q "All entries within their freshness budgets" "$R" || clean=false
+          grep -q '\*\*0 dead\*\*' "$R"                            || clean=false
+          grep -q "no issues across all GitHub-linked projects" "$R" || clean=false
+          grep -q "agree with 10-career.yaml" "$R"                || clean=false
+          echo "verdict: clean=$clean (open issue: ${NUM:-none})"
+
           TITLE="Review queue: $(date -u +%Y-%m)"
-          if [ -n "$NUM" ]; then
-            gh issue edit "$NUM" --title "$TITLE" --body-file "$RUNNER_TEMP/report.md"
-            echo "✓ updated issue #$NUM"
+          if [ "$clean" = "true" ]; then
+            if [ -n "$NUM" ]; then
+              gh issue comment "$NUM" --body "✅ Review queue clean as of $(date -u +%Y-%m-%d) — freshness, links, repo health, and CV anchors all green. Auto-closing; a fresh issue opens automatically when the next scan finds something actionable."
+              gh issue close "$NUM" --reason completed
+              echo "✓ closed clean issue #$NUM"
+            else
+              echo "✓ clean and no open issue — nothing to do"
+            fi
           else
-            gh issue create --title "$TITLE" --label review-queue --body-file "$RUNNER_TEMP/report.md"
-            echo "✓ created new review-queue issue"
+            if [ -n "$NUM" ]; then
+              gh issue edit "$NUM" --title "$TITLE" --body-file "$R"
+              echo "✓ updated issue #$NUM"
+            else
+              gh issue create --title "$TITLE" --label review-queue --body-file "$R"
+              echo "✓ created new review-queue issue"
+            fi
           fi

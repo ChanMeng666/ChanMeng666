@@ -1096,7 +1096,9 @@ work:
     startDate: "2025-03"
     endDate: "2026-02"
     location: USA (remote)
-    url: https://sanicle.cloud/
+    # sanicle.cloud is permanently offline (company will not renew the domain/
+    # TLS); point at the LinkedIn company page so the link stays reachable.
+    url: https://www.linkedin.com/company/sanicleofficial/
     logo: /public/organizations/sanicle-logo.svg
     featured: true
     tier: primary

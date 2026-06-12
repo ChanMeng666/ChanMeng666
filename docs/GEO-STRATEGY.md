@@ -56,7 +56,7 @@ The README contains a `<script type="application/ld+json">` block hidden inside 
 
 ### 6. `llms-full.txt`
 
-Per the (Jeremy Howard, 2024) llms.txt convention. A bundled full-text dump rendered from `data/profile.yaml`. Some LLM platforms reportedly weight this as a context primer when crawling the site. Adoption is low (<1% of bot requests in OtterlyAI 2025 data), but the cost is zero — we render it from the same source.
+Per the (Jeremy Howard, 2024) llms.txt convention. A bundled full-text dump rendered from `data/profile/*.yaml`. Some LLM platforms reportedly weight this as a context primer when crawling the site. Adoption is low (<1% of bot requests in OtterlyAI 2025 data), but the cost is zero — we render it from the same source.
 
 ### 7. robots.txt explicit allow
 

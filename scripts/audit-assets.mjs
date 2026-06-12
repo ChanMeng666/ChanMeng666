@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Audits /public assets referenced from data/profile.yaml.
+// Audits /public assets referenced from data/profile/*.yaml.
 // Warns on:
 //   - referenced files that don't exist on disk
 //   - files in /public that aren't referenced anywhere (orphans)

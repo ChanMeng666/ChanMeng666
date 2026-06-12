@@ -1,6 +1,6 @@
 name: Validate Profile Data
 
-# Schema-validate data/profile.yaml on every PR. Prevents broken data from
+# Schema-validate data/profile/*.yaml on every PR. Prevents broken data from
 # reaching main and triggering a failed rebuild.
 
 on:
@@ -31,7 +31,7 @@ jobs:
             echo "✓ Committed outputs are in sync with data/."
           else
             echo "✗ Committed README.md / llms.txt / llms-full.txt / dist/profile.json"
-            echo "  are stale relative to data/profile.yaml. Run 'npm run build'"
+            echo "  are stale relative to data/profile/*.yaml. Run 'npm run build'"
             echo "  locally and commit the regenerated files, or rely on the"
             echo "  build-readme.yml workflow to do it after merge."
             git diff --stat README.md llms.txt llms-full.txt dist/profile.json

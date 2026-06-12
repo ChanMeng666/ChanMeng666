@@ -3,7 +3,7 @@
 
 // ─── EXPERIENCE ──────────────────────────────────────────────────────────────
 // Each role line carries one verifiable business-outcome metric pulled from
-// data/profile.yaml::work[].impactHeadline. Products built at these employers
+// data/profile/10-career.yaml::work[].impactHeadline. Products built at these employers
 // (GAVIGO IRE, She Sharp Platform) are referenced by name but NOT re-described
 // — the deep narrative lives in Selected Projects for independent OSS work,
 // and the metric here is what matters to HR / hiring managers / founders.

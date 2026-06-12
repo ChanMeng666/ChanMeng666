@@ -75,12 +75,12 @@ data/brand.yaml ──► validate-brand.mjs ──► build-brand.mjs ──┬
                                                               ├─► docs/brand/DESIGN.md  (auto-injected token tables)
                                                               └─► public/brand-system.html
 
-data/profile.yaml ──► validate.mjs ──► build.mjs ──► README.md
-                                          │ (reads      │  llms.txt
-                                          │  dist/brand)│  llms-full.txt
-                                          │             └─► dist/profile.json
-                                          └──── data.brand + data.decorations injected from
-                                                dist/brand/tokens.json before template render
+data/profile/*.yaml ──► load-profile.mjs ──► validate.mjs ──► build.mjs ──► README.md
+  (13 shards, merged      (concatenates the                      │ (reads      │  llms.txt
+   in filename order)      projects: list                        │  dist/brand)│  llms-full.txt
+                           across shards 20-23)                  │             └─► dist/profile.json
+                                                                 └──── data.brand + data.decorations injected from
+                                                                       dist/brand/tokens.json before template render
 
 cv/chan-meng-cv.typ ──► cv/build.ps1 ──► public/chan-meng-cv.pdf
        │                                  public/cv.jsonld
@@ -90,7 +90,7 @@ cv/chan-meng-cv.typ ──► cv/build.ps1 ──► public/chan-meng-cv.pdf
 
 **Brand build runs first.** `npm run build` chains `build:brand && build`. The profile build refuses to run without `dist/brand/tokens.json` present (error points to `npm run build:brand`).
 
-1. **Load:** `js-yaml` parses `data/profile.yaml` into a plain object.
+1. **Load:** `scripts/lib/load-profile.mjs` parses every `data/profile/*.yaml` shard (js-yaml, filename order) and merges them into a plain object — same-named array keys concatenate (the `projects[]` list spans four shards), any other top-level collision is an error. Per-key provenance lets `validate.mjs` attribute schema errors to the owning shard file.
 2. **Validate:** `ajv` (draft 2020-12) checks the object against `schema/profile.schema.json`. Fail-fast.
 3. **Augment:** `build.mjs` adds derived state (`meta.lastModified`, `_currentRoles`, `_flagshipProjects`, `_openSourceByCategory`, `_certsByCategory`, `_jsonldProfilePagePretty`, etc.).
 4. **Render:** Handlebars compiles each template with the augmented data.
@@ -121,9 +121,9 @@ Templates can shorten or omit. They never add substance.
 ## The single source of truth principle
 
 - **Inbound:** nothing. No Medium API import, no LinkedIn import, no auto-sync of GitHub stars into the YAML. The user is the sole input.
-- **Outbound:** everything. README, `llms.txt`, `llms-full.txt`, `dist/profile.json`, plus future Typst CV, LinkedIn rebuilds, and chanmeng.org all consume from this one file.
-- **Live metrics** like GitHub stars/forks render via dynamic shields.io badges at *view time*. They never write back into `profile.yaml`.
+- **Outbound:** everything. README, `llms.txt`, `llms-full.txt`, `dist/profile.json`, plus future Typst CV, LinkedIn rebuilds, and chanmeng.org all consume from this one merged data source.
+- **Live metrics** like GitHub stars/forks are refreshed into the project shards only via the explicit `npm run refresh-metrics -- --apply` step (line-anchored edits; never a YAML round-trip).
 
 ## Adding new content
 
-See `docs/CONTRIBUTING-DATA.md` for the per-section how-to. The short version: edit `data/profile.yaml`, commit, push. The `build-readme.yml` workflow rebuilds and force-pushes the regenerated outputs back to `main`.
+See `docs/CONTRIBUTING-DATA.md` for the per-section how-to and the shard map (also in the repo-root `CLAUDE.md`). The short version: edit the relevant `data/profile/*.yaml` shard, commit, push. The `build-readme.yml` workflow rebuilds and force-pushes the regenerated outputs back to `main`.

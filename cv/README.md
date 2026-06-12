@@ -36,14 +36,14 @@ cv/
 │   ├── recognition.typ
 │   └── footer.typ
 ├── build.ps1                # one-shot build (PDF + JSON-LD + llms.txt)
-├── build-jsonld.mjs         # data/profile.yaml → schema.org JSON-LD
-├── build-llms-txt.mjs       # data/profile.yaml → agent-readable summary
+├── build-jsonld.mjs         # data/profile/*.yaml → schema.org JSON-LD
+├── build-llms-txt.mjs       # data/profile/*.yaml → agent-readable summary
 └── README.md
 ```
 
 ## Source of truth
 
-Where possible, content is sourced from [`../data/profile.yaml`](../data/profile.yaml) — the same single-source-of-truth that builds the GitHub profile README. The Typst sections currently hardcode hero project narratives (so they can include architect-grade vocabulary like "PostToolUse hook" and "hub-and-spoke coordinator" that doesn't belong in profile.yaml), but the JSON-LD and `cv-llms.txt` generators pull directly from YAML.
+Where possible, content is sourced from [`../data/profile/`](../data/profile/) — the same single-source-of-truth that builds the GitHub profile README. The Typst sections currently hardcode hero project narratives (so they can include architect-grade vocabulary like "PostToolUse hook" and "hub-and-spoke coordinator" that doesn't belong in profile.yaml), but the JSON-LD and `cv-llms.txt` generators pull directly from YAML.
 
 ## Word blacklist (strip before compile)
 
@@ -69,7 +69,7 @@ The Anthropic Forward Deployed Engineer JD phrase `shipped MCP servers, sub-agen
 
 ## Regenerating
 
-Whenever `data/profile.yaml` changes (work entries, recommendations, project metrics), rerun `pwsh cv/build.ps1` to refresh `public/chan-meng-cv.pdf` + the JSON-LD and llms.txt siblings.
+Whenever `data/profile/*.yaml` changes (work entries, recommendations, project metrics), rerun `pwsh cv/build.ps1` to refresh `public/chan-meng-cv.pdf` + the JSON-LD and llms.txt siblings.
 
 ## Before editing any `.typ` file — read [`TYPST_PITFALLS.md`](./TYPST_PITFALLS.md)
 

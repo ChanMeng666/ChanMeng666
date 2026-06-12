@@ -1,7 +1,7 @@
 name: Build README
 
 # Rebuild README.md, llms.txt, llms-full.txt, and dist/profile.json from
-# data/profile.yaml whenever the source data, templates, schema, or build
+# data/profile/*.yaml whenever the source data, templates, schema, or build
 # scripts change. Also runs daily to refresh meta.lastModified (freshness
 # signal for GEO).
 
@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate data/profile.yaml against schema
+      - name: Validate data/profile/*.yaml against schema
         run: npm run validate
 
       - name: Build outputs

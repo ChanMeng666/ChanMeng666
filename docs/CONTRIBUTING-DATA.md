@@ -1,6 +1,21 @@
-# How to update `data/profile.yaml`
+# How to update the profile data (`data/profile/*.yaml`)
 
-`data/profile.yaml` is the only file you edit. Everything else (README, llms.txt, llms-full.txt, dist/profile.json) is generated.
+The profile data lives as **shards** in `data/profile/` — one file per theme, merged in filename order by `scripts/lib/load-profile.mjs`. The shards are the only files you edit. Everything else (README, llms.txt, llms-full.txt, dist/profile.json, linkedin/*) is generated.
+
+| Shard | Contains |
+|---|---|
+| `00-basics.yaml` | basics, builderTools |
+| `10-career.yaml` | work, volunteer, education |
+| `20`–`23-projects-*.yaml` | the `projects[]` list, concatenated across four files (flagship → OSS primary → web apps → the rest) |
+| `25-contributions.yaml` | openSourceContributions |
+| `30-recognition.yaml` | awards, certificates, publications |
+| `40-skills.yaml` | skills, domains, languages, interests |
+| `50-references.yaml` | references (testimonials) |
+| `60-network.yaml` | organizations, collaborators |
+| `70-linkedin.yaml` | the curated LinkedIn snapshot block |
+| `90-meta.yaml` | meta, incl. `meta.x_brand` display config |
+
+To locate an entry: `grep -rn "id: <slug>" data/profile/`. See the repo-root `CLAUDE.md` for the full data map and cross-reference rules.
 
 ## Quick start
 
@@ -18,7 +33,7 @@ After pushing your YAML edit to `main`, the `build-readme.yml` workflow rebuilds
 
 ### Adding a new work experience
 
-Add a new entry to `work[]`. Required: `id` (lowercase, hyphenated), `name`, `position`. Use `endDate: null` for current roles.
+Add a new entry to `work[]` in `10-career.yaml`. Required: `id` (lowercase, hyphenated), `name`, `position`. Use `endDate: null` for current roles.
 
 ```yaml
 work:
@@ -49,7 +64,7 @@ The five narrative dimensions are mandatory in spirit but can stay empty (`""`) 
 
 ### Adding a new project
 
-Add to `projects[]`. Flagships have `priority: 1-4`. Open source has `priority: 5+`.
+Add to `projects[]` in the matching `2x-projects-*.yaml` shard (flagship → `20`, OSS primary band → `21`, web apps → `22`, everything else → `23`). Flagships have `priority: 1-4`. Open source has `priority: 5+`.
 
 ```yaml
 projects:
@@ -85,7 +100,7 @@ projects:
         Specific scope: founder / lead engineer / etc., with evidence.
 ```
 
-To promote a project to flagship status, change its `priority` to 1-4 *and* add its `id` to `meta.x_brand.flagshipProjectIds` in the order you want it displayed.
+To promote a project to flagship status, change its `priority` to 1-4, move the entry to `20-projects-flagship.yaml`, *and* add its `id` to `meta.x_brand.flagshipProjectIds` (in `90-meta.yaml`) in the order you want it displayed.
 
 ### Adding a new certificate
 
@@ -164,9 +179,9 @@ Common validation errors:
 
 ```bash
 git checkout -b update-tam-ai-ti-narrative
-# edit data/profile.yaml ...
+# edit the relevant data/profile/*.yaml shard ...
 npm run check
-git add data/profile.yaml README.md llms.txt llms-full.txt dist/profile.json
+git add data/profile/ README.md llms.txt llms-full.txt dist/profile.json
 git commit -m "feat(data): expand Tam-AI-Ti narrative with Q1 outcomes"
 git push -u origin update-tam-ai-ti-narrative
 # open PR — validate-data.yml gates merge

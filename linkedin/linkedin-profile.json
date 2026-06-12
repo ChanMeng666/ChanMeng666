@@ -3,7 +3,7 @@
     "description": "Structured snapshot of Chan Meng's live LinkedIn profile copy. Canonical store for LinkedIn section text; markdown companions in this folder are kept in sync with it.",
     "profileUrl": "https://www.linkedin.com/in/chanmeng666/",
     "capturedAt": "2026-06-04",
-    "source": "Live LinkedIn page text, finalised and confirmed by Chan Meng. Facts trace to data/profile.yaml; live-only details (engagement stats, credential IDs, media captions) captured here.",
+    "source": "Live LinkedIn page text, finalised and confirmed by Chan Meng. Facts trace to the data/profile/*.yaml shards; live-only details (engagement stats, credential IDs, media captions) captured here.",
     "notes": {
       "skills": "Flat list mirroring the live Skills 'All' view (order preserved). Each skill records its associated experiences/projects/certificates and any endorsement signals. LinkedIn groups skills under the tabs in skills.categories, but the 'All' view does not expose which tab each skill belongs to, so per-skill category is not recorded.",
       "honorsAndAwards": "Six entries in live display order (newest first), captured verbatim from the live profile (all six now live, UN CSW 69 Speaker included). FemTech Weekend and FemTech China are DISTINCT organisations: the Excellence Award (Dec 2024) is issued by FemTech China; the UN Women FemTech Hackathon Outstanding Performer award (Mar 2025) is from FemTech Weekend. All 'issuer' and 'associatedWith' values are taken exactly as shown on the live page.",

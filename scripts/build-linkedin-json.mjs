@@ -1,13 +1,13 @@
-// Generate linkedin/linkedin-profile.json from data/profile.yaml.
+// Generate linkedin/linkedin-profile.json from data/profile/*.yaml.
 //
-// data/profile.yaml is the single source of truth. The `linkedin:` block in it
+// data/profile/*.yaml is the single source of truth. The `linkedin:` block in it
 // carries all LinkedIn-specific narrative/presentation copy; drift-prone FACTS
 // (languages, banner name/headline/pronouns, the FemTech China award fields, and
 // a couple of date ranges) are injected here from the canonical main sections so
 // they live in exactly one place.
 //
 // Pipeline:
-//   data/profile.yaml --(this)--> linkedin/linkedin-profile.json
+//   data/profile/*.yaml --(this)--> linkedin/linkedin-profile.json
 //                      --(build-linkedin-md.mjs)--> linkedin/*.md
 //
 // Run:  node scripts/build-linkedin-json.mjs
@@ -291,4 +291,4 @@ for (const r of ln.recommendations?.received ?? []) {
 
 const outPath = path.join(repoRoot, "linkedin", "linkedin-profile.json");
 writeFileSync(outPath, JSON.stringify(ln, null, 2) + "\n", "utf8");
-console.log("✓ wrote linkedin/linkedin-profile.json from data/profile.yaml");
+console.log("✓ wrote linkedin/linkedin-profile.json from data/profile/*.yaml");

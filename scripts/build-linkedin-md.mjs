@@ -1,9 +1,9 @@
 // Generate human-readable markdown companions from linkedin/linkedin-profile.json.
 //
 // linkedin/linkedin-profile.json is now a GENERATED artifact — it is produced by
-// scripts/build-linkedin-json.mjs from the `linkedin:` block in data/profile.yaml
+// scripts/build-linkedin-json.mjs from the `linkedin:` block in data/profile/*.yaml
 // (the single source of truth). Do NOT hand-edit linkedin-profile.json; edit
-// data/profile.yaml and run `npm run build:linkedin`.
+// data/profile/*.yaml and run `npm run build:linkedin`.
 //
 // These .md files are derived from the JSON (always in sync).
 // Run:  node scripts/build-linkedin-md.mjs

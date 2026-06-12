@@ -40,7 +40,7 @@ const errors = [];
 const warnings = [];
 const err = (m) => errors.push(m);
 
-if (!ln) err("data/profile.yaml has no top-level `linkedin:` block.");
+if (!ln) err("data/profile/*.yaml has no top-level `linkedin:` block.");
 
 const work = (id) => (profile.work ?? []).find((w) => w.id === id);
 const volunteer = (id) => (profile.volunteer ?? []).find((v) => v.id === id);

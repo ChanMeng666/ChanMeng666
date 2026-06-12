@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/ChanMeng666/ChanMeng666/schema/profile.schema.json",
   "title": "ChanMeng666 Profile Data Schema",
-  "description": "Extended JSON Resume v1.0.0 schema with meta.x_brand namespace and structured narrative blocks for projects and work. Validates data/profile.yaml.",
+  "description": "Extended JSON Resume v1.0.0 schema with meta.x_brand namespace and structured narrative blocks for projects and work. Validates the merged data/profile/*.yaml shards.",
   "type": "object",
   "additionalProperties": true,
   "required": ["basics", "meta"],

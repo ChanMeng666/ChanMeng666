@@ -124,7 +124,7 @@ Target: `2`. If it returns `3`:
    typst compile --root . --format png --ppi 150 --pages 3 cv/chan-meng-cv.typ scratch-{p}.png
    ```
 2. Decide:
-   - **Drop low-value content** (testimonial quote, redundant footer line, intro paragraph that duplicates an experience entry). The Saba Gecgil testimonial has been dropped twice now to make room for spacing the user explicitly requested — its full text lives in `data/profile.yaml::references` for reference-check stages.
+   - **Drop low-value content** (testimonial quote, redundant footer line, intro paragraph that duplicates an experience entry). The Saba Gecgil testimonial has been dropped twice now to make room for spacing the user explicitly requested — its full text lives in `data/profile/50-references.yaml` for reference-check stages.
    - **Dial back only spacing the user did not specifically request** (section padding, divider thickness, skill-category padding). NEVER undo the inter-entry / intra-entry / list-ratio fixes — those are visual contract.
    - **Do not shrink text size** to fit. Type sizes are calibrated for screen + print legibility.
 

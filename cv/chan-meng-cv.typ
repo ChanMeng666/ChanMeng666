@@ -2,7 +2,7 @@
 // Chan Meng — AI Agent Architect & Full-stack Engineer
 // Two-page Typst CV with balanced two-column layout
 // (narrative LEFT 61.8%, structured RIGHT 38.2%, full-width header).
-// Source of truth: ../data/profile.yaml.
+// Source of truth: ../data/profile/*.yaml.
 // Build: pwsh ./build.ps1 → ../public/chan-meng-cv.pdf.
 // ─────────────────────────────────────────────────────────────────────────────
 

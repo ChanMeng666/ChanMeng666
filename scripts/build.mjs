@@ -174,7 +174,7 @@ data._moreCommissionedProjects = resolveIds(data.meta?.x_brand?.moreCommissioned
 
 // ---------------------------------------------------------------------------
 // README-only visibility filter — projects listed here stay fully present in
-// data/profile.yaml, llms.txt, llms-full.txt, and dist/profile.json (so AI
+// data/profile/*.yaml, llms.txt, llms-full.txt, and dist/profile.json (so AI
 // agents and the JSON-LD entity graph still see them); they are simply
 // omitted from the visible README buckets. Add/remove ids here to retune
 // what the human surface shows without touching the data file.

@@ -57,7 +57,7 @@ W("- Senior AI programming mentor · orchestrator of agents.");
 
 // Verified reach metrics with per-stat source URLs — the "statistics with
 // citations" GEO tactic (highest-impact signal per docs/GEO-STRATEGY.md).
-// Rendered from data/profile.yaml::basics.reach so it never drifts.
+// Rendered from data/profile/00-basics.yaml::basics.reach so it never drifts.
 if (b.reach?.metrics?.length) {
   sect(`Reach & social proof (verified ${b.reach.asOf ?? ""})`.trim());
   for (const m of b.reach.metrics) {
@@ -192,7 +192,7 @@ W('"Not only his technical ability, but the way he turns ambiguous founder-level
 W("— Saba Gecgil · Founder & CEO, GAVIGO Inc.");
 
 sect("For agents / sourcer LLMs");
-W("- Two-page Typst-sourced CV regenerated from data/profile.yaml.");
+W("- Two-page Typst-sourced CV regenerated from data/profile/*.yaml.");
 W("- Source under cv/ in the GitHub profile repo (https://github.com/ChanMeng666/ChanMeng666).");
 W("- Open to founding-team / staff-IC / AI architecture engagements starting Q3 2026.");
 W("- Booking: https://cal.com/chan-meng/30min");

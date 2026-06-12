@@ -9,7 +9,7 @@ Everything for Chan Meng's LinkedIn profile in one place: a structured **source-
 section copy. It is a faithful snapshot of the **live LinkedIn page** (text finalised and confirmed
 by Chan), with one object per section: `banner`, `about`, `services`, `featured`, `experience`,
 `education`, `licensesAndCertifications`, `projects`, `volunteering`, `honorsAndAwards`,
-`publications`. Facts trace back to [`../data/profile.yaml`](../data/profile.yaml); live-only details
+`publications`. Facts trace back to [`../data/profile/`](../data/profile/); live-only details
 (engagement stats, credential IDs, media captions) are captured in the JSON.
 
 ## Generated markdown — kept in sync
@@ -74,6 +74,6 @@ screenshots at 2×). The HTML pulls headshots and the logo from `../../public/re
 
 1. **Section copy** → edit [`linkedin-profile.json`](./linkedin-profile.json), then run
    `node scripts/build-linkedin-md.mjs`. Never hand-edit the generated `.md` files.
-2. **Underlying facts** → fix [`../data/profile.yaml`](../data/profile.yaml) first (it is the
+2. **Underlying facts** → fix [`../data/profile/`](../data/profile/) first (it is the
    repository-wide source of truth), then reflect the change in the JSON here.
 3. **Visuals** → edit the HTML in `linkedin-services/`, then run `node scripts/export-linkedin-cards.mjs`.

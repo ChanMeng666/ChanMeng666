@@ -53,7 +53,7 @@
 // Subcategory ordering: coding-agent mastery first (Claude Code → Codex CLI
 // → cross-IDE dev work), then engineering substrate (SDKs/protocols),
 // finally production discipline (quality + observability — populated from
-// the tools that actually appear in data/profile.yaml; the previous
+// the tools that actually appear in data/profile/*.yaml; the previous
 // Braintrust/Langfuse/Inspect AI list was inaccurate).
 #let ai-engineering-toolkit() = section("AI Engineering & Tooling", {
   // Each surface listed below appears in EXACTLY ONE row. MCP lives only in
@@ -198,7 +198,7 @@
   list.item[*UN CSW 69 Speaker* — UN HQ NYC, Mar 2025 · attracted *IBM pilot interest* and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
   list.item[*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors · guided 11 teams / 80+ participants.]
   // FemTech China and FemTech Weekend are TWO DISTINCT organisations — separate
-  // events, separate awards. Never combine them. (See data/profile.yaml awards[].)
+  // events, separate awards. Never combine them. (See data/profile/30-recognition.yaml awards[].)
   list.item[*Excellence Award* — FemTech China (Women's Health Technology Challenge, Dec 2024).]
   list.item[*UN Women FemTech Hackathon — Outstanding Performer* — FemTech Weekend, Beijing (Mar 2025).]
 })
@@ -207,7 +207,7 @@
 // Testimonial quote dropped in this iteration to make room for the wider
 // inter-bullet / inter-entry spacing the user requested. Most professional
 // CVs do not carry testimonials; full quote remains available in
-// data/profile.yaml::references for reference-check stages.
+// data/profile/50-references.yaml for reference-check stages.
 #let endorsements() = []
 
 // ─── Assemble entire right column ────────────────────────────────────────────

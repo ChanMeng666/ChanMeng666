@@ -402,7 +402,7 @@ projects:
       - { label: "First commit",            value: "2024-11-27 (started as Vercel-hosted Next.js demo)" }
       - { label: "Pivot 1 (free-AI move)",  value: "2026-04-09 commit 3aec6ce: 'migrate from Vercel to Cloudflare Workers with free AI image generation'" }
       - { label: "Pivot 2 (full SaaS)",     value: "2026-04-10 commit 8626be4: 'add authentication, credits, payments, and image storage'" }
-      - { label: "Latest commit",           value: "2026-04-21 (ca5c63e, brand-logo refresh)" }
+      - { label: "Latest commit",           value: "2026-06-05" }
       - { label: "Development span",        value: "~17 months across 24 solo commits" }
       - { label: "AI provider",             value: "Cloudflare Workers AI (FLUX.1 Schnell @cf/black-forest-labs/flux-1-schnell, no API key, env.AI binding)" }
       - { label: "Free tier ceiling",       value: "100,000 image-generation requests/day (Workers AI free tier)" }
@@ -1259,7 +1259,7 @@ projects:
     name: The Birth of Leviathan
     priority: 71
     category: games
-    repoUrl: https://github.com/ChanMeng666/leviathan
+    # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     url: https://leviathan-client.vercel.app/
     status: live
   - id: html-brick-game
@@ -1703,12 +1703,11 @@ projects:
     priority: 28
     category: web-apps
     tagline: Commercial AI-powered English learning platform — Crimson Education US partnership; Next.js 15 + CopilotKit + OpenAI Realtime API
-    url: https://nzcel-prep.vercel.app/
     logo: /public/brands/nzcel-prep-logo.svg
     techStack: ["Next.js 15", CopilotKit, "OpenAI Realtime API"]
     narrative:
       impactHeadline: "Commercial AI-powered English-language prep for the NZ Certificate in English Language (NZCEL) — Crimson Education US partnership built on Next.js 15 + CopilotKit + OpenAI Realtime API for spoken-conversation practice."
-    status: live
+    status: archived
   - id: forward-with-her-website
     tier: secondary
     recency: historical
@@ -1772,13 +1771,11 @@ projects:
     category: ai-apps
     tagline: Personal site at chanmeng.org powering an 11-stage AI newsletter pipeline + IBM Watson digital twin
     url: https://chanmeng.org/
-    repoUrl: https://github.com/ChanMeng666/2d-portfolio
+    # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     logo: /public/brands/portfolio.svg
     extraLinks:
       - { label: "Newsletter signup", url: "https://chanmeng.org/#newsletter" }
       - { label: "Blog", url: "https://chanmeng.org/blog" }
-      - { label: "Newsletter workflow", url: "https://github.com/ChanMeng666/2d-portfolio/blob/main/.github/workflows/ai-newsletter.yml" }
-      - { label: "Pipeline source", url: "https://github.com/ChanMeng666/2d-portfolio/blob/main/scripts/ai-newsletter.ts" }
     techStack:
       - "Next.js 14"
       - "React 18"
@@ -2040,12 +2037,11 @@ projects:
     category: ai-apps
     tagline: AI-powered hospital staff scheduling — Next.js + CopilotKit interactive calendar with natural-language operations
     repoUrl: https://github.com/ChanMeng666/hospital-roster-agent
-    url: https://roster.chanmeng.org/
     logo: /public/brands/hospital-roster-agent-logo.svg
     techStack: ["Next.js", TypeScript, CopilotKit]
     narrative:
       impactHeadline: "AI-powered hospital staff scheduling — Next.js + CopilotKit interactive calendar where natural-language commands (e.g. 'move Smith's Tuesday shift to Wednesday') drive the underlying schedule, demonstrating agentic UI patterns for healthcare."
-    status: live
+    status: archived
   - id: design-pages
     tier: archive
     recency: historical
@@ -2093,10 +2089,9 @@ projects:
     category: web-apps
     tagline: Next.js quantitative job-evaluation tool — assess current roles across 10 dimensions (time, skill match, compensation, growth, environment)
     repoUrl: https://github.com/ChanMeng666/job-valuation
-    url: https://job-valuation.vercel.app/
     logo: /public/brands/job-valuation.svg
     techStack: ["Next.js", TypeScript]
-    status: live
+    status: archived
   - id: flip-book-template
     tier: archive
     recency: historical
@@ -2156,11 +2151,10 @@ projects:
     priority: 41
     category: web-apps
     tagline: Next.js 14 personal introduction site — responsive bento-grid layout with elegant animations
-    repoUrl: https://github.com/ChanMeng666/who-i-am
-    url: https://who-i-am-nine.vercel.app/
+    # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     logo: /public/brands/who-i-am.svg
     techStack: ["Next.js 14", TypeScript]
-    status: live
+    status: archived
   - id: douban-elite-scraper
     tier: archive
     recency: historical

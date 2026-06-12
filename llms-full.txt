@@ -69,7 +69,7 @@ philosophy — "Subtraction for life, addition for thought."
 - **FemTech Weekend** (employer) -- CTO, Chengdu chapter (Mar 2025 — Feb 2026). URL: https://www.femtechweekend.com. Related work: femtech-weekend.
 - **Forward with Her 她行 Mentorship** (employer) -- Tech & Professional Development Mentor (Oct 2024 — Sep 2025). URL: https://www.linkedin.com/company/taxing-mentorship/. Related work: forward-with-her. Related volunteer: forward-with-her-mentor.
 - **Lincoln University, NZ** (employer) -- Master of Applied Computing (Distinction) + Full-Stack Developer. URL: https://www.lincoln.ac.nz. Related work: lincoln.
-- **FreePeriod** (employer) -- Full-Stack Engineer (Oct — Dec 2024). URL: https://www.freeperiod.org. Related work: freeperiod.
+- **FreePeriod** (employer) -- Full-Stack Engineer (Oct — Dec 2024). URL: https://www.linkedin.com/company/free-period/. Related work: freeperiod.
 - **CopilotKit** (employer) -- Open-source contributor — 2 merged PRs into a 24.6k★ repo. URL: https://www.copilotkit.ai. Related work: copilotkit.
 - **ByteDance** (employer) -- Backend Developer, Youth Training Camp (Jun — Aug 2024). URL: https://www.bytedance.com. Related work: bytedance.
 - **Cebu International Academy** (employer) -- Volunteer Educator (Mar — Aug 2023). URL: http://cebucia.com. Related volunteer: cebu-international-academy.
@@ -1075,7 +1075,7 @@ women's health companion orchestrating **eight specialized
 agents** (Main Coordinator + Cycle Tracker + Fertility
 Tracker + Symptom Mood + Nutrition Guide + Exercise Coach +
 Lifestyle Manager + Health Insights) through CopilotKit's
-agent-routing layer. Live at femtracker-agent.vercel.app, with
+agent-routing layer. Shipped with a public demo deployment (since retired), with
 source on GitHub and a YouTube demo walkthrough. Maintainer
 Tyler Slaton (`@tylerslaton`) approved with:
 *"This is awesome! Thank you for the cool showcase
@@ -1869,7 +1869,7 @@ practice I carried into every subsequent role.
 [tier=primary · recency=recent · updated=2026-06-04]
 - **Period:** Oct 2024 -- Oct 2025
 - **Location:** Remote (cross-Pacific)
-- **URL:** https://forwardwithher.org/
+- **URL:** https://www.linkedin.com/company/taxing-mentorship/
 - **Keywords:** STEM mentorship, Women in tech, Career development, Bi-weekly 1:1 mentorship, Cross-Pacific volunteer network
 
 Volunteer mentor at **Forward with Her (她行)**, a nonprofit founded in
@@ -2583,7 +2583,6 @@ one role.
 ### 3. GAVIGO IRE — Activation & Execution Layer for Interactive Software — AI-orchestrated post-app activation platform with sub-millisecond container pre-warming; backed by Google for Startups Cloud Program + NVIDIA Inception (Feb 2026)
 [tier=flagship · recency=active · updated=2026-05-18]
 - **URL:** https://ire.gavigo.com/
-- **Repository:** https://github.com/ChanMeng666/gavigo
 - **Tech stack:** Go, gorilla/websocket, Kubernetes, DigitalOcean DOKS (initial), Google Kubernetes Engine (post-migration), client-go (K8s API), Artifact Registry, GCE Ingress + Global HTTP(S) LB, React 18, Vite, React Native, Expo 54, WebSocket, Redis 7, PostgreSQL 16, Supabase, GPT-4o-mini
 - **Total commits:** 360
 - **Solo commits:** 353 (98%)
@@ -2805,8 +2804,8 @@ on the active codebase.
 - **PulseMCP badge:** Top Pick · 26.1k visitors · #1,105 global rank
 - **Glama quality:** A (license) · 122 stars
 - **Skywork review:** Dedicated Oct 2025 deep-dive article + AI-Engineer's Guide companion piece
-- **Stars:** 122 (Glama) / 121+ (dynamic badge)
-- **Forks:** 21+ (dynamic badge)
+- **Stars:** 123
+- **Forks:** 21
 - **Commits:** 98 (Google News) + 71 (Google Jobs) = 169
 - **Early MCP contrib:** Issue #76 (Nov 27 2024 — Windows/NVM workaround)
 **Summary:** An early-ecosystem MCP server — first commit **Dec 30 2024, just
@@ -3109,7 +3108,7 @@ landmines, no headless browsers. **Critical architectural
 decision**: the same `@suno-cards/parser` package is **shared
 with Chan's other Suno project, SunoStats** — Chan's separate
 analytics SaaS for Suno creators
-([github.com/ChanMeng666/sunostats](https://github.com/ChanMeng666/sunostats)).
+([sunostats.chanmeng.org](https://sunostats.chanmeng.org/)).
 Extracting the parser as a workspace package means a single
 Valibot schema definition + a single typed-error hierarchy
 (`SunoNotFoundError`, `SunoNetworkError`, `SunoSchemaError`,
@@ -3348,7 +3347,6 @@ both repos today through the 5.x line.
 ### 2D Portfolio — chanmeng.org — Personal site at chanmeng.org powering an 11-stage AI newsletter pipeline + IBM Watson digital twin
 [tier=primary · recency=active · updated=2026-05-18]
 - **URL:** https://chanmeng.org/
-- **Repository:** https://github.com/ChanMeng666/2d-portfolio
 - **Tech stack:** Next.js 14, React 18, TypeScript 5, Tailwind, Framer Motion, MDX, IBM Watson AI, OpenAI (gpt-4o + gpt-4o-mini), Resend, React Email, Vercel Blob, Product Hunt GraphQL API, Cloudflare Pages, GitHub Actions cron
 
 **Summary:** Personal website at **chanmeng.org** serving three production systems
@@ -4531,7 +4529,6 @@ metadata. Maintains the live deployment today.
 ### SunoStats — The Analyst Suno Never Shipped — Closed a gap in Suno's official platform that creators couldn't fix themselves — discovered that Suno's serializer leaks unredacted parent->child lineage UUIDs only on /api/trending + persona sub-trees, built the industry's first public Suno lineage explorer on that finding. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.
 [tier=primary · recency=recent · updated=2026-05-19]
 - **URL:** https://sunostats.chanmeng.org/
-- **Repository:** https://github.com/ChanMeng666/sunostats
 - **Tech stack:** Next.js 16.2 (App Router, Webpack pin), React 19.2, TypeScript 5, Tailwind CSS 4 + GSAP 3.15 scroll motion, Neon Postgres (serverless HTTP driver), Drizzle ORM 0.45 + Drizzle Kit 0.31, NextAuth v5 beta + Neon Auth (Better Auth), Google OAuth (no password flow), Stripe 22 (webhook-verified credit ledger, auto test/live switch), Resend 6 (insight email delivery), @suno-cards/parser workspace package (Valibot validators + typed Suno error hierarchy), WITH RECURSIVE Postgres CTEs (lineage graph traversal), Biome 2.4 (lint + format), Docker multi-stage + Node 20 slim runner, GitHub Container Registry (GHCR), VPS deployment behind Traefik + Let's Encrypt TLS, GitHub Actions CI/CD (typecheck + lint + build + deploy), Linux crontab (collect-trending 04:00 UTC, sync-all 04:05 UTC), next-themes (light/dark), i18n: EN / 简体中文 / 日本語 (cookie-driven, server-resolved)
 
 **Summary:** Production third-party analytics layer for **Suno creators** —
@@ -5227,7 +5224,6 @@ the `libraryos.live` custom domain. Maintains the live
 deployment today.
 ### FemTracker Agent — 8-agent CopilotKit + LangGraph women's-health companion (merged into CopilotKit's official demos_2025)
 [tier=primary · recency=recent · updated=2026-05-18]
-- **URL:** https://femtracker-agent.vercel.app/
 - **Repository:** https://github.com/ChanMeng666/femtracker-agent
 - **Tech stack:** Next.js 15, React 19, TypeScript, CopilotKit, Python 3.12, LangGraph, Supabase, Redis
 
@@ -5290,8 +5286,8 @@ safety in a medical-domain product.
 via [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068),
 publicly thanked by maintainer Tyler Slaton — external
 recognition of production-grade quality from the framework's
-own maintainers, not just a self-published demo. Live demo at
-femtracker-agent.vercel.app: reported 95+ Lighthouse score,
+own maintainers, not just a self-published demo. While the demo deployment was live at
+femtracker-agent.vercel.app it reported 95+ Lighthouse score,
 sub-second TTFB, 99.9% uptime. Demo video at the linked YouTube
 URL. 90 sustained commits.
 
@@ -5482,7 +5478,7 @@ across 24 solo commits and 2 tagged releases (v1.0.0 + v1.1.0).
 Built with Chrome Manifest V3 APIs (webRequest + webRequestBlocking
 + storage + runtime messaging), JavaScript ES6+, Webpack 5, Babel.
 
-**Impact:** Formally Chrome Web Store-published browser extension for downloading Tencent Meeting recordings — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted; still maintained 18 months after first ship.
+**Impact:** Formally Chrome Web Store-published browser extension for downloading Tencent Meeting recordings — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted; maintained continuously since first ship in 2024.
 
 **Problem:** Tencent Meeting recordings live on the `myqcloud.com` CDN
 behind a combination of authentication headers, referrer
@@ -5936,7 +5932,6 @@ The four layers are loosely coupled: the agent can be re-shaped without touching
 ### LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI) — One Cloudflare Worker serving four surfaces over a single backend — a React SPA for humans who click-and-type, plus three identical-power agent surfaces (HTTP API at `/api/*` with OpenAPI 3.1 + Scalar docs at `/docs`, MCP Streamable HTTP at `/mcp` with 11 locked tools mirroring the HTTP routes 1:1, and an `lja` CLI on npm mirroring the MCP names 1:1). Every operation a human can do by clicking, an AI agent can do by HTTP call, MCP tool, or CLI invocation, with full feature parity and a unified `lja_*` API key.
 [tier=primary · recency=recent · updated=2026-05-19]
 - **URL:** https://linkedin-jobs-search.chanmeng-dev.workers.dev/
-- **Repository:** https://github.com/ChanMeng666/linkedin-jobs-search
 - **Tech stack:** Cloudflare Workers (single Worker, single entrypoint `worker/index.ts`), Hono 4 + `@hono/zod-openapi` (every `/api/*` route is `OpenAPIHono` + `createRoute`), @modelcontextprotocol/sdk 1.29 — Streamable HTTP MCP server at `/mcp` with 11 locked tool names, cac-based `lja` CLI published as `@chanmeng666/linkedin-jobs-search-cli` on npm (8 commands mirroring MCP names 1:1), React 18 SPA built by Vite 6 + react-router-dom 6 (served as static assets by the Worker), Once UI design system (`@once-ui-system/core` 1.5) — composable layout primitives, @scalar/api-reference-react — `/docs` route renders the OpenAPI spec interactively, Neon Postgres via `@neondatabase/serverless` HTTP driver + Drizzle ORM 0.38, Drizzle Kit 0.30 — schema push + studio (3 hand-written SQL migrations: subscriptions, api_keys, usage_events), Stack Auth 2.8 (cookie/JWT for humans) + custom `lja_<keyId>_<secret>` Bearer scheme (agents) with strict precedence, Stripe 22 metered subscriptions with dual `STRIPE_MODE=test|live` mode switching + canonical-JSON + sha256 idempotency, Cloudflare R2 — export artifact bucket with 1-day lifecycle, HMAC-signed presigned download URLs (1h TTL), Cloudflare KV — SWR cache with `{HIT, REVALIDATING, MISS}` headers + KV-backed cost-class-aware per-minute rate limiter (5 points for `POST /api/jobs`/`/api/export`, 1 elsewhere), ULID 3.0 — `req_<26-char>` IDs threaded through `X-Request-Id` header, every JSON-line log, and problem+json `trace_id`, RFC 7807 `application/problem+json` errors with stable machine codes (`unauthorized`, `forbidden`, `not_found`, `validation_error`, `quota_exceeded`, `rate_limited`, `internal_error`, `invalid_token`, `expired_token`, `export_expired`), Pulumi TypeScript (`infra/`) — replaces wrangler.jsonc as the primary deploy path; `deploy:wrangler` kept as fallback, Pulumi CrossGuard policy pack (4 policies: `no-destroy-prod`, `secret-must-be-secret`, `worker-vars-no-cleartext-secret`, `worker-name-must-match-stack`), node --test --experimental-transform-types — unit tests colocated next to source + cross-cutting `worker/contract.test.ts` using in-process `app.fetch` dispatch, GitHub Actions CI (`test.yml`, `pulumi.yml`, `cli-publish.yml`), jose 5 (JWT verify) · ulid 3 · zod 3.25 (validation everywhere) · json2csv (export), TypeScript strict mode everywhere; ESLint 8 + react-hooks 7.1, MIT license
 
 **Summary:** LinkedIn Jobs Search is the architectural inversion of a typical web app: instead of an SPA with a "developer API" tacked on, it ships **one Cloudflare Worker that exposes four surfaces of equal weight** — a React SPA at `/` for humans who click-and-type, an OpenAPI 3.1 HTTP API at `/api/*` with Scalar docs at `/docs`, an MCP Streamable HTTP server at `/mcp` with 11 tools, and an `lja` CLI on npm with 8 commands. **Every operation a human can do by clicking, an AI agent can do by HTTP call, MCP tool, or CLI invocation, with full feature parity.** Search jobs across 30+ countries, save them, update application status, list saved jobs, export to CSV/JSON, list search presets, list search history, view subscription — every primitive exists on every surface. The 11 MCP tools (`search_jobs`, `list_countries`, `list_saved_jobs`, `save_job`, `update_saved_job_status`, `delete_saved_job`, `export_saved_jobs`, `get_subscription`, `list_search_presets`, `save_search_preset`, `list_search_history`) **mirror the HTTP routes 1:1**, and the 8 `lja` CLI commands **mirror the MCP tool names 1:1** — the same vocabulary across every surface, so an agent's plan-of-action translates verbatim from one to another. The two audiences share a single `lja_<keyId>_<secret>` API key model: humans **mint** keys in the SPA dashboard (cookie-auth UI; one-time plaintext display; only the sha256 of the secret is stored), then **use** those keys to drive the HTTP API, MCP, or CLI. Cookies authenticate the SPA only and are deliberately ignored whenever any `Authorization` header is present (a malformed Bearer always returns 401, never falls through to cookie auth — a structural decision so agents and humans cannot accidentally cross-authenticate). The platform has its own `/guide` page that splits into two parallel tracks ("For humans" and "For agents and developers") with TOC + hash-jump nav, and the homepage itself uses a "dual-track feature catalog" layout that visually mirrors the same dichotomy. The codebase has been through 259 commits and a Vercel→Cloudflare Workers migration, and the last ~2 weeks shipped **8 design-doc-driven sub-projects (A → H)** that brought it from "an SPA that happens to expose an API" to "a four-surface monolith with full agent ergonomics": A added the agent surface (RFC 7807 errors with stable codes, ULID request IDs, `resolveCaller()` middleware, api_keys table, OpenAPIHono migration, MCP server, lja CLI); B replaced subscription tiers with Stripe metered billing (usage_events table, canonical-JSON + sha256 idempotency, `X-Quota-*` headers, per-event metering); C replaced wrangler.jsonc with Pulumi TypeScript + a CrossGuard policy pack of 4 policies (no-destroy-prod, secret-must-be-secret, worker-vars-no-cleartext-secret, worker-name-must-match-stack); D added R2-backed exports with HMAC-signed presigned URLs and a two-step download flow propagated through Worker + MCP + CLI; E added a SWR cache module with `X-Cache: HIT|REVALIDATING|MISS` headers and a global cost-class-aware rate-limit middleware; F built the test infrastructure (`node --test --experimental-transform-types`, contract suite via in-process `app.fetch` dispatch); G stripped 3D-globe decoration and built the dual-track landing + `/docs` (Scalar) + `/mcp` static onboarding routes; H built the visitor onboarding (homepage feature-catalog, dual-track `/guide`, API keys tab in the dashboard with one-time-plaintext mint + revoke confirmation flows, subtitle + first-visit empty-state on every primary page). Each sub-project has a paired design spec and implementation plan under `docs/superpowers/`.
@@ -5994,7 +5989,6 @@ every surface.
 
 [tier=primary · recency=active · updated=2026-05-19]
 - **URL:** https://www.femtechweekend.com/
-- **Repository:** https://github.com/ChanMeng666/femtech-weekend-website
 - **Tech stack:** Docusaurus 3.9.2 (classic preset + @docusaurus/theme-mermaid), React 18.2 + TypeScript 5.6 (typecheck via `tsc --noEmit` in CI), Drizzle ORM 0.45 + drizzle-kit 0.31 (3 migrations: 0000_luxuriant_riptide → 0001_programme_overhaul → 0002_speaker_overhaul), Neon serverless Postgres (@neondatabase/serverless 1.0), Cloudflare Pages + Cloudflare Pages Functions (15 endpoints, ~3,839 LOC of server-side .js), Wrangler 4.0 (deployment + local dev via `wrangler pages dev build`), @notionhq/client v3 (Notion-as-CMS for non-technical founder editorial workflow), Resend REST API (Contacts API with segment assignment + transactional email), Google Generative AI 0.24 (Gemini-powered /api/chat-stream), Cloudinary (image uploads: headshots, company overview PDFs, pitch decks), Radix UI primitives (Accordion, Avatar, Checkbox, Collapsible, Dialog, Label, Select, Separator, Slot), Tailwind CSS 3.4 + tailwindcss-animate + class-variance-authority, Framer Motion 12.35 + GSAP 3.13 (scroll + reveal animations), earth-flyline 1.6 (interactive 2D world-map with count-up statistics), i18n-iso-countries (country-code rendering across speaker/partner data), gray-matter (MDX frontmatter parsing), Docusaurus i18n (EN + 简体中文 across every page from day one), Node 22.x (pinned in engines)
 
 **Summary:** Solo-built Gen-2 platform (97.2% of 544 commits across ~1 year) for
@@ -6687,6 +6681,7 @@ intentional removal as the primary design move.
 
 ### Prasanth Pavithran (Driving Business Transformation | Building Better Communities | Investor | She Sharp Mentor | AI Evangelist | Storyteller; fellow She Sharp Ambassador / mentor alongside Chan supporting women in STEM)
 [tier=secondary · recency=recent · updated=2026-05-30]
+LinkedIn: https://www.linkedin.com/in/prasanth-pavithran-mba-a54ab912/
 > Chan stands out from the crowd. She is driven to solve real business problems, bringing outstanding technical skills from concept through to production. She is a powerhouse of talent, paired with a genuinely great attitude.
 
 I have had the pleasure of working with Chan through She Sharp, where we served as Ambassadors and mentors supporting women in STEM. She is a strong collaborator who knows when to lead, when to contribute, and when to support others. Chan would be an asset to any team.
@@ -7027,7 +7022,7 @@ Sanicle Director of Program Operations 2020–2024; Chan's colleague during her 
 - **Tam-AI-Ti 19-user research cohort produced 181 bilingual journal entries, 35 voice coaching sessions, 146 AI coach messages, and 74 daily Hauora check-ins over four months (Oct 2025 – Mar 2026)** (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
 - **Tam-AI-Ti built solo for Riria (Missy) Te Kanawa, former KPMG NZ National Māori Sector lead and lead author of KPMG's Maui Rau report series, as an independent research-pilot commission** (source: https://www.linkedin.com/in/riria-missy-te-kanawa-6137528b/, verified 2026-05-16)
 - **Tam-AI-Ti: 88+ CopilotKit AI actions, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, GPT-4o Realtime voice** (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
-- **GAVIGO IRE: 360 total commits, 353 solo (98%), production-deployed at ire.gavigo.com** (source: https://github.com/ChanMeng666/gavigo, verified 2026-05-16)
+- **GAVIGO IRE: 360 total commits, 353 solo (98%), production-deployed at ire.gavigo.com** (source: https://ire.gavigo.com/, verified 2026-05-16)
 - **Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud** (source: https://ire.gavigo.com/, verified 2026-05-16)
 - **Early-ecosystem MCP developer: opened modelcontextprotocol/servers issue #76 on 2024-11-27 (three weeks after MCP's public launch) documenting the Windows + NVM PATH workaround that became reference troubleshooting guidance for early Claude Desktop adopters** (source: https://github.com/modelcontextprotocol/servers/issues/76, verified 2026-05-16)
 - **Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with 26.1k visitors and #1,105 global popularity rank, Glama A license rating + 122 stars, listed across 15+ MCP catalogs including Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, Archestra, serp.ai, AIBase, AgentSkillsHub, MagicSlides) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); both servers covered in three independent media write-ups (Skywork AI x2, AgentSkillsHub)** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-05-16)
@@ -7055,8 +7050,8 @@ Sanicle Director of Program Operations 2020–2024; Chan's colleague during her 
 - **Sanicle company entity verifiable on LinkedIn: industry Wellness and Fitness Services, headquartered Tulsa Oklahoma, founded 2021, 2-10 employees, pre-seed $160,000 (December 2021 per Crunchbase) — corroborates the CTO context for my Mar 2025 – Feb 2026 tenure leading the engineering rebuild that took the platform from a Bubble no-code prototype to the multi-tenant Next.js + IBM watsonx FemTech platform** (source: https://www.linkedin.com/company/sanicleofficial/, verified 2026-05-16)
 - **ByteDance Youth Training Camp cohort lead Guangming Luo personally identifiable at https://www.linkedin.com/in/guangmingluo1994/ — corroborates the cohort 'Rebirth: I Code at Youth Training Camp' (Team 115) engagement context; ByteDance is the world's largest TikTok / Douyin / Toutiao / CapCut / Lark / Doubao operator (LinkedIn company page https://www.linkedin.com/company/bytedance/)** (source: https://www.linkedin.com/company/bytedance/, verified 2026-05-16)
 - **CORDE direct reports-to Barry Clark personally identifiable at https://www.linkedin.com/in/barry-clark-b92644/ — CORDE-side business sponsor of the Lincoln University COMP693 industry-placement engagement (Jun-Nov 2024) and the weekly demo-cadence recipient over the five-month delivery** (source: https://www.linkedin.com/company/corde-ltd/, verified 2026-05-16)
-- **CORDE Workbench API specification author Kullum Ladley personally identifiable at https://www.linkedin.com/in/kullum-ladley-4496b316a/ — CORDE's technical liaison on the engagement; the same Kullum named in every API document filename prefix `YYYYMMDD_Kullum_...` in the 15-document API specification set captured under version control in the team-corde documentation repository** (source: https://github.com/ChanMeng666/team-corde, verified 2026-05-16)
-- **CORDE student teammate Luke Shi (Zhenzhou Shi) personally identifiable at https://www.linkedin.com/in/zhenzhou-shi/ — the gentoo111 GitHub handle that owns the upstream CORDE-Mobile-Application repository; 28.6% of the 539-commit codebase (vs my 42%), the second-prolific contributor** (source: https://github.com/gentoo111/CORDE-Mobile-Application, verified 2026-05-16)
+- **CORDE Workbench API specification author Kullum Ladley personally identifiable at https://www.linkedin.com/in/kullum-ladley-4496b316a/ — CORDE's technical liaison on the engagement; the same Kullum named in every API document filename prefix `YYYYMMDD_Kullum_...` in the 15-document API specification set captured under version control in the team-corde documentation repository** (source: https://www.linkedin.com/in/kullum-ladley-4496b316a/, verified 2026-05-16)
+- **CORDE student teammate Luke Shi (Zhenzhou Shi) personally identifiable at https://www.linkedin.com/in/zhenzhou-shi/ — the gentoo111 GitHub handle that owns the upstream CORDE-Mobile-Application repository; 28.6% of the 539-commit codebase (vs my 42%), the second-prolific contributor** (source: https://www.linkedin.com/in/zhenzhou-shi/, verified 2026-05-16)
 - **18 LinkedIn Recommendations Received on Chan's public LinkedIn profile (linkedin.com/in/chanmeng666/details/recommendations/) spanning Nov 2024 – May 2026, from a representative mix of founders, senior managers, peers, academic supervisor, big-tech mentor, and mentees: GAVIGO founder/CEO Saba Gecgil (managed Chan directly during the GAVIGO engagement); Sanicle managers Paige Afanu (Omopeju) and Chaste Christopher Inegbedion; Sanicle peer Gabrielle J. Hurst; AWS SheBuilds mentor Cecilia Yin (AWS Solutions Architect); Lincoln University Associate Professor Patricia Anthony (Chan's teacher during the Master of Applied Computing with Distinction); She Sharp Ambassadors and website-team collaborators Prasanth Pavithran (MBA; She Sharp Ambassador / AI Evangelist), Lesley Gao (Product Designer / Web Developer), Nirmala Chinnappan (Project Coordinator at AUT; Master of IT Project Management), and Yesha Kaniyawala (AI Engineer at Possibl.ai); Forward with Her 她行 mentees Siyu Xing (PhD candidate at University of Chinese Academy of Sciences) and Amy Li; cross-org collaborators Jixuan Jessie Wan (Deloitte) and Qiao Jun (Tsinghua University); and mentees Mi Su, Shushu Qin, Yijia (Robin) Lee, and Shiyu Fang** (source: https://www.linkedin.com/in/chanmeng666/details/recommendations/, verified 2026-05-30)
 - **Paige Afanu (Omopeju Afanu, LinkedIn handle peju-afanu-7b9367110) was the Chief Executive Officer of Sanicle during Chan's CTO tenure (Mar 2025 – Feb 2026); attribution verified from this repository's own historical README snapshot at git commit d01e0f7129ada279bd2ffa17f8cf45b07cfc85f8 (Apr 14 2026) which renders 'Omopeju Afanu | Sanicle | Chief Executive Officer' as the explicit relationship label** (source: https://github.com/ChanMeng666/ChanMeng666/blob/d01e0f7129ada279bd2ffa17f8cf45b07cfc85f8/README.md, verified 2026-05-17)
 - **Forward with Her (她行) Mentorship — a 360+-mentor, 800+-mentee women-in-STEM programme operating under the LinkedIn corporate brand `taxing-mentorship` — was the umbrella under which Chan served as Technology & Professional Development Mentor from October 2024 through September 2025; seven of the eighteen public LinkedIn recommendations on Chan's profile come from mentees who specifically credit Forward with Her sessions (Siyu Xing at UCAS, Amy Li at China West Normal, Di Peng at ShanghaiTech, Mi Su at Guangxi University, Shushu Qin at Laurentian University, Yijia Robin Lee at Tianjin Normal, and Shiyu Fang at GDS Communication), making it the single-largest source of independently-attested mentorship impact in Chan's career to date** (source: https://www.linkedin.com/company/taxing-mentorship/, verified 2026-05-17)

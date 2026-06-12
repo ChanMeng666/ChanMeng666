@@ -435,7 +435,7 @@
         "companyContext": "CopilotKit is the open-source framework for building in-app AI\ncopilots and AI agents — 24,600+ GitHub stars and a thriving\ncontributor community. It provides React components for embedding\nLLM-powered AI assistants directly into web applications\n(chat interfaces, command palettes, in-app actions), a runtime\nlayer for tool and action registration that LLMs can invoke,\nand a Python SDK for multi-agent systems orchestrated through\nLangGraph. The framework is one of the standard ways to add\nsophisticated AI UX to a React app.\n",
         "mission": "Make it trivially easy for any web application to add a\nsophisticated AI copilot or agent system. Lower the floor for\nbuilding agentic UX so AI capabilities aren't gated by the\ncomplexity of state management, LLM orchestration, and\nframework integration plumbing.\n",
         "myMandate": "Open Source Contributor — adding capabilities, demos, and\ndocumentation downstream of real-world production use. I run\nCopilotKit + LangGraph in two production systems\n(Tam-AI-Ti's 88+ AI actions; FemTracker Agent's 8-agent\nwomen's-health pipeline) and contribute back the missing\nshowcases, integration paths, and ecosystem bridges I\nencountered along the way.\n",
-        "impactDelivered": "Two merged pull requests to the CopilotKit main repository,\nboth publicly approved and thanked by named maintainers:\n\n**[PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)\n— `chore(demos): Add FemTracker Agent + CopilotKit Demo to\nthe demos_2025 folder`** (merged 2025-09-11, after ~10 weeks\nof review, 341 additions): contributed FemTracker Agent to\nCopilotKit's official `demos_2025` collection — an AI-powered\nwomen's health companion orchestrating **eight specialized\nagents** (Main Coordinator + Cycle Tracker + Fertility\nTracker + Symptom Mood + Nutrition Guide + Exercise Coach +\nLifestyle Manager + Health Insights) through CopilotKit's\nagent-routing layer. Live at femtracker-agent.vercel.app, with\nsource on GitHub and a YouTube demo walkthrough. Maintainer\nTyler Slaton (`@tylerslaton`) approved with:\n*\"This is awesome! Thank you for the cool showcase\n@ChanMeng666.\"*\n\n**[PR #2529](https://github.com/CopilotKit/CopilotKit/pull/2529)\n— `docs: add Claude Code setup instructions to MCP server\nguide`** (merged 2025-10-09, 62 additions): expanded the\nCopilotKit MCP server documentation with step-by-step Claude\nCode CLI setup commands, expected output examples, verification\nflow, and management commands — positioned between the\nexisting Cline and GitHub Copilot sections. This contribution\nconnects CopilotKit's MCP-server capability with Anthropic's\nClaude Code, building on my earlier early-MCP-developer work.\nMaintainer Brandon McConnell (`@brandonmcconnell`) approved:\n*\"This looks great. Thanks, @ChanMeng666 👏\"*\n",
+        "impactDelivered": "Two merged pull requests to the CopilotKit main repository,\nboth publicly approved and thanked by named maintainers:\n\n**[PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)\n— `chore(demos): Add FemTracker Agent + CopilotKit Demo to\nthe demos_2025 folder`** (merged 2025-09-11, after ~10 weeks\nof review, 341 additions): contributed FemTracker Agent to\nCopilotKit's official `demos_2025` collection — an AI-powered\nwomen's health companion orchestrating **eight specialized\nagents** (Main Coordinator + Cycle Tracker + Fertility\nTracker + Symptom Mood + Nutrition Guide + Exercise Coach +\nLifestyle Manager + Health Insights) through CopilotKit's\nagent-routing layer. Shipped with a public demo deployment (since retired), with\nsource on GitHub and a YouTube demo walkthrough. Maintainer\nTyler Slaton (`@tylerslaton`) approved with:\n*\"This is awesome! Thank you for the cool showcase\n@ChanMeng666.\"*\n\n**[PR #2529](https://github.com/CopilotKit/CopilotKit/pull/2529)\n— `docs: add Claude Code setup instructions to MCP server\nguide`** (merged 2025-10-09, 62 additions): expanded the\nCopilotKit MCP server documentation with step-by-step Claude\nCode CLI setup commands, expected output examples, verification\nflow, and management commands — positioned between the\nexisting Cline and GitHub Copilot sections. This contribution\nconnects CopilotKit's MCP-server capability with Anthropic's\nClaude Code, building on my earlier early-MCP-developer work.\nMaintainer Brandon McConnell (`@brandonmcconnell`) approved:\n*\"This looks great. Thanks, @ChanMeng666 👏\"*\n",
         "technicalHighlights": "Both contributions come from real production usage: Tam-AI-Ti\n(88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and\nFemTracker Agent (8-agent CopilotKit + LangGraph + Python\norchestration). The FemTracker Agent demo is the most\nsubstantive multi-agent showcase in CopilotKit's demos\ncollection — Next.js 15 + React 19 + TypeScript on the\nfrontend, Python 3.12 + LangGraph for agent orchestration,\nSupabase PostgreSQL persistence with WHO-standard health\nscoring (0-100 metric scales), Redis caching reportedly\nsustaining 90%+ hit rates.\n\nThe MCP-docs PR is a deliberate ecosystem bridge: it connects\nCopilotKit's MCP-server capability to Anthropic's Claude Code,\nwhich extends the same early-MCP-developer thread I established\nin November 2024 (issue #76 in modelcontextprotocol/servers)\nand December 2024 (server-google-news, server-google-jobs).\nBoth PRs are docs- and demo-shaped — the highest-leverage\ncontribution surface for someone outside the maintainer team\nof a 24.6k-star project.\n"
       }
     },
@@ -626,7 +626,7 @@
       "startDate": "2024-10",
       "endDate": "2025-10",
       "location": "Remote (cross-Pacific)",
-      "url": "https://forwardwithher.org/",
+      "url": "https://www.linkedin.com/company/taxing-mentorship/",
       "logo": "/public/organizations/forward-with-her-logo.jpg",
       "tier": "primary",
       "recency": "recent",
@@ -804,16 +804,12 @@
           "url": "https://youtu.be/NtT7_q6xhlk"
         },
         {
-          "label": "Client organisation",
-          "url": "https://whiri-ai.com/"
+          "label": "Client organisation — project site",
+          "url": "https://tamaiti.whiri-ai.com/"
         },
         {
           "label": "About Riria (Missy) Te Kanawa",
           "url": "https://www.linkedin.com/in/riria-missy-te-kanawa/"
-        },
-        {
-          "label": "KPMG Maui Rau report (research origin)",
-          "url": "https://kpmg.com/nz/en/home/insights/2024/02/maui-rau.html"
         },
         {
           "label": "Te Whare Tapa Whā (Māori health model)",
@@ -1214,7 +1210,6 @@
       "category": "ai-apps",
       "tagline": "Activation & Execution Layer for Interactive Software — AI-orchestrated post-app activation platform with sub-millisecond container pre-warming; backed by Google for Startups Cloud Program + NVIDIA Inception (Feb 2026)",
       "url": "https://ire.gavigo.com/",
-      "repoUrl": "https://github.com/ChanMeng666/gavigo",
       "extraLinks": [
         {
           "label": "Company",
@@ -1364,10 +1359,6 @@
           "url": "https://skywork.ai/skypage/en/google-news-ai-engineer-dive/1978706891771256832"
         },
         {
-          "label": "AgentSkillsHub guide",
-          "url": "https://agentskillshub.dev/skills/google-news/"
-        },
-        {
           "label": "PulseMCP (Top Pick)",
           "url": "https://www.pulsemcp.com/servers/chanmeng666-google-news"
         },
@@ -1452,11 +1443,11 @@
         },
         {
           "label": "Stars",
-          "value": "122 (Glama) / 121+ (dynamic badge)"
+          "value": "123"
         },
         {
           "label": "Forks",
-          "value": "21+ (dynamic badge)"
+          "value": "21"
         },
         {
           "label": "Commits",
@@ -1550,8 +1541,8 @@
           "url": "https://github.com/ChanMeng666/github-readme-suno-cards/commit/295756e"
         },
         {
-          "label": "Companion: SunoStats",
-          "url": "https://github.com/ChanMeng666/sunostats"
+          "label": "Companion: SunoStats (live app)",
+          "url": "https://sunostats.chanmeng.org/"
         }
       ],
       "techStack": [
@@ -1593,7 +1584,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-04-21 (2f894c9, still iterating ~1 month in)"
+          "value": "2026-06-05"
         },
         {
           "label": "Total commits",
@@ -1640,7 +1631,7 @@
         "problem": "Suno AI creators have no graceful way to surface their music\ncatalog on the surfaces where developer audiences actually\ncongregate: GitHub READMEs, personal portfolio sites, technical\nblog footers, project documentation. Three escape hatches all\nfail: (1) link out to suno.com — loses the visual hook and\nbreaks if Suno changes URL shapes; (2) screenshot the player —\nstale the moment you publish a new song; (3) hand-edit\nMarkdown — fine for one song, completely unmanageable beyond\nthree. Worse: many Suno creators are bilingual or multilingual\nand produce songs with CJK (Chinese/Japanese/Korean) titles,\nwhich pure SVG `<text>` doesn't shape properly because SVG\ntext layout never properly inherited the rich text-shaping\nrules of HTML. The gap that needs filling: a service that\nrenders animated, visually-rich Suno music cards as embeddable\nSVG, handles CJK text correctly, supports both zero-setup\nsingle embeds and CI-driven auto-syncing card grids, and\nworks in both directions (browse-and-build via a hosted UI,\nor fully programmatic via a GitHub Action).\n",
         "audience": "Three concentric audiences. (1) **Developer-musicians** using\nSuno AI who want their GitHub profile README, portfolio site,\nor project documentation to display a live, auto-updating\ncatalog of their music — including CJK-named tracks. (2)\n**Music creators** more broadly who maintain a GitHub-shaped\npublic web presence (devrel folks, indie-game developers,\nbedroom electronic producers with side-projects, AI\nresearchers releasing music under handles) and want a polished\nvisual surface for their Suno output. (3) **Engineers\nstudying the project as a worked example** of (a) extracting\na public clean repo from a larger internal monorepo,\n(b) sharing a single Valibot-validated parser kernel across\ntwo independent products (SunoStats + this), (c) the\nSVG `<foreignObject>` + CSS-keyframes technique for animated,\nCJK-safe SVG that pure SVG can't render.\n",
         "productLogic": "Two complementary usage paths. **Path 1 — Direct Embed (zero\nsetup).** A user pastes one Markdown line referencing the\nhosted card endpoint:\n`[![](https://github-readme-suno-cards.vercel.app/api/card?id=YOUR_SONG_ID)](https://suno.com/song/YOUR_SONG_ID)`.\nThe `id` parameter accepts **three normalized input formats**:\na raw UUID, a full `suno.com/song/<uuid>` URL, or a\n`suno.com/s/<shortcode>` short code — the parser canonicalises\nall three into a single internal ID. The hosted\n[`/builder`](https://github-readme-suno-cards.vercel.app/builder)\nvisual editor lets users preview the 12 base card\ncombinations (2 layouts × 2 presets × 3 themes), toggle 11\nelement flags, override individual colors with hex codes, and\ncopy out the resulting embed URL. **Path 2 — GitHub Action\nAuto-Sync.** A user adds `<!-- SUNO-CARDS:START -->` and\n`<!-- SUNO-CARDS:END -->` markers to their README, then drops\na workflow file at `.github/workflows/suno-cards.yml` with\n`uses: ChanMeng666/github-readme-suno-cards@v0.1` and a `cron`\ntrigger (typically every 6 hours). The Action takes any of\n**8 inputs** — `handle` (auto-discovery of all public songs\nfor a Suno creator), `manifest_path` (YAML file listing\nexplicit song IDs), `song_ids` (CSV alternative),\n`sort` (`created_at` / `play_count` / `upvote_count` /\n`name`), `max` (1–20), `include_tags`, `exclude_tags`,\nand `min_duration` / `max_duration` filters — fetches the\nmatched songs, sorts them, and surgically replaces only the\ncontent between the markers in the README. A companion\n`EndBug/add-and-commit@v9` step commits the diff. The two\npaths share the same parser + renderer so the cards look\nidentical regardless of origin path.\n",
-        "technicalApproach": "**pnpm monorepo** with three top-level workspaces: `apps/`\n(the Next.js 15.1 frontend), `packages/` (the two reusable\nkernels), and `action/` (the GitHub Marketplace Action). The\ntwo reusable packages are the architecturally important ones.\n**`@suno-cards/parser`** is a Valibot-validated parser for\nSuno's public oEmbed-style API surface\n(`studio-api-prod.suno.com`) — anonymous, CORS-enabled,\npublic-by-design endpoints that Suno advertises via the W3C\noEmbed protocol; no scraping, no auth, no rate-limit\nlandmines, no headless browsers. **Critical architectural\ndecision**: the same `@suno-cards/parser` package is **shared\nwith Chan's other Suno project, SunoStats** — Chan's separate\nanalytics SaaS for Suno creators\n([github.com/ChanMeng666/sunostats](https://github.com/ChanMeng666/sunostats)).\nExtracting the parser as a workspace package means a single\nValibot schema definition + a single typed-error hierarchy\n(`SunoNotFoundError`, `SunoNetworkError`, `SunoSchemaError`,\netc.) underwrites both products — fix a Suno API drift once,\nboth products benefit. **`@suno-cards/render`** is the pure-\nfunction SVG rendering engine — deterministic, cacheable,\nand platform-independent (Vercel Edge can serve it, the\nGitHub Action's Node 20 runner can also call it locally).\n**The defining rendering technique**: SVG `<foreignObject>`\ncarries inline HTML `<span>` elements so CJK text shapes\ncorrectly (SVG `<text>` doesn't), with **CSS `@keyframes`\nanimations** applied to those spans to drive the **animated\nequalizer bars** below the song info — a hybrid layout that\npure SVG can't produce cleanly because SVG's animation\nprimitives can't compose with proper rich-text shaping. The\nequalizer animation runs even inside GitHub's Camo proxy\n(which strips most interactivity) because CSS keyframes\nsurvive the SVG sanitization pass. **Two-level caching**:\nVercel Data Cache upstream (3600s TTL for single-card\nrequests) and HTTP `Cache-Control` headers downstream,\nletting GitHub's Camo proxy manage the SVG distribution\nlayer transparently. **GitHub Action build**:\n`action/build.ts` runs an esbuild bundle that emits a\n`dist/index.js` (Node 20 runtime) plus the `action.yml`\nmanifest with composite action metadata (icon: `music`,\ncolor: `purple`) — committed alongside the source so the\nAction consumes the bundled artifact directly, no install\nstep needed at workflow runtime. **Quality**: Biome 1.9\nfor lint + format, Vitest tests inside `action/test/`, CI\nvia GitHub Actions workflow.\n",
+        "technicalApproach": "**pnpm monorepo** with three top-level workspaces: `apps/`\n(the Next.js 15.1 frontend), `packages/` (the two reusable\nkernels), and `action/` (the GitHub Marketplace Action). The\ntwo reusable packages are the architecturally important ones.\n**`@suno-cards/parser`** is a Valibot-validated parser for\nSuno's public oEmbed-style API surface\n(`studio-api-prod.suno.com`) — anonymous, CORS-enabled,\npublic-by-design endpoints that Suno advertises via the W3C\noEmbed protocol; no scraping, no auth, no rate-limit\nlandmines, no headless browsers. **Critical architectural\ndecision**: the same `@suno-cards/parser` package is **shared\nwith Chan's other Suno project, SunoStats** — Chan's separate\nanalytics SaaS for Suno creators\n([sunostats.chanmeng.org](https://sunostats.chanmeng.org/)).\nExtracting the parser as a workspace package means a single\nValibot schema definition + a single typed-error hierarchy\n(`SunoNotFoundError`, `SunoNetworkError`, `SunoSchemaError`,\netc.) underwrites both products — fix a Suno API drift once,\nboth products benefit. **`@suno-cards/render`** is the pure-\nfunction SVG rendering engine — deterministic, cacheable,\nand platform-independent (Vercel Edge can serve it, the\nGitHub Action's Node 20 runner can also call it locally).\n**The defining rendering technique**: SVG `<foreignObject>`\ncarries inline HTML `<span>` elements so CJK text shapes\ncorrectly (SVG `<text>` doesn't), with **CSS `@keyframes`\nanimations** applied to those spans to drive the **animated\nequalizer bars** below the song info — a hybrid layout that\npure SVG can't produce cleanly because SVG's animation\nprimitives can't compose with proper rich-text shaping. The\nequalizer animation runs even inside GitHub's Camo proxy\n(which strips most interactivity) because CSS keyframes\nsurvive the SVG sanitization pass. **Two-level caching**:\nVercel Data Cache upstream (3600s TTL for single-card\nrequests) and HTTP `Cache-Control` headers downstream,\nletting GitHub's Camo proxy manage the SVG distribution\nlayer transparently. **GitHub Action build**:\n`action/build.ts` runs an esbuild bundle that emits a\n`dist/index.js` (Node 20 runtime) plus the `action.yml`\nmanifest with composite action metadata (icon: `music`,\ncolor: `purple`) — committed alongside the source so the\nAction consumes the bundled artifact directly, no install\nstep needed at workflow runtime. **Quality**: Biome 1.9\nfor lint + format, Vitest tests inside `action/test/`, CI\nvia GitHub Actions workflow.\n",
         "outcomes": "Live production service at\n[github-readme-suno-cards.vercel.app](https://github-readme-suno-cards.vercel.app)\nwith `/gallery` and `/builder` routes. The current public\nrepository is the **clean-extract** version — first commit\n`73f4fa8` *\"feat: initial commit — github-readme-suno-cards\nv0.1\"* on 2026-04-13, immediately followed by `295756e`\n*\"chore: clean remaining internal reference\"* (the\npost-extraction sanitization sweep). The actual product is\nolder inside the private origin monorepo where the parser\nwas first developed; the v0.1 extraction was the moment Chan\ncleaned it up and shipped it as a focused MIT-licensed\nopen-source release. Continuing iteration through 2026-04-21\n(latest commit `2f894c9`). **The shared parser kernel with\nSunoStats** (Chan's separate Suno analytics SaaS at\n[sunostats.chanmeng.org](https://sunostats.chanmeng.org)) is\nthe architecturally important outcome: rather than two\nindependent Suno API integrations drifting apart over time,\nthe two products are pinned to a single Valibot contract\nwith a single typed-error hierarchy. **Roadmap**: waveform\nlayout variants, lyrics-excerpt blocks, playlist cards,\nPNG export via `@resvg/resvg` for users who can't embed\nSVG directly.\n",
         "myRole": "Sole author across both the original private monorepo and\nthe public v0.1 extraction. Designed the pnpm monorepo\nsplit with the parser + renderer extracted as reusable\nworkspace packages; wrote the Valibot schemas against\nSuno's oEmbed API contract; designed the typed Suno error\nhierarchy; engineered the `<foreignObject>` + CSS-keyframes\nrendering technique that handles CJK text + animated\nequalizers in a single SVG; built the GitHub Marketplace\nAction with esbuild-bundled dist; designed the 8-input\nAction surface with three id-format normalization;\ndesigned the `<!-- SUNO-CARDS:START/END -->` marker-based\nsurgical README replacement; built the visual `/builder`\nUI with live preview over all 12 base combinations + 11\ntoggle flags + hex color overrides; executed the\n2026-04-13 public-extract release sequence (`73f4fa8` +\n`295756e`); coordinates parser updates across both this\nproject and the SunoStats sibling repo.\n"
       }
@@ -1965,7 +1956,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-04-07 (still maintained 18 months on)"
+          "value": "2026-06-05"
         },
         {
           "label": "Total commits",
@@ -2000,7 +1991,7 @@
       "startDate": "2024-11-25",
       "publicSummary": "A **formally published Chrome Web Store product** (extension ID\n`gdajdfngeonjmcclghkmeoacopnnfpnc`) — not a dev script, not a\nGitHub-only release: passed Google's full Chrome Web Store\nreview, with a vetted `PRIVACY.md`, an Apache-2.0 license that\nincludes a patent grant, and a **Manifest V3 manifest that\nretains the `webRequestBlocking` permission** despite V3's\nnarrowed permissioning model (the extension's network-intercept\nuse case justified it during review). The extension auto-detects\nTencent Meeting recording streams on the `*.myqcloud.com` CDN as\nthe user plays the video, then generates a ready-to-run `curl`\ncommand with the correct headers, problematic ones stripped, and\nWindows paths auto-rewritten to Git-Bash-compatible Unix paths.\nListed live in the Chrome Web Store with a live-from-store rating\nshield, **first committed Nov 25 2024** (5 days before\nAnthropic's MCP launch), **still maintained through April 2026**\nacross 24 solo commits and 2 tagged releases (v1.0.0 + v1.1.0).\nBuilt with Chrome Manifest V3 APIs (webRequest + webRequestBlocking\n+ storage + runtime messaging), JavaScript ES6+, Webpack 5, Babel.\n",
       "narrative": {
-        "impactHeadline": "Formally Chrome Web Store-published browser extension for downloading Tencent Meeting recordings — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted; still maintained 18 months after first ship.",
+        "impactHeadline": "Formally Chrome Web Store-published browser extension for downloading Tencent Meeting recordings — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted; maintained continuously since first ship in 2024.",
         "problem": "Tencent Meeting recordings live on the `myqcloud.com` CDN\nbehind a combination of authentication headers, referrer\nrequirements, and URL patterns that make manual download\nunusable for non-developers. Educators recording lectures,\nbusiness operators capturing client meetings, and content\ncreators producing interview material all routinely need a\nlocal copy of a Tencent Meeting recording — for accessibility\ncaptioning, archive retention, post-production editing, or\nrepublishing to a different distribution channel — but the\nofficial Tencent Meeting UI provides **no clean download\nbutton**, the underlying CDN URL is buried in the network\ntab in a non-obvious format, and ad-hoc `curl` attempts fail\nalmost universally because the CDN rejects requests missing\nthe right `referer`, `user-agent`, and `authority` headers.\nWorse, Chinese corporate environments standardised on Tencent\nMeeting tend to skew Windows-heavy with locked-down IT\npolicies that block desktop downloaders, leaving Git Bash as\nthe only practical Unix-shell access path — and Git Bash\nconsumes Unix-style paths, not Windows ones, which is yet\nanother conversion the average user gets wrong.\n",
         "audience": "The README explicitly names three primary user groups: (1)\n**educators** recording lectures who need persistent local\ncopies for re-use across cohorts; (2) **business professionals**\narchiving client meetings for compliance, follow-up review,\nor legal record-keeping; (3) **content creators** capturing\ninterviews, panels, and roundtables for post-production\nediting into long-form content. Secondary audience: any\nMandarin-speaking knowledge worker in a corporate environment\nstandardised on Tencent Meeting whose IT department blocks\ninstallation of desktop downloaders — Chrome extensions are\nnearly always installable from the Chrome Web Store even\nwhen local-admin install is restricted. The audience skew\nis reflected in the manifest's localized name\n(`腾讯会议录屏下载助手`) and the README's bilingual structure.\n",
         "productLogic": "The extension is **passive by default**. It sits silently in\nthe browser, the content script injects into pages under\n`*.meeting.tencent.com` and `*.myqcloud.com`, and the\nbackground service worker listens for streaming responses\nmatching the Tencent Meeting recording URL signature via the\n`webRequest` API. When the user plays a recording in the\nnormal Tencent Meeting UI, the extension captures the CDN\nURL, the auth headers, and the referer chain — invisibly. The\nuser then clicks the extension icon to open the popup, types\n(or pastes) a save path like `D:\\videos\\meeting.mp4`, and\nclicks \"Generate Command\". The popup produces a ready-to-run\n`curl` command with: (a) the correct authenticated URL, (b)\nonly the headers Tencent's CDN actually requires (problematic\nones that fail when re-issued outside the browser stripped),\n(c) the Windows path auto-rewritten to `/d/videos/meeting.mp4`\nfor Git Bash compatibility, (d) the `--compressed` flag for\ngzip-encoded streams, and (e) the `--output` flag pre-filled.\nThe user pastes that one line into Git Bash, hits Enter, and\nthe file downloads. **No URL extraction, no header guessing,\nno path conversion required from the user.**\n",
@@ -2102,7 +2093,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-04-21 (commit 4ee9829, still actively iterating)"
+          "value": "2026-06-12"
         },
         {
           "label": "Total commits",
@@ -2195,7 +2186,6 @@
       "priority": 11,
       "category": "ai-apps",
       "tagline": "8-agent CopilotKit + LangGraph women's-health companion (merged into CopilotKit's official demos_2025)",
-      "url": "https://femtracker-agent.vercel.app/",
       "repoUrl": "https://github.com/ChanMeng666/femtracker-agent",
       "logo": "/public/brands/femtracker.svg",
       "extraLinks": [
@@ -2218,7 +2208,7 @@
         "Supabase",
         "Redis"
       ],
-      "status": "live",
+      "status": "maintained",
       "publicSummary": "AI-powered women's-health companion built on CopilotKit and Python\nLangGraph, with **8 specialized agents** (Main Coordinator + Cycle\nTracker + Fertility Tracker + Symptom Mood + Nutrition Guide + Exercise\nCoach + Lifestyle Manager + Health Insights) coordinating through\nintelligent routing. WHO-standard health scoring (0-100 metric scales),\nRedis caching with reported 90%+ hit rates, Supabase PostgreSQL\npersistence. Merged into CopilotKit's official `demos_2025` showcase\nvia [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)\n(publicly thanked by maintainer Tyler Slaton).\n",
       "narrative": {
         "impactHeadline": "8-agent women's-health companion merged into CopilotKit's official demos_2025 — intelligent routing across specialists, WHO-standard scoring, 90%+ Redis cache hit rates, publicly thanked by CopilotKit maintainers as a reference implementation.",
@@ -2226,7 +2216,7 @@
         "audience": "Health-conscious women managing cycle-related symptoms,\nplanning conception, or pursuing holistic wellness — and the\nsecondary audience of agent-framework practitioners studying\nwhat production-grade multi-agent coordination looks like\nunder HIPAA-aligned constraints. CopilotKit's maintainers\nthemselves are an audience: the project shipped into their\nofficial `demos_2025` showcase.\n",
         "productLogic": "Single conversational surface (CopilotKit) routes the user's\nintent to one of eight specialised agents: **Main Coordinator**\n+ **Cycle Tracker** + **Fertility Tracker** + **Symptom Mood**\n+ **Nutrition Guide** + **Exercise Coach** + **Lifestyle\nManager** + **Health Insights**. Each agent has its own\ndomain logic and prompt scaffolding but shares the same\nSupabase-backed user model, so a question that crosses two\ndomains (\"am I dehydrated today?\", which touches nutrition +\ncycle + exercise) gets routed through the Coordinator and\nanswered with WHO-standard scoring rather than three\ndisconnected guesses.\n",
         "technicalApproach": "The architectural bet is **CopilotKit on the frontend +\nLangGraph on the backend**, communicating through a CopilotKit\nruntime adapter. Next.js 15 + React 19 + TypeScript on the\nfrontend; Python 3.12 + LangGraph for agent orchestration;\nSupabase PostgreSQL with **Row Level Security** for\nprivacy-preserving multi-tenant persistence; Redis caching\nachieving 90%+ hit rates on hot read paths. The health-scoring\nengine implements WHO-standard algorithms across six dimensions:\nexercise (150 min/week benchmark), hydration (2 000 mL daily),\ncycle regularity (21–35 day window), mood patterns, lifestyle\nfactors, fertility indicators — each 0–100, composited into\nactionable insights. Codebase is 83.2% TypeScript for type\nsafety in a medical-domain product.\n",
-        "outcomes": "**Merged into CopilotKit's official `demos_2025` showcase**\nvia [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068),\npublicly thanked by maintainer Tyler Slaton — external\nrecognition of production-grade quality from the framework's\nown maintainers, not just a self-published demo. Live demo at\nfemtracker-agent.vercel.app: reported 95+ Lighthouse score,\nsub-second TTFB, 99.9% uptime. Demo video at the linked YouTube\nURL. 90 sustained commits.\n",
+        "outcomes": "**Merged into CopilotKit's official `demos_2025` showcase**\nvia [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068),\npublicly thanked by maintainer Tyler Slaton — external\nrecognition of production-grade quality from the framework's\nown maintainers, not just a self-published demo. While the demo deployment was live at\nfemtracker-agent.vercel.app it reported 95+ Lighthouse score,\nsub-second TTFB, 99.9% uptime. Demo video at the linked YouTube\nURL. 90 sustained commits.\n",
         "myRole": "Sole author of the agent architecture, the WHO-scoring engine,\nthe Supabase schema with Row Level Security, and the CopilotKit\nruntime adapter. Drove the project into CopilotKit's official\ndemo set — a path that required not just shipping but\ndemonstrating reference-implementation-grade quality to a\nthird-party maintainer team.\n"
       }
     },
@@ -2240,7 +2230,6 @@
       "category": "web-apps",
       "tagline": "Bilingual editorial + event platform for China's first women's health-tech organisation; carries the 2026 Shanghai Summit",
       "url": "https://www.femtechweekend.com/",
-      "repoUrl": "https://github.com/ChanMeng666/femtech-weekend-website",
       "techStack": [
         "Docusaurus",
         "React",
@@ -2442,7 +2431,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-04-07 (still maintained)"
+          "value": "2026-06-05"
         },
         {
           "label": "Access tiers",
@@ -2522,7 +2511,6 @@
       "priority": 16,
       "category": "web-apps",
       "tagline": "One Cloudflare Worker serving four surfaces over a single backend — a React SPA for humans who click-and-type, plus three identical-power agent surfaces (HTTP API at `/api/*` with OpenAPI 3.1 + Scalar docs at `/docs`, MCP Streamable HTTP at `/mcp` with 11 locked tools mirroring the HTTP routes 1:1, and an `lja` CLI on npm mirroring the MCP names 1:1). Every operation a human can do by clicking, an AI agent can do by HTTP call, MCP tool, or CLI invocation, with full feature parity and a unified `lja_*` API key.",
-      "repoUrl": "https://github.com/ChanMeng666/linkedin-jobs-search",
       "logo": "/public/brands/linkedin-jobs-search-logo.svg",
       "url": "https://linkedin-jobs-search.chanmeng-dev.workers.dev/",
       "demoUrl": "https://linkedin-jobs-search.chanmeng-dev.workers.dev/",
@@ -2555,30 +2543,6 @@
         {
           "label": "lja CLI on npm",
           "url": "https://www.npmjs.com/package/@chanmeng666/linkedin-jobs-search-cli"
-        },
-        {
-          "label": "Agent surface commit (A.6 MCP / A.7 CLI)",
-          "url": "https://github.com/ChanMeng666/linkedin-jobs-search/commit/a288e25...e7c34d6"
-        },
-        {
-          "label": "OpenAPI migration commit (A.5)",
-          "url": "https://github.com/ChanMeng666/linkedin-jobs-search/commit/3aec6ce...4eaced3"
-        },
-        {
-          "label": "Pulumi IaC + CrossGuard commit (sub-C)",
-          "url": "https://github.com/ChanMeng666/linkedin-jobs-search/commits/main/infra"
-        },
-        {
-          "label": "Test infra commit (sub-F: node --test + contract suite)",
-          "url": "https://github.com/ChanMeng666/linkedin-jobs-search/blob/main/worker/contract.test.ts"
-        },
-        {
-          "label": "Sub-project specs & plans (docs/superpowers/)",
-          "url": "https://github.com/ChanMeng666/linkedin-jobs-search/tree/main/docs/superpowers"
-        },
-        {
-          "label": "Migration: Vercel → Cloudflare Workers",
-          "url": "https://github.com/ChanMeng666/linkedin-jobs-search/blob/main/docs/MIGRATION_GUIDE_VERCEL_TO_CLOUDFLARE.md"
         }
       ],
       "techStack": [
@@ -2728,7 +2692,6 @@
       "category": "web-apps",
       "tagline": "Solo-built (97.2% of 544 commits across ~1 year) Gen-2 platform for\nFemTech Weekend — China's first women's-health-technology\norganisation, founded 2024 by Zhu Yihan in Chengdu. Docusaurus 3.9\neditorial spine + Drizzle ORM on Neon serverless Postgres for form\ndata + 15 Cloudflare Pages Functions (~3,800 LOC) for the entire\nserver side, deployed on Cloudflare Pages for low-latency\ncross-border edge delivery. Currently powering Shanghai Summit 2026\n(June 22-25, 16 confirmed speakers headlined by Ida Tin — Clue\nco-founder who coined the term \"FemTech\" in 2016): 10-section\nsummit homepage + 3 sub-pages, 4 application pipelines\n(programme/speaker/pitch/ecosystem) writing to typed Postgres\ntables, double-opt-in newsletter wired to a Resend segment, admin\ndashboard with batch review + brand-styled approval/rejection email\nautomation, Gemini-powered chatbot, bilingual EN/简体中文 across\nevery surface.\n",
       "url": "https://www.femtechweekend.com/",
-      "repoUrl": "https://github.com/ChanMeng666/femtech-weekend-website",
       "extraLinks": [
         {
           "label": "Shanghai Summit 2026",
@@ -2933,7 +2896,6 @@
       "category": "web-apps",
       "tagline": "Solo-built freelance commission under signed\n4 May 2026 agreement with Chow Luck Club Ltd; PM Armand Bentigan)\nfor the official `eatropolis.co.nz` event website — Auckland's\none-day culinary festival on **2026-10-10 at Shed 10, Queens\nWharf, Tāmaki Makaurau**, featuring **30+ award-winning chefs**.\nProduction-grade in the literal contract sense: 9-day intensive\nbuild with two-phase public reveal schedule (Phase 1 teaser\n2026-05-22, Phase 2 full site 2026-06-05), engineered to handle\n**1,000 concurrent visitors** under k6 load testing per contract,\nhardened for the **NZ Government Web Accessibility Standard 1.2\n(WCAG 2.2 AA)** with **Tātaki Auckland Unlimited (TAU)** review\ngates, deployed to **Cloudflare Workers via OpenNext** (the\nofficial 2026 Next.js-on-Cloudflare path, not the legacy Pages\nadapter), with Resend (DKIM/SPF/DMARC live, mail-tester 10/10),\nstreaming OpenAI chat + Whisper + TTS gated behind Cloudflare\nTurnstile + KV per-IP rate-limit, GA4 + CF Web Analytics behind\na NZ Privacy Act 2020-compliant cookie banner, and a **GitHub-\nas-CMS** content workflow with one-click `✏️` Web-Editor links so\nthe non-technical client edits MDX + JSON directly in the browser.\n",
       "url": "https://eatropolis.co.nz/",
-      "repoUrl": "https://github.com/Chow-Luck-Club/eatropolis-website",
       "extraLinks": [
         {
           "label": "Phase 1 coming-soon landing",
@@ -3426,7 +3388,6 @@
       "category": "web-apps",
       "tagline": "Closed a gap in Suno's official platform that creators couldn't fix themselves — discovered that Suno's serializer leaks unredacted parent->child lineage UUIDs only on /api/trending + persona sub-trees, built the industry's first public Suno lineage explorer on that finding. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.",
       "url": "https://sunostats.chanmeng.org/",
-      "repoUrl": "https://github.com/ChanMeng666/sunostats",
       "logo": "/public/brands/sunostats-logo.svg",
       "extraLinks": [
         {
@@ -3440,14 +3401,6 @@
         {
           "label": "Data sources & compliance",
           "url": "https://sunostats.chanmeng.org/legal/data-sources"
-        },
-        {
-          "label": "Init commit (2026-04-12)",
-          "url": "https://github.com/ChanMeng666/sunostats/commit/f2f9f80"
-        },
-        {
-          "label": "Architecture docs",
-          "url": "https://github.com/ChanMeng666/sunostats/blob/master/docs/architecture.md"
         }
       ],
       "techStack": [
@@ -3971,7 +3924,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-04-21 (ca5c63e, brand-logo refresh)"
+          "value": "2026-06-05"
         },
         {
           "label": "Development span",
@@ -4321,7 +4274,6 @@
       "name": "The Birth of Leviathan",
       "priority": 71,
       "category": "games",
-      "repoUrl": "https://github.com/ChanMeng666/leviathan",
       "url": "https://leviathan-client.vercel.app/",
       "status": "live"
     },
@@ -4572,7 +4524,6 @@
       "priority": 28,
       "category": "web-apps",
       "tagline": "Commercial AI-powered English learning platform — Crimson Education US partnership; Next.js 15 + CopilotKit + OpenAI Realtime API",
-      "url": "https://nzcel-prep.vercel.app/",
       "logo": "/public/brands/nzcel-prep-logo.svg",
       "techStack": [
         "Next.js 15",
@@ -4582,7 +4533,7 @@
       "narrative": {
         "impactHeadline": "Commercial AI-powered English-language prep for the NZ Certificate in English Language (NZCEL) — Crimson Education US partnership built on Next.js 15 + CopilotKit + OpenAI Realtime API for spoken-conversation practice."
       },
-      "status": "live"
+      "status": "archived"
     },
     {
       "id": "forward-with-her-website",
@@ -4721,7 +4672,6 @@
       "category": "ai-apps",
       "tagline": "Personal site at chanmeng.org powering an 11-stage AI newsletter pipeline + IBM Watson digital twin",
       "url": "https://chanmeng.org/",
-      "repoUrl": "https://github.com/ChanMeng666/2d-portfolio",
       "logo": "/public/brands/portfolio.svg",
       "extraLinks": [
         {
@@ -4731,14 +4681,6 @@
         {
           "label": "Blog",
           "url": "https://chanmeng.org/blog"
-        },
-        {
-          "label": "Newsletter workflow",
-          "url": "https://github.com/ChanMeng666/2d-portfolio/blob/main/.github/workflows/ai-newsletter.yml"
-        },
-        {
-          "label": "Pipeline source",
-          "url": "https://github.com/ChanMeng666/2d-portfolio/blob/main/scripts/ai-newsletter.ts"
         }
       ],
       "techStack": [
@@ -4907,7 +4849,6 @@
       "category": "ai-apps",
       "tagline": "AI-powered hospital staff scheduling — Next.js + CopilotKit interactive calendar with natural-language operations",
       "repoUrl": "https://github.com/ChanMeng666/hospital-roster-agent",
-      "url": "https://roster.chanmeng.org/",
       "logo": "/public/brands/hospital-roster-agent-logo.svg",
       "techStack": [
         "Next.js",
@@ -4917,7 +4858,7 @@
       "narrative": {
         "impactHeadline": "AI-powered hospital staff scheduling — Next.js + CopilotKit interactive calendar where natural-language commands (e.g. 'move Smith's Tuesday shift to Wednesday') drive the underlying schedule, demonstrating agentic UI patterns for healthcare."
       },
-      "status": "live"
+      "status": "archived"
     },
     {
       "id": "design-pages",
@@ -4985,13 +4926,12 @@
       "category": "web-apps",
       "tagline": "Next.js quantitative job-evaluation tool — assess current roles across 10 dimensions (time, skill match, compensation, growth, environment)",
       "repoUrl": "https://github.com/ChanMeng666/job-valuation",
-      "url": "https://job-valuation.vercel.app/",
       "logo": "/public/brands/job-valuation.svg",
       "techStack": [
         "Next.js",
         "TypeScript"
       ],
-      "status": "live"
+      "status": "archived"
     },
     {
       "id": "flip-book-template",
@@ -5077,14 +5017,12 @@
       "priority": 41,
       "category": "web-apps",
       "tagline": "Next.js 14 personal introduction site — responsive bento-grid layout with elegant animations",
-      "repoUrl": "https://github.com/ChanMeng666/who-i-am",
-      "url": "https://who-i-am-nine.vercel.app/",
       "logo": "/public/brands/who-i-am.svg",
       "techStack": [
         "Next.js 14",
         "TypeScript"
       ],
-      "status": "live"
+      "status": "archived"
     },
     {
       "id": "douban-elite-scraper",
@@ -7692,6 +7630,7 @@
           "relationship": "Driving Business Transformation | Building Better Communities | Investor | She Sharp Mentor | AI Evangelist | Storyteller; fellow She Sharp Ambassador / mentor alongside Chan supporting women in STEM",
           "linkedinRelationship": "Worked with Chan on the same team",
           "givenAt": "2026-05-28",
+          "linkedinUrl": "https://www.linkedin.com/in/prasanth-pavithran-mba-a54ab912/",
           "image": "/public/recommendations/Prasanth-Pavithran.jpg"
         }
       }
@@ -8307,7 +8246,7 @@
         "自在月行",
         "FreePeriod (HKUST-GZ)"
       ],
-      "url": "https://www.freeperiod.org",
+      "url": "https://www.linkedin.com/company/free-period/",
       "logo": "/public/organizations/free-period-logo.png",
       "type": "nonprofit",
       "industry": "Public Health — period-equity hardware",
@@ -9183,6 +9122,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-06-12",
     "buildYear": "2026",
-    "buildTimestamp": "2026-06-12T05:19:35.405Z"
+    "buildTimestamp": "2026-06-12T05:39:02.886Z"
   }
 }

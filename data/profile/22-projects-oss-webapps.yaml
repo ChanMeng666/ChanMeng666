@@ -21,7 +21,7 @@ projects:
     category: web-apps
     tagline: Bilingual editorial + event platform for China's first women's health-tech organisation; carries the 2026 Shanghai Summit
     url: https://www.femtechweekend.com/
-    repoUrl: https://github.com/ChanMeng666/femtech-weekend-website
+    # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     techStack: [Docusaurus, React, TypeScript, Drizzle ORM, Neon Postgres, Notion API, Cloudflare Pages, Tailwind CSS, Radix UI, earth-flyline]
     narrative:
       impactHeadline: "Bilingual editorial + event platform for FemTech Weekend — China's first women's-health-tech organisation; the historical production codebase that carried the org's events before the Docusaurus Gen-2 rewrite for editorial focus."
@@ -106,7 +106,7 @@ projects:
       - { label: "Stripe price-ID DB fix",      value: "2026-03-05 commit 85b6244: 'read Stripe price IDs from database instead of env vars'" }
       - { label: "Supabase keep-alive",         value: "2025-12-31 commit 17344d6 + 2026-01-25 commit 64b03d0 (prevent 7-day free-tier auto-pause)" }
       - { label: "Total commits",               value: "80 across 18 months (solo, plus 2 Vercel CVE-patch PRs auto-applied)" }
-      - { label: "Latest commit",               value: "2026-04-07 (still maintained)" }
+      - { label: "Latest commit",               value: "2026-06-05" }
       - { label: "Access tiers",                value: "4 (Free / Basic / Pro / Enterprise + a deliberate Africa-friendly accessibility tier)" }
       - { label: "Role hierarchy",              value: "4 (Owner/Admin/Librarian/Member with granular permission matrix)" }
       - { label: "Free-tier quotas",            value: "100 books, 5 users, 3 loans/user (higher tiers scale to unlimited)" }
@@ -355,7 +355,7 @@ projects:
     priority: 16
     category: web-apps
     tagline: One Cloudflare Worker serving four surfaces over a single backend — a React SPA for humans who click-and-type, plus three identical-power agent surfaces (HTTP API at `/api/*` with OpenAPI 3.1 + Scalar docs at `/docs`, MCP Streamable HTTP at `/mcp` with 11 locked tools mirroring the HTTP routes 1:1, and an `lja` CLI on npm mirroring the MCP names 1:1). Every operation a human can do by clicking, an AI agent can do by HTTP call, MCP tool, or CLI invocation, with full feature parity and a unified `lja_*` API key.
-    repoUrl: https://github.com/ChanMeng666/linkedin-jobs-search
+    # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     logo: /public/brands/linkedin-jobs-search-logo.svg
     url: https://linkedin-jobs-search.chanmeng-dev.workers.dev/
     demoUrl: https://linkedin-jobs-search.chanmeng-dev.workers.dev/
@@ -368,12 +368,6 @@ projects:
       - { label: "OpenAPI 3.1 JSON",          url: "https://linkedin-jobs-search.chanmeng-dev.workers.dev/openapi.json" }
       - { label: "Agent contract llms.txt",   url: "https://linkedin-jobs-search.chanmeng-dev.workers.dev/llms.txt" }
       - { label: "lja CLI on npm",            url: "https://www.npmjs.com/package/@chanmeng666/linkedin-jobs-search-cli" }
-      - { label: "Agent surface commit (A.6 MCP / A.7 CLI)", url: "https://github.com/ChanMeng666/linkedin-jobs-search/commit/a288e25...e7c34d6" }
-      - { label: "OpenAPI migration commit (A.5)", url: "https://github.com/ChanMeng666/linkedin-jobs-search/commit/3aec6ce...4eaced3" }
-      - { label: "Pulumi IaC + CrossGuard commit (sub-C)", url: "https://github.com/ChanMeng666/linkedin-jobs-search/commits/main/infra" }
-      - { label: "Test infra commit (sub-F: node --test + contract suite)", url: "https://github.com/ChanMeng666/linkedin-jobs-search/blob/main/worker/contract.test.ts" }
-      - { label: "Sub-project specs & plans (docs/superpowers/)", url: "https://github.com/ChanMeng666/linkedin-jobs-search/tree/main/docs/superpowers" }
-      - { label: "Migration: Vercel → Cloudflare Workers", url: "https://github.com/ChanMeng666/linkedin-jobs-search/blob/main/docs/MIGRATION_GUIDE_VERCEL_TO_CLOUDFLARE.md" }
     techStack:
       - "Cloudflare Workers (single Worker, single entrypoint `worker/index.ts`)"
       - "Hono 4 + `@hono/zod-openapi` (every `/api/*` route is `OpenAPIHono` + `createRoute`)"
@@ -488,7 +482,7 @@ projects:
       automation, Gemini-powered chatbot, bilingual EN/简体中文 across
       every surface.
     url: https://www.femtechweekend.com/
-    repoUrl: https://github.com/ChanMeng666/femtech-weekend-website
+    # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     extraLinks:
       - { label: "Shanghai Summit 2026", url: "https://www.femtechweekend.com/shanghai-summit" }
       - { label: "FemTech Market Map for Greater China (report)", url: "https://www.femtechweekend.com/blog/femtech-market-map-greater-china-2025" }
@@ -941,7 +935,7 @@ projects:
       as-CMS** content workflow with one-click `✏️` Web-Editor links so
       the non-technical client edits MDX + JSON directly in the browser.
     url: https://eatropolis.co.nz/
-    repoUrl: https://github.com/Chow-Luck-Club/eatropolis-website
+    # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     extraLinks:
       - { label: "Phase 1 coming-soon landing", url: "https://eatropolis.co.nz/coming-soon" }
       - { label: "Client — Chow Luck Club", url: "https://chowluckclub.com/" }
@@ -1868,14 +1862,12 @@ projects:
     category: web-apps
     tagline: Closed a gap in Suno's official platform that creators couldn't fix themselves — discovered that Suno's serializer leaks unredacted parent->child lineage UUIDs only on /api/trending + persona sub-trees, built the industry's first public Suno lineage explorer on that finding. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.
     url: https://sunostats.chanmeng.org/
-    repoUrl: https://github.com/ChanMeng666/sunostats
+    # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     logo: /public/brands/sunostats-logo.svg
     extraLinks:
       - { label: "Live app",                url: "https://sunostats.chanmeng.org/" }
       - { label: "Public trending (no auth)", url: "https://sunostats.chanmeng.org/trending" }
       - { label: "Data sources & compliance", url: "https://sunostats.chanmeng.org/legal/data-sources" }
-      - { label: "Init commit (2026-04-12)",  url: "https://github.com/ChanMeng666/sunostats/commit/f2f9f80" }
-      - { label: "Architecture docs",         url: "https://github.com/ChanMeng666/sunostats/blob/master/docs/architecture.md" }
     techStack:
       - "Next.js 16.2 (App Router, Webpack pin)"
       - "React 19.2"

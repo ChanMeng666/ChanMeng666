@@ -32,6 +32,10 @@ const EXTERNAL_REFERENCES = new Set([
   // PDF's alternate links and by recruiter LLMs — not orphan assets.
   "/public/cv.jsonld",
   "/public/cv-llms.txt",
+  // Brand photo library — kept on purpose for future surfaces (covers,
+  // social cards), not currently referenced from any rendered output.
+  "/public/photos/chan-by-the-tree.jpg",
+  "/public/photos/chanmeng-portrait-2026.jpg",
 ]);
 
 const referenced = new Set(EXTERNAL_REFERENCES);
@@ -63,7 +67,7 @@ if (brand) walk(brand);
 // (e.g. hero logo) and dynamically-composed paths (e.g. cert-issuer logos
 // keyed by category) without needing the audit to understand template logic.
 // This requires `npm run build` to have run first; `npm run check` does that.
-const renderedOutputs = ["README.md", "llms.txt", "llms-full.txt", "dist/profile.json"];
+const renderedOutputs = ["README.md", "llms.txt", "llms-full.txt", "dist/profile.json", "public/brand-system.html"];
 for (const rel of renderedOutputs) {
   const abs = path.join(repoRoot, rel);
   if (!fs.existsSync(abs)) continue;

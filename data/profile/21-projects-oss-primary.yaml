@@ -30,7 +30,7 @@ projects:
       - { label: "Visual builder",       url: "https://github-readme-suno-cards.vercel.app/builder" }
       - { label: "Public v0.1 commit",   url: "https://github.com/ChanMeng666/github-readme-suno-cards/commit/73f4fa8" }
       - { label: "Internal-ref cleanup", url: "https://github.com/ChanMeng666/github-readme-suno-cards/commit/295756e" }
-      - { label: "Companion: SunoStats", url: "https://github.com/ChanMeng666/sunostats" }
+      - { label: "Companion: SunoStats (live app)", url: "https://sunostats.chanmeng.org/" }
     techStack:
       - "pnpm 9.12 monorepo (apps/ + packages/ + action/)"
       - "Next.js 15.1 (Vercel Edge runtime)"
@@ -60,7 +60,7 @@ projects:
     metrics:
       - { label: "Public v0.1 commit",    value: "2026-04-13 (commit 73f4fa8 — 'initial commit github-readme-suno-cards v0.1', extracted as a clean public-facing repo)" }
       - { label: "Internal cleanup",      value: "2026-04-13 commit 295756e — 'clean remaining internal reference' (post-extraction sanitization)" }
-      - { label: "Latest commit",         value: "2026-04-21 (2f894c9, still iterating ~1 month in)" }
+      - { label: "Latest commit",         value: "2026-06-05" }
       - { label: "Total commits",         value: "21 (solo, public history; the underlying renderer is older inside the private origin repo)" }
       - { label: "Live service",          value: "https://github-readme-suno-cards.vercel.app (Vercel Edge runtime)" }
       - { label: "GitHub Action",         value: "uses: ChanMeng666/github-readme-suno-cards@v0.1 (composite action, 'music' icon, purple branding)" }
@@ -178,7 +178,7 @@ projects:
         decision**: the same `@suno-cards/parser` package is **shared
         with Chan's other Suno project, SunoStats** — Chan's separate
         analytics SaaS for Suno creators
-        ([github.com/ChanMeng666/sunostats](https://github.com/ChanMeng666/sunostats)).
+        ([sunostats.chanmeng.org](https://sunostats.chanmeng.org/)).
         Extracting the parser as a workspace package means a single
         Valibot schema definition + a single typed-error hierarchy
         (`SunoNotFoundError`, `SunoNetworkError`, `SunoSchemaError`,
@@ -707,7 +707,7 @@ projects:
     metrics:
       - { label: "Chrome Web Store ID",   value: "gdajdfngeonjmcclghkmeoacopnnfpnc" }
       - { label: "First commit",          value: "2024-11-25 (predates MCP public launch by 5 days)" }
-      - { label: "Latest commit",         value: "2026-04-07 (still maintained 18 months on)" }
+      - { label: "Latest commit",         value: "2026-06-05" }
       - { label: "Total commits",         value: "24 (solo)" }
       - { label: "Tagged releases",       value: "2 (v1.0.0, v1.1.0)" }
       - { label: "License",               value: "Apache-2.0 (includes patent grant)" }
@@ -737,7 +737,7 @@ projects:
       Built with Chrome Manifest V3 APIs (webRequest + webRequestBlocking
       + storage + runtime messaging), JavaScript ES6+, Webpack 5, Babel.
     narrative:
-      impactHeadline: "Formally Chrome Web Store-published browser extension for downloading Tencent Meeting recordings — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted; still maintained 18 months after first ship."
+      impactHeadline: "Formally Chrome Web Store-published browser extension for downloading Tencent Meeting recordings — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted; maintained continuously since first ship in 2024."
       problem: |
         Tencent Meeting recordings live on the `myqcloud.com` CDN
         behind a combination of authentication headers, referrer
@@ -927,7 +927,7 @@ projects:
     metrics:
       - { label: "Internal product name",    value: "Chromaflow (package.json) — public URL retains the descriptive 'gradient-svg-generator' for discoverability" }
       - { label: "First commit",             value: "2025-01-06 (commit 782c6f1)" }
-      - { label: "Latest commit",            value: "2026-04-21 (commit 4ee9829, still actively iterating)" }
+      - { label: "Latest commit",            value: "2026-06-12" }
       - { label: "Total commits",            value: "273 (solo, ~18 months sustained)" }
       - { label: "Template count",           value: "340+ across 16 categories (Pride 20, Tech, Nature, Material, Text-FX, Gaming, Weather 12, Light&Shadow 12, Art Movements 12, Culinary 12, Patterns 8, Metallic 8, Path-Text 12, Shapes 25, Experimental 29, GitHub-Profile 30)" }
       - { label: "Refactor phases",          value: "4 documented phases (5: extract svgPrimitives factory + _shared/palettes; 6: truth-up-marketing-numbers + docs/architecture.md; 7: JS->TS migration + Zod validation; 8: gallery virtualization)" }
@@ -1179,14 +1179,13 @@ projects:
     priority: 11
     category: ai-apps
     tagline: 8-agent CopilotKit + LangGraph women's-health companion (merged into CopilotKit's official demos_2025)
-    url: https://femtracker-agent.vercel.app/
     repoUrl: https://github.com/ChanMeng666/femtracker-agent
     logo: /public/brands/femtracker.svg
     extraLinks:
       - { label: "Demo video", url: "https://youtu.be/VVCQKmeEtRs" }
       - { label: "CopilotKit PR #2068", url: "https://github.com/CopilotKit/CopilotKit/pull/2068" }
     techStack: ["Next.js 15", "React 19", TypeScript, CopilotKit, "Python 3.12", LangGraph, Supabase, Redis]
-    status: live
+    status: maintained
     publicSummary: |
       AI-powered women's-health companion built on CopilotKit and Python
       LangGraph, with **8 specialized agents** (Main Coordinator + Cycle
@@ -1247,8 +1246,8 @@ projects:
         via [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068),
         publicly thanked by maintainer Tyler Slaton — external
         recognition of production-grade quality from the framework's
-        own maintainers, not just a self-published demo. Live demo at
-        femtracker-agent.vercel.app: reported 95+ Lighthouse score,
+        own maintainers, not just a self-published demo. While the demo deployment was live at
+        femtracker-agent.vercel.app it reported 95+ Lighthouse score,
         sub-second TTFB, 99.9% uptime. Demo video at the linked YouTube
         URL. 90 sustained commits.
       myRole: |

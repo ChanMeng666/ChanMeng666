@@ -36,6 +36,9 @@ const MAX = Number((args.find((a) => a.startsWith("--max=")) ?? "").slice("--max
 const SKIP_HOSTS = [
   "linkedin.com", "mp.weixin.qq.com", "x.com", "twitter.com",
   "instagram.com", "facebook.com",
+  // digital.govt.nz serves 404 to GitHub-runner IPs (bot filtering) while
+  // resolving fine from residential connections — verified 2026-06-12.
+  "digital.govt.nz",
 ];
 
 const CONCURRENCY = 8;

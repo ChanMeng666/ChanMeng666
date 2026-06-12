@@ -65,10 +65,16 @@ const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); 
 
 // Documentation placeholders are not links — e.g. the Suno-cards usage example
 // `https://suno.com/song/YOUR_SONG_ID`. Skip anything with an obvious
-// ALL_CAPS placeholder token or an <angle-bracket> template segment.
+// ALL_CAPS placeholder token or an <angle-bracket> template segment, and
+// internal/non-public hostnames quoted in technical narratives (no dot, e.g.
+// Docker Compose service names like `http://agent:8123`, or localhost).
 const isPlaceholder = (u) => /YOUR_[A-Z_]+|<[A-Za-z_-]+>|\.\.\./.test(u);
+const isInternal = (u) => {
+  const h = hostOf(u);
+  return !h.includes(".") || h === "localhost" || /^\d+\.\d+\.\d+\.\d+$/.test(h);
+};
 
-let urls = [...occurrences.keys()].filter((u) => !isPlaceholder(u));
+let urls = [...occurrences.keys()].filter((u) => !isPlaceholder(u) && !isInternal(u));
 const skipped = urls.filter((u) => SKIP_HOSTS.some((h) => hostOf(u) === h || hostOf(u).endsWith("." + h)));
 urls = urls.filter((u) => !skipped.includes(u));
 if (HOST_FILTER) urls = urls.filter((u) => hostOf(u).includes(HOST_FILTER));

@@ -46,7 +46,7 @@ const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 // Extract URLs from raw shard text
 // ---------------------------------------------------------------------------
 
-const URL_RE = /https?:\/\/[^\s"'<>\\)\]},|]+/g;
+const URL_RE = /https?:\/\/[^\s"'`<>\\)\]},|*]+/g;
 const occurrences = new Map(); // url -> [{ file, line }]
 
 for (const file of listShardFiles()) {

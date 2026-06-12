@@ -493,17 +493,21 @@ openSourceContributions:
   - id: mcp-linkedin-2-with-requirement
     tier: archive
     recency: historical
-    lastUpdated: "2026-05-26"
+    lastUpdated: "2026-06-12"
     repo: adhikasp/mcp-linkedin
-    repoUrl: https://github.com/adhikasp/mcp-linkedin
+    # Upstream repo was DELETED from GitHub (confirmed 2026-06-12; original
+    # https://github.com/adhikasp/mcp-linkedin now 404s even authenticated).
+    # repoUrl points at the closest Wayback snapshot; the issue page itself
+    # (issues/2) has no snapshot, so its link points at the same archive.
+    repoUrl: https://web.archive.org/web/20260525191019/https://github.com/adhikasp/mcp-linkedin
     type: issue
     number: 2
-    url: https://github.com/adhikasp/mcp-linkedin/issues/2
+    url: https://web.archive.org/web/20260525191019/https://github.com/adhikasp/mcp-linkedin
     title: "Failed to resolve --with requirement error when starting MCP server"
     state: open
     date: "2024-12-31"
     category: bug-report
-    summary: Reported a `uv --with` requirement-resolution failure when starting the mcp-linkedin server.
+    summary: Reported a `uv --with` requirement-resolution failure when starting the mcp-linkedin server. Upstream repo has since been deleted; links point at the Wayback snapshot.
     impact: 4 comments — substantive back-and-forth with maintainer.
     comments: 4
 

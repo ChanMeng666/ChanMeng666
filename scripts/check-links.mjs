@@ -63,7 +63,12 @@ for (const file of listShardFiles()) {
 
 const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } };
 
-let urls = [...occurrences.keys()];
+// Documentation placeholders are not links — e.g. the Suno-cards usage example
+// `https://suno.com/song/YOUR_SONG_ID`. Skip anything with an obvious
+// ALL_CAPS placeholder token or an <angle-bracket> template segment.
+const isPlaceholder = (u) => /YOUR_[A-Z_]+|<[A-Za-z_-]+>|\.\.\./.test(u);
+
+let urls = [...occurrences.keys()].filter((u) => !isPlaceholder(u));
 const skipped = urls.filter((u) => SKIP_HOSTS.some((h) => hostOf(u) === h || hostOf(u).endsWith("." + h)));
 urls = urls.filter((u) => !skipped.includes(u));
 if (HOST_FILTER) urls = urls.filter((u) => hostOf(u).includes(HOST_FILTER));

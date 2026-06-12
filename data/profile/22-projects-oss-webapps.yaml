@@ -491,8 +491,8 @@ projects:
     repoUrl: https://github.com/ChanMeng666/femtech-weekend-website
     extraLinks:
       - { label: "Shanghai Summit 2026", url: "https://www.femtechweekend.com/shanghai-summit" }
-      - { label: "FemTech Market Map for Greater China (report)", url: "https://www.femtechweekend.com/blog/femtech-market-map-greater-china" }
-      - { label: "FemmeHealth Ventures Alliance (partnership)", url: "https://www.femtechweekend.com/blog/femmehealth-ventures-alliance" }
+      - { label: "FemTech Market Map for Greater China (report)", url: "https://www.femtechweekend.com/blog/femtech-market-map-greater-china-2025" }
+      - { label: "FemmeHealth Ventures Alliance (partnership)", url: "https://www.femtechweekend.com/blog/femmehealth-ventures-alliance-partnership" }
       - { label: "Insights hub", url: "https://www.femtechweekend.com/insights" }
       - { label: "Stories", url: "https://www.femtechweekend.com/stories" }
       - { label: "Opinions", url: "https://www.femtechweekend.com/opinions" }
@@ -1163,8 +1163,8 @@ projects:
         Contentful) since the scope explicitly avoids additional
         third-party dependencies. The implementation: every editable
         field has a `✏️` direct link in `docs/CONTENT-INVENTORY.md`
-        pointing at `https://github.com/Chow-Luck-Club/eatropolis-
-        website/edit/main/<path>` — the non-technical client
+        pointing at the repo's `edit/main/<path>` GitHub Web Editor
+        URL — the non-technical client
         clicks, edits in GitHub's browser editor, commits, and
         GitHub Actions auto-deploys in ~3 minutes. The content
         itself is **43 MDX files** (dishes, workshops, FAQs,
@@ -1627,7 +1627,7 @@ projects:
     url: https://sendjoy.chanmeng-dev.workers.dev/
     extraLinks:
       - { label: "Live app",           url: "https://sendjoy.chanmeng-dev.workers.dev/" }
-      - { label: "Tutorial",           url: "https://github.com/ChanMeng666/send-joy/blob/main/TUTORIAL.md" }
+      - { label: "Tutorial",           url: "https://github.com/ChanMeng666/send-joy/blob/master/TUTORIAL.md" }
       - { label: "CF Workers migration commit", url: "https://github.com/ChanMeng666/send-joy/commit/e9ace8a" }
       - { label: "CLI->visual pivot commit",    url: "https://github.com/ChanMeng666/send-joy/commit/fe16fdd" }
       - { label: "Non-tech UX commit",          url: "https://github.com/ChanMeng666/send-joy/commit/782731c" }

@@ -1,0 +1,2155 @@
+# =============================================================================
+# CAREER — work roles, volunteer roles, education
+# =============================================================================
+# Shard of Chan Meng's profile data. Top-level keys: work, volunteer, education.
+# All data/profile/*.yaml shards are merged (in filename order) by
+# scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
+# After editing: npm run check. Data map + cross-reference rules: CLAUDE.md.
+# =============================================================================
+
+# =============================================================================
+# WORK — career roles, in chronological-relevance order (most recent first).
+# Phase 3 will fill in `narrative.*` for each role one at a time.
+# =============================================================================
+work:
+  - id: engram
+    name: Engram
+    position: AI Agent Architect
+    startDate: "2026-05"
+    endDate: null                       # null = present
+    location: Albuquerque, New Mexico, United States (remote)
+    url: https://engram.media/
+    featured: true
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-18"
+    keywords:
+      - AI System Architecture
+      - Mission Control (internal product)
+      - Model Context Protocol (MCP)
+      - Agentic Workflows
+      - Anthropic Claude Partner Network
+      - Claude Certified Architect — Foundations (CCA-F)
+      - Notion knowledge base
+      - API-as-UI experiences
+    narrative:
+      impactHeadline: "Recruited by Claude itself — when Engram's founder asked the LLM to surface an AI architect for their Anthropic Partner Network track, Chan was the recommendation. Founder Luka Madzarac publicly confirmed it — empirical proof that GEO + open-source portfolios work."
+      companyContext: |
+        Engram LLC ([engram.media](https://engram.media/) /
+        [LinkedIn company](https://www.linkedin.com/company/engrammedia/))
+        is a New Mexico–registered AI-powered media agency founded by
+        **Luka Madzarac**. The company is repositioning around
+        **agent-powered media operations**: deploying agents and pipelines
+        that run a client's entire media function in-house — design, data,
+        content, distribution — instead of outsourcing production. The
+        target market is service businesses that need a media department
+        running on autopilot. Engram is building its stack on Anthropic's
+        Claude platform and is on a path to **certified Anthropic
+        partner** status. The **Architect Cohort** is a selective
+        onboarding programme through which Engram brings architect-tier
+        engineers into the core team that will define the company's
+        agentic-media engineering standards.
+      mission: |
+        Replace click-through software workflows with **agentic ones** —
+        natural-language intent drives downstream system orchestration
+        and the agent's reasoning becomes the user-facing surface. For
+        Engram specifically, that translates into autonomous media
+        operations: instead of a human team manually assembling
+        campaigns, content, and analytics, agentic systems plan,
+        produce, and ship the media function for the client. The
+        product line targets organisations that need end-to-end
+        automation rather than demo-grade AI tooling, starting with
+        Engram's own internal operations and graduating to client
+        deployments.
+      myMandate: |
+        **How the engagement started.** Luka Madzarac asked Claude Code
+        to surface AI architects who could help Engram reach Anthropic
+        Partner status. Claude returned Chan as one of the strongest
+        matches based on her verifiable open-source agentic-tooling
+        footprint — **claude-code-audio-hooks**, **CopilotKit**
+        contributions, production LangChain automation engines,
+        programmatic media generation with **Remotion**, and the
+        "**API-as-UI**" design pattern she's been publishing. Luka
+        publicly confirmed the sourcing path on LinkedIn:
+        *"Claude Code surfaced Chan as one of the strongest matches
+        for what we're looking for."*
+        ([announcement post](https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-activity-7459724144671195136-3JoV))
+
+        **What the cohort engagement covers.** 45-day Architect Cohort
+        onboarding (May–June 2026) at ~10–15 hours per week, structured
+        as a mutual evaluation period. Specific responsibilities:
+        (1) completing Anthropic's **Claude Partner Network Learning
+        Path** (4 courses) and passing the **Claude Certified Architect —
+        Foundations (CCA-F)** examination — building on already-held
+        Anthropic credentials (**AI Fluency: Framework & Foundations**,
+        Aug 2025; **Claude Code in Action**, Aug 2025, credential
+        ID JHIY9NPYTR2D); (2) participating in weekly working sessions
+        with founder Luka Madzarac and the rest of the cohort on
+        agent, skill, and MCP-integration patterns; (3) contributing
+        to the cohort's emerging agentic-media engineering conventions;
+        (4) maintaining presence in Engram's communication channels
+        for cross-cohort engineering discussion.
+      technicalHighlights: |
+        The technical footprint that Claude Code surfaced to Engram —
+        all carved out as Chan's own IP under the cohort agreement and
+        remaining Chan's property:
+
+        - **claude-code-audio-hooks** — audio-feedback hook system for
+          Claude Code (explicitly named in the cohort agreement as
+          Chan's preserved IP), with its **echook** notification daemon.
+        - **CopilotKit** — active contributor to the open-source agent
+          UI framework
+          ([PRs](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)).
+        - **google-news-mcp** — production MCP server published to the
+          public registry.
+        - **typst-claude-skill** — Claude Code skill for programmatic
+          document generation; demonstrates skill-structure design.
+        - **claude-code-compressed-map** — LLM-first tier/recency
+          metadata system powering this very profile (the meta-move:
+          optimising Chan's own data so LLMs rank it correctly —
+          *GEO in practice*).
+        - Production **LangChain** automation engines and interactive
+          LLM systems for mobile gaming.
+        - Programmatic media generation via **Remotion**.
+
+        The technical centre of gravity is **"API-as-UI"**: building
+        agent surfaces where conversational intent orchestrates
+        downstream tools and the model's chain-of-reasoning becomes
+        the user interface — not a chat widget bolted onto a form.
+      # TODO(narrative-tech): optional — add 1–2 cohort-specific
+      # contributions surfaced during weekly working sessions (general
+      # agent-design / MCP-pattern level, no Engram-internal prompts
+      # or client specifics).
+      impactDelivered: |
+        Current cohort-period in-flight work (the engagement is
+        intentionally evaluation-shaped, with a sponsored client engagement
+        decision by Day 40):
+
+        1. **Anthropic Claude Partner Network Learning Path** —
+           progress in flight across the 4-course curriculum.
+        2. **CCA-F examination preparation**, building on already-held
+           AI Fluency: Framework & Foundations and Claude Code in
+           Action credentials.
+        3. **Contributions to the cohort's shared agent and skill design
+           conventions** through weekly working sessions with the founder
+           and the rest of the architect cohort.
+        4. **Cross-pollination** of Chan's pre-existing open-source
+           agentic tooling experience (claude-code-audio-hooks,
+           CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based
+           media generation) into cohort discussions on production-grade
+           agent design.
+
+        **Meta-signal**: the engagement itself validates a hypothesis
+        Chan has been publishing about (**GEO / Generative Engine
+        Optimization**) — that frontier models actively surface
+        candidates based on verifiable code and real-world impact rather
+        than traditional SEO keywords. Being the candidate Claude Code
+        recommended to Engram for an Anthropic Partner engagement is
+        empirical evidence that the open-source-first portfolio strategy
+        works.
+      # TODO(narrative-impact): fill in concrete numbers as cohort progresses:
+      #   - "completed N of 4 Anthropic Partner Network courses"
+      #   - "CCA-F exam scheduled for <date>" (target early June 2026)
+
+  - id: technest
+    name: TechNest Community
+    position: AI Instructor & Mentor
+    startDate: "2026-04"
+    endDate: null                       # null = present
+    location: Newfoundland, Canada (remote instruction)
+    url: https://www.technestcommunity.com/
+    logo: /public/organizations/technest-community-logo.jpg
+    featured: true
+    tier: primary
+    recency: active
+    lastUpdated: "2026-05-18"
+    keywords:
+      - Cursor
+      - Claude Code
+      - Gemini CLI
+      - Model Context Protocol
+      - Next.js
+      - Neon Postgres
+      - Drizzle ORM
+      - Vercel
+      - Typst
+      - Docusaurus
+      - Cloudflare Workers
+      - Notion API
+      - Algolia DocSearch
+    narrative:
+      impactHeadline: "TechNest's first AI-specialised mentorship track — sole instructor of a 12-week prompt-first curriculum with weekly live classes, recordings, an in-course RAG assistant, and capstone voting. Students ship portfolio-grade AI apps by week 8 on a 95.7%-solo platform."
+      companyContext: |
+        TechNest Community is a Newfoundland-based nonprofit, established
+        November 1, 2024, with the stated mission of "making technology
+        accessible, creative, and impactful" for youth, newcomers, and
+        local communities across Atlantic Canada. It operates four
+        pillars: a structured **Mentorship Programme** that pairs learners
+        with industry professionals on year-long tracks (software
+        engineering, product management, cybersecurity, data analysis, 3D
+        animation, and — for 2026 — Artificial Intelligence); **Creative
+        Connections** networking events such as *Tech in the Park*
+        (100+ attendees) and *Sip & Paint*; **Product Development** of
+        community-serving software (their flagship is *Library Labs*,
+        an AI-powered 3D learning platform); and **Tech for Children**
+        coding-and-robotics workshops run in partnership with NCANL.
+        Leadership is led by Abiodun (Magret) Oyedele and Afolasade Bello,
+        both of whom I report to directly as the AI Track instructor.
+      mission: |
+        Make modern tech careers reachable for groups that the Canadian
+        tech industry typically under-serves — youth, newcomers to Canada,
+        and people living outside the country's major tech hubs. The
+        underlying conviction is that the best lever for regional economic
+        mobility is not generic "learn to code" content but mentored,
+        cohort-based programmes that connect learners with working
+        professionals and ship a portfolio-grade product by the end.
+      myMandate: |
+        Designed and delivered the **2026 AI Track** end-to-end as sole
+        instructor — the first AI-specialised cohort in the organisation's
+        history, and the only mentorship track running in 2026 dedicated
+        to AI engineering. The mandate covers full curriculum authorship,
+        live instruction, ongoing mentorship through the capstone, and the
+        teaching infrastructure students use throughout the cohort.
+        Reporting line is direct to TechNest's leadership (Abiodun Oyedele
+        and Afolasade Bello). Authority over: curriculum doctrine, weekly
+        topic sequencing, assessment rubric, capstone tracks, tooling
+        choices, and the public teaching platform that hosts every
+        artefact — slides, lab handouts, recorded sessions, downloadable
+        PDFs, capstone showcase, and an AI assistant trained on the course
+        corpus itself.
+      impactDelivered: |
+        **Authored and ran the 2026 AI Track — a 12-week prompt-first AI
+        engineering curriculum** that became TechNest's flagship 2026
+        cohort. Programme runs **April 25 – July 17, 2026** (Matriculation
+        Ceremony April 25, official start April 27, completion July 17),
+        delivered as one two-hour live session per week plus self-paced
+        lab time, on a fixed five-phase session shape (Recap → Concept →
+        Live Demo → Hands-On Lab → Q&A).
+
+        **The curriculum doctrine is original and opinionated:** *"Natural
+        language is the source code."* Students arrive having used only
+        ChatGPT in a browser. By Week 8 they own a live, polished,
+        AI-powered personal website that doubles as their portfolio,
+        AI-clone chatbot, guestbook, blog, contact funnel, and the
+        source-of-truth for their auto-generated CV and cover letter — all
+        driven by prompting Cursor, Claude Code, and Gemini CLI rather
+        than hand-writing code. By Week 12, every student team has shipped
+        a multi-user AI product that strangers can actually use.
+
+        **8-week teaching phase** evolves one progressively-built personal
+        site, grafting a meaningful full-stack feature each week onto the
+        same codebase: (1) AI Developer Toolkit Setup — Cursor, Claude
+        Code, Gemini CLI, MCP servers, Skills, GitHub; (2) Deploy via
+        Vercel CLI; (3) AI Clone — Gemini 2.5 Flash chat widget with a
+        student-voiced system prompt; (4) Full-Stack — Neon Postgres +
+        Neon Auth + Drizzle, guestbook; (5) Vercel Blob image uploads;
+        (6) MDX blog + RSS; (7) Real-Time Slack notifications via webhook;
+        (8) Typst PDF automation through the Typst skill in Claude Code,
+        which becomes the engine for an auto-generated CV and cover letter.
+
+        **4-week capstone** runs June 22 – July 17, 2026: teams of 2–4
+        students evolve their personal-site codebase into a deployed
+        multi-user AI SaaS on one of three tracks — *Campus Life*
+        (event finder, roommate matcher, dorm chore-and-bill splitter),
+        *Personal Growth* (habit coach with weekly AI reviews, reading
+        companion, journaling assistant), or *Creative Tools* (AI
+        short-story studio, music-prompt playground, comic-panel
+        generator). Demo Day is a 5-minute live demonstration plus
+        3-minute Q&A in front of invited guests, with public voting
+        powered through the showcase platform I built.
+
+        **Assessment rhythm baked into the doctrine.** Weekly assignments
+        carry 50% weight and require students to submit both (a) the
+        updated live site URL and (b) a screenshot of the Cursor /
+        Claude Code conversation that drove the change — the screenshot
+        rule operationalises the doctrine: *the prompt is the work*. The
+        remaining weight is split across participation (10%), capstone
+        (30%), and final demo (10%).
+
+        **Public artefacts shipped through the platform** during the
+        cohort include downloadable PDF handouts (curriculum-outline.pdf
+        586 KB, capstone-spec.pdf 604 KB, and per-week lab guides),
+        per-week recorded video tutorials sidebar-indexed in the docs,
+        the Notion-backed Capstone 2026 public showcase page with live
+        voting, an AI assistant that answers questions about the course
+        material via retrieval over all four course versions plus the
+        blog, and a Notion-powered classroom message board.
+      technicalHighlights: |
+        **Designed and built the teaching platform itself** — published as
+        my personal teaching site at *ai-programming-teaching-project*
+        (Docusaurus 3.8+ with `@docusaurus/faster`, deployed on
+        Cloudflare Pages) and authored 100% by me, with 198 of 207 commits
+        from my two GitHub identities and the remaining 9 from automated
+        bots (Claude code-review automation and Dependabot security
+        bumps). The platform serves four cohort versions side by side
+        through Docusaurus versioned docs: `2024-winter`, `2025-summer`,
+        `2026-her-waka` (the academyEX / Her Waka programme), and
+        `2026-technest` (the active cohort, set as default). New cohorts
+        slot in without disturbing older ones, and students who took a
+        prior cohort retain a stable URL for their materials.
+
+        **In-course AI assistant** indexes all four course versions plus
+        the blog into a retrieval corpus with stable hash chunk IDs and
+        version-aware retrieval, so a student in the 2026 cohort gets
+        answers from 2026 materials by default. Implemented with a secure
+        seeding flow and resilient retrieval logic — a teaching-platform
+        feature most cohort sites simply don't have.
+
+        **Notion-powered classroom infrastructure**, two surfaces: a
+        course-wide message board with a Cloudflare Worker backend that
+        proxies writes into Notion (so the cohort owners can moderate
+        and review in the tool they already use), and a Capstone 2026
+        public-showcase page that lists every team's demo with live
+        Notion-backed voting open to invited guests — both bilingual.
+
+        **Bilingual i18n by default** (English primary, 简体中文 secondary)
+        across every cohort version. The build pipeline includes
+        contextual Algolia search filtered by locale, localised Mermaid
+        toolbar labels, locale-aware table-of-contents headings, and
+        translated tag taxonomies — so a Mandarin-speaking student gets
+        a fully localised experience including search results.
+
+        **PDF handout pipeline** built on Typst — the same tool taught in
+        Week 8 of the curriculum — so the printable curriculum outline,
+        capstone spec, and per-week lab guides are generated through the
+        skill students learn to use themselves. The pedagogical loop is
+        intentional: students see, in production, the artefact they're
+        being taught to build.
+
+        **Engineering hygiene visible in the commit log**: full migration
+        of the production deployment from Vercel to Cloudflare Pages
+        (with SEO URL migration and Algolia config update); 13
+        Dependabot security vulnerabilities resolved in one pass and
+        ongoing patches managed cleanly; Mermaid dual-view component for
+        diagram-heavy lessons; per-version sidebar customisation; SEO
+        improvements with keyword-targeted blog posts written to support
+        student discovery; trailingSlash and Algolia contextualSearch
+        configuration to keep cross-locale and cross-version search
+        coherent.
+
+        **The choice of stack mirrors the curriculum.** I deliberately
+        chose tools the students are learning — Next.js / React, Notion
+        APIs, Cloudflare deployment, Typst PDF generation, Algolia
+        search — so the teaching platform is itself a worked example of
+        the doctrine being taught. Students can literally read the
+        instructor's repo to see how the patterns they're learning
+        compose in a real production system.
+    publicSummary: |
+      AI Instructor & Mentor at TechNest Community, a Newfoundland nonprofit
+      democratising tech careers across Atlantic Canada. Designed and delivered
+      the 2026 AI Track — a 12-week prompt-first AI engineering curriculum
+      ("natural language is the source code") with 8 teaching weeks plus a
+      4-week multi-user-AI capstone — and built the bilingual Docusaurus
+      teaching platform that hosts it (versioned cohort docs, in-course AI
+      assistant with RAG over all four cohorts, Notion-backed message board
+      and capstone voting, Typst PDF handout pipeline). Programme runs April
+      25 – July 17, 2026; reports to Abiodun Oyedele and Afolasade Bello.
+
+  - id: gavigo
+    name: Gavigo
+    position: "Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer)"
+    startDate: "2025-10"
+    endDate: null
+    location: USA (remote — Delaware-incorporated)
+    url: https://gavigo.com/
+    logo: /public/organizations/gavigo-logo.jpg
+    featured: true
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-18"
+    keywords: [Go, "Kubernetes (GKE)", "React Native", WebSocket, "Redis", "GPT-4o-mini", "AI orchestration", "Distributed systems", "Founding engineer"]
+    narrative:
+      impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owns the Intelligence Layer end-to-end (98% solo on 353 commits) with a contractually protected technical domain."
+      companyContext: |
+        GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
+        stage, Istanbul-founded by Saba Gecgil and registered in
+        Wilmington, Delaware. Official LinkedIn positioning:
+        **"Activation & Execution Layer for Interactive Software"**.
+        Consumer-facing mission (from the company's own marketing):
+        "Skip the Store. Start the Play" — eliminate the friction between
+        user intent and digital experience. Internally framed as building
+        the "Post-App World" through proprietary "Instant Reality
+        Switching" technology. The architecture is publicly described as
+        two pillars: the Technology Platform (the CTO-led foundation) and
+        the Intelligence Layer (the autonomous predictive engine that
+        makes Instant Reality possible). The current product wedge is
+        mobile gaming; the underlying activation engine is platform-
+        shaped and applies to any interactive content category where
+        install gap and cold-start latency dominate the funnel. External
+        validation during my tenure: accepted into both **Google for
+        Startups Cloud Program** and **NVIDIA Inception Program**
+        (Feb 2026), and featured publicly by tech-business press
+        (feedvoice.com, *"How GAVIGO Is Ending App Store Friction for
+        Instant Digital Play"*, 2026-02-10).
+      mission: |
+        Replace the native-app install funnel — discover → app-store
+        landing → install → onboard → first interaction — with
+        sub-millisecond intent-to-experience activation. The problem
+        being solved is industry-wide: cold-start latency, install
+        friction, and re-engagement cost on mobile interactive content
+        (games, video, AI experiences) where perception of instantaneity
+        drives engagement.
+      myMandate: |
+        Own the Intelligence Layer end-to-end — GAVIGO's term for the
+        autonomous, predictive engine that powers Instant Reality
+        activation. The role is contractually defined with a "Protected
+        Technical Domain" that includes activation systems, activation
+        flow and execution behavior, activation-economics proof path,
+        AI-assisted orchestration and execution-control systems, restore
+        and reuse boundary work, heavier-workload validation, and the
+        core activation / execution / AI-enabled systems architecture of
+        GAVIGO's interactive workload platform — plus the natural forward
+        extension of that domain as the system evolves. Reporting to
+        founder & CEO Saba Gecgil.
+
+        Title progression formalized over three contract iterations:
+        Original Consulting Agreement (Oct 17 2025), Amended and Restated
+        (Feb 9 2026), Second Amended and Restated (Apr 16 2026) which
+        ratified the current title: **Founding Principal Engineer,
+        Activation, Execution & AI Systems**.
+      impactDelivered: |
+        Shipped GAVIGO IRE — the Instant Reality Exchange platform — from
+        M1 prototype to live production at ire.gavigo.com. First shipped
+        on DigitalOcean DOKS (Singapore); led the full migration to Google
+        Cloud GKE (Belgium) in a clean ~30-minute cutover on 2026-03-11
+        when GAVIGO's Google Cloud partnership took effect — full
+        production-grade expertise on both DigitalOcean and Google Cloud.
+        360 total commits, 353 (98%) solo across my two git identities;
+        remainder is GitHub Actions bot.
+
+        Real measured platform performance, from the production benchmark
+        spine: restore path <1 ms p50, cold path ~12 ms p50, 84.6%
+        warm-pool hit rate, 0 errors at 100 concurrent WebSocket clients
+        under load test. Architectural deliverables include the
+        deterministic five-state Activation Spine
+        (COLD → READY → ACTIVE → REUSABLE → restore) with atomic Redis
+        transitions and proof-signal timestamps; the seven-trigger AI
+        rules engine (Swarm Boost, Proactive Warm, Cross-Domain Inject,
+        Mode Change, Lookahead Warm, Initial Warm, Checkpoint Restore);
+        the warm-pool LRU manager with ProtectSlot reservations; the
+        cross-platform state-sync protocol bridging MMKV / localStorage /
+        Redis; and the Phase 9 audience-aware WebSocket broadcast filter
+        that lets investors, operators, and the public see different
+        slices of the same catalog. Recognized in the corporate record
+        as "a core long-term technical builder of the Company's
+        interactive workload platform" with founder-level equity
+        participation.
+
+        **External validation during my tenure (Feb 2026 cluster):**
+        the company was accepted into the **Google for Startups Cloud
+        Program** (announced by founder Saba Gecgil) — the partnership
+        that directly enabled the GCP migration I led the following
+        month, and the platform under which the sub-millisecond
+        activation claims are now being validated in production-grade
+        Google infrastructure. The same window brought acceptance into
+        the **NVIDIA Inception Program** (supporting startups building
+        GPU-intensive infrastructure-level technologies), and
+        third-party press coverage at feedvoice.com — *"How GAVIGO Is
+        Ending App Store Friction for Instant Digital Play"*
+        (2026-02-10) — which surfaced GAVIGO's sub-0.2-second
+        end-to-end activation claim, the patented execution-layer IP
+        positioning, and the "Watch and Play era" public narrative the
+        company is operating against. My contractual scope was
+        re-amended in the same window (Second Amended and Restated
+        Consulting Agreement, Apr 16 2026) to formalise the **Founding
+        Principal Engineer, Activation, Execution & AI Systems** title
+        and the Protected Technical Domain backing it.
+      technicalHighlights: |
+        **Cross-cloud production expertise — DigitalOcean and Google Cloud.**
+        Originally architected on **DigitalOcean DOKS (Singapore, sgp1)**
+        with DO Container Registry, DO LoadBalancer, and Let's Encrypt
+        + manual certbot rotation. Led the full migration to **Google
+        Cloud GKE Standard Zonal (Belgium, europe-west1-b)** on
+        2026-03-11 in a single ~30-minute cutover when GAVIGO's Google
+        Cloud partnership took effect. Migration rebuilt every layer of
+        the infrastructure: DO Container Registry → Artifact Registry
+        (cross-region europe-west3 pulls); DO LoadBalancer → GCE Ingress
+        + Global HTTP(S) Load Balancer with Google-managed certs (auto-
+        renewal replacing certbot toil); DO LB annotations → FrontendConfig
+        / BackendConfig with WebSocket-aware 86400 s timeouts; service
+        types reshaped LoadBalancer-per-frontend → ClusterIP-behind-Ingress;
+        static IP swapped to a GCP Global static IP. All five deployments
+        migrated cleanly with `strategy: Recreate` to avoid CPU deadlock
+        on single-node clusters. Full migration record archived in the
+        repo for institutional memory.
+
+        Single Go binary orchestrator combining a gorilla/websocket hub,
+        the Scorer (weighted personal / global / trend signals into a
+        combined activation score), the seven-trigger Rules Engine, and a
+        Kubernetes client-go integration that patches deployment replicas
+        in real time. Companion services: React + Vite dashboard, React
+        Native + Expo 54 mobile build served via nginx, always-warm shared
+        game-server pod baking ~25 FOSS games for zero per-game cold
+        start, Node + Express AI-service pod with GPT-4o-mini, Phase 6+
+        compute / inference workloads, Redis 7 with allkeys-LRU and a
+        400 MB warm-pool budget, optional Postgres 16 for social data.
+
+        Hardest engineering problems solved: (1) Sub-millisecond restore
+        via the Activation Spine state machine with deterministic atomic
+        transitions, not optimistic ones. (2) Cross-platform state sync
+        across MMKV, localStorage, postMessage, and Redis with a single
+        canonical source of truth. (3) Async K8s coordination (EndpointSlice
+        and Pod-status watches) feeding real-time WebSocket telemetry
+        with millisecond-precision phase timestamps that prove the
+        decision → patch → observation chain rather than asserting it.
+        (4) Warm-pool LRU without cascade eviction, via ProtectSlot
+        reservations for controlled and benchmark workloads. (5)
+        Audience-aware broadcast filtering at the WebSocket envelope
+        layer so each client preset sees a different catalog slice
+        without N broadcast topics.
+
+        FOSS curation: cloned 11 open-source game repos, scored against
+        license (MIT / Apache-2.0), build size (<50 KB), web-first
+        compatibility, and audio bug stability — vendored the top 9
+        (Hextris, Clumsy Bird, Tiny Yurts, Catculus, Casual Crusade,
+        Stolen Sword, Brewing Disaster, Coup Ahoo, DEAD AGAIN,
+        Norman the Necromancer, Idle Necromancer).
+
+  - id: aotearoa-infinite-academy
+    name: Aotearoa Infinite Academy
+    position: Software Engineer (Bandicoot squad · Crimson Academies)
+    startDate: "2025-10"
+    endDate: "2025-11"
+    location: New Zealand (remote, Christchurch-anchored team)
+    url: https://www.aotearoainfiniteacademy.school/
+    logo: /public/organizations/aotearoa-infinite-academy.svg
+    featured: true
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-27"
+    keywords:
+      - EdTech
+      - Charter school launch
+      - Bandicoot dev squad
+      - ESOL learning platform
+      - Multi-tenant LMS
+      - Firebase DataConnect
+      - Cloud SQL (PostgreSQL)
+      - Specification-Driven Development
+      - AI-augmented engineering practice
+      - Claude Code knowledge sharing
+    narrative:
+      impactHeadline: "Joined Crimson Academies' Bandicoot dev squad as engineer for AIA — NZ's first free online charter school. Shipped the ESOL platform end-to-end, refactored Emi into a multi-tenant LMS monorepo on Firebase DataConnect + Cloud SQL, and led the team's AI-tools training."
+      companyContext: |
+        **Aotearoa Infinite Academy (AIA)** is **New Zealand's first
+        free online charter high school** — Y9–12, fully remote,
+        officially confirmed as a charter school on 14 October 2025
+        and opening Term 1 2026 (27 January 2026). AIA is part of
+        the **Crimson Academies** group (sister schools: Crimson Global
+        Academy / CGA, Mt Hobson Academy / MHA, Crimson AGE School)
+        and shares IT, finance, HR, and engineering with the group.
+        Founder/CEO **Penelope ("Pene") Barton**; founding principal
+        **Saira Sharif**. Chan joined Crimson Academies' newly-formed
+        engineering squad **"Bandicoot"** — initially Pene, Olivia Dyet,
+        Peter Joe, Chan — joined shortly afterwards by **Tom Rivett**
+        (CGA engineering lead, Christchurch).
+      mission: |
+        Stand up the full digital stack — Learning Management System,
+        AI grading, ESOL learning support, AI agents, internal employee
+        platform (Bright) — that lets AIA open Term 1 2026 as a fully
+        online charter school. Replace fragmented existing systems
+        (Canvas, CGA Home, Teams, Webflow-driven enrollment) with a
+        unified codebase that serves both Emi (the existing Crimson
+        Academies LMS) and Infinite (the new AIA high-school LMS) while
+        feeding a shared SIS, parent portal, and analytics layer.
+      myMandate: |
+        Hired as **Software Engineer** for the Bandicoot squad with
+        a focused remit across four projects, all assigned directly
+        by Pene Barton:
+        1. **Design and ship the ESOL learning platform end-to-end**
+           — from blank slate to v2 deployment, including database,
+           role model, dashboard, and audio/AI-dialogue features.
+        2. **Work the LMS backlog for Infinite-Learn (AIA)** —
+           and ultimately refactor both Emi and Infinite into a
+           single multi-tenant codebase.
+        3. **Build the AI Grading system** — pending teacher
+           mark schemes and example submissions to inform design.
+        4. **Act as the squad's AI-tools knowledge lead** — share
+           Claude Code, Claude Skills, Specification-Driven
+           Development, Wispr Flow, Mermaid, and other AI-augmented
+           workflows across the engineering team.
+        Reporting line: directly to Pene Barton (CEO/founder), with
+        parallel collaboration on architecture decisions with Tom
+        Rivett (CGA engineering lead) and Peter Joe (fellow engineer).
+        Engagement ran ~three weeks of focused delivery (22 October –
+        9 November 2025), in parallel with the early GAVIGO ramp-up.
+      impactDelivered: |
+        Three weeks of focused delivery across four parallel tracks:
+
+        **ESOL Learning Platform** (designed and shipped solo,
+        end-to-end). Built from a blank slate to v2 deployment in
+        the first weekend; database structure + 6-role user dashboard
+        (System Admin · School Admin · Department Head · Teacher
+        · Student · Parent); conversation transcription storage,
+        audio recording storage, and playback for AI dialogue
+        interactions; iterated on UI/UX and role logic based on
+        user-testing feedback from **Becky Hancock** (CGA Director
+        of Curriculum & Pedagogy) routed via Brittanie Bates.
+
+        **LMS monorepo refactor (Emi → Infinite, multi-tenant)**.
+        Refactored the Firestore-backed Emi prototype into a
+        professional monorepo at `github.com/ChanMeng6/infinite-lms`
+        with clean separation between Emi and AIA subprojects.
+        Migrated from Firestore to **Firebase DataConnect with
+        PostgreSQL** (Cloud SQL instance `lms-dataconnect-dev`) —
+        modelled 6 core tables (user · course · lesson · assignment
+        · enrollment · submission). Deployed multi-tenant on a
+        single Firebase instance with separate domains
+        (`infinite-lms-emi.web.app` + `infinite-lms-aia.web.app`),
+        shared auth (added Google email login as a new sign-in
+        option), and architecture documentation for team reference
+        and onboarding.
+
+        **Cross-team AI-tools enablement**. Led the **AI Tools
+        Training Session** on 29 October 2025 for the full Bandicoot
+        squad (Pene, Tom, Dan Clark, Sarah Yock, Peter Joe, Zhiyu),
+        covering Wispr Flow, Claude Skills, Claude Code productivity
+        tips, Spec Kit (Specification-Driven Development), and
+        Mermaid diagrams. Comprehensive write-up published in the
+        all-aotearoa-infinite-academy Slack group. Attended the
+        International Java Developers Conference and **ChurConf 2025**;
+        distilled the SDD methodology talk *"The Chasm, the Craft,
+        and the Chain of AI-Assisted Code"* into a team-shareable
+        document.
+
+        **Integration research**: comprehensive SMS/email solution
+        comparison (Twilio for SMS, Resend for email automation) with
+        pricing analysis and implementation recommendations for the
+        EMI project, delivered to Pene.
+
+        **Open-source IP launched during this engagement**:
+        `claude-code-audio-hooks` — an audio-feedback hook system for
+        Claude Code that emerged from multitasking across LMS + ESOL
+        + GAVIGO workloads. Later evolved into the `echook` daemon
+        and is explicitly preserved as Chan's IP in the subsequent
+        Engram Architect Cohort engagement letter (May 2026).
+      technicalHighlights: |
+        **ESOL platform**: full-stack TypeScript on Firebase with
+        role-based access control across 6 distinct user types; audio
+        recording / transcription pipeline integrated into the AI
+        dialogue flow.
+
+        **LMS refactor — the key architectural decision**: chose
+        **Firebase DataConnect** over staying on Firestore to give
+        the LMS a relational backbone (Cloud SQL PostgreSQL) while
+        keeping Firebase's hosting, auth, and storage primitives
+        intact. **Multi-tenant pattern**: one Firebase project hosting
+        two distinct app deployments (Emi Primary + Infinite-Learn)
+        sharing the same database schema and auth, but with separate
+        domains. This was the explicit alternative to forking two
+        codebases or running two Firebase projects — preserving
+        cross-team collaboration on a single source-of-truth repo
+        and shared infrastructure cost.
+
+        **Architecture documentation**: converted Pene's hand-drawn
+        architecture diagrams into Mermaid code for the squad's
+        living documentation set.
+
+        **AI-augmented engineering practice**: brought Claude Code,
+        Specification-Driven Development (Spec Kit), Wispr Flow, and
+        Claude Skills into Bandicoot's everyday workflow — the
+        squad's first systematic AI-tools onboarding session, and
+        the basis for ongoing developer-productivity gains across
+        the team.
+    publicSummary: |
+      Software Engineer at **Aotearoa Infinite Academy (AIA)** —
+      New Zealand's first free online charter high school, part of
+      the **Crimson Academies** group, opening Term 1 2026. Joined
+      the newly-formed **Bandicoot** engineering squad for a focused
+      three-week delivery (22 October – 9 November 2025) under
+      founder/CEO Penelope Barton. Designed and shipped the ESOL
+      learning platform end-to-end; refactored the existing Emi LMS
+      into a multi-tenant monorepo on Firebase DataConnect +
+      PostgreSQL (Cloud SQL) serving both Emi (primary) and
+      Infinite-Learn (AIA high school) on a single codebase; led
+      the squad's first systematic AI-tools training session and
+      seeded Specification-Driven Development practice across the
+      team. Open-source IP `claude-code-audio-hooks` (now `echook`)
+      launched during this engagement and explicitly preserved as
+      Chan's IP in subsequent contract negotiations.
+
+  - id: she-sharp
+    name: She Sharp
+    position: Senior Full Stack Engineer & Website Team Lead
+    startDate: "2025-07"
+    endDate: null
+    location: New Zealand
+    url: https://www.shesharp.org.nz/
+    logo: /public/organizations/she-sharp-logo-purple-dark.svg
+    featured: true
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-18"
+    keywords: ["Next.js 15", "React 19", "Drizzle ORM", "Neon Postgres", Stripe, "GPT-4o-mini", Slack, "Agent skills", "NextAuth 5", "Tailwind 4"]
+    narrative:
+      impactHeadline: "Recruited directly by founder Dr Mahsa Mohaghegh as the senior AI + full-stack capability She Sharp didn't have in-house; led the cutover from Webflow to the new platform via a custom migration crawler preserving 10+ years of legacy content for 2,200+ members."
+      companyContext: |
+        She Sharp is New Zealand's leading women-in-STEM community — a
+        registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
+        AI/NLP researcher and Director of Women in Tech at AUT. The
+        organization runs a mentorship programme, a corporate-partner
+        network, and a recurring events calendar that together support
+        2,200+ registered members, 1,000+ active, and 8,000+ women supported
+        across its history. 50+ corporate partners, 84+ events since 2014,
+        85% mentorship success rate.
+      mission: |
+        Close the representation gap in technology by connecting women in
+        STEM with role models, mentors, employers, and each other — and by
+        running flagship programmes (mentorship, Her Waka workforce re-entry,
+        THRIVE) that operationalize that mission at scale. The bottleneck on
+        scale, when I joined, was the technical capability of the platform:
+        the old Webflow site had become incompatible with the membership
+        system, AI matching, billing, and Slack-integrated operations the
+        mission required.
+      myMandate: |
+        Recruited directly by Dr Mahsa Mohaghegh (McCauley) as Senior Full
+        Stack Engineer & Website Team Lead — specifically as the AI and
+        senior development capability She Sharp didn't have in-house — to
+        build the new member platform end-to-end and own it operationally.
+        Mandate explicitly includes: replace the Webflow site, design and
+        ship the AI mentor-mentee matching system, integrate Slack across
+        the organization's operations, run events and recruitment
+        infrastructure, and serve as technical lead on adjacent initiatives
+        (Her Waka MSD-funded programme, SEO strategy).
+      impactDelivered: |
+        Shipped and operate the new full-stack She Sharp platform replacing
+        the legacy Webflow site. 648 of 748 commits authored solo (86.6% of
+        total). Headline systems delivered: AI mentor-mentee matching
+        (GPT-4o-mini, 5-dimensional scoring with human-in-the-loop review),
+        three role-permissioned dashboards (mentor / mentee / admin) with
+        dual-role support, Stripe membership-tier billing, the Slack
+        ecosystem (event-collector bot, volunteer webhooks, weekly stats
+        digest, weekly NZ funding-opportunities crawler), a Claude agent
+        skill `sync-event-from-slack` that automates event-page publication
+        from Slack content, comprehensive audit logging, and a database
+        version-control system.
+
+        **Custom Slack ecosystem for the She Sharp workspace.** Beyond
+        the admin-side Claude Code skill, I shipped a portfolio of
+        integrations that run inside the She Sharp Slack workspace
+        itself: an event-collector endpoint (`/api/slack/events`) that
+        ingests workspace activity for the database; a **weekly
+        mentorship-stats digest bot** that auto-publishes engagement
+        numbers each Monday; and a **weekly NZ funding-opportunities
+        digest bot** that crawls 6 government RSS/HTML sources, scores
+        each opportunity for member relevance (60+ threshold), and
+        posts the top 10 to a dedicated `#funding-opportunities`
+        channel via Incoming Webhook. Together these collapse work
+        that previously consumed volunteer-team hours each week into
+        background automation members notice as "the Slack just knows."
+
+        Beyond the main platform, I shipped three supporting projects: the
+        Python migration crawler (1,748 images / 707 MB / 11 JSON files
+        bootstrapping the new platform from the old Webflow site), the Her
+        Waka MSD-funded teaching site at herwaka.shesharp.org.nz with
+        complete authored curriculum (4 workshops + 8+ tutorials), and a
+        professional SEO audit and 10-point recommendations report on
+        shesharp.org.nz that identified the high-priority mobile-vs-desktop
+        ranking gap on "women in tech New Zealand."
+      technicalHighlights: |
+        Architected and built every layer of the platform: Next.js 15.6
+        canary + React 19.1.2 + TypeScript 5.8 on Drizzle 0.43 over Neon
+        Postgres, NextAuth 5 with bcrypt + Google/GitHub OAuth, Tailwind 4
+        + shadcn/ui, Resend transactional email, Cloudinary image pipeline,
+        Stripe-integrated membership flow, Vercel edge deployment +
+        3 Vercel Cron jobs. Schema runs 1,392 lines / 30 pgEnums / 34
+        pgTables / 27 SQL migrations — every business concept is a typed
+        enum so invalid states are unrepresentable. 95 API routes, 53
+        pages, 145 components.
+
+        The AI matching engine is a deliberate two-stage pipeline:
+        rule-based pre-filter for cost control, then GPT-4o-mini at
+        temp 0.3 / max_tokens 1000 / JSON-object response_format scoring on
+        promising pairs along five **explicitly weighted** dimensions
+        (MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%)
+        with explainable natural-language justifications, Upstash Redis
+        cache by pair, exponential-backoff retries, deterministic rule-
+        based fallback when AI is unavailable, and admin human-in-the-loop
+        approval as the final gate. The Slack agent
+        skill composes existing CLI tools (Slack fetch, image download,
+        docx parse, JSON validate, git commit) into a single intent-driven
+        workflow with dry-run preview and CI gating — collapsing event
+        publication from hours of manual work to one command. Across the
+        three supporting projects I worked in Python (crawler with image
+        deduplication + Wayback Machine fallback), Mintlify / MDX (Her Waka
+        teaching site authored solo), and Node 22 native fetch over the
+        SerpData API (the SEO audit with mermaid-diagrammed report).
+
+  - id: femtech-weekend
+    name: FemTech Weekend
+    position: Chief Technology Officer
+    startDate: "2025-03"
+    endDate: null
+    location: Chengdu, China (HQ; remote, with Shanghai Summit delivery)
+    url: https://www.femtechweekend.com/
+    logo: /public/organizations/femtech-weekend-logo.svg
+    featured: true
+    tier: primary
+    recency: active
+    lastUpdated: "2026-05-18"
+    keywords:
+      - Next.js
+      - Docusaurus
+      - Drizzle ORM
+      - Neon Postgres
+      - Notion API
+      - Cloudflare Pages
+      - Cloudinary
+      - Google Generative AI
+      - i18next
+      - Tailwind CSS
+      - Radix UI
+      - earth-flyline
+    narrative:
+      impactHeadline: "Sole technical leader and co-architect with the founder; tenure spans two platform generations (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite), serving as the sole engineering voice across all org events and the 2026 summit cycle."
+      companyContext: |
+        FemTech Weekend is China's first organisation built specifically around
+        women's health technology — a community, research outfit, and event
+        producer rolled into one, **headquartered in Chengdu, founded 2024
+        by Zhu Yihan**, with a 2–10-person core team. Its remit is to take
+        the international FemTech movement (a category coined in 2016 by
+        Ida Tin, the Clue co-founder who headlines the 2026 Shanghai Summit)
+        and ground it in the Greater China market: connecting founders,
+        investors, healthcare professionals, and academic researchers across
+        the China–global divide, positioned publicly as the **"China
+        representative for cross-border women's health initiatives."** The
+        organisation runs ecosystem partnerships with major corporates
+        including **Bayer** and **PwC** on women's-health ecosystem
+        development, hosts quarterly updates on China FemTech innovation,
+        and collaborates with **FemTech Across Borders** on international
+        programmes — alongside original market research (FemTech Market Map
+        for Greater China, FemmeHealth Ventures Alliance partnership reports),
+        editorial content, hackathons and pitch competitions, and the
+        flagship Shanghai Summit.
+      mission: |
+        Build the connective tissue between Chinese and global women's health
+        innovation: surface investable founders, decode the China market for
+        international FemTech operators, and accelerate culturally-grounded
+        women's health innovation by reducing the information and capital
+        friction across borders. The conviction is that women's health is
+        chronically under-funded globally and structurally invisible in much
+        of China — and that a deliberate cross-border community can compress
+        years of market education and partnership-building into months.
+      myMandate: |
+        Hired as CTO with full ownership of every digital surface the
+        organisation operates. I report directly to **founder Zhu Yihan**,
+        run as a solo engineering team (with a single occasional code
+        contributor), and have end-to-end authority over architecture,
+        vendor choice, deployment infrastructure, and content management
+        workflow. My mandate covers two parallel website generations, all
+        back-office tooling that the non-technical team uses to keep the
+        platform current, the application and subscription pipelines that
+        capture every inbound lead, and the live digital infrastructure
+        for the Shanghai Summit 2026 — the organisation's largest event
+        to date.
+
+        The arrangement is best described as **co-designing technical
+        strategy with the founder, then executing solo**: regular
+        working sessions with Zhu Yihan to align platform direction,
+        partner integrations, and editorial cadence, followed by my
+        own end-to-end engineering delivery. Shanghai Summit 2026 in
+        particular runs through this loop — speakers, multi-tier
+        sponsor partners, NGO collaborators (AVPN among them), and
+        policy/academic partners are all reflected through the same
+        infrastructure I built, with content updates landing hours
+        after founder-side decisions.
+      impactDelivered: |
+        Built and shipped **two complete generations of the FemTech Weekend
+        website from scratch, solo**, across roughly a year of work.
+
+        **Generation 1 — femtechweekend.com (the original site).** 58
+        commits, 100% authored by me. A Next.js 15 application that paired
+        a public-facing marketing and ecosystem site with a Notion-backed
+        content layer so the non-technical founder could publish blog
+        articles, ecosystem profiles, and event reports directly inside
+        Notion — no developer-in-the-loop, no CMS learning curve, no
+        markdown gymnastics. Visitor form submissions (ecosystem
+        applications, event registrations, image uploads) flowed straight
+        into Notion databases via the Notion API, with images persisted to
+        Cloudinary, so the founder could triage applicants in the same tool
+        she already used for everything else. Bilingual (English / 简体中文)
+        from day one via i18next, including bilingual switching on the blog
+        detail pages. A gated "report request" flow captured email
+        addresses before unlocking research reports.
+
+        **Generation 2 — the current platform (femtech-weekend-website).**
+        544 commits, 529 of them (97.2%) authored solo by me. A
+        substantially larger and more ambitious system: Docusaurus 3.9 as
+        the editorial spine (chosen deliberately over keeping Next.js,
+        because the site's centre of gravity had shifted from "marketing
+        site with a CMS" to "research publication and event platform with
+        deep editorial content"), backed by Drizzle ORM against Neon
+        serverless Postgres for application and subscription data, with
+        Notion retained for content the founder edits directly. Deployed on
+        Cloudflare Pages via Wrangler for global edge delivery. Adds:
+        comprehensive bilingual content (EN/简体中文 across every section,
+        not just the blog), a full **Shanghai Summit 2026** event site with
+        ten distinct sections (Hero, FAB Globe, Partners, Speakers, Agenda,
+        Audience, Venue, Why Different, Global Network, Sponsors), three
+        sub-pages (programme, pitch, hour-by-hour agenda), an admin
+        applications dashboard, an interactive 2D world-map visualisation
+        of the global network (powered by earth-flyline with count-up
+        statistics), Google Generative AI integration, transactional email
+        templates for pitch and programme review workflows, and a research
+        publications hub. Two original research reports published through
+        the platform: *FemTech Market Map for Greater China* (2025-05) and
+        the *FemmeHealth Ventures Alliance* partnership announcement
+        (2025-06).
+
+        **Shanghai Summit 2026 delivery.** The platform is currently
+        carrying the organisation's largest event: a four-day Shanghai
+        Summit running **June 22–25, 2026** with the theme *Where Global
+        Women's Health Meets China*. The lineup includes 16 early confirmed
+        speakers headlined by **Ida Tin** (Clue co-founder; coined the term
+        "FemTech" in 2016), alongside Alice Zheng, Dominnique Karetsos,
+        Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike
+        Steinebach, Stella Fu, Peixian Lu, Sandy Lv, Chai Ke (柴可), Chen
+        Jian, Jazmin Seregi, Judy Lux, Abraham Morse, and Ira Evdokimova.
+        The summit is structured as a flagship conference plus a dedicated
+        capital and pitch day plus curated site visits, with named partners
+        including AVPN and a multi-tier sponsor programme — all of it
+        rendered, managed, and updated through infrastructure I designed
+        and operate solo.
+      technicalHighlights: |
+        **Two-generation architectural evolution, with the second
+        generation an intentional rewrite rather than a refactor.** The
+        decisive call was whether to grow Generation 1 (Next.js + Notion)
+        forward, or to admit that the platform's centre of gravity had
+        shifted from "marketing site that publishes the occasional report"
+        to "research publication and multi-event hub with deep editorial
+        content," and rebuild on a stack actually optimised for that
+        shape. I chose to rebuild on Docusaurus 3.9 — not the default
+        choice for a brand website, but the right one for an editorial
+        platform whose long-term value lives in its market research,
+        opinion pieces, founder stories, and event archives.
+
+        **Notion-as-CMS for a non-technical founder.** In both generations,
+        the founder edits content directly inside Notion — articles,
+        ecosystem profiles, event reports — and the website renders it
+        live. This is the single most important UX decision in the system:
+        it removes me from the publishing critical path and gives the
+        founder full editorial control without needing to learn a custom
+        CMS or speak markdown. Implemented in Gen 1 with `react-notion-x`
+        for richly-rendered article bodies, and in Gen 2 with the modern
+        `@notionhq/client` v3 SDK pulling structured content into
+        Docusaurus pages.
+
+        **Drizzle ORM + Neon serverless Postgres** in Generation 2 for
+        application submissions, subscription confirmations, and admin
+        dashboards — moving structured form data off Notion (which was a
+        clever fit for content but the wrong fit for relational submission
+        data) onto a real schema-versioned Postgres database with
+        type-safe queries.
+
+        **Cloudflare Pages + Wrangler** for global edge deployment of
+        Generation 2: low-latency delivery to both Chinese and
+        international visitors, which matters more for this audience than
+        for most products, since the whole proposition is cross-border.
+
+        **Bilingual everything, from day one.** Both generations ship in
+        EN and 简体中文 — not as an afterthought, but as a first-class
+        architectural constraint that shapes routing, content models,
+        speaker data structures, agenda time-zone rendering, and all
+        editorial copy. The Gen 2 platform's content layer is built so
+        that every speaker, partner, agenda block, and editorial piece
+        has parallel locales rather than fall-through defaults.
+
+        **Image performance discipline.** The summit content is
+        image-heavy (speaker headshots, venue photography, partner
+        logos), so I ran a deliberate pass that compressed and optimised
+        14 large images and shrank the social-card image from 6 MB to
+        240 KB — overall reducing site image weight by roughly 67%
+        without losing visual fidelity. The full-build pipeline keeps
+        this regression-tested with TypeScript checks and Docusaurus's
+        build warnings treated as errors.
+
+        **Interactive global-network map** built with `earth-flyline` —
+        a 2D world-map visualisation with count-up statistics rendered
+        responsively across screen sizes, with light/dark mode theming —
+        which carries the visual weight of the summit's "global meets
+        China" thesis on the front page.
+
+        **Transactional email infrastructure.** Custom templates for
+        pitch package emails and programme review confirmations,
+        including forwarding-recipient logic so the founder gets a
+        complete audit trail of every application without having to
+        check the dashboard.
+
+        **Effectively no team to lean on.** Generation 1 was 100% solo;
+        Generation 2 received 17 commits from one occasional contributor
+        out of 544 total — 97.2% solo. Every architectural decision,
+        deployment incident, schema migration, and last-minute speaker
+        update is on me, and the platform has remained continuously
+        operational through both generations and through active summit
+        marketing.
+    publicSummary: |
+      CTO at FemTech Weekend, China's first women's health-tech organisation.
+      Solo-built two generations of the public platform — original Next.js +
+      Notion site (58 commits, 100% solo) and the current Docusaurus +
+      Drizzle/Neon + Cloudflare Pages platform (544 commits, 97.2% solo) — and
+      currently delivering the digital infrastructure for the 2026 Shanghai
+      Summit (June 22–25, 16 confirmed speakers including Ida Tin), the
+      organisation's largest event to date.
+
+  - id: copilotkit
+    name: CopilotKit
+    position: Open Source Contributor
+    startDate: "2025-06"
+    endDate: "2026-05"
+    location: USA (remote)
+    url: "https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666"
+    logo: /public/organizations/copilot-kit-logo.svg
+    featured: true
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-06-04"
+    keywords:
+      - "CopilotKit (24.6k+ stars)"
+      - "Open source"
+      - TypeScript
+      - React
+      - "Python LangGraph"
+      - "Multi-agent orchestration"
+      - "MCP integration"
+      - "Anthropic Claude Code"
+      - "Documentation as contribution"
+    narrative:
+      impactHeadline: "Two merged PRs landed in CopilotKit's official demos & docs (24.6k+ stars): contributed the 8-agent FemTracker multi-specialist demo and the Claude Code MCP setup guide — entries that other LLMs and dev tools now index when teaching agentic UIs."
+      companyContext: |
+        CopilotKit is the open-source framework for building in-app AI
+        copilots and AI agents — 24,600+ GitHub stars and a thriving
+        contributor community. It provides React components for embedding
+        LLM-powered AI assistants directly into web applications
+        (chat interfaces, command palettes, in-app actions), a runtime
+        layer for tool and action registration that LLMs can invoke,
+        and a Python SDK for multi-agent systems orchestrated through
+        LangGraph. The framework is one of the standard ways to add
+        sophisticated AI UX to a React app.
+      mission: |
+        Make it trivially easy for any web application to add a
+        sophisticated AI copilot or agent system. Lower the floor for
+        building agentic UX so AI capabilities aren't gated by the
+        complexity of state management, LLM orchestration, and
+        framework integration plumbing.
+      myMandate: |
+        Open Source Contributor — adding capabilities, demos, and
+        documentation downstream of real-world production use. I run
+        CopilotKit + LangGraph in two production systems
+        (Tam-AI-Ti's 88+ AI actions; FemTracker Agent's 8-agent
+        women's-health pipeline) and contribute back the missing
+        showcases, integration paths, and ecosystem bridges I
+        encountered along the way.
+      impactDelivered: |
+        Two merged pull requests to the CopilotKit main repository,
+        both publicly approved and thanked by named maintainers:
+
+        **[PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)
+        — `chore(demos): Add FemTracker Agent + CopilotKit Demo to
+        the demos_2025 folder`** (merged 2025-09-11, after ~10 weeks
+        of review, 341 additions): contributed FemTracker Agent to
+        CopilotKit's official `demos_2025` collection — an AI-powered
+        women's health companion orchestrating **eight specialized
+        agents** (Main Coordinator + Cycle Tracker + Fertility
+        Tracker + Symptom Mood + Nutrition Guide + Exercise Coach +
+        Lifestyle Manager + Health Insights) through CopilotKit's
+        agent-routing layer. Live at femtracker-agent.vercel.app, with
+        source on GitHub and a YouTube demo walkthrough. Maintainer
+        Tyler Slaton (`@tylerslaton`) approved with:
+        *"This is awesome! Thank you for the cool showcase
+        @ChanMeng666."*
+
+        **[PR #2529](https://github.com/CopilotKit/CopilotKit/pull/2529)
+        — `docs: add Claude Code setup instructions to MCP server
+        guide`** (merged 2025-10-09, 62 additions): expanded the
+        CopilotKit MCP server documentation with step-by-step Claude
+        Code CLI setup commands, expected output examples, verification
+        flow, and management commands — positioned between the
+        existing Cline and GitHub Copilot sections. This contribution
+        connects CopilotKit's MCP-server capability with Anthropic's
+        Claude Code, building on my earlier early-MCP-developer work.
+        Maintainer Brandon McConnell (`@brandonmcconnell`) approved:
+        *"This looks great. Thanks, @ChanMeng666 👏"*
+      technicalHighlights: |
+        Both contributions come from real production usage: Tam-AI-Ti
+        (88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and
+        FemTracker Agent (8-agent CopilotKit + LangGraph + Python
+        orchestration). The FemTracker Agent demo is the most
+        substantive multi-agent showcase in CopilotKit's demos
+        collection — Next.js 15 + React 19 + TypeScript on the
+        frontend, Python 3.12 + LangGraph for agent orchestration,
+        Supabase PostgreSQL persistence with WHO-standard health
+        scoring (0-100 metric scales), Redis caching reportedly
+        sustaining 90%+ hit rates.
+
+        The MCP-docs PR is a deliberate ecosystem bridge: it connects
+        CopilotKit's MCP-server capability to Anthropic's Claude Code,
+        which extends the same early-MCP-developer thread I established
+        in November 2024 (issue #76 in modelcontextprotocol/servers)
+        and December 2024 (server-google-news, server-google-jobs).
+        Both PRs are docs- and demo-shaped — the highest-leverage
+        contribution surface for someone outside the maintainer team
+        of a 24.6k-star project.
+
+  - id: sanicle
+    name: Sanicle
+    position: CTO (prev. Senior AI/ML Infrastructure Engineer)
+    startDate: "2025-03"
+    endDate: "2026-02"
+    location: USA (remote)
+    url: https://sanicle.cloud/
+    logo: /public/organizations/sanicle-logo.svg
+    featured: true
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-18"
+    keywords:
+      - FemTech
+      - "Women's health"
+      - "Menstrual and menopause wellness"
+      - "B2B SaaS"
+      - "Next.js 15"
+      - "NextAuth 5"
+      - "Drizzle ORM"
+      - "IBM watsonx"
+      - "llama-3-405b-instruct"
+      - "Google Gemini"
+      - "Multi-tenant architecture"
+      - "Role-based auth"
+      - Vercel
+      - "Solo CTO"
+    narrative:
+      impactHeadline: "Took Sanicle from a no-code prototype to a production B2B FemTech SaaS — and personally integrated IBM watsonx AI into the product, which earned Sanicle their IBM Silver Partner certification + PartnerPlus directory listing. ~98% solo on 350+ commits."
+      companyContext: |
+        Sanicle (sanicle.cloud) is a US-based FemTech B2B / B2G SaaS
+        platform tackling menstrual and menopause workplace wellness.
+        Self-description from the company README: "an innovative FemTech
+        B2B-B2G SaaS platform that leverages AI-powered technology to
+        revolutionize menstrual and menopause health in the workplace.
+        Supports comprehensive health tracking, predictive analytics,
+        and workplace integration with enterprise-grade security.
+        Powered by IBM Cloud watsonx AI for intelligent health insights
+        and personalized support." Founding leadership Chan worked with
+        directly: Chief Executive Officer Paige Afanu (Omopeju Afanu)
+        and Chief Period Officer Chaste Christopher Inegbedion (both
+        of whom managed Chan directly), Chief Experience Officer
+        Gabrielle J. Hurst (peer on the same team; now Remote Pilot
+        & Product Marketing Manager at Houston Robotics), and Chief
+        AI Officer Daryll Hall — three of whom contributed LinkedIn
+        testimonials referenced in this profile. The company was
+        featured in THISDAYLIVE's May 2025 piece on FemTech founders
+        redefining women's workplace health.
+      mission: |
+        Scale menstrual and menopause wellness benefits to working
+        women — through employer-provided AI health consultations,
+        cycle and symptom tracking, automated leave-request workflows
+        with health-context awareness, and HR-side workforce health
+        analytics — while keeping the experience privacy-first and
+        enterprise-deployable. The strategic wedge into enterprises
+        runs through the IBM partnership: Sanicle is listed in the
+        official IBM PartnerPlus Solution Directory, and the watsonx
+        integration is a major credibility surface for B2B sales.
+      myMandate: |
+        Hired initially as **Senior AI/ML Infrastructure Engineer** in
+        February 2025 (initial sanicle-ai commit on Feb 26 2025);
+        promoted to **CTO** in March 2025. Operating mandate covered
+        the entire technology surface of the company: replace the
+        legacy Bubble no-code site with a real full-stack system,
+        ship a multi-tenant women's-health SaaS with role-separated
+        employee and HR dashboards, integrate IBM watsonx for AI
+        health consultations and leave-request workflows, build the
+        marketing site, prototype the mobile app, and produce the
+        executive-deck demos used in IBM partner conversations. The
+        role through to Feb 2026 spanned active build (Feb–Jun 2025,
+        14 weeks of intense solo development) and ongoing
+        maintenance, IBM partnership work, and product evolution
+        through close-out.
+      impactDelivered: |
+        **IBM Silver Partner certification for Sanicle.** My watsonx
+        integration into employee dashboards — AI-powered health
+        consultations and automated leave requests — was the
+        engineering work that anchored Sanicle's entry into the IBM
+        Business Partner Network. Sanicle.Cloud is now listed in IBM's
+        official PartnerPlus Solution Directory (ibm.com/partnerplus/
+        directory/solution/0638) as a partner solution delivered on
+        watsonx generative AI, hybrid cloud integration, and secure
+        data tooling.
+
+        **Five production codebases, ~98% solo authorship across
+        ~350+ commits:**
+        - `sanicle-cloud` — official company website on Next.js,
+          replacing the legacy Bubble no-code site with a proper
+          full-stack build (a migration I strategically recommended
+          and the team accepted)
+        - `sanicle-ai` — the core FemTech platform with multi-tenant
+          architecture, role-based auth (Employee / HR Manager /
+          Org Admin), cycle and symptom tracking, AI consultation
+          chat, leave-request workflows, HR analytics dashboards
+        - `sanicle-ai-mobile` — mobile-first PWA prototype for the
+          employee surface
+        - `reveal.js / sanicle-ai-presentation` — executive demo
+          deck with working employee-side and HR-side video flows
+          used in IBM and partner conversations
+        - `sanicle-docs` — internal work archive including 11 weekly
+          reports (Mar 25 – Jun 8 2025) and post-meeting supplements
+          tracking IBM partnership work, architecture decisions, and
+          UI/UX feedback from the C-level team
+
+        **Public Next.js ecosystem contribution.** Published a
+        community write-up on the Vercel forum titled "Solved Bug:
+        Authentication Redirect Issue in Sanicle-AI Platform"
+        (community.vercel.com/t/.../6818) documenting a production
+        NextAuth 5 + Next.js 15 middleware / auth-state /
+        routing-conflict failure mode and the multi-stage solution.
+        Publicly acknowledged by Vercel Staff (Amy Egan): *"Thanks
+        for sharing your debugging process and solution! This could
+        help lots of people facing similar auth issues, or trying to
+        avoid them in the first place."*
+      technicalHighlights: |
+        Full-stack on **Next.js 15.5.9 + React 19 + TypeScript** with
+        **NextAuth 5.0.0-beta.30** for multi-tenant role-based auth
+        (Employee / HR Manager / Org Admin); **Drizzle ORM 0.34** over
+        PostgreSQL for type-safe persistence; **Upstash Redis** for
+        caching; **Vercel Blob** for file uploads; **Vercel AI SDK
+        4.3** as the AI abstraction layer; **shadcn/ui + Radix**
+        components; **FullCalendar** for period and cycle
+        visualization; **Chart.js** for HR analytics dashboards;
+        **Framer Motion** for the interaction polish. Deployed on
+        Vercel.
+
+        **Dual-AI architecture for resilience.** The platform combines
+        **IBM Cloud watsonx AI** (`meta-llama/llama-3-405b-instruct`)
+        as the primary engine for AI health consultations and
+        leave-request reasoning, with **Google Gemini** as a fallback
+        when watsonx hits its 28-second response baseline against
+        Vercel's 10-second function-timeout ceiling. Mock-response
+        fallback in the `/api/watsonx-chat` route preserves UX
+        availability when the upstream model is rate-limited or
+        timing out, with environment flags (`MOCK_API`) controlling
+        development vs production behavior.
+
+        **The Next.js / NextAuth 5 auth-redirect bug-and-fix.**
+        Identified, debugged, and publicly documented a multi-cause
+        production failure where users authenticated successfully but
+        were never redirected to their personal dashboards on Vercel
+        — despite working in local development. Root cause was a
+        combination of middleware conflicts, authentication-state
+        synchronization issues, and routing complications across
+        NextAuth 5 beta and Next.js 15. Multi-stage fix shipped to
+        production; write-up published to the Vercel community forum
+        and publicly thanked by Vercel Staff.
+
+        **Strategic migration call.** On joining, recommended Sanicle
+        migrate from its Bubble no-code site to a code-based
+        full-stack architecture — the team accepted and I executed
+        the migration solo across `sanicle-cloud` and `sanicle-ai`,
+        unblocking the enterprise-grade auth, multi-tenant data
+        model, IBM watsonx integration, and Vercel-native deployment
+        pipeline that Bubble fundamentally couldn't support.
+
+  - id: forward-with-her
+    name: Forward with Her (她行) Mentorship
+    position: Technology & Professional Development Mentor
+    startDate: "2024-10"
+    endDate: "2025-09"
+    location: China (remote, online cohort delivery)
+    url: "https://www.linkedin.com/company/taxing-mentorship/"
+    logo: /public/organizations/forward-with-her-logo.jpg
+    featured: true
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-18"
+    keywords:
+      - Mentorship
+      - "Women in STEM"
+      - "Career development"
+      - "AI programming education"
+      - "Cohort teaching"
+      - "Office Hours"
+    narrative:
+      impactHeadline: "Mentored inside a 360-mentor / 800-mentee STEM programme — 7 of Chan's 18 public LinkedIn recommendations come from this cohort. The AI-teaching platform Chan first built for these mentees now hosts 4 coexisting cohorts including TechNest 2026."
+      companyContext: |
+        **Forward with Her (她行 / "Forward with Her Mentorship")** is a
+        China-rooted, internationally-reaching women-in-STEM mentorship
+        programme operating under the corporate brand
+        *taxing-mentorship* on LinkedIn. The programme is structured as
+        a curated mentor-mentee network where established professionals
+        across software engineering, data, product, AI, and adjacent
+        technical disciplines guide cohorts of early-career women
+        through one-on-one mentoring, group sessions, and topic-specific
+        public lectures and office-hour discussions. **Network scale:
+        360+ mentors supporting 800+ mentees** across the programme's
+        operating lifetime.
+      mission: |
+        Open accelerated, mentor-led pathways into technology careers
+        for women who would otherwise face the harder, slower, often
+        isolated route. The programme's theory of change is that
+        sustained 1:1 mentorship at a critical career transition
+        outperforms generic learn-to-code content because it transfers
+        not just skills but agency, judgment, and the soft
+        infrastructure (peer networks, role models, navigation
+        literacy) that compounds.
+      myMandate: |
+        Served as a **Technology & Professional Development Mentor**
+        from October 2024 through September 2025 (one full annual
+        cycle). Mandate covered: one-on-one mentorship sessions with
+        assigned mentees across software engineering, AI tooling, and
+        career navigation; group mentoring sessions and shared Office
+        Hours with multiple cohort sisters; public lectures on AI
+        programming, identity formation in tech, and career
+        transitions; and ongoing availability as a long-term contact
+        for mentees beyond the formal programme cycle.
+      impactDelivered: |
+        **The mentorship engagement is the umbrella under which seven
+        of the eighteen public LinkedIn recommendations on Chan's
+        profile were given** — making Forward with Her the
+        single-largest source of independently-attested mentorship
+        impact across Chan's career to date. Mentees who gave
+        LinkedIn recommendations specifically attributing their
+        learning to Forward with Her sessions include:
+
+        - **Siyu Xing** (Ph.D. Candidate in CS / AIGC, University of
+          Chinese Academy of Sciences) — attended Chan's AI
+          programming public course and Office Hours; cites "insights
+          on identity and self-awareness" and the spiritual-power
+          framing of the cohort culture
+        - **Amy Li** (student at China West Normal University) —
+          connected twice 1:1 plus a cohort tea-party; cites Chan as
+          "not only a mentor… also my role model"
+        - **Di Peng** (student at ShanghaiTech University) — completed
+          Chan's AI-assisted development course on Cursor, shipped her
+          first personal website end-to-end
+        - **Mi Su (苏米)** (Student at Guangxi University) — cohort
+          mentee
+        - **Shushu Qin** (Master of Computational Science at Laurentian
+          University / Université Laurentienne) — cohort mentee who
+          went on to AWS certifications (SAA + ML)
+        - **Yijia (Robin) Lee** (Student at Tianjin Normal University)
+          — cohort mentee
+        - **Shiyu Fang** (Web Developer at GDS Communication) — cohort
+          mentee who carried the AI-with-web-development integration
+          methodology into her own subsequent practice
+
+        The programme also produced a public-lecture series whose
+        accumulated topics — AI programming using natural-language
+        prompts, identity formation in tech, career navigation for
+        early-career women — informed both the eventual TechNest
+        Community AI Track curriculum (2026) and the AI Programming
+        Education teaching platform that's now my open-source
+        teaching repository.
+
+        **The AI Programming Education teaching platform
+        (`programming.chanmeng.org`) was first built specifically for
+        this Forward with Her cohort.** Its earliest cohort version
+        (`2024-winter`) exists precisely because I needed a structured
+        place to host the tutorials, lecture recordings, and exercises
+        I was delivering live to mentees. It has since grown into the
+        open-source teaching platform now serving 4 coexisting cohort
+        versions across TechNest, HER WAKA, and the original Forward
+        with Her audience — but its origin is here.
+
+        I also built and shipped a dedicated **bilingual EN/CN promo
+        site** for the programme
+        (`forward-with-her-mentorship-program.pages.dev`) — a
+        3D-rendered Next.js 15 + Three.js landing page on Cloudflare
+        Pages that supported the programme's external visibility
+        while I was in the cohort.
+      technicalHighlights: |
+        The substance of this role is **pedagogical and relational
+        rather than technical-implementation**, but the technical
+        content of the mentorship was concrete: students learned to
+        prompt Cursor, Claude Code, and AI editors to ship a complete
+        personal website end-to-end; how to evaluate AI tools as
+        collaborative partners rather than autocomplete; how to read
+        and act on LLM output critically; and how to integrate
+        bilingual content (EN/简体中文) into modern web projects.
+
+        The teaching methodology developed here — prompt-first
+        development, learn-by-shipping a real production site,
+        cohort accountability through Office Hours, screenshot-as-
+        evidence assessment — is the same doctrine that later
+        anchored the **2026 TechNest Community AI Track curriculum**
+        and the personal AI Programming Education teaching platform
+        (`programming.chanmeng.org`). The cohort recordings and
+        materials from this period are preserved in the teaching
+        repository as the `2024-winter` and `2025-summer` versioned
+        cohort docs.
+    publicSummary: |
+      Technology & Professional Development Mentor in the Forward with Her
+      (她行) Mentorship programme — a women-in-STEM mentor-mentee network
+      of 360+ mentors supporting 800+ mentees — from October 2024 through
+      September 2025. **Seven of the 18 public LinkedIn recommendations on
+      Chan's profile come from mentees who specifically credit Forward with
+      Her sessions for their learning**, including students at the
+      University of Chinese Academy of Sciences, ShanghaiTech University,
+      Tianjin Normal University, China West Normal University, Guangxi
+      University, and Laurentian University. The teaching doctrine
+      developed here ("natural language is the source code"; ship a real
+      production site by Week 8) became the foundation for the later 2026
+      TechNest AI Track curriculum and Chan's AI Programming Education
+      teaching platform.
+
+  - id: freeperiod
+    name: FreePeriod
+    position: Chief Technology Officer
+    startDate: "2024-11"
+    endDate: "2025-06"
+    location: Guangzhou, China (remote)
+    url: "https://www.linkedin.com/company/free-period/"
+    logo: /public/organizations/free-period-logo.png
+    featured: true
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-18"
+    keywords:
+      - Next.js
+      - TypeScript
+      - Tailwind CSS
+      - Radix UI
+      - Framer Motion
+      - Recharts
+      - Zustand
+      - Google Maps API
+      - Cloudflare Pages
+      - i18n
+    narrative:
+      impactHeadline: "Solo CTO of a Guangzhou period-poverty startup combining software with off-grid hardware (solar-powered free-period-product dispensers) — site live during the company's 6-award streak (HKUST competition, Tencent VC, Tsinghua SDG, Japan conference)."
+      companyContext: |
+        FreePeriod is a Guangzhou-based public-health startup tackling
+        period poverty and menstrual access through a combined hardware,
+        software, and advocacy approach. Founded in 2024 by Julia Zhu
+        (朱楠) and incubated at the **Hong Kong University of Science and
+        Technology (Guangzhou) Lab of Future Technology**, the company
+        designs and deploys emergency sanitary-pad dispensers based on
+        vending-machine technology for public spaces, runs reproductive
+        health education programmes, and advocates for "women-friendly
+        places" that supply free sanitary products in public restrooms —
+        organised under the founder's strapline that *sanitary pads
+        should be public infrastructure, like toilet paper, not a luxury
+        purchase*. The team is 2–10 strong and operates as a
+        university-incubated venture with strong academic and competition
+        backing.
+      mission: |
+        Normalise menstrual products as a free, universally-available
+        public good — starting in mainland China, where period poverty
+        is still under-discussed and where women in transit, on campus,
+        in low-income workplaces, or in emergencies routinely face
+        access gaps. The theory of change is to combine concrete
+        hardware deployments (so the access gap is visibly solved in
+        specific real places) with reproductive health education (so
+        the cultural conversation moves) and policy advocacy (so the
+        commitment institutionalises). The March 2024 policy win
+        installing free sanitary pads in HKUST(GZ) women's restrooms is
+        the proof-of-model the rest of the strategy builds on.
+      myMandate: |
+        Brought in as CTO in November 2024 to own every piece of
+        FreePeriod's digital presence. Reporting directly to founder
+        Julia Zhu, my mandate covered the public website end-to-end —
+        architecture, build, deployment, and ongoing maintenance —
+        alongside the digital infrastructure that supports the
+        company's advocacy and product-rollout work (location directory
+        of dispenser installations, advocacy document distribution,
+        product demonstration, event scheduling, bilingual content for
+        cross-border audiences). Solo engineering team throughout.
+      impactDelivered: |
+        **Built and shipped the FreePeriod official website
+        end-to-end, solo** — 53 commits in the repository, 100%
+        authored by me across my two GitHub identities (49 + 4 from
+        Chan Meng / ChanMeng666; zero outside contributors). The site
+        is the public face of every product, advocacy, and education
+        thread the company runs.
+
+        **What the site has to do, and does:** present the dispenser
+        product and the company's mission to a press- and grant-
+        evaluator audience (the company collected six named awards and
+        programme selections in its 2024 cycle); host an interactive
+        **Google Maps directory** of dispenser locations and
+        women-friendly places so visitors can find free menstrual
+        products near them; serve a product introduction video and
+        downloadable advocacy documents (research summaries, policy
+        briefs, partnership decks); run a Google Calendar embed for
+        community-event scheduling; and operate fully bilingually
+        (English / 简体中文) for both domestic Chinese audiences and the
+        international academic, competition, and grant ecosystem the
+        company sits inside.
+
+        **Stayed on the site post-tenure as the long-term technical
+        custodian** — the founder kept me on for ongoing infrastructure
+        work after the active CTO engagement ended in June 2025. In
+        that capacity I shipped the **production migration from Vercel
+        to Cloudflare Pages** in April 2026 (re-pointing DNS, rebuilding
+        the static export pipeline around `wrangler pages deploy`,
+        updating CI), upgraded Next.js to 15.5.9 to clear all then-open
+        Dependabot security alerts in a single pass, refined the i18n
+        layer to handle developer-credit footer attribution in both
+        locales, and kept locations data current as new dispensers were
+        installed.
+
+        **Joined during the company's external-validation cycle.**
+        During the period of my active CTO tenure and immediately
+        leading into it, FreePeriod accumulated a striking concentration
+        of recognition: **Best Award at Japan's 12th International
+        Conference on Social Sciences and Humanities** (2024); **Third
+        Prize in the HKUST Sustainable Smart Living Competition**
+        (2024); **Best Social Media Award at China's inaugural FemTech
+        Weekend Challenge** — the same FemTech Weekend organisation I
+        later joined as CTO, which is part of how that next role came
+        about; **First Prize at the Shenzhen Nanshan District
+        Philanthropic Creative Star Contest**; selection into
+        **Tencent's Technology Venture Capital Program**; selection
+        into **Tsinghua University's SDG Open Innovation Marathon**;
+        and the **HKUST Entrepreneurship Bridge Grant**. The site I
+        built was the public artefact those judging panels were
+        clicking through.
+      technicalHighlights: |
+        **Static-export Next.js 15 + TypeScript** site deployed as a
+        fully static bundle (the build script wipes `.next` and `out/`
+        then writes a clean static export), which is the right shape
+        for a high-traffic, low-mutation marketing-and-advocacy site
+        sitting in front of grant judges, press, and policy
+        stakeholders. Cheap to host, instantly cacheable, and trivial
+        to move between hosts — a property I exercised when I migrated
+        production from Vercel to Cloudflare Pages via `wrangler` in
+        April 2026 without rebuilding the application.
+
+        **Google Maps as a directory primitive.** Rather than building
+        a custom database-backed location service, I used
+        `@react-google-maps/api` with a hand-curated TypeScript module
+        (`locations.ts`) as the source of truth for dispenser and
+        women-friendly-place installations. Each install or location
+        update flows through a Git commit, so the founder gets full
+        audit history of where and when each pin moved, and the
+        Maps-rendered front end stays one PR away from edits. Several
+        commits in the log are `Update locations.ts` — that's the
+        rollout cadence visible in version control.
+
+        **Bilingual i18n by design, not bolt-on** — Chinese and English
+        run side by side across the marketing copy, the dispenser
+        product descriptions, the impact narrative, the advocacy
+        document previews, and the footer credit. The audience split
+        is genuinely bilingual (domestic Chinese policy and partner
+        audiences on one side; international academic, competition,
+        and grant audiences on the other), so the language layer is a
+        first-class architectural concern, not a translation
+        afterthought.
+
+        **Document and video preview pipelines** for the policy
+        briefs, research summaries, partnership decks, and the
+        company's product introduction video — in-browser preview plus
+        downloadable original — so external evaluators can review
+        artefacts without leaving the site.
+
+        **Radix UI primitives + Framer Motion** for accessibility-
+        correct interactive components (dialogs, toasts, checkboxes,
+        popovers) with motion polish, and **Recharts** for impact-
+        metric visualisations on the dashboard. **Zustand** for the
+        small amount of client-side state the marketing surface needs
+        (language toggle, dialog state).
+
+        **Engineering hygiene maintained through the long tail.**
+        Even after the active CTO engagement ended I kept the site
+        secure and modern: a clean Dependabot-driven Next.js 15.5.9
+        upgrade resolved all then-open security alerts in a single
+        commit; the Cloudflare Pages migration was executed without
+        downtime; i18n strings stayed current with footer attribution
+        changes; and locations data continued to track installations
+        as the company rolled out.
+
+        **Software-meets-hardware integration as a deliberate
+        skill surface.** FreePeriod is not a pure-software play —
+        the product is a vending-machine-class hardware deployment
+        for emergency sanitary pads, with solar-powered variants
+        for lower-grid-access locations, deployed across public
+        spaces and partner institutions. My engineering job was
+        to make the software side of that combined operation
+        legible and useful: the live Google Maps dispenser
+        directory that lets users locate the nearest installation;
+        the bilingual advocacy document distribution flow; the
+        live product-demo interface; and the locations dataset
+        that tracks each rollout. This was an explicit exercise
+        in shipping software that is judged not on technical
+        novelty but on whether it makes physical-world deployments
+        visible, addressable, and trustworthy to non-technical
+        audiences.
+    publicSummary: |
+      CTO at FreePeriod (Guangzhou, China; HKUST(GZ) Lab of Future Technology
+      incubated), the public-health startup tackling period poverty through
+      sanitary-pad dispensers, reproductive-health education, and policy
+      advocacy under founder Julia Zhu. Solo-built and shipped the company's
+      official website (Next.js 15 + TypeScript + Google Maps location
+      directory + bilingual EN/中文 + document and video preview pipelines;
+      53 commits, 100% solo) — and stayed on as long-term technical custodian
+      after the active CTO engagement, executing the production migration to
+      Cloudflare Pages and ongoing security maintenance.
+
+  - id: bytedance
+    name: ByteDance
+    position: Backend Developer — Youth Training Camp (青训营)
+    startDate: "2024-11"
+    endDate: "2025-03"
+    location: China (remote)
+    url: "https://youthcamp.bytedance.com/"
+    logo: /public/organizations/bytedance-logo-english.svg
+    featured: true
+    tier: flagship
+    recency: recent
+    lastUpdated: "2026-05-18"
+    keywords:
+      - Go
+      - Java
+      - Spring Boot
+      - MySQL
+      - Redis
+      - MyBatis
+      - Alibaba Cloud
+      - Docker
+      - Vue 3
+      - Pinia
+      - Algorithms
+      - Clean Architecture
+    narrative:
+      impactHeadline: "#2-most-prolific committer on the team's Spring Boot capstone (26% of 174 commits) and published two open-source backend-architecture templates (Go + Java with bilingual READMEs) — now used by later ByteDance Youth Training Camp cohorts as scaffolding."
+      companyContext: |
+        ByteDance — the parent company of Douyin (Chinese TikTok), TikTok,
+        Toutiao, CapCut, Lark, and Doubao — runs its **Youth Training
+        Camp (青训营)** as a structured cohort programme for backend,
+        frontend, mobile, and algorithm-engineering talent in China.
+        The camp combines an algorithm curriculum delivered on
+        ByteDance's MarsCode platform (hosted at juejin.cn) with a
+        capstone team project where developers ship a complete
+        production-shape system end-to-end. It is one of the most
+        competitive training entry points into China's domestic
+        consumer-internet stack, and the project teams are explicitly
+        modelled on the engineering practices of ByteDance product
+        teams — clean architecture, mainstream stacks (Go / Java /
+        Vue), bilingual documentation, and visible code review.
+      mission: |
+        Move trainees from "can write working code" to "can ship
+        production-grade systems in a team" by simulating ByteDance's
+        own engineering rigour — disciplined algorithm fluency,
+        clean-architecture backend design, real-world e-commerce
+        domain modelling, and the kind of git-history hygiene and
+        bilingual-documentation expectation that matters for working
+        inside a Chinese megacorp with global reach.
+      myMandate: |
+        Joined the **"Rebirth: I Code at Youth Training Camp" cohort
+        (重生之我在青训营写代码), Team 115**, as backend developer on
+        the camp's capstone e-commerce platform — *Douyin Mall*. The
+        mandate had three pieces: (1) complete ByteDance MarsCode's
+        algorithm curriculum at depth — not just pass, but solve and
+        write up each problem; (2) ship backend features on the
+        Team-115 capstone alongside seven other trainees, with the
+        normal expectations of a cross-functional engineering team
+        (branching, code review, integration testing, deployment);
+        (3) carry the work outwards beyond the camp's required scope
+        if I had the energy — which I did.
+      impactDelivered: |
+        **Algorithm curriculum — 81 problems, fully written up.**
+        Solved every problem in ByteDance's MarsCode Youth Training
+        Camp Juejin algorithm track and published them as a public
+        teaching repository at *juejin-algorithm-practice* (66
+        commits, 100% solo). Each problem ships with a per-problem
+        README (problem statement, examples, solution approach,
+        complexity analysis) and a tested Python implementation.
+        Topics span arrays/strings, dynamic programming, greedy
+        algorithms, math and number theory, binary search, graphs and
+        trees, bit manipulation, sorting and searching, simulation,
+        and encoding/decoding — the breadth a Chinese backend
+        engineer is expected to demonstrate at interview.
+
+        **Team 115 capstone — Douyin Mall backend.** Shipped backend
+        features on the team's Spring Boot 3 e-commerce platform
+        covering user management, product management, shopping cart,
+        order processing, and an AI customer-service module. The
+        repo carries 174 commits from 8 contributors; **my 45
+        commits placed me as the #2-most-prolific committer on the
+        team** (~26% of the codebase's commit history), behind only
+        the team lead. Stack: Java 17 + Spring Boot 3 + MyBatis +
+        MySQL + Redis + Alibaba Cloud services + Docker, with the
+        kind of microservice-style internal layering the camp's
+        evaluation rubric expects.
+
+        **Frontend supplement — built solo to integrate against the
+        team backend.** Authored a separate Vue 3 + Vite + TypeScript
+        + Pinia + Vue Router frontend (`douyin-mall-frontend`, 15
+        commits, 100% mine) with end-to-end Cypress and Vitest unit
+        coverage, so the team's backend had a clean live-integration
+        target. This wasn't required by the camp; I wrote it to close
+        the loop on the system as a working product.
+
+        **Two open-source teaching templates distilled from the
+        capstone.** The camp's full-stack architecture had enough
+        reusable shape to be worth packaging as starter kits for the
+        next cohort of learners, so I built and published two
+        clean-architecture skeletons:
+
+        - **`douyin-mall-go-template`** (a.k.a. "TikTok Shop Go
+          Template") — Go + Gin + MySQL + Redis backend with
+          standard `cmd/`, `internal/`, `api/`, `pkg/`, `configs/`,
+          `docs/`, `frontend/`, `logs/` layout, JWT auth, RESTful
+          APIs, and a paired React frontend — 27 commits, 100%
+          solo, bilingual EN + 简体中文 README. This is the same
+          repository now featured as one of the eight projects on
+          my GitHub Open Source primary table.
+        - **`douyin-mall-java-template`** — the Spring Boot + Maven
+          counterpart with Maven wrapper, conventional `src/main` /
+          `src/test` layout — 13 commits, 100% solo, bilingual
+          README. Intended as the Java track's mirror of the Go
+          template.
+
+        The five repositories together — algorithm track, capstone
+        backend, supplementary frontend, two architecture templates
+        — represent a deliberately overcomplete portfolio of camp
+        artefacts: most trainees deliver the algorithm submissions
+        and the team capstone; very few add a solo frontend and two
+        production-shape architecture templates on top.
+      technicalHighlights: |
+        **Java / Spring Boot 3 + MyBatis + MySQL + Redis +
+        Alibaba Cloud** on the Team-115 capstone, which is the
+        canonical Chinese-internet backend stack. The architecture
+        is layered along the lines mainstream ByteDance projects
+        use — controller / service / mapper separation, Redis-
+        backed caching for hot product and cart paths, MyBatis for
+        explicit SQL control rather than JPA's abstraction, and
+        Alibaba Cloud services for OSS / SMS / message queue
+        integration. This is the stack a Chinese backend engineer
+        is expected to have shipped in production.
+
+        **Go + Gin clean-architecture template** in
+        `douyin-mall-go-template`. The directory shape (`cmd/`,
+        `internal/`, `pkg/`, `api/`, `configs/`, `docs/`, `logs/`,
+        `frontend/`) is the layout the Go community treats as
+        production-correct — separation between executable entry
+        points, internal packages, and reusable libraries; explicit
+        config and docs trees; logs as a deployment artefact. The
+        template ships JWT authentication, RESTful API conventions,
+        and a complete e-commerce domain model so that a learner
+        forking it has the shape of a real service rather than a
+        scaffolded stub.
+
+        **Vue 3 + Vite + Pinia + Vue Router + TypeScript** on the
+        frontend supplement, with a non-trivial testing pyramid
+        (Vitest for unit, Cypress for e2e via `start-server-and-
+        test`) — explicitly the configuration that lets you run
+        e2e tests both in CI (`vite preview` + `cypress run`) and
+        interactively (`vite dev` + `cypress open`).
+
+        **Algorithm fluency across ten topic areas** — the 81
+        problems on Juejin span the topic distribution Chinese
+        big-tech interview panels actually test, including the
+        weaker spots most candidates have (bit manipulation,
+        simulation, encoding/decoding) rather than just the Leetcode
+        favourites (arrays, DP). Each solution has explicit
+        complexity analysis, which is how the camp graded them.
+
+        **Bilingual technical documentation discipline** — every
+        repository I authored or led for the camp ships
+        side-by-side English and 简体中文 READMEs at production
+        quality. This is the documentation expectation inside a
+        Chinese megacorp with global products, and it's a habit I
+        carried out of the camp into every subsequent project.
+
+        **Team collaboration at the right scale** — being the #2
+        committer on an 8-person team taught the specific muscles
+        that solo projects don't: PR review etiquette, integration
+        conflict resolution, sharing test fixtures across modules,
+        and writing commit messages that another contributor will
+        read.
+    publicSummary: |
+      Backend Developer in ByteDance's Youth Training Camp (青训营) cohort
+      "Rebirth: I Code at Youth Training Camp" (Team 115). Completed
+      ByteDance MarsCode's 81-problem algorithm curriculum on Juejin with
+      full write-ups and complexity analysis (published as
+      `juejin-algorithm-practice`); was the #2-most-prolific committer on
+      the team's Spring Boot 3 + MySQL + Redis Douyin Mall capstone (45 of
+      174 team commits); then voluntarily built three additional
+      open-source artefacts beyond the camp's scope — a solo Vue 3 frontend
+      integrating against the team backend, a Go + Gin clean-architecture
+      template (now featured on my GitHub Open Source primary table), and
+      a Java + Spring Boot counterpart template — all bilingual EN + 简体中文.
+
+  - id: corde
+    name: CORDE (NZ infrastructure & civil construction)
+    position: Full Stack Developer & Lead Documenter (Lincoln University COMP693 Industry Placement)
+    startDate: "2024-06"
+    endDate: "2024-11"
+    location: Canterbury, New Zealand
+    url: "https://corde.nz/"
+    logo: /public/organizations/corde-logo.jpg
+    featured: true
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    keywords:
+      - React Native
+      - TypeScript
+      - Native Base
+      - SQLite
+      - ArcGIS
+      - Azure DevOps
+      - Figma
+      - REST APIs
+      - Offline-First
+      - Android
+      - Jest
+      - Apifox
+    narrative:
+      impactHeadline: "#1-most-prolific contributor (42% of 539 commits) on CORDE's offline-first React Native field-operations app — still widely used today by CORDE's water/civil-infrastructure crews. Also owned 97.9% of the documentation track end-to-end."
+      companyContext: |
+        **CORDE** is a Canterbury-based **New Zealand infrastructure
+        and civil-construction company** — 30+ years of operations,
+        roughly 164 staff (LinkedIn category 201–500), trading
+        nationally under the tagline *"Trusted Connections."* In
+        February 2022 three separate Canterbury entities were unified
+        under the CORDE brand. The company operates across three
+        specialist arms — **Civil Construction**, **Regional Asset
+        Maintenance** (open-space management; introduced autonomous
+        mowing tech to NZ via partnerships with Colbrook Industries
+        and RC Mowers USA), and **Water Infrastructure / three waters**
+        — across three Canterbury offices: head office at **85
+        Hoskyns Road, Rolleston**, plus **Timaru** (South Canterbury)
+        and **Rangiora** (North Canterbury). Recognised projects
+        include Te Whāriki Subdivision Stage 3, Windsorcare Village
+        Stage 1, and the Ellesmere-to-Pines Pipeline Project; awards
+        include **CCNZ Canterbury Contractor of the Year** and a
+        **Construction Excellence National Award**. CORDE recently
+        acquired Arnold Jensen Electrical (70+-year-old NZ electrical
+        specialist) to bring electrical capability in-house. This
+        is a substantial regional employer, not a small client.
+
+        The engagement was a **Lincoln University COMP693 industry-
+        placement capstone** — the practicum module of the Master of
+        Applied Computing programme — embedded directly inside CORDE
+        with weekly on-site meetings at their Canterbury offices,
+        distributed online work between meetings, and CORDE's own
+        engineering processes (Azure DevOps for project management,
+        Figma for design hand-off, Apifox + Swagger for API contract
+        testing) governing how the work shipped. Five months from
+        June 2024 kickoff to November 2024 delivery.
+      mission: |
+        Solve a concrete operational problem inside a working
+        infrastructure firm: CORDE's field crews — water-
+        infrastructure technicians, civil-construction site teams,
+        regional-asset-maintenance operators — routinely work in
+        rural and semi-rural Canterbury where mobile network coverage
+        is unreliable. The company's central operations platform
+        (referred to as "Workbench" in the API contracts) is web-
+        based and assumes connectivity. The mobile app's job was to
+        make the field worker's tablet the **system of record for
+        the moment of work**, capture text and photos and GPS
+        simultaneously, hold it locally with integrity guarantees,
+        and synchronise back to Workbench cleanly when connectivity
+        returned — including handling the conflict cases that real
+        offline-first systems have to handle. This is a real
+        productivity problem worth real engineering for a 164-staff
+        infrastructure operator.
+      myMandate: |
+        Full-stack developer on a two-active-developer Lincoln
+        University team (myself plus Luke Shi / Zhenzhou Shi),
+        reporting directly to **Barry Clark** on CORDE's side as
+        the business sponsor and to **Kullum Ladley** as CORDE's
+        technical liaison and Workbench API specification author.
+        Mandate covered: front-end implementation across the entire
+        React Native + Native Base UI layer, database design (ERD
+        work co-designed with CORDE's existing database slices),
+        business-logic diagrams and architectural documentation,
+        weekly sprint-meeting question sets sent to CORDE, stage-
+        development presentation decks, live app demos and screen
+        recordings, and APK packaging for weekly CORDE reviews.
+        Documentation lead was an explicit role inside the team —
+        the docs repository carries a top-level folder literally
+        titled "*Chan Meng's Documentation Contribution Collection*"
+        with separate sub-folders for each of those mandates.
+      impactDelivered: |
+        **Shipped a production-quality React Native offline-data-
+        collection mobile app** for CORDE's field-operations
+        workflow. The codebase carries **539 commits across three
+        contributors**; **my 227 commits (combining the Chan Meng
+        and Chan handles) make me the #1-most-prolific contributor
+        — 42% of the entire commit history** — with Luke Shi (the
+        repo owner under his GitHub handle gentoo111) on 28.6% and
+        Xue Zheng on 25.8%. The app integrates with CORDE's
+        Workbench central operations platform via the API contract
+        documented across a sequence of **15 specifications
+        authored by Kullum Ladley** (the same Kullum named in every
+        API document's filename prefix `YYYYMMDD_Kullum_...`),
+        covering Workbench API calls, log creation, mobile-app
+        authentication, log extension fields, file-upload pipelines,
+        and group completion workflow — all captured under version
+        control as the API/ folder of the team's documentation
+        repository.
+
+        **Owned the documentation track end-to-end.** The team's
+        documentation repository (`team-corde`) has 143 commits;
+        **my 140 (97.9%) make me effectively the sole author.**
+        The repo contains: day-by-day weekly project work records
+        (the visible diary of the engagement across five months —
+        every UI library evaluation, every database-schema
+        iteration, every employer-email outcome, every offline
+        meeting decision), the project description and user-stories
+        archive, the full API documentation set from CORDE, and
+        seven separate sub-folders enumerating my specific
+        contributions — business logic diagrams, presentation
+        decks, database design, UI/UX and front-end implementation,
+        live demos and screen recordings, APK packaging, and
+        weekly sprint question sets.
+
+        **Practised the soft skills the capstone is designed to
+        teach.** Translated CORDE's abstract user stories into
+        concrete Azure DevOps work items; co-designed the database
+        schema by reconciling two team-developed plans against
+        CORDE's existing database slices into a unified version;
+        survived two UI library re-evaluations (Native Base →
+        React Native Elements → Native Base) and chose Native Base
+        for its Figma-component-library integration so design and
+        implementation stayed close; ran the demo cadence in front
+        of Barry Clark and the CORDE technical team every week
+        across five months; and made the team's GitHub one-branch
+        policy work even though it required disciplined sequencing
+        of two developers' parallel work.
+
+        **Kept the codebase modern after the engagement ended.**
+        Continued making targeted commits in subsequent years for
+        React Native version currency, Android 16 KB page-size
+        linker compliance, husky + lint-staged pre-commit hooks,
+        and dependency upgrades — keeping the repository a usable
+        portfolio piece rather than an archived snapshot of
+        mid-2024 React Native conventions.
+
+        **The application remains in active use today by CORDE's
+        field crews** for offline data collection — GPS-tagged
+        photos and structured form data captured on water-
+        infrastructure and civil-construction sites where mobile
+        coverage drops out, then syncing back when crews return
+        to coverage. The codebase-currency commits aren't archive
+        maintenance; they're keeping a production tool aligned
+        with the platform conventions of the year the crews are
+        actually running it on.
+      technicalHighlights: |
+        **React Native 0.83 + TypeScript + Native Base** on the
+        client, deliberately chosen over Expo because the project's
+        offline-first requirements pushed against Expo's managed
+        workflow (and over React Native Elements because Native
+        Base shipped a Figma component library that let the team
+        do design-first then implement against the exact
+        components). The native-only mode also opened the door to
+        Android-native development where the offline pipeline
+        needed it.
+
+        **SQLite as the system of record for the moment of work.**
+        Local-first storage of text + photo + GPS coordinates +
+        timestamps captured in the field, with a synchronisation
+        pipeline that reconciles back to CORDE's Workbench central
+        database when connectivity returns. The sync model had to
+        handle the real conflict cases offline-first systems
+        actually face — duplicate-key collisions when a worker's
+        local IDs and the server's IDs both move forward, partial
+        sync where one log uploads but its attachments don't,
+        connectivity drop mid-batch, and the file-upload
+        sub-protocol covered separately in Kullum's API specifications.
+
+        **Heavy native-integration surface:** geolocation +
+        geolocation-service (foreground and background), camera-
+        roll, image-picker, document-picker, file-system, secure
+        keychain storage, native maps, react-native-permissions
+        for the Android permission flow, base64 encoding for the
+        on-the-wire payloads. The dependency list is twice as long
+        as a typical RN app because field-data-collection in
+        Canterbury's rural water-infrastructure context genuinely
+        touches that much of the device.
+
+        **API integration discipline.** Apifox for shared interface
+        testing across the team; Swagger as the contract source
+        from CORDE; a `test-sharepoint-connection.js` script as
+        evidence of a SharePoint-touching corner of CORDE's
+        document workflow; Azure DevOps as the work-item store
+        Barry Clark and the CORDE team worked from; per-week
+        question sets compiled into documents and reviewed before
+        each offline meeting so CORDE's time was used efficiently.
+
+        **The documentation repo is the artefact.** A second
+        repository (`team-corde`) ran in parallel as the project's
+        living memory — every weekly meeting decision, every
+        UI-library evaluation, every database-schema iteration,
+        every CORDE email exchange's outcome, captured in
+        version-controlled prose. This is unusually disciplined
+        documentation for a student-team engagement and is the
+        practice I carried into every subsequent role.
+    publicSummary: |
+      Full-Stack Developer & lead documenter on a Lincoln University COMP693
+      industry-placement team building a React Native offline-first field
+      data-collection mobile app for **CORDE** — a 30+-year-old, 164-staff
+      Canterbury-based NZ infrastructure and civil-construction company
+      (civil construction + regional asset maintenance + water infrastructure;
+      CCNZ Canterbury Contractor of the Year). Reported directly to Barry
+      Clark on CORDE's side with Kullum Ladley as the Workbench API
+      specification author. **#1-most-prolific contributor on the code repo**
+      (227 of 539 commits, 42%, ahead of teammate Luke Shi at 28.6%) and
+      effectively sole author of the team documentation repo (140 of 143
+      commits, 97.9%). The bridge from Master's-programme student to
+      professional engineer that ran directly into the ByteDance + FreePeriod
+      + Sanicle CTO sequence.
+
+# =============================================================================
+# VOLUNTEER EXPERIENCE
+# Unpaid roles supporting women in STEM, cross-cultural exchange, and education.
+# JSON Resume v1.0.0 `volunteer` array. Same shape as `work`.
+# =============================================================================
+volunteer:
+  - id: forward-with-her-mentor
+    name: Forward with Her (她行)
+    position: STEM Mentor
+    startDate: "2024-10"
+    endDate: "2025-10"
+    location: Remote (cross-Pacific)
+    url: "https://forwardwithher.org/"
+    logo: /public/organizations/forward-with-her-logo.jpg
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-06-04"
+    keywords:
+      - STEM mentorship
+      - Women in tech
+      - Career development
+      - Bi-weekly 1:1 mentorship
+      - Cross-Pacific volunteer network
+    summary: |
+      Volunteer mentor at **Forward with Her (她行)**, a nonprofit founded in
+      2020 connecting women in STEM through one-on-one and group mentorship.
+      The organisation has **over 1,000 members** worldwide and launched the
+      "Her Voice" podcast to amplify women's voices in tech. Bi-weekly
+      mentorship meetings with assigned early-career mentees cover career
+      development, personal growth, and practical problem-solving in STEM
+      environments — coordinated through a dedicated volunteer liaison.
+      Holds 2024 and 2025 official mentor certificates.
+
+  - id: she-sharp-ambassador
+    name: She Sharp
+    position: Ambassador — Website Team
+    startDate: "2025-07"
+    endDate: null
+    location: Auckland, New Zealand (remote)
+    url: "https://shesharp.org.nz/"
+    logo: /public/organizations/she-sharp-logo-purple-dark.svg
+    tier: primary
+    recency: active
+    lastUpdated: "2026-05-18"
+    keywords:
+      - Volunteer ambassador
+      - Women in STEM
+      - Community outreach
+      - Website team
+    summary: |
+      Ambassador on the She Sharp Website Team — a nonprofit dedicated to
+      bridging the gender gap in STEM (where female representation sits at
+      ~20%). She Sharp has built a **2,200+ member community** and organised
+      **84+ events since 2014**. Continues Chan's relationship with the
+      organisation after the formal Lead Engineer role, focused on
+      sustaining the digital infrastructure that powers community growth.
+
+  - id: cebu-international-academy
+    name: Cebu International Academy (CIA)
+    position: Volunteer Educator
+    startDate: "2023-03"
+    endDate: "2023-08"
+    location: Cebu, Philippines
+    logo: /public/organizations/cia.jpg
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    keywords:
+      - Community outreach
+      - Poverty alleviation
+      - Event organisation
+      - Rural-area programmes
+      - Business communication
+    summary: |
+      Alumnus of **Cebu International Academy** (where Chan completed IELTS
+      and Business English programmes with focused small-group training).
+      Actively led community outreach programmes in rural Cebu —
+      organising events and distributing essential supplies to children,
+      women, and the elderly. The role strengthened business communication
+      skills and reinforced a commitment to driving positive social impact
+      through technology.
+
+  - id: guilin-festival-translator
+    name: Art Committee of Guilin Festival
+    position: Festival Translator & Cultural Exchange Volunteer
+    startDate: "2023-09"
+    endDate: "2023-11"
+    location: Guilin, Guangxi, China
+    logo: /public/organizations/guilin-arts-festival.jpg
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    keywords:
+      - Cross-cultural exchange
+      - Māori cultural studies
+      - Translation
+      - Cultural representation
+      - Business English
+    summary: |
+      Volunteer translator for a **Māori dance troupe from New Zealand**
+      at the **2023 Guilin Arts Festival**. Provided translation support
+      and facilitated deeper cultural exchange between performers and
+      local audiences — covering traditional dance, music, and language.
+      The placement sharpened cross-cultural communication skills and
+      illustrated how technology can enrich cultural representation in
+      international settings. An early signal of the cross-Pacific
+      orientation that later anchored Chan's work between China and NZ.
+
+# =============================================================================
+# EDUCATION
+# =============================================================================
+education:
+  - id: lincoln
+    tier: flagship
+    recency: recent
+    lastUpdated: "2026-05-18"
+    institution: Lincoln University, New Zealand
+    url: https://www.lincoln.ac.nz/
+    studyType: Master of Applied Computing (Distinction, Dean's List)
+    startDate: "2023-11"
+    endDate: "2024-12"
+    image: /public/education/lincoln-uni-logo.jpg
+    location: New Zealand
+    highlights:
+      - Master's with Distinction
+      - "Dean's List (Top 5%)"
+    courses: []
+    credentialId: "170086552"
+    credentialUrl: "https://www2.nzqa.govt.nz/qualifications-and-standards/access-your-results/verify/"
+
+  - id: jsnu
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    institution: Jiangsu Normal University, China
+    url: http://www.jsnu.edu.cn/
+    studyType: Bachelor of Geography Science (Distinction)
+    startDate: "2012-09"
+    endDate: "2016-06"
+    image: /public/education/jsnu.jpg
+    location: China
+    highlights:
+      - Bachelor's with Distinction
+    courses: []
+  - id: nanning-no2
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    institution: Nanning No.2 High School (南宁二中)
+    studyType: High School Diploma (Science track — Mathematics, Physics, Chemistry, Biology)
+    startDate: "2008-09"
+    endDate: "2011-06"
+    location: Nanning, Guangxi, China
+    score: "A+"
+    courses:
+      - Mathematics
+      - Physics
+      - Chemistry
+      - Biology
+      - Student Council activities (leadership, competitions, collaborative projects)
+    highlights:
+      - "Founded 1906 — one of China's top-100 secondary schools (Guangxi); rigorous science track with nationally-recognised teachers."
+      - "Active in Student Council; participated in competitions and collaborative projects that sharpened analytical and problem-solving skills."
+      - "The science-track foundation (logic + first-principles reasoning) is what later carried Chan into Geographic Information Systems and software engineering."

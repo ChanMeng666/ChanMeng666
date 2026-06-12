@@ -1,21 +1,24 @@
 #!/usr/bin/env node
 // Build schema.org Person + WorkExperience JSON-LD sibling for the CV.
-// Usage: node build-jsonld.mjs ../data/profile.yaml > ../public/cv.jsonld
+// Usage: node build-jsonld.mjs ../data/profile > ../public/cv.jsonld
+//        (accepts either the data/profile shard directory or a single .yaml file)
 //
 // Recruiter-LLMs (LinkedIn AI search, Greenhouse AI ranking, Jobright)
 // hit the canonical /cv URL, follow the alternate link to cv.jsonld, and
 // parse this file. JSON-LD bypasses LLM inference entirely.
 
-import { readFileSync } from "node:fs";
+import { readFileSync, statSync } from "node:fs";
 import yaml from "js-yaml";
 
 const argv = process.argv.slice(2);
 if (argv.length < 1) {
-  console.error("usage: build-jsonld.mjs <profile.yaml>");
+  console.error("usage: build-jsonld.mjs <data/profile dir | profile.yaml>");
   process.exit(2);
 }
 
-const profile = yaml.load(readFileSync(argv[0], "utf8"));
+const profile = statSync(argv[0]).isDirectory()
+  ? (await import("../scripts/lib/load-profile.mjs")).loadProfile()
+  : yaml.load(readFileSync(argv[0], "utf8"));
 const b = profile.basics ?? {};
 
 const sameAs = (b.profiles ?? [])

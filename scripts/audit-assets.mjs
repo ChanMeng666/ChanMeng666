@@ -10,12 +10,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import yaml from "js-yaml";
+import { loadProfile } from "./lib/load-profile.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, "..");
 
-const data = yaml.load(fs.readFileSync(path.join(repoRoot, "data", "profile.yaml"), "utf8"));
+const data = loadProfile();
 const brandPath = path.join(repoRoot, "data", "brand.yaml");
 const brand = fs.existsSync(brandPath)
   ? yaml.load(fs.readFileSync(brandPath, "utf8"))

@@ -16,10 +16,10 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import yaml from "js-yaml";
+import { loadProfile } from "./lib/load-profile.mjs";
 
 const repoRoot = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
-const profile = yaml.load(readFileSync(path.join(repoRoot, "data", "profile.yaml"), "utf8"));
+const profile = loadProfile();
 const ln = profile.linkedin;
 // The generated artifact, used to cross-check that re-derived date facts still
 // agree with what is published (catches date drift in the canonical sections).

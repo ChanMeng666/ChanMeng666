@@ -1,0 +1,406 @@
+# =============================================================================
+# SKILLS — technical stack, problem domains, languages, interests
+# =============================================================================
+# Shard of Chan Meng's profile data. Top-level keys: skills, domains, languages, interests.
+# All data/profile/*.yaml shards are merged (in filename order) by
+# scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
+# After editing: npm run check. Data map + cross-reference rules: CLAUDE.md.
+# =============================================================================
+
+# =============================================================================
+# SKILLS — five categories matching the README pill rows. Each category now
+# also carries an expertise[] sub-list: per-tool since-year + depth rating +
+# optional frameworks/notes. Generated from a scan of 105 Chan-owned repos
+# (D:\github_repository\) plus curated additions for non-source-detectable
+# stacks (Go at ByteDance, AWS via SheBuilds, K8s/GCP at GAVIGO).
+# =============================================================================
+skills:
+  - name: Languages
+    keywords: [TypeScript, Python, Go, Java, JavaScript]
+    expertise:
+      - tool: TypeScript
+        since: "2024"
+        depth: expert
+        notes: "Detected in 51 Chan-owned repos."
+      - tool: Python
+        since: "2020"
+        depth: expert
+        frameworks: ["FastAPI", "Anthropic SDK", "OpenAI SDK"]
+        notes: "Data-science & ML coursework (Lincoln Master); HackerRank Python; Anthropic SDK; FastAPI for wellness-agent. 13 repos."
+      - tool: Go
+        since: "2024"
+        depth: intermediate
+        frameworks: ["go-kit", "gin"]
+        notes: "ByteDance Youth Training Camp internship (Jun-Aug 2024) backend services; GAVIGO Activation/Execution Layer modules."
+      - tool: Java
+        since: "2022"
+        depth: intermediate
+        frameworks: ["Spring Boot"]
+        notes: "HackerRank Java (Basic) cert; legacy enterprise stack exposure via Douyin Mall Java template."
+      - tool: Angular
+        since: "2023"
+        depth: intermediate
+        notes: "HackerRank Angular (Intermediate) cert."
+      - tool: JavaScript
+        since: "2020"
+        depth: expert
+        notes: "Foundational web dev language; baseline for all React/Next.js work."
+
+  - name: Frontend
+    keywords: [React, "Next.js", "React Native", TailwindCSS, Vue.js, Zustand, "Redux Toolkit"]
+    expertise:
+      - tool: React
+        since: "2024"
+        depth: expert
+        notes: "Detected in 48 repos."
+      - tool: Next.js
+        since: "2024"
+        depth: expert
+        notes: "Detected in 38 repos."
+      - tool: React Native
+        since: "2024"
+        depth: intermediate
+        notes: "femtracker, corde-mobile-application."
+      - tool: TailwindCSS
+        since: "2024"
+        depth: expert
+        notes: "Detected in 41 repos."
+      - tool: Vue.js
+        since: "2025"
+        depth: learning
+        notes: "Limited exposure via douyin-mall-frontend."
+      - tool: Zustand
+        since: "2024"
+        depth: expert
+        notes: "9 repos — primary client state library."
+      - tool: Redux Toolkit
+        since: "2025"
+        depth: learning
+
+  - name: Backend
+    keywords: ["Node.js", PostgreSQL, pgVector, Redis, Docker, Kubernetes, "Drizzle ORM", Prisma, Supabase, Zod, Stripe, Hono, NextAuth, Jest, Vitest, FastAPI]
+    expertise:
+      - tool: Node.js
+        since: "2024"
+        depth: expert
+        notes: "Detected in 63 repos."
+      - tool: PostgreSQL
+        since: "2024"
+        depth: expert
+        notes: "7 repos — primary OLTP store (Sanicle, She Sharp, library-os)."
+      - tool: pgVector
+        since: "2025"
+        depth: intermediate
+        notes: "Postgres vector extension for Sanicle / She Sharp embedding workflows."
+      - tool: Redis
+        since: "2025"
+        depth: intermediate
+        frameworks: ["@upstash/redis", "ioredis"]
+        notes: "Upstash Redis for She Sharp mentor-match cache; conventional Redis elsewhere."
+      - tool: Docker
+        since: "2024"
+        depth: expert
+        notes: "7 repos."
+      - tool: Kubernetes
+        since: "2026"
+        depth: intermediate
+        frameworks: ["GKE", "kubectl"]
+        notes: "GAVIGO cross-cloud migration to GCP/GKE; 30-min cutover with 84.6% warm-pool hit rate."
+      - tool: Drizzle ORM
+        since: "2024"
+        depth: expert
+        notes: "17 repos — preferred ORM for new builds (She Sharp 1,392-line schema, 30 pgEnums, 34 pgTables)."
+      - tool: Prisma
+        since: "2026"
+        depth: learning
+        notes: "Single experiment in fanfic-lab."
+      - tool: Supabase
+        since: "2024"
+        depth: intermediate
+        notes: "femtracker-agent, library-management-system."
+      - tool: Zod
+        since: "2024"
+        depth: expert
+        notes: "19 repos — runtime validation contract for every new full-stack build."
+      - tool: Stripe
+        since: "2024"
+        depth: expert
+        notes: "8 repos — NZD billing for She Sharp; subscription flows elsewhere."
+      - tool: Hono
+        since: "2024"
+        depth: intermediate
+        notes: "Edge-runtime API server for css-tower-defense, linkedin-jobs-search."
+      - tool: NextAuth
+        since: "2025"
+        depth: intermediate
+        notes: "Sanicle, She Sharp, sunostats, Tam-AI-Ti."
+      - tool: Jest
+        since: "2024"
+        depth: intermediate
+      - tool: Vitest
+        since: "2025"
+        depth: intermediate
+      - tool: FastAPI
+        since: "2025"
+        depth: learning
+        notes: "wellness-agent Python backend."
+
+  - name: AI/ML
+    keywords: ["Claude AI", "Claude Code", Cursor, "OpenAI SDK", LangGraph, CopilotKit, "MCP (Model Context Protocol)", "Vercel AI SDK"]
+    expertise:
+      - tool: Claude AI
+        since: "2024"
+        depth: expert
+        frameworks: ["Anthropic SDK", "Claude Sonnet 4.6", "Claude Opus 4.7"]
+        notes: "Anthropic credential `Claude Code in Action` (ID JHIY9NPYTR2D, Aug 2025) + `AI Fluency Framework` (Aug 2025); Engram Architect Cohort selection (May 2026)."
+      - tool: Claude Code
+        since: "2024"
+        depth: expert
+        notes: "14 repos. Authored claude-code-audio-hooks (echook daemon) and typst-claude-skill; explicitly preserved as Chan's IP in the Engram cohort agreement."
+      - tool: Cursor
+        since: "2024"
+        depth: intermediate
+        notes: "Daily pair-coding tool; teaches Cursor as an AI literacy primitive in TechNest and Forward with Her cohorts."
+      - tool: OpenAI SDK
+        since: "2024"
+        depth: expert
+        notes: "6 repos — GPT-4o-mini powers She Sharp's mentor-match weighted scoring."
+      - tool: LangGraph
+        since: "2025"
+        depth: intermediate
+        notes: "fanfic-lab, hospital-roster-agent."
+      - tool: CopilotKit
+        since: "2025"
+        depth: intermediate
+        notes: "4 repos. Active open-source contributor — merged PRs into the 24.6k★ upstream repo."
+      - tool: MCP (Model Context Protocol)
+        since: "2024"
+        depth: intermediate
+        notes: "Authored server-google-news + server-google-jobs (PulseMCP newsletter feature); MCP integration in linkedin-jobs-search and website-building-agent."
+      - tool: Vercel AI SDK
+        since: "2025"
+        depth: expert
+        notes: "7 repos — preferred AI integration layer for full-stack work."
+
+  - name: Architecture & Concepts
+    keywords: ["AI Agent Architecture", "Multi-agent Systems", "AI Orchestration", "Microservices Architecture", "Distributed Systems", "Multi-Tenant Architecture", "Offline-First Architecture", "Retrieval-Augmented Generation (RAG)", "Voice AI", "Specification-Driven Development", "Internationalization (i18n)", "CSS 3D Transforms"]
+    expertise:
+      - tool: AI Agent Architecture
+        since: "2024"
+        depth: expert
+        notes: "End-to-end agentic systems — retrieval, memory, tool use, evaluations, model routing. See domains[id=ai-agent-architecture]."
+      - tool: Multi-agent Systems
+        since: "2025"
+        depth: expert
+        frameworks: ["LangGraph", "CopilotKit", "MCP"]
+        notes: "7-node LangGraph orchestration in fanfic-lab; hospital-roster-agent."
+      - tool: Microservices Architecture
+        since: "2024"
+        depth: expert
+        frameworks: ["Kubernetes", "GKE"]
+        notes: "GAVIGO Activation/Execution Layer; cross-cloud GKE migration."
+      - tool: Multi-Tenant Architecture
+        since: "2025"
+        depth: expert
+        notes: "Sanicle.AI corporate-tenant FemTech SaaS; library-os."
+      - tool: Retrieval-Augmented Generation (RAG)
+        since: "2024"
+        depth: expert
+        frameworks: ["pgVector", "Cloudflare Vectorize"]
+        notes: "~4,800 bilingual chunks in the teaching platform; Tam-AI-Ti."
+      - tool: Voice AI
+        since: "2025"
+        depth: intermediate
+        frameworks: ["OpenAI Realtime (gpt-4o-realtime)"]
+        notes: "Voice-first coaching in Tam-AI-Ti (te reo Māori + English)."
+
+  - name: Tools
+    keywords: [Vercel, AWS, GCP, "Cloudflare Workers", Coolify, Mintlify, Docusaurus, DigitalOcean, Remotion, Typst]
+    expertise:
+      - tool: Vercel
+        since: "2024"
+        depth: expert
+        notes: "Primary deploy target — every flagship full-stack project."
+      - tool: AWS
+        since: "2024"
+        depth: intermediate
+        frameworks: ["S3"]
+        notes: "AWS SheBuilds mentee programme (mentor: Cecilia Yin); HackerRank resume artefact hosted on S3."
+      - tool: GCP
+        since: "2026"
+        depth: intermediate
+        frameworks: ["GKE", "Cloud Run"]
+        notes: "GAVIGO DigitalOcean -> Google Cloud production migration (cutover 2026-03-11). Google for Startups Cloud Program partnership."
+      - tool: Cloudflare Workers
+        since: "2024"
+        depth: expert
+        frameworks: ["Workers", "Vectorize", "KV", "Workers AI"]
+        notes: "25 repos — primary edge runtime for OpenNext deployments; RAG backbone for the teaching platform."
+      - tool: Coolify
+        since: "2024"
+        depth: intermediate
+        notes: "Self-hosted PaaS for personal infrastructure + early GAVIGO experiments."
+      - tool: Mintlify
+        since: "2024"
+        depth: intermediate
+        notes: "Her Waka teaching site and other documentation sites."
+      - tool: Docusaurus
+        since: "2024"
+        depth: intermediate
+        notes: "AI programming teaching platform versioned docs + FemTech Weekend site."
+      - tool: DigitalOcean
+        since: "2024"
+        depth: intermediate
+        notes: "Pre-migration GAVIGO platform host."
+      - tool: Remotion
+        since: "2026"
+        depth: intermediate
+        notes: "Programmatic video for claude-code-audio-hooks-promo-video and GAVIGO IRE explainers."
+      - tool: Typst
+        since: "2026"
+        depth: learning
+        notes: "Personal CV; typst-claude-skill agent."
+
+# =============================================================================
+# DOMAINS — vertical / problem-area expertise distinct from technical skills.
+# Drives JSON-LD knowsAbout enrichment with verticals so LLMs surface Chan
+# for domain-shaped queries (e.g. "Maori cultural tech", "FemTech engineer")
+# beyond raw tech stack matching. evidenceProjectIds auto-derived from a scan
+# of 105 Chan-owned repos.
+# =============================================================================
+domains:
+  - id: ai-agent-architecture
+    name: AI Agent Architecture
+    since: "2024"
+    summary: |
+      Designs and ships agentic systems end-to-end — Claude Code skills,
+      MCP servers, multi-step LangGraph/CopilotKit flows, agent-UI
+      patterns, and the audio-feedback hook system that surfaces agent
+      state to the operator.
+    evidenceProjectIds:
+      - awesome-claude-skills
+      - awesome-claude-skills-1
+      - claude-code-audio-hooks
+      - claude-code-audio-hooks-promo-video
+      - event-qa-ai-template
+      - femtracker-agent
+      - hospital-roster-agent
+      - panda-agent
+      - server-google-jobs
+      - server-google-news
+      - typst-claude-skill
+      - website-building-agent
+      - wellness-agent
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+
+  - id: femtech
+    name: "Women's Health Technology (FemTech)"
+    since: "2024"
+    summary: |
+      Designs and ships full-stack FemTech products — workplace
+      menstrual/menopausal wellness platforms, period-equity hardware,
+      AI cycle companions, indigenous-women's health pilots, and
+      FemTech ecosystem infrastructure for cross-border community
+      building.
+    evidenceProjectIds:
+      - femtech-weekend
+      - femtech-weekend-website
+      - femtracker
+      - femtracker-agent
+      - forward-with-her-mentorship-program
+      - free-period-website
+      - hospital-roster-agent
+      - sanicle-ai
+      - sanicle-ai-mobile
+      - sanicle-cloud
+      - sanicle-docs
+      - she-sharp
+      - she-sharp-crawl
+      - tam-ai-ti-web
+      - wellness-agent
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+
+  - id: cultural-technology
+    name: Māori Cultural Technology
+    since: "2025"
+    summary: |
+      Builds research-pilot software with and for indigenous-led
+      organisations — embedding cultural lens (Māori worldview,
+      bilingual interface, customary protocols) into product structure,
+      data ownership, and AI interaction design. Lead project:
+      Tam-AI-Ti for Riria (Missy) Te Kanawa.
+    evidenceProjectIds:
+      - tam-ai-ti-web
+    tier: primary
+    recency: active
+    lastUpdated: "2026-05-22"
+
+  - id: ai-programming-education
+    name: AI Programming Education
+    since: "2024"
+    summary: |
+      Leads multi-cohort AI-programming pedagogy — "natural language
+      is the source code" doctrine — across four cohorts since 2024
+      (Forward with Her ×2, Her Waka 2026, TechNest 2026) with full
+      curriculum authoring, live cohort facilitation, and post-cohort
+      showcase artefacts.
+    evidenceProjectIds:
+      - ai-programming-teaching-project
+      - awesome-claude-skills
+      - awesome-claude-skills-1
+      - chinese-redefine
+      - english-redefine
+      - esol-learning-platform
+      - event-qa-ai-template
+      - typst-claude-skill
+    evidenceWorkIds:
+      - forward-with-her
+      - technest
+      - she-sharp
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-22"
+
+  - id: minimalist-design
+    name: Minimalist Living + Minimalist UX
+    since: "2020"
+    summary: |
+      Public minimalist-living advocate (multi-platform articles +
+      WeChat press features) translating subtraction-as-craft into
+      product UI — calm dashboards, tight information density, and
+      intentional removal as the primary design move.
+    evidenceProjectIds:
+      - 2d-portfolio
+      - 3d-portfolio
+      - chan-meng-novel
+      - chan-meng-web
+      - minimalist-good-post
+      - my-cv
+      - who-i-am
+    tier: primary
+    recency: active
+    lastUpdated: "2026-05-22"
+
+# =============================================================================
+# LANGUAGES
+# =============================================================================
+languages:
+  - { language: Cantonese,          fluency: Native or bilingual proficiency }
+  - { language: Chinese (Mandarin), fluency: Native or bilingual proficiency }
+  - { language: English,            fluency: Professional working proficiency }
+  - { language: Japanese,           fluency: Limited working proficiency }
+
+# =============================================================================
+# INTERESTS
+# =============================================================================
+interests:
+  - name: Minimalist Living
+    keywords: ["Digital minimalism", "Subtraction for life, addition for thought"]
+  - name: Women's Health Technology
+    keywords: [FemTech]
+  - name: Cultural Technology
+    keywords: ["te reo Maori", "Cross-cultural product design"]

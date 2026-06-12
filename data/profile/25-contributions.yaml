@@ -1,0 +1,560 @@
+# =============================================================================
+# OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work
+# =============================================================================
+# Shard of Chan Meng's profile data. Top-level keys: openSourceContributions.
+# All data/profile/*.yaml shards are merged (in filename order) by
+# scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
+# After editing: npm run check. Data map + cross-reference rules: CLAUDE.md.
+# =============================================================================
+
+# =============================================================================
+# OPEN SOURCE CONTRIBUTIONS — upstream PRs, issues, and notable solution comments
+# authored by Chan on repos she does not own. Distinct from projects[] (owned
+# work) and references[] (testimonials). Excludes contributions to repos she
+# maintains (NZ-SheSharp/*) or co-owns (Whiri-AI/*, LU* university group repos).
+# Audited 2026-05-26 via `gh search prs/issues --author ChanMeng666`.
+# =============================================================================
+openSourceContributions:
+
+  # ─────────────────────────────── FLAGSHIP ────────────────────────────────
+  # The single contribution that defined Chan's early-MCP-ecosystem footprint:
+  # solution comment on a Windows + NVM/NPM Claude Desktop connection bug,
+  # posted three weeks after MCP's public launch. 32 reactions (30 hearts +
+  # 2 thumbs-up), thanked in-thread by multiple users (El-Invierno,
+  # rockywangxiaolei, ZubeidHendricks, angrysky56), and indirectly
+  # acknowledged by Anthropic maintainer @jspahrsummers who pointed to
+  # this thread as a known-issue tracker.
+
+  - id: mcp-servers-75-windows-nvm-solution
+    tier: flagship
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: modelcontextprotocol/servers
+    repoUrl: https://github.com/modelcontextprotocol/servers
+    type: comment
+    number: 75
+    url: https://github.com/modelcontextprotocol/servers/issues/75#issuecomment-2502877979
+    title: "Solution for MCP Servers Connection Issues with NVM/NPM (Windows)"
+    state: closed
+    date: "2024-11-27"
+    category: mcp-ecosystem
+    summary: |
+      Step-by-step Windows + NVM/NPM workaround for the early Claude Desktop
+      MCP connection failure: install MCP server packages globally, locate
+      `node.exe` and global npm root via `where node` and `npm root -g`, then
+      rewrite `claude_desktop_config.json` with absolute paths instead of `npx`
+      commands. Posted as a comment on TristanLib's issue #75 ("How to
+      configure windows filesystem?") three weeks after MCP's public launch.
+    impact: |
+      32 GitHub reactions (30 hearts + 2 thumbs-up) — the most-reacted single
+      artifact in Chan's OSS footprint. Thanked in-thread by multiple users
+      ("Thanks a ton! Solved my issue." — @El-Invierno; "thanks a lot, it
+      works under windows 11" — @rockywangxiaolei; "Thank you, this worked for
+      me" — @ZubeidHendricks; "Perfect! Thanks so much." — @angrysky56). Became
+      reference troubleshooting guidance for early Windows + NVM Claude
+      Desktop adopters. Indirectly acknowledged by Anthropic maintainer
+      @jspahrsummers who pointed the thread at issue #40 as the upstream fix
+      tracker. Preceded and informed Chan's subsequent authoring of two
+      production MCP servers (server-google-news, server-google-jobs).
+    reactions: 32
+    comments: 14
+
+  # ─────────────────────────────── PRIMARY ─────────────────────────────────
+  # The four contributions that anchor Chan's "Open Source Contributor"
+  # identity in the personal-brand layer: two CopilotKit PRs (FemTracker
+  # demo + Claude Code docs), the wshobson/agents security-agents PR
+  # (canonical Claude Code Plugins collection), and Chan's own MCP issue #76
+  # which documented the same Windows workaround as a standalone reference.
+
+  - id: wshobson-agents-62-security-agents
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-26"
+    repo: wshobson/agents
+    repoUrl: https://github.com/wshobson/agents
+    type: pull-request
+    number: 62
+    url: https://github.com/wshobson/agents/pull/62
+    title: "feat: Add comprehensive security coding expert agents with improved descriptions"
+    state: merged
+    date: "2025-09-09"
+    mergedAt: "2025-09-15"
+    category: ai-tooling
+    summary: |
+      Added comprehensive security-focused Claude Code expert agents and
+      refined existing agent descriptions across the canonical
+      community-maintained agents catalogue. 448 lines added across 3 files.
+    impact: |
+      Merged into wshobson/agents — the canonical community collection of
+      99 specialized AI agents, 67 focused plugins, 107 agent skills, and
+      15 workflow orchestrators distributed through the Claude Code
+      marketplace and the Smithery namespace (`smithery.ai/skills?ns=wshobson`).
+      2 thumbs-up reactions. Contribution badge surfaced on Chan's GitHub
+      profile via the canonical fork relationship.
+    reactions: 2
+    comments: 2
+
+  - id: copilotkit-2068-femtracker-demo
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-26"
+    repo: CopilotKit/CopilotKit
+    repoUrl: https://github.com/CopilotKit/CopilotKit
+    type: pull-request
+    number: 2068
+    url: https://github.com/CopilotKit/CopilotKit/pull/2068
+    title: "chore(demos): Add FemTracker Agent + CopilotKit Demo to the demos_2025 folder"
+    state: merged
+    date: "2025-06-29"
+    mergedAt: "2025-09-11"
+    category: ai-tooling
+    relatedProjectId: femtracker-agent
+    summary: |
+      Added the 8-agent FemTracker Agent demo (a women's-health AI tracker
+      built on CopilotKit + LangGraph) to CopilotKit's official `demos_2025`
+      folder. 341 lines added.
+    impact: |
+      Merged by maintainer @tyler-slaton into CopilotKit/CopilotKit (24.6k+
+      GitHub stars). Public showcase of Chan's FemTracker Agent project
+      inside the canonical CopilotKit demo collection that ships with the
+      framework's example documentation.
+    reactions: 0
+    comments: 4
+
+  - id: copilotkit-2529-claude-code-mcp-docs
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-26"
+    repo: CopilotKit/CopilotKit
+    repoUrl: https://github.com/CopilotKit/CopilotKit
+    type: pull-request
+    number: 2529
+    url: https://github.com/CopilotKit/CopilotKit/pull/2529
+    title: "docs: add Claude Code setup instructions to MCP server guide"
+    state: merged
+    date: "2025-09-29"
+    mergedAt: "2025-10-09"
+    category: ai-tooling
+    summary: |
+      Added Claude Code-specific setup instructions to CopilotKit's official
+      MCP server documentation page so developers using Claude Code (rather
+      than Cursor or Claude Desktop) get a first-class onboarding path. 62
+      lines added.
+    impact: |
+      Merged by maintainer @brandon-mcconnell into CopilotKit/CopilotKit.
+      Closes a documentation gap that was actively blocking Claude Code
+      adopters from integrating CopilotKit's MCP server features.
+    reactions: 0
+    comments: 4
+
+  - id: mcp-servers-76-windows-nvm-issue
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: modelcontextprotocol/servers
+    repoUrl: https://github.com/modelcontextprotocol/servers
+    type: issue
+    number: 76
+    url: https://github.com/modelcontextprotocol/servers/issues/76
+    title: "Connection failures with npm-based MCP servers while uvx-based servers work correctly (Solved, see the comment in this post)"
+    state: closed
+    date: "2024-11-27"
+    closedAt: "2024-11-27"
+    category: mcp-ecosystem
+    summary: |
+      Filed a standalone issue (companion to comment on #75) documenting the
+      Windows + NVM/NPM connection failure and its workaround — chosen as
+      the canonical "Chan-authored" reference issue Anthropic maintainers
+      and the broader community could link to. Self-resolved with the
+      detailed step-by-step solution in the comments.
+    impact: |
+      Three weeks after MCP's public launch on 2024-11-25, this issue served
+      as the standalone link target for the Windows + NVM workaround across
+      Discord servers, Stack Overflow, and downstream MCP catalog
+      documentation. 14 comments, 2 thumbs-up reactions on the issue body
+      itself. Closed same day after community confirmation the solution
+      worked. Cited in `meta.x_brand.statisticsClaims` as "early-ecosystem
+      MCP developer" evidence.
+    reactions: 2
+    comments: 14
+
+  # ─────────────────────────────── SECONDARY ───────────────────────────────
+  # Verifiable PRs/issues that round out the OSS-contributor record but
+  # don't define identity — included for completeness in dist/profile.json
+  # and for any future README rendering.
+
+  - id: mcp-get-62-google-news
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: michaellatman/mcp-get
+    repoUrl: https://github.com/michaellatman/mcp-get
+    type: pull-request
+    number: 62
+    url: https://github.com/michaellatman/mcp-get/pull/62
+    title: "Add Google News MCP Server"
+    state: merged
+    date: "2025-01-01"
+    mergedAt: "2025-01-01"
+    category: mcp-ecosystem
+    relatedProjectId: server-google-news
+    summary: |
+      Registered Chan's `@chanmeng666/google-news-server` MCP server in the
+      `mcp-get` package registry — one of the early community MCP discovery
+      tools — making it installable via `npx @michaellatman/mcp-get@latest
+      install`.
+    impact: |
+      Merged within an hour of opening. Brought Chan's first authored MCP
+      server into one of the canonical early-ecosystem distribution
+      channels alongside Anthropic's own reference servers.
+    comments: 0
+
+  - id: awesome-mcp-servers-163-google-news-i18n
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: punkpeye/awesome-mcp-servers
+    repoUrl: https://github.com/punkpeye/awesome-mcp-servers
+    type: pull-request
+    number: 163
+    url: https://github.com/punkpeye/awesome-mcp-servers/pull/163
+    title: "Add Google News MCP Server & Add the content in Chinese README and Japanese README that is not synchronized with the English README"
+    state: merged
+    date: "2024-12-30"
+    mergedAt: "2025-01-01"
+    category: i18n
+    relatedProjectId: server-google-news
+    summary: |
+      Two-in-one PR: (1) registered the Google News MCP Server in the
+      `awesome-mcp-servers` curated list, (2) synchronised the Chinese and
+      Japanese README translations with content that had drifted behind the
+      English source.
+    impact: |
+      Merged into the most-starred awesome-list for MCP servers in the
+      early ecosystem. The i18n half restored language parity for zh/ja
+      readers; the listing half put server-google-news in front of the
+      community's primary discovery channel.
+    comments: 0
+
+  - id: mcp-servers-445-google-news-listing
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: modelcontextprotocol/servers
+    repoUrl: https://github.com/modelcontextprotocol/servers
+    type: pull-request
+    number: 445
+    url: https://github.com/modelcontextprotocol/servers/pull/445
+    title: "Add Google News MCP Server in README"
+    state: closed
+    date: "2024-12-30"
+    closedAt: "2024-12-30"
+    category: mcp-ecosystem
+    relatedProjectId: server-google-news
+    summary: |
+      Proposed adding server-google-news to the official
+      modelcontextprotocol/servers README community-servers section.
+    impact: |
+      Closed (not merged) because the official repo's community-server
+      listing process was restructured shortly after; the server is now
+      listed in 15+ downstream MCP catalogs instead. Preserved here as an
+      early-ecosystem evidence trail.
+    comments: 1
+
+  - id: capsule-render-71-zh-translations
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: kyechan99/capsule-render
+    repoUrl: https://github.com/kyechan99/capsule-render
+    type: pull-request
+    number: 71
+    url: https://github.com/kyechan99/capsule-render/pull/71
+    title: "Added Simplified Chinese, Traditional Chinese and Traditional Cantonese README translations"
+    state: merged
+    date: "2024-12-12"
+    mergedAt: "2024-12-12"
+    category: i18n
+    summary: |
+      Authored full README translations into Simplified Chinese (zh-Hans),
+      Traditional Chinese (zh-Hant), and Traditional Cantonese (yue-Hant)
+      for `capsule-render` — the popular GitHub profile banner generator
+      used by thousands of profile READMEs. 1,330 lines added across 7
+      files, merged the same day.
+    impact: |
+      Three new locales added to a widely-used GitHub-profile tool. The
+      yue-Hant (Traditional Cantonese) variant is particularly rare in
+      open-source documentation — Cantonese is typically grouped under
+      generic Chinese rather than treated as a first-class locale.
+    comments: 2
+
+  - id: awesome-dev-portfolios-258
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: Kiran1689/Awesome-Dev-Portfolios
+    repoUrl: https://github.com/Kiran1689/Awesome-Dev-Portfolios
+    type: listing
+    number: 258
+    url: https://github.com/Kiran1689/Awesome-Dev-Portfolios/pull/258
+    title: "Fix: Add ChanMeng666's Portfolio"
+    state: merged
+    date: "2024-12-27"
+    mergedAt: "2024-12-27"
+    category: dev-portfolio
+    summary: |
+      Registered chanmeng.dev in the curated Awesome-Dev-Portfolios list,
+      after first opening companion issue #257 to request the addition.
+    impact: |
+      Merged within 30 minutes of opening. Surfaces Chan's portfolio inside
+      a developer-discovery channel ranked highly in "best dev portfolio"
+      search queries.
+    comments: 3
+
+  - id: claude-code-46524-slash-cmd-agent-invokable
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-05-26"
+    repo: anthropics/claude-code
+    repoUrl: https://github.com/anthropics/claude-code
+    type: issue
+    number: 46524
+    url: https://github.com/anthropics/claude-code/issues/46524
+    title: "[FEATURE] Make every slash command agent-invokable (and their output agent-readable) — /reload-plugins as a concrete AI-first blocker"
+    state: closed
+    date: "2026-04-11"
+    closedAt: "2026-05-23"
+    category: feature-request
+    summary: |
+      Filed a feature request arguing that every Claude Code slash command
+      should be invokable from inside an agent loop and its output should be
+      readable back to the agent, using `/reload-plugins` as the concrete
+      blocker. Framed the request inside the broader "AI-first developer
+      tooling" design principle.
+    impact: |
+      3 reactions, 3 comments. Closed by Anthropic engineering after
+      consideration. Evidence of Chan operating at the design-feedback
+      tier of the Claude Code ecosystem.
+    reactions: 3
+    comments: 3
+
+  - id: copilotkit-1957-adapter-bug
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: CopilotKit/CopilotKit
+    repoUrl: https://github.com/CopilotKit/CopilotKit
+    type: issue
+    number: 1957
+    url: https://github.com/CopilotKit/CopilotKit/issues/1957
+    title: "🐛 Bug: Custom LLM Service Adapter Integration Fails with \"serviceAdapter.process is not a function\" Error"
+    state: closed
+    date: "2025-06-08"
+    closedAt: "2026-04-12"
+    category: bug-report
+    summary: |
+      Reported a reproducible bug in CopilotKit's Custom LLM Service
+      Adapter integration where `serviceAdapter.process` was undefined at
+      runtime when supplying a user-defined adapter, with a minimal
+      reproduction case.
+    impact: |
+      5 comments, closed by CopilotKit maintainers after fix landed. The
+      reproduction case was useful enough that Chan filed a companion bug
+      report against the `example-todos-app` repo (issue #14) explicitly
+      cross-linking back to this thread.
+    comments: 5
+
+  # ─────────────────────────────── ARCHIVE ─────────────────────────────────
+  # Less-impactful issues, awesome-list registrations, and unresolved bug
+  # reports — preserved for completeness; LLM consumers should skip by
+  # default per the archive-tier convention in tierEnum.
+
+  - id: claude-code-21064-chrome-extension
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: anthropics/claude-code
+    repoUrl: https://github.com/anthropics/claude-code
+    type: issue
+    number: 21064
+    url: https://github.com/anthropics/claude-code/issues/21064
+    title: "[FEATURE] Integration with Claude Chrome Extension for Browser Automation and Debugging"
+    state: closed
+    date: "2026-01-26"
+    closedAt: "2026-02-28"
+    category: feature-request
+    summary: Feature request to integrate Claude Code with the Claude Chrome extension for browser automation and debugging workflows.
+    impact: 2 comments. Closed by Anthropic engineering.
+    comments: 2
+
+  - id: mintlify-docs-4828-mobile-sidebar
+    tier: archive
+    recency: active
+    lastUpdated: "2026-05-26"
+    repo: mintlify/docs
+    repoUrl: https://github.com/mintlify/docs
+    type: issue
+    number: 4828
+    url: https://github.com/mintlify/docs/issues/4828
+    title: "Mobile sidebar navigation unresponsive on iOS and Android standard browsers"
+    state: open
+    date: "2026-03-24"
+    category: bug-report
+    summary: Reported that Mintlify's mobile sidebar navigation becomes unresponsive on iOS Safari and Android default browsers.
+    impact: Open bug report awaiting Mintlify triage.
+    comments: 0
+
+  - id: react-spreadsheet-430-regression
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: iddan/react-spreadsheet
+    repoUrl: https://github.com/iddan/react-spreadsheet
+    type: issue
+    number: 430
+    url: https://github.com/iddan/react-spreadsheet/issues/430
+    title: "Column addition not rendering in v0.10.x (regression from v0.9.5)"
+    state: open
+    date: "2025-07-13"
+    category: bug-report
+    summary: Reported a regression where column-addition stopped rendering in react-spreadsheet v0.10.x, with v0.9.5 cited as last-known-good.
+    impact: Open regression report.
+    comments: 0
+
+  - id: copilotkit-example-todos-14-adapter-bug
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: CopilotKit/example-todos-app
+    repoUrl: https://github.com/CopilotKit/example-todos-app
+    type: issue
+    number: 14
+    url: https://github.com/CopilotKit/example-todos-app/issues/14
+    title: "🐛 Bug: Custom LLM Service Adapter Integration Fails with \"serviceAdapter.process is not a function\" Error #1957 in CopilotKit repository"
+    state: open
+    date: "2025-06-09"
+    category: bug-report
+    summary: Companion bug report cross-linking to CopilotKit/CopilotKit#1957 — flagged that the example-todos-app reproduces the same adapter integration failure.
+    impact: Open bug report.
+    comments: 0
+
+  - id: revealjs-3762-positioning
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: hakimel/reveal.js
+    repoUrl: https://github.com/hakimel/reveal.js
+    type: issue
+    number: 3762
+    url: https://github.com/hakimel/reveal.js/issues/3762
+    title: "Content Positioning Inconsistency in Reveal.js Across Different Screen Sizes"
+    state: open
+    date: "2025-03-13"
+    category: bug-report
+    summary: Reported inconsistent content positioning in reveal.js presentations across different screen sizes.
+    impact: 1 comment.
+    comments: 1
+
+  - id: theoremexplainagent-8-failed-scenes
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: TIGER-AI-Lab/TheoremExplainAgent
+    repoUrl: https://github.com/TIGER-AI-Lab/TheoremExplainAgent
+    type: issue
+    number: 8
+    url: https://github.com/TIGER-AI-Lab/TheoremExplainAgent/issues/8
+    title: "Failed scenes prevent video merging, wasting successful generations and API tokens"
+    state: open
+    date: "2025-03-06"
+    category: bug-report
+    summary: Reported that TheoremExplainAgent's failure handling discards successful scene generations when any scene fails, wasting API tokens already spent.
+    impact: 3 comments — substantive technical discussion with maintainers.
+    comments: 3
+
+  - id: mcp-servers-460-config-inconsistency
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: modelcontextprotocol/servers
+    repoUrl: https://github.com/modelcontextprotocol/servers
+    type: issue
+    number: 460
+    url: https://github.com/modelcontextprotocol/servers/issues/460
+    title: "Inconsistent configuration requirements for different MCP server installation methods"
+    state: closed
+    date: "2025-01-02"
+    closedAt: "2025-08-24"
+    category: feature-request
+    summary: Filed an issue identifying inconsistent configuration requirements across npm/uvx/git-based MCP server installation paths and proposing standardisation.
+    impact: 1 comment. Closed during the MCP servers repo restructure.
+    comments: 1
+
+  - id: mcp-linkedin-2-with-requirement
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: adhikasp/mcp-linkedin
+    repoUrl: https://github.com/adhikasp/mcp-linkedin
+    type: issue
+    number: 2
+    url: https://github.com/adhikasp/mcp-linkedin/issues/2
+    title: "Failed to resolve --with requirement error when starting MCP server"
+    state: open
+    date: "2024-12-31"
+    category: bug-report
+    summary: Reported a `uv --with` requirement-resolution failure when starting the mcp-linkedin server.
+    impact: 4 comments — substantive back-and-forth with maintainer.
+    comments: 4
+
+  - id: awesome-claude-skills-289-typst
+    tier: archive
+    recency: active
+    lastUpdated: "2026-05-26"
+    repo: travisvn/awesome-claude-skills
+    repoUrl: https://github.com/travisvn/awesome-claude-skills
+    type: listing
+    number: 289
+    url: https://github.com/travisvn/awesome-claude-skills/pull/289
+    title: "Add typst-claude-skill: Professional document/PDF generation with Typst"
+    state: open
+    date: "2026-03-16"
+    category: listing
+    relatedProjectId: typst-claude-skill
+    summary: Submitted Chan's typst-claude-skill (Typst typesetting as a Claude Code skill) to the travisvn awesome-claude-skills list.
+    impact: Open PR awaiting maintainer triage.
+
+  - id: awesome-claude-skills-397-typst
+    tier: archive
+    recency: active
+    lastUpdated: "2026-05-26"
+    repo: ComposioHQ/awesome-claude-skills
+    repoUrl: https://github.com/ComposioHQ/awesome-claude-skills
+    type: listing
+    number: 397
+    url: https://github.com/ComposioHQ/awesome-claude-skills/pull/397
+    title: "Add Typst Claude Skill to Document Processing"
+    state: open
+    date: "2026-03-16"
+    category: listing
+    relatedProjectId: typst-claude-skill
+    summary: Submitted typst-claude-skill to ComposioHQ's awesome-claude-skills list under the Document Processing category.
+    impact: Open PR awaiting maintainer triage.
+
+  - id: awesome-agent-skills-224-typst
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+    repo: VoltAgent/awesome-agent-skills
+    repoUrl: https://github.com/VoltAgent/awesome-agent-skills
+    type: listing
+    number: 224
+    url: https://github.com/VoltAgent/awesome-agent-skills/pull/224
+    title: "Add skill: ChanMeng666/typst-claude-skill"
+    state: closed
+    date: "2026-03-16"
+    closedAt: "2026-03-16"
+    category: listing
+    relatedProjectId: typst-claude-skill
+    summary: Submitted typst-claude-skill to VoltAgent's awesome-agent-skills list.
+    impact: Closed by maintainer (list editorial decision).

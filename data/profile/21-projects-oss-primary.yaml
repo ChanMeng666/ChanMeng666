@@ -1,0 +1,1260 @@
+# =============================================================================
+# PROJECTS 2/4 — open source, primary band (visible in README table)
+# =============================================================================
+# Shard of Chan Meng's profile data. Top-level keys: projects.
+# All data/profile/*.yaml shards are merged (in filename order) by
+# scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
+# After editing: npm run check. Data map + cross-reference rules: CLAUDE.md.
+# NOTE: continuation of the `projects:` list started in 20-projects-flagship.yaml
+# =============================================================================
+
+projects:
+  # ------- OPEN SOURCE — PRIMARY (visible in the table by default) -------
+  - id: github-readme-suno-cards
+    tier: primary
+    recency: active
+    meta:
+      x_brand:
+        featuredStack: [github, nextjs, vercel, typescript, react]
+    lastUpdated: "2026-05-19"
+    name: github-readme-suno-cards — Suno Music Cards for GitHub READMEs
+    priority: 5
+    category: branding
+    tagline: GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 8 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with SunoStats.
+    logo: /public/brands/github-readme-suno-cards-logo.svg
+    url: https://github-readme-suno-cards.vercel.app
+    repoUrl: https://github.com/ChanMeng666/github-readme-suno-cards
+    extraLinks:
+      - { label: "Live service",         url: "https://github-readme-suno-cards.vercel.app" }
+      - { label: "Gallery",              url: "https://github-readme-suno-cards.vercel.app/gallery" }
+      - { label: "Visual builder",       url: "https://github-readme-suno-cards.vercel.app/builder" }
+      - { label: "Public v0.1 commit",   url: "https://github.com/ChanMeng666/github-readme-suno-cards/commit/73f4fa8" }
+      - { label: "Internal-ref cleanup", url: "https://github.com/ChanMeng666/github-readme-suno-cards/commit/295756e" }
+      - { label: "Companion: SunoStats", url: "https://github.com/ChanMeng666/sunostats" }
+    techStack:
+      - "pnpm 9.12 monorepo (apps/ + packages/ + action/)"
+      - "Next.js 15.1 (Vercel Edge runtime)"
+      - "TypeScript 5.6"
+      - "@suno-cards/parser workspace package (Valibot-validated Suno oEmbed parser — shared kernel with SunoStats)"
+      - "@suno-cards/render workspace package (pure-function SVG renderer)"
+      - "Valibot (strict TypeScript schema validation against studio-api-prod.suno.com oEmbed)"
+      - "SVG <foreignObject> + inline HTML <span> (CJK text shaping)"
+      - "CSS @keyframes (equalizer-bar animation driven by HTML spans inside the SVG)"
+      - "GitHub Actions composite action (Node 20 runner with esbuild-bundled dist)"
+      - "Biome 1.9 (lint + format)"
+      - "Vitest (parser tests inside action/test/)"
+      - "Vercel Data Cache (upstream, 3600s TTL for single cards)"
+      - "HTTP Cache-Control headers (downstream, drives GitHub Camo proxy)"
+      - "esbuild (action bundle build via action/build.ts)"
+      - "MIT license"
+    keywords:
+      - "GitHub README enhancement"
+      - "GitHub Marketplace Action"
+      - "Suno creator tooling"
+      - "Animated SVG"
+      - "CJK-safe text rendering"
+      - "oEmbed compliance"
+      - "Cross-project parser kernel"
+      - "Public extract from internal monorepo"
+      - "Auto-updating README"
+    metrics:
+      - { label: "Public v0.1 commit",    value: "2026-04-13 (commit 73f4fa8 — 'initial commit github-readme-suno-cards v0.1', extracted as a clean public-facing repo)" }
+      - { label: "Internal cleanup",      value: "2026-04-13 commit 295756e — 'clean remaining internal reference' (post-extraction sanitization)" }
+      - { label: "Latest commit",         value: "2026-04-21 (2f894c9, still iterating ~1 month in)" }
+      - { label: "Total commits",         value: "21 (solo, public history; the underlying renderer is older inside the private origin repo)" }
+      - { label: "Live service",          value: "https://github-readme-suno-cards.vercel.app (Vercel Edge runtime)" }
+      - { label: "GitHub Action",         value: "uses: ChanMeng666/github-readme-suno-cards@v0.1 (composite action, 'music' icon, purple branding)" }
+      - { label: "Action inputs",         value: "8 (handle, manifest_path, song_ids, sort, max, include_tags, exclude_tags, min/max_duration)" }
+      - { label: "Card combinations",     value: "12 base (2 layouts x 2 presets x 3 themes)" }
+      - { label: "Customization toggles", value: "11 element show/hide flags + hex color overrides" }
+      - { label: "id input formats",      value: "3 (UUID / suno.com URL / suno.com/s/<shortcode>) — parser-normalized" }
+      - { label: "Sister project",        value: "SunoStats shares the @suno-cards/parser workspace kernel (parser extracted between the two repos)" }
+      - { label: "License",               value: "MIT" }
+    status: live
+    startDate: "2026-04-13"
+    publicSummary: |
+      A **GitHub Marketplace Action + Vercel-hosted SVG card service**
+      that lets any Suno creator surface their music catalog in their
+      GitHub README — either as a single embedded card (zero-setup
+      Markdown line) or as an auto-syncing card grid kept in sync by a
+      scheduled GitHub Action (`uses: ChanMeng666/github-readme-suno-cards@v0.1`).
+      The current public repo was **extracted from a longer-lived
+      internal monorepo on 2026-04-13** (commit `73f4fa8`
+      *"initial commit — github-readme-suno-cards v0.1"* followed
+      immediately by `295756e` *"clean remaining internal reference"*)
+      and now ships as a clean, focused, MIT-licensed open-source
+      package. **Architectural insight**: the `@suno-cards/parser`
+      workspace package is **shared with SunoStats** (Chan's separate
+      Suno analytics SaaS) — the parser was distilled out as the common
+      kernel between the two projects, so a single Valibot-validated
+      Suno-oEmbed contract underwrites both products. Ships 12 base
+      card combinations (2 layouts × 2 presets × 3 themes), 11
+      customization toggles, hex color overrides, 3 different `id`
+      input formats (raw UUID / `suno.com/song/<uuid>` URL /
+      `suno.com/s/<shortcode>` short code), and 8 GitHub Action inputs
+      including tag filtering and duration filtering. Stack: pnpm
+      monorepo + Next.js 15.1 on Vercel Edge + Valibot schemas + an
+      SVG renderer that uses `<foreignObject>` + inline HTML `<span>`
+      for CJK-safe text shaping with CSS `@keyframes` animations
+      driving the equalizer bars.
+    narrative:
+      impactHeadline: "GitHub Marketplace Action for Suno music cards — CJK-safe animated SVG with 12 design combinations, parses three ID formats, shares a Valibot kernel with SunoStats analytics, extracted from monorepo as a clean MIT-licensed release."
+      problem: |
+        Suno AI creators have no graceful way to surface their music
+        catalog on the surfaces where developer audiences actually
+        congregate: GitHub READMEs, personal portfolio sites, technical
+        blog footers, project documentation. Three escape hatches all
+        fail: (1) link out to suno.com — loses the visual hook and
+        breaks if Suno changes URL shapes; (2) screenshot the player —
+        stale the moment you publish a new song; (3) hand-edit
+        Markdown — fine for one song, completely unmanageable beyond
+        three. Worse: many Suno creators are bilingual or multilingual
+        and produce songs with CJK (Chinese/Japanese/Korean) titles,
+        which pure SVG `<text>` doesn't shape properly because SVG
+        text layout never properly inherited the rich text-shaping
+        rules of HTML. The gap that needs filling: a service that
+        renders animated, visually-rich Suno music cards as embeddable
+        SVG, handles CJK text correctly, supports both zero-setup
+        single embeds and CI-driven auto-syncing card grids, and
+        works in both directions (browse-and-build via a hosted UI,
+        or fully programmatic via a GitHub Action).
+      audience: |
+        Three concentric audiences. (1) **Developer-musicians** using
+        Suno AI who want their GitHub profile README, portfolio site,
+        or project documentation to display a live, auto-updating
+        catalog of their music — including CJK-named tracks. (2)
+        **Music creators** more broadly who maintain a GitHub-shaped
+        public web presence (devrel folks, indie-game developers,
+        bedroom electronic producers with side-projects, AI
+        researchers releasing music under handles) and want a polished
+        visual surface for their Suno output. (3) **Engineers
+        studying the project as a worked example** of (a) extracting
+        a public clean repo from a larger internal monorepo,
+        (b) sharing a single Valibot-validated parser kernel across
+        two independent products (SunoStats + this), (c) the
+        SVG `<foreignObject>` + CSS-keyframes technique for animated,
+        CJK-safe SVG that pure SVG can't render.
+      productLogic: |
+        Two complementary usage paths. **Path 1 — Direct Embed (zero
+        setup).** A user pastes one Markdown line referencing the
+        hosted card endpoint:
+        `[![](https://github-readme-suno-cards.vercel.app/api/card?id=YOUR_SONG_ID)](https://suno.com/song/YOUR_SONG_ID)`.
+        The `id` parameter accepts **three normalized input formats**:
+        a raw UUID, a full `suno.com/song/<uuid>` URL, or a
+        `suno.com/s/<shortcode>` short code — the parser canonicalises
+        all three into a single internal ID. The hosted
+        [`/builder`](https://github-readme-suno-cards.vercel.app/builder)
+        visual editor lets users preview the 12 base card
+        combinations (2 layouts × 2 presets × 3 themes), toggle 11
+        element flags, override individual colors with hex codes, and
+        copy out the resulting embed URL. **Path 2 — GitHub Action
+        Auto-Sync.** A user adds `<!-- SUNO-CARDS:START -->` and
+        `<!-- SUNO-CARDS:END -->` markers to their README, then drops
+        a workflow file at `.github/workflows/suno-cards.yml` with
+        `uses: ChanMeng666/github-readme-suno-cards@v0.1` and a `cron`
+        trigger (typically every 6 hours). The Action takes any of
+        **8 inputs** — `handle` (auto-discovery of all public songs
+        for a Suno creator), `manifest_path` (YAML file listing
+        explicit song IDs), `song_ids` (CSV alternative),
+        `sort` (`created_at` / `play_count` / `upvote_count` /
+        `name`), `max` (1–20), `include_tags`, `exclude_tags`,
+        and `min_duration` / `max_duration` filters — fetches the
+        matched songs, sorts them, and surgically replaces only the
+        content between the markers in the README. A companion
+        `EndBug/add-and-commit@v9` step commits the diff. The two
+        paths share the same parser + renderer so the cards look
+        identical regardless of origin path.
+      technicalApproach: |
+        **pnpm monorepo** with three top-level workspaces: `apps/`
+        (the Next.js 15.1 frontend), `packages/` (the two reusable
+        kernels), and `action/` (the GitHub Marketplace Action). The
+        two reusable packages are the architecturally important ones.
+        **`@suno-cards/parser`** is a Valibot-validated parser for
+        Suno's public oEmbed-style API surface
+        (`studio-api-prod.suno.com`) — anonymous, CORS-enabled,
+        public-by-design endpoints that Suno advertises via the W3C
+        oEmbed protocol; no scraping, no auth, no rate-limit
+        landmines, no headless browsers. **Critical architectural
+        decision**: the same `@suno-cards/parser` package is **shared
+        with Chan's other Suno project, SunoStats** — Chan's separate
+        analytics SaaS for Suno creators
+        ([github.com/ChanMeng666/sunostats](https://github.com/ChanMeng666/sunostats)).
+        Extracting the parser as a workspace package means a single
+        Valibot schema definition + a single typed-error hierarchy
+        (`SunoNotFoundError`, `SunoNetworkError`, `SunoSchemaError`,
+        etc.) underwrites both products — fix a Suno API drift once,
+        both products benefit. **`@suno-cards/render`** is the pure-
+        function SVG rendering engine — deterministic, cacheable,
+        and platform-independent (Vercel Edge can serve it, the
+        GitHub Action's Node 20 runner can also call it locally).
+        **The defining rendering technique**: SVG `<foreignObject>`
+        carries inline HTML `<span>` elements so CJK text shapes
+        correctly (SVG `<text>` doesn't), with **CSS `@keyframes`
+        animations** applied to those spans to drive the **animated
+        equalizer bars** below the song info — a hybrid layout that
+        pure SVG can't produce cleanly because SVG's animation
+        primitives can't compose with proper rich-text shaping. The
+        equalizer animation runs even inside GitHub's Camo proxy
+        (which strips most interactivity) because CSS keyframes
+        survive the SVG sanitization pass. **Two-level caching**:
+        Vercel Data Cache upstream (3600s TTL for single-card
+        requests) and HTTP `Cache-Control` headers downstream,
+        letting GitHub's Camo proxy manage the SVG distribution
+        layer transparently. **GitHub Action build**:
+        `action/build.ts` runs an esbuild bundle that emits a
+        `dist/index.js` (Node 20 runtime) plus the `action.yml`
+        manifest with composite action metadata (icon: `music`,
+        color: `purple`) — committed alongside the source so the
+        Action consumes the bundled artifact directly, no install
+        step needed at workflow runtime. **Quality**: Biome 1.9
+        for lint + format, Vitest tests inside `action/test/`, CI
+        via GitHub Actions workflow.
+      outcomes: |
+        Live production service at
+        [github-readme-suno-cards.vercel.app](https://github-readme-suno-cards.vercel.app)
+        with `/gallery` and `/builder` routes. The current public
+        repository is the **clean-extract** version — first commit
+        `73f4fa8` *"feat: initial commit — github-readme-suno-cards
+        v0.1"* on 2026-04-13, immediately followed by `295756e`
+        *"chore: clean remaining internal reference"* (the
+        post-extraction sanitization sweep). The actual product is
+        older inside the private origin monorepo where the parser
+        was first developed; the v0.1 extraction was the moment Chan
+        cleaned it up and shipped it as a focused MIT-licensed
+        open-source release. Continuing iteration through 2026-04-21
+        (latest commit `2f894c9`). **The shared parser kernel with
+        SunoStats** (Chan's separate Suno analytics SaaS at
+        [sunostats.chanmeng.org](https://sunostats.chanmeng.org)) is
+        the architecturally important outcome: rather than two
+        independent Suno API integrations drifting apart over time,
+        the two products are pinned to a single Valibot contract
+        with a single typed-error hierarchy. **Roadmap**: waveform
+        layout variants, lyrics-excerpt blocks, playlist cards,
+        PNG export via `@resvg/resvg` for users who can't embed
+        SVG directly.
+      myRole: |
+        Sole author across both the original private monorepo and
+        the public v0.1 extraction. Designed the pnpm monorepo
+        split with the parser + renderer extracted as reusable
+        workspace packages; wrote the Valibot schemas against
+        Suno's oEmbed API contract; designed the typed Suno error
+        hierarchy; engineered the `<foreignObject>` + CSS-keyframes
+        rendering technique that handles CJK text + animated
+        equalizers in a single SVG; built the GitHub Marketplace
+        Action with esbuild-bundled dist; designed the 8-input
+        Action surface with three id-format normalization;
+        designed the `<!-- SUNO-CARDS:START/END -->` marker-based
+        surgical README replacement; built the visual `/builder`
+        UI with live preview over all 12 base combinations + 11
+        toggle flags + hex color overrides; executed the
+        2026-04-13 public-extract release sequence (`73f4fa8` +
+        `295756e`); coordinates parser updates across both this
+        project and the SunoStats sibling repo.
+
+  - id: echook
+    tier: primary
+    recency: active
+    meta:
+      x_brand:
+        featuredStack: [claude, cursor, codex, python]
+        contextLogo:
+          - src: /public/tech-logos/claude.svg
+            alt: "Claude Code"
+            url: "https://claude.com/claude-code"
+          - src: /public/tech-logos/cursor.svg
+            alt: "Cursor"
+            url: "https://cursor.com"
+          - src: /public/tech-logos/codex.svg
+            alt: "OpenAI Codex"
+            url: "https://github.com/openai/codex"
+    lastUpdated: "2026-05-18"
+    name: echook (Echo + Hook)
+    priority: 6
+    category: ai-apps
+    tagline: AI-operated audio notification system for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only
+    repoUrl: https://github.com/ChanMeng666/echook
+    logo: /public/brands/echook-logo.svg
+    status: active
+    extraLinks:
+      - { label: "Promo video repo (Remotion)", url: "https://github.com/ChanMeng666/echook-promo-video" }
+      - { label: "Claude Code Marketplace listing", url: "https://github.com/ChanMeng666/echook#install-in-60-seconds" }
+    techStack:
+      - Python 3.6+
+      - "Claude Code Plugin SDK"
+      - "Cursor IDE 3.2.16+ third-party hooks"
+      - "Codex CLI hooks API"
+      - "hooks.json native matcher routing"
+      - "NDJSON structured logging (schema audio-hooks.v1)"
+      - "ElevenLabs TTS API"
+      - "Slack / Discord / Teams / ntfy webhooks"
+      - "PowerShell MediaPlayer (Windows)"
+      - "afplay (macOS)"
+      - "mpg123 / ffplay / paplay / aplay (Linux auto-detect)"
+      - "GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13)"
+      - "Remotion 4 (promo video)"
+      - "React 19 (promo video)"
+      - "Suno (background music generation)"
+    publicSummary: |
+      AI-operated audio notification system for Claude Code, Cursor IDE, and
+      Codex CLI. The defining product idea: the **human never learns the
+      tool**. The user talks to their AI agent in plain English ("install
+      audio-hooks", "switch to chimes", "snooze for 30 minutes", "send alerts
+      to my Slack"), and the agent runs every shell command, reads every JSON
+      output, and reports back. Install reduces to **1 shell command + 2
+      natural-language prompts + 1 slash command = 4 things**; everything
+      after that is conversation. Ships 26 hook events, 2 audio themes,
+      rate-limit alerts (5h/7d quota windows), webhooks (Slack/Discord/Teams/
+      ntfy), TTS that speaks Claude's actual reply, and a context-window
+      status line. 63 GitHub stars, 42 releases, 139 unittest cases on
+      Ubuntu/Windows/macOS × Python 3.9–3.13. A sister repo,
+      **echook-promo-video**, ships the 88-second 1080p product film built
+      entirely in code (Remotion + Claude Code + ElevenLabs + Suno).
+      Carved out as Chan's preserved IP in the Engram Architect Cohort
+      Engagement Letter (May 2026).
+    narrative:
+      impactHeadline: "Audio-feedback hook system for Claude Code / Cursor / Codex — 26 hook events, 2 themes, context-window status line with quota bars, 42 releases, 139 tests on triple-platform CI, plus a Remotion-built promo video shipped entirely in code."
+      problem: |
+        Developers running long-form AI coding workflows on Claude Code,
+        Cursor IDE, and Codex CLI have no way to *hear* what their agent
+        is doing — they alt-tab to check progress, miss rate-limit
+        warnings, and only discover stuck sessions on visual inspection.
+        Bolt-on notification tools exist but they all carry the same
+        anti-pattern: **the human is downstream of the CLI**. The user
+        has to read docs, memorise flags, copy commands, and re-learn the
+        same surface every time it changes. That model collapses the
+        moment a serious user starts rotating between Claude Code, Cursor,
+        and Codex — three editors, three configuration languages, three
+        sets of muscle memory. The mismatch isn't audio; it's the
+        contract between humans, AI agents, and developer tooling.
+      audience: |
+        Software engineers operating Claude Code / Cursor IDE / Codex CLI
+        at the "AI-first" level — comfortable telling their coding agent
+        to install, theme, snooze, webhook, or reconfigure infrastructure
+        in plain English rather than memorising subcommands. Also: power
+        users debugging long-running workflows where audio cues are faster
+        than visual polling; teams rolling out shared notification
+        defaults across multiple developers; researchers building on the
+        AI-first plugin contract as a reference implementation.
+      productLogic: |
+        echook inverts the relationship: **the human is upstream of
+        Claude Code, the AI agent learns the tool on the human's behalf.**
+        A one-line install prompt — *"install the audio-hooks plugin from
+        github.com/ChanMeng666/echook"* — kicks off the entire flow. Claude
+        Code runs `claude plugin marketplace add` and `claude plugin
+        install`, the user types `/reload-plugins` exactly once (the only
+        manual slash command in the entire lifetime of the tool, because
+        Claude Code's reload has no CLI equivalent), and from that moment
+        forward every interaction is conversation. *"Switch to chimes."*
+        *"Snooze for 8 hours."* *"Send alerts to my Slack at this webhook
+        URL and test it."* *"Disable everything except stop and
+        permission_request."* The `/audio-hooks` skill parses intent,
+        invokes the right `audio-hooks` CLI subcommand, reads its JSON
+        output, and narrates the result. The user memorises **nothing**.
+        Cross-editor parity is part of the same contract: every prompt
+        works identically on Cursor's agent and on Codex CLI because they
+        all drive the same Python binary against the same JSON API.
+      businessLogic: |
+        Open source under MIT — no paywall, no premium tier, no telemetry.
+        The business value is **build-in-public credibility**: echook is
+        the demonstration artifact for Chan's AI-first product philosophy
+        and shows up in every Engram-cohort interview, every recruiter
+        conversation, and the public README of every downstream client
+        project. The 42-release cadence, the cross-platform CI matrix,
+        and the 139-test bridge-contract suite make it visible production
+        engineering — not a weekend script. The Remotion promo video
+        sister repo extends the same proof: it shows Chan can ship not
+        just the product but the marketing artifact for the product, end
+        to end, programmatically, with zero Adobe-suite licensing or
+        third-party video production overhead.
+      technicalApproach: |
+        AI-first design at every layer. The `audio-hooks` CLI ships a
+        stable JSON-only API with **27 subcommands, no prompts, no
+        spinners**, versioned NDJSON event logging (schema
+        `audio-hooks.v1`, 5 MB rotation × 3 files), and a **stable error
+        code enum** (`AUDIO_FILE_MISSING`, `WEBHOOK_TIMEOUT`,
+        `DUAL_INSTALL_DETECTED`, etc.) where each error carries a
+        `suggested_command` field so an agent can recover autonomously
+        without screen-scraping. Hook coverage is **26 events** spanning
+        session start/end, tool execution, permission requests, file
+        changes, worktree creation, elicitation, and rate-limit warnings
+        (5-hour and 7-day quota windows with configurable 80%/95%
+        thresholds; each `(window, threshold, resets_at)` fires exactly
+        once via debounce markers). Two audio themes: ElevenLabs
+        **Jessica** voice or modern UI chimes; rebuilds are declarative
+        via `config/audio_manifest.json` + the ElevenLabs generator.
+        Webhooks fan out to Slack, Discord, Teams, and ntfy via
+        fire-and-forget subprocess with a versioned
+        `audio-hooks.webhook.v1` payload — they never block the hook.
+        The status line ships **10 customisable segments** including
+        color-coded context-window and API-quota bars with absolute
+        token counts (e.g. `Context: 83% (166K/200K)`) so users see the
+        "agent dumb zone" before they enter it. Cross-editor architecture
+        is the deepest piece: canonical sources live in `/hooks/`,
+        `/bin/`, `/audio/`, `/cursor-hooks/`, `/codex-hooks/`, and
+        `build-plugin.sh` syncs them into the Claude Code plugin layout
+        — **one source of truth, three editor targets**, with CI
+        enforcing in-sync via `build-plugin.sh --check`. The Cursor path
+        leverages Cursor 3.2.16+'s auto-bridge so 99% of users get
+        Cursor support for free; Cursor-only installs go through a
+        native `~/.cursor/hooks.json` registration with a
+        `DUPLICATE_BRIDGE` error guard that aborts if both paths would
+        be active. The Codex CLI path goes further: install handles
+        OpenAI's required `[features]\ncodex_hooks = true` feature flag
+        by **authoring a fresh `~/.codex/config.toml` when none exists**
+        and emitting machine-readable `next_steps` for the calling AI
+        agent to add the flag with its Edit tool when one does — we
+        never round-trip user TOML because that destroys comments and
+        formatting. **18 canonical events with no Codex equivalent
+        no-op cleanly under the codex invoker** with a debug NDJSON
+        event, never blocking the session. The whole bridge contract is
+        validated by 139 unittest cases across Ubuntu/Windows/macOS ×
+        Python 3.9/3.12/3.13 in GitHub Actions CI.
+      outcomes: |
+        63 GitHub stars, 6 forks, **42 releases** shipped, **139 unittest
+        cases**. The defining release sequence: v5.0 (Jan 2026) shipped
+        the AI-first redesign — JSON CLI, `/audio-hooks` skill, NDJSON
+        logging, plugin-native install; v5.2.0 (May 2026) added native
+        Codex CLI support with +33 bridge-contract tests; v5.2.1 (May
+        2026) executed the **echook rebrand** — a "door-only" GitHub
+        rename from `claude-code-audio-hooks` → `echook` (because leading
+        with "Claude Code" became misleading once native Cursor and
+        Codex paths shipped) that preserved every existing install via
+        GitHub's repo redirect, kept the `audio-hooks` CLI name, the
+        `chanmeng-audio-hooks` marketplace name, and all state
+        directories unchanged. The Engram Architect Cohort Engagement
+        Letter (May 9, 2026) explicitly names
+        *claude-code-audio-hooks* among Chan's preserved IP — formal
+        recognition by a commercial agentic infrastructure firm that this is
+        portfolio-grade engineering, not a hobby script. The sister
+        repo **echook-promo-video** then closed the loop on the
+        AI-first thesis: an 88.7-second 1920×1080 @ 30fps product film
+        composed of 9 sections (Intro → Problem → Solution → Features →
+        Advanced → Demo → Ecosystem → Cross-Platform → CTA) connected
+        by `@remotion/transitions` (wipe/fade/slide) with a layered
+        audio mix (Suno-generated BGM with auto volume ducking + 8
+        ElevenLabs SFX cues + 3 ElevenLabs voiceover tracks) — built
+        entirely in React + Remotion + AI-generated audio, **zero
+        Adobe Premiere, zero After Effects, zero human voice actors**.
+        The whole video pipeline is reproducible: one
+        `npm run generate-audio` regenerates every voice and effect from
+        the ElevenLabs API; one `npm run render` produces the MP4.
+      myRole: |
+        Sole author of both repos. On echook proper: designed the
+        AI-first contract (JSON API + NDJSON log + stable error codes +
+        `suggested_command` recovery), wrote every hook event
+        integration, engineered the three-editor synchronisation
+        pipeline (canonical → plugin layout sync via
+        `build-plugin.sh`, with CI enforcement), authored the Codex
+        TOML-feature-flag bootstrap pattern, and executed the 5.2.1
+        rebrand without breaking compatibility. On echook-promo-video:
+        designed the 9-section narrative arc with Claude Code, built
+        the reusable visual primitives (TypewriterText, Terminal,
+        SoundWave, GreenGrid, CounterNumber, GlowText), orchestrated
+        the Remotion `TransitionSeries`, wrote the ElevenLabs
+        audio-generation script, and tuned the volume-ducking
+        envelopes so BGM ducks during VO + demo playback. Maintains
+        both repos today through the 5.x line.
+
+  - id: douyin-mall-go-template
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    name: TikTok Shop Go Template
+    priority: 7
+    category: web-apps
+    tagline: Production-shape Go + Gin + MySQL + Redis e-commerce backend template — clean architecture, JWT auth, bilingual; distilled from ByteDance Youth Training Camp learnings
+    repoUrl: https://github.com/ChanMeng666/douyin-mall-go-template
+    logo: /public/brands/tiktok-shop.svg
+    techStack: [Go, Gin, MySQL, Redis, JWT, REST, Clean Architecture]
+    status: active
+    publicSummary: |
+      Production-shape Go + Gin + MySQL + Redis e-commerce backend template
+      with clean architecture, JWT auth, and paired React frontend — built
+      solo as a teaching artefact from the ByteDance Youth Training Camp
+      capstone. 52 GitHub stars, 7 forks, < 50 ms average API response time.
+    narrative:
+      impactHeadline: "Production-shape Go + Gin + MySQL + Redis e-commerce backend template — 52 stars / 7 forks (Chan's most-starred primary OSS project), clean architecture with JWT auth and bilingual READMEs, sub-50ms average API response."
+      problem: |
+        Developers learning Go web development have access to plenty of
+        toy hello-world tutorials and plenty of opaque production
+        codebases, but very little **in between** — no template that
+        demonstrates a complete e-commerce backend with the directory
+        layout, build pipeline, and documentation discipline a Chinese
+        big-tech team would actually ship.
+      audience: |
+        Two layered audiences. Primary: Go beginners progressing from
+        toy projects to "ship-shaped" architecture — students from the
+        ByteDance Youth Training Camp and similar bootcamps. Secondary:
+        experienced developers needing a clean starter for an
+        e-commerce backend who don't want to assemble Gin + MyBatis +
+        JWT + Redis + Docker themselves.
+      technicalApproach: |
+        Full stack: **Go 1.23 + Gin** for the backend, **MySQL 8.0** for
+        persistence, **React 18** + Vite for the frontend, **JWT
+        authentication**, **RESTful APIs**, **Redis** caching. Directory
+        layout follows the Go community's production-correct convention:
+        `cmd/server/` (entry points), `internal/` (core business logic),
+        `api/v1/` (handlers and route definitions), `pkg/` (reusable
+        packages), `configs/` (YAML-based config), `docs/` (API specs +
+        schema diagrams), `frontend/` (React/Vite). The repo also ships
+        a **dual frontend implementation**: a React SPA and a vanilla
+        HTML/JavaScript version side by side, so learners can compare
+        architectural approaches against the same backend. Deployment
+        guides cover Docker, Railway, Render, and Fly.io. Bilingual
+        (EN + 简体中文) README at production quality.
+      outcomes: |
+        **52 GitHub stars, 7 forks**, 27 sustained commits — the
+        strongest external traction of any project in Chan's open-source
+        catalogue under "primary" tier. Featured as one of the eight
+        primary projects on Chan's GitHub Open Source table. **< 50 ms**
+        average API response time. Apache-2.0 license to permit
+        commercial reuse while encouraging community contribution.
+        Doubles as the worked-example artefact accompanying Chan's
+        ByteDance Youth Training Camp narrative — the same engineering
+        practices that scored Chan as the #2-most-prolific committer on
+        the Team-115 capstone, packaged as a public learning resource.
+      myRole: |
+        Sole author. Designed the directory layout, wrote both backend
+        and frontend implementations, authored the bilingual
+        documentation, and packaged the multi-platform deployment
+        guides. The repo is its own pedagogical statement: students can
+        read the instructor's commits to see how patterns they're being
+        taught compose into a real production-shape service.
+
+  - id: server-google-jobs
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-19"
+    name: server-google-jobs
+    priority: 8
+    category: ai-apps
+    tagline: Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
+    url: https://github.com/ChanMeng666/server-google-jobs
+    repoUrl: https://github.com/ChanMeng666/server-google-jobs
+    logo: /public/brands/server-google-jobs.svg
+    extraLinks:
+      - { label: "Skywork review",      url: "https://skywork.ai/skypage/en/google-jobs-mcp-server/1981237070002356224" }
+      - { label: "PulseMCP listing",    url: "https://www.pulsemcp.com/servers/chanmeng666-google-jobs" }
+      - { label: "Glama",               url: "https://glama.ai/mcp/servers/@ChanMeng666/server-google-jobs" }
+      - { label: "mcp.so",              url: "https://mcp.so/server/server-google-jobs/ChanMeng666" }
+      - { label: "AI Toolhouse",        url: "https://www.aitoolhouse.com/mcp-servers/chanmeng666-google-jobs" }
+      - { label: "MagicSlides",         url: "https://www.magicslides.app/mcps/chanmeng666-google-jobs" }
+      - { label: "Companion News MCP",  url: "https://github.com/ChanMeng666/server-google-news" }
+    techStack:
+      - TypeScript
+      - "Node.js"
+      - "@modelcontextprotocol/sdk 1.25.1"
+      - "stdio transport"
+      - SerpAPI
+      - node-fetch
+      - "ES modules"
+      - "npm (scoped @chanmeng666)"
+      - "Dockerfile"
+      - ".mcpb compiled binary"
+      - "mcp-evals (v2.0.0 early adoption)"
+    keywords:
+      - "Model Context Protocol"
+      - "Early MCP developer (Dec 2024 — 5 weeks post-launch)"
+      - "Locale-aware MCP"
+      - "Multi-language job search"
+      - "Skywork AI featured review"
+      - "MCP Registry"
+      - "Anthropic MCP ecosystem"
+    metrics:
+      - { label: "First commit",      value: "2024-12-31 — 36 days after MCP's Nov 25 2024 public launch" }
+      - { label: "npm package",       value: "@chanmeng666/google-jobs-server" }
+      - { label: "PulseMCP",          value: "4.6k visitors · registered Jan 1 2025" }
+      - { label: "Skywork review",    value: '"one of the most elegant, production-ready solutions" (Oct 27 2025)' }
+      - { label: "Glama quality",     value: "A (license) · MIT" }
+      - { label: "Locales",           value: "English, Simplified Chinese, Japanese, Korean (30+ strings each)" }
+      - { label: "Commits",           value: "71 (solo)" }
+    status: live
+    startDate: "2024-12-31"
+    publicSummary: |
+      MCP server for Google Jobs multi-language search (English, Simplified
+      Chinese, Japanese, Korean — 30+ translated strings per locale). Built
+      **Dec 31 2024, 36 days after Anthropic's Nov 25 2024 launch of the
+      Model Context Protocol** — companion to `server-google-news` (one
+      day earlier). **The subject of a dedicated Skywork AI deep-dive
+      review** *("The Ultimate Guide to Chan Meng's Google Jobs MCP
+      Server"*, Oct 27 2025) that calls it *"one of the most elegant,
+      production-ready solutions I've found for a very specific, very
+      common problem"* and benchmarks it favourably against generic
+      SerpAPI wrappers, custom scrapers, and manual API integrations.
+      Listed on **PulseMCP** (4.6k visitors, registered Jan 1 2025),
+      **Glama** (A license rating), Smithery, mcp.so, AI Toolhouse,
+      AIBase, MagicSlides, and serp.ly — 10+ catalogs total.
+      Published as `@chanmeng666/google-jobs-server` on npm; installable
+      through Smithery (`npx -y @smithery/cli install
+      @chanmeng666/google-jobs-server --client claude`); ships a
+      Dockerfile and a `.mcpb` compiled binary for frictionless install
+      on the MCP Registry; security badges from MseeP.ai and Glama.ai.
+    narrative:
+      impactHeadline: "Companion early-MCP Google Jobs server (36 days after MCP launch) — on the official MCP Registry, listed across 10+ MCP discovery surfaces with Glama A-rating; Skywork AI deep-dive review called it 'one of the most elegant production-ready solutions.'"
+      problem: |
+        At launch (Dec 31 2024), MCP was weeks old as a public protocol
+        and there was no canonical way for an AI assistant to query
+        **multilingual job listings**. Job seekers in non-English markets
+        — particularly Greater China, Japan, and Korea — couldn't ask
+        Claude Desktop for relevant openings without falling back to
+        manually translating queries and hand-pasting URL parameters.
+      audience: |
+        Three groups. (a) Developers integrating job search into AI
+        applications. (b) Multilingual job-seekers using Claude Desktop
+        and similar MCP-aware tools. (c) Other early-era MCP server
+        authors wanting a reference implementation of locale-aware
+        third-party API integration — explicitly recognised in
+        Skywork AI's *"The Ultimate Guide"* review as a production-grade
+        reference pattern in the early MCP ecosystem.
+      productLogic: |
+        The server exposes Google Jobs (via SerpAPI) as a composable MCP
+        capability. Clients call `search` with parameters `query`,
+        `location`, `employment_type`, `salary`, `radius`, `sort_by` —
+        and a `locale` parameter that maps onto English / Simplified
+        Chinese / Japanese / Korean. The server returns up to 10 results
+        per page with all error messages, status labels, and suggestion
+        prompts translated into the requested locale (30+ strings each).
+        Input is locale-agnostic: a user writing "part-time" or "兼职"
+        or "アルバイト" all map to the same SerpAPI employment code.
+        Skywork's review specifically highlights the **AI-optimized
+        structured output** as eliminating downstream parsing work and
+        the **smart fallback mechanisms** as production-ready error
+        handling.
+      technicalApproach: |
+        TypeScript on Node.js, built against `@modelcontextprotocol/sdk
+        1.25.1` (kept current with the official SDK release line). The
+        hardest design problem was **locale-agnostic parameter
+        handling** — rather than hard-coding language-specific branches,
+        the server maintains a 4-locale translation matrix keyed
+        against canonical SerpAPI codes, so input in any supported
+        language collapses to the same internal query and output
+        rehydrates into the user's chosen locale. Distribution surface
+        is unusually wide for an early MCP: **npm**
+        (`@chanmeng666/google-jobs-server`), **Smithery** (one-command
+        install via `npx -y @smithery/cli`), a **Dockerfile** for
+        containerised deployment, a `.mcpb` compiled binary for
+        frictionless install on the official MCP Registry, and
+        `mcp-evals 2.0.0` as an early adopter of the MCP evaluation
+        framework. The `package.json` carries a structured `ai:` block
+        with use cases, capabilities, target audience, and primary use
+        cases declared in JSON for LLM-driven discovery — the same
+        GEO-aware authoring pattern used across all of Chan's MCP work.
+      outcomes: |
+        **71 solo commits**. Registered on the official MCP Registry;
+        security-assessment badges from MseeP.ai and Glama.ai validating
+        runtime reliability. Listed across **10+ MCP discovery
+        surfaces** — PulseMCP (4.6k visitors, registered Jan 1 2025),
+        Glama (A license rating), Smithery, mcp.so, AI Toolhouse,
+        AIBase, MagicSlides, serp.ly, MCP Server Finder, MCP Archive.
+        **Subject of an independently authored deep-dive review** by
+        Skywork AI (Oct 27 2025) — *"The Ultimate Guide to Chan Meng's
+        Google Jobs MCP Server"* — which calls it *"one of the most
+        elegant, production-ready solutions"* and includes a
+        comparison table showing it as superior to generic SerpAPI
+        wrappers in setup complexity, maintenance overhead, and
+        AI-specific optimisation. The companion piece to Chan's
+        **google-news-mcp** server (first commit one day earlier,
+        2024-12-30) — together these two represent **one of the
+        earliest public sets of locale-aware MCP servers**, predating
+        most enterprise MCP adoption by months.
+      myRole: |
+        Sole author. Designed the locale-agnostic parameter handling,
+        authored every translation table, wrote the multi-channel
+        distribution pipeline (npm + Smithery + Docker + .mcpb), and
+        maintains the project as part of the matched Google News /
+        Google Jobs MCP pair. The Skywork review specifically
+        attributes the production-ready design and intelligent
+        error-handling architecture to Chan as creator.
+
+  - id: tencent-meeting-video-downloader
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-19"
+    name: 腾讯会议录屏下载助手 — Chrome Web Store-Published Extension
+    priority: 9
+    category: web-apps
+    tagline: Formally published Chrome Web Store product (extension ID gdajdfngeonjmcclghkmeoacopnnfpnc) — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted. First commit Nov 25 2024, still maintained through April 2026.
+    url: https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
+    repoUrl: https://github.com/ChanMeng666/tencent-meeting-video-downloader
+    logo: /public/brands/tencent-meeting-video-downloader.svg
+    extraLinks:
+      - { label: "Chrome Web Store listing",      url: "https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc" }
+      - { label: "Privacy policy (PRIVACY.md)",   url: "https://github.com/ChanMeng666/tencent-meeting-video-downloader/blob/main/PRIVACY.md" }
+      - { label: "Releases (v1.0.0 + v1.1.0)",    url: "https://github.com/ChanMeng666/tencent-meeting-video-downloader/releases" }
+      - { label: "License (Apache-2.0)",          url: "https://github.com/ChanMeng666/tencent-meeting-video-downloader/blob/main/LICENSE" }
+      - { label: "Code of Conduct",               url: "https://github.com/ChanMeng666/tencent-meeting-video-downloader/blob/main/CODE_OF_CONDUCT.md" }
+    techStack:
+      - "Chrome Extension Manifest V3"
+      - "Chrome webRequest + webRequestBlocking API (retained under V3 review)"
+      - "Chrome storage API (local URL persistence)"
+      - "Chrome runtime messaging (inter-component IPC)"
+      - "Service worker (background.js)"
+      - "Content script injection (content.js, scoped to *.meeting.tencent.com + *.myqcloud.com)"
+      - "JavaScript ES6+ (async/await)"
+      - "Webpack 5 (bundling + tree-shaking)"
+      - "Babel (cross-browser transpilation)"
+      - "CSS3 + HTML5 popup UI"
+      - "ESLint code-quality enforcement"
+    keywords:
+      - "Chrome Web Store published"
+      - "Manifest V3 review-approved"
+      - "webRequestBlocking retained"
+      - "Apache-2.0 with patent grant"
+      - "Privacy-policy compliant"
+      - "Mandarin enterprise user base"
+      - "Reverse-engineered CDN headers"
+      - "Cross-platform shell path normalization"
+    metrics:
+      - { label: "Chrome Web Store ID",   value: "gdajdfngeonjmcclghkmeoacopnnfpnc" }
+      - { label: "First commit",          value: "2024-11-25 (predates MCP public launch by 5 days)" }
+      - { label: "Latest commit",         value: "2026-04-07 (still maintained 18 months on)" }
+      - { label: "Total commits",         value: "24 (solo)" }
+      - { label: "Tagged releases",       value: "2 (v1.0.0, v1.1.0)" }
+      - { label: "License",               value: "Apache-2.0 (includes patent grant)" }
+      - { label: "Privacy policy",        value: "PRIVACY.md (required for Chrome Web Store submission)" }
+      - { label: "Manifest permissions",  value: "webRequest + webRequestBlocking + storage (V3 review-approved)" }
+      - { label: "Host permissions",      value: "*.qq.com, *.tencent.com, *.myqcloud.com" }
+      - { label: "Rating badge",          value: "Dynamic shields.io chrome-web-store/rating live-from-store" }
+    status: live
+    startDate: "2024-11-25"
+    publicSummary: |
+      A **formally published Chrome Web Store product** (extension ID
+      `gdajdfngeonjmcclghkmeoacopnnfpnc`) — not a dev script, not a
+      GitHub-only release: passed Google's full Chrome Web Store
+      review, with a vetted `PRIVACY.md`, an Apache-2.0 license that
+      includes a patent grant, and a **Manifest V3 manifest that
+      retains the `webRequestBlocking` permission** despite V3's
+      narrowed permissioning model (the extension's network-intercept
+      use case justified it during review). The extension auto-detects
+      Tencent Meeting recording streams on the `*.myqcloud.com` CDN as
+      the user plays the video, then generates a ready-to-run `curl`
+      command with the correct headers, problematic ones stripped, and
+      Windows paths auto-rewritten to Git-Bash-compatible Unix paths.
+      Listed live in the Chrome Web Store with a live-from-store rating
+      shield, **first committed Nov 25 2024** (5 days before
+      Anthropic's MCP launch), **still maintained through April 2026**
+      across 24 solo commits and 2 tagged releases (v1.0.0 + v1.1.0).
+      Built with Chrome Manifest V3 APIs (webRequest + webRequestBlocking
+      + storage + runtime messaging), JavaScript ES6+, Webpack 5, Babel.
+    narrative:
+      impactHeadline: "Formally Chrome Web Store-published browser extension for downloading Tencent Meeting recordings — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted; still maintained 18 months after first ship."
+      problem: |
+        Tencent Meeting recordings live on the `myqcloud.com` CDN
+        behind a combination of authentication headers, referrer
+        requirements, and URL patterns that make manual download
+        unusable for non-developers. Educators recording lectures,
+        business operators capturing client meetings, and content
+        creators producing interview material all routinely need a
+        local copy of a Tencent Meeting recording — for accessibility
+        captioning, archive retention, post-production editing, or
+        republishing to a different distribution channel — but the
+        official Tencent Meeting UI provides **no clean download
+        button**, the underlying CDN URL is buried in the network
+        tab in a non-obvious format, and ad-hoc `curl` attempts fail
+        almost universally because the CDN rejects requests missing
+        the right `referer`, `user-agent`, and `authority` headers.
+        Worse, Chinese corporate environments standardised on Tencent
+        Meeting tend to skew Windows-heavy with locked-down IT
+        policies that block desktop downloaders, leaving Git Bash as
+        the only practical Unix-shell access path — and Git Bash
+        consumes Unix-style paths, not Windows ones, which is yet
+        another conversion the average user gets wrong.
+      audience: |
+        The README explicitly names three primary user groups: (1)
+        **educators** recording lectures who need persistent local
+        copies for re-use across cohorts; (2) **business professionals**
+        archiving client meetings for compliance, follow-up review,
+        or legal record-keeping; (3) **content creators** capturing
+        interviews, panels, and roundtables for post-production
+        editing into long-form content. Secondary audience: any
+        Mandarin-speaking knowledge worker in a corporate environment
+        standardised on Tencent Meeting whose IT department blocks
+        installation of desktop downloaders — Chrome extensions are
+        nearly always installable from the Chrome Web Store even
+        when local-admin install is restricted. The audience skew
+        is reflected in the manifest's localized name
+        (`腾讯会议录屏下载助手`) and the README's bilingual structure.
+      productLogic: |
+        The extension is **passive by default**. It sits silently in
+        the browser, the content script injects into pages under
+        `*.meeting.tencent.com` and `*.myqcloud.com`, and the
+        background service worker listens for streaming responses
+        matching the Tencent Meeting recording URL signature via the
+        `webRequest` API. When the user plays a recording in the
+        normal Tencent Meeting UI, the extension captures the CDN
+        URL, the auth headers, and the referer chain — invisibly. The
+        user then clicks the extension icon to open the popup, types
+        (or pastes) a save path like `D:\videos\meeting.mp4`, and
+        clicks "Generate Command". The popup produces a ready-to-run
+        `curl` command with: (a) the correct authenticated URL, (b)
+        only the headers Tencent's CDN actually requires (problematic
+        ones that fail when re-issued outside the browser stripped),
+        (c) the Windows path auto-rewritten to `/d/videos/meeting.mp4`
+        for Git Bash compatibility, (d) the `--compressed` flag for
+        gzip-encoded streams, and (e) the `--output` flag pre-filled.
+        The user pastes that one line into Git Bash, hits Enter, and
+        the file downloads. **No URL extraction, no header guessing,
+        no path conversion required from the user.**
+      technicalApproach: |
+        **Chrome Manifest V3** — the modern security model Google
+        moved all extensions to in 2023–24 — but with a deliberately
+        retained `webRequestBlocking` permission, which V3 narrowed
+        from the V2 baseline for most extensions. The justification
+        carried through Chrome Web Store review: this is a
+        download-augmentation tool whose entire purpose is to observe
+        and capture in-flight CDN responses; without blocking
+        webRequest the URL signature can't be reliably extracted in
+        time. **Component separation** is clean and idiomatic for V3:
+        `background.js` runs as the service worker, registering the
+        webRequest listeners against `*.myqcloud.com` and writing
+        matched URLs to `chrome.storage`; `content.js` is the
+        content-script injection scoped to `*.meeting.tencent.com`
+        and `*.myqcloud.com`, handling page-level DOM observation;
+        `popup.js` + `popup.html` + `popup.css` is the user-facing
+        UI; `utils/download.js` houses the curl-command builder. The
+        non-obvious engineering is in **two reverse-engineered
+        details**: (1) which headers Tencent's CDN actually requires
+        vs. which ones break the request when re-issued from outside
+        the browser context — established by trial across multiple
+        recording sessions — and (2) the **automatic Windows-to-Unix
+        path conversion** for Git Bash (`D:\videos\meeting.mp4` →
+        `/d/videos/meeting.mp4`), which sounds trivial but is
+        precisely the conversion average Chinese corporate users get
+        wrong every time. **Build**: Webpack 5 + Babel transpilation
+        + ESLint code-quality. **Distribution**: Chrome Web Store
+        review-approved with a `PRIVACY.md` (mandatory for V3
+        approval), an Apache-2.0 LICENSE with patent grant, and a
+        `CODE_OF_CONDUCT.md`. **Permissions justified at review**:
+        `webRequest` and `webRequestBlocking` (URL capture), `storage`
+        (local URL persistence between popup and background), plus
+        host permissions on `*.qq.com`, `*.tencent.com`, and
+        `*.myqcloud.com` (all Tencent-controlled CDN origins).
+      outcomes: |
+        **Formally published on Chrome Web Store** (the explicit
+        framing the project leads with) at extension ID
+        `gdajdfngeonjmcclghkmeoacopnnfpnc` — a credential that
+        meaningfully exceeds an unpublished GitHub-only release
+        because it carries Google's review approval for the
+        Manifest V3 manifest, the privacy posture, and the
+        permissions justification. The README displays a **live
+        chrome-web-store rating shield** that pulls the current
+        store rating dynamically (`shields.io/chrome-web-store/
+        rating/gdajdfngeonjmcclghkmeoacopnnfpnc`) and a
+        github-release badge for **two tagged releases (v1.0.0 +
+        v1.1.0)**. Total **24 solo commits across 18 months** —
+        from the first commit on **2024-11-25** (which incidentally
+        predates Anthropic's MCP public launch by 5 days) through
+        the most recent commit on **2026-04-07**, putting it in the
+        same productive late-2024 shipping window that produced the
+        two early MCP servers and the Christmas-greeting CLI that
+        became SendJoy. Sustained traction for an explicitly niche
+        utility: the kind of product that exists only because Chan
+        used Tencent Meeting daily during the China-based work
+        portion of her career, hit the exact friction the README
+        describes, and wrote the tool she herself needed —
+        afterwards committing to the Chrome Web Store distribution
+        path (rather than a GitHub-only release) so other
+        Mandarin-speaking knowledge workers could install it from
+        the same trusted distribution channel as any other Chrome
+        extension.
+      myRole: |
+        Sole author, sole maintainer, sole Chrome Web Store
+        publisher of record. Reverse-engineered which `*.myqcloud.com`
+        headers the Tencent CDN actually requires vs. which ones
+        break the re-issued request; designed the popup UI; wrote
+        the Manifest V3 manifest with the deliberately retained
+        `webRequestBlocking` permission and shepherded it through
+        Chrome Web Store review (including the `PRIVACY.md`
+        authoring and the permissions justification); engineered
+        the cross-platform curl generator including the
+        Windows-to-Git-Bash path conversion; built the Webpack 5 +
+        Babel build pipeline; published v1.0.0 and v1.1.0 to the
+        Chrome Web Store; maintains the listing today with
+        periodic header updates as Tencent's CDN evolves.
+
+  - id: gradient-svg-generator
+    tier: primary
+    recency: active
+    meta:
+      x_brand:
+        featuredStack: [nextjs, react, typescript, tailwindcss, vercel]
+    lastUpdated: "2026-05-19"
+    name: gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs
+    priority: 10
+    category: creative
+    tagline: 340+ parametric animated SVG templates served as live XML via Vercel Edge — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 273-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
+    url: https://gradient-svg-generator.vercel.app/
+    repoUrl: https://github.com/ChanMeng666/gradient-svg-generator
+    logo: /public/brands/gradient-svg-generator-logo.svg
+    extraLinks:
+      - { label: "Visual editor (/create)",  url: "https://gradient-svg-generator.vercel.app/create" }
+      - { label: "Template gallery",         url: "https://gradient-svg-generator.vercel.app/templates" }
+      - { label: "API docs",                 url: "https://gradient-svg-generator.vercel.app/api-docs" }
+      - { label: "Architecture doc",         url: "https://github.com/ChanMeng666/gradient-svg-generator/blob/main/docs/architecture.md" }
+      - { label: "Adding-an-effect guide",   url: "https://github.com/ChanMeng666/gradient-svg-generator/blob/main/docs/adding-an-effect.md" }
+      - { label: "Truth-up-numbers commit",  url: "https://github.com/ChanMeng666/gradient-svg-generator/commit/fdcb7dd" }
+    techStack:
+      - "Next.js 16.2 (App Router + Vercel Edge runtime)"
+      - "React 19.2 + TypeScript 5.4 (gradual JS->TS migration through Phase 7)"
+      - "Tailwind CSS 4.2 + @tailwindcss/typography + @tailwindcss/forms"
+      - "Zustand 5.0 (template gallery state)"
+      - "@tanstack/react-query 5.83 (data fetching)"
+      - "@tanstack/react-virtual 3.13 (virtualized template grid for 340+ entries)"
+      - "Zod 3.23 (runtime validation of /api/svg query params, 400-on-bad-input)"
+      - "fuse.js 7.1 (fuzzy template search)"
+      - "framer-motion 12.23 (visual editor micro-interactions)"
+      - "SVG <animate> / <animateTransform> (SMIL animation primitives)"
+      - "CSS @keyframes embedded in <style> inside the streamed SVG"
+      - "Animated linearGradient / radialGradient stop offsets"
+      - "SVG filters: <feTurbulence>, <feDisplacementMap>, <feGaussianBlur>, <feColorMatrix>"
+      - "<textPath> for text-following-path animations"
+      - "@vercel/node 2.15 serverless function (/api/svg endpoint streams XML)"
+      - "Vitest 1.6 + @testing-library/* (tests/contract/ + tests/unit/)"
+      - "ESLint 9 + TypeScript-ESLint 8 + Prettier 3 + Husky 9 + lint-staged 15"
+      - "web-vitals 5.0 (production performance telemetry)"
+      - "ISC license"
+    keywords:
+      - "Streaming SVG-as-service"
+      - "Parametric template system"
+      - "SVG animation principles (SMIL + CSS + filters)"
+      - "URL-parameterised banner generator"
+      - "340+ template catalog"
+      - "Virtualized template gallery"
+      - "JS->TS gradual migration"
+      - "Anti-LLM-hype marketing-number discipline"
+      - "Multi-phase refactor (5/6/7/8)"
+      - "Profile dogfooding"
+    metrics:
+      - { label: "Internal product name",    value: "Chromaflow (package.json) — public URL retains the descriptive 'gradient-svg-generator' for discoverability" }
+      - { label: "First commit",             value: "2025-01-06 (commit 782c6f1)" }
+      - { label: "Latest commit",            value: "2026-04-21 (commit 4ee9829, still actively iterating)" }
+      - { label: "Total commits",            value: "273 (solo, ~18 months sustained)" }
+      - { label: "Template count",           value: "340+ across 16 categories (Pride 20, Tech, Nature, Material, Text-FX, Gaming, Weather 12, Light&Shadow 12, Art Movements 12, Culinary 12, Patterns 8, Metallic 8, Path-Text 12, Shapes 25, Experimental 29, GitHub-Profile 30)" }
+      - { label: "Refactor phases",          value: "4 documented phases (5: extract svgPrimitives factory + _shared/palettes; 6: truth-up-marketing-numbers + docs/architecture.md; 7: JS->TS migration + Zod validation; 8: gallery virtualization)" }
+      - { label: "URL parameters",           value: "10 (text, template, height, duration, color0-N, gradientType, stroke, strokeWidth, rotate, textBg)" }
+      - { label: "API endpoint",             value: "GET /api/svg — streams XML with Content-Type: image/svg+xml" }
+      - { label: "Anti-hype commit",         value: "fdcb7dd 'truth up marketing numbers across the codebase' + db724e0 'drop 50+ Effects claim'" }
+      - { label: "Dogfooding",               value: "Powers every visual badge / banner in every Chan-authored README — including this profile" }
+      - { label: "License",                  value: "ISC" }
+    status: live
+    startDate: "2025-01-06"
+    publicSummary: |
+      Production **streaming-SVG service** that delivers **340+ animated
+      gradient banner templates** as live XML over a parameterised URL —
+      paste one Markdown image link, no install, the browser animates
+      the gradient locally using a combination of three SVG-animation
+      principles: **SMIL `<animate>` and `<animateTransform>` elements**
+      (animating gradient stop offsets, transforms, opacities),
+      **CSS `@keyframes` embedded in a `<style>` block inside the
+      streamed SVG document** (driving blur, glow, text effects), and
+      **SVG filter primitives** (`<feTurbulence>`,
+      `<feDisplacementMap>`, `<feGaussianBlur>`, `<feColorMatrix>`)
+      for organic distortions (turbulent waves, liquid mercury,
+      caustic underwater). The codebase carries the internal product
+      name **Chromaflow** (per `package.json`) while keeping the
+      descriptive `gradient-svg-generator` repo and URL for
+      discoverability. Built up over **18 months / 273 solo commits**
+      through a documented **4-phase refactor saga**: Phase 5 extracted
+      `svgPrimitives` factory + `_shared/palettes.js`; Phase 6
+      deliberately *"truthed up marketing numbers"* (commit `fdcb7dd`
+      followed by `db724e0` *"drop 50+ Effects claim"* — the kind of
+      anti-LLM-hype discipline you don't usually see in solo OSS);
+      Phase 7 was the gradual JavaScript->TypeScript migration with
+      Zod-validated `/api/svg` query params; Phase 8 added
+      `@tanstack/react-virtual` virtualization for the 340+ template
+      gallery so the visual editor scrolls smoothly. Powers **every
+      visual badge in every Chan-authored README**, including the
+      profile that ships this entry — continuous dogfooding means any
+      rendering regression breaks visible branding immediately.
+    narrative:
+      impactHeadline: "340+ parametric animated-SVG templates served as live XML via Vercel Edge — the open-source visual engine powering every badge in this README. 273 solo commits across 18 months, with deliberate 'anti-LLM-hype' content audits to keep marketing numbers honest."
+      problem: |
+        Adding striking animated visuals to a GitHub profile, project
+        README, or documentation site requires either bespoke SVG
+        authorship (a multi-day yak-shave per banner), third-party
+        paid services (most of which lock you into a watermark or a
+        narrow style palette), or static rasterised images that look
+        dated within months. None of these scale to the modern open-
+        source norm of *hundreds* of repos per developer, each with
+        differentiated branding. The specific technical gap: there's
+        no zero-install service that lets a developer drop a
+        parameterised URL into Markdown and get **a live, animated,
+        on-brand SVG banner** that the browser renders standalone
+        (no JS dependency, no Lottie player, no canvas) and that
+        survives GitHub's Camo proxy stripping. The product gap
+        widens for **specific identity-coded communities** — pride
+        creators wanting accurate flag palettes, technical writers
+        wanting consistent capsule shapes across docs, niche
+        aesthetic communities (cyberpunk / art deco / impressionist)
+        with no off-the-shelf template gallery.
+      audience: |
+        Three concentric audiences. (1) **Open-source maintainers
+        and developer-builders** who want their READMEs and profile
+        pages to look polished without dependency sprawl — the
+        primary daily-active user segment. (2) **Identity-coded
+        communities** with template subsets specifically authored
+        for them: **20 dedicated pride flag templates** (Progress,
+        Trans, Bi, Pan, Lesbian, Nonbinary, Ace, Genderfluid,
+        Aromantic, Rainbow, etc.); **30 GitHub Profile templates**
+        oriented around DevOps/full-stack practitioner branding;
+        **29 experimental dimensional-portal templates** for
+        creative technologists. (3) **Engineers studying the
+        project as a worked example** of (a) parametric SVG
+        animation built without a heavy graphics framework, (b) a
+        deliberately documented multi-phase refactor saga, (c) the
+        anti-LLM-hype "truth up marketing numbers" discipline.
+      productLogic: |
+        Single-URL contract. The user pastes one Markdown image line:
+        `![banner](https://gradient-svg-generator.vercel.app/api/svg?text=Hello&template=neural-network&height=120)`
+        and GitHub (or any Markdown renderer) embeds the live
+        animated SVG. **10 URL parameters** control everything:
+        `text=` (display string, `;`-separated for skill-pill grids),
+        `template=` (any of the 340+ template names from the
+        gallery), `height=` (1–10000 pixels), `duration=` (animation
+        loop time), `color0=` through `colorN=` (gradient stop
+        overrides, hex without `#`), `gradientType=` (effect-style
+        override that bypasses the template default), `stroke=`,
+        `strokeWidth=`, `rotate=`, `textBg=`. Users who don't want
+        to handwrite parameters open the
+        **[/create visual editor](https://gradient-svg-generator.vercel.app/create)**:
+        a GUI composer with live preview that emits the final URL
+        for copy-paste. Users who want to browse first hit
+        **[/templates](https://gradient-svg-generator.vercel.app/templates)**
+        — a `@tanstack/react-virtual`-virtualized gallery (Phase 8
+        commit `45cb01f`) with `fuse.js` fuzzy search across
+        names + categories + tags, so 340+ entries scroll smoothly
+        on every device.
+      businessLogic: |
+        Free, ISC-licensed, no paywall, no API key, no watermark —
+        the entire service runs on Vercel's free tier with the SVG
+        generation done in a serverless function that streams XML
+        directly back to the client (`Content-Type: image/svg+xml`),
+        cached at Vercel's edge. The build-in-public value: the
+        project is **infrastructure for Chan's other projects** —
+        every visual badge across every Chan-authored repo's README
+        pulls from this service, so the service becomes its own
+        continuous-integration signal (any rendering regression
+        breaks visible branding immediately on her own portfolio,
+        forcing same-day fix). This is also the project that
+        survived the most explicit **anti-LLM-hype audit**: Phase 6
+        commit `fdcb7dd` *"truth up marketing numbers across the
+        codebase"* + the follow-up `db724e0` *"drop 50+ Effects
+        claim"* + `8fd7886` *"catch older stale counts (216+/22
+        categories)"* — Chan went through and corrected every
+        exaggerated count in the README and documentation, replacing
+        them with the true template count. The kind of engineering
+        discipline that flips marketing claims into verifiable
+        statistics rather than letting LLM-generated copy inflate
+        them.
+      technicalApproach: |
+        **The SVG-animation technical principle is the load-bearing
+        engineering of this project.** Every banner is a small,
+        live XML document — typically 2-8KB — that the browser
+        animates locally without any JavaScript runtime. The
+        animation is composed from three orthogonal SVG primitives,
+        used in combination:
+
+        **(1) SMIL animation elements** (`<animate>`,
+        `<animateTransform>`, `<animateMotion>`) animate XML
+        attributes over time. The two most-used patterns: animating
+        a `<linearGradient>` or `<radialGradient>`'s stop `offset`
+        values to make colors flow (rainbow-wave, hologram-blue,
+        northern-aurora templates), and `<animateTransform>`
+        rotating a pattern (zigzag-energy, cyber-matrix). SMIL is
+        the **declarative** animation channel — the entire timeline
+        is encoded as XML attributes, no scripting.
+
+        **(2) CSS `@keyframes` embedded in a `<style>` block inside
+        the SVG document**. Where SMIL is limited (e.g. animating
+        `filter` strength, animating `stroke-dasharray` for path
+        reveals), CSS keyframes pick up the slack. The
+        typewriter-terminal, glitch-cyber, neon-flicker,
+        luminance-glow, and chrome-flow templates all use a
+        `<defs><style>@keyframes ...</style></defs>` block at the
+        top of the SVG with selectors targeting elements inside
+        the document. This is the **same technique** Chan uses in
+        the [github-readme-suno-cards](https://github.com/ChanMeng666/github-readme-suno-cards)
+        sister project to drive the equalizer animation through
+        GitHub's Camo proxy — CSS keyframes survive Camo's SVG
+        sanitization pass.
+
+        **(3) SVG filter primitives** for organic effects that
+        neither SMIL nor CSS can produce. The interesting templates
+        — turbulent-waves, liquid-mercury, plasma-blob,
+        electromagnetic-field, caustic-underwater, fog-rolling,
+        forest-mist — all rely on **`<feTurbulence>`** (Perlin/
+        fractal noise generation) feeding **`<feDisplacementMap>`**
+        (which uses one image's color channels to displace another
+        image's pixels) for organic distortion, plus
+        **`<feGaussianBlur>`** and **`<feColorMatrix>`** for
+        bloom/glow effects (god-rays, lens-flare, bokeh-blur).
+        Path-text-animation templates layer **`<textPath>`** on top
+        of an animated `<path>` so the text follows a moving curve
+        (curved-flow, spiral-text, typing-path-reveal).
+
+        **Template organisation is the architectural bet.** 340+
+        templates are split into **16 named categories** (Pride,
+        Tech, Nature, Material, Text-FX, Gaming, Weather,
+        Light&Shadow, Art Movements, Culinary, Patterns, Metallic,
+        Path-Text, Shapes, Experimental, GitHub-Profile) plus 4
+        gradient base types (horizontal, vertical, holographic,
+        radial). Phase 5 of the refactor saga extracted the shared
+        primitives — `svgPrimitives` factory functions for animated
+        linear/radial gradients (commit `0dedfb5`), `_shared/
+        palettes.js` for named color palettes (commit `43e7774`),
+        and feature-folder organisation (`features/specialty/`,
+        `features/fluids/`, etc.) replacing the original flat
+        structure. Phase 7 was the **JavaScript->TypeScript
+        migration in seven sub-phases** (7.1 through 7.8) plus
+        commit `4c7d14b` *"Zod-validate /api/svg query params +
+        400 on bad height"* — runtime validation against a Zod
+        schema so a request like `?height=99999999999` returns a
+        clean 400 with a typed error message rather than crashing
+        the function.
+
+        **Deployment**: Vercel Edge runtime via `@vercel/node` 2.15
+        serverless function at `/api/svg`. **Testing**: Vitest 1.6
+        with both `tests/contract/` (API surface contract tests
+        guarding the URL-parameter contract — invariant across
+        refactors) and `tests/unit/`. **Code quality discipline**:
+        Husky 9 pre-commit hooks running `eslint --fix` +
+        `prettier --write` via `lint-staged`, so no lint or
+        formatting regression reaches the remote. **Performance**:
+        `web-vitals` 5.0 telemetry in production. **State** in the
+        visual editor: Zustand 5.0 for store shape, React Query for
+        template metadata fetching, `@tanstack/react-virtual` for
+        the 340+ template gallery (Phase 8 fix `4626dfd`
+        *"eliminate bottom whitespace by using window
+        virtualizer"*).
+      outcomes: |
+        **273 solo commits across 18 months** (first commit
+        2025-01-06, latest `4ee9829` 2026-04-21), production-grade
+        availability on Vercel's global edge, ISC-licensed for
+        broad reuse. **Dogfooded across every Chan-authored repo**:
+        the badges, banners, and section headers in every public
+        README (including the README that ships this profile entry)
+        come from `gradient-svg-generator.vercel.app/api/svg` URLs
+        — which means any rendering regression on the service breaks
+        visible branding immediately, forcing a same-day fix and
+        making the dogfooding loop continuous. The **4-phase
+        refactor saga** is itself the outcome to surface: Phase 5
+        (extract svgPrimitives + palettes + feature-folders),
+        Phase 6 (truth up marketing numbers + author `docs/
+        architecture.md` and `docs/adding-an-effect.md`
+        walkthrough), Phase 7 (JS->TS migration in 7 sub-phases +
+        Zod runtime validation), Phase 8 (template-gallery
+        virtualization with react-virtual). The **anti-LLM-hype
+        marketing-number discipline** (commits `fdcb7dd` +
+        `db724e0` + `8fd7886`) is rare enough in solo OSS that it's
+        worth flagging on its own — Chan deliberately went through
+        the codebase and corrected exaggerated effect counts rather
+        than letting LLM-generated copy inflate them. Roadmap:
+        continued template additions, additional gradient-type
+        variants, broader category coverage.
+      myRole: |
+        Sole author. Designed the URL-parameterised streaming-SVG
+        contract; authored every one of the 340+ template
+        generators across 16 categories; designed the parametric
+        template system so each template is a self-contained
+        function rather than a monolithic switch; engineered the
+        SVG-animation toolkit combining SMIL + CSS keyframes + SVG
+        filters; built the `/create` visual editor with live
+        preview; built the `/templates` virtualized gallery; ran
+        the entire 4-phase refactor saga (Phase 5 primitive
+        extraction, Phase 6 truth-up-the-marketing-numbers + docs
+        authoring, Phase 7 JS->TS migration + Zod validation,
+        Phase 8 react-virtual gallery); set up the Vercel + GitHub
+        Actions + Vitest + Husky pre-commit pipeline. Uses the
+        service across every personal repo as a continuous-
+        integration signal for the project itself.
+
+  - id: femtracker-agent
+    tier: primary
+    recency: recent
+    meta:
+      x_brand:
+        featuredStack: [copilotkit, langgraph, python, nextjs, supabase]
+    lastUpdated: "2026-05-18"
+    name: FemTracker Agent
+    priority: 11
+    category: ai-apps
+    tagline: 8-agent CopilotKit + LangGraph women's-health companion (merged into CopilotKit's official demos_2025)
+    url: https://femtracker-agent.vercel.app/
+    repoUrl: https://github.com/ChanMeng666/femtracker-agent
+    logo: /public/brands/femtracker.svg
+    extraLinks:
+      - { label: "Demo video", url: "https://youtu.be/VVCQKmeEtRs" }
+      - { label: "CopilotKit PR #2068", url: "https://github.com/CopilotKit/CopilotKit/pull/2068" }
+    techStack: ["Next.js 15", "React 19", TypeScript, CopilotKit, "Python 3.12", LangGraph, Supabase, Redis]
+    status: live
+    publicSummary: |
+      AI-powered women's-health companion built on CopilotKit and Python
+      LangGraph, with **8 specialized agents** (Main Coordinator + Cycle
+      Tracker + Fertility Tracker + Symptom Mood + Nutrition Guide + Exercise
+      Coach + Lifestyle Manager + Health Insights) coordinating through
+      intelligent routing. WHO-standard health scoring (0-100 metric scales),
+      Redis caching with reported 90%+ hit rates, Supabase PostgreSQL
+      persistence. Merged into CopilotKit's official `demos_2025` showcase
+      via [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)
+      (publicly thanked by maintainer Tyler Slaton).
+    narrative:
+      impactHeadline: "8-agent women's-health companion merged into CopilotKit's official demos_2025 — intelligent routing across specialists, WHO-standard scoring, 90%+ Redis cache hit rates, publicly thanked by CopilotKit maintainers as a reference implementation."
+      problem: |
+        Existing women's-health apps treat menstrual cycle, fertility,
+        symptoms, nutrition, exercise, and lifestyle as **disconnected
+        verticals** — each one a separate dashboard, no shared model of
+        the user, no agent to reason across them. Users asking
+        "should I push my workout today given where I am in my cycle?"
+        get four sub-apps with no answer. Add the privacy concerns of
+        sensitive health data being aggregated by ad-funded apps and
+        the category is overdue for an agent-native rebuild.
+      audience: |
+        Health-conscious women managing cycle-related symptoms,
+        planning conception, or pursuing holistic wellness — and the
+        secondary audience of agent-framework practitioners studying
+        what production-grade multi-agent coordination looks like
+        under HIPAA-aligned constraints. CopilotKit's maintainers
+        themselves are an audience: the project shipped into their
+        official `demos_2025` showcase.
+      productLogic: |
+        Single conversational surface (CopilotKit) routes the user's
+        intent to one of eight specialised agents: **Main Coordinator**
+        + **Cycle Tracker** + **Fertility Tracker** + **Symptom Mood**
+        + **Nutrition Guide** + **Exercise Coach** + **Lifestyle
+        Manager** + **Health Insights**. Each agent has its own
+        domain logic and prompt scaffolding but shares the same
+        Supabase-backed user model, so a question that crosses two
+        domains ("am I dehydrated today?", which touches nutrition +
+        cycle + exercise) gets routed through the Coordinator and
+        answered with WHO-standard scoring rather than three
+        disconnected guesses.
+      technicalApproach: |
+        The architectural bet is **CopilotKit on the frontend +
+        LangGraph on the backend**, communicating through a CopilotKit
+        runtime adapter. Next.js 15 + React 19 + TypeScript on the
+        frontend; Python 3.12 + LangGraph for agent orchestration;
+        Supabase PostgreSQL with **Row Level Security** for
+        privacy-preserving multi-tenant persistence; Redis caching
+        achieving 90%+ hit rates on hot read paths. The health-scoring
+        engine implements WHO-standard algorithms across six dimensions:
+        exercise (150 min/week benchmark), hydration (2 000 mL daily),
+        cycle regularity (21–35 day window), mood patterns, lifestyle
+        factors, fertility indicators — each 0–100, composited into
+        actionable insights. Codebase is 83.2% TypeScript for type
+        safety in a medical-domain product.
+      outcomes: |
+        **Merged into CopilotKit's official `demos_2025` showcase**
+        via [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068),
+        publicly thanked by maintainer Tyler Slaton — external
+        recognition of production-grade quality from the framework's
+        own maintainers, not just a self-published demo. Live demo at
+        femtracker-agent.vercel.app: reported 95+ Lighthouse score,
+        sub-second TTFB, 99.9% uptime. Demo video at the linked YouTube
+        URL. 90 sustained commits.
+      myRole: |
+        Sole author of the agent architecture, the WHO-scoring engine,
+        the Supabase schema with Row Level Security, and the CopilotKit
+        runtime adapter. Drove the project into CopilotKit's official
+        demo set — a path that required not just shipping but
+        demonstrating reference-implementation-grade quality to a
+        third-party maintainer team.

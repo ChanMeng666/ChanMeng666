@@ -1,20 +1,23 @@
 #!/usr/bin/env node
 // Build agent-readable plain-text CV summary sibling.
-// Usage: node build-llms-txt.mjs ../data/profile.yaml > ../public/cv-llms.txt
+// Usage: node build-llms-txt.mjs ../data/profile > ../public/cv-llms.txt
+//        (accepts either the data/profile shard directory or a single .yaml file)
 //
 // Mirrors the llms.txt convention: a deterministic, parseable summary
 // for AI sourcer agents that don't (yet) handle JSON-LD.
 
-import { readFileSync } from "node:fs";
+import { readFileSync, statSync } from "node:fs";
 import yaml from "js-yaml";
 
 const argv = process.argv.slice(2);
 if (argv.length < 1) {
-  console.error("usage: build-llms-txt.mjs <profile.yaml>");
+  console.error("usage: build-llms-txt.mjs <data/profile dir | profile.yaml>");
   process.exit(2);
 }
 
-const profile = yaml.load(readFileSync(argv[0], "utf8"));
+const profile = statSync(argv[0]).isDirectory()
+  ? (await import("../scripts/lib/load-profile.mjs")).loadProfile()
+  : yaml.load(readFileSync(argv[0], "utf8"));
 const b = profile.basics ?? {};
 
 const out = [];

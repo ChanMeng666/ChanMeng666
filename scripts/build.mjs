@@ -1,15 +1,16 @@
 #!/usr/bin/env node
-// Build pipeline: data/profile.yaml -> README.md, llms.txt, llms-full.txt,
-// dist/profile.json. The single source of truth is data/profile.yaml.
+// Build pipeline: data/profile/*.yaml -> README.md, llms.txt, llms-full.txt,
+// dist/profile.json. The single source of truth is the data/profile/ shards
+// (merged by scripts/lib/load-profile.mjs).
 // Outputs are regenerated on every run — do not edit them by hand.
 
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import yaml from "js-yaml";
 import Handlebars from "handlebars";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
+import { loadProfile } from "./lib/load-profile.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,17 +20,16 @@ const repoRoot = path.resolve(__dirname, "..");
 // Load + validate data
 // ---------------------------------------------------------------------------
 
-const yamlPath = path.join(repoRoot, "data", "profile.yaml");
 const schemaPath = path.join(repoRoot, "schema", "profile.schema.json");
 
-const data = yaml.load(fs.readFileSync(yamlPath, "utf8"));
+const data = loadProfile();
 const schema = JSON.parse(fs.readFileSync(schemaPath, "utf8"));
 
 const ajv = new Ajv({ allErrors: true, strict: false });
 addFormats(ajv);
 const validate = ajv.compile(schema);
 if (!validate(data)) {
-  console.error("✗ data/profile.yaml failed schema validation. Run `npm run validate` to see details.");
+  console.error("✗ data/profile/ failed schema validation. Run `npm run validate` to see details.");
   for (const err of validate.errors ?? []) {
     console.error(`  ${err.instancePath || "(root)"}  ${err.message}`);
   }

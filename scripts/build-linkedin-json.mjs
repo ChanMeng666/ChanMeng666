@@ -11,15 +11,13 @@
 //                      --(build-linkedin-md.mjs)--> linkedin/*.md
 //
 // Run:  node scripts/build-linkedin-json.mjs
-import { readFileSync, writeFileSync } from "node:fs";
+import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import yaml from "js-yaml";
+import { loadProfile } from "./lib/load-profile.mjs";
 
 const repoRoot = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
-const profile = yaml.load(
-  readFileSync(path.join(repoRoot, "data", "profile.yaml"), "utf8")
-);
+const profile = loadProfile();
 
 // Base object = the LinkedIn-specific block. Deep-clone so we never mutate the
 // parsed YAML in surprising ways.

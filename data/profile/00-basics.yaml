@@ -1,0 +1,136 @@
+# =============================================================================
+# BASICS — identity, summary, social profiles, builder tools
+# =============================================================================
+# Shard of Chan Meng's profile data. Top-level keys: basics, builderTools.
+# All data/profile/*.yaml shards are merged (in filename order) by
+# scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
+# After editing: npm run check. Data map + cross-reference rules: CLAUDE.md.
+# =============================================================================
+
+# =============================================================================
+# BASICS — identity, summary, social profiles
+# =============================================================================
+basics:
+  name: Chan Meng
+  alternateName: Chan
+  pronouns: She/Her
+  label: AI Agent Architect & Full-Stack Engineer
+  headline: AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Creator of Tam-AI-Ti (Te Whare Tapa Whā AI Coach) | Cultural tech & women's health | Auckland, NZ
+  image: /public/brands/chan-monkey-logo-black.svg
+  email: chanmeng.career@gmail.com
+  url: https://chanmeng.org/
+  summary: |
+    AI agent architect, full-stack engineer, and minimalist living advocate
+    building at the intersection of AI, cultural technology, and women's
+    health. Based in Auckland, New Zealand. Holds a Master of Applied
+    Computing with Distinction from Lincoln University, New Zealand.
+    Featured in multiple media interviews for her minimalist lifestyle
+    philosophy — "Subtraction for life, addition for thought."
+  location:
+    region: Auckland, New Zealand
+    countryCode: NZ
+    timezone: Pacific/Auckland
+  taglines:
+    primary: Building at the intersection of AI, cultural technology, and women's health.
+    secondary: A minimalist. Subtraction for life, addition for thought.
+    heroLabel: "AI Agent Architect | Full-stack Engineer | AI Builder"   # longer branded version shown in the hero terminal-green badge
+
+  # Social and platform profiles. The first four (Portfolio, LinkedIn, GitHub,
+  # Email) render as primary badges in the README hero. The rest power the
+  # JSON-LD `sameAs` graph and the footer link table.
+  profiles:
+    - { network: Portfolio,   url: "https://chanmeng.org/" }
+    - { network: LinkedIn,    username: chanmeng666,    url: "https://www.linkedin.com/in/chanmeng666/" }
+    - { network: GitHub,      username: ChanMeng666,    url: "https://github.com/ChanMeng666" }
+    - { network: Email,       url: "mailto:chanmeng.career@gmail.com" }
+    - { network: Resume,      label: "Resume (HackerRank PDF)", url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf" }
+    - { network: X,           username: chanmeng666,    url: "https://x.com/chanmeng666",                 label: "Twitter / X" }
+    - { network: ORCID,       username: "0009-0002-1446-778X", url: "https://orcid.org/0009-0002-1446-778X", label: "Lincoln University NZ alumna" }
+    - { network: Medium,      username: chanmeng666,    url: "https://medium.com/@chanmeng666" }
+    - { network: HuggingFace, username: ChanMeng666,    url: "https://huggingface.co/ChanMeng666" }
+    - { network: YouTube,     username: "@ChanMeng666", url: "https://www.youtube.com/@ChanMeng666" }
+    - { network: Discord,     username: chanmeng666,    url: "https://discord.gg/T3NJG5n98a",            label: "Community server + DM @chanmeng666" }
+    - { network: Newsletter,  url: "https://chanmeng.org/#newsletter",                                   label: "Personal newsletter" }
+    - { network: Spotify,     label: "Decoding the Future",          url: "https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj" }
+    - { network: Spotify,     label: "Future Turing (未来图灵)",       url: "https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4" }
+    - { network: Spotify,     label: "Praxis and Pages (知行书话)",    url: "https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL" }
+    - { network: TechRosie,   url: "https://github.com/TechRosie" }
+    - { network: Cal,         label: "Book a meeting",                 url: "https://cal.com/chan-meng/30min" }
+    - { network: BuyMeACoffee, url: "https://buymeacoffee.com/chanmeng66u" }
+
+  # Headline reach / social-proof metrics — point-in-time counts surfaced as
+  # pills at the top of the CV (cv/sections/header.typ) and reusable by other
+  # derivatives. Refresh the values + `asOf` when updated. NOTE: the chanmeng.org
+  # personal newsletter below is DISTINCT from the "Decoding the Future" LinkedIn
+  # newsletter (800+ subscribers; recorded under media[]/podcasts).
+  reach:
+    asOf: "2026-06"
+    metrics:
+      - { label: "newsletter subscribers",  value: "1,103", source: "https://chanmeng.org/#newsletter" }
+      - { label: "LinkedIn followers",       value: "5,594", source: "https://www.linkedin.com/in/chanmeng666/" }
+      - { label: "LinkedIn recommendations", value: "18",    source: "https://www.linkedin.com/in/chanmeng666/", note: "public recommendations; 7 from the Forward With Her cohort" }
+      - { label: "GitHub followers",         value: "210",   source: "https://github.com/ChanMeng666" }
+      - { label: "GitHub stars",             value: "451",   source: "https://github.com/ChanMeng666", note: "sum of stargazers across 102 own non-fork public repos (gh repo list, 2026-06); org/commercial repos are private" }
+
+# =============================================================================
+# DECORATIONS — moved to data/brand.yaml (signatures.banners,
+# signatures.pillRotation.templates, signatures.visitorCounter,
+# signatures.sunoCards). scripts/build.mjs synthesises data.decorations from
+# the brand tokens via an adapter, so templates continue to read
+# data.decorations.* unchanged.
+# =============================================================================
+
+# =============================================================================
+# BUILDER TOOLS — free tools Chan built for the community, rendered as a
+# 3-card subsection inside Open Source. Distinct from projects[] by audience
+# contract: optimised for try-it-now CTAs, not storytelling depth.
+# =============================================================================
+builderTools:
+  - id: readme-profile-generator
+    name: README Profile Generator
+    tagline: Build a stunning GitHub profile in minutes — zero coding
+    description: >
+      Real-time visual editor with smart skill badges, dynamic GitHub stats
+      integration, and one-click copy-to-clipboard. Privacy-focused — all
+      processing happens client-side.
+    primaryCta:
+      label: Try live
+      url: https://huggingface.co/spaces/ChanMeng666/readme-profile-generator
+    secondaryCta:
+      label: GitHub
+      url: https://github.com/ChanMeng666/readme-profile-generator
+    techBadges: [Streamlit, Python]
+    audience: "GitHub users who want a polished profile without manual markdown editing"
+
+  - id: chan-meng-cli
+    name: Chan Meng — Interactive CLI
+    tagline: Meet me in 3 minutes — minimalism in your terminal
+    description: >
+      One-command npx execution. Four interactive modules: The Journey,
+      Philosophy, Practical Minimalism, Connect. Saves progress, resumes
+      where you left off. Beautiful ASCII art with gradient colours.
+    primaryCta:
+      label: "npx chan-meng"
+      url: https://www.npmjs.com/package/chan-meng
+    secondaryCta:
+      label: GitHub
+      url: https://github.com/ChanMeng666/chan-meng
+    techBadges: [Node.js, TypeScript]
+    audience: "Recruiters / visitors who want to understand Chan's story without scrolling a long README"
+
+  - id: ai-programming-teaching-project
+    name: AI Programming Teaching Hub
+    tagline: Learn AI-assisted coding from beginner to advanced
+    description: >
+      Bilingual (CN/EN) Docusaurus platform with RAG-powered chat assistant
+      (Llama 3.1 8B via Cloudflare Workers AI + Vectorize). Progressive
+      curriculum: prompt engineering, Cursor/v0 tool mastery, real-world
+      project implementations.
+    primaryCta:
+      label: Visit site
+      url: https://programming.chanmeng.org/
+    secondaryCta:
+      label: GitHub
+      url: https://github.com/ChanMeng666/ai-programming-teaching-project
+    techBadges: [Docusaurus, Cloudflare]
+    audience: "Engineers learning AI-assisted development, especially the Chinese-speaking community"

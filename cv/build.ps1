@@ -6,7 +6,7 @@
 #
 # Inputs:
 #   - cv/chan-meng-cv.typ (Typst sources)
-#   - data/profile.yaml   (source of truth for JSON-LD + llms.txt)
+#   - data/profile/*.yaml (source of truth for JSON-LD + llms.txt)
 #
 # Outputs (written to public/ so they ship with the GitHub repo and the
 # README "Resume" pill keeps resolving to the same URL):
@@ -26,10 +26,10 @@ try {
     typst compile --root . --font-path cv/fonts cv/chan-meng-cv.typ public/chan-meng-cv.pdf
 
     Write-Host "→ Emitting public/cv.jsonld (schema.org JSON-LD for recruiter LLMs)"
-    node cv/build-jsonld.mjs data/profile.yaml | Out-File -Encoding utf8 public/cv.jsonld
+    node cv/build-jsonld.mjs data/profile | Out-File -Encoding utf8 public/cv.jsonld
 
     Write-Host "→ Emitting public/cv-llms.txt (agent-readable plain-text summary)"
-    node cv/build-llms-txt.mjs data/profile.yaml | Out-File -Encoding utf8 public/cv-llms.txt
+    node cv/build-llms-txt.mjs data/profile | Out-File -Encoding utf8 public/cv-llms.txt
 
     $pdfBytes  = (Get-Item public/chan-meng-cv.pdf).Length
     $jsonBytes = (Get-Item public/cv.jsonld).Length

@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-// Refreshes machine-derivable GitHub metrics for projects in data/profile.yaml.
+// Refreshes machine-derivable GitHub metrics for projects in the
+// data/profile/2*-projects-*.yaml shards.
 //
 // Why this is line-anchored (not a YAML round-trip):
-//   profile.yaml is 1MB of heavily-commented hand-curated content. A
+//   the project shards are heavily-commented hand-curated content. A
 //   js-yaml dump strips comments and reorders keys. So we do targeted
 //   in-place edits: only lines matching `- { label: "<TRACKED>", value: "..." }`
-//   inside a project's `metrics:` block get their value replaced.
+//   inside a project's `metrics:` block get their value replaced — each shard
+//   file is read, edited, and written back independently.
 //
 // Tracked labels — must match exactly (case-sensitive):
 //   "Stars"
@@ -28,12 +30,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execSync } from "node:child_process";
-import yaml from "js-yaml";
+import { loadProfile, listShardFiles } from "./lib/load-profile.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, "..");
-const yamlPath = path.join(repoRoot, "data", "profile.yaml");
+const projectShardPaths = listShardFiles().filter((f) =>
+  /^\d+-projects-/.test(path.basename(f))
+);
 
 const APPLY = process.argv.includes("--apply");
 
@@ -106,45 +110,50 @@ function isMachinePure(label, value) {
 }
 
 // ---------------------------------------------------------------------------
-// Load data + locate project metric blocks
+// Load data + locate project metric blocks (per shard file)
 // ---------------------------------------------------------------------------
 
-const sourceText = fs.readFileSync(yamlPath, "utf8");
-const data = yaml.load(sourceText);
+const data = loadProfile();
 
-const lines = sourceText.split(/\r?\n/);
-const projectBlocks = [];   // { id, slug, metricsStart, metricsEnd }
+// shards: shardPath -> { lines, dirty }
+const shards = new Map();
+const projectBlocks = [];   // { id, shardPath, metricsStart, metricsEnd }
 
-let currentProject = null;
-let inMetrics = false;
-for (let i = 0; i < lines.length; i++) {
-  const line = lines[i];
-  const idMatch = line.match(/^  - id: (\S+)/);
-  if (idMatch) {
-    if (currentProject) projectBlocks.push(currentProject);
-    currentProject = { id: idMatch[1], startLine: i, metricsStart: null, metricsEnd: null };
-    inMetrics = false;
-    continue;
-  }
-  if (!currentProject) continue;
-  if (line === "    metrics:") {
-    currentProject.metricsStart = i;
-    inMetrics = true;
-    continue;
-  }
-  if (inMetrics) {
-    // Metrics block ends when we hit another top-level project key (indent <= 4
-    // chars) that isn't a continuation. Conservative end: a line that is a
-    // sibling key like `    status:` / `    startDate:` / `    publicSummary:`.
-    if (/^    [a-zA-Z_]/.test(line) && line !== "    metrics:") {
-      currentProject.metricsEnd = i;
+for (const shardPath of projectShardPaths) {
+  const lines = fs.readFileSync(shardPath, "utf8").split(/\r?\n/);
+  shards.set(shardPath, { lines, dirty: false });
+
+  let currentProject = null;
+  let inMetrics = false;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const idMatch = line.match(/^  - id: (\S+)/);
+    if (idMatch) {
+      if (currentProject) projectBlocks.push(currentProject);
+      currentProject = { id: idMatch[1], shardPath, startLine: i, metricsStart: null, metricsEnd: null };
       inMetrics = false;
+      continue;
+    }
+    if (!currentProject) continue;
+    if (line === "    metrics:") {
+      currentProject.metricsStart = i;
+      inMetrics = true;
+      continue;
+    }
+    if (inMetrics) {
+      // Metrics block ends when we hit another top-level project key (indent <= 4
+      // chars) that isn't a continuation. Conservative end: a line that is a
+      // sibling key like `    status:` / `    startDate:` / `    publicSummary:`.
+      if (/^    [a-zA-Z_]/.test(line) && line !== "    metrics:") {
+        currentProject.metricsEnd = i;
+        inMetrics = false;
+      }
     }
   }
-}
-if (currentProject) {
-  if (inMetrics) currentProject.metricsEnd = lines.length;
-  projectBlocks.push(currentProject);
+  if (currentProject) {
+    if (inMetrics) currentProject.metricsEnd = lines.length;
+    projectBlocks.push(currentProject);
+  }
 }
 
 // Cross-reference with parsed data so we get the canonical project objects
@@ -156,7 +165,7 @@ const projectsById = Object.fromEntries((data.projects ?? []).map((p) => [p.id, 
 
 console.log(APPLY ? "Mode: --apply (will write changes)\n" : "Mode: dry-run (no changes written)\n");
 
-const updates = [];                       // [{ lineIdx, oldLine, newLine, projectId, label }]
+const updates = [];                       // [{ shardPath, lineIdx, oldLine, newLine, projectId, label }]
 const reportRows = [];                    // [{ projectId, slug, label, current, live, status }]
 const skippedNoMetrics = [];              // project ids with GH URL but no metrics block
 
@@ -178,6 +187,7 @@ for (const block of projectBlocks) {
     continue;
   }
 
+  const { lines } = shards.get(block.shardPath);
   for (let i = block.metricsStart + 1; i < block.metricsEnd; i++) {
     const line = lines[i];
     // Match: `      - { label: "<L>", value: "<V>" }` (also handles single quotes,
@@ -200,7 +210,7 @@ for (const block of projectBlocks) {
 
     if (status === "drift") {
       const newLine = `${m[1]}${m[2]}${label}${m[2]}${m[4]}${m[5]}${liveValue}${m[5]}${m[7]}`;
-      updates.push({ lineIdx: i, oldLine: line, newLine, projectId: project.id, label });
+      updates.push({ shardPath: block.shardPath, lineIdx: i, oldLine: line, newLine, projectId: project.id, label });
     }
   }
 }
@@ -238,9 +248,17 @@ if (narrativeRows.length) {
 }
 
 if (APPLY && updates.length) {
-  for (const u of updates) lines[u.lineIdx] = u.newLine;
-  fs.writeFileSync(yamlPath, lines.join("\n"), "utf8");
-  console.log(`\n✓ Applied ${updates.length} updates to ${path.relative(repoRoot, yamlPath)}.`);
+  for (const u of updates) {
+    const shard = shards.get(u.shardPath);
+    shard.lines[u.lineIdx] = u.newLine;
+    shard.dirty = true;
+  }
+  for (const [shardPath, shard] of shards) {
+    if (!shard.dirty) continue;
+    fs.writeFileSync(shardPath, shard.lines.join("\n"), "utf8");
+    console.log(`\n✓ Wrote ${path.relative(repoRoot, shardPath)}.`);
+  }
+  console.log(`✓ Applied ${updates.length} updates.`);
   console.log(`  Next: run \`npm run build\` to regenerate README + outputs.`);
 } else if (!APPLY && driftRows.length) {
   console.log(`\nRun with --apply to write these changes.`);

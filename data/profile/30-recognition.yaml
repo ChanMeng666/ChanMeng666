@@ -1,0 +1,1267 @@
+# =============================================================================
+# RECOGNITION — awards, certificates, publications & media
+# =============================================================================
+# Shard of Chan Meng's profile data. Top-level keys: awards, certificates, publications.
+# All data/profile/*.yaml shards are merged (in filename order) by
+# scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
+# After editing: npm run check. Data map + cross-reference rules: CLAUDE.md.
+# =============================================================================
+
+# =============================================================================
+# AWARDS & HONORS
+# =============================================================================
+awards:
+  - title: Outstanding Mentor Award
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-18"
+    date: "2025-08"
+    awarder: AI Hackathon Festival 2025 (AI Forum NZ, She Sharp, AUT)
+    url: "https://www.linkedin.com/in/chanmeng666/details/honors/"
+    summary: |
+      Recognised as an Outstanding Mentor at the AI Hackathon Festival
+      2025, co-organised by AI Forum NZ, She Sharp, and Auckland
+      University of Technology. Served as **one of 14 expert mentors**
+      guiding **11 teams comprising 80+ participants** in developing
+      AI-powered solutions aligned with UN Sustainable Development
+      Goals. During the intensive 2-day hackathon, provided comprehensive
+      technical guidance and strategic support to diverse participants
+      including students from **Westlake Girls High School** and other
+      competitors from various professional backgrounds. Helped teams
+      tackle real-world challenges across food insecurity, digital
+      accessibility, workforce upskilling, and indigenous environmental
+      stewardship.
+
+  - title: UN CSW 69 Speaker — Beyond Beijing 30 Conference
+    tier: flagship
+    recency: recent
+    lastUpdated: "2026-05-18"
+    date: "2025-03-14"
+    awarder: United Nations Headquarters, New York
+    url: "https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg"
+    summary: |
+      Invited as a featured speaker to present **Sanicle AI** — an
+      innovative women's workplace health management platform — at the
+      historic **UN CSW 69 conference marking the 30th anniversary of
+      the Beijing Declaration**, held at UN Headquarters in New York on
+      March 14, 2025. Demonstrated how AI technology effectively
+      addresses workplace gender inequities through practical health
+      solutions to an audience of international delegates, UN officials,
+      and global leaders. The presentation drew significant attention
+      from corporate leaders including **IBM representatives who
+      expressed interest in pilot collaboration**, and government
+      officials including the **Minister of Gender and Children's
+      Affairs from Sierra Leone**, who praised the platform as the first
+      comprehensive solution connecting menstrual cycle data to
+      actionable workplace policies through AI analysis. Generated
+      multiple collaboration requests from NGOs and member states.
+
+  - title: UN Women FemTech Hackathon Outstanding Performer
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-18"
+    date: "2025-03-10"
+    awarder: FemTech Weekend (Beijing)
+    url: https://www.femtechweekend.com/
+    summary: |
+      Recognised for exceptional performance as an independent developer
+      during the **2025 UN Women FemTech Hackathon in Beijing**.
+      Contributed to innovative solutions addressing women's health
+      challenges in professional environments through collaborative work
+      with multiple organisations including **Sanicle** and the **NGO
+      CSW Forum**.
+
+  - title: "Dean's List — Top 5% Academic Performance"
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-05-18"
+    date: "2025-01-23"
+    awarder: Lincoln University, Faculty of Environment, Society & Design
+    url: https://www.lincoln.ac.nz/
+    summary: |
+      Recognised for outstanding academic excellence in **Semester 2,
+      2024**, placing among the **top 5% of students** in the Faculty
+      of Environment, Society & Design. Awarded by Lincoln University,
+      New Zealand's specialist land-based university.
+
+  - title: Master of Applied Computing with Distinction
+    tier: flagship
+    recency: historical
+    lastUpdated: "2026-05-18"
+    date: "2024-12-18"
+    awarder: Lincoln University, New Zealand
+    url: https://www.lincoln.ac.nz/
+    summary: |
+      Awarded **Distinction** for achieving an average of **80%+ across
+      all courses** in the Master of Applied Computing programme at
+      Lincoln University, New Zealand's specialist land-based university.
+
+  - title: Excellence Award — FemTech China Women's Health Technology Challenge
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-06-04"
+    date: "2024-12-01"
+    awarder: FemTech China
+    url: https://femtechcn.com/
+    summary: |
+      Won the Excellence Award as a core team member of the **FemTech China
+      Women's Health Technology Challenge** (December 2024). Led product
+      development through intensive workshops and mentoring sessions,
+      creating innovative solutions for women's healthcare. FemTech China is
+      a distinct organisation from FemTech Weekend.
+
+# =============================================================================
+# CERTIFICATES — 50+ professional certifications
+# Phase 4 will add credential IDs, issue dates, and verification URLs.
+# =============================================================================
+certificates:
+  # =========================================================================
+  # All 46 certificates carry a direct per-cert verification URL + credentialId,
+  # exported from Chan's LinkedIn certifications page on 2026-05-22:
+  #   https://www.linkedin.com/in/chanmeng666/details/certifications/
+  # =========================================================================
+
+  # ---- HackerRank (23 — all Dec 2024, credential URLs at hackerrank.com/certificates/<id>) ----
+  - name: "Software Engineer"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/software-engineer-certificate.png
+    issuerLogo: /public/certificates/issuers/hackerrank-logo.jpg
+    date: "2024-12"
+    credentialId: "929C61379016"
+    url: "https://www.hackerrank.com/certificates/929c61379016"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Software Engineer Intern"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/software-engineer-intern-certificate.png
+    date: "2024-12"
+    credentialId: "8C2B34A73C1E"
+    url: "https://www.hackerrank.com/certificates/8c2b34a73c1e"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-26"
+  - name: "Frontend Developer (React)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/frontend-developer-react-certificate.png
+    date: "2024-12"
+    credentialId: "CFCAF3276EF6"
+    url: "https://www.hackerrank.com/certificates/cfcaf3276ef6"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Problem Solving (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/problem-solving-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "92C8E2648264"
+    url: "https://www.hackerrank.com/certificates/92c8e2648264"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Problem Solving (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/problem-solving-basic-certificate.png
+    date: "2024-12"
+    credentialId: "B4535E195051"
+    url: "https://www.hackerrank.com/certificates/b4535e195051"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+  - name: "REST API (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/rest-api-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "B71BEC8F3BCE"
+    url: "https://www.hackerrank.com/certificates/b71bec8f3bce"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "SQL (Advanced)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/sql-advanced-certificate.png
+    date: "2024-12"
+    credentialId: "77A6D9183C77"
+    url: "https://www.hackerrank.com/certificates/77a6d9183c77"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "SQL (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/sql-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "82CD89877A17"
+    url: "https://www.hackerrank.com/certificates/82cd89877a17"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+  - name: "SQL (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/sql-basic-certificate.png
+    date: "2024-12"
+    credentialId: "1604ADEBD057"
+    url: "https://www.hackerrank.com/certificates/1604adebd057"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+  - name: "Node.js (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/nodejs-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "FAD3DC5626D1"
+    url: "https://www.hackerrank.com/certificates/fad3dc5626d1"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "JavaScript (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/javascript-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "829C5CB9023F"
+    url: "https://www.hackerrank.com/certificates/829c5cb9023f"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "JavaScript (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/javascript-basic-certificate.png
+    date: "2024-12"
+    credentialId: "83E393B81C8B"
+    url: "https://www.hackerrank.com/certificates/83e393b81c8b"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Go (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/go-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "1528BFA4886B"
+    url: "https://www.hackerrank.com/certificates/1528bfa4886b"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Go (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/go-basic-certificate.png
+    date: "2024-12"
+    credentialId: "36BD7EE1CABC"
+    url: "https://www.hackerrank.com/certificates/36bd7ee1cabc"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+  - name: "Angular (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/angular-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "03146D2BE2BE"
+    url: "https://www.hackerrank.com/certificates/03146d2be2be"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Angular (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/angular-basic-certificate.png
+    date: "2024-12"
+    credentialId: "D7F06CA7345E"
+    url: "https://www.hackerrank.com/certificates/d7f06ca7345e"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+  - name: "React (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/react-basic-certificate.png
+    date: "2024-12"
+    credentialId: "F31DC3770D34"
+    url: "https://www.hackerrank.com/certificates/f31dc3770d34"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "R (Intermediate)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/r-intermediate-certificate.png
+    date: "2024-12"
+    credentialId: "15F33A7DC11A"
+    url: "https://www.hackerrank.com/certificates/15f33a7dc11a"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "R (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/r-basic-certificate.png
+    date: "2024-12"
+    credentialId: "F5D0DC5DB53A"
+    url: "https://www.hackerrank.com/certificates/f5d0dc5db53a"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-26"
+  - name: "Python (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/python-basic-certificate.png
+    date: "2024-12"
+    credentialId: "AB7FE9567088"
+    url: "https://www.hackerrank.com/certificates/ab7fe9567088"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Java (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/java-basic-certificate.png
+    date: "2024-12"
+    credentialId: "62E985054B0B"
+    url: "https://www.hackerrank.com/certificates/62e985054b0b"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "CSS (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/css-basic-certificate.png
+    date: "2024-12"
+    credentialId: "46C95BC8F25D"
+    url: "https://www.hackerrank.com/certificates/46c95bc8f25d"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "C# (Basic)"
+    issuer: HackerRank
+    category: hackerrank
+    image: /public/certificates/csharp-basic-certificate.png
+    date: "2024-12"
+    credentialId: "F342EE2DF441"
+    url: "https://www.hackerrank.com/certificates/f342ee2df441"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-22"
+
+  # ---- Microsoft Career Essentials series (10 — Dec 2024 + Feb 2025; LinkedIn Learning direct URLs) ----
+  - name: "Azure AI Essentials"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/microsoft-azure-ai-essentials-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/microsoft-logo.jpg
+    date: "2025-02"
+    credentialId: "92C0764F9B4CEA702B1C1CA5D0E2585392F34109F720AFEBA2A74E7A34706290"
+    url: "https://www.linkedin.com/learning/certificates/92c0764f9b4cea702b1c1ca5d0e2585392f34109f720afeba2a74e7a34706290/"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Generative AI Career Skills Fundamentals"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/generative-ai-career-skills-fundamentals.jpg
+    date: "2024-12"
+    credentialId: "187ECAD3ED6CB0BE31706C413B5F38AE1BD1D58272AD950E4FD19B5636AD5747"
+    url: "https://www.linkedin.com/learning/certificates/187ecad3ed6cb0be31706c413b5f38ae1bd1d58272ad950e4fd19b5636ad5747/"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Software Development"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-software-development-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "7ACFE44A99F9E575A3CB2BF5C05902C197D7782CA4A14A9765DD8C41DF1AA848"
+    url: "https://www.linkedin.com/learning/certificates/7acfe44a99f9e575a3cb2bf5c05902c197d7782ca4a14a9765dd8c41df1aa848/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "System Administration"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-system-administration-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "442E34701E88D7F12D5CC82B6FC6CBDDCDA2F1C6F9F6DE77103C9BEFBE354982"
+    url: "https://www.linkedin.com/learning/certificates/442e34701e88d7f12d5cc82b6fc6cbddcda2f1c6f9f6de77103c9befbe354982/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Project Management"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-project-management-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "9D9F22F0E7E87C3B6375D1294F8C97B10CC505EC24E8FAE4D670573D55A9938C"
+    url: "https://www.linkedin.com/learning/certificates/9d9f22f0e7e87c3b6375d1294f8c97b10cc505ec24e8fae4d670573d55a9938c/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Cybersecurity"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-cybersecurity-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "A5436B52459256A59BFFE778A3DFFFCA6853124D22E6F88B704FBEC0CA39FE09"
+    url: "https://www.linkedin.com/learning/certificates/a5436b52459256a59bffe778a3dfffca6853124d22e6f88b704fbec0ca39fe09/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Data Analysis"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-data-analysis-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "EA775058BE5D0BEC5E46DFDC14D4E9C64F54D6709A3A23ED3DC85CD3907FCED6"
+    url: "https://www.linkedin.com/learning/certificates/ea775058be5d0bec5e46dfdc14d4e9c64f54d6709a3a23ed3dc85cd3907fced6/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Business Analysis"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-business-analysis-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "16558615A397548E131BA55A2F9108F54CB8D7F7DCC84419B6C2E644A98F75A2"
+    url: "https://www.linkedin.com/learning/certificates/16558615a397548e131ba55a2f9108f54cb8d7f7dcc84419b6c2e644a98f75a2/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Administrative Assistance"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-administrative-assistance-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "5AC9921894297B67EB03727C2549EE8A9376D0446E80FE0294FB0A7CA417B3EF"
+    url: "https://www.linkedin.com/learning/certificates/5ac9921894297b67eb03727c2549ee8a9376d0446e80fe0294fb0a7ca417b3ef/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Sustainable Tech"
+    issuer: Microsoft
+    category: microsoft
+    image: /public/certificates/career-essentials-sustainable-tech-microsoft-linkedin.jpg
+    date: "2024-12"
+    credentialId: "210641FCD656696D2FE451C6D70D051ADC35A26416E1EE16E107B5247ECAAA26"
+    url: "https://www.linkedin.com/learning/certificates/210641fcd656696d2fe451c6d70d051adc35a26416e1ee16e107b5247ecaaa26/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+
+  # ---- Other (16 — Anthropic ×6 + Google + 9 LinkedIn Learning) ----
+  - name: "Claude Code in Action"
+    issuer: Anthropic
+    category: other
+    image: /public/certificates/anthropic-claude-code-in-action.jpg
+    issuerLogo: /public/certificates/issuers/anthropicresearch-logo.jpeg
+    date: "2026-05"
+    credentialId: "8yz7o8sxvicp"
+    url: "https://verify.skilljar.com/c/8yz7o8sxvicp"
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-26"
+  - name: "Claude Code in Action (Aug 2025)"
+    issuer: Anthropic
+    category: other
+    image: /public/certificates/anthropic-claude-code-in-action-2025-08.jpg
+    issuerLogo: /public/certificates/issuers/anthropicresearch-logo.jpeg
+    date: "2025-08"
+    credentialId: "JHIY9NPYTR2D"
+    url: "https://verify.skilljar.com/c/jhiy9npytr2d"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-26"
+  - name: "AI Fluency Framework"
+    issuer: Anthropic
+    category: other
+    image: /public/certificates/anthropic-ai-fluency-framework-and-foundations.jpg
+    issuerLogo: /public/certificates/issuers/anthropicresearch-logo.jpeg
+    date: "2025-08"
+    credentialId: "v3hv657p3ygc"
+    url: "https://verify.skilljar.com/c/v3hv657p3ygc"
+    tier: flagship
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Building with the Claude API"
+    issuer: Anthropic
+    category: other
+    image: /public/certificates/anthropic-building-with-the-claude-api.jpg
+    issuerLogo: /public/certificates/issuers/anthropicresearch-logo.jpeg
+    date: "2026-05"
+    credentialId: "c4v3j3vdcxxe"
+    url: "https://verify.skilljar.com/c/c4v3j3vdcxxe"
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-26"
+  - name: "Introduction to Model Context Protocol"
+    issuer: Anthropic
+    category: other
+    image: /public/certificates/anthropic-introduction-to-model-context-protocol.jpg
+    issuerLogo: /public/certificates/issuers/anthropicresearch-logo.jpeg
+    date: "2026-05"
+    credentialId: "ocwksk2fwt2e"
+    url: "https://verify.skilljar.com/c/ocwksk2fwt2e"
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-26"
+  - name: "Introduction to Agent Skills"
+    issuer: Anthropic
+    category: other
+    image: /public/certificates/anthropic-introduction-to-agent-skills.jpg
+    issuerLogo: /public/certificates/issuers/anthropicresearch-logo.jpeg
+    date: "2026-05"
+    credentialId: "66thfskid4eu"
+    url: "https://verify.skilljar.com/c/66thfskid4eu"
+    tier: flagship
+    recency: active
+    lastUpdated: "2026-05-26"
+  - name: "Google AI Essentials"
+    issuer: Google
+    category: other
+    image: /public/certificates/Google-AI-Essentials.jpg
+    issuerLogo: /public/certificates/issuers/google-logo.jpeg
+    date: "2025-08"
+    credentialId: "ZR0B96QLZXDM"
+    url: "https://www.coursera.org/account/accomplishments/specialization/ZR0B96QLZXDM"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "GitHub Professional"
+    issuer: GitHub
+    category: other
+    image: /public/certificates/career-essentials-github-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/github-logo.jpg
+    date: "2024-12"
+    credentialId: "EDD123D9420DDBBDF2078C97C306975F88F1AC637A5BF6B46B104340D8B469A1"
+    url: "https://www.linkedin.com/learning/certificates/edd123d9420ddbbdf2078c97c306975f88f1ac637a5bf6b46b104340d8b469a1/"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Docker Professional"
+    issuer: Docker
+    category: other
+    image: /public/certificates/docker-foundations-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/docker-logo.jpg
+    date: "2025-02"
+    credentialId: "9EC9F12BD8974EF2AB60810D9D8C2790843862A9CA9E82AB1DF93FF78BD2FFA0"
+    url: "https://www.linkedin.com/learning/certificates/9ec9f12bd8974ef2ab60810d9d8c2790843862a9ca9e82ab1df93ff78bd2ffa0/"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Ubuntu Linux"
+    issuer: Canonical
+    category: other
+    image: /public/certificates/completion-ubuntu-linux-professional-certificate-canonical.jpg
+    issuerLogo: /public/certificates/issuers/canonical-logo.jpg
+    date: "2025-02"
+    credentialId: "3C7B2CCAE529721034F83B944C6F781E8FB3C305DD7859C269E0E42DB20C16FA"
+    url: "https://www.linkedin.com/learning/certificates/3c7b2ccae529721034f83b944c6f781e8fb3c305dd7859c269e0e42db20c16fa/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Anaconda Data Science"
+    issuer: Anaconda
+    category: other
+    image: /public/certificates/completion-anaconda-python-data-science-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/anacondainc-logo.jpg
+    date: "2025-02"
+    credentialId: "866BA89BFBB2A495BDD9CB5953555DFB7F41A9BD2E8B9B30A206EDEED8A60188"
+    url: "https://www.linkedin.com/learning/certificates/866ba89bfbb2a495bdd9cb5953555dfb7f41a9bd2e8b9b30a206edeed8a60188/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Atlassian Agile"
+    issuer: Atlassian
+    category: other
+    image: /public/certificates/completion-atlassian-agile-project-management-professional-certificate.jpg
+    issuerLogo: /public/certificates/issuers/atlassian-logo.jpg
+    date: "2025-02"
+    credentialId: "9A542712E3361965C339E439885AECC684F23EEE22A0A695541C57137DDEDD84"
+    url: "https://www.linkedin.com/learning/certificates/9a542712e3361965c339e439885aecc684f23eee22a0a695541c57137ddedd84/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "Machine Learning"
+    issuer: Wolfram Research
+    category: other
+    image: /public/certificates/completion-machine-learning-statistical-foundations-wolfram-research.jpg
+    date: "2025-02"
+    credentialId: "2864BEBB120159DA61988309D16EF29418AD598F330499E580DDA4D5B979F742"
+    url: "https://www.linkedin.com/learning/certificates/2864bebb120159da61988309d16ef29418ad598f330499e580dda4d5b979f742/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "JavaScript Foundations"
+    issuer: Mozilla
+    category: other
+    image: /public/certificates/javascript-foundations-professional-certificate-mozilla.jpg
+    issuerLogo: /public/certificates/issuers/mozilla-corporation-logo.jpg
+    date: "2025-02"
+    credentialId: "F045AF6F4D485DA35B748AF33062DC24F8A275D3B66AF8E0D18A410F67D587D9"
+    url: "https://www.linkedin.com/learning/certificates/f045af6f4d485da35b748af33062dc24f8a275d3b66af8e0d18a410f67d587d9/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+  - name: "C++ Programming Professional"
+    issuer: "C++ Institute (OpenEDG)"
+    category: other
+    image: /public/certificates/completion-c-programming-professional-certificate-openedgc.jpg
+    issuerLogo: /public/certificates/issuers/cppinstitute-logo.jpg
+    date: "2025-02"
+    credentialId: "22A8638F0A1646E6B5B12E4EAB7492583E9DFEB3B15519A6FAD26C9438243335"
+    url: "https://www.linkedin.com/learning/certificates/22a8638f0a1646e6b5b12e4eab7492583e9dfeb3b15519a6fad26c9438243335/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-26"
+  - name: "Java Foundations Professional"
+    issuer: JetBrains
+    category: other
+    image: /public/certificates/completion-java-foundations-professional-certificate-jetbrains.jpg
+    issuerLogo: /public/certificates/issuers/jetbrains-logo.jpg
+    date: "2025-02"
+    credentialId: "DBB63917D9AABE179405102FE44C567749A59CF090F05390100D9B8C841F8A04"
+    url: "https://www.linkedin.com/learning/certificates/dbb63917d9aabe179405102fe44c567749a59cf090f05390100d9b8c841f8a04/"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-22"
+
+  # ---- Academic (1 — NZ Record of Achievement, the formal Master verification) ----
+  - name: "Master of Applied Computing (Level 9)"
+    issuer: "New Zealand Qualifications Authority | Mana Tohu Mātauranga o Aotearoa"
+    category: academic
+    image: /public/certificates/nzqa-master-of-applied-computing-level-9.jpg
+    date: "2025-08"
+    credentialId: "170086552"
+    url: "https://www2.nzqa.govt.nz/qualifications-and-standards/access-your-results/verify/"
+    tier: flagship
+    recency: historical
+    lastUpdated: "2026-05-22"
+
+  # ---- Community / Volunteer (3 — non-technical credentials that humanise the profile) ----
+  - name: "Forward With Her — Winter 2024 Mentor Volunteer Service Certificate"
+    issuer: "Forward With Her (她行)"
+    category: community
+    image: /public/certificates/forward-with-her-winter-2024-mentor-certificate.jpg
+    date: "2025-02"
+    tier: primary
+    recency: historical
+    lastUpdated: "2026-05-26"
+    # Recognition certificate for serving as Mentor in the 2024 Winter cohort of the
+    # "Forward With Her" (她行) Mentorship Program — the 360+-mentor, 800+-mentee
+    # women-in-STEM programme. This is the single-largest source of independently
+    # attested mentorship impact in Chan's career (7 of 18 LinkedIn recommendations
+    # come from FWH mentees) — see statisticsClaims block + work[id=forward-with-her].
+  - name: "#IAmRemarkable Workshop Participation"
+    issuer: Rmrkblty.org
+    category: community
+    image: /public/certificates/iamremarkable-workshop-2026-participation.jpg
+    date: "2026-04"
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-05-26"
+    # Participation certificate for the 90-minute #IAmRemarkable workshop facilitated
+    # in-person by Dr. Mahsa McCauley on 2026-04-07 (She Sharp / iamremarkable.org).
+    # Distinct from Chan's role as facilitator of similar workshops; this is the
+    # attendee credential.
+  - name: "Southern Cross Round the Bays Auckland 2026 — 8.4km Finisher"
+    issuer: Stuff
+    category: community
+    image: /public/certificates/southern-cross-round-the-bays-auckland-2026.jpg
+    date: "2026-03"
+    credentialId: "26073"
+    tier: archive
+    recency: recent
+    lastUpdated: "2026-05-22"
+
+# =============================================================================
+# PUBLICATIONS — articles, podcast episodes, press features
+# =============================================================================
+publications:
+  # ============================================================================
+  # FEATURED THIRD-PARTY MEDIA — press features, featured-in articles, podcasts
+  # Chan was the subject. These rank highest for GEO third-party-brand-mention
+  # multiplier (~6.5x per Airops 2026).
+  # ============================================================================
+  - name: "Meet the FemTech Founders Redefining Women's Health at Work"
+    tier: flagship
+    recency: recent
+    lastUpdated: "2026-05-18"
+    publisher: THISDAYLIVE
+    releaseDate: "2025-05-28"
+    url: https://www.thisdaylive.com/2025/05/28/meet-the-femtech-founders-redefining-womens-health-at-work/
+    summary: |
+      Press feature on Sanicle's founding team and women's-workplace-health
+      mission, published during the period Chan served as CTO at Sanicle.
+    meta: { x_brand: { type: press } }
+
+  - name: "Weekly Pulse: Remote MCP, Images, Screen Recording"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: PulseMCP
+    url: https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording
+    image: /public/articles/weekly-pulse-remote-mcp.png
+    summary: |
+      The MCP server Chan developed (server-google-news / server-google-jobs)
+      was featured in this PulseMCP newsletter article by Tadas Antanavicius
+      (https://www.pulsemcp.com/authors/tadas-antanavicius) — third-party
+      coverage of an early-ecosystem MCP contribution.
+    meta: { x_brand: { type: press } }
+
+  - name: FemTech Weekend × UN Women CSW69
+    tier: flagship
+    recency: recent
+    lastUpdated: "2026-05-18"
+    publisher: WeChat (FemTech Weekend)
+    url: https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg
+    image: /public/articles/un-women-csw69.jpeg
+    summary: |
+      Feature article on Chan's UN CSW 69 Speaker presentation — Sanicle AI
+      for women's workplace health — at the Beyond Beijing 30 Conference,
+      UN Headquarters NYC, March 14 2025. Article reports IBM
+      representatives expressed pilot-collaboration interest and the
+      Minister of Gender and Children's Affairs from Sierra Leone praised
+      the platform as the first comprehensive solution connecting menstrual
+      cycle data to actionable workplace policies through AI analysis.
+    meta: { x_brand: { type: press } }
+
+  - name: "Solved Bug: Authentication Redirect Issue in Sanicle-AI Platform"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: Vercel Community
+    releaseDate: "2025-03"
+    url: https://community.vercel.com/t/solved-bug-authentication-redirect-issue-in-sanicle-ai-platform/6818
+    image: /public/articles/bug-report-authentication-redirect-issue.png
+    summary: |
+      Community write-up of a Next.js 15 + NextAuth 5 production auth-redirect
+      bug encountered during the Sanicle-AI build, with the multi-stage solution.
+      Publicly acknowledged by Vercel Staff (Amy Egan):
+      "Thanks for sharing your debugging process and solution! This could help
+      lots of people facing similar auth issues, or trying to avoid them in
+      the first place."
+    meta: { x_brand: { type: article } }
+
+  # ============================================================================
+  # PODCAST EPISODES — Chan as guest
+  # ============================================================================
+  - name: 码农姐妹 — From Math Teacher to Full-Stack Developer
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: 小宇宙FM (Xiaoyuzhou)
+    url: https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2
+    image: /public/articles/from-math-teacher-to-full-stack-developer.jpg
+    summary: |
+      Guest appearance on the 码农姐妹 (Coder Sisters) podcast,
+      discussing Chan's career transition from mathematics teaching
+      to full-stack engineering.
+    meta: { x_brand: { type: podcastEpisode } }
+
+  - name: Femtech At Work — From Math Teacher to FemTech CTO (Greater China Edition, Ep 21)
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: Spotify
+    url: https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2
+    image: /public/articles/femtech-at-work.png
+    summary: |
+      Chan Meng on AI and Women's Health Innovation — Greater China
+      Edition Episode 21 of the Femtech At Work podcast.
+    meta: { x_brand: { type: podcastEpisode } }
+
+  # ============================================================================
+  # PODCASTS CHAN HOSTS — original audio content
+  # ============================================================================
+  - name: Decoding the Future
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: Spotify (English-language host show)
+    url: https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj
+    image: /public/podcasts/decoding-the-future-cover-en.png
+    summary: |
+      Chan-hosted English-language podcast exploring landmark research
+      papers driving innovation in Artificial Intelligence, LLMs, and
+      beyond. Companion LinkedIn newsletter ("Decoding the Future") with
+      800+ subscribers.
+    meta: { x_brand: { type: podcastShow, role: host } }
+
+  - name: Future Turing 未来图灵
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: Spotify (Chinese-language host show)
+    url: https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4
+    image: /public/podcasts/decoding-the-future-cover-cn.jpg
+    summary: |
+      Chan-hosted Chinese-language podcast — the 中文 counterpart of
+      Decoding the Future — focused on decoding landmark research
+      papers in Artificial Intelligence, LLMs, and other cutting-edge
+      fields. *"Where is the boundary of intelligence? How will the
+      future be shaped by code?"*
+    meta: { x_brand: { type: podcastShow, role: host } }
+
+  - name: Praxis and Pages 知行书话
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: Spotify (host show)
+    url: https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL
+    image: /public/podcasts/praxis-and-pages.jpg
+    summary: |
+      Chan-hosted podcast exploring humanities and social-science
+      books with the help of NotebookLM — using AI to organise,
+      distill, and reflect on book content, then sharing those
+      insights in vivid, engaging conversations.
+    meta: { x_brand: { type: podcastShow, role: host } }
+
+  - name: Beyond Thirty 不止三十
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: Spotify (host show)
+    url: https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL
+    image: /public/podcasts/beyond-thirty.png
+    summary: |
+      Chan-hosted conversational podcast. As a woman in her 30s, Chan
+      invites women between the ages of 30 and 40 from all walks of
+      life for open, authentic conversations. Featured episodes include
+      EP1 *Don't Do RAG: When Cache-Augmented Generation is All You
+      Need for Knowledge Tasks*, EP3 *Breaking the illusion of
+      employment in the age of AI*, EP4 *AI and Future Career Prospects*.
+    meta: { x_brand: { type: podcastShow, role: host } }
+
+  # ============================================================================
+  # NEWSLETTERS — Chan-authored
+  # ============================================================================
+  - name: Decoding the Future (LinkedIn Newsletter)
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Newsletter
+    url: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7359054938187984896
+    summary: |
+      Companion LinkedIn newsletter to the Decoding the Future podcast —
+      cutting-edge AI research papers and LLM innovations. 800+ tech
+      enthusiasts subscribed (as of the historical README snapshot).
+    meta: { x_brand: { type: newsletter, role: host } }
+
+  - name: What's Shipping in AI (Weekly AI Digest)
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: chanmeng.org/#newsletter
+    url: https://chanmeng.org/#newsletter
+    summary: |
+      Every Monday — curated picks from the hottest new AI tools on
+      Product Hunt. A 3-minute read to keep subscribers in the loop on
+      what's trending in AI. Free, 5 seconds to subscribe.
+    meta: { x_brand: { type: newsletter, role: host } }
+
+  # ============================================================================
+  # AI & ML TECHNICAL ARTICLES — Chan-authored on LinkedIn Pulse
+  # ============================================================================
+  - name: The AI Fluency Framework
+    tier: primary
+    recency: active
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/ai-fluency-framework-chan-meng-4taxc/
+    image: /public/articles/the-ai-fluency-framework.png
+    meta: { x_brand: { type: article } }
+
+  - name: "The Future is Small: Why Small Language Models (SLMs) Are Powering the Next Wave of AI Agents"
+    tier: primary
+    recency: active
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/future-small-why-language-models-slms-powering-next-wave-chan-meng-hddsc/
+    image: /public/articles/the-future-is-small.png
+    meta: { x_brand: { type: article } }
+
+  - name: CopilotKit + LangGraph.js HITL Integration Guide
+    tier: primary
+    recency: active
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/copilotkit-langgraphjs-hitl-integration-guide-chan-meng-tjzoe/
+    image: /public/articles/copilotkit-langgraph-integration-guide.png
+    meta: { x_brand: { type: article } }
+
+  - name: Solution for MCP Servers Connection Issues with NVM/NPM
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/solution-mcp-servers-connection-issues-nvmnpm-chan-meng-a762c/
+    image: /public/articles/solution-for-mcp-servers-connection-issues.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Creating a Python MCP Server: A Step-by-Step Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/creating-python-mcp-server-step-by-step-guide-chan-meng-olwmc/
+    image: /public/articles/creating-a-python-mcp-server.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Building an AI Dialogue System: A Comprehensive Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/building-ai-dialogue-system-comprehensive-guide-chan-meng-d3dsc/
+    image: /public/articles/building-an-ai-dialogue-system.png
+    meta: { x_brand: { type: article } }
+
+  - name: AI Chatbot Integration Guide for Website
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/ai-chatbot-integration-guide-website-chan-meng-itgsc/
+    image: /public/articles/ai-chatbot-integration-guide-for-website.png
+    meta: { x_brand: { type: article } }
+
+  - name: AI Conversation Implementation Tutorial
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/ai-conversation-implementation-tutorial-chan-meng-4pg7c/
+    image: /public/articles/ai-conversation-implementation-tutorial.jpg
+    meta: { x_brand: { type: article } }
+
+  - name: "Creating Educational Animations with Manim: From Script to Final Video"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/creating-educational-animations-manim-from-script-final-chan-meng-9x3lc/
+    image: /public/articles/creating-educational-animations-with-manim.png
+    meta: { x_brand: { type: article } }
+
+  # ============================================================================
+  # GITHUB / OPEN-SOURCE / TOOLING TECHNICAL ARTICLES — Chan-authored
+  # ============================================================================
+  - name: "Essential Files for a Professional GitHub Repository: A Comprehensive Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/essential-files-professional-github-repository-guide-chan-meng-ubunc/
+    image: /public/articles/essential-files-for-a-professional-github-repository.png
+    meta: { x_brand: { type: article } }
+
+  - name: How to Add a GitHub Contribution Snake to Your Profile README
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/how-add-github-contribution-snake-your-profile-readme-chan-meng-tzakc/
+    image: /public/articles/how-to-add-a-github-contribution-snake-to-your-profile-readme.png
+    meta: { x_brand: { type: article } }
+
+  - name: "From Git Log to Insights: Evaluating Team Contributions in GitHub Projects"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/from-git-log-insights-evaluating-team-contributions-github-chan-meng-qdtpc/
+    image: /public/articles/from-git-log-to-insights.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Protecting Your Open Source Project: A Comprehensive Guide to Combating Code Plagiarism"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/protecting-your-open-source-project-comprehensive-guide-chan-meng-u77wc/
+    image: /public/articles/protecting-your-open-source-project.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Creating a Comprehensive File List Documentation System: A Technical Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/creating-comprehensive-file-list-documentation-system-chan-meng-njjxc/
+    image: /public/articles/creating-a-comprehensive-file-list-documentation-system.png
+    meta: { x_brand: { type: article } }
+
+  - name: A Complete Guide to Publishing Your First npm Package
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/complete-guide-publishing-your-first-npm-package-chan-meng-srrec/
+    image: /public/articles/publish-your-first-npm-package.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Apifox API Testing Tool Guide: From Beginner to Practitioner"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/apifox-api-testing-tool-guide-from-beginner-chan-meng-ekqjc/
+    image: /public/articles/apifox-api-testing-tool-guide.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Git Branch Management and Project Initialization: A Comprehensive Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/git-branch-management-project-initialization-guide-chan-meng-9oewc/
+    image: /public/articles/git-branch-management-and-project-initialization.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Conventional Commits: A Comprehensive Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/conventional-commits-comprehensive-guide-chan-meng-n9psc/
+    image: /public/articles/conventional-commits.png
+    meta: { x_brand: { type: article } }
+
+  - name: "How to Deploy Your React Project to Vercel: A Complete Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/how-deploy-your-react-project-vercel-complete-guide-chan-meng-kkale/
+    image: /public/articles/how-to-deploy-your-react-project-to-vercel.png
+    meta: { x_brand: { type: article } }
+
+  - name: "The Power of Index Files: A Guide to Better Code Organization in React Projects"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/power-index-files-guide-better-code-organization-react-chan-meng-eqndc/
+    image: /public/articles/the-power-of-index-files.png
+    meta: { x_brand: { type: article } }
+
+  - name: Spring Boot Project Database Configuration Guide for Local and Cloud Environments
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/spring-boot-project-database-configuration-guide-local-chan-meng-cuiqc/
+    image: /public/articles/spring-boot-project-database-configuration-guide.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Solving Language Switching in Next.js: A Guide to Client-Server Component Architecture"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/solving-language-switching-nextjs-guide-client-server-chan-meng-pyudc/
+    image: /public/articles/solving-language-switching-in-nextjs.png
+    meta: { x_brand: { type: article } }
+
+  - name: Setting Up Algolia DocSearch in Docusaurus
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/setting-up-algolia-docsearch-docusaurus-chan-meng-yxeqc/
+    image: /public/articles/setting-up-algolia-doc-search-in-docusaurus.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Implementing Internationalization in a Docusaurus Website: Experience and Lessons Learned"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/implementing-internationalization-docusaurus-website-experience-meng-ppfgc/
+    image: /public/articles/implementing-internationalization-in-a-docusaurus.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Building a PDF Download Form with Notion Integration in Docusaurus: A Complete Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/building-pdf-download-form-notion-integration-docusaurus-chan-meng-oodrc/
+    image: /public/articles/building-a-pdf-download-form-with-notion-integration-in-docusaurus.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Building a Website with Notion Integration: Form Submission and Content Display"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/building-website-notion-integration-form-submission-content-chan-meng-rptac/
+    image: /public/articles/building-a-website-with-notion-integration.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Docusaurus Navbar Styling Guide: Lessons Learned"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/docusaurus-navbar-styling-guide-lessons-learned-chan-meng-ss8he/
+    image: /public/articles/docusaurus-navbar-styling-guide.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Fixing Google Fonts in Next.js 13+: A Pixel-Perfect Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/fixing-google-fonts-nextjs-13-pixel-perfect-guide-chan-meng-iw3sc/
+    image: /public/articles/stop-using--import-for-fonts-in-next-js.png
+    meta: { x_brand: { type: article } }
+
+  - name: "The Developer's Guide: Configuring AWS SES for Bulk Email"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/developers-guide-configuring-aws-ses-bulk-email-chan-meng-79ele/
+    image: /public/articles/configuring-aws-ses-for-bulk-email.png
+    meta: { x_brand: { type: article } }
+
+  - name: Building a Web Scraper for Douban Group Posts
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/building-web-scraper-douban-group-posts-chan-meng-pn6oc/
+    image: /public/articles/building-a-web-scraper-for-douban-group-posts.png
+    meta: { x_brand: { type: article } }
+
+  - name: Tencent Meeting Screen Recording Download Guide
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/how-download-videos-from-web-pages-step-by-step-guide-chan-meng-mp5pc/
+    image: /public/articles/tencent-meeting-screen-recording-download-guide.png
+    meta: { x_brand: { type: article } }
+
+  - name: Planning Overseas Education and Career Development
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/planning-overseas-education-career-development-chan-meng-vfhic/
+    image: /public/articles/planning-overseas-education-and-career-development.png
+    meta: { x_brand: { type: article } }
+
+  - name: "📺 My Video Tutorial Resources Collection"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/my-video-tutorial-resources-collection-chan-meng-udkfc/
+    image: /public/articles/my-video-tutorial-resources-collection.png
+    meta: { x_brand: { type: article } }
+
+  - name: Steal these Brand Secrets from Linear's CEO
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/steal-brand-secrets-from-linears-ceo-chan-meng-dgaac/
+    image: /public/articles/steal-these-brand-secrets.png
+    meta: { x_brand: { type: article } }
+
+  # ============================================================================
+  # MINIMALIST LIVING / LIFESTYLE ARTICLES — Chan-authored
+  # ============================================================================
+  - name: Digital Minimalism — Technology as a Tool, Not a Master
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/digital-minimalism-technology-tool-master-chan-meng-lkz0c/
+    image: /public/articles/digital-minimalism.png
+    meta: { x_brand: { type: article } }
+
+  - name: Creating a Minimalist Living Space — Lessons from The Art of Discarding
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/creating-minimalist-living-space-lessons-from-art-discarding-meng-wwdrc/
+    image: /public/articles/creating-a-minimalist-living-space.png
+    meta: { x_brand: { type: article } }
+
+  - name: "Getting Started with Minimalism — A Beginner's Guide"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: LinkedIn Pulse
+    url: https://www.linkedin.com/pulse/getting-started-minimalism-beginners-guide-chan-meng-jbioc/
+    image: /public/articles/getting-started-with-minimalism.png
+    meta: { x_brand: { type: article } }
+
+  - name: "My Home's Minimalist Transformation: Before and After"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: Douban
+    url: https://www.douban.com/group/topic/309627759/
+    image: /public/articles/p658085706.webp
+    meta: { x_brand: { type: article } }
+
+  - name: A Complete Guide to Legally Changing Your Name as an Adult
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: Douban
+    url: https://www.douban.com/group/topic/310015982/
+    image: /public/articles/p658073376.webp
+    meta: { x_brand: { type: article } }
+
+  # ============================================================================
+  # WECHAT PRESS / LIFESTYLE COVERAGE — Chinese-language platforms
+  # ============================================================================
+  - name: A Glimpse of My Minimalist Home
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: Douban (Daily Douban Feature)
+    url: https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q
+    meta: { x_brand: { type: press } }
+
+  - name: Girl on Mattress
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: The Most People (最人物)
+    url: https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ
+    image: /public/articles/girl-on-mattress.jpg
+    meta: { x_brand: { type: press } }
+
+  - name: "Minimalist to the End, I Threw Away My Old Name"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: NetEase Kan Ke inSight (网易看客 inSight)
+    url: https://mp.weixin.qq.com/s/Jk9I8ONA6vsyvHz7d4dkfw
+    image: /public/articles/kan-kein-sight.jpg
+    meta: { x_brand: { type: press } }
+
+  - name: A Genderless Girl
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-05-18"
+    publisher: WeChat
+    url: https://mp.weixin.qq.com/s/E0tR5syP1Wa6We60ipd0Vg
+    image: /public/articles/a-genderless-girl.jpg
+    meta: { x_brand: { type: press } }

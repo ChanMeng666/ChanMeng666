@@ -157,6 +157,12 @@ const expCompanyToWork = {
   "ByteDance": "bytedance",
   "CORDE": "corde",
 };
+// `_titleCurated: true` is a YAML-only marker for check-linkedin-sync.mjs
+// (exempts a deliberately reworded display title from the drift check) —
+// strip it so it never reaches the generated JSON.
+for (const c of ln.experience) {
+  for (const p of c.positions ?? []) delete p._titleCurated;
+}
 for (const c of ln.experience) {
   const wid = expCompanyToWork[c.company];
   if (!wid) continue; // Sanicle / Gavigo left verbatim

@@ -10,6 +10,9 @@ on:
       - "data/**"
       - "schema/**"
       - "scripts/validate.mjs"
+      - "scripts/check-*.mjs"
+      - "scripts/lib/**"
+      - "cv/sections/**"
       - "package.json"
       - "package-lock.json"
 
@@ -24,6 +27,12 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run validate
+      # Freshness SLA: deterministic logic errors always fail; under --strict an
+      # overdue flagship/active entry also fails — you're already editing the
+      # data, review the overdue item (npm run reviewed -- "<section.key>").
+      - run: node scripts/check-freshness.mjs --strict
+      # CV anchor facts (date ranges) must agree with 10-career.yaml.
+      - run: node scripts/check-cv-sync.mjs --strict
       - run: npm run build
       - name: Check that committed outputs match what build would generate
         run: |

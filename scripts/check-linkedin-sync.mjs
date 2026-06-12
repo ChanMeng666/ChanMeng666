@@ -75,6 +75,25 @@ const expCompanyToWork = {
   "FreePeriod": "freeperiod", "ByteDance": "bytedance", "CORDE": "corde",
 };
 const genExp = (company) => generated?.experience?.find((c) => c.company === company);
+
+// Title drift: where the block keeps an explicit position title (i.e. the
+// generator does NOT inject it), the display title must still agree with the
+// canonical work[].position. "Agree" tolerates deliberate tightening:
+// normalized-equal, or the block title's tokens are a subset of the canonical
+// title's tokens (parentheticals/dashes stripped). A genuinely reworded title
+// must carry `_titleCurated: true` on the position, or this errors — that's
+// what catches a canonical rename that forgot the LinkedIn block.
+const normTitle = (s) => String(s).toLowerCase()
+  .replace(/\([^)]*\)/g, " ")
+  .replace(/[—–\-&/·,]/g, " ")
+  .replace(/\s+/g, " ").trim();
+const titleTokens = (s) => new Set(normTitle(s).split(" ").filter(Boolean));
+const titleAgrees = (blockTitle, workPos) => {
+  if (normTitle(blockTitle) === normTitle(workPos)) return true;
+  const b = titleTokens(blockTitle), w = titleTokens(workPos);
+  return [...b].every((t) => w.has(t));
+};
+
 for (const [company, wid] of Object.entries(expCompanyToWork)) {
   const w = work(wid);
   if (!w) { err(`experience "${company}" maps to missing work id "${wid}".`); continue; }
@@ -83,6 +102,13 @@ for (const [company, wid] of Object.entries(expCompanyToWork)) {
   const derived = dateRange(ym(w.startDate), ym(w.endDate));
   if (pub && pub !== derived)
     err(`experience "${company}" dateRange drift: work[] derives "${derived}" but published "${pub}".`);
+
+  const blockExp = ln?.experience?.find((c) => c.company === company);
+  const p = blockExp?.positions?.length === 1 ? blockExp.positions[0] : null;
+  if (p && "title" in p && p.title !== w.position && !p._titleCurated && !titleAgrees(p.title, w.position)) {
+    err(`experience "${company}" title drift: block shows "${p.title}" but work[].position is "${w.position}". ` +
+        `If the LinkedIn display title is intentionally different, add \`_titleCurated: true\` to that position in 70-linkedin.yaml.`);
+  }
 }
 // Forward with Her volunteering dateRange source.
 if (!volunteer("forward-with-her-mentor")) err(`volunteer "forward-with-her-mentor" missing (Forward with Her dateRange source).`);

@@ -361,6 +361,11 @@ linkedin:
         - https://www.aotearoainfiniteacademy.school/
       positions:
         - title: Software Developer
+          # Live LinkedIn deliberately shows "Software Developer"; canonical
+          # work[].position is "Software Engineer (Bandicoot squad · Crimson
+          # Academies)". _titleCurated exempts this from the title drift check
+          # in scripts/check-linkedin-sync.mjs (stripped from generated JSON).
+          _titleCurated: true
           duration: 2 mos
           location: Auckland Central, Auckland, New Zealand · Remote
           description: |-

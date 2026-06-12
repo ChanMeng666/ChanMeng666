@@ -18,8 +18,32 @@ npm run check        # validate (schema + linkedin sync) + build + asset audit
 - `npm run build` — regenerate all outputs
 - `npm run refresh-metrics` — dry-run GitHub stars/forks/commit-date refresh
   (`--apply` to write); only touches `- { label: "Stars", value: ... }`-style
-  lines in the project shards
+  lines in the project shards. Also reports repo health (404s, renames,
+  archived-but-active, activity gaps) for every GitHub-linked project.
 - CV PDF: `pwsh cv/build.ps1` (manual; needs typst)
+
+## Truth maintenance
+
+Schema validation proves well-formed, not true. The freshness SLA keeps
+hand-typed facts on a review cadence:
+
+- Every entry's `lastUpdated` must be within its tier budget: flagship 3mo,
+  primary 6mo, secondary 12mo, archive exempt; `recency: active` caps at 3mo.
+  `npm run check:freshness` reports; the PR gate runs it `--strict` (an
+  overdue flagship/active entry FAILS the PR — review it while you're in the
+  data anyway).
+- After actually re-reading an entry and confirming its facts:
+  `npm run reviewed -- "work.engram" --apply` (NEVER bulk-bump `lastUpdated`
+  by hand-editing — that destroys the field's meaning).
+- `npm run check:cv` — CV role-line anchor facts (date ranges error, titles
+  warn) vs 10-career.yaml. PR gate runs it `--strict`.
+- `npm run check:links` — link liveness across all shards (monthly workflow
+  only; never blocks PRs).
+- A LinkedIn display title that deliberately differs from `work[].position`
+  needs `_titleCurated: true` on that position in 70-linkedin.yaml, or
+  check-linkedin-sync fails.
+- The `review-queue.yml` workflow runs all of this monthly and upserts one
+  GitHub issue labelled `review-queue`.
 
 ## Data map — which shard to edit
 

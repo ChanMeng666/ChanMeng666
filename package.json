@@ -14,7 +14,11 @@
     "build:linkedin": "node scripts/build-linkedin-json.mjs && node scripts/build-linkedin-md.mjs",
     "validate": "node scripts/validate.mjs && node scripts/validate-brand.mjs && node scripts/check-linkedin-sync.mjs",
     "audit": "node scripts/audit-assets.mjs",
-    "check": "npm run validate && npm run build && npm run audit",
+    "check": "npm run validate && npm run check:freshness && npm run check:cv && npm run build && npm run audit",
+    "check:freshness": "node scripts/check-freshness.mjs",
+    "check:cv": "node scripts/check-cv-sync.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "reviewed": "node scripts/mark-reviewed.mjs",
     "refresh-metrics": "node scripts/refresh-github-metrics.mjs"
   },
   "dependencies": {

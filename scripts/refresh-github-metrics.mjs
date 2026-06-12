@@ -20,9 +20,19 @@
 // If a project doesn't already have one of these labels, the script reports
 // the live value but does NOT add it (manual opt-in keeps the curated tone).
 //
+// Besides metrics, every GitHub-linked project gets a REPO HEALTH check from
+// the same API response (zero extra calls): missing/private repos, renames
+// (redirect target differs from the YAML slug), archived repos still claimed
+// active/recent, and activity gaps in both directions (repo moved on while the
+// entry's lastUpdated is stale; entry claims "active" while the repo is
+// dormant). Health findings are report-only; --strict-health exits 1 on
+// missing or archived-while-active.
+//
 // Usage:
-//   node scripts/refresh-github-metrics.mjs            # dry-run report
-//   node scripts/refresh-github-metrics.mjs --apply    # write changes in place
+//   node scripts/refresh-github-metrics.mjs                  # dry-run report
+//   node scripts/refresh-github-metrics.mjs --apply          # write metric changes
+//   node scripts/refresh-github-metrics.mjs --verbose        # + description drift
+//   node scripts/refresh-github-metrics.mjs --strict-health  # exit 1 on hard health issues
 //
 // Requires: gh CLI authenticated (`gh auth status`).
 
@@ -40,6 +50,8 @@ const projectShardPaths = listShardFiles().filter((f) =>
 );
 
 const APPLY = process.argv.includes("--apply");
+const VERBOSE = process.argv.includes("--verbose");
+const STRICT_HEALTH = process.argv.includes("--strict-health");
 
 const TRACKED_LABELS = new Set([
   "Stars",
@@ -168,22 +180,85 @@ console.log(APPLY ? "Mode: --apply (will write changes)\n" : "Mode: dry-run (no 
 const updates = [];                       // [{ shardPath, lineIdx, oldLine, newLine, projectId, label }]
 const reportRows = [];                    // [{ projectId, slug, label, current, live, status }]
 const skippedNoMetrics = [];              // project ids with GH URL but no metrics block
+const healthIssues = [];                  // [{ projectId, type, detail, hard }]
 
-for (const block of projectBlocks) {
-  const project = projectsById[block.id];
-  if (!project) continue;
+const parseLooseDate = (d) => {
+  const m = String(d ?? "").match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$/);
+  if (!m) return null;
+  return new Date(Date.UTC(Number(m[1]), m[2] ? Number(m[2]) - 1 : 0, m[3] ? Number(m[3]) : 1));
+};
+const daysBetween = (a, b) => Math.floor((b - a) / 86_400_000);
+const now = new Date();
+
+function checkRepoHealth(project, slug, info) {
+  const requested = `${slug.owner}/${slug.repo}`.toLowerCase();
+  if ((info.full_name ?? "").toLowerCase() !== requested) {
+    healthIssues.push({
+      projectId: project.id, type: "renamed", hard: false,
+      detail: `repoUrl points at ${requested} but gh redirects to ${info.full_name} — update repoUrl (check extraLinks too).`,
+    });
+  }
+  if (info.archived && (project.recency === "active" || project.recency === "recent")) {
+    healthIssues.push({
+      projectId: project.id, type: "archived", hard: true,
+      detail: `repo is ARCHIVED on GitHub but entry recency is "${project.recency}" — set recency: historical or unarchive.`,
+    });
+  }
+  const pushed = info.pushed_at ? new Date(info.pushed_at) : null;
+  const lu = parseLooseDate(project.lastUpdated);
+  if (pushed && lu && (project.tier === "flagship" || project.tier === "primary") && daysBetween(lu, pushed) > 90) {
+    healthIssues.push({
+      projectId: project.id, type: "entry-behind-repo", hard: false,
+      detail: `repo last pushed ${info.pushed_at.slice(0, 10)} but entry lastUpdated ${project.lastUpdated} — the repo moved on; re-review the entry (npm run reviewed -- "projects.${project.id}" --apply).`,
+    });
+  }
+  if (pushed && project.recency === "active" && daysBetween(pushed, now) > 365) {
+    healthIssues.push({
+      projectId: project.id, type: "active-but-dormant", hard: false,
+      detail: `entry claims recency "active" but the repo's last push was ${info.pushed_at.slice(0, 10)} (>12 months ago).`,
+    });
+  }
+  if (VERBOSE && info.description && project.tagline) {
+    const tok = (s) => new Set(String(s).toLowerCase().match(/[a-z0-9]{4,}/g) ?? []);
+    const a = tok(info.description), b = tok(project.tagline);
+    const overlap = [...a].some((t) => b.has(t));
+    if (!overlap) {
+      healthIssues.push({
+        projectId: project.id, type: "description-drift", hard: false,
+        detail: `GH description "${info.description}" shares no tokens with YAML tagline "${project.tagline}".`,
+      });
+    }
+  }
+}
+
+// Health-check every GitHub-linked project (even those without a metrics
+// block); metric diffing additionally requires a located metrics block.
+const blocksById = Object.fromEntries(projectBlocks.map((b) => [b.id, b]));
+
+for (const project of data.projects ?? []) {
   const slug = findGithubSlug(project);
   if (!slug) continue;
-  if (block.metricsStart == null) {
-    skippedNoMetrics.push(project.id);
-    continue;
-  }
+  const block = blocksById[project.id];
 
   let info;
   try {
     info = ghApi(`repos/${slug.owner}/${slug.repo}`);
   } catch (e) {
-    console.log(`  ⚠ ${project.id} (${slug.owner}/${slug.repo}): ${e.message.split("\n")[0]}`);
+    const first = e.message.split("\n")[0];
+    const is404 = /\b404\b|Not Found/i.test(`${first} ${e.stderr ?? ""}`);
+    healthIssues.push({
+      projectId: project.id, type: is404 ? "missing" : "fetch-error", hard: is404,
+      detail: is404
+        ? `repo ${slug.owner}/${slug.repo} is 404 (deleted or private) — fix repoUrl or archive the entry.`
+        : `gh api failed: ${first}`,
+    });
+    continue;
+  }
+
+  checkRepoHealth(project, slug, info);
+
+  if (!block || block.metricsStart == null) {
+    skippedNoMetrics.push(project.id);
     continue;
   }
 
@@ -247,6 +322,15 @@ if (narrativeRows.length) {
   }
 }
 
+if (healthIssues.length) {
+  console.log(`\nRepo health (${healthIssues.length} issue${healthIssues.length === 1 ? "" : "s"}):`);
+  for (const h of healthIssues) {
+    console.log(`  ${h.hard ? "✗" : "⚠"} ${pad(h.projectId, 28)} [${h.type}] ${h.detail}`);
+  }
+} else {
+  console.log("\nRepo health: ✓ no issues across all GitHub-linked projects.");
+}
+
 if (APPLY && updates.length) {
   for (const u of updates) {
     const shard = shards.get(u.shardPath);
@@ -264,4 +348,9 @@ if (APPLY && updates.length) {
   console.log(`\nRun with --apply to write these changes.`);
 } else if (!driftRows.length) {
   console.log(`\n✓ All tracked metrics in sync — nothing to do.`);
+}
+
+if (STRICT_HEALTH && healthIssues.some((h) => h.hard)) {
+  console.error(`\n✗ --strict-health: ${healthIssues.filter((h) => h.hard).length} hard health issue(s) (missing/archived).`);
+  process.exit(1);
 }

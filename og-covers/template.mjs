@@ -43,6 +43,21 @@ export function renderHtml(e) {
   const tileBg = e.tileBg || (dark ? "#0E0E18" : "#F7F6F2");
   const tileBorder = dark ? "rgba(255,255,255,0.22)" : "rgba(7,6,7,0.14)";
   const accentBar = e.accent || "#FC5000";
+  const hasLogo = !!e.logoDataUri;
+  // With a logo we keep a narrower text column (logo tile sits on the right);
+  // without one, the text spans wider and a solid accent panel anchors the right.
+  const contentW = hasLogo ? 660 : 720;
+
+  const right = hasLogo
+    ? `  <div class="tile${e.logoPad ? " pad" : ""}">
+    <img src="${e.logoDataUri}" alt="">
+  </div>`
+    : `  <div class="panel">
+    <span class="px" style="left:48px; top:64px; background:${ink}; opacity:0.22;"></span>
+    <span class="px" style="right:54px; top:120px; background:${dark ? "#FFFFFF" : "#070607"}; opacity:0.85;"></span>
+    <span class="px" style="left:80px; bottom:96px; background:${dark ? "#FFFFFF" : "#070607"}; opacity:0.85;"></span>
+    <span class="px" style="right:64px; bottom:60px; background:${ink}; opacity:0.22;"></span>
+  </div>`;
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -65,7 +80,7 @@ export function renderHtml(e) {
   .px{ position:absolute; width:18px; height:18px; opacity:0.9; }
 
   /* ── Left content column ── */
-  .content{ position:absolute; left:88px; top:0; bottom:0; width:660px;
+  .content{ position:absolute; left:88px; top:0; bottom:0; width:${contentW}px;
     display:flex; flex-direction:column; justify-content:center; }
   .eyebrow{ font-size:21px; font-weight:700; letter-spacing:0.22em;
     text-transform:uppercase; color:${ink}; opacity:0.9; }
@@ -83,6 +98,10 @@ export function renderHtml(e) {
     display:flex; align-items:center; justify-content:center; }
   .tile img{ width:100%; height:100%; object-fit:contain; }
   .tile.pad img{ width:74%; height:74%; }
+
+  /* ── Right accent panel (used when a project has no logo asset) ── */
+  .panel{ position:absolute; right:0; top:0; width:360px; height:630px;
+    background:${accentBar}; }
 
   /* ── Personal mark (bottom-left corner) ── */
   .mark{ position:absolute; left:88px; bottom:46px;
@@ -106,9 +125,7 @@ export function renderHtml(e) {
     <p class="tagline">${e.tagline}</p>
   </div>
 
-  <div class="tile${e.logoPad ? " pad" : ""}">
-    <img src="${e.logoDataUri}" alt="">
-  </div>
+${right}
 
   <div class="mark">
     <img src="${e.markDataUri}" alt="">

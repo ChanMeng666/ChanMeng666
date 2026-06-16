@@ -50,7 +50,7 @@ const monkeyWhite = await dataUri(path.join(brandsDir, "chan-meng-monkey-white-t
 
 const jobs = [];
 for (const p of selected) {
-  const logoUri = await dataUri(path.join(p.repoDir, p.logo));
+  const logoUri = p.logo ? await dataUri(path.join(p.repoDir, p.logo)) : null;
   const markUri = isDark(p.bg) ? monkeyWhite : monkeyBlack;
   const html = renderHtml({ ...p, logoDataUri: logoUri, markDataUri: markUri });
   const ogDir = path.join(p.repoDir, "og");
@@ -58,6 +58,7 @@ for (const p of selected) {
   const htmlPath = path.join(ogDir, "og-cover.html");
   await fs.writeFile(htmlPath, html, "utf8");
   const outPath = path.join(p.repoDir, p.publicDir, "og-cover.png");
+  await fs.mkdir(path.dirname(outPath), { recursive: true });
   jobs.push({ id: p.id, htmlPath, outPath });
 }
 

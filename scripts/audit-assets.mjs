@@ -1,5 +1,9 @@
 #!/usr/bin/env node
-// Audits /public assets referenced from data/profile/*.yaml.
+// Audits /public assets referenced from the data + derived-product surfaces:
+//   - data/profile/*.yaml and data/brand.yaml
+//   - rendered build outputs (README, llms*, dist/profile.json, brand-system)
+//   - CV and media-kit Typst sources (cv/**/*.typ, media-kit/**/*.typ), which
+//     compile with `--root .` and reference brand assets by /public/... path
 // Warns on:
 //   - referenced files that don't exist on disk
 //   - files in /public that aren't referenced anywhere (orphans)
@@ -32,10 +36,10 @@ const EXTERNAL_REFERENCES = new Set([
   // PDF's alternate links and by recruiter LLMs — not orphan assets.
   "/public/cv.jsonld",
   "/public/cv-llms.txt",
-  // Brand photo library — kept on purpose for future surfaces (covers,
-  // social cards), not currently referenced from any rendered output.
-  "/public/photos/chan-by-the-tree.jpg",
-  "/public/photos/chanmeng-portrait-2026.jpg",
+  // Media-kit PDF output (media-kit/build.ps1) — a downloadable deliverable,
+  // not linked from any rendered surface. The photos/logos it features are
+  // picked up by the Typst-source scan below.
+  "/public/chan-meng-media-kit.pdf",
 ]);
 
 const referenced = new Set(EXTERNAL_REFERENCES);
@@ -77,6 +81,28 @@ for (const rel of renderedOutputs) {
   }
 }
 
+// Scan the CV and media-kit Typst sources. Both compile with `--root .`, so
+// they reference brand assets by absolute /public/... paths resolved at build
+// time (e.g. image("/public/photos/...")). Without this, every photo/logo used
+// only by the CV or media kit would look like an orphan. Trailing punctuation
+// is stripped so a path quoted inside prose can't masquerade as a missing ref.
+const typstSources = [];
+function collectTypst(dir) {
+  if (!fs.existsSync(dir)) return;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const abs = path.join(dir, entry.name);
+    if (entry.isDirectory()) collectTypst(abs);
+    else if (entry.name.endsWith(".typ")) typstSources.push(abs);
+  }
+}
+for (const d of ["cv", "media-kit"]) collectTypst(path.join(repoRoot, d));
+for (const abs of typstSources) {
+  const txt = fs.readFileSync(abs, "utf8");
+  for (const m of txt.matchAll(/\/public\/[^"'<>\s)}{,\\]+/g)) {
+    referenced.add(m[0].replace(/[.,;:!?]+$/, ""));
+  }
+}
+
 // Walk the actual /public directory
 const publicDir = path.join(repoRoot, "public");
 const filesOnDisk = new Set();
@@ -100,7 +126,7 @@ if (missing.length) {
 }
 
 if (orphans.length) {
-  console.warn(`\n⚠ ${orphans.length} files in /public are not referenced from profile.yaml:`);
+  console.warn(`\n⚠ ${orphans.length} files in /public are not referenced anywhere (profile, rendered outputs, or CV/media-kit sources):`);
   for (const p of orphans.slice(0, 50)) console.warn(`    ${p}`);
   if (orphans.length > 50) console.warn(`    ... and ${orphans.length - 50} more`);
 }

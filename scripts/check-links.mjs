@@ -16,15 +16,21 @@
 // This check NEVER runs in the PR gate — remote-server flakiness must not
 // block data edits. It runs in the monthly review-queue workflow.
 //
+// With --repos, GitHub repo `homepage` deployment links are also folded in.
+// These are NOT in the shards, but a repo whose homepage 404s advertises a
+// dead deployment at the top of its GitHub page — the shard scan can't see it.
+//
 // Usage:
 //   node scripts/check-links.mjs                       # full report
 //   node scripts/check-links.mjs --max=30              # sample (local iteration)
 //   node scripts/check-links.mjs --host=github.com     # filter by host substring
+//   node scripts/check-links.mjs --repos               # + scan repo homepages (needs gh)
 //   node scripts/check-links.mjs --fail-on-dead        # exit 1 if any dead
 //   node scripts/check-links.mjs --format=md           # markdown for the issue
 
 import fs from "node:fs";
 import path from "node:path";
+import { execSync } from "node:child_process";
 import { listShardFiles } from "./lib/load-profile.mjs";
 
 const args = process.argv.slice(2);
@@ -62,6 +68,39 @@ for (const file of listShardFiles()) {
       occurrences.get(url).push({ file: rel, line: i + 1 });
     }
   });
+}
+
+// ---------------------------------------------------------------------------
+// Optionally fold in GitHub repo `homepage` deployment links (--repos).
+// Owners = Chan's account plus the orgs she leads (forks excluded). Requires
+// `gh` authenticated; an owner is skipped with a warning if the call fails.
+// ---------------------------------------------------------------------------
+
+const SCAN_REPOS = args.includes("--repos");
+const REPO_OWNERS = [
+  "ChanMeng666", "Whiri-AI", "gavigo-inc", "Sanicleai",
+  "NZ-SheSharp", "SheSharp-NZ", "Chow-Luck-Club",
+];
+
+if (SCAN_REPOS) {
+  for (const owner of REPO_OWNERS) {
+    let json;
+    try {
+      json = execSync(
+        `gh repo list ${owner} --limit 1000 --json name,isFork,homepageUrl`,
+        { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"], maxBuffer: 32 * 1024 * 1024 },
+      );
+    } catch {
+      console.error(`(skipped repo homepage scan for ${owner}: gh unavailable or not authenticated)`);
+      continue;
+    }
+    for (const r of JSON.parse(json)) {
+      if (r.isFork || !r.homepageUrl) continue;
+      const url = r.homepageUrl.replace(/[.,;:!?]+$/, "");
+      if (!occurrences.has(url)) occurrences.set(url, []);
+      occurrences.get(url).push({ file: `gh:${owner}/${r.name}`, line: "homepage" });
+    }
+  }
 }
 
 const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } };

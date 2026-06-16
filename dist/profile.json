@@ -2216,7 +2216,7 @@
         "audience": "Health-conscious women managing cycle-related symptoms,\nplanning conception, or pursuing holistic wellness — and the\nsecondary audience of agent-framework practitioners studying\nwhat production-grade multi-agent coordination looks like\nunder HIPAA-aligned constraints. CopilotKit's maintainers\nthemselves are an audience: the project shipped into their\nofficial `demos_2025` showcase.\n",
         "productLogic": "Single conversational surface (CopilotKit) routes the user's\nintent to one of eight specialised agents: **Main Coordinator**\n+ **Cycle Tracker** + **Fertility Tracker** + **Symptom Mood**\n+ **Nutrition Guide** + **Exercise Coach** + **Lifestyle\nManager** + **Health Insights**. Each agent has its own\ndomain logic and prompt scaffolding but shares the same\nSupabase-backed user model, so a question that crosses two\ndomains (\"am I dehydrated today?\", which touches nutrition +\ncycle + exercise) gets routed through the Coordinator and\nanswered with WHO-standard scoring rather than three\ndisconnected guesses.\n",
         "technicalApproach": "The architectural bet is **CopilotKit on the frontend +\nLangGraph on the backend**, communicating through a CopilotKit\nruntime adapter. Next.js 15 + React 19 + TypeScript on the\nfrontend; Python 3.12 + LangGraph for agent orchestration;\nSupabase PostgreSQL with **Row Level Security** for\nprivacy-preserving multi-tenant persistence; Redis caching\nachieving 90%+ hit rates on hot read paths. The health-scoring\nengine implements WHO-standard algorithms across six dimensions:\nexercise (150 min/week benchmark), hydration (2 000 mL daily),\ncycle regularity (21–35 day window), mood patterns, lifestyle\nfactors, fertility indicators — each 0–100, composited into\nactionable insights. Codebase is 83.2% TypeScript for type\nsafety in a medical-domain product.\n",
-        "outcomes": "**Merged into CopilotKit's official `demos_2025` showcase**\nvia [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068),\npublicly thanked by maintainer Tyler Slaton — external\nrecognition of production-grade quality from the framework's\nown maintainers, not just a self-published demo. While the demo deployment was live at\nfemtracker-agent.vercel.app it reported 95+ Lighthouse score,\nsub-second TTFB, 99.9% uptime. Demo video at the linked YouTube\nURL. 90 sustained commits.\n",
+        "outcomes": "**Merged into CopilotKit's official `demos_2025` showcase**\nvia [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068),\npublicly thanked by maintainer Tyler Slaton — external\nrecognition of production-grade quality from the framework's\nown maintainers, not just a self-published demo. The demo\ndeployment measured a 95+ Lighthouse score, sub-second TTFB,\nand 99.9% uptime while it was live. Demo video at the linked\nYouTube URL. 90 sustained commits.\n",
         "myRole": "Sole author of the agent architecture, the WHO-scoring engine,\nthe Supabase schema with Row Level Security, and the CopilotKit\nruntime adapter. Drove the project into CopilotKit's official\ndemo set — a path that required not just shipping but\ndemonstrating reference-implementation-grade quality to a\nthird-party maintainer team.\n"
       }
     },
@@ -9153,8 +9153,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-06-15",
+    "lastModified": "2026-06-16",
     "buildYear": "2026",
-    "buildTimestamp": "2026-06-15T20:23:23.710Z"
+    "buildTimestamp": "2026-06-16T10:55:00.178Z"
   }
 }

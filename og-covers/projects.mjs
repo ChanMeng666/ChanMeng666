@@ -71,8 +71,12 @@ export const projects = [
 
   // ── Wave 1: flagship / primary deployed web apps ──
   {
+    // NOTE: the deployed site is the PUBLIC repo (remote
+    // ChanMeng666/github-readme-suno-cards), NOT the local
+    // `github-readme-suno-cards` folder (which is the private research repo
+    // `suno-research-private`). Deployed on a separate Vercel account.
     id: "github-readme-suno-cards",
-    repoDir: "D:/github_repository/github-readme-suno-cards",
+    repoDir: "D:/github_repository/github-readme-suno-cards-public",
     publicDir: "apps/web/public",
     siteUrl: "https://github-readme-suno-cards.vercel.app",
     name: "Suno Music Cards",
@@ -80,9 +84,11 @@ export const projects = [
     tagline: "Turn your Suno tracks into dynamic GitHub README cards.",
     bg: "#0A0A0F",
     accent: "#8B5CF6",
-    logo: null, // project ships no logo asset — uses the no-logo panel layout
-    framework: "edge-route",
-    metaFile: "apps/web/app/route.ts",
+    tileBg: "#FFFFFF", // colorful transparent logo — pops on a white tile
+    logo: "apps/web/public/logo.svg",
+    logoPad: true,
+    framework: "app",
+    metaFile: "apps/web/app/layout.tsx",
     deployBranch: "main",
   },
   {

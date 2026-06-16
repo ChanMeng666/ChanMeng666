@@ -162,7 +162,9 @@ export const projects = [
     id: "she-sharp",
     repoDir: "D:/github_repository/she-sharp",
     publicDir: "public",
-    siteUrl: "https://www.shesharp.org.nz",
+    // Canonical OG domain is the Vercel deploy: shesharp.org.nz is a separate
+    // Cloudflare site that does not serve this deployment's assets.
+    siteUrl: "https://she-sharp-zeta.vercel.app",
     name: "She Sharp",
     eyebrow: "Women in STEM",
     tagline: "Connecting women in tech through events, mentorship & careers.",

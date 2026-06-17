@@ -252,4 +252,224 @@ export const projects = [
     deployBranch: "main",
     autoDeploy: false, // manual: npm run deploy:wrangler (vite build && wrangler deploy)
   },
+
+  // ── Wave 3: remaining deployed apps + games (+ 2 SVG-og fixes) ──
+  {
+    id: "sunostats",
+    repoDir: "D:/github_repository/sunostats",
+    publicDir: "public",
+    siteUrl: "https://sunostats.chanmeng.org",
+    name: "SunoStats",
+    eyebrow: "Suno Analytics",
+    tagline: "The analyst for Suno creators — tag reports, snapshots, trending intel.",
+    bg: "#161616", // monochrome editorial brand
+    accent: "#FAFAFA",
+    logo: null, // only ships the personal monkey mark → no-logo panel layout
+    framework: "app",
+    metaFile: "src/app/layout.tsx",
+    deployBranch: "master", // GitHub Actions → Docker → VPS, auto on push
+  },
+  {
+    id: "chinese-redefine",
+    repoDir: "D:/github_repository/chinese-redefine",
+    publicDir: "public",
+    siteUrl: "https://chinese-redefine.chanmeng-dev.workers.dev",
+    name: "Chinese Redefine",
+    eyebrow: "Word Card Generator",
+    tagline: "Reinterpreting classical Chinese words for modern times.",
+    bg: "#F7F4EF", // warm paper cream
+    accent: "#C82F1D", // vermillion (朱砂红)
+    tileBg: "#FFFFFF",
+    logo: "public/logo-seal.svg", // circular red seal mark
+    logoPad: true,
+    framework: "app",
+    metaFile: "app/layout.tsx",
+    deployBranch: "master",
+    autoDeploy: false, // manual: npm run deploy (opennextjs-cloudflare); acct c87dca (chanmeng-dev)
+  },
+  {
+    id: "agrihire-solutions",
+    repoDir: "D:/github_repository/agrihire-solutions",
+    publicDir: "public",
+    siteUrl: "https://agrihire.chanmeng.org",
+    name: "AgriHire Solutions",
+    eyebrow: "Equipment Hire",
+    tagline: "Agricultural equipment hire made simple — across New Zealand.",
+    bg: "#2D8659", // brand green
+    accent: "#1B5E20", // deeper green panel
+    logo: null, // only ships the personal monkey mark → no-logo panel layout
+    framework: "app",
+    metaFile: "src/app/layout.tsx",
+    deployBranch: "main",
+    autoDeploy: false, // manual: npm run deploy (opennextjs-cloudflare)
+  },
+  {
+    id: "ai-hackathon-assistant",
+    repoDir: "D:/github_repository/ai-hackathon-assistant",
+    publicDir: "public",
+    siteUrl: "https://ai-hackathon-assistant.chanmeng-dev.workers.dev",
+    name: "AI Hackathon 2025",
+    eyebrow: "Festival Assistant",
+    tagline: "Schedules, team formation, judging criteria — instant answers.",
+    bg: "#050505",
+    accent: "linear-gradient(135deg,#47D83A,#189C91)", // the event green→teal gradient
+    logo: null, // logo is a wide wordmark; use the gradient panel instead
+    framework: "app",
+    metaFile: "app/layout.tsx",
+    deployBranch: "master", // GitHub Actions → Cloudflare, auto on push to main/master
+  },
+  {
+    id: "forward-with-her-mentorship-program",
+    repoDir: "D:/github_repository/forward-with-her-mentorship-program",
+    publicDir: "public",
+    siteUrl: "https://forward-with-her-mentorship-program.pages.dev",
+    name: "Forward with Her",
+    eyebrow: "Mentorship",
+    tagline: "A growth program connecting women in tech with mentors.",
+    bg: "#FFF5E6", // warm cream
+    accent: "#FF9933", // orange
+    tileBg: "#FFFFFF",
+    logo: "public/images/logo.svg",
+    logoPad: true,
+    framework: "app",
+    metaFile: "src/app/layout.tsx",
+    deployBranch: "master",
+    autoDeploy: false, // Cloudflare Pages: npm run build && wrangler pages deploy out
+  },
+  {
+    id: "send-joy",
+    repoDir: "D:/github_repository/send-joy",
+    publicDir: "public",
+    siteUrl: "https://sendjoy.chanmeng-dev.workers.dev",
+    name: "SendJoy",
+    eyebrow: "Email Templates",
+    tagline: "Drag-and-drop email templates — free, open-source, no code.",
+    bg: "#FFFFFF",
+    accent: "#DC2626", // neo-red
+    tileBg: "#FEF3C7", // neo-cream tile frames the red mark
+    logo: "public/send-joy-logo.svg",
+    logoPad: true,
+    framework: "app",
+    metaFile: "app/layout.tsx", // FIX: og:image .svg → /og-cover.png
+    deployBranch: "master", // GitHub Actions → Cloudflare, auto on push
+  },
+  {
+    id: "leviathan",
+    repoDir: "D:/github_repository/leviathan",
+    publicDir: "packages/client/public",
+    siteUrl: "https://leviathan-client.vercel.app",
+    name: "Leviathan",
+    eyebrow: "AI Roguelike",
+    tagline: "An AI-native narrative strategy roguelike. Every run is unique.",
+    bg: "#1B2B1B", // Balatro-style forest green
+    accent: "#D4A843", // warm gold
+    tileBg: "#F5F0E8", // cream card frames the dark mark
+    logo: "packages/client/public/leviathan-logo.svg",
+    logoPad: true,
+    framework: "static", // Vite; meta in packages/client/index.html (FIX og:image .svg → png)
+    metaFile: "packages/client/index.html",
+    deployBranch: "main", // Vercel auto on push
+  },
+  {
+    id: "css-tower-defense",
+    repoDir: "D:/github_repository/css-tower-defense",
+    publicDir: "assets/images", // gulp copies assets/ → dist/ (served by the worker)
+    siteUrl: "https://towerdefense.chanmeng.org",
+    name: "Guardians of Aotearoa",
+    eyebrow: "Te Pā Tiaki",
+    tagline: "A 3D tower defense game rendered entirely in CSS.",
+    bg: "#000000",
+    accent: "#2D8A8A", // cyan
+    tileBg: "#FFF8F0", // warm white frames the ornate Māori mark
+    logo: "assets/images/tower-defense-logo.svg",
+    logoPad: true,
+    framework: "static", // gulp-built; meta in index.src.html → built index.html (absolute og url)
+    metaFile: "index.src.html",
+    deployBranch: "main", // GitHub Actions: compile + wrangler, auto on push
+  },
+  {
+    id: "ai-human-game",
+    repoDir: "D:/github_repository/ai-human-game",
+    publicDir: "public",
+    siteUrl: "https://ai-human-game.chanmeng-dev.workers.dev",
+    name: "AI vs Human",
+    eyebrow: "Guessing Game",
+    tagline: "Can you tell AI-generated content from human-made?",
+    bg: "#0A0A0A",
+    accent: "#C846AB", // bright purple
+    tileBg: "#FFFFFF",
+    logo: "public/ai-human-game.svg",
+    logoPad: true,
+    framework: "app",
+    metaFile: "app/layout.tsx",
+    deployBranch: "main",
+    autoDeploy: false, // manual: npm run deploy (build:cloudflare && wrangler deploy); acct c87dca
+  },
+  {
+    id: "journey-of-reincarnation",
+    repoDir: "D:/github_repository/journey-of-reincarnation",
+    publicDir: "public",
+    siteUrl: "https://journey-of-reincarnation.pages.dev",
+    name: "Journey of Reincarnation",
+    eyebrow: "Life Simulation",
+    tagline: "A journey through different lives.",
+    bg: "#020817",
+    accent: "#6366F1", // indigo pop on the near-black brand bg
+    logo: "public/images/JourneyofReincarnation_white.svg", // white variant for dark bg
+    logoPad: true,
+    framework: "app",
+    metaFile: "src/app/layout.tsx",
+    deployBranch: "main",
+    autoDeploy: false, // manual: npm run deploy (next build && wrangler pages deploy out)
+  },
+  {
+    id: "otherworld-god-farmer",
+    repoDir: "D:/github_repository/otherworld-god-farmer",
+    publicDir: "public",
+    siteUrl: "https://otherworld-god-farmer.pages.dev",
+    name: "Otherworld God-Farmer",
+    eyebrow: "Farm Sim",
+    tagline: "A leisurely garden, from scratch.",
+    bg: "#2C3E50", // game canvas slate
+    accent: "#FA4F00", // logo orange
+    tileBg: "#FFFFFF",
+    logo: "public/otherworld-god-farmer-logo.svg",
+    logoPad: true,
+    framework: "angular", // meta in src/index.html (absolute og url)
+    metaFile: "src/index.html",
+    deployBranch: "main",
+    autoDeploy: false, // manual: npm run deploy (ng build && wrangler pages deploy)
+  },
+  {
+    id: "html-brick-game",
+    repoDir: "D:/github_repository/html-brick-game",
+    publicDir: ".", // plain static site; png sits next to index.html at repo root
+    siteUrl: "https://chanmeng666.github.io/html-brick-game",
+    name: "Starlight Breaker",
+    eyebrow: "HTML5 Canvas",
+    tagline: "An artistic brick-breaking game in pure vanilla JavaScript.",
+    bg: "#1E3C72", // deep arcade blue
+    accent: "#00D4FF", // cyan
+    logo: null, // ships only a 1200×630 banner PNG → use the no-logo panel
+    framework: "static", // GitHub Pages subpath; absolute og url required
+    metaFile: "index.html",
+    deployBranch: "main", // GitHub Pages, auto on push to main (root)
+  },
+  {
+    id: "kaboom-rpg-adventure",
+    repoDir: "D:/github_repository/kaboom-rpg-adventure",
+    publicDir: "public", // Vite copies public/ → dist/ root
+    siteUrl: "https://chanmeng666.github.io/kaboom-rpg-adventure",
+    name: "Kaboom RPG",
+    eyebrow: "Pixel Adventure",
+    tagline: "A 2D pixel-art RPG adventure built with Kaboom.js.",
+    bg: "#311047", // dark purple
+    accent: "#6366F1", // indigo
+    tileBg: "#FFFFFF",
+    logo: "public/logo.svg",
+    logoPad: true,
+    framework: "static", // Vite + GitHub Actions → Pages subpath; absolute og url required
+    metaFile: "index.html",
+    deployBranch: "master", // GitHub Actions: vite build → Pages, auto on push
+  },
 ];

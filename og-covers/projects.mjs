@@ -195,4 +195,61 @@ export const projects = [
     metaFile: "docusaurus.config.ts",
     deployBranch: "main",
   },
+
+  // ── Wave 2: flagship / private web apps ──
+  {
+    id: "tam-ai-ti",
+    repoDir: "D:/github_repository/tam-ai-ti-web",
+    publicDir: "public",
+    siteUrl: "https://tamaiti.whiri-ai.com",
+    name: "TAM AI TI",
+    eyebrow: "Financial Wellness",
+    tagline: "Financial wellness that weaves Māori wisdom with AI.",
+    bg: "#064E3B", // deep pounamu — dark companion to the brand green #10B981
+    accent: "#10B981",
+    tileBg: "#FFFFFF", // logo is a single-color (black) square mark
+    logo: "public/tam-ai-ti-logo.svg",
+    logoPad: true,
+    framework: "app",
+    metaFile: "app/layout.tsx",
+    deployBranch: "main",
+    remoteOwner: "Whiri-AI", // org repo; Vercel git-integration auto-deploy
+  },
+  {
+    id: "gavigo-ire",
+    repoDir: "D:/github_repository/gavigo",
+    publicDir: "frontend/public",
+    siteUrl: "https://ire.gavigo.com",
+    name: "Gavigo IRE",
+    eyebrow: "Instant Reality Exchange",
+    tagline: "AI-driven container orchestration, visualized in real time.",
+    bg: "#0A0E1A",
+    accent: "#0082FB",
+    tileBg: "#FFFFFF", // logo is a dark-blue gradient mark — pops on a white tile
+    logo: "frontend/public/gavigo-logo.svg",
+    logoPad: true,
+    framework: "static", // Vite + React; meta tags live in frontend/index.html
+    metaFile: "frontend/index.html",
+    deployBranch: "main",
+    autoDeploy: false, // GKE: docker build → push to GCR → kubectl apply (manual, on their infra)
+    remoteOwner: "gavigo-inc",
+  },
+  {
+    id: "linkedin-jobs-search",
+    repoDir: "D:/github_repository/linkedin-jobs-search",
+    publicDir: "public",
+    siteUrl: "https://linkedin-jobs-search.chanmeng-dev.workers.dev",
+    name: "LinkedIn Jobs Search",
+    eyebrow: "Job Search API",
+    tagline: "Programmatic LinkedIn job search for humans and AI agents.",
+    bg: "#0A66C2",
+    accent: "#FFA7D7",
+    tileBg: "#FFFFFF", // branded blue+pink square mark, framed on white
+    logo: "public/assets/images/linkedin-jobs-search-logo.svg",
+    logoPad: true,
+    framework: "static", // Vite + React SPA on a Cloudflare Worker; meta in index.html
+    metaFile: "index.html",
+    deployBranch: "main",
+    autoDeploy: false, // manual: npm run deploy:wrangler (vite build && wrangler deploy)
+  },
 ];

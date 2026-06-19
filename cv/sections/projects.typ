@@ -8,7 +8,7 @@
   set text(size: size-body, fill: ink)
   set par(leading: 0.82em, justify: true)
   [
-    Builds production AI systems used by real teams every day — handling paying customers, sensitive data, and regulated workflows, not demos. Focus areas: *women's health, cultural technology, and early-stage startup infrastructure*. Daily-driver of the same *Claude Agent SDK, MCP, and agent-skills* stack used inside Anthropic's Partner Network — already shipping these as open-source reference implementations.
+    Builds the AI software that real companies run every day — handling paying customers, private data, and regulated work, not demos. Focus areas: *women's health, cultural technology, and early-stage startup infrastructure*. Works AI-native by default — directing coding agents (Claude Code, Codex) and the *Claude Agent SDK, MCP, and agent-skills* stack Anthropic's partners use, and owning the judgment of what actually ships.
   ]
 })
 

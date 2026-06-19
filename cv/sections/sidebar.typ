@@ -31,16 +31,16 @@
     *Ship production AI agents that don't fall over.* Multi-agent systems with hard guardrails enforced in code — not just prompts — for compliance and financial steps.
   ]
   list.item[
-    *Keep AI cost and latency predictable.* Prompt caching, model-tier routing, evaluation harnesses with documented failure modes — not hype.
+    *Keep AI fast and affordable to run.* Prompt caching, model-tier routing, and evaluation harnesses with documented failure modes — not hype.
   ]
   list.item[
-    *Multi-tenant SaaS without context bleed.* Scoped sessions per customer, durable error handling, observability.
+    *Keep every customer's data separate and safe.* Per-customer isolation (multi-tenant), durable error handling, observability.
   ]
   list.item[
-    *Senior judgement on architectural calls.* Discovery-first planning before coding · structured CI output · deterministic code-level guardrails over prompt instructions.
+    *Senior judgement on the big technical calls.* Discovery-first planning before coding · structured CI output · deterministic code-level guardrails over prompt instructions.
   ]
   list.item[
-    *Multiply team velocity.* Internal CLIs, IDE hooks, and MCP servers that compound across the engineering org.
+    *Make the whole team faster.* Internal CLIs, IDE hooks, and MCP servers that compound across the engineering org.
   ]
 })
 
@@ -98,11 +98,8 @@
     "CopilotKit",
     "Vercel AI SDK",
   ))
-  skill-category("Agent protocols", (
-    "MCP",
-    "A2A",
-    "AGNTCY",
-    "ACP",
+  skill-category("How agents connect to tools & data", (
+    "MCP (Model Context Protocol)",
   ))
   // Real tools from profile.yaml: Vitest (multiple projects), Cypress
   // (Douyin Mall Vue 3 supplement), mcp-evals 2.0.0 (early adopter, line

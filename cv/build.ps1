@@ -10,9 +10,10 @@
 #
 # Outputs (written to public/ so they ship with the GitHub repo and the
 # README "Resume" pill keeps resolving to the same URL):
-#   - public/chan-meng-cv.pdf  (canonical CV — replaces the old static file)
-#   - public/cv.jsonld         (schema.org Person + WorkExperience JSON-LD)
-#   - public/cv-llms.txt       (agent-readable plain-text summary)
+#   - public/chan-meng-cv.pdf          (canonical 2-page CV — README/site link here)
+#   - public/chan-meng-cv-extended.pdf (multi-page, single-column, AI-native companion)
+#   - public/cv.jsonld                 (schema.org Person + WorkExperience JSON-LD)
+#   - public/cv-llms.txt               (agent-readable plain-text summary)
 
 $ErrorActionPreference = "Stop"
 $repoRoot = Split-Path -Parent $PSScriptRoot
@@ -25,6 +26,9 @@ try {
     # CI, independent of what's installed in the OS font book.
     typst compile --root . --font-path cv/fonts cv/chan-meng-cv.typ public/chan-meng-cv.pdf
 
+    Write-Host "→ Compiling cv/chan-meng-cv-extended.typ → public/chan-meng-cv-extended.pdf"
+    typst compile --root . --font-path cv/fonts cv/chan-meng-cv-extended.typ public/chan-meng-cv-extended.pdf
+
     Write-Host "→ Emitting public/cv.jsonld (schema.org JSON-LD for recruiter LLMs)"
     node cv/build-jsonld.mjs data/profile | Out-File -Encoding utf8 public/cv.jsonld
 
@@ -32,13 +36,15 @@ try {
     node cv/build-llms-txt.mjs data/profile | Out-File -Encoding utf8 public/cv-llms.txt
 
     $pdfBytes  = (Get-Item public/chan-meng-cv.pdf).Length
+    $extBytes  = (Get-Item public/chan-meng-cv-extended.pdf).Length
     $jsonBytes = (Get-Item public/cv.jsonld).Length
     $txtBytes  = (Get-Item public/cv-llms.txt).Length
     Write-Host ""
     Write-Host "✓ Build complete"
-    Write-Host "   public/chan-meng-cv.pdf   $($pdfBytes.ToString('N0')) bytes"
-    Write-Host "   public/cv.jsonld          $($jsonBytes.ToString('N0')) bytes"
-    Write-Host "   public/cv-llms.txt        $($txtBytes.ToString('N0')) bytes"
+    Write-Host "   public/chan-meng-cv.pdf            $($pdfBytes.ToString('N0')) bytes"
+    Write-Host "   public/chan-meng-cv-extended.pdf   $($extBytes.ToString('N0')) bytes"
+    Write-Host "   public/cv.jsonld                   $($jsonBytes.ToString('N0')) bytes"
+    Write-Host "   public/cv-llms.txt                 $($txtBytes.ToString('N0')) bytes"
 }
 finally {
     Pop-Location

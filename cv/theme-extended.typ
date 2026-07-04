@@ -25,8 +25,8 @@
 // ─── Leading (within-paragraph line spacing) — airy ──────────────────────────
 // Typst par.leading is the GAP between lines (default 0.65em). 0.95em gives a
 // clearly open, relaxed measure for long-form reading without feeling sparse.
-#let leading-body-x = 0.95em
-#let leading-lead-x = 1.0em   // manifesto paragraphs — the roomiest text
+#let leading-body-x = 1.04em  // within-paragraph line spacing — open, easy to read
+#let leading-lead-x = 1.16em  // manifesto / lead paragraphs — the roomiest text
 
 // ─── Structural spacing (between blocks) — generous ──────────────────────────
 #let space-section-x    = 26pt   // above each section header — strong breath

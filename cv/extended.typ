@@ -152,6 +152,31 @@
   for it in items { list.item(it) }
 })
 
+// ─── Logo strip — a row of shipped-product marks, fixed height ───────────────
+#let logo-strip(paths, ht: 19pt, g: 18pt) = block(above: 0pt, below: 0pt, {
+  set par(leading: 1.7em, justify: false)
+  for (i, p) in paths.enumerate() {
+    box(baseline: 0.3 * ht, image(p, height: ht))
+    if i < paths.len() - 1 { h(g) }
+  }
+})
+
+// ─── Captioned photo figure (centered, rounded, hairline frame) ──────────────
+#let photo-figure(path, caption, w: 58%) = block(above: 0pt, below: 0pt, breakable: false,
+  align(center, box(width: w, {
+    box(width: 100%, radius: 8pt, clip: true, stroke: 0.8pt + rule.lighten(25%), image(path, width: 100%))
+    v(5pt)
+    align(center, text(size: size-tiny-x, fill: muted, style: "italic", caption))
+  }))
+)
+
+// ─── Halftone brand band — Chan's signature risograph texture (16:9 source,
+//     clipped to a slim full-width strip as a brand accent). ─────────────────
+#let halftone-band() = block(above: 0pt, below: 16pt,
+  box(width: 100%, height: 34pt, clip: true, radius: 4pt,
+    image("/public/brand/halftone-thumb.svg", width: 100%))
+)
+
 // ─────────────────────────────────────────────────────────────────────────────
 // HEADER
 // ─────────────────────────────────────────────────────────────────────────────
@@ -255,24 +280,156 @@
   )
 })
 
+// ─── Capability band (single column): accent eyebrow + concise lead +
+//     tight receipt list. Generous gap below so bands breathe vertically. ────
+#let cap(eyebrow, lead, items) = block(above: 0pt, below: 22pt, {
+  block(above: 0pt, below: 7pt, breakable: false, {
+    text(weight: "bold", size: size-meta-x, font: sans, fill: accent, tracking: 0.07em, upper(eyebrow))
+  })
+  if lead != none {
+    block(above: 0pt, below: 9pt, {
+      set par(leading: leading-body-x, justify: false)
+      text(size: size-body-x, fill: muted, lead)
+    })
+  }
+  block(above: 0pt, below: 0pt, {
+    set text(size: size-body-x, fill: ink)
+    set par(leading: leading-body-x, justify: false)
+    set list(marker: text(fill: accent, size: 6pt)[•], indent: 0pt, body-indent: 8pt, spacing: 9pt)
+    for it in items { list.item(it) }
+  })
+})
+
+// ─── Evidence figure tile (real image clipped, or a dashed placeholder). ─────
+#let fig(img, caption) = block(breakable: false, {
+  if img == none {
+    box(width: 100%, height: 150pt, radius: 7pt, fill: pill-bg,
+      stroke: (paint: accent, thickness: 0.9pt, dash: "dashed"),
+      align(center + horizon, text(size: 9pt, fill: muted, style: "italic")[screenshot to add]))
+  } else {
+    box(width: 100%, height: 150pt, radius: 7pt, clip: true, stroke: 0.8pt + rule.lighten(30%),
+      image(img, width: 100%))
+  }
+  v(5pt)
+  text(size: size-tiny-x, fill: muted, style: "italic", caption)
+})
+
+// ─── Two-up figure grid — large, airy tiles (deliberately NOT a dense grid). ─
+#let fig-grid(items) = grid(
+  columns: (1fr, 1fr),
+  column-gutter: 18pt,
+  row-gutter: 18pt,
+  ..items.map(it => fig(it.at(0), it.at(1))),
+)
+
+// ─── Speaking / event photo strip (real photos + "to add" placeholders) ──────
+#let photo-strip(items) = block(breakable: false, {
+  grid(
+    columns: (1fr,) * items.len(),
+    column-gutter: 10pt,
+    ..items.map(it => {
+      if it.img == none {
+        box(width: 100%, height: 84pt, radius: 6pt, fill: pill-bg,
+          stroke: (paint: accent, thickness: 0.8pt, dash: "dashed"),
+          align(center + horizon, text(size: 7.5pt, fill: muted, style: "italic")[photo to add]))
+      } else {
+        box(width: 100%, height: 84pt, radius: 6pt, clip: true, stroke: 0.8pt + rule.lighten(30%),
+          image(it.img, width: 100%))
+      }
+    }),
+  )
+  v(5pt)
+  grid(
+    columns: (1fr,) * items.len(),
+    column-gutter: 10pt,
+    ..items.map(it => text(size: size-tiny-x, fill: muted, style: "italic", it.cap)),
+  )
+})
+
 // ─────────────────────────────────────────────────────────────────────────────
-// SECTION: What I Build With AI  (full-spectrum showcase)
+// SECTION: Selected Work — the single, de-duplicated evidence showcase.
+// Every artifact appears exactly ONCE, grouped by capability, each name a link.
+// (Replaces the old "What I Build" + "Open-Sourced" + "Selected Projects".)
 // ─────────────────────────────────────────────────────────────────────────────
-#let x-what-i-build() = xsection("What I Build With AI", {
-  block(above: 0pt, below: 16pt, {
+#let x-selected-work() = xsection("Selected Work — Proof of an AI-Native Builder", {
+  block(above: 0pt, below: 22pt, {
     set par(leading: leading-lead-x, justify: false)
     text(size: size-body-x, fill: ink)[
-      "Engineer" undersells it. With AI as the multiplier, I build across the whole product surface — the agent, the system around it, the brand it ships under, and the documents and marketing that carry it:
+      As an independent developer working directly with real clients, I own the whole delivery end to end — the app and the agent, the brand system, the documents, and the launch media — all as version-controlled code, with Claude Code as the multiplier. Every name below is a link you can open; a few of these are shown in the gallery that follows.
     ]
   })
-  build-line([AI agents & multi-agent systems], [guardrails enforced in code, built to run in production with paying customers — not demos.])
-  build-line([MCP servers], [shipped one of the earliest in the ecosystem (Google News MCP, 35 days after Anthropic's launch) — now listed across 15+ catalogs.])
-  build-line([Agent skills], [including the official Typst skill for Claude Code — it typesets this very CV.])
-  build-line([Visual brand & design systems], [a full Caldera-grade brand system (tokens, type, motion) and gradient-svg-generator with 340+ animated-SVG templates.])
-  build-line([Workflows & internal tooling], [CI/CD pipelines, internal CLIs, multi-agent "teams", code-review automation, and IDE hooks that compound across an engineering org.])
-  build-line([Documents as code], [agendas, contracts, receipts, papers, Speaker & Media Kits, this CV — all typeset programmatically in Typst: version-controlled, reproducible, no templates and no hosted doc-gen service.])
-  build-line([Marketing assets], [branded social & OG cover images, promotional graphics, and short-form video — produced through code, on-brand, at speed.])
+
+  cap("AI agents & production apps",
+    [Multi-agent systems that run in production — paying customers, sensitive data, guardrails enforced in code, not just prompts. The agent ships as the product, never a demo.],
+    (
+      [#link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] — te-ao-Māori financial-wellness coach · 351 commits · 19-user, 4-month cohort],
+      [#link("https://github.com/ChanMeng666/femtracker-agent")[FemTracker] — 8-node LangGraph agent, merged into CopilotKit's official demos],
+      [#link("https://www.vitex.org.nz/")[Vitex] — AI career agent: a job description → tailored résumé + cover letter in under 30s],
+      [#link("https://fanfic-lab.tech/")[FanFic Lab] — 7-node LangGraph writing agent with RAG over pgvector],
+      [#link("https://sunostats.chanmeng.org/")[SunoStats] — the first Suno music-lineage explorer · trilingual],
+    ),
+  )
+  cap("Skills, MCP servers & developer tools",
+    [I package the workflows I rely on into reusable Claude Code skills, plugins and MCP servers — then open-source them for everyone.],
+    (
+      [#link("https://github.com/ChanMeng666/academic-paper-review-skill")[academic-paper-review-skill] — dual-lens peer review → Markdown / Typst / PDF],
+      [#link("https://github.com/ChanMeng666/app-promo-studio")[app-promo-studio] — screenshots → cross-platform store & social images],
+      [#link("https://github.com/ChanMeng666/logo-as-code-skill")[logo-as-code-skill] — hand-drawn logo → editable SVG + favicons],
+      [#link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] — Typst PDF generation; it typesets this CV],
+      [#link("https://github.com/ChanMeng666/echook")[echook] — audio-hooks framework · 26 events · 139 tests · triple-OS CI],
+      [#link("https://glama.ai/mcp/servers/ChanMeng666/server-google-news")[Google News] & #link("https://github.com/ChanMeng666/server-google-jobs")[Google Jobs] MCP — among the earliest · 15+ catalogs],
+    ),
+  )
+  cap("Design systems & brand",
+    [Whole design systems, not themes — tokens, type, motion, and a signature risograph texture — for my own brand and for paying clients.],
+    (
+      [*Caldera* — the design system behind this CV: tokens, type, motion],
+      [#link("https://eatropolis.co.nz/")[Chow Luck Club] — event brand + site for a paying client (Tātaki Auckland Unlimited / Auckland Council)],
+      [#link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] — 340+ animated-SVG templates · 273 solo commits],
+    ),
+  )
+  cap("Documents as code",
+    [As an independent developer with real clients, I write the paperwork too — all typeset as version-controlled Typst, reproducible, with no hosted doc-gen service.],
+    (
+      [*Client contracts & staged receipts* — delivery paperwork generated and tracked as code],
+      [*Conference agenda* — FemTech Weekend's 2026 Shanghai Summit programme],
+      [Speaker & #link("https://github.com/ChanMeng666/ChanMeng666/tree/main/media-kit")[Media Kit] — a press one-sheet for speaking],
+      [*Peer-review reports & this CV* — my own Typst pipeline],
+    ),
+  )
+  cap("Marketing media — images & video",
+    [Launch media, also as code — promo graphics generated from the design system as HTML, and code-driven video in Remotion with AI voice and music. Zero Premiere, zero voice actors.],
+    (
+      [#link("https://github.com/ChanMeng666/echook-promo-video")[echook promo film] — 88-sec product film · Remotion + Claude Code + ElevenLabs + Suno],
+      [*Promo graphics & OG covers* — HTML → branded images across every deployed project],
+    ),
+  )
+  cap("Team automation & playable games",
+    [I automate team operations and build playful things — a Slack ecosystem that retired volunteer chores, and games shipped end to end.],
+    (
+      [#link("https://github.com/NZ-SheSharp/she-sharp")[She Sharp Slack ecosystem] — event bot, weekly digests, NZ-funding crawler + a sync-event-from-slack skill],
+      [#link("https://towerdefense.chanmeng.org/")[CSS Tower Defense] — 3D tower defense in pure CSS, for Waitangi Day],
+      [#link("https://cloud-canals.vercel.app/")[Cloud Canals] — SVG water-routing game for team downtime],
+    ),
+  )
+
+  // ── Evidence gallery — large two-up tiles, real screenshots + placeholders.
+  block(above: 6pt, below: 9pt, breakable: false, {
+    text(size: size-meta-x, fill: muted, style: "italic")[Selected work, in the wild — real screenshots, with placeholders where more are coming.]
+  })
+  fig-grid((
+    ("/cv/assets/thumbs/tam-ai-ti.jpg", [Tam-AI-Ti — production app]),
+    ("/cv/assets/thumbs/vitex.jpg", [Vitex — AI career agent]),
+    ("/cv/assets/thumbs/eatropolis.jpg", [Chow Luck Club — client site]),
+    (none, [CSS Tower Defense — pure-CSS game]),
+    (none, [Client contract & receipts — Typst]),
+    (none, [echook promo film — Remotion]),
+  ))
 })
+
+// (The old "Open-Sourced for the Community" and "Selected Open-Source Projects"
+//  sections were merged into x-selected-work() above — each artifact appears
+//  exactly once now, so nothing is duplicated.)
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SECTION: Experience
@@ -318,65 +475,11 @@
 })
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SECTION: Selected Open-Source Projects
-// ─────────────────────────────────────────────────────────────────────────────
-#let x-projects() = xsection("Selected Open-Source Projects", {
-  xproject(
-    logo: "/public/brands/tam-ai-ti-logo-with-brand.svg",
-    name: "Tam-AI-Ti", url: "https://tamaiti.whiri-ai.com/",
-    context-line: [An AI financial-wellness app built around te ao Māori — the user's culture lives in the data model, not just the translation layer · commissioned solo by Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead).],
-    bullets: (
-      [351 commits solo · 48 tables / 494 columns / 22 migrations · 3-model OpenAI composition (`gpt-4o-mini` coach turns + `gpt-4o` synthesis + `gpt-4o-realtime-preview` voice).],
-      [*Schema-first te reo Māori* — Maramataka lunar phases and Te Whare Tapa Whā wellness domains live as first-class Drizzle enum types, not UI labels (prevents the "i18n drift" where cultural concepts decay into English-only columns).],
-      [*19-user research cohort sustained 4 months* · 181 bilingual journal entries · 35 voice sessions · 146 AI coach messages · 74 daily check-ins.],
-    ),
-  )
-  xproject(
-    logo: "/public/brands/echook-logo.svg",
-    name: "echook — claude-code-audio-hooks", url: "https://github.com/ChanMeng666/echook",
-    context-line: [A noise-control system for AI coding assistants — turns down their constant audio chatter during deep work, and alerts only on the things that matter.],
-    bullets: (
-      [*Reference implementation of the Claude Agent SDK hooks lifecycle* — PreToolUse · PostToolUse · status line · context-window quota. 26 hook events · 42 releases · 139 tests on triple-platform CI (Linux / macOS / Windows).],
-      [*Cross-tool by design* — one hook system, three IDE surfaces: Claude Code, Cursor, OpenAI Codex.],
-      [Started as an internal noise-fix for long-running background agents; open-sourced after teammates asked for it; now community-adopted across all three IDEs.],
-    ),
-  )
-  xproject(
-    logo: "/public/brands/vitex.svg",
-    name: "Vitex — AI Career Agent", url: "https://www.vitex.org.nz/",
-    context-line: [Paste a job description, get a tailored resume + cover letter scored against the JD's keywords in under 30 seconds · ~95% solo · 168 commits · Vercel AI SDK + GPT-4o + Typst.],
-    bullets: (
-      [*7-step AI pipeline streaming over SSE* (JD parsing → background → match analysis → resume tailoring → ATS scoring → cover letter → Typst doc generation) · every stage Zod-validated structured output.],
-      [*Typst compiles PDFs locally in under 100 ms* across 14 AI-auto-selected templates — no hosted Chromium, no third-party doc-gen API.],
-      [*Three production migrations* (Railway → Cloudflare Workers → DigitalOcean VPS) + LaTeX → Typst engine swap, zero downtime · Docker + Traefik + GitHub Actions CD · Stripe credits ledger + share-token URLs.],
-    ),
-  )
-  xproject(
-    logo: "/public/brands/server-google-news.svg",
-    name: "Google News MCP Server", url: "https://glama.ai/mcp/servers/ChanMeng666/server-google-news",
-    context-line: [Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch.],
-    bullets: (
-      [*Featured in Skywork AI's AI-engineer deep-dive guide* — listed across *15+ MCP catalogs* · PulseMCP "Top Pick" · Glama A-rating · 122 stars · `@chanmeng666/google-news-server` on npm.],
-      [*Shipped before MCP had a registry* — built its own discovery story (PulseMCP + Glama + npm submissions), compounding into a first-mover index advantage as catalogs came online.],
-    ),
-  )
-
-  block(above: 4pt, below: 0pt, {
-    set text(size: size-tiny-x, fill: muted, style: "italic")
-    set par(leading: leading-body-x, justify: false)
-    [
-      *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (solo 9-day commercial event platform for Chow Luck Club × Tātaki Auckland Unlimited / Auckland Council) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (340+ animated-SVG templates, 273 solo commits) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (official Typst skill for Claude Code — typesets this CV) · #link("https://sunostats.chanmeng.org/")[SunoStats] (industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese) · #link("https://fanfic-lab.tech/")[FanFic Lab] (7-node LangGraph agent).
-    ]
-  })
-})
-
-// ─────────────────────────────────────────────────────────────────────────────
 // SECTION: Toolkit & Stack
 // ─────────────────────────────────────────────────────────────────────────────
 #let x-toolkit() = xsection("Toolkit & Stack", {
   xskill-category("Claude Code — every extension surface shipped", ("CLAUDE.md", "Skills", "Subagents", "Hooks", "Status line", "Plugins"))
   xskill-category("Codex CLI — daily-driver fluency", ("AGENTS.md", "Sandbox + approvals", "Headless mode"))
-  xskill-category("Beyond pure coding — AI-leveraged work", ("Typst PDFs", "CI/CD pipelines", "Slack apps", "Agent teams", "Code review", "Internal CLIs"))
   xskill-category("Agent SDKs & frameworks", ("Claude Agent SDK", "OpenAI Agents SDK", "LangGraph", "LangChain", "CopilotKit", "Vercel AI SDK"))
   xskill-category("How agents connect to tools & data", ("MCP (Model Context Protocol)",))
   xskill-category("Quality & observability", ("Vitest", "Cypress", "mcp-evals", "Lighthouse", "OpenTelemetry", "web-vitals"))
@@ -389,14 +492,27 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // SECTION: Recognition
 // ─────────────────────────────────────────────────────────────────────────────
-#let x-recognition() = xsection("Recognition", {
-  set text(size: size-body-x, fill: ink)
-  set par(leading: leading-body-x)
-  set list(marker: text(fill: accent, size: 6pt)[•], indent: 0pt, body-indent: 7pt, spacing: 12pt)
-  list.item[*UN CSW 69 Speaker* — UN HQ NYC, Mar 2025 · attracted *IBM pilot interest* and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
-  list.item[*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors · guided 11 teams / 80+ participants.]
-  list.item[*Excellence Award* — FemTech China (Women's Health Technology Challenge, Dec 2024).]
-  list.item[*UN Women FemTech Hackathon — Outstanding Performer* — FemTech Weekend, Beijing (Mar 2025).]
+#let x-recognition() = xsection("Speaking & Recognition", {
+  block(above: 0pt, below: 12pt, {
+    set par(leading: leading-lead-x, justify: false)
+    text(size: size-body-x, fill: ink)[I speak and mentor in public — at the UN, at hackathons, and across the tech community. A few moments (more to come):]
+  })
+  photo-strip((
+    (img: "/cv/assets/thumbs/speak-keynote.jpg", cap: [Keynote — AI Hackathon Festival 2025]),
+    (img: "/cv/assets/thumbs/speak-panel1.jpg", cap: [Panel — She Sharp]),
+    (img: "/cv/assets/thumbs/speak-panel2.jpg", cap: [Speaking — She Sharp]),
+    (img: none, cap: [more to add]),
+  ))
+  v(16pt)
+  block(above: 0pt, below: 0pt, {
+    set text(size: size-body-x, fill: ink)
+    set par(leading: leading-body-x)
+    set list(marker: text(fill: accent, size: 6pt)[•], indent: 0pt, body-indent: 7pt, spacing: 12pt)
+    list.item[*UN CSW 69 Speaker* — UN HQ NYC, Mar 2025 · attracted *IBM pilot interest* and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
+    list.item[*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors · guided 11 teams / 80+ participants.]
+    list.item[*Excellence Award* — FemTech China (Women's Health Technology Challenge, Dec 2024).]
+    list.item[*UN Women FemTech Hackathon — Outstanding Performer* — FemTech Weekend, Beijing (Mar 2025).]
+  })
 })
 
 // ─────────────────────────────────────────────────────────────────────────────

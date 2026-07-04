@@ -2175,3 +2175,134 @@ projects:
     narrative:
       impactHeadline: "Spring Boot + Maven open-source e-commerce backend template — the Java counterpart to the Go template Chan published from her ByteDance Youth Training Camp capstone, scaffold for later cohorts learning Spring backend architecture."
     status: live
+  - id: esol-learning-platform
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-07-04"
+    name: AI-Powered ESOL Learning Platform
+    priority: 81
+    category: ai-apps
+    tagline: Multi-path English-learning platform — real-time AI speaking coach (OpenAI Realtime API), CEFR general practice, NZCEL exam prep, and gamified progress tracking on a multi-tenant Neon Postgres backend
+    repoUrl: https://github.com/ChanMeng666/esol-learning-platform
+    techStack: ["Next.js 15", React, TypeScript, "Tailwind CSS 4", CopilotKit, "OpenAI Realtime API", Whisper, "Neon Postgres", "Drizzle ORM", "Stack Auth", "Cloudflare Pages"]
+    status: active
+    startDate: "2025-10"
+    publicSummary: |
+      An AI-powered ESOL platform that combines four learning paths — a
+      real-time voice conversation coach built on the OpenAI Realtime API,
+      CEFR-aligned general practice, NZCEL exam preparation, and gamified
+      progress dashboards — over a multi-tenant PostgreSQL backend with
+      organization-scoped server actions.
+    narrative:
+      impactHeadline: "AI-powered ESOL learning platform with a real-time OpenAI voice coach, CEFR + NZCEL study paths, and org-scoped multi-tenant progress tracking — 44-table Neon Postgres schema, 60+ server actions, and audio caching that cuts TTS API cost by 90%+."
+      problem: |
+        ESOL learners lack a single integrated platform for real-time
+        speaking practice, structured NZCEL/CEFR study paths, and persistent
+        cross-module progress tracking.
+      audience: |
+        English-language learners targeting NZCEL or CEFR levels, and
+        organizations needing tenant-isolated ESOL training infrastructure.
+      technicalApproach: |
+        Next.js 15 app over a 44-table Neon Postgres schema with 60+
+        organization-scoped Server Actions, CopilotKit tutoring, and an
+        OpenAI Realtime API voice coach with intelligent audio caching
+        (90%+ TTS cost reduction). Configured for Cloudflare Pages via
+        OpenNext.
+      myRole: |
+        Sole designer and engineer — schema, server actions, voice-coach
+        integration, and the four learning-path modules.
+  - id: wellness-agent
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-07-04"
+    name: Wellness Support Agent
+    priority: 82
+    category: ai-apps
+    tagline: Workplace-wellness platform on Google's Agent Development Kit — five specialized agents with privacy-first, role-based support for employees, HR, and employers
+    repoUrl: https://github.com/ChanMeng666/wellness-agent
+    url: https://sanicle-wellness-agent-2lxj5uw.gamma.site/
+    extraLinks:
+      - { label: "Overview site", url: "https://sanicle-wellness-agent-2lxj5uw.gamma.site/" }
+      - { label: "GitHub repo", url: "https://github.com/ChanMeng666/wellness-agent" }
+    techStack: ["Next.js 15", React, TypeScript, "Python 3.9+", FastAPI, "Google ADK", "Gemini 1.5 Flash", Firestore, BigQuery]
+    status: draft
+    startDate: "2025-05"
+    publicSummary: |
+      A full-stack workplace-wellness demo built on Google's Agent
+      Development Kit: a root agent routes requests to five specialized
+      sub-agents (employee support, HR manager, employer insights, search,
+      leave requests) with a custom memory system and privacy callbacks,
+      served through a Python FastAPI backend to a Next.js chat UI.
+    narrative:
+      impactHeadline: "Workplace-wellness platform on Google's Agent Development Kit — a root agent routes to five specialized sub-agents with privacy callbacks and role-based access for employees, HR, and employers, demonstrating multi-agent architecture for enterprise wellness."
+      problem: |
+        Organizations need privacy-conscious, role-aware AI wellness support
+        that separates employee, HR, and employer data access.
+      audience: |
+        Employees seeking wellness assistance, HR managers analyzing
+        anonymized trends, and employers evaluating workforce wellness ROI.
+      technicalApproach: |
+        Google ADK root agent delegates to five sub-agents with a custom
+        memory system and privacy callbacks; a Python FastAPI backend serves
+        the Next.js chat UI and is deployable to Google Cloud (Firestore,
+        BigQuery, Storage).
+      myRole: |
+        Sole designer and engineer of the agent graph, memory system, and
+        both frontend and backend.
+  - id: she-sharp-event-black-board
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-07-04"
+    name: She Sharp — Event Welcome Board
+    priority: 83
+    category: web-apps
+    tagline: Fullscreen, on-brand electronic welcome sign for She Sharp offline events — pure HTML/CSS/JS, no build step, works offline, with optional live event-data sync from shesharp.org.nz
+    repoUrl: https://github.com/ChanMeng666/she-sharp-event-black-board
+    techStack: [HTML, CSS, JavaScript, "QR code"]
+    status: live
+    startDate: "2026-06"
+    publicSummary: |
+      A static, rotating welcome display for She Sharp events — hero,
+      event details, speaker grid, partner logos, and a registration QR
+      scene. Content is edited in a single config file, and an optional
+      live fetch pulls upcoming events from the official She Sharp JSON
+      feed with silent fallback to local config.
+    narrative:
+      impactHeadline: "Offline-first electronic welcome board for She Sharp's offline tech events — a zero-build static display that auto-rotates hero, speaker, partner, and QR scenes and can optionally sync live event data from shesharp.org.nz."
+      problem: |
+        Event venues need a polished, on-brand welcome screen that works
+        without installs, builds, or reliable Wi-Fi.
+      audience: |
+        She Sharp organizers and volunteers running entrance displays at
+        offline tech events in New Zealand.
+      technicalApproach: |
+        Data-driven static site — a config file defines scenes, an app
+        module handles auto-rotation / fullscreen / keyboard controls, and
+        a live-fetch module optionally maps the official EventV3 feed with
+        silent fallback to local config.
+      myRole: |
+        Sole author; built for the She Sharp community she volunteers with.
+  - id: douyin-mall-frontend
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-07-04"
+    name: Douyin Mall Frontend
+    priority: 84
+    category: web-apps
+    tagline: Vue 3 + TypeScript e-commerce storefront — product browsing, cart, orders, and payment UI, the separated frontend for the Douyin Mall capstone stack
+    repoUrl: https://github.com/ChanMeng666/douyin-mall-frontend
+    techStack: ["Vue 3", TypeScript, Vite, Pinia, "Vue Router", Axios, Vitest, Cypress]
+    status: active
+    startDate: "2025-01"
+    narrative:
+      impactHeadline: "Vue 3 + TypeScript e-commerce storefront for the Douyin Mall stack — a type-safe SPA (Pinia + Vue Router + Vite) implementing the full product / cart / checkout / payment flow with Vitest and Cypress coverage."
+      problem: |
+        The Douyin Mall backend needed a modern, type-safe, separated
+        frontend for a complete shopping experience.
+      technicalApproach: |
+        Vue 3 SPA built with Vite, Pinia state, and Vue Router, consuming
+        REST APIs via Axios with TypeScript type safety and Vitest /
+        Cypress test coverage.
+      myRole: |
+        Frontend author for the ByteDance Youth Training Camp capstone
+        storefront.

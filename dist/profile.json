@@ -473,7 +473,7 @@
         "companyContext": "Sanicle (sanicle.cloud) is a US-based FemTech B2B / B2G SaaS\nplatform tackling menstrual and menopause workplace wellness.\nSelf-description from the company README: \"an innovative FemTech\nB2B-B2G SaaS platform that leverages AI-powered technology to\nrevolutionize menstrual and menopause health in the workplace.\nSupports comprehensive health tracking, predictive analytics,\nand workplace integration with enterprise-grade security.\nPowered by IBM Cloud watsonx AI for intelligent health insights\nand personalized support.\" Founding leadership Chan worked with\ndirectly: Chief Executive Officer Paige Afanu (Omopeju Afanu)\nand Chief Period Officer Chaste Christopher Inegbedion (both\nof whom managed Chan directly), Chief Experience Officer\nGabrielle J. Hurst (peer on the same team; now Remote Pilot\n& Product Marketing Manager at Houston Robotics), and Chief\nAI Officer Daryll Hall — three of whom contributed LinkedIn\ntestimonials referenced in this profile. The company was\nfeatured in THISDAYLIVE's May 2025 piece on FemTech founders\nredefining women's workplace health.\n",
         "mission": "Scale menstrual and menopause wellness benefits to working\nwomen — through employer-provided AI health consultations,\ncycle and symptom tracking, automated leave-request workflows\nwith health-context awareness, and HR-side workforce health\nanalytics — while keeping the experience privacy-first and\nenterprise-deployable. The strategic wedge into enterprises\nruns through the IBM partnership: Sanicle is listed in the\nofficial IBM PartnerPlus Solution Directory, and the watsonx\nintegration is a major credibility surface for B2B sales.\n",
         "myMandate": "Hired initially as **Senior AI/ML Infrastructure Engineer** in\nFebruary 2025 (initial sanicle-ai commit on Feb 26 2025);\npromoted to **CTO** in March 2025. Operating mandate covered\nthe entire technology surface of the company: replace the\nlegacy Bubble no-code site with a real full-stack system,\nship a multi-tenant women's-health SaaS with role-separated\nemployee and HR dashboards, integrate IBM watsonx for AI\nhealth consultations and leave-request workflows, build the\nmarketing site, prototype the mobile app, and produce the\nexecutive-deck demos used in IBM partner conversations. The\nrole through to Feb 2026 spanned active build (Feb–Jun 2025,\n14 weeks of intense solo development) and ongoing\nmaintenance, IBM partnership work, and product evolution\nthrough close-out.\n",
-        "impactDelivered": "**IBM Silver Partner certification for Sanicle.** My watsonx\nintegration into employee dashboards — AI-powered health\nconsultations and automated leave requests — was the\nengineering work that anchored Sanicle's entry into the IBM\nBusiness Partner Network. Sanicle.Cloud is now listed in IBM's\nofficial PartnerPlus Solution Directory (ibm.com/partnerplus/\ndirectory/solution/0638) as a partner solution delivered on\nwatsonx generative AI, hybrid cloud integration, and secure\ndata tooling.\n\n**Five production codebases, ~98% solo authorship across\n~350+ commits:**\n- `sanicle-cloud` — official company website on Next.js,\n  replacing the legacy Bubble no-code site with a proper\n  full-stack build (a migration I strategically recommended\n  and the team accepted)\n- `sanicle-ai` — the core FemTech platform with multi-tenant\n  architecture, role-based auth (Employee / HR Manager /\n  Org Admin), cycle and symptom tracking, AI consultation\n  chat, leave-request workflows, HR analytics dashboards\n- `sanicle-ai-mobile` — mobile-first PWA prototype for the\n  employee surface\n- `reveal.js / sanicle-ai-presentation` — executive demo\n  deck with working employee-side and HR-side video flows\n  used in IBM and partner conversations\n- `sanicle-docs` — internal work archive including 11 weekly\n  reports (Mar 25 – Jun 8 2025) and post-meeting supplements\n  tracking IBM partnership work, architecture decisions, and\n  UI/UX feedback from the C-level team\n\n**Public Next.js ecosystem contribution.** Published a\ncommunity write-up on the Vercel forum titled \"Solved Bug:\nAuthentication Redirect Issue in Sanicle-AI Platform\"\n(community.vercel.com/t/.../6818) documenting a production\nNextAuth 5 + Next.js 15 middleware / auth-state /\nrouting-conflict failure mode and the multi-stage solution.\nPublicly acknowledged by Vercel Staff (Amy Egan): *\"Thanks\nfor sharing your debugging process and solution! This could\nhelp lots of people facing similar auth issues, or trying to\navoid them in the first place.\"*\n",
+        "impactDelivered": "**IBM Silver Partner certification for Sanicle.** My watsonx\nintegration into employee dashboards — AI-powered health\nconsultations and automated leave requests — was the\nengineering work that anchored Sanicle's entry into the IBM\nBusiness Partner Network. Sanicle.Cloud is now listed in IBM's\nofficial PartnerPlus Solution Directory (ibm.com/partnerplus/\ndirectory/solution/0638) as a partner solution delivered on\nwatsonx generative AI, hybrid cloud integration, and secure\ndata tooling.\n\n**Five production codebases, ~98% solo authorship across\n~350+ commits:**\n- `sanicle-cloud` — official company website on Next.js\n  (live at sanicle.cloud), replacing the legacy Bubble no-code\n  site with a proper full-stack build (a migration I\n  strategically recommended and the team accepted)\n- `sanicle-ai` — the core FemTech platform with multi-tenant\n  architecture, role-based auth (Employee / HR Manager /\n  Org Admin), cycle and symptom tracking, AI consultation\n  chat, leave-request workflows, HR analytics dashboards\n  (demo at sanicle-ai.vercel.app; dual IBM watsonx + Google\n  Gemini assistants, built for the UN Women x Sanicle hackathon)\n- `sanicle-ai-mobile` — mobile-first PWA prototype for the\n  employee surface\n- `reveal.js / sanicle-ai-presentation` — executive demo\n  deck with working employee-side and HR-side video flows\n  used in IBM and partner conversations\n- `sanicle-docs` — internal work archive including 11 weekly\n  reports (Mar 25 – Jun 8 2025) and post-meeting supplements\n  tracking IBM partnership work, architecture decisions, and\n  UI/UX feedback from the C-level team\n\n**Public Next.js ecosystem contribution.** Published a\ncommunity write-up on the Vercel forum titled \"Solved Bug:\nAuthentication Redirect Issue in Sanicle-AI Platform\"\n(community.vercel.com/t/.../6818) documenting a production\nNextAuth 5 + Next.js 15 middleware / auth-state /\nrouting-conflict failure mode and the multi-stage solution.\nPublicly acknowledged by Vercel Staff (Amy Egan): *\"Thanks\nfor sharing your debugging process and solution! This could\nhelp lots of people facing similar auth issues, or trying to\navoid them in the first place.\"*\n",
         "technicalHighlights": "Full-stack on **Next.js 15.5.9 + React 19 + TypeScript** with\n**NextAuth 5.0.0-beta.30** for multi-tenant role-based auth\n(Employee / HR Manager / Org Admin); **Drizzle ORM 0.34** over\nPostgreSQL for type-safe persistence; **Upstash Redis** for\ncaching; **Vercel Blob** for file uploads; **Vercel AI SDK\n4.3** as the AI abstraction layer; **shadcn/ui + Radix**\ncomponents; **FullCalendar** for period and cycle\nvisualization; **Chart.js** for HR analytics dashboards;\n**Framer Motion** for the interaction polish. Deployed on\nVercel.\n\n**Dual-AI architecture for resilience.** The platform combines\n**IBM Cloud watsonx AI** (`meta-llama/llama-3-405b-instruct`)\nas the primary engine for AI health consultations and\nleave-request reasoning, with **Google Gemini** as a fallback\nwhen watsonx hits its 28-second response baseline against\nVercel's 10-second function-timeout ceiling. Mock-response\nfallback in the `/api/watsonx-chat` route preserves UX\navailability when the upstream model is rate-limited or\ntiming out, with environment flags (`MOCK_API`) controlling\ndevelopment vs production behavior.\n\n**The Next.js / NextAuth 5 auth-redirect bug-and-fix.**\nIdentified, debugged, and publicly documented a multi-cause\nproduction failure where users authenticated successfully but\nwere never redirected to their personal dashboards on Vercel\n— despite working in local development. Root cause was a\ncombination of middleware conflicts, authentication-state\nsynchronization issues, and routing complications across\nNextAuth 5 beta and Next.js 15. Multi-stage fix shipped to\nproduction; write-up published to the Vercel community forum\nand publicly thanked by Vercel Staff.\n\n**Strategic migration call.** On joining, recommended Sanicle\nmigrate from its Bubble no-code site to a code-based\nfull-stack architecture — the team accepted and I executed\nthe migration solo across `sanicle-cloud` and `sanicle-ai`,\nunblocking the enterprise-grade auth, multi-tenant data\nmodel, IBM watsonx integration, and Vercel-native deployment\npipeline that Bubble fundamentally couldn't support.\n"
       }
     },
@@ -1761,6 +1761,16 @@
       "tagline": "Production-shape Go + Gin + MySQL + Redis e-commerce backend template — clean architecture, JWT auth, bilingual; distilled from ByteDance Youth Training Camp learnings",
       "repoUrl": "https://github.com/ChanMeng666/douyin-mall-go-template",
       "logo": "/public/brands/tiktok-shop.svg",
+      "extraLinks": [
+        {
+          "label": "Full Spring Boot backend (douyin-mall capstone)",
+          "url": "https://github.com/ChanMeng666/douyin-mall"
+        },
+        {
+          "label": "Vue 3 storefront (douyin-mall-frontend)",
+          "url": "https://github.com/ChanMeng666/douyin-mall-frontend"
+        }
+      ],
       "techStack": [
         "Go",
         "Gin",
@@ -2196,6 +2206,10 @@
         {
           "label": "CopilotKit PR #2068",
           "url": "https://github.com/CopilotKit/CopilotKit/pull/2068"
+        },
+        {
+          "label": "FemTracker (React Native product-safety tracker, v1.0.0)",
+          "url": "https://github.com/ChanMeng666/femtracker"
         }
       ],
       "techStack": [
@@ -3547,6 +3561,139 @@
         "impactHeadline": "Spring Boot + Maven open-source e-commerce backend template — the Java counterpart to the Go template Chan published from her ByteDance Youth Training Camp capstone, scaffold for later cohorts learning Spring backend architecture."
       },
       "status": "live"
+    },
+    {
+      "id": "esol-learning-platform",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-07-04",
+      "name": "AI-Powered ESOL Learning Platform",
+      "priority": 81,
+      "category": "ai-apps",
+      "tagline": "Multi-path English-learning platform — real-time AI speaking coach (OpenAI Realtime API), CEFR general practice, NZCEL exam prep, and gamified progress tracking on a multi-tenant Neon Postgres backend",
+      "repoUrl": "https://github.com/ChanMeng666/esol-learning-platform",
+      "techStack": [
+        "Next.js 15",
+        "React",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "CopilotKit",
+        "OpenAI Realtime API",
+        "Whisper",
+        "Neon Postgres",
+        "Drizzle ORM",
+        "Stack Auth",
+        "Cloudflare Pages"
+      ],
+      "status": "active",
+      "startDate": "2025-10",
+      "publicSummary": "An AI-powered ESOL platform that combines four learning paths — a\nreal-time voice conversation coach built on the OpenAI Realtime API,\nCEFR-aligned general practice, NZCEL exam preparation, and gamified\nprogress dashboards — over a multi-tenant PostgreSQL backend with\norganization-scoped server actions.\n",
+      "narrative": {
+        "impactHeadline": "AI-powered ESOL learning platform with a real-time OpenAI voice coach, CEFR + NZCEL study paths, and org-scoped multi-tenant progress tracking — 44-table Neon Postgres schema, 60+ server actions, and audio caching that cuts TTS API cost by 90%+.",
+        "problem": "ESOL learners lack a single integrated platform for real-time\nspeaking practice, structured NZCEL/CEFR study paths, and persistent\ncross-module progress tracking.\n",
+        "audience": "English-language learners targeting NZCEL or CEFR levels, and\norganizations needing tenant-isolated ESOL training infrastructure.\n",
+        "technicalApproach": "Next.js 15 app over a 44-table Neon Postgres schema with 60+\norganization-scoped Server Actions, CopilotKit tutoring, and an\nOpenAI Realtime API voice coach with intelligent audio caching\n(90%+ TTS cost reduction). Configured for Cloudflare Pages via\nOpenNext.\n",
+        "myRole": "Sole designer and engineer — schema, server actions, voice-coach\nintegration, and the four learning-path modules.\n"
+      }
+    },
+    {
+      "id": "wellness-agent",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Wellness Support Agent",
+      "priority": 82,
+      "category": "ai-apps",
+      "tagline": "Workplace-wellness platform on Google's Agent Development Kit — five specialized agents with privacy-first, role-based support for employees, HR, and employers",
+      "repoUrl": "https://github.com/ChanMeng666/wellness-agent",
+      "url": "https://sanicle-wellness-agent-2lxj5uw.gamma.site/",
+      "extraLinks": [
+        {
+          "label": "Overview site",
+          "url": "https://sanicle-wellness-agent-2lxj5uw.gamma.site/"
+        },
+        {
+          "label": "GitHub repo",
+          "url": "https://github.com/ChanMeng666/wellness-agent"
+        }
+      ],
+      "techStack": [
+        "Next.js 15",
+        "React",
+        "TypeScript",
+        "Python 3.9+",
+        "FastAPI",
+        "Google ADK",
+        "Gemini 1.5 Flash",
+        "Firestore",
+        "BigQuery"
+      ],
+      "status": "draft",
+      "startDate": "2025-05",
+      "publicSummary": "A full-stack workplace-wellness demo built on Google's Agent\nDevelopment Kit: a root agent routes requests to five specialized\nsub-agents (employee support, HR manager, employer insights, search,\nleave requests) with a custom memory system and privacy callbacks,\nserved through a Python FastAPI backend to a Next.js chat UI.\n",
+      "narrative": {
+        "impactHeadline": "Workplace-wellness platform on Google's Agent Development Kit — a root agent routes to five specialized sub-agents with privacy callbacks and role-based access for employees, HR, and employers, demonstrating multi-agent architecture for enterprise wellness.",
+        "problem": "Organizations need privacy-conscious, role-aware AI wellness support\nthat separates employee, HR, and employer data access.\n",
+        "audience": "Employees seeking wellness assistance, HR managers analyzing\nanonymized trends, and employers evaluating workforce wellness ROI.\n",
+        "technicalApproach": "Google ADK root agent delegates to five sub-agents with a custom\nmemory system and privacy callbacks; a Python FastAPI backend serves\nthe Next.js chat UI and is deployable to Google Cloud (Firestore,\nBigQuery, Storage).\n",
+        "myRole": "Sole designer and engineer of the agent graph, memory system, and\nboth frontend and backend.\n"
+      }
+    },
+    {
+      "id": "she-sharp-event-black-board",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "She Sharp — Event Welcome Board",
+      "priority": 83,
+      "category": "web-apps",
+      "tagline": "Fullscreen, on-brand electronic welcome sign for She Sharp offline events — pure HTML/CSS/JS, no build step, works offline, with optional live event-data sync from shesharp.org.nz",
+      "repoUrl": "https://github.com/ChanMeng666/she-sharp-event-black-board",
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "QR code"
+      ],
+      "status": "live",
+      "startDate": "2026-06",
+      "publicSummary": "A static, rotating welcome display for She Sharp events — hero,\nevent details, speaker grid, partner logos, and a registration QR\nscene. Content is edited in a single config file, and an optional\nlive fetch pulls upcoming events from the official She Sharp JSON\nfeed with silent fallback to local config.\n",
+      "narrative": {
+        "impactHeadline": "Offline-first electronic welcome board for She Sharp's offline tech events — a zero-build static display that auto-rotates hero, speaker, partner, and QR scenes and can optionally sync live event data from shesharp.org.nz.",
+        "problem": "Event venues need a polished, on-brand welcome screen that works\nwithout installs, builds, or reliable Wi-Fi.\n",
+        "audience": "She Sharp organizers and volunteers running entrance displays at\noffline tech events in New Zealand.\n",
+        "technicalApproach": "Data-driven static site — a config file defines scenes, an app\nmodule handles auto-rotation / fullscreen / keyboard controls, and\na live-fetch module optionally maps the official EventV3 feed with\nsilent fallback to local config.\n",
+        "myRole": "Sole author; built for the She Sharp community she volunteers with.\n"
+      }
+    },
+    {
+      "id": "douyin-mall-frontend",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Douyin Mall Frontend",
+      "priority": 84,
+      "category": "web-apps",
+      "tagline": "Vue 3 + TypeScript e-commerce storefront — product browsing, cart, orders, and payment UI, the separated frontend for the Douyin Mall capstone stack",
+      "repoUrl": "https://github.com/ChanMeng666/douyin-mall-frontend",
+      "techStack": [
+        "Vue 3",
+        "TypeScript",
+        "Vite",
+        "Pinia",
+        "Vue Router",
+        "Axios",
+        "Vitest",
+        "Cypress"
+      ],
+      "status": "active",
+      "startDate": "2025-01",
+      "narrative": {
+        "impactHeadline": "Vue 3 + TypeScript e-commerce storefront for the Douyin Mall stack — a type-safe SPA (Pinia + Vue Router + Vite) implementing the full product / cart / checkout / payment flow with Vitest and Cypress coverage.",
+        "problem": "The Douyin Mall backend needed a modern, type-safe, separated\nfrontend for a complete shopping experience.\n",
+        "technicalApproach": "Vue 3 SPA built with Vite, Pinia state, and Vue Router, consuming\nREST APIs via Axios with TypeScript type safety and Vitest /\nCypress test coverage.\n",
+        "myRole": "Frontend author for the ByteDance Youth Training Camp capstone\nstorefront.\n"
+      }
     },
     {
       "id": "vitex",
@@ -5090,6 +5237,551 @@
         "Data analysis"
       ],
       "status": "live"
+    },
+    {
+      "id": "archlang",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-07-04",
+      "name": "ArchLang",
+      "priority": 85,
+      "category": "tools",
+      "tagline": "A small declarative language that compiles to professional SVG floor plans — like Typst/LaTeX, but for architecture; zero-dependency TypeScript that runs in Node and the browser",
+      "repoUrl": "https://github.com/ChanMeng666/archlang",
+      "url": "https://archlang-playground.vercel.app",
+      "extraLinks": [
+        {
+          "label": "Playground",
+          "url": "https://archlang-playground.vercel.app"
+        },
+        {
+          "label": "Docs",
+          "url": "https://archlang-docs.vercel.app"
+        },
+        {
+          "label": "npm (@chanmeng666/archlang)",
+          "url": "https://www.npmjs.com/package/@chanmeng666/archlang"
+        }
+      ],
+      "techStack": [
+        "TypeScript",
+        "Node.js",
+        "Vite",
+        "CodeMirror 6",
+        "LSP",
+        "Vitest"
+      ],
+      "status": "production",
+      "startDate": "2026-06",
+      "publicSummary": "ArchLang is a parametric DSL for floor plans: walls, rooms, doors,\nwindows, fixtures, and dimensions compile to deterministic SVG (also\nDXF/PDF/PNG). It ships architectural-soundness linting, circulation\nanalysis, a CLI with JSON output for AI agents, VS Code / LSP tooling,\nand a browser playground.\n",
+      "narrative": {
+        "impactHeadline": "A declarative language that compiles to professional SVG floor plans — Typst/LaTeX for architecture. Zero-dependency TypeScript, isomorphic across Node and browser, published to npm with a playground, docs site, and VS Code extension.",
+        "problem": "Floor plans are usually hand-drawn or image-generated, which makes\nparametric edits and agent-driven authoring hard.\n",
+        "audience": "Architects, design-tool builders, and AI agents that need\ndeterministic, programmatic floor-plan generation.\n",
+        "technicalApproach": "Pure TypeScript compiler (hand-written lexer + recursive-descent\nparser) with zero runtime dependencies, isomorphic in Node and\nbrowser; it exports structured diagnostics instead of throwing, plus\nlint / describe / repair pipelines for plan validation and four\nexport formats (SVG, DXF, PDF, PNG).\n",
+        "myRole": "Sole author — language design, compiler, tooling, and packaging.\n"
+      }
+    },
+    {
+      "id": "femtech-radar",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-07-04",
+      "name": "FemTech Radar",
+      "priority": 86,
+      "category": "ai-apps",
+      "tagline": "Agent-first FemTech intelligence — an MCP server that fetches, dedupes, and scores women's-health & FemTech research and news, feeding a weekly GitHub Agentic Workflow and an auto-updating Astro + RSS site",
+      "repoUrl": "https://github.com/ChanMeng666/femtech-radar",
+      "url": "https://chanmeng666.github.io/femtech-radar/",
+      "extraLinks": [
+        {
+          "label": "Live site",
+          "url": "https://chanmeng666.github.io/femtech-radar/"
+        },
+        {
+          "label": "RSS feed",
+          "url": "https://chanmeng666.github.io/femtech-radar/rss.xml"
+        },
+        {
+          "label": "npm (@chanmeng666/femtech-radar-mcp)",
+          "url": "https://www.npmjs.com/package/@chanmeng666/femtech-radar-mcp"
+        }
+      ],
+      "techStack": [
+        "TypeScript",
+        "MCP (@modelcontextprotocol/sdk)",
+        "Zod",
+        "Vitest",
+        "tsup",
+        "Astro 5",
+        "GitHub Agentic Workflows",
+        "GitHub Pages",
+        "RSS"
+      ],
+      "status": "live",
+      "startDate": "2026-06",
+      "publicSummary": "A three-unit pipeline that turns scattered FemTech / women's-health\nsignal into a curated weekly digest: an MCP server (fetch -> normalize\n-> dedupe -> score), a weekly GitHub Agentic Workflow where Copilot\ncurates review-gated JSON, and an Astro site that auto-deploys to\nGitHub Pages with RSS subscriptions.\n",
+      "narrative": {
+        "impactHeadline": "Agent-first FemTech intelligence — a deterministic MCP core (fetch, dedupe, relevance × popularity × freshness scoring) feeds a review-gated weekly GitHub Agentic Workflow and an auto-deploying Astro + RSS site across four sections.",
+        "problem": "FemTech news, research, opportunities, and discussions are scattered\nacross dozens of sources with too much noise to track manually.\n",
+        "audience": "FemTech practitioners, researchers, and community members who want a\ncurated weekly digest and an MCP tool their own agents can query.\n",
+        "technicalApproach": "A deterministic MCP core (injected Fetcher adapters, dedupe,\nrelevance × popularity × freshness scoring) is separated from\neditorial judgment in the agentic workflow; a shared Zod schema\ncontract links the MCP server and the Astro site. 28 unit tests;\nnpm package at v0.3.0.\n",
+        "myRole": "Sole author of the MCP server, scoring model, agentic workflow, and\nAstro site.\n"
+      }
+    },
+    {
+      "id": "panda-agent",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Panda — Agentic AI Code Verification",
+      "priority": 87,
+      "category": "ai-apps",
+      "tagline": "Autonomous agent that inspects backend code, detects bugs, proposes fixes, and iterates until tests pass — observe/reason/act loop with sandboxed Vitest, REST + WebSocket APIs, and a web UI",
+      "repoUrl": "https://github.com/ChanMeng666/panda-agent",
+      "url": "https://panda-web-production.up.railway.app",
+      "extraLinks": [
+        {
+          "label": "Live web app",
+          "url": "https://panda-web-production.up.railway.app"
+        },
+        {
+          "label": "API",
+          "url": "https://panda-api-production-c8e2.up.railway.app"
+        }
+      ],
+      "techStack": [
+        "Node.js",
+        "TypeScript 5.3",
+        "Express.js",
+        "WebSocket",
+        "Next.js 14",
+        "Monaco Editor",
+        "OpenAI GPT-4o",
+        "Vitest",
+        "Railway",
+        "Docker"
+      ],
+      "status": "production",
+      "startDate": "2026-01",
+      "publicSummary": "Panda implements a full agent loop for backend code verification —\nobserve (run tests), reason (analyze failures), act (generate and\napply fixes), then iterate — with static analysis, sandboxed Vitest\nexecution, REST + WebSocket APIs, and a web UI, deployed on Railway.\n",
+      "narrative": {
+        "impactHeadline": "Agentic AI code-verification system — an orchestrator runs an observe/reason/act loop (static analysis, sandboxed Vitest, LLM root-cause + patch generation) until tests pass, streaming progress over WebSockets; deployed full-stack on Railway.",
+        "problem": "Submitting AI-suggested code changes without automated verify-fix\niteration leaves bugs and broken tests unresolved.\n",
+        "technicalApproach": "An orchestrator coordinates a static analyzer (pre-runtime import\nrestoration), an isolated sandbox, LLM-driven root-cause analysis and\npatch generation, and a configurable model strategy with WebSocket\nprogress streaming (default max 5 iterations).\n",
+        "myRole": "Sole author of the agent loop, sandbox, APIs, and web UI.\n"
+      }
+    },
+    {
+      "id": "svg-animation-studio",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-07-04",
+      "name": "SVG Animation Studio",
+      "priority": 88,
+      "category": "creative",
+      "tagline": "A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 25 motion/shape/filter primitives, 4 skills, 3 subagents, snapshot-tested",
+      "repoUrl": "https://github.com/ChanMeng666/svg-animation-studio",
+      "techStack": [
+        "Node.js",
+        "JavaScript",
+        "Next.js 15",
+        "React",
+        "Vitest",
+        "SVGO",
+        "Claude Code skills"
+      ],
+      "status": "active",
+      "startDate": "2026-06",
+      "publicSummary": "A composable SVG animation framework with 25 named primitives\n(motion, shapes, filters), preset templates, and Claude Code skills\nthat generate, verify, and ship animations — plus a Next.js preview\ngrid, snapshot tests, and an SVGO export pipeline.\n",
+      "narrative": {
+        "impactHeadline": "A composable, Claude-Code-driven SVG animation system — 25 named primitives compose through a single assembly path, with skills and subagents that generate, visually verify, and safely extend the library; 10/10 snapshot tests.",
+        "problem": "LLM-generated SVG animations drift in markup, IDs, and style across\nrequests instead of reusing a stable vocabulary.\n",
+        "technicalApproach": "A framework-free library exposes composeSVG() as the single assembly\npath; presets compose primitives; Claude Code skills and subagents\nhandle generation, visual verification, and safe library extension.\n",
+        "myRole": "Sole author of the primitive library, skills, subagents, and preview.\n"
+      }
+    },
+    {
+      "id": "cloud-canals",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Cloud Canals",
+      "priority": 89,
+      "category": "games",
+      "tagline": "A small SVG browser game about routing water across floating islands — drag to build canal networks from cloud springs to crop fields, with reservoirs, seasonal objectives, and synthesized audio",
+      "repoUrl": "https://github.com/ChanMeng666/cloud-canals",
+      "techStack": [
+        "Vite 8",
+        "JavaScript",
+        "SVG",
+        "CSS",
+        "Web Audio API"
+      ],
+      "status": "draft",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A lightweight, touch-friendly SVG puzzle game — build canal networks from cloud springs to crop fields on a pan-and-zoom island map, with reservoirs, seasonal objectives, and synthesized Web Audio music, in dependency-free vanilla JS."
+      }
+    },
+    {
+      "id": "super-mario-makey-makey",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Super Mario · Makey Makey Edition",
+      "priority": 90,
+      "category": "games",
+      "tagline": "A faithful Canvas remake of Super Mario World 1-1 playable with a Makey Makey or keyboard — every pixel and sound drawn/synthesized in code, no assets; the bonus showcase for the Makey Makey IoT workshop",
+      "repoUrl": "https://github.com/ChanMeng666/super-mario-makey-makey",
+      "url": "https://chanmeng666.github.io/super-mario-makey-makey/",
+      "extraLinks": [
+        {
+          "label": "Play now",
+          "url": "https://chanmeng666.github.io/super-mario-makey-makey/"
+        }
+      ],
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Canvas 2D",
+        "Fable 5"
+      ],
+      "status": "live",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A pure-Canvas Super Mario World 1-1 remake — every pixel and sound drawn or synthesized in code, no assets, no build step — playing on Arrows + Space + Click so it runs on a Makey Makey. The ceiling demo for the youth IoT workshop."
+      }
+    },
+    {
+      "id": "perfume-3d-viewer",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Perfume 3D Viewer",
+      "priority": 91,
+      "category": "creative",
+      "tagline": "Interactive browser-based 3D viewer for Perfume (Japanese pop group) dance-pose models exported from Blender — Three.js with cinematic lighting, orbit controls, and a glass-morphism UI, zero build step",
+      "repoUrl": "https://github.com/ChanMeng666/perfume_obj",
+      "url": "https://perfume-3d-viewer.pages.dev",
+      "extraLinks": [
+        {
+          "label": "Live viewer",
+          "url": "https://perfume-3d-viewer.pages.dev"
+        }
+      ],
+      "techStack": [
+        "Three.js",
+        "OBJLoader",
+        "OrbitControls",
+        "HTML",
+        "JavaScript",
+        "Cloudflare Pages"
+      ],
+      "status": "live",
+      "startDate": "2026-02",
+      "narrative": {
+        "impactHeadline": "A single-file WebGL viewer for a Blender-exported OBJ of Perfume's three members (15,006 vertices), each colored distinctly with PBR materials, a cinematic five-light rig, ACES filmic tone mapping, and orbit controls — deployed to Cloudflare Pages with no build step."
+      }
+    },
+    {
+      "id": "popup-image-app",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Popup Image App",
+      "priority": 92,
+      "category": "tools",
+      "tagline": "A lightweight always-on-top floating desktop app for image and text reference — Electron with drag-and-drop, in-app crop/resize editor, notes, and JSON save/load",
+      "repoUrl": "https://github.com/ChanMeng666/popup-image-app",
+      "techStack": [
+        "Electron 28",
+        "HTML5 Canvas",
+        "CSS3",
+        "JavaScript",
+        "Node.js IPC"
+      ],
+      "status": "draft",
+      "startDate": "2026-01",
+      "narrative": {
+        "impactHeadline": "A frameless, always-on-top, transparent Electron window for keeping image references visible while you work — drag-and-drop import, an HTML5 Canvas crop/resize editor, text notes, and JSON save/load, with context-isolated IPC."
+      }
+    },
+    {
+      "id": "lottie-theme-converter",
+      "tier": "secondary",
+      "recency": "historical",
+      "lastUpdated": "2026-07-04",
+      "name": "Lottie Theme Converter",
+      "priority": 93,
+      "category": "tools",
+      "tagline": "A Python CLI that converts Lottie animations between light and dark themes by inverting embedded-image RGB channels while preserving alpha transparency",
+      "repoUrl": "https://github.com/ChanMeng666/lottie-edit",
+      "techStack": [
+        "Python 3.8+",
+        "Pillow",
+        "JSON",
+        "Base64"
+      ],
+      "status": "draft",
+      "startDate": "2024-12",
+      "narrative": {
+        "impactHeadline": "A single-script Python tool that inverts the RGB channels of base64 images embedded in Lottie JSON while leaving alpha untouched — giving dual-theme apps a dark-mode Lottie variant without re-exporting."
+      }
+    },
+    {
+      "id": "makey-makey-iot-slides",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Touch the World, Talk to Code",
+      "priority": 94,
+      "category": "creative",
+      "tagline": "A 20-minute IoT-hardware teaching slideshow for ages 12-18 — vibe-code a Banana Piano with a free AI tool, then play it with a Makey Makey board; static HTML on the Caldera brand system, deployable to GitHub Pages",
+      "repoUrl": "https://github.com/ChanMeng666/makey-makey-iot-slides",
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Web Audio API"
+      ],
+      "status": "live",
+      "startDate": "2026-06",
+      "publicSummary": "An 11-slide deck for a Youth Tech Series workshop (13 June 2026,\nAuckland) teaching that a Makey Makey emulates a USB keyboard, so\nkeypress web toys work with bananas. It bundles three build-along\ndemos (Banana Piano, Simon Says, Catch & Dodge), a student handout,\nspeaker notes, and a bonus Super Mario showcase.\n",
+      "narrative": {
+        "impactHeadline": "A zero-build teaching slideshow taking students 12-18 from 'touch objects' to 'code responds' in 20 minutes — three vibe-coded Web Audio build-alongs for the Makey Makey, on Chan's Caldera brand, deployable to GitHub Pages."
+      }
+    },
+    {
+      "id": "chanmeng-knowledge-base",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-07-04",
+      "name": "Chan Meng's Knowledge Base",
+      "priority": 95,
+      "category": "tools",
+      "tagline": "A curated public knowledge base of technical guides and integration playbooks from real projects — auth, payments, AI integrations, plugin architecture, SEO/GEO, DevOps migrations; authored in Obsidian, built with Quartz",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-knowledge-base",
+      "url": "https://chanmeng666.github.io/chanmeng-knowledge-base/",
+      "extraLinks": [
+        {
+          "label": "Live site",
+          "url": "https://chanmeng666.github.io/chanmeng-knowledge-base/"
+        }
+      ],
+      "techStack": [
+        "Quartz 4",
+        "Obsidian",
+        "Markdown",
+        "Node.js",
+        "GitHub Pages"
+      ],
+      "status": "live",
+      "startDate": "2026-04",
+      "narrative": {
+        "impactHeadline": "A searchable, publishable knowledge base distilling real-project learnings — Neon + Flask auth, Stripe on Cloudflare Workers, CopilotKit + LangGraph, plugin architecture, SEO/GEO, and DevOps migrations — authored in Obsidian and built with Quartz to GitHub Pages."
+      }
+    },
+    {
+      "id": "chan-meng-personal-brand-logo",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Chan Meng — Personal Brand Logo",
+      "priority": 96,
+      "category": "branding",
+      "tagline": "Personal-brand monkey logo reconstructed from hand-drawn art into smooth cubic Bézier curves — reproducible, scalable, parametric SVG generated by a dependency-free Python script; 8 ready-to-use variants",
+      "repoUrl": "https://github.com/ChanMeng666/chan-meng-personal-brand-logo",
+      "extraLinks": [
+        {
+          "label": "Generalized skill (logo-as-code)",
+          "url": "https://github.com/ChanMeng666/logo-as-code-skill"
+        }
+      ],
+      "techStack": [
+        "Python 3",
+        "Node.js",
+        "Sharp",
+        "SVG"
+      ],
+      "status": "production",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A hand-drawn monkey + 'CHAN' wordmark rebuilt as mathematically fitted cubic Bézier contours with exact circular eyes — 8 ready-to-use SVG variants (four color schemes × full/monkey-only) regenerated from one archived source by a zero-dependency Python generator."
+      }
+    },
+    {
+      "id": "geo-markdown-mirror",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "geo-markdown-mirror",
+      "priority": 97,
+      "category": "ai-apps",
+      "tagline": "A Claude Code skill that generates plain-Markdown mirror pages of a site's key pages (the neon.com/pricing.md pattern) for GEO and one-click ask-AI — framework-aware for Next.js, Docusaurus, Vite SPAs, and static HTML",
+      "repoUrl": "https://github.com/ChanMeng666/geo-markdown-mirror",
+      "techStack": [
+        "Claude Code Skill",
+        "Node.js",
+        "JavaScript",
+        "turndown",
+        "Playwright"
+      ],
+      "status": "active",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A Claude Code skill that flattens JS-heavy pages into faithful /llms/*.md mirrors, builds an llms.txt index, and injects rel=alternate discovery hints so AI crawlers cite the right content — 100% eval-assertion pass vs a 44% baseline, across four framework guides."
+      }
+    },
+    {
+      "id": "professional-repo-docs-skill",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "professional-repo-docs",
+      "priority": 98,
+      "category": "ai-apps",
+      "tagline": "A Claude Code skill/plugin that scaffolds professional, agent-first GitHub repo documentation from one invocation — README, LICENSE, community-health files, issue/PR templates, AGENTS.md, and llms.txt",
+      "repoUrl": "https://github.com/ChanMeng666/professional-repo-docs-skill",
+      "techStack": [
+        "Claude Code Skill",
+        "Node.js",
+        "Markdown templates",
+        "gh CLI"
+      ],
+      "status": "active",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A Claude Code skill/plugin that bootstraps a full open-source doc set in Chan's house style — agent-first README, LICENSE, code-of-conduct, contributing/security/support, issue/PR templates, AGENTS.md, and llms.txt — creating only missing files and never auto-committing."
+      }
+    },
+    {
+      "id": "academic-paper-review-skill",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "Academic Paper Review Skill",
+      "priority": 99,
+      "category": "ai-apps",
+      "tagline": "A Claude Code skill for rigorous dual-lens (editorial + technical) peer review of academic papers — outputs reviewer letters or audit reports as Markdown, Typst, and PDF, with a reusable CeTZ chart library and Mermaid diagram templates",
+      "repoUrl": "https://github.com/ChanMeng666/academic-paper-review-skill",
+      "techStack": [
+        "Claude Code Skill",
+        "Typst",
+        "CeTZ",
+        "Mermaid CLI",
+        "Python",
+        "Markdown"
+      ],
+      "status": "active",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A Claude Code skill that turns manuscripts into credible peer reviews — separating editorial and domain critique, verifying load-bearing claims against primary sources, recomputing in-manuscript statistics, and rendering evidence-rich Typst/PDF output."
+      }
+    },
+    {
+      "id": "app-promo-studio",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "app-promo-studio",
+      "priority": 100,
+      "category": "creative",
+      "tagline": "A Claude Code plugin that generates cross-platform app promo images (App Store, Google Play, iPad, Mac, web hero, social/OG) from screenshots and headlines — exact platform sizes in PNG/JPG/WebP/AVIF plus true vector SVG",
+      "repoUrl": "https://github.com/ChanMeng666/app-promo-studio",
+      "techStack": [
+        "Claude Code Plugin",
+        "Node.js",
+        "Playwright",
+        "sharp",
+        "@resvg/resvg-js",
+        "HTML/CSS",
+        "SVG"
+      ],
+      "status": "active",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A config-driven Claude Code plugin that renders store-ready promo assets across 17 platform targets and 5 themes from one config — two render engines (HTML/CSS + Playwright raster, native SVG + resvg) with dimension/alpha/size-cap validation and pure-CSS device frames."
+      }
+    },
+    {
+      "id": "linkedin-post-skill",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "linkedin-post Skill",
+      "priority": 101,
+      "category": "ai-apps",
+      "tagline": "A Claude Code skill that writes on-brand English LinkedIn posts (idea + event-recap), generates Caldera-branded visuals (Mermaid, HTML-to-PNG via Playwright, OpenAI fallback), and drafts them into the composer for review — never auto-posts",
+      "repoUrl": "https://github.com/ChanMeng666/linkedin-post-skill",
+      "techStack": [
+        "Claude Code Skill",
+        "Node.js",
+        "Playwright",
+        "Mermaid CLI",
+        "OpenAI gpt-image-1",
+        "claude-in-chrome",
+        "HTML/CSS"
+      ],
+      "status": "active",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A Claude Code skill for Chan's personal-brand LinkedIn presence — two modes (idea posts and verified-mention event recaps), one on-brand visual per post via a Mermaid -> HTML-card -> OpenAI-image priority chain, staged into the composer for review, never auto-posted."
+      }
+    },
+    {
+      "id": "logo-as-code-skill",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "logo-as-code Skill",
+      "priority": 102,
+      "category": "branding",
+      "tagline": "A Claude Code skill that turns a hand-drawn, sketched, or scanned logo into clean, reproducible code — fitting smooth cubic Bézier curves to the real outline to generate an editable SVG, color/layout variants, and PNG/ICO/favicon exports",
+      "repoUrl": "https://github.com/ChanMeng666/logo-as-code-skill",
+      "extraLinks": [
+        {
+          "label": "Worked example (personal-brand logo)",
+          "url": "https://github.com/ChanMeng666/chan-meng-personal-brand-logo"
+        }
+      ],
+      "techStack": [
+        "Claude Code Skill",
+        "Python 3",
+        "Node.js",
+        "sharp",
+        "png-to-ico",
+        "SVG"
+      ],
+      "status": "active",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A Claude Code skill that reconstructs a hand-drawn logo as parametric, version-controlled code — a per-contour smooth -> cubic-Bézier pipeline with exact circles, an interactive CSS diff gallery, and PNG/ICO/favicon exports. Generalizes Chan's own monkey-logo method."
+      }
+    },
+    {
+      "id": "readme-showcase",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "readme-showcase",
+      "priority": 103,
+      "category": "ai-apps",
+      "tagline": "A Claude Code skill that captures polished screenshots and a demo GIF/MP4 of a deployed web project and embeds them into its GitHub README behind an idempotent SHOWCASE marker — Playwright capture, ffmpeg GIF pipeline, reproducible scenario files",
+      "repoUrl": "https://github.com/ChanMeng666/readme-showcase",
+      "techStack": [
+        "Claude Code Skill",
+        "Node.js",
+        "playwright-core",
+        "ffmpeg",
+        "sharp-cli"
+      ],
+      "status": "active",
+      "startDate": "2026-06",
+      "narrative": {
+        "impactHeadline": "A Claude Code skill that probes a live URL, writes a committed scenario file, captures hero/mobile/full-page WebP shots and a size-capped demo GIF (plus MP4), and injects an idempotent SHOWCASE block into a README — with a human review gate before any commit."
+      }
     }
   ],
   "openSourceContributions": [
@@ -9153,8 +9845,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-07-03",
+    "lastModified": "2026-07-04",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-03T18:11:00.976Z"
+    "buildTimestamp": "2026-07-04T03:30:28.834Z"
   }
 }

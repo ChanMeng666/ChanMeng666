@@ -11,7 +11,7 @@ philosophy — "Subtraction for life, addition for thought."
 
 12 companies · 4 teaching cohorts · 72 shipped projects · Master's with Distinction
 
-**Last updated:** 2026-07-03
+**Last updated:** 2026-07-04
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -1176,14 +1176,16 @@ data tooling.
 
 **Five production codebases, ~98% solo authorship across
 ~350+ commits:**
-- `sanicle-cloud` — official company website on Next.js,
-  replacing the legacy Bubble no-code site with a proper
-  full-stack build (a migration I strategically recommended
-  and the team accepted)
+- `sanicle-cloud` — official company website on Next.js
+  (live at sanicle.cloud), replacing the legacy Bubble no-code
+  site with a proper full-stack build (a migration I
+  strategically recommended and the team accepted)
 - `sanicle-ai` — the core FemTech platform with multi-tenant
   architecture, role-based auth (Employee / HR Manager /
   Org Admin), cycle and symptom tracking, AI consultation
   chat, leave-request workflows, HR analytics dashboards
+  (demo at sanicle-ai.vercel.app; dual IBM watsonx + Google
+  Gemini assistants, built for the UN Women x Sanicle hackathon)
 - `sanicle-ai-mobile` — mobile-first PWA prototype for the
   employee surface
 - `reveal.js / sanicle-ai-presentation` — executive demo

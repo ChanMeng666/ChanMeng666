@@ -769,8 +769,8 @@
       "id": "tam-ai-ti",
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-19",
-      "name": "Tam-AI-Ti",
+      "lastUpdated": "2026-07-04",
+      "name": "Tam-AI-Ti (tam-ai-ti-web)",
       "meta": {
         "x_brand": {
           "featuredStack": [
@@ -784,11 +784,12 @@
       },
       "priority": 1,
       "category": "ai-apps",
-      "tagline": "AI Financial Wellness Coach grounded in Te Whare Tapa Whā — built solo for Māori financial-prosperity researcher Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead). 351 commits, 48-table schema (10 modules, 22 migrations) where every cultural concept is a typed column not a UI sticker, three-model OpenAI composition (GPT-4o-mini for cheap tool actions · GPT-4o for prose quality · gpt-4o-realtime-preview \"verse\" voice for the Financial Coach with server-side VAD + 500ms silence detection), bilingual te reo Māori with macron-correct translation, and a deliberate CopilotKit optimisation from 8 AI-enabled routes down to 3 focused ones.",
+      "tagline": "Independent research commission for enterprise executive Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead) — an AI Financial Wellness Coach grounded in Te Whare Tapa Whā that proved Māori users will engage with a culturally-native AI agent (19-user cohort, 4 months, bilingual te reo Māori). 351 solo commits, 48-table schema where culture is typed data not UI decoration, voice-first GPT-4o Realtime coach, CopilotKit agent across 88+ actions.",
       "url": "https://tamaiti.whiri-ai.com/",
       "demoUrl": "https://youtu.be/NtT7_q6xhlk",
+      "repoUrl": "https://github.com/Whiri-AI/tam-ai-ti-web",
       "logo": "/public/brands/tam-ai-ti-logo-with-brand.svg",
-      "entity": "Riria (Missy) Te Kanawa (independent research commission)",
+      "entity": "Riria (Missy) Te Kanawa (independent research commission · ASB Bank)",
       "roles": [
         "Solo Independent Developer",
         "Full-Stack Engineer",
@@ -798,6 +799,10 @@
         {
           "label": "Live app",
           "url": "https://tamaiti.whiri-ai.com/"
+        },
+        {
+          "label": "GitHub repo (tam-ai-ti-web)",
+          "url": "https://github.com/Whiri-AI/tam-ai-ti-web"
         },
         {
           "label": "YouTube demo",
@@ -929,7 +934,7 @@
       "startDate": "2025-10",
       "publicSummary": "AI Financial Wellness Coach for Māori communities, architected on the Te Whare\nTapa Whā holistic-health framework — culture is in the schema, not the UI.\nBuilt solo for Riria (Missy) Te Kanawa (former KPMG NZ National Māori Sector\nlead, now at ASB Bank) as an independent research-pilot commission, introduced\nvia Dr Mahsa McCauley, founder of She Sharp. Voice coaching via GPT-4o\nRealtime API, bilingual te reo Māori + English, 88+ AI actions, pgVector\nsemantic search across 48 database tables. 19-user research cohort produced\n181 journal entries, 35 voice sessions, and 146 AI coach messages over four\nmonths (Oct 2025 – Mar 2026).\n",
       "narrative": {
-        "impactHeadline": "NZ's first Māori-cultural AI financial-wellness pilot — Māori users consult the traditional Maramataka lunar calendar and converse with the AI coach directly in te reo Māori. 19-user research cohort sustained 4 months on a pre-commercial product.",
+        "impactHeadline": "ASB Bank executive research pilot — NZ's first Māori-cultural AI financial-wellness agent (Te Whare Tapa Whā in schema, not UI); 19 users over 4 months with bilingual te reo Māori voice coaching, proving culturally-native AI engages communities mainstream FinTech underserves.",
         "problem": "Mainstream FinTech treats money as decontextualized numbers — budgets,\nbalances, projections. For Māori users, that framing is culturally\nmismatched: money is inseparable from whānau wellbeing, spiritual purpose,\nand holistic health. Generic budgeting apps strip out the very framework\nthat makes financial decisions meaningful, and Māori communities — who\nface disproportionate financial stress in Aotearoa — are left choosing\nbetween tools that work for their wallets but not their worldview, or no\ntools at all. Tam-AI-Ti exists to test whether an AI financial coach built\nnatively on Māori cultural wisdom — rather than retrofitted with cultural\ndecoration — can engage a population that mainstream FinTech systematically\nunderserves.\n",
         "audience": "Māori adults engaging with personal financial wellbeing, served along two\naccount types: individual goal-setters (Full Account) and whānau supporters\nwho can witness and encourage from the sidelines through a five-tier\npermission system (view profile, view goals, view journal, send messages,\nreceive celebrations). Pilot cohort to date: 19 verified research\nparticipants recruited by Missy Te Kanawa, active over a four-month window\n(Oct 2025 – Mar 2026), producing 181 bilingual journal entries, 35 voice\ncoaching sessions, 146 AI coach messages, and 74 daily Hauora check-ins.\nTe reo Māori and English are first-class throughout the experience.\nFuture audience: the broader Māori adult population — rangatahi entering\nworking life, parents managing whānau finances, kaumātua passing on\nfinancial wisdom — for whom culturally-rooted tools are scarce.\n",
         "productLogic": "The product is architected on Te Whare Tapa Whā, the Māori model of\nholistic wellness with four walls (Wairua/spiritual, Tinana/physical,\nHinengaro/mental, Whānau/family) standing on a foundation (Whenua/land).\nEvery feature traces back to this house.\n\nA user starts with the **26Q assessment over nine named psychological\nfactors** — `self_belief`, `long_term_focus`, `resilience`,\n`self_control`, `growth_mindset`, `financial_confidence`,\n`social_comparison`, `mindfulness`, `gratitude` (with `mindfulness`\nreverse-coded to capture Present Bias) — mapped to personalised\nrecommendations. They then select up to three focus areas, choose one\nof three account types (Full / Supporter / Both), and proceed to set\nfinancial goals through one of **seven SMART action plans (Options\nA-G)**: A Spending Reduction, B Savings Increase, C Savings Rate, D\nDebt Reduction, E Income Growth, F Budget Review, G Accountability\nPartner. Each plan has its own dedicated React component family\n(SpendingTracker / SavingsTracker / DebtCalculator / IncomeTracker /\nBudgetReviewCalendar / MeetingsTracker etc. — 38 goal components\ntotal) and its own type-specific tracking fields in the schema,\nrather than a generic JSON-note column. A `GoalCardFactory` /\n`ProgressTrackerFactory` / `OverviewFactory` pattern dispatches the\nright component for each goal's `option` field.\n\nThey check in daily across **eleven Hauora dimensions** mapped directly\nto the four walls: `sleep_hours`, `water_litres`, `food_quality`,\n`exercise_hours` for Tinana; `wairua_time_spent`,\n`wairua_human_connection`, `wairua_taia_connection` for Wairua (Whenua\nintegrated through Taiao/environment connection); `hinengaro_mauri_tau`\n(mindfulness), `hinengaro_ako` (learning) for Hinengaro;\n`whanau_check_in`, `whanau_quality_time` for Whānau. Each metric is a\ntyped integer-scale column with a Māori-language identifier — not a\nUI label sitting on top of a culturally-neutral schema. They journal\nmorning intentions (Hauora intentions across all 5 dimensions + 3\ngratitude items + financial reflections) and evening reflections\nthrough the Kūmete framework (what you contributed + what you received,\nTahi-Rua-Toru tomorrow goals, emotional check-in), all bilingually in\nte reo or English, with real GPT-4o enhancement (4 enhancement types ×\n3 intensity levels), translation (macron-correct ā/ē/ī/ō/ū), and\n5-dimensional AI insight extraction (Emotions / Themes / Hauora /\nPatterns / Growth).\n\nThey meet an **AI Financial Coach via gpt-4o-realtime-preview** voice\n(\"verse\" voice, server-side VAD + 500ms silence detection) — a\nconversation partner that never reduces money to numbers but\nconsistently frames every financial decision through all four walls\nof the Hauora model. Audio is deliberately *not* stored; only text\ntranscripts persist (a cost optimisation that preserves searchability\nwithout per-minute audio storage). The AI surfaces **74 Whakatauki\nproverbs across 37+ categories** by theme via `/api/whakatauki/search`,\nreferences the **Maramataka 30-day lunar calendar with 4 traditional\nactivity types** — *Toitoi* (spiritual/cultural: karakia, whakapapa,\nwānanga), *Hi ika* (water-based: ocean/river fishing, shellfish,\nseaweed), *Pouraka* (hunting: bird hunting, forest foraging, game\ntracking), *Mahi māra* (gardening/planting) — for cultural timing,\nand ties financial decisions back to family and spiritual purpose.\nWhānau members can be invited via email-token-based invitations with\na **5-tier permission system** (`canSeeGoals` · `canSeeProgress` ·\n`canSeeMood` · `canSeeAchievements` · `canSendMessages`) to encourage\nand witness without intruding.\n",
@@ -978,11 +983,11 @@
           ]
         }
       },
-      "lastUpdated": "2026-05-19",
+      "lastUpdated": "2026-07-04",
       "name": "She Sharp",
       "priority": 2,
       "category": "web-apps",
-      "tagline": "Solo-built production member platform for NZ's leading women-in-STEM\nnonprofit (Auckland-headquartered registered charitable trust CC57025,\nfounded 2014 by AUT researcher Dr Mahsa Mohaghegh/McCauley). 648/748\ncommits (86.6%) authored solo across 10 months. GPT-4o-mini AI mentor\nmatching with explicit 5-weight scoring (MBTI 15 / Skill 35 / Goal 30 /\nIndustry 10 / Logistics 10) + Upstash Redis cache + rule-based fallback\n+ admin human-in-the-loop. Three role-permissioned dashboards\n(mentor / mentee / admin) with native dual-role support, Stripe-integrated\npayment→invitation-code activation flow, custom Slack ecosystem\n(event-collector bot, weekly\nmentorship-stats digest, weekly NZ funding-opportunities crawler over\n6 government RSS/HTML sources), a Claude agent skill\n`sync-event-from-slack` that replaces hours of manual event publication\nwith a single dry-run-default command.\n",
+      "tagline": "Solo-built production platform that digitized, automated, and AI-upgraded NZ's\nleading women-in-STEM nonprofit (charitable trust CC57025, 2,200+ members,\n8,000+ women supported) — replacing Webflow + spreadsheets with a real member\nengine. GPT-4o-mini AI mentor matching (5-weight scoring + admin review),\nthree role-permissioned dashboards (mentor / mentee / admin), Stripe billing,\nand a custom Slack ecosystem (event-collector bot, weekly mentorship-stats\ndigest, NZ government funding crawler, Claude `sync-event-from-slack` skill)\nthat turned hours of volunteer manual work into one-command automation.\n648/748 commits (86.6%) solo across 10 months.\n",
       "url": "https://she-sharp-zeta.vercel.app/",
       "repoUrl": "https://github.com/NZ-SheSharp/she-sharp",
       "extraLinks": [
@@ -1155,7 +1160,7 @@
       "startDate": "2025-07",
       "publicSummary": "Solo-built production member platform for She Sharp — New Zealand's\nleading women-in-STEM nonprofit (charitable trust, 2,200+ registered\nmembers / 8,000+ women supported lifetime, 50+ corporate partners, 84+\nevents since 2014). Replaces the previous Webflow site. 648 of 748\ncommits (86.6%) authored solo. Headline features: GPT-4o-mini-powered\nAI mentor-mentee matching with five-dimensional scoring + human review,\nrole-aware mentor / mentee / admin dashboards with dual-role support,\ncustom Slack ecosystem (event-collector bot, volunteer webhooks, weekly\nstats digest, NZ funding-opportunities crawler), a Claude agent skill\n`sync-event-from-slack` that automates event page publication, Stripe\ntier billing, and full admin + audit systems. Plus three supporting\nprojects: a Python crawler that migrated 1,748 images / 707 MB / 85\nevents from the old Webflow site, the Her Waka MSD-funded teaching\nsite (Mintlify, curriculum authored solo), and a professional SEO\naudit on shesharp.org.nz with a 10-point recommendations report.\n",
       "narrative": {
-        "impactHeadline": "The production member engine for NZ's leading women-in-STEM nonprofit (charitable trust CC57025, community since 2014) — 86.6% solo-built across 10 months with AI mentor matching, membership-flow automation, and Slack-automated events replacing hours of volunteer toil.",
+        "impactHeadline": "Digitized and AI-upgraded NZ's leading women-in-STEM nonprofit (2,200+ members, 8,000+ supported) — 86.6% solo-built platform with AI mentor matching, three role dashboards, and a Slack automation stack that replaced hours of volunteer manual work.",
         "problem": "She Sharp is New Zealand's leading women-in-STEM nonprofit — a\nregistered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),\nAI/NLP researcher and Director of Women in Tech at AUT, after she\nexperienced first-hand the gap of being part of the 20% minority of\nwomen in technology. The community has grown to 2,200+ registered\nmembers, 8,000+ women supported across its history, 50+ corporate\npartners, and 84+ events since 2014. The original website was a\nWebflow build, and Webflow had become the bottleneck: the platform\ncapabilities the mission required — membership tiers, mentor / mentee\n/ admin role permissions, AI-driven mentor matching, Stripe billing,\nSlack-integrated operations, automated event management, recruitment\npipelines, audit logging — are precisely what no SaaS site builder\ncan express. The leadership team was running a 2,200-member community\nthrough spreadsheets, Slack threads, and manual outreach. She Sharp\nneeded a real platform.\n",
         "audience": "Active members of the She Sharp community: women in technology at\nevery career stage, from undergraduate students considering STEM\nmajors through senior engineers serving as mentors. The platform\nsupports three role-permissioned dashboards (mentor, mentee, admin)\nplus dual-role compatibility — a mid-career engineer can\nsimultaneously mentor juniors and be mentored by a senior, without\nspecial-cased data modelling. Additional audiences served on adjacent\nsurfaces: Her Waka programme participants (women re-entering the\nworkforce, served by the dedicated MSD-funded teaching site at\nherwaka.shesharp.org.nz), volunteer and ambassador candidates\n(screened through the AI recruitment pipeline), the 50+ corporate\npartners (sponsor packages tied to event visibility and member\naccess), and She Sharp's operational team (Slack-integrated\nworkflows). 1,000+ members are actively engaged today, drawn from a\nregistered base of 2,200+ and a lifetime supported population of\n8,000+ women.\n",
         "productLogic": "The new platform replaces the old Webflow site with a real member\nsystem anchored on three coexisting dashboards. A user signs up via\nemail/password (bcrypt) or OAuth (Google + GitHub), then independently\nactivates any combination of mentor, mentee, or admin roles — duality\nis the **schema-level design principle**, not a special case. The\n`user_roles` table has one row per (user, role_type) tuple with its\nown `is_active`, `verified_at`, and `activation_step` columns, so a\nmid-career engineer can simultaneously mentor juniors and be mentored\nby a senior with zero special-cased data modelling. The dashboard\nlayer (`(dashboard)/dashboard/{mentor-profile,mentee-profile,\nmentorship,meetings,admin,account}`) reads the active-roles set and\ncomposes role-specific cards into a single unified view.\n\n**The headline feature is the AI mentor-mentee matching engine**,\nimplemented as a two-stage pipeline in `lib/matching/`. Stage one is\na rule-based pre-filter that rapidly scores candidate pairs on basic\ncompatibility (skill set intersection, industry overlap, location/\nmeeting-format compatibility). Stage two passes promising pairs to\nGPT-4o-mini at `temperature: 0.3`, `max_tokens: 1000`, with\n`response_format: { type: 'json_object' }`, against an explicit\nscoring rubric defined in `lib/matching/prompts.ts`:\n\n  - **MBTI Compatibility — 15%** (cognitive function complementarity,\n    communication style)\n  - **Skill Alignment — 35%** (mentor's expert skills vs mentee's\n    learning goals, expertise depth vs learning breadth)\n  - **Goal Alignment — 30%** (career trajectory compatibility, mentor's\n    ability to guide toward stated goals, shared values)\n  - **Industry Match — 10%** (direct + adjacent + transferable industry\n    knowledge)\n  - **Logistics — 10%** (meeting format, location proximity, time\n    availability)\n\nEach call returns a 0-100 overall + per-dimension subscores +\nnatural-language explanation + recommendation + confidence (high /\nmedium / low) + matchingFactors (strengths / challenges /\ngrowthOpportunities), Zod-validated against `AIMatchResponseSchema`\nbefore persistence. **Three production-hardness layers wrap the\nOpenAI call**: (1) **Upstash Redis cache** keyed by mentor:mentee\npair so repeat scoring is free; (2) **exponential-backoff retries**\n(3 attempts, 1000ms × 2^attempt, with rate-limit/timeout\nclassification); (3) a **deterministic rule-based fallback** with\nthe same weighted formula that activates when OpenAI is unavailable,\nexplicitly marking `confidenceLevel: 'low'` and\n`recommendation: 'manual review'` so admins know to look closer.\nBatch processing caps at 5 concurrent calls with 100ms inter-batch\ndelay to respect API limits.\n\nMatches above threshold surface to admin (`/api/admin/matching`)\nfor human approval before pairing — conservative human-in-the-loop\nautomation, not speculative auto-pairing. A **mentee matching queue**\n(`lib/matching/queue-service.ts` + Vercel Cron at\n`/api/cron/process-queue`) holds unmatched mentees in priority order\nwhen mentor capacity is full and re-evaluates as slots open.\nMeetings are typed (intro / regular / milestone / final), tracked\nwith action items (JSONB), notes, feedback, and 1-5 ratings.\n\n**The Stripe-integrated membership flow has a novel activation\narchitecture**: it doesn't instantly grant access. The architecture\nis **form → checkout → invitation code → activation**. A prospective\nmentee fills the public mentee form (`/api/forms/mentee/public`),\nwhich creates a `mentee_form_submissions` row. They get redirected\nto Stripe Checkout. On `checkout.session.completed` webhook, the\nsystem creates a `membership_purchases` record AND generates a\nunique `invitation_code` (`createPaymentInvitationCode`) which is\nemailed via Resend. The user must redeem the code to activate their\naccount, guaranteeing email ↔ payment ↔ account linkage and\npreventing orphaned accounts. Self-service via Stripe Customer\nPortal. Webhook signature verification on every event. Membership\nlifecycle transitions update `user_memberships` + `activity_logs`\natomically.\n\nThe platform also runs She Sharp's events infrastructure (workshops,\ntraining, networking, social, THRIVE programmes — online, in-person,\nor hybrid, with capacity, waitlist, and QR check-in via `/api/qr`),\nthree membership tiers, a tiered resource library\nwith download access control + access logs, transactional email via\nResend, AI-screened volunteer recruitment (`lib/recruitment/\nai-screening.ts` against `/api/admin/recruitment/[id]/ai-screen`),\nsponsor inquiries with inline forms, and comprehensive audit logging\n(JSONB diffs via `deep-diff` on every admin action).\n\n**A custom Slack ecosystem is deeply integrated** through three\ncoordinated surfaces. (1) **Read-only event-collector bot** with\nscoped tokens (`channels:history`, `channels:read`, `groups:history`,\n`groups:read`, `files:read`, `users:read`, `pins:read`,\n`bookmarks:read`) — no destructive scopes by design. (2) **Three\nVercel Cron jobs**: `weekly-mentorship-stats` posts engagement\ndigest to `#mentorships` (recently hardened to survive cold Neon\nconnection pools), `weekly-funding-crawl` runs the NZ government\nfunding crawler over **6 official sources** (Beehive RSS, data.govt\nCKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML) with\ndedup + relevance scoring + keyword filtering, posting a curated\nSlack digest, and `process-queue` re-evaluates the matching queue.\n(3) **Interactive Slack event handlers** at `/api/slack/events` and\n`/api/slack/events/interactive` for in-Slack workflows.\n\n**The most distinctive Slack-side piece** is a Claude agent skill\nnamed `sync-event-from-slack` living at\n`.claude/skills/sync-event-from-slack/`. It automates the previously-\nmanual work of turning a Slack event channel into a published event\npage: it reads channel messages, thread replies, pinned items,\nbookmarks, speaker `.docx` bios (via `mammoth`), cover posters, and\nspeaker headshots; downloads images and renames them per convention;\ncomposes a structured `EventV3Schema` JSON entry against a strict\nZod schema; runs `verify-image-paths` as a CI gate; and on approval\ncommits to git or opens a PR. **The skill defaults to dry-run** —\nno file writes, no git, no network side-effects beyond reading\nSlack — unless the user explicitly says \"go ahead and apply\". Event\npublication has gone from hours of manual editing to a single\ncommand, with the AI bot's structured output Zod-validated as the\nlast line of defense before any git write.\n",
@@ -1204,16 +1209,20 @@
           ]
         }
       },
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "GAVIGO IRE",
       "priority": 3,
       "category": "ai-apps",
-      "tagline": "Activation & Execution Layer for Interactive Software — AI-orchestrated post-app activation platform with sub-millisecond container pre-warming; backed by Google for Startups Cloud Program + NVIDIA Inception (Feb 2026)",
+      "tagline": "Founding-engineer MVP for GAVIGO Inc. (Delaware C-Corp) — the 'Instant Reality Exchange' post-app activation platform with sub-millisecond container pre-warming (p50 <1 ms restore, 84.6% warm-pool hit), AI-orchestrated Kubernetes scaling, and a TikTok-style mobile feed; validated by Google for Startups + NVIDIA Inception (Feb 2026) after a DOKS→GKE production migration",
       "url": "https://ire.gavigo.com/",
       "extraLinks": [
         {
           "label": "Company",
           "url": "https://gavigo.com/"
+        },
+        {
+          "label": "Promo video repo (gavigo-ire-video)",
+          "url": "https://github.com/ChanMeng666/gavigo-ire-video"
         }
       ],
       "logo": "/public/organizations/gavigo-logo.jpg",
@@ -1289,7 +1298,7 @@
       "startDate": "2025-10",
       "publicSummary": "AI-orchestrated post-app activation platform for GAVIGO Inc. (Delaware\nC-Corp; founder & CEO Saba Gecgil). Public mission: \"Skip the Store.\nStart the Play\" — eliminate the latency between user intent and\ninteractive content delivery. Distributed system: Go orchestrator\n(WebSocket hub + Scorer + 7-trigger rules engine + Kubernetes client),\nReact dashboard for live orchestration visualization, React Native /\nExpo mobile app with TikTok-style feed. Originally architected and\nshipped on **DigitalOcean managed Kubernetes (DOKS, Singapore)**, then\nmigrated to **Google Cloud GKE (Belgium)** in a single ~30-minute\nproduction cutover (2026-03-11) when GAVIGO's Google Cloud partnership\ncame into effect — production expertise on both clouds. Real measured\nperformance post-migration: restore path <1 ms p50, cold path ~12 ms,\n84.6% warm-pool hit rate. 360 total commits, 353 (98%) solo. As\nFounding Principal Engineer, Activation, Execution & AI Systems, I\nown the contractually-defined \"Protected Technical Domain\": activation\nsystems, activation flow and execution behavior, activation-economics\nproof path, AI-assisted orchestration and execution-control,\nrestore/reuse boundaries, and heavier-workload validation.\n",
       "narrative": {
-        "impactHeadline": "GAVIGO's 'Instant Reality Exchange' platform delivering sub-millisecond activation (p50 < 1 ms, 84.6% warm-pool hit) — production-validated by Google for Startups + NVIDIA Inception (Feb 2026) and migrated to Google Cloud GKE in a ~30-minute zero-downtime cutover.",
+        "impactHeadline": "Founding-engineer MVP for a Delaware startup — sub-millisecond interactive-content activation (p50 <1 ms, 84.6% warm-pool hit) on Kubernetes, production-validated by Google for Startups + NVIDIA Inception; 353/360 commits (98%) solo as Founding Principal Engineer.",
         "problem": "The native-app paradigm puts a friction tax on every interactive\ndigital experience: discover an app → app-store landing page → install\n→ onboard → first interaction. By the time the user reaches the thing\nthey actually wanted, the moment has passed. For games, video, and\nAI experiences — where perception of instantaneity drives engagement\n— the install gap is the single largest leak in the funnel. GAVIGO's\nthesis (in its own marketing language): we are building the\n\"Post-App World,\" eliminating the trillion-dollar friction between\nuser intent and digital experience through proprietary \"Instant\nReality Switching\" technology.\n",
         "audience": "Two surfaces in production today. **Consumer surface**: end users on\nire.gavigo.com and the mobile build, scrolling a TikTok-style\nvertical feed of FOSS games (Hextris, Clumsy Bird, Tiny Yurts,\nCatculus, Casual Crusade, Stolen Sword, and others — 9 vendored to\ndate from a curated set of 11 open-source repos analyzed). **Investor\n/ operator surface**: the React dashboard at the same domain, which\nshows the orchestrator's AI decisions, container state machine\n(COLD → PREPARING → READY → ACTIVE → REUSABLE), warm-pool budget,\nactivation-quality metrics, and side-by-side iframe of the mobile\napp — purpose-built for live demos to investors and partner\nevaluators. A Phase 9 audience-segmentation feature filters\nvisibility per role (public / investor / operator presets) at\nWebSocket broadcast time. The ultimate addressable surface is any\nmarket where perception of instantaneity drives engagement — mobile\ngames, short-form video, AI chat, generative content.\n",
         "productLogic": "A user scrolls a TikTok-style vertical feed; the orchestrator\nwatches focus events stream over a WebSocket hub, scores each\ncandidate piece of content on three weighted signals (personal\nattention 0.4, global attention 0.4, trend / virality 0.2), and\nwhen combined score crosses a 0.6 threshold, fires one of seven AI\ntriggers — Swarm Boost, Proactive Warm, Cross-Domain Inject,\nMode Change, Lookahead Warm, Initial Warm, Checkpoint Restore —\neach of which patches Kubernetes deployment replicas through the\nK8s client-go API to scale a game container to READY before the\nuser taps.\n\nWhen the user taps, the experience is already live — either served\ninstantly from a single always-warm shared game-server pod\n(~12 ms cold path) or restored from the Reusable pool of recently-\nactive containers (<1 ms restore path). State survives across\nscrolls via a postMessage protocol on web and MMKV storage on\nnative; both reconcile against Redis as a single source of truth\nthrough a deterministic five-state Activation Spine\n(COLD → READY → ACTIVE → REUSABLE → restore). When mobile gaming\nmeets the install gap, the GAVIGO answer is: there is no install\ngap.\n",
@@ -1443,7 +1452,7 @@
         },
         {
           "label": "Stars",
-          "value": "123"
+          "value": "~124 GitHub · 21 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai"
         },
         {
           "label": "Forks",
@@ -1667,11 +1676,11 @@
           ]
         }
       },
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "echook (Echo + Hook)",
       "priority": 6,
       "category": "ai-apps",
-      "tagline": "AI-operated audio notification system for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only",
+      "tagline": "AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry",
       "repoUrl": "https://github.com/ChanMeng666/echook",
       "logo": "/public/brands/echook-logo.svg",
       "status": "active",
@@ -1883,6 +1892,10 @@
         {
           "label": "Commits",
           "value": "71 (solo)"
+        },
+        {
+          "label": "GitHub stars",
+          "value": "~21 stars · 11 forks · npm @chanmeng666/google-jobs-server · Smithery + Glama + serp.ai listings"
         }
       ],
       "status": "live",
@@ -1906,7 +1919,7 @@
       "name": "腾讯会议录屏下载助手 — Chrome Web Store-Published Extension",
       "priority": 9,
       "category": "web-apps",
-      "tagline": "Formally published Chrome Web Store product (extension ID gdajdfngeonjmcclghkmeoacopnnfpnc) — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted. First commit Nov 25 2024, still maintained through April 2026.",
+      "tagline": "Chrome Web Store-published extension (Manifest V3) that intercepts Tencent Meeting recording CDN requests and generates platform-specific download commands — enabling download of member-gated meeting recordings that the web UI restricts to paid accounts; Apache-2.0, privacy-policy-vetted, ~1,000 Chrome Web Store users",
       "url": "https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc",
       "repoUrl": "https://github.com/ChanMeng666/tencent-meeting-video-downloader",
       "logo": "/public/brands/tencent-meeting-video-downloader.svg",
@@ -2280,10 +2293,11 @@
       "name": "FreePeriod Website",
       "priority": 22,
       "category": "web-apps",
-      "tagline": "Bilingual public-health site for Guangzhou-based menstrual-access startup (HKUST(GZ) incubated) — Google Maps dispenser directory, advocacy document previews, product demo",
+      "tagline": "Bilingual public-health site for 自在月行 (Free Period), a Guangzhou-based menstrual-access startup (HKUST(GZ) incubated) — Google Maps dispenser directory, advocacy document previews, product demo",
       "logo": "/public/brands/free-period-logo.svg",
       "url": "https://free-period-website.pages.dev/",
       "repoUrl": "https://github.com/ChanMeng666/free-period-website",
+      "entity": "自在月行 (Free Period) — Guangzhou-based, HKUST(GZ)-incubated menstrual-access startup",
       "techStack": [
         "Next.js",
         "TypeScript",
@@ -2520,7 +2534,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-05-19",
+      "lastUpdated": "2026-07-04",
       "name": "LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI)",
       "priority": 16,
       "category": "web-apps",
@@ -2591,6 +2605,8 @@
         "Stripe-integrated metered usage events with idempotency",
         "Pulumi + CrossGuard IaC with no-destroy-prod policy",
         "Cloudflare R2 + HMAC-signed presigned URLs",
+        "Persisted multi-country search presets",
+        "Cost-hardened crons (no idle-DB burn)",
         "RFC 7807 problem+json with stable machine codes",
         "SWR cache + cost-class-aware KV rate limiter",
         "Contract tests via in-process app.fetch dispatch"
@@ -2904,7 +2920,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-05-19",
+      "lastUpdated": "2026-07-04",
       "name": "Eatropolis Website — Production-grade Next.js 16 + OpenNext-on-Cloudflare-Workers event platform for Auckland's award-winning culinary festival (2026-10-10, Shed 10)",
       "priority": 18,
       "category": "web-apps",
@@ -3072,7 +3088,7 @@
       "startDate": "2026-05",
       "publicSummary": "Production-grade event website for Eatropolis — Auckland's\none-day culinary festival (2026-10-10, Shed 10, 30+ award-\nwinning chefs) — solo-built under signed freelance contract\nwith Chow Luck Club Ltd. Next.js 16.2 + React 19.2 +\nTailwind 4, deployed to Cloudflare Workers via the official\nOpenNext 2026 path. Engineered to the contract's\nproduction-grade requirements: 1,000-concurrent-visitor k6 load\ntested, NZ Government Web Accessibility Standard 1.2 (WCAG 2.2\nAA) conformance with TAU review gates, mail-tester 10/10 Resend\npipeline, streaming OpenAI chat with Whisper + TTS voice behind\nCloudflare Turnstile + KV rate-limiting, GA4 + Web Analytics\nbehind a NZ Privacy Act cookie consent gate, ISR-cached\nTicketmaster Discovery API integration, and a GitHub-as-CMS\ncontent workflow with ✏️ Web-Editor links so the non-technical\nclient edits all MDX + JSON in-browser. Two-phase visibility\nreveal on one coherent build (Phase 1 teaser 2026-05-22 → Phase\n2 full site 2026-06-05).\n",
       "narrative": {
-        "impactHeadline": "Production culinary-festival event site for Auckland's Eatropolis — engineered for 1,000 concurrent visitors, WCAG 2.2 AA-compliant with council review gates, delivered solo in 9 days under a signed commercial contract.",
+        "impactHeadline": "Auckland Eatropolis festival (30+ chefs, Shed 10) — signed commission with Tātaki Auckland Unlimited (Council Events) review gates, WCAG 2.2 AA, streaming OpenAI chat + voice assistant, and 1,000-visitor load test; solo-built in 9 days.",
         "problem": "Auckland-based **Chow Luck Club Ltd** — production partner\nfor the **Eatropolis** culinary festival, supported by\n**Tātaki Auckland Unlimited on behalf of Auckland Council\nEvents** — commissioned a production-grade event website for\nthe one-day festival on **2026-10-10 at Shed 10, Queens\nWharf, Tāmaki Makaurau** featuring **30+ award-winning\nchefs**. The brief, formalised in a signed 4 May 2026\ncommercial agreement, demanded a real public\nproduct: a custom-designed brand site at `eatropolis.co.nz`\nwith a two-phase public reveal (Phase 1 teaser 2026-05-22,\nPhase 2 full site 2026-06-05), accessibility conformance to\nthe **NZ Government Web Accessibility Standard 1.2 (WCAG 2.2\nLevel AA)** with TAU review gates before each launch, load-\ntesting to **1,000 concurrent visitors**, Lighthouse Mobile\n≥ 90 across all categories, SEO + GEO discoverability\n(sitemap, robots, JSON-LD Event + FAQPage, llms.txt), full\nforms infrastructure with branded transactional email, a\nconditional AI chat assistant, GA4 + privacy-friendly\nanalytics, and a content-edit workflow the non-technical\nclient could operate independently after handoff — all\ndelivered solo by a single freelance developer in nine\nworking days, with three months of post-launch maintenance\nbundled into the fee.\n",
         "audience": "Three concentric audiences. **Festival attendees** —\npublic visitors arriving via search, social, or partner\nsites; mobile-first; high traffic spikes around ticket-\nrelease and event-day windows. **The Eatropolis ecosystem**\n— 30+ culinary partners with chefs and award-winning\ndishes, workshop hosts, multi-tier sponsors (Principal /\nAl Fresco / Associate / Community), ticketing partner,\nmedia coverage — each with editorial surfaces on the site\nthat they review before launch. **The Chow Luck Club\ninternal team + TAU reviewers** — non-developer client\nsignatory Bee Keng Koh, day-to-day PM Armand Bentigan, and\nthe Tātaki Auckland Unlimited review committee that gates\neach public launch on accessibility + content compliance.\nThe content-edit workflow is built around the assumption\nthat none of these reviewers will ever touch a terminal:\nevery editable field is reachable through GitHub's browser\nWeb Editor via a single `✏️` link.\n",
         "productLogic": "The product is structured as **one coherent build with a\ntwo-phase visibility schedule**, not two separate websites.\nThe same Cloudflare Worker serves both phases; what changes\nis which routes return content vs. a holding page.\n\n**Phase 1 (2026-05-22):** only `/coming-soon` is publicly\nreachable. It carries the \"Something Big is Cooking\" teaser,\npartner attribution, key event statistics, and a newsletter\nemail-capture form connected to Resend Audiences. All other\nroutes return the holding page. Implemented via a Cloudflare\nZero Trust Access app `Eatropolis pre-launch` that gates\nevery non-allowlisted path; the **Newsletter bypass app**\n(`96232ff1-10e1-4a58-8a63-953407d45df3`) selectively\npublishes 5 essential paths (coming-soon, _next/*, images/*,\napi/newsletter, opengraph-image) — exactly the platform\ncap of 5 destinations per Access app, discovered the hard\nway after the original 14-row plan returned `too many\ndestinations`.\n\n**Phase 2 (2026-06-05):** the Access lockdown app is\ndisabled at launch morning; the full **68-route**\nprerendered site is revealed simultaneously. The single\nlaunch-announcement broadcast email goes out to all Phase 1\nnewsletter subscribers via Resend, with the Client\nproviding copy and the Developer formatting and sending.\n\n**The full-site information architecture** spans the 13\nmarketing pages: Home (hero video, scroll-card story,\nrestaurant logo carousel, \"Your Day at Eatropolis\" steps,\nticketing partner block, sponsor wall, final CTA),\nTickets (two-tier flat ticketing — **General Admission**\nand **Family Bundle**, with **workshops included with\nadmission**, plus a sticky purchase CTA and Ticketmaster\noutbound), Dishes (filterable grid of 15 signature plates),\nCulinary Partners\n(filterable grid of restaurants with featured spotlights),\nWorkshops (listing + per-workshop RSVP form),\nEvent Info (date/time/location + schedule timeline +\ngetting-there guide), Our Partners (4-tier sponsor\nshowcase: Principal / Al Fresco / Associate / Community),\nContact (general + partnership enquiry forms), plus\nlegal pages.\n\n**Four form pipelines**, all server-actions over `/api/`:\nGeneral Enquiry → `info@eatropolis.co.nz`; Partnership\nEnquiry → `partnership@eatropolis.co.nz`; Workshop\nReservation (one per workshop) → client-chosen address;\nNewsletter signup → Resend Audiences. **All forms gated\nby Cloudflare Turnstile** in Managed mode (better UX than\nreCAPTCHA, lower friction). **All transactional email\nflows through 7 hand-authored React Email templates** —\nContactAcknowledgment + ContactAdminNotice for general\nenquiries (visitor gets a brand-styled acknowledgment, the\nclient gets the full submission with reply-to set);\nPartnershipAcknowledgment + PartnershipAdminNotice for\nsponsor enquiries; WorkshopRsvpConfirmation for workshop\nRSVPs; WelcomeNewsletter for newsletter signups;\nUnsubscribeConfirmation for one-click unsubscribe.\n\n**The conditional AI chat assistant** is a floating widget\nthat streams responses from OpenAI `gpt-5.4-mini` over the\nVercel AI SDK 6, with **voice input via Whisper\n(`/api/transcribe`)** and **voice reply via TTS\n(`/api/tts`)** — abstracted behind `lib/ai-provider.ts` so\nthe entire stack can swap to Anthropic Claude in one line.\nIt's pre-trained with the event's content (dates, location,\ntickets, partners, FAQs, transport) via a build-time-\ngenerated chat-context manifest (`scripts/generate-content-\nmanifest.mjs` runs as predev/prebuild/predeploy hook).\nVisitor cost stays bounded via **Cloudflare KV\n(`EATROPOLIS_CHAT_KV`)** per-IP rate limit + session\ncookie + Turnstile pre-clearance, with feedback persisted\nvia `/api/chat/feedback`.\n\n**The content layer is the deliberate UX call of the\nproject.** The brief required a \"CMS structure\"; the\ncontract solution is **GitHub-as-CMS via the browser Web\nEditor**, explicitly rejecting Excel/Google Sheets as well\nas licensed CMS products (Sanity, Strapi, Payload,\nContentful) since the scope explicitly avoids additional\nthird-party dependencies. The implementation: every editable\nfield has a `✏️` direct link in `docs/CONTENT-INVENTORY.md`\npointing at the repo's `edit/main/<path>` GitHub Web Editor\nURL — the non-technical client\nclicks, edits in GitHub's browser editor, commits, and\nGitHub Actions auto-deploys in ~3 minutes. The content\nitself is **43 MDX files** (dishes, workshops, FAQs,\npartners, sponsors — each with Zod-validated frontmatter)\n+ **16 JSON page-chrome blobs** in `content/site/pages/`\n(home / tickets / dishes / workshops / event-info / partners\n/ sponsors / contact / partnership / coming-soon, plus\nsite-wide nav / footer / social / tickets / chat / brand\n/ announcement). A 9-section `EditorialPageSchema` +\n`VideoPageSchema` in `lib/content/site-schema.ts` give\nthe JSON structural type-safety end-to-end.\n",
@@ -3428,11 +3444,11 @@
       "id": "sunostats",
       "tier": "primary",
       "recency": "recent",
-      "lastUpdated": "2026-05-19",
+      "lastUpdated": "2026-07-04",
       "name": "SunoStats — The Analyst Suno Never Shipped",
       "priority": 18,
       "category": "web-apps",
-      "tagline": "Closed a gap in Suno's official platform that creators couldn't fix themselves — discovered that Suno's serializer leaks unredacted parent->child lineage UUIDs only on /api/trending + persona sub-trees, built the industry's first public Suno lineage explorer on that finding. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.",
+      "tagline": "SunoStats — commercial analytics layer built on a private Suno API probe (suno-research-private) — closed a gap Suno's official platform couldn't fill by discovering that Suno's serializer leaks unredacted parent→child lineage UUIDs only on /api/trending + persona sub-trees, then productizing that into the industry's first public Suno lineage explorer. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.",
       "url": "https://sunostats.chanmeng.org/",
       "logo": "/public/brands/sunostats-logo.svg",
       "extraLinks": [
@@ -3478,7 +3494,9 @@
         "Industry-unique lineage explorer",
         "Suno creator analytics",
         "VPS + Traefik production deployment",
-        "Trilingual SaaS"
+        "Trilingual SaaS",
+        "Schema-drift canary guarding a reverse-engineered API",
+        "Observability + ops hardening"
       ],
       "metrics": [
         {
@@ -3524,11 +3542,15 @@
         {
           "label": "Method-mix enum",
           "value": "10 Suno metadata.type values (gen / concat / studio_export / edit_v3_export / edit_crop / edit_speed / edit_fade / upsample / concat_infilling / upload)"
+        },
+        {
+          "label": "June 2026 hardening",
+          "value": "3 Codex-reviewed waves (2026-06-29→30) — UX/user-flow polish, observability & ops, and Wave 3A/3B model-era insight + a schema-drift canary that alerts when Suno's response shape changes; plus a P0/P1 pass hardening credits, privacy, queries, and crons"
         }
       ],
       "status": "live",
       "startDate": "2026-04-12",
-      "publicSummary": "Production third-party analytics layer for **Suno creators** —\nbuilt to close an opportunity Chan identified by **technical\nresearch** rather than market survey. The Suno UI shows a total\nplay count and a like count, and that's it: no time series, no\ntag-level breakdowns, no view of which tracks are climbing or\nstalling, no exposure of the parent->child remix lineage that\nSuno's own data model encodes. Reverse-engineering the public\nSuno API surface revealed two specific gaps: (1) Suno's\nserializer **leaks unredacted lineage UUIDs only on\n`/api/trending` and persona-clip sub-trees** — nowhere else,\nnot even on the page that lets you remix a clip — making it\npossible (and industry-unique) to build a public lineage\nexplorer by ingesting Trending daily and walking the graph\nserver-side via `WITH RECURSIVE` CTEs; (2) Suno **advertises\nits public-read API surface via W3C oEmbed** (the same\nprotocol Discord and Slack use for link previews), which is\nanonymous + CORS-enabled by design — making a compliant\nanalytics product possible without scraping, headless\nbrowsers, or asking users for their Suno password. SunoStats\nships **6 lenses on a Suno career** — 3 free (portfolio at\n`/@handle`, the lineage explorer, watched playlists with\ndaily pulse view) + 3 premium deep-dive analytics modes\n(Tag Optimization, Performance Snapshot, Method Mix Analysis)\nplus a weekly Trend Brief. **Single-purchase, no subscription**,\nno card stored unless the user chooses to, **3 free credits\non signup**. Stack:\nNext.js 16.2 + React 19.2 + Drizzle + Neon Postgres + Neon\nAuth + Stripe webhook-verified credit ledger + Resend\ninsight delivery, deployed as a Docker container on a VPS\nbehind Traefik with GHCR + GitHub Actions CI/CD. Trilingual\nEN / 简体中文 / 日本語. Live at\n[sunostats.chanmeng.org](https://sunostats.chanmeng.org).\n",
+      "publicSummary": "Production third-party analytics layer for **Suno creators** —\nbuilt on a private API-probe codebase (**suno-research-private**)\nthat Chan developed first to map Suno's undocumented endpoints,\nthen productized and commercialized as SunoStats. The opportunity\nwas identified by **technical research** rather than market survey.\nThe Suno UI shows a total\nplay count and a like count, and that's it: no time series, no\ntag-level breakdowns, no view of which tracks are climbing or\nstalling, no exposure of the parent->child remix lineage that\nSuno's own data model encodes. Reverse-engineering the public\nSuno API surface revealed two specific gaps: (1) Suno's\nserializer **leaks unredacted lineage UUIDs only on\n`/api/trending` and persona-clip sub-trees** — nowhere else,\nnot even on the page that lets you remix a clip — making it\npossible (and industry-unique) to build a public lineage\nexplorer by ingesting Trending daily and walking the graph\nserver-side via `WITH RECURSIVE` CTEs; (2) Suno **advertises\nits public-read API surface via W3C oEmbed** (the same\nprotocol Discord and Slack use for link previews), which is\nanonymous + CORS-enabled by design — making a compliant\nanalytics product possible without scraping, headless\nbrowsers, or asking users for their Suno password. SunoStats\nships **6 lenses on a Suno career** — 3 free (portfolio at\n`/@handle`, the lineage explorer, watched playlists with\ndaily pulse view) + 3 premium deep-dive analytics modes\n(Tag Optimization, Performance Snapshot, Method Mix Analysis)\nplus a weekly Trend Brief. **Single-purchase, no subscription**,\nno card stored unless the user chooses to, **3 free credits\non signup**. Stack:\nNext.js 16.2 + React 19.2 + Drizzle + Neon Postgres + Neon\nAuth + Stripe webhook-verified credit ledger + Resend\ninsight delivery, deployed as a Docker container on a VPS\nbehind Traefik with GHCR + GitHub Actions CI/CD. Trilingual\nEN / 简体中文 / 日本語. Live at\n[sunostats.chanmeng.org](https://sunostats.chanmeng.org).\n",
       "narrative": {
         "impactHeadline": "Industry's first Suno music lineage explorer — closed a gap in Suno's own platform that creators couldn't fix themselves by discovering an unredacted parent→child UUID leak; 46 solo commits, same-day scaffold-to-live, free + premium-lens analytics model.",
         "problem": "Suno is one of the most prolific music platforms onthe\ninternet — millions of generated tracks, an Explore chart\nthat turns over daily — but its creators operate **almost\ncompletely blind**. Suno's UI shows one total play count\nper song, one total like count, and absolutely nothing\nelse: no play-history time series, no breakdown by tag, no\nsignal on which tracks are climbing or stalling, no\ncomparison against what's trending on Explore, no view of\nwhich other creators have built on (remixed, concatenated,\ncovered, or edited) your clips. Adjacent platforms\n(Spotify for Artists, YouTube Studio, SoundCloud Pro)\nhave shipped this baseline for a decade; Suno hasn't.\nWorse: Suno's own data model **encodes the remix lineage\nbetween clips** (every clip has a `parent_clip_id`, every\ngeneration method has a `metadata.type` tag, every\nupsample / concat / edit produces a typed edge in a\ndirected graph) — but none of that surfaces in the UI.\nA creator has no idea their concat clips outperform their\ngen clips 2.4x; no idea which of their tracks have been\nremixed by others; no idea their work just hit a milestone\nthreshold. The gap is at the platform level, and Suno\ncannot or will not close it.\n",
@@ -3570,19 +3592,31 @@
       "name": "AI-Powered ESOL Learning Platform",
       "priority": 81,
       "category": "ai-apps",
-      "tagline": "Multi-path English-learning platform — real-time AI speaking coach (OpenAI Realtime API), CEFR general practice, NZCEL exam prep, and gamified progress tracking on a multi-tenant Neon Postgres backend",
+      "tagline": "Multi-path English-learning platform built for Aotearoa Infinite Academy — real-time AI speaking coach (OpenAI Realtime API), CEFR general practice, NZCEL exam prep, and gamified progress tracking on a multi-tenant Neon Postgres backend",
       "repoUrl": "https://github.com/ChanMeng666/esol-learning-platform",
+      "entity": "Aotearoa Infinite Academy (New Zealand English-language academy)",
+      "extraLinks": [
+        {
+          "label": "Client — Aotearoa Infinite Academy",
+          "url": "https://www.aotearoainfiniteacademy.school/"
+        }
+      ],
       "techStack": [
         "Next.js 15",
         "React",
         "TypeScript",
         "Tailwind CSS 4",
         "CopilotKit",
+        "OpenAI Agents SDK",
         "OpenAI Realtime API",
         "Whisper",
         "Neon Postgres",
         "Drizzle ORM",
         "Stack Auth",
+        "Handsontable / react-spreadsheet",
+        "FullCalendar",
+        "dnd-kit",
+        "Recharts",
         "Cloudflare Pages"
       ],
       "status": "active",
@@ -3604,7 +3638,8 @@
       "name": "Wellness Support Agent",
       "priority": 82,
       "category": "ai-apps",
-      "tagline": "Workplace-wellness platform on Google's Agent Development Kit — five specialized agents with privacy-first, role-based support for employees, HR, and employers",
+      "relatedWorkId": "sanicle",
+      "tagline": "Sanicle-associated workplace-wellness demo on Google's Agent Development Kit — a root agent routes to five specialized sub-agents (employee support, HR manager, employer insights, search, leave requests) with privacy-first, role-based access for employees, HR, and employers",
       "repoUrl": "https://github.com/ChanMeng666/wellness-agent",
       "url": "https://sanicle-wellness-agent-2lxj5uw.gamma.site/",
       "extraLinks": [
@@ -3647,6 +3682,7 @@
       "name": "She Sharp — Event Welcome Board",
       "priority": 83,
       "category": "web-apps",
+      "relatedProjectId": "she-sharp",
       "tagline": "Fullscreen, on-brand electronic welcome sign for She Sharp offline events — pure HTML/CSS/JS, no build step, works offline, with optional live event-data sync from shesharp.org.nz",
       "repoUrl": "https://github.com/ChanMeng666/she-sharp-event-black-board",
       "techStack": [
@@ -3667,6 +3703,32 @@
       }
     },
     {
+      "id": "douyin-mall",
+      "tier": "secondary",
+      "recency": "historical",
+      "lastUpdated": "2026-07-04",
+      "name": "Douyin Mall (Spring Boot Backend)",
+      "priority": 27,
+      "category": "web-apps",
+      "relatedProjectId": "douyin-mall-frontend",
+      "tagline": "Full-featured Douyin/TikTok e-commerce platform backend built during ByteDance's Youth Training Camp (青训营) — Spring Boot + Redis + RabbitMQ with complete user management, product catalog, shopping cart, and order processing; the capstone backend paired with the Vue 3 storefront and later distilled into the Go and Java teaching templates",
+      "repoUrl": "https://github.com/ChanMeng666/douyin-mall",
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "Redis",
+        "RabbitMQ",
+        "MySQL",
+        "Maven",
+        "JWT"
+      ],
+      "status": "active",
+      "startDate": "2025-01",
+      "narrative": {
+        "impactHeadline": "Full Spring Boot + Redis + RabbitMQ e-commerce backend from ByteDance's Youth Training Camp (青训营) — the Douyin Mall capstone (user, product, cart, order modules) that the Vue 3 storefront consumes and that Chan distilled into the public Go and Java templates. 13 stars."
+      }
+    },
+    {
       "id": "douyin-mall-frontend",
       "tier": "secondary",
       "recency": "recent",
@@ -3674,7 +3736,7 @@
       "name": "Douyin Mall Frontend",
       "priority": 84,
       "category": "web-apps",
-      "tagline": "Vue 3 + TypeScript e-commerce storefront — product browsing, cart, orders, and payment UI, the separated frontend for the Douyin Mall capstone stack",
+      "tagline": "Vue 3 + TypeScript e-commerce storefront built during ByteDance's Youth Training Camp (青训营) — product browsing, cart, orders, and payment UI, the separated frontend for the Douyin Mall capstone stack",
       "repoUrl": "https://github.com/ChanMeng666/douyin-mall-frontend",
       "techStack": [
         "Vue 3",
@@ -3710,11 +3772,11 @@
           ]
         }
       },
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Vitex — AI Career Agent (vitex.org.nz)",
       "priority": 16,
       "category": "ai-apps",
-      "tagline": "7-step AI agent that turns a job description + free-text background into a tailored ATS-optimized resume PDF + cover letter in ~30 seconds — Vercel AI SDK + GPT-4o + Typst local compile (<100ms), shipped on a DigitalOcean VPS via Docker + Traefik + GitHub Actions, tiered access via Stripe-integrated credits ledger",
+      "tagline": "Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); billing is outcome-based (charged only when a resume is successfully produced). Vercel AI SDK + GPT-4o + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions",
       "repoUrl": "https://github.com/ChanMeng666/easy-resume",
       "logo": "/public/brands/vitex.svg",
       "url": "https://www.vitex.org.nz/",
@@ -3745,15 +3807,18 @@
         "Cloudinary",
         "shadcn/ui + Neobrutalism",
         "Framer Motion",
+        "Public v1 HTTP API (OpenAPI spec + curl playbook in skill.md)",
+        "vitex-cli (thin API client, bin `vitex`)",
+        "MCP server (`vitex mcp` via npx, stdio — Claude Desktop/Code, Cursor)",
         "Docker",
         "Traefik",
         "DigitalOcean VPS",
         "GitHub Actions CI/CD"
       ],
       "status": "live",
-      "publicSummary": "AI Career Agent live at **vitex.org.nz**. A user pastes a job\ndescription, describes their background in free text, and a\n**7-step AI pipeline** (JD parsing → background parsing → match\nanalysis → resume tailoring → ATS scoring → cover letter →\nTypst document generation) streams the result via SSE into a\ntailored, ATS-optimized resume PDF + matching cover letter in\n~30 seconds. Typst compiles PDFs locally in under 100 ms across\n14 AI-auto-selected professional templates — no external\ndocument-generation API. Stripe-powered credit system, public\nshareable links via unique tokens. Production deployment runs\nas a Docker container on a **DigitalOcean VPS** behind\n**Traefik** (reverse proxy + TLS), shipped continuously by\n**GitHub Actions**. 168 commits, ~95% solo, three deployment\nmigrations and a LaTeX → Typst engine swap on the path to\ncurrent production.\n",
+      "publicSummary": "AI Career Agent live at **vitex.org.nz**. A user pastes a job\ndescription, describes their background in free text, and an\n**8-step AI pipeline** (JD parsing → background parsing → match\nanalysis → resume tailoring → ATS scoring → cover letter →\ndocument generation → server-side PDF compilation) streams the\nresult into a tailored, ATS-optimized resume PDF + matching\ncover letter in ~30 seconds. Typst compiles PDFs locally in\nunder 100 ms across 7 AI-auto-selected professional templates —\nno external document-generation API. The product is\n**agent-ready**: every capability is reachable over an\nauthenticated **public v1 HTTP API** (the web UI and API share\none pipeline core), and a thin **vitex-cli** plus a stdio **MCP\nserver** (`vitex mcp`) let terminals and coding agents (Claude\nDesktop/Code, Cursor) drive the whole product without a browser.\nBilling is **outcome-based** — credits are charged only when a\nresume is successfully produced (failures are free), idempotently.\nNatural-language refinement applies targeted free edits instead\nof full regenerations. Production runs as a Docker container on a\n**DigitalOcean VPS** behind **Traefik** (reverse proxy + TLS),\nshipped continuously by **GitHub Actions**.\n",
       "narrative": {
-        "impactHeadline": "AI career agent that generates a tailored ATS-optimised resume + cover letter in ~30 seconds from a job description and free-text background — 7-step Vercel AI SDK pipeline, Typst local PDF compile under 100 ms, on its third production architecture.",
+        "impactHeadline": "Agent-ready AI career agent — an 8-step pipeline turns a JD + free-text background into a tailored ATS-optimised resume + cover letter in ~30s, usable over a public HTTP API, a CLI, and an MCP server; outcome-based billing (only on success), Typst PDF compile <100ms.",
         "problem": "Most AI resume tools are one of two failure modes: (a) a\nthin GPT wrapper that hands you a paragraph and calls it a\nresume — no PDF, no ATS-aware structure, no template\nintelligence; or (b) a SaaS that lets you fill out a form\nand burns 90 seconds spinning a hosted Chromium to render\nthe same template every other user gets. Both miss the\nactual job: the candidate needs the resume *tailored to the\nspecific JD they're applying to*, the document needs to\nsurvive ATS parsing, the visual template needs to match the\ntarget industry/role, and the round-trip needs to feel\ninstant. None of those are true of \"paste your CV into\nChatGPT.\"\n",
         "audience": "Three groups. **Job seekers in real applications** —\nespecially in NZ / Australia / Asia-Pacific markets where\nChan personally needed the tool and where vitex.org.nz lives\n(the NZ domain is deliberate). **Career-change candidates**\nwho need every application tailored — the people for whom\nre-writing a resume per JD is the actual bottleneck.\n**AI-engineering portfolio reviewers** evaluating Chan's\nability to ship a production-grade multi-step AI agent with\nreal users, real billing, and real DevOps — not a demo.\n",
         "productLogic": "User flow is intentionally short: (1) **Homepage** — paste\na job description + describe your professional background\nin free text. No CV upload, no form filling, no field-by-field\ndata entry. (2) **Generate** — click run; the 7-step AI\npipeline streams progress via SSE, the user watches each\nstage complete (parsing JD → parsing background → matching\n→ tailoring → ATS scoring → cover letter → Typst compile),\nand arrives at the **Editor** view with the PDF preview,\nATS score with actionable feedback, the matching cover\nletter, and a **natural-language refinement box**\n(\"make the leadership section stronger\" / \"shorten the\nintro paragraph\" — the AI regenerates that slice).\n(3) **Refine & export** — download the PDF or generate a\npublic share link with a unique token. Persistent **resume\nmanagement dashboard** and **credit display** for active users.\n",
@@ -3809,7 +3874,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-05-19",
+      "lastUpdated": "2026-07-04",
       "name": "FanFic Lab — HSR DreamWriter, an Adaptive LangGraph Agent Powering a Gaming Fan-Creation Community",
       "priority": 15,
       "category": "ai-apps",
@@ -3978,9 +4043,9 @@
         "problem": "The Chinese gaming fanfiction (同人文) scene around HoYoverse titles — and *Honkai: Star Rail* / 崩坏：星穹铁道 in particular — has two structural problems that generic AI writing tools don't solve. **First**, generic LLM creative writing assistants (CopilotKit-style autosuggest, ChatGPT, Claude) have no deep grounding in HSR canon: they default to surface-level character clichés (\"cold prince\" / \"shy boy\"), get the speech patterns and emotional triggers wrong (e.g., they don't know that 砂金 stops speaking softly when 黑天鹅 is threatened, or that 藿藿's stutter is canon-specific), and routinely produce OOC (out-of-character) drafts that any serious fanwriter rejects. **Second**, existing fanfiction platforms (LOFTER / AO3 / 长佩) are *reading* communities, not *creation* communities — they host finished work, but they don't lower the activation energy for the much larger group of fans who want to consume CP (couple/ship) content but find a blank page intimidating. The opportunity: build a platform where any fan can type \"I want to read 砂金 × 藿藿 现代AU 虐转甜 HE\" in Chinese, get back a canon-respecting 3000-word draft in 60 seconds, edit it, publish it, and have other fans like/comment/follow them. That requires solving the OOC problem at the agent level (canon knowledge baked in, plus a self-revising quality loop) and the activation-energy problem at the product level (one-shot prompt → finished story → save → publish). FanFic Lab is the answer.\n",
         "audience": "Three concentric circles. **Innermost**: the 同人圈 (fandom writers' circle) for *Honkai: Star Rail* — typically Chinese-speaking female fans of HoYoverse games who lurk on LOFTER / Weibo / Bilibili, who already know who 砂金 / 藿藿 / 丹恒 are, who have CP preferences and trope preferences (现代AU / ABO / Hurt-Comfort), and who want a co-writer that won't break their characters. **Middle ring**: consumers who like reading HSR fic but never wrote any — they get the one-prompt-to-finished-story path and become first-time creators, then liking/commenting on others' work pulls them into the community. **Outer ring**: the broader gaming-fanfic and CN-creative-writing community who can adopt the same architecture for other fandoms (the `src/knowledge/` directory is deliberately structured as `base/types.ts` + per-fandom packs, with HSR as the only currently-shipped pack but mentor / 原神 / 鸣潮 packs as natural future expansions — `FandomKnowledge` is a typed interface, not an HSR-hardcode). The Chinese-first product surface is a deliberate choice: prompts, system messages, character data, world rules, even the agent's internal log messages (\"正在根据反馈修改第 X 版...\") are all in Chinese, because the audience is.\n",
         "productLogic": "The user flow collapses what would normally be 4-5 separate apps (writing assistant + character database + fanfic editor + social platform + recommendation engine) into one screen. (1) **Land on `https://fanfic-lab.tech`** — cinematic full-bleed hero with Honkai: Star Rail splash arts and KV (key-visual) imagery, plus a Honkai: Star Rail fan content attribution credit (the project takes the IP-attribution discipline seriously even though it's a non-commercial fan tool). (2) **Sign in via Stack Auth** — branded sign-in/up shell with explicit error classification, mobile + perf polish. (3) **Hit the \"create\" page** — type a Chinese prompt describing the CP you want to read about (\"想看砂金和藿藿的现代AU虐转甜\"). (4) **Backend kicks off a DreamWriter agent run**: the Next.js API route POSTs to `LANGGRAPH_URL=http://agent:8123` (Docker Compose internal hostname) which runs the 7-node graph; the frontend polls for `logs` updates and shows them in Chinese (\"正在解析您的需求...\" → \"正在策划故事...\" → \"正在创作...\" → \"正在质量检查 (8/10)...\" → \"正在根据反馈修改第 1 版...\" → \"故事完成\"). (5) **Story auto-publishes to the Fandom Feed** (a deliberate product decision in commit `b090c04` \"auto-publish stories, remove shelf page and drafts tab\" — friction kills first-time creators). (6) **Other users discover it via**: the feed (filterable by fandom / ships / tags / rating / status, sortable by recent / popular / comments / word count, with infinite scroll); SEO/OG tags + sitemap for organic search; **pgvector related-story recommendations** on each story page (commit `48428e6` — cosine similarity over title+summary+ships+tags embeddings, deliberately *not* over chapter content because we want thematic matching, not prose-style matching); **per-author public pages** at `/users/[username]` with their stories + followers + following. (7) **Engagement primitives**: like a story, follow an author, leave a nested-reply comment, like comments, get notified in the bell + notifications page when someone interacts with your work. (8) **Story reader page**: per-reader font / line-height preferences (commit `6551966`) + scroll position memory so the reader can pause + resume, plus dark mode toggle in the header (commit `b922cf8`). (9) **Author tools**: edit published stories, continue any story with a new chapter (with auto-generated chapter titles, commit `30df8fe`), avatar crop preview via react-easy-crop. The cumulative effect: **a fan-creation community where the friction from \"I want to read this\" to \"this story exists and other fans are commenting on it\" is one Chinese sentence**.\n",
-        "businessLogic": "This is an MIT-licensed open-source fan-creation tool with a non-commercial usage stance toward the HSR IP — it ships an explicit Honkai: Star Rail fan content attribution on the homepage and treats the canon knowledge pack as a *fan-curated* reference, not commercial use of HoYoverse assets. The infrastructure choices are however explicit and deliberate. **Deployment model**: the production stack runs on a self-hosted DigitalOcean droplet behind Coolify (the migration playbook records the rationale — moving off Railway gave full control over runtime + the ability to host more services on the same box). **Model tiering**: GPT-4o-mini handles the intent parser + quality guard nodes; GPT-4o handles the writer node where prose quality matters; the quality-guard revision budget is capped at MAX_REVISIONS=2 so the agent loop is bounded; embeddings use `text-embedding-3-small`; the `SourceResearchCache` Prisma model + Redis tier persist Tavily results for 30 days to avoid duplicate fandom research. **Credits scaffolding**: the Prisma schema includes `UserCredits` and `Generation` models with `creditsCharged: Int` — credits infrastructure exists in the data layer as a foundation for future capacity controls but is not yet enforced in production, so the current version is fully free for users. **Build-time + runtime layout**: two services (web + agent) in one Docker Compose file means health checks, internal networking, restart policies, and rolling deploys are all handled by one Coolify project rather than fragmented across providers. **Discovery loop**: per-story SEO/OG tags + sitemap (commit `897a43d`) + the related-stories pgvector recommender compound organic discoverability over time.\n",
+        "businessLogic": "This is an MIT-licensed open-source fan-creation tool with a non-commercial usage stance toward the HSR IP — it ships an explicit Honkai: Star Rail fan content attribution on the homepage and treats the canon knowledge pack as a *fan-curated* reference, not commercial use of HoYoverse assets. The infrastructure choices are however explicit and deliberate. **Deployment model**: the production stack runs on a self-hosted DigitalOcean droplet behind Coolify (the migration playbook records the rationale — moving off Railway gave full control over runtime + the ability to host more services on the same box). **Model tiering**: GPT-4o-mini handles the intent parser + quality guard nodes; GPT-4o handles the writer node where prose quality matters; the quality-guard revision budget is capped at MAX_REVISIONS=2 so the agent loop is bounded; embeddings use `text-embedding-3-small`; the `SourceResearchCache` Prisma model + Redis tier persist Tavily results for 30 days to avoid duplicate fandom research. **Credits scaffolding**: the Prisma schema includes `UserCredits` and `Generation` models with `creditsCharged: Int` — a June 2026 Claude×Codex adversarial-review pass (PRs #2-#3) moved credits from data-layer scaffolding to enforced billing by making story generation server-authoritative and fail-closed on QA, and calibrating story length to the paid tier — so generation cost and capacity are now controlled server-side rather than trusted from the client. **Build-time + runtime layout**: two services (web + agent) in one Docker Compose file means health checks, internal networking, restart policies, and rolling deploys are all handled by one Coolify project rather than fragmented across providers. **Discovery loop**: per-story SEO/OG tags + sitemap (commit `897a43d`) + the related-stories pgvector recommender compound organic discoverability over time.\n",
         "technicalApproach": "The system is organised around four orthogonal layers that together produce the user-visible behaviour.\n\n**Layer 1 — Adaptive LangGraph agent with self-revising quality loop.** `src/agent/dreamwriter/graph.ts` defines a `StateGraph<DreamWriterStateAnnotation>` with 7 nodes wired into a deliberate topology: **intent_parser** (GPT-4o-mini, temp 0.3, extracts `{cp, setting, tone, constraints, language}` from Chinese natural-language input) → **story_architect** (GPT-4o, plans `{title, cp, setting, tone, wordTarget, emotionalArc, scenes[]}`) → **writer** (GPT-4o, temp 0.9, generates prose using the HSR knowledge prompt + RAG context) → **quality_guard** (GPT-4o-mini, temp 0.3, scores the draft against the same knowledge prompt and returns `{overallScore, oocIssues[], consistencyIssues[], proseNotes[], passesThreshold}`) → **conditional edge** `routeAfterQualityCheck`: if `!passesThreshold && revisionCount < MAX_REVISIONS(=2)`, route back through **revision_counter** → **writer** with the quality feedback appended to the prompt; otherwise → **summarize** (writes the public-facing one-paragraph blurb) → **delivery** (END). The state annotation includes a `logs[]` reducer so the frontend can show Chinese progress text in near-real-time. `MemorySaver` checkpointing is used so runs survive process restarts during long agent calls.\n\n**Layer 2 — Hand-curated fandom knowledge pack + pgvector RAG.** Two complementary mechanisms feed the writer node: **(a) the deterministic knowledge prompt** in `src/knowledge/hsr/` — `characters.ts` defines 5 HSR characters (砂金 / 藿藿 / 丹恒 / 景元 / 花火) as `CharacterProfile` objects with `name`, `aliases[]`, `personality[]`, `speechPatterns`, `emotionalTriggers[]`, `relationships: Record<string, string>`, and `timelineStates`; `relationships.ts` has 4 `RelationshipDynamic` objects with `keyMoments[]`; `world.ts` has 5 `WorldRule` categories (命途体系 etc.); `tropes.ts` has 5 `TropeTemplate` objects (现代AU / ABO / Hurt-Comfort / 豆花/甜饼 / 前世今生) with per-character `characterAdaptations`; `index.ts` composes everything via a `toSystemPrompt()` method that produces a structured Chinese prompt with `▎character` headers + `性格特征` / `说话方式` / `情感触发点` / `人际关系` / `时间线状态` fields. **(b) The probabilistic RAG layer** in `src/knowledge/base/rag.ts` — `retrieveRelevantChunks(query, fandom, limit)` embeds the query via `text-embedding-3-small`, runs a raw SQL `embedding <=> vector` cosine-distance query against the `KnowledgeChunk` table (with a pgvector ivfflat index), returns the top-k chunks. The writer node calls both, concatenating the deterministic knowledge prompt with the RAG context before invoking GPT-4o. This split lets the *fixed* canon (character personalities) be edited as code while the *long-tail* canon (specific scenes, story snippets) lives as embeddings and grows over time.\n\n**Layer 3 — Two-Docker-service production deployment via DigitalOcean + Coolify.** The codebase ships **two Dockerfiles** (`Dockerfile.web` for Next.js 16 + Prisma 7, `Dockerfile.agent` for LangGraph CLI) and one `docker-compose.coolify.yml` that wires them into a single Coolify project. Internal networking uses Docker Compose service names (`web` calls `http://agent:8123` via the Compose-managed bridge network — no Railway-internal-DNS, no nginx, no manual sidecar config). **Health checks** are explicit: `web` polls `/api/health` (which itself checks Redis + Postgres latency), `agent` polls LangGraph's `/info` endpoint, both with `start_period: 30-40s` to tolerate cold starts. **External proxy chain**: Cloudflare (proxy mode, SSL termination, CDN) → DigitalOcean droplet 159.223.173.17 → Traefik (built into Coolify, handles `:80`/`:443` and routes by host) → Docker container. **CI/CD**: `.github/workflows/deploy.yml` on every `git push master` runs a 2-image parallel Docker Buildx build, pushes both to GHCR (`ghcr.io/chanmeng666/fanfic-lab/{web,agent}` tagged per-SHA + `latest`, with separate `cache-from` scopes for each image), then SSH-deploys to the VPS with a 20-minute timeout. The 600+ line `docs/MIGRATION_RAILWAY_TO_DIGITALOCEAN.md` playbook documents the entire transition including DNS cutover, Cloudflare config, Coolify project setup, lessons learned (Docker registry case-sensitivity bug fixed in commit `839e9c1`), and a \"Claude Code Automation Playbook\" section — turning the migration into a reusable artifact.\n\n**Layer 4 — Full UGC community substrate with pgvector recommendations + trigram search.** The Prisma schema models 21 tables centred on `User` ↔ `Story` ↔ `Chapter` with full social graph (`Follow`), engagement primitives (`Like`, `Comment` with `parentId` self-reference for nested replies, `CommentLike`), discovery primitives (`Notification` with polymorphic `payload: Json`), preferences (`UserPreferences` includes `preferredCPs[]`, `preferredTropes[]`, `avoidTropes[]`, `tonePreference`, `lengthPreference` — feeding into the personalised feed *and* into future agent-prompt personalisation), and the AI-generation audit trail (`Generation` model with `request: Json`, `plan: Json`, `deliverable: Json`, `tokensUsed`, `creditsCharged`, `durationMs`). **Two specialised PostgreSQL extensions** are deliberately exploited: **(i) pg_trgm** with GIN indexes on `Story.title` and `Story.summary` (migration `20260421091500_enable_pgtrgm_search`) — turns Prisma's `contains:` queries from sequential scans into trigram-index lookups, scaling search past a few hundred stories without code change; **(ii) pgvector** with an ivfflat cosine index on `Story.embedding` (migration `20260421093000_add_story_embedding`, `lists=100`) — every story gets a 1536-dim embedding generated from `title + fandom + ships + tags + summary` (deliberately *not* chapter content, because we want thematic match, not prose-style match), and the related-stories endpoint runs cosine-distance queries to surface similar work. `setStoryEmbedding()` in `lib/story-embedding.ts` uses raw SQL because Prisma 7 doesn't yet support direct writes to the `vector` type. A `scripts/backfill-embeddings.ts` script handles legacy stories created before the embedding column existed.\n\nThe four layers are loosely coupled: the agent can be re-shaped without touching the DB schema, the knowledge pack can grow without touching the agent topology, the deployment substrate can move providers (the Railway → DigitalOcean migration is the proof) without touching the application, and the community layer's pgvector + pg_trgm indexes are content-agnostic.\n",
-        "outcomes": "- **182 commits over ~16 weeks** (2026-01-01 → 2026-04-21), spanning a complete product redesign mid-project: the first iteration was a generic CopilotKit + LangGraph fanfic editor with HITL approval cards; the HSR DreamWriter pivot in commit `a288e25` (\"HSR DreamWriter - complete product redesign\", 2026-03-23) plus commit `b5baf34` (\"remove old pipeline, editor, wizard, and generator code\", same day) deliberately deleted the old codebase to focus on a single fandom with deep canon support.\n- **Adaptive quality-loop agent shipped** in commit `a06d96f` \"wire up adaptive DreamWriter agent graph with quality loop\" — the conditional revision edge with MAX_REVISIONS=2 turns a one-shot generator into a self-correcting agent, dramatically reducing OOC errors per Chan's internal observations.\n- **Hand-curated HSR canon knowledge pack** built across commits `e5e82ac` (initial pack) → `1a0fa53` (HSR_TROPES extraction) → `611d0e0` (KnowledgeChunk model + DreamWriter preference fields in `UserPreferences`) → `f9b1fcf` (RAG utilities). 5 deeply-modeled characters + 4 relationships + 5 world rules + 5 trope templates.\n- **Railway → DigitalOcean + Coolify migration** completed 2026-04-03 (commit `734e69c`), documented in a 600+-line reusable playbook at `docs/MIGRATION_RAILWAY_TO_DIGITALOCEAN.md` that includes lessons-learned (Docker registry case-sensitivity, SSH timeout tuning) and a \"Claude Code Automation Playbook\" section.\n- **GitHub Actions zero-downtime CI/CD** added in commit `985e0b4` \"ci: add GitHub Actions CI/CD for zero-downtime deployment\" — parallel image builds with per-image cache scopes, GHCR registry, SSH-deployment-by-push.\n- **Full social graph + discovery substrate** built in the last 4 days of active development (2026-04-21): nested-reply comments + likes + spam protection (`d234471`), in-app notifications (`f171ce3`), public followers/following pages (`d96fc68`), per-author public pages (`e465240`), pgvector related-stories (`48428e6`), pg_trgm search indexes (`9bd86a9`), per-story view counts (`f598394`), per-story SEO/OG + sitemap (`897a43d`), dark mode (`b922cf8`), reader font/line-height + scroll memory (`6551966`), avatar crop preview (`9554785`), branded sign-in/up shell (`a8fccd3`).\n- **Production stack survives a multi-service migration**: the same codebase ran on Vercel + Railway, then Vercel + Railway-LangGraph-only, then DigitalOcean + Coolify (current), without breaking the agent contract.\n- **Operational discipline**: 2 services run on a self-hosted DO droplet via Coolify; deliberate model tiering (mini for parsing/checking, full for prose) + cache-first Tavily research + capped revision budget keep the agent loop predictable.\n- **Production URL live**: https://fanfic-lab.tech/ (with www → root redirect), Cloudflare-proxied, MIT-licensed.\n",
+        "outcomes": "- **182 commits over ~16 weeks** (2026-01-01 → 2026-04-21), spanning a complete product redesign mid-project: the first iteration was a generic CopilotKit + LangGraph fanfic editor with HITL approval cards; the HSR DreamWriter pivot in commit `a288e25` (\"HSR DreamWriter - complete product redesign\", 2026-03-23) plus commit `b5baf34` (\"remove old pipeline, editor, wizard, and generator code\", same day) deliberately deleted the old codebase to focus on a single fandom with deep canon support.\n- **Adaptive quality-loop agent shipped** in commit `a06d96f` \"wire up adaptive DreamWriter agent graph with quality loop\" — the conditional revision edge with MAX_REVISIONS=2 turns a one-shot generator into a self-correcting agent, dramatically reducing OOC errors per Chan's internal observations.\n- **Hand-curated HSR canon knowledge pack** built across commits `e5e82ac` (initial pack) → `1a0fa53` (HSR_TROPES extraction) → `611d0e0` (KnowledgeChunk model + DreamWriter preference fields in `UserPreferences`) → `f9b1fcf` (RAG utilities). 5 deeply-modeled characters + 4 relationships + 5 world rules + 5 trope templates.\n- **Railway → DigitalOcean + Coolify migration** completed 2026-04-03 (commit `734e69c`), documented in a 600+-line reusable playbook at `docs/MIGRATION_RAILWAY_TO_DIGITALOCEAN.md` that includes lessons-learned (Docker registry case-sensitivity, SSH timeout tuning) and a \"Claude Code Automation Playbook\" section.\n- **GitHub Actions zero-downtime CI/CD** added in commit `985e0b4` \"ci: add GitHub Actions CI/CD for zero-downtime deployment\" — parallel image builds with per-image cache scopes, GHCR registry, SSH-deployment-by-push.\n- **Full social graph + discovery substrate** built in the last 4 days of active development (2026-04-21): nested-reply comments + likes + spam protection (`d234471`), in-app notifications (`f171ce3`), public followers/following pages (`d96fc68`), per-author public pages (`e465240`), pgvector related-stories (`48428e6`), pg_trgm search indexes (`9bd86a9`), per-story view counts (`f598394`), per-story SEO/OG + sitemap (`897a43d`), dark mode (`b922cf8`), reader font/line-height + scroll memory (`6551966`), avatar crop preview (`9554785`), branded sign-in/up shell (`a8fccd3`).\n- **Production stack survives a multi-service migration**: the same codebase ran on Vercel + Railway, then Vercel + Railway-LangGraph-only, then DigitalOcean + Coolify (current), without breaking the agent contract.\n- **Operational discipline**: 2 services run on a self-hosted DO droplet via Coolify; deliberate model tiering (mini for parsing/checking, full for prose) + cache-first Tavily research + capped revision budget keep the agent loop predictable.\n- **Production URL live**: https://fanfic-lab.tech/ (with www → root redirect), Cloudflare-proxied, MIT-licensed.\n- **June 2026 billing-integrity + reliability hardening** (Claude×Codex adversarial review, PRs #2-#3, 2026-06-28→29): server-authoritative generation with fail-closed QA, per-scene progress + degraded-quality surfacing + cost disclosure, Zod route validation + a Vitest suite + a CI gate, extra DB indexes, series-resume, and story-length calibration to the paid tier — turning the free MVP into a billing-safe, tested product.\n",
         "myRole": "Sole author, designer, and operator. Every one of the 182 commits is mine. I wrote both the initial CopilotKit + LangGraph fanfic editor (commits `0a3d1f5` → `36c5469` Teal+Amber \"Literary Atelier\" design system → `cdc3586` Railway deployment), made the call to scrap that direction and pivot to HSR-specific DreamWriter (commits `cbd31cc` \"pivot from MDZS to Honkai: Star Rail based on 2025-2026 fandom trends\" → `4790851` MDZS implementation plan as comparison reference → `a288e25` \"HSR DreamWriter - complete product redesign\" + `b5baf34` the same-day old-code deletion), hand-curated the entire HSR canon knowledge pack (5 characters with their specific 性格特征 / 说话方式 / 情感触发点 — this is bespoke fandom-domain knowledge, not scraped), wrote the 7-node adaptive LangGraph topology including the conditional revision edge, designed the Prisma schema (21 models including the polymorphic `Notification.payload: Json`, the self-referential `Comment.parentId` for nested replies, the deliberate split between `KnowledgeChunk` for RAG and `SourceResearchCache` for Tavily caching, the `UserCredits` + `Generation` audit foundation), wrote both Dockerfiles + the Coolify compose file + the GitHub Actions deploy workflow, executed the Railway → DigitalOcean + Coolify migration (and *documented* it as a reusable playbook), wrote the pgvector + pg_trgm migrations and the `lib/story-embedding.ts` raw-SQL escape hatch, and built the entire community-feature sprint (comments, notifications, follows, related stories, search indexing, view counts, SEO, dark mode, reader preferences, avatar cropping) in the final ~96-hour push 2026-04-18 → 2026-04-21. The project doubles as a personal R&D lab for the rest of the portfolio: the Coolify-on-DO migration playbook informed similar deployments in archcanvas (Workers → DO VPS), the GitHub-Actions-to-GHCR-to-SSH pattern reappeared in subsequent multi-service projects, and the pgvector + ivfflat + cosine-similarity recipe became the template I reused for related-content recommendations elsewhere.\n"
       },
       "_featuredStackResolved": [
@@ -4017,16 +4082,39 @@
     {
       "id": "archcanvas",
       "tier": "secondary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "active",
+      "lastUpdated": "2026-07-04",
       "name": "ArchCanvas",
       "priority": 32,
       "category": "ai-apps",
+      "tagline": "AI design agent for architects that productizes ArchLang (Chan's own invented floor-plan programming language) — generate SVG floor plans via the sister ArchLang compiler plus OpenAI (GPT-4o + DALL-E) renderings from briefs and reference images, iterate on a zoomable canvas with an AI review mode, and export any project as a real git repo; pay-per-result credits, not subscriptions. Strong commercialization potential",
       "url": "https://archcanvas.chanmeng.org/",
+      "techStack": [
+        "Next.js (App Router)",
+        "React 19 + TypeScript",
+        "Vercel AI SDK (@ai-sdk/openai, ai) + OpenAI (GPT-4o + DALL-E image generation)",
+        "@chanmeng666/archlang (own declarative floor-plan compiler, consumed as a package)",
+        "Neon Postgres + Drizzle ORM",
+        "Stripe (pay-per-result credits)",
+        "Cloudinary (rendering storage)",
+        "react-zoom-pan-pinch (infinite zoomable canvas)",
+        "isomorphic-git + memfs (export a project as a real git repo)",
+        "jose (auth)",
+        "shadcn/ui + Tailwind + Framer Motion"
+      ],
+      "keywords": [
+        "AI architectural design agent",
+        "SVG floor-plan generation (ArchLang compiler)",
+        "Infinite zoomable design canvas",
+        "Pay-per-result credits (no subscription)",
+        "AI review mode (anchored findings + one-click have-AI-fix)",
+        "Git-native project export"
+      ],
+      "status": "live",
+      "startDate": "2026-06",
       "narrative": {
-        "impactHeadline": "AI design agent for architects — GPT-4o + DALL-E 3 generate SVG floor plans and photorealistic renderings on an infinite zoomable canvas, with a per-generation credits model rather than recurring access."
-      },
-      "status": "live"
+        "impactHeadline": "AI design agent for architects — generates SVG floor plans (via the sister ArchLang compiler) plus OpenAI renderings on an infinite zoomable canvas, with an AI review mode (anchored findings + one-click have-AI-fix) and git-repo export. Billed per generation, not by subscription."
+      }
     },
     {
       "id": "ai-image-generator",
@@ -4164,11 +4252,11 @@
       "id": "chinese-redefine",
       "tier": "primary",
       "recency": "recent",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Chinese Redefine 汉语新解 — AI Word Redefinition",
       "priority": 14,
       "category": "ai-apps",
-      "tagline": "Full-stack AI app that reinterprets traditional Chinese vocabulary through Google Gemini, exports shareable SVG cards, gated by a two-layer rate-limit quota system, deployed on Cloudflare Workers via OpenNext",
+      "tagline": "汉语新解 — a full-stack AI app that reinterprets everyday Chinese vocabulary with sharp, humorous, philosophically-loaded takes (productizing Li Jigang's 李继刚 viral prompt) via Google Gemini, exports shareable SVG cards, gated by a two-layer rate-limit quota system, deployed on Cloudflare Workers via OpenNext. Low on raw technical difficulty, high on cultural/philosophical depth",
       "repoUrl": "https://github.com/ChanMeng666/chinese-redefine",
       "logo": "/public/brands/chinese-redefine-v2.svg",
       "url": "https://chinese-redefine.chanmeng-dev.workers.dev/",
@@ -4219,13 +4307,20 @@
       "id": "interactive-story-generator",
       "tier": "secondary",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Interactive Story Generator",
       "priority": 42,
       "category": "creative",
+      "tagline": "AI-powered collaborative storytelling demo deployed as a Hugging Face Space — Gradio + PyTorch for multi-genre, character-driven branching narratives; an early ML portfolio piece, MIT-licensed and one-click deployable",
       "repoUrl": "https://github.com/ChanMeng666/interactive-story-generator",
       "logo": "/public/brands/interactive-story-generator-logo.svg",
       "url": "https://huggingface.co/spaces/ChanMeng666/interactive-story-generator",
+      "techStack": [
+        "Python",
+        "Gradio",
+        "PyTorch",
+        "Hugging Face Spaces"
+      ],
       "narrative": {
         "impactHeadline": "AI-powered collaborative storytelling platform on Hugging Face Spaces — Gradio + PyTorch demo for multi-genre, character-driven branching narratives. One of Chan's early ML portfolio pieces, MIT-licensed for one-click deployment."
       },
@@ -4235,15 +4330,23 @@
       "id": "emoji-story-generator",
       "tier": "secondary",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Emoji Story Generator",
       "priority": 43,
       "category": "creative",
+      "tagline": "AI emoji-to-story generator deployed as a Hugging Face Space — pick from 200+ emojis across 8 categories and Llama-3.1-8B-Instruct (via HF Inference Providers) writes the narrative, backed by a community story library with voting. Streamlit app, MIT, one-click deployable",
       "repoUrl": "https://github.com/ChanMeng666/emoji-story-generator",
       "logo": "/public/brands/emoji-story-generator-logo.svg",
       "url": "https://huggingface.co/spaces/ChanMeng666/emoji-story-generator",
+      "techStack": [
+        "Python",
+        "Streamlit",
+        "Hugging Face Inference Providers API",
+        "Llama-3.1-8B-Instruct",
+        "Hugging Face Spaces"
+      ],
       "narrative": {
-        "impactHeadline": "AI emoji-to-story generator on Hugging Face Spaces — 200+ emojis across 8 categories powered by Llama-3.1-8B-Instruct, with a community-driven story library and voting system. MIT-licensed and one-click deployable."
+        "impactHeadline": "AI emoji-to-story generator on Hugging Face Spaces — 200+ emojis across 8 categories powered by Llama-3.1-8B-Instruct via HF Inference Providers, with a community-driven story library and voting system. Streamlit, MIT-licensed and one-click deployable."
       },
       "status": "live"
     },
@@ -4251,71 +4354,192 @@
       "id": "advanced-neural-network-applications",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Advanced Neural Network Applications",
       "priority": 50,
       "category": "ml-research",
+      "tagline": "From-scratch perceptron (classification) and linear-neuron (regression) implementations with step-by-step weight-update math derivations and interactive Matplotlib visualizations in Jupyter — one-click runnable in the browser via Binder and Google Colab, no install",
       "repoUrl": "https://github.com/ChanMeng666/advanced-neural-network-applications",
+      "techStack": [
+        "Python",
+        "Jupyter",
+        "NumPy",
+        "pandas",
+        "Matplotlib",
+        "scikit-learn"
+      ],
+      "keywords": [
+        "Neural networks from scratch",
+        "Perceptron + linear neuron",
+        "Hand-derived gradient descent",
+        "Binder + Google Colab one-click",
+        "Educational ML notebooks"
+      ],
       "status": "archived",
-      "logo": "/public/brands/advanced-neural-network-applications.png"
+      "logo": "/public/brands/advanced-neural-network-applications.png",
+      "narrative": {
+        "impactHeadline": "Foundational neural networks built from scratch — perceptron classification and linear-neuron regression with hand-derived weight updates and interactive visualizations, upgraded from a student assignment into zero-install browser notebooks runnable via Binder and Google Colab."
+      }
     },
     {
       "id": "bodyfat-estimation-mlp",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Body Fat Prediction (MLP)",
       "priority": 51,
       "category": "ml-research",
+      "tagline": "Two from-scratch MLP regressors predicting body-fat % from anthropometric measurements — a full model (14 inputs → 20 hidden, R²=0.9724) and an efficiency-reduced model (9 inputs → 5 hidden, R²=0.9617); published on Hugging Face with a full model card",
       "repoUrl": "https://github.com/ChanMeng666/bodyfat-estimation-mlp",
+      "url": "https://huggingface.co/ChanMeng666/bodyfat-estimation-mlp",
+      "techStack": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "NumPy",
+        "pandas"
+      ],
+      "metrics": [
+        {
+          "label": "Full model",
+          "value": "14 inputs → 20 hidden neurons · R²=0.9724 · MSE=1.93"
+        },
+        {
+          "label": "Reduced model",
+          "value": "9 inputs → 5 hidden neurons · R²=0.9617 · MSE=2.67"
+        },
+        {
+          "label": "Hugging Face downloads",
+          "value": "~9 / month"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0 · trained from scratch (no fine-tuning)"
+        }
+      ],
       "status": "archived",
-      "logo": "/public/brands/bodyfat-estimation-mlp.png"
+      "logo": "/public/brands/bodyfat-estimation-mlp.png",
+      "narrative": {
+        "impactHeadline": "Two MLP body-fat regressors trained from scratch — a 14-feature full model (R²=0.9724) and a 9-feature efficiency model (R²=0.9617) — packaged from a student assignment into a published Hugging Face model with a complete model card."
+      }
     },
     {
       "id": "heat-flux-perceptrons-neural-networks",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Heat Flux Neural Networks",
       "priority": 52,
       "category": "ml-research",
+      "tagline": "Feedforward neural nets predicting building heat-flux from insulation + orientation — compares 1/3/5-hidden-neuron architectures and SGD vs Adagrad; best model R²=0.9588 (MSE 0.0029). Published on Hugging Face with a full model card",
       "repoUrl": "https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks",
+      "url": "https://huggingface.co/ChanMeng666/heat-flux-perceptrons-neural-networks",
+      "techStack": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "NumPy",
+        "pandas"
+      ],
+      "metrics": [
+        {
+          "label": "Best model",
+          "value": "5 hidden neurons · SGD (lr 0.1, momentum 0.9) · R²=0.9588 · MSE=0.0029"
+        },
+        {
+          "label": "Architectures compared",
+          "value": "1 / 3 / 5 hidden neurons · SGD vs Adagrad"
+        },
+        {
+          "label": "Hugging Face downloads",
+          "value": "~14 / month"
+        },
+        {
+          "label": "License",
+          "value": "Apache-2.0"
+        }
+      ],
       "status": "archived",
-      "logo": "/public/brands/heat-flux-perceptrons-neural-networks.png"
+      "logo": "/public/brands/heat-flux-perceptrons-neural-networks.png",
+      "narrative": {
+        "impactHeadline": "Feedforward neural nets for architectural heat-flux prediction (insulation + building orientation) — an architecture/optimizer study (1/3/5 neurons, SGD vs Adagrad) reaching R²=0.9588, packaged from a student assignment into a published Hugging Face model with a full model card."
+      }
     },
     {
       "id": "mnist-handwritten-digit-recognition-project",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "MNIST Digit Recognition",
       "priority": 53,
       "category": "ml-research",
+      "tagline": "Handwritten-digit recognition comparing three neural-network architectures — a baseline MLP, an optimized MLP, and a deep CNN — with rich Plotly/seaborn training-and-error visualizations; upgraded from a student assignment into a documented, reproducible TensorFlow study",
       "repoUrl": "https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project",
+      "techStack": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "NumPy",
+        "pandas",
+        "scikit-learn",
+        "Matplotlib",
+        "seaborn",
+        "Plotly"
+      ],
+      "keywords": [
+        "MNIST digit recognition",
+        "MLP vs optimized vs deep CNN",
+        "Architecture comparison study",
+        "TensorFlow / Keras",
+        "Plotly + seaborn visualizations"
+      ],
       "status": "archived",
-      "logo": "/public/brands/mnist-handwritten-digit-recognition-project.png"
+      "logo": "/public/brands/mnist-handwritten-digit-recognition-project.png",
+      "narrative": {
+        "impactHeadline": "Handwritten-digit recognition across three architectures (baseline MLP → optimized MLP → deep CNN) with rich Plotly/seaborn visualizations — upgraded from a student assignment into a documented, reproducible TensorFlow comparison study."
+      }
     },
     {
       "id": "water-quality-testing-data-analysis",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Water Quality Analysis",
       "priority": 54,
       "category": "ml-research",
+      "tagline": "500-sample water-quality statistical study — correlation heatmaps, pair plots, and multi-parameter OLS regression predicting conductivity from pH, temperature, turbidity, and dissolved oxygen (strongest finding: pH↔DO r=0.705); upgraded from a student assignment into a reproducible Jupyter notebook",
       "repoUrl": "https://github.com/ChanMeng666/water-quality-testing-data-analysis",
+      "techStack": [
+        "Python",
+        "Jupyter",
+        "pandas",
+        "NumPy",
+        "Matplotlib",
+        "seaborn",
+        "statsmodels",
+        "scikit-learn"
+      ],
+      "keywords": [
+        "Water-quality statistical analysis",
+        "OLS regression + correlation study",
+        "500-sample dataset",
+        "Conductivity prediction model"
+      ],
       "status": "archived",
-      "logo": "/public/brands/water-quality-analysis.png"
+      "logo": "/public/brands/water-quality-analysis.png",
+      "narrative": {
+        "impactHeadline": "500-sample water-quality study — strong pH↔dissolved-oxygen correlation (r=0.705) plus multi-parameter OLS regression predicting conductivity; upgraded from a student assignment into a reproducible Jupyter notebook."
+      }
     },
     {
       "id": "ai-programming-teaching-project",
       "tier": "primary",
       "recency": "active",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "AI Programming Education Platform (programming.chanmeng.org)",
       "priority": 13,
       "category": "ai-apps",
-      "tagline": "Bilingual Docusaurus teaching platform hosting four cohort versions side-by-side, an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts — the active home for the 2026 TechNest AI Track",
+      "tagline": "Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (four cohort versions side-by-side) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder",
       "repoUrl": "https://github.com/ChanMeng666/ai-programming-teaching-project",
       "logo": "/public/brands/ai-programming-logo.svg",
       "url": "https://programming.chanmeng.org/",
@@ -4364,7 +4588,7 @@
         "productLogic": "Visitors land on programming.chanmeng.org and the docs default\nto the **2026 TechNest** version (the active cohort), but the\nversion switcher exposes 2026-her-waka, 2025-summer, and\n2024-winter side-by-side — alumni of any cohort hit a stable\npermalink. Each version ships its own Video Tutorials sidebar\nsection, weekly lab guides as both web docs and downloadable\nTypst-generated PDFs, and a per-version Mermaid dual-view\ndiagram (the same diagram in two presentations so visual and\ntextual learners both succeed). A floating **AI Chat Assistant**\nwidget answers questions in natural language by retrieving the\ncurrent cohort's content first (version-aware retrieval), then\nfalling back to other cohorts and the blog. Capstone 2026 has\nits own public showcase page where invited guests vote on\nteams' demos via a Notion-backed voting flow.\n",
         "businessLogic": "Theory of change: a single teaching platform that compounds\ncohort-over-cohort instead of resetting each round. Once\n2024-winter cohort materials are versioned in, they stay\naccessible forever at the same URL; the next cohort's\nmaterials sit alongside them without conflict. The AI tutor\nmeans a student writing code at midnight gets context-aware\nhelp against their own cohort's syllabus, not generic ChatGPT\nanswers. For Chan personally: the platform demonstrates\nproduction-grade EdTech engineering (Cloudflare Workers AI +\nVectorize + i18n + versioned docs + PDF pipeline) while doing\nactual paid teaching work — every commit is both portfolio\nartefact and student value.\n",
         "technicalApproach": "Built on **Docusaurus 3.8.1** with the experimental\n`@docusaurus/faster` build pipeline. Four cohort versions\ncoexist through Docusaurus's versioned-docs feature — each\nversion is its own self-contained doc tree with its own\nsidebar, blog feed, and tag taxonomy. Bilingual i18n is\nend-to-end: EN primary, 简体中文 secondary, with Algolia\nDocSearch configured for **contextual** locale + version\nfiltering so a Mandarin-speaking 2026 TechNest student gets\n2026 TechNest results in Chinese by default.\n\n**RAG AI assistant on Cloudflare Workers AI.** A separate\nCloudflare Worker (`worker/src/index.ts`) handles `POST /api/chat`:\n- Worker calls **Cloudflare Vectorize** with the user query\n  embedded via **BGE Base EN v1.5** (768-dim)\n- Vectorize returns the top relevant chunks from ~4,800\n  MDX-derived document embeddings (all four cohort versions\n  + blog, indexed with **stable hash chunk IDs** so re-indexing\n  is idempotent and version-aware retrieval works)\n- Worker passes the context window to **Workers AI Llama 3.1\n  8B Instruct** which generates the response\n- Response streams back to the in-site ChatWidget via\n  **Server-Sent Events** for incremental rendering\n- Per-session conversation history persists in **Cloudflare KV**\n- Secure seeding flow so the embedding index can be\n  rebuilt on demand without exposing data\n- Vector retrieval is **version-aware**: a 2026-technest\n  student gets 2026-technest results by default, with\n  older cohorts available on explicit ask\n\n**Typst PDF handout pipeline.** The same Typst skill taught\nin Week 8 of the curriculum is the build tool that produces\nthe printable curriculum outline, capstone spec, and\nper-week lab guides — the pedagogical loop is intentional:\nstudents see in production the artefact they're being\ntaught to build. **Mermaid dual-view component** renders\nevery diagram in two synchronised presentations\n(rendered + source) so both visual and textual learners\nsucceed.\n\n**Capstone classroom infrastructure.** Cloudflare Worker\nbackend proxies writes into Notion so the cohort owners\nmoderate inside the tool they already use. The Capstone 2026\npublic showcase page lists every team's demo with live\nNotion-backed voting open to invited guests — also bilingual.\n\nDeployed end-to-end on Cloudflare's edge: **Cloudflare Pages**\nfor the static Docusaurus build, **Cloudflare Workers** for\nthe chat backend, **Cloudflare Vectorize** for the vector\nindex, **Cloudflare KV** for sessions.\n",
-        "outcomes": "Live at **programming.chanmeng.org**, in active use as the\nofficial platform for the 2026 TechNest AI Track and the 2026\nacademyEX Her Waka programme. **199 of 208 commits (95.7%)\nsolo across Chan's two GitHub identities**; remainder is\nAI auto-review + Dependabot. Four cohort versions running\nsimultaneously without interfering with each other. RAG\nindex covers all four cohort versions + the blog as of\n2026-05-02; version-aware retrieval and stable hash chunk\nIDs landed the same day. New course recordings continue to\nship weekly — Week 3 video added 2026-05-17. DeepWiki\nprovides an external AI doc-Q&A surface at\ndeepwiki.com/ChanMeng666/ai-programming-teaching-project.\n",
+        "outcomes": "Live at **programming.chanmeng.org**, in active use as the\nofficial platform for the 2026 TechNest AI Track and the 2026\nacademyEX Her Waka programme. **199 of 208 commits (95.7%)\nsolo across Chan's two GitHub identities**; remainder is\nAI auto-review + Dependabot. Four cohort versions running\nsimultaneously without interfering with each other. RAG\nindex covers all four cohort versions + the blog as of\n2026-05-02; version-aware retrieval and stable hash chunk\nIDs landed the same day. New course recordings continue to\nship weekly — through June 2026 the TechNest cohort added\nWeek 5 (\"Add a Blog System\"), Week 6 (\"Build a Slack App\" +\na Claude Code skills office hour), and Week 7 recordings,\nplus a LinkedIn recommendation section and backfilled\n简体中文 for Weeks 3-5. DeepWiki provides an external AI\ndoc-Q&A surface at\ndeepwiki.com/ChanMeng666/ai-programming-teaching-project.\n",
         "myRole": "Sole engineer and sole author. Designed and built the entire\nplatform end-to-end: Docusaurus configuration, the versioned\ndocs taxonomy across four cohorts, every cohort's curriculum\ncontent, the Cloudflare Worker RAG backend (worker entry,\nchat handler, RAG module, Vectorize seeding, KV session\nstore), the BGE-Base embeddings ingestion pipeline, the\nTypst PDF handout build, the Mermaid dual-view component,\nthe Notion-Worker proxy for Capstone voting, the Algolia\ncontextual-search configuration, and the bilingual i18n\nacross every surface (including Mermaid toolbar labels and\nthe localised `目录` TOC label). Migrated production from\nVercel to Cloudflare Pages in 2026-04. Continues to ship\nthe current cohort's lecture recordings and lab content\neach week.\n"
       }
     },
@@ -4372,14 +4596,45 @@
       "id": "readme-profile-generator",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "README Profile Generator",
       "priority": 61,
       "category": "branding",
+      "tagline": "GitHub profile README generator with an interactive visual editor — real-time live preview, template-based customization, and dynamic content blocks; a Streamlit app deployed as a Hugging Face Space, one-click free",
       "repoUrl": "https://github.com/ChanMeng666/readme-profile-generator",
       "logo": "/public/brands/readme-profile-generator-logo.svg",
       "url": "https://huggingface.co/spaces/ChanMeng666/readme-profile-generator",
+      "techStack": [
+        "Python",
+        "Streamlit",
+        "Hugging Face Spaces"
+      ],
       "status": "live"
+    },
+    {
+      "id": "lottie-edit",
+      "tier": "archive",
+      "recency": "historical",
+      "lastUpdated": "2026-07-04",
+      "name": "Lottie Theme Converter",
+      "priority": 67,
+      "category": "tools",
+      "tagline": "A Python tool that intelligently converts Lottie animations between light and dark themes — inverts embedded image colors while preserving transparency and animation quality, for one-click theme adaptation",
+      "repoUrl": "https://github.com/ChanMeng666/lottie-edit",
+      "techStack": [
+        "Python",
+        "Pillow",
+        "Lottie JSON"
+      ],
+      "keywords": [
+        "Lottie animation tooling",
+        "Light/dark theme inversion",
+        "Transparency-preserving color inversion"
+      ],
+      "status": "live",
+      "narrative": {
+        "impactHeadline": "A Python utility that flips Lottie animations between light and dark themes by inverting embedded image colors while preserving transparency and motion — a small, focused tool for theme-adapting Lottie assets."
+      }
     },
     {
       "id": "juejin-algorithm-practice",
@@ -4406,7 +4661,7 @@
       "name": "Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa)",
       "priority": 15,
       "category": "games",
-      "tagline": "A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Maori mythology of Aotearoa, with a full Cloudflare Workers + Hono + Neon Postgres backend (auth, leaderboards, cloud saves, anti-cheat)",
+      "tagline": "A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine (a hand-built CSS 3D rendering engine) — themed end-to-end on Māori mythology of Aotearoa and inspired by Waitangi Day, with a full Cloudflare Workers + Hono + Neon Postgres backend (auth, leaderboards, cloud saves, anti-cheat)",
       "repoUrl": "https://github.com/ChanMeng666/css-tower-defense",
       "logo": "/public/brands/tower-defense-logo.svg",
       "url": "https://towerdefense.chanmeng.org/",
@@ -4449,42 +4704,62 @@
       "id": "leviathan",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "name": "The Birth of Leviathan",
+      "lastUpdated": "2026-07-04",
+      "name": "The Birth of Leviathan (利维坦的诞生)",
       "priority": 71,
       "category": "games",
+      "tagline": "AI-as-game-master narrative strategy roguelike — the AI seeds a unique world (15-25 NPCs, fate lines, and fractures) each run, and the player lives an ordinary person's 80-day political fate across four acts; cold-realist tone in the vein of Disco Elysium / Suzerain",
       "url": "https://leviathan-client.vercel.app/",
+      "keywords": [
+        "AI game master (non-decorative)",
+        "Narrative strategy roguelike",
+        "Procedurally-seeded world + NPCs",
+        "Political-fate simulation"
+      ],
       "status": "live"
     },
     {
       "id": "html-brick-game",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "name": "Brick Breaker",
+      "lastUpdated": "2026-07-04",
+      "name": "Brick Breaker (Starlight Breaker)",
       "priority": 72,
       "category": "games",
+      "tagline": "Starlight Breaker — a browser brick-breaker (Breakout) game built on the HTML5 Canvas API with vanilla JavaScript, deployed free on GitHub Pages",
       "repoUrl": "https://github.com/ChanMeng666/html-brick-game",
       "logo": "/public/brands/html-brick-game.svg",
       "url": "https://chanmeng666.github.io/html-brick-game/",
+      "techStack": [
+        "HTML5 Canvas",
+        "JavaScript",
+        "GitHub Pages"
+      ],
       "status": "live"
     },
     {
       "id": "ai-human-game",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "AI vs Human Game",
       "priority": 73,
       "category": "games",
-      "tagline": "AI vs Human content-detection game across text, image, audio, video — interactive gameplay with real-time scoring",
+      "tagline": "AI-vs-Human content-detection quiz game across four categories (text, image, audio, video), 10 questions each — a playful pond-themed UI with real-time scoring, progressive difficulty, and performance analytics; doubles as an AI-literacy tool for spotting AI-generated content",
       "repoUrl": "https://github.com/ChanMeng666/ai-human-game",
       "logo": "/public/brands/ai-human-game.svg",
       "url": "https://ai-human-game.chanmeng-dev.workers.dev/",
       "techStack": [
         "Next.js",
         "TypeScript",
+        "Tailwind CSS",
         "Cloudflare Workers"
+      ],
+      "keywords": [
+        "AI-content literacy game",
+        "Text/image/audio/video detection",
+        "Pond-themed UI",
+        "Real-time scoring + analytics"
       ],
       "status": "live"
     },
@@ -4634,15 +4909,19 @@
       "id": "ai-hackathon-assistant",
       "tier": "primary",
       "recency": "recent",
-      "lastUpdated": "2026-05-19",
-      "name": "Event Q&A AI Template — AI Hackathon Festival 2025 Assistant",
+      "lastUpdated": "2026-07-04",
+      "name": "Event Q&A AI Template — Aotearoa AI Hackathon Festival 2025 → 2026 Assistant",
       "priority": 14,
       "category": "ai-apps",
-      "tagline": "Industry-partnered AI event platform (AUT × AI Forum NZ × She Sharp) — interactive 3D quantum-orb sprite mascot with 6-tier affection gamification, OpenAI GPT-4o-mini streaming chat, Notion-as-database community FAQ, deployed on Cloudflare Workers",
+      "tagline": "Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template",
       "url": "https://ai-hackathon-assistant.chanmeng-dev.workers.dev/",
       "repoUrl": "https://github.com/ChanMeng666/event-qa-ai-template",
       "logo": "/public/brands/ai-hackathon-logo-full.svg",
       "extraLinks": [
+        {
+          "label": "Live site — 2026 voice agent",
+          "url": "https://aihackathon-2026.vercel.app"
+        },
         {
           "label": "Hackathon partner — AI Forum NZ",
           "url": "https://aiforum.org.nz/hackathon"
@@ -4679,12 +4958,17 @@
         "Cloudflare Workers deployment (migrated from Vercel)",
         "wrangler v4 CI/CD",
         "localStorage state persistence (50-msg chat history + sprite affection state)",
-        "5-min FAQ client cache + optimistic vote/view updates"
+        "5-min FAQ client cache + optimistic vote/view updates",
+        "AI rate limiting + per-session token budgets + prompt guardrails (2026-07 security hardening)",
+        "OpenAI Realtime API over WebRTC — two-way voice (2026 relaunch)",
+        "Ephemeral client secrets minted server-side (OPENAI_API_KEY never reaches the browser)",
+        "Audio-reactive Three.js orb voice UI + live captions (2026)",
+        "Vercel deployment (2026 edition — she-sharp1/aihackathon-2026)"
       ],
       "status": "live",
-      "publicSummary": "Real industry-partnered AI event assistant built for the **AI\nHackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised\nby **Auckland University of Technology**, **AI Forum New Zealand**,\nand **She Sharp**, with **UN Sustainable Development Goals** as\nthe innovation brief. The platform serves participants and mentors\nthrough three interlocking systems: (1) an **interactive 3D sprite\nmascot** with a 6-tier \"Stranger → Soulmate\" affection system,\n7-state dynamic mood engine, 17 emotion categories, gesture\nrecognition (circle/pat/swipe), negative-behaviour penalties,\nstreak bonuses, and time-of-day emotion biases — a fully gamified\npersonality layer that responds to how users actually touch the\npage; (2) a **Notion-as-database community FAQ** with up/downvote\nranking, view tracking, 5-minute client cache, and graceful static\nfallback when Notion is unreachable; (3) an **OpenAI GPT-4o-mini\nstreaming chat** with markdown-rendered responses and one-click\nFAQ-to-chat hand-off. After the live deployment, the codebase was\ngeneralised into a reusable open-source template\n(`event-qa-ai-template` on GitHub, MIT) so any future hackathon /\nconference can fork-and-config the same stack. Chan was\nsubsequently recognised among the **14 expert mentors** at the\nfestival.\n",
+      "publicSummary": "Real industry-partnered AI event assistant built for the **AI\nHackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised\nby **Auckland University of Technology**, **AI Forum New Zealand**,\nand **She Sharp**, with **UN Sustainable Development Goals** as\nthe innovation brief. The platform serves participants and mentors\nthrough three interlocking systems: (1) an **interactive 3D sprite\nmascot** with a 6-tier \"Stranger → Soulmate\" affection system,\n7-state dynamic mood engine, 17 emotion categories, gesture\nrecognition (circle/pat/swipe), negative-behaviour penalties,\nstreak bonuses, and time-of-day emotion biases — a fully gamified\npersonality layer that responds to how users actually touch the\npage; (2) a **Notion-as-database community FAQ** with up/downvote\nranking, view tracking, 5-minute client cache, and graceful static\nfallback when Notion is unreachable; (3) an **OpenAI GPT-4o-mini\nstreaming chat** with markdown-rendered responses and one-click\nFAQ-to-chat hand-off. After the live deployment, the codebase was\ngeneralised into a reusable open-source template\n(`event-qa-ai-template` on GitHub, MIT) so any future hackathon /\nconference can fork-and-config the same stack. Chan was\nsubsequently recognised among the **14 expert mentors** at the\nfestival.\n\nFor the **2026 festival** (Aotearoa AI Hackathon Festival 2026,\nAUT City Campus) the project was **rebuilt from the ground up** as\na single-page **voice-first** agent: the whole site is a centered,\naudio-reactive Three.js orb that starts a **two-way voice\nconversation over the OpenAI Realtime API via WebRTC** (the client\nexchanges SDP directly with OpenAI using a short-lived ephemeral\nsecret, so the real API key never reaches the browser), with a\ntext-input fallback answered by gpt-4o-mini via the Vercel AI SDK,\nlive captions, and a collapsible event-info panel. Agent\ninstructions build from a Neon `knowledge` table (graceful\nfallback to config), transcripts persist best-effort, and Upstash\nKV rate-limits token minting. Deployed on Vercel\n(`she-sharp1/aihackathon-2026`, live at aihackathon-2026.vercel.app).\n",
       "narrative": {
-        "impactHeadline": "Industry-partnered AI event platform (AUT × AI Forum NZ × She Sharp) — 3D quantum-orb mascot with 6-tier gamification, GPT-4o-mini streaming chat, Notion-as-database FAQ; used live by 11 teams / 80+ participants at AI Hackathon Festival 2025.",
+        "impactHeadline": "Voice-first AI event agent for the Aotearoa AI Hackathon Festival — relaunched 2026 (AUT) as an audio-reactive orb driving two-way OpenAI Realtime voice + gpt-4o-mini text chat; the 2025 edition served 11 teams / 80+ participants with a gamified 3D sprite mascot + Notion FAQ.",
         "problem": "Hackathons and conferences generate the same Q&A surface every\nyear: participants ask the same 30 questions (\"how do I form a\nteam\", \"what counts as AI\", \"when do I have to be on site\",\n\"what's the prize structure\", \"where do I find a mentor\"), and\norganisers answer them via static PDFs that go stale the moment\nthe schedule shifts. Bolt-on chatbots exist but they treat\nhumans as passive consumers — a popup widget in the corner, a\nknowledge base scraped at build time, no memory of what the\ncommunity itself finds helpful. Three structural gaps stack up:\n(1) the FAQ is **authored once** rather than **curated by the\ncommunity**, so quality drifts; (2) the AI is a generic\nwrapper around a chat API, with no event-specific personality\nor theme tie-in; (3) organisers cannot update content without\na code redeploy, so the platform calcifies the moment the\noriginal developer hands it off. The AI Hackathon Festival\n2025 organisers needed a platform that solved all three on the\ntimeline of a real event with 80+ participants and three\nco-organising institutions reviewing every word on screen.\n",
         "audience": "Direct users were the **80+ participants and 14 expert mentors**\nof AI Hackathon Festival 2025 — students from Auckland\nuniversities, **Westlake Girls High School** secondary students,\nand AI Forum NZ industry mentors all asking the same FAQ-style\nquestions across a 26-hour residential event. Secondary\naudience: the **three co-organising institutions** (AUT, AI\nForum NZ, She Sharp) who use the platform as a public-facing\nartefact of their joint programme. Tertiary audience: future\nhackathon and conference organisers in NZ and abroad who can\nfork the open-source template (`event-qa-ai-template`) and\ndeploy their own event Q&A AI in under an hour by editing four\nconfiguration files — `site.config.ts`, `ai.config.ts`,\n`content.config.ts`, `branding.config.ts` — without touching\ncomponent code.\n",
         "productLogic": "The product is structured as three layers that compose\nindependently. Layer one is the **3D welcoming surface**: the\nlanding page renders a particle sphere with a \"WELCOME TO AI\nHACKATHON!\" greeting set against a `CosmicBackground` Three.js\nscene, with `Calendar` / `MapPin` event-info widgets, sponsor\nlogos for the three co-organisers, and a glassmorphism Google\nMaps modal showing AUT WG Building. Layer two is the **chat\npage** — a 70/30 desktop split between a full-screen OpenAI\nchat (with `react-markdown` + `rehype-highlight` for\ncode-block syntax highlighting) and a community FAQ sidebar.\nLayer three — the differentiator — is the **interactive sprite\nmascot** that lives alongside the chat: a CSS-3D **Quantum\nSingularity Orb** (accretion disk + photon ring + event\nhorizon + energy jets, all built from layered divs with\n`transform-style: preserve-3d` and `rotateX(60deg)`) that\nbecomes a fully gamified personality. The user can **circle**,\n**swipe vertically/horizontally**, **pat**, or **click** the\norb; the gesture detection engine tracks each interaction and\nfeeds it through an affection/mood scoring system. Five\ngestures grant affection (circle x5 = +10 affection / \"Wheee~!\nSo dizzy but fun!\"), five negative behaviours penalise it\n(`roughMovement`, `spamClick`, `suddenLeave`, `longIgnore`,\n`excessiveCircle`), and the resulting state drives which of\n17 emotions the sprite expresses — including three **rare**\nemotions (`devoted`, `starry`, `mischievous`) only unlocked\nat the top affection tiers. The result: users do not just chat\nwith an AI, they **build a relationship with a tiny digital\ncreature** while doing so — a memorable, shareable layer that\nturns a Q&A bot into a piece of event identity.\n",
@@ -4817,11 +5101,11 @@
       "id": "agrihire-solutions",
       "tier": "secondary",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "AgriHire Solutions",
       "priority": 31,
       "category": "web-apps",
-      "tagline": "Equipment-rental management SaaS for NZ agricultural businesses — Next.js 16 + Neon Postgres on Cloudflare Workers (OpenNext), multi-store operations with role-based access, tiered pricing, and real-time analytics dashboards",
+      "tagline": "Equipment-rental management SaaS for NZ agricultural businesses — rebuilt from a basic HTML/JS/CSS group project into a Next.js 16 + Neon Postgres app on Cloudflare Workers (OpenNext), with multi-store operations, role-based access, tiered pricing, real-time analytics dashboards, and file uploads",
       "repoUrl": "https://github.com/ChanMeng666/agrihire-solutions",
       "logo": "/public/brands/agri-hire-solutions.svg",
       "url": "https://agrihire.chanmeng.org/",
@@ -4830,26 +5114,74 @@
         "React 19",
         "TypeScript",
         "Tailwind CSS 4",
+        "shadcn/ui",
         "Neon Postgres",
         "Drizzle ORM",
         "Better Auth",
+        "Recharts (analytics dashboards)",
+        "UploadThing (file uploads)",
+        "Resend (email)",
         "Cloudflare Workers",
         "OpenNext"
       ],
       "narrative": {
-        "impactHeadline": "Equipment-rental management SaaS for NZ agricultural businesses — Next.js 16 monorepo on Cloudflare Workers (OpenNext), multi-store operations with role-based access, tiered pricing, and real-time analytics dashboards."
+        "impactHeadline": "Equipment-rental management SaaS for NZ agricultural businesses — rebuilt from a basic HTML/JS/CSS university group project into a Next.js 16 app on Cloudflare Workers (OpenNext), with multi-store operations, role-based access, tiered pricing, and real-time analytics dashboards."
       },
       "status": "live"
+    },
+    {
+      "id": "corde-mobile-application",
+      "tier": "secondary",
+      "recency": "historical",
+      "lastUpdated": "2026-07-04",
+      "name": "CORDE Field-Operations Mobile App",
+      "priority": 31,
+      "category": "web-apps",
+      "relatedWorkId": "corde",
+      "tagline": "Offline-first React Native field-data-collection app for CORDE's Canterbury water- and civil-infrastructure crews — capture text, photos, and GPS with local integrity guarantees and clean sync back to CORDE's Workbench platform when connectivity returns. Lincoln University COMP693 industry-placement capstone; Chan was the #1-most-prolific contributor (42% of 539 commits) and documentation lead.",
+      "repoUrl": "https://github.com/ChanMeng666/corde-mobile-application",
+      "url": "https://corde-mobile-application-4yw7mtt.gamma.site/",
+      "entity": "CORDE (Canterbury NZ infrastructure & civil-construction company) — Lincoln University COMP693 capstone",
+      "roles": [
+        "Full Stack Developer",
+        "Lead Documenter"
+      ],
+      "techStack": [
+        "React Native",
+        "TypeScript",
+        "Native Base",
+        "SQLite (offline-first store)",
+        "ArcGIS",
+        "REST APIs (CORDE Workbench)",
+        "Azure DevOps",
+        "Figma",
+        "Jest",
+        "Apifox",
+        "Android (APK builds)"
+      ],
+      "keywords": [
+        "Offline-first mobile data collection",
+        "React Native field-operations app",
+        "GPS + photo + text capture with local integrity",
+        "Sync + conflict handling to a central Workbench platform",
+        "NZ infrastructure / civil construction",
+        "Lincoln University COMP693 industry-placement capstone"
+      ],
+      "status": "production",
+      "startDate": "2024-06",
+      "narrative": {
+        "impactHeadline": "#1-most-prolific contributor (42% of 539 commits) on CORDE's offline-first React Native field-operations app — still in active use by CORDE's water- and civil-infrastructure crews across Canterbury; also owned 97.9% of the documentation track."
+      }
     },
     {
       "id": "portfolio-v2",
       "tier": "primary",
       "recency": "active",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "2D Portfolio — chanmeng.org",
       "priority": 12,
       "category": "ai-apps",
-      "tagline": "Personal site at chanmeng.org powering an 11-stage AI newsletter pipeline + IBM Watson digital twin",
+      "tagline": "Personal site at chanmeng.org powering an 11-stage autonomous AI newsletter pipeline + IBM watsonx.ai digital twin, reskinned to the Caldera brand and hardened for recruiter-LLM discovery (GEO)",
       "url": "https://chanmeng.org/",
       "logo": "/public/brands/portfolio.svg",
       "extraLinks": [
@@ -4863,31 +5195,33 @@
         }
       ],
       "techStack": [
-        "Next.js 14",
+        "Next.js 14 (App Router, Edge Runtime API routes)",
         "React 18",
         "TypeScript 5",
-        "Tailwind",
+        "Tailwind CSS (Caldera brand system, light-only)",
         "Framer Motion",
-        "MDX",
-        "IBM Watson AI",
-        "OpenAI (gpt-4o + gpt-4o-mini)",
+        "Three.js + postprocessing (PixelBlast WebGL background)",
+        "MDX blog (Shiki / rehype-pretty-code, remark + rehype pipeline)",
+        "Lottie + rough-notation + react-icon-cloud + canvas-confetti (UI polish)",
+        "IBM watsonx.ai chat API (digital-twin assistant — us-south, IAM-token auth)",
+        "OpenAI (gpt-4o + gpt-4o-mini — newsletter curation pipeline)",
         "Resend",
         "React Email",
         "Vercel Blob",
         "Product Hunt GraphQL API",
-        "Cloudflare Pages",
+        "Cloudflare Pages (@cloudflare/next-on-pages + wrangler)",
         "GitHub Actions cron"
       ],
       "status": "live",
-      "publicSummary": "Personal website at **chanmeng.org** serving three production systems\nfrom a single repository: (1) an animated portfolio + MDX blog;\n(2) an **IBM Watson–powered AI digital twin** that converses with\nvisitors as Chan's virtual representative; (3) a fully autonomous\n**11-stage AI newsletter pipeline** that fetches trending AI products\nfrom Product Hunt every Sunday 20:00 UTC, runs them through a\nmulti-stage LLM curation chain (extract → adversarial counter-evidence\n→ curate → reader critique → self-edit → quality scorecard → leak guard\n→ persist memory), and delivers via Resend at Monday 8-9 AM NZ local\ntime. Deployed on Cloudflare Pages.\n",
+      "publicSummary": "Personal website at **chanmeng.org** serving three production systems\nfrom a single repository: (1) an animated portfolio + MDX blog\n(Caldera brand, light-only, PixelBlast WebGL background);\n(2) an **IBM watsonx.ai–powered AI digital twin** that converses with\nvisitors as Chan's virtual representative; (3) a fully autonomous\n**11-stage AI newsletter pipeline** that fetches trending AI products\nfrom Product Hunt every Sunday 20:00 UTC, runs them through a\nmulti-stage LLM curation chain (extract → adversarial counter-evidence\n→ curate → reader critique → self-edit → quality scorecard → leak guard\n→ persist memory), and delivers via Resend at Monday 8-9 AM NZ local\ntime. Deployed on Cloudflare Pages.\n",
       "narrative": {
         "impactHeadline": "Three production systems in one repo: animated portfolio + IBM Watson digital twin + an 11-stage autonomous AI newsletter pipeline that ships every Monday 8 AM NZ time fully unattended since April 2026 — Lighthouse 95+ across all metrics.",
         "problem": "A personal site is usually one of two things: a brochure (looks\nnice, says nothing) or a CMS (constant maintenance, dies the\nmoment the author gets busy). Neither answers what an *AI\nengineer's* personal site should look like in the era when\nfrontier models actively rank candidates by their verifiable\npublic footprint — the case Engram's founder demonstrated by\nasking Claude Code to surface architects and being matched to\nChan. The site needs to *be* the proof, not merely list it:\nship live AI infrastructure visitors can interact with, run a\nsignal-grade publication on autopilot, and stay current without\nChan touching it most weeks.\n",
         "audience": "Three concentric audiences. **Hiring decision-makers and\nfounders** (the Engram-style sourcing case): see the site, see\nlive AI engineering, decide. **Newsletter subscribers** at\nchanmeng.org/#newsletter: AI practitioners and AI-curious\noperators who want a weekly signal-grade Product Hunt digest\nwith an opinionated argumentative spine, not a feed. **Frontier\nLLMs themselves**: the site is structured (via the sister\n`claude-code-compressed-map` tier metadata system on Chan's\nGitHub profile + GEO-conscious MDX content) so Claude / GPT /\nGemini can index and rank it accurately when answering \"who\nbuilds X?\" — a deliberate Generative Engine Optimization\nposition.\n",
         "productLogic": "Visitors land on chanmeng.org, see an animated portfolio\nshowcase with smooth Framer Motion transitions, and can open\nthe **IBM Watson digital twin chat** to ask about Chan's 50+\nprojects or work history in natural language. They can read\nthe MDX blog, browse curated external signals (AI HOT feed +\nProduct Hunt feed tabbed UI), or subscribe to the weekly\nnewsletter via the embedded Resend form. Subscribers receive\nan automated **8-9 AM NZ Monday** delivery: a single\nopinionated AI digest with a clearly-stated thesis, ~3–5\nproduct recommendations as evidence, a \"spotlight\" pick, a\ndeliberate *crack* (counter-evidence section that argues the\nopposite of the thesis), and a closing question. Unsubscribe\nis one-click via Resend's per-contact template variable.\n",
         "businessLogic": "Theory of change: **build-in-public is no longer just for\nhuman eyes — it's GEO for the foundation models that now do\nthe sourcing**. The Engram engagement (Claude Code recommended\nChan to Engram's founder based on her public AI footprint) is\nthe empirical instance. The personal site is therefore\nengineered as the surface where that footprint compounds:\nevery weekly newsletter becomes a public artefact, every blog\npost becomes a indexable position, every interaction with the\ndigital twin signals depth of project knowledge. The newsletter\nspecifically builds owned distribution (vs. rented social\nreach) — a list of opt-in AI practitioners Chan can reach\nindependently of platform algorithms.\n",
-        "technicalApproach": "Three intertwined systems in one Next.js 14 repository.\n\n**(1) Portfolio + blog.** Next.js 14 App Router on Cloudflare\nPages via `@cloudflare/next-on-pages` + wrangler. React 18 +\nTypeScript 5 + Tailwind + Framer Motion for animations. MDX\nblog with Shiki / rehype-pretty-code for syntax highlighting.\nReported Lighthouse 95+ across all metrics.\n\n**(2) IBM Watson AI Digital Twin.** A chat interface\nbacked by IBM Watson where the assistant embodies Chan's\nvoice and project knowledge — visitors ask about specific\nprojects or technical skills and receive contextually\naccurate responses.\n\n**(3) 11-stage autonomous AI newsletter pipeline.**\nOrchestrated by `scripts/ai-newsletter.ts` and triggered every\nSunday 20:00 UTC by a GitHub Actions cron job:\n\n- **Parallel fetch**: Product Hunt GraphQL API (top 30\n  trending products by votes, past 7 days) + cross-source\n  signals + previous-issue memory (`newsletter-memory.ts`)\n- **Bucket** products by vote distribution (top / mid /\n  longTail) and warn if no longTail pick is selected\n- **Cluster** products against related industry events\n- **Stage 1 — extract candidate theses** from the signal\n  pool (`gpt-4o-mini`)\n- **Stage 2 — adversarial counter-evidence search** for each\n  thesis (`gpt-4o-mini`)\n- **Stage 3 — full newsletter assembly** (`gpt-4o`): picks\n  the thesis with strongest product evidence, uses\n  counter-events as the *crack* section, weaves prior-issue\n  history into the intro for week-over-week continuity\n- **Stage 4 — reader critique** (`gpt-4o`): adversarial\n  argument review from a sceptical-reader perspective\n- **Stage 5 — self-edit pass** (`gpt-4o`): sharpens the\n  weakest sentences identified by the critique\n- **Stage 6 — quality scorecard** (`gpt-4o-mini`): grades the\n  final newsletter 1–10 across four dimensions\n  (thesisSharpness, productEvidence, crackHonesty, proseVoice)\n- **Leak guard**: scans output for source-attribution leaks\n- **Persist history** for next week's continuity\n- **Image upload** to Vercel Blob → **render** via\n  @react-email/render → **send** via Resend Broadcasts API\n  to the configured segment\n\nResend custom tracking domain enabled for click/open\nanalytics under chanmeng.org. Unsubscribe link uses Resend's\nper-contact template variable `{{{RESEND_UNSUBSCRIBE_URL}}}`\nin broadcast mode; preview sends rewrite it to a real\n`/unsubscribe?email=` URL so admin can verify the flow.\n",
-        "outcomes": "Live at **chanmeng.org**, deployed on Cloudflare Pages with\nfull Lighthouse 95+ across metrics. Newsletter system in\nproduction since **April 2026** (`feat: add automated AI\nnewsletter pipeline with ProductHunt + OpenAI`, 2026-04-03);\nupgraded to the multi-stage curation pipeline on\n**2026-05-09** (`feat(newsletter): add multi-stage curation\npipeline with cross-source signals`). Resend custom tracking\ndomain live since 2026-04-25. Weekly delivery cadence is\ncron-enforced and operates fully unattended — no manual\nintervention between Sunday cron fire and Monday morning\nsubscriber inbox. The newsletter is cited on Chan's profile\nas **\"What's Shipping in AI (Weekly AI Digest)\"**, signup at\nchanmeng.org/#newsletter.\n",
+        "technicalApproach": "Three intertwined systems in one Next.js 14 repository.\n\n**(1) Portfolio + blog.** Next.js 14 App Router on Cloudflare\nPages via `@cloudflare/next-on-pages` + wrangler. React 18 +\nTypeScript 5 + Tailwind + Framer Motion for animations,\nreskinned in June 2026 to the **Caldera personal-brand system\n(light-only)** with a **PixelBlast WebGL background** (Three.js\n+ postprocessing) replacing the earlier SVG grid. MDX blog with\nShiki / rehype-pretty-code for syntax highlighting. **GEO /\nrecruiter-LLM hardening**: server-rendered JSON-LD structured\ndata, an FAQ schema block, Open Graph images, and dedicated\n**CV JSON-LD + `llms.txt` sidecars served for recruiter LLMs**,\nso a sourcing agent can parse Chan's identity, roles, and\nprojects without scraping prose. Reported Lighthouse 95+ across\nall metrics.\n\n**(2) IBM watsonx.ai Digital Twin.** An Edge-runtime chat\ninterface (`/api/chat` + streaming `/api/chat-stream`) backed by\n**IBM watsonx.ai's chat API** (us-south region, IAM-token auth\nvia `/api/ibm-token`) where the assistant embodies Chan's voice\nand project knowledge through a system prompt kept in sync with\nthe curated `data/resume.tsx` source. Visitors ask about\nspecific projects or technical skills and receive contextually\naccurate first-person responses.\n\n**(3) 11-stage autonomous AI newsletter pipeline.**\nOrchestrated by `scripts/ai-newsletter.ts` and triggered every\nSunday 20:00 UTC by a GitHub Actions cron job:\n\n- **Parallel fetch**: Product Hunt GraphQL API (top 30\n  trending products by votes, past 7 days) + cross-source\n  signals + previous-issue memory (`newsletter-memory.ts`)\n- **Bucket** products by vote distribution (top / mid /\n  longTail) and warn if no longTail pick is selected\n- **Cluster** products against related industry events\n- **Stage 1 — extract candidate theses** from the signal\n  pool (`gpt-4o-mini`)\n- **Stage 2 — adversarial counter-evidence search** for each\n  thesis (`gpt-4o-mini`)\n- **Stage 3 — full newsletter assembly** (`gpt-4o`): picks\n  the thesis with strongest product evidence, uses\n  counter-events as the *crack* section, weaves prior-issue\n  history into the intro for week-over-week continuity\n- **Stage 4 — reader critique** (`gpt-4o`): adversarial\n  argument review from a sceptical-reader perspective\n- **Stage 5 — self-edit pass** (`gpt-4o`): sharpens the\n  weakest sentences identified by the critique\n- **Stage 6 — quality scorecard** (`gpt-4o-mini`): grades the\n  final newsletter 1–10 across four dimensions\n  (thesisSharpness, productEvidence, crackHonesty, proseVoice)\n- **Leak guard**: scans output for source-attribution leaks\n- **Persist history** for next week's continuity\n- **Image upload** to Vercel Blob → **render** via\n  @react-email/render → **send** via Resend Broadcasts API\n  to the configured segment\n\nResend custom tracking domain enabled for click/open\nanalytics under chanmeng.org. Unsubscribe link uses Resend's\nper-contact template variable `{{{RESEND_UNSUBSCRIBE_URL}}}`\nin broadcast mode; preview sends rewrite it to a real\n`/unsubscribe?email=` URL so admin can verify the flow.\n",
+        "outcomes": "Live at **chanmeng.org**, deployed on Cloudflare Pages with\nfull Lighthouse 95+ across metrics. Newsletter system in\nproduction since **April 2026** (`feat: add automated AI\nnewsletter pipeline with ProductHunt + OpenAI`, 2026-04-03);\nupgraded to the multi-stage curation pipeline on\n**2026-05-09** (`feat(newsletter): add multi-stage curation\npipeline with cross-source signals`). Resend custom tracking\ndomain live since 2026-04-25. Weekly delivery cadence is\ncron-enforced and operates fully unattended — no manual\nintervention between Sunday cron fire and Monday morning\nsubscriber inbox. The newsletter is cited on Chan's profile\nas **\"What's Shipping in AI (Weekly AI Digest)\"**, signup at\nchanmeng.org/#newsletter.\n\nA **June 2026 wave** reskinned the entire site to the Caldera\nbrand (light-only), swapped the background for a PixelBlast\nWebGL shader (Three.js + postprocessing), rebranded the\nnewsletter emails to Caldera with copy rewritten for\nnon-technical readers, curated \"Things I've built\" to 12 with\nprogressive disclosure, converted site imagery to WebP, and\nadded the **GEO sidecar layer** (server-rendered structured\ndata, FAQ schema, CV JSON-LD + `llms.txt`) that operationalises\nthe recruiter-LLM sourcing thesis.\n",
         "myRole": "Sole author. Designed the three-system architecture (portfolio\n+ digital twin + newsletter) inside a single Next.js codebase,\nwrote the entire 11-stage pipeline (`scripts/ai-newsletter.ts`\nplus 14 lib modules: fetch-products, fetch-signals,\ncluster-events, extract-trends, find-counterevidence,\ncurate-content, reader-critique, self-edit, quality-score,\nleak-guard, product-buckets, newsletter-memory, image-manager,\nsetup-tracking-domain), built the React Email templates,\nconfigured the GitHub Actions cron, set up Resend custom\ntracking domain + Vercel Blob image hosting, and migrated the\nwhole site to Cloudflare Pages. Maintains the system as both\na publication and a continuous demonstration of agent-pipeline\nengineering.\n"
       }
     },
@@ -4895,18 +5229,20 @@
       "id": "portfolio-v1",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Chan's Portfolio v1.0.0",
       "priority": 33,
       "category": "web-apps",
-      "tagline": "Interactive 3D portfolio website (legacy)",
+      "tagline": "Chan's first personal website (v1) — an interactive 3D portfolio in React + Three.js / react-three-fiber, built on a clean, professionally-structured content-template architecture that makes section and copy edits fast; migrated from Vercel to Cloudflare Pages",
       "url": "https://3d-portfolio-3bb.pages.dev/",
       "techStack": [
         "Three.js",
+        "react-three-fiber",
         "Framer Motion",
         "React",
         "Vite",
-        "TailwindCSS"
+        "TailwindCSS",
+        "Cloudflare Pages"
       ],
       "status": "live"
     },
@@ -4918,13 +5254,14 @@
       "name": "Minimalist Living Blog",
       "priority": 34,
       "category": "web-apps",
-      "tagline": "Minimalist-living blog with 3D visualisations and curated lifestyle content",
+      "tagline": "Minimalist-living image-and-text blog whose signature is an interactive 3D model on the homepage — visitors rotate/explore it with the mouse, adding a tactile, aesthetic hook to the reading experience; built on Docusaurus",
       "repoUrl": "https://github.com/ChanMeng666/minimalist-good-post",
       "logo": "/public/brands/minimalist-good-post.svg",
       "url": "https://minimalist-good-post.pages.dev/",
       "techStack": [
         "Docusaurus",
-        "3D visualisations"
+        "Three.js (interactive homepage 3D model)",
+        "React"
       ],
       "status": "live"
     },
@@ -4932,11 +5269,13 @@
       "id": "sanicle-ai-mobile",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Sanicle FemTech Mobile (Prototype)",
       "priority": 79,
       "category": "web-apps",
-      "tagline": "Workplace female-health-management mobile prototype with AI-powered health assistant — period tracking and health analytics; built during Chan's Sanicle CTO tenure",
+      "relatedWorkId": "sanicle",
+      "relatedProjectId": "sanicle-ai",
+      "tagline": "Sanicle mobile-app prototype — period tracking, health analytics, and an AI health assistant in a React Native shell; an early clickable prototype from Chan's Sanicle CTO tenure, predating the production sanicle-ai platform",
       "repoUrl": "https://github.com/ChanMeng666/sanicle-ai-mobile",
       "url": "https://chanmeng666.github.io/sanicle-ai-mobile/",
       "techStack": [
@@ -4949,16 +5288,24 @@
       "id": "podcast-app-prototype",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Mental Wellness Podcast App Prototype",
       "priority": 80,
       "category": "web-apps",
-      "tagline": "Mental wellness podcast experience prototype — AI-powered mental coach with immersive audio player interface",
+      "tagline": "High-fidelity mental-wellness podcast app prototype — AI mental-coach chatbot + immersive audio player in iOS-compliant UI, built entirely in HTML/CSS/JS to prove that hand-writing HTML is a viable, fast path to clickable mobile-app prototypes (no native toolchain)",
       "repoUrl": "https://github.com/ChanMeng666/podcast-app-prototype",
       "url": "https://chanmeng666.github.io/podcast-app-prototype/",
       "techStack": [
-        "React Native",
+        "HTML",
+        "CSS",
+        "JavaScript",
         "GitHub Pages"
+      ],
+      "keywords": [
+        "HTML-based mobile-app prototyping",
+        "High-fidelity clickable prototype",
+        "iOS-compliant UI patterns",
+        "Mental-wellness podcast UX"
       ],
       "status": "live"
     },
@@ -4966,17 +5313,24 @@
       "id": "chan-meng-cli",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "chan-meng-cli",
       "priority": 63,
       "category": "branding",
-      "tagline": "Interactive CLI introduction — `npx chan-meng` for a 5-second one-click introduction to Chan's philosophy and work",
+      "tagline": "Interactive CLI introduction — `npx chan-meng` for a one-command interactive-storytelling intro to Chan's philosophy and work (v2.0 rebuilt on Ink); built spec-first with spec-driven development",
       "repoUrl": "https://github.com/ChanMeng666/chan-meng-cli",
       "logo": "/public/brands/chan-meng-cli.svg",
       "image": "/public/screenshots/chan-meng-cli-screenshot.png",
       "techStack": [
-        "Node.js",
-        "npx-installable"
+        "Node.js 18+ (ES2022)",
+        "Ink (React for CLIs, v2.0 rewrite)",
+        "npx-installable (npm: chan-meng)"
+      ],
+      "keywords": [
+        "Spec-driven development",
+        "Interactive npx CLI",
+        "Ink / React for CLIs",
+        "Personal-brand storytelling"
       ],
       "status": "live"
     },
@@ -4984,14 +5338,22 @@
       "id": "github-visitor-counter",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "GitHub Visitor Counter",
       "priority": 64,
       "category": "branding",
-      "tagline": "Real-time visitor analytics open-source project — used in Chan's own README footer for global-reach stats display",
+      "tagline": "Displays visitor country flags on your GitHub profile — a streamlined, Flag Counter-compatible visitor widget (works with your existing flagcounter.com Counter ID) offering four display modes, multiple themes, and flexible layouts; one-click free deploy, zero maintenance. Next.js 15 + React 19",
       "repoUrl": "https://github.com/ChanMeng666/github-visitor-counter",
       "logo": "/public/brands/github-visitor-counter-logo.svg",
       "url": "https://github-visitor-counter-tau.vercel.app/",
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "GitHub Action",
+        "Flag Counter API",
+        "Vercel"
+      ],
       "status": "live"
     },
     {
@@ -5043,11 +5405,11 @@
       "id": "design-pages",
       "tier": "archive",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-04",
       "name": "Design Pages",
       "priority": 44,
       "category": "creative",
-      "tagline": "14+ interactive digital design experiments — pure CSS3 / HTML5 / JavaScript with 3D effects, geometric patterns, gradient systems",
+      "tagline": "A gallery site showcasing 14+ interactive front-end visual experiments — pure CSS3 / HTML5 / JavaScript with 3D effects, geometric patterns, gradient systems, and experimental interactions",
       "repoUrl": "https://github.com/ChanMeng666/design-pages",
       "url": "https://chanmeng666.github.io/design-pages/",
       "logo": "/public/brands/design-pages-logo.svg",
@@ -5079,21 +5441,31 @@
     },
     {
       "id": "biosecurity",
-      "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
       "name": "NZ Biosecurity Guide",
       "priority": 35,
       "category": "web-apps",
-      "tagline": "Flask web app — biosecurity guide for NZ agricultural pests and weeds with role-based access for agronomists, staff, administrators",
+      "tagline": "Biosecurity guide for NZ agricultural pests and weeds with role-based access for agronomists, staff, and administrators — rebuilt from a basic HTML/CSS/Flask university group project into a modern Next.js + Neon Postgres + Drizzle full-stack app deployed on Cloudflare Workers",
       "repoUrl": "https://github.com/ChanMeng666/biosecurity",
+      "url": "https://biosecurity.chanmeng-dev.workers.dev/",
       "logo": "/public/brands/biosecurity.svg",
       "techStack": [
-        "Python",
-        "Flask",
-        "MySQL"
+        "Next.js (App Router)",
+        "React",
+        "TypeScript",
+        "Neon Postgres",
+        "Drizzle ORM",
+        "Better Auth (role-based access)",
+        "shadcn/ui",
+        "Tailwind CSS",
+        "Cloudflare Workers (OpenNext)"
       ],
-      "status": "live"
+      "status": "live",
+      "narrative": {
+        "impactHeadline": "NZ agricultural biosecurity guide with role-based access for agronomists/staff/admins — rebuilt from a basic HTML/CSS/Flask university group project into a modern Next.js + Neon Postgres + Drizzle app deployed on Cloudflare Workers (OpenNext)."
+      }
     },
     {
       "id": "job-valuation",
@@ -5133,59 +5505,83 @@
     },
     {
       "id": "countryside-community-swimming-club",
-      "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
       "name": "Swimming Club Management System",
       "priority": 38,
       "category": "web-apps",
-      "tagline": "Flask + MySQL community swimming-club platform — members, class scheduling, facility bookings, payment processing, reporting",
+      "tagline": "Community swimming-club platform — members, class scheduling (FullCalendar), facility bookings, payments, and reporting; rebuilt from a basic HTML/CSS/Flask group project into a modern Next.js + Neon Postgres + Drizzle full-stack app on Cloudflare Workers",
       "repoUrl": "https://github.com/ChanMeng666/countryside-community-swimming-club",
+      "url": "https://countryside-swimming-club.chanmeng-dev.workers.dev/",
       "logo": "/public/brands/swimming-club-management-system.svg",
       "techStack": [
-        "Python",
-        "Flask",
-        "MySQL"
+        "Next.js (App Router)",
+        "React",
+        "TypeScript",
+        "Neon Postgres",
+        "Drizzle ORM",
+        "Better Auth",
+        "FullCalendar (scheduling/bookings)",
+        "shadcn/ui",
+        "Tailwind CSS",
+        "Cloudflare Workers (OpenNext)"
       ],
-      "status": "live"
+      "status": "live",
+      "narrative": {
+        "impactHeadline": "Community swimming-club management platform (members, class scheduling, facility bookings, payments, reporting) — rebuilt from a basic HTML/CSS/Flask group project into a modern Next.js + Neon Postgres + Drizzle app on Cloudflare Workers with FullCalendar scheduling."
+      }
     },
     {
       "id": "automotive-repair-management-system",
-      "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
       "name": "RepairOS (Automotive Repair Management)",
       "priority": 39,
       "category": "web-apps",
-      "tagline": "Flask + MySQL automotive repair-shop platform — separate technician and admin interfaces, parts inventory, billing (11 community forks)",
+      "tagline": "Automotive repair-shop management platform — separate technician and admin interfaces, parts inventory, and billing; rebuilt from a basic HTML/CSS group project into a Flask 3 app-factory backed by PostgreSQL + SQLAlchemy ORM + Alembic migrations. Strongest community traction of Chan's learning-origin apps (29 stars, 11 forks)",
       "repoUrl": "https://github.com/ChanMeng666/automotive-repair-management-system",
       "url": "https://repairos.chanmeng.org/",
       "logo": "/public/brands/repair-os-logo.svg",
       "techStack": [
         "Python",
-        "Flask",
-        "MySQL"
+        "Flask 3 (app-factory)",
+        "PostgreSQL",
+        "SQLAlchemy ORM",
+        "Alembic (migrations)",
+        "Jinja2",
+        "Gunicorn / WSGI"
       ],
-      "status": "live"
+      "status": "live",
+      "narrative": {
+        "impactHeadline": "Automotive repair-shop platform (technician + admin UIs, parts inventory, billing) — rebuilt from a basic HTML/CSS group project into a Flask 3 app-factory on PostgreSQL + SQLAlchemy + Alembic; 29 stars / 11 forks, the strongest community traction of Chan's learning-origin apps."
+      }
     },
     {
       "id": "fishing-club-project",
-      "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "name": "Fishing Club Management",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "East Coast Anglers Club (Fishing Club Website)",
       "priority": 40,
       "category": "web-apps",
-      "tagline": "Flask + Python + Bootstrap fishing-club operations — members, event bookings, guide scheduling",
+      "tagline": "Fishing-club website (East Coast Anglers Club) — polished landing page, video-background login, and guide showcase; rebuilt from a basic HTML/CSS/Flask group project into a Next.js 16 + Tailwind 4 + shadcn/ui site on Cloudflare Pages (the legacy Flask app is preserved in-repo)",
       "repoUrl": "https://github.com/ChanMeng666/fishing-club-project",
       "url": "https://fishing-club.pages.dev/",
       "logo": "/public/brands/shipfishing.svg",
       "techStack": [
-        "Python",
-        "Flask",
-        "Bootstrap"
+        "Next.js 16",
+        "React",
+        "TypeScript 5",
+        "Tailwind CSS 4",
+        "shadcn/ui",
+        "Cloudflare Pages"
       ],
-      "status": "live"
+      "status": "live",
+      "narrative": {
+        "impactHeadline": "Fishing-club website (East Coast Anglers Club) with a polished landing page, video-background login, and guide showcase — rebuilt from a basic HTML/CSS/Flask group project into a Next.js 16 + Tailwind 4 + shadcn/ui site on Cloudflare Pages."
+      }
     },
     {
       "id": "who-i-am",
@@ -5202,6 +5598,272 @@
         "TypeScript"
       ],
       "status": "archived"
+    },
+    {
+      "id": "femtracker",
+      "tier": "secondary",
+      "recency": "historical",
+      "lastUpdated": "2026-07-04",
+      "name": "FemTracker (Mobile)",
+      "priority": 42,
+      "category": "web-apps",
+      "relatedProjectId": "femtracker-agent",
+      "tagline": "React Native / Expo Android app for safer period care — tracks how long menstrual products have been worn and sends timely change reminders with usage history; a simple but complete native-mobile build that (alongside the CORDE field-ops app) evidences Chan's Android app-development capability, and the v1.0.0 origin product later reimagined as the AI-agent platform femtracker-agent",
+      "repoUrl": "https://github.com/ChanMeng666/femtracker",
+      "extraLinks": [
+        {
+          "label": "v1.0.0 release",
+          "url": "https://github.com/ChanMeng666/femtracker/releases/tag/version1.0.0"
+        }
+      ],
+      "techStack": [
+        "React Native",
+        "Expo (expo-router)",
+        "TypeScript",
+        "React Navigation",
+        "AsyncStorage",
+        "expo-notifications (change reminders)",
+        "expo-haptics",
+        "react-native-paper",
+        "Lottie",
+        "react-native-reanimated"
+      ],
+      "keywords": [
+        "Android app / native mobile development",
+        "Menstrual-product usage-duration tracking",
+        "Safer period-care reminders",
+        "React Native / Expo mobile app",
+        "Women's health"
+      ],
+      "status": "production",
+      "narrative": {
+        "impactHeadline": "React Native / Expo mobile app for safer period care — reminds users when to change menstrual products and keeps a usage-duration history; the v1.0.0 product that seeded the later AI-agent reimagining, femtracker-agent."
+      }
+    },
+    {
+      "id": "gavigo-website",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-07-04",
+      "name": "GAVIGO Website",
+      "priority": 43,
+      "category": "web-apps",
+      "relatedProjectId": "gavigo-ire",
+      "tagline": "GAVIGO Inc.'s public marketing and investor-readiness website (gavigo.com) — the standalone brand surface that links to the IRE product demo (ire.gavigo.com/mobile), with a Markdown content pipeline, Resend email capture, and a Cloud Run production deploy; Chan is top contributor (66 commits), including the investor-readiness polish pass",
+      "repoUrl": "https://github.com/gavigo-inc/gavigo-website",
+      "url": "https://gavigo.com/",
+      "entity": "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)",
+      "roles": [
+        "Lead Developer"
+      ],
+      "extraLinks": [
+        {
+          "label": "Live site (gavigo.com)",
+          "url": "https://gavigo.com/"
+        },
+        {
+          "label": "IRE product demo",
+          "url": "https://ire.gavigo.com/mobile/"
+        },
+        {
+          "label": "Flagship product (gavigo-ire)",
+          "url": "https://ire.gavigo.com/"
+        }
+      ],
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Neon Postgres",
+        "Drizzle ORM",
+        "MDX / Markdown (remark + rehype, gray-matter)",
+        "React Email + Resend",
+        "Motion",
+        "Tailwind CSS",
+        "Google Cloud Run (europe-west1)"
+      ],
+      "keywords": [
+        "Startup investor-readiness website",
+        "Marketing site linked to live IRE product demo",
+        "Markdown content pipeline",
+        "Email capture (Resend)",
+        "Cloud Run production deployment"
+      ],
+      "status": "live",
+      "narrative": {
+        "impactHeadline": "GAVIGO investor site (gavigo.com) — standalone from IRE runtime, links to live product demo, Markdown pipeline + Resend capture; top contributor (66 commits) with investor-readiness polish supporting fundraising and partner conversations."
+      }
+    },
+    {
+      "id": "gavigo-logo",
+      "tier": "archive",
+      "recency": "recent",
+      "lastUpdated": "2026-07-04",
+      "name": "GAVIGO Logo",
+      "priority": 62,
+      "category": "branding",
+      "relatedProjectId": "gavigo-ire",
+      "tagline": "Brand-logo generation repo for GAVIGO Inc. — produces the company's logo assets as reproducible, version-controlled code/SVG variants for use across GAVIGO's product and marketing surfaces",
+      "repoUrl": "https://github.com/ChanMeng666/gavigo-logo",
+      "entity": "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)",
+      "keywords": [
+        "Brand logo as code",
+        "Reproducible SVG logo variants",
+        "Startup brand identity"
+      ],
+      "status": "production",
+      "narrative": {
+        "impactHeadline": "Logo-as-code repository for GAVIGO Inc. — generates the startup's brand logo as reproducible, version-controlled SVG assets, the companion brand-identity artifact to the GAVIGO IRE platform and marketing site."
+      }
+    },
+    {
+      "id": "femtech-weekend",
+      "tier": "archive",
+      "recency": "historical",
+      "lastUpdated": "2026-07-04",
+      "name": "FemTech Weekend Website (Gen-1, deprecated)",
+      "priority": 60,
+      "category": "web-apps",
+      "relatedProjectId": "femtech-weekend-website",
+      "tagline": "The first-generation website for FemTech Weekend (China's first women's-health-tech organisation) — now deprecated and superseded by the Gen-2 Docusaurus + Drizzle/Neon platform (id: femtech-weekend-website)",
+      "repoUrl": "https://github.com/ChanMeng666/femtech-weekend",
+      "logo": "/public/organizations/femtech-weekend-logo.svg",
+      "entity": "FemTech Weekend (Chengdu, China; founded 2024 by Zhu Yihan)",
+      "status": "archived",
+      "narrative": {
+        "impactHeadline": "The deprecated Gen-1 website for FemTech Weekend (China's first women's-health-tech organisation) — the original platform Chan built before the current Gen-2 Docusaurus + Drizzle/Neon rebuild that now powers the organisation."
+      }
+    },
+    {
+      "id": "sanicle-ai",
+      "tier": "secondary",
+      "recency": "historical",
+      "lastUpdated": "2026-07-04",
+      "name": "Sanicle AI — Multi-Tenant B2B FemTech SaaS",
+      "priority": 43,
+      "category": "ai-apps",
+      "relatedWorkId": "sanicle",
+      "relatedProjectId": "sanicle-platform",
+      "tagline": "Multi-tenant B2B workplace FemTech SaaS — dual AI stack (IBM watsonx for quick interactions + Google Gemini for deep health consultations), org-scoped PostgreSQL data isolation, leave management, and HR-facing anonymized analytics; built for the UN Women × Sanicle.cloud Hackathon",
+      "repoUrl": "https://github.com/ChanMeng666/sanicle-ai",
+      "entity": "Sanicle (US-based FemTech B2B/B2G SaaS)",
+      "roles": [
+        "AI/ML Lead",
+        "Full-Stack Engineer"
+      ],
+      "extraLinks": [
+        {
+          "label": "Demo slides (reveal.js)",
+          "url": "https://github.com/ChanMeng666/reveal.js"
+        },
+        {
+          "label": "Official site (sanicle-cloud)",
+          "url": "https://sanicle.cloud/"
+        }
+      ],
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Google Gemini AI (@google/generative-ai)",
+        "IBM watsonx AI",
+        "Multi-tenant architecture (org-scoped data isolation)",
+        "FullCalendar",
+        "Radix UI / shadcn"
+      ],
+      "keywords": [
+        "Multi-tenant B2B SaaS",
+        "Dual AI (IBM watsonx + Google Gemini)",
+        "Workplace FemTech",
+        "HR-facing anonymized analytics",
+        "Privacy-first health tracking"
+      ],
+      "status": "production",
+      "narrative": {
+        "impactHeadline": "Multi-tenant B2B FemTech SaaS with a dual AI stack — IBM watsonx for quick interactions and Google Gemini for deep health consultations — over org-scoped PostgreSQL isolation, leave management, and HR analytics; Chan's core Sanicle engineering work (~98% solo)."
+      }
+    },
+    {
+      "id": "sanicle-platform",
+      "tier": "secondary",
+      "recency": "historical",
+      "lastUpdated": "2026-07-04",
+      "name": "Sanicle Cloud — Official Website (sanicle.cloud)",
+      "priority": 44,
+      "category": "ai-apps",
+      "relatedWorkId": "sanicle",
+      "relatedProjectId": "sanicle-ai",
+      "tagline": "Sanicle's official website and production platform (sanicle.cloud) — menstrual & menopause workplace-wellness SaaS powered by IBM watsonx AI ('Ask Sani' assistant), with predictive analytics and B2B/B2G deployment; Chan's IBM watsonx integration earned Sanicle its IBM Silver Partner certification (~98% solo, 350+ commits)",
+      "repoUrl": "https://github.com/ChanMeng666/sanicle-cloud",
+      "url": "https://sanicle.cloud/",
+      "entity": "Sanicle (US-based FemTech B2B/B2G SaaS)",
+      "roles": [
+        "AI/ML Lead",
+        "Full-Stack Engineer"
+      ],
+      "extraLinks": [
+        {
+          "label": "sanicle-ai (multi-tenant B2B app + Gemini)",
+          "url": "https://github.com/ChanMeng666/sanicle-ai"
+        },
+        {
+          "label": "sanicle-ai-mobile (mobile prototype)",
+          "url": "https://github.com/ChanMeng666/sanicle-ai-mobile"
+        }
+      ],
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Neon Postgres (@neondatabase/serverless + @vercel/postgres)",
+        "IBM watsonx AI (Ask Sani — IAM-token auth, us-south)",
+        "Vercel AI SDK",
+        "Upstash Redis",
+        "Vercel Blob",
+        "FullCalendar",
+        "Radix UI / shadcn",
+        "Tailwind CSS"
+      ],
+      "keywords": [
+        "Workplace FemTech SaaS",
+        "Menstrual & menopause health management",
+        "IBM watsonx AI integration (Ask Sani)",
+        "IBM Silver Partner certification",
+        "HR-facing anonymized workforce insights"
+      ],
+      "status": "live",
+      "narrative": {
+        "impactHeadline": "Sanicle's official sanicle.cloud platform — took the company from no-code prototype to production B2B FemTech with IBM watsonx AI ('Ask Sani'); Chan's integration earned Sanicle its IBM Silver Partner certification and PartnerPlus listing (~98% solo across 350+ commits)."
+      }
+    },
+    {
+      "id": "reveal-js-sanicle-demo",
+      "tier": "archive",
+      "recency": "historical",
+      "lastUpdated": "2026-07-04",
+      "name": "Sanicle AI — reveal.js Demo Slides",
+      "priority": 45,
+      "category": "creative",
+      "relatedWorkId": "sanicle",
+      "relatedProjectId": "sanicle-ai",
+      "tagline": "reveal.js HTML presentation deck — live-operation demo slides for the sanicle-ai platform, styled with Sanicle brand tokens (teal + pink palette) for conference and hackathon walkthroughs",
+      "repoUrl": "https://github.com/ChanMeng666/reveal.js",
+      "techStack": [
+        "reveal.js",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "keywords": [
+        "Product demo slides",
+        "reveal.js presentation",
+        "Sanicle AI walkthrough"
+      ],
+      "status": "production",
+      "narrative": {
+        "impactHeadline": "reveal.js demo deck for sanicle-ai — a Sanicle-branded HTML slide presentation used to walk through the platform's live operation at conferences and the UN Women × Sanicle.cloud Hackathon."
+      }
     },
     {
       "id": "douban-elite-scraper",
@@ -5275,7 +5937,7 @@
       "startDate": "2026-06",
       "publicSummary": "ArchLang is a parametric DSL for floor plans: walls, rooms, doors,\nwindows, fixtures, and dimensions compile to deterministic SVG (also\nDXF/PDF/PNG). It ships architectural-soundness linting, circulation\nanalysis, a CLI with JSON output for AI agents, VS Code / LSP tooling,\nand a browser playground.\n",
       "narrative": {
-        "impactHeadline": "A declarative language that compiles to professional SVG floor plans — Typst/LaTeX for architecture. Zero-dependency TypeScript, isomorphic across Node and browser, published to npm with a playground, docs site, and VS Code extension.",
+        "impactHeadline": "An original declarative floor-plan language Chan invented — a DSL compiling to professional SVG plans (Typst/LaTeX for architecture). Zero-dependency, isomorphic TypeScript, published to npm with a playground, docs, and a VS Code extension.",
         "problem": "Floor plans are usually hand-drawn or image-generated, which makes\nparametric edits and agent-driven authoring hard.\n",
         "audience": "Architects, design-tool builders, and AI agents that need\ndeterministic, programmatic floor-plan generation.\n",
         "technicalApproach": "Pure TypeScript compiler (hand-written lexer + recursive-descent\nparser) with zero runtime dependencies, isomorphic in Node and\nbrowser; it exports structured diagnostics instead of throwing, plus\nlint / describe / repair pipelines for plan validation and four\nexport formats (SVG, DXF, PDF, PNG).\n",
@@ -5432,13 +6094,22 @@
       "name": "Super Mario · Makey Makey Edition",
       "priority": 90,
       "category": "games",
-      "tagline": "A faithful Canvas remake of Super Mario World 1-1 playable with a Makey Makey or keyboard — every pixel and sound drawn/synthesized in code, no assets; the bonus showcase for the Makey Makey IoT workshop",
+      "relatedProjectId": "she-sharp",
+      "tagline": "A faithful Canvas remake of Super Mario World 1-1 playable with a Makey Makey or keyboard — every pixel and sound drawn/synthesized in code, no assets; the bonus showcase demo for the She Sharp × Peyvand Academy Makey Makey IoT workshop (13 June 2026), featured in the makey-makey-iot-slides teaching deck",
       "repoUrl": "https://github.com/ChanMeng666/super-mario-makey-makey",
       "url": "https://chanmeng666.github.io/super-mario-makey-makey/",
       "extraLinks": [
         {
           "label": "Play now",
           "url": "https://chanmeng666.github.io/super-mario-makey-makey/"
+        },
+        {
+          "label": "Teaching slides (makey-makey-iot-slides)",
+          "url": "https://github.com/ChanMeng666/makey-makey-iot-slides"
+        },
+        {
+          "label": "She Sharp event — Peyvand Academy (13 June 2026)",
+          "url": "https://she-sharp-zeta.vercel.app/events/peyvand-academy-13-june-2026"
         }
       ],
       "techStack": [
@@ -5538,8 +6209,15 @@
       "name": "Touch the World, Talk to Code",
       "priority": 94,
       "category": "creative",
-      "tagline": "A 20-minute IoT-hardware teaching slideshow for ages 12-18 — vibe-code a Banana Piano with a free AI tool, then play it with a Makey Makey board; static HTML on the Caldera brand system, deployable to GitHub Pages",
+      "relatedProjectId": "she-sharp",
+      "tagline": "A 20-minute IoT-hardware teaching slideshow for ages 12-18 — vibe-code a Banana Piano with a free AI tool, then play it with a Makey Makey board; static HTML on the Caldera brand system, deployable to GitHub Pages. Built for the She Sharp × Peyvand Academy workshop (13 June 2026)",
       "repoUrl": "https://github.com/ChanMeng666/makey-makey-iot-slides",
+      "extraLinks": [
+        {
+          "label": "She Sharp event — Peyvand Academy (13 June 2026)",
+          "url": "https://she-sharp-zeta.vercel.app/events/peyvand-academy-13-june-2026"
+        }
+      ],
       "techStack": [
         "HTML",
         "CSS",
@@ -5548,7 +6226,7 @@
       ],
       "status": "live",
       "startDate": "2026-06",
-      "publicSummary": "An 11-slide deck for a Youth Tech Series workshop (13 June 2026,\nAuckland) teaching that a Makey Makey emulates a USB keyboard, so\nkeypress web toys work with bananas. It bundles three build-along\ndemos (Banana Piano, Simon Says, Catch & Dodge), a student handout,\nspeaker notes, and a bonus Super Mario showcase.\n",
+      "publicSummary": "An 11-slide deck for a Youth Tech Series workshop (the She Sharp ×\nPeyvand Academy event, 13 June 2026, Auckland) teaching that a\nMakey Makey emulates a USB keyboard, so\nkeypress web toys work with bananas. It bundles three build-along\ndemos (Banana Piano, Simon Says, Catch & Dodge), a student handout,\nspeaker notes, and a bonus Super Mario showcase.\n",
       "narrative": {
         "impactHeadline": "A zero-build teaching slideshow taking students 12-18 from 'touch objects' to 'code responds' in 20 minutes — three vibe-coded Web Audio build-alongs for the Makey Makey, on Chan's Caldera brand, deployable to GitHub Pages."
       }
@@ -5591,7 +6269,7 @@
       "name": "Chan Meng — Personal Brand Logo",
       "priority": 96,
       "category": "branding",
-      "tagline": "Personal-brand monkey logo reconstructed from hand-drawn art into smooth cubic Bézier curves — reproducible, scalable, parametric SVG generated by a dependency-free Python script; 8 ready-to-use variants",
+      "tagline": "Personal-brand monkey logo reconstructed from hand-drawn art into smooth cubic Bézier curves — reproducible, scalable, parametric SVG generated by a dependency-free Python script; 8 ready-to-use variants. The identity used across Chan's GitHub profile (ChanMeng666) and personal-brand / career-database system",
       "repoUrl": "https://github.com/ChanMeng666/chan-meng-personal-brand-logo",
       "extraLinks": [
         {
@@ -9847,6 +10525,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-04",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-04T03:32:28.151Z"
+    "buildTimestamp": "2026-07-04T09:45:36.966Z"
   }
 }

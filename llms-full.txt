@@ -1925,9 +1925,10 @@ orientation that later anchored Chan's work between China and NZ.
 
 ## Flagship Projects
 
-### 1. Tam-AI-Ti — AI Financial Wellness Coach grounded in Te Whare Tapa Whā — built solo for Māori financial-prosperity researcher Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead). 351 commits, 48-table schema (10 modules, 22 migrations) where every cultural concept is a typed column not a UI sticker, three-model OpenAI composition (GPT-4o-mini for cheap tool actions · GPT-4o for prose quality · gpt-4o-realtime-preview "verse" voice for the Financial Coach with server-side VAD + 500ms silence detection), bilingual te reo Māori with macron-correct translation, and a deliberate CopilotKit optimisation from 8 AI-enabled routes down to 3 focused ones.
-[tier=flagship · recency=active · updated=2026-05-19]
+### 1. Tam-AI-Ti (tam-ai-ti-web) — Independent research commission for enterprise executive Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead) — an AI Financial Wellness Coach grounded in Te Whare Tapa Whā that proved Māori users will engage with a culturally-native AI agent (19-user cohort, 4 months, bilingual te reo Māori). 351 solo commits, 48-table schema where culture is typed data not UI decoration, voice-first GPT-4o Realtime coach, CopilotKit agent across 88+ actions.
+[tier=flagship · recency=active · updated=2026-07-04]
 - **URL:** https://tamaiti.whiri-ai.com/
+- **Repository:** https://github.com/Whiri-AI/tam-ai-ti-web
 - **Demo:** https://youtu.be/NtT7_q6xhlk
 - **Tech stack:** Next.js 15.5 (App Router + Turbopack build + Edge Runtime AI endpoints), React 19.1 + TypeScript 5 (100% strict typing across 48 tables / 494 columns), Drizzle ORM 0.44 + drizzle-kit 0.31 (10 schema files: users · assessments · goals · daily-engagement · ai-coach · whanau · maramataka · whakatauki · financial-coach · index; 22 hand-written SQL migrations 0000-0021), Neon Postgres (HTTP serverless adapter `@neondatabase/serverless` 1.0), pgVector — 1536-dim `text-embedding-3-small` embeddings on 4 tables (goals · goal_progress · journal_entries · ai_coach_messages), CopilotKit 1.10 (backend + runtime + react-core/react-ui/react-textarea) — deliberately optimised from 8 AI-enabled routes down to 3 focused ones (Dashboard CRUD wellness + Journal fill + Journal History search), OpenAI 6 SDK — three-model composition: `gpt-4o-mini-2024-07-18` for CopilotKit actions (temp 0.3, deterministic), `gpt-4o-2024-11-20` for journal enhance/translate/insights (temp 0.5-0.8), `gpt-4o-realtime-preview` ("verse" voice) for the Financial Coach with server-side VAD + 500ms silence detection, @openai/agents 0.1 (OpenAI Agents SDK), NextAuth v5 (beta 29) + @auth/drizzle-adapter 1.10 — Google OAuth 2.0, database sessions (30-day duration, not JWT), react-hook-form 7.62 + @hookform/resolvers 5 + Zod 3.25 validation across all API inputs, @vercel/blob 2.0 — avatar storage; ioredis 5.7 — Redis session cache; Resend 6 + @react-email/components 0.5 — transactional email, react-easy-crop 5.5 — avatar crop preview; recharts 3.2 — Hauora trend charts; @lottiefiles/dotlottie-react 0.17 — animated illustrations; date-fns 4 NZ-time-aware day boundaries, Radix UI primitives (17 packages: Dialog, AlertDialog, NavigationMenu, Popover, Tabs, RadioGroup, Slider, Switch, Tooltip, ScrollArea, Avatar, Checkbox, DropdownMenu, Label, Progress, Select, Separator), Tailwind CSS v4 + tw-animate-css 1.3 + Sonner 2 toasts + next-themes (light-only by deliberate design), Vercel hosting (auto-deploy, Edge Runtime, Blob storage, KV Redis) — migrated from developer's personal Hobby plan to client's Pro team in March 2026 with a zero-downtime cutover documented as a reusable playbook, Custom React Server Components CVE patches applied within hours of Vercel/Snyk PRs (PR #2, Dec 2025)
 - **Research cohort:** 19 users (Oct 2025 – Mar 2026)
@@ -1957,7 +1958,7 @@ semantic search across 48 database tables. 19-user research cohort produced
 181 journal entries, 35 voice sessions, and 146 AI coach messages over four
 months (Oct 2025 – Mar 2026).
 
-**Impact:** NZ's first Māori-cultural AI financial-wellness pilot — Māori users consult the traditional Maramataka lunar calendar and converse with the AI coach directly in te reo Māori. 19-user research cohort sustained 4 months on a pre-commercial product.
+**Impact:** ASB Bank executive research pilot — NZ's first Māori-cultural AI financial-wellness agent (Te Whare Tapa Whā in schema, not UI); 19 users over 4 months with bilingual te reo Māori voice coaching, proving culturally-native AI engages communities mainstream FinTech underserves.
 
 **Problem:** Mainstream FinTech treats money as decontextualized numbers — budgets,
 balances, projections. For Māori users, that framing is culturally
@@ -2200,22 +2201,17 @@ production migration from my personal Vercel to the client's
 Whiri-AI Pro team that I designed, executed, and documented as a
 reusable `PROJECT_MIGRATION_GUIDE.md` playbook for future client
 engagements.
-### 2. She Sharp — Solo-built production member platform for NZ's leading women-in-STEM
-nonprofit (Auckland-headquartered registered charitable trust CC57025,
-founded 2014 by AUT researcher Dr Mahsa Mohaghegh/McCauley). 648/748
-commits (86.6%) authored solo across 10 months. GPT-4o-mini AI mentor
-matching with explicit 5-weight scoring (MBTI 15 / Skill 35 / Goal 30 /
-Industry 10 / Logistics 10) + Upstash Redis cache + rule-based fallback
-+ admin human-in-the-loop. Three role-permissioned dashboards
-(mentor / mentee / admin) with native dual-role support, Stripe-integrated
-payment→invitation-code activation flow, custom Slack ecosystem
-(event-collector bot, weekly
-mentorship-stats digest, weekly NZ funding-opportunities crawler over
-6 government RSS/HTML sources), a Claude agent skill
-`sync-event-from-slack` that replaces hours of manual event publication
-with a single dry-run-default command.
+### 2. She Sharp — Solo-built production platform that digitized, automated, and AI-upgraded NZ's
+leading women-in-STEM nonprofit (charitable trust CC57025, 2,200+ members,
+8,000+ women supported) — replacing Webflow + spreadsheets with a real member
+engine. GPT-4o-mini AI mentor matching (5-weight scoring + admin review),
+three role-permissioned dashboards (mentor / mentee / admin), Stripe billing,
+and a custom Slack ecosystem (event-collector bot, weekly mentorship-stats
+digest, NZ government funding crawler, Claude `sync-event-from-slack` skill)
+that turned hours of volunteer manual work into one-command automation.
+648/748 commits (86.6%) solo across 10 months.
 
-[tier=flagship · recency=recent · updated=2026-05-19]
+[tier=flagship · recency=recent · updated=2026-07-04]
 - **URL:** https://she-sharp-zeta.vercel.app/
 - **Repository:** https://github.com/NZ-SheSharp/she-sharp
 - **Tech stack:** Next.js 15.6 canary (App Router, Turbopack dev), React 19.1.2, TypeScript 5.8, Drizzle ORM 0.43, Neon Postgres (serverless pool), NextAuth 5 beta (Google + GitHub OAuth + bcrypt credentials), @auth/drizzle-adapter, OpenAI GPT-4o-mini (temp 0.3, max_tokens 1000, JSON-object response_format), Upstash Redis (AI match cache + queue), Stripe 20 (Customer Portal for self-service membership management), @slack/web-api (event-collector + interactive handlers), @octokit/rest (Slack-skill auto-commits), Claude agent skill: sync-event-from-slack, Resend (transactional email), Cloudinary (image hosting + transformations), Tailwind CSS 4.1, shadcn/ui + Radix UI (20+ primitives), @dnd-kit (kanban-style admin workflows), Recharts 3 + @number-flow/react (dashboard analytics), Framer Motion + Lenis (landing-page polish), Three.js + OGL (hero shader effects), Zod 3 (validation everywhere — Slack-bot LLM output gating, form schemas), React Hook Form + @hookform/resolvers, Vercel Edge Network + Vercel Cron
@@ -2257,7 +2253,7 @@ events from the old Webflow site, the Her Waka MSD-funded teaching
 site (Mintlify, curriculum authored solo), and a professional SEO
 audit on shesharp.org.nz with a 10-point recommendations report.
 
-**Impact:** The production member engine for NZ's leading women-in-STEM nonprofit (charitable trust CC57025, community since 2014) — 86.6% solo-built across 10 months with AI mentor matching, membership-flow automation, and Slack-automated events replacing hours of volunteer toil.
+**Impact:** Digitized and AI-upgraded NZ's leading women-in-STEM nonprofit (2,200+ members, 8,000+ supported) — 86.6% solo-built platform with AI mentor matching, three role dashboards, and a Slack automation stack that replaced hours of volunteer manual work.
 
 **Problem:** She Sharp is New Zealand's leading women-in-STEM nonprofit — a
 registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
@@ -2582,8 +2578,8 @@ professional SEO audit and recommendations report
 (serpdata-api-test) on shesharp.org.nz — operating across
 engineering, instructional design, and strategic analysis under
 one role.
-### 3. GAVIGO IRE — Activation & Execution Layer for Interactive Software — AI-orchestrated post-app activation platform with sub-millisecond container pre-warming; backed by Google for Startups Cloud Program + NVIDIA Inception (Feb 2026)
-[tier=flagship · recency=active · updated=2026-05-18]
+### 3. GAVIGO IRE — Founding-engineer MVP for GAVIGO Inc. (Delaware C-Corp) — the 'Instant Reality Exchange' post-app activation platform with sub-millisecond container pre-warming (p50 <1 ms restore, 84.6% warm-pool hit), AI-orchestrated Kubernetes scaling, and a TikTok-style mobile feed; validated by Google for Startups + NVIDIA Inception (Feb 2026) after a DOKS→GKE production migration
+[tier=flagship · recency=active · updated=2026-07-04]
 - **URL:** https://ire.gavigo.com/
 - **Tech stack:** Go, gorilla/websocket, Kubernetes, DigitalOcean DOKS (initial), Google Kubernetes Engine (post-migration), client-go (K8s API), Artifact Registry, GCE Ingress + Global HTTP(S) LB, React 18, Vite, React Native, Expo 54, WebSocket, Redis 7, PostgreSQL 16, Supabase, GPT-4o-mini
 - **Total commits:** 360
@@ -2613,7 +2609,7 @@ systems, activation flow and execution behavior, activation-economics
 proof path, AI-assisted orchestration and execution-control,
 restore/reuse boundaries, and heavier-workload validation.
 
-**Impact:** GAVIGO's 'Instant Reality Exchange' platform delivering sub-millisecond activation (p50 < 1 ms, 84.6% warm-pool hit) — production-validated by Google for Startups + NVIDIA Inception (Feb 2026) and migrated to Google Cloud GKE in a ~30-minute zero-downtime cutover.
+**Impact:** Founding-engineer MVP for a Delaware startup — sub-millisecond interactive-content activation (p50 <1 ms, 84.6% warm-pool hit) on Kubernetes, production-validated by Google for Startups + NVIDIA Inception; 353/360 commits (98%) solo as Founding Principal Engineer.
 
 **Problem:** The native-app paradigm puts a friction tax on every interactive
 digital experience: discover an app → app-store landing page → install
@@ -2806,7 +2802,7 @@ on the active codebase.
 - **PulseMCP badge:** Top Pick · 26.1k visitors · #1,105 global rank
 - **Glama quality:** A (license) · 122 stars
 - **Skywork review:** Dedicated Oct 2025 deep-dive article + AI-Engineer's Guide companion piece
-- **Stars:** 123
+- **Stars:** ~124 GitHub · 21 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai
 - **Forks:** 21
 - **Commits:** 98 (Google News) + 71 (Google Jobs) = 169
 - **Early MCP contrib:** Issue #76 (Nov 27 2024 — Windows/NVM workaround)
@@ -3182,8 +3178,8 @@ toggle flags + hex color overrides; executed the
 2026-04-13 public-extract release sequence (`73f4fa8` +
 `295756e`); coordinates parser updates across both this
 project and the SunoStats sibling repo.
-### echook (Echo + Hook) — AI-operated audio notification system for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only
-[tier=primary · recency=active · updated=2026-05-18]
+### echook (Echo + Hook) — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
+[tier=primary · recency=active · updated=2026-07-04]
 - **Repository:** https://github.com/ChanMeng666/echook
 - **Tech stack:** Python 3.6+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13), Remotion 4 (promo video), React 19 (promo video), Suno (background music generation)
 
@@ -3346,14 +3342,15 @@ the Remotion `TransitionSeries`, wrote the ElevenLabs
 audio-generation script, and tuned the volume-ducking
 envelopes so BGM ducks during VO + demo playback. Maintains
 both repos today through the 5.x line.
-### 2D Portfolio — chanmeng.org — Personal site at chanmeng.org powering an 11-stage AI newsletter pipeline + IBM Watson digital twin
-[tier=primary · recency=active · updated=2026-05-18]
+### 2D Portfolio — chanmeng.org — Personal site at chanmeng.org powering an 11-stage autonomous AI newsletter pipeline + IBM watsonx.ai digital twin, reskinned to the Caldera brand and hardened for recruiter-LLM discovery (GEO)
+[tier=primary · recency=active · updated=2026-07-04]
 - **URL:** https://chanmeng.org/
-- **Tech stack:** Next.js 14, React 18, TypeScript 5, Tailwind, Framer Motion, MDX, IBM Watson AI, OpenAI (gpt-4o + gpt-4o-mini), Resend, React Email, Vercel Blob, Product Hunt GraphQL API, Cloudflare Pages, GitHub Actions cron
+- **Tech stack:** Next.js 14 (App Router, Edge Runtime API routes), React 18, TypeScript 5, Tailwind CSS (Caldera brand system, light-only), Framer Motion, Three.js + postprocessing (PixelBlast WebGL background), MDX blog (Shiki / rehype-pretty-code, remark + rehype pipeline), Lottie + rough-notation + react-icon-cloud + canvas-confetti (UI polish), IBM watsonx.ai chat API (digital-twin assistant — us-south, IAM-token auth), OpenAI (gpt-4o + gpt-4o-mini — newsletter curation pipeline), Resend, React Email, Vercel Blob, Product Hunt GraphQL API, Cloudflare Pages (@cloudflare/next-on-pages + wrangler), GitHub Actions cron
 
 **Summary:** Personal website at **chanmeng.org** serving three production systems
-from a single repository: (1) an animated portfolio + MDX blog;
-(2) an **IBM Watson–powered AI digital twin** that converses with
+from a single repository: (1) an animated portfolio + MDX blog
+(Caldera brand, light-only, PixelBlast WebGL background);
+(2) an **IBM watsonx.ai–powered AI digital twin** that converses with
 visitors as Chan's virtual representative; (3) a fully autonomous
 **11-stage AI newsletter pipeline** that fetches trending AI products
 from Product Hunt every Sunday 20:00 UTC, runs them through a
@@ -3420,15 +3417,26 @@ independently of platform algorithms.
 
 **(1) Portfolio + blog.** Next.js 14 App Router on Cloudflare
 Pages via `@cloudflare/next-on-pages` + wrangler. React 18 +
-TypeScript 5 + Tailwind + Framer Motion for animations. MDX
-blog with Shiki / rehype-pretty-code for syntax highlighting.
-Reported Lighthouse 95+ across all metrics.
+TypeScript 5 + Tailwind + Framer Motion for animations,
+reskinned in June 2026 to the **Caldera personal-brand system
+(light-only)** with a **PixelBlast WebGL background** (Three.js
++ postprocessing) replacing the earlier SVG grid. MDX blog with
+Shiki / rehype-pretty-code for syntax highlighting. **GEO /
+recruiter-LLM hardening**: server-rendered JSON-LD structured
+data, an FAQ schema block, Open Graph images, and dedicated
+**CV JSON-LD + `llms.txt` sidecars served for recruiter LLMs**,
+so a sourcing agent can parse Chan's identity, roles, and
+projects without scraping prose. Reported Lighthouse 95+ across
+all metrics.
 
-**(2) IBM Watson AI Digital Twin.** A chat interface
-backed by IBM Watson where the assistant embodies Chan's
-voice and project knowledge — visitors ask about specific
-projects or technical skills and receive contextually
-accurate responses.
+**(2) IBM watsonx.ai Digital Twin.** An Edge-runtime chat
+interface (`/api/chat` + streaming `/api/chat-stream`) backed by
+**IBM watsonx.ai's chat API** (us-south region, IAM-token auth
+via `/api/ibm-token`) where the assistant embodies Chan's voice
+and project knowledge through a system prompt kept in sync with
+the curated `data/resume.tsx` source. Visitors ask about
+specific projects or technical skills and receive contextually
+accurate first-person responses.
 
 **(3) 11-stage autonomous AI newsletter pipeline.**
 Orchestrated by `scripts/ai-newsletter.ts` and triggered every
@@ -3481,6 +3489,16 @@ subscriber inbox. The newsletter is cited on Chan's profile
 as **"What's Shipping in AI (Weekly AI Digest)"**, signup at
 chanmeng.org/#newsletter.
 
+A **June 2026 wave** reskinned the entire site to the Caldera
+brand (light-only), swapped the background for a PixelBlast
+WebGL shader (Three.js + postprocessing), rebranded the
+newsletter emails to Caldera with copy rewritten for
+non-technical readers, curated "Things I've built" to 12 with
+progressive disclosure, converted site imagery to WebP, and
+added the **GEO sidecar layer** (server-rendered structured
+data, FAQ schema, CV JSON-LD + `llms.txt`) that operationalises
+the recruiter-LLM sourcing thesis.
+
 **My role:** Sole author. Designed the three-system architecture (portfolio
 + digital twin + newsletter) inside a single Next.js codebase,
 wrote the entire 11-stage pipeline (`scripts/ai-newsletter.ts`
@@ -3494,8 +3512,8 @@ tracking domain + Vercel Blob image hosting, and migrated the
 whole site to Cloudflare Pages. Maintains the system as both
 a publication and a continuous demonstration of agent-pipeline
 engineering.
-### AI Programming Education Platform (programming.chanmeng.org) — Bilingual Docusaurus teaching platform hosting four cohort versions side-by-side, an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts — the active home for the 2026 TechNest AI Track
-[tier=primary · recency=active · updated=2026-05-18]
+### AI Programming Education Platform (programming.chanmeng.org) — Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (four cohort versions side-by-side) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
+[tier=primary · recency=active · updated=2026-07-04]
 - **URL:** https://programming.chanmeng.org/
 - **Repository:** https://github.com/ChanMeng666/ai-programming-teaching-project
 - **Tech stack:** Docusaurus 3.8.1, @docusaurus/faster, React 18, MDX, Cloudflare Workers, Workers AI (Llama 3.1 8B Instruct), Cloudflare Vectorize, BGE Base EN v1.5 (768-dim embeddings), Cloudflare KV, Cloudflare Pages, Notion API, Algolia DocSearch (contextual), Typst, Mermaid (dual-view), i18next (EN + 简体中文), Server-Sent Events
@@ -3626,8 +3644,12 @@ simultaneously without interfering with each other. RAG
 index covers all four cohort versions + the blog as of
 2026-05-02; version-aware retrieval and stable hash chunk
 IDs landed the same day. New course recordings continue to
-ship weekly — Week 3 video added 2026-05-17. DeepWiki
-provides an external AI doc-Q&A surface at
+ship weekly — through June 2026 the TechNest cohort added
+Week 5 ("Add a Blog System"), Week 6 ("Build a Slack App" +
+a Claude Code skills office hour), and Week 7 recordings,
+plus a LinkedIn recommendation section and backfilled
+简体中文 for Weeks 3-5. DeepWiki provides an external AI
+doc-Q&A surface at
 deepwiki.com/ChanMeng666/ai-programming-teaching-project.
 
 **My role:** Sole engineer and sole author. Designed and built the entire
@@ -3644,8 +3666,8 @@ the localised `目录` TOC label). Migrated production from
 Vercel to Cloudflare Pages in 2026-04. Continues to ship
 the current cohort's lecture recordings and lab content
 each week.
-### Chinese Redefine 汉语新解 — AI Word Redefinition — Full-stack AI app that reinterprets traditional Chinese vocabulary through Google Gemini, exports shareable SVG cards, gated by a two-layer rate-limit quota system, deployed on Cloudflare Workers via OpenNext
-[tier=primary · recency=recent · updated=2026-05-18]
+### Chinese Redefine 汉语新解 — AI Word Redefinition — 汉语新解 — a full-stack AI app that reinterprets everyday Chinese vocabulary with sharp, humorous, philosophically-loaded takes (productizing Li Jigang's 李继刚 viral prompt) via Google Gemini, exports shareable SVG cards, gated by a two-layer rate-limit quota system, deployed on Cloudflare Workers via OpenNext. Low on raw technical difficulty, high on cultural/philosophical depth
+[tier=primary · recency=recent · updated=2026-07-04]
 - **URL:** https://chinese-redefine.chanmeng-dev.workers.dev/
 - **Repository:** https://github.com/ChanMeng666/chinese-redefine
 - **Tech stack:** Next.js 15 (App Router), React 18, TypeScript 5, Tailwind, shadcn/ui, Framer Motion, Google Gemini API, Neon Auth, Neon Postgres (serverless), Drizzle ORM, Resend (OTP email), @opennextjs/cloudflare, Cloudflare Workers, Wrangler
@@ -3782,7 +3804,7 @@ composition (`CardGenerator`, `CardThumbnail`, `ResultCard`,
 designed and implemented the SVG generation system in
 `lib/svgGenerator.ts`, and shipped the Modern Chinese Ink
 aesthetic redesign end-to-end.
-### Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa) — A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Maori mythology of Aotearoa, with a full Cloudflare Workers + Hono + Neon Postgres backend (auth, leaderboards, cloud saves, anti-cheat)
+### Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa) — A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine (a hand-built CSS 3D rendering engine) — themed end-to-end on Māori mythology of Aotearoa and inspired by Waitangi Day, with a full Cloudflare Workers + Hono + Neon Postgres backend (auth, leaderboards, cloud saves, anti-cheat)
 [tier=primary · recency=recent · updated=2026-05-18]
 - **URL:** https://towerdefense.chanmeng.org/
 - **Repository:** https://github.com/ChanMeng666/css-tower-defense
@@ -3950,29 +3972,34 @@ server-side anti-cheat validation, composed the dynamic
 music state machine and the Web Audio synth effects,
 wrote the Gulp + LESS build pipeline, and authored the
 4-step interactive tutorial with spotlight overlays.
-### Vitex — AI Career Agent (vitex.org.nz) — 7-step AI agent that turns a job description + free-text background into a tailored ATS-optimized resume PDF + cover letter in ~30 seconds — Vercel AI SDK + GPT-4o + Typst local compile (<100ms), shipped on a DigitalOcean VPS via Docker + Traefik + GitHub Actions, tiered access via Stripe-integrated credits ledger
-[tier=primary · recency=recent · updated=2026-05-18]
+### Vitex — AI Career Agent (vitex.org.nz) — Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); billing is outcome-based (charged only when a resume is successfully produced). Vercel AI SDK + GPT-4o + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions
+[tier=primary · recency=recent · updated=2026-07-04]
 - **URL:** https://www.vitex.org.nz/
 - **Repository:** https://github.com/ChanMeng666/easy-resume
-- **Tech stack:** Next.js 15, React 19, TypeScript 5, Vercel AI SDK v6, @ai-sdk/openai, OpenAI GPT-4o, Zod schemas, Typst (local binary), Neon Postgres, Drizzle ORM, Upstash Redis, Stack Auth, Stripe, Cloudinary, shadcn/ui + Neobrutalism, Framer Motion, Docker, Traefik, DigitalOcean VPS, GitHub Actions CI/CD
+- **Tech stack:** Next.js 15, React 19, TypeScript 5, Vercel AI SDK v6, @ai-sdk/openai, OpenAI GPT-4o, Zod schemas, Typst (local binary), Neon Postgres, Drizzle ORM, Upstash Redis, Stack Auth, Stripe, Cloudinary, shadcn/ui + Neobrutalism, Framer Motion, Public v1 HTTP API (OpenAPI spec + curl playbook in skill.md), vitex-cli (thin API client, bin `vitex`), MCP server (`vitex mcp` via npx, stdio — Claude Desktop/Code, Cursor), Docker, Traefik, DigitalOcean VPS, GitHub Actions CI/CD
 
 **Summary:** AI Career Agent live at **vitex.org.nz**. A user pastes a job
-description, describes their background in free text, and a
-**7-step AI pipeline** (JD parsing → background parsing → match
+description, describes their background in free text, and an
+**8-step AI pipeline** (JD parsing → background parsing → match
 analysis → resume tailoring → ATS scoring → cover letter →
-Typst document generation) streams the result via SSE into a
-tailored, ATS-optimized resume PDF + matching cover letter in
-~30 seconds. Typst compiles PDFs locally in under 100 ms across
-14 AI-auto-selected professional templates — no external
-document-generation API. Stripe-powered credit system, public
-shareable links via unique tokens. Production deployment runs
-as a Docker container on a **DigitalOcean VPS** behind
-**Traefik** (reverse proxy + TLS), shipped continuously by
-**GitHub Actions**. 168 commits, ~95% solo, three deployment
-migrations and a LaTeX → Typst engine swap on the path to
-current production.
+document generation → server-side PDF compilation) streams the
+result into a tailored, ATS-optimized resume PDF + matching
+cover letter in ~30 seconds. Typst compiles PDFs locally in
+under 100 ms across 7 AI-auto-selected professional templates —
+no external document-generation API. The product is
+**agent-ready**: every capability is reachable over an
+authenticated **public v1 HTTP API** (the web UI and API share
+one pipeline core), and a thin **vitex-cli** plus a stdio **MCP
+server** (`vitex mcp`) let terminals and coding agents (Claude
+Desktop/Code, Cursor) drive the whole product without a browser.
+Billing is **outcome-based** — credits are charged only when a
+resume is successfully produced (failures are free), idempotently.
+Natural-language refinement applies targeted free edits instead
+of full regenerations. Production runs as a Docker container on a
+**DigitalOcean VPS** behind **Traefik** (reverse proxy + TLS),
+shipped continuously by **GitHub Actions**.
 
-**Impact:** AI career agent that generates a tailored ATS-optimised resume + cover letter in ~30 seconds from a job description and free-text background — 7-step Vercel AI SDK pipeline, Typst local PDF compile under 100 ms, on its third production architecture.
+**Impact:** Agent-ready AI career agent — an 8-step pipeline turns a JD + free-text background into a tailored ATS-optimised resume + cover letter in ~30s, usable over a public HTTP API, a CLI, and an MCP server; outcome-based billing (only on success), Typst PDF compile <100ms.
 
 **Problem:** Most AI resume tools are one of two failure modes: (a) a
 thin GPT wrapper that hands you a paragraph and calls it a
@@ -4126,11 +4153,11 @@ overhaul, built the natural-language refinement loop in
 the Editor, and continues to operate the production
 service as recently as the May 2026 mobile reliability
 pass.
-### Event Q&A AI Template — AI Hackathon Festival 2025 Assistant — Industry-partnered AI event platform (AUT × AI Forum NZ × She Sharp) — interactive 3D quantum-orb sprite mascot with 6-tier affection gamification, OpenAI GPT-4o-mini streaming chat, Notion-as-database community FAQ, deployed on Cloudflare Workers
-[tier=primary · recency=recent · updated=2026-05-19]
+### Event Q&A AI Template — Aotearoa AI Hackathon Festival 2025 → 2026 Assistant — Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template
+[tier=primary · recency=recent · updated=2026-07-04]
 - **URL:** https://ai-hackathon-assistant.chanmeng-dev.workers.dev/
 - **Repository:** https://github.com/ChanMeng666/event-qa-ai-template
-- **Tech stack:** Next.js 16.1 (App Router), React 18 + TypeScript 5, Tailwind CSS v3 + Framer Motion v12, Vercel AI SDK v4.3, @ai-sdk/openai (GPT-4o-mini-2024-07-18 streaming), Three.js 0.182 + @react-three/fiber 8.16, Custom Quantum Orb 3D mascot (CSS 3D transforms + Three.js particles), Sprite affection gamification engine (gesture detection, mood weighting, time-of-day bias), Notion REST API (raw fetch, CF Workers compatible — replaced @notionhq/client SDK), shadcn/ui + Radix primitives, @opennextjs/cloudflare adapter, Cloudflare Workers deployment (migrated from Vercel), wrangler v4 CI/CD, localStorage state persistence (50-msg chat history + sprite affection state), 5-min FAQ client cache + optimistic vote/view updates
+- **Tech stack:** Next.js 16.1 (App Router), React 18 + TypeScript 5, Tailwind CSS v3 + Framer Motion v12, Vercel AI SDK v4.3, @ai-sdk/openai (GPT-4o-mini-2024-07-18 streaming), Three.js 0.182 + @react-three/fiber 8.16, Custom Quantum Orb 3D mascot (CSS 3D transforms + Three.js particles), Sprite affection gamification engine (gesture detection, mood weighting, time-of-day bias), Notion REST API (raw fetch, CF Workers compatible — replaced @notionhq/client SDK), shadcn/ui + Radix primitives, @opennextjs/cloudflare adapter, Cloudflare Workers deployment (migrated from Vercel), wrangler v4 CI/CD, localStorage state persistence (50-msg chat history + sprite affection state), 5-min FAQ client cache + optimistic vote/view updates, AI rate limiting + per-session token budgets + prompt guardrails (2026-07 security hardening), OpenAI Realtime API over WebRTC — two-way voice (2026 relaunch), Ephemeral client secrets minted server-side (OPENAI_API_KEY never reaches the browser), Audio-reactive Three.js orb voice UI + live captions (2026), Vercel deployment (2026 edition — she-sharp1/aihackathon-2026)
 
 **Summary:** Real industry-partnered AI event assistant built for the **AI
 Hackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised
@@ -4154,7 +4181,21 @@ conference can fork-and-config the same stack. Chan was
 subsequently recognised among the **14 expert mentors** at the
 festival.
 
-**Impact:** Industry-partnered AI event platform (AUT × AI Forum NZ × She Sharp) — 3D quantum-orb mascot with 6-tier gamification, GPT-4o-mini streaming chat, Notion-as-database FAQ; used live by 11 teams / 80+ participants at AI Hackathon Festival 2025.
+For the **2026 festival** (Aotearoa AI Hackathon Festival 2026,
+AUT City Campus) the project was **rebuilt from the ground up** as
+a single-page **voice-first** agent: the whole site is a centered,
+audio-reactive Three.js orb that starts a **two-way voice
+conversation over the OpenAI Realtime API via WebRTC** (the client
+exchanges SDP directly with OpenAI using a short-lived ephemeral
+secret, so the real API key never reaches the browser), with a
+text-input fallback answered by gpt-4o-mini via the Vercel AI SDK,
+live captions, and a collapsible event-info panel. Agent
+instructions build from a Neon `knowledge` table (graceful
+fallback to config), transcripts persist best-effort, and Upstash
+KV rate-limits token minting. Deployed on Vercel
+(`she-sharp1/aihackathon-2026`, live at aihackathon-2026.vercel.app).
+
+**Impact:** Voice-first AI event agent for the Aotearoa AI Hackathon Festival — relaunched 2026 (AUT) as an audio-reactive orb driving two-way OpenAI Realtime voice + gpt-4o-mini text chat; the 2025 edition served 11 teams / 80+ participants with a gamified 3D sprite mascot + Notion FAQ.
 
 **Problem:** Hackathons and conferences generate the same Q&A surface every
 year: participants ask the same 30 questions ("how do I form a
@@ -4528,14 +4569,17 @@ persistence model with zero server-side state; executed the
 Vercel -> Cloudflare Workers migration with GitHub Actions
 auto-deploy; authored the README, TUTORIAL.md, and GEO
 metadata. Maintains the live deployment today.
-### SunoStats — The Analyst Suno Never Shipped — Closed a gap in Suno's official platform that creators couldn't fix themselves — discovered that Suno's serializer leaks unredacted parent->child lineage UUIDs only on /api/trending + persona sub-trees, built the industry's first public Suno lineage explorer on that finding. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.
-[tier=primary · recency=recent · updated=2026-05-19]
+### SunoStats — The Analyst Suno Never Shipped — SunoStats — commercial analytics layer built on a private Suno API probe (suno-research-private) — closed a gap Suno's official platform couldn't fill by discovering that Suno's serializer leaks unredacted parent→child lineage UUIDs only on /api/trending + persona sub-trees, then productizing that into the industry's first public Suno lineage explorer. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.
+[tier=primary · recency=recent · updated=2026-07-04]
 - **URL:** https://sunostats.chanmeng.org/
 - **Tech stack:** Next.js 16.2 (App Router, Webpack pin), React 19.2, TypeScript 5, Tailwind CSS 4 + GSAP 3.15 scroll motion, Neon Postgres (serverless HTTP driver), Drizzle ORM 0.45 + Drizzle Kit 0.31, NextAuth v5 beta + Neon Auth (Better Auth), Google OAuth (no password flow), Stripe 22 (webhook-verified credit ledger, auto test/live switch), Resend 6 (insight email delivery), @suno-cards/parser workspace package (Valibot validators + typed Suno error hierarchy), WITH RECURSIVE Postgres CTEs (lineage graph traversal), Biome 2.4 (lint + format), Docker multi-stage + Node 20 slim runner, GitHub Container Registry (GHCR), VPS deployment behind Traefik + Let's Encrypt TLS, GitHub Actions CI/CD (typecheck + lint + build + deploy), Linux crontab (collect-trending 04:00 UTC, sync-all 04:05 UTC), next-themes (light/dark), i18n: EN / 简体中文 / 日本語 (cookie-driven, server-resolved)
 
 **Summary:** Production third-party analytics layer for **Suno creators** —
-built to close an opportunity Chan identified by **technical
-research** rather than market survey. The Suno UI shows a total
+built on a private API-probe codebase (**suno-research-private**)
+that Chan developed first to map Suno's undocumented endpoints,
+then productized and commercialized as SunoStats. The opportunity
+was identified by **technical research** rather than market survey.
+The Suno UI shows a total
 play count and a like count, and that's it: no time series, no
 tag-level breakdowns, no view of which tracks are climbing or
 stalling, no exposure of the parent->child remix lineage that
@@ -5455,7 +5499,7 @@ maintains the project as part of the matched Google News /
 Google Jobs MCP pair. The Skywork review specifically
 attributes the production-ready design and intelligent
 error-handling architecture to Chan as creator.
-### 腾讯会议录屏下载助手 — Chrome Web Store-Published Extension — Formally published Chrome Web Store product (extension ID gdajdfngeonjmcclghkmeoacopnnfpnc) — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted. First commit Nov 25 2024, still maintained through April 2026.
+### 腾讯会议录屏下载助手 — Chrome Web Store-Published Extension — Chrome Web Store-published extension (Manifest V3) that intercepts Tencent Meeting recording CDN requests and generates platform-specific download commands — enabling download of member-gated meeting recordings that the web UI restricts to paid accounts; Apache-2.0, privacy-policy-vetted, ~1,000 Chrome Web Store users
 [tier=primary · recency=recent · updated=2026-05-19]
 - **URL:** https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
 - **Repository:** https://github.com/ChanMeng666/tencent-meeting-video-downloader
@@ -5891,7 +5935,7 @@ The four mechanisms are loosely coupled: the assessment registry can grow withou
 
 **My role:** Sole author and maintainer. Every commit on the repo is from me — including the initial Next.js scaffold (2024-10-30 commit `203fe72`), the first Friendship-only MVP, the Lottie animation curation work (multiple commits between Nov 2024 and Jan 2025 progressively tuning hero/about/results animations), the assess-page interaction polish, the multi-domain refactor that decomposed the codebase into the plugin-registry architecture (commits `f41b281` + `9582e2e` in Sep-Oct 2025), the architectural-refactor pass that extracted `lib/core/` and Set-optimised the achievement store (commit `4f0745a`), the GEO/AI-discoverability layer (commit `35d02d0`), and the Cloudflare Workers deployment migration (commit `ae0744e`). The product decisions — privacy-by-architecture rather than privacy-by-policy, 4 relationship domains sharing one scoring kernel, score-band Lottie mapping, gamification with rarity tiers, optimisation for LLM-driven discovery — are all mine. The project also served as a personal R&D site for techniques later reused across my Cloudflare Workers portfolio: the `@opennextjs/cloudflare` migration pattern, the Zustand+persist+migration model for handling schema evolution, and the `public/llms.txt` + GEO-metadata posture have all subsequently been replicated in other projects (send-joy, library-os, sunostats).
 ### FanFic Lab — HSR DreamWriter, an Adaptive LangGraph Agent Powering a Gaming Fan-Creation Community — A full-stack AI co-creation platform for the *Honkai&#58; Star Rail* (崩坏：星穹铁道) fandom — a 7-node LangGraph adaptive agent (intent parser → architect → writer → quality guard → revision loop → summarizer → delivery) with a self-revising quality loop, hand-curated 5-character HSR canon knowledge pack + RAG over a `KnowledgeChunk` pgvector index, and a UGC community layer with follows / nested-reply comments / notifications / pgvector related-story recommendations — split into two Docker services (`web` + `agent`) self-hosted on a DigitalOcean VPS via Coolify behind Cloudflare.
-[tier=primary · recency=recent · updated=2026-05-19]
+[tier=primary · recency=recent · updated=2026-07-04]
 - **URL:** https://fanfic-lab.tech/
 - **Repository:** https://github.com/ChanMeng666/fanfic-lab
 - **Tech stack:** Next.js 16.1 (App Router, Turbopack, Server Actions), React 19.2 + TypeScript 5, Tailwind CSS 4 (PostCSS plugin) + tw-animate-css + shadcn/ui, Radix UI primitives (Dialog, DropdownMenu, Popover, ScrollArea, Tabs, Avatar, Checkbox, Collapsible, Progress, Select, Separator, Slot), Motion (formerly Framer Motion) 12 — parallax hero, transitions, LangGraph.js 1.0 + @langchain/core 1.1 + @langchain/openai 1.2 + @langchain/langgraph-cli 1.1 — runs as a separate Docker service on port 8123, OpenAI SDK 6.33 — GPT-4o (creative writer, temp 0.9) + GPT-4o-mini (intent parser, quality guard at temp 0.3) + text-embedding-3-small (1536-dim vectors), Tavily Search SDK (@tavily/core 0.6 + @langchain/tavily 1.2) — web research for non-canon fandoms, Prisma 7.2 + @prisma/adapter-pg 7.2 + Neon serverless 1.0 — type-safe ORM on Neon PostgreSQL, pgvector + ivfflat cosine index (`Story.embedding vector(1536)`, lists=100) — related-story recommendations, pg_trgm GIN indexes (`Story_title_trgm_idx`, `Story_summary_trgm_idx`) — fast ILIKE substring search, KnowledgeChunk table with `vector(1536)` embeddings + RAG retrieval helper (`retrieveRelevantChunks`) feeding the writer node, Redis (ioredis 5.8) — Tavily research cache with 30-day TTL, Stack Auth 2.8 — managed authentication; user rows synced to Postgres on first sign-in, Cloudinary 2.8 — story covers + avatars (with react-easy-crop 5.5 client-side crop preview), Zod 3.25 — runtime validation of agent state, request payloads, knowledge schemas, Sonner 2.0 — toast notifications · next-themes 0.4 — dark mode, Docker Compose two-service deployment (`Dockerfile.web` + `Dockerfile.agent`) on a DigitalOcean VPS, Coolify (self-hosted PaaS) on DigitalOcean droplet 159.223.173.17, Traefik reverse proxy (built into Coolify) routing :80/:443 to web + agent containers, Cloudflare proxy mode — SSL termination + CDN + DDoS protection, GitHub Actions CI: build → push to GHCR (`ghcr.io/chanmeng666/fanfic-lab/{web,agent}`) → SSH-deploy to VPS on `git push master`, MIT license
@@ -5906,7 +5950,7 @@ The four mechanisms are loosely coupled: the assessment registry can grow withou
 
 **Product logic:** The user flow collapses what would normally be 4-5 separate apps (writing assistant + character database + fanfic editor + social platform + recommendation engine) into one screen. (1) **Land on `https://fanfic-lab.tech`** — cinematic full-bleed hero with Honkai: Star Rail splash arts and KV (key-visual) imagery, plus a Honkai: Star Rail fan content attribution credit (the project takes the IP-attribution discipline seriously even though it's a non-commercial fan tool). (2) **Sign in via Stack Auth** — branded sign-in/up shell with explicit error classification, mobile + perf polish. (3) **Hit the "create" page** — type a Chinese prompt describing the CP you want to read about ("想看砂金和藿藿的现代AU虐转甜"). (4) **Backend kicks off a DreamWriter agent run**: the Next.js API route POSTs to `LANGGRAPH_URL=http://agent:8123` (Docker Compose internal hostname) which runs the 7-node graph; the frontend polls for `logs` updates and shows them in Chinese ("正在解析您的需求..." → "正在策划故事..." → "正在创作..." → "正在质量检查 (8/10)..." → "正在根据反馈修改第 1 版..." → "故事完成"). (5) **Story auto-publishes to the Fandom Feed** (a deliberate product decision in commit `b090c04` "auto-publish stories, remove shelf page and drafts tab" — friction kills first-time creators). (6) **Other users discover it via**: the feed (filterable by fandom / ships / tags / rating / status, sortable by recent / popular / comments / word count, with infinite scroll); SEO/OG tags + sitemap for organic search; **pgvector related-story recommendations** on each story page (commit `48428e6` — cosine similarity over title+summary+ships+tags embeddings, deliberately *not* over chapter content because we want thematic matching, not prose-style matching); **per-author public pages** at `/users/[username]` with their stories + followers + following. (7) **Engagement primitives**: like a story, follow an author, leave a nested-reply comment, like comments, get notified in the bell + notifications page when someone interacts with your work. (8) **Story reader page**: per-reader font / line-height preferences (commit `6551966`) + scroll position memory so the reader can pause + resume, plus dark mode toggle in the header (commit `b922cf8`). (9) **Author tools**: edit published stories, continue any story with a new chapter (with auto-generated chapter titles, commit `30df8fe`), avatar crop preview via react-easy-crop. The cumulative effect: **a fan-creation community where the friction from "I want to read this" to "this story exists and other fans are commenting on it" is one Chinese sentence**.
 
-**Business logic:** This is an MIT-licensed open-source fan-creation tool with a non-commercial usage stance toward the HSR IP — it ships an explicit Honkai: Star Rail fan content attribution on the homepage and treats the canon knowledge pack as a *fan-curated* reference, not commercial use of HoYoverse assets. The infrastructure choices are however explicit and deliberate. **Deployment model**: the production stack runs on a self-hosted DigitalOcean droplet behind Coolify (the migration playbook records the rationale — moving off Railway gave full control over runtime + the ability to host more services on the same box). **Model tiering**: GPT-4o-mini handles the intent parser + quality guard nodes; GPT-4o handles the writer node where prose quality matters; the quality-guard revision budget is capped at MAX_REVISIONS=2 so the agent loop is bounded; embeddings use `text-embedding-3-small`; the `SourceResearchCache` Prisma model + Redis tier persist Tavily results for 30 days to avoid duplicate fandom research. **Credits scaffolding**: the Prisma schema includes `UserCredits` and `Generation` models with `creditsCharged: Int` — credits infrastructure exists in the data layer as a foundation for future capacity controls but is not yet enforced in production, so the current version is fully free for users. **Build-time + runtime layout**: two services (web + agent) in one Docker Compose file means health checks, internal networking, restart policies, and rolling deploys are all handled by one Coolify project rather than fragmented across providers. **Discovery loop**: per-story SEO/OG tags + sitemap (commit `897a43d`) + the related-stories pgvector recommender compound organic discoverability over time.
+**Business logic:** This is an MIT-licensed open-source fan-creation tool with a non-commercial usage stance toward the HSR IP — it ships an explicit Honkai: Star Rail fan content attribution on the homepage and treats the canon knowledge pack as a *fan-curated* reference, not commercial use of HoYoverse assets. The infrastructure choices are however explicit and deliberate. **Deployment model**: the production stack runs on a self-hosted DigitalOcean droplet behind Coolify (the migration playbook records the rationale — moving off Railway gave full control over runtime + the ability to host more services on the same box). **Model tiering**: GPT-4o-mini handles the intent parser + quality guard nodes; GPT-4o handles the writer node where prose quality matters; the quality-guard revision budget is capped at MAX_REVISIONS=2 so the agent loop is bounded; embeddings use `text-embedding-3-small`; the `SourceResearchCache` Prisma model + Redis tier persist Tavily results for 30 days to avoid duplicate fandom research. **Credits scaffolding**: the Prisma schema includes `UserCredits` and `Generation` models with `creditsCharged: Int` — a June 2026 Claude×Codex adversarial-review pass (PRs #2-#3) moved credits from data-layer scaffolding to enforced billing by making story generation server-authoritative and fail-closed on QA, and calibrating story length to the paid tier — so generation cost and capacity are now controlled server-side rather than trusted from the client. **Build-time + runtime layout**: two services (web + agent) in one Docker Compose file means health checks, internal networking, restart policies, and rolling deploys are all handled by one Coolify project rather than fragmented across providers. **Discovery loop**: per-story SEO/OG tags + sitemap (commit `897a43d`) + the related-stories pgvector recommender compound organic discoverability over time.
 
 **Technical approach:** The system is organised around four orthogonal layers that together produce the user-visible behaviour.
 
@@ -5929,10 +5973,11 @@ The four layers are loosely coupled: the agent can be re-shaped without touching
 - **Production stack survives a multi-service migration**: the same codebase ran on Vercel + Railway, then Vercel + Railway-LangGraph-only, then DigitalOcean + Coolify (current), without breaking the agent contract.
 - **Operational discipline**: 2 services run on a self-hosted DO droplet via Coolify; deliberate model tiering (mini for parsing/checking, full for prose) + cache-first Tavily research + capped revision budget keep the agent loop predictable.
 - **Production URL live**: https://fanfic-lab.tech/ (with www → root redirect), Cloudflare-proxied, MIT-licensed.
+- **June 2026 billing-integrity + reliability hardening** (Claude×Codex adversarial review, PRs #2-#3, 2026-06-28→29): server-authoritative generation with fail-closed QA, per-scene progress + degraded-quality surfacing + cost disclosure, Zod route validation + a Vitest suite + a CI gate, extra DB indexes, series-resume, and story-length calibration to the paid tier — turning the free MVP into a billing-safe, tested product.
 
 **My role:** Sole author, designer, and operator. Every one of the 182 commits is mine. I wrote both the initial CopilotKit + LangGraph fanfic editor (commits `0a3d1f5` → `36c5469` Teal+Amber "Literary Atelier" design system → `cdc3586` Railway deployment), made the call to scrap that direction and pivot to HSR-specific DreamWriter (commits `cbd31cc` "pivot from MDZS to Honkai: Star Rail based on 2025-2026 fandom trends" → `4790851` MDZS implementation plan as comparison reference → `a288e25` "HSR DreamWriter - complete product redesign" + `b5baf34` the same-day old-code deletion), hand-curated the entire HSR canon knowledge pack (5 characters with their specific 性格特征 / 说话方式 / 情感触发点 — this is bespoke fandom-domain knowledge, not scraped), wrote the 7-node adaptive LangGraph topology including the conditional revision edge, designed the Prisma schema (21 models including the polymorphic `Notification.payload: Json`, the self-referential `Comment.parentId` for nested replies, the deliberate split between `KnowledgeChunk` for RAG and `SourceResearchCache` for Tavily caching, the `UserCredits` + `Generation` audit foundation), wrote both Dockerfiles + the Coolify compose file + the GitHub Actions deploy workflow, executed the Railway → DigitalOcean + Coolify migration (and *documented* it as a reusable playbook), wrote the pgvector + pg_trgm migrations and the `lib/story-embedding.ts` raw-SQL escape hatch, and built the entire community-feature sprint (comments, notifications, follows, related stories, search indexing, view counts, SEO, dark mode, reader preferences, avatar cropping) in the final ~96-hour push 2026-04-18 → 2026-04-21. The project doubles as a personal R&D lab for the rest of the portfolio: the Coolify-on-DO migration playbook informed similar deployments in archcanvas (Workers → DO VPS), the GitHub-Actions-to-GHCR-to-SSH pattern reappeared in subsequent multi-service projects, and the pgvector + ivfflat + cosine-similarity recipe became the template I reused for related-content recommendations elsewhere.
 ### LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI) — One Cloudflare Worker serving four surfaces over a single backend — a React SPA for humans who click-and-type, plus three identical-power agent surfaces (HTTP API at `/api/*` with OpenAPI 3.1 + Scalar docs at `/docs`, MCP Streamable HTTP at `/mcp` with 11 locked tools mirroring the HTTP routes 1:1, and an `lja` CLI on npm mirroring the MCP names 1:1). Every operation a human can do by clicking, an AI agent can do by HTTP call, MCP tool, or CLI invocation, with full feature parity and a unified `lja_*` API key.
-[tier=primary · recency=recent · updated=2026-05-19]
+[tier=primary · recency=recent · updated=2026-07-04]
 - **URL:** https://linkedin-jobs-search.chanmeng-dev.workers.dev/
 - **Tech stack:** Cloudflare Workers (single Worker, single entrypoint `worker/index.ts`), Hono 4 + `@hono/zod-openapi` (every `/api/*` route is `OpenAPIHono` + `createRoute`), @modelcontextprotocol/sdk 1.29 — Streamable HTTP MCP server at `/mcp` with 11 locked tool names, cac-based `lja` CLI published as `@chanmeng666/linkedin-jobs-search-cli` on npm (8 commands mirroring MCP names 1:1), React 18 SPA built by Vite 6 + react-router-dom 6 (served as static assets by the Worker), Once UI design system (`@once-ui-system/core` 1.5) — composable layout primitives, @scalar/api-reference-react — `/docs` route renders the OpenAPI spec interactively, Neon Postgres via `@neondatabase/serverless` HTTP driver + Drizzle ORM 0.38, Drizzle Kit 0.30 — schema push + studio (3 hand-written SQL migrations: subscriptions, api_keys, usage_events), Stack Auth 2.8 (cookie/JWT for humans) + custom `lja_<keyId>_<secret>` Bearer scheme (agents) with strict precedence, Stripe 22 metered subscriptions with dual `STRIPE_MODE=test|live` mode switching + canonical-JSON + sha256 idempotency, Cloudflare R2 — export artifact bucket with 1-day lifecycle, HMAC-signed presigned download URLs (1h TTL), Cloudflare KV — SWR cache with `{HIT, REVALIDATING, MISS}` headers + KV-backed cost-class-aware per-minute rate limiter (5 points for `POST /api/jobs`/`/api/export`, 1 elsewhere), ULID 3.0 — `req_<26-char>` IDs threaded through `X-Request-Id` header, every JSON-line log, and problem+json `trace_id`, RFC 7807 `application/problem+json` errors with stable machine codes (`unauthorized`, `forbidden`, `not_found`, `validation_error`, `quota_exceeded`, `rate_limited`, `internal_error`, `invalid_token`, `expired_token`, `export_expired`), Pulumi TypeScript (`infra/`) — replaces wrangler.jsonc as the primary deploy path; `deploy:wrangler` kept as fallback, Pulumi CrossGuard policy pack (4 policies: `no-destroy-prod`, `secret-must-be-secret`, `worker-vars-no-cleartext-secret`, `worker-name-must-match-stack`), node --test --experimental-transform-types — unit tests colocated next to source + cross-cutting `worker/contract.test.ts` using in-process `app.fetch` dispatch, GitHub Actions CI (`test.yml`, `pulumi.yml`, `cli-publish.yml`), jose 5 (JWT verify) · ulid 3 · zod 3.25 (validation everywhere) · json2csv (export), TypeScript strict mode everywhere; ESLint 8 + react-hooks 7.1, MIT license
 

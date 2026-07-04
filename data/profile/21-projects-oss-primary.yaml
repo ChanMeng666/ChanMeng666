@@ -267,11 +267,11 @@ projects:
           - src: /public/tech-logos/codex.svg
             alt: "OpenAI Codex"
             url: "https://github.com/openai/codex"
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-07-04"
     name: echook (Echo + Hook)
     priority: 6
     category: ai-apps
-    tagline: AI-operated audio notification system for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only
+    tagline: AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
     repoUrl: https://github.com/ChanMeng666/echook
     logo: /public/brands/echook-logo.svg
     status: active
@@ -571,6 +571,7 @@ projects:
       - { label: "Glama quality",     value: "A (license) · MIT" }
       - { label: "Locales",           value: "English, Simplified Chinese, Japanese, Korean (30+ strings each)" }
       - { label: "Commits",           value: "71 (solo)" }
+      - { label: "GitHub stars",      value: "~21 stars · 11 forks · npm @chanmeng666/google-jobs-server · Smithery + Glama + serp.ai listings" }
     status: live
     startDate: "2024-12-31"
     publicSummary: |
@@ -676,7 +677,7 @@ projects:
     name: 腾讯会议录屏下载助手 — Chrome Web Store-Published Extension
     priority: 9
     category: web-apps
-    tagline: Formally published Chrome Web Store product (extension ID gdajdfngeonjmcclghkmeoacopnnfpnc) — Manifest V3 with retained blocking webRequest permission, Apache-2.0 with patent grant, privacy-policy-vetted. First commit Nov 25 2024, still maintained through April 2026.
+    tagline: "Chrome Web Store-published extension (Manifest V3) that intercepts Tencent Meeting recording CDN requests and generates platform-specific download commands — enabling download of member-gated meeting recordings that the web UI restricts to paid accounts; Apache-2.0, privacy-policy-vetted, ~1,000 Chrome Web Store users"
     url: https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
     repoUrl: https://github.com/ChanMeng666/tencent-meeting-video-downloader
     logo: /public/brands/tencent-meeting-video-downloader.svg

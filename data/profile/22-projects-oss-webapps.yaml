@@ -36,10 +36,11 @@ projects:
     name: FreePeriod Website
     priority: 22
     category: web-apps
-    tagline: Bilingual public-health site for Guangzhou-based menstrual-access startup (HKUST(GZ) incubated) — Google Maps dispenser directory, advocacy document previews, product demo
+    tagline: Bilingual public-health site for 自在月行 (Free Period), a Guangzhou-based menstrual-access startup (HKUST(GZ) incubated) — Google Maps dispenser directory, advocacy document previews, product demo
     logo: /public/brands/free-period-logo.svg
     url: https://free-period-website.pages.dev/
     repoUrl: https://github.com/ChanMeng666/free-period-website
+    entity: "自在月行 (Free Period) — Guangzhou-based, HKUST(GZ)-incubated menstrual-access startup"
     techStack: [Next.js, TypeScript, Tailwind CSS, Radix UI, Framer Motion, Recharts, Zustand, Google Maps API, Cloudflare Pages]
     narrative:
       impactHeadline: "Bilingual period-poverty advocacy site for a Guangzhou HKUST(GZ)-incubated startup — integrated Google Maps dispenser directory helping end-users locate menstrual-access resources in underserved markets."
@@ -350,7 +351,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [cloudflare-workers, mcp, scalar, npm]
-    lastUpdated: "2026-05-19"
+    lastUpdated: "2026-07-04"
     name: LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI)
     priority: 16
     category: web-apps
@@ -399,6 +400,8 @@ projects:
       - "Stripe-integrated metered usage events with idempotency"
       - "Pulumi + CrossGuard IaC with no-destroy-prod policy"
       - "Cloudflare R2 + HMAC-signed presigned URLs"
+      - "Persisted multi-country search presets"
+      - "Cost-hardened crons (no idle-DB burn)"
       - "RFC 7807 problem+json with stable machine codes"
       - "SWR cache + cost-class-aware KV rate limiter"
       - "Contract tests via in-process app.fetch dispatch"
@@ -910,7 +913,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, opennext, cloudflare-workers, react, typescript]
-    lastUpdated: "2026-05-19"
+    lastUpdated: "2026-07-04"
     name: Eatropolis Website — Production-grade Next.js 16 + OpenNext-on-Cloudflare-Workers event platform for Auckland's award-winning culinary festival (2026-10-10, Shed 10)
     priority: 18
     category: web-apps
@@ -1030,7 +1033,7 @@ projects:
       reveal on one coherent build (Phase 1 teaser 2026-05-22 → Phase
       2 full site 2026-06-05).
     narrative:
-      impactHeadline: "Production culinary-festival event site for Auckland's Eatropolis — engineered for 1,000 concurrent visitors, WCAG 2.2 AA-compliant with council review gates, delivered solo in 9 days under a signed commercial contract."
+      impactHeadline: "Auckland Eatropolis festival (30+ chefs, Shed 10) — signed commission with Tātaki Auckland Unlimited (Council Events) review gates, WCAG 2.2 AA, streaming OpenAI chat + voice assistant, and 1,000-visitor load test; solo-built in 9 days."
       problem: |
         Auckland-based **Chow Luck Club Ltd** — production partner
         for the **Eatropolis** culinary festival, supported by
@@ -1855,11 +1858,11 @@ projects:
   - id: sunostats
     tier: primary
     recency: recent
-    lastUpdated: "2026-05-19"
+    lastUpdated: "2026-07-04"
     name: SunoStats — The Analyst Suno Never Shipped
     priority: 18
     category: web-apps
-    tagline: Closed a gap in Suno's official platform that creators couldn't fix themselves — discovered that Suno's serializer leaks unredacted parent->child lineage UUIDs only on /api/trending + persona sub-trees, built the industry's first public Suno lineage explorer on that finding. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.
+    tagline: "SunoStats — commercial analytics layer built on a private Suno API probe (suno-research-private) — closed a gap Suno's official platform couldn't fill by discovering that Suno's serializer leaks unredacted parent→child lineage UUIDs only on /api/trending + persona sub-trees, then productizing that into the industry's first public Suno lineage explorer. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS."
     url: https://sunostats.chanmeng.org/
     # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     logo: /public/brands/sunostats-logo.svg
@@ -1896,6 +1899,8 @@ projects:
       - "Suno creator analytics"
       - "VPS + Traefik production deployment"
       - "Trilingual SaaS"
+      - "Schema-drift canary guarding a reverse-engineered API"
+      - "Observability + ops hardening"
     metrics:
       - { label: "First commit",        value: "2026-04-12 (commit f2f9f80, full monolith scaffolded same-day with auth + data pipeline + landing)" }
       - { label: "Total commits",       value: "46 (solo) across ~1 month of active development" }
@@ -1908,12 +1913,16 @@ projects:
       - { label: "Locales",             value: "3 (English, Simplified Chinese, Japanese)" }
       - { label: "Tag classifier",      value: "9 buckets (drives insight engine + portfolio filter)" }
       - { label: "Method-mix enum",     value: "10 Suno metadata.type values (gen / concat / studio_export / edit_v3_export / edit_crop / edit_speed / edit_fade / upsample / concat_infilling / upload)" }
+      - { label: "June 2026 hardening",  value: "3 Codex-reviewed waves (2026-06-29→30) — UX/user-flow polish, observability & ops, and Wave 3A/3B model-era insight + a schema-drift canary that alerts when Suno's response shape changes; plus a P0/P1 pass hardening credits, privacy, queries, and crons" }
     status: live
     startDate: "2026-04-12"
     publicSummary: |
       Production third-party analytics layer for **Suno creators** —
-      built to close an opportunity Chan identified by **technical
-      research** rather than market survey. The Suno UI shows a total
+      built on a private API-probe codebase (**suno-research-private**)
+      that Chan developed first to map Suno's undocumented endpoints,
+      then productized and commercialized as SunoStats. The opportunity
+      was identified by **technical research** rather than market survey.
+      The Suno UI shows a total
       play count and a like count, and that's it: no time series, no
       tag-level breakdowns, no view of which tracks are climbing or
       stalling, no exposure of the parent->child remix lineage that
@@ -2182,9 +2191,12 @@ projects:
     name: AI-Powered ESOL Learning Platform
     priority: 81
     category: ai-apps
-    tagline: Multi-path English-learning platform — real-time AI speaking coach (OpenAI Realtime API), CEFR general practice, NZCEL exam prep, and gamified progress tracking on a multi-tenant Neon Postgres backend
+    tagline: Multi-path English-learning platform built for Aotearoa Infinite Academy — real-time AI speaking coach (OpenAI Realtime API), CEFR general practice, NZCEL exam prep, and gamified progress tracking on a multi-tenant Neon Postgres backend
     repoUrl: https://github.com/ChanMeng666/esol-learning-platform
-    techStack: ["Next.js 15", React, TypeScript, "Tailwind CSS 4", CopilotKit, "OpenAI Realtime API", Whisper, "Neon Postgres", "Drizzle ORM", "Stack Auth", "Cloudflare Pages"]
+    entity: "Aotearoa Infinite Academy (New Zealand English-language academy)"
+    extraLinks:
+      - { label: "Client — Aotearoa Infinite Academy", url: "https://www.aotearoainfiniteacademy.school/" }
+    techStack: ["Next.js 15", React, TypeScript, "Tailwind CSS 4", CopilotKit, "OpenAI Agents SDK", "OpenAI Realtime API", Whisper, "Neon Postgres", "Drizzle ORM", "Stack Auth", "Handsontable / react-spreadsheet", "FullCalendar", "dnd-kit", "Recharts", "Cloudflare Pages"]
     status: active
     startDate: "2025-10"
     publicSummary: |
@@ -2218,7 +2230,8 @@ projects:
     name: Wellness Support Agent
     priority: 82
     category: ai-apps
-    tagline: Workplace-wellness platform on Google's Agent Development Kit — five specialized agents with privacy-first, role-based support for employees, HR, and employers
+    relatedWorkId: sanicle
+    tagline: "Sanicle-associated workplace-wellness demo on Google's Agent Development Kit — a root agent routes to five specialized sub-agents (employee support, HR manager, employer insights, search, leave requests) with privacy-first, role-based access for employees, HR, and employers"
     repoUrl: https://github.com/ChanMeng666/wellness-agent
     url: https://sanicle-wellness-agent-2lxj5uw.gamma.site/
     extraLinks:
@@ -2256,6 +2269,7 @@ projects:
     name: She Sharp — Event Welcome Board
     priority: 83
     category: web-apps
+    relatedProjectId: she-sharp
     tagline: Fullscreen, on-brand electronic welcome sign for She Sharp offline events — pure HTML/CSS/JS, no build step, works offline, with optional live event-data sync from shesharp.org.nz
     repoUrl: https://github.com/ChanMeng666/she-sharp-event-black-board
     techStack: [HTML, CSS, JavaScript, "QR code"]
@@ -2282,6 +2296,21 @@ projects:
         silent fallback to local config.
       myRole: |
         Sole author; built for the She Sharp community she volunteers with.
+  - id: douyin-mall
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-07-04"
+    name: Douyin Mall (Spring Boot Backend)
+    priority: 27
+    category: web-apps
+    relatedProjectId: douyin-mall-frontend
+    tagline: "Full-featured Douyin/TikTok e-commerce platform backend built during ByteDance's Youth Training Camp (青训营) — Spring Boot + Redis + RabbitMQ with complete user management, product catalog, shopping cart, and order processing; the capstone backend paired with the Vue 3 storefront and later distilled into the Go and Java teaching templates"
+    repoUrl: https://github.com/ChanMeng666/douyin-mall
+    techStack: [Java, "Spring Boot", Redis, RabbitMQ, MySQL, Maven, JWT]
+    status: active
+    startDate: "2025-01"
+    narrative:
+      impactHeadline: "Full Spring Boot + Redis + RabbitMQ e-commerce backend from ByteDance's Youth Training Camp (青训营) — the Douyin Mall capstone (user, product, cart, order modules) that the Vue 3 storefront consumes and that Chan distilled into the public Go and Java templates. 13 stars."
   - id: douyin-mall-frontend
     tier: secondary
     recency: recent
@@ -2289,7 +2318,7 @@ projects:
     name: Douyin Mall Frontend
     priority: 84
     category: web-apps
-    tagline: Vue 3 + TypeScript e-commerce storefront — product browsing, cart, orders, and payment UI, the separated frontend for the Douyin Mall capstone stack
+    tagline: Vue 3 + TypeScript e-commerce storefront built during ByteDance's Youth Training Camp (青训营) — product browsing, cart, orders, and payment UI, the separated frontend for the Douyin Mall capstone stack
     repoUrl: https://github.com/ChanMeng666/douyin-mall-frontend
     techStack: ["Vue 3", TypeScript, Vite, Pinia, "Vue Router", Axios, Vitest, Cypress]
     status: active

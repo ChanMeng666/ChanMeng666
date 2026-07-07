@@ -1447,11 +1447,11 @@
         },
         {
           "label": "Stars",
-          "value": "~124 GitHub · 21 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai"
+          "value": "~126 GitHub · 20 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai"
         },
         {
           "label": "Forks",
-          "value": "21"
+          "value": "20"
         },
         {
           "label": "Commits",
@@ -1589,7 +1589,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-06-05"
+          "value": "2026-07-05"
         },
         {
           "label": "Total commits",
@@ -1979,7 +1979,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-06-05"
+          "value": "2026-06-16"
         },
         {
           "label": "Total commits",
@@ -2117,7 +2117,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-06-12"
+          "value": "2026-06-16"
         },
         {
           "label": "Total commits",
@@ -2464,7 +2464,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-06-05"
+          "value": "2026-06-16"
         },
         {
           "label": "Access tiers",
@@ -3999,7 +3999,7 @@
           "value": "e5e82ac (HSR knowledge pack) + 1a0fa53 (tropes extraction) + 611d0e0 (KnowledgeChunk model + DreamWriter prefs) + f9b1fcf (RAG utilities)"
         }
       ],
-      "publicSummary": "FanFic Lab (live at fanfic-lab.tech) is a full-stack AI co-creation community built specifically for the *Honkai: Star Rail* (崩坏：星穹铁道) fandom — the most popular HoYoverse game in China during the project window. The 182-commit codebase compresses three usually-separate things into one product: (1) **an adaptive LangGraph.js agent named \"DreamWriter\"** that takes a Chinese natural-language prompt like \"想看砂金和藿藿的现代AU虐转甜\" and runs it through a 7-node graph (intent parser → story architect → writer → quality guard → conditional revision loop → summarizer → delivery), where the quality-guard node uses GPT-4o-mini to score the draft 1-10 against an HSR canon knowledge prompt and either passes the story through or sends it back to the writer for up to MAX_REVISIONS=2 self-corrections; (2) **a hand-curated fandom knowledge pack** at `src/knowledge/hsr/` containing 5 deeply-modeled HSR characters (砂金 / 藿藿 / 丹恒 / 景元 / 花火) with personality / speech-pattern / emotional-trigger / relationship maps + 4 relationship dynamics + 5 world-rule categories (命途体系, etc.) + 5 trope templates (现代AU, ABO, Hurt/Comfort, 豆花/甜饼, 前世今生/命运轮回), composed into a system prompt by a `toSystemPrompt()` method and combined at runtime with **RAG over a `KnowledgeChunk` pgvector table** (1536-dim `text-embedding-3-small` vectors, retrieved by the writer node before drafting); and (3) **a UGC community layer** with Stack-Auth identities, public follows, public author pages, nested-reply comments + comment likes + spam protection, in-app notifications with a bell + page, per-reader font/line-height/scroll-position preferences, dark mode, per-story view tracking, pgvector-cosine related-story recommendations, pg_trgm GIN-indexed search, and SEO/OG tags + sitemap. The whole thing is split into **two Docker services** — `web` (Next.js 16 frontend + API routes) and `agent` (LangGraph CLI runtime on port 8123) — wired together via Docker Compose internal networking, self-hosted on a **DigitalOcean VPS via Coolify** behind Cloudflare proxy-mode SSL, with GitHub Actions building both images to GHCR and SSH-deploying on every `git push master`. The migration from Railway to DigitalOcean+Coolify (commit `734e69c`, 2026-04-03) is documented in a 600+-line `docs/MIGRATION_RAILWAY_TO_DIGITALOCEAN.md` playbook that doubles as a reusable Claude-Code automation reference. Before the HSR DreamWriter pivot in commit `a288e25` (2026-03-23), the project shipped as a more generic CopilotKit + LangGraph fandom-agnostic editor with HITL approval cards, Tavily fandom research, and a creative wizard — that earlier work survives in `docs/COPILOTKIT_LANGGRAPH_HITL_GUIDE.md` and informed the current agent design. The pivot commit `b5baf34` the same day deliberately removed the old editor/wizard/generator code, demonstrating willingness to delete working code when a sharper product direction emerges.\n",
+      "publicSummary": "FanFic Lab (live at fanfic-lab.tech) is a full-stack AI co-creation community built specifically for the *Honkai: Star Rail* (崩坏：星穹铁道) fandom — the most popular HoYoverse game in China during the project window. The 182-commit codebase compresses three usually-separate things into one product: (1) **an adaptive LangGraph.js agent named \"DreamWriter\"** that takes a Chinese natural-language prompt like \"想看砂金和藿藿的现代AU虐转甜\" and runs it through a 7-node graph (intent parser → story architect → writer → quality guard → conditional revision loop → summarizer → delivery), where the quality-guard node uses GPT-4o-mini to score the draft 1-10 against an HSR canon knowledge prompt and either passes the story through or sends it back to the writer for up to MAX_REVISIONS=2 self-corrections; (2) **a hand-curated fandom knowledge pack** at `src/knowledge/hsr/` containing 5 deeply-modeled HSR characters (砂金 / 藿藿 / 丹恒 / 景元 / 花火) with personality / speech-pattern / emotional-trigger / relationship maps + 4 relationship dynamics + 5 world-rule categories (命途体系, etc.) + 5 trope templates (现代AU, ABO, Hurt/Comfort, 豆花/甜饼, 前世今生/命运轮回), composed into a system prompt by a `toSystemPrompt()` method and combined at runtime with **RAG over a `KnowledgeChunk` pgvector table** (1536-dim `text-embedding-3-small` vectors, retrieved by the writer node before drafting); and (3) **a UGC community layer** with Stack-Auth identities, public follows, public author pages, nested-reply comments + comment likes + spam protection, in-app notifications with a bell + page, per-reader font/line-height/scroll-position preferences, dark mode, per-story view tracking, pgvector-cosine related-story recommendations, pg_trgm GIN-indexed search, and SEO/OG tags + sitemap. The whole thing is split into **two Docker services** — `web` (Next.js 16 frontend + API routes) and `agent` (LangGraph CLI runtime on port 8123) — wired together via Docker Compose internal networking, self-hosted on a **DigitalOcean VPS via Coolify** behind Cloudflare proxy-mode SSL, with GitHub Actions building both images to GHCR and SSH-deploying on every `git push master`. The migration from Railway to DigitalOcean+Coolify (commit `734e69c`, 2026-04-03) is documented in a 600+-line `docs/MIGRATION_RAILWAY_TO_DIGITALOCEAN.md` playbook that doubles as a reusable Claude-Code automation reference. Before the HSR DreamWriter pivot in commit `a288e25` (2026-03-23), the project shipped as a more generic CopilotKit + LangGraph fandom-agnostic editor with HITL approval cards, Tavily fandom research, and a creative wizard — that earlier work (since removed from the codebase in the pivot) informed the current agent design. The pivot commit `b5baf34` the same day deliberately removed the old editor/wizard/generator code, demonstrating willingness to delete working code when a sharper product direction emerges.\n",
       "narrative": {
         "impactHeadline": "Adaptive LangGraph agent for Chinese fanfiction creators — 7-node quality-loop graph over a hand-curated Honkai: Star Rail canon + pgvector RAG, plus a follower/comment/recommendation community shipped as a lean two-service Docker stack self-hosted via DigitalOcean + Coolify.",
         "problem": "The Chinese gaming fanfiction (同人文) scene around HoYoverse titles — and *Honkai: Star Rail* / 崩坏：星穹铁道 in particular — has two structural problems that generic AI writing tools don't solve. **First**, generic LLM creative writing assistants (CopilotKit-style autosuggest, ChatGPT, Claude) have no deep grounding in HSR canon: they default to surface-level character clichés (\"cold prince\" / \"shy boy\"), get the speech patterns and emotional triggers wrong (e.g., they don't know that 砂金 stops speaking softly when 黑天鹅 is threatened, or that 藿藿's stutter is canon-specific), and routinely produce OOC (out-of-character) drafts that any serious fanwriter rejects. **Second**, existing fanfiction platforms (LOFTER / AO3 / 长佩) are *reading* communities, not *creation* communities — they host finished work, but they don't lower the activation energy for the much larger group of fans who want to consume CP (couple/ship) content but find a blank page intimidating. The opportunity: build a platform where any fan can type \"I want to read 砂金 × 藿藿 现代AU 虐转甜 HE\" in Chinese, get back a canon-respecting 3000-word draft in 60 seconds, edit it, publish it, and have other fans like/comment/follow them. That requires solving the OOC problem at the agent level (canon knowledge baked in, plus a self-revising quality loop) and the activation-energy problem at the product level (one-shot prompt → finished story → save → publish). FanFic Lab is the answer.\n",
@@ -4128,7 +4128,7 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-06-05"
+          "value": "2026-06-16"
         },
         {
           "label": "Development span",
@@ -10628,6 +10628,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-07T09:31:38.780Z"
+    "buildTimestamp": "2026-07-07T09:42:03.047Z"
   }
 }

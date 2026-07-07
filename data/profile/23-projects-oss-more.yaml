@@ -354,7 +354,7 @@ projects:
         Sole author, designer, and operator. Every one of the 182 commits is mine. I wrote both the initial CopilotKit + LangGraph fanfic editor (commits `0a3d1f5` → `36c5469` Teal+Amber "Literary Atelier" design system → `cdc3586` Railway deployment), made the call to scrap that direction and pivot to HSR-specific DreamWriter (commits `cbd31cc` "pivot from MDZS to Honkai: Star Rail based on 2025-2026 fandom trends" → `4790851` MDZS implementation plan as comparison reference → `a288e25` "HSR DreamWriter - complete product redesign" + `b5baf34` the same-day old-code deletion), hand-curated the entire HSR canon knowledge pack (5 characters with their specific 性格特征 / 说话方式 / 情感触发点 — this is bespoke fandom-domain knowledge, not scraped), wrote the 7-node adaptive LangGraph topology including the conditional revision edge, designed the Prisma schema (21 models including the polymorphic `Notification.payload: Json`, the self-referential `Comment.parentId` for nested replies, the deliberate split between `KnowledgeChunk` for RAG and `SourceResearchCache` for Tavily caching, the `UserCredits` + `Generation` audit foundation), wrote both Dockerfiles + the Coolify compose file + the GitHub Actions deploy workflow, executed the Railway → DigitalOcean + Coolify migration (and *documented* it as a reusable playbook), wrote the pgvector + pg_trgm migrations and the `lib/story-embedding.ts` raw-SQL escape hatch, and built the entire community-feature sprint (comments, notifications, follows, related stories, search indexing, view counts, SEO, dark mode, reader preferences, avatar cropping) in the final ~96-hour push 2026-04-18 → 2026-04-21. The project doubles as a personal R&D lab for the rest of the portfolio: the Coolify-on-DO migration playbook informed similar deployments in archcanvas (Workers → DO VPS), the GitHub-Actions-to-GHCR-to-SSH pattern reappeared in subsequent multi-service projects, and the pgvector + ivfflat + cosine-similarity recipe became the template I reused for related-content recommendations elsewhere.
   - id: archcanvas
     provenance: personal
-    tier: secondary
+    tier: primary
     recency: active
     lastUpdated: "2026-07-04"
     name: ArchCanvas
@@ -2573,7 +2573,7 @@ projects:
   # ------- 2026-07 intake wave: newly-recorded ChanMeng666 repos -------
   - id: archlang
     provenance: personal
-    tier: secondary
+    tier: primary
     recency: active
     lastUpdated: "2026-07-04"
     name: ArchLang

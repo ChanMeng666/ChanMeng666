@@ -3560,7 +3560,10 @@
         "technicalApproach": "**The discovery and the engineering it enables.** Chan\nreverse-engineered Suno's public JSON surface and found\nthat Suno's response serializer **leaks unredacted\n`parent_clip_id` fields only when a clip is included in\nthe `/api/trending` snapshot or when it appears as a\ndescendant of a persona clip** — never on the standard\nclip-detail endpoint, never on the profile listing\nendpoint, never in the remix UI itself. The\n`collect-trending` cron job (04:00 UTC daily) walks\nevery clip in Trending, ingests the leaked lineage\nUUIDs, deduplicates them into a `clipLineageEdges`\ntable, and serves the resulting graph via Postgres\n`WITH RECURSIVE` CTEs through `/api/lineage/[clipId]`\n(public, no auth, configurable `hopsUp`/`hopsDown`\nquery params capped at 5/3). Private clips appear as\nanonymised nodes so listing-level visibility is\nrespected. **Compliance posture**: every Suno read goes\nthrough endpoints **Suno itself advertises via the W3C\noEmbed protocol** (the same\n`<link rel=\"alternate\" type=\"application/json+oembed\">`\nany reader software follows), making the data plane\nanonymous, CORS-enabled, and public-by-design. No HTML\nscraping, no headless browsers, no authenticated\nrequests, no proxying user sessions. The full\nposture lives at\n`/legal/data-sources`.\n**Suno parser package**: `packages/parser`\n(`@suno-cards/parser`) is a workspace-local Valibot\nvalidator + typed-error hierarchy (`SunoNotFoundError`,\n`SunoNetworkError`, `SunoSchemaError`, …) consumed by\n`src/lib/suno/*` — every external Suno call returns\ntyped errors mapped to user-facing API codes. Small\nreverse-engineered details get their own utils: e.g.\nSuno's CDN `cdn2.suno.ai/image_*.jpeg?width=N` only\naccepts widths `{100, 256, 360, 720}`, so\n`resizeSunoCover` snaps automatically. **Insight\ngeneration pipeline**: each report is an idempotent\nper-user-per-day pure async function (`tag-optimization`,\n`performance-snapshot`, `method-mix`) in\n`src/lib/insights/*`; an i18n-aware `headline()`\nfunction returns `{eyebrow, headline, subtitle}` for\nthe report card; the React Server Component dispatcher\nat `/dashboard/insights/[id]` selects the right\nrenderer by `kind`. Adding a new insight type requires\nexactly **8 touchpoints** (engine + payload type +\nheadline + 3-locale translations + report component +\nregistration in both the on-demand and cron-batch\nroutes + dispatcher case + dashboard button) —\ndeliberately friction'd so each concern stays separated.\n**Deployment**: Docker multi-stage build (Node 20 slim\nrunner with non-root `nextjs` user); GitHub Actions\npushes images to `ghcr.io/chanmeng666/sunostats/web`,\nSSHes to the VPS, restarts the container with Traefik\nlabels for `sunostats.chanmeng.org` (Let's Encrypt TLS),\nand rewrites `/etc/cron.d/sunostats` to re-schedule\nthe 4 cron endpoints with the fresh `CRON_SECRET`.\nCron-protected internal routes 401 anything without\nthe `x-cron-secret` header. **i18n**: trilingual\nEN/简体中文/日本語 with cookie-driven server-resolved\nlocale plus Accept-Language fallback. The translation\ndictionary is a TypeScript type, so adding a key fails\nthe build if any locale is missing — guaranteeing\ncoverage without runtime drift.\n",
         "outcomes": "Built and shipped April 2026, with a same-day\nscaffold-to-live trajectory: the initial commit\n`f2f9f80` (2026-04-12) is *\"scaffold SunoStats monolith\n— Next.js 15 + Drizzle + Tailwind 4\"*, followed within\nhours by Neon Auth (`2c243dd`), Google OAuth\n(`2ff764f`), the data collection pipeline (`40707ec`),\nand the portfolio + landing + OG image generator\n(`b5d1e1d`). Total of **46 solo commits across the first\nmonth** taking the project from blank repo to the\nproduction system live at sunostats.chanmeng.org —\nwith auth, Stripe-integrated payments, Resend email, 4 cron\npipelines, the lineage explorer with `WITH RECURSIVE`\ngraph queries, the 3 paid insight engines, the\nwatched-playlist pulse view, the Docker + Traefik VPS\ndeploy, and trilingual i18n all wired end-to-end.\nMost recent commit `d36ddfb` (2026-05-10) tunes\nproduction container env handling. The lineage\nresearch finding remains the project's competitive\nmoat — no other Suno analytics product surfaces the\nparent->child remix graph, because the discovery\ndepends on noticing which API endpoints leak the\nUUIDs versus which redact them. Demonstrated to\nfounders and recruiters as Chan's worked example of\n**identifying a gap by technical research, then\nclosing it with a fully production-shape full-stack\nproduct in 4–5 weeks**.\n",
         "myRole": "Sole product designer, sole engineer, sole maintainer.\nDid the reverse-engineering research that found the\nlineage-UUID leak surface; designed the\noEmbed-discovered compliance posture and the public\ndata-sources legal page; designed the 3-free + 3-premium\nlens taxonomy; designed the\ncredit-ledger-with-auto-refund Stripe-integrated payment\nmodel; designed the 8-touchpoint extension pattern for new\ninsight types; built every Suno parser in\n`@suno-cards/parser`; engineered the 4 cron pipelines\nwith `x-cron-secret`-gated internal routes; built the\nlineage `WITH RECURSIVE` CTE graph traversal; built\nthe Docker+Traefik+GHCR deployment pipeline with\ncrontab auto-install via GitHub Actions; authored the\ntrilingual EN/简中/日本語 i18n dictionary; wrote the\npublic-facing README + the internal AGENTS.md and\narchitecture/data-model/i18n docs. Maintains the live\ndeployment today.\n"
-      }
+      },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null
     },
     {
       "id": "douyin-mall-java-template",
@@ -4060,7 +4063,7 @@
     {
       "id": "archcanvas",
       "provenance": "personal",
-      "tier": "secondary",
+      "tier": "primary",
       "recency": "active",
       "lastUpdated": "2026-07-04",
       "name": "ArchCanvas",
@@ -4093,7 +4096,10 @@
       "startDate": "2026-06",
       "narrative": {
         "impactHeadline": "AI design agent for architects — generates SVG floor plans (via the sister ArchLang compiler) plus OpenAI renderings on an infinite zoomable canvas, with an AI review mode (anchored findings + one-click have-AI-fix) and git-repo export. Billed per generation, not by subscription."
-      }
+      },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null
     },
     {
       "id": "ai-image-generator",
@@ -5939,7 +5945,7 @@
     {
       "id": "archlang",
       "provenance": "personal",
-      "tier": "secondary",
+      "tier": "primary",
       "recency": "active",
       "lastUpdated": "2026-07-04",
       "name": "ArchLang",
@@ -5979,7 +5985,10 @@
         "audience": "Architects, design-tool builders, and AI agents that need\ndeterministic, programmatic floor-plan generation.\n",
         "technicalApproach": "Pure TypeScript compiler (hand-written lexer + recursive-descent\nparser) with zero runtime dependencies, isomorphic in Node and\nbrowser; it exports structured diagnostics instead of throwing, plus\nlint / describe / repair pipelines for plan validation and four\nexport formats (SVG, DXF, PDF, PNG).\n",
         "myRole": "Sole author — language design, compiler, tooling, and packaging.\n"
-      }
+      },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null
     },
     {
       "id": "femtech-radar",
@@ -10692,6 +10701,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-07T06:51:10.693Z"
+    "buildTimestamp": "2026-07-07T07:13:36.229Z"
   }
 }

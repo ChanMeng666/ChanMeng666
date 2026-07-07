@@ -1586,7 +1586,7 @@ projects:
     priority: 14
     category: ai-apps
     tagline: "Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template"
-    url: https://ai-hackathon-assistant.chanmeng-dev.workers.dev/
+    url: https://hackathon.shesharp.org.nz/
     repoUrl: https://github.com/ChanMeng666/event-qa-ai-template
     logo: /public/brands/ai-hackathon-logo-full.svg
     extraLinks:
@@ -1595,7 +1595,6 @@ projects:
       - { label: "Partner — AUT (host venue)", url: "https://www.aut.ac.nz/" }
       - { label: "Partner — She Sharp", url: "https://www.shesharp.org.nz/" }
       - { label: "Template setup guide", url: "https://github.com/ChanMeng666/event-qa-ai-template/blob/master/docs/TEMPLATE-SETUP.md" }
-      - { label: "Notion integration docs", url: "https://github.com/ChanMeng666/event-qa-ai-template/blob/master/docs/NOTION-INTEGRATION.md" }
     techStack:
       - "Next.js 16.1 (App Router)"
       - "React 18 + TypeScript 5"
@@ -1916,7 +1915,7 @@ projects:
     category: web-apps
     relatedWorkId: corde
     tagline: "Offline-first React Native field-data-collection app for CORDE's Canterbury water- and civil-infrastructure crews — capture text, photos, and GPS with local integrity guarantees and clean sync back to CORDE's Workbench platform when connectivity returns. Lincoln University COMP693 industry-placement capstone; Chan was the #1-most-prolific contributor (42% of 539 commits) and documentation lead."
-    repoUrl: https://github.com/ChanMeng666/corde-mobile-application
+    # repoUrl omitted — private/removed client capstone repository (404s publicly); do not re-add.
     url: https://corde-mobile-application-4yw7mtt.gamma.site/
     entity: "CORDE (Canterbury NZ infrastructure & civil-construction company) — Lincoln University COMP693 capstone"
     roles: ["Full Stack Developer", "Lead Documenter"]
@@ -2415,7 +2414,7 @@ projects:
     category: web-apps
     relatedProjectId: gavigo-ire
     tagline: "GAVIGO Inc.'s public marketing and investor-readiness website (gavigo.com) — the standalone brand surface that links to the IRE product demo (ire.gavigo.com/mobile), with a Markdown content pipeline, Resend email capture, and a Cloud Run production deploy; Chan is top contributor (66 commits), including the investor-readiness polish pass"
-    repoUrl: https://github.com/gavigo-inc/gavigo-website
+    # repoUrl omitted — private GAVIGO org repository (gavigo-inc/gavigo-website, 404s publicly); do not re-add.
     url: https://gavigo.com/
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
     roles: ["Lead Developer"]
@@ -2443,7 +2442,7 @@ projects:
     category: branding
     relatedProjectId: gavigo-ire
     tagline: "Brand-logo generation repo for GAVIGO Inc. — produces the company's logo assets as reproducible, version-controlled code/SVG variants for use across GAVIGO's product and marketing surfaces"
-    repoUrl: https://github.com/ChanMeng666/gavigo-logo
+    # repoUrl omitted — private/removed GAVIGO logo repository (404s publicly); do not re-add.
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
     keywords:
       - "Brand logo as code"
@@ -2462,7 +2461,7 @@ projects:
     category: web-apps
     relatedProjectId: femtech-weekend-website
     tagline: "The first-generation website for FemTech Weekend (China's first women's-health-tech organisation) — now deprecated and superseded by the Gen-2 Docusaurus + Drizzle/Neon platform (id: femtech-weekend-website)"
-    repoUrl: https://github.com/ChanMeng666/femtech-weekend
+    # repoUrl omitted — Gen-1 repository removed/private (superseded by femtech-weekend-website; 404s publicly); do not re-add.
     logo: /public/organizations/femtech-weekend-logo.svg
     entity: "FemTech Weekend (Chengdu, China; founded 2024 by Zhu Yihan)"
     status: archived
@@ -2484,7 +2483,6 @@ projects:
     roles: ["AI/ML Lead", "Full-Stack Engineer"]
     extraLinks:
       - { label: "Demo slides (reveal.js)", url: "https://github.com/ChanMeng666/reveal.js" }
-      - { label: "Official site (sanicle-cloud)", url: "https://sanicle.cloud/" }
     techStack: ["Next.js", React, TypeScript, PostgreSQL, "Google Gemini AI (@google/generative-ai)", "IBM watsonx AI", "Multi-tenant architecture (org-scoped data isolation)", FullCalendar, "Radix UI / shadcn"]
     keywords:
       - "Multi-tenant B2B SaaS"
@@ -2507,7 +2505,7 @@ projects:
     relatedProjectId: sanicle-ai
     tagline: "Sanicle's official website and production platform (sanicle.cloud) — menstrual & menopause workplace-wellness SaaS powered by IBM watsonx AI ('Ask Sani' assistant), with predictive analytics and B2B/B2G deployment; Chan's IBM watsonx integration earned Sanicle its IBM Silver Partner certification (~98% solo, 350+ commits)"
     repoUrl: https://github.com/ChanMeng666/sanicle-cloud
-    url: https://sanicle.cloud/
+    # url omitted — sanicle.cloud deployment offline (DNS dead); source repo remains.
     entity: "Sanicle (US-based FemTech B2B/B2G SaaS)"
     roles: ["AI/ML Lead", "Full-Stack Engineer"]
     extraLinks:
@@ -2659,10 +2657,7 @@ projects:
     category: ai-apps
     tagline: Autonomous agent that inspects backend code, detects bugs, proposes fixes, and iterates until tests pass — observe/reason/act loop with sandboxed Vitest, REST + WebSocket APIs, and a web UI
     repoUrl: https://github.com/ChanMeng666/panda-agent
-    url: https://panda-web-production.up.railway.app
-    extraLinks:
-      - { label: "Live web app", url: "https://panda-web-production.up.railway.app" }
-      - { label: "API", url: "https://panda-api-production-c8e2.up.railway.app" }
+    # url + Railway deployment links removed — deployment offline (project shuttered); source repo remains.
     techStack: ["Node.js", "TypeScript 5.3", "Express.js", WebSocket, "Next.js 14", "Monaco Editor", "OpenAI GPT-4o", Vitest, Railway, Docker]
     status: archived
     startDate: "2026-01"

@@ -161,6 +161,17 @@ data._commissionedProjects     = resolveIds(data.meta?.x_brand?.commissionedProj
 data._aiAgentProjects          = resolveIds(data.meta?.x_brand?.aiAgentProjectIds);
 data._openSourceCraftProjects  = resolveIds(data.meta?.x_brand?.openSourceCraftProjectIds);
 
+// Spotlight = the projects Chan is actively deep-developing right now (distinct
+// from flagshipProjectIds, which is "most-impressive"). A typo here is a data
+// bug, so fail the build rather than silently dropping the id.
+const spotlightIds = data.meta?.x_brand?.spotlightProjectIds ?? [];
+const missingSpotlight = spotlightIds.filter((id) => !projectIds.has(id));
+if (missingSpotlight.length) {
+  console.error(`✗ meta.x_brand.spotlightProjectIds reference unknown project id(s): ${missingSpotlight.join(", ")}`);
+  process.exit(1);
+}
+data._spotlightProjects = resolveIds(spotlightIds);
+
 // Open Source overflow (rendered inside the Open Source <details>):
 // excludes commissioned overflow, which now lives under Commissioned work.
 data._moreProjectsByGroup = [
@@ -238,6 +249,7 @@ data._tiered = {
   certificates: groupByTier(data.certificates),
   publications: groupByTier(data.publications),
   references: groupByTier(data.references),
+  events: groupByTier(data.events),
 };
 
 // flagship + primary = the "must reference" subset surfaced in llms.txt

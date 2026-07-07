@@ -37,7 +37,7 @@ const ACTIVE_CAP_MONTHS = 3;
 const SECTIONS = [
   "work", "volunteer", "projects", "education", "awards",
   "certificates", "publications", "domains", "references",
-  "openSourceContributions",
+  "openSourceContributions", "events",
 ];
 
 const { data, provenance } = loadProfileWithProvenance();

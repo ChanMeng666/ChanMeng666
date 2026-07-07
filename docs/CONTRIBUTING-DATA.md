@@ -13,6 +13,7 @@ The profile data lives as **shards** in `data/profile/` — one file per theme, 
 | `50-references.yaml` | references (testimonials) |
 | `60-network.yaml` | organizations, collaborators |
 | `70-linkedin.yaml` | the curated LinkedIn snapshot block |
+| `80-events.yaml` | events — offline talks / hackathons / workshops / appearances |
 | `90-meta.yaml` | meta, incl. `meta.x_brand` display config |
 
 To locate an entry: `grep -rn "id: <slug>" data/profile/`. See the repo-root `CLAUDE.md` for the full data map and cross-reference rules.
@@ -72,6 +73,7 @@ projects:
     name: My New Project
     priority: 5
     category: ai-apps     # web-apps | ai-apps | creative | ml-research | branding | games
+    provenance: personal  # client | personal | coursework | bootcamp | hackathon — the project's KIND
     tagline: One-line description for cards
     url: https://example.com/
     repoUrl: https://github.com/ChanMeng666/my-new-project
@@ -101,6 +103,37 @@ projects:
 ```
 
 To promote a project to flagship status, change its `priority` to 1-4, move the entry to `20-projects-flagship.yaml`, *and* add its `id` to `meta.x_brand.flagshipProjectIds` (in `90-meta.yaml`) in the order you want it displayed.
+
+`provenance` records the project's *kind/origin* and is independent of tier/recency/category: `client` = built for a real employer / paid commission / affiliated org; `personal` = self-initiated; `coursework` = university assignment or group-project origin; `bootcamp` = training-camp capstone (青训营 etc.); `hackathon` = built at/for a hackathon. Classify by evidence in the entry (`entity`, `relatedWorkId`, narrative), not by which `meta.x_brand.*ProjectIds` bucket it sits in. To mark a project as shuttered / 关停, set `status: archived` + `recency: deprecated` — do **not** use a provenance value for lifecycle.
+
+To flag a project as one Chan is *actively deep-developing* (distinct from flagship = most-impressive), add its `id` to `meta.x_brand.spotlightProjectIds` in `90-meta.yaml`. The build fails if any id there does not resolve to a project.
+
+### Adding an event (offline talk / hackathon / workshop / appearance)
+
+Add to `events[]` in `80-events.yaml`. Events are a running log of braggable in-person activities for year-end summaries and brand copy; they **cross-reference** awards/work/projects rather than duplicating their prose. They surface in `llms-full.txt` and `dist/profile.json` (not the README) and are held to the freshness SLA like any other tiered entry.
+
+```yaml
+events:
+  - id: some-conference-2026
+    name: "Some Conference 2026 — Keynote"
+    role: Speaker          # Speaker | Panelist | Mentor | Judge | Instructor | Organizer | Attendee
+    type: talk             # talk | panel | hackathon | workshop | conference | community | award | media
+    date: "2026-09-20"
+    endDate: "2026-09-21"  # optional, for multi-day
+    location: "Auckland, New Zealand"
+    organizer: "Host Org"
+    url: https://example.com/event
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-09-22"
+    keywords: [AI, speaking]
+    relatedAwardTitle: "..."   # optional → an awards[].title
+    relatedWorkId: some-work   # optional → work[].id / volunteer[].id
+    relatedProjectId: some-id  # optional → projects[].id
+    summary: |
+      One paragraph on what Chan did there. Cross-reference the award/role,
+      don't restate it.
+```
 
 ### Adding a new certificate
 

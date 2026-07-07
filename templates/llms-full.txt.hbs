@@ -218,6 +218,22 @@
 {{#each awards}}- **{{title}}** ({{awarder}}{{#if date}}, {{date}}{{/if}}){{#if url}} -- {{url}}{{/if}}{{#if summary}}: {{trim summary}}{{/if}} {{tierBadge this}}
 {{/each}}
 
+## Talks, Events & Activities
+
+{{#each events}}### {{name}}{{#if role}} — {{role}}{{/if}}
+{{#if (or tier recency lastUpdated)}}{{tierBadge this}}
+{{/if}}
+{{#if type}}- **Type:** {{type}}
+{{/if}}{{#if date}}- **Date:** {{dateRange date endDate}}
+{{/if}}{{#if location}}- **Location:** {{location}}
+{{/if}}{{#if organizer}}- **Organizer:** {{organizer}}
+{{/if}}{{#if url}}- **URL:** {{url}}
+{{/if}}{{#if keywords.length}}- **Keywords:** {{join keywords ", "}}
+{{/if}}{{#if summary}}
+{{trim summary}}
+{{/if}}
+{{/each}}
+
 ## Certifications (50+)
 
 {{#each _certsByCategory}}### {{label}}

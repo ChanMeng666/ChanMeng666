@@ -109,6 +109,40 @@
       }
     },
 
+    "events": {
+      "type": "array",
+      "description": "Dated offline / in-person activities Chan took part in — talks, panels, hackathons mentored, workshops taught, community appearances. Kept for year-end summaries and personal-brand copy. Cross-references awards/work rather than duplicating their prose.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "name": { "type": "string" },
+          "role": {
+            "type": "string",
+            "description": "Speaker | Panelist | Mentor | Judge | Instructor | Organizer | Attendee"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["talk", "panel", "hackathon", "workshop", "conference", "community", "award", "media"]
+          },
+          "date": { "$ref": "#/$defs/loosePartialDate" },
+          "endDate": { "$ref": "#/$defs/loosePartialDate" },
+          "location": { "type": "string" },
+          "organizer": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "summary": { "type": "string" },
+          "keywords": { "type": "array", "items": { "type": "string" } },
+          "relatedAwardTitle": { "type": "string", "description": "Cross-ref into awards[].title." },
+          "relatedWorkId": { "type": "string", "description": "Cross-ref into work[].id or volunteer[].id." },
+          "relatedProjectId": { "type": "string", "description": "Cross-ref into projects[].id." },
+          "tier": { "$ref": "#/$defs/tierEnum" },
+          "recency": { "$ref": "#/$defs/recencyEnum" },
+          "lastUpdated": { "$ref": "#/$defs/loosePartialDate" }
+        }
+      }
+    },
+
     "certificates": {
       "type": "array",
       "items": {
@@ -622,6 +656,11 @@
         "roles": { "type": "array", "items": { "type": "string" } },
         "entity": { "type": "string" },
         "type": { "type": "string" },
+        "provenance": {
+          "type": "string",
+          "enum": ["client", "personal", "coursework", "bootcamp", "hackathon"],
+          "description": "Intrinsic origin/kind of the project. client = real employer / paid commission / affiliated-org engagement (真实雇主合作); personal = self-initiated; coursework = university assignment or group-project origin (练手); bootcamp = training-camp capstone (ByteDance 青训营 etc.); hackathon = built at/for a hackathon. Orthogonal to tier (ranking), recency/status (lifecycle), and category (domain)."
+        },
         "highlights": { "type": "array", "items": { "type": "string" } },
         "extraLinks": {
           "type": "array",

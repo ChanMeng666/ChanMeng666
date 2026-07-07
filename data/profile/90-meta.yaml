@@ -166,6 +166,23 @@ meta:
 
     # Project ordering for README
     flagshipProjectIds: [tam-ai-ti, she-sharp, gavigo-ire, google-news-mcp]
+
+    # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
+    # 2026-07). Deliberately DISTINCT from flagshipProjectIds (which is the
+    # most-impressive / proof set): spotlight is the "still building, still
+    # investing" focus set, used for year-end summaries and brand copy. Every id
+    # must resolve to a projects[].id or the build fails (see build.mjs).
+    # (The ChanMeng666 career-database repo itself is not a projects[] entry, so
+    # it is intentionally absent here.)
+    spotlightProjectIds:
+      - sunostats
+      - portfolio-v2                    # 2d-portfolio / chanmeng.org
+      - ai-programming-teaching-project
+      - archcanvas
+      - archlang
+      - vitex                           # easy-resume
+      - echook
+      - gradient-svg-generator
     openSourcePrimaryIds:
       - github-readme-suno-cards
       - echook

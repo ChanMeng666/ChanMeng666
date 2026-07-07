@@ -61,6 +61,7 @@ hand-typed facts on a review cadence:
 | `50-references.yaml` | references | 20 | `id` |
 | `60-network.yaml` | organizations, collaborators | 30 + 10 | `id` |
 | `70-linkedin.yaml` | linkedin | curated live-page snapshot | — |
+| `80-events.yaml` | events (offline talks/hackathons/workshops/appearances) | 5 | `id` |
 | `90-meta.yaml` | meta (incl. `meta.x_brand` display config) | — | — |
 
 The `projects:` list spans shards 20→23 and is concatenated in filename order
@@ -74,8 +75,12 @@ by the loader. To find an entry: `grep -rn "id: <slug>" data/profile/`.
   (build fails if broken)
 - `collaborators[].worksTogether[].contextId` → work/volunteer/project id,
   depending on `contextType`
-- `meta.x_brand.flagshipProjectIds` (and similar id lists in 90-meta) →
-  `projects[].id`; update when promoting/demoting a project
+- `meta.x_brand.flagshipProjectIds` (and similar id lists in 90-meta, incl.
+  `spotlightProjectIds`) → `projects[].id`; update when promoting/demoting a
+  project. `spotlightProjectIds` is validated by the build (typo'd id fails).
+- `events[].relatedWorkId` → `work[].id`/`volunteer[].id`;
+  `events[].relatedProjectId` → `projects[].id`; `events[].relatedAwardTitle` →
+  an `awards[].title` (all soft cross-refs — keep them true)
 - `linkedin:` block (70-linkedin) mirrors work/projects/awards/references **by
   name**, with `_sourceAward` markers into `awards[]`.
   `scripts/check-linkedin-sync.mjs` (part of `npm run validate`) fails on
@@ -96,7 +101,15 @@ Changing a role title, date, or award in one place ≠ done. Check the other two
 
 - `tier`: flagship | primary | secondary | archive (LLM-consumer ranking;
   archive = skip by default)
-- `recency`: active | recent | historical; `endDate: null` = current role
+- `recency`: active | recent | historical | deprecated; `endDate: null` = current role
+- `provenance` (projects only): client | personal | coursework | bootcamp |
+  hackathon — the project's *kind/origin*, orthogonal to tier (ranking),
+  recency/status (lifecycle), and category (domain). client = real employer /
+  paid commission / affiliated-org work; coursework = university assignment or
+  group-project origin; bootcamp = training-camp capstone (青训营 etc.).
+  Classify by evidence (`entity`/`relatedWorkId`/narrative), not by the meta
+  editorial buckets. A shuttered/关停 project is expressed via `status: archived`
+  + `recency: deprecated`, NOT a provenance value.
 - `lastUpdated`: bump (YYYY-MM-DD) whenever you meaningfully review/edit an entry
 - Dates are `"YYYY-MM"` or `"YYYY-MM-DD"` strings, quoted
 - Long prose uses YAML `|` literal blocks; markdown allowed inside

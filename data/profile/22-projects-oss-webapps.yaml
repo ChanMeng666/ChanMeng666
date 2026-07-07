@@ -13,6 +13,7 @@ projects:
 
   # Web Applications
   - id: femtech-weekend-platform
+    provenance: client
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-18"
@@ -27,6 +28,7 @@ projects:
       impactHeadline: "Bilingual editorial + event platform for FemTech Weekend — China's first women's-health-tech organisation; the historical production codebase that carried the org's events before the Docusaurus Gen-2 rewrite for editorial focus."
     status: live
   - id: free-period-website
+    provenance: client
     tier: secondary
     recency: historical
     meta:
@@ -46,6 +48,7 @@ projects:
       impactHeadline: "Bilingual period-poverty advocacy site for a Guangzhou HKUST(GZ)-incubated startup — integrated Google Maps dispenser directory helping end-users locate menstrual-access resources in underserved markets."
     status: live
   - id: library-os
+    provenance: personal
     tier: primary
     recency: recent
     meta:
@@ -346,6 +349,7 @@ projects:
         the `libraryos.live` custom domain. Maintains the live
         deployment today.
   - id: linkedin-jobs-search
+    provenance: personal
     tier: primary
     recency: recent
     meta:
@@ -459,6 +463,7 @@ projects:
       myRole: |
         Sole author, designer, and operator. Every one of the 259 commits is mine. The unique architectural commitment — *humans and agents are equal first-class citizens, not a primary audience plus a developer afterthought* — is my product call, and it's the call that organises every sub-project below it. I designed and wrote the 4-surface monolith (single Hono app + MCP server + CLI workspace + React SPA all sharing the same routes); designed the 11-MCP-tool catalog with explicit `LOCKED` contract semantics so renames are breaking changes; designed the `lja_<keyId>_<secret>` key format (ULID keyId + 32-byte URL-safe-base64 secret, only the sha256 stored server-side); designed the cookie-vs-Bearer auth precedence (cookies ignored when any Authorization header is present, MCP requires Bearer, key-management requires cookie — so agents can't mint their own keys); designed the 10-stable-error-code catalogue + 0-12 CLI exit-code mapping; wrote the OpenAPIHono migration across every `/api/*` route (sub-project A.5); ran the design-doc → implementation-plan → ticketed-commit workflow that produced the 8 sub-projects A→H in the final 2-week sprint (each with a paired design spec at `docs/superpowers/<letter>-spec.md` + implementation plan at `docs/superpowers/<letter>-plan.md`); wrote the Pulumi TypeScript IaC + the 4-policy CrossGuard pack including the deliberate pivot from rejection-based to structural `protect: true` enforcement; wrote the contract test harness using in-process `app.fetch` dispatch; wrote the dual-track `/guide` page + the dual-track feature-catalog homepage that visually mirrors the same dichotomy; published the CLI to npm under my own scope; and operate the production deployment. The "humans and agents are equal" framing has since influenced subsequent projects in my portfolio — the CLI-first agent-friendly response contract reappears in `lighthouse-as-a-service` style projects, and the MCP-tools-mirror-HTTP-routes pattern is reused in other tooling work.
   - id: femtech-weekend-website
+    provenance: client
     tier: primary
     recency: active
     meta:
@@ -908,6 +913,7 @@ projects:
         and ecosystem partnerships.
 
   - id: eatropolis-website
+    provenance: client
     tier: primary
     recency: active
     meta:
@@ -1502,6 +1508,7 @@ projects:
         Onehunga 1061) is on file as Developer.
 
   - id: friendscope
+    provenance: personal
     tier: primary
     recency: recent
     lastUpdated: "2026-05-19"
@@ -1611,6 +1618,7 @@ projects:
       myRole: |
         Sole author and maintainer. Every commit on the repo is from me — including the initial Next.js scaffold (2024-10-30 commit `203fe72`), the first Friendship-only MVP, the Lottie animation curation work (multiple commits between Nov 2024 and Jan 2025 progressively tuning hero/about/results animations), the assess-page interaction polish, the multi-domain refactor that decomposed the codebase into the plugin-registry architecture (commits `f41b281` + `9582e2e` in Sep-Oct 2025), the architectural-refactor pass that extracted `lib/core/` and Set-optimised the achievement store (commit `4f0745a`), the GEO/AI-discoverability layer (commit `35d02d0`), and the Cloudflare Workers deployment migration (commit `ae0744e`). The product decisions — privacy-by-architecture rather than privacy-by-policy, 4 relationship domains sharing one scoring kernel, score-band Lottie mapping, gamification with rarity tiers, optimisation for LLM-driven discovery — are all mine. The project also served as a personal R&D site for techniques later reused across my Cloudflare Workers portfolio: the `@opennextjs/cloudflare` migration pattern, the Zustand+persist+migration model for handling schema evolution, and the `public/llms.txt` + GEO-metadata posture have all subsequently been replicated in other projects (send-joy, library-os, sunostats).
   - id: send-joy
+    provenance: personal
     tier: primary
     recency: recent
     lastUpdated: "2026-05-19"
@@ -1856,6 +1864,7 @@ projects:
         auto-deploy; authored the README, TUTORIAL.md, and GEO
         metadata. Maintains the live deployment today.
   - id: sunostats
+    provenance: personal
     tier: primary
     recency: recent
     lastUpdated: "2026-07-04"
@@ -2171,6 +2180,7 @@ projects:
         architecture/data-model/i18n docs. Maintains the live
         deployment today.
   - id: douyin-mall-java-template
+    provenance: bootcamp
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-18"
@@ -2185,6 +2195,7 @@ projects:
       impactHeadline: "Spring Boot + Maven open-source e-commerce backend template — the Java counterpart to the Go template Chan published from her ByteDance Youth Training Camp capstone, scaffold for later cohorts learning Spring backend architecture."
     status: live
   - id: esol-learning-platform
+    provenance: client
     tier: secondary
     recency: active
     lastUpdated: "2026-07-04"
@@ -2224,6 +2235,7 @@ projects:
         Sole designer and engineer — schema, server actions, voice-coach
         integration, and the four learning-path modules.
   - id: wellness-agent
+    provenance: client
     tier: secondary
     recency: recent
     lastUpdated: "2026-07-04"
@@ -2263,6 +2275,7 @@ projects:
         Sole designer and engineer of the agent graph, memory system, and
         both frontend and backend.
   - id: she-sharp-event-black-board
+    provenance: client
     tier: secondary
     recency: recent
     lastUpdated: "2026-07-04"
@@ -2297,6 +2310,7 @@ projects:
       myRole: |
         Sole author; built for the She Sharp community she volunteers with.
   - id: douyin-mall
+    provenance: bootcamp
     tier: secondary
     recency: historical
     lastUpdated: "2026-07-04"
@@ -2312,6 +2326,7 @@ projects:
     narrative:
       impactHeadline: "Full Spring Boot + Redis + RabbitMQ e-commerce backend from ByteDance's Youth Training Camp (青训营) — the Douyin Mall capstone (user, product, cart, order modules) that the Vue 3 storefront consumes and that Chan distilled into the public Go and Java templates. 13 stars."
   - id: douyin-mall-frontend
+    provenance: bootcamp
     tier: secondary
     recency: recent
     lastUpdated: "2026-07-04"

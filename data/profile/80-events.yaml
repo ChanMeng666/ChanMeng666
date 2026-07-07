@@ -1,0 +1,150 @@
+# =============================================================================
+# EVENTS — offline / in-person activities: talks, panels, hackathons mentored,
+# workshops taught, community appearances.
+# =============================================================================
+# Shard of Chan Meng's profile data. Top-level key: events.
+# All data/profile/*.yaml shards are merged (in filename order) by
+# scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
+# After editing: npm run check. Data map + field template: CLAUDE.md /
+# docs/CONTRIBUTING-DATA.md.
+#
+# Purpose: a running log of braggable offline appearances so that at year-end an
+# AI reading this database can generate summaries and personal-brand copy, and so
+# every public-facing surface can cite where Chan showed up. Entries CROSS-REFER
+# awards[]/work[]/projects[] (relatedAwardTitle / relatedWorkId / relatedProjectId)
+# rather than duplicating their prose.
+#
+# Field template (see docs/CONTRIBUTING-DATA.md "Adding an event"):
+#   id, name, role (Speaker|Panelist|Mentor|Judge|Instructor|Organizer|Attendee),
+#   type (talk|panel|hackathon|workshop|conference|community|award|media),
+#   date ("YYYY-MM-DD"), endDate (optional), location, organizer, url,
+#   keywords[], summary (| block), tier, recency, lastUpdated,
+#   optional relatedAwardTitle / relatedWorkId / relatedProjectId.
+# =============================================================================
+events:
+  - id: un-csw69-speaker
+    name: "UN CSW 69 — Beyond Beijing 30 Conference"
+    role: Speaker
+    type: talk
+    date: "2025-03-14"
+    location: "United Nations Headquarters, New York, USA"
+    organizer: "United Nations (Beyond Beijing 30 Conference)"
+    url: "https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg"
+    tier: flagship
+    recency: recent
+    lastUpdated: "2026-07-07"
+    keywords:
+      - UN CSW
+      - FemTech
+      - public speaking
+      - women's health
+    relatedAwardTitle: "UN CSW 69 Speaker — Beyond Beijing 30 Conference"
+    relatedWorkId: sanicle
+    summary: |
+      Invited as a featured speaker at the 69th session of the UN Commission on
+      the Status of Women to present **Sanicle AI** to international delegates.
+      Fielded interest from IBM representatives and praise from the Minister of
+      Gender and Children's Affairs of Sierra Leone; the talk generated multiple
+      follow-up collaboration requests from NGOs and UN member states. Full
+      recognition detail lives in `awards[]`; this entry records the appearance.
+
+  - id: ai-hackathon-festival-2025-mentor
+    name: "AI Hackathon Festival 2025 — Expert Mentor"
+    role: Mentor
+    type: hackathon
+    date: "2025-08"
+    location: "Auckland University of Technology, Auckland, New Zealand"
+    organizer: "AI Forum NZ × She Sharp × Auckland University of Technology"
+    url: "https://www.linkedin.com/in/chanmeng666/details/honors/"
+    tier: flagship
+    recency: recent
+    lastUpdated: "2026-07-07"
+    keywords:
+      - hackathon
+      - mentorship
+      - AI for good
+      - UN SDGs
+    relatedAwardTitle: "Outstanding Mentor Award — AI Hackathon Festival 2025"
+    relatedProjectId: ai-hackathon-assistant
+    summary: |
+      One of 14 expert mentors, guiding 11 teams (80+ participants, including
+      students from Westlake Girls High School) to ship AI solutions aligned with
+      the UN Sustainable Development Goals across food insecurity, digital
+      accessibility, workforce upskilling, and indigenous environmental
+      stewardship. Received the Outstanding Mentor Award (recorded in `awards[]`);
+      the event's AI Q&A assistant is the `ai-hackathon-assistant` project.
+
+  - id: her-waka-workshops-2026
+    name: "Her Waka — AI × Career Empowerment In-Person Workshops"
+    role: Instructor
+    type: workshop
+    date: "2026-03"
+    endDate: "2026-06"
+    location: "academyEX, Auckland, New Zealand"
+    organizer: "NZ Ministry of Social Development × She Sharp × academyEX"
+    url: "https://herwaka.shesharp.org.nz/"
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-07-07"
+    keywords:
+      - teaching
+      - AI literacy
+      - women returning to work
+      - in-person workshop
+    relatedWorkId: she-sharp
+    relatedProjectId: her-waka
+    summary: |
+      Authored and delivered four in-person workshops (25-person session cap) for
+      women returning to the workforce, under an NZ Ministry of Social
+      Development-funded programme: AI & the Future of Work, #IAmRemarkable + Vibe
+      Coding, Cybersecurity, and Personal Branding — paired with 10 self-paced AI
+      tutorials and a job-search library. Cohort record: `meta.x_brand.teachingCohorts`.
+
+  - id: peyvand-academy-makey-makey-2026
+    name: "Peyvand Academy — Touch the World, Talk to Code (IoT for teens)"
+    role: Instructor
+    type: workshop
+    date: "2026-06-13"
+    location: "Auckland, New Zealand"
+    organizer: "She Sharp × Peyvand Academy"
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-07-07"
+    keywords:
+      - STEM outreach
+      - Makey Makey
+      - IoT
+      - teens
+    relatedWorkId: she-sharp
+    relatedProjectId: makey-makey-iot-slides
+    summary: |
+      Ran a hands-on IoT teaching session for 12–18-year-olds — a Banana Piano and
+      a Super Mario · Makey Makey build — turning everyday objects into controllers
+      to make hardware and code tangible. Teaching deck: `makey-makey-iot-slides`;
+      live demo project: `super-mario-makey-makey`.
+
+  - id: forward-with-her-mentorship-2024-2025
+    name: "Forward with Her (她行) — Technology & Professional Development Mentor"
+    role: Mentor
+    type: community
+    date: "2024-10"
+    endDate: "2025-09"
+    location: "Remote (China / global cohort)"
+    organizer: "Forward with Her (她行) Mentorship"
+    url: "https://www.linkedin.com/company/taxing-mentorship/"
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-07-07"
+    keywords:
+      - mentorship
+      - women in STEM
+      - AI programming
+    relatedWorkId: forward-with-her-mentor
+    relatedProjectId: ai-programming-teaching-project
+    summary: |
+      Served as a Technology & Professional Development Mentor in a 360+-mentor,
+      800+-mentee women-in-STEM programme, running two AI-programming cohorts
+      (Winter 2024, Summer 2025). Seven of Chan's public LinkedIn recommendations
+      come from mentees who credit these sessions — the single-largest source of
+      independently attested mentorship impact. Cohort record:
+      `meta.x_brand.teachingCohorts`.

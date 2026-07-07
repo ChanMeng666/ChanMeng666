@@ -350,12 +350,12 @@ projects:
         deployment today.
   - id: linkedin-jobs-search
     provenance: personal
-    tier: primary
-    recency: recent
+    tier: archive
+    recency: deprecated
     meta:
       x_brand:
         featuredStack: [cloudflare-workers, mcp, scalar, npm]
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-07"
     name: LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI)
     priority: 16
     category: web-apps
@@ -364,7 +364,7 @@ projects:
     logo: /public/brands/linkedin-jobs-search-logo.svg
     url: https://linkedin-jobs-search.chanmeng-dev.workers.dev/
     demoUrl: https://linkedin-jobs-search.chanmeng-dev.workers.dev/
-    status: live
+    status: archived
     extraLinks:
       - { label: "Live SPA (humans)",         url: "https://linkedin-jobs-search.chanmeng-dev.workers.dev/" }
       - { label: "Dual-track Guide",          url: "https://linkedin-jobs-search.chanmeng-dev.workers.dev/guide" }

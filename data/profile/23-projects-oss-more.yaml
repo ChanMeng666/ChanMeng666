@@ -231,8 +231,8 @@ projects:
         pass.
   - id: fanfic-lab
     provenance: personal
-    tier: primary
-    recency: recent
+    tier: archive
+    recency: deprecated
     meta:
       x_brand:
         featuredStack: [langgraph, nextjs, neon, docker, coolify]
@@ -240,7 +240,7 @@ projects:
           - src: /public/tech-logos/honkai-star-rail.webp
             alt: "Honkai: Star Rail (HoYoverse)"
             url: "https://hsr.hoyoverse.com/"
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-07"
     name: FanFic Lab — HSR DreamWriter, an Adaptive LangGraph Agent Powering a Gaming Fan-Creation Community
     priority: 15
     category: ai-apps
@@ -249,7 +249,7 @@ projects:
     logo: /public/brands/fanfic-lab-logo.svg
     url: https://fanfic-lab.tech/
     demoUrl: https://fanfic-lab.tech/
-    status: live
+    status: archived
     extraLinks:
       - { label: "Live app",                          url: "https://fanfic-lab.tech/" }
       - { label: "Fandom feed",                       url: "https://fanfic-lab.tech/feed" }

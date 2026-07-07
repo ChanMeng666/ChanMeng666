@@ -22,7 +22,7 @@ Solo-built freelance commission under a signed 4 May 2026 agreement with Chow Lu
 Stack: Next.js 16, OpenNext-on-Cloudflare-Workers, Drizzle + Neon Postgres, Resend, OpenAI streaming.
 ```
 
-**Skills:** Next.js, Cloudflare Pages / Workers and +3 skills
+**Skills:** Next.js, Cloudflare Pages / Workers, OpenNext, Drizzle ORM, Neon Postgres, OpenAI API
 
 ## 2. SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
@@ -40,7 +40,7 @@ SunoStats is the first public tool that maps how a Suno-generated song's lineage
 Stack: Next.js 16, Drizzle + Neon Postgres, Stripe, Resend, Docker + Traefik VPS.
 ```
 
-**Skills:** Drizzle ORM, Internationalization (i18n) and +2 skills
+**Skills:** Drizzle ORM, Internationalization (i18n), Next.js, Neon Postgres, Stripe, Docker, PostgreSQL
 
 ## 3. Vitex — AI Career Agent SaaS (vitex.org.nz)
 
@@ -57,7 +57,7 @@ Vitex turns a job description plus a candidate's background into an ATS-optimise
 Stack: Next.js 15, Vercel AI SDK + GPT-4o, Typst, Stripe, Neon Postgres + Drizzle, Docker + Traefik on DigitalOcean.
 ```
 
-**Skills:** Vercel AI SDK, Typst and +1 skill
+**Skills:** Vercel AI SDK, Typst, Next.js, Stripe, Neon Postgres, Drizzle ORM, Docker
 
 ## 4. ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans
 
@@ -74,7 +74,7 @@ ArchLang is a programming language I designed for architecture: you write a floo
 Stack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.
 ```
 
-**Skills:** TypeScript, Programming Language Design and +2 skills
+**Skills:** TypeScript, Programming Language Design, Node.js, Compiler Design, Language Server Protocol (LSP), CodeMirror, Vitest
 
 ## 5. ArchCanvas — AI Design Agent for Architects That Productizes ArchLang
 
@@ -91,7 +91,7 @@ ArchCanvas turns my ArchLang language into a product for architects. Describe a 
 Stack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-4o + DALL·E), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.
 ```
 
-**Skills:** Vercel AI SDK, AI Agent Architecture and +3 skills
+**Skills:** Vercel AI SDK, AI Agent Architecture, Next.js, React, OpenAI API, Neon Postgres, Drizzle ORM, Stripe, Cloudinary
 
 ## 6. echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
 
@@ -108,7 +108,7 @@ echook adds audio cues to AI coding assistants so you stop staring at the termin
 Stack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Actions CI.
 ```
 
-**Skills:** Claude Code Plugins, Cursor IDE Hooks and +3 skills
+**Skills:** Claude Code Plugins, Cursor IDE Hooks, Codex CLI Integration, Python (Programming Language), ElevenLabs TTS, Webhooks, GitHub Actions
 
 ## 7. She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
 
@@ -126,7 +126,7 @@ The member-lifecycle platform that now runs She Sharp — NZ's largest women-in-
 Stack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.
 ```
 
-**Skills:** AI Matching Systems, Drizzle ORM and +2 skills
+**Skills:** AI Matching Systems, Drizzle ORM, Next.js, Neon Postgres, NextAuth, Stripe, Slack API, Vercel
 
 ## 8. FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
 
@@ -145,7 +145,7 @@ Gen-2 was a deliberate rewrite from Next.js to Docusaurus when the site's centre
 Stack: Docusaurus 3.9, React 18, Drizzle + Neon Postgres, Cloudflare Pages, Resend, Notion-as-CMS.
 ```
 
-**Skills:** Bilingual Web Development, Cloudflare Pages / Workers and +3 skills
+**Skills:** Bilingual Web Development, Cloudflare Pages / Workers, Docusaurus, React, Drizzle ORM, Neon Postgres, Notion API
 
 ## 9. programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
 
@@ -163,7 +163,7 @@ The bilingual teaching site behind every AI programming cohort I've run since la
 Stack: Docusaurus 3.8, Cloudflare Pages, Llama 3.1 8B via Cloudflare Workers AI + Vectorize, Notion API, Algolia, Typst.
 ```
 
-**Skills:** Docusaurus, Retrieval-Augmented Generation (RAG) and +2 skills
+**Skills:** Docusaurus, Retrieval-Augmented Generation (RAG), Cloudflare Pages / Workers, Cloudflare Workers AI, Notion API, Algolia, Typst
 
 ## 10. Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
 
@@ -182,7 +182,7 @@ Commissioned by Riria (Missy) Te Kanawa — former KPMG NZ Māori Sector Partner
 Stack: Next.js 15.5, React 19.1, Drizzle + Neon Postgres + pgVector (1536-dim), OpenAI (gpt-4o-mini / gpt-4o / gpt-4o-realtime), CopilotKit.
 ```
 
-**Skills:** Voice AI (OpenAI Realtime), pgVector and +3 skills
+**Skills:** Voice AI (OpenAI Realtime), pgVector, Next.js, React, Drizzle ORM, Neon Postgres, OpenAI API, CopilotKit
 
 ## 11. Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)
 
@@ -199,7 +199,7 @@ A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, ze
 Stack: CSS 3D + ES6 + LESS + Gulp 4; Cloudflare Workers + Hono + Neon Postgres; Web Audio API + Howler.js.
 ```
 
-**Skills:** CSS 3D Transforms, Cloudflare Pages / Workers and +1 skill
+**Skills:** CSS 3D Transforms, Cloudflare Pages / Workers, JavaScript (ES6), Hono, Neon Postgres, Web Audio API
 
 ## 12. Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx
 
@@ -217,7 +217,7 @@ Sanicle.AI is the multi-tenant FemTech platform that lets US employers offer men
 Stack: Next.js 15, React 19, NextAuth 5, Drizzle + Neon Postgres, Upstash Redis, Vercel AI SDK, IBM watsonx + Google Gemini fallback.
 ```
 
-**Skills:** Multi-Tenant Architecture, IBM watsonx and +3 skills
+**Skills:** Multi-Tenant Architecture, IBM watsonx, Next.js, NextAuth, Drizzle ORM, Neon Postgres, Upstash Redis, Vercel AI SDK, Google Gemini
 **Media:** `Sanicle-AI: Women's Health Platform for Workplace Wellness` · `screencapture-sanicle-ai-vercel-app-chat-36a2b38e-be71-4c62-a459-ff43cb6d5c7c-2025-03-10-21_31_22.png` · `screencapture-sanicle-ai-vercel-app-employee-dashboard-f13eaf10-0a5b-49cf-b943-c35de5f631b4-events-2025-03-10-21_29_11.png`  _(Show all 10 media)_
 
 ## 13. Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant
@@ -235,7 +235,7 @@ Sanicle.Cloud is the public-facing website that introduces Sanicle's workplace-w
 Stack: Next.js 15, React 19, TypeScript, Tailwind, IBM watsonx, Vercel.
 ```
 
-**Skills:** Next.js, IBM watsonx and +2 skills
+**Skills:** Next.js, IBM watsonx, React, TypeScript, Tailwind CSS, Conversational AI, Vercel
 **Media:** `screencapture-sanicle-cloud-2025-04-18-16_24_26.png` · `screencapture-sanicle-cloud-team-chan-meng-2025-04-18-16_28_20.png` · `screencapture-sanicle-cloud-demo-2025-04-18-16_27_59.png`  _(Show all 13 media)_
 
 ## 14. Google News MCP Server — Early-Ecosystem AI Tool-Use Server
@@ -252,7 +252,7 @@ A Model Context Protocol (MCP — Anthropic's open standard that lets AI agents 
 Stack: TypeScript + Node.js + @modelcontextprotocol/sdk + SerpAPI; published as @chanmeng666/google-news-server on npm.
 ```
 
-**Skills:** Model Context Protocol (MCP), TypeScript and +3 skills
+**Skills:** Model Context Protocol (MCP), TypeScript, Node.js, SerpAPI, npm Publishing
 **Media:** `GitHub - ChanMeng666/server-google-news` · `2024-12-30 021446.png` · `2024-12-30 021524.png`  _(Show all 5 media)_
 
 ## 15. CORDE Mobile — Offline-First Field-Operations App (React Native)
@@ -271,7 +271,7 @@ A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Cant
 Stack: React Native 0.83, TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.
 ```
 
-**Skills:** React Native, Offline-First Architecture and +3 skills
+**Skills:** React Native, Offline-First Architecture, TypeScript, Native Base, SQLite, Mobile Application Development
 **Media:** `CORDE Mobile Application: Revolutionizing Field Operations` · `1-1-LoginScreen.png` · `1-2-3-LoginScreen.png`  _(Show all 9 media)_
 
 ## 16. FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
@@ -296,5 +296,5 @@ The site was the public artefact every judging panel clicked through during Free
 Stack: Next.js 15, TypeScript, Tailwind, Google Maps API, Cloudflare Pages.
 ```
 
-**Skills:** Next.js, Internationalization (i18n) and +3 skills
+**Skills:** Next.js, Internationalization (i18n), TypeScript, Tailwind CSS, Google Maps API, Cloudflare Pages / Workers
 **Media:** `screencapture-free-period-website-vercel-app-2024-12-01-20_11_54.png` · `screencapture-free-period-website-vercel-app-products-2024-12-01-19_38_55.png` · `screencapture-free-period-website-vercel-app-impact-2024-12-01-19_39_15.png`  _(Show all 5 media)_

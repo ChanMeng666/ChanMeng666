@@ -1762,6 +1762,16 @@
       "tier": "primary",
       "recency": "historical",
       "lastUpdated": "2026-05-18",
+      "meta": {
+        "x_brand": {
+          "featuredStack": [
+            "go",
+            "gin",
+            "mysql",
+            "redis"
+          ]
+        }
+      },
       "name": "TikTok Shop Go Template",
       "priority": 7,
       "category": "web-apps",
@@ -1797,7 +1807,24 @@
         "outcomes": "**52 GitHub stars, 7 forks**, 27 sustained commits — the\nstrongest external traction of any project in Chan's open-source\ncatalogue under \"primary\" tier. Featured as one of the eight\nprimary projects on Chan's GitHub Open Source table. **< 50 ms**\naverage API response time. Apache-2.0 license to permit\ncommercial reuse while encouraging community contribution.\nDoubles as the worked-example artefact accompanying Chan's\nByteDance Youth Training Camp narrative — the same engineering\npractices that scored Chan as the #2-most-prolific committer on\nthe Team-115 capstone, packaged as a public learning resource.\n",
         "myRole": "Sole author. Designed the directory layout, wrote both backend\nand frontend implementations, authored the bilingual\ndocumentation, and packaged the multi-platform deployment\nguides. The repo is its own pedagogical statement: students can\nread the instructor's commits to see how patterns they're being\ntaught compose into a real production-shape service.\n"
       },
-      "_featuredStackResolved": [],
+      "_featuredStackResolved": [
+        {
+          "name": "go",
+          "src": "/public/tech-logos/go.svg"
+        },
+        {
+          "name": "gin",
+          "src": "/public/tech-logos/gin.svg"
+        },
+        {
+          "name": "mysql",
+          "src": "/public/tech-logos/mysql.svg"
+        },
+        {
+          "name": "redis",
+          "src": "/public/tech-logos/redis.svg"
+        }
+      ],
       "_contextLogo": [],
       "_affiliationOrg": null
     },
@@ -3389,6 +3416,17 @@
       "tier": "primary",
       "recency": "recent",
       "lastUpdated": "2026-07-04",
+      "meta": {
+        "x_brand": {
+          "featuredStack": [
+            "nextjs",
+            "react",
+            "drizzle",
+            "neon",
+            "stripe"
+          ]
+        }
+      },
       "name": "Seismophone — The independent observatory for AI music",
       "priority": 18,
       "category": "web-apps",
@@ -3505,7 +3543,28 @@
         "outcomes": "Built and shipped April 2026, with a same-day\nscaffold-to-live trajectory: the initial commit\n`f2f9f80` (2026-04-12) is *\"scaffold SunoStats monolith\n— Next.js 15 + Drizzle + Tailwind 4\"*, followed within\nhours by Neon Auth (`2c243dd`), Google OAuth\n(`2ff764f`), the data collection pipeline (`40707ec`),\nand the portfolio + landing + OG image generator\n(`b5d1e1d`). Total of **46 solo commits across the first\nmonth** taking the project from blank repo to the\nproduction system live at sunostats.chanmeng.org —\nwith auth, Stripe-integrated payments, Resend email, 4 cron\npipelines, the lineage explorer with `WITH RECURSIVE`\ngraph queries, the 3 paid insight engines, the\nwatched-playlist pulse view, the Docker + Traefik VPS\ndeploy, and trilingual i18n all wired end-to-end.\nMost recent commit `d36ddfb` (2026-05-10) tunes\nproduction container env handling. The lineage\nresearch finding remains the project's competitive\nmoat — no other Suno analytics product surfaces the\nparent->child remix graph, because the discovery\ndepends on noticing which API endpoints leak the\nUUIDs versus which redact them. Demonstrated to\nfounders and recruiters as Chan's worked example of\n**identifying a gap by technical research, then\nclosing it with a fully production-shape full-stack\nproduct in 4–5 weeks**.\n",
         "myRole": "Sole product designer, sole engineer, sole maintainer.\nDid the reverse-engineering research that found the\nlineage-UUID leak surface; designed the\noEmbed-discovered compliance posture and the public\ndata-sources legal page; designed the 3-free + 3-premium\nlens taxonomy; designed the\ncredit-ledger-with-auto-refund Stripe-integrated payment\nmodel; designed the 8-touchpoint extension pattern for new\ninsight types; built every Suno parser in\n`@suno-cards/parser`; engineered the 4 cron pipelines\nwith `x-cron-secret`-gated internal routes; built the\nlineage `WITH RECURSIVE` CTE graph traversal; built\nthe Docker+Traefik+GHCR deployment pipeline with\ncrontab auto-install via GitHub Actions; authored the\ntrilingual EN/简中/日本語 i18n dictionary; wrote the\npublic-facing README + the internal AGENTS.md and\narchitecture/data-model/i18n docs. Maintains the live\ndeployment today.\n"
       },
-      "_featuredStackResolved": [],
+      "_featuredStackResolved": [
+        {
+          "name": "nextjs",
+          "src": "/public/tech-logos/nextjs.svg"
+        },
+        {
+          "name": "react",
+          "src": "/public/tech-logos/react.svg"
+        },
+        {
+          "name": "drizzle",
+          "src": "/public/tech-logos/drizzle.svg"
+        },
+        {
+          "name": "neon",
+          "src": "/public/tech-logos/neon.svg"
+        },
+        {
+          "name": "stripe",
+          "src": "/public/tech-logos/stripe.svg"
+        }
+      ],
       "_contextLogo": [],
       "_affiliationOrg": null
     },
@@ -3996,6 +4055,17 @@
       "tier": "primary",
       "recency": "active",
       "lastUpdated": "2026-07-04",
+      "meta": {
+        "x_brand": {
+          "featuredStack": [
+            "openai",
+            "vercel-ai-sdk",
+            "nextjs",
+            "react",
+            "typescript"
+          ]
+        }
+      },
       "name": "ArchCanvas",
       "priority": 32,
       "category": "ai-apps",
@@ -4028,7 +4098,28 @@
       "narrative": {
         "impactHeadline": "AI design agent for architects — generates SVG floor plans (via the sister ArchLang compiler) plus OpenAI renderings on an infinite zoomable canvas, with an AI review mode (anchored findings + one-click have-AI-fix) and git-repo export. Billed per generation, not by subscription."
       },
-      "_featuredStackResolved": [],
+      "_featuredStackResolved": [
+        {
+          "name": "openai",
+          "src": "/public/tech-logos/openai.svg"
+        },
+        {
+          "name": "vercel-ai-sdk",
+          "src": "/public/tech-logos/vercel-ai-sdk.svg"
+        },
+        {
+          "name": "nextjs",
+          "src": "/public/tech-logos/nextjs.svg"
+        },
+        {
+          "name": "react",
+          "src": "/public/tech-logos/react.svg"
+        },
+        {
+          "name": "typescript",
+          "src": "/public/tech-logos/typescript.svg"
+        }
+      ],
       "_contextLogo": [],
       "_affiliationOrg": null
     },
@@ -4462,6 +4553,17 @@
       "tier": "primary",
       "recency": "active",
       "lastUpdated": "2026-07-04",
+      "meta": {
+        "x_brand": {
+          "featuredStack": [
+            "docusaurus",
+            "react",
+            "cloudflare-workers",
+            "cloudflare-pages",
+            "typst"
+          ]
+        }
+      },
       "name": "AI Programming Education Platform (programming.chanmeng.org)",
       "priority": 13,
       "category": "ai-apps",
@@ -4517,7 +4619,28 @@
         "outcomes": "Live at **programming.chanmeng.org**, in active use as the\nofficial platform for the 2026 TechNest AI Track and the 2026\nacademyEX Her Waka programme. **199 of 208 commits (95.7%)\nsolo across Chan's two GitHub identities**; remainder is\nAI auto-review + Dependabot. Four cohort versions running\nsimultaneously without interfering with each other. RAG\nindex covers all four cohort versions + the blog as of\n2026-05-02; version-aware retrieval and stable hash chunk\nIDs landed the same day. New course recordings continue to\nship weekly — through June 2026 the TechNest cohort added\nWeek 5 (\"Add a Blog System\"), Week 6 (\"Build a Slack App\" +\na Claude Code skills office hour), and Week 7 recordings,\nplus a LinkedIn recommendation section and backfilled\n简体中文 for Weeks 3-5. DeepWiki provides an external AI\ndoc-Q&A surface at\ndeepwiki.com/ChanMeng666/ai-programming-teaching-project.\n",
         "myRole": "Sole engineer and sole author. Designed and built the entire\nplatform end-to-end: Docusaurus configuration, the versioned\ndocs taxonomy across four cohorts, every cohort's curriculum\ncontent, the Cloudflare Worker RAG backend (worker entry,\nchat handler, RAG module, Vectorize seeding, KV session\nstore), the BGE-Base embeddings ingestion pipeline, the\nTypst PDF handout build, the Mermaid dual-view component,\nthe Notion-Worker proxy for Capstone voting, the Algolia\ncontextual-search configuration, and the bilingual i18n\nacross every surface (including Mermaid toolbar labels and\nthe localised `目录` TOC label). Migrated production from\nVercel to Cloudflare Pages in 2026-04. Continues to ship\nthe current cohort's lecture recordings and lab content\neach week.\n"
       },
-      "_featuredStackResolved": [],
+      "_featuredStackResolved": [
+        {
+          "name": "docusaurus",
+          "src": "/public/tech-logos/docusaurus.svg"
+        },
+        {
+          "name": "react",
+          "src": "/public/tech-logos/react.svg"
+        },
+        {
+          "name": "cloudflare-workers",
+          "src": "/public/tech-logos/cloudflare-workers.svg"
+        },
+        {
+          "name": "cloudflare-pages",
+          "src": "/public/tech-logos/cloudflare-pages.svg"
+        },
+        {
+          "name": "typst",
+          "src": "/public/tech-logos/typst.svg"
+        }
+      ],
       "_contextLogo": [],
       "_affiliationOrg": null
     },
@@ -5833,6 +5956,16 @@
       "tier": "primary",
       "recency": "active",
       "lastUpdated": "2026-07-04",
+      "meta": {
+        "x_brand": {
+          "featuredStack": [
+            "typescript",
+            "nodejs",
+            "npm",
+            "vercel"
+          ]
+        }
+      },
       "name": "ArchLang",
       "priority": 85,
       "category": "tools",
@@ -5872,7 +6005,24 @@
         "technicalApproach": "Pure TypeScript compiler (hand-written lexer + recursive-descent\nparser) with zero runtime dependencies, isomorphic in Node and\nbrowser; it exports structured diagnostics instead of throwing, plus\nlint / describe / repair pipelines for plan validation and four\nexport formats (SVG, DXF, PDF, PNG).\n",
         "myRole": "Sole author — language design, compiler, tooling, and packaging.\n"
       },
-      "_featuredStackResolved": [],
+      "_featuredStackResolved": [
+        {
+          "name": "typescript",
+          "src": "/public/tech-logos/typescript.svg"
+        },
+        {
+          "name": "nodejs",
+          "src": "/public/tech-logos/nodejs.svg"
+        },
+        {
+          "name": "npm",
+          "src": "/public/tech-logos/npm.svg"
+        },
+        {
+          "name": "vercel",
+          "src": "/public/tech-logos/vercel.svg"
+        }
+      ],
       "_contextLogo": [],
       "_affiliationOrg": null
     },
@@ -10576,6 +10726,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-07T13:25:31.882Z"
+    "buildTimestamp": "2026-07-07T13:54:30.000Z"
   }
 }

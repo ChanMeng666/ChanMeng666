@@ -26,7 +26,7 @@ What I work on:
 • Anthropic Partner Network curriculum + Claude Certified Architect — Foundations (CCA-F) exam, on top of held credentials in AI Fluency and Claude Code in Action.
 ```
 
-**Skills:** Model Context Protocol (MCP), Anthropic Claude and +3 skills
+**Skills:** Model Context Protocol (MCP), Anthropic Claude, AI Agent Architecture, Multi-Agent Systems, AI System Design
 **Media:** `Engram Media`
 
 ## TechNest Community
@@ -48,7 +48,7 @@ Programme: 12 weeks, April 25 – July 17, 2026. Curriculum thesis: "natural lan
 • Fully bilingual EN / CN.
 ```
 
-**Skills:** Curriculum Development, AI-Assisted Development and +2 skills
+**Skills:** Curriculum Development, AI-Assisted Development, Technical Teaching, Docusaurus, Retrieval-Augmented Generation (RAG), Next.js
 **Media:** `AI Programming Learning Platform - Master AI Programming`
 
 ## Gavigo
@@ -80,7 +80,7 @@ Hardest work shipped:
 Stack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, GPT-4o-mini.
 ```
 
-**Skills:** Go (Programming Language), Kubernetes and +3 skills
+**Skills:** Go (Programming Language), Kubernetes, Google Kubernetes Engine (GKE), Redis, WebSocket, React Native, Distributed Systems
 **Media:** `GAVIGO IRE - AI Container Orchestration Dashboard`
 
 ### Core Engineer (M1 Prototype)
@@ -101,7 +101,7 @@ What I built:
 • Investor-facing dashboard exposing AI decision-making and resource allocation in real time.
 ```
 
-**Skills:** Microservices Architecture, Kubernetes and +3 skills
+**Skills:** Microservices Architecture, Kubernetes, Docker, Next.js, Python (Programming Language), WebSocket
 **Media:** `GAVIGO - Skip the Store. Start the Play | Instant Mobile Gaming Revolution`
 
 ## She Sharp
@@ -128,7 +128,7 @@ What shipped (648 of 748 commits solo — 86.6% — across 10 months):
 Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Tailwind 4, Vercel.
 ```
 
-**Skills:** Next.js, Full-Stack Development and +3 skills
+**Skills:** Next.js, Full-Stack Development, React, Drizzle ORM, Neon Postgres, NextAuth, Stripe, Slack API
 **Media:** `She Sharp - Connecting Women in Technology` · `1755385997508.jpeg` · `1755253595927.jpeg`  _(Show all 4 media)_
 
 ## FemTech Weekend
@@ -153,7 +153,7 @@ Shanghai Summit 2026 (June 22–25): 16 confirmed speakers headlined by Ida Tin 
 Two original research reports published through the platform: FemTech Market Map for Greater China (May 2025), FemmeHealth Ventures Alliance announcement (June 2025).
 ```
 
-**Skills:** Technical Leadership, Bilingual Web Development and +2 skills
+**Skills:** Technical Leadership, Bilingual Web Development, Next.js, Docusaurus, Drizzle ORM, Cloudflare Pages / Workers
 **Media:** `FemTech Weekend | Femtech Weekend`
 
 ## CopilotKit
@@ -178,7 +178,7 @@ Maintainer Brandon McConnell: "This looks great. Thanks, @ChanMeng666 👏"
 Stack of the FemTracker demo: Next.js 15 + React 19 + TypeScript on the frontend; Python 3.12 + LangGraph for multi-agent orchestration; Supabase Postgres; Redis caching at 90%+ hit rate.
 ```
 
-**Skills:** Model Context Protocol (MCP), Open Source Contribution and +3 skills
+**Skills:** Model Context Protocol (MCP), Open Source Contribution, LangGraph, Multi-Agent Systems, CopilotKit, Technical Documentation
 **Media:** `docs: add Claude Code setup instructions to MCP server guide by ChanMeng666 · Pull Request #2529 · CopilotKit/CopilotKit` · `chore(demos): Add FemTracker Agent + CopilotKit Demo to the demos_2025 folder by ChanMeng666 · Pull Request #2068 · CopilotKit/CopilotKit` · `screencapture-github-CopilotKit-CopilotKit-pull-2529-2025-10-22-23_10_45.png`  _(Show all 4 media)_
 
 ## Sanicle
@@ -205,7 +205,7 @@ What I owned (5 production codebases, ~350+ commits, ~98% solo):
 Public Next.js contribution: published a multi-cause production fix for a NextAuth 5 + Next.js 15 auth-redirect failure on the Vercel community forum. Publicly thanked by Vercel Staff (Amy Egan). Featured in THISDAYLIVE (May 2025) on FemTech founders.
 ```
 
-**Skills:** Technology Leadership, IBM watsonx and +3 skills
+**Skills:** Technology Leadership, IBM watsonx, Multi-Tenant Architecture, Next.js, Google Gemini, AI Integration
 
 ### Senior AI/ML Infrastructure Engineer
 
@@ -228,7 +228,7 @@ Engineering achievements that translated directly to business outcomes:
 This is the work that carried Sanicle into formal partnership conversations with IBM and Google.
 ```
 
-**Skills:** IBM watsonx, Next.js and +3 skills
+**Skills:** IBM watsonx, Next.js, Multi-Tenant Architecture, Drizzle ORM, PostgreSQL, NextAuth, Upstash Redis
 **Media:** `Sanicle Wellness Agent` · `Sanicle.Cloud` · `Sanicle.cloud is an AI-powered SaaS platform helping employers scale menstrual and menopause wellness benefits for healthier workplaces.`  _(Show all 8 media)_
 
 ## Aotearoa Infinite Academy
@@ -252,7 +252,7 @@ Four parallel tracks:
 Open-source artefact launched here: claude-code-audio-hooks — explicitly preserved as my IP in the subsequent Engram Architect Cohort engagement letter.
 ```
 
-**Skills:** Firebase, Multi-Tenant Architecture and +3 skills
+**Skills:** Firebase, Multi-Tenant Architecture, PostgreSQL, Google Cloud SQL, Claude Code Subagents, Full-Stack Development
 
 ## Forward with Her 她行
 **Links:** <https://www.linkedin.com/company/taxing-mentorship/>
@@ -272,7 +272,7 @@ What I delivered: 1:1 mentorship across software engineering, AI tooling, and ca
 The teaching doctrine I built here — "natural language is the source code"; ship a real production site by Week 8 — later became the foundation for the 2026 TechNest AI Track curriculum.
 ```
 
-**Skills:** Technical Mentorship, AI-Assisted Development and +3 skills
+**Skills:** Technical Mentorship, AI-Assisted Development, Public Speaking, Next.js, Three.js, Career Development
 **Media:** `Screenshot_2025-02-11-19-34-08-434_com.tencent.mm.jpg` · `IMG_20250215_130218.jpg` · `IMG_20250214_233035.jpg`  _(Show all 5 media)_
 
 ## FreePeriod
@@ -307,7 +307,7 @@ What the site does:
 Stayed on post-tenure as long-term technical custodian; executed Vercel → Cloudflare Pages migration in April 2026 without rebuilding the app.
 ```
 
-**Skills:** Next.js, TypeScript and +3 skills
+**Skills:** Next.js, TypeScript, Technical Leadership, Google Maps API, Internationalization (i18n), Cloudflare Pages / Workers
 **Media:** `FreePeriod Official` · `Business Plan` · `20241201155453.jpg`  _(Show all 8 media)_
 
 ## ByteDance
@@ -329,7 +329,7 @@ Delivered a deliberately overcomplete portfolio (most trainees deliver the algor
 • Two open-source teaching templates (beyond scope), both bilingual EN + CN: Go + Gin (douyin-mall-go-template — 52 stars / 7 forks, my most-starred OSS project) and Spring Boot + Maven. Both now used by later camp cohorts as scaffolding.
 ```
 
-**Skills:** Go (Programming Language), Spring Boot and +3 skills
+**Skills:** Go (Programming Language), Spring Boot, Java, MySQL, Redis, Vue.js, Data Structures & Algorithms
 **Media:** `Certificate of Completion` · `Front-end, Back-end, Big data -- MarsCode Youth Camp` · `2025-01-07 213705.png`
 
 ## CORDE
@@ -355,5 +355,5 @@ What I built and shipped:
 Stack: React Native 0.83 + TypeScript + Native Base + SQLite + native geolocation/camera/maps.
 ```
 
-**Skills:** React Native, TypeScript and +3 skills
+**Skills:** React Native, TypeScript, Offline-First Architecture, Native Base, SQLite, Mobile Application Development
 **Media:** `Weekly Mobile App Development Sprint Meetings` · `Weekly Mobile App Development Sprint Meetings` · `CORDE | Full Stack Developer`

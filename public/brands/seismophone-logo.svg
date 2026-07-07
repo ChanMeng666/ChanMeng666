@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <title>Seismophone</title>
+  <rect width="180" height="180" rx="40" fill="#0a0a0a"/>
+  <circle cx="90" cy="90" r="58" fill="none" stroke="#fafafa" stroke-width="7"/>
+  <clipPath id="ring"><circle cx="90" cy="90" r="58"/></clipPath>
+  <g clip-path="url(#ring)">
+    <line x1="24" y1="90" x2="156" y2="90" stroke="#fafafa" stroke-width="3.5" opacity="0.28"/>
+    <polyline points="24,90 66,90 78,80 88,84 96,88 100,46 108,132 116,74 124,90 156,90"
+      fill="none" stroke="#fafafa" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <line x1="130" y1="66" x2="130" y2="114" stroke="#c9503f" stroke-width="6"/>
+  <circle cx="130" cy="90" r="8.5" fill="#c9503f"/>
+</svg>

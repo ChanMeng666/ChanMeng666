@@ -1862,17 +1862,17 @@ projects:
     tier: primary
     recency: recent
     lastUpdated: "2026-07-04"
-    name: SunoStats — The Analyst Suno Never Shipped
+    name: Seismophone — The independent observatory for AI music
     priority: 18
     category: web-apps
-    tagline: "SunoStats — commercial analytics layer built on a private Suno API probe (suno-research-private) — closed a gap Suno's official platform couldn't fill by discovering that Suno's serializer leaks unredacted parent→child lineage UUIDs only on /api/trending + persona sub-trees, then productizing that into the industry's first public Suno lineage explorer. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS."
-    url: https://sunostats.chanmeng.org/
+    tagline: "Seismophone — commercial analytics layer built on a private Suno API probe (suno-research-private) — closed a gap Suno's official platform couldn't fill by discovering that Suno's serializer leaks unredacted parent→child lineage UUIDs only on /api/trending + persona sub-trees, then productizing that into the industry's first public Suno lineage explorer. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS."
+    url: https://seismophone.chanmeng.org/
     # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
-    logo: /public/brands/sunostats-logo.svg
+    logo: /public/brands/seismophone-logo.svg
     extraLinks:
-      - { label: "Live app",                url: "https://sunostats.chanmeng.org/" }
-      - { label: "Public trending (no auth)", url: "https://sunostats.chanmeng.org/trending" }
-      - { label: "Data sources & compliance", url: "https://sunostats.chanmeng.org/legal/data-sources" }
+      - { label: "Live app",                url: "https://seismophone.chanmeng.org/" }
+      - { label: "Public trending (no auth)", url: "https://seismophone.chanmeng.org/trending" }
+      - { label: "Data sources & compliance", url: "https://seismophone.chanmeng.org/legal/data-sources" }
     techStack:
       - "Next.js 16.2 (App Router, Webpack pin)"
       - "React 19.2"

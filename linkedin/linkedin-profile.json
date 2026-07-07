@@ -950,8 +950,7 @@
       {
         "name": "Multi-agent Systems",
         "associations": [
-          "Open Source Contributor at CopilotKit",
-          "FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom"
+          "Open Source Contributor at CopilotKit"
         ]
       },
       {
@@ -1126,8 +1125,7 @@
       {
         "name": "pgVector",
         "associations": [
-          "Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)",
-          "FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom"
+          "Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)"
         ]
       },
       {
@@ -1281,8 +1279,7 @@
       {
         "name": "LangGraph",
         "associations": [
-          "Open Source Contributor at CopilotKit",
-          "FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom"
+          "Open Source Contributor at CopilotKit"
         ]
       },
       {
@@ -1681,14 +1678,24 @@
       "moreSkillsCount": 1
     },
     {
-      "name": "FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom",
-      "dateRange": "Jan 2026 – Present",
-      "description": "A full-stack AI co-creation platform for fans of Honkai: Star Rail. Users describe a story (a character pairing, a vibe, a scenario); a multi-agent backend negotiates with itself — parse intent, architect plot, write, quality-check, revise, summarise, deliver — and returns a chapter that respects the canon of five named HSR characters and four relationship dynamics.\n\n• 7-node LangGraph (intent_parser → story_architect → writer → quality_guard → revision_counter → summarize → delivery) with a quality-loop revision budget of MAX_REVISIONS = 2 so the agent doesn't loop forever.\n• Hand-curated HSR knowledge pack — 5 characters × 4 dynamics × 5 world-rule categories × 5 trope templates — RAG-indexed so the writer agent grounds in canon, not training-data hallucinations.\n• Community layer: follows, nested replies, pgVector recommendations.\n• 182 solo commits over 16 weeks. Self-hosted Docker (web + agent) on DigitalOcean via Coolify, behind Cloudflare.\n\nStack: Next.js 16 + LangGraph.js + OpenAI + Prisma + Neon Postgres + pgVector.",
+      "name": "ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans",
+      "dateRange": "Jun 2026 – Present",
+      "description": "ArchLang is a programming language I designed for architecture: you write a floor plan as code — walls, rooms, doors, windows, fixtures, dimensions — and it compiles to deterministic, professional SVG (also DXF, PDF, PNG). Think Typst or LaTeX, but for building plans instead of documents.\n\n• Hand-written lexer + recursive-descent parser in pure TypeScript with zero runtime dependencies — the same compiler runs in Node and in the browser.\n• Exports structured diagnostics instead of throwing, with lint / describe / repair pipelines for architectural-soundness checking and circulation analysis.\n• Ships a CLI with JSON output built for AI agents, plus VS Code / LSP tooling and a live browser playground.\n• Published to npm as @chanmeng666/archlang with its own documentation site.\n\nStack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.",
       "skills": [
-        "LangGraph",
-        "Multi-agent Systems"
+        "TypeScript",
+        "Programming Language Design"
       ],
       "moreSkillsCount": 2
+    },
+    {
+      "name": "ArchCanvas — AI Design Agent for Architects That Productizes ArchLang",
+      "dateRange": "Jun 2026 – Present",
+      "description": "ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it generates real SVG floor plans through the ArchLang compiler plus GPT-4o / DALL·E renderings, then lets you iterate on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.\n\n• Sister product to my ArchLang language — consumes @chanmeng666/archlang as a package, so it produces editable parametric plans, not just images.\n• AI review mode surfaces anchored findings directly on the canvas with one-click \"have AI fix\".\n• Export any project as a real git repo (isomorphic-git + memfs).\n• Pay-per-result credits, not subscriptions.\n\nStack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-4o + DALL·E), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.",
+      "skills": [
+        "Vercel AI SDK",
+        "AI Agent Architecture"
+      ],
+      "moreSkillsCount": 3
     },
     {
       "name": "echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI",

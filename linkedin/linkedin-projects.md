@@ -59,24 +59,41 @@ Stack: Next.js 15, Vercel AI SDK + GPT-4o, Typst, Stripe, Neon Postgres + Drizzl
 
 **Skills:** Vercel AI SDK, Typst and +1 skill
 
-## 4. FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom
+## 4. ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans
 
-**Dates:** Jan 2026 – Present
+**Dates:** Jun 2026 – Present
 
 ```
-A full-stack AI co-creation platform for fans of Honkai: Star Rail. Users describe a story (a character pairing, a vibe, a scenario); a multi-agent backend negotiates with itself — parse intent, architect plot, write, quality-check, revise, summarise, deliver — and returns a chapter that respects the canon of five named HSR characters and four relationship dynamics.
+ArchLang is a programming language I designed for architecture: you write a floor plan as code — walls, rooms, doors, windows, fixtures, dimensions — and it compiles to deterministic, professional SVG (also DXF, PDF, PNG). Think Typst or LaTeX, but for building plans instead of documents.
 
-• 7-node LangGraph (intent_parser → story_architect → writer → quality_guard → revision_counter → summarize → delivery) with a quality-loop revision budget of MAX_REVISIONS = 2 so the agent doesn't loop forever.
-• Hand-curated HSR knowledge pack — 5 characters × 4 dynamics × 5 world-rule categories × 5 trope templates — RAG-indexed so the writer agent grounds in canon, not training-data hallucinations.
-• Community layer: follows, nested replies, pgVector recommendations.
-• 182 solo commits over 16 weeks. Self-hosted Docker (web + agent) on DigitalOcean via Coolify, behind Cloudflare.
+• Hand-written lexer + recursive-descent parser in pure TypeScript with zero runtime dependencies — the same compiler runs in Node and in the browser.
+• Exports structured diagnostics instead of throwing, with lint / describe / repair pipelines for architectural-soundness checking and circulation analysis.
+• Ships a CLI with JSON output built for AI agents, plus VS Code / LSP tooling and a live browser playground.
+• Published to npm as @chanmeng666/archlang with its own documentation site.
 
-Stack: Next.js 16 + LangGraph.js + OpenAI + Prisma + Neon Postgres + pgVector.
+Stack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.
 ```
 
-**Skills:** LangGraph, Multi-agent Systems and +2 skills
+**Skills:** TypeScript, Programming Language Design and +2 skills
 
-## 5. echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
+## 5. ArchCanvas — AI Design Agent for Architects That Productizes ArchLang
+
+**Dates:** Jun 2026 – Present
+
+```
+ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it generates real SVG floor plans through the ArchLang compiler plus GPT-4o / DALL·E renderings, then lets you iterate on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.
+
+• Sister product to my ArchLang language — consumes @chanmeng666/archlang as a package, so it produces editable parametric plans, not just images.
+• AI review mode surfaces anchored findings directly on the canvas with one-click "have AI fix".
+• Export any project as a real git repo (isomorphic-git + memfs).
+• Pay-per-result credits, not subscriptions.
+
+Stack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-4o + DALL·E), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.
+```
+
+**Skills:** Vercel AI SDK, AI Agent Architecture and +3 skills
+
+## 6. echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
 
 **Dates:** Nov 2025 – Present
 
@@ -93,7 +110,7 @@ Stack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Act
 
 **Skills:** Claude Code Plugins, Cursor IDE Hooks and +3 skills
 
-## 6. She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
+## 7. She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
 
 **Dates:** Jul 2025 – Present
 **Associated with:** She Sharp
@@ -111,7 +128,7 @@ Stack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.
 
 **Skills:** AI Matching Systems, Drizzle ORM and +2 skills
 
-## 7. FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
+## 8. FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
 
 **Dates:** Mar 2025 – Present
 **Other contributors:** yes
@@ -130,7 +147,7 @@ Stack: Docusaurus 3.9, React 18, Drizzle + Neon Postgres, Cloudflare Pages, Rese
 
 **Skills:** Bilingual Web Development, Cloudflare Pages / Workers and +3 skills
 
-## 8. programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+## 9. programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
 
 **Dates:** Oct 2024 – Present
 **Associated with:** TechNest Community
@@ -148,7 +165,7 @@ Stack: Docusaurus 3.8, Cloudflare Pages, Llama 3.1 8B via Cloudflare Workers AI 
 
 **Skills:** Docusaurus, Retrieval-Augmented Generation (RAG) and +2 skills
 
-## 9. Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
+## 10. Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
 
 **Dates:** Sep 2025 – Apr 2026
 **Other contributors:** yes
@@ -167,7 +184,7 @@ Stack: Next.js 15.5, React 19.1, Drizzle + Neon Postgres + pgVector (1536-dim), 
 
 **Skills:** Voice AI (OpenAI Realtime), pgVector and +3 skills
 
-## 10. Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)
+## 11. Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)
 
 **Dates:** Feb 2026 – Mar 2026
 
@@ -184,7 +201,7 @@ Stack: CSS 3D + ES6 + LESS + Gulp 4; Cloudflare Workers + Hono + Neon Postgres; 
 
 **Skills:** CSS 3D Transforms, Cloudflare Pages / Workers and +1 skill
 
-## 11. Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx
+## 12. Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx
 
 **Dates:** Feb 2025 – Feb 2026
 **Associated with:** Sanicle
@@ -203,7 +220,7 @@ Stack: Next.js 15, React 19, NextAuth 5, Drizzle + Neon Postgres, Upstash Redis,
 **Skills:** Multi-Tenant Architecture, IBM watsonx and +3 skills
 **Media:** `Sanicle-AI: Women's Health Platform for Workplace Wellness` · `screencapture-sanicle-ai-vercel-app-chat-36a2b38e-be71-4c62-a459-ff43cb6d5c7c-2025-03-10-21_31_22.png` · `screencapture-sanicle-ai-vercel-app-employee-dashboard-f13eaf10-0a5b-49cf-b943-c35de5f631b4-events-2025-03-10-21_29_11.png`  _(Show all 10 media)_
 
-## 12. Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant
+## 13. Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant
 
 **Dates:** Apr 2025 – Feb 2026
 **Associated with:** Sanicle
@@ -221,7 +238,7 @@ Stack: Next.js 15, React 19, TypeScript, Tailwind, IBM watsonx, Vercel.
 **Skills:** Next.js, IBM watsonx and +2 skills
 **Media:** `screencapture-sanicle-cloud-2025-04-18-16_24_26.png` · `screencapture-sanicle-cloud-team-chan-meng-2025-04-18-16_28_20.png` · `screencapture-sanicle-cloud-demo-2025-04-18-16_27_59.png`  _(Show all 13 media)_
 
-## 13. Google News MCP Server — Early-Ecosystem AI Tool-Use Server
+## 14. Google News MCP Server — Early-Ecosystem AI Tool-Use Server
 
 **Dates:** Dec 2024 – Dec 2024
 
@@ -238,7 +255,7 @@ Stack: TypeScript + Node.js + @modelcontextprotocol/sdk + SerpAPI; published as 
 **Skills:** Model Context Protocol (MCP), TypeScript and +3 skills
 **Media:** `GitHub - ChanMeng666/server-google-news` · `2024-12-30 021446.png` · `2024-12-30 021524.png`  _(Show all 5 media)_
 
-## 14. CORDE Mobile — Offline-First Field-Operations App (React Native)
+## 15. CORDE Mobile — Offline-First Field-Operations App (React Native)
 
 **Dates:** Jun 2024 – Nov 2024
 **Associated with:** CORDE
@@ -257,7 +274,7 @@ Stack: React Native 0.83, TypeScript, Native Base, SQLite, native geolocation / 
 **Skills:** React Native, Offline-First Architecture and +3 skills
 **Media:** `CORDE Mobile Application: Revolutionizing Field Operations` · `1-1-LoginScreen.png` · `1-2-3-LoginScreen.png`  _(Show all 9 media)_
 
-## 15. FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
+## 16. FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
 
 **Dates:** Nov 2024 – Nov 2024
 **Other contributors:** yes

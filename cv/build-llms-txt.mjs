@@ -157,7 +157,8 @@ W("- echook (Claude Code / Cursor / Codex audio hooks — above)");
 W("- gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 340+ animated-SVG templates · 273 solo commits");
 W("- typst-claude-skill — official Typst skill for Claude Code (typesets this CV)");
 W("- SunoStats (https://sunostats.chanmeng.org/) — industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese · Docker + Traefik VPS");
-W("- FanFic Lab (https://fanfic-lab.tech/) — 7-node LangGraph agent");
+W("- ArchLang (https://github.com/ChanMeng666/archlang) — a floor-plan programming language I invented: compiles to professional SVG plans (Typst/LaTeX for architecture) · zero-dependency isomorphic TypeScript · published to npm as @chanmeng666/archlang");
+W("- ArchCanvas (https://archcanvas.chanmeng.org/) — AI design agent for architects that productizes ArchLang · GPT-4o + DALL·E renderings on a zoomable canvas · pay-per-result credits");
 
 sect("Experience (most recent)");
 const roles = [

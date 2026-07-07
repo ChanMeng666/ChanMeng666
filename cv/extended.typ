@@ -365,13 +365,14 @@
       [#link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] — te-ao-Māori financial-wellness coach · 351 commits · 19-user, 4-month cohort],
       [#link("https://github.com/ChanMeng666/femtracker-agent")[FemTracker] — 8-node LangGraph agent, merged into CopilotKit's official demos],
       [#link("https://www.vitex.org.nz/")[Vitex] — AI career agent: a job description → tailored résumé + cover letter in under 30s],
-      [#link("https://fanfic-lab.tech/")[FanFic Lab] — 7-node LangGraph writing agent with RAG over pgvector],
+      [#link("https://archcanvas.chanmeng.org/")[ArchCanvas] — AI design agent for architects · productizes ArchLang · GPT-4o + DALL·E · pay-per-result],
       [#link("https://sunostats.chanmeng.org/")[SunoStats] — the first Suno music-lineage explorer · trilingual],
     ),
   )
   cap("Skills, MCP servers & developer tools",
     [I package the workflows I rely on into reusable Claude Code skills, plugins and MCP servers — then open-source them for everyone.],
     (
+      [#link("https://github.com/ChanMeng666/archlang")[ArchLang] — a floor-plan programming language I invented · compiles to professional SVG (Typst/LaTeX for architecture) · zero-dependency TypeScript · on npm],
       [#link("https://github.com/ChanMeng666/academic-paper-review-skill")[academic-paper-review-skill] — dual-lens peer review → Markdown / Typst / PDF],
       [#link("https://github.com/ChanMeng666/app-promo-studio")[app-promo-studio] — screenshots → cross-platform store & social images],
       [#link("https://github.com/ChanMeng666/logo-as-code-skill")[logo-as-code-skill] — hand-drawn logo → editable SVG + favicons],

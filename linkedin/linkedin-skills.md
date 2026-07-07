@@ -12,7 +12,6 @@
 
 ### Multi-agent Systems
 - Open Source Contributor at CopilotKit
-- FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom
 
 ### AI/ML Engineering
   _1 endorsement_
@@ -98,7 +97,6 @@
 
 ### pgVector
 - Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
-- FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom
 
 ### Docusaurus
 - FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
@@ -180,7 +178,6 @@
 
 ### LangGraph
 - Open Source Contributor at CopilotKit
-- FanFic Lab — 7-Node LangGraph Co-Creation Platform for HSR Fandom
 
 ### Open Source Contribution
 - Open Source Contributor at CopilotKit

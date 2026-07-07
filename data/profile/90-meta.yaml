@@ -165,7 +165,9 @@ meta:
       flagshipAwardClaim: "Outstanding Mentor Award — AI Hackathon Festival 2025"
 
     # Project ordering for README
-    flagshipProjectIds: [tam-ai-ti, she-sharp, gavigo-ire, google-news-mcp]
+    # Hero card order = this list's order. Hiring-first (2026-07): lead with the
+    # hardest staff-IC proof (founding-engineer infra, then 124★ adoption).
+    flagshipProjectIds: [gavigo-ire, google-news-mcp, tam-ai-ti, she-sharp]
 
     # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
     # 2026-07). Deliberately DISTINCT from flagshipProjectIds (which is the
@@ -206,19 +208,32 @@ meta:
     openSourceCategoryOrder: [web-apps, ai-apps, creative, ml-research, branding, games]
 
     # =========================================================================
-    # README v2 — provenance-based project buckets (4 visible + 4 overflow)
-    # The original tier-based openSourcePrimaryIds above is retained for
-    # backwards-compat with anything that still consumes it; the v2 templates
-    # render from the bucket lists below instead.
+    # README v2 — provenance-based project buckets. The original tier-based
+    # openSourcePrimaryIds above is retained for backwards-compat; the v2
+    # templates render from the bucket lists below.
+    #
+    # 2026-07 CURATION — hiring-first, "tighten hard". The README shopfront is
+    # optimised for a technical hiring manager's ~60-second skim (depth,
+    # production rigor, adoption/star proof), so it shows only the strongest
+    # ~15 projects and NO <details> overflow — every more* list is emptied and
+    # the "View all repositories →" link carries discovery. Deliberate cuts:
+    # small solo apps (chinese-redefine, ai-image-generator, send-joy,
+    # friendscope), typst-claude-skill, ai-hackathon-assistant, css-tower-defense
+    # (Te Pa Tiaki), the douyin-mall-java template, and three smaller client
+    # sites (her-waka, free-period, forward-with-her). Promoted in:
+    # douyin-mall-go-template (53★ backend proof). Rescued (kept on merit):
+    # sunostats, ai-programming-teaching-project. Everything cut stays fully
+    # present in llms.txt / llms-full.txt / dist/profile.json / LinkedIn — it is
+    # only off the human shopfront. To re-widen, repopulate the more* lists.
     # =========================================================================
-    commissionedProjectIds:    [femtech-weekend-website, eatropolis-website, her-waka, free-period-website]
-    aiAgentProjectIds:         [archcanvas, vitex, femtracker-agent, echook]
-    openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, library-os, archlang, sunostats]
-    # Overflow buckets — rendered inside <details>More projects</details>
-    moreAiAgentProjectIds:        [ai-image-generator, typst-claude-skill, chinese-redefine, ai-programming-teaching-project, ai-hackathon-assistant]
-    moreOpenSourceProjectIds:     [friendscope, send-joy, server-google-jobs, tencent-meeting-video-downloader]
-    moreCommissionedProjectIds:   [forward-with-her-website, agrihire-solutions, nzcel-prep, customer-insight, hospital-roster-agent]
-    moreCreativeProjectIds:       [portfolio-v2, css-tower-defense, douyin-mall-go-template, douyin-mall-java-template]
+    commissionedProjectIds:    [femtech-weekend-website, eatropolis-website]
+    aiAgentProjectIds:         [echook, archcanvas, vitex, ai-programming-teaching-project]
+    openSourceCraftProjectIds: [archlang, library-os, gradient-svg-generator, douyin-mall-go-template, sunostats]
+    # Overflow buckets — intentionally empty (see curation note above).
+    moreAiAgentProjectIds:        []
+    moreOpenSourceProjectIds:     []
+    moreCommissionedProjectIds:   []
+    moreCreativeProjectIds:       []
 
     # =========================================================================
     # Tech-stack icon registry — maps short keys to SVG logos on disk.

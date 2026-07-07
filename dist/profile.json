@@ -1796,7 +1796,10 @@
         "technicalApproach": "Full stack: **Go 1.23 + Gin** for the backend, **MySQL 8.0** for\npersistence, **React 18** + Vite for the frontend, **JWT\nauthentication**, **RESTful APIs**, **Redis** caching. Directory\nlayout follows the Go community's production-correct convention:\n`cmd/server/` (entry points), `internal/` (core business logic),\n`api/v1/` (handlers and route definitions), `pkg/` (reusable\npackages), `configs/` (YAML-based config), `docs/` (API specs +\nschema diagrams), `frontend/` (React/Vite). The repo also ships\na **dual frontend implementation**: a React SPA and a vanilla\nHTML/JavaScript version side by side, so learners can compare\narchitectural approaches against the same backend. Deployment\nguides cover Docker, Railway, Render, and Fly.io. Bilingual\n(EN + 简体中文) README at production quality.\n",
         "outcomes": "**52 GitHub stars, 7 forks**, 27 sustained commits — the\nstrongest external traction of any project in Chan's open-source\ncatalogue under \"primary\" tier. Featured as one of the eight\nprimary projects on Chan's GitHub Open Source table. **< 50 ms**\naverage API response time. Apache-2.0 license to permit\ncommercial reuse while encouraging community contribution.\nDoubles as the worked-example artefact accompanying Chan's\nByteDance Youth Training Camp narrative — the same engineering\npractices that scored Chan as the #2-most-prolific committer on\nthe Team-115 capstone, packaged as a public learning resource.\n",
         "myRole": "Sole author. Designed the directory layout, wrote both backend\nand frontend implementations, authored the bilingual\ndocumentation, and packaged the multi-platform deployment\nguides. The repo is its own pedagogical statement: students can\nread the instructor's commits to see how patterns they're being\ntaught compose into a real production-shape service.\n"
-      }
+      },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null
     },
     {
       "id": "server-google-jobs",
@@ -2316,31 +2319,7 @@
       "narrative": {
         "impactHeadline": "Bilingual period-poverty advocacy site for a Guangzhou HKUST(GZ)-incubated startup — integrated Google Maps dispenser directory helping end-users locate menstrual-access resources in underserved markets."
       },
-      "status": "live",
-      "_featuredStackResolved": [
-        {
-          "name": "nextjs",
-          "src": "/public/tech-logos/nextjs.svg"
-        },
-        {
-          "name": "react",
-          "src": "/public/tech-logos/react.svg"
-        },
-        {
-          "name": "typescript",
-          "src": "/public/tech-logos/typescript.svg"
-        },
-        {
-          "name": "tailwindcss",
-          "src": "/public/tech-logos/tailwindcss.svg"
-        },
-        {
-          "name": "cloudflare-pages",
-          "src": "/public/tech-logos/cloudflare-pages.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrg": null
+      "status": "live"
     },
     {
       "id": "library-os",
@@ -4536,7 +4515,10 @@
         "technicalApproach": "Built on **Docusaurus 3.8.1** with the experimental\n`@docusaurus/faster` build pipeline. Four cohort versions\ncoexist through Docusaurus's versioned-docs feature — each\nversion is its own self-contained doc tree with its own\nsidebar, blog feed, and tag taxonomy. Bilingual i18n is\nend-to-end: EN primary, 简体中文 secondary, with Algolia\nDocSearch configured for **contextual** locale + version\nfiltering so a Mandarin-speaking 2026 TechNest student gets\n2026 TechNest results in Chinese by default.\n\n**RAG AI assistant on Cloudflare Workers AI.** A separate\nCloudflare Worker (`worker/src/index.ts`) handles `POST /api/chat`:\n- Worker calls **Cloudflare Vectorize** with the user query\n  embedded via **BGE Base EN v1.5** (768-dim)\n- Vectorize returns the top relevant chunks from ~4,800\n  MDX-derived document embeddings (all four cohort versions\n  + blog, indexed with **stable hash chunk IDs** so re-indexing\n  is idempotent and version-aware retrieval works)\n- Worker passes the context window to **Workers AI Llama 3.1\n  8B Instruct** which generates the response\n- Response streams back to the in-site ChatWidget via\n  **Server-Sent Events** for incremental rendering\n- Per-session conversation history persists in **Cloudflare KV**\n- Secure seeding flow so the embedding index can be\n  rebuilt on demand without exposing data\n- Vector retrieval is **version-aware**: a 2026-technest\n  student gets 2026-technest results by default, with\n  older cohorts available on explicit ask\n\n**Typst PDF handout pipeline.** The same Typst skill taught\nin Week 8 of the curriculum is the build tool that produces\nthe printable curriculum outline, capstone spec, and\nper-week lab guides — the pedagogical loop is intentional:\nstudents see in production the artefact they're being\ntaught to build. **Mermaid dual-view component** renders\nevery diagram in two synchronised presentations\n(rendered + source) so both visual and textual learners\nsucceed.\n\n**Capstone classroom infrastructure.** Cloudflare Worker\nbackend proxies writes into Notion so the cohort owners\nmoderate inside the tool they already use. The Capstone 2026\npublic showcase page lists every team's demo with live\nNotion-backed voting open to invited guests — also bilingual.\n\nDeployed end-to-end on Cloudflare's edge: **Cloudflare Pages**\nfor the static Docusaurus build, **Cloudflare Workers** for\nthe chat backend, **Cloudflare Vectorize** for the vector\nindex, **Cloudflare KV** for sessions.\n",
         "outcomes": "Live at **programming.chanmeng.org**, in active use as the\nofficial platform for the 2026 TechNest AI Track and the 2026\nacademyEX Her Waka programme. **199 of 208 commits (95.7%)\nsolo across Chan's two GitHub identities**; remainder is\nAI auto-review + Dependabot. Four cohort versions running\nsimultaneously without interfering with each other. RAG\nindex covers all four cohort versions + the blog as of\n2026-05-02; version-aware retrieval and stable hash chunk\nIDs landed the same day. New course recordings continue to\nship weekly — through June 2026 the TechNest cohort added\nWeek 5 (\"Add a Blog System\"), Week 6 (\"Build a Slack App\" +\na Claude Code skills office hour), and Week 7 recordings,\nplus a LinkedIn recommendation section and backfilled\n简体中文 for Weeks 3-5. DeepWiki provides an external AI\ndoc-Q&A surface at\ndeepwiki.com/ChanMeng666/ai-programming-teaching-project.\n",
         "myRole": "Sole engineer and sole author. Designed and built the entire\nplatform end-to-end: Docusaurus configuration, the versioned\ndocs taxonomy across four cohorts, every cohort's curriculum\ncontent, the Cloudflare Worker RAG backend (worker entry,\nchat handler, RAG module, Vectorize seeding, KV session\nstore), the BGE-Base embeddings ingestion pipeline, the\nTypst PDF handout build, the Mermaid dual-view component,\nthe Notion-Worker proxy for Capstone voting, the Algolia\ncontextual-search configuration, and the bilingual i18n\nacross every surface (including Mermaid toolbar labels and\nthe localised `目录` TOC label). Migrated production from\nVercel to Cloudflare Pages in 2026-04. Continues to ship\nthe current cohort's lecture recordings and lab content\neach week.\n"
-      }
+      },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null
     },
     {
       "id": "readme-profile-generator",
@@ -4989,31 +4971,7 @@
       "narrative": {
         "impactHeadline": "Bilingual EN/CN promo site for the Forward with Her mentorship programme — 3D-rendered landing page (Three.js + Cloudflare Pages) supporting the 360+-mentor / 800+-mentee cohort that produced 7 of Chan's LinkedIn testimonials."
       },
-      "status": "live",
-      "_featuredStackResolved": [
-        {
-          "name": "nextjs",
-          "src": "/public/tech-logos/nextjs.svg"
-        },
-        {
-          "name": "react",
-          "src": "/public/tech-logos/react.svg"
-        },
-        {
-          "name": "threejs",
-          "src": "/public/tech-logos/threejs.svg"
-        },
-        {
-          "name": "tailwindcss",
-          "src": "/public/tech-logos/tailwindcss.svg"
-        },
-        {
-          "name": "cloudflare-pages",
-          "src": "/public/tech-logos/cloudflare-pages.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrg": null
+      "status": "live"
     },
     {
       "id": "her-waka",
@@ -5043,19 +5001,7 @@
       "narrative": {
         "impactHeadline": "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
       },
-      "status": "live",
-      "_featuredStackResolved": [
-        {
-          "name": "mintlify",
-          "src": "/public/tech-logos/mintlify.svg"
-        },
-        {
-          "name": "github",
-          "src": "/public/tech-logos/github.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrg": null
+      "status": "live"
     },
     {
       "id": "agrihire-solutions",
@@ -10628,6 +10574,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-07T12:31:14.760Z"
+    "buildTimestamp": "2026-07-07T13:10:58.927Z"
   }
 }

@@ -1925,7 +1925,421 @@ orientation that later anchored Chan's work between China and NZ.
 
 ## Flagship Projects
 
-### 1. Tam-AI-Ti (tam-ai-ti-web) — Independent research commission for enterprise executive Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead) — an AI Financial Wellness Coach grounded in Te Whare Tapa Whā that proved Māori users will engage with a culturally-native AI agent (19-user cohort, 4 months, bilingual te reo Māori). 351 solo commits, 48-table schema where culture is typed data not UI decoration, voice-first GPT-4o Realtime coach, CopilotKit agent across 88+ actions.
+### 1. GAVIGO IRE — Founding-engineer MVP for GAVIGO Inc. (Delaware C-Corp) — the 'Instant Reality Exchange' post-app activation platform with sub-millisecond container pre-warming (p50 <1 ms restore, 84.6% warm-pool hit), AI-orchestrated Kubernetes scaling, and a TikTok-style mobile feed; validated by Google for Startups + NVIDIA Inception (Feb 2026) after a DOKS→GKE production migration
+[tier=flagship · recency=active · updated=2026-07-04]
+- **URL:** https://ire.gavigo.com/
+- **Tech stack:** Go, gorilla/websocket, Kubernetes, DigitalOcean DOKS (initial), Google Kubernetes Engine (post-migration), client-go (K8s API), Artifact Registry, GCE Ingress + Global HTTP(S) LB, React 18, Vite, React Native, Expo 54, WebSocket, Redis 7, PostgreSQL 16, Supabase, GPT-4o-mini
+- **Total commits:** 360
+- **Solo commits:** 353 (98%)
+- **Restore path p50:** <1 ms
+- **Cold path p50:** ~12 ms
+- **Warm pool hit rate:** 84.6%
+- **Cloud platforms:** DigitalOcean DOKS → Google Cloud GKE
+- **Cross-cloud cutover:** ~30 min downtime (2026-03-11)
+- **Games vendored (FOSS):** 9 (from 11 repos analyzed)
+**Summary:** AI-orchestrated post-app activation platform for GAVIGO Inc. (Delaware
+C-Corp; founder & CEO Saba Gecgil). Public mission: "Skip the Store.
+Start the Play" — eliminate the latency between user intent and
+interactive content delivery. Distributed system: Go orchestrator
+(WebSocket hub + Scorer + 7-trigger rules engine + Kubernetes client),
+React dashboard for live orchestration visualization, React Native /
+Expo mobile app with TikTok-style feed. Originally architected and
+shipped on **DigitalOcean managed Kubernetes (DOKS, Singapore)**, then
+migrated to **Google Cloud GKE (Belgium)** in a single ~30-minute
+production cutover (2026-03-11) when GAVIGO's Google Cloud partnership
+came into effect — production expertise on both clouds. Real measured
+performance post-migration: restore path <1 ms p50, cold path ~12 ms,
+84.6% warm-pool hit rate. 360 total commits, 353 (98%) solo. As
+Founding Principal Engineer, Activation, Execution & AI Systems, I
+own the contractually-defined "Protected Technical Domain": activation
+systems, activation flow and execution behavior, activation-economics
+proof path, AI-assisted orchestration and execution-control,
+restore/reuse boundaries, and heavier-workload validation.
+
+**Impact:** Founding-engineer MVP for a Delaware startup — sub-millisecond interactive-content activation (p50 <1 ms, 84.6% warm-pool hit) on Kubernetes, production-validated by Google for Startups + NVIDIA Inception; 353/360 commits (98%) solo as Founding Principal Engineer.
+
+**Problem:** The native-app paradigm puts a friction tax on every interactive
+digital experience: discover an app → app-store landing page → install
+→ onboard → first interaction. By the time the user reaches the thing
+they actually wanted, the moment has passed. For games, video, and
+AI experiences — where perception of instantaneity drives engagement
+— the install gap is the single largest leak in the funnel. GAVIGO's
+thesis (in its own marketing language): we are building the
+"Post-App World," eliminating the trillion-dollar friction between
+user intent and digital experience through proprietary "Instant
+Reality Switching" technology.
+
+**Audience:** Two surfaces in production today. **Consumer surface**: end users on
+ire.gavigo.com and the mobile build, scrolling a TikTok-style
+vertical feed of FOSS games (Hextris, Clumsy Bird, Tiny Yurts,
+Catculus, Casual Crusade, Stolen Sword, and others — 9 vendored to
+date from a curated set of 11 open-source repos analyzed). **Investor
+/ operator surface**: the React dashboard at the same domain, which
+shows the orchestrator's AI decisions, container state machine
+(COLD → PREPARING → READY → ACTIVE → REUSABLE), warm-pool budget,
+activation-quality metrics, and side-by-side iframe of the mobile
+app — purpose-built for live demos to investors and partner
+evaluators. A Phase 9 audience-segmentation feature filters
+visibility per role (public / investor / operator presets) at
+WebSocket broadcast time. The ultimate addressable surface is any
+market where perception of instantaneity drives engagement — mobile
+games, short-form video, AI chat, generative content.
+
+**Product logic:** A user scrolls a TikTok-style vertical feed; the orchestrator
+watches focus events stream over a WebSocket hub, scores each
+candidate piece of content on three weighted signals (personal
+attention 0.4, global attention 0.4, trend / virality 0.2), and
+when combined score crosses a 0.6 threshold, fires one of seven AI
+triggers — Swarm Boost, Proactive Warm, Cross-Domain Inject,
+Mode Change, Lookahead Warm, Initial Warm, Checkpoint Restore —
+each of which patches Kubernetes deployment replicas through the
+K8s client-go API to scale a game container to READY before the
+user taps.
+
+When the user taps, the experience is already live — either served
+instantly from a single always-warm shared game-server pod
+(~12 ms cold path) or restored from the Reusable pool of recently-
+active containers (<1 ms restore path). State survives across
+scrolls via a postMessage protocol on web and MMKV storage on
+native; both reconcile against Redis as a single source of truth
+through a deterministic five-state Activation Spine
+(COLD → READY → ACTIVE → REUSABLE → restore). When mobile gaming
+meets the install gap, the GAVIGO answer is: there is no install
+gap.
+
+**Business logic:** GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
+stage, founder Saba Gecgil. The product wedge is mobile gaming
+(public tagline: "Skip the Store. Start the Play") — but the
+underlying activation engine is platform-shaped: any interactive
+content category where the install gap or cold-start latency is
+the dominant funnel leak. The defensibility is architectural,
+not feature-level: a proprietary Activation Spine plus a measured
+sub-millisecond restore path is the kind of capability that
+compounds, doesn't decay. GAVIGO frames its architecture publicly
+as "Two Pillars": the Technology Platform (CTO-led foundation)
+and the Intelligence Layer (the "soul" — the autonomous predictive
+engine that makes Instant Reality possible). I own the
+Intelligence Layer side of that architecture under the title
+Founding Principal Engineer, Activation, Execution & AI Systems.
+
+**Technical approach:** The orchestrator is a single Go binary (gorilla/websocket hub +
+Scorer + Rules Engine + K8s client-go patcher) deployed to a
+managed Kubernetes cluster. Companion pods: a React + Vite
+dashboard, a React Native / Expo mobile-web build served from an
+nginx pod, a single always-warm nginx game-server pod baking ~25
+FOSS games (zero per-game startup latency), an AI-service pod
+(Node + Express + GPT-4o-mini) that scales 0→1, Phase 6+ compute
+/ inference workloads, Redis 7 (allkeys-LRU eviction, 400 MB
+budget) for warm-pool state and activation metrics, and optional
+PostgreSQL 16 for social data.
+
+**Cross-cloud production experience: DigitalOcean and Google Cloud.**
+The platform shipped first on **DigitalOcean Kubernetes (DOKS) in
+Singapore (sgp1)** — DO Container Registry, DO LoadBalancer
+(REGIONAL type), Let's Encrypt with manual certbot renewal — chosen
+for cost-efficient prototype-to-production iteration. When GAVIGO's
+Google Cloud partnership came into effect, I led the full migration
+to **GKE Standard Zonal in Belgium (europe-west1-b)** on 2026-03-11.
+The cutover rebuilt the entire infrastructure stack: DO Container
+Registry → Artifact Registry in europe-west3 (cross-region pulls
+within GCP); DO LoadBalancer → GCE Ingress + Global HTTP(S) LB
+with Google-managed certs (auto-renewal replacing 80-day certbot
+toil); DO LB redirect annotation → FrontendConfig
+`redirectToHttps: true`; DO LB default WebSocket timeouts →
+BackendConfig `timeoutSec: 86400` to keep activation WS sessions
+alive; service types reshaped from LoadBalancer-per-frontend to
+ClusterIP-behind-Ingress; static IP swapped to a GCP global static
+IP. All five deployments (orchestrator, frontend, mobile-web,
+ai-service, redis) migrated cleanly with `strategy: Recreate` to
+avoid CPU deadlock on single-node clusters. Total production
+downtime during cutover: **~30 minutes** (DNS propagation + cert
+provisioning). The migration is fully documented in the project's
+`docs/archive/gcp-migration-record.md` for institutional memory.
+
+Hard problems solved. **Sub-millisecond restore** through a
+deterministic five-state Activation Spine with atomic Redis
+transitions and phase-by-phase timestamps that prove the
+decision → K8s patch → client observation chain. **Warm-pool
+LRU without cascade eviction** via ProtectSlot reservations that
+keep controlled / benchmark games safe from displacement.
+**Cross-platform state sync** between MMKV (native), localStorage
+/ postMessage (web), and Redis (server) with a typed game
+protocol bridging iframe ↔ WebView. **Async K8s coordination
+with real-time telemetry** — pod EndpointSlice / Pod-status
+watches feed activation_ready broadcasts with millisecond-
+precision timestamps. **Audience-aware broadcast filtering**
+(Phase 9) where the WebSocket hub filters event envelopes per
+client preset (public / investor / operator) so each viewer sees
+a different slice of the catalog. **Benchmark spine** running
+20 iterations per path on real K8s, validating <1 ms restore p50
+and ~12 ms cold p50 against load-tested 100 concurrent WebSocket
+clients.
+
+Engineering culture is phase-driven with comprehensive proof
+packs: each major capability lands as a phase (Phase 1 init →
+Phase 2 telemetry → Phase 3 shared game-server → Phase 4 service
+worker / iframe pool → Phase 5 activation spine → Phase 6
+compute workloads → Phase 7-8 proof pack → Phase 9 audience
+presets), with documentation and benchmark numbers required to
+promote work to public surfaces.
+
+**Outcomes:** Production-deployed at ire.gavigo.com. First shipped on
+DigitalOcean DOKS (Singapore), then migrated to Google Cloud GKE
+(Belgium) on 2026-03-11 in a clean ~30-minute cutover when GAVIGO's
+Google Cloud partnership came into effect — production-grade
+expertise demonstrated on both clouds. 360 total commits, 353 solo
+(98%, across both my git identities); remainder GitHub Actions bot.
+Real measured platform metrics post-migration: restore path <1 ms
+p50, cold path ~12 ms p50, 84.6% warm-pool hit rate, 0 errors at
+100 concurrent WebSocket clients in load tests. Catalog: 9 vendored
+FOSS games (curated from 11 open-source repos analyzed for license,
+build size, and web-first compatibility) across 9 studios, 199
+bundled videos. Phase 9 audience-segmentation live: investors and
+operators see different catalogs than the public surface.
+Pre-Series A; product is the working artifact for upcoming
+investor conversations. Role formally formalized over three
+contract iterations (Original Oct 17 2025; Amended Feb 9 2026;
+Second Amended Apr 16 2026), each escalating recognition of my
+technical ownership area.
+
+**External validation cycle, Feb 2026:** GAVIGO was accepted
+into the **Google for Startups Cloud Program** — announced by
+founder Saba Gecgil with the message that the value isn't cloud
+credits but the ability to "test [our] assumptions in depth and
+prove that faster activation and higher concurrency don't
+require more hardware, just better control over how compute is
+used." That partnership is what unlocked the GCP migration I
+executed on March 11. The same window brought acceptance into
+the **NVIDIA Inception Program** — the deep-tech / GPU
+infrastructure track that supports startups building GPU-
+intensive infrastructure-level technologies. And the company
+was profiled by tech-business press at feedvoice.com on
+2026-02-10 in *"How GAVIGO Is Ending App Store Friction for
+Instant Digital Play"* — the public account names the
+sub-0.2-second activation claim, the patented execution-layer
+IP positioning, the "Watch and Play era" narrative, and the
+cross-border Istanbul-to-global ambition.
+
+**My role:** Founding Principal Engineer, Activation, Execution & AI Systems
+(prior: Core Engineer), reporting to founder & CEO Saba Gecgil.
+Joined Oct 17 2025; current title and scope formalized by the
+Second Amended and Restated Consulting Agreement effective
+Apr 16 2026.
+
+The contract defines a "Protected Technical Domain" that anchors
+my role: activation systems, activation flow and execution
+behavior, activation-economics proof path, AI-assisted
+orchestration and execution-control systems, restore and reuse
+boundary work, heavier-workload validation and transition work,
+and the core activation, execution, and AI-enabled systems
+architecture of GAVIGO's interactive workload platform — plus
+the natural forward extension of that area as the system evolves.
+Recognized in the contract record as "a core long-term technical
+builder of the Company's interactive workload platform" with
+founder-level equity participation. 98% solo commit authorship
+on the active codebase.
+### 2. Google News MCP Server — Early-ecosystem MCP server (shipped 5 weeks after Anthropic's Nov 25 2024 MCP launch) — PulseMCP "Top Pick", featured in Skywork AI deep-dive review, distributed across 15+ MCP catalogs
+[tier=flagship · recency=recent · updated=2026-05-19]
+- **URL:** https://github.com/ChanMeng666/server-google-news
+- **Repository:** https://github.com/ChanMeng666/server-google-news
+- **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk, stdio transport, SerpAPI, axios, ES modules, npm (scoped @chanmeng666)
+- **First commit:** 2024-12-30 — 35 days after MCP's Nov 25 2024 public launch
+- **npm package:** @chanmeng666/google-news-server
+- **Registry listings:** 15+ MCP catalogs (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, MCP Server Finder, MCP Archive, Playbooks, mcpservers.org, Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides)
+- **PulseMCP badge:** Top Pick · 26.1k visitors · #1,105 global rank
+- **Glama quality:** A (license) · 122 stars
+- **Skywork review:** Dedicated Oct 2025 deep-dive article + AI-Engineer's Guide companion piece
+- **Stars:** ~126 GitHub · 20 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai
+- **Forks:** 20
+- **Commits:** 98 (Google News) + 71 (Google Jobs) = 169
+- **Early MCP contrib:** Issue #76 (Nov 27 2024 — Windows/NVM workaround)
+**Summary:** An early-ecosystem MCP server — first commit **Dec 30 2024, just
+35 days after Anthropic's public launch of the Model Context
+Protocol on Nov 25 2024**. Brings Google News search to AI
+assistants like Claude Desktop, Cline, and Cursor through SerpAPI,
+with automatic topical categorization (AI & Technology, Business,
+Science & Research, Healthcare, General) and multi-language /
+multi-region support. Carries the **PulseMCP "Top Pick" badge**
+with 26.1k estimated visitors and a #1,105 global popularity rank.
+Featured in three independent deep-dive write-ups: Skywork AI's
+*"Chan Meng's Google News MCP Server: The AI Engineer's Guide to
+Real-Time News Integration"*, Skywork's *"Google News & Trends
+MCP Server: The AI Engineer's Deep Dive"*, and AgentSkillsHub's
+*"Install Guide & Security Review"*. Distributed across **15+
+MCP catalogs and registries** — Smithery, mcp.so, Glama (A
+license rating, 122 stars), PulseMCP, Awesome MCP Servers,
+MCP Server Finder, MCP Archive, Playbooks, mcpservers.org,
+Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub,
+MagicSlides — and npm-published as
+`@chanmeng666/google-news-server`. Paired with a companion early
+server, `server-google-jobs` (first commit Dec 31 2024) —
+together 169 solo commits across the two servers. Beyond shipping
+code, I contributed early ecosystem troubleshooting via
+[modelcontextprotocol/servers issue #76](https://github.com/modelcontextprotocol/servers/issues/76)
+(opened Nov 27 2024) — the Windows + NVM PATH workaround
+referenced in both server READMEs as primary troubleshooting
+guidance.
+
+**Impact:** Earliest-ecosystem MCP server (shipped 35 days after Anthropic's Nov 2024 MCP launch) — now listed across 15+ MCP catalogs, earned PulseMCP's 'Top Pick' badge and Glama's A-rating, used by AI assistants worldwide for current-events search.
+
+**Problem:** Anthropic published the Model Context Protocol specification in
+November 2024 as the open standard for connecting AI assistants
+like Claude to external tools and data sources — but in the first
+weeks after launch, the ecosystem had only a handful of reference
+servers and no real way for AI assistants to search current news.
+Generative engines (ChatGPT, Claude, Perplexity) were increasingly
+being asked "what's happening with X today" — questions an LLM
+cannot answer from training data alone. The gap was concrete:
+Claude Desktop users wanted current-events search; the MCP server
+catalog had nothing for Google News.
+
+A second, related friction surfaced almost immediately: Windows
+users running Node Version Manager couldn't get any npm-based MCP
+server (filesystem, github, postgres, brave-search, google-maps,
+etc.) to connect to Claude Desktop, because PATH resolution
+through NVM's shim layer broke the desktop client's process
+spawn. This blocked a large fraction of early Windows adopters
+from using MCP at all.
+
+**Audience:** AI assistants and the developers integrating them. Direct
+consumers: Claude Desktop, Cline, Cursor's agent mode, Continue,
+any MCP-compliant client running a system prompt that includes
+news-search capability. Downstream consumers: end-users asking
+their AI assistant about current events, journalists / analysts
+using AI workflows to monitor coverage, developers building
+research agents and content workflows. The multi-registry
+distribution surface (10+ catalogs) was designed for *discovery*:
+AI developers find MCP servers by browsing registries, not by
+searching GitHub.
+
+**Product logic:** A user asks their AI assistant something like "what's happening
+with [topic] in [region] this week"; the assistant invokes the
+MCP server's `google_news_search` tool with `query`, optional
+`gl` (country code), and `hl` (language code) parameters; the
+server relays the request to SerpAPI's `google_news` engine and
+returns structured JSON; the server then post-processes the
+results with regex-based topic categorization (AI & Technology,
+Business, Science & Research, Healthcare, General) and formats
+the output with source attribution, dates, snippets, and links
+intact.
+
+The companion `server-google-jobs` follows the same pattern with
+a richer parameter set — `query` plus `location`, `posted_age`
+(today / 3 days / week / month), `employment_type`
+(FULLTIME / PARTTIME / CONTRACTOR / INTERN), `salary`, `radius`,
+`hl`, `page`, `sort_by` — and ships with **full localization
+for English, Simplified Chinese, Japanese, and Korean**
+(30+ translated strings per locale).
+
+Both servers run over MCP's `stdio` transport — the default
+channel for desktop AI clients — and are installable in one
+command via Smithery's CLI:
+`npx -y @smithery/cli install @chanmeng666/google-news-server --client claude`.
+
+**Business logic:** Open source, MIT licensed, no direct monetization. The strategic
+intent is **ecosystem positioning**: be the canonical Google
+News / Google Jobs MCP server during the formative months of the
+Model Context Protocol so the project compounds discovery for
+adjacent work. Multi-registry distribution (Smithery, mcp.so,
+Glama, PulseMCP, Awesome MCP Servers, mcpservers.org, MCP
+Archive, MCP Server Finder, Playbooks, Archestra) makes the
+project surface anywhere a developer looks for an MCP tool.
+The README's structured JSON-LD `SoftwareApplication` metadata
+and `<script type="text/llms.txt">` section take the same
+approach to LLM-driven discovery that the rest of my work uses:
+AI agents themselves should be able to read the server's
+identity, parameters, and use cases without parsing prose.
+
+**Technical approach:** TypeScript on Node.js, built against `@modelcontextprotocol/sdk`
+v1.0.0 (Google News) and v1.25.1 (Google Jobs — the newer SDK
+pin reflects ongoing maintenance). ES module target, packaged
+as a CLI binary (`google-news-server`, `google-jobs-server`)
+exported in `package.json`. Transport is stdio — the default
+channel for desktop AI clients, where the server runs as a
+spawned subprocess of Claude Desktop or equivalent. HTTP is
+handled with axios on the News server and node-fetch on the
+Jobs server (deliberately leaner — no axios, no dotenv
+overhead, environment read directly from `process.env`).
+
+SerpAPI (paid tier required for News and Jobs query volume;
+2 req/sec rate limit, 5 concurrent, 1 h cache) is the underlying
+data plane. The servers add a thin
+intelligence layer on top: query parameter validation,
+categorization post-processing, multi-language formatting,
+error handling with localized messages. Both READMEs are 320-335
+lines and structured with badges, video demos, MseeP.ai
+security badges, JSON-LD `SoftwareApplication` schema, and an
+explicit "AI Assistant Instructions & GEO Optimization"
+collapsible section — the same GEO-aware authoring pattern I
+use across all my work.
+
+Beyond shipping code, the third technical contribution is
+community: my **issue #76** (opened Nov 27 2024, three weeks
+after MCP's launch) documented the Windows + NVM `PATH`
+resolution failure that blocked Claude Desktop from spawning
+npm-based MCP servers. The fix — point Claude Desktop's config
+at the absolute path of `node.exe` rather than relying on PATH
+— is referenced as primary troubleshooting guidance in both my
+own server READMEs and (per the README's own claim) became
+guidance in the broader MCP ecosystem.
+
+**Outcomes:** Both servers are production-deployed via npm and listed across
+**15+ MCP discovery surfaces**, with independent third-party
+validation that this is treated as portfolio-grade MCP work:
+
+**Catalog distribution & quality signals (server-google-news,
+`@chanmeng666/google-news-server`):**
+- **PulseMCP "Top Pick" badge** + 26.1k estimated visitors,
+  #1,105 global popularity rank
+  ([listing](https://www.pulsemcp.com/servers/chanmeng666-google-news))
+- **Glama A-grade license rating** + 122 stars
+  ([listing](https://glama.ai/mcp/servers/@ChanMeng666/server-google-news))
+- Smithery one-command install
+- Listed across mcp.so, Awesome MCP Servers (mcpservers.org),
+  MCP Server Finder, MCP Archive, Playbooks, Archestra, serp.ai,
+  mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides
+
+**Catalog distribution (server-google-jobs,
+`@chanmeng666/google-jobs-server`):**
+- PulseMCP listing — 4.6k visitors, registered Jan 1 2025
+- Glama listed (A license rating)
+- AI Toolhouse, mcp.so, AIBase, MagicSlides, serp.ly
+
+**Independent media coverage:** three dedicated deep-dive
+articles by third-party reviewers in 2025:
+- Skywork AI: *"The Ultimate Guide to Chan Meng's Google Jobs
+  MCP Server"* (Oct 27, 2025) — describes the project as *"one
+  of the most elegant, production-ready solutions I've found
+  for a very specific, very common problem"* and benchmarks it
+  favourably against generic SerpAPI wrappers, custom scrapers,
+  and manual API integrations
+- Skywork AI: *"Chan Meng's Google News MCP Server: The AI
+  Engineer's Guide to Real-Time News Integration"*
+- Skywork AI: *"Google News & Trends MCP Server: The AI
+  Engineer's Deep Dive"*
+- AgentSkillsHub: *"Google News MCP Server — Install Guide &
+  Security Review"*
+
+**Combined engineering footprint:** 169 commits across the two
+servers, both authored solo, actively maintained through
+2025–26. Both serve as concrete artefacts for the
+early-MCP-developer narrative — **first commits Dec 30 and
+Dec 31 2024, within 5–6 weeks of MCP's Nov 25 2024 public
+launch**. Issue #76 remains visible in the official
+`modelcontextprotocol/servers` repository as institutional
+memory of an early ecosystem contribution.
+
+**My role:** Sole author, sole maintainer, sole responder to issues and PRs.
+Both servers, both READMEs, both npm publishes, both registry
+submissions, the issue #76 troubleshooting contribution.
+
+The broader signal: these two servers + the early issue #76
+contribution position me as an immediately-active MCP
+ecosystem participant — not a theoretical early adopter, but
+someone who shipped, distributed, documented, and supported
+production MCP infrastructure within the protocol's first
+month.
+### 3. Tam-AI-Ti (tam-ai-ti-web) — Independent research commission for enterprise executive Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead) — an AI Financial Wellness Coach grounded in Te Whare Tapa Whā that proved Māori users will engage with a culturally-native AI agent (19-user cohort, 4 months, bilingual te reo Māori). 351 solo commits, 48-table schema where culture is typed data not UI decoration, voice-first GPT-4o Realtime coach, CopilotKit agent across 88+ actions.
 [tier=flagship · recency=active · updated=2026-07-04]
 - **URL:** https://tamaiti.whiri-ai.com/
 - **Demo:** https://youtu.be/NtT7_q6xhlk
@@ -2200,7 +2614,7 @@ production migration from my personal Vercel to the client's
 Whiri-AI Pro team that I designed, executed, and documented as a
 reusable `PROJECT_MIGRATION_GUIDE.md` playbook for future client
 engagements.
-### 2. She Sharp — Solo-built production platform that digitized, automated, and AI-upgraded NZ's
+### 4. She Sharp — Solo-built production platform that digitized, automated, and AI-upgraded NZ's
 leading women-in-STEM nonprofit (charitable trust CC57025, 2,200+ members,
 8,000+ women supported) — replacing Webflow + spreadsheets with a real member
 engine. GPT-4o-mini AI mentor matching (5-weight scoring + admin review),
@@ -2577,420 +2991,6 @@ professional SEO audit and recommendations report
 (serpdata-api-test) on shesharp.org.nz — operating across
 engineering, instructional design, and strategic analysis under
 one role.
-### 3. GAVIGO IRE — Founding-engineer MVP for GAVIGO Inc. (Delaware C-Corp) — the 'Instant Reality Exchange' post-app activation platform with sub-millisecond container pre-warming (p50 <1 ms restore, 84.6% warm-pool hit), AI-orchestrated Kubernetes scaling, and a TikTok-style mobile feed; validated by Google for Startups + NVIDIA Inception (Feb 2026) after a DOKS→GKE production migration
-[tier=flagship · recency=active · updated=2026-07-04]
-- **URL:** https://ire.gavigo.com/
-- **Tech stack:** Go, gorilla/websocket, Kubernetes, DigitalOcean DOKS (initial), Google Kubernetes Engine (post-migration), client-go (K8s API), Artifact Registry, GCE Ingress + Global HTTP(S) LB, React 18, Vite, React Native, Expo 54, WebSocket, Redis 7, PostgreSQL 16, Supabase, GPT-4o-mini
-- **Total commits:** 360
-- **Solo commits:** 353 (98%)
-- **Restore path p50:** <1 ms
-- **Cold path p50:** ~12 ms
-- **Warm pool hit rate:** 84.6%
-- **Cloud platforms:** DigitalOcean DOKS → Google Cloud GKE
-- **Cross-cloud cutover:** ~30 min downtime (2026-03-11)
-- **Games vendored (FOSS):** 9 (from 11 repos analyzed)
-**Summary:** AI-orchestrated post-app activation platform for GAVIGO Inc. (Delaware
-C-Corp; founder & CEO Saba Gecgil). Public mission: "Skip the Store.
-Start the Play" — eliminate the latency between user intent and
-interactive content delivery. Distributed system: Go orchestrator
-(WebSocket hub + Scorer + 7-trigger rules engine + Kubernetes client),
-React dashboard for live orchestration visualization, React Native /
-Expo mobile app with TikTok-style feed. Originally architected and
-shipped on **DigitalOcean managed Kubernetes (DOKS, Singapore)**, then
-migrated to **Google Cloud GKE (Belgium)** in a single ~30-minute
-production cutover (2026-03-11) when GAVIGO's Google Cloud partnership
-came into effect — production expertise on both clouds. Real measured
-performance post-migration: restore path <1 ms p50, cold path ~12 ms,
-84.6% warm-pool hit rate. 360 total commits, 353 (98%) solo. As
-Founding Principal Engineer, Activation, Execution & AI Systems, I
-own the contractually-defined "Protected Technical Domain": activation
-systems, activation flow and execution behavior, activation-economics
-proof path, AI-assisted orchestration and execution-control,
-restore/reuse boundaries, and heavier-workload validation.
-
-**Impact:** Founding-engineer MVP for a Delaware startup — sub-millisecond interactive-content activation (p50 <1 ms, 84.6% warm-pool hit) on Kubernetes, production-validated by Google for Startups + NVIDIA Inception; 353/360 commits (98%) solo as Founding Principal Engineer.
-
-**Problem:** The native-app paradigm puts a friction tax on every interactive
-digital experience: discover an app → app-store landing page → install
-→ onboard → first interaction. By the time the user reaches the thing
-they actually wanted, the moment has passed. For games, video, and
-AI experiences — where perception of instantaneity drives engagement
-— the install gap is the single largest leak in the funnel. GAVIGO's
-thesis (in its own marketing language): we are building the
-"Post-App World," eliminating the trillion-dollar friction between
-user intent and digital experience through proprietary "Instant
-Reality Switching" technology.
-
-**Audience:** Two surfaces in production today. **Consumer surface**: end users on
-ire.gavigo.com and the mobile build, scrolling a TikTok-style
-vertical feed of FOSS games (Hextris, Clumsy Bird, Tiny Yurts,
-Catculus, Casual Crusade, Stolen Sword, and others — 9 vendored to
-date from a curated set of 11 open-source repos analyzed). **Investor
-/ operator surface**: the React dashboard at the same domain, which
-shows the orchestrator's AI decisions, container state machine
-(COLD → PREPARING → READY → ACTIVE → REUSABLE), warm-pool budget,
-activation-quality metrics, and side-by-side iframe of the mobile
-app — purpose-built for live demos to investors and partner
-evaluators. A Phase 9 audience-segmentation feature filters
-visibility per role (public / investor / operator presets) at
-WebSocket broadcast time. The ultimate addressable surface is any
-market where perception of instantaneity drives engagement — mobile
-games, short-form video, AI chat, generative content.
-
-**Product logic:** A user scrolls a TikTok-style vertical feed; the orchestrator
-watches focus events stream over a WebSocket hub, scores each
-candidate piece of content on three weighted signals (personal
-attention 0.4, global attention 0.4, trend / virality 0.2), and
-when combined score crosses a 0.6 threshold, fires one of seven AI
-triggers — Swarm Boost, Proactive Warm, Cross-Domain Inject,
-Mode Change, Lookahead Warm, Initial Warm, Checkpoint Restore —
-each of which patches Kubernetes deployment replicas through the
-K8s client-go API to scale a game container to READY before the
-user taps.
-
-When the user taps, the experience is already live — either served
-instantly from a single always-warm shared game-server pod
-(~12 ms cold path) or restored from the Reusable pool of recently-
-active containers (<1 ms restore path). State survives across
-scrolls via a postMessage protocol on web and MMKV storage on
-native; both reconcile against Redis as a single source of truth
-through a deterministic five-state Activation Spine
-(COLD → READY → ACTIVE → REUSABLE → restore). When mobile gaming
-meets the install gap, the GAVIGO answer is: there is no install
-gap.
-
-**Business logic:** GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
-stage, founder Saba Gecgil. The product wedge is mobile gaming
-(public tagline: "Skip the Store. Start the Play") — but the
-underlying activation engine is platform-shaped: any interactive
-content category where the install gap or cold-start latency is
-the dominant funnel leak. The defensibility is architectural,
-not feature-level: a proprietary Activation Spine plus a measured
-sub-millisecond restore path is the kind of capability that
-compounds, doesn't decay. GAVIGO frames its architecture publicly
-as "Two Pillars": the Technology Platform (CTO-led foundation)
-and the Intelligence Layer (the "soul" — the autonomous predictive
-engine that makes Instant Reality possible). I own the
-Intelligence Layer side of that architecture under the title
-Founding Principal Engineer, Activation, Execution & AI Systems.
-
-**Technical approach:** The orchestrator is a single Go binary (gorilla/websocket hub +
-Scorer + Rules Engine + K8s client-go patcher) deployed to a
-managed Kubernetes cluster. Companion pods: a React + Vite
-dashboard, a React Native / Expo mobile-web build served from an
-nginx pod, a single always-warm nginx game-server pod baking ~25
-FOSS games (zero per-game startup latency), an AI-service pod
-(Node + Express + GPT-4o-mini) that scales 0→1, Phase 6+ compute
-/ inference workloads, Redis 7 (allkeys-LRU eviction, 400 MB
-budget) for warm-pool state and activation metrics, and optional
-PostgreSQL 16 for social data.
-
-**Cross-cloud production experience: DigitalOcean and Google Cloud.**
-The platform shipped first on **DigitalOcean Kubernetes (DOKS) in
-Singapore (sgp1)** — DO Container Registry, DO LoadBalancer
-(REGIONAL type), Let's Encrypt with manual certbot renewal — chosen
-for cost-efficient prototype-to-production iteration. When GAVIGO's
-Google Cloud partnership came into effect, I led the full migration
-to **GKE Standard Zonal in Belgium (europe-west1-b)** on 2026-03-11.
-The cutover rebuilt the entire infrastructure stack: DO Container
-Registry → Artifact Registry in europe-west3 (cross-region pulls
-within GCP); DO LoadBalancer → GCE Ingress + Global HTTP(S) LB
-with Google-managed certs (auto-renewal replacing 80-day certbot
-toil); DO LB redirect annotation → FrontendConfig
-`redirectToHttps: true`; DO LB default WebSocket timeouts →
-BackendConfig `timeoutSec: 86400` to keep activation WS sessions
-alive; service types reshaped from LoadBalancer-per-frontend to
-ClusterIP-behind-Ingress; static IP swapped to a GCP global static
-IP. All five deployments (orchestrator, frontend, mobile-web,
-ai-service, redis) migrated cleanly with `strategy: Recreate` to
-avoid CPU deadlock on single-node clusters. Total production
-downtime during cutover: **~30 minutes** (DNS propagation + cert
-provisioning). The migration is fully documented in the project's
-`docs/archive/gcp-migration-record.md` for institutional memory.
-
-Hard problems solved. **Sub-millisecond restore** through a
-deterministic five-state Activation Spine with atomic Redis
-transitions and phase-by-phase timestamps that prove the
-decision → K8s patch → client observation chain. **Warm-pool
-LRU without cascade eviction** via ProtectSlot reservations that
-keep controlled / benchmark games safe from displacement.
-**Cross-platform state sync** between MMKV (native), localStorage
-/ postMessage (web), and Redis (server) with a typed game
-protocol bridging iframe ↔ WebView. **Async K8s coordination
-with real-time telemetry** — pod EndpointSlice / Pod-status
-watches feed activation_ready broadcasts with millisecond-
-precision timestamps. **Audience-aware broadcast filtering**
-(Phase 9) where the WebSocket hub filters event envelopes per
-client preset (public / investor / operator) so each viewer sees
-a different slice of the catalog. **Benchmark spine** running
-20 iterations per path on real K8s, validating <1 ms restore p50
-and ~12 ms cold p50 against load-tested 100 concurrent WebSocket
-clients.
-
-Engineering culture is phase-driven with comprehensive proof
-packs: each major capability lands as a phase (Phase 1 init →
-Phase 2 telemetry → Phase 3 shared game-server → Phase 4 service
-worker / iframe pool → Phase 5 activation spine → Phase 6
-compute workloads → Phase 7-8 proof pack → Phase 9 audience
-presets), with documentation and benchmark numbers required to
-promote work to public surfaces.
-
-**Outcomes:** Production-deployed at ire.gavigo.com. First shipped on
-DigitalOcean DOKS (Singapore), then migrated to Google Cloud GKE
-(Belgium) on 2026-03-11 in a clean ~30-minute cutover when GAVIGO's
-Google Cloud partnership came into effect — production-grade
-expertise demonstrated on both clouds. 360 total commits, 353 solo
-(98%, across both my git identities); remainder GitHub Actions bot.
-Real measured platform metrics post-migration: restore path <1 ms
-p50, cold path ~12 ms p50, 84.6% warm-pool hit rate, 0 errors at
-100 concurrent WebSocket clients in load tests. Catalog: 9 vendored
-FOSS games (curated from 11 open-source repos analyzed for license,
-build size, and web-first compatibility) across 9 studios, 199
-bundled videos. Phase 9 audience-segmentation live: investors and
-operators see different catalogs than the public surface.
-Pre-Series A; product is the working artifact for upcoming
-investor conversations. Role formally formalized over three
-contract iterations (Original Oct 17 2025; Amended Feb 9 2026;
-Second Amended Apr 16 2026), each escalating recognition of my
-technical ownership area.
-
-**External validation cycle, Feb 2026:** GAVIGO was accepted
-into the **Google for Startups Cloud Program** — announced by
-founder Saba Gecgil with the message that the value isn't cloud
-credits but the ability to "test [our] assumptions in depth and
-prove that faster activation and higher concurrency don't
-require more hardware, just better control over how compute is
-used." That partnership is what unlocked the GCP migration I
-executed on March 11. The same window brought acceptance into
-the **NVIDIA Inception Program** — the deep-tech / GPU
-infrastructure track that supports startups building GPU-
-intensive infrastructure-level technologies. And the company
-was profiled by tech-business press at feedvoice.com on
-2026-02-10 in *"How GAVIGO Is Ending App Store Friction for
-Instant Digital Play"* — the public account names the
-sub-0.2-second activation claim, the patented execution-layer
-IP positioning, the "Watch and Play era" narrative, and the
-cross-border Istanbul-to-global ambition.
-
-**My role:** Founding Principal Engineer, Activation, Execution & AI Systems
-(prior: Core Engineer), reporting to founder & CEO Saba Gecgil.
-Joined Oct 17 2025; current title and scope formalized by the
-Second Amended and Restated Consulting Agreement effective
-Apr 16 2026.
-
-The contract defines a "Protected Technical Domain" that anchors
-my role: activation systems, activation flow and execution
-behavior, activation-economics proof path, AI-assisted
-orchestration and execution-control systems, restore and reuse
-boundary work, heavier-workload validation and transition work,
-and the core activation, execution, and AI-enabled systems
-architecture of GAVIGO's interactive workload platform — plus
-the natural forward extension of that area as the system evolves.
-Recognized in the contract record as "a core long-term technical
-builder of the Company's interactive workload platform" with
-founder-level equity participation. 98% solo commit authorship
-on the active codebase.
-### 4. Google News MCP Server — Early-ecosystem MCP server (shipped 5 weeks after Anthropic's Nov 25 2024 MCP launch) — PulseMCP "Top Pick", featured in Skywork AI deep-dive review, distributed across 15+ MCP catalogs
-[tier=flagship · recency=recent · updated=2026-05-19]
-- **URL:** https://github.com/ChanMeng666/server-google-news
-- **Repository:** https://github.com/ChanMeng666/server-google-news
-- **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk, stdio transport, SerpAPI, axios, ES modules, npm (scoped @chanmeng666)
-- **First commit:** 2024-12-30 — 35 days after MCP's Nov 25 2024 public launch
-- **npm package:** @chanmeng666/google-news-server
-- **Registry listings:** 15+ MCP catalogs (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, MCP Server Finder, MCP Archive, Playbooks, mcpservers.org, Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides)
-- **PulseMCP badge:** Top Pick · 26.1k visitors · #1,105 global rank
-- **Glama quality:** A (license) · 122 stars
-- **Skywork review:** Dedicated Oct 2025 deep-dive article + AI-Engineer's Guide companion piece
-- **Stars:** ~126 GitHub · 20 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai
-- **Forks:** 20
-- **Commits:** 98 (Google News) + 71 (Google Jobs) = 169
-- **Early MCP contrib:** Issue #76 (Nov 27 2024 — Windows/NVM workaround)
-**Summary:** An early-ecosystem MCP server — first commit **Dec 30 2024, just
-35 days after Anthropic's public launch of the Model Context
-Protocol on Nov 25 2024**. Brings Google News search to AI
-assistants like Claude Desktop, Cline, and Cursor through SerpAPI,
-with automatic topical categorization (AI & Technology, Business,
-Science & Research, Healthcare, General) and multi-language /
-multi-region support. Carries the **PulseMCP "Top Pick" badge**
-with 26.1k estimated visitors and a #1,105 global popularity rank.
-Featured in three independent deep-dive write-ups: Skywork AI's
-*"Chan Meng's Google News MCP Server: The AI Engineer's Guide to
-Real-Time News Integration"*, Skywork's *"Google News & Trends
-MCP Server: The AI Engineer's Deep Dive"*, and AgentSkillsHub's
-*"Install Guide & Security Review"*. Distributed across **15+
-MCP catalogs and registries** — Smithery, mcp.so, Glama (A
-license rating, 122 stars), PulseMCP, Awesome MCP Servers,
-MCP Server Finder, MCP Archive, Playbooks, mcpservers.org,
-Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub,
-MagicSlides — and npm-published as
-`@chanmeng666/google-news-server`. Paired with a companion early
-server, `server-google-jobs` (first commit Dec 31 2024) —
-together 169 solo commits across the two servers. Beyond shipping
-code, I contributed early ecosystem troubleshooting via
-[modelcontextprotocol/servers issue #76](https://github.com/modelcontextprotocol/servers/issues/76)
-(opened Nov 27 2024) — the Windows + NVM PATH workaround
-referenced in both server READMEs as primary troubleshooting
-guidance.
-
-**Impact:** Earliest-ecosystem MCP server (shipped 35 days after Anthropic's Nov 2024 MCP launch) — now listed across 15+ MCP catalogs, earned PulseMCP's 'Top Pick' badge and Glama's A-rating, used by AI assistants worldwide for current-events search.
-
-**Problem:** Anthropic published the Model Context Protocol specification in
-November 2024 as the open standard for connecting AI assistants
-like Claude to external tools and data sources — but in the first
-weeks after launch, the ecosystem had only a handful of reference
-servers and no real way for AI assistants to search current news.
-Generative engines (ChatGPT, Claude, Perplexity) were increasingly
-being asked "what's happening with X today" — questions an LLM
-cannot answer from training data alone. The gap was concrete:
-Claude Desktop users wanted current-events search; the MCP server
-catalog had nothing for Google News.
-
-A second, related friction surfaced almost immediately: Windows
-users running Node Version Manager couldn't get any npm-based MCP
-server (filesystem, github, postgres, brave-search, google-maps,
-etc.) to connect to Claude Desktop, because PATH resolution
-through NVM's shim layer broke the desktop client's process
-spawn. This blocked a large fraction of early Windows adopters
-from using MCP at all.
-
-**Audience:** AI assistants and the developers integrating them. Direct
-consumers: Claude Desktop, Cline, Cursor's agent mode, Continue,
-any MCP-compliant client running a system prompt that includes
-news-search capability. Downstream consumers: end-users asking
-their AI assistant about current events, journalists / analysts
-using AI workflows to monitor coverage, developers building
-research agents and content workflows. The multi-registry
-distribution surface (10+ catalogs) was designed for *discovery*:
-AI developers find MCP servers by browsing registries, not by
-searching GitHub.
-
-**Product logic:** A user asks their AI assistant something like "what's happening
-with [topic] in [region] this week"; the assistant invokes the
-MCP server's `google_news_search` tool with `query`, optional
-`gl` (country code), and `hl` (language code) parameters; the
-server relays the request to SerpAPI's `google_news` engine and
-returns structured JSON; the server then post-processes the
-results with regex-based topic categorization (AI & Technology,
-Business, Science & Research, Healthcare, General) and formats
-the output with source attribution, dates, snippets, and links
-intact.
-
-The companion `server-google-jobs` follows the same pattern with
-a richer parameter set — `query` plus `location`, `posted_age`
-(today / 3 days / week / month), `employment_type`
-(FULLTIME / PARTTIME / CONTRACTOR / INTERN), `salary`, `radius`,
-`hl`, `page`, `sort_by` — and ships with **full localization
-for English, Simplified Chinese, Japanese, and Korean**
-(30+ translated strings per locale).
-
-Both servers run over MCP's `stdio` transport — the default
-channel for desktop AI clients — and are installable in one
-command via Smithery's CLI:
-`npx -y @smithery/cli install @chanmeng666/google-news-server --client claude`.
-
-**Business logic:** Open source, MIT licensed, no direct monetization. The strategic
-intent is **ecosystem positioning**: be the canonical Google
-News / Google Jobs MCP server during the formative months of the
-Model Context Protocol so the project compounds discovery for
-adjacent work. Multi-registry distribution (Smithery, mcp.so,
-Glama, PulseMCP, Awesome MCP Servers, mcpservers.org, MCP
-Archive, MCP Server Finder, Playbooks, Archestra) makes the
-project surface anywhere a developer looks for an MCP tool.
-The README's structured JSON-LD `SoftwareApplication` metadata
-and `<script type="text/llms.txt">` section take the same
-approach to LLM-driven discovery that the rest of my work uses:
-AI agents themselves should be able to read the server's
-identity, parameters, and use cases without parsing prose.
-
-**Technical approach:** TypeScript on Node.js, built against `@modelcontextprotocol/sdk`
-v1.0.0 (Google News) and v1.25.1 (Google Jobs — the newer SDK
-pin reflects ongoing maintenance). ES module target, packaged
-as a CLI binary (`google-news-server`, `google-jobs-server`)
-exported in `package.json`. Transport is stdio — the default
-channel for desktop AI clients, where the server runs as a
-spawned subprocess of Claude Desktop or equivalent. HTTP is
-handled with axios on the News server and node-fetch on the
-Jobs server (deliberately leaner — no axios, no dotenv
-overhead, environment read directly from `process.env`).
-
-SerpAPI (paid tier required for News and Jobs query volume;
-2 req/sec rate limit, 5 concurrent, 1 h cache) is the underlying
-data plane. The servers add a thin
-intelligence layer on top: query parameter validation,
-categorization post-processing, multi-language formatting,
-error handling with localized messages. Both READMEs are 320-335
-lines and structured with badges, video demos, MseeP.ai
-security badges, JSON-LD `SoftwareApplication` schema, and an
-explicit "AI Assistant Instructions & GEO Optimization"
-collapsible section — the same GEO-aware authoring pattern I
-use across all my work.
-
-Beyond shipping code, the third technical contribution is
-community: my **issue #76** (opened Nov 27 2024, three weeks
-after MCP's launch) documented the Windows + NVM `PATH`
-resolution failure that blocked Claude Desktop from spawning
-npm-based MCP servers. The fix — point Claude Desktop's config
-at the absolute path of `node.exe` rather than relying on PATH
-— is referenced as primary troubleshooting guidance in both my
-own server READMEs and (per the README's own claim) became
-guidance in the broader MCP ecosystem.
-
-**Outcomes:** Both servers are production-deployed via npm and listed across
-**15+ MCP discovery surfaces**, with independent third-party
-validation that this is treated as portfolio-grade MCP work:
-
-**Catalog distribution & quality signals (server-google-news,
-`@chanmeng666/google-news-server`):**
-- **PulseMCP "Top Pick" badge** + 26.1k estimated visitors,
-  #1,105 global popularity rank
-  ([listing](https://www.pulsemcp.com/servers/chanmeng666-google-news))
-- **Glama A-grade license rating** + 122 stars
-  ([listing](https://glama.ai/mcp/servers/@ChanMeng666/server-google-news))
-- Smithery one-command install
-- Listed across mcp.so, Awesome MCP Servers (mcpservers.org),
-  MCP Server Finder, MCP Archive, Playbooks, Archestra, serp.ai,
-  mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides
-
-**Catalog distribution (server-google-jobs,
-`@chanmeng666/google-jobs-server`):**
-- PulseMCP listing — 4.6k visitors, registered Jan 1 2025
-- Glama listed (A license rating)
-- AI Toolhouse, mcp.so, AIBase, MagicSlides, serp.ly
-
-**Independent media coverage:** three dedicated deep-dive
-articles by third-party reviewers in 2025:
-- Skywork AI: *"The Ultimate Guide to Chan Meng's Google Jobs
-  MCP Server"* (Oct 27, 2025) — describes the project as *"one
-  of the most elegant, production-ready solutions I've found
-  for a very specific, very common problem"* and benchmarks it
-  favourably against generic SerpAPI wrappers, custom scrapers,
-  and manual API integrations
-- Skywork AI: *"Chan Meng's Google News MCP Server: The AI
-  Engineer's Guide to Real-Time News Integration"*
-- Skywork AI: *"Google News & Trends MCP Server: The AI
-  Engineer's Deep Dive"*
-- AgentSkillsHub: *"Google News MCP Server — Install Guide &
-  Security Review"*
-
-**Combined engineering footprint:** 169 commits across the two
-servers, both authored solo, actively maintained through
-2025–26. Both serve as concrete artefacts for the
-early-MCP-developer narrative — **first commits Dec 30 and
-Dec 31 2024, within 5–6 weeks of MCP's Nov 25 2024 public
-launch**. Issue #76 remains visible in the official
-`modelcontextprotocol/servers` repository as institutional
-memory of an early ecosystem contribution.
-
-**My role:** Sole author, sole maintainer, sole responder to issues and PRs.
-Both servers, both READMEs, both npm publishes, both registry
-submissions, the issue #76 troubleshooting contribution.
-
-The broader signal: these two servers + the early issue #76
-contribution position me as an immediately-active MCP
-ecosystem participant — not a theoretical early adopter, but
-someone who shipped, distributed, documented, and supported
-production MCP infrastructure within the protocol's first
-month.
 
 ## Notable Open Source Projects
 

@@ -35,7 +35,7 @@
   </tr>
 {{/each}}</table>
 
-<details>
+{{#if _moreProjectsByGroup.length}}<details>
 <summary><kbd>&nbsp;More AI agents & tools &nbsp;·&nbsp; More open-source products &nbsp;·&nbsp; Creative & experiments&nbsp;</kbd></summary>
 
 <br>
@@ -58,6 +58,6 @@
 {{/each}}
 <p><a href="https://github.com/ChanMeng666?tab=repositories">View all repositories →</a></p>
 
-</details>
+</details>{{else}}<p><a href="https://github.com/ChanMeng666?tab=repositories">View all repositories →</a></p>{{/if}}
 
 {{> suno-cards}}

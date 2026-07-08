@@ -788,7 +788,7 @@
       "tagline": "Independent research commission for enterprise executive Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead) — an AI Financial Wellness Coach grounded in Te Whare Tapa Whā that proved Māori users will engage with a culturally-native AI agent (19-user cohort, 4 months, bilingual te reo Māori). 351 solo commits, 48-table schema where culture is typed data not UI decoration, voice-first GPT-4o Realtime coach, CopilotKit agent across 88+ actions.",
       "url": "https://tamaiti.whiri-ai.com/",
       "demoUrl": "https://youtu.be/NtT7_q6xhlk",
-      "logo": "/public/brands/tam-ai-ti-logo-with-brand.svg",
+      "logo": "/public/brands/tam-ai-ti-mark.svg",
       "entity": "Riria (Missy) Te Kanawa (independent research commission · ASB Bank)",
       "roles": [
         "Solo Independent Developer",
@@ -939,6 +939,7 @@
         "outcomes": "Production-deployed at **tamaiti.whiri-ai.com**, in active operation\nsince October 2025. **Research cohort engagement (Oct 2025 – Mar 2026,\napproximately four months)**: 19 verified users, 181 bilingual journal\nentries, 18 active financial goals, 146 AI coach messages, 35 voice\ncoaching sessions, 74 daily Hauora check-ins. Sustained multi-month\nengagement on a pre-commercial product with no marketing channel — a\nmeaningful early signal for a research-pilot product.\n\n**March 2026 production migration**: executed a zero-downtime cutover\nfrom my personal Vercel Hobby account to the client's Whiri-AI Pro\nteam account, including GitHub repo transfer, Vercel Blob + KV\nre-creation, Google OAuth re-config, custom-domain DNS cutover\nthrough Cloudflare, blob-data migration, Resend sender-domain\nre-verification, and `NEXTAUTH_SECRET` preservation so existing user\nsessions survived the move. The whole migration was documented as a\nreusable artifact at `docs/implementation/PROJECT_MIGRATION_GUIDE.md`\n— a 12-step playbook covering every component, the\nwhat-transfers-and-what-doesn't matrix, and the rationale for *not*\nusing Vercel's built-in Project Transfer feature.\n\n**22 schema migrations shipped** in lock-step with feature work, none\nrolled back; the most consequential being 0015 (Hauora-metrics\nrestructure from mixed types to consistent integer scales), 0020\n(Financial Coach voice tables) and 0021 (period-based tracking for\nOptions F/G converting them from one-shot to recurring goals). React\nServer Components CVE patches landed within hours of Vercel/Snyk\nautomated PRs (PR #2, Dec 2025).\n\nProject status: fully developed, deployed, in active operating phase,\nand transferred to client operational ownership. Sits within Missy\nTe Kanawa's wider body of published work on Māori economic prosperity\n— KPMG NZ **Maui Rau** report series (lead author), Māori Governance\nSummit talks, The Spinoff contributing author — and is the working\nartifact for the thesis that culturally-native technology can serve\nMāori communities where culturally-decorated technology cannot.\n",
         "myRole": "Solo independent developer with full ownership of the entire stack and\nlifecycle. Introduced to the project by Dr Mahsa McCauley (Mohaghegh),\nfounder of She Sharp (New Zealand's leading women-in-STEM nonprofit) —\nMissy approached Mahsa for a developer recommendation and Mahsa referred\nme from the She Sharp engineering team, where I serve as Senior Full\nStack Engineer and Website Team Lead.\n\nEngagement model: Missy as client, directing the product structurally\n(feature requests, surveys, \"include the Maramataka lunar calendar,\"\n\"add a Financial Coach feature\") and funding the work directly; I\ndesigned, built, deployed, and maintained the entire system, and ran\nthe data analysis. Throughout development I sent feature-demo videos at\nevery milestone so Missy could review progress without needing a\ntechnical background. Post-launch, I produced teaching videos enabling\nMissy to use Cursor to do her own database reads and basic data\nanalysis — transferring practical operational ownership while remaining\nthe technical lead. **351 commits, solo authorship throughout**\n(2025-09-19 → 2026-03-29), including the March 2026 zero-downtime\nproduction migration from my personal Vercel to the client's\nWhiri-AI Pro team that I designed, executed, and documented as a\nreusable `PROJECT_MIGRATION_GUIDE.md` playbook for future client\nengagements.\n"
       },
+      "_relatedProject": null,
       "_featuredStackResolved": [
         {
           "name": "openai",
@@ -1013,7 +1014,7 @@
           "url": "https://www.linkedin.com/company/shesharpnz/"
         }
       ],
-      "logo": "/public/organizations/she-sharp-logo-purple-dark.svg",
+      "logo": "/public/brands/she-sharp-mark.svg",
       "entity": "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)",
       "roles": [
         "Senior Full Stack Engineer",
@@ -1166,6 +1167,7 @@
         "outcomes": "Production-deployed and operating She Sharp's full member lifecycle\nfor ~10 months (first commit 2025-07-22, latest 2026-05-11). Commit\nvolume: **748 total commits, 648 (86.6%) authored solo by Chan\nMeng**, with the remaining ~100 commits by Lesley Gao on frontend\ndesign and code. **345 of those commits landed in 2026 H1 alone** —\nthe platform is in active build-out, not in maintenance mode. The\nplatform now runs She Sharp's membership, mentorship, events,\nsponsor relationships, volunteer recruitment pipeline, and internal\nteam operations across **95 API routes, 53 pages, 145 components,\n27 SQL migrations, and an 11-namespace `lib/` library** (matching,\nslack-bot, stripe, funding, programmes, recruitment, invitations,\nmentorship, email, auth, db) — the technical infrastructure for an\norganization with 2,200+ registered members, 1,000+ active, 8,000+\nwomen supported lifetime, 50+ corporate partners, 84+ events since\n2014, 18 industry mentors, and a reported 85% mentorship success\nrate (mentees achieve 5-6× higher promotion likelihood per She\nSharp's own outcomes data).\n\n**The Her Waka programme launched in March 2026** with NZ Ministry\nof Social Development funding, using the dedicated teaching site I\nbuilt (herwaka.shesharp.org.nz) and the curriculum I authored —\n4 workshops + 8 tutorials in 3 tiers. **The SEO audit** identified\nactionable competitive gaps — notably the desktop/mobile ranking\ndisparity on the core query \"women in tech New Zealand\" — and\ninformed near-term content strategy. **The migration crawler** enabled\na clean cutover from Webflow without losing institutional knowledge.\n**The Slack-bot + agent-skill pairing** replaced an hours-long\nmanual event-publication workflow with a single dry-run-default\ncommand; the most-recent cron-hardening commit (`84f788f`, \"make\nweekly-mentorship-stats survive cold Neon pools\") is the kind of\nsmall production-resilience detail that only emerges from operating\nthe system, not just building it.\n",
         "myRole": "Senior Full Stack Engineer and Website Team Lead. Recruited directly\nby founder Dr Mahsa Mohaghegh (McCauley) — AI/NLP researcher and\nDirector of Women in Tech at AUT — specifically to deliver the AI\nand full-stack senior engineering that Webflow couldn't, and that\nthe She Sharp team didn't have in-house.\n\nSolo full-stack ownership of the main platform: product architecture,\ndatabase schema (1,392 lines, 30 pgEnums, 34 pgTables, 27 SQL\nmigrations), AI matching pipeline (5-weight rubric + Upstash Redis\ncache + rule-based fallback + admin human-in-the-loop), Stripe\nbilling with the form→checkout→invitation-code activation flow,\nSlack ecosystem (read-only event-collector, 3 weekly Cron digests,\ninteractive event handlers), the `sync-event-from-slack` Claude\nagent skill with strict Zod validation and dry-run default, admin\nsystems, deployments, observability, and operational support.\nLesley Gao contributed some frontend design and frontend code\n(~100 commits, 13.4% of total); the remaining 648 commits (86.6%)\nare mine. Beyond the main platform I also designed and built the\ndata migration crawler that bootstrapped the launch\n(she-sharp-crawl), the Her Waka teaching site (her-waka) and its\ncomplete four-workshop + 8-tutorial curriculum, and the\nprofessional SEO audit and recommendations report\n(serpdata-api-test) on shesharp.org.nz — operating across\nengineering, instructional design, and strategic analysis under\none role.\n"
       },
+      "_relatedProject": null,
       "_featuredStackResolved": [
         {
           "name": "nextjs",
@@ -1219,7 +1221,8 @@
           "url": "https://gavigo.com/"
         }
       ],
-      "logo": "/public/brands/gavigo-logo.svg",
+      "logo": "/public/brands/gavigo-mark.svg",
+      "relatedProjectId": "gavigo-website",
       "entity": "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)",
       "roles": [
         "Founding Principal Engineer, Activation, Execution & AI Systems",
@@ -1300,6 +1303,60 @@
         "technicalApproach": "The orchestrator is a single Go binary (gorilla/websocket hub +\nScorer + Rules Engine + K8s client-go patcher) deployed to a\nmanaged Kubernetes cluster. Companion pods: a React + Vite\ndashboard, a React Native / Expo mobile-web build served from an\nnginx pod, a single always-warm nginx game-server pod baking ~25\nFOSS games (zero per-game startup latency), an AI-service pod\n(Node + Express + GPT-4o-mini) that scales 0→1, Phase 6+ compute\n/ inference workloads, Redis 7 (allkeys-LRU eviction, 400 MB\nbudget) for warm-pool state and activation metrics, and optional\nPostgreSQL 16 for social data.\n\n**Cross-cloud production experience: DigitalOcean and Google Cloud.**\nThe platform shipped first on **DigitalOcean Kubernetes (DOKS) in\nSingapore (sgp1)** — DO Container Registry, DO LoadBalancer\n(REGIONAL type), Let's Encrypt with manual certbot renewal — chosen\nfor cost-efficient prototype-to-production iteration. When GAVIGO's\nGoogle Cloud partnership came into effect, I led the full migration\nto **GKE Standard Zonal in Belgium (europe-west1-b)** on 2026-03-11.\nThe cutover rebuilt the entire infrastructure stack: DO Container\nRegistry → Artifact Registry in europe-west3 (cross-region pulls\nwithin GCP); DO LoadBalancer → GCE Ingress + Global HTTP(S) LB\nwith Google-managed certs (auto-renewal replacing 80-day certbot\ntoil); DO LB redirect annotation → FrontendConfig\n`redirectToHttps: true`; DO LB default WebSocket timeouts →\nBackendConfig `timeoutSec: 86400` to keep activation WS sessions\nalive; service types reshaped from LoadBalancer-per-frontend to\nClusterIP-behind-Ingress; static IP swapped to a GCP global static\nIP. All five deployments (orchestrator, frontend, mobile-web,\nai-service, redis) migrated cleanly with `strategy: Recreate` to\navoid CPU deadlock on single-node clusters. Total production\ndowntime during cutover: **~30 minutes** (DNS propagation + cert\nprovisioning). The migration is fully documented in the project's\n`docs/archive/gcp-migration-record.md` for institutional memory.\n\nHard problems solved. **Sub-millisecond restore** through a\ndeterministic five-state Activation Spine with atomic Redis\ntransitions and phase-by-phase timestamps that prove the\ndecision → K8s patch → client observation chain. **Warm-pool\nLRU without cascade eviction** via ProtectSlot reservations that\nkeep controlled / benchmark games safe from displacement.\n**Cross-platform state sync** between MMKV (native), localStorage\n/ postMessage (web), and Redis (server) with a typed game\nprotocol bridging iframe ↔ WebView. **Async K8s coordination\nwith real-time telemetry** — pod EndpointSlice / Pod-status\nwatches feed activation_ready broadcasts with millisecond-\nprecision timestamps. **Audience-aware broadcast filtering**\n(Phase 9) where the WebSocket hub filters event envelopes per\nclient preset (public / investor / operator) so each viewer sees\na different slice of the catalog. **Benchmark spine** running\n20 iterations per path on real K8s, validating <1 ms restore p50\nand ~12 ms cold p50 against load-tested 100 concurrent WebSocket\nclients.\n\nEngineering culture is phase-driven with comprehensive proof\npacks: each major capability lands as a phase (Phase 1 init →\nPhase 2 telemetry → Phase 3 shared game-server → Phase 4 service\nworker / iframe pool → Phase 5 activation spine → Phase 6\ncompute workloads → Phase 7-8 proof pack → Phase 9 audience\npresets), with documentation and benchmark numbers required to\npromote work to public surfaces.\n",
         "outcomes": "Production-deployed at ire.gavigo.com. First shipped on\nDigitalOcean DOKS (Singapore), then migrated to Google Cloud GKE\n(Belgium) on 2026-03-11 in a clean ~30-minute cutover when GAVIGO's\nGoogle Cloud partnership came into effect — production-grade\nexpertise demonstrated on both clouds. 360 total commits, 353 solo\n(98%, across both my git identities); remainder GitHub Actions bot.\nReal measured platform metrics post-migration: restore path <1 ms\np50, cold path ~12 ms p50, 84.6% warm-pool hit rate, 0 errors at\n100 concurrent WebSocket clients in load tests. Catalog: 9 vendored\nFOSS games (curated from 11 open-source repos analyzed for license,\nbuild size, and web-first compatibility) across 9 studios, 199\nbundled videos. Phase 9 audience-segmentation live: investors and\noperators see different catalogs than the public surface.\nPre-Series A; product is the working artifact for upcoming\ninvestor conversations. Role formally formalized over three\ncontract iterations (Original Oct 17 2025; Amended Feb 9 2026;\nSecond Amended Apr 16 2026), each escalating recognition of my\ntechnical ownership area.\n\n**External validation cycle, Feb 2026:** GAVIGO was accepted\ninto the **Google for Startups Cloud Program** — announced by\nfounder Saba Gecgil with the message that the value isn't cloud\ncredits but the ability to \"test [our] assumptions in depth and\nprove that faster activation and higher concurrency don't\nrequire more hardware, just better control over how compute is\nused.\" That partnership is what unlocked the GCP migration I\nexecuted on March 11. The same window brought acceptance into\nthe **NVIDIA Inception Program** — the deep-tech / GPU\ninfrastructure track that supports startups building GPU-\nintensive infrastructure-level technologies. And the company\nwas profiled by tech-business press at feedvoice.com on\n2026-02-10 in *\"How GAVIGO Is Ending App Store Friction for\nInstant Digital Play\"* — the public account names the\nsub-0.2-second activation claim, the patented execution-layer\nIP positioning, the \"Watch and Play era\" narrative, and the\ncross-border Istanbul-to-global ambition.\n",
         "myRole": "Founding Principal Engineer, Activation, Execution & AI Systems\n(prior: Core Engineer), reporting to founder & CEO Saba Gecgil.\nJoined Oct 17 2025; current title and scope formalized by the\nSecond Amended and Restated Consulting Agreement effective\nApr 16 2026.\n\nThe contract defines a \"Protected Technical Domain\" that anchors\nmy role: activation systems, activation flow and execution\nbehavior, activation-economics proof path, AI-assisted\norchestration and execution-control systems, restore and reuse\nboundary work, heavier-workload validation and transition work,\nand the core activation, execution, and AI-enabled systems\narchitecture of GAVIGO's interactive workload platform — plus\nthe natural forward extension of that area as the system evolves.\nRecognized in the contract record as \"a core long-term technical\nbuilder of the Company's interactive workload platform\" with\nfounder-level equity participation. 98% solo commit authorship\non the active codebase.\n"
+      },
+      "_relatedProject": {
+        "id": "gavigo-website",
+        "provenance": "client",
+        "tier": "secondary",
+        "recency": "active",
+        "lastUpdated": "2026-07-04",
+        "name": "GAVIGO Website",
+        "priority": 43,
+        "category": "web-apps",
+        "relatedProjectId": "gavigo-ire",
+        "tagline": "GAVIGO Inc.'s public marketing and investor-readiness website (gavigo.com) — the standalone brand surface that links to the IRE product demo (ire.gavigo.com/mobile), with a Markdown content pipeline, Resend email capture, and a Cloud Run production deploy; Chan is top contributor (66 commits), including the investor-readiness polish pass",
+        "url": "https://gavigo.com/",
+        "entity": "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)",
+        "roles": [
+          "Lead Developer"
+        ],
+        "extraLinks": [
+          {
+            "label": "Live site (gavigo.com)",
+            "url": "https://gavigo.com/"
+          },
+          {
+            "label": "IRE product demo",
+            "url": "https://ire.gavigo.com/mobile/"
+          },
+          {
+            "label": "Flagship product (gavigo-ire)",
+            "url": "https://ire.gavigo.com/"
+          }
+        ],
+        "techStack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Neon Postgres",
+          "Drizzle ORM",
+          "MDX / Markdown (remark + rehype, gray-matter)",
+          "React Email + Resend",
+          "Motion",
+          "Tailwind CSS",
+          "Google Cloud Run (europe-west1)"
+        ],
+        "keywords": [
+          "Startup investor-readiness website",
+          "Marketing site linked to live IRE product demo",
+          "Markdown content pipeline",
+          "Email capture (Resend)",
+          "Cloud Run production deployment"
+        ],
+        "status": "live",
+        "narrative": {
+          "impactHeadline": "GAVIGO investor site (gavigo.com) — standalone from IRE runtime, links to live product demo, Markdown pipeline + Resend capture; top contributor (66 commits) with investor-readiness polish supporting fundraising and partner conversations."
+        }
       },
       "_featuredStackResolved": [
         {
@@ -2695,7 +2752,7 @@
           "url": "https://www.femtechweekend.com/about-us"
         }
       ],
-      "logo": "/public/organizations/femtech-weekend-logo.svg",
+      "logo": "/public/brands/femtech-weekend-mark.svg",
       "entity": "FemTech Weekend (Chengdu, China; founded 2024 by Zhu Yihan; positioned publicly as China's representative for cross-border women's-health initiatives)",
       "roles": [
         "Chief Technology Officer",
@@ -2823,6 +2880,7 @@
         "outcomes": "Production-deployed at femtechweekend.com and operating the\nfull organisational pipeline (ecosystem applications,\nnewsletter, summit registration, research distribution)\nacross both EN and 简体中文 audiences. **544 commits, 529\n(97.2%) authored solo by Chan Meng** across ~12 months\n(2025-05-08 → 2026-05-13). **Shanghai Summit 2026 launches\nJune 22-25, 2026** with the platform as its sole\noperational substrate.\n\nRecent commit cadence shows the platform is in active\ndelivery, not maintenance: the last week of recorded\nactivity alone includes speaker-lineup rotation (`6b0b780`,\nrotating the speaker grid and refreshing Ida Tin's title),\nsponsor-tier restructuring (`6f33496`), the image-weight\n67%-reduction pass (`19d3e71`), and an ongoing speaker-card\nand modal refinement series — all of it solo, all of it on\na live site marketing a flagship event two months out.\n\nThe platform demonstrates a design call worth flagging:\n**Generation 2 was a deliberate rewrite, not a refactor**.\nI admitted that the centre of gravity had shifted from\n\"marketing site that publishes the occasional report\" to\n\"research-publication and multi-event hub with deep\neditorial content,\" and rebuilt on Docusaurus 3.9 — not\nthe default choice for a brand website, but the right one\nfor an editorial platform whose long-term value lives in\nits market research, opinion pieces, founder stories, and\nevent archives. The Gen-1 → Gen-2 cutover happened\nwithout losing institutional knowledge and is now the\nprimary public-facing surface for the organisation.\n\nTwo original research reports have been published through\nthe platform: **FemTech Market Map for Greater China**\n(2025-05) and the **FemmeHealth Ventures Alliance**\npartnership announcement (2025-06). Both function as\nlead-generation artefacts feeding the ecosystem and\nnewsletter pipelines, and as thought-leadership\npositioning for the organisation in both Chinese and\ninternational markets.\n",
         "myRole": "Chief Technology Officer, hired 2025-03 by founder Zhu\nYihan with full ownership of every digital surface the\norganisation operates. Solo engineering team (with one\noccasional contributor of ~15 commits out of 544).\nEnd-to-end authority over architecture, vendor choice,\ndeployment infrastructure, content management workflow,\napplication and subscription pipelines, and the live\ndigital infrastructure for the Shanghai Summit 2026.\n\nSpecifically: designed and built both website generations\nfrom scratch (Gen-1 Next.js + Notion at 100% solo across\n58 commits in a separate repo; Gen-2 — this entry — at\n97.2% solo across 544 commits over ~12 months). Wrote the\nentire Drizzle schema, every migration, all 15 Cloudflare\nPages Functions, every email template (HTML + plain-text\ntwins, brand-coloured, XSS-defended), the admin dashboard,\nthe four application-pipeline forms, the Shanghai Summit\n10-section homepage + 3 sub-pages, the Notion-as-CMS\nintegration, the bilingual EN/简体中文 routing + content\nlayer, the Gemini chatbot integration, the earth-flyline\nglobal-network visualisation, and the image-performance\noptimisation pass. Operate the production Cloudflare\nPages deployment and every speaker-lineup / sponsor / agenda\nupdate directly on `main`. Reporting line: directly to\nfounder Zhu Yihan; collaboration with the broader 2-10-\nperson core team on editorial calendar, summit programming,\nand ecosystem partnerships.\n"
       },
+      "_relatedProject": null,
       "_featuredStackResolved": [
         {
           "name": "docusaurus",
@@ -2892,7 +2950,7 @@
           "url": "https://www.digital.govt.nz/standards-and-guidance/design-and-ux/web-accessibility-standard-1-2/"
         }
       ],
-      "logo": "/public/organizations/eatropolis-logo.svg",
+      "logo": "/public/brands/eatropolis-mark.svg",
       "entity": "Chow Luck Club Ltd (NZ company; signatory Bee Keng Koh; project manager Armand Bentigan) — event partner: Tātaki Auckland Unlimited on behalf of Auckland Council Events",
       "roles": [
         "Solo Freelance Developer (contract: Chan Meng × Chow Luck Club Ltd, 4 May 2026)",
@@ -3041,6 +3099,7 @@
         "outcomes": "Production-deployed at `eatropolis.co.nz` since\n2026-05-09, currently in **pre-launch Access lockdown**\nwith allowlisted reviewers authenticating via Cloudflare\nZero Trust OTP. **Phase 1 coming-soon page publicly\naccessible since 2026-05-12** via the dedicated bypass\napp — newsletter signup end-to-end verified\n(form → Neon `form_submissions` + `email_outbox` rows →\nResend accept → Gmail `email.delivered` webhook → Neon\n`email_events` row in **5.96 seconds**), Gmail\nPromotions-tab delivery confirmed.\n\n**115 commits, sole author**, across the contracted\n9-day intensive build (2026-05-07 → 2026-05-15) plus\ncontinued polish through 2026-05-13. **68 prerendered\nroutes** in production, 0 TypeScript errors, 0 Zod\nerrors at build time, lint clean. **The eleventh-pass\nstatus doc** (`docs/STATUS.md`, 2026-05-12) records\ncomprehensive employer-feedback closeout: two new UX\ncomponents shipped (`<IncludedBadge/>` for \"free with\nadmission\" semantic affordance + `<PricingAtAGlance/>`\nfor site-wide flat-pricing anchor), workshop `price`\nfield purged across schema + MDX + JSON-LD + llms.txt,\nblue accent landed as the **subtle harbour-deep**\ndecorative path per WCAG-AA recalibration, and the\n**GitHub-as-CMS workflow** documented at\n`docs/CONTENT-INVENTORY.md` with one ✏️ link per\neditable field.\n\n**Outstanding pre-Phase-2 items** (per\n`docs/REMAINING-TASKS.md`): disable the `Eatropolis\npre-launch` Access app on 2026-06-05 launch morning\n(one toggle in CF Zero Trust dashboard, not a code\nchange); employer publishes the Eatropolis event\nlisting on Ticketmaster; full 1,000-VU k6 acceptance\nprofile against the public live site (currently\nblocked only on the Access disable); mobile Lighthouse\nPerformance re-confirmation after 24h cache warm.\n**Workers Free → Standard upgrade landed 2026-05-09**\n— Issue #17 (CPU constraint blocking the k6 profile)\nplatform-side resolved.\n\nThe build also produced supplementary deliverables\nthe contract specifies but most freelance projects\nskip: a **TICKETMASTER-SETUP.md** one-page integration\nguide for the client, a **WCAG-CONFORMANCE.md** with\nthe full token-strategy + brand-hierarchy + harbour-\ndeep recalibration documented for any future TAU\naudit, a **CONTENT-EDITING-GUIDE.md** with Option A\n(GitHub Web Editor) and Option B (Cursor local) paths\nplus JSON gotchas, a **CONTENT-INVENTORY.md** master\nindex, a **HANDOFF.md** non-developer client guide,\nand a **STATUS.md** running decision log with mermaid\narchitecture diagrams. The original 9-day delivery\nplan lives at `C:\\Users\\0\\.claude\\plans\\chan-meng-d-\ngithub-repository-eatropoli-cosmic-yao.md`,\nsuperseded by STATUS / DAY-9-REPORT wherever the two\ndiverge.\n",
         "myRole": "**Sole freelance developer under signed 4 May 2026\nagreement** between Chan Meng (Auckland-based) and\nBee Keng Koh for and on behalf of Chow Luck Club Ltd,\nwith Armand Bentigan as the day-to-day project\nmanager. Three-stage delivery schedule, each anchored\nto a Developer deliverable (not to TAU approval).\n**All 115 commits authored\nsolo**; the GitHub repo lives in the **client\norganisation** at `github.com/Chow-Luck-Club/\neatropolis-website` (private), where I am the sole\noutside collaborator. The entire Cloudflare account\n(`3f0d36625c1a1a7b1f2ee2b211a87791`) is Armand's,\nwith my personal CF login (`chanmeng.dev@gmail.com`)\nadded as Administrator — **all infrastructure is\nclient-owned**, so the handoff at end-of-maintenance\non 2026-09-05 is a zero-friction credential rotation\nrather than an account transfer.\n\n**End-to-end ownership** covers: contract drafting\n(I authored the contract in Typst, compiled to PDF —\nthe `eatropolis-agreement.typ` source lives at\n`D:/github_repository/eatropolis/contract/`); product\narchitecture; the 13-page marketing site IA + design\nsystem (Big Shoulders + Archivo Narrow + Italiana +\nJetBrains Mono + League Gothic, brand hierarchy\nBlack / Red / White, harbour blue strictly subtle\ndecorative accent per WCAG-AA recalibration); the\nfull Cloudflare Workers + OpenNext deploy pipeline\nwith GitHub Actions auto-deploy; the 3 Zero Trust\nAccess apps for the pre-launch / webhook bypass /\nnewsletter bypass schedule; the Drizzle + Neon\npersistence layer (4-namespace schema, 4-repository\nmodules, 2 migrations including the partial-index\nhotfix); the 10 API routes (newsletter / 3 forms /\nchat streaming + Whisper + TTS + chat feedback /\nunsubscribe / Resend webhook); the 7 React Email\ntemplates with the brand-styled theme; the AI chat\nassistant with build-time-generated context manifest;\nthe Ticketmaster Discovery API ISR integration; the\nGA4 + CF Web Analytics + cookie consent triple; the\nWCAG 2.2 AA conformance pass (39/39 axe-core\nPlaywright tests + WAI-ARIA APG NavDropdown keyboard\npattern + harbour-deep recalibration); the k6\nload-test profile to 1,000 concurrent visitors per\ncontract §3.8; the GitHub-as-CMS workflow with the\n✏️ Web-Editor links; and the four-document handoff\npackage (HANDOFF + CONTENT-INVENTORY + CONTENT-\nEDITING-GUIDE + TICKETMASTER-SETUP) plus the running\ndecision log at STATUS.md. **Reporting line**: WhatsApp\nfor day-to-day with Armand (+64 20 4427217), email\nfor formal documents with Bee Keng Koh\n(`bee@chowluckclub.com`); my contact (`chanmeng.\ncareer@gmail.com`, +64 28 8523 5858, 1/59 Spring St\nOnehunga 1061) is on file as Developer.\n"
       },
+      "_relatedProject": null,
       "_featuredStackResolved": [
         {
           "name": "nextjs",
@@ -10697,6 +10756,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-08",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-08T01:57:01.469Z"
+    "buildTimestamp": "2026-07-08T04:41:54.080Z"
   }
 }

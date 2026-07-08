@@ -137,6 +137,13 @@ data._flagshipProjects = flagshipIds
   .map((id) => data._index.projects[id])
   .filter(Boolean);
 
+// Optional companion project per featured card (relatedProjectId) — e.g. the
+// GAVIGO card surfaces both GAVIGO IRE and the gavigo-website company site under
+// one brand logo. Only cards that set relatedProjectId render the extra link.
+for (const p of data._flagshipProjects) {
+  p._relatedProject = p.relatedProjectId ? data._index.projects[p.relatedProjectId] : null;
+}
+
 const flagshipIdSet = new Set(flagshipIds);
 const openSource = projectsSorted.filter((p) => !flagshipIdSet.has(p.id));
 data._openSourceProjects = openSource;

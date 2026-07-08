@@ -24,6 +24,8 @@
 {{else}}{{briefTagline tagline}}
 
 {{/if}}{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
+{{/if}}{{#if _relatedProject}}
+<sub>↳ Also built: <a href="{{default _relatedProject.url _relatedProject.repoUrl}}">{{briefTagline _relatedProject.name}} ↗</a></sub>
 {{/if}}
 <br clear="all">
 

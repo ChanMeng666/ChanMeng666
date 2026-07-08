@@ -30,7 +30,7 @@ projects:
     url: https://tamaiti.whiri-ai.com/
     demoUrl: https://youtu.be/NtT7_q6xhlk
     # repoUrl omitted — private client repository (Whiri-AI/tam-ai-ti-web, 404s publicly); do not re-add.
-    logo: /public/brands/tam-ai-ti-logo-with-brand.svg
+    logo: /public/brands/tam-ai-ti-mark.svg
     entity: "Riria (Missy) Te Kanawa (independent research commission · ASB Bank)"
     roles: ["Solo Independent Developer", "Full-Stack Engineer", "Maintainer"]
     extraLinks:
@@ -375,7 +375,7 @@ projects:
       - { label: "NZ Charities Register (CC57025)", url: "https://register.charities.govt.nz/Charity/CC57025" }
       - { label: "Founder Dr Mahsa Mohaghegh (LinkedIn)", url: "https://www.linkedin.com/in/mahsamohaghegh/" }
       - { label: "She Sharp LinkedIn", url: "https://www.linkedin.com/company/shesharpnz/" }
-    logo: /public/organizations/she-sharp-logo-purple-dark.svg
+    logo: /public/brands/she-sharp-mark.svg
     entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
     roles: ["Senior Full Stack Engineer", "Website Team Lead", "Solo Architect of New Platform"]
     techStack:
@@ -803,7 +803,8 @@ projects:
     # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     extraLinks:
       - { label: "Company", url: "https://gavigo.com/" }
-    logo: /public/brands/gavigo-logo.svg
+    logo: /public/brands/gavigo-mark.svg
+    relatedProjectId: gavigo-website   # surface the GAVIGO company site under the same brand card
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
     roles: ["Founding Principal Engineer, Activation, Execution & AI Systems", "Core Engineer (prior)"]
     techStack:

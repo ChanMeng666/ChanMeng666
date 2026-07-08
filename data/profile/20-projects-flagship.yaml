@@ -376,6 +376,7 @@ projects:
       - { label: "Founder Dr Mahsa Mohaghegh (LinkedIn)", url: "https://www.linkedin.com/in/mahsamohaghegh/" }
       - { label: "She Sharp LinkedIn", url: "https://www.linkedin.com/company/shesharpnz/" }
     logo: /public/brands/she-sharp-mark.svg
+    relatedProjectIds: [her-waka, ai-hackathon-assistant, makey-makey-iot-slides]   # She Sharp extension sub-projects, shown under one card
     entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
     roles: ["Senior Full Stack Engineer", "Website Team Lead", "Solo Architect of New Platform"]
     techStack:
@@ -804,7 +805,7 @@ projects:
     extraLinks:
       - { label: "Company", url: "https://gavigo.com/" }
     logo: /public/brands/gavigo-mark.svg
-    relatedProjectId: gavigo-website   # surface the GAVIGO company site under the same brand card
+    relatedProjectIds: [gavigo-website]   # surface the GAVIGO company site under the same brand card
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
     roles: ["Founding Principal Engineer, Activation, Execution & AI Systems", "Core Engineer (prior)"]
     techStack:

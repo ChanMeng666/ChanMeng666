@@ -137,11 +137,13 @@ data._flagshipProjects = flagshipIds
   .map((id) => data._index.projects[id])
   .filter(Boolean);
 
-// Optional companion project per featured card (relatedProjectId) — e.g. the
-// GAVIGO card surfaces both GAVIGO IRE and the gavigo-website company site under
-// one brand logo. Only cards that set relatedProjectId render the extra link.
+// Optional companion projects per featured card (relatedProjectIds list, or the
+// singular relatedProjectId) — e.g. GAVIGO surfaces its company site, and She
+// Sharp surfaces its extension sub-projects, all under one brand card. Only
+// cards that set the field render the extra links.
 for (const p of data._flagshipProjects) {
-  p._relatedProject = p.relatedProjectId ? data._index.projects[p.relatedProjectId] : null;
+  const ids = p.relatedProjectIds ?? (p.relatedProjectId ? [p.relatedProjectId] : []);
+  p._relatedProjects = ids.map((id) => data._index.projects[id]).filter(Boolean);
 }
 
 const flagshipIdSet = new Set(flagshipIds);

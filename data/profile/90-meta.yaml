@@ -165,9 +165,12 @@ meta:
       flagshipAwardClaim: "Outstanding Mentor Award — AI Hackathon Festival 2025"
 
     # Project ordering for README
-    # Hero card order = this list's order. Hiring-first (2026-07): lead with the
-    # hardest staff-IC proof (founding-engineer infra, then 124★ adoption).
-    flagshipProjectIds: [gavigo-ire, google-news-mcp, tam-ai-ti, she-sharp]
+    # Drives the "Client & organisation work" big editorial cards. 2026-07:
+    # README reorganised onto ONE axis — provenance (who commissioned it). This
+    # list = the production systems Chan led for companies/nonprofits (all
+    # provenance:client); list order = card order. Personal/OSS work (incl. the
+    # 124★ google-news-mcp) lives in the open-source buckets below instead.
+    flagshipProjectIds: [gavigo-ire, tam-ai-ti, she-sharp, femtech-weekend-website, eatropolis-website]
 
     # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
     # 2026-07). Deliberately DISTINCT from flagshipProjectIds (which is the
@@ -226,8 +229,12 @@ meta:
     # present in llms.txt / llms-full.txt / dist/profile.json / LinkedIn — it is
     # only off the human shopfront. To re-widen, repopulate the more* lists.
     # =========================================================================
-    commissionedProjectIds:    [femtech-weekend-website, eatropolis-website]
-    aiAgentProjectIds:         [echook, archcanvas, vitex, ai-programming-teaching-project]
+    # Retired 2026-07 — the standalone "Commissioned work" section was removed
+    # and its client projects merged into the "Client & organisation work" cards
+    # above (flagshipProjectIds), so the README has one provenance axis, not two
+    # overlapping client sections. Kept as [] for backwards-compat.
+    commissionedProjectIds:    []
+    aiAgentProjectIds:         [google-news-mcp, echook, archcanvas, vitex, ai-programming-teaching-project]
     openSourceCraftProjectIds: [archlang, gradient-svg-generator, douyin-mall-go-template, sunostats]
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []

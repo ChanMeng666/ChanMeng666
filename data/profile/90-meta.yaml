@@ -188,25 +188,20 @@ meta:
       - vitex                           # easy-resume
       - echook
       - gradient-svg-generator
+    # Cleaned 2026-07-11: removed ids demoted to archive/secondary (library-os,
+    # femtracker-agent, friendscope, send-joy, chinese-redefine, ai-image-generator,
+    # douyin-mall-go-template, tencent-meeting-video-downloader).
     openSourcePrimaryIds:
       - github-readme-suno-cards
       - echook
       - portfolio-v2
       - ai-programming-teaching-project
-      - chinese-redefine
       - css-tower-defense
       - vitex
       - ai-hackathon-assistant
-      - send-joy
       - sunostats
-      - ai-image-generator
-      - library-os
-      - femtracker-agent
-      - douyin-mall-go-template
       - server-google-jobs
-      - tencent-meeting-video-downloader
       - gradient-svg-generator
-      - friendscope
       - femtech-weekend-website
     openSourceCategoryOrder: [web-apps, ai-apps, creative, ml-research, branding, games]
 
@@ -235,7 +230,7 @@ meta:
     # overlapping client sections. Kept as [] for backwards-compat.
     commissionedProjectIds:    []
     aiAgentProjectIds:         [google-news-mcp, echook, archcanvas, vitex, ai-programming-teaching-project]
-    openSourceCraftProjectIds: [archlang, gradient-svg-generator, douyin-mall-go-template, sunostats]
+    openSourceCraftProjectIds: [archlang, gradient-svg-generator, sunostats]
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []
     moreOpenSourceProjectIds:     []

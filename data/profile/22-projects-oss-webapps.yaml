@@ -12,24 +12,6 @@ projects:
   # ------- OPEN SOURCE — COLLAPSIBLE BY CATEGORY -------
 
   # Web Applications
-  - id: femtech-weekend-platform
-    provenance: client
-    tier: secondary
-    recency: historical
-    lastUpdated: "2026-05-18"
-    name: FemTech Weekend Platform
-    priority: 20
-    category: web-apps
-    clientOrgId: femtech-weekend
-    relatedWorkId: femtech-weekend
-    supersededBy: femtech-weekend-website
-    tagline: Bilingual editorial + event platform for China's first women's health-tech organisation; carries the 2026 Shanghai Summit
-    url: https://www.femtechweekend.com/
-    # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
-    techStack: [Docusaurus, React, TypeScript, Drizzle ORM, Neon Postgres, Notion API, Cloudflare Pages, Tailwind CSS, Radix UI, earth-flyline]
-    narrative:
-      impactHeadline: "Bilingual editorial + event platform for FemTech Weekend — China's first women's-health-tech organisation; the historical production codebase that carried the org's events before the Docusaurus Gen-2 rewrite for editorial focus."
-    status: live
   - id: free-period-website
     provenance: client
     tier: secondary
@@ -473,7 +455,7 @@ projects:
     category: web-apps
     clientOrgId: femtech-weekend
     relatedWorkId: femtech-weekend
-    supersedes: [femtech-weekend, femtech-weekend-platform]
+    supersedes: [femtech-weekend]
     tagline: |
       Solo-built (97.2% of 544 commits across ~1 year) Gen-2 platform for
       FemTech Weekend — China's first women's-health-technology
@@ -915,7 +897,7 @@ projects:
 
   - id: eatropolis-website
     provenance: client
-    tier: primary
+    tier: flagship
     recency: active
     meta:
       x_brand:
@@ -1511,7 +1493,7 @@ projects:
 
   - id: friendscope
     provenance: personal
-    tier: primary
+    tier: archive
     recency: recent
     lastUpdated: "2026-05-19"
     name: FriendScope — Privacy-First Relationship Assessment with Lottie-Animated Result Cards
@@ -1621,7 +1603,7 @@ projects:
         Sole author and maintainer. Every commit on the repo is from me — including the initial Next.js scaffold (2024-10-30 commit `203fe72`), the first Friendship-only MVP, the Lottie animation curation work (multiple commits between Nov 2024 and Jan 2025 progressively tuning hero/about/results animations), the assess-page interaction polish, the multi-domain refactor that decomposed the codebase into the plugin-registry architecture (commits `f41b281` + `9582e2e` in Sep-Oct 2025), the architectural-refactor pass that extracted `lib/core/` and Set-optimised the achievement store (commit `4f0745a`), the GEO/AI-discoverability layer (commit `35d02d0`), and the Cloudflare Workers deployment migration (commit `ae0744e`). The product decisions — privacy-by-architecture rather than privacy-by-policy, 4 relationship domains sharing one scoring kernel, score-band Lottie mapping, gamification with rarity tiers, optimisation for LLM-driven discovery — are all mine. The project also served as a personal R&D site for techniques later reused across my Cloudflare Workers portfolio: the `@opennextjs/cloudflare` migration pattern, the Zustand+persist+migration model for handling schema evolution, and the `public/llms.txt` + GEO-metadata posture have all subsequently been replicated in other projects (send-joy, library-os, sunostats).
   - id: send-joy
     provenance: personal
-    tier: primary
+    tier: archive
     recency: recent
     lastUpdated: "2026-05-19"
     name: SendJoy — Visual Email Platform
@@ -2081,7 +2063,7 @@ projects:
     status: live
   - id: esol-learning-platform
     provenance: client
-    tier: secondary
+    tier: archive
     recency: active
     lastUpdated: "2026-07-04"
     name: AI-Powered ESOL Learning Platform

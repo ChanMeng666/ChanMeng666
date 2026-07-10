@@ -2025,7 +2025,7 @@
     {
       "id": "echook",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "flagship",
       "recency": "active",
       "meta": {
         "x_brand": {
@@ -2186,7 +2186,7 @@
     {
       "id": "douyin-mall-go-template",
       "provenance": "bootcamp",
-      "tier": "primary",
+      "tier": "secondary",
       "recency": "historical",
       "lastUpdated": "2026-05-18",
       "meta": {
@@ -2234,26 +2234,6 @@
         "outcomes": "**52 GitHub stars, 7 forks**, 27 sustained commits — the\nstrongest external traction of any project in Chan's open-source\ncatalogue under \"primary\" tier. Featured as one of the eight\nprimary projects on Chan's GitHub Open Source table. **< 50 ms**\naverage API response time. Apache-2.0 license to permit\ncommercial reuse while encouraging community contribution.\nDoubles as the worked-example artefact accompanying Chan's\nByteDance Youth Training Camp narrative — the same engineering\npractices that scored Chan as the #2-most-prolific committer on\nthe Team-115 capstone, packaged as a public learning resource.\n",
         "myRole": "Sole author. Designed the directory layout, wrote both backend\nand frontend implementations, authored the bilingual\ndocumentation, and packaged the multi-platform deployment\nguides. The repo is its own pedagogical statement: students can\nread the instructor's commits to see how patterns they're being\ntaught compose into a real production-shape service.\n"
       },
-      "_featuredStackResolved": [
-        {
-          "name": "go",
-          "src": "/public/tech-logos/go.svg"
-        },
-        {
-          "name": "gin",
-          "src": "/public/tech-logos/gin.svg"
-        },
-        {
-          "name": "mysql",
-          "src": "/public/tech-logos/mysql.svg"
-        },
-        {
-          "name": "redis",
-          "src": "/public/tech-logos/redis.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -2378,7 +2358,7 @@
     {
       "id": "tencent-meeting-video-downloader",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "secondary",
       "recency": "recent",
       "lastUpdated": "2026-05-19",
       "name": "腾讯会议录屏下载助手 — Chrome Web Store-Published Extension",
@@ -2670,7 +2650,7 @@
     {
       "id": "femtracker-agent",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "archive",
       "recency": "recent",
       "meta": {
         "x_brand": {
@@ -2728,49 +2708,6 @@
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
-      "_supersedesProjects": []
-    },
-    {
-      "id": "femtech-weekend-platform",
-      "provenance": "client",
-      "tier": "secondary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "name": "FemTech Weekend Platform",
-      "priority": 20,
-      "category": "web-apps",
-      "clientOrgId": "femtech-weekend",
-      "relatedWorkId": "femtech-weekend",
-      "supersededBy": "femtech-weekend-website",
-      "tagline": "Bilingual editorial + event platform for China's first women's health-tech organisation; carries the 2026 Shanghai Summit",
-      "url": "https://www.femtechweekend.com/",
-      "techStack": [
-        "Docusaurus",
-        "React",
-        "TypeScript",
-        "Drizzle ORM",
-        "Neon Postgres",
-        "Notion API",
-        "Cloudflare Pages",
-        "Tailwind CSS",
-        "Radix UI",
-        "earth-flyline"
-      ],
-      "narrative": {
-        "impactHeadline": "Bilingual editorial + event platform for FemTech Weekend — China's first women's-health-tech organisation; the historical production codebase that carried the org's events before the Docusaurus Gen-2 rewrite for editorial focus."
-      },
-      "status": "live",
-      "_clientOrg": {
-        "id": "femtech-weekend",
-        "name": "FemTech Weekend",
-        "url": "https://www.femtechweekend.com"
-      },
-      "_relatedProjectsResolved": [],
-      "_supersededByProject": {
-        "id": "femtech-weekend-website",
-        "name": "FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, currently delivering Shanghai Summit 2026",
-        "url": "https://www.femtechweekend.com/"
-      },
       "_supersedesProjects": []
     },
     {
@@ -3149,8 +3086,7 @@
       "clientOrgId": "femtech-weekend",
       "relatedWorkId": "femtech-weekend",
       "supersedes": [
-        "femtech-weekend",
-        "femtech-weekend-platform"
+        "femtech-weekend"
       ],
       "tagline": "Solo-built (97.2% of 544 commits across ~1 year) Gen-2 platform for\nFemTech Weekend — China's first women's-health-technology\norganisation, founded 2024 by Zhu Yihan in Chengdu. Docusaurus 3.9\neditorial spine + Drizzle ORM on Neon serverless Postgres for form\ndata + 15 Cloudflare Pages Functions (~3,800 LOC) for the entire\nserver side, deployed on Cloudflare Pages for low-latency\ncross-border edge delivery. Currently powering Shanghai Summit 2026\n(June 22-25, 16 confirmed speakers headlined by Ida Tin — Clue\nco-founder who coined the term \"FemTech\" in 2016): 10-section\nsummit homepage + 3 sub-pages, 4 application pipelines\n(programme/speaker/pitch/ecosystem) writing to typed Postgres\ntables, double-opt-in newsletter wired to a Resend segment, admin\ndashboard with batch review + brand-styled approval/rejection email\nautomation, Gemini-powered chatbot, bilingual EN/简体中文 across\nevery surface.\n",
       "url": "https://www.femtechweekend.com/",
@@ -3348,18 +3284,13 @@
         {
           "id": "femtech-weekend",
           "name": "FemTech Weekend Website (Gen-1, deprecated)"
-        },
-        {
-          "id": "femtech-weekend-platform",
-          "name": "FemTech Weekend Platform",
-          "url": "https://www.femtechweekend.com/"
         }
       ]
     },
     {
       "id": "eatropolis-website",
       "provenance": "client",
-      "tier": "primary",
+      "tier": "flagship",
       "recency": "active",
       "meta": {
         "x_brand": {
@@ -3623,7 +3554,7 @@
     {
       "id": "friendscope",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "archive",
       "recency": "recent",
       "lastUpdated": "2026-05-19",
       "name": "FriendScope — Privacy-First Relationship Assessment with Lottie-Animated Result Cards",
@@ -3795,7 +3726,7 @@
     {
       "id": "send-joy",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "archive",
       "recency": "recent",
       "lastUpdated": "2026-05-19",
       "name": "SendJoy — Visual Email Platform",
@@ -4114,7 +4045,7 @@
     {
       "id": "esol-learning-platform",
       "provenance": "client",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "active",
       "lastUpdated": "2026-07-04",
       "name": "AI-Powered ESOL Learning Platform",
@@ -4346,7 +4277,7 @@
     {
       "id": "vitex",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "flagship",
       "recency": "recent",
       "meta": {
         "x_brand": {
@@ -4672,7 +4603,7 @@
     {
       "id": "archcanvas",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "flagship",
       "recency": "active",
       "lastUpdated": "2026-07-10",
       "meta": {
@@ -4795,7 +4726,7 @@
     {
       "id": "ai-image-generator",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "archive",
       "recency": "recent",
       "lastUpdated": "2026-05-19",
       "name": "AI Image Generator — Full-Stack Text-to-Image SaaS",
@@ -4932,7 +4863,7 @@
     {
       "id": "chinese-redefine",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "archive",
       "recency": "recent",
       "lastUpdated": "2026-07-04",
       "name": "Chinese Redefine 汉语新解 — AI Word Redefinition",
@@ -4992,7 +4923,7 @@
     {
       "id": "interactive-story-generator",
       "provenance": "personal",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "historical",
       "lastUpdated": "2026-07-04",
       "name": "Interactive Story Generator",
@@ -5020,7 +4951,7 @@
     {
       "id": "emoji-story-generator",
       "provenance": "personal",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "historical",
       "lastUpdated": "2026-07-04",
       "name": "Emoji Story Generator",
@@ -5824,7 +5755,7 @@
     {
       "id": "nzcel-prep",
       "provenance": "client",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "historical",
       "lastUpdated": "2026-05-18",
       "name": "ESOL Platform (NZCEL Prep)",
@@ -5849,7 +5780,7 @@
     {
       "id": "forward-with-her-website",
       "provenance": "client",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "historical",
       "meta": {
         "x_brand": {
@@ -5943,7 +5874,7 @@
     {
       "id": "agrihire-solutions",
       "provenance": "coursework",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "historical",
       "lastUpdated": "2026-07-04",
       "name": "AgriHire Solutions",
@@ -6264,7 +6195,7 @@
     {
       "id": "customer-insight",
       "provenance": "personal",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "historical",
       "lastUpdated": "2026-05-18",
       "name": "Customer Insight",
@@ -6367,7 +6298,7 @@
     {
       "id": "biosecurity",
       "provenance": "coursework",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "recent",
       "lastUpdated": "2026-07-04",
       "name": "NZ Biosecurity Guide",
@@ -6446,7 +6377,7 @@
     {
       "id": "countryside-community-swimming-club",
       "provenance": "coursework",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "recent",
       "lastUpdated": "2026-07-04",
       "name": "Swimming Club Management System",
@@ -6511,7 +6442,7 @@
     {
       "id": "fishing-club-project",
       "provenance": "coursework",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "recent",
       "lastUpdated": "2026-07-04",
       "name": "East Coast Anglers Club (Fishing Club Website)",
@@ -6562,7 +6493,7 @@
     {
       "id": "femtracker",
       "provenance": "personal",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "historical",
       "lastUpdated": "2026-07-04",
       "name": "FemTracker (Mobile)",
@@ -6795,7 +6726,7 @@
     {
       "id": "sanicle-ai",
       "provenance": "client",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "historical",
       "lastUpdated": "2026-07-04",
       "name": "Sanicle AI — Multi-Tenant B2B FemTech SaaS",
@@ -6859,7 +6790,7 @@
     {
       "id": "sanicle-platform",
       "provenance": "client",
-      "tier": "secondary",
+      "tier": "archive",
       "recency": "historical",
       "lastUpdated": "2026-07-04",
       "name": "Sanicle Cloud — Official Website (sanicle.cloud)",
@@ -7020,7 +6951,7 @@
     {
       "id": "archlang",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "flagship",
       "recency": "active",
       "lastUpdated": "2026-07-10",
       "meta": {
@@ -12003,6 +11934,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-10",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-10T21:30:21.732Z"
+    "buildTimestamp": "2026-07-10T22:49:40.438Z"
   }
 }

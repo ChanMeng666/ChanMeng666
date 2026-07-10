@@ -12,7 +12,7 @@ projects:
   # AI Applications & Agents
   - id: vitex
     provenance: personal
-    tier: primary
+    tier: flagship
     recency: recent
     meta:
       x_brand:
@@ -367,7 +367,7 @@ projects:
         Sole author, designer, and operator. Every one of the 182 commits is mine. I wrote both the initial CopilotKit + LangGraph fanfic editor (commits `0a3d1f5` → `36c5469` Teal+Amber "Literary Atelier" design system → `cdc3586` Railway deployment), made the call to scrap that direction and pivot to HSR-specific DreamWriter (commits `cbd31cc` "pivot from MDZS to Honkai: Star Rail based on 2025-2026 fandom trends" → `4790851` MDZS implementation plan as comparison reference → `a288e25` "HSR DreamWriter - complete product redesign" + `b5baf34` the same-day old-code deletion), hand-curated the entire HSR canon knowledge pack (5 characters with their specific 性格特征 / 说话方式 / 情感触发点 — this is bespoke fandom-domain knowledge, not scraped), wrote the 7-node adaptive LangGraph topology including the conditional revision edge, designed the Prisma schema (21 models including the polymorphic `Notification.payload: Json`, the self-referential `Comment.parentId` for nested replies, the deliberate split between `KnowledgeChunk` for RAG and `SourceResearchCache` for Tavily caching, the `UserCredits` + `Generation` audit foundation), wrote both Dockerfiles + the Coolify compose file + the GitHub Actions deploy workflow, executed the Railway → DigitalOcean + Coolify migration (and *documented* it as a reusable playbook), wrote the pgvector + pg_trgm migrations and the `lib/story-embedding.ts` raw-SQL escape hatch, and built the entire community-feature sprint (comments, notifications, follows, related stories, search indexing, view counts, SEO, dark mode, reader preferences, avatar cropping) in the final ~96-hour push 2026-04-18 → 2026-04-21. The project doubles as a personal R&D lab for the rest of the portfolio: the Coolify-on-DO migration playbook informed similar deployments in archcanvas (Workers → DO VPS), the GitHub-Actions-to-GHCR-to-SSH pattern reappeared in subsequent multi-service projects, and the pgvector + ivfflat + cosine-similarity recipe became the template I reused for related-content recommendations elsewhere.
   - id: archcanvas
     provenance: personal
-    tier: primary
+    tier: flagship
     recency: active
     lastUpdated: "2026-07-10"
     meta:
@@ -526,7 +526,7 @@ projects:
   # Creative AI & Language Tools
   - id: ai-image-generator
     provenance: personal
-    tier: primary
+    tier: archive
     recency: recent
     lastUpdated: "2026-05-19"
     name: AI Image Generator — Full-Stack Text-to-Image SaaS
@@ -789,7 +789,7 @@ projects:
         deployment pipeline. Maintains the live deployment today.
   - id: chinese-redefine
     provenance: personal
-    tier: primary
+    tier: archive
     recency: recent
     lastUpdated: "2026-07-04"
     name: Chinese Redefine 汉语新解 — AI Word Redefinition
@@ -954,7 +954,7 @@ projects:
         aesthetic redesign end-to-end.
   - id: interactive-story-generator
     provenance: personal
-    tier: secondary
+    tier: archive
     recency: historical
     lastUpdated: "2026-07-04"
     name: Interactive Story Generator
@@ -970,7 +970,7 @@ projects:
     status: live
   - id: emoji-story-generator
     provenance: personal
-    tier: secondary
+    tier: archive
     recency: historical
     lastUpdated: "2026-07-04"
     name: Emoji Story Generator
@@ -1982,7 +1982,7 @@ projects:
         simultaneously building the platform and using it.
   - id: nzcel-prep
     provenance: client
-    tier: secondary
+    tier: archive
     recency: historical
     lastUpdated: "2026-05-18"
     name: ESOL Platform (NZCEL Prep)
@@ -1996,7 +1996,7 @@ projects:
     status: archived
   - id: forward-with-her-website
     provenance: client
-    tier: secondary
+    tier: archive
     recency: historical
     meta:
       x_brand:
@@ -2041,7 +2041,7 @@ projects:
     status: live
   - id: agrihire-solutions
     provenance: coursework
-    tier: secondary
+    tier: archive
     recency: historical
     lastUpdated: "2026-07-04"
     name: AgriHire Solutions
@@ -2372,7 +2372,7 @@ projects:
     status: live
   - id: customer-insight
     provenance: personal
-    tier: secondary
+    tier: archive
     recency: historical
     lastUpdated: "2026-05-18"
     name: Customer Insight
@@ -2431,7 +2431,7 @@ projects:
     status: live
   - id: biosecurity
     provenance: coursework
-    tier: secondary
+    tier: archive
     recency: recent
     lastUpdated: "2026-07-04"
     name: NZ Biosecurity Guide
@@ -2474,7 +2474,7 @@ projects:
     status: live
   - id: countryside-community-swimming-club
     provenance: coursework
-    tier: secondary
+    tier: archive
     recency: recent
     lastUpdated: "2026-07-04"
     name: Swimming Club Management System
@@ -2506,7 +2506,7 @@ projects:
       impactHeadline: "Automotive repair-shop platform (technician + admin UIs, parts inventory, billing) — rebuilt from a basic HTML/CSS group project into a Flask 3 app-factory on PostgreSQL + SQLAlchemy + Alembic; 29 stars / 11 forks, the strongest community traction of Chan's learning-origin apps."
   - id: fishing-club-project
     provenance: coursework
-    tier: secondary
+    tier: archive
     recency: recent
     lastUpdated: "2026-07-04"
     name: East Coast Anglers Club (Fishing Club Website)
@@ -2535,7 +2535,7 @@ projects:
     status: archived
   - id: femtracker
     provenance: personal
-    tier: secondary
+    tier: archive
     recency: historical
     lastUpdated: "2026-07-04"
     name: FemTracker (Mobile)
@@ -2713,7 +2713,7 @@ projects:
       impactHeadline: "The deprecated Gen-1 website for FemTech Weekend (China's first women's-health-tech organisation) — the original platform Chan built before the current Gen-2 Docusaurus + Drizzle/Neon rebuild that now powers the organisation."
   - id: sanicle-ai
     provenance: client
-    tier: secondary
+    tier: archive
     recency: historical
     lastUpdated: "2026-07-04"
     name: Sanicle AI — Multi-Tenant B2B FemTech SaaS
@@ -2740,7 +2740,7 @@ projects:
       impactHeadline: "Multi-tenant B2B FemTech SaaS with a dual AI stack — IBM watsonx for quick interactions and Google Gemini for deep health consultations — over org-scoped PostgreSQL isolation, leave management, and HR analytics; Chan's core Sanicle engineering work (~98% solo)."
   - id: sanicle-platform
     provenance: client
-    tier: secondary
+    tier: archive
     recency: historical
     lastUpdated: "2026-07-04"
     name: Sanicle Cloud — Official Website (sanicle.cloud)
@@ -2815,7 +2815,7 @@ projects:
   # ------- 2026-07 intake wave: newly-recorded ChanMeng666 repos -------
   - id: archlang
     provenance: personal
-    tier: primary
+    tier: flagship
     recency: active
     lastUpdated: "2026-07-10"
     meta:

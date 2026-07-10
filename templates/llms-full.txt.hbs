@@ -152,8 +152,11 @@
 {{/if}}{{#if demoUrl}}- **Demo:** {{demoUrl}}
 {{/if}}{{#if techStack}}- **Tech stack:** {{join techStack ", "}}
 {{/if}}{{#each metrics}}- **{{label}}:** {{value}}
-{{/each}}
-{{#if publicSummary}}**Summary:** {{trim publicSummary}}
+{{/each}}{{#if _clientOrg}}- **Part of:** {{_clientOrg.name}} ({{_clientOrg.url}})
+{{/if}}{{#if _relatedProjectsResolved.length}}- **Related projects:** {{#each _relatedProjectsResolved}}{{name}}{{#unless @last}}, {{/unless}}{{/each}}
+{{/if}}{{#if _supersededByProject}}- **Superseded by:** {{_supersededByProject.name}}
+{{/if}}{{#if _supersedesProjects.length}}- **Supersedes:** {{#each _supersedesProjects}}{{name}}{{#unless @last}}, {{/unless}}{{/each}}
+{{/if}}{{#if publicSummary}}**Summary:** {{trim publicSummary}}
 {{/if}}{{#if narrative.impactHeadline}}
 **Impact:** {{trim narrative.impactHeadline}}
 {{/if}}{{#if narrative.problem}}
@@ -180,6 +183,10 @@
 {{/if}}{{#if url}}- **URL:** {{url}}
 {{/if}}{{#if repoUrl}}{{#unless (eq url repoUrl)}}- **Repository:** {{repoUrl}}
 {{/unless}}{{/if}}{{#if techStack}}- **Tech stack:** {{join techStack ", "}}
+{{/if}}{{#if _clientOrg}}- **Part of:** {{_clientOrg.name}} ({{_clientOrg.url}})
+{{/if}}{{#if _relatedProjectsResolved.length}}- **Related projects:** {{#each _relatedProjectsResolved}}{{name}}{{#unless @last}}, {{/unless}}{{/each}}
+{{/if}}{{#if _supersededByProject}}- **Superseded by:** {{_supersededByProject.name}}
+{{/if}}{{#if _supersedesProjects.length}}- **Supersedes:** {{#each _supersedesProjects}}{{name}}{{#unless @last}}, {{/unless}}{{/each}}
 {{/if}}{{#if publicSummary}}
 **Summary:** {{trim publicSummary}}
 {{/if}}{{#if narrative.impactHeadline}}

@@ -93,6 +93,8 @@ philosophy — "Subtraction for life, addition for thought."
 - **Cloudflare** (vendor) -- Workers AI + Vectorize + KV — teaching platform RAG. URL: https://www.cloudflare.com.
 - **Neon** (vendor) -- Postgres backbone — She Sharp, FemTech Weekend. URL: https://neon.tech.
 - **Chow Luck Club Ltd** (employer) -- Commissioning client for eatropolis-website (Auckland, NZ). URL: https://www.linkedin.com/company/chowluckclub/. Related project: eatropolis-website.
+- **Whiri-AI** (employer) -- Research-commission client for Tam-AI-Ti (Māori AI financial wellness). URL: https://tamaiti.whiri-ai.com/. Related project: tam-ai-ti.
+- **TechRosie** (partner) -- Women-developer community Chan contributes to (hosts femtracker). URL: https://github.com/TechRosie.
 
 ## AI Mentor & Educator
 
@@ -1937,6 +1939,8 @@ orientation that later anchored Chan's work between China and NZ.
 - **Cloud platforms:** DigitalOcean DOKS → Google Cloud GKE
 - **Cross-cloud cutover:** ~30 min downtime (2026-03-11)
 - **Games vendored (FOSS):** 9 (from 11 repos analyzed)
+- **Part of:** GAVIGO Inc. (https://gavigo.com)
+- **Related projects:** GAVIGO Website
 **Summary:** AI-orchestrated post-app activation platform for GAVIGO Inc. (Delaware
 C-Corp; founder & CEO Saba Gecgil). Public mission: "Skip the Store.
 Start the Play" — eliminate the latency between user intent and
@@ -2160,6 +2164,7 @@ on the active codebase.
 - **Pages · API routes · components:** 38 pages · 76 API route files · 100+ endpoints across 20 modules · 115+ components (44 main · 38 goal-specific · 28 shadcn/ui · 5+ cultural)
 - **Commits (solo):** 351 (2025-09-19 → 2026-03-29)
 - **Production migration:** Vercel personal Hobby → client Whiri-AI Pro team executed March 2026 with zero downtime; documented as `docs/implementation/PROJECT_MIGRATION_GUIDE.md` — a reusable playbook covering GH org transfer, Blob/KV recreation, OAuth re-config, DNS cutover, blob-data migration, and `NEXTAUTH_SECRET` preservation for session survival
+- **Part of:** Whiri-AI (https://tamaiti.whiri-ai.com/)
 **Summary:** AI Financial Wellness Coach for Māori communities, architected on the Te Whare
 Tapa Whā holistic-health framework — culture is in the schema, not the UI.
 Built solo for Riria (Missy) Te Kanawa (former KPMG NZ National Māori Sector
@@ -2424,7 +2429,7 @@ that turned hours of volunteer manual work into one-command automation.
 648/748 commits (86.6%) solo across 10 months.
 
 [tier=flagship · recency=recent · updated=2026-07-04]
-- **URL:** https://she-sharp-zeta.vercel.app/
+- **URL:** https://www.shesharp.org.nz/
 - **Repository:** https://github.com/NZ-SheSharp/she-sharp
 - **Tech stack:** Next.js 15.6 canary (App Router, Turbopack dev), React 19.1.2, TypeScript 5.8, Drizzle ORM 0.43, Neon Postgres (serverless pool), NextAuth 5 beta (Google + GitHub OAuth + bcrypt credentials), @auth/drizzle-adapter, OpenAI GPT-4o-mini (temp 0.3, max_tokens 1000, JSON-object response_format), Upstash Redis (AI match cache + queue), Stripe 20 (Customer Portal for self-service membership management), @slack/web-api (event-collector + interactive handlers), @octokit/rest (Slack-skill auto-commits), Claude agent skill: sync-event-from-slack, Resend (transactional email), Cloudinary (image hosting + transformations), Tailwind CSS 4.1, shadcn/ui + Radix UI (20+ primitives), @dnd-kit (kanban-style admin workflows), Recharts 3 + @number-flow/react (dashboard analytics), Framer Motion + Lenis (landing-page polish), Three.js + OGL (hero shader effects), Zod 3 (validation everywhere — Slack-bot LLM output gating, form schemas), React Hook Form + @hookform/resolvers, Vercel Edge Network + Vercel Cron
 - **Total commits:** 748
@@ -2449,6 +2454,8 @@ that turned hours of volunteer manual work into one-command automation.
 - **Industry mentors:** 18
 - **Mentorship success rate:** 85% (5-6× higher promotion likelihood for mentees per She Sharp's outcomes data)
 - **Migration crawler assets:** 1,748 images / 707 MB / 11 JSON files / 85 events + 50 Humanitix tickets + 15 podcasts + 121 photo galleries + 7 press articles + 118 pages
+- **Part of:** She Sharp (https://shesharp.org.nz)
+- **Related projects:** HER WAKA — Employment Programme for Women in Auckland, Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp), Touch the World, Talk to Code
 **Summary:** Solo-built production member platform for She Sharp — New Zealand's
 leading women-in-STEM nonprofit (charitable trust, 2,200+ registered
 members / 8,000+ women supported lifetime, 50+ corporate partners, 84+
@@ -2826,6 +2833,8 @@ every surface.
 - **Editorial content directories:** 3 (blog/ research reports, opinions/ commentary, stories/ founder profiles) — Docusaurus blog plugin instances
 - **Bilingual locales:** 2 (en + zh-Hans) across every page from day one — not retrofit
 - **Image performance pass:** 14 images compressed; social-card 6 MB → 240 KB; site image weight reduced ~67% (`19d3e71`)
+- **Part of:** FemTech Weekend (https://www.femtechweekend.com)
+- **Supersedes:** FemTech Weekend Website (Gen-1, deprecated), FemTech Weekend Platform
 **Summary:** Solo-built Gen-2 platform (97.2% of 544 commits across ~1 year) for
 FemTech Weekend, China's first women's-health-technology
 organisation. Docusaurus 3.9 editorial spine + Drizzle ORM on Neon
@@ -3222,6 +3231,7 @@ the non-technical client edits MDX + JSON directly in the browser.
 - **Load testing:** k6 to 1,000 concurrent VUs per contract §3.8 (full profile pending Phase 2 Access disable on 2026-06-05)
 - **Deploy pipeline:** GitHub Actions push-to-main → opennextjs-cloudflare build + deploy, ~55-70s end-to-end
 - **Cloudflare Zero Trust apps:** 3 self-hosted Access apps (pre-launch lockdown `e1ff6f56-…`, webhook bypass, newsletter bypass `96232ff1-…`); newsletter bypass uses 5/5 hostname destination slots (platform limit)
+- **Part of:** Chow Luck Club Ltd (https://www.linkedin.com/company/chowluckclub/)
 **Summary:** Production-grade event website for Eatropolis — Auckland's
 one-day culinary festival (2026-10-10, Shed 10, 30+ award-
 winning chefs) — solo-built under signed freelance contract
@@ -3710,11 +3720,12 @@ Onehunga 1061) is on file as Developer.
 
 ## Notable Open Source Projects
 
-### github-readme-suno-cards — Suno Music Cards for GitHub READMEs — GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 8 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with SunoStats.
-[tier=primary · recency=active · updated=2026-05-19]
+### github-readme-suno-cards — Suno Music Cards for GitHub READMEs — GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 8 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.
+[tier=primary · recency=active · updated=2026-07-10]
 - **URL:** https://github-readme-suno-cards.vercel.app
 - **Repository:** https://github.com/ChanMeng666/github-readme-suno-cards
-- **Tech stack:** pnpm 9.12 monorepo (apps/ + packages/ + action/), Next.js 15.1 (Vercel Edge runtime), TypeScript 5.6, @suno-cards/parser workspace package (Valibot-validated Suno oEmbed parser — shared kernel with SunoStats), @suno-cards/render workspace package (pure-function SVG renderer), Valibot (strict TypeScript schema validation against studio-api-prod.suno.com oEmbed), SVG <foreignObject> + inline HTML <span> (CJK text shaping), CSS @keyframes (equalizer-bar animation driven by HTML spans inside the SVG), GitHub Actions composite action (Node 20 runner with esbuild-bundled dist), Biome 1.9 (lint + format), Vitest (parser tests inside action/test/), Vercel Data Cache (upstream, 3600s TTL for single cards), HTTP Cache-Control headers (downstream, drives GitHub Camo proxy), esbuild (action bundle build via action/build.ts), MIT license
+- **Tech stack:** pnpm 9.12 monorepo (apps/ + packages/ + action/), Next.js 15.1 (Vercel serverless runtime), TypeScript 5.6, @suno-cards/parser workspace package (Valibot-validated Suno oEmbed parser — shared kernel with Seismophone), @suno-cards/render workspace package (pure-function SVG renderer), Valibot (strict TypeScript schema validation against studio-api-prod.suno.com oEmbed), SVG <foreignObject> + inline HTML <span> (CJK text shaping), CSS @keyframes (equalizer-bar animation driven by HTML spans inside the SVG), GitHub Actions composite action (Node 20 runner with esbuild-bundled dist), Biome 1.9 (lint + format), Vitest (parser tests inside action/test/), Vercel Data Cache (upstream, 3600s TTL for single cards), HTTP Cache-Control headers (downstream, drives GitHub Camo proxy), esbuild (action bundle build via action/build.ts), MIT license
+- **Related projects:** Seismophone — The independent observatory for AI music
 
 **Summary:** A **GitHub Marketplace Action + Vercel-hosted SVG card service**
 that lets any Suno creator surface their music catalog in their
@@ -3727,7 +3738,7 @@ internal monorepo on 2026-04-13** (commit `73f4fa8`
 immediately by `295756e` *"clean remaining internal reference"*)
 and now ships as a clean, focused, MIT-licensed open-source
 package. **Architectural insight**: the `@suno-cards/parser`
-workspace package is **shared with SunoStats** (Chan's separate
+workspace package is **shared with Seismophone** (Chan's separate
 Suno analytics SaaS) — the parser was distilled out as the common
 kernel between the two projects, so a single Valibot-validated
 Suno-oEmbed contract underwrites both products. Ships 12 base
@@ -3736,12 +3747,12 @@ customization toggles, hex color overrides, 3 different `id`
 input formats (raw UUID / `suno.com/song/<uuid>` URL /
 `suno.com/s/<shortcode>` short code), and 8 GitHub Action inputs
 including tag filtering and duration filtering. Stack: pnpm
-monorepo + Next.js 15.1 on Vercel Edge + Valibot schemas + an
+monorepo + Next.js 15.1 on Vercel serverless + Valibot schemas + an
 SVG renderer that uses `<foreignObject>` + inline HTML `<span>`
 for CJK-safe text shaping with CSS `@keyframes` animations
 driving the equalizer bars.
 
-**Impact:** GitHub Marketplace Action for Suno music cards — CJK-safe animated SVG with 12 design combinations, parses three ID formats, shares a Valibot kernel with SunoStats analytics, extracted from monorepo as a clean MIT-licensed release.
+**Impact:** GitHub Marketplace Action for Suno music cards — CJK-safe animated SVG with 12 design combinations, parses three ID formats, shares a Valibot kernel with Seismophone analytics, extracted from monorepo as a clean MIT-licensed release.
 
 **Problem:** Suno AI creators have no graceful way to surface their music
 catalog on the surfaces where developer audiences actually
@@ -3774,7 +3785,7 @@ visual surface for their Suno output. (3) **Engineers
 studying the project as a worked example** of (a) extracting
 a public clean repo from a larger internal monorepo,
 (b) sharing a single Valibot-validated parser kernel across
-two independent products (SunoStats + this), (c) the
+two independent products (Seismophone + this), (c) the
 SVG `<foreignObject>` + CSS-keyframes technique for animated,
 CJK-safe SVG that pure SVG can't render.
 
@@ -3819,16 +3830,16 @@ public-by-design endpoints that Suno advertises via the W3C
 oEmbed protocol; no scraping, no auth, no rate-limit
 landmines, no headless browsers. **Critical architectural
 decision**: the same `@suno-cards/parser` package is **shared
-with Chan's other Suno project, SunoStats** — Chan's separate
+with Chan's other Suno project, Seismophone** — Chan's separate
 analytics SaaS for Suno creators
-([sunostats.chanmeng.org](https://sunostats.chanmeng.org/)).
+([seismophone.chanmeng.org](https://seismophone.chanmeng.org/)).
 Extracting the parser as a workspace package means a single
 Valibot schema definition + a single typed-error hierarchy
 (`SunoNotFoundError`, `SunoNetworkError`, `SunoSchemaError`,
 etc.) underwrites both products — fix a Suno API drift once,
 both products benefit. **`@suno-cards/render`** is the pure-
 function SVG rendering engine — deterministic, cacheable,
-and platform-independent (Vercel Edge can serve it, the
+and platform-independent (Vercel serverless can serve it, the
 GitHub Action's Node 20 runner can also call it locally).
 **The defining rendering technique**: SVG `<foreignObject>`
 carries inline HTML `<span>` elements so CJK text shapes
@@ -3866,8 +3877,8 @@ was first developed; the v0.1 extraction was the moment Chan
 cleaned it up and shipped it as a focused MIT-licensed
 open-source release. Continuing iteration through 2026-04-21
 (latest commit `2f894c9`). **The shared parser kernel with
-SunoStats** (Chan's separate Suno analytics SaaS at
-[sunostats.chanmeng.org](https://sunostats.chanmeng.org)) is
+Seismophone** (Chan's separate Suno analytics SaaS at
+[seismophone.chanmeng.org](https://seismophone.chanmeng.org)) is
 the architecturally important outcome: rather than two
 independent Suno API integrations drifting apart over time,
 the two products are pinned to a single Valibot contract
@@ -3892,9 +3903,9 @@ UI with live preview over all 12 base combinations + 11
 toggle flags + hex color overrides; executed the
 2026-04-13 public-extract release sequence (`73f4fa8` +
 `295756e`); coordinates parser updates across both this
-project and the SunoStats sibling repo.
+project and the Seismophone sibling repo.
 ### echook (Echo + Hook) — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
-[tier=primary · recency=active · updated=2026-07-04]
+[tier=primary · recency=active · updated=2026-07-10]
 - **Repository:** https://github.com/ChanMeng666/echook
 - **Tech stack:** Python 3.6+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13), Remotion 4 (promo video), React 19 (promo video), Suno (background music generation)
 
@@ -3905,17 +3916,17 @@ audio-hooks", "switch to chimes", "snooze for 30 minutes", "send alerts
 to my Slack"), and the agent runs every shell command, reads every JSON
 output, and reports back. Install reduces to **1 shell command + 2
 natural-language prompts + 1 slash command = 4 things**; everything
-after that is conversation. Ships 26 hook events, 2 audio themes,
+after that is conversation. Ships 39 hook events, 2 audio themes,
 rate-limit alerts (5h/7d quota windows), webhooks (Slack/Discord/Teams/
-ntfy), TTS that speaks Claude's actual reply, and a context-window
-status line. 63 GitHub stars, 42 releases, 139 unittest cases on
-Ubuntu/Windows/macOS × Python 3.9–3.13. A sister repo,
+ntfy), TTS that speaks Claude's actual reply, and a 29-segment
+context-window status line. Now on v6.3.3 with ~76 GitHub stars and
+200+ unittest cases on Ubuntu/Windows/macOS × Python 3.9–3.13. A sister repo,
 **echook-promo-video**, ships the 88-second 1080p product film built
 entirely in code (Remotion + Claude Code + ElevenLabs + Suno).
 Carved out as Chan's preserved IP in the Engram Architect Cohort
 Engagement Letter (May 2026).
 
-**Impact:** Audio-feedback hook system for Claude Code / Cursor / Codex — 26 hook events, 2 themes, context-window status line with quota bars, 42 releases, 139 tests on triple-platform CI, plus a Remotion-built promo video shipped entirely in code.
+**Impact:** AI-operated hook system for Claude Code / Cursor / Codex, driven entirely by natural language — 39 hook events across three harnesses from one source, a 29-segment context-window status line, audio/TTS/webhook channels, 200+ tests on triple-platform CI. ~76 stars, v6.3.3.
 
 **Problem:** Developers running long-form AI coding workflows on Claude Code,
 Cursor IDE, and Codex CLI have no way to *hear* what their agent
@@ -3962,8 +3973,9 @@ The business value is **build-in-public credibility**: echook is
 the demonstration artifact for Chan's AI-first product philosophy
 and shows up in every Engram-cohort interview, every recruiter
 conversation, and the public README of every downstream client
-project. The 42-release cadence, the cross-platform CI matrix,
-and the 139-test bridge-contract suite make it visible production
+project. The sustained release cadence (now v6.3.3), the
+cross-platform CI matrix, and the 200+-test bridge-contract suite
+make it visible production
 engineering — not a weekend script. The Remotion promo video
 sister repo extends the same proof: it shows Chan can ship not
 just the product but the marketing artifact for the product, end
@@ -3971,13 +3983,13 @@ to end, programmatically, with zero Adobe-suite licensing or
 third-party video production overhead.
 
 **Technical approach:** AI-first design at every layer. The `audio-hooks` CLI ships a
-stable JSON-only API with **27 subcommands, no prompts, no
+stable JSON-only API with **~40 subcommands, no prompts, no
 spinners**, versioned NDJSON event logging (schema
 `audio-hooks.v1`, 5 MB rotation × 3 files), and a **stable error
 code enum** (`AUDIO_FILE_MISSING`, `WEBHOOK_TIMEOUT`,
 `DUAL_INSTALL_DETECTED`, etc.) where each error carries a
 `suggested_command` field so an agent can recover autonomously
-without screen-scraping. Hook coverage is **26 events** spanning
+without screen-scraping. Hook coverage is **39 events** spanning
 session start/end, tool execution, permission requests, file
 changes, worktree creation, elicitation, and rate-limit warnings
 (5-hour and 7-day quota windows with configurable 80%/95%
@@ -3988,7 +4000,7 @@ via `config/audio_manifest.json` + the ElevenLabs generator.
 Webhooks fan out to Slack, Discord, Teams, and ntfy via
 fire-and-forget subprocess with a versioned
 `audio-hooks.webhook.v1` payload — they never block the hook.
-The status line ships **10 customisable segments** including
+The status line ships **29 customisable segments** including
 color-coded context-window and API-quota bars with absolute
 token counts (e.g. `Context: 83% (166K/200K)`) so users see the
 "agent dumb zone" before they enter it. Cross-editor architecture
@@ -4010,11 +4022,11 @@ never round-trip user TOML because that destroys comments and
 formatting. **18 canonical events with no Codex equivalent
 no-op cleanly under the codex invoker** with a debug NDJSON
 event, never blocking the session. The whole bridge contract is
-validated by 139 unittest cases across Ubuntu/Windows/macOS ×
+validated by 200+ unittest cases across Ubuntu/Windows/macOS ×
 Python 3.9/3.12/3.13 in GitHub Actions CI.
 
-**Outcomes:** 63 GitHub stars, 6 forks, **42 releases** shipped, **139 unittest
-cases**. The defining release sequence: v5.0 (Jan 2026) shipped
+**Outcomes:** ~76 GitHub stars, **150 commits** across the 5.x → 6.x line (now
+v6.3.3), **200+ unittest cases**. The defining release sequence: v5.0 (Jan 2026) shipped
 the AI-first redesign — JSON CLI, `/audio-hooks` skill, NDJSON
 logging, plugin-native install; v5.2.0 (May 2026) added native
 Codex CLI support with +33 bridge-contract tests; v5.2.1 (May
@@ -4058,7 +4070,7 @@ audio-generation script, and tuned the volume-ducking
 envelopes so BGM ducks during VO + demo playback. Maintains
 both repos today through the 5.x line.
 ### 2D Portfolio — chanmeng.org — Personal site at chanmeng.org powering an 11-stage autonomous AI newsletter pipeline + IBM watsonx.ai digital twin, reskinned to the Caldera brand and hardened for recruiter-LLM discovery (GEO)
-[tier=primary · recency=active · updated=2026-07-04]
+[tier=primary · recency=active · updated=2026-07-10]
 - **URL:** https://chanmeng.org/
 - **Tech stack:** Next.js 14 (App Router, Edge Runtime API routes), React 18, TypeScript 5, Tailwind CSS (Caldera brand system, light-only), Framer Motion, Three.js + postprocessing (PixelBlast WebGL background), MDX blog (Shiki / rehype-pretty-code, remark + rehype pipeline), Lottie + rough-notation + react-icon-cloud + canvas-confetti (UI polish), IBM watsonx.ai chat API (digital-twin assistant — us-south, IAM-token auth), OpenAI (gpt-4o + gpt-4o-mini — newsletter curation pipeline), Resend, React Email, Vercel Blob, Product Hunt GraphQL API, Cloudflare Pages (@cloudflare/next-on-pages + wrangler), GitHub Actions cron
 
@@ -4074,7 +4086,7 @@ multi-stage LLM curation chain (extract → adversarial counter-evidence
 → persist memory), and delivers via Resend at Monday 8-9 AM NZ local
 time. Deployed on Cloudflare Pages.
 
-**Impact:** Three production systems in one repo: animated portfolio + IBM Watson digital twin + an 11-stage autonomous AI newsletter pipeline that ships every Monday 8 AM NZ time fully unattended since April 2026 — Lighthouse 95+ across all metrics.
+**Impact:** Three production systems in one repo: animated portfolio + an IBM watsonx.ai digital twin + an 11-stage autonomous AI newsletter pipeline that ships every Monday 8 AM NZ time fully unattended since April 2026 — Lighthouse 95+ across all metrics. 188 solo commits.
 
 **Problem:** A personal site is usually one of two things: a brochure (looks
 nice, says nothing) or a CMS (constant maintenance, dies the
@@ -4227,26 +4239,27 @@ tracking domain + Vercel Blob image hosting, and migrated the
 whole site to Cloudflare Pages. Maintains the system as both
 a publication and a continuous demonstration of agent-pipeline
 engineering.
-### AI Programming Education Platform (programming.chanmeng.org) — Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (four cohort versions side-by-side) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
-[tier=primary · recency=active · updated=2026-07-04]
+### AI Programming Education Platform (programming.chanmeng.org) — Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
+[tier=primary · recency=active · updated=2026-07-10]
 - **URL:** https://programming.chanmeng.org/
 - **Repository:** https://github.com/ChanMeng666/ai-programming-teaching-project
 - **Tech stack:** Docusaurus 3.8.1, @docusaurus/faster, React 18, MDX, Cloudflare Workers, Workers AI (Llama 3.1 8B Instruct), Cloudflare Vectorize, BGE Base EN v1.5 (768-dim embeddings), Cloudflare KV, Cloudflare Pages, Notion API, Algolia DocSearch (contextual), Typst, Mermaid (dual-view), i18next (EN + 简体中文), Server-Sent Events
 
 **Summary:** Production teaching platform at **programming.chanmeng.org** hosting
-four cohort versions side-by-side (2024-winter, 2025-summer,
-2026-her-waka, 2026-technest) through Docusaurus versioned docs.
+five cohort versions side-by-side (2024-winter · 2025-summer ·
+2026-her-waka · 2026-peyvand-academy · 2026-technest, three of them
+running concurrently in 2026) through Docusaurus versioned docs.
 Backed by an **in-course RAG AI assistant** running on Cloudflare
 Workers AI (Llama 3.1 8B Instruct), with ~4,800 indexed document
 chunks served from Cloudflare Vectorize via BGE Base EN v1.5
 embeddings and conversation memory in Cloudflare KV. Bilingual
 EN + 简体中文 throughout, with Typst-generated downloadable PDF
 handouts, Notion-backed Capstone voting, Mermaid dual-view
-diagrams, and Algolia contextual search. 199 of 208 commits solo
-(95.7%). Actively maintained — new course recordings shipped
+diagrams, and Algolia contextual search. 214 of 224 commits solo
+(~96%). Actively maintained — new course recordings shipped
 weekly through the 2026 TechNest cohort.
 
-**Impact:** Public teaching platform running 4 coexisting AI-instructor cohort versions (Winter 2024 · Summer 2025 · HER WAKA 2026 · TechNest 2026) with an in-course RAG assistant on Cloudflare Workers indexing ~4,800 bilingual document chunks across the entire course corpus.
+**Impact:** Public teaching platform running 5 coexisting cohort versions — three concurrent 2026 tracks (TechNest · Peyvand · HER WAKA) plus 2025 & 2024 — with an in-course RAG assistant on Cloudflare Workers indexing ~4,800 bilingual doc chunks across the whole corpus.
 
 **Problem:** AI-programming cohort programmes typically die between cohorts:
 the lecture deck is rebuilt from scratch each round, students
@@ -4301,7 +4314,7 @@ actual paid teaching work — every commit is both portfolio
 artefact and student value.
 
 **Technical approach:** Built on **Docusaurus 3.8.1** with the experimental
-`@docusaurus/faster` build pipeline. Four cohort versions
+`@docusaurus/faster` build pipeline. Five cohort versions
 coexist through Docusaurus's versioned-docs feature — each
 version is its own self-contained doc tree with its own
 sidebar, blog feed, and tag taxonomy. Bilingual i18n is
@@ -4520,7 +4533,7 @@ designed and implemented the SVG generation system in
 `lib/svgGenerator.ts`, and shipped the Modern Chinese Ink
 aesthetic redesign end-to-end.
 ### Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa) — A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine (a hand-built CSS 3D rendering engine) — themed end-to-end on Māori mythology of Aotearoa and inspired by Waitangi Day, with a full Cloudflare Workers + Hono + Neon Postgres backend (auth, leaderboards, cloud saves, anti-cheat)
-[tier=primary · recency=recent · updated=2026-05-18]
+[tier=primary · recency=recent · updated=2026-07-10]
 - **URL:** https://towerdefense.chanmeng.org/
 - **Repository:** https://github.com/ChanMeng666/css-tower-defense
 - **Tech stack:** CSS 3D Transforms, Vanilla JavaScript (ES6), LESS preprocessor, Gulp 4 build pipeline, Cloudflare Workers, Hono, Neon Postgres, Web Audio API, Howler.js, DOM object pooling
@@ -4539,7 +4552,7 @@ Neon Postgres for auth, leaderboards, cloud saves (3 slots),
 daily challenges, and server-side anti-cheat. 84 commits over
 ~2 months (Feb–Mar 2026), executed in disciplined P0–P4 phases.
 
-**Impact:** 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Māori mythology of Aotearoa, with full Cloudflare Workers + Hono + Neon Postgres backend. 84 commits / ~99% solo over 2 months.
+**Impact:** 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Māori mythology of Aotearoa, with full Cloudflare Workers + Hono + Neon Postgres backend (server-side anti-cheat). 90 commits / ~99% solo over ~4.5 months.
 
 **Problem:** Two prevailing pictures of "a portfolio game project" are both
 wrong: (a) a trivial Canvas + JS toy that lasts one weekend
@@ -4688,7 +4701,7 @@ music state machine and the Web Audio synth effects,
 wrote the Gulp + LESS build pipeline, and authored the
 4-step interactive tutorial with spotlight overlays.
 ### Vitex — AI Career Agent (vitex.org.nz) — Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); billing is outcome-based (charged only when a resume is successfully produced). Vercel AI SDK + GPT-4o + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions
-[tier=primary · recency=recent · updated=2026-07-04]
+[tier=primary · recency=recent · updated=2026-07-10]
 - **URL:** https://www.vitex.org.nz/
 - **Repository:** https://github.com/ChanMeng666/easy-resume
 - **Tech stack:** Next.js 15, React 19, TypeScript 5, Vercel AI SDK v6, @ai-sdk/openai, OpenAI GPT-4o, Zod schemas, Typst (local binary), Neon Postgres, Drizzle ORM, Upstash Redis, Stack Auth, Stripe, Cloudinary, shadcn/ui + Neobrutalism, Framer Motion, Public v1 HTTP API (OpenAPI spec + curl playbook in skill.md), vitex-cli (thin API client, bin `vitex`), MCP server (`vitex mcp` via npx, stdio — Claude Desktop/Code, Cursor), Docker, Traefik, DigitalOcean VPS, GitHub Actions CI/CD
@@ -4742,7 +4755,7 @@ real users, real billing, and real DevOps — not a demo.
 **Product logic:** User flow is intentionally short: (1) **Homepage** — paste
 a job description + describe your professional background
 in free text. No CV upload, no form filling, no field-by-field
-data entry. (2) **Generate** — click run; the 7-step AI
+data entry. (2) **Generate** — click run; the 8-step AI
 pipeline streams progress via SSE, the user watches each
 stage complete (parsing JD → parsing background → matching
 → tailoring → ATS scoring → cover letter → Typst compile),
@@ -4770,9 +4783,10 @@ Cache + Payments + AI + PDF rendering — is production-shaped
 for a real user base, not a demo.
 
 **Technical approach:** **AI agent layer.** The pipeline is **Vercel AI SDK v6**
-with the OpenAI provider (`@ai-sdk/openai`) calling **GPT-4o**
-across seven sequential stages, each producing a
-**Zod-validated** structured output:
+with the OpenAI provider (`@ai-sdk/openai`) across **eight
+sequential stages** on two-tier model routing (a cheap extract
+tier for parsing, a reasoning tier for tailoring; env-overridable),
+each producing a **Zod-validated** structured output:
 1. **JD Parsing** — extract role, seniority, must-have
    skills, nice-to-haves, company signals
 2. **Background Parsing** — convert the user's free-text
@@ -4784,11 +4798,17 @@ across seven sequential stages, each producing a
    emit actionable feedback
 6. **Cover Letter Generation** — produce a matching cover
    letter from the same parsed pair
-7. **Document Generation** — render to Typst, compile to PDF
+7. **Render** — auto-select a template + seeded design tokens,
+   emit Typst source for the resume + cover letter
+8. **Compile** — compile Typst → PDF bytes server-side; this is
+   the billable artifact, so billing fires only here
 
-Each stage streams progress to the client via **Server-Sent
-Events** so the user sees the agent thinking instead of a
-spinner. The system disables OpenAI strict JSON schema
+Immediately after tailoring (step 4) a deterministic
+**faithfulness gate** re-checks the output for fabricated skills
+or employers and triggers one bounded corrective re-tailor — an
+anti-hallucination guard with no LLM in the check itself. Each
+stage streams progress to the client via **Server-Sent Events**
+so the user sees the agent thinking instead of a spinner. The system disables OpenAI strict JSON schema
 mode where Zod uses `.optional()` (commit log captures the
 diagnosis), and reads JD + background from `sessionStorage`
 instead of URL params so deep links don't leak input data.
@@ -4803,8 +4823,9 @@ Typst compiles in milliseconds where LaTeX needs seconds
 and Workers couldn't run the binary at all. The Docker
 image pre-populates the Typst package cache for FontAwesome
 so cold container starts don't pay the package-fetch cost.
-**14 professional templates** are AI-auto-selected based
-on parsed industry / role signals; the renderer also ships
+**7 professional templates** (academic, banking, compact,
+creative, executive, modern-cv, two-column) are AI-auto-selected
+based on parsed industry / role signals; the renderer also ships
 FontAwesome 6 contact icons (replacing the emoji icons of
 an earlier iteration).
 
@@ -4840,10 +4861,9 @@ in the commit log as real edge-case failures during the
 VPS migration.
 
 **Outcomes:** Live and operational at **vitex.org.nz**, serving real users
-with the full free-credit + credit-pack flow. **168 commits over
-~3 months** (2026-02-21 → 2026-05-09), **~95% Chan-authored**
-across two GitHub identities (8 commits from Claude
-co-author, 1 from Vercel deploy bot, rest solo). Three
+with the full free-credit + credit-pack flow. **372 commits over
+~18 months** (2025-01-11 → 2026-07-10), essentially sole-authored.
+Three
 deployment migrations and a LaTeX → Typst document-engine
 swap shipped without service outage — every migration step
 is in the commit log including the specific Docker
@@ -4854,7 +4874,7 @@ reliability + responsive UI pass shipped 2026-05-09 after
 the production hardening phase.
 
 **My role:** Sole engineer, sole designer, sole product owner. Designed
-the 7-step agent pipeline with Zod-validated stages
+the 8-step agent pipeline with Zod-validated stages
 (migrating the editor from CopilotKit to Vercel AI SDK
 agent chat along the way), wrote every API route, built
 the Stripe credit system, configured Stack Auth, designed
@@ -4873,6 +4893,8 @@ pass.
 - **URL:** https://hackathon.shesharp.org.nz/
 - **Repository:** https://github.com/ChanMeng666/event-qa-ai-template
 - **Tech stack:** Next.js 16.1 (App Router), React 18 + TypeScript 5, Tailwind CSS v3 + Framer Motion v12, Vercel AI SDK v4.3, @ai-sdk/openai (GPT-4o-mini-2024-07-18 streaming), Three.js 0.182 + @react-three/fiber 8.16, Custom Quantum Orb 3D mascot (CSS 3D transforms + Three.js particles), Sprite affection gamification engine (gesture detection, mood weighting, time-of-day bias), Notion REST API (raw fetch, CF Workers compatible — replaced @notionhq/client SDK), shadcn/ui + Radix primitives, @opennextjs/cloudflare adapter, Cloudflare Workers deployment (migrated from Vercel), wrangler v4 CI/CD, localStorage state persistence (50-msg chat history + sprite affection state), 5-min FAQ client cache + optimistic vote/view updates, AI rate limiting + per-session token budgets + prompt guardrails (2026-07 security hardening), OpenAI Realtime API over WebRTC — two-way voice (2026 relaunch), Ephemeral client secrets minted server-side (OPENAI_API_KEY never reaches the browser), Audio-reactive Three.js orb voice UI + live captions (2026), Vercel deployment (2026 edition — she-sharp1/aihackathon-2026)
+- **Part of:** She Sharp (https://shesharp.org.nz)
+- **Related projects:** She Sharp
 
 **Summary:** Real industry-partnered AI event assistant built for the **AI
 Hackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised
@@ -5284,264 +5306,140 @@ persistence model with zero server-side state; executed the
 Vercel -> Cloudflare Workers migration with GitHub Actions
 auto-deploy; authored the README, TUTORIAL.md, and GEO
 metadata. Maintains the live deployment today.
-### Seismophone — The independent observatory for AI music — Seismophone — commercial analytics layer built on a private Suno API probe (suno-research-private) — closed a gap Suno's official platform couldn't fill by discovering that Suno's serializer leaks unredacted parent→child lineage UUIDs only on /api/trending + persona sub-trees, then productizing that into the industry's first public Suno lineage explorer. Three free lenses + three single-purchase deep-dive reports. Trilingual EN/简中/日本語. Live on a Docker+Traefik VPS.
-[tier=primary · recency=recent · updated=2026-07-04]
+### Seismophone — The independent observatory for AI music — Seismophone — 'the independent observatory for AI music,' publishing ecosystem readings the platforms don't. Discovered that Suno's public API serializer skips its lineage-UUID redaction pass on exactly two response shapes, and turned that into the industry's first public Suno remix-lineage explorer; also proved Suno's 'trending' feed is a frozen 2024 fossil and built a fossil-watch pulse around it. Free public creator portfolios (/@handle) + observatory pages; seven single-purchase credit-billed insight reports. Trilingual EN/简中/日本語, solo-built, self-hosted on a Docker+Traefik VPS, with a read-only MCP server for AI agents.
+[tier=primary · recency=recent · updated=2026-07-10]
 - **URL:** https://seismophone.chanmeng.org/
-- **Tech stack:** Next.js 16.2 (App Router, Webpack pin), React 19.2, TypeScript 5, Tailwind CSS 4 + GSAP 3.15 scroll motion, Neon Postgres (serverless HTTP driver), Drizzle ORM 0.45 + Drizzle Kit 0.31, NextAuth v5 beta + Neon Auth (Better Auth), Google OAuth (no password flow), Stripe 22 (webhook-verified credit ledger, auto test/live switch), Resend 6 (insight email delivery), @suno-cards/parser workspace package (Valibot validators + typed Suno error hierarchy), WITH RECURSIVE Postgres CTEs (lineage graph traversal), Biome 2.4 (lint + format), Docker multi-stage + Node 20 slim runner, GitHub Container Registry (GHCR), VPS deployment behind Traefik + Let's Encrypt TLS, GitHub Actions CI/CD (typecheck + lint + build + deploy), Linux crontab (collect-trending 04:00 UTC, sync-all 04:05 UTC), next-themes (light/dark), i18n: EN / 简体中文 / 日本語 (cookie-driven, server-resolved)
+- **Tech stack:** Next.js 16.2 (App Router, Webpack pin), React 19.2, TypeScript 5, Tailwind CSS 4 + GSAP 3.15 scroll motion, Neon Postgres (serverless HTTP driver), Drizzle ORM 0.45 + Drizzle Kit 0.31, NextAuth v5 beta + Neon Auth (Better Auth), Google OAuth (no password flow), Stripe 22 (webhook-verified credit ledger, auto test/live switch), Resend 6 (insight email delivery), OpenAI 6 (optional 'analyst's note' narration on reports via gpt-5.4-nano; numbers-only when no key), Read-only MCP server (mcp-handler, Streamable HTTP) — 7 public tools at /api/mcp for AI agents, @suno-cards/parser workspace package (Valibot validators + typed Suno error hierarchy), WITH RECURSIVE Postgres CTEs (lineage graph traversal), Biome 2.4 (lint + format), Docker multi-stage + Node 20 slim runner, GitHub Container Registry (GHCR), VPS deployment behind Traefik + Let's Encrypt TLS, GitHub Actions CI/CD (typecheck + lint + build + deploy), Linux crontab (collect-trending 04:00 UTC, sync-all 04:05 UTC), next-themes (light/dark), i18n: EN / 简体中文 / 日本語 (cookie-driven, server-resolved)
 
-**Summary:** Production third-party analytics layer for **Suno creators** —
-built on a private API-probe codebase (**suno-research-private**)
-that Chan developed first to map Suno's undocumented endpoints,
-then productized and commercialized as SunoStats. The opportunity
-was identified by **technical research** rather than market survey.
-The Suno UI shows a total
-play count and a like count, and that's it: no time series, no
-tag-level breakdowns, no view of which tracks are climbing or
-stalling, no exposure of the parent->child remix lineage that
-Suno's own data model encodes. Reverse-engineering the public
-Suno API surface revealed two specific gaps: (1) Suno's
-serializer **leaks unredacted lineage UUIDs only on
-`/api/trending` and persona-clip sub-trees** — nowhere else,
-not even on the page that lets you remix a clip — making it
-possible (and industry-unique) to build a public lineage
-explorer by ingesting Trending daily and walking the graph
-server-side via `WITH RECURSIVE` CTEs; (2) Suno **advertises
-its public-read API surface via W3C oEmbed** (the same
-protocol Discord and Slack use for link previews), which is
-anonymous + CORS-enabled by design — making a compliant
-analytics product possible without scraping, headless
-browsers, or asking users for their Suno password. SunoStats
-ships **6 lenses on a Suno career** — 3 free (portfolio at
-`/@handle`, the lineage explorer, watched playlists with
-daily pulse view) + 3 premium deep-dive analytics modes
-(Tag Optimization, Performance Snapshot, Method Mix Analysis)
-plus a weekly Trend Brief. **Single-purchase, no subscription**,
-no card stored unless the user chooses to, **3 free credits
-on signup**. Stack:
-Next.js 16.2 + React 19.2 + Drizzle + Neon Postgres + Neon
-Auth + Stripe webhook-verified credit ledger + Resend
-insight delivery, deployed as a Docker container on a VPS
-behind Traefik with GHCR + GitHub Actions CI/CD. Trilingual
-EN / 简体中文 / 日本語. Live at
-[sunostats.chanmeng.org](https://sunostats.chanmeng.org).
+**Summary:** Seismophone (codebase: sunostats) is an independent third-party
+observatory for AI-generated music, instrumented deepest on Suno. It
+captures Suno's public data daily and publishes free ecosystem readings
+the platform itself doesn't expose — how the trending feed has frozen,
+which model eras dominate, and who remixes whom — then points the same
+instruments at a signed-in creator's own catalog to produce a free public
+portfolio at /@handle plus seven credit-billed insight reports. Its
+distinctive dataset is a public Suno remix-lineage graph, recovered from
+a redaction gap in Suno's own API and now un-reproducible. Solo-built on
+Next.js 16 + Neon Postgres, trilingual (EN / 简中 / 日本語), self-hosted
+on a Docker + Traefik VPS, with a read-only MCP server for AI agents.
 
-**Impact:** Industry's first Suno music lineage explorer — closed a gap in Suno's own platform that creators couldn't fix themselves by discovering an unredacted parent→child UUID leak; 46 solo commits, same-day scaffold-to-live, free + premium-lens analytics model.
+**Impact:** Seismophone (repo: sunostats) — an independent observatory for AI music that publishes what the platforms won't: a public Suno remix-lineage graph recovered from a redaction gap in Suno's own API, now sealed and un-reproducible. Solo-built, self-hosted.
 
-**Problem:** Suno is one of the most prolific music platforms onthe
-internet — millions of generated tracks, an Explore chart
-that turns over daily — but its creators operate **almost
-completely blind**. Suno's UI shows one total play count
-per song, one total like count, and absolutely nothing
-else: no play-history time series, no breakdown by tag, no
-signal on which tracks are climbing or stalling, no
-comparison against what's trending on Explore, no view of
-which other creators have built on (remixed, concatenated,
-covered, or edited) your clips. Adjacent platforms
-(Spotify for Artists, YouTube Studio, SoundCloud Pro)
-have shipped this baseline for a decade; Suno hasn't.
-Worse: Suno's own data model **encodes the remix lineage
-between clips** (every clip has a `parent_clip_id`, every
-generation method has a `metadata.type` tag, every
-upsample / concat / edit produces a typed edge in a
-directed graph) — but none of that surfaces in the UI.
-A creator has no idea their concat clips outperform their
-gen clips 2.4x; no idea which of their tracks have been
-remixed by others; no idea their work just hit a milestone
-threshold. The gap is at the platform level, and Suno
-cannot or will not close it.
+**Problem:** AI-music platforms like Suno expose almost nothing about their own
+ecosystems. A creator gets a follower count and a play count; the
+structural data that would let them understand their catalog, trace a
+song's lineage, or read the platform's editorial behaviour is simply
+not published. Nobody outside Suno can answer basic ecosystem
+questions: is the "trending" feed actually live, which model eras
+dominate the charts, who remixes whom? Seismophone exists to measure
+that ecosystem from the outside and publish the readings openly — its
+stated stance is "we publish what the platforms won't."
 
-**Audience:** Three concentric audiences. (1) **Suno creators** —
-bedroom musicians, label A&R staff, indie producers, and
-creator-economy professionals who release on Suno and
-need actual signal to make tag, format, and timing
-decisions. (2) **Suno-adjacent industry observers** — AI
-music trend-watchers, journalists, content marketers who
-cite Suno data, and other AI-music platforms benchmarking
-against Suno's Explore chart. (3) **Engineers studying
-the project as a worked example** of (a) reverse-engineering
-a partial public API surface into a usable third-party
-product, (b) compliance-first data sourcing via W3C
-oEmbed, (c) a credits-ledger access model with no
-recurring-subscription wall.
+**Audience:** Two audiences on one set of instruments. First, anyone — no account —
+can read the free observatory: the fossil-watch "pulse," the preserved
+2024 trending exhibit, the model-era timeline, and the cross-author
+"who remixes whom" lineage graph. Second, signed-in Suno creators point
+the same instruments at their own catalog: they claim a handle, get a
+free public portfolio at /@handle, watch up to ten playlists with daily
+pulse diffs, and buy any of seven deep-dive insight reports on their own
+music. A third, machine audience is served deliberately: a public
+read-only MCP server lets external AI agents query the observatory
+without Seismophone bearing their inference cost.
 
-**Product logic:** Six lenses, deliberately tiered into three free + three
-paid so a new user can value the product before paying.
-**Free lens 1 — Portfolio at `/@handle`**: a shareable,
-public, account-free page with an auto-generated OG
-image, a grayscale-to-colour-on-hover cover grid,
-tag-filterable and sortable by plays/likes/created date.
-`middleware.ts` rewrites `/@handle` -> `/profile/[handle]`
-so creators can share the prettier short form. **Free
-lens 2 — Lineage Explorer at `/lineage/[clipId]`**: the
-industry-unique core, built on the lineage-UUID research
-finding. Renders the parent->descendant graph of any
-Suno clip that has ever appeared on Explore, as a
-clickable SVG. Private clips appear anonymised (no
-title, no handle) so listing-level visibility is
-respected. **Free lens 3 — Watched playlists with daily
-pulse view (up to 10 per user)**: each cycle classifies
-a playlist's entries into **new entries / risers /
-fallers / drop-outs / holders** — useful for tracking
-contest playlists, label-curated channels, or genre
-playlists creators want their tracks placed in.
-**Premium lens 4 — Tag Optimization Report**: compares
-a creator's library tag distribution against the tags
-winning on Explore right now, returns three priority
-buckets (Add / Increase / Maintain). **Premium lens 5 —
-Performance Snapshot**: time-series analysis of
-the creator's own catalog with **milestone tracking
-(100/500/1K/5K/10K plays)**, **movers / stalls /
-decliners** by play velocity, and **per-Suno-model-version
-breakdown** (v3 / v4 / v4.5+ average plays per song).
-**Premium lens 5b — Method Mix Analysis**: distribution
-across the **10-value `metadata.type` enum**
-(`gen`/`concat`/`studio_export`/`edit_v3_export`/
-`edit_crop`/`edit_speed`/`edit_fade`/`upsample`/
-`concat_infilling`/`upload`) vs. the trending corpus,
-plus per-method average plays, surfacing claims like
-"your concat clips outperform gen clips by 2.4x".
-**Premium lens 6 — Weekly Trend Brief**: cross-week
-delta analysis on Explore, emailed via Resend with the
-full writeup. Sign-up grants **3 free credits**, no
-card required. Each insight is **inline-debited from
-the `creditTransactions` ledger** with automatic refund
-+ status `failed` if the generator throws.
+**Product logic:** The product is one measurement apparatus pointed in two directions.
 
-**Business logic:** **Single-purchase credits ledger, no recurring
-subscription**, no card stored unless the user chooses
-to. The model is structurally important: SunoStats serves
-a creator population whose willingness-to-engage is
-non-uniform across the year (release cycles, contest
-pushes), and a recurring-subscription wall would push out
-the long tail of dabblers. A per-insight credits model
-makes the access surface legible: a user runs one Tag
-Report and instantly knows the value of that one report,
-rather than committing to a tier they'd use sparingly.
-Stripe Checkout is one-click; live and test modes
-**auto-switch based on the `STRIPE_SECRET_KEY` prefix**
-so demos can run without touching production data. The
-webhook signs every transaction into the
-`creditTransactions` ledger before the credit is usable.
-Three credit packs (Starter / Pro / Bulk) scale the
-ledger top-up. Portfolios and the Lineage Explorer are
-permanently free — they're the network-effect surface
-(creators share their `/@handle` URL on socials, lineage
-URLs link out from any Suno discussion) that pulls new
-signups into the funnel. The product's competitive moat
-is the lineage research itself: no other Suno analytics
-product surfaces parent->child remix graphs, because
-nobody else has discovered the data leaks through
-`/api/trending` and persona-clip sub-trees.
+**Outward (the observatory, free).** A daily pipeline captures Suno's
+public surfaces and turns them into published readings. `/pulse` is a
+"fossil-watch" — it treats Suno's `/api/trending` feed forensically,
+having proven it is a frozen September-2024 playlist object served fresh
+but never updated, and renders a cadence "seismograph," a model-version
+timeline, the longest-reigning #1, and tag-trend curves. `/trending`
+preserves the 2024 feed as a historical exhibit. `/observatory/
+who-remixes-whom` and the per-song `/lineage/[clipId]` explorer render
+Suno's real remix/derivation graph as a clickable SVG, walked
+server-side with recursive Postgres CTEs (bounded to a few hops each
+way); private clips appear only as anonymized nodes.
 
-**Technical approach:** **The discovery and the engineering it enables.** Chan
-reverse-engineered Suno's public JSON surface and found
-that Suno's response serializer **leaks unredacted
-`parent_clip_id` fields only when a clip is included in
-the `/api/trending` snapshot or when it appears as a
-descendant of a persona clip** — never on the standard
-clip-detail endpoint, never on the profile listing
-endpoint, never in the remix UI itself. The
-`collect-trending` cron job (04:00 UTC daily) walks
-every clip in Trending, ingests the leaked lineage
-UUIDs, deduplicates them into a `clipLineageEdges`
-table, and serves the resulting graph via Postgres
-`WITH RECURSIVE` CTEs through `/api/lineage/[clipId]`
-(public, no auth, configurable `hopsUp`/`hopsDown`
-query params capped at 5/3). Private clips appear as
-anonymised nodes so listing-level visibility is
-respected. **Compliance posture**: every Suno read goes
-through endpoints **Suno itself advertises via the W3C
-oEmbed protocol** (the same
-`<link rel="alternate" type="application/json+oembed">`
-any reader software follows), making the data plane
-anonymous, CORS-enabled, and public-by-design. No HTML
-scraping, no headless browsers, no authenticated
-requests, no proxying user sessions. The full
-posture lives at
-`/legal/data-sources`.
-**Suno parser package**: `packages/parser`
-(`@suno-cards/parser`) is a workspace-local Valibot
-validator + typed-error hierarchy (`SunoNotFoundError`,
-`SunoNetworkError`, `SunoSchemaError`, …) consumed by
-`src/lib/suno/*` — every external Suno call returns
-typed errors mapped to user-facing API codes. Small
-reverse-engineered details get their own utils: e.g.
-Suno's CDN `cdn2.suno.ai/image_*.jpeg?width=N` only
-accepts widths `{100, 256, 360, 720}`, so
-`resizeSunoCover` snaps automatically. **Insight
-generation pipeline**: each report is an idempotent
-per-user-per-day pure async function (`tag-optimization`,
-`performance-snapshot`, `method-mix`) in
-`src/lib/insights/*`; an i18n-aware `headline()`
-function returns `{eyebrow, headline, subtitle}` for
-the report card; the React Server Component dispatcher
-at `/dashboard/insights/[id]` selects the right
-renderer by `kind`. Adding a new insight type requires
-exactly **8 touchpoints** (engine + payload type +
-headline + 3-locale translations + report component +
-registration in both the on-demand and cron-batch
-routes + dispatcher case + dashboard button) —
-deliberately friction'd so each concern stays separated.
-**Deployment**: Docker multi-stage build (Node 20 slim
-runner with non-root `nextjs` user); GitHub Actions
-pushes images to `ghcr.io/chanmeng666/sunostats/web`,
-SSHes to the VPS, restarts the container with Traefik
-labels for `sunostats.chanmeng.org` (Let's Encrypt TLS),
-and rewrites `/etc/cron.d/sunostats` to re-schedule
-the 4 cron endpoints with the fresh `CRON_SECRET`.
-Cron-protected internal routes 401 anything without
-the `x-cron-secret` header. **i18n**: trilingual
-EN/简体中文/日本語 with cookie-driven server-resolved
-locale plus Accept-Language fallback. The translation
-dictionary is a TypeScript type, so adding a key fails
-the build if any locale is missing — guaranteeing
-coverage without runtime drift.
+**Inward (creator lenses).** A creator signs in with Google, claims
+their Suno handle, and instantly gets a free public portfolio at
+`/@handle` (themable, with configurable stats and tag filters). They
+then spend credits on seven single-purchase reports — Tag Optimization,
+Performance Snapshot, Method Mix, Song DNA, Persona Mix, Remix
+Readiness, and Model Era — each a deterministic analytics engine over
+their catalog, optionally topped with a short LLM "analyst's note."
+Every account starts with three free credits; reports are $1 (one
+credit) with no subscription, so a creator pays only for the specific
+questions they want answered.
 
-**Outcomes:** Built and shipped April 2026, with a same-day
-scaffold-to-live trajectory: the initial commit
-`f2f9f80` (2026-04-12) is *"scaffold SunoStats monolith
-— Next.js 15 + Drizzle + Tailwind 4"*, followed within
-hours by Neon Auth (`2c243dd`), Google OAuth
-(`2ff764f`), the data collection pipeline (`40707ec`),
-and the portfolio + landing + OG image generator
-(`b5d1e1d`). Total of **46 solo commits across the first
-month** taking the project from blank repo to the
-production system live at sunostats.chanmeng.org —
-with auth, Stripe-integrated payments, Resend email, 4 cron
-pipelines, the lineage explorer with `WITH RECURSIVE`
-graph queries, the 3 paid insight engines, the
-watched-playlist pulse view, the Docker + Traefik VPS
-deploy, and trilingual i18n all wired end-to-end.
-Most recent commit `d36ddfb` (2026-05-10) tunes
-production container env handling. The lineage
-research finding remains the project's competitive
-moat — no other Suno analytics product surfaces the
-parent->child remix graph, because the discovery
-depends on noticing which API endpoints leak the
-UUIDs versus which redact them. Demonstrated to
-founders and recruiters as Chan's worked example of
-**identifying a gap by technical research, then
-closing it with a fully production-shape full-stack
-product in 4–5 weeks**.
+**Business logic:** The model is free-observatory-plus-microtransactions, not a
+subscription. Everything ecosystem-level and every public creator
+portfolio is free forever; the only paid surface is the seven
+per-catalog insight reports at $1/credit, sold in Stripe packs (Starter
+5 / Pro 20 / Bulk 50) with three credits granted free at signup. The
+defensible asset is the lineage archive: because it was recovered from
+a redaction gap Suno has since closed, it is a sealed, un-reproducible
+dataset — a genuine data moat rather than a feature a competitor can
+re-derive. Distribution is deliberately agent-native: the read-only MCP
+server turns the observatory into a tool other people's AI agents can
+call, extending reach without ad spend, while the trilingual surface
+(EN / 简中 / 日本語) reaches Suno's large East-Asian creator base.
 
-**My role:** Sole product designer, sole engineer, sole maintainer.
-Did the reverse-engineering research that found the
-lineage-UUID leak surface; designed the
-oEmbed-discovered compliance posture and the public
-data-sources legal page; designed the 3-free + 3-premium
-lens taxonomy; designed the
-credit-ledger-with-auto-refund Stripe-integrated payment
-model; designed the 8-touchpoint extension pattern for new
-insight types; built every Suno parser in
-`@suno-cards/parser`; engineered the 4 cron pipelines
-with `x-cron-secret`-gated internal routes; built the
-lineage `WITH RECURSIVE` CTE graph traversal; built
-the Docker+Traefik+GHCR deployment pipeline with
-crontab auto-install via GitHub Actions; authored the
-trilingual EN/简中/日本語 i18n dictionary; wrote the
-public-facing README + the internal AGENTS.md and
-architecture/data-model/i18n docs. Maintains the live
-deployment today.
+**Technical approach:** A Next.js 16 (App Router, pinned to Webpack + `output: standalone`) app
+in React 19 and TypeScript 5, over a single 17-table Drizzle schema on
+Neon serverless Postgres. Auth is NextAuth v5 + Neon Auth (Google OAuth
+only); payments run through Stripe with a webhook-verified credit
+ledger; Resend delivers report emails; an optional OpenAI `gpt-5.4-nano`
+pass narrates otherwise numbers-only reports.
+
+**The lineage harvest is the crux.** Suno's serializer redacts clip
+parent-UUIDs to the all-zeros UUID on its main endpoints, but misses
+that pass on exactly two response shapes — the slim clips of
+`/api/trending` and the `personas[].clip` sub-trees of a public profile.
+A dedicated parser path (the *only* sanctioned one) extracts the four
+real parent-pointer types from those shapes, filters out zero-UUIDs,
+and deduplicates them into a directed-edge table with an idempotent
+unique constraint; the public graph is then walked with `WITH RECURSIVE`
+Postgres CTEs. Ingestion is strictly compliant — only W3C
+oEmbed-discovered public endpoints, anonymous and CORS-enabled, at a
+once-daily cadence, with no scraping, credentials, or headless browser,
+and listing-level privacy always respected.
+
+**Money-path and reverse-engineered-API correctness are hardened
+deliberately.** Concurrent double-charges are blocked by a partial
+unique index over in-flight report claims; balances debit via
+optimistic `UPDATE … RETURNING` with a sub-zero rollback; Stripe
+idempotency is enforced two ways (a unique ledger index plus a
+processed-events dedupe log); generator failures auto-refund. Because
+the whole product depends on Suno's unofficial response shapes, a weekly
+schema-drift canary alerts when they change, and a durable cron-runs
+table provides leasing and observability that Neon's HTTP driver can't.
+The app self-hosts as a multi-stage Docker image (Node 20 slim,
+non-root) behind Traefik + Let's Encrypt, shipped via GHCR and GitHub
+Actions, with five daily/weekly cron pipelines; the trilingual
+dictionaries are TypeScript-checked so a missing translation key fails
+the build.
+
+**Outcomes:** Live at seismophone.chanmeng.org, solo-built across 99 commits over
+roughly three months (2026-04-12 → 2026-07-10). The apparatus runs 19
+pages, 28 API route handlers, 56 components, and five cron pipelines
+over a 17-table schema, plus a 7-tool read-only MCP server. Its
+signature result is the sealed remix-lineage archive — ~102 real
+parent→child edges recovered in a single 2026-05-09 backfill before Suno
+closed the redaction gap — which makes the public lineage explorer a
+dataset that, by construction, cannot be collected again. The build also
+went through structured hardening waves (Codex-reviewed) covering
+credits, privacy, query performance, observability, and the
+schema-drift canary. The forensic teardown of Suno's frozen `/api/
+trending` fossil is itself a published finding, reframing a stale API
+into a monitored artifact.
+
+**My role:** Sole author of the entire system — product concept and "observatory"
+positioning, the lineage-harvest discovery and parser, the 17-table
+schema and daily ingestion pipeline, all seven insight engines, the
+Stripe credit ledger and its concurrency hardening, the recursive-CTE
+lineage graph and SVG explorer, the read-only MCP server, the trilingual
+i18n system, and the self-hosted Docker + Traefik deployment with its
+cron and observability tooling. 99 of 99 commits are mine.
 ### AI Image Generator — Full-Stack Text-to-Image SaaS — Full-stack text-to-image SaaS pivoted onto Cloudflare Workers AI's FLUX.1 Schnell free tier (100k req/day) — auth + credits ledger + Stripe-integrated payments + image storage + gallery, deployed on Cloudflare Workers via OpenNext. Two architectural pivots (Vercel->CF Workers free-AI 2026-04-09, then full SaaS layer one day later) turned a 2024 demo into a production product.
 [tier=primary · recency=recent · updated=2026-05-19]
 - **URL:** https://image-generator.chanmeng-dev.workers.dev/
@@ -6116,7 +6014,7 @@ guides. The repo is its own pedagogical statement: students can
 read the instructor's commits to see how patterns they're being
 taught compose into a real production-shape service.
 ### server-google-jobs — Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
-[tier=primary · recency=recent · updated=2026-05-19]
+[tier=primary · recency=recent · updated=2026-07-10]
 - **URL:** https://github.com/ChanMeng666/server-google-jobs
 - **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk 1.25.1, stdio transport, SerpAPI, node-fetch, ES modules, npm (scoped @chanmeng666), Dockerfile, .mcpb compiled binary, mcp-evals (v2.0.0 early adoption)
 
@@ -6189,7 +6087,10 @@ with use cases, capabilities, target audience, and primary use
 cases declared in JSON for LLM-driven discovery — the same
 GEO-aware authoring pattern used across all of Chan's MCP work.
 
-**Outcomes:** **71 solo commits**. Registered on the official MCP Registry;
+**Outcomes:** **72 commits** (≈46 by Chan; the rest Renovate bumps and external
+contributors — including the founders of the Smithery and Glama MCP
+catalogs, a genuine early-ecosystem signal). Registered on the
+official MCP Registry;
 security-assessment badges from MseeP.ai and Glama.ai validating
 runtime reliability. Listed across **10+ MCP discovery
 surfaces** — PulseMCP (4.6k visitors, registered Jan 1 2025),
@@ -6373,11 +6274,11 @@ Windows-to-Git-Bash path conversion; built the Webpack 5 +
 Babel build pipeline; published v1.0.0 and v1.1.0 to the
 Chrome Web Store; maintains the listing today with
 periodic header updates as Tencent's CDN evolves.
-### gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs — 340+ parametric animated SVG templates served as live XML via Vercel Edge — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 273-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
-[tier=primary · recency=active · updated=2026-05-19]
+### gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs — 340+ parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
+[tier=primary · recency=active · updated=2026-07-10]
 - **URL:** https://gradient-svg-generator.vercel.app/
 - **Repository:** https://github.com/ChanMeng666/gradient-svg-generator
-- **Tech stack:** Next.js 16.2 (App Router + Vercel Edge runtime), React 19.2 + TypeScript 5.4 (gradual JS->TS migration through Phase 7), Tailwind CSS 4.2 + @tailwindcss/typography + @tailwindcss/forms, Zustand 5.0 (template gallery state), @tanstack/react-query 5.83 (data fetching), @tanstack/react-virtual 3.13 (virtualized template grid for 340+ entries), Zod 3.23 (runtime validation of /api/svg query params, 400-on-bad-input), fuse.js 7.1 (fuzzy template search), framer-motion 12.23 (visual editor micro-interactions), SVG <animate> / <animateTransform> (SMIL animation primitives), CSS @keyframes embedded in <style> inside the streamed SVG, Animated linearGradient / radialGradient stop offsets, SVG filters: <feTurbulence>, <feDisplacementMap>, <feGaussianBlur>, <feColorMatrix>, <textPath> for text-following-path animations, @vercel/node 2.15 serverless function (/api/svg endpoint streams XML), Vitest 1.6 + @testing-library/* (tests/contract/ + tests/unit/), ESLint 9 + TypeScript-ESLint 8 + Prettier 3 + Husky 9 + lint-staged 15, web-vitals 5.0 (production performance telemetry), ISC license
+- **Tech stack:** Next.js 16.2 (App Router + Vercel serverless runtime), React 19.2 + TypeScript 5.4 (gradual JS->TS migration through Phase 7), Tailwind CSS 4.2 + @tailwindcss/typography + @tailwindcss/forms, Zustand 5.0 (template gallery state), @tanstack/react-query 5.83 (data fetching), @tanstack/react-virtual 3.13 (virtualized template grid for 340+ entries), Zod 3.23 (runtime validation of /api/svg query params, 400-on-bad-input), fuse.js 7.1 (fuzzy template search), framer-motion 12.23 (visual editor micro-interactions), SVG <animate> / <animateTransform> (SMIL animation primitives), CSS @keyframes embedded in <style> inside the streamed SVG, Animated linearGradient / radialGradient stop offsets, SVG filters: <feTurbulence>, <feDisplacementMap>, <feGaussianBlur>, <feColorMatrix>, <textPath> for text-following-path animations, @vercel/node 2.15 serverless function (/api/svg endpoint streams XML), Vitest 1.6 + @testing-library/* (tests/contract/ + tests/unit/), ESLint 9 + TypeScript-ESLint 8 + Prettier 3 + Husky 9 + lint-staged 15, web-vitals 5.0 (production performance telemetry), ISC license
 
 **Summary:** Production **streaming-SVG service** that delivers **340+ animated
 gradient banner templates** as live XML over a parameterised URL —
@@ -6393,7 +6294,7 @@ for organic distortions (turbulent waves, liquid mercury,
 caustic underwater). The codebase carries the internal product
 name **Chromaflow** (per `package.json`) while keeping the
 descriptive `gradient-svg-generator` repo and URL for
-discoverability. Built up over **18 months / 273 solo commits**
+discoverability. Built up over **18 months / 283 solo commits**
 through a documented **4-phase refactor saga**: Phase 5 extracted
 `svgPrimitives` factory + `_shared/palettes.js`; Phase 6
 deliberately *"truthed up marketing numbers"* (commit `fdcb7dd`
@@ -6407,7 +6308,7 @@ visual badge in every Chan-authored README**, including the
 profile that ships this entry — continuous dogfooding means any
 rendering regression breaks visible branding immediately.
 
-**Impact:** 340+ parametric animated-SVG templates served as live XML via Vercel Edge — the open-source visual engine powering every badge in this README. 273 solo commits across 18 months, with deliberate 'anti-LLM-hype' content audits to keep marketing numbers honest.
+**Impact:** 340+ parametric animated-SVG templates served as live XML via Vercel serverless — the open-source visual engine powering every badge in this README. 283 solo commits across 18 months, with deliberate 'anti-LLM-hype' content audits to keep marketing numbers honest.
 
 **Problem:** Adding striking animated visuals to a GitHub profile, project
 README, or documentation site requires either bespoke SVG
@@ -6552,7 +6453,7 @@ schema so a request like `?height=99999999999` returns a
 clean 400 with a typed error message rather than crashing
 the function.
 
-**Deployment**: Vercel Edge runtime via `@vercel/node` 2.15
+**Deployment**: Vercel serverless runtime via `@vercel/node` 2.15
 serverless function at `/api/svg`. **Testing**: Vitest 1.6
 with both `tests/contract/` (API surface contract tests
 guarding the URL-parameter contract — invariant across
@@ -6668,6 +6569,8 @@ every surface.
 [tier=primary · recency=active · updated=2026-05-19]
 - **URL:** https://www.femtechweekend.com/
 - **Tech stack:** Docusaurus 3.9.2 (classic preset + @docusaurus/theme-mermaid), React 18.2 + TypeScript 5.6 (typecheck via `tsc --noEmit` in CI), Drizzle ORM 0.45 + drizzle-kit 0.31 (3 migrations: 0000_luxuriant_riptide → 0001_programme_overhaul → 0002_speaker_overhaul), Neon serverless Postgres (@neondatabase/serverless 1.0), Cloudflare Pages + Cloudflare Pages Functions (15 endpoints, ~3,839 LOC of server-side .js), Wrangler 4.0 (deployment + local dev via `wrangler pages dev build`), @notionhq/client v3 (Notion-as-CMS for non-technical founder editorial workflow), Resend REST API (Contacts API with segment assignment + transactional email), Google Generative AI 0.24 (Gemini-powered /api/chat-stream), Cloudinary (image uploads: headshots, company overview PDFs, pitch decks), Radix UI primitives (Accordion, Avatar, Checkbox, Collapsible, Dialog, Label, Select, Separator, Slot), Tailwind CSS 3.4 + tailwindcss-animate + class-variance-authority, Framer Motion 12.35 + GSAP 3.13 (scroll + reveal animations), earth-flyline 1.6 (interactive 2D world-map with count-up statistics), i18n-iso-countries (country-code rendering across speaker/partner data), gray-matter (MDX frontmatter parsing), Docusaurus i18n (EN + 简体中文 across every page from day one), Node 22.x (pinned in engines)
+- **Part of:** FemTech Weekend (https://www.femtechweekend.com)
+- **Supersedes:** FemTech Weekend Website (Gen-1, deprecated), FemTech Weekend Platform
 
 **Summary:** Solo-built Gen-2 platform (97.2% of 544 commits across ~1 year) for
 FemTech Weekend, China's first women's-health-technology

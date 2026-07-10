@@ -181,6 +181,34 @@ if (missingSpotlight.length) {
 }
 data._spotlightProjects = resolveIds(spotlightIds);
 
+// ---------------------------------------------------------------------------
+// Hard validation of project relationship FKs. clientOrgId → organizations[].id,
+// relatedWorkId → work[].id, relatedProjectIds/supersedes/supersededBy →
+// projects[].id. A typo is a data bug, so fail the build (same policy as
+// spotlightProjectIds) rather than silently dropping the edge.
+// ---------------------------------------------------------------------------
+{
+  const orgIdSet = new Set((data.organizations ?? []).map((o) => o.id));
+  const workIdSet = new Set((data.work ?? []).map((w) => w.id));
+  const relErrors = [];
+  for (const p of data.projects ?? []) {
+    if (p.clientOrgId && !orgIdSet.has(p.clientOrgId))
+      relErrors.push(`${p.id}.clientOrgId → unknown organization '${p.clientOrgId}'`);
+    if (p.relatedWorkId && !workIdSet.has(p.relatedWorkId))
+      relErrors.push(`${p.id}.relatedWorkId → unknown work '${p.relatedWorkId}'`);
+    for (const rid of p.relatedProjectIds ?? [])
+      if (!projectIds.has(rid)) relErrors.push(`${p.id}.relatedProjectIds → unknown project '${rid}'`);
+    for (const sid of p.supersedes ?? [])
+      if (!projectIds.has(sid)) relErrors.push(`${p.id}.supersedes → unknown project '${sid}'`);
+    if (p.supersededBy && !projectIds.has(p.supersededBy))
+      relErrors.push(`${p.id}.supersededBy → unknown project '${p.supersededBy}'`);
+  }
+  if (relErrors.length) {
+    console.error(`✗ project relationship FK error(s):\n  ${relErrors.join("\n  ")}`);
+    process.exit(1);
+  }
+}
+
 // Open Source overflow (rendered inside the Open Source <details>):
 // excludes commissioned overflow, which now lives under Commissioned work.
 data._moreProjectsByGroup = [
@@ -486,6 +514,29 @@ for (const p of visibleProjects) {
   p._featuredStackResolved = resolveStack(xb.featuredStack);
   p._contextLogo           = normalizeContextLogo(xb.contextLogo);
   p._affiliationOrg        = data._orgByProjectId[p.id] ?? null;
+}
+
+// ---------------------------------------------------------------------------
+// Relationship resolution for ALL projects (not just visible ones), so cards
+// and llms-full can render org grouping + cross-links + version lineage:
+//   _clientOrg              : commissioning org from clientOrgId (logo optional)
+//   _relatedProjectsResolved: sibling project objects (relatedProjectIds)
+//   _supersededByProject     / _supersedesProjects : version lineage
+// _clientOrg resolves against the full org list (allOrgs), so an org without a
+// renderable logo still yields a "Part of <name>" text link.
+// ---------------------------------------------------------------------------
+const orgByIdAll = Object.fromEntries((data._organisationsAll ?? []).map((o) => [o.id, o]));
+// Lightweight, acyclic projections — templates only need a few fields, and
+// storing full objects here creates circular references (A↔B cross-links) that
+// break dist/profile.json serialization.
+const liteProj = (p) => (p ? { id: p.id, name: p.name, url: p.url, repoUrl: p.repoUrl } : null);
+const liteOrg = (o) => (o ? { id: o.id, name: o.name, url: o.url } : null);
+for (const p of data.projects ?? []) {
+  p._clientOrg = p.clientOrgId ? liteOrg(orgByIdAll[p.clientOrgId]) : null;
+  const relIds = p.relatedProjectIds ?? (p.relatedProjectId ? [p.relatedProjectId] : []);
+  p._relatedProjectsResolved = relIds.map((id) => liteProj(data._index.projects[id])).filter(Boolean);
+  p._supersededByProject = p.supersededBy ? liteProj(data._index.projects[p.supersededBy]) : null;
+  p._supersedesProjects = (p.supersedes ?? []).map((id) => liteProj(data._index.projects[id])).filter(Boolean);
 }
 
 if (missingTechLogos.size) {

@@ -17,7 +17,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [vercel-ai-sdk, typst, stripe, digitalocean, docker]
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-10"
     name: Vitex — AI Career Agent (vitex.org.nz)
     priority: 16
     category: ai-apps
@@ -53,6 +53,16 @@ projects:
       - "DigitalOcean VPS"
       - "GitHub Actions CI/CD"
     status: live
+    metrics:
+      - { label: "Commits (solo)",  value: "372 (2025-01-11 → 2026-07-10, ~18 months); essentially sole author" }
+      - { label: "Surfaces",        value: "11 pages · 29 API route handlers · 25 components · 222 source files (~30k LOC)" }
+      - { label: "Pipeline",        value: "8 steps (parse JD ∥ parse background → match → tailor + faithfulness gate → ATS score ∥ cover letter → render → Typst compile)" }
+      - { label: "Templates",       value: "7 AI-auto-selected (academic · banking · compact · creative · executive · modern-cv · two-column)" }
+      - { label: "Agent surfaces",  value: "one core, N thin adapters — web SSE + public REST v1 (API key) + hosted OAuth-protected MCP + published vitex-cli with a stdio MCP; 9 MCP tools; full OAuth 2.1 AS with dynamic client registration + PKCE" }
+      - { label: "Billing",         value: "outcome-based — 1 credit charged exactly once, only after a PDF compiles; DB partial-unique-index idempotency survives SSE reconnects + concurrent races; failures + refinements free" }
+      - { label: "Models",          value: "two-tier routing (cheap extract tier + reasoning tier, env-overridable); deterministic no-LLM ATS scoring + anti-hallucination faithfulness gate" }
+      - { label: "PDF engine",      value: "local Typst binary compile <100ms, SHA-256-cached; no external document API" }
+      - { label: "Tests",          value: "215 Vitest test files (high density)" }
     publicSummary: |
       AI Career Agent live at **vitex.org.nz**. A user pastes a job
       description, describes their background in free text, and an
@@ -103,7 +113,7 @@ projects:
         User flow is intentionally short: (1) **Homepage** — paste
         a job description + describe your professional background
         in free text. No CV upload, no form filling, no field-by-field
-        data entry. (2) **Generate** — click run; the 7-step AI
+        data entry. (2) **Generate** — click run; the 8-step AI
         pipeline streams progress via SSE, the user watches each
         stage complete (parsing JD → parsing background → matching
         → tailoring → ATS scoring → cover letter → Typst compile),
@@ -131,9 +141,10 @@ projects:
         for a real user base, not a demo.
       technicalApproach: |
         **AI agent layer.** The pipeline is **Vercel AI SDK v6**
-        with the OpenAI provider (`@ai-sdk/openai`) calling **GPT-4o**
-        across seven sequential stages, each producing a
-        **Zod-validated** structured output:
+        with the OpenAI provider (`@ai-sdk/openai`) across **eight
+        sequential stages** on two-tier model routing (a cheap extract
+        tier for parsing, a reasoning tier for tailoring; env-overridable),
+        each producing a **Zod-validated** structured output:
         1. **JD Parsing** — extract role, seniority, must-have
            skills, nice-to-haves, company signals
         2. **Background Parsing** — convert the user's free-text
@@ -145,11 +156,17 @@ projects:
            emit actionable feedback
         6. **Cover Letter Generation** — produce a matching cover
            letter from the same parsed pair
-        7. **Document Generation** — render to Typst, compile to PDF
+        7. **Render** — auto-select a template + seeded design tokens,
+           emit Typst source for the resume + cover letter
+        8. **Compile** — compile Typst → PDF bytes server-side; this is
+           the billable artifact, so billing fires only here
 
-        Each stage streams progress to the client via **Server-Sent
-        Events** so the user sees the agent thinking instead of a
-        spinner. The system disables OpenAI strict JSON schema
+        Immediately after tailoring (step 4) a deterministic
+        **faithfulness gate** re-checks the output for fabricated skills
+        or employers and triggers one bounded corrective re-tailor — an
+        anti-hallucination guard with no LLM in the check itself. Each
+        stage streams progress to the client via **Server-Sent Events**
+        so the user sees the agent thinking instead of a spinner. The system disables OpenAI strict JSON schema
         mode where Zod uses `.optional()` (commit log captures the
         diagnosis), and reads JD + background from `sessionStorage`
         instead of URL params so deep links don't leak input data.
@@ -164,8 +181,9 @@ projects:
         and Workers couldn't run the binary at all. The Docker
         image pre-populates the Typst package cache for FontAwesome
         so cold container starts don't pay the package-fetch cost.
-        **14 professional templates** are AI-auto-selected based
-        on parsed industry / role signals; the renderer also ships
+        **7 professional templates** (academic, banking, compact,
+        creative, executive, modern-cv, two-column) are AI-auto-selected
+        based on parsed industry / role signals; the renderer also ships
         FontAwesome 6 contact icons (replacing the emoji icons of
         an earlier iteration).
 
@@ -201,10 +219,9 @@ projects:
         VPS migration.
       outcomes: |
         Live and operational at **vitex.org.nz**, serving real users
-        with the full free-credit + credit-pack flow. **168 commits over
-        ~3 months** (2026-02-21 → 2026-05-09), **~95% Chan-authored**
-        across two GitHub identities (8 commits from Claude
-        co-author, 1 from Vercel deploy bot, rest solo). Three
+        with the full free-credit + credit-pack flow. **372 commits over
+        ~18 months** (2025-01-11 → 2026-07-10), essentially sole-authored.
+        Three
         deployment migrations and a LaTeX → Typst document-engine
         swap shipped without service outage — every migration step
         is in the commit log including the specific Docker
@@ -215,7 +232,7 @@ projects:
         the production hardening phase.
       myRole: |
         Sole engineer, sole designer, sole product owner. Designed
-        the 7-step agent pipeline with Zod-validated stages
+        the 8-step agent pipeline with Zod-validated stages
         (migrating the editor from CopilotKit to Vercel AI SDK
         agent chat along the way), wrote every API route, built
         the Stripe credit system, configured Stack Auth, designed
@@ -352,40 +369,159 @@ projects:
     provenance: personal
     tier: primary
     recency: active
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-10"
     meta:
       x_brand:
         featuredStack: [openai, vercel-ai-sdk, nextjs, react, typescript]
     name: ArchCanvas
     priority: 32
     category: ai-apps
-    tagline: AI design agent for architects that productizes ArchLang (Chan's own invented floor-plan programming language) — generate SVG floor plans via the sister ArchLang compiler plus OpenAI (GPT-4o + DALL-E) renderings from briefs and reference images, iterate on a zoomable canvas with an AI review mode, and export any project as a real git repo; pay-per-result credits, not subscriptions. Strong commercialization potential
+    tagline: "'Your AI architect — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Pay-per-generation credits, not subscriptions."
     url: https://archcanvas.chanmeng.org/
     logo: /public/brands/archcanvas-logo.svg
-    # repoUrl omitted — repository is private
+    # repoUrl omitted — repository is private/proprietary
     techStack:
-      - "Next.js (App Router)"
-      - "React 19 + TypeScript"
-      - "Vercel AI SDK (@ai-sdk/openai, ai) + OpenAI (GPT-4o + DALL-E image generation)"
-      - "@chanmeng666/archlang (own declarative floor-plan compiler, consumed as a package)"
-      - "Neon Postgres + Drizzle ORM"
-      - "Stripe (pay-per-result credits)"
+      - "Next.js 15.3 (App Router) + React 19 + TypeScript 5.8"
+      - "Vercel AI SDK (ai 4.3, @ai-sdk/openai) + OpenAI 6.45 — orchestrator migrated off GPT-4o to a newer reasoning model for tool use; GPT-4o retained for vision"
+      - "GPT Image grounded renderings (view-aware model chain: aerial vs eye-level)"
+      - "@chanmeng666/archlang 1.12.1 (Chan's own declarative floor-plan compiler, consumed as a package)"
+      - "Neon Postgres + Drizzle ORM (9 tables, schema-push)"
+      - "Stripe 17 (pay-per-generation credits, dual live/test mode)"
       - "Cloudinary (rendering storage)"
       - "react-zoom-pan-pinch (infinite zoomable canvas)"
-      - "isomorphic-git + memfs (export a project as a real git repo)"
-      - "jose (auth)"
-      - "shadcn/ui + Tailwind + Framer Motion"
+      - "isomorphic-git + memfs + fflate (export design history as a real git repo, in-memory)"
+      - "jose (JWT/JWKS auth)"
+      - "Zod validation · shadcn/ui + Tailwind 4 + Framer Motion + GSAP"
+      - "Docker canary-then-swap deploy over SSH (DigitalOcean VPS, Traefik + Let's Encrypt, Cloudflare Full-Strict)"
     keywords:
       - "AI architectural design agent"
-      - "SVG floor-plan generation (ArchLang compiler)"
-      - "Infinite zoomable design canvas"
-      - "Pay-per-result credits (no subscription)"
-      - "AI review mode (anchored findings + one-click have-AI-fix)"
-      - "Git-native project export"
+      - "Parametric ArchLang DSL under the hood (not freehand SVG)"
+      - "Grounded, view-aware GPT-Image renderings"
+      - "Infinite zoomable design canvas with in-place morphing edits"
+      - "Select-to-act room editing + parametric sliders (no-LLM recompile)"
+      - "Review mode — circulation overlay + anchored critique + one-click have-AI-fix"
+      - "Design history exported as a real git repository"
+      - "Pay-per-generation credits (no subscription)"
+    metrics:
+      - { label: "Commits (solo)",   value: "269 (2026-04-08 → 2026-07-10, ~3 months); sole author" }
+      - { label: "Surfaces",         value: "13 pages · 28 API route handlers · 71 components · 190 source files" }
+      - { label: "Database",         value: "9 Drizzle tables on Neon (projects · designFrames · agentThreads · credits · creditTransactions · shares · generationAttempts · …)" }
+      - { label: "Agent tools",      value: "7 (askDesignQuestions · generateFloorPlanDSL[charges] · editFloorPlanDSL[free] · generateRendering · critiquePlan · analyzeReference[vision] · analyzeFloorPlan)" }
+      - { label: "Billing",          value: "1 credit per generation (plan + grounded rendering + critique); edits, parametric tweaks, re-renders, and review are free; 3 free generation sets on signup" }
+      - { label: "Pricing",          value: "Free (3 sets) / Starter $10 (5) / Pro $25 (15); Stripe dual live/test mode" }
+      - { label: "Git export",       value: "in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)" }
+      - { label: "Deploy",           value: "private repo → GitHub Actions → GHCR → canary-then-swap over SSH (boot canary, poll /api/health, swap only if healthy) on a DO VPS behind Traefik + Cloudflare" }
     status: live
-    startDate: "2026-06"
+    startDate: "2026-04"
+    publicSummary: |
+      ArchCanvas is an AI design agent for architecture and self-builders. A
+      user describes a build in natural language; the agent asks a few
+      clarifying questions, then designs one strong floor plan — written as
+      parametric ArchLang and compiled to a real dimensioned SVG (with room
+      labels and measurements), plus a photorealistic GPT-Image rendering
+      grounded on a raster of that exact plan. From there it is conversational:
+      on an infinite zoomable canvas, edits morph the plan in place, a version
+      timeline scrubs the lineage, a review mode overlays walking-circulation
+      and pins anchored critique with one-click "have AI fix," and a parametric
+      panel exposes the plan's own variables as live sliders. The whole design
+      history exports as a real git repository. Billing is pay-per-generation
+      credits, not a subscription — refinement is free.
     narrative:
-      impactHeadline: "AI design agent for architects — generates SVG floor plans (via the sister ArchLang compiler) plus OpenAI renderings on an infinite zoomable canvas, with an AI review mode (anchored findings + one-click have-AI-fix) and git-repo export. Billed per generation, not by subscription."
+      impactHeadline: "An AI design agent for architects that productizes Chan's own ArchLang DSL — it writes parametric ArchLang (not freehand SVG) compiled to real dimensioned plans, with grounded GPT-Image renderings, a zoomable canvas, a review mode, and git-repo export. Solo-built, 269 commits."
+      problem: |
+        AI floor-plan tools produce pretty pictures you cannot build from and
+        cannot precisely edit. An image-generated plan has no real dimensions,
+        no guarantee a wall is straight, and no handle to grab when you want
+        the kitchen two metres wider — you re-prompt and hope. Meanwhile
+        professional CAD is powerful but slow and expert-only, and neither
+        world lets you simply *talk* to your design. ArchCanvas exists to close
+        that gap: a plan you can converse your way to, that is nonetheless a
+        real, dimensioned, buildable artifact you can keep editing precisely.
+      audience: |
+        Architects and designers who want to move fast from brief to a
+        credible dimensioned plan, and self-builders / renovators who have a
+        vision but not CAD skills and need something they (or a builder) can
+        actually work from. Because every plan is real ArchLang underneath, the
+        same product serves a careful professional who wants to tweak a wall
+        thickness by a slider and a first-timer who just wants to describe
+        their dream house and see it — and refine it — in plain language.
+      productLogic: |
+        The studio runs in two acts. **Act I** is a full-screen briefing
+        conversation: the user picks a typology (residential, accessible
+        clinic, open-plan office, passive house) and describes the build; the
+        agent asks two-to-five clarifying questions inline, then generates ONE
+        plan — deliberately not a grid of options — as parametric ArchLang,
+        compiles it to a dimensioned SVG with `data-arch-id` anchors, renders a
+        grounded GPT-Image visualization, and critiques it. That single
+        generation is the only thing that costs a credit.
+
+        **Act II** is a canvas-first studio, and everything in it is free.
+        Edits are conversational and **morph the plan in place** — the parent
+        geometry fades to a dashed ghost, a semantic-diff chip shows what
+        changed, and a version-lineage timeline lets you scrub the history.
+        **Select-to-act**: click a room, door, or window and a floating action
+        bar offers verb chips (Enlarge / Shrink / Widen / Move) plus
+        agent-suggested scoped edits. A **Parametric Tweaks** panel turns the
+        plan's own ArchLang `let` variables (room sizes, counts, wall
+        thickness) into live sliders that recompile instantly with no LLM call
+        and no credit. **Review mode** toggles ArchLang's circulation overlay
+        (walk routes, pinch points) and pins anchored critique findings, each
+        with a free "have AI fix" — display-only, never auto-applied. The
+        finished design exports as SVG/PNG/DXF/PDF, or as a real git repository
+        whose commit log is the design conversation.
+      businessLogic: |
+        Pay-per-generation credits, not subscriptions — a deliberate fit for a
+        design task whose value is lumpy (you generate a few plans, then
+        iterate for free for a long time). One credit buys a full generation
+        turn (plan + grounded rendering + critique); every refinement, tweak,
+        re-render, and review action is free, so a user pays only when they ask
+        for genuinely new work. Three free generation sets on signup let people
+        reach real value before paying. Stripe packs price a set at roughly
+        $1.67–$2.00 against a stated per-generation cost of ~$0.30–$0.55, a
+        healthy margin the project tracks explicitly. The moat is the ArchLang
+        pairing: because plans are a deterministic program rather than pixels,
+        ArchCanvas can offer editing, tweaking, diffing, and git export that an
+        image-generation competitor structurally cannot.
+      technicalApproach: |
+        A single Next.js 15 monolith (React 19, TypeScript 5.8) over a 9-table
+        Drizzle schema on Neon Postgres, with Stripe credits, Cloudinary
+        rendering storage, and jose-based auth. The AI layer is an orchestrated
+        tool-agent on the Vercel AI SDK: the orchestrator was deliberately
+        migrated off GPT-4o (which under-used tools and wrote non-parametric
+        DSL) to a newer reasoning model, while GPT-4o is retained for vision
+        (reference-image analysis). Its seven tools center on
+        `generateFloorPlanDSL` — write parametric ArchLang, compile it through
+        Chan's own `@chanmeng666/archlang` package, pass a ship-gate, save a
+        frame — with `editFloorPlanDSL` as the free minimal-diff follow-up.
+        Renderings are a **grounded, view-aware chain**: the compiled plan is
+        rasterized and sent as the grounding image to GPT Image, with a
+        model order chosen per view (aerial vs eye-level) so the render matches
+        the real geometry instead of hallucinating a layout. `designFrames`
+        stores each version's ArchLang source, compiled SVG, rendering URLs,
+        lint warnings, review findings, and a self-referential `parentFrameId`
+        for lineage — which is exactly what the in-memory git export
+        (isomorphic-git + memfs, zipped with fflate) walks root-to-tip to build
+        a real repository. Deployment is a canary-then-swap over SSH: build a
+        Docker image, push to GHCR, boot a health-checked canary, and only swap
+        traffic if `/api/health` passes — otherwise abort untouched.
+      outcomes: |
+        Live at archcanvas.chanmeng.org, solo-built across 269 commits over
+        roughly three months (2026-04-08 → 2026-07-10): 13 pages, 28 API route
+        handlers, 71 components, and 190 source files over a 9-table schema.
+        The product is unusually rigorous about testing its own thesis — a
+        `generationAttempts` telemetry table tracks first-pass ArchLang
+        validity per model, and a `bench` harness runs briefs through both the
+        DSL pipeline and a legacy freehand-pixel pipeline as a control group,
+        so the "DSL beats pixels" claim is measured, not asserted. It is also
+        the proving ground that hardened ArchLang: ArchCanvas's real
+        in-browser use of the compiler drove concrete upstream fixes.
+      myRole: |
+        Sole author of the entire product — the two-act studio and canvas UX,
+        the AI orchestrator and its seven tools, the grounded view-aware
+        rendering chain, the ArchLang integration, the 9-table schema and
+        credit/billing system, the git-repo export, the falsifiability
+        instruments, and the canary-then-swap deployment. And of ArchLang
+        itself, the DSL it is built on. 269 of 269 commits are mine.
 
   # Creative AI & Language Tools
   - id: ai-image-generator
@@ -946,14 +1082,14 @@ projects:
     provenance: personal
     tier: primary
     recency: active
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-10"
     meta:
       x_brand:
         featuredStack: [docusaurus, react, cloudflare, typst]
     name: AI Programming Education Platform (programming.chanmeng.org)
     priority: 13
     category: ai-apps
-    tagline: Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (four cohort versions side-by-side) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
+    tagline: Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
     repoUrl: https://github.com/ChanMeng666/ai-programming-teaching-project
     logo: /public/brands/ai-programming-logo.svg
     url: https://programming.chanmeng.org/
@@ -982,19 +1118,20 @@ projects:
     status: live
     publicSummary: |
       Production teaching platform at **programming.chanmeng.org** hosting
-      four cohort versions side-by-side (2024-winter, 2025-summer,
-      2026-her-waka, 2026-technest) through Docusaurus versioned docs.
+      five cohort versions side-by-side (2024-winter · 2025-summer ·
+      2026-her-waka · 2026-peyvand-academy · 2026-technest, three of them
+      running concurrently in 2026) through Docusaurus versioned docs.
       Backed by an **in-course RAG AI assistant** running on Cloudflare
       Workers AI (Llama 3.1 8B Instruct), with ~4,800 indexed document
       chunks served from Cloudflare Vectorize via BGE Base EN v1.5
       embeddings and conversation memory in Cloudflare KV. Bilingual
       EN + 简体中文 throughout, with Typst-generated downloadable PDF
       handouts, Notion-backed Capstone voting, Mermaid dual-view
-      diagrams, and Algolia contextual search. 199 of 208 commits solo
-      (95.7%). Actively maintained — new course recordings shipped
+      diagrams, and Algolia contextual search. 214 of 224 commits solo
+      (~96%). Actively maintained — new course recordings shipped
       weekly through the 2026 TechNest cohort.
     narrative:
-      impactHeadline: "Public teaching platform running 4 coexisting AI-instructor cohort versions (Winter 2024 · Summer 2025 · HER WAKA 2026 · TechNest 2026) with an in-course RAG assistant on Cloudflare Workers indexing ~4,800 bilingual document chunks across the entire course corpus."
+      impactHeadline: "Public teaching platform running 5 coexisting cohort versions — three concurrent 2026 tracks (TechNest · Peyvand · HER WAKA) plus 2025 & 2024 — with an in-course RAG assistant on Cloudflare Workers indexing ~4,800 bilingual doc chunks across the whole corpus."
       problem: |
         AI-programming cohort programmes typically die between cohorts:
         the lecture deck is rebuilt from scratch each round, students
@@ -1049,7 +1186,7 @@ projects:
         artefact and student value.
       technicalApproach: |
         Built on **Docusaurus 3.8.1** with the experimental
-        `@docusaurus/faster` build pipeline. Four cohort versions
+        `@docusaurus/faster` build pipeline. Five cohort versions
         coexist through Docusaurus's versioned-docs feature — each
         version is its own self-contained doc tree with its own
         sidebar, blog feed, and tag taxonomy. Bilingual i18n is
@@ -1176,7 +1313,7 @@ projects:
     provenance: personal
     tier: primary
     recency: recent
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-07-10"
     name: Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa)
     priority: 15
     category: games
@@ -1214,7 +1351,7 @@ projects:
       daily challenges, and server-side anti-cheat. 84 commits over
       ~2 months (Feb–Mar 2026), executed in disciplined P0–P4 phases.
     narrative:
-      impactHeadline: "3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Māori mythology of Aotearoa, with full Cloudflare Workers + Hono + Neon Postgres backend. 84 commits / ~99% solo over 2 months."
+      impactHeadline: "3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Māori mythology of Aotearoa, with full Cloudflare Workers + Hono + Neon Postgres backend (server-side anti-cheat). 90 commits / ~99% solo over ~4.5 months."
       problem: |
         Two prevailing pictures of "a portfolio game project" are both
         wrong: (a) a trivial Canvas + JS toy that lasts one weekend
@@ -1591,6 +1728,9 @@ projects:
     name: Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)
     priority: 14
     category: ai-apps
+    clientOrgId: she-sharp
+    relatedWorkId: she-sharp
+    relatedProjectIds: [she-sharp]
     tagline: "Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template"
     url: https://hackathon.shesharp.org.nz/
     repoUrl: https://github.com/ChanMeng666/event-qa-ai-template
@@ -1869,6 +2009,7 @@ projects:
     name: Forward with Her Mentorship Programme Website
     priority: 29
     category: web-apps
+    clientOrgId: forward-with-her
     tagline: Bilingual EN/CN mentorship-programme site with 3D model viewer — supports the same 360+-mentor / 800+-mentee Forward with Her programme through which 7 of Chan's LinkedIn testimonials came in
     logo: /public/brands/forward-with-her-logo.svg
     repoUrl: https://github.com/ChanMeng666/forward-with-her-mentorship-program
@@ -1888,6 +2029,9 @@ projects:
     name: HER WAKA — Employment Programme for Women in Auckland
     priority: 30
     category: web-apps
+    clientOrgId: she-sharp
+    relatedWorkId: she-sharp
+    relatedProjectIds: [she-sharp]
     tagline: Mintlify documentation platform for the She Sharp × NZ Ministry of Social Development (MSD) employment-readiness programme delivered at academyEX Auckland (Mar-Jun 2026); 4 workshops authored solo by Chan
     url: https://herwaka.shesharp.org.nz/
     logo: /public/brands/her-waka.jpg
@@ -1919,6 +2063,7 @@ projects:
     name: CORDE Field-Operations Mobile App
     priority: 31
     category: web-apps
+    clientOrgId: corde
     relatedWorkId: corde
     tagline: "Offline-first React Native field-data-collection app for CORDE's Canterbury water- and civil-infrastructure crews — capture text, photos, and GPS with local integrity guarantees and clean sync back to CORDE's Workbench platform when connectivity returns. Lincoln University COMP693 industry-placement capstone; Chan was the #1-most-prolific contributor (42% of 539 commits) and documentation lead."
     # repoUrl omitted — private/removed client capstone repository (404s publicly); do not re-add.
@@ -1941,7 +2086,7 @@ projects:
     provenance: personal
     tier: primary
     recency: active
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-10"
     name: 2D Portfolio — chanmeng.org
     priority: 12
     category: ai-apps
@@ -1983,7 +2128,7 @@ projects:
       → persist memory), and delivers via Resend at Monday 8-9 AM NZ local
       time. Deployed on Cloudflare Pages.
     narrative:
-      impactHeadline: "Three production systems in one repo: animated portfolio + IBM Watson digital twin + an 11-stage autonomous AI newsletter pipeline that ships every Monday 8 AM NZ time fully unattended since April 2026 — Lighthouse 95+ across all metrics."
+      impactHeadline: "Three production systems in one repo: animated portfolio + an IBM watsonx.ai digital twin + an 11-stage autonomous AI newsletter pipeline that ships every Monday 8 AM NZ time fully unattended since April 2026 — Lighthouse 95+ across all metrics. 188 solo commits."
       problem: |
         A personal site is usually one of two things: a brochure (looks
         nice, says nothing) or a CMS (constant maintenance, dies the
@@ -2172,8 +2317,9 @@ projects:
     name: Sanicle FemTech Mobile (Prototype)
     priority: 79
     category: web-apps
+    clientOrgId: sanicle
     relatedWorkId: sanicle
-    relatedProjectId: sanicle-ai
+    relatedProjectIds: [sanicle-ai]
     tagline: "Sanicle mobile-app prototype — period tracking, health analytics, and an AI health assistant in a React Native shell; an early clickable prototype from Chan's Sanicle CTO tenure, predating the production sanicle-ai platform"
     repoUrl: https://github.com/ChanMeng666/sanicle-ai-mobile
     url: https://chanmeng666.github.io/sanicle-ai-mobile/
@@ -2242,9 +2388,9 @@ projects:
     status: live
   - id: hospital-roster-agent
     provenance: personal
-    tier: secondary
+    tier: archive
     recency: historical
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-07-11"
     name: Hospital Roster Agent
     priority: 34
     category: ai-apps
@@ -2344,9 +2490,9 @@ projects:
       impactHeadline: "Community swimming-club management platform (members, class scheduling, facility bookings, payments, reporting) — rebuilt from a basic HTML/CSS/Flask group project into a modern Next.js + Neon Postgres + Drizzle app on Cloudflare Workers with FullCalendar scheduling."
   - id: automotive-repair-management-system
     provenance: coursework
-    tier: secondary
+    tier: archive
     recency: recent
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-11"
     name: RepairOS (Automotive Repair Management)
     priority: 39
     category: web-apps
@@ -2355,7 +2501,7 @@ projects:
     url: https://repairos.chanmeng.org/
     logo: /public/brands/repair-os-logo.svg
     techStack: [Python, "Flask 3 (app-factory)", PostgreSQL, "SQLAlchemy ORM", "Alembic (migrations)", Jinja2, "Gunicorn / WSGI"]
-    status: live
+    status: archived
     narrative:
       impactHeadline: "Automotive repair-shop platform (technician + admin UIs, parts inventory, billing) — rebuilt from a basic HTML/CSS group project into a Flask 3 app-factory on PostgreSQL + SQLAlchemy + Alembic; 29 stars / 11 forks, the strongest community traction of Chan's learning-origin apps."
   - id: fishing-club-project
@@ -2395,7 +2541,7 @@ projects:
     name: FemTracker (Mobile)
     priority: 42
     category: web-apps
-    relatedProjectId: femtracker-agent
+    relatedProjectIds: [femtracker-agent]   # v1.0.0 origin product; also hosted under the TechRosie women-developers org (TechRosie/femtracker)
     tagline: "React Native / Expo Android app for safer period care — tracks how long menstrual products have been worn and sends timely change reminders with usage history; a simple but complete native-mobile build that (alongside the CORDE field-ops app) evidences Chan's Android app-development capability, and the v1.0.0 origin product later reimagined as the AI-agent platform femtracker-agent"
     repoUrl: https://github.com/ChanMeng666/femtracker
     extraLinks:
@@ -2412,18 +2558,20 @@ projects:
       impactHeadline: "React Native / Expo mobile app for safer period care — reminds users when to change menstrual products and keeps a usage-duration history; the v1.0.0 product that seeded the later AI-agent reimagining, femtracker-agent."
   - id: gavigo-website
     provenance: client
-    tier: secondary
+    tier: primary
     recency: active
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-10"
     name: GAVIGO Website
     priority: 43
     category: web-apps
-    relatedProjectId: gavigo-ire
-    tagline: "GAVIGO Inc.'s public marketing and investor-readiness website (gavigo.com) — the standalone brand surface that links to the IRE product demo (ire.gavigo.com/mobile), with a Markdown content pipeline, Resend email capture, and a Cloud Run production deploy; Chan is top contributor (66 commits), including the investor-readiness polish pass"
+    clientOrgId: gavigo
+    relatedWorkId: gavigo
+    relatedProjectIds: [gavigo-ire]
+    tagline: "GAVIGO Inc.'s public marketing and investor-readiness website (gavigo.com) — the standalone brand surface that links to the IRE product demo (ire.gavigo.com/mobile), with a Markdown content pipeline, Resend email capture, and a Cloud Run production deploy; Chan is the sole developer (66/66 commits, 100%), including the investor-readiness polish pass"
     # repoUrl omitted — private GAVIGO org repository (gavigo-inc/gavigo-website, 404s publicly); do not re-add.
     url: https://gavigo.com/
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
-    roles: ["Lead Developer"]
+    roles: ["Sole Developer"]
     extraLinks:
       - { label: "Live site (gavigo.com)", url: "https://gavigo.com/" }
       - { label: "IRE product demo", url: "https://ire.gavigo.com/mobile/" }
@@ -2436,8 +2584,94 @@ projects:
       - "Email capture (Resend)"
       - "Cloud Run production deployment"
     status: live
+    metrics:
+      - { label: "Authorship",     value: "sole developer — 66/66 commits (100%); the only contributor to the repository" }
+      - { label: "Live URL",       value: "https://gavigo.com (Google Cloud Run, europe-west1)" }
+      - { label: "Role",           value: "the standalone company/investor site, decoupled from the IRE product runtime (ire.gavigo.com) it links to" }
+      - { label: "Content",        value: "Markdown/MDX pipeline (remark + rehype + gray-matter) so non-engineers can edit copy without touching code" }
+      - { label: "Capture",        value: "Resend + React Email lead capture wired to Neon Postgres (Drizzle ORM)" }
+      - { label: "Company",        value: "GAVIGO Inc. (Delaware C-Corp; NVIDIA Inception + Google for Startups); Chan is founding principal engineer on the flagship IRE platform" }
+    startDate: "2025-12"
+    publicSummary: |
+      GAVIGO Inc.'s public marketing and investor-readiness website at
+      gavigo.com — the company's standalone brand surface, deliberately
+      decoupled from the IRE product runtime (ire.gavigo.com) so marketing
+      copy and investor messaging can change without redeploying the product.
+      Chan built and maintains it solo (66 of 66 commits): a Next.js site with
+      a Markdown/MDX content pipeline (so non-engineers can edit copy),
+      Motion-driven brand animation, Resend + React Email lead capture backed
+      by Neon Postgres, and a Google Cloud Run production deploy — including
+      the investor-readiness polish pass that supported GAVIGO's fundraising
+      and partner conversations.
     narrative:
-      impactHeadline: "GAVIGO investor site (gavigo.com) — standalone from IRE runtime, links to live product demo, Markdown pipeline + Resend capture; top contributor (66 commits) with investor-readiness polish supporting fundraising and partner conversations."
+      impactHeadline: "GAVIGO's company + investor site (gavigo.com) — a standalone brand surface decoupled from the IRE product runtime it links to, with a Markdown content pipeline + Resend capture on Cloud Run. Solo-built (66/66 commits, 100%) with an investor-readiness polish pass for fundraising."
+      problem: |
+        A startup's product and its story move at different speeds. GAVIGO's
+        IRE platform is a fast-changing, latency-critical runtime; its public
+        company narrative — the pitch to investors, partners, and early
+        users — needs to change even faster, and by people who aren't
+        shipping the product. Running the marketing site inside the product
+        codebase couples the two: a copy tweak risks the runtime, and a
+        non-engineer can't touch either. GAVIGO needed a company surface that
+        is polished, investor-ready, editable without engineering, and
+        completely decoupled from the product it represents.
+      audience: |
+        Primarily investors and strategic partners evaluating GAVIGO during
+        fundraising and business-development conversations — the site is the
+        first credible impression and the bridge to the live IRE demo. Second,
+        prospective early users and press arriving at gavigo.com who need to
+        understand "Skip the Store. Start the Play" and reach the product in
+        one click. Third, GAVIGO's own non-technical team, who edit copy and
+        read captured leads without asking an engineer.
+      productLogic: |
+        The site is deliberately a **separate surface from the product**. It
+        presents GAVIGO's positioning and brand, animates key moments with
+        Motion for a premium feel, and routes every call-to-action to the live
+        IRE demo (ire.gavigo.com/mobile) so the story hands off directly to
+        the working product. Content is authored in **Markdown/MDX** through a
+        remark + rehype + gray-matter pipeline, so marketing copy, announcement
+        posts, and page sections are editable as plain files without touching
+        React — the whole point being that the company narrative can move
+        without an engineer in the loop. A **Resend + React Email** capture
+        flow collects interested-party leads into Neon Postgres, turning the
+        site from a brochure into a working top-of-funnel instrument for
+        investor and partner outreach.
+      businessLogic: |
+        This is founding-team company infrastructure, not a revenue product.
+        Its job is fundraising and credibility: a standalone, polished,
+        fast-to-update investor-readiness surface that GAVIGO (a Delaware
+        C-Corp, NVIDIA Inception + Google for Startups member) can point
+        investors and partners to, that always reflects the current pitch, and
+        that funnels interest straight to the live IRE demo and into a captured
+        lead list. Decoupling it from the product runtime is the strategic
+        choice — the company can iterate its story continuously while the
+        latency-critical IRE platform ships on its own cadence.
+      technicalApproach: |
+        A Next.js + React + TypeScript site deployed as a container on
+        **Google Cloud Run** (europe-west1) — deliberately separate hosting
+        from the IRE platform. Copy and content run through a
+        **Markdown/MDX pipeline** (remark + rehype + gray-matter) so pages are
+        file-editable; **Motion** drives brand animation; **Tailwind CSS**
+        carries the design system. Lead capture is a **Resend + React Email**
+        flow persisting to **Neon Postgres via Drizzle ORM**. The build is
+        small and focused by design — the engineering value is in a clean,
+        maintainable, non-engineer-editable company surface with a real
+        capture backend, shipped and operated solo.
+      outcomes: |
+        Live in production at gavigo.com on Google Cloud Run, built and
+        maintained entirely by Chan — **66 of 66 commits, the repository's
+        sole contributor** — including the investor-readiness polish pass that
+        supported GAVIGO's fundraising and partner conversations. It stands as
+        the company's public front door and the hand-off point into the live
+        IRE product demo, decoupled from and shipping independently of the
+        product runtime.
+      myRole: |
+        Sole developer and maintainer of the site end-to-end — the Next.js
+        build, the Markdown/MDX content pipeline, the Motion brand animation,
+        the Resend + Neon lead-capture backend, and the Google Cloud Run
+        deployment — as GAVIGO's founding principal engineer (the same role
+        under which I lead the flagship IRE platform). 66 of 66 commits are
+        mine.
   - id: gavigo-logo
     provenance: client
     tier: archive
@@ -2446,7 +2680,9 @@ projects:
     name: GAVIGO Logo
     priority: 62
     category: branding
-    relatedProjectId: gavigo-ire
+    clientOrgId: gavigo
+    relatedWorkId: gavigo
+    relatedProjectIds: [gavigo-ire]
     tagline: "Brand-logo generation repo for GAVIGO Inc. — produces the company's logo assets as reproducible, version-controlled code/SVG variants for use across GAVIGO's product and marketing surfaces"
     # repoUrl omitted — private/removed GAVIGO logo repository (404s publicly); do not re-add.
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
@@ -2465,7 +2701,9 @@ projects:
     name: FemTech Weekend Website (Gen-1, deprecated)
     priority: 60
     category: web-apps
-    relatedProjectId: femtech-weekend-website
+    clientOrgId: femtech-weekend
+    relatedWorkId: femtech-weekend
+    supersededBy: femtech-weekend-website
     tagline: "The first-generation website for FemTech Weekend (China's first women's-health-tech organisation) — now deprecated and superseded by the Gen-2 Docusaurus + Drizzle/Neon platform (id: femtech-weekend-website)"
     # repoUrl omitted — Gen-1 repository removed/private (superseded by femtech-weekend-website; 404s publicly); do not re-add.
     logo: /public/organizations/femtech-weekend-logo.svg
@@ -2481,8 +2719,9 @@ projects:
     name: Sanicle AI — Multi-Tenant B2B FemTech SaaS
     priority: 43
     category: ai-apps
+    clientOrgId: sanicle
     relatedWorkId: sanicle
-    relatedProjectId: sanicle-platform
+    relatedProjectIds: [sanicle-platform]
     tagline: "Multi-tenant B2B workplace FemTech SaaS — dual AI stack (IBM watsonx for quick interactions + Google Gemini for deep health consultations), org-scoped PostgreSQL data isolation, leave management, and HR-facing anonymized analytics; built for the UN Women × Sanicle.cloud Hackathon"
     repoUrl: https://github.com/ChanMeng666/sanicle-ai
     entity: "Sanicle (US-based FemTech B2B/B2G SaaS)"
@@ -2507,8 +2746,9 @@ projects:
     name: Sanicle Cloud — Official Website (sanicle.cloud)
     priority: 44
     category: ai-apps
+    clientOrgId: sanicle
     relatedWorkId: sanicle
-    relatedProjectId: sanicle-ai
+    relatedProjectIds: [sanicle-ai]
     tagline: "Sanicle's official website and production platform (sanicle.cloud) — menstrual & menopause workplace-wellness SaaS powered by IBM watsonx AI ('Ask Sani' assistant), with predictive analytics and B2B/B2G deployment; Chan's IBM watsonx integration earned Sanicle its IBM Silver Partner certification (~98% solo, 350+ commits)"
     repoUrl: https://github.com/ChanMeng666/sanicle-cloud
     # url omitted — sanicle.cloud deployment offline (DNS dead); source repo remains.
@@ -2535,8 +2775,9 @@ projects:
     name: Sanicle AI — reveal.js Demo Slides
     priority: 45
     category: creative
+    clientOrgId: sanicle
     relatedWorkId: sanicle
-    relatedProjectId: sanicle-ai
+    relatedProjectIds: [sanicle-ai]
     tagline: "reveal.js HTML presentation deck — live-operation demo slides for the sanicle-ai platform, styled with Sanicle brand tokens (teal + pink palette) for conference and hackathon walkthroughs"
     repoUrl: https://github.com/ChanMeng666/reveal.js
     techStack: [reveal.js, HTML, CSS, JavaScript]
@@ -2576,14 +2817,14 @@ projects:
     provenance: personal
     tier: primary
     recency: active
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-10"
     meta:
       x_brand:
         featuredStack: [typescript, nodejs, npm, vercel]
     name: ArchLang
     priority: 85
     category: tools
-    tagline: A small declarative language that compiles to professional SVG floor plans — like Typst/LaTeX, but for architecture; zero-dependency TypeScript that runs in Node and the browser
+    tagline: "An original declarative language Chan invented that compiles .arch source into professional, dimensioned floor plans — 'Typst/LaTeX for architecture.' Zero-dependency, isomorphic TypeScript (hand-written lexer + recursive-descent parser), errors returned as data not thrown, with architectural-soundness linting, human-circulation analysis, a deterministic repair pass, four export formats (SVG/DXF/PDF/PNG), an agent-native CLI, full LSP + VS Code extension, and a client-side playground. Published to npm; the compiler engine behind ArchCanvas."
     repoUrl: https://github.com/ChanMeng666/archlang
     url: https://archlang-playground.vercel.app
     logo: /public/brands/archlang-logo.svg
@@ -2591,31 +2832,134 @@ projects:
       - { label: "Playground", url: "https://archlang-playground.vercel.app" }
       - { label: "Docs", url: "https://archlang-docs.vercel.app" }
       - { label: "npm (@chanmeng666/archlang)", url: "https://www.npmjs.com/package/@chanmeng666/archlang" }
-    techStack: [TypeScript, "Node.js", Vite, "CodeMirror 6", LSP, Vitest]
+    techStack: ["TypeScript 5.7 (ESM, zero runtime dependencies)", "Hand-written lexer + recursive-descent parser + expression evaluator", "tsup (build)", "Biome 2.5 (lint/format)", "Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression)", "Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF)", "LSP (hover/completion/rename/signature)", "VS Code extension (ChanMeng.archlang, TextMate grammar)", "Vite + CodeMirror 6 playground (100% client-side)", "VitePress docs", "GitHub Action (renders ```arch fences to images)"]
+    metrics:
+      - { label: "Commits (solo)",   value: "192 (2026-06-25 → 2026-07-10, ~2.5 weeks intensive); sole author" }
+      - { label: "npm package",      value: "@chanmeng666/archlang v1.12.1 (13 versioned feature branches, 10 ADRs)" }
+      - { label: "Source",           value: "80 TypeScript files (~19.7k LOC) + 82 test files" }
+      - { label: "Primitives",       value: "8 elements (wall · room · door · window · opening · furniture · dim · column) + fixture-symbol catalog" }
+      - { label: "Export formats",   value: "4 — SVG + DXF (zero-dep) · PDF + PNG (lazily-loaded optional add-ons)" }
+      - { label: "Diagnostics",      value: "74 distinct E_*/W_* codes, each carrying a byte span + a machine-applicable fix" }
+      - { label: "Lint rules",       value: "8 architectural-soundness rule modules (reachability, door-swing collision, windowless bedroom, wet-room enclosure, circulation)" }
+      - { label: "CLI",             value: "~20 subcommands, all with --json + deterministic exit codes (0 ok / 1 IO / 2 source / 3 usage)" }
+      - { label: "Downstream",       value: "the compiler engine behind ArchCanvas, which consumes frozen-API contracts (data-arch-id anchors, diffPlans()) verbatim" }
     status: production
     startDate: "2026-06"
     publicSummary: |
       ArchLang is a parametric DSL for floor plans: walls, rooms, doors,
-      windows, fixtures, and dimensions compile to deterministic SVG (also
-      DXF/PDF/PNG). It ships architectural-soundness linting, circulation
-      analysis, a CLI with JSON output for AI agents, VS Code / LSP tooling,
-      and a browser playground.
+      windows, fixtures, and dimensions — placed by exact millimetre
+      coordinates or relationally (right-of / below with alignment + gap) —
+      compile to deterministic SVG (also DXF / PDF / PNG). The same source
+      always produces the identical drawing, so "make the bedroom 1m wider"
+      is a one-number diff rather than a re-rolled raster. It ships
+      architectural-soundness linting, human-circulation analysis, a
+      deterministic repair pass, an agent-native CLI (JSON output, structured
+      diagnostics), full LSP + a VS Code extension, and a 100%-client-side
+      browser playground — as zero-runtime-dependency isomorphic TypeScript.
     narrative:
-      impactHeadline: "An original declarative floor-plan language Chan invented — a DSL compiling to professional SVG plans (Typst/LaTeX for architecture). Zero-dependency, isomorphic TypeScript, published to npm with a playground, docs, and a VS Code extension."
+      impactHeadline: "An original declarative floor-plan language Chan invented — compiling to professional dimensioned plans (Typst/LaTeX for architecture). Zero-dependency isomorphic TypeScript with errors-as-data, soundness linting, and circulation modeling; the engine behind ArchCanvas."
       problem: |
-        Floor plans are usually hand-drawn or image-generated, which makes
-        parametric edits and agent-driven authoring hard.
+        Floor plans live in two unsatisfying states: hand-drawn in heavy CAD
+        tools, or generated as raster images. Both make the thing you most
+        want to do — a precise, parametric edit — expensive: widening a
+        bedroom means re-drawing, or re-rolling an image and hoping the rest
+        survives. Neither is authorable by an AI agent, because there is no
+        deterministic text representation an agent can write, verify, and
+        tweak. And an image never *knows* whether the plan it depicts is
+        actually habitable — whether a bathroom is reachable only through a
+        bedroom, whether a door swings into another door, whether a bedroom
+        has a window. ArchLang exists to make a floor plan a **program**:
+        exact, deterministic, diff-able, agent-authorable, and checkable for
+        architectural soundness.
       audience: |
-        Architects, design-tool builders, and AI agents that need
-        deterministic, programmatic floor-plan generation.
+        Three audiences. Architects and self-builders who want plans that are
+        precise and reproducible rather than hand-drawn approximations;
+        design-tool builders who need a floor-plan engine they can embed
+        (ArchCanvas is the first); and AI agents that need to author and
+        verify plans without ever rendering an image — for which ArchLang
+        exposes its entire language in one ~2k-token spec page and returns a
+        plan "as facts" (rooms, areas, adjacency, door connections,
+        circulation) over `describe --json`.
+      productLogic: |
+        You write `.arch` source. The coordinate model is integer millimetres
+        with an SVG-convention origin; elements are placed either absolutely
+        (`room 4000x3000 at (0,0)`) or **relationally** — `right-of`,
+        `left-of`, `above`, `below` with `align` and `gap`, resolved by
+        deterministic topological arithmetic so the layout stays consistent
+        under edits. The language is genuinely programmable: `let` bindings,
+        pure value-functions, `for`/`if`/`while`, arrays, string
+        interpolation, and `import` + `component` for reuse — all expand-time
+        and pure (no runtime, clock, or I/O), so output is byte-for-byte
+        deterministic.
+
+        Compilation is a returned value, not a side effect: `compile()` hands
+        back `{ svg, errors, warnings, diagnostics, ast, scene }` and **never
+        throws** on a bad plan — every diagnostic carries a byte span and a
+        machine-applicable `fix`, and the SVG is simply left empty. On top of
+        the compiler sit four analysis surfaces: a **lint** pass over eight
+        architectural-soundness rules (reachability, door-swing collision,
+        windowless bedroom, unenclosed wet room, too-narrow door…); a
+        **circulation** analysis that models how a person actually walks the
+        plan on a clearance-eroded nav grid (per-room walk distance, narrowest
+        pinch, path circuitousness) with an optional route overlay; a
+        deterministic **repair** pass that nudges furniture out of walls and
+        door swings and emits a change log; and **describe**, which returns
+        the plan as structured facts. All of this is reachable from a
+        ~20-subcommand CLI where every command supports `--json` and returns
+        deterministic exit codes, plus an LSP, a VS Code extension, four
+        themes, accessibility annotations, and a fully client-side playground.
+      businessLogic: |
+        ArchLang is free and open-source, MIT, published on npm as
+        `@chanmeng666/archlang`. Its strategic role is twofold. As an artifact
+        it is a credential — an original programming language with a
+        hand-written compiler, a real diagnostic system, domain-specific
+        static analysis, and full IDE tooling, built and versioned with
+        engineering discipline (13 feature branches, 10 ADRs). As
+        infrastructure it is the **engine that makes a commercial product
+        possible**: ArchCanvas (the paid AI design agent) depends on it,
+        writing parametric ArchLang rather than freehand SVG so that its
+        select-to-act editing, parametric sliders, and semantic diffs all
+        work — capabilities that only exist because the underlying plan is a
+        deterministic program. ArchLang deliberately ships **no MCP server**:
+        a CLI costs zero context until it is called, whereas an MCP schema
+        would sit in an agent's context window permanently, so agent access is
+        via the token-cheap CLI instead.
       technicalApproach: |
-        Pure TypeScript compiler (hand-written lexer + recursive-descent
-        parser) with zero runtime dependencies, isomorphic in Node and
-        browser; it exports structured diagnostics instead of throwing, plus
-        lint / describe / repair pipelines for plan validation and four
-        export formats (SVG, DXF, PDF, PNG).
+        A pure-TypeScript, zero-runtime-dependency compiler: a hand-written
+        lexer (~388 LOC, line/col tracking), a recursive-descent parser
+        (~860 LOC), and a separate expression evaluator (~614 LOC), all
+        isomorphic so the same code runs in Node and in the browser — the
+        playground sends nothing to a server. The heavy or native pieces
+        (resvg for PNG raster, clipper2-wasm for polygon geometry, pdfkit for
+        PDF) are **optional and lazily imported** behind `webpackIgnore` /
+        `@vite-ignore` guards, so a browser bundle never tries to resolve them
+        and a default install pulls none of them. Output determinism is
+        enforced with property tests (fast-check) and visual-regression tests
+        (pixelmatch). The diagnostic layer — 74 stable `E_*`/`W_*` codes, each
+        with a byte span and a suggested fix, surfaced as data and even as a
+        self-describing error-SVG card — is the deliberate foundation of the
+        agent story: an LLM can author a plan, read the structured errors, and
+        self-correct in a tight loop without a human or an image in the middle.
+      outcomes: |
+        A complete, published language: 192 solo commits over ~2.5 weeks of
+        intensive development (2026-06-25 → 2026-07-10), 80 source files
+        (~19.7k LOC) against 82 test files, released to npm at v1.12.1 across
+        13 versioned feature branches with 10 architecture decision records.
+        The surface area is unusually complete for a solo language project —
+        8 primitives, 4 export formats, 8 lint-rule modules, a circulation
+        analyzer, a repair pass, a ~20-command CLI, a full LSP, a VS Code
+        extension, a client-side playground, a VitePress docs site, and a
+        GitHub Action that renders every ```arch fence in a repo's Markdown.
+        Most tellingly, it is already load-bearing: ArchCanvas's first
+        in-browser use of the core drove real hardening (the v1.12.1
+        client-side-import fix, repair-pass robustness), proving the engine
+        under a downstream product rather than in isolation.
       myRole: |
-        Sole author — language design, compiler, tooling, and packaging.
+        Sole author of everything — the language design, the hand-written
+        lexer / parser / evaluator, the diagnostic system, all four export
+        backends, the lint and circulation and repair pipelines, the LSP and
+        VS Code extension, the CodeMirror playground, the docs site, and the
+        npm packaging. 192 of 192 commits are mine.
   - id: femtech-radar
     provenance: client
     tier: secondary
@@ -2624,6 +2968,9 @@ projects:
     name: FemTech Radar
     priority: 86
     category: ai-apps
+    clientOrgId: femtech-weekend
+    relatedWorkId: femtech-weekend
+    relatedProjectIds: [femtech-weekend-website]
     tagline: Agent-first FemTech intelligence — an MCP server that fetches, dedupes, and scores women's-health & FemTech research and news, feeding a weekly GitHub Agentic Workflow and an auto-updating Astro + RSS site
     repoUrl: https://github.com/ChanMeng666/femtech-radar
     url: https://chanmeng666.github.io/femtech-radar/
@@ -2740,14 +3087,14 @@ projects:
     name: Super Mario · Makey Makey Edition
     priority: 90
     category: games
-    relatedProjectId: she-sharp
+    relatedProjectIds: [she-sharp, makey-makey-iot-slides]
     tagline: "A faithful Canvas remake of Super Mario World 1-1 playable with a Makey Makey or keyboard — every pixel and sound drawn/synthesized in code, no assets; the bonus showcase demo for the She Sharp × Peyvand Academy Makey Makey IoT workshop (13 June 2026), featured in the makey-makey-iot-slides teaching deck"
     repoUrl: https://github.com/ChanMeng666/super-mario-makey-makey
     url: https://chanmeng666.github.io/super-mario-makey-makey/
     extraLinks:
       - { label: "Play now", url: "https://chanmeng666.github.io/super-mario-makey-makey/" }
       - { label: "Teaching slides (makey-makey-iot-slides)", url: "https://github.com/ChanMeng666/makey-makey-iot-slides" }
-      - { label: "She Sharp event — Peyvand Academy (13 June 2026)", url: "https://she-sharp-zeta.vercel.app/events/peyvand-academy-13-june-2026" }
+      - { label: "She Sharp event — Peyvand Academy (13 June 2026)", url: "https://www.shesharp.org.nz/events/peyvand-academy-13-june-2026" }
     techStack: [HTML, CSS, JavaScript, "Canvas 2D", "Fable 5"]
     status: live
     startDate: "2026-06"
@@ -2788,16 +3135,16 @@ projects:
       impactHeadline: "A frameless, always-on-top, transparent Electron window for keeping image references visible while you work — drag-and-drop import, an HTML5 Canvas crop/resize editor, text notes, and JSON save/load, with context-isolated IPC."
   - id: lottie-theme-converter
     provenance: personal
-    tier: secondary
+    tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-11"
     name: Lottie Theme Converter
     priority: 93
     category: tools
     tagline: A Python CLI that converts Lottie animations between light and dark themes by inverting embedded-image RGB channels while preserving alpha transparency
     repoUrl: https://github.com/ChanMeng666/lottie-edit
     techStack: ["Python 3.8+", Pillow, JSON, Base64]
-    status: draft
+    status: archived
     startDate: "2024-12"
     narrative:
       impactHeadline: "A single-script Python tool that inverts the RGB channels of base64 images embedded in Lottie JSON while leaving alpha untouched — giving dual-theme apps a dark-mode Lottie variant without re-exporting."
@@ -2809,12 +3156,14 @@ projects:
     name: Touch the World, Talk to Code
     priority: 94
     category: creative
-    relatedProjectId: she-sharp
+    clientOrgId: she-sharp
+    relatedWorkId: she-sharp
+    relatedProjectIds: [she-sharp]
     tagline: A 20-minute IoT-hardware teaching slideshow for ages 12-18 — vibe-code a Banana Piano with a free AI tool, then play it with a Makey Makey board; static HTML on the Caldera brand system, deployable to GitHub Pages. Built for the She Sharp × Peyvand Academy workshop (13 June 2026)
     url: https://chanmeng666.github.io/makey-makey-iot-slides/#1
     repoUrl: https://github.com/ChanMeng666/makey-makey-iot-slides
     extraLinks:
-      - { label: "She Sharp event — Peyvand Academy (13 June 2026)", url: "https://she-sharp-zeta.vercel.app/events/peyvand-academy-13-june-2026" }
+      - { label: "She Sharp event — Peyvand Academy (13 June 2026)", url: "https://www.shesharp.org.nz/events/peyvand-academy-13-june-2026" }
     techStack: [HTML, CSS, JavaScript, "Web Audio API"]
     status: live
     startDate: "2026-06"

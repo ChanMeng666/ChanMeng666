@@ -675,7 +675,32 @@
         },
         "tier": { "$ref": "#/$defs/tierEnum" },
         "recency": { "$ref": "#/$defs/recencyEnum" },
-        "lastUpdated": { "$ref": "#/$defs/loosePartialDate" }
+        "lastUpdated": { "$ref": "#/$defs/loosePartialDate" },
+        "clientOrgId": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "FK to organizations[].id — the org/client this project was built for. The grouping backbone (all projects for one org share it). Build-validated (see scripts/build.mjs). For client projects this equals relatedWorkId since work.id === org.id."
+        },
+        "relatedWorkId": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "FK to work[].id — the role/engagement this project was produced during. Build-validated."
+        },
+        "relatedProjectIds": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "description": "Cross-links to sibling projects[].id (non-folding — related projects still render as their own cards). Build-validated. Replaces the deprecated singular relatedProjectId."
+        },
+        "supersedes": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "description": "FKs to projects[].id — older project(s) this one replaces (e.g. Gen-2 supersedes Gen-1). Build-validated."
+        },
+        "supersededBy": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "FK to projects[].id — the newer project that replaced this one. Build-validated."
+        }
       }
     },
 

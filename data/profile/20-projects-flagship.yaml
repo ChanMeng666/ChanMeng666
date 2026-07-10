@@ -26,6 +26,7 @@ projects:
         featuredStack: [openai, copilotkit, drizzle, neon, nextjs]
     priority: 1
     category: ai-apps
+    clientOrgId: whiri-ai
     tagline: "Independent research commission for enterprise executive Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead) — an AI Financial Wellness Coach grounded in Te Whare Tapa Whā that proved Māori users will engage with a culturally-native AI agent (19-user cohort, 4 months, bilingual te reo Māori). 351 solo commits, 48-table schema where culture is typed data not UI decoration, voice-first GPT-4o Realtime coach, CopilotKit agent across 88+ actions."
     url: https://tamaiti.whiri-ai.com/
     demoUrl: https://youtu.be/NtT7_q6xhlk
@@ -366,7 +367,7 @@ projects:
       digest, NZ government funding crawler, Claude `sync-event-from-slack` skill)
       that turned hours of volunteer manual work into one-command automation.
       648/748 commits (86.6%) solo across 10 months.
-    url: https://she-sharp-zeta.vercel.app/
+    url: https://www.shesharp.org.nz/
     repoUrl: https://github.com/NZ-SheSharp/she-sharp
     extraLinks:
       - { label: "She Sharp", url: "https://www.shesharp.org.nz/" }
@@ -376,7 +377,9 @@ projects:
       - { label: "Founder Dr Mahsa Mohaghegh (LinkedIn)", url: "https://www.linkedin.com/in/mahsamohaghegh/" }
       - { label: "She Sharp LinkedIn", url: "https://www.linkedin.com/company/shesharpnz/" }
     logo: /public/brands/she-sharp-mark.svg
-    relatedProjectIds: [her-waka, ai-hackathon-assistant, makey-makey-iot-slides]   # She Sharp extension sub-projects, shown under one card
+    clientOrgId: she-sharp
+    relatedWorkId: she-sharp
+    relatedProjectIds: [her-waka, ai-hackathon-assistant, makey-makey-iot-slides]   # She Sharp sibling projects — cross-linked; each also renders as its own card (clientOrgId: she-sharp)
     entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
     roles: ["Senior Full Stack Engineer", "Website Team Lead", "Solo Architect of New Platform"]
     techStack:
@@ -805,7 +808,9 @@ projects:
     extraLinks:
       - { label: "Company", url: "https://gavigo.com/" }
     logo: /public/brands/gavigo-mark.svg
-    relatedProjectIds: [gavigo-website]   # surface the GAVIGO company site under the same brand card
+    clientOrgId: gavigo
+    relatedWorkId: gavigo
+    relatedProjectIds: [gavigo-website]   # GAVIGO company site — cross-linked; also renders as its own card (clientOrgId: gavigo)
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
     roles: ["Founding Principal Engineer, Activation, Execution & AI Systems", "Core Engineer (prior)"]
     techStack:

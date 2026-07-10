@@ -105,7 +105,7 @@ What I built:
 **Media:** `GAVIGO - Skip the Store. Start the Play | Instant Mobile Gaming Revolution`
 
 ## She Sharp
-**Links:** <https://shesharp.org.nz/> · <https://she-sharp-zeta.vercel.app/>
+**Links:** <https://shesharp.org.nz/> · <https://www.shesharp.org.nz/>
 
 ### Senior Full Stack Engineer & Website Team Lead
 

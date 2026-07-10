@@ -17,11 +17,12 @@ projects:
     meta:
       x_brand:
         featuredStack: [github, nextjs, vercel, typescript, react]
-    lastUpdated: "2026-05-19"
+    lastUpdated: "2026-07-10"
     name: github-readme-suno-cards — Suno Music Cards for GitHub READMEs
     priority: 5
     category: branding
-    tagline: GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 8 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with SunoStats.
+    relatedProjectIds: [sunostats]   # shares the @suno-cards/parser Valibot kernel with Seismophone
+    tagline: GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 8 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.
     logo: /public/brands/github-readme-suno-cards-logo.svg
     url: https://github-readme-suno-cards.vercel.app
     repoUrl: https://github.com/ChanMeng666/github-readme-suno-cards
@@ -31,12 +32,12 @@ projects:
       - { label: "Visual builder",       url: "https://github-readme-suno-cards.vercel.app/builder" }
       - { label: "Public v0.1 commit",   url: "https://github.com/ChanMeng666/github-readme-suno-cards/commit/73f4fa8" }
       - { label: "Internal-ref cleanup", url: "https://github.com/ChanMeng666/github-readme-suno-cards/commit/295756e" }
-      - { label: "Companion: SunoStats (live app)", url: "https://sunostats.chanmeng.org/" }
+      - { label: "Companion: Seismophone (live app)", url: "https://seismophone.chanmeng.org/" }
     techStack:
       - "pnpm 9.12 monorepo (apps/ + packages/ + action/)"
-      - "Next.js 15.1 (Vercel Edge runtime)"
+      - "Next.js 15.1 (Vercel serverless runtime)"
       - "TypeScript 5.6"
-      - "@suno-cards/parser workspace package (Valibot-validated Suno oEmbed parser — shared kernel with SunoStats)"
+      - "@suno-cards/parser workspace package (Valibot-validated Suno oEmbed parser — shared kernel with Seismophone)"
       - "@suno-cards/render workspace package (pure-function SVG renderer)"
       - "Valibot (strict TypeScript schema validation against studio-api-prod.suno.com oEmbed)"
       - "SVG <foreignObject> + inline HTML <span> (CJK text shaping)"
@@ -62,14 +63,14 @@ projects:
       - { label: "Public v0.1 commit",    value: "2026-04-13 (commit 73f4fa8 — 'initial commit github-readme-suno-cards v0.1', extracted as a clean public-facing repo)" }
       - { label: "Internal cleanup",      value: "2026-04-13 commit 295756e — 'clean remaining internal reference' (post-extraction sanitization)" }
       - { label: "Latest commit",         value: "2026-07-05" }
-      - { label: "Total commits",         value: "21 (solo, public history; the underlying renderer is older inside the private origin repo)" }
-      - { label: "Live service",          value: "https://github-readme-suno-cards.vercel.app (Vercel Edge runtime)" }
+      - { label: "Total commits",         value: "146 (solo, 2026-04-12 → 2026-07-06, ~3 months)" }
+      - { label: "Live service",          value: "https://github-readme-suno-cards.vercel.app (Vercel serverless runtime)" }
       - { label: "GitHub Action",         value: "uses: ChanMeng666/github-readme-suno-cards@v0.1 (composite action, 'music' icon, purple branding)" }
       - { label: "Action inputs",         value: "8 (handle, manifest_path, song_ids, sort, max, include_tags, exclude_tags, min/max_duration)" }
       - { label: "Card combinations",     value: "12 base (2 layouts x 2 presets x 3 themes)" }
       - { label: "Customization toggles", value: "11 element show/hide flags + hex color overrides" }
       - { label: "id input formats",      value: "3 (UUID / suno.com URL / suno.com/s/<shortcode>) — parser-normalized" }
-      - { label: "Sister project",        value: "SunoStats shares the @suno-cards/parser workspace kernel (parser extracted between the two repos)" }
+      - { label: "Sister project",        value: "Seismophone shares the @suno-cards/parser workspace kernel (parser extracted between the two repos)" }
       - { label: "License",               value: "MIT" }
     status: live
     startDate: "2026-04-13"
@@ -85,7 +86,7 @@ projects:
       immediately by `295756e` *"clean remaining internal reference"*)
       and now ships as a clean, focused, MIT-licensed open-source
       package. **Architectural insight**: the `@suno-cards/parser`
-      workspace package is **shared with SunoStats** (Chan's separate
+      workspace package is **shared with Seismophone** (Chan's separate
       Suno analytics SaaS) — the parser was distilled out as the common
       kernel between the two projects, so a single Valibot-validated
       Suno-oEmbed contract underwrites both products. Ships 12 base
@@ -94,12 +95,12 @@ projects:
       input formats (raw UUID / `suno.com/song/<uuid>` URL /
       `suno.com/s/<shortcode>` short code), and 8 GitHub Action inputs
       including tag filtering and duration filtering. Stack: pnpm
-      monorepo + Next.js 15.1 on Vercel Edge + Valibot schemas + an
+      monorepo + Next.js 15.1 on Vercel serverless + Valibot schemas + an
       SVG renderer that uses `<foreignObject>` + inline HTML `<span>`
       for CJK-safe text shaping with CSS `@keyframes` animations
       driving the equalizer bars.
     narrative:
-      impactHeadline: "GitHub Marketplace Action for Suno music cards — CJK-safe animated SVG with 12 design combinations, parses three ID formats, shares a Valibot kernel with SunoStats analytics, extracted from monorepo as a clean MIT-licensed release."
+      impactHeadline: "GitHub Marketplace Action for Suno music cards — CJK-safe animated SVG with 12 design combinations, parses three ID formats, shares a Valibot kernel with Seismophone analytics, extracted from monorepo as a clean MIT-licensed release."
       problem: |
         Suno AI creators have no graceful way to surface their music
         catalog on the surfaces where developer audiences actually
@@ -132,7 +133,7 @@ projects:
         studying the project as a worked example** of (a) extracting
         a public clean repo from a larger internal monorepo,
         (b) sharing a single Valibot-validated parser kernel across
-        two independent products (SunoStats + this), (c) the
+        two independent products (Seismophone + this), (c) the
         SVG `<foreignObject>` + CSS-keyframes technique for animated,
         CJK-safe SVG that pure SVG can't render.
       productLogic: |
@@ -177,16 +178,16 @@ projects:
         oEmbed protocol; no scraping, no auth, no rate-limit
         landmines, no headless browsers. **Critical architectural
         decision**: the same `@suno-cards/parser` package is **shared
-        with Chan's other Suno project, SunoStats** — Chan's separate
+        with Chan's other Suno project, Seismophone** — Chan's separate
         analytics SaaS for Suno creators
-        ([sunostats.chanmeng.org](https://sunostats.chanmeng.org/)).
+        ([seismophone.chanmeng.org](https://seismophone.chanmeng.org/)).
         Extracting the parser as a workspace package means a single
         Valibot schema definition + a single typed-error hierarchy
         (`SunoNotFoundError`, `SunoNetworkError`, `SunoSchemaError`,
         etc.) underwrites both products — fix a Suno API drift once,
         both products benefit. **`@suno-cards/render`** is the pure-
         function SVG rendering engine — deterministic, cacheable,
-        and platform-independent (Vercel Edge can serve it, the
+        and platform-independent (Vercel serverless can serve it, the
         GitHub Action's Node 20 runner can also call it locally).
         **The defining rendering technique**: SVG `<foreignObject>`
         carries inline HTML `<span>` elements so CJK text shapes
@@ -224,8 +225,8 @@ projects:
         cleaned it up and shipped it as a focused MIT-licensed
         open-source release. Continuing iteration through 2026-04-21
         (latest commit `2f894c9`). **The shared parser kernel with
-        SunoStats** (Chan's separate Suno analytics SaaS at
-        [sunostats.chanmeng.org](https://sunostats.chanmeng.org)) is
+        Seismophone** (Chan's separate Suno analytics SaaS at
+        [seismophone.chanmeng.org](https://seismophone.chanmeng.org)) is
         the architecturally important outcome: rather than two
         independent Suno API integrations drifting apart over time,
         the two products are pinned to a single Valibot contract
@@ -250,7 +251,7 @@ projects:
         toggle flags + hex color overrides; executed the
         2026-04-13 public-extract release sequence (`73f4fa8` +
         `295756e`); coordinates parser updates across both this
-        project and the SunoStats sibling repo.
+        project and the Seismophone sibling repo.
 
   - id: echook
     provenance: personal
@@ -269,7 +270,7 @@ projects:
           - src: /public/tech-logos/codex.svg
             alt: "OpenAI Codex"
             url: "https://github.com/openai/codex"
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-10"
     name: echook (Echo + Hook)
     priority: 6
     category: ai-apps
@@ -296,6 +297,17 @@ projects:
       - "Remotion 4 (promo video)"
       - "React 19 (promo video)"
       - "Suno (background music generation)"
+    metrics:
+      - { label: "Commits (solo)", value: "150 (2025-11-01 → 2026-07-07, ~8 months); effectively single-author" }
+      - { label: "GitHub stars",   value: "~76 (echook, renamed from claude-code-audio-hooks)" }
+      - { label: "Version",        value: "v6.3.3 (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)" }
+      - { label: "Hook events",    value: "39 canonical events (6 on by default), mapped per harness: Claude Code 39 · Cursor 19 native / 8 via auto-bridge · Codex 10" }
+      - { label: "Harnesses",      value: "3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift" }
+      - { label: "Runtime",        value: "Python 3.6+ standard library only (no third-party runtime deps); distributed via plugin marketplaces + source, not npm" }
+      - { label: "CLI",            value: "~40 JSON-in/JSON-out subcommands; a `manifest` command emits the entire surface (subcommands, hooks, config keys, error codes) as machine-readable JSON so an agent can self-orient" }
+      - { label: "Status line",    value: "29 configurable segments (context-window color bands, quota bars, model/branch/cost), auto-reflowing to terminal width" }
+      - { label: "Channels",       value: "audio · desktop toast · TTS (speaks the agent's actual final message) · webhook (Slack/Discord/Teams/ntfy, versioned payload)" }
+      - { label: "Tests / CI",     value: "200+ unittest cases on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate" }
     publicSummary: |
       AI-operated audio notification system for Claude Code, Cursor IDE, and
       Codex CLI. The defining product idea: the **human never learns the
@@ -304,17 +316,17 @@ projects:
       to my Slack"), and the agent runs every shell command, reads every JSON
       output, and reports back. Install reduces to **1 shell command + 2
       natural-language prompts + 1 slash command = 4 things**; everything
-      after that is conversation. Ships 26 hook events, 2 audio themes,
+      after that is conversation. Ships 39 hook events, 2 audio themes,
       rate-limit alerts (5h/7d quota windows), webhooks (Slack/Discord/Teams/
-      ntfy), TTS that speaks Claude's actual reply, and a context-window
-      status line. 63 GitHub stars, 42 releases, 139 unittest cases on
-      Ubuntu/Windows/macOS × Python 3.9–3.13. A sister repo,
+      ntfy), TTS that speaks Claude's actual reply, and a 29-segment
+      context-window status line. Now on v6.3.3 with ~76 GitHub stars and
+      200+ unittest cases on Ubuntu/Windows/macOS × Python 3.9–3.13. A sister repo,
       **echook-promo-video**, ships the 88-second 1080p product film built
       entirely in code (Remotion + Claude Code + ElevenLabs + Suno).
       Carved out as Chan's preserved IP in the Engram Architect Cohort
       Engagement Letter (May 2026).
     narrative:
-      impactHeadline: "Audio-feedback hook system for Claude Code / Cursor / Codex — 26 hook events, 2 themes, context-window status line with quota bars, 42 releases, 139 tests on triple-platform CI, plus a Remotion-built promo video shipped entirely in code."
+      impactHeadline: "AI-operated hook system for Claude Code / Cursor / Codex, driven entirely by natural language — 39 hook events across three harnesses from one source, a 29-segment context-window status line, audio/TTS/webhook channels, 200+ tests on triple-platform CI. ~76 stars, v6.3.3."
       problem: |
         Developers running long-form AI coding workflows on Claude Code,
         Cursor IDE, and Codex CLI have no way to *hear* what their agent
@@ -361,8 +373,9 @@ projects:
         the demonstration artifact for Chan's AI-first product philosophy
         and shows up in every Engram-cohort interview, every recruiter
         conversation, and the public README of every downstream client
-        project. The 42-release cadence, the cross-platform CI matrix,
-        and the 139-test bridge-contract suite make it visible production
+        project. The sustained release cadence (now v6.3.3), the
+        cross-platform CI matrix, and the 200+-test bridge-contract suite
+        make it visible production
         engineering — not a weekend script. The Remotion promo video
         sister repo extends the same proof: it shows Chan can ship not
         just the product but the marketing artifact for the product, end
@@ -370,13 +383,13 @@ projects:
         third-party video production overhead.
       technicalApproach: |
         AI-first design at every layer. The `audio-hooks` CLI ships a
-        stable JSON-only API with **27 subcommands, no prompts, no
+        stable JSON-only API with **~40 subcommands, no prompts, no
         spinners**, versioned NDJSON event logging (schema
         `audio-hooks.v1`, 5 MB rotation × 3 files), and a **stable error
         code enum** (`AUDIO_FILE_MISSING`, `WEBHOOK_TIMEOUT`,
         `DUAL_INSTALL_DETECTED`, etc.) where each error carries a
         `suggested_command` field so an agent can recover autonomously
-        without screen-scraping. Hook coverage is **26 events** spanning
+        without screen-scraping. Hook coverage is **39 events** spanning
         session start/end, tool execution, permission requests, file
         changes, worktree creation, elicitation, and rate-limit warnings
         (5-hour and 7-day quota windows with configurable 80%/95%
@@ -387,7 +400,7 @@ projects:
         Webhooks fan out to Slack, Discord, Teams, and ntfy via
         fire-and-forget subprocess with a versioned
         `audio-hooks.webhook.v1` payload — they never block the hook.
-        The status line ships **10 customisable segments** including
+        The status line ships **29 customisable segments** including
         color-coded context-window and API-quota bars with absolute
         token counts (e.g. `Context: 83% (166K/200K)`) so users see the
         "agent dumb zone" before they enter it. Cross-editor architecture
@@ -409,11 +422,11 @@ projects:
         formatting. **18 canonical events with no Codex equivalent
         no-op cleanly under the codex invoker** with a debug NDJSON
         event, never blocking the session. The whole bridge contract is
-        validated by 139 unittest cases across Ubuntu/Windows/macOS ×
+        validated by 200+ unittest cases across Ubuntu/Windows/macOS ×
         Python 3.9/3.12/3.13 in GitHub Actions CI.
       outcomes: |
-        63 GitHub stars, 6 forks, **42 releases** shipped, **139 unittest
-        cases**. The defining release sequence: v5.0 (Jan 2026) shipped
+        ~76 GitHub stars, **150 commits** across the 5.x → 6.x line (now
+        v6.3.3), **200+ unittest cases**. The defining release sequence: v5.0 (Jan 2026) shipped
         the AI-first redesign — JSON CLI, `/audio-hooks` skill, NDJSON
         logging, plugin-native install; v5.2.0 (May 2026) added native
         Codex CLI support with +33 bridge-contract tests; v5.2.1 (May
@@ -534,7 +547,7 @@ projects:
     provenance: personal
     tier: primary
     recency: recent
-    lastUpdated: "2026-05-19"
+    lastUpdated: "2026-07-10"
     name: server-google-jobs
     priority: 8
     category: ai-apps
@@ -651,7 +664,10 @@ projects:
         cases declared in JSON for LLM-driven discovery — the same
         GEO-aware authoring pattern used across all of Chan's MCP work.
       outcomes: |
-        **71 solo commits**. Registered on the official MCP Registry;
+        **72 commits** (≈46 by Chan; the rest Renovate bumps and external
+        contributors — including the founders of the Smithery and Glama MCP
+        catalogs, a genuine early-ecosystem signal). Registered on the
+        official MCP Registry;
         security-assessment badges from MseeP.ai and Glama.ai validating
         runtime reliability. Listed across **10+ MCP discovery
         surfaces** — PulseMCP (4.6k visitors, registered Jan 1 2025),
@@ -891,11 +907,11 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, react, typescript, tailwindcss, vercel]
-    lastUpdated: "2026-05-19"
+    lastUpdated: "2026-07-10"
     name: gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs
     priority: 10
     category: creative
-    tagline: 340+ parametric animated SVG templates served as live XML via Vercel Edge — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 273-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
+    tagline: 340+ parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
     url: https://gradient-svg-generator.vercel.app/
     repoUrl: https://github.com/ChanMeng666/gradient-svg-generator
     logo: /public/brands/gradient-svg-generator-logo.svg
@@ -907,7 +923,7 @@ projects:
       - { label: "Adding-an-effect guide",   url: "https://github.com/ChanMeng666/gradient-svg-generator/blob/main/docs/adding-an-effect.md" }
       - { label: "Truth-up-numbers commit",  url: "https://github.com/ChanMeng666/gradient-svg-generator/commit/fdcb7dd" }
     techStack:
-      - "Next.js 16.2 (App Router + Vercel Edge runtime)"
+      - "Next.js 16.2 (App Router + Vercel serverless runtime)"
       - "React 19.2 + TypeScript 5.4 (gradual JS->TS migration through Phase 7)"
       - "Tailwind CSS 4.2 + @tailwindcss/typography + @tailwindcss/forms"
       - "Zustand 5.0 (template gallery state)"
@@ -940,8 +956,9 @@ projects:
     metrics:
       - { label: "Internal product name",    value: "Chromaflow (package.json) — public URL retains the descriptive 'gradient-svg-generator' for discoverability" }
       - { label: "First commit",             value: "2025-01-06 (commit 782c6f1)" }
-      - { label: "Latest commit",            value: "2026-06-16" }
-      - { label: "Total commits",            value: "273 (solo, ~18 months sustained)" }
+      - { label: "Latest commit",            value: "2026-07-10" }
+      - { label: "Total commits",            value: "283 (solo, 2025-01-06 → 2026-07-10, ~18 months sustained)" }
+      - { label: "gradientType effects",     value: "176 composable effect types underneath the templates, across ~26 families (wired through a 7-module EffectRegistry → TemplateRegistry → SVGComposer pipeline)" }
       - { label: "Template count",           value: "340+ across 16 categories (Pride 20, Tech, Nature, Material, Text-FX, Gaming, Weather 12, Light&Shadow 12, Art Movements 12, Culinary 12, Patterns 8, Metallic 8, Path-Text 12, Shapes 25, Experimental 29, GitHub-Profile 30)" }
       - { label: "Refactor phases",          value: "4 documented phases (5: extract svgPrimitives factory + _shared/palettes; 6: truth-up-marketing-numbers + docs/architecture.md; 7: JS->TS migration + Zod validation; 8: gallery virtualization)" }
       - { label: "URL parameters",           value: "10 (text, template, height, duration, color0-N, gradientType, stroke, strokeWidth, rotate, textBg)" }
@@ -966,7 +983,7 @@ projects:
       caustic underwater). The codebase carries the internal product
       name **Chromaflow** (per `package.json`) while keeping the
       descriptive `gradient-svg-generator` repo and URL for
-      discoverability. Built up over **18 months / 273 solo commits**
+      discoverability. Built up over **18 months / 283 solo commits**
       through a documented **4-phase refactor saga**: Phase 5 extracted
       `svgPrimitives` factory + `_shared/palettes.js`; Phase 6
       deliberately *"truthed up marketing numbers"* (commit `fdcb7dd`
@@ -980,7 +997,7 @@ projects:
       profile that ships this entry — continuous dogfooding means any
       rendering regression breaks visible branding immediately.
     narrative:
-      impactHeadline: "340+ parametric animated-SVG templates served as live XML via Vercel Edge — the open-source visual engine powering every badge in this README. 273 solo commits across 18 months, with deliberate 'anti-LLM-hype' content audits to keep marketing numbers honest."
+      impactHeadline: "340+ parametric animated-SVG templates served as live XML via Vercel serverless — the open-source visual engine powering every badge in this README. 283 solo commits across 18 months, with deliberate 'anti-LLM-hype' content audits to keep marketing numbers honest."
       problem: |
         Adding striking animated visuals to a GitHub profile, project
         README, or documentation site requires either bespoke SVG
@@ -1125,7 +1142,7 @@ projects:
         clean 400 with a typed error message rather than crashing
         the function.
 
-        **Deployment**: Vercel Edge runtime via `@vercel/node` 2.15
+        **Deployment**: Vercel serverless runtime via `@vercel/node` 2.15
         serverless function at `/api/svg`. **Testing**: Vitest 1.6
         with both `tests/contract/` (API surface contract tests
         guarding the URL-parameter contract — invariant across

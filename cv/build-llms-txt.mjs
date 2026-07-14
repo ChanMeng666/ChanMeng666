@@ -104,7 +104,7 @@ const projects = [
   {
     name: "Tam-AI-Ti",
     url: "https://tamaiti.whiri-ai.com/",
-    role: "Solo full-stack — commissioned by Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead)",
+    role: "Solo full-stack — independent research commission from Riria (Missy) Te Kanawa personally (ASB Bank · former KPMG NZ National Māori Sector lead)",
     summary:
       "AI financial-wellness app built around te ao Māori — the user's culture lives in the data model (Maramataka lunar phases and Te Whare Tapa Whā wellness domains as first-class Drizzle enum types), not just the translation layer. 351 commits solo · 48 tables / 494 columns / 22 migrations · 3-model OpenAI composition (gpt-4o-mini coach turns + gpt-4o synthesis + gpt-4o-realtime-preview voice). 19-user research cohort sustained 4 months · 181 bilingual journal entries · 35 voice sessions · 146 AI coach messages · 74 daily check-ins.",
   },

@@ -59,6 +59,6 @@ What the six-month engagement reinforced:
 
 • Business communication skills, sharpened daily by English-immersion teaching, small-group facilitation, and direct cross-cultural exchange with learners across multiple Filipino communities.
 • Event organisation muscle — coordinating volunteer teams, supply logistics, and community-engagement schedules across rural sites.
-• A commitment to driving positive social impact through technology. This is the orientation that later anchored my work in women's-health tech (CTO at Sanicle, FemTech Weekend, and FreePeriod) and in culturally-grounded AI (Tam-AI-Ti — my Māori financial-wellness coach built for ASB Bank research).
+• A commitment to driving positive social impact through technology. This is the orientation that later anchored my work in women's-health tech (CTO at Sanicle, FemTech Weekend, and FreePeriod) and in culturally-grounded AI (Tam-AI-Ti — my Māori financial-wellness coach, built as an independent research commission).
 ```
 **Media:** `20241031100639.jpg` · `Regular Volunteer` · `Regular Volunteer`  _(Show all 12 media)_

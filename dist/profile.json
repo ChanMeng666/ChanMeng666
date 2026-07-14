@@ -852,7 +852,7 @@
         "Voice-first AI Financial Coach (gpt-4o-realtime-preview)",
         "Bilingual te reo Māori with macron-correct translation",
         "pgVector semantic search across 4 tables",
-        "Solo full-stack build for an ASB Bank research commission",
+        "Solo full-stack build for an independent executive research commission",
         "4-month research-cohort engagement signal",
         "Production Vercel-to-client-team migration playbook",
         "Deliberate CopilotKit optimisation: 8 routes → 3 (anti-bloat UX discipline)"
@@ -931,7 +931,7 @@
       "startDate": "2025-10",
       "publicSummary": "AI Financial Wellness Coach for Māori communities, architected on the Te Whare\nTapa Whā holistic-health framework — culture is in the schema, not the UI.\nBuilt solo for Riria (Missy) Te Kanawa (former KPMG NZ National Māori Sector\nlead, now at ASB Bank) as an independent research-pilot commission, introduced\nvia Dr Mahsa McCauley, founder of She Sharp. Voice coaching via GPT-4o\nRealtime API, bilingual te reo Māori + English, 88+ AI actions, pgVector\nsemantic search across 48 database tables. 19-user research cohort produced\n181 journal entries, 35 voice sessions, and 146 AI coach messages over four\nmonths (Oct 2025 – Mar 2026).\n",
       "narrative": {
-        "impactHeadline": "ASB Bank executive research pilot — NZ's first Māori-cultural AI financial-wellness agent (Te Whare Tapa Whā in schema, not UI); 19 users over 4 months with bilingual te reo Māori voice coaching, proving culturally-native AI engages communities mainstream FinTech underserves.",
+        "impactHeadline": "Independent executive research pilot — NZ's first Māori-cultural AI financial-wellness agent (Te Whare Tapa Whā in schema, not UI); 19 users over 4 months with bilingual te reo Māori voice coaching, proving culturally-native AI engages communities mainstream FinTech underserves.",
         "problem": "Mainstream FinTech treats money as decontextualized numbers — budgets,\nbalances, projections. For Māori users, that framing is culturally\nmismatched: money is inseparable from whānau wellbeing, spiritual purpose,\nand holistic health. Generic budgeting apps strip out the very framework\nthat makes financial decisions meaningful, and Māori communities — who\nface disproportionate financial stress in Aotearoa — are left choosing\nbetween tools that work for their wallets but not their worldview, or no\ntools at all. Tam-AI-Ti exists to test whether an AI financial coach built\nnatively on Māori cultural wisdom — rather than retrofitted with cultural\ndecoration — can engage a population that mainstream FinTech systematically\nunderserves.\n",
         "audience": "Māori adults engaging with personal financial wellbeing, served along two\naccount types: individual goal-setters (Full Account) and whānau supporters\nwho can witness and encourage from the sidelines through a five-tier\npermission system (view profile, view goals, view journal, send messages,\nreceive celebrations). Pilot cohort to date: 19 verified research\nparticipants recruited by Missy Te Kanawa, active over a four-month window\n(Oct 2025 – Mar 2026), producing 181 bilingual journal entries, 35 voice\ncoaching sessions, 146 AI coach messages, and 74 daily Hauora check-ins.\nTe reo Māori and English are first-class throughout the experience.\nFuture audience: the broader Māori adult population — rangatahi entering\nworking life, parents managing whānau finances, kaumātua passing on\nfinancial wisdom — for whom culturally-rooted tools are scarce.\n",
         "productLogic": "The product is architected on Te Whare Tapa Whā, the Māori model of\nholistic wellness with four walls (Wairua/spiritual, Tinana/physical,\nHinengaro/mental, Whānau/family) standing on a foundation (Whenua/land).\nEvery feature traces back to this house.\n\nA user starts with the **26Q assessment over nine named psychological\nfactors** — `self_belief`, `long_term_focus`, `resilience`,\n`self_control`, `growth_mindset`, `financial_confidence`,\n`social_comparison`, `mindfulness`, `gratitude` (with `mindfulness`\nreverse-coded to capture Present Bias) — mapped to personalised\nrecommendations. They then select up to three focus areas, choose one\nof three account types (Full / Supporter / Both), and proceed to set\nfinancial goals through one of **seven SMART action plans (Options\nA-G)**: A Spending Reduction, B Savings Increase, C Savings Rate, D\nDebt Reduction, E Income Growth, F Budget Review, G Accountability\nPartner. Each plan has its own dedicated React component family\n(SpendingTracker / SavingsTracker / DebtCalculator / IncomeTracker /\nBudgetReviewCalendar / MeetingsTracker etc. — 38 goal components\ntotal) and its own type-specific tracking fields in the schema,\nrather than a generic JSON-note column. A `GoalCardFactory` /\n`ProgressTrackerFactory` / `OverviewFactory` pattern dispatches the\nright component for each goal's `option` field.\n\nThey check in daily across **eleven Hauora dimensions** mapped directly\nto the four walls: `sleep_hours`, `water_litres`, `food_quality`,\n`exercise_hours` for Tinana; `wairua_time_spent`,\n`wairua_human_connection`, `wairua_taia_connection` for Wairua (Whenua\nintegrated through Taiao/environment connection); `hinengaro_mauri_tau`\n(mindfulness), `hinengaro_ako` (learning) for Hinengaro;\n`whanau_check_in`, `whanau_quality_time` for Whānau. Each metric is a\ntyped integer-scale column with a Māori-language identifier — not a\nUI label sitting on top of a culturally-neutral schema. They journal\nmorning intentions (Hauora intentions across all 5 dimensions + 3\ngratitude items + financial reflections) and evening reflections\nthrough the Kūmete framework (what you contributed + what you received,\nTahi-Rua-Toru tomorrow goals, emotional check-in), all bilingually in\nte reo or English, with real GPT-4o enhancement (4 enhancement types ×\n3 intensity levels), translation (macron-correct ā/ē/ī/ō/ū), and\n5-dimensional AI insight extraction (Emotions / Themes / Hauora /\nPatterns / Growth).\n\nThey meet an **AI Financial Coach via gpt-4o-realtime-preview** voice\n(\"verse\" voice, server-side VAD + 500ms silence detection) — a\nconversation partner that never reduces money to numbers but\nconsistently frames every financial decision through all four walls\nof the Hauora model. Audio is deliberately *not* stored; only text\ntranscripts persist (a cost optimisation that preserves searchability\nwithout per-minute audio storage). The AI surfaces **74 Whakatauki\nproverbs across 37+ categories** by theme via `/api/whakatauki/search`,\nreferences the **Maramataka 30-day lunar calendar with 4 traditional\nactivity types** — *Toitoi* (spiritual/cultural: karakia, whakapapa,\nwānanga), *Hi ika* (water-based: ocean/river fishing, shellfish,\nseaweed), *Pouraka* (hunting: bird hunting, forest foraging, game\ntracking), *Mahi māra* (gardening/planting) — for cultural timing,\nand ties financial decisions back to family and spiritual purpose.\nWhānau members can be invited via email-token-based invitations with\na **5-tier permission system** (`canSeeGoals` · `canSeeProgress` ·\n`canSeeMood` · `canSeeAchievements` · `canSendMessages`) to encourage\nand witness without intruding.\n",
@@ -1218,6 +1218,18 @@
             "impactHeadline": "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
           },
           "status": "live",
+          "_featuredStackResolved": [
+            {
+              "name": "mintlify",
+              "src": "/public/tech-logos/mintlify.svg"
+            },
+            {
+              "name": "github",
+              "src": "/public/tech-logos/github.svg"
+            }
+          ],
+          "_contextLogo": [],
+          "_affiliationOrg": null,
           "_clientOrg": {
             "id": "she-sharp",
             "name": "She Sharp",
@@ -1308,6 +1320,9 @@
             "outcomes": "Delivered live for the **AI Hackathon Festival 2025** at AUT\nCity Campus WG Building, **15–16 August 2025**. Used by **11\nteams and 80+ participants** during the residential event —\nAI Forum NZ's public LinkedIn cohort announcement (with full\nWestlake Girls High School student attendance) cites Chan as\n**1 of 14 expert mentors**, recognised at the event. The\nteams shipped solutions across the UN SDG brief — food\ninsecurity, digital accessibility, workforce upskilling, and\nindigenous environmental stewardship — with national-tier\nprizes flowing through the AI Forum NZ pipeline (AI Summit\nentry worth $1,499, $1,000 national winner, $5,000 national\nAgentic AI winner, ArcGIS licences). Post-event, the codebase\nwas **refactored into a reusable MIT template** (commit\n`948bdf0` \"transform project into reusable event Q&A\ntemplate\"), documented in `docs/TEMPLATE-SETUP.md`,\n`docs/NOTION-INTEGRATION.md`, and `docs/UI-DESIGN-SYSTEM.md`,\nwith the live deployment retained as the canonical worked\nexample. Listed alongside Chan's other commercial-grade AI\nplatforms (echook, vitex, chinese-redefine,\nai-programming-teaching-project) as portfolio evidence of\nend-to-end industry-partner delivery — design, AI integration,\ngameplay engineering, database, deployment, and post-delivery\nproductisation as a reusable open-source artefact.\n",
             "myRole": "Sole developer end-to-end. Owned the discovery phase with the\nthree co-organising institutions, designed the dual-layer\nproduct (chat surface + gamified mascot + Notion FAQ), built\nevery component, authored both the Gemini and the OpenAI\nprovider implementations, designed the entire ~960-line\naffection / mood / emotion gameplay schema, engineered the\nCSS-3D Quantum Orb visualisation, migrated the deployment\nfrom Vercel to Cloudflare Workers when free-tier economics\nand Notion-SDK incompatibility forced the move, refactored\nthe codebase into a reusable open-source template after the\nlive event, and authored the three setup-documentation files.\nOn the mentorship side: served as one of the 14 expert\nmentors during the 26-hour event itself, guiding teams on\nprompt design, SDG framing, and product narrative —\nsimultaneously building the platform and using it.\n"
           },
+          "_featuredStackResolved": [],
+          "_contextLogo": [],
+          "_affiliationOrg": null,
           "_clientOrg": {
             "id": "she-sharp",
             "name": "She Sharp",
@@ -1635,6 +1650,9 @@
             "outcomes": "Live in production at gavigo.com on Google Cloud Run, built and\nmaintained entirely by Chan — **66 of 66 commits, the repository's\nsole contributor** — including the investor-readiness polish pass that\nsupported GAVIGO's fundraising and partner conversations. It stands as\nthe company's public front door and the hand-off point into the live\nIRE product demo, decoupled from and shipping independently of the\nproduct runtime.\n",
             "myRole": "Sole developer and maintainer of the site end-to-end — the Next.js\nbuild, the Markdown/MDX content pipeline, the Motion brand animation,\nthe Resend + Neon lead-capture backend, and the Google Cloud Run\ndeployment — as GAVIGO's founding principal engineer (the same role\nunder which I lead the flagship IRE platform). 66 of 66 commits are\nmine.\n"
           },
+          "_featuredStackResolved": [],
+          "_contextLogo": [],
+          "_affiliationOrg": null,
           "_clientOrg": {
             "id": "gavigo",
             "name": "GAVIGO Inc.",
@@ -1839,6 +1857,7 @@
         "outcomes": "Both servers are production-deployed via npm and listed across\n**15+ MCP discovery surfaces**, with independent third-party\nvalidation that this is treated as portfolio-grade MCP work:\n\n**Catalog distribution & quality signals (server-google-news,\n`@chanmeng666/google-news-server`):**\n- **PulseMCP \"Top Pick\" badge** + 26.1k estimated visitors,\n  #1,105 global popularity rank\n  ([listing](https://www.pulsemcp.com/servers/chanmeng666-google-news))\n- **Glama A-grade license rating** + 122 stars\n  ([listing](https://glama.ai/mcp/servers/@ChanMeng666/server-google-news))\n- Smithery one-command install\n- Listed across mcp.so, Awesome MCP Servers (mcpservers.org),\n  MCP Server Finder, MCP Archive, Playbooks, Archestra, serp.ai,\n  mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides\n\n**Catalog distribution (server-google-jobs,\n`@chanmeng666/google-jobs-server`):**\n- PulseMCP listing — 4.6k visitors, registered Jan 1 2025\n- Glama listed (A license rating)\n- AI Toolhouse, mcp.so, AIBase, MagicSlides, serp.ly\n\n**Independent media coverage:** three dedicated deep-dive\narticles by third-party reviewers in 2025:\n- Skywork AI: *\"The Ultimate Guide to Chan Meng's Google Jobs\n  MCP Server\"* (Oct 27, 2025) — describes the project as *\"one\n  of the most elegant, production-ready solutions I've found\n  for a very specific, very common problem\"* and benchmarks it\n  favourably against generic SerpAPI wrappers, custom scrapers,\n  and manual API integrations\n- Skywork AI: *\"Chan Meng's Google News MCP Server: The AI\n  Engineer's Guide to Real-Time News Integration\"*\n- Skywork AI: *\"Google News & Trends MCP Server: The AI\n  Engineer's Deep Dive\"*\n- AgentSkillsHub: *\"Google News MCP Server — Install Guide &\n  Security Review\"*\n\n**Combined engineering footprint:** 169 commits across the two\nservers, both authored solo, actively maintained through\n2025–26. Both serve as concrete artefacts for the\nearly-MCP-developer narrative — **first commits Dec 30 and\nDec 31 2024, within 5–6 weeks of MCP's Nov 25 2024 public\nlaunch**. Issue #76 remains visible in the official\n`modelcontextprotocol/servers` repository as institutional\nmemory of an early ecosystem contribution.\n",
         "myRole": "Sole author, sole maintainer, sole responder to issues and PRs.\nBoth servers, both READMEs, both npm publishes, both registry\nsubmissions, the issue #76 troubleshooting contribution.\n\nThe broader signal: these two servers + the early issue #76\ncontribution position me as an immediately-active MCP\necosystem participant — not a theoretical early adopter, but\nsomeone who shipped, distributed, documented, and supported\nproduction MCP infrastructure within the protocol's first\nmonth.\n"
       },
+      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "mcp",
@@ -2011,6 +2030,30 @@
         "outcomes": "Live production service at\n[github-readme-suno-cards.vercel.app](https://github-readme-suno-cards.vercel.app)\nwith `/gallery` and `/builder` routes. The current public\nrepository is the **clean-extract** version — first commit\n`73f4fa8` *\"feat: initial commit — github-readme-suno-cards\nv0.1\"* on 2026-04-13, immediately followed by `295756e`\n*\"chore: clean remaining internal reference\"* (the\npost-extraction sanitization sweep). The actual product is\nolder inside the private origin monorepo where the parser\nwas first developed; the v0.1 extraction was the moment Chan\ncleaned it up and shipped it as a focused MIT-licensed\nopen-source release. Continuing iteration through 2026-04-21\n(latest commit `2f894c9`). **The shared parser kernel with\nSeismophone** (Chan's separate Suno analytics SaaS at\n[seismophone.chanmeng.org](https://seismophone.chanmeng.org)) is\nthe architecturally important outcome: rather than two\nindependent Suno API integrations drifting apart over time,\nthe two products are pinned to a single Valibot contract\nwith a single typed-error hierarchy. **Roadmap**: waveform\nlayout variants, lyrics-excerpt blocks, playlist cards,\nPNG export via `@resvg/resvg` for users who can't embed\nSVG directly.\n",
         "myRole": "Sole author across both the original private monorepo and\nthe public v0.1 extraction. Designed the pnpm monorepo\nsplit with the parser + renderer extracted as reusable\nworkspace packages; wrote the Valibot schemas against\nSuno's oEmbed API contract; designed the typed Suno error\nhierarchy; engineered the `<foreignObject>` + CSS-keyframes\nrendering technique that handles CJK text + animated\nequalizers in a single SVG; built the GitHub Marketplace\nAction with esbuild-bundled dist; designed the 8-input\nAction surface with three id-format normalization;\ndesigned the `<!-- SUNO-CARDS:START/END -->` marker-based\nsurgical README replacement; built the visual `/builder`\nUI with live preview over all 12 base combinations + 11\ntoggle flags + hex color overrides; executed the\n2026-04-13 public-extract release sequence (`73f4fa8` +\n`295756e`); coordinates parser updates across both this\nproject and the Seismophone sibling repo.\n"
       },
+      "_featuredStackResolved": [
+        {
+          "name": "github",
+          "src": "/public/tech-logos/github.svg"
+        },
+        {
+          "name": "nextjs",
+          "src": "/public/tech-logos/nextjs.svg"
+        },
+        {
+          "name": "vercel",
+          "src": "/public/tech-logos/vercel.svg"
+        },
+        {
+          "name": "typescript",
+          "src": "/public/tech-logos/typescript.svg"
+        },
+        {
+          "name": "react",
+          "src": "/public/tech-logos/react.svg"
+        }
+      ],
+      "_contextLogo": [],
+      "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [
         {
@@ -2142,6 +2185,7 @@
         "outcomes": "~76 GitHub stars, **150 commits** across the 5.x → 6.x line (now\nv6.3.3), **200+ unittest cases**. The defining release sequence: v5.0 (Jan 2026) shipped\nthe AI-first redesign — JSON CLI, `/audio-hooks` skill, NDJSON\nlogging, plugin-native install; v5.2.0 (May 2026) added native\nCodex CLI support with +33 bridge-contract tests; v5.2.1 (May\n2026) executed the **echook rebrand** — a \"door-only\" GitHub\nrename from `claude-code-audio-hooks` → `echook` (because leading\nwith \"Claude Code\" became misleading once native Cursor and\nCodex paths shipped) that preserved every existing install via\nGitHub's repo redirect, kept the `audio-hooks` CLI name, the\n`chanmeng-audio-hooks` marketplace name, and all state\ndirectories unchanged. The Engram Architect Cohort Engagement\nLetter (May 9, 2026) explicitly names\n*claude-code-audio-hooks* among Chan's preserved IP — formal\nrecognition by a commercial agentic infrastructure firm that this is\nportfolio-grade engineering, not a hobby script. The sister\nrepo **echook-promo-video** then closed the loop on the\nAI-first thesis: an 88.7-second 1920×1080 @ 30fps product film\ncomposed of 9 sections (Intro → Problem → Solution → Features →\nAdvanced → Demo → Ecosystem → Cross-Platform → CTA) connected\nby `@remotion/transitions` (wipe/fade/slide) with a layered\naudio mix (Suno-generated BGM with auto volume ducking + 8\nElevenLabs SFX cues + 3 ElevenLabs voiceover tracks) — built\nentirely in React + Remotion + AI-generated audio, **zero\nAdobe Premiere, zero After Effects, zero human voice actors**.\nThe whole video pipeline is reproducible: one\n`npm run generate-audio` regenerates every voice and effect from\nthe ElevenLabs API; one `npm run render` produces the MP4.\n",
         "myRole": "Sole author of both repos. On echook proper: designed the\nAI-first contract (JSON API + NDJSON log + stable error codes +\n`suggested_command` recovery), wrote every hook event\nintegration, engineered the three-editor synchronisation\npipeline (canonical → plugin layout sync via\n`build-plugin.sh`, with CI enforcement), authored the Codex\nTOML-feature-flag bootstrap pattern, and executed the 5.2.1\nrebrand without breaking compatibility. On echook-promo-video:\ndesigned the 9-section narrative arc with Claude Code, built\nthe reusable visual primitives (TypewriterText, Terminal,\nSoundWave, GreenGrid, CounterNumber, GlowText), orchestrated\nthe Remotion `TransitionSeries`, wrote the ElevenLabs\naudio-generation script, and tuned the volume-ducking\nenvelopes so BGM ducks during VO + demo playback. Maintains\nboth repos today through the 5.x line.\n"
       },
+      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "claude",
@@ -2186,9 +2230,9 @@
     {
       "id": "douyin-mall-go-template",
       "provenance": "bootcamp",
-      "tier": "secondary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "tier": "archive",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "meta": {
         "x_brand": {
           "featuredStack": [
@@ -2224,7 +2268,7 @@
         "REST",
         "Clean Architecture"
       ],
-      "status": "active",
+      "status": "archived",
       "publicSummary": "Production-shape Go + Gin + MySQL + Redis e-commerce backend template\nwith clean architecture, JWT auth, and paired React frontend — built\nsolo as a teaching artefact from the ByteDance Youth Training Camp\ncapstone. 52 GitHub stars, 7 forks, < 50 ms average API response time.\n",
       "narrative": {
         "impactHeadline": "Production-shape Go + Gin + MySQL + Redis e-commerce backend template — 52 stars / 7 forks (Chan's most-starred primary OSS project), clean architecture with JWT auth and bilingual READMEs, sub-50ms average API response.",
@@ -2350,6 +2394,9 @@
         "outcomes": "**72 commits** (≈46 by Chan; the rest Renovate bumps and external\ncontributors — including the founders of the Smithery and Glama MCP\ncatalogs, a genuine early-ecosystem signal). Registered on the\nofficial MCP Registry;\nsecurity-assessment badges from MseeP.ai and Glama.ai validating\nruntime reliability. Listed across **10+ MCP discovery\nsurfaces** — PulseMCP (4.6k visitors, registered Jan 1 2025),\nGlama (A license rating), Smithery, mcp.so, AI Toolhouse,\nAIBase, MagicSlides, serp.ly, MCP Server Finder, MCP Archive.\n**Subject of an independently authored deep-dive review** by\nSkywork AI (Oct 27 2025) — *\"The Ultimate Guide to Chan Meng's\nGoogle Jobs MCP Server\"* — which calls it *\"one of the most\nelegant, production-ready solutions\"* and includes a\ncomparison table showing it as superior to generic SerpAPI\nwrappers in setup complexity, maintenance overhead, and\nAI-specific optimisation. The companion piece to Chan's\n**google-news-mcp** server (first commit one day earlier,\n2024-12-30) — together these two represent **one of the\nearliest public sets of locale-aware MCP servers**, predating\nmost enterprise MCP adoption by months.\n",
         "myRole": "Sole author. Designed the locale-agnostic parameter handling,\nauthored every translation table, wrote the multi-channel\ndistribution pipeline (npm + Smithery + Docker + .mcpb), and\nmaintains the project as part of the matched Google News /\nGoogle Jobs MCP pair. The Skywork review specifically\nattributes the production-ready design and intelligent\nerror-handling architecture to Chan as creator.\n"
       },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -2651,7 +2698,7 @@
       "id": "femtracker-agent",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "recent",
+      "recency": "deprecated",
       "meta": {
         "x_brand": {
           "featuredStack": [
@@ -2663,7 +2710,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-14",
       "name": "FemTracker Agent",
       "priority": 11,
       "category": "ai-apps",
@@ -2694,7 +2741,7 @@
         "Supabase",
         "Redis"
       ],
-      "status": "maintained",
+      "status": "archived",
       "publicSummary": "AI-powered women's-health companion built on CopilotKit and Python\nLangGraph, with **8 specialized agents** (Main Coordinator + Cycle\nTracker + Fertility Tracker + Symptom Mood + Nutrition Guide + Exercise\nCoach + Lifestyle Manager + Health Insights) coordinating through\nintelligent routing. WHO-standard health scoring (0-100 metric scales),\nRedis caching with reported 90%+ hit rates, Supabase PostgreSQL\npersistence. Merged into CopilotKit's official `demos_2025` showcase\nvia [PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)\n(publicly thanked by maintainer Tyler Slaton).\n",
       "narrative": {
         "impactHeadline": "8-agent women's-health companion merged into CopilotKit's official demos_2025 — intelligent routing across specialists, WHO-standard scoring, 90%+ Redis cache hit rates, publicly thanked by CopilotKit maintainers as a reference implementation.",
@@ -2776,7 +2823,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-07-08",
+      "lastUpdated": "2026-07-14",
       "name": "LibraryOS — Multi-Tenant Library SaaS",
       "priority": 20,
       "category": "web-apps",
@@ -2905,7 +2952,7 @@
           "value": "Apache-2.0"
         }
       ],
-      "status": "live",
+      "status": "archived",
       "startDate": "2024-10-30",
       "publicSummary": "Production **multi-tenant library management SaaS** with its own\npurchased custom domain ([libraryos.live](https://libraryos.live)),\nbuilt over **18 months across 80 solo commits** spanning **two\nmajor architectural pivots and one infamous debugging saga**. The\nproduct offers a 4-tier access model with Stripe-integrated\nflows (Free / Basic / Pro / Enterprise), 4-role RBAC\n(Owner/Admin/Librarian/Member), per-tenant data isolation via\nSupabase row-level security policies, team invitations via Resend\ntransactional emails, multi-organization membership (users can\nbelong to multiple libraries and switch between them), and an\n**Africa-friendly accessibility tier** explicitly designed for\nlower-income markets. **Defining engineering moments**: (1) the\nsingle-tenant -> multi-tenant SaaS rebuild on 2025-12-30 (commit\n`5e7e8c5`); (2) the same-week rebrand from\n`library-management-system` -> `LibraryOS` (commit `4bd58b5`);\n(3) the **Supabase keep-alive cron** to prevent the free-tier\ndatabase from auto-pausing after 7 days of inactivity (commits\n`17344d6` + `64b03d0`); (4) the **Vercel -> Cloudflare Workers\nmigration** (commit `14c42fc`, 2026-02-03) with the custom\n`libraryos.live` domain switch (`ecf6c14`); (5) the\n**12-commit Stripe-SDK-on-Cloudflare-Workers debugging saga**\nending with the architectural fix in commit `e1ab824`\n*\"use fetch HTTP client for Stripe SDK on Cloudflare Workers\"*\nand the companion `85b6244` *\"read Stripe price IDs from database\ninstead of env vars\"*. Stack: Next.js 16.1 + React 19.2 +\nTailwind 4 + Supabase + Stripe 20 + Resend 6 + shadcn/ui +\nZod 4 + @opennextjs/cloudflare. Apache-2.0.\n",
       "narrative": {
@@ -4018,9 +4065,9 @@
     {
       "id": "douyin-mall-java-template",
       "provenance": "bootcamp",
-      "tier": "secondary",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "tier": "archive",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "TikTok Shop Java Template",
       "priority": 26,
       "category": "web-apps",
@@ -4036,7 +4083,7 @@
       "narrative": {
         "impactHeadline": "Spring Boot + Maven open-source e-commerce backend template — the Java counterpart to the Go template Chan published from her ByteDance Youth Training Camp capstone, scaffold for later cohorts learning Spring backend architecture."
       },
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -4046,8 +4093,8 @@
       "id": "esol-learning-platform",
       "provenance": "client",
       "tier": "archive",
-      "recency": "active",
-      "lastUpdated": "2026-07-04",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "AI-Powered ESOL Learning Platform",
       "priority": 81,
       "category": "ai-apps",
@@ -4080,7 +4127,7 @@
         "Recharts",
         "Cloudflare Pages"
       ],
-      "status": "active",
+      "status": "archived",
       "startDate": "2025-10",
       "publicSummary": "An AI-powered ESOL platform that combines four learning paths — a\nreal-time voice conversation coach built on the OpenAI Realtime API,\nCEFR-aligned general practice, NZCEL exam preparation, and gamified\nprogress dashboards — over a multi-tenant PostgreSQL backend with\norganization-scoped server actions.\n",
       "narrative": {
@@ -4103,7 +4150,7 @@
       "id": "wellness-agent",
       "provenance": "client",
       "tier": "archive",
-      "recency": "recent",
+      "recency": "historical",
       "lastUpdated": "2026-07-11",
       "name": "Wellness Support Agent",
       "priority": 82,
@@ -4204,9 +4251,9 @@
     {
       "id": "douyin-mall",
       "provenance": "bootcamp",
-      "tier": "secondary",
-      "recency": "historical",
-      "lastUpdated": "2026-07-04",
+      "tier": "archive",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Douyin Mall (Spring Boot Backend)",
       "priority": 27,
       "category": "web-apps",
@@ -4224,7 +4271,7 @@
         "Maven",
         "JWT"
       ],
-      "status": "active",
+      "status": "archived",
       "startDate": "2025-01",
       "narrative": {
         "impactHeadline": "Full Spring Boot + Redis + RabbitMQ e-commerce backend from ByteDance's Youth Training Camp (青训营) — the Douyin Mall capstone (user, product, cart, order modules) that the Vue 3 storefront consumes and that Chan distilled into the public Go and Java templates. 13 stars."
@@ -4243,9 +4290,9 @@
     {
       "id": "douyin-mall-frontend",
       "provenance": "bootcamp",
-      "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "tier": "archive",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Douyin Mall Frontend",
       "priority": 84,
       "category": "web-apps",
@@ -4261,7 +4308,7 @@
         "Vitest",
         "Cypress"
       ],
-      "status": "active",
+      "status": "archived",
       "startDate": "2025-01",
       "narrative": {
         "impactHeadline": "Vue 3 + TypeScript e-commerce storefront for the Douyin Mall stack — a type-safe SPA (Pinia + Vue Router + Vite) implementing the full product / cart / checkout / payment flow with Vitest and Cypress coverage.",
@@ -4383,6 +4430,7 @@
         "outcomes": "Live and operational at **vitex.org.nz**, serving real users\nwith the full free-credit + credit-pack flow. **372 commits over\n~18 months** (2025-01-11 → 2026-07-10), essentially sole-authored.\nThree\ndeployment migrations and a LaTeX → Typst document-engine\nswap shipped without service outage — every migration step\nis in the commit log including the specific Docker\nfixes (`xz-utils`, `curl`, FontAwesome package pre-cache),\nthe strict-JSON-schema regression diagnosis, and the\n`sessionStorage` migration for sensitive input. Mobile\nreliability + responsive UI pass shipped 2026-05-09 after\nthe production hardening phase.\n",
         "myRole": "Sole engineer, sole designer, sole product owner. Designed\nthe 8-step agent pipeline with Zod-validated stages\n(migrating the editor from CopilotKit to Vercel AI SDK\nagent chat along the way), wrote every API route, built\nthe Stripe credit system, configured Stack Auth, designed\nthe Drizzle schema for resumes / credits / share tokens,\nexecuted all three deployment migrations (Railway → CF\nWorkers → DigitalOcean VPS), executed the LaTeX → Typst\nengine swap (including the Dockerfile fixes for `xz-utils`\nand the Typst FontAwesome package pre-cache), designed the\nNeobrutalism UI in the \"sell results, not tools\" Phase 3\noverhaul, built the natural-language refinement loop in\nthe Editor, and continues to operate the production\nservice as recently as the May 2026 mobile reliability\npass.\n"
       },
+      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "vercel-ai-sdk",
@@ -4694,6 +4742,7 @@
         "outcomes": "Live at archcanvas.chanmeng.org, solo-built across 269 commits over\nroughly three months (2026-04-08 → 2026-07-10): 13 pages, 28 API route\nhandlers, 71 components, and 190 source files over a 9-table schema.\nThe product is unusually rigorous about testing its own thesis — a\n`generationAttempts` telemetry table tracks first-pass ArchLang\nvalidity per model, and a `bench` harness runs briefs through both the\nDSL pipeline and a legacy freehand-pixel pipeline as a control group,\nso the \"DSL beats pixels\" claim is measured, not asserted. It is also\nthe proving ground that hardened ArchLang: ArchCanvas's real\nin-browser use of the compiler drove concrete upstream fixes.\n",
         "myRole": "Sole author of the entire product — the two-act studio and canvas UX,\nthe AI orchestrator and its seven tools, the grounded view-aware\nrendering chain, the ArchLang integration, the 9-table schema and\ncredit/billing system, the git-repo export, the falsifiability\ninstruments, and the canary-then-swap deployment. And of ArchLang\nitself, the DSL it is built on. 269 of 269 commits are mine.\n"
       },
+      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "openai",
@@ -4727,8 +4776,8 @@
       "id": "ai-image-generator",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "recent",
-      "lastUpdated": "2026-05-19",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "AI Image Generator — Full-Stack Text-to-Image SaaS",
       "priority": 19,
       "category": "ai-apps",
@@ -4842,7 +4891,7 @@
           "value": "Apache-2.0 (includes patent grant)"
         }
       ],
-      "status": "live",
+      "status": "archived",
       "startDate": "2024-11-27",
       "publicSummary": "Production **full-stack text-to-image SaaS** — image generation\npowered by **Cloudflare Workers AI's FLUX.1 Schnell** 12B-parameter\nmodel accessed through the in-platform `env.AI` binding (no\nexternal API key, 100k requests/day on the free tier), wrapped in\na complete SaaS surface: **Neon Auth + Stripe credits ledger +\nNeon Postgres image storage + gallery + (auth) and (protected)\nNext.js route groups**. The interesting story is the **two\narchitectural pivots** the project went through to get here:\nit started 2024-11-27 as a Vercel-hosted Next.js demo using a\npaid AI provider, ran in that shape for ~16 months gathering\niteration ideas, then on **2026-04-09 pivoted to Cloudflare\nWorkers with free-tier FLUX.1 Schnell** (commit `3aec6ce`,\n*\"migrate from Vercel to Cloudflare Workers with free AI image\ngeneration\"*), and on **2026-04-10** — one day later —\ntransformed from \"free demo\" to **full SaaS in a single commit**\n`8626be4` *\"add authentication, credits, payments, and image\nstorage\"*. UI is a deliberate **Mondrian-inspired** geometric\ncomposition (later refined to minimalist grayscale on\n2026-04-20). Stack: Next.js 15.5 + React 19.2 + Drizzle ORM +\nNeon Postgres + Better Auth + Stripe 22 + OpenTelemetry +\n`@opennextjs/cloudflare` adapter. Live at\n[image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/).\nApache-2.0 with patent grant. 24 solo commits across ~17 months\nof sustained iteration.\n",
       "narrative": {
@@ -5307,8 +5356,8 @@
       "id": "lottie-edit",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-07-04",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Lottie Theme Converter",
       "priority": 67,
       "category": "tools",
@@ -5324,7 +5373,7 @@
         "Light/dark theme inversion",
         "Transparency-preserving color inversion"
       ],
-      "status": "live",
+      "status": "archived",
       "narrative": {
         "impactHeadline": "A Python utility that flips Lottie animations between light and dark themes by inverting embedded image colors while preserving transparency and motion — a small, focused tool for theme-adapting Lottie assets."
       },
@@ -5337,8 +5386,8 @@
       "id": "juejin-algorithm-practice",
       "provenance": "bootcamp",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Juejin Algorithm Practice",
       "priority": 62,
       "category": "branding",
@@ -5349,7 +5398,7 @@
         "Algorithms",
         "Data Structures"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5402,6 +5451,9 @@
         "outcomes": "Live at **towerdefense.chanmeng.org**. **84 commits across\n~2 months** (2026-02-06 → 2026-03-30), ~99% Chan-authored\nacross two GitHub identities. Execution followed an\nexplicit **P0 → P4 phase plan** visible in the commit log:\nP0 (game feel — damage numbers, death bursts, firing\nanimations, wave transitions), P1 (onboarding & UX —\ntutorial with spotlight cutout, hints, cooldown UI),\nP2 (retention — expanded achievements, leaderboard filters,\ncelebrations), P3-P4 (deep systems — mana abilities, dynamic\nmusic, endless mode). Plus the full content build:\nsynergies, new enemies, multi-map, daily-challenge overhaul,\ncloud backend integration. Anti-cheat is in production and\nactively rejecting out-of-range submissions. The 3D\nisometric CSS rendering holds 60 FPS through dense\nWave-10 combat thanks to object pooling.\n",
         "myRole": "Sole designer, sole engineer, sole audio architect. Designed\nthe CSS-3D rendering technique end-to-end (perspective,\npreserve-3d, the comic/pop-art visual language, the DOM\nobject pool), wrote every game system (waves, AI,\nphysics, towers, enemies, synergies, reforging, combo,\nmana, achievements, daily challenges, tech tree, crafting,\ninventory), shipped the entire **Maori cultural design** —\nchoosing which te reo name maps to which mechanic so\nmeaning and gameplay reinforce each other — built the\nCloudflare Workers + Hono + Neon backend including\nserver-side anti-cheat validation, composed the dynamic\nmusic state machine and the Web Audio synth effects,\nwrote the Gulp + LESS build pipeline, and authored the\n4-step interactive tutorial with spotlight overlays.\n"
       },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5434,8 +5486,8 @@
       "id": "html-brick-game",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-07-04",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Brick Breaker (Starlight Breaker)",
       "priority": 72,
       "category": "games",
@@ -5448,7 +5500,7 @@
         "JavaScript",
         "GitHub Pages"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5458,8 +5510,8 @@
       "id": "ai-human-game",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-07-04",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "AI vs Human Game",
       "priority": 73,
       "category": "games",
@@ -5479,7 +5531,7 @@
         "Pond-themed UI",
         "Real-time scoring + analytics"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5489,8 +5541,8 @@
       "id": "journey-of-reincarnation",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Reincarnation Journey",
       "priority": 74,
       "category": "games",
@@ -5502,7 +5554,7 @@
         "Next.js",
         "Cloudflare Pages"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5512,8 +5564,8 @@
       "id": "otherworld-god-farmer",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Otherworld God-Farmer",
       "priority": 75,
       "category": "games",
@@ -5526,7 +5578,7 @@
         "Pixi.js 8",
         "Cloudflare Pages"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5536,8 +5588,8 @@
       "id": "kaboom-rpg-adventure",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Kaboom RPG Adventure",
       "priority": 76,
       "category": "games",
@@ -5550,7 +5602,7 @@
         "Vite",
         "GitHub Pages"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5582,8 +5634,8 @@
       "id": "slime-split",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Slime Split",
       "priority": 78,
       "category": "games",
@@ -5596,35 +5648,7 @@
         "Lua",
         "Box2D"
       ],
-      "status": "live",
-      "_clientOrg": null,
-      "_relatedProjectsResolved": [],
-      "_supersededByProject": null,
-      "_supersedesProjects": []
-    },
-    {
-      "id": "claude-code-audio-hooks",
-      "provenance": "personal",
-      "tier": "archive",
-      "recency": "deprecated",
-      "lastUpdated": "2026-05-18",
-      "name": "Claude Code Audio Hooks (legacy name → echook)",
-      "priority": 9,
-      "category": "ai-apps",
-      "tagline": "Original name of the project now published as `echook` — repo URL still resolves via GitHub redirect for backward compatibility",
-      "repoUrl": "https://github.com/ChanMeng666/echook",
-      "logo": "/public/brands/claude-code-audio-hooks-logo.svg",
-      "techStack": [
-        "Claude Code",
-        "CLI",
-        "Cross-platform"
-      ],
       "status": "archived",
-      "publicSummary": "Historical / legacy entry. The project was renamed to **echook** at\nv5.2.1 — a \"door-only\" rename to reflect expanded support for\nCursor IDE and Codex CLI alongside Claude Code. All stars, releases,\nissues, and existing installs transferred via GitHub's repository\nredirect; the old URL is still cited here because the **Engram\nArchitect Cohort Engagement Letter** (May 2026) explicitly carves\nout *claude-code-audio-hooks* by name as Chan's preserved IP. See\nthe `echook` entry for the current canonical project narrative.\n",
-      "narrative": {
-        "problem": "Historical naming. The substantive project narrative lives on\nthe `echook` entry.\n",
-        "myRole": "Sole author; renamed the repository to `echook` at v5.2.1\nwithout breaking any existing user installation.\n"
-      },
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5736,6 +5760,9 @@
         "outcomes": "Delivered live for the **AI Hackathon Festival 2025** at AUT\nCity Campus WG Building, **15–16 August 2025**. Used by **11\nteams and 80+ participants** during the residential event —\nAI Forum NZ's public LinkedIn cohort announcement (with full\nWestlake Girls High School student attendance) cites Chan as\n**1 of 14 expert mentors**, recognised at the event. The\nteams shipped solutions across the UN SDG brief — food\ninsecurity, digital accessibility, workforce upskilling, and\nindigenous environmental stewardship — with national-tier\nprizes flowing through the AI Forum NZ pipeline (AI Summit\nentry worth $1,499, $1,000 national winner, $5,000 national\nAgentic AI winner, ArcGIS licences). Post-event, the codebase\nwas **refactored into a reusable MIT template** (commit\n`948bdf0` \"transform project into reusable event Q&A\ntemplate\"), documented in `docs/TEMPLATE-SETUP.md`,\n`docs/NOTION-INTEGRATION.md`, and `docs/UI-DESIGN-SYSTEM.md`,\nwith the live deployment retained as the canonical worked\nexample. Listed alongside Chan's other commercial-grade AI\nplatforms (echook, vitex, chinese-redefine,\nai-programming-teaching-project) as portfolio evidence of\nend-to-end industry-partner delivery — design, AI integration,\ngameplay engineering, database, deployment, and post-delivery\nproductisation as a reusable open-source artefact.\n",
         "myRole": "Sole developer end-to-end. Owned the discovery phase with the\nthree co-organising institutions, designed the dual-layer\nproduct (chat surface + gamified mascot + Notion FAQ), built\nevery component, authored both the Gemini and the OpenAI\nprovider implementations, designed the entire ~960-line\naffection / mood / emotion gameplay schema, engineered the\nCSS-3D Quantum Orb visualisation, migrated the deployment\nfrom Vercel to Cloudflare Workers when free-tier economics\nand Notion-SDK incompatibility forced the move, refactored\nthe codebase into a reusable open-source template after the\nlive event, and authored the three setup-documentation files.\nOn the mentorship side: served as one of the 14 expert\nmentors during the 26-hour event itself, guiding teams on\nprompt design, SDG framing, and product narrative —\nsimultaneously building the platform and using it.\n"
       },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "she-sharp",
         "name": "She Sharp",
@@ -5855,6 +5882,18 @@
         "impactHeadline": "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
       },
       "status": "live",
+      "_featuredStackResolved": [
+        {
+          "name": "mintlify",
+          "src": "/public/tech-logos/mintlify.svg"
+        },
+        {
+          "name": "github",
+          "src": "/public/tech-logos/github.svg"
+        }
+      ],
+      "_contextLogo": [],
+      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "she-sharp",
         "name": "She Sharp",
@@ -6048,8 +6087,8 @@
       "id": "minimalist-good-post",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Minimalist Living Blog",
       "priority": 34,
       "category": "web-apps",
@@ -6062,7 +6101,7 @@
         "Three.js (interactive homepage 3D model)",
         "React"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -6072,8 +6111,8 @@
       "id": "sanicle-ai-mobile",
       "provenance": "client",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-07-04",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Sanicle FemTech Mobile (Prototype)",
       "priority": 79,
       "category": "web-apps",
@@ -6089,7 +6128,7 @@
         "React Native",
         "GitHub Pages"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": {
         "id": "sanicle",
         "name": "Sanicle Inc.",
@@ -6109,8 +6148,8 @@
       "id": "podcast-app-prototype",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-07-04",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Mental Wellness Podcast App Prototype",
       "priority": 80,
       "category": "web-apps",
@@ -6129,7 +6168,7 @@
         "iOS-compliant UI patterns",
         "Mental-wellness podcast UX"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -6275,8 +6314,8 @@
       "id": "english-redefine",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "English Redefine",
       "priority": 45,
       "category": "creative",
@@ -6289,7 +6328,7 @@
         "Google Gemini",
         "Cloudflare Workers"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -6412,8 +6451,8 @@
       "id": "automotive-repair-management-system",
       "provenance": "coursework",
       "tier": "archive",
-      "recency": "recent",
-      "lastUpdated": "2026-07-11",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "RepairOS (Automotive Repair Management)",
       "priority": 39,
       "category": "web-apps",
@@ -6636,6 +6675,9 @@
         "outcomes": "Live in production at gavigo.com on Google Cloud Run, built and\nmaintained entirely by Chan — **66 of 66 commits, the repository's\nsole contributor** — including the investor-readiness polish pass that\nsupported GAVIGO's fundraising and partner conversations. It stands as\nthe company's public front door and the hand-off point into the live\nIRE product demo, decoupled from and shipping independently of the\nproduct runtime.\n",
         "myRole": "Sole developer and maintainer of the site end-to-end — the Next.js\nbuild, the Markdown/MDX content pipeline, the Motion brand animation,\nthe Resend + Neon lead-capture backend, and the Google Cloud Run\ndeployment — as GAVIGO's founding principal engineer (the same role\nunder which I lead the flagship IRE platform). 66 of 66 commits are\nmine.\n"
       },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "gavigo",
         "name": "GAVIGO Inc.",
@@ -6907,8 +6949,8 @@
       "id": "douban-elite-scraper",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Douban Elite Posts Scraper",
       "priority": 65,
       "category": "branding",
@@ -6920,7 +6962,7 @@
         "Web scraping",
         "Markdown"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -6930,8 +6972,8 @@
       "id": "douban-review-scraper",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Douban Review Scraper",
       "priority": 66,
       "category": "branding",
@@ -6942,7 +6984,7 @@
         "Python",
         "Data analysis"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -7049,6 +7091,7 @@
         "outcomes": "A complete, published language: 192 solo commits over ~2.5 weeks of\nintensive development (2026-06-25 → 2026-07-10), 80 source files\n(~19.7k LOC) against 82 test files, released to npm at v1.12.1 across\n13 versioned feature branches with 10 architecture decision records.\nThe surface area is unusually complete for a solo language project —\n8 primitives, 4 export formats, 8 lint-rule modules, a circulation\nanalyzer, a repair pass, a ~20-command CLI, a full LSP, a VS Code\nextension, a client-side playground, a VitePress docs site, and a\nGitHub Action that renders every ```arch fence in a repo's Markdown.\nMost tellingly, it is already load-bearing: ArchCanvas's first\nin-browser use of the core drove real hardening (the v1.12.1\nclient-side-import fix, repair-pass robustness), proving the engine\nunder a downstream product rather than in isolation.\n",
         "myRole": "Sole author of everything — the language design, the hand-written\nlexer / parser / evaluator, the diagnostic system, all four export\nbackends, the lint and circulation and repair pipelines, the LSP and\nVS Code extension, the CodeMirror playground, the docs site, and the\nnpm packaging. 192 of 192 commits are mine.\n"
       },
+      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "typescript",
@@ -7126,6 +7169,9 @@
         "technicalApproach": "A deterministic MCP core (injected Fetcher adapters, dedupe,\nrelevance × popularity × freshness scoring) is separated from\neditorial judgment in the agentic workflow; a shared Zod schema\ncontract links the MCP server and the Astro site. 28 unit tests;\nnpm package at v0.3.0.\n",
         "myRole": "Sole author of the MCP server, scoring model, agentic workflow, and\nAstro site.\n"
       },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "femtech-weekend",
         "name": "FemTech Weekend",
@@ -7235,6 +7281,9 @@
       "narrative": {
         "impactHeadline": "A lightweight, touch-friendly SVG puzzle game — build canal networks from cloud springs to crop fields on a pan-and-zoom island map, with reservoirs, seasonal objectives, and synthesized Web Audio music, in dependency-free vanilla JS."
       },
+      "_featuredStackResolved": [],
+      "_contextLogo": [],
+      "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -7340,13 +7389,12 @@
       "id": "popup-image-app",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-07-04",
+      "recency": "deprecated",
+      "lastUpdated": "2026-07-14",
       "name": "Popup Image App",
       "priority": 92,
       "category": "tools",
       "tagline": "A lightweight always-on-top floating desktop app for image and text reference — Electron with drag-and-drop, in-app crop/resize editor, notes, and JSON save/load",
-      "repoUrl": "https://github.com/ChanMeng666/popup-image-app",
       "techStack": [
         "Electron 28",
         "HTML5 Canvas",
@@ -10138,8 +10186,8 @@
       "evidenceProjectIds": [
         "awesome-claude-skills",
         "awesome-claude-skills-1",
-        "claude-code-audio-hooks",
         "claude-code-audio-hooks-promo-video",
+        "echook",
         "event-qa-ai-template",
         "femtracker-agent",
         "hospital-roster-agent",
@@ -11932,8 +11980,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-07-10",
+    "lastModified": "2026-07-14",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-10T22:49:40.438Z"
+    "buildTimestamp": "2026-07-14T11:19:58.015Z"
   }
 }

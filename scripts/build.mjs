@@ -262,10 +262,30 @@ data._moreProjectsByGroup = data._moreProjectsByGroup
 // The Client work table and its <details> overflow now come straight from the
 // meta ID lists.
 
-// Legacy openSourcePrimaryIds is retained for backwards-compat consumers but
-// is no longer rendered by the v2 templates.
-const primaryIds = data.meta?.x_brand?.openSourcePrimaryIds ?? [];
-data._openSourcePrimary = resolveIds(primaryIds);
+// "Notable Open Source" for llms.txt / llms-full.txt.
+// 2026-07-14: this used to read a hand-maintained meta.x_brand.openSourcePrimaryIds
+// list. That list was NOT dead code — it renders these two LLM-facing sections —
+// and it silently drifted out of sync with Chan's curation, presenting a client
+// website (femtech-weekend-website) as a primary open-source project of hers and
+// listing two projects that have no public repository at all. It is now DERIVED
+// from the same curated buckets that drive the README (90-meta.yaml), so the two
+// surfaces cannot disagree:
+//   flagship products + AI-agent table + open-source craft table,
+//   minus provenance:client (client work is presented AS client work),
+//   minus anything without a public repoUrl (no source => not "open source").
+// Nothing is lost: every project, including the excluded ones, still appears in
+// llms-full.txt's full by-category listing and in dist/profile.json.
+const _osSeen = new Set();
+data._openSourcePrimary = [
+  ...data._flagshipProjects,
+  ...data._aiAgentProjects,
+  ...data._openSourceCraftProjects,
+].filter((p) => {
+  if (!p.repoUrl || p.provenance === "client") return false;
+  if (_osSeen.has(p.id)) return false;
+  _osSeen.add(p.id);
+  return true;
+});
 
 // ---------------------------------------------------------------------------
 // Tier/recency partitions: every list-type collection grouped by tier so

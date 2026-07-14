@@ -747,11 +747,6 @@
           "type": "array",
           "items": { "type": "string" }
         },
-        "openSourcePrimaryIds": {
-          "type": "array",
-          "items": { "type": "string" },
-          "description": "IDs of projects in the primary Open Source table (the visible-by-default ones)."
-        },
         "statisticsClaims": {
           "type": "array",
           "items": {
@@ -860,13 +855,17 @@
           "description": "Four role archetypes Chan takes on. Surfaced as the 2×2 'What I take on' panel + Service[] in JSON-LD + ## section in llms.txt.",
           "items": {
             "type": "object",
-            "required": ["id", "title", "scope", "format", "proofProjectId", "proofProjectName"],
+            "required": ["id", "title", "scope", "format", "proofProjectName"],
+            "anyOf": [
+              { "required": ["proofProjectId"] },
+              { "required": ["proofUrl"] }
+            ],
             "properties": {
               "id":               { "type": "string", "pattern": "^[a-z0-9-]+$" },
               "title":            { "type": "string" },
               "scope":            { "type": "string" },
               "format":           { "type": "string" },
-              "proofProjectId":   { "type": "string", "description": "ID of the project that best demonstrates this role; used to deep-link from the panel into Featured Work when the project is flagship-tier." },
+              "proofProjectId":   { "type": "string", "description": "ID of the project that best demonstrates this role; used to deep-link from the panel into Featured Work when the project is flagship-tier. MUST point at a project the README still shows (a curated bucket in meta.x_brand) — never at a kept/archived one. Omit it and set proofUrl instead when no shown project fits." },
               "proofProjectName": { "type": "string", "description": "Display name shown in the proof link." },
               "proofUrl":         { "type": "string", "format": "uri", "description": "Optional external URL — wins over in-page anchor when set. Use for non-flagship proof projects whose anchor isn't on the page." },
               "proofWorkId":      { "type": ["string", "null"] }

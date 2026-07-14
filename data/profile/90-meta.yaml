@@ -26,7 +26,11 @@ meta:
     valueProposition:
       identity: "AI Agent Architect · Founding-engineer · AI Educator"
       tagline: "I architect AI agents, ship full-stack platforms end-to-end, and teach others to do the same."
-      proofLine: "12 companies · 4 teaching cohorts · 72 shipped projects · Master's with Distinction"
+      # 102 = every projects[] entry that actually shipped (103 total, minus the
+      # one `status: draft` entry, cloud-canals). Archived and deprecated
+      # projects are counted — they shipped, then were retired. Recounted
+      # 2026-07-14; the previous "72" predated ~30 entries of data backfill.
+      proofLine: "12 companies · 4 teaching cohorts · 102 shipped projects · Master's with Distinction"
 
     # ---------------------------------------------------------------------
     # WHAT I TAKE ON — the four engagement archetypes surfaced as a 2×2
@@ -54,7 +58,12 @@ meta:
         title: "CTO-class operator"
         scope: "Own the tech for an early-stage product company. Hiring plan, architecture, ship velocity."
         format: "Full-time · Equity"
-        proofProjectId: sanicle-ai-mobile
+        # No proofProjectId: every surviving Sanicle projects[] entry is
+        # archive-tier (sanicle-ai-mobile was archived in the 2026-07 curation;
+        # sanicle-ai / sanicle-platform / reveal-js-sanicle-demo are archive +
+        # historical), so a proof link would point at a project the README no
+        # longer shows. The CTO role's evidence is the live company product plus
+        # the work[].id: sanicle entry, so this role is proofUrl-only.
         proofProjectName: Sanicle
         proofUrl: https://sanicle.com
         proofWorkId: sanicle
@@ -198,24 +207,23 @@ meta:
     # investing"). Orthogonal to the display buckets: portfolio-v2 is spotlight
     # but shows in no README table, and that is intended. Dropped vs the
     # previous set: sunostats (still listed under craft, no longer a focus).
-    openSourcePrimaryIds:
-      - github-readme-suno-cards
-      - echook
-      - portfolio-v2
-      - ai-programming-teaching-project
-      - css-tower-defense
-      - vitex
-      - ai-hackathon-assistant
-      - sunostats
-      - server-google-jobs
-      - gradient-svg-generator
-      - femtech-weekend-website
+    # 2026-07-14: `openSourcePrimaryIds` (a hand-maintained "Notable Open
+    # Source" list) is RETIRED. It was not dead code — it fed the
+    # `## Notable Open Source` sections of llms.txt and llms-full.txt via
+    # `data._openSourcePrimary` in scripts/build.mjs — and it had drifted out of
+    # sync with the curation below, presenting a CLIENT website
+    # (femtech-weekend-website) to LLM consumers as one of Chan's primary
+    # open-source projects, plus two projects with no public repository. That
+    # section is now DERIVED in build.mjs from the curated buckets below
+    # (flagship + aiAgent + craft, minus provenance:client and minus anything
+    # without a public repoUrl), so the human shopfront and the LLM surfaces
+    # cannot disagree again. Do not reintroduce a second hand-kept list.
     openSourceCategoryOrder: [web-apps, ai-apps, creative, ml-research, branding, games]
 
     # =========================================================================
-    # README v2 — provenance-based project buckets. The original tier-based
-    # openSourcePrimaryIds above is retained for backwards-compat; the v2
-    # templates render from the bucket lists below.
+    # README v2 — provenance-based project buckets. These lists are the single
+    # source of truth for BOTH the README shopfront and the LLM-facing
+    # "Notable Open Source" sections (see the retirement note above).
     #
     # 2026-07-14 CURATION — product-first ORDER, from Chan's own
     # project-by-project triage (53 projects: 10 hero cards, 11 listed, 21 kept

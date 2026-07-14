@@ -22,7 +22,7 @@
       logo: "/public/brands/tam-ai-ti-logo-with-brand.svg",
       name: "Tam-AI-Ti",
       url: "https://tamaiti.whiri-ai.com/",
-      context-line: [An AI financial-wellness app built around te ao Māori — the user's culture lives in the data model, not just the translation layer · commissioned solo by Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead).],
+      context-line: [An AI financial-wellness app built around te ao Māori — the user's culture lives in the data model, not just the translation layer · an independent research commission from Riria (Missy) Te Kanawa personally (ASB Bank · former KPMG NZ National Māori Sector lead).],
       bullets: (
         [351 commits solo · 48 tables / 494 columns / 22 migrations · 3-model OpenAI composition (`gpt-4o-mini` coach turns + `gpt-4o` synthesis + `gpt-4o-realtime-preview` voice).],
         [*Schema-first te reo Māori* — Maramataka lunar phases and Te Whare Tapa Whā wellness domains live as first-class Drizzle enum types, not UI labels (prevents the "i18n drift" where cultural concepts decay into English-only columns).],

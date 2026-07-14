@@ -258,11 +258,12 @@ meta:
     # douyin-mall 13★) is archived despite its stars — Chan is done presenting
     # training-camp work as evidence.
     # Everything cut or archived stays fully present in llms-full.txt (the
-    # "More Projects (by category)" long tail), dist/profile.json and the
-    # LinkedIn outputs — it is only off the human shopfront. NOT llms.txt:
-    # that surface is a short top-tier summary and has never carried the
-    # archived band, by design. To re-widen the README, repopulate the more*
-    # lists.
+    # "More Projects (by category)" long tail) and dist/profile.json — it is
+    # only off the human shopfront. NOT llms.txt: that surface is a short
+    # top-tier summary and has never carried the archived band, by design.
+    # NOT the LinkedIn outputs either: linkedin/ mirrors only the curated
+    # 70-linkedin.yaml snapshot, which doesn't carry every archived project.
+    # To re-widen the README, repopulate the more* lists.
     # =========================================================================
     # Client & organisation work (templates/partials/commissioned.hbs) — all
     # provenance:client, ordered strongest-first. clientCardProjectIds render
@@ -430,7 +431,7 @@ meta:
       - { claim: "As CTO at FreePeriod — a Guangzhou-based public-health startup incubated at the Hong Kong University of Science and Technology (Guangzhou) Lab of Future Technology, tackling period poverty through sanitary-pad dispensers, reproductive-health education, and policy advocacy under founder Julia Zhu (朱楠) — solo-built and shipped the official website (Next.js 15 + TypeScript + Google Maps location directory + bilingual EN/中文; 53 commits, 100% solo); during my tenure the company was recognised with Best Award at Japan's 12th International Conference on Social Sciences and Humanities, Third Prize at the HKUST Sustainable Smart Living Competition, Best Social Media Award at China's inaugural FemTech Weekend Challenge, First Prize at the Shenzhen Nanshan District Philanthropic Creative Star Contest, and selections into Tencent's Technology Venture Capital Program, Tsinghua's SDG Open Innovation Marathon, and the HKUST Entrepreneurship Bridge Grant",
           source: "https://www.linkedin.com/company/free-period/",
           verifiedAt: "2026-05-16" }
-      - { claim: "ByteDance Youth Training Camp (字节跳动青训营) backend developer in cohort 'Rebirth: I Code at Youth Training Camp' (重生之我在青训营写代码), Team 115 — completed ByteDance MarsCode's 81-problem algorithm curriculum on Juejin with full per-problem write-ups (juejin-algorithm-practice, 66 commits 100% solo); placed #2-most-prolific committer (45 of 174 team commits, ~26%) on the team's Spring Boot 3 + MySQL + Redis Douyin Mall capstone behind eight contributors; voluntarily built three additional open-source artefacts beyond camp scope — a solo Vue 3 frontend (douyin-mall-frontend, 15 commits 100% solo), the Go + Gin clean-architecture TikTok Shop template featured in my Open Source primary table (douyin-mall-go-template, 27 commits 100% solo), and the Spring Boot Java counterpart (douyin-mall-java-template, 13 commits 100% solo)",
+      - { claim: "ByteDance Youth Training Camp (字节跳动青训营) backend developer in cohort 'Rebirth: I Code at Youth Training Camp' (重生之我在青训营写代码), Team 115 — completed ByteDance MarsCode's 81-problem algorithm curriculum on Juejin with full per-problem write-ups (juejin-algorithm-practice, 66 commits 100% solo); placed #2-most-prolific committer (45 of 174 team commits, ~26%) on the team's Spring Boot 3 + MySQL + Redis Douyin Mall capstone behind eight contributors; voluntarily built three additional open-source artefacts beyond camp scope — a solo Vue 3 frontend (douyin-mall-frontend, 15 commits 100% solo), the Go + Gin clean-architecture TikTok Shop template douyin-mall-go-template (27 commits 100% solo, 53 GitHub stars), and the Spring Boot Java counterpart (douyin-mall-java-template, 13 commits 100% solo)",
           source: "https://github.com/ChanMeng666/douyin-mall",
           verifiedAt: "2026-05-16" }
       - { claim: "Full-Stack Developer & lead documenter on a Lincoln University COMP693 industry-placement team building a React Native + Native Base + SQLite offline-first field-data-collection mobile app (text + photo + GPS capture, conflict-resolved sync) for CORDE — a 30+-year-old, 164-staff Canterbury-based NZ infrastructure and civil-construction company (corde.nz; head office Rolleston; tagline 'Trusted Connections'; CCNZ Canterbury Contractor of the Year + Construction Excellence National Award); reported directly to Barry Clark on CORDE's side with Kullum Ladley as Workbench API specification author; #1-most-prolific contributor on the code repository (227 of 539 commits, 42%) ahead of teammate Luke Shi / Zhenzhou Shi (28.6%), and effectively sole author of the team documentation repository (140 of 143 commits, 97.9%) preserving five months of weekly meeting records, 15 Kullum-authored API specifications, database schema iterations, UI library evaluations, and itemised contribution sub-folders",

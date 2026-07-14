@@ -1,13 +1,15 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     Client & organisation work — big editorial cards (vertical stack) for the
-     production systems Chan led for companies/nonprofits. Sourced from
-     flagshipProjectIds (all provenance:client). Per-card: logo (right-float
-     80px) · H3 name · "For <org>" line · impact · 18px tech-stack icons.
+     What I build — big editorial cards (vertical stack) for the six projects
+     Chan leads herself. Sourced from flagshipProjectIds: five of her own
+     open-source products plus She Sharp (the charity platform she built and
+     runs). Client work has its own table (see commissioned.hbs). Per-card:
+     logo (right-float 80px) · H3 name · "For <org>" line · impact · 18px
+     tech-stack icons.
      ═══════════════════════════════════════════════════════════════════════ -->
 
-## Client & organisation work
+## What I build
 
-<sub>Production systems I led end-to-end for companies and nonprofits.</sub>
+<sub>My own open-source products, plus She Sharp — the platform I built and run for the charity. All shipped, all still maintained. Client work is in the next section.</sub>
 
 {{#each _flagshipProjects}}{{#if logo}}<img src="{{logo}}" align="right" height="80" alt="{{name}}" title="{{name}}">
 
@@ -16,7 +18,7 @@
 
 {{#if _affiliationOrg}}<sub>For <a href="{{_affiliationOrg.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default _affiliationOrg.logoDark _affiliationOrg.logoLight}}"><img src="{{_affiliationOrg.logoLight}}" height="22" alt="{{_affiliationOrg.name}}"></picture> {{_affiliationOrg.name}}</a>{{#if _affiliationOrg.context}} — {{_affiliationOrg.context}}{{/if}}.</sub>
 {{else}}{{#if _contextLogo.length}}<sub>For {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="22" alt="{{alt}}" style="vertical-align:middle"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}.</sub>
-{{else}}{{#if entity}}<sub>For {{entity}}.</sub>
+{{else}}{{#if entity}}<sub>{{entity}}.</sub>
 {{/if}}{{/if}}{{/if}}
 
 {{#if narrative.impactHeadline}}{{narrative.impactHeadline}}

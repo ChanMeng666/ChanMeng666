@@ -227,13 +227,13 @@ data._moreCommissionedProjects = resolveIds(data.meta?.x_brand?.moreCommissioned
 // omitted from the visible README buckets. Add/remove ids here to retune
 // what the human surface shows without touching the data file.
 // ---------------------------------------------------------------------------
-const README_HIDDEN_PROJECT_IDS = new Set([
-  "femtracker-agent",
-  "github-readme-suno-cards",
-  "tencent-meeting-video-downloader",
-  "portfolio-v2",
-  "douyin-mall-java-template",
-]);
+// 2026-07-14: emptied. Chan's project-by-project triage now expresses every
+// visibility decision in the bucket lists themselves (90-meta.yaml), so a
+// second, hidden filter here would only be a place for the two to disagree —
+// e.g. github-readme-suno-cards was hidden here while Chan listed it under
+// craft. The mechanism is kept for one-off suppressions that shouldn't change
+// the curated lists.
+const README_HIDDEN_PROJECT_IDS = new Set([]);
 const stripHidden = (arr) =>
   arr.filter((p) => !README_HIDDEN_PROJECT_IDS.has(p.id));
 
@@ -244,17 +244,13 @@ data._moreProjectsByGroup = data._moreProjectsByGroup
   .map((g) => ({ ...g, items: stripHidden(g.items) }))
   .filter((g) => g.items.length > 0);
 
-// Promote forward-with-her-website from the "More commissioned work"
-// overflow into the visible Commissioned work table, then collapse the
-// overflow entirely (so the <details> block no longer renders).
-const COMMISSIONED_PROMOTE_IDS = ["forward-with-her-website"];
-const promoted = COMMISSIONED_PROMOTE_IDS
-  .map((id) => data._moreCommissionedProjects.find((p) => p.id === id))
-  .filter(Boolean);
-if (promoted.length) {
-  data._commissionedProjects = [...data._commissionedProjects, ...promoted];
-}
-data._moreCommissionedProjects = [];
+// 2026-07-14: removed the hard-coded COMMISSIONED_PROMOTE_IDS block (it lifted
+// forward-with-her-website out of the commissioned overflow and then force-
+// emptied that overflow). moreCommissionedProjectIds has been [] since the
+// 2026-07 curation, so the promotion could never fire, and the forced empty
+// meant repopulating the list in 90-meta.yaml would silently render nothing.
+// The Client work table and its <details> overflow now come straight from the
+// meta ID lists.
 
 // Legacy openSourcePrimaryIds is retained for backwards-compat consumers but
 // is no longer rendered by the v2 templates.

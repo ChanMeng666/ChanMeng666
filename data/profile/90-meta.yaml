@@ -165,12 +165,15 @@ meta:
       flagshipAwardClaim: "Outstanding Mentor Award — AI Hackathon Festival 2025"
 
     # Project ordering for README
-    # Drives the "Client & organisation work" big editorial cards. 2026-07:
-    # README reorganised onto ONE axis — provenance (who commissioned it). This
-    # list = the production systems Chan led for companies/nonprofits (all
-    # provenance:client); list order = card order. Personal/OSS work (incl. the
-    # 124★ google-news-mcp) lives in the open-source buckets below instead.
-    flagshipProjectIds: [gavigo-ire, tam-ai-ti, she-sharp, femtech-weekend-website, eatropolis-website]
+    # Drives the big editorial cards at the top of the README. 2026-07-14:
+    # PRODUCT-FIRST PIVOT. The hero used to be client work; it is now the six
+    # things Chan built and owns — five of her own open-source products
+    # (google-news-mcp 125★, echook 75★, archlang, archcanvas, vitex) plus
+    # she-sharp, the charity platform she built and still runs. Client work is
+    # not dropped: it moved to its own Client work table
+    # (commissionedProjectIds), so a reader sees "what she makes" before "who
+    # hired her". List order = card order; it is Chan's own ordering.
+    flagshipProjectIds: [google-news-mcp, echook, archlang, archcanvas, she-sharp, vitex]
 
     # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
     # 2026-07). Deliberately DISTINCT from flagshipProjectIds (which is the
@@ -180,17 +183,17 @@ meta:
     # (The ChanMeng666 career-database repo itself is not a projects[] entry, so
     # it is intentionally absent here.)
     spotlightProjectIds:
-      - sunostats
-      - portfolio-v2                    # 2d-portfolio / chanmeng.org
-      - ai-programming-teaching-project
-      - archcanvas
-      - archlang
-      - vitex                           # easy-resume
       - echook
+      - archlang
+      - archcanvas
+      - vitex                           # easy-resume
       - gradient-svg-generator
-    # Cleaned 2026-07-11: removed ids demoted to archive/secondary (library-os,
-    # femtracker-agent, friendscope, send-joy, chinese-redefine, ai-image-generator,
-    # douyin-mall-go-template, tencent-meeting-video-downloader).
+      - ai-programming-teaching-project
+      - portfolio-v2                    # 2d-portfolio / chanmeng.org
+    # Set 2026-07-14 from Chan's own triage (7 of 53 projects marked "still
+    # investing"). Orthogonal to the display buckets: portfolio-v2 is spotlight
+    # but shows in no README table, and that is intended. Dropped vs the
+    # previous set: sunostats (still listed under craft, no longer a focus).
     openSourcePrimaryIds:
       - github-readme-suno-cards
       - echook
@@ -210,27 +213,34 @@ meta:
     # openSourcePrimaryIds above is retained for backwards-compat; the v2
     # templates render from the bucket lists below.
     #
-    # 2026-07 CURATION — hiring-first, "tighten hard". The README shopfront is
-    # optimised for a technical hiring manager's ~60-second skim (depth,
-    # production rigor, adoption/star proof), so it shows only the strongest
-    # ~15 projects and NO <details> overflow — every more* list is emptied and
-    # the "View all repositories →" link carries discovery. Deliberate cuts:
-    # small solo apps (chinese-redefine, ai-image-generator, send-joy,
-    # friendscope), typst-claude-skill, ai-hackathon-assistant, css-tower-defense
-    # (Te Pa Tiaki), the douyin-mall-java template, and three smaller client
-    # sites (her-waka, free-period, forward-with-her). Promoted in:
-    # douyin-mall-go-template (53★ backend proof). Rescued (kept on merit):
-    # sunostats, ai-programming-teaching-project. Everything cut stays fully
-    # present in llms.txt / llms-full.txt / dist/profile.json / LinkedIn — it is
-    # only off the human shopfront. To re-widen, repopulate the more* lists.
+    # 2026-07-14 CURATION — product-first, from Chan's own project-by-project
+    # triage (53 projects: 6 hero, 15 listed, 21 kept off the shopfront, 11
+    # archived). Two changes from the 2026-07 hiring-first pass:
+    #
+    #   1. The hero is now HER PRODUCTS, not her clients (see
+    #      flagshipProjectIds above). A reader meets what she builds and
+    #      maintains before they meet who paid for it.
+    #   2. Client work gets its OWN table again — commissionedProjectIds is
+    #      repopulated and templates/partials/commissioned.hbs is re-included in
+    #      the README. The client flagships (GAVIGO IRE, Tam-AI-Ti, Eatropolis,
+    #      FemTech Weekend) are demoted from cards to table rows, not removed.
+    #
+    # The shopfront shows 21 projects across four sections: 6 hero cards + 7
+    # client rows + 3 AI-agent rows + 5 craft rows. Every more* list stays
+    # empty — no <details> overflow; the "View all repositories →" link carries
+    # discovery. Notable demotions: the whole ByteDance-bootcamp/coursework band
+    # (douyin-mall-go-template 53★, automotive-repair-management-system 29★,
+    # douyin-mall-java-template 24★, douyin-mall 13★) is archived despite its
+    # stars — Chan is done presenting training-camp work as evidence.
+    # Everything cut or archived stays fully present in llms.txt /
+    # llms-full.txt / dist/profile.json / LinkedIn — it is only off the human
+    # shopfront. To re-widen, repopulate the more* lists.
     # =========================================================================
-    # Retired 2026-07 — the standalone "Commissioned work" section was removed
-    # and its client projects merged into the "Client & organisation work" cards
-    # above (flagshipProjectIds), so the README has one provenance axis, not two
-    # overlapping client sections. Kept as [] for backwards-compat.
-    commissionedProjectIds:    []
-    aiAgentProjectIds:         [google-news-mcp, echook, archcanvas, vitex, ai-programming-teaching-project]
-    openSourceCraftProjectIds: [archlang, gradient-svg-generator, sunostats]
+    # Client work table (templates/partials/commissioned.hbs) — all
+    # provenance:client, ordered strongest-first.
+    commissionedProjectIds:    [gavigo-ire, tam-ai-ti, femtech-weekend-website, eatropolis-website, femtech-radar, gavigo-website, her-waka]
+    aiAgentProjectIds:         [server-google-jobs, ai-programming-teaching-project, ai-hackathon-assistant]
+    openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats, cloud-canals, css-tower-defense]
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []
     moreOpenSourceProjectIds:     []

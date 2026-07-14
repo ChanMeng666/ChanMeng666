@@ -2048,9 +2048,9 @@ projects:
         cron and observability tooling. 99 of 99 commits are mine.
   - id: douyin-mall-java-template
     provenance: bootcamp
-    tier: secondary
-    recency: historical
-    lastUpdated: "2026-05-18"
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     name: TikTok Shop Java Template
     priority: 26
     category: web-apps
@@ -2060,12 +2060,12 @@ projects:
     techStack: [Java, Spring Boot, Maven, MySQL]
     narrative:
       impactHeadline: "Spring Boot + Maven open-source e-commerce backend template — the Java counterpart to the Go template Chan published from her ByteDance Youth Training Camp capstone, scaffold for later cohorts learning Spring backend architecture."
-    status: live
+    status: archived
   - id: esol-learning-platform
     provenance: client
     tier: archive
-    recency: active
-    lastUpdated: "2026-07-04"
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     name: AI-Powered ESOL Learning Platform
     priority: 81
     category: ai-apps
@@ -2077,7 +2077,7 @@ projects:
     extraLinks:
       - { label: "Client — Aotearoa Infinite Academy", url: "https://www.aotearoainfiniteacademy.school/" }
     techStack: ["Next.js 15", React, TypeScript, "Tailwind CSS 4", CopilotKit, "OpenAI Agents SDK", "OpenAI Realtime API", Whisper, "Neon Postgres", "Drizzle ORM", "Stack Auth", "Handsontable / react-spreadsheet", "FullCalendar", "dnd-kit", "Recharts", "Cloudflare Pages"]
-    status: active
+    status: archived
     startDate: "2025-10"
     publicSummary: |
       An AI-powered ESOL platform that combines four learning paths — a
@@ -2183,9 +2183,9 @@ projects:
         Sole author; built for the She Sharp community she volunteers with.
   - id: douyin-mall
     provenance: bootcamp
-    tier: secondary
-    recency: historical
-    lastUpdated: "2026-07-04"
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     name: Douyin Mall (Spring Boot Backend)
     priority: 27
     category: web-apps
@@ -2193,22 +2193,22 @@ projects:
     tagline: "Full-featured Douyin/TikTok e-commerce platform backend built during ByteDance's Youth Training Camp (青训营) — Spring Boot + Redis + RabbitMQ with complete user management, product catalog, shopping cart, and order processing; the capstone backend paired with the Vue 3 storefront and later distilled into the Go and Java teaching templates"
     repoUrl: https://github.com/ChanMeng666/douyin-mall
     techStack: [Java, "Spring Boot", Redis, RabbitMQ, MySQL, Maven, JWT]
-    status: active
+    status: archived
     startDate: "2025-01"
     narrative:
       impactHeadline: "Full Spring Boot + Redis + RabbitMQ e-commerce backend from ByteDance's Youth Training Camp (青训营) — the Douyin Mall capstone (user, product, cart, order modules) that the Vue 3 storefront consumes and that Chan distilled into the public Go and Java templates. 13 stars."
   - id: douyin-mall-frontend
     provenance: bootcamp
-    tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     name: Douyin Mall Frontend
     priority: 84
     category: web-apps
     tagline: Vue 3 + TypeScript e-commerce storefront built during ByteDance's Youth Training Camp (青训营) — product browsing, cart, orders, and payment UI, the separated frontend for the Douyin Mall capstone stack
     repoUrl: https://github.com/ChanMeng666/douyin-mall-frontend
     techStack: ["Vue 3", TypeScript, Vite, Pinia, "Vue Router", Axios, Vitest, Cypress]
-    status: active
+    status: archived
     startDate: "2025-01"
     narrative:
       impactHeadline: "Vue 3 + TypeScript e-commerce storefront for the Douyin Mall stack — a type-safe SPA (Pinia + Vue Router + Vite) implementing the full product / cart / checkout / payment flow with Vitest and Cypress coverage."

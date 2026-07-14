@@ -40,7 +40,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, cloudflare-workers, opennext, supabase, stripe]
-    lastUpdated: "2026-07-08"
+    lastUpdated: "2026-07-14"
     name: LibraryOS — Multi-Tenant Library SaaS
     priority: 20
     category: web-apps
@@ -97,12 +97,12 @@ projects:
       - { label: "Supabase keep-alive",         value: "2025-12-31 commit 17344d6 + 2026-01-25 commit 64b03d0 (prevent 7-day free-tier auto-pause)" }
       - { label: "Total commits",               value: "80 across 18 months (solo, plus 2 Vercel CVE-patch PRs auto-applied)" }
       - { label: "Latest commit",               value: "2026-06-16" }
-      - { label: "Access tiers",                value: "4 (Free / Basic / Pro / Enterprise + a deliberate Africa-friendly accessibility tier)" }
+      - { label: "Entitlement model",           value: "4 quota levels enforced server-side, plus a deliberate region-aware accessibility level for lower-income markets" }
       - { label: "Role hierarchy",              value: "4 (Owner/Admin/Librarian/Member with granular permission matrix)" }
-      - { label: "Free-tier quotas",            value: "100 books, 5 users, 3 loans/user (higher tiers scale to unlimited)" }
+      - { label: "Entry-level quotas",          value: "100 books, 5 users, 3 loans/user; higher entitlement levels scale those ceilings to unlimited" }
       - { label: "Live URL",                    value: "https://libraryos.live (purchased custom domain)" }
       - { label: "License",                     value: "Apache-2.0" }
-    status: live
+    status: archived
     startDate: "2024-10-30"
     publicSummary: |
       Production **multi-tenant library management SaaS** with its own
@@ -191,9 +191,10 @@ projects:
         layer** via Supabase row-level security (RLS) policies on
         every table — `books`, `loans`, `members`, `reviews`,
         `categories` — so even a SQL injection in application code
-        can't leak across tenants. **Access tiers**: the Free tier
-        covers 100 books / 5 users / 3 loans-per-user; Basic, Pro,
-        and Enterprise scale those quotas progressively to unlimited.
+        can't leak across tenants. **Entitlement tiers**: the entry
+        level covers 100 books / 5 users / 3 loans-per-user, and higher
+        levels scale those quotas progressively to unlimited — enforced
+        server-side against the tenant record, not hidden in the UI.
         Stripe Checkout handles initial activation, Customer Portal
         handles upgrades / downgrades / cancellations, and the
         `/api/stripe/webhook` endpoint atomically updates the
@@ -203,10 +204,9 @@ projects:
         scoped token; the recipient clicks through, authenticates,
         and joins the organisation with the pre-assigned role.
         **The Africa-friendly accessibility tier** is a deliberate
-        regional design decision (commit `16e81c1` *"add live mode
-        pricing for Africa-friendly subscriptions"*) — lower-income
+        regional design decision (commit `16e81c1`) — lower-income
         markets need a region-aware entry point for the product to
-        be reachable.
+        be reachable at all.
       businessLogic: |
         The infrastructure choices are structurally favourable: Supabase
         covers the database for typical small-library volume (the
@@ -341,7 +341,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [cloudflare-workers, mcp, scalar, npm]
-    lastUpdated: "2026-07-07"
+    lastUpdated: "2026-07-14"
     name: LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI)
     priority: 16
     category: web-apps
@@ -400,7 +400,7 @@ projects:
       - { label: "DB schema migrations",       value: "3 hand-written SQL (0001 subscriptions · 0002 api_keys · 0003 usage_events) — applied via `drizzle-kit push`" }
       - { label: "Stable error codes",         value: "10 (`unauthorized` · `forbidden` · `not_found` · `validation_error` · `quota_exceeded` · `rate_limited` · `internal_error` · `invalid_token` · `expired_token` · `export_expired`) with matching CLI exit codes (0-12)" }
       - { label: "Auth precedence",            value: "Cookie/JWT for humans, `lja_<keyId>_<secret>` Bearer for agents; cookies are **ignored** whenever any Authorization header is present (deliberately malformed Bearer always returns 401, never falls through)" }
-      - { label: "Access model",               value: "Outcome-metered usage events: free tier covers 50 searches + 5 exports/month UTC; metered tier scales per-event past the included 1,000/100 budget" }
+      - { label: "Access model",               value: "Outcome-metered usage events (one `job_search.success` per returned country, one `export.completed` per export) recorded idempotently against a UTC-calendar-month quota and surfaced to callers via `X-Quota-*` response headers" }
       - { label: "Production URL",             value: "Retired 2026-07 — was a single Cloudflare Worker monolith at *.workers.dev; deployment taken down, lja CLI remains published on npm" }
       - { label: "Stack migration",            value: "Migrated from Node.js + Express on Vercel to Cloudflare Workers + Hono in early 2026 (commit `2026-01-21`); migration playbook preserved at `docs/MIGRATION_GUIDE_VERCEL_TO_CLOUDFLARE.md`" }
       - { label: "Dual-track Guide page",      value: "/guide ships two parallel tracks (humans-signin/search/save/history/export/billing/keys + agents-auth/surfaces/http/mcp/cli/errors/quota/export) with TOC + hash-jump nav (commits H.4 → H.6, 2026-05-10)" }
@@ -415,7 +415,7 @@ projects:
       productLogic: |
         The user flow is **one product, two onboarding tracks**. (1) **Human track**: visit linkedin-jobs-search.chanmeng-dev.workers.dev → "Sign in" (Google or GitHub OAuth via Stack Auth — no email/password, no 2FA prompt, no email-verify step) → `/search` (anonymous visitors can do single-country search; signed-in users unlock multi-country + save + history + presets + export + API key management) → click "Save" on a job card → it appears in `/dashboard` (jobs tab + history tab + presets tab + API keys tab + usage tab) → optionally hit "Export CSV" → optionally hit `/billing` for Stripe metered subscription → at any point, hit `/dashboard` "API keys" tab to mint an `lja_*` token (one-time plaintext display — copy-paste it once, server only stores the sha256). (2) **Agent track**: visit `/connect` for paste-ready Claude Desktop / Cursor / MCP Inspector configs → drop in your `lja_*` token → the 11 MCP tools light up → call them with the same vocabulary the SPA uses internally. **Or** `npm i -g @chanmeng666/linkedin-jobs-search-cli` → set `LJA_API_KEY` and `LJA_BASE_URL` envvars → run `lja search --keyword rust --location Remote` → bare JSON on stdout, RFC 7807 problem+json on stderr, exit code matches the wire `code` field (0 ok / 1 unauthorized / 2 forbidden / 3 not_found / 4 validation_error / 5 quota_exceeded / 6 rate_limited / 7 internal_error / 8 IO error / 9 unknown / 10 invalid_token / 11 expired_token / 12 export_expired). **Or** issue raw HTTPS to `POST /api/jobs` with `Authorization: Bearer lja_*` — same response envelope, same `X-Quota-*` and `X-RateLimit-*` and `X-Cache` headers, same OpenAPI 3.1 schema documented at `/openapi.json` and rendered at `/docs` via Scalar. The deep product insight: **the human surface and the agent surface aren't separate products with a shared backend — they're two onboarding ramps onto the same primitives**, and the `/guide` page explicitly walks both paths step by step with a TOC and hash-jump nav so a visitor can self-select their track in 5 seconds.
       businessLogic: |
-        **Outcome-metered access model** — every successful `job_search.success` event (one per returned country) and every `export.completed` event counts against a monthly quota measured in UTC calendar months. **Free tier** covers 50 searches + 5 exports per month with no card required. **Metered tier** scales granularly per-event past an included 1,000 searches + 100 exports budget — no per-seat fee, no flat monthly minimum, no tiered "Pro" plan. Every quota signal is a granular per-call event that exactly mirrors the platform's own usage surface (LinkedIn upstream + Workers compute + Neon + R2 + Stripe). The metering machinery (sub-project B, commits B.0 → B.31) is engineered with structural care: a `usage_events` table records every event with a `canonical_request_sha256` for idempotency (so a retry never double-counts), a cron-based dead-letter retry sweeps any events that failed to flush to Stripe, response `X-Quota-Remaining` headers let agents budget their next call without a separate /me endpoint round-trip, and the `STRIPE_MODE=test|live` env-var switch lets the live flow be tested end-to-end before flipping a customer cohort. The agent-vs-human distinction also has access consequences encoded in the auth model: **the MCP endpoint requires a Bearer key** (cookie users get 403 — agents can't accidentally use SPA-session cookies), and **the key-management routes require a cookie session** (Bearer keys get 403 — agents can't mint their own keys, only humans can, so key issuance is always trackable to a human session). This is the structural answer to "how do you build a platform where agents are first-class but humans retain control of issuance".
+        **Outcome-metered access model** — every successful `job_search.success` event (one per returned country) and every `export.completed` event counts against a quota measured in UTC calendar months. Access is metered per *outcome*, never per seat and never per flat time window: the unit of account is a granular per-call event that exactly mirrors the platform's own usage surface (LinkedIn upstream + Workers compute + Neon + R2 + Stripe), so an agent that issues one multi-country search is accounted for exactly as many events as it actually consumed. The metering machinery (sub-project B, commits B.0 → B.31) is engineered with structural care: a `usage_events` table records every event with a `canonical_request_sha256` for idempotency (so a retry never double-counts), a cron-based dead-letter retry sweeps any events that failed to flush to Stripe, response `X-Quota-Remaining` headers let agents budget their next call without a separate /me endpoint round-trip, and the `STRIPE_MODE=test|live` env-var switch lets the live flow be tested end-to-end before flipping a customer cohort. The agent-vs-human distinction also has access consequences encoded in the auth model: **the MCP endpoint requires a Bearer key** (cookie users get 403 — agents can't accidentally use SPA-session cookies), and **the key-management routes require a cookie session** (Bearer keys get 403 — agents can't mint their own keys, only humans can, so key issuance is always trackable to a human session). This is the structural answer to "how do you build a platform where agents are first-class but humans retain control of issuance".
       technicalApproach: |
         The system is organised around four orthogonal mechanisms.
 
@@ -1851,14 +1851,14 @@ projects:
     provenance: personal
     tier: primary
     recency: recent
-    lastUpdated: "2026-07-10"
+    lastUpdated: "2026-07-14"
     meta:
       x_brand:
         featuredStack: [nextjs, react, drizzle, neon, stripe]
     name: Seismophone — The independent observatory for AI music
     priority: 18
     category: web-apps
-    tagline: "Seismophone — 'the independent observatory for AI music,' publishing ecosystem readings the platforms don't. Discovered that Suno's public API serializer skips its lineage-UUID redaction pass on exactly two response shapes, and turned that into the industry's first public Suno remix-lineage explorer; also proved Suno's 'trending' feed is a frozen 2024 fossil and built a fossil-watch pulse around it. Free public creator portfolios (/@handle) + observatory pages; seven single-purchase credit-billed insight reports. Trilingual EN/简中/日本語, solo-built, self-hosted on a Docker+Traefik VPS, with a read-only MCP server for AI agents."
+    tagline: "Seismophone — 'the independent observatory for AI music,' publishing ecosystem readings the platforms don't. Discovered that Suno's public API serializer skips its lineage-UUID redaction pass on exactly two response shapes, and turned that into the industry's first public Suno remix-lineage explorer; also proved Suno's 'trending' feed is a frozen 2024 fossil and built a fossil-watch pulse around it. Open public creator portfolios (/@handle) + observatory pages; seven deterministic single-purchase insight reports over a creator's own catalog. Trilingual EN/简中/日本語, solo-built, self-hosted on a Docker+Traefik VPS, with a read-only MCP server for AI agents."
     url: https://seismophone.chanmeng.org/
     # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     logo: /public/brands/seismophone-logo.svg
@@ -1904,9 +1904,9 @@ projects:
       - { label: "Live URL",            value: "https://seismophone.chanmeng.org (legacy sunostats.chanmeng.org 301-redirects to it)" }
       - { label: "Surfaces",            value: "19 pages · 28 API route handlers · 56 React components · 190 TS/TSX files in src" }
       - { label: "Database",            value: "17 Drizzle tables on Neon Postgres; append-only daily snapshots + credit ledger" }
-      - { label: "Free tier",           value: "Public creator portfolio at /@handle, lineage explorer, observatory pages (/pulse, /trending, who-remixes-whom), up to 10 watched playlists — no account needed for observatory reads" }
-      - { label: "Insight reports",     value: "7 credit-billed engines (tag_optimization · performance_snapshot · method_mix · song_dna · persona_mix · remix_readiness · model_era) — $1 / 1 credit each; 3 free starter credits; no subscription" }
-      - { label: "Stripe packs",        value: "Starter 5 / Pro 20 / Bulk 50 credits (webhook-verified ledger)" }
+      - { label: "Open surface",        value: "Public creator portfolio at /@handle, lineage explorer, observatory pages (/pulse, /trending, who-remixes-whom), up to 10 watched playlists — no account needed for observatory reads" }
+      - { label: "Insight reports",     value: "7 single-purchase analytics engines (tag_optimization · performance_snapshot · method_mix · song_dna · persona_mix · remix_readiness · model_era), each deterministic over the creator's own catalog and optionally topped with a short LLM analyst's note" }
+      - { label: "Stripe integration",  value: "webhook-verified credit ledger — signed Stripe events atomically reconcile the append-only ledger, so a replayed or out-of-order webhook can't double-apply" }
       - { label: "Lineage archive",     value: "~102 parent→child edges from a single 2026-05-09 backfill — sealed and now un-reproducible after Suno closed the redaction gap" }
       - { label: "Trending fossil",     value: "/api/trending frozen since Sept 2024 (~2 years, ~49 clips/capture); 84+ daily captures preserved as a historical exhibit" }
       - { label: "MCP server",          value: "7 read-only tools at /api/mcp (get_pulse, get_trending, get_clip_lineage, list_reports, get_report, get_portfolio, about) so external AI agents can query the observatory" }
@@ -1922,8 +1922,8 @@ projects:
       captures Suno's public data daily and publishes free ecosystem readings
       the platform itself doesn't expose — how the trending feed has frozen,
       which model eras dominate, and who remixes whom — then points the same
-      instruments at a signed-in creator's own catalog to produce a free public
-      portfolio at /@handle plus seven credit-billed insight reports. Its
+      instruments at a signed-in creator's own catalog to produce an open public
+      portfolio at /@handle plus seven single-purchase insight reports. Its
       distinctive dataset is a public Suno remix-lineage graph, recovered from
       a redaction gap in Suno's own API and now un-reproducible. Solo-built on
       Next.js 16 + Neon Postgres, trilingual (EN / 简中 / 日本語), self-hosted
@@ -1973,15 +1973,14 @@ projects:
         Performance Snapshot, Method Mix, Song DNA, Persona Mix, Remix
         Readiness, and Model Era — each a deterministic analytics engine over
         their catalog, optionally topped with a short LLM "analyst's note."
-        Every account starts with three free credits; reports are $1 (one
-        credit) with no subscription, so a creator pays only for the specific
-        questions they want answered.
+        Each report is a discrete, single-purchase artifact — a creator asks
+        one specific question of their own catalog and gets one answer back,
+        rather than committing to an ongoing relationship with the tool.
       businessLogic: |
-        The model is free-observatory-plus-microtransactions, not a
-        subscription. Everything ecosystem-level and every public creator
-        portfolio is free forever; the only paid surface is the seven
-        per-catalog insight reports at $1/credit, sold in Stripe packs (Starter
-        5 / Pro 20 / Bulk 50) with three credits granted free at signup. The
+        The shape is open-observatory-plus-discrete-reports. Everything
+        ecosystem-level and every public creator portfolio is open to all;
+        the only gated surface is the seven per-catalog insight reports,
+        each a self-contained analysis of a creator's own catalog. The
         defensible asset is the lineage archive: because it was recovered from
         a redaction gap Suno has since closed, it is a sealed, un-reproducible
         dataset — a genuine data moat rather than a feature a competitor can
@@ -2048,9 +2047,9 @@ projects:
         cron and observability tooling. 99 of 99 commits are mine.
   - id: douyin-mall-java-template
     provenance: bootcamp
-    tier: secondary
-    recency: historical
-    lastUpdated: "2026-05-18"
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     name: TikTok Shop Java Template
     priority: 26
     category: web-apps
@@ -2060,12 +2059,12 @@ projects:
     techStack: [Java, Spring Boot, Maven, MySQL]
     narrative:
       impactHeadline: "Spring Boot + Maven open-source e-commerce backend template — the Java counterpart to the Go template Chan published from her ByteDance Youth Training Camp capstone, scaffold for later cohorts learning Spring backend architecture."
-    status: live
+    status: archived
   - id: esol-learning-platform
     provenance: client
     tier: archive
-    recency: active
-    lastUpdated: "2026-07-04"
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     name: AI-Powered ESOL Learning Platform
     priority: 81
     category: ai-apps
@@ -2077,7 +2076,7 @@ projects:
     extraLinks:
       - { label: "Client — Aotearoa Infinite Academy", url: "https://www.aotearoainfiniteacademy.school/" }
     techStack: ["Next.js 15", React, TypeScript, "Tailwind CSS 4", CopilotKit, "OpenAI Agents SDK", "OpenAI Realtime API", Whisper, "Neon Postgres", "Drizzle ORM", "Stack Auth", "Handsontable / react-spreadsheet", "FullCalendar", "dnd-kit", "Recharts", "Cloudflare Pages"]
-    status: active
+    status: archived
     startDate: "2025-10"
     publicSummary: |
       An AI-powered ESOL platform that combines four learning paths — a
@@ -2106,7 +2105,7 @@ projects:
   - id: wellness-agent
     provenance: client
     tier: archive
-    recency: recent
+    recency: historical
     lastUpdated: "2026-07-11"
     name: Wellness Support Agent
     priority: 82
@@ -2183,9 +2182,9 @@ projects:
         Sole author; built for the She Sharp community she volunteers with.
   - id: douyin-mall
     provenance: bootcamp
-    tier: secondary
-    recency: historical
-    lastUpdated: "2026-07-04"
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     name: Douyin Mall (Spring Boot Backend)
     priority: 27
     category: web-apps
@@ -2193,22 +2192,22 @@ projects:
     tagline: "Full-featured Douyin/TikTok e-commerce platform backend built during ByteDance's Youth Training Camp (青训营) — Spring Boot + Redis + RabbitMQ with complete user management, product catalog, shopping cart, and order processing; the capstone backend paired with the Vue 3 storefront and later distilled into the Go and Java teaching templates"
     repoUrl: https://github.com/ChanMeng666/douyin-mall
     techStack: [Java, "Spring Boot", Redis, RabbitMQ, MySQL, Maven, JWT]
-    status: active
+    status: archived
     startDate: "2025-01"
     narrative:
       impactHeadline: "Full Spring Boot + Redis + RabbitMQ e-commerce backend from ByteDance's Youth Training Camp (青训营) — the Douyin Mall capstone (user, product, cart, order modules) that the Vue 3 storefront consumes and that Chan distilled into the public Go and Java templates. 13 stars."
   - id: douyin-mall-frontend
     provenance: bootcamp
-    tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     name: Douyin Mall Frontend
     priority: 84
     category: web-apps
     tagline: Vue 3 + TypeScript e-commerce storefront built during ByteDance's Youth Training Camp (青训营) — product browsing, cart, orders, and payment UI, the separated frontend for the Douyin Mall capstone stack
     repoUrl: https://github.com/ChanMeng666/douyin-mall-frontend
     techStack: ["Vue 3", TypeScript, Vite, Pinia, "Vue Router", Axios, Vitest, Cypress]
-    status: active
+    status: archived
     startDate: "2025-01"
     narrative:
       impactHeadline: "Vue 3 + TypeScript e-commerce storefront for the Douyin Mall stack — a type-safe SPA (Pinia + Vue Router + Vite) implementing the full product / cart / checkout / payment flow with Vitest and Cypress coverage."

@@ -166,6 +166,15 @@ for (let i = 0; i < data._flagshipProjects.length; i += 2) {
 const resolveIds = (ids) =>
   (ids ?? []).map((id) => data._index.projects[id]).filter(Boolean);
 
+// Client & organisation work leads with the SAME big editorial cards as the
+// "What I build" hero (shared partial: templates/partials/project-cards.hbs) —
+// clientCardProjectIds are cards, commissionedProjectIds are the table below.
+data._clientCardProjects       = resolveIds(data.meta?.x_brand?.clientCardProjectIds);
+for (const p of data._clientCardProjects) {
+  const ids = p.relatedProjectIds ?? (p.relatedProjectId ? [p.relatedProjectId] : []);
+  p._relatedProjects = ids.map((id) => data._index.projects[id]).filter(Boolean);
+}
+
 data._commissionedProjects     = resolveIds(data.meta?.x_brand?.commissionedProjectIds);
 data._aiAgentProjects          = resolveIds(data.meta?.x_brand?.aiAgentProjectIds);
 data._openSourceCraftProjects  = resolveIds(data.meta?.x_brand?.openSourceCraftProjectIds);
@@ -222,21 +231,23 @@ data._moreCommissionedProjects = resolveIds(data.meta?.x_brand?.moreCommissioned
 
 // ---------------------------------------------------------------------------
 // README-only visibility filter — projects listed here stay fully present in
-// data/profile/*.yaml, llms.txt, llms-full.txt, and dist/profile.json (so AI
-// agents and the JSON-LD entity graph still see them); they are simply
-// omitted from the visible README buckets. Add/remove ids here to retune
+// data/profile/*.yaml, llms-full.txt and dist/profile.json (so AI agents and
+// the JSON-LD entity graph still see them); they are simply omitted from the
+// visible README buckets. (llms.txt is a short top-tier summary and carries
+// only the flagship/primary band either way.) Add/remove ids here to retune
 // what the human surface shows without touching the data file.
 // ---------------------------------------------------------------------------
-const README_HIDDEN_PROJECT_IDS = new Set([
-  "femtracker-agent",
-  "github-readme-suno-cards",
-  "tencent-meeting-video-downloader",
-  "portfolio-v2",
-  "douyin-mall-java-template",
-]);
+// 2026-07-14: emptied. Chan's project-by-project triage now expresses every
+// visibility decision in the bucket lists themselves (90-meta.yaml), so a
+// second, hidden filter here would only be a place for the two to disagree —
+// e.g. github-readme-suno-cards was hidden here while Chan listed it under
+// craft. The mechanism is kept for one-off suppressions that shouldn't change
+// the curated lists.
+const README_HIDDEN_PROJECT_IDS = new Set([]);
 const stripHidden = (arr) =>
   arr.filter((p) => !README_HIDDEN_PROJECT_IDS.has(p.id));
 
+data._clientCardProjects      = stripHidden(data._clientCardProjects);
 data._commissionedProjects    = stripHidden(data._commissionedProjects);
 data._aiAgentProjects         = stripHidden(data._aiAgentProjects);
 data._openSourceCraftProjects = stripHidden(data._openSourceCraftProjects);
@@ -244,22 +255,75 @@ data._moreProjectsByGroup = data._moreProjectsByGroup
   .map((g) => ({ ...g, items: stripHidden(g.items) }))
   .filter((g) => g.items.length > 0);
 
-// Promote forward-with-her-website from the "More commissioned work"
-// overflow into the visible Commissioned work table, then collapse the
-// overflow entirely (so the <details> block no longer renders).
-const COMMISSIONED_PROMOTE_IDS = ["forward-with-her-website"];
-const promoted = COMMISSIONED_PROMOTE_IDS
-  .map((id) => data._moreCommissionedProjects.find((p) => p.id === id))
-  .filter(Boolean);
-if (promoted.length) {
-  data._commissionedProjects = [...data._commissionedProjects, ...promoted];
-}
-data._moreCommissionedProjects = [];
+// 2026-07-14: removed the hard-coded COMMISSIONED_PROMOTE_IDS block (it lifted
+// forward-with-her-website out of the commissioned overflow and then force-
+// emptied that overflow). moreCommissionedProjectIds has been [] since the
+// 2026-07 curation, so the promotion could never fire, and the forced empty
+// meant repopulating the list in 90-meta.yaml would silently render nothing.
+// The Client work table and its <details> overflow now come straight from the
+// meta ID lists.
 
-// Legacy openSourcePrimaryIds is retained for backwards-compat consumers but
-// is no longer rendered by the v2 templates.
-const primaryIds = data.meta?.x_brand?.openSourcePrimaryIds ?? [];
-data._openSourcePrimary = resolveIds(primaryIds);
+// "Notable Open Source" for llms.txt / llms-full.txt.
+// 2026-07-14: this used to read a hand-maintained meta.x_brand.openSourcePrimaryIds
+// list. That list was NOT dead code — it renders these two LLM-facing sections —
+// and it silently drifted out of sync with Chan's curation, presenting a client
+// website (femtech-weekend-website) as a primary open-source project of hers and
+// listing two projects that have no public repository at all. It is now DERIVED
+// from the same curated buckets that drive the README (90-meta.yaml), so the two
+// surfaces cannot disagree:
+//   flagship products + AI-agent table + open-source craft table,
+//   minus provenance:client (client work is presented AS client work),
+//   minus anything without a public repoUrl (no source => not "open source").
+// Nothing is lost: every project, including the excluded ones, still appears in
+// llms-full.txt's full by-category listing and in dist/profile.json.
+const _osSeen = new Set();
+data._openSourcePrimary = [
+  ...data._flagshipProjects,
+  ...data._aiAgentProjects,
+  ...data._openSourceCraftProjects,
+].filter((p) => {
+  if (!p.repoUrl || p.provenance === "client") return false;
+  if (_osSeen.has(p.id)) return false;
+  _osSeen.add(p.id);
+  return true;
+});
+
+// "## More Projects (by category)" in llms-full.txt — the long tail: EVERY
+// project that is not already spelled out in _openSourcePrimary above,
+// grouped by category. This is the surface that makes the README curation
+// honest: a project demoted off the human shopfront (tier=archive, the
+// ByteDance-bootcamp band, coursework, retired experiments) is still
+// discoverable here by an LLM consumer, stamped with its tier badge.
+// It is NOT an open-source list — it deliberately includes provenance:client
+// deliverables and projects with no public repo, so the heading and the note
+// above it in llms-full.txt.hbs must never call it "open source" (they did
+// until 2026-07-14, which presented client sites as Chan's open source).
+//
+// 2026-07-14: this list was previously NEVER BUILT — templates/llms-full.txt.hbs
+// iterates `_openSourceByCategory`, but build.mjs never defined it, so the
+// section had been rendering EMPTY and the long tail was silently absent from
+// llms-full.txt. Do not delete this block without deleting the template section.
+// Ordering: meta.x_brand.openSourceCategoryOrder first, then any category not
+// named there (e.g. `tools`), so adding a new category can never drop projects.
+{
+  const primaryIds = new Set(data._openSourcePrimary.map((p) => p.id));
+  const byCat = new Map();
+  for (const p of data.projects ?? []) {
+    if (primaryIds.has(p.id)) continue;
+    const k = p.category ?? "other";
+    if (!byCat.has(k)) byCat.set(k, []);
+    byCat.get(k).push(p);
+  }
+  const order = data.meta?.x_brand?.openSourceCategoryOrder ?? [];
+  const keys = [
+    ...order.filter((k) => byCat.has(k)),
+    ...[...byCat.keys()].filter((k) => !order.includes(k)).sort(),
+  ];
+  data._openSourceByCategory = keys.map((category) => ({
+    category,
+    items: byCat.get(category),
+  }));
+}
 
 // ---------------------------------------------------------------------------
 // Tier/recency partitions: every list-type collection grouped by tier so
@@ -392,6 +456,44 @@ data._basicsSummaryFlat = flatten(data.basics?.summary);
 data._valueProposition = data.meta?.x_brand?.valueProposition ?? null;
 
 const engagementRoles = data.meta?.x_brand?.engagementRoles ?? [];
+
+// An engagement role may anchor its proof at a project (proofProjectId) — the
+// README renders that as an in-page anchor link into a project card. So the id
+// must (a) exist and (b) be in a bucket the README actually DISPLAYS, or the
+// anchor lands nowhere. A role with only proofUrl and no proofProjectId is
+// valid (e.g. cto-class-operator, whose evidence is an external site). Same
+// fail-the-build policy as spotlightProjectIds: a typo here is a data bug.
+{
+  const xb = data.meta?.x_brand ?? {};
+  const displayedIds = new Set(
+    [
+      ...(xb.flagshipProjectIds ?? []),
+      ...(xb.clientCardProjectIds ?? []),
+      ...(xb.commissionedProjectIds ?? []),
+      ...(xb.aiAgentProjectIds ?? []),
+      ...(xb.openSourceCraftProjectIds ?? []),
+    ],
+  );
+  const proofErrors = [];
+  for (const role of engagementRoles) {
+    if (!role.proofProjectId) continue; // proofUrl-only roles are valid
+    if (!projectIds.has(role.proofProjectId)) {
+      proofErrors.push(
+        `engagementRoles[${role.id ?? role.title ?? "?"}].proofProjectId "${role.proofProjectId}" is not a known projects[].id`,
+      );
+    } else if (!displayedIds.has(role.proofProjectId)) {
+      proofErrors.push(
+        `engagementRoles[${role.id ?? role.title ?? "?"}].proofProjectId "${role.proofProjectId}" resolves to a real project, but that project is in no displayed README bucket (flagshipProjectIds / clientCardProjectIds / commissionedProjectIds / aiAgentProjectIds / openSourceCraftProjectIds) — the proof anchor would link to a card the README never renders`,
+      );
+    }
+  }
+  if (proofErrors.length) {
+    console.error("✗ meta.x_brand.engagementRoles proof cross-reference errors:");
+    for (const e of proofErrors) console.error(`  - ${e}`);
+    process.exit(1);
+  }
+}
+
 data._engagementRoles = {
   all: engagementRoles,
   firstRow: engagementRoles.slice(0, 2),
@@ -505,6 +607,7 @@ const normalizeContextLogo = (raw) => {
 
 const visibleProjects = [
   ...data._flagshipProjects,
+  ...data._clientCardProjects,
   ...data._commissionedProjects,
   ...data._aiAgentProjects,
   ...data._openSourceCraftProjects,

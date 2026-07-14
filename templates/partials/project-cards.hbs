@@ -1,0 +1,33 @@
+{{!--
+     SHARED big-editorial-card body. (Handlebars comment, not an HTML comment:
+     this partial is rendered twice, and an HTML comment would be emitted twice
+     into the README.) Called with a project array as context:
+       {{> project-cards _flagshipProjects}}   (featured-work.hbs — "What I build")
+       {{> project-cards _clientCardProjects}} (commissioned.hbs — client work)
+     Both sections must render IDENTICALLY — priority is expressed by order on
+     the page, not by card size — so this markup exists exactly once. Per card:
+     logo (right-float 80px) · H3 name · "For <org>" line · impact headline ·
+     18px tech-stack icons · optional related-project cross-links.
+     GOTCHA: keep the blank line between the bare <img> and the following `###`
+     heading — CommonMark's type-7 HTML-block rule swallows the heading without it.
+--}}
+{{#each this}}{{#if logo}}<img src="{{logo}}" align="right" height="80" alt="{{name}}" title="{{name}}">
+
+{{/if}}### [{{briefTagline name}}]({{default url repoUrl}})
+
+{{#if _affiliationOrg}}<sub>For <a href="{{_affiliationOrg.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default _affiliationOrg.logoDark _affiliationOrg.logoLight}}"><img src="{{_affiliationOrg.logoLight}}" height="22" alt="{{_affiliationOrg.name}}"></picture> {{_affiliationOrg.name}}</a>{{#if _affiliationOrg.context}} — {{_affiliationOrg.context}}{{/if}}.</sub>
+{{else}}{{#if _contextLogo.length}}<sub>For {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="22" alt="{{alt}}" style="vertical-align:middle"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}.</sub>
+{{else}}{{#if entity}}<sub>{{entity}}.</sub>
+{{/if}}{{/if}}{{/if}}
+
+{{#if narrative.impactHeadline}}{{narrative.impactHeadline}}
+
+{{else}}{{briefTagline tagline}}
+
+{{/if}}{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
+{{/if}}{{#if _relatedProjects.length}}
+<sub>↳ Related: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
+{{/if}}
+<br clear="all">
+
+{{/each}}

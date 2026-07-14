@@ -62,7 +62,7 @@ A. {{answer}}
 
 ## Notable Open Source
 
-{{#each _openSourcePrimary}}- **{{name}}** -- {{flatten publicSummary}}{{#if url}} ({{url}}){{else}}{{#if repoUrl}} ({{repoUrl}}){{/if}}{{/if}}
+{{#each _openSourcePrimary}}- **{{name}}** -- {{flatten (default publicSummary tagline)}}{{#if url}} ({{url}}){{else}}{{#if repoUrl}} ({{repoUrl}}){{/if}}{{/if}}
 {{/each}}
 
 ## Core Expertise

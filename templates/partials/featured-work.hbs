@@ -1,32 +1,21 @@
-<!-- ═══════════════════════════════════════════════════════════════════════
-     Client & organisation work — big editorial cards (vertical stack) for the
-     production systems Chan led for companies/nonprofits. Sourced from
-     flagshipProjectIds (all provenance:client). Per-card: logo (right-float
-     80px) · H3 name · "For <org>" line · impact · 18px tech-stack icons.
-     ═══════════════════════════════════════════════════════════════════════ -->
+{{!-- ═══════════════════════════════════════════════════════════════════════
+     What I build — big editorial cards (vertical stack) for the five projects
+     Chan owns herself (provenance: personal). Sourced from flagshipProjectIds.
+     Verified 2026-07-15 against the shards: all five are live (status
+     production/active/live); four have a public repoUrl (google-news-mcp,
+     echook, archlang, vitex→easy-resume) and archcanvas is hosted with no
+     public repo — hence "four are open source", not five.
+     If you change the sub line, RE-READ those fields — this line has shipped a
+     false open-source count three times. she-sharp used to be here; it is
+     client work (provenance: client, NZ-SheSharp org repo) and now renders in
+     commissioned.hbs. No carve-out clause belongs in this line any more.
+     Card markup lives in the shared project-cards.hbs partial, which
+     commissioned.hbs renders too — the client cards are the SAME size and
+     shape; product-first is expressed by order on the page, not card weight.
+     ═══════════════════════════════════════════════════════════════════════ --}}
 
-## Client & organisation work
+## What I build
 
-<sub>Production systems I led end-to-end for companies and nonprofits.</sub>
+<sub>Products I own end to end — an MCP server, a hooks plugin for Claude Code, Cursor and Codex, a floor-plan language with a live playground, an AI architect, and an AI career agent. All five are live; four are open source.</sub>
 
-{{#each _flagshipProjects}}{{#if logo}}<img src="{{logo}}" align="right" height="80" alt="{{name}}" title="{{name}}">
-
-{{/if}}
-### [{{briefTagline name}}]({{default url repoUrl}})
-
-{{#if _affiliationOrg}}<sub>For <a href="{{_affiliationOrg.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default _affiliationOrg.logoDark _affiliationOrg.logoLight}}"><img src="{{_affiliationOrg.logoLight}}" height="22" alt="{{_affiliationOrg.name}}"></picture> {{_affiliationOrg.name}}</a>{{#if _affiliationOrg.context}} — {{_affiliationOrg.context}}{{/if}}.</sub>
-{{else}}{{#if _contextLogo.length}}<sub>For {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="22" alt="{{alt}}" style="vertical-align:middle"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}.</sub>
-{{else}}{{#if entity}}<sub>For {{entity}}.</sub>
-{{/if}}{{/if}}{{/if}}
-
-{{#if narrative.impactHeadline}}{{narrative.impactHeadline}}
-
-{{else}}{{briefTagline tagline}}
-
-{{/if}}{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
-{{/if}}{{#if _relatedProjects.length}}
-<sub>↳ Related: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
-{{/if}}
-<br clear="all">
-
-{{/each}}
+{{> project-cards _flagshipProjects}}

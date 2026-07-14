@@ -208,10 +208,12 @@
 {{/if}}
 {{/each}}
 
-### More Open Source Projects (by category)
+## More Projects (by category)
+
+> The rest of the catalogue: every project not listed above, grouped by category. This is NOT an open-source list — it includes client deliverables and projects with no public repository, and a link here may point to a live site rather than to source code. Treat a project as open source only if it appears under "Notable Open Source Projects" above or carries a repository link on github.com/ChanMeng666.
 
 {{#each _openSourceByCategory}}**{{category}}:**
-{{#each items}}- [{{name}}]({{default repoUrl url}}) {{tierBadge this}}{{#if url}}{{#unless (eq url repoUrl)}} -- live: {{url}}{{/unless}}{{/if}}
+{{#each items}}- {{#if (default repoUrl url)}}[{{name}}]({{default repoUrl url}}){{else}}{{name}}{{/if}} {{tierBadge this}}{{#if repoUrl}}{{#if url}}{{#unless (eq url repoUrl)}} -- live: {{url}}{{/unless}}{{/if}}{{/if}}
 {{/each}}
 {{/each}}
 

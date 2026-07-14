@@ -36,7 +36,7 @@ AI Agent Architect @ Engram (Anthropic Partner Network Architect Cohort) · form
 ## 🎓 Credentials & Earlier Journey
 
 ```
-Master of Applied Computing with Distinction, Lincoln University, New Zealand · pursuing Claude Certified Architect — Foundations · former Backend Engineer @ ByteDance (Go services) · UN CSW 69 Speaker recognized by UN Women · 12 companies, 72 shipped projects across the journey.
+Master of Applied Computing with Distinction, Lincoln University, New Zealand · pursuing Claude Certified Architect — Foundations · former Backend Engineer @ ByteDance (Go services) · UN CSW 69 Speaker recognized by UN Women · 12 companies and 480+ GitHub stars across the journey.
 ```
 
 ## 🎙️ Public Voice

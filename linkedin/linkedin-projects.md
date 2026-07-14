@@ -31,7 +31,7 @@ Stack: Next.js 16, OpenNext-on-Cloudflare-Workers, Drizzle + Neon Postgres, Rese
 ```
 SunoStats is the first public tool that maps how a Suno-generated song's lineage descends from its parent. Suno is the AI music platform; its own product doesn't expose lineage to creators. SunoStats does, because the research behind it discovered that Suno's API serializer leaks the parent→child UUID chain only on the trending feed and persona sub-trees — nowhere else, not even on the remix page.
 
-• Three free public lenses (creator profiles, trending, lineage view) + three single-purchase deep-dive reports — no recurring subscription.
+• Three open public lenses (creator profiles, trending, lineage view) + single-purchase deep-dive reports, each a deterministic analysis of one creator's own catalog.
 • Lineage traversal uses WITH RECURSIVE CTEs in Postgres so the graph walk happens at the database, not the application layer.
 • Trilingual EN / CN / JP with cookie-driven server-resolved locale.
 • oEmbed-discovered compliance posture; no scraping, no headless browsers.
@@ -86,7 +86,7 @@ ArchCanvas turns my ArchLang language into a product for architects. Describe a 
 • Sister product to my ArchLang language — consumes @chanmeng666/archlang as a package, so it produces editable parametric plans, not just images.
 • AI review mode surfaces anchored findings directly on the canvas with one-click "have AI fix".
 • Export any project as a real git repo (isomorphic-git + memfs).
-• Pay-per-result credits, not subscriptions.
+• Refinement mutates the plan in place — edits, parametric tweaks and re-renders never regenerate it from scratch.
 
 Stack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-4o + DALL·E), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.
 ```

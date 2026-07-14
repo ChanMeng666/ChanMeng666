@@ -104,7 +104,7 @@ const projects = [
   {
     name: "Tam-AI-Ti",
     url: "https://tamaiti.whiri-ai.com/",
-    role: "Solo full-stack — commissioned by Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead)",
+    role: "Solo full-stack — independent research commission from Riria (Missy) Te Kanawa personally (former KPMG NZ National Māori Sector lead; now Māori Executive Lead at ASB Bank, her employer — ASB did not commission this work)",
     summary:
       "AI financial-wellness app built around te ao Māori — the user's culture lives in the data model (Maramataka lunar phases and Te Whare Tapa Whā wellness domains as first-class Drizzle enum types), not just the translation layer. 351 commits solo · 48 tables / 494 columns / 22 migrations · 3-model OpenAI composition (gpt-4o-mini coach turns + gpt-4o synthesis + gpt-4o-realtime-preview voice). 19-user research cohort sustained 4 months · 181 bilingual journal entries · 35 voice sessions · 146 AI coach messages · 74 daily check-ins.",
   },
@@ -158,7 +158,7 @@ W("- gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 340
 W("- typst-claude-skill — official Typst skill for Claude Code (typesets this CV)");
 W("- SunoStats (https://sunostats.chanmeng.org/) — industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese · Docker + Traefik VPS");
 W("- ArchLang (https://github.com/ChanMeng666/archlang) — a floor-plan programming language I invented: compiles to professional SVG plans (Typst/LaTeX for architecture) · zero-dependency isomorphic TypeScript · published to npm as @chanmeng666/archlang");
-W("- ArchCanvas (https://archcanvas.chanmeng.org/) — AI design agent for architects that productizes ArchLang · GPT-4o + DALL·E renderings on a zoomable canvas · pay-per-result credits");
+W("- ArchCanvas (https://archcanvas.chanmeng.org/) — AI design agent for architects that productizes ArchLang · GPT-Image renderings grounded on the compiled plan, on a zoomable canvas · edits morph the plan in place instead of regenerating it");
 
 sect("Experience (most recent)");
 const roles = [

@@ -19,7 +19,7 @@ projects:
     provenance: client
     tier: flagship
     recency: active
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-14"
     name: Tam-AI-Ti (tam-ai-ti-web)
     meta:
       x_brand:
@@ -27,12 +27,12 @@ projects:
     priority: 1
     category: ai-apps
     clientOrgId: whiri-ai
-    tagline: "Independent research commission for enterprise executive Riria (Missy) Te Kanawa (ASB Bank · former KPMG NZ National Māori Sector lead) — an AI Financial Wellness Coach grounded in Te Whare Tapa Whā that proved Māori users will engage with a culturally-native AI agent (19-user cohort, 4 months, bilingual te reo Māori). 351 solo commits, 48-table schema where culture is typed data not UI decoration, voice-first GPT-4o Realtime coach, CopilotKit agent across 88+ actions."
+    tagline: "Independent research commission from enterprise executive Riria (Missy) Te Kanawa personally (former KPMG NZ National Māori Sector lead; her employer is ASB Bank, which was not a party to this commission) — an AI Financial Wellness Coach grounded in Te Whare Tapa Whā that proved Māori users will engage with a culturally-native AI agent (19-user cohort, 4 months, bilingual te reo Māori). 351 solo commits, 48-table schema where culture is typed data not UI decoration, voice-first GPT-4o Realtime coach, CopilotKit agent across 88+ actions."
     url: https://tamaiti.whiri-ai.com/
     demoUrl: https://youtu.be/NtT7_q6xhlk
     # repoUrl omitted — private client repository (Whiri-AI/tam-ai-ti-web, 404s publicly); do not re-add.
     logo: /public/brands/tam-ai-ti-mark.svg
-    entity: "Riria (Missy) Te Kanawa (independent research commission · ASB Bank)"
+    entity: "Riria (Missy) Te Kanawa — an independent research commission from her personally"
     roles: ["Solo Independent Developer", "Full-Stack Engineer", "Maintainer"]
     extraLinks:
       - { label: "Live app",                        url: "https://tamaiti.whiri-ai.com/" }
@@ -67,7 +67,7 @@ projects:
       - "Voice-first AI Financial Coach (gpt-4o-realtime-preview)"
       - "Bilingual te reo Māori with macron-correct translation"
       - "pgVector semantic search across 4 tables"
-      - "Solo full-stack build for an ASB Bank research commission"
+      - "Solo full-stack build for an independent executive research commission"
       - "4-month research-cohort engagement signal"
       - "Production Vercel-to-client-team migration playbook"
       - "Deliberate CopilotKit optimisation: 8 routes → 3 (anti-bloat UX discipline)"
@@ -102,7 +102,7 @@ projects:
       181 journal entries, 35 voice sessions, and 146 AI coach messages over four
       months (Oct 2025 – Mar 2026).
     narrative:
-      impactHeadline: "ASB Bank executive research pilot — NZ's first Māori-cultural AI financial-wellness agent (Te Whare Tapa Whā in schema, not UI); 19 users over 4 months with bilingual te reo Māori voice coaching, proving culturally-native AI engages communities mainstream FinTech underserves."
+      impactHeadline: "Independent executive research pilot — NZ's first Māori-cultural AI financial-wellness agent (Te Whare Tapa Whā in schema, not UI); 19 users over 4 months with bilingual te reo Māori voice coaching, proving culturally-native AI engages communities mainstream FinTech underserves."
       problem: |
         Mainstream FinTech treats money as decontextualized numbers — budgets,
         balances, projections. For Māori users, that framing is culturally
@@ -379,7 +379,7 @@ projects:
     logo: /public/brands/she-sharp-mark.svg
     clientOrgId: she-sharp
     relatedWorkId: she-sharp
-    relatedProjectIds: [her-waka, ai-hackathon-assistant, makey-makey-iot-slides]   # She Sharp sibling projects — cross-linked; each also renders as its own card (clientOrgId: she-sharp)
+    relatedProjectIds: [her-waka, ai-hackathon-assistant]   # She Sharp sibling projects — cross-linked; each also renders as its own card (clientOrgId: she-sharp). makey-makey-iot-slides removed 2026-07-14: Chan's triage kept it OFF the shopfront, and a "↳ Related:" link here put it back on the README. Only ids Chan marked hero/listed may sit here.
     entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
     roles: ["Senior Full Stack Engineer", "Website Team Lead", "Solo Architect of New Platform"]
     techStack:

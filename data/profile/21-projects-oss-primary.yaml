@@ -472,9 +472,9 @@ projects:
 
   - id: douyin-mall-go-template
     provenance: bootcamp
-    tier: secondary
-    recency: historical
-    lastUpdated: "2026-05-18"
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     meta:
       x_brand:
         featuredStack: [go, gin, mysql, redis]
@@ -488,7 +488,7 @@ projects:
       - { label: "Full Spring Boot backend (douyin-mall capstone)", url: "https://github.com/ChanMeng666/douyin-mall" }
       - { label: "Vue 3 storefront (douyin-mall-frontend)", url: "https://github.com/ChanMeng666/douyin-mall-frontend" }
     techStack: [Go, Gin, MySQL, Redis, JWT, REST, Clean Architecture]
-    status: active
+    status: archived
     publicSummary: |
       Production-shape Go + Gin + MySQL + Redis e-commerce backend template
       with clean architecture, JWT auth, and paired React frontend — built
@@ -525,10 +525,11 @@ projects:
         guides cover Docker, Railway, Render, and Fly.io. Bilingual
         (EN + 简体中文) README at production quality.
       outcomes: |
-        **52 GitHub stars, 7 forks**, 27 sustained commits — the
-        strongest external traction of any project in Chan's open-source
-        catalogue under "primary" tier. Featured as one of the eight
-        primary projects on Chan's GitHub Open Source table. **< 50 ms**
+        **53 GitHub stars, 7 forks**, 27 sustained commits — the
+        strongest external traction of any of Chan's ByteDance Youth
+        Training Camp artefacts. Archived from the active README lineup
+        alongside the rest of that training-camp band, but the numbers
+        stand on their own. **< 50 ms**
         average API response time. Apache-2.0 license to permit
         commercial reuse while encouraging community contribution.
         Doubles as the worked-example artefact accompanying Chan's
@@ -1201,11 +1202,11 @@ projects:
   - id: femtracker-agent
     provenance: personal
     tier: archive
-    recency: recent
+    recency: deprecated
     meta:
       x_brand:
         featuredStack: [copilotkit, langgraph, python, nextjs, supabase]
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-07-14"
     name: FemTracker Agent
     priority: 11
     category: ai-apps
@@ -1217,7 +1218,7 @@ projects:
       - { label: "CopilotKit PR #2068", url: "https://github.com/CopilotKit/CopilotKit/pull/2068" }
       - { label: "FemTracker (React Native product-safety tracker, v1.0.0)", url: "https://github.com/ChanMeng666/femtracker" }
     techStack: ["Next.js 15", "React 19", TypeScript, CopilotKit, "Python 3.12", LangGraph, Supabase, Redis]
-    status: maintained
+    status: archived
     publicSummary: |
       AI-powered women's-health companion built on CopilotKit and Python
       LangGraph, with **8 specialized agents** (Main Coordinator + Cycle

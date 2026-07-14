@@ -26,7 +26,16 @@ meta:
     valueProposition:
       identity: "AI Agent Architect · Founding-engineer · AI Educator"
       tagline: "I architect AI agents, ship full-stack platforms end-to-end, and teach others to do the same."
-      proofLine: "12 companies · 4 teaching cohorts · 72 shipped projects · Master's with Distinction"
+      # NO project count here, deliberately (2026-07-14): a raw count of
+      # projects[] is self-reported and reads as padding — the tail includes
+      # small games, scrapers and coursework, so a hiring manager who clicks
+      # through finds html-brick-game. Use an ADOPTION signal instead.
+      # Adoption signal, not a self-reported count: stars are given by other
+      # people. Measured 2026-07-14 at 487 across 87 public repos
+      # (`gh repo list ChanMeng666 --limit 300 --json isPrivate,stargazerCount`);
+      # deliberately rounded DOWN to 480+ because this line is hand-written and
+      # is NOT refreshed by `npm run refresh-metrics`, so a precise figure rots.
+      proofLine: "12 companies · 4 teaching cohorts · 480+ GitHub stars · Master's with Distinction"
 
     # ---------------------------------------------------------------------
     # WHAT I TAKE ON — the four engagement archetypes surfaced as a 2×2
@@ -54,7 +63,12 @@ meta:
         title: "CTO-class operator"
         scope: "Own the tech for an early-stage product company. Hiring plan, architecture, ship velocity."
         format: "Full-time · Equity"
-        proofProjectId: sanicle-ai-mobile
+        # No proofProjectId: every surviving Sanicle projects[] entry is
+        # archive-tier (sanicle-ai-mobile was archived in the 2026-07 curation;
+        # sanicle-ai / sanicle-platform / reveal-js-sanicle-demo are archive +
+        # historical), so a proof link would point at a project the README no
+        # longer shows. The CTO role's evidence is the live company product plus
+        # the work[].id: sanicle entry, so this role is proofUrl-only.
         proofProjectName: Sanicle
         proofUrl: https://sanicle.com
         proofWorkId: sanicle
@@ -165,12 +179,23 @@ meta:
       flagshipAwardClaim: "Outstanding Mentor Award — AI Hackathon Festival 2025"
 
     # Project ordering for README
-    # Drives the "Client & organisation work" big editorial cards. 2026-07:
-    # README reorganised onto ONE axis — provenance (who commissioned it). This
-    # list = the production systems Chan led for companies/nonprofits (all
-    # provenance:client); list order = card order. Personal/OSS work (incl. the
-    # 124★ google-news-mcp) lives in the open-source buckets below instead.
-    flagshipProjectIds: [gavigo-ire, tam-ai-ti, she-sharp, femtech-weekend-website, eatropolis-website]
+    # Drives the big editorial cards at the top of the README ("What I build").
+    # 2026-07-14: PRODUCT-FIRST ORDER. The hero used to be client work; it is
+    # now the five things Chan leads herself (google-news-mcp 125★, echook 75★,
+    # archlang, archcanvas, vitex). All five are live; four have a public repo —
+    # archcanvas is hosted with no public source. Any open-source count in
+    # featured-work.hbs must be re-checked against projects[].repoUrl.
+    # 2026-07-15: she-sharp MOVED OUT of this list into clientCardProjectIds.
+    # It is not demoted (still tier: flagship, still a big card) — it is client
+    # work by every field (provenance: client, clientOrgId: she-sharp, repo
+    # under the NZ-SheSharp org, work[] role "Senior Full Stack Engineer &
+    # Website Team Lead"), exactly the shape FemTech Weekend already had in the
+    # client section. Do NOT re-add it here.
+    # Client work is NOT demoted: clientCardProjectIds below gets
+    # the identical big-card treatment, immediately after this section, so
+    # priority is expressed by ORDER on the page, not by card size.
+    # List order = card order; it is Chan's own ordering.
+    flagshipProjectIds: [google-news-mcp, echook, archlang, archcanvas, vitex]
 
     # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
     # 2026-07). Deliberately DISTINCT from flagshipProjectIds (which is the
@@ -180,57 +205,84 @@ meta:
     # (The ChanMeng666 career-database repo itself is not a projects[] entry, so
     # it is intentionally absent here.)
     spotlightProjectIds:
-      - sunostats
-      - portfolio-v2                    # 2d-portfolio / chanmeng.org
-      - ai-programming-teaching-project
-      - archcanvas
+      - echook
       - archlang
+      - archcanvas
       - vitex                           # easy-resume
-      - echook
       - gradient-svg-generator
-    # Cleaned 2026-07-11: removed ids demoted to archive/secondary (library-os,
-    # femtracker-agent, friendscope, send-joy, chinese-redefine, ai-image-generator,
-    # douyin-mall-go-template, tencent-meeting-video-downloader).
-    openSourcePrimaryIds:
-      - github-readme-suno-cards
-      - echook
-      - portfolio-v2
       - ai-programming-teaching-project
-      - css-tower-defense
-      - vitex
-      - ai-hackathon-assistant
-      - sunostats
-      - server-google-jobs
-      - gradient-svg-generator
-      - femtech-weekend-website
+      - portfolio-v2                    # 2d-portfolio / chanmeng.org
+    # Set 2026-07-14 from Chan's own triage (7 of 53 projects marked "still
+    # investing"). Orthogonal to the display buckets: portfolio-v2 is spotlight
+    # but shows in no README table, and that is intended. Dropped vs the
+    # previous set: sunostats (still listed under craft, no longer a focus).
+    # 2026-07-14: `openSourcePrimaryIds` (a hand-maintained "Notable Open
+    # Source" list) is RETIRED. It was not dead code — it fed the
+    # `## Notable Open Source` sections of llms.txt and llms-full.txt via
+    # `data._openSourcePrimary` in scripts/build.mjs — and it had drifted out of
+    # sync with the curation below, presenting a CLIENT website
+    # (femtech-weekend-website) to LLM consumers as one of Chan's primary
+    # open-source projects, plus two projects with no public repository. That
+    # section is now DERIVED in build.mjs from the curated buckets below
+    # (flagship + aiAgent + craft, minus provenance:client and minus anything
+    # without a public repoUrl), so the human shopfront and the LLM surfaces
+    # cannot disagree again. Do not reintroduce a second hand-kept list.
     openSourceCategoryOrder: [web-apps, ai-apps, creative, ml-research, branding, games]
 
     # =========================================================================
-    # README v2 — provenance-based project buckets. The original tier-based
-    # openSourcePrimaryIds above is retained for backwards-compat; the v2
-    # templates render from the bucket lists below.
+    # README v2 — provenance-based project buckets. These lists are the single
+    # source of truth for BOTH the README shopfront and the LLM-facing
+    # "Notable Open Source" sections (see the retirement note above).
     #
-    # 2026-07 CURATION — hiring-first, "tighten hard". The README shopfront is
-    # optimised for a technical hiring manager's ~60-second skim (depth,
-    # production rigor, adoption/star proof), so it shows only the strongest
-    # ~15 projects and NO <details> overflow — every more* list is emptied and
-    # the "View all repositories →" link carries discovery. Deliberate cuts:
-    # small solo apps (chinese-redefine, ai-image-generator, send-joy,
-    # friendscope), typst-claude-skill, ai-hackathon-assistant, css-tower-defense
-    # (Te Pa Tiaki), the douyin-mall-java template, and three smaller client
-    # sites (her-waka, free-period, forward-with-her). Promoted in:
-    # douyin-mall-go-template (53★ backend proof). Rescued (kept on merit):
-    # sunostats, ai-programming-teaching-project. Everything cut stays fully
-    # present in llms.txt / llms-full.txt / dist/profile.json / LinkedIn — it is
-    # only off the human shopfront. To re-widen, repopulate the more* lists.
+    # 2026-07-14 CURATION — product-first ORDER, from Chan's own
+    # project-by-project triage. She triaged 53 projects into four decisions:
+    # 6 hero, 15 listed, 21 kept (off the shopfront), 11 archived. The 6 hero +
+    # 15 listed = the 21 projects the README shows; how those 21 are RENDERED
+    # (big card vs table row) is a layout choice made below, not part of her
+    # decision — do not restate the split in render terms, it has already
+    # contradicted the ground truth once. Two changes from the 2026-07
+    # hiring-first pass:
+    #
+    #   1. The page now OPENS with her products, not her clients (see
+    #      flagshipProjectIds above). A reader meets what she builds and
+    #      maintains before they meet who paid for it.
+    #   2. Client work keeps its OWN section, at equal visual weight: the five
+    #      client flagships (GAVIGO IRE, Tam-AI-Ti, She Sharp, FemTech Weekend,
+    #      Eatropolis) render as the SAME big editorial cards via
+    #      clientCardProjectIds; the remaining three client builds sit in a
+    #      compact table under them (commissionedProjectIds). Nothing is
+    #      demoted — priority is order on the page, not card size.
+    #
+    # 2026-07-15: she-sharp moved from the hero band to the client cards (see
+    # flagshipProjectIds note above). Same tier, same card, different section.
+    # The card split is now 5 product cards + 5 client cards (was 6 + 4); the
+    # 21 shown projects are unchanged.
+    #
+    # The shopfront shows 21 projects across four sections: 5 product cards +
+    # 5 client cards + 3 client rows + 3 AI-agent rows + 5 craft rows. Every
+    # more* list stays empty — no <details> overflow; the "View all
+    # repositories →" link carries discovery. Notable demotions: the whole
+    # ByteDance-bootcamp/coursework band (douyin-mall-go-template 53★,
+    # automotive-repair-management-system 29★, douyin-mall-java-template 24★,
+    # douyin-mall 13★) is archived despite its stars — Chan is done presenting
+    # training-camp work as evidence.
+    # Everything cut or archived stays fully present in llms-full.txt (the
+    # "More Projects (by category)" long tail) and dist/profile.json — it is
+    # only off the human shopfront. NOT llms.txt: that surface is a short
+    # top-tier summary and has never carried the archived band, by design.
+    # NOT the LinkedIn outputs either: linkedin/ mirrors only the curated
+    # 70-linkedin.yaml snapshot, which doesn't carry every archived project.
+    # To re-widen the README, repopulate the more* lists.
     # =========================================================================
-    # Retired 2026-07 — the standalone "Commissioned work" section was removed
-    # and its client projects merged into the "Client & organisation work" cards
-    # above (flagshipProjectIds), so the README has one provenance axis, not two
-    # overlapping client sections. Kept as [] for backwards-compat.
-    commissionedProjectIds:    []
-    aiAgentProjectIds:         [google-news-mcp, echook, archcanvas, vitex, ai-programming-teaching-project]
-    openSourceCraftProjectIds: [archlang, gradient-svg-generator, sunostats]
+    # Client & organisation work (templates/partials/commissioned.hbs) — all
+    # provenance:client, ordered strongest-first. clientCardProjectIds render
+    # through the SHARED card partial (templates/partials/project-cards.hbs),
+    # byte-for-byte the same treatment as flagshipProjectIds;
+    # commissionedProjectIds render as the compact table beneath them.
+    clientCardProjectIds:      [gavigo-ire, tam-ai-ti, she-sharp, femtech-weekend-website, eatropolis-website]
+    commissionedProjectIds:    [femtech-radar, gavigo-website, her-waka]
+    aiAgentProjectIds:         [server-google-jobs, ai-programming-teaching-project, ai-hackathon-assistant]
+    openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats, cloud-canals, css-tower-defense]
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []
     moreOpenSourceProjectIds:     []
@@ -388,7 +440,7 @@ meta:
       - { claim: "As CTO at FreePeriod — a Guangzhou-based public-health startup incubated at the Hong Kong University of Science and Technology (Guangzhou) Lab of Future Technology, tackling period poverty through sanitary-pad dispensers, reproductive-health education, and policy advocacy under founder Julia Zhu (朱楠) — solo-built and shipped the official website (Next.js 15 + TypeScript + Google Maps location directory + bilingual EN/中文; 53 commits, 100% solo); during my tenure the company was recognised with Best Award at Japan's 12th International Conference on Social Sciences and Humanities, Third Prize at the HKUST Sustainable Smart Living Competition, Best Social Media Award at China's inaugural FemTech Weekend Challenge, First Prize at the Shenzhen Nanshan District Philanthropic Creative Star Contest, and selections into Tencent's Technology Venture Capital Program, Tsinghua's SDG Open Innovation Marathon, and the HKUST Entrepreneurship Bridge Grant",
           source: "https://www.linkedin.com/company/free-period/",
           verifiedAt: "2026-05-16" }
-      - { claim: "ByteDance Youth Training Camp (字节跳动青训营) backend developer in cohort 'Rebirth: I Code at Youth Training Camp' (重生之我在青训营写代码), Team 115 — completed ByteDance MarsCode's 81-problem algorithm curriculum on Juejin with full per-problem write-ups (juejin-algorithm-practice, 66 commits 100% solo); placed #2-most-prolific committer (45 of 174 team commits, ~26%) on the team's Spring Boot 3 + MySQL + Redis Douyin Mall capstone behind eight contributors; voluntarily built three additional open-source artefacts beyond camp scope — a solo Vue 3 frontend (douyin-mall-frontend, 15 commits 100% solo), the Go + Gin clean-architecture TikTok Shop template featured in my Open Source primary table (douyin-mall-go-template, 27 commits 100% solo), and the Spring Boot Java counterpart (douyin-mall-java-template, 13 commits 100% solo)",
+      - { claim: "ByteDance Youth Training Camp (字节跳动青训营) backend developer in cohort 'Rebirth: I Code at Youth Training Camp' (重生之我在青训营写代码), Team 115 — completed ByteDance MarsCode's 81-problem algorithm curriculum on Juejin with full per-problem write-ups (juejin-algorithm-practice, 66 commits 100% solo); placed #2-most-prolific committer (45 of 174 team commits, ~26%) on the team's Spring Boot 3 + MySQL + Redis Douyin Mall capstone behind eight contributors; voluntarily built three additional open-source artefacts beyond camp scope — a solo Vue 3 frontend (douyin-mall-frontend, 15 commits 100% solo), the Go + Gin clean-architecture TikTok Shop template douyin-mall-go-template (27 commits 100% solo, 53 GitHub stars), and the Spring Boot Java counterpart (douyin-mall-java-template, 13 commits 100% solo)",
           source: "https://github.com/ChanMeng666/douyin-mall",
           verifiedAt: "2026-05-16" }
       - { claim: "Full-Stack Developer & lead documenter on a Lincoln University COMP693 industry-placement team building a React Native + Native Base + SQLite offline-first field-data-collection mobile app (text + photo + GPS capture, conflict-resolved sync) for CORDE — a 30+-year-old, 164-staff Canterbury-based NZ infrastructure and civil-construction company (corde.nz; head office Rolleston; tagline 'Trusted Connections'; CCNZ Canterbury Contractor of the Year + Construction Excellence National Award); reported directly to Barry Clark on CORDE's side with Kullum Ladley as Workbench API specification author; #1-most-prolific contributor on the code repository (227 of 539 commits, 42%) ahead of teammate Luke Shi / Zhenzhou Shi (28.6%), and effectively sole author of the team documentation repository (140 of 143 commits, 97.9%) preserving five months of weekly meeting records, 15 Kullum-authored API specifications, database schema iterations, UI library evaluations, and itemised contribution sub-folders",

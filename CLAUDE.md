@@ -78,6 +78,16 @@ by the loader. To find an entry: `grep -rn "id: <slug>" data/profile/`.
 - `meta.x_brand.flagshipProjectIds` (and similar id lists in 90-meta, incl.
   `spotlightProjectIds`) → `projects[].id`; update when promoting/demoting a
   project. `spotlightProjectIds` is validated by the build (typo'd id fails).
+- **Hiding a project from the README can silently delete it from the LLM
+  surfaces.** `_openSourcePrimary` — the "Notable Open Source Projects" block in
+  llms.txt and the full narrative block in llms-full.txt — is *derived* in
+  build.mjs from the README display buckets (flagship + aiAgent + craft, minus
+  `provenance: client`, minus anything with no public `repoUrl`). So removing an
+  id from `aiAgentProjectIds` / `openSourceCraftProjectIds` drops its narrative
+  from both files; the project falls back to a one-line entry in llms-full.txt's
+  long tail. If a project should stay in the LLM narrative while being off the
+  human shopfront, add it to `meta.x_brand.llmsOnlyOpenSourceIds` (build fails on
+  a typo'd id there). Check this whenever you de-list a project.
 - `events[].relatedWorkId` → `work[].id`/`volunteer[].id`;
   `events[].relatedProjectId` → `projects[].id`; `events[].relatedAwardTitle` →
   an `awards[].title` (all soft cross-refs — keep them true)

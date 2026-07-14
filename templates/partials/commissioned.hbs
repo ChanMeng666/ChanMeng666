@@ -8,11 +8,17 @@
          3-col HTML table (logo · name + org · impact + stack icons) with
          explicit colgroup widths so descriptions don't get squeezed.
      Sits below "What I build": same visual weight, second by order only.
+     COPY RULE for the <sub> line: only name an organisation that actually
+     engaged Chan (projects[].clientOrgId / entity). tam-ai-ti's client is
+     Riria (Missy) Te Kanawa personally — an independent research commission
+     (clientOrgId: whiri-ai). ASB Bank is her employer, NOT Chan's client, and
+     must never be listed as one. FemTech Weekend is `type: community`, not a
+     nonprofit — don't upgrade orgs to legal statuses the data doesn't claim.
      ═══════════════════════════════════════════════════════════════════════ -->
 
 ## Client & organisation work
 
-<sub>Production systems for a Delaware startup, an ASB Bank research pilot, a women's-health nonprofit and an Auckland food festival — all still running. I'm GAVIGO's Founding Principal Engineer and FemTech Weekend's CTO.</sub>
+<sub>Production systems for a Delaware startup, an independent Māori-led AI research commission, a FemTech organisation in China and an Auckland food festival — all still running. I'm GAVIGO's Founding Principal Engineer and FemTech Weekend's CTO.</sub>
 
 {{> project-cards _clientCardProjects}}
 {{#if _commissionedProjects.length}}

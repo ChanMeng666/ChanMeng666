@@ -287,6 +287,39 @@ data._openSourcePrimary = [
   return true;
 });
 
+// "### More Open Source Projects (by category)" in llms-full.txt — the long
+// tail: EVERY project that is not already spelled out in _openSourcePrimary
+// above, grouped by category. This is the surface that makes the README
+// curation honest: a project demoted off the human shopfront (tier=archive,
+// the ByteDance-bootcamp band, coursework, retired experiments) is still
+// discoverable here by an LLM consumer, stamped with its tier badge.
+//
+// 2026-07-14: this list was previously NEVER BUILT — templates/llms-full.txt.hbs
+// iterates `_openSourceByCategory`, but build.mjs never defined it, so the
+// section had been rendering EMPTY and the long tail was silently absent from
+// llms-full.txt. Do not delete this block without deleting the template section.
+// Ordering: meta.x_brand.openSourceCategoryOrder first, then any category not
+// named there (e.g. `tools`), so adding a new category can never drop projects.
+{
+  const primaryIds = new Set(data._openSourcePrimary.map((p) => p.id));
+  const byCat = new Map();
+  for (const p of data.projects ?? []) {
+    if (primaryIds.has(p.id)) continue;
+    const k = p.category ?? "other";
+    if (!byCat.has(k)) byCat.set(k, []);
+    byCat.get(k).push(p);
+  }
+  const order = data.meta?.x_brand?.openSourceCategoryOrder ?? [];
+  const keys = [
+    ...order.filter((k) => byCat.has(k)),
+    ...[...byCat.keys()].filter((k) => !order.includes(k)).sort(),
+  ];
+  data._openSourceByCategory = keys.map((category) => ({
+    category,
+    items: byCat.get(category),
+  }));
+}
+
 // ---------------------------------------------------------------------------
 // Tier/recency partitions: every list-type collection grouped by tier so
 // llms.txt can emit only the top tiers and llms-full.txt can stamp each entry

@@ -7,7 +7,13 @@
      Both sections must render IDENTICALLY — priority is expressed by order on
      the page, not by card size — so this markup exists exactly once. Per card:
      logo (right-float 80px) · H3 name · "For <org>" line · impact headline ·
-     18px tech-stack icons · optional related-project cross-links.
+     optional related-project cross-links.
+     2026-07-15: the 18px tech-stack icon strip (_featuredStackResolved) was
+     REMOVED from every README surface — Chan found the logo rows cluttered. The
+     data (meta.x_brand.featuredStack + meta.x_brand.techIconMap) is still in the
+     shards and still resolved by build.mjs into dist/profile.json; only the
+     rendering is gone. Do not confuse it with _contextLogo (which harnesses a
+     product supports) or _affiliationOrg (the commissioning client) — those stay.
      GOTCHA: keep the blank line between the bare <img> and the following `###`
      heading — CommonMark's type-7 HTML-block rule swallows the heading without it.
 --}}
@@ -24,10 +30,8 @@
 
 {{else}}{{briefTagline tagline}}
 
-{{/if}}{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
-{{/if}}{{#if _relatedProjects.length}}
-<sub>↳ Related: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
-{{/if}}
-<br clear="all">
+{{/if}}{{#if _relatedProjects.length}}<sub>↳ Related: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
+
+{{/if}}<br clear="all">
 
 {{/each}}

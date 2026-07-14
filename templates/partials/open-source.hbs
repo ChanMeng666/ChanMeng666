@@ -1,6 +1,10 @@
 {{!-- ═══════════════════════════════════════════════════════════════════════
      Open source — 2 visible H4 sub-buckets + <details> overflow +
      "Sound I make" Suno sub-block.
+     2026-07-15: the 18px tech-stack icon strips (_featuredStackResolved) were
+     removed from both tables — see the note in project-cards.hbs. The
+     _contextLogo strip in the AI-agents table (which harnesses a product
+     supports) is NOT a stack strip and stays.
      ═══════════════════════════════════════════════════════════════════════ --}}
 
 ## Open source & personal products
@@ -18,7 +22,7 @@
 {{#each _aiAgentProjects}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _contextLogo.length}}<br><sub>{{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"></a>{{#unless @last}} {{/unless}}{{/each}}</sub>{{/if}}</td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Related: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Related: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
   </tr>
 {{/each}}</table>
 
@@ -33,7 +37,7 @@
 {{#each _openSourceCraftProjects}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Related: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Related: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
   </tr>
 {{/each}}</table>
 

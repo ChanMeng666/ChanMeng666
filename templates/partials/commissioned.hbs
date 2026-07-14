@@ -4,9 +4,14 @@
        · clientCardProjectIds  → the SAME big editorial cards as "What I build"
          (shared partial project-cards.hbs — never copy that markup here, the
          two sections must render identically or they will drift)
-       · commissionedProjectIds → the remaining client builds, as a compact
-         3-col HTML table (logo · name + org · impact + stack icons) with
-         explicit colgroup widths so descriptions don't get squeezed.
+       · commissionedProjectIds → EMPTY as of 2026-07-15, so the compact 3-col
+         table below renders nothing. The three rows it used to carry
+         (femtech-radar, gavigo-website, her-waka) are sub-projects of client
+         cards that already cross-link them via relatedProjectIds, so the table
+         was showing them a second time with the same copy. The markup is kept,
+         guarded by {{#if _commissionedProjects.length}}, for the next client
+         build that has no parent card to hang off. See the curation note on
+         commissionedProjectIds in data/profile/90-meta.yaml.
      Sits below "What I build": same visual weight, second by order only.
      2026-07-15: she-sharp joined the card band (5 cards now, was 4) — it is
      client work by every field, same shape as femtech-weekend-website, and it
@@ -36,7 +41,7 @@
 {{#each _commissionedProjects}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="48" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _affiliationOrg}}<br><sub><a href="{{_affiliationOrg.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default _affiliationOrg.logoDark _affiliationOrg.logoLight}}"><img src="{{_affiliationOrg.logoLight}}" height="20" alt="{{_affiliationOrg.name}}"></picture> {{_affiliationOrg.name}}</a></sub>{{/if}}</td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}</td>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}</td>
   </tr>
 {{/each}}</table>
 {{/if}}

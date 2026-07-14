@@ -249,17 +249,18 @@ meta:
     #   2. Client work keeps its OWN section, at equal visual weight: the five
     #      client flagships (GAVIGO IRE, Tam-AI-Ti, She Sharp, FemTech Weekend,
     #      Eatropolis) render as the SAME big editorial cards via
-    #      clientCardProjectIds; the remaining three client builds sit in a
-    #      compact table under them (commissionedProjectIds). Nothing is
-    #      demoted — priority is order on the page, not card size.
+    #      clientCardProjectIds. Nothing is demoted — priority is order on the
+    #      page, not card size.
     #
     # 2026-07-15: she-sharp moved from the hero band to the client cards (see
     # flagshipProjectIds note above). Same tier, same card, different section.
     # The card split is now 5 product cards + 5 client cards (was 6 + 4); the
     # 21 shown projects are unchanged.
     #
-    # The shopfront shows 21 projects across four sections: 5 product cards +
-    # 5 client cards + 3 client rows + 3 AI-agent rows + 5 craft rows. Every
+    # The shopfront shows 21 projects: 5 product cards + 5 client cards +
+    # 3 AI-agent rows + 5 craft rows, plus the 3 client sub-projects that now
+    # ride as "↳ Related:" links on their parent client cards (see
+    # commissionedProjectIds below). Every
     # more* list stays empty — no <details> overflow; the "View all
     # repositories →" link carries discovery. Notable demotions: the whole
     # ByteDance-bootcamp/coursework band (douyin-mall-go-template 53★,
@@ -277,10 +278,23 @@ meta:
     # Client & organisation work (templates/partials/commissioned.hbs) — all
     # provenance:client, ordered strongest-first. clientCardProjectIds render
     # through the SHARED card partial (templates/partials/project-cards.hbs),
-    # byte-for-byte the same treatment as flagshipProjectIds;
-    # commissionedProjectIds render as the compact table beneath them.
+    # byte-for-byte the same treatment as flagshipProjectIds.
     clientCardProjectIds:      [gavigo-ire, tam-ai-ti, she-sharp, femtech-weekend-website, eatropolis-website]
-    commissionedProjectIds:    [femtech-radar, gavigo-website, her-waka]
+    # commissionedProjectIds — EMPTY BY DESIGN (2026-07-15). It used to hold
+    # [femtech-radar, gavigo-website, her-waka], rendered as a 3-row table under
+    # the client cards. All three are sub-projects of a client card that already
+    # cross-links them: gavigo-website ← gavigo-ire, her-waka ← she-sharp, and
+    # femtech-radar ← femtech-weekend-website (relatedProjectIds added
+    # 2026-07-15). The table showed them a SECOND time with the same
+    # description, so Chan cut it; the "↳ Related:" links on the parent cards
+    # are now their single appearance. They are NOT de-listed — tier/status/
+    # recency unchanged, still on the README, still in every LLM surface. This
+    # is a presentation choice, not a demotion.
+    # (An earlier empty state of this list, before the 2026-07-14 curation, is
+    # unrelated — that one meant "no commissioned work shown at all".)
+    # If a future client build has no parent card to hang off, put it here and
+    # the table in commissioned.hbs comes back automatically.
+    commissionedProjectIds:    []
     aiAgentProjectIds:         [server-google-jobs, ai-programming-teaching-project, ai-hackathon-assistant]
     openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats, cloud-canals, css-tower-defense]
     # Overflow buckets — intentionally empty (see curation note above).

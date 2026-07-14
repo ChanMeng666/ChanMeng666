@@ -275,49 +275,125 @@ Do not guess her choices. Do not proceed to Task 5 without the export.
 
 ---
 
-### Task 5: Write her decisions back into the data
+### Task 5: Write Chan's decisions back into the data
+
+Chan completed the triage. Her export is at
+`D:\Temp\claude\D--github-repository-ChanMeng666\3f4780f6-4d9e-4aac-8e06-980ab59555b6\scratchpad\decisions.json`
+— 53 items, 0 undecided: **6 hero, 15 listed, 21 kept, 11 archived**, 7 spotlight.
+
+**Her decision is a deliberate strategic pivot: product-first.** The hero cards are now her own
+products (google-news-mcp ★125, echook ★75, archlang, archcanvas, vitex) plus she-sharp. Her client
+flagships — GAVIGO IRE, Tam-AI-Ti, Eatropolis, FemTech Weekend — drop to table rows. She confirmed
+this is intentional, and asked for a dedicated **Client work table** to hold them. This means the
+README's section structure changes, not just its ID lists.
 
 **Files:**
-- Modify: `data/profile/20-projects-flagship.yaml`, `21-projects-oss-primary.yaml`, `22-projects-oss-webapps.yaml`, `23-projects-oss-more.yaml` (the `tier` / `status` / `recency` / `lastUpdated` of any project whose level changed)
-- Modify: `data/profile/90-meta.yaml` (bucket lists at lines ~173–238)
-- Modify: `scripts/build.mjs` (`README_HIDDEN_PROJECT_IDS`, a `Set` around line 193)
+- Modify: `data/profile/90-meta.yaml` — bucket lists (~L173–238) and the curation comment above them
+- Modify: `data/profile/2*-projects-*.yaml` — `tier`/`status`/`recency`/`lastUpdated` on entries whose level changed
+- Modify: `templates/partials/featured-work.hbs` — the section heading (L8) and its `<sub>` intro (L10)
+- Modify: `templates/README.md.hbs` — include the client-work partial
+- Modify: `scripts/build.mjs` — re-enable the commissioned wiring; check `README_HIDDEN_PROJECT_IDS` (~L230)
+- Reuse: `templates/partials/commissioned.hbs` — the retired partial becomes the Client work table
 
 **Interfaces:**
-- Consumes: the JSON array produced by Task 4.
+- Consumes: `decisions.json` (shape: `{id, level, spotlight, bucket}`; `bucket` is `null` on every
+  row — Chan left the optional dropdown untouched, so routing is by the table below, not by that field).
+- Produces: bucket lists the build resolves via `resolveIds()` in `scripts/build.mjs` (L169–171).
 
-Mapping from her export to the data:
+#### Level → data mapping
 
-| export `level` | shard fields | `90-meta.yaml` bucket |
+| level | shard fields | bucket list |
 |---|---|---|
-| `hero` | leave `tier` as-is unless it is `archive` (then → `flagship`) | append to `flagshipProjectIds`, **in her drag order** |
-| `listed` | `tier: primary` if currently `archive` | append to `aiAgentProjectIds` or `openSourceCraftProjectIds` per the `bucket` field |
-| `kept` | unchanged | remove from every bucket list |
-| `archived` | `tier: archive`, `status: archived`, `recency: deprecated` | remove from every bucket list |
-| `spotlight: true` (any level) | — | append to `spotlightProjectIds` |
+| `hero` (6) | `tier: flagship` if not already | `flagshipProjectIds`, **in the export's order** |
+| `listed` (15) | `tier: primary` if currently `archive` | routed per the table below |
+| `kept` (21) | unchanged | removed from every bucket list |
+| `archived` (11) | `tier: archive`, `status: archived`, `recency: deprecated` | removed from every bucket list |
+| `spotlight: true` (7) | — | `spotlightProjectIds` |
 
-Bump `lastUpdated` to `2026-07-14` on every entry whose fields changed — Chan reviewed it on the triage page, so the field's meaning is preserved.
+Bump `lastUpdated: "2026-07-14"` on every entry whose fields change. Chan reviewed each one on the
+triage page, so the field's meaning holds.
 
-- [ ] **Step 1: Apply the shard field changes**
+#### Routing the 15 `listed` projects
 
-Per-entry `Edit` calls. Do not `sed`.
+Chan chose "add a Client work table". Route by `provenance`, then `category`:
 
-- [ ] **Step 2: Rewrite the bucket lists in `90-meta.yaml`**
+**`commissionedProjectIds`** — Client work table (all `provenance: client`), 7:
+`gavigo-ire`, `tam-ai-ti`, `femtech-weekend-website`, `eatropolis-website`, `femtech-radar`,
+`gavigo-website`, `her-waka`
 
-Replace `flagshipProjectIds`, `aiAgentProjectIds`, `openSourceCraftProjectIds`, and `spotlightProjectIds` with the exported sets. Update the inline curation comment above them (currently dated 2026-07 and describing the previous pass) to describe *this* pass and its rationale — that comment is how the next reader understands the shopfront.
+**`aiAgentProjectIds`** — AI agents & tooling table, 3:
+`server-google-jobs`, `ai-programming-teaching-project`, `ai-hackathon-assistant`
 
-Leave `commissionedProjectIds` and the `more*` lists as `[]` unless her export requires otherwise.
+**`openSourceCraftProjectIds`** — Craft & open-source products table, 5:
+`gradient-svg-generator`, `github-readme-suno-cards`, `sunostats`, `cloud-canals`, `css-tower-defense`
 
-- [ ] **Step 3: Sync `README_HIDDEN_PROJECT_IDS` in `scripts/build.mjs`**
+7 + 3 + 5 = 15. Every `listed` id lands in exactly one table; no id appears in two lists.
 
-Any id she marked `kept` or `archived` that is still named in that Set can stay (belt-and-braces). Any id she marked `hero` or `listed` **must not** be in it, or it will be silently suppressed from the README despite bucket membership.
+#### `spotlightProjectIds` (7)
 
-- [ ] **Step 4: Verify every bucket id resolves**
+`echook`, `archlang`, `archcanvas`, `vitex`, `gradient-svg-generator`,
+`ai-programming-teaching-project`, `portfolio-v2`
+
+Note `portfolio-v2` is `spotlight: true` but `level: kept` — that is coherent and intended: spotlight
+is an orthogonal "still investing" axis, not a display level. It goes in `spotlightProjectIds` and in
+no display bucket.
+
+- [ ] **Step 1: Rewrite the bucket lists in `90-meta.yaml`**
+
+Set `flagshipProjectIds` to the 6 hero ids **in export order**: `google-news-mcp`, `echook`,
+`archlang`, `archcanvas`, `she-sharp`, `vitex`. Set `commissionedProjectIds`,
+`aiAgentProjectIds`, `openSourceCraftProjectIds`, and `spotlightProjectIds` per the lists above.
+Leave the `more*` lists as `[]`.
+
+Replace the inline curation comment (currently describing the 2026-07 hiring-first pass) with one
+describing THIS pass: product-first hero, client work demoted to its own table, and why. That comment
+is how the next reader understands the shopfront — a stale comment is worse than none.
+
+- [ ] **Step 2: Apply the shard field changes**
+
+Per-entry `Edit` calls, never sed. The 11 `archived` ids get `tier: archive` + `status: archived` +
+`recency: deprecated`: `douyin-mall-go-template`, `automotive-repair-management-system`,
+`douyin-mall-java-template`, `library-os`, `douyin-mall`, `juejin-algorithm-practice`,
+`ai-image-generator`, `douyin-mall-frontend`, `femtracker-agent`, `otherworld-god-farmer`,
+`esol-learning-platform`.
+
+Note several of these were already archived by Task 2 — verify before editing and skip the no-ops.
+`douyin-mall-go-template` (★53), `douyin-mall-java-template` (★24), `douyin-mall` (★13),
+`douyin-mall-frontend` (★5) and `automotive-repair-management-system` (★29) are the notable
+demotions: Chan is retiring the ByteDance-bootcamp and coursework band despite the stars.
+
+The 6 `hero` ids must be `tier: flagship`. The 15 `listed` ids must not be `tier: archive`.
+
+- [ ] **Step 3: Re-enable the Client work table**
+
+`templates/partials/commissioned.hbs` exists but is no longer included by `templates/README.md.hbs`,
+and `scripts/build.mjs` still wires `data._commissionedProjects` (L169) and strips hidden ids from it
+(L240). Re-include the partial in `README.md.hbs` — place it AFTER `{{> featured-work}}` and before
+`{{> open-source}}`, with a `{{> monogram-divider}}` between sections to match the existing rhythm.
+
+Read the partial and confirm its heading and `<sub>` intro say what this table now is: client and
+organisation work, delivered end-to-end. Update the copy if it does not.
+
+Check `build.mjs` L247–255: there is a hard-coded `COMMISSIONED_PROMOTE_IDS` that promotes ids from
+the commissioned overflow into the visible table. With `moreCommissionedProjectIds` empty it should be
+inert — verify that, and remove the dead promotion code if it is no longer reachable.
+
+- [ ] **Step 4: Retitle the hero section**
+
+`templates/partials/featured-work.hbs` L8 reads `## Client & organisation work` and L10 reads
+`<sub>Production systems I led end-to-end for companies and nonprofits.</sub>`. That heading is now
+false — 5 of the 6 hero cards are Chan's own products.
+
+Retitle it to describe what the section actually holds. The heading and its one-line intro must be
+honest about the mix (her own products, plus She Sharp). Do not invent a marketing slogan; state what
+the reader is looking at. Keep the blank line between the `<img>` and the `###` heading (a bare `<img>`
+directly above a `###` breaks heading rendering via CommonMark's type-7 HTML block rule).
+
+- [ ] **Step 5: Verify every bucket id resolves and no id is double-listed**
 
 ```bash
 npm run validate
 ```
-
-Expected: PASS. The build fails on a typo'd id in `spotlightProjectIds` and on a broken `collaborators[].currentOrgId`; a typo in the other bucket lists silently renders nothing, so also run:
 
 ```bash
 node --input-type=module -e '
@@ -325,36 +401,48 @@ import { loadProfile } from "./scripts/lib/load-profile.mjs";
 const p = loadProfile();
 const ids = new Set(p.projects.map(x => x.id));
 const b = p.meta.x_brand;
-for (const key of ["flagshipProjectIds","aiAgentProjectIds","openSourceCraftProjectIds","spotlightProjectIds","commissionedProjectIds","moreAiAgentProjectIds","moreOpenSourceProjectIds","moreCommissionedProjectIds","moreCreativeProjectIds"]) {
-  const bad = (b[key] || []).filter(i => !ids.has(i));
-  console.log(key.padEnd(30), bad.length ? "BROKEN -> " + bad.join(", ") : "ok");
+const KEYS = ["flagshipProjectIds","commissionedProjectIds","aiAgentProjectIds","openSourceCraftProjectIds","spotlightProjectIds","moreAiAgentProjectIds","moreOpenSourceProjectIds","moreCommissionedProjectIds","moreCreativeProjectIds"];
+for (const k of KEYS) {
+  const bad = (b[k] || []).filter(i => !ids.has(i));
+  console.log(k.padEnd(30), bad.length ? "BROKEN -> " + bad.join(", ") : "ok (" + (b[k]||[]).length + ")");
 }
+const DISPLAY = ["flagshipProjectIds","commissionedProjectIds","aiAgentProjectIds","openSourceCraftProjectIds"];
+const seen = new Map();
+for (const k of DISPLAY) for (const i of (b[k] || [])) seen.set(i, [...(seen.get(i) || []), k]);
+const dup = [...seen].filter(([, ks]) => ks.length > 1);
+console.log(dup.length ? "DOUBLE-LISTED: " + JSON.stringify(dup) : "ok: no id in two display buckets");
+const byId = new Map(p.projects.map(x => [x.id, x]));
+const shown = DISPLAY.flatMap(k => b[k] || []);
+const bad = shown.map(i => byId.get(i)).filter(x => x && (x.tier === "archive" || x.status === "archived"));
+console.log(bad.length ? "ARCHIVED BUT SHOWN: " + bad.map(x => x.id).join(", ") : "ok: nothing archived is in a display bucket");
 '
 ```
 
-Expected: `ok` on every line.
+Expected: every list `ok`, no double-listing, nothing archived in a display bucket.
 
-- [ ] **Step 5: Commit the shards**
+- [ ] **Step 6: Commit**
 
 ```bash
-git add data/profile/ scripts/build.mjs
-git commit -m "feat(data): re-curate public project set per 2026-07 triage"
+git add data/profile/ templates/ scripts/build.mjs
+git commit -m "feat(data): product-first project curation — new hero set + client work table"
 ```
 
 ---
 
 ### Task 6: Reconcile the references that point *at* the highlight set
 
-Changing which projects are highlighted breaks the copy that names them. These live in `90-meta.yaml` and are not auto-derived.
+Changing which projects are highlighted breaks the copy that names them. These are hand-written and
+not auto-derived, so nothing will fail loudly — they will just quietly lie.
 
 **Files:**
-- Modify: `data/profile/90-meta.yaml` — `valueProposition.proofLine` (line ~29), `engagementRoles[].proofProjectId` / `proofProjectName` / `proofUrl` (lines ~38–68)
-- Check: `cv/sections/*.typ`, `cv/build-llms-txt.mjs` (CV prose is hand-curated Typst and hardcodes some copy — facts live in three places)
-- Check: `data/profile/70-linkedin.yaml` (LinkedIn Projects copy is curated, mirrors by name)
+- Modify: `data/profile/90-meta.yaml` — `valueProposition.proofLine` (~L29), `engagementRoles[]` (~L38–68), `faq` (~L91–101)
+- Check: `cv/sections/*.typ`, `cv/build-llms-txt.mjs` — CV prose is hand-curated Typst and hardcodes copy
+- Check: `data/profile/70-linkedin.yaml` — LinkedIn copy is curated and mirrors by name
 
 - [ ] **Step 1: Recount the projects and fix `proofLine`**
 
-`proofLine` currently reads `"12 companies · 4 teaching cohorts · 72 shipped projects · Master's with Distinction"`. The count is stale — the data holds 103 entries after Task 1.
+`proofLine` reads `"12 companies · 4 teaching cohorts · 72 shipped projects · Master's with Distinction"`.
+The count is stale — the data holds 103 entries.
 
 ```bash
 node --input-type=module -e '
@@ -367,29 +455,52 @@ console.log("work entries   ", p.work.length);
 '
 ```
 
-Pick the number the line should honestly claim — "shipped projects" most defensibly means every entry that actually shipped, including archived ones (they did ship). Ask Chan which framing she wants if the honest number differs materially from 72. Update the line.
+"Shipped projects" most defensibly means every entry that actually shipped — archived ones did ship.
+Update the number to the honest total. If the honest number differs materially from 72 in a way that
+changes the line's meaning, report it rather than silently picking a framing.
 
-- [ ] **Step 2: Verify each `engagementRoles[].proofProjectId` still points at a highlighted project**
+- [ ] **Step 2: Re-point `engagementRoles[].proofProjectId`**
 
-The four roles cite `gavigo-ire`, `tam-ai-ti`, `sanicle-ai-mobile`, and `ai-programming-teaching-project`. Note `sanicle-ai-mobile` is one of the 15 entries archived in Task 2 — a role's proof link would then point at a demoted, GitHub-archived project. Re-point it at a project Chan marked `hero` or `listed` for that role's archetype (the CTO-class-operator role has other Sanicle evidence available; check `work[].id: sanicle` and the Sanicle projects).
+The four roles cite `gavigo-ire`, `tam-ai-ti`, `sanicle-ai-mobile`, `ai-programming-teaching-project`.
 
-- [ ] **Step 3: Verify no dangling proof ids**
+- `sanicle-ai-mobile` is **archived** (Task 2) — a role's proof link pointing at a demoted,
+  GitHub-archived project is broken evidence. Re-point the CTO-class-operator role. Look at what
+  Sanicle evidence survives: `grep -n "sanicle" data/profile/2*-projects-*.yaml` and the
+  `work[].id: sanicle` entry. If no Sanicle project survives in a display bucket, use `proofUrl`
+  (https://sanicle.com) and drop `proofProjectId` rather than linking a demoted entry.
+- `gavigo-ire` and `tam-ai-ti` are still shown (Client work table), so those two roles still resolve
+  to something a reader can click. Confirm, don't assume.
+
+A `proofProjectId` may point at any project the README still shows — hero or table row. It may NOT
+point at a `kept` or `archived` project.
+
+- [ ] **Step 3: Check the FAQ answers for demoted projects**
+
+`meta.x_brand.faq` names GAVIGO IRE and She Sharp in "What is Chan's biggest shipped result?". Both
+survive on the README, so that answer stands. Read the other four answers and confirm none of them
+leans on a project Chan just demoted.
+
+- [ ] **Step 4: Verify no proof reference dangles or points at a hidden project**
 
 ```bash
 node --input-type=module -e '
 import { loadProfile } from "./scripts/lib/load-profile.mjs";
 const p = loadProfile();
 const byId = new Map(p.projects.map(x => [x.id, x]));
-for (const r of p.meta.x_brand.engagementRoles) {
+const b = p.meta.x_brand;
+const shown = new Set([...(b.flagshipProjectIds||[]), ...(b.commissionedProjectIds||[]), ...(b.aiAgentProjectIds||[]), ...(b.openSourceCraftProjectIds||[])]);
+for (const r of b.engagementRoles) {
+  if (!r.proofProjectId) { console.log(r.id.padEnd(30), "(no proofProjectId — proofUrl only)"); continue; }
   const proj = byId.get(r.proofProjectId);
-  console.log(r.id.padEnd(30), r.proofProjectId.padEnd(34), proj ? proj.tier + "/" + proj.status : "!! MISSING");
+  const state = !proj ? "!! MISSING" : !shown.has(r.proofProjectId) ? "!! NOT ON README (" + proj.tier + "/" + proj.status + ")" : "ok (" + proj.tier + ")";
+  console.log(r.id.padEnd(30), r.proofProjectId.padEnd(34), state);
 }
 '
 ```
 
-Expected: every role resolves, and none resolves to a project that is `archive`/`archived`.
+Expected: every role either `ok` or explicitly `proofUrl`-only. No `MISSING`, no `NOT ON README`.
 
-- [ ] **Step 4: Validate and commit**
+- [ ] **Step 5: Validate and commit**
 
 ```bash
 npm run validate
@@ -412,13 +523,7 @@ npm run check
 
 Expected: schema PASS, linkedin-sync PASS, build succeeds, asset audit clean.
 
-- [ ] **Step 2: Read the generated README and confirm it matches her decisions**
-
-```bash
-grep -nE '^#{2,3} |^\| \[' README.md | head -60
-```
-
-Confirm: every project she marked `hero` appears as a card **in her order**; every `listed` one appears in the right table with its star count; **nothing** she marked `kept` or `archived` appears anywhere in README.md.
+- [ ] **Step 2: Confirm the README matches Chan's decisions exactly**
 
 ```bash
 node --input-type=module -e '
@@ -426,44 +531,65 @@ import fs from "node:fs";
 import { loadProfile } from "./scripts/lib/load-profile.mjs";
 const readme = fs.readFileSync("README.md", "utf8");
 const p = loadProfile();
-const leaked = p.projects.filter(x => (x.tier === "archive" || x.status === "archived") && new RegExp("\\\\b" + x.id + "\\\\b").test(readme));
-console.log(leaked.length ? "LEAKED into README: " + leaked.map(x => x.id).join(", ") : "OK: no archived project in README");
+const D = JSON.parse(fs.readFileSync("D:/Temp/claude/D--github-repository-ChanMeng666/3f4780f6-4d9e-4aac-8e06-980ab59555b6/scratchpad/decisions.json", "utf8"));
+const byId = new Map(p.projects.map(x => [x.id, x]));
+const hit = (id) => { const x = byId.get(id); if (!x) return false; const u = x.url || x.repoUrl; return (u && readme.includes(u)) || readme.includes(x.name); };
+let fail = 0;
+for (const d of D) {
+  const on = hit(d.id);
+  const want = d.level === "hero" || d.level === "listed";
+  if (on !== want) { console.log("MISMATCH", d.id.padEnd(34), "level=" + d.level.padEnd(9), "onReadme=" + on); fail++; }
+}
+console.log(fail ? fail + " MISMATCHES" : "OK: README shows exactly the hero+listed set, nothing else");
 '
 ```
 
-Expected: `OK: no archived project in README`.
+Expected: `OK`. A `kept` or `archived` project appearing on the README is a failure; a `hero` or
+`listed` project missing from it is a failure.
 
-- [ ] **Step 3: Confirm the archived projects are still present downstream**
+- [ ] **Step 3: Confirm hero card order matches her drag order**
+
+```bash
+grep -n "^### \[" README.md | head -10
+```
+
+Expected: the first six `###` cards, in this order: google-news-mcp, echook, archlang, archcanvas,
+she-sharp, vitex (rendered under their display names).
+
+- [ ] **Step 4: Confirm archived projects are still present downstream**
 
 ```bash
 node -e '
 const d = require("./dist/profile.json");
-const arc = d.projects.filter(x => x.tier === "archive");
-console.log("archive-tier entries still in dist/profile.json:", arc.length);
+console.log("archive-tier entries still in dist/profile.json:", d.projects.filter(x => x.tier === "archive").length);
 '
 grep -c "library-os" llms-full.txt
 ```
 
-Expected: a non-zero archive count, and `library-os` still present in `llms-full.txt` — demoted, not deleted, exactly as the spec requires.
+Expected: a non-zero archive count, and `library-os` still in `llms-full.txt` — demoted, not deleted.
 
-- [ ] **Step 4: Freshness gate**
+- [ ] **Step 5: Freshness gate**
 
 ```bash
 npm run check:freshness -- --strict
+npm run check:cv -- --strict
 ```
 
-Expected: PASS. If an entry is overdue, re-read it and run `npm run reviewed -- "<key>" --apply` — never hand-edit `lastUpdated` in bulk.
+Expected: PASS. If an entry is overdue, re-read it and run `npm run reviewed -- "<key>" --apply` —
+never hand-edit `lastUpdated` in bulk.
 
-- [ ] **Step 5: Commit shards and generated outputs together**
+- [ ] **Step 6: Commit shards and generated outputs together**
 
 ```bash
 git add -A
-git commit -m "chore(readme): rebuild from data/ after project re-curation"
+git commit -m "chore(readme): rebuild from data/ after product-first re-curation"
 ```
 
-- [ ] **Step 6: Report to Chan**
+- [ ] **Step 7: Report**
 
-State plainly: how many projects the README now shows (was 14), which were promoted, which were demoted, the new honest project count in `proofLine`, and anything the plan hit that she needs to decide.
+State plainly: how many projects the README now shows (was 14), the new hero order, what moved into
+the Client work table, what was demoted to archive (especially the starred ByteDance-bootcamp band),
+the new honest project count in `proofLine`, and anything that needs Chan's decision.
 
 ---
 

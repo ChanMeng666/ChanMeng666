@@ -1,18 +1,21 @@
 {{!-- ═══════════════════════════════════════════════════════════════════════
-     What I build — big editorial cards (vertical stack) for the six projects
-     Chan leads herself. Sourced from flagshipProjectIds. Verified 2026-07-14
-     against the shards: all six are live (status production/active/live); five
-     have a public repoUrl (google-news-mcp, echook, archlang, she-sharp under
-     the NZ-SheSharp org, vitex) and archcanvas is hosted with no public repo.
-     If you change the sub line, re-check those fields — it has shipped a false
-     open-source count twice. Card markup lives in the shared project-cards.hbs
-     partial, which
+     What I build — big editorial cards (vertical stack) for the five projects
+     Chan owns herself (provenance: personal). Sourced from flagshipProjectIds.
+     Verified 2026-07-15 against the shards: all five are live (status
+     production/active/live); four have a public repoUrl (google-news-mcp,
+     echook, archlang, vitex→easy-resume) and archcanvas is hosted with no
+     public repo — hence "four are open source", not five.
+     If you change the sub line, RE-READ those fields — this line has shipped a
+     false open-source count three times. she-sharp used to be here; it is
+     client work (provenance: client, NZ-SheSharp org repo) and now renders in
+     commissioned.hbs. No carve-out clause belongs in this line any more.
+     Card markup lives in the shared project-cards.hbs partial, which
      commissioned.hbs renders too — the client cards are the SAME size and
      shape; product-first is expressed by order on the page, not card weight.
      ═══════════════════════════════════════════════════════════════════════ --}}
 
 ## What I build
 
-<sub>Developer tools I build end to end — an MCP server, a Claude Code hook runtime, a language with a live playground — plus shipped products for design, careers and the She Sharp tech community. All six are live; five are open source.</sub>
+<sub>Products I own end to end — an MCP server, a hooks plugin for Claude Code, Cursor and Codex, a floor-plan language with a live playground, an AI architect, and an AI career agent. All five are live; four are open source.</sub>
 
 {{> project-cards _flagshipProjects}}

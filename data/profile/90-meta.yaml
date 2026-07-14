@@ -181,17 +181,21 @@ meta:
     # Project ordering for README
     # Drives the big editorial cards at the top of the README ("What I build").
     # 2026-07-14: PRODUCT-FIRST ORDER. The hero used to be client work; it is
-    # now the six things Chan leads herself (google-news-mcp 125★, echook 75★,
-    # archlang, archcanvas, she-sharp, vitex). All six are live; five have a
-    # public repo — archcanvas is hosted with no public source, and she-sharp's
-    # repo lives under the NZ-SheSharp org (provenance: client), so README copy
-    # here must not claim sole ownership of it. Any open-source count in
+    # now the five things Chan leads herself (google-news-mcp 125★, echook 75★,
+    # archlang, archcanvas, vitex). All five are live; four have a public repo —
+    # archcanvas is hosted with no public source. Any open-source count in
     # featured-work.hbs must be re-checked against projects[].repoUrl.
+    # 2026-07-15: she-sharp MOVED OUT of this list into clientCardProjectIds.
+    # It is not demoted (still tier: flagship, still a big card) — it is client
+    # work by every field (provenance: client, clientOrgId: she-sharp, repo
+    # under the NZ-SheSharp org, work[] role "Senior Full Stack Engineer &
+    # Website Team Lead"), exactly the shape FemTech Weekend already had in the
+    # client section. Do NOT re-add it here.
     # Client work is NOT demoted: clientCardProjectIds below gets
     # the identical big-card treatment, immediately after this section, so
     # priority is expressed by ORDER on the page, not by card size.
     # List order = card order; it is Chan's own ordering.
-    flagshipProjectIds: [google-news-mcp, echook, archlang, archcanvas, she-sharp, vitex]
+    flagshipProjectIds: [google-news-mcp, echook, archlang, archcanvas, vitex]
 
     # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
     # 2026-07). Deliberately DISTINCT from flagshipProjectIds (which is the
@@ -242,15 +246,20 @@ meta:
     #   1. The page now OPENS with her products, not her clients (see
     #      flagshipProjectIds above). A reader meets what she builds and
     #      maintains before they meet who paid for it.
-    #   2. Client work keeps its OWN section, at equal visual weight: the four
-    #      client flagships (GAVIGO IRE, Tam-AI-Ti, FemTech Weekend,
+    #   2. Client work keeps its OWN section, at equal visual weight: the five
+    #      client flagships (GAVIGO IRE, Tam-AI-Ti, She Sharp, FemTech Weekend,
     #      Eatropolis) render as the SAME big editorial cards via
     #      clientCardProjectIds; the remaining three client builds sit in a
     #      compact table under them (commissionedProjectIds). Nothing is
     #      demoted — priority is order on the page, not card size.
     #
-    # The shopfront shows 21 projects across four sections: 6 product cards +
-    # 4 client cards + 3 client rows + 3 AI-agent rows + 5 craft rows. Every
+    # 2026-07-15: she-sharp moved from the hero band to the client cards (see
+    # flagshipProjectIds note above). Same tier, same card, different section.
+    # The card split is now 5 product cards + 5 client cards (was 6 + 4); the
+    # 21 shown projects are unchanged.
+    #
+    # The shopfront shows 21 projects across four sections: 5 product cards +
+    # 5 client cards + 3 client rows + 3 AI-agent rows + 5 craft rows. Every
     # more* list stays empty — no <details> overflow; the "View all
     # repositories →" link carries discovery. Notable demotions: the whole
     # ByteDance-bootcamp/coursework band (douyin-mall-go-template 53★,
@@ -270,7 +279,7 @@ meta:
     # through the SHARED card partial (templates/partials/project-cards.hbs),
     # byte-for-byte the same treatment as flagshipProjectIds;
     # commissionedProjectIds render as the compact table beneath them.
-    clientCardProjectIds:      [gavigo-ire, tam-ai-ti, femtech-weekend-website, eatropolis-website]
+    clientCardProjectIds:      [gavigo-ire, tam-ai-ti, she-sharp, femtech-weekend-website, eatropolis-website]
     commissionedProjectIds:    [femtech-radar, gavigo-website, her-waka]
     aiAgentProjectIds:         [server-google-jobs, ai-programming-teaching-project, ai-hackathon-assistant]
     openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats, cloud-canals, css-tower-defense]

@@ -166,6 +166,15 @@ for (let i = 0; i < data._flagshipProjects.length; i += 2) {
 const resolveIds = (ids) =>
   (ids ?? []).map((id) => data._index.projects[id]).filter(Boolean);
 
+// Client & organisation work leads with the SAME big editorial cards as the
+// "What I build" hero (shared partial: templates/partials/project-cards.hbs) —
+// clientCardProjectIds are cards, commissionedProjectIds are the table below.
+data._clientCardProjects       = resolveIds(data.meta?.x_brand?.clientCardProjectIds);
+for (const p of data._clientCardProjects) {
+  const ids = p.relatedProjectIds ?? (p.relatedProjectId ? [p.relatedProjectId] : []);
+  p._relatedProjects = ids.map((id) => data._index.projects[id]).filter(Boolean);
+}
+
 data._commissionedProjects     = resolveIds(data.meta?.x_brand?.commissionedProjectIds);
 data._aiAgentProjects          = resolveIds(data.meta?.x_brand?.aiAgentProjectIds);
 data._openSourceCraftProjects  = resolveIds(data.meta?.x_brand?.openSourceCraftProjectIds);
@@ -237,6 +246,7 @@ const README_HIDDEN_PROJECT_IDS = new Set([]);
 const stripHidden = (arr) =>
   arr.filter((p) => !README_HIDDEN_PROJECT_IDS.has(p.id));
 
+data._clientCardProjects      = stripHidden(data._clientCardProjects);
 data._commissionedProjects    = stripHidden(data._commissionedProjects);
 data._aiAgentProjects         = stripHidden(data._aiAgentProjects);
 data._openSourceCraftProjects = stripHidden(data._openSourceCraftProjects);
@@ -501,6 +511,7 @@ const normalizeContextLogo = (raw) => {
 
 const visibleProjects = [
   ...data._flagshipProjects,
+  ...data._clientCardProjects,
   ...data._commissionedProjects,
   ...data._aiAgentProjects,
   ...data._openSourceCraftProjects,

@@ -1,34 +1,15 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     What I build — big editorial cards (vertical stack) for the six projects
-     Chan leads herself. Sourced from flagshipProjectIds: five of her own
-     open-source products plus She Sharp (the charity platform she built and
-     runs). Client work has its own table (see commissioned.hbs). Per-card:
-     logo (right-float 80px) · H3 name · "For <org>" line · impact · 18px
-     tech-stack icons.
+     What I build — big editorial cards (vertical stack) for the six products
+     Chan owns. Sourced from flagshipProjectIds: four open-source repos
+     (google-news-mcp, echook, archlang, vitex), ArchCanvas (a hosted product
+     with no public repo) and She Sharp (the charity platform she built and
+     runs). Card markup lives in the shared project-cards.hbs partial, which
+     commissioned.hbs renders too — the client cards are the SAME size and
+     shape; product-first is expressed by order on the page, not card weight.
      ═══════════════════════════════════════════════════════════════════════ -->
 
 ## What I build
 
-<sub>My own open-source products, plus She Sharp — the platform I built and run for the charity. All shipped, all still maintained. Client work is in the next section.</sub>
+<sub>Six products I build and own — four open-source repos, plus ArchCanvas (hosted, no public repo) and She Sharp (the platform I built and run for the charity). All live, all still maintained. Client and organisation work is the next section, in the same cards.</sub>
 
-{{#each _flagshipProjects}}{{#if logo}}<img src="{{logo}}" align="right" height="80" alt="{{name}}" title="{{name}}">
-
-{{/if}}
-### [{{briefTagline name}}]({{default url repoUrl}})
-
-{{#if _affiliationOrg}}<sub>For <a href="{{_affiliationOrg.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default _affiliationOrg.logoDark _affiliationOrg.logoLight}}"><img src="{{_affiliationOrg.logoLight}}" height="22" alt="{{_affiliationOrg.name}}"></picture> {{_affiliationOrg.name}}</a>{{#if _affiliationOrg.context}} — {{_affiliationOrg.context}}{{/if}}.</sub>
-{{else}}{{#if _contextLogo.length}}<sub>For {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="22" alt="{{alt}}" style="vertical-align:middle"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}.</sub>
-{{else}}{{#if entity}}<sub>{{entity}}.</sub>
-{{/if}}{{/if}}{{/if}}
-
-{{#if narrative.impactHeadline}}{{narrative.impactHeadline}}
-
-{{else}}{{briefTagline tagline}}
-
-{{/if}}{{#if _featuredStackResolved.length}}{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}" style="vertical-align:middle"> {{/each}}
-{{/if}}{{#if _relatedProjects.length}}
-<sub>↳ Related: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
-{{/if}}
-<br clear="all">
-
-{{/each}}
+{{> project-cards _flagshipProjects}}

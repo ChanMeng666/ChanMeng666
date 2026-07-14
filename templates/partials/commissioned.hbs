@@ -1,15 +1,21 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
      Client & organisation work — the systems Chan shipped for companies and
-     nonprofits, sourced from commissionedProjectIds (all provenance:client).
-     Sits below the "What I build" hero cards: this is the who-hired-her axis.
-     3-col HTML table (logo · name + org · impact + stack icons) with explicit
-     colgroup widths so descriptions don't get squeezed.
+     nonprofits (all provenance:client). Two bands, one section:
+       · clientCardProjectIds  → the SAME big editorial cards as "What I build"
+         (shared partial project-cards.hbs — never copy that markup here, the
+         two sections must render identically or they will drift)
+       · commissionedProjectIds → the remaining client builds, as a compact
+         3-col HTML table (logo · name + org · impact + stack icons) with
+         explicit colgroup widths so descriptions don't get squeezed.
+     Sits below "What I build": same visual weight, second by order only.
      ═══════════════════════════════════════════════════════════════════════ -->
 
 ## Client & organisation work
 
-<sub>Systems I delivered end-to-end for companies and nonprofits — scoped, built, shipped, handed over.</sub>
+<sub>Systems I scoped, built and shipped for companies and nonprofits. The four below are live and still mine to run — I'm GAVIGO's Founding Principal Engineer, FemTech Weekend's CTO, and I maintain Tam-AI-Ti and Eatropolis. Smaller client builds follow in the table.</sub>
 
+{{> project-cards _clientCardProjects}}
+{{#if _commissionedProjects.length}}
 <table>
   <colgroup>
     <col style="width:72px">
@@ -22,6 +28,7 @@
     <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _featuredStackResolved.length}}<br>{{#each _featuredStackResolved}}<img src="{{src}}" height="18" alt="{{name}}" title="{{name}}"> {{/each}}{{/if}}</td>
   </tr>
 {{/each}}</table>
+{{/if}}
 
 {{#if _moreCommissionedProjects.length}}
 <details>

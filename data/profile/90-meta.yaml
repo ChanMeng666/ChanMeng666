@@ -165,14 +165,15 @@ meta:
       flagshipAwardClaim: "Outstanding Mentor Award — AI Hackathon Festival 2025"
 
     # Project ordering for README
-    # Drives the big editorial cards at the top of the README. 2026-07-14:
-    # PRODUCT-FIRST PIVOT. The hero used to be client work; it is now the six
-    # things Chan built and owns — five of her own open-source products
-    # (google-news-mcp 125★, echook 75★, archlang, archcanvas, vitex) plus
-    # she-sharp, the charity platform she built and still runs. Client work is
-    # not dropped: it moved to its own Client work table
-    # (commissionedProjectIds), so a reader sees "what she makes" before "who
-    # hired her". List order = card order; it is Chan's own ordering.
+    # Drives the big editorial cards at the top of the README ("What I build").
+    # 2026-07-14: PRODUCT-FIRST ORDER. The hero used to be client work; it is
+    # now the six things Chan built and owns — four open-source repos
+    # (google-news-mcp 125★, echook 75★, archlang, vitex), archcanvas (a hosted
+    # product, no public repo) and she-sharp (the charity platform she built and
+    # still runs). Client work is NOT demoted: clientCardProjectIds below gets
+    # the identical big-card treatment, immediately after this section, so
+    # priority is expressed by ORDER on the page, not by card size.
+    # List order = card order; it is Chan's own ordering.
     flagshipProjectIds: [google-news-mcp, echook, archlang, archcanvas, she-sharp, vitex]
 
     # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
@@ -213,32 +214,40 @@ meta:
     # openSourcePrimaryIds above is retained for backwards-compat; the v2
     # templates render from the bucket lists below.
     #
-    # 2026-07-14 CURATION — product-first, from Chan's own project-by-project
-    # triage (53 projects: 6 hero, 15 listed, 21 kept off the shopfront, 11
-    # archived). Two changes from the 2026-07 hiring-first pass:
+    # 2026-07-14 CURATION — product-first ORDER, from Chan's own
+    # project-by-project triage (53 projects: 10 hero cards, 11 listed, 21 kept
+    # off the shopfront, 11 archived). Two changes from the 2026-07
+    # hiring-first pass:
     #
-    #   1. The hero is now HER PRODUCTS, not her clients (see
+    #   1. The page now OPENS with her products, not her clients (see
     #      flagshipProjectIds above). A reader meets what she builds and
     #      maintains before they meet who paid for it.
-    #   2. Client work gets its OWN table again — commissionedProjectIds is
-    #      repopulated and templates/partials/commissioned.hbs is re-included in
-    #      the README. The client flagships (GAVIGO IRE, Tam-AI-Ti, Eatropolis,
-    #      FemTech Weekend) are demoted from cards to table rows, not removed.
+    #   2. Client work keeps its OWN section, at equal visual weight: the four
+    #      client flagships (GAVIGO IRE, Tam-AI-Ti, FemTech Weekend,
+    #      Eatropolis) render as the SAME big editorial cards via
+    #      clientCardProjectIds; the remaining three client builds sit in a
+    #      compact table under them (commissionedProjectIds). Nothing is
+    #      demoted — priority is order on the page, not card size.
     #
-    # The shopfront shows 21 projects across four sections: 6 hero cards + 7
-    # client rows + 3 AI-agent rows + 5 craft rows. Every more* list stays
-    # empty — no <details> overflow; the "View all repositories →" link carries
-    # discovery. Notable demotions: the whole ByteDance-bootcamp/coursework band
-    # (douyin-mall-go-template 53★, automotive-repair-management-system 29★,
-    # douyin-mall-java-template 24★, douyin-mall 13★) is archived despite its
-    # stars — Chan is done presenting training-camp work as evidence.
+    # The shopfront shows 21 projects across four sections: 6 product cards +
+    # 4 client cards + 3 client rows + 3 AI-agent rows + 5 craft rows. Every
+    # more* list stays empty — no <details> overflow; the "View all
+    # repositories →" link carries discovery. Notable demotions: the whole
+    # ByteDance-bootcamp/coursework band (douyin-mall-go-template 53★,
+    # automotive-repair-management-system 29★, douyin-mall-java-template 24★,
+    # douyin-mall 13★) is archived despite its stars — Chan is done presenting
+    # training-camp work as evidence.
     # Everything cut or archived stays fully present in llms.txt /
     # llms-full.txt / dist/profile.json / LinkedIn — it is only off the human
     # shopfront. To re-widen, repopulate the more* lists.
     # =========================================================================
-    # Client work table (templates/partials/commissioned.hbs) — all
-    # provenance:client, ordered strongest-first.
-    commissionedProjectIds:    [gavigo-ire, tam-ai-ti, femtech-weekend-website, eatropolis-website, femtech-radar, gavigo-website, her-waka]
+    # Client & organisation work (templates/partials/commissioned.hbs) — all
+    # provenance:client, ordered strongest-first. clientCardProjectIds render
+    # through the SHARED card partial (templates/partials/project-cards.hbs),
+    # byte-for-byte the same treatment as flagshipProjectIds;
+    # commissionedProjectIds render as the compact table beneath them.
+    clientCardProjectIds:      [gavigo-ire, tam-ai-ti, femtech-weekend-website, eatropolis-website]
+    commissionedProjectIds:    [femtech-radar, gavigo-website, her-waka]
     aiAgentProjectIds:         [server-google-jobs, ai-programming-teaching-project, ai-hackathon-assistant]
     openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats, cloud-canals, css-tower-defense]
     # Overflow buckets — intentionally empty (see curation note above).

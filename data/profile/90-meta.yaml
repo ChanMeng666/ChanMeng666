@@ -167,10 +167,13 @@ meta:
     # Project ordering for README
     # Drives the big editorial cards at the top of the README ("What I build").
     # 2026-07-14: PRODUCT-FIRST ORDER. The hero used to be client work; it is
-    # now the six things Chan built and owns — four open-source repos
-    # (google-news-mcp 125★, echook 75★, archlang, vitex), archcanvas (a hosted
-    # product, no public repo) and she-sharp (the charity platform she built and
-    # still runs). Client work is NOT demoted: clientCardProjectIds below gets
+    # now the six things Chan leads herself (google-news-mcp 125★, echook 75★,
+    # archlang, archcanvas, she-sharp, vitex). All six are live; five have a
+    # public repo — archcanvas is hosted with no public source, and she-sharp's
+    # repo lives under the NZ-SheSharp org (provenance: client), so README copy
+    # here must not claim sole ownership of it. Any open-source count in
+    # featured-work.hbs must be re-checked against projects[].repoUrl.
+    # Client work is NOT demoted: clientCardProjectIds below gets
     # the identical big-card treatment, immediately after this section, so
     # priority is expressed by ORDER on the page, not by card size.
     # List order = card order; it is Chan's own ordering.

@@ -1234,7 +1234,7 @@ linkedin:
       description: |-
         SunoStats is the first public tool that maps how a Suno-generated song's lineage descends from its parent. Suno is the AI music platform; its own product doesn't expose lineage to creators. SunoStats does, because the research behind it discovered that Suno's API serializer leaks the parent→child UUID chain only on the trending feed and persona sub-trees — nowhere else, not even on the remix page.
 
-        • Three free public lenses (creator profiles, trending, lineage view) + three single-purchase deep-dive reports — no recurring subscription.
+        • Three open public lenses (creator profiles, trending, lineage view) + single-purchase deep-dive reports, each a deterministic analysis of one creator's own catalog.
         • Lineage traversal uses WITH RECURSIVE CTEs in Postgres so the graph walk happens at the database, not the application layer.
         • Trilingual EN / CN / JP with cookie-driven server-resolved locale.
         • oEmbed-discovered compliance posture; no scraping, no headless browsers.

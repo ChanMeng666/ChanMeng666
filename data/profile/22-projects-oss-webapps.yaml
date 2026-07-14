@@ -1858,7 +1858,7 @@ projects:
     name: Seismophone — The independent observatory for AI music
     priority: 18
     category: web-apps
-    tagline: "Seismophone — 'the independent observatory for AI music,' publishing ecosystem readings the platforms don't. Discovered that Suno's public API serializer skips its lineage-UUID redaction pass on exactly two response shapes, and turned that into the industry's first public Suno remix-lineage explorer; also proved Suno's 'trending' feed is a frozen 2024 fossil and built a fossil-watch pulse around it. Free public creator portfolios (/@handle) + observatory pages; seven single-purchase credit-billed insight reports. Trilingual EN/简中/日本語, solo-built, self-hosted on a Docker+Traefik VPS, with a read-only MCP server for AI agents."
+    tagline: "Seismophone — 'the independent observatory for AI music,' publishing ecosystem readings the platforms don't. Discovered that Suno's public API serializer skips its lineage-UUID redaction pass on exactly two response shapes, and turned that into the industry's first public Suno remix-lineage explorer; also proved Suno's 'trending' feed is a frozen 2024 fossil and built a fossil-watch pulse around it. Open public creator portfolios (/@handle) + observatory pages; seven deterministic single-purchase insight reports over a creator's own catalog. Trilingual EN/简中/日本語, solo-built, self-hosted on a Docker+Traefik VPS, with a read-only MCP server for AI agents."
     url: https://seismophone.chanmeng.org/
     # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     logo: /public/brands/seismophone-logo.svg
@@ -1904,9 +1904,9 @@ projects:
       - { label: "Live URL",            value: "https://seismophone.chanmeng.org (legacy sunostats.chanmeng.org 301-redirects to it)" }
       - { label: "Surfaces",            value: "19 pages · 28 API route handlers · 56 React components · 190 TS/TSX files in src" }
       - { label: "Database",            value: "17 Drizzle tables on Neon Postgres; append-only daily snapshots + credit ledger" }
-      - { label: "Free tier",           value: "Public creator portfolio at /@handle, lineage explorer, observatory pages (/pulse, /trending, who-remixes-whom), up to 10 watched playlists — no account needed for observatory reads" }
+      - { label: "Open surface",        value: "Public creator portfolio at /@handle, lineage explorer, observatory pages (/pulse, /trending, who-remixes-whom), up to 10 watched playlists — no account needed for observatory reads" }
       - { label: "Insight reports",     value: "7 single-purchase analytics engines (tag_optimization · performance_snapshot · method_mix · song_dna · persona_mix · remix_readiness · model_era), each deterministic over the creator's own catalog and optionally topped with a short LLM analyst's note" }
-      - { label: "Stripe packs",        value: "Starter 5 / Pro 20 / Bulk 50 credits (webhook-verified ledger)" }
+      - { label: "Stripe integration",  value: "webhook-verified credit ledger — signed Stripe events atomically reconcile the append-only ledger, so a replayed or out-of-order webhook can't double-apply" }
       - { label: "Lineage archive",     value: "~102 parent→child edges from a single 2026-05-09 backfill — sealed and now un-reproducible after Suno closed the redaction gap" }
       - { label: "Trending fossil",     value: "/api/trending frozen since Sept 2024 (~2 years, ~49 clips/capture); 84+ daily captures preserved as a historical exhibit" }
       - { label: "MCP server",          value: "7 read-only tools at /api/mcp (get_pulse, get_trending, get_clip_lineage, list_reports, get_report, get_portfolio, about) so external AI agents can query the observatory" }
@@ -1922,8 +1922,8 @@ projects:
       captures Suno's public data daily and publishes free ecosystem readings
       the platform itself doesn't expose — how the trending feed has frozen,
       which model eras dominate, and who remixes whom — then points the same
-      instruments at a signed-in creator's own catalog to produce a free public
-      portfolio at /@handle plus seven credit-billed insight reports. Its
+      instruments at a signed-in creator's own catalog to produce an open public
+      portfolio at /@handle plus seven single-purchase insight reports. Its
       distinctive dataset is a public Suno remix-lineage graph, recovered from
       a redaction gap in Suno's own API and now un-reproducible. Solo-built on
       Next.js 16 + Neon Postgres, trilingual (EN / 简中 / 日本語), self-hosted

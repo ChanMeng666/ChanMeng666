@@ -365,7 +365,7 @@
       [#link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] — te-ao-Māori financial-wellness coach · 351 commits · 19-user, 4-month cohort],
       [#link("https://github.com/ChanMeng666/femtracker-agent")[FemTracker] — 8-node LangGraph agent, merged into CopilotKit's official demos],
       [#link("https://www.vitex.org.nz/")[Vitex] — AI career agent: a job description → tailored résumé + cover letter in under 30s],
-      [#link("https://archcanvas.chanmeng.org/")[ArchCanvas] — AI design agent for architects · productizes ArchLang · GPT-4o + DALL·E · pay-per-result],
+      [#link("https://archcanvas.chanmeng.org/")[ArchCanvas] — AI design agent for architects · productizes ArchLang · GPT-Image renderings grounded on the compiled plan · edits morph the plan in place],
       [#link("https://sunostats.chanmeng.org/")[SunoStats] — the first Suno music-lineage explorer · trilingual],
     ),
   )

@@ -179,6 +179,19 @@ data._commissionedProjects     = resolveIds(data.meta?.x_brand?.commissionedProj
 data._aiAgentProjects          = resolveIds(data.meta?.x_brand?.aiAgentProjectIds);
 data._openSourceCraftProjects  = resolveIds(data.meta?.x_brand?.openSourceCraftProjectIds);
 
+// LLM-surface-only open source: projects that keep their full narrative in
+// llms.txt / llms-full.txt but render NO README table row of their own (they
+// already surface as a "↳ Related" link under a card, so a row would show the
+// same project twice). A typo here silently drops an entry from the LLM
+// surfaces, so it fails the build like spotlightProjectIds does.
+const llmsOnlyOsIds = data.meta?.x_brand?.llmsOnlyOpenSourceIds ?? [];
+const missingLlmsOnlyOs = llmsOnlyOsIds.filter((id) => !projectIds.has(id));
+if (missingLlmsOnlyOs.length) {
+  console.error(`✗ meta.x_brand.llmsOnlyOpenSourceIds reference unknown project id(s): ${missingLlmsOnlyOs.join(", ")}`);
+  process.exit(1);
+}
+data._llmsOnlyOpenSourceProjects = resolveIds(llmsOnlyOsIds);
+
 // Spotlight = the projects Chan is actively deep-developing right now (distinct
 // from flagshipProjectIds, which is "most-impressive"). A typo here is a data
 // bug, so fail the build rather than silently dropping the id.
@@ -271,7 +284,10 @@ data._moreProjectsByGroup = data._moreProjectsByGroup
 // listing two projects that have no public repository at all. It is now DERIVED
 // from the same curated buckets that drive the README (90-meta.yaml), so the two
 // surfaces cannot disagree:
-//   flagship products + AI-agent table + open-source craft table,
+//   flagship products + AI-agent table + open-source craft table
+//     + llmsOnlyOpenSourceIds (open source Chan owns that the README shows only
+//       as a "↳ Related" link, so it has no table row of its own — an LLM
+//       consumer should still get the full entry),
 //   minus provenance:client (client work is presented AS client work),
 //   minus anything without a public repoUrl (no source => not "open source").
 // Nothing is lost: every project, including the excluded ones, still appears in
@@ -280,6 +296,7 @@ const _osSeen = new Set();
 data._openSourcePrimary = [
   ...data._flagshipProjects,
   ...data._aiAgentProjects,
+  ...data._llmsOnlyOpenSourceProjects,
   ...data._openSourceCraftProjects,
 ].filter((p) => {
   if (!p.repoUrl || p.provenance === "client") return false;

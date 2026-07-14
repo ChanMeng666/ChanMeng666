@@ -295,7 +295,15 @@ meta:
     # If a future client build has no parent card to hang off, put it here and
     # the table in commissioned.hbs comes back automatically.
     commissionedProjectIds:    []
-    aiAgentProjectIds:         [server-google-jobs, ai-programming-teaching-project, ai-hackathon-assistant]
+    # ai-hackathon-assistant is deliberately NOT here: it already surfaces as a
+    # "↳ Related" link on the She Sharp client card, and a second row here showed
+    # the same project twice. It keeps its tier/status and stays in llms-full /
+    # dist / LinkedIn — this is a README display choice only. It is listed under
+    # llmsOnlyOpenSourceIds below so the LLM surfaces keep its full narrative.
+    aiAgentProjectIds:         [server-google-jobs, ai-programming-teaching-project]
+    # Open source with a full llms.txt / llms-full.txt entry but NO README table
+    # row of its own (already visible as a "↳ Related" link on a card above).
+    llmsOnlyOpenSourceIds:     [ai-hackathon-assistant]
     openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats, cloud-canals, css-tower-defense]
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []

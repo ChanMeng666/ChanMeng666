@@ -40,7 +40,7 @@ What the three-month placement covered:
 • Direct engagement with Māori cultural practice — traditional dance, music, te reo Māori language, and ceremonial protocol — through immersive exposure rather than textbook study.
 • Cross-cultural communication and cultural representation in international settings, using IT tools to enrich how Māori culture was presented to diverse Chinese audiences.
 
-Why this matters to my current work: the immersive exposure to Māori culture I gained at Guilin in 2023 became the experiential foundation that later anchored Tam-AI-Ti — the AI Financial Wellness Coach I built solo on the Te Whare Tapa Whā holistic-health framework for Māori financial-prosperity research at ASB Bank (commissioned by Riria "Missy" Te Kanawa, former KPMG NZ National Māori Sector lead). What started as festival volunteer work two years earlier became the cultural grounding behind one of my flagship AI projects.
+Why this matters to my current work: the immersive exposure to Māori culture I gained at Guilin in 2023 became the experiential foundation that later anchored Tam-AI-Ti — the AI Financial Wellness Coach I built solo on the Te Whare Tapa Whā holistic-health framework, as an independent research commission from Riria "Missy" Te Kanawa personally (former KPMG NZ National Māori Sector lead; now Māori Executive Lead at ASB Bank), to explore Māori financial prosperity. What started as festival volunteer work two years earlier became the cultural grounding behind one of my flagship AI projects.
 ```
 **Media:** `Volunteer at the Maori Song and Dance Troupe performance` · `Volunteer at the Maori Song and Dance Troupe performance` · `IMG_20231031_160043.jpg`  _(Show all 6 media)_
 

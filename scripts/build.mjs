@@ -418,6 +418,44 @@ data._basicsSummaryFlat = flatten(data.basics?.summary);
 data._valueProposition = data.meta?.x_brand?.valueProposition ?? null;
 
 const engagementRoles = data.meta?.x_brand?.engagementRoles ?? [];
+
+// An engagement role may anchor its proof at a project (proofProjectId) — the
+// README renders that as an in-page anchor link into a project card. So the id
+// must (a) exist and (b) be in a bucket the README actually DISPLAYS, or the
+// anchor lands nowhere. A role with only proofUrl and no proofProjectId is
+// valid (e.g. cto-class-operator, whose evidence is an external site). Same
+// fail-the-build policy as spotlightProjectIds: a typo here is a data bug.
+{
+  const xb = data.meta?.x_brand ?? {};
+  const displayedIds = new Set(
+    [
+      ...(xb.flagshipProjectIds ?? []),
+      ...(xb.clientCardProjectIds ?? []),
+      ...(xb.commissionedProjectIds ?? []),
+      ...(xb.aiAgentProjectIds ?? []),
+      ...(xb.openSourceCraftProjectIds ?? []),
+    ],
+  );
+  const proofErrors = [];
+  for (const role of engagementRoles) {
+    if (!role.proofProjectId) continue; // proofUrl-only roles are valid
+    if (!projectIds.has(role.proofProjectId)) {
+      proofErrors.push(
+        `engagementRoles[${role.id ?? role.title ?? "?"}].proofProjectId "${role.proofProjectId}" is not a known projects[].id`,
+      );
+    } else if (!displayedIds.has(role.proofProjectId)) {
+      proofErrors.push(
+        `engagementRoles[${role.id ?? role.title ?? "?"}].proofProjectId "${role.proofProjectId}" resolves to a real project, but that project is in no displayed README bucket (flagshipProjectIds / clientCardProjectIds / commissionedProjectIds / aiAgentProjectIds / openSourceCraftProjectIds) — the proof anchor would link to a card the README never renders`,
+      );
+    }
+  }
+  if (proofErrors.length) {
+    console.error("✗ meta.x_brand.engagementRoles proof cross-reference errors:");
+    for (const e of proofErrors) console.error(`  - ${e}`);
+    process.exit(1);
+  }
+}
+
 data._engagementRoles = {
   all: engagementRoles,
   firstRow: engagementRoles.slice(0, 2),

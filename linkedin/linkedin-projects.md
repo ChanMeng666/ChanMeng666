@@ -86,7 +86,7 @@ ArchCanvas turns my ArchLang language into a product for architects. Describe a 
 • Sister product to my ArchLang language — consumes @chanmeng666/archlang as a package, so it produces editable parametric plans, not just images.
 • AI review mode surfaces anchored findings directly on the canvas with one-click "have AI fix".
 • Export any project as a real git repo (isomorphic-git + memfs).
-• Pay-per-result credits, not subscriptions.
+• Refinement mutates the plan in place — edits, parametric tweaks and re-renders never regenerate it from scratch.
 
 Stack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-4o + DALL·E), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.
 ```

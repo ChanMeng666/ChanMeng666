@@ -17,11 +17,11 @@ projects:
     meta:
       x_brand:
         featuredStack: [vercel-ai-sdk, typst, stripe, digitalocean, docker]
-    lastUpdated: "2026-07-10"
+    lastUpdated: "2026-07-14"
     name: Vitex — AI Career Agent (vitex.org.nz)
     priority: 16
     category: ai-apps
-    tagline: "Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); billing is outcome-based (charged only when a resume is successfully produced). Vercel AI SDK + GPT-4o + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions"
+    tagline: "Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + GPT-4o + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions"
     repoUrl: https://github.com/ChanMeng666/easy-resume
     logo: /public/brands/vitex.svg
     url: https://www.vitex.org.nz/
@@ -59,7 +59,7 @@ projects:
       - { label: "Pipeline",        value: "8 steps (parse JD ∥ parse background → match → tailor + faithfulness gate → ATS score ∥ cover letter → render → Typst compile)" }
       - { label: "Templates",       value: "7 AI-auto-selected (academic · banking · compact · creative · executive · modern-cv · two-column)" }
       - { label: "Agent surfaces",  value: "one core, N thin adapters — web SSE + public REST v1 (API key) + hosted OAuth-protected MCP + published vitex-cli with a stdio MCP; 9 MCP tools; full OAuth 2.1 AS with dynamic client registration + PKCE" }
-      - { label: "Billing",         value: "outcome-based — 1 credit charged exactly once, only after a PDF compiles; DB partial-unique-index idempotency survives SSE reconnects + concurrent races; failures + refinements free" }
+      - { label: "Idempotency",     value: "a generation is committed exactly once, and only after a PDF actually compiles; a DB partial-unique index survives SSE reconnects + concurrent races, so retries and refinements never duplicate a run" }
       - { label: "Models",          value: "two-tier routing (cheap extract tier + reasoning tier, env-overridable); deterministic no-LLM ATS scoring + anti-hallucination faithfulness gate" }
       - { label: "PDF engine",      value: "local Typst binary compile <100ms, SHA-256-cached; no external document API" }
       - { label: "Tests",          value: "215 Vitest test files (high density)" }
@@ -78,14 +78,16 @@ projects:
       one pipeline core), and a thin **vitex-cli** plus a stdio **MCP
       server** (`vitex mcp`) let terminals and coding agents (Claude
       Desktop/Code, Cursor) drive the whole product without a browser.
-      Billing is **outcome-based** — credits are charged only when a
-      resume is successfully produced (failures are free), idempotently.
-      Natural-language refinement applies targeted free edits instead
-      of full regenerations. Production runs as a Docker container on a
+      The pipeline is **idempotent**: a generation is committed exactly
+      once, and only after a PDF actually compiles — a database
+      partial-unique index holds that invariant through SSE reconnects
+      and concurrent retries. Natural-language refinement then applies
+      targeted edits to the existing document rather than re-running the
+      whole pipeline. Production runs as a Docker container on a
       **DigitalOcean VPS** behind **Traefik** (reverse proxy + TLS),
       shipped continuously by **GitHub Actions**.
     narrative:
-      impactHeadline: "Agent-ready AI career agent — an 8-step pipeline turns a JD + free-text background into a tailored ATS-optimised resume + cover letter in ~30s, usable over a public HTTP API, a CLI, and an MCP server; outcome-based billing (only on success), Typst PDF compile <100ms."
+      impactHeadline: "Agent-ready AI career agent — an 8-step pipeline turns a JD + free-text background into a tailored ATS-optimised resume + cover letter in ~30s, usable over a public HTTP API, a CLI, and an MCP server; idempotent generation (committed only on compile), Typst PDF compile <100ms."
       problem: |
         Most AI resume tools are one of two failure modes: (a) a
         thin GPT wrapper that hands you a paragraph and calls it a
@@ -124,14 +126,13 @@ projects:
         intro paragraph" — the AI regenerates that slice).
         (3) **Refine & export** — download the PDF or generate a
         public share link with a unique token. Persistent **resume
-        management dashboard** and **credit display** for active users.
+        management dashboard** for active users.
       businessLogic: |
-        A Stripe-integrated credits ledger gates AI generation
-        capacity. Free credits on signup cover trial use; additional
-        credit packs scale further. The architecture aligns the
-        right incentive — each generation runs a 7-step OpenAI
-        pipeline plus a Typst compile, so per-event credit gating
-        keeps capacity predictable rather than all-you-can-eat.
+        Generation capacity is gated per event rather than left
+        unbounded: each run is a 7-step OpenAI pipeline plus a Typst
+        compile, so the ledger commits a run exactly once — and only
+        after a PDF actually compiles — which keeps capacity
+        predictable and makes a failed or retried run a non-event.
         Public **share links via unique tokens** give the product
         organic distribution: a candidate who lands a job credits
         Vitex on LinkedIn, the share link becomes social proof, the
@@ -158,8 +159,8 @@ projects:
            letter from the same parsed pair
         7. **Render** — auto-select a template + seeded design tokens,
            emit Typst source for the resume + cover letter
-        8. **Compile** — compile Typst → PDF bytes server-side; this is
-           the billable artifact, so billing fires only here
+        8. **Compile** — compile Typst → PDF bytes server-side; the PDF
+           is the deliverable, so the run is committed only here
 
         Immediately after tailoring (step 4) a deterministic
         **faithfulness gate** re-checks the output for fabricated skills
@@ -219,7 +220,7 @@ projects:
         VPS migration.
       outcomes: |
         Live and operational at **vitex.org.nz**, serving real users
-        with the full free-credit + credit-pack flow. **372 commits over
+        end-to-end from pasted JD to compiled PDF. **372 commits over
         ~18 months** (2025-01-11 → 2026-07-10), essentially sole-authored.
         Three
         deployment migrations and a LaTeX → Typst document-engine
@@ -369,14 +370,14 @@ projects:
     provenance: personal
     tier: flagship
     recency: active
-    lastUpdated: "2026-07-10"
+    lastUpdated: "2026-07-14"
     meta:
       x_brand:
         featuredStack: [openai, vercel-ai-sdk, nextjs, react, typescript]
     name: ArchCanvas
     priority: 32
     category: ai-apps
-    tagline: "'Your AI architect — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Pay-per-generation credits, not subscriptions."
+    tagline: "'Your AI architect — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Refinement mutates the plan in place — it never regenerates it."
     url: https://archcanvas.chanmeng.org/
     logo: /public/brands/archcanvas-logo.svg
     # repoUrl omitted — repository is private/proprietary
@@ -386,7 +387,7 @@ projects:
       - "GPT Image grounded renderings (view-aware model chain: aerial vs eye-level)"
       - "@chanmeng666/archlang 1.12.1 (Chan's own declarative floor-plan compiler, consumed as a package)"
       - "Neon Postgres + Drizzle ORM (9 tables, schema-push)"
-      - "Stripe 17 (pay-per-generation credits, dual live/test mode)"
+      - "Stripe 17 (credits ledger, dual live/test mode)"
       - "Cloudinary (rendering storage)"
       - "react-zoom-pan-pinch (infinite zoomable canvas)"
       - "isomorphic-git + memfs + fflate (export design history as a real git repo, in-memory)"
@@ -401,14 +402,13 @@ projects:
       - "Select-to-act room editing + parametric sliders (no-LLM recompile)"
       - "Review mode — circulation overlay + anchored critique + one-click have-AI-fix"
       - "Design history exported as a real git repository"
-      - "Pay-per-generation credits (no subscription)"
+      - "Refine-in-place editing (never regenerates the plan)"
     metrics:
       - { label: "Commits (solo)",   value: "269 (2026-04-08 → 2026-07-10, ~3 months); sole author" }
       - { label: "Surfaces",         value: "13 pages · 28 API route handlers · 71 components · 190 source files" }
       - { label: "Database",         value: "9 Drizzle tables on Neon (projects · designFrames · agentThreads · credits · creditTransactions · shares · generationAttempts · …)" }
-      - { label: "Agent tools",      value: "7 (askDesignQuestions · generateFloorPlanDSL[charges] · editFloorPlanDSL[free] · generateRendering · critiquePlan · analyzeReference[vision] · analyzeFloorPlan)" }
-      - { label: "Billing",          value: "1 credit per generation (plan + grounded rendering + critique); edits, parametric tweaks, re-renders, and review are free; 3 free generation sets on signup" }
-      - { label: "Pricing",          value: "Free (3 sets) / Starter $10 (5) / Pro $25 (15); Stripe dual live/test mode" }
+      - { label: "Agent tools",      value: "7 (askDesignQuestions · generateFloorPlanDSL[new plan] · editFloorPlanDSL[minimal diff] · generateRendering · critiquePlan · analyzeReference[vision] · analyzeFloorPlan)" }
+      - { label: "Generation unit",  value: "one generation = plan + grounded rendering + critique, produced as a single atomic set; edits, parametric tweaks, re-renders, and review mode all operate on that set without re-generating it" }
       - { label: "Git export",       value: "in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)" }
       - { label: "Deploy",           value: "private repo → GitHub Actions → GHCR → canary-then-swap over SSH (boot canary, poll /api/health, swap only if healthy) on a DO VPS behind Traefik + Cloudflare" }
     status: live
@@ -424,8 +424,9 @@ projects:
       timeline scrubs the lineage, a review mode overlays walking-circulation
       and pins anchored critique with one-click "have AI fix," and a parametric
       panel exposes the plan's own variables as live sliders. The whole design
-      history exports as a real git repository. Billing is pay-per-generation
-      credits, not a subscription — refinement is free.
+      history exports as a real git repository. Refinement never regenerates:
+      edits, parametric tweaks, re-renders, and review all mutate the existing
+      plan in place rather than asking the model for a fresh one.
     narrative:
       impactHeadline: "An AI design agent for architects that productizes Chan's own ArchLang DSL — it writes parametric ArchLang (not freehand SVG) compiled to real dimensioned plans, with grounded GPT-Image renderings, a zoomable canvas, a review mode, and git-repo export. Solo-built, 269 commits."
       problem: |
@@ -453,9 +454,10 @@ projects:
         plan — deliberately not a grid of options — as parametric ArchLang,
         compiles it to a dimensioned SVG with `data-arch-id` anchors, renders a
         grounded GPT-Image visualization, and critiques it. That single
-        generation is the only thing that costs a credit.
+        generation turn is the only point at which the agent is asked for a
+        brand-new plan.
 
-        **Act II** is a canvas-first studio, and everything in it is free.
+        **Act II** is a canvas-first studio, and nothing in it regenerates.
         Edits are conversational and **morph the plan in place** — the parent
         geometry fades to a dashed ghost, a semantic-diff chip shows what
         changed, and a version-lineage timeline lets you scrub the history.
@@ -464,24 +466,23 @@ projects:
         agent-suggested scoped edits. A **Parametric Tweaks** panel turns the
         plan's own ArchLang `let` variables (room sizes, counts, wall
         thickness) into live sliders that recompile instantly with no LLM call
-        and no credit. **Review mode** toggles ArchLang's circulation overlay
+        at all. **Review mode** toggles ArchLang's circulation overlay
         (walk routes, pinch points) and pins anchored critique findings, each
-        with a free "have AI fix" — display-only, never auto-applied. The
+        with a one-click "have AI fix" — display-only, never auto-applied. The
         finished design exports as SVG/PNG/DXF/PDF, or as a real git repository
         whose commit log is the design conversation.
       businessLogic: |
-        Pay-per-generation credits, not subscriptions — a deliberate fit for a
-        design task whose value is lumpy (you generate a few plans, then
-        iterate for free for a long time). One credit buys a full generation
-        turn (plan + grounded rendering + critique); every refinement, tweak,
-        re-render, and review action is free, so a user pays only when they ask
-        for genuinely new work. Three free generation sets on signup let people
-        reach real value before paying. Stripe packs price a set at roughly
-        $1.67–$2.00 against a stated per-generation cost of ~$0.30–$0.55, a
-        healthy margin the project tracks explicitly. The moat is the ArchLang
-        pairing: because plans are a deterministic program rather than pixels,
-        ArchCanvas can offer editing, tweaking, diffing, and git export that an
-        image-generation competitor structurally cannot.
+        The unit of work is one generation turn — plan + grounded rendering +
+        critique, produced as a single atomic set — and everything downstream
+        of it is refinement rather than regeneration. That split is deliberate:
+        a design task's value is lumpy (you want a few strong plans, then you
+        iterate on them for a long time), so every edit, parametric tweak,
+        re-render, and review action mutates the existing frame in place, and
+        the model is re-invoked only when the user genuinely asks for new work.
+        The moat is the ArchLang pairing: because plans are a deterministic
+        program rather than pixels, ArchCanvas can offer editing, tweaking,
+        diffing, and git export that an image-generation competitor structurally
+        cannot.
       technicalApproach: |
         A single Next.js 15 monolith (React 19, TypeScript 5.8) over a 9-table
         Drizzle schema on Neon Postgres, with Stripe credits, Cloudinary
@@ -492,7 +493,7 @@ projects:
         (reference-image analysis). Its seven tools center on
         `generateFloorPlanDSL` — write parametric ArchLang, compile it through
         Chan's own `@chanmeng666/archlang` package, pass a ship-gate, save a
-        frame — with `editFloorPlanDSL` as the free minimal-diff follow-up.
+        frame — with `editFloorPlanDSL` as the minimal-diff follow-up.
         Renderings are a **grounded, view-aware chain**: the compiled plan is
         rasterized and sent as the grounding image to GPT Image, with a
         model order chosen per view (aerial vs eye-level) so the render matches
@@ -686,18 +687,17 @@ projects:
         is the load-bearing constraint that lets the surface stay
         open while a credits-ledger upgrade path scales power-user
         capacity. Without that free-tier ceiling the choice would
-        have been: cap everyone, lose money on every public
-        generation, or rate-limit so aggressively the demo isn't
-        useful. The pivot to Cloudflare Workers AI (commit
+        have been: cap everyone, or rate-limit so aggressively the
+        demo isn't useful. The pivot to Cloudflare Workers AI (commit
         `3aec6ce`) was the structural decision that made the
-        whole SaaS shape workable. Above the free tier:
-        Stripe-integrated credit packs (test/live mode
-        auto-switching, webhook-verified ledger) provide the
+        whole SaaS shape workable. Above the free tier, a
+        Stripe-integrated credits ledger (test/live mode
+        auto-switching, webhook-verified) provides the capacity
         upgrade path. Storage on Neon's serverless Postgres keeps
         persistence light at typical hobbyist volume. Net: the
         product is **open for the long-tail majority of users** and
-        scales gracefully for the small minority who exhaust their
-        free credits. Apache-2.0 with patent grant — explicitly
+        scales gracefully for the small minority who exhaust that
+        free-tier headroom. Apache-2.0 with patent grant — explicitly
         licensed for commercial use, fork, and re-deployment.
       technicalApproach: |
         **AI layer.** Cloudflare Workers AI is accessed through

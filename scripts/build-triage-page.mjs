@@ -454,11 +454,35 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
   var IDS = ${JSON.stringify(candidates.map((c) => c.id))};
   var state = { d: {}, heroOrder: [] };   // d[id] = {level,bucket,spotlight}
 
+  // Restored values are untrusted: a stale/poisoned localStorage entry (e.g. a level
+  // name from a future rename under the same key) must degrade to "undecided", never
+  // produce an off-contract export row. Whitelist on the way in.
+  var LEVELS = { hero:1, listed:1, kept:1, archived:1 };
+  var BUCKETS = { aiAgent:1, craft:1 };
+  function sanitize(d){
+    if (!d || typeof d !== "object") return null;
+    var level = LEVELS[d.level] ? d.level : null;
+    var bucket = (level === "listed" && BUCKETS[d.bucket]) ? d.bucket : null;
+    var spotlight = d.spotlight === true;
+    if (!level && !spotlight) return null;   // nothing meaningful → undecided
+    return { level: level, bucket: bucket, spotlight: spotlight };
+  }
+
   try {
     var raw = localStorage.getItem(KEY);
     if (raw) {
       var p = JSON.parse(raw);
-      if (p && p.d) state = { d: p.d, heroOrder: Array.isArray(p.heroOrder) ? p.heroOrder : [] };
+      if (p && p.d && typeof p.d === "object") {
+        var clean = {};
+        IDS.forEach(function(id){
+          var s = sanitize(p.d[id]);
+          if (s) clean[id] = s;
+        });
+        var order = (Array.isArray(p.heroOrder) ? p.heroOrder : []).filter(function(id){
+          return clean[id] && clean[id].level === "hero";
+        });
+        state = { d: clean, heroOrder: order };
+      }
     }
   } catch (e) { /* corrupt/blocked storage → start clean */ }
 

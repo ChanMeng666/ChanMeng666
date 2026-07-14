@@ -231,9 +231,10 @@ data._moreCommissionedProjects = resolveIds(data.meta?.x_brand?.moreCommissioned
 
 // ---------------------------------------------------------------------------
 // README-only visibility filter — projects listed here stay fully present in
-// data/profile/*.yaml, llms.txt, llms-full.txt, and dist/profile.json (so AI
-// agents and the JSON-LD entity graph still see them); they are simply
-// omitted from the visible README buckets. Add/remove ids here to retune
+// data/profile/*.yaml, llms-full.txt and dist/profile.json (so AI agents and
+// the JSON-LD entity graph still see them); they are simply omitted from the
+// visible README buckets. (llms.txt is a short top-tier summary and carries
+// only the flagship/primary band either way.) Add/remove ids here to retune
 // what the human surface shows without touching the data file.
 // ---------------------------------------------------------------------------
 // 2026-07-14: emptied. Chan's project-by-project triage now expresses every
@@ -287,12 +288,16 @@ data._openSourcePrimary = [
   return true;
 });
 
-// "### More Open Source Projects (by category)" in llms-full.txt — the long
-// tail: EVERY project that is not already spelled out in _openSourcePrimary
-// above, grouped by category. This is the surface that makes the README
-// curation honest: a project demoted off the human shopfront (tier=archive,
-// the ByteDance-bootcamp band, coursework, retired experiments) is still
+// "## More Projects (by category)" in llms-full.txt — the long tail: EVERY
+// project that is not already spelled out in _openSourcePrimary above,
+// grouped by category. This is the surface that makes the README curation
+// honest: a project demoted off the human shopfront (tier=archive, the
+// ByteDance-bootcamp band, coursework, retired experiments) is still
 // discoverable here by an LLM consumer, stamped with its tier badge.
+// It is NOT an open-source list — it deliberately includes provenance:client
+// deliverables and projects with no public repo, so the heading and the note
+// above it in llms-full.txt.hbs must never call it "open source" (they did
+// until 2026-07-14, which presented client sites as Chan's open source).
 //
 // 2026-07-14: this list was previously NEVER BUILT — templates/llms-full.txt.hbs
 // iterates `_openSourceByCategory`, but build.mjs never defined it, so the

@@ -231,8 +231,12 @@ meta:
     # "Notable Open Source" sections (see the retirement note above).
     #
     # 2026-07-14 CURATION — product-first ORDER, from Chan's own
-    # project-by-project triage (53 projects: 10 hero cards, 11 listed, 21 kept
-    # off the shopfront, 11 archived). Two changes from the 2026-07
+    # project-by-project triage. She triaged 53 projects into four decisions:
+    # 6 hero, 15 listed, 21 kept (off the shopfront), 11 archived. The 6 hero +
+    # 15 listed = the 21 projects the README shows; how those 21 are RENDERED
+    # (big card vs table row) is a layout choice made below, not part of her
+    # decision — do not restate the split in render terms, it has already
+    # contradicted the ground truth once. Two changes from the 2026-07
     # hiring-first pass:
     #
     #   1. The page now OPENS with her products, not her clients (see
@@ -253,9 +257,12 @@ meta:
     # automotive-repair-management-system 29★, douyin-mall-java-template 24★,
     # douyin-mall 13★) is archived despite its stars — Chan is done presenting
     # training-camp work as evidence.
-    # Everything cut or archived stays fully present in llms.txt /
-    # llms-full.txt / dist/profile.json / LinkedIn — it is only off the human
-    # shopfront. To re-widen, repopulate the more* lists.
+    # Everything cut or archived stays fully present in llms-full.txt (the
+    # "More Projects (by category)" long tail), dist/profile.json and the
+    # LinkedIn outputs — it is only off the human shopfront. NOT llms.txt:
+    # that surface is a short top-tier summary and has never carried the
+    # archived band, by design. To re-widen the README, repopulate the more*
+    # lists.
     # =========================================================================
     # Client & organisation work (templates/partials/commissioned.hbs) — all
     # provenance:client, ordered strongest-first. clientCardProjectIds render

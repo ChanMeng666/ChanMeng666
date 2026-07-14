@@ -20,8 +20,13 @@
 // advisory hint. See computeAdvice() for how that hint is derived.
 
 import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
+import yaml from "js-yaml";
 import { loadProfile } from "./lib/load-profile.mjs";
+
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 // ---------------------------------------------------------------------------
 // args
@@ -204,6 +209,59 @@ const esc = (s) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
+// ---------------------------------------------------------------------------
+// brand — palette + type come from data/brand.yaml and the repo's own font
+// files, never from hand-picked hexes. The Artifact CSP blocks font CDNs, so
+// the display face is inlined as a base64 data URI at build time.
+// ---------------------------------------------------------------------------
+const brand = yaml.load(fs.readFileSync(path.join(repoRoot, "data", "brand.yaml"), "utf8"));
+const RAW = brand.color.raw;
+const SEM = brand.color.semantic;
+const tok = (semanticKey) => {
+  const rawKey = SEM[semanticKey];
+  if (!rawKey || !RAW[rawKey]) throw new Error(`brand.yaml: unknown semantic token "${semanticKey}"`);
+  return RAW[rawKey];
+};
+
+// Derived shades (tints/alphas of brand raws — no new hues invented).
+const rgb = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
+const hex2 = (n) => Math.max(0, Math.min(255, Math.round(n))).toString(16).padStart(2, "0");
+const mix = (a, b, t) => {
+  const [ar, ag, ab] = rgb(a);
+  const [br, bg, bb] = rgb(b);
+  return "#" + hex2(ar + (br - ar) * t) + hex2(ag + (bg - ag) * t) + hex2(ab + (bb - ab) * t);
+};
+const alpha = (hex, a) => {
+  const [r, g, b] = rgb(hex);
+  return `rgba(${r},${g},${b},${a})`;
+};
+
+const INK = tok("inkPrimary");           // abyssalInk
+const PAGE = tok("canvasPage");          // basaltCanvas
+const SURFACE = tok("canvasSurface");    // ashWhite
+const WHITE = tok("onAccent");           // pureWhite
+const ACCENT = tok("accentPrimary");     // digitalOrange — accent only, never a state
+const DECOR = tok("surfaceDecor");       // cyberViolet  — the decided/selection state
+const GLARE = tok("surfaceTag");         // pixelGlare   — warnings / tags
+
+const fontStack = (fam) => brand.typography.families[fam].stack.map((f) => (/\s/.test(f) ? `"${f}"` : f)).join(", ");
+const DISPLAY_STACK = fontStack("display");
+const BODY_STACK = fontStack("bodySans");
+const MONO_STACK = fontStack("mono");
+
+const fontFace = (family, file, weight) => {
+  const p = path.join(repoRoot, "cv", "fonts", file);
+  if (!fs.existsSync(p)) return ""; // graceful: the stack's fallbacks carry it
+  const b64 = fs.readFileSync(p).toString("base64");
+  return `@font-face{font-family:"${family}";font-style:normal;font-weight:${weight};font-display:swap;` +
+    `src:url(data:font/ttf;base64,${b64}) format("truetype");}`;
+};
+const FONT_FACES = [
+  fontFace("Anton", "Anton-Regular.ttf", 400),
+  fontFace("DM Sans", "DMSans-Regular.ttf", 400),
+  fontFace("DM Sans", "DMSans-Bold.ttf", 700),
+].join("\n");
+
 const LEVELS = [
   ["hero", "Hero card"],
   ["listed", "Listed"],
@@ -293,28 +351,61 @@ const card = (c) => {
 
 const html = `<title>Project triage — README curation ${GENERATED_AT}</title>
 <style>
+/* Type: Anton (display) + DM Sans (body), inlined from cv/fonts/ as data URIs —
+   the Artifact CSP blocks font CDNs, so a <link> would silently fall back. */
+${FONT_FACES}
+
+/* Colour: every token below is data/brand.yaml (Caldera). digitalOrange is the
+   ACCENT and is never used to mean a state; cyberViolet carries the decided /
+   selected state; pixelGlare carries warnings and tags. */
 :root{
-  --bg:#faf7f2; --fg:#1a1714; --dim:#6d6459; --card:#fff; --line:#e2d9cc;
-  --accent:#d8541e; --accent-soft:#fdeee6; --ok:#1f7a4c; --warn:#8a6d1f; --danger:#a8321c;
-  --shadow:0 1px 2px rgba(0,0,0,.05),0 6px 18px rgba(0,0,0,.04);
+  --bg:${PAGE}; --card:${SURFACE}; --fg:${INK};
+  --dim:${alpha(INK, 0.62)}; --line:${alpha(INK, 0.16)};
+  --accent:${ACCENT}; --on-accent:${WHITE}; --accent-soft:${mix(ACCENT, SURFACE, 0.88)};
+  --state:${DECOR}; --state-soft:${mix(DECOR, SURFACE, 0.9)};
+  --warn:${GLARE}; --warn-ink:${INK};
+  --danger:${INK}; --danger-ink:${WHITE};
+  --shadow:0 1px 2px ${alpha(INK, 0.06)},0 8px 20px ${alpha(INK, 0.05)};
 }
 @media (prefers-color-scheme:dark){
-  :root{ --bg:#16130f; --fg:#f2ece4; --dim:#9d9184; --card:#211c17; --line:#3a322a;
-    --accent:#ff7a45; --accent-soft:#3a2318; --ok:#5fd39b; --warn:#e0bd63; --danger:#ff8a72;
-    --shadow:none; }
+  :root{
+    --bg:${INK}; --card:${mix(INK, PAGE, 0.1)}; --fg:${SURFACE};
+    --dim:${mix(INK, SURFACE, 0.62)}; --line:${mix(INK, SURFACE, 0.26)};
+    --accent:${ACCENT}; --on-accent:${WHITE}; --accent-soft:${mix(ACCENT, INK, 0.82)};
+    --state:${mix(DECOR, SURFACE, 0.45)}; --state-soft:${mix(DECOR, INK, 0.78)};
+    --warn:${GLARE}; --warn-ink:${INK};
+    --danger:${GLARE}; --danger-ink:${INK};
+    --shadow:none;
+  }
 }
-:root[data-theme="dark"]{ --bg:#16130f; --fg:#f2ece4; --dim:#9d9184; --card:#211c17; --line:#3a322a;
-  --accent:#ff7a45; --accent-soft:#3a2318; --ok:#5fd39b; --warn:#e0bd63; --danger:#ff8a72; --shadow:none; }
-:root[data-theme="light"]{ --bg:#faf7f2; --fg:#1a1714; --dim:#6d6459; --card:#fff; --line:#e2d9cc;
-  --accent:#d8541e; --accent-soft:#fdeee6; --ok:#1f7a4c; --warn:#8a6d1f; --danger:#a8321c;
-  --shadow:0 1px 2px rgba(0,0,0,.05),0 6px 18px rgba(0,0,0,.04); }
+:root[data-theme="dark"]{
+  --bg:${INK}; --card:${mix(INK, PAGE, 0.1)}; --fg:${SURFACE};
+  --dim:${mix(INK, SURFACE, 0.62)}; --line:${mix(INK, SURFACE, 0.26)};
+  --accent:${ACCENT}; --on-accent:${WHITE}; --accent-soft:${mix(ACCENT, INK, 0.82)};
+  --state:${mix(DECOR, SURFACE, 0.45)}; --state-soft:${mix(DECOR, INK, 0.78)};
+  --warn:${GLARE}; --warn-ink:${INK};
+  --danger:${GLARE}; --danger-ink:${INK};
+  --shadow:none;
+}
+:root[data-theme="light"]{
+  --bg:${PAGE}; --card:${SURFACE}; --fg:${INK};
+  --dim:${alpha(INK, 0.62)}; --line:${alpha(INK, 0.16)};
+  --accent:${ACCENT}; --on-accent:${WHITE}; --accent-soft:${mix(ACCENT, SURFACE, 0.88)};
+  --state:${DECOR}; --state-soft:${mix(DECOR, SURFACE, 0.9)};
+  --warn:${GLARE}; --warn-ink:${INK};
+  --danger:${INK}; --danger-ink:${WHITE};
+  --shadow:0 1px 2px ${alpha(INK, 0.06)},0 8px 20px ${alpha(INK, 0.05)};
+}
 
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);overflow-x:hidden;
-  font:15px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}
+  font:500 15px/1.5 ${BODY_STACK};}
+code,.id,.stars,.evidence dd{font-family:${MONO_STACK}}
 .wrap{max-width:1500px;margin:0 auto;padding:24px 16px 120px}
-h1{font-size:1.5rem;margin:0 0 4px}
-.sub-title{color:var(--dim);margin:0 0 18px;font-size:.9rem}
+h1{font-family:${DISPLAY_STACK};font-weight:400;font-size:2.6rem;line-height:.95;
+  letter-spacing:.02em;margin:0 0 6px;text-transform:none}
+h1 .dot{color:var(--accent)}
+.sub-title{color:var(--dim);margin:0 0 18px;font-size:.9rem;max-width:80ch}
 .dim{color:var(--dim)}
 a{color:var(--accent)}
 
@@ -323,17 +414,19 @@ a{color:var(--accent)}
 .bar select,.bar input[type=search],.bar button{font:inherit;font-size:.85rem;padding:6px 8px;
   border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg)}
 .bar button{cursor:pointer}
-.bar button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
-.counter{margin-left:auto;font-size:.85rem;font-variant-numeric:tabular-nums}
+.bar button.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:700}
+.counter{margin-left:auto;font-size:.85rem;font-variant-numeric:tabular-nums;font-family:${MONO_STACK}}
 .counter b{color:var(--accent)}
 
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;
   box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;min-width:0}
-.card.decided{border-color:var(--ok)}
+/* decided = cyberViolet (a STATE, deliberately not the orange accent) */
+.card.decided{border-color:var(--state);box-shadow:inset 3px 0 0 var(--state),var(--shadow)}
 .card.hidden{display:none}
 .card-head{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;min-width:0}
-.card-head h2{font-size:1rem;margin:0;overflow-wrap:anywhere}
+.card-head h2{font-family:${DISPLAY_STACK};font-weight:400;font-size:1.22rem;line-height:1.05;
+  letter-spacing:.01em;margin:0;overflow-wrap:anywhere}
 .id{font-size:.72rem;color:var(--dim)}
 .stars{white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}
 .star-glyph{color:var(--accent);margin-left:2px}
@@ -347,24 +440,28 @@ a{color:var(--accent)}
 .meta-row .lbl{font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--dim)}
 .links a{margin-right:8px}
 .flag{font-size:.68rem;padding:1px 7px;border-radius:999px;border:1px solid var(--line)}
-.flag.mem{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
-.flag.warn{color:var(--warn);border-color:var(--warn)}
-.flag.danger{color:var(--danger);border-color:var(--danger)}
+.flag.mem{background:var(--state-soft);border-color:var(--state);color:var(--state)}
+.flag.warn{background:var(--warn);border-color:var(--warn);color:var(--warn-ink)}
+.flag.danger{background:var(--danger);border-color:var(--danger);color:var(--danger-ink);font-weight:700}
 
-/* advisory hint — deliberately NOT a control: dashed, muted, pointer-events:none */
-.advice{border:1px dashed var(--line);border-radius:10px;padding:6px 8px;font-size:.75rem;
+/* advisory hint — deliberately NOT a control and quieter than every control on
+   the card: hairline dashed, muted ink, no accent fill, pointer-events:none. */
+.advice{border:1px dashed var(--line);border-radius:10px;padding:6px 8px;font-size:.72rem;
   background:transparent;color:var(--dim);pointer-events:none;user-select:none}
-.advice-tag{font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);
-  margin-right:6px;white-space:nowrap}
-.advice-body b{color:var(--fg)}
+.advice-tag{font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);
+  margin-right:6px;white-space:nowrap;font-weight:700}
+.advice-body b{color:var(--fg);font-weight:700}
 
 .controls{margin-top:auto;display:flex;flex-direction:column;gap:8px}
 .levels{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .lv{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:9px;
   padding:6px 8px;font-size:.78rem;cursor:pointer;min-width:0}
 .lv span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.lv:hover{border-color:var(--accent)}
-.lv:has(input:checked){background:var(--accent-soft);border-color:var(--accent);font-weight:600}
+.lv:hover{border-color:var(--state)}
+.lv:has(input:checked){background:var(--state-soft);border-color:var(--state);
+  box-shadow:inset 0 0 0 1px var(--state);font-weight:700}
+.lv input{accent-color:var(--state)}
+.spot input{accent-color:var(--accent)}
 .sub{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:.78rem}
 .sub select{font:inherit;padding:4px 6px;border-radius:8px;border:1px solid var(--line);
   background:var(--bg);color:var(--fg)}
@@ -373,9 +470,10 @@ a{color:var(--accent)}
 button.clear{margin-left:auto;font:inherit;font-size:.72rem;background:none;border:1px solid var(--line);
   color:var(--dim);border-radius:8px;padding:3px 8px;cursor:pointer}
 
-.hero-panel{border:1px solid var(--accent);border-radius:12px;padding:12px;margin-bottom:18px;
-  background:var(--accent-soft)}
-.hero-panel h3{margin:0 0 6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.hero-panel{border:1px solid var(--state);border-radius:12px;padding:12px;margin-bottom:18px;
+  background:var(--state-soft)}
+.hero-panel h3{font-family:${DISPLAY_STACK};font-weight:400;margin:0 0 8px;font-size:1.05rem;
+  letter-spacing:.02em;color:var(--fg)}
 #heroList{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
 #heroList li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 10px;
   font-size:.82rem;cursor:grab;display:flex;gap:8px;align-items:center}
@@ -383,17 +481,18 @@ button.clear{margin-left:auto;font:inherit;font-size:.72rem;background:none;bord
 #heroList li .grip{color:var(--dim)}
 #heroList li .pos{font-variant-numeric:tabular-nums;color:var(--dim);min-width:1.4em}
 
-#exportBox{width:100%;min-height:220px;margin-top:10px;font:12px/1.45 ui-monospace,SFMono-Regular,Consolas,monospace;
-  border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--card);color:var(--fg)}
+#exportBox{width:100%;min-height:220px;margin-top:10px;font:400 12px/1.45 ${MONO_STACK};
+  border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);color:var(--fg)}
 dialog{border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--fg);
-  max-width:min(820px,94vw);width:100%;padding:16px}
-dialog::backdrop{background:rgba(0,0,0,.45)}
+  max-width:min(820px,94vw);width:100%;padding:16px;font:inherit}
+dialog h3{font-family:${DISPLAY_STACK};font-weight:400;font-size:1.4rem;letter-spacing:.02em}
+dialog::backdrop{background:${alpha(INK, 0.55)}}
 .note{font-size:.78rem;color:var(--dim)}
 @media (max-width:480px){ .levels{grid-template-columns:1fr} }
 </style>
 
 <div class="wrap">
-  <h1>Project triage — README curation</h1>
+  <h1>Project triage <span class="dot">/</span> README curation</h1>
   <p class="sub-title">${candidates.length} candidates · generated ${GENERATED_AT} from <code>data/profile/*.yaml</code> + <code>gh repo list</code>.
   Every card starts <b>undecided</b>. The dashed ★ line is an advisory hint, not a selection — nothing is chosen for you.
   Decisions are saved in this browser as you click; Export any time.</p>
@@ -442,7 +541,7 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
   <p class="note" id="exportNote"></p>
   <textarea id="exportBox" spellcheck="false" aria-label="exported JSON"></textarea>
   <div style="display:flex;gap:8px;margin-top:10px">
-    <button type="button" id="copyBtn" class="primary" style="font:inherit;padding:6px 12px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer">Copy to clipboard</button>
+    <button type="button" id="copyBtn" class="primary" style="font:inherit;font-weight:700;padding:6px 12px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:var(--on-accent);cursor:pointer">Copy to clipboard</button>
     <button type="button" id="closeDlg" style="font:inherit;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer">Close</button>
   </div>
 </dialog>

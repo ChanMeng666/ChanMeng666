@@ -1217,18 +1217,6 @@
             "impactHeadline": "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
           },
           "status": "live",
-          "_featuredStackResolved": [
-            {
-              "name": "mintlify",
-              "src": "/public/tech-logos/mintlify.svg"
-            },
-            {
-              "name": "github",
-              "src": "/public/tech-logos/github.svg"
-            }
-          ],
-          "_contextLogo": [],
-          "_affiliationOrg": null,
           "_clientOrg": {
             "id": "she-sharp",
             "name": "She Sharp",
@@ -1592,9 +1580,6 @@
             "outcomes": "Live in production at gavigo.com on Google Cloud Run, built and\nmaintained entirely by Chan — **66 of 66 commits, the repository's\nsole contributor** — including the investor-readiness polish pass that\nsupported GAVIGO's fundraising and partner conversations. It stands as\nthe company's public front door and the hand-off point into the live\nIRE product demo, decoupled from and shipping independently of the\nproduct runtime.\n",
             "myRole": "Sole developer and maintainer of the site end-to-end — the Next.js\nbuild, the Markdown/MDX content pipeline, the Motion brand animation,\nthe Resend + Neon lead-capture backend, and the Google Cloud Run\ndeployment — as GAVIGO's founding principal engineer (the same role\nunder which I lead the flagship IRE platform). 66 of 66 commits are\nmine.\n"
           },
-          "_featuredStackResolved": [],
-          "_contextLogo": [],
-          "_affiliationOrg": null,
           "_clientOrg": {
             "id": "gavigo",
             "name": "GAVIGO Inc.",
@@ -3074,6 +3059,9 @@
       "category": "web-apps",
       "clientOrgId": "femtech-weekend",
       "relatedWorkId": "femtech-weekend",
+      "relatedProjectIds": [
+        "femtech-radar"
+      ],
       "supersedes": [
         "femtech-weekend"
       ],
@@ -3237,7 +3225,75 @@
         "outcomes": "Production-deployed at femtechweekend.com and operating the\nfull organisational pipeline (ecosystem applications,\nnewsletter, summit registration, research distribution)\nacross both EN and 简体中文 audiences. **544 commits, 529\n(97.2%) authored solo by Chan Meng** across ~12 months\n(2025-05-08 → 2026-05-13). **Shanghai Summit 2026 launches\nJune 22-25, 2026** with the platform as its sole\noperational substrate.\n\nRecent commit cadence shows the platform is in active\ndelivery, not maintenance: the last week of recorded\nactivity alone includes speaker-lineup rotation (`6b0b780`,\nrotating the speaker grid and refreshing Ida Tin's title),\nsponsor-tier restructuring (`6f33496`), the image-weight\n67%-reduction pass (`19d3e71`), and an ongoing speaker-card\nand modal refinement series — all of it solo, all of it on\na live site marketing a flagship event two months out.\n\nThe platform demonstrates a design call worth flagging:\n**Generation 2 was a deliberate rewrite, not a refactor**.\nI admitted that the centre of gravity had shifted from\n\"marketing site that publishes the occasional report\" to\n\"research-publication and multi-event hub with deep\neditorial content,\" and rebuilt on Docusaurus 3.9 — not\nthe default choice for a brand website, but the right one\nfor an editorial platform whose long-term value lives in\nits market research, opinion pieces, founder stories, and\nevent archives. The Gen-1 → Gen-2 cutover happened\nwithout losing institutional knowledge and is now the\nprimary public-facing surface for the organisation.\n\nTwo original research reports have been published through\nthe platform: **FemTech Market Map for Greater China**\n(2025-05) and the **FemmeHealth Ventures Alliance**\npartnership announcement (2025-06). Both function as\nlead-generation artefacts feeding the ecosystem and\nnewsletter pipelines, and as thought-leadership\npositioning for the organisation in both Chinese and\ninternational markets.\n",
         "myRole": "Chief Technology Officer, hired 2025-03 by founder Zhu\nYihan with full ownership of every digital surface the\norganisation operates. Solo engineering team (with one\noccasional contributor of ~15 commits out of 544).\nEnd-to-end authority over architecture, vendor choice,\ndeployment infrastructure, content management workflow,\napplication and subscription pipelines, and the live\ndigital infrastructure for the Shanghai Summit 2026.\n\nSpecifically: designed and built both website generations\nfrom scratch (Gen-1 Next.js + Notion at 100% solo across\n58 commits in a separate repo; Gen-2 — this entry — at\n97.2% solo across 544 commits over ~12 months). Wrote the\nentire Drizzle schema, every migration, all 15 Cloudflare\nPages Functions, every email template (HTML + plain-text\ntwins, brand-coloured, XSS-defended), the admin dashboard,\nthe four application-pipeline forms, the Shanghai Summit\n10-section homepage + 3 sub-pages, the Notion-as-CMS\nintegration, the bilingual EN/简体中文 routing + content\nlayer, the Gemini chatbot integration, the earth-flyline\nglobal-network visualisation, and the image-performance\noptimisation pass. Operate the production Cloudflare\nPages deployment and every speaker-lineup / sponsor / agenda\nupdate directly on `main`. Reporting line: directly to\nfounder Zhu Yihan; collaboration with the broader 2-10-\nperson core team on editorial calendar, summit programming,\nand ecosystem partnerships.\n"
       },
-      "_relatedProjects": [],
+      "_relatedProjects": [
+        {
+          "id": "femtech-radar",
+          "provenance": "client",
+          "tier": "secondary",
+          "recency": "active",
+          "lastUpdated": "2026-07-04",
+          "name": "FemTech Radar",
+          "priority": 86,
+          "category": "ai-apps",
+          "clientOrgId": "femtech-weekend",
+          "relatedWorkId": "femtech-weekend",
+          "relatedProjectIds": [
+            "femtech-weekend-website"
+          ],
+          "tagline": "Agent-first FemTech intelligence — an MCP server that fetches, dedupes, and scores women's-health & FemTech research and news, feeding a weekly GitHub Agentic Workflow and an auto-updating Astro + RSS site",
+          "repoUrl": "https://github.com/ChanMeng666/femtech-radar",
+          "url": "https://chanmeng666.github.io/femtech-radar/",
+          "extraLinks": [
+            {
+              "label": "Live site",
+              "url": "https://chanmeng666.github.io/femtech-radar/"
+            },
+            {
+              "label": "RSS feed",
+              "url": "https://chanmeng666.github.io/femtech-radar/rss.xml"
+            },
+            {
+              "label": "npm (@chanmeng666/femtech-radar-mcp)",
+              "url": "https://www.npmjs.com/package/@chanmeng666/femtech-radar-mcp"
+            }
+          ],
+          "techStack": [
+            "TypeScript",
+            "MCP (@modelcontextprotocol/sdk)",
+            "Zod",
+            "Vitest",
+            "tsup",
+            "Astro 5",
+            "GitHub Agentic Workflows",
+            "GitHub Pages",
+            "RSS"
+          ],
+          "status": "live",
+          "startDate": "2026-06",
+          "publicSummary": "A three-unit pipeline that turns scattered FemTech / women's-health\nsignal into a curated weekly digest: an MCP server (fetch -> normalize\n-> dedupe -> score), a weekly GitHub Agentic Workflow where Copilot\ncurates review-gated JSON, and an Astro site that auto-deploys to\nGitHub Pages with RSS subscriptions.\n",
+          "narrative": {
+            "impactHeadline": "Agent-first FemTech intelligence — a deterministic MCP core (fetch, dedupe, relevance × popularity × freshness scoring) feeds a review-gated weekly GitHub Agentic Workflow and an auto-deploying Astro + RSS site across four sections.",
+            "problem": "FemTech news, research, opportunities, and discussions are scattered\nacross dozens of sources with too much noise to track manually.\n",
+            "audience": "FemTech practitioners, researchers, and community members who want a\ncurated weekly digest and an MCP tool their own agents can query.\n",
+            "technicalApproach": "A deterministic MCP core (injected Fetcher adapters, dedupe,\nrelevance × popularity × freshness scoring) is separated from\neditorial judgment in the agentic workflow; a shared Zod schema\ncontract links the MCP server and the Astro site. 28 unit tests;\nnpm package at v0.3.0.\n",
+            "myRole": "Sole author of the MCP server, scoring model, agentic workflow, and\nAstro site.\n"
+          },
+          "_clientOrg": {
+            "id": "femtech-weekend",
+            "name": "FemTech Weekend",
+            "url": "https://www.femtechweekend.com"
+          },
+          "_relatedProjectsResolved": [
+            {
+              "id": "femtech-weekend-website",
+              "name": "FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, currently delivering Shanghai Summit 2026",
+              "url": "https://www.femtechweekend.com/"
+            }
+          ],
+          "_supersededByProject": null,
+          "_supersedesProjects": []
+        }
+      ],
       "_featuredStackResolved": [
         {
           "name": "docusaurus",
@@ -3267,7 +3323,14 @@
         "name": "FemTech Weekend",
         "url": "https://www.femtechweekend.com"
       },
-      "_relatedProjectsResolved": [],
+      "_relatedProjectsResolved": [
+        {
+          "id": "femtech-radar",
+          "name": "FemTech Radar",
+          "url": "https://chanmeng666.github.io/femtech-radar/",
+          "repoUrl": "https://github.com/ChanMeng666/femtech-radar"
+        }
+      ],
       "_supersededByProject": null,
       "_supersedesProjects": [
         {
@@ -5820,18 +5883,6 @@
         "impactHeadline": "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
       },
       "status": "live",
-      "_featuredStackResolved": [
-        {
-          "name": "mintlify",
-          "src": "/public/tech-logos/mintlify.svg"
-        },
-        {
-          "name": "github",
-          "src": "/public/tech-logos/github.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "she-sharp",
         "name": "She Sharp",
@@ -6613,9 +6664,6 @@
         "outcomes": "Live in production at gavigo.com on Google Cloud Run, built and\nmaintained entirely by Chan — **66 of 66 commits, the repository's\nsole contributor** — including the investor-readiness polish pass that\nsupported GAVIGO's fundraising and partner conversations. It stands as\nthe company's public front door and the hand-off point into the live\nIRE product demo, decoupled from and shipping independently of the\nproduct runtime.\n",
         "myRole": "Sole developer and maintainer of the site end-to-end — the Next.js\nbuild, the Markdown/MDX content pipeline, the Motion brand animation,\nthe Resend + Neon lead-capture backend, and the Google Cloud Run\ndeployment — as GAVIGO's founding principal engineer (the same role\nunder which I lead the flagship IRE platform). 66 of 66 commits are\nmine.\n"
       },
-      "_featuredStackResolved": [],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "gavigo",
         "name": "GAVIGO Inc.",
@@ -7107,9 +7155,6 @@
         "technicalApproach": "A deterministic MCP core (injected Fetcher adapters, dedupe,\nrelevance × popularity × freshness scoring) is separated from\neditorial judgment in the agentic workflow; a shared Zod schema\ncontract links the MCP server and the Astro site. 28 unit tests;\nnpm package at v0.3.0.\n",
         "myRole": "Sole author of the MCP server, scoring model, agentic workflow, and\nAstro site.\n"
       },
-      "_featuredStackResolved": [],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "femtech-weekend",
         "name": "FemTech Weekend",
@@ -11919,6 +11964,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-14",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-14T12:52:49.313Z"
+    "buildTimestamp": "2026-07-14T13:11:40.407Z"
   }
 }

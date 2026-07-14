@@ -2462,7 +2462,7 @@ projects:
   - id: automotive-repair-management-system
     provenance: coursework
     tier: archive
-    recency: recent
+    recency: historical
     lastUpdated: "2026-07-11"
     name: RepairOS (Automotive Repair Management)
     priority: 39
@@ -3092,13 +3092,13 @@ projects:
   - id: popup-image-app
     provenance: personal
     tier: archive
-    recency: historical
-    lastUpdated: "2026-07-04"
+    recency: deprecated
+    lastUpdated: "2026-07-14"
     name: Popup Image App
     priority: 92
     category: tools
     tagline: A lightweight always-on-top floating desktop app for image and text reference — Electron with drag-and-drop, in-app crop/resize editor, notes, and JSON save/load
-    repoUrl: https://github.com/ChanMeng666/popup-image-app
+    # repoUrl omitted — repository no longer public; do not re-add.
     techStack: ["Electron 28", "HTML5 Canvas", CSS3, JavaScript, "Node.js IPC"]
     status: archived
     startDate: "2026-01"

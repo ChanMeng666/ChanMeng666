@@ -1612,35 +1612,6 @@ projects:
     status: live
 
   # ------- AI Applications & Agents (continued) -------
-  - id: claude-code-audio-hooks
-    provenance: personal
-    tier: archive
-    recency: deprecated
-    lastUpdated: "2026-05-18"
-    name: Claude Code Audio Hooks (legacy name → echook)
-    priority: 9
-    category: ai-apps
-    tagline: Original name of the project now published as `echook` — repo URL still resolves via GitHub redirect for backward compatibility
-    repoUrl: https://github.com/ChanMeng666/echook
-    logo: /public/brands/claude-code-audio-hooks-logo.svg
-    techStack: ["Claude Code", CLI, "Cross-platform"]
-    status: archived
-    publicSummary: |
-      Historical / legacy entry. The project was renamed to **echook** at
-      v5.2.1 — a "door-only" rename to reflect expanded support for
-      Cursor IDE and Codex CLI alongside Claude Code. All stars, releases,
-      issues, and existing installs transferred via GitHub's repository
-      redirect; the old URL is still cited here because the **Engram
-      Architect Cohort Engagement Letter** (May 2026) explicitly carves
-      out *claude-code-audio-hooks* by name as Chan's preserved IP. See
-      the `echook` entry for the current canonical project narrative.
-    narrative:
-      problem: |
-        Historical naming. The substantive project narrative lives on
-        the `echook` entry.
-      myRole: |
-        Sole author; renamed the repository to `echook` at v5.2.1
-        without breaking any existing user installation.
   - id: typst-claude-skill
     provenance: personal
     tier: primary

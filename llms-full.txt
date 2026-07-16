@@ -11,7 +11,7 @@ philosophy — "Subtraction for life, addition for thought."
 
 12 companies · 4 teaching cohorts · 480+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-07-16
+**Last updated:** 2026-07-17
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -4317,180 +4317,6 @@ toggle flags + hex color overrides; executed the
 2026-04-13 public-extract release sequence (`73f4fa8` +
 `295756e`); coordinates parser updates across both this
 project and the Seismophone sibling repo.
-### Cloud Canals — A small SVG browser game about routing water across floating islands — drag to build canal networks from cloud springs to crop fields, with reservoirs, seasonal objectives, and synthesized audio
-[tier=secondary · recency=recent · updated=2026-07-04]
-- **Repository:** https://github.com/ChanMeng666/cloud-canals
-- **Tech stack:** Vite 8, JavaScript, SVG, CSS, Web Audio API
-
-**Impact:** A lightweight, touch-friendly SVG puzzle game — build canal networks from cloud springs to crop fields on a pan-and-zoom island map, with reservoirs, seasonal objectives, and synthesized Web Audio music, in dependency-free vanilla JS.
-### Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa) — A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine (a hand-built CSS 3D rendering engine) — themed end-to-end on Māori mythology of Aotearoa and inspired by Waitangi Day, with a full Cloudflare Workers + Hono + Neon Postgres backend (auth, leaderboards, cloud saves, anti-cheat)
-[tier=primary · recency=recent · updated=2026-07-10]
-- **URL:** https://towerdefense.chanmeng.org/
-- **Repository:** https://github.com/ChanMeng666/css-tower-defense
-- **Tech stack:** CSS 3D Transforms, Vanilla JavaScript (ES6), LESS preprocessor, Gulp 4 build pipeline, Cloudflare Workers, Hono, Neon Postgres, Web Audio API, Howler.js, DOM object pooling
-
-**Summary:** A full **3D isometric tower-defense game** rendered entirely through
-CSS 3D transforms on real DOM elements — no `<canvas>`, no WebGL,
-no game engine. Every tower, enemy, projectile, particle, and
-weather effect is a styled DOM node at a 45-degree isometric
-perspective. Themed end-to-end on **Maori mythology and culture of
-Aotearoa**: six towers named after Maori weapons and atua (Taiaha,
-Mere, Tangaroa, Tohunga, Tawhiri, Mahuika), six enemies from
-Maori legend (Kehua, Patupaiarehe, Toa, Wairua, Tipua, Taniwha),
-three maps (Te Awa, Te Maunga, Te Moana), three taonga materials
-(Pipi, Koiwi, Pounamu). Backed by Cloudflare Workers + Hono +
-Neon Postgres for auth, leaderboards, cloud saves (3 slots),
-daily challenges, and server-side anti-cheat. 84 commits over
-~2 months (Feb–Mar 2026), executed in disciplined P0–P4 phases.
-
-**Impact:** 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Māori mythology of Aotearoa, with full Cloudflare Workers + Hono + Neon Postgres backend (server-side anti-cheat). 90 commits / ~99% solo over ~4.5 months.
-
-**Problem:** Two prevailing pictures of "a portfolio game project" are both
-wrong: (a) a trivial Canvas + JS toy that lasts one weekend
-and looks it; (b) a Unity-shaped engine project that's
-impressive but says nothing about web-platform fluency. There
-is a third position the portfolio market doesn't routinely
-produce: a **production-shaped game shipped end-to-end on raw
-web primitives** — DOM + CSS — that proves both deep browser
-engineering and design discipline. There is also a fourth
-gap: a NZ-based developer's portfolio should *show*
-engagement with Aotearoa rather than just claim residence,
-and Maori mythology deserves more interactive cultural
-representation than it usually gets.
-
-**Audience:** Three concentric audiences. **Game players** — anyone who
-clicks Play Now on towerdefense.chanmeng.org and can play
-without an account thanks to fully-supported guest mode.
-**Engineering recruiters and architects** evaluating the
-portfolio: the game is proof of CSS-engine fluency, vanilla
-ES6 architecture discipline, full-stack ops (Workers + Hono +
-Neon), and the kind of phased product execution
-(P0 → P1 → P2 → P3 → P4) usually only seen in shipped
-products. **The Aotearoa cultural audience**: locals, the
-Maori community, NZ tech employers — anyone for whom
-respectful engagement with te reo and Maori cosmology is a
-meaningful signal alongside the technical work.
-
-**Product logic:** Players load the game in-browser, optionally sign in for
-cloud progression (or stay in guest mode), pick a difficulty
-(Normal / Hard / Expert), choose a map (Te Awa, Te Maunga,
-or Te Moana), and play through **10 progressive waves**
-defending against six Maori-legend enemy archetypes plus
-four variant tiers (Rangatira elite, Pakanga armored, Tere
-swift, Mate deadly). Players place towers, gather **taonga**
-(treasures: Pipi, Koiwi, Pounamu) dropped by enemies, craft
-consumables from six recipes, build XP through a Tech Tree
-of 10 upgrades, attempt **daily challenges** drawn from 20+
-templates across six categories, and chase rank on
-**leaderboards** (global and per-challenge). Endless mode
-keeps wave 11+ available after victory. Server-side
-anti-cheat validates submitted scores against expected
-ranges. Cloud saves persist across 3 slots; guest mode keeps
-progress in localStorage.
-
-**Business logic:** Theory of differentiation for a non-commercial portfolio
-artefact: be **specifically uncopyable**. A Canvas tower
-defense is a five-page tutorial; a CSS-3D tower defense is
-a multi-month engineering bet that signals *exactly* what
-the candidate can do. Pair that with cultural engagement
-most portfolios don't attempt — six towers and six enemies
-whose names and roles draw on te reo Maori — and the
-project becomes a single-sentence portfolio differentiator
-in NZ-relevant interviews. The free, guest-playable web
-deployment maximises the surface area: anyone reading the
-portfolio can click Play and *experience* the engineering,
-not just read about it.
-
-**Technical approach:** **Rendering — 100% CSS 3D.** Every tower, enemy, projectile,
-explosion, particle, weather effect is a real DOM element.
-The world is a 45-degree isometric scene built with
-`transform-style: preserve-3d` and 1200px CSS perspective.
-Towers and enemies are constructed from `clip-path`,
-`border-radius`, and pseudo-elements — *no emoji, no
-images*. Visual style is comic / pop-art: halftone dot
-patterns, hard-offset pop shadows, thick comic borders, a
-warm `#FFF8F0` palette. **DOM object pooling** via
-`Pool.acquire()` / `Pool.release()` recycles elements so
-the scene stays at 60 FPS through dense wave combat.
-**Dynamic theming** via CSS custom properties driven from
-JS produces day/night, weather, and seasonal palette
-transitions — same DOM, different CSS variables.
-
-**Game logic — vanilla ES6.** No framework, no engine. The
-codebase is organised as IIFE modules communicating
-through an event-driven bus. Core systems include the
-wave director, enemy AI, tower targeting, projectile
-physics, the combo system (chain kills within 1.5s),
-critical-hit probability, the mana ability system with
-cooldowns, the Terraria-inspired **reforging** engine
-(Common → Uncommon → Rare → Epic → Legendary prefixes),
-and **tower synergies** that activate when adjacent towers
-combine (Freeze Lightning, Fire Blast, Blessing, Array).
-
-**Maori cultural integration is structural, not decorative.**
-Towers carry the abilities their te reo names imply:
-Tangaroa (ocean atua) slows enemies with ice, Mahuika (fire
-goddess) deals damage-over-time, Tawhiri (storm god) chains
-lightning. The Taniwha boss has three signature skills —
-Karanga (call / summon minions), Kaitiaki (guardian /
-shield), Te Riri (anger / enrage). Maps are place-words:
-Te Awa (the river), Te Maunga (the mountain), Te Moana
-(the ocean). Materials are taonga (treasures): Pipi
-(shellfish), Koiwi (bone), Pounamu (greenstone). The
-naming isn't surface skin — each mechanic is selected to
-match the mythological meaning.
-
-**Cloud backend.** Cloudflare Workers running the **Hono**
-web framework, backed by **Neon serverless Postgres**.
-Endpoints cover auth, leaderboards (global + per-challenge),
-cloud saves (3 slots per user), stats tracking, and
-daily-challenge rotation. **Server-side score validation**
-rejects submissions outside expected ranges to defend the
-leaderboard against cheating. **Guest mode is a
-first-class path** — the entire game works without an
-account; cloud sync activates the moment a player signs in.
-
-**Audio.** **Web Audio API** synth generates SFX in real
-time (firing, impact, death, level-up); **Howler.js**
-handles music and longer samples. Music is *dynamic* — the
-soundtrack adapts to game state (menu, playing, boss,
-victory, defeat).
-
-**Build pipeline.** **LESS** preprocessor for CSS modules,
-**Gulp 4** for the build/watch pipeline, deployment via
-Wrangler to Cloudflare Workers with the static assets
-served from the same edge.
-
-**Outcomes:** Live at **towerdefense.chanmeng.org**. **84 commits across
-~2 months** (2026-02-06 → 2026-03-30), ~99% Chan-authored
-across two GitHub identities. Execution followed an
-explicit **P0 → P4 phase plan** visible in the commit log:
-P0 (game feel — damage numbers, death bursts, firing
-animations, wave transitions), P1 (onboarding & UX —
-tutorial with spotlight cutout, hints, cooldown UI),
-P2 (retention — expanded achievements, leaderboard filters,
-celebrations), P3-P4 (deep systems — mana abilities, dynamic
-music, endless mode). Plus the full content build:
-synergies, new enemies, multi-map, daily-challenge overhaul,
-cloud backend integration. Anti-cheat is in production and
-actively rejecting out-of-range submissions. The 3D
-isometric CSS rendering holds 60 FPS through dense
-Wave-10 combat thanks to object pooling.
-
-**My role:** Sole designer, sole engineer, sole audio architect. Designed
-the CSS-3D rendering technique end-to-end (perspective,
-preserve-3d, the comic/pop-art visual language, the DOM
-object pool), wrote every game system (waves, AI,
-physics, towers, enemies, synergies, reforging, combo,
-mana, achievements, daily challenges, tech tree, crafting,
-inventory), shipped the entire **Maori cultural design** —
-choosing which te reo name maps to which mechanic so
-meaning and gameplay reinforce each other — built the
-Cloudflare Workers + Hono + Neon backend including
-server-side anti-cheat validation, composed the dynamic
-music state machine and the Web Audio synth effects,
-wrote the Gulp + LESS build pipeline, and authored the
-4-step interactive tutorial with spotlight overlays.
 
 ## More Projects (by category)
 
@@ -4581,6 +4407,7 @@ wrote the Gulp + LESS build pipeline, and authored the
 - [Chan Meng — Personal Brand Logo](https://github.com/ChanMeng666/chan-meng-personal-brand-logo) [tier=secondary · recency=recent · updated=2026-07-04]
 - [logo-as-code Skill](https://github.com/ChanMeng666/logo-as-code-skill) [tier=secondary · recency=recent · updated=2026-07-04]
 **games:**
+- [Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa)](https://github.com/ChanMeng666/css-tower-defense) [tier=secondary · recency=recent · updated=2026-07-16] -- live: https://towerdefense.chanmeng.org/
 - [The Birth of Leviathan (利维坦的诞生)](https://leviathan-client.vercel.app/) [tier=archive · recency=historical · updated=2026-07-04]
 - [Brick Breaker (Starlight Breaker)](https://github.com/ChanMeng666/html-brick-game) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://chanmeng666.github.io/html-brick-game/
 - [AI vs Human Game](https://github.com/ChanMeng666/ai-human-game) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://ai-human-game.chanmeng-dev.workers.dev/
@@ -4589,6 +4416,7 @@ wrote the Gulp + LESS build pipeline, and authored the
 - [Kaboom RPG Adventure](https://github.com/ChanMeng666/kaboom-rpg-adventure) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://chanmeng666.github.io/kaboom-rpg-adventure/
 - [Memory Rush](https://chanmeng666.itch.io/memory-rush) [tier=archive · recency=historical · updated=2026-05-18]
 - [Slime Split](https://github.com/ChanMeng666/slime-split) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://chanmeng666.itch.io/slime-split
+- [Cloud Canals](https://github.com/ChanMeng666/cloud-canals) [tier=secondary · recency=recent · updated=2026-07-16]
 - [Super Mario · Makey Makey Edition](https://github.com/ChanMeng666/super-mario-makey-makey) [tier=secondary · recency=recent · updated=2026-07-04] -- live: https://chanmeng666.github.io/super-mario-makey-makey/
 **tools:**
 - [Lottie Theme Converter](https://github.com/ChanMeng666/lottie-edit) [tier=archive · recency=deprecated · updated=2026-07-14]

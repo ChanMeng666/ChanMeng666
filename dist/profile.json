@@ -5405,9 +5405,9 @@
     {
       "id": "css-tower-defense",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-07-10",
+      "lastUpdated": "2026-07-16",
       "name": "Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa)",
       "priority": 15,
       "category": "games",
@@ -5449,9 +5449,6 @@
         "outcomes": "Live at **towerdefense.chanmeng.org**. **84 commits across\n~2 months** (2026-02-06 → 2026-03-30), ~99% Chan-authored\nacross two GitHub identities. Execution followed an\nexplicit **P0 → P4 phase plan** visible in the commit log:\nP0 (game feel — damage numbers, death bursts, firing\nanimations, wave transitions), P1 (onboarding & UX —\ntutorial with spotlight cutout, hints, cooldown UI),\nP2 (retention — expanded achievements, leaderboard filters,\ncelebrations), P3-P4 (deep systems — mana abilities, dynamic\nmusic, endless mode). Plus the full content build:\nsynergies, new enemies, multi-map, daily-challenge overhaul,\ncloud backend integration. Anti-cheat is in production and\nactively rejecting out-of-range submissions. The 3D\nisometric CSS rendering holds 60 FPS through dense\nWave-10 combat thanks to object pooling.\n",
         "myRole": "Sole designer, sole engineer, sole audio architect. Designed\nthe CSS-3D rendering technique end-to-end (perspective,\npreserve-3d, the comic/pop-art visual language, the DOM\nobject pool), wrote every game system (waves, AI,\nphysics, towers, enemies, synergies, reforging, combo,\nmana, achievements, daily challenges, tech tree, crafting,\ninventory), shipped the entire **Maori cultural design** —\nchoosing which te reo name maps to which mechanic so\nmeaning and gameplay reinforce each other — built the\nCloudflare Workers + Hono + Neon backend including\nserver-side anti-cheat validation, composed the dynamic\nmusic state machine and the Web Audio synth effects,\nwrote the Gulp + LESS build pipeline, and authored the\n4-step interactive tutorial with spotlight overlays.\n"
       },
-      "_featuredStackResolved": [],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -7240,7 +7237,7 @@
       "provenance": "personal",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "lastUpdated": "2026-07-16",
       "name": "Cloud Canals",
       "priority": 89,
       "category": "games",
@@ -7258,9 +7255,6 @@
       "narrative": {
         "impactHeadline": "A lightweight, touch-friendly SVG puzzle game — build canal networks from cloud springs to crop fields on a pan-and-zoom island map, with reservoirs, seasonal objectives, and synthesized Web Audio music, in dependency-free vanilla JS."
       },
-      "_featuredStackResolved": [],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -11956,8 +11950,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-07-16",
+    "lastModified": "2026-07-17",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-16T18:04:03.081Z"
+    "buildTimestamp": "2026-07-17T00:22:28.857Z"
   }
 }

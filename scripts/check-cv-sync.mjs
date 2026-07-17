@@ -36,6 +36,7 @@ const CV_ORG_TO_WORK = {
   "GAVIGO Inc.": "gavigo",
   "She Sharp": "she-sharp",
   "FemTech Weekend": "femtech-weekend",
+  "Sanicle": "sanicle",
 };
 
 const profile = loadProfile();

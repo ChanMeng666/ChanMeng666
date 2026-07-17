@@ -189,7 +189,7 @@ W("- Anthropic certificates (6): Building with the Claude API · Intro to MCP ·
 W("- Featured in THISDAYLIVE · PulseMCP · 小宇宙FM (Xiaoyuzhou) · WeChat (FemTech Weekend)");
 
 sect("Reference quote");
-W('"Not only his technical ability, but the way he turns ambiguous founder-level direction into working systems, measurable proof, and reliable product surfaces."');
+W('"Not only her technical ability, but the way she turns ambiguous founder-level direction into working systems, measurable proof, and reliable product surfaces."');
 W("— Saba Gecgil · Founder & CEO, GAVIGO Inc.");
 
 sect("For agents / sourcer LLMs");

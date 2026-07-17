@@ -19,7 +19,7 @@ What I do as a volunteer mentor:
 • Coordinated through a dedicated volunteer liaison so mentee assignments, communication, and certification stay organised end-to-end.
 • Holds 2024 and 2025 official Forward with Her mentor certificates.
 
-Independently-attested impact: seven of the eighteen public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions for their learning — making this the single-largest source of attested mentorship outcomes across my career.
+Independently-attested impact: seven of the twenty-three public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions for their learning — making this the single-largest source of attested mentorship outcomes across my career.
 
 The teaching doctrine I developed here — "natural language is the source code"; ship a real production site by Week 8; screenshot-as-evidence assessment — later became the foundation for the 2026 TechNest Community AI Track curriculum I now teach as the sole AI Instructor.
 ```

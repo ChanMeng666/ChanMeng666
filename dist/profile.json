@@ -106,7 +106,7 @@
       }
     ],
     "reach": {
-      "asOf": "2026-06",
+      "asOf": "2026-07",
       "metrics": [
         {
           "label": "newsletter subscribers",
@@ -115,18 +115,18 @@
         },
         {
           "label": "LinkedIn followers",
-          "value": "5,594",
+          "value": "5,856",
           "source": "https://www.linkedin.com/in/chanmeng666/"
         },
         {
           "label": "LinkedIn recommendations",
-          "value": "18",
+          "value": "23",
           "source": "https://www.linkedin.com/in/chanmeng666/",
           "note": "public recommendations; 7 from the Forward With Her cohort"
         },
         {
           "label": "GitHub followers",
-          "value": "210",
+          "value": "218",
           "source": "https://github.com/ChanMeng666"
         },
         {
@@ -420,7 +420,7 @@
       "recency": "recent",
       "lastUpdated": "2026-06-04",
       "keywords": [
-        "CopilotKit (24.6k+ stars)",
+        "CopilotKit (36.1k+ stars)",
         "Open source",
         "TypeScript",
         "React",
@@ -431,12 +431,12 @@
         "Documentation as contribution"
       ],
       "narrative": {
-        "impactHeadline": "Two merged PRs landed in CopilotKit's official demos & docs (24.6k+ stars): contributed the 8-agent FemTracker multi-specialist demo and the Claude Code MCP setup guide — entries that other LLMs and dev tools now index when teaching agentic UIs.",
-        "companyContext": "CopilotKit is the open-source framework for building in-app AI\ncopilots and AI agents — 24,600+ GitHub stars and a thriving\ncontributor community. It provides React components for embedding\nLLM-powered AI assistants directly into web applications\n(chat interfaces, command palettes, in-app actions), a runtime\nlayer for tool and action registration that LLMs can invoke,\nand a Python SDK for multi-agent systems orchestrated through\nLangGraph. The framework is one of the standard ways to add\nsophisticated AI UX to a React app.\n",
+        "impactHeadline": "Two merged PRs landed in CopilotKit's official demos & docs (36.1k+ stars): contributed the 8-agent FemTracker multi-specialist demo and the Claude Code MCP setup guide — entries that other LLMs and dev tools now index when teaching agentic UIs.",
+        "companyContext": "CopilotKit is the open-source framework for building in-app AI\ncopilots and AI agents — 36,100+ GitHub stars and a thriving\ncontributor community. It provides React components for embedding\nLLM-powered AI assistants directly into web applications\n(chat interfaces, command palettes, in-app actions), a runtime\nlayer for tool and action registration that LLMs can invoke,\nand a Python SDK for multi-agent systems orchestrated through\nLangGraph. The framework is one of the standard ways to add\nsophisticated AI UX to a React app.\n",
         "mission": "Make it trivially easy for any web application to add a\nsophisticated AI copilot or agent system. Lower the floor for\nbuilding agentic UX so AI capabilities aren't gated by the\ncomplexity of state management, LLM orchestration, and\nframework integration plumbing.\n",
         "myMandate": "Open Source Contributor — adding capabilities, demos, and\ndocumentation downstream of real-world production use. I run\nCopilotKit + LangGraph in two production systems\n(Tam-AI-Ti's 88+ AI actions; FemTracker Agent's 8-agent\nwomen's-health pipeline) and contribute back the missing\nshowcases, integration paths, and ecosystem bridges I\nencountered along the way.\n",
         "impactDelivered": "Two merged pull requests to the CopilotKit main repository,\nboth publicly approved and thanked by named maintainers:\n\n**[PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)\n— `chore(demos): Add FemTracker Agent + CopilotKit Demo to\nthe demos_2025 folder`** (merged 2025-09-11, after ~10 weeks\nof review, 341 additions): contributed FemTracker Agent to\nCopilotKit's official `demos_2025` collection — an AI-powered\nwomen's health companion orchestrating **eight specialized\nagents** (Main Coordinator + Cycle Tracker + Fertility\nTracker + Symptom Mood + Nutrition Guide + Exercise Coach +\nLifestyle Manager + Health Insights) through CopilotKit's\nagent-routing layer. Shipped with a public demo deployment (since retired), with\nsource on GitHub and a YouTube demo walkthrough. Maintainer\nTyler Slaton (`@tylerslaton`) approved with:\n*\"This is awesome! Thank you for the cool showcase\n@ChanMeng666.\"*\n\n**[PR #2529](https://github.com/CopilotKit/CopilotKit/pull/2529)\n— `docs: add Claude Code setup instructions to MCP server\nguide`** (merged 2025-10-09, 62 additions): expanded the\nCopilotKit MCP server documentation with step-by-step Claude\nCode CLI setup commands, expected output examples, verification\nflow, and management commands — positioned between the\nexisting Cline and GitHub Copilot sections. This contribution\nconnects CopilotKit's MCP-server capability with Anthropic's\nClaude Code, building on my earlier early-MCP-developer work.\nMaintainer Brandon McConnell (`@brandonmcconnell`) approved:\n*\"This looks great. Thanks, @ChanMeng666 👏\"*\n",
-        "technicalHighlights": "Both contributions come from real production usage: Tam-AI-Ti\n(88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and\nFemTracker Agent (8-agent CopilotKit + LangGraph + Python\norchestration). The FemTracker Agent demo is the most\nsubstantive multi-agent showcase in CopilotKit's demos\ncollection — Next.js 15 + React 19 + TypeScript on the\nfrontend, Python 3.12 + LangGraph for agent orchestration,\nSupabase PostgreSQL persistence with WHO-standard health\nscoring (0-100 metric scales), Redis caching reportedly\nsustaining 90%+ hit rates.\n\nThe MCP-docs PR is a deliberate ecosystem bridge: it connects\nCopilotKit's MCP-server capability to Anthropic's Claude Code,\nwhich extends the same early-MCP-developer thread I established\nin November 2024 (issue #76 in modelcontextprotocol/servers)\nand December 2024 (server-google-news, server-google-jobs).\nBoth PRs are docs- and demo-shaped — the highest-leverage\ncontribution surface for someone outside the maintainer team\nof a 24.6k-star project.\n"
+        "technicalHighlights": "Both contributions come from real production usage: Tam-AI-Ti\n(88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and\nFemTracker Agent (8-agent CopilotKit + LangGraph + Python\norchestration). The FemTracker Agent demo is the most\nsubstantive multi-agent showcase in CopilotKit's demos\ncollection — Next.js 15 + React 19 + TypeScript on the\nfrontend, Python 3.12 + LangGraph for agent orchestration,\nSupabase PostgreSQL persistence with WHO-standard health\nscoring (0-100 metric scales), Redis caching reportedly\nsustaining 90%+ hit rates.\n\nThe MCP-docs PR is a deliberate ecosystem bridge: it connects\nCopilotKit's MCP-server capability to Anthropic's Claude Code,\nwhich extends the same early-MCP-developer thread I established\nin November 2024 (issue #76 in modelcontextprotocol/servers)\nand December 2024 (server-google-news, server-google-jobs).\nBoth PRs are docs- and demo-shaped — the highest-leverage\ncontribution surface for someone outside the maintainer team\nof a 36.1k-star project.\n"
       }
     },
     {
@@ -499,14 +499,14 @@
         "Office Hours"
       ],
       "narrative": {
-        "impactHeadline": "Mentored inside a 360-mentor / 800-mentee STEM programme — 7 of Chan's 18 public LinkedIn recommendations come from this cohort. The AI-teaching platform Chan first built for these mentees now hosts 4 coexisting cohorts including TechNest 2026.",
+        "impactHeadline": "Mentored inside a 360-mentor / 800-mentee STEM programme — 7 of Chan's 23 public LinkedIn recommendations come from this cohort. The AI-teaching platform Chan first built for these mentees now hosts 4 coexisting cohorts including TechNest 2026.",
         "companyContext": "**Forward with Her (她行 / \"Forward with Her Mentorship\")** is a\nChina-rooted, internationally-reaching women-in-STEM mentorship\nprogramme operating under the corporate brand\n*taxing-mentorship* on LinkedIn. The programme is structured as\na curated mentor-mentee network where established professionals\nacross software engineering, data, product, AI, and adjacent\ntechnical disciplines guide cohorts of early-career women\nthrough one-on-one mentoring, group sessions, and topic-specific\npublic lectures and office-hour discussions. **Network scale:\n360+ mentors supporting 800+ mentees** across the programme's\noperating lifetime.\n",
         "mission": "Open accelerated, mentor-led pathways into technology careers\nfor women who would otherwise face the harder, slower, often\nisolated route. The programme's theory of change is that\nsustained 1:1 mentorship at a critical career transition\noutperforms generic learn-to-code content because it transfers\nnot just skills but agency, judgment, and the soft\ninfrastructure (peer networks, role models, navigation\nliteracy) that compounds.\n",
         "myMandate": "Served as a **Technology & Professional Development Mentor**\nfrom October 2024 through September 2025 (one full annual\ncycle). Mandate covered: one-on-one mentorship sessions with\nassigned mentees across software engineering, AI tooling, and\ncareer navigation; group mentoring sessions and shared Office\nHours with multiple cohort sisters; public lectures on AI\nprogramming, identity formation in tech, and career\ntransitions; and ongoing availability as a long-term contact\nfor mentees beyond the formal programme cycle.\n",
-        "impactDelivered": "**The mentorship engagement is the umbrella under which seven\nof the eighteen public LinkedIn recommendations on Chan's\nprofile were given** — making Forward with Her the\nsingle-largest source of independently-attested mentorship\nimpact across Chan's career to date. Mentees who gave\nLinkedIn recommendations specifically attributing their\nlearning to Forward with Her sessions include:\n\n- **Siyu Xing** (Ph.D. Candidate in CS / AIGC, University of\n  Chinese Academy of Sciences) — attended Chan's AI\n  programming public course and Office Hours; cites \"insights\n  on identity and self-awareness\" and the spiritual-power\n  framing of the cohort culture\n- **Amy Li** (student at China West Normal University) —\n  connected twice 1:1 plus a cohort tea-party; cites Chan as\n  \"not only a mentor… also my role model\"\n- **Di Peng** (student at ShanghaiTech University) — completed\n  Chan's AI-assisted development course on Cursor, shipped her\n  first personal website end-to-end\n- **Mi Su (苏米)** (Student at Guangxi University) — cohort\n  mentee\n- **Shushu Qin** (Master of Computational Science at Laurentian\n  University / Université Laurentienne) — cohort mentee who\n  went on to AWS certifications (SAA + ML)\n- **Yijia (Robin) Lee** (Student at Tianjin Normal University)\n  — cohort mentee\n- **Shiyu Fang** (Web Developer at GDS Communication) — cohort\n  mentee who carried the AI-with-web-development integration\n  methodology into her own subsequent practice\n\nThe programme also produced a public-lecture series whose\naccumulated topics — AI programming using natural-language\nprompts, identity formation in tech, career navigation for\nearly-career women — informed both the eventual TechNest\nCommunity AI Track curriculum (2026) and the AI Programming\nEducation teaching platform that's now my open-source\nteaching repository.\n\n**The AI Programming Education teaching platform\n(`programming.chanmeng.org`) was first built specifically for\nthis Forward with Her cohort.** Its earliest cohort version\n(`2024-winter`) exists precisely because I needed a structured\nplace to host the tutorials, lecture recordings, and exercises\nI was delivering live to mentees. It has since grown into the\nopen-source teaching platform now serving 4 coexisting cohort\nversions across TechNest, HER WAKA, and the original Forward\nwith Her audience — but its origin is here.\n\nI also built and shipped a dedicated **bilingual EN/CN promo\nsite** for the programme\n(`forward-with-her-mentorship-program.pages.dev`) — a\n3D-rendered Next.js 15 + Three.js landing page on Cloudflare\nPages that supported the programme's external visibility\nwhile I was in the cohort.\n",
+        "impactDelivered": "**The mentorship engagement is the umbrella under which seven\nof the twenty-three public LinkedIn recommendations on Chan's\nprofile were given** — making Forward with Her the\nsingle-largest source of independently-attested mentorship\nimpact across Chan's career to date. Mentees who gave\nLinkedIn recommendations specifically attributing their\nlearning to Forward with Her sessions include:\n\n- **Siyu Xing** (Ph.D. Candidate in CS / AIGC, University of\n  Chinese Academy of Sciences) — attended Chan's AI\n  programming public course and Office Hours; cites \"insights\n  on identity and self-awareness\" and the spiritual-power\n  framing of the cohort culture\n- **Amy Li** (student at China West Normal University) —\n  connected twice 1:1 plus a cohort tea-party; cites Chan as\n  \"not only a mentor… also my role model\"\n- **Di Peng** (student at ShanghaiTech University) — completed\n  Chan's AI-assisted development course on Cursor, shipped her\n  first personal website end-to-end\n- **Mi Su (苏米)** (Student at Guangxi University) — cohort\n  mentee\n- **Shushu Qin** (Master of Computational Science at Laurentian\n  University / Université Laurentienne) — cohort mentee who\n  went on to AWS certifications (SAA + ML)\n- **Yijia (Robin) Lee** (Student at Tianjin Normal University)\n  — cohort mentee\n- **Shiyu Fang** (Web Developer at GDS Communication) — cohort\n  mentee who carried the AI-with-web-development integration\n  methodology into her own subsequent practice\n\nThe programme also produced a public-lecture series whose\naccumulated topics — AI programming using natural-language\nprompts, identity formation in tech, career navigation for\nearly-career women — informed both the eventual TechNest\nCommunity AI Track curriculum (2026) and the AI Programming\nEducation teaching platform that's now my open-source\nteaching repository.\n\n**The AI Programming Education teaching platform\n(`programming.chanmeng.org`) was first built specifically for\nthis Forward with Her cohort.** Its earliest cohort version\n(`2024-winter`) exists precisely because I needed a structured\nplace to host the tutorials, lecture recordings, and exercises\nI was delivering live to mentees. It has since grown into the\nopen-source teaching platform now serving 4 coexisting cohort\nversions across TechNest, HER WAKA, and the original Forward\nwith Her audience — but its origin is here.\n\nI also built and shipped a dedicated **bilingual EN/CN promo\nsite** for the programme\n(`forward-with-her-mentorship-program.pages.dev`) — a\n3D-rendered Next.js 15 + Three.js landing page on Cloudflare\nPages that supported the programme's external visibility\nwhile I was in the cohort.\n",
         "technicalHighlights": "The substance of this role is **pedagogical and relational\nrather than technical-implementation**, but the technical\ncontent of the mentorship was concrete: students learned to\nprompt Cursor, Claude Code, and AI editors to ship a complete\npersonal website end-to-end; how to evaluate AI tools as\ncollaborative partners rather than autocomplete; how to read\nand act on LLM output critically; and how to integrate\nbilingual content (EN/简体中文) into modern web projects.\n\nThe teaching methodology developed here — prompt-first\ndevelopment, learn-by-shipping a real production site,\ncohort accountability through Office Hours, screenshot-as-\nevidence assessment — is the same doctrine that later\nanchored the **2026 TechNest Community AI Track curriculum**\nand the personal AI Programming Education teaching platform\n(`programming.chanmeng.org`). The cohort recordings and\nmaterials from this period are preserved in the teaching\nrepository as the `2024-winter` and `2025-summer` versioned\ncohort docs.\n"
       },
-      "publicSummary": "Technology & Professional Development Mentor in the Forward with Her\n(她行) Mentorship programme — a women-in-STEM mentor-mentee network\nof 360+ mentors supporting 800+ mentees — from October 2024 through\nSeptember 2025. **Seven of the 18 public LinkedIn recommendations on\nChan's profile come from mentees who specifically credit Forward with\nHer sessions for their learning**, including students at the\nUniversity of Chinese Academy of Sciences, ShanghaiTech University,\nTianjin Normal University, China West Normal University, Guangxi\nUniversity, and Laurentian University. The teaching doctrine\ndeveloped here (\"natural language is the source code\"; ship a real\nproduction site by Week 8) became the foundation for the later 2026\nTechNest AI Track curriculum and Chan's AI Programming Education\nteaching platform.\n"
+      "publicSummary": "Technology & Professional Development Mentor in the Forward with Her\n(她行) Mentorship programme — a women-in-STEM mentor-mentee network\nof 360+ mentors supporting 800+ mentees — from October 2024 through\nSeptember 2025. **Seven of the 23 public LinkedIn recommendations on\nChan's profile come from mentees who specifically credit Forward with\nHer sessions for their learning**, including students at the\nUniversity of Chinese Academy of Sciences, ShanghaiTech University,\nTianjin Normal University, China West Normal University, Guangxi\nUniversity, and Laurentian University. The teaching doctrine\ndeveloped here (\"natural language is the source code\"; ship a real\nproduction site by Week 8) became the foundation for the later 2026\nTechNest AI Track curriculum and Chan's AI Programming Education\nteaching platform.\n"
     },
     {
       "id": "freeperiod",
@@ -7791,7 +7791,7 @@
       "category": "ai-tooling",
       "relatedProjectId": "femtracker-agent",
       "summary": "Added the 8-agent FemTracker Agent demo (a women's-health AI tracker\nbuilt on CopilotKit + LangGraph) to CopilotKit's official `demos_2025`\nfolder. 341 lines added.\n",
-      "impact": "Merged by maintainer @tyler-slaton into CopilotKit/CopilotKit (24.6k+\nGitHub stars). Public showcase of Chan's FemTracker Agent project\ninside the canonical CopilotKit demo collection that ships with the\nframework's example documentation.\n",
+      "impact": "Merged by maintainer @tyler-slaton into CopilotKit/CopilotKit (36.1k+\nGitHub stars). Public showcase of Chan's FemTracker Agent project\ninside the canonical CopilotKit demo collection that ships with the\nframework's example documentation.\n",
       "reactions": 0,
       "comments": 4
     },
@@ -9967,7 +9967,7 @@
           "tool": "CopilotKit",
           "since": "2025",
           "depth": "intermediate",
-          "notes": "4 repos. Active open-source contributor — merged PRs into the 24.6k★ upstream repo."
+          "notes": "4 repos. Active open-source contributor — merged PRs into the 36.1k★ upstream repo."
         },
         {
           "tool": "MCP (Model Context Protocol)",
@@ -10292,6 +10292,74 @@
   ],
   "references": [
     {
+      "name": "Ikenna Anasieze",
+      "id": "ikenna-anasieze",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-17",
+      "reference": "I had the pleasure of working closely with Chan, and she is an exceptional professional who consistently brings immense value to her team and projects. Chan possesses a rare combination of sharp technical acumen and outstanding problem-solving skills, allowing her to tackle complex challenges with both speed and precision.\n\nWhat truly sets Chan apart is her collaborative mindset and strong work ethic. She is a natural communicator who effortlessly bridges technical execution with team objectives, always ensuring everyone is aligned and motivated. She takes extreme ownership of her work, delivers high-quality results under pressure, and is always willing to lift others up along the way.\n\nChan would be a tremendous asset to any organization looking for a driven, skilled, and forward-thinking professional. I highly recommend her and look forward to seeing her continued success!",
+      "meta": {
+        "x_brand": {
+          "relationship": "AI Cloud Engineer / AWS AI Engineer / AI Platform Engineer (highly-available, scalable AI infrastructure & cloud-native systems); reported to Chan directly",
+          "linkedinRelationship": "Reported to Chan directly",
+          "givenAt": "2026-06-20",
+          "linkedinUrl": "https://www.linkedin.com/in/ikenna-anasieze/",
+          "image": "/public/recommendations/Ikenna-Anasieze.png"
+        }
+      }
+    },
+    {
+      "name": "Swayam Dhir",
+      "id": "swayam-dhir",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-17",
+      "reference": "I had the pleasure of completing Chan’s full AI course series and it was genuinely one of the most valuable learning experiences I’ve had. Chan has an ability to make complex AI concepts accessible and practical. Her passion for the subject comes through in every session, and she creates an environment where you feel genuinely supported. I came away with skills I’m already putting to use. I’d highly recommend her to anyone looking to build real AI knowledge.",
+      "meta": {
+        "x_brand": {
+          "relationship": "Software Developer / Full-Stack Engineer (scalable, AI-integrated web applications); completed Chan's full AI course series (TechNest Community AI Track)",
+          "linkedinRelationship": "Reported to Chan directly",
+          "givenAt": "2026-06-19",
+          "linkedinUrl": "https://www.linkedin.com/in/swayam-dhir-58526b36b/",
+          "image": "/public/recommendations/Swayam-Dhir.jpg"
+        }
+      }
+    },
+    {
+      "name": "Mahdieh Najmi",
+      "id": "mahdieh-najmi",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-17",
+      "reference": "Chan is a great person that I met her through techNest community. She is a dedicated mentor and I learned about AI and the practical way of building application with cursor, deploy it on Vercel, connect it to DB using Neon (Postgres DB) and some other tools. She is patient and friendly, and doesn’t matter at which level you are, she is there to support you. She is an active girl and she really cares about open source projects which I really admire!",
+      "meta": {
+        "x_brand": {
+          "relationship": "System Analyst / Full-Stack Developer; mentee in the TechNest community",
+          "linkedinRelationship": "Worked with Chan but on different teams",
+          "givenAt": "2026-06-18",
+          "linkedinUrl": "https://www.linkedin.com/in/mahdiehnajmi/",
+          "image": "/public/recommendations/Mahdieh-Najmi.jpg"
+        }
+      }
+    },
+    {
+      "name": "Shivani Dhandabani",
+      "id": "shivani-dhandabani",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-07-17",
+      "reference": "I had the privilege of working alongside Chan during our AI hackathon, where she stood out not just for her technical depth, but for the way she genuinely invested in others around her.\n\nChan is a full-stack developer and AI specialist with rare breadth — spanning agentic systems, LLM integration, and production-grade web and mobile development. But what I witnessed at the hackathon was something that doesn't show up on a resume: her instinct to mentor. She took time to break down complex AI concepts, guided others through blockers with patience and clarity, and made the entire team feel more capable because she was in the room.\n\nShe brings structure and warmth to high-pressure environments in equal measure. If you get the chance to work with or learn from Chan, take it — she's the kind of person who genuinely raises the bar for everyone around her.",
+      "meta": {
+        "x_brand": {
+          "relationship": "Master of Engineering, RHCSA-certified (Linux & Cloud Infrastructure, Managed Services, Incident Management), 2026 graduate; worked alongside Chan at an AI hackathon",
+          "linkedinRelationship": "Senior to Chan but didn't manage Chan directly",
+          "givenAt": "2026-06-17",
+          "linkedinUrl": "https://www.linkedin.com/in/shivani-dhandabani-a3474a221/",
+          "image": "/public/recommendations/Shivani-Dhandabani.jpg"
+        }
+      }
+    },
+    {
       "name": "Prasanth Pavithran",
       "id": "prasanth-pavithran",
       "tier": "secondary",
@@ -10590,14 +10658,13 @@
       "id": "di-peng",
       "tier": "secondary",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-07-17",
       "reference": "I recently had the opportunity to join Chan's AI-assisted\ndevelopment course through Forward with Her, where I created my\nfirst personal website using the Cursor editor, incorporating my\nown curated media elements. The experience introduced me to the\nfascinating world of web and app development. Chan's hands-on\nteaching approach and technical expertise made complex concepts\napproachable, particularly through interactive problem-solving\nsessions. I'm excited to see more of her innovative work in the\ntech space!\n",
       "meta": {
         "x_brand": {
           "relationship": "Student at ShanghaiTech University; Mentee",
           "linkedinRelationship": "Reported to Chan directly (Forward with Her AI-assisted development course)",
-          "givenAt": "2024-11-26",
-          "givenAtNote": "Date recovered from historical README snapshot at git commit d01e0f7129ada279bd2ffa17f8cf45b07cfc85f8; recommendation may no longer be publicly visible on Chan's current LinkedIn recommendations page",
+          "givenAt": "2024-11-30",
           "linkedinUrl": "https://www.linkedin.com/in/di-peng-25636033b/",
           "image": "/public/recommendations/Di-Peng.jpeg"
         }
@@ -10970,7 +11037,7 @@
         "x_brand": {
           "displayTier": "primary",
           "category": "employer",
-          "context": "Open-source contributor — 2 merged PRs into a 24.6k★ repo",
+          "context": "Open-source contributor — 2 merged PRs into a 36.1k★ repo",
           "relatedWorkId": "copilotkit"
         }
       }
@@ -11949,6 +12016,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-17",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-17T08:26:18.771Z"
+    "buildTimestamp": "2026-07-17T09:23:29.516Z"
   }
 }

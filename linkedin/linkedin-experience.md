@@ -165,7 +165,7 @@ Two original research reports published through the platform: FemTech Market Map
 **Location:** Seattle, Washington, United States · Remote
 
 ```
-Two merged PRs in CopilotKit (24,600+ GitHub stars) — the open-source framework for building in-app AI copilots and agents — both publicly approved by named maintainers. Both contributions came directly from production systems I run.
+Two merged PRs in CopilotKit (36,100+ GitHub stars) — the open-source framework for building in-app AI copilots and agents — both publicly approved by named maintainers. Both contributions came directly from production systems I run.
 
 PR #2068 — FemTracker Agent demo (merged September 2025, after 10 weeks of review). Contributed an 8-agent women's-health companion to CopilotKit's official demos_2025 collection: a Main Coordinator routes requests to specialists in cycle tracking, fertility, symptoms, nutrition, exercise, lifestyle, and health insights, using WHO-standard scoring scales.
 
@@ -265,7 +265,7 @@ Open-source artefact launched here: claude-code-audio-hooks — explicitly prese
 ```
 Technology & Professional Development Mentor for one full annual cycle inside Forward with Her (她行 / taxing-mentorship) — a women-in-STEM mentor-mentee network connecting 360+ mentors with 800+ mentees globally across software engineering, data, product, and AI.
 
-Independently-attested impact: seven of the eighteen public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.
+Independently-attested impact: seven of the twenty-three public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.
 
 What I delivered: 1:1 mentorship across software engineering, AI tooling, and career navigation; group Office Hours; public lectures on AI programming, identity formation in tech, and career navigation for early-career women; a bilingual EN/CN promo site for the programme (3D Next.js 15 + Three.js, Cloudflare Pages).
 

@@ -22,12 +22,12 @@ AI agent architect, full-stack engineer, and minimalist living advocate building
 - On Anthropic Partner Network architect track via Engram — Claude Certified Architect — Foundations curriculum.
 - Senior AI programming mentor · orchestrator of agents.
 
-# Reach & social proof (verified 2026-06)
+# Reach & social proof (verified 2026-07)
 
 - 1,103 newsletter subscribers · https://chanmeng.org/#newsletter
-- 5,594 LinkedIn followers · https://www.linkedin.com/in/chanmeng666/
-- 18 LinkedIn recommendations — public recommendations; 7 from the Forward With Her cohort · https://www.linkedin.com/in/chanmeng666/
-- 210 GitHub followers · https://github.com/ChanMeng666
+- 5,856 LinkedIn followers · https://www.linkedin.com/in/chanmeng666/
+- 23 LinkedIn recommendations — public recommendations; 7 from the Forward With Her cohort · https://www.linkedin.com/in/chanmeng666/
+- 218 GitHub followers · https://github.com/ChanMeng666
 - 480+ GitHub stars — measured 487 across own non-fork public repos (gh repo list, 2026-07-14), published as a stable 480+; org/commercial repos are private · https://github.com/ChanMeng666
 
 # Claude Code stack (canonical 5-layer vocabulary)
@@ -87,6 +87,11 @@ AI agent architect, full-stack engineer, and minimalist living advocate building
 - Role: Solo author & maintainer (essentially sole-authored · 379 commits over ~18 months)
 - Paste a job description, get a tailored resume and cover letter scored against the job's keywords in under 30 seconds. The user watches their resume assemble live instead of a spinner — each stage streams over SSE (Vercel AI SDK), validated by Zod. Typst compiles the PDFs locally in under 100 ms across 7 auto-selected templates — no hosted Chromium or external doc API. Kept running through three production migrations (Railway → Cloudflare Workers → DigitalOcean) and a LaTeX → Typst engine swap, zero downtime. 8-step AI pipeline (JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → template render → PDF compile) · gpt-5.5 (reasoning) / gpt-5.4-mini (extract) · Docker + Traefik + GitHub Actions CD · Stripe credits ledger + share-token URLs.
 
+### ArchCanvas × ArchLang
+- URL: https://archcanvas.uk/
+- Role: Sole author — an original programming language (free, open source) and the commercial product built on top of it
+- Chan invented a floor-plan programming language, then built the paid product it powers. ArchLang turns a floor plan into a precise program rather than a picture; ArchCanvas is the AI design agent on top of it — describe a building in plain words, get a dimensioned, buildable floor plan plus a grounded rendering, then refine it conversationally on an infinite zoomable canvas where edits morph the plan in place instead of regenerating it. Because the plan is a deterministic program, ArchCanvas offers exact editing, parametric sliders, semantic diffs, and full design-history export that an image generator structurally cannot — and a built-in bench harness runs each brief through both the DSL pipeline and a freehand-pixel control, so the advantage is measured, not asserted. Open-source engine as credential + commercial product as the business is the two-layer strategy. ArchLang: @chanmeng666/archlang on npm · 34 tagged releases · hand-written zero-dependency isomorphic TypeScript compiler · 83-diagnostic error system · architectural-soundness linting · LSP + VS Code extension. ArchCanvas: live at archcanvas.uk · Next.js 15 + Vercel AI SDK + gpt-5.5 orchestration + GPT Image 2 grounded renderings · Stripe credit ledger · design history exported as a real git repo · canary-then-swap deploy on a DigitalOcean VPS.
+
 ### echook — claude-code-audio-hooks
 - URL: https://github.com/ChanMeng666/echook
 - Role: Solo author & maintainer (MIT)
@@ -104,8 +109,8 @@ AI agent architect, full-stack engineer, and minimalist living advocate building
 - gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 355 animated-SVG templates for READMEs across 19 categories
 - typst-claude-skill — official Typst skill for Claude Code (typesets this CV)
 - Seismophone (https://seismophone.chanmeng.org/) — an independent observatory for AI music · trilingual English / Simplified Chinese / Japanese · Docker + Traefik VPS
-- ArchLang (https://github.com/ChanMeng666/archlang) — a floor-plan programming language I invented: compiles to professional SVG plans (Typst/LaTeX for architecture) · zero-dependency isomorphic TypeScript · published to npm as @chanmeng666/archlang
-- ArchCanvas (https://archcanvas.uk/) — AI design agent for architects that productizes ArchLang · gpt-5.5 orchestration + GPT Image 2 renderings grounded on the compiled plan, on a zoomable canvas · edits morph the plan in place instead of regenerating it
+- ArchLang (https://github.com/ChanMeng666/archlang) — the floor-plan language above, packaged as a standalone dev tool: `.arch` source in, dimensioned SVG/DXF/PDF out; agent-native CLI + LSP + VS Code extension; @chanmeng666/archlang on npm (details under Selected work → ArchCanvas × ArchLang)
+- ArchCanvas (https://archcanvas.uk/) — listed here as the reference example of building a commercial product directly on a self-authored open-source engine (full write-up under Selected work → ArchCanvas × ArchLang)
 
 # Experience (most recent)
 
@@ -114,7 +119,7 @@ AI agent architect, full-stack engineer, and minimalist living advocate building
 - Founding Principal Engineer (Activation, Execution & AI Systems) · Gavigo · Oct 2025 — Present — Owns the intelligence layer of GAVIGO's app-activation platform — tap a game in a feed and it plays instantly, no app-store install. Built the AI scheduler that keeps content pre-warmed on Kubernetes (GKE) so a tapped game resumes in under a millisecond, and moved the platform across clouds (DigitalOcean → GCP) with zero downtime. Promoted Core Engineer → Founding Principal Engineer across three contract iterations, building nearly the whole system solo · p50 < 1 ms · 84.6% warm-pool hit rate · ~97% solo on 426 of 439 non-merge commits.
 - Senior Full-Stack Engineer & Website Team Lead · She Sharp · Jul 2025 — Present — Recruited by founder Dr Mahsa Mohaghegh to rebuild the member platform for New Zealand's leading women-in-STEM charity (2,200+ registered members, 8,000+ women supported lifetime). Moved the community off a drag-and-drop website onto one system for sign-ups, events, and mentor matching — 10+ years of content carried over with zero broken inbound links, ~85% solo over a year. Mentors and mentees are paired by AI scoring (GPT-4o-mini, 5-dimensional scoring) with human review · 793 of 936 commits · Webflow → Next.js.
 - Chief Technology Officer · FemTech Weekend · Mar 2025 — Present — Sole engineer behind China's first women's-health-technology organisation — built, then rebuilt its entire web platform twice as the mission grew, from a marketing site on Next.js to an editorial and research platform on Docusaurus. Ran the digital infrastructure for the 2026 Shanghai Summit (June 22–25), a four-day event with 20 confirmed speakers headlined by Ida Tin, who coined the term "FemTech".
-- Open Source Contributor · CopilotKit (24.6k stars) · Jun 2025 — Present — 2 merged PRs · 8-agent FemTracker demo + Claude Code MCP setup guide
+- Open Source Contributor · CopilotKit (36.1k stars) · Jun 2025 — Present — 2 merged PRs · 8-agent FemTracker demo + Claude Code MCP setup guide
 - CTO (prev. Senior AI/ML Infrastructure Engineer) · Sanicle · Mar 2025 — Feb 2026 — Joined as Senior AI/ML Infrastructure Engineer, promoted to CTO. Took Sanicle from a no-code prototype to the production B2B FemTech SaaS employers buy for their staff — menstrual and menopause workplace wellness. Personally integrated IBM watsonx into the product, the work that earned Sanicle its IBM Silver Partner certification · solo build, 350+ commits · OpenAI + pgvector.
 - Full-Stack Engineer (Douyin Mall capstone) · ByteDance · — — Spring Boot 3 + solo Vue 3 build · #2 of 8 contributors
 

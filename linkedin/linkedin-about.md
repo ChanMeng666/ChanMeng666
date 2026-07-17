@@ -12,7 +12,7 @@ I architect AI agents that survive production and build the platforms around the
 ## 🤖 AI Agent Engineering
 
 ```
-Agentic systems designed end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, and model routing across Claude, OpenAI, and Llama. Earliest-ecosystem MCP server author — Google News MCP (PulseMCP Top Pick, Glama A-rating). FemTracker Agent merged into CopilotKit's official demos repo (24.6k★).
+Agentic systems designed end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, and model routing across Claude, OpenAI, and Llama. Earliest-ecosystem MCP server author — Google News MCP (PulseMCP Top Pick, Glama A-rating). FemTracker Agent merged into CopilotKit's official demos repo (36.1k★).
 ```
 
 ## 💻 Full-Stack Foundations

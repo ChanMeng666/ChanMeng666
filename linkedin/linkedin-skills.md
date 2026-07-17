@@ -3,7 +3,7 @@
 
 # LinkedIn — Skills
 
-97 skills, in the order LinkedIn's "All" view displays them.
+95 skills, in the order LinkedIn's "All" view displays them.
 
 **Category tabs:** Industry Knowledge · Tools & Technologies · Interpersonal Skills · Other Skills
 
@@ -44,16 +44,10 @@
 - Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
 
 ### PostgreSQL Recursive CTEs
-- SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
+- Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
 ### Reverse Engineering
-- SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
-
-### CSS 3D Transforms
-- Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)
-
-### Game Design
-- Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)
+- Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
 ### Cursor IDE Hooks
 - echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
@@ -77,7 +71,7 @@
 - Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)
 
 ### Cloudflare Workers AI
-- programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+- programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
 
 ### Open Source Maintenance
 - Google News MCP Server — Early-Ecosystem AI Tool-Use Server
@@ -100,7 +94,7 @@
 
 ### Docusaurus
 - FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
-- programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+- programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
 
 ### Migration Strategy
 - Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant
@@ -185,7 +179,7 @@
 ### Bilingual Web Development
 - Chief Technology Officer (CTO) at FemTech Weekend
 - FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
-- programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+- programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
 
 ### Notion API
 - Chief Technology Officer (CTO) at FemTech Weekend
@@ -219,7 +213,7 @@
 
 ### Retrieval-Augmented Generation (RAG)
 - AI Instructor & Mentor at TechNest Community
-- programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+- programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
 
 ### Curriculum Development
 - AI Instructor & Mentor at TechNest Community
@@ -299,7 +293,7 @@
 ### Internationalization (i18n)
 - Chief Technology Officer (CTO) at FreePeriod
 - FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
-- SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
+- Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
 ### Mobile Application Development
 - Full Stack Developer at CORDE

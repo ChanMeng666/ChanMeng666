@@ -124,7 +124,7 @@
 #let stack() = section("Stack", {
   skill-category("Models", (
     "Anthropic Opus / Sonnet / Haiku",
-    "OpenAI GPT-4o + realtime",
+    "OpenAI gpt-5.5 / GPT-4o + realtime",
     "Gemini 2.x",
     "Llama 3.x",
   ))
@@ -151,7 +151,8 @@
     "Docker + Traefik",
     "Redis",
     "Stripe",
-    "NextAuth",
+    "Stack Auth",
+    "NextAuth 5",
   ))
   skill-category("Languages", (
     "TypeScript",

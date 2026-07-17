@@ -365,8 +365,8 @@
       [#link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] — te-ao-Māori financial-wellness coach · 351 commits · 19-user, 4-month cohort],
       [#link("https://github.com/ChanMeng666/femtracker-agent")[FemTracker] — 8-node LangGraph agent, merged into CopilotKit's official demos],
       [#link("https://www.vitex.org.nz/")[Vitex] — AI career agent: a job description → tailored résumé + cover letter in under 30s],
-      [#link("https://archcanvas.chanmeng.org/")[ArchCanvas] — AI design agent for architects · productizes ArchLang · GPT-Image renderings grounded on the compiled plan · edits morph the plan in place],
-      [#link("https://sunostats.chanmeng.org/")[SunoStats] — the first Suno music-lineage explorer · trilingual],
+      [#link("https://archcanvas.uk/")[ArchCanvas] — AI design agent for architects · productizes ArchLang · gpt-5.5 orchestration + GPT Image 2 renderings grounded on the compiled plan · edits morph the plan in place],
+      [#link("https://seismophone.chanmeng.org/")[Seismophone] — an independent observatory for AI music · trilingual],
     ),
   )
   cap("Skills, MCP servers & developer tools",
@@ -377,7 +377,7 @@
       [#link("https://github.com/ChanMeng666/app-promo-studio")[app-promo-studio] — screenshots → cross-platform store & social images],
       [#link("https://github.com/ChanMeng666/logo-as-code-skill")[logo-as-code-skill] — hand-drawn logo → editable SVG + favicons],
       [#link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] — Typst PDF generation; it typesets this CV],
-      [#link("https://github.com/ChanMeng666/echook")[echook] — audio-hooks framework · 26 events · 139 tests · triple-OS CI],
+      [#link("https://github.com/ChanMeng666/echook")[echook] — audio-hooks framework · 37 events · 248 tests · triple-OS CI],
       [#link("https://glama.ai/mcp/servers/ChanMeng666/server-google-news")[Google News] & #link("https://github.com/ChanMeng666/server-google-jobs")[Google Jobs] MCP — among the earliest · 15+ catalogs],
     ),
   )
@@ -386,7 +386,7 @@
     (
       [*Caldera* — the design system behind this CV: tokens, type, motion],
       [#link("https://eatropolis.co.nz/")[Chow Luck Club] — event brand + site for a paying client (Tātaki Auckland Unlimited / Auckland Council)],
-      [#link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] — 340+ animated-SVG templates · 273 solo commits],
+      [#link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] — 355 animated-SVG templates · 283 commits],
     ),
   )
   cap("Documents as code",
@@ -405,12 +405,10 @@
       [*Promo graphics & OG covers* — HTML → branded images across every deployed project],
     ),
   )
-  cap("Team automation & playable games",
-    [I automate team operations and build playful things — a Slack ecosystem that retired volunteer chores, and games shipped end to end.],
+  cap("Team automation",
+    [I automate team operations end to end — a Slack ecosystem that retired volunteer chores.],
     (
       [#link("https://github.com/NZ-SheSharp/she-sharp")[She Sharp Slack ecosystem] — event bot, weekly digests, NZ-funding crawler + a sync-event-from-slack skill],
-      [#link("https://towerdefense.chanmeng.org/")[CSS Tower Defense] — 3D tower defense in pure CSS, for Waitangi Day],
-      [#link("https://cloud-canals.vercel.app/")[Cloud Canals] — SVG water-routing game for team downtime],
     ),
   )
 
@@ -422,7 +420,6 @@
     ("/cv/assets/thumbs/tam-ai-ti.jpg", [Tam-AI-Ti — production app]),
     ("/cv/assets/thumbs/vitex.jpg", [Vitex — AI career agent]),
     ("/cv/assets/thumbs/eatropolis.jpg", [Chow Luck Club — client site]),
-    (none, [CSS Tower Defense — pure-CSS game]),
     (none, [Client contract & receipts — Typst]),
     (none, [echook promo film — Remotion]),
   ))
@@ -446,25 +443,25 @@
     title: "AI Instructor & Mentor", org: "TechNest Community", org-url: "https://www.technestcommunity.com/",
     dates: "Apr 2026 — Present",
     location: [St John's, Newfoundland, Canada · *Remote*],
-    summary: [Built and sole-teaches TechNest's first AI-specialised mentorship track — a *12-week prompt-first curriculum where students ship portfolio-grade AI apps by week 8*. Also built the bilingual teaching platform 95.7% solo, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV).],
+    summary: [Built and sole-teaches TechNest's first AI-specialised mentorship track — a *12-week prompt-first curriculum where students ship portfolio-grade AI apps by week 8*. Also built the bilingual teaching platform ~96% solo, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV).],
   )
   xrole(
     title: "Founding Principal Engineer, Activation, Execution & AI Systems", org: "GAVIGO Inc.", org-url: "https://gavigo.com/",
     dates: "Oct 2025 — Present",
     location: [Wilmington, Delaware, United States · *Remote*],
-    summary: [Promoted *Core Engineer → Founding Principal Engineer across three contract iterations* — owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install). *p50 < 1 ms activation latency · 84.6% warm-pool hit rate* · cross-cloud DigitalOcean → GCP GKE migration in a *30-minute zero-downtime cutover* · *98% solo on 353 commits*.],
+    summary: [Promoted *Core Engineer → Founding Principal Engineer across three contract iterations* — owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install). *p50 < 1 ms activation latency · 84.6% warm-pool hit rate* · cross-cloud DigitalOcean → GCP GKE migration in a *30-minute zero-downtime cutover* · *~97% solo on 426 of 439 non-merge commits*.],
   )
   xrole(
     title: "Senior Full-Stack Engineer & Website Team Lead", org: "She Sharp", org-url: "https://www.shesharp.org.nz/",
     dates: "Jul 2025 — Present",
     location: [Auckland, New Zealand · *Hybrid*],
-    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild *New Zealand's leading women-in-STEM platform* (*2,200+ registered members, 8,000+ women supported lifetime*). Webflow → Next.js cutover *86.6% solo across 10 months*, 10+ years of legacy content preserved with *zero broken inbound links*, AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top.],
+    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild *New Zealand's leading women-in-STEM platform* (*2,200+ registered members, 8,000+ women supported lifetime*). Webflow → Next.js cutover *85% solo across ~12 months*, 10+ years of legacy content preserved with *zero broken inbound links*, AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top.],
   )
   xrole(
     title: "Chief Technology Officer", org: "FemTech Weekend", org-url: "https://www.femtechweekend.com/",
     dates: "Mar 2025 — Present",
     location: [Chengdu, Sichuan, China · *Remote*],
-    summary: [Sole technical lead for *China's first FemTech organisation* since its inaugural conference — built and rebuilt the entire web platform twice (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite). Currently operating the *2026 Shanghai Summit — 16 confirmed speakers, including FemTech-term originator Ida Tin*.],
+    summary: [Sole technical lead for *China's first FemTech organisation* since its inaugural conference — built and rebuilt the entire web platform twice (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite). Delivered the *2026 Shanghai Summit (June 22–25) — 20 confirmed speakers, including FemTech-term originator Ida Tin*.],
   )
 
   block(above: 4pt, below: 0pt, {
@@ -484,9 +481,9 @@
   xskill-category("Agent SDKs & frameworks", ("Claude Agent SDK", "OpenAI Agents SDK", "LangGraph", "LangChain", "CopilotKit", "Vercel AI SDK"))
   xskill-category("How agents connect to tools & data", ("MCP (Model Context Protocol)",))
   xskill-category("Quality & observability", ("Vitest", "Cypress", "mcp-evals", "Lighthouse", "OpenTelemetry", "web-vitals"))
-  xskill-category("Models", ("Anthropic Opus / Sonnet / Haiku", "OpenAI GPT-4o + realtime", "Gemini 2.x", "Llama 3.x"))
+  xskill-category("Models", ("Anthropic Opus / Sonnet / Haiku", "OpenAI gpt-5.5 / GPT-4o + realtime", "Gemini 2.x", "Llama 3.x"))
   xskill-category("App frameworks", ("Next.js 16", "React", "Vue 3", "Spring Boot 3", "FastAPI", "TailwindCSS", "Drizzle ORM", "Zod"))
-  xskill-category("Infra & data", ("Kubernetes GKE", "Cloudflare Workers + Vectorize", "Neon Postgres + pgvector", "Supabase", "Docker + Traefik", "Redis", "Stripe", "NextAuth"))
+  xskill-category("Infra & data", ("Kubernetes GKE", "Cloudflare Workers + Vectorize", "Neon Postgres + pgvector", "Supabase", "Docker + Traefik", "Redis", "Stripe", "Stack Auth", "NextAuth 5"))
   xskill-category("Languages", ("TypeScript", "Python", "Go", "Java", "SQL", "Typst"))
 })
 

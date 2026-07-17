@@ -150,6 +150,8 @@ const doc = {
       "Anthropic Opus / Sonnet / Haiku",
       "OpenAI GPT-4o",
       "OpenAI GPT-4o-mini",
+      "OpenAI gpt-5.5",
+      "OpenAI gpt-5.4-mini",
       "Gemini 2.x",
       "Llama 3.x",
       // Production AI discipline

@@ -35,7 +35,7 @@
       url: "https://github.com/ChanMeng666/echook",
       context-line: [A noise-control system for AI coding assistants — turns down their constant audio chatter during deep work, alerts only on the things that matter.],
       bullets: (
-        [*Reference implementation of the Claude Agent SDK hooks lifecycle* — PreToolUse · PostToolUse · status line · context-window quota. 26 hook events · 42 releases · 139 tests on triple-platform CI (Linux / macOS / Windows).],
+        [*Reference implementation of the Claude Agent SDK hooks lifecycle* — PreToolUse · PostToolUse · status line · context-window quota. 37 hook events · 42 releases · 248 tests on triple-platform CI (Linux / macOS / Windows).],
         [*Cross-tool by design* — single hook system, three IDE surfaces: Claude Code, Cursor, OpenAI Codex.],
         [Started as an internal noise-fix for long-running background agents; open-sourced after teammates asked for it; now community-adopted across all three IDEs.],
       ),
@@ -44,10 +44,10 @@
       logo: "/public/brands/vitex.svg",
       name: "Vitex — AI Career Agent",
       url: "https://www.vitex.org.nz/",
-      context-line: [Paste a job description, get a tailored resume + cover letter scored against the JD's keywords in under 30 seconds · ~95% solo · 168 commits · Vercel AI SDK + GPT-4o + Typst.],
+      context-line: [Paste a job description, get a tailored resume + cover letter scored against the JD's keywords in under 30 seconds · essentially sole-authored · 379 commits over ~18 months · Vercel AI SDK + gpt-5.5 / gpt-5.4-mini + Typst.],
       bullets: (
-        [*7-step AI pipeline streaming over SSE* (JD parsing → background → match analysis → resume tailoring → ATS scoring → cover letter → Typst doc generation) · every stage Zod-validated structured output · disables OpenAI strict-JSON mode on `.optional()` Zod schemas.],
-        [*Typst compiles PDFs locally in under 100 ms* across 14 AI-auto-selected templates — no hosted Chromium, no third-party doc-gen API.],
+        [*8-step AI pipeline streaming over SSE* (JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → template render (Typst source) → PDF compile) · every stage Zod-validated structured output · disables OpenAI strict-JSON mode on `.optional()` Zod schemas.],
+        [*Typst compiles PDFs locally in under 100 ms* across 7 auto-selected templates — no hosted Chromium, no third-party doc-gen API.],
         [*Three production migrations* (Railway → Cloudflare Workers → DigitalOcean VPS) + LaTeX → Typst engine swap, zero downtime · Docker + Traefik + GitHub Actions CD · Stripe credits ledger + share-token URLs.],
       ),
     ),
@@ -84,7 +84,7 @@
       set text(size: size-tiny, fill: muted, style: "italic")
       set par(leading: 0.68em, justify: true)
       [
-        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (solo 9-day commercial event platform for Chow Luck Club × Tātaki Auckland Unlimited / Auckland Council) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (340+ animated-SVG templates, 273 solo commits) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (official Typst skill for Claude Code — typesets this CV) · #link("https://sunostats.chanmeng.org/")[SunoStats] (industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese) · #link("https://github.com/ChanMeng666/archlang")[ArchLang] (a floor-plan programming language I invented — compiles to professional SVG plans; published to npm) · #link("https://archcanvas.chanmeng.org/")[ArchCanvas] (AI design agent for architects that productizes ArchLang).
+        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (solo 9-day commercial event platform for Chow Luck Club × Tātaki Auckland Unlimited / Auckland Council) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 animated-SVG templates across 19 categories, 283 commits) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (official Typst skill for Claude Code — typesets this CV) · #link("https://seismophone.chanmeng.org/")[Seismophone] (an independent observatory for AI music · trilingual English / Simplified Chinese / Japanese) · #link("https://github.com/ChanMeng666/archlang")[ArchLang] (a floor-plan programming language I invented — compiles to professional SVG plans; published to npm) · #link("https://archcanvas.uk/")[ArchCanvas] (AI design agent for architects that productizes ArchLang).
       ]
     },
   )

@@ -44,7 +44,7 @@ Programme: 12 weeks, April 25 – July 17, 2026. Curriculum thesis: "natural lan
 
 • Week 8 outcome: each student owns a live AI-powered personal site — portfolio + AI-clone chatbot + blog + auto-generated CV — on Next.js + Neon Postgres + Drizzle + Vercel.
 • Week 12 outcome: each team of 2–4 ships a deployed multi-user AI SaaS — habit coaches, AI story studios, dorm chore splitters. Public Demo Day with audience voting.
-• Built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, 95.7% solo (198 of 207 commits). Hosts 4 cohorts side-by-side with a version-aware RAG assistant — students query their cohort's own materials and get answers from inside the course content.
+• Built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, ~96% solo (211 of 220 non-merge commits). Hosts 5 cohorts side-by-side with a version-aware RAG assistant — students query their cohort's own materials and get answers from inside the course content.
 • Fully bilingual EN / CN.
 ```
 
@@ -67,7 +67,7 @@ Promoted from Core Engineer to Founding Principal Engineer at Gavigo across thre
 What "instant" means in production:
 
 • Users get into the experience in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel. Warm-pool hit rate 84.6%; 0 errors at 100 concurrent live users under load.
-• 360 total platform commits, 353 (98%) authored solo.
+• 439 total platform commits, 426 (~97%) authored solo.
 
 External validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com.
 
@@ -77,7 +77,7 @@ Hardest work shipped:
 • Cross-cloud migration: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single 30-minute zero-downtime cutover.
 • 7-trigger AI rules engine deciding which games to pre-load, for whom, when.
 
-Stack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, GPT-4o-mini.
+Stack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, gpt-5.4-mini.
 ```
 
 **Skills:** Go (Programming Language), Kubernetes, Google Kubernetes Engine (GKE), Redis, WebSocket, React Native, Distributed Systems
@@ -118,7 +118,7 @@ Recruited directly by founder Dr Mahsa Mohaghegh (Head of Computer and Informati
 
 Mandate: replace the no-code Webflow site with a real engineering platform, and own it operationally.
 
-What shipped (648 of 748 commits solo — 86.6% — across 10 months):
+What shipped (793 of 936 commits solo — 85% — across ~12 months):
 
 • AI mentor-mentee matching engine — GPT-4o-mini scoring potential pairs across 5 weighted dimensions (skill, goal, personality, industry, logistics) with explainable natural-language reasons, rule-based fallback, Redis caching, and human admin approval as the final gate.
 • Three role-permissioned dashboards (mentor / mentee / admin), Stripe membership billing, audit logging.
@@ -141,14 +141,14 @@ Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Tailwi
 **LinkedIn helped me get this job**
 
 ```
-Sole technical leader and co-architect with founder Zhu Yihan at FemTech Weekend — China's first organisation built around women's health technology (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders). Currently delivering all engineering for the 2026 Shanghai Summit.
+Sole technical leader and co-architect with founder Zhu Yihan at FemTech Weekend — China's first organisation built around women's health technology (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders). Delivered all engineering for the 2026 Shanghai Summit (June 22–25).
 
 Built and shipped two complete platform generations from scratch, solo:
 
 • Generation 1 — femtechweekend.com (Mar 2025–). Next.js 15 with Notion as the CMS so the non-technical founder could publish directly inside Notion (a tool she already used daily) and the website rendered it live. Bilingual EN / CN from day one. 58 commits, 100% solo.
-• Generation 2 — current platform (May 2025–). Deliberate rebuild on Docusaurus when the site's centre of gravity shifted from "marketing site with CMS" to "research publication and multi-event hub." Adds Drizzle + Neon Postgres for typed application data, deployed on Cloudflare Pages for global edge delivery. 544 commits, 529 solo (97.2%).
+• Generation 2 — current platform (May 2025–). Deliberate rebuild on Docusaurus when the site's centre of gravity shifted from "marketing site with CMS" to "research publication and multi-event hub." Adds Drizzle + Neon Postgres for typed application data, deployed on Cloudflare Pages for global edge delivery. 564 commits, 534 solo (94.7%).
 
-Shanghai Summit 2026 (June 22–25): 16 confirmed speakers headlined by Ida Tin — the Clue co-founder who coined the term "FemTech" in 2016. Multi-tier sponsorship; AVPN among named partners. Every page rendered through infrastructure I designed and operate solo.
+Shanghai Summit 2026 (June 22–25) drew 20 confirmed speakers headlined by Ida Tin — the Clue co-founder who coined the term "FemTech" in 2016. Multi-tier sponsorship; AVPN among named partners. Every page rendered through infrastructure I designed and operate solo.
 
 Two original research reports published through the platform: FemTech Market Map for Greater China (May 2025), FemmeHealth Ventures Alliance announcement (June 2025).
 ```

@@ -60,7 +60,7 @@
       {
         "emoji": "🚀",
         "heading": "Current & Recent Work",
-        "body": "AI Agent Architect @ Engram (Anthropic Partner Network Architect Cohort) · former CTO @ Sanicle Inc. → IBM Silver Partner via watsonx integration · Senior Engineer & Ambassador @ She Sharp (2,200+ member NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest (4 cohorts, bilingual platform built solo)."
+        "body": "AI Agent Architect @ Engram (Anthropic Partner Network Architect Cohort) · former CTO @ Sanicle Inc. → IBM Silver Partner via watsonx integration · Senior Engineer & Ambassador @ She Sharp (2,200+ member NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest (5 cohorts, bilingual platform built solo)."
       },
       {
         "emoji": "🎓",
@@ -159,7 +159,7 @@
           "dateRange": "Apr 2026 - Present",
           "duration": "3 mos",
           "location": "St John's, Newfoundland and Labrador, Canada · Remote",
-          "description": "Designed and sole-teach TechNest Community's first AI engineering mentorship track — the only AI cohort the Canadian nonprofit is running in 2026. Reports directly to TechNest leadership Abiodun Oyedele and Afolasade Bello.\n\nProgramme: 12 weeks, April 25 – July 17, 2026. Curriculum thesis: \"natural language is now the source code.\" Students don't write code by hand — they direct AI assistants (Cursor, Claude Code, Gemini CLI) to ship real applications.\n\n• Week 8 outcome: each student owns a live AI-powered personal site — portfolio + AI-clone chatbot + blog + auto-generated CV — on Next.js + Neon Postgres + Drizzle + Vercel.\n• Week 12 outcome: each team of 2–4 ships a deployed multi-user AI SaaS — habit coaches, AI story studios, dorm chore splitters. Public Demo Day with audience voting.\n• Built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, 95.7% solo (198 of 207 commits). Hosts 4 cohorts side-by-side with a version-aware RAG assistant — students query their cohort's own materials and get answers from inside the course content.\n• Fully bilingual EN / CN.",
+          "description": "Designed and sole-teach TechNest Community's first AI engineering mentorship track — the only AI cohort the Canadian nonprofit is running in 2026. Reports directly to TechNest leadership Abiodun Oyedele and Afolasade Bello.\n\nProgramme: 12 weeks, April 25 – July 17, 2026. Curriculum thesis: \"natural language is now the source code.\" Students don't write code by hand — they direct AI assistants (Cursor, Claude Code, Gemini CLI) to ship real applications.\n\n• Week 8 outcome: each student owns a live AI-powered personal site — portfolio + AI-clone chatbot + blog + auto-generated CV — on Next.js + Neon Postgres + Drizzle + Vercel.\n• Week 12 outcome: each team of 2–4 ships a deployed multi-user AI SaaS — habit coaches, AI story studios, dorm chore splitters. Public Demo Day with audience voting.\n• Built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, ~96% solo (211 of 220 non-merge commits). Hosts 5 cohorts side-by-side with a version-aware RAG assistant — students query their cohort's own materials and get answers from inside the course content.\n• Fully bilingual EN / CN.",
           "skills": [
             "Curriculum Development",
             "AI-Assisted Development",
@@ -189,7 +189,7 @@
           "duration": "5 mos",
           "location": "1007 N Orange St, 4th Floor, 4785, Wilmington, Delaware 19801, USA",
           "foundViaLinkedIn": true,
-          "description": "Promoted from Core Engineer to Founding Principal Engineer at Gavigo across three formalised contracts in 6 months. I own the Intelligence Layer of Gavigo IRE — Gavigo's \"Instant Reality Exchange\" platform, which lets users open straight into a game without an app-store install. Reports to founder & CEO Saba Gecgil.\n\nWhat \"instant\" means in production:\n\n• Users get into the experience in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel. Warm-pool hit rate 84.6%; 0 errors at 100 concurrent live users under load.\n• 360 total platform commits, 353 (98%) authored solo.\n\nExternal validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com.\n\nHardest work shipped:\n\n• Sub-millisecond restore via a 5-state engine with atomic Redis transitions and timestamped proof signals — every speed claim is auditable in production logs, not asserted.\n• Cross-cloud migration: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single 30-minute zero-downtime cutover.\n• 7-trigger AI rules engine deciding which games to pre-load, for whom, when.\n\nStack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, GPT-4o-mini.",
+          "description": "Promoted from Core Engineer to Founding Principal Engineer at Gavigo across three formalised contracts in 6 months. I own the Intelligence Layer of Gavigo IRE — Gavigo's \"Instant Reality Exchange\" platform, which lets users open straight into a game without an app-store install. Reports to founder & CEO Saba Gecgil.\n\nWhat \"instant\" means in production:\n\n• Users get into the experience in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel. Warm-pool hit rate 84.6%; 0 errors at 100 concurrent live users under load.\n• 439 total platform commits, 426 (~97%) authored solo.\n\nExternal validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com.\n\nHardest work shipped:\n\n• Sub-millisecond restore via a 5-state engine with atomic Redis transitions and timestamped proof signals — every speed claim is auditable in production logs, not asserted.\n• Cross-cloud migration: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single 30-minute zero-downtime cutover.\n• 7-trigger AI rules engine deciding which games to pre-load, for whom, when.\n\nStack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, gpt-5.4-mini.",
           "skills": [
             "Go (Programming Language)",
             "Kubernetes",
@@ -237,7 +237,7 @@
           "duration": "1 yr",
           "location": "Auckland Central, Auckland, New Zealand · Hybrid",
           "foundViaLinkedIn": true,
-          "description": "Recruited directly by founder Dr Mahsa Mohaghegh (Head of Computer and Information Sciences, School of Engineering, Computer and Mathematical Sciences at AUT) as the senior AI + full-stack engineer She Sharp didn't have in-house. She Sharp is New Zealand's leading women-in-STEM community — registered charitable trust (CC57025), 2,200+ members, 1,000+ active, 8,000+ women supported lifetime, 50+ corporate partners, 84+ events since 2014.\n\nMandate: replace the no-code Webflow site with a real engineering platform, and own it operationally.\n\nWhat shipped (648 of 748 commits solo — 86.6% — across 10 months):\n\n• AI mentor-mentee matching engine — GPT-4o-mini scoring potential pairs across 5 weighted dimensions (skill, goal, personality, industry, logistics) with explainable natural-language reasons, rule-based fallback, Redis caching, and human admin approval as the final gate.\n• Three role-permissioned dashboards (mentor / mentee / admin), Stripe membership billing, audit logging.\n• Custom Slack ecosystem: weekly stats digest, NZ funding-opportunities crawler (6 sources scored for member relevance, top 10 posted weekly), event-page publisher via Claude Code agent skill. Each automation removes hours of weekly volunteer work.\n• Python migration crawler preserved 10+ years of legacy content with zero broken links.\n\nStack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Tailwind 4, Vercel.",
+          "description": "Recruited directly by founder Dr Mahsa Mohaghegh (Head of Computer and Information Sciences, School of Engineering, Computer and Mathematical Sciences at AUT) as the senior AI + full-stack engineer She Sharp didn't have in-house. She Sharp is New Zealand's leading women-in-STEM community — registered charitable trust (CC57025), 2,200+ members, 1,000+ active, 8,000+ women supported lifetime, 50+ corporate partners, 84+ events since 2014.\n\nMandate: replace the no-code Webflow site with a real engineering platform, and own it operationally.\n\nWhat shipped (793 of 936 commits solo — 85% — across ~12 months):\n\n• AI mentor-mentee matching engine — GPT-4o-mini scoring potential pairs across 5 weighted dimensions (skill, goal, personality, industry, logistics) with explainable natural-language reasons, rule-based fallback, Redis caching, and human admin approval as the final gate.\n• Three role-permissioned dashboards (mentor / mentee / admin), Stripe membership billing, audit logging.\n• Custom Slack ecosystem: weekly stats digest, NZ funding-opportunities crawler (6 sources scored for member relevance, top 10 posted weekly), event-page publisher via Claude Code agent skill. Each automation removes hours of weekly volunteer work.\n• Python migration crawler preserved 10+ years of legacy content with zero broken links.\n\nStack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Tailwind 4, Vercel.",
           "skills": [
             "Next.js",
             "Full-Stack Development",
@@ -269,7 +269,7 @@
           "duration": "1 yr 4 mos",
           "location": "Shanghai, China · Remote",
           "foundViaLinkedIn": true,
-          "description": "Sole technical leader and co-architect with founder Zhu Yihan at FemTech Weekend — China's first organisation built around women's health technology (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders). Currently delivering all engineering for the 2026 Shanghai Summit.\n\nBuilt and shipped two complete platform generations from scratch, solo:\n\n• Generation 1 — femtechweekend.com (Mar 2025–). Next.js 15 with Notion as the CMS so the non-technical founder could publish directly inside Notion (a tool she already used daily) and the website rendered it live. Bilingual EN / CN from day one. 58 commits, 100% solo.\n• Generation 2 — current platform (May 2025–). Deliberate rebuild on Docusaurus when the site's centre of gravity shifted from \"marketing site with CMS\" to \"research publication and multi-event hub.\" Adds Drizzle + Neon Postgres for typed application data, deployed on Cloudflare Pages for global edge delivery. 544 commits, 529 solo (97.2%).\n\nShanghai Summit 2026 (June 22–25): 16 confirmed speakers headlined by Ida Tin — the Clue co-founder who coined the term \"FemTech\" in 2016. Multi-tier sponsorship; AVPN among named partners. Every page rendered through infrastructure I designed and operate solo.\n\nTwo original research reports published through the platform: FemTech Market Map for Greater China (May 2025), FemmeHealth Ventures Alliance announcement (June 2025).",
+          "description": "Sole technical leader and co-architect with founder Zhu Yihan at FemTech Weekend — China's first organisation built around women's health technology (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders). Delivered all engineering for the 2026 Shanghai Summit (June 22–25).\n\nBuilt and shipped two complete platform generations from scratch, solo:\n\n• Generation 1 — femtechweekend.com (Mar 2025–). Next.js 15 with Notion as the CMS so the non-technical founder could publish directly inside Notion (a tool she already used daily) and the website rendered it live. Bilingual EN / CN from day one. 58 commits, 100% solo.\n• Generation 2 — current platform (May 2025–). Deliberate rebuild on Docusaurus when the site's centre of gravity shifted from \"marketing site with CMS\" to \"research publication and multi-event hub.\" Adds Drizzle + Neon Postgres for typed application data, deployed on Cloudflare Pages for global edge delivery. 564 commits, 534 solo (94.7%).\n\nShanghai Summit 2026 (June 22–25) drew 20 confirmed speakers headlined by Ida Tin — the Clue co-founder who coined the term \"FemTech\" in 2016. Multi-tier sponsorship; AVPN among named partners. Every page rendered through infrastructure I designed and operate solo.\n\nTwo original research reports published through the platform: FemTech Market Map for Greater China (May 2025), FemmeHealth Ventures Alliance announcement (June 2025).",
           "skills": [
             "Technical Leadership",
             "Bilingual Web Development",
@@ -1062,25 +1062,13 @@
       {
         "name": "PostgreSQL Recursive CTEs",
         "associations": [
-          "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
+          "Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
         ]
       },
       {
         "name": "Reverse Engineering",
         "associations": [
-          "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
-        ]
-      },
-      {
-        "name": "CSS 3D Transforms",
-        "associations": [
-          "Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)"
-        ]
-      },
-      {
-        "name": "Game Design",
-        "associations": [
-          "Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)"
+          "Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
         ]
       },
       {
@@ -1128,7 +1116,7 @@
       {
         "name": "Cloudflare Workers AI",
         "associations": [
-          "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
+          "programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
         ]
       },
       {
@@ -1178,7 +1166,7 @@
         "name": "Docusaurus",
         "associations": [
           "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages",
-          "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
+          "programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
         ]
       },
       {
@@ -1339,7 +1327,7 @@
         "associations": [
           "Chief Technology Officer (CTO) at FemTech Weekend",
           "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages",
-          "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
+          "programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
         ]
       },
       {
@@ -1403,7 +1391,7 @@
         "name": "Retrieval-Augmented Generation (RAG)",
         "associations": [
           "AI Instructor & Mentor at TechNest Community",
-          "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
+          "programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant"
         ]
       },
       {
@@ -1603,7 +1591,7 @@
         "associations": [
           "Chief Technology Officer (CTO) at FreePeriod",
           "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)",
-          "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
+          "Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
         ]
       },
       {
@@ -1707,9 +1695,8 @@
       "hasOtherContributors": true
     },
     {
-      "name": "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)",
-      "dateRange": "Apr 2026 – Present",
-      "description": "SunoStats is the first public tool that maps how a Suno-generated song's lineage descends from its parent. Suno is the AI music platform; its own product doesn't expose lineage to creators. SunoStats does, because the research behind it discovered that Suno's API serializer leaks the parent→child UUID chain only on the trending feed and persona sub-trees — nowhere else, not even on the remix page.\n\n• Three open public lenses (creator profiles, trending, lineage view) + single-purchase deep-dive reports, each a deterministic analysis of one creator's own catalog.\n• Lineage traversal uses WITH RECURSIVE CTEs in Postgres so the graph walk happens at the database, not the application layer.\n• Trilingual EN / CN / JP with cookie-driven server-resolved locale.\n• oEmbed-discovered compliance posture; no scraping, no headless browsers.\n• 46 solo commits across one month — same-day scaffold-to-live, then production hardening: Stripe webhook verification and a credits ledger that auto-switches keys by STRIPE_SECRET_KEY prefix.\n\nStack: Next.js 16, Drizzle + Neon Postgres, Stripe, Resend, Docker + Traefik VPS.",
+      "name": "Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)",
+      "description": "Seismophone is an independent observatory for AI music that maps how a Suno-generated song's lineage descends from its parent. Suno is the AI music platform; its own product doesn't expose lineage to creators. Seismophone does, because the research behind it discovered that Suno's API serializer leaks the parent→child UUID chain only on the trending feed and persona sub-trees — nowhere else, not even on the remix page.\n\n• Three open public lenses (creator profiles, trending, lineage view) + single-purchase deep-dive reports, each a deterministic analysis of one creator's own catalog.\n• Lineage traversal uses WITH RECURSIVE CTEs in Postgres so the graph walk happens at the database, not the application layer.\n• Trilingual EN / CN / JP with cookie-driven server-resolved locale.\n• oEmbed-discovered compliance posture; no scraping, no headless browsers.\n• 46 solo commits across one month — same-day scaffold-to-live, then production hardening: Stripe webhook verification and a credits ledger that auto-switches keys by STRIPE_SECRET_KEY prefix.\n\nStack: Next.js 16, Drizzle + Neon Postgres, Stripe, Resend, Docker + Traefik VPS.",
       "skills": [
         "Drizzle ORM",
         "Internationalization (i18n)",
@@ -1723,7 +1710,7 @@
     {
       "name": "Vitex — AI Career Agent SaaS (vitex.org.nz)",
       "dateRange": "Feb 2026 – Present",
-      "description": "Vitex turns a job description plus a candidate's background into an ATS-optimised resume PDF and matching cover letter in about 30 seconds. The user pastes a job ad, uploads their existing CV, and a seven-step AI pipeline streams the tailored documents back. A natural-language refinement box then lets them iterate — \"make the leadership section stronger\" — and the AI regenerates just that slice.\n\n• Pipeline: JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → Typst document generation, streamed via SSE.\n• Typst compiles each PDF locally in under 100ms — the user sees the document before finishing the reasoning summary.\n• Three production migrations (including a LaTeX → Typst engine swap) shipped with zero outage.\n• 168 commits over ~3 months, ~95% solo. Stripe credit ledger; public shareable links via per-document tokens for organic distribution.\n\nStack: Next.js 15, Vercel AI SDK + GPT-4o, Typst, Stripe, Neon Postgres + Drizzle, Docker + Traefik on DigitalOcean.",
+      "description": "Vitex turns a job description plus a candidate's background into an ATS-optimised resume PDF and matching cover letter in about 30 seconds. The user pastes a job ad, uploads their existing CV, and an 8-step AI pipeline streams the tailored documents back. A natural-language refinement box then lets them iterate — \"make the leadership section stronger\" — and the AI regenerates just that slice.\n\n• Pipeline: JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → template render (Typst source) → PDF compile, streamed via SSE.\n• Typst compiles each PDF locally in under 100ms — the user sees the document before finishing the reasoning summary.\n• Three production migrations (including a LaTeX → Typst engine swap) shipped with zero outage.\n• Stripe credit ledger; public shareable links via per-document tokens for organic distribution.\n\nStack: Next.js 15, Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract), Typst, Stripe, Neon Postgres + Drizzle, Docker + Traefik on DigitalOcean.",
       "skills": [
         "Vercel AI SDK",
         "Typst",
@@ -1737,7 +1724,7 @@
     {
       "name": "ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans",
       "dateRange": "Jun 2026 – Present",
-      "description": "ArchLang is a programming language I designed for architecture: you write a floor plan as code — walls, rooms, doors, windows, fixtures, dimensions — and it compiles to deterministic, professional SVG (also DXF, PDF, PNG). Think Typst or LaTeX, but for building plans instead of documents.\n\n• Hand-written lexer + recursive-descent parser in pure TypeScript with zero runtime dependencies — the same compiler runs in Node and in the browser.\n• Exports structured diagnostics instead of throwing, with lint / describe / repair pipelines for architectural-soundness checking and circulation analysis.\n• Ships a CLI with JSON output built for AI agents, plus VS Code / LSP tooling and a live browser playground.\n• Published to npm as @chanmeng666/archlang with its own documentation site.\n\nStack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.",
+      "description": "ArchLang is a programming language I designed for architecture: you write a floor plan as code — walls, rooms, doors, windows, fixtures, dimensions — and it compiles to deterministic, professional SVG (also DXF, PDF, PNG, text). Think Typst or LaTeX, but for building plans instead of documents.\n\n• Hand-written lexer + recursive-descent parser in pure TypeScript with zero runtime dependencies — the same compiler runs in Node and in the browser.\n• Exports structured diagnostics instead of throwing, with lint / describe / repair pipelines for architectural-soundness checking and circulation analysis.\n• Ships a CLI with JSON output built for AI agents, plus VS Code / LSP tooling and a live browser playground.\n• Published to npm as @chanmeng666/archlang with its own documentation site.\n\nStack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.",
       "skills": [
         "TypeScript",
         "Programming Language Design",
@@ -1751,7 +1738,7 @@
     {
       "name": "ArchCanvas — AI Design Agent for Architects That Productizes ArchLang",
       "dateRange": "Jun 2026 – Present",
-      "description": "ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it generates real SVG floor plans through the ArchLang compiler plus GPT-4o / DALL·E renderings, then lets you iterate on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.\n\n• Sister product to my ArchLang language — consumes @chanmeng666/archlang as a package, so it produces editable parametric plans, not just images.\n• AI review mode surfaces anchored findings directly on the canvas with one-click \"have AI fix\".\n• Export any project as a real git repo (isomorphic-git + memfs).\n• Refinement mutates the plan in place — edits, parametric tweaks and re-renders never regenerate it from scratch.\n\nStack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-4o + DALL·E), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.",
+      "description": "ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it generates real SVG floor plans through the ArchLang compiler plus gpt-5.5 orchestration + GPT Image 2 renderings grounded on the compiled plan, then lets you iterate on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.\n\n• Sister product to my ArchLang language — consumes @chanmeng666/archlang as a package, so it produces editable parametric plans, not just images.\n• AI review mode surfaces anchored findings directly on the canvas with one-click \"have AI fix\".\n• Export any project as a real git repo (isomorphic-git + memfs).\n• Refinement mutates the plan in place — edits, parametric tweaks and re-renders never regenerate it from scratch.\n\nStack: Next.js, React 19, Vercel AI SDK + OpenAI (gpt-5.5 + GPT Image 2; GPT-4o for vision), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.",
       "skills": [
         "Vercel AI SDK",
         "AI Agent Architecture",
@@ -1767,7 +1754,7 @@
     {
       "name": "echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI",
       "dateRange": "Nov 2025 – Present",
-      "description": "echook adds audio cues to AI coding assistants so you stop staring at the terminal waiting for them to finish. Twenty-six hook events — task started, permission needed, build failed, agent stopped, rate-limit hit, context nearing 100% — each play a sound and optionally fire Slack / Discord / Teams / ntfy webhooks. Same product on Claude Code, Cursor IDE, and Codex CLI. Install via natural language (\"install echook with the Focus Flow theme\").\n\n• 42 releases, 139 tests on triple-platform CI (Ubuntu / Windows / macOS × Python 3.9 / 3.12 / 3.13). 26 hook events, 2 themes.\n• Context-window status line with live quota bars — see remaining budget without alt-tabbing.\n• Explicitly preserved as the author's IP in the Engram Architect Cohort Engagement Letter (9 May 2026); Engram is in Anthropic's Partner Network.\n• Sister repo echook-promo-video: 88.7-second product film built in React + Remotion + AI-generated audio — zero Premiere, zero voice actors.\n\nStack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Actions CI.",
+      "description": "echook adds audio cues to AI coding assistants so you stop staring at the terminal waiting for them to finish. Thirty-seven hook events — task started, permission needed, build failed, agent stopped, rate-limit hit, context nearing 100% — each play a sound and optionally fire Slack / Discord / Teams / ntfy webhooks. Same product on Claude Code, Cursor IDE, and Codex CLI. Install via natural language (\"install echook with the Focus Flow theme\").\n\n• 42 releases, 248 tests on triple-platform CI (Ubuntu / Windows / macOS × Python 3.9 / 3.12 / 3.13). 37 hook events, 2 themes.\n• Context-window status line with live quota bars — see remaining budget without alt-tabbing.\n• Explicitly preserved as the author's IP in the Engram Architect Cohort Engagement Letter (9 May 2026); Engram is in Anthropic's Partner Network.\n• Sister repo echook-promo-video: 88.7-second product film built in React + Remotion + AI-generated audio — zero Premiere, zero voice actors.\n\nStack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Actions CI.",
       "skills": [
         "Claude Code Plugins",
         "Cursor IDE Hooks",
@@ -1782,7 +1769,7 @@
       "name": "She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community",
       "dateRange": "Jul 2025 – Present",
       "associatedWith": "She Sharp",
-      "description": "The member-lifecycle platform that now runs She Sharp — NZ's largest women-in-tech community (charitable trust CC57025; 2,200+ members, 1,000+ active, 50+ corporate partners, 84+ events since 2014). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.\n\n• AI mentor–mentee matcher: GPT-4o-mini scoring pairs across five weighted dimensions (Skill 35%, Goal 30%, MBTI 15%, Industry 10%, Logistics 10%) with explainable reasons and a rule-based fallback; admin as final gate.\n• 648 of 748 commits solo (86.6%) across 10 months. Frontend designer Lesley Gao authored ~100 (13.4%).\n• Slack ecosystem: weekly stats digest, NZ funding-opportunities crawler over six government sources, Claude Code skill that publishes new events with one dry-run-default command.\n\nStack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.",
+      "description": "The member-lifecycle platform that now runs She Sharp — NZ's largest women-in-tech community (charitable trust CC57025; 2,200+ members, 1,000+ active, 50+ corporate partners, 84+ events since 2014). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.\n\n• AI mentor–mentee matcher: GPT-4o-mini scoring pairs across five weighted dimensions (Skill 35%, Goal 30%, MBTI 15%, Industry 10%, Logistics 10%) with explainable reasons and a rule-based fallback; admin as final gate.\n• 793 of 936 commits solo (85%) across ~12 months. Frontend designer Lesley Gao authored 140 (15%).\n• Slack ecosystem: weekly stats digest, NZ funding-opportunities crawler over six government sources, Claude Code skill that publishes new events with one dry-run-default command.\n\nStack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.",
       "skills": [
         "AI Matching Systems",
         "Drizzle ORM",
@@ -1798,7 +1785,7 @@
     {
       "name": "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages",
       "dateRange": "Mar 2025 – Present",
-      "description": "The official site and submissions hub for FemTech Weekend — China's first women's-health-technology organisation — currently powering Shanghai Summit 2026 (June 22–25). 16 confirmed speakers are headlined by Ida Tin, the Clue co-founder who coined the term \"FemTech\" in 2016.\n\nGen-2 was a deliberate rewrite from Next.js to Docusaurus when the site's centre of gravity shifted from \"marketing site\" to \"research publication and multi-event hub\". Visitors today read original research reports (FemTech Market Map for Greater China; FemmeHealth Ventures Alliance), browse the speaker programme, and submit pitches / programme entries / speaker applications / ecosystem partnerships through four review pipelines.\n\n• 529 of 544 commits solo (97.2%) over one year.\n• Bilingual EN / CN from day one — the non-technical founder Zhu Yihan edits the live site directly.\n• 15 Cloudflare Pages Functions (~3,839 LOC) replace a separate backend; submissions + email + admin review run on edge serverless.\n\nStack: Docusaurus 3.9, React 18, Drizzle + Neon Postgres, Cloudflare Pages, Resend, Notion-as-CMS.",
+      "description": "The official site and submissions hub for FemTech Weekend — China's first women's-health-technology organisation — which delivered Shanghai Summit 2026 (June 22–25). 20 confirmed speakers were headlined by Ida Tin, the Clue co-founder who coined the term \"FemTech\" in 2016.\n\nGen-2 was a deliberate rewrite from Next.js to Docusaurus when the site's centre of gravity shifted from \"marketing site\" to \"research publication and multi-event hub\". Visitors today read original research reports (FemTech Market Map for Greater China; FemmeHealth Ventures Alliance), browse the speaker programme, and submit pitches / programme entries / speaker applications / ecosystem partnerships through four review pipelines.\n\n• 534 of 564 commits solo (94.7%) over ~13.5 months.\n• Bilingual EN / CN from day one — the non-technical founder Zhu Yihan edits the live site directly.\n• 15 Cloudflare Pages Functions (~3,839 LOC) replace a separate backend; submissions + email + admin review run on edge serverless.\n\nStack: Docusaurus 3.9, React 18, Drizzle + Neon Postgres, Cloudflare Pages, Resend, Notion-as-CMS.",
       "skills": [
         "Bilingual Web Development",
         "Cloudflare Pages / Workers",
@@ -1811,10 +1798,10 @@
       "hasOtherContributors": true
     },
     {
-      "name": "programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant",
+      "name": "programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant",
       "dateRange": "Oct 2024 – Present",
       "associatedWith": "TechNest Community",
-      "description": "The bilingual teaching site behind every AI programming cohort I've run since late 2024 — Forward with Her (2024-winter, 2025-summer), Her Waka 2026 (NZ Ministry of Social Development funded, at academyEX Auckland), and TechNest 2026 (Canada). All four cohorts coexist on one platform; each student gets their own version-aware course.\n\n• In-course AI assistant: ~4,800 bilingual document chunks indexed with RAG (retrieval-augmented generation — the AI looks up the cohort's actual materials before answering, so students don't get hallucinations from the wrong version).\n• 198 of 207 commits solo (95.7%); the remainder are bot commits (Claude code-review automation + Dependabot).\n• Notion-as-CMS classroom: course-wide message board, capstone-showcase page with live audience voting, Typst PDF handouts auto-built from MDX.\n• Bilingual EN / CN with Algolia contextual search.\n\nStack: Docusaurus 3.8, Cloudflare Pages, Llama 3.1 8B via Cloudflare Workers AI + Vectorize, Notion API, Algolia, Typst.",
+      "description": "The bilingual teaching site behind every AI programming cohort I've run since late 2024 — Forward with Her (2024-winter, 2025-summer), Her Waka 2026 (NZ Ministry of Social Development funded, at academyEX Auckland), Peyvand Academy 2026, and TechNest 2026 (Canada). All five cohorts coexist on one platform; each student gets their own version-aware course.\n\n• In-course AI assistant: ~4,800 bilingual document chunks indexed with RAG (retrieval-augmented generation — the AI looks up the cohort's actual materials before answering, so students don't get hallucinations from the wrong version).\n• 211 of 220 non-merge commits solo (~96%); the remainder are bot commits (Claude code-review automation + Dependabot).\n• Notion-as-CMS classroom: course-wide message board, capstone-showcase page with live audience voting, Typst PDF handouts auto-built from MDX.\n• Bilingual EN / CN with Algolia contextual search.\n\nStack: Docusaurus 3.8, Cloudflare Pages, Llama 3.1 8B via Cloudflare Workers AI + Vectorize, Notion API, Algolia, Typst.",
       "skills": [
         "Docusaurus",
         "Retrieval-Augmented Generation (RAG)",
@@ -1840,19 +1827,6 @@
         "CopilotKit"
       ],
       "hasOtherContributors": true
-    },
-    {
-      "name": "Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)",
-      "dateRange": "Feb 2026 – Mar 2026",
-      "description": "A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on the Māori mythology of Aotearoa. The constraint is the point: every tower, enemy, projectile, and explosion is a real DOM element animated by the browser's CSS engine.\n\n• Six towers named after Māori weapons and atua (Taiaha, Mere, Tangaroa, Tohunga, Tāwhiri, Mahuika); six enemies from Māori legend; three maps as place-words (Te Awa, Te Maunga, Te Moana). Cultural integration is structural, not decorative: Tangaroa (ocean atua) slows with ice, Mahuika (fire goddess) deals damage-over-time, Tāwhiri (storm god) chains lightning.\n• DOM object pooling holds 60 FPS through dense Wave-10 combat.\n• Full cloud backend — leaderboards, daily challenges, tech tree, crafting, endless mode — with server-side anti-cheat validating submitted scores.\n• 84 commits over 2 months, ~99% solo; explicit P0 → P4 phase plan visible in the commit log.\n\nStack: CSS 3D + ES6 + LESS + Gulp 4; Cloudflare Workers + Hono + Neon Postgres; Web Audio API + Howler.js.",
-      "skills": [
-        "CSS 3D Transforms",
-        "Cloudflare Pages / Workers",
-        "JavaScript (ES6)",
-        "Hono",
-        "Neon Postgres",
-        "Web Audio API"
-      ]
     },
     {
       "name": "Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx",

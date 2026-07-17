@@ -68,7 +68,7 @@
       h(space-pill-row)
       stat-pill("1,103", "newsletter subscribers")
       h(space-pill-row)
-      stat-pill-multi[#snum[451] GitHub stars · #snum[210] followers]
+      stat-pill-multi[#snum[480+] GitHub stars · #snum[210] followers]
       h(space-pill-row)
       stat-pill-multi[CopilotKit contributor · #snum[2] merged PRs · #snum[24.6k] stars]
     },

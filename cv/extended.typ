@@ -229,7 +229,7 @@
     h(gap-pill-row-x)
     spill[#snum[1,103] newsletter subscribers]
     h(gap-pill-row-x)
-    spill[#snum[451] GitHub stars · #snum[210] followers]
+    spill[#snum[480+] GitHub stars · #snum[210] followers]
     h(gap-pill-row-x)
     spill[CopilotKit contributor · #snum[2] merged PRs · #snum[24.6k] stars]
   })
@@ -250,7 +250,7 @@
 #let x-introduction() = xsection("Introduction", {
   set par(leading: leading-lead-x, justify: false)
   text(size: size-body-x, fill: ink)[
-    Builds the AI software that real companies run every day — the kind that handles paying customers, private data, and regulated work, not demos. Focus areas: *women's health, cultural technology, and early-stage startup infrastructure*. Works AI-native by default: directs coding agents (Claude Code, Codex) and the same *Claude Agent SDK, MCP, and agent skills* stack Anthropic's own partners use, and owns the judgment calls that decide what actually ships — publishing the work as open-source examples other teams build on.
+    Builds the AI software companies run every day — products with paying customers, private data, and regulated work behind them, not demos. Focus areas: *women's health, cultural technology, and early-stage startup infrastructure*. Works AI-native by default — directing coding agents (Claude Code, Codex) and building on the *Claude Agent SDK, MCP, and agent skills*, while keeping the call on what actually ships a human one — and publishing the work as open-source examples other teams build on.
   ]
 })
 
@@ -362,7 +362,7 @@
   cap("AI agents & production apps",
     [Multi-agent systems that run in production — paying customers, sensitive data, guardrails enforced in code, not just prompts. The agent ships as the product, never a demo.],
     (
-      [#link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] — te-ao-Māori financial-wellness coach · 351 commits · 19-user, 4-month cohort],
+      [#link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] — te-ao-Māori financial-wellness coach · bilingual voice coaching · 19-user, 4-month research cohort],
       [#link("https://github.com/ChanMeng666/femtracker-agent")[FemTracker] — 8-node LangGraph agent, merged into CopilotKit's official demos],
       [#link("https://www.vitex.org.nz/")[Vitex] — AI career agent: a job description → tailored résumé + cover letter in under 30s],
       [#link("https://archcanvas.uk/")[ArchCanvas] — AI design agent for architects · productizes ArchLang · gpt-5.5 orchestration + GPT Image 2 renderings grounded on the compiled plan · edits morph the plan in place],
@@ -377,7 +377,7 @@
       [#link("https://github.com/ChanMeng666/app-promo-studio")[app-promo-studio] — screenshots → cross-platform store & social images],
       [#link("https://github.com/ChanMeng666/logo-as-code-skill")[logo-as-code-skill] — hand-drawn logo → editable SVG + favicons],
       [#link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] — Typst PDF generation; it typesets this CV],
-      [#link("https://github.com/ChanMeng666/echook")[echook] — audio-hooks framework · 37 events · 248 tests · triple-OS CI],
+      [#link("https://github.com/ChanMeng666/echook")[echook] — audio-hooks framework · voice + sound alerts across three IDEs · triple-OS CI],
       [#link("https://glama.ai/mcp/servers/ChanMeng666/server-google-news")[Google News] & #link("https://github.com/ChanMeng666/server-google-jobs")[Google Jobs] MCP — among the earliest · 15+ catalogs],
     ),
   )
@@ -386,7 +386,7 @@
     (
       [*Caldera* — the design system behind this CV: tokens, type, motion],
       [#link("https://eatropolis.co.nz/")[Chow Luck Club] — event brand + site for a paying client (Tātaki Auckland Unlimited / Auckland Council)],
-      [#link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] — 355 animated-SVG templates · 283 commits],
+      [#link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] — 355 animated-SVG templates for READMEs],
     ),
   )
   cap("Documents as code",
@@ -437,37 +437,43 @@
     title: "AI Agent Architect", org: "Engram", org-url: "https://engram.media/",
     dates: "May 2026 — Present",
     location: [Albuquerque, New Mexico, United States · *Remote*],
-    summary: [Recruited onto *Anthropic's Partner Network architect track* — the founder used his own Claude agent to surface candidates, and Chan's open-source portfolio was the recommendation (publicly confirmed). 45-day Architect Cohort: *Claude Certified Architect — Foundations* curriculum.],
+    summary: [Recruited onto *Anthropic's Partner Network architect track* — Engram's founder asked his own Claude agent to surface candidates, and Chan's open-source portfolio was the pick (publicly confirmed by founder Luka Madzarac). Now in the 45-day Architect Cohort on the *Claude Certified Architect — Foundations* curriculum.],
   )
   xrole(
     title: "AI Instructor & Mentor", org: "TechNest Community", org-url: "https://www.technestcommunity.com/",
     dates: "Apr 2026 — Present",
     location: [St John's, Newfoundland, Canada · *Remote*],
-    summary: [Built and sole-teaches TechNest's first AI-specialised mentorship track — a *12-week prompt-first curriculum where students ship portfolio-grade AI apps by week 8*. Also built the bilingual teaching platform ~96% solo, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV).],
+    summary: [Sole instructor of TechNest's first AI-specialised mentorship track — her *fifth teaching cohort since 2024*. Students arrive knowing only browser ChatGPT and, over 12 weeks, learn to build by directing coding agents, shipping a live multi-user AI product by the end. Also built the bilingual teaching platform that hosts it, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV).],
   )
   xrole(
     title: "Founding Principal Engineer, Activation, Execution & AI Systems", org: "GAVIGO Inc.", org-url: "https://gavigo.com/",
     dates: "Oct 2025 — Present",
     location: [Wilmington, Delaware, United States · *Remote*],
-    summary: [Promoted *Core Engineer → Founding Principal Engineer across three contract iterations* — owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install). *p50 < 1 ms activation latency · 84.6% warm-pool hit rate* · cross-cloud DigitalOcean → GCP GKE migration in a *30-minute zero-downtime cutover* · *~97% solo on 426 of 439 non-merge commits*.],
+    summary: [Owns the intelligence layer of GAVIGO's app-activation platform — tap a game in a feed and it plays instantly, no app-store install. Built the AI scheduler that keeps content pre-warmed on Kubernetes (GKE) so a tapped game resumes in *under a millisecond* — already warm 84.6% of the time — and moved the platform across clouds (DigitalOcean → GCP) with zero downtime. Promoted *Core Engineer → Founding Principal Engineer* across three renewals, building nearly the whole system solo.],
   )
   xrole(
     title: "Senior Full-Stack Engineer & Website Team Lead", org: "She Sharp", org-url: "https://www.shesharp.org.nz/",
     dates: "Jul 2025 — Present",
     location: [Auckland, New Zealand · *Hybrid*],
-    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild *New Zealand's leading women-in-STEM platform* (*2,200+ registered members, 8,000+ women supported lifetime*). Webflow → Next.js cutover *85% solo across ~12 months*, 10+ years of legacy content preserved with *zero broken inbound links*, AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top.],
+    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild the member platform for *New Zealand's leading women-in-STEM charity* (*2,200+ registered members, 8,000+ women supported lifetime*). Moved the community off a drag-and-drop website onto one system for sign-ups, events, and mentor matching — 10+ years of content carried over with *zero broken inbound links*, \~85% solo over a year. Mentors and mentees are paired by AI scoring (GPT-4o-mini, 5-dimensional) with human review.],
   )
   xrole(
     title: "Chief Technology Officer", org: "FemTech Weekend", org-url: "https://www.femtechweekend.com/",
     dates: "Mar 2025 — Present",
     location: [Chengdu, Sichuan, China · *Remote*],
-    summary: [Sole technical lead for *China's first FemTech organisation* since its inaugural conference — built and rebuilt the entire web platform twice (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite). Delivered the *2026 Shanghai Summit (June 22–25) — 20 confirmed speakers, including FemTech-term originator Ida Tin*.],
+    summary: [Sole engineer behind *China's first women's-health-technology organisation* — built, then rebuilt its entire web platform twice as the mission grew, from a marketing site on Next.js to an editorial and research platform on Docusaurus. Ran the digital infrastructure for the *2026 Shanghai Summit* (June 22–25), a four-day event with *20 confirmed speakers* headlined by Ida Tin, who coined the term "FemTech".],
+  )
+  xrole(
+    title: "Chief Technology Officer", org: "Sanicle", org-url: "https://www.linkedin.com/company/sanicleofficial/",
+    dates: "Mar 2025 — Feb 2026",
+    location: [Tulsa, Oklahoma, United States · *Remote*],
+    summary: [Joined as Senior AI/ML Infrastructure Engineer, promoted to CTO. Took Sanicle from a no-code prototype to the production B2B FemTech SaaS employers buy for their staff — menstrual and menopause workplace wellness. Personally integrated *IBM watsonx* into the product, the work that earned Sanicle its *#link("https://www.ibm.com/partnerplus/directory/solution/0638")[IBM Silver Partner]* certification.],
   )
 
   block(above: 4pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)
     text(size: size-meta-x, fill: muted, style: "italic")[
-      *Previously:* *CTO at #link("https://www.ibm.com/partnerplus/directory/company/9542")[Sanicle]* (prev. Senior AI/ML Infrastructure Engineer; Tulsa, Oklahoma, US · remote) — earned the company its *IBM Silver Partner* certification through a solo build (350+ commits) · *#link("https://www.bytedance.com/en/")[ByteDance] Full-Stack Engineer* on the Douyin Mall capstone (Beijing, China · remote; Spring Boot 3 + solo Vue 3, #2 of 8 contributors) · *React Native full-stack mobile dev at #link("https://corde.nz/")[CORDE Christchurch]* (Canterbury, NZ · hybrid) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 18 LinkedIn recs from this cohort).
+      *Previously:* *#link("https://www.bytedance.com/en/")[ByteDance] Full-Stack Engineer* on the Douyin Mall capstone (Beijing, China · remote; Spring Boot 3 + solo Vue 3, #2 of 8 contributors) · *React Native full-stack mobile dev at #link("https://corde.nz/")[CORDE Christchurch]* (Canterbury, NZ · hybrid) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 18 LinkedIn recs from this cohort).
     ]
   })
 })

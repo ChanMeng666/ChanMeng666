@@ -28,16 +28,16 @@
     body-indent: 7pt,
   )
   list.item[
-    *Ship production AI agents that don't fall over.* Multi-agent systems with hard guardrails enforced in code — not just prompts — for compliance and financial steps.
+    *Ship production AI agents that hold up under real use.* Compliance and money-handling steps guarded in code, not just prompts.
   ]
   list.item[
-    *Keep AI fast and affordable to run.* Prompt caching, model-tier routing, and evaluation harnesses with documented failure modes — not hype.
+    *Keep AI fast and economical in production.* Prompt caching, model-tier routing, and evaluation harnesses with documented failure modes.
   ]
   list.item[
     *Keep every customer's data separate and safe.* Per-customer isolation (multi-tenant), durable error handling, observability.
   ]
   list.item[
-    *Senior judgement on the big technical calls.* Discovery-first planning before coding · structured CI output · deterministic code-level guardrails over prompt instructions.
+    *Senior judgement on the calls that are hard to reverse.* Discovery-first planning, structured CI output, guardrails enforced in code rather than by instruction.
   ]
   list.item[
     *Make the whole team faster.* Internal CLIs, IDE hooks, and MCP servers that compound across the engineering org.
@@ -77,12 +77,12 @@
   // capabilities. Built-in conveniences (Goal mode, /review, Session
   // resume) removed; AGENTS.md + sandbox/approval architecture + headless
   // mode are the surfaces a senior agent engineer actually configures.
-  skill-category("Codex CLI — daily-driver fluency", (
+  skill-category("Codex CLI — daily driver", (
     "AGENTS.md",
     "Sandbox + approvals",
     "Headless mode",
   ))
-  skill-category("Beyond pure coding — AI-leveraged dev work", (
+  skill-category("What I automate beyond code", (
     "Typst PDFs",
     "CI/CD pipelines",
     "Slack apps",

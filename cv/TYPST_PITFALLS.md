@@ -183,6 +183,32 @@ When the user asks for "left-aligned contacts in the top-right area," they want 
 
 ---
 
+## 9. A bare `~` in markup is a non-breaking space, not a literal tilde
+
+In Typst markup content, `~` is syntax for a non-breaking space. So an "approximately" tilde written before a number silently vanishes and leaves a stray space in its place: `~85% solo` renders as ` 85% solo` (nbsp + text, which reads as an accidental double space), and `~18 months` renders as ` 18 months`. The compiler does not warn — the source looks correct.
+
+```typst
+// BAD — the tilde disappears; "85% solo" gains a ghost leading space.
+Shipped ~85% of the code solo across ~18 months.
+```
+
+**Symptom the user reports:** a stray double space before a number ("85% solo across  12 months"), with the intended `~` nowhere on the page. The pre-rewrite CV shipped this way for weeks; it was only caught during the 2026-07-17 plain-language rewrite when a PNG render was inspected closely (PR #11, commit e45174f). Fixed occurrences lived in `cv/sections/experience.typ`, `cv/sections/projects.typ`, and `cv/extended.typ`.
+
+**Fix:** escape the tilde so it renders literally:
+
+```typst
+// GOOD — the tilde renders as a literal "approximately" mark.
+Shipped \~85% of the code solo across \~18 months.
+```
+
+**Scope:** this applies ONLY to `.typ` markup content. A `~` is literal in the JS/YAML surfaces (`cv/build-llms-txt.mjs`, `data/profile/*.yaml`), and it is also literal inside Typst code comments — leave those alone. Audit `.typ` content for offenders:
+
+```powershell
+rg '~\d' cv/**/*.typ
+```
+
+---
+
 ## File responsibilities (where to find each rule applied)
 
 | File | Owns | Pitfalls relevant |

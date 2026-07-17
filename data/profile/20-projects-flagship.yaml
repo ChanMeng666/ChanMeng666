@@ -19,7 +19,7 @@ projects:
     provenance: client
     tier: flagship
     recency: active
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-07-17"
     name: Tam-AI-Ti (tam-ai-ti-web)
     meta:
       x_brand:
@@ -92,42 +92,45 @@ projects:
     status: production
     startDate: "2025-10"
     publicSummary: |
-      AI Financial Wellness Coach for Māori communities, architected on the Te Whare
-      Tapa Whā holistic-health framework — culture is in the schema, not the UI.
-      Built solo for Riria (Missy) Te Kanawa (former KPMG NZ National Māori Sector
-      lead, now at ASB Bank) as an independent research-pilot commission, introduced
-      via Dr Mahsa McCauley, founder of She Sharp. Voice coaching via GPT-4o
-      Realtime API, bilingual te reo Māori + English, 88+ AI actions, pgVector
-      semantic search across 48 database tables. 19-user research cohort produced
-      181 journal entries, 35 voice sessions, and 146 AI coach messages over four
-      months (Oct 2025 – Mar 2026).
+      An AI financial-wellness coach for Māori communities, built on the
+      Māori holistic-health model Te Whare Tapa Whā — the cultural framework
+      lives in the database schema, not as surface styling. Users get voice
+      coaching and journaling in both te reo Māori and English, guided
+      through wellbeing check-ins and money goals framed around family,
+      spiritual purpose, and health rather than numbers alone. Built solo
+      for an independent research commission from Riria (Missy) Te Kanawa;
+      a 19-person cohort used it over four months (Oct 2025 – Mar 2026),
+      producing 181 bilingual journal entries, 35 voice coaching sessions,
+      and over 500 transcribed coaching messages.
     narrative:
-      impactHeadline: "Independent executive research pilot — NZ's first Māori-cultural AI financial-wellness agent (Te Whare Tapa Whā in schema, not UI); 19 users over 4 months with bilingual te reo Māori voice coaching, proving culturally-native AI engages communities mainstream FinTech underserves."
+      impactHeadline: "A te reo *Māori* AI coach for financial wellbeing, built on the Māori holistic-health model Te Whare Tapa Whā — encoded in the database, not added as decoration. A 19-person research cohort used it over four months: voice coaching plus 181 bilingual journal entries."
       problem: |
-        Mainstream FinTech treats money as decontextualized numbers — budgets,
-        balances, projections. For Māori users, that framing is culturally
-        mismatched: money is inseparable from whānau wellbeing, spiritual purpose,
-        and holistic health. Generic budgeting apps strip out the very framework
-        that makes financial decisions meaningful, and Māori communities — who
-        face disproportionate financial stress in Aotearoa — are left choosing
-        between tools that work for their wallets but not their worldview, or no
-        tools at all. Tam-AI-Ti exists to test whether an AI financial coach built
-        natively on Māori cultural wisdom — rather than retrofitted with cultural
-        decoration — can engage a population that mainstream FinTech systematically
-        underserves.
+        Mainstream financial apps treat money as decontextualised numbers —
+        budgets, balances, projections. For many Māori users that framing is
+        culturally mismatched: money is inseparable from *whānau* wellbeing,
+        spiritual purpose, and holistic health. Generic budgeting tools strip
+        out the very framework that makes financial decisions meaningful,
+        leaving Māori communities — who face disproportionate financial stress
+        in Aotearoa — choosing between tools that fit their wallet but not
+        their worldview, or no tool at all. Tam-AI-Ti exists to test a direct
+        question: can an AI financial coach built natively on Māori cultural
+        wisdom, rather than retrofitted with cultural decoration, engage a
+        population that mainstream financial technology systematically
+        underserves?
       audience: |
-        Māori adults engaging with personal financial wellbeing, served along two
-        account types: individual goal-setters (Full Account) and whānau supporters
-        who can witness and encourage from the sidelines through a five-tier
-        permission system (view profile, view goals, view journal, send messages,
-        receive celebrations). Pilot cohort to date: 19 verified research
-        participants recruited by Missy Te Kanawa, active over a four-month window
-        (Oct 2025 – Mar 2026), producing 181 bilingual journal entries, 35 voice
-        coaching sessions, 146 AI coach messages, and 74 daily Hauora check-ins.
-        Te reo Māori and English are first-class throughout the experience.
-        Future audience: the broader Māori adult population — rangatahi entering
-        working life, parents managing whānau finances, kaumātua passing on
-        financial wisdom — for whom culturally-rooted tools are scarce.
+        Māori adults working on their financial wellbeing, served along two
+        account types: individual goal-setters (Full Account) and *whānau*
+        supporters who can witness and encourage from the sidelines through a
+        five-tier permission system (view profile, view goals, view journal,
+        send messages, receive celebrations). Research cohort to date: 19
+        verified participants recruited by Missy Te Kanawa, active over a
+        four-month window (Oct 2025 – Mar 2026), producing 181 bilingual
+        journal entries, 35 voice coaching sessions, 146 AI coach messages,
+        and 74 daily Hauora check-ins. Te reo Māori and English are
+        first-class throughout. Future audience: the broader Māori adult
+        population — *rangatahi* entering working life, parents managing
+        *whānau* finances, *kaumātua* passing on financial wisdom — for whom
+        culturally-rooted tools are scarce.
       productLogic: |
         The product is architected on Te Whare Tapa Whā, the Māori model of
         holistic wellness with four walls (Wairua/spiritual, Tinana/physical,
@@ -191,23 +194,24 @@ projects:
       businessLogic: |
         Currently a research-pilot product, not yet commercial. Funded directly
         by the researcher as an independent contracted build. The theory of
-        change: if a financial wellness tool authentically reflects Māori
-        cultural frameworks — rather than skinning generic FinTech with cultural
-        decoration — it can drive engagement and outcomes for a population that
-        mainstream products systematically miss.
+        change: if a financial-wellness tool authentically reflects Māori
+        cultural frameworks — rather than skinning generic financial technology
+        with cultural decoration — it can drive engagement and outcomes for a
+        population mainstream products miss.
 
         The hypothesis sits inside Riria (Missy) Te Kanawa's broader body of work
         on Māori economic prosperity. She is lead author of KPMG New Zealand's
-        Maui Rau report series on how Māori can advance prosperity for their
+        *Maui Rau* report series on how Māori can advance prosperity for their
         people, has spoken at the National Māori Governance Summit, contributes
         to The Spinoff, and brings two decades of experience as a Chartered
         Accountant and management consultant. Former Partner at KPMG NZ leading
-        the National Māori Sector; now at ASB Bank. Tam-AI-Ti is the working
-        artifact for that thesis — a product proving culturally-native technology
-        can serve where culturally-decorated technology cannot.
+        the National Māori Sector; now at ASB Bank (which was not a party to
+        this commission). Tam-AI-Ti is the working artifact for that thesis —
+        evidence that culturally-native technology can serve where
+        culturally-decorated technology cannot.
 
-        Commercialization paths remain open: iwi partnerships, Māori community
-        organizations, financial institutions seeking to authentically serve the
+        Paths forward remain open: iwi partnerships, Māori community
+        organisations, and institutions seeking to authentically serve the
         Māori sector.
       technicalApproach: |
         Solo full-stack build on Next.js 15.5 with Turbopack and TypeScript 5
@@ -288,40 +292,37 @@ projects:
         for Hauora trend charts.
       outcomes: |
         Production-deployed at **tamaiti.whiri-ai.com**, in active operation
-        since October 2025. **Research cohort engagement (Oct 2025 – Mar 2026,
-        approximately four months)**: 19 verified users, 181 bilingual journal
+        since October 2025. Research-cohort engagement (Oct 2025 – Mar 2026,
+        roughly four months): 19 verified users, 181 bilingual journal
         entries, 18 active financial goals, 146 AI coach messages, 35 voice
-        coaching sessions, 74 daily Hauora check-ins. Sustained multi-month
-        engagement on a pre-commercial product with no marketing channel — a
-        meaningful early signal for a research-pilot product.
+        coaching sessions with over 500 transcribed messages, and 74 daily
+        Hauora check-ins. Sustained multi-month engagement on a pre-commercial
+        product with no marketing channel — a meaningful early signal for a
+        research pilot.
 
-        **March 2026 production migration**: executed a zero-downtime cutover
-        from my personal Vercel Hobby account to the client's Whiri-AI Pro
-        team account, including GitHub repo transfer, Vercel Blob + KV
-        re-creation, Google OAuth re-config, custom-domain DNS cutover
-        through Cloudflare, blob-data migration, Resend sender-domain
-        re-verification, and `NEXTAUTH_SECRET` preservation so existing user
-        sessions survived the move. The whole migration was documented as a
-        reusable artifact at `docs/implementation/PROJECT_MIGRATION_GUIDE.md`
-        — a 12-step playbook covering every component, the
-        what-transfers-and-what-doesn't matrix, and the rationale for *not*
-        using Vercel's built-in Project Transfer feature.
+        **March 2026 production migration**: a zero-downtime cutover from my
+        personal Vercel Hobby account to the client's Whiri-AI Pro team
+        account — GitHub repo transfer, Vercel Blob + KV re-creation, Google
+        OAuth re-config, custom-domain DNS cutover through Cloudflare,
+        blob-data migration, Resend sender-domain re-verification, and
+        `NEXTAUTH_SECRET` preservation so existing user sessions survived.
+        Documented as a reusable 12-step playbook covering every component and
+        the rationale for not using Vercel's built-in Project Transfer.
 
         **22 schema migrations shipped** in lock-step with feature work, none
-        rolled back; the most consequential being 0015 (Hauora-metrics
-        restructure from mixed types to consistent integer scales), 0020
-        (Financial Coach voice tables) and 0021 (period-based tracking for
-        Options F/G converting them from one-shot to recurring goals). React
-        Server Components CVE patches landed within hours of Vercel/Snyk
-        automated PRs (PR #2, Dec 2025).
+        rolled back — the most consequential being 0015 (Hauora-metrics
+        restructure to consistent integer scales), 0020 (Financial Coach voice
+        tables) and 0021 (period-based tracking converting Options F/G from
+        one-shot to recurring goals). React Server Components CVE patches
+        landed within hours of Vercel/Snyk automated PRs (PR #2, Dec 2025).
 
-        Project status: fully developed, deployed, in active operating phase,
-        and transferred to client operational ownership. Sits within Missy
-        Te Kanawa's wider body of published work on Māori economic prosperity
-        — KPMG NZ **Maui Rau** report series (lead author), Māori Governance
-        Summit talks, The Spinoff contributing author — and is the working
-        artifact for the thesis that culturally-native technology can serve
-        Māori communities where culturally-decorated technology cannot.
+        Project status: fully built, deployed, in active operation, and
+        transferred to client operational ownership. It sits within Missy
+        Te Kanawa's wider published work on Māori economic prosperity — KPMG
+        NZ *Maui Rau* report series (lead author), Māori Governance Summit
+        talks, The Spinoff contributing author — as the working artifact for
+        the thesis that culturally-native technology can serve Māori
+        communities where culturally-decorated technology cannot.
       myRole: |
         Solo independent developer with full ownership of the entire stack and
         lifecycle. Introduced to the project by Dr Mahsa McCauley (Mohaghegh),
@@ -353,7 +354,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, drizzle, neon, stripe, vercel]
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-17"
     name: She Sharp
     priority: 2
     category: web-apps
@@ -366,7 +367,7 @@ projects:
       and a custom Slack ecosystem (event-collector bot, weekly mentorship-stats
       digest, NZ government funding crawler, Claude `sync-event-from-slack` skill)
       that turned hours of volunteer manual work into one-command automation.
-      648/748 commits (86.6%) solo across 10 months.
+      793/936 commits (85%) solo across ~12 months.
     url: https://www.shesharp.org.nz/
     repoUrl: https://github.com/NZ-SheSharp/she-sharp
     extraLinks:
@@ -409,7 +410,7 @@ projects:
       - "Vercel Edge Network + Vercel Cron"
     keywords:
       - Women in STEM nonprofit (NZ registered charitable trust CC57025)
-      - Solo full-stack build (648 of 748 commits, 86.6% solo)
+      - Solo full-stack build (793 of 936 commits, 85% solo)
       - Three role-permissioned dashboards (mentor / mentee / admin) with native dual-role schema
       - AI mentor-mentee matching (GPT-4o-mini, explicit-weight 5-dimensional scoring)
       - Two-stage matching pipeline (rule-based pre-filter → GPT-4o-mini → admin human-in-the-loop)
@@ -424,15 +425,15 @@ projects:
       - Webflow → Next.js migration via Python crawler (she-sharp-crawl)
       - Her Waka MSD-funded teaching site authored solo (4 workshops + 8 tutorials)
     metrics:
-      - { label: "Total commits",            value: "748" }
-      - { label: "Solo commits",             value: "648 (86.6%) — Lesley Gao authored ~100 frontend commits (13.4%)" }
-      - { label: "Commits since 2026-01-01", value: "345 (intensive H1 build-out)" }
-      - { label: "Build window",             value: "2025-07-22 → 2026-05-11 (~10 months active)" }
+      - { label: "Total commits",            value: "936" }
+      - { label: "Solo commits",             value: "793 (85%) — Lesley Gao authored 140 frontend commits (15.0%)" }
+      - { label: "Commits since 2026-01-01", value: "541 (intensive H1 build-out)" }
+      - { label: "Build window",             value: "2025-07-22 → 2026-07-14 (~12 months active)" }
       - { label: "API routes",               value: "95 (app/api/**/route.ts)" }
       - { label: "Pages",                    value: "53 (app/**/page.tsx)" }
-      - { label: "Components",               value: "145 (components/**/*.tsx)" }
-      - { label: "Database schema",          value: "1,392 lines, 30 pgEnums, 34 pgTables" }
-      - { label: "SQL migrations",           value: "27 (0000_soft_the_anarchist → 0026_brief_invisible_woman)" }
+      - { label: "Components",               value: "160 (components/**/*.tsx)" }
+      - { label: "Database schema",          value: "1,411 lines, 30 pgEnums, 35 pgTables" }
+      - { label: "SQL migrations",           value: "26 (0000_soft_the_anarchist → 0027_bitter_fallen_one)" }
       - { label: "Lib modules",              value: "matching, slack-bot, stripe, funding, programmes, recruitment, invitations, mentorship, email, auth, db (11 namespaced)" }
       - { label: "Cron jobs",                value: "3 (process-queue, weekly-funding-crawl, weekly-mentorship-stats)" }
       - { label: "Funding crawler sources",  value: "6 NZ government feeds (beehive RSS, data.govt CKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML)" }
@@ -449,39 +450,29 @@ projects:
     status: production
     startDate: "2025-07"
     publicSummary: |
-      Solo-built production member platform for She Sharp — New Zealand's
-      leading women-in-STEM nonprofit (charitable trust, 2,200+ registered
-      members / 8,000+ women supported lifetime, 50+ corporate partners, 84+
-      events since 2014). Replaces the previous Webflow site. 648 of 748
-      commits (86.6%) authored solo. Headline features: GPT-4o-mini-powered
-      AI mentor-mentee matching with five-dimensional scoring + human review,
-      role-aware mentor / mentee / admin dashboards with dual-role support,
-      custom Slack ecosystem (event-collector bot, volunteer webhooks, weekly
-      stats digest, NZ funding-opportunities crawler), a Claude agent skill
-      `sync-event-from-slack` that automates event page publication, Stripe
-      tier billing, and full admin + audit systems. Plus three supporting
-      projects: a Python crawler that migrated 1,748 images / 707 MB / 85
-      events from the old Webflow site, the Her Waka MSD-funded teaching
-      site (Mintlify, curriculum authored solo), and a professional SEO
-      audit on shesharp.org.nz with a 10-point recommendations report.
+      Solo-built member platform for She Sharp — New Zealand's leading
+      women-in-STEM charity (a registered charitable trust). It handles
+      member sign-ups and billing, runs the events calendar, and matches
+      mentors with mentees using AI scoring backed by a human reviewer,
+      replacing a Webflow site and spreadsheets the team had outgrown.
     narrative:
-      impactHeadline: "Digitized and AI-upgraded NZ's leading women-in-STEM nonprofit (2,200+ members, 8,000+ supported) — 86.6% solo-built platform with AI mentor matching, three role dashboards, and a Slack automation stack that replaced hours of volunteer manual work."
+      impactHeadline: "The member platform for New Zealand's leading women-in-STEM charity — solo-built over a year, replacing spreadsheets and a drag-and-drop website with one system for member sign-ups, events, and mentor matching that pairs AI scoring with human review."
       problem: |
         She Sharp is New Zealand's leading women-in-STEM nonprofit — a
         registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
-        AI/NLP researcher and Director of Women in Tech at AUT, after she
-        experienced first-hand the gap of being part of the 20% minority of
-        women in technology. The community has grown to 2,200+ registered
-        members, 8,000+ women supported across its history, 50+ corporate
-        partners, and 84+ events since 2014. The original website was a
-        Webflow build, and Webflow had become the bottleneck: the platform
+        AI/NLP researcher and Head of Computer and Information Sciences at
+        AUT, after she experienced first-hand the gap of being part of the
+        20% minority of women in technology. The community reports 2,200+
+        registered members, 8,000+ women supported across its history, 50+
+        corporate partners, and 84+ events since 2014. The original website
+        was a Webflow build, and Webflow had become the bottleneck: the
         capabilities the mission required — membership tiers, mentor / mentee
         / admin role permissions, AI-driven mentor matching, Stripe billing,
         Slack-integrated operations, automated event management, recruitment
-        pipelines, audit logging — are precisely what no SaaS site builder
-        can express. The leadership team was running a 2,200-member community
-        through spreadsheets, Slack threads, and manual outreach. She Sharp
-        needed a real platform.
+        pipelines, audit logging — are precisely what no drag-and-drop site
+        builder can express. The leadership team was running a 2,200-member
+        community through spreadsheets, Slack threads, and manual outreach.
+        She Sharp needed a real platform.
       audience: |
         Active members of the She Sharp community: women in technology at
         every career stage, from undergraduate students considering STEM
@@ -496,9 +487,9 @@ projects:
         (screened through the AI recruitment pipeline), the 50+ corporate
         partners (sponsor packages tied to event visibility and member
         access), and She Sharp's operational team (Slack-integrated
-        workflows). 1,000+ members are actively engaged today, drawn from a
-        registered base of 2,200+ and a lifetime supported population of
-        8,000+ women.
+        workflows). The organisation reports 1,000+ active members today,
+        drawn from a registered base of 2,200+ and a lifetime supported
+        population of 8,000+ women.
       productLogic: |
         The new platform replaces the old Webflow site with a real member
         system anchored on three coexisting dashboards. A user signs up via
@@ -612,24 +603,21 @@ projects:
         publication has gone from hours of manual editing to a single
         command, with the AI bot's structured output Zod-validated as the
         last line of defense before any git write.
-      businessLogic: |
-        She Sharp is a registered New Zealand charitable trust. Three
-        operational channels now run through the platform at scale: three
-        membership tiers (free / basic / premium) with Stripe-integrated
-        flows; 50+ corporate-partner relationships (sponsor packages tied
-        to event visibility and member-base access); and grant-funded
-        programmes — notably Her Waka, an NZ Ministry of Social Development-
-        funded four-session employment-readiness programme for women
-        re-entering the workforce, run at academyEX Auckland (March–June
-        2026), with its own dedicated teaching site I built and authored.
 
+        The events surface now also carries fully data-driven event pages —
+        for example the Aotearoa AI Hackathon Festival 2026 page (hosted by
+        AUT in partnership with She Sharp and the AI Forum NZ), with a judging
+        panel, schedule, prizes, sponsors, and photo galleries composed from a
+        single Zod-validated `EventV3Schema` entry rather than hand-built
+        markup.
+      businessLogic: |
         The platform is the operational substrate that lets each channel
         scale without proportional staff load: dashboards, matching,
         membership lifecycle, communications, recruitment, and event
-        management are automated. The organization's mission scaling (from
-        the 1,500 active members publicly cited a year ago, toward the
-        2,200+ registered base today and beyond) depends directly on this
-        technical capability.
+        management are automated. The organisation's mission scaling — from
+        the 1,500 active members publicly cited a year ago toward the 2,200+
+        registered base it reports today — depends directly on this technical
+        capability.
       technicalApproach: |
         Next.js 15.6 canary (App Router, Turbopack dev) + React 19.1.2 +
         TypeScript 5.8 over Drizzle ORM 0.43 on Neon Postgres (serverless
@@ -641,7 +629,7 @@ projects:
         @dnd-kit for admin kanban workflows; Recharts 3 + @number-flow/react
         for dashboard analytics.
 
-        **The schema runs to 1,392 lines, 30 pgEnums, and 34 pgTables** —
+        **The schema runs to 1,411 lines, 30 pgEnums, and 35 pgTables** —
         a deliberate type-safety investment. Membership tiers (free / basic /
         premium), mentorship-relationship states (pending / active / paused /
         completed / rejected), meeting types (intro / regular / milestone /
@@ -651,8 +639,8 @@ projects:
         career_transition), MBTI 16 personality types, recruitment stages,
         invitation-code redemption states, activity-log action types — every
         business concept is a typed enum rather than a string column, so
-        invalid states are unrepresentable at the database level. **27 SQL
-        migrations** (0000_soft_the_anarchist → 0026_brief_invisible_woman)
+        invalid states are unrepresentable at the database level. **26 SQL
+        migration files** (0000_soft_the_anarchist → 0027_bitter_fallen_one)
         applied via a custom safe-migration wrapper with pre-deployment
         snapshots and rollback SQL generation.
 
@@ -666,7 +654,7 @@ projects:
         Stripe (checkout / donate / webhook), Slack (events / interactive),
         cron (process-queue / weekly-funding-crawl / weekly-mentorship-stats),
         resources (download with access control), notifications, file
-        uploads (CV + profile photo via Cloudinary). **53 pages, 145
+        uploads (CV + profile photo via Cloudinary). **53 pages, 160
         components.**
 
         **The AI matching engine** combines a deterministic rule-based
@@ -733,63 +721,59 @@ projects:
         in tech New Zealand' — high-priority technical SEO gap").
       outcomes: |
         Production-deployed and operating She Sharp's full member lifecycle
-        for ~10 months (first commit 2025-07-22, latest 2026-05-11). Commit
-        volume: **748 total commits, 648 (86.6%) authored solo by Chan
-        Meng**, with the remaining ~100 commits by Lesley Gao on frontend
-        design and code. **345 of those commits landed in 2026 H1 alone** —
-        the platform is in active build-out, not in maintenance mode. The
-        platform now runs She Sharp's membership, mentorship, events,
-        sponsor relationships, volunteer recruitment pipeline, and internal
-        team operations across **95 API routes, 53 pages, 145 components,
-        27 SQL migrations, and an 11-namespace `lib/` library** (matching,
-        slack-bot, stripe, funding, programmes, recruitment, invitations,
-        mentorship, email, auth, db) — the technical infrastructure for an
-        organization with 2,200+ registered members, 1,000+ active, 8,000+
-        women supported lifetime, 50+ corporate partners, 84+ events since
-        2014, 18 industry mentors, and a reported 85% mentorship success
-        rate (mentees achieve 5-6× higher promotion likelihood per She
-        Sharp's own outcomes data).
+        for about a year (first commit 2025-07-22, latest 2026-07-14) — still
+        in active build-out, not maintenance. Commit volume: **936 commits,
+        793 (85%) authored solo by Chan Meng**, with 140 (15%) by Lesley Gao
+        on frontend design and code and 3 by an automation bot. **541 of
+        those commits landed since 2026-01-01 alone.** The platform now runs
+        She Sharp's membership, mentorship, events, sponsor relationships,
+        volunteer recruitment pipeline, and internal team operations across
+        **95 API routes, 53 pages, 160 components, 26 SQL migrations, and an
+        11-namespace `lib/` library** (matching, slack-bot, stripe, funding,
+        programmes, recruitment, invitations, mentorship, email, auth, db) —
+        the technical infrastructure for an organisation that reports 2,200+
+        registered members, 1,000+ active, 8,000+ women supported lifetime,
+        50+ corporate partners, 84+ events since 2014, 18 industry mentors,
+        and an 85% mentorship success rate.
 
-        **The Her Waka programme launched in March 2026** with NZ Ministry
-        of Social Development funding, using the dedicated teaching site I
-        built (herwaka.shesharp.org.nz) and the curriculum I authored —
-        4 workshops + 8 tutorials in 3 tiers. **The SEO audit** identified
-        actionable competitive gaps — notably the desktop/mobile ranking
-        disparity on the core query "women in tech New Zealand" — and
-        informed near-term content strategy. **The migration crawler** enabled
-        a clean cutover from Webflow without losing institutional knowledge.
-        **The Slack-bot + agent-skill pairing** replaced an hours-long
-        manual event-publication workflow with a single dry-run-default
-        command; the most-recent cron-hardening commit (`84f788f`, "make
-        weekly-mentorship-stats survive cold Neon pools") is the kind of
-        small production-resilience detail that only emerges from operating
-        the system, not just building it.
+        The most recent build-out extended the public site into a photo-rich
+        "Editorial" visual system and full event pages — including the
+        Aotearoa AI Hackathon Festival 2026 page (AUT × She Sharp × AI Forum
+        NZ, 7–8 August 2026 at AUT City Campus), assembled from a single
+        Zod-validated event entry. **The Her Waka programme launched in March
+        2026** with NZ Ministry of Social Development funding, using the
+        dedicated teaching site I built (herwaka.shesharp.org.nz) and the
+        curriculum I authored — 4 workshops + 8 tutorials in 3 tiers. **The
+        SEO audit** identified actionable competitive gaps, notably the
+        desktop/mobile ranking disparity on "women in tech New Zealand."
+        **The migration crawler** enabled a clean cutover from Webflow
+        without losing institutional knowledge. **The Slack-bot + agent-skill
+        pairing** replaced an hours-long manual event-publication workflow
+        with a single dry-run-default command.
       myRole: |
         Senior Full Stack Engineer and Website Team Lead. Recruited directly
-        by founder Dr Mahsa Mohaghegh (McCauley) — AI/NLP researcher and
-        Director of Women in Tech at AUT — specifically to deliver the AI
-        and full-stack senior engineering that Webflow couldn't, and that
-        the She Sharp team didn't have in-house.
+        by founder Dr Mahsa Mohaghegh (McCauley) — AI/NLP researcher and Head
+        of Computer and Information Sciences at AUT — specifically to deliver
+        the AI and full-stack senior engineering that Webflow couldn't, and
+        that the She Sharp team didn't have in-house.
 
         Solo full-stack ownership of the main platform: product architecture,
-        database schema (1,392 lines, 30 pgEnums, 34 pgTables, 27 SQL
+        database schema (1,411 lines, 30 pgEnums, 35 pgTables, 26 SQL
         migrations), AI matching pipeline (5-weight rubric + Upstash Redis
         cache + rule-based fallback + admin human-in-the-loop), Stripe
         billing with the form→checkout→invitation-code activation flow,
         Slack ecosystem (read-only event-collector, 3 weekly Cron digests,
         interactive event handlers), the `sync-event-from-slack` Claude
         agent skill with strict Zod validation and dry-run default, admin
-        systems, deployments, observability, and operational support.
-        Lesley Gao contributed some frontend design and frontend code
-        (~100 commits, 13.4% of total); the remaining 648 commits (86.6%)
-        are mine. Beyond the main platform I also designed and built the
-        data migration crawler that bootstrapped the launch
+        systems, deployments, observability, and operational support. Lesley
+        Gao contributed frontend design and frontend code (140 commits, 15%);
+        the remaining 793 commits (85%) are mine. Beyond the main platform I
+        also built the data-migration crawler that bootstrapped the launch
         (she-sharp-crawl), the Her Waka teaching site (her-waka) and its
-        complete four-workshop + 8-tutorial curriculum, and the
-        professional SEO audit and recommendations report
-        (serpdata-api-test) on shesharp.org.nz — operating across
-        engineering, instructional design, and strategic analysis under
-        one role.
+        complete four-workshop + 8-tutorial curriculum, and the professional
+        SEO audit and recommendations report (serpdata-api-test) on
+        shesharp.org.nz — working across engineering, instructional design,
+        and strategic analysis under one role.
 
   - id: gavigo-ire
     provenance: client
@@ -798,7 +782,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [kubernetes, nvidia, google-cloud, docker, typescript]
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-17"
     name: GAVIGO IRE
     priority: 3
     category: ai-apps
@@ -830,7 +814,7 @@ projects:
       - "Redis 7"
       - "PostgreSQL 16"
       - Supabase
-      - "GPT-4o-mini"
+      - "gpt-5.4-mini"
     keywords:
       - Post-App World
       - Instant Reality Switching
@@ -841,86 +825,79 @@ projects:
       - "WebSocket hub"
       - "Founding engineer"
     metrics:
-      - { label: "Total commits",       value: "360" }
-      - { label: "Solo commits",        value: "353 (98%)" }
+      - { label: "Total commits",       value: "445 (439 non-merge)" }
+      - { label: "Chan's commits",      value: "426 (~97%)" }
       - { label: "Restore path p50",    value: "<1 ms" }
       - { label: "Cold path p50",       value: "~12 ms" }
       - { label: "Warm pool hit rate",  value: "84.6%" }
       - { label: "Cloud platforms",     value: "DigitalOcean DOKS → Google Cloud GKE" }
       - { label: "Cross-cloud cutover", value: "~30 min downtime (2026-03-11)" }
-      - { label: "Games vendored (FOSS)", value: "9 (from 11 repos analyzed)" }
+      - { label: "Games",               value: "23 across 4 studios (+2 ML/compute workloads)" }
     status: production
     startDate: "2025-10"
     publicSummary: |
-      AI-orchestrated post-app activation platform for GAVIGO Inc. (Delaware
-      C-Corp; founder & CEO Saba Gecgil). Public mission: "Skip the Store.
-      Start the Play" — eliminate the latency between user intent and
-      interactive content delivery. Distributed system: Go orchestrator
-      (WebSocket hub + Scorer + 7-trigger rules engine + Kubernetes client),
-      React dashboard for live orchestration visualization, React Native /
-      Expo mobile app with TikTok-style feed. Originally architected and
-      shipped on **DigitalOcean managed Kubernetes (DOKS, Singapore)**, then
-      migrated to **Google Cloud GKE (Belgium)** in a single ~30-minute
-      production cutover (2026-03-11) when GAVIGO's Google Cloud partnership
-      came into effect — production expertise on both clouds. Real measured
-      performance post-migration: restore path <1 ms p50, cold path ~12 ms,
-      84.6% warm-pool hit rate. 360 total commits, 353 (98%) solo. As
-      Founding Principal Engineer, Activation, Execution & AI Systems, I
-      own the contractually-defined "Protected Technical Domain": activation
-      systems, activation flow and execution behavior, activation-economics
-      proof path, AI-assisted orchestration and execution-control,
-      restore/reuse boundaries, and heavier-workload validation.
+      GAVIGO IRE is the founding-engineer MVP for GAVIGO Inc., a Delaware
+      startup (founder & CEO Saba Gecgil) building a way past the app-install
+      step: scroll a phone feed and tap a game or short video that starts
+      playing instantly, with no download and no loading screen. Behind the
+      feed, an AI scheduler predicts the next tap and pre-warms that content
+      on a Kubernetes cluster, so a chosen game resumes in under a
+      millisecond and, in benchmarks, was already warm 84.6% of the time.
+      Built as the founding-engineer platform — the activation and
+      AI-orchestration systems that make instant play work — deployed to
+      production on Google Cloud after a live migration from DigitalOcean.
     narrative:
-      impactHeadline: "Founding-engineer MVP for a Delaware startup — sub-millisecond interactive-content activation (p50 <1 ms, 84.6% warm-pool hit) on Kubernetes, production-validated by Google for Startups + NVIDIA Inception; 353/360 commits (98%) solo as Founding Principal Engineer."
+      impactHeadline: "Founding-engineer build for GAVIGO, a Delaware startup: tap a game or short video in a phone feed and it plays instantly — no app install, no loading wait. An AI scheduler pre-warms content on Kubernetes, so a tapped game resumes in under 1 ms, already warm 84.6% of the time."
       problem: |
         The native-app paradigm puts a friction tax on every interactive
         digital experience: discover an app → app-store landing page → install
         → onboard → first interaction. By the time the user reaches the thing
         they actually wanted, the moment has passed. For games, video, and
-        AI experiences — where perception of instantaneity drives engagement
+        AI experiences — where the feeling of instantaneity drives engagement
         — the install gap is the single largest leak in the funnel. GAVIGO's
-        thesis (in its own marketing language): we are building the
-        "Post-App World," eliminating the trillion-dollar friction between
-        user intent and digital experience through proprietary "Instant
-        Reality Switching" technology.
+        thesis, in its own marketing language: we are building the
+        "Post-App World," eliminating the friction between user intent and
+        digital experience through proprietary "Instant Reality Switching"
+        technology.
       audience: |
-        Two surfaces in production today. **Consumer surface**: end users on
-        ire.gavigo.com and the mobile build, scrolling a TikTok-style
-        vertical feed of FOSS games (Hextris, Clumsy Bird, Tiny Yurts,
-        Catculus, Casual Crusade, Stolen Sword, and others — 9 vendored to
-        date from a curated set of 11 open-source repos analyzed). **Investor
-        / operator surface**: the React dashboard at the same domain, which
-        shows the orchestrator's AI decisions, container state machine
-        (COLD → PREPARING → READY → ACTIVE → REUSABLE), warm-pool budget,
-        activation-quality metrics, and side-by-side iframe of the mobile
-        app — purpose-built for live demos to investors and partner
-        evaluators. A Phase 9 audience-segmentation feature filters
-        visibility per role (public / investor / operator presets) at
-        WebSocket broadcast time. The ultimate addressable surface is any
-        market where perception of instantaneity drives engagement — mobile
+        Two surfaces run in production today. **Consumer surface**: end users
+        on ire.gavigo.com and the mobile build scroll a TikTok-style vertical
+        feed of 23 self-hosted games across four in-house studios (Arcade
+        Zone, Puzzle Lab, Reflex Arena, ML Lab) plus a bundled video catalog
+        — every game served from one always-warm pod, no external
+        game-portal iframes. **Investor / operator surface**: the React
+        dashboard at the same domain shows the orchestrator's AI decisions,
+        the container state machine (COLD → PREPARING → READY → ACTIVE →
+        REUSABLE), warm-pool budget, activation-quality metrics, and a
+        side-by-side iframe of the mobile app — purpose-built for live demos
+        to investors and partner evaluators. A Phase 9 audience-segmentation
+        feature filters visibility per role (public / investor / operator
+        presets) at WebSocket broadcast time, and a Phase 11 partner-pilot
+        layer adds per-session telemetry and an operator-gated proof report
+        for named-partner trials. The ultimate addressable surface is any
+        market where the feeling of instantaneity drives engagement — mobile
         games, short-form video, AI chat, generative content.
       productLogic: |
-        A user scrolls a TikTok-style vertical feed; the orchestrator
-        watches focus events stream over a WebSocket hub, scores each
-        candidate piece of content on three weighted signals (personal
-        attention 0.4, global attention 0.4, trend / virality 0.2), and
-        when combined score crosses a 0.6 threshold, fires one of seven AI
-        triggers — Swarm Boost, Proactive Warm, Cross-Domain Inject,
-        Mode Change, Lookahead Warm, Initial Warm, Checkpoint Restore —
-        each of which patches Kubernetes deployment replicas through the
-        K8s client-go API to scale a game container to READY before the
-        user taps.
+        A user scrolls a vertical feed; the orchestrator watches focus events
+        stream over a WebSocket hub, scores each candidate piece of content
+        on three weighted signals (personal attention 0.4, global attention
+        0.4, trend / virality 0.2), and when the combined score crosses a 0.6
+        threshold, fires one of seven AI triggers — Swarm Boost, Proactive
+        Warm, Cross-Domain Inject, Mode Change, Lookahead Warm, Initial Warm,
+        Checkpoint Restore — each of which patches Kubernetes deployment
+        replicas through the K8s client-go API to scale a game container to
+        READY before the user taps.
 
         When the user taps, the experience is already live — either served
-        instantly from a single always-warm shared game-server pod
-        (~12 ms cold path) or restored from the Reusable pool of recently-
-        active containers (<1 ms restore path). State survives across
-        scrolls via a postMessage protocol on web and MMKV storage on
+        instantly from a single always-warm shared game-server pod (the
+        ~12 ms "cold" path here is orchestrator overhead, not a real
+        container start) or restored from the Reusable pool of
+        recently-active containers (<1 ms restore path). State survives
+        across scrolls via a postMessage protocol on web and MMKV storage on
         native; both reconcile against Redis as a single source of truth
-        through a deterministic five-state Activation Spine
-        (COLD → READY → ACTIVE → REUSABLE → restore). When mobile gaming
-        meets the install gap, the GAVIGO answer is: there is no install
-        gap.
+        through a deterministic five-state Activation Spine (COLD → READY →
+        ACTIVE → REUSABLE → restore). When mobile gaming meets the install
+        gap, the GAVIGO answer is: there is no install gap.
       businessLogic: |
         GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
         stage, founder Saba Gecgil. The product wedge is mobile gaming
@@ -930,110 +907,91 @@ projects:
         the dominant funnel leak. The defensibility is architectural,
         not feature-level: a proprietary Activation Spine plus a measured
         sub-millisecond restore path is the kind of capability that
-        compounds, doesn't decay. GAVIGO frames its architecture publicly
-        as "Two Pillars": the Technology Platform (CTO-led foundation)
-        and the Intelligence Layer (the "soul" — the autonomous predictive
-        engine that makes Instant Reality possible). I own the
-        Intelligence Layer side of that architecture under the title
-        Founding Principal Engineer, Activation, Execution & AI Systems.
+        compounds rather than decays. GAVIGO frames its architecture
+        publicly as "Two Pillars": the Technology Platform (CTO-led
+        foundation) and the Intelligence Layer (the autonomous predictive
+        engine that makes Instant Reality possible). I own the Intelligence
+        Layer side of that architecture under the title Founding Principal
+        Engineer, Activation, Execution & AI Systems.
       technicalApproach: |
         The orchestrator is a single Go binary (gorilla/websocket hub +
-        Scorer + Rules Engine + K8s client-go patcher) deployed to a
-        managed Kubernetes cluster. Companion pods: a React + Vite
-        dashboard, a React Native / Expo mobile-web build served from an
-        nginx pod, a single always-warm nginx game-server pod baking ~25
-        FOSS games (zero per-game startup latency), an AI-service pod
-        (Node + Express + GPT-4o-mini) that scales 0→1, Phase 6+ compute
-        / inference workloads, Redis 7 (allkeys-LRU eviction, 400 MB
+        Scorer + Rules Engine + K8s client-go patcher) deployed to a managed
+        Kubernetes cluster. Companion pods: a React + Vite dashboard, a React
+        Native / Expo mobile-web build served from an nginx pod, a single
+        always-warm nginx game-server pod baking the 25-entry catalog (23 web
+        games across four studios plus 2 ML/compute workloads) for zero
+        per-game startup latency, an AI-service pod (Node + Express calling
+        OpenAI `gpt-5.4-mini`, with a simulated-response fallback when no key
+        is set) that scales 0→1, Redis 7 (allkeys-LRU eviction, 400 MB
         budget) for warm-pool state and activation metrics, and optional
-        PostgreSQL 16 for social data.
+        PostgreSQL 16 / Supabase for social data.
 
         **Cross-cloud production experience: DigitalOcean and Google Cloud.**
         The platform shipped first on **DigitalOcean Kubernetes (DOKS) in
-        Singapore (sgp1)** — DO Container Registry, DO LoadBalancer
-        (REGIONAL type), Let's Encrypt with manual certbot renewal — chosen
-        for cost-efficient prototype-to-production iteration. When GAVIGO's
-        Google Cloud partnership came into effect, I led the full migration
-        to **GKE Standard Zonal in Belgium (europe-west1-b)** on 2026-03-11.
-        The cutover rebuilt the entire infrastructure stack: DO Container
-        Registry → Artifact Registry in europe-west3 (cross-region pulls
-        within GCP); DO LoadBalancer → GCE Ingress + Global HTTP(S) LB
-        with Google-managed certs (auto-renewal replacing 80-day certbot
-        toil); DO LB redirect annotation → FrontendConfig
-        `redirectToHttps: true`; DO LB default WebSocket timeouts →
-        BackendConfig `timeoutSec: 86400` to keep activation WS sessions
-        alive; service types reshaped from LoadBalancer-per-frontend to
-        ClusterIP-behind-Ingress; static IP swapped to a GCP global static
-        IP. All five deployments (orchestrator, frontend, mobile-web,
-        ai-service, redis) migrated cleanly with `strategy: Recreate` to
-        avoid CPU deadlock on single-node clusters. Total production
-        downtime during cutover: **~30 minutes** (DNS propagation + cert
-        provisioning). The migration is fully documented in the project's
-        `docs/archive/gcp-migration-record.md` for institutional memory.
+        Singapore (sgp1)** — DO Container Registry, REGIONAL LoadBalancer,
+        Let's Encrypt with manual certbot renewal — chosen for cost-efficient
+        prototype-to-production iteration. When GAVIGO's Google Cloud
+        partnership came into effect, I led the full migration to **GKE
+        Standard Zonal in Belgium (europe-west1-b)** on 2026-03-11: Artifact
+        Registry replacing DO Container Registry, GCE Ingress + Global
+        HTTP(S) LB with Google-managed certs (auto-renewal replacing 80-day
+        certbot toil), a FrontendConfig HTTPS redirect, a BackendConfig
+        `timeoutSec: 86400` to keep activation WebSocket sessions alive,
+        service types reshaped from LoadBalancer-per-frontend to
+        ClusterIP-behind-Ingress, and a GCP global static IP. All five
+        deployments migrated with `strategy: Recreate` to avoid CPU deadlock
+        on single-node clusters; total downtime was **~30 minutes**. GCP
+        remains the only production cloud; a separate AWS account (funded by
+        NVIDIA Inception AWS Activate credits, with a live GPU **spot** quota)
+        runs nothing in production and is reserved for short, torn-down
+        inference/runtime experiments.
 
         Hard problems solved. **Sub-millisecond restore** through a
         deterministic five-state Activation Spine with atomic Redis
-        transitions and phase-by-phase timestamps that prove the
-        decision → K8s patch → client observation chain. **Warm-pool
-        LRU without cascade eviction** via ProtectSlot reservations that
-        keep controlled / benchmark games safe from displacement.
-        **Cross-platform state sync** between MMKV (native), localStorage
-        / postMessage (web), and Redis (server) with a typed game
-        protocol bridging iframe ↔ WebView. **Async K8s coordination
-        with real-time telemetry** — pod EndpointSlice / Pod-status
-        watches feed activation_ready broadcasts with millisecond-
-        precision timestamps. **Audience-aware broadcast filtering**
-        (Phase 9) where the WebSocket hub filters event envelopes per
-        client preset (public / investor / operator) so each viewer sees
-        a different slice of the catalog. **Benchmark spine** running
-        20 iterations per path on real K8s, validating <1 ms restore p50
-        and ~12 ms cold p50 against load-tested 100 concurrent WebSocket
-        clients.
-
-        Engineering culture is phase-driven with comprehensive proof
-        packs: each major capability lands as a phase (Phase 1 init →
-        Phase 2 telemetry → Phase 3 shared game-server → Phase 4 service
-        worker / iframe pool → Phase 5 activation spine → Phase 6
-        compute workloads → Phase 7-8 proof pack → Phase 9 audience
-        presets), with documentation and benchmark numbers required to
-        promote work to public surfaces.
+        transitions and phase-by-phase timestamps that prove the decision →
+        K8s patch → client-observation chain. **Warm-pool LRU without cascade
+        eviction** via ProtectSlot reservations. **Cross-platform state sync**
+        between MMKV (native), localStorage / postMessage (web), and Redis
+        (server) with a typed protocol bridging iframe ↔ WebView. **Async K8s
+        coordination with real-time telemetry** — EndpointSlice / Pod-status
+        watches feed `activation_ready` broadcasts with millisecond-precision
+        timestamps. **Audience-aware broadcast filtering** (Phase 9) so public
+        / investor / operator viewers each see a different slice of the
+        catalog. **Partner-pilot telemetry and CI discipline** (Phase 11):
+        per-session records joining WebSocket session ↔ user ↔ device ↔
+        activation count, typed failure classes, time-to-playable p50/p95, an
+        operator-gated proof report, and the project's first CI pipeline (`go
+        build/vet/test -race`, `vite build`, `tsc`). Benchmarks run 20
+        iterations per path on real K8s, validating <1 ms restore p50 against
+        100 concurrent WebSocket clients.
       outcomes: |
-        Production-deployed at ire.gavigo.com. First shipped on
-        DigitalOcean DOKS (Singapore), then migrated to Google Cloud GKE
-        (Belgium) on 2026-03-11 in a clean ~30-minute cutover when GAVIGO's
-        Google Cloud partnership came into effect — production-grade
-        expertise demonstrated on both clouds. 360 total commits, 353 solo
-        (98%, across both my git identities); remainder GitHub Actions bot.
-        Real measured platform metrics post-migration: restore path <1 ms
-        p50, cold path ~12 ms p50, 84.6% warm-pool hit rate, 0 errors at
-        100 concurrent WebSocket clients in load tests. Catalog: 9 vendored
-        FOSS games (curated from 11 open-source repos analyzed for license,
-        build size, and web-first compatibility) across 9 studios, 199
-        bundled videos. Phase 9 audience-segmentation live: investors and
-        operators see different catalogs than the public surface.
-        Pre-Series A; product is the working artifact for upcoming
-        investor conversations. Role formally formalized over three
-        contract iterations (Original Oct 17 2025; Amended Feb 9 2026;
-        Second Amended Apr 16 2026), each escalating recognition of my
-        technical ownership area.
+        Production-deployed at ire.gavigo.com. First shipped on DigitalOcean
+        DOKS (Singapore), then migrated to Google Cloud GKE (Belgium) on
+        2026-03-11 in a clean ~30-minute cutover when GAVIGO's Google Cloud
+        partnership came into effect — production-grade expertise demonstrated
+        on both clouds. **445 total commits (439 non-merge); I authored 426 of
+        them (~97%) across my two git identities**, with a second engineer
+        onboarded in June 2026 and the remainder from the CI bot. Real
+        measured platform metrics post-migration: restore path <1 ms p50,
+        ~12 ms p50 on the orchestrator "cold" path (a genuine 0→1 container
+        start measures ~18 s and is a deliberate Phase 6+ boundary, not the
+        demo path), 84.6% warm-pool hit rate, 0 errors at 100 concurrent
+        WebSocket clients. Catalog: 23 self-hosted games across four studios
+        plus 2 ML/compute workloads and a 197-video bundle. Phase 9
+        audience-segmentation and Phase 11 partner-pilot telemetry are live.
+        Pre-Series A; the product is the working artifact for upcoming
+        investor conversations. Role formalized over three contract iterations
+        (Original Oct 17 2025; Amended Feb 9 2026; Second Amended Apr 16
+        2026), each escalating recognition of my technical ownership.
 
-        **External validation cycle, Feb 2026:** GAVIGO was accepted
-        into the **Google for Startups Cloud Program** — announced by
-        founder Saba Gecgil with the message that the value isn't cloud
-        credits but the ability to "test [our] assumptions in depth and
-        prove that faster activation and higher concurrency don't
-        require more hardware, just better control over how compute is
-        used." That partnership is what unlocked the GCP migration I
-        executed on March 11. The same window brought acceptance into
-        the **NVIDIA Inception Program** — the deep-tech / GPU
-        infrastructure track that supports startups building GPU-
-        intensive infrastructure-level technologies. And the company
-        was profiled by tech-business press at feedvoice.com on
-        2026-02-10 in *"How GAVIGO Is Ending App Store Friction for
-        Instant Digital Play"* — the public account names the
-        sub-0.2-second activation claim, the patented execution-layer
-        IP positioning, the "Watch and Play era" narrative, and the
-        cross-border Istanbul-to-global ambition.
+        **External validation.** GAVIGO holds NVIDIA Inception membership —
+        evidenced by a $10,000 AWS Activate credit issued through the NVIDIA
+        Inception path (active 2026-07-01, running to 2028-07-31). GAVIGO also
+        states acceptance into the **Google for Startups Cloud Program** (the
+        partnership that unlocked the GCP migration executed on March 11) and
+        was profiled by tech-business press (feedvoice.com, 2026-02-10) — both
+        are company/external claims a reviewer should confirm with the team
+        before citing.
       myRole: |
         Founding Principal Engineer, Activation, Execution & AI Systems
         (prior: Core Engineer), reporting to founder & CEO Saba Gecgil.
@@ -1043,7 +1001,7 @@ projects:
 
         The contract defines a "Protected Technical Domain" that anchors
         my role: activation systems, activation flow and execution
-        behavior, activation-economics proof path, AI-assisted
+        behavior, the activation-economics proof path, AI-assisted
         orchestration and execution-control systems, restore and reuse
         boundary work, heavier-workload validation and transition work,
         and the core activation, execution, and AI-enabled systems
@@ -1051,8 +1009,10 @@ projects:
         the natural forward extension of that area as the system evolves.
         Recognized in the contract record as "a core long-term technical
         builder of the Company's interactive workload platform" with
-        founder-level equity participation. 98% solo commit authorship
-        on the active codebase.
+        founder-level equity participation. I authored 426 of the project's
+        439 commits (~97%); a second engineer joined in mid-2026, so the
+        codebase is no longer solely mine, but activation, orchestration,
+        and AI-systems ownership remains my defined domain.
 
   - id: google-news-mcp
     provenance: personal
@@ -1061,7 +1021,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [mcp, anthropic, npm, typescript, nodejs]
-    lastUpdated: "2026-05-19"
+    lastUpdated: "2026-07-17"
     name: Google News MCP Server
     priority: 4
     category: ai-apps
@@ -1109,196 +1069,123 @@ projects:
       - { label: "PulseMCP badge",     value: "Top Pick · 26.1k visitors · #1,105 global rank" }
       - { label: "Glama quality",      value: "A (license) · 122 stars" }
       - { label: "Skywork review",     value: "Dedicated Oct 2025 deep-dive article + AI-Engineer's Guide companion piece" }
-      - { label: "Stars",              value: "~126 GitHub · 20 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai" }
+      - { label: "Stars",              value: "~125 GitHub · 20 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai" }
       - { label: "Forks",              value: "20" }
-      - { label: "Commits",            value: "98 (Google News) + 71 (Google Jobs) = 169" }
+      - { label: "Commits",            value: "not tracked (shallow history) — see repos" }
       - { label: "Early MCP contrib",  value: "Issue #76 (Nov 27 2024 — Windows/NVM workaround)" }
     status: production
     startDate: "2024-12-30"
     publicSummary: |
-      An early-ecosystem MCP server — first commit **Dec 30 2024, just
-      35 days after Anthropic's public launch of the Model Context
-      Protocol on Nov 25 2024**. Brings Google News search to AI
-      assistants like Claude Desktop, Cline, and Cursor through SerpAPI,
-      with automatic topical categorization (AI & Technology, Business,
-      Science & Research, Healthcare, General) and multi-language /
-      multi-region support. Carries the **PulseMCP "Top Pick" badge**
-      with 26.1k estimated visitors and a #1,105 global popularity rank.
-      Featured in three independent deep-dive write-ups: Skywork AI's
-      *"Chan Meng's Google News MCP Server: The AI Engineer's Guide to
-      Real-Time News Integration"*, Skywork's *"Google News & Trends
-      MCP Server: The AI Engineer's Deep Dive"*, and AgentSkillsHub's
-      *"Install Guide & Security Review"*. Distributed across **15+
-      MCP catalogs and registries** — Smithery, mcp.so, Glama (A
-      license rating, 122 stars), PulseMCP, Awesome MCP Servers,
-      MCP Server Finder, MCP Archive, Playbooks, mcpservers.org,
-      Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub,
-      MagicSlides — and npm-published as
-      `@chanmeng666/google-news-server`. Paired with a companion early
-      server, `server-google-jobs` (first commit Dec 31 2024) —
-      together 169 solo commits across the two servers. Beyond shipping
-      code, I contributed early ecosystem troubleshooting via
-      [modelcontextprotocol/servers issue #76](https://github.com/modelcontextprotocol/servers/issues/76)
-      (opened Nov 27 2024) — the Windows + NVM PATH workaround
-      referenced in both server READMEs as primary troubleshooting
-      guidance.
+      An early Model Context Protocol server — the open standard Anthropic
+      launched in November 2024 to connect AI assistants to outside tools.
+      Its first commit landed 35 days after that launch. It lets assistants
+      like Claude, Cursor, and Cline search live Google News through SerpAPI,
+      automatically sorted into topics (technology, business, science,
+      health) and offered in 10 languages. Published on npm as
+      `@chanmeng666/google-news-server`, it carries a PulseMCP "Top Pick"
+      badge and ships a one-click install bundle for Claude Desktop.
     narrative:
-      impactHeadline: "Earliest-ecosystem MCP server (shipped 35 days after Anthropic's Nov 2024 MCP launch) — now listed across 15+ MCP catalogs, earned PulseMCP's 'Top Pick' badge and Glama's A-rating, used by AI assistants worldwide for current-events search."
+      impactHeadline: "Lets AI assistants like Claude search live Google News — sorted into topics, in 10 languages. One of the first tools built for Anthropic's Model Context Protocol: shipped 35 days after the standard launched, and it's now listed across 15+ MCP directories."
       problem: |
-        Anthropic published the Model Context Protocol specification in
-        November 2024 as the open standard for connecting AI assistants
-        like Claude to external tools and data sources — but in the first
-        weeks after launch, the ecosystem had only a handful of reference
-        servers and no real way for AI assistants to search current news.
-        Generative engines (ChatGPT, Claude, Perplexity) were increasingly
-        being asked "what's happening with X today" — questions an LLM
-        cannot answer from training data alone. The gap was concrete:
-        Claude Desktop users wanted current-events search; the MCP server
-        catalog had nothing for Google News.
+        Anthropic published the Model Context Protocol in November 2024 — the
+        open standard that lets AI assistants like Claude reach outside their
+        training data to real tools and live sources. In the first weeks after
+        launch the ecosystem had only a handful of reference servers, and none
+        of them let an assistant search current news. That was a concrete gap:
+        people were already asking their AI assistant "what's happening with X
+        today," a question no model can answer from training data alone, and
+        there was no Google News option in the MCP catalog.
 
-        A second, related friction surfaced almost immediately: Windows
-        users running Node Version Manager couldn't get any npm-based MCP
-        server (filesystem, github, postgres, brave-search, google-maps,
-        etc.) to connect to Claude Desktop, because PATH resolution
-        through NVM's shim layer broke the desktop client's process
-        spawn. This blocked a large fraction of early Windows adopters
-        from using MCP at all.
+        A second friction appeared at the same time: Windows users running Node
+        Version Manager couldn't get *any* npm-based MCP server to connect to
+        Claude Desktop, because PATH resolution through NVM's shim layer broke
+        the desktop client's ability to launch the server process. That blocked
+        a large share of early Windows adopters from using MCP at all.
       audience: |
-        AI assistants and the developers integrating them. Direct
-        consumers: Claude Desktop, Cline, Cursor's agent mode, Continue,
-        any MCP-compliant client running a system prompt that includes
-        news-search capability. Downstream consumers: end-users asking
-        their AI assistant about current events, journalists / analysts
-        using AI workflows to monitor coverage, developers building
-        research agents and content workflows. The multi-registry
-        distribution surface (10+ catalogs) was designed for *discovery*:
-        AI developers find MCP servers by browsing registries, not by
-        searching GitHub.
+        AI assistants and the developers wiring them up. Direct consumers:
+        Claude Desktop, Cursor's agent mode, Cline, Continue, and any
+        MCP-compliant client whose setup includes news search. Downstream: the
+        people asking those assistants about current events — analysts and
+        journalists monitoring coverage, developers building research and
+        content agents. The project is deliberately listed on multiple MCP
+        registries because that is how AI developers actually find servers —
+        they browse catalogs, not GitHub search.
       productLogic: |
-        A user asks their AI assistant something like "what's happening
-        with [topic] in [region] this week"; the assistant invokes the
-        MCP server's `google_news_search` tool with `query`, optional
-        `gl` (country code), and `hl` (language code) parameters; the
-        server relays the request to SerpAPI's `google_news` engine and
-        returns structured JSON; the server then post-processes the
-        results with regex-based topic categorization (AI & Technology,
-        Business, Science & Research, Healthcare, General) and formats
-        the output with source attribution, dates, snippets, and links
-        intact.
+        A user asks their AI assistant something like "what's happening with
+        [topic] in [region] this week." The assistant calls the server's one
+        tool, `google_news_search`, with a query plus optional `gl` (country)
+        and `hl` (language) codes. The server passes the request to SerpAPI's
+        Google News engine, gets structured results back, sorts them into
+        topics (AI & Technology, Business, Science & Research, Healthcare,
+        General) with lightweight pattern matching, and returns clean output
+        with each article's source, date, snippet, and link intact. It also
+        supports search by news topic, publisher, full-story coverage, and
+        section via token parameters, and falls back to English for
+        unsupported language codes.
 
-        The companion `server-google-jobs` follows the same pattern with
-        a richer parameter set — `query` plus `location`, `posted_age`
-        (today / 3 days / week / month), `employment_type`
-        (FULLTIME / PARTTIME / CONTRACTOR / INTERN), `salary`, `radius`,
-        `hl`, `page`, `sort_by` — and ships with **full localization
-        for English, Simplified Chinese, Japanese, and Korean**
-        (30+ translated strings per locale).
-
-        Both servers run over MCP's `stdio` transport — the default
-        channel for desktop AI clients — and are installable in one
-        command via Smithery's CLI:
-        `npx -y @smithery/cli install @chanmeng666/google-news-server --client claude`.
+        The server runs over MCP's stdio channel — the default for desktop AI
+        clients — and installs in one command through Smithery's CLI (`npx -y
+        @smithery/cli install @chanmeng666/google-news-server --client
+        claude`), or via a packaged `.mcpb` bundle for one-click setup in
+        Claude Desktop.
       businessLogic: |
-        Open source, MIT licensed, no direct monetization. The strategic
-        intent is **ecosystem positioning**: be the canonical Google
-        News / Google Jobs MCP server during the formative months of the
-        Model Context Protocol so the project compounds discovery for
-        adjacent work. Multi-registry distribution (Smithery, mcp.so,
-        Glama, PulseMCP, Awesome MCP Servers, mcpservers.org, MCP
-        Archive, MCP Server Finder, Playbooks, Archestra) makes the
-        project surface anywhere a developer looks for an MCP tool.
-        The README's structured JSON-LD `SoftwareApplication` metadata
-        and `<script type="text/llms.txt">` section take the same
-        approach to LLM-driven discovery that the rest of my work uses:
-        AI agents themselves should be able to read the server's
-        identity, parameters, and use cases without parsing prose.
+        Open source, MIT licensed, no direct monetization. The intent is
+        ecosystem positioning: be a canonical Google News server during the
+        formative months of the Model Context Protocol, so the project keeps
+        surfacing wherever a developer looks for an MCP tool. Distribution
+        across many registries (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP
+        Servers, Archestra, and others) is the discovery strategy. The README
+        also carries JSON-LD `SoftwareApplication` metadata and an `llms.txt`
+        guide so that AI agents themselves can read the server's identity,
+        parameters, and use cases without parsing marketing prose — the same
+        discovery-by-machine approach used across the rest of this portfolio.
       technicalApproach: |
-        TypeScript on Node.js, built against `@modelcontextprotocol/sdk`
-        v1.0.0 (Google News) and v1.25.1 (Google Jobs — the newer SDK
-        pin reflects ongoing maintenance). ES module target, packaged
-        as a CLI binary (`google-news-server`, `google-jobs-server`)
-        exported in `package.json`. Transport is stdio — the default
-        channel for desktop AI clients, where the server runs as a
-        spawned subprocess of Claude Desktop or equivalent. HTTP is
-        handled with axios on the News server and node-fetch on the
-        Jobs server (deliberately leaner — no axios, no dotenv
-        overhead, environment read directly from `process.env`).
+        TypeScript on Node.js, built against `@modelcontextprotocol/sdk` v1.x,
+        shipped as an ES-module CLI binary (`google-news-server`) declared in
+        `package.json`. Transport is stdio, so the server runs as a subprocess
+        the desktop AI client launches. HTTP calls go through axios; SerpAPI is
+        the underlying data source (2 requests/second, 5 concurrent, 1-hour
+        cache). On top of the raw API the server adds a thin intelligence
+        layer: parameter validation, topic categorization, multi-language
+        formatting, and error handling with clear messages.
 
-        SerpAPI (paid tier required for News and Jobs query volume;
-        2 req/sec rate limit, 5 concurrent, 1 h cache) is the underlying
-        data plane. The servers add a thin
-        intelligence layer on top: query parameter validation,
-        categorization post-processing, multi-language formatting,
-        error handling with localized messages. Both READMEs are 320-335
-        lines and structured with badges, video demos, MseeP.ai
-        security badges, JSON-LD `SoftwareApplication` schema, and an
-        explicit "AI Assistant Instructions & GEO Optimization"
-        collapsible section — the same GEO-aware authoring pattern I
-        use across all my work.
+        The repo also ships production packaging — a Dockerfile, a Smithery
+        config, a `manifest.json`, a JSON-LD `structured-data.json`, an
+        `llms.txt`, and a downloadable `.mcpb` install bundle — plus a full
+        set of community-health docs (CONTRIBUTING, SECURITY, SUPPORT,
+        GOVERNANCE, CHANGELOG, issue/PR templates) added in 2026.
 
-        Beyond shipping code, the third technical contribution is
-        community: my **issue #76** (opened Nov 27 2024, three weeks
-        after MCP's launch) documented the Windows + NVM `PATH`
-        resolution failure that blocked Claude Desktop from spawning
-        npm-based MCP servers. The fix — point Claude Desktop's config
-        at the absolute path of `node.exe` rather than relying on PATH
-        — is referenced as primary troubleshooting guidance in both my
-        own server READMEs and (per the README's own claim) became
-        guidance in the broader MCP ecosystem.
+        The third contribution is community, not code: **issue #76** in the
+        official `modelcontextprotocol/servers` repo (opened Nov 27 2024, two
+        days after MCP's launch) documented the Windows + NVM PATH failure that
+        stopped Claude Desktop from launching npm-based MCP servers. The fix —
+        point the client config at the absolute path of `node.exe` instead of
+        relying on PATH — is cited as the primary troubleshooting step in this
+        server's README.
       outcomes: |
-        Both servers are production-deployed via npm and listed across
-        **15+ MCP discovery surfaces**, with independent third-party
-        validation that this is treated as portfolio-grade MCP work:
+        The server is published on npm as `@chanmeng666/google-news-server`
+        and listed across multiple MCP discovery surfaces, with third-party
+        recognition:
+        - PulseMCP "Top Pick" badge *(external claim — needs registry check)*
+        - Glama A-grade license rating *(external claim — needs registry check)*
+        - Smithery one-command install, plus listings on mcp.so, Awesome MCP
+          Servers, Archestra, and other catalogs *(exact catalog count is
+          external — needs registry check)*
+        - Independent deep-dive write-ups by third-party reviewers (Skywork
+          AI, AgentSkillsHub) *(external claim — needs registry check)*
+        - A hosted deployment listed on Fronteir AI *(external claim — needs
+          registry check)*
 
-        **Catalog distribution & quality signals (server-google-news,
-        `@chanmeng666/google-news-server`):**
-        - **PulseMCP "Top Pick" badge** + 26.1k estimated visitors,
-          #1,105 global popularity rank
-          ([listing](https://www.pulsemcp.com/servers/chanmeng666-google-news))
-        - **Glama A-grade license rating** + 122 stars
-          ([listing](https://glama.ai/mcp/servers/@ChanMeng666/server-google-news))
-        - Smithery one-command install
-        - Listed across mcp.so, Awesome MCP Servers (mcpservers.org),
-          MCP Server Finder, MCP Archive, Playbooks, Archestra, serp.ai,
-          mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides
-
-        **Catalog distribution (server-google-jobs,
-        `@chanmeng666/google-jobs-server`):**
-        - PulseMCP listing — 4.6k visitors, registered Jan 1 2025
-        - Glama listed (A license rating)
-        - AI Toolhouse, mcp.so, AIBase, MagicSlides, serp.ly
-
-        **Independent media coverage:** three dedicated deep-dive
-        articles by third-party reviewers in 2025:
-        - Skywork AI: *"The Ultimate Guide to Chan Meng's Google Jobs
-          MCP Server"* (Oct 27, 2025) — describes the project as *"one
-          of the most elegant, production-ready solutions I've found
-          for a very specific, very common problem"* and benchmarks it
-          favourably against generic SerpAPI wrappers, custom scrapers,
-          and manual API integrations
-        - Skywork AI: *"Chan Meng's Google News MCP Server: The AI
-          Engineer's Guide to Real-Time News Integration"*
-        - Skywork AI: *"Google News & Trends MCP Server: The AI
-          Engineer's Deep Dive"*
-        - AgentSkillsHub: *"Google News MCP Server — Install Guide &
-          Security Review"*
-
-        **Combined engineering footprint:** 169 commits across the two
-        servers, both authored solo, actively maintained through
-        2025–26. Both serve as concrete artefacts for the
-        early-MCP-developer narrative — **first commits Dec 30 and
-        Dec 31 2024, within 5–6 weeks of MCP's Nov 25 2024 public
-        launch**. Issue #76 remains visible in the official
-        `modelcontextprotocol/servers` repository as institutional
-        memory of an early ecosystem contribution.
+        Alongside it, the companion `server-google-jobs` (first commit late
+        December 2024) applies the same pattern to Google Jobs search
+        *(Jobs-repo specifics not verifiable from the News clone — see
+        flags)*. Issue #76 remains visible in the official MCP servers
+        repository as a record of an early ecosystem contribution.
       myRole: |
-        Sole author, sole maintainer, sole responder to issues and PRs.
-        Both servers, both READMEs, both npm publishes, both registry
-        submissions, the issue #76 troubleshooting contribution.
-
-        The broader signal: these two servers + the early issue #76
-        contribution position me as an immediately-active MCP
-        ecosystem participant — not a theoretical early adopter, but
-        someone who shipped, distributed, documented, and supported
-        production MCP infrastructure within the protocol's first
-        month.
+        I built and maintain the server solo — the code, the README, the npm
+        publish, the registry submissions, the packaging, and the
+        issue-tracker responses. I also filed the early issue #76
+        troubleshooting contribution. Together these make the
+        early-MCP-developer story concrete: not a theoretical early adopter,
+        but someone who shipped, distributed, documented, and supported a
+        working MCP server within the protocol's first month.

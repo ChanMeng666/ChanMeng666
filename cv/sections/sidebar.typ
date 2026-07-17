@@ -1,7 +1,17 @@
 #import "../theme.typ": *
 #import "../components.typ": *
 
-// ─── Education (moved to LEFT column end — kept here as compact helper) ─────
+// Right-column sections use an explicit header top-gap. PAGE-1 sidebar sections
+// (What I Bring, AI Engineering, Stack) stay small (gap: 4pt) so the sticky
+// keep-with-next chain holds the Stack header + Models category on page 1;
+// PAGE-2 sections (Certifications, Recognition, Education) pass a larger gap to
+// spend the slack and fill page 2. The left narrative column keeps the roomy
+// default (tight: false).
+#let sec(title, body, gap: 4pt) = section(title, body, tight: gap)
+
+// ─── Education (terminal right-column section) ─────────────────────────────
+// sticky:false — nothing follows it, so it must NOT keep-with-next (a sticky
+// terminal header gets bumped to a fresh page even with room above).
 #let education() = section("Education", {
   compact-entry(
     title: "Master of Applied Computing",
@@ -10,13 +20,13 @@
     location: "New Zealand",
     note: "Distinction (80%+) · Dean's List, Top 5%",
   )
-})
+}, tight: 22pt, sticky: false)
 
 // ─── 1. What I bring to a team (plain-English value statements) ─────────────
 // This is the recruiter/HR/founder-facing distillation of the architect-grade
 // patterns the technical sections demonstrate. Each line is one capability +
 // one concrete signal.
-#let what-i-bring() = section("What I Bring to a Team", {
+#let what-i-bring() = sec("What I Bring to a Team", {
   set text(size: size-meta, fill: ink)
   // Within-bullet leading is tight; between-bullet spacing ~2× wider so the eye
   // binds each bullet as a single unit and the list still breathes.
@@ -55,7 +65,7 @@
 // finally production discipline (quality + observability — populated from
 // the tools that actually appear in data/profile/*.yaml; the previous
 // Braintrust/Langfuse/Inspect AI list was inaccurate).
-#let ai-engineering-toolkit() = section("AI Engineering & Tooling", {
+#let ai-engineering-toolkit() = sec("AI Engineering & Tooling", {
   // Each surface listed below appears in EXACTLY ONE row. MCP lives only in
   // Agent protocols; Hooks lives only in Claude Code; LangGraph/LangChain/
   // CopilotKit/Vercel AI SDK live only in Agent SDKs & frameworks (removed
@@ -121,7 +131,7 @@
 // infra, the languages. The previous "AI frameworks" row (LangGraph,
 // CopilotKit, Vercel AI SDK) moved to AI Engineering & Tooling's "Agent
 // SDKs & frameworks" row — each surface appears exactly once.
-#let stack() = section("Stack", {
+#let stack() = sec("Stack", {
   skill-category("Models", (
     "Anthropic Opus / Sonnet / Haiku",
     "OpenAI gpt-5.5 / GPT-4o + realtime",
@@ -165,7 +175,7 @@
 })
 
 // ─── 5. Certifications & training ────────────────────────────────────────────
-#let certifications() = section("Certifications & Training", {
+#let certifications() = sec("Certifications & Training", {
   cert-group("Anthropic (6)", (
     [*Building with the Claude API · Intro to MCP · Intro to Agent Skills · Claude Code in Action* (all May 2026; *Claude Code in Action* originally Aug 2025) · *AI Fluency: Framework & Foundations* (Aug 2025)],
     [*Claude Certified Architect — Foundations* curriculum completed (on Anthropic Partner Network track via Engram)],
@@ -179,17 +189,17 @@
     [*HackerRank Software Engineer* + 22 skill certifications — *SQL (Advanced)* · Problem Solving · Go · Node.js · React · Angular],
     [*Microsoft* (Azure · System Administration · Project Management) · *C++ Institute* · *Anaconda Python* · *Atlassian Agile* · *Mozilla*],
   ))
-})
+}, gap: 16pt)
 
 // ─── 6. Recognition + reference quotes ───────────────────────────────────────
-#let recognition-and-reference() = section("Recognition", {
+#let recognition-and-reference() = sec("Recognition", {
   set text(size: size-tiny, fill: ink)
   // Tight within-bullet leading; ~2.5× wider between bullets so each recognition
   // reads as its own airy line.
   set par(leading: 0.7em)
   set list(
     marker: text(fill: accent, size: 5.5pt)[•],
-    spacing: 9pt,
+    spacing: 15pt,
     indent: 0pt,
     body-indent: 6pt,
   )
@@ -199,7 +209,7 @@
   // events, separate awards. Never combine them. (See data/profile/30-recognition.yaml awards[].)
   list.item[*Excellence Award* — FemTech China (Women's Health Technology Challenge, Dec 2024).]
   list.item[*UN Women FemTech Hackathon — Outstanding Performer* — FemTech Weekend, Beijing (Mar 2025).]
-})
+}, gap: 18pt)
 
 // ─── 7. Endorsements — removed ──────────────────────────────────────────────
 // Testimonial quote dropped in this iteration to make room for the wider

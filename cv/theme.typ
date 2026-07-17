@@ -35,15 +35,21 @@
 // ─── Type sizes — print-tuned, CV-specific (NOT in brand.yaml web scale) ────
 // Anton is a heavy compact-grotesque face and reads SMALLER than a normal sans
 // at the same point size, so the display sizes are pushed up vs the old serif.
+// v2.2 TYPOGRAPHIC SYSTEM: 10 ad-hoc sizes collapsed to 7 clear ROLES so the
+// page reads as one system. size-entry is the single token for EVERY entry
+// title (role-lines, project-card names, compact-entry titles); size-body is
+// THE single reading size (experience summaries + project bullets + intro all
+// share it — no more per-surface 7.4 / 9 splits).
 #let size-h1      = 28pt        // NAME — Anton, mixed-case (heavier/wider than Bebas)
 #let size-h2      = 11pt        // section header — Anton, uppercased (Anton's heavier
                                 //   cut needs a hair less size than Bebas to hold 2 pages)
-#let size-h3      = 10pt        // entry title — DM Sans bold
-#let size-role    = 10.5pt      // role line under name — DM Sans
-#let size-body    = 9pt
-#let size-meta    = 8pt
+#let size-entry   = 9.5pt       // ALL entry titles — role-line / project-card / compact
+#let size-h3      = size-entry  // deprecated alias — kept so old imports still resolve
+#let size-role    = 10.5pt      // header role line under name (header-local, untouched)
+#let size-body    = 8.4pt       // THE single reading size — summaries, bullets, intro
+#let size-meta    = 8pt         // org lines, dates pairs, context-lines, sidebar bullets
 #let size-pill    = 7.6pt
-#let size-tiny    = 7pt
+#let size-tiny    = 7pt          // dates, Previously/Also-built closers, footnotes
 
 // ─── Geometry (golden-ratio aliases from brand.yaml) ────────────────────────
 #let col-main = golden-main
@@ -64,12 +70,18 @@
 // its own body) and spent on the section / inter-entry gaps (generous, so the
 // blocks separate cleanly). Net height is ~neutral but the hierarchy reads far
 // more clearly than the old flat, evenly-packed rhythm.
-#let space-section    = 9pt    // above each section-header — top structural cue
+// v2.2 rhythm: one 4pt-modular scale, ratio ≈1.5 line-height on the single body
+// size. leading-body drives intro / experience summaries / project bullets;
+// leading-meta drives the wrapping meta/context lines a notch tighter.
+#let space-section    = 16pt   // above each section-header — top structural cue
+                               //   (LEFT column only — right sidebar sections pass
+                               //    explicit per-section top-gaps via `sec`/`section`)
 #let space-after-rule = 6pt    // between section accent rule and first content — a little air
 #let space-entry      = 11pt   // between entries within a section
 #let space-pill-row   = 3pt    // horizontal pill gap
-#let leading-body     = 0.82em // base paragraph leading — airy for human readers
-#let leading-summary  = 0.88em // summary blocks inside role/project entries
+#let leading-body     = 0.5em  // THE reading leading — 8.4pt → 12.6pt lines, ratio 1.5
+#let leading-meta     = 0.45em // wrapping meta / project-card context lines
+#let leading-summary  = leading-body // deprecated alias (summaries now use leading-body)
 #let leading-tight    = 0.68em // for compact lists (sidebar pills, certs)
 
 // ─── Inter / intra entry gaps (named so designers can find them) ────────────
@@ -78,7 +90,7 @@
 // between-jobs (inter 16pt). The intra gap is deliberately NON-tiny — the three
 // lines of one job are distinct paragraphs and need to breathe — while inter is
 // well over 2× intra so the eye never binds a title to the job above.
-#let gap-inter-entry  = 9pt    // between consecutive role-lines / experience entries (≈2× intra)
+#let gap-inter-entry  = 14pt   // between consecutive role-lines / experience entries (≈2.8× intra)
 #let gap-intra-entry  = 5pt    // between meta line (org/dates) and summary inside one entry
-#let gap-card-meta    = 4pt    // project-card: between title row and italic context line
-#let gap-card-body    = 3pt    // project-card: between italic context line and bullets
+#let gap-card-meta    = 6pt    // project-card: between title row and italic context line
+#let gap-card-body    = 6pt    // project-card: between italic context line and bullets

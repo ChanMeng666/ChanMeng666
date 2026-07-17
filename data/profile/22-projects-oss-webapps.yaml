@@ -449,8 +449,8 @@ projects:
     meta:
       x_brand:
         featuredStack: [docusaurus, drizzle, neon, cloudflare-pages, react]
-    lastUpdated: "2026-05-19"
-    name: FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, currently delivering Shanghai Summit 2026
+    lastUpdated: "2026-07-17"
+    name: FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026
     priority: 17
     category: web-apps
     clientOrgId: femtech-weekend
@@ -458,14 +458,14 @@ projects:
     relatedProjectIds: [femtech-radar]   # FemTech Radar — the FemTech Weekend intelligence sub-project; cross-linked so it renders as a "↳ Related:" link under this card (same treatment as gavigo-ire → gavigo-website, she-sharp → her-waka)
     supersedes: [femtech-weekend]
     tagline: |
-      Solo-built (97.2% of 544 commits across ~1 year) Gen-2 platform for
+      Solo-built (94.7% of 564 commits across ~1 year) Gen-2 platform for
       FemTech Weekend — China's first women's-health-technology
       organisation, founded 2024 by Zhu Yihan in Chengdu. Docusaurus 3.9
       editorial spine + Drizzle ORM on Neon serverless Postgres for form
-      data + 15 Cloudflare Pages Functions (~3,800 LOC) for the entire
+      data + 16 Cloudflare Pages Functions (~5,373 LOC) for the entire
       server side, deployed on Cloudflare Pages for low-latency
-      cross-border edge delivery. Currently powering Shanghai Summit 2026
-      (June 22-25, 16 confirmed speakers headlined by Ida Tin — Clue
+      cross-border edge delivery. Carried Shanghai Summit 2026
+      (June 22-25, 20 confirmed speakers headlined by Ida Tin — Clue
       co-founder who coined the term "FemTech" in 2016): 10-section
       summit homepage + 3 sub-pages, 4 application pipelines
       (programme/speaker/pitch/ecosystem) writing to typed Postgres
@@ -485,13 +485,13 @@ projects:
       - { label: "Founder Zhu Yihan (organisation)", url: "https://www.femtechweekend.com/about-us" }
     logo: /public/brands/femtech-weekend-mark.svg
     entity: "FemTech Weekend (Chengdu, China; founded 2024 by Zhu Yihan; positioned publicly as China's representative for cross-border women's-health initiatives)"
-    roles: ["Chief Technology Officer", "Solo Engineer (97.2% of 544 commits)", "Sole Architect of Gen-1 and Gen-2 platforms"]
+    roles: ["Chief Technology Officer", "Solo Engineer (94.7% of 564 commits)", "Sole Architect of Gen-1 and Gen-2 platforms"]
     techStack:
       - "Docusaurus 3.9.2 (classic preset + @docusaurus/theme-mermaid)"
       - "React 18.2 + TypeScript 5.6 (typecheck via `tsc --noEmit` in CI)"
-      - "Drizzle ORM 0.45 + drizzle-kit 0.31 (3 migrations: 0000_luxuriant_riptide → 0001_programme_overhaul → 0002_speaker_overhaul)"
+      - "Drizzle ORM 0.45 + drizzle-kit 0.31 (4 migrations: 0000_luxuriant_riptide → 0001_programme_overhaul → 0002_speaker_overhaul → 0003_agenda_downloads)"
       - "Neon serverless Postgres (@neondatabase/serverless 1.0)"
-      - "Cloudflare Pages + Cloudflare Pages Functions (15 endpoints, ~3,839 LOC of server-side .js)"
+      - "Cloudflare Pages + Cloudflare Pages Functions (16 endpoints, ~5,373 LOC of server-side .js)"
       - "Wrangler 4.0 (deployment + local dev via `wrangler pages dev build`)"
       - "@notionhq/client v3 (Notion-as-CMS for non-technical founder editorial workflow)"
       - "Resend REST API (Contacts API with segment assignment + transactional email)"
@@ -507,13 +507,13 @@ projects:
       - "Node 22.x (pinned in engines)"
     keywords:
       - China's first women's-health-tech organisation (FemTech Weekend, founded 2024, Chengdu)
-      - Solo-built Gen-2 platform (529 of 544 commits = 97.2% solo; 17 commits from one occasional contributor)
+      - Solo-built Gen-2 platform (534 of 564 commits = 94.7% solo; 30 commits from one occasional contributor)
       - Docusaurus 3.9 as editorial spine (deliberate rewrite from Gen-1 Next.js — chosen for research-publication centre of gravity)
       - Cloudflare Pages global edge delivery (matters for cross-border China ↔ international audience)
-      - 15 Cloudflare Pages Functions (~3,839 LOC) — entire server side without a Node backend
+      - 16 Cloudflare Pages Functions (~5,373 LOC) — entire server side without a Node backend
       - Drizzle ORM + Neon serverless Postgres (typed schema for application/subscription submissions, not Notion)
       - Notion-as-CMS retained for editorial content (founder edits directly in Notion, no developer-in-the-loop)
-      - Shanghai Summit 2026 (June 22-25; Ida Tin / Clue co-founder headlines; 16 confirmed speakers; 10 homepage sections + 3 sub-pages)
+      - Shanghai Summit 2026 (June 22-25; Ida Tin / Clue co-founder headlines; 20 confirmed speakers; 10 homepage sections + 3 sub-pages)
       - 4-pipeline application system (pitch, programme, speaker, ecosystem — each typed Postgres table with reference numbers + admin status workflow)
       - Double-opt-in newsletter with Resend Contacts API + segment assignment + brand-styled HTML welcome email
       - Admin dashboard with ADMIN_API_KEY-protected batch review + approval/rejection email automation
@@ -523,378 +523,69 @@ projects:
       - 2 original research reports (FemTech Market Map for Greater China 2025-05, FemmeHealth Ventures Alliance 2025-06)
       - Two-generation architectural evolution (Gen-1 Next.js + Notion → Gen-2 Docusaurus + Drizzle/Neon)
     metrics:
-      - { label: "Total commits",              value: "544 (Gen-2 only; Gen-1 was a separate repo with 58 commits)" }
-      - { label: "Solo commits",               value: "529 (97.2%); ~15 from one occasional contributor" }
-      - { label: "Build window",               value: "2025-05-08 → 2026-05-13 (~12 months active development)" }
-      - { label: "Cloudflare Pages Functions", value: "15 endpoints (~3,839 LOC of server-side .js)" }
+      - { label: "Total commits",              value: "564 (Gen-2 only; Gen-1 was a separate repo with 58 commits)" }
+      - { label: "Solo commits",               value: "534 (94.7%); ~30 from one occasional contributor" }
+      - { label: "Build window",               value: "2025-05-08 → 2026-06-26 (~13.5 months active development)" }
+      - { label: "Cloudflare Pages Functions", value: "16 endpoints (~5,373 LOC of server-side .js)" }
       - { label: "Application pipelines",      value: "4 (pitch / programme / speaker / ecosystem) — each typed Postgres table with reference numbers + admin status workflow" }
-      - { label: "Newsletter system",          value: "Resend Contacts API + segment 7ed0369b-… + double-opt-in confirm + brand-styled welcome email" }
+      - { label: "Newsletter system",          value: "Resend Contacts API + contact segment + double-opt-in confirm + brand-styled welcome email" }
       - { label: "Admin endpoints",            value: "3 (admin/applications, admin/batch-review, admin/send-approval — ADMIN_API_KEY-protected)" }
       - { label: "Email automation",           value: "Brand-styled HTML + plain-text (newsletter welcome, approval, rejection) — primary #AA7C52, success #10b981" }
       - { label: "File upload endpoints",      value: "4 (headshot, image, company-overview PDF, pitch-deck) → Cloudinary" }
-      - { label: "Database tables",            value: "3 (pitch_applications + programme_applications + speaker_applications) — ~20 cols each with status / statusUpdatedAt / adminNotes / referenceNumber" }
-      - { label: "SQL migrations",             value: "3 (0000_luxuriant_riptide → 0001_programme_overhaul → 0002_speaker_overhaul)" }
+      - { label: "Database tables",            value: "4 (pitch_applications + programme_applications + speaker_applications + agenda_downloads) — the three application tables carry ~20 cols each with status / statusUpdatedAt / adminNotes / referenceNumber; agenda_downloads is the summit-agenda lead-capture table" }
+      - { label: "SQL migrations",             value: "4 (0000_luxuriant_riptide → 0001_programme_overhaul → 0002_speaker_overhaul → 0003_agenda_downloads)" }
       - { label: "Shanghai Summit homepage",   value: "10 sections (SummitHero / FABGlobeSection / PartnersGrid / SpeakersGrid / AgendaTimeline / WhoShouldAttend / VenueShowcase / WhyDifferent / GlobalEcosystem / SponsorsSection) + SummitCTA" }
       - { label: "Shanghai Summit sub-pages",  value: "3 (programme / pitch / agenda — each with its own hero + form/timeline)" }
-      - { label: "Confirmed speakers (2026-05)", value: "16 — Ida Tin (Clue co-founder, coined 'FemTech' 2016) headlines; Alice Zheng, Dominnique Karetsos, Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike Steinebach, Stella Fu, Peixian Lu, Sandy Lv, Chai Ke 柴可, Chen Jian, Jazmin Seregi, Judy Lux, Abraham Morse, Ira Evdokimova" }
+      - { label: "Confirmed speakers (2026-06)", value: "20 — Ida Tin (Clue co-founder, coined 'FemTech' 2016) headlines; Alice Zheng, Dominnique Karetsos, Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike Steinebach, Stella Fu, Peixian Lu, Sandy Lv, Chai Ke 柴可, Chen Jian, Jazmin Seregi, Abraham (Nick) Morse, Ira Evdokimova, Maryann Selfe, Jonathan Y. Zhao, Rahul Agrawal, Giulia Paggiola, Michael Wang" }
       - { label: "Editorial content directories", value: "3 (blog/ research reports, opinions/ commentary, stories/ founder profiles) — Docusaurus blog plugin instances" }
       - { label: "Bilingual locales",          value: "2 (en + zh-Hans) across every page from day one — not retrofit" }
       - { label: "Image performance pass",     value: "14 images compressed; social-card 6 MB → 240 KB; site image weight reduced ~67% (`19d3e71`)" }
     status: production
     startDate: "2025-05"
     publicSummary: |
-      Solo-built Gen-2 platform (97.2% of 544 commits across ~1 year) for
-      FemTech Weekend, China's first women's-health-technology
-      organisation. Docusaurus 3.9 editorial spine + Drizzle ORM on Neon
-      Postgres + 15 Cloudflare Pages Functions deployed on Cloudflare
-      Pages. Currently powering Shanghai Summit 2026 (June 22-25, Ida Tin
-      headlines, 16 confirmed speakers) with a 10-section summit homepage,
-      3 sub-pages, 4 typed application pipelines (pitch / programme /
-      speaker / ecosystem), a double-opt-in newsletter wired to a Resend
-      segment, an admin dashboard with ADMIN_API_KEY-protected batch
-      review and brand-styled approval/rejection email automation, a
-      Gemini-powered chatbot, and bilingual EN / 简体中文 across every
-      surface. Built CTO-side under founder Zhu Yihan.
+      The website and application system for FemTech Weekend, China's first women's-health-technology community. It carried the community's Shanghai Summit 2026 (June 22–25) with a bilingual English / 简体中文 event site, four online application forms, a newsletter, and a founder-run admin dashboard, all on fast edge hosting for audiences inside and outside China. Built almost single-handed across 564 commits (534 solo) over roughly 13 months.
     narrative:
-      impactHeadline: "Gen-2 platform (Docusaurus, a deliberate rewrite away from Next.js for editorial focus) currently operating Shanghai Summit 2026 with 16 confirmed speakers including FemTech term originator Ida Tin — 97.2% solo on 544 commits, hosting 2 original research reports."
+      impactHeadline: "The bilingual website and sign-up system for FemTech Weekend — China's first women's-health-tech community — which carried Shanghai Summit 2026 and its 20 confirmed speakers, led by Ida Tin, who coined the term FemTech."
       problem: |
-        FemTech Weekend is China's first organisation built specifically
-        around women's-health technology — a community, research outfit,
-        and event producer rolled into one, headquartered in Chengdu,
-        founded 2024 by Zhu Yihan, with a 2-10-person core team. Its
-        remit is to take the international FemTech movement (a category
-        coined in 2016 by Ida Tin, the Clue co-founder who headlines the
-        2026 Shanghai Summit) and ground it in the Greater China
-        market: connect founders, investors, healthcare professionals,
-        and academic researchers across the China-global divide,
-        positioned publicly as the "China representative for
-        cross-border women's-health initiatives." The organisation runs
-        ecosystem partnerships with Bayer and PwC, hosts quarterly
-        updates on China FemTech innovation, collaborates with FemTech
-        Across Borders on international programmes, and publishes
-        original market research (FemTech Market Map for Greater China,
-        FemmeHealth Ventures Alliance reports).
+        FemTech Weekend is China's first community built specifically around women's-health technology — part community, part research outfit, part event producer — headquartered in Chengdu, founded 2024 by Zhu Yihan, with a 2-10-person core team. Its remit is to take the international FemTech movement (a category named in 2016 by Ida Tin, the Clue co-founder who headlines the 2026 Shanghai Summit) and ground it in the Greater China market: connecting founders, investors, healthcare professionals, and researchers across the China-global divide. The community publishes original market research (the FemTech Market Map for Greater China and FemmeHealth Ventures Alliance reports) and runs recurring updates on China FemTech innovation.
 
-        Two website generations have lived inside this 12-month window.
-        Gen-1 (femtechweekend.com, separate repo, 58 commits, 100%
-        solo) was a Next.js 15 + Notion-CMS marketing site. Gen-2 —
-        the entry described here — was a deliberate rewrite, not a
-        refactor, after the organisation's centre of gravity shifted
-        from "marketing site that publishes the occasional report" to
-        "research publication and multi-event hub with deep editorial
-        content," and culminating in the **Shanghai Summit 2026** —
-        a four-day flagship event running June 22-25, 2026 with the
-        theme *Where Global Women's Health Meets China*. The summit
-        requires its own first-class digital infrastructure: a
-        sizeable speaker lineup, multi-track agenda, four distinct
-        application pipelines, an ecosystem partner directory, a
-        sponsor programme, and a press-ready editorial surface — all
-        of it bilingual EN / 简体中文, all of it edge-delivered
-        across the China-global divide, and all of it operable by a
-        non-technical founder when I am not in the loop.
+        Two website generations have lived inside a ~13-month window. Gen-1 (a separate repo, a Next.js + Notion marketing site — external claim: 58 commits, needs registry check) was replaced by a deliberate rewrite, not a refactor, once the community's centre of gravity shifted from "marketing site that publishes the occasional report" to "research-publication and multi-event hub with deep editorial content." That shift culminated in Shanghai Summit 2026 — a four-day flagship event, June 22-25, 2026, themed Where Global Women's Health Meets China. The summit needed its own first-class digital infrastructure: a 20-speaker lineup, an hour-by-hour agenda, four application pipelines, an ecosystem partner directory, a sponsor programme, and a press-ready editorial surface — all bilingual EN / 简体中文, all edge-delivered across the China-global divide, and all operable by a non-technical founder when I am not in the loop.
       audience: |
-        Three concentric audiences. **Founders, investors, and
-        ecosystem operators** in women's-health technology — the
-        people who apply to the programme, pitch competition, speaker
-        pool, or ecosystem directory; subscribe to the newsletter;
-        and read the research reports. They span both Chinese and
-        international markets, so every primary surface ships
-        bilingually. **Shanghai Summit 2026 attendees and prospective
-        attendees** — 16 confirmed speakers including Ida Tin, plus
-        partners (AVPN among them), sponsors across multiple tiers,
-        and a delegate audience drawn from the femtech community
-        globally. **The FemTech Weekend internal team** — primarily
-        founder Zhu Yihan, who edits Notion content directly without
-        developer involvement, and who reviews applications through
-        the ADMIN_API_KEY-protected admin dashboard and approves
-        ecosystem applicants via the brand-styled email automation
-        I built into the platform.
+        Three concentric audiences. Founders, investors, and ecosystem operators in women's-health technology — the people who apply to the programme, pitch competition, speaker pool, or ecosystem directory; subscribe to the newsletter; and read the research reports. They span Chinese and international markets, so every primary surface ships bilingually. Shanghai Summit 2026 attendees and prospective attendees — 20 confirmed speakers including Ida Tin, plus partners (PwC, Bayer, AVPN and others), multi-tier sponsors, and a delegate audience drawn from the global femtech community. The FemTech Weekend internal team — primarily founder Zhu Yihan, who edits Notion content directly without developer involvement and reviews applications through the ADMIN_API_KEY-protected admin dashboard, approving ecosystem applicants via the brand-styled email automation built into the platform.
       productLogic: |
-        The platform is organised around **four parallel surfaces**
-        that the founder operates independently, plus a fifth
-        founder-only surface (the admin backend).
+        The platform is organised around four parallel surfaces the founder operates independently, plus a fifth founder-only surface (the admin backend).
 
-        **Surface 1 — the editorial spine.** Docusaurus 3.9 with three
-        blog-plugin instances: `blog/` (research reports, currently
-        2 published — FemTech Market Map for Greater China 2025-05,
-        and the FemmeHealth Ventures Alliance partnership 2025-06),
-        `opinions/` (industry commentary), and `stories/` (founder
-        profiles). Each surface has its own authors and tags. The
-        choice of Docusaurus over keeping Next.js was deliberate: for
-        a research-publication-plus-event hub, the gain in
-        MDX-native editorial ergonomics outweighed the loss of
-        Next.js's rendering flexibility.
+        Surface 1 — the editorial spine. Docusaurus 3.9 with three blog-plugin instances: blog/ (research reports, currently 2 published — FemTech Market Map for Greater China 2025-05, and FemmeHealth Ventures Alliance 2025-06), opinions/ (commentary), and stories/ (founder profiles). Choosing Docusaurus over keeping Next.js was deliberate: for a research-publication-plus-event hub, the gain in MDX-native editorial ergonomics outweighed the loss of Next.js's rendering flexibility.
 
-        **Surface 2 — the Shanghai Summit 2026 event site.** A 10-
-        section homepage at `/shanghai-summit/` composed of
-        SummitHero → FABGlobeSection → PartnersGrid → SpeakersGrid →
-        AgendaTimeline → WhoShouldAttend → VenueShowcase → WhyDifferent →
-        GlobalEcosystem → SponsorsSection, with SummitCTA bookending
-        the page. Three sub-pages: `/shanghai-summit/programme` (8-week
-        leadership-development programme application), `/shanghai-
-        summit/pitch` (pitch-competition application with deck upload),
-        and `/shanghai-summit/agenda` (hour-by-hour DetailedAgendaDay
-        timeline across the four event days). Speaker data lives in a
-        typed `src/data/shanghai-summit.ts` module so non-technical
-        edits go through a single source of truth.
+        Surface 2 — the Shanghai Summit 2026 event site. A 10-section homepage at /shanghai-summit/ (SummitHero → FABGlobeSection → PartnersGrid → SpeakersGrid → AgendaTimeline → WhoShouldAttend → VenueShowcase → WhyDifferent → GlobalEcosystem → SponsorsSection, bookended by SummitCTA), with the venue set to the Qiantan Center, Shanghai. Sub-pages cover the programme application, the pitch-competition application (with deck upload), and an hour-by-hour agenda; the full agenda now sits behind a lead-capture modal that records interest to its own table. Speaker data lives in a typed src/data/shanghai-summit.ts module (20 confirmed speakers) so non-technical edits go through a single source of truth.
 
-        **Surface 3 — the four application pipelines.** Each pipeline
-        is a typed Drizzle table on Neon Postgres with its own
-        Cloudflare Pages Function endpoint:
+        Surface 3 — the four application pipelines. Each is a typed Drizzle table on Neon Postgres with its own Cloudflare Pages Function: pitch_applications, programme_applications (including the China-engagement fields — china_objectives, china_relevance, china_concerns, etc.), speaker_applications, and ecosystem submissions handled inline. Every submission gets a reference_number, defaults to status: 'submitted', and is reviewable in the admin dashboard. PDFs (pitch decks, company overviews) and headshots upload to Cloudinary through four dedicated upload-* endpoints, keeping object storage detached from Postgres row size.
 
-          - **pitch_applications** (~18 cols incl. company_name,
-            company_website, role_title, company_type, health_focus,
-            work_areas, business_model, annual_revenue,
-            pitch_deck_url, market_served, status, status_updated_at,
-            admin_notes, reference_number)
-          - **programme_applications** (~22 cols including the
-            China-engagement nuances: china_objectives,
-            target_customer, china_relevance, china_engagement,
-            china_concerns, worthwhile_outcome, consent_data)
-          - **speaker_applications** (~16 cols including headshot_url,
-            bio, speaking_topics, session_format, interested_events,
-            previous_experience)
-          - **ecosystem submissions** (handled inline through
-            `submit-ecosystem.js`)
-
-        Every submission gets a `reference_number`, defaults to
-        `status: 'submitted'`, and is reviewable in the admin
-        dashboard. **PDFs (pitch decks, company overviews) and images
-        (headshots) upload to Cloudinary** through four dedicated
-        `upload-*.js` endpoints — keeping object storage cost
-        predictable and detached from Postgres row size.
-
-        **Surface 4 — the newsletter system.** `subscribe-newsletter.js`
-        creates a contact in Resend via the Contacts API with
-        explicit segment assignment (segment ID
-        `7ed0369b-5209-4a19-a99b-1decde318083`), handling the 409
-        "contact already exists" path by falling back to the
-        contact-to-segment join endpoint. The endpoint then sends a
-        brand-styled HTML welcome email (primary `#AA7C52`, paired
-        with a plain-text fallback for accessibility) explaining what
-        the subscriber will receive — research, ecosystem updates,
-        event invitations, exclusive resources. **A second endpoint
-        `/api/confirm-subscription` handles the double-opt-in
-        confirmation flow** so subscribers explicitly verify intent
-        before getting added to the active segment. All emails carry
-        XSS-escaped subscriber identity, an unsubscribe foothold, and
-        the canonical from-address `noreply@femtechweekend.com` (or
-        whichever address `RESEND_FROM_EMAIL` resolves to in the
-        Cloudflare environment binding).
-
-        **Surface 5 — the admin backend.** `src/pages/admin/
-        applications.tsx` is the founder-facing dashboard, backed by
-        three protected Cloudflare Pages Functions:
-        `admin/applications.js` (list/filter all four pipelines),
-        `admin/batch-review.js` (batch status updates), and
-        `admin/send-approval.js` (sends a brand-styled
-        approval-or-rejection email — success-green `#10b981`
-        gradient for approvals; the email template enumerates what
-        the ecosystem member now gets: directory listing, exclusive
-        networking events, early access to research reports,
-        investor introductions). **All admin endpoints check
-        `X-Admin-Key` against the `ADMIN_API_KEY` environment binding
-        before any database mutation.** XSS-escaping is enforced on
-        every interpolated field of the email templates as a
-        defensive default.
-
-        Two cross-cutting capabilities: **a Gemini-powered chatbot**
-        (`/api/chat-stream` over `@google/generative-ai`) for visitor
-        Q&A about the organisation and summit, and **an interactive
-        2D world-map** built with `earth-flyline` carrying the
-        visual weight of the summit's "global meets China" thesis
-        on the front page, with count-up statistics rendered
-        responsively across screen sizes and theming-aware
-        light/dark mode.
+        Surface 4 — the newsletter system. subscribe-newsletter.js creates a Resend contact with explicit segment assignment, handling the "contact already exists" path via the contact-to-segment join endpoint, then sends a brand-styled HTML welcome email (with a plain-text fallback for accessibility). A second endpoint, confirm-subscription.js, runs the double-opt-in flow so subscribers verify intent before joining the active segment.
       businessLogic: |
-        FemTech Weekend is a private organisation; revenue and
-        sustainability flow through three channels that the platform
-        directly operationalises: **(1) ecosystem partnerships**
-        (Bayer, PwC, AVPN, FemTech Across Borders) where the
-        platform's directory listing + visibility is part of the
-        partner offer; **(2) the Shanghai Summit 2026 itself** —
-        ticketed delegate access plus a multi-tier sponsor programme
-        where the platform's homepage SponsorsSection + dedicated
-        sponsor logos are part of the sponsor deliverable; and
-        **(3) research-report distribution + thought leadership** —
-        the published reports (FemTech Market Map for Greater China,
-        FemmeHealth Ventures Alliance) function as lead-generation
-        artefacts that feed the ecosystem and newsletter pipelines.
+        FemTech Weekend is a private community organisation; its sustainability flows through three channels the platform directly operationalises: (1) ecosystem partnerships (PwC, Bayer, AVPN and others), where the platform's directory listing and visibility are part of the partner offer; (2) the Shanghai Summit 2026 itself — a delegate and multi-tier sponsor programme, where the homepage SponsorsSection and dedicated sponsor placements are part of the sponsor deliverable; and (3) research-report distribution and thought leadership — the published reports (FemTech Market Map for Greater China, FemmeHealth Ventures Alliance) act as lead-generation artefacts feeding the ecosystem and newsletter pipelines.
 
-        The platform's job in this economy is to be the
-        **trust-signal-bearing public surface** that lets a Western
-        founder, a Chinese investor, a corporate partner, or a
-        prospective speaker take the organisation seriously inside
-        15 seconds of arrival — and the **operational substrate** that
-        lets the 2-10-person core team triage applications, publish
-        editorial, and run the summit without scaling headcount.
-        Every architectural choice on Gen-2 is downstream of those
-        two demands.
+        The platform's job in this economy is to be the trust-signal-bearing public surface that lets a Western founder, a Chinese investor, a corporate partner, or a prospective speaker take the organisation seriously within seconds of arrival — and the operational substrate that lets the 2-10-person core team triage applications, publish editorial, and run the summit without scaling headcount. Every architectural choice on Gen-2 is downstream of those two demands.
       technicalApproach: |
-        **Docusaurus 3.9 as editorial spine, Drizzle/Neon for typed
-        application data, Cloudflare Pages Functions for the entire
-        server side.** No Node backend, no container, no separate
-        admin app — the whole platform is one Docusaurus site with
-        15 colocated `functions/api/*.js` Pages Functions handling
-        every server-side concern.
+        Docusaurus 3.9 as editorial spine, Drizzle/Neon for typed application data, Cloudflare Pages Functions for the entire server side. No Node backend, no container, no separate admin app — the whole platform is one Docusaurus site with colocated Pages Functions handling every server-side concern.
 
-        **15 Cloudflare Pages Functions, ~3,839 LOC of server-side
-        JavaScript**, organised by intent:
+        16 Cloudflare Pages Functions, ~5,373 LOC of server-side JavaScript, organised by intent: 4 application submitters (submit-programme/-speaker/-pitch/-ecosystem.js), 2 newsletter endpoints (subscribe-newsletter.js, confirm-subscription.js — Resend Contacts API, segment assignment, 409-conflict fallback, double-opt-in), 4 Cloudinary uploaders (upload-headshot/-image/-company-overview/-pitch-deck.js), 3 admin endpoints (admin/applications.js, admin/batch-review.js, admin/send-approval.js — each checks X-Admin-Key against ADMIN_API_KEY before any DB write), 1 Gemini chatbot (chat-stream.js), 1 PDF intake (pdf-form-submit.js), and 1 agenda lead-capture (submit-agenda-download.js).
 
-          - **4 application submitters**: `submit-programme.js`,
-            `submit-speaker.js`, `submit-pitch.js`,
-            `submit-ecosystem.js` — each validates input, persists to
-            its typed Drizzle table, assigns a reference number, and
-            triggers a confirmation email.
-          - **2 newsletter endpoints**: `subscribe-newsletter.js` and
-            `confirm-subscription.js` — Resend Contacts API with
-            explicit segment assignment, 409-conflict fallback to
-            contact-to-segment join, double-opt-in confirmation,
-            brand-styled welcome email.
-          - **4 Cloudinary uploaders**: `upload-headshot.js`,
-            `upload-image.js`, `upload-company-overview.js`,
-            `upload-pitch-deck.js` — each enforces accepted MIME types
-            and produces a Cloudinary public URL written back to the
-            corresponding Postgres row.
-          - **3 admin endpoints**: `admin/applications.js` (filtered
-            list), `admin/batch-review.js` (bulk status updates),
-            `admin/send-approval.js` (approval / rejection email
-            sender) — every one checks `X-Admin-Key` against
-            `ADMIN_API_KEY` env binding before touching the DB.
-          - **1 chatbot**: `chat-stream.js` over
-            `@google/generative-ai` (Gemini), streamed response.
-          - **1 PDF intake**: `pdf-form-submit.js`.
+        Drizzle schema, 4 tables, 4 migrations: 0000_luxuriant_riptide → 0001_programme_overhaul (China-engagement column family) → 0002_speaker_overhaul → 0003_agenda_downloads (summit-agenda lead capture). Tables share a common pattern: identifying fields → typed domain fields → uploaded asset URLs → admin lifecycle (status defaulting to 'submitted', status_updated_at, admin_notes, reference_number), created_at via defaultNow(). Schema at src/db/schema.ts.
 
-        **Drizzle schema, 3 tables, ~3 migrations**:
-        `0000_luxuriant_riptide` (initial pitch + programme +
-        speaker tables) → `0001_programme_overhaul` (programme-form
-        restructure including the China-engagement column family) →
-        `0002_speaker_overhaul` (speaker-form refinement). All
-        tables share a common pattern: identifying fields → typed
-        domain fields → uploaded asset URLs → admin lifecycle
-        (`status` defaulting to `'submitted'`, `status_updated_at`,
-        `admin_notes`, `reference_number`), with `created_at`
-        defaulted via Drizzle's `defaultNow()`. Schema lives at
-        `src/db/schema.ts` (81 lines); CLI access via `drizzle-kit
-        0.31` (`drizzle.config.ts`).
+        Email automation discipline. Every transactional template is hand-authored HTML plus a plain-text twin, brand colours baked in, table-based layout that renders cleanly in Outlook and Gmail. Every interpolated string passes through an escapeHtml helper before reaching the template. Resend is called over its REST API directly (no SDK), so the same code runs unchanged on the Cloudflare Workers runtime.
 
-        **Email automation discipline.** Every transactional template
-        is hand-authored HTML + plain-text twin, with brand colours
-        baked in (`#AA7C52` primary, `#996F49` dark, `#10b981`
-        success, `#ef4444` error) and a consistent header / body /
-        footer table-based layout that renders cleanly in Outlook
-        and Gmail's quirkier modes. Every interpolated string passes
-        through an `escapeHtml(str)` helper before reaching the
-        template — a defensive default against any future
-        admin-input contamination. Resend REST API is called
-        directly (no SDK), so the same code runs unchanged on the
-        Cloudflare Workers runtime.
-
-        **Notion-as-CMS for editorial content** in both generations
-        — articles, ecosystem profiles, event reports edit directly
-        inside Notion and render live. Implemented in Gen-2 with
-        the modern `@notionhq/client v3` SDK pulling structured
-        content into Docusaurus pages. This is the single most
-        important UX decision in the system: it removes me from the
-        publishing critical path and gives the founder full
-        editorial control without needing to learn markdown or any
-        custom CMS.
-
-        **Bilingual everything, from day one.** Both generations
-        ship in EN and 简体中文 — not as an afterthought, but as a
-        first-class architectural constraint that shapes routing,
-        content models, speaker data structures, agenda time-zone
-        rendering, and editorial copy. Docusaurus's native i18n
-        plugin handles the routing; the Gen-2 content layer is
-        built so that every speaker, partner, agenda block, and
-        editorial piece has parallel locales rather than fall-
-        through defaults.
-
-        **Image performance discipline.** The summit content is
-        image-heavy (speaker headshots, venue photography, partner
-        logos), so I ran a deliberate pass (commit `19d3e71`,
-        2026-05-12) that compressed and optimised 14 large images
-        and shrank the social-card image from 6 MB to 240 KB —
-        overall reducing site image weight by roughly 67% without
-        losing visual fidelity. TypeScript checks (`tsc --noEmit`)
-        plus Docusaurus's build warnings treated as errors form the
-        CI safety net.
-
-        **Cloudflare Pages + Wrangler 4.0** for global edge
-        delivery. Local dev composes `docusaurus start` with
-        `wrangler pages dev build --port 3001` via `concurrently`
-        so functions are testable against the same edge runtime
-        they'll run on in production. Node 22.x pinned in
-        `engines`. Drizzle migrations applied via `drizzle-kit
-        push` against the Neon serverless connection.
+        Notion-as-CMS for editorial content in both generations — articles, ecosystem profiles, and event reports are edited directly in Notion via @notionhq/client v3 and render live, removing the developer from the publishing critical path. Bilingual everything from day one — EN and 简体中文 as a first-class constraint shaping routing, content models, speaker data, and agenda rendering. Image performance discipline — a deliberate pass compressed 14 large images and shrank the social-card image from 6 MB to 240 KB, reducing site image weight ~67%. Cloudflare Pages + Wrangler 4.0 for global edge delivery; local dev composes docusaurus start with wrangler pages dev so functions run against the same edge runtime as production; Node 22.x pinned in engines.
       outcomes: |
-        Production-deployed at femtechweekend.com and operating the
-        full organisational pipeline (ecosystem applications,
-        newsletter, summit registration, research distribution)
-        across both EN and 简体中文 audiences. **544 commits, 529
-        (97.2%) authored solo by Chan Meng** across ~12 months
-        (2025-05-08 → 2026-05-13). **Shanghai Summit 2026 launches
-        June 22-25, 2026** with the platform as its sole
-        operational substrate.
+        Production-deployed at femtechweekend.com and operating the full organisational pipeline (ecosystem applications, newsletter, summit forms, research distribution) across both EN and 简体中文 audiences. 564 commits, 534 (94.7%) authored solo across ~13 months (2025-05-08 → 2026-06-26). Shanghai Summit 2026 ran June 22–25, 2026 with the platform as its sole operational substrate.
 
-        Recent commit cadence shows the platform is in active
-        delivery, not maintenance: the last week of recorded
-        activity alone includes speaker-lineup rotation (`6b0b780`,
-        rotating the speaker grid and refreshing Ida Tin's title),
-        sponsor-tier restructuring (`6f33496`), the image-weight
-        67%-reduction pass (`19d3e71`), and an ongoing speaker-card
-        and modal refinement series — all of it solo, all of it on
-        a live site marketing a flagship event two months out.
+        Commit cadence shows active delivery, not maintenance: recent work includes growing the confirmed lineup to 20 speakers, setting the venue to Shanghai's Qiantan Center, building the gated "download full agenda" lead-capture flow (new endpoint + agenda_downloads table), and rebuilding the social/OG card — all solo, on a live site marketing a flagship event.
 
-        The platform demonstrates a design call worth flagging:
-        **Generation 2 was a deliberate rewrite, not a refactor**.
-        I admitted that the centre of gravity had shifted from
-        "marketing site that publishes the occasional report" to
-        "research-publication and multi-event hub with deep
-        editorial content," and rebuilt on Docusaurus 3.9 — not
-        the default choice for a brand website, but the right one
-        for an editorial platform whose long-term value lives in
-        its market research, opinion pieces, founder stories, and
-        event archives. The Gen-1 → Gen-2 cutover happened
-        without losing institutional knowledge and is now the
-        primary public-facing surface for the organisation.
-
-        Two original research reports have been published through
-        the platform: **FemTech Market Map for Greater China**
-        (2025-05) and the **FemmeHealth Ventures Alliance**
-        partnership announcement (2025-06). Both function as
-        lead-generation artefacts feeding the ecosystem and
-        newsletter pipelines, and as thought-leadership
-        positioning for the organisation in both Chinese and
-        international markets.
+        The platform demonstrates a design call worth flagging: Generation 2 was a deliberate rewrite, not a refactor. As the centre of gravity shifted from "marketing site" to "research-publication and multi-event hub," it was rebuilt on Docusaurus 3.9 — not the default choice for a brand website, but the right one for an editorial platform whose long-term value lives in its market research, opinion pieces, founder stories, and event archives. Two original research reports have been published through it — FemTech Market Map for Greater China (2025-05) and the FemmeHealth Ventures Alliance partnership announcement (2025-06) — both functioning as lead-generation artefacts and thought-leadership positioning in Chinese and international markets.
       myRole: |
-        Chief Technology Officer, hired 2025-03 by founder Zhu
-        Yihan with full ownership of every digital surface the
-        organisation operates. Solo engineering team (with one
-        occasional contributor of ~15 commits out of 544).
-        End-to-end authority over architecture, vendor choice,
-        deployment infrastructure, content management workflow,
-        application and subscription pipelines, and the live
-        digital infrastructure for the Shanghai Summit 2026.
+        I am Chief Technology Officer, hired 2025-03 by founder Zhu Yihan (hire date is a career fact, not repo-verifiable), with full ownership of every digital surface the organisation operates. I run a solo engineering team, with one occasional contributor accounting for ~30 of 564 commits. I hold end-to-end authority over architecture, vendor choice, deployment infrastructure, content-management workflow, application and subscription pipelines, and the live infrastructure for Shanghai Summit 2026.
 
-        Specifically: designed and built both website generations
-        from scratch (Gen-1 Next.js + Notion at 100% solo across
-        58 commits in a separate repo; Gen-2 — this entry — at
-        97.2% solo across 544 commits over ~12 months). Wrote the
-        entire Drizzle schema, every migration, all 15 Cloudflare
-        Pages Functions, every email template (HTML + plain-text
-        twins, brand-coloured, XSS-defended), the admin dashboard,
-        the four application-pipeline forms, the Shanghai Summit
-        10-section homepage + 3 sub-pages, the Notion-as-CMS
-        integration, the bilingual EN/简体中文 routing + content
-        layer, the Gemini chatbot integration, the earth-flyline
-        global-network visualisation, and the image-performance
-        optimisation pass. Operate the production Cloudflare
-        Pages deployment and every speaker-lineup / sponsor / agenda
-        update directly on `main`. Reporting line: directly to
-        founder Zhu Yihan; collaboration with the broader 2-10-
-        person core team on editorial calendar, summit programming,
-        and ecosystem partnerships.
+        Specifically: I designed and built both website generations from scratch (Gen-1 Next.js + Notion — external claim: 100% solo across 58 commits in a separate repo, needs registry check; Gen-2 — this entry — at 94.7% solo across 564 commits over ~13 months). I wrote the entire Drizzle schema, every migration, all 16 Cloudflare Pages Functions, every email template (HTML + plain-text twins, brand-coloured, XSS-defended), the admin dashboard, the four application-pipeline forms, the Shanghai Summit 10-section homepage plus sub-pages and gated agenda, the Notion-as-CMS integration, the bilingual EN / 简体中文 routing and content layer, the Gemini chatbot, the earth-flyline global-network visualisation, and the image-performance pass. I operate the production Cloudflare Pages deployment and make every speaker / sponsor / agenda update directly on main, reporting to founder Zhu Yihan and collaborating with the 2-10-person core team on editorial calendar, summit programming, and ecosystem partnerships.
 
   - id: eatropolis-website
     provenance: client
@@ -903,7 +594,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, opennext, cloudflare-workers, react, typescript]
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-07-17"
     name: Eatropolis Website — Production-grade Next.js 16 + OpenNext-on-Cloudflare-Workers event platform for Auckland's award-winning culinary festival (2026-10-10, Shed 10)
     priority: 18
     category: web-apps
@@ -948,7 +639,7 @@ projects:
       - "Wrangler 4.88 (deploy + local preview)"
       - "Drizzle ORM 0.45 + drizzle-kit 0.31 (2 SQL migrations + 4-namespace schema split: chat / email / forms / index)"
       - "Neon serverless Postgres (@neondatabase/serverless 1.1)"
-      - "MDX (@next/mdx + @mdx-js/loader + remark-frontmatter + gray-matter) — 43 MDX + 16 JSON content files"
+      - "MDX (@next/mdx + @mdx-js/loader + remark-frontmatter + gray-matter) — 40 MDX + 16 JSON content files"
       - "Zod 4.4 (validates every MDX frontmatter + JSON page-chrome blob at build time)"
       - "Resend 6 + @react-email/components 1.0 + @react-email/render 2.0 (7 hand-authored React Email templates)"
       - "Vercel AI SDK 6 (@ai-sdk/openai 3 + @ai-sdk/react 3 + ai 6, provider-abstracted via lib/ai-provider.ts)"
@@ -957,7 +648,7 @@ projects:
       - "Cloudflare KV (EATROPOLIS_CHAT_KV per-IP rate limit + session cookie)"
       - "Svix 1.93 (Resend webhook signature verification)"
       - "Framer Motion 12.38"
-      - "Ticketmaster Discovery API (ISR cache 1h, server-only key, UTM-tagged outbound)"
+      - "Universe (Ticketmaster company) ticketing link-out (UTM-tagged outbound; on-site Discovery API integration removed)"
       - "Cloudflare Zero Trust Access (3 self-hosted apps: pre-launch lockdown + webhook bypass + newsletter bypass)"
       - "Cloudflare Web Analytics + Google Analytics 4 (manual JS-snippet mode behind cookie consent)"
       - "Playwright 1.59 + @axe-core/playwright 4.11 (39/39 axe tests pass; mobile-nav + target-size + a11y suites)"
@@ -972,12 +663,12 @@ projects:
       - Tātaki Auckland Unlimited (TAU) review gates before each launch phase
       - OpenNext for Cloudflare Workers (official 2026 path, not legacy Pages adapter)
       - GitHub-as-CMS (✏️ Web-Editor links per editable field; rejected Excel/Sheets matrix)
-      - MDX + JSON content layer (43 MDX + 16 page-chrome JSON, Zod-validated at build time)
+      - MDX + JSON content layer (40 MDX + 16 page-chrome JSON, Zod-validated at build time)
       - DKIM + SPF + DMARC live, mail-tester 10/10, brand-styled React Email templates
       - Streaming AI chat with voice (Whisper transcribe + TTS) behind Turnstile + KV per-IP rate limit
       - Cookie consent gate (NZ Privacy Act 2020) before GA4 + CF Web Analytics snippets inject
-      - Ticketmaster Discovery API with 1-hour ISR cache + UTM-tagged outbound
-      - Two-tier flat ticketing structure (general admission + family bundle; workshops included)
+      - Off-site ticketing via Universe (Ticketmaster company) link-out with UTM-tagged outbound
+      - Two-tier flat ticketing structure (general admission + family bundle)
       - Brand hierarchy Black / Red / White (harbour blue strictly subtle decorative accent)
       - 3 Cloudflare Zero Trust Access apps (pre-launch lockdown + webhook bypass + newsletter bypass)
       - Client-owned infrastructure (Cloudflare account, GitHub org, Resend, OpenAI all owned by Chow Luck Club)
@@ -985,512 +676,89 @@ projects:
       - { label: "Engagement type",          value: "Signed commercial commission, three-stage delivery schedule (Phase 1 internal delivery + Phase 2 internal delivery + final acceptance)" }
       - { label: "Build span",                value: "2026-05-07 → 2026-05-15 (9-day intensive delivery per contract §5)" }
       - { label: "Phase 1 public launch",     value: "2026-05-22 (teaser landing page with newsletter capture)" }
-      - { label: "Phase 2 public launch",     value: "2026-06-05 (full site + Ticketmaster integration + workshop RSVPs)" }
+      - { label: "Phase 2 public launch",     value: "2026-06-05 (full site went public)" }
       - { label: "Event day",                 value: "2026-10-10 at Shed 10, Queens Wharf, Tāmaki Makaurau" }
       - { label: "Free maintenance window",   value: "5 June 2026 → 5 September 2026 (hard expiry per contract §15.1)" }
-      - { label: "Total commits",             value: "115 (solo; private client-org repo at github.com/Chow-Luck-Club/eatropolis-website)" }
-      - { label: "Production routes",         value: "68 prerendered (per eleventh-pass STATUS doc 2026-05-12; up from 62 in ninth pass)" }
-      - { label: "API routes",                value: "10 (chat + chat/feedback + contact + newsletter + partnership + transcribe + tts + unsubscribe + webhooks/resend + workshop-rsvp)" }
-      - { label: "Pages (page.tsx files)",    value: "13 marketing pages" }
-      - { label: "React components",          value: "58 (.tsx) across 14 namespaces (analytics, cards, chat, consent, dishes, faq, forms, hero, legal, mdx, motion, nav, tickets, ui)" }
-      - { label: "Content files",             value: "43 MDX (dishes/workshops/faqs/partners/sponsors/site) + 16 JSON (page-chrome) = 59 total" }
-      - { label: "React Email templates",     value: "7 (ContactAcknowledgment, ContactAdminNotice, PartnershipAcknowledgment, PartnershipAdminNotice, UnsubscribeConfirmation, WelcomeNewsletter, WorkshopRsvpConfirmation)" }
+      - { label: "Total commits",             value: "115 (solo; in the client's private organisation repository)" }
+      - { label: "API routes",                value: "9 (chat + chat/feedback + contact + newsletter + partnership + transcribe + tts + unsubscribe + webhooks/resend)" }
+      - { label: "Pages (page.tsx files)",    value: "11 marketing pages" }
+      - { label: "React components",          value: "57 (.tsx) across 14 namespaces (analytics, cards, chat, consent, dishes, faq, forms, hero, legal, mdx, motion, nav, tickets, ui)" }
+      - { label: "Content files",             value: "40 MDX (dishes/faqs/partners/sponsors/site) + 16 JSON (page-chrome) = 56 total" }
+      - { label: "React Email templates",     value: "7 (ContactAcknowledgment, ContactAdminNotice, PartnershipAcknowledgment, PartnershipAdminNotice, UnsubscribeConfirmation, WelcomeNewsletter, LaunchAnnouncement)" }
       - { label: "Drizzle schema namespaces", value: "4 (chat / email / forms / index) with 4 repositories (chat / email-events / forms / subscribers)" }
       - { label: "SQL migrations",            value: "2 (0000_elite_molecule_man + 0001_green_hex — the second a partial-index ON CONFLICT mismatch hotfix)" }
       - { label: "Lighthouse Mobile target",  value: "≥ 90 per contract §3.8; achieved 71 → 84 Performance via font-weight trim + lazy-mount AIAssistant + deferred hero video sources" }
       - { label: "Accessibility verification", value: "39/39 axe-core Playwright tests pass; WAI-ARIA APG NavDropdown menu keyboard pattern; conformance statement per WCAG 2.2 AA contract §3.10" }
       - { label: "Email deliverability",      value: "mail-tester 10/10 — SPF + DKIM + DMARC all live on eatropolis.co.nz; Gmail.email-delivered webhook round-trip 5.96s end-to-end" }
-      - { label: "Load testing",              value: "k6 to 1,000 concurrent VUs per contract §3.8 (full profile pending Phase 2 Access disable on 2026-06-05)" }
+      - { label: "Load testing",              value: "k6 to 1,000 concurrent VUs per contract §3.8 — passed with 0.00% error rate over 113,320 requests in five minutes" }
       - { label: "Deploy pipeline",           value: "GitHub Actions push-to-main → opennextjs-cloudflare build + deploy, ~55-70s end-to-end" }
-      - { label: "Cloudflare Zero Trust apps", value: "3 self-hosted Access apps (pre-launch lockdown `e1ff6f56-…`, webhook bypass, newsletter bypass `96232ff1-…`); newsletter bypass uses 5/5 hostname destination slots (platform limit)" }
+      - { label: "Cloudflare Zero Trust apps", value: "3 self-hosted Access apps (pre-launch lockdown + webhook bypass + newsletter bypass); newsletter bypass used 5/5 hostname destination slots (platform limit)" }
     status: production
     startDate: "2026-05"
     publicSummary: |
-      Production-grade event website for Eatropolis — Auckland's
-      one-day culinary festival (2026-10-10, Shed 10, 30+ award-
-      winning chefs) — solo-built under signed freelance contract
-      with Chow Luck Club Ltd. Next.js 16.2 + React 19.2 +
-      Tailwind 4, deployed to Cloudflare Workers via the official
-      OpenNext 2026 path. Engineered to the contract's
-      production-grade requirements: 1,000-concurrent-visitor k6 load
-      tested, NZ Government Web Accessibility Standard 1.2 (WCAG 2.2
-      AA) conformance with TAU review gates, mail-tester 10/10 Resend
-      pipeline, streaming OpenAI chat with Whisper + TTS voice behind
-      Cloudflare Turnstile + KV rate-limiting, GA4 + Web Analytics
-      behind a NZ Privacy Act cookie consent gate, ISR-cached
-      Ticketmaster Discovery API integration, and a GitHub-as-CMS
-      content workflow with ✏️ Web-Editor links so the non-technical
-      client edits all MDX + JSON in-browser. Two-phase visibility
-      reveal on one coherent build (Phase 1 teaser 2026-05-22 → Phase
-      2 full site 2026-06-05).
+      The live public website for Eatropolis — Auckland's one-day culinary festival on 10 October 2026 at Shed 10, featuring 30+ award-winning chefs — solo-built under a signed freelance contract with Chow Luck Club Ltd. It runs on Next.js and Cloudflare's edge network, meets the NZ Government's WCAG 2.2 AA accessibility standard, and includes a voice-enabled AI guide that answers visitor questions about dishes, tickets, and getting there. It launched publicly in June 2026 after passing a 1,000-visitor load test with zero errors, and the non-technical client now edits all site content themselves.
     narrative:
-      impactHeadline: "Auckland Eatropolis festival (30+ chefs, Shed 10) — signed commission with Tātaki Auckland Unlimited (Council Events) review gates, WCAG 2.2 AA, streaming OpenAI chat + voice assistant, and 1,000-visitor load test; solo-built in 9 days."
+      impactHeadline: "The live website for Eatropolis, Auckland's one-day food festival — 30+ award-winning chefs at Shed 10 on 10 Oct 2026. Solo-built in a 9-day sprint: an accessible (WCAG 2.2 AA) site with a voice-enabled AI event guide that passed a 1,000-visitor load test with zero errors."
       problem: |
-        Auckland-based **Chow Luck Club Ltd** — production partner
-        for the **Eatropolis** culinary festival, supported by
-        **Tātaki Auckland Unlimited on behalf of Auckland Council
-        Events** — commissioned a production-grade event website for
-        the one-day festival on **2026-10-10 at Shed 10, Queens
-        Wharf, Tāmaki Makaurau** featuring **30+ award-winning
-        chefs**. The brief, formalised in a signed 4 May 2026
-        commercial agreement, demanded a real public
-        product: a custom-designed brand site at `eatropolis.co.nz`
-        with a two-phase public reveal (Phase 1 teaser 2026-05-22,
-        Phase 2 full site 2026-06-05), accessibility conformance to
-        the **NZ Government Web Accessibility Standard 1.2 (WCAG 2.2
-        Level AA)** with TAU review gates before each launch, load-
-        testing to **1,000 concurrent visitors**, Lighthouse Mobile
-        ≥ 90 across all categories, SEO + GEO discoverability
-        (sitemap, robots, JSON-LD Event + FAQPage, llms.txt), full
-        forms infrastructure with branded transactional email, a
-        conditional AI chat assistant, GA4 + privacy-friendly
-        analytics, and a content-edit workflow the non-technical
-        client could operate independently after handoff — all
-        delivered solo by a single freelance developer in nine
-        working days, with three months of post-launch maintenance
-        bundled into the fee.
+        Auckland-based Chow Luck Club Ltd — producer of the Eatropolis culinary festival, supported by Tātaki Auckland Unlimited on behalf of Auckland Council Events — needed a real, production-grade public website for its one-day festival on 2026-10-10 at Shed 10, Queens Wharf, Auckland, featuring 30+ award-winning chefs. The brief, set in a signed 4 May 2026 commercial agreement, called for a custom-designed site at eatropolis.co.nz released in two visibility phases (a teaser landing first, then the full site), conformance to the NZ Government Web Accessibility Standard 1.2 (WCAG 2.2 Level AA) with Tātaki Auckland Unlimited review gates before each launch, load-testing to 1,000 concurrent visitors, strong mobile performance, SEO plus AI-crawler discoverability, full contact and enquiry forms with branded email, an AI event assistant, privacy-compliant analytics, and — critically — a way for the non-technical client to edit every word on the site themselves after handoff. All delivered solo by one freelance developer in nine working days, with three months of post-launch maintenance included.
       audience: |
-        Three concentric audiences. **Festival attendees** —
-        public visitors arriving via search, social, or partner
-        sites; mobile-first; high traffic spikes around ticket-
-        release and event-day windows. **The Eatropolis ecosystem**
-        — 30+ culinary partners with chefs and award-winning
-        dishes, workshop hosts, multi-tier sponsors (Principal /
-        Al Fresco / Associate / Community), ticketing partner,
-        media coverage — each with editorial surfaces on the site
-        that they review before launch. **The Chow Luck Club
-        internal team + TAU reviewers** — non-developer client
-        signatory Bee Keng Koh, day-to-day PM Armand Bentigan, and
-        the Tātaki Auckland Unlimited review committee that gates
-        each public launch on accessibility + content compliance.
-        The content-edit workflow is built around the assumption
-        that none of these reviewers will ever touch a terminal:
-        every editable field is reachable through GitHub's browser
-        Web Editor via a single `✏️` link.
+        Three concentric audiences. Festival-goers — the public, arriving from search, social, and partner sites; mobile-first; with traffic spikes around ticket release and event day. The Eatropolis ecosystem — 30+ culinary partners and their award-winning dishes, plus multi-tier sponsors (Principal / Al Fresco / Associate / Community), the ticketing partner, and media — each with pages on the site they review before launch. The Chow Luck Club team and Tātaki Auckland Unlimited reviewers — the non-developer client signatory Bee Keng Koh, day-to-day project manager Armand Bentigan, and the review committee that gates each public launch on accessibility and content. The content-editing workflow assumes none of these reviewers will ever open a terminal: every editable field is reachable through a single ✏️ link into GitHub's browser-based editor. After launch, the client took this up in practice — making a dozen of their own content edits this way.
       productLogic: |
-        The product is structured as **one coherent build with a
-        two-phase visibility schedule**, not two separate websites.
-        The same Cloudflare Worker serves both phases; what changes
-        is which routes return content vs. a holding page.
+        The product is one website with a two-phase visibility schedule, not two separate builds. The same Cloudflare edge worker serves both phases; what changes is which pages are publicly reachable.
 
-        **Phase 1 (2026-05-22):** only `/coming-soon` is publicly
-        reachable. It carries the "Something Big is Cooking" teaser,
-        partner attribution, key event statistics, and a newsletter
-        email-capture form connected to Resend Audiences. All other
-        routes return the holding page. Implemented via a Cloudflare
-        Zero Trust Access app `Eatropolis pre-launch` that gates
-        every non-allowlisted path; the **Newsletter bypass app**
-        (`96232ff1-10e1-4a58-8a63-953407d45df3`) selectively
-        publishes 5 essential paths (coming-soon, _next/*, images/*,
-        api/newsletter, opengraph-image) — exactly the platform
-        cap of 5 destinations per Access app, discovered the hard
-        way after the original 14-row plan returned `too many
-        destinations`.
+        Phase 1 (teaser): only the /coming-soon page is public — a "Something Big is Cooking" teaser with partner attribution, key event facts, and a newsletter sign-up connected to the email service. Everything else sits behind a Cloudflare access lockdown, with a narrow bypass rule publishing just the handful of paths the teaser needs.
 
-        **Phase 2 (2026-06-05):** the Access lockdown app is
-        disabled at launch morning; the full **68-route**
-        prerendered site is revealed simultaneously. The single
-        launch-announcement broadcast email goes out to all Phase 1
-        newsletter subscribers via Resend, with the Client
-        providing copy and the Developer formatting and sending.
+        Phase 2 (full site, live since 2026-06-05): the lockdown was lifted on launch morning and the full site went public in one step, with a single launch-announcement email sent to everyone who had signed up during Phase 1.
 
-        **The full-site information architecture** spans the 13
-        marketing pages: Home (hero video, scroll-card story,
-        restaurant logo carousel, "Your Day at Eatropolis" steps,
-        ticketing partner block, sponsor wall, final CTA),
-        Tickets (two-tier flat ticketing — **General Admission**
-        and **Family Bundle**, with **workshops included with
-        admission**, plus a sticky purchase CTA and Ticketmaster
-        outbound), Dishes (filterable grid of 15 signature plates),
-        Culinary Partners
-        (filterable grid of restaurants with featured spotlights),
-        Workshops (listing + per-workshop RSVP form),
-        Event Info (date/time/location + schedule timeline +
-        getting-there guide), Our Partners (4-tier sponsor
-        showcase: Principal / Al Fresco / Associate / Community),
-        Contact (general + partnership enquiry forms), plus
-        legal pages.
+        The full site spans the marketing pages: Home (hero video, scroll-through origin story, restaurant logo carousel, "Your Day at Eatropolis" steps, ticketing block, sponsor wall, final call-to-action); Dishes (a filterable grid of signature plates, several of them 2026 Iconic Auckland Eats Award winners); Culinary Partners (filterable restaurant grid with featured spotlights); Experiences; Event Info (date, time, location, schedule, getting-there guide); Our Partners (four-tier sponsor showcase); Contact (general and partnership enquiry forms); plus legal pages. Tickets are sold off-site through Universe (a Ticketmaster company) — the site links straight out to the Universe checkout rather than hosting its own ticket page.
 
-        **Four form pipelines**, all server-actions over `/api/`:
-        General Enquiry → `info@eatropolis.co.nz`; Partnership
-        Enquiry → `partnership@eatropolis.co.nz`; Workshop
-        Reservation (one per workshop) → client-chosen address;
-        Newsletter signup → Resend Audiences. **All forms gated
-        by Cloudflare Turnstile** in Managed mode (better UX than
-        reCAPTCHA, lower friction). **All transactional email
-        flows through 7 hand-authored React Email templates** —
-        ContactAcknowledgment + ContactAdminNotice for general
-        enquiries (visitor gets a brand-styled acknowledgment, the
-        client gets the full submission with reply-to set);
-        PartnershipAcknowledgment + PartnershipAdminNotice for
-        sponsor enquiries; WorkshopRsvpConfirmation for workshop
-        RSVPs; WelcomeNewsletter for newsletter signups;
-        UnsubscribeConfirmation for one-click unsubscribe.
+        Three form pipelines, all server-side: General Enquiry, Partnership Enquiry, and Newsletter sign-up. All forms are protected by Cloudflare Turnstile (an anti-spam check that's gentler on users than reCAPTCHA), and all confirmation and notification email flows through hand-authored, brand-styled templates — a visitor acknowledgment plus a full-submission notice to the client for both general and partnership enquiries, a newsletter welcome, a one-click unsubscribe confirmation, and the launch announcement.
 
-        **The conditional AI chat assistant** is a floating widget
-        that streams responses from OpenAI `gpt-5.4-mini` over the
-        Vercel AI SDK 6, with **voice input via Whisper
-        (`/api/transcribe`)** and **voice reply via TTS
-        (`/api/tts`)** — abstracted behind `lib/ai-provider.ts` so
-        the entire stack can swap to Anthropic Claude in one line.
-        It's pre-trained with the event's content (dates, location,
-        tickets, partners, FAQs, transport) via a build-time-
-        generated chat-context manifest (`scripts/generate-content-
-        manifest.mjs` runs as predev/prebuild/predeploy hook).
-        Visitor cost stays bounded via **Cloudflare KV
-        (`EATROPOLIS_CHAT_KV`)** per-IP rate limit + session
-        cookie + Turnstile pre-clearance, with feedback persisted
-        via `/api/chat/feedback`.
+        The AI event assistant is a floating chat widget that streams answers from an OpenAI model, with voice input (speech-to-text) and voice reply (text-to-speech). It's pre-loaded with the event's own content — dates, location, tickets, partners, FAQs, transport — compiled at build time, so it can't invent prices, dates, or partner names; every answer is grounded in the same content the client edits. It's rate-limited per visitor with Cloudflare's key-value store plus a Turnstile pre-check. The AI layer is written behind a single provider abstraction, so the whole chat stack can switch from OpenAI to Anthropic Claude in one line.
 
-        **The content layer is the deliberate UX call of the
-        project.** The brief required a "CMS structure"; the
-        contract solution is **GitHub-as-CMS via the browser Web
-        Editor**, explicitly rejecting Excel/Google Sheets as well
-        as licensed CMS products (Sanity, Strapi, Payload,
-        Contentful) since the scope explicitly avoids additional
-        third-party dependencies. The implementation: every editable
-        field has a `✏️` direct link in `docs/CONTENT-INVENTORY.md`
-        pointing at the repo's `edit/main/<path>` GitHub Web Editor
-        URL — the non-technical client
-        clicks, edits in GitHub's browser editor, commits, and
-        GitHub Actions auto-deploys in ~3 minutes. The content
-        itself is **43 MDX files** (dishes, workshops, FAQs,
-        partners, sponsors — each with Zod-validated frontmatter)
-        + **16 JSON page-chrome blobs** in `content/site/pages/`
-        (home / tickets / dishes / workshops / event-info / partners
-        / sponsors / contact / partnership / coming-soon, plus
-        site-wide nav / footer / social / tickets / chat / brand
-        / announcement). A 9-section `EditorialPageSchema` +
-        `VideoPageSchema` in `lib/content/site-schema.ts` give
-        the JSON structural type-safety end-to-end.
+        The content layer is the project's deliberate design call. The brief asked for a "CMS structure"; the solution is GitHub-as-CMS through the browser editor, deliberately rejecting spreadsheets and licensed CMS products (Sanity, Strapi, Payload, Contentful) to avoid adding third-party dependencies. Every editable field has a direct ✏️ link that opens GitHub's web editor; the client edits, saves, and the site auto-rebuilds in a few minutes. The content is 40 MDX files (dishes, partners, FAQs, sponsors — each with schema-validated frontmatter) plus 16 JSON files for page copy, all type-checked at build time.
       businessLogic: |
-        This is a **commercial freelance commission** — not a
-        personal project, not a passion side-build. The delivery
-        is anchored to a signed contract with a three-stage
-        schedule **(Phase 1 internal delivery 2026-05-16, Phase 2
-        internal delivery 2026-05-29, Phase 3 acceptance)** —
-        each stage tied to a **Developer deliverable**, not to TAU
-        approval, so review-cycle delays don't gate progress.
+        This is a commercial freelance commission — not a personal or passion project. Delivery is anchored to a signed contract with a three-stage schedule, each stage tied to a developer deliverable rather than to reviewer sign-off, so review delays don't stall progress.
 
-        **The contract's scope discipline is the second
-        architectural axis**: §3 enumerates exactly 14 explicit
-        items in scope (the site, the design system, the animation
-        layer, 4 forms, 1 launch broadcast, the conditional AI
-        widget, SEO + GEO, performance + load testing + security
-        hardening, GA4 + analytics, WCAG 2.2 AA conformance,
-        Cloudflare hosting, initial content seeding for 10
-        partners + 10 dishes + 6 workshops + 15 sponsors, hand-
-        off + training, and 3 months of maintenance). **Every
-        category outside §3 — additional pages, custom ticketing,
-        multilingual versions, blog/news section, marketing-email
-        campaigns beyond the single launch broadcast, formal
-        third-party WCAG audit, future-year event refreshes, deep
-        CRM integrations — sits under §4 Available Add-ons** with
-        separately-quoted scope, or under §12 hourly engagement
-        after the maintenance window expires on 2026-09-06. The
-        warranty (§15) is hard-capped at the 3-month maintenance
-        window. This isn't a contract I sign for someone else — I
-        wrote it (in Typst, compiled to PDF), so the scope
-        discipline is by design: 9 days of intensive solo work
-        surrounded by a clearly-bounded commercial perimeter that
-        doesn't let the project bleed into 2027 or 2028 event-year
-        obligations.
+        Scope discipline is the second design axis. The contract enumerates exactly what's in scope (the site, design system, animation layer, three forms, one launch broadcast, the AI widget, SEO plus AI-crawler discoverability, performance and load testing and security hardening, analytics, WCAG 2.2 AA conformance, Cloudflare hosting, initial content seeding, handoff and training, and three months of maintenance). Everything outside that — extra pages, custom ticketing, multilingual versions, a blog, ongoing email campaigns, a formal third-party accessibility audit, future-year event refreshes, deep CRM work — sits under separately-quoted add-ons or hourly engagement after the maintenance window ends. The warranty is capped at that same window. I wrote the contract myself (in Typst, compiled to PDF), so the scope discipline is by design: nine days of intensive solo work inside a clearly bounded commercial perimeter that doesn't bleed into future event years.
 
-        **The client side of the business model** is itself
-        worth surfacing: Chow Luck Club Ltd produces the
-        festival as a private event business; **Tātaki Auckland
-        Unlimited (Auckland Council's culture, business, and
-        economic-development arm)** sponsors it on behalf of
-        Auckland Council Events. That sponsor relationship is
-        why the contract is explicit about WCAG 2.2 AA
-        conformance with TAU review gates — TAU has organisational
-        compliance obligations to the New Zealand Government Web
-        Accessibility Standard 1.2, and the contract draws a
-        clean line between what the website **technically
-        conforms to** (in scope: automated audits, manual checks,
-        a written conformance statement) versus the **formal
-        third-party accessibility audit + Web Standards Self-
-        Assessment + Risk Assessment and Management Plan** that
-        TAU as a public-sector body itself files (out of scope —
-        organisational compliance, not a website deliverable).
+        The client side is worth surfacing too. Chow Luck Club Ltd runs the festival as a private event business; Tātaki Auckland Unlimited (Auckland Council's culture, business, and economic-development arm) supports it on behalf of Auckland Council Events. That relationship is why the contract is explicit about WCAG 2.2 AA conformance with review gates — Tātaki Auckland Unlimited has its own public-sector accessibility obligations. The contract draws a clean line between what the website technically conforms to (automated audits, manual checks, a written conformance statement — in scope) and the formal third-party audit and self-assessment that Tātaki Auckland Unlimited files as an organisation (out of scope).
       technicalApproach: |
-        **Stack:** Next.js 16.2.5 (App Router, React Server
-        Components, ISR) + React 19.2.4 + TypeScript 5 +
-        Tailwind CSS 4 (with `@theme` DTCG design tokens
-        consumed as CSS custom properties) — deployed to
-        **Cloudflare Workers via `@opennextjs/cloudflare`
-        1.19.7**, the official 2026 path now that the Pages
-        adapter is legacy. Wrangler 4.88 handles local preview
-        + deploys. The choice of OpenNext-on-Workers (not
-        Vercel, not Pages, not Netlify) is contract-driven:
-        the Client owns the Cloudflare account, and the entire
-        stack — hosting, DNS, anti-spam, email routing,
-        analytics, WAF, Zero Trust Access — is operated under
-        Cloudflare's free tier with the Worker upgraded to
-        Standard plan only after the CPU constraint of the
-        Free tier blocked the 1,000-VU k6 profile (Issue #17,
-        resolved 2026-05-09).
+        Stack: Next.js 16.2.5 (App Router, React Server Components) with React 19.2, TypeScript, and Tailwind CSS 4 (design tokens consumed as CSS custom properties), deployed to Cloudflare Workers via @opennextjs/cloudflare — the current official path now that the Pages adapter is legacy. The choice is contract-driven: the client owns the Cloudflare account, and the whole stack (hosting, DNS, anti-spam, email routing, analytics, access control) runs there, with the worker upgraded to the paid tier only after the free tier's CPU limit blocked the 1,000-visitor load profile.
 
-        **Data layer:** Drizzle ORM 0.45 + `@neondatabase/
-        serverless` 1.1 against a Neon serverless Postgres
-        instance, **4-namespace schema split** at
-        `lib/db/schema/{chat,email,forms,index}.ts` with
-        **4 repository modules** at `lib/db/repositories/
-        {chat,email-events,forms,subscribers}.ts` for
-        type-safe query boundaries. **2 migrations**:
-        `0000_elite_molecule_man.sql` (initial schema) +
-        `0001_green_hex.sql` (a partial-index `ON CONFLICT`
-        mismatch hotfix on `email_events.resend_event_id` /
-        `email_outbox.resend_email_id`, caught during the
-        Resend webhook integration). The persistence
-        architecture is a **full email lifecycle audit**:
-        `form_submissions` (visitor input) → `email_outbox`
-        (Resend send attempts with idempotency keys) →
-        `email_events` (Resend webhook deliveries / opens /
-        bounces / complaints). End-to-end newsletter signup
-        round-trip verified 2026-05-12 at **5.96 seconds**
-        from form submit to Gmail delivery confirmation in
-        Neon.
+        Data layer: Drizzle ORM against a Neon serverless Postgres database, with the schema split into four namespaces (chat / email / forms / index) behind four repository modules for type-safe query boundaries. Persistence is a full email-lifecycle audit: form submission → send attempt (with idempotency keys) → delivery/open/bounce/complaint webhook events. End-to-end newsletter round-trip was verified at 5.96 seconds from form submit to Gmail delivery confirmation.
 
-        **Content layer:** MDX (`@next/mdx` + `@mdx-js/loader`
-        + `remark-frontmatter` + `gray-matter`) for long-form
-        editorial content + Zod 4.4 schemas for both frontmatter
-        and page-chrome JSON validation **at build time**. The
-        prebuild hook `scripts/generate-content-manifest.mjs`
-        compiles every content file into a typed manifest
-        (`lib/.generated/chat-context.ts`) that powers the AI
-        chat assistant's system context — the AI knows about
-        every dish, workshop, partner, and FAQ without runtime
-        DB reads. **43 MDX content files + 16 JSON page-chrome
-        files** total, with the schema split between
-        `EditorialPageSchema` and `VideoPageSchema` for the
-        two hero patterns.
+        Content layer: MDX for long-form editorial content plus Zod schemas that validate both frontmatter and page-copy JSON at build time. A prebuild step compiles every content file into a typed manifest that powers the AI assistant's knowledge — so the AI knows every dish, partner, and FAQ without any runtime database reads.
 
-        **Email pipeline:** Resend 6 with **7 hand-authored
-        React Email templates** at `emails/*.tsx`, theming
-        centralised in `emails/_theme.ts`. The domain
-        `eatropolis.co.nz` has SPF + DKIM (Resend domain
-        verification) + a DMARC record set up via Cloudflare
-        DNS, with a DMARC dashboard subscribed for ongoing
-        deliverability monitoring. **mail-tester scores
-        10/10**. Resend webhook signatures are verified via
-        `svix` at `/api/webhooks/resend/route.ts`; webhook
-        traffic bypasses the Zero Trust lockdown via a
-        dedicated `Eatropolis webhook bypass` Access app
-        (path = `eatropolis.co.nz/api/webhooks/*`).
+        Email: Resend with 7 hand-authored, brand-styled email templates. The domain has SPF, DKIM, and DMARC live, with a DMARC dashboard for ongoing monitoring; mail-tester scores 10/10. Inbound webhook signatures are verified, and webhook traffic is carved out of the pre-launch lockdown with a dedicated bypass rule.
 
-        **AI layer:** Vercel AI SDK 6 + `@ai-sdk/openai` 3 +
-        `@ai-sdk/react` 3, abstracted behind
-        `lib/ai-provider.ts` so the entire chat stack swaps
-        to Anthropic Claude in a single line. Model:
-        OpenAI `gpt-5.4-mini` for streaming chat; **Whisper**
-        for `/api/transcribe` (voice input); **OpenAI TTS**
-        for `/api/tts` (voice reply). All three call paths
-        gated by **(1) Cloudflare Turnstile** pre-clearance,
-        **(2) Cloudflare KV (`EATROPOLIS_CHAT_KV`)** per-IP
-        rate limit with a session cookie, and **(3)** the
-        chat-context manifest as the prompt context so the
-        AI can never fabricate prices, dates, or partner
-        names — every answer is grounded in the JSON / MDX
-        layer the Client edits.
+        AI: the Vercel AI SDK behind a one-file provider abstraction (lib/ai-provider.ts), currently on an OpenAI model for streaming chat, plus speech-to-text for voice input and text-to-speech for voice reply. All three paths are gated by (1) a Turnstile pre-check, (2) a per-visitor rate limit in Cloudflare's key-value store, and (3) the build-time content manifest as grounding, so the assistant can't fabricate facts.
 
-        **Analytics + consent:** Cloudflare Web Analytics
-        (privacy-friendly, cookie-free) + Google Analytics 4
-        with configured conversion events (ticket-button
-        clicks, contact-form submits, partnership-form
-        submits, workshop reservations, newsletter signups,
-        scroll depth, session duration). Both **render in
-        manual JS-snippet mode (not auto-injection)** behind
-        a **NZ Privacy Act 2020-compliant cookie consent
-        banner** in `components/consent/` — nothing tracks
-        until the visitor accepts.
+        Tickets: sold off-site through Universe (a Ticketmaster company); the site links straight to the Universe checkout with UTM-tagged outbound links so the client can attribute ticket traffic. (An earlier on-site Ticketmaster Discovery API integration was removed once the festival moved to Universe.)
 
-        **Ticketmaster integration:** Discovery API called
-        server-side with a Cloudflare-secret API key, response
-        ISR-cached for **1 hour**, outbound links UTM-tagged
-        so the Client can attribute ticket revenue back to
-        the website in the Ticketmaster dashboard.
+        Analytics and consent: Cloudflare Web Analytics (privacy-friendly, cookie-free) plus Google Analytics 4 with configured conversion events, both loaded in manual snippet mode behind a NZ Privacy Act 2020 cookie-consent banner — nothing tracks until the visitor accepts. GA4 was later moved to Consent Mode v2 so real, consented traffic is measured correctly.
 
-        **Performance discipline:** Lighthouse Mobile
-        target ≥ 90 across all categories per contract §3.8.
-        Achieved Performance 71 → 84 (~25% TBT drop) by
-        trimming Big Shoulders font weights from
-        `[400,600,700,800,900]` → `[400,700,800]`,
-        lazy-mounting `<AIAssistant/>` via
-        `next/dynamic({ssr:false})` gated behind
-        `requestIdleCallback`, and deferring hero video
-        `<source>` children with `preload="none"`. Images
-        run through a custom optimisation pipeline at
-        `scripts/optimize-images.mjs` producing AVIF + WebP
-        ladders. **k6 load test** at `tests/load/k6.js`
-        profiles to **1,000 concurrent VUs** per contract.
+        Performance: contract target of Lighthouse mobile ≥ 90 across categories, pursued by trimming font weights, lazy-mounting the AI assistant, and deferring hero-video sources; images run through a custom AVIF/WebP optimisation pipeline. Accessibility, SEO, and best-practices scores land at or above 90 on the measured routes.
 
-        **Accessibility:** automated + manual gates. The
-        automated suite is **39/39 axe-core Playwright
-        tests passing** across `tests/a11y.spec.ts` +
-        `tests/mobile-nav.spec.ts` + `tests/target-size.spec.
-        ts`. The manual layer covers keyboard-only navigation,
-        focus visibility, heading hierarchy, alt text,
-        semantic HTML, video captions, screen-reader spot-
-        checks, and **a WAI-ARIA APG NavDropdown menu
-        keyboard pattern** with ArrowDown/Up/Home/End + Tab-
-        close + Esc-no-reopen guard. **WCAG color discipline
-        worth flagging**: the brand's `--color-harbour` at
-        `#0866ff` measures 4.13:1 on parchment (failing
-        1.4.3 AA normal-text 4.5:1) — fixed by adding
-        `--color-harbour-deep` `#0050cc` at 6.02:1 on
-        parchment / 7.02:1 on bone / 6.37:1 on cream for
-        text use; saturated harbour stays in decorative non-
-        text roles only (focus rings, `aria-hidden` bullet
-        separators where 3:1 non-text minimum applies). Brand
-        hierarchy is Black / Red / White per employer brief,
-        harbour strictly subtle accent. A written **WCAG
-        2.2 AA conformance statement** delivered at Phase 2
-        internal handoff documents testing performed,
-        results, and known limitations.
+        Load testing: a k6 profile to 1,000 concurrent visitors was run against the live site over five minutes (113,320 requests) with a 0.00% error rate — a clean pass on the contract's under-1% error threshold.
 
-        **Pre-launch lockdown:** all routes sit behind
-        **Cloudflare Zero Trust Access** (free tier) between
-        2026-05-09 and 2026-06-05. The `Eatropolis pre-
-        launch` Access app (`e1ff6f56-7889-4f92-a99d-
-        6d209cfa051e`) gates everything except allowlisted
-        reviewers (`@chowluckclub.com`, `@eatropolis.co.nz`,
-        `chanmeng.career@gmail.com`) who authenticate via
-        email OTP. Two **bypass apps** carve out the
-        public-facing paths: `Eatropolis webhook bypass` for
-        Resend webhooks, and `Eatropolis newsletter bypass`
-        (`96232ff1-10e1-4a58-8a63-953407d45df3`) for the
-        Phase 1 coming-soon flow — the latter using all
-        **5/5 hostname destination slots** (a platform cap
-        discovered the hard way) to publish `coming-soon`,
-        `_next/*`, `images/*`, `api/newsletter`, and
-        `opengraph-image` while keeping the rest locked.
+        Accessibility: automated and manual gates. The automated suite is 39/39 axe-core Playwright tests passing across the accessibility, mobile-nav, and target-size specs. The manual layer covers keyboard-only navigation, focus visibility, heading hierarchy, alt text, semantic HTML, and screen-reader spot-checks, including a standards-based keyboard pattern for the nav dropdown menu. One brand-colour contrast issue (a harbour-blue at 4.13:1, below the 4.5:1 minimum for normal text) was fixed by adding a darker variant for text use and keeping the saturated blue in decorative, non-text roles only. A written WCAG 2.2 AA conformance statement was delivered at handoff.
 
-        **Deploy pipeline:** GitHub Actions
-        (`.github/workflows/deploy.yml`) triggers on every
-        push to `main` plus manual `workflow_dispatch`, runs
-        on `ubuntu-latest` (Linux mandatory — Windows is
-        explicitly blocked in `AGENTS.md` because the
-        OpenNext build chain has Windows incompatibilities),
-        executes `pnpm install` → `lint` → `pnpm run deploy`
-        (which calls `opennextjs-cloudflare build &&
-        opennextjs-cloudflare deploy`). **Typical wall time
-        ~55-70 seconds end-to-end**, with `CLOUDFLARE_API_
-        TOKEN` + `CLOUDFLARE_ACCOUNT_ID` (`3f0d36625c1a1a7b
-        1f2ee2b211a87791`) stored in GitHub Secrets.
+        Pre-launch lockdown: before launch, all routes sat behind Cloudflare Zero Trust Access, with allowlisted reviewers signing in via email one-time-passcode and a small set of bypass rules exposing the teaser and webhook paths. On 2026-06-05 the lockdown was opened and the full site went public.
+
+        Deploy pipeline: GitHub Actions on every push to main (Linux only — the OpenNext build chain has Windows incompatibilities), running install → lint → build → deploy in roughly 55–70 seconds end-to-end.
       outcomes: |
-        Production-deployed at `eatropolis.co.nz` since
-        2026-05-09, currently in **pre-launch Access lockdown**
-        with allowlisted reviewers authenticating via Cloudflare
-        Zero Trust OTP. **Phase 1 coming-soon page publicly
-        accessible since 2026-05-12** via the dedicated bypass
-        app — newsletter signup end-to-end verified
-        (form → Neon `form_submissions` + `email_outbox` rows →
-        Resend accept → Gmail `email.delivered` webhook → Neon
-        `email_events` row in **5.96 seconds**), Gmail
-        Promotions-tab delivery confirmed.
+        Live and public at eatropolis.co.nz since 2026-06-05. The pre-launch access lockdown was opened on launch morning and the full site went public in one step, with a single launch-announcement email sent to every Phase 1 newsletter subscriber. The newsletter pipeline was verified end-to-end (form → database rows → email service → Gmail delivery webhook) in 5.96 seconds.
 
-        **115 commits, sole author**, across the contracted
-        9-day intensive build (2026-05-07 → 2026-05-15) plus
-        continued polish through 2026-05-13. **68 prerendered
-        routes** in production, 0 TypeScript errors, 0 Zod
-        errors at build time, lint clean. **The eleventh-pass
-        status doc** (`docs/STATUS.md`, 2026-05-12) records
-        comprehensive employer-feedback closeout: two new UX
-        components shipped (`<IncludedBadge/>` for "free with
-        admission" semantic affordance + `<PricingAtAGlance/>`
-        for site-wide flat-pricing anchor), workshop `price`
-        field purged across schema + MDX + JSON-LD + llms.txt,
-        blue accent landed as the **subtle harbour-deep**
-        decorative path per WCAG-AA recalibration, and the
-        **GitHub-as-CMS workflow** documented at
-        `docs/CONTENT-INVENTORY.md` with one ✏️ link per
-        editable field.
+        115 commits, sole developer, across the contracted 9-day intensive build (2026-05-07 → 2026-05-15), with 0 TypeScript errors and 0 schema errors at build time. The 1,000-visitor k6 load test passed with a 0.00% error rate over 113,320 requests in five minutes (the response-time percentile ran above target, attributable to a single local test runner rather than server errors). Lighthouse accessibility, SEO, and best-practices scores meet or exceed 90 on the measured routes; mail-tester scores 10/10.
 
-        **Outstanding pre-Phase-2 items** (per
-        `docs/REMAINING-TASKS.md`): disable the `Eatropolis
-        pre-launch` Access app on 2026-06-05 launch morning
-        (one toggle in CF Zero Trust dashboard, not a code
-        change); employer publishes the Eatropolis event
-        listing on Ticketmaster; full 1,000-VU k6 acceptance
-        profile against the public live site (currently
-        blocked only on the Access disable); mobile Lighthouse
-        Performance re-confirmation after 24h cache warm.
-        **Workers Free → Standard upgrade landed 2026-05-09**
-        — Issue #17 (CPU constraint blocking the k6 profile)
-        platform-side resolved.
+        The GitHub-as-CMS handoff is proven in practice: after launch, the non-technical client independently made a dozen content edits — home page, coming-soon, tickets, announcement copy — through the browser editor, exactly as the workflow intended.
 
-        The build also produced supplementary deliverables
-        the contract specifies but most freelance projects
-        skip: a **TICKETMASTER-SETUP.md** one-page integration
-        guide for the client, a **WCAG-CONFORMANCE.md** with
-        the full token-strategy + brand-hierarchy + harbour-
-        deep recalibration documented for any future TAU
-        audit, a **CONTENT-EDITING-GUIDE.md** with Option A
-        (GitHub Web Editor) and Option B (Cursor local) paths
-        plus JSON gotchas, a **CONTENT-INVENTORY.md** master
-        index, a **HANDOFF.md** non-developer client guide,
-        and a **STATUS.md** running decision log with mermaid
-        architecture diagrams. The original 9-day delivery
-        plan lives at `C:\Users\0\.claude\plans\chan-meng-d-
-        github-repository-eatropoli-cosmic-yao.md`,
-        superseded by STATUS / DAY-9-REPORT wherever the two
-        diverge.
+        The build also produced handoff documents most freelance projects skip: a ticketing setup guide, a WCAG conformance statement, a content-editing guide, a content inventory, a non-developer handoff guide, and a running decision log with architecture diagrams. Post-launch maintenance covered analytics hardening (adopting GA4 Consent Mode v2, and root-causing zero Cloudflare-analytics data to visitor-side tracker blocking rather than a code defect) and ongoing content additions, including new Iconic Auckland Eats Award-winning dishes.
       myRole: |
-        **Sole freelance developer under signed 4 May 2026
-        agreement** between Chan Meng (Auckland-based) and
-        Bee Keng Koh for and on behalf of Chow Luck Club Ltd,
-        with Armand Bentigan as the day-to-day project
-        manager. Three-stage delivery schedule, each anchored
-        to a Developer deliverable (not to TAU approval).
-        **All 115 commits authored
-        solo**; the GitHub repo lives in the **client
-        organisation** at `github.com/Chow-Luck-Club/
-        eatropolis-website` (private), where I am the sole
-        outside collaborator. The entire Cloudflare account
-        (`3f0d36625c1a1a7b1f2ee2b211a87791`) is Armand's,
-        with my personal CF login (`chanmeng.dev@gmail.com`)
-        added as Administrator — **all infrastructure is
-        client-owned**, so the handoff at end-of-maintenance
-        on 2026-09-05 is a zero-friction credential rotation
-        rather than an account transfer.
+        Sole freelance developer under a signed 4 May 2026 agreement between Chan Meng (Auckland-based) and Bee Keng Koh for and on behalf of Chow Luck Club Ltd, with Armand Bentigan as day-to-day project manager. Three-stage delivery schedule, each stage anchored to a developer deliverable rather than reviewer approval. All 115 build-phase commits were mine, in the client's private organisation repository where I am the sole outside collaborator; the client's own account later made a small number of content-only edits through the browser editor after handoff. The entire Cloudflare account is the client's, with my login added as an administrator — all infrastructure is client-owned, so end-of-maintenance handoff is a credential rotation rather than an account transfer.
 
-        **End-to-end ownership** covers: contract drafting
-        (I authored the contract in Typst, compiled to PDF —
-        the `eatropolis-agreement.typ` source lives at
-        `D:/github_repository/eatropolis/contract/`); product
-        architecture; the 13-page marketing site IA + design
-        system (Big Shoulders + Archivo Narrow + Italiana +
-        JetBrains Mono + League Gothic, brand hierarchy
-        Black / Red / White, harbour blue strictly subtle
-        decorative accent per WCAG-AA recalibration); the
-        full Cloudflare Workers + OpenNext deploy pipeline
-        with GitHub Actions auto-deploy; the 3 Zero Trust
-        Access apps for the pre-launch / webhook bypass /
-        newsletter bypass schedule; the Drizzle + Neon
-        persistence layer (4-namespace schema, 4-repository
-        modules, 2 migrations including the partial-index
-        hotfix); the 10 API routes (newsletter / 3 forms /
-        chat streaming + Whisper + TTS + chat feedback /
-        unsubscribe / Resend webhook); the 7 React Email
-        templates with the brand-styled theme; the AI chat
-        assistant with build-time-generated context manifest;
-        the Ticketmaster Discovery API ISR integration; the
-        GA4 + CF Web Analytics + cookie consent triple; the
-        WCAG 2.2 AA conformance pass (39/39 axe-core
-        Playwright tests + WAI-ARIA APG NavDropdown keyboard
-        pattern + harbour-deep recalibration); the k6
-        load-test profile to 1,000 concurrent visitors per
-        contract §3.8; the GitHub-as-CMS workflow with the
-        ✏️ Web-Editor links; and the four-document handoff
-        package (HANDOFF + CONTENT-INVENTORY + CONTENT-
-        EDITING-GUIDE + TICKETMASTER-SETUP) plus the running
-        decision log at STATUS.md. **Reporting line**: WhatsApp
-        for day-to-day with Armand (+64 20 4427217), email
-        for formal documents with Bee Keng Koh
-        (`bee@chowluckclub.com`); my contact (`chanmeng.
-        career@gmail.com`, +64 28 8523 5858, 1/59 Spring St
-        Onehunga 1061) is on file as Developer.
+        End-to-end ownership covered: drafting the contract myself (in Typst, compiled to PDF); product architecture; the marketing-site information architecture and design system (brand hierarchy Black / Red / White, harbour blue as a subtle accent per the accessibility recalibration); the full Cloudflare Workers + OpenNext deploy pipeline with GitHub Actions auto-deploy; the Zero Trust access rules for the pre-launch and bypass schedule; the Drizzle + Neon persistence layer; the API routes for newsletter, contact and partnership forms, and the streaming chat + voice + feedback endpoints; the 7 brand-styled email templates; the AI assistant with its build-time content manifest; the Universe ticketing link-out; the analytics-plus-consent setup; the WCAG 2.2 AA conformance pass (39/39 axe-core tests plus manual verification); the 1,000-visitor k6 load-test profile; the GitHub-as-CMS workflow with per-field ✏️ editor links; and the handoff document package plus the running decision log. Day-to-day coordination ran over WhatsApp with the project manager and formal documents over email with the client signatory.
 
   - id: friendscope
     provenance: personal
@@ -1852,7 +1120,7 @@ projects:
     provenance: personal
     tier: primary
     recency: recent
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-07-17"
     meta:
       x_brand:
         featuredStack: [nextjs, react, drizzle, neon, stripe]
@@ -1899,11 +1167,12 @@ projects:
       - "VPS + Traefik production deployment"
       - "Trilingual SaaS"
       - "Schema-drift canary guarding a reverse-engineered API"
+      - "Live editorial-shelf pulse (Staff Picks / Best of v5.5 daily diffs)"
       - "Observability + ops hardening"
     metrics:
       - { label: "Commits (solo)",      value: "99 (2026-04-12 → 2026-07-10, ~3 months active); sole author" }
       - { label: "Live URL",            value: "https://seismophone.chanmeng.org (legacy sunostats.chanmeng.org 301-redirects to it)" }
-      - { label: "Surfaces",            value: "19 pages · 28 API route handlers · 56 React components · 190 TS/TSX files in src" }
+      - { label: "Surfaces",            value: "19 pages · 28 API route handlers · 57 React components · 193 TS/TSX files in src" }
       - { label: "Database",            value: "17 Drizzle tables on Neon Postgres; append-only daily snapshots + credit ledger" }
       - { label: "Open surface",        value: "Public creator portfolio at /@handle, lineage explorer, observatory pages (/pulse, /trending, who-remixes-whom), up to 10 watched playlists — no account needed for observatory reads" }
       - { label: "Insight reports",     value: "7 single-purchase analytics engines (tag_optimization · performance_snapshot · method_mix · song_dna · persona_mix · remix_readiness · model_era), each deterministic over the creator's own catalog and optionally topped with a short LLM analyst's note" }
@@ -1918,134 +1187,31 @@ projects:
     status: live
     startDate: "2026-04"
     publicSummary: |
-      Seismophone (codebase: sunostats) is an independent third-party
-      observatory for AI-generated music, instrumented deepest on Suno. It
-      captures Suno's public data daily and publishes free ecosystem readings
-      the platform itself doesn't expose — how the trending feed has frozen,
-      which model eras dominate, and who remixes whom — then points the same
-      instruments at a signed-in creator's own catalog to produce an open public
-      portfolio at /@handle plus seven single-purchase insight reports. Its
-      distinctive dataset is a public Suno remix-lineage graph, recovered from
-      a redaction gap in Suno's own API and now un-reproducible. Solo-built on
-      Next.js 16 + Neon Postgres, trilingual (EN / 简中 / 日本語), self-hosted
-      on a Docker + Traefik VPS, with a read-only MCP server for AI agents.
+      Seismophone (codebase: sunostats) is an independent, third-party observatory for AI-generated music, instrumented deepest on Suno. It captures Suno's public data daily and publishes free readings the platform itself hides — forensic proof that Suno's "trending" chart froze in 2024, a daily pulse on Suno's live curated Explore shelves, and a rare map of who remixes whom, recovered from a since-closed gap in Suno's own data. Point the same instruments at your own catalog and they produce a free public portfolio at /@handle plus seven single-purchase insight reports; solo-built on Next.js 16 + Neon Postgres, trilingual (EN / 简中 / 日本語), self-hosted on a Docker + Traefik server with a read-only MCP server for AI agents.
     narrative:
-      impactHeadline: "Seismophone (repo: sunostats) — an independent observatory for AI music that publishes what the platforms won't: a public Suno remix-lineage graph recovered from a redaction gap in Suno's own API, now sealed and un-reproducible. Solo-built, self-hosted."
+      impactHeadline: 'Seismophone (repo: sunostats) is an independent observatory for AI-generated music. It measures Suno from the outside and publishes free readings the platform hides: proof its "trending" chart froze in 2024, and a rare map of who remixes whom from a since-closed data gap.'
       problem: |
-        AI-music platforms like Suno expose almost nothing about their own
-        ecosystems. A creator gets a follower count and a play count; the
-        structural data that would let them understand their catalog, trace a
-        song's lineage, or read the platform's editorial behaviour is simply
-        not published. Nobody outside Suno can answer basic ecosystem
-        questions: is the "trending" feed actually live, which model eras
-        dominate the charts, who remixes whom? Seismophone exists to measure
-        that ecosystem from the outside and publish the readings openly — its
-        stated stance is "we publish what the platforms won't."
+        AI-music platforms like Suno expose almost nothing about their own ecosystems. A creator gets a follower count and a play count; the structural data that would let them understand their catalog, trace a song's lineage, or read the platform's editorial behaviour is simply not published. Nobody outside Suno can answer basic ecosystem questions: is the "trending" feed actually live, where did real discovery move, which model eras dominate, who remixes whom? Seismophone exists to measure that ecosystem from the outside and publish the readings openly — its stated stance is "we publish what the platforms won't."
       audience: |
-        Two audiences on one set of instruments. First, anyone — no account —
-        can read the free observatory: the fossil-watch "pulse," the preserved
-        2024 trending exhibit, the model-era timeline, and the cross-author
-        "who remixes whom" lineage graph. Second, signed-in Suno creators point
-        the same instruments at their own catalog: they claim a handle, get a
-        free public portfolio at /@handle, watch up to ten playlists with daily
-        pulse diffs, and buy any of seven deep-dive insight reports on their own
-        music. A third, machine audience is served deliberately: a public
-        read-only MCP server lets external AI agents query the observatory
-        without Seismophone bearing their inference cost.
+        Two audiences on one set of instruments. First, anyone — no account — can read the free observatory: the fossil-watch "pulse" of Suno's dead trending feed, a daily pulse on Suno's live curated Explore shelves (Staff Picks, Best of v5.5), the model-era timeline, and the cross-author "who remixes whom" lineage graph. Second, signed-in Suno creators point the same instruments at their own catalog: they claim a handle, get a free public portfolio at /@handle, watch up to ten playlists with daily pulse diffs, and buy any of seven deep-dive insight reports on their own music. A third, machine audience is served deliberately: a public read-only MCP server lets external AI agents query the observatory without Seismophone bearing their inference cost.
       productLogic: |
         The product is one measurement apparatus pointed in two directions.
 
-        **Outward (the observatory, free).** A daily pipeline captures Suno's
-        public surfaces and turns them into published readings. `/pulse` is a
-        "fossil-watch" — it treats Suno's `/api/trending` feed forensically,
-        having proven it is a frozen September-2024 playlist object served fresh
-        but never updated, and renders a cadence "seismograph," a model-version
-        timeline, the longest-reigning #1, and tag-trend curves. `/trending`
-        preserves the 2024 feed as a historical exhibit. `/observatory/
-        who-remixes-whom` and the per-song `/lineage/[clipId]` explorer render
-        Suno's real remix/derivation graph as a clickable SVG, walked
-        server-side with recursive Postgres CTEs (bounded to a few hops each
-        way); private clips appear only as anonymized nodes.
+        **Outward (the observatory, free).** A daily pipeline captures Suno's public surfaces and turns them into published readings. `/pulse` has two halves. The top is a "fossil-watch": it treats Suno's `/api/trending` feed forensically, having proven it is a frozen September-2024 playlist object served fresh but never updated, and renders a cadence "seismograph," a model-version timeline, the longest-reigning #1, and tag-trend curves. Below it is a live block that diffs Suno's real curated Explore shelves (Staff Picks, Best of v5.5) day to day — new entries, risers, fallers, drop-outs — the forward-looking instrument that replaced the dead feed. `/trending` preserves the 2024 feed as a historical exhibit. `/observatory/who-remixes-whom` and the per-song `/lineage/[clipId]` explorer render Suno's real remix/derivation graph as a clickable SVG, walked server-side with recursive Postgres CTEs (bounded to a few hops each way); private clips appear only as anonymized nodes.
 
-        **Inward (creator lenses).** A creator signs in with Google, claims
-        their Suno handle, and instantly gets a free public portfolio at
-        `/@handle` (themable, with configurable stats and tag filters). They
-        then spend credits on seven single-purchase reports — Tag Optimization,
-        Performance Snapshot, Method Mix, Song DNA, Persona Mix, Remix
-        Readiness, and Model Era — each a deterministic analytics engine over
-        their catalog, optionally topped with a short LLM "analyst's note."
-        Each report is a discrete, single-purchase artifact — a creator asks
-        one specific question of their own catalog and gets one answer back,
-        rather than committing to an ongoing relationship with the tool.
+        **Inward (creator lenses).** A creator signs in with Google, claims their Suno handle, and instantly gets a free public portfolio at `/@handle` (themable, with configurable stats and tag filters). They then spend credits on seven single-purchase reports — Tag Optimization, Performance Snapshot, Method Mix, Song DNA, Persona Mix, Remix Readiness, and Model Era — each a deterministic analytics engine over their catalog, optionally topped with a short LLM "analyst's note." Each report is a discrete, single-purchase artifact — a creator asks one specific question of their own catalog and gets one answer back, rather than committing to an ongoing relationship with the tool.
       businessLogic: |
-        The shape is open-observatory-plus-discrete-reports. Everything
-        ecosystem-level and every public creator portfolio is open to all;
-        the only gated surface is the seven per-catalog insight reports,
-        each a self-contained analysis of a creator's own catalog. The
-        defensible asset is the lineage archive: because it was recovered from
-        a redaction gap Suno has since closed, it is a sealed, un-reproducible
-        dataset — a genuine data moat rather than a feature a competitor can
-        re-derive. Distribution is deliberately agent-native: the read-only MCP
-        server turns the observatory into a tool other people's AI agents can
-        call, extending reach without ad spend, while the trilingual surface
-        (EN / 简中 / 日本語) reaches Suno's large East-Asian creator base.
+        The shape is open-observatory-plus-discrete-reports. Everything ecosystem-level and every public creator portfolio is open to all; the only gated surface is the seven per-catalog insight reports, each a self-contained analysis of a creator's own catalog. The defensible asset is the lineage archive: because it was recovered from a redaction gap Suno has since closed, it is a sealed, un-reproducible dataset — a genuine data moat rather than a feature a competitor can re-derive. Distribution is deliberately agent-native: the read-only MCP server turns the observatory into a tool other people's AI agents can call, extending reach without ad spend, while the trilingual surface (EN / 简中 / 日本語) reaches Suno's large East-Asian creator base.
       technicalApproach: |
-        A Next.js 16 (App Router, pinned to Webpack + `output: standalone`) app
-        in React 19 and TypeScript 5, over a single 17-table Drizzle schema on
-        Neon serverless Postgres. Auth is NextAuth v5 + Neon Auth (Google OAuth
-        only); payments run through Stripe with a webhook-verified credit
-        ledger; Resend delivers report emails; an optional OpenAI `gpt-5.4-nano`
-        pass narrates otherwise numbers-only reports.
+        A Next.js 16 (App Router, pinned to Webpack + `output: standalone`) app in React 19 and TypeScript 5, over a single 17-table Drizzle schema on Neon serverless Postgres. Auth is NextAuth v5 + Neon Auth (Google OAuth only); payments run through Stripe with a webhook-verified credit ledger; Resend delivers report emails; an optional OpenAI `gpt-5.4-nano` pass narrates otherwise numbers-only reports.
 
-        **The lineage harvest is the crux.** Suno's serializer redacts clip
-        parent-UUIDs to the all-zeros UUID on its main endpoints, but misses
-        that pass on exactly two response shapes — the slim clips of
-        `/api/trending` and the `personas[].clip` sub-trees of a public profile.
-        A dedicated parser path (the *only* sanctioned one) extracts the four
-        real parent-pointer types from those shapes, filters out zero-UUIDs,
-        and deduplicates them into a directed-edge table with an idempotent
-        unique constraint; the public graph is then walked with `WITH RECURSIVE`
-        Postgres CTEs. Ingestion is strictly compliant — only W3C
-        oEmbed-discovered public endpoints, anonymous and CORS-enabled, at a
-        once-daily cadence, with no scraping, credentials, or headless browser,
-        and listing-level privacy always respected.
+        **The lineage harvest is the crux.** Suno's serializer redacts clip parent-UUIDs to the all-zeros UUID on its main endpoints, but missed that pass on exactly two response shapes — the slim clips of `/api/trending` and the `personas[].clip` sub-trees of a public profile. A dedicated parser path (the *only* sanctioned one) extracts the real parent-pointer types from those shapes, filters out zero-UUIDs, and deduplicates them into a directed-edge table with an idempotent unique constraint; the public graph is then walked with `WITH RECURSIVE` Postgres CTEs. Ingestion is strictly compliant — only W3C oEmbed-discovered public endpoints, anonymous and CORS-enabled, at a once-daily cadence, with no scraping, credentials, or headless browser, and listing-level privacy always respected.
 
-        **Money-path and reverse-engineered-API correctness are hardened
-        deliberately.** Concurrent double-charges are blocked by a partial
-        unique index over in-flight report claims; balances debit via
-        optimistic `UPDATE … RETURNING` with a sub-zero rollback; Stripe
-        idempotency is enforced two ways (a unique ledger index plus a
-        processed-events dedupe log); generator failures auto-refund. Because
-        the whole product depends on Suno's unofficial response shapes, a weekly
-        schema-drift canary alerts when they change, and a durable cron-runs
-        table provides leasing and observability that Neon's HTTP driver can't.
-        The app self-hosts as a multi-stage Docker image (Node 20 slim,
-        non-root) behind Traefik + Let's Encrypt, shipped via GHCR and GitHub
-        Actions, with five daily/weekly cron pipelines; the trilingual
-        dictionaries are TypeScript-checked so a missing translation key fails
-        the build.
+        **Money-path and reverse-engineered-API correctness are hardened deliberately.** Concurrent double-charges are blocked by a partial unique index over in-flight report claims; balances debit via optimistic `UPDATE … RETURNING` with a sub-zero rollback; Stripe idempotency is enforced two ways (a unique ledger index plus a processed-events dedupe log); generator failures auto-refund. Because the whole product depends on Suno's unofficial response shapes, a weekly schema-drift canary alerts when they change, and a daily editorial-shelf staleness sentinel flags when a tracked shelf freezes (its UUID rotated away); a durable cron-runs table provides leasing and observability that Neon's HTTP driver can't. The app self-hosts as a multi-stage Docker image (Node 20 slim, non-root) behind Traefik + Let's Encrypt, shipped via GHCR and GitHub Actions, with five daily/weekly cron pipelines; the trilingual dictionaries are TypeScript-checked so a missing translation key fails the build.
       outcomes: |
-        Live at seismophone.chanmeng.org, solo-built across 99 commits over
-        roughly three months (2026-04-12 → 2026-07-10). The apparatus runs 19
-        pages, 28 API route handlers, 56 components, and five cron pipelines
-        over a 17-table schema, plus a 7-tool read-only MCP server. Its
-        signature result is the sealed remix-lineage archive — ~102 real
-        parent→child edges recovered in a single 2026-05-09 backfill before Suno
-        closed the redaction gap — which makes the public lineage explorer a
-        dataset that, by construction, cannot be collected again. The build also
-        went through structured hardening waves (Codex-reviewed) covering
-        credits, privacy, query performance, observability, and the
-        schema-drift canary. The forensic teardown of Suno's frozen `/api/
-        trending` fossil is itself a published finding, reframing a stale API
-        into a monitored artifact.
+        Live at seismophone.chanmeng.org, solo-built across 99 commits over roughly three months (2026-04-12 → 2026-07-10). The apparatus runs 19 pages, 28 API route handlers, 57 components, and five cron pipelines over a 17-table schema, plus a 7-tool read-only MCP server. Its signature result is the sealed remix-lineage archive — ~102 real parent→child edges recovered in a single 2026-05-09 backfill before Suno closed the redaction gap — which makes the public lineage explorer a dataset that, by construction, cannot be collected again. The forensic teardown of Suno's frozen `/api/trending` fossil is itself a published finding; when that feed proved dead, the observatory added a live pulse on Suno's real curated Explore shelves as the forward-looking replacement. The build also went through structured hardening waves (Codex-reviewed) covering credits, privacy, query performance, observability, and the schema-drift and editorial-shelf sentinels.
       myRole: |
-        Sole author of the entire system — product concept and "observatory"
-        positioning, the lineage-harvest discovery and parser, the 17-table
-        schema and daily ingestion pipeline, all seven insight engines, the
-        Stripe credit ledger and its concurrency hardening, the recursive-CTE
-        lineage graph and SVG explorer, the read-only MCP server, the trilingual
-        i18n system, and the self-hosted Docker + Traefik deployment with its
-        cron and observability tooling. 99 of 99 commits are mine.
+        I built the entire system solo — product concept and "observatory" positioning, the lineage-harvest discovery and parser, the 17-table schema and daily ingestion pipeline, the fossil-watch teardown and the live editorial-shelf pulse, all seven insight engines, the Stripe credit ledger and its concurrency hardening, the recursive-CTE lineage graph and SVG explorer, the read-only MCP server, the trilingual i18n system, and the self-hosted Docker + Traefik deployment with its cron and observability tooling. 99 of 99 commits are mine.
   - id: douyin-mall-java-template
     provenance: bootcamp
     tier: archive

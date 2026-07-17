@@ -71,7 +71,7 @@ linkedin:
         body: When your audience isn't the default Silicon Valley user, the framework belongs in the schema, not in UI decoration. Tam-AI-Ti — an AI Financial Wellness Coach for Māori communities — encodes Te Whare Tapa Whā as a first-class domain model. 351 solo commits, 48-table schema, voice-first coaching in te reo Māori and English.
       - emoji: 🚀
         heading: Current & Recent Work
-        body: AI Agent Architect @ Engram (Anthropic Partner Network Architect Cohort) · former CTO @ Sanicle Inc. → IBM Silver Partner via watsonx integration · Senior Engineer & Ambassador @ She Sharp (2,200+ member NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest (4 cohorts, bilingual platform built solo).
+        body: AI Agent Architect @ Engram (Anthropic Partner Network Architect Cohort) · former CTO @ Sanicle Inc. → IBM Silver Partner via watsonx integration · Senior Engineer & Ambassador @ She Sharp (2,200+ member NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest (5 cohorts, bilingual platform built solo).
       - emoji: 🎓
         heading: Credentials & Earlier Journey
         body: Master of Applied Computing with Distinction, Lincoln University, New Zealand · pursuing Claude Certified Architect — Foundations · former Backend Engineer @ ByteDance (Go services) · UN CSW 69 Speaker recognized by UN Women · 12 companies and 480+ GitHub stars across the journey.
@@ -153,7 +153,7 @@ linkedin:
 
             • Week 8 outcome: each student owns a live AI-powered personal site — portfolio + AI-clone chatbot + blog + auto-generated CV — on Next.js + Neon Postgres + Drizzle + Vercel.
             • Week 12 outcome: each team of 2–4 ships a deployed multi-user AI SaaS — habit coaches, AI story studios, dorm chore splitters. Public Demo Day with audience voting.
-            • Built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, 95.7% solo (198 of 207 commits). Hosts 4 cohorts side-by-side with a version-aware RAG assistant — students query their cohort's own materials and get answers from inside the course content.
+            • Built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, ~96% solo (211 of 220 non-merge commits). Hosts 5 cohorts side-by-side with a version-aware RAG assistant — students query their cohort's own materials and get answers from inside the course content.
             • Fully bilingual EN / CN.
           skills:
             - Curriculum Development
@@ -182,7 +182,7 @@ linkedin:
             What "instant" means in production:
 
             • Users get into the experience in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel. Warm-pool hit rate 84.6%; 0 errors at 100 concurrent live users under load.
-            • 360 total platform commits, 353 (98%) authored solo.
+            • 439 total platform commits, 426 (~97%) authored solo.
 
             External validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com.
 
@@ -192,7 +192,7 @@ linkedin:
             • Cross-cloud migration: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single 30-minute zero-downtime cutover.
             • 7-trigger AI rules engine deciding which games to pre-load, for whom, when.
 
-            Stack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, GPT-4o-mini.
+            Stack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, gpt-5.4-mini.
           skills:
             - Go (Programming Language)
             - Kubernetes
@@ -240,7 +240,7 @@ linkedin:
 
             Mandate: replace the no-code Webflow site with a real engineering platform, and own it operationally.
 
-            What shipped (648 of 748 commits solo — 86.6% — across 10 months):
+            What shipped (793 of 936 commits solo — 85% — across ~12 months):
 
             • AI mentor-mentee matching engine — GPT-4o-mini scoring potential pairs across 5 weighted dimensions (skill, goal, personality, industry, logistics) with explainable natural-language reasons, rule-based fallback, Redis caching, and human admin approval as the final gate.
             • Three role-permissioned dashboards (mentor / mentee / admin), Stripe membership billing, audit logging.
@@ -271,14 +271,14 @@ linkedin:
           location: Shanghai, China · Remote
           foundViaLinkedIn: true
           description: |-
-            Sole technical leader and co-architect with founder Zhu Yihan at FemTech Weekend — China's first organisation built around women's health technology (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders). Currently delivering all engineering for the 2026 Shanghai Summit.
+            Sole technical leader and co-architect with founder Zhu Yihan at FemTech Weekend — China's first organisation built around women's health technology (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders). Delivered all engineering for the 2026 Shanghai Summit (June 22–25).
 
             Built and shipped two complete platform generations from scratch, solo:
 
             • Generation 1 — femtechweekend.com (Mar 2025–). Next.js 15 with Notion as the CMS so the non-technical founder could publish directly inside Notion (a tool she already used daily) and the website rendered it live. Bilingual EN / CN from day one. 58 commits, 100% solo.
-            • Generation 2 — current platform (May 2025–). Deliberate rebuild on Docusaurus when the site's centre of gravity shifted from "marketing site with CMS" to "research publication and multi-event hub." Adds Drizzle + Neon Postgres for typed application data, deployed on Cloudflare Pages for global edge delivery. 544 commits, 529 solo (97.2%).
+            • Generation 2 — current platform (May 2025–). Deliberate rebuild on Docusaurus when the site's centre of gravity shifted from "marketing site with CMS" to "research publication and multi-event hub." Adds Drizzle + Neon Postgres for typed application data, deployed on Cloudflare Pages for global edge delivery. 564 commits, 534 solo (94.7%).
 
-            Shanghai Summit 2026 (June 22–25): 16 confirmed speakers headlined by Ida Tin — the Clue co-founder who coined the term "FemTech" in 2016. Multi-tier sponsorship; AVPN among named partners. Every page rendered through infrastructure I designed and operate solo.
+            Shanghai Summit 2026 (June 22–25) drew 20 confirmed speakers headlined by Ida Tin — the Clue co-founder who coined the term "FemTech" in 2016. Multi-tier sponsorship; AVPN among named partners. Every page rendered through infrastructure I designed and operate solo.
 
             Two original research reports published through the platform: FemTech Market Map for Greater China (May 2025), FemmeHealth Ventures Alliance announcement (June 2025).
           skills:
@@ -863,16 +863,10 @@ linkedin:
           - Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
       - name: PostgreSQL Recursive CTEs
         associations:
-          - SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
+          - Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
       - name: Reverse Engineering
         associations:
-          - SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
-      - name: CSS 3D Transforms
-        associations:
-          - Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)
-      - name: Game Design
-        associations:
-          - Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)
+          - Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
       - name: Cursor IDE Hooks
         associations:
           - echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
@@ -896,7 +890,7 @@ linkedin:
           - Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)
       - name: Cloudflare Workers AI
         associations:
-          - programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+          - programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
       - name: Open Source Maintenance
         associations:
           - Google News MCP Server — Early-Ecosystem AI Tool-Use Server
@@ -923,7 +917,7 @@ linkedin:
       - name: Docusaurus
         associations:
           - FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
-          - programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+          - programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
       - name: Migration Strategy
         associations:
           - Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant
@@ -1010,7 +1004,7 @@ linkedin:
         associations:
           - Chief Technology Officer (CTO) at FemTech Weekend
           - FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
-          - programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+          - programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
       - name: Notion API
         associations:
           - Chief Technology Officer (CTO) at FemTech Weekend
@@ -1044,7 +1038,7 @@ linkedin:
       - name: Retrieval-Augmented Generation (RAG)
         associations:
           - AI Instructor & Mentor at TechNest Community
-          - programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+          - programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
       - name: Curriculum Development
         associations:
           - AI Instructor & Mentor at TechNest Community
@@ -1159,7 +1153,7 @@ linkedin:
         associations:
           - Chief Technology Officer (CTO) at FreePeriod
           - FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
-          - SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
+          - Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
       - name: Mobile Application Development
         associations:
           - Full Stack Developer at CORDE
@@ -1230,9 +1224,9 @@ linkedin:
         - Neon Postgres
         - OpenAI API
       hasOtherContributors: true
-    - name: SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
+    - name: Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
       description: |-
-        SunoStats is the first public tool that maps how a Suno-generated song's lineage descends from its parent. Suno is the AI music platform; its own product doesn't expose lineage to creators. SunoStats does, because the research behind it discovered that Suno's API serializer leaks the parent→child UUID chain only on the trending feed and persona sub-trees — nowhere else, not even on the remix page.
+        Seismophone is an independent observatory for AI music that maps how a Suno-generated song's lineage descends from its parent. Suno is the AI music platform; its own product doesn't expose lineage to creators. Seismophone does, because the research behind it discovered that Suno's API serializer leaks the parent→child UUID chain only on the trending feed and persona sub-trees — nowhere else, not even on the remix page.
 
         • Three open public lenses (creator profiles, trending, lineage view) + single-purchase deep-dive reports, each a deterministic analysis of one creator's own catalog.
         • Lineage traversal uses WITH RECURSIVE CTEs in Postgres so the graph walk happens at the database, not the application layer.
@@ -1252,14 +1246,14 @@ linkedin:
     - name: Vitex — AI Career Agent SaaS (vitex.org.nz)
       dateRange: Feb 2026 – Present
       description: |-
-        Vitex turns a job description plus a candidate's background into an ATS-optimised resume PDF and matching cover letter in about 30 seconds. The user pastes a job ad, uploads their existing CV, and a seven-step AI pipeline streams the tailored documents back. A natural-language refinement box then lets them iterate — "make the leadership section stronger" — and the AI regenerates just that slice.
+        Vitex turns a job description plus a candidate's background into an ATS-optimised resume PDF and matching cover letter in about 30 seconds. The user pastes a job ad, uploads their existing CV, and an 8-step AI pipeline streams the tailored documents back. A natural-language refinement box then lets them iterate — "make the leadership section stronger" — and the AI regenerates just that slice.
 
-        • Pipeline: JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → Typst document generation, streamed via SSE.
+        • Pipeline: JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → template render (Typst source) → PDF compile, streamed via SSE.
         • Typst compiles each PDF locally in under 100ms — the user sees the document before finishing the reasoning summary.
         • Three production migrations (including a LaTeX → Typst engine swap) shipped with zero outage.
-        • 168 commits over ~3 months, ~95% solo. Stripe credit ledger; public shareable links via per-document tokens for organic distribution.
+        • Stripe credit ledger; public shareable links via per-document tokens for organic distribution.
 
-        Stack: Next.js 15, Vercel AI SDK + GPT-4o, Typst, Stripe, Neon Postgres + Drizzle, Docker + Traefik on DigitalOcean.
+        Stack: Next.js 15, Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract), Typst, Stripe, Neon Postgres + Drizzle, Docker + Traefik on DigitalOcean.
       skills:
         - Vercel AI SDK
         - Typst
@@ -1271,7 +1265,7 @@ linkedin:
     - name: ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans
       dateRange: Jun 2026 – Present
       description: |-
-        ArchLang is a programming language I designed for architecture: you write a floor plan as code — walls, rooms, doors, windows, fixtures, dimensions — and it compiles to deterministic, professional SVG (also DXF, PDF, PNG). Think Typst or LaTeX, but for building plans instead of documents.
+        ArchLang is a programming language I designed for architecture: you write a floor plan as code — walls, rooms, doors, windows, fixtures, dimensions — and it compiles to deterministic, professional SVG (also DXF, PDF, PNG, text). Think Typst or LaTeX, but for building plans instead of documents.
 
         • Hand-written lexer + recursive-descent parser in pure TypeScript with zero runtime dependencies — the same compiler runs in Node and in the browser.
         • Exports structured diagnostics instead of throwing, with lint / describe / repair pipelines for architectural-soundness checking and circulation analysis.
@@ -1290,14 +1284,14 @@ linkedin:
     - name: ArchCanvas — AI Design Agent for Architects That Productizes ArchLang
       dateRange: Jun 2026 – Present
       description: |-
-        ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it generates real SVG floor plans through the ArchLang compiler plus GPT-4o / DALL·E renderings, then lets you iterate on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.
+        ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it generates real SVG floor plans through the ArchLang compiler plus gpt-5.5 orchestration + GPT Image 2 renderings grounded on the compiled plan, then lets you iterate on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.
 
         • Sister product to my ArchLang language — consumes @chanmeng666/archlang as a package, so it produces editable parametric plans, not just images.
         • AI review mode surfaces anchored findings directly on the canvas with one-click "have AI fix".
         • Export any project as a real git repo (isomorphic-git + memfs).
         • Refinement mutates the plan in place — edits, parametric tweaks and re-renders never regenerate it from scratch.
 
-        Stack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-4o + DALL·E), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.
+        Stack: Next.js, React 19, Vercel AI SDK + OpenAI (gpt-5.5 + GPT Image 2; GPT-4o for vision), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.
       skills:
         - Vercel AI SDK
         - AI Agent Architecture
@@ -1311,9 +1305,9 @@ linkedin:
     - name: echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
       dateRange: Nov 2025 – Present
       description: |-
-        echook adds audio cues to AI coding assistants so you stop staring at the terminal waiting for them to finish. Twenty-six hook events — task started, permission needed, build failed, agent stopped, rate-limit hit, context nearing 100% — each play a sound and optionally fire Slack / Discord / Teams / ntfy webhooks. Same product on Claude Code, Cursor IDE, and Codex CLI. Install via natural language ("install echook with the Focus Flow theme").
+        echook adds audio cues to AI coding assistants so you stop staring at the terminal waiting for them to finish. Thirty-seven hook events — task started, permission needed, build failed, agent stopped, rate-limit hit, context nearing 100% — each play a sound and optionally fire Slack / Discord / Teams / ntfy webhooks. Same product on Claude Code, Cursor IDE, and Codex CLI. Install via natural language ("install echook with the Focus Flow theme").
 
-        • 42 releases, 139 tests on triple-platform CI (Ubuntu / Windows / macOS × Python 3.9 / 3.12 / 3.13). 26 hook events, 2 themes.
+        • 42 releases, 248 tests on triple-platform CI (Ubuntu / Windows / macOS × Python 3.9 / 3.12 / 3.13). 37 hook events, 2 themes.
         • Context-window status line with live quota bars — see remaining budget without alt-tabbing.
         • Explicitly preserved as the author's IP in the Engram Architect Cohort Engagement Letter (9 May 2026); Engram is in Anthropic's Partner Network.
         • Sister repo echook-promo-video: 88.7-second product film built in React + Remotion + AI-generated audio — zero Premiere, zero voice actors.
@@ -1333,7 +1327,7 @@ linkedin:
         The member-lifecycle platform that now runs She Sharp — NZ's largest women-in-tech community (charitable trust CC57025; 2,200+ members, 1,000+ active, 50+ corporate partners, 84+ events since 2014). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.
 
         • AI mentor–mentee matcher: GPT-4o-mini scoring pairs across five weighted dimensions (Skill 35%, Goal 30%, MBTI 15%, Industry 10%, Logistics 10%) with explainable reasons and a rule-based fallback; admin as final gate.
-        • 648 of 748 commits solo (86.6%) across 10 months. Frontend designer Lesley Gao authored ~100 (13.4%).
+        • 793 of 936 commits solo (85%) across ~12 months. Frontend designer Lesley Gao authored 140 (15%).
         • Slack ecosystem: weekly stats digest, NZ funding-opportunities crawler over six government sources, Claude Code skill that publishes new events with one dry-run-default command.
 
         Stack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.
@@ -1350,11 +1344,11 @@ linkedin:
     - name: FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
       dateRange: Mar 2025 – Present
       description: |-
-        The official site and submissions hub for FemTech Weekend — China's first women's-health-technology organisation — currently powering Shanghai Summit 2026 (June 22–25). 16 confirmed speakers are headlined by Ida Tin, the Clue co-founder who coined the term "FemTech" in 2016.
+        The official site and submissions hub for FemTech Weekend — China's first women's-health-technology organisation — which delivered Shanghai Summit 2026 (June 22–25). 20 confirmed speakers were headlined by Ida Tin, the Clue co-founder who coined the term "FemTech" in 2016.
 
         Gen-2 was a deliberate rewrite from Next.js to Docusaurus when the site's centre of gravity shifted from "marketing site" to "research publication and multi-event hub". Visitors today read original research reports (FemTech Market Map for Greater China; FemmeHealth Ventures Alliance), browse the speaker programme, and submit pitches / programme entries / speaker applications / ecosystem partnerships through four review pipelines.
 
-        • 529 of 544 commits solo (97.2%) over one year.
+        • 534 of 564 commits solo (94.7%) over ~13.5 months.
         • Bilingual EN / CN from day one — the non-technical founder Zhu Yihan edits the live site directly.
         • 15 Cloudflare Pages Functions (~3,839 LOC) replace a separate backend; submissions + email + admin review run on edge serverless.
 
@@ -1368,14 +1362,14 @@ linkedin:
         - Neon Postgres
         - Notion API
       hasOtherContributors: true
-    - name: programming.chanmeng.org — 4-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+    - name: programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
       dateRange: Oct 2024 – Present
       associatedWith: TechNest Community
       description: |-
-        The bilingual teaching site behind every AI programming cohort I've run since late 2024 — Forward with Her (2024-winter, 2025-summer), Her Waka 2026 (NZ Ministry of Social Development funded, at academyEX Auckland), and TechNest 2026 (Canada). All four cohorts coexist on one platform; each student gets their own version-aware course.
+        The bilingual teaching site behind every AI programming cohort I've run since late 2024 — Forward with Her (2024-winter, 2025-summer), Her Waka 2026 (NZ Ministry of Social Development funded, at academyEX Auckland), Peyvand Academy 2026, and TechNest 2026 (Canada). All five cohorts coexist on one platform; each student gets their own version-aware course.
 
         • In-course AI assistant: ~4,800 bilingual document chunks indexed with RAG (retrieval-augmented generation — the AI looks up the cohort's actual materials before answering, so students don't get hallucinations from the wrong version).
-        • 198 of 207 commits solo (95.7%); the remainder are bot commits (Claude code-review automation + Dependabot).
+        • 211 of 220 non-merge commits solo (~96%); the remainder are bot commits (Claude code-review automation + Dependabot).
         • Notion-as-CMS classroom: course-wide message board, capstone-showcase page with live audience voting, Typst PDF handouts auto-built from MDX.
         • Bilingual EN / CN with Algolia contextual search.
 
@@ -1410,24 +1404,6 @@ linkedin:
         - OpenAI API
         - CopilotKit
       hasOtherContributors: true
-    - name: Pa Tiaki — Guardians of Aotearoa (100% CSS 3D Tower-Defense Game)
-      dateRange: Feb 2026 – Mar 2026
-      description: |-
-        A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on the Māori mythology of Aotearoa. The constraint is the point: every tower, enemy, projectile, and explosion is a real DOM element animated by the browser's CSS engine.
-
-        • Six towers named after Māori weapons and atua (Taiaha, Mere, Tangaroa, Tohunga, Tāwhiri, Mahuika); six enemies from Māori legend; three maps as place-words (Te Awa, Te Maunga, Te Moana). Cultural integration is structural, not decorative: Tangaroa (ocean atua) slows with ice, Mahuika (fire goddess) deals damage-over-time, Tāwhiri (storm god) chains lightning.
-        • DOM object pooling holds 60 FPS through dense Wave-10 combat.
-        • Full cloud backend — leaderboards, daily challenges, tech tree, crafting, endless mode — with server-side anti-cheat validating submitted scores.
-        • 84 commits over 2 months, ~99% solo; explicit P0 → P4 phase plan visible in the commit log.
-
-        Stack: CSS 3D + ES6 + LESS + Gulp 4; Cloudflare Workers + Hono + Neon Postgres; Web Audio API + Howler.js.
-      skills:
-        - CSS 3D Transforms
-        - Cloudflare Pages / Workers
-        - JavaScript (ES6)
-        - Hono
-        - Neon Postgres
-        - Web Audio API
     - name: Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx
       dateRange: Feb 2025 – Feb 2026
       associatedWith: Sanicle

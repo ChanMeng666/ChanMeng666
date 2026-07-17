@@ -24,20 +24,17 @@ shots were pruned).
 | Folder | LinkedIn project | Source URL | Shots |
 |---|---|---|---|
 | `eatropolis/` | Eatropolis — Auckland Culinary Festival | https://eatropolis.co.nz/ | 5 |
-| `sunostats/` | SunoStats — Suno Music-Lineage Explorer | https://sunostats.chanmeng.org/ (+ `/trending`) | 5 |
+| `sunostats/` | Seismophone (repo: sunostats) — independent observatory for AI music | https://seismophone.chanmeng.org/ (+ `/trending`) — legacy `sunostats.chanmeng.org` redirects | 5 |
 | `vitex/` | Vitex — AI Career Agent SaaS | https://www.vitex.org.nz/ (+ `/pricing`) | 5 |
 | `fanfic-lab/` | FanFic Lab — LangGraph HSR Co-Creation | https://fanfic-lab.tech/ (+ `/about`) | 2 |
 | `she-sharp/` | She Sharp Member Platform | member-app login https://she-sharp-zeta.vercel.app/ | 1 |
 | `femtech-weekend/` | FemTech Weekend Gen-2 Platform | https://www.femtechweekend.com/ (+ summit, insights, stories) | 8 |
 | `programming-chanmeng/` | programming.chanmeng.org teaching platform | https://programming.chanmeng.org/ (+ curriculum, message board) | 4 |
 | `tam-ai-ti/` | Tam-AI-Ti — financial-wellness coach | https://tamaiti.whiri-ai.com/ | 5 |
-| `pa-tiaki/` | Pa Tiaki — CSS 3D tower defense | https://towerdefense.chanmeng.org/ | 1 |
 | `free-period/` | FreePeriod — period-poverty platform | https://free-period-website.pages.dev/ (+ products, impact) | 6 |
 
 ## Notes / limitations
 
-- **Pa Tiaki** gates actual gameplay behind a login wall ("LOGIN REQUIRED"), so
-  only the branded main menu is public — that's the menu shot.
 - **FanFic Lab** is a Chinese-language HSR fan product; the story-discovery feed
   is empty publicly ("已加载 0 篇"), so only the hero + About page were worth
   capturing. The hero (HSR character art) is the strongest visual.

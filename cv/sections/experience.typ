@@ -22,7 +22,7 @@
     org-url: "https://www.technestcommunity.com/",
     dates: "Apr 2026 — Present",
     location: [St John's, Newfoundland, Canada · *Remote*],
-    summary: [Built and sole-teaches TechNest's first AI-specialised mentorship track — *12-week prompt-first curriculum, students ship portfolio-grade AI apps by week 8*. Also built the bilingual teaching platform 95.7% solo, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV).],
+    summary: [Built and sole-teaches TechNest's first AI-specialised mentorship track — *12-week prompt-first curriculum, students ship portfolio-grade AI apps by week 8*. Also built the bilingual teaching platform ~96% solo, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV).],
   )
   role-line(
     title: "Founding Principal Engineer, Activation, Execution & AI Systems",
@@ -30,7 +30,7 @@
     org-url: "https://gavigo.com/",
     dates: "Oct 2025 — Present",
     location: [Wilmington, Delaware, United States · *Remote*],
-    summary: [Promoted *Core Engineer → Founding Principal Engineer across three contract iterations* — owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install). *p50 < 1 ms activation latency · 84.6% warm-pool hit rate* · cross-cloud DigitalOcean → GCP GKE migration in a *30-minute zero-downtime cutover* · *98% solo on 353 commits*.],
+    summary: [Promoted *Core Engineer → Founding Principal Engineer across three contract iterations* — owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install). *p50 < 1 ms activation latency · 84.6% warm-pool hit rate* · cross-cloud DigitalOcean → GCP GKE migration in a *30-minute zero-downtime cutover* · *~97% solo on 426 of 439 non-merge commits*.],
   )
   role-line(
     title: "Senior Full-Stack Engineer & Website Team Lead",
@@ -38,7 +38,7 @@
     org-url: "https://www.shesharp.org.nz/",
     dates: "Jul 2025 — Present",
     location: [Auckland, New Zealand · *Hybrid*],
-    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild *New Zealand's leading women-in-STEM platform* (*2,200+ registered members, 8,000+ women supported lifetime*) · Webflow → Next.js cutover *86.6% solo across 10 months*, 10+ years of legacy content preserved with *zero broken inbound links*, AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top.],
+    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild *New Zealand's leading women-in-STEM platform* (*2,200+ registered members, 8,000+ women supported lifetime*) · Webflow → Next.js cutover *85% solo across ~12 months*, 10+ years of legacy content preserved with *zero broken inbound links*, AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top.],
   )
   role-line(
     title: "Chief Technology Officer",
@@ -46,7 +46,7 @@
     org-url: "https://www.femtechweekend.com/",
     dates: "Mar 2025 — Present",
     location: [Chengdu, Sichuan, China · *Remote*],
-    summary: [Sole technical lead for *China's first FemTech organisation* since its inaugural conference — built and rebuilt the entire web platform twice (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite). Currently operating the *2026 Shanghai Summit, 16 confirmed speakers including FemTech-term originator Ida Tin*.],
+    summary: [Sole technical lead for *China's first FemTech organisation* since its inaugural conference — built and rebuilt the entire web platform twice (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite). Delivered the *2026 Shanghai Summit (June 22–25), 20 confirmed speakers including FemTech-term originator Ida Tin*.],
   )
 
   v(4pt)

@@ -30,7 +30,7 @@ When your audience isn't the default Silicon Valley user, the framework belongs 
 ## 🚀 Current & Recent Work
 
 ```
-AI Agent Architect @ Engram (Anthropic Partner Network Architect Cohort) · former CTO @ Sanicle Inc. → IBM Silver Partner via watsonx integration · Senior Engineer & Ambassador @ She Sharp (2,200+ member NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest (4 cohorts, bilingual platform built solo).
+AI Agent Architect @ Engram (Anthropic Partner Network Architect Cohort) · former CTO @ Sanicle Inc. → IBM Silver Partner via watsonx integration · Senior Engineer & Ambassador @ She Sharp (2,200+ member NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest (5 cohorts, bilingual platform built solo).
 ```
 
 ## 🎓 Credentials & Earlier Journey

@@ -178,7 +178,7 @@ work:
       - Notion API
       - Algolia DocSearch
     narrative:
-      impactHeadline: "TechNest's first AI-specialised mentorship track — sole instructor of a 12-week prompt-first curriculum with weekly live classes, recordings, an in-course RAG assistant, and capstone voting. Students ship portfolio-grade AI apps by week 8 on a 95.7%-solo platform."
+      impactHeadline: "TechNest's first AI-specialised mentorship track — sole instructor of a 12-week prompt-first curriculum with weekly live classes, recordings, an in-course RAG assistant, and capstone voting. Students ship portfolio-grade AI apps by week 8 on a ~96%-solo platform."
       companyContext: |
         TechNest Community is a Newfoundland-based nonprofit, established
         November 1, 2024, with the stated mission of "making technology
@@ -278,13 +278,15 @@ work:
         **Designed and built the teaching platform itself** — published as
         my personal teaching site at *ai-programming-teaching-project*
         (Docusaurus 3.8+ with `@docusaurus/faster`, deployed on
-        Cloudflare Pages) and authored 100% by me, with 198 of 207 commits
-        from my two GitHub identities and the remaining 9 from automated
-        bots (Claude code-review automation and Dependabot security
-        bumps). The platform serves four cohort versions side by side
+        Cloudflare Pages) and authored 100% by me, with 211 of 220 non-merge
+        commits from my two GitHub identities and the remaining 9 from
+        automated bots (Claude code-review automation and Dependabot security
+        bumps). The platform serves five cohort versions side by side
         through Docusaurus versioned docs: `2024-winter`, `2025-summer`,
-        `2026-her-waka` (the academyEX / Her Waka programme), and
-        `2026-technest` (the active cohort, set as default). New cohorts
+        `2026-her-waka` (the academyEX / Her Waka programme),
+        `2026-technest` (the active cohort, set as default), and
+        `2026-peyvand-academy` (the She Sharp × Peyvand Academy youth
+        workshop). New cohorts
         slot in without disturbing older ones, and students who took a
         prior cohort retain a stable URL for their materials.
 
@@ -341,7 +343,7 @@ work:
       ("natural language is the source code") with 8 teaching weeks plus a
       4-week multi-user-AI capstone — and built the bilingual Docusaurus
       teaching platform that hosts it (versioned cohort docs, in-course AI
-      assistant with RAG over all four cohorts, Notion-backed message board
+      assistant with RAG over all five cohorts, Notion-backed message board
       and capstone voting, Typst PDF handout pipeline). Programme runs April
       25 – July 17, 2026; reports to Abiodun Oyedele and Afolasade Bello.
 
@@ -357,9 +359,9 @@ work:
     tier: flagship
     recency: active
     lastUpdated: "2026-05-18"
-    keywords: [Go, "Kubernetes (GKE)", "React Native", WebSocket, "Redis", "GPT-4o-mini", "AI orchestration", "Distributed systems", "Founding engineer"]
+    keywords: [Go, "Kubernetes (GKE)", "React Native", WebSocket, "Redis", "gpt-5.4-mini", "AI orchestration", "Distributed systems", "Founding engineer"]
     narrative:
-      impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owns the Intelligence Layer end-to-end (98% solo on 353 commits) with a contractually protected technical domain."
+      impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owns the Intelligence Layer end-to-end (~97% solo on 426 of 439 commits) with a contractually protected technical domain."
       companyContext: |
         GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
         stage, Istanbul-founded by Saba Gecgil and registered in
@@ -414,8 +416,9 @@ work:
         Cloud GKE (Belgium) in a clean ~30-minute cutover on 2026-03-11
         when GAVIGO's Google Cloud partnership took effect — full
         production-grade expertise on both DigitalOcean and Google Cloud.
-        360 total commits, 353 (98%) solo across my two git identities;
-        remainder is GitHub Actions bot.
+        439 total commits, 426 (~97%) solo across my two git identities;
+        the remainder split between the GitHub Actions bot and a second
+        engineer who joined in June 2026.
 
         Real measured platform performance, from the production benchmark
         spine: restore path <1 ms p50, cold path ~12 ms p50, 84.6%
@@ -480,7 +483,7 @@ work:
         in real time. Companion services: React + Vite dashboard, React
         Native + Expo 54 mobile build served via nginx, always-warm shared
         game-server pod baking ~25 FOSS games for zero per-game cold
-        start, Node + Express AI-service pod with GPT-4o-mini, Phase 6+
+        start, Node + Express AI-service pod with gpt-5.4-mini, Phase 6+
         compute / inference workloads, Redis 7 with allkeys-LRU and a
         400 MB warm-pool budget, optional Postgres 16 for social data.
 
@@ -686,7 +689,7 @@ work:
       companyContext: |
         She Sharp is New Zealand's leading women-in-STEM community — a
         registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
-        AI/NLP researcher and Director of Women in Tech at AUT. The
+        AI/NLP researcher and Head of Computer and Information Sciences at AUT. The
         organization runs a mentorship programme, a corporate-partner
         network, and a recurring events calendar that together support
         2,200+ registered members, 1,000+ active, and 8,000+ women supported
@@ -713,7 +716,7 @@ work:
         (Her Waka MSD-funded programme, SEO strategy).
       impactDelivered: |
         Shipped and operate the new full-stack She Sharp platform replacing
-        the legacy Webflow site. 648 of 748 commits authored solo (86.6% of
+        the legacy Webflow site. 793 of 936 commits authored solo (85% of
         total). Headline systems delivered: AI mentor-mentee matching
         (GPT-4o-mini, 5-dimensional scoring with human-in-the-loop review),
         three role-permissioned dashboards (mentor / mentee / admin) with
@@ -752,10 +755,10 @@ work:
         Postgres, NextAuth 5 with bcrypt + Google/GitHub OAuth, Tailwind 4
         + shadcn/ui, Resend transactional email, Cloudinary image pipeline,
         Stripe-integrated membership flow, Vercel edge deployment +
-        3 Vercel Cron jobs. Schema runs 1,392 lines / 30 pgEnums / 34
-        pgTables / 27 SQL migrations — every business concept is a typed
+        3 Vercel Cron jobs. Schema runs 1,411 lines / 30 pgEnums / 35
+        pgTables / 26 SQL migrations — every business concept is a typed
         enum so invalid states are unrepresentable. 95 API routes, 53
-        pages, 145 components.
+        pages, 160 components.
 
         The AI matching engine is a deliberate two-stage pipeline:
         rule-based pre-filter for cost control, then GPT-4o-mini at
@@ -873,7 +876,7 @@ work:
         addresses before unlocking research reports.
 
         **Generation 2 — the current platform (femtech-weekend-website).**
-        544 commits, 529 of them (97.2%) authored solo by me. A
+        564 commits, 534 of them (94.7%) authored solo by me. A
         substantially larger and more ambitious system: Docusaurus 3.9 as
         the editorial spine (chosen deliberately over keeping Next.js,
         because the site's centre of gravity had shifted from "marketing
@@ -896,16 +899,16 @@ work:
         the *FemmeHealth Ventures Alliance* partnership announcement
         (2025-06).
 
-        **Shanghai Summit 2026 delivery.** The platform is currently
-        carrying the organisation's largest event: a four-day Shanghai
-        Summit running **June 22–25, 2026** with the theme *Where Global
-        Women's Health Meets China*. The lineup includes 16 early confirmed
+        **Shanghai Summit 2026 delivery.** The platform carried the
+        organisation's largest event: a four-day Shanghai
+        Summit held **June 22–25, 2026** with the theme *Where Global
+        Women's Health Meets China*. The lineup featured 20 confirmed
         speakers headlined by **Ida Tin** (Clue co-founder; coined the term
         "FemTech" in 2016), alongside Alice Zheng, Dominnique Karetsos,
         Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike
         Steinebach, Stella Fu, Peixian Lu, Sandy Lv, Chai Ke (柴可), Chen
         Jian, Jazmin Seregi, Judy Lux, Abraham Morse, and Ira Evdokimova.
-        The summit is structured as a flagship conference plus a dedicated
+        The summit was structured as a flagship conference plus a dedicated
         capital and pitch day plus curated site visits, with named partners
         including AVPN and a multi-tier sponsor programme — all of it
         rendered, managed, and updated through infrastructure I designed
@@ -976,8 +979,8 @@ work:
         check the dashboard.
 
         **Effectively no team to lean on.** Generation 1 was 100% solo;
-        Generation 2 received 17 commits from one occasional contributor
-        out of 544 total — 97.2% solo. Every architectural decision,
+        Generation 2 received 30 commits from one occasional contributor
+        out of 564 total — 94.7% solo. Every architectural decision,
         deployment incident, schema migration, and last-minute speaker
         update is on me, and the platform has remained continuously
         operational through both generations and through active summit
@@ -986,9 +989,9 @@ work:
       CTO at FemTech Weekend, China's first women's health-tech organisation.
       Solo-built two generations of the public platform — original Next.js +
       Notion site (58 commits, 100% solo) and the current Docusaurus +
-      Drizzle/Neon + Cloudflare Pages platform (544 commits, 97.2% solo) — and
-      currently delivering the digital infrastructure for the 2026 Shanghai
-      Summit (June 22–25, 16 confirmed speakers including Ida Tin), the
+      Drizzle/Neon + Cloudflare Pages platform (564 commits, 94.7% solo) — and
+      delivered the digital infrastructure for the 2026 Shanghai
+      Summit (June 22–25, 20 confirmed speakers including Ida Tin), the
       organisation's largest event to date.
 
   - id: copilotkit

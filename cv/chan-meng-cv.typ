@@ -38,7 +38,7 @@
     "Cloudflare Workers", "Cloudflare Vectorize", "Cloudflare KV", "OpenNext",
     "Kubernetes", "GKE", "GCP", "AWS", "Docker", "Traefik", "Redis",
     "TypeScript", "Python", "Go", "Java", "SQL", "Typst",
-    "GPT-4o", "GPT-4o-mini", "Llama 3.1 8B", "Llama 3.x",
+    "GPT-4o", "GPT-4o-mini", "gpt-5.5", "gpt-5.4-mini", "Llama 3.1 8B", "Llama 3.x",
     "production AI", "RAG", "cultural technology", "women's health technology",
     "te reo Māori", "Auckland New Zealand",
   ),

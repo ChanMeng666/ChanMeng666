@@ -113,28 +113,28 @@ const projects = [
     url: "https://ire.gavigo.com/",
     role: "Founding Principal Engineer, Activation/Execution/AI Systems",
     summary:
-      "Sub-millisecond app activation platform — lets users open straight into a game without an app-store install. Tail-latency-aware: p50 < 1 ms · 84.6% warm-pool hit rate. Structured error propagation with errorCategory + isRetryable. Cross-cloud DigitalOcean → GCP GKE migration in ~30 min zero-downtime cutover. Promoted Core Engineer → Founding Principal Engineer across three contract iterations · 98% solo on 353 commits.",
+      "Sub-millisecond app activation platform — lets users open straight into a game without an app-store install. Tail-latency-aware: p50 < 1 ms · 84.6% warm-pool hit rate. Structured error propagation with errorCategory + isRetryable. Cross-cloud DigitalOcean → GCP GKE migration in ~30 min zero-downtime cutover. Promoted Core Engineer → Founding Principal Engineer across three contract iterations · ~97% solo on 426 of 439 non-merge commits.",
   },
   {
     name: "She Sharp Platform",
     url: "https://she-sharp-zeta.vercel.app/",
     role: "Senior Full-Stack Engineer & Website Team Lead — recruited by founder Dr Mahsa Mohaghegh",
     summary:
-      "Rebuilt New Zealand's leading women-in-STEM platform (2,200+ registered members, 8,000+ women supported lifetime). 86.6% solo across 10 months · Webflow → Next.js cutover via custom crawler preserving 10+ years of legacy content with zero broken inbound links. AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top. 1,392-line schema · 34 pgTables · multi-tenant isolation. PostToolUse normalisation hook for heterogeneous Stripe / Slack / Webflow webhook timestamps.",
+      "Rebuilt New Zealand's leading women-in-STEM platform (2,200+ registered members, 8,000+ women supported lifetime). 85% solo across ~12 months · Webflow → Next.js cutover via custom crawler preserving 10+ years of legacy content with zero broken inbound links. AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top. 1,411-line schema · 35 pgTables · multi-tenant isolation. PostToolUse normalisation hook for heterogeneous Stripe / Slack / Webflow webhook timestamps.",
   },
   {
     name: "Vitex — AI Career Agent",
     url: "https://www.vitex.org.nz/",
-    role: "Solo author & maintainer (~95% solo · 168 commits)",
+    role: "Solo author & maintainer (essentially sole-authored · 379 commits over ~18 months)",
     summary:
-      "Paste a job description, get a tailored resume + cover letter scored against the JD's keywords in under 30 seconds. 7-step AI pipeline streaming over SSE (JD parsing → background → match analysis → resume tailoring → ATS scoring → cover letter → Typst doc generation) · every stage Zod-validated structured output · disables OpenAI strict-JSON mode on .optional() Zod schemas. Vercel AI SDK + GPT-4o + Typst (PDFs compile locally in under 100 ms across 14 AI-auto-selected templates — no hosted Chromium, no third-party doc-gen API). Three production migrations (Railway → Cloudflare Workers → DigitalOcean VPS) + LaTeX → Typst engine swap, zero downtime · Docker + Traefik + GitHub Actions CD · Stripe credits ledger + share-token URLs.",
+      "Paste a job description, get a tailored resume + cover letter scored against the JD's keywords in under 30 seconds. 8-step AI pipeline streaming over SSE (JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → template render (Typst source) → PDF compile) · every stage Zod-validated structured output · disables OpenAI strict-JSON mode on .optional() Zod schemas. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst (PDFs compile locally in under 100 ms across 7 auto-selected templates — no hosted Chromium, no third-party doc-gen API). Three production migrations (Railway → Cloudflare Workers → DigitalOcean VPS) + LaTeX → Typst engine swap, zero downtime · Docker + Traefik + GitHub Actions CD · Stripe credits ledger + share-token URLs.",
   },
   {
     name: "echook — claude-code-audio-hooks",
     url: "https://github.com/ChanMeng666/echook",
     role: "Solo author & maintainer (MIT)",
     summary:
-      "Noise-control system for AI coding assistants — turns down their constant audio chatter during deep work, alerts only on the things that matter. Reference implementation of the Claude Agent SDK hooks lifecycle — PreToolUse · PostToolUse · status line · context-window quota. 26 hook events · 42 releases · 139 tests on triple-platform CI (Linux/macOS/Windows). Cross-tool by design — single hook system, three IDE surfaces: Claude Code, Cursor, OpenAI Codex. Started as an internal noise-fix for long-running background agents; open-sourced after teammates asked for it; now community-adopted across all three IDEs.",
+      "Noise-control system for AI coding assistants — turns down their constant audio chatter during deep work, alerts only on the things that matter. Reference implementation of the Claude Agent SDK hooks lifecycle — PreToolUse · PostToolUse · status line · context-window quota. 37 hook events · 42 releases · 248 tests on triple-platform CI (Linux/macOS/Windows). Cross-tool by design — single hook system, three IDE surfaces: Claude Code, Cursor, OpenAI Codex. Started as an internal noise-fix for long-running background agents; open-sourced after teammates asked for it; now community-adopted across all three IDEs.",
   },
   {
     name: "Google News MCP Server",
@@ -154,19 +154,19 @@ for (const p of projects) {
 
 sect("Developer-leverage tooling (builds for self and team)");
 W("- echook (Claude Code / Cursor / Codex audio hooks — above)");
-W("- gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 340+ animated-SVG templates · 273 solo commits");
+W("- gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 355 animated-SVG templates across 19 categories · 283 commits");
 W("- typst-claude-skill — official Typst skill for Claude Code (typesets this CV)");
-W("- SunoStats (https://sunostats.chanmeng.org/) — industry's first Suno music lineage explorer · trilingual English / Simplified Chinese / Japanese · Docker + Traefik VPS");
+W("- Seismophone (https://seismophone.chanmeng.org/) — an independent observatory for AI music · trilingual English / Simplified Chinese / Japanese · Docker + Traefik VPS");
 W("- ArchLang (https://github.com/ChanMeng666/archlang) — a floor-plan programming language I invented: compiles to professional SVG plans (Typst/LaTeX for architecture) · zero-dependency isomorphic TypeScript · published to npm as @chanmeng666/archlang");
-W("- ArchCanvas (https://archcanvas.chanmeng.org/) — AI design agent for architects that productizes ArchLang · GPT-Image renderings grounded on the compiled plan, on a zoomable canvas · edits morph the plan in place instead of regenerating it");
+W("- ArchCanvas (https://archcanvas.uk/) — AI design agent for architects that productizes ArchLang · gpt-5.5 orchestration + GPT Image 2 renderings grounded on the compiled plan, on a zoomable canvas · edits morph the plan in place instead of regenerating it");
 
 sect("Experience (most recent)");
 const roles = [
   ["AI Agent Architect", "Engram", "May 2026 — Present", "Recruited onto Anthropic's Partner Network architect track — Engram's founder used his own Claude agent to surface candidates, publicly confirmed Chan's open-source portfolio as the recommendation. 45-day Architect Cohort: Claude Certified Architect — Foundations curriculum."],
-  ["AI Instructor & Mentor", "TechNest Community", "Apr 2026 — Present", "Built and sole-teaches TechNest's first AI-specialised mentorship track — 12-week prompt-first curriculum, students ship portfolio-grade AI apps by week 8. Bilingual teaching platform built 95.7% solo, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV)."],
-  ["Founding Principal Engineer (Activation, Execution & AI Systems)", "Gavigo", "Oct 2025 — Present", "Promoted Core Engineer → Founding Principal Engineer across three contract iterations · owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install) · p50 < 1 ms · 84.6% warm-pool hit rate · cross-cloud DigitalOcean → GCP GKE migration in 30-minute zero-downtime cutover · 98% solo on 353 commits."],
-  ["Senior Full-Stack Engineer & Website Team Lead", "She Sharp", "Jul 2025 — Present", "Recruited by founder Dr Mahsa Mohaghegh to rebuild NZ's leading women-in-STEM platform (2,200+ registered members, 8,000+ women supported lifetime) · Webflow → Next.js cutover 86.6% solo across 10 months with zero broken inbound links · AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top."],
-  ["Chief Technology Officer", "FemTech Weekend", "Mar 2025 — Present", "Sole technical lead for China's first FemTech organisation since its inaugural conference — Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite · operates the 2026 Shanghai Summit (16 confirmed speakers including FemTech-term originator Ida Tin)."],
+  ["AI Instructor & Mentor", "TechNest Community", "Apr 2026 — Present", "Built and sole-teaches TechNest's first AI-specialised mentorship track — 12-week prompt-first curriculum, students ship portfolio-grade AI apps by week 8. Bilingual teaching platform built ~96% solo, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV)."],
+  ["Founding Principal Engineer (Activation, Execution & AI Systems)", "Gavigo", "Oct 2025 — Present", "Promoted Core Engineer → Founding Principal Engineer across three contract iterations · owns the Intelligence Layer of GAVIGO's sub-millisecond app activation platform (lets users open straight into a game without an app-store install) · p50 < 1 ms · 84.6% warm-pool hit rate · cross-cloud DigitalOcean → GCP GKE migration in 30-minute zero-downtime cutover · ~97% solo on 426 of 439 non-merge commits."],
+  ["Senior Full-Stack Engineer & Website Team Lead", "She Sharp", "Jul 2025 — Present", "Recruited by founder Dr Mahsa Mohaghegh to rebuild NZ's leading women-in-STEM platform (2,200+ registered members, 8,000+ women supported lifetime) · Webflow → Next.js cutover 85% solo across ~12 months with zero broken inbound links · AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) shipped on top."],
+  ["Chief Technology Officer", "FemTech Weekend", "Mar 2025 — Present", "Sole technical lead for China's first FemTech organisation since its inaugural conference — Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite · delivered the 2026 Shanghai Summit, June 22–25 (20 confirmed speakers including FemTech-term originator Ida Tin)."],
   ["Open Source Contributor", "CopilotKit (24.6k stars)", "Jun 2025 — Present", "2 merged PRs · 8-agent FemTracker demo + Claude Code MCP setup guide"],
   ["CTO (prev. Senior AI/ML Infrastructure Engineer)", "Sanicle", "Mar 2025 — Feb 2026", "earned the company its IBM Silver Partner certification through a solo build (350+ commits) · OpenAI + pgvector"],
   ["Full-Stack Engineer (Douyin Mall capstone)", "ByteDance", "—", "Spring Boot 3 + solo Vue 3 build · #2 of 8 contributors"],

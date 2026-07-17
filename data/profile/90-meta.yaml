@@ -112,7 +112,7 @@ meta:
       - question: "Where is Chan based and what timezones does she cover?"
         answer: "Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first."
       - question: "What is Chan's biggest shipped result?"
-        answer: "GAVIGO IRE — 353 of 360 commits solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — 2,200+ registered members, 1,000+ active, 95 API routes, 1,392-line schema, 86.6% commits solo."
+        answer: "GAVIGO IRE — 426 of 439 commits (~97%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — 2,200+ registered members, 1,000+ active, 95 API routes, 1,411-line schema, 85% commits solo (793 of 936)."
 
     # ---------------------------------------------------------------------
     # TEACHING COHORTS — the four AI-programming cohorts Chan has led
@@ -171,10 +171,21 @@ meta:
         curriculumUrl: https://programming.chanmeng.org/docs/curriculum-outline/
         relatedWorkId: technest
         relatedProjectId: ai-programming-teaching-project
+      - id: peyvand-academy-2026
+        cohortLabel: Peyvand Academy 2026
+        programName: "Youth Tech Series — AI & Electronics Workshop"
+        partnerOrg: "She Sharp × Peyvand Academy × Ministry of Education (Auckland, NZ)"
+        audience: "Youth aged 12–18; zero coding experience"
+        format: "2-hour in-person workshop (AI + basic electronics; Makey Makey IoT toys) + self-paced tutorial"
+        dateRange: "13 June 2026"
+        keyOutcome: "Solo-authored & delivered the 'Touch the World, Talk to Code' Makey Makey IoT tutorial + demos; in person at Fruitvale Primary School, Auckland"
+        curriculumUrl: https://programming.chanmeng.org/docs/2026-peyvand-academy/programme/about-workshop
+        relatedWorkId: she-sharp
+        relatedProjectId: ai-programming-teaching-project
 
     teachingImpact:
-      cohortCount: 4
-      learnerReachClaim: "100+ direct learners across 4 cohorts since 2024"
+      cohortCount: 5
+      learnerReachClaim: "100+ direct learners across 5 cohorts since 2024"
       menteeRefsClaim: "7 LinkedIn references from Forward with Her mentees"
       flagshipAwardClaim: "Outstanding Mentor Award — AI Hackathon Festival 2025"
 
@@ -381,15 +392,15 @@ meta:
     # rate when prose includes verifiable numbers with sources. Add new claims
     # as you verify them; freshness banner uses meta.lastModified for the date.
     statisticsClaims:
-      - { claim: "648 of 748 commits (86.6%) authored solo on the She Sharp full-stack member platform; remainder by Lesley Gao on frontend design",
+      - { claim: "793 of 936 commits (85%) authored solo on the She Sharp full-stack member platform; remainder chiefly by Lesley Gao on frontend design (140 commits, 15%)",
           source: "https://github.com/NZ-SheSharp/she-sharp",
-          verifiedAt: "2026-05-16" }
+          verifiedAt: "2026-07-16" }
       - { claim: "She Sharp NZ: 2,200+ registered members, 1,000+ active, 8,000+ women supported lifetime, 50+ corporate partners, 84+ events since 2014, 85% mentorship success rate (5-6x higher promotion likelihood for mentees)",
           source: "https://www.shesharp.org.nz/about-us",
           verifiedAt: "2026-05-16" }
-      - { claim: "Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,392-line schema with 30 pgEnums + 34 pgTables + 27 SQL migrations across 95 API routes / 53 pages / 145 components",
+      - { claim: "Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,411-line schema with 30 pgEnums + 35 pgTables + 26 SQL migrations across 95 API routes / 53 pages / 160 components",
           source: "https://github.com/NZ-SheSharp/she-sharp",
-          verifiedAt: "2026-05-16" }
+          verifiedAt: "2026-07-16" }
       - { claim: "She Sharp data migration crawler bootstrapped the new platform with 1,748 images / 707 MB / 11 JSON files / 85 events / 50 Humanitix tickets / 15 podcasts / 121 photo galleries from the old Webflow site",
           source: "https://www.shesharp.org.nz/",
           verifiedAt: "2026-05-16" }
@@ -408,9 +419,9 @@ meta:
       - { claim: "Tam-AI-Ti: 88+ CopilotKit AI actions, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, GPT-4o Realtime voice",
           source: "https://tamaiti.whiri-ai.com/",
           verifiedAt: "2026-05-16" }
-      - { claim: "GAVIGO IRE: 360 total commits, 353 solo (98%), production-deployed at ire.gavigo.com",
+      - { claim: "GAVIGO IRE: 439 total commits, 426 solo (~97%), production-deployed at ire.gavigo.com",
           source: "https://ire.gavigo.com/",
-          verifiedAt: "2026-05-16" }
+          verifiedAt: "2026-07-16" }
       - { claim: "Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud",
           source: "https://ire.gavigo.com/",
           verifiedAt: "2026-05-16" }
@@ -450,15 +461,15 @@ meta:
       - { claim: "GAVIGO publicly profiled by tech-business press in 'How GAVIGO Is Ending App Store Friction for Instant Digital Play' (feedvoice.com, 2026-02-10, by Robert Bloomingfield) — the article publicly cites GAVIGO's sub-0.2-second activation claim, patented execution-layer IP, the 'Watch and Play era' positioning, and the cross-border Istanbul-to-global ambition; LinkedIn-verified company positioning is 'Activation & Execution Layer for Interactive Software'",
           source: "https://feedvoice.com/how-gavigo-is-ending-app-store-friction-for-instant-digital-play/",
           verifiedAt: "2026-05-16" }
-      - { claim: "As CTO at FemTech Weekend (China's first women's health-tech organisation), solo-built two complete generations of the public platform — original femtechweekend.com on Next.js 15 + Notion CMS (58 commits, 100% solo) and the current Docusaurus 3.9 + Drizzle ORM + Neon Postgres + Cloudflare Pages platform (544 commits, 529 / 97.2% solo) — now hosting the Shanghai Summit 2026 (June 22–25, 2026; 16 confirmed speakers including Ida Tin, the Clue co-founder who coined the term 'FemTech' in 2016)",
+      - { claim: "As CTO at FemTech Weekend (China's first women's health-tech organisation), solo-built two complete generations of the public platform — original femtechweekend.com on Next.js 15 + Notion CMS (58 commits, 100% solo) and the current Docusaurus 3.9 + Drizzle ORM + Neon Postgres + Cloudflare Pages platform (564 commits, 534 / 94.7% solo) — which hosted the Shanghai Summit 2026 (June 22–25, 2026; 20 confirmed speakers including Ida Tin, the Clue co-founder who coined the term 'FemTech' in 2016)",
           source: "https://www.femtechweekend.com/shanghai-summit",
-          verifiedAt: "2026-05-16" }
+          verifiedAt: "2026-07-16" }
       - { claim: "Sole instructor and curriculum author of TechNest Community's 2026 AI Track — a 12-week prompt-first AI engineering programme (April 25 – July 17, 2026) on the doctrine 'natural language is the source code' — comprising 8 teaching weeks (Cursor / Claude Code / Gemini CLI / MCPs → Vercel deploy → Gemini chat clone → Neon Postgres + Auth → Vercel Blob → MDX blog → Slack webhooks → Typst PDF automation) plus a 4-week multi-user-AI-SaaS capstone across three tracks (Campus Life, Personal Growth, Creative Tools)",
           source: "https://programming.chanmeng.org/docs/curriculum-outline",
           verifiedAt: "2026-05-16" }
-      - { claim: "Built the bilingual Docusaurus teaching platform hosting four cohort versions side by side (2024-winter, 2025-summer, 2026-her-waka, 2026-technest) with an in-course AI assistant using version-aware RAG over all four cohorts plus the blog, a Notion-powered classroom message board on a Cloudflare Worker backend, and a Notion-backed Capstone 2026 public-voting showcase — 198 of 207 commits authored by me, balance from Claude code-review and Dependabot automation",
+      - { claim: "Built the bilingual Docusaurus teaching platform hosting five cohort versions side by side (2024-winter, 2025-summer, 2026-her-waka, 2026-technest, 2026-peyvand-academy) with an in-course AI assistant using version-aware RAG over all five cohorts plus the blog, a Notion-powered classroom message board on a Cloudflare Worker backend, and a Notion-backed Capstone 2026 public-voting showcase — 211 of 220 commits authored by me, balance from Claude code-review and Dependabot automation",
           source: "https://github.com/ChanMeng666/ai-programming-teaching-project",
-          verifiedAt: "2026-05-16" }
+          verifiedAt: "2026-07-16" }
       - { claim: "As CTO at FreePeriod — a Guangzhou-based public-health startup incubated at the Hong Kong University of Science and Technology (Guangzhou) Lab of Future Technology, tackling period poverty through sanitary-pad dispensers, reproductive-health education, and policy advocacy under founder Julia Zhu (朱楠) — solo-built and shipped the official website (Next.js 15 + TypeScript + Google Maps location directory + bilingual EN/中文; 53 commits, 100% solo); during my tenure the company was recognised with Best Award at Japan's 12th International Conference on Social Sciences and Humanities, Third Prize at the HKUST Sustainable Smart Living Competition, Best Social Media Award at China's inaugural FemTech Weekend Challenge, First Prize at the Shenzhen Nanshan District Philanthropic Creative Star Contest, and selections into Tencent's Technology Venture Capital Program, Tsinghua's SDG Open Innovation Marathon, and the HKUST Entrepreneurship Bridge Grant",
           source: "https://www.linkedin.com/company/free-period/",
           verifiedAt: "2026-05-16" }

@@ -30,7 +30,7 @@ linkedin:
       skills: Flat list mirroring the live Skills 'All' view (order preserved). Each skill records its associated experiences/projects/certificates and any endorsement signals. LinkedIn groups skills under the tabs in skills.categories, but the 'All' view does not expose which tab each skill belongs to, so per-skill category is not recorded.
       honorsAndAwards: 'Six entries in live display order (newest first), captured verbatim from the live profile (all six now live, UN CSW 69 Speaker included). FemTech Weekend and FemTech China are DISTINCT organisations: the Excellence Award (Dec 2024) is issued by FemTech China; the UN Women FemTech Hackathon Outstanding Performer award (Mar 2025) is from FemTech Weekend. All ''issuer'' and ''associatedWith'' values are taken exactly as shown on the live page.'
       publications: Mirrors the live Publications section (12 entries, newest first, with the dates LinkedIn displays). The 3 flagship LinkedIn Pulse technical articles from the earlier curated draft are NOT on the live page and are omitted here.
-      recommendations: Received recommendations only (18), newest first, captured verbatim including bilingual (Chinese + English) text where the recommender wrote both.
+      recommendations: Received recommendations only (23), newest first, captured verbatim including bilingual (Chinese + English) text where the recommender wrote both.
     sections:
       - banner
       - about
@@ -62,7 +62,7 @@ linkedin:
     sections:
       - emoji: 🤖
         heading: AI Agent Engineering
-        body: 'Agentic systems designed end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, and model routing across Claude, OpenAI, and Llama. Earliest-ecosystem MCP server author — Google News MCP (PulseMCP Top Pick, Glama A-rating). FemTracker Agent merged into CopilotKit''s official demos repo (24.6k★).'
+        body: 'Agentic systems designed end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, and model routing across Claude, OpenAI, and Llama. Earliest-ecosystem MCP server author — Google News MCP (PulseMCP Top Pick, Glama A-rating). FemTracker Agent merged into CopilotKit''s official demos repo (36.1k★).'
       - emoji: 💻
         heading: Full-Stack Foundations
         body: Next.js, TypeScript, Drizzle/Postgres, Stripe, Kubernetes. I've shipped voice-first interfaces (gpt-4o-realtime), bilingual UX, and zero-downtime cloud migrations. GAVIGO IRE — p50 < 1 ms activation, production-validated by Google for Startups + NVIDIA Inception.
@@ -299,7 +299,7 @@ linkedin:
         - duration: 1 yr
           location: Seattle, Washington, United States · Remote
           description: |-
-            Two merged PRs in CopilotKit (24,600+ GitHub stars) — the open-source framework for building in-app AI copilots and agents — both publicly approved by named maintainers. Both contributions came directly from production systems I run.
+            Two merged PRs in CopilotKit (36,100+ GitHub stars) — the open-source framework for building in-app AI copilots and agents — both publicly approved by named maintainers. Both contributions came directly from production systems I run.
 
             PR #2068 — FemTracker Agent demo (merged September 2025, after 10 weeks of review). Contributed an 8-agent women's-health companion to CopilotKit's official demos_2025 collection: a Main Coordinator routes requests to specialists in cycle tracking, fertility, symptoms, nutrition, exercise, lifestyle, and health insights, using WHO-standard scoring scales.
 
@@ -427,7 +427,7 @@ linkedin:
           description: |-
             Technology & Professional Development Mentor for one full annual cycle inside Forward with Her (她行 / taxing-mentorship) — a women-in-STEM mentor-mentee network connecting 360+ mentors with 800+ mentees globally across software engineering, data, product, and AI.
 
-            Independently-attested impact: seven of the eighteen public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.
+            Independently-attested impact: seven of the twenty-three public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.
 
             What I delivered: 1:1 mentorship across software engineering, AI tooling, and career navigation; group Office Hours; public lectures on AI programming, identity formation in tech, and career navigation for early-career women; a bilingual EN/CN promo site for the programme (3D Next.js 15 + Three.js, Cloudflare Pages).
 
@@ -1545,7 +1545,7 @@ linkedin:
         • Coordinated through a dedicated volunteer liaison so mentee assignments, communication, and certification stay organised end-to-end.
         • Holds 2024 and 2025 official Forward with Her mentor certificates.
 
-        Independently-attested impact: seven of the eighteen public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions for their learning — making this the single-largest source of attested mentorship outcomes across my career.
+        Independently-attested impact: seven of the twenty-three public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions for their learning — making this the single-largest source of attested mentorship outcomes across my career.
 
         The teaching doctrine I developed here — "natural language is the source code"; ship a real production site by Week 8; screenshot-as-evidence assessment — later became the foundation for the 2026 TechNest Community AI Track curriculum I now teach as the sole AI Instructor.
       media:
@@ -1710,6 +1710,26 @@ linkedin:
           - links
   recommendations:
     received:
+      - recommender: Ikenna Anasieze
+        ref: ikenna-anasieze
+        headline: AI Cloud Engineer | AWS AI Engineer | AI Platform Engineer | Building Highly Available, Scalable AI Infrastructure & Cloud Native Systems
+        relationship: Ikenna reported to Chan directly
+        profileUrl: https://www.linkedin.com/in/ikenna-anasieze/
+      - recommender: Swayam Dhir
+        ref: swayam-dhir
+        headline: Software Developer | Full-Stack Engineering | Building Scalable, AI-Integrated Web Applications
+        relationship: Swayam reported to Chan directly
+        profileUrl: https://www.linkedin.com/in/swayam-dhir-58526b36b/
+      - recommender: Mahdieh Najmi
+        ref: mahdieh-najmi
+        headline: System Analyst | Full-Stack Developer
+        relationship: Mahdieh worked with Chan but on different teams
+        profileUrl: https://www.linkedin.com/in/mahdiehnajmi/
+      - recommender: Shivani Dhandabani
+        ref: shivani-dhandabani
+        headline: Master of Engineering | RHCSA Certified | Linux & Cloud Infrastructure | Managed Services | Incident Management | 2026 Graduate
+        relationship: Shivani was senior to Chan but didn't manage Chan directly
+        profileUrl: https://www.linkedin.com/in/shivani-dhandabani-a3474a221/
       - recommender: Prasanth Pavithran (MBA)
         ref: prasanth-pavithran
         headline: Driving Business Transformation | Building Better Communities | Investor | She Sharp Mentor | AI Evangelist | Storyteller
@@ -1717,12 +1737,12 @@ linkedin:
         profileUrl: https://www.linkedin.com/in/prasanth-pavithran-mba-a54ab912/
       - recommender: Lesley Gao
         ref: lesley-gao
-        headline: Product Designer | Web Developer
+        headline: Building AI Research Experiences for Trusted Advisers | Design Engineer @ Nylon
         relationship: Lesley worked with Chan on the same team
         profileUrl: https://www.linkedin.com/in/lesley-gao/
       - recommender: Saba Gecgil
         ref: saba-gecgil
-        headline: Founder & CEO @ GAVIGO | Activation & Execution Layer for Interactive Software
+        headline: Founder & CEO at GAVIGO | Activation and Execution Platform for Interactive Software
         relationship: Saba managed Chan directly
         profileUrl: https://www.linkedin.com/in/saba-gecgil/
       - recommender: Nirmala Chinnappan
@@ -1795,6 +1815,11 @@ linkedin:
         headline: Deloitte - Data Analyst
         relationship: Jixuan Jessie worked with Chan but they were at different companies
         profileUrl: https://www.linkedin.com/in/jixuan-wan/
+      - recommender: di Peng
+        ref: di-peng
+        headline: Student at ShanghaiTech University
+        relationship: di reported to Chan directly
+        profileUrl: https://www.linkedin.com/in/di-peng-25636033b/
       - recommender: Qiao Jun
         ref: qiao-jun
         headline: 清华学生

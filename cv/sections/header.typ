@@ -64,13 +64,13 @@
       // ── Social-proof stat row — the six metrics merged into FOUR source-
       //    grouped pills (LinkedIn · Newsletter · GitHub · CopilotKit) so the
       //    header reads concise; every number is preserved + bold-accented. ──
-      stat-pill-multi[#snum[5,594] LinkedIn followers · #snum[18] recommendations]
+      stat-pill-multi[#snum[5,856] LinkedIn followers · #snum[23] recommendations]
       h(space-pill-row)
       stat-pill("1,103", "newsletter subscribers")
       h(space-pill-row)
-      stat-pill-multi[#snum[480+] GitHub stars · #snum[210] followers]
+      stat-pill-multi[#snum[480+] GitHub stars · #snum[218] followers]
       h(space-pill-row)
-      stat-pill-multi[CopilotKit contributor · #snum[2] merged PRs · #snum[24.6k] stars]
+      stat-pill-multi[CopilotKit contributor · #snum[2] merged PRs · #snum[36.1k] stars]
     },
 
     // ── Contact items (stacked, LEFT-aligned within the right slot) ────────

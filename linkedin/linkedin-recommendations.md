@@ -3,9 +3,57 @@
 
 # LinkedIn — Recommendations (Received)
 
-18 received recommendations, newest first.
+23 received recommendations, newest first.
 
-## 1. [Prasanth Pavithran (MBA)](https://www.linkedin.com/in/prasanth-pavithran-mba-a54ab912/)
+## 1. [Ikenna Anasieze](https://www.linkedin.com/in/ikenna-anasieze/)
+
+_AI Cloud Engineer | AWS AI Engineer | AI Platform Engineer | Building Highly Available, Scalable AI Infrastructure & Cloud Native Systems_
+
+**June 20, 2026** · Ikenna reported to Chan directly
+
+```
+I had the pleasure of working closely with Chan, and she is an exceptional professional who consistently brings immense value to her team and projects. Chan possesses a rare combination of sharp technical acumen and outstanding problem-solving skills, allowing her to tackle complex challenges with both speed and precision.
+
+What truly sets Chan apart is her collaborative mindset and strong work ethic. She is a natural communicator who effortlessly bridges technical execution with team objectives, always ensuring everyone is aligned and motivated. She takes extreme ownership of her work, delivers high-quality results under pressure, and is always willing to lift others up along the way.
+
+Chan would be a tremendous asset to any organization looking for a driven, skilled, and forward-thinking professional. I highly recommend her and look forward to seeing her continued success!
+```
+
+## 2. [Swayam Dhir](https://www.linkedin.com/in/swayam-dhir-58526b36b/)
+
+_Software Developer | Full-Stack Engineering | Building Scalable, AI-Integrated Web Applications_
+
+**June 19, 2026** · Swayam reported to Chan directly
+
+```
+I had the pleasure of completing Chan’s full AI course series and it was genuinely one of the most valuable learning experiences I’ve had. Chan has an ability to make complex AI concepts accessible and practical. Her passion for the subject comes through in every session, and she creates an environment where you feel genuinely supported. I came away with skills I’m already putting to use. I’d highly recommend her to anyone looking to build real AI knowledge.
+```
+
+## 3. [Mahdieh Najmi](https://www.linkedin.com/in/mahdiehnajmi/)
+
+_System Analyst | Full-Stack Developer_
+
+**June 18, 2026** · Mahdieh worked with Chan but on different teams
+
+```
+Chan is a great person that I met her through techNest community. She is a dedicated mentor and I learned about AI and the practical way of building application with cursor, deploy it on Vercel, connect it to DB using Neon (Postgres DB) and some other tools. She is patient and friendly, and doesn’t matter at which level you are, she is there to support you. She is an active girl and she really cares about open source projects which I really admire!
+```
+
+## 4. [Shivani Dhandabani](https://www.linkedin.com/in/shivani-dhandabani-a3474a221/)
+
+_Master of Engineering | RHCSA Certified | Linux & Cloud Infrastructure | Managed Services | Incident Management | 2026 Graduate_
+
+**June 17, 2026** · Shivani was senior to Chan but didn't manage Chan directly
+
+```
+I had the privilege of working alongside Chan during our AI hackathon, where she stood out not just for her technical depth, but for the way she genuinely invested in others around her.
+
+Chan is a full-stack developer and AI specialist with rare breadth — spanning agentic systems, LLM integration, and production-grade web and mobile development. But what I witnessed at the hackathon was something that doesn't show up on a resume: her instinct to mentor. She took time to break down complex AI concepts, guided others through blockers with patience and clarity, and made the entire team feel more capable because she was in the room.
+
+She brings structure and warmth to high-pressure environments in equal measure. If you get the chance to work with or learn from Chan, take it — she's the kind of person who genuinely raises the bar for everyone around her.
+```
+
+## 5. [Prasanth Pavithran (MBA)](https://www.linkedin.com/in/prasanth-pavithran-mba-a54ab912/)
 
 _Driving Business Transformation | Building Better Communities | Investor | She Sharp Mentor | AI Evangelist | Storyteller_
 
@@ -17,9 +65,9 @@ Chan stands out from the crowd. She is driven to solve real business problems, b
 I have had the pleasure of working with Chan through She Sharp, where we served as Ambassadors and mentors supporting women in STEM. She is a strong collaborator who knows when to lead, when to contribute, and when to support others. Chan would be an asset to any team.
 ```
 
-## 2. [Lesley Gao](https://www.linkedin.com/in/lesley-gao/)
+## 6. [Lesley Gao](https://www.linkedin.com/in/lesley-gao/)
 
-_Product Designer | Web Developer_
+_Building AI Research Experiences for Trusted Advisers | Design Engineer @ Nylon_
 
 **May 25, 2026** · Lesley worked with Chan on the same team
 
@@ -37,9 +85,9 @@ From a communication perspective, Chan is very open to feedback. She acts quickl
 Above all, what stands out most to me is her passion for technology. It's something I genuinely admire. I would wholeheartedly recommend Chan to any employer looking for a reliable, technically strong, and genuinely passionate developer.
 ```
 
-## 3. [Saba Gecgil](https://www.linkedin.com/in/saba-gecgil/)
+## 7. [Saba Gecgil](https://www.linkedin.com/in/saba-gecgil/)
 
-_Founder & CEO @ GAVIGO | Activation & Execution Layer for Interactive Software_
+_Founder & CEO at GAVIGO | Activation and Execution Platform for Interactive Software_
 
 **May 25, 2026** · Saba managed Chan directly
 
@@ -59,7 +107,7 @@ Chan played a major role in helping GAVIGO move from an early technical concept 
 I would strongly recommend Chan for any ambitious technical team building low-latency systems, activation infrastructure, orchestration, AI/compute-backed product surfaces, or early-stage deep technology. She is the kind of engineer who makes a hard system more real, more measurable, and more shippable.
 ```
 
-## 4. [Nirmala Chinnappan](https://www.linkedin.com/in/nirmalachinnappan/)
+## 8. [Nirmala Chinnappan](https://www.linkedin.com/in/nirmalachinnappan/)
 
 _Project Coordinator | ITIL | Change Management | Event Manager | Master of IT Project Management @ AUT_
 
@@ -72,7 +120,7 @@ Beyond her technical capabilities, Chan Meng is highly collaborative, detail-ori
 I highly recommend Chan Meng for her technical excellence, leadership, and dedication to using technology to create positive social impact. She is a valuable contributor to any team, and I look forward to seeing her continued success in the tech industry.
 ```
 
-## 5. [Yesha Kaniyawala](https://www.linkedin.com/in/yeshakaniyawalasoftwareengineer/)
+## 9. [Yesha Kaniyawala](https://www.linkedin.com/in/yeshakaniyawalasoftwareengineer/)
 
 _AI Engineer at Possibl.ai_
 
@@ -88,7 +136,7 @@ What truly distinguishes her is her profound commitment to the mission. Her depe
 Any organization would be exceptionally fortunate to have Chan among their ranks. She is not merely a talented professional, she is the kind of individual who elevates everyone around her. I recommend her with the utmost enthusiasm and without the slightest reservation.
 ```
 
-## 6. [Siyu Xing](https://www.linkedin.com/in/siyu-x-4a003a356/)
+## 10. [Siyu Xing](https://www.linkedin.com/in/siyu-x-4a003a356/)
 
 _Ph.D. Candidate in CS (AIGC) | University of Chinese Academy of Sciences_
 
@@ -100,7 +148,7 @@ _Ph.D. Candidate in CS (AIGC) | University of Chinese Academy of Sciences_
 I'm very glad to have met Chan Meng through Forward with Her 她行 Mentorship. I attended Chan's AI programming course. Her insights on identity and self-awareness deeply inspired me. I also joined her Office Hours with other sisters, and hearing Chan share her personal stories and perspectives helped me broaden my way of thinking. I highly recommend Chan to anyone who wants to grow and advance in the technology field.
 ```
 
-## 7. [Cecilia Yin](https://www.linkedin.com/in/cecilia-yin/)
+## 11. [Cecilia Yin](https://www.linkedin.com/in/cecilia-yin/)
 
 _Solutions Architect at AWS_
 
@@ -110,7 +158,7 @@ _Solutions Architect at AWS_
 I had the pleasure of mentoring Chan through the AWS SheBuilds program. She has a great mix of technical skills and a genuine passion for AI that shines through in everything she does. I always enjoyed our chats. She brings curiosity, positivity, and a genuine drive to grow. I'm excited to see where her journey takes her and wish her all the best for what's ahead.
 ```
 
-## 8. [Amy Li](https://www.linkedin.com/in/amy-li-780142382/)
+## 12. [Amy Li](https://www.linkedin.com/in/amy-li-780142382/)
 
 _西华师范大学学生_
 
@@ -130,7 +178,7 @@ Chan is not only a mentor to me, but also my role model. Her strong motivation a
 I highly recommend Chan to everyone, you will gain a lot from talking to her.
 ```
 
-## 9. [Paige Afanu](https://www.linkedin.com/in/peju-afanu-7b9367110/)
+## 13. [Paige Afanu](https://www.linkedin.com/in/peju-afanu-7b9367110/)
 
 _ICP-ACC POPM SSM CMC FIMC CMP | GRC Analyst | Cybersecurity Analyst | Product Owner | Business Analyst | Agile Coach | Development Expert | Expert Resource for Government | Business Management_
 
@@ -144,7 +192,7 @@ Chan's problem-solving abilities and attention to detail are remarkable. She con
 Her passion for technology and her ability to tackle challenging projects make her a valuable asset to any team or initiative. I highly recommend Chan for any opportunity that requires technical excellence and a forward-thinking approach to development.
 ```
 
-## 10. [Gabrielle J. Hurst](https://www.linkedin.com/in/gabrielle-j-h-159141202/)
+## 14. [Gabrielle J. Hurst](https://www.linkedin.com/in/gabrielle-j-h-159141202/)
 
 _Remote Pilot & Product Marketing Manager @ Houston Robotics_
 
@@ -164,7 +212,7 @@ Despite operating across time zones, she remains fully present, responsive, and 
 In every sense, Chan is the kind of engineer who elevates those around her.
 ```
 
-## 11. [Chaste Christopher Inegbedion](https://www.linkedin.com/in/chastechrisinegbedion/)
+## 15. [Chaste Christopher Inegbedion](https://www.linkedin.com/in/chastechrisinegbedion/)
 
 _Event & Program Ops Leader | Creator & Journalist | 50+ Events, 5+ Markets | $1M+ Budgets | $750K+ Saved | Vendor & Stakeholder Leadership | Connecting Brands at High-Impact Events 🔜 Cannes 🇫🇷_
 
@@ -176,7 +224,7 @@ I highly recommend Chan Meng. Since joining Sanicle, her hands-on experience, de
 Chan is truly the best hand when it comes to workplace health, consistently demonstrating a remarkable ability to translate complex concepts into actionable strategies. I am confident that she will continue to drive significant impact wherever her journey leads.
 ```
 
-## 12. [苏米](https://www.linkedin.com/in/%E7%B1%B3-%E8%8B%8F-8b24881a4/)
+## 16. [苏米](https://www.linkedin.com/in/%E7%B1%B3-%E8%8B%8F-8b24881a4/)
 
 _设计师_
 
@@ -186,7 +234,7 @@ _设计师_
 Chan Meng is a mentor who is committed to others. Even when there are professional differences, she will put herself in others' shoes to seek help and communicate patiently. When working on code, she is always able to actively grasp the latest technological developments and capture the results in various forms of communication, making her a great full-stack engineer.
 ```
 
-## 13. [Shushu Qin](https://www.linkedin.com/in/shushu-q-278a93316/)
+## 17. [Shushu Qin](https://www.linkedin.com/in/shushu-q-278a93316/)
 
 _Software Developer | AWS Certified (SAA + ML) | Experienced in Java, Spring Boot, JUnit, Functional & Unit Testing, Redis, RESTful APIs_
 
@@ -196,7 +244,7 @@ _Software Developer | AWS Certified (SAA + ML) | Experienced in Java, Spring Boo
 Chan Meng is an inspiring mentor whose passion for coding deeply influenced me. Her enthusiasm for writing clean and efficient code made me appreciate the beauty of problem-solving through programming. She not only provided technical guidance but also encouraged me to think critically and continuously improve. Her patience, support, and deep expertise make her an outstanding mentor, and I highly recommend her to anyone seeking guidance in technology！
 ```
 
-## 14. [Patricia Anthony](https://www.linkedin.com/in/patricia-anthony-90b877327/)
+## 18. [Patricia Anthony](https://www.linkedin.com/in/patricia-anthony-90b877327/)
 
 _Associate Professor at Lincoln University (NZ)_
 
@@ -215,7 +263,7 @@ Asscociate Professor in Applied Computing
 Lincoln University
 ```
 
-## 15. [Yijia(Robin) Lee](https://www.linkedin.com/in/yijia-robin-lee-710674278/)
+## 19. [Yijia(Robin) Lee](https://www.linkedin.com/in/yijia-robin-lee-710674278/)
 
 _--_
 
@@ -225,7 +273,7 @@ _--_
 I'm so fortunate to have Chan as my mentor! Her passion, expertise, and patience have helped me gain more technical skills and cultivate innovative thinking abilities. Thanks for opening the door to the future of the technology!
 ```
 
-## 16. [shiyu fang](https://www.linkedin.com/in/shiyu-fang1/)
+## 20. [shiyu fang](https://www.linkedin.com/in/shiyu-fang1/)
 
 _Frontend Developer | UI/UX Design | Full-Stack Capable_
 
@@ -235,7 +283,7 @@ _Frontend Developer | UI/UX Design | Full-Stack Capable_
 Chan's innovative approach to combining AI with web development is truly inspiring! Her enthusiasm is contagious, and she opened my eyes to exciting new ways of coding. A fantastic mentor who makes tech learning fun!
 ```
 
-## 17. [Jixuan Jessie Wan](https://www.linkedin.com/in/jixuan-wan/)
+## 21. [Jixuan Jessie Wan](https://www.linkedin.com/in/jixuan-wan/)
 
 _Deloitte - Data Analyst_
 
@@ -255,7 +303,26 @@ Previously, I often found myself stuck at the configuration stage with tools, bu
 I am sincerely grateful to Chan for not only enhancing my skills but also greatly boosting my confidence. I wholeheartedly recommend Chan Meng to anyone seeking professional guidance and looking to advance in the technical field.
 ```
 
-## 18. [Qiao Jun](https://www.linkedin.com/in/qiao-jun-78a1b1282/)
+## 22. [di Peng](https://www.linkedin.com/in/di-peng-25636033b/)
+
+_Student at ShanghaiTech University_
+
+**November 30, 2024** · di reported to Chan directly
+
+```
+I recently had the opportunity to join Chan's AI-assisted
+development course through Forward with Her, where I created my
+first personal website using the Cursor editor, incorporating my
+own curated media elements. The experience introduced me to the
+fascinating world of web and app development. Chan's hands-on
+teaching approach and technical expertise made complex concepts
+approachable, particularly through interactive problem-solving
+sessions. I'm excited to see more of her innovative work in the
+tech space!
+
+```
+
+## 23. [Qiao Jun](https://www.linkedin.com/in/qiao-jun-78a1b1282/)
 
 _清华学生_
 

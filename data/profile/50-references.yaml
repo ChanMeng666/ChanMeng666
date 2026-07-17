@@ -13,11 +13,79 @@
 # =============================================================================
 references:
   # Ordered newest-first to match LinkedIn's "Recommendations Received" display order.
-  # Of the 20 entries below, 18 are the complete public set on Chan's LinkedIn profile
-  # (linkedin.com/in/chanmeng666/details/recommendations/) as of 2026-05-30.
-  # The remaining 2 (Di Peng, Daryll Hall) are historical-archive entries preserved
-  # from earlier README snapshots — see their per-entry givenAtNote / historicalArchive
-  # fields.
+  # Of the 24 entries below, 23 are the complete public set on Chan's LinkedIn profile
+  # (linkedin.com/in/chanmeng666/details/recommendations/) as of 2026-07-17.
+  # The remaining 1 (Daryll Hall) is a historical-archive entry preserved from an
+  # earlier README snapshot — see its historicalArchive field. (Di Peng, previously
+  # archive-only, is live again on the current page.)
+
+  - name: Ikenna Anasieze
+    id: ikenna-anasieze
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-07-17"
+    reference: |-
+      I had the pleasure of working closely with Chan, and she is an exceptional professional who consistently brings immense value to her team and projects. Chan possesses a rare combination of sharp technical acumen and outstanding problem-solving skills, allowing her to tackle complex challenges with both speed and precision.
+
+      What truly sets Chan apart is her collaborative mindset and strong work ethic. She is a natural communicator who effortlessly bridges technical execution with team objectives, always ensuring everyone is aligned and motivated. She takes extreme ownership of her work, delivers high-quality results under pressure, and is always willing to lift others up along the way.
+
+      Chan would be a tremendous asset to any organization looking for a driven, skilled, and forward-thinking professional. I highly recommend her and look forward to seeing her continued success!
+    meta:
+      x_brand:
+        relationship: AI Cloud Engineer / AWS AI Engineer / AI Platform Engineer (highly-available, scalable AI infrastructure & cloud-native systems); reported to Chan directly
+        linkedinRelationship: Reported to Chan directly
+        givenAt: "2026-06-20"
+        linkedinUrl: https://www.linkedin.com/in/ikenna-anasieze/
+        image: /public/recommendations/Ikenna-Anasieze.png
+
+  - name: Swayam Dhir
+    id: swayam-dhir
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-07-17"
+    reference: |-
+      I had the pleasure of completing Chan’s full AI course series and it was genuinely one of the most valuable learning experiences I’ve had. Chan has an ability to make complex AI concepts accessible and practical. Her passion for the subject comes through in every session, and she creates an environment where you feel genuinely supported. I came away with skills I’m already putting to use. I’d highly recommend her to anyone looking to build real AI knowledge.
+    meta:
+      x_brand:
+        relationship: Software Developer / Full-Stack Engineer (scalable, AI-integrated web applications); completed Chan's full AI course series (TechNest Community AI Track)
+        linkedinRelationship: Reported to Chan directly
+        givenAt: "2026-06-19"
+        linkedinUrl: https://www.linkedin.com/in/swayam-dhir-58526b36b/
+        image: /public/recommendations/Swayam-Dhir.jpg
+
+  - name: Mahdieh Najmi
+    id: mahdieh-najmi
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-07-17"
+    reference: |-
+      Chan is a great person that I met her through techNest community. She is a dedicated mentor and I learned about AI and the practical way of building application with cursor, deploy it on Vercel, connect it to DB using Neon (Postgres DB) and some other tools. She is patient and friendly, and doesn’t matter at which level you are, she is there to support you. She is an active girl and she really cares about open source projects which I really admire!
+    meta:
+      x_brand:
+        relationship: System Analyst / Full-Stack Developer; mentee in the TechNest community
+        linkedinRelationship: Worked with Chan but on different teams
+        givenAt: "2026-06-18"
+        linkedinUrl: https://www.linkedin.com/in/mahdiehnajmi/
+        image: /public/recommendations/Mahdieh-Najmi.jpg
+
+  - name: Shivani Dhandabani
+    id: shivani-dhandabani
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-07-17"
+    reference: |-
+      I had the privilege of working alongside Chan during our AI hackathon, where she stood out not just for her technical depth, but for the way she genuinely invested in others around her.
+
+      Chan is a full-stack developer and AI specialist with rare breadth — spanning agentic systems, LLM integration, and production-grade web and mobile development. But what I witnessed at the hackathon was something that doesn't show up on a resume: her instinct to mentor. She took time to break down complex AI concepts, guided others through blockers with patience and clarity, and made the entire team feel more capable because she was in the room.
+
+      She brings structure and warmth to high-pressure environments in equal measure. If you get the chance to work with or learn from Chan, take it — she's the kind of person who genuinely raises the bar for everyone around her.
+    meta:
+      x_brand:
+        relationship: Master of Engineering, RHCSA-certified (Linux & Cloud Infrastructure, Managed Services, Incident Management), 2026 graduate; worked alongside Chan at an AI hackathon
+        linkedinRelationship: Senior to Chan but didn't manage Chan directly
+        givenAt: "2026-06-17"
+        linkedinUrl: https://www.linkedin.com/in/shivani-dhandabani-a3474a221/
+        image: /public/recommendations/Shivani-Dhandabani.jpg
 
   - name: Prasanth Pavithran
     id: prasanth-pavithran
@@ -363,7 +431,7 @@ references:
     id: di-peng
     tier: secondary
     recency: historical
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-07-17"
     reference: |
       I recently had the opportunity to join Chan's AI-assisted
       development course through Forward with Her, where I created my
@@ -378,8 +446,7 @@ references:
       x_brand:
         relationship: Student at ShanghaiTech University; Mentee
         linkedinRelationship: Reported to Chan directly (Forward with Her AI-assisted development course)
-        givenAt: "2024-11-26"
-        givenAtNote: Date recovered from historical README snapshot at git commit d01e0f7129ada279bd2ffa17f8cf45b07cfc85f8; recommendation may no longer be publicly visible on Chan's current LinkedIn recommendations page
+        givenAt: "2024-11-30"
         linkedinUrl: https://www.linkedin.com/in/di-peng-25636033b/
         image: /public/recommendations/Di-Peng.jpeg
 

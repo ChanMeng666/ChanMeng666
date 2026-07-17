@@ -225,13 +225,13 @@
     let snum(v) = text(weight: "bold", fill: accent)[#v]
     let spill(body) = box(fill: pill-bg, stroke: 0.6pt + accent, radius: cv-radius-pill-x,
       inset: (x: 7pt, y: 3pt), outset: (y: 0.5pt), text(size: size-pill-x, fill: muted, body))
-    spill[#snum[5,594] LinkedIn followers · #snum[18] recommendations]
+    spill[#snum[5,856] LinkedIn followers · #snum[23] recommendations]
     h(gap-pill-row-x)
     spill[#snum[1,103] newsletter subscribers]
     h(gap-pill-row-x)
-    spill[#snum[480+] GitHub stars · #snum[210] followers]
+    spill[#snum[480+] GitHub stars · #snum[218] followers]
     h(gap-pill-row-x)
-    spill[CopilotKit contributor · #snum[2] merged PRs · #snum[24.6k] stars]
+    spill[CopilotKit contributor · #snum[2] merged PRs · #snum[36.1k] stars]
   })
 
   v(14pt)
@@ -365,19 +365,19 @@
       [#link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] — te-ao-Māori financial-wellness coach · bilingual voice coaching · 19-user, 4-month research cohort],
       [#link("https://github.com/ChanMeng666/femtracker-agent")[FemTracker] — 8-node LangGraph agent, merged into CopilotKit's official demos],
       [#link("https://www.vitex.org.nz/")[Vitex] — AI career agent: a job description → tailored résumé + cover letter in under 30s],
-      [#link("https://archcanvas.uk/")[ArchCanvas] — AI design agent for architects · productizes ArchLang · gpt-5.5 orchestration + GPT Image 2 renderings grounded on the compiled plan · edits morph the plan in place],
+      [#link("https://archcanvas.uk/")[ArchCanvas] — AI design agent for architects & self-builders · the paid product built on my own ArchLang · because the plan is a program, not a picture, it edits precisely where an image generator cannot · gpt-5.5 orchestration + GPT Image 2 renderings grounded on the compiled plan],
       [#link("https://seismophone.chanmeng.org/")[Seismophone] — an independent observatory for AI music · trilingual],
     ),
   )
   cap("Skills, MCP servers & developer tools",
     [I package the workflows I rely on into reusable Claude Code skills, plugins and MCP servers — then open-source them for everyone.],
     (
-      [#link("https://github.com/ChanMeng666/archlang")[ArchLang] — a floor-plan programming language I invented · compiles to professional SVG (Typst/LaTeX for architecture) · zero-dependency TypeScript · on npm],
+      [#link("https://github.com/ChanMeng666/archlang")[ArchLang] — a floor-plan programming language I invented · turns a floor plan into a precise program, not a picture · the free open-source engine ArchCanvas is built on · zero-dependency TypeScript, on npm],
       [#link("https://github.com/ChanMeng666/academic-paper-review-skill")[academic-paper-review-skill] — dual-lens peer review → Markdown / Typst / PDF],
       [#link("https://github.com/ChanMeng666/app-promo-studio")[app-promo-studio] — screenshots → cross-platform store & social images],
       [#link("https://github.com/ChanMeng666/logo-as-code-skill")[logo-as-code-skill] — hand-drawn logo → editable SVG + favicons],
       [#link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] — Typst PDF generation; it typesets this CV],
-      [#link("https://github.com/ChanMeng666/echook")[echook] — audio-hooks framework · voice + sound alerts across three IDEs · triple-OS CI],
+      [#link("https://github.com/ChanMeng666/echook")[echook] — plain-English-configured notifications for AI coding assistants · Claude Code / Cursor / Codex · triple-OS CI],
       [#link("https://glama.ai/mcp/servers/ChanMeng666/server-google-news")[Google News] & #link("https://github.com/ChanMeng666/server-google-jobs")[Google Jobs] MCP — among the earliest · 15+ catalogs],
     ),
   )
@@ -473,7 +473,7 @@
   block(above: 4pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)
     text(size: size-meta-x, fill: muted, style: "italic")[
-      *Previously:* *#link("https://www.bytedance.com/en/")[ByteDance] Full-Stack Engineer* on the Douyin Mall capstone (Beijing, China · remote; Spring Boot 3 + solo Vue 3, #2 of 8 contributors) · *React Native full-stack mobile dev at #link("https://corde.nz/")[CORDE Christchurch]* (Canterbury, NZ · hybrid) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 18 LinkedIn recs from this cohort).
+      *Previously:* *#link("https://www.bytedance.com/en/")[ByteDance] Full-Stack Engineer* on the Douyin Mall capstone (Beijing, China · remote; Spring Boot 3 + solo Vue 3, #2 of 8 contributors) · *React Native full-stack mobile dev at #link("https://corde.nz/")[CORDE Christchurch]* (Canterbury, NZ · hybrid) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 23 LinkedIn recs from this cohort).
     ]
   })
 })

@@ -8,7 +8,7 @@
       "skills": "Flat list mirroring the live Skills 'All' view (order preserved). Each skill records its associated experiences/projects/certificates and any endorsement signals. LinkedIn groups skills under the tabs in skills.categories, but the 'All' view does not expose which tab each skill belongs to, so per-skill category is not recorded.",
       "honorsAndAwards": "Six entries in live display order (newest first), captured verbatim from the live profile (all six now live, UN CSW 69 Speaker included). FemTech Weekend and FemTech China are DISTINCT organisations: the Excellence Award (Dec 2024) is issued by FemTech China; the UN Women FemTech Hackathon Outstanding Performer award (Mar 2025) is from FemTech Weekend. All 'issuer' and 'associatedWith' values are taken exactly as shown on the live page.",
       "publications": "Mirrors the live Publications section (12 entries, newest first, with the dates LinkedIn displays). The 3 flagship LinkedIn Pulse technical articles from the earlier curated draft are NOT on the live page and are omitted here.",
-      "recommendations": "Received recommendations only (18), newest first, captured verbatim including bilingual (Chinese + English) text where the recommender wrote both."
+      "recommendations": "Received recommendations only (23), newest first, captured verbatim including bilingual (Chinese + English) text where the recommender wrote both."
     },
     "sections": [
       "banner",
@@ -45,7 +45,7 @@
       {
         "emoji": "🤖",
         "heading": "AI Agent Engineering",
-        "body": "Agentic systems designed end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, and model routing across Claude, OpenAI, and Llama. Earliest-ecosystem MCP server author — Google News MCP (PulseMCP Top Pick, Glama A-rating). FemTracker Agent merged into CopilotKit's official demos repo (24.6k★)."
+        "body": "Agentic systems designed end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, and model routing across Claude, OpenAI, and Llama. Earliest-ecosystem MCP server author — Google News MCP (PulseMCP Top Pick, Glama A-rating). FemTracker Agent merged into CopilotKit's official demos repo (36.1k★)."
       },
       {
         "emoji": "💻",
@@ -297,7 +297,7 @@
           "dateRange": "Jun 2025 - May 2026",
           "duration": "1 yr",
           "location": "Seattle, Washington, United States · Remote",
-          "description": "Two merged PRs in CopilotKit (24,600+ GitHub stars) — the open-source framework for building in-app AI copilots and agents — both publicly approved by named maintainers. Both contributions came directly from production systems I run.\n\nPR #2068 — FemTracker Agent demo (merged September 2025, after 10 weeks of review). Contributed an 8-agent women's-health companion to CopilotKit's official demos_2025 collection: a Main Coordinator routes requests to specialists in cycle tracking, fertility, symptoms, nutrition, exercise, lifestyle, and health insights, using WHO-standard scoring scales.\n\nMaintainer Tyler Slaton: \"This is awesome! Thank you for the cool showcase @ChanMeng666.\"\n\nPR #2529 — Claude Code MCP setup guide (merged October 2025). Expanded CopilotKit's MCP (Model Context Protocol — Anthropic's open standard for AI agents to safely use tools and data) documentation with step-by-step Claude Code setup — bridging CopilotKit's React framework with Anthropic's Claude Code CLI.\n\nMaintainer Brandon McConnell: \"This looks great. Thanks, @ChanMeng666 👏\"\n\nStack of the FemTracker demo: Next.js 15 + React 19 + TypeScript on the frontend; Python 3.12 + LangGraph for multi-agent orchestration; Supabase Postgres; Redis caching at 90%+ hit rate.",
+          "description": "Two merged PRs in CopilotKit (36,100+ GitHub stars) — the open-source framework for building in-app AI copilots and agents — both publicly approved by named maintainers. Both contributions came directly from production systems I run.\n\nPR #2068 — FemTracker Agent demo (merged September 2025, after 10 weeks of review). Contributed an 8-agent women's-health companion to CopilotKit's official demos_2025 collection: a Main Coordinator routes requests to specialists in cycle tracking, fertility, symptoms, nutrition, exercise, lifestyle, and health insights, using WHO-standard scoring scales.\n\nMaintainer Tyler Slaton: \"This is awesome! Thank you for the cool showcase @ChanMeng666.\"\n\nPR #2529 — Claude Code MCP setup guide (merged October 2025). Expanded CopilotKit's MCP (Model Context Protocol — Anthropic's open standard for AI agents to safely use tools and data) documentation with step-by-step Claude Code setup — bridging CopilotKit's React framework with Anthropic's Claude Code CLI.\n\nMaintainer Brandon McConnell: \"This looks great. Thanks, @ChanMeng666 👏\"\n\nStack of the FemTracker demo: Next.js 15 + React 19 + TypeScript on the frontend; Python 3.12 + LangGraph for multi-agent orchestration; Supabase Postgres; Redis caching at 90%+ hit rate.",
           "skills": [
             "Model Context Protocol (MCP)",
             "Open Source Contribution",
@@ -399,7 +399,7 @@
           "dateRange": "Oct 2024 - Sep 2025",
           "duration": "1 yr",
           "location": "Beijing, China · Remote",
-          "description": "Technology & Professional Development Mentor for one full annual cycle inside Forward with Her (她行 / taxing-mentorship) — a women-in-STEM mentor-mentee network connecting 360+ mentors with 800+ mentees globally across software engineering, data, product, and AI.\n\nIndependently-attested impact: seven of the eighteen public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.\n\nWhat I delivered: 1:1 mentorship across software engineering, AI tooling, and career navigation; group Office Hours; public lectures on AI programming, identity formation in tech, and career navigation for early-career women; a bilingual EN/CN promo site for the programme (3D Next.js 15 + Three.js, Cloudflare Pages).\n\nThe teaching doctrine I built here — \"natural language is the source code\"; ship a real production site by Week 8 — later became the foundation for the 2026 TechNest AI Track curriculum.",
+          "description": "Technology & Professional Development Mentor for one full annual cycle inside Forward with Her (她行 / taxing-mentorship) — a women-in-STEM mentor-mentee network connecting 360+ mentors with 800+ mentees globally across software engineering, data, product, and AI.\n\nIndependently-attested impact: seven of the twenty-three public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.\n\nWhat I delivered: 1:1 mentorship across software engineering, AI tooling, and career navigation; group Office Hours; public lectures on AI programming, identity formation in tech, and career navigation for early-career women; a bilingual EN/CN promo site for the programme (3D Next.js 15 + Three.js, Cloudflare Pages).\n\nThe teaching doctrine I built here — \"natural language is the source code\"; ship a real production site by Week 8 — later became the foundation for the 2026 TechNest AI Track curriculum.",
           "skills": [
             "Technical Mentorship",
             "AI-Assisted Development",
@@ -1941,7 +1941,7 @@
       "dateRange": "Oct 2024 - Oct 2025",
       "duration": "1 yr 1 mo",
       "cause": "Science and Technology",
-      "description": "Volunteer STEM Mentor at Forward with Her (她行) — a women-in-STEM nonprofit founded in 2020 connecting 1,000+ members worldwide through one-on-one and group mentorship, with the \"Her Voice\" podcast amplifying women's voices in technology.\n\nWhat I do as a volunteer mentor:\n\n• Bi-weekly 1:1 meetings with assigned early-career women in technology, covering career development, personal growth, and practical problem-solving in STEM environments.\n• Group mentoring sessions and shared Office Hours alongside cohort sisters across software engineering, data, product, and AI.\n• Coordinated through a dedicated volunteer liaison so mentee assignments, communication, and certification stay organised end-to-end.\n• Holds 2024 and 2025 official Forward with Her mentor certificates.\n\nIndependently-attested impact: seven of the eighteen public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions for their learning — making this the single-largest source of attested mentorship outcomes across my career.\n\nThe teaching doctrine I developed here — \"natural language is the source code\"; ship a real production site by Week 8; screenshot-as-evidence assessment — later became the foundation for the 2026 TechNest Community AI Track curriculum I now teach as the sole AI Instructor.",
+      "description": "Volunteer STEM Mentor at Forward with Her (她行) — a women-in-STEM nonprofit founded in 2020 connecting 1,000+ members worldwide through one-on-one and group mentorship, with the \"Her Voice\" podcast amplifying women's voices in technology.\n\nWhat I do as a volunteer mentor:\n\n• Bi-weekly 1:1 meetings with assigned early-career women in technology, covering career development, personal growth, and practical problem-solving in STEM environments.\n• Group mentoring sessions and shared Office Hours alongside cohort sisters across software engineering, data, product, and AI.\n• Coordinated through a dedicated volunteer liaison so mentee assignments, communication, and certification stay organised end-to-end.\n• Holds 2024 and 2025 official Forward with Her mentor certificates.\n\nIndependently-attested impact: seven of the twenty-three public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions for their learning — making this the single-largest source of attested mentorship outcomes across my career.\n\nThe teaching doctrine I developed here — \"natural language is the source code\"; ship a real production site by Week 8; screenshot-as-evidence assessment — later became the foundation for the 2026 TechNest Community AI Track curriculum I now teach as the sole AI Instructor.",
       "media": [
         "2025-mentor-certificate.pdf",
         "2024-mentor-certificate.pdf",
@@ -2073,6 +2073,38 @@
   "recommendations": {
     "received": [
       {
+        "recommender": "Ikenna Anasieze",
+        "headline": "AI Cloud Engineer | AWS AI Engineer | AI Platform Engineer | Building Highly Available, Scalable AI Infrastructure & Cloud Native Systems",
+        "date": "June 20, 2026",
+        "relationship": "Ikenna reported to Chan directly",
+        "text": "I had the pleasure of working closely with Chan, and she is an exceptional professional who consistently brings immense value to her team and projects. Chan possesses a rare combination of sharp technical acumen and outstanding problem-solving skills, allowing her to tackle complex challenges with both speed and precision.\n\nWhat truly sets Chan apart is her collaborative mindset and strong work ethic. She is a natural communicator who effortlessly bridges technical execution with team objectives, always ensuring everyone is aligned and motivated. She takes extreme ownership of her work, delivers high-quality results under pressure, and is always willing to lift others up along the way.\n\nChan would be a tremendous asset to any organization looking for a driven, skilled, and forward-thinking professional. I highly recommend her and look forward to seeing her continued success!",
+        "profileUrl": "https://www.linkedin.com/in/ikenna-anasieze/"
+      },
+      {
+        "recommender": "Swayam Dhir",
+        "headline": "Software Developer | Full-Stack Engineering | Building Scalable, AI-Integrated Web Applications",
+        "date": "June 19, 2026",
+        "relationship": "Swayam reported to Chan directly",
+        "text": "I had the pleasure of completing Chan’s full AI course series and it was genuinely one of the most valuable learning experiences I’ve had. Chan has an ability to make complex AI concepts accessible and practical. Her passion for the subject comes through in every session, and she creates an environment where you feel genuinely supported. I came away with skills I’m already putting to use. I’d highly recommend her to anyone looking to build real AI knowledge.",
+        "profileUrl": "https://www.linkedin.com/in/swayam-dhir-58526b36b/"
+      },
+      {
+        "recommender": "Mahdieh Najmi",
+        "headline": "System Analyst | Full-Stack Developer",
+        "date": "June 18, 2026",
+        "relationship": "Mahdieh worked with Chan but on different teams",
+        "text": "Chan is a great person that I met her through techNest community. She is a dedicated mentor and I learned about AI and the practical way of building application with cursor, deploy it on Vercel, connect it to DB using Neon (Postgres DB) and some other tools. She is patient and friendly, and doesn’t matter at which level you are, she is there to support you. She is an active girl and she really cares about open source projects which I really admire!",
+        "profileUrl": "https://www.linkedin.com/in/mahdiehnajmi/"
+      },
+      {
+        "recommender": "Shivani Dhandabani",
+        "headline": "Master of Engineering | RHCSA Certified | Linux & Cloud Infrastructure | Managed Services | Incident Management | 2026 Graduate",
+        "date": "June 17, 2026",
+        "relationship": "Shivani was senior to Chan but didn't manage Chan directly",
+        "text": "I had the privilege of working alongside Chan during our AI hackathon, where she stood out not just for her technical depth, but for the way she genuinely invested in others around her.\n\nChan is a full-stack developer and AI specialist with rare breadth — spanning agentic systems, LLM integration, and production-grade web and mobile development. But what I witnessed at the hackathon was something that doesn't show up on a resume: her instinct to mentor. She took time to break down complex AI concepts, guided others through blockers with patience and clarity, and made the entire team feel more capable because she was in the room.\n\nShe brings structure and warmth to high-pressure environments in equal measure. If you get the chance to work with or learn from Chan, take it — she's the kind of person who genuinely raises the bar for everyone around her.",
+        "profileUrl": "https://www.linkedin.com/in/shivani-dhandabani-a3474a221/"
+      },
+      {
         "recommender": "Prasanth Pavithran (MBA)",
         "headline": "Driving Business Transformation | Building Better Communities | Investor | She Sharp Mentor | AI Evangelist | Storyteller",
         "date": "May 28, 2026",
@@ -2082,7 +2114,7 @@
       },
       {
         "recommender": "Lesley Gao",
-        "headline": "Product Designer | Web Developer",
+        "headline": "Building AI Research Experiences for Trusted Advisers | Design Engineer @ Nylon",
         "date": "May 25, 2026",
         "relationship": "Lesley worked with Chan on the same team",
         "text": "A PR merged at 12:30am? You didn't see it wrong, that's pretty normal for Chan.\n\nI've really enjoyed working with Chan as a She Sharp ambassador and collaborating on the new website together. Since this is a project that requires commitment outside of work hours, it's not unusual to see PRs being merged late at night in the GitHub repo.\n\nChan is someone you feel genuinely confident working with. She naturally becomes the technical backbone of the team, and whenever technical support is needed, she's always one of the first to step up.\n\nShe is also proactive in proposing automation tools that improve efficiency and reduce costs for the team. Beyond that, she often goes out of her way to build things that genuinely help others learn. For example, during this year's MSD workshops, she independently created a website that brought together workshop resources and additional AI learning materials, giving participants more opportunities to continue exploring and learning beyond the sessions. To me, that is what true empowerment looks like.\n\nFrom a communication perspective, Chan is very open to feedback. She acts quickly on reasonable suggestions, while also being confident enough to push back on ideas that may not make sense, always with thoughtful explanations or better alternatives.\n\nAbove all, what stands out most to me is her passion for technology. It's something I genuinely admire. I would wholeheartedly recommend Chan to any employer looking for a reliable, technically strong, and genuinely passionate developer.",
@@ -2090,7 +2122,7 @@
       },
       {
         "recommender": "Saba Gecgil",
-        "headline": "Founder & CEO @ GAVIGO | Activation & Execution Layer for Interactive Software",
+        "headline": "Founder & CEO at GAVIGO | Activation and Execution Platform for Interactive Software",
         "date": "May 25, 2026",
         "relationship": "Saba managed Chan directly",
         "text": "Chan has been one of the most important engineering contributors to GAVIGO during a demanding early stage.\n\nWhat stands out about Chan is not only her technical ability, but the way she turns ambiguous founder-level direction into working systems, measurable proof, and reliable product surfaces.\n\nAt GAVIGO, Chan has led critical work across our activation and execution pipeline, orchestration behavior, telemetry, demo reliability, public/investor/operator surfaces, and compute-backed proof systems. She consistently brings clarity to hard systems questions: what needs to run at activation time, what can be prepared, what can be reused, where state can be preserved, and where the boundary needs to be measured rather than assumed.\n\nShe combines speed with discipline. Chan ships quickly, but she also documents, tests, and pushes for technical honesty. If something is unsafe to expose, she says it clearly. If a fast fix is enough, she executes it. If a deeper system boundary appears, she helps turn it into a measured engineering question instead of hand-waving around it.\n\nShe has also been an excellent founder-engineer collaborator. In an early-stage company, priorities change, constraints are real, and the path is rarely linear. Chan has handled that environment with ownership, patience, and maturity. She cares not only about writing code, but about making the system demonstrable, explainable, and credible for investors, partners, and the team.\n\nChan played a major role in helping GAVIGO move from an early technical concept into a controlled proof system with real product behavior, measured infrastructure signals, and a much clearer activation/execution architecture.\n\nI would strongly recommend Chan for any ambitious technical team building low-latency systems, activation infrastructure, orchestration, AI/compute-backed product surfaces, or early-stage deep technology. She is the kind of engineer who makes a hard system more real, more measurable, and more shippable.",
@@ -2207,6 +2239,14 @@
         "relationship": "Jixuan Jessie worked with Chan but they were at different companies",
         "text": "终于找到了推荐入口！我很高兴有机会向您推荐Chan Meng老师。我完成了Chan老师的精彩课程，迫不及待想要分享我的学习体验。Chan老师的教学风格认真且细致，她对于每个工具的使用讲解都极具耐心和深度。\n\n过去，我在配置工具时常常遇到困难，但在Chan老师逐步详尽的指导下，我不仅克服了这些挑战，还成功地创建了一个网站。这对我来说是一个巨大的成就，让我感到无比兴奋和自豪。这一切都要归功于Chan老师的专业指导和无私分享。\n\n我衷心感谢Chan老师，她的课程不仅提升了我的技能，也极大地增强了我的自信心。我强烈推荐Chan Meng老师给任何寻求专业指导和想要在技术领域取得进步的人。\n\nI am delighted to have the opportunity to recommend Chan Meng on LinkedIn. Having just completed Chan's exceptional course, I am eager to share my learning experience. Chan's teaching style is meticulous and thorough, with patient and in-depth explanations for the use of each tool.\n\nPreviously, I often found myself stuck at the configuration stage with tools, but with Chan's step-by-step guidance, I not only overcame these challenges but also successfully created a website. This is a significant achievement for me and has filled me with immense excitement and pride. All of this is thanks to Chan's professional instruction and generous sharing of knowledge.\n\nI am sincerely grateful to Chan for not only enhancing my skills but also greatly boosting my confidence. I wholeheartedly recommend Chan Meng to anyone seeking professional guidance and looking to advance in the technical field.",
         "profileUrl": "https://www.linkedin.com/in/jixuan-wan/"
+      },
+      {
+        "recommender": "di Peng",
+        "headline": "Student at ShanghaiTech University",
+        "date": "November 30, 2024",
+        "relationship": "di reported to Chan directly",
+        "text": "I recently had the opportunity to join Chan's AI-assisted\ndevelopment course through Forward with Her, where I created my\nfirst personal website using the Cursor editor, incorporating my\nown curated media elements. The experience introduced me to the\nfascinating world of web and app development. Chan's hands-on\nteaching approach and technical expertise made complex concepts\napproachable, particularly through interactive problem-solving\nsessions. I'm excited to see more of her innovative work in the\ntech space!\n",
+        "profileUrl": "https://www.linkedin.com/in/di-peng-25636033b/"
       },
       {
         "recommender": "Qiao Jun",

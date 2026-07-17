@@ -116,11 +116,11 @@
         grid(
           columns: (1fr, 1fr, 1fr, 1fr, 1fr),
           column-gutter: 9pt,
-          metric-tile("5,594", "LinkedIn"),
+          metric-tile("5,856", "LinkedIn"),
           metric-tile("1,103", "Newsletter"),
-          metric-tile("210", "GitHub followers"),
-          metric-tile("451", "GitHub stars"),
-          metric-tile("18", "Recommendations"),
+          metric-tile("218", "GitHub followers"),
+          metric-tile("480+", "GitHub stars"),
+          metric-tile("23", "Recommendations"),
         )
       },
     ),

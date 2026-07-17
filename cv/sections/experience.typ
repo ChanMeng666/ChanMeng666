@@ -61,7 +61,7 @@
   block(above: 0pt, below: 0pt, {
     set par(leading: 0.7em, justify: false)
     text(size: size-tiny, fill: muted, style: "italic")[
-      *Previously:* *#link("https://www.bytedance.com/en/")[ByteDance] full-stack engineer* on the Douyin Mall capstone (Beijing · remote; Spring Boot 3 backend + solo Vue 3 frontend) · *React Native mobile developer at #link("https://corde.nz/")[CORDE]* (Christchurch, NZ · hybrid) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 18 LinkedIn recommendations come from this cohort).
+      *Previously:* *#link("https://www.bytedance.com/en/")[ByteDance] full-stack engineer* on the Douyin Mall capstone (Beijing · remote; Spring Boot 3 backend + solo Vue 3 frontend) · *React Native mobile developer at #link("https://corde.nz/")[CORDE]* (Christchurch, NZ · hybrid) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 23 LinkedIn recommendations come from this cohort).
     ]
   })
 })

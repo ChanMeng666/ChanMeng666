@@ -61,18 +61,24 @@
 
 // ─── Skill / tooling category (bold label + wrapped pills) ───────────────────
 #let skill-category(category, items) = {
-  text(
-    weight: "bold",
-    size: size-meta,
-    font: sans,          // DM Sans — Anton is too cramped at 8pt; keep labels legible
-    fill: primary,
-    tracking: 0.06em,
-    upper(category),
-  )
-  v(4pt)
+  // The label is a sticky (keep-with-next) block so it never strands at a page
+  // bottom with its pills pushed over — but we deliberately avoid wrapping
+  // label+pills in a single `breakable: false` block: inside a two-column grid
+  // cell, a non-breakable block that doesn't fit leaves a large dead gap and can
+  // force a spurious page. sticky keeps them together without that side effect.
+  block(above: 0pt, below: 4pt, sticky: true, {
+    text(
+      weight: "bold",
+      size: size-meta,
+      font: sans,          // DM Sans — Anton is too cramped at 8pt; keep labels legible
+      fill: primary,
+      tracking: 0.06em,
+      upper(category),
+    )
+  })
   // Tags WITHIN a category cluster tightly (small wrapped-row leading + small
   // horizontal gap) so the group reads as one unit; the big gap is RESERVED for
-  // BETWEEN categories (v(11pt) below) — that contrast is the section's rhythm.
+  // BETWEEN categories (v(10pt) below) — that contrast is the section's rhythm.
   block(above: 0pt, below: 0pt, {
     set par(leading: 0.8em, justify: false)
     for (i, it) in items.enumerate() {
@@ -80,7 +86,7 @@
       if i < items.len() - 1 { h(space-pill-row) }
     }
   })
-  v(10pt)   // clear gap to the next category label — the in-section rhythm cue
+  v(11pt)   // clear gap to the next category label — the in-section rhythm cue
 }
 
 // ─── Inline italic label (e.g. for the architect-grade paragraph header) ────
@@ -98,24 +104,39 @@
 // structural RULE. So the section underline is two-tone — a short solid orange
 // lead-block, then a thin ink hairline filling the rest of the width. Reads more
 // intentional than a flat full-width orange line and ties the CV to the brand.
-#let section(title, body) = {
-  v(space-section)
-  text(
-    font: sans-display,    // Anton — heavy compact-grotesque section headers
-    weight: "regular",     // Anton is intrinsically bold; avoid faux-bold
-    size: size-h2,
-    fill: primary,
-    tracking: 0.03em,      // MIXED-case (brand voice) — relaxed tracking, not all-caps
-    title,
-  )
-  v(3.5pt)
-  grid(
-    columns: (34pt, 1fr),
-    align: (left + horizon, left + horizon),
-    line(stroke: 2.2pt + accent, length: 100%),         // orange lead block
-    line(stroke: 0.5pt + rule.lighten(20%), length: 100%), // ink structural hairline
-  )
-  v(space-after-rule)
+// `tight` (right column only) sets an explicit, per-section header top-gap so
+// the denser sidebar can be tuned page-by-page: the PAGE-1 sidebar sections
+// (What I Bring, AI Engineering, Stack) stay small so the sticky keep-with-next
+// chain keeps the Stack header + Models category on page 1, while the PAGE-2
+// sections (Certifications, Recognition, Education) get more air to fill page 2.
+// `tight: false` = the roomy default (space-section) used by the LEFT narrative
+// column, so this never reflows the left column. Otherwise pass a length.
+#let section(title, body, tight: false, sticky: true) = {
+  v(if tight == false { space-section } else { tight })
+  // sticky:true = keep-with-next — the header + rule never strand alone at a
+  // page bottom; if the first content block flows to the next page, the header
+  // moves with it (avoids the orphaned "Stack / MODELS" header at page 1 foot).
+  // The TERMINAL section (Education) passes sticky:false — it has nothing after
+  // it to orphan against, and a sticky terminal header gets needlessly bumped to
+  // the next page even when it fits.
+  block(breakable: false, sticky: sticky, {
+    text(
+      font: sans-display,    // Anton — heavy compact-grotesque section headers
+      weight: "regular",     // Anton is intrinsically bold; avoid faux-bold
+      size: size-h2,
+      fill: primary,
+      tracking: 0.03em,      // MIXED-case (brand voice) — relaxed tracking, not all-caps
+      title,
+    )
+    v(3.5pt)
+    grid(
+      columns: (34pt, 1fr),
+      align: (left + horizon, left + horizon),
+      line(stroke: 2.2pt + accent, length: 100%),         // orange lead block
+      line(stroke: 0.5pt + rule.lighten(20%), length: 100%), // ink structural hairline
+    )
+    v(if tight == false { space-after-rule } else { 4pt })
+  })
   body
 }
 
@@ -124,16 +145,16 @@
 // down for the page. Lighter footprint than a full-width rule and ties the CV to
 // the brand's dotted secondary affordance.
 #let cv-divider() = {
-  v(5pt)
+  v(11pt)
   line(stroke: (paint: accent, thickness: 2pt, dash: "dotted"), length: 30pt)
-  v(5pt)
+  v(11pt)
 }
 
 // ─── Tight divider (for experience list — many entries) ─────────────────────
 #let cv-divider-tight() = {
-  v(5pt)
+  v(11pt)
   line(stroke: (paint: accent, thickness: 2pt, dash: "dotted"), length: 30pt)
-  v(5pt)
+  v(11pt)
 }
 
 // ─── Work / experience entry ─────────────────────────────────────────────────
@@ -154,7 +175,7 @@
   above: 0pt,
   below: 0pt,
   {
-    text(weight: "bold", size: size-h3, fill: ink, title)
+    text(weight: "bold", size: size-entry, fill: ink, title)
     linebreak()
     {
       set text(style: "italic", size: size-meta, fill: primary)
@@ -189,17 +210,18 @@
   below: 0pt,
   {
     grid(
-      columns: (44pt, 1fr),
+      columns: (38pt, 1fr),
       column-gutter: 0.7em,
       align: (center + top, left + top),
-      // ─ Logo cell ────────────────────────────────────────────────────────
+      // ─ Logo cell ─ uniform 30pt square slot so every mark carries the same
+      //   optical mass regardless of the source SVG's aspect ratio / padding. ─
       if logo != none {
-        box(image(logo, height: 36pt))
+        box(width: 30pt, height: 30pt, image(logo, width: 100%, height: 100%, fit: "contain"))
       } else { [] },
       // ─ Text cell ────────────────────────────────────────────────────────
       {
         // Name line
-        text(weight: "bold", size: size-h3, fill: ink, name)
+        text(weight: "bold", size: size-entry, fill: ink, name)
         if url != "" {
           h(6pt)
           text(size: size-tiny, fill: muted)[#link(url, url.replace("https://", ""))]
@@ -207,19 +229,23 @@
         if context-line != none {
           v(gap-card-meta)
           block(above: 0pt, below: 0pt, {
-            set par(leading: 0.7em)
-            text(style: "italic", size: size-meta, fill: primary, context-line)
+            set par(leading: leading-meta, justify: false)
+            // muted (grey) — a distinct "meta layer" so the plain-language intro
+            // reads as its own tier against the ink bullets below, not a wall of
+            // same-weight text.
+            text(style: "italic", size: size-meta, fill: muted, context-line)
           })
           v(gap-card-body)
         }
-        // Bullets — solid orange dot. Within-bullet leading 0.74em; between
-        // bullets 11pt (~2×) so each bullet reads as a distinct paragraph with
-        // air around it, not a continuation of the line above.
+        // Bullets — solid orange dot, ink at the single reading size. Reading
+        // leading (leading-body, ratio 1.5) within a bullet; 8pt between bullets
+        // (> the 6pt gap-card-body context→bullets seam) so each bullet reads as
+        // a distinct unit and the layers are clearly separated.
         set text(size: size-body, fill: ink)
-        set par(leading: 0.7em)
+        set par(leading: leading-body, justify: false)
         set list(
           marker: text(fill: accent)[•],
-          spacing: 7.5pt,
+          spacing: 8pt,
           indent: 0pt,
           body-indent: 6pt,
         )
@@ -258,7 +284,7 @@
     //           was being collapsed inside a single paragraph). A small gap to
     //           its org·dates subtitle — distinct lines, not crammed. ───────
     block(above: 0pt, below: 4pt, breakable: false, {
-      text(weight: "bold", size: 9.5pt, fill: ink, title)
+      text(weight: "bold", size: size-entry, fill: ink, title)
     })
 
     // ── Line 2: Org · Dates (italic + muted, sits below the title block) ─
@@ -283,8 +309,8 @@
     if summary != none {
       v(gap-intra-entry)
       block(above: 0pt, below: 0pt, {
-        set par(leading: leading-summary, justify: false)
-        text(size: 7.4pt, fill: ink, summary)
+        set par(leading: leading-body, justify: false)
+        text(size: size-body, fill: ink, summary)
       })
     }
   },
@@ -302,7 +328,7 @@
   // Title — own block so `below` actually renders. Stacked lines breathe so
   // title / org·location / dates / note each read as a distinct line.
   block(above: 0pt, below: 5pt, breakable: false, {
-    text(weight: "bold", size: 9.5pt, fill: ink, title)
+    text(weight: "bold", size: size-entry, fill: ink, title)
   })
   // Org · Location — italic
   block(above: 0pt, below: 3pt, breakable: false, {
@@ -334,14 +360,14 @@
   set par(leading: 0.7em)
   set list(
     marker: text(fill: accent, size: 5.5pt)[•],
-    spacing: 10pt,
+    spacing: 15pt,
     indent: 0pt,
     body-indent: 6pt,
   )
   for it in items {
     list.item(it)
   }
-  v(4pt)
+  v(6pt)
 }
 
 // ─── Bullet list inside an entry (consistent style) ─────────────────────────

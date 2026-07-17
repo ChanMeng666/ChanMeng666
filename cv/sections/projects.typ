@@ -6,9 +6,9 @@
 // and Selected Projects respectively.
 #let introduction() = section("Introduction", {
   set text(size: size-body, fill: ink)
-  set par(leading: 0.82em, justify: true)
+  set par(leading: leading-body, justify: false)
   [
-    Builds the AI software companies run every day — products with paying customers, private data, and regulated work behind them, not demos. Focus areas: *women's health, cultural technology, and early-stage startup infrastructure*. Works AI-native by default — directing coding agents (Claude Code, Codex) and building on the *Claude Agent SDK, MCP, and agent skills*, while keeping the call on what actually ships a human one.
+    Builds the AI software companies run every day — products with paying customers, private data, and regulated work behind them, not demos. Focus areas: *women's health, cultural technology, and early-stage startup infrastructure*. Works AI-native by default — directing coding agents (Claude Code, Codex) and building on the Claude Agent SDK, MCP, and agent skills, while keeping the call on what actually ships a human one.
   ]
 })
 
@@ -33,12 +33,12 @@
       ),
     ),
     (
-      logo: "/public/brands/tam-ai-ti-logo-with-brand.svg",
+      logo: "/public/brands/tam-ai-ti-mark.svg",
       name: "Tam-AI-Ti",
       url: "https://tamaiti.whiri-ai.com/",
       context-line: [An AI financial-wellness app for Māori communities, built around te ao Māori · an independent research commission from Riria (Missy) Te Kanawa personally (former KPMG NZ National Māori Sector lead; now Māori Executive Lead at ASB Bank, her employer).],
       bullets: (
-        [A research question, not a spec: *can technology built natively on Māori culture engage a population that culturally-decorated technology does not?* Built solo — a bilingual (te reo Māori / English) voice-and-journaling app where the culture is typed data in the database (Maramataka phases, Te Whare Tapa Whā domains), not labels bolted on.],
+        [*A research question, not a spec:* can technology built natively on Māori culture engage a population that culturally-decorated technology does not? Built solo — a bilingual (te reo Māori / English) voice-and-journaling app where the culture is typed data in the database (Maramataka phases, Te Whare Tapa Whā domains), not labels bolted on.],
         [The evidence: a *19-user cohort over 4 months* produced 181 bilingual journal entries and 74 daily check-ins — sustained engagement for a pre-commercial pilot with no marketing.],
       ),
     ),
@@ -53,12 +53,12 @@
       ),
     ),
     (
-      logo: "/public/brands/server-google-news.svg",
+      logo: "/public/brands/server-google-news-mark.svg",
       name: "Google News MCP Server",
       url: "https://glama.ai/mcp/servers/ChanMeng666/server-google-news",
       context-line: [Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch.],
       bullets: (
-        [*Shipped before MCP had a registry* — 35 days after the standard launched — so it was listed by hand across *15+ catalogs*, the way developers actually find MCP servers. The first-mover position compounded: a PulseMCP "Top Pick", a Glama A-rating, \~125 GitHub stars, and a Skywork AI deep-dive.],
+        [*Shipped before MCP had a registry* — 35 days after the standard launched — so it was listed by hand across 15+ catalogs, the way developers actually find MCP servers. The first-mover position compounded: a PulseMCP "Top Pick", a Glama A-rating, \~125 GitHub stars, and a Skywork AI deep-dive.],
       ),
     ),
   )
@@ -78,11 +78,11 @@
   //    project appears exactly once across the entire CV. A clear gap (≈ the
   //    inter-card rhythm) separates it from the last project card above so it
   //    doesn't read as part of the Google News MCP entry.
-  v(12pt)
+  v(20pt)
   block(
     {
       set text(size: size-tiny, fill: muted, style: "italic")
-      set par(leading: 0.68em, justify: true)
+      set par(leading: 0.68em, justify: false)
       [
         *Also built:* #link("https://github.com/ChanMeng666/echook")[echook] — plain-English-configured notifications for AI coding assistants (Claude Code / Cursor / Codex) · #link("https://eatropolis.co.nz/")[eatropolis.co.nz] — Auckland food-festival platform (Chow Luck Club × Tātaki Auckland Unlimited; solo, 9 days) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 animated-SVG README templates) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (typesets this CV) · #link("https://seismophone.chanmeng.org/")[Seismophone] (AI-music observatory).
       ]

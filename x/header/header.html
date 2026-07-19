@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chan Meng — X Header (Caldera)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --basalt:#E2E2DF; --ash:#F7F6F2; --white:#FFFFFF; --ink:#070607;
+    --orange:#FC5000; --violet:#524AE9; --glare:#F5F28E; --muted:#5B5B59;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#aaa; font-family:'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+
+  /* Flat basalt ground — clean, lets the color-block composition pop.
+     X renders this at 1500×500 (3:1). */
+  .header{
+    width:1500px; height:500px; position:relative;
+    background:var(--basalt); overflow:hidden;
+  }
+
+  /* ── Identity block — upper/left, well clear of the bottom-left corner where
+        X overlays the round profile avatar (~x46–246, y296–496 desktop). ── */
+  .eyebrow{
+    position:absolute; left:96px; top:64px;
+    font-weight:600; font-size:18px; letter-spacing:0.15em; text-transform:uppercase;
+    color:var(--ink); display:flex; align-items:center; gap:12px;
+  }
+  .eyebrow .dot{ width:12px; height:12px; background:var(--orange); display:inline-block; flex:none; }
+
+  .name{
+    position:absolute; left:92px; top:92px;
+    font-family:'Anton',sans-serif; font-weight:400; font-size:120px;
+    line-height:0.9; letter-spacing:0.02em; color:var(--ink);
+  }
+
+  /* Italic tagline with the orange dash mark — one clean line under the name. */
+  .signature{
+    position:absolute; left:96px; top:232px; white-space:nowrap;
+    display:flex; align-items:center; gap:18px;
+  }
+  .signature .mark{ width:30px; height:6px; background:var(--orange); flex:none; }
+  .signature .text{
+    font-style:italic; font-weight:400; font-size:22px; letter-spacing:0.005em; color:var(--ink);
+  }
+
+  /* ── Metric chips — mid band. Starts x300 to stay clear of the avatar. ── */
+  .metrics{
+    position:absolute; left:300px; top:296px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .chip{
+    display:flex; align-items:center; gap:9px;
+    background:var(--ash); border-radius:20px;
+    padding:9px 16px; white-space:nowrap;
+    font-weight:600; font-size:16px; letter-spacing:0.005em; color:var(--ink);
+  }
+  .chip .sq{ width:9px; height:9px; background:var(--orange); flex:none; }
+
+  /* ── Flagship proof strip — lower band, starts x430 so it clears the avatar
+        entirely. Product mark + wordmark per chip. ── */
+  .proof{
+    position:absolute; left:430px; top:392px;
+    display:flex; align-items:center; gap:14px;
+  }
+  .pchip{
+    display:flex; align-items:center; gap:8px;
+    white-space:nowrap;
+    font-weight:600; font-size:16px; letter-spacing:0.005em; color:var(--ink);
+  }
+  .pchip img{ height:34px; width:auto; display:block; flex:none; }
+  /* Anton wordmark fallback for marks that render illegibly small. */
+  .pchip .wm{
+    font-family:'Anton',sans-serif; font-weight:400; font-size:26px;
+    letter-spacing:0.02em; color:var(--ink); line-height:1;
+    height:34px; display:flex; align-items:center;
+  }
+
+  /* ── Right-side color-block composition — flat squares + monkey lockup,
+        scaled from the LinkedIn cover to the 500px-tall X canvas. Kept to
+        x>1200 so it never fights the text column. ── */
+  .block{ position:absolute; }
+  .b-violet{ left:1204px; top:96px;  width:92px;  height:92px;  background:var(--violet); }
+  .b-ink{    left:1240px; top:128px; width:244px; height:244px; background:var(--ink); }
+  .b-orange{ left:1400px; top:308px; width:118px; height:118px; background:var(--orange); }
+  .b-glare{  left:1198px; top:378px; width:64px;  height:64px;  background:var(--glare); }
+
+  /* Subtle halftone panel behind the blocks — the risograph texture signature. */
+  .halftone{
+    position:absolute; left:1214px; top:70px; width:150px; height:auto;
+    opacity:0.5; z-index:0;
+  }
+
+  /* Monkey mark on the ink block — invert flips the black art to white; the
+     screen blend drops the SVG's white background square cleanly into the ink. */
+  .logo{
+    position:absolute; left:1276px; top:164px; width:172px; height:172px;
+    filter:invert(1); mix-blend-mode:screen; z-index:2;
+  }
+
+  /* Scattered pixel accents — the cyber-playground signature. */
+  .px{ position:absolute; width:18px; height:18px; z-index:1; }
+  .p1{ left:1172px; top:200px; background:var(--ink); }
+  .p2{ left:1470px; top:150px; background:var(--violet); }
+  .p3{ left:1466px; top:250px; background:var(--glare); }
+  .p4{ left:1352px; top:398px; background:var(--ink); }
+
+  /* ── Debug safe-zone overlay. OFF by default. To toggle ON, add the class to
+        <body>: <body class="show-guides">  (remove before shipping). ── */
+  .guides{ display:none; }
+  body.show-guides .guides{ display:block; }
+  .guides .avatar{
+    position:absolute; left:46px; top:296px; width:200px; height:200px;
+    border:3px dashed rgba(252,80,0,.9); border-radius:50%; z-index:50;
+  }
+  .guides .safe{
+    position:absolute; left:300px; top:70px; width:1140px; height:360px;
+    border:2px dashed rgba(82,74,233,.9); z-index:50;
+  }
+  .guides .corner{
+    position:absolute; left:0; top:280px; width:280px; height:220px;
+    background:rgba(252,80,0,.12); border:2px solid rgba(252,80,0,.6); z-index:49;
+  }
+</style>
+</head>
+<body>
+
+<div class="header" data-out="x-header.png">
+
+  <!-- identity -->
+  <div class="eyebrow"><span class="dot"></span>AI Agent Architect · Founding Engineer · AI Educator</div>
+  <div class="name">Chan Meng</div>
+  <div class="signature">
+    <span class="mark"></span>
+    <span class="text">I architect AI agents, ship full-stack platforms end-to-end, and teach others to do the same.</span>
+  </div>
+
+  <!-- metric chips -->
+  <div class="metrics">
+    <span class="chip"><span class="sq"></span>480+ GitHub stars</span>
+    <span class="chip"><span class="sq"></span>12 companies</span>
+    <span class="chip"><span class="sq"></span>5 teaching cohorts</span>
+    <span class="chip"><span class="sq"></span>Anthropic Partner Network</span>
+  </div>
+
+  <!-- flagship proof strip -->
+  <div class="proof">
+    <span class="pchip"><img src="../../public/brands/server-google-news-mark.svg" alt="">Google News MCP</span>
+    <span class="pchip"><img src="../../public/brands/echook-logo.svg" alt="">echook</span>
+    <span class="pchip"><img src="../../public/brands/archlang-logo.svg" alt="">ArchLang</span>
+    <span class="pchip"><img src="../../public/brands/archcanvas-logo.svg" alt="">ArchCanvas</span>
+    <span class="pchip"><img src="../../public/brands/vitex.svg" alt="">Vitex</span>
+  </div>
+
+  <!-- right composition -->
+  <img class="halftone" src="../../public/brand/halftone-thumb.svg" alt="">
+  <div class="block b-violet"></div>
+  <div class="block b-ink"></div>
+  <div class="block b-orange"></div>
+  <div class="block b-glare"></div>
+  <img class="logo" src="../../public/brands/chan-monkey-logo-black.svg" alt="">
+  <div class="px p1"></div>
+  <div class="px p2"></div>
+  <div class="px p3"></div>
+  <div class="px p4"></div>
+
+  <!-- safe-zone guides (hidden unless body.show-guides) -->
+  <div class="guides">
+    <div class="avatar"></div>
+    <div class="safe"></div>
+    <div class="corner"></div>
+  </div>
+
+</div>
+
+</body>
+</html>

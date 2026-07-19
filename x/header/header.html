@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chan Meng — X Header (Caldera)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --basalt:#E2E2DF; --ink:#070607; --orange:#FC5000; --muted:#5B5B59;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#aaa; font-family:'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+
+  /* Flat basalt ground. X renders this at 1500×500 (3:1). The header's only
+     job is identity — product proof lives in the bio + pinned image now, so
+     everything here is generous air, one big name, and one color-block mark. */
+  .header{
+    width:1500px; height:500px; position:relative;
+    background:var(--basalt); overflow:hidden;
+  }
+
+  /* ── Left identity stack. Left edge at x=300 so the whole column sits clear
+        of the bottom-left avatar rectangle (x<280, y>280) that X overlays, and
+        leaves a wide basalt margin on the far left for calm asymmetry. ── */
+  .eyebrow{
+    position:absolute; left:302px; top:104px;
+    font-weight:600; font-size:18px; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--ink); display:flex; align-items:center; gap:14px;
+  }
+  .eyebrow .sq{ width:13px; height:13px; background:var(--orange); display:inline-block; flex:none; }
+
+  .name{
+    position:absolute; left:296px; top:132px;
+    font-family:'Anton',sans-serif; font-weight:400; font-size:146px;
+    line-height:0.9; letter-spacing:0.015em; color:var(--ink);
+  }
+
+  /* Italic tagline with the orange dash mark — two calm lines under the name.
+     Left edge at x=430 (matches the LinkedIn cover .signature) so BOTH lines
+     clear the round avatar overlay: the avatar circle is widest at its vertical
+     centre (~y396), which aligns with the tagline's lower line, and there it
+     reaches past the old x≈300 edge — 430 keeps both lines clear with margin. */
+  .tagline{
+    position:absolute; left:430px; top:356px;
+    display:flex; align-items:flex-start; gap:20px;
+  }
+  .tagline .mark{ width:34px; height:6px; background:var(--orange); flex:none; margin-top:14px; }
+  .tagline .text{
+    font-style:italic; font-weight:400; font-size:23px; line-height:1.45;
+    letter-spacing:0.005em; color:var(--ink);
+  }
+
+  /* ── Right side — exactly two elements. One large ink block carrying the
+        monkey mark, plus one orange square offset behind its lower-left
+        corner. Nothing else. Kept to x>1150 so it never crowds the name. ── */
+  .b-ink{
+    position:absolute; left:1188px; top:118px; width:264px; height:264px;
+    background:var(--ink); z-index:2;
+  }
+  .b-orange{
+    position:absolute; left:1130px; top:326px; width:112px; height:112px;
+    background:var(--orange); z-index:1;
+  }
+
+  /* Monkey mark on the ink block — invert flips the black art to white; the
+     screen blend drops the SVG's white background square cleanly into the ink. */
+  .logo{
+    position:absolute; left:1246px; top:176px; width:148px; height:148px;
+    filter:invert(1); mix-blend-mode:screen; z-index:3;
+  }
+
+  /* ── Debug safe-zone overlay. OFF by default. To toggle ON, add the class to
+        <body>: <body class="show-guides">  (remove before shipping). ── */
+  .guides{ display:none; }
+  body.show-guides .guides{ display:block; }
+  .guides .avatar{
+    position:absolute; left:46px; top:296px; width:200px; height:200px;
+    border:3px dashed rgba(252,80,0,.9); border-radius:50%; z-index:50;
+  }
+  .guides .safe{
+    position:absolute; left:300px; top:70px; width:1140px; height:360px;
+    border:2px dashed rgba(82,74,233,.9); z-index:50;
+  }
+  .guides .corner{
+    position:absolute; left:0; top:280px; width:280px; height:220px;
+    background:rgba(252,80,0,.12); border:2px solid rgba(252,80,0,.6); z-index:49;
+  }
+</style>
+</head>
+<body>
+
+<div class="header" data-out="x-header.png">
+
+  <!-- identity -->
+  <div class="eyebrow"><span class="sq"></span>AI Agent Architect · Founding Engineer · AI Educator</div>
+  <div class="name">Chan Meng</div>
+  <div class="tagline">
+    <span class="mark"></span>
+    <span class="text">I architect AI agents, ship full-stack platforms end-to-end,<br>and teach others to do the same.</span>
+  </div>
+
+  <!-- right composition — two elements only -->
+  <div class="b-orange"></div>
+  <div class="b-ink"></div>
+  <img class="logo" src="../../public/brands/chan-monkey-logo-black.svg" alt="">
+
+  <!-- safe-zone guides (hidden unless body.show-guides) -->
+  <div class="guides">
+    <div class="avatar"></div>
+    <div class="safe"></div>
+    <div class="corner"></div>
+  </div>
+
+</div>
+
+</body>
+</html>

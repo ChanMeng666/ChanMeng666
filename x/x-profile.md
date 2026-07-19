@@ -19,11 +19,17 @@ Copy for the X (Twitter) profile fields — display name, bio, location, website
 
 Pattern `Chan Meng — <short role descriptor>`. "AI Agent Architect" is the lead descriptor from `basics.label` and `meta.x_brand.valueProposition.identity`; it is the single most search-relevant role for both recruiters and technical readers, so it earns the display-name slot over the longer "& Full-Stack Engineer" (which lives in the bio instead).
 
-**Bio** (≤160 chars) — chosen primary:
+**Bio** (≤160 chars) — chosen primary (v2):
+
+> AI agent architect & full-stack engineer. ArchCanvas (archcanvas.uk): describe a building → buildable floor plan. Vitex (vitex.org.nz): job ad → resume.
+
+(152 chars.) Contains (a) compressed identity opener — AI agent architect + full-stack engineer; (b) two flagship products each with its live link as a bare domain and a value hint a stranger can parse — **ArchCanvas** (`archcanvas.uk`, the AI architect: describe a building and get a dimensioned, buildable floor plan) and **Vitex** (`vitex.org.nz`, the AI career agent: a job ad becomes a tailored resume). X bios count plain characters and are NOT t.co-wrapped, and X auto-links bare domains, so `archcanvas.uk` / `vitex.org.nz` render as clickable links at their literal character cost. No `chanmeng.org` — the Website field already carries it, so repeating it here would be redundant.
+
+_Previous bio (v1, applied live 2026-07-19, superseded same day) — kept for history:_
 
 > AI agent architect & full-stack engineer. I ship AI-native products end to end — creator of Tam-AI-Ti, a Te Whare Tapa Whā AI coach. chanmeng.org
 
-(145 chars.) Contains (a) compressed identity — AI agent architect + full-stack engineer; (b) one flagship proof point — Tam-AI-Ti, the Te Whare Tapa Whā AI coach (`20-projects-flagship.yaml`, flagship, live at tamaiti.whiri-ai.com); (c) pointer to chanmeng.org. The human-stakes lead ("I ship AI-native products end to end") reads for a recruiter; the named product and the cultural-tech specificity read for an engineer. X bios count plain characters and do not t.co-shorten URLs, so `chanmeng.org` is counted verbatim.
+_v2 applied live 2026-07-19 (@chanmeng666): the primary bio above was set live (renders with clean bare-domain links `archcanvas.uk` / `vitex.org.nz`); the header was replaced with the redesigned minimal `x/header/x-header.png`; the v1 pinned intro thread (root status `2078709504532000825`, 3 tweets) was deleted and a fresh 3-tweet thread from `x/x-pinned-tweet.md` was posted, with `x/media/pinned-products.png` attached to tweet 1 and pinned (new root status `2078727381859389815`). Auto-generated link cards were removed from tweets 2 and 3 so the thread's only media is tweet 1's product lineup. Display name, location, and website were left unchanged. The v0 rollback table above is preserved as the original pre-July baseline._
 
 **Location** — `Auckland, New Zealand`
 
@@ -35,17 +41,17 @@ Reasoning: X's Professional Account category taxonomy has no "software engineer"
 
 ## Alternate bios
 
-**Alternate 1** (148 chars) — credential-forward, recruiter-leaning:
+**Alternate 1** (160 chars) — recruiter-leaning, "ships products solo":
 
-> AI Agent Architect · Founding engineer · AI educator. 480+ GitHub stars, Master’s with Distinction. AI, cultural tech & women’s health. chanmeng.org
+> AI agent architect & full-stack engineer. I ship AI-native products solo: ArchCanvas (archcanvas.uk), an AI architect, and Vitex (vitex.org.nz), a career agent.
 
-_When to use:_ during an active job search or recruiter-heavy period, when the adoption signal (480+ stars — given by other people, per the `proofLine` note in `90-meta.yaml`) and the credential do more work than a single named product.
+_When to use:_ during an active job search or recruiter-heavy period, where the "ships AI-native products solo" framing plus two live, linked, self-describing products (ArchCanvas = AI architect, Vitex = AI career agent) does more work than a bare credential list. Both products link out as bare domains; no `chanmeng.org` (Website field covers it).
 
-**Alternate 2** (153 chars) — builder/open-source-leaning:
+**Alternate 2** (157 chars) — builder / open-source-leaning:
 
-> I architect AI agents & ship full-stack platforms solo. Creator of Tam-AI-Ti and an early Model Context Protocol server (PulseMCP Top Pick). chanmeng.org
+> I architect AI agents & ship full-stack solo. ArchCanvas (archcanvas.uk): brief → buildable floor plan. Vitex (vitex.org.nz): job ad → resume. Plus ArchLang.
 
-_When to use:_ when the audience skews developer/open-source (e.g. after MCP or agent-tooling posts), where "early Model Context Protocol server (PulseMCP Top Pick)" is the strongest credibility hook for technical readers.
+_When to use:_ when the audience skews developer/open-source (e.g. after agent-tooling or DSL posts). Keeps the two linked flagship products but name-drops **ArchLang** (Chan's own floor-plan DSL that ArchCanvas compiles) as the extra credibility hook for technical readers. No `chanmeng.org`.
 
 ## Character-count verification
 
@@ -53,16 +59,16 @@ _When to use:_ when the audience skews developer/open-source (e.g. after MCP or 
 $ node -e '
 const items = {
   "display":  "Chan Meng — AI Agent Architect",
-  "primary":  "AI agent architect & full-stack engineer. I ship AI-native products end to end — creator of Tam-AI-Ti, a Te Whare Tapa Whā AI coach. chanmeng.org",
-  "alt1":     "AI Agent Architect · Founding engineer · AI educator. 480+ GitHub stars, Master’s with Distinction. AI, cultural tech & women’s health. chanmeng.org",
-  "alt2":     "I architect AI agents & ship full-stack platforms solo. Creator of Tam-AI-Ti and an early Model Context Protocol server (PulseMCP Top Pick). chanmeng.org"
+  "primary":  "AI agent architect & full-stack engineer. ArchCanvas (archcanvas.uk): describe a building → buildable floor plan. Vitex (vitex.org.nz): job ad → resume.",
+  "alt1":     "AI agent architect & full-stack engineer. I ship AI-native products solo: ArchCanvas (archcanvas.uk), an AI architect, and Vitex (vitex.org.nz), a career agent.",
+  "alt2":     "I architect AI agents & ship full-stack solo. ArchCanvas (archcanvas.uk): brief → buildable floor plan. Vitex (vitex.org.nz): job ad → resume. Plus ArchLang."
 };
 for (const [k,v] of Object.entries(items)) console.log(k.padEnd(9), String(v.length).padStart(3), (v.length<=(k==="display"?50:160)?"OK ":"OVER"), JSON.stringify(v));
 '
 display    30 OK  "Chan Meng — AI Agent Architect"
-primary   145 OK  "AI agent architect & full-stack engineer. I ship AI-native products end to end — creator of Tam-AI-Ti, a Te Whare Tapa Whā AI coach. chanmeng.org"
-alt1      148 OK  "AI Agent Architect · Founding engineer · AI educator. 480+ GitHub stars, Master’s with Distinction. AI, cultural tech & women’s health. chanmeng.org"
-alt2      153 OK  "I architect AI agents & ship full-stack platforms solo. Creator of Tam-AI-Ti and an early Model Context Protocol server (PulseMCP Top Pick). chanmeng.org"
+primary   152 OK  "AI agent architect & full-stack engineer. ArchCanvas (archcanvas.uk): describe a building → buildable floor plan. Vitex (vitex.org.nz): job ad → resume."
+alt1      160 OK  "AI agent architect & full-stack engineer. I ship AI-native products solo: ArchCanvas (archcanvas.uk), an AI architect, and Vitex (vitex.org.nz), a career agent."
+alt2      157 OK  "I architect AI agents & ship full-stack solo. ArchCanvas (archcanvas.uk): brief → buildable floor plan. Vitex (vitex.org.nz): job ad → resume. Plus ArchLang."
 ```
 
-Display name 30/50, primary bio 145/160, alt1 148/160, alt2 153/160 — all within limits.
+Display name 30/50, primary bio 152/160, alt1 160/160, alt2 157/160 — all within limits. No bio contains `chanmeng.org`; each names ArchCanvas + Vitex with its bare-domain link and a value hint.

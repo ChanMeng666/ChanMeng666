@@ -15,6 +15,11 @@ and must never be linked or mentioned.
 
 ## The pinned thread (3 tweets)
 
+> **Live status (v2, 2026-07-19):** Tweet 1 is posted with
+> `x/media/pinned-products.png` attached (the image suppresses the auto link
+> card that the profile URL would otherwise render). Thread root status id:
+> `2078727381859389815`.
+
 A pin shows only the first tweet, so Tweet 1 stands fully on its own: who Chan
 is, the human-stakes value, and the compressed proof (480+ GitHub stars across
 shipped AI tools). Tweets 2 and 3 continue for anyone who expands the thread.

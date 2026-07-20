@@ -65,6 +65,14 @@ A. {{answer}}
 {{#each _openSourcePrimary}}- **{{name}}** -- {{flatten (default publicSummary tagline)}}{{#if url}} ({{url}}){{else}}{{#if repoUrl}} ({{repoUrl}}){{/if}}{{/if}}
 {{/each}}
 
+## Writing
+
+{{_writingAll.length}} technical articles, all self-hosted at {{_writingIndexUrl}} (canonical; originally published on LinkedIn Pulse or Medium where noted on each page). Featured selection:
+
+{{#each _writingFeatured}}- **{{name}}** ({{releaseDate}}) -- {{#if summary}}{{flatten summary}} {{/if}}{{url}}
+{{/each}}
+Full index (all {{_writingAll.length}}, newest first): {{_writingIndexUrl}}
+
 ## Core Expertise
 
 {{#each skills}}- **{{name}}**: {{join keywords ", "}}

@@ -403,13 +403,40 @@ data._certsByCategory = ["microsoft", "other", "hackerrank"]
   }));
 
 // Media Appearances — only third-party press / interviews / podcast episodes
-// where Chan is the subject. Drops the ~20 LinkedIn Pulse articles (covered by
-// the Medium widget), the 4 podcastShow entries (rendered separately as
-// "Podcasts I Host"), and the 2 newsletter entries.
+// where Chan is the SUBJECT (hero.hbs renders the first 4 as a "Featured in"
+// row). Deliberately excludes everything Chan authored or hosts: the ~46
+// `type: article` entries (those go to _writingFeatured below), the 4
+// podcastShow entries, and the 2 newsletter entries. None of those three
+// groups has a README section of its own today.
 data._mediaAppearances = (data.publications ?? []).filter((p) => {
   const type = p?.meta?.x_brand?.type;
   return type === "press" || type === "interview" || type === "podcastEpisode";
 });
+
+// ---------------------------------------------------------------------------
+// Writing — Chan-authored articles, now self-hosted at chanmeng.org/blog.
+// Keyed by blog slug (the last path segment of `url`), which is the only
+// stable id a publication entry has; publications have no `id` field.
+// featuredArticleIds curates the README shopfront subset the same way
+// flagshipProjectIds curates projects, and a typo fails the build for the same
+// reason spotlightProjectIds does.
+// ---------------------------------------------------------------------------
+const BLOG_PREFIX = "https://chanmeng.org/blog/";
+const articles = (data.publications ?? []).filter(
+  (p) => p?.meta?.x_brand?.type === "article" && (p.url ?? "").startsWith(BLOG_PREFIX),
+);
+const bySlug = new Map(articles.map((a) => [a.url.slice(BLOG_PREFIX.length), a]));
+
+const featuredArticleIds = data.meta?.x_brand?.featuredArticleIds ?? [];
+const missingArticles = featuredArticleIds.filter((id) => !bySlug.has(id));
+if (missingArticles.length) {
+  console.error(`✗ meta.x_brand.featuredArticleIds reference unknown blog slug(s): ${missingArticles.join(", ")}`);
+  process.exit(1);
+}
+data._writingFeatured = featuredArticleIds.map((id) => ({ ...bySlug.get(id), slug: id }));
+// Every self-hosted article, newest first — the LLM surfaces take the lot.
+data._writingAll = [...articles].sort((a, b) => (b.releaseDate ?? "").localeCompare(a.releaseDate ?? ""));
+data._writingIndexUrl = "https://chanmeng.org/blog";
 
 // Featured testimonials (3 visible, rest in collapsible)
 data._featuredReferences = (data.references ?? []).filter(
@@ -984,13 +1011,23 @@ Handlebars.registerHelper("slice", (arr, start, end) =>
 //   2. text before the first ". " (sentence boundary)
 //   3. character truncation at ~160 chars on a word boundary
 // Used by the Open Source primary table where every row must stay scannable.
+// 2026-07-21: rewritten. The old implementation used
+// `raw.match(/[^.!?]+[.!?]+(\s|$)/g)`, which is LOSSY: a full stop not
+// followed by whitespace ("Next.js", "LangGraph.js", "U.S.") makes the match
+// attempt at index 0 fail, /g then restarts *after* that dot, and the opening
+// words are silently DELETED. A summary beginning "Running Stripe checkout …
+// in a Next.js app deployed to Cloudflare Workers" rendered as "js app
+// deployed to Cloudflare Workers". This hit the README Writing table and
+// could equally truncate a testimonial in recognition.hbs.
+// Splitting on the boundary instead of matching whole sentences guarantees
+// the result always starts at character 0.
 Handlebars.registerHelper("firstSentences", (s, n) => {
   const raw = String(s ?? "").replace(/\s+/g, " ").trim();
   if (!raw) return "";
   const num = Math.max(1, Number(n) || 1);
-  const sentences = raw.match(/[^.!?]+[.!?]+(\s|$)/g);
-  if (!sentences || !sentences.length) return raw;
-  return sentences.slice(0, num).join("").trim();
+  // Boundary = terminator + whitespace + something that can open a sentence.
+  const parts = raw.split(/(?<=[.!?])\s+(?=["'“(\[]?[A-Z0-9])/);
+  return parts.slice(0, num).join(" ").trim();
 });
 Handlebars.registerHelper("briefTagline", (s) => {
   const raw = String(s ?? "").replace(/\s+/g, " ").trim();

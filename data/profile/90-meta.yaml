@@ -241,6 +241,33 @@ meta:
     openSourceCategoryOrder: [web-apps, ai-apps, creative, ml-research, branding, games]
 
     # =========================================================================
+    # Writing shopfront — the README "Writing" section (templates/partials/
+    # writing.hbs). Same contract as spotlightProjectIds: these are BLOG SLUGS
+    # (the tail of a `publications[].url` of the form
+    # https://chanmeng.org/blog/<slug>), and a typo FAILS the build in
+    # scripts/build.mjs. Publications have no `id` field, so the slug is the id.
+    #
+    # Curated 2026-07-21, hiring-first, ordered newest-first. ~46 self-hosted
+    # articles exist; the README shows these 8 and links to the full index.
+    # Every article still reaches llms.txt / llms-full.txt via _writingAll, so
+    # de-listing here does NOT hide an article from LLM consumers (unlike the
+    # project buckets — see the _openSourcePrimary note above).
+    #
+    # Selection rule: production decisions and original evidence, not tutorials.
+    # Deliberately excluded: the 2024-25 LinkedIn Pulse how-to back catalogue
+    # (Docusaurus, git, npm, Notion setup guides) and the minimalism/lifestyle
+    # essays — both still fully catalogued, both wrong for a hiring shopfront.
+    featuredArticleIds:
+      - suno-trending-feed-frozen              # original 84-day dataset, not a rehash
+      - neon-auth-email-verification           # documents what the vendor doesn't
+      - stripe-cloudflare-workers-integration  # payments on an edge runtime
+      - railway-to-digitalocean-migration      # infra migration playbook
+      - claude-code-audio-hooks-architecture   # system designed for an AI operator
+      - copilotkit-langgraph-hitl              # the failed-approaches write-up
+      - ai-fluency-framework                   # pairs with the instructor work
+      - small-language-models-next-wave-ai-agents  # the agent-architecture thesis
+
+    # =========================================================================
     # README v2 — provenance-based project buckets. These lists are the single
     # source of truth for BOTH the README shopfront and the LLM-facing
     # "Notable Open Source" sections (see the retirement note above).
@@ -568,9 +595,9 @@ meta:
     # Minimalist living articles
     minimalistArticles:
       - { title: "My Home's Minimalist Transformation: Before and After",                  url: "https://www.douban.com/group/topic/309627759/?_dtcc=1&_i=75245459vsCiSF",  platform: Douban }
-      - { title: "Getting Started with Minimalism — A Beginner's Guide",                   url: "https://www.linkedin.com/pulse/getting-started-minimalism-beginners-guide-chan-meng-jbioc/", platform: LinkedIn }
-      - { title: "Digital Minimalism — Technology as a Tool, Not a Master",                url: "https://www.linkedin.com/pulse/digital-minimalism-technology-tool-master-chan-meng-lkz0c/", platform: LinkedIn }
-      - { title: "Creating a Minimalist Living Space — Lessons from The Art of Discarding", url: "https://www.linkedin.com/pulse/creating-minimalist-living-space-lessons-from-art-discarding-meng-wwdrc/", platform: LinkedIn }
+      - { title: "Getting Started with Minimalism — A Beginner's Guide",                   url: "https://chanmeng.org/blog/getting-started-with-minimalism", platform: chanmeng.org }
+      - { title: "Digital Minimalism — Technology as a Tool, Not a Master",                url: "https://chanmeng.org/blog/digital-minimalism", platform: chanmeng.org }
+      - { title: "Creating a Minimalist Living Space — Lessons from The Art of Discarding", url: "https://chanmeng.org/blog/minimalist-living-space", platform: chanmeng.org }
       - { title: "A Complete Guide to Legally Changing Your Name as an Adult",             url: "https://www.douban.com/group/topic/310015982/?_dtcc=1&_i=75245459vsCiSF",  platform: Douban }
       - { title: "Minimalist Living Blog",                                                  url: "https://minimalist-good-post.pages.dev",                                  platform: "Cloudflare Pages" }
 
@@ -578,7 +605,7 @@ meta:
     # subset (see _footerLinksReadme cache in scripts/build.mjs); the
     # complete list flows into llms-full.txt and dist/profile.json.
     footerLinks:
-      - { label: Medium,             url: "https://chanmeng666.medium.com/",                                                      description: "Read my latest articles on full-stack development and AI" }
+      - { label: Writing,            url: "https://chanmeng.org/blog",                                                            description: "Field reports on AI engineering, agents and full-stack production work" }
       - { label: Hugging Face,       url: "https://huggingface.co/ChanMeng666",                                                   description: "Explore my ML models and Spaces" }
       - { label: Discord,            url: "https://discord.gg/T3NJG5n98a",                                                        description: "Join the AI Programming community" }
       - { label: YouTube,            url: "https://www.youtube.com/@ChanMeng666",                                                 description: "Watch project demos and tutorials" }

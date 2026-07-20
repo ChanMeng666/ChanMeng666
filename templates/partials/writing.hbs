@@ -1,0 +1,25 @@
+{{!-- ═══════════════════════════════════════════════════════════════════════
+     Writing — curated subset of the self-hosted articles at chanmeng.org/blog.
+     Driven by meta.x_brand.featuredArticleIds (blog slugs; a typo fails the
+     build in scripts/build.mjs, same policy as spotlightProjectIds).
+     The full catalogue reaches LLM consumers via _writingAll in llms.txt /
+     llms-full.txt, so trimming this list never hides an article from them.
+     No badge images here by design — the section is text + links only.
+     ═══════════════════════════════════════════════════════════════════════ --}}
+
+## Writing
+
+<sub>Field reports written while building the thing they describe — what the decision was, what broke, and what I'd do again. Everything below is self-hosted; nothing is behind a platform login.</sub>
+
+<table>
+  <colgroup>
+    <col style="width:110px">
+    <col>
+  </colgroup>
+{{#each _writingFeatured}}  <tr>
+    <td valign="top"><sub>{{formatDate releaseDate}}</sub></td>
+    <td><strong><a href="{{url}}">{{name}}</a></strong>{{#if summary}}<br><sub>{{firstSentences (flatten summary) 1}}</sub>{{/if}}</td>
+  </tr>
+{{/each}}</table>
+
+<p><a href="{{_writingIndexUrl}}">Read all {{_writingAll.length}} articles →</a></p>

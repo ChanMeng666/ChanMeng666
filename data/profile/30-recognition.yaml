@@ -825,21 +825,32 @@ publications:
       insights in vivid, engaging conversations.
     meta: { x_brand: { type: podcastShow, role: host } }
 
-  - name: Beyond Thirty 不止三十
-    tier: secondary
-    recency: historical
-    lastUpdated: "2026-05-18"
-    publisher: Spotify (host show)
-    url: https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL
+  # ============================================================================
+  # UNLAUNCHED SHOW CONCEPTS — designed but never published
+  # ============================================================================
+  # Corrected 2026-07-21. This entry previously sat in the "PODCASTS CHAN HOSTS"
+  # band, carried Praxis and Pages' Spotify URL, and listed "featured episodes"
+  # that belong to Decoding the Future. Chan confirmed the show was planned but
+  # never launched: no Spotify/Apple/web presence exists. The `url` is removed
+  # (not schema-required), tier/recency demoted to archive/deprecated, and the
+  # summary now states the unlaunched status plainly, so no generated surface
+  # can present it as a live hosted show. The cover art is real work and is
+  # retained. Do NOT move this back under "PODCASTS CHAN HOSTS" unless the show
+  # actually ships — at which point add the real Spotify URL.
+  - name: Beyond Thirty 不止三十 (unlaunched concept)
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-07-21"
+    publisher: Unpublished — concept and cover art only, never launched
     image: /public/podcasts/beyond-thirty.png
     summary: |
-      Chan-hosted conversational podcast. As a woman in her 30s, Chan
-      invites women between the ages of 30 and 40 from all walks of
-      life for open, authentic conversations. Featured episodes include
-      EP1 *Don't Do RAG: When Cache-Augmented Generation is All You
-      Need for Knowledge Tasks*, EP3 *Breaking the illusion of
-      employment in the age of AI*, EP4 *AI and Future Career Prospects*.
-    meta: { x_brand: { type: podcastShow, role: host } }
+      An unlaunched podcast concept, not a published show. The premise: as a
+      woman in her 30s, Chan would invite women between the ages of 30 and 40
+      from all walks of life for open, authentic conversations. Bespoke cover
+      art was designed, but no episode was ever recorded or published and the
+      show has no Spotify, Apple Podcasts, or web presence. Listed here as
+      design/concept work only.
+    meta: { x_brand: { type: podcastShow, status: unlaunched } }
 
   # ============================================================================
   # NEWSLETTERS — Chan-authored

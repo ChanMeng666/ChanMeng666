@@ -557,9 +557,9 @@ meta:
       - { claim: "Early contributor to Anthropic's Model Context Protocol (modelcontextprotocol/servers) — authored the Windows NVM/NPM configuration solution that was adopted as the canonical Windows-compatibility fix for early Claude Desktop MCP adopters (Issue #75 comment, Nov 2024); preceded and informs Chan's subsequent authoring of two production MCP servers (server-google-news, server-google-jobs) listed across 10+ MCP catalogs",
           source: "https://github.com/modelcontextprotocol/servers/issues/75#issuecomment-2502877979",
           verifiedAt: "2026-05-17" }
-      - { claim: "Three Chan-hosted podcasts published on Spotify: Decoding the Future (English, focused on AI research papers + LLM innovations; companion LinkedIn newsletter with 800+ subscribers); Future Turing 未来图灵 (Chinese-language counterpart); Praxis and Pages 知行书话 (humanities books via NotebookLM-assisted analysis); Beyond Thirty 不止三十 (conversational, women in their 30s; featured episodes include 'Don't Do RAG' on Cache-Augmented Generation, 'Breaking the illusion of employment in the age of AI', and 'AI and Future Career Prospects')",
+      - { claim: "Three Chan-hosted podcasts published on Spotify: Decoding the Future (English, focused on AI research papers + LLM innovations; companion LinkedIn newsletter with 800+ subscribers); Future Turing 未来图灵 (Chinese-language counterpart); Praxis and Pages 知行书话 (humanities books via NotebookLM-assisted analysis)",
           source: "https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj",
-          verifiedAt: "2026-05-17" }
+          verifiedAt: "2026-07-21" }
       - { claim: "30+ Chan-authored LinkedIn Pulse technical articles published 2024-2025 covering AI/ML (AI Fluency Framework, Small Language Models, CopilotKit + LangGraph integration, MCP server creation, AI dialogue systems, Manim educational animations), GitHub/open-source tooling (essential repo files, contribution snake, code organization patterns, npm publishing, conventional commits), and Docusaurus/Next.js engineering (Algolia DocSearch setup, i18n, Notion-PDF integration, Next.js language switching) — featured by PulseMCP's Tadas Antanavicius in a third-party newsletter feature on Chan's MCP servers",
           source: "https://www.linkedin.com/in/chanmeng666/recent-activity/articles/",
           verifiedAt: "2026-05-17" }
@@ -590,7 +590,11 @@ meta:
       - { name: "Decoding the Future",                        url: "https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj", language: en, description: "AI research papers and innovation" }
       - { name: "Future Turing (未来图灵)",                    url: "https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4",  language: zh, description: "AI innovation (Chinese)" }
       - { name: "Praxis and Pages (知行书话)",                 url: "https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL",  language: zh, description: "Humanities and social science" }
-      - { name: "Beyond Thirty (不止三十)",                    url: "https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL",  language: zh, description: "Conversations with women 30-40" }
+      # Beyond Thirty (不止三十) removed 2026-07-21: never launched. It had been
+      # listed here with Praxis and Pages' Spotify URL. It survives in
+      # 30-recognition.yaml under "UNLAUNCHED SHOW CONCEPTS" as concept/design
+      # work. This list is rendered as a flat "Podcasts Hosted" block in
+      # llms-full.txt — only genuinely published shows belong in it.
 
     # Minimalist living articles
     minimalistArticles:

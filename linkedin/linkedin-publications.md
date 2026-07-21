@@ -100,7 +100,7 @@ What the episode covers:
 **Publication/Publisher:** FemTech Weekend
 **Publication date:** Apr 2, 2025
 **Author:** FemTech Weekend editorial — Chan Meng featured
-**URL:** <https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg>
+**URL:** <https://chanmeng.org/blog/from-code-to-care-un>
 
 ```
 A feature in FemTech Weekend's publication on my work as an independent developer presenting at the UN Commission on the Status of Women (CSW69) and Columbia University SIPA's international forum on technology and women's health.
@@ -157,7 +157,7 @@ Being picked up by an independent MCP-ecosystem newsletter, written by Tadas Ant
 **Publication/Publisher:** NetEase — Kan Ke inSight (网易看客 inSight)
 **Publication date:** Oct 18, 2024
 **Author:** Chan Meng
-**URL:** <https://mp.weixin.qq.com/s/Jk9I8ONA6vsyvHz7d4dkfw>
+**URL:** <https://chanmeng.org/blog/threw-away-my-old-name>
 **Engagement:** 29,000+ reads · 534 audio listens · 569 likes · 1,118 shares · 136 bookmarks · 106 comments
 
 ```

@@ -56,10 +56,13 @@ linkedin:
     websiteUrl: https://chanmeng.org/
   about:
     lead: |-
-      Building at the intersection of AI, cultural technology, and women's health.
+      Building at the intersection of AI, cultural technology, and women's health — and founder of ArchCanvas + ArchLang, an AI architect for floor plans built on an open-source compiler I wrote.
 
       I architect AI agents that survive production and build the platforms around them — for founders who need to move fast, teams who need depth, and products whose users aren't the default Silicon Valley persona.
     sections:
+      - emoji: 🏗️
+        heading: Founder — ArchCanvas + ArchLang
+        body: 'My current flagship build — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that COMPILES a floor plan written as .arch source into dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture" (github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang). ArchCanvas is the AI architect built on it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you refine by talking to it (archcanvas.uk).'
       - emoji: 🤖
         heading: AI Agent Engineering
         body: 'Agentic systems designed end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, and model routing across Claude, OpenAI, and Llama. Earliest-ecosystem MCP server author — Google News MCP (PulseMCP Top Pick, Glama A-rating). FemTracker Agent merged into CopilotKit''s official demos repo (36.1k★).'
@@ -85,8 +88,8 @@ linkedin:
       - AI Agent Architecture
       - Model Context Protocol (MCP)
       - Multi-agent Systems
-      - Kubernetes
       - AI Integration
+      - Kubernetes
   services:
     pageTitle: Chan's Services
     openToWork: true

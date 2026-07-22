@@ -4,9 +4,15 @@
 # LinkedIn — About
 
 ```
-Building at the intersection of AI, cultural technology, and women's health.
+Building at the intersection of AI, cultural technology, and women's health — and founder of ArchCanvas + ArchLang, an AI architect for floor plans built on an open-source compiler I wrote.
 
 I architect AI agents that survive production and build the platforms around them — for founders who need to move fast, teams who need depth, and products whose users aren't the default Silicon Valley persona.
+```
+
+## 🏗️ Founder — ArchCanvas + ArchLang
+
+```
+My current flagship build — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that COMPILES a floor plan written as .arch source into dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture" (github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang). ArchCanvas is the AI architect built on it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you refine by talking to it (archcanvas.uk).
 ```
 
 ## 🤖 AI Agent Engineering
@@ -51,4 +57,4 @@ Host of three Spotify shows: Decoding the Future, Future Turing, and Praxis and 
 Based in Auckland, Aotearoa New Zealand. Open to founding-team, staff-IC, AI architecture, and AI-engineering instruction engagements starting Q3 2026.
 ```
 
-**Top skills:** AI Agent Architecture • Model Context Protocol (MCP) • Multi-agent Systems • Kubernetes • AI Integration
+**Top skills:** AI Agent Architecture • Model Context Protocol (MCP) • Multi-agent Systems • AI Integration • Kubernetes

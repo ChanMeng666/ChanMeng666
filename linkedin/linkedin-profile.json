@@ -30,7 +30,7 @@
   "banner": {
     "name": "Chan Meng",
     "pronouns": "She/Her",
-    "headline": "AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Creator of Tam-AI-Ti (Te Whare Tapa Whā AI Coach) | Cultural tech & women's health | Auckland, NZ",
+    "headline": "AI Agent Architect & Full-Stack Engineer | Founder of ArchCanvas + ArchLang (an AI architect built on the floor-plan compiler I wrote) | Anthropic Partner Network | Cultural tech & women's health | Auckland, NZ",
     "location": "Auckland, Auckland, New Zealand",
     "currentEmployerBadge": "Engram",
     "educationBadge": "Lincoln University (NZ)",
@@ -40,8 +40,13 @@
     "websiteUrl": "https://chanmeng.org/"
   },
   "about": {
-    "lead": "Building at the intersection of AI, cultural technology, and women's health.\n\nI architect AI agents that survive production and build the platforms around them — for founders who need to move fast, teams who need depth, and products whose users aren't the default Silicon Valley persona.",
+    "lead": "Building at the intersection of AI, cultural technology, and women's health — and founder of ArchCanvas + ArchLang, an AI architect for floor plans built on an open-source compiler I wrote.\n\nI architect AI agents that survive production and build the platforms around them — for founders who need to move fast, teams who need depth, and products whose users aren't the default Silicon Valley persona.",
     "sections": [
+      {
+        "emoji": "🏗️",
+        "heading": "Founder — ArchCanvas + ArchLang",
+        "body": "My current flagship build — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that COMPILES a floor plan written as .arch source into dimensioned SVG/DXF/PDF — \"Typst/LaTeX for architecture\" (github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang). ArchCanvas is the AI architect built on it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you refine by talking to it (archcanvas.uk)."
+      },
       {
         "emoji": "🤖",
         "heading": "AI Agent Engineering",
@@ -82,8 +87,8 @@
       "AI Agent Architecture",
       "Model Context Protocol (MCP)",
       "Multi-agent Systems",
-      "Kubernetes",
-      "AI Integration"
+      "AI Integration",
+      "Kubernetes"
     ]
   },
   "services": {

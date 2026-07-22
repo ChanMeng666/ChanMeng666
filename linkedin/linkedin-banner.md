@@ -12,5 +12,5 @@
 **Headline:**
 
 ```
-AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Creator of Tam-AI-Ti (Te Whare Tapa Whā AI Coach) | Cultural tech & women's health | Auckland, NZ
+AI Agent Architect & Full-Stack Engineer | Founder of ArchCanvas + ArchLang (an AI architect built on the floor-plan compiler I wrote) | Anthropic Partner Network | Cultural tech & women's health | Auckland, NZ
 ```

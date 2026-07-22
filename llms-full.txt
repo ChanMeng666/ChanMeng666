@@ -195,6 +195,40 @@ GAVIGO IRE — 426 of 439 commits (~97%) solo, <1ms p50 restore latency, 84.6% w
 
 ## Current Roles
 
+### Founder & Sole Engineer at ArchCanvas
+[tier=flagship · recency=active · updated=2026-07-23]
+- **Period:** Apr 2026 -- Present
+- **Location:** Auckland, New Zealand (remote)
+- **URL:** https://archcanvas.uk/
+- **Keywords:** ArchCanvas (AI architect for floor plans), ArchLang (declarative floor-plan language), Designs that compile (parametric, not pixels), Programming Language Design, Compilers, AI Agent Architecture, Vercel AI SDK, Next.js, Building in public
+
+**Impact:** Founder of ArchCanvas — an AI architect that turns a plain-English brief into one strong, checkable, dimensioned floor plan — built on ArchLang, the open-source floor-plan language I wrote that compiles code to real drawings ("Typst/LaTeX for architecture").
+
+**Company context:** ArchCanvas ([archcanvas.uk](https://archcanvas.uk/)) is an AI design
+agent for architects and self-builders: describe a building in plain
+language and it designs a dimensioned floor plan you can actually build
+from — with room labels and measurements — alongside a grounded AI
+rendering, then stays conversational on an infinite zoomable canvas
+where you refine the plan by talking to it. It is productised on top of
+**ArchLang** ([github.com/ChanMeng666/archlang](https://github.com/ChanMeng666/archlang) ·
+[playground.archlang.uk](https://playground.archlang.uk) · npm
+[@chanmeng666/archlang](https://www.npmjs.com/package/@chanmeng666/archlang)),
+the open-source declarative floor-plan language I designed and wrote.
+
+**Mission:** Make a floor plan a **program, not a picture**. Because every ArchCanvas
+plan is real parametric ArchLang rather than pixels, edits are precise
+and re-editable — nudge a wall, tweak a parameter, or have the AI review
+circulation and pin fixes in place — capabilities an image-generation
+tool structurally cannot offer.
+
+**My mandate:** Sole author of both the language and the product — every commit is mine —
+building in public. ArchLang is a hand-written compiler (lexer +
+recursive-descent parser, zero runtime dependencies) with
+architectural-soundness linting, a CLI, LSP + VS Code tooling, and a
+client-side playground, published open-source to npm. ArchCanvas is the
+Next.js product that consumes it as a package: an AI agent writes
+ArchLang, compiles it, grounds a rendering on the compiled plan, and
+critiques it — then lets the user refine the plan in place.
 ### AI Agent Architect at Engram
 [tier=flagship · recency=active · updated=2026-05-18]
 - **Period:** May 2026 -- Present

@@ -146,6 +146,7 @@ for (const h of ln.honorsAndAwards) {
 // Sanicle and Gavigo show TWO LinkedIn positions against one merged work entry,
 // so they are intentionally NOT injected here — they stay verbatim in the block.
 const expCompanyToWork = {
+  "ArchCanvas": "archcanvas",
   "Engram": "engram",
   "TechNest Community": "technest",
   "She Sharp": "she-sharp",

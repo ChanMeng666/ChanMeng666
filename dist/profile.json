@@ -199,6 +199,36 @@
   ],
   "work": [
     {
+      "id": "archcanvas",
+      "name": "ArchCanvas",
+      "position": "Founder & Sole Engineer",
+      "startDate": "2026-04",
+      "endDate": null,
+      "location": "Auckland, New Zealand (remote)",
+      "url": "https://archcanvas.uk/",
+      "featured": true,
+      "tier": "flagship",
+      "recency": "active",
+      "lastUpdated": "2026-07-23",
+      "keywords": [
+        "ArchCanvas (AI architect for floor plans)",
+        "ArchLang (declarative floor-plan language)",
+        "Designs that compile (parametric, not pixels)",
+        "Programming Language Design",
+        "Compilers",
+        "AI Agent Architecture",
+        "Vercel AI SDK",
+        "Next.js",
+        "Building in public"
+      ],
+      "narrative": {
+        "impactHeadline": "Founder of ArchCanvas — an AI architect that turns a plain-English brief into one strong, checkable, dimensioned floor plan — built on ArchLang, the open-source floor-plan language I wrote that compiles code to real drawings (\"Typst/LaTeX for architecture\").",
+        "companyContext": "ArchCanvas ([archcanvas.uk](https://archcanvas.uk/)) is an AI design\nagent for architects and self-builders: describe a building in plain\nlanguage and it designs a dimensioned floor plan you can actually build\nfrom — with room labels and measurements — alongside a grounded AI\nrendering, then stays conversational on an infinite zoomable canvas\nwhere you refine the plan by talking to it. It is productised on top of\n**ArchLang** ([github.com/ChanMeng666/archlang](https://github.com/ChanMeng666/archlang) ·\n[playground.archlang.uk](https://playground.archlang.uk) · npm\n[@chanmeng666/archlang](https://www.npmjs.com/package/@chanmeng666/archlang)),\nthe open-source declarative floor-plan language I designed and wrote.\n",
+        "mission": "Make a floor plan a **program, not a picture**. Because every ArchCanvas\nplan is real parametric ArchLang rather than pixels, edits are precise\nand re-editable — nudge a wall, tweak a parameter, or have the AI review\ncirculation and pin fixes in place — capabilities an image-generation\ntool structurally cannot offer.\n",
+        "myMandate": "Sole author of both the language and the product — every commit is mine —\nbuilding in public. ArchLang is a hand-written compiler (lexer +\nrecursive-descent parser, zero runtime dependencies) with\narchitectural-soundness linting, a CLI, LSP + VS Code tooling, and a\nclient-side playground, published open-source to npm. ArchCanvas is the\nNext.js product that consumes it as a package: an AI agent writes\nArchLang, compiles it, grounds a rendering on the compiled plan, and\ncritiques it — then lets the user refine the plan in place.\n"
+      }
+    },
+    {
       "id": "engram",
       "name": "Engram",
       "position": "AI Agent Architect",
@@ -12235,6 +12265,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-07-22",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-22T13:12:16.366Z"
+    "buildTimestamp": "2026-07-22T14:18:40.065Z"
   }
 }

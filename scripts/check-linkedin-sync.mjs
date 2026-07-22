@@ -69,6 +69,7 @@ for (const h of ln?.honorsAndAwards ?? []) {
 // the golden title we also confirm it still matches; differing titles are
 // curated and intentionally left in the block (no assertion). ---
 const expCompanyToWork = {
+  "ArchCanvas": "archcanvas",
   "Engram": "engram", "TechNest Community": "technest", "She Sharp": "she-sharp",
   "FemTech Weekend": "femtech-weekend", "CopilotKit": "copilotkit",
   "Aotearoa Infinite Academy": "aotearoa-infinite-academy", "Forward with Her 她行": "forward-with-her",

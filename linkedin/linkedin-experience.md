@@ -3,6 +3,27 @@
 
 # LinkedIn — Experience
 
+## ArchCanvas
+**Links:** <https://archcanvas.uk/> · <https://github.com/ChanMeng666/archlang> · <https://playground.archlang.uk>
+
+### Founder & Sole Engineer
+
+**Employment type:** Self-employed
+**Dates:** Apr 2026 - Present · 4 mos
+**Location:** Auckland, New Zealand · Remote
+
+```
+Founder and sole engineer of ArchCanvas — an AI architect that turns a plain-English brief into one strong, checkable, dimensioned floor plan you can actually build from, then lets you refine it conversationally on an infinite zoomable canvas. Also the sole author of ArchLang, the open-source declarative floor-plan language ArchCanvas compiles on: write a plan as .arch source and it compiles to dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture."
+
+• Designs that compile, not pixels: because every plan is real parametric ArchLang under the hood, edits are precise and re-editable — nudge a wall, tweak a parameter, or have the AI review circulation and pin fixes in place.
+• ArchLang is published open-source to npm as @chanmeng666/archlang — a hand-written compiler (lexer + recursive-descent parser, zero runtime dependencies) with architectural-soundness linting, a CLI, LSP + VS Code tooling, and a client-side playground.
+• Sole author of both the language and the product — every commit is mine — building in public.
+
+Links: archcanvas.uk · github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang
+```
+
+**Skills:** AI Agent Architecture, Programming Language Design, Compilers, TypeScript, Next.js
+
 ## Engram
 **Links:** <https://engram.media/>
 

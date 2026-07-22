@@ -4,11 +4,11 @@
     "alternateName": "Chan",
     "pronouns": "She/Her",
     "label": "AI Agent Architect & Full-Stack Engineer",
-    "headline": "AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Creator of Tam-AI-Ti (Te Whare Tapa Whā AI Coach) | Cultural tech & women's health | Auckland, NZ",
+    "headline": "AI Agent Architect & Full-Stack Engineer | Founder of ArchCanvas + ArchLang (an AI architect built on the floor-plan compiler I wrote) | Anthropic Partner Network | Cultural tech & women's health | Auckland, NZ",
     "image": "/public/brands/chan-monkey-logo-black.svg",
     "email": "chanmeng.career@gmail.com",
     "url": "https://chanmeng.org/",
-    "summary": "AI agent architect, full-stack engineer, and minimalist living advocate\nbuilding at the intersection of AI, cultural technology, and women's\nhealth. Based in Auckland, New Zealand. Holds a Master of Applied\nComputing with Distinction from Lincoln University, New Zealand.\nFeatured in multiple media interviews for her minimalist lifestyle\nphilosophy — \"Subtraction for life, addition for thought.\"\n",
+    "summary": "AI agent architect, full-stack engineer, and minimalist living advocate\nbuilding at the intersection of AI, cultural technology, and women's\nhealth. Current flagship build: ArchCanvas — an AI architect for floor\nplans — on ArchLang, the open-source declarative floor-plan language she\nwrote that compiles source to dimensioned drawings. Based in Auckland, New\nZealand. Holds a Master of Applied Computing with Distinction from Lincoln\nUniversity, New Zealand. Featured in multiple media interviews for her\nminimalist lifestyle philosophy — \"Subtraction for life, addition for\nthought.\"\n",
     "location": {
       "region": "Auckland, New Zealand",
       "countryCode": "NZ",
@@ -198,6 +198,36 @@
     }
   ],
   "work": [
+    {
+      "id": "archcanvas",
+      "name": "ArchCanvas",
+      "position": "Founder & Sole Engineer",
+      "startDate": "2026-04",
+      "endDate": null,
+      "location": "Auckland, New Zealand (remote)",
+      "url": "https://archcanvas.uk/",
+      "featured": true,
+      "tier": "flagship",
+      "recency": "active",
+      "lastUpdated": "2026-07-23",
+      "keywords": [
+        "ArchCanvas (AI architect for floor plans)",
+        "ArchLang (declarative floor-plan language)",
+        "Designs that compile (parametric, not pixels)",
+        "Programming Language Design",
+        "Compilers",
+        "AI Agent Architecture",
+        "Vercel AI SDK",
+        "Next.js",
+        "Building in public"
+      ],
+      "narrative": {
+        "impactHeadline": "Founder of ArchCanvas — an AI architect that turns a plain-English brief into one strong, checkable, dimensioned floor plan — built on ArchLang, the open-source floor-plan language I wrote that compiles code to real drawings (\"Typst/LaTeX for architecture\").",
+        "companyContext": "ArchCanvas ([archcanvas.uk](https://archcanvas.uk/)) is an AI design\nagent for architects and self-builders: describe a building in plain\nlanguage and it designs a dimensioned floor plan you can actually build\nfrom — with room labels and measurements — alongside a grounded AI\nrendering, then stays conversational on an infinite zoomable canvas\nwhere you refine the plan by talking to it. It is productised on top of\n**ArchLang** ([github.com/ChanMeng666/archlang](https://github.com/ChanMeng666/archlang) ·\n[playground.archlang.uk](https://playground.archlang.uk) · npm\n[@chanmeng666/archlang](https://www.npmjs.com/package/@chanmeng666/archlang)),\nthe open-source declarative floor-plan language I designed and wrote.\n",
+        "mission": "Make a floor plan a **program, not a picture**. Because every ArchCanvas\nplan is real parametric ArchLang rather than pixels, edits are precise\nand re-editable — nudge a wall, tweak a parameter, or have the AI review\ncirculation and pin fixes in place — capabilities an image-generation\ntool structurally cannot offer.\n",
+        "myMandate": "Sole author of both the language and the product — every commit is mine —\nbuilding in public. ArchLang is a hand-written compiler (lexer +\nrecursive-descent parser, zero runtime dependencies) with\narchitectural-soundness linting, a CLI, LSP + VS Code tooling, and a\nclient-side playground, published open-source to npm. ArchCanvas is the\nNext.js product that consumes it as a package: an AI agent writes\nArchLang, compiles it, grounds a rendering on the compiled plan, and\ncritiques it — then lets the user refine the plan in place.\n"
+      }
+    },
     {
       "id": "engram",
       "name": "Engram",
@@ -12233,8 +12263,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-07-21",
+    "lastModified": "2026-07-22",
     "buildYear": "2026",
-    "buildTimestamp": "2026-07-21T18:14:23.102Z"
+    "buildTimestamp": "2026-07-22T14:37:08.213Z"
   }
 }

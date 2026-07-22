@@ -30,7 +30,7 @@
   "banner": {
     "name": "Chan Meng",
     "pronouns": "She/Her",
-    "headline": "AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Creator of Tam-AI-Ti (Te Whare Tapa Whā AI Coach) | Cultural tech & women's health | Auckland, NZ",
+    "headline": "AI Agent Architect & Full-Stack Engineer | Founder of ArchCanvas + ArchLang (an AI architect built on the floor-plan compiler I wrote) | Anthropic Partner Network | Cultural tech & women's health | Auckland, NZ",
     "location": "Auckland, Auckland, New Zealand",
     "currentEmployerBadge": "Engram",
     "educationBadge": "Lincoln University (NZ)",
@@ -40,37 +40,42 @@
     "websiteUrl": "https://chanmeng.org/"
   },
   "about": {
-    "lead": "Building at the intersection of AI, cultural technology, and women's health.\n\nI architect AI agents that survive production and build the platforms around them — for founders who need to move fast, teams who need depth, and products whose users aren't the default Silicon Valley persona.",
+    "lead": "Building at the intersection of AI, cultural technology, and women's health — and founder of ArchCanvas + ArchLang, an AI architect for floor plans built on an open-source compiler I wrote.\n\nI architect AI agents that survive production and build the platforms around them — for founders who need speed, teams who need depth, and users who aren't the Silicon Valley default.",
     "sections": [
+      {
+        "emoji": "🏗️",
+        "heading": "Founder — ArchCanvas + ArchLang",
+        "body": "My current flagship build — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that COMPILES a floor plan written as .arch source into dimensioned SVG/DXF/PDF — \"Typst/LaTeX for architecture\" (github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang). ArchCanvas is the AI architect built on it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you refine by talking to it (archcanvas.uk)."
+      },
       {
         "emoji": "🤖",
         "heading": "AI Agent Engineering",
-        "body": "Agentic systems designed end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, and model routing across Claude, OpenAI, and Llama. Earliest-ecosystem MCP server author — Google News MCP (PulseMCP Top Pick, Glama A-rating). FemTracker Agent merged into CopilotKit's official demos repo (36.1k★)."
+        "body": "Agentic systems end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, model routing across Claude/OpenAI/Llama. Earliest-ecosystem MCP server author (Google News MCP — PulseMCP Top Pick). FemTracker Agent merged into CopilotKit (36.1k★)."
       },
       {
         "emoji": "💻",
         "heading": "Full-Stack Foundations",
-        "body": "Next.js, TypeScript, Drizzle/Postgres, Stripe, Kubernetes. I've shipped voice-first interfaces (gpt-4o-realtime), bilingual UX, and zero-downtime cloud migrations. GAVIGO IRE — p50 < 1 ms activation, production-validated by Google for Startups + NVIDIA Inception."
+        "body": "Next.js, TypeScript, Drizzle/Postgres, Stripe, Kubernetes. Shipped voice-first interfaces, bilingual UX, and zero-downtime cloud migrations. GAVIGO IRE — p50 < 1 ms activation, validated by Google for Startups + NVIDIA Inception."
       },
       {
         "emoji": "🌿",
         "heading": "Cultural-First Technology",
-        "body": "When your audience isn't the default Silicon Valley user, the framework belongs in the schema, not in UI decoration. Tam-AI-Ti — an AI Financial Wellness Coach for Māori communities — encodes Te Whare Tapa Whā as a first-class domain model. 351 solo commits, 48-table schema, voice-first coaching in te reo Māori and English."
+        "body": "Tam-AI-Ti — an AI Financial Wellness Coach for Māori communities — encodes Te Whare Tapa Whā as a first-class domain model, not UI decoration: 351 solo commits, voice-first te reo Māori + English."
       },
       {
         "emoji": "🚀",
         "heading": "Current & Recent Work",
-        "body": "AI Agent Architect @ Engram (Anthropic Partner Network Architect Cohort) · former CTO @ Sanicle Inc. → IBM Silver Partner via watsonx integration · Senior Engineer & Ambassador @ She Sharp (2,200+ member NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest (5 cohorts, bilingual platform built solo)."
+        "body": "AI Agent Architect @ Engram (Anthropic Partner Network) · former CTO @ Sanicle (IBM Silver Partner) · Senior Engineer @ She Sharp (NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest — see Experience for full roles."
       },
       {
         "emoji": "🎓",
         "heading": "Credentials & Earlier Journey",
-        "body": "Master of Applied Computing with Distinction, Lincoln University, New Zealand · pursuing Claude Certified Architect — Foundations · former Backend Engineer @ ByteDance (Go services) · UN CSW 69 Speaker recognized by UN Women · 12 companies and 480+ GitHub stars across the journey."
+        "body": "Master of Applied Computing with Distinction, Lincoln University NZ · pursuing Claude Certified Architect — Foundations · former Backend Engineer @ ByteDance · UN CSW 69 Speaker · 480+ GitHub stars."
       },
       {
         "emoji": "🎙️",
         "heading": "Public Voice",
-        "body": "Host of three Spotify shows: Decoding the Future, Future Turing, and Praxis and Pages. Media-featured for the minimalist lifestyle philosophy: \"Subtraction for life, addition for thought.\""
+        "body": "Host of three Spotify shows: Decoding the Future, Future Turing, Praxis and Pages. Media-featured for \"Subtraction for life, addition for thought.\""
       },
       {
         "emoji": "📍",
@@ -82,8 +87,8 @@
       "AI Agent Architecture",
       "Model Context Protocol (MCP)",
       "Multi-agent Systems",
-      "Kubernetes",
-      "AI Integration"
+      "AI Integration",
+      "Kubernetes"
     ]
   },
   "services": {
@@ -120,6 +125,31 @@
     }
   ],
   "experience": [
+    {
+      "company": "ArchCanvas",
+      "links": [
+        "https://archcanvas.uk/",
+        "https://github.com/ChanMeng666/archlang",
+        "https://playground.archlang.uk"
+      ],
+      "positions": [
+        {
+          "title": "Founder & Sole Engineer",
+          "employmentType": "Self-employed",
+          "dateRange": "Apr 2026 - Present",
+          "duration": "4 mos",
+          "location": "Auckland, New Zealand · Remote",
+          "description": "Founder and sole engineer of ArchCanvas — an AI architect that turns a plain-English brief into one strong, checkable, dimensioned floor plan you can actually build from, then lets you refine it conversationally on an infinite zoomable canvas. Also the sole author of ArchLang, the open-source declarative floor-plan language ArchCanvas compiles on: write a plan as .arch source and it compiles to dimensioned SVG/DXF/PDF — \"Typst/LaTeX for architecture.\"\n\n• Designs that compile, not pixels: because every plan is real parametric ArchLang under the hood, edits are precise and re-editable — nudge a wall, tweak a parameter, or have the AI review circulation and pin fixes in place.\n• ArchLang is published open-source to npm as @chanmeng666/archlang — a hand-written compiler (lexer + recursive-descent parser, zero runtime dependencies) with architectural-soundness linting, a CLI, LSP + VS Code tooling, and a client-side playground.\n• Sole author of both the language and the product — every commit is mine — building in public.\n\nLinks: archcanvas.uk · github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang",
+          "skills": [
+            "AI Agent Architecture",
+            "Programming Language Design",
+            "Compilers",
+            "TypeScript",
+            "Next.js"
+          ]
+        }
+      ]
+    },
     {
       "company": "Engram",
       "links": [

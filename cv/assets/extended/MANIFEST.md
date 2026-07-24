@@ -27,6 +27,7 @@ committed; only the outputs below land in the repo.
 | `cap-joborg.jpg` | `D:\github_repository\ai-programming-teaching-project\static\img\capstone\joborg-ai.webp` | p12 capstone strip |
 | `cap-icare.jpg` | `D:\github_repository\ai-programming-teaching-project\static\img\capstone\icare.webp` | p12 capstone strip |
 | `cap-credithero.jpg` | `D:\github_repository\ai-programming-teaching-project\static\img\capstone\credithero.webp` | p12 capstone strip |
+| `rec-amy-li.png` | `public\recommendations\Amy-Li.jpg` (repo-local re-copy) | pp13–14 "Voices" avatar wall |
 
 ## Selection notes
 
@@ -55,6 +56,14 @@ piano is pictured):**
   banana-piano may only be mentioned in body narrative; image captions must describe the
   workshop scene above. The group photo showing ~30 minors' faces head-on was deliberately
   excluded.
+
+**`rec-amy-li.png`** — a repo-local copy of Amy Li's recommender avatar for the
+pp13–14 "Voices" wall. The shared asset `public/recommendations/Amy-Li.jpg` is
+**PNG bytes behind a `.jpg` name**; Typst picks its decoder from the file
+extension and fails to load it. The shared file is left untouched (other
+surfaces rely on its path); this correctly-named `.png` copy sits beside the
+book so `cv/extended.typ` can reference it. Not a resized magazine select —
+it's an avatar-sized image kept as-is.
 
 **Capstone screenshots** — clean product marketing screenshots of three teaching-cohort
 capstone apps: Joborg AI (interview coach), iCare (medical-records plain-English summariser),

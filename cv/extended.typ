@@ -35,15 +35,6 @@
   pagebreak()
 }
 
-// ── p3–15: chapter stubs (filled in Tasks 5–8) ───────────────────────────────
-// Each stub reserves its slice of the page map so the whole book compiles at the
-// full 16 pages from Task 4 onward: opener + placeholder, then blank reserved
-// pages via `pages` strong pagebreaks (Tasks 5–8 replace the blanks with copy).
-#let x-stub(number, title, desc, pages) = {
-  chapter-opener(number, title, kicker: none)
-  img-placeholder("IMG-STUB", desc, ratio: "landscape")
-  for _ in range(pages) { pagebreak() }
-}
 // ── pp3–4: Chapter 1 — My Story ──────────────────────────────────────────────
 // Fixed factual arc (do not alter): geography degree → maths teacher at private
 // tutoring institutions → the 双减 regulation ended that industry → moved to NZ

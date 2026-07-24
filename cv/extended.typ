@@ -19,10 +19,11 @@
 
 // ── p2: opening note ─────────────────────────────────────────────────────────
 #let x-opening() = {
-  // Vertically centred composition: 1fr spacers top and bottom balance the page
-  // so there is no dead bottom, and the photo runs full column width (was 78%,
-  // which left the lower ~60% of the page blank). Copy is verbatim.
-  v(1fr)
+  // Opening note: the copy sits in the upper third and an enlarged full-width
+  // photo band anchors the rest, so the page reads composed rather than empty
+  // (the old version left big symmetric margins around a short landscape photo).
+  // Copy is verbatim.
+  v(0.7fr)
   block(width: 100%, {
     set par(leading: leading-lead-x, justify: false)
     text(size: 14pt, fill: ink)[
@@ -33,8 +34,9 @@
       If you're here to hire, my two-page CV is one click away: #link("https://chanmeng.org/cv")[chanmeng.org/cv].
     ]
   })
-  v(30pt)
-  photo("/public/photos/chan-celebrate.jpg", caption: [Auckland — where I rebuilt everything.], w: 100%)
+  v(34pt)
+  photo-band("/public/photos/chan-celebrate.jpg", h: 322pt,
+    caption: [Auckland — where I rebuilt everything.])
   v(1fr)
   pagebreak()
 }
@@ -66,27 +68,23 @@
       The proof came from an unexpected place. An early-stage founder asked his own Claude agent to find him an engineer. It read the open web and recommended me — which the founder, #link("https://engram.media/")[Engram]'s Luka Madzarac, later confirmed in public. I hadn't applied. The work had. Auckland, for its part, met me with more kindness than I expected.
     ]
   })
-  pagebreak()
-  // p4 — supporting photos + pull-quote + the shows where I've discussed the change.
-  // NOTE: the brief's draft placed cv/assets/extended/namechange-hero.jpg in the
-  // right cell, but that image reads "I THREW AWAY MY OLD NAME" — the legal
-  // name-change story, which the red lines assign to the Minimalist chapter (and
-  // MANIFEST.md reserves that file as the pp5–7 chapter hero). Using an
-  // img-placeholder here keeps the two-up visual, honours the red line, and
-  // leaves the Minimalist hero for its own chapter. IMG-01 → shot list.
-  grid(
-    columns: (1fr, 1fr),
-    column-gutter: gap-photo-x,
-    photo("/public/photos/chanmeng-portrait-2026.jpg", caption: [Auckland, 2026.]),
-    img-placeholder("IMG-01", "Arriving in Auckland at thirty — beginning again", ratio: "portrait"),
-  )
-  // Balance the space freed when the podcast line was removed (2026-07-24):
-  // centre the closing pull-quote in the area below the photos rather than
-  // leaving a large dead band at the page foot.
+  // Anchor p3's foot with a real Auckland photo (fills what was a dead lower
+  // half) — a She Sharp panel, tying the "Auckland met me with kindness" close to
+  // the community that took me in. Location pin on the caption (D3).
   v(1fr)
+  photo-band("/public/photos/chan-panel-shesharp-gesturing.jpg", h: 232pt,
+    caption: [#icon("map-pin", size: 8pt) #h(1pt) On a She Sharp panel in Auckland — the community that took me in.])
+  pagebreak()
+  // p4 — one large portrait + the closing pull-quote anchored lower (rebalanced
+  // 2026-07-24: the old two-up grid used an empty IMG-01 placeholder and left a
+  // mid-page void; a single big real photo + a lower quote fills the spread).
+  v(0.4fr)
+  align(center, photo("/public/photos/chanmeng-portrait-2026.jpg",
+    caption: [Auckland, 2026 — beginning again.], w: 78%))
+  v(0.8fr)
   pull-quote(
     [When execution gets cheap, the work that matters is choosing what to build — and having the taste to keep only what's worth keeping.])
-  v(1fr)
+  v(0.5fr)
   pagebreak()
 }
 // ── pp5–7: Chapter 2 — A Minimalist ──────────────────────────────────────────
@@ -139,18 +137,29 @@
       At thirty I legally changed my name and remade who I am. I wrote about it #link("https://chanmeng.org/blog/threw-away-my-old-name")[on the blog].
     ]
   })
+  // A large minimalist frame directly under the caption fills what was ~half a
+  // blank page — kept close to the caption (not floated to the foot) so no middle
+  // void opens up.
+  v(0.5fr)
+  photo-band("/cv/assets/extended/min-suitcase.jpg", h: 330pt,
+    caption: [A room pared back to the essentials — one suitcase by the door.])
+  v(0.7fr)
   pagebreak()
-  // p7 — bridge to craft + pull-quote
-  block(above: 0pt, below: 14pt, {
+  // p7 — bridge to craft: text, an enlarged full-width desk photo, and the
+  // closing pull-quote distributed low so the page fills top to bottom.
+  block(above: 0pt, below: 0pt, {
     set par(leading: leading-lead-x, justify: false)
     text(size: size-body-x, fill: ink)[
       It's the same instinct in my software: *stripping away what isn't needed so the essential works better* — whether that's a living space or a system. It shows up as calm dashboards, as anti-bloat discipline (my #link("https://github.com/CopilotKit/CopilotKit")[CopilotKit] contribution cut a flow from eight paths down to three), and as #link("https://github.com/ChanMeng666/chan-meng-cli")[npx chan-meng] — a whole introduction in one command.
     ]
   })
-  photo("/cv/assets/extended/min-desk.jpg", caption: [Nothing on the floor that doesn't earn its place — the same rule I bring to a codebase.], w: 70%)
-  v(16pt)
+  v(0.5fr)
+  photo-band("/cv/assets/extended/min-desk.jpg", h: 300pt,
+    caption: [Nothing on the floor that doesn't earn its place — the same rule I bring to a codebase.])
+  v(0.65fr)
   pull-quote(
     [Living alone, I finally learned to confirm my own existence through my own eyes — my own perspective, my own taste.])
+  v(0.4fr)
   pagebreak()
 }
 // ── pp8–11: Chapter 3 — What I Build ─────────────────────────────────────────
@@ -166,53 +175,62 @@
 // tagline / url|repoUrl). Red lines held: no pricing; no commit-count/solo-%
 // dev-stat bragging in prose (product feature counts like "355 templates" fine).
 #let x-build() = {
+  // Page map (deterministic, 4 pagebreaks → pp8–11), rebalanced 2026-07-24 so no
+  // page is airy: opener MERGES onto p8 above the flagship, then 1/2/2/1+quote —
+  // p8 opener + ArchCanvas (feature), p9 ArchLang + Vitex, p10 echook + Google
+  // News MCP, p11 gradient-svg-generator (feature) + a closing pull-quote. Six
+  // products, same order; product cards are full-width and large so each page
+  // fills top to bottom.
   chapter-opener("3", "What I Build",
     kicker: [The largest chapter — because the work is the argument. Six products I designed and shipped; every name is a link you can open.])
-  block(above: 0pt, below: 0pt, {
+  block(above: 0pt, below: 30pt, {
     set par(leading: leading-lead-x, justify: false)
     text(size: size-body-x, fill: ink)[
       These are the products I keep coming back to — the ones that show what I care about when I build: precise artifacts over pretty pictures, tools you operate in plain language, and systems small enough to hold in your head. Each one below I designed and shipped end to end.
     ]
   })
-  pagebreak()
-  // p9 — the architecture pair: the agent + the engine underneath it
-  v(1fr)
   product-tile("/public/brands/archcanvas-logo.svg", [ArchCanvas],
     [An AI design agent for architects and self-builders: describe a building and it draws a dimensioned floor plan you can actually build from, plus a realistic rendering.],
     [Refine it by talking, on an infinite zoomable canvas; every plan is real ArchLang underneath, exportable as a full git history.],
-    "https://archcanvas.uk/", "archcanvas.uk")
+    "https://archcanvas.uk/", "archcanvas.uk", logo-h: 315pt)
+  v(1fr)
+  pagebreak()
+  // p9 — ArchLang (the engine under ArchCanvas) + Vitex
   v(1fr)
   product-tile("/public/brands/archlang-logo.svg", [ArchLang],
     [A small language for floor plans: write walls and rooms in plain text, get back a precise dimensioned drawing, change one number and exactly one thing moves.],
     [A zero-dependency TypeScript compiler exporting SVG, DXF, PDF, and PNG — and it checks whether a plan is actually livable. The engine behind ArchCanvas.],
     "https://playground.archlang.uk", "playground.archlang.uk")
   v(1fr)
-  pagebreak()
-  // p10 — two agent-ready products: a career agent + a dev-tooling plugin
-  v(1fr)
   product-tile("/public/brands/vitex.svg", [Vitex — AI Career Agent],
     [Paste a job ad and describe your background, and Vitex writes a resume and cover letter tailored to that job as an ATS-ready PDF in about thirty seconds.],
     [Reachable over the web, a public API, a command-line tool, and an MCP server — so an AI assistant can drive the whole product without a browser.],
     "https://www.vitex.org.nz/", "vitex.org.nz")
+  v(1fr)
+  pagebreak()
+  // p10 — echook (dev-tooling plugin) + Google News MCP (ecosystem server)
   v(1fr)
   product-tile("/public/brands/echook-logo.svg", [echook],
     [An audio-and-status plugin for Claude Code, Cursor, and Codex — you never learn it; you just tell your AI agent "install echook" or "snooze for 30 minutes."],
     [Pure Python standard library, 37 hook events and a context-window status bar, tested on Windows, macOS, and Linux. Open source under MIT.],
     "https://github.com/ChanMeng666/echook", "github.com/ChanMeng666/echook")
   v(1fr)
-  pagebreak()
-  // p11 — two open-source ecosystem tools
-  v(1fr)
   product-tile("/public/brands/server-google-news.svg", [Google News MCP Server],
     [One of the earliest servers for the Model Context Protocol — the open standard Anthropic launched in late 2024 — and this one shipped just five weeks later.],
     [It lets Claude, Cursor, and Cline search live Google News by topic in ten languages; published on npm and carried across 15+ MCP catalogs, a PulseMCP "Top Pick."],
     "https://github.com/ChanMeng666/server-google-news", "github.com/ChanMeng666/server-google-news")
   v(1fr)
+  pagebreak()
+  // p11 — gradient-svg-generator (feature) + the chapter's closing pull-quote
+  v(0.5fr)
   product-tile("/public/brands/gradient-svg-generator-logo.svg", [gradient-svg-generator],
     [Paste a URL into any Markdown file and your README grows an animated gradient banner that renders live in the browser — no image files, no build step.],
     [355 parametric templates streamed as live SVG XML from a serverless function, using SMIL animation, CSS keyframes, and SVG filters.],
-    "https://gradient-svg-generator.vercel.app/", "gradient-svg-generator.vercel.app")
-  v(1fr)
+    "https://gradient-svg-generator.vercel.app/", "gradient-svg-generator.vercel.app", logo-h: 300pt)
+  v(0.85fr)
+  pull-quote(
+    [Precise artifacts over pretty pictures. Every one of these you can open, run, and read the source of — that's the whole argument.])
+  v(0.5fr)
   pagebreak()
 }
 
@@ -246,20 +264,20 @@
   // cover) shows each frame whole — no crop — so the captions stay truthful to
   // what is actually visible (CAPTION TRUTH RULE, MANIFEST.md). Enlarged to fill
   // the space freed when the student-capstone strip was removed (2026-07-24).
-  v(1fr)
+  v(0.55fr)
   grid(columns: (1fr, 1fr), column-gutter: gap-photo-x,
     ..(
       ("/cv/assets/extended/teach-banana-1.jpg", [AI & Electronics Workshop — the lineup on stage.]),
       ("/cv/assets/extended/teach-banana-2.jpg", [Presenting from the front of the room.]),
     ).map(it => block(above: 0pt, below: 0pt, breakable: false, {
-      box(width: 100%, height: 260pt, radius: radius-photo-x, clip: true, fill: pill-bg,
+      box(width: 100%, height: 300pt, radius: radius-photo-x, clip: true, fill: pill-bg,
         stroke: frame-photo-x + rule.lighten(25%),
         image(it.at(0), width: 100%, height: 100%, fit: "contain"))
       v(6pt)
       text(size: size-tiny-x, fill: muted, style: "italic", it.at(1))
     }))
   )
-  v(1fr)
+  v(0.75fr)
   block(above: 0pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)
     text(size: size-tiny-x, fill: muted, style: "italic")[
@@ -305,26 +323,34 @@
 #let x-voices() = {
   chapter-opener("5", "Voices",
     kicker: [Twenty-four people who've worked with me — every one of them, in their own words.])
-  avatar-wall(voices-people, cols: 8)
+  // Enlarged 6-across wall (24 = 6×4), centered below the opener so it fills the
+  // page rather than sitting as a small band at the top.
+  v(1fr)
+  avatar-wall(voices-people, cols: 6, size: 66pt, row-gutter: 26pt, col-gutter: 12pt, cap-size: 9pt)
+  v(1fr)
   pagebreak()
-  // p14 — two featured quotes. Both are exact verbatim substrings of the
+  // p14 — two featured quotes, each with the speaker's avatar in the byline and
+  // distributed down the page. Both are exact verbatim substrings of the
   // corresponding entries in data/profile/50-references.yaml, joined by ellipses
   // where interior sentences are omitted; the source casing ("she"/"what") is
   // preserved and a leading ellipsis marks the pulled-from-mid-paragraph excerpt
   // (controller ruling: quotes must be VERBATIM substrings).
-  pull-quote(
+  v(1fr)
+  voice-feature("/public/recommendations/Lesley-Gao.jpg",
     [… she often goes out of her way to build things that genuinely help others learn … To me, that is what true empowerment looks like.],
-    attribution: [Lesley Gao · She Sharp website team])
-  pull-quote(
+    [Lesley Gao · She Sharp website team])
+  v(1fr)
+  voice-feature("/public/recommendations/Shivani-Dhandabani.jpg",
     [… what I witnessed at the hackathon was something that doesn't show up on a resume: her instinct to mentor … she's the kind of person who genuinely raises the bar for everyone around her.],
-    attribution: [Shivani Dhandabani · AI hackathon])
-  v(10pt)
+    [Shivani Dhandabani · AI hackathon])
+  v(1fr)
   block(above: 0pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)
     text(size: size-tiny-x, fill: muted, style: "italic")[
       All 24 recommendations in full: #link("https://www.linkedin.com/in/chanmeng666/")[linkedin.com/in/chanmeng666].
     ]
   })
+  v(0.4fr)
   pagebreak()
 }
 
@@ -337,8 +363,17 @@
 #let x-recognition() = {
   chapter-opener("6", "Recognition",
     kicker: [Where the work has been seen.])
-  photo("/public/articles/un-women-csw69.jpeg", caption: [Speaking at UN CSW69, UN HQ New York — March 2025.], w: 82%)
-  v(16pt)
+  // Two-up recognition band (was one photo + a blank lower third): the UN CSW69
+  // frame beside the AI Hackathon Festival stage — the latter illustrates the
+  // Outstanding Mentor Award bullet below. Fixed-height cover crops align.
+  v(0.5fr)
+  grid(columns: (1fr, 1fr), column-gutter: gap-photo-x,
+    photo-band("/public/articles/un-women-csw69.jpeg", h: 190pt,
+      caption: [Speaking at UN CSW69, UN HQ New York — March 2025.]),
+    photo-band("/public/photos/chan-keynote-ai-hackathon-2025.jpg", h: 190pt,
+      caption: [Presenting at the AI Hackathon Festival 2025, Auckland.]),
+  )
+  v(0.5fr)
   block(above: 0pt, below: 0pt, {
     set text(size: size-body-x, fill: ink)
     set par(leading: leading-body-x, justify: false)
@@ -350,6 +385,7 @@
       [*Excellence Award* — FemTech China, Women's Health Technology Challenge, December 2024.],
     )
   })
+  v(0.5fr)
   pagebreak()
 }
 

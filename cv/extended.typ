@@ -199,7 +199,7 @@
   block(above: 0pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)
     text(size: size-body-x, fill: ink)[
-      *Caldera* is the design system behind this very document — its tokens, type, motion, and the risograph halftone you see on every chapter mark. #link("https://eatropolis.co.nz/")[*Chow Luck Club*] is an event brand and website I built on commission for Tātaki Auckland Unlimited. #link("https://gradient-svg-generator.vercel.app/")[*gradient-svg-generator*] turns a phrase into an animated SVG banner — 355 templates rendered as live XML, used across my own READMEs.
+      *Caldera* is the design system behind this very document — its tokens, type, motion, and the risograph halftone you see on every chapter mark. #link("https://eatropolis.co.nz/")[*Eatropolis*] is the festival site I built on commission for Chow Luck Club Ltd, with Tātaki Auckland Unlimited (Auckland Council) as event partner. #link("https://gradient-svg-generator.vercel.app/")[*gradient-svg-generator*] turns a phrase into an animated SVG banner — 355 templates rendered as live XML, used across my own READMEs.
     ]
   })
   pagebreak()

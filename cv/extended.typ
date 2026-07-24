@@ -44,7 +44,59 @@
   img-placeholder("IMG-STUB", desc, ratio: "landscape")
   for _ in range(pages) { pagebreak() }
 }
-#let x-story() = x-stub("1", "My Story", "story", 2)                    // pp3–4
+// ── pp3–4: Chapter 1 — My Story ──────────────────────────────────────────────
+// Fixed factual arc (do not alter): geography degree → maths teacher at private
+// tutoring institutions → the 双减 regulation ended that industry → moved to NZ
+// at 30, Master of Applied Computing at Lincoln (Distinction) → built alongside
+// AI throughout the degree (origin of today's agent-directing practice) →
+// Engram's founder asked Claude to surface an engineer and it recommended Chan
+// (publicly confirmed by Luka Madzarac). Red lines: no family-of-origin content,
+// no third-party names beyond the publicly-confirmed founder, leaving-China
+// framed only as "a place where I could breathe freely." Name-change story lives
+// in the Minimalist chapter, not here.
+#let x-story() = {
+  chapter-opener("1", "My Story",
+    kicker: [I started with maps, taught maths, watched an industry vanish, and at thirty crossed the world to begin again.])
+  block(above: 0pt, below: 14pt, {
+    set par(leading: leading-lead-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      My degree was in geography; my first real job was teaching maths to teenagers in China. Then, almost overnight, the private-tutoring industry I worked in was regulated out of existence. At thirty — the age everyone says is too late — I moved to a place where I could breathe freely and rebuild, and read for a Master of Applied Computing at #link("https://www.lincoln.ac.nz/")[Lincoln University], finishing with *Distinction*.
+    ]
+    v(gap-para-x)
+    text(size: size-body-x, fill: ink)[
+      I never learned to code the old way. From my first assignment I built alongside AI, pairing with a model the way other students paired with a lab partner. That wasn't a shortcut — it's the origin of how I work now: someone who *directs* coding agents rather than typing every line.
+    ]
+    v(gap-para-x)
+    text(size: size-body-x, fill: ink)[
+      The proof came from an unexpected place. An early-stage founder asked his own Claude agent to find him an engineer. It read the open web and recommended me — which the founder, #link("https://engram.media/")[Engram]'s Luka Madzarac, later confirmed in public. I hadn't applied. The work had. Auckland, for its part, met me with more kindness than I expected.
+    ]
+  })
+  pagebreak()
+  // p4 — supporting photos + pull-quote + the shows where I've discussed the change.
+  // NOTE: the brief's draft placed cv/assets/extended/namechange-hero.jpg in the
+  // right cell, but that image reads "I THREW AWAY MY OLD NAME" — the legal
+  // name-change story, which the red lines assign to the Minimalist chapter (and
+  // MANIFEST.md reserves that file as the pp5–7 chapter hero). Using an
+  // img-placeholder here keeps the two-up visual, honours the red line, and
+  // leaves the Minimalist hero for its own chapter. IMG-01 → shot list.
+  grid(
+    columns: (1fr, 1fr),
+    column-gutter: gap-photo-x,
+    photo("/public/photos/chanmeng-portrait-2026.jpg", caption: [Auckland, 2026.]),
+    img-placeholder("IMG-01", "Arriving in Auckland at thirty — beginning again", ratio: "portrait"),
+  )
+  v(14pt)
+  pull-quote(
+    [When execution gets cheap, the work that matters is choosing what to build — and having the taste to keep only what's worth keeping.])
+  v(gap-para-x)
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-body-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      I've talked about changing careers on the two shows I host — #link("https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj")[Decoding the Future] and #link("https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4")[Future Turing].
+    ]
+  })
+  pagebreak()
+}
 #let x-minimalist() = x-stub("2", "A Minimalist", "minimalist", 3)     // pp5–7
 #let x-build() = x-stub("3", "What I Build, and Who For", "build", 4)  // pp8–11
 #let x-teaching() = x-stub("4", "Teaching", "teaching", 1)             // p12

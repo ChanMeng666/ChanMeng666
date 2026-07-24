@@ -97,7 +97,66 @@
   })
   pagebreak()
 }
-#let x-minimalist() = x-stub("2", "A Minimalist", "minimalist", 3)     // pp5–7
+// ── pp5–7: Chapter 2 — A Minimalist ──────────────────────────────────────────
+// Subtraction as daily practice → engineering philosophy. p5 life photos, p6
+// three external media features (verbatim URLs) + name-change caption, p7
+// bridge-to-craft + min-desk + pull-quote. Red lines: name-change framed ONLY
+// as forward-looking self-remaking, sourced to the blog; NO family-of-origin
+// detail; no radical-expression references; no pricing. The girl-on-mattress
+// and kan-kein-sight covers are the outlets' own brand-marks (最人物 / NetEase
+// 看客), used as recognizable media-feature marks; p658073376.webp is a real
+// minimalist-home photo (verified on render).
+#let x-minimalist() = {
+  chapter-opener("2", "A Minimalist",
+    kicker: [Subtraction as a daily practice — and, it turns out, as an engineering philosophy.])
+  block(above: 0pt, below: 14pt, {
+    set par(leading: leading-lead-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      It began with a broken charging cable and a bent hairpin. I threw them out, felt lighter, and kept going. Today everything I own fits into one backpack and one suitcase. I don't keep a living room — I borrow the city's.
+    ]
+  })
+  photo-grid((
+    ("/cv/assets/extended/min-empty-room.jpg", [One room, almost empty.]),
+    ("/cv/assets/extended/min-foam-mat.jpg", [A foam mat instead of a bed.]),
+  ))
+  v(gap-photo-x)
+  photo-grid((
+    ("/cv/assets/extended/min-one-bag.jpg", [Everything I own — one backpack, one suitcase.]),
+    ("/cv/assets/extended/min-city-livingroom.jpg", [The city is my living room.]),
+  ))
+  pagebreak()
+  // p6 — three media cards
+  block(above: 0pt, below: 12pt, text(size: size-body-x, fill: muted, style: "italic")[
+    People read along. A few pieces travelled far:])
+  grid(columns: (1fr, 1fr, 1fr), column-gutter: 14pt,
+    article-card("/public/articles/girl-on-mattress.jpg", "Girl on Mattress",
+      "100k+ reads · 3,864 reshares", "https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ"),
+    article-card("/public/articles/p658073376.webp", "A Glimpse of My Minimalist Home",
+      "100k+ reads · 14k reshares", "https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q"),
+    article-card("/public/articles/kan-kein-sight.jpg", "I Threw Away My Old Name",
+      "29k+ reads", "https://chanmeng.org/blog/threw-away-my-old-name"),
+  )
+  v(10pt)
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-body-x, justify: false)
+    text(size: size-tiny-x, fill: muted, style: "italic")[
+      At thirty I legally changed my name and remade who I am. I wrote about it #link("https://chanmeng.org/blog/threw-away-my-old-name")[on the blog].
+    ]
+  })
+  pagebreak()
+  // p7 — bridge to craft + pull-quote
+  block(above: 0pt, below: 14pt, {
+    set par(leading: leading-lead-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      It's the same instinct in my software: *stripping away what isn't needed so the essential works better* — whether that's a living space or a system. It shows up as calm dashboards, as anti-bloat discipline (my #link("https://github.com/CopilotKit/CopilotKit")[CopilotKit] contribution cut a flow from eight paths down to three), and as #link("https://github.com/ChanMeng666/chan-meng-cli")[npx chan-meng] — a whole introduction in one command.
+    ]
+  })
+  photo("/cv/assets/extended/min-desk.jpg", caption: [One desk, one machine, everything version-controlled.], w: 70%)
+  v(16pt)
+  pull-quote(
+    [Living alone, I finally learned to confirm my own existence through my own eyes — my own perspective, my own taste.])
+  pagebreak()
+}
 #let x-build() = x-stub("3", "What I Build, and Who For", "build", 4)  // pp8–11
 #let x-teaching() = x-stub("4", "Teaching", "teaching", 1)             // p12
 #let x-voices() = x-stub("5", "Voices", "voices", 2)                   // pp13–14

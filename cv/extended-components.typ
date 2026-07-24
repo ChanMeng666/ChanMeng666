@@ -64,18 +64,20 @@
 })
 
 // ─── Pull-quote (large italic, orange lead rule) ─────────────────────────────
-#let pull-quote(body, attribution: none) = block(above: 6pt, below: 12pt, breakable: false, {
-  grid(columns: (4pt, 1fr), column-gutter: 12pt,
-    rect(width: 4pt, height: 100%, fill: accent, radius: 2pt, stroke: none),
-    {
-      set par(leading: leading-lead-x, justify: false)
-      text(size: size-pull-x, style: "italic", fill: primary)[#body]
-      if attribution != none {
-        v(6pt)
-        text(size: size-meta-x, fill: muted)[— #attribution]
-      }
-    })
-})
+// The lead rule is a block LEFT stroke, not a rect(height: 100%): a rect's 100%
+// resolves against the page region (in an auto-height grid row it ran to the
+// page foot), whereas a block border hugs the block's own content height. The
+// left inset holds the text off the bar. Same pattern as components.typ::quote-block.
+#let pull-quote(body, attribution: none) = block(above: 6pt, below: 12pt, breakable: false,
+  block(inset: (left: 14pt), stroke: (left: 4pt + accent), {
+    set par(leading: leading-lead-x, justify: false)
+    text(size: size-pull-x, style: "italic", fill: primary)[#body]
+    if attribution != none {
+      v(6pt)
+      text(size: size-meta-x, fill: muted)[— #attribution]
+    }
+  })
+)
 
 // ─── Avatar wall — people: array of (img, name) ──────────────────────────────
 #let avatar-wall(people, cols: 8) = grid(

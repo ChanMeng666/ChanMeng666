@@ -271,20 +271,105 @@
   })
   pagebreak()
 }
-#let x-voices() = x-stub("5", "Voices", "voices", 2)                   // pp13–14
-#let x-recognition() = x-stub("6", "Recognition", "recognition", 1)    // p15
+// ── pp13–14: Chapter 5 — Voices ──────────────────────────────────────────────
+// ALL 24 recommenders appear (avatar wall = exactly 24, incl. historical-archive
+// Daryll Hall — controller ruling). Extensions are the ON-DISK truth, not the
+// brief draft: Gabby/Mi Su/Shushu/Patricia are .jpeg (not .jpg), and Amy-Li's
+// avatar is the repo-local rec-amy-li.png — public/recommendations/Amy-Li.jpg is
+// PNG bytes behind a .jpg name, which Typst decodes by extension and FAILS on;
+// the shared asset is left untouched, a correctly-named copy lives beside this
+// book (cv/assets/extended/rec-amy-li.png). Order mirrors 50-references.yaml.
+#let voices-people = (
+  ("/public/recommendations/Ikenna-Anasieze.png", "Ikenna"),
+  ("/public/recommendations/Swayam-Dhir.jpg", "Swayam"),
+  ("/public/recommendations/Mahdieh-Najmi.jpg", "Mahdieh"),
+  ("/public/recommendations/Shivani-Dhandabani.jpg", "Shivani"),
+  ("/public/recommendations/Prasanth-Pavithran.jpg", "Prasanth"),
+  ("/public/recommendations/Lesley-Gao.jpg", "Lesley"),
+  ("/public/recommendations/Saba-Gecgil.png", "Saba"),
+  ("/public/recommendations/Nirmala-Chinnappan.jpg", "Nirmala"),
+  ("/public/recommendations/Yesha-Kaniyawala.jpg", "Yesha"),
+  ("/public/recommendations/Siyu-Xing.jpg", "Siyu"),
+  ("/public/recommendations/Cecilia-Yin.jpg", "Cecilia"),
+  ("/cv/assets/extended/rec-amy-li.png", "Amy"),
+  ("/public/recommendations/Omopeju-Afanu.jpg", "Paige"),
+  ("/public/recommendations/Gabby-Hurst.jpeg", "Gabby"),
+  ("/public/recommendations/Chaste-Christopher-Inegbedion.jpg", "Chaste"),
+  ("/public/recommendations/Mi-Su.jpeg", "Mi Su"),
+  ("/public/recommendations/Shushu-Qin.jpeg", "Shushu"),
+  ("/public/recommendations/Patricia-Anthony.jpeg", "Patricia"),
+  ("/public/recommendations/Robin-Lee.jpeg", "Robin"),
+  ("/public/recommendations/Shiyu-Fang.jpeg", "Shiyu"),
+  ("/public/recommendations/Jixuan-Jessie-Wan.jpeg", "Jessie"),
+  ("/public/recommendations/Di-Peng.jpeg", "Di"),
+  ("/public/recommendations/Qiao-Jun.jpeg", "Qiao Jun"),
+  ("/public/recommendations/Daryll-Hall.jpeg", "Daryll"),
+)
+#let x-voices() = {
+  chapter-opener("5", "Voices",
+    kicker: [Twenty-four people who've worked with me — every one of them, in their own words.])
+  avatar-wall(voices-people, cols: 8)
+  pagebreak()
+  // p14 — two featured quotes. Both are exact verbatim substrings of the
+  // corresponding entries in data/profile/50-references.yaml, joined by ellipses
+  // where interior sentences are omitted; the source casing ("she"/"what") is
+  // preserved and a leading ellipsis marks the pulled-from-mid-paragraph excerpt
+  // (controller ruling: quotes must be VERBATIM substrings).
+  pull-quote(
+    [… she often goes out of her way to build things that genuinely help others learn … To me, that is what true empowerment looks like.],
+    attribution: [Lesley Gao · She Sharp website team])
+  pull-quote(
+    [… what I witnessed at the hackathon was something that doesn't show up on a resume: her instinct to mentor … she's the kind of person who genuinely raises the bar for everyone around her.],
+    attribution: [Shivani Dhandabani · AI hackathon])
+  v(10pt)
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-body-x, justify: false)
+    text(size: size-tiny-x, fill: muted, style: "italic")[
+      All 24 recommendations in full: #link("https://www.linkedin.com/in/chanmeng666/")[linkedin.com/in/chanmeng666].
+    ]
+  })
+  pagebreak()
+}
 
-// ── p16: full-bleed back cover ───────────────────────────────────────────────
+// ── p15: Chapter 6 — Recognition ─────────────────────────────────────────────
+// One page. UN CSW69 photo + awards/podcasts. Award titles/dates verified
+// against data/profile/30-recognition.yaml; podcast + spotify URLs against
+// data/profile/00-basics.yaml. No pricing framing; the only named third parties
+// are a company (IBM) and a government minister by title — both from the
+// canonical UN CSW69 award summary, no private individuals.
+#let x-recognition() = {
+  chapter-opener("6", "Recognition",
+    kicker: [Where the work has been seen.])
+  photo("/public/articles/un-women-csw69.jpeg", caption: [Speaking at UN CSW69, UN HQ New York — March 2025.], w: 82%)
+  v(16pt)
+  block(above: 0pt, below: 0pt, {
+    set text(size: size-body-x, fill: ink)
+    set par(leading: leading-body-x, justify: false)
+    set list(marker: text(fill: accent, size: 6pt)[•], indent: 0pt, body-indent: 8pt, spacing: 11pt)
+    list(
+      [*UN CSW69 Speaker* — UN HQ, New York, March 2025 · drew IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.],
+      [*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors, guiding 11 teams / 80+ participants.],
+      [*UN Women FemTech Hackathon — Outstanding Performer* — FemTech Weekend, Beijing, March 2025.],
+      [*Excellence Award* — FemTech China, Women's Health Technology Challenge, December 2024.],
+      [Guest on three podcasts — #link("https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj")[Decoding the Future], #link("https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4")[Future Turing], and #link("https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL")[Praxis and Pages].],
+    )
+  })
+  pagebreak()
+}
+
+// ── p16: back cover (centered, non-bleed — keeps Task 4 geometry) ────────────
 #let x-backcover() = {
   set page(footer: none)
   v(1fr)
   align(center, image("/public/brands/chan-meng-monkey-black-transparent.svg", width: 90pt))
   v(20pt)
-  align(center, block(width: 12cm, {
+  align(center, block(width: 13cm, {
     set par(leading: leading-lead-x, justify: false)
     text(size: 11pt, fill: ink, weight: "bold")[Where to find me]
     v(8pt)
-    text(size: 10pt, fill: ink)[chanmeng.org · chanmeng.org/blog · Newsletter · linkedin.com/in/chanmeng666 · github.com/ChanMeng666 · youtube.com/\@ChanMeng666 · cal.com/chan-meng/30min]
+    text(size: 10pt, fill: ink)[
+      #link("https://chanmeng.org/")[chanmeng.org] · #link("https://chanmeng.org/blog")[chanmeng.org/blog] · #link("https://chanmeng.org/#newsletter")[Newsletter] · #link("https://www.linkedin.com/in/chanmeng666/")[linkedin.com/in/chanmeng666] · #link("https://github.com/ChanMeng666")[github.com/ChanMeng666] · #link("https://www.youtube.com/@ChanMeng666")[youtube.com/\@ChanMeng666] · #link("https://cal.com/chan-meng/30min")[cal.com/chan-meng/30min]
+    ]
   }))
   v(1fr)
 }

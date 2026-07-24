@@ -3,7 +3,7 @@
 What Chan can supply to finish and upgrade the 16-page
 `chan-meng-cv-extended.pdf`. Two kinds of task:
 
-1. **In-PDF placeholders (`IMG-XX`)** — currently render as a cream halftone
+1. **In-PDF placeholders (`IMG-XX`)** — currently render as a plain cream
    block stamped with the id. The book compiles at 16 pages either way, but each
    one should be replaced with a real photo before the magazine is called done.
 2. **Swap-in upgrades** — the layout already shows a real image (a logo, an

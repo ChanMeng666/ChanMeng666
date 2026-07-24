@@ -23,7 +23,7 @@
   ..items.map(it => photo(it.at(0), caption: it.at(1))),
 )
 
-// ─── Branded placeholder block (cream + light halftone + IMG-XX label) ───────
+// ─── Branded placeholder block (plain cream + IMG-XX label) ──────────────────
 #let img-placeholder(id, desc, ratio: "landscape") = {
   let h = if ratio == "portrait" { ph-h-portrait }
     else if ratio == "square" { ph-h-square }
@@ -32,11 +32,7 @@
   block(above: 0pt, below: 0pt, breakable: false,
     box(width: 100%, height: h, radius: radius-photo-x, clip: true, fill: pill-bg,
       stroke: frame-photo-x + rule.lighten(25%), {
-        // halftone texture, then a translucent cream veil that mutes the vivid
-        // brand gradient into a LIGHT wash so the IMG-XX label stays legible
-        place(top + left, box(width: 100%, height: h, clip: true,
-          image("/public/brand/halftone-thumb.svg", width: 100%)))
-        place(top + left, box(width: 100%, height: h, fill: pill-bg.transparentize(28%)))
+        // plain cream card — the IMG-XX label reads clean against it
         place(center + horizon, box(inset: 6pt, {
           text(size: 9pt, weight: "bold", fill: accent)[#id]
           text(size: 9pt, fill: muted)[ · ]
@@ -124,14 +120,22 @@
   }))
 )
 
-// ─── Chapter opener (big title + optional kicker + halftone strip) ───────────
+// ─── Chapter opener (big title + optional kicker + clean Caldera rule) ───────
+// The rule is the brand's two-tone section motif (components.typ::section): a
+// short solid-orange lead block, then a thin ink hairline to the page edge —
+// scaled up for the magazine's big chapter titles. Replaces the old dot-strip
+// (that decorative motif was removed brand-wide 2026-07-24).
 #let chapter-opener(number, title, kicker: none) = block(above: 0pt, below: 16pt, breakable: false, {
   text(size: size-kicker-x, weight: "bold", fill: accent, tracking: 0.14em)[#upper("Chapter " + number)]
   v(6pt)
   text(font: sans-display, weight: "regular", size: size-chapter-x, fill: primary, tracking: 0.02em, title)
-  v(8pt)
-  box(width: 100%, height: 18pt, clip: true, radius: 4pt,
-    image("/public/brand/halftone-hero.svg", width: 100%))
+  v(11pt)
+  grid(
+    columns: (54pt, 1fr),
+    align: (left + horizon, left + horizon),
+    line(stroke: 3pt + accent, length: 100%),
+    line(stroke: 0.6pt + rule.lighten(20%), length: 100%),
+  )
   if kicker != none {
     v(10pt)
     block(above: 0pt, below: 0pt, {

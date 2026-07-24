@@ -31,9 +31,11 @@ What Chan can supply to finish and upgrade the 16-page
 
 ## 1. In-PDF placeholders (fill these)
 
-| IMG id | Page | What to shoot | Suggested source | Orientation |
-|---|---|---|---|---|
-| `IMG-01` | p4 · "My Story" | Chan **arriving in Auckland at thirty — beginning again**. Sits in a two-up grid beside the 2026 Auckland portrait, so it wants the same quiet, personal register (airport, first apartment, or on foot in the city near arrival). | A real arrival-era photo of Chan in Auckland. | **Portrait 3:4** |
+None. The last placeholder (`IMG-01`, p4) was retired in revision wave 2
+(2026-07-24): the Story spread now runs on real photos end to end — a She Sharp
+panel anchors p3 and the 2026 Auckland portrait carries p4 — so nothing renders
+as a labelled cream box anymore. `img-placeholder()` remains in
+`extended-components.typ` only as the article-card fallback.
 
 ---
 

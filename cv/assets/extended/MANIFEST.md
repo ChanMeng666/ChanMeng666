@@ -37,7 +37,8 @@ suitcase), `min-foam-mat` (16 — foam sleeping mat on a bare tile floor), `min-
 (26 — a red backpack and one wrapped bundle against a bare wall), `min-city-livingroom`
 (22 — a thin mattress on the floor as a bed, city out the window), `min-desk` (24 — a
 totally bare room, one folded quilt on the floor in a pool of sun; repurposed on p7 as
-the minimalism→engineering bridge). `min-suitcase` (08) remains an unused spare.
+the minimalism→engineering bridge). `min-suitcase` (08) is now placed on p6 (revision
+wave 2, 2026-07-24) as the large frame anchoring the media-features page foot.
 
 **`namechange-hero.jpg`** — the "threw away my old name" essay's clean title-card
 illustration (reads "TO THE EXTREME OF MINIMALISM — I THREW AWAY MY OLD NAME"). Chosen

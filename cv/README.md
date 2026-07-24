@@ -15,8 +15,11 @@ This compiles the PDF and emits the GEO siblings to `public/`. Outputs:
 | File | Purpose |
 | --- | --- |
 | `public/chan-meng-cv.pdf` | Canonical 2-page CV (linked from the README) |
+| `public/chan-meng-cv-extended.pdf` | 16-page «Subtraction / Addition» magazine companion |
 | `public/cv.jsonld` | schema.org Person + WorkExperience JSON-LD — recruiter LLMs (LinkedIn AI Search, Greenhouse AI ranking, Jobright) parse this directly |
 | `public/cv-llms.txt` | Plain-text agent-readable summary mirroring the [llms.txt](https://llmstxt.org/) convention |
+
+`public/chan-meng-cv-extended.pdf` is the 16-page image-led magazine companion to the 2-page CV, built by the same `pwsh cv/build.ps1`; its unshot/upgradeable photos are tracked in [`assets/extended/SHOT-LIST.md`](./assets/extended/SHOT-LIST.md).
 
 Requires [Typst 0.14+](https://typst.app/) and Node.js 22+ on PATH.
 
@@ -24,10 +27,10 @@ Requires [Typst 0.14+](https://typst.app/) and Node.js 22+ on PATH.
 
 ```
 cv/
-├── chan-meng-cv.typ         # entry point — page geometry, PDF metadata, layout
-├── theme.typ                # design tokens (colors, fonts, spacing)
-├── components.typ           # reusable: project-card, pill, section-header, ...
-├── sections/
+├── chan-meng-cv.typ           # entry point — 2-page CV: geometry, PDF metadata, layout
+├── theme.typ                  # design tokens (colors, fonts, spacing)
+├── components.typ             # reusable: project-card, pill, section-header, ...
+├── sections/                  # 2-page CV body sections
 │   ├── header.typ
 │   ├── sidebar.typ
 │   ├── projects.typ
@@ -35,9 +38,16 @@ cv/
 │   ├── experience.typ
 │   ├── recognition.typ
 │   └── footer.typ
-├── build.ps1                # one-shot build (PDF + JSON-LD + llms.txt)
-├── build-jsonld.mjs         # data/profile/*.yaml → schema.org JSON-LD
-├── build-llms-txt.mjs       # data/profile/*.yaml → agent-readable summary
+├── chan-meng-cv-extended.typ  # entry point — 16-page «Subtraction / Addition» magazine
+├── extended.typ               # magazine chapter content (x-cover … x-backcover)
+├── extended-components.typ    # magazine primitives: photo, article-card, avatar-wall, …
+├── theme-extended.typ         # spacious *-x tokens + magazine tokens
+├── assets/
+│   ├── extended/              # curated+compressed magazine photos + MANIFEST + SHOT-LIST
+│   └── thumbs/                # legacy small screenshots
+├── build.ps1                  # one-shot build (both PDFs + JSON-LD + llms.txt)
+├── build-jsonld.mjs           # data/profile/*.yaml → schema.org JSON-LD
+├── build-llms-txt.mjs         # data/profile/*.yaml → agent-readable summary
 └── README.md
 ```
 

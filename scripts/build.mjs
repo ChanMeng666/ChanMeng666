@@ -710,7 +710,7 @@ data._teachingImpact = data.meta?.x_brand?.teachingImpact ?? null;
 // so personal links (Medium, HF, Discord, YouTube, etc.) stay reachable
 // for AI agents and other surfaces without crowding the visible README.
 {
-  const readmeOrder = ["Newsletter", "Resume", "Buy Me a Coffee"];
+  const readmeOrder = ["Newsletter", "Resume", "Extended CV", "Buy Me a Coffee"];
   const all = data.meta?.x_brand?.footerLinks ?? [];
   const byLabel = new Map(all.map((l) => [l.label, l]));
   data._footerLinksReadme = readmeOrder.map((label) => byLabel.get(label)).filter(Boolean);

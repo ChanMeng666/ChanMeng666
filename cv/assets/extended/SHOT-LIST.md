@@ -52,20 +52,24 @@ What Chan can supply to finish and upgrade the 16-page
 
 ### 2b. Product logos → live app screenshots
 
-The p9–p11 "What I Build" grids currently pair each product with its **brand
-logo** (SVG) or an existing thumbnail. A real, in-context **screenshot of the
-running app** would make the work more tangible. Optional; supply any subset.
-For all app screens: **landscape 16:10**, drop the JPG in `cv/assets/extended/`,
-and update the one path in the corresponding `photo-grid` tuple in
-`cv/extended.typ`.
+Chapter 3 ("What I Build", pp9–11) was rebuilt 2026-07-24 around Chan's own
+flagship set. Each product now sits in a **uniform `product-tile`** whose fixed
+logo box shows the product's **brand logo** (SVG). A real, in-context
+**screenshot of the running app** would make each more tangible — but the tile is
+deliberately uniform, so any swap-in should be a **1200×630-style branded cover**
+or a clean landscape frame that letterboxes cleanly onto the cream box (`contain`
+fit). Optional; supply any subset. Drop the JPG in `cv/assets/extended/` and
+update the one `product-tile(...)` logo path in `cv/extended.typ`.
 
-| Product | Page · slot | Currently shows | Suggested shot | Orientation |
+| Product | Page | Currently shows | Suggested shot | Orientation |
 |---|---|---|---|---|
-| **FemTracker** | p9 · For the community | `femtracker.svg` (logo) | The period-tracking agent's live UI / reasoning view | Landscape 16:10 |
-| **She Sharp / Her Waka** | p9 · For the community (prose only — no image slot yet) | *no image* | A frame of the She Sharp site or Her Waka workshop platform, if we decide to add a slot | Landscape 16:10 |
-| **gradient-svg-generator** | p10 · Work with taste | `gradient-svg-generator-logo.svg` (logo) | The generator UI with a rendered animated banner | Landscape 16:10 |
-| **Chinese & English Redefine** | p11 · The fun side | `chinese-redefine-v2.svg` (logo) | A deck screen showing a reframed word + its shareable export card | Landscape 16:10 |
-| **Te Pā Tiaki (tower defence)** | p11 · The fun side | `tower-defense-logo.svg` (logo) | An in-game frame of the pure-CSS 3D Māori-myth tower defence | Landscape 16:10 |
+| **ArchCanvas** | p9 | `archcanvas-logo.svg` | The zoomable canvas with a dimensioned plan + its grounded rendering | Landscape 16:10 |
+| **ArchLang** | p9 | `archlang-logo.svg` | The playground: `.arch` source on the left, compiled dimensioned SVG on the right | Landscape 16:10 |
+| **Vitex** | p10 | `vitex.svg` | The generated ATS-ready resume PDF preview (a real screenshot already exists at `cv/assets/thumbs/vitex.jpg`) | Landscape 16:10 |
+| **echook** | p10 | `echook-logo.svg` | The context-window status bar / a webhook alert in Slack | Landscape 16:10 |
+| **Google News MCP Server** | p11 | `server-google-news.svg` | A PulseMCP "Top Pick" listing, or Claude calling the tool | Landscape 16:10 |
+| **gradient-svg-generator** | p11 | `gradient-svg-generator-logo.svg` | The generator UI with a rendered animated banner | Landscape 16:10 |
 
-> Already real screenshots (no action needed): `tam-ai-ti.jpg` (p9) and
-> `eatropolis.jpg` (p10).
+> If Chan ever generates branded 1200×630 OG covers for these flagship repos
+> (the `og-covers/` generator writes `og-cover.png` into each project's own
+> repo), those are the ideal swap-in — same aspect for every tile by design.

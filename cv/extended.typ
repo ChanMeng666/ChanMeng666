@@ -357,15 +357,23 @@
 #let x-backcover() = {
   set page(footer: none)
   v(1fr)
-  align(center, image("/public/brands/chan-meng-monkey-black-transparent.svg", width: 90pt))
-  v(20pt)
-  align(center, block(width: 13cm, {
-    set par(leading: leading-lead-x, justify: false)
-    text(size: 11pt, fill: ink, weight: "bold")[Where to find me]
-    v(8pt)
-    text(size: 10pt, fill: ink)[
-      #link("https://chanmeng.org/")[chanmeng.org] · #link("https://chanmeng.org/blog")[chanmeng.org/blog] · #link("https://chanmeng.org/#newsletter")[Newsletter] · #link("https://www.linkedin.com/in/chanmeng666/")[linkedin.com/in/chanmeng666] · #link("https://github.com/ChanMeng666")[github.com/ChanMeng666] · #link("https://www.youtube.com/@ChanMeng666")[youtube.com/\@ChanMeng666] · #link("https://cal.com/chan-meng/30min")[cal.com/chan-meng/30min]
-    ]
-  }))
+  align(center, image("/public/brands/chan-meng-monkey-black-transparent.svg", width: 82pt))
+  v(28pt)
+  align(center, text(font: sans-display, weight: "regular", size: 24pt, fill: primary, tracking: 0.02em)[Where to find me])
+  v(10pt)
+  // brand two-tone rule, centered under the heading
+  align(center, box(width: 120pt, grid(columns: (40pt, 1fr), align: (center + horizon, center + horizon),
+    line(stroke: 3pt + accent, length: 100%),
+    line(stroke: 0.6pt + rule.lighten(20%), length: 100%))))
+  v(30pt)
+  backcover-links((
+    ("globe",    "https://chanmeng.org/",                 "chanmeng.org"),
+    ("feather",  "https://chanmeng.org/blog",             "chanmeng.org/blog"),
+    ("mail",     "https://chanmeng.org/#newsletter",      "Newsletter"),
+    ("linkedin", "https://www.linkedin.com/in/chanmeng666/", "linkedin.com/in/chanmeng666"),
+    ("github",   "https://github.com/ChanMeng666",        "github.com/ChanMeng666"),
+    ("youtube",  "https://www.youtube.com/@ChanMeng666",  "youtube.com/@ChanMeng666"),
+    ("calendar", "https://cal.com/chan-meng/30min",       "cal.com/chan-meng/30min"),
+  ))
   v(1fr)
 }

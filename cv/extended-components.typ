@@ -3,6 +3,33 @@
 // callouts). Consumes the *-x tokens from theme-extended.typ.
 #import "theme-extended.typ": *
 
+// ─── Icon (color-baked SVG from cv/assets/icons) ─────────────────────────────
+// SVGs carry a concrete brand-token hex (accent #FC5000) baked in — Typst's
+// image() does NOT inherit the surrounding text fill (TYPST_PITFALLS §6). The
+// baseline nudge seats the glyph on the text baseline rather than the descender.
+// Defined first so later primitives (product-tile) can reference it.
+#let icon(name, size: 12pt, baseline: 0.16em) = box(baseline: baseline, height: size,
+  image("/cv/assets/icons/" + name + ".svg", height: size, fit: "contain"))
+
+// ─── Inline URL with a small leading link icon (product tiles etc.) ──────────
+#let icon-link(name, url, label, size: size-tiny-x, color: primary) = {
+  icon(name, size: size * 1.05)
+  h(4pt)
+  text(size: size, fill: color)[#link(url, label)]
+}
+
+// ─── Back-cover link grid — orange icons + ink labels, aligned columns ───────
+// items: array of (icon-name, url, label). One grid so all icons share a column
+// edge and all labels share theirs; centered as a block on the page.
+#let backcover-links(items) = align(center, box(grid(
+  columns: (20pt, auto), column-gutter: 12pt, row-gutter: 17pt,
+  align: (center + horizon, left + horizon),
+  ..items.map(it => (
+    icon(it.at(0), size: 16pt, baseline: 0.30em),
+    text(size: 11.5pt, fill: ink)[#link(it.at(1), it.at(2))],
+  )).flatten(),
+)))
+
 // ─── Rounded, hairline-framed photo (optional caption) ───────────────────────
 #let photo(path, caption: none, w: 100%) = block(above: 0pt, below: 0pt, breakable: false,
   box(width: w, {
@@ -87,7 +114,7 @@
         text(size: size-meta-x, fill: muted, tech)
       })
       block(above: 0pt, below: 0pt, breakable: false,
-        text(size: size-tiny-x, fill: primary)[#link(url, linktext)])
+        icon-link("link", url, linktext))
     })
 })
 

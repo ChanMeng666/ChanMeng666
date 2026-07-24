@@ -241,7 +241,7 @@ function emitTypst() {
   }
   lines.push("");
   lines.push("// ─── Semantic tokens (templates consume these) ───────────────────────────");
-  for (const [name, ref] of Object.entries(brand.color.semantic)) {
+  for (const name of Object.keys(brand.color.semantic)) {
     const resolved = semanticResolved[name];
     lines.push(`#let ${kebab(name)} = rgb("${resolved}")`);
   }

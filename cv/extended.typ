@@ -157,8 +157,120 @@
     [Living alone, I finally learned to confirm my own existence through my own eyes — my own perspective, my own taste.])
   pagebreak()
 }
-#let x-build() = x-stub("3", "What I Build, and Who For", "build", 4)  // pp8–11
-#let x-teaching() = x-stub("4", "Teaching", "teaching", 1)             // p12
+// ── pp8–11: Chapter 3 — What I Build, and Who For ────────────────────────────
+// The book's largest chapter: one product per line = one human-stakes sentence
+// + one plain-language technical line + a live link you can open. Page map is
+// DETERMINISTIC (4 explicit pagebreaks → exactly pp8–11): p8 opener + framing,
+// p9 "for the community", p10 "work with taste", p11 "the fun side". URLs are
+// all verified against data/profile/2*-projects*.yaml (see task-7-report.md).
+// Red lines held: no pricing/cost framings; no commit-count/solo-% dev-stat
+// bragging in prose (product feature counts like "355 templates" are fine).
+#let x-build() = {
+  chapter-opener("3", "What I Build, and Who For",
+    kicker: [The largest chapter — because the work is the argument. Every name below is a link you can open.])
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-lead-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      I build in three registers: for communities that need the tool, for the plain pleasure of craft, and for the fun of chasing an idea past the point of sense. Here is one line from each — a person or a place it was built for, and how it works underneath.
+    ]
+  })
+  pagebreak()
+  // p9 — Group A: for the community
+  block(above: 0pt, below: 8pt, text(size: size-meta-x, weight: "bold", fill: accent, tracking: 0.08em)[FOR THE COMMUNITY])
+  photo-grid((
+    ("/cv/assets/thumbs/tam-ai-ti.jpg", none),
+    ("/public/brands/femtracker.svg", none),
+  ))
+  v(10pt)
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-body-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      *#link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti]* is a te-ao-Māori financial-wellness coach that talks with you in two languages, built for a 19-person, four-month research cohort — a retrieval-augmented agent grounded in Māori values. #link("https://github.com/ChanMeng666/femtracker-agent")[*FemTracker*] takes on period poverty; its eight-node reasoning agent was solid enough to merge into #link("https://github.com/CopilotKit/CopilotKit")[CopilotKit]'s official demos. #link("https://www.shesharp.org.nz/")[*She Sharp*] and #link("https://herwaka.shesharp.org.nz/")[*Her Waka*] carry the site and workshop platform for New Zealand's leading women-in-STEM charity.
+    ]
+  })
+  pagebreak()
+  // p10 — Group B: work with taste (design systems / brand / craft)
+  block(above: 0pt, below: 8pt, text(size: size-meta-x, weight: "bold", fill: accent, tracking: 0.08em)[WORK WITH TASTE])
+  photo-grid((
+    ("/cv/assets/thumbs/eatropolis.jpg", none),
+    ("/public/brands/gradient-svg-generator-logo.svg", none),
+  ))
+  v(10pt)
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-body-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      *Caldera* is the design system behind this very document — its tokens, type, motion, and the risograph halftone you see on every chapter mark. #link("https://eatropolis.co.nz/")[*Chow Luck Club*] is an event brand and website I built on commission for Tātaki Auckland Unlimited. #link("https://gradient-svg-generator.vercel.app/")[*gradient-svg-generator*] turns a phrase into an animated SVG banner — 355 templates rendered as live XML, used across my own READMEs.
+    ]
+  })
+  pagebreak()
+  // p11 — Group C: the fun side
+  block(above: 0pt, below: 8pt, text(size: size-meta-x, weight: "bold", fill: accent, tracking: 0.08em)[THE FUN SIDE])
+  photo-grid((
+    ("/public/brands/chinese-redefine-v2.svg", none),
+    ("/public/brands/tower-defense-logo.svg", none),
+  ))
+  v(10pt)
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-body-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      Not everything has to be serious. My *#link("https://chinese-redefine.chanmeng-dev.workers.dev/")[Chinese & English Redefine]* apps reframe everyday words into something funnier and truer, then export the take as a shareable card. And *#link("https://towerdefense.chanmeng.org/")[Te Pā Tiaki]*, a Māori-myth tower defence, is exactly what it sounds like — a 3D game rendered in pure CSS transforms, no game engine at all, just to see how far that could go.
+    ]
+  })
+  pagebreak()
+}
+
+// ── p12: Chapter 4 — Teaching ────────────────────────────────────────────────
+// EXACTLY one page (single trailing pagebreak). Manifesto line big, a short
+// method paragraph, the banana-workshop photo pair, the capstone strip, and a
+// REAL attributed student quote (verbatim from data/profile/50-references.yaml,
+// Jessie Wan). CAPTION TRUTH RULE: teach-banana-*.jpg show the "AI & Electronics
+// Workshop" (presenters on stage / audience from behind), NOT a banana piano —
+// captions describe the workshop scene; the banana-piano is prose-only.
+#let x-teaching() = {
+  chapter-opener("4", "Teaching",
+    kicker: [Three years, five cohorts. My whole method in one line.])
+  block(above: 0pt, below: 12pt, {
+    set par(leading: leading-lead-x, justify: false)
+    text(size: 16pt, style: "italic", fill: primary)["Natural language is the source code."]
+  })
+  block(above: 0pt, below: 12pt, {
+    set par(leading: leading-body-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      Students arrive knowing only browser ChatGPT. Weeks later they have shipped a live, multi-user AI product by directing coding agents — the same way I work. I have run this five times since 2024, most recently for #link("https://www.technestcommunity.com/")[TechNest] and at a #link("https://programming.chanmeng.org/")[hands-on workshop] where a banana piano taught younger students that code can be playful.
+    ]
+  })
+  // Fixed-height, fit:"contain" pair (cream gutters) rather than photo-grid: the
+  // two workshop frames have mismatched aspect ratios (one portrait, one
+  // landscape) and a width-scaled portrait blew the page past p12. contain (not
+  // cover) shows each frame whole — no crop — so the captions stay truthful to
+  // what is actually visible (CAPTION TRUTH RULE, MANIFEST.md L47–57).
+  grid(columns: (1fr, 1fr), column-gutter: gap-photo-x,
+    ..(
+      ("/cv/assets/extended/teach-banana-1.jpg", [AI & Electronics Workshop — the lineup on stage.]),
+      ("/cv/assets/extended/teach-banana-2.jpg", [Presenting from the front of the room.]),
+    ).map(it => block(above: 0pt, below: 0pt, breakable: false, {
+      box(width: 100%, height: 150pt, radius: radius-photo-x, clip: true, fill: pill-bg,
+        stroke: frame-photo-x + rule.lighten(25%),
+        image(it.at(0), width: 100%, height: 100%, fit: "contain"))
+      v(5pt)
+      text(size: size-tiny-x, fill: muted, style: "italic", it.at(1))
+    }))
+  )
+  v(gap-photo-x)
+  photo-grid((
+    ("/cv/assets/extended/cap-joborg.jpg", [Student capstone — JobOrg.]),
+    ("/cv/assets/extended/cap-icare.jpg", [Student capstone — iCare.]),
+    ("/cv/assets/extended/cap-credithero.jpg", [Student capstone — CreditHero.]),
+  ), cols: 3)
+  v(12pt)
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-body-x, justify: false)
+    text(size: size-tiny-x, fill: muted, style: "italic")[
+      "Chan's teaching style is meticulous and thorough, with patient and in-depth explanations for the use of each tool." — Jessie Wan, course student.
+    ]
+  })
+  pagebreak()
+}
 #let x-voices() = x-stub("5", "Voices", "voices", 2)                   // pp13–14
 #let x-recognition() = x-stub("6", "Recognition", "recognition", 1)    // p15
 

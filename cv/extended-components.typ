@@ -48,9 +48,15 @@
 
 // ─── Media-article card ──────────────────────────────────────────────────────
 #let article-card(cover, title, stats, url) = block(above: 0pt, below: gap-inter-entry-x, breakable: false, {
+  // Fixed cover height + fit:"contain" so covers of differing aspect ratios
+  // (outlet brand-marks vs. landscape photos) all render the same height —
+  // keeping the card tops and the title/link rows aligned across a grid row.
+  // Letterbox/pillarbox gutters are filled with cream (pill-bg), never white.
+  let cover-h-x = 112pt
   if cover != none {
-    box(width: 100%, radius: radius-photo-x, clip: true,
-      stroke: frame-photo-x + rule.lighten(25%), image(cover, width: 100%))
+    box(width: 100%, height: cover-h-x, fill: pill-bg, radius: radius-photo-x, clip: true,
+      stroke: frame-photo-x + rule.lighten(25%),
+      image(cover, width: 100%, height: 100%, fit: "contain"))
   } else {
     img-placeholder("IMG-??", "article cover", ratio: "wide")
   }

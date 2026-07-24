@@ -39,3 +39,17 @@
 
 // ─── Larger pill radius to match the bigger type ─────────────────────────────
 #let cv-radius-pill-x = 7pt
+
+// ─── Magazine tokens (16-page image-led extended CV) ─────────────────────────
+#let radius-photo-x   = 10pt    // rounded photo frame
+#let frame-photo-x    = 0.8pt   // hairline photo stroke (uses rule.lighten(25%))
+#let size-pull-x      = 20pt    // pull-quote display size
+#let size-chapter-x   = 40pt    // chapter-opener title (Anton)
+#let size-kicker-x    = 10pt    // chapter kicker eyebrow
+#let avatar-size-x    = 46pt    // Voices avatar diameter
+#let size-avatar-cap-x = 7pt    // avatar name caption
+#let gap-photo-x      = 14pt    // gutter between gridded photos
+#let ph-h-landscape   = 150pt   // img-placeholder heights by ratio
+#let ph-h-portrait    = 220pt
+#let ph-h-square      = 170pt
+#let ph-h-wide        = 120pt

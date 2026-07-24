@@ -69,6 +69,32 @@
     text(size: size-tiny-x, fill: primary)[#link(url, url.replace("https://", ""))])
 })
 
+// ─── Product tile — UNIFORM product row (fixed logo box + copy) ──────────────
+// Every product on pp9–11 gets the identical treatment: a fixed-size logo box
+// (contain + cream fill, so brand marks of any aspect ratio letterbox to the
+// same footprint) beside a name / one human line / one plain-technical line /
+// a live link. Two tiles per page, vertically distributed with v(1fr) spacers.
+#let product-tile(logo, name, human, tech, url, linktext) = block(above: 0pt, below: 0pt, breakable: false, {
+  grid(columns: (180pt, 1fr), column-gutter: 18pt, align: (horizon, horizon),
+    box(width: 100%, height: 120pt, fill: pill-bg, radius: radius-photo-x, clip: true,
+      inset: 12pt, stroke: frame-photo-x + rule.lighten(25%),
+      image(logo, width: 100%, height: 100%, fit: "contain")),
+    {
+      block(above: 0pt, below: 6pt, breakable: false,
+        text(weight: "bold", size: size-h3-x, fill: ink, name))
+      block(above: 0pt, below: 6pt, breakable: false, {
+        set par(leading: leading-body-x, justify: false)
+        text(size: size-body-x, fill: ink, human)
+      })
+      block(above: 0pt, below: 7pt, breakable: false, {
+        set par(leading: leading-body-x, justify: false)
+        text(size: size-meta-x, fill: muted, tech)
+      })
+      block(above: 0pt, below: 0pt, breakable: false,
+        text(size: size-tiny-x, fill: primary)[#link(url, linktext)])
+    })
+})
+
 // ─── Pull-quote (large italic, orange lead rule) ─────────────────────────────
 // The lead rule is a block LEFT stroke, not a rect(height: 100%): a rect's 100%
 // resolves against the page region (in an auto-height grid row it ran to the

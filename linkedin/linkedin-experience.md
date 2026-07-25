@@ -158,7 +158,7 @@ Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Tailwi
 ### Chief Technology Officer (CTO)
 
 **Dates:** Mar 2025 - Present · 1 yr 4 mos
-**Location:** Shanghai, China · Remote
+**Location:** Chengdu, China · Remote
 **LinkedIn helped me get this job**
 
 ```
@@ -337,7 +337,7 @@ Stayed on post-tenure as long-term technical custodian; executed Vercel → Clou
 ### Backend Developer
 
 **Dates:** Nov 2024 - Mar 2025 · 5 mos
-**Location:** Shanghai, China · Remote
+**Location:** Beijing, China · Remote
 
 ```
 Selected into ByteDance's Youth Training Camp — in the Team 115. ByteDance is the parent of Douyin (China's TikTok), TikTok, Toutiao, CapCut, Lark, and Doubao. One of the most competitive training entry points into China's consumer-internet stack.
@@ -345,9 +345,9 @@ Selected into ByteDance's Youth Training Camp — in the Team 115. ByteDance is 
 Delivered a deliberately overcomplete portfolio (most trainees deliver the algorithm submissions and team capstone; I added three artefacts beyond scope):
 
 • Algorithm curriculum — solved every problem in ByteDance MarsCode's Juejin track. 81 problems, fully written up with statement, approach, complexity analysis, and tested Python implementation (juejin-algorithm-practice, 66 commits, 100% solo).
-• Team 115 capstone — Spring Boot 3 e-commerce platform (Douyin Mall): user management, products, cart, orders, AI customer service. #2-most-prolific committer on an 8-person team (45 of 174 commits, ~26%), behind only the team lead. Stack: Java 17 + Spring Boot 3 + MyBatis + MySQL + Redis + Alibaba Cloud + Docker.
+• Team 115 capstone — Spring Boot 3 e-commerce platform (Douyin Mall): user management, products, cart, orders, AI customer service. #2-most-prolific committer on a 6-person team (45 of 174 commits, ~26%), behind only the team lead. Stack: Java 17 + Spring Boot 3 + MyBatis + MySQL + Redis + Alibaba Cloud + Docker.
 • Solo Vue 3 frontend supplement (beyond scope) — built to integrate against the team backend, Cypress + Vitest coverage.
-• Two open-source teaching templates (beyond scope), both bilingual EN + CN: Go + Gin (douyin-mall-go-template — 52 stars / 7 forks, my most-starred OSS project) and Spring Boot + Maven. Both now used by later camp cohorts as scaffolding.
+• Two open-source teaching templates (beyond scope), both bilingual EN + CN: Go + Gin (douyin-mall-go-template — 53 stars / 7 forks, my most-starred OSS project) and Spring Boot + Maven. Both now used by later camp cohorts as scaffolding.
 ```
 
 **Skills:** Go (Programming Language), Spring Boot, Java, MySQL, Redis, Vue.js, Data Structures & Algorithms

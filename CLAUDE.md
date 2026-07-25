@@ -116,7 +116,8 @@ Changing a role title, date, or award in one place ≠ done. Check the other two
   hackathon — the project's *kind/origin*, orthogonal to tier (ranking),
   recency/status (lifecycle), and category (domain). client = real employer /
   paid commission / affiliated-org work; coursework = university assignment or
-  group-project origin; bootcamp = training-camp capstone (青训营 etc.).
+  group-project origin; bootcamp = training-camp capstone (ByteDance Youth
+  Training Camp etc.).
   Classify by evidence (`entity`/`relatedWorkId`/narrative), not by the meta
   editorial buckets. A shuttered/关停 project is expressed via `status: archived`
   + `recency: deprecated`, NOT a provenance value.

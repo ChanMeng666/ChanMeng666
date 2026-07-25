@@ -104,7 +104,7 @@ projects:
 
 To promote a project to flagship status, change its `priority` to 1-4, move the entry to `20-projects-flagship.yaml`, *and* add its `id` to `meta.x_brand.flagshipProjectIds` (in `90-meta.yaml`) in the order you want it displayed.
 
-`provenance` records the project's *kind/origin* and is independent of tier/recency/category: `client` = built for a real employer / paid commission / affiliated org; `personal` = self-initiated; `coursework` = university assignment or group-project origin; `bootcamp` = training-camp capstone (青训营 etc.); `hackathon` = built at/for a hackathon. Classify by evidence in the entry (`entity`, `relatedWorkId`, narrative), not by which `meta.x_brand.*ProjectIds` bucket it sits in. To mark a project as shuttered / 关停, set `status: archived` + `recency: deprecated` — do **not** use a provenance value for lifecycle.
+`provenance` records the project's *kind/origin* and is independent of tier/recency/category: `client` = built for a real employer / paid commission / affiliated org; `personal` = self-initiated; `coursework` = university assignment or group-project origin; `bootcamp` = training-camp capstone (ByteDance Youth Training Camp etc.); `hackathon` = built at/for a hackathon. Classify by evidence in the entry (`entity`, `relatedWorkId`, narrative), not by which `meta.x_brand.*ProjectIds` bucket it sits in. To mark a project as shuttered / 关停, set `status: archived` + `recency: deprecated` — do **not** use a provenance value for lifecycle.
 
 To flag a project as one Chan is *actively deep-developing* (distinct from flagship = most-impressive), add its `id` to `meta.x_brand.spotlightProjectIds` in `90-meta.yaml`. The build fails if any id there does not resolve to a project.
 

@@ -176,7 +176,7 @@ const roles = [
   ["Chief Technology Officer", "FemTech Weekend", "Mar 2025 — Present", "Sole engineer behind China's first women's-health-technology organisation — built, then rebuilt its entire web platform twice as the mission grew, from a marketing site on Next.js to an editorial and research platform on Docusaurus. Ran the digital infrastructure for the 2026 Shanghai Summit (June 22–25), a four-day event with 20 confirmed speakers headlined by Ida Tin, who coined the term \"FemTech\"."],
   ["Open Source Contributor", "CopilotKit (36.1k stars)", "Jun 2025 — Present", "2 merged PRs · 8-agent FemTracker demo + Claude Code MCP setup guide"],
   ["CTO (prev. Senior AI/ML Infrastructure Engineer)", "Sanicle", "Mar 2025 — Feb 2026", "Joined as Senior AI/ML Infrastructure Engineer, promoted to CTO. Took Sanicle from a no-code prototype to the production B2B FemTech SaaS employers buy for their staff — menstrual and menopause workplace wellness. Personally integrated IBM watsonx into the product, the work that earned Sanicle its IBM Silver Partner certification · solo build, 350+ commits · OpenAI + pgvector."],
-  ["Full-Stack Engineer (Douyin Mall capstone)", "ByteDance", "—", "Spring Boot 3 + solo Vue 3 build · #2 of 8 contributors"],
+  ["Full-Stack Engineer (Douyin Mall capstone)", "ByteDance", "—", "Spring Boot 3 + solo Vue 3 build · #2 of 6 contributors"],
 ];
 for (const [role, org, dates, detail] of roles) {
   W(`- ${role} · ${org} · ${dates} — ${detail}`);

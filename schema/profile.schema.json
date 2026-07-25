@@ -659,7 +659,7 @@
         "provenance": {
           "type": "string",
           "enum": ["client", "personal", "coursework", "bootcamp", "hackathon"],
-          "description": "Intrinsic origin/kind of the project. client = real employer / paid commission / affiliated-org engagement (真实雇主合作); personal = self-initiated; coursework = university assignment or group-project origin (练手); bootcamp = training-camp capstone (ByteDance 青训营 etc.); hackathon = built at/for a hackathon. Orthogonal to tier (ranking), recency/status (lifecycle), and category (domain)."
+          "description": "Intrinsic origin/kind of the project. client = real employer / paid commission / affiliated-org engagement (真实雇主合作); personal = self-initiated; coursework = university assignment or group-project origin (练手); bootcamp = training-camp capstone (ByteDance Youth Training Camp etc.); hackathon = built at/for a hackathon. Orthogonal to tier (ranking), recency/status (lifecycle), and category (domain)."
         },
         "highlights": { "type": "array", "items": { "type": "string" } },
         "extraLinks": {

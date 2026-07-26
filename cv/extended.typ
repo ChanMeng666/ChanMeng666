@@ -136,9 +136,17 @@
       It began with a broken charging cable and a bent hairpin. I threw them out, felt lighter, and kept going. Today everything I own fits into one backpack and one suitcase. I don't keep a living room — I borrow the city's.
     ]
   })
+  // Top-right is Chan's own wide frame of the flat, supplied 2026-07-26 and
+  // placed at her explicit direction: she picked it to show the room "corner to
+  // corner, no dead angles" — front door, bathroom, bare walls and floor in one
+  // shot. It is the establishing frame the three detail frames around it belong
+  // to. It replaces min-foam-mat, which was retired in the same pass as the
+  // book's tightest near-twin (same room, same window wall, same balcony door as
+  // min-empty-room beside it). Cropped to 1.3375 so the row-mate's 1.3383 lines
+  // up exactly — see MANIFEST.md for the crop and the watermark ruling.
   photo-grid((
     ("/cv/assets/extended/min-empty-room.jpg", [One room, almost empty.]),
-    ("/cv/assets/extended/min-foam-mat.jpg", [A foam mat instead of a bed.]),
+    ("/cv/assets/extended/min-room-panorama.jpg", [The whole room in one frame — front door, bathroom, bare walls.]),
   ))
   v(gap-photo-x)
   photo-grid((

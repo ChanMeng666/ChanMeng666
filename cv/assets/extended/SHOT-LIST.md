@@ -3,7 +3,7 @@
 What Chan can supply to finish and upgrade the 16-page
 `chan-meng-cv-extended.pdf`. Two kinds of task:
 
-1. **In-PDF placeholders (`IMG-XX`)** — currently render as a cream halftone
+1. **In-PDF placeholders (`IMG-XX`)** — currently render as a plain cream
    block stamped with the id. The book compiles at 16 pages either way, but each
    one should be replaced with a real photo before the magazine is called done.
 2. **Swap-in upgrades** — the layout already shows a real image (a logo, an
@@ -31,9 +31,14 @@ What Chan can supply to finish and upgrade the 16-page
 
 ## 1. In-PDF placeholders (fill these)
 
-| IMG id | Page | What to shoot | Suggested source | Orientation |
-|---|---|---|---|---|
-| `IMG-01` | p4 · "My Story" | Chan **arriving in Auckland at thirty — beginning again**. Sits in a two-up grid beside the 2026 Auckland portrait, so it wants the same quiet, personal register (airport, first apartment, or on foot in the city near arrival). | A real arrival-era photo of Chan in Auckland. | **Portrait 3:4** |
+None. The last placeholder (`IMG-01`, p4) was retired in revision wave 2
+(2026-07-24). Wave 3 (2026-07-26) went further and put Chan's **own** photos on
+that page: p4 is now a real timeline — the Lincoln campus in November 2023 above
+a before/after row of Nanning and CORDE. (The portrait that briefly stood there
+turned out to be a second crop of the p2 boat frame, captioned "Auckland"; see
+MANIFEST.md.) `img-placeholder()` remains in `extended-components.typ` only as
+the fallback branch inside `article-card` — which is itself no longer used, since
+p6 moved to `article-row` on 2026-07-26.
 
 ---
 
@@ -43,29 +48,64 @@ What Chan can supply to finish and upgrade the 16-page
 
 | Target | Page | Currently shows | Replace with | Orientation |
 |---|---|---|---|---|
-| `cv/assets/extended/namechange-hero.jpg` | (not currently placed) | Curated but **unused** — Task 6 told the name-change story via the p6 article card + caption, so this file is a spare. The version on disk is the essay's clean title-card illustration (the only frame in that source folder without a "看客 INSIGHT" / NetEase watermark). | Chan's **un-watermarked original of the stone-alley / red-backpack photo** (the watermarked press version is `2d-portfolio/…/threw-away-my-old-name/16.png`). With a clean original in hand this could become the Minimalist chapter's hero image. | Portrait or square |
-| `public/articles/kan-kein-sight.jpg` | p6 · "A Minimalist" (3rd article card, *I Threw Away My Old Name*) | The NetEase 看客 outlet **brand-mark**, used as a recognizable media-feature cover. | A **real photo** would read warmer than a brand-mark. `fit:"contain"` letterboxes onto a cream card, so any aspect ratio is safe. | Any (landscape reads best) |
+| `cv/assets/extended/namechange-hero.jpg` | (not currently placed) | Curated but **unused** — Task 6 told the name-change story via p6's 3rd media feature + caption, so this file is a spare. The version on disk is the essay's clean title-card illustration (the only frame in that source folder without a "看客 INSIGHT" / NetEase watermark). | Chan's **un-watermarked original of the stone-alley / red-backpack photo** (the watermarked press version is `2d-portfolio/…/threw-away-my-old-name/16.png`). With a clean original in hand this could become the Minimalist chapter's hero image. | Portrait or square |
+| `public/articles/kan-kein-sight.jpg` | p6 · "A Minimalist" (3rd media-feature row, *I Threw Away My Old Name*) | The NetEase 看客 outlet **brand-mark**, used as a recognizable media-feature cover. | A **real photo** would read warmer than a brand-mark. `article-row` draws the cover `fit:"contain"` on the row's cream ground, so any aspect ratio is safe. | Any (landscape reads best) |
+> All three p6 covers are now outlet brand-marks — 最人物, Douban, NetEase 看客 —
+> which is the intended design. The Douban card is **resolved**: it runs on
+> Wikimedia's public-domain vector wordmark (`douban-logo.svg`), so it is exactly
+> sharp at any size. The square green Douban app icon is *not* a viable upgrade —
+> Wikimedia's only copy is `File:Logo of Douban (Small).png` at 100×100 px, which
+> prints at roughly 48 dpi. If Chan ever obtains a ≥ 640 px square Douban icon
+> from another source, swapping it in would make the row three matched squares;
+> until then the wordmark is the sharper choice. See MANIFEST.md.
 
-> The other two p6 covers are fine as-is: `girl-on-mattress.jpg` (最人物) and
-> `p658073376.webp` (*A Glimpse of My Minimalist Home*) are real photos, not
-> brand-marks — no swap needed.
+### 2a-bis. Spares already in hand (2026-07-26)
+
+Frames from Chan's photo library that are good but did not earn a page this
+wave. They are **not** compressed into `cv/assets/extended/` — they still live in
+`C:\Users\0\Downloads\photo\`. Any of them can be pulled in later, subject to the
+no-duplicates rule in MANIFEST.md.
+
+| Source file | What it shows | Why it's held back |
+|---|---|---|
+| `CORDE-2.jpg` / `CORDE-3.jpg` | Chan beside CORDE's branded fleet vehicles under a blue Canterbury sky. | Near-duplicates of each other; `CORDE-1` (the branded office entry) already carries CORDE on p4. |
+| `she sharp-1.jpeg` | Chan and another participant at a She Sharp hackathon table, laptops open. | Needs Chan's explicit OK — the co-subject is an identifiable adult who isn't a billed speaker. |
+| `speaker.jpg` | The full She Sharp "Panel Speakers" frame, all three panelists seated. | Same panel as p3's photo; would be a duplicate. Usable only as a *replacement* for `chan-panel-shesharp-gesturing.jpg`. |
+
+**Still missing from the library** (worth shooting or digging out):
+
+1. **An un-watermarked, fully-realised empty-room photo.** Raised in priority
+   2026-07-26: Chan retired `min-suitcase.jpg` because it showed a room with a
+   full double bed — a transitional state, not the finished one — and nothing in
+   the supplied library can replace it, because every candidate room frame
+   carries the NetEase 看客 watermark. The chapter now runs on four such rooms
+   (p5) plus one (p7); a sixth clean frame would give p6 back the option of a
+   photographic anchor.
+2. **A frame of Chan at a desk actually working.** The book still has no photo of
+   the making — only of the results, the rooms, and the stages. For a magazine
+   whose argument is that she directs coding agents, this is the single
+   highest-value shot missing.
 
 ### 2b. Product logos → live app screenshots
 
-The p9–p11 "What I Build" grids currently pair each product with its **brand
-logo** (SVG) or an existing thumbnail. A real, in-context **screenshot of the
-running app** would make the work more tangible. Optional; supply any subset.
-For all app screens: **landscape 16:10**, drop the JPG in `cv/assets/extended/`,
-and update the one path in the corresponding `photo-grid` tuple in
-`cv/extended.typ`.
+Chapter 3 ("What I Build", pp9–11) was rebuilt 2026-07-24 around Chan's own
+flagship set. Each product now sits in a **uniform `product-tile`** whose fixed
+logo box shows the product's **brand logo** (SVG). A real, in-context
+**screenshot of the running app** would make each more tangible — but the tile is
+deliberately uniform, so any swap-in should be a **1200×630-style branded cover**
+or a clean landscape frame that letterboxes cleanly onto the cream box (`contain`
+fit). Optional; supply any subset. Drop the JPG in `cv/assets/extended/` and
+update the one `product-tile(...)` logo path in `cv/extended.typ`.
 
-| Product | Page · slot | Currently shows | Suggested shot | Orientation |
+| Product | Page | Currently shows | Suggested shot | Orientation |
 |---|---|---|---|---|
-| **FemTracker** | p9 · For the community | `femtracker.svg` (logo) | The period-tracking agent's live UI / reasoning view | Landscape 16:10 |
-| **She Sharp / Her Waka** | p9 · For the community (prose only — no image slot yet) | *no image* | A frame of the She Sharp site or Her Waka workshop platform, if we decide to add a slot | Landscape 16:10 |
-| **gradient-svg-generator** | p10 · Work with taste | `gradient-svg-generator-logo.svg` (logo) | The generator UI with a rendered animated banner | Landscape 16:10 |
-| **Chinese & English Redefine** | p11 · The fun side | `chinese-redefine-v2.svg` (logo) | A deck screen showing a reframed word + its shareable export card | Landscape 16:10 |
-| **Te Pā Tiaki (tower defence)** | p11 · The fun side | `tower-defense-logo.svg` (logo) | An in-game frame of the pure-CSS 3D Māori-myth tower defence | Landscape 16:10 |
+| **ArchCanvas** | p9 | `archcanvas-logo.svg` | The zoomable canvas with a dimensioned plan + its grounded rendering | Landscape 16:10 |
+| **ArchLang** | p9 | `archlang-logo.svg` | The playground: `.arch` source on the left, compiled dimensioned SVG on the right | Landscape 16:10 |
+| **Vitex** | p10 | `vitex.svg` | The generated ATS-ready resume PDF preview (a real screenshot already exists at `cv/assets/thumbs/vitex.jpg`) | Landscape 16:10 |
+| **echook** | p10 | `echook-logo.svg` | The context-window status bar / a webhook alert in Slack | Landscape 16:10 |
+| **Google News MCP Server** | p11 | `server-google-news.svg` | A PulseMCP "Top Pick" listing, or Claude calling the tool | Landscape 16:10 |
+| **gradient-svg-generator** | p11 | `gradient-svg-generator-logo.svg` | The generator UI with a rendered animated banner | Landscape 16:10 |
 
-> Already real screenshots (no action needed): `tam-ai-ti.jpg` (p9) and
-> `eatropolis.jpg` (p10).
+> If Chan ever generates branded 1200×630 OG covers for these flagship repos
+> (the `og-covers/` generator writes `og-cover.png` into each project's own
+> repo), those are the ideal swap-in — same aspect for every tile by design.

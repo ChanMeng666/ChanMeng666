@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chan Meng — Brand System</title>
   <link rel="icon" type="image/svg+xml" href="brands/chan-monkey-logo-black.svg">
-  <meta name="description" content="Personal visual + verbal design system for Chan Meng — a faithful Caldera clone: warm basalt concrete, heavy mixed-case Anton display, risograph halftone gradients. Generated from data/brand.yaml.">
+  <meta name="description" content="Personal visual + verbal design system for Chan Meng — a faithful Caldera clone: warm basalt concrete, heavy mixed-case Anton display, flat risograph color blocks. Generated from data/brand.yaml.">
   <link rel="stylesheet" href="../dist/brand/tokens.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     html { -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
-      /* Halftone dot-grid texture (signatures.dotGrid) — grey printed dot field
+      /* Dot-grid texture (signatures.dotGrid) — grey printed dot field
          on the basalt canvas, matching caldera.xyz; cards float over it. */
       background-color: var(--color-canvas-page);
       background-image: radial-gradient(color-mix(in srgb, var(--color-ink-primary) 13%, transparent) 2px, transparent 2.2px);
@@ -107,7 +107,7 @@
     }
     @media (max-width: 640px) { .nav .links { display: none; } }
 
-    /* ── Hero — asymmetric: headline left, halftone panel right ────────────── */
+    /* ── Hero — asymmetric: headline left, gradient band panel right ───────── */
     .hero { display: grid; grid-template-columns: 1fr; gap: var(--space-5); padding: var(--space-6) 0 var(--rhythm-section-large); align-items: center; }
     @media (min-width: 900px) { .hero { grid-template-columns: 42% 1fr; } }
     .hero .panel { width: 100%; height: auto; display: block; border-radius: var(--radius-card); }
@@ -158,7 +158,7 @@
           CREAM cards (never orange) with a black-ink number and an orange CIRCULAR
           icon badge top-left, joined by CREAM "dog-bone" SVG connectors that merge
           into the cards: full-width flares at each card edge pinched to a thin waist
-          where the grey halftone canvas bites through (smooth radius-8 fillets). The
+          where the grey basalt canvas bites through (smooth radius-8 fillets). The
           connector <path> is copied verbatim from caldera.xyz. The bones PERSIST at
           every breakpoint (verified live): 4-across (vertical bones) → 2×2 (a centre
           cross-junction: vertical bones top+bottom pairs, horizontal bones left+right
@@ -290,7 +290,7 @@
     .specimen .preview-body { font-family: var(--font-body-sans); font-size: var(--text-body-size); line-height: var(--text-body-line-height); color: var(--color-ink-primary); }
     .specimen .preview-mono { font-family: var(--font-mono); font-size: var(--text-mono-size); color: var(--color-ink-primary); }
 
-    /* ── Blog / content card (halftone thumb + Hazard-Yellow tag) ──────────── */
+    /* ── Blog / content card (color-block thumb + Hazard-Yellow tag) ───────── */
     .blog-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-3); margin: var(--space-3) 0; }
     @media (min-width: 720px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
     .blog-card { background: var(--color-canvas-surface); border-radius: var(--radius-card); padding: var(--space-3); }
@@ -466,7 +466,7 @@
       </div>
       <p class="mono" style="margin-top: var(--space-3);">v2.1.1 · 2026-06-07 · Caldera clone</p>
     </div>
-    <img class="panel" src="../public/brand/halftone-hero.svg" alt="Halftone gradient hero panel — Digital Orange to Cyber Violet">
+    <img class="panel" src="https://gradient-svg-generator.vercel.app/api/svg?text=Subtraction%20%2F%20Addition&template=brand-hero&height=340&duration=8s" alt="Chan Meng brand hero band — animated Digital Orange gradient">
   </header>
 
   <!-- STAT GRID — interconnected cards (signatures.connectedCards) -->
@@ -815,22 +815,22 @@
       </div>
     </div>
 
-    <!-- Blog cards: halftone thumb + Hazard-Yellow category tag + Anton title -->
+    <!-- Blog cards: flat brand color-block thumb + Hazard-Yellow category tag + Anton title -->
     <div class="blog-grid">
       <div class="blog-card">
-        <img class="thumb" src="../public/brand/halftone-thumb.svg" alt="">
+        <div class="thumb" style="aspect-ratio: 16 / 9; background: var(--color-surface-accent);"></div>
         <span class="tag">Announcement</span>
         <h3>Shipping agentic workflows in production</h3>
         <span class="date">2026-06-07</span>
       </div>
       <div class="blog-card">
-        <img class="thumb" src="../public/brand/halftone-thumb.svg" alt="">
+        <div class="thumb" style="aspect-ratio: 16 / 9; background: var(--color-surface-decor);"></div>
         <span class="tag">Open Source</span>
         <h3>Free tools I built for the community</h3>
         <span class="date">2026-06-07</span>
       </div>
       <div class="blog-card">
-        <img class="thumb" src="../public/brand/halftone-thumb.svg" alt="">
+        <div class="thumb" style="aspect-ratio: 16 / 9; background: var(--color-surface-glare);"></div>
         <span class="tag">FemTech</span>
         <h3>Cultural technology and women's health</h3>
         <span class="date">2026-06-07</span>
@@ -958,21 +958,11 @@
   <!-- SIGNATURES -->
   <section>
     <h2 class="section">Decorative signatures</h2>
-    <p class="lead">All built on assets Chan owns: the risograph halftone panels (public/brand/), gradient-svg-generator banners + pills, the monogram, and the datestamp. External services (shields.io, trophies, wakatime, streaks) are forbidden.</p>
+    <p class="lead">All built on assets Chan owns: gradient-svg-generator banners + pills, the monogram, and the datestamp. External services (shields.io, trophies, wakatime, streaks) are forbidden.</p>
     <div class="sig-gallery">
 
       <div class="sig-card">
-        <h3>1. Halftone panel — halftone</h3>
-        <div class="preview">
-          <img src="../public/brand/halftone-hero.svg" alt="Halftone hero panel" loading="lazy" style="max-height: 220px;">
-        </div>
-        <p class="meta"><strong>Colors:</strong> Digital Orange → Cyber Violet</p>
-        <p class="meta"><strong>Use:</strong> Hero decorative panel; blog / project card thumbnails.</p>
-        <p class="meta"><strong>Don't:</strong> Behind body text. As a button fill. More than one hero panel per surface.</p>
-      </div>
-
-      <div class="sig-card">
-        <h3>2. Hero band — heroBand</h3>
+        <h3>1. Hero band — heroBand</h3>
         <p class="meta"><span>Template: <code class="mono">brand-hero</code></span><span>Height: 200px</span><span>Duration: 8s</span></p>
         <div class="preview">
           <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Chan%20Meng&template=brand-hero&height=200&duration=8s" alt="Hero band preview" loading="lazy">
@@ -981,7 +971,7 @@
       </div>
 
       <div class="sig-card">
-        <h3>3. Accent eyebrow — goldEyebrow</h3>
+        <h3>2. Accent eyebrow — goldEyebrow</h3>
         <div class="preview" style="text-align: left;">
           <p class="eyebrow">Featured Work</p>
           <h3 style="font-family: var(--font-display); font-size: var(--text-display-lg-size); letter-spacing: 0.02em; color: var(--color-ink-strong); margin: 0;">Sample display heading</h3>
@@ -991,7 +981,7 @@
       </div>
 
       <div class="sig-card">
-        <h3>4. Mono datestamp — monoDatestamp</h3>
+        <h3>3. Mono datestamp — monoDatestamp</h3>
         <div class="preview" style="text-align: left;">
           <span class="mono">last updated · 2026-06-07 · build 47</span>
         </div>
@@ -999,7 +989,7 @@
       </div>
 
       <div class="sig-card">
-        <h3>5. Monogram divider — monogramDivider</h3>
+        <h3>4. Monogram divider — monogramDivider</h3>
         <div class="preview">
           <div style="display: flex; align-items: center; gap: 12px; justify-content: center;">
             <span style="flex: 1; height: 2px; background: var(--color-ink-primary); opacity: 0.4;"></span>
@@ -1011,7 +1001,7 @@
       </div>
 
       <div class="sig-card">
-        <h3>6. Pill rotation — pillRotation</h3>
+        <h3>5. Pill rotation — pillRotation</h3>
         <div class="preview">
           <p class="meta">Recoloured to the Caldera palette (15 configured)</p>
           <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 12px;">

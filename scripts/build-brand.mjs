@@ -241,7 +241,7 @@ function emitTypst() {
   }
   lines.push("");
   lines.push("// ─── Semantic tokens (templates consume these) ───────────────────────────");
-  for (const [name, ref] of Object.entries(brand.color.semantic)) {
+  for (const name of Object.keys(brand.color.semantic)) {
     const resolved = semanticResolved[name];
     lines.push(`#let ${kebab(name)} = rgb("${resolved}")`);
   }
@@ -435,7 +435,7 @@ function emitCalderaDesignMd(variablesCss, themeCss) {
 
 **Theme:** light
 
-${brand.identity.name}'s personal brand is a faithful clone of the Caldera system: a warm basalt-grey concrete canvas is the backdrop for risograph halftone-dot gradient forms (Digital Orange → Cyber Violet) and a heavy, mixed-case, tightly tracked compact-grotesque display face (${displayFont}). Cards and buttons use generous rounded corners for a friendly, almost toy-like solidity. The atmosphere is editorial yet bold — color is rationed for impact, hierarchy comes from solid color blocks and type weight, and the system stays flat (no shadows, no elevation gradients).
+${brand.identity.name}'s personal brand is a faithful clone of the Caldera system: a warm basalt-grey concrete canvas is the backdrop for flat risograph color-block forms (Digital Orange → Cyber Violet) and a heavy, mixed-case, tightly tracked compact-grotesque display face (${displayFont}). Cards and buttons use generous rounded corners for a friendly, almost toy-like solidity. The atmosphere is editorial yet bold — color is rationed for impact, hierarchy comes from solid color blocks and type weight, and the system stays flat (no shadows, no elevation gradients).
 
 ## Tokens — Colors
 
@@ -509,16 +509,16 @@ One flat pill system — hierarchy by **fill, not size**. Every variant shares t
 Sizes: \`sm\` (8×16, 14px) · md (12×24, 16px — default) · \`lg\` (16×34, 18px). Disabled: 40% opacity, non-interactive. Any button may carry a leading/trailing inline SVG that inherits the label colour.
 
 ### Connected Stat Cards
-A row of **CREAM** (\`${brand.radius.card}px\`) metric cards — a black-\`Abyssal Ink\` number plus an orange CIRCULAR icon badge top-left — JOINED into one unit by a **cream "dog-bone" connector** (identical fill to the cards) that flares to full width at each card edge and pinches to a thin waist where the grey \`Basalt Canvas\` halftone bites through (two smooth radius-8 concave fillets; SVG \`<path>\` copied verbatim from caldera.xyz — use the path alone, NO centre \`<rect>\`, which would protrude as a square sliver). Never fill these cards orange — orange lives only in the badge. The bones PERSIST at every breakpoint (verified on the live site): row + vertical bones → 2×2 **centre cross-junction** (vertical bones link the top + bottom pairs, horizontal bones link the left + right pairs) → single column with a horizontal bone between every stacked pair. The interlocking-metric motif — reserve for a tight row of closely-related stats.
+A row of **CREAM** (\`${brand.radius.card}px\`) metric cards — a black-\`Abyssal Ink\` number plus an orange CIRCULAR icon badge top-left — JOINED into one unit by a **cream "dog-bone" connector** (identical fill to the cards) that flares to full width at each card edge and pinches to a thin waist where the grey \`Basalt Canvas\` bites through (two smooth radius-8 concave fillets; SVG \`<path>\` copied verbatim from caldera.xyz — use the path alone, NO centre \`<rect>\`, which would protrude as a square sliver). Never fill these cards orange — orange lives only in the badge. The bones PERSIST at every breakpoint (verified on the live site): row + vertical bones → 2×2 **centre cross-junction** (vertical bones link the top + bottom pairs, horizontal bones link the left + right pairs) → single column with a horizontal bone between every stacked pair. The interlocking-metric motif — reserve for a tight row of closely-related stats.
 
 ### Dot-Grid Background
-A grey halftone dot field under most sections: a CSS radial-gradient tile of \`Abyssal Ink\` dots (~2px, ~13% opacity, ~20px spacing) over the \`Basalt Canvas\`, matching the live caldera.xyz ground. The printed paper that cards float on — never run it at full strength behind body text.
+A grey dot field under most sections: a CSS radial-gradient tile of \`Abyssal Ink\` dots (~2px, ~13% opacity, ~20px spacing) over the \`Basalt Canvas\`, matching the live caldera.xyz ground. The printed paper that cards float on — never run it at full strength behind body text.
 
 ### Circular Icon Badge
 \`Digital Orange\` **circle** (50% radius, ~64px) with a white glyph centred — Caldera's stat / channel mark, anchored top-left of a card. (Caldera uses a full circle, not a squircle.)
 
 ### Nested Thumbnail Card
-A \`${brand.radius.card}px\` ash card with ${brand.spacing.rhythm.cardPadding}px padding holding an inset image at the smaller \`--radius-card-sm\` (${brand.radius.cardSm ?? 24}px) — the rounded-image-inside-rounded-card nesting. Thumbnails carry the orange halftone treatment. Cards stay cream; the active/inactive split is a solid cream card vs. dotted-outline ghost rows (an accordion), **not** an orange fill.
+A \`${brand.radius.card}px\` ash card with ${brand.spacing.rhythm.cardPadding}px padding holding an inset image at the smaller \`--radius-card-sm\` (${brand.radius.cardSm ?? 24}px) — the rounded-image-inside-rounded-card nesting. Cards stay cream; the active/inactive split is a solid cream card vs. dotted-outline ghost rows (an accordion), **not** an orange fill.
 
 ### Pill Input + Arrow
 \`Paper White\` (or transparent on a colored panel) field, 1px ink border, \`--radius-input\` (${brand.radius.input}px) full pill, with a circular submit button (▸) seated at the right end. No focus glow — the border thickens to 2px on focus.

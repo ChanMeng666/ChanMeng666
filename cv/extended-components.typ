@@ -108,10 +108,13 @@
   // (outlet brand-marks vs. landscape photos) all render the same height —
   // keeping the card tops and the title/link rows aligned across a grid row.
   // Letterbox/pillarbox gutters are filled with cream (pill-bg), never white.
+  // The horizontal inset holds wide marks off the frame edge: a full-bleed
+  // wordmark touching both sides reads as a cropping mistake rather than a
+  // deliberate letterbox. x-only, so the fixed card height is unchanged.
   let cover-h-x = 150pt
   if cover != none {
     box(width: 100%, height: cover-h-x, fill: pill-bg, radius: radius-photo-x, clip: true,
-      stroke: frame-photo-x + rule.lighten(25%),
+      stroke: frame-photo-x + rule.lighten(25%), inset: (x: 9pt),
       image(cover, width: 100%, height: 100%, fit: "contain"))
   } else {
     img-placeholder("IMG-??", "article cover", ratio: "wide")

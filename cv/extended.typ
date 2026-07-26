@@ -273,20 +273,26 @@
       Students arrive knowing only browser ChatGPT. Weeks later they have shipped a live, multi-user AI product by directing coding agents — the same way I work. I have run this five times since 2024, most recently for #link("https://www.technestcommunity.com/")[TechNest] and at a #link("https://programming.chanmeng.org/")[hands-on workshop] where a banana piano taught younger students that code can be playful.
     ]
   })
-  // Fixed-height, fit:"contain" row (cream gutters) rather than photo-grid: the
-  // workshop frames have mismatched aspect ratios (two portrait, one landscape)
-  // and a width-scaled portrait blew the page past p12. contain (not cover)
-  // shows each frame whole — no crop — so the captions stay truthful to what is
-  // actually visible (CAPTION TRUTH RULE, MANIFEST.md). Widened to three
-  // 2026-07-26: teach-kids-laptop is the only frame in Chan's library that shows
-  // her actually teaching, and every child in it is shot from behind — no
-  // identifiable faces, which is why the other frames from that day are out.
+  // Fixed-height, fit:"contain" row (cream gutters) rather than photo-grid: a
+  // width-scaled portrait blew the page past p12, and contain (not cover) shows
+  // each frame whole — no crop — so the captions stay truthful to what is
+  // actually visible (CAPTION TRUTH RULE, MANIFEST.md).
+  //
+  // Both frames show Chan: she is second from the right in the stage lineup
+  // (buzzcut, dark fur-collar coat), and she is the one leaning over the laptop.
+  // teach-banana-2 was cut in review 2026-07-26 — it carried the caption
+  // "Presenting from the front of the room", but the person holding the
+  // microphone in that frame is the event's host in a pink blazer, NOT Chan, who
+  // does not appear in it at all. Rather than re-caption a frame whose only
+  // identifiable subject is a private individual, it was dropped: that is the
+  // same standard that keeps `she sharp-1.jpeg` out of the book. The row went
+  // back to a 2-up, which also lets both surviving frames run much larger — they
+  // share an aspect ratio (3:4) so they fill their boxes almost exactly.
   v(0.55fr)
   photo-row((
-    ("/cv/assets/extended/teach-banana-1.jpg", [AI & Electronics Workshop — the lineup on stage.]),
+    ("/cv/assets/extended/teach-banana-1.jpg", [AI & Electronics Workshop — the presenter lineup on stage.]),
     ("/cv/assets/extended/teach-kids-laptop.jpg", [Hands-on at the same workshop — a browser game on the laptop, the room crowded in.]),
-    ("/cv/assets/extended/teach-banana-2.jpg", [Presenting from the front of the room.]),
-  ), h: 250pt)
+  ), h: 300pt)
   v(0.75fr)
   block(above: 0pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)

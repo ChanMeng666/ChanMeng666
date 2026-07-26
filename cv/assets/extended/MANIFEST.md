@@ -24,7 +24,7 @@ committed; only the outputs below land in the repo.
 | `min-desk.jpg` | `D:\github_repository\2d-portfolio\public\blog\minimalist-lifestyle-journey\24.png` | pp5–7 "A Minimalist" |
 | `namechange-hero.jpg` | `D:\github_repository\2d-portfolio\public\blog\threw-away-my-old-name\01.png` | pp5–7 "A Minimalist" (chapter hero / title card) |
 | `teach-banana-1.jpg` | `D:\github_repository\ai-programming-teaching-project\static\img\peyvand-academy\peyvand-academy-13-june-2026-photo-6.webp` | p12 Teaching |
-| `teach-banana-2.jpg` | `D:\github_repository\ai-programming-teaching-project\static\img\peyvand-academy\peyvand-academy-13-june-2026-photo-2.webp` | p12 Teaching (re-cropped square 2026-07-26) |
+| ~~`teach-banana-2.jpg`~~ | `…peyvand-academy-13-june-2026-photo-2.webp` | **retired 2026-07-26** — see "Retired" below |
 | `teach-kids-laptop.jpg` | `C:\Users\0\Downloads\photo\Teaching.HEIC` | p12 Teaching |
 | `story-lincoln.jpg` | `C:\Users\0\Downloads\photo\lincoln university.jpg` | p4 "My Story" |
 | `story-nanning.jpg` | `C:\Users\0\Downloads\photo\china-nanning.jpg` | p4 "My Story" |
@@ -57,9 +57,15 @@ backpack) — request from Chan via shot list._
 piano is pictured):**
 - `teach-banana-1.jpg` = She Sharp / Peyvand Academy "AI & Electronics Workshop" (Youth
   Tech Series 2026), presenter lineup on stage in front of the projected title slide,
-  audience shot from behind.
-- `teach-banana-2.jpg` = Chan presenting at the front of the same workshop, audience shot
-  from behind (backs of heads).
+  audience shot from behind. **Chan is second from the right** — buzzcut, dark
+  fur-collar coat. She is standing in the lineup, not speaking.
+- ~~`teach-banana-2.jpg` = Chan presenting at the front of the same workshop~~ —
+  **this description was WRONG and is retracted (2026-07-26).** Zooming the stage in the
+  original `…photo-2.webp` shows the person holding the microphone is the event's host,
+  a woman in a bright pink blazer with glasses; **Chan does not appear in that frame at
+  all.** The error propagated into the p12 caption "Presenting from the front of the
+  room", which attributed another person's presenting to Chan. The frame is retired —
+  see "Retired" below.
 - No frame in this set distinctly shows the Makey Makey banana-piano demo. The
   banana-piano may only be mentioned in body narrative; image captions must describe the
   workshop scene above. The group photo showing ~30 minors' faces head-on was deliberately
@@ -81,7 +87,7 @@ count as the same photo. Two violations were found and fixed in this wave:
 
 1. `public/articles/p658073376.webp` (p6 article-card cover) was the **same
    frame** as `min-desk.jpg` on p7 — the quilt-on-tile-floor room, both 1080×807.
-   Fixed by D1: the p6 card now carries `douban-logo.png`, and the room photo
+   Fixed by D1: the p6 card now carries `douban-logo.svg`, and the room photo
    keeps its single appearance on p7.
 2. `public/photos/chanmeng-portrait-2026.jpg` (p4) was a tight crop of the
    **same boat frame** as `public/photos/chan-celebrate.jpg` (p2 band) — Chan
@@ -148,6 +154,26 @@ the bar the other frames from that day do not. Same venue as `teach-banana-*`
 | `she sharp-1.jpeg` | An unrelated adult co-subject sits front-and-centre beside Chan and is not a billed public speaker (unlike the p3 panel, where the others are named on the event's own slide). Held as a spare pending Chan's explicit OK. |
 | `cebu.JPG`, `Cebu-Language School.jpg` | Already in the book as `chan-celebrate.jpg` (p2) and `chan-by-the-tree.jpg` (p1). |
 | `CORDE-2.jpg`, `CORDE-3.jpg` | Good frames (Chan beside CORDE fleet vehicles) but near-duplicates of each other, and one CORDE frame is enough. **Available spares.** |
+
+## Retired: `teach-banana-2.jpg` (2026-07-26)
+
+Deleted from the repo and unplaced from p12, in review. Three reasons, any one of
+which would be enough:
+
+1. **Its caption was false.** "Presenting from the front of the room" credited Chan
+   with presenting; the person with the microphone is the event's host. The false
+   premise came from this manifest's own frame description, now retracted above.
+2. **Chan is not in the frame.** In a personal magazine, a picture the subject is
+   absent from earns its place only by showing something she did — and this one
+   shows someone else doing it.
+3. **Its only identifiable subject is a private individual**, front and centre, not
+   billed as a speaker in the shot. That is exactly the standard that keeps
+   `she sharp-1.jpeg` out (see the exclusions table), so keeping this frame would have
+   been inconsistent.
+
+The file is regenerable from the source webp if it is ever wanted again. p12 went back
+to a 2-up, which also lets the two surviving frames — both of which do show Chan, and
+which share a 3∶4 aspect — run at 300 pt and nearly fill their boxes.
 
 **Student-capstone screenshots (removed 2026-07-24)** — the p12 strip showing three
 teaching-cohort capstone apps (Joborg AI, iCare, CreditHero) was cut: student projects

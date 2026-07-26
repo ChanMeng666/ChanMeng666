@@ -37,7 +37,8 @@ that page: p4 is now a real timeline — the Lincoln campus in November 2023 abo
 a before/after row of Nanning and CORDE. (The portrait that briefly stood there
 turned out to be a second crop of the p2 boat frame, captioned "Auckland"; see
 MANIFEST.md.) `img-placeholder()` remains in `extended-components.typ` only as
-the article-card fallback.
+the fallback branch inside `article-card` — which is itself no longer used, since
+p6 moved to `article-row` on 2026-07-26.
 
 ---
 
@@ -47,8 +48,8 @@ the article-card fallback.
 
 | Target | Page | Currently shows | Replace with | Orientation |
 |---|---|---|---|---|
-| `cv/assets/extended/namechange-hero.jpg` | (not currently placed) | Curated but **unused** — Task 6 told the name-change story via the p6 article card + caption, so this file is a spare. The version on disk is the essay's clean title-card illustration (the only frame in that source folder without a "看客 INSIGHT" / NetEase watermark). | Chan's **un-watermarked original of the stone-alley / red-backpack photo** (the watermarked press version is `2d-portfolio/…/threw-away-my-old-name/16.png`). With a clean original in hand this could become the Minimalist chapter's hero image. | Portrait or square |
-| `public/articles/kan-kein-sight.jpg` | p6 · "A Minimalist" (3rd article card, *I Threw Away My Old Name*) | The NetEase 看客 outlet **brand-mark**, used as a recognizable media-feature cover. | A **real photo** would read warmer than a brand-mark. `fit:"contain"` letterboxes onto a cream card, so any aspect ratio is safe. | Any (landscape reads best) |
+| `cv/assets/extended/namechange-hero.jpg` | (not currently placed) | Curated but **unused** — Task 6 told the name-change story via p6's 3rd media feature + caption, so this file is a spare. The version on disk is the essay's clean title-card illustration (the only frame in that source folder without a "看客 INSIGHT" / NetEase watermark). | Chan's **un-watermarked original of the stone-alley / red-backpack photo** (the watermarked press version is `2d-portfolio/…/threw-away-my-old-name/16.png`). With a clean original in hand this could become the Minimalist chapter's hero image. | Portrait or square |
+| `public/articles/kan-kein-sight.jpg` | p6 · "A Minimalist" (3rd media-feature row, *I Threw Away My Old Name*) | The NetEase 看客 outlet **brand-mark**, used as a recognizable media-feature cover. | A **real photo** would read warmer than a brand-mark. `article-row` draws the cover `fit:"contain"` on the row's cream ground, so any aspect ratio is safe. | Any (landscape reads best) |
 > All three p6 covers are now outlet brand-marks — 最人物, Douban, NetEase 看客 —
 > which is the intended design. The Douban card is **resolved**: it runs on
 > Wikimedia's public-domain vector wordmark (`douban-logo.svg`), so it is exactly

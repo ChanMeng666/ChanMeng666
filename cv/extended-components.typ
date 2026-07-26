@@ -103,6 +103,9 @@
 }
 
 // ─── Media-article card ──────────────────────────────────────────────────────
+// CURRENTLY UNUSED (p6 moved to article-row 2026-07-26); kept for potential
+// card-grid reuse. Nothing in extended.typ calls it — edits here change nothing
+// in the PDF, and its `img-placeholder` fallback branch is likewise dormant.
 #let article-card(cover, title, stats, url) = block(above: 0pt, below: gap-inter-entry-x, breakable: false, {
   // Fixed cover height + fit:"contain" so covers of differing aspect ratios
   // (outlet brand-marks vs. landscape photos) all render the same height —

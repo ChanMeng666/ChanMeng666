@@ -2273,8 +2273,8 @@ transitions, wrote the ElevenLabs audio-generation script, and
 tuned the volume-ducking so the background music dips under
 voiceover and demo playback. Maintains both repos today.
 ### 3. ArchLang — An original declarative floor-plan language that compiles .arch source into professional, dimensioned floor plans — 'Typst/LaTeX for architecture.' Zero-dependency, isomorphic TypeScript (hand-written lexer + recursive-descent parser), errors returned as data not thrown, with architectural-soundness linting, human-circulation analysis, a deterministic repair pass, five export formats (SVG/DXF/PDF/PNG/text), an agent-native CLI, full LSP + VS Code extension, and a client-side playground. Published to npm; the compiler engine behind ArchCanvas.
-[tier=flagship · recency=active · updated=2026-07-17]
-- **URL:** https://playground.archlang.uk
+[tier=flagship · recency=active · updated=2026-07-26]
+- **URL:** https://archlang.uk/
 - **Repository:** https://github.com/ChanMeng666/archlang
 - **Tech stack:** TypeScript 5.7 (ESM, zero runtime dependencies), Hand-written lexer + recursive-descent parser + expression evaluator, tsup (build), Biome 2.5 (lint/format), Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression), Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF), LSP (hover/completion/rename/signature), VS Code extension (ChanMeng.archlang, TextMate grammar), Vite + CodeMirror 6 playground (100% client-side), VitePress docs, GitHub Action (renders ```arch fences to images)
 - **Commits (solo):** 304 (297 by Chan + 7 automated bumps) (2026-06-25 → 2026-07-15, ~3 weeks intensive); sole author
@@ -2663,8 +2663,8 @@ transitions, wrote the ElevenLabs audio-generation script, and
 tuned the volume-ducking so the background music dips under
 voiceover and demo playback. Maintains both repos today.
 ### ArchLang — An original declarative floor-plan language that compiles .arch source into professional, dimensioned floor plans — 'Typst/LaTeX for architecture.' Zero-dependency, isomorphic TypeScript (hand-written lexer + recursive-descent parser), errors returned as data not thrown, with architectural-soundness linting, human-circulation analysis, a deterministic repair pass, five export formats (SVG/DXF/PDF/PNG/text), an agent-native CLI, full LSP + VS Code extension, and a client-side playground. Published to npm; the compiler engine behind ArchCanvas.
-[tier=flagship · recency=active · updated=2026-07-17]
-- **URL:** https://playground.archlang.uk
+[tier=flagship · recency=active · updated=2026-07-26]
+- **URL:** https://archlang.uk/
 - **Repository:** https://github.com/ChanMeng666/archlang
 - **Tech stack:** TypeScript 5.7 (ESM, zero runtime dependencies), Hand-written lexer + recursive-descent parser + expression evaluator, tsup (build), Biome 2.5 (lint/format), Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression), Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF), LSP (hover/completion/rename/signature), VS Code extension (ChanMeng.archlang, TextMate grammar), Vite + CodeMirror 6 playground (100% client-side), VitePress docs, GitHub Action (renders ```arch fences to images)
 

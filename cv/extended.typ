@@ -81,7 +81,7 @@
     ]
     v(gap-para-x)
     text(size: size-body-x, fill: ink)[
-      The proof came from an unexpected place. An early-stage founder asked his own Claude agent to find him an engineer. It read the open web and recommended me — which the founder, #link("https://engram.media/")[Engram]'s Luka Madzarac, later confirmed in public. I hadn't applied. The work had. Auckland, for its part, met me with more kindness than I expected.
+      The proof came from an unexpected place. An early-stage founder asked his own Claude agent to find him an engineer. It read the open web and recommended me — which the founder, #link("https://engram.media/")[Engram]'s Luka Madzarac, later #link("https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-activity-7459724144671195136-3JoV")[confirmed in public]. I hadn't applied. The work had. Auckland, for its part, met me with more kindness than I expected.
     ]
   })
   // Anchor p3's foot with a real Auckland photo (fills what was a dead lower
@@ -100,13 +100,16 @@
   // from data/profile/10-career.yaml: the Lincoln Master of Applied Computing
   // starts 2023-11 (the photo's own burned-in date stamp reads 2023/11/16);
   // CORDE is the Lincoln COMP693 industry placement, Canterbury, 2024-06→2024-11;
-  // Nanning is where Chan went to school (education: nanning-no2, Guangxi).
+  // Nanning is Chan's hometown — she lived there from age 2 to 18, kindergarten
+  // through high school (per Chan, 2026-07-26; the shard records only the high
+  // school, education: nanning-no2, Guangxi). University was elsewhere, so "the
+  // city I went to school in" (the pre-2026-07-26 caption) mis-framed it.
   v(0.3fr)
   photo-band("/cv/assets/extended/story-lincoln.jpg", h: 245pt,
     caption: [Lincoln University, Canterbury — November 2023, my first weeks in the programme.])
   v(0.45fr)
   photo-row((
-    ("/cv/assets/extended/story-nanning.jpg", [Before: a night street in Nanning, Guangxi — the Chinese city I went to school in.]),
+    ("/cv/assets/extended/story-nanning.jpg", [Before: a night street in Nanning, Guangxi — my hometown, where I grew up.]),
     ("/cv/assets/extended/story-corde.jpg", [After: on site at CORDE in Canterbury — the infrastructure firm my Lincoln industry placement shipped into, 2024.]),
   ), h: 215pt)
   v(0.6fr)
@@ -240,7 +243,7 @@
   product-tile("/public/brands/archlang-logo.svg", [ArchLang],
     [A small language for floor plans: write walls and rooms in plain text, get back a precise dimensioned drawing, change one number and exactly one thing moves.],
     [A zero-dependency TypeScript compiler exporting SVG, DXF, PDF, and PNG — and it checks whether a plan is actually livable. The engine behind ArchCanvas.],
-    "https://playground.archlang.uk", "playground.archlang.uk")
+    "https://archlang.uk/", "archlang.uk")
   v(1fr)
   product-tile("/public/brands/vitex.svg", [Vitex — AI Career Agent],
     [Paste a job ad and describe your background, and Vitex writes a resume and cover letter tailored to that job as an ATS-ready PDF in about thirty seconds.],

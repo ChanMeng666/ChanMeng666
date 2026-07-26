@@ -2428,7 +2428,7 @@ projects:
     provenance: personal
     tier: flagship
     recency: active
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-07-26"
     meta:
       x_brand:
         featuredStack: [typescript, nodejs, npm, vercel]
@@ -2437,11 +2437,13 @@ projects:
     category: tools
     tagline: "An original declarative floor-plan language that compiles .arch source into professional, dimensioned floor plans — 'Typst/LaTeX for architecture.' Zero-dependency, isomorphic TypeScript (hand-written lexer + recursive-descent parser), errors returned as data not thrown, with architectural-soundness linting, human-circulation analysis, a deterministic repair pass, five export formats (SVG/DXF/PDF/PNG/text), an agent-native CLI, full LSP + VS Code extension, and a client-side playground. Published to npm; the compiler engine behind ArchCanvas."
     repoUrl: https://github.com/ChanMeng666/archlang
-    url: https://playground.archlang.uk
+    # Primary link is the project home/docs site (archlang.uk), per Chan
+    # 2026-07-26; the playground stays reachable as an extra link. The old
+    # "Docs" extra link was dropped because it now duplicates `url`.
+    url: https://archlang.uk/
     logo: /public/brands/archlang-logo.svg
     extraLinks:
       - { label: "Playground", url: "https://playground.archlang.uk" }
-      - { label: "Docs", url: "https://archlang.uk" }
       - { label: "npm (@chanmeng666/archlang)", url: "https://www.npmjs.com/package/@chanmeng666/archlang" }
     techStack: ["TypeScript 5.7 (ESM, zero runtime dependencies)", "Hand-written lexer + recursive-descent parser + expression evaluator", "tsup (build)", "Biome 2.5 (lint/format)", "Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression)", "Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF)", "LSP (hover/completion/rename/signature)", "VS Code extension (ChanMeng.archlang, TextMate grammar)", "Vite + CodeMirror 6 playground (100% client-side)", "VitePress docs", "GitHub Action (renders ```arch fences to images)"]
     metrics:

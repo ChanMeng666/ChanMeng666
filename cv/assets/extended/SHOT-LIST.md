@@ -49,11 +49,14 @@ the article-card fallback.
 |---|---|---|---|---|
 | `cv/assets/extended/namechange-hero.jpg` | (not currently placed) | Curated but **unused** — Task 6 told the name-change story via the p6 article card + caption, so this file is a spare. The version on disk is the essay's clean title-card illustration (the only frame in that source folder without a "看客 INSIGHT" / NetEase watermark). | Chan's **un-watermarked original of the stone-alley / red-backpack photo** (the watermarked press version is `2d-portfolio/…/threw-away-my-old-name/16.png`). With a clean original in hand this could become the Minimalist chapter's hero image. | Portrait or square |
 | `public/articles/kan-kein-sight.jpg` | p6 · "A Minimalist" (3rd article card, *I Threw Away My Old Name*) | The NetEase 看客 outlet **brand-mark**, used as a recognizable media-feature cover. | A **real photo** would read warmer than a brand-mark. `fit:"contain"` letterboxes onto a cream card, so any aspect ratio is safe. | Any (landscape reads best) |
-| `cv/assets/extended/douban-logo.png` | p6 · "A Minimalist" (2nd article card, *A Glimpse of My Minimalist Home*) | The Douban publisher mark, at only **100×100 px** — it prints at roughly 48 dpi in a ~153×150 pt card and its diagonals visibly stair-step. | **A higher-resolution Douban mark** (≥ 640 px square, matching its two neighbours), or the SVG rasterised at 800 px. Same filename, same path — no code change needed. | Square |
-
 > All three p6 covers are now outlet brand-marks — 最人物, Douban, NetEase 看客 —
-> which is the intended design. The first and third are 640×640; only the Douban
-> mark needs a sharper source.
+> which is the intended design. The Douban card is **resolved**: it runs on
+> Wikimedia's public-domain vector wordmark (`douban-logo.svg`), so it is exactly
+> sharp at any size. The square green Douban app icon is *not* a viable upgrade —
+> Wikimedia's only copy is `File:Logo of Douban (Small).png` at 100×100 px, which
+> prints at roughly 48 dpi. If Chan ever obtains a ≥ 640 px square Douban icon
+> from another source, swapping it in would make the row three matched squares;
+> until then the wordmark is the sharper choice. See MANIFEST.md.
 
 ### 2a-bis. Spares already in hand (2026-07-26)
 

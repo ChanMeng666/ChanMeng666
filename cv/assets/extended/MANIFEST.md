@@ -29,7 +29,7 @@ committed; only the outputs below land in the repo.
 | `story-lincoln.jpg` | `C:\Users\0\Downloads\photo\lincoln university.jpg` | p4 "My Story" |
 | `story-nanning.jpg` | `C:\Users\0\Downloads\photo\china-nanning.jpg` | p4 "My Story" |
 | `story-corde.jpg` | `C:\Users\0\Downloads\photo\CORDE-1.jpg` | p4 "My Story" |
-| `douban-logo.png` | Douban logo (Wikimedia-style mark) supplied by Chan as `C:\Users\0\Downloads\photo\Logo_of_Douban_(Small).png` | p6 "A Minimalist" — 2nd article-card cover |
+| `douban-logo.svg` | Wikimedia Commons `File:Douban logo.svg` — https://commons.wikimedia.org/wiki/File:Douban_logo.svg (**public domain**, trademarked; credited to Douban, transferred from zh.wikipedia). Downloaded from `https://upload.wikimedia.org/wikipedia/commons/a/aa/Douban_logo.svg`, byte-identical, not re-encoded. | p6 "A Minimalist" — 2nd article-card cover |
 | `rec-amy-li.png` | `public\recommendations\Amy-Li.jpg` (repo-local re-copy) | pp13–14 "Voices" avatar wall |
 
 ## Selection notes
@@ -92,12 +92,29 @@ count as the same photo. Two violations were found and fixed in this wave:
    (`chan-by-the-tree.jpg`) is the source library's `Cebu-Language School.jpg`
    — a *different* frame from the same trip, so it stays.
 
-**`douban-logo.png`** — the publisher mark of Douban, where *A Glimpse of My
+**`douban-logo.svg`** — the publisher mark of Douban, where *A Glimpse of My
 Minimalist Home* ran. Makes all three p6 cards outlet-branded (最人物 / Douban /
-NetEase 看客). **Known limitation: the supplied file is 100×100 px** and the card
-cover box is ~153×150 pt, so it prints at roughly 48 dpi — the diagonal strokes
-show visible stair-stepping at 300 ppi. Its two neighbours are 640×640. A
-higher-resolution Douban mark should replace it (see SHOT-LIST §2a).
+NetEase 看客).
+
+This is the **wordmark** (豆瓣 douban), not the square green app icon Chan first
+supplied. That icon is Wikimedia's `File:Logo of Douban (Small).png` and its name
+is literal: **100×100 px is the only raster that exists**. Checked the Commons
+`Category:Douban`, a namespace-6 search for "Douban", and the file list of the
+en-wiki *Douban* article — Wikimedia holds exactly two Douban brand assets, that
+100 px icon and this vector wordmark. At 100 px against a ~153×150 pt card the
+icon printed at roughly 48 dpi and its diagonals stair-stepped visibly at 300 ppi.
+
+The SVG has no such ceiling: it is true vector, so it is exactly sharp at any
+size. It is also **Typst-safe** — pure `<path>` elements with concrete
+`fill:rgb(...)` values, no `currentColor` (which Typst would not inherit, see
+TYPST_PITFALLS §6), no nested `<svg>`, no `<use>`, no `<text>` or font
+dependencies. Verified by rendering p6 at 300 ppi: zero aliasing.
+
+The trade is shape, not quality. A 4.7∶1 wordmark letterboxes onto the cream card
+rather than filling it like its two square neighbours — which is precisely the
+case `article-card`'s `fit:"contain"` + cream gutter was built for, and it gives
+the row useful tonal variety (black card, cream card, white card). It also puts a
+Latin-readable "douban" in front of recruiters who cannot read 豆瓣 or 看客.
 
 **Story photos (p4)** — all three are Chan's own, from her library. Anchor facts
 verified against `data/profile/10-career.yaml`: the Lincoln Master of Applied

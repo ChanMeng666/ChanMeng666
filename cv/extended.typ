@@ -140,7 +140,7 @@
   grid(columns: (1fr, 1fr, 1fr), column-gutter: 14pt,
     article-card("/public/articles/girl-on-mattress.jpg", "Girl on Mattress",
       "100k+ reads · 3,864 reshares", "https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ"),
-    article-card("/cv/assets/extended/douban-logo.png", "A Glimpse of My Minimalist Home",
+    article-card("/cv/assets/extended/douban-logo.svg", "A Glimpse of My Minimalist Home",
       "100k+ reads · 14k reshares", "https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q"),
     article-card("/public/articles/kan-kein-sight.jpg", "I Threw Away My Old Name",
       "29k+ reads", "https://chanmeng.org/blog/threw-away-my-old-name"),

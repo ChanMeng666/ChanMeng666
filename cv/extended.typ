@@ -39,7 +39,19 @@
   // Cebu trip as the p1 cover), not Auckland — the old "Auckland — where I
   // rebuilt everything" line described a place the photo does not show. Captions
   // describe what is actually visible (MANIFEST.md caption-truth rule).
-  photo-band("/public/photos/chan-celebrate.jpg", h: 322pt,
+  //
+  // Shows the WHOLE frame (Chan's ruling, wave 4). This used to run
+  // public/photos/chan-celebrate.jpg through a 322pt cover-crop band — but that
+  // shared file is itself a 1920×560 media-kit letterbox (media-kit/README.md
+  // calls it "a kit-only crop"), so the book only ever showed Chan from the
+  // fingertips to the chest. Switching the Typst fit alone could not have
+  // recovered the rest; the frame had to be rebuilt from the 6000×4000 original.
+  // open-cebu-boat.jpg is that full 3∶2 frame — she is sitting cross-legged on
+  // the outrigger — drawn at natural aspect (no crop, no letterbox) by photo().
+  // At 487.56pt of content width it stands 325pt tall, within 3pt of the band it
+  // replaces, so the page balance carries over unchanged. The media kit keeps
+  // its own crop untouched.
+  photo("/cv/assets/extended/open-cebu-boat.jpg",
     caption: [Arms up, out on the water — the spirit I'd like this read in.])
   v(1fr)
   pagebreak()

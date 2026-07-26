@@ -11,10 +11,13 @@
 //
 // Tooling mirrors scripts/export-linkedin-cards.mjs: the playwright-core that
 // ships with the global @playwright/cli, pointed at the on-disk full Chromium to
-// dodge the version-mismatch download prompt.
+// dodge the version-mismatch download prompt. Browsers live under
+// PLAYWRIGHT_BROWSERS_PATH (falls back to the default %LOCALAPPDATA%/ms-playwright);
+// the newest installed chromium-* build is picked at runtime, see below.
 
 import { createRequire } from "node:module";
 import fs from "node:fs/promises";
+import fsSync from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderHtml, isDark } from "./template.mjs";
@@ -63,9 +66,27 @@ for (const p of selected) {
 }
 
 // 2. Screenshot each surface.
+// The CLI's playwright-core pins a browser build that may differ from what's
+// installed on disk; point at an on-disk full Chromium to avoid a
+// version-mismatch download prompt. Browsers live under PLAYWRIGHT_BROWSERS_PATH
+// (falls back to the default %LOCALAPPDATA%/ms-playwright). Pick the newest
+// installed chromium-* build so this keeps working as builds roll forward.
+const browsersRoot =
+  process.env.PLAYWRIGHT_BROWSERS_PATH ||
+  path.join(process.env.LOCALAPPDATA || "", "ms-playwright");
+const newestChromium = fsSync
+  .readdirSync(browsersRoot)
+  .filter((d) => /^chromium-\d+$/.test(d))
+  .sort((a, b) => Number(a.split("-")[1]) - Number(b.split("-")[1]))
+  .pop();
+if (!newestChromium) {
+  throw new Error(`No chromium-* build found under ${browsersRoot}`);
+}
 const CHROME = path.join(
-  process.env.LOCALAPPDATA || "",
-  "ms-playwright/chromium-1223/chrome-win64/chrome.exe",
+  browsersRoot,
+  newestChromium,
+  "chrome-win64",
+  "chrome.exe",
 );
 const browser = await chromium.launch({ executablePath: CHROME });
 const context = await browser.newContext({ deviceScaleFactor: 2 });

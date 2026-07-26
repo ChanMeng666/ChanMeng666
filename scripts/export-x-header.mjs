@@ -37,6 +37,9 @@ const newestChromium = fs
   .filter((d) => /^chromium-\d+$/.test(d))
   .sort((a, b) => Number(a.split("-")[1]) - Number(b.split("-")[1]))
   .pop();
+if (!newestChromium) {
+  throw new Error(`No chromium-* build found under ${browsersRoot}`);
+}
 const CHROME = path.join(
   browsersRoot,
   newestChromium,

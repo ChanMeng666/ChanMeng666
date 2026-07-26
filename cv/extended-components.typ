@@ -71,8 +71,14 @@
 // blowing the page. Letterbox gutters fill with cream (pill-bg), never white —
 // so captions stay truthful to the whole visible frame. Used wherever a page
 // pairs frames of mismatched orientation (pp4, 12).
-#let photo-row(items, h: 300pt, gutter: gap-photo-x) = grid(
-  columns: (1fr,) * items.len(),
+//
+// `cols:` overrides the default equal split. Passing each frame an fr weight
+// EQUAL TO ITS ASPECT RATIO makes every box exactly its image's shape, so a
+// mixed landscape/portrait row fills edge to edge with zero cream letterbox —
+// provided `h` is set to (content-width − gutters) ÷ (sum of the ratios). p12
+// runs this way; p4 keeps the equal split, where the letterbox is wanted.
+#let photo-row(items, h: 300pt, gutter: gap-photo-x, cols: none) = grid(
+  columns: if cols != none { cols } else { (1fr,) * items.len() },
   column-gutter: gutter,
   ..items.map(it => block(above: 0pt, below: 0pt, breakable: false, {
     box(width: 100%, height: h, radius: radius-photo-x, clip: true, fill: pill-bg,

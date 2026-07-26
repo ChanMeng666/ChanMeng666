@@ -39,7 +39,19 @@
   // Cebu trip as the p1 cover), not Auckland — the old "Auckland — where I
   // rebuilt everything" line described a place the photo does not show. Captions
   // describe what is actually visible (MANIFEST.md caption-truth rule).
-  photo-band("/public/photos/chan-celebrate.jpg", h: 322pt,
+  //
+  // Shows the WHOLE frame (Chan's ruling, wave 4). This used to run
+  // public/photos/chan-celebrate.jpg through a 322pt cover-crop band — but that
+  // shared file is itself a 1920×560 media-kit letterbox (media-kit/README.md
+  // calls it "a kit-only crop"), so the book only ever showed Chan from the
+  // fingertips to the chest. Switching the Typst fit alone could not have
+  // recovered the rest; the frame had to be rebuilt from the 6000×4000 original.
+  // open-cebu-boat.jpg is that full 3∶2 frame — she is sitting cross-legged on
+  // the outrigger — drawn at natural aspect (no crop, no letterbox) by photo().
+  // At 487.56pt of content width it stands 325pt tall, within 3pt of the band it
+  // replaces, so the page balance carries over unchanged. The media kit keeps
+  // its own crop untouched.
+  photo("/cv/assets/extended/open-cebu-boat.jpg",
     caption: [Arms up, out on the water — the spirit I'd like this read in.])
   v(1fr)
   pagebreak()
@@ -124,9 +136,17 @@
       It began with a broken charging cable and a bent hairpin. I threw them out, felt lighter, and kept going. Today everything I own fits into one backpack and one suitcase. I don't keep a living room — I borrow the city's.
     ]
   })
+  // Top-right is Chan's own wide frame of the flat, supplied 2026-07-26 and
+  // placed at her explicit direction: she picked it to show the room "corner to
+  // corner, no dead angles" — front door, bathroom, bare walls and floor in one
+  // shot. It is the establishing frame the three detail frames around it belong
+  // to. It replaces min-foam-mat, which was retired in the same pass as the
+  // book's tightest near-twin (same room, same window wall, same balcony door as
+  // min-empty-room beside it). Cropped to 1.3375 so the row-mate's 1.3383 lines
+  // up exactly — see MANIFEST.md for the crop and the watermark ruling.
   photo-grid((
     ("/cv/assets/extended/min-empty-room.jpg", [One room, almost empty.]),
-    ("/cv/assets/extended/min-foam-mat.jpg", [A foam mat instead of a bed.]),
+    ("/cv/assets/extended/min-room-panorama.jpg", [Front door, bathroom, bare walls — the room corner to corner.]),
   ))
   v(gap-photo-x)
   photo-grid((
@@ -261,10 +281,16 @@
 // Jessie Wan). The three student-capstone screenshots were removed 2026-07-24 —
 // student projects read as less professional and could be mistaken for Chan's
 // own work; the two workshop photos were enlarged to rebalance the page.
-// CAPTION TRUTH RULE:
-// teach-banana-*.jpg show the "AI & Electronics Workshop" (presenters on stage /
-// audience from behind), NOT a banana piano — captions describe the workshop
-// scene; the banana-piano is prose-only.
+// CAPTION TRUTH RULE: no frame on this page shows a banana piano — the
+// banana-piano stays prose-only, and each caption names only the event it
+// actually depicts. The mentee-range sentence is bounded by the data: the
+// Peyvand cohort is audience "Youth aged 12–18" per 90-meta.yaml:181 —
+// **Fruitvale Primary School is the VENUE, not the age group** (same line), so
+// the school's name is a trap: it reads as "primary schoolers" and the cohort
+// is teenagers. 80-events.yaml's peyvand-academy-makey-makey-2026 says 12–18
+// too. The hackathon's named school cohort is Westlake Girls High
+// (30-recognition.yaml) and the adult end is TechNest / Her Waka;
+// "university students" has zero support in the data. Do not reach for either.
 #let x-teaching() = {
   chapter-opener("4", "Teaching",
     kicker: [Three years, five cohorts. My whole method in one line.])
@@ -275,7 +301,7 @@
   block(above: 0pt, below: 12pt, {
     set par(leading: leading-body-x, justify: false)
     text(size: size-body-x, fill: ink)[
-      Students arrive knowing only browser ChatGPT. Weeks later they have shipped a live, multi-user AI product by directing coding agents — the same way I work. I have run this five times since 2024, most recently for #link("https://www.technestcommunity.com/")[TechNest] and at a #link("https://programming.chanmeng.org/")[hands-on workshop] where a banana piano taught younger students that code can be playful.
+      Students arrive knowing only browser ChatGPT. Weeks later they have shipped a live, multi-user AI product by directing coding agents — the same way I work. I have run this five times since 2024, most recently for #link("https://www.technestcommunity.com/")[TechNest] and at a #link("https://programming.chanmeng.org/")[hands-on workshop] where a banana piano taught younger students that code can be playful. They range from twelve-year-olds at that workshop, through high-school students I mentored at an AI hackathon, to adults retraining for a new career — the method holds; only the pace changes.
     ]
   })
   // Fixed-height, fit:"contain" row (cream gutters) rather than photo-grid: a
@@ -283,21 +309,26 @@
   // each frame whole — no crop — so the captions stay truthful to what is
   // actually visible (CAPTION TRUTH RULE, MANIFEST.md).
   //
-  // Both frames show Chan: she is second from the right in the stage lineup
-  // (buzzcut, dark fur-collar coat), and she is the one leaning over the laptop.
-  // teach-banana-2 was cut in review 2026-07-26 — it carried the caption
-  // "Presenting from the front of the room", but the person holding the
-  // microphone in that frame is the event's host in a pink blazer, NOT Chan, who
-  // does not appear in it at all. Rather than re-caption a frame whose only
-  // identifiable subject is a private individual, it was dropped: that is the
-  // same standard that keeps `she sharp-1.jpeg` out of the book. The row went
-  // back to a 2-up, which also lets both surviving frames run much larger — they
-  // share an aspect ratio (3:4) so they fill their boxes almost exactly.
+  // Both frames show Chan at work with students, and together they carry the
+  // page's range claim: teenagers at the She Sharp × Peyvand workshop on the
+  // right, high-school students at the AI Hackathon Festival on the left.
+  //
+  // The left frame is Chan's own, supplied 2026-07-26 and placed at her explicit
+  // direction (MANIFEST.md records the minors ruling). It replaces
+  // teach-banana-1, the stage-lineup frame, in which Chan stood in a row of
+  // presenters doing nothing the chapter is about; this one shows her doing the
+  // work — at the laptop beside the screen, Gemini CLI up, students around the
+  // table. teach-banana-2 went in the previous wave for a false caption.
+  //
+  // The row mixes a 1.3308 landscape with a 0.75 portrait, so the columns carry
+  // fr weights EQUAL to those ratios and h is set to the height at which both
+  // boxes are exactly their image's shape: (487.56 − 14) ÷ (1.3308 + 0.75) =
+  // 227.6pt. Every edge meets the frame; no cream letterbox anywhere.
   v(0.55fr)
   photo-row((
-    ("/cv/assets/extended/teach-banana-1.jpg", [AI & Electronics Workshop — the presenter lineup on stage.]),
-    ("/cv/assets/extended/teach-kids-laptop.jpg", [Hands-on at the same workshop — a browser game on the laptop, the room crowded in.]),
-  ), h: 300pt)
+    ("/cv/assets/extended/teach-westlake-hackathon.jpg", [AI Hackathon Festival 2025 at AUT — walking Westlake Girls High School students through AI coding tools.]),
+    ("/cv/assets/extended/teach-kids-laptop.jpg", [A She Sharp workshop for teens — a browser game on the laptop, the room crowded in.]),
+  ), h: 227.5pt, cols: (1.3308fr, 0.75fr))
   v(0.75fr)
   block(above: 0pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)

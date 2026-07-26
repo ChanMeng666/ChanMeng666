@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chan Meng — YouTube Channel Banner (Caldera)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{ --basalt:#E2E2DF; --ink:#070607; --orange:#FC5000; }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#aaa; font-family:'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+
+  /* 1280×720 CSS, exported at deviceScaleFactor 2 → 2560×1440 PNG (YouTube's
+     recommended upload; well over the 2048×1152 minimum). YouTube crops this
+     FOUR ways and all four share the same vertical band y 254.25→465.75. The
+     mobile/all-device safe area is only 773×211.5 CSS (x 253.5→1026.5) — EVERY
+     content element lives inside it. The wings (x<253.5, x>1026.5, and y outside
+     the band) carry ground only: basalt + dot grid, nothing else. Ever. */
+  .banner{
+    width:1280px; height:720px; position:relative; overflow:hidden;
+    background-color:var(--basalt);
+    /* signatures.dotGrid — ink @ 8%, 2px dot. 20px tile (not brand.yaml's 22)
+       so 1280/20=64 and 720/20=36 divide exactly and no dot clips at an edge;
+       matches public/brand-system.html. */
+    background-image:radial-gradient(rgba(7,6,7,.08) 2px, transparent 2.2px);
+    background-size:20px 20px;
+  }
+
+  /* ── Identity stack. Left edge inset 34.5px from the safe-area left (253.5).
+        .name sits 4px left of .eyebrow/.tagline to optically cancel Anton's left
+        side bearing (the X header uses +6 at 146px; 6×92/146 ≈ 4). ── */
+  .eyebrow{
+    position:absolute; left:292px; top:277px;
+    font-weight:600; font-size:12px; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--ink); display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow .sq{ width:8px; height:8px; background:var(--orange); display:inline-block; flex:none; }
+
+  /* Anton at line-height .9 puts its ink top within 0.4px of `top`, and its ink
+     height ≈ 1.00em, so ink runs 297.4 → 388.4. 92px is 0.63× the X header's 146
+     — the 211.5px safe band cannot hold 146 at ANY gap value (zero gaps still
+     overflows by 1.3px), and 146 also overflows the width by 240px. */
+  .name{
+    position:absolute; left:288px; top:297px;
+    font-family:'Anton',sans-serif; font-weight:400; font-size:92px;
+    line-height:0.9; letter-spacing:0.015em; color:var(--ink);
+  }
+
+  .tagline{
+    position:absolute; left:292px; top:407px;
+    display:flex; align-items:flex-start; gap:12px;
+  }
+  .tagline .mark{ width:22px; height:4px; background:var(--orange); flex:none; margin-top:8px; }
+  .tagline .text{
+    font-style:italic; font-weight:400; font-size:14px; line-height:1.45;
+    letter-spacing:0.005em; color:var(--ink);
+  }
+
+  /* ── Right composition — INSIDE the safe area, because the wings are cropped
+        on mobile and are decided-empty; a mark in a wing would leave the highest
+        traffic surface brandless. Nothing overlays a YouTube banner (the avatar
+        sits below it), so there is no outward pressure like X's avatar.
+        Sized so the WHOLE composition (block + its 28px bottom overhang) spans
+        the text stack's ink band: .b-ink top 280 == eyebrow ink top; .b-orange
+        bottom 441 ≈ tagline ink bottom. Naively applying the X header's ratios
+        to a 160px block would push the orange to y=474 — 8px outside safe. ── */
+  .b-ink{
+    position:absolute; left:859px; top:280px; width:133px; height:133px;
+    background:var(--ink); z-index:2;
+  }
+  .b-orange{
+    position:absolute; left:830px; top:385px; width:56px; height:56px;
+    background:var(--orange); z-index:1;
+  }
+  /* White-on-transparent monkey — no invert()/mix-blend-mode needed (the X and
+     LinkedIn covers use the blend trick only because they load the black-on-
+     white asset). Same result, no stacking-context fragility; same approach as
+     x/media/pinned-products.html. Centred: (133-75)/2 = 29 on both axes. */
+  .logo{
+    position:absolute; left:888px; top:309px; width:75px; height:75px; z-index:3;
+  }
+
+  /* ── Debug crop overlay. OFF by default. Toggle: <body class="show-guides">
+        (remove before re-rendering the shipped PNG). All three dashed rects share
+        the same vertical band; box-sizing:border-box puts each line's OUTER edge
+        exactly on the crop boundary. ── */
+  .guides{ display:none; }
+  body.show-guides .guides{ display:block; }
+  .guides div{ position:absolute; z-index:50; }
+  .g-desktop{ left:0;         top:254.25px; width:1280px;  height:211.5px; border:2px dashed rgba(7,6,7,.35); }
+  .g-tablet { left:176.25px;  top:254.25px; width:927.5px; height:211.5px; border:2px dashed rgba(82,74,233,.9); }
+  .g-safe   { left:253.5px;   top:254.25px; width:773px;   height:211.5px; border:2px dashed rgba(252,80,0,.95); }
+  .g-tv-top { left:0; top:0;        width:1280px; height:254.25px; background:rgba(82,74,233,.08); z-index:49; }
+  .g-tv-bot { left:0; top:465.75px; width:1280px; height:254.25px; background:rgba(82,74,233,.08); z-index:49; }
+</style>
+</head>
+<body>
+
+<div class="banner" data-out="youtube-banner.png">
+
+  <!-- identity -->
+  <div class="eyebrow"><span class="sq"></span>AI Agent Architect · Founding Engineer · AI Educator</div>
+  <div class="name">Chan Meng</div>
+  <div class="tagline">
+    <span class="mark"></span>
+    <span class="text">I architect AI agents, ship full-stack platforms end-to-end,<br>and teach others to do the same.</span>
+  </div>
+
+  <!-- right composition — two blocks + the mark, all inside the safe area -->
+  <div class="b-orange"></div>
+  <div class="b-ink"></div>
+  <img class="logo" src="../../public/brands/chan-meng-monkey-white-transparent.svg" alt="">
+
+  <!-- crop guides (hidden unless body.show-guides) -->
+  <div class="guides">
+    <div class="g-tv-top"></div>
+    <div class="g-tv-bot"></div>
+    <div class="g-desktop"></div>
+    <div class="g-tablet"></div>
+    <div class="g-safe"></div>
+  </div>
+
+</div>
+
+</body>
+</html>

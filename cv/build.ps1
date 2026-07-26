@@ -19,6 +19,21 @@ $ErrorActionPreference = "Stop"
 $repoRoot = Split-Path -Parent $PSScriptRoot
 Push-Location $repoRoot
 
+# A failing `node ... | Out-File ...` still CREATES its destination — empty — and
+# a native command's non-zero exit does not trip $ErrorActionPreference, so the
+# script would sail on and print "✓ Build complete" over a 0-byte artifact.
+# Seen 2026-07-26: a fresh worktree with no node_modules made both generators
+# die with ERR_MODULE_NOT_FOUND, and the build still reported success while
+# public/cv.jsonld and public/cv-llms.txt were truncated to nothing.
+function Assert-Generated($path, $step) {
+    if ($LASTEXITCODE -ne 0) {
+        throw "$step failed: node exited $LASTEXITCODE, so $path was not regenerated."
+    }
+    if (-not (Test-Path $path) -or (Get-Item $path).Length -eq 0) {
+        throw "$step wrote an empty $path. If dependencies are missing, run 'npm ci' in this worktree first."
+    }
+}
+
 try {
     Write-Host "→ Compiling cv/chan-meng-cv.typ → public/chan-meng-cv.pdf"
     # --font-path vendors the OFL brand fonts (Bebas Neue, DM Sans, JetBrains
@@ -31,9 +46,11 @@ try {
 
     Write-Host "→ Emitting public/cv.jsonld (schema.org JSON-LD for recruiter LLMs)"
     node cv/build-jsonld.mjs data/profile | Out-File -Encoding utf8 public/cv.jsonld
+    Assert-Generated public/cv.jsonld "cv/build-jsonld.mjs"
 
     Write-Host "→ Emitting public/cv-llms.txt (agent-readable plain-text summary)"
     node cv/build-llms-txt.mjs data/profile | Out-File -Encoding utf8 public/cv-llms.txt
+    Assert-Generated public/cv-llms.txt "cv/build-llms-txt.mjs"
 
     $pdfBytes  = (Get-Item public/chan-meng-cv.pdf).Length
     $extBytes  = (Get-Item public/chan-meng-cv-extended.pdf).Length

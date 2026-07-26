@@ -101,8 +101,9 @@
   // starts 2023-11 (the photo's own burned-in date stamp reads 2023/11/16);
   // CORDE is the Lincoln COMP693 industry placement, Canterbury, 2024-06→2024-11;
   // Nanning is Chan's hometown — she lived there from age 2 to 18, kindergarten
-  // through high school (education: nanning-no2, Guangxi); university was
-  // elsewhere, so "the city I went to school in" (pre-2026-07-26) mis-framed it.
+  // through high school (per Chan, 2026-07-26; the shard records only the high
+  // school, education: nanning-no2, Guangxi). University was elsewhere, so "the
+  // city I went to school in" (the pre-2026-07-26 caption) mis-framed it.
   v(0.3fr)
   photo-band("/cv/assets/extended/story-lincoln.jpg", h: 245pt,
     caption: [Lincoln University, Canterbury — November 2023, my first weeks in the programme.])

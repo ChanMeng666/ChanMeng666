@@ -128,6 +128,28 @@
     text(size: size-tiny-x, fill: primary)[#link(url, url.replace("https://", ""))])
 })
 
+// ─── Media-article ROW — full-width card, outlet mark left, copy right ───────
+// The landscape counterpart to article-card, sharing product-tile's geometry.
+// Three of these stack down a page where a 3-across grid of article-cards would
+// squeeze each column to ~153pt — at that width the titles wrap to two lines,
+// the long WeChat URLs break mid-string, and the stat lines stop aligning across
+// the row because the one-line and two-line titles push them to different
+// heights. Full width gives every title and URL a single line and lets the
+// outlet marks run large. Same content, same links — only the shape changes.
+#let article-row(cover, title, stats, url, cover-h: 152pt, cover-w: 172pt) = block(above: 0pt, below: 0pt, breakable: false,
+  box(width: 100%, fill: pill-bg, radius: radius-photo-x, stroke: frame-photo-x + rule.lighten(25%), inset: 20pt, {
+    grid(columns: (cover-w, 1fr), column-gutter: 26pt, align: (center + horizon, left + horizon),
+      box(width: 100%, height: cover-h, image(cover, width: 100%, height: 100%, fit: "contain")),
+      {
+        block(above: 0pt, below: 9pt, breakable: false,
+          text(weight: "bold", size: 15pt, fill: ink, title))
+        block(above: 0pt, below: 10pt, breakable: false,
+          text(size: size-meta-x, fill: muted, style: "italic", stats))
+        block(above: 0pt, below: 0pt, breakable: false,
+          icon-link("link", url, url.replace("https://", "")))
+      })
+  }))
+
 // ─── Product tile — UNIFORM full-width product CARD (big logo + copy) ─────────
 // Every product on pp8–11 gets the identical treatment: a full-width cream card
 // (so the page reads as filled, not tiny marks floating in a void) holding a

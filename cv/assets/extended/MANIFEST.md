@@ -19,7 +19,7 @@ committed; only the outputs below land in the repo.
 | `min-empty-room.jpg` | `D:\github_repository\2d-portfolio\public\blog\minimalist-lifestyle-journey\13.png` | pp5–7 "A Minimalist" |
 | `min-foam-mat.jpg` | `D:\github_repository\2d-portfolio\public\blog\minimalist-lifestyle-journey\16.png` | pp5–7 "A Minimalist" |
 | `min-one-bag.jpg` | `D:\github_repository\2d-portfolio\public\blog\minimalist-lifestyle-journey\26.png` | pp5–7 "A Minimalist" |
-| `min-suitcase.jpg` | `D:\github_repository\2d-portfolio\public\blog\minimalist-lifestyle-journey\08.png` | pp5–7 "A Minimalist" (unused spare) |
+| ~~`min-suitcase.jpg`~~ | `D:\github_repository\2d-portfolio\public\blog\minimalist-lifestyle-journey\08.png` | **retired 2026-07-26** — see "Retired" below |
 | `min-city-livingroom.jpg` | `D:\github_repository\2d-portfolio\public\blog\minimalist-lifestyle-journey\22.png` | pp5–7 "A Minimalist" |
 | `min-desk.jpg` | `D:\github_repository\2d-portfolio\public\blog\minimalist-lifestyle-journey\24.png` | pp5–7 "A Minimalist" |
 | `namechange-hero.jpg` | `D:\github_repository\2d-portfolio\public\blog\threw-away-my-old-name\01.png` | pp5–7 "A Minimalist" (chapter hero / title card) |
@@ -43,8 +43,9 @@ suitcase), `min-foam-mat` (16 — foam sleeping mat on a bare tile floor), `min-
 (26 — a red backpack and one wrapped bundle against a bare wall), `min-city-livingroom`
 (22 — a thin mattress on the floor as a bed, city out the window), `min-desk` (24 — a
 totally bare room, one folded quilt on the floor in a pool of sun; repurposed on p7 as
-the minimalism→engineering bridge). `min-suitcase` (08) is now placed on p6 (revision
-wave 2, 2026-07-24) as the large frame anchoring the media-features page foot.
+the minimalism→engineering bridge). `min-suitcase` (08) was placed on p6 in wave 2 and
+**retired 2026-07-26** — it was the one frame in the set that never met the standard the
+rest of the sentence describes. See "Retired" below.
 
 **`namechange-hero.jpg`** — the "threw away my old name" essay's clean title-card
 illustration (reads "TO THE EXTREME OF MINIMALISM — I THREW AWAY MY OLD NAME"). Chosen
@@ -154,6 +155,24 @@ the bar the other frames from that day do not. Same venue as `teach-banana-*`
 | `she sharp-1.jpeg` | An unrelated adult co-subject sits front-and-centre beside Chan and is not a billed public speaker (unlike the p3 panel, where the others are named on the event's own slide). Held as a spare pending Chan's explicit OK. |
 | `cebu.JPG`, `Cebu-Language School.jpg` | Already in the book as `chan-celebrate.jpg` (p2) and `chan-by-the-tree.jpg` (p1). |
 | `CORDE-2.jpg`, `CORDE-3.jpg` | Good frames (Chan beside CORDE fleet vehicles) but near-duplicates of each other, and one CORDE frame is enough. **Available spares.** |
+
+## Retired: `min-suitcase.jpg` (2026-07-26, Chan's ruling)
+
+Deleted from the repo and unplaced from p6. It showed a room with a **full double bed,
+a bedside table and curtains** under the caption *"A room pared back to the essentials —
+one suitcase by the door."* That is a **transitional-state room: it fails Chan's
+final-state standard** — the same standard that, in wave 2, drove every other `min-*`
+frame to be reselected from the late, most-minimal end of the blog set. It survived that
+pass only because it was added separately, later in the same wave, as page furniture.
+
+The lesson worth keeping: a frame added to *fill space* skips the selection bar the rest
+of the set had to clear. p6's foot is no longer filled with a photograph at all — the
+three media features were restacked full-width to carry the page on their own, which
+also fixed their cramped typography (see `extended.typ`).
+
+`SHOT-LIST.md` keeps "an un-watermarked, fully-realised empty-room photo" as an
+outstanding request, since no frame in Chan's supplied library can serve as a
+replacement — every candidate carries the NetEase 看客 watermark.
 
 ## Retired: `teach-banana-2.jpg` (2026-07-26)
 

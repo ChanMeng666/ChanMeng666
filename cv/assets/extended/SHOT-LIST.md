@@ -71,10 +71,19 @@ no-duplicates rule in MANIFEST.md.
 | `she sharp-1.jpeg` | Chan and another participant at a She Sharp hackathon table, laptops open. | Needs Chan's explicit OK — the co-subject is an identifiable adult who isn't a billed speaker. |
 | `speaker.jpg` | The full She Sharp "Panel Speakers" frame, all three panelists seated. | Same panel as p3's photo; would be a duplicate. Usable only as a *replacement* for `chan-panel-shesharp-gesturing.jpg`. |
 
-**Still missing from the library** (worth shooting): a frame of Chan at a desk
-actually working — the book has no photo of the making, only of the results and
-the rooms; and an un-watermarked minimalist room frame (every one Chan supplied
-this round carries the NetEase 看客 mark).
+**Still missing from the library** (worth shooting or digging out):
+
+1. **An un-watermarked, fully-realised empty-room photo.** Raised in priority
+   2026-07-26: Chan retired `min-suitcase.jpg` because it showed a room with a
+   full double bed — a transitional state, not the finished one — and nothing in
+   the supplied library can replace it, because every candidate room frame
+   carries the NetEase 看客 watermark. The chapter now runs on four such rooms
+   (p5) plus one (p7); a sixth clean frame would give p6 back the option of a
+   photographic anchor.
+2. **A frame of Chan at a desk actually working.** The book still has no photo of
+   the making — only of the results, the rooms, and the stages. For a magazine
+   whose argument is that she directs coding agents, this is the single
+   highest-value shot missing.
 
 ### 2b. Product logos → live app screenshots
 

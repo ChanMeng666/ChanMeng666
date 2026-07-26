@@ -137,28 +137,33 @@
   // p6 — three media cards
   block(above: 0pt, below: 12pt, text(size: size-body-x, fill: muted, style: "italic")[
     People read along. A few pieces travelled far:])
-  grid(columns: (1fr, 1fr, 1fr), column-gutter: 14pt,
-    article-card("/public/articles/girl-on-mattress.jpg", "Girl on Mattress",
-      "100k+ reads · 3,864 reshares", "https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ"),
-    article-card("/cv/assets/extended/douban-logo.svg", "A Glimpse of My Minimalist Home",
-      "100k+ reads · 14k reshares", "https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q"),
-    article-card("/public/articles/kan-kein-sight.jpg", "I Threw Away My Old Name",
-      "29k+ reads", "https://chanmeng.org/blog/threw-away-my-old-name"),
-  )
-  v(10pt)
+  // The three features run as full-width rows rather than a 3-across grid
+  // (2026-07-26). Two changes drove it. Chan retired min-suitcase.jpg — the frame
+  // that used to anchor this page's foot showed a room with a full double bed, a
+  // transitional state, not the fully-realised minimalism the chapter claims —
+  // which freed ~330pt. And at 3-across each column was only ~153pt wide, where
+  // two of the three titles wrapped to two lines, both WeChat URLs broke
+  // mid-string, and the stat lines fell out of alignment across the row because
+  // the one- and two-line titles pushed them to different heights. Stacking the
+  // same three cards full-width fixes the typography and fills the page, with no
+  // new prose and no decorative filler. Content and links are unchanged.
+  v(0.3fr)
+  article-row("/public/articles/girl-on-mattress.jpg", "Girl on Mattress",
+    "100k+ reads · 3,864 reshares", "https://mp.weixin.qq.com/s/hRh8rTF9gjdpI8KEixuSFQ")
+  v(0.34fr)
+  article-row("/cv/assets/extended/douban-logo.svg", "A Glimpse of My Minimalist Home",
+    "100k+ reads · 14k reshares", "https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q")
+  v(0.34fr)
+  article-row("/public/articles/kan-kein-sight.jpg", "I Threw Away My Old Name",
+    "29k+ reads", "https://chanmeng.org/blog/threw-away-my-old-name")
+  v(0.4fr)
   block(above: 0pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)
     text(size: size-tiny-x, fill: muted, style: "italic")[
       At thirty I legally changed my name and remade who I am. I wrote about it #link("https://chanmeng.org/blog/threw-away-my-old-name")[on the blog].
     ]
   })
-  // A large minimalist frame directly under the caption fills what was ~half a
-  // blank page — kept close to the caption (not floated to the foot) so no middle
-  // void opens up.
-  v(0.5fr)
-  photo-band("/cv/assets/extended/min-suitcase.jpg", h: 330pt,
-    caption: [A room pared back to the essentials — one suitcase by the door.])
-  v(0.7fr)
+  v(0.25fr)
   pagebreak()
   // p7 — bridge to craft: text, an enlarged full-width desk photo, and the
   // closing pull-quote distributed low so the page fills top to bottom.

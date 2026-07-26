@@ -146,7 +146,7 @@
   // up exactly — see MANIFEST.md for the crop and the watermark ruling.
   photo-grid((
     ("/cv/assets/extended/min-empty-room.jpg", [One room, almost empty.]),
-    ("/cv/assets/extended/min-room-panorama.jpg", [The whole room in one frame — front door, bathroom, bare walls.]),
+    ("/cv/assets/extended/min-room-panorama.jpg", [Front door, bathroom, bare walls — the room corner to corner.]),
   ))
   v(gap-photo-x)
   photo-grid((
@@ -284,11 +284,13 @@
 // CAPTION TRUTH RULE: no frame on this page shows a banana piano — the
 // banana-piano stays prose-only, and each caption names only the event it
 // actually depicts. The mentee-range sentence is bounded by the data: the
-// Peyvand workshop is logged for 12–18-year-olds (80-events.yaml
-// peyvand-academy-makey-makey-2026), the hackathon's named school cohort is
-// Westlake Girls High (30-recognition.yaml), and the adult end is TechNest /
-// Her Waka. NOTHING in the data supports "primary schoolers" or "university
-// students" — do not reach for either.
+// Peyvand cohort is audience "Youth aged 12–18" per 90-meta.yaml:181 —
+// **Fruitvale Primary School is the VENUE, not the age group** (same line), so
+// the school's name is a trap: it reads as "primary schoolers" and the cohort
+// is teenagers. 80-events.yaml's peyvand-academy-makey-makey-2026 says 12–18
+// too. The hackathon's named school cohort is Westlake Girls High
+// (30-recognition.yaml) and the adult end is TechNest / Her Waka;
+// "university students" has zero support in the data. Do not reach for either.
 #let x-teaching() = {
   chapter-opener("4", "Teaching",
     kicker: [Three years, five cohorts. My whole method in one line.])

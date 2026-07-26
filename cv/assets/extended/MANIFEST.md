@@ -230,13 +230,22 @@ School") and `80-events.yaml` (`ai-hackathon-festival-2025-mentor`, venue AUT).
 The caption does **not** claim she is presenting to the room; she is at the
 laptop, which is what the frame shows.
 
-_Bound for the mentee-range sentence on p12:_ the data supports **12–18-year-olds**
-(`peyvand-academy-makey-makey-2026` is logged for 12–18s), **high-school students**
-(Westlake Girls, above), and **adults** (TechNest's 12-week AI track, Her Waka's
-women returning to work). It does **not** support "primary schoolers", and it does
-**not** support "university students" — AUT co-organised the hackathon, but the
-award text describes the non-school participants only as coming "from various
-professional backgrounds." Both claims were checked and dropped.
+_Bound for the mentee-range sentence on p12:_ the data supports **12–18-year-olds**,
+**high-school students** (Westlake Girls, above), and **adults** (TechNest's
+12-week AI track, Her Waka's women returning to work).
+
+It does **not** support "primary schoolers". The Peyvand cohort is
+`audience: "Youth aged 12–18; zero coding experience"` at **`90-meta.yaml:181`**,
+and `80-events.yaml`'s `peyvand-academy-makey-makey-2026` says 12–18 as well.
+**Watch this one:** the *same* `90-meta.yaml` line records the workshop as held
+"in person at **Fruitvale Primary School**, Auckland" — that is the **venue, not
+the age group**, and the school's name is exactly the trap that would produce a
+false "primary schoolers" claim.
+
+It does **not** support "university students" either — AUT co-organised the
+hackathon, but the award text describes the non-school participants only as
+coming "from various professional backgrounds." Both claims were checked and
+dropped.
 
 ### Zero-duplicate audit — wave 4
 
@@ -275,7 +284,10 @@ other). Wave 3's duplicate sweep did not catch the pair because it was hunting
 identical files and crops, not two exposures of one wall.
 
 So the frame Chan asked to place happened to displace the one frame most worth
-displacing. The book now has no two frames sharing a wall.
+displacing. No two frames in the book now show the same wall from the same
+angle. (Not the stronger claim that no wall recurs at all — the audit above
+records the panorama sharing the bathroom-doorway corner with `min-desk` on p7
+and the entrance door with `min-one-bag` on p5, from different positions.)
 
 ## Retired: `teach-banana-1.jpg` (2026-07-26, wave 4)
 

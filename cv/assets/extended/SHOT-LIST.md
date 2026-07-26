@@ -32,10 +32,12 @@ What Chan can supply to finish and upgrade the 16-page
 ## 1. In-PDF placeholders (fill these)
 
 None. The last placeholder (`IMG-01`, p4) was retired in revision wave 2
-(2026-07-24): the Story spread now runs on real photos end to end — a She Sharp
-panel anchors p3 and the 2026 Auckland portrait carries p4 — so nothing renders
-as a labelled cream box anymore. `img-placeholder()` remains in
-`extended-components.typ` only as the article-card fallback.
+(2026-07-24). Wave 3 (2026-07-26) went further and put Chan's **own** photos on
+that page: p4 is now a real timeline — the Lincoln campus in November 2023 above
+a before/after row of Nanning and CORDE. (The portrait that briefly stood there
+turned out to be a second crop of the p2 boat frame, captioned "Auckland"; see
+MANIFEST.md.) `img-placeholder()` remains in `extended-components.typ` only as
+the article-card fallback.
 
 ---
 
@@ -47,10 +49,29 @@ as a labelled cream box anymore. `img-placeholder()` remains in
 |---|---|---|---|---|
 | `cv/assets/extended/namechange-hero.jpg` | (not currently placed) | Curated but **unused** — Task 6 told the name-change story via the p6 article card + caption, so this file is a spare. The version on disk is the essay's clean title-card illustration (the only frame in that source folder without a "看客 INSIGHT" / NetEase watermark). | Chan's **un-watermarked original of the stone-alley / red-backpack photo** (the watermarked press version is `2d-portfolio/…/threw-away-my-old-name/16.png`). With a clean original in hand this could become the Minimalist chapter's hero image. | Portrait or square |
 | `public/articles/kan-kein-sight.jpg` | p6 · "A Minimalist" (3rd article card, *I Threw Away My Old Name*) | The NetEase 看客 outlet **brand-mark**, used as a recognizable media-feature cover. | A **real photo** would read warmer than a brand-mark. `fit:"contain"` letterboxes onto a cream card, so any aspect ratio is safe. | Any (landscape reads best) |
+| `cv/assets/extended/douban-logo.png` | p6 · "A Minimalist" (2nd article card, *A Glimpse of My Minimalist Home*) | The Douban publisher mark, at only **100×100 px** — it prints at roughly 48 dpi in a ~153×150 pt card and its diagonals visibly stair-step. | **A higher-resolution Douban mark** (≥ 640 px square, matching its two neighbours), or the SVG rasterised at 800 px. Same filename, same path — no code change needed. | Square |
 
-> The other two p6 covers are fine as-is: `girl-on-mattress.jpg` (最人物) and
-> `p658073376.webp` (*A Glimpse of My Minimalist Home*) are real photos, not
-> brand-marks — no swap needed.
+> All three p6 covers are now outlet brand-marks — 最人物, Douban, NetEase 看客 —
+> which is the intended design. The first and third are 640×640; only the Douban
+> mark needs a sharper source.
+
+### 2a-bis. Spares already in hand (2026-07-26)
+
+Frames from Chan's photo library that are good but did not earn a page this
+wave. They are **not** compressed into `cv/assets/extended/` — they still live in
+`C:\Users\0\Downloads\photo\`. Any of them can be pulled in later, subject to the
+no-duplicates rule in MANIFEST.md.
+
+| Source file | What it shows | Why it's held back |
+|---|---|---|
+| `CORDE-2.jpg` / `CORDE-3.jpg` | Chan beside CORDE's branded fleet vehicles under a blue Canterbury sky. | Near-duplicates of each other; `CORDE-1` (the branded office entry) already carries CORDE on p4. |
+| `she sharp-1.jpeg` | Chan and another participant at a She Sharp hackathon table, laptops open. | Needs Chan's explicit OK — the co-subject is an identifiable adult who isn't a billed speaker. |
+| `speaker.jpg` | The full She Sharp "Panel Speakers" frame, all three panelists seated. | Same panel as p3's photo; would be a duplicate. Usable only as a *replacement* for `chan-panel-shesharp-gesturing.jpg`. |
+
+**Still missing from the library** (worth shooting): a frame of Chan at a desk
+actually working — the book has no photo of the making, only of the results and
+the rooms; and an un-watermarked minimalist room frame (every one Chan supplied
+this round carries the NetEase 看客 mark).
 
 ### 2b. Product logos → live app screenshots
 

@@ -35,8 +35,12 @@
     ]
   })
   v(34pt)
+  // Caption corrected 2026-07-26: this frame is Chan on a boat at sea (the same
+  // Cebu trip as the p1 cover), not Auckland — the old "Auckland — where I
+  // rebuilt everything" line described a place the photo does not show. Captions
+  // describe what is actually visible (MANIFEST.md caption-truth rule).
   photo-band("/public/photos/chan-celebrate.jpg", h: 322pt,
-    caption: [Auckland — where I rebuilt everything.])
+    caption: [Arms up, out on the water — the spirit I'd like this read in.])
   v(1fr)
   pagebreak()
 }
@@ -75,13 +79,25 @@
   photo-band("/public/photos/chan-panel-shesharp-gesturing.jpg", h: 232pt,
     caption: [#icon("map-pin", size: 8pt) #h(1pt) On a She Sharp panel in Auckland — the community that took me in.])
   pagebreak()
-  // p4 — one large portrait + the closing pull-quote anchored lower (rebalanced
-  // 2026-07-24: the old two-up grid used an empty IMG-01 placeholder and left a
-  // mid-page void; a single big real photo + a lower quote fills the spread).
-  v(0.4fr)
-  align(center, photo("/public/photos/chanmeng-portrait-2026.jpg",
-    caption: [Auckland, 2026 — beginning again.], w: 78%))
-  v(0.8fr)
+  // p4 — the arrival spread, rebuilt 2026-07-26 into a real timeline from Chan's
+  // own photo library. It previously ran on chanmeng-portrait-2026.jpg, which is
+  // a tight crop of the SAME boat frame the p2 band uses (chan-celebrate.jpg) —
+  // one photo appearing twice — under the caption "Auckland, 2026", a place that
+  // frame does not show. Both problems are gone: the Lincoln campus shot carries
+  // the page, and a before/after row grounds the crossing. Anchor facts, all
+  // from data/profile/10-career.yaml: the Lincoln Master of Applied Computing
+  // starts 2023-11 (the photo's own burned-in date stamp reads 2023/11/16);
+  // CORDE is the Lincoln COMP693 industry placement, Canterbury, 2024-06→2024-11;
+  // Nanning is where Chan went to school (education: nanning-no2, Guangxi).
+  v(0.3fr)
+  photo-band("/cv/assets/extended/story-lincoln.jpg", h: 245pt,
+    caption: [Lincoln University, Canterbury — November 2023, my first weeks in the programme.])
+  v(0.45fr)
+  photo-row((
+    ("/cv/assets/extended/story-nanning.jpg", [Before: a night street in Nanning, Guangxi — the Chinese city I went to school in.]),
+    ("/cv/assets/extended/story-corde.jpg", [After: on site at CORDE in Canterbury — the infrastructure firm my Lincoln industry placement shipped into, 2024.]),
+  ), h: 215pt)
+  v(0.6fr)
   pull-quote(
     [When execution gets cheap, the work that matters is choosing what to build — and having the taste to keep only what's worth keeping.])
   v(0.5fr)
@@ -96,10 +112,9 @@
 // -desk swapped off transitional frames (captions updated to match). Red lines:
 // name-change framed ONLY
 // as forward-looking self-remaking, sourced to the blog; NO family-of-origin
-// detail; no radical-expression references; no pricing. The girl-on-mattress
-// and kan-kein-sight covers are the outlets' own brand-marks (最人物 / NetEase
-// 看客), used as recognizable media-feature marks; p658073376.webp is a real
-// minimalist-home photo (verified on render).
+// detail; no radical-expression references; no pricing. As of 2026-07-26 all
+// three p6 covers are the outlets' own brand-marks — 最人物 / Douban / NetEase
+// 看客 — used as recognizable media-feature marks.
 #let x-minimalist() = {
   chapter-opener("2", "A Minimalist",
     kicker: [Subtraction as a daily practice — and, it turns out, as an engineering philosophy.])
@@ -258,25 +273,20 @@
       Students arrive knowing only browser ChatGPT. Weeks later they have shipped a live, multi-user AI product by directing coding agents — the same way I work. I have run this five times since 2024, most recently for #link("https://www.technestcommunity.com/")[TechNest] and at a #link("https://programming.chanmeng.org/")[hands-on workshop] where a banana piano taught younger students that code can be playful.
     ]
   })
-  // Fixed-height, fit:"contain" pair (cream gutters) rather than photo-grid: the
-  // two workshop frames have mismatched aspect ratios (one portrait, one
-  // landscape) and a width-scaled portrait blew the page past p12. contain (not
-  // cover) shows each frame whole — no crop — so the captions stay truthful to
-  // what is actually visible (CAPTION TRUTH RULE, MANIFEST.md). Enlarged to fill
-  // the space freed when the student-capstone strip was removed (2026-07-24).
+  // Fixed-height, fit:"contain" row (cream gutters) rather than photo-grid: the
+  // workshop frames have mismatched aspect ratios (two portrait, one landscape)
+  // and a width-scaled portrait blew the page past p12. contain (not cover)
+  // shows each frame whole — no crop — so the captions stay truthful to what is
+  // actually visible (CAPTION TRUTH RULE, MANIFEST.md). Widened to three
+  // 2026-07-26: teach-kids-laptop is the only frame in Chan's library that shows
+  // her actually teaching, and every child in it is shot from behind — no
+  // identifiable faces, which is why the other frames from that day are out.
   v(0.55fr)
-  grid(columns: (1fr, 1fr), column-gutter: gap-photo-x,
-    ..(
-      ("/cv/assets/extended/teach-banana-1.jpg", [AI & Electronics Workshop — the lineup on stage.]),
-      ("/cv/assets/extended/teach-banana-2.jpg", [Presenting from the front of the room.]),
-    ).map(it => block(above: 0pt, below: 0pt, breakable: false, {
-      box(width: 100%, height: 300pt, radius: radius-photo-x, clip: true, fill: pill-bg,
-        stroke: frame-photo-x + rule.lighten(25%),
-        image(it.at(0), width: 100%, height: 100%, fit: "contain"))
-      v(6pt)
-      text(size: size-tiny-x, fill: muted, style: "italic", it.at(1))
-    }))
-  )
+  photo-row((
+    ("/cv/assets/extended/teach-banana-1.jpg", [AI & Electronics Workshop — the lineup on stage.]),
+    ("/cv/assets/extended/teach-kids-laptop.jpg", [Hands-on at the same workshop — a browser game on the laptop, the room crowded in.]),
+    ("/cv/assets/extended/teach-banana-2.jpg", [Presenting from the front of the room.]),
+  ), h: 250pt)
   v(0.75fr)
   block(above: 0pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)

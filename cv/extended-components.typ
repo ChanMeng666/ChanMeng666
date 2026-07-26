@@ -64,6 +64,25 @@
   ..items.map(it => photo(it.at(0), caption: it.at(1))),
 )
 
+// ─── Fixed-height photo row — items: array of (path, caption) ────────────────
+// Unlike photo-grid (natural aspect, width-scaled) this gives every frame the
+// SAME box height and fits with "contain", so a row can mix portrait and
+// landscape sources without cropping anything and without one tall portrait
+// blowing the page. Letterbox gutters fill with cream (pill-bg), never white —
+// so captions stay truthful to the whole visible frame. Used wherever a page
+// pairs frames of mismatched orientation (pp4, 12).
+#let photo-row(items, h: 300pt, gutter: gap-photo-x) = grid(
+  columns: (1fr,) * items.len(),
+  column-gutter: gutter,
+  ..items.map(it => block(above: 0pt, below: 0pt, breakable: false, {
+    box(width: 100%, height: h, radius: radius-photo-x, clip: true, fill: pill-bg,
+      stroke: frame-photo-x + rule.lighten(25%),
+      image(it.at(0), width: 100%, height: 100%, fit: "contain"))
+    v(6pt)
+    text(size: size-tiny-x, fill: muted, style: "italic", it.at(1))
+  })),
+)
+
 // ─── Branded placeholder block (plain cream + IMG-XX label) ──────────────────
 #let img-placeholder(id, desc, ratio: "landscape") = {
   let h = if ratio == "portrait" { ph-h-portrait }

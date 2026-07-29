@@ -3,3 +3,6 @@
 .typst-cache/
 dist/
 *.log
+
+# NOTE: exports/ is deliberately TRACKED — it holds manual-upload deliverables
+# (the ATS resume PDF), not build scratch. Do not add it here.

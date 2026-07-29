@@ -20,7 +20,11 @@ npm run check        # validate (schema + linkedin sync) + build + asset audit
   (`--apply` to write); only touches `- { label: "Stars", value: ... }`-style
   lines in the project shards. Also reports repo health (404s, renames,
   archived-but-active, activity gaps) for every GitHub-linked project.
-- CV PDF: `pwsh cv/build.ps1` (manual; needs typst)
+- CV PDFs: `pwsh cv/build.ps1` (manual; needs typst). Emits three:
+  `public/chan-meng-cv.pdf` (canonical 2-page), `public/chan-meng-cv-extended.pdf`
+  (16-page magazine), and `cv/exports/chan-meng-cv-ats.pdf` (plain single-column
+  ATS resume — tracked but deliberately OUTSIDE `public/`, never web-served or
+  linked; see `cv/exports/README.md`)
 
 ## Truth maintenance
 
@@ -36,7 +40,10 @@ hand-typed facts on a review cadence:
   `npm run reviewed -- "work.engram" --apply` (NEVER bulk-bump `lastUpdated`
   by hand-editing — that destroys the field's meaning).
 - `npm run check:cv` — CV role-line anchor facts (date ranges error, titles
-  warn) vs 10-career.yaml. PR gate runs it `--strict`.
+  warn) vs 10-career.yaml, across BOTH `cv/sections/experience.typ` and
+  `cv/chan-meng-cv-ats.typ`. PR gate runs it `--strict`. Its regex is not
+  comment-aware: never write the literal `role-line` + `(` inside a comment in
+  either file, or it parses as a phantom entry.
 - `npm run check:links` — link liveness across all shards (monthly workflow
   only; never blocks PRs).
 - A LinkedIn display title that deliberately differs from `work[].position`
@@ -97,15 +104,21 @@ by the loader. To find an entry: `grep -rn "id: <slug>" data/profile/`.
   broken mappings. If you rename a company/award in a canonical section,
   reconcile the linkedin shard too.
 
-## Facts live in THREE places — fix all of them
+## Facts live in FOUR places — fix all of them
 
 1. `data/profile/*.yaml` — canonical
 2. `cv/sections/*.typ` — CV prose is **hand-curated Typst**, not generated;
    `cv/build-llms-txt.mjs` also hardcodes some copy
 3. `70-linkedin.yaml` — LinkedIn display copy is curated (dates/banner facts
    are auto-injected by the generator, titles/narrative are not)
+4. `cv/chan-meng-cv-ats.typ` — the ATS resume carries its own copy on purpose:
+   ATS wants action-verb bullets and expanded acronyms where the designed CV
+   wants narrative prose. Unlike #3, its anchor facts (dates, titles, org URLs)
+   ARE machine-guarded by `npm run check:cv`. It also carries three employers
+   the designed CV mentions only in an italic aside (ByteDance, CORDE, Forward
+   with Her) as full dated entries.
 
-Changing a role title, date, or award in one place ≠ done. Check the other two.
+Changing a role title, date, or award in one place ≠ done. Check the other three.
 
 ## Field conventions
 

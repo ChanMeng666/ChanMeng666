@@ -209,6 +209,53 @@ rg '~\d' cv/**/*.typ
 
 ---
 
+## 10. Extraction pitfalls — what survives `pdftotext`, and what does not
+
+These three were found by extracting the *shipping* PDFs, not by reading source. They are content-level bugs, so they apply to every `.typ` file here, not just the ATS variant.
+
+**(a) A bare `@` in markup is a label reference, not an at-sign.** Companion to §9's `~`. `chanmeng.career@gmail.com` written in markup silently loses the address. `cv/sections/header.typ:80` dodges it by putting the address in a *string* with `\u{0040}`; in markup, escape it:
+
+```typst
+// BAD  — "@gmail" parses as a label reference
+chanmeng.career@gmail.com
+// GOOD
+chanmeng.career\@gmail.com
+```
+
+**(b) `pdftotext` de-hyphenation eats a hyphen sitting at a line break — and `hyphenate: false` does NOT prevent it.** That setting only disables *automatic* hyphenation. Typst still treats an *explicit* hyphen as a line-break opportunity, and poppler then reads a trailing hyphen as a soft hyphen and deletes it. Measured on real output:
+
+| Source text | Where it broke | Extracted as |
+|---|---|---|
+| `AI-native` (public/chan-meng-cv.pdf) | after `AI-` | `AInative` |
+| `web-vitals` (first ATS build) | after `web-` | `webvitals` |
+| `multi-user` (first ATS build) | after `multi-` | `multiuser` |
+| `gpt-5.4-mini` (first ATS build) | after `5.4-` | `gpt-5.4mini` |
+| `Architect - Foundations` | after `-` | `Architect Foundations` |
+
+The first is a live keyword loss in the shipping CV. Three defences: set `hyphenate: false`; box every hyphenated compound so it cannot break internally; and do not use a bare ` - ` as sentence punctuation — a colon, parentheses, or an em dash all survive.
+
+```typst
+// Removes the break opportunity inside every hyphenated compound.
+#show regex("[\w.]+(-[\w.]+)+"): it => box(it)
+```
+
+Verify with a grep of the extraction, not by reading the source:
+
+```powershell
+& "D:\tools\poppler\poppler-26.02.0\Library\bin\pdftotext.exe" -enc UTF-8 <pdf> - |
+  Select-String 'AI-native|Full-stack|multi-tenant|open-source|CI/CD'
+```
+
+**(c) Space-separated inline lists extract as one undelimited run.** The CV's skill pills are visually separated by whitespace, so `Status line` and `Plugins` come out as `Status line Plugins` — a keyword matcher cannot tell where one skill ends. Same for the icon-stacked contact column, which extracts as a single line containing all five contact fields. **Commas between items; one contact item per line.**
+
+Not a pitfall but worth knowing: Typst 0.15 emits `Tagged: yes` PDFs with correct ToUnicode CMaps by default, and `· — ’ “” → ā «»` all round-trip byte-exact. Encoding is not the problem in this repo; layout is.
+
+### The ATS variant's contract is different
+
+`cv/chan-meng-cv-ats.typ` + `cv/ats-components.typ` are deliberately exempt from §1, §2, §4 and §6 — they have no icons and no callouts, and every vertical gap comes from one spacing scale at the top of `ats-components.typ` rather than from `theme.typ` tokens. §3 (the ≥1.7× list ratio) IS honoured there. Their definition of done is the extraction check in §10 **plus** a PNG render, since they now carry hairline rules and underlined links that only a render will show misplaced. §9 and §10 always apply.
+
+---
+
 ## File responsibilities (where to find each rule applied)
 
 | File | Owns | Pitfalls relevant |
@@ -220,6 +267,8 @@ rg '~\d' cv/**/*.typ
 | `cv/sections/experience.typ` | Role entries via `role-line()` | 2 (rendered) |
 | `cv/sections/projects.typ` | Intro + project cards | 2 (rendered) |
 | `cv/chan-meng-cv.typ` | Body grid (left column = narrative; right column = structured + recognition) | 5 |
+| `cv/chan-meng-cv-ats.typ` | ATS resume content — single column, plain | 9, 10 (exempt from 1–4, 6) |
+| `cv/ats-components.typ` | ATS renderers: `role-line`, `skills-line`, `project-entry`, `education-entry` | 9, 10 (exempt from 1–4, 6) |
 
 ---
 
@@ -234,3 +283,4 @@ rg '~\d' cv/**/*.typ
    - No orphaned quote source line; no orphaned single line on a page.
 4. Word blacklist still clean (`delve`, `realm`, `intricate`, `showcasing`, `pivotal`, `leveraged X to drive Y`, `results-driven`, `passionate`, `dynamic professional` — see `cv/README.md`).
 5. README "Resume" pill still resolves to `public/chan-meng-cv.pdf` (do not rename the file).
+6. If `cv/chan-meng-cv-ats.typ` or `cv/ats-components.typ` changed: 3 pages, `pdfinfo` says `Tagged: yes`, every `pdffonts` row says `uni=yes`, `pdfimages -list` is empty, `pdftotext` and `pdftotext -raw` agree on reading order, and `node scripts/check-cv-sync.mjs` is clean.

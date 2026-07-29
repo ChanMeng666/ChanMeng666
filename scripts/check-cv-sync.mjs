@@ -10,9 +10,20 @@
 //   - org URLs           → WARNING
 //   - unmapped role-line → WARNING (extend CV_ORG_TO_WORK below)
 //
-// Scope: the role-line(...) calls in cv/sections/experience.typ. The italic
-// "Previously:" footer block is freeform prose and intentionally NOT parsed.
-// projects.typ / recognition.typ are a future increment.
+// Scope: the role-line(...) calls in TWO hand-curated Typst surfaces —
+//   1. cv/sections/experience.typ  (the designed 2-page CV)
+//   2. cv/chan-meng-cv-ats.typ     (the plain ATS resume; see CLAUDE.md
+//      "Facts live in FOUR places")
+// The ATS resume's local role-line() helper (cv/ats-components.typ)
+// deliberately keeps the SAME named parameters and the same one-argument-per-
+// line call formatting, so one regex pair parses both files unchanged. The
+// helper is DEFINED in ats-components.typ, not in the entry point, so the
+// `#let role-line(` definition is never parsed here as a phantom entry.
+//
+// The italic "Previously:" footer block in experience.typ is freeform prose and
+// intentionally NOT parsed — the three roles it mentions (ByteDance, CORDE,
+// Forward with Her) ARE parsed from the ATS resume, where they are real
+// dated entries. projects.typ / recognition.typ are a future increment.
 //
 // Usage:
 //   node scripts/check-cv-sync.mjs            # report; always exit 0
@@ -27,9 +38,14 @@ const STRICT = process.argv.includes("--strict");
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "..");
-const cvPath = path.join(repoRoot, "cv", "sections", "experience.typ");
+const CV_FILES = [
+  path.join(repoRoot, "cv", "sections", "experience.typ"),
+  path.join(repoRoot, "cv", "chan-meng-cv-ats.typ"),
+];
 
-// CV display-org -> work[].id. Extend when a new role-line is added to the CV.
+// CV display-org -> work[].id. Extend when a new role-line is added to either
+// CV surface. A role with no work[] entry must use extra-role(...) in the ATS
+// resume so it is not parsed here at all.
 const CV_ORG_TO_WORK = {
   "Engram": "engram",
   "TechNest Community": "technest",
@@ -37,6 +53,10 @@ const CV_ORG_TO_WORK = {
   "She Sharp": "she-sharp",
   "FemTech Weekend": "femtech-weekend",
   "Sanicle": "sanicle",
+  // ATS resume only — promoted out of the designed CV's italic "Previously:" line.
+  "Forward with Her": "forward-with-her",
+  "ByteDance": "bytedance",
+  "CORDE": "corde",
 };
 
 const profile = loadProfile();
@@ -46,25 +66,41 @@ const workById = Object.fromEntries((profile.work ?? []).map((w) => [w.id, w]));
 // Parse role-line(...) calls
 // ---------------------------------------------------------------------------
 
-const src = fs.readFileSync(cvPath, "utf8");
-const roleLines = [];
-for (const m of src.matchAll(/role-line\(([\s\S]*?)\n\s*\)/g)) {
-  const body = m[1];
-  const field = (name) => {
-    const f = body.match(new RegExp(`${name}:\\s*"([^"]*)"`));
-    return f ? f[1] : null;
-  };
-  roleLines.push({
-    title: field("title"),
-    org: field("org"),
-    orgUrl: field("org-url"),
-    dates: field("dates"),
-  });
+function parseRoleLines(file) {
+  const src = fs.readFileSync(file, "utf8");
+  const rel = path.relative(repoRoot, file).replace(/\\/g, "/");
+  const out = [];
+  for (const m of src.matchAll(/role-line\(([\s\S]*?)\n\s*\)/g)) {
+    const body = m[1];
+    const field = (name) => {
+      const f = body.match(new RegExp(`${name}:\\s*"([^"]*)"`));
+      return f ? f[1] : null;
+    };
+    out.push({
+      file: rel,
+      title: field("title"),
+      org: field("org"),
+      orgUrl: field("org-url"),
+      dates: field("dates"),
+    });
+  }
+  return out;
 }
 
-if (!roleLines.length) {
-  console.error(`✗ No role-line(...) calls parsed from ${path.relative(repoRoot, cvPath)} — parser or file structure changed.`);
-  process.exit(1);
+const roleLines = [];
+const perFile = [];
+for (const file of CV_FILES) {
+  const rel = path.relative(repoRoot, file).replace(/\\/g, "/");
+  const parsed = parseRoleLines(file);
+  // Hard-fail PER FILE: a silently-zero parse means the file structure drifted
+  // away from what this regex understands, which would turn the guard into a
+  // no-op without anyone noticing.
+  if (!parsed.length) {
+    console.error(`✗ No role-line(...) calls parsed from ${rel} — parser or file structure changed.`);
+    process.exit(1);
+  }
+  perFile.push(`${rel} (${parsed.length})`);
+  roleLines.push(...parsed);
 }
 
 // ---------------------------------------------------------------------------
@@ -98,25 +134,26 @@ const errors = [];
 const warnings = [];
 
 for (const r of roleLines) {
+  const at = `${r.file}: `;
   const wid = CV_ORG_TO_WORK[r.org];
   if (!wid) {
-    warnings.push(`role-line org "${r.org}" is not in CV_ORG_TO_WORK — add the mapping so its facts are checked.`);
+    warnings.push(`${at}role-line org "${r.org}" is not in CV_ORG_TO_WORK — add the mapping so its facts are checked.`);
     continue;
   }
   const w = workById[wid];
   if (!w) {
-    errors.push(`role-line "${r.org}" maps to work id "${wid}" which no longer exists in 10-career.yaml.`);
+    errors.push(`${at}role-line "${r.org}" maps to work id "${wid}" which no longer exists in 10-career.yaml.`);
     continue;
   }
   const want = derivedRange(w);
   if (normDates(r.dates) !== normDates(want)) {
-    errors.push(`"${r.org}" dates drift: CV shows "${r.dates}" but work[${wid}] derives "${want}".`);
+    errors.push(`${at}"${r.org}" dates drift: CV shows "${r.dates}" but work[${wid}] derives "${want}".`);
   }
   if (r.title && !titleAgrees(r.title, w.position)) {
-    warnings.push(`"${r.org}" title differs: CV "${r.title}" vs work[${wid}].position "${w.position}" (fine if intentionally tightened).`);
+    warnings.push(`${at}"${r.org}" title differs: CV "${r.title}" vs work[${wid}].position "${w.position}" (fine if intentionally tightened).`);
   }
   if (r.orgUrl && w.url && normUrl(r.orgUrl) !== normUrl(w.url)) {
-    warnings.push(`"${r.org}" org-url differs: CV "${r.orgUrl}" vs work[${wid}].url "${w.url}".`);
+    warnings.push(`${at}"${r.org}" org-url differs: CV "${r.orgUrl}" vs work[${wid}].url "${w.url}".`);
   }
 }
 
@@ -132,10 +169,11 @@ if (warnings.length) {
   console.warn(`⚠ ${warnings.length} CV warning(s):`);
   for (const w of warnings) console.warn(`    ${w}`);
 }
+const scope = `${roleLines.length} role-lines across ${perFile.join(", ")}`;
 if (!errors.length && !warnings.length) {
-  console.log(`✓ CV anchor facts (${roleLines.length} role-lines) agree with 10-career.yaml.`);
+  console.log(`✓ CV anchor facts (${scope}) agree with 10-career.yaml.`);
 } else if (!errors.length) {
-  console.log(`✓ CV date ranges all agree with 10-career.yaml (${roleLines.length} role-lines checked).`);
+  console.log(`✓ CV date ranges all agree with 10-career.yaml (${scope} checked).`);
 }
 
 if (STRICT && errors.length) process.exit(1);

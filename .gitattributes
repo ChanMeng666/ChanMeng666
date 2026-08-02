@@ -13,6 +13,11 @@
 *.webp binary
 *.ico  binary
 *.pdf  binary
+# A .docx is a ZIP. `* text=auto` above would probably sniff it as binary via
+# its NUL bytes, but this repo pins its binaries rather than trusting the
+# heuristic — a CRLF-normalised .docx is silently corrupt, and the one in
+# cv/exports/ is what gets uploaded to job portals.
+*.docx binary
 *.woff  binary
 *.woff2 binary
 *.ttf  binary

@@ -24,7 +24,10 @@ npm run check        # validate (schema + linkedin sync) + build + asset audit
   `public/chan-meng-cv.pdf` (canonical 2-page), `public/chan-meng-cv-extended.pdf`
   (16-page magazine), and `cv/exports/chan-meng-cv-ats.pdf` (plain single-column
   ATS resume — tracked but deliberately OUTSIDE `public/`, never web-served or
-  linked; see `cv/exports/README.md`)
+  linked; see `cv/exports/README.md`). The same run also writes
+  `cv/exports/chan-meng-cv-ats.docx` (the DEFAULT upload artifact — Lever refused
+  the PDF) and `cv/exports/chan-meng-cv-ats.txt`, both parsed out of
+  `cv/chan-meng-cv-ats.typ` by `cv/build-ats-exports.mjs`
 
 ## Truth maintenance
 
@@ -44,6 +47,11 @@ hand-typed facts on a review cadence:
   `cv/chan-meng-cv-ats.typ`. PR gate runs it `--strict`. Its regex is not
   comment-aware: never write the literal `role-line` + `(` inside a comment in
   either file, or it parses as a phantom entry.
+- `npm run check:ats` — parses `cv/chan-meng-cv-ats.typ` the way the Word/plain-text
+  exports do and asserts its exact shape (7 headings in order, 9 roles, 4 projects,
+  …); writes nothing, needs no typst. Part of `npm run check` and the PR gate. It
+  fails loudly rather than letting a construct drop silently out of the `.docx`
+  while still appearing in the PDF.
 - `npm run check:links` — link liveness across all shards (monthly workflow
   only; never blocks PRs).
 - A LinkedIn display title that deliberately differs from `work[].position`
@@ -116,7 +124,10 @@ by the loader. To find an entry: `grep -rn "id: <slug>" data/profile/`.
    wants narrative prose. Unlike #3, its anchor facts (dates, titles, org URLs)
    ARE machine-guarded by `npm run check:cv`. It also carries three employers
    the designed CV mentions only in an italic aside (ByteDance, CORDE, Forward
-   with Her) as full dated entries.
+   with Her) as full dated entries. `cv/exports/chan-meng-cv-ats.docx` and
+   `.txt` are not a fifth place — they are generated views of this file, emitted
+   by `cv/build-ats-exports.mjs`, exactly as README.md is a generated view of
+   `data/profile/*.yaml`; never hand-edit them.
 
 Changing a role title, date, or award in one place ≠ done. Check the other three.
 

@@ -46,9 +46,21 @@
 #set document(
   title: "Chan Meng — Resume",
   author: "Chan Meng",
-  // Suppress /CreationDate + /ModDate. This PDF is COMMITTED, so identical
-  // input must produce identical bytes or every rebuild is a diff.
-  date: none,
+  // PINNED, not `auto` and not `none`. A date must be PRESENT: a PDF carrying
+  // no /CreationDate and no /ModDate is a known trip-hazard for legacy resume
+  // parsers, and it was the clearest structural difference between this file
+  // and the designed CV when Lever returned "Couldn't auto-read resume" on an
+  // upload of THIS pdf (2026-08-03). Pinning still keeps what `date: none` was
+  // protecting: this PDF is COMMITTED, so identical input must produce
+  // identical bytes or every rebuild is a diff.
+  //
+  // Bump this BY HAND when the resume's CONTENT changes — it is the document's
+  // revision date, not the build's wall clock. Do NOT switch to `auto`, and do
+  // NOT move it to a `typst compile --creation-timestamp` flag in build.ps1:
+  // that would split one fact across two files and make a bare `typst compile`
+  // produce a different PDF. cv/build-ats-exports.mjs PARSES this line and
+  // reuses it for the .docx core properties, so it stays one fact in one file.
+  date: datetime(year: 2026, month: 8, day: 3),
   // NO keywords: on purpose. The 70-term list in chan-meng-cv.typ is plainly
   // legible in `pdfinfo` and reads as keyword stuffing to an AI screener —
   // the same class of anti-pattern cv/README.md already bans. Everything that

@@ -13,16 +13,19 @@
     "build:linkedin": "node scripts/build-linkedin-json.mjs && node scripts/build-linkedin-md.mjs",
     "validate": "node scripts/validate.mjs && node scripts/validate-brand.mjs && node scripts/check-linkedin-sync.mjs",
     "audit": "node scripts/audit-assets.mjs",
-    "check": "npm run validate && npm run check:freshness && npm run check:cv && npm run build && npm run audit",
+    "check": "npm run validate && npm run check:freshness && npm run check:cv && npm run check:ats && npm run build && npm run audit",
     "check:freshness": "node scripts/check-freshness.mjs",
     "check:cv": "node scripts/check-cv-sync.mjs",
+    "check:ats": "node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --check",
     "check:links": "node scripts/check-links.mjs",
+    "build:ats-exports": "node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --docx cv/exports/chan-meng-cv-ats.docx --txt cv/exports/chan-meng-cv-ats.txt",
     "reviewed": "node scripts/mark-reviewed.mjs",
     "refresh-metrics": "node scripts/refresh-github-metrics.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "docx": "^9.7.1",
     "handlebars": "^4.7.8",
     "js-yaml": "^4.1.0"
   }

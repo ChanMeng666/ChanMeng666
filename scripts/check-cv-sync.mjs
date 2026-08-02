@@ -20,6 +20,15 @@
 // helper is DEFINED in ats-components.typ, not in the entry point, so the
 // `#let role-line(` definition is never parsed here as a phantom entry.
 //
+// SECOND CONSUMER (added 2026-08-03): scripts/lib/parse-ats-resume.mjs also
+// parses cv/chan-meng-cv-ats.typ — it generates the .docx and .txt in
+// cv/exports/ from the same role-line(...) calls. Two parsers now depend on that
+// file's call shape, so the formatting rule above is doubly load-bearing. The
+// two differ in one way on purpose: this file is NOT comment-aware (hence the
+// "never write role-line + ( inside a comment" rule), while the ATS parser
+// strips comments first. Both assert an exact role count, so a divergence fails
+// loudly on whichever side sees it rather than silently disagreeing.
+//
 // The italic "Previously:" footer block in experience.typ is freeform prose and
 // intentionally NOT parsed — the three roles it mentions (ByteDance, CORDE,
 // Forward with Her) ARE parsed from the ATS resume, where they are real

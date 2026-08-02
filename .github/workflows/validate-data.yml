@@ -13,6 +13,10 @@ on:
       - "scripts/check-*.mjs"
       - "scripts/lib/**"
       - "cv/sections/**"
+      # The .docx/.txt generators parse the ATS entry point directly, so a
+      # formatting drift in either must reach check:ats below.
+      - "cv/chan-meng-cv-ats.typ"
+      - "cv/*.mjs"
       - "package.json"
       - "package-lock.json"
 
@@ -33,6 +37,11 @@ jobs:
       - run: node scripts/check-freshness.mjs --strict
       # CV anchor facts (date ranges) must agree with 10-career.yaml.
       - run: node scripts/check-cv-sync.mjs --strict
+      # The ATS resume's .docx/.txt are PARSED out of cv/chan-meng-cv-ats.typ.
+      # A structural change there must fail here — not months later, an hour
+      # before an application, when the exports are actually rebuilt. Needs no
+      # typst, so it is cheap to gate every PR with.
+      - run: npm run check:ats
       - run: npm run build
       - name: Check that committed outputs match what build would generate
         run: |

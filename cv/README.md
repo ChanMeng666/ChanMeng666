@@ -49,6 +49,7 @@ cv/
 ├── ats-txt.mjs                # renderer: parsed ATS model → plain UTF-8
 ├── ats-docx.mjs               # renderer: parsed ATS model → OOXML (Heading1, w:numPr, w:hyperlink)
 ├── build-ats-exports.mjs      # CLI: .typ → exports/*.docx + *.txt; owns writing + the determinism freeze
+├── verify-ats-exports.py      # runs BOTH definitions of done below against the built artifacts
 ├── exports/                   # TRACKED manual-upload deliverables (NOT web-served)
 │   ├── chan-meng-cv-ats.pdf
 │   ├── chan-meng-cv-ats.docx  # GENERATED — never hand-edit
@@ -171,6 +172,27 @@ and zero literal `- ` runs · 29 hyperlinks with zero dangling relationships ·
 zero tables, drawings, text boxes, `framePr` or columns, and no header/footer/media
 parts · Arial only, `DM Sans` appears nowhere in the package · core properties
 present with no keywords · byte-identical across three consecutive builds.
+
+### Checking it — `python cv/verify-ats-exports.py`
+
+Both definitions of done above are **runnable**, and were prose until they
+weren't: the failure they guard against is silent, because a Word file quietly
+missing a job still opens fine and still looks like a resume. The script reads
+the `.docx` back with nothing but `zipfile` and two regexes (a `.docx` is a ZIP
+of XML, and this machine has no Word, LibreOffice, pandoc or Java), diffs its
+token stream against `pdftotext` on the PDF, and re-runs the whole PDF
+regression suite including the hyphenated-keyword grep. Exit 0 means safe to
+upload.
+
+Requires poppler on `PATH` plus `pypdf`, which is why it is **not** in CI —
+`npm run check:ats` is the cheap gate that runs on every PR. Run this one before
+an actual upload, and after touching `chan-meng-cv-ats.typ`, `ats-docx.mjs` or
+`ats-txt.mjs`.
+
+The two checks it cannot make are the two that matter most, and both need a
+human: open the `.docx` in Google Docs or Word Online to confirm it *looks*
+right, and attach it to a real Lever or Greenhouse apply form to confirm the
+parser auto-fills name, email and experience (don't submit).
 
 ## Regenerating
 

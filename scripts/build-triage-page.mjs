@@ -11,6 +11,13 @@
 //   node scripts/build-triage-page.mjs --out /path/to/triage.html
 //   node scripts/build-triage-page.mjs --repos-json cache.json   # offline / cached gh dump
 //   node scripts/build-triage-page.mjs --dump-repos cache.json   # save the gh dump for reuse
+//   node scripts/build-triage-page.mjs --commits-json c30.json   # {"repo": <commits in window>}
+//
+// `pushedAt` alone is a poor activity signal: a bulk docs/dependency sweep across
+// every repo gives forty dead repos the same recent push date as the two Chan is
+// actually building. --commits-json supplies a commit count over a recent window
+// (see RECENT-COMMIT-WINDOW below), which separates them. Produce it with:
+//   for r in $(...); do gh api "repos/OWNER/$r/commits?since=<ISO>&per_page=100" --jq length; done
 //
 // The page is fully self-contained (inline CSS + JS, no network requests of any
 // kind) because it is published as an Artifact under a strict CSP.
@@ -39,6 +46,14 @@ const argOf = (flag) => {
 const OUT = argOf("--out");
 const REPOS_JSON = argOf("--repos-json");
 const DUMP_REPOS = argOf("--dump-repos");
+const COMMITS_JSON = argOf("--commits-json");
+// Label only — the caller decides the real window when it builds --commits-json.
+const COMMIT_WINDOW = argOf("--commit-window") ?? "30d";
+
+// Repos that are never portfolio projects, however active they look.
+// `ChanMeng666` is this repository (the profile itself); `public-videos` and the
+// `*-promo-video` repos are asset stores for projects that already have entries.
+const NOT_A_PROJECT = new Set(["ChanMeng666", "public-videos"]);
 
 // ---------------------------------------------------------------------------
 // data
@@ -56,12 +71,19 @@ function loadRepos() {
       "--limit",
       "300",
       "--json",
-      "name,isArchived,isPrivate,stargazerCount,pushedAt",
+      "name,isArchived,isPrivate,isFork,stargazerCount,pushedAt,createdAt,description,url",
     ],
     { encoding: "utf8", maxBuffer: 20 * 1024 * 1024 }
   );
   if (DUMP_REPOS) fs.writeFileSync(DUMP_REPOS, raw);
   return JSON.parse(raw);
+}
+
+function loadCommits() {
+  if (!COMMITS_JSON) return null;
+  const raw = JSON.parse(fs.readFileSync(COMMITS_JSON, "utf8"));
+  // Keyed case-insensitively so it lines up with the repo-name matching below.
+  return new Map(Object.entries(raw).map(([k, v]) => [k.toLowerCase(), Number(v) || 0]));
 }
 
 const repoNameOf = (repoUrl) => {
@@ -116,7 +138,16 @@ function computeAdvice(c) {
     `status ${c.status}`
   );
   if (c.ghArchived) add(-2, "GitHub-archived");
-  if (c.pushDays != null) {
+
+  // Commit count over the recent window outranks pushedAt when we have it: a
+  // repo-wide docs sweep moves every pushedAt at once, but only real work moves
+  // the commit count. Fall back to pushedAt when --commits-json wasn't supplied.
+  if (c.commits != null) {
+    add(
+      c.commits >= 20 ? 3 : c.commits >= 5 ? 2 : c.commits >= 1 ? 1 : -1,
+      `${c.commits} commits/${COMMIT_WINDOW}`
+    );
+  } else if (c.pushDays != null) {
     add(c.pushDays <= 90 ? 1 : c.pushDays > 730 ? -1 : 0, `pushed ${c.pushDays}d ago`);
   }
 
@@ -134,7 +165,9 @@ function computeAdvice(c) {
 // ---------------------------------------------------------------------------
 const profile = loadProfile();
 const repos = loadRepos();
+const commits = loadCommits();
 const byName = new Map(repos.map((r) => [r.name.toLowerCase(), r]));
+const commitsFor = (repoName) => (commits && repoName ? commits.get(repoName.toLowerCase()) ?? 0 : null);
 
 const xb = profile.meta?.x_brand ?? {};
 const BUCKET_LISTS = {
@@ -146,14 +179,21 @@ const BUCKET_LISTS = {
 
 const all = (profile.projects ?? []).map((p) => {
   const rn = repoNameOf(p.repoUrl);
-  const gh = rn ? byName.get(rn.name.toLowerCase()) : null;
+  // Some entries predate their repo and carry no repoUrl even though a repo of
+  // the same name exists. Fall back to id-matching so those don't masquerade as
+  // brand-new repos below — they just need their repoUrl filled in.
+  const gh =
+    (rn ? byName.get(rn.name.toLowerCase()) : null) ?? (p.repoUrl ? null : byName.get(p.id));
+  const repoUnlinked = !p.repoUrl && !!gh;
   const ghStars = gh ? gh.stargazerCount : null;
   const stars = ghStars ?? shardStars(p);
   const memberships = Object.entries(BUCKET_LISTS)
     .filter(([, ids]) => ids.includes(p.id))
     .map(([k]) => k);
   return {
+    key: p.id,
     id: p.id,
+    isNew: false,
     name: p.name,
     tagline: (p.tagline || "").trim(),
     tier: p.tier ?? "—",
@@ -169,34 +209,103 @@ const all = (profile.projects ?? []).map((p) => {
     starSource: ghStars != null ? "gh" : stars != null ? "shard" : "none",
     pushedAt: gh?.pushedAt ?? null,
     pushDays: daysSince(gh?.pushedAt),
+    commits: commitsFor(gh?.name),
     ghArchived: gh ? !!gh.isArchived : false,
     ghPrivate: gh ? !!gh.isPrivate : false,
     ghMissing: !!p.repoUrl && !gh,
+    repoUnlinked,
     memberships,
   };
 });
 
 // Candidate rule (from the task brief):
 //   tier !== "archive"  ||  stars >= 5  ||  recency === "active"
+// …plus anything with commits in the recent window, so work started since the
+// last triage can't be filtered out by a stale `tier`.
 const candidates = all.filter(
-  (c) => c.tier !== "archive" || (c.stars ?? 0) >= 5 || c.recency === "active"
+  (c) =>
+    c.tier !== "archive" ||
+    (c.stars ?? 0) >= 5 ||
+    c.recency === "active" ||
+    (c.commits ?? 0) >= 1
 );
-for (const c of candidates) c.advice = computeAdvice(c);
+
+// ---------------------------------------------------------------------------
+// new repos — public, non-fork, and not referenced by any project entry
+// ---------------------------------------------------------------------------
+// Private repos are never candidates: this database is public, and client /
+// research repos must not leak into it via a triage page.
+const linkedRepoNames = new Set();
+for (const p of profile.projects ?? []) {
+  const rn = repoNameOf(p.repoUrl);
+  if (rn) linkedRepoNames.add(rn.name.toLowerCase());
+  for (const l of p.extraLinks ?? []) {
+    const ln = repoNameOf(l.url ?? l.href);
+    if (ln) linkedRepoNames.add(ln.name.toLowerCase());
+  }
+  if (byName.has(p.id)) linkedRepoNames.add(p.id);
+}
+
+const newRepos = repos
+  .filter(
+    (r) =>
+      !r.isPrivate &&
+      !r.isFork &&
+      !NOT_A_PROJECT.has(r.name) &&
+      !linkedRepoNames.has(r.name.toLowerCase())
+  )
+  .map((r) => ({
+    key: `new:${r.name}`,
+    id: r.name,
+    isNew: true,
+    name: r.name,
+    tagline: (r.description || "").trim(),
+    tier: "—",
+    status: r.isArchived ? "archived" : "—",
+    recency: "—",
+    provenance: "—",
+    category: "—",
+    keywords: [],
+    url: null,
+    repoUrl: r.url ?? `https://github.com/ChanMeng666/${r.name}`,
+    repoOwner: "ChanMeng666",
+    stars: r.stargazerCount ?? 0,
+    starSource: "gh",
+    pushedAt: r.pushedAt ?? null,
+    pushDays: daysSince(r.pushedAt),
+    commits: commitsFor(r.name),
+    createdAt: r.createdAt ?? null,
+    ghArchived: !!r.isArchived,
+    ghPrivate: false,
+    ghMissing: false,
+    repoUnlinked: false,
+    memberships: [],
+  }));
+
+for (const c of [...candidates, ...newRepos]) c.advice = computeAdvice(c);
 
 const sortKey = (c) => [-(c.stars ?? 0), c.name.toLowerCase()];
-candidates.sort((a, b) => {
+const byStars = (a, b) => {
   const [as, an] = sortKey(a);
   const [bs, bn] = sortKey(b);
   return as - bs || (an < bn ? -1 : an > bn ? 1 : 0);
-});
+};
+candidates.sort(byStars);
+newRepos.sort((a, b) => (b.commits ?? 0) - (a.commits ?? 0) || byStars(a, b));
+
+// One flat list drives the DOM; `isNew` only changes which levels a card offers.
+const cards = [...newRepos, ...candidates];
 
 const GENERATED_AT = new Date().toISOString().slice(0, 10);
-const facets = (k) => [...new Set(candidates.map((c) => c[k]))].sort();
+const facets = (k) => [...new Set(cards.map((c) => c[k]))].sort();
 
 process.stderr.write(
   `[triage] ${all.length} projects → ${candidates.length} candidates ` +
     `(non-archive ${all.filter((c) => c.tier !== "archive").length}; ` +
-    `archive rescued by ≥5★ or active ${candidates.filter((c) => c.tier === "archive").length})\n`
+    `archive rescued by ≥5★/active/commits ${candidates.filter((c) => c.tier === "archive").length}) ` +
+    `+ ${newRepos.length} unrecorded repos` +
+    (commits ? ` · commit counts loaded (${COMMIT_WINDOW} window)` : " · no commit data") +
+    "\n"
 );
 
 // ---------------------------------------------------------------------------
@@ -268,11 +377,20 @@ const LEVELS = [
   ["kept", "Kept, not shown"],
   ["archived", "Demote to archive"],
 ];
+// A repo with no data entry can't be "kept" or "demoted" — it isn't recorded
+// yet. Its choices are how prominently to record it, or not to.
+const NEW_LEVELS = [
+  ["hero", "Add as hero card"],
+  ["listed", "Add + list"],
+  ["add", "Add, data only"],
+  ["skip", "Skip — don't record"],
+];
 
 const card = (c) => {
   const push = c.pushedAt
     ? `${c.pushedAt.slice(0, 10)} <span class="dim">(${c.pushDays}d)</span>`
     : `<span class="dim">no GitHub repo</span>`;
+  const levels = c.isNew ? NEW_LEVELS : LEVELS;
   const starTxt =
     c.stars == null
       ? '<span class="dim">—</span>'
@@ -281,6 +399,7 @@ const card = (c) => {
     c.ghArchived ? `<span class="flag danger">GH archived</span>` : "",
     c.ghPrivate ? `<span class="flag warn">private</span>` : "",
     c.ghMissing ? `<span class="flag warn">repo not in gh list</span>` : "",
+    c.repoUnlinked ? `<span class="flag warn" title="a repo of this name exists but the entry has no repoUrl">repoUrl missing</span>` : "",
   ].join("");
   const mem = c.memberships.length
     ? c.memberships.map((m) => `<span class="flag mem">${esc(m)}</span>`).join("")
@@ -293,13 +412,16 @@ const card = (c) => {
     .join(" · ");
 
   return `
-<article class="card" data-id="${esc(c.id)}" data-tier="${esc(c.tier)}" data-prov="${esc(c.provenance)}"
+<article class="card${c.isNew ? " is-new" : ""}" data-key="${esc(c.key)}" data-id="${esc(c.id)}"
+  data-new="${c.isNew ? "1" : "0"}"
+  data-tier="${esc(c.tier)}" data-prov="${esc(c.provenance)}"
   data-cat="${esc(c.category)}" data-stars="${c.stars ?? 0}" data-push="${c.pushDays ?? 99999}"
-  data-name="${esc(c.name.toLowerCase())}">
+  data-commits="${c.commits ?? -1}" data-name="${esc(c.name.toLowerCase())}">
   <header class="card-head">
     <div>
       <h2>${esc(c.name)}</h2>
       <code class="id">${esc(c.id)}</code>
+      ${c.isNew ? `<span class="flag new-tag">not in the database</span>` : ""}
     </div>
     <div class="stars" title="GitHub stars">${starTxt}<span class="star-glyph">★</span></div>
   </header>
@@ -313,6 +435,13 @@ const card = (c) => {
     <div><dt>provenance</dt><dd>${esc(c.provenance)}</dd></div>
     <div><dt>category</dt><dd>${esc(c.category)}</dd></div>
     <div><dt>last push</dt><dd>${push}</dd></div>
+    ${
+      c.commits != null
+        ? `<div><dt>commits / ${esc(COMMIT_WINDOW)}</dt><dd class="${
+            c.commits > 0 ? "hot" : ""
+          }">${c.commits}${c.commits >= 100 ? "+" : ""}</dd></div>`
+        : ""
+    }
   </dl>
   <div class="meta-row"><span class="lbl">in buckets</span> ${mem} ${flags}</div>
   ${links ? `<div class="meta-row links">${links}</div>` : ""}
@@ -326,11 +455,13 @@ const card = (c) => {
 
   <div class="controls">
     <div class="levels" role="radiogroup" aria-label="level for ${esc(c.name)}">
-      ${LEVELS.map(
-        ([v, label]) => `<label class="lv lv-${v}">
-        <input type="radio" name="lv__${esc(c.id)}" value="${v}" data-role="level">
+      ${levels
+        .map(
+          ([v, label]) => `<label class="lv lv-${v}">
+        <input type="radio" name="lv__${esc(c.key)}" value="${v}" data-role="level">
         <span>${label}</span></label>`
-      ).join("")}
+        )
+        .join("")}
     </div>
     <div class="sub">
       <label class="bkt">bucket
@@ -441,6 +572,15 @@ a{color:var(--accent)}
 .links a{margin-right:8px}
 .flag{font-size:.68rem;padding:1px 7px;border-radius:999px;border:1px solid var(--line)}
 .flag.mem{background:var(--state-soft);border-color:var(--state);color:var(--state)}
+/* "not in the database" is a tag on the data, so it takes the pixelGlare tag
+   treatment — not the accent, which this page reserves for emphasis and never
+   for a state. The dashed border is what carries it at card scale, kept clearly
+   distinct from the solid cyberViolet rail that marks a decision. */
+.flag.new-tag{background:var(--warn);border-color:var(--warn);color:var(--warn-ink);
+  font-weight:700;margin-left:6px;white-space:nowrap}
+.card.is-new{border-style:dashed}
+/* Emphasis on a number, the same job the star glyph does — an accent use, not a state. */
+.evidence dd.hot{font-weight:700;color:var(--accent)}
 .flag.warn{background:var(--warn);border-color:var(--warn);color:var(--warn-ink)}
 .flag.danger{background:var(--danger);border-color:var(--danger);color:var(--danger-ink);font-weight:700}
 
@@ -493,13 +633,25 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
 
 <div class="wrap">
   <h1>Project triage <span class="dot">/</span> README curation</h1>
-  <p class="sub-title">${candidates.length} candidates · generated ${GENERATED_AT} from <code>data/profile/*.yaml</code> + <code>gh repo list</code>.
+  <p class="sub-title">${candidates.length} recorded candidates${
+    newRepos.length ? ` + <b>${newRepos.length} repos not yet in the database</b>` : ""
+  } · generated ${GENERATED_AT} from <code>data/profile/*.yaml</code> + <code>gh repo list</code>.
   Every card starts <b>undecided</b>. The dashed ★ line is an advisory hint, not a selection — nothing is chosen for you.
   Decisions are saved in this browser as you click; Export any time.</p>
+  ${
+    commits
+      ? `<p class="sub-title"><b>To see what you're actually building right now, sort by “commits ↓”.</b>
+  Last-push dates are misleading here — a bulk docs sweep in June moved forty repos at once, so the
+  <code>commits / ${esc(COMMIT_WINDOW)}</code> figure is the honest activity signal. ${
+    cards.filter((c) => (c.commits ?? 0) > 0).length
+  } of ${cards.length} cards have any commits in that window.</p>`
+      : ""
+  }
 
   <div class="bar">
     <input type="search" id="q" placeholder="search name / id…" aria-label="search">
     <select id="sort" aria-label="sort">
+      ${commits ? `<option value="commits">sort: commits ↓ (what you're building)</option>` : ""}
       <option value="stars">sort: stars ↓</option>
       <option value="tier">sort: tier</option>
       <option value="prov">sort: provenance</option>
@@ -521,9 +673,15 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
       <option value="undecided">undecided only</option>
       <option value="decided">decided only</option>
     </select>
+    <select id="fKind" aria-label="filter recorded or new">
+      <option value="">kind: all</option>
+      <option value="new">not in database only</option>
+      <option value="recorded">recorded projects only</option>
+      ${commits ? `<option value="active">has commits in ${esc(COMMIT_WINDOW)}</option>` : ""}
+    </select>
     <button type="button" id="export" class="primary">Export JSON</button>
     <button type="button" id="resetAll">Reset all</button>
-    <span class="counter"><b id="nUndecided">${candidates.length}</b> undecided / ${candidates.length}</span>
+    <span class="counter"><b id="nUndecided">${cards.length}</b> undecided / ${cards.length}</span>
   </div>
 
   <section class="hero-panel" id="heroPanel" hidden>
@@ -532,7 +690,7 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
   </section>
 
   <main class="grid" id="grid">
-    ${candidates.map(card).join("\n")}
+    ${cards.map(card).join("\n")}
   </main>
 </div>
 
@@ -549,14 +707,19 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
 <script>
 (function(){
   "use strict";
-  var KEY = "chan-readme-triage-v1";
-  var IDS = ${JSON.stringify(candidates.map((c) => c.id))};
-  var state = { d: {}, heroOrder: [] };   // d[id] = {level,bucket,spotlight}
+  // v2: keys are namespaced ("new:<repo>" for repos with no data entry), so a v1
+  // blob would restore under the wrong keys — bump rather than migrate.
+  var KEY = "chan-readme-triage-v2";
+  var IDS = ${JSON.stringify(cards.map((c) => c.key))};
+  var META = ${JSON.stringify(
+    Object.fromEntries(cards.map((c) => [c.key, { id: c.id, isNew: c.isNew }]))
+  )};
+  var state = { d: {}, heroOrder: [] };   // d[key] = {level,bucket,spotlight}
 
   // Restored values are untrusted: a stale/poisoned localStorage entry (e.g. a level
   // name from a future rename under the same key) must degrade to "undecided", never
   // produce an off-contract export row. Whitelist on the way in.
-  var LEVELS = { hero:1, listed:1, kept:1, archived:1 };
+  var LEVELS = { hero:1, listed:1, kept:1, archived:1, add:1, skip:1 };
   var BUCKETS = { aiAgent:1, craft:1 };
   function sanitize(d){
     if (!d || typeof d !== "object") return null;
@@ -591,11 +754,11 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
   var grid = document.getElementById("grid");
   var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
   var byId = {};
-  cards.forEach(function(el){ byId[el.dataset.id] = el; });
+  cards.forEach(function(el){ byId[el.dataset.key] = el; });
 
   // ---- restore saved decisions onto the DOM (nothing is preset in the HTML) --
   function applyToCard(el){
-    var id = el.dataset.id, d = get(id);
+    var id = el.dataset.key, d = get(id);
     var radios = el.querySelectorAll('input[data-role="level"]');
     var bucket = el.querySelector('[data-role="bucket"]');
     var spot = el.querySelector('[data-role="spotlight"]');
@@ -617,7 +780,7 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
 
   grid.addEventListener("change", function(e){
     var el = e.target.closest(".card"); if (!el) return;
-    var id = el.dataset.id, role = e.target.dataset.role;
+    var id = el.dataset.key, role = e.target.dataset.role;
     if (role === "level") { setLevel(id, e.target.value); return; }
     var d = state.d[id] || (state.d[id] = { level:null, bucket:null, spotlight:false });
     if (role === "bucket") d.bucket = e.target.value || null;
@@ -627,7 +790,7 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
 
   grid.addEventListener("click", function(e){
     if (!e.target.matches('[data-role="clear"]')) return;
-    var el = e.target.closest(".card"), id = el.dataset.id;
+    var el = e.target.closest(".card"), id = el.dataset.key;
     delete state.d[id];
     state.heroOrder = state.heroOrder.filter(function(x){ return x !== id; });
     save(); applyToCard(el); renderHero(); renderCount();
@@ -660,7 +823,7 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
       var pos = document.createElement("span"); pos.className = "pos"; pos.textContent = (i+1) + ".";
       var grip = document.createElement("span"); grip.className = "grip"; grip.textContent = "⠿";
       var name = document.createElement("span");
-      name.textContent = (byId[id].querySelector("h2").textContent) + "  (" + id + ")";
+      name.textContent = (byId[id].querySelector("h2").textContent) + "  (" + META[id].id + ")";
       li.appendChild(pos); li.appendChild(grip); li.appendChild(name);
       heroList.appendChild(li);
     });
@@ -696,12 +859,13 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
   var fProv = document.getElementById("fProv");
   var fCat = document.getElementById("fCat");
   var fState = document.getElementById("fState");
+  var fKind = document.getElementById("fKind");
   var TIER_ORDER = { flagship:0, primary:1, secondary:2, archive:3 };
 
   function refresh(){
     var term = q.value.trim().toLowerCase();
     cards.forEach(function(el){
-      var id = el.dataset.id, d = get(id);
+      var id = el.dataset.key, d = get(id);
       var ok = true;
       if (term && (el.dataset.name.indexOf(term) < 0 && id.toLowerCase().indexOf(term) < 0)) ok = false;
       if (fTier.value && el.dataset.tier !== fTier.value) ok = false;
@@ -709,10 +873,14 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
       if (fCat.value && el.dataset.cat !== fCat.value) ok = false;
       if (fState.value === "undecided" && d && d.level) ok = false;
       if (fState.value === "decided" && !(d && d.level)) ok = false;
+      if (fKind.value === "new" && el.dataset.new !== "1") ok = false;
+      if (fKind.value === "recorded" && el.dataset.new === "1") ok = false;
+      if (fKind.value === "active" && !(+el.dataset.commits > 0)) ok = false;
       el.classList.toggle("hidden", !ok);
     });
     var mode = sortSel.value;
     var sorted = cards.slice().sort(function(a,b){
+      if (mode === "commits") return (+b.dataset.commits) - (+a.dataset.commits) || (+b.dataset.stars) - (+a.dataset.stars);
       if (mode === "stars") return (+b.dataset.stars) - (+a.dataset.stars) || a.dataset.name.localeCompare(b.dataset.name);
       if (mode === "push")  return (+a.dataset.push) - (+b.dataset.push);
       if (mode === "tier")  return (TIER_ORDER[a.dataset.tier] - TIER_ORDER[b.dataset.tier]) || (+b.dataset.stars) - (+a.dataset.stars);
@@ -722,7 +890,7 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
     });
     sorted.forEach(function(el){ grid.appendChild(el); });
   }
-  [q,sortSel,fTier,fProv,fCat,fState].forEach(function(el){
+  [q,sortSel,fTier,fProv,fCat,fState,fKind].forEach(function(el){
     el.addEventListener("input", refresh);
     el.addEventListener("change", refresh);
   });
@@ -731,11 +899,12 @@ dialog::backdrop{background:${alpha(INK, 0.55)}}
   function exportArray(){
     var order = heroIds();
     var rest = IDS.filter(function(id){ return order.indexOf(id) < 0; });
-    return order.concat(rest).map(function(id){
-      var d = get(id) || {};
+    return order.concat(rest).map(function(key){
+      var d = get(key) || {};
       var level = d.level || "undecided";
       return {
-        id: id,
+        id: META[key].id,
+        "new": META[key].isNew,
         level: level,
         spotlight: !!d.spotlight,
         bucket: level === "listed" ? (d.bucket || null) : null

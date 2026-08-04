@@ -6,7 +6,7 @@
 **Name:** Chan Meng
 **Pronouns:** She/Her
 **Location:** Auckland, Auckland, New Zealand
-**Current:** Engram  |  **Education:** Lincoln University (NZ)
+**Current:** ArchCanvas  |  **Education:** Lincoln University (NZ)
 **Website:** [My Website](https://chanmeng.org/)  |  **Connections:** 500+  |  **Open to work:** yes
 
 **Headline:**

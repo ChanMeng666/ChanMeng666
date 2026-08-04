@@ -717,8 +717,8 @@ projects:
   - id: interactive-story-generator
     provenance: personal
     tier: archive
-    recency: historical
-    lastUpdated: "2026-07-04"
+    recency: deprecated
+    lastUpdated: "2026-08-05"
     name: Interactive Story Generator
     priority: 42
     category: creative
@@ -729,7 +729,7 @@ projects:
     techStack: [Python, Gradio, PyTorch, "Hugging Face Spaces"]
     narrative:
       impactHeadline: "AI-powered collaborative storytelling platform on Hugging Face Spaces — Gradio + PyTorch demo for multi-genre, character-driven branching narratives. One of Chan's early ML portfolio pieces, MIT-licensed for one-click deployment."
-    status: live
+    status: archived
   - id: emoji-story-generator
     provenance: personal
     tier: archive
@@ -842,9 +842,13 @@ projects:
   # Personal Branding Tools
   - id: ai-programming-teaching-project
     provenance: personal
+    # Band change 2026-08-05: back to the AI-agents table when the card band was
+    # cut to three. Still a build-validated proof anchor for an engagementRole,
+    # which requires it to stay in SOME displayed bucket — aiAgentProjectIds
+    # satisfies that. Removing it from every bucket would fail the build.
     tier: primary
     recency: active
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-08-05"
     meta:
       x_brand:
         featuredStack: [docusaurus, react, cloudflare, typst]
@@ -951,9 +955,9 @@ projects:
   # Games & Interactive
   - id: css-tower-defense
     provenance: personal
-    tier: secondary
+    tier: primary
     recency: recent
-    lastUpdated: "2026-07-16"
+    lastUpdated: "2026-08-05"
     name: Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa)
     priority: 15
     category: games
@@ -1335,13 +1339,17 @@ projects:
     provenance: hackathon
     tier: primary
     recency: recent
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-08-05"
     name: Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)
     priority: 14
     category: ai-apps
     clientOrgId: she-sharp
     relatedWorkId: she-sharp
-    relatedProjectIds: [she-sharp]
+    # relatedProjectIds intentionally does NOT list she-sharp. The relation is
+    # declared once, on the she-sharp card (relatedProjectIds: [her-waka,
+    # ai-hackathon-assistant]) — declaring it here too rendered BOTH
+    # "↳ Part of She Sharp" (from clientOrgId) and "↳ Related: She Sharp" on
+    # the same row once this project became a listed aiAgent row on 2026-08-05.
     tagline: "Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template"
     url: https://hackathon.shesharp.org.nz/
     repoUrl: https://github.com/ChanMeng666/event-qa-ai-template
@@ -1631,12 +1639,12 @@ projects:
     status: live
   - id: her-waka
     provenance: client
-    tier: secondary
+    tier: primary
     recency: historical
     meta:
       x_brand:
         featuredStack: [mintlify, github]
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-08-05"
     name: HER WAKA — Employment Programme for Women in Auckland
     priority: 30
     category: web-apps
@@ -1955,8 +1963,8 @@ projects:
   - id: chan-meng-cli
     provenance: personal
     tier: archive
-    recency: historical
-    lastUpdated: "2026-07-04"
+    recency: deprecated
+    lastUpdated: "2026-08-05"
     name: chan-meng-cli
     priority: 63
     category: branding
@@ -1966,7 +1974,7 @@ projects:
     image: /public/screenshots/chan-meng-cli-screenshot.png
     techStack: ["Node.js 18+ (ES2022)", "Ink (React for CLIs, v2.0 rewrite)", "npx-installable (npm: chan-meng)"]
     keywords: ["Spec-driven development", "Interactive npx CLI", "Ink / React for CLIs", "Personal-brand storytelling"]
-    status: live
+    status: archived
   - id: github-visitor-counter
     provenance: personal
     tier: secondary
@@ -2171,8 +2179,12 @@ projects:
     provenance: client
     tier: primary
     recency: active
-    lastUpdated: "2026-07-10"
+    lastUpdated: "2026-08-05"
     name: GAVIGO Website
+    # Shares gavigo-ire's company mark deliberately: same client, and the
+    # commissioned table renders an empty cell without a logo. Added when this
+    # entry rejoined commissionedProjectIds (2026-08-05).
+    logo: /public/brands/gavigo-mark.svg
     priority: 43
     category: web-apps
     clientOrgId: gavigo
@@ -2359,7 +2371,10 @@ projects:
     category: ai-apps
     clientOrgId: sanicle
     relatedWorkId: sanicle
-    relatedProjectIds: [sanicle-ai]
+    # sanicle-ai-mobile is the mobile prototype spun out of this platform —
+    # already linked from extraLinks below; declared here too so the Sanicle
+    # cluster is walkable from the data. All three are archived.
+    relatedProjectIds: [sanicle-ai, sanicle-ai-mobile]
     tagline: "Sanicle's official website and production platform (sanicle.cloud) — menstrual & menopause workplace-wellness SaaS powered by IBM watsonx AI ('Ask Sani' assistant), with predictive analytics and B2B/B2G deployment; Chan's IBM watsonx integration earned Sanicle its IBM Silver Partner certification (~98% solo, 350+ commits)"
     repoUrl: https://github.com/ChanMeng666/sanicle-cloud
     # url omitted — sanicle.cloud deployment offline (DNS dead); source repo remains.
@@ -2696,9 +2711,9 @@ projects:
       impactHeadline: "A zero-build teaching slideshow taking students 12-18 from 'touch objects' to 'code responds' in 20 minutes — three vibe-coded Web Audio build-alongs for the Makey Makey, on Chan's Caldera brand, deployable to GitHub Pages."
   - id: chanmeng-knowledge-base
     provenance: personal
-    tier: secondary
-    recency: active
-    lastUpdated: "2026-07-04"
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-08-05"
     name: Chan Meng's Knowledge Base
     priority: 95
     category: tools
@@ -2708,7 +2723,7 @@ projects:
     extraLinks:
       - { label: "Live site", url: "https://chanmeng666.github.io/chanmeng-knowledge-base/" }
     techStack: ["Quartz 4", Obsidian, Markdown, "Node.js", "GitHub Pages"]
-    status: live
+    status: archived
     startDate: "2026-04"
     narrative:
       impactHeadline: "A searchable, publishable knowledge base distilling real-project learnings — Neon + Flask auth, Stripe on Cloudflare Workers, CopilotKit + LangGraph, plugin architecture, SEO/GEO, and DevOps migrations — authored in Obsidian and built with Quartz to GitHub Pages."
@@ -2722,6 +2737,10 @@ projects:
     category: branding
     tagline: Personal-brand monkey logo reconstructed from hand-drawn art into smooth cubic Bézier curves — reproducible, scalable, parametric SVG generated by a dependency-free Python script; 8 ready-to-use variants. The identity used across Chan's GitHub profile (ChanMeng666) and personal-brand / career-database system
     repoUrl: https://github.com/ChanMeng666/chan-meng-personal-brand-logo
+    # This logo is the worked example the logo-as-code skill was generalized
+    # FROM — the method existed here first. Both are triaged "kept", so
+    # neither renders on the README and this link is data only.
+    relatedProjectIds: [logo-as-code-skill]
     extraLinks:
       - { label: "Generalized skill (logo-as-code)", url: "https://github.com/ChanMeng666/logo-as-code-skill" }
     techStack: ["Python 3", "Node.js", Sharp, SVG]
@@ -2814,6 +2833,9 @@ projects:
     category: branding
     tagline: A Claude Code skill that turns a hand-drawn, sketched, or scanned logo into clean, reproducible code — fitting smooth cubic Bézier curves to the real outline to generate an editable SVG, color/layout variants, and PNG/ICO/favicon exports
     repoUrl: https://github.com/ChanMeng666/logo-as-code-skill
+    # Generalized from chan-meng-personal-brand-logo — that repo is the worked
+    # example this skill was extracted from, not a consumer of it.
+    relatedProjectIds: [chan-meng-personal-brand-logo]
     extraLinks:
       - { label: "Worked example (personal-brand logo)", url: "https://github.com/ChanMeng666/chan-meng-personal-brand-logo" }
     techStack: ["Claude Code Skill", "Python 3", "Node.js", sharp, "png-to-ico", SVG]
@@ -2836,3 +2858,151 @@ projects:
     startDate: "2026-06"
     narrative:
       impactHeadline: "A Claude Code skill that probes a live URL, writes a committed scenario file, captures hero/mobile/full-page WebP shots and a size-capped demo GIF (plus MP4), and injects an idempotent SHOWCASE block into a README — with a human review gate before any commit."
+
+  - id: a11y-loop
+    provenance: personal
+    tier: primary
+    recency: active
+    lastUpdated: "2026-08-05"
+    name: a11y-loop
+    priority: 104
+    category: ai-apps
+    tagline: A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then proves what it can prove with a real Playwright + axe-core browser audit across the states the agent built — and states plainly what it could not check
+    repoUrl: https://github.com/ChanMeng666/a11y-loop
+    logo: /public/brands/a11y-loop-logo.svg
+    extraLinks:
+      - { label: "npm package", url: "https://www.npmjs.com/package/a11y-loop" }
+      - { label: "Promo video repo (Remotion)", url: "https://github.com/ChanMeng666/a11y-loop-promo-video" }
+      - { label: "Benchmark results", url: "https://github.com/ChanMeng666/a11y-loop/blob/main/evals/benchmark-results.md" }
+    techStack:
+      - "Claude Code Skill (Agent Skills open standard)"
+      - "Node.js >= 20"
+      - Playwright
+      - "axe-core 4.12"
+      - "WCAG 2.2 AA"
+      - JavaScript
+      - "GitHub Actions CI"
+    metrics:
+      - { label: "npm version", value: "v0.2.4 (8 published versions)" }
+      - { label: "License",     value: "MIT" }
+    status: active
+    startDate: "2026-07"
+    publicSummary: |
+      Accessible interfaces usually fail at the moment the code is
+      written, not at the audit months later. a11y-loop moves the check
+      to that moment: it gives an AI coding agent the rules up front so
+      it writes accessible markup by default, then drives a real browser
+      over what it built — Playwright plus axe-core, across the actual
+      interaction states rather than one static snapshot — and reports
+      what passed. Its distinguishing habit is the honest part: it
+      publishes an explicit list of what it could NOT verify, so a green
+      run never implies full WCAG 2.2 AA coverage it has no standing to
+      claim. Ships as both a Claude Code skill and a standalone CLI
+      (`npx a11y-loop`), with a contrast checker that proposes fixes and
+      a CI mode. MIT.
+    narrative:
+      impactHeadline: "Shifts accessibility left into the agent's own write step, then verifies it in a real browser across built states — and publishes an explicit 'could not check' list, so a passing run never overclaims WCAG 2.2 AA coverage."
+      problem: |
+        AI coding agents produce interfaces fast, and they produce
+        inaccessible ones by default: missing focus indicators, unlabelled
+        controls, contrast that fails at a ratio nobody measured. The usual
+        remedy is a late audit against a static page, which misses every
+        state a user actually reaches and reports a pass the tool has no
+        standing to claim.
+      audience: |
+        Developers who build UI by directing coding agents, and the teams
+        who inherit that code — plus anyone who needs a defensible
+        accessibility position rather than a badge.
+      technicalApproach: |
+        Two halves sharing one rule set. The authoring half is an Agent
+        Skill on the open standard, so Claude Code, Cursor and Copilot pick
+        up the same defaults. The verification half drives Playwright over
+        the built states and runs axe-core 4.12 against WCAG 2.2 AA, then
+        partitions the result into checked, failed, and — the part most
+        tools omit — not checkable by automation.
+      myRole: |
+        Sole author. Published to npm as `a11y-loop`; the repo is written
+        agent-first, with an AGENTS.md alongside the README so an agent can
+        orient itself without a human intermediary.
+    # The promo video is linked via extraLinks above, NOT relatedProjectIds:
+    # relatedProjectIds renders a "↳ Related:" link on the README, and Chan
+    # triaged a11y-loop-promo-video as data-only. Same treatment echook gives
+    # echook-promo-video. The relationship is still declared — from the child
+    # side, where it renders nowhere.
+
+  - id: a11y-loop-promo-video
+    provenance: personal
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-08-05"
+    name: a11y-loop — Promo Video
+    priority: 105
+    category: creative
+    tagline: A 2:59 Remotion film for a11y-loop in which nothing on screen is mocked up — every page, terminal and number is captured from the real CLI by scripts in the repo, and an automated verify step gates the render
+    repoUrl: https://github.com/ChanMeng666/a11y-loop-promo-video
+    techStack:
+      - "Remotion 4"
+      - React
+      - TypeScript
+      - "ElevenLabs (narration)"
+      - "Suno (score)"
+      - "SRT + VTT caption sidecars"
+    metrics:
+      - { label: "Runtime", value: "2:59 (5,370 frames at 1920x1080, 30 fps)" }
+      - { label: "Masters", value: "3 (standard, reduced-motion, caption sidecars)" }
+    status: live
+    startDate: "2026-07"
+    narrative:
+      impactHeadline: "The promo film for a11y-loop, made under the standard the tool itself argues for: every on-screen number is captured from the real CLI and gated by an automated verify step, and three design decisions changed mid-production because measuring them contradicted the estimate."
+      technicalApproach: |
+        Remotion + React, narrated with ElevenLabs and scored with Suno.
+        Two production rules do the work. One idea per beat — a `Beats`
+        component owns scene switching so only one beat can exist at a
+        time, after a first cut stacked two complete layouts on screen.
+        And nothing on screen is mocked up: every page, terminal and figure
+        comes from running the real tool against the real demo pages via
+        capture scripts in the repo. That second rule has teeth — the
+        accent colour, a hairline rule and a contrast demo were all changed
+        after measurement contradicted the estimate. Ships a
+        reduced-motion master alongside the standard one, with SRT and VTT
+        sidecars.
+    relatedProjectIds: [a11y-loop]
+
+  - id: product-reality-check
+    provenance: personal
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-08-05"
+    name: product-reality-check
+    priority: 106
+    category: ai-apps
+    tagline: A Claude agent skill for validation-first market research — competitor sweeps, prior-art audits of every "first/only" claim, bottom-up sizing from named buyers, a red-team kill memo and dated evidence gates, so a side project meets reality before months go into it
+    repoUrl: https://github.com/ChanMeng666/product-reality-check
+    techStack:
+      - "Claude Code Skill (Agent Skills open standard)"
+      - "Claude Code"
+    status: active
+    startDate: "2026-08"
+    narrative:
+      impactHeadline: "Runs the unglamorous half of shipping a product — who would actually pay, which superlatives survive a prior-art check, what the bottom-up size really is — and is built to return truth rather than encouragement, with a falsification section on every report."
+      problem: |
+        Most side projects are validated by vibes: build the thing, write a
+        README calling it the first tool that does X, post it, watch
+        nothing happen, and never learn which of the three possible
+        reasons it was.
+      technicalApproach: |
+        An Agent Skill that forces five things hand-waved validation skips.
+        A falsification section on every report — specific, cheap-to-check
+        observations that would overturn the conclusion. A prior-art audit
+        on every superlative, since a stranger can refute "first" in one
+        search and that refutation discredits everything beside it. A claim
+        ledger, where each externally checkable number carries a source URL
+        fetched in-session and a verification date, and numbers without a
+        row get deleted rather than softened. Bottom-up sizing from named
+        buyer archetypes and sourced price anchors, never "1% of a $40B
+        market". And a red-team kill memo followed by numeric go/kill
+        thresholds set before the evidence they will judge.
+      myRole: |
+        Sole author. MIT. Triggers on the questions people actually ask —
+        "who would pay for this?", "why is nobody using it?" — rather than
+        requiring a command to be memorised.

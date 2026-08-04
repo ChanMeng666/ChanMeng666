@@ -218,11 +218,11 @@ Protocol (MCP), and agent skills.
   title: "AI Agent Architect",
   org: "Engram",
   org-url: "https://engram.media/",
-  dates: "May 2026 - Present",
+  dates: "May 2026 - Jul 2026",
   location: "Albuquerque, New Mexico, United States",
   arrangement: "Remote",
   bullets: (
-    [Recruited onto Anthropic's Partner Network architect track after the founder's Claude agent surfaced this open-source portfolio; now in the 45-day Architect Cohort on the Claude Certified Architect: Foundations curriculum.],
+    [Recruited onto Anthropic's Partner Network architect track after the founder's Claude agent surfaced this open-source portfolio; completed the 45-day Architect Cohort, working through the Partner Network curriculum and contributing to the cohort's agent, skill and Model Context Protocol integration conventions.],
   ),
 )
 
@@ -230,11 +230,11 @@ Protocol (MCP), and agent skills.
   title: "AI Instructor & Mentor",
   org: "TechNest Community",
   org-url: "https://www.technestcommunity.com/",
-  dates: "Apr 2026 - Present",
+  dates: "Apr 2026 - Aug 2026",
   location: "St John's, Newfoundland, Canada",
   arrangement: "Remote",
   bullets: (
-    [Sole instructor of TechNest's first AI-specialised mentorship track, the fifth teaching cohort delivered since 2024; over 12 weeks students go from browser ChatGPT to shipping a live multi-user AI product by directing coding agents. Also built the bilingual platform that hosts it, with an in-course RAG assistant on Cloudflare Workers.],
+    [Sole instructor of TechNest's first AI-specialised mentorship track, the fifth teaching cohort delivered since 2024; over 12 weeks students went from browser ChatGPT to shipping a live multi-user AI product by directing coding agents. Graduated 30 students who shipped 6 deployed multi-user AI products. Also built the bilingual platform that hosts it, with an in-course RAG assistant on Cloudflare Workers.],
   ),
 )
 

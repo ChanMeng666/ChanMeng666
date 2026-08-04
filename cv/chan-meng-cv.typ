@@ -18,7 +18,7 @@
 #set document(
   title: "Chan Meng — AI Agent Architect & Full-stack Engineer",
   author: "Chan Meng",
-  description: "Two-page CV for Chan Meng — agentic engineer, Claude Code stack expert, senior AI programming mentor based in Auckland, New Zealand. On Anthropic Partner Network track via Engram. Canonical: https://chanmeng.org/cv · JSON-LD: https://chanmeng.org/cv.jsonld · agent summary: https://chanmeng.org/cv-llms.txt",
+  description: "Two-page CV for Chan Meng — agentic engineer, Claude Code stack expert, senior AI programming mentor based in Auckland, New Zealand. Came through the Anthropic Partner Network track via Engram. Canonical: https://chanmeng.org/cv · JSON-LD: https://chanmeng.org/cv.jsonld · agent summary: https://chanmeng.org/cv-llms.txt",
   keywords: (
     "AI Agent Architect", "agentic engineer", "orchestrator of agents",
     "senior AI programming mentor", "AI-tooling expert",
@@ -27,7 +27,12 @@
     "Claude Code skills", "Claude Code hooks", "agent skills",
     "Codex CLI", "Cursor", "OpenAI Codex", "OpenAI Agents SDK",
     "MCP server", "MCP gateway", "MCP", "ACP", "tool_use", "JSON Schema",
-    "Anthropic SDK", "Anthropic Partner Network", "Claude Certified Architect",
+    // "Claude Certified Architect — Foundations curriculum", not the bare
+    // credential name: the curriculum was completed and the practice exam
+    // passed, but the certification exam was never sat. A bare keyword here
+    // reads to a recruiter LLM as a held credential.
+    "Anthropic SDK", "Anthropic Partner Network",
+    "Claude Certified Architect — Foundations curriculum",
     "agentic workflows", "multi-agent orchestration", "A2A", "AGNTCY",
     "LLMOps", "evaluations", "mcp-evals", "Vitest", "Cypress",
     "Lighthouse", "OpenTelemetry", "web-vitals",

@@ -65,20 +65,19 @@ work:
     name: Engram
     position: AI Agent Architect
     startDate: "2026-05"
-    endDate: null                       # null = present
+    endDate: "2026-07"
     location: Albuquerque, New Mexico, United States (remote)
     url: https://engram.media/
     featured: true
     tier: flagship
-    recency: active
-    lastUpdated: "2026-05-18"
+    recency: recent
+    lastUpdated: "2026-08-04"
     keywords:
       - AI System Architecture
       - Mission Control (internal product)
       - Model Context Protocol (MCP)
       - Agentic Workflows
       - Anthropic Claude Partner Network
-      - Claude Certified Architect — Foundations (CCA-F)
       - Notion knowledge base
       - API-as-UI experiences
     narrative:
@@ -124,12 +123,11 @@ work:
         for what we're looking for."*
         ([announcement post](https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-activity-7459724144671195136-3JoV))
 
-        **What the cohort engagement covers.** 45-day Architect Cohort
-        onboarding (May–June 2026) at ~10–15 hours per week, structured
-        as a mutual evaluation period. Specific responsibilities:
-        (1) completing Anthropic's **Claude Partner Network Learning
-        Path** (4 courses) and passing the **Claude Certified Architect —
-        Foundations (CCA-F)** examination — building on already-held
+        **What the cohort engagement covered.** A 45-day Architect Cohort
+        onboarding at ~10–15 hours per week, structured as a mutual
+        evaluation period; the engagement ran May–July 2026.
+        Responsibilities were: (1) working through Anthropic's **Claude
+        Partner Network Learning Path** — building on already-held
         Anthropic credentials (**AI Fluency: Framework & Foundations**,
         Aug 2025; **Claude Code in Action**, Aug 2025, credential
         ID JHIY9NPYTR2D); (2) participating in weekly working sessions
@@ -165,28 +163,39 @@ work:
         agent surfaces where conversational intent orchestrates
         downstream tools and the model's chain-of-reasoning becomes
         the user interface — not a chat widget bolted onto a form.
-      # TODO(narrative-tech): optional — add 1–2 cohort-specific
-      # contributions surfaced during weekly working sessions (general
-      # agent-design / MCP-pattern level, no Engram-internal prompts
-      # or client specifics).
       impactDelivered: |
-        Current cohort-period in-flight work (the engagement is
-        intentionally evaluation-shaped, with a sponsored client engagement
-        decision by Day 40):
+        The Architect Cohort was an evaluation-shaped engagement rather
+        than a delivery one, and it ran its course May–July 2026. What
+        came out of it:
 
-        1. **Anthropic Claude Partner Network Learning Path** —
-           progress in flight across the 4-course curriculum.
-        2. **CCA-F examination preparation**, building on already-held
-           AI Fluency: Framework & Foundations and Claude Code in
-           Action credentials.
-        3. **Contributions to the cohort's shared agent and skill design
+        1. **Anthropic Claude Partner Network Learning Path — completed**,
+           with verifiable per-course certificates recorded in
+           `certificates[]` (Claude Code in Action, Building with the
+           Claude API, Introduction to Model Context Protocol,
+           Introduction to Agent Skills, all May 2026, on top of AI
+           Fluency Framework and Claude Code in Action from Aug 2025).
+           The **Claude Certified Architect — Foundations practice
+           examination was sat and passed.**
+        2. **Contributions to the cohort's shared agent and skill design
            conventions** through weekly working sessions with the founder
            and the rest of the architect cohort.
-        4. **Cross-pollination** of Chan's pre-existing open-source
+        3. **Cross-pollination** of Chan's pre-existing open-source
            agentic tooling experience (claude-code-audio-hooks,
            CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based
            media generation) into cohort discussions on production-grade
            agent design.
+        4. **Open-source IP preserved.** The cohort agreement explicitly
+           carved out claude-code-audio-hooks (now **echook**) and the
+           rest of Chan's prior work as her own property — echook has
+           since gone on to 78 GitHub stars independently of Engram.
+
+        **Precise on the credential, deliberately.** The CCA-F
+        *curriculum* was completed and the *practice* exam passed; the
+        **official certification exam was never sat, so the CCA-F
+        credential is not held.** Every surface should say "curriculum
+        completed" or "practice exam passed" and never "certified" —
+        the course certificates are real and verifiable, the
+        certification is not claimed.
 
         **Meta-signal**: the engagement itself validates a hypothesis
         Chan has been publishing about (**GEO / Generative Engine
@@ -195,23 +204,21 @@ work:
         than traditional SEO keywords. Being the candidate Claude Code
         recommended to Engram for an Anthropic Partner engagement is
         empirical evidence that the open-source-first portfolio strategy
-        works.
-      # TODO(narrative-impact): fill in concrete numbers as cohort progresses:
-      #   - "completed N of 4 Anthropic Partner Network courses"
-      #   - "CCA-F exam scheduled for <date>" (target early June 2026)
+        works — and that remains true independently of how the cohort
+        ended.
 
   - id: technest
     name: TechNest Community
     position: AI Instructor & Mentor
     startDate: "2026-04"
-    endDate: null                       # null = present
+    endDate: "2026-08"
     location: Newfoundland, Canada (remote instruction)
     url: https://www.technestcommunity.com/
     logo: /public/organizations/technest-community-logo.jpg
     featured: true
     tier: primary
-    recency: active
-    lastUpdated: "2026-05-18"
+    recency: recent
+    lastUpdated: "2026-08-04"
     keywords:
       - Cursor
       - Claude Code
@@ -269,11 +276,12 @@ work:
       impactDelivered: |
         **Authored and ran the 2026 AI Track — a 12-week prompt-first AI
         engineering curriculum** that became TechNest's flagship 2026
-        cohort. Programme runs **April 25 – July 17, 2026** (Matriculation
-        Ceremony April 25, official start April 27, completion July 17),
-        delivered as one two-hour live session per week plus self-paced
-        lab time, on a fixed five-phase session shape (Recap → Concept →
-        Live Demo → Hands-On Lab → Q&A).
+        cohort. The programme ran **April 25 – July 17, 2026**
+        (Matriculation Ceremony April 25, official start April 27,
+        completion July 17), delivered as one two-hour live session per
+        week plus self-paced lab time, on a fixed five-phase session shape
+        (Recap → Concept → Live Demo → Hands-On Lab → Q&A).
+        **30 students graduated.**
 
         **The curriculum doctrine is original and opinionated:** *"Natural
         language is the source code."* Students arrive having used only
@@ -296,16 +304,26 @@ work:
         (8) Typst PDF automation through the Typst skill in Claude Code,
         which becomes the engine for an auto-generated CV and cover letter.
 
-        **4-week capstone** runs June 22 – July 17, 2026: teams of 2–4
-        students evolve their personal-site codebase into a deployed
-        multi-user AI SaaS on one of three tracks — *Campus Life*
-        (event finder, roommate matcher, dorm chore-and-bill splitter),
-        *Personal Growth* (habit coach with weekly AI reviews, reading
-        companion, journaling assistant), or *Creative Tools* (AI
-        short-story studio, music-prompt playground, comic-panel
-        generator). Demo Day is a 5-minute live demonstration plus
-        3-minute Q&A in front of invited guests, with public voting
-        powered through the showcase platform I built.
+        **4-week capstone** ran June 22 – July 17, 2026: students evolved
+        their personal-site codebase into a deployed multi-user AI SaaS on
+        one of three tracks — *Campus Life* (event finder, roommate
+        matcher, dorm chore-and-bill splitter), *Personal Growth* (habit
+        coach with weekly AI reviews, reading companion, journaling
+        assistant), or *Creative Tools* (AI short-story studio,
+        music-prompt playground, comic-panel generator). Demo Day was a
+        5-minute live demonstration plus 3-minute Q&A in front of invited
+        guests, with public voting powered through the showcase platform
+        I built.
+
+        **Capstone outcome (as of 2026-08-04): 6 projects shipped and
+        published to the public showcase** — 5 on the *Personal Growth*
+        track and 1 on *Campus Life* — drawing **138 public votes**
+        between them. The most-voted project was **LinguaPath** with 66
+        votes, ahead of Joborg AI (31) and iCare (21); every one is a
+        live, deployed, multi-user AI product with a public repo and a
+        demo video. Counts are point-in-time: the `/capstone-showcase`
+        page is a deliberately temporary cohort artefact and its Notion
+        database, not the page, is the durable record.
 
         **Assessment rhythm baked into the doctrine.** Weekly assignments
         carry 50% weight and require students to submit both (a) the
@@ -393,8 +411,10 @@ work:
       4-week multi-user-AI capstone — and built the bilingual Docusaurus
       teaching platform that hosts it (versioned cohort docs, in-course AI
       assistant with RAG over all five cohorts, Notion-backed message board
-      and capstone voting, Typst PDF handout pipeline). Programme runs April
-      25 – July 17, 2026; reports to Abiodun Oyedele and Afolasade Bello.
+      and capstone voting, Typst PDF handout pipeline). The programme ran April
+      25 – July 17, 2026 and graduated 30 students, who shipped 6 deployed
+      multi-user AI products to the public capstone showcase; reported to
+      Abiodun Oyedele and Afolasade Bello.
 
   - id: gavigo
     name: Gavigo

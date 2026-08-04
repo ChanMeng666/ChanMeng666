@@ -4,18 +4,22 @@
        · clientCardProjectIds  → the SAME big editorial cards as "What I build"
          (shared partial project-cards.hbs — never copy that markup here, the
          two sections must render identically or they will drift)
-       · commissionedProjectIds → EMPTY as of 2026-07-15, so the compact 3-col
-         table below renders nothing. The three rows it used to carry
-         (femtech-radar, gavigo-website, her-waka) are sub-projects of client
-         cards that already cross-link them via relatedProjectIds, so the table
-         was showing them a second time with the same copy. The markup is kept,
-         guarded by {{#if _commissionedProjects.length}}, for the next client
-         build that has no parent card to hang off. See the curation note on
-         commissionedProjectIds in data/profile/90-meta.yaml.
+       · commissionedProjectIds → REPOPULATED 2026-08-05 from Chan's triage
+         export: free-period-website, gavigo-website, her-waka. This reverses
+         the 2026-07-15 emptying, when the table was cut because gavigo-website
+         and her-waka already appear as "↳ Related:" links on their parent
+         cards (gavigo-ire, she-sharp) and the table repeated them. That double
+         appearance is back by Chan's choice. femtech-radar stays OUT — she
+         marked it "kept", so the FemTech Weekend card's related link is its
+         only appearance. See the curation note on commissionedProjectIds in
+         data/profile/90-meta.yaml.
      Sits below "What I build": same visual weight, second by order only.
      2026-07-15: she-sharp joined the card band (5 cards now, was 4) — it is
      client work by every field, same shape as femtech-weekend-website, and it
      is NOT demoted by the move: same tier: flagship, same card.
+     2026-08-05: same five cards, REORDERED to Chan's triage drag order. The
+     <sub> line below names the clients IN CARD ORDER and is hand-written —
+     re-order its clauses whenever clientCardProjectIds changes.
      COPY RULE for the <sub> line: only name an organisation that actually
      engaged Chan (projects[].clientOrgId / entity). tam-ai-ti's client is
      Riria (Missy) Te Kanawa personally — an independent research commission
@@ -28,7 +32,7 @@
 
 ## Client & organisation work
 
-<sub>Systems I built for real clients — a Delaware startup, an independent Māori-led AI research commission, New Zealand's leading women-in-STEM charity, a women's-health-tech community in China, and an Auckland food festival — all still running today. I'm GAVIGO's Founding Principal Engineer, She Sharp's Senior Full Stack Engineer & Website Team Lead, and FemTech Weekend's CTO.</sub>
+<sub>Systems I built for real clients — a women's-health-tech community in China, an Auckland food festival, a Delaware startup, New Zealand's leading women-in-STEM charity, and an independent Māori-led AI research commission — all still running today. I'm FemTech Weekend's CTO, GAVIGO's Founding Principal Engineer, and She Sharp's Senior Full Stack Engineer & Website Team Lead.</sub>
 
 {{> project-cards _clientCardProjects}}
 {{#if _commissionedProjects.length}}

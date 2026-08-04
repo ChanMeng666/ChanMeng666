@@ -12,17 +12,17 @@
     title: "AI Agent Architect",
     org: "Engram",
     org-url: "https://engram.media/",
-    dates: "May 2026 — Present",
+    dates: "May 2026 — Jul 2026",
     location: [Albuquerque, New Mexico, United States · *Remote*],
-    summary: [Recruited onto *Anthropic's Partner Network architect track* — Engram's founder asked his own Claude agent to surface candidates, and Chan's open-source portfolio was the pick (publicly confirmed by founder Luka Madzarac). Now in the 45-day Architect Cohort on the Claude Certified Architect — Foundations curriculum.],
+    summary: [Recruited onto *Anthropic's Partner Network architect track* — Engram's founder asked his own Claude agent to surface candidates, and Chan's open-source portfolio was the pick (publicly confirmed by founder Luka Madzarac). Spent the 45-day Architect Cohort on the Partner Network curriculum and the cohort's agent, skill and MCP-integration conventions.],
   )
   role-line(
     title: "AI Instructor & Mentor",
     org: "TechNest Community",
     org-url: "https://www.technestcommunity.com/",
-    dates: "Apr 2026 — Present",
+    dates: "Apr 2026 — Aug 2026",
     location: [St John's, Newfoundland, Canada · *Remote*],
-    summary: [Sole instructor of TechNest's first AI-specialised mentorship track — her *fifth teaching cohort since 2024*. Students arrive knowing only browser ChatGPT and, over 12 weeks, learn to build by directing coding agents, shipping a live multi-user AI product by the end. Also built the bilingual teaching platform that hosts it, including an in-course RAG assistant on Cloudflare Workers.],
+    summary: [Sole instructor of TechNest's first AI-specialised mentorship track — her *fifth teaching cohort since 2024*. Students arrived knowing only browser ChatGPT and, over 12 weeks, learned to build by directing coding agents; *30 graduated* and shipped *6 deployed multi-user AI products*. Also built the bilingual teaching platform that hosts it, including an in-course RAG assistant on Cloudflare Workers.],
   )
   role-line(
     title: "Founding Principal Engineer, Activation, Execution & AI Systems",

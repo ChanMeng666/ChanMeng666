@@ -206,7 +206,23 @@ meta:
     # the identical big-card treatment, immediately after this section, so
     # priority is expressed by ORDER on the page, not by card size.
     # List order = card order; it is Chan's own ordering.
-    flagshipProjectIds: [google-news-mcp, echook, archlang, archcanvas, vitex]
+    # 2026-08-05, second pass — CUT BACK TO THREE. The first pass grew this to
+    # seven and Chan judged that it flattened the hierarchy: too many cards of
+    # equal weight, no clear主次. This band is now ONLY the work she is on
+    # full-time, matching basics.headline ("Founder of ArchCanvas + ArchLang"):
+    #   archlang → the open-source compiler · archcanvas → the product on top
+    #   vitex    → the other live product she runs
+    # Everything else moved DOWN to the "More I've built" tables, not out:
+    #   echook, ai-programming-teaching-project → aiAgentProjectIds
+    #   gradient-svg-generator, sunostats       → openSourceCraftProjectIds
+    #   google-news-mcp                         → aiAgentProjectIds (first pass)
+    # None of those is archived or deprecated — they stepped down a band.
+    # KNOWN COST, accepted by Chan: sunostats/Seismophone has no public repo, and
+    # _openSourcePrimary (build.mjs) filters on repoUrl, so outside this flagship
+    # band it gets only a one-line long-tail entry in llms-full.txt instead of a
+    # full narrative. archcanvas is also repo-less but stays flagship, so it is
+    # unaffected. Keep this in mind before demoting any repo-less project.
+    flagshipProjectIds: [archlang, vitex, archcanvas]
 
     # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
     # 2026-07). Deliberately DISTINCT from flagshipProjectIds (which is the
@@ -317,32 +333,38 @@ meta:
     # provenance:client, ordered strongest-first. clientCardProjectIds render
     # through the SHARED card partial (templates/partials/project-cards.hbs),
     # byte-for-byte the same treatment as flagshipProjectIds.
-    clientCardProjectIds:      [gavigo-ire, tam-ai-ti, she-sharp, femtech-weekend-website, eatropolis-website]
-    # commissionedProjectIds — EMPTY BY DESIGN (2026-07-15). It used to hold
-    # [femtech-radar, gavigo-website, her-waka], rendered as a 3-row table under
-    # the client cards. All three are sub-projects of a client card that already
-    # cross-links them: gavigo-website ← gavigo-ire, her-waka ← she-sharp, and
-    # femtech-radar ← femtech-weekend-website (relatedProjectIds added
-    # 2026-07-15). The table showed them a SECOND time with the same
-    # description, so Chan cut it; the "↳ Related:" links on the parent cards
-    # are now their single appearance. They are NOT de-listed — tier/status/
-    # recency unchanged, still on the README, still in every LLM surface. This
-    # is a presentation choice, not a demotion.
-    # (An earlier empty state of this list, before the 2026-07-14 curation, is
-    # unrelated — that one meant "no commissioned work shown at all".)
-    # If a future client build has no parent card to hang off, put it here and
-    # the table in commissioned.hbs comes back automatically.
-    commissionedProjectIds:    []
-    # ai-hackathon-assistant is deliberately NOT here: it already surfaces as a
-    # "↳ Related" link on the She Sharp client card, and a second row here showed
-    # the same project twice. It keeps its tier/status and stays in llms-full /
-    # dist / LinkedIn — this is a README display choice only. It is listed under
-    # llmsOnlyOpenSourceIds below so the LLM surfaces keep its full narrative.
-    aiAgentProjectIds:         [server-google-jobs, ai-programming-teaching-project]
+    # 2026-08-05: reordered to Chan's triage drag order. Same five projects.
+    clientCardProjectIds:      [femtech-weekend-website, eatropolis-website, gavigo-ire, she-sharp, tam-ai-ti]
+    # commissionedProjectIds — REPOPULATED 2026-08-05 from Chan's triage export,
+    # which marked free-period-website, gavigo-website and her-waka as "listed".
+    # This REVERSES the 2026-07-15 cut, when the list was emptied because
+    # gavigo-website ← gavigo-ire and her-waka ← she-sharp already appear as
+    # "↳ Related:" links on their parent cards, so the table showed them twice.
+    # That duplication is back by design — Chan chose to surface them. If the
+    # double appearance reads badly on the rendered README, the fix is to empty
+    # this list again, NOT to remove the relatedProjectIds (those are the data
+    # relationship and must stay true regardless of display).
+    # femtech-radar is NOT here: Chan marked it "kept", so it stays a
+    # "↳ Related" link on the FemTech Weekend card only.
+    commissionedProjectIds:    [free-period-website, gavigo-website, her-waka]
+    # 2026-08-05: ai-hackathon-assistant PROMOTED to a real row here (Chan marked
+    # it "listed"), so it is no longer llms-only. a11y-loop is new to the
+    # database in this same pass. Second pass the same day: echook and
+    # ai-programming-teaching-project came DOWN from the flagship card band when
+    # it was cut to three, so this table now leads with echook — the
+    # most-starred project in the whole portfolio (78★). Order = display order.
+    aiAgentProjectIds:         [echook, google-news-mcp, server-google-jobs, ai-programming-teaching-project, ai-hackathon-assistant, a11y-loop]
     # Open source with a full llms.txt / llms-full.txt entry but NO README table
     # row of its own (already visible as a "↳ Related" link on a card above).
-    llmsOnlyOpenSourceIds:     [ai-hackathon-assistant]
-    openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats]
+    # Empty since 2026-08-05: its only member, ai-hackathon-assistant, now has a
+    # row of its own under aiAgentProjectIds, so nothing needs the carve-out.
+    llmsOnlyOpenSourceIds:     []
+    # 2026-08-05: portfolio-v2 and css-tower-defense joined. Second pass the same
+    # day: gradient-svg-generator and sunostats came back DOWN from the flagship
+    # card band when it was cut to three. gradient-svg-generator leads — it is
+    # the tool every banner and pill on this README is rendered with, so the
+    # credit captions throughout point at this row.
+    openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats, portfolio-v2, css-tower-defense]
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []
     moreOpenSourceProjectIds:     []

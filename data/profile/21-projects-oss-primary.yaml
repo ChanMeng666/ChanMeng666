@@ -21,7 +21,13 @@ projects:
     name: github-readme-suno-cards — Suno Music Cards for GitHub READMEs
     priority: 5
     category: branding
-    relatedProjectIds: [sunostats]   # shares the @suno-cards/parser Valibot kernel with Seismophone
+    # No relatedProjectIds → sunostats. They genuinely share the
+    # @suno-cards/parser Valibot kernel (see the tagline, which states it), but
+    # Seismophone is now a flagship card of its own, so a "↳ Related:" link here
+    # would be its second appearance on the README — Chan's no-duplicates rule
+    # (2026-08-05). Unlike the gavigo/she-sharp cases the relation cannot move to
+    # the child either, because BOTH ends render related links; it is carried by
+    # the tagline prose and the extraLink below instead.
     tagline: GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 36 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.
     logo: /public/brands/github-readme-suno-cards-logo.svg
     url: https://github-readme-suno-cards.vercel.app
@@ -223,7 +229,11 @@ projects:
 
   - id: echook
     provenance: personal
-    tier: flagship
+    # primary, not flagship: on 2026-08-05 the README card band was cut to the
+    # three projects Chan works on full-time, and echook moved to the AI-agents
+    # table. Still the most-starred project in the portfolio (78★) and still
+    # active — this is a band change, not a demotion of the work.
+    tier: primary
     recency: active
     meta:
       x_brand:
@@ -631,9 +641,9 @@ projects:
 
   - id: tencent-meeting-video-downloader
     provenance: personal
-    tier: secondary
-    recency: recent
-    lastUpdated: "2026-05-19"
+    tier: archive
+    recency: deprecated
+    lastUpdated: "2026-08-05"
     name: 腾讯会议录屏下载助手 — Chrome Web Store-Published Extension
     priority: 9
     category: web-apps
@@ -679,7 +689,7 @@ projects:
       - { label: "Manifest permissions",  value: "webRequest + webRequestBlocking + storage (V3 review-approved)" }
       - { label: "Host permissions",      value: "*.qq.com, *.tencent.com, *.myqcloud.com" }
       - { label: "Rating badge",          value: "Dynamic shields.io chrome-web-store/rating live-from-store" }
-    status: live
+    status: archived
     startDate: "2024-11-25"
     publicSummary: |
       A **formally published Chrome Web Store product** (extension ID
@@ -838,12 +848,15 @@ projects:
 
   - id: gradient-svg-generator
     provenance: personal
+    # Band change 2026-08-05: back to the "Craft & products" table when the card
+    # band was cut to three. It still renders every banner and pill on the
+    # README, so it stays highly visible through the credit captions.
     tier: primary
     recency: active
     meta:
       x_brand:
         featuredStack: [nextjs, react, typescript, tailwindcss, vercel]
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-08-05"
     name: gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs
     priority: 10
     category: creative

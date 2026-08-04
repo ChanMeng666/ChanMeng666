@@ -14,12 +14,12 @@ projects:
   # Web Applications
   - id: free-period-website
     provenance: client
-    tier: secondary
+    tier: primary
     recency: historical
     meta:
       x_brand:
         featuredStack: [nextjs, react, typescript, tailwindcss, cloudflare-pages]
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-08-05"
     name: FreePeriod Website
     priority: 22
     category: web-apps
@@ -444,12 +444,12 @@ projects:
         Sole author, designer, and operator. Every one of the 259 commits is mine. The unique architectural commitment — *humans and agents are equal first-class citizens, not a primary audience plus a developer afterthought* — is my product call, and it's the call that organises every sub-project below it. I designed and wrote the 4-surface monolith (single Hono app + MCP server + CLI workspace + React SPA all sharing the same routes); designed the 11-MCP-tool catalog with explicit `LOCKED` contract semantics so renames are breaking changes; designed the `lja_<keyId>_<secret>` key format (ULID keyId + 32-byte URL-safe-base64 secret, only the sha256 stored server-side); designed the cookie-vs-Bearer auth precedence (cookies ignored when any Authorization header is present, MCP requires Bearer, key-management requires cookie — so agents can't mint their own keys); designed the 10-stable-error-code catalogue + 0-12 CLI exit-code mapping; wrote the OpenAPIHono migration across every `/api/*` route (sub-project A.5); ran the design-doc → implementation-plan → ticketed-commit workflow that produced the 8 sub-projects A→H in the final 2-week sprint (each with a paired design spec at `docs/superpowers/<letter>-spec.md` + implementation plan at `docs/superpowers/<letter>-plan.md`); wrote the Pulumi TypeScript IaC + the 4-policy CrossGuard pack including the deliberate pivot from rejection-based to structural `protect: true` enforcement; wrote the contract test harness using in-process `app.fetch` dispatch; wrote the dual-track `/guide` page + the dual-track feature-catalog homepage that visually mirrors the same dichotomy; published the CLI to npm under my own scope; and operate the production deployment. The "humans and agents are equal" framing has since influenced subsequent projects in my portfolio — the CLI-first agent-friendly response contract reappears in `lighthouse-as-a-service` style projects, and the MCP-tools-mirror-HTTP-routes pattern is reused in other tooling work.
   - id: femtech-weekend-website
     provenance: client
-    tier: primary
+    tier: flagship
     recency: active
     meta:
       x_brand:
         featuredStack: [docusaurus, drizzle, neon, cloudflare-pages, react]
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-08-05"
     name: FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026
     priority: 17
     category: web-apps
@@ -1118,9 +1118,15 @@ projects:
         metadata. Maintains the live deployment today.
   - id: sunostats
     provenance: personal
+    # Band change 2026-08-05: back to the "Craft & products" table when the card
+    # band was cut to three. NOTE the side effect Chan accepted knowingly —
+    # Seismophone has no public repo, and build.mjs's _openSourcePrimary filters
+    # on repoUrl, so outside the flagship band it gets only a one-line long-tail
+    # entry in llms-full.txt rather than a full narrative. If that matters later,
+    # the fix is to put it back in flagshipProjectIds, not to fake a repoUrl.
     tier: primary
     recency: recent
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-08-05"
     meta:
       x_brand:
         featuredStack: [nextjs, react, drizzle, neon, stripe]
@@ -1355,7 +1361,10 @@ projects:
     name: Douyin Mall (Spring Boot Backend)
     priority: 27
     category: web-apps
-    relatedProjectIds: [douyin-mall-frontend]
+    # The full Douyin Mall cluster: this Spring Boot backend is the origin
+    # capstone; the Vue storefront and the two language templates all derive
+    # from it. All four are archived, so none of these render anywhere.
+    relatedProjectIds: [douyin-mall-frontend, douyin-mall-go-template, douyin-mall-java-template]
     tagline: "Full-featured Douyin/TikTok e-commerce platform backend built during ByteDance's Youth Training Camp — Spring Boot + Redis + RabbitMQ with complete user management, product catalog, shopping cart, and order processing; the capstone backend paired with the Vue 3 storefront and later distilled into the Go and Java teaching templates"
     repoUrl: https://github.com/ChanMeng666/douyin-mall
     techStack: [Java, "Spring Boot", Redis, RabbitMQ, MySQL, Maven, JWT]

@@ -536,6 +536,44 @@ const engagementRoles = data.meta?.x_brand?.engagementRoles ?? [];
     for (const e of proofErrors) console.error(`  - ${e}`);
     process.exit(1);
   }
+
+  // ---------------------------------------------------------------------
+  // NO-DUPLICATE-DISPLAY GUARD (Chan's rule, 2026-08-05)
+  // ---------------------------------------------------------------------
+  // A project may appear on the README exactly once. `relatedProjectIds`
+  // renders as a small "↳ Related:" line under a card (project-cards.hbs) or
+  // under an open-source table row (open-source.hbs) — so pointing one at a
+  // project that ALSO has its own card/row shows that project twice.
+  //
+  // Only some buckets render the related line: the two card bands and the two
+  // open-source tables. The commissioned table does not, which is why
+  // gavigo-website → gavigo-ire and her-waka → she-sharp are legal and are
+  // where those relationships are declared. When BOTH ends render (e.g.
+  // github-readme-suno-cards ↔ sunostats), carry the relationship in
+  // `extraLinks` instead — extraLinks is data-only and renders nowhere.
+  const rendersRelatedLine = new Set([
+    ...(xb.flagshipProjectIds ?? []),
+    ...(xb.clientCardProjectIds ?? []),
+    ...(xb.aiAgentProjectIds ?? []),
+    ...(xb.openSourceCraftProjectIds ?? []),
+  ]);
+  const dupErrors = [];
+  for (const id of rendersRelatedLine) {
+    const p = data._index.projects[id];
+    if (!p) continue;
+    const ids = p.relatedProjectIds ?? (p.relatedProjectId ? [p.relatedProjectId] : []);
+    for (const rid of ids) {
+      if (!displayedIds.has(rid)) continue;
+      dupErrors.push(
+        `"${id}".relatedProjectIds → "${rid}" would render a "↳ Related:" link, but "${rid}" already has its own card/row on the README — that is a duplicate display. Move the relationship to the other end (if that end renders no related line) or to extraLinks.`,
+      );
+    }
+  }
+  if (dupErrors.length) {
+    console.error("✗ README duplicate-display errors:");
+    for (const e of dupErrors) console.error(`  - ${e}`);
+    process.exit(1);
+  }
 }
 
 data._engagementRoles = {

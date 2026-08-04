@@ -30,7 +30,7 @@ Links: archcanvas.uk · github.com/ChanMeng666/archlang · playground.archlang.u
 ### AI Agent Architect
 
 **Employment type:** Contract
-**Dates:** May 2026 - Present · 2 mos
+**Dates:** May 2026 - Jul 2026 · 3 mos
 **Location:** Albuquerque, New Mexico, United States · Remote
 **LinkedIn helped me get this job**
 
@@ -39,12 +39,12 @@ Selected as AI Architect for Engram — a US AI-media agency rebuilding itself a
 
 How I was hired: founder Luka Madzarac asked Claude AI itself to recommend top AI engineers as the company entered Anthropic's Partner Network. My open-source portfolio came back as Claude's top recommendation. Luka confirmed publicly: "Claude Code surfaced Chan as one of the strongest matches."
 
-What I work on:
+What I worked on:
 
 • Designing Mission Control plus specialised agents that run a client's media operation — natural language in, finished campaigns out.
 • MCP (Model Context Protocol) integration patterns — Anthropic's open standard for letting AI agents safely use real tools, APIs, and data.
 • "API-as-UI" design — products where the AI's reasoning IS the interface, not a chat widget bolted onto a form.
-• Anthropic Partner Network curriculum + Claude Certified Architect — Foundations (CCA-F) exam, on top of held credentials in AI Fluency and Claude Code in Action.
+• Completed the Anthropic Partner Network curriculum and passed the Claude Certified Architect — Foundations practice exam, on top of held course certificates in AI Fluency, Claude Code in Action, the Claude API, MCP and Agent Skills.
 ```
 
 **Skills:** Model Context Protocol (MCP), Anthropic Claude, AI Agent Architecture, Multi-Agent Systems, AI System Design
@@ -55,16 +55,16 @@ What I work on:
 
 ### AI Instructor & Mentor
 
-**Dates:** Apr 2026 - Present · 3 mos
+**Dates:** Apr 2026 - Aug 2026 · 5 mos
 **Location:** St John's, Newfoundland and Labrador, Canada · Remote
 
 ```
-Designed and sole-teach TechNest Community's first AI engineering mentorship track — the only AI cohort the Canadian nonprofit is running in 2026. Reports directly to TechNest leadership Abiodun Oyedele and Afolasade Bello.
+Designed and sole-taught TechNest Community's first AI engineering mentorship track — the only AI cohort the Canadian nonprofit ran in 2026. Reported directly to TechNest leadership Abiodun Oyedele and Afolasade Bello.
 
-Programme: 12 weeks, April 25 – July 17, 2026. Curriculum thesis: "natural language is now the source code." Students don't write code by hand — they direct AI assistants (Cursor, Claude Code, Gemini CLI) to ship real applications.
+Programme: 12 weeks, April 25 – July 17, 2026. Curriculum thesis: "natural language is now the source code." Students didn't write code by hand — they directed AI assistants (Cursor, Claude Code, Gemini CLI) to ship real applications. 30 students graduated.
 
-• Week 8 outcome: each student owns a live AI-powered personal site — portfolio + AI-clone chatbot + blog + auto-generated CV — on Next.js + Neon Postgres + Drizzle + Vercel.
-• Week 12 outcome: each team of 2–4 ships a deployed multi-user AI SaaS — habit coaches, AI story studios, dorm chore splitters. Public Demo Day with audience voting.
+• Week 8 outcome: each student owned a live AI-powered personal site — portfolio + AI-clone chatbot + blog + auto-generated CV — on Next.js + Neon Postgres + Drizzle + Vercel.
+• Week 12 outcome: 6 deployed multi-user AI products shipped to a public capstone showcase — a language-learning coach, an AI job agent, a healthcare document translator and more — with a public Demo Day and audience voting (138 votes cast).
 • Built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, ~96% solo (211 of 220 non-merge commits). Hosts 5 cohorts side-by-side with a version-aware RAG assistant — students query their cohort's own materials and get answers from inside the course content.
 • Fully bilingual EN / CN.
 ```

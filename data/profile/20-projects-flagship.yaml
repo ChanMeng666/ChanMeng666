@@ -377,10 +377,20 @@ projects:
       - { label: "NZ Charities Register (CC57025)", url: "https://register.charities.govt.nz/Charity/CC57025" }
       - { label: "Founder Dr Mahsa Mohaghegh (LinkedIn)", url: "https://www.linkedin.com/in/mahsamohaghegh/" }
       - { label: "She Sharp LinkedIn", url: "https://www.linkedin.com/company/shesharpnz/" }
+      - { label: "Aotearoa AI Hackathon 2026 event assistant", url: "https://hackathon.shesharp.org.nz/" }
     logo: /public/brands/she-sharp-mark.svg
     clientOrgId: she-sharp
     relatedWorkId: she-sharp
-    relatedProjectIds: [her-waka, ai-hackathon-assistant]   # She Sharp sibling projects — cross-linked; each also renders as its own card (clientOrgId: she-sharp). makey-makey-iot-slides removed 2026-07-14: Chan's triage kept it OFF the shopfront, and a "↳ Related:" link here put it back on the README. Only ids Chan marked hero/listed may sit here.
+    # relatedProjectIds is EMPTY on purpose (2026-08-05, Chan's no-duplicates
+    # rule): a project may appear on the README once. her-waka and
+    # ai-hackathon-assistant both now have their own row (commissioned table and
+    # AI-agents table respectively), so a "↳ Related:" link here would be their
+    # second appearance. The relationships are still declared —
+    # her-waka.relatedProjectIds → she-sharp (the commissioned table renders no
+    # related links, so it is invisible), and both Her Waka and the hackathon
+    # site are in the extraLinks block above, which renders nowhere.
+    # scripts/build.mjs now FAILS the build on any such duplicate.
+    # makey-makey-iot-slides was removed here for the same reason on 2026-07-14.
     entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
     roles: ["Senior Full Stack Engineer", "Website Team Lead", "Solo Architect of New Platform"]
     techStack:
@@ -794,7 +804,11 @@ projects:
     logo: /public/brands/gavigo-mark.svg
     clientOrgId: gavigo
     relatedWorkId: gavigo
-    relatedProjectIds: [gavigo-website]   # GAVIGO company site — cross-linked; also renders as its own card (clientOrgId: gavigo)
+    # No relatedProjectIds → gavigo-website: it has its own row in the
+    # commissioned table, and a "↳ Related:" link here would be a second
+    # appearance (Chan's no-duplicates rule, 2026-08-05). The relationship
+    # lives on gavigo-website.relatedProjectIds → gavigo-ire, where the
+    # commissioned table renders nothing.
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
     roles: ["Founding Principal Engineer, Activation, Execution & AI Systems", "Core Engineer (prior)"]
     techStack:
@@ -1016,12 +1030,12 @@ projects:
 
   - id: google-news-mcp
     provenance: personal
-    tier: flagship
+    tier: primary
     recency: recent
     meta:
       x_brand:
         featuredStack: [mcp, anthropic, npm, typescript, nodejs]
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-08-05"
     name: Google News MCP Server
     priority: 4
     category: ai-apps

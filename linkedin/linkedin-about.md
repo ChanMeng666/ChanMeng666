@@ -36,13 +36,13 @@ Tam-AI-Ti — an AI Financial Wellness Coach for Māori communities — encodes 
 ## 🚀 Current & Recent Work
 
 ```
-AI Agent Architect @ Engram (Anthropic Partner Network) · former CTO @ Sanicle (IBM Silver Partner) · Senior Engineer @ She Sharp (NZ women-in-STEM nonprofit) · AI-Engineering Instructor @ TechNest — see Experience for full roles.
+Founder @ ArchCanvas + ArchLang (current, full-time) · Senior Engineer @ She Sharp (NZ women-in-STEM nonprofit, current) · former AI Agent Architect @ Engram (Anthropic Partner Network) · former CTO @ Sanicle (IBM Silver Partner) · former AI-Engineering Instructor @ TechNest — see Experience for full roles.
 ```
 
 ## 🎓 Credentials & Earlier Journey
 
 ```
-Master of Applied Computing with Distinction, Lincoln University NZ · pursuing Claude Certified Architect — Foundations · former Backend Engineer @ ByteDance · UN CSW 69 Speaker · 480+ GitHub stars.
+Master of Applied Computing with Distinction, Lincoln University NZ · completed the Anthropic Partner Network architect-track curriculum via Engram (6 verifiable Anthropic course certificates) · former Backend Engineer @ ByteDance · UN CSW 69 Speaker · 480+ GitHub stars.
 ```
 
 ## 🎙️ Public Voice
@@ -54,7 +54,7 @@ Host of three Spotify shows: Decoding the Future, Future Turing, Praxis and Page
 ## 📍 Now
 
 ```
-Based in Auckland, Aotearoa New Zealand. Open to founding-team, staff-IC, AI architecture, and AI-engineering instruction engagements starting Q3 2026.
+Based in Auckland, Aotearoa New Zealand. Building ArchCanvas + ArchLang full-time, and open now to founding-team, staff-IC, AI architecture, and AI-engineering instruction engagements.
 ```
 
 **Top skills:** AI Agent Architecture • Model Context Protocol (MCP) • Multi-agent Systems • AI Integration • Kubernetes

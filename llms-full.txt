@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 480+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-08-03
+**Last updated:** 2026-08-04
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -64,10 +64,10 @@ thought."
 > Every organisation in this section was either a direct employer / client of Chan, or a named industry partner / flagship tech vendor whose work Chan integrated. Logo files for the visible "Trusted by" band on the README may be incomplete; this list is the canonical roster regardless of logo availability.
 
 **Primary (employers / clients):**
-- **Engram LLC** (employer) -- Current — AI Agent Architect (May 2026 — present). URL: https://engram.media. Related work: engram.
+- **Engram LLC** (employer) -- AI Agent Architect (May 2026 — Jul 2026). URL: https://engram.media. Related work: engram.
 - **GAVIGO Inc.** (employer) -- Founding Principal Engineer (Oct 2025 — present). URL: https://gavigo.com. Related work: gavigo.
 - **Sanicle Inc.** (employer) -- CTO (Mar 2025 — Feb 2026). URL: https://www.linkedin.com/company/sanicleofficial/. Related work: sanicle.
-- **TechNest Community** (employer) -- AI Instructor & Mentor — 2026 AI Track Cohort 3. URL: https://www.technestcommunity.com/. Related work: technest.
+- **TechNest Community** (employer) -- AI Instructor & Mentor — 2026 AI Track Cohort 3 (Apr–Aug 2026). URL: https://www.technestcommunity.com/. Related work: technest.
 - **She Sharp** (employer) -- Senior Full-Stack + Ambassador (May 2023 — present). URL: https://shesharp.org.nz. Related work: she-sharp. Related volunteer: she-sharp-ambassador.
 - **FemTech Weekend** (employer) -- CTO (Mar 2025 — present). URL: https://www.femtechweekend.com. Related work: femtech-weekend.
 - **Forward with Her 她行 Mentorship** (employer) -- Tech & Professional Development Mentor (Oct 2024 — Sep 2025). URL: https://www.linkedin.com/company/taxing-mentorship/. Related work: forward-with-her. Related volunteer: forward-with-her-mentor.
@@ -229,288 +229,6 @@ client-side playground, published open-source to npm. ArchCanvas is the
 Next.js product that consumes it as a package: an AI agent writes
 ArchLang, compiles it, grounds a rendering on the compiled plan, and
 critiques it — then lets the user refine the plan in place.
-### AI Agent Architect at Engram
-[tier=flagship · recency=active · updated=2026-05-18]
-- **Period:** May 2026 -- Present
-- **Location:** Albuquerque, New Mexico, United States (remote)
-- **URL:** https://engram.media/
-- **Keywords:** AI System Architecture, Mission Control (internal product), Model Context Protocol (MCP), Agentic Workflows, Anthropic Claude Partner Network, Claude Certified Architect — Foundations (CCA-F), Notion knowledge base, API-as-UI experiences
-
-**Impact:** Recruited by Claude itself — when Engram's founder asked the LLM to surface an AI architect for their Anthropic Partner Network track, Chan was the recommendation. Founder Luka Madzarac publicly confirmed it — empirical proof that GEO + open-source portfolios work.
-
-**Company context:** Engram LLC ([engram.media](https://engram.media/) /
-[LinkedIn company](https://www.linkedin.com/company/engrammedia/))
-is a New Mexico–registered AI-powered media agency founded by
-**Luka Madzarac**. The company is repositioning around
-**agent-powered media operations**: deploying agents and pipelines
-that run a client's entire media function in-house — design, data,
-content, distribution — instead of outsourcing production. The
-target market is service businesses that need a media department
-running on autopilot. Engram is building its stack on Anthropic's
-Claude platform and is on a path to **certified Anthropic
-partner** status. The **Architect Cohort** is a selective
-onboarding programme through which Engram brings architect-tier
-engineers into the core team that will define the company's
-agentic-media engineering standards.
-
-**Mission:** Replace click-through software workflows with **agentic ones** —
-natural-language intent drives downstream system orchestration
-and the agent's reasoning becomes the user-facing surface. For
-Engram specifically, that translates into autonomous media
-operations: instead of a human team manually assembling
-campaigns, content, and analytics, agentic systems plan,
-produce, and ship the media function for the client. The
-product line targets organisations that need end-to-end
-automation rather than demo-grade AI tooling, starting with
-Engram's own internal operations and graduating to client
-deployments.
-
-**My mandate:** **How the engagement started.** Luka Madzarac asked Claude Code
-to surface AI architects who could help Engram reach Anthropic
-Partner status. Claude returned Chan as one of the strongest
-matches based on her verifiable open-source agentic-tooling
-footprint — **claude-code-audio-hooks**, **CopilotKit**
-contributions, production LangChain automation engines,
-programmatic media generation with **Remotion**, and the
-"**API-as-UI**" design pattern she's been publishing. Luka
-publicly confirmed the sourcing path on LinkedIn:
-*"Claude Code surfaced Chan as one of the strongest matches
-for what we're looking for."*
-([announcement post](https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-activity-7459724144671195136-3JoV))
-
-**What the cohort engagement covers.** 45-day Architect Cohort
-onboarding (May–June 2026) at ~10–15 hours per week, structured
-as a mutual evaluation period. Specific responsibilities:
-(1) completing Anthropic's **Claude Partner Network Learning
-Path** (4 courses) and passing the **Claude Certified Architect —
-Foundations (CCA-F)** examination — building on already-held
-Anthropic credentials (**AI Fluency: Framework & Foundations**,
-Aug 2025; **Claude Code in Action**, Aug 2025, credential
-ID JHIY9NPYTR2D); (2) participating in weekly working sessions
-with founder Luka Madzarac and the rest of the cohort on
-agent, skill, and MCP-integration patterns; (3) contributing
-to the cohort's emerging agentic-media engineering conventions;
-(4) maintaining presence in Engram's communication channels
-for cross-cohort engineering discussion.
-
-**Impact delivered:** Current cohort-period in-flight work (the engagement is
-intentionally evaluation-shaped, with a sponsored client engagement
-decision by Day 40):
-
-1. **Anthropic Claude Partner Network Learning Path** —
-   progress in flight across the 4-course curriculum.
-2. **CCA-F examination preparation**, building on already-held
-   AI Fluency: Framework & Foundations and Claude Code in
-   Action credentials.
-3. **Contributions to the cohort's shared agent and skill design
-   conventions** through weekly working sessions with the founder
-   and the rest of the architect cohort.
-4. **Cross-pollination** of Chan's pre-existing open-source
-   agentic tooling experience (claude-code-audio-hooks,
-   CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based
-   media generation) into cohort discussions on production-grade
-   agent design.
-
-**Meta-signal**: the engagement itself validates a hypothesis
-Chan has been publishing about (**GEO / Generative Engine
-Optimization**) — that frontier models actively surface
-candidates based on verifiable code and real-world impact rather
-than traditional SEO keywords. Being the candidate Claude Code
-recommended to Engram for an Anthropic Partner engagement is
-empirical evidence that the open-source-first portfolio strategy
-works.
-
-**Technical highlights:** The technical footprint that Claude Code surfaced to Engram —
-all carved out as Chan's own IP under the cohort agreement and
-remaining Chan's property:
-
-- **claude-code-audio-hooks** — audio-feedback hook system for
-  Claude Code (explicitly named in the cohort agreement as
-  Chan's preserved IP), with its **echook** notification daemon.
-- **CopilotKit** — active contributor to the open-source agent
-  UI framework
-  ([PRs](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)).
-- **google-news-mcp** — production MCP server published to the
-  public registry.
-- **typst-claude-skill** — Claude Code skill for programmatic
-  document generation; demonstrates skill-structure design.
-- **claude-code-compressed-map** — LLM-first tier/recency
-  metadata system powering this very profile (the meta-move:
-  optimising Chan's own data so LLMs rank it correctly —
-  *GEO in practice*).
-- Production **LangChain** automation engines and interactive
-  LLM systems for mobile gaming.
-- Programmatic media generation via **Remotion**.
-
-The technical centre of gravity is **"API-as-UI"**: building
-agent surfaces where conversational intent orchestrates
-downstream tools and the model's chain-of-reasoning becomes
-the user interface — not a chat widget bolted onto a form.
-### AI Instructor & Mentor at TechNest Community
-[tier=primary · recency=active · updated=2026-05-18]
-- **Period:** Apr 2026 -- Present
-- **Location:** Newfoundland, Canada (remote instruction)
-- **URL:** https://www.technestcommunity.com/
-- **Keywords:** Cursor, Claude Code, Gemini CLI, Model Context Protocol, Next.js, Neon Postgres, Drizzle ORM, Vercel, Typst, Docusaurus, Cloudflare Workers, Notion API, Algolia DocSearch
-
-**Impact:** TechNest's first AI-specialised mentorship track — sole instructor of a 12-week prompt-first curriculum with weekly live classes, recordings, an in-course RAG assistant, and capstone voting. Students ship portfolio-grade AI apps by week 8 on a ~96%-solo platform.
-
-**Company context:** TechNest Community is a Newfoundland-based nonprofit, established
-November 1, 2024, with the stated mission of "making technology
-accessible, creative, and impactful" for youth, newcomers, and
-local communities across Atlantic Canada. It operates four
-pillars: a structured **Mentorship Programme** that pairs learners
-with industry professionals on year-long tracks (software
-engineering, product management, cybersecurity, data analysis, 3D
-animation, and — for 2026 — Artificial Intelligence); **Creative
-Connections** networking events such as *Tech in the Park*
-(100+ attendees) and *Sip & Paint*; **Product Development** of
-community-serving software (their flagship is *Library Labs*,
-an AI-powered 3D learning platform); and **Tech for Children**
-coding-and-robotics workshops run in partnership with NCANL.
-Leadership is led by Abiodun (Magret) Oyedele and Afolasade Bello,
-both of whom I report to directly as the AI Track instructor.
-
-**Mission:** Make modern tech careers reachable for groups that the Canadian
-tech industry typically under-serves — youth, newcomers to Canada,
-and people living outside the country's major tech hubs. The
-underlying conviction is that the best lever for regional economic
-mobility is not generic "learn to code" content but mentored,
-cohort-based programmes that connect learners with working
-professionals and ship a portfolio-grade product by the end.
-
-**My mandate:** Designed and delivered the **2026 AI Track** end-to-end as sole
-instructor — the first AI-specialised cohort in the organisation's
-history, and the only mentorship track running in 2026 dedicated
-to AI engineering. The mandate covers full curriculum authorship,
-live instruction, ongoing mentorship through the capstone, and the
-teaching infrastructure students use throughout the cohort.
-Reporting line is direct to TechNest's leadership (Abiodun Oyedele
-and Afolasade Bello). Authority over: curriculum doctrine, weekly
-topic sequencing, assessment rubric, capstone tracks, tooling
-choices, and the public teaching platform that hosts every
-artefact — slides, lab handouts, recorded sessions, downloadable
-PDFs, capstone showcase, and an AI assistant trained on the course
-corpus itself.
-
-**Impact delivered:** **Authored and ran the 2026 AI Track — a 12-week prompt-first AI
-engineering curriculum** that became TechNest's flagship 2026
-cohort. Programme runs **April 25 – July 17, 2026** (Matriculation
-Ceremony April 25, official start April 27, completion July 17),
-delivered as one two-hour live session per week plus self-paced
-lab time, on a fixed five-phase session shape (Recap → Concept →
-Live Demo → Hands-On Lab → Q&A).
-
-**The curriculum doctrine is original and opinionated:** *"Natural
-language is the source code."* Students arrive having used only
-ChatGPT in a browser. By Week 8 they own a live, polished,
-AI-powered personal website that doubles as their portfolio,
-AI-clone chatbot, guestbook, blog, contact funnel, and the
-source-of-truth for their auto-generated CV and cover letter — all
-driven by prompting Cursor, Claude Code, and Gemini CLI rather
-than hand-writing code. By Week 12, every student team has shipped
-a multi-user AI product that strangers can actually use.
-
-**8-week teaching phase** evolves one progressively-built personal
-site, grafting a meaningful full-stack feature each week onto the
-same codebase: (1) AI Developer Toolkit Setup — Cursor, Claude
-Code, Gemini CLI, MCP servers, Skills, GitHub; (2) Deploy via
-Vercel CLI; (3) AI Clone — Gemini 2.5 Flash chat widget with a
-student-voiced system prompt; (4) Full-Stack — Neon Postgres +
-Neon Auth + Drizzle, guestbook; (5) Vercel Blob image uploads;
-(6) MDX blog + RSS; (7) Real-Time Slack notifications via webhook;
-(8) Typst PDF automation through the Typst skill in Claude Code,
-which becomes the engine for an auto-generated CV and cover letter.
-
-**4-week capstone** runs June 22 – July 17, 2026: teams of 2–4
-students evolve their personal-site codebase into a deployed
-multi-user AI SaaS on one of three tracks — *Campus Life*
-(event finder, roommate matcher, dorm chore-and-bill splitter),
-*Personal Growth* (habit coach with weekly AI reviews, reading
-companion, journaling assistant), or *Creative Tools* (AI
-short-story studio, music-prompt playground, comic-panel
-generator). Demo Day is a 5-minute live demonstration plus
-3-minute Q&A in front of invited guests, with public voting
-powered through the showcase platform I built.
-
-**Assessment rhythm baked into the doctrine.** Weekly assignments
-carry 50% weight and require students to submit both (a) the
-updated live site URL and (b) a screenshot of the Cursor /
-Claude Code conversation that drove the change — the screenshot
-rule operationalises the doctrine: *the prompt is the work*. The
-remaining weight is split across participation (10%), capstone
-(30%), and final demo (10%).
-
-**Public artefacts shipped through the platform** during the
-cohort include downloadable PDF handouts (curriculum-outline.pdf
-586 KB, capstone-spec.pdf 604 KB, and per-week lab guides),
-per-week recorded video tutorials sidebar-indexed in the docs,
-the Notion-backed Capstone 2026 public showcase page with live
-voting, an AI assistant that answers questions about the course
-material via retrieval over all four course versions plus the
-blog, and a Notion-powered classroom message board.
-
-**Technical highlights:** **Designed and built the teaching platform itself** — published as
-my personal teaching site at *ai-programming-teaching-project*
-(Docusaurus 3.8+ with `@docusaurus/faster`, deployed on
-Cloudflare Pages) and authored 100% by me, with 211 of 220 non-merge
-commits from my two GitHub identities and the remaining 9 from
-automated bots (Claude code-review automation and Dependabot security
-bumps). The platform serves five cohort versions side by side
-through Docusaurus versioned docs: `2024-winter`, `2025-summer`,
-`2026-her-waka` (the academyEX / Her Waka programme),
-`2026-technest` (the active cohort, set as default), and
-`2026-peyvand-academy` (the She Sharp × Peyvand Academy youth
-workshop). New cohorts
-slot in without disturbing older ones, and students who took a
-prior cohort retain a stable URL for their materials.
-
-**In-course AI assistant** indexes all four course versions plus
-the blog into a retrieval corpus with stable hash chunk IDs and
-version-aware retrieval, so a student in the 2026 cohort gets
-answers from 2026 materials by default. Implemented with a secure
-seeding flow and resilient retrieval logic — a teaching-platform
-feature most cohort sites simply don't have.
-
-**Notion-powered classroom infrastructure**, two surfaces: a
-course-wide message board with a Cloudflare Worker backend that
-proxies writes into Notion (so the cohort owners can moderate
-and review in the tool they already use), and a Capstone 2026
-public-showcase page that lists every team's demo with live
-Notion-backed voting open to invited guests — both bilingual.
-
-**Bilingual i18n by default** (English primary, 简体中文 secondary)
-across every cohort version. The build pipeline includes
-contextual Algolia search filtered by locale, localised Mermaid
-toolbar labels, locale-aware table-of-contents headings, and
-translated tag taxonomies — so a Mandarin-speaking student gets
-a fully localised experience including search results.
-
-**PDF handout pipeline** built on Typst — the same tool taught in
-Week 8 of the curriculum — so the printable curriculum outline,
-capstone spec, and per-week lab guides are generated through the
-skill students learn to use themselves. The pedagogical loop is
-intentional: students see, in production, the artefact they're
-being taught to build.
-
-**Engineering hygiene visible in the commit log**: full migration
-of the production deployment from Vercel to Cloudflare Pages
-(with SEO URL migration and Algolia config update); 13
-Dependabot security vulnerabilities resolved in one pass and
-ongoing patches managed cleanly; Mermaid dual-view component for
-diagram-heavy lessons; per-version sidebar customisation; SEO
-improvements with keyword-targeted blog posts written to support
-student discovery; trailingSlash and Algolia contextualSearch
-configuration to keep cross-locale and cross-version search
-coherent.
-
-**The choice of stack mirrors the curriculum.** I deliberately
-chose tools the students are learning — Next.js / React, Notion
-APIs, Cloudflare deployment, Typst PDF generation, Algolia
-search — so the teaching platform is itself a worked example of
-the doctrine being taught. Students can literally read the
-instructor's repo to see how the patterns they're learning
-compose in a real production system.
 ### Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer) at Gavigo
 [tier=flagship · recency=active · updated=2026-05-18]
 - **Period:** Oct 2025 -- Present
@@ -954,6 +672,312 @@ marketing.
 
 ## Past Roles
 
+### AI Agent Architect at Engram
+[tier=flagship · recency=recent · updated=2026-08-04]
+- **Period:** May 2026 -- Jul 2026
+- **Location:** Albuquerque, New Mexico, United States (remote)
+- **URL:** https://engram.media/
+
+**Impact:** Recruited by Claude itself — when Engram's founder asked the LLM to surface an AI architect for their Anthropic Partner Network track, Chan was the recommendation. Founder Luka Madzarac publicly confirmed it — empirical proof that GEO + open-source portfolios work.
+
+**Company context:** Engram LLC ([engram.media](https://engram.media/) /
+[LinkedIn company](https://www.linkedin.com/company/engrammedia/))
+is a New Mexico–registered AI-powered media agency founded by
+**Luka Madzarac**. The company is repositioning around
+**agent-powered media operations**: deploying agents and pipelines
+that run a client's entire media function in-house — design, data,
+content, distribution — instead of outsourcing production. The
+target market is service businesses that need a media department
+running on autopilot. Engram is building its stack on Anthropic's
+Claude platform and is on a path to **certified Anthropic
+partner** status. The **Architect Cohort** is a selective
+onboarding programme through which Engram brings architect-tier
+engineers into the core team that will define the company's
+agentic-media engineering standards.
+
+**Mission:** Replace click-through software workflows with **agentic ones** —
+natural-language intent drives downstream system orchestration
+and the agent's reasoning becomes the user-facing surface. For
+Engram specifically, that translates into autonomous media
+operations: instead of a human team manually assembling
+campaigns, content, and analytics, agentic systems plan,
+produce, and ship the media function for the client. The
+product line targets organisations that need end-to-end
+automation rather than demo-grade AI tooling, starting with
+Engram's own internal operations and graduating to client
+deployments.
+
+**My mandate:** **How the engagement started.** Luka Madzarac asked Claude Code
+to surface AI architects who could help Engram reach Anthropic
+Partner status. Claude returned Chan as one of the strongest
+matches based on her verifiable open-source agentic-tooling
+footprint — **claude-code-audio-hooks**, **CopilotKit**
+contributions, production LangChain automation engines,
+programmatic media generation with **Remotion**, and the
+"**API-as-UI**" design pattern she's been publishing. Luka
+publicly confirmed the sourcing path on LinkedIn:
+*"Claude Code surfaced Chan as one of the strongest matches
+for what we're looking for."*
+([announcement post](https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-activity-7459724144671195136-3JoV))
+
+**What the cohort engagement covered.** A 45-day Architect Cohort
+onboarding at ~10–15 hours per week, structured as a mutual
+evaluation period; the engagement ran May–July 2026.
+Responsibilities were: (1) working through Anthropic's **Claude
+Partner Network Learning Path** — building on already-held
+Anthropic credentials (**AI Fluency: Framework & Foundations**,
+Aug 2025; **Claude Code in Action**, Aug 2025, credential
+ID JHIY9NPYTR2D); (2) participating in weekly working sessions
+with founder Luka Madzarac and the rest of the cohort on
+agent, skill, and MCP-integration patterns; (3) contributing
+to the cohort's emerging agentic-media engineering conventions;
+(4) maintaining presence in Engram's communication channels
+for cross-cohort engineering discussion.
+
+**Impact delivered:** The Architect Cohort was an evaluation-shaped engagement rather
+than a delivery one, and it ran its course May–July 2026. What
+came out of it:
+
+1. **Anthropic Claude Partner Network Learning Path — completed**,
+   with verifiable per-course certificates recorded in
+   `certificates[]` (Claude Code in Action, Building with the
+   Claude API, Introduction to Model Context Protocol,
+   Introduction to Agent Skills, all May 2026, on top of AI
+   Fluency Framework and Claude Code in Action from Aug 2025).
+   The **Claude Certified Architect — Foundations practice
+   examination was sat and passed.**
+2. **Contributions to the cohort's shared agent and skill design
+   conventions** through weekly working sessions with the founder
+   and the rest of the architect cohort.
+3. **Cross-pollination** of Chan's pre-existing open-source
+   agentic tooling experience (claude-code-audio-hooks,
+   CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based
+   media generation) into cohort discussions on production-grade
+   agent design.
+4. **Open-source IP preserved.** The cohort agreement explicitly
+   carved out claude-code-audio-hooks (now **echook**) and the
+   rest of Chan's prior work as her own property — echook has
+   since gone on to 78 GitHub stars independently of Engram.
+
+**Precise on the credential, deliberately.** The CCA-F
+*curriculum* was completed and the *practice* exam passed; the
+**official certification exam was never sat, so the CCA-F
+credential is not held.** Every surface should say "curriculum
+completed" or "practice exam passed" and never "certified" —
+the course certificates are real and verifiable, the
+certification is not claimed.
+
+**Meta-signal**: the engagement itself validates a hypothesis
+Chan has been publishing about (**GEO / Generative Engine
+Optimization**) — that frontier models actively surface
+candidates based on verifiable code and real-world impact rather
+than traditional SEO keywords. Being the candidate Claude Code
+recommended to Engram for an Anthropic Partner engagement is
+empirical evidence that the open-source-first portfolio strategy
+works — and that remains true independently of how the cohort
+ended.
+
+**Technical highlights:** The technical footprint that Claude Code surfaced to Engram —
+all carved out as Chan's own IP under the cohort agreement and
+remaining Chan's property:
+
+- **claude-code-audio-hooks** — audio-feedback hook system for
+  Claude Code (explicitly named in the cohort agreement as
+  Chan's preserved IP), with its **echook** notification daemon.
+- **CopilotKit** — active contributor to the open-source agent
+  UI framework
+  ([PRs](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)).
+- **google-news-mcp** — production MCP server published to the
+  public registry.
+- **typst-claude-skill** — Claude Code skill for programmatic
+  document generation; demonstrates skill-structure design.
+- **claude-code-compressed-map** — LLM-first tier/recency
+  metadata system powering this very profile (the meta-move:
+  optimising Chan's own data so LLMs rank it correctly —
+  *GEO in practice*).
+- Production **LangChain** automation engines and interactive
+  LLM systems for mobile gaming.
+- Programmatic media generation via **Remotion**.
+
+The technical centre of gravity is **"API-as-UI"**: building
+agent surfaces where conversational intent orchestrates
+downstream tools and the model's chain-of-reasoning becomes
+the user interface — not a chat widget bolted onto a form.
+### AI Instructor & Mentor at TechNest Community
+[tier=primary · recency=recent · updated=2026-08-04]
+- **Period:** Apr 2026 -- Aug 2026
+- **Location:** Newfoundland, Canada (remote instruction)
+- **URL:** https://www.technestcommunity.com/
+
+**Impact:** TechNest's first AI-specialised mentorship track — sole instructor of a 12-week prompt-first curriculum with weekly live classes, recordings, an in-course RAG assistant, and capstone voting. Students ship portfolio-grade AI apps by week 8 on a ~96%-solo platform.
+
+**Company context:** TechNest Community is a Newfoundland-based nonprofit, established
+November 1, 2024, with the stated mission of "making technology
+accessible, creative, and impactful" for youth, newcomers, and
+local communities across Atlantic Canada. It operates four
+pillars: a structured **Mentorship Programme** that pairs learners
+with industry professionals on year-long tracks (software
+engineering, product management, cybersecurity, data analysis, 3D
+animation, and — for 2026 — Artificial Intelligence); **Creative
+Connections** networking events such as *Tech in the Park*
+(100+ attendees) and *Sip & Paint*; **Product Development** of
+community-serving software (their flagship is *Library Labs*,
+an AI-powered 3D learning platform); and **Tech for Children**
+coding-and-robotics workshops run in partnership with NCANL.
+Leadership is led by Abiodun (Magret) Oyedele and Afolasade Bello,
+both of whom I report to directly as the AI Track instructor.
+
+**Mission:** Make modern tech careers reachable for groups that the Canadian
+tech industry typically under-serves — youth, newcomers to Canada,
+and people living outside the country's major tech hubs. The
+underlying conviction is that the best lever for regional economic
+mobility is not generic "learn to code" content but mentored,
+cohort-based programmes that connect learners with working
+professionals and ship a portfolio-grade product by the end.
+
+**My mandate:** Designed and delivered the **2026 AI Track** end-to-end as sole
+instructor — the first AI-specialised cohort in the organisation's
+history, and the only mentorship track running in 2026 dedicated
+to AI engineering. The mandate covers full curriculum authorship,
+live instruction, ongoing mentorship through the capstone, and the
+teaching infrastructure students use throughout the cohort.
+Reporting line is direct to TechNest's leadership (Abiodun Oyedele
+and Afolasade Bello). Authority over: curriculum doctrine, weekly
+topic sequencing, assessment rubric, capstone tracks, tooling
+choices, and the public teaching platform that hosts every
+artefact — slides, lab handouts, recorded sessions, downloadable
+PDFs, capstone showcase, and an AI assistant trained on the course
+corpus itself.
+
+**Impact delivered:** **Authored and ran the 2026 AI Track — a 12-week prompt-first AI
+engineering curriculum** that became TechNest's flagship 2026
+cohort. The programme ran **April 25 – July 17, 2026**
+(Matriculation Ceremony April 25, official start April 27,
+completion July 17), delivered as one two-hour live session per
+week plus self-paced lab time, on a fixed five-phase session shape
+(Recap → Concept → Live Demo → Hands-On Lab → Q&A).
+**30 students graduated.**
+
+**The curriculum doctrine is original and opinionated:** *"Natural
+language is the source code."* Students arrive having used only
+ChatGPT in a browser. By Week 8 they own a live, polished,
+AI-powered personal website that doubles as their portfolio,
+AI-clone chatbot, guestbook, blog, contact funnel, and the
+source-of-truth for their auto-generated CV and cover letter — all
+driven by prompting Cursor, Claude Code, and Gemini CLI rather
+than hand-writing code. By Week 12, every student team has shipped
+a multi-user AI product that strangers can actually use.
+
+**8-week teaching phase** evolves one progressively-built personal
+site, grafting a meaningful full-stack feature each week onto the
+same codebase: (1) AI Developer Toolkit Setup — Cursor, Claude
+Code, Gemini CLI, MCP servers, Skills, GitHub; (2) Deploy via
+Vercel CLI; (3) AI Clone — Gemini 2.5 Flash chat widget with a
+student-voiced system prompt; (4) Full-Stack — Neon Postgres +
+Neon Auth + Drizzle, guestbook; (5) Vercel Blob image uploads;
+(6) MDX blog + RSS; (7) Real-Time Slack notifications via webhook;
+(8) Typst PDF automation through the Typst skill in Claude Code,
+which becomes the engine for an auto-generated CV and cover letter.
+
+**4-week capstone** ran June 22 – July 17, 2026: students evolved
+their personal-site codebase into a deployed multi-user AI SaaS on
+one of three tracks — *Campus Life* (event finder, roommate
+matcher, dorm chore-and-bill splitter), *Personal Growth* (habit
+coach with weekly AI reviews, reading companion, journaling
+assistant), or *Creative Tools* (AI short-story studio,
+music-prompt playground, comic-panel generator). Demo Day was a
+5-minute live demonstration plus 3-minute Q&A in front of invited
+guests, with public voting powered through the showcase platform
+I built.
+
+**Capstone outcome (as of 2026-08-04): 6 projects shipped and
+published to the public showcase** — 5 on the *Personal Growth*
+track and 1 on *Campus Life* — drawing **138 public votes**
+between them. The most-voted project was **LinguaPath** with 66
+votes, ahead of Joborg AI (31) and iCare (21); every one is a
+live, deployed, multi-user AI product with a public repo and a
+demo video. Counts are point-in-time: the `/capstone-showcase`
+page is a deliberately temporary cohort artefact and its Notion
+database, not the page, is the durable record.
+
+**Assessment rhythm baked into the doctrine.** Weekly assignments
+carry 50% weight and require students to submit both (a) the
+updated live site URL and (b) a screenshot of the Cursor /
+Claude Code conversation that drove the change — the screenshot
+rule operationalises the doctrine: *the prompt is the work*. The
+remaining weight is split across participation (10%), capstone
+(30%), and final demo (10%).
+
+**Public artefacts shipped through the platform** during the
+cohort include downloadable PDF handouts (curriculum-outline.pdf
+586 KB, capstone-spec.pdf 604 KB, and per-week lab guides),
+per-week recorded video tutorials sidebar-indexed in the docs,
+the Notion-backed Capstone 2026 public showcase page with live
+voting, an AI assistant that answers questions about the course
+material via retrieval over all four course versions plus the
+blog, and a Notion-powered classroom message board.
+
+**Technical highlights:** **Designed and built the teaching platform itself** — published as
+my personal teaching site at *ai-programming-teaching-project*
+(Docusaurus 3.8+ with `@docusaurus/faster`, deployed on
+Cloudflare Pages) and authored 100% by me, with 211 of 220 non-merge
+commits from my two GitHub identities and the remaining 9 from
+automated bots (Claude code-review automation and Dependabot security
+bumps). The platform serves five cohort versions side by side
+through Docusaurus versioned docs: `2024-winter`, `2025-summer`,
+`2026-her-waka` (the academyEX / Her Waka programme),
+`2026-technest` (the active cohort, set as default), and
+`2026-peyvand-academy` (the She Sharp × Peyvand Academy youth
+workshop). New cohorts
+slot in without disturbing older ones, and students who took a
+prior cohort retain a stable URL for their materials.
+
+**In-course AI assistant** indexes all four course versions plus
+the blog into a retrieval corpus with stable hash chunk IDs and
+version-aware retrieval, so a student in the 2026 cohort gets
+answers from 2026 materials by default. Implemented with a secure
+seeding flow and resilient retrieval logic — a teaching-platform
+feature most cohort sites simply don't have.
+
+**Notion-powered classroom infrastructure**, two surfaces: a
+course-wide message board with a Cloudflare Worker backend that
+proxies writes into Notion (so the cohort owners can moderate
+and review in the tool they already use), and a Capstone 2026
+public-showcase page that lists every team's demo with live
+Notion-backed voting open to invited guests — both bilingual.
+
+**Bilingual i18n by default** (English primary, 简体中文 secondary)
+across every cohort version. The build pipeline includes
+contextual Algolia search filtered by locale, localised Mermaid
+toolbar labels, locale-aware table-of-contents headings, and
+translated tag taxonomies — so a Mandarin-speaking student gets
+a fully localised experience including search results.
+
+**PDF handout pipeline** built on Typst — the same tool taught in
+Week 8 of the curriculum — so the printable curriculum outline,
+capstone spec, and per-week lab guides are generated through the
+skill students learn to use themselves. The pedagogical loop is
+intentional: students see, in production, the artefact they're
+being taught to build.
+
+**Engineering hygiene visible in the commit log**: full migration
+of the production deployment from Vercel to Cloudflare Pages
+(with SEO URL migration and Algolia config update); 13
+Dependabot security vulnerabilities resolved in one pass and
+ongoing patches managed cleanly; Mermaid dual-view component for
+diagram-heavy lessons; per-version sidebar customisation; SEO
+improvements with keyword-targeted blog posts written to support
+student discovery; trailingSlash and Algolia contextualSearch
+configuration to keep cross-locale and cross-version search
+coherent.
+
+**The choice of stack mirrors the curriculum.** I deliberately
+chose tools the students are learning — Next.js / React, Notion
+APIs, Cloudflare deployment, Typst PDF generation, Algolia
+search — so the teaching platform is itself a worked example of
+the doctrine being taught. Students can literally read the
+instructor's repo to see how the patterns they're learning
+compose in a real production system.
 ### Software Engineer (Bandicoot squad · Crimson Academies) at Aotearoa Infinite Academy
 [tier=primary · recency=historical · updated=2026-05-27]
 - **Period:** Oct 2025 -- Nov 2025
@@ -1977,302 +2001,7 @@ orientation that later anchored Chan's work between China and NZ.
 
 ## Flagship Projects
 
-### 1. Google News MCP Server — Early-ecosystem MCP server (shipped 5 weeks after Anthropic's Nov 25 2024 MCP launch) — PulseMCP "Top Pick", featured in Skywork AI deep-dive review, distributed across 15+ MCP catalogs
-[tier=flagship · recency=recent · updated=2026-07-17]
-- **URL:** https://github.com/ChanMeng666/server-google-news
-- **Repository:** https://github.com/ChanMeng666/server-google-news
-- **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk, stdio transport, SerpAPI, axios, ES modules, npm (scoped @chanmeng666)
-- **First commit:** 2024-12-30 — 35 days after MCP's Nov 25 2024 public launch
-- **npm package:** @chanmeng666/google-news-server
-- **Registry listings:** 15+ MCP catalogs (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, MCP Server Finder, MCP Archive, Playbooks, mcpservers.org, Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides)
-- **PulseMCP badge:** Top Pick · 26.1k visitors · #1,105 global rank
-- **Glama quality:** A (license) · 122 stars
-- **Skywork review:** Dedicated Oct 2025 deep-dive article + AI-Engineer's Guide companion piece
-- **Stars:** ~125 GitHub · 20 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai
-- **Forks:** 20
-- **Commits:** not tracked (shallow history) — see repos
-- **Early MCP contrib:** Issue #76 (Nov 27 2024 — Windows/NVM workaround)
-**Summary:** An early Model Context Protocol server — the open standard Anthropic
-launched in November 2024 to connect AI assistants to outside tools.
-Its first commit landed 35 days after that launch. It lets assistants
-like Claude, Cursor, and Cline search live Google News through SerpAPI,
-automatically sorted into topics (technology, business, science,
-health) and offered in 10 languages. Published on npm as
-`@chanmeng666/google-news-server`, it carries a PulseMCP "Top Pick"
-badge and ships a one-click install bundle for Claude Desktop.
-
-**Impact:** Lets AI assistants like Claude search live Google News — sorted into topics, in 10 languages. One of the first tools built for Anthropic's Model Context Protocol: shipped 35 days after the standard launched, and it's now listed across 15+ MCP directories.
-
-**Problem:** Anthropic published the Model Context Protocol in November 2024 — the
-open standard that lets AI assistants like Claude reach outside their
-training data to real tools and live sources. In the first weeks after
-launch the ecosystem had only a handful of reference servers, and none
-of them let an assistant search current news. That was a concrete gap:
-people were already asking their AI assistant "what's happening with X
-today," a question no model can answer from training data alone, and
-there was no Google News option in the MCP catalog.
-
-A second friction appeared at the same time: Windows users running Node
-Version Manager couldn't get *any* npm-based MCP server to connect to
-Claude Desktop, because PATH resolution through NVM's shim layer broke
-the desktop client's ability to launch the server process. That blocked
-a large share of early Windows adopters from using MCP at all.
-
-**Audience:** AI assistants and the developers wiring them up. Direct consumers:
-Claude Desktop, Cursor's agent mode, Cline, Continue, and any
-MCP-compliant client whose setup includes news search. Downstream: the
-people asking those assistants about current events — analysts and
-journalists monitoring coverage, developers building research and
-content agents. The project is deliberately listed on multiple MCP
-registries because that is how AI developers actually find servers —
-they browse catalogs, not GitHub search.
-
-**Product logic:** A user asks their AI assistant something like "what's happening with
-[topic] in [region] this week." The assistant calls the server's one
-tool, `google_news_search`, with a query plus optional `gl` (country)
-and `hl` (language) codes. The server passes the request to SerpAPI's
-Google News engine, gets structured results back, sorts them into
-topics (AI & Technology, Business, Science & Research, Healthcare,
-General) with lightweight pattern matching, and returns clean output
-with each article's source, date, snippet, and link intact. It also
-supports search by news topic, publisher, full-story coverage, and
-section via token parameters, and falls back to English for
-unsupported language codes.
-
-The server runs over MCP's stdio channel — the default for desktop AI
-clients — and installs in one command through Smithery's CLI (`npx -y
-@smithery/cli install @chanmeng666/google-news-server --client
-claude`), or via a packaged `.mcpb` bundle for one-click setup in
-Claude Desktop.
-
-**Business logic:** Open source, MIT licensed, no direct monetization. The intent is
-ecosystem positioning: be a canonical Google News server during the
-formative months of the Model Context Protocol, so the project keeps
-surfacing wherever a developer looks for an MCP tool. Distribution
-across many registries (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP
-Servers, Archestra, and others) is the discovery strategy. The README
-also carries JSON-LD `SoftwareApplication` metadata and an `llms.txt`
-guide so that AI agents themselves can read the server's identity,
-parameters, and use cases without parsing marketing prose — the same
-discovery-by-machine approach used across the rest of this portfolio.
-
-**Technical approach:** TypeScript on Node.js, built against `@modelcontextprotocol/sdk` v1.x,
-shipped as an ES-module CLI binary (`google-news-server`) declared in
-`package.json`. Transport is stdio, so the server runs as a subprocess
-the desktop AI client launches. HTTP calls go through axios; SerpAPI is
-the underlying data source (2 requests/second, 5 concurrent, 1-hour
-cache). On top of the raw API the server adds a thin intelligence
-layer: parameter validation, topic categorization, multi-language
-formatting, and error handling with clear messages.
-
-The repo also ships production packaging — a Dockerfile, a Smithery
-config, a `manifest.json`, a JSON-LD `structured-data.json`, an
-`llms.txt`, and a downloadable `.mcpb` install bundle — plus a full
-set of community-health docs (CONTRIBUTING, SECURITY, SUPPORT,
-GOVERNANCE, CHANGELOG, issue/PR templates) added in 2026.
-
-The third contribution is community, not code: **issue #76** in the
-official `modelcontextprotocol/servers` repo (opened Nov 27 2024, two
-days after MCP's launch) documented the Windows + NVM PATH failure that
-stopped Claude Desktop from launching npm-based MCP servers. The fix —
-point the client config at the absolute path of `node.exe` instead of
-relying on PATH — is cited as the primary troubleshooting step in this
-server's README.
-
-**Outcomes:** The server is published on npm as `@chanmeng666/google-news-server`
-and listed across multiple MCP discovery surfaces, with third-party
-recognition:
-- PulseMCP "Top Pick" badge *(external claim — needs registry check)*
-- Glama A-grade license rating *(external claim — needs registry check)*
-- Smithery one-command install, plus listings on mcp.so, Awesome MCP
-  Servers, Archestra, and other catalogs *(exact catalog count is
-  external — needs registry check)*
-- Independent deep-dive write-ups by third-party reviewers (Skywork
-  AI, AgentSkillsHub) *(external claim — needs registry check)*
-- A hosted deployment listed on Fronteir AI *(external claim — needs
-  registry check)*
-
-Alongside it, the companion `server-google-jobs` (first commit late
-December 2024) applies the same pattern to Google Jobs search
-*(Jobs-repo specifics not verifiable from the News clone — see
-flags)*. Issue #76 remains visible in the official MCP servers
-repository as a record of an early ecosystem contribution.
-
-**My role:** I built and maintain the server solo — the code, the README, the npm
-publish, the registry submissions, the packaging, and the
-issue-tracker responses. I also filed the early issue #76
-troubleshooting contribution. Together these make the
-early-MCP-developer story concrete: not a theoretical early adopter,
-but someone who shipped, distributed, documented, and supported a
-working MCP server within the protocol's first month.
-### 2. echook (Echo + Hook) — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
-[tier=flagship · recency=active · updated=2026-07-17]
-- **URL:** 
-- **Repository:** https://github.com/ChanMeng666/echook
-- **Tech stack:** Python 3.6+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13), Remotion 4 (promo video), React 19 (promo video), Suno (background music generation)
-- **Commits (solo):** 151 (2025-11-01 → 2026-07-16, ~8 months); effectively single-author
-- **GitHub stars:** ~75 (echook, renamed from claude-code-audio-hooks)
-- **Version:** v6.3.4 (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)
-- **Hook events:** 37 canonical events (3 on by default), mapped per harness: Claude Code 37 · Cursor 18 native (8 via auto-bridge) · Codex 10
-- **Harnesses:** 3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift
-- **Runtime:** Python 3.6+ standard library only (no third-party runtime deps); distributed via plugin marketplaces + source, not npm
-- **CLI:** ~40 JSON-in/JSON-out subcommands; a `manifest` command emits the entire surface (subcommands, hooks, config keys, error codes) as machine-readable JSON so an agent can self-orient
-- **Status line:** 29 configurable segments (context-window color bands, quota bars, model/branch/cost), auto-reflowing to terminal width
-- **Channels:** audio · desktop toast · TTS (speaks the agent's actual final message) · webhook (Slack/Discord/Teams/ntfy, versioned payload)
-- **Tests / CI:** 248 unittest cases on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate
-**Summary:** An audio-and-status notification system for Claude Code, Cursor
-IDE, and Codex CLI. The core idea: you never have to learn the
-tool. You talk to your AI agent in plain English — "install
-audio-hooks," "switch to chimes," "snooze for 30 minutes," "send
-alerts to my Slack" — and the agent runs the commands, reads the
-results, and reports back. It ships 37 hook events (3 on by
-default), two audio themes, warnings before you hit your 5-hour
-and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,
-text-to-speech that reads the agent's actual reply aloud, and a
-29-segment status bar that tracks how much of the context window
-is left. Now on v6.3.4 with 248 automated tests running on
-Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
-under MIT; runs on the Python standard library with no extra
-dependencies. A sister repo, echook-promo-video, ships an
-88-second product film built entirely in code.
-
-**Impact:** A notification system for AI coding assistants — Claude Code, Cursor, and Codex — that you install and set up just by talking to the AI in plain English. It plays sounds, reads the agent's reply aloud, warns you before you hit usage limits, and shows a live status bar.
-
-**Problem:** Developers running long AI coding sessions on Claude Code,
-Cursor IDE, and Codex CLI have no easy way to *hear* what their
-agent is doing. They alt-tab to check progress, miss
-usage-limit warnings, and only notice a stuck session by
-looking at it. Add-on notification tools exist, but they all
-share the same flaw: the human sits downstream of the command
-line. You have to read docs, memorize flags, copy commands, and
-re-learn the same surface every time it changes. That breaks
-down the moment a serious user rotates between three editors,
-each with its own configuration language and its own muscle
-memory. The real mismatch isn't audio — it's the working
-contract between humans, AI agents, and developer tooling.
-
-**Audience:** Software engineers operating Claude Code, Cursor IDE, or Codex
-CLI at the "AI-first" level — people comfortable telling their
-coding agent to install, theme, snooze, webhook, or reconfigure
-things in plain English rather than memorizing subcommands.
-Also: power users debugging long-running workflows where a
-sound is faster than watching a screen; teams rolling out
-shared notification defaults across several developers; and
-researchers who want a working reference implementation of an
-AI-first plugin contract.
-
-**Product logic:** echook flips the usual relationship: the human is upstream, and
-the AI agent learns the tool on the human's behalf. One install
-prompt — *"install the audio-hooks plugin from
-github.com/ChanMeng666/echook"* — starts the whole flow. The
-agent runs `claude plugin marketplace add` and `claude plugin
-install`, the user types `/reload-plugins` exactly once (the
-only manual step in the tool's entire lifetime, because Claude
-Code's reload has no command-line equivalent), and from then on
-every interaction is a sentence. *"Switch to chimes." "Snooze
-for 8 hours." "Send alerts to my Slack at this webhook and test
-it." "Turn everything off except stop and permission
-requests."* The `/audio-hooks` skill reads the intent, runs the
-right `audio-hooks` command, reads its JSON output, and tells
-you what happened. You memorize nothing. Cross-editor parity is
-part of the same contract: every prompt works the same way on
-Cursor's agent and on Codex CLI, because all three drive the
-same Python program against the same JSON interface.
-
-**Business logic:** Open source under MIT — no paywall, no premium tier, no
-telemetry. The value is build-in-public credibility: echook is
-the demonstration piece for Chan's AI-first product philosophy,
-and it shows up in Engram-cohort interviews, recruiter
-conversations, and the README of downstream client projects. A
-sustained release cadence (now v6.3.4), a three-OS
-continuous-integration matrix, and a 248-case test suite
-guarding the cross-editor contract make it visibly production
-engineering, not a weekend script. The Remotion promo-video
-sister repo extends the same proof — it shows Chan can ship not
-only the product but the marketing film for it, end to end and
-entirely in code, with no video-production tooling.
-
-**Technical approach:** AI-first design at every layer. The `audio-hooks` command-line
-tool exposes a stable, JSON-only interface with roughly 40
-subcommands, no prompts and no spinners, versioned NDJSON event
-logging (schema `audio-hooks.v1`, 5 MB rotation × 3 files), and
-a fixed set of error codes (`AUDIO_FILE_MISSING`,
-`WEBHOOK_TIMEOUT`, `DUAL_INSTALL_DETECTED`, and so on) where
-each error carries a `suggested_command` field so an agent can
-recover on its own without scraping text. Hook coverage spans
-37 canonical events — session start and end, tool execution,
-permission requests, file changes, MCP elicitation, and
-usage-limit warnings (5-hour and 7-day windows with configurable
-80%/95% thresholds, each `(window, threshold, resets_at)` firing
-exactly once via debounce markers). Two audio themes ship: an
-ElevenLabs "Jessica" voice or modern UI chimes; rebuilds are
-declarative via `config/audio_manifest.json` plus the ElevenLabs
-generator. Webhooks fan out to Slack, Discord, Teams, and ntfy
-through a fire-and-forget subprocess with a versioned
-`audio-hooks.webhook.v1` payload, so they never block the hook.
-The status bar offers 29 configurable segments, including
-color-coded context-window and usage bars with absolute token
-counts (e.g. `Context: 83% (166K/200K)`) so users see the
-"agent dumb zone" before they reach it. The deepest piece is the
-cross-editor architecture: canonical sources live in `/hooks/`,
-`/bin/`, `/audio/`, `/cursor-hooks/`, and `/codex-hooks/`, and
-`build-plugin.sh` syncs them into the Claude Code plugin layout
-— one source of truth, three editor targets — with continuous
-integration enforcing no-drift via `build-plugin.sh --check`.
-Cursor rides its 3.2.16+ auto-bridge so most users get support
-for free; Cursor-only installs use a native
-`~/.cursor/hooks.json` registration guarded by a
-`DUPLICATE_BRIDGE` error that aborts if both paths would run at
-once. The Codex path handles OpenAI's required
-`[features]\ncodex_hooks = true` flag by writing a fresh
-`~/.codex/config.toml` when none exists and emitting
-machine-readable `next_steps` for the agent to edit an existing
-one — echook never round-trips a user's TOML, because that would
-destroy comments and formatting. Canonical events with no Codex
-equivalent no-op cleanly under the Codex invoker with a debug
-log line, never blocking the session. The whole contract is
-validated by 248 test cases across Ubuntu, Windows, and macOS on
-Python 3.9, 3.12, and 3.13 in GitHub Actions.
-
-**Outcomes:** ~76 GitHub stars (external — needs registry check; live 75),
-151 commits across the 5.x → 6.x line (now v6.3.4), and 248
-automated test cases. The defining release sequence: v5.0 (Jan
-2026) shipped the AI-first redesign — JSON command interface,
-`/audio-hooks` skill, NDJSON logging, plugin-native install;
-v5.2.0 (May 2026) added native Codex CLI support with +33
-contract tests; v5.2.1 (May 2026) executed the echook rebrand —
-a "door-only" GitHub rename from `claude-code-audio-hooks` to
-`echook` (leading with "Claude Code" had become misleading once
-native Cursor and Codex paths shipped) that preserved every
-existing install via GitHub's repo redirect and kept the
-`audio-hooks` command name, the `chanmeng-audio-hooks`
-marketplace name, and all state directories unchanged. The
-Engram Architect Cohort Engagement Letter (May 9, 2026)
-explicitly names *claude-code-audio-hooks* among Chan's
-preserved IP — formal recognition by a commercial
-agentic-infrastructure firm that this is portfolio-grade
-engineering, not a hobby script. The sister repo
-echook-promo-video then closed the loop on the thesis: an
-88-second 1080p product film composed entirely in code (React +
-Remotion, with Suno-generated background music and ElevenLabs
-voice and effects — no video-editing suites and no human voice
-actors), fully reproducible from two commands.
-
-**My role:** Sole author of both repos. On echook proper: designed the
-AI-first contract (JSON interface + NDJSON log + fixed error
-codes + `suggested_command` recovery), wrote every hook-event
-integration, engineered the three-editor synchronization
-pipeline (canonical sources synced into the plugin layout via
-`build-plugin.sh`, with CI enforcement), authored the Codex
-TOML feature-flag bootstrap pattern, and executed the 5.2.1
-rebrand without breaking compatibility. On echook-promo-video:
-designed the nine-section narrative arc, built the reusable
-visual primitives (TypewriterText, Terminal, SoundWave,
-GreenGrid, CounterNumber, GlowText), orchestrated the Remotion
-transitions, wrote the ElevenLabs audio-generation script, and
-tuned the volume-ducking so the background music dips under
-voiceover and demo playback. Maintains both repos today.
-### 3. ArchLang — An original declarative floor-plan language that compiles .arch source into professional, dimensioned floor plans — 'Typst/LaTeX for architecture.' Zero-dependency, isomorphic TypeScript (hand-written lexer + recursive-descent parser), errors returned as data not thrown, with architectural-soundness linting, human-circulation analysis, a deterministic repair pass, five export formats (SVG/DXF/PDF/PNG/text), an agent-native CLI, full LSP + VS Code extension, and a client-side playground. Published to npm; the compiler engine behind ArchCanvas.
+### 1. ArchLang — An original declarative floor-plan language that compiles .arch source into professional, dimensioned floor plans — 'Typst/LaTeX for architecture.' Zero-dependency, isomorphic TypeScript (hand-written lexer + recursive-descent parser), errors returned as data not thrown, with architectural-soundness linting, human-circulation analysis, a deterministic repair pass, five export formats (SVG/DXF/PDF/PNG/text), an agent-native CLI, full LSP + VS Code extension, and a client-side playground. Published to npm; the compiler engine behind ArchCanvas.
 [tier=flagship · recency=active · updated=2026-07-26]
 - **URL:** https://archlang.uk/
 - **Repository:** https://github.com/ChanMeng666/archlang
@@ -2305,37 +2034,7 @@ Compilation is a returned value, not a side effect: `compile()` hands back `{ sv
 **Outcomes:** A complete, published language: 304 commits (297 mine, the rest automated dependency bumps) over roughly three weeks of intensive development (from 2026-06-25), across 92 source files (~23.3k LOC) against 109 test files, released to npm at v1.18.0 over 34 tagged releases with 15 architecture decision records. The surface area is unusually complete for a solo language project — 8 primitives, 5 export formats, 8 lint-rule modules, a circulation analyzer, a repair pass, an intent-scoring channel, a ~20-command CLI, a full LSP, a VS Code extension, an optional MCP server, a client-side playground, a docs site, a published HuggingFace dataset of self-verifying repair trajectories, and a GitHub Action that renders every ```arch fence in a repo's Markdown. Most tellingly, it is already load-bearing: ArchCanvas's in-browser use of the core drove real hardening, proving the engine under a downstream product rather than in isolation.
 
 **My role:** I invented the language and wrote everything — the language design, the hand-written lexer / parser / evaluator, the 83-code diagnostic system, all five export backends, the lint / circulation / repair / intent / suggest pipelines, the LSP and VS Code extension, the CodeMirror playground, the docs site, the MCP server, and the npm packaging. 297 of the 304 commits are mine; the remaining 7 are automated dependency bumps.
-### 4. ArchCanvas — 'Your AI architect — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Refinement mutates the plan in place — it never regenerates it.
-[tier=flagship · recency=active · updated=2026-07-17]
-- **URL:** https://archcanvas.uk/
-- **Tech stack:** Next.js 15.3 (App Router) + React 19 + TypeScript 5.8, Vercel AI SDK (ai 4.3, @ai-sdk/openai) + OpenAI 6.45 — orchestrator migrated off GPT-4o to a newer reasoning model for tool use; GPT-4o retained for vision, GPT Image grounded renderings (view-aware model chain: aerial vs eye-level), @chanmeng666/archlang ^1.18.0 (Chan's own declarative floor-plan compiler, consumed as a package), Neon Postgres + Drizzle ORM (9 tables, schema-push), Stripe 17 (credits ledger, dual live/test mode), Cloudinary (rendering storage), react-zoom-pan-pinch (infinite zoomable canvas), isomorphic-git + memfs + fflate (export design history as a real git repo, in-memory), jose (JWT/JWKS auth), Zod validation · shadcn/ui + Tailwind 4 + Framer Motion + GSAP, Docker canary-then-swap deploy over SSH (DigitalOcean VPS, Traefik + Let's Encrypt, Cloudflare Full-Strict)
-- **Commits (solo):** ~295 (268 non-merge) (2026-04-08 → 2026-07-16, ~3 months); sole author
-- **Surfaces:** 13 pages · 28 API route handlers · 71 components · 205 source files
-- **Database:** 9 Drizzle tables on Neon (projects · designFrames · agentThreads · credits · creditTransactions · shares · generationAttempts · uploads · stripeWebhookEvents)
-- **Agent tools:** 9 (7 user-facing: askDesignQuestions · generateFloorPlanDSL[new plan] · editFloorPlanDSL[minimal diff] · generateRendering · critiquePlan · analyzeReference[vision] · analyzeFloorPlan)
-- **Generation unit:** one generation = plan + grounded rendering + critique, produced as a single atomic set; edits, parametric tweaks, re-renders, and review mode all operate on that set without re-generating it
-- **Git export:** in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)
-- **Deploy:** private repo → GitHub Actions → GHCR → canary-then-swap over SSH (boot canary, poll /api/health, swap only if healthy) on a DO VPS behind Traefik + Cloudflare
-**Summary:** ArchCanvas is an AI design agent for architects and self-builders. Describe a building in plain language and it asks a few questions, then designs one dimensioned floor plan you can actually build from — with room labels and measurements — alongside a realistic AI rendering of it. From there it stays conversational: on an infinite zoomable canvas you refine the plan by talking to it, scrub through every past version, and export the whole design as files or as a full change history.
-
-**Impact:** An AI design agent for architects and self-builders: describe a building in plain words and it designs a dimensioned floor plan you can actually build from, plus a realistic rendering — then you refine it by talking, on an infinite zoomable canvas.
-
-**Problem:** AI floor-plan tools produce pretty pictures you cannot build from and cannot precisely edit. An image-generated plan has no real dimensions, no guarantee a wall is straight, and no handle to grab when you want the kitchen two metres wider — you re-prompt and hope. Meanwhile professional CAD is powerful but slow and expert-only, and neither world lets you simply *talk* to your design. ArchCanvas closes that gap: a plan you can converse your way to, that is nonetheless a real, dimensioned, buildable artifact you can keep editing precisely.
-
-**Audience:** Architects and designers who want to move fast from brief to a credible dimensioned plan, and self-builders / renovators who have a vision but not CAD skills and need something they (or their builder) can actually work from. Because every plan is a real floor-plan program underneath, the same product serves a careful professional nudging a wall thickness with a slider and a first-timer who just wants to describe their dream house and see it — and refine it — in plain language.
-
-**Product logic:** The studio runs in two acts. **Act I** is a full-screen briefing conversation: the user picks a typology (residential, accessible clinic, open-plan office, passive house) and describes the build; the agent asks two-to-five clarifying questions inline, then generates ONE plan — deliberately not a grid of options — as parametric ArchLang, compiles it to a dimensioned SVG with `data-arch-id` anchors, renders a grounded AI visualization, and critiques it. That single turn is the only point at which the agent is asked for a brand-new plan.
-
-**Act II** is a canvas-first studio, and nothing in it regenerates. Edits are conversational and **morph the plan in place** — the parent geometry fades to a dashed ghost, a semantic-diff chip shows what changed, and a version-lineage timeline lets you scrub the history. **Select-to-act**: click a room, door, or window and a floating action bar offers verb chips (Enlarge / Shrink / Widen / Move) plus agent-suggested scoped edits. A **Parametric Tweaks** panel turns the plan's own variables (room sizes, counts, wall thickness) into live sliders that recompile instantly with no AI call at all. **Review mode** toggles a walking-circulation overlay (routes, pinch points) and pins anchored critique findings, each with a one-click "have AI fix" — display-only, never auto-applied. The finished design exports as SVG/PNG/DXF/PDF, or as a full versioned change history whose log *is* the design conversation.
-
-**Business logic:** The unit of work is one generation turn — plan + grounded rendering + critique, produced as a single atomic set — and everything downstream of it is refinement rather than regeneration. That split is deliberate: a design task's value is lumpy (you want a few strong plans, then iterate on them for a long time), so every edit, parametric tweak, re-render, and review action mutates the existing frame in place, and the model is re-invoked only when the user genuinely asks for new work. The advantage is the ArchLang pairing: because plans are a deterministic program rather than pixels, ArchCanvas can offer editing, tweaking, diffing, and change-history export that an image-generation competitor structurally cannot.
-
-**Technical approach:** A single Next.js 15 monolith (React 19, TypeScript 5.8) over a 9-table Drizzle schema on Neon Postgres, with Stripe credits, Cloudinary rendering storage, and jose-based auth. The AI layer is an orchestrated tool-agent on the Vercel AI SDK: the orchestrator was deliberately migrated off GPT-4o (which under-used tools and wrote non-parametric DSL) to **gpt-5.5**, while GPT-4o is retained for vision (reference-image analysis). Its tools center on `generateFloorPlanDSL` — write parametric ArchLang, compile it through the `@chanmeng666/archlang` package (now 1.18), pass a ship-gate, save a frame — with `editFloorPlanDSL` as the minimal-diff follow-up. Renderings are a **grounded, view-aware chain**: the compiled plan is rasterized and sent as the grounding image to GPT Image 2, with model order chosen per view (aerial vs eye-level) so the render matches the real geometry instead of hallucinating a layout. `designFrames` stores each version's ArchLang source, compiled SVG, rendering URLs, lint warnings, review findings, and a self-referential `parentFrameId` for lineage — which is exactly what the in-memory change-history export (isomorphic-git + memfs, zipped with fflate) walks root-to-tip. Deployment is a canary-then-swap over SSH: build a Docker image, push to GHCR, boot a health-checked canary, and swap traffic only if `/api/health` passes — otherwise abort untouched.
-
-**Outcomes:** Live in production at archcanvas.uk, solo-built across roughly 295 commits over three months (2026-04-08 → 2026-07-16): 13 pages, 28 API route handlers, 71 components, and 205 source files over a 9-table schema. The product is unusually rigorous about testing its own thesis — a `generationAttempts` telemetry table tracks first-pass ArchLang validity per model, and a `bench` harness runs briefs through both the DSL pipeline and a legacy freehand-pixel pipeline as a control group (now with timing and token axes), so the "DSL beats pixels" claim is measured, not asserted. It is also the proving ground that hardened ArchLang: real in-browser use of the compiler drove concrete upstream fixes, most recently the 1.18 topology work.
-
-**My role:** Sole author of the entire product — the two-act studio and canvas UX, the AI orchestrator and its tools, the grounded view-aware rendering chain, the ArchLang integration, the 9-table schema and credit/billing system, the change-history export, the falsifiability instruments, and the canary-then-swap deployment. And of ArchLang itself, the floor-plan language it is built on. Every commit is mine.
-### 5. Vitex — AI Career Agent (vitex.org.nz) — Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions
+### 2. Vitex — AI Career Agent (vitex.org.nz) — Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions
 [tier=flagship · recency=recent · updated=2026-07-17]
 - **URL:** https://www.vitex.org.nz/
 - **Repository:** https://github.com/ChanMeng666/easy-resume
@@ -2384,284 +2083,39 @@ Right after tailoring, a deterministic **faithfulness gate** re-checks for fabri
 **Outcomes:** Live and operational at **vitex.org.nz**, serving real users end-to-end from a pasted job ad to a compiled PDF. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.
 
 **My role:** Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.
+### 3. ArchCanvas — 'Your AI architect — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Refinement mutates the plan in place — it never regenerates it.
+[tier=flagship · recency=active · updated=2026-07-17]
+- **URL:** https://archcanvas.uk/
+- **Tech stack:** Next.js 15.3 (App Router) + React 19 + TypeScript 5.8, Vercel AI SDK (ai 4.3, @ai-sdk/openai) + OpenAI 6.45 — orchestrator migrated off GPT-4o to a newer reasoning model for tool use; GPT-4o retained for vision, GPT Image grounded renderings (view-aware model chain: aerial vs eye-level), @chanmeng666/archlang ^1.18.0 (Chan's own declarative floor-plan compiler, consumed as a package), Neon Postgres + Drizzle ORM (9 tables, schema-push), Stripe 17 (credits ledger, dual live/test mode), Cloudinary (rendering storage), react-zoom-pan-pinch (infinite zoomable canvas), isomorphic-git + memfs + fflate (export design history as a real git repo, in-memory), jose (JWT/JWKS auth), Zod validation · shadcn/ui + Tailwind 4 + Framer Motion + GSAP, Docker canary-then-swap deploy over SSH (DigitalOcean VPS, Traefik + Let's Encrypt, Cloudflare Full-Strict)
+- **Commits (solo):** ~295 (268 non-merge) (2026-04-08 → 2026-07-16, ~3 months); sole author
+- **Surfaces:** 13 pages · 28 API route handlers · 71 components · 205 source files
+- **Database:** 9 Drizzle tables on Neon (projects · designFrames · agentThreads · credits · creditTransactions · shares · generationAttempts · uploads · stripeWebhookEvents)
+- **Agent tools:** 9 (7 user-facing: askDesignQuestions · generateFloorPlanDSL[new plan] · editFloorPlanDSL[minimal diff] · generateRendering · critiquePlan · analyzeReference[vision] · analyzeFloorPlan)
+- **Generation unit:** one generation = plan + grounded rendering + critique, produced as a single atomic set; edits, parametric tweaks, re-renders, and review mode all operate on that set without re-generating it
+- **Git export:** in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)
+- **Deploy:** private repo → GitHub Actions → GHCR → canary-then-swap over SSH (boot canary, poll /api/health, swap only if healthy) on a DO VPS behind Traefik + Cloudflare
+**Summary:** ArchCanvas is an AI design agent for architects and self-builders. Describe a building in plain language and it asks a few questions, then designs one dimensioned floor plan you can actually build from — with room labels and measurements — alongside a realistic AI rendering of it. From there it stays conversational: on an infinite zoomable canvas you refine the plan by talking to it, scrub through every past version, and export the whole design as files or as a full change history.
+
+**Impact:** An AI design agent for architects and self-builders: describe a building in plain words and it designs a dimensioned floor plan you can actually build from, plus a realistic rendering — then you refine it by talking, on an infinite zoomable canvas.
+
+**Problem:** AI floor-plan tools produce pretty pictures you cannot build from and cannot precisely edit. An image-generated plan has no real dimensions, no guarantee a wall is straight, and no handle to grab when you want the kitchen two metres wider — you re-prompt and hope. Meanwhile professional CAD is powerful but slow and expert-only, and neither world lets you simply *talk* to your design. ArchCanvas closes that gap: a plan you can converse your way to, that is nonetheless a real, dimensioned, buildable artifact you can keep editing precisely.
+
+**Audience:** Architects and designers who want to move fast from brief to a credible dimensioned plan, and self-builders / renovators who have a vision but not CAD skills and need something they (or their builder) can actually work from. Because every plan is a real floor-plan program underneath, the same product serves a careful professional nudging a wall thickness with a slider and a first-timer who just wants to describe their dream house and see it — and refine it — in plain language.
+
+**Product logic:** The studio runs in two acts. **Act I** is a full-screen briefing conversation: the user picks a typology (residential, accessible clinic, open-plan office, passive house) and describes the build; the agent asks two-to-five clarifying questions inline, then generates ONE plan — deliberately not a grid of options — as parametric ArchLang, compiles it to a dimensioned SVG with `data-arch-id` anchors, renders a grounded AI visualization, and critiques it. That single turn is the only point at which the agent is asked for a brand-new plan.
+
+**Act II** is a canvas-first studio, and nothing in it regenerates. Edits are conversational and **morph the plan in place** — the parent geometry fades to a dashed ghost, a semantic-diff chip shows what changed, and a version-lineage timeline lets you scrub the history. **Select-to-act**: click a room, door, or window and a floating action bar offers verb chips (Enlarge / Shrink / Widen / Move) plus agent-suggested scoped edits. A **Parametric Tweaks** panel turns the plan's own variables (room sizes, counts, wall thickness) into live sliders that recompile instantly with no AI call at all. **Review mode** toggles a walking-circulation overlay (routes, pinch points) and pins anchored critique findings, each with a one-click "have AI fix" — display-only, never auto-applied. The finished design exports as SVG/PNG/DXF/PDF, or as a full versioned change history whose log *is* the design conversation.
+
+**Business logic:** The unit of work is one generation turn — plan + grounded rendering + critique, produced as a single atomic set — and everything downstream of it is refinement rather than regeneration. That split is deliberate: a design task's value is lumpy (you want a few strong plans, then iterate on them for a long time), so every edit, parametric tweak, re-render, and review action mutates the existing frame in place, and the model is re-invoked only when the user genuinely asks for new work. The advantage is the ArchLang pairing: because plans are a deterministic program rather than pixels, ArchCanvas can offer editing, tweaking, diffing, and change-history export that an image-generation competitor structurally cannot.
+
+**Technical approach:** A single Next.js 15 monolith (React 19, TypeScript 5.8) over a 9-table Drizzle schema on Neon Postgres, with Stripe credits, Cloudinary rendering storage, and jose-based auth. The AI layer is an orchestrated tool-agent on the Vercel AI SDK: the orchestrator was deliberately migrated off GPT-4o (which under-used tools and wrote non-parametric DSL) to **gpt-5.5**, while GPT-4o is retained for vision (reference-image analysis). Its tools center on `generateFloorPlanDSL` — write parametric ArchLang, compile it through the `@chanmeng666/archlang` package (now 1.18), pass a ship-gate, save a frame — with `editFloorPlanDSL` as the minimal-diff follow-up. Renderings are a **grounded, view-aware chain**: the compiled plan is rasterized and sent as the grounding image to GPT Image 2, with model order chosen per view (aerial vs eye-level) so the render matches the real geometry instead of hallucinating a layout. `designFrames` stores each version's ArchLang source, compiled SVG, rendering URLs, lint warnings, review findings, and a self-referential `parentFrameId` for lineage — which is exactly what the in-memory change-history export (isomorphic-git + memfs, zipped with fflate) walks root-to-tip. Deployment is a canary-then-swap over SSH: build a Docker image, push to GHCR, boot a health-checked canary, and swap traffic only if `/api/health` passes — otherwise abort untouched.
+
+**Outcomes:** Live in production at archcanvas.uk, solo-built across roughly 295 commits over three months (2026-04-08 → 2026-07-16): 13 pages, 28 API route handlers, 71 components, and 205 source files over a 9-table schema. The product is unusually rigorous about testing its own thesis — a `generationAttempts` telemetry table tracks first-pass ArchLang validity per model, and a `bench` harness runs briefs through both the DSL pipeline and a legacy freehand-pixel pipeline as a control group (now with timing and token axes), so the "DSL beats pixels" claim is measured, not asserted. It is also the proving ground that hardened ArchLang: real in-browser use of the compiler drove concrete upstream fixes, most recently the 1.18 topology work.
+
+**My role:** Sole author of the entire product — the two-act studio and canvas UX, the AI orchestrator and its tools, the grounded view-aware rendering chain, the ArchLang integration, the 9-table schema and credit/billing system, the change-history export, the falsifiability instruments, and the canary-then-swap deployment. And of ArchLang itself, the floor-plan language it is built on. Every commit is mine.
 
 ## Notable Open Source Projects
 
-### Google News MCP Server — Early-ecosystem MCP server (shipped 5 weeks after Anthropic's Nov 25 2024 MCP launch) — PulseMCP "Top Pick", featured in Skywork AI deep-dive review, distributed across 15+ MCP catalogs
-[tier=flagship · recency=recent · updated=2026-07-17]
-- **URL:** https://github.com/ChanMeng666/server-google-news
-- **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk, stdio transport, SerpAPI, axios, ES modules, npm (scoped @chanmeng666)
-
-**Summary:** An early Model Context Protocol server — the open standard Anthropic
-launched in November 2024 to connect AI assistants to outside tools.
-Its first commit landed 35 days after that launch. It lets assistants
-like Claude, Cursor, and Cline search live Google News through SerpAPI,
-automatically sorted into topics (technology, business, science,
-health) and offered in 10 languages. Published on npm as
-`@chanmeng666/google-news-server`, it carries a PulseMCP "Top Pick"
-badge and ships a one-click install bundle for Claude Desktop.
-
-**Impact:** Lets AI assistants like Claude search live Google News — sorted into topics, in 10 languages. One of the first tools built for Anthropic's Model Context Protocol: shipped 35 days after the standard launched, and it's now listed across 15+ MCP directories.
-
-**Problem:** Anthropic published the Model Context Protocol in November 2024 — the
-open standard that lets AI assistants like Claude reach outside their
-training data to real tools and live sources. In the first weeks after
-launch the ecosystem had only a handful of reference servers, and none
-of them let an assistant search current news. That was a concrete gap:
-people were already asking their AI assistant "what's happening with X
-today," a question no model can answer from training data alone, and
-there was no Google News option in the MCP catalog.
-
-A second friction appeared at the same time: Windows users running Node
-Version Manager couldn't get *any* npm-based MCP server to connect to
-Claude Desktop, because PATH resolution through NVM's shim layer broke
-the desktop client's ability to launch the server process. That blocked
-a large share of early Windows adopters from using MCP at all.
-
-**Audience:** AI assistants and the developers wiring them up. Direct consumers:
-Claude Desktop, Cursor's agent mode, Cline, Continue, and any
-MCP-compliant client whose setup includes news search. Downstream: the
-people asking those assistants about current events — analysts and
-journalists monitoring coverage, developers building research and
-content agents. The project is deliberately listed on multiple MCP
-registries because that is how AI developers actually find servers —
-they browse catalogs, not GitHub search.
-
-**Product logic:** A user asks their AI assistant something like "what's happening with
-[topic] in [region] this week." The assistant calls the server's one
-tool, `google_news_search`, with a query plus optional `gl` (country)
-and `hl` (language) codes. The server passes the request to SerpAPI's
-Google News engine, gets structured results back, sorts them into
-topics (AI & Technology, Business, Science & Research, Healthcare,
-General) with lightweight pattern matching, and returns clean output
-with each article's source, date, snippet, and link intact. It also
-supports search by news topic, publisher, full-story coverage, and
-section via token parameters, and falls back to English for
-unsupported language codes.
-
-The server runs over MCP's stdio channel — the default for desktop AI
-clients — and installs in one command through Smithery's CLI (`npx -y
-@smithery/cli install @chanmeng666/google-news-server --client
-claude`), or via a packaged `.mcpb` bundle for one-click setup in
-Claude Desktop.
-
-**Business logic:** Open source, MIT licensed, no direct monetization. The intent is
-ecosystem positioning: be a canonical Google News server during the
-formative months of the Model Context Protocol, so the project keeps
-surfacing wherever a developer looks for an MCP tool. Distribution
-across many registries (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP
-Servers, Archestra, and others) is the discovery strategy. The README
-also carries JSON-LD `SoftwareApplication` metadata and an `llms.txt`
-guide so that AI agents themselves can read the server's identity,
-parameters, and use cases without parsing marketing prose — the same
-discovery-by-machine approach used across the rest of this portfolio.
-
-**Technical approach:** TypeScript on Node.js, built against `@modelcontextprotocol/sdk` v1.x,
-shipped as an ES-module CLI binary (`google-news-server`) declared in
-`package.json`. Transport is stdio, so the server runs as a subprocess
-the desktop AI client launches. HTTP calls go through axios; SerpAPI is
-the underlying data source (2 requests/second, 5 concurrent, 1-hour
-cache). On top of the raw API the server adds a thin intelligence
-layer: parameter validation, topic categorization, multi-language
-formatting, and error handling with clear messages.
-
-The repo also ships production packaging — a Dockerfile, a Smithery
-config, a `manifest.json`, a JSON-LD `structured-data.json`, an
-`llms.txt`, and a downloadable `.mcpb` install bundle — plus a full
-set of community-health docs (CONTRIBUTING, SECURITY, SUPPORT,
-GOVERNANCE, CHANGELOG, issue/PR templates) added in 2026.
-
-The third contribution is community, not code: **issue #76** in the
-official `modelcontextprotocol/servers` repo (opened Nov 27 2024, two
-days after MCP's launch) documented the Windows + NVM PATH failure that
-stopped Claude Desktop from launching npm-based MCP servers. The fix —
-point the client config at the absolute path of `node.exe` instead of
-relying on PATH — is cited as the primary troubleshooting step in this
-server's README.
-
-**Outcomes:** The server is published on npm as `@chanmeng666/google-news-server`
-and listed across multiple MCP discovery surfaces, with third-party
-recognition:
-- PulseMCP "Top Pick" badge *(external claim — needs registry check)*
-- Glama A-grade license rating *(external claim — needs registry check)*
-- Smithery one-command install, plus listings on mcp.so, Awesome MCP
-  Servers, Archestra, and other catalogs *(exact catalog count is
-  external — needs registry check)*
-- Independent deep-dive write-ups by third-party reviewers (Skywork
-  AI, AgentSkillsHub) *(external claim — needs registry check)*
-- A hosted deployment listed on Fronteir AI *(external claim — needs
-  registry check)*
-
-Alongside it, the companion `server-google-jobs` (first commit late
-December 2024) applies the same pattern to Google Jobs search
-*(Jobs-repo specifics not verifiable from the News clone — see
-flags)*. Issue #76 remains visible in the official MCP servers
-repository as a record of an early ecosystem contribution.
-
-**My role:** I built and maintain the server solo — the code, the README, the npm
-publish, the registry submissions, the packaging, and the
-issue-tracker responses. I also filed the early issue #76
-troubleshooting contribution. Together these make the
-early-MCP-developer story concrete: not a theoretical early adopter,
-but someone who shipped, distributed, documented, and supported a
-working MCP server within the protocol's first month.
-### echook (Echo + Hook) — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
-[tier=flagship · recency=active · updated=2026-07-17]
-- **Repository:** https://github.com/ChanMeng666/echook
-- **Tech stack:** Python 3.6+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13), Remotion 4 (promo video), React 19 (promo video), Suno (background music generation)
-
-**Summary:** An audio-and-status notification system for Claude Code, Cursor
-IDE, and Codex CLI. The core idea: you never have to learn the
-tool. You talk to your AI agent in plain English — "install
-audio-hooks," "switch to chimes," "snooze for 30 minutes," "send
-alerts to my Slack" — and the agent runs the commands, reads the
-results, and reports back. It ships 37 hook events (3 on by
-default), two audio themes, warnings before you hit your 5-hour
-and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,
-text-to-speech that reads the agent's actual reply aloud, and a
-29-segment status bar that tracks how much of the context window
-is left. Now on v6.3.4 with 248 automated tests running on
-Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
-under MIT; runs on the Python standard library with no extra
-dependencies. A sister repo, echook-promo-video, ships an
-88-second product film built entirely in code.
-
-**Impact:** A notification system for AI coding assistants — Claude Code, Cursor, and Codex — that you install and set up just by talking to the AI in plain English. It plays sounds, reads the agent's reply aloud, warns you before you hit usage limits, and shows a live status bar.
-
-**Problem:** Developers running long AI coding sessions on Claude Code,
-Cursor IDE, and Codex CLI have no easy way to *hear* what their
-agent is doing. They alt-tab to check progress, miss
-usage-limit warnings, and only notice a stuck session by
-looking at it. Add-on notification tools exist, but they all
-share the same flaw: the human sits downstream of the command
-line. You have to read docs, memorize flags, copy commands, and
-re-learn the same surface every time it changes. That breaks
-down the moment a serious user rotates between three editors,
-each with its own configuration language and its own muscle
-memory. The real mismatch isn't audio — it's the working
-contract between humans, AI agents, and developer tooling.
-
-**Audience:** Software engineers operating Claude Code, Cursor IDE, or Codex
-CLI at the "AI-first" level — people comfortable telling their
-coding agent to install, theme, snooze, webhook, or reconfigure
-things in plain English rather than memorizing subcommands.
-Also: power users debugging long-running workflows where a
-sound is faster than watching a screen; teams rolling out
-shared notification defaults across several developers; and
-researchers who want a working reference implementation of an
-AI-first plugin contract.
-
-**Product logic:** echook flips the usual relationship: the human is upstream, and
-the AI agent learns the tool on the human's behalf. One install
-prompt — *"install the audio-hooks plugin from
-github.com/ChanMeng666/echook"* — starts the whole flow. The
-agent runs `claude plugin marketplace add` and `claude plugin
-install`, the user types `/reload-plugins` exactly once (the
-only manual step in the tool's entire lifetime, because Claude
-Code's reload has no command-line equivalent), and from then on
-every interaction is a sentence. *"Switch to chimes." "Snooze
-for 8 hours." "Send alerts to my Slack at this webhook and test
-it." "Turn everything off except stop and permission
-requests."* The `/audio-hooks` skill reads the intent, runs the
-right `audio-hooks` command, reads its JSON output, and tells
-you what happened. You memorize nothing. Cross-editor parity is
-part of the same contract: every prompt works the same way on
-Cursor's agent and on Codex CLI, because all three drive the
-same Python program against the same JSON interface.
-
-**Business logic:** Open source under MIT — no paywall, no premium tier, no
-telemetry. The value is build-in-public credibility: echook is
-the demonstration piece for Chan's AI-first product philosophy,
-and it shows up in Engram-cohort interviews, recruiter
-conversations, and the README of downstream client projects. A
-sustained release cadence (now v6.3.4), a three-OS
-continuous-integration matrix, and a 248-case test suite
-guarding the cross-editor contract make it visibly production
-engineering, not a weekend script. The Remotion promo-video
-sister repo extends the same proof — it shows Chan can ship not
-only the product but the marketing film for it, end to end and
-entirely in code, with no video-production tooling.
-
-**Technical approach:** AI-first design at every layer. The `audio-hooks` command-line
-tool exposes a stable, JSON-only interface with roughly 40
-subcommands, no prompts and no spinners, versioned NDJSON event
-logging (schema `audio-hooks.v1`, 5 MB rotation × 3 files), and
-a fixed set of error codes (`AUDIO_FILE_MISSING`,
-`WEBHOOK_TIMEOUT`, `DUAL_INSTALL_DETECTED`, and so on) where
-each error carries a `suggested_command` field so an agent can
-recover on its own without scraping text. Hook coverage spans
-37 canonical events — session start and end, tool execution,
-permission requests, file changes, MCP elicitation, and
-usage-limit warnings (5-hour and 7-day windows with configurable
-80%/95% thresholds, each `(window, threshold, resets_at)` firing
-exactly once via debounce markers). Two audio themes ship: an
-ElevenLabs "Jessica" voice or modern UI chimes; rebuilds are
-declarative via `config/audio_manifest.json` plus the ElevenLabs
-generator. Webhooks fan out to Slack, Discord, Teams, and ntfy
-through a fire-and-forget subprocess with a versioned
-`audio-hooks.webhook.v1` payload, so they never block the hook.
-The status bar offers 29 configurable segments, including
-color-coded context-window and usage bars with absolute token
-counts (e.g. `Context: 83% (166K/200K)`) so users see the
-"agent dumb zone" before they reach it. The deepest piece is the
-cross-editor architecture: canonical sources live in `/hooks/`,
-`/bin/`, `/audio/`, `/cursor-hooks/`, and `/codex-hooks/`, and
-`build-plugin.sh` syncs them into the Claude Code plugin layout
-— one source of truth, three editor targets — with continuous
-integration enforcing no-drift via `build-plugin.sh --check`.
-Cursor rides its 3.2.16+ auto-bridge so most users get support
-for free; Cursor-only installs use a native
-`~/.cursor/hooks.json` registration guarded by a
-`DUPLICATE_BRIDGE` error that aborts if both paths would run at
-once. The Codex path handles OpenAI's required
-`[features]\ncodex_hooks = true` flag by writing a fresh
-`~/.codex/config.toml` when none exists and emitting
-machine-readable `next_steps` for the agent to edit an existing
-one — echook never round-trips a user's TOML, because that would
-destroy comments and formatting. Canonical events with no Codex
-equivalent no-op cleanly under the Codex invoker with a debug
-log line, never blocking the session. The whole contract is
-validated by 248 test cases across Ubuntu, Windows, and macOS on
-Python 3.9, 3.12, and 3.13 in GitHub Actions.
-
-**Outcomes:** ~76 GitHub stars (external — needs registry check; live 75),
-151 commits across the 5.x → 6.x line (now v6.3.4), and 248
-automated test cases. The defining release sequence: v5.0 (Jan
-2026) shipped the AI-first redesign — JSON command interface,
-`/audio-hooks` skill, NDJSON logging, plugin-native install;
-v5.2.0 (May 2026) added native Codex CLI support with +33
-contract tests; v5.2.1 (May 2026) executed the echook rebrand —
-a "door-only" GitHub rename from `claude-code-audio-hooks` to
-`echook` (leading with "Claude Code" had become misleading once
-native Cursor and Codex paths shipped) that preserved every
-existing install via GitHub's repo redirect and kept the
-`audio-hooks` command name, the `chanmeng-audio-hooks`
-marketplace name, and all state directories unchanged. The
-Engram Architect Cohort Engagement Letter (May 9, 2026)
-explicitly names *claude-code-audio-hooks* among Chan's
-preserved IP — formal recognition by a commercial
-agentic-infrastructure firm that this is portfolio-grade
-engineering, not a hobby script. The sister repo
-echook-promo-video then closed the loop on the thesis: an
-88-second 1080p product film composed entirely in code (React +
-Remotion, with Suno-generated background music and ElevenLabs
-voice and effects — no video-editing suites and no human voice
-actors), fully reproducible from two commands.
-
-**My role:** Sole author of both repos. On echook proper: designed the
-AI-first contract (JSON interface + NDJSON log + fixed error
-codes + `suggested_command` recovery), wrote every hook-event
-integration, engineered the three-editor synchronization
-pipeline (canonical sources synced into the plugin layout via
-`build-plugin.sh`, with CI enforcement), authored the Codex
-TOML feature-flag bootstrap pattern, and executed the 5.2.1
-rebrand without breaking compatibility. On echook-promo-video:
-designed the nine-section narrative arc, built the reusable
-visual primitives (TypewriterText, Terminal, SoundWave,
-GreenGrid, CounterNumber, GlowText), orchestrated the Remotion
-transitions, wrote the ElevenLabs audio-generation script, and
-tuned the volume-ducking so the background music dips under
-voiceover and demo playback. Maintains both repos today.
 ### ArchLang — An original declarative floor-plan language that compiles .arch source into professional, dimensioned floor plans — 'Typst/LaTeX for architecture.' Zero-dependency, isomorphic TypeScript (hand-written lexer + recursive-descent parser), errors returned as data not thrown, with architectural-soundness linting, human-circulation analysis, a deterministic repair pass, five export formats (SVG/DXF/PDF/PNG/text), an agent-native CLI, full LSP + VS Code extension, and a client-side playground. Published to npm; the compiler engine behind ArchCanvas.
 [tier=flagship · recency=active · updated=2026-07-26]
 - **URL:** https://archlang.uk/
@@ -2728,6 +2182,281 @@ Right after tailoring, a deterministic **faithfulness gate** re-checks for fabri
 **Outcomes:** Live and operational at **vitex.org.nz**, serving real users end-to-end from a pasted job ad to a compiled PDF. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.
 
 **My role:** Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.
+### echook (Echo + Hook) — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
+[tier=primary · recency=active · updated=2026-07-17]
+- **Repository:** https://github.com/ChanMeng666/echook
+- **Tech stack:** Python 3.6+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13), Remotion 4 (promo video), React 19 (promo video), Suno (background music generation)
+
+**Summary:** An audio-and-status notification system for Claude Code, Cursor
+IDE, and Codex CLI. The core idea: you never have to learn the
+tool. You talk to your AI agent in plain English — "install
+audio-hooks," "switch to chimes," "snooze for 30 minutes," "send
+alerts to my Slack" — and the agent runs the commands, reads the
+results, and reports back. It ships 37 hook events (3 on by
+default), two audio themes, warnings before you hit your 5-hour
+and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,
+text-to-speech that reads the agent's actual reply aloud, and a
+29-segment status bar that tracks how much of the context window
+is left. Now on v6.3.4 with 248 automated tests running on
+Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
+under MIT; runs on the Python standard library with no extra
+dependencies. A sister repo, echook-promo-video, ships an
+88-second product film built entirely in code.
+
+**Impact:** A notification system for AI coding assistants — Claude Code, Cursor, and Codex — that you install and set up just by talking to the AI in plain English. It plays sounds, reads the agent's reply aloud, warns you before you hit usage limits, and shows a live status bar.
+
+**Problem:** Developers running long AI coding sessions on Claude Code,
+Cursor IDE, and Codex CLI have no easy way to *hear* what their
+agent is doing. They alt-tab to check progress, miss
+usage-limit warnings, and only notice a stuck session by
+looking at it. Add-on notification tools exist, but they all
+share the same flaw: the human sits downstream of the command
+line. You have to read docs, memorize flags, copy commands, and
+re-learn the same surface every time it changes. That breaks
+down the moment a serious user rotates between three editors,
+each with its own configuration language and its own muscle
+memory. The real mismatch isn't audio — it's the working
+contract between humans, AI agents, and developer tooling.
+
+**Audience:** Software engineers operating Claude Code, Cursor IDE, or Codex
+CLI at the "AI-first" level — people comfortable telling their
+coding agent to install, theme, snooze, webhook, or reconfigure
+things in plain English rather than memorizing subcommands.
+Also: power users debugging long-running workflows where a
+sound is faster than watching a screen; teams rolling out
+shared notification defaults across several developers; and
+researchers who want a working reference implementation of an
+AI-first plugin contract.
+
+**Product logic:** echook flips the usual relationship: the human is upstream, and
+the AI agent learns the tool on the human's behalf. One install
+prompt — *"install the audio-hooks plugin from
+github.com/ChanMeng666/echook"* — starts the whole flow. The
+agent runs `claude plugin marketplace add` and `claude plugin
+install`, the user types `/reload-plugins` exactly once (the
+only manual step in the tool's entire lifetime, because Claude
+Code's reload has no command-line equivalent), and from then on
+every interaction is a sentence. *"Switch to chimes." "Snooze
+for 8 hours." "Send alerts to my Slack at this webhook and test
+it." "Turn everything off except stop and permission
+requests."* The `/audio-hooks` skill reads the intent, runs the
+right `audio-hooks` command, reads its JSON output, and tells
+you what happened. You memorize nothing. Cross-editor parity is
+part of the same contract: every prompt works the same way on
+Cursor's agent and on Codex CLI, because all three drive the
+same Python program against the same JSON interface.
+
+**Business logic:** Open source under MIT — no paywall, no premium tier, no
+telemetry. The value is build-in-public credibility: echook is
+the demonstration piece for Chan's AI-first product philosophy,
+and it shows up in Engram-cohort interviews, recruiter
+conversations, and the README of downstream client projects. A
+sustained release cadence (now v6.3.4), a three-OS
+continuous-integration matrix, and a 248-case test suite
+guarding the cross-editor contract make it visibly production
+engineering, not a weekend script. The Remotion promo-video
+sister repo extends the same proof — it shows Chan can ship not
+only the product but the marketing film for it, end to end and
+entirely in code, with no video-production tooling.
+
+**Technical approach:** AI-first design at every layer. The `audio-hooks` command-line
+tool exposes a stable, JSON-only interface with roughly 40
+subcommands, no prompts and no spinners, versioned NDJSON event
+logging (schema `audio-hooks.v1`, 5 MB rotation × 3 files), and
+a fixed set of error codes (`AUDIO_FILE_MISSING`,
+`WEBHOOK_TIMEOUT`, `DUAL_INSTALL_DETECTED`, and so on) where
+each error carries a `suggested_command` field so an agent can
+recover on its own without scraping text. Hook coverage spans
+37 canonical events — session start and end, tool execution,
+permission requests, file changes, MCP elicitation, and
+usage-limit warnings (5-hour and 7-day windows with configurable
+80%/95% thresholds, each `(window, threshold, resets_at)` firing
+exactly once via debounce markers). Two audio themes ship: an
+ElevenLabs "Jessica" voice or modern UI chimes; rebuilds are
+declarative via `config/audio_manifest.json` plus the ElevenLabs
+generator. Webhooks fan out to Slack, Discord, Teams, and ntfy
+through a fire-and-forget subprocess with a versioned
+`audio-hooks.webhook.v1` payload, so they never block the hook.
+The status bar offers 29 configurable segments, including
+color-coded context-window and usage bars with absolute token
+counts (e.g. `Context: 83% (166K/200K)`) so users see the
+"agent dumb zone" before they reach it. The deepest piece is the
+cross-editor architecture: canonical sources live in `/hooks/`,
+`/bin/`, `/audio/`, `/cursor-hooks/`, and `/codex-hooks/`, and
+`build-plugin.sh` syncs them into the Claude Code plugin layout
+— one source of truth, three editor targets — with continuous
+integration enforcing no-drift via `build-plugin.sh --check`.
+Cursor rides its 3.2.16+ auto-bridge so most users get support
+for free; Cursor-only installs use a native
+`~/.cursor/hooks.json` registration guarded by a
+`DUPLICATE_BRIDGE` error that aborts if both paths would run at
+once. The Codex path handles OpenAI's required
+`[features]\ncodex_hooks = true` flag by writing a fresh
+`~/.codex/config.toml` when none exists and emitting
+machine-readable `next_steps` for the agent to edit an existing
+one — echook never round-trips a user's TOML, because that would
+destroy comments and formatting. Canonical events with no Codex
+equivalent no-op cleanly under the Codex invoker with a debug
+log line, never blocking the session. The whole contract is
+validated by 248 test cases across Ubuntu, Windows, and macOS on
+Python 3.9, 3.12, and 3.13 in GitHub Actions.
+
+**Outcomes:** ~76 GitHub stars (external — needs registry check; live 75),
+151 commits across the 5.x → 6.x line (now v6.3.4), and 248
+automated test cases. The defining release sequence: v5.0 (Jan
+2026) shipped the AI-first redesign — JSON command interface,
+`/audio-hooks` skill, NDJSON logging, plugin-native install;
+v5.2.0 (May 2026) added native Codex CLI support with +33
+contract tests; v5.2.1 (May 2026) executed the echook rebrand —
+a "door-only" GitHub rename from `claude-code-audio-hooks` to
+`echook` (leading with "Claude Code" had become misleading once
+native Cursor and Codex paths shipped) that preserved every
+existing install via GitHub's repo redirect and kept the
+`audio-hooks` command name, the `chanmeng-audio-hooks`
+marketplace name, and all state directories unchanged. The
+Engram Architect Cohort Engagement Letter (May 9, 2026)
+explicitly names *claude-code-audio-hooks* among Chan's
+preserved IP — formal recognition by a commercial
+agentic-infrastructure firm that this is portfolio-grade
+engineering, not a hobby script. The sister repo
+echook-promo-video then closed the loop on the thesis: an
+88-second 1080p product film composed entirely in code (React +
+Remotion, with Suno-generated background music and ElevenLabs
+voice and effects — no video-editing suites and no human voice
+actors), fully reproducible from two commands.
+
+**My role:** Sole author of both repos. On echook proper: designed the
+AI-first contract (JSON interface + NDJSON log + fixed error
+codes + `suggested_command` recovery), wrote every hook-event
+integration, engineered the three-editor synchronization
+pipeline (canonical sources synced into the plugin layout via
+`build-plugin.sh`, with CI enforcement), authored the Codex
+TOML feature-flag bootstrap pattern, and executed the 5.2.1
+rebrand without breaking compatibility. On echook-promo-video:
+designed the nine-section narrative arc, built the reusable
+visual primitives (TypewriterText, Terminal, SoundWave,
+GreenGrid, CounterNumber, GlowText), orchestrated the Remotion
+transitions, wrote the ElevenLabs audio-generation script, and
+tuned the volume-ducking so the background music dips under
+voiceover and demo playback. Maintains both repos today.
+### Google News MCP Server — Early-ecosystem MCP server (shipped 5 weeks after Anthropic's Nov 25 2024 MCP launch) — PulseMCP "Top Pick", featured in Skywork AI deep-dive review, distributed across 15+ MCP catalogs
+[tier=primary · recency=recent · updated=2026-08-05]
+- **URL:** https://github.com/ChanMeng666/server-google-news
+- **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk, stdio transport, SerpAPI, axios, ES modules, npm (scoped @chanmeng666)
+
+**Summary:** An early Model Context Protocol server — the open standard Anthropic
+launched in November 2024 to connect AI assistants to outside tools.
+Its first commit landed 35 days after that launch. It lets assistants
+like Claude, Cursor, and Cline search live Google News through SerpAPI,
+automatically sorted into topics (technology, business, science,
+health) and offered in 10 languages. Published on npm as
+`@chanmeng666/google-news-server`, it carries a PulseMCP "Top Pick"
+badge and ships a one-click install bundle for Claude Desktop.
+
+**Impact:** Lets AI assistants like Claude search live Google News — sorted into topics, in 10 languages. One of the first tools built for Anthropic's Model Context Protocol: shipped 35 days after the standard launched, and it's now listed across 15+ MCP directories.
+
+**Problem:** Anthropic published the Model Context Protocol in November 2024 — the
+open standard that lets AI assistants like Claude reach outside their
+training data to real tools and live sources. In the first weeks after
+launch the ecosystem had only a handful of reference servers, and none
+of them let an assistant search current news. That was a concrete gap:
+people were already asking their AI assistant "what's happening with X
+today," a question no model can answer from training data alone, and
+there was no Google News option in the MCP catalog.
+
+A second friction appeared at the same time: Windows users running Node
+Version Manager couldn't get *any* npm-based MCP server to connect to
+Claude Desktop, because PATH resolution through NVM's shim layer broke
+the desktop client's ability to launch the server process. That blocked
+a large share of early Windows adopters from using MCP at all.
+
+**Audience:** AI assistants and the developers wiring them up. Direct consumers:
+Claude Desktop, Cursor's agent mode, Cline, Continue, and any
+MCP-compliant client whose setup includes news search. Downstream: the
+people asking those assistants about current events — analysts and
+journalists monitoring coverage, developers building research and
+content agents. The project is deliberately listed on multiple MCP
+registries because that is how AI developers actually find servers —
+they browse catalogs, not GitHub search.
+
+**Product logic:** A user asks their AI assistant something like "what's happening with
+[topic] in [region] this week." The assistant calls the server's one
+tool, `google_news_search`, with a query plus optional `gl` (country)
+and `hl` (language) codes. The server passes the request to SerpAPI's
+Google News engine, gets structured results back, sorts them into
+topics (AI & Technology, Business, Science & Research, Healthcare,
+General) with lightweight pattern matching, and returns clean output
+with each article's source, date, snippet, and link intact. It also
+supports search by news topic, publisher, full-story coverage, and
+section via token parameters, and falls back to English for
+unsupported language codes.
+
+The server runs over MCP's stdio channel — the default for desktop AI
+clients — and installs in one command through Smithery's CLI (`npx -y
+@smithery/cli install @chanmeng666/google-news-server --client
+claude`), or via a packaged `.mcpb` bundle for one-click setup in
+Claude Desktop.
+
+**Business logic:** Open source, MIT licensed, no direct monetization. The intent is
+ecosystem positioning: be a canonical Google News server during the
+formative months of the Model Context Protocol, so the project keeps
+surfacing wherever a developer looks for an MCP tool. Distribution
+across many registries (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP
+Servers, Archestra, and others) is the discovery strategy. The README
+also carries JSON-LD `SoftwareApplication` metadata and an `llms.txt`
+guide so that AI agents themselves can read the server's identity,
+parameters, and use cases without parsing marketing prose — the same
+discovery-by-machine approach used across the rest of this portfolio.
+
+**Technical approach:** TypeScript on Node.js, built against `@modelcontextprotocol/sdk` v1.x,
+shipped as an ES-module CLI binary (`google-news-server`) declared in
+`package.json`. Transport is stdio, so the server runs as a subprocess
+the desktop AI client launches. HTTP calls go through axios; SerpAPI is
+the underlying data source (2 requests/second, 5 concurrent, 1-hour
+cache). On top of the raw API the server adds a thin intelligence
+layer: parameter validation, topic categorization, multi-language
+formatting, and error handling with clear messages.
+
+The repo also ships production packaging — a Dockerfile, a Smithery
+config, a `manifest.json`, a JSON-LD `structured-data.json`, an
+`llms.txt`, and a downloadable `.mcpb` install bundle — plus a full
+set of community-health docs (CONTRIBUTING, SECURITY, SUPPORT,
+GOVERNANCE, CHANGELOG, issue/PR templates) added in 2026.
+
+The third contribution is community, not code: **issue #76** in the
+official `modelcontextprotocol/servers` repo (opened Nov 27 2024, two
+days after MCP's launch) documented the Windows + NVM PATH failure that
+stopped Claude Desktop from launching npm-based MCP servers. The fix —
+point the client config at the absolute path of `node.exe` instead of
+relying on PATH — is cited as the primary troubleshooting step in this
+server's README.
+
+**Outcomes:** The server is published on npm as `@chanmeng666/google-news-server`
+and listed across multiple MCP discovery surfaces, with third-party
+recognition:
+- PulseMCP "Top Pick" badge *(external claim — needs registry check)*
+- Glama A-grade license rating *(external claim — needs registry check)*
+- Smithery one-command install, plus listings on mcp.so, Awesome MCP
+  Servers, Archestra, and other catalogs *(exact catalog count is
+  external — needs registry check)*
+- Independent deep-dive write-ups by third-party reviewers (Skywork
+  AI, AgentSkillsHub) *(external claim — needs registry check)*
+- A hosted deployment listed on Fronteir AI *(external claim — needs
+  registry check)*
+
+Alongside it, the companion `server-google-jobs` (first commit late
+December 2024) applies the same pattern to Google Jobs search
+*(Jobs-repo specifics not verifiable from the News clone — see
+flags)*. Issue #76 remains visible in the official MCP servers
+repository as a record of an early ecosystem contribution.
+
+**My role:** I built and maintain the server solo — the code, the README, the npm
+publish, the registry submissions, the packaging, and the
+issue-tracker responses. I also filed the early issue #76
+troubleshooting contribution. Together these make the
+early-MCP-developer story concrete: not a theoretical early adopter,
+but someone who shipped, distributed, documented, and supported a
+working MCP server within the protocol's first month.
 ### server-google-jobs — Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
 [tier=primary · recency=recent · updated=2026-07-17]
 - **URL:** https://github.com/ChanMeng666/server-google-jobs
@@ -2806,7 +2535,7 @@ Google News MCP counterpart. External contributions have been
 dependency bumps and catalog-integration commits; the tool
 design and localization are mine.
 ### AI Programming Education Platform (programming.chanmeng.org) — Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
-[tier=primary · recency=active · updated=2026-07-17]
+[tier=primary · recency=active · updated=2026-08-05]
 - **URL:** https://programming.chanmeng.org/
 - **Repository:** https://github.com/ChanMeng666/ai-programming-teaching-project
 - **Tech stack:** Docusaurus 3.8.1, @docusaurus/faster, React 18, MDX, Cloudflare Workers, Workers AI (Llama 3.1 8B Instruct (fp8)), Cloudflare Vectorize, BGE Base EN v1.5 (768-dim embeddings), Cloudflare KV, Cloudflare Pages, Notion API, Algolia DocSearch (contextual), Typst, Mermaid (dual-view), i18next (EN + 简体中文), Server-Sent Events
@@ -2839,12 +2568,11 @@ Capstone classroom infrastructure. A Cloudflare Worker proxies writes into Notio
 
 **My role:** I built and run the entire platform end-to-end: Docusaurus configuration, the versioned-docs taxonomy across five cohorts, every cohort's curriculum content, the Cloudflare Worker RAG backend (worker entry, chat handler, RAG module, Vectorize seeding, KV session store), the BGE-Base embeddings ingestion pipeline, the Typst PDF handout build, the Mermaid dual-view component, the Notion-Worker proxy and Demo Day showcase for Capstone voting, the Algolia contextual-search configuration, and the bilingual i18n across every surface. I migrated production from Vercel to Cloudflare Pages in 2026-04, and in 2026-07 hardened the chat backend (custom domain, rate limiting, CORS allow-list, WAF) and restored it onto Cloudflare's current model after the old one was deprecated. I continue to ship the current cohort's recordings and lab content each week.
 ### Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp) — Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template
-[tier=primary · recency=recent · updated=2026-07-04]
+[tier=primary · recency=recent · updated=2026-08-05]
 - **URL:** https://hackathon.shesharp.org.nz/
 - **Repository:** https://github.com/ChanMeng666/event-qa-ai-template
 - **Tech stack:** Next.js 16.1 (App Router), React 18 + TypeScript 5, Tailwind CSS v3 + Framer Motion v12, Vercel AI SDK v4.3, @ai-sdk/openai (GPT-4o-mini-2024-07-18 streaming), Three.js 0.182 + @react-three/fiber 8.16, Custom Quantum Orb 3D mascot (CSS 3D transforms + Three.js particles), Sprite affection gamification engine (gesture detection, mood weighting, time-of-day bias), Notion REST API (raw fetch, CF Workers compatible — replaced @notionhq/client SDK), shadcn/ui + Radix primitives, @opennextjs/cloudflare adapter, Cloudflare Workers deployment (migrated from Vercel), wrangler v4 CI/CD, localStorage state persistence (50-msg chat history + sprite affection state), 5-min FAQ client cache + optimistic vote/view updates, AI rate limiting + per-session token budgets + prompt guardrails (2026-07 security hardening), OpenAI Realtime API over WebRTC — two-way voice (2026 relaunch), Ephemeral client secrets minted server-side (OPENAI_API_KEY never reaches the browser), Audio-reactive Three.js orb voice UI + live captions (2026), Vercel deployment (2026 edition — she-sharp1/aihackathon-2026)
 - **Part of:** She Sharp (https://shesharp.org.nz)
-- **Related projects:** She Sharp
 
 **Summary:** Real industry-partnered AI event assistant built for the **AI
 Hackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised
@@ -3062,8 +2790,49 @@ On the mentorship side: served as one of the 14 expert
 mentors during the 26-hour event itself, guiding teams on
 prompt design, SDG framing, and product narrative —
 simultaneously building the platform and using it.
+### a11y-loop — A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then proves what it can prove with a real Playwright + axe-core browser audit across the states the agent built — and states plainly what it could not check
+[tier=primary · recency=active · updated=2026-08-05]
+- **Repository:** https://github.com/ChanMeng666/a11y-loop
+- **Tech stack:** Claude Code Skill (Agent Skills open standard), Node.js >= 20, Playwright, axe-core 4.12, WCAG 2.2 AA, JavaScript, GitHub Actions CI
+
+**Summary:** Accessible interfaces usually fail at the moment the code is
+written, not at the audit months later. a11y-loop moves the check
+to that moment: it gives an AI coding agent the rules up front so
+it writes accessible markup by default, then drives a real browser
+over what it built — Playwright plus axe-core, across the actual
+interaction states rather than one static snapshot — and reports
+what passed. Its distinguishing habit is the honest part: it
+publishes an explicit list of what it could NOT verify, so a green
+run never implies full WCAG 2.2 AA coverage it has no standing to
+claim. Ships as both a Claude Code skill and a standalone CLI
+(`npx a11y-loop`), with a contrast checker that proposes fixes and
+a CI mode. MIT.
+
+**Impact:** Shifts accessibility left into the agent's own write step, then verifies it in a real browser across built states — and publishes an explicit 'could not check' list, so a passing run never overclaims WCAG 2.2 AA coverage.
+
+**Problem:** AI coding agents produce interfaces fast, and they produce
+inaccessible ones by default: missing focus indicators, unlabelled
+controls, contrast that fails at a ratio nobody measured. The usual
+remedy is a late audit against a static page, which misses every
+state a user actually reaches and reports a pass the tool has no
+standing to claim.
+
+**Audience:** Developers who build UI by directing coding agents, and the teams
+who inherit that code — plus anyone who needs a defensible
+accessibility position rather than a badge.
+
+**Technical approach:** Two halves sharing one rule set. The authoring half is an Agent
+Skill on the open standard, so Claude Code, Cursor and Copilot pick
+up the same defaults. The verification half drives Playwright over
+the built states and runs axe-core 4.12 against WCAG 2.2 AA, then
+partitions the result into checked, failed, and — the part most
+tools omit — not checkable by automation.
+
+**My role:** Sole author. Published to npm as `a11y-loop`; the repo is written
+agent-first, with an AGENTS.md alongside the README so an agent can
+orient itself without a human intermediary.
 ### gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs — 355 parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
-[tier=primary · recency=active · updated=2026-07-17]
+[tier=primary · recency=active · updated=2026-08-05]
 - **URL:** https://gradient-svg-generator.vercel.app/
 - **Repository:** https://github.com/ChanMeng666/gradient-svg-generator
 - **Tech stack:** Next.js 16.2 (App Router + Vercel serverless runtime), React 19.2 + TypeScript 5.4 (gradual JS->TS migration through Phase 7), Tailwind CSS 4.2 + @tailwindcss/typography + @tailwindcss/forms, Zustand 5.0 (template gallery state), @tanstack/react-query 5.83 (data fetching), @tanstack/react-virtual 3.13 (virtualized template grid for 355 entries), Zod 3.23 (runtime validation of /api/svg query params, 400-on-bad-input), fuse.js 7.1 (fuzzy template search), framer-motion 12.23 (visual editor micro-interactions), SVG <animate> / <animateTransform> (SMIL animation primitives), CSS @keyframes embedded in <style> inside the streamed SVG, Animated linearGradient / radialGradient stop offsets, SVG filters: <feTurbulence>, <feDisplacementMap>, <feGaussianBlur>, <feColorMatrix>, <textPath> for text-following-path animations, @vercel/node 2.15 serverless function (/api/svg endpoint streams XML), Vitest 1.6 + @testing-library/* (tests/contract/ + tests/unit/), ESLint 9 + TypeScript-ESLint 8 + Prettier 3 + Husky 9 + lint-staged 15, web-vitals 5.0 (production performance telemetry), ISC license
@@ -3235,7 +3004,6 @@ repo as a live test signal for the project itself.
 - **URL:** https://github-readme-suno-cards.vercel.app
 - **Repository:** https://github.com/ChanMeng666/github-readme-suno-cards
 - **Tech stack:** pnpm 9.12 monorepo (apps/ + packages/ + action/), Next.js 15.1 (Vercel serverless runtime), TypeScript 5.6, @suno-cards/parser workspace package (Valibot-validated Suno oEmbed parser — shared kernel with Seismophone), @suno-cards/render workspace package (pure-function SVG renderer), Valibot (strict TypeScript schema validation against studio-api-prod.suno.com oEmbed), SVG <foreignObject> + inline HTML <span> (CJK text shaping), CSS @keyframes (equalizer-bar animation driven by HTML spans inside the SVG), GitHub Actions composite action (Node 20 runner with esbuild-bundled dist), Biome 1.9 (lint + format), Vitest (parser tests inside action/test/), Vercel Data Cache (upstream, 3600s TTL for single cards), HTTP Cache-Control headers (downstream, drives GitHub Camo proxy), esbuild (action bundle build via action/build.ts), MIT license
-- **Related projects:** Seismophone — The independent observatory for AI music
 
 **Summary:** Show your AI-generated Suno music as animated, always-current
 cards on your GitHub profile, portfolio, or docs. Paste one
@@ -3382,6 +3150,174 @@ ran the 2026-04-13 public-extract release and the 2026-07
 health audit that quarantined the trending fossil; and
 coordinate parser updates across this project and its
 Seismophone sibling.
+### Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa) — A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine (a hand-built CSS 3D rendering engine) — themed end-to-end on Māori mythology of Aotearoa and inspired by Waitangi Day, with a full Cloudflare Workers + Hono + Neon Postgres backend (auth, leaderboards, cloud saves, anti-cheat)
+[tier=primary · recency=recent · updated=2026-08-05]
+- **URL:** https://towerdefense.chanmeng.org/
+- **Repository:** https://github.com/ChanMeng666/css-tower-defense
+- **Tech stack:** CSS 3D Transforms, Vanilla JavaScript (ES6), LESS preprocessor, Gulp 4 build pipeline, Cloudflare Workers, Hono, Neon Postgres, Web Audio API, Howler.js, DOM object pooling
+
+**Summary:** A full **3D isometric tower-defense game** rendered entirely through
+CSS 3D transforms on real DOM elements — no `<canvas>`, no WebGL,
+no game engine. Every tower, enemy, projectile, particle, and
+weather effect is a styled DOM node at a 45-degree isometric
+perspective. Themed end-to-end on **Maori mythology and culture of
+Aotearoa**: six towers named after Maori weapons and atua (Taiaha,
+Mere, Tangaroa, Tohunga, Tawhiri, Mahuika), six enemies from
+Maori legend (Kehua, Patupaiarehe, Toa, Wairua, Tipua, Taniwha),
+three maps (Te Awa, Te Maunga, Te Moana), three taonga materials
+(Pipi, Koiwi, Pounamu). Backed by Cloudflare Workers + Hono +
+Neon Postgres for auth, leaderboards, cloud saves (3 slots),
+daily challenges, and server-side anti-cheat. 84 commits over
+~2 months (Feb–Mar 2026), executed in disciplined P0–P4 phases.
+
+**Impact:** 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine — themed end-to-end on Māori mythology of Aotearoa, with full Cloudflare Workers + Hono + Neon Postgres backend (server-side anti-cheat). 90 commits / ~99% solo over ~4.5 months.
+
+**Problem:** Two prevailing pictures of "a portfolio game project" are both
+wrong: (a) a trivial Canvas + JS toy that lasts one weekend
+and looks it; (b) a Unity-shaped engine project that's
+impressive but says nothing about web-platform fluency. There
+is a third position the portfolio market doesn't routinely
+produce: a **production-shaped game shipped end-to-end on raw
+web primitives** — DOM + CSS — that proves both deep browser
+engineering and design discipline. There is also a fourth
+gap: a NZ-based developer's portfolio should *show*
+engagement with Aotearoa rather than just claim residence,
+and Maori mythology deserves more interactive cultural
+representation than it usually gets.
+
+**Audience:** Three concentric audiences. **Game players** — anyone who
+clicks Play Now on towerdefense.chanmeng.org and can play
+without an account thanks to fully-supported guest mode.
+**Engineering recruiters and architects** evaluating the
+portfolio: the game is proof of CSS-engine fluency, vanilla
+ES6 architecture discipline, full-stack ops (Workers + Hono +
+Neon), and the kind of phased product execution
+(P0 → P1 → P2 → P3 → P4) usually only seen in shipped
+products. **The Aotearoa cultural audience**: locals, the
+Maori community, NZ tech employers — anyone for whom
+respectful engagement with te reo and Maori cosmology is a
+meaningful signal alongside the technical work.
+
+**Product logic:** Players load the game in-browser, optionally sign in for
+cloud progression (or stay in guest mode), pick a difficulty
+(Normal / Hard / Expert), choose a map (Te Awa, Te Maunga,
+or Te Moana), and play through **10 progressive waves**
+defending against six Maori-legend enemy archetypes plus
+four variant tiers (Rangatira elite, Pakanga armored, Tere
+swift, Mate deadly). Players place towers, gather **taonga**
+(treasures: Pipi, Koiwi, Pounamu) dropped by enemies, craft
+consumables from six recipes, build XP through a Tech Tree
+of 10 upgrades, attempt **daily challenges** drawn from 20+
+templates across six categories, and chase rank on
+**leaderboards** (global and per-challenge). Endless mode
+keeps wave 11+ available after victory. Server-side
+anti-cheat validates submitted scores against expected
+ranges. Cloud saves persist across 3 slots; guest mode keeps
+progress in localStorage.
+
+**Business logic:** Theory of differentiation for a non-commercial portfolio
+artefact: be **specifically uncopyable**. A Canvas tower
+defense is a five-page tutorial; a CSS-3D tower defense is
+a multi-month engineering bet that signals *exactly* what
+the candidate can do. Pair that with cultural engagement
+most portfolios don't attempt — six towers and six enemies
+whose names and roles draw on te reo Maori — and the
+project becomes a single-sentence portfolio differentiator
+in NZ-relevant interviews. The free, guest-playable web
+deployment maximises the surface area: anyone reading the
+portfolio can click Play and *experience* the engineering,
+not just read about it.
+
+**Technical approach:** **Rendering — 100% CSS 3D.** Every tower, enemy, projectile,
+explosion, particle, weather effect is a real DOM element.
+The world is a 45-degree isometric scene built with
+`transform-style: preserve-3d` and 1200px CSS perspective.
+Towers and enemies are constructed from `clip-path`,
+`border-radius`, and pseudo-elements — *no emoji, no
+images*. Visual style is comic / pop-art: halftone dot
+patterns, hard-offset pop shadows, thick comic borders, a
+warm `#FFF8F0` palette. **DOM object pooling** via
+`Pool.acquire()` / `Pool.release()` recycles elements so
+the scene stays at 60 FPS through dense wave combat.
+**Dynamic theming** via CSS custom properties driven from
+JS produces day/night, weather, and seasonal palette
+transitions — same DOM, different CSS variables.
+
+**Game logic — vanilla ES6.** No framework, no engine. The
+codebase is organised as IIFE modules communicating
+through an event-driven bus. Core systems include the
+wave director, enemy AI, tower targeting, projectile
+physics, the combo system (chain kills within 1.5s),
+critical-hit probability, the mana ability system with
+cooldowns, the Terraria-inspired **reforging** engine
+(Common → Uncommon → Rare → Epic → Legendary prefixes),
+and **tower synergies** that activate when adjacent towers
+combine (Freeze Lightning, Fire Blast, Blessing, Array).
+
+**Maori cultural integration is structural, not decorative.**
+Towers carry the abilities their te reo names imply:
+Tangaroa (ocean atua) slows enemies with ice, Mahuika (fire
+goddess) deals damage-over-time, Tawhiri (storm god) chains
+lightning. The Taniwha boss has three signature skills —
+Karanga (call / summon minions), Kaitiaki (guardian /
+shield), Te Riri (anger / enrage). Maps are place-words:
+Te Awa (the river), Te Maunga (the mountain), Te Moana
+(the ocean). Materials are taonga (treasures): Pipi
+(shellfish), Koiwi (bone), Pounamu (greenstone). The
+naming isn't surface skin — each mechanic is selected to
+match the mythological meaning.
+
+**Cloud backend.** Cloudflare Workers running the **Hono**
+web framework, backed by **Neon serverless Postgres**.
+Endpoints cover auth, leaderboards (global + per-challenge),
+cloud saves (3 slots per user), stats tracking, and
+daily-challenge rotation. **Server-side score validation**
+rejects submissions outside expected ranges to defend the
+leaderboard against cheating. **Guest mode is a
+first-class path** — the entire game works without an
+account; cloud sync activates the moment a player signs in.
+
+**Audio.** **Web Audio API** synth generates SFX in real
+time (firing, impact, death, level-up); **Howler.js**
+handles music and longer samples. Music is *dynamic* — the
+soundtrack adapts to game state (menu, playing, boss,
+victory, defeat).
+
+**Build pipeline.** **LESS** preprocessor for CSS modules,
+**Gulp 4** for the build/watch pipeline, deployment via
+Wrangler to Cloudflare Workers with the static assets
+served from the same edge.
+
+**Outcomes:** Live at **towerdefense.chanmeng.org**. **84 commits across
+~2 months** (2026-02-06 → 2026-03-30), ~99% Chan-authored
+across two GitHub identities. Execution followed an
+explicit **P0 → P4 phase plan** visible in the commit log:
+P0 (game feel — damage numbers, death bursts, firing
+animations, wave transitions), P1 (onboarding & UX —
+tutorial with spotlight cutout, hints, cooldown UI),
+P2 (retention — expanded achievements, leaderboard filters,
+celebrations), P3-P4 (deep systems — mana abilities, dynamic
+music, endless mode). Plus the full content build:
+synergies, new enemies, multi-map, daily-challenge overhaul,
+cloud backend integration. Anti-cheat is in production and
+actively rejecting out-of-range submissions. The 3D
+isometric CSS rendering holds 60 FPS through dense
+Wave-10 combat thanks to object pooling.
+
+**My role:** Sole designer, sole engineer, sole audio architect. Designed
+the CSS-3D rendering technique end-to-end (perspective,
+preserve-3d, the comic/pop-art visual language, the DOM
+object pool), wrote every game system (waves, AI,
+physics, towers, enemies, synergies, reforging, combo,
+mana, achievements, daily challenges, tech tree, crafting,
+inventory), shipped the entire **Maori cultural design** —
+choosing which te reo name maps to which mechanic so
+meaning and gameplay reinforce each other — built the
+Cloudflare Workers + Hono + Neon backend including
+server-side anti-cheat validation, composed the dynamic
+music state machine and the Web Audio synth effects,
+wrote the Gulp + LESS build pipeline, and authored the
+4-step interactive tutorial with spotlight overlays.
 
 ## More Projects (by category)
 
@@ -3390,22 +3326,22 @@ Seismophone sibling.
 **web-apps:**
 - [She Sharp](https://github.com/NZ-SheSharp/she-sharp) [tier=flagship · recency=recent · updated=2026-07-17] -- live: https://www.shesharp.org.nz/
 - [TikTok Shop Go Template](https://github.com/ChanMeng666/douyin-mall-go-template) [tier=archive · recency=deprecated · updated=2026-07-14]
-- [腾讯会议录屏下载助手 — Chrome Web Store-Published Extension](https://github.com/ChanMeng666/tencent-meeting-video-downloader) [tier=secondary · recency=recent · updated=2026-05-19] -- live: https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
-- [FreePeriod Website](https://github.com/ChanMeng666/free-period-website) [tier=secondary · recency=historical · updated=2026-05-18] -- live: https://free-period-website.pages.dev/
+- [腾讯会议录屏下载助手 — Chrome Web Store-Published Extension](https://github.com/ChanMeng666/tencent-meeting-video-downloader) [tier=archive · recency=deprecated · updated=2026-08-05] -- live: https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
+- [FreePeriod Website](https://github.com/ChanMeng666/free-period-website) [tier=primary · recency=historical · updated=2026-08-05] -- live: https://free-period-website.pages.dev/
 - [LibraryOS — Multi-Tenant Library SaaS](https://github.com/ChanMeng666/library-os) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://libraryos.live/
 - LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI) [tier=archive · recency=deprecated · updated=2026-07-14]
-- [FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026](https://www.femtechweekend.com/) [tier=primary · recency=active · updated=2026-07-17]
+- [FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026](https://www.femtechweekend.com/) [tier=flagship · recency=active · updated=2026-08-05]
 - [Eatropolis Website — Production-grade Next.js 16 + OpenNext-on-Cloudflare-Workers event platform for Auckland's award-winning culinary festival (2026-10-10, Shed 10)](https://eatropolis.co.nz/) [tier=flagship · recency=active · updated=2026-07-17]
 - [FriendScope — Privacy-First Relationship Assessment with Lottie-Animated Result Cards](https://github.com/ChanMeng666/friendscope) [tier=archive · recency=recent · updated=2026-05-19] -- live: https://friendscope.chanmeng-dev.workers.dev/
 - [SendJoy — Visual Email Platform](https://github.com/ChanMeng666/send-joy) [tier=archive · recency=recent · updated=2026-05-19] -- live: https://sendjoy.chanmeng-dev.workers.dev/
-- [Seismophone — The independent observatory for AI music](https://seismophone.chanmeng.org/) [tier=primary · recency=recent · updated=2026-07-17]
+- [Seismophone — The independent observatory for AI music](https://seismophone.chanmeng.org/) [tier=primary · recency=recent · updated=2026-08-05]
 - [TikTok Shop Java Template](https://github.com/ChanMeng666/douyin-mall-java-template) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [She Sharp — Event Welcome Board](https://github.com/ChanMeng666/she-sharp-event-black-board) [tier=secondary · recency=recent · updated=2026-07-04]
 - [Douyin Mall (Spring Boot Backend)](https://github.com/ChanMeng666/douyin-mall) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [Douyin Mall Frontend](https://github.com/ChanMeng666/douyin-mall-frontend) [tier=archive · recency=deprecated · updated=2026-07-14]
 - ESOL Platform (NZCEL Prep) [tier=archive · recency=historical · updated=2026-05-18]
 - [Forward with Her Mentorship Programme Website](https://github.com/ChanMeng666/forward-with-her-mentorship-program) [tier=archive · recency=historical · updated=2026-05-30] -- live: https://forward-with-her-mentorship-program.pages.dev/
-- [HER WAKA — Employment Programme for Women in Auckland](https://herwaka.shesharp.org.nz/) [tier=secondary · recency=historical · updated=2026-05-18]
+- [HER WAKA — Employment Programme for Women in Auckland](https://herwaka.shesharp.org.nz/) [tier=primary · recency=historical · updated=2026-08-05]
 - [AgriHire Solutions](https://github.com/ChanMeng666/agrihire-solutions) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://agrihire.chanmeng.org/
 - [CORDE Field-Operations Mobile App](https://corde-mobile-application-4yw7mtt.gamma.site/) [tier=secondary · recency=historical · updated=2026-07-04]
 - [Chan's Portfolio v1.0.0](https://3d-portfolio-3bb.pages.dev/) [tier=archive · recency=deprecated · updated=2026-07-04]
@@ -3420,7 +3356,7 @@ Seismophone sibling.
 - [East Coast Anglers Club (Fishing Club Website)](https://github.com/ChanMeng666/fishing-club-project) [tier=archive · recency=recent · updated=2026-07-04] -- live: https://fishing-club.pages.dev/
 - Who I Am (Personal Intro Site) [tier=archive · recency=historical · updated=2026-05-18]
 - [FemTracker (Mobile)](https://github.com/ChanMeng666/femtracker) [tier=archive · recency=historical · updated=2026-07-04]
-- [GAVIGO Website](https://gavigo.com/) [tier=primary · recency=active · updated=2026-07-10]
+- [GAVIGO Website](https://gavigo.com/) [tier=primary · recency=active · updated=2026-08-05]
 - FemTech Weekend Website (Gen-1, deprecated) [tier=archive · recency=deprecated · updated=2026-07-04]
 **ai-apps:**
 - [Tam-AI-Ti (tam-ai-ti-web)](https://tamaiti.whiri-ai.com/) [tier=flagship · recency=active · updated=2026-07-17]
@@ -3445,8 +3381,9 @@ Seismophone sibling.
 - [Academic Paper Review Skill](https://github.com/ChanMeng666/academic-paper-review-skill) [tier=secondary · recency=recent · updated=2026-07-04]
 - [linkedin-post Skill](https://github.com/ChanMeng666/linkedin-post-skill) [tier=secondary · recency=recent · updated=2026-07-04]
 - [readme-showcase](https://github.com/ChanMeng666/readme-showcase) [tier=secondary · recency=recent · updated=2026-07-04]
+- [product-reality-check](https://github.com/ChanMeng666/product-reality-check) [tier=secondary · recency=active · updated=2026-08-05]
 **creative:**
-- [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://huggingface.co/spaces/ChanMeng666/interactive-story-generator
+- [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) [tier=archive · recency=deprecated · updated=2026-08-05] -- live: https://huggingface.co/spaces/ChanMeng666/interactive-story-generator
 - [Emoji Story Generator](https://github.com/ChanMeng666/emoji-story-generator) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://huggingface.co/spaces/ChanMeng666/emoji-story-generator
 - [Design Pages](https://github.com/ChanMeng666/design-pages) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://chanmeng666.github.io/design-pages/
 - [English Redefine](https://github.com/ChanMeng666/english-redefine) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://english-redefine.chanmeng-dev.workers.dev/
@@ -3455,6 +3392,7 @@ Seismophone sibling.
 - [Perfume 3D Viewer](https://github.com/ChanMeng666/perfume_obj) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://perfume-3d-viewer.pages.dev
 - [Touch the World, Talk to Code](https://github.com/ChanMeng666/makey-makey-iot-slides) [tier=secondary · recency=recent · updated=2026-07-04] -- live: https://chanmeng666.github.io/makey-makey-iot-slides/#1
 - [app-promo-studio](https://github.com/ChanMeng666/app-promo-studio) [tier=secondary · recency=recent · updated=2026-07-04]
+- [a11y-loop — Promo Video](https://github.com/ChanMeng666/a11y-loop-promo-video) [tier=secondary · recency=recent · updated=2026-08-05]
 **ml-research:**
 - [Advanced Neural Network Applications](https://github.com/ChanMeng666/advanced-neural-network-applications) [tier=archive · recency=historical · updated=2026-07-04]
 - [Body Fat Prediction (MLP)](https://github.com/ChanMeng666/bodyfat-estimation-mlp) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://huggingface.co/ChanMeng666/bodyfat-estimation-mlp
@@ -3464,7 +3402,7 @@ Seismophone sibling.
 **branding:**
 - [README Profile Generator](https://github.com/ChanMeng666/readme-profile-generator) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://huggingface.co/spaces/ChanMeng666/readme-profile-generator
 - [Juejin Algorithm Practice](https://github.com/ChanMeng666/juejin-algorithm-practice) [tier=archive · recency=deprecated · updated=2026-07-14]
-- [chan-meng-cli](https://github.com/ChanMeng666/chan-meng-cli) [tier=archive · recency=historical · updated=2026-07-04]
+- [chan-meng-cli](https://github.com/ChanMeng666/chan-meng-cli) [tier=archive · recency=deprecated · updated=2026-08-05]
 - [GitHub Visitor Counter](https://github.com/ChanMeng666/github-visitor-counter) [tier=secondary · recency=recent · updated=2026-07-07] -- live: https://github-visitor-counter-tau.vercel.app/
 - GAVIGO Logo [tier=archive · recency=recent · updated=2026-07-04]
 - [Douban Elite Posts Scraper](https://github.com/ChanMeng666/douban-elite-scraper) [tier=archive · recency=deprecated · updated=2026-07-14]
@@ -3472,7 +3410,6 @@ Seismophone sibling.
 - [Chan Meng — Personal Brand Logo](https://github.com/ChanMeng666/chan-meng-personal-brand-logo) [tier=secondary · recency=recent · updated=2026-07-04]
 - [logo-as-code Skill](https://github.com/ChanMeng666/logo-as-code-skill) [tier=secondary · recency=recent · updated=2026-07-04]
 **games:**
-- [Te Pa Tiaki — CSS 3D Tower Defense (Guardians of Aotearoa)](https://github.com/ChanMeng666/css-tower-defense) [tier=secondary · recency=recent · updated=2026-07-16] -- live: https://towerdefense.chanmeng.org/
 - [The Birth of Leviathan (利维坦的诞生)](https://leviathan-client.vercel.app/) [tier=archive · recency=historical · updated=2026-07-04]
 - [Brick Breaker (Starlight Breaker)](https://github.com/ChanMeng666/html-brick-game) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://chanmeng666.github.io/html-brick-game/
 - [AI vs Human Game](https://github.com/ChanMeng666/ai-human-game) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://ai-human-game.chanmeng-dev.workers.dev/
@@ -3487,7 +3424,7 @@ Seismophone sibling.
 - [Lottie Theme Converter](https://github.com/ChanMeng666/lottie-edit) [tier=archive · recency=deprecated · updated=2026-07-14]
 - Popup Image App [tier=archive · recency=deprecated · updated=2026-07-14]
 - [Lottie Theme Converter](https://github.com/ChanMeng666/lottie-edit) [tier=archive · recency=historical · updated=2026-07-11]
-- [Chan Meng's Knowledge Base](https://github.com/ChanMeng666/chanmeng-knowledge-base) [tier=secondary · recency=active · updated=2026-07-04] -- live: https://chanmeng666.github.io/chanmeng-knowledge-base/
+- [Chan Meng's Knowledge Base](https://github.com/ChanMeng666/chanmeng-knowledge-base) [tier=archive · recency=deprecated · updated=2026-08-05] -- live: https://chanmeng666.github.io/chanmeng-knowledge-base/
 
 ## Education
 
@@ -3575,8 +3512,24 @@ the UN Sustainable Development Goals across food insecurity, digital
 accessibility, workforce upskilling, and indigenous environmental
 stewardship. Received the Outstanding Mentor Award (recorded in `awards[]`);
 the event's AI Q&A assistant is the `ai-hackathon-assistant` project.
-### Her Waka — AI × Career Empowerment In-Person Workshops — Instructor
-[tier=primary · recency=recent · updated=2026-07-07]
+### Aotearoa AI Hackathon Festival 2026 — Mentor
+[tier=flagship · recency=active · updated=2026-08-04]
+- **Type:** hackathon
+- **Date:** Aug 2026 -- Aug 2026
+- **Location:** AUT City Campus, Auckland, New Zealand
+- **Organizer:** AUT × She Sharp × AI Forum NZ × Fisher & Paykel Healthcare
+- **URL:** https://www.shesharp.org.nz/events/aotearoa-ai-hackathon-festival-2026
+- **Keywords:** hackathon, mentorship, AI for good, UN SDGs
+
+Returning as one of 14 named mentors for the two-day 2026 festival, a year
+after the 2025 edition that produced the Outstanding Mentor Award — this
+time billed on the public mentor roster as **Founding Engineer, ArchCanvas**
+alongside mentors from AUT, Fisher & Paykel Healthcare, Southern Cross and
+Possibl.ai. Teams build against five real-world SDG themes and pitch to a
+judging panel. The festival's voice-first event assistant is
+`ai-hackathon-assistant`, relaunched for 2026.
+### Her Waka — AI × Career Empowerment In-Person Workshops — Curriculum Author, Panelist & Technical Mentor
+[tier=primary · recency=recent · updated=2026-08-05]
 - **Type:** workshop
 - **Date:** Mar 2026 -- Jun 2026
 - **Location:** academyEX, Auckland, New Zealand
@@ -3584,11 +3537,20 @@ the event's AI Q&A assistant is the `ai-hackathon-assistant` project.
 - **URL:** https://herwaka.shesharp.org.nz/
 - **Keywords:** teaching, AI literacy, women returning to work, in-person workshop
 
-Authored and delivered four in-person workshops (25-person session cap) for
-women returning to the workforce, under an NZ Ministry of Social
-Development-funded programme: AI & the Future of Work, #IAmRemarkable + Vibe
-Coding, Cybersecurity, and Personal Branding — paired with 10 self-paced AI
-tutorials and a job-search library. Cohort record: `meta.x_brand.teachingCohorts`.
+**Authored the programme solo** — the teaching platform and all four
+workshops' content — then took part in the sessions themselves as a
+**panel speaker and technical mentor**. Four in-person workshops
+(25-person session cap) for women returning to the workforce,
+under an NZ Ministry of Social
+Development-funded programme: AI & the Future of Work (25 Mar), #IAmRemarkable
++ Vibe Coding (7 Apr), Cybersecurity (5 May, invitation-only), and Personal
+Branding (2 Jun) — paired with 10 self-paced AI tutorials and a job-search
+library. Chan was a named panelist in the March session and a speaker in
+April, sharing the room with RCSA recruiters from Potentia, Randstad Digital
+and Elevate Consulting who ran the networking half, and Dr Mahsa McCauley
+facilitating. Registrations across the four sessions: 39 / 32 / 5 / — , with
+27 and 24 checked in for the first two. Programme curriculum and cohort
+record: `meta.x_brand.teachingCohorts` (`her-waka-2026`).
 ### Peyvand Academy — Touch the World, Talk to Code (IoT for teens) — Instructor
 [tier=secondary · recency=recent · updated=2026-07-07]
 - **Type:** workshop
@@ -3601,6 +3563,22 @@ Ran a hands-on IoT teaching session for 12–18-year-olds — a Banana Piano and
 a Super Mario · Makey Makey build — turning everyday objects into controllers
 to make hardware and code tangible. Teaching deck: `makey-makey-iot-slides`;
 live demo project: `super-mario-makey-makey`.
+### Peyvand Academy — Youth Tech Series: Electronics Workshop (ages 12–18) — Mentor
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** workshop
+- **Date:** Jun 2026 -- Present
+- **Location:** Fruitvale Primary School, Auckland, New Zealand
+- **Organizer:** She Sharp × Peyvand Academy × NZ Ministry of Education × Little Engineers
+- **URL:** https://www.shesharp.org.nz/events/peyvand-academy-20-june-2026
+- **Keywords:** STEM outreach, electronics, teens
+
+Second session of the Youth Tech Series, one week after the Makey Makey
+workshop and a deliberate step deeper: hands-on electronics for the same
+12–18 age group, run with Little Engineers joining the Peyvand Academy and
+Ministry of Education partnership. Chan mentored on the floor rather than
+leading the session. Recorded separately from
+`peyvand-academy-makey-makey-2026` because the subject and the partner set
+both differ.
 ### Forward with Her (她行) — Technology & Professional Development Mentor — Mentor
 [tier=primary · recency=recent · updated=2026-07-07]
 - **Type:** community
@@ -3616,6 +3594,136 @@ Served as a Technology & Professional Development Mentor in a 360+-mentor,
 come from mentees who credit these sessions — the single-largest source of
 independently attested mentorship impact. Cohort record:
 `meta.x_brand.teachingCohorts`.
+### THRIVE: Your Career, Your Story — Organizer
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** panel
+- **Date:** Jul 2025 -- Present
+- **Location:** HPE, Level 19 PwC Tower, Auckland, New Zealand
+- **Organizer:** She Sharp × TechBabes NZ × Hewlett Packard Enterprise
+- **URL:** https://www.shesharp.org.nz/events/thrive-your-career-your-story
+- **Keywords:** careers, personal branding, mentoring, women in tech
+
+Career-transition evening for graduates and professionals changing track:
+a keynote, a six-person industry panel (IBM, Microsoft, Spark, Veeam,
+PB Tech), and a hands-on CV-and-interview clinic staffed by 16 mentors.
+98 registered, 68 attended.
+### Business and Technology Transformation Through Platforms and Products — Organizer
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** panel
+- **Date:** Sep 2025 -- Present
+- **Location:** Fonterra, Auckland, New Zealand
+- **Organizer:** She Sharp × Fonterra
+- **URL:** https://www.shesharp.org.nz/events/business-and-technology-transformation-through-platforms-and-products
+- **Keywords:** platform engineering, product operating model, women in tech
+
+Panel with three women leading Fonterra's shift to a product-and-platform
+operating model — digital enablement, release-train practice, and Salesforce
+platform ownership — on what that shift changes about IT delivery.
+96 registered, 61 attended.
+### Code Secure. Lead the Future — Women in Cybersecurity Workshop — Organizer
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** workshop
+- **Date:** Oct 2025 -- Present
+- **Location:** Xero, Parnell, Auckland, New Zealand
+- **Organizer:** She Sharp × Xero × Secure Code Warrior
+- **URL:** https://www.shesharp.org.nz/events/code-secure
+- **Keywords:** cybersecurity, secure coding, workshop
+
+Half-day gamified secure-coding workshop on Secure Code Warrior's platform,
+with participants choosing Java Spring, Python, JavaScript, Ruby or a
+beginner pseudocode track, plus lightning talks from Xero's Executive GM of
+Security and Secure Code Warrior's Chief Customer Officer.
+62 registered, 52 attended.
+### Future-Ready: Data, AI, Digital Innovation & Inclusive Careers at Vector — Organizer
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** panel
+- **Date:** Nov 2025 -- Present
+- **Location:** Vector, Newmarket, Auckland, New Zealand
+- **Organizer:** She Sharp × Vector
+- **URL:** https://www.shesharp.org.nz/events/she-sharp-vector-future-ready-data-ai-digital-innovation-inclusive-careers-at-vector
+- **Keywords:** energy tech, data and AI, women in STEM
+
+Panel on how a utility becomes a tech company — Vector's data, AI and ADMS
+platform work told by the women running it — followed by a 45-minute
+think-a-thon. 93 registered, 67 attended.
+### She Sharp & HCLTech: AI Empowerment — Shaping an Inclusive Digital Future — Organizer (remote)
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** panel
+- **Date:** Nov 2025 -- Present
+- **Location:** University of Otago, Dunedin, New Zealand (Chan supported remotely from Auckland)
+- **Organizer:** She Sharp × HCLTech × University of Otago
+- **URL:** https://www.shesharp.org.nz/events/she-sharp-hcltech-ai-empowerment-shaping-an-inclusive-digital-future
+- **Keywords:** inclusive AI, future of work, regional outreach
+
+The series' only South Island date — a keynote from Otago's Head of Digital
+Strategy plus a public-sector panel (Dunedin City Council CIO, MSD labour-market
+advisor, Callaghan Innovation) on inclusive AI and the skills that survive it.
+68 registered, 55 attended. **The one event in this series Chan supported
+remotely rather than in person**: built the event's web presence and prepared
+the supporting material from Auckland. Every other event in this block she
+attended on the ground.
+### She Sharp & academyEX: International Women's Day 2026 — Give To Gain — Organizer
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** community
+- **Date:** Mar 2026 -- Present
+- **Location:** academyEX, Grafton, Auckland, New Zealand
+- **Organizer:** She Sharp × academyEX
+- **URL:** https://www.shesharp.org.nz/events/she-sharp-and-academyex-international-womens-day-2026
+- **Keywords:** International Women's Day, gender equity, community
+
+IWD 2026 on the "Give To Gain" theme, with a keynote from academyEX's Chief
+Delivery Officer and speakers from Property Besties, WE Mana, HEB Construction
+and NZME. The largest turnout of the series window — 103 registered,
+72 attended.
+### Own Your Energy with Candice Murray — Career Mindset Workshop — Organizer
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** workshop
+- **Date:** Apr 2026 -- Present
+- **Location:** Metlifecare, Newmarket, Auckland, New Zealand
+- **Organizer:** She Sharp × Metlifecare
+- **URL:** https://www.shesharp.org.nz/events/she-sharp-candice-murray-own-your-energy
+- **Keywords:** career mindset, coaching, workshop
+
+Interactive career-mindset workshop with coach Candice Murray on shifting
+your own energy before the moments that matter, hosted by Metlifecare's CIO.
+81 registered, 60 attended.
+### Making LinkedIn Work for You, with Stuart Little — Organizer
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** workshop
+- **Date:** May 2026 -- Present
+- **Location:** AUT City Campus, Auckland, New Zealand
+- **Organizer:** She Sharp × AUT (Engineering, Computer and Mathematical Sciences)
+- **URL:** https://www.shesharp.org.nz/events/event-aut-linkedin-15-may-2026
+- **Keywords:** personal branding, LinkedIn, careers
+
+Personal-branding masterclass with creative strategist Stuart Little
+(Agency8) and recruiter Janelle Wright on making a LinkedIn profile attract
+the right opportunities — the same ground Chan teaches in her own Personal
+Branding module, run here for an AUT student audience.
+### Working Smarter: AI, MYOB, and the New Delivery Landscape — Organizer
+[tier=secondary · recency=recent · updated=2026-08-04]
+- **Type:** workshop
+- **Date:** Jul 2026 -- Present
+- **Location:** MYOB, Auckland CBD, Auckland, New Zealand
+- **Organizer:** She Sharp × MYOB
+- **URL:** https://www.shesharp.org.nz/events/she-sharp-and-myob-working-smarter
+- **Keywords:** AI in practice, delivery, product management
+
+AI-in-practice session with MYOB product, domain and people leads on what
+actually changes in delivery work once AI is in the toolchain.
+### No Pain, All Gain — Getting Fit for AI — Organizer
+[tier=secondary · recency=active · updated=2026-08-04]
+- **Type:** panel
+- **Date:** Sep 2026 -- Present
+- **Location:** Les Mills Auckland City, Auckland, New Zealand
+- **Organizer:** She Sharp × Les Mills
+- **URL:** https://www.shesharp.org.nz/events/event-lesmills-03-september-2026
+- **Keywords:** diversity and AI, cross-functional, panel
+
+Upcoming cross-functional panel on diversity and AI for impact — legal and
+privacy, commercial, change-management and technical views of the same
+rollout — followed by table discussions. Speaker line-up not yet published
+at the time of writing.
 
 ## Certifications (50+)
 

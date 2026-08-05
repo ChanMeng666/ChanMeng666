@@ -23,7 +23,7 @@ projects:
     category: ai-apps
     tagline: "Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions"
     repoUrl: https://github.com/ChanMeng666/easy-resume
-    logo: /public/brands/vitex.svg
+    logo: /public/brands/vitex-mark.svg
     url: https://www.vitex.org.nz/
     extraLinks:
       - { label: "Live product", url: "https://www.vitex.org.nz/" }
@@ -231,7 +231,7 @@ projects:
     category: ai-apps
     tagline: "'Your AI architect — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Refinement mutates the plan in place — it never regenerates it."
     url: https://archcanvas.uk/
-    logo: /public/brands/archcanvas-logo.svg
+    logo: /public/brands/archcanvas-mark.svg
     # repoUrl omitted — repository is private/proprietary
     techStack:
       - "Next.js 15.3 (App Router) + React 19 + TypeScript 5.8"
@@ -858,7 +858,7 @@ projects:
     category: ai-apps
     tagline: Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
     repoUrl: https://github.com/ChanMeng666/ai-programming-teaching-project
-    logo: /public/brands/ai-programming-logo.svg
+    logo: /public/brands/ai-programming-mark.svg
     url: https://programming.chanmeng.org/
     extraLinks:
       - { label: "2026 TechNest cohort", url: "https://programming.chanmeng.org/docs/programme/about-technest/" }
@@ -964,7 +964,7 @@ projects:
     category: games
     tagline: A 3D tower-defense game rendered 100% with CSS 3D transforms — zero Canvas, zero WebGL, zero engine (a hand-built CSS 3D rendering engine) — themed end-to-end on Māori mythology of Aotearoa and inspired by Waitangi Day, with a full Cloudflare Workers + Hono + Neon Postgres backend (auth, leaderboards, cloud saves, anti-cheat)
     repoUrl: https://github.com/ChanMeng666/css-tower-defense
-    logo: /public/brands/tower-defense-logo.svg
+    logo: /public/brands/tower-defense-mark.svg
     url: https://towerdefense.chanmeng.org/
     extraLinks:
       - { label: "Play now", url: "https://towerdefense.chanmeng.org/" }
@@ -2457,7 +2457,7 @@ projects:
     # 2026-07-26; the playground stays reachable as an extra link. The old
     # "Docs" extra link was dropped because it now duplicates `url`.
     url: https://archlang.uk/
-    logo: /public/brands/archlang-logo.svg
+    logo: /public/brands/archlang-mark.svg
     extraLinks:
       - { label: "Playground", url: "https://playground.archlang.uk" }
       - { label: "npm (@chanmeng666/archlang)", url: "https://www.npmjs.com/package/@chanmeng666/archlang" }
@@ -2870,7 +2870,7 @@ projects:
     category: ai-apps
     tagline: A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then proves what it can prove with a real Playwright + axe-core browser audit across the states the agent built — and states plainly what it could not check
     repoUrl: https://github.com/ChanMeng666/a11y-loop
-    logo: /public/brands/a11y-loop-logo.svg
+    logo: /public/brands/a11y-loop-mark.svg
     extraLinks:
       - { label: "npm package", url: "https://www.npmjs.com/package/a11y-loop" }
       - { label: "Promo video repo (Remotion)", url: "https://github.com/ChanMeng666/a11y-loop-promo-video" }

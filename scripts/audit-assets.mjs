@@ -40,6 +40,18 @@ const EXTERNAL_REFERENCES = new Set([
   // not linked from any rendered surface. The photos/logos it features are
   // picked up by the Typst-source scan below.
   "/public/chan-meng-media-kit.pdf",
+  // Unframed brand artwork. Since 2026-08-05 projects[].logo points at the
+  // framed "-mark.svg" cards, so these raw logos no longer appear in any
+  // rendered README output — but they are NOT dead. They are the SOURCES that
+  // scripts/make-brand-mark.mjs regenerates the marks from, and og-covers/
+  // renders some of them directly (a directory this audit does not scan).
+  // Deleting one silently breaks `make-brand-mark.mjs --all`.
+  "/public/brands/a11y-loop-logo.svg",
+  "/public/brands/ai-programming-logo.svg",
+  "/public/brands/free-period-logo.svg",
+  "/public/brands/seismophone-logo.svg",
+  "/public/brands/server-google-jobs.svg",
+  "/public/brands/tower-defense-logo.svg",
 ]);
 
 const referenced = new Set(EXTERNAL_REFERENCES);

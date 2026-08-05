@@ -30,7 +30,7 @@ projects:
     # the child either, because BOTH ends render related links; it is carried by
     # the tagline prose and the extraLink below instead.
     tagline: GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 36 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.
-    logo: /public/brands/github-readme-suno-cards-logo.svg
+    logo: /public/brands/github-readme-suno-cards-mark.svg
     url: https://github-readme-suno-cards.vercel.app
     repoUrl: https://github.com/ChanMeng666/github-readme-suno-cards
     extraLinks:
@@ -257,7 +257,7 @@ projects:
     category: ai-apps
     tagline: AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
     repoUrl: https://github.com/ChanMeng666/echook
-    logo: /public/brands/echook-logo.svg
+    logo: /public/brands/echook-mark.svg
     status: active
     extraLinks:
       - { label: "Promo video repo (Remotion)", url: "https://github.com/ChanMeng666/echook-promo-video" }
@@ -530,7 +530,7 @@ projects:
     tagline: Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
     url: https://github.com/ChanMeng666/server-google-jobs
     repoUrl: https://github.com/ChanMeng666/server-google-jobs
-    logo: /public/brands/server-google-jobs.svg
+    logo: /public/brands/google-jobs-mcp-mark.svg
     extraLinks:
       - { label: "Skywork review",      url: "https://skywork.ai/skypage/en/google-jobs-mcp-server/1981237070002356224" }
       - { label: "PulseMCP listing",    url: "https://www.pulsemcp.com/servers/chanmeng666-google-jobs" }
@@ -872,7 +872,7 @@ projects:
     tagline: 355 parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
     url: https://gradient-svg-generator.vercel.app/
     repoUrl: https://github.com/ChanMeng666/gradient-svg-generator
-    logo: /public/brands/gradient-svg-generator-logo.svg
+    logo: /public/brands/chromaflow-mark.svg
     extraLinks:
       - { label: "Visual editor (/create)",  url: "https://gradient-svg-generator.vercel.app/create" }
       - { label: "Template gallery",         url: "https://gradient-svg-generator.vercel.app/templates" }

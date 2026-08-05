@@ -222,7 +222,10 @@ meta:
     # band it gets only a one-line long-tail entry in llms-full.txt instead of a
     # full narrative. archcanvas is also repo-less but stays flagship, so it is
     # unaffected. Keep this in mind before demoting any repo-less project.
-    flagshipProjectIds: [archlang, vitex, archcanvas]
+    # Order 2026-08-05 (Chan): the compiler, then the product built on it, then
+    # the other live product — so the ArchLang → ArchCanvas dependency reads
+    # top-to-bottom instead of being split by Vitex.
+    flagshipProjectIds: [archlang, archcanvas, vitex]
 
     # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
     # 2026-07). Deliberately DISTINCT from flagshipProjectIds (which is the
@@ -264,7 +267,7 @@ meta:
     # scripts/build.mjs. Publications have no `id` field, so the slug is the id.
     #
     # Curated 2026-07-21, hiring-first, ordered newest-first. ~46 self-hosted
-    # articles exist; the README shows these 8 and links to the full index.
+    # articles exist; the README shows these 5 and links to the full index.
     # Every article still reaches llms.txt / llms-full.txt via _writingAll, so
     # de-listing here does NOT hide an article from LLM consumers (unlike the
     # project buckets — see the _openSourcePrimary note above).
@@ -273,14 +276,20 @@ meta:
     # Deliberately excluded: the 2024-25 LinkedIn Pulse how-to back catalogue
     # (Docusaurus, git, npm, Notion setup guides) and the minimalism/lifestyle
     # essays — both still fully catalogued, both wrong for a hiring shopfront.
+    #
+    # 2026-08-05: trimmed 8 → 5. The cut was for RANGE, not recency: four of the
+    # eight were July 2026 and three of those were infrastructure how-tos, so the
+    # section read as one repeated note. What remains covers five different kinds
+    # of writing — an original investigation, an architecture piece on Chan's own
+    # product, a debugging field report, one infra how-to, and a thesis. Dropped:
+    # neon-auth-email-verification and railway-to-digitalocean-migration (the two
+    # nearest-duplicate how-tos) and ai-fluency-framework (a framework
+    # walkthrough, the weakest original-evidence claim of the eight).
     featuredArticleIds:
       - suno-trending-feed-frozen              # original 84-day dataset, not a rehash
-      - neon-auth-email-verification           # documents what the vendor doesn't
-      - stripe-cloudflare-workers-integration  # payments on an edge runtime
-      - railway-to-digitalocean-migration      # infra migration playbook
       - claude-code-audio-hooks-architecture   # system designed for an AI operator
       - copilotkit-langgraph-hitl              # the failed-approaches write-up
-      - ai-fluency-framework                   # pairs with the instructor work
+      - stripe-cloudflare-workers-integration  # payments on an edge runtime
       - small-language-models-next-wave-ai-agents  # the agent-architecture thesis
 
     # =========================================================================
@@ -333,38 +342,44 @@ meta:
     # provenance:client, ordered strongest-first. clientCardProjectIds render
     # through the SHARED card partial (templates/partials/project-cards.hbs),
     # byte-for-byte the same treatment as flagshipProjectIds.
-    # 2026-08-05: reordered to Chan's triage drag order. Same five projects.
-    clientCardProjectIds:      [femtech-weekend-website, eatropolis-website, gavigo-ire, she-sharp, tam-ai-ti]
-    # commissionedProjectIds — REPOPULATED 2026-08-05 from Chan's triage export,
-    # which marked free-period-website, gavigo-website and her-waka as "listed".
-    # This REVERSES the 2026-07-15 cut, when the list was emptied because
-    # gavigo-website ← gavigo-ire and her-waka ← she-sharp already appear as
-    # "↳ Related:" links on their parent cards, so the table showed them twice.
-    # That duplication is back by design — Chan chose to surface them. If the
-    # double appearance reads badly on the rendered README, the fix is to empty
-    # this list again, NOT to remove the relatedProjectIds (those are the data
-    # relationship and must stay true regardless of display).
-    # femtech-radar is NOT here: Chan marked it "kept", so it stays a
-    # "↳ Related" link on the FemTech Weekend card only.
-    commissionedProjectIds:    [free-period-website, gavigo-website, her-waka]
-    # 2026-08-05: ai-hackathon-assistant PROMOTED to a real row here (Chan marked
-    # it "listed"), so it is no longer llms-only. a11y-loop is new to the
-    # database in this same pass. Second pass the same day: echook and
-    # ai-programming-teaching-project came DOWN from the flagship card band when
-    # it was cut to three, so this table now leads with echook — the
-    # most-starred project in the whole portfolio (78★). Order = display order.
-    aiAgentProjectIds:         [echook, google-news-mcp, server-google-jobs, ai-programming-teaching-project, ai-hackathon-assistant, a11y-loop]
+    # 2026-08-05: reordered to Chan's triage drag order, then free-period-website
+    # ADDED as a sixth card. FreePeriod is an independent employer (Chan was its
+    # CTO — see work[] / the README "Previously" line), NOT a sub-project of any
+    # card here, so it gets an employer-weight card rather than a table row
+    # underneath one.
+    clientCardProjectIds:      [femtech-weekend-website, eatropolis-website, gavigo-ire, she-sharp, tam-ai-ti, free-period-website]
+    # commissionedProjectIds — EMPTY BY DESIGN again (2026-08-05, second pass).
+    # It briefly held [free-period-website, gavigo-website, her-waka] earlier the
+    # same day. Chan reverted it: a sub-project belongs under its parent card as
+    # a small "↳ Related:" link, not as a table row that reads like independent
+    # work. gavigo-website ← gavigo-ire, her-waka ← she-sharp and
+    # ai-hackathon-assistant ← she-sharp are therefore declared on the PARENT's
+    # relatedProjectIds, and free-period-website moved up to a card of its own
+    # because it is not a sub-project at all.
+    # This restores the 2026-07-15 arrangement. Keep it that way: only put an id
+    # here if it is client work with NO parent card to hang off.
+    commissionedProjectIds:    []
+    # 2026-08-05 second pass: ai-hackathon-assistant REMOVED — it is a
+    # sub-project of the She Sharp website and now renders only as a
+    # "↳ Related:" link on that card, with llmsOnlyOpenSourceIds keeping its
+    # full LLM narrative. echook and ai-programming-teaching-project came DOWN
+    # from the flagship card band when it was cut to three, so this table leads
+    # with echook — the most-starred project in the portfolio (78★).
+    # Order = display order.
+    aiAgentProjectIds:         [echook, google-news-mcp, server-google-jobs, ai-programming-teaching-project, a11y-loop]
     # Open source with a full llms.txt / llms-full.txt entry but NO README table
     # row of its own (already visible as a "↳ Related" link on a card above).
-    # Empty since 2026-08-05: its only member, ai-hackathon-assistant, now has a
-    # row of its own under aiAgentProjectIds, so nothing needs the carve-out.
-    llmsOnlyOpenSourceIds:     []
-    # 2026-08-05: portfolio-v2 and css-tower-defense joined. Second pass the same
-    # day: gradient-svg-generator and sunostats came back DOWN from the flagship
-    # card band when it was cut to three. gradient-svg-generator leads — it is
-    # the tool every banner and pill on this README is rendered with, so the
-    # credit captions throughout point at this row.
-    openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats, portfolio-v2, css-tower-defense]
+    # ai-hackathon-assistant is back here 2026-08-05: without it, de-listing the
+    # project from aiAgentProjectIds would silently drop its narrative from BOTH
+    # llms.txt and llms-full.txt (see the _openSourcePrimary note in CLAUDE.md).
+    llmsOnlyOpenSourceIds:     [ai-hackathon-assistant]
+    # 2026-08-05 second pass: portfolio-v2 REMOVED — chanmeng.org is already the
+    # "Portfolio" pill in the header, so a row here showed the same site twice.
+    # css-tower-defense joined; gradient-svg-generator and sunostats came back
+    # down from the flagship card band. gradient-svg-generator leads — it is the
+    # tool every banner and pill on this README is rendered with, so the credit
+    # captions throughout point at this row.
+    openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards, sunostats, css-tower-defense]
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []
     moreOpenSourceProjectIds:     []

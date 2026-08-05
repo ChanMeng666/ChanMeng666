@@ -852,7 +852,8 @@ projects:
     meta:
       x_brand:
         featuredStack: [docusaurus, react, cloudflare, typst]
-    name: AI Programming Education Platform (programming.chanmeng.org)
+    # Product name only — the URL is already the card/row link.
+    name: AI Programming Education Platform
     priority: 13
     category: ai-apps
     tagline: Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder

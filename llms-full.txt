@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 480+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-08-04
+**Last updated:** 2026-08-05
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -2034,7 +2034,37 @@ Compilation is a returned value, not a side effect: `compile()` hands back `{ sv
 **Outcomes:** A complete, published language: 304 commits (297 mine, the rest automated dependency bumps) over roughly three weeks of intensive development (from 2026-06-25), across 92 source files (~23.3k LOC) against 109 test files, released to npm at v1.18.0 over 34 tagged releases with 15 architecture decision records. The surface area is unusually complete for a solo language project — 8 primitives, 5 export formats, 8 lint-rule modules, a circulation analyzer, a repair pass, an intent-scoring channel, a ~20-command CLI, a full LSP, a VS Code extension, an optional MCP server, a client-side playground, a docs site, a published HuggingFace dataset of self-verifying repair trajectories, and a GitHub Action that renders every ```arch fence in a repo's Markdown. Most tellingly, it is already load-bearing: ArchCanvas's in-browser use of the core drove real hardening, proving the engine under a downstream product rather than in isolation.
 
 **My role:** I invented the language and wrote everything — the language design, the hand-written lexer / parser / evaluator, the 83-code diagnostic system, all five export backends, the lint / circulation / repair / intent / suggest pipelines, the LSP and VS Code extension, the CodeMirror playground, the docs site, the MCP server, and the npm packaging. 297 of the 304 commits are mine; the remaining 7 are automated dependency bumps.
-### 2. Vitex — AI Career Agent (vitex.org.nz) — Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions
+### 2. ArchCanvas — 'Your AI architect — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Refinement mutates the plan in place — it never regenerates it.
+[tier=flagship · recency=active · updated=2026-07-17]
+- **URL:** https://archcanvas.uk/
+- **Tech stack:** Next.js 15.3 (App Router) + React 19 + TypeScript 5.8, Vercel AI SDK (ai 4.3, @ai-sdk/openai) + OpenAI 6.45 — orchestrator migrated off GPT-4o to a newer reasoning model for tool use; GPT-4o retained for vision, GPT Image grounded renderings (view-aware model chain: aerial vs eye-level), @chanmeng666/archlang ^1.18.0 (Chan's own declarative floor-plan compiler, consumed as a package), Neon Postgres + Drizzle ORM (9 tables, schema-push), Stripe 17 (credits ledger, dual live/test mode), Cloudinary (rendering storage), react-zoom-pan-pinch (infinite zoomable canvas), isomorphic-git + memfs + fflate (export design history as a real git repo, in-memory), jose (JWT/JWKS auth), Zod validation · shadcn/ui + Tailwind 4 + Framer Motion + GSAP, Docker canary-then-swap deploy over SSH (DigitalOcean VPS, Traefik + Let's Encrypt, Cloudflare Full-Strict)
+- **Commits (solo):** ~295 (268 non-merge) (2026-04-08 → 2026-07-16, ~3 months); sole author
+- **Surfaces:** 13 pages · 28 API route handlers · 71 components · 205 source files
+- **Database:** 9 Drizzle tables on Neon (projects · designFrames · agentThreads · credits · creditTransactions · shares · generationAttempts · uploads · stripeWebhookEvents)
+- **Agent tools:** 9 (7 user-facing: askDesignQuestions · generateFloorPlanDSL[new plan] · editFloorPlanDSL[minimal diff] · generateRendering · critiquePlan · analyzeReference[vision] · analyzeFloorPlan)
+- **Generation unit:** one generation = plan + grounded rendering + critique, produced as a single atomic set; edits, parametric tweaks, re-renders, and review mode all operate on that set without re-generating it
+- **Git export:** in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)
+- **Deploy:** private repo → GitHub Actions → GHCR → canary-then-swap over SSH (boot canary, poll /api/health, swap only if healthy) on a DO VPS behind Traefik + Cloudflare
+**Summary:** ArchCanvas is an AI design agent for architects and self-builders. Describe a building in plain language and it asks a few questions, then designs one dimensioned floor plan you can actually build from — with room labels and measurements — alongside a realistic AI rendering of it. From there it stays conversational: on an infinite zoomable canvas you refine the plan by talking to it, scrub through every past version, and export the whole design as files or as a full change history.
+
+**Impact:** An AI design agent for architects and self-builders: describe a building in plain words and it designs a dimensioned floor plan you can actually build from, plus a realistic rendering — then you refine it by talking, on an infinite zoomable canvas.
+
+**Problem:** AI floor-plan tools produce pretty pictures you cannot build from and cannot precisely edit. An image-generated plan has no real dimensions, no guarantee a wall is straight, and no handle to grab when you want the kitchen two metres wider — you re-prompt and hope. Meanwhile professional CAD is powerful but slow and expert-only, and neither world lets you simply *talk* to your design. ArchCanvas closes that gap: a plan you can converse your way to, that is nonetheless a real, dimensioned, buildable artifact you can keep editing precisely.
+
+**Audience:** Architects and designers who want to move fast from brief to a credible dimensioned plan, and self-builders / renovators who have a vision but not CAD skills and need something they (or their builder) can actually work from. Because every plan is a real floor-plan program underneath, the same product serves a careful professional nudging a wall thickness with a slider and a first-timer who just wants to describe their dream house and see it — and refine it — in plain language.
+
+**Product logic:** The studio runs in two acts. **Act I** is a full-screen briefing conversation: the user picks a typology (residential, accessible clinic, open-plan office, passive house) and describes the build; the agent asks two-to-five clarifying questions inline, then generates ONE plan — deliberately not a grid of options — as parametric ArchLang, compiles it to a dimensioned SVG with `data-arch-id` anchors, renders a grounded AI visualization, and critiques it. That single turn is the only point at which the agent is asked for a brand-new plan.
+
+**Act II** is a canvas-first studio, and nothing in it regenerates. Edits are conversational and **morph the plan in place** — the parent geometry fades to a dashed ghost, a semantic-diff chip shows what changed, and a version-lineage timeline lets you scrub the history. **Select-to-act**: click a room, door, or window and a floating action bar offers verb chips (Enlarge / Shrink / Widen / Move) plus agent-suggested scoped edits. A **Parametric Tweaks** panel turns the plan's own variables (room sizes, counts, wall thickness) into live sliders that recompile instantly with no AI call at all. **Review mode** toggles a walking-circulation overlay (routes, pinch points) and pins anchored critique findings, each with a one-click "have AI fix" — display-only, never auto-applied. The finished design exports as SVG/PNG/DXF/PDF, or as a full versioned change history whose log *is* the design conversation.
+
+**Business logic:** The unit of work is one generation turn — plan + grounded rendering + critique, produced as a single atomic set — and everything downstream of it is refinement rather than regeneration. That split is deliberate: a design task's value is lumpy (you want a few strong plans, then iterate on them for a long time), so every edit, parametric tweak, re-render, and review action mutates the existing frame in place, and the model is re-invoked only when the user genuinely asks for new work. The advantage is the ArchLang pairing: because plans are a deterministic program rather than pixels, ArchCanvas can offer editing, tweaking, diffing, and change-history export that an image-generation competitor structurally cannot.
+
+**Technical approach:** A single Next.js 15 monolith (React 19, TypeScript 5.8) over a 9-table Drizzle schema on Neon Postgres, with Stripe credits, Cloudinary rendering storage, and jose-based auth. The AI layer is an orchestrated tool-agent on the Vercel AI SDK: the orchestrator was deliberately migrated off GPT-4o (which under-used tools and wrote non-parametric DSL) to **gpt-5.5**, while GPT-4o is retained for vision (reference-image analysis). Its tools center on `generateFloorPlanDSL` — write parametric ArchLang, compile it through the `@chanmeng666/archlang` package (now 1.18), pass a ship-gate, save a frame — with `editFloorPlanDSL` as the minimal-diff follow-up. Renderings are a **grounded, view-aware chain**: the compiled plan is rasterized and sent as the grounding image to GPT Image 2, with model order chosen per view (aerial vs eye-level) so the render matches the real geometry instead of hallucinating a layout. `designFrames` stores each version's ArchLang source, compiled SVG, rendering URLs, lint warnings, review findings, and a self-referential `parentFrameId` for lineage — which is exactly what the in-memory change-history export (isomorphic-git + memfs, zipped with fflate) walks root-to-tip. Deployment is a canary-then-swap over SSH: build a Docker image, push to GHCR, boot a health-checked canary, and swap traffic only if `/api/health` passes — otherwise abort untouched.
+
+**Outcomes:** Live in production at archcanvas.uk, solo-built across roughly 295 commits over three months (2026-04-08 → 2026-07-16): 13 pages, 28 API route handlers, 71 components, and 205 source files over a 9-table schema. The product is unusually rigorous about testing its own thesis — a `generationAttempts` telemetry table tracks first-pass ArchLang validity per model, and a `bench` harness runs briefs through both the DSL pipeline and a legacy freehand-pixel pipeline as a control group (now with timing and token axes), so the "DSL beats pixels" claim is measured, not asserted. It is also the proving ground that hardened ArchLang: real in-browser use of the compiler drove concrete upstream fixes, most recently the 1.18 topology work.
+
+**My role:** Sole author of the entire product — the two-act studio and canvas UX, the AI orchestrator and its tools, the grounded view-aware rendering chain, the ArchLang integration, the 9-table schema and credit/billing system, the change-history export, the falsifiability instruments, and the canary-then-swap deployment. And of ArchLang itself, the floor-plan language it is built on. Every commit is mine.
+### 3. Vitex — AI Career Agent (vitex.org.nz) — Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions
 [tier=flagship · recency=recent · updated=2026-07-17]
 - **URL:** https://www.vitex.org.nz/
 - **Repository:** https://github.com/ChanMeng666/easy-resume
@@ -2083,36 +2113,6 @@ Right after tailoring, a deterministic **faithfulness gate** re-checks for fabri
 **Outcomes:** Live and operational at **vitex.org.nz**, serving real users end-to-end from a pasted job ad to a compiled PDF. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.
 
 **My role:** Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.
-### 3. ArchCanvas — 'Your AI architect — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Refinement mutates the plan in place — it never regenerates it.
-[tier=flagship · recency=active · updated=2026-07-17]
-- **URL:** https://archcanvas.uk/
-- **Tech stack:** Next.js 15.3 (App Router) + React 19 + TypeScript 5.8, Vercel AI SDK (ai 4.3, @ai-sdk/openai) + OpenAI 6.45 — orchestrator migrated off GPT-4o to a newer reasoning model for tool use; GPT-4o retained for vision, GPT Image grounded renderings (view-aware model chain: aerial vs eye-level), @chanmeng666/archlang ^1.18.0 (Chan's own declarative floor-plan compiler, consumed as a package), Neon Postgres + Drizzle ORM (9 tables, schema-push), Stripe 17 (credits ledger, dual live/test mode), Cloudinary (rendering storage), react-zoom-pan-pinch (infinite zoomable canvas), isomorphic-git + memfs + fflate (export design history as a real git repo, in-memory), jose (JWT/JWKS auth), Zod validation · shadcn/ui + Tailwind 4 + Framer Motion + GSAP, Docker canary-then-swap deploy over SSH (DigitalOcean VPS, Traefik + Let's Encrypt, Cloudflare Full-Strict)
-- **Commits (solo):** ~295 (268 non-merge) (2026-04-08 → 2026-07-16, ~3 months); sole author
-- **Surfaces:** 13 pages · 28 API route handlers · 71 components · 205 source files
-- **Database:** 9 Drizzle tables on Neon (projects · designFrames · agentThreads · credits · creditTransactions · shares · generationAttempts · uploads · stripeWebhookEvents)
-- **Agent tools:** 9 (7 user-facing: askDesignQuestions · generateFloorPlanDSL[new plan] · editFloorPlanDSL[minimal diff] · generateRendering · critiquePlan · analyzeReference[vision] · analyzeFloorPlan)
-- **Generation unit:** one generation = plan + grounded rendering + critique, produced as a single atomic set; edits, parametric tweaks, re-renders, and review mode all operate on that set without re-generating it
-- **Git export:** in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)
-- **Deploy:** private repo → GitHub Actions → GHCR → canary-then-swap over SSH (boot canary, poll /api/health, swap only if healthy) on a DO VPS behind Traefik + Cloudflare
-**Summary:** ArchCanvas is an AI design agent for architects and self-builders. Describe a building in plain language and it asks a few questions, then designs one dimensioned floor plan you can actually build from — with room labels and measurements — alongside a realistic AI rendering of it. From there it stays conversational: on an infinite zoomable canvas you refine the plan by talking to it, scrub through every past version, and export the whole design as files or as a full change history.
-
-**Impact:** An AI design agent for architects and self-builders: describe a building in plain words and it designs a dimensioned floor plan you can actually build from, plus a realistic rendering — then you refine it by talking, on an infinite zoomable canvas.
-
-**Problem:** AI floor-plan tools produce pretty pictures you cannot build from and cannot precisely edit. An image-generated plan has no real dimensions, no guarantee a wall is straight, and no handle to grab when you want the kitchen two metres wider — you re-prompt and hope. Meanwhile professional CAD is powerful but slow and expert-only, and neither world lets you simply *talk* to your design. ArchCanvas closes that gap: a plan you can converse your way to, that is nonetheless a real, dimensioned, buildable artifact you can keep editing precisely.
-
-**Audience:** Architects and designers who want to move fast from brief to a credible dimensioned plan, and self-builders / renovators who have a vision but not CAD skills and need something they (or their builder) can actually work from. Because every plan is a real floor-plan program underneath, the same product serves a careful professional nudging a wall thickness with a slider and a first-timer who just wants to describe their dream house and see it — and refine it — in plain language.
-
-**Product logic:** The studio runs in two acts. **Act I** is a full-screen briefing conversation: the user picks a typology (residential, accessible clinic, open-plan office, passive house) and describes the build; the agent asks two-to-five clarifying questions inline, then generates ONE plan — deliberately not a grid of options — as parametric ArchLang, compiles it to a dimensioned SVG with `data-arch-id` anchors, renders a grounded AI visualization, and critiques it. That single turn is the only point at which the agent is asked for a brand-new plan.
-
-**Act II** is a canvas-first studio, and nothing in it regenerates. Edits are conversational and **morph the plan in place** — the parent geometry fades to a dashed ghost, a semantic-diff chip shows what changed, and a version-lineage timeline lets you scrub the history. **Select-to-act**: click a room, door, or window and a floating action bar offers verb chips (Enlarge / Shrink / Widen / Move) plus agent-suggested scoped edits. A **Parametric Tweaks** panel turns the plan's own variables (room sizes, counts, wall thickness) into live sliders that recompile instantly with no AI call at all. **Review mode** toggles a walking-circulation overlay (routes, pinch points) and pins anchored critique findings, each with a one-click "have AI fix" — display-only, never auto-applied. The finished design exports as SVG/PNG/DXF/PDF, or as a full versioned change history whose log *is* the design conversation.
-
-**Business logic:** The unit of work is one generation turn — plan + grounded rendering + critique, produced as a single atomic set — and everything downstream of it is refinement rather than regeneration. That split is deliberate: a design task's value is lumpy (you want a few strong plans, then iterate on them for a long time), so every edit, parametric tweak, re-render, and review action mutates the existing frame in place, and the model is re-invoked only when the user genuinely asks for new work. The advantage is the ArchLang pairing: because plans are a deterministic program rather than pixels, ArchCanvas can offer editing, tweaking, diffing, and change-history export that an image-generation competitor structurally cannot.
-
-**Technical approach:** A single Next.js 15 monolith (React 19, TypeScript 5.8) over a 9-table Drizzle schema on Neon Postgres, with Stripe credits, Cloudinary rendering storage, and jose-based auth. The AI layer is an orchestrated tool-agent on the Vercel AI SDK: the orchestrator was deliberately migrated off GPT-4o (which under-used tools and wrote non-parametric DSL) to **gpt-5.5**, while GPT-4o is retained for vision (reference-image analysis). Its tools center on `generateFloorPlanDSL` — write parametric ArchLang, compile it through the `@chanmeng666/archlang` package (now 1.18), pass a ship-gate, save a frame — with `editFloorPlanDSL` as the minimal-diff follow-up. Renderings are a **grounded, view-aware chain**: the compiled plan is rasterized and sent as the grounding image to GPT Image 2, with model order chosen per view (aerial vs eye-level) so the render matches the real geometry instead of hallucinating a layout. `designFrames` stores each version's ArchLang source, compiled SVG, rendering URLs, lint warnings, review findings, and a self-referential `parentFrameId` for lineage — which is exactly what the in-memory change-history export (isomorphic-git + memfs, zipped with fflate) walks root-to-tip. Deployment is a canary-then-swap over SSH: build a Docker image, push to GHCR, boot a health-checked canary, and swap traffic only if `/api/health` passes — otherwise abort untouched.
-
-**Outcomes:** Live in production at archcanvas.uk, solo-built across roughly 295 commits over three months (2026-04-08 → 2026-07-16): 13 pages, 28 API route handlers, 71 components, and 205 source files over a 9-table schema. The product is unusually rigorous about testing its own thesis — a `generationAttempts` telemetry table tracks first-pass ArchLang validity per model, and a `bench` harness runs briefs through both the DSL pipeline and a legacy freehand-pixel pipeline as a control group (now with timing and token axes), so the "DSL beats pixels" claim is measured, not asserted. It is also the proving ground that hardened ArchLang: real in-browser use of the compiler drove concrete upstream fixes, most recently the 1.18 topology work.
-
-**My role:** Sole author of the entire product — the two-act studio and canvas UX, the AI orchestrator and its tools, the grounded view-aware rendering chain, the ArchLang integration, the 9-table schema and credit/billing system, the change-history export, the falsifiability instruments, and the canary-then-swap deployment. And of ArchLang itself, the floor-plan language it is built on. Every commit is mine.
 
 ## Notable Open Source Projects
 
@@ -2182,7 +2182,7 @@ Right after tailoring, a deterministic **faithfulness gate** re-checks for fabri
 **Outcomes:** Live and operational at **vitex.org.nz**, serving real users end-to-end from a pasted job ad to a compiled PDF. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.
 
 **My role:** Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.
-### echook (Echo + Hook) — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
+### echook — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
 [tier=primary · recency=active · updated=2026-07-17]
 - **Repository:** https://github.com/ChanMeng666/echook
 - **Tech stack:** Python 3.6+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13), Remotion 4 (promo video), React 19 (promo video), Suno (background music generation)
@@ -2457,7 +2457,7 @@ troubleshooting contribution. Together these make the
 early-MCP-developer story concrete: not a theoretical early adopter,
 but someone who shipped, distributed, documented, and supported a
 working MCP server within the protocol's first month.
-### server-google-jobs — Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
+### Google Jobs MCP Server — Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
 [tier=primary · recency=recent · updated=2026-07-17]
 - **URL:** https://github.com/ChanMeng666/server-google-jobs
 - **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk 1.25.1, stdio transport, SerpAPI, node-fetch, ES modules, npm (scoped @chanmeng666), Dockerfile, .mcpb compiled binary, mcp-evals (v2.0.0 early adoption)
@@ -2534,7 +2534,7 @@ wrote every translation, built the multi-channel distribution
 Google News MCP counterpart. External contributions have been
 dependency bumps and catalog-integration commits; the tool
 design and localization are mine.
-### AI Programming Education Platform (programming.chanmeng.org) — Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
+### AI Programming Education Platform — Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
 [tier=primary · recency=active · updated=2026-08-05]
 - **URL:** https://programming.chanmeng.org/
 - **Repository:** https://github.com/ChanMeng666/ai-programming-teaching-project
@@ -2567,6 +2567,47 @@ Capstone classroom infrastructure. A Cloudflare Worker proxies writes into Notio
 **Outcomes:** Live at programming.chanmeng.org, in active use as the official platform for the 2026 TechNest AI Track and the 2026 academyEX Her Waka programme. 211 of 220 non-merge commits (95.9%) solo across Chan's two GitHub identities; the remainder is AI auto-review + Dependabot. Five cohort versions run side by side without interfering. The RAG index covers all five versions + the blog (~4,800 chunks), with version-aware retrieval and stable chunk IDs. After Cloudflare deprecated the original chat model, the assistant was restored on 2026-07-10 by swapping to Llama 3.1 8B Instruct (fp8), alongside a move to a custom API domain, per-IP rate limiting, a CORS allow-list, and a WAF rule. Course recordings continue through the TechNest cohort's 8-week curriculum, and Demo Day 2026 now has a public Capstone Showcase with published student projects (CreditHero, iCare, JobOrg-AI) and guest voting. DeepWiki provides an external AI doc-Q&A surface at deepwiki.com/ChanMeng666/ai-programming-teaching-project.
 
 **My role:** I built and run the entire platform end-to-end: Docusaurus configuration, the versioned-docs taxonomy across five cohorts, every cohort's curriculum content, the Cloudflare Worker RAG backend (worker entry, chat handler, RAG module, Vectorize seeding, KV session store), the BGE-Base embeddings ingestion pipeline, the Typst PDF handout build, the Mermaid dual-view component, the Notion-Worker proxy and Demo Day showcase for Capstone voting, the Algolia contextual-search configuration, and the bilingual i18n across every surface. I migrated production from Vercel to Cloudflare Pages in 2026-04, and in 2026-07 hardened the chat backend (custom domain, rate limiting, CORS allow-list, WAF) and restored it onto Cloudflare's current model after the old one was deprecated. I continue to ship the current cohort's recordings and lab content each week.
+### a11y-loop — A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then proves what it can prove with a real Playwright + axe-core browser audit across the states the agent built — and states plainly what it could not check
+[tier=primary · recency=active · updated=2026-08-05]
+- **Repository:** https://github.com/ChanMeng666/a11y-loop
+- **Tech stack:** Claude Code Skill (Agent Skills open standard), Node.js >= 20, Playwright, axe-core 4.12, WCAG 2.2 AA, JavaScript, GitHub Actions CI
+
+**Summary:** Accessible interfaces usually fail at the moment the code is
+written, not at the audit months later. a11y-loop moves the check
+to that moment: it gives an AI coding agent the rules up front so
+it writes accessible markup by default, then drives a real browser
+over what it built — Playwright plus axe-core, across the actual
+interaction states rather than one static snapshot — and reports
+what passed. Its distinguishing habit is the honest part: it
+publishes an explicit list of what it could NOT verify, so a green
+run never implies full WCAG 2.2 AA coverage it has no standing to
+claim. Ships as both a Claude Code skill and a standalone CLI
+(`npx a11y-loop`), with a contrast checker that proposes fixes and
+a CI mode. MIT.
+
+**Impact:** Shifts accessibility left into the agent's own write step, then verifies it in a real browser across built states — and publishes an explicit 'could not check' list, so a passing run never overclaims WCAG 2.2 AA coverage.
+
+**Problem:** AI coding agents produce interfaces fast, and they produce
+inaccessible ones by default: missing focus indicators, unlabelled
+controls, contrast that fails at a ratio nobody measured. The usual
+remedy is a late audit against a static page, which misses every
+state a user actually reaches and reports a pass the tool has no
+standing to claim.
+
+**Audience:** Developers who build UI by directing coding agents, and the teams
+who inherit that code — plus anyone who needs a defensible
+accessibility position rather than a badge.
+
+**Technical approach:** Two halves sharing one rule set. The authoring half is an Agent
+Skill on the open standard, so Claude Code, Cursor and Copilot pick
+up the same defaults. The verification half drives Playwright over
+the built states and runs axe-core 4.12 against WCAG 2.2 AA, then
+partitions the result into checked, failed, and — the part most
+tools omit — not checkable by automation.
+
+**My role:** Sole author. Published to npm as `a11y-loop`; the repo is written
+agent-first, with an AGENTS.md alongside the README so an agent can
+orient itself without a human intermediary.
 ### Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp) — Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template
 [tier=primary · recency=recent · updated=2026-08-05]
 - **URL:** https://hackathon.shesharp.org.nz/
@@ -2790,48 +2831,7 @@ On the mentorship side: served as one of the 14 expert
 mentors during the 26-hour event itself, guiding teams on
 prompt design, SDG framing, and product narrative —
 simultaneously building the platform and using it.
-### a11y-loop — A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then proves what it can prove with a real Playwright + axe-core browser audit across the states the agent built — and states plainly what it could not check
-[tier=primary · recency=active · updated=2026-08-05]
-- **Repository:** https://github.com/ChanMeng666/a11y-loop
-- **Tech stack:** Claude Code Skill (Agent Skills open standard), Node.js >= 20, Playwright, axe-core 4.12, WCAG 2.2 AA, JavaScript, GitHub Actions CI
-
-**Summary:** Accessible interfaces usually fail at the moment the code is
-written, not at the audit months later. a11y-loop moves the check
-to that moment: it gives an AI coding agent the rules up front so
-it writes accessible markup by default, then drives a real browser
-over what it built — Playwright plus axe-core, across the actual
-interaction states rather than one static snapshot — and reports
-what passed. Its distinguishing habit is the honest part: it
-publishes an explicit list of what it could NOT verify, so a green
-run never implies full WCAG 2.2 AA coverage it has no standing to
-claim. Ships as both a Claude Code skill and a standalone CLI
-(`npx a11y-loop`), with a contrast checker that proposes fixes and
-a CI mode. MIT.
-
-**Impact:** Shifts accessibility left into the agent's own write step, then verifies it in a real browser across built states — and publishes an explicit 'could not check' list, so a passing run never overclaims WCAG 2.2 AA coverage.
-
-**Problem:** AI coding agents produce interfaces fast, and they produce
-inaccessible ones by default: missing focus indicators, unlabelled
-controls, contrast that fails at a ratio nobody measured. The usual
-remedy is a late audit against a static page, which misses every
-state a user actually reaches and reports a pass the tool has no
-standing to claim.
-
-**Audience:** Developers who build UI by directing coding agents, and the teams
-who inherit that code — plus anyone who needs a defensible
-accessibility position rather than a badge.
-
-**Technical approach:** Two halves sharing one rule set. The authoring half is an Agent
-Skill on the open standard, so Claude Code, Cursor and Copilot pick
-up the same defaults. The verification half drives Playwright over
-the built states and runs axe-core 4.12 against WCAG 2.2 AA, then
-partitions the result into checked, failed, and — the part most
-tools omit — not checkable by automation.
-
-**My role:** Sole author. Published to npm as `a11y-loop`; the repo is written
-agent-first, with an AGENTS.md alongside the README so an agent can
-orient itself without a human intermediary.
-### gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs — 355 parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
+### Chromaflow — 355 parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
 [tier=primary · recency=active · updated=2026-08-05]
 - **URL:** https://gradient-svg-generator.vercel.app/
 - **Repository:** https://github.com/ChanMeng666/gradient-svg-generator
@@ -2999,7 +2999,7 @@ JS→TS migration with Zod validation, gallery virtualization) and
 the July 2026 site redesign; set up the Vercel + GitHub Actions +
 Vitest + Husky pipeline. I use the service across every personal
 repo as a live test signal for the project itself.
-### github-readme-suno-cards — Suno Music Cards for GitHub READMEs — GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 36 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.
+### Github README Suno Cards — GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 36 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.
 [tier=primary · recency=active · updated=2026-07-17]
 - **URL:** https://github-readme-suno-cards.vercel.app
 - **Repository:** https://github.com/ChanMeng666/github-readme-suno-cards

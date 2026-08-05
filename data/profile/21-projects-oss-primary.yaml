@@ -18,7 +18,8 @@ projects:
       x_brand:
         featuredStack: [github, nextjs, vercel, typescript, react]
     lastUpdated: "2026-07-17"
-    name: github-readme-suno-cards — Suno Music Cards for GitHub READMEs
+    # Formal product name; the repo is still ChanMeng666/github-readme-suno-cards.
+    name: Github README Suno Cards
     priority: 5
     category: branding
     # No relatedProjectIds → sunostats. They genuinely share the
@@ -249,7 +250,9 @@ projects:
             alt: "OpenAI Codex"
             url: "https://github.com/openai/codex"
     lastUpdated: "2026-07-17"
-    name: echook (Echo + Hook)
+    # Product name only. The "(Echo + Hook)" etymology gloss lived here until
+    # 2026-08-05 and read as part of the name in every rendered surface.
+    name: echook
     priority: 6
     category: ai-apps
     tagline: AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
@@ -519,7 +522,9 @@ projects:
     tier: primary
     recency: recent
     lastUpdated: "2026-07-17"
-    name: server-google-jobs
+    # Formal product name, matching its sibling "Google News MCP Server".
+    # The repo is still ChanMeng666/server-google-jobs.
+    name: Google Jobs MCP Server
     priority: 8
     category: ai-apps
     tagline: Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
@@ -857,7 +862,11 @@ projects:
       x_brand:
         featuredStack: [nextjs, react, typescript, tailwindcss, vercel]
     lastUpdated: "2026-08-05"
-    name: gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs
+    # Product name only — "Chromaflow" is what it is called; the repo is still
+    # ChanMeng666/gradient-svg-generator and the service still runs at
+    # gradient-svg-generator.vercel.app. The old value carried the repo slug and
+    # a full descriptor, both of which belong in the tagline, not the name.
+    name: Chromaflow
     priority: 10
     category: creative
     tagline: 355 parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".

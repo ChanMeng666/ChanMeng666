@@ -1059,6 +1059,10 @@
       "logo": "/public/brands/she-sharp-mark.svg",
       "clientOrgId": "she-sharp",
       "relatedWorkId": "she-sharp",
+      "relatedProjectIds": [
+        "her-waka",
+        "ai-hackathon-assistant"
+      ],
       "entity": "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)",
       "roles": [
         "Senior Full Stack Engineer",
@@ -1211,7 +1215,138 @@
         "outcomes": "Production-deployed and operating She Sharp's full member lifecycle\nfor about a year (first commit 2025-07-22, latest 2026-07-14) — still\nin active build-out, not maintenance. Commit volume: **936 commits,\n793 (85%) authored solo by Chan Meng**, with 140 (15%) by Lesley Gao\non frontend design and code and 3 by an automation bot. **541 of\nthose commits landed since 2026-01-01 alone.** The platform now runs\nShe Sharp's membership, mentorship, events, sponsor relationships,\nvolunteer recruitment pipeline, and internal team operations across\n**95 API routes, 53 pages, 160 components, 26 SQL migrations, and an\n11-namespace `lib/` library** (matching, slack-bot, stripe, funding,\nprogrammes, recruitment, invitations, mentorship, email, auth, db) —\nthe technical infrastructure for an organisation that reports 2,200+\nregistered members, 1,000+ active, 8,000+ women supported lifetime,\n50+ corporate partners, 84+ events since 2014, 18 industry mentors,\nand an 85% mentorship success rate.\n\nThe most recent build-out extended the public site into a photo-rich\n\"Editorial\" visual system and full event pages — including the\nAotearoa AI Hackathon Festival 2026 page (AUT × She Sharp × AI Forum\nNZ, 7–8 August 2026 at AUT City Campus), assembled from a single\nZod-validated event entry. **The Her Waka programme launched in March\n2026** with NZ Ministry of Social Development funding, using the\ndedicated teaching site I built (herwaka.shesharp.org.nz) and the\ncurriculum I authored — 4 workshops + 8 tutorials in 3 tiers. **The\nSEO audit** identified actionable competitive gaps, notably the\ndesktop/mobile ranking disparity on \"women in tech New Zealand.\"\n**The migration crawler** enabled a clean cutover from Webflow\nwithout losing institutional knowledge. **The Slack-bot + agent-skill\npairing** replaced an hours-long manual event-publication workflow\nwith a single dry-run-default command.\n",
         "myRole": "Senior Full Stack Engineer and Website Team Lead. Recruited directly\nby founder Dr Mahsa Mohaghegh (McCauley) — AI/NLP researcher and Head\nof Computer and Information Sciences at AUT — specifically to deliver\nthe AI and full-stack senior engineering that Webflow couldn't, and\nthat the She Sharp team didn't have in-house.\n\nSolo full-stack ownership of the main platform: product architecture,\ndatabase schema (1,411 lines, 30 pgEnums, 35 pgTables, 26 SQL\nmigrations), AI matching pipeline (5-weight rubric + Upstash Redis\ncache + rule-based fallback + admin human-in-the-loop), Stripe\nbilling with the form→checkout→invitation-code activation flow,\nSlack ecosystem (read-only event-collector, 3 weekly Cron digests,\ninteractive event handlers), the `sync-event-from-slack` Claude\nagent skill with strict Zod validation and dry-run default, admin\nsystems, deployments, observability, and operational support. Lesley\nGao contributed frontend design and frontend code (140 commits, 15%);\nthe remaining 793 commits (85%) are mine. Beyond the main platform I\nalso built the data-migration crawler that bootstrapped the launch\n(she-sharp-crawl), the Her Waka teaching site (her-waka) and its\ncomplete four-workshop + 8-tutorial curriculum, and the professional\nSEO audit and recommendations report (serpdata-api-test) on\nshesharp.org.nz — working across engineering, instructional design,\nand strategic analysis under one role.\n"
       },
-      "_relatedProjects": [],
+      "_relatedProjects": [
+        {
+          "id": "her-waka",
+          "provenance": "client",
+          "tier": "primary",
+          "recency": "historical",
+          "meta": {
+            "x_brand": {
+              "featuredStack": [
+                "mintlify",
+                "github"
+              ]
+            }
+          },
+          "lastUpdated": "2026-08-05",
+          "name": "HER WAKA — Employment Programme for Women in Auckland",
+          "priority": 30,
+          "category": "web-apps",
+          "clientOrgId": "she-sharp",
+          "relatedWorkId": "she-sharp",
+          "relatedProjectIds": [
+            "she-sharp"
+          ],
+          "tagline": "Mintlify documentation platform for the She Sharp × NZ Ministry of Social Development (MSD) employment-readiness programme delivered at academyEX Auckland (Mar-Jun 2026); 4 workshops authored solo by Chan",
+          "url": "https://herwaka.shesharp.org.nz/",
+          "logo": "/public/brands/her-waka.jpg",
+          "techStack": [
+            "Mintlify",
+            "MDX",
+            "She Sharp × MSD partnership"
+          ],
+          "narrative": {
+            "impactHeadline": "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
+          },
+          "status": "live",
+          "_clientOrg": {
+            "id": "she-sharp",
+            "name": "She Sharp",
+            "url": "https://shesharp.org.nz"
+          },
+          "_relatedProjectsResolved": [
+            {
+              "id": "she-sharp",
+              "name": "She Sharp",
+              "url": "https://www.shesharp.org.nz/",
+              "repoUrl": "https://github.com/NZ-SheSharp/she-sharp"
+            }
+          ],
+          "_supersededByProject": null,
+          "_supersedesProjects": []
+        },
+        {
+          "id": "ai-hackathon-assistant",
+          "provenance": "hackathon",
+          "tier": "primary",
+          "recency": "recent",
+          "lastUpdated": "2026-08-05",
+          "name": "Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)",
+          "priority": 14,
+          "category": "ai-apps",
+          "clientOrgId": "she-sharp",
+          "relatedWorkId": "she-sharp",
+          "tagline": "Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template",
+          "url": "https://hackathon.shesharp.org.nz/",
+          "repoUrl": "https://github.com/ChanMeng666/event-qa-ai-template",
+          "logo": "/public/brands/ai-hackathon-logo-full.svg",
+          "extraLinks": [
+            {
+              "label": "Live site — 2026 voice agent",
+              "url": "https://aihackathon-2026.vercel.app"
+            },
+            {
+              "label": "Hackathon partner — AI Forum NZ",
+              "url": "https://aiforum.org.nz/hackathon"
+            },
+            {
+              "label": "Partner — AUT (host venue)",
+              "url": "https://www.aut.ac.nz/"
+            },
+            {
+              "label": "Partner — She Sharp",
+              "url": "https://www.shesharp.org.nz/"
+            },
+            {
+              "label": "Template setup guide",
+              "url": "https://github.com/ChanMeng666/event-qa-ai-template/blob/master/docs/TEMPLATE-SETUP.md"
+            }
+          ],
+          "techStack": [
+            "Next.js 16.1 (App Router)",
+            "React 18 + TypeScript 5",
+            "Tailwind CSS v3 + Framer Motion v12",
+            "Vercel AI SDK v4.3",
+            "@ai-sdk/openai (GPT-4o-mini-2024-07-18 streaming)",
+            "Three.js 0.182 + @react-three/fiber 8.16",
+            "Custom Quantum Orb 3D mascot (CSS 3D transforms + Three.js particles)",
+            "Sprite affection gamification engine (gesture detection, mood weighting, time-of-day bias)",
+            "Notion REST API (raw fetch, CF Workers compatible — replaced @notionhq/client SDK)",
+            "shadcn/ui + Radix primitives",
+            "@opennextjs/cloudflare adapter",
+            "Cloudflare Workers deployment (migrated from Vercel)",
+            "wrangler v4 CI/CD",
+            "localStorage state persistence (50-msg chat history + sprite affection state)",
+            "5-min FAQ client cache + optimistic vote/view updates",
+            "AI rate limiting + per-session token budgets + prompt guardrails (2026-07 security hardening)",
+            "OpenAI Realtime API over WebRTC — two-way voice (2026 relaunch)",
+            "Ephemeral client secrets minted server-side (OPENAI_API_KEY never reaches the browser)",
+            "Audio-reactive Three.js orb voice UI + live captions (2026)",
+            "Vercel deployment (2026 edition — she-sharp1/aihackathon-2026)"
+          ],
+          "status": "live",
+          "publicSummary": "Real industry-partnered AI event assistant built for the **AI\nHackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised\nby **Auckland University of Technology**, **AI Forum New Zealand**,\nand **She Sharp**, with **UN Sustainable Development Goals** as\nthe innovation brief. The platform serves participants and mentors\nthrough three interlocking systems: (1) an **interactive 3D sprite\nmascot** with a 6-tier \"Stranger → Soulmate\" affection system,\n7-state dynamic mood engine, 17 emotion categories, gesture\nrecognition (circle/pat/swipe), negative-behaviour penalties,\nstreak bonuses, and time-of-day emotion biases — a fully gamified\npersonality layer that responds to how users actually touch the\npage; (2) a **Notion-as-database community FAQ** with up/downvote\nranking, view tracking, 5-minute client cache, and graceful static\nfallback when Notion is unreachable; (3) an **OpenAI GPT-4o-mini\nstreaming chat** with markdown-rendered responses and one-click\nFAQ-to-chat hand-off. After the live deployment, the codebase was\ngeneralised into a reusable open-source template\n(`event-qa-ai-template` on GitHub, MIT) so any future hackathon /\nconference can fork-and-config the same stack. Chan was\nsubsequently recognised among the **14 expert mentors** at the\nfestival.\n\nFor the **2026 festival** (Aotearoa AI Hackathon Festival 2026,\nAUT City Campus) the project was **rebuilt from the ground up** as\na single-page **voice-first** agent: the whole site is a centered,\naudio-reactive Three.js orb that starts a **two-way voice\nconversation over the OpenAI Realtime API via WebRTC** (the client\nexchanges SDP directly with OpenAI using a short-lived ephemeral\nsecret, so the real API key never reaches the browser), with a\ntext-input fallback answered by gpt-4o-mini via the Vercel AI SDK,\nlive captions, and a collapsible event-info panel. Agent\ninstructions build from a Neon `knowledge` table (graceful\nfallback to config), transcripts persist best-effort, and Upstash\nKV rate-limits token minting. Deployed on Vercel\n(`she-sharp1/aihackathon-2026`, live at aihackathon-2026.vercel.app).\n",
+          "narrative": {
+            "impactHeadline": "Voice-first AI event agent for the Aotearoa AI Hackathon Festival — relaunched 2026 (AUT) as an audio-reactive orb driving two-way OpenAI Realtime voice + gpt-4o-mini text chat; the 2025 edition served 11 teams / 80+ participants with a gamified 3D sprite mascot + Notion FAQ.",
+            "problem": "Hackathons and conferences generate the same Q&A surface every\nyear: participants ask the same 30 questions (\"how do I form a\nteam\", \"what counts as AI\", \"when do I have to be on site\",\n\"what's the prize structure\", \"where do I find a mentor\"), and\norganisers answer them via static PDFs that go stale the moment\nthe schedule shifts. Bolt-on chatbots exist but they treat\nhumans as passive consumers — a popup widget in the corner, a\nknowledge base scraped at build time, no memory of what the\ncommunity itself finds helpful. Three structural gaps stack up:\n(1) the FAQ is **authored once** rather than **curated by the\ncommunity**, so quality drifts; (2) the AI is a generic\nwrapper around a chat API, with no event-specific personality\nor theme tie-in; (3) organisers cannot update content without\na code redeploy, so the platform calcifies the moment the\noriginal developer hands it off. The AI Hackathon Festival\n2025 organisers needed a platform that solved all three on the\ntimeline of a real event with 80+ participants and three\nco-organising institutions reviewing every word on screen.\n",
+            "audience": "Direct users were the **80+ participants and 14 expert mentors**\nof AI Hackathon Festival 2025 — students from Auckland\nuniversities, **Westlake Girls High School** secondary students,\nand AI Forum NZ industry mentors all asking the same FAQ-style\nquestions across a 26-hour residential event. Secondary\naudience: the **three co-organising institutions** (AUT, AI\nForum NZ, She Sharp) who use the platform as a public-facing\nartefact of their joint programme. Tertiary audience: future\nhackathon and conference organisers in NZ and abroad who can\nfork the open-source template (`event-qa-ai-template`) and\ndeploy their own event Q&A AI in under an hour by editing four\nconfiguration files — `site.config.ts`, `ai.config.ts`,\n`content.config.ts`, `branding.config.ts` — without touching\ncomponent code.\n",
+            "productLogic": "The product is structured as three layers that compose\nindependently. Layer one is the **3D welcoming surface**: the\nlanding page renders a particle sphere with a \"WELCOME TO AI\nHACKATHON!\" greeting set against a `CosmicBackground` Three.js\nscene, with `Calendar` / `MapPin` event-info widgets, sponsor\nlogos for the three co-organisers, and a glassmorphism Google\nMaps modal showing AUT WG Building. Layer two is the **chat\npage** — a 70/30 desktop split between a full-screen OpenAI\nchat (with `react-markdown` + `rehype-highlight` for\ncode-block syntax highlighting) and a community FAQ sidebar.\nLayer three — the differentiator — is the **interactive sprite\nmascot** that lives alongside the chat: a CSS-3D **Quantum\nSingularity Orb** (accretion disk + photon ring + event\nhorizon + energy jets, all built from layered divs with\n`transform-style: preserve-3d` and `rotateX(60deg)`) that\nbecomes a fully gamified personality. The user can **circle**,\n**swipe vertically/horizontally**, **pat**, or **click** the\norb; the gesture detection engine tracks each interaction and\nfeeds it through an affection/mood scoring system. Five\ngestures grant affection (circle x5 = +10 affection / \"Wheee~!\nSo dizzy but fun!\"), five negative behaviours penalise it\n(`roughMovement`, `spamClick`, `suddenLeave`, `longIgnore`,\n`excessiveCircle`), and the resulting state drives which of\n17 emotions the sprite expresses — including three **rare**\nemotions (`devoted`, `starry`, `mischievous`) only unlocked\nat the top affection tiers. The result: users do not just chat\nwith an AI, they **build a relationship with a tiny digital\ncreature** while doing so — a memorable, shareable layer that\nturns a Q&A bot into a piece of event identity.\n",
+            "businessLogic": "Three intertwined value propositions. For the **organising\ninstitutions**, the platform is a public-facing demonstration\nartefact of the joint AUT × AI Forum NZ × She Sharp programme,\nrunning on Cloudflare Workers (free tier covers an event-week\ntraffic spike with zero cost) with a Notion database that\n**non-developer event staff can edit live** during the event —\nadding new FAQ entries through the Notion UI, watching them\nappear within the 5-minute client cache window. For **future\nevent organisers**, after the live event, the codebase was\ndeliberately generalised into a **reusable MIT template**\n(`event-qa-ai-template`) with all event-specific content\nextracted into `config/*.ts` files and full setup\ndocumentation, so the same stack ships any hackathon /\nconference / community event Q&A platform in under an hour of\nconfiguration. For **Chan**, the project established a\nverifiable, AI-Forum-NZ-endorsed track record of shipping\ncommercial-grade AI infrastructure for an industry partner —\na credential cited in the public LinkedIn announcement of the\n14-mentor cohort and in the Engram Architect Cohort\nEngagement Letter narrative.\n",
+            "technicalApproach": "**AI layer.** OpenAI GPT-4o-mini-2024-07-18 served through\nVercel AI SDK v4.3's `streamText` with `convertToCoreMessages`,\nreturning `toDataStreamResponse()` for character-by-character\nSSE streaming. The system prompt is **generated from\nsiteConfig at runtime** so any organiser fork inherits an\nevent-specific prompt without code edits — it embeds event\nname, dates, venue, theme (UN SDGs), team-formation rules\n(3-6 members, Hacker/Hipster/Hustler composition), schedule\n(Friday 8 PM venue close, Discord for mentor requests), and\nprize tiers ($250 venue, $1,000 national, $5,000 national\nAgentic AI winner) plus Markdown formatting guidelines. The\ncodebase pivoted from Google Gemini 2.5 Flash to OpenAI\nGPT-4o-mini mid-build (commit `5eb3e70`) for cost + Cloudflare\nWorkers compatibility reasons; the system prompt generator\nremained provider-agnostic. **3D sprite gamification.** A\n~960-line `sprite-affection.config.ts` declaratively encodes\nthe entire gameplay model: 5 gestures, 5 negative behaviours,\n7 mood states (`ecstatic` 80–100 → `upset` -100 to -80),\n17 emotions with per-emotion ear-colour RGB, glow-colour,\nparticle-colour, animation type (`bounce` / `shake` / `pulse`\n/ `spin` / `wobble` / `tremble` / `droop`) and eye shape\n(`sphere` / `arc` / `star` / `heart` / `crescent` / `spiral`\n/ `teardrop`), 6 affection tiers (Stranger 0–9 → Acquaintance\n10–29 → Friend 30–59 → Good Friend 60–99 → Best Friend\n100–149 → Soulmate 150+), 7 time-of-day biases (late-night\nboosts `sleepy` x3, evening boosts `love` x1.3), and 5 streak\nbonus levels (1/3/7/14/30 days, 30-day streak unlocks the\n`devoted` rare emotion). Two relational systems link mood\nand affection: a **mood multiplier** scales affection gains\nfrom 0.5x (depressed) to 1.5x (euphoric), and **affection\nmood protection** sets a floor that rises with tier (Soulmate\ngets a -10 floor + 5 mood/min recovery toward +20). All state\npersists to `localStorage` under `sprite-affection-data`.\nThe Quantum Orb itself is rendered with **CSS-only 3D**\n(preserve-3d transforms + rotateX) + Three.js particle\naccents — no GLB / heavy 3D pipeline — so the bundle stays\nsmall enough for Cloudflare Workers. **Notion backend.** A\nnon-obvious engineering call: the project initially used\n`@notionhq/client`, but migrating to Cloudflare Workers\n(commit `5b1dc7e`) broke the Node-dependent SDK; the fix\n(commit `20eaf2e`) replaced it with **direct REST calls\nagainst `api.notion.com/v1` using native `fetch`** — version\nheader `Notion-Version: 2022-06-28`, filter by\n`IsActive` checkbox, parse `Title` / `RichText` / `Select` /\n`Number` properties via small typed getters. Four API routes\n— `/api/chat`, `/api/faq/questions`, `/api/faq/vote`,\n`/api/faq/view` — wrap the same client. **Deployment.**\nMigrated from Vercel to Cloudflare Workers using\n`@opennextjs/cloudflare` v1.3 + wrangler v4; the entire stack\nnow ships on Cloudflare's free tier including the AI streaming\nendpoint. The build command `opennextjs-cloudflare build &&\nopennextjs-cloudflare deploy` handles the Next.js → Workers\nadapter step.\n",
+            "outcomes": "Delivered live for the **AI Hackathon Festival 2025** at AUT\nCity Campus WG Building, **15–16 August 2025**. Used by **11\nteams and 80+ participants** during the residential event —\nAI Forum NZ's public LinkedIn cohort announcement (with full\nWestlake Girls High School student attendance) cites Chan as\n**1 of 14 expert mentors**, recognised at the event. The\nteams shipped solutions across the UN SDG brief — food\ninsecurity, digital accessibility, workforce upskilling, and\nindigenous environmental stewardship — with national-tier\nprizes flowing through the AI Forum NZ pipeline (AI Summit\nentry worth $1,499, $1,000 national winner, $5,000 national\nAgentic AI winner, ArcGIS licences). Post-event, the codebase\nwas **refactored into a reusable MIT template** (commit\n`948bdf0` \"transform project into reusable event Q&A\ntemplate\"), documented in `docs/TEMPLATE-SETUP.md`,\n`docs/NOTION-INTEGRATION.md`, and `docs/UI-DESIGN-SYSTEM.md`,\nwith the live deployment retained as the canonical worked\nexample. Listed alongside Chan's other commercial-grade AI\nplatforms (echook, vitex, chinese-redefine,\nai-programming-teaching-project) as portfolio evidence of\nend-to-end industry-partner delivery — design, AI integration,\ngameplay engineering, database, deployment, and post-delivery\nproductisation as a reusable open-source artefact.\n",
+            "myRole": "Sole developer end-to-end. Owned the discovery phase with the\nthree co-organising institutions, designed the dual-layer\nproduct (chat surface + gamified mascot + Notion FAQ), built\nevery component, authored both the Gemini and the OpenAI\nprovider implementations, designed the entire ~960-line\naffection / mood / emotion gameplay schema, engineered the\nCSS-3D Quantum Orb visualisation, migrated the deployment\nfrom Vercel to Cloudflare Workers when free-tier economics\nand Notion-SDK incompatibility forced the move, refactored\nthe codebase into a reusable open-source template after the\nlive event, and authored the three setup-documentation files.\nOn the mentorship side: served as one of the 14 expert\nmentors during the 26-hour event itself, guiding teams on\nprompt design, SDG framing, and product narrative —\nsimultaneously building the platform and using it.\n"
+          },
+          "_clientOrg": {
+            "id": "she-sharp",
+            "name": "She Sharp",
+            "url": "https://shesharp.org.nz"
+          },
+          "_relatedProjectsResolved": [],
+          "_supersededByProject": null,
+          "_supersedesProjects": []
+        }
+      ],
       "_featuredStackResolved": [
         {
           "name": "nextjs",
@@ -1241,7 +1376,19 @@
         "name": "She Sharp",
         "url": "https://shesharp.org.nz"
       },
-      "_relatedProjectsResolved": [],
+      "_relatedProjectsResolved": [
+        {
+          "id": "her-waka",
+          "name": "HER WAKA — Employment Programme for Women in Auckland",
+          "url": "https://herwaka.shesharp.org.nz/"
+        },
+        {
+          "id": "ai-hackathon-assistant",
+          "name": "Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)",
+          "url": "https://hackathon.shesharp.org.nz/",
+          "repoUrl": "https://github.com/ChanMeng666/event-qa-ai-template"
+        }
+      ],
       "_supersededByProject": null,
       "_supersedesProjects": []
     },
@@ -1276,6 +1423,9 @@
       "logo": "/public/brands/gavigo-mark.svg",
       "clientOrgId": "gavigo",
       "relatedWorkId": "gavigo",
+      "relatedProjectIds": [
+        "gavigo-website"
+      ],
       "entity": "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)",
       "roles": [
         "Founding Principal Engineer, Activation, Execution & AI Systems",
@@ -1357,7 +1507,116 @@
         "outcomes": "Production-deployed at ire.gavigo.com. First shipped on DigitalOcean\nDOKS (Singapore), then migrated to Google Cloud GKE (Belgium) on\n2026-03-11 in a clean ~30-minute cutover when GAVIGO's Google Cloud\npartnership came into effect — production-grade expertise demonstrated\non both clouds. **445 total commits (439 non-merge); I authored 426 of\nthem (~97%) across my two git identities**, with a second engineer\nonboarded in June 2026 and the remainder from the CI bot. Real\nmeasured platform metrics post-migration: restore path <1 ms p50,\n~12 ms p50 on the orchestrator \"cold\" path (a genuine 0→1 container\nstart measures ~18 s and is a deliberate Phase 6+ boundary, not the\ndemo path), 84.6% warm-pool hit rate, 0 errors at 100 concurrent\nWebSocket clients. Catalog: 23 self-hosted games across four studios\nplus 2 ML/compute workloads and a 197-video bundle. Phase 9\naudience-segmentation and Phase 11 partner-pilot telemetry are live.\nPre-Series A; the product is the working artifact for upcoming\ninvestor conversations. Role formalized over three contract iterations\n(Original Oct 17 2025; Amended Feb 9 2026; Second Amended Apr 16\n2026), each escalating recognition of my technical ownership.\n\n**External validation.** GAVIGO holds NVIDIA Inception membership —\nevidenced by a $10,000 AWS Activate credit issued through the NVIDIA\nInception path (active 2026-07-01, running to 2028-07-31). GAVIGO also\nstates acceptance into the **Google for Startups Cloud Program** (the\npartnership that unlocked the GCP migration executed on March 11) and\nwas profiled by tech-business press (feedvoice.com, 2026-02-10) — both\nare company/external claims a reviewer should confirm with the team\nbefore citing.\n",
         "myRole": "Founding Principal Engineer, Activation, Execution & AI Systems\n(prior: Core Engineer), reporting to founder & CEO Saba Gecgil.\nJoined Oct 17 2025; current title and scope formalized by the\nSecond Amended and Restated Consulting Agreement effective\nApr 16 2026.\n\nThe contract defines a \"Protected Technical Domain\" that anchors\nmy role: activation systems, activation flow and execution\nbehavior, the activation-economics proof path, AI-assisted\norchestration and execution-control systems, restore and reuse\nboundary work, heavier-workload validation and transition work,\nand the core activation, execution, and AI-enabled systems\narchitecture of GAVIGO's interactive workload platform — plus\nthe natural forward extension of that area as the system evolves.\nRecognized in the contract record as \"a core long-term technical\nbuilder of the Company's interactive workload platform\" with\nfounder-level equity participation. I authored 426 of the project's\n439 commits (~97%); a second engineer joined in mid-2026, so the\ncodebase is no longer solely mine, but activation, orchestration,\nand AI-systems ownership remains my defined domain.\n"
       },
-      "_relatedProjects": [],
+      "_relatedProjects": [
+        {
+          "id": "gavigo-website",
+          "provenance": "client",
+          "tier": "primary",
+          "recency": "active",
+          "lastUpdated": "2026-08-05",
+          "name": "GAVIGO Website",
+          "logo": "/public/brands/gavigo-mark.svg",
+          "priority": 43,
+          "category": "web-apps",
+          "clientOrgId": "gavigo",
+          "relatedWorkId": "gavigo",
+          "relatedProjectIds": [
+            "gavigo-ire"
+          ],
+          "tagline": "GAVIGO Inc.'s public marketing and investor-readiness website (gavigo.com) — the standalone brand surface that links to the IRE product demo (ire.gavigo.com/mobile), with a Markdown content pipeline, Resend email capture, and a Cloud Run production deploy; Chan is the sole developer (66/66 commits, 100%), including the investor-readiness polish pass",
+          "url": "https://gavigo.com/",
+          "entity": "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)",
+          "roles": [
+            "Sole Developer"
+          ],
+          "extraLinks": [
+            {
+              "label": "Live site (gavigo.com)",
+              "url": "https://gavigo.com/"
+            },
+            {
+              "label": "IRE product demo",
+              "url": "https://ire.gavigo.com/mobile/"
+            },
+            {
+              "label": "Flagship product (gavigo-ire)",
+              "url": "https://ire.gavigo.com/"
+            }
+          ],
+          "techStack": [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Neon Postgres",
+            "Drizzle ORM",
+            "MDX / Markdown (remark + rehype, gray-matter)",
+            "React Email + Resend",
+            "Motion",
+            "Tailwind CSS",
+            "Google Cloud Run (europe-west1)"
+          ],
+          "keywords": [
+            "Startup investor-readiness website",
+            "Marketing site linked to live IRE product demo",
+            "Markdown content pipeline",
+            "Email capture (Resend)",
+            "Cloud Run production deployment"
+          ],
+          "status": "live",
+          "metrics": [
+            {
+              "label": "Authorship",
+              "value": "sole developer — 66/66 commits (100%); the only contributor to the repository"
+            },
+            {
+              "label": "Live URL",
+              "value": "https://gavigo.com (Google Cloud Run, europe-west1)"
+            },
+            {
+              "label": "Role",
+              "value": "the standalone company/investor site, decoupled from the IRE product runtime (ire.gavigo.com) it links to"
+            },
+            {
+              "label": "Content",
+              "value": "Markdown/MDX pipeline (remark + rehype + gray-matter) so non-engineers can edit copy without touching code"
+            },
+            {
+              "label": "Capture",
+              "value": "Resend + React Email lead capture wired to Neon Postgres (Drizzle ORM)"
+            },
+            {
+              "label": "Company",
+              "value": "GAVIGO Inc. (Delaware C-Corp; NVIDIA Inception + Google for Startups); Chan is founding principal engineer on the flagship IRE platform"
+            }
+          ],
+          "startDate": "2025-12",
+          "publicSummary": "GAVIGO Inc.'s public marketing and investor-readiness website at\ngavigo.com — the company's standalone brand surface, deliberately\ndecoupled from the IRE product runtime (ire.gavigo.com) so marketing\ncopy and investor messaging can change without redeploying the product.\nChan built and maintains it solo (66 of 66 commits): a Next.js site with\na Markdown/MDX content pipeline (so non-engineers can edit copy),\nMotion-driven brand animation, Resend + React Email lead capture backed\nby Neon Postgres, and a Google Cloud Run production deploy — including\nthe investor-readiness polish pass that supported GAVIGO's fundraising\nand partner conversations.\n",
+          "narrative": {
+            "impactHeadline": "GAVIGO's company + investor site (gavigo.com) — a standalone brand surface decoupled from the IRE product runtime it links to, with a Markdown content pipeline + Resend capture on Cloud Run. Solo-built (66/66 commits, 100%) with an investor-readiness polish pass for fundraising.",
+            "problem": "A startup's product and its story move at different speeds. GAVIGO's\nIRE platform is a fast-changing, latency-critical runtime; its public\ncompany narrative — the pitch to investors, partners, and early\nusers — needs to change even faster, and by people who aren't\nshipping the product. Running the marketing site inside the product\ncodebase couples the two: a copy tweak risks the runtime, and a\nnon-engineer can't touch either. GAVIGO needed a company surface that\nis polished, investor-ready, editable without engineering, and\ncompletely decoupled from the product it represents.\n",
+            "audience": "Primarily investors and strategic partners evaluating GAVIGO during\nfundraising and business-development conversations — the site is the\nfirst credible impression and the bridge to the live IRE demo. Second,\nprospective early users and press arriving at gavigo.com who need to\nunderstand \"Skip the Store. Start the Play\" and reach the product in\none click. Third, GAVIGO's own non-technical team, who edit copy and\nread captured leads without asking an engineer.\n",
+            "productLogic": "The site is deliberately a **separate surface from the product**. It\npresents GAVIGO's positioning and brand, animates key moments with\nMotion for a premium feel, and routes every call-to-action to the live\nIRE demo (ire.gavigo.com/mobile) so the story hands off directly to\nthe working product. Content is authored in **Markdown/MDX** through a\nremark + rehype + gray-matter pipeline, so marketing copy, announcement\nposts, and page sections are editable as plain files without touching\nReact — the whole point being that the company narrative can move\nwithout an engineer in the loop. A **Resend + React Email** capture\nflow collects interested-party leads into Neon Postgres, turning the\nsite from a brochure into a working top-of-funnel instrument for\ninvestor and partner outreach.\n",
+            "businessLogic": "This is founding-team company infrastructure, not a revenue product.\nIts job is fundraising and credibility: a standalone, polished,\nfast-to-update investor-readiness surface that GAVIGO (a Delaware\nC-Corp, NVIDIA Inception + Google for Startups member) can point\ninvestors and partners to, that always reflects the current pitch, and\nthat funnels interest straight to the live IRE demo and into a captured\nlead list. Decoupling it from the product runtime is the strategic\nchoice — the company can iterate its story continuously while the\nlatency-critical IRE platform ships on its own cadence.\n",
+            "technicalApproach": "A Next.js + React + TypeScript site deployed as a container on\n**Google Cloud Run** (europe-west1) — deliberately separate hosting\nfrom the IRE platform. Copy and content run through a\n**Markdown/MDX pipeline** (remark + rehype + gray-matter) so pages are\nfile-editable; **Motion** drives brand animation; **Tailwind CSS**\ncarries the design system. Lead capture is a **Resend + React Email**\nflow persisting to **Neon Postgres via Drizzle ORM**. The build is\nsmall and focused by design — the engineering value is in a clean,\nmaintainable, non-engineer-editable company surface with a real\ncapture backend, shipped and operated solo.\n",
+            "outcomes": "Live in production at gavigo.com on Google Cloud Run, built and\nmaintained entirely by Chan — **66 of 66 commits, the repository's\nsole contributor** — including the investor-readiness polish pass that\nsupported GAVIGO's fundraising and partner conversations. It stands as\nthe company's public front door and the hand-off point into the live\nIRE product demo, decoupled from and shipping independently of the\nproduct runtime.\n",
+            "myRole": "Sole developer and maintainer of the site end-to-end — the Next.js\nbuild, the Markdown/MDX content pipeline, the Motion brand animation,\nthe Resend + Neon lead-capture backend, and the Google Cloud Run\ndeployment — as GAVIGO's founding principal engineer (the same role\nunder which I lead the flagship IRE platform). 66 of 66 commits are\nmine.\n"
+          },
+          "_clientOrg": {
+            "id": "gavigo",
+            "name": "GAVIGO Inc.",
+            "url": "https://gavigo.com"
+          },
+          "_relatedProjectsResolved": [
+            {
+              "id": "gavigo-ire",
+              "name": "GAVIGO IRE",
+              "url": "https://ire.gavigo.com/"
+            }
+          ],
+          "_supersededByProject": null,
+          "_supersedesProjects": []
+        }
+      ],
       "_featuredStackResolved": [
         {
           "name": "kubernetes",
@@ -1387,7 +1646,13 @@
         "name": "GAVIGO Inc.",
         "url": "https://gavigo.com"
       },
-      "_relatedProjectsResolved": [],
+      "_relatedProjectsResolved": [
+        {
+          "id": "gavigo-website",
+          "name": "GAVIGO Website",
+          "url": "https://gavigo.com/"
+        }
+      ],
       "_supersededByProject": null,
       "_supersedesProjects": []
     },
@@ -1586,7 +1851,7 @@
         }
       },
       "lastUpdated": "2026-07-17",
-      "name": "github-readme-suno-cards — Suno Music Cards for GitHub READMEs",
+      "name": "Github README Suno Cards",
       "priority": 5,
       "category": "branding",
       "tagline": "GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 36 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.",
@@ -1771,7 +2036,7 @@
         }
       },
       "lastUpdated": "2026-07-17",
-      "name": "echook (Echo + Hook)",
+      "name": "echook",
       "priority": 6,
       "category": "ai-apps",
       "tagline": "AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry",
@@ -1961,7 +2226,7 @@
       "tier": "primary",
       "recency": "recent",
       "lastUpdated": "2026-07-17",
-      "name": "server-google-jobs",
+      "name": "Google Jobs MCP Server",
       "priority": 8,
       "category": "ai-apps",
       "tagline": "Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs",
@@ -2208,7 +2473,7 @@
         }
       },
       "lastUpdated": "2026-08-05",
-      "name": "gradient-svg-generator (Chromaflow) — Streaming Animated SVG Service for GitHub READMEs",
+      "name": "Chromaflow",
       "priority": 10,
       "category": "creative",
       "tagline": "355 parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name \"Chromaflow\".",
@@ -2470,6 +2735,7 @@
         "impactHeadline": "Bilingual period-poverty advocacy site for a Guangzhou HKUST(GZ)-incubated startup — integrated Google Maps dispenser directory helping end-users locate menstrual-access resources in underserved markets."
       },
       "status": "live",
+      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "nextjs",
@@ -5027,7 +5293,7 @@
           ]
         }
       },
-      "name": "AI Programming Education Platform (programming.chanmeng.org)",
+      "name": "AI Programming Education Platform",
       "priority": 13,
       "category": "ai-apps",
       "tagline": "Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder",
@@ -5536,9 +5802,6 @@
         "outcomes": "Delivered live for the **AI Hackathon Festival 2025** at AUT\nCity Campus WG Building, **15–16 August 2025**. Used by **11\nteams and 80+ participants** during the residential event —\nAI Forum NZ's public LinkedIn cohort announcement (with full\nWestlake Girls High School student attendance) cites Chan as\n**1 of 14 expert mentors**, recognised at the event. The\nteams shipped solutions across the UN SDG brief — food\ninsecurity, digital accessibility, workforce upskilling, and\nindigenous environmental stewardship — with national-tier\nprizes flowing through the AI Forum NZ pipeline (AI Summit\nentry worth $1,499, $1,000 national winner, $5,000 national\nAgentic AI winner, ArcGIS licences). Post-event, the codebase\nwas **refactored into a reusable MIT template** (commit\n`948bdf0` \"transform project into reusable event Q&A\ntemplate\"), documented in `docs/TEMPLATE-SETUP.md`,\n`docs/NOTION-INTEGRATION.md`, and `docs/UI-DESIGN-SYSTEM.md`,\nwith the live deployment retained as the canonical worked\nexample. Listed alongside Chan's other commercial-grade AI\nplatforms (echook, vitex, chinese-redefine,\nai-programming-teaching-project) as portfolio evidence of\nend-to-end industry-partner delivery — design, AI integration,\ngameplay engineering, database, deployment, and post-delivery\nproductisation as a reusable open-source artefact.\n",
         "myRole": "Sole developer end-to-end. Owned the discovery phase with the\nthree co-organising institutions, designed the dual-layer\nproduct (chat surface + gamified mascot + Notion FAQ), built\nevery component, authored both the Gemini and the OpenAI\nprovider implementations, designed the entire ~960-line\naffection / mood / emotion gameplay schema, engineered the\nCSS-3D Quantum Orb visualisation, migrated the deployment\nfrom Vercel to Cloudflare Workers when free-tier economics\nand Notion-SDK incompatibility forced the move, refactored\nthe codebase into a reusable open-source template after the\nlive event, and authored the three setup-documentation files.\nOn the mentorship side: served as one of the 14 expert\nmentors during the 26-hour event itself, guiding teams on\nprompt design, SDG framing, and product narrative —\nsimultaneously building the platform and using it.\n"
       },
-      "_featuredStackResolved": [],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "she-sharp",
         "name": "She Sharp",
@@ -5651,18 +5914,6 @@
         "impactHeadline": "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
       },
       "status": "live",
-      "_featuredStackResolved": [
-        {
-          "name": "mintlify",
-          "src": "/public/tech-logos/mintlify.svg"
-        },
-        {
-          "name": "github",
-          "src": "/public/tech-logos/github.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "she-sharp",
         "name": "She Sharp",
@@ -5821,9 +6072,6 @@
         "outcomes": "Live at **chanmeng.org**, deployed on Cloudflare Pages with\nfull Lighthouse 95+ across metrics. Newsletter system in\nproduction since **April 2026** (`feat: add automated AI\nnewsletter pipeline with ProductHunt + OpenAI`, 2026-04-03);\nupgraded to the multi-stage curation pipeline on\n**2026-05-09** (`feat(newsletter): add multi-stage curation\npipeline with cross-source signals`). Resend custom tracking\ndomain live since 2026-04-25. Weekly delivery cadence is\ncron-enforced and operates fully unattended — no manual\nintervention between Sunday cron fire and Monday morning\nsubscriber inbox. The newsletter is cited on Chan's profile\nas **\"What's Shipping in AI (Weekly AI Digest)\"**, signup at\nchanmeng.org/#newsletter.\n\nA **June 2026 wave** reskinned the entire site to the Caldera\nbrand (light-only), swapped the background for a PixelBlast\nWebGL shader (Three.js + postprocessing), rebranded the\nnewsletter emails to Caldera with copy rewritten for\nnon-technical readers, curated \"Things I've built\" to 12 with\nprogressive disclosure, converted site imagery to WebP, and\nadded the **GEO sidecar layer** (server-rendered structured\ndata, FAQ schema, CV JSON-LD + `llms.txt`) that operationalises\nthe recruiter-LLM sourcing thesis.\n",
         "myRole": "Sole author. Designed the three-system architecture (portfolio\n+ digital twin + newsletter) inside a single Next.js codebase,\nwrote the entire 11-stage pipeline (`scripts/ai-newsletter.ts`\nplus 14 lib modules: fetch-products, fetch-signals,\ncluster-events, extract-trends, find-counterevidence,\ncurate-content, reader-critique, self-edit, quality-score,\nleak-guard, product-buckets, newsletter-memory, image-manager,\nsetup-tracking-domain), built the React Email templates,\nconfigured the GitHub Actions cron, set up Resend custom\ntracking domain + Vercel Blob image hosting, and migrated the\nwhole site to Cloudflare Pages. Maintains the system as both\na publication and a continuous demonstration of agent-pipeline\nengineering.\n"
       },
-      "_featuredStackResolved": [],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -6448,9 +6696,6 @@
         "outcomes": "Live in production at gavigo.com on Google Cloud Run, built and\nmaintained entirely by Chan — **66 of 66 commits, the repository's\nsole contributor** — including the investor-readiness polish pass that\nsupported GAVIGO's fundraising and partner conversations. It stands as\nthe company's public front door and the hand-off point into the live\nIRE product demo, decoupled from and shipping independently of the\nproduct runtime.\n",
         "myRole": "Sole developer and maintainer of the site end-to-end — the Next.js\nbuild, the Markdown/MDX content pipeline, the Motion brand animation,\nthe Resend + Neon lead-capture backend, and the Google Cloud Run\ndeployment — as GAVIGO's founding principal engineer (the same role\nunder which I lead the flagship IRE platform). 66 of 66 commits are\nmine.\n"
       },
-      "_featuredStackResolved": [],
-      "_contextLogo": [],
-      "_affiliationOrg": null,
       "_clientOrg": {
         "id": "gavigo",
         "name": "GAVIGO Inc.",
@@ -12437,8 +12682,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-08-04",
+    "lastModified": "2026-08-05",
     "buildYear": "2026",
-    "buildTimestamp": "2026-08-04T18:25:25.572Z"
+    "buildTimestamp": "2026-08-05T03:08:17.490Z"
   }
 }

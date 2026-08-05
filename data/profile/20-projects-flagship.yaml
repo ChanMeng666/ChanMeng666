@@ -381,16 +381,16 @@ projects:
     logo: /public/brands/she-sharp-mark.svg
     clientOrgId: she-sharp
     relatedWorkId: she-sharp
-    # relatedProjectIds is EMPTY on purpose (2026-08-05, Chan's no-duplicates
-    # rule): a project may appear on the README once. her-waka and
-    # ai-hackathon-assistant both now have their own row (commissioned table and
-    # AI-agents table respectively), so a "↳ Related:" link here would be their
-    # second appearance. The relationships are still declared —
-    # her-waka.relatedProjectIds → she-sharp (the commissioned table renders no
-    # related links, so it is invisible), and both Her Waka and the hackathon
-    # site are in the extraLinks block above, which renders nowhere.
-    # scripts/build.mjs now FAILS the build on any such duplicate.
-    # makey-makey-iot-slides was removed here for the same reason on 2026-07-14.
+    # She Sharp sibling projects, rendered as the small "↳ Related:" line under
+    # this card — their ONLY appearance on the README. Both were briefly given
+    # their own rows earlier on 2026-08-05 (her-waka in the commissioned table,
+    # ai-hackathon-assistant in the AI-agents table); Chan reverted that, because
+    # a sub-project under its parent card reads correctly while a standalone row
+    # reads like independent work.
+    # Only ids that have NO row of their own may sit here — scripts/build.mjs
+    # fails the build otherwise (duplicate display). makey-makey-iot-slides was
+    # removed on 2026-07-14 for exactly that reason.
+    relatedProjectIds: [her-waka, ai-hackathon-assistant]
     entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
     roles: ["Senior Full Stack Engineer", "Website Team Lead", "Solo Architect of New Platform"]
     techStack:
@@ -804,11 +804,10 @@ projects:
     logo: /public/brands/gavigo-mark.svg
     clientOrgId: gavigo
     relatedWorkId: gavigo
-    # No relatedProjectIds → gavigo-website: it has its own row in the
-    # commissioned table, and a "↳ Related:" link here would be a second
-    # appearance (Chan's no-duplicates rule, 2026-08-05). The relationship
-    # lives on gavigo-website.relatedProjectIds → gavigo-ire, where the
-    # commissioned table renders nothing.
+    # GAVIGO's company site — a sub-project of this card, rendered as the small
+    # "↳ Related:" line and appearing nowhere else on the README. It briefly had
+    # its own commissioned-table row earlier on 2026-08-05; Chan reverted that.
+    relatedProjectIds: [gavigo-website]
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
     roles: ["Founding Principal Engineer, Activation, Execution & AI Systems", "Core Engineer (prior)"]
     techStack:

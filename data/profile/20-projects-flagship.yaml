@@ -20,7 +20,9 @@ projects:
     tier: flagship
     recency: active
     lastUpdated: "2026-07-17"
-    name: Tam-AI-Ti (tam-ai-ti-web)
+    # Product name only — "(tam-ai-ti-web)" was the repo slug and read as part
+    # of the name in every rendered surface, including the img alt text.
+    name: Tam-AI-Ti
     meta:
       x_brand:
         featuredStack: [openai, copilotkit, drizzle, neon, nextjs]

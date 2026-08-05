@@ -3,8 +3,8 @@
 This repo is Chan Meng's **career database**. The data source is the shard set
 `data/profile/*.yaml` (merged by `scripts/lib/load-profile.mjs`); everything
 else — README.md, llms.txt, llms-full.txt, dist/profile.json,
-linkedin/linkedin-profile.json + linkedin/*.md — is **generated**. Never edit
-generated files by hand; edit the shard, then build.
+dist/video-data.json, linkedin/linkedin-profile.json + linkedin/*.md — is
+**generated**. Never edit generated files by hand; edit the shard, then build.
 
 ## Edit workflow
 
@@ -16,6 +16,13 @@ npm run check        # validate (schema + linkedin sync) + build + asset audit
 
 - `npm run validate` — schema + cross-surface gates only (fast)
 - `npm run build` — regenerate all outputs
+- `npm run build:video-data` — emit `dist/video-data.json`, the ~25-fact slice
+  the promo film (`../chan-meng-promo-video`) renders from. Part of `build`.
+  Each fact declares a regex over a metric's *prose* and **fails the build when
+  the rule stops matching** — that is the case where a rewritten caveat would
+  silently make a number on screen wrong. Fix the rule or fix the claim; never
+  loosen the regex. Watch for `\b` in a rule touching te reo or 中文: JS word
+  boundaries are ASCII-only, so `Whā\b` never matches.
 - `npm run refresh-metrics` — dry-run GitHub stars/forks/commit-date refresh
   (`--apply` to write); only touches `- { label: "Stars", value: ... }`-style
   lines in the project shards. Also reports repo health (404s, renames,

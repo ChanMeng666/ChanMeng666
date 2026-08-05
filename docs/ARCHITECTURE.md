@@ -99,6 +99,14 @@ cv/chan-meng-cv.typ ──► cv/build.ps1 ──► public/chan-meng-cv.pdf
    - `llms.txt` — short LLM index (Howard's spec).
    - `llms-full.txt` — bundled full-text dump for LLM context-window ingestion.
    - `dist/profile.json` — clean JSON Resume v1.0.0 (strips `meta.x_brand` and the `_*` derived caches). External consumers read this from the raw URL.
+   - `dist/video-data.json` — a ~9KB curated slice for the promo film (see
+     `scripts/build-video-data.mjs`). Unlike the others this is an *extraction
+     with assertions*, not a projection: `metrics[].value` is prose, so each
+     fact declares a regex that pulls the number out **and** asserts the prose
+     still has the shape the claim was written against. A rule that stops
+     matching fails the build — which is exactly the case where someone rewrites
+     a caveat and a number on screen silently becomes wrong. Note this reads the
+     merged shards, not `dist/profile.json`, because it needs `meta.x_brand`.
 
 ## Rendering strategy — full record in, audience-tailored views out
 
@@ -109,6 +117,7 @@ cv/chan-meng-cv.typ ──► cv/build.ps1 ──► public/chan-meng-cv.pdf
 | Typst CV (separate repo, consumes `dist/profile.json`) | One-line bullets from `narrative.outcomes` per project; tech keywords from `techStack`. | Terse |
 | `llms-full.txt` | Full `narrative.*` for every project and role. | Maximal |
 | LinkedIn rebuild (manual) | About section from `basics.summary`; experience from `work[].narrative.*`. | Per-platform limits |
+| Promo film (`chan-meng-promo-video`, consumes `dist/video-data.json`) | ~25 facts as on-screen supers, each carrying its own `path` back into the record. The voice carries meaning; the supers carry numbers. | Extreme — one number per beat |
 
 Templates can shorten or omit. They never add substance.
 

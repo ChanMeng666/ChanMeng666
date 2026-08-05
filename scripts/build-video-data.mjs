@@ -248,6 +248,11 @@ const identity = required({
   tagline: profile.meta?.x_brand?.valueProposition?.tagline,
   availability: profile.meta?.x_brand?.engagementAvailability?.current,
   bookingUrl: profile.meta?.x_brand?.engagementAvailability?.cta?.primary?.url,
+  // The CTA's wording is curated copy, so it comes from the record like the
+  // rest. It also keeps the film's anti-typing gate honest: "Book a 30-min
+  // intro" typed into a scene trips the digit check as an untraced claim, and
+  // the fix for that is to bind it, not to annotate around it.
+  bookingLabel: profile.meta?.x_brand?.engagementAvailability?.cta?.primary?.label,
 });
 
 function required(obj) {

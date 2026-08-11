@@ -13,11 +13,77 @@
 # =============================================================================
 references:
   # Ordered newest-first to match LinkedIn's "Recommendations Received" display order.
-  # Of the 24 entries below, 23 are the complete public set on Chan's LinkedIn profile
-  # (linkedin.com/in/chanmeng666/details/recommendations/) as of 2026-07-17.
+  # Of the 27 entries below, 26 are the complete public set on Chan's LinkedIn profile
+  # (linkedin.com/in/chanmeng666/details/recommendations/) as of 2026-08-11.
   # The remaining 1 (Daryll Hall) is a historical-archive entry preserved from an
   # earlier README snapshot — see its historicalArchive field. (Di Peng, previously
   # archive-only, is live again on the current page.)
+  #
+  # NOTE: the single README pull-quote is NOT simply the first featured entry — it
+  # is pinned by meta.x_brand.readmePullQuoteId in 90-meta.yaml, so this file can
+  # stay strictly newest-first without churning the README on every new arrival.
+
+  - name: Kwame Essuman
+    id: kwame-essuman
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-08-11"
+    reference: |-
+      I had the privilege of being taught and mentored by Chan during the TechNest AI Cohort 3 program. What sets Chan apart is her genuine commitment to her students, she consistently made time for everyone to ensure no one was left behind.
+
+      Chan has a rare talent for making complex AI concepts accessible and intuitive. Her sessions were exceptionally hands-on, allowing us to immediately apply theoretical knowledge to real-world problems. I’m deeply grateful for her guidance and support, and I highly recommend her as a top-tier AI instructor and mentor.
+    meta:
+      x_brand:
+        relationship: Data & Full-Stack AI Engineer (production RAG systems, agentic workflows, requirements engineering & CX); taught and mentored by Chan in TechNest AI Cohort 3
+        linkedinRelationship: Reported to Chan directly
+        givenAt: "2026-08-10"
+        linkedinUrl: https://www.linkedin.com/in/kwameessuman/
+        image: /public/recommendations/Kwame-Essuman.jpg
+
+  - name: Suliat Alaga
+    id: suliat-alaga
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-08-11"
+    reference: |-
+      I had the pleasure of working with Chan Meng as an AI Instructor during the TechNest Community Cohort 3 Mentorship Program, and it was an exceptional experience.
+
+      Chan is not only highly knowledgeable in Artificial Intelligence and Machine Learning but also has a remarkable ability to make complex concepts easy to understand. Her teaching is structured, engaging, and practical, creating an environment where learners feel comfortable asking questions, experimenting, and growing.
+
+      What stood out most was her genuine commitment to her students' success. She paid close attention to their progress, encouraged continuous learning, and consistently went the extra mile to ensure everyone understood the concepts being taught. The feedback from our mentees was overwhelmingly positive, with many highlighting how much confidence and clarity they gained through her sessions.
+
+      Beyond her technical expertise, Chan is approachable, patient, and generous with her knowledge. She is the kind of educator and mentor who leaves a lasting impact on those she teaches.
+
+      I wholeheartedly recommend Chan to any organization or community looking for an outstanding AI educator, mentor, or technical trainer. It was a privilege to have her on the TechNest mentorship team, and I look forward to collaborating with her again in the future.
+    meta:
+      x_brand:
+        relationship: Senior Frontend Engineer (React.js / Next.js / TypeScript; scalable fintech & enterprise banking platforms) and TechNest Co-Founder & Mentor; served alongside Chan on the TechNest Cohort 3 mentorship team
+        linkedinRelationship: Worked with Chan on the same team
+        givenAt: "2026-08-06"
+        linkedinUrl: https://www.linkedin.com/in/suliat-titilope-alaga/
+        image: /public/recommendations/Suliat-Alaga.jpg
+        featured: true
+
+  - name: Abiodun (Magret) Oyedele
+    id: abiodun-magret-oyedele
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-08-11"
+    reference: |-
+      I am grateful to have learned from Chan Meng during the TechNest Cohort 3 Artificial Intelligence course.
+
+      Chan is not only knowledgeable but also very intentional in how she teaches. She makes complex AI concepts feel more approachable. Her teaching style is clear, encouraging, and easy to learn from.
+
+      What stood out to me most was how supportive she was throughout the program. I felt comfortable asking questions, and she always took the time to share useful feedback, recommend helpful tools, and guide us on how to improve our projects beyond simply completing the course.
+
+      Chan is a great instructor and mentor, and I truly appreciate the impact she made during my AI learning journey.
+    meta:
+      x_brand:
+        relationship: Full Stack Developer (React, Next.js, Node.js, Express, Nest.js, Flask, PostgreSQL, MongoDB); TechNest Community leadership — one of the two leads Chan reported to as AI Track instructor (see work[id=technest]) — who also took the Cohort 3 Artificial Intelligence course herself
+        linkedinRelationship: Worked with Chan on the same team
+        givenAt: "2026-08-04"
+        linkedinUrl: https://www.linkedin.com/in/oyedele-abiodun/
+        image: /public/recommendations/Abiodun-Oyedele.jpg
 
   - name: Ikenna Anasieze
     id: ikenna-anasieze

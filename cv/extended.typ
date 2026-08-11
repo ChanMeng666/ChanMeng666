@@ -342,7 +342,7 @@
   pagebreak()
 }
 // ── pp13–14: Chapter 5 — Voices ──────────────────────────────────────────────
-// ALL 24 recommenders appear (avatar wall = exactly 24, incl. historical-archive
+// ALL 27 recommenders appear (avatar wall = exactly 27, incl. historical-archive
 // Daryll Hall — controller ruling). Extensions are the ON-DISK truth, not the
 // brief draft: Gabby/Mi Su/Shushu/Patricia are .jpeg (not .jpg), and Amy-Li's
 // avatar is the repo-local rec-amy-li.png — public/recommendations/Amy-Li.jpg is
@@ -350,6 +350,9 @@
 // the shared asset is left untouched, a correctly-named copy lives beside this
 // book (cv/assets/extended/rec-amy-li.png). Order mirrors 50-references.yaml.
 #let voices-people = (
+  ("/public/recommendations/Kwame-Essuman.jpg", "Kwame"),
+  ("/public/recommendations/Suliat-Alaga.jpg", "Suliat"),
+  ("/public/recommendations/Abiodun-Oyedele.jpg", "Abiodun"),
   ("/public/recommendations/Ikenna-Anasieze.png", "Ikenna"),
   ("/public/recommendations/Swayam-Dhir.jpg", "Swayam"),
   ("/public/recommendations/Mahdieh-Najmi.jpg", "Mahdieh"),
@@ -377,11 +380,17 @@
 )
 #let x-voices() = {
   chapter-opener("5", "Voices",
-    kicker: [Twenty-four people who've worked with me — every one of them, in their own words.])
-  // Enlarged 6-across wall (24 = 6×4), centered below the opener so it fills the
-  // page rather than sitting as a small band at the top.
+    kicker: [Twenty-seven people who've worked with me — every one of them, in their own words.])
+  // Enlarged 6-across wall, centered below the opener so it fills the page rather
+  // than sitting as a small band at the top. 27 no longer divides by 6, so the
+  // first 24 render as the 6×4 block and the remaining 3 as a centred final row —
+  // a plain 27-cell grid would left-align that row and leave a hole on the right.
   v(1fr)
-  avatar-wall(voices-people, cols: 6, size: 66pt, row-gutter: 26pt, col-gutter: 12pt, cap-size: 9pt)
+  avatar-wall(voices-people.slice(0, 24), cols: 6, size: 66pt, row-gutter: 26pt, col-gutter: 12pt, cap-size: 9pt)
+  v(26pt)
+  // 3 * 66pt avatars + 2 * 12pt gutters = 222pt.
+  align(center, box(width: 222pt,
+    avatar-wall(voices-people.slice(24), cols: 3, size: 66pt, row-gutter: 26pt, col-gutter: 12pt, cap-size: 9pt)))
   v(1fr)
   pagebreak()
   // p14 — two featured quotes, each with the speaker's avatar in the byline and
@@ -402,7 +411,7 @@
   block(above: 0pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)
     text(size: size-tiny-x, fill: muted, style: "italic")[
-      All 24 recommendations in full: #link("https://www.linkedin.com/in/chanmeng666/")[linkedin.com/in/chanmeng666].
+      All 26 public recommendations in full: #link("https://www.linkedin.com/in/chanmeng666/")[linkedin.com/in/chanmeng666].
     ]
   })
   v(0.4fr)

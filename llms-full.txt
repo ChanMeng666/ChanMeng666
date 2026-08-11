@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 480+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-08-05
+**Last updated:** 2026-08-11
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -86,6 +86,7 @@ thought."
 - **RCSA Australia and New Zealand** (partner) -- Industry insights partner — Her Waka 2026. URL: https://www.rcsa.com.au.
 - **Auckland University of Technology** (partner) -- Co-organiser — AI Hackathon Festival 2025. URL: https://www.aut.ac.nz.
 - **AI Forum New Zealand** (partner) -- Co-organiser — AI Hackathon Festival 2025. URL: https://aiforum.org.nz.
+- **My Life My Voice** (partner) -- Set the 'Accessible UI Generation for Developers' challenge at the Aotearoa AI Hackathon Festival 2026; Chan handed them a11y-loop unsolicited on 2026-08-11 — outreach sent, unreciprocated at time of writing, NOT a partnership. URL: https://www.mylifemyvoice.org.nz. Related project: a11y-loop.
 - **UN Women** (partner) -- CSW 69 speaker — UN HQ NYC, Mar 14 2025. URL: https://www.unwomen.org.
 - **United Nations Headquarters** (partner) -- Beyond Beijing 30 Conference speaker (CSW 69). URL: https://www.un.org.
 - **Westlake Girls High School** (partner) -- Mentee school — AI Hackathon Festival 2025. URL: https://www.westlakegirls.school.nz.
@@ -900,6 +901,22 @@ demo video. Counts are point-in-time: the `/capstone-showcase`
 page is a deliberately temporary cohort artefact and its Notion
 database, not the page, is the durable record.
 
+**Independently attested by both sides of the programme.** Five of
+the 26 public LinkedIn recommendations on Chan's profile come from
+the TechNest AI cohorts — and they run in both directions of the
+reporting line. TechNest leadership vouched for the teaching:
+co-founder and fellow mentor **Suliat Alaga** ("the feedback from
+our mentees was overwhelmingly positive… an outstanding AI
+educator, mentor, or technical trainer", Aug 2026) and **Abiodun
+(Magret) Oyedele**, one of the two TechNest leads Chan reports to,
+who took the Cohort 3 course herself. Learners attested to the
+same thing independently: **Kwame Essuman** ("she consistently
+made time for everyone to ensure no one was left behind… a
+top-tier AI instructor and mentor"), **Swayam Dhir**, and
+**Mahdieh Najmi**. This is the second-largest source of
+independently-attested teaching impact in Chan's career after
+Forward with Her (7 recommendations).
+
 **Assessment rhythm baked into the doctrine.** Weekly assignments
 carry 50% weight and require students to submit both (a) the
 updated live site URL and (b) a screenshot of the Cursor /
@@ -1328,7 +1345,7 @@ pipeline that Bubble fundamentally couldn't support.
 - **Location:** China (remote, online cohort delivery)
 - **URL:** https://www.linkedin.com/company/taxing-mentorship/
 
-**Impact:** Mentored inside a 360-mentor / 800-mentee STEM programme — 7 of Chan's 23 public LinkedIn recommendations come from this cohort. The AI-teaching platform Chan first built for these mentees now hosts 4 coexisting cohorts including TechNest 2026.
+**Impact:** Mentored inside a 360-mentor / 800-mentee STEM programme — 7 of Chan's 26 public LinkedIn recommendations come from this cohort. The AI-teaching platform Chan first built for these mentees now hosts 4 coexisting cohorts including TechNest 2026.
 
 **Company context:** **Forward with Her (她行 / "Forward with Her Mentorship")** is a
 China-rooted, internationally-reaching women-in-STEM mentorship
@@ -1362,7 +1379,7 @@ transitions; and ongoing availability as a long-term contact
 for mentees beyond the formal programme cycle.
 
 **Impact delivered:** **The mentorship engagement is the umbrella under which seven
-of the twenty-three public LinkedIn recommendations on Chan's
+of the twenty-six public LinkedIn recommendations on Chan's
 profile were given** — making Forward with Her the
 single-largest source of independently-attested mentorship
 impact across Chan's career to date. Mentees who gave
@@ -2568,7 +2585,7 @@ Capstone classroom infrastructure. A Cloudflare Worker proxies writes into Notio
 
 **My role:** I built and run the entire platform end-to-end: Docusaurus configuration, the versioned-docs taxonomy across five cohorts, every cohort's curriculum content, the Cloudflare Worker RAG backend (worker entry, chat handler, RAG module, Vectorize seeding, KV session store), the BGE-Base embeddings ingestion pipeline, the Typst PDF handout build, the Mermaid dual-view component, the Notion-Worker proxy and Demo Day showcase for Capstone voting, the Algolia contextual-search configuration, and the bilingual i18n across every surface. I migrated production from Vercel to Cloudflare Pages in 2026-04, and in 2026-07 hardened the chat backend (custom domain, rate limiting, CORS allow-list, WAF) and restored it onto Cloudflare's current model after the old one was deprecated. I continue to ship the current cohort's recordings and lab content each week.
 ### a11y-loop — A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then proves what it can prove with a real Playwright + axe-core browser audit across the states the agent built — and states plainly what it could not check
-[tier=primary · recency=active · updated=2026-08-05]
+[tier=primary · recency=active · updated=2026-08-11]
 - **Repository:** https://github.com/ChanMeng666/a11y-loop
 - **Tech stack:** Claude Code Skill (Agent Skills open standard), Node.js >= 20, Playwright, axe-core 4.12, WCAG 2.2 AA, JavaScript, GitHub Actions CI
 
@@ -2604,6 +2621,31 @@ up the same defaults. The verification half drives Playwright over
 the built states and runs axe-core 4.12 against WCAG 2.2 AA, then
 partitions the result into checked, failed, and — the part most
 tools omit — not checkable by automation.
+
+**Outcomes:** Built 26 Jul – 1 Aug 2026 and published to npm (v0.2.4, 31 Jul) —
+dates verifiable from the repo's own commit history, and both *before*
+the **Aotearoa AI Hackathon Festival 2026** (7–8 Aug, AUT City Campus),
+where **My Life My Voice**, a disability-led NZ organisation, had set
+*Accessible UI Generation for Developers* as a problem statement
+arguing that the bottleneck is workflow rather than developer intent.
+Chan mentored at that festival. With the competition closed, nothing
+being scored and no prize at stake, she handed the finished project to
+the organisation that had raised the problem: contact-form submission
+and an email to `info@mylifemyvoice.org.nz` on **2026-08-11**, offering
+the MIT licence at no cost, a free walkthrough for their team or the
+providers they work with, and a roadmap open to feedback from disabled
+testers — plus a public LinkedIn post crediting them the same day.
+All three carried the project's own §3 honesty rules rather than
+suspending them for outreach: no compliance claim anywhere, coverage
+cited with its denominator (17 of the 55 WCAG 2.2 A/AA success criteria
+have any automated rule at all), and an explicit statement that
+automation does not replace testing with disabled people. The
+README's most flattering number — the 35 → 1 → 0 benchmark — was
+deliberately left out of all three, because N=6, single-run and
+self-audited cannot be caveated properly in an email or a social post;
+the fully reproducible 163 → 0 demo was used instead.
+**Unreciprocated at the time of writing** — this is a record of
+outreach, not of adoption, endorsement or partnership.
 
 **My role:** Sole author. Published to npm as `a11y-loop`; the repo is written
 agent-first, with an AGENTS.md alongside the README so an agent can
@@ -3513,7 +3555,7 @@ accessibility, workforce upskilling, and indigenous environmental
 stewardship. Received the Outstanding Mentor Award (recorded in `awards[]`);
 the event's AI Q&A assistant is the `ai-hackathon-assistant` project.
 ### Aotearoa AI Hackathon Festival 2026 — Mentor
-[tier=flagship · recency=active · updated=2026-08-04]
+[tier=flagship · recency=recent · updated=2026-08-11]
 - **Type:** hackathon
 - **Date:** Aug 2026 -- Aug 2026
 - **Location:** AUT City Campus, Auckland, New Zealand
@@ -3528,6 +3570,21 @@ alongside mentors from AUT, Fisher & Paykel Healthcare, Southern Cross and
 Possibl.ai. Teams build against five real-world SDG themes and pitch to a
 judging panel. The festival's voice-first event assistant is
 `ai-hackathon-assistant`, relaunched for 2026.
+
+A second thread outlived the festival. One of the problem statements —
+**Accessible UI Generation for Developers** — was set by **My Life My
+Voice**, a disability-led NZ organisation whose *AI For People* programme
+argues for AI built to work for disabled people rather than the reverse.
+Its brief names the same bottleneck the `a11y-loop` project attacks:
+accessibility as a manual, late audit sitting outside the tools developers
+use, auditing what is already broken instead of preventing it. With the
+competition closed and nothing being scored, Chan sent that finished,
+MIT-licensed project to the organisation unsolicited on **2026-08-11** —
+contact form plus an email to `info@mylifemyvoice.org.nz`, offering a free
+walkthrough and a roadmap open to feedback from disabled testers — and
+published a LinkedIn post crediting them the same day. Recorded as
+outreach, **not** adoption: see `projects[a11y-loop].narrative.outcomes`
+and the `my-life-my-voice` organisation entry.
 ### Her Waka — AI × Career Empowerment In-Person Workshops — Curriculum Author, Panelist & Technical Mentor
 [tier=primary · recency=recent · updated=2026-08-05]
 - **Type:** workshop
@@ -4015,6 +4072,37 @@ intentional removal as the primary design move.
 
 ## Testimonials
 
+### Kwame Essuman (Data & Full-Stack AI Engineer (production RAG systems, agentic workflows, requirements engineering & CX); taught and mentored by Chan in TechNest AI Cohort 3)
+[tier=secondary · recency=recent · updated=2026-08-11]
+LinkedIn: https://www.linkedin.com/in/kwameessuman/
+> I had the privilege of being taught and mentored by Chan during the TechNest AI Cohort 3 program. What sets Chan apart is her genuine commitment to her students, she consistently made time for everyone to ensure no one was left behind.
+
+Chan has a rare talent for making complex AI concepts accessible and intuitive. Her sessions were exceptionally hands-on, allowing us to immediately apply theoretical knowledge to real-world problems. I’m deeply grateful for her guidance and support, and I highly recommend her as a top-tier AI instructor and mentor.
+
+### Suliat Alaga (Senior Frontend Engineer (React.js / Next.js / TypeScript; scalable fintech & enterprise banking platforms) and TechNest Co-Founder & Mentor; served alongside Chan on the TechNest Cohort 3 mentorship team)
+[tier=primary · recency=recent · updated=2026-08-11]
+LinkedIn: https://www.linkedin.com/in/suliat-titilope-alaga/
+> I had the pleasure of working with Chan Meng as an AI Instructor during the TechNest Community Cohort 3 Mentorship Program, and it was an exceptional experience.
+
+Chan is not only highly knowledgeable in Artificial Intelligence and Machine Learning but also has a remarkable ability to make complex concepts easy to understand. Her teaching is structured, engaging, and practical, creating an environment where learners feel comfortable asking questions, experimenting, and growing.
+
+What stood out most was her genuine commitment to her students' success. She paid close attention to their progress, encouraged continuous learning, and consistently went the extra mile to ensure everyone understood the concepts being taught. The feedback from our mentees was overwhelmingly positive, with many highlighting how much confidence and clarity they gained through her sessions.
+
+Beyond her technical expertise, Chan is approachable, patient, and generous with her knowledge. She is the kind of educator and mentor who leaves a lasting impact on those she teaches.
+
+I wholeheartedly recommend Chan to any organization or community looking for an outstanding AI educator, mentor, or technical trainer. It was a privilege to have her on the TechNest mentorship team, and I look forward to collaborating with her again in the future.
+
+### Abiodun (Magret) Oyedele (Full Stack Developer (React, Next.js, Node.js, Express, Nest.js, Flask, PostgreSQL, MongoDB); TechNest Community leadership — one of the two leads Chan reported to as AI Track instructor (see work[id=technest]) — who also took the Cohort 3 Artificial Intelligence course herself)
+[tier=secondary · recency=recent · updated=2026-08-11]
+LinkedIn: https://www.linkedin.com/in/oyedele-abiodun/
+> I am grateful to have learned from Chan Meng during the TechNest Cohort 3 Artificial Intelligence course.
+
+Chan is not only knowledgeable but also very intentional in how she teaches. She makes complex AI concepts feel more approachable. Her teaching style is clear, encouraging, and easy to learn from.
+
+What stood out to me most was how supportive she was throughout the program. I felt comfortable asking questions, and she always took the time to share useful feedback, recommend helpful tools, and guide us on how to improve our projects beyond simply completing the course.
+
+Chan is a great instructor and mentor, and I truly appreciate the impact she made during my AI learning journey.
+
 ### Ikenna Anasieze (AI Cloud Engineer / AWS AI Engineer / AI Platform Engineer (highly-available, scalable AI infrastructure & cloud-native systems); reported to Chan directly)
 [tier=secondary · recency=recent · updated=2026-07-17]
 LinkedIn: https://www.linkedin.com/in/ikenna-anasieze/
@@ -4416,9 +4504,9 @@ Sanicle Director of Program Operations 2020–2024; Chan's colleague during her 
 - **CORDE direct reports-to Barry Clark personally identifiable at https://www.linkedin.com/in/barry-clark-b92644/ — CORDE-side business sponsor of the Lincoln University COMP693 industry-placement engagement (Jun-Nov 2024) and the weekly demo-cadence recipient over the five-month delivery** (source: https://www.linkedin.com/company/corde-ltd/, verified 2026-05-16)
 - **CORDE Workbench API specification author Kullum Ladley personally identifiable at https://www.linkedin.com/in/kullum-ladley-4496b316a/ — CORDE's technical liaison on the engagement; the same Kullum named in every API document filename prefix `YYYYMMDD_Kullum_...` in the 15-document API specification set captured under version control in the team-corde documentation repository** (source: https://www.linkedin.com/in/kullum-ladley-4496b316a/, verified 2026-05-16)
 - **CORDE student teammate Luke Shi (Zhenzhou Shi) personally identifiable at https://www.linkedin.com/in/zhenzhou-shi/ — the gentoo111 GitHub handle that owns the upstream CORDE-Mobile-Application repository; 28.6% of the 539-commit codebase (vs my 42%), the second-prolific contributor** (source: https://www.linkedin.com/in/zhenzhou-shi/, verified 2026-05-16)
-- **18 LinkedIn Recommendations Received on Chan's public LinkedIn profile (linkedin.com/in/chanmeng666/details/recommendations/) spanning Nov 2024 – May 2026, from a representative mix of founders, senior managers, peers, academic supervisor, big-tech mentor, and mentees: GAVIGO founder/CEO Saba Gecgil (managed Chan directly during the GAVIGO engagement); Sanicle managers Paige Afanu (Omopeju) and Chaste Christopher Inegbedion; Sanicle peer Gabrielle J. Hurst; AWS SheBuilds mentor Cecilia Yin (AWS Solutions Architect); Lincoln University Associate Professor Patricia Anthony (Chan's teacher during the Master of Applied Computing with Distinction); She Sharp Ambassadors and website-team collaborators Prasanth Pavithran (MBA; She Sharp Ambassador / AI Evangelist), Lesley Gao (Product Designer / Web Developer), Nirmala Chinnappan (Project Coordinator at AUT; Master of IT Project Management), and Yesha Kaniyawala (AI Engineer at Possibl.ai); Forward with Her 她行 mentees Siyu Xing (PhD candidate at University of Chinese Academy of Sciences) and Amy Li; cross-org collaborators Jixuan Jessie Wan (Deloitte) and Qiao Jun (Tsinghua University); and mentees Mi Su, Shushu Qin, Yijia (Robin) Lee, and Shiyu Fang** (source: https://www.linkedin.com/in/chanmeng666/details/recommendations/, verified 2026-05-30)
+- **26 LinkedIn Recommendations Received on Chan's public LinkedIn profile (linkedin.com/in/chanmeng666/details/recommendations/) spanning Nov 2024 – Aug 2026, from a representative mix of founders, senior managers, peers, academic supervisor, big-tech mentor, co-founders of a teaching community, and mentees: GAVIGO founder/CEO Saba Gecgil (managed Chan directly during the GAVIGO engagement); Sanicle managers Paige Afanu (Omopeju) and Chaste Christopher Inegbedion; Sanicle peer Gabrielle J. Hurst; AWS SheBuilds mentor Cecilia Yin (AWS Solutions Architect); Lincoln University Associate Professor Patricia Anthony (Chan's teacher during the Master of Applied Computing with Distinction); She Sharp Ambassadors and website-team collaborators Prasanth Pavithran (MBA; She Sharp Ambassador / AI Evangelist), Lesley Gao (Product Designer / Web Developer), Nirmala Chinnappan (Project Coordinator at AUT; Master of IT Project Management), and Yesha Kaniyawala (AI Engineer at Possibl.ai); TechNest Community leadership — co-founder and fellow mentor Suliat Alaga (Senior Frontend Engineer) and Abiodun (Magret) Oyedele (Full Stack Developer), one of the two TechNest leads Chan reported to as AI Track instructor — plus TechNest AI-cohort learners Kwame Essuman (Data & Full-Stack AI Engineer), Swayam Dhir (Software Developer), and Mahdieh Najmi (System Analyst / Full-Stack Developer); Forward with Her 她行 mentees Siyu Xing (PhD candidate at University of Chinese Academy of Sciences), Amy Li, and Di Peng (ShanghaiTech); cross-org collaborators Jixuan Jessie Wan (Deloitte) and Qiao Jun (Tsinghua University); AI cloud engineer Ikenna Anasieze; infrastructure engineer Shivani Dhandabani; and mentees Mi Su, Shushu Qin, Yijia (Robin) Lee, and Shiyu Fang** (source: https://www.linkedin.com/in/chanmeng666/details/recommendations/, verified 2026-08-11)
 - **Paige Afanu (Omopeju Afanu, LinkedIn handle peju-afanu-7b9367110) was the Chief Executive Officer of Sanicle during Chan's CTO tenure (Mar 2025 – Feb 2026); attribution verified from this repository's own historical README snapshot at git commit d01e0f7129ada279bd2ffa17f8cf45b07cfc85f8 (Apr 14 2026) which renders 'Omopeju Afanu | Sanicle | Chief Executive Officer' as the explicit relationship label** (source: https://github.com/ChanMeng666/ChanMeng666/blob/d01e0f7129ada279bd2ffa17f8cf45b07cfc85f8/README.md, verified 2026-05-17)
-- **Forward with Her (她行) Mentorship — a 360+-mentor, 800+-mentee women-in-STEM programme operating under the LinkedIn corporate brand `taxing-mentorship` — was the umbrella under which Chan served as Technology & Professional Development Mentor from October 2024 through September 2025; seven of the twenty-three public LinkedIn recommendations on Chan's profile come from mentees who specifically credit Forward with Her sessions (Siyu Xing at UCAS, Amy Li at China West Normal, Di Peng at ShanghaiTech, Mi Su at Guangxi University, Shushu Qin at Laurentian University, Yijia Robin Lee at Tianjin Normal, and Shiyu Fang at GDS Communication), making it the single-largest source of independently-attested mentorship impact in Chan's career to date** (source: https://www.linkedin.com/company/taxing-mentorship/, verified 2026-07-17)
+- **Forward with Her (她行) Mentorship — a 360+-mentor, 800+-mentee women-in-STEM programme operating under the LinkedIn corporate brand `taxing-mentorship` — was the umbrella under which Chan served as Technology & Professional Development Mentor from October 2024 through September 2025; seven of the twenty-six public LinkedIn recommendations on Chan's profile come from mentees who specifically credit Forward with Her sessions (Siyu Xing at UCAS, Amy Li at China West Normal, Di Peng at ShanghaiTech, Mi Su at Guangxi University, Shushu Qin at Laurentian University, Yijia Robin Lee at Tianjin Normal, and Shiyu Fang at GDS Communication), making it the single-largest source of independently-attested mentorship impact in Chan's career to date** (source: https://www.linkedin.com/company/taxing-mentorship/, verified 2026-07-17)
 - **Recognised as one of 14 expert mentors at the AI Hackathon Festival 2025 (co-organised by AI Forum NZ, She Sharp, and Auckland University of Technology, August 2025), guiding 11 teams comprising 80+ participants — including students from Westlake Girls High School — to ship AI-powered solutions aligned with UN Sustainable Development Goals across food insecurity, digital accessibility, workforce upskilling, and indigenous environmental stewardship** (source: https://www.linkedin.com/in/chanmeng666/details/honors/, verified 2026-05-17)
 - **UN CSW 69 Speaker (March 14, 2025, UN Headquarters New York, Beyond Beijing 30 Conference) — presented Sanicle AI to international delegates including IBM representatives who expressed interest in pilot collaboration and the Minister of Gender and Children's Affairs from Sierra Leone, who praised the platform as the first comprehensive solution connecting menstrual cycle data to actionable workplace policies through AI analysis; the presentation generated multiple follow-up collaboration requests from NGOs and UN member states** (source: https://chanmeng.org/blog/from-code-to-care-un, verified 2026-05-17)
 - **Contributor to wshobson/agents (Claude Code Plugins) — the canonical community collection of 99 specialized AI agents, 67 focused plugins, 107 agent skills, and 15 workflow orchestrators distributed through the Claude Code marketplace and Smithery namespace; merged PR #62 from ChanMeng666** (source: https://github.com/wshobson/agents/pull/62, verified 2026-05-17)

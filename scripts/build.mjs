@@ -438,10 +438,23 @@ data._writingFeatured = featuredArticleIds.map((id) => ({ ...bySlug.get(id), slu
 data._writingAll = [...articles].sort((a, b) => (b.releaseDate ?? "").localeCompare(a.releaseDate ?? ""));
 data._writingIndexUrl = "https://chanmeng.org/blog";
 
-// Featured testimonials (3 visible, rest in collapsible)
+// Featured testimonials. recognition.hbs renders only the FIRST of these, and
+// references[] is kept newest-first, so the README quote is pinned explicitly by
+// meta.x_brand.readmePullQuoteId rather than left to arrival order.
 data._featuredReferences = (data.references ?? []).filter(
   (r) => r.meta?.x_brand?.featured,
 );
+const pullQuoteId = data.meta?.x_brand?.readmePullQuoteId;
+if (pullQuoteId) {
+  const pinned = data._featuredReferences.findIndex((r) => r.id === pullQuoteId);
+  if (pinned === -1) {
+    console.error(
+      `✗ meta.x_brand.readmePullQuoteId "${pullQuoteId}" does not match any references[].id carrying meta.x_brand.featured: true`,
+    );
+    process.exit(1);
+  }
+  data._featuredReferences.unshift(...data._featuredReferences.splice(pinned, 1));
+}
 data._otherReferences = (data.references ?? []).filter(
   (r) => !r.meta?.x_brand?.featured,
 );

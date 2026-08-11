@@ -80,7 +80,7 @@ hand-typed facts on a review cadence:
 | `25-contributions.yaml` | openSourceContributions | 23 | `id` |
 | `30-recognition.yaml` | awards, certificates, publications | 6 + 53 + 55 | `title`+`awarder` / `name` |
 | `40-skills.yaml` | skills, domains, languages, interests | — | `name` |
-| `50-references.yaml` | references | 20 | `id` |
+| `50-references.yaml` | references | 27 | `id` |
 | `60-network.yaml` | organizations, collaborators | 30 + 10 | `id` |
 | `70-linkedin.yaml` | linkedin | curated live-page snapshot | — |
 | `80-events.yaml` | events (offline talks/hackathons/workshops/appearances) | 5 | `id` |

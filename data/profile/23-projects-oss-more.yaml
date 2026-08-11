@@ -2864,7 +2864,7 @@ projects:
     provenance: personal
     tier: primary
     recency: active
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-08-11"
     name: a11y-loop
     priority: 104
     category: ai-apps
@@ -2921,6 +2921,31 @@ projects:
         the built states and runs axe-core 4.12 against WCAG 2.2 AA, then
         partitions the result into checked, failed, and — the part most
         tools omit — not checkable by automation.
+      outcomes: |
+        Built 26 Jul – 1 Aug 2026 and published to npm (v0.2.4, 31 Jul) —
+        dates verifiable from the repo's own commit history, and both *before*
+        the **Aotearoa AI Hackathon Festival 2026** (7–8 Aug, AUT City Campus),
+        where **My Life My Voice**, a disability-led NZ organisation, had set
+        *Accessible UI Generation for Developers* as a problem statement
+        arguing that the bottleneck is workflow rather than developer intent.
+        Chan mentored at that festival. With the competition closed, nothing
+        being scored and no prize at stake, she handed the finished project to
+        the organisation that had raised the problem: contact-form submission
+        and an email to `info@mylifemyvoice.org.nz` on **2026-08-11**, offering
+        the MIT licence at no cost, a free walkthrough for their team or the
+        providers they work with, and a roadmap open to feedback from disabled
+        testers — plus a public LinkedIn post crediting them the same day.
+        All three carried the project's own §3 honesty rules rather than
+        suspending them for outreach: no compliance claim anywhere, coverage
+        cited with its denominator (17 of the 55 WCAG 2.2 A/AA success criteria
+        have any automated rule at all), and an explicit statement that
+        automation does not replace testing with disabled people. The
+        README's most flattering number — the 35 → 1 → 0 benchmark — was
+        deliberately left out of all three, because N=6, single-run and
+        self-audited cannot be caveated properly in an email or a social post;
+        the fully reproducible 163 → 0 demo was used instead.
+        **Unreciprocated at the time of writing** — this is a record of
+        outreach, not of adoption, endorsement or partnership.
       myRole: |
         Sole author. Published to npm as `a11y-loop`; the repo is written
         agent-first, with an AGENTS.md alongside the README so an agent can

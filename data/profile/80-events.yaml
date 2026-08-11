@@ -86,8 +86,9 @@ events:
     organizer: "AUT × She Sharp × AI Forum NZ × Fisher & Paykel Healthcare"
     url: "https://www.shesharp.org.nz/events/aotearoa-ai-hackathon-festival-2026"
     tier: flagship
-    recency: active
-    lastUpdated: "2026-08-04"
+    # Ran 2026-08-07/08; flipped active → recent once the festival concluded.
+    recency: recent
+    lastUpdated: "2026-08-11"
     keywords:
       - hackathon
       - mentorship
@@ -103,6 +104,21 @@ events:
       Possibl.ai. Teams build against five real-world SDG themes and pitch to a
       judging panel. The festival's voice-first event assistant is
       `ai-hackathon-assistant`, relaunched for 2026.
+
+      A second thread outlived the festival. One of the problem statements —
+      **Accessible UI Generation for Developers** — was set by **My Life My
+      Voice**, a disability-led NZ organisation whose *AI For People* programme
+      argues for AI built to work for disabled people rather than the reverse.
+      Its brief names the same bottleneck the `a11y-loop` project attacks:
+      accessibility as a manual, late audit sitting outside the tools developers
+      use, auditing what is already broken instead of preventing it. With the
+      competition closed and nothing being scored, Chan sent that finished,
+      MIT-licensed project to the organisation unsolicited on **2026-08-11** —
+      contact form plus an email to `info@mylifemyvoice.org.nz`, offering a free
+      walkthrough and a roadmap open to feedback from disabled testers — and
+      published a LinkedIn post crediting them the same day. Recorded as
+      outreach, **not** adoption: see `projects[a11y-loop].narrative.outcomes`
+      and the `my-life-my-voice` organisation entry.
 
   - id: her-waka-workshops-2026
     name: "Her Waka — AI × Career Empowerment In-Person Workshops"

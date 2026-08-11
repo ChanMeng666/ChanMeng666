@@ -30,7 +30,7 @@ linkedin:
       skills: Flat list mirroring the live Skills 'All' view (order preserved). Each skill records its associated experiences/projects/certificates and any endorsement signals. LinkedIn groups skills under the tabs in skills.categories, but the 'All' view does not expose which tab each skill belongs to, so per-skill category is not recorded.
       honorsAndAwards: 'Six entries in live display order (newest first), captured verbatim from the live profile (all six now live, UN CSW 69 Speaker included). FemTech Weekend and FemTech China are DISTINCT organisations: the Excellence Award (Dec 2024) is issued by FemTech China; the UN Women FemTech Hackathon Outstanding Performer award (Mar 2025) is from FemTech Weekend. All ''issuer'' and ''associatedWith'' values are taken exactly as shown on the live page.'
       publications: Mirrors the live Publications section (11 entries, newest first, with the dates LinkedIn displays). Chan's LinkedIn Pulse technical articles are NOT on the live page and are omitted here — they now live at chanmeng.org/blog and are catalogued in 30-recognition.yaml. The LinkedIn Newsletter entry was retired 2026-07-21; the remaining newsletter entry is Chan's own "What's Shipping in AI" at chanmeng.org/#newsletter, which is a different publication.
-      recommendations: Received recommendations only (23), newest first, captured verbatim including bilingual (Chinese + English) text where the recommender wrote both.
+      recommendations: Received recommendations only (26), newest first, captured verbatim including bilingual (Chinese + English) text where the recommender wrote both.
     sections:
       - banner
       - about
@@ -457,7 +457,7 @@ linkedin:
           description: |-
             Technology & Professional Development Mentor for one full annual cycle inside Forward with Her (她行 / taxing-mentorship) — a women-in-STEM mentor-mentee network connecting 360+ mentors with 800+ mentees globally across software engineering, data, product, and AI.
 
-            Independently-attested impact: seven of the twenty-three public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.
+            Independently-attested impact: seven of the twenty-six public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.
 
             What I delivered: 1:1 mentorship across software engineering, AI tooling, and career navigation; group Office Hours; public lectures on AI programming, identity formation in tech, and career navigation for early-career women; a bilingual EN/CN promo site for the programme (3D Next.js 15 + Three.js, Cloudflare Pages).
 
@@ -1575,7 +1575,7 @@ linkedin:
         • Coordinated through a dedicated volunteer liaison so mentee assignments, communication, and certification stay organised end-to-end.
         • Holds 2024 and 2025 official Forward with Her mentor certificates.
 
-        Independently-attested impact: seven of the twenty-three public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions for their learning — making this the single-largest source of attested mentorship outcomes across my career.
+        Independently-attested impact: seven of the twenty-six public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions for their learning — making this the single-largest source of attested mentorship outcomes across my career.
 
         The teaching doctrine I developed here — "natural language is the source code"; ship a real production site by Week 8; screenshot-as-evidence assessment — later became the foundation for the 2026 TechNest Community AI Track curriculum I now teach as the sole AI Instructor.
       media:
@@ -1740,6 +1740,21 @@ linkedin:
           - links
   recommendations:
     received:
+      - recommender: Kwame Essuman
+        ref: kwame-essuman
+        headline: Data & Full-Stack AI Engineer | Production RAG Systems & Agentic Workflows | Requirements Engineering & CX | Sales| Account Management
+        relationship: Kwame reported to Chan directly
+        profileUrl: https://www.linkedin.com/in/kwameessuman/
+      - recommender: Suliat Alaga
+        ref: suliat-alaga
+        headline: Senior Frontend Engineer | React.js, Next.js, TypeScript Expert | Building Scalable Fintech & Enterprise Banking Platforms | | First-Class Computer Science Graduate | TechNest Co-Founder & Mentor
+        relationship: Suliat worked with Chan on the same team
+        profileUrl: https://www.linkedin.com/in/suliat-titilope-alaga/
+      - recommender: Abiodun Oyedele
+        ref: abiodun-magret-oyedele
+        headline: Full Stack Developer | Building Scalable Web Apps | React, Next.js, Node.js, Express, Nest.js, Flask, PostgreSQL, MongoDB
+        relationship: Abiodun worked with Chan on the same team
+        profileUrl: https://www.linkedin.com/in/oyedele-abiodun/
       - recommender: Ikenna Anasieze
         ref: ikenna-anasieze
         headline: AI Cloud Engineer | AWS AI Engineer | AI Platform Engineer | Building Highly Available, Scalable AI Infrastructure & Cloud Native Systems

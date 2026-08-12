@@ -171,10 +171,13 @@ Changing a role title, date, or award in one place ≠ done. Check the other thr
   Chan's own tools (gradient-svg-generator, github-visitor-counter,
   github-readme-suno-cards)
 - Any README visual must work on BOTH GitHub canvases (`#ffffff` and `#0d1117`).
-  Near-black ink on transparency and hardcoded `theme=dark` URLs fail silently
-  in one theme. Technique + verification scripts:
+  The failure mode is narrow: **ink on transparency** (the hero mark, now fixed
+  with a `<picture>` swap). An asset carrying its own background plate — the
+  cover, the Suno cards, the flag map — is fine in both themes, and a palette
+  grep cannot tell the two apart. **Render before reporting anything as
+  broken.** Technique + verification scripts:
   [readme-theme-assets-skill](https://github.com/ChanMeng666/readme-theme-assets-skill);
-  this repo's remaining offenders are tracked in
+  this repo's status and the false-positive post-mortem are in
   `docs/github-theme-aware-assets.md`
 
 ## Bulk edits

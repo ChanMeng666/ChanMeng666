@@ -95,6 +95,18 @@ by the loader. To find an entry: `grep -rn "id: <slug>" data/profile/`.
 - `projects[].relatedProjectId` → must exist as `projects[].id`
 - `collaborators[].currentOrgId` → must exist as `organizations[].id`
   (build fails if broken)
+- **The partner-logo line on a project card comes from the ORG, not the
+  project.** `organizations[].meta.x_brand.relatedProjectId` → `projects[].id`
+  is what renders `For <logo> Org Name — <org context>` in project-cards.hbs.
+  `projects[].clientOrgId` does NOT drive it (that only feeds the "↳ Part of"
+  text link in the open-source tables). Two more gates: the org's `logo:` file
+  must exist on disk (otherwise the card silently falls back to the project's
+  `entity` prose — that is why Tam-AI-Ti has no logo), and the org's
+  `context:` string becomes the descriptor after the em-dash, so keep it short
+  and client-facing — it also renders in the llms.txt organisation roster.
+  Several orgs may point at the SAME project (eatropolis-website is named by
+  both `chow-luck-club` and `tataki-auckland-unlimited`); they render in
+  `organizations[]` file order, so ordering in 60-network.yaml is load-bearing.
 - `collaborators[].worksTogether[].contextId` → work/volunteer/project id,
   depending on `contextType`
 - `meta.x_brand.flagshipProjectIds` (and similar id lists in 90-meta, incl.

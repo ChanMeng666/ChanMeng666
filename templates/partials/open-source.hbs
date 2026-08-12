@@ -1,15 +1,22 @@
 {{!-- ═══════════════════════════════════════════════════════════════════════
-     Open source — 2 visible H4 sub-buckets + <details> overflow +
+     More I've built — 3 visible H4 sub-buckets + <details> overflow +
      "Sound I make" Suno sub-block.
      2026-07-15: the 18px tech-stack icon strips (_featuredStackResolved) were
      removed from both tables — see the note in project-cards.hbs. The
      _contextLogo strip in the AI-agents table (which harnesses a product
      supports) is NOT a stack strip and stays.
+     2026-08-12: a THIRD sub-bucket, "Client & commissioned work", moved here
+     from commissioned.hbs along with its <details> overflow. It renders
+     commissionedProjectIds — client builds that are real paid engagements but
+     not card-weight (tam-ai-ti, free-period-website). It sits LAST on purpose:
+     this section leads with the work Chan owns herself. Its rows must always
+     name the client, which is the whole reason the band exists rather than
+     folding these two into the tables above.
      ═══════════════════════════════════════════════════════════════════════ --}}
 
 ## More I've built
 
-<sub>Everything else I build and maintain beyond the featured work above — my own tools, games, and products, most of them open source.</sub>
+<sub>Everything else I build and maintain beyond the featured work above — my own tools, games, and products, most of them open source, plus the smaller builds I've shipped for clients.</sub>
 
 #### AI agents & tooling
 
@@ -22,7 +29,7 @@
 {{#each _aiAgentProjects}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _contextLogo.length}}<br><sub>{{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"></a>{{#unless @last}} {{/unless}}{{/each}}</sub>{{/if}}</td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Related: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Sub-projects I built solo: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
   </tr>
 {{/each}}</table>
 
@@ -40,11 +47,58 @@
 {{#each _openSourceCraftProjects}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Related: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Sub-projects I built solo: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
   </tr>
 {{/each}}</table>
 
-{{#if _moreProjectsByGroup.length}}<details>
+{{#if _commissionedProjects.length}}{{!-- NOTE the ~ on this comment's closing marker: it
+     eats the newline that would otherwise stack a SECOND blank line on top of
+     the one above, between the craft table and this H4. The blank line stays
+     outside the conditional so it is still correct when the list is empty.
+     Client builds below card weight. The partner line
+     is REQUIRED reading here — these rows exist to show who commissioned the
+     work, so a row must never render without one. _affiliationOrgs gives the
+     logo treatment. When the client has no logo on disk the fallback is the
+     project's own `entity` prose (tam-ai-ti → "Riria (Missy) Te Kanawa — an
+     independent research commission from her personally", which says far more
+     than the bare org name "Whiri-AI" its clientOrgId resolves to), and only
+     then the _clientOrg text link. --~}}
+#### Client & commissioned work
+
+<table>
+  <colgroup>
+    <col style="width:120px">
+    <col style="width:200px">
+    <col>
+  </colgroup>
+{{#each _commissionedProjects}}  <tr>
+    <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
+    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _affiliationOrgs.length}}<br><sub>For {{#each _affiliationOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{else}}{{#if entity}}<br><sub>For {{entity}}.</sub>{{else}}{{#if _clientOrg}}<br><sub>For <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{/if}}{{/if}}</td>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}</td>
+  </tr>
+{{/each}}</table>
+
+{{/if}}{{#if _moreCommissionedProjects.length}}<details>
+<summary><kbd>&nbsp;More commissioned work&nbsp;</kbd></summary>
+
+<br>
+
+<table>
+  <colgroup>
+    <col style="width:64px">
+    <col style="width:240px">
+    <col>
+  </colgroup>
+{{#each _moreCommissionedProjects}}  <tr>
+    <td>{{#if logo}}<img src="{{logo}}" height="36" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
+    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
+    <td>{{briefTagline tagline}}</td>
+  </tr>
+{{/each}}</table>
+
+</details>
+
+{{/if}}{{#if _moreProjectsByGroup.length}}<details>
 <summary><kbd>&nbsp;More AI agents & tools &nbsp;·&nbsp; More open-source products &nbsp;·&nbsp; Creative & experiments&nbsp;</kbd></summary>
 
 <br>

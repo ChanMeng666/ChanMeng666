@@ -7,21 +7,38 @@
      Both sections must render IDENTICALLY — priority is expressed by order on
      the page, not by card size — so this markup exists exactly once. Per card:
      logo (right-float 80px) · H3 name · "For <org>" line · impact headline ·
-     optional related-project cross-links.
+     optional sub-project cross-links.
+     The "For <org>" line iterates _affiliationOrgs (PLURAL) — eatropolis-website
+     names two, Chow Luck Club Ltd and Tātaki Auckland Unlimited, because both
+     reviewed the build. The list comes from organizations[].meta.x_brand
+     .relatedProjectId in 60-network.yaml — NOT from projects[].clientOrgId —
+     and renders in organizations[] file order, so re-ordering that file
+     re-orders these logos. With a single org the output is byte-identical to
+     what the old singular _affiliationOrg emitted.
      2026-07-15: the 18px tech-stack icon strip (_featuredStackResolved) was
      REMOVED from every README surface — Chan found the logo rows cluttered. The
      data (meta.x_brand.featuredStack + meta.x_brand.techIconMap) is still in the
      shards and still resolved by build.mjs into dist/profile.json; only the
      rendering is gone. Do not confuse it with _contextLogo (which harnesses a
      product supports) or _affiliationOrg (the commissioning client) — those stay.
+     2026-08-12: the cross-link label is "↳ Sub-projects I built solo:", not the
+     old "↳ Related:" — that read as "somebody's adjacent project" and left
+     visitors unsure who built HER WAKA / GAVIGO Website / the hackathon
+     assistant. Every id in relatedProjectIds is a build Chan owns end-to-end,
+     and the label now says so. open-source.hbs uses the same wording.
      GOTCHA: keep the blank line between the bare <img> and the following `###`
      heading — CommonMark's type-7 HTML-block rule swallows the heading without it.
+     GOTCHA: do NOT put a Handlebars comment between the impact headline and the
+     sub-projects conditional below — the newline that ends the comment survives
+     into the README as a stray blank line inside the card. (And never write a
+     nested Handlebars comment inside THIS block: the inner close-marker ends
+     the outer comment early and the rest of the file stops parsing.)
 --}}
 {{#each this}}{{#if logo}}<img src="{{logo}}" align="right" height="80" alt="{{name}}" title="{{name}}">
 
 {{/if}}### [{{briefTagline name}}]({{default url repoUrl}})
 
-{{#if _affiliationOrg}}<sub>For <a href="{{_affiliationOrg.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default _affiliationOrg.logoDark _affiliationOrg.logoLight}}"><img src="{{_affiliationOrg.logoLight}}" height="22" alt="{{_affiliationOrg.name}}"></picture> {{_affiliationOrg.name}}</a>{{#if _affiliationOrg.context}} — {{_affiliationOrg.context}}{{/if}}.</sub>
+{{#if _affiliationOrgs.length}}<sub>For {{#each _affiliationOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="22" alt="{{name}}"></picture> {{name}}</a>{{#if context}} — {{context}}{{/if}}{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
 {{else}}{{#if _contextLogo.length}}<sub>For {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="22" alt="{{alt}}" style="vertical-align:middle"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}.</sub>
 {{else}}{{#if entity}}<sub>{{entity}}.</sub>
 {{/if}}{{/if}}{{/if}}
@@ -30,7 +47,7 @@
 
 {{else}}{{briefTagline tagline}}
 
-{{/if}}{{#if _relatedProjects.length}}<sub>↳ Related: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
+{{/if}}{{#if _relatedProjects.length}}<sub>↳ Sub-projects I built solo: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
 
 {{/if}}<br clear="all">
 

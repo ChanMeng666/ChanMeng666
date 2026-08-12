@@ -645,14 +645,24 @@ data._organisationsMissingLogos = allOrgs
 // logo file exists on disk are surfaced — partials that show inline logos use
 // these to decide whether to render an <img>. Orgs without renderable logos
 // still appear in llms.txt / JSON-LD `affiliation` for AI ingestion.
+// A project can have MORE THAN ONE affiliation org (eatropolis-website was
+// commissioned by Chow Luck Club Ltd and co-reviewed by Tātaki Auckland
+// Unlimited on behalf of Auckland Council Events), so the project lookup keeps
+// both shapes: _orgsByProjectId is the full list in organizations[] file order
+// — which is why order in 60-network.yaml is load-bearing — and
+// _orgByProjectId keeps the legacy first-wins single value.
 data._orgById = Object.fromEntries(orgsRenderable.map((o) => [o.id, o]));
 data._orgByWorkId = {};
 data._orgByVolunteerId = {};
 data._orgByProjectId = {};
+data._orgsByProjectId = {};
 for (const o of orgsRenderable) {
   if (o.relatedWorkId)      data._orgByWorkId[o.relatedWorkId] = o;
   if (o.relatedVolunteerId) data._orgByVolunteerId[o.relatedVolunteerId] = o;
-  if (o.relatedProjectId)   data._orgByProjectId[o.relatedProjectId] = o;
+  if (o.relatedProjectId) {
+    (data._orgsByProjectId[o.relatedProjectId] ??= []).push(o);
+    data._orgByProjectId[o.relatedProjectId] ??= o;
+  }
 }
 
 if (data._organisationsMissingLogos.length) {
@@ -668,7 +678,10 @@ if (data._organisationsMissingLogos.length) {
 // Logo-hierarchy resolver — attach to each visible project:
 //   _featuredStackResolved : tech-stack mini-icons (18px in templates)
 //   _contextLogo           : array of IP / platform context logos (22px)
-//   _affiliationOrg        : commissioning-org logo (22px) from existing lookup
+//   _affiliationOrgs       : commissioning/partner orgs (22px logos), in
+//                            organizations[] file order — a project may have
+//                            several (see _orgsByProjectId above)
+//   _affiliationOrg        : the first of those, kept for back-compat
 // Each tier gracefully skips entries whose underlying file is missing on disk,
 // so the build never fails because a tech-logo SVG hasn't landed yet.
 // ---------------------------------------------------------------------------
@@ -711,7 +724,15 @@ for (const p of visibleProjects) {
   const xb = p?.meta?.x_brand ?? {};
   p._featuredStackResolved = resolveStack(xb.featuredStack);
   p._contextLogo           = normalizeContextLogo(xb.contextLogo);
-  p._affiliationOrg        = data._orgByProjectId[p.id] ?? null;
+  // Projected, not the raw org object: the raw one carries `_enriched` (the
+  // entire organizations[] record), and attaching that to every client project
+  // duplicated ~100 lines per card into dist/profile.json. These six fields are
+  // everything the card and table markup reads.
+  p._affiliationOrgs       = (data._orgsByProjectId[p.id] ?? []).map((o) => ({
+    id: o.id, name: o.name, url: o.url,
+    logoLight: o.logoLight, logoDark: o.logoDark, context: o.context,
+  }));
+  p._affiliationOrg        = p._affiliationOrgs[0] ?? null;
 }
 
 // ---------------------------------------------------------------------------

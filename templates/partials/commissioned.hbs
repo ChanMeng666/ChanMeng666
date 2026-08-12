@@ -1,78 +1,37 @@
 {{!-- ═══════════════════════════════════════════════════════════════════════
      Client & organisation work — the systems Chan shipped for companies and
-     nonprofits (all provenance:client). Two bands, one section:
-       · clientCardProjectIds  → the SAME big editorial cards as "What I build"
-         (shared partial project-cards.hbs — never copy that markup here, the
-         two sections must render identically or they will drift)
-       · commissionedProjectIds → EMPTY again as of 2026-08-05 (second pass),
-         so the compact table below renders nothing. It briefly held
-         free-period-website, gavigo-website and her-waka earlier that day and
-         Chan reverted it: a SUB-PROJECT belongs under its parent card as a
-         small "↳ Related:" link (gavigo-website ← gavigo-ire, her-waka and
-         ai-hackathon-assistant ← she-sharp, femtech-radar ←
-         femtech-weekend-website), because a table row reads like independent
-         work. free-period-website is not a sub-project at all, so it moved UP
-         to a card of its own. The markup here is kept, guarded by
-         {{#if _commissionedProjects.length}}, for the next client build that
-         genuinely has no parent card to hang off. See the curation note in
-         data/profile/90-meta.yaml.
+     nonprofits (all provenance:client), as the SAME big editorial cards used by
+     "What I build" (shared partial project-cards.hbs — never copy that markup
+     here, the two sections must render identically or they will drift).
+     Sourced from clientCardProjectIds.
      Sits below "What I build": same visual weight, second by order only.
-     2026-07-15: she-sharp joined the card band (5 cards now, was 4) — it is
-     client work by every field, same shape as femtech-weekend-website, and it
-     is NOT demoted by the move: same tier: flagship, same card.
-     2026-08-05: reordered to Chan's triage drag order, then free-period-website
-     joined as a SIXTH card — FreePeriod is an independent employer (Chan was
-     its CTO), not a sub-project of anything above it. The <sub> line below
-     names the clients IN CARD ORDER and is hand-written — re-order its clauses
-     whenever clientCardProjectIds changes.
+     2026-08-12: CUT TO FOUR CARDS. tam-ai-ti and free-period-website moved DOWN
+     to the new "Client & commissioned work" table in open-source.hbs (they run
+     through commissionedProjectIds, which now renders THERE, not here) — Chan's
+     call: both are genuine paid engagements, but not heavy enough builds to sit
+     at card weight beside the other four. They still name their client, so the
+     commercial relationship is not lost; only the visual weight changed.
+     Every card here now carries a partner-logo line, because each client org in
+     60-network.yaml declares meta.x_brand.relatedProjectId pointing back at it.
+     eatropolis-website names TWO orgs — Chow Luck Club Ltd commissioned it and
+     Tātaki Auckland Unlimited (on behalf of Auckland Council Events) co-reviewed
+     it. See project-cards.hbs for how that line is assembled.
+     2026-07-15: she-sharp joined the card band — it is client work by every
+     field, same shape as femtech-weekend-website, and it is NOT demoted by the
+     move: same tier: flagship, same card.
+     The <sub> line below names the clients IN CARD ORDER and is hand-written —
+     re-order its clauses whenever clientCardProjectIds changes.
      COPY RULE for the <sub> line: only name an organisation that actually
-     engaged Chan (projects[].clientOrgId / entity). tam-ai-ti's client is
-     Riria (Missy) Te Kanawa personally — an independent research commission
-     (clientOrgId: whiri-ai). ASB Bank is her employer, NOT Chan's client, and
-     must never be listed as one. FemTech Weekend is `type: community`, not a
-     nonprofit — don't upgrade orgs to legal statuses the data doesn't claim.
-     She Sharp IS a registered NZ charitable trust (CC57025, org type:
-     nonprofit) — that one may be called a charity, and only that one.
+     engaged Chan (projects[].clientOrgId / entity). FemTech Weekend is
+     `type: community`, not a nonprofit — don't upgrade orgs to legal statuses
+     the data doesn't claim. She Sharp IS a registered NZ charitable trust
+     (CC57025, org type: nonprofit) — that one may be called a charity, and only
+     that one. ASB Bank is Riria Te Kanawa's employer, NOT Chan's client, and
+     must never be listed as one anywhere on this surface.
      ═══════════════════════════════════════════════════════════════════════ --}}
 
 ## Client & organisation work
 
-<sub>Systems I built for real clients and employers — a women's-health-tech community in China, an Auckland food festival, a Delaware startup, New Zealand's leading women-in-STEM charity, an independent Māori-led AI research commission, and a period-poverty startup — most still running today. I'm FemTech Weekend's CTO, GAVIGO's Founding Principal Engineer, and She Sharp's Senior Full Stack Engineer & Website Team Lead.</sub>
+<sub>Systems I built for real clients and employers — a women's-health-tech community in China, an Auckland food festival, a Delaware startup, and New Zealand's leading women-in-STEM charity — all still running today. I'm FemTech Weekend's CTO, GAVIGO's Founding Principal Engineer, and She Sharp's Senior Full Stack Engineer & Website Team Lead.</sub>
 
 {{> project-cards _clientCardProjects}}
-{{#if _commissionedProjects.length}}
-<table>
-  <colgroup>
-    <col style="width:72px">
-    <col style="width:200px">
-    <col>
-  </colgroup>
-{{#each _commissionedProjects}}  <tr>
-    <td>{{#if logo}}<img src="{{logo}}" height="48" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
-    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _affiliationOrg}}<br><sub><a href="{{_affiliationOrg.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default _affiliationOrg.logoDark _affiliationOrg.logoLight}}"><img src="{{_affiliationOrg.logoLight}}" height="20" alt="{{_affiliationOrg.name}}"></picture> {{_affiliationOrg.name}}</a></sub>{{/if}}</td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}</td>
-  </tr>
-{{/each}}</table>
-{{/if}}
-
-{{#if _moreCommissionedProjects.length}}
-<details>
-<summary><kbd>&nbsp;More commissioned work&nbsp;</kbd></summary>
-
-<br>
-
-<table>
-  <colgroup>
-    <col style="width:64px">
-    <col style="width:240px">
-    <col>
-  </colgroup>
-{{#each _moreCommissionedProjects}}  <tr>
-    <td>{{#if logo}}<img src="{{logo}}" height="36" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
-    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{briefTagline tagline}}</td>
-  </tr>
-{{/each}}</table>
-
-</details>
-{{/if}}

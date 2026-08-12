@@ -960,7 +960,7 @@
       "startDate": "2025-10",
       "publicSummary": "An AI financial-wellness coach for Māori communities, built on the\nMāori holistic-health model Te Whare Tapa Whā — the cultural framework\nlives in the database schema, not as surface styling. Users get voice\ncoaching and journaling in both te reo Māori and English, guided\nthrough wellbeing check-ins and money goals framed around family,\nspiritual purpose, and health rather than numbers alone. Built solo\nfor an independent research commission from Riria (Missy) Te Kanawa;\na 19-person cohort used it over four months (Oct 2025 – Mar 2026),\nproducing 181 bilingual journal entries, 35 voice coaching sessions,\nand over 500 transcribed coaching messages.\n",
       "narrative": {
-        "impactHeadline": "A te reo *Māori* AI coach for financial wellbeing, built on the Māori holistic-health model Te Whare Tapa Whā — encoded in the database, not added as decoration. A 19-person research cohort used it over four months: voice coaching plus 181 bilingual journal entries.",
+        "impactHeadline": "A te reo Māori AI coach for financial wellbeing, built on the Māori holistic-health model Te Whare Tapa Whā — encoded in the database, not added as decoration. A 19-person research cohort used it over four months: voice coaching plus 181 bilingual journal entries.",
         "problem": "Mainstream financial apps treat money as decontextualised numbers —\nbudgets, balances, projections. For many Māori users that framing is\nculturally mismatched: money is inseparable from *whānau* wellbeing,\nspiritual purpose, and holistic health. Generic budgeting tools strip\nout the very framework that makes financial decisions meaningful,\nleaving Māori communities — who face disproportionate financial stress\nin Aotearoa — choosing between tools that fit their wallet but not\ntheir worldview, or no tool at all. Tam-AI-Ti exists to test a direct\nquestion: can an AI financial coach built natively on Māori cultural\nwisdom, rather than retrofitted with cultural decoration, engage a\npopulation that mainstream financial technology systematically\nunderserves?\n",
         "audience": "Māori adults working on their financial wellbeing, served along two\naccount types: individual goal-setters (Full Account) and *whānau*\nsupporters who can witness and encourage from the sidelines through a\nfive-tier permission system (view profile, view goals, view journal,\nsend messages, receive celebrations). Research cohort to date: 19\nverified participants recruited by Missy Te Kanawa, active over a\nfour-month window (Oct 2025 – Mar 2026), producing 181 bilingual\njournal entries, 35 voice coaching sessions, 146 AI coach messages,\nand 74 daily Hauora check-ins. Te reo Māori and English are\nfirst-class throughout. Future audience: the broader Māori adult\npopulation — *rangatahi* entering working life, parents managing\n*whānau* finances, *kaumātua* passing on financial wisdom — for whom\nculturally-rooted tools are scarce.\n",
         "productLogic": "The product is architected on Te Whare Tapa Whā, the Māori model of\nholistic wellness with four walls (Wairua/spiritual, Tinana/physical,\nHinengaro/mental, Whānau/family) standing on a foundation (Whenua/land).\nEvery feature traces back to this house.\n\nA user starts with the **26Q assessment over nine named psychological\nfactors** — `self_belief`, `long_term_focus`, `resilience`,\n`self_control`, `growth_mindset`, `financial_confidence`,\n`social_comparison`, `mindfulness`, `gratitude` (with `mindfulness`\nreverse-coded to capture Present Bias) — mapped to personalised\nrecommendations. They then select up to three focus areas, choose one\nof three account types (Full / Supporter / Both), and proceed to set\nfinancial goals through one of **seven SMART action plans (Options\nA-G)**: A Spending Reduction, B Savings Increase, C Savings Rate, D\nDebt Reduction, E Income Growth, F Budget Review, G Accountability\nPartner. Each plan has its own dedicated React component family\n(SpendingTracker / SavingsTracker / DebtCalculator / IncomeTracker /\nBudgetReviewCalendar / MeetingsTracker etc. — 38 goal components\ntotal) and its own type-specific tracking fields in the schema,\nrather than a generic JSON-note column. A `GoalCardFactory` /\n`ProgressTrackerFactory` / `OverviewFactory` pattern dispatches the\nright component for each goal's `option` field.\n\nThey check in daily across **eleven Hauora dimensions** mapped directly\nto the four walls: `sleep_hours`, `water_litres`, `food_quality`,\n`exercise_hours` for Tinana; `wairua_time_spent`,\n`wairua_human_connection`, `wairua_taia_connection` for Wairua (Whenua\nintegrated through Taiao/environment connection); `hinengaro_mauri_tau`\n(mindfulness), `hinengaro_ako` (learning) for Hinengaro;\n`whanau_check_in`, `whanau_quality_time` for Whānau. Each metric is a\ntyped integer-scale column with a Māori-language identifier — not a\nUI label sitting on top of a culturally-neutral schema. They journal\nmorning intentions (Hauora intentions across all 5 dimensions + 3\ngratitude items + financial reflections) and evening reflections\nthrough the Kūmete framework (what you contributed + what you received,\nTahi-Rua-Toru tomorrow goals, emotional check-in), all bilingually in\nte reo or English, with real GPT-4o enhancement (4 enhancement types ×\n3 intensity levels), translation (macron-correct ā/ē/ī/ō/ū), and\n5-dimensional AI insight extraction (Emotions / Themes / Hauora /\nPatterns / Growth).\n\nThey meet an **AI Financial Coach via gpt-4o-realtime-preview** voice\n(\"verse\" voice, server-side VAD + 500ms silence detection) — a\nconversation partner that never reduces money to numbers but\nconsistently frames every financial decision through all four walls\nof the Hauora model. Audio is deliberately *not* stored; only text\ntranscripts persist (a cost optimisation that preserves searchability\nwithout per-minute audio storage). The AI surfaces **74 Whakatauki\nproverbs across 37+ categories** by theme via `/api/whakatauki/search`,\nreferences the **Maramataka 30-day lunar calendar with 4 traditional\nactivity types** — *Toitoi* (spiritual/cultural: karakia, whakapapa,\nwānanga), *Hi ika* (water-based: ocean/river fishing, shellfish,\nseaweed), *Pouraka* (hunting: bird hunting, forest foraging, game\ntracking), *Mahi māra* (gardening/planting) — for cultural timing,\nand ties financial decisions back to family and spiritual purpose.\nWhānau members can be invited via email-token-based invitations with\na **5-tier permission system** (`canSeeGoals` · `canSeeProgress` ·\n`canSeeMood` · `canSeeAchievements` · `canSendMessages`) to encourage\nand witness without intruding.\n",
@@ -969,7 +969,6 @@
         "outcomes": "Production-deployed at **tamaiti.whiri-ai.com**, in active operation\nsince October 2025. Research-cohort engagement (Oct 2025 – Mar 2026,\nroughly four months): 19 verified users, 181 bilingual journal\nentries, 18 active financial goals, 146 AI coach messages, 35 voice\ncoaching sessions with over 500 transcribed messages, and 74 daily\nHauora check-ins. Sustained multi-month engagement on a pre-commercial\nproduct with no marketing channel — a meaningful early signal for a\nresearch pilot.\n\n**March 2026 production migration**: a zero-downtime cutover from my\npersonal Vercel Hobby account to the client's Whiri-AI Pro team\naccount — GitHub repo transfer, Vercel Blob + KV re-creation, Google\nOAuth re-config, custom-domain DNS cutover through Cloudflare,\nblob-data migration, Resend sender-domain re-verification, and\n`NEXTAUTH_SECRET` preservation so existing user sessions survived.\nDocumented as a reusable 12-step playbook covering every component and\nthe rationale for not using Vercel's built-in Project Transfer.\n\n**22 schema migrations shipped** in lock-step with feature work, none\nrolled back — the most consequential being 0015 (Hauora-metrics\nrestructure to consistent integer scales), 0020 (Financial Coach voice\ntables) and 0021 (period-based tracking converting Options F/G from\none-shot to recurring goals). React Server Components CVE patches\nlanded within hours of Vercel/Snyk automated PRs (PR #2, Dec 2025).\n\nProject status: fully built, deployed, in active operation, and\ntransferred to client operational ownership. It sits within Missy\nTe Kanawa's wider published work on Māori economic prosperity — KPMG\nNZ *Maui Rau* report series (lead author), Māori Governance Summit\ntalks, The Spinoff contributing author — as the working artifact for\nthe thesis that culturally-native technology can serve Māori\ncommunities where culturally-decorated technology cannot.\n",
         "myRole": "Solo independent developer with full ownership of the entire stack and\nlifecycle. Introduced to the project by Dr Mahsa McCauley (Mohaghegh),\nfounder of She Sharp (New Zealand's leading women-in-STEM nonprofit) —\nMissy approached Mahsa for a developer recommendation and Mahsa referred\nme from the She Sharp engineering team, where I serve as Senior Full\nStack Engineer and Website Team Lead.\n\nEngagement model: Missy as client, directing the product structurally\n(feature requests, surveys, \"include the Maramataka lunar calendar,\"\n\"add a Financial Coach feature\") and funding the work directly; I\ndesigned, built, deployed, and maintained the entire system, and ran\nthe data analysis. Throughout development I sent feature-demo videos at\nevery milestone so Missy could review progress without needing a\ntechnical background. Post-launch, I produced teaching videos enabling\nMissy to use Cursor to do her own database reads and basic data\nanalysis — transferring practical operational ownership while remaining\nthe technical lead. **351 commits, solo authorship throughout**\n(2025-09-19 → 2026-03-29), including the March 2026 zero-downtime\nproduction migration from my personal Vercel to the client's\nWhiri-AI Pro team that I designed, executed, and documented as a\nreusable `PROJECT_MIGRATION_GUIDE.md` playbook for future client\nengagements.\n"
       },
-      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "openai",
@@ -993,6 +992,7 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": {
         "id": "whiri-ai",
@@ -1370,7 +1370,24 @@
         }
       ],
       "_contextLogo": [],
-      "_affiliationOrg": null,
+      "_affiliationOrgs": [
+        {
+          "id": "she-sharp",
+          "name": "She Sharp",
+          "url": "https://shesharp.org.nz",
+          "logoLight": "/public/organizations/she-sharp-logo-purple-dark.svg",
+          "logoDark": "/public/organizations/she-sharp-logo-purple-dark.svg",
+          "context": "Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since May 2023"
+        }
+      ],
+      "_affiliationOrg": {
+        "id": "she-sharp",
+        "name": "She Sharp",
+        "url": "https://shesharp.org.nz",
+        "logoLight": "/public/organizations/she-sharp-logo-purple-dark.svg",
+        "logoDark": "/public/organizations/she-sharp-logo-purple-dark.svg",
+        "context": "Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since May 2023"
+      },
       "_clientOrg": {
         "id": "she-sharp",
         "name": "She Sharp",
@@ -1640,7 +1657,24 @@
         }
       ],
       "_contextLogo": [],
-      "_affiliationOrg": null,
+      "_affiliationOrgs": [
+        {
+          "id": "gavigo",
+          "name": "GAVIGO Inc.",
+          "url": "https://gavigo.com",
+          "logoLight": "/public/brands/gavigo-mark.svg",
+          "logoDark": "/public/brands/gavigo-mark.svg",
+          "context": "Founding Principal Engineer (Oct 2025 — present)"
+        }
+      ],
+      "_affiliationOrg": {
+        "id": "gavigo",
+        "name": "GAVIGO Inc.",
+        "url": "https://gavigo.com",
+        "logoLight": "/public/brands/gavigo-mark.svg",
+        "logoDark": "/public/brands/gavigo-mark.svg",
+        "context": "Founding Principal Engineer (Oct 2025 — present)"
+      },
       "_clientOrg": {
         "id": "gavigo",
         "name": "GAVIGO Inc.",
@@ -1828,6 +1862,7 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -1997,6 +2032,7 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -2158,6 +2194,7 @@
           "url": "https://github.com/openai/codex"
         }
       ],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -2333,6 +2370,7 @@
       },
       "_featuredStackResolved": [],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -2625,6 +2663,7 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -2735,7 +2774,6 @@
         "impactHeadline": "Bilingual period-poverty advocacy site for a Guangzhou HKUST(GZ)-incubated startup — integrated Google Maps dispenser directory helping end-users locate menstrual-access resources in underserved markets."
       },
       "status": "live",
-      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "nextjs",
@@ -2759,7 +2797,24 @@
         }
       ],
       "_contextLogo": [],
-      "_affiliationOrg": null,
+      "_affiliationOrgs": [
+        {
+          "id": "freeperiod",
+          "name": "FreePeriod",
+          "url": "https://www.linkedin.com/company/free-period/",
+          "logoLight": "/public/organizations/free-period-logo.png",
+          "logoDark": "/public/organizations/free-period-logo.png",
+          "context": "Chief Technology Officer (Nov 2024 — Jun 2025)"
+        }
+      ],
+      "_affiliationOrg": {
+        "id": "freeperiod",
+        "name": "FreePeriod",
+        "url": "https://www.linkedin.com/company/free-period/",
+        "logoLight": "/public/organizations/free-period-logo.png",
+        "logoDark": "/public/organizations/free-period-logo.png",
+        "context": "Chief Technology Officer (Nov 2024 — Jun 2025)"
+      },
       "_clientOrg": {
         "id": "freeperiod",
         "name": "FreePeriod",
@@ -3352,7 +3407,24 @@
         }
       ],
       "_contextLogo": [],
-      "_affiliationOrg": null,
+      "_affiliationOrgs": [
+        {
+          "id": "femtech-weekend",
+          "name": "FemTech Weekend",
+          "url": "https://www.femtechweekend.com",
+          "logoLight": "/public/organizations/femtech-weekend-logo.svg",
+          "logoDark": "/public/organizations/femtech-weekend-logo-dark.svg",
+          "context": "CTO (Mar 2025 — present)"
+        }
+      ],
+      "_affiliationOrg": {
+        "id": "femtech-weekend",
+        "name": "FemTech Weekend",
+        "url": "https://www.femtechweekend.com",
+        "logoLight": "/public/organizations/femtech-weekend-logo.svg",
+        "logoDark": "/public/organizations/femtech-weekend-logo-dark.svg",
+        "context": "CTO (Mar 2025 — present)"
+      },
       "_clientOrg": {
         "id": "femtech-weekend",
         "name": "FemTech Weekend",
@@ -3588,42 +3660,31 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [
+        {
+          "id": "chow-luck-club",
+          "name": "Chow Luck Club Ltd",
+          "url": "https://www.linkedin.com/company/chowluckclub/",
+          "logoLight": "/public/organizations/chow-luck-club-logo.png",
+          "logoDark": "/public/organizations/chow-luck-club-logo.png",
+          "context": "Commissioning client for eatropolis-website (Auckland, NZ)"
+        },
+        {
+          "id": "tataki-auckland-unlimited",
+          "name": "Tātaki Auckland Unlimited",
+          "url": "https://www.aucklandunlimited.com/",
+          "logoLight": "/public/organizations/tataki-auckland-unlimited-colour.svg",
+          "logoDark": "/public/organizations/tataki-auckland-unlimited-white.svg",
+          "context": "Event partner and co-reviewer of the eatropolis-website build, on behalf of Auckland Council Events"
+        }
+      ],
       "_affiliationOrg": {
         "id": "chow-luck-club",
         "name": "Chow Luck Club Ltd",
         "url": "https://www.linkedin.com/company/chowluckclub/",
         "logoLight": "/public/organizations/chow-luck-club-logo.png",
         "logoDark": "/public/organizations/chow-luck-club-logo.png",
-        "displayTier": "secondary",
-        "category": "employer",
-        "context": "Commissioning client for eatropolis-website (Auckland, NZ)",
-        "relatedWorkId": null,
-        "relatedVolunteerId": null,
-        "relatedProjectId": "eatropolis-website",
-        "_enriched": {
-          "id": "chow-luck-club",
-          "name": "Chow Luck Club Ltd",
-          "url": "https://www.linkedin.com/company/chowluckclub/",
-          "logo": "/public/organizations/chow-luck-club-logo.png",
-          "type": "enterprise",
-          "industry": "Events & Hospitality (Auckland)",
-          "hq": {
-            "city": "Auckland",
-            "countryCode": "NZ"
-          },
-          "description": "Auckland-based events and hospitality company — commissioned the\neatropolis-website build. Director (Events & Marketing) Bee Keng\nKoh and Creative Producer Armand Bentigan were client-side\ncontacts.\n",
-          "tier": "secondary",
-          "recency": "recent",
-          "lastUpdated": "2026-05-22",
-          "meta": {
-            "x_brand": {
-              "displayTier": "secondary",
-              "category": "employer",
-              "context": "Commissioning client for eatropolis-website (Auckland, NZ)",
-              "relatedProjectId": "eatropolis-website"
-            }
-          }
-        }
+        "context": "Commissioning client for eatropolis-website (Auckland, NZ)"
       },
       "_clientOrg": {
         "id": "chow-luck-club",
@@ -4093,6 +4154,7 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -4479,7 +4541,6 @@
         "outcomes": "Live and operational at **vitex.org.nz**, serving real users end-to-end from a pasted job ad to a compiled PDF. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.\n",
         "myRole": "Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.\n"
       },
-      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "vercel-ai-sdk",
@@ -4503,6 +4564,7 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -4811,6 +4873,7 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -5367,6 +5430,7 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -5498,6 +5562,7 @@
       },
       "_featuredStackResolved": [],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -7132,6 +7197,7 @@
         }
       ],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -7856,6 +7922,7 @@
       },
       "_featuredStackResolved": [],
       "_contextLogo": [],
+      "_affiliationOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -11224,7 +11291,7 @@
         "Gavigo"
       ],
       "url": "https://gavigo.com",
-      "logo": "/public/organizations/gavigo-logo.jpg",
+      "logo": "/public/brands/gavigo-mark.svg",
       "type": "startup",
       "industry": "Software Development — Activation & Execution Layer for Interactive Software",
       "hq": {
@@ -11239,13 +11306,14 @@
       ],
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-22",
+      "lastUpdated": "2026-08-12",
       "meta": {
         "x_brand": {
           "displayTier": "primary",
           "category": "employer",
           "context": "Founding Principal Engineer (Oct 2025 — present)",
-          "relatedWorkId": "gavigo"
+          "relatedWorkId": "gavigo",
+          "relatedProjectId": "gavigo-ire"
         }
       }
     },
@@ -11333,14 +11401,15 @@
       ],
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-22",
+      "lastUpdated": "2026-08-12",
       "meta": {
         "x_brand": {
           "displayTier": "primary",
           "category": "employer",
-          "context": "Senior Full-Stack + Ambassador (May 2023 — present)",
+          "context": "Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since May 2023",
           "relatedWorkId": "she-sharp",
-          "relatedVolunteerId": "she-sharp-ambassador"
+          "relatedVolunteerId": "she-sharp-ambassador",
+          "relatedProjectId": "she-sharp"
         }
       }
     },
@@ -11349,6 +11418,7 @@
       "name": "FemTech Weekend",
       "url": "https://www.femtechweekend.com",
       "logo": "/public/organizations/femtech-weekend-logo.svg",
+      "logoDark": "/public/organizations/femtech-weekend-logo-dark.svg",
       "type": "community",
       "industry": "Business Consulting & Services — FemTech ecosystem platform",
       "hq": {
@@ -11363,13 +11433,14 @@
       ],
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-22",
+      "lastUpdated": "2026-08-12",
       "meta": {
         "x_brand": {
           "displayTier": "primary",
           "category": "employer",
           "context": "CTO (Mar 2025 — present)",
-          "relatedWorkId": "femtech-weekend"
+          "relatedWorkId": "femtech-weekend",
+          "relatedProjectId": "femtech-weekend-website"
         }
       }
     },
@@ -11480,13 +11551,14 @@
       ],
       "tier": "primary",
       "recency": "historical",
-      "lastUpdated": "2026-05-22",
+      "lastUpdated": "2026-08-12",
       "meta": {
         "x_brand": {
           "displayTier": "primary",
           "category": "employer",
-          "context": "Full-Stack Engineer (Oct — Dec 2024)",
-          "relatedWorkId": "freeperiod"
+          "context": "Chief Technology Officer (Nov 2024 — Jun 2025)",
+          "relatedWorkId": "freeperiod",
+          "relatedProjectId": "free-period-website"
         }
       }
     },
@@ -12091,6 +12163,35 @@
           "displayTier": "secondary",
           "category": "employer",
           "context": "Commissioning client for eatropolis-website (Auckland, NZ)",
+          "relatedProjectId": "eatropolis-website"
+        }
+      }
+    },
+    {
+      "id": "tataki-auckland-unlimited",
+      "name": "Tātaki Auckland Unlimited",
+      "aliases": [
+        "Auckland Council Events",
+        "Tātaki Auckland Unlimited Ltd"
+      ],
+      "url": "https://www.aucklandunlimited.com/",
+      "logo": "/public/organizations/tataki-auckland-unlimited-colour.svg",
+      "logoDark": "/public/organizations/tataki-auckland-unlimited-white.svg",
+      "type": "gov",
+      "industry": "Economic & cultural development agency (Auckland Council CCO)",
+      "hq": {
+        "city": "Auckland",
+        "countryCode": "NZ"
+      },
+      "description": "Auckland Council's economic and cultural development agency. Through\nAuckland Council Events it was the event partner for Eatropolis and\nreviewed the eatropolis-website build alongside Chow Luck Club Ltd.\n",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-08-12",
+      "meta": {
+        "x_brand": {
+          "displayTier": "secondary",
+          "category": "partner",
+          "context": "Event partner and co-reviewer of the eatropolis-website build, on behalf of Auckland Council Events",
           "relatedProjectId": "eatropolis-website"
         }
       }
@@ -12764,8 +12865,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-08-11",
+    "lastModified": "2026-08-12",
     "buildYear": "2026",
-    "buildTimestamp": "2026-08-11T17:55:03.760Z"
+    "buildTimestamp": "2026-08-12T05:07:50.077Z"
   }
 }

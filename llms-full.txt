@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 480+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-08-11
+**Last updated:** 2026-08-12
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -65,14 +65,14 @@ thought."
 
 **Primary (employers / clients):**
 - **Engram LLC** (employer) -- AI Agent Architect (May 2026 — Jul 2026). URL: https://engram.media. Related work: engram.
-- **GAVIGO Inc.** (employer) -- Founding Principal Engineer (Oct 2025 — present). URL: https://gavigo.com. Related work: gavigo.
+- **GAVIGO Inc.** (employer) -- Founding Principal Engineer (Oct 2025 — present). URL: https://gavigo.com. Related work: gavigo. Related project: gavigo-ire.
 - **Sanicle Inc.** (employer) -- CTO (Mar 2025 — Feb 2026). URL: https://www.linkedin.com/company/sanicleofficial/. Related work: sanicle.
 - **TechNest Community** (employer) -- AI Instructor & Mentor — 2026 AI Track Cohort 3 (Apr–Aug 2026). URL: https://www.technestcommunity.com/. Related work: technest.
-- **She Sharp** (employer) -- Senior Full-Stack + Ambassador (May 2023 — present). URL: https://shesharp.org.nz. Related work: she-sharp. Related volunteer: she-sharp-ambassador.
-- **FemTech Weekend** (employer) -- CTO (Mar 2025 — present). URL: https://www.femtechweekend.com. Related work: femtech-weekend.
+- **She Sharp** (employer) -- Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since May 2023. URL: https://shesharp.org.nz. Related work: she-sharp. Related volunteer: she-sharp-ambassador. Related project: she-sharp.
+- **FemTech Weekend** (employer) -- CTO (Mar 2025 — present). URL: https://www.femtechweekend.com. Related work: femtech-weekend. Related project: femtech-weekend-website.
 - **Forward with Her 她行 Mentorship** (employer) -- Tech & Professional Development Mentor (Oct 2024 — Sep 2025). URL: https://www.linkedin.com/company/taxing-mentorship/. Related work: forward-with-her. Related volunteer: forward-with-her-mentor.
 - **Lincoln University, NZ** (employer) -- Master of Applied Computing (Distinction) + Full-Stack Developer. URL: https://www.lincoln.ac.nz. Related work: lincoln.
-- **FreePeriod** (employer) -- Full-Stack Engineer (Oct — Dec 2024). URL: https://www.linkedin.com/company/free-period/. Related work: freeperiod.
+- **FreePeriod** (employer) -- Chief Technology Officer (Nov 2024 — Jun 2025). URL: https://www.linkedin.com/company/free-period/. Related work: freeperiod. Related project: free-period-website.
 - **CopilotKit** (employer) -- Open-source contributor — 2 merged PRs into a 36.1k★ repo. URL: https://www.copilotkit.ai. Related work: copilotkit.
 - **ByteDance** (employer) -- Backend Developer, Youth Training Camp (Nov 2024 — Mar 2025). URL: https://www.bytedance.com. Related work: bytedance.
 - **Cebu International Academy** (employer) -- Volunteer Educator (Mar — Aug 2023). URL: http://cebucia.com. Related volunteer: cebu-international-academy.
@@ -97,6 +97,7 @@ thought."
 - **Cloudflare** (vendor) -- Workers AI + Vectorize + KV — teaching platform RAG. URL: https://www.cloudflare.com.
 - **Neon** (vendor) -- Postgres backbone — She Sharp, FemTech Weekend. URL: https://neon.tech.
 - **Chow Luck Club Ltd** (employer) -- Commissioning client for eatropolis-website (Auckland, NZ). URL: https://www.linkedin.com/company/chowluckclub/. Related project: eatropolis-website.
+- **Tātaki Auckland Unlimited** (partner) -- Event partner and co-reviewer of the eatropolis-website build, on behalf of Auckland Council Events. URL: https://www.aucklandunlimited.com/. Related project: eatropolis-website.
 - **Whiri-AI** (employer) -- Research-commission client for Tam-AI-Ti (Māori AI financial wellness). URL: https://tamaiti.whiri-ai.com/. Related project: tam-ai-ti.
 - **TechRosie** (partner) -- Women-developer community Chan contributes to (hosts femtracker). URL: https://github.com/TechRosie.
 
@@ -2081,55 +2082,6 @@ Compilation is a returned value, not a side effect: `compile()` hands back `{ sv
 **Outcomes:** Live in production at archcanvas.uk, solo-built across roughly 295 commits over three months (2026-04-08 → 2026-07-16): 13 pages, 28 API route handlers, 71 components, and 205 source files over a 9-table schema. The product is unusually rigorous about testing its own thesis — a `generationAttempts` telemetry table tracks first-pass ArchLang validity per model, and a `bench` harness runs briefs through both the DSL pipeline and a legacy freehand-pixel pipeline as a control group (now with timing and token axes), so the "DSL beats pixels" claim is measured, not asserted. It is also the proving ground that hardened ArchLang: real in-browser use of the compiler drove concrete upstream fixes, most recently the 1.18 topology work.
 
 **My role:** Sole author of the entire product — the two-act studio and canvas UX, the AI orchestrator and its tools, the grounded view-aware rendering chain, the ArchLang integration, the 9-table schema and credit/billing system, the change-history export, the falsifiability instruments, and the canary-then-swap deployment. And of ArchLang itself, the floor-plan language it is built on. Every commit is mine.
-### 3. Vitex — AI Career Agent (vitex.org.nz) — Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions
-[tier=flagship · recency=recent · updated=2026-07-17]
-- **URL:** https://www.vitex.org.nz/
-- **Repository:** https://github.com/ChanMeng666/easy-resume
-- **Tech stack:** Next.js 15, React 19, TypeScript 5, Vercel AI SDK v6, @ai-sdk/openai, OpenAI gpt-5.5 (reasoning) / gpt-5.4-mini (extract), Zod schemas, Typst (local binary), Neon Postgres, Drizzle ORM, Upstash Redis, Stack Auth, Stripe, Cloudinary, shadcn/ui + Phantom design system, Framer Motion, Public v1 HTTP API (OpenAPI spec + curl playbook in skill.md), vitex-cli (thin API client, bin `vitex`), MCP server (`vitex mcp` via npx, stdio — Claude Desktop/Code, Cursor), Docker, Traefik, DigitalOcean VPS, GitHub Actions CI/CD
-- **Commits (solo):** 379 (2025-01-11 → 2026-07-14, ~18 months); essentially sole author
-- **Surfaces:** 11 pages · 30 API route handlers · 25 components · 232 source files (~30k LOC)
-- **Pipeline:** 8 steps (parse JD ∥ parse background → match → tailor + faithfulness gate → ATS score ∥ cover letter → render → Typst compile)
-- **Templates:** 7 AI-auto-selected (academic · banking · compact · creative · executive · modern-cv · two-column)
-- **Agent surfaces:** one core, N thin adapters — web SSE + public REST v1 (API key) + hosted OAuth-protected MCP + published vitex-cli with a stdio MCP; 9 MCP tools; full OAuth 2.1 AS with dynamic client registration + PKCE
-- **Idempotency:** a generation is committed exactly once, and only after a PDF actually compiles; a DB partial-unique index survives SSE reconnects + concurrent races, so retries and refinements never duplicate a run
-- **Models:** two-tier routing (cheap extract tier + reasoning tier, env-overridable); deterministic no-LLM ATS scoring + anti-hallucination faithfulness gate
-- **PDF engine:** local Typst binary compile <100ms, SHA-256-cached; no external document API
-- **Tests:** 49 test files / 437 tests
-**Summary:** AI career agent live at **vitex.org.nz**. Paste a job ad and describe your background in plain text, and an 8-step AI pipeline writes a resume and cover letter tailored to that specific job, then compiles them into a polished, ATS-ready PDF in about 30 seconds across 7 auto-selected templates — no document is rendered by an outside service. Vitex is **agent-ready**: everything the website does is also reachable over a public API, a command-line tool, and an MCP server, so a terminal or an AI assistant (Claude, Cursor, ChatGPT) can drive the whole product without a browser.
-
-**Impact:** Paste a job ad and describe your background — it writes a resume and cover letter tailored to that job and builds them into a polished PDF in about 30 seconds. Works from a browser, the command line, or inside an AI assistant.
-
-**Problem:** Most AI resume tools fail in one of two ways: (a) a thin chatbot wrapper that hands you a paragraph and calls it a resume — no PDF, no ATS-aware structure, no template intelligence; or (b) a form-filling site that spends a minute-plus rendering the same generic template every other user gets. Both miss the real job: the resume has to be tailored to the *specific* job ad, the document has to survive automated applicant-tracking (ATS) parsing, the visual template has to fit the target industry, and the whole round-trip has to feel instant. None of that is true of "paste your CV into ChatGPT."
-
-**Audience:** Three groups. **Job seekers in live applications** — especially in the NZ / Australia / Asia-Pacific markets where Chan personally needed the tool and where vitex.org.nz deliberately lives. **Career-changers** who have to re-tailor every application — the people for whom rewriting a resume per job ad is the actual bottleneck. And **AI-engineering reviewers** assessing Chan's ability to ship a production multi-step AI agent with real users, real billing, and real operations — not a demo.
-
-**Product logic:** The flow is deliberately short. (1) **Homepage** — paste a job ad and describe your background in free text; no CV upload, no field-by-field form. (2) **Generate** — click run and the 8-step pipeline streams its progress live (reading the job ad → reading your background → matching → tailoring → ATS scoring → cover letter → building the PDF), so you watch each stage finish instead of staring at a spinner, then land in the **Editor** with a PDF preview, an ATS score with concrete feedback, and the matching cover letter. (3) **Refine & export** — a plain-English box ("make the leadership section stronger", "shorten the intro") re-does just that slice rather than regenerating everything; then download the PDF or publish a share link. A dashboard keeps a searchable history for signed-in users.
-
-**Business logic:** Each run is a multi-call AI pipeline plus a document compile, so capacity is metered per successful result rather than left open-ended: the ledger records a run **exactly once, and only after a PDF actually compiles**, which makes a failed or retried attempt a non-event. Public **share links** give the product organic reach — a candidate who lands a job can credit Vitex, and the shared resume is itself a live demo of what the product produces. The full stack (auth, database, cache, payments, AI, PDF rendering) is shaped for a real user base, not a showcase.
-
-**Technical approach:** **AI agent layer.** The pipeline runs on the **Vercel AI SDK** with the OpenAI provider across **eight sequential stages**, on two-tier model routing — a cheaper **extract** model (default `gpt-5.4-mini`) for parsing and a stronger **reasoning** model (default `gpt-5.5`) for tailoring, both overridable per deployment, with per-tier reasoning-effort control. Each stage emits a **Zod-validated** structured output:
-1. **JD parsing** — role, seniority, must-have and nice-to-have skills, company signals
-2. **Background parsing** — free-text description → structured skills/experience
-3. **Match analysis** — candidate↔job fit profile
-4. **Tailoring** — reorder, rewrite, and emphasise history toward the parsed job ad
-5. **ATS scoring** — a **deterministic, no-LLM** check of parse-ability, with actionable feedback
-6. **Cover letter** — generated from the same parsed pair
-7. **Render** — auto-select a template + seeded design tokens, emit Typst source
-8. **Compile** — Typst → PDF server-side; the PDF is the deliverable, so the run is committed only here
-
-Right after tailoring, a deterministic **faithfulness gate** re-checks for fabricated skills or employers and triggers one bounded corrective re-tailor — an anti-hallucination guard with no model in the check itself. Every stage streams progress over **Server-Sent Events**. Inputs are read from `sessionStorage` rather than URL params so deep links can't leak a user's data.
-
-**Document engine — Typst, not LaTeX.** PDFs are compiled by a **local Typst binary** inside the Docker image, with no call to any outside service; the project migrated from LaTeX to Typst on 2026-04-06 (same day as the Cloudflare Workers → DigitalOcean VPS move) because Typst compiles in milliseconds where LaTeX needs seconds and Workers couldn't run the binary at all. The image pre-warms the Typst package cache (FontAwesome) so cold starts don't pay a fetch cost. **7 templates** (academic, banking, compact, creative, executive, modern-cv, two-column) are auto-selected from parsed industry/role signals.
-
-**Persistence + product stack.** Neon serverless Postgres + Drizzle ORM (resumes, history, credit ledger); Upstash Redis for short-lived cache; Stack Auth for sign-in and agent API keys; Stripe for the credit ledger; Cloudinary for uploads and rendered PDFs; nanoid for share tokens.
-
-**UI — Phantom.** Next.js 15 App Router + React 19 + TypeScript. The **Phantom** design system — a soft, flat, single-hue aubergine-and-lavender look with light-weight type and generous whitespace — is the deliberate visual identity, and replaced an earlier Neobrutalism (thick borders, hard shadows) treatment in a 2026 UI pass. shadcn/ui + Tailwind for primitives, Framer Motion for transitions, react-hook-form + Zod for validation.
-
-**Deployment + hardening.** Production runs as a single **Docker container** on a **DigitalOcean VPS** behind **Traefik** (reverse proxy + automatic TLS), shipped by **GitHub Actions** with **health-gated rolling deploys** and automatic database migrations. Recent hardening added site-wide security headers (Content-Security-Policy + HSTS in production), request rate-limiting on the API-key/credit/billing routes, and auth + rate-limiting + sandboxing on the PDF-compile endpoint. Two earlier platform migrations (Railway → CF Workers → VPS) and the LaTeX → Typst swap all shipped without an outage.
-
-**Outcomes:** Live and operational at **vitex.org.nz**, serving real users end-to-end from a pasted job ad to a compiled PDF. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.
-
-**My role:** Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.
 
 ## Notable Open Source Projects
 

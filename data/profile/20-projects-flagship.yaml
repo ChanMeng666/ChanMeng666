@@ -105,7 +105,11 @@ projects:
       producing 181 bilingual journal entries, 35 voice coaching sessions,
       and over 500 transcribed coaching messages.
     narrative:
-      impactHeadline: "A te reo *Māori* AI coach for financial wellbeing, built on the Māori holistic-health model Te Whare Tapa Whā — encoded in the database, not added as decoration. A 19-person research cohort used it over four months: voice coaching plus 181 bilingual journal entries."
+      # No markdown emphasis in this string: as of 2026-08-12 tam-ai-ti renders
+      # as a README table row, and GitHub does not parse inline markdown inside
+      # an HTML block — "*Māori*" came out with literal asterisks. "te reo Māori"
+      # is the language's name and reads correctly unemphasised.
+      impactHeadline: "A te reo Māori AI coach for financial wellbeing, built on the Māori holistic-health model Te Whare Tapa Whā — encoded in the database, not added as decoration. A 19-person research cohort used it over four months: voice coaching plus 181 bilingual journal entries."
       problem: |
         Mainstream financial apps treat money as decontextualised numbers —
         budgets, balances, projections. For many Māori users that framing is

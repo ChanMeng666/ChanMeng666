@@ -222,10 +222,16 @@ meta:
     # band it gets only a one-line long-tail entry in llms-full.txt instead of a
     # full narrative. archcanvas is also repo-less but stays flagship, so it is
     # unaffected. Keep this in mind before demoting any repo-less project.
-    # Order 2026-08-05 (Chan): the compiler, then the product built on it, then
-    # the other live product — so the ArchLang → ArchCanvas dependency reads
-    # top-to-bottom instead of being split by Vitex.
-    flagshipProjectIds: [archlang, archcanvas, vitex]
+    # 2026-08-12 — CUT TO TWO. vitex moved DOWN to aiAgentProjectIds: Chan has
+    # stopped developing it. It is NOT archived and must not be (still
+    # status: live, still tier: flagship, still in spotlightProjectIds) — it
+    # simply no longer belongs in a band whose promise is "what I work on
+    # full-time". The band is now exactly the ArchLang → ArchCanvas pair, and
+    # the compiler → product dependency reads top-to-bottom.
+    # Vitex keeps its full llms.txt / llms-full.txt narrative through the move:
+    # _openSourcePrimary (build.mjs) is fed by aiAgentProjectIds too, and vitex
+    # is provenance: personal with a public repoUrl, so it passes both filters.
+    flagshipProjectIds: [archlang, archcanvas]
 
     # SPOTLIGHT — projects Chan is actively deep-developing right now (as of
     # 2026-07). Deliberately DISTINCT from flagshipProjectIds (which is the
@@ -334,10 +340,10 @@ meta:
     # The card split is now 5 product cards + 5 client cards (was 6 + 4); the
     # 21 shown projects are unchanged.
     #
-    # The shopfront shows 21 projects: 5 product cards + 5 client cards +
-    # 3 AI-agent rows + 5 craft rows, plus the 3 client sub-projects that now
-    # ride as "↳ Related:" links on their parent client cards (see
-    # commissionedProjectIds below). Every
+    # As of 2026-08-12 the shopfront shows 16 projects: 2 product cards +
+    # 4 client cards + 6 AI-agent rows + 4 craft rows + 2 client/commissioned
+    # rows, plus the 4 sub-projects that ride as "↳ Sub-projects I built solo:"
+    # links on their parent client cards. Every
     # more* list stays empty — no <details> overflow; the "View all
     # repositories →" link carries discovery. Notable demotions: the whole
     # ByteDance-bootcamp/coursework band (douyin-mall-go-template 53★,
@@ -356,31 +362,44 @@ meta:
     # provenance:client, ordered strongest-first. clientCardProjectIds render
     # through the SHARED card partial (templates/partials/project-cards.hbs),
     # byte-for-byte the same treatment as flagshipProjectIds.
-    # 2026-08-05: reordered to Chan's triage drag order, then free-period-website
-    # ADDED as a sixth card. FreePeriod is an independent employer (Chan was its
-    # CTO — see work[] / the README "Previously" line), NOT a sub-project of any
-    # card here, so it gets an employer-weight card rather than a table row
-    # underneath one.
-    clientCardProjectIds:      [femtech-weekend-website, eatropolis-website, gavigo-ire, she-sharp, tam-ai-ti, free-period-website]
-    # commissionedProjectIds — EMPTY BY DESIGN again (2026-08-05, second pass).
-    # It briefly held [free-period-website, gavigo-website, her-waka] earlier the
-    # same day. Chan reverted it: a sub-project belongs under its parent card as
-    # a small "↳ Related:" link, not as a table row that reads like independent
-    # work. gavigo-website ← gavigo-ire, her-waka ← she-sharp and
-    # ai-hackathon-assistant ← she-sharp are therefore declared on the PARENT's
-    # relatedProjectIds, and free-period-website moved up to a card of its own
-    # because it is not a sub-project at all.
-    # This restores the 2026-07-15 arrangement. Keep it that way: only put an id
-    # here if it is client work with NO parent card to hang off.
-    commissionedProjectIds:    []
+    # 2026-08-05: reordered to Chan's triage drag order.
+    # 2026-08-12: CUT TO FOUR. tam-ai-ti and free-period-website moved DOWN to
+    # commissionedProjectIds — Chan's call: both are real paid engagements, but
+    # the builds are not heavy enough to hold card weight next to the other
+    # four. They keep naming their client in the table below, so nothing about
+    # the commercial relationship is lost; only the visual weight changed.
+    # Every id here now renders a partner-LOGO line, because each client org in
+    # 60-network.yaml declares meta.x_brand.relatedProjectId pointing back at
+    # the project. That org→project pointer — NOT projects[].clientOrgId — is
+    # what the card partial reads. eatropolis-website is pointed at by TWO orgs
+    # (chow-luck-club + tataki-auckland-unlimited) and renders both logos in
+    # organizations[] file order.
+    clientCardProjectIds:      [femtech-weekend-website, eatropolis-website, gavigo-ire, she-sharp]
+    # Client & commissioned work — NO LONGER EMPTY as of 2026-08-12, and it no
+    # longer renders in commissioned.hbs: this table moved into
+    # templates/partials/open-source.hbs as the third "More I've built"
+    # sub-bucket, below the AI-agent and craft tables.
+    # Still true, and still the rule: a SUB-PROJECT does not belong here — it
+    # belongs under its parent card as a "↳ Sub-projects I built solo:" link
+    # (gavigo-website ← gavigo-ire, her-waka + ai-hackathon-assistant ←
+    # she-sharp, femtech-radar ← femtech-weekend-website). Only put an id here
+    # if it is client work with NO parent card to hang off, which is exactly
+    # what tam-ai-ti and free-period-website are.
+    # This bucket is part of build.mjs's `displayedIds`, which matters:
+    # engagementRoles[].proofProjectId pins tam-ai-ti to a DISPLAYED bucket and
+    # the build fails if it lands in a more* list instead.
+    commissionedProjectIds:    [tam-ai-ti, free-period-website]
     # 2026-08-05 second pass: ai-hackathon-assistant REMOVED — it is a
     # sub-project of the She Sharp website and now renders only as a
-    # "↳ Related:" link on that card, with llmsOnlyOpenSourceIds keeping its
-    # full LLM narrative. echook and ai-programming-teaching-project came DOWN
-    # from the flagship card band when it was cut to three, so this table leads
-    # with echook — the most-starred project in the portfolio (78★).
+    # "↳ Sub-projects I built solo:" link on that card, with
+    # llmsOnlyOpenSourceIds keeping its full LLM narrative.
+    # 2026-08-12: vitex LEADS this table, down from the flagship card band —
+    # Chan has stopped developing it, but it is live, open source, and the only
+    # other product with an MCP server + CLI, so it sits with echook and the
+    # MCP servers rather than under craft. echook follows: the most-starred
+    # project in the portfolio (78★).
     # Order = display order.
-    aiAgentProjectIds:         [echook, google-news-mcp, server-google-jobs, ai-programming-teaching-project, a11y-loop]
+    aiAgentProjectIds:         [vitex, echook, google-news-mcp, server-google-jobs, ai-programming-teaching-project, a11y-loop]
     # Open source with a full llms.txt / llms-full.txt entry but NO README table
     # row of its own (already visible as a "↳ Related" link on a card above).
     # ai-hackathon-assistant is back here 2026-08-05: without it, de-listing the

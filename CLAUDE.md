@@ -170,6 +170,12 @@ Changing a role title, date, or award in one place ≠ done. Check the other thr
 - No pricing/cost framings in project narratives; README visuals only from
   Chan's own tools (gradient-svg-generator, github-visitor-counter,
   github-readme-suno-cards)
+- Any README visual must work on BOTH GitHub canvases (`#ffffff` and `#0d1117`).
+  Near-black ink on transparency and hardcoded `theme=dark` URLs fail silently
+  in one theme. Technique + verification scripts:
+  [readme-theme-assets-skill](https://github.com/ChanMeng666/readme-theme-assets-skill);
+  this repo's remaining offenders are tracked in
+  `docs/github-theme-aware-assets.md`
 
 ## Bulk edits
 

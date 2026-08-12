@@ -2,20 +2,26 @@
      SECTION 1: Hero
      Top gradient banner (gradient-svg-generator) → portrait + H1 + taglines
      + proof line → personal sea photo with caption → mini visitor counter.
-     2026-08-12: the hero mark points at chan-monkey-live-ON-WHITE.svg, not the
-     bare chan-monkey-live.svg. The monkey is drawn in #070607 on transparency,
-     so on GitHub's dark theme the first thing a visitor saw was a black shape on
-     a near-black page. The on-white variant sits the same animation on a white
-     card, so one file works in both themes — no <picture> swap, nothing to keep
-     in sync.
-     Both files are VENDORED from the chan-meng-logo repo (assets/anime/), which
+     2026-08-12: the hero mark is a <picture>, not a bare <img>. The monkey is
+     drawn in #070607 on transparency, so on GitHub's dark theme the first thing
+     a visitor saw was a black shape on a near-black page. Light readers keep the
+     transparent original — no card, no border, exactly as before — and dark
+     readers get chan-monkey-live-on-white.svg, the same animation on a white
+     card. The prefers-color-scheme hook does not exist inside an <img>-loaded
+     SVG, but it does exist here in the host markup, which is why this surface
+     can have both instead of picking one.
+     Verified through GitHub's own Markdown API, not by assumption: it keeps
+     <picture>/<source>/srcset AND the align="right" on the inner <img>, so the
+     float and the text wrap survive. It wraps the whole thing in
+     <themed-picture>, which is inline and does not disturb the float.
+     Both SVGs are VENDORED from the chan-meng-logo repo (assets/anime/), which
      owns the artwork and the derivation — do not edit or regenerate them here.
      Upstream: `npm run build:on-white`, then copy the result over.
      ═══════════════════════════════════════════════════════════════════════ --}}
 
 {{> banner decorations.banners.hero}}
 
-<a href="{{basics.url}}"><img src="/public/brands/chan-monkey-live-on-white.svg" align="right" width="160" alt="{{basics.name}} — {{basics.label}} · {{default basics.location.region "Auckland, New Zealand"}}"></a>
+<a href="{{basics.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="/public/brands/chan-monkey-live-on-white.svg"><img src="/public/brands/chan-monkey-live.svg" align="right" width="160" alt="{{basics.name}} — {{basics.label}} · {{default basics.location.region "Auckland, New Zealand"}}"></picture></a>
 
 *{{#each (split basics.taglines.heroLabel "|")}}{{trim this}}{{#unless @last}} · {{/unless}}{{/each}}.*
 *{{default basics.location.region "Auckland, New Zealand"}}.*

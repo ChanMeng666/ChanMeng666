@@ -52,12 +52,6 @@ const EXTERNAL_REFERENCES = new Set([
   "/public/brands/seismophone-logo.svg",
   "/public/brands/server-google-jobs.svg",
   "/public/brands/tower-defense-logo.svg",
-  // The transparent original of the animated hero mark, vendored from the
-  // chan-meng-logo repo. The README renders the -on-white variant instead (it
-  // survives GitHub's dark theme, which this one does not), so nothing here
-  // references this file — but it has been served from this repo's raw URL
-  // since 2026-08, so it stays rather than breaking anyone's hotlink.
-  "/public/brands/chan-monkey-live.svg",
 ]);
 
 const referenced = new Set(EXTERNAL_REFERENCES);

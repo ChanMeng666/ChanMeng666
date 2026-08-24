@@ -33,6 +33,10 @@ awards:
       stewardship.
 
   - title: UN CSW 69 Speaker — Beyond Beijing 30 Conference
+    # The conference was a physical event at UN HQ New York; Chan presented
+    # REMOTELY by video link (confirmed 2026-08-25). "held at UN Headquarters"
+    # below describes the conference and stays accurate — but do not add
+    # travel/attendance wording. Detail + photo: events[un-csw69-speaker].
     tier: flagship
     recency: recent
     lastUpdated: "2026-05-18"
@@ -771,13 +775,28 @@ publications:
   - name: Femtech At Work — From Math Teacher to FemTech CTO (Greater China Edition, Ep 21)
     tier: secondary
     recency: historical
-    lastUpdated: "2026-05-18"
-    publisher: Spotify
+    lastUpdated: "2026-08-25"
+    # `publisher` was "Spotify" until 2026-08-25 — that is the platform, not the
+    # show. 70-linkedin.yaml already said "Femtech At Work"; the two shards
+    # disagreed. The show name is correct, matching the sibling 码农姐妹 entry.
+    publisher: Femtech At Work
+    releaseDate: "2025-04-22"
     url: https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2
+    # The show's own Episode 21 cover art. Do NOT replace this with the LinkedIn
+    # screenshot in `evidence` below — that screenshot merely contains a lower-
+    # resolution copy of this same artwork inside the post.
     image: /public/articles/femtech-at-work.png
     summary: |
       Chan Meng on AI and Women's Health Innovation — Greater China
-      Edition Episode 21 of the Femtech At Work podcast.
+      Edition Episode 21 of the Femtech At Work podcast, the episode that
+      closed Season 1 of the Greater China Edition.
+    evidence:
+      - src: /public/evidence/femtech-at-work-ep21-host-announcement-linkedin.jpg
+        alt: "LinkedIn post by host Maaike Steinebach announcing Chan Meng as the Episode 21 guest and the close of Season 1"
+        caption: |
+          The host's own public announcement of the episode — third-party
+          attestation of the appearance, distinct from the cover art itself.
+        credit: "Maaike Steinebach (LinkedIn)"
     meta: { x_brand: { type: podcastEpisode } }
 
   # ============================================================================

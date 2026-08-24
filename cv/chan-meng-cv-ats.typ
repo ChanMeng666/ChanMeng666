@@ -258,7 +258,7 @@ Protocol (MCP), and agent skills.
   location: "Auckland, New Zealand",
   arrangement: "Hybrid",
   bullets: (
-    [Rebuilt the member platform for New Zealand's leading women-in-STEM charity (2,200+ registered members, 8,000+ women supported lifetime) — one system for sign-ups, events, and AI-scored mentor matching, carrying 10+ years of content across with zero broken inbound links, \~85% solo over a year.],
+    [Rebuilt the member platform for New Zealand's leading women-in-STEM charity (3,500+ members, 5,000+ women reached lifetime) — one system for sign-ups, events, and AI-scored mentor matching, carrying 10+ years of content across with zero broken inbound links, \~85% solo over a year.],
   ),
 )
 

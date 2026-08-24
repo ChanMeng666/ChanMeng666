@@ -38,7 +38,7 @@
     org-url: "https://www.shesharp.org.nz/",
     dates: "Jul 2025 — Present",
     location: [Auckland, New Zealand · *Hybrid*],
-    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild the member platform for New Zealand's leading women-in-STEM charity (*2,200+ registered members, 8,000+ women supported lifetime*). Moved the community off a drag-and-drop website onto one system for sign-ups, events, and mentor matching — 10+ years of content carried over with zero broken inbound links, \~85% solo over a year. Mentors and mentees are paired by AI scoring (GPT-4o-mini) with human review.],
+    summary: [Recruited by founder Dr Mahsa Mohaghegh to rebuild the member platform for New Zealand's leading women-in-STEM charity (*3,500+ members, 5,000+ women reached lifetime*). Moved the community off a drag-and-drop website onto one system for sign-ups, events, and mentor matching — 10+ years of content carried over with zero broken inbound links, \~85% solo over a year. Mentors and mentees are paired by AI scoring (GPT-4o-mini) with human review.],
   )
   role-line(
     title: "Chief Technology Officer",

@@ -133,6 +133,11 @@
           "url": { "type": "string", "format": "uri" },
           "summary": { "type": "string" },
           "keywords": { "type": "array", "items": { "type": "string" } },
+          "photos": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/mediaAsset" },
+            "description": "Photography of Chan at this event. Files live under /public/photos/events/ named YYYY-MM-DD-<event-slug>-<what>.jpg."
+          },
           "relatedAwardTitle": { "type": "string", "description": "Cross-ref into awards[].title." },
           "relatedWorkId": { "type": "string", "description": "Cross-ref into work[].id or volunteer[].id." },
           "relatedProjectId": { "type": "string", "description": "Cross-ref into projects[].id." },
@@ -179,6 +184,11 @@
           "url": { "type": "string", "format": "uri" },
           "summary": { "type": "string" },
           "image": { "type": "string" },
+          "evidence": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/mediaAsset" },
+            "description": "Screenshots backing this publication (e.g. a third-party announcement post). Files live under /public/evidence/. Distinct from `image`, which is the publication's own artwork."
+          },
           "tier": { "$ref": "#/$defs/tierEnum" },
           "recency": { "$ref": "#/$defs/recencyEnum" },
           "lastUpdated": { "$ref": "#/$defs/loosePartialDate" },
@@ -439,6 +449,21 @@
       "description": "Current relevance signal. active = ongoing right now; recent = finished within ~12 months and still representative; historical = finished long ago but still on the record; deprecated = sunset / not for outbound use."
     },
 
+    "mediaAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["src", "alt"],
+      "description": "A photo or evidence screenshot committed under /public/. Used by events[].photos (photography of Chan at an offline event) and by work/volunteer/publications evidence[] (a screenshot that backs a specific claim).",
+      "properties": {
+        "src":     { "type": "string", "description": "Path under /public/ with a leading slash. audit-assets.mjs hard-fails if the file is absent, so place the file BEFORE writing this." },
+        "alt":     { "type": "string", "description": "Required. Describes the image for a reader who cannot see it." },
+        "caption": { "type": "string" },
+        "credit":  { "type": "string", "description": "Photographer / source, when known." },
+        "date":    { "$ref": "#/$defs/loosePartialDate" },
+        "url":     { "type": "string", "format": "uri", "description": "Live source the asset was captured from, so the claim survives the screenshot going stale." }
+      }
+    },
+
     "organizationEntry": {
       "type": "object",
       "additionalProperties": false,
@@ -609,6 +634,11 @@
         "logo": { "type": "string" },
         "keywords": { "type": "array", "items": { "type": "string" } },
         "narrative": { "$ref": "#/$defs/narrativeWork" },
+        "evidence": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mediaAsset" },
+          "description": "Screenshots backing a specific claim made in this entry (e.g. a public confirmation post). Files live under /public/evidence/."
+        },
         "publicSummary": { "type": "string" },
         "featured": { "type": "boolean", "description": "Show in compact README experience table." },
         "tier": { "$ref": "#/$defs/tierEnum" },

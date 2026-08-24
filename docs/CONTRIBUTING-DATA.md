@@ -130,10 +130,56 @@ events:
     relatedAwardTitle: "..."   # optional → an awards[].title
     relatedWorkId: some-work   # optional → work[].id / volunteer[].id
     relatedProjectId: some-id  # optional → projects[].id
+    photos:                    # optional — see "Event photos & evidence screenshots"
+      - src: /public/photos/events/2026-09-20-some-conference-keynote.jpg
+        alt: "Chan Meng delivering the keynote at Some Conference 2026"
+        caption: "Some Conference 2026, Auckland."
+        date: "2026-09-20"     # optional
+        credit: "Photographer name"  # optional
     summary: |
       One paragraph on what Chan did there. Cross-reference the award/role,
       don't restate it.
 ```
+
+### Event photos & evidence screenshots
+
+Two directories, two jobs. Both are audited by `npm run audit`.
+
+| Directory | Holds | Naming |
+|---|---|---|
+| `public/photos/events/` | photography of Chan at an offline event | `YYYY-MM-DD-<event-slug>-<what>.jpg` — date-first so the directory sorts chronologically |
+| `public/evidence/` | a screenshot that proves a specific claim (a public confirmation post, a billing page, a roster) | `<claim-slug>.<ext>` — **no** date prefix; the date belongs in the YAML `date:` field |
+
+`public/photos/` itself stays flat and unchanged: it holds portraits and the
+handful of stage shots the CV and media kit reference by absolute Typst path.
+
+**Which field to use**
+
+- `events[].photos` — photography of an event.
+- `work[].evidence` / `volunteer[].evidence` / `publications[].evidence` — a
+  screenshot backing a claim the entry makes. On a publication this is *distinct
+  from* `image`, which is the publication's own artwork.
+
+All three take the same `mediaAsset` shape: `src` and `alt` are required;
+`caption`, `credit`, `date` and `url` are optional. Prefer filling `url` with the
+live source — a claim backed only by a screenshot dies when the screenshot goes
+stale.
+
+**Order of operations.** `scripts/audit-assets.mjs` **exits 1** when YAML
+references a `/public/...` path with no file on disk. Always place and compress
+the file *first*, then write the YAML. The reverse order breaks `npm run check`.
+
+**Compression** (the same recipe `cv/assets/extended/MANIFEST.md` uses):
+
+- **Photos** → max **1400 px** on the long edge, progressive mozjpeg **q80**
+  (drop to q68 if a frame lands over budget), **≤ 400 KB**. Bake EXIF orientation
+  (`.rotate()`) so the image never renders sideways.
+- **Screenshots** → keep **PNG**, target **≤ 600 KB**, and downscale only as far
+  as the text stays readable. Legibility is the whole value of a screenshot —
+  open it and read it before committing.
+
+Anything dropped into `public/` that nothing references shows up in the audit's
+orphan warning, so never park a file there "for later".
 
 ### Adding a new certificate
 

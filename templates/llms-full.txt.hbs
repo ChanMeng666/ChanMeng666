@@ -233,12 +233,14 @@
 {{#if (or tier recency lastUpdated)}}{{tierBadge this}}
 {{/if}}
 {{#if type}}- **Type:** {{type}}
-{{/if}}{{#if date}}- **Date:** {{dateRange date endDate}}
+{{/if}}{{#if date}}- **Date:** {{eventDate date endDate}}
 {{/if}}{{#if location}}- **Location:** {{location}}
 {{/if}}{{#if organizer}}- **Organizer:** {{organizer}}
 {{/if}}{{#if url}}- **URL:** {{url}}
 {{/if}}{{#if keywords.length}}- **Keywords:** {{join keywords ", "}}
-{{/if}}{{#if summary}}
+{{/if}}{{#if photos.length}}- **Photos:**
+{{#each photos}}  - {{alt}} — {{src}}
+{{/each}}{{/if}}{{#if summary}}
 {{trim summary}}
 {{/if}}
 {{/each}}

@@ -1054,6 +1054,16 @@ Handlebars.registerHelper("dateRange", (start, end) => {
   const b = end ? fmtDate(end) : "Present";
   return a ? `${a} -- ${b}` : b;
 });
+// Events, unlike roles, are not ongoing: a missing `endDate` on an event means
+// "single-day", not "still running". Using dateRange for them rendered every
+// one-day event as "Aug 2026 -- Present", which reads as an open-ended
+// commitment and corrupts any year-end tally built from this data.
+Handlebars.registerHelper("eventDate", (date, endDate) => {
+  const a = fmtDate(date);
+  if (!a) return "";
+  const b = endDate ? fmtDate(endDate) : null;
+  return b && b !== a ? `${a} -- ${b}` : a;
+});
 Handlebars.registerHelper("hasNarrative", (n) =>
   !!(
     n &&

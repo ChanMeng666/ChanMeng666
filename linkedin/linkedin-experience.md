@@ -135,7 +135,7 @@ What I built:
 **LinkedIn helped me get this job**
 
 ```
-Recruited directly by founder Dr Mahsa Mohaghegh (Head of Computer and Information Sciences, School of Engineering, Computer and Mathematical Sciences at AUT) as the senior AI + full-stack engineer She Sharp didn't have in-house. She Sharp is New Zealand's leading women-in-STEM community — registered charitable trust (CC57025), 2,200+ members, 1,000+ active, 8,000+ women supported lifetime, 50+ corporate partners, 84+ events since 2014.
+Recruited directly by founder Dr Mahsa Mohaghegh (Head of Computer and Information Sciences, School of Engineering, Computer and Mathematical Sciences at AUT) as the senior AI + full-stack engineer She Sharp didn't have in-house. She Sharp is New Zealand's leading women-in-STEM community — registered charitable trust (CC57025), 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014.
 
 Mandate: replace the no-code Webflow site with a real engineering platform, and own it operationally.
 

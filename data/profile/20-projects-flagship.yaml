@@ -366,8 +366,8 @@ projects:
     category: web-apps
     tagline: |
       Solo-built production platform that digitized, automated, and AI-upgraded NZ's
-      leading women-in-STEM nonprofit (charitable trust CC57025, 2,200+ members,
-      8,000+ women supported) — replacing Webflow + spreadsheets with a real member
+      leading women-in-STEM nonprofit (charitable trust CC57025, 3,500+ members,
+      5,000+ women reached) — replacing Webflow + spreadsheets with a real member
       engine. GPT-4o-mini AI mentor matching (5-weight scoring + admin review),
       three role-permissioned dashboards (mentor / mentee / admin), Stripe billing,
       and a custom Slack ecosystem (event-collector bot, weekly mentorship-stats
@@ -456,10 +456,10 @@ projects:
       - { label: "AI matching weights",      value: "MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%" }
       - { label: "AI matching score range",  value: "0-100 overall + 5 per-dimension subscores + confidence (high/medium/low)" }
       - { label: "AI retry policy",          value: "3 attempts with exponential backoff (1s × 2^n), batch concurrency 5, 100ms inter-batch delay" }
-      - { label: "Members",                  value: "2,200+ registered / 1,000+ active" }
-      - { label: "Women supported",          value: "8,000+ lifetime" }
+      - { label: "Members",                  value: "3,500+" }
+      - { label: "Women reached",            value: "5,000+ lifetime" }
       - { label: "Corporate partners",       value: "50+" }
-      - { label: "Events since 2014",        value: "84+" }
+      - { label: "Events since 2014",        value: "96+" }
       - { label: "Industry mentors",         value: "18" }
       - { label: "Mentorship success rate",  value: "85% (5-6× higher promotion likelihood for mentees per She Sharp's outcomes data)" }
       - { label: "Migration crawler assets", value: "1,748 images / 707 MB / 11 JSON files / 85 events + 50 Humanitix tickets + 15 podcasts + 121 photo galleries + 7 press articles + 118 pages" }
@@ -478,15 +478,15 @@ projects:
         registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
         AI/NLP researcher and Head of Computer and Information Sciences at
         AUT, after she experienced first-hand the gap of being part of the
-        20% minority of women in technology. The community reports 2,200+
-        registered members, 8,000+ women supported across its history, 50+
-        corporate partners, and 84+ events since 2014. The original website
+        20% minority of women in technology. The community reports 3,500+
+        members, 5,000+ women reached across its history, 50+
+        corporate partners, and 96+ events since 2014. The original website
         was a Webflow build, and Webflow had become the bottleneck: the
         capabilities the mission required — membership tiers, mentor / mentee
         / admin role permissions, AI-driven mentor matching, Stripe billing,
         Slack-integrated operations, automated event management, recruitment
         pipelines, audit logging — are precisely what no drag-and-drop site
-        builder can express. The leadership team was running a 2,200-member
+        builder can express. The leadership team was running a 3,500-member
         community through spreadsheets, Slack threads, and manual outreach.
         She Sharp needed a real platform.
       audience: |
@@ -503,9 +503,8 @@ projects:
         (screened through the AI recruitment pipeline), the 50+ corporate
         partners (sponsor packages tied to event visibility and member
         access), and She Sharp's operational team (Slack-integrated
-        workflows). The organisation reports 1,000+ active members today,
-        drawn from a registered base of 2,200+ and a lifetime supported
-        population of 8,000+ women.
+        workflows). The organisation reports 3,500+ members today and a lifetime
+        reach of 5,000+ women.
       productLogic: |
         The new platform replaces the old Webflow site with a real member
         system anchored on three coexisting dashboards. A user signs up via
@@ -631,7 +630,7 @@ projects:
         scale without proportional staff load: dashboards, matching,
         membership lifecycle, communications, recruitment, and event
         management are automated. The organisation's mission scaling — from
-        the 1,500 active members publicly cited a year ago toward the 2,200+
+        the 1,500 active members publicly cited two years ago toward the 3,500+
         registered base it reports today — depends directly on this technical
         capability.
       technicalApproach: |
@@ -747,10 +746,10 @@ projects:
         **95 API routes, 53 pages, 160 components, 26 SQL migrations, and an
         11-namespace `lib/` library** (matching, slack-bot, stripe, funding,
         programmes, recruitment, invitations, mentorship, email, auth, db) —
-        the technical infrastructure for an organisation that reports 2,200+
-        registered members, 1,000+ active, 8,000+ women supported lifetime,
-        50+ corporate partners, 84+ events since 2014, 18 industry mentors,
-        and an 85% mentorship success rate.
+        the technical infrastructure for an organisation that reports 3,500+
+        members, 5,000+ women reached lifetime, 50+ corporate partners,
+        96+ events since 2014, 18 industry mentors, and an 85% mentorship
+        success rate.
 
         The most recent build-out extended the public site into a photo-rich
         "Editorial" visual system and full event pages — including the

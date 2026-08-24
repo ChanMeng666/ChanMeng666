@@ -256,7 +256,16 @@
         "myMandate": "**How the engagement started.** Luka Madzarac asked Claude Code\nto surface AI architects who could help Engram reach Anthropic\nPartner status. Claude returned Chan as one of the strongest\nmatches based on her verifiable open-source agentic-tooling\nfootprint — **claude-code-audio-hooks**, **CopilotKit**\ncontributions, production LangChain automation engines,\nprogrammatic media generation with **Remotion**, and the\n\"**API-as-UI**\" design pattern she's been publishing. Luka\npublicly confirmed the sourcing path on LinkedIn:\n*\"Claude Code surfaced Chan as one of the strongest matches\nfor what we're looking for.\"*\n([announcement post](https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-activity-7459724144671195136-3JoV))\n\n**What the cohort engagement covered.** A 45-day Architect Cohort\nonboarding at ~10–15 hours per week, structured as a mutual\nevaluation period; the engagement ran May–July 2026.\nResponsibilities were: (1) working through Anthropic's **Claude\nPartner Network Learning Path** — building on already-held\nAnthropic credentials (**AI Fluency: Framework & Foundations**,\nAug 2025; **Claude Code in Action**, Aug 2025, credential\nID JHIY9NPYTR2D); (2) participating in weekly working sessions\nwith founder Luka Madzarac and the rest of the cohort on\nagent, skill, and MCP-integration patterns; (3) contributing\nto the cohort's emerging agentic-media engineering conventions;\n(4) maintaining presence in Engram's communication channels\nfor cross-cohort engineering discussion.\n",
         "technicalHighlights": "The technical footprint that Claude Code surfaced to Engram —\nall carved out as Chan's own IP under the cohort agreement and\nremaining Chan's property:\n\n- **claude-code-audio-hooks** — audio-feedback hook system for\n  Claude Code (explicitly named in the cohort agreement as\n  Chan's preserved IP), with its **echook** notification daemon.\n- **CopilotKit** — active contributor to the open-source agent\n  UI framework\n  ([PRs](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)).\n- **google-news-mcp** — production MCP server published to the\n  public registry.\n- **typst-claude-skill** — Claude Code skill for programmatic\n  document generation; demonstrates skill-structure design.\n- **claude-code-compressed-map** — LLM-first tier/recency\n  metadata system powering this very profile (the meta-move:\n  optimising Chan's own data so LLMs rank it correctly —\n  *GEO in practice*).\n- Production **LangChain** automation engines and interactive\n  LLM systems for mobile gaming.\n- Programmatic media generation via **Remotion**.\n\nThe technical centre of gravity is **\"API-as-UI\"**: building\nagent surfaces where conversational intent orchestrates\ndownstream tools and the model's chain-of-reasoning becomes\nthe user interface — not a chat widget bolted onto a form.\n",
         "impactDelivered": "The Architect Cohort was an evaluation-shaped engagement rather\nthan a delivery one, and it ran its course May–July 2026. What\ncame out of it:\n\n1. **Anthropic Claude Partner Network Learning Path — completed**,\n   with verifiable per-course certificates recorded in\n   `certificates[]` (Claude Code in Action, Building with the\n   Claude API, Introduction to Model Context Protocol,\n   Introduction to Agent Skills, all May 2026, on top of AI\n   Fluency Framework and Claude Code in Action from Aug 2025).\n   The **Claude Certified Architect — Foundations practice\n   examination was sat and passed.**\n2. **Contributions to the cohort's shared agent and skill design\n   conventions** through weekly working sessions with the founder\n   and the rest of the architect cohort.\n3. **Cross-pollination** of Chan's pre-existing open-source\n   agentic tooling experience (claude-code-audio-hooks,\n   CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based\n   media generation) into cohort discussions on production-grade\n   agent design.\n4. **Open-source IP preserved.** The cohort agreement explicitly\n   carved out claude-code-audio-hooks (now **echook**) and the\n   rest of Chan's prior work as her own property — echook has\n   since gone on to 78 GitHub stars independently of Engram.\n\n**Precise on the credential, deliberately.** The CCA-F\n*curriculum* was completed and the *practice* exam passed; the\n**official certification exam was never sat, so the CCA-F\ncredential is not held.** Every surface should say \"curriculum\ncompleted\" or \"practice exam passed\" and never \"certified\" —\nthe course certificates are real and verifiable, the\ncertification is not claimed.\n\n**Meta-signal**: the engagement itself validates a hypothesis\nChan has been publishing about (**GEO / Generative Engine\nOptimization**) — that frontier models actively surface\ncandidates based on verifiable code and real-world impact rather\nthan traditional SEO keywords. Being the candidate Claude Code\nrecommended to Engram for an Anthropic Partner engagement is\nempirical evidence that the open-source-first portfolio strategy\nworks — and that remains true independently of how the cohort\nended.\n"
-      }
+      },
+      "evidence": [
+        {
+          "src": "/public/evidence/claude-recommended-chan-to-engram-linkedin.png",
+          "alt": "LinkedIn post in which Engram founder Luka Madzarac publicly confirms that Claude Code surfaced Chan Meng as one of the strongest matches for the role",
+          "caption": "Chan's post on being recruited through Claude, with founder Luka\nMadzarac replying in the comments: \"It's true, Claude Code surfaced\nChan as one of the strongest matches for what we're looking for.\"\n4,264 impressions.\n",
+          "date": "2026-05",
+          "url": "https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-share-7459724143593246720-SD5v"
+        }
+      ]
     },
     {
       "id": "technest",
@@ -376,7 +385,7 @@
       "featured": true,
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-08-24",
       "keywords": [
         "Next.js 15",
         "React 19",
@@ -390,8 +399,8 @@
         "Tailwind 4"
       ],
       "narrative": {
-        "impactHeadline": "Recruited directly by founder Dr Mahsa Mohaghegh as the senior AI + full-stack capability She Sharp didn't have in-house; led the cutover from Webflow to the new platform via a custom migration crawler preserving 10+ years of legacy content for 2,200+ members.",
-        "companyContext": "She Sharp is New Zealand's leading women-in-STEM community — a\nregistered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),\nAI/NLP researcher and Head of Computer and Information Sciences at AUT. The\norganization runs a mentorship programme, a corporate-partner\nnetwork, and a recurring events calendar that together support\n2,200+ registered members, 1,000+ active, and 8,000+ women supported\nacross its history. 50+ corporate partners, 84+ events since 2014,\n85% mentorship success rate.\n",
+        "impactHeadline": "Recruited directly by founder Dr Mahsa Mohaghegh as the senior AI + full-stack capability She Sharp didn't have in-house; led the cutover from Webflow to the new platform via a custom migration crawler preserving 10+ years of legacy content for 3,500+ members.",
+        "companyContext": "She Sharp is New Zealand's leading women-in-STEM community — a\nregistered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),\nAI/NLP researcher and Head of Computer and Information Sciences at AUT. The\norganization runs a mentorship programme, a corporate-partner\nnetwork, and a recurring events calendar that together support\n3,500+ members and 5,000+ women reached\nacross its history. 50+ corporate partners, 96+ events since 2014,\n85% mentorship success rate.\n",
         "mission": "Close the representation gap in technology by connecting women in\nSTEM with role models, mentors, employers, and each other — and by\nrunning flagship programmes (mentorship, Her Waka workforce re-entry,\nTHRIVE) that operationalize that mission at scale. The bottleneck on\nscale, when I joined, was the technical capability of the platform:\nthe old Webflow site had become incompatible with the membership\nsystem, AI matching, billing, and Slack-integrated operations the\nmission required.\n",
         "myMandate": "Recruited directly by Dr Mahsa Mohaghegh (McCauley) as Senior Full\nStack Engineer & Website Team Lead — specifically as the AI and\nsenior development capability She Sharp didn't have in-house — to\nbuild the new member platform end-to-end and own it operationally.\nMandate explicitly includes: replace the Webflow site, design and\nship the AI mentor-mentee matching system, integrate Slack across\nthe organization's operations, run events and recruitment\ninfrastructure, and serve as technical lead on adjacent initiatives\n(Her Waka MSD-funded programme, SEO strategy).\n",
         "impactDelivered": "Shipped and operate the new full-stack She Sharp platform replacing\nthe legacy Webflow site. 793 of 936 commits authored solo (85% of\ntotal). Headline systems delivered: AI mentor-mentee matching\n(GPT-4o-mini, 5-dimensional scoring with human-in-the-loop review),\nthree role-permissioned dashboards (mentor / mentee / admin) with\ndual-role support, Stripe membership-tier billing, the Slack\necosystem (event-collector bot, volunteer webhooks, weekly stats\ndigest, weekly NZ funding-opportunities crawler), a Claude agent\nskill `sync-event-from-slack` that automates event-page publication\nfrom Slack content, comprehensive audit logging, and a database\nversion-control system.\n\n**Custom Slack ecosystem for the She Sharp workspace.** Beyond\nthe admin-side Claude Code skill, I shipped a portfolio of\nintegrations that run inside the She Sharp Slack workspace\nitself: an event-collector endpoint (`/api/slack/events`) that\ningests workspace activity for the database; a **weekly\nmentorship-stats digest bot** that auto-publishes engagement\nnumbers each Monday; and a **weekly NZ funding-opportunities\ndigest bot** that crawls 6 government RSS/HTML sources, scores\neach opportunity for member relevance (60+ threshold), and\nposts the top 10 to a dedicated `#funding-opportunities`\nchannel via Incoming Webhook. Together these collapse work\nthat previously consumed volunteer-team hours each week into\nbackground automation members notice as \"the Slack just knows.\"\n\nBeyond the main platform, I shipped three supporting projects: the\nPython migration crawler (1,748 images / 707 MB / 11 JSON files\nbootstrapping the new platform from the old Webflow site), the Her\nWaka MSD-funded teaching site at herwaka.shesharp.org.nz with\ncomplete authored curriculum (4 workshops + 8+ tutorials), and a\nprofessional SEO audit and 10-point recommendations report on\nshesharp.org.nz that identified the high-priority mobile-vs-desktop\nranking gap on \"women in tech New Zealand.\"\n",
@@ -680,14 +689,14 @@
       "logo": "/public/organizations/she-sharp-logo-purple-dark.svg",
       "tier": "primary",
       "recency": "active",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-08-24",
       "keywords": [
         "Volunteer ambassador",
         "Women in STEM",
         "Community outreach",
         "Website team"
       ],
-      "summary": "Ambassador on the She Sharp Website Team — a nonprofit dedicated to\nbridging the gender gap in STEM (where female representation sits at\n~20%). She Sharp has built a **2,200+ member community** and organised\n**84+ events since 2014**. Continues Chan's relationship with the\norganisation after the formal Lead Engineer role, focused on\nsustaining the digital infrastructure that powers community growth.\n"
+      "summary": "Ambassador on the She Sharp Website Team — a nonprofit dedicated to\nbridging the gender gap in STEM (where female representation sits at\n~20%). She Sharp has built a **3,500+ member community** and organised\n**96+ events since 2014**. Continues Chan's relationship with the\norganisation after the formal Lead Engineer role, focused on\nsustaining the digital infrastructure that powers community growth.\n"
     },
     {
       "id": "cebu-international-academy",
@@ -1023,7 +1032,7 @@
       "name": "She Sharp",
       "priority": 2,
       "category": "web-apps",
-      "tagline": "Solo-built production platform that digitized, automated, and AI-upgraded NZ's\nleading women-in-STEM nonprofit (charitable trust CC57025, 2,200+ members,\n8,000+ women supported) — replacing Webflow + spreadsheets with a real member\nengine. GPT-4o-mini AI mentor matching (5-weight scoring + admin review),\nthree role-permissioned dashboards (mentor / mentee / admin), Stripe billing,\nand a custom Slack ecosystem (event-collector bot, weekly mentorship-stats\ndigest, NZ government funding crawler, Claude `sync-event-from-slack` skill)\nthat turned hours of volunteer manual work into one-command automation.\n793/936 commits (85%) solo across ~12 months.\n",
+      "tagline": "Solo-built production platform that digitized, automated, and AI-upgraded NZ's\nleading women-in-STEM nonprofit (charitable trust CC57025, 3,500+ members,\n5,000+ women reached) — replacing Webflow + spreadsheets with a real member\nengine. GPT-4o-mini AI mentor matching (5-weight scoring + admin review),\nthree role-permissioned dashboards (mentor / mentee / admin), Stripe billing,\nand a custom Slack ecosystem (event-collector bot, weekly mentorship-stats\ndigest, NZ government funding crawler, Claude `sync-event-from-slack` skill)\nthat turned hours of volunteer manual work into one-command automation.\n793/936 commits (85%) solo across ~12 months.\n",
       "url": "https://www.shesharp.org.nz/",
       "repoUrl": "https://github.com/NZ-SheSharp/she-sharp",
       "extraLinks": [
@@ -1175,11 +1184,11 @@
         },
         {
           "label": "Members",
-          "value": "2,200+ registered / 1,000+ active"
+          "value": "3,500+"
         },
         {
-          "label": "Women supported",
-          "value": "8,000+ lifetime"
+          "label": "Women reached",
+          "value": "5,000+ lifetime"
         },
         {
           "label": "Corporate partners",
@@ -1187,7 +1196,7 @@
         },
         {
           "label": "Events since 2014",
-          "value": "84+"
+          "value": "96+"
         },
         {
           "label": "Industry mentors",
@@ -1207,12 +1216,12 @@
       "publicSummary": "Solo-built member platform for She Sharp — New Zealand's leading\nwomen-in-STEM charity (a registered charitable trust). It handles\nmember sign-ups and billing, runs the events calendar, and matches\nmentors with mentees using AI scoring backed by a human reviewer,\nreplacing a Webflow site and spreadsheets the team had outgrown.\n",
       "narrative": {
         "impactHeadline": "The member platform for New Zealand's leading women-in-STEM charity — solo-built over a year, replacing spreadsheets and a drag-and-drop website with one system for member sign-ups, events, and mentor matching that pairs AI scoring with human review.",
-        "problem": "She Sharp is New Zealand's leading women-in-STEM nonprofit — a\nregistered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),\nAI/NLP researcher and Head of Computer and Information Sciences at\nAUT, after she experienced first-hand the gap of being part of the\n20% minority of women in technology. The community reports 2,200+\nregistered members, 8,000+ women supported across its history, 50+\ncorporate partners, and 84+ events since 2014. The original website\nwas a Webflow build, and Webflow had become the bottleneck: the\ncapabilities the mission required — membership tiers, mentor / mentee\n/ admin role permissions, AI-driven mentor matching, Stripe billing,\nSlack-integrated operations, automated event management, recruitment\npipelines, audit logging — are precisely what no drag-and-drop site\nbuilder can express. The leadership team was running a 2,200-member\ncommunity through spreadsheets, Slack threads, and manual outreach.\nShe Sharp needed a real platform.\n",
-        "audience": "Active members of the She Sharp community: women in technology at\nevery career stage, from undergraduate students considering STEM\nmajors through senior engineers serving as mentors. The platform\nsupports three role-permissioned dashboards (mentor, mentee, admin)\nplus dual-role compatibility — a mid-career engineer can\nsimultaneously mentor juniors and be mentored by a senior, without\nspecial-cased data modelling. Additional audiences served on adjacent\nsurfaces: Her Waka programme participants (women re-entering the\nworkforce, served by the dedicated MSD-funded teaching site at\nherwaka.shesharp.org.nz), volunteer and ambassador candidates\n(screened through the AI recruitment pipeline), the 50+ corporate\npartners (sponsor packages tied to event visibility and member\naccess), and She Sharp's operational team (Slack-integrated\nworkflows). The organisation reports 1,000+ active members today,\ndrawn from a registered base of 2,200+ and a lifetime supported\npopulation of 8,000+ women.\n",
+        "problem": "She Sharp is New Zealand's leading women-in-STEM nonprofit — a\nregistered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),\nAI/NLP researcher and Head of Computer and Information Sciences at\nAUT, after she experienced first-hand the gap of being part of the\n20% minority of women in technology. The community reports 3,500+\nmembers, 5,000+ women reached across its history, 50+\ncorporate partners, and 96+ events since 2014. The original website\nwas a Webflow build, and Webflow had become the bottleneck: the\ncapabilities the mission required — membership tiers, mentor / mentee\n/ admin role permissions, AI-driven mentor matching, Stripe billing,\nSlack-integrated operations, automated event management, recruitment\npipelines, audit logging — are precisely what no drag-and-drop site\nbuilder can express. The leadership team was running a 3,500-member\ncommunity through spreadsheets, Slack threads, and manual outreach.\nShe Sharp needed a real platform.\n",
+        "audience": "Active members of the She Sharp community: women in technology at\nevery career stage, from undergraduate students considering STEM\nmajors through senior engineers serving as mentors. The platform\nsupports three role-permissioned dashboards (mentor, mentee, admin)\nplus dual-role compatibility — a mid-career engineer can\nsimultaneously mentor juniors and be mentored by a senior, without\nspecial-cased data modelling. Additional audiences served on adjacent\nsurfaces: Her Waka programme participants (women re-entering the\nworkforce, served by the dedicated MSD-funded teaching site at\nherwaka.shesharp.org.nz), volunteer and ambassador candidates\n(screened through the AI recruitment pipeline), the 50+ corporate\npartners (sponsor packages tied to event visibility and member\naccess), and She Sharp's operational team (Slack-integrated\nworkflows). The organisation reports 3,500+ members today and a lifetime\nreach of 5,000+ women.\n",
         "productLogic": "The new platform replaces the old Webflow site with a real member\nsystem anchored on three coexisting dashboards. A user signs up via\nemail/password (bcrypt) or OAuth (Google + GitHub), then independently\nactivates any combination of mentor, mentee, or admin roles — duality\nis the **schema-level design principle**, not a special case. The\n`user_roles` table has one row per (user, role_type) tuple with its\nown `is_active`, `verified_at`, and `activation_step` columns, so a\nmid-career engineer can simultaneously mentor juniors and be mentored\nby a senior with zero special-cased data modelling. The dashboard\nlayer (`(dashboard)/dashboard/{mentor-profile,mentee-profile,\nmentorship,meetings,admin,account}`) reads the active-roles set and\ncomposes role-specific cards into a single unified view.\n\n**The headline feature is the AI mentor-mentee matching engine**,\nimplemented as a two-stage pipeline in `lib/matching/`. Stage one is\na rule-based pre-filter that rapidly scores candidate pairs on basic\ncompatibility (skill set intersection, industry overlap, location/\nmeeting-format compatibility). Stage two passes promising pairs to\nGPT-4o-mini at `temperature: 0.3`, `max_tokens: 1000`, with\n`response_format: { type: 'json_object' }`, against an explicit\nscoring rubric defined in `lib/matching/prompts.ts`:\n\n  - **MBTI Compatibility — 15%** (cognitive function complementarity,\n    communication style)\n  - **Skill Alignment — 35%** (mentor's expert skills vs mentee's\n    learning goals, expertise depth vs learning breadth)\n  - **Goal Alignment — 30%** (career trajectory compatibility, mentor's\n    ability to guide toward stated goals, shared values)\n  - **Industry Match — 10%** (direct + adjacent + transferable industry\n    knowledge)\n  - **Logistics — 10%** (meeting format, location proximity, time\n    availability)\n\nEach call returns a 0-100 overall + per-dimension subscores +\nnatural-language explanation + recommendation + confidence (high /\nmedium / low) + matchingFactors (strengths / challenges /\ngrowthOpportunities), Zod-validated against `AIMatchResponseSchema`\nbefore persistence. **Three production-hardness layers wrap the\nOpenAI call**: (1) **Upstash Redis cache** keyed by mentor:mentee\npair so repeat scoring is free; (2) **exponential-backoff retries**\n(3 attempts, 1000ms × 2^attempt, with rate-limit/timeout\nclassification); (3) a **deterministic rule-based fallback** with\nthe same weighted formula that activates when OpenAI is unavailable,\nexplicitly marking `confidenceLevel: 'low'` and\n`recommendation: 'manual review'` so admins know to look closer.\nBatch processing caps at 5 concurrent calls with 100ms inter-batch\ndelay to respect API limits.\n\nMatches above threshold surface to admin (`/api/admin/matching`)\nfor human approval before pairing — conservative human-in-the-loop\nautomation, not speculative auto-pairing. A **mentee matching queue**\n(`lib/matching/queue-service.ts` + Vercel Cron at\n`/api/cron/process-queue`) holds unmatched mentees in priority order\nwhen mentor capacity is full and re-evaluates as slots open.\nMeetings are typed (intro / regular / milestone / final), tracked\nwith action items (JSONB), notes, feedback, and 1-5 ratings.\n\n**The Stripe-integrated membership flow has a novel activation\narchitecture**: it doesn't instantly grant access. The architecture\nis **form → checkout → invitation code → activation**. A prospective\nmentee fills the public mentee form (`/api/forms/mentee/public`),\nwhich creates a `mentee_form_submissions` row. They get redirected\nto Stripe Checkout. On `checkout.session.completed` webhook, the\nsystem creates a `membership_purchases` record AND generates a\nunique `invitation_code` (`createPaymentInvitationCode`) which is\nemailed via Resend. The user must redeem the code to activate their\naccount, guaranteeing email ↔ payment ↔ account linkage and\npreventing orphaned accounts. Self-service via Stripe Customer\nPortal. Webhook signature verification on every event. Membership\nlifecycle transitions update `user_memberships` + `activity_logs`\natomically.\n\nThe platform also runs She Sharp's events infrastructure (workshops,\ntraining, networking, social, THRIVE programmes — online, in-person,\nor hybrid, with capacity, waitlist, and QR check-in via `/api/qr`),\nthree membership tiers, a tiered resource library\nwith download access control + access logs, transactional email via\nResend, AI-screened volunteer recruitment (`lib/recruitment/\nai-screening.ts` against `/api/admin/recruitment/[id]/ai-screen`),\nsponsor inquiries with inline forms, and comprehensive audit logging\n(JSONB diffs via `deep-diff` on every admin action).\n\n**A custom Slack ecosystem is deeply integrated** through three\ncoordinated surfaces. (1) **Read-only event-collector bot** with\nscoped tokens (`channels:history`, `channels:read`, `groups:history`,\n`groups:read`, `files:read`, `users:read`, `pins:read`,\n`bookmarks:read`) — no destructive scopes by design. (2) **Three\nVercel Cron jobs**: `weekly-mentorship-stats` posts engagement\ndigest to `#mentorships` (recently hardened to survive cold Neon\nconnection pools), `weekly-funding-crawl` runs the NZ government\nfunding crawler over **6 official sources** (Beehive RSS, data.govt\nCKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML) with\ndedup + relevance scoring + keyword filtering, posting a curated\nSlack digest, and `process-queue` re-evaluates the matching queue.\n(3) **Interactive Slack event handlers** at `/api/slack/events` and\n`/api/slack/events/interactive` for in-Slack workflows.\n\n**The most distinctive Slack-side piece** is a Claude agent skill\nnamed `sync-event-from-slack` living at\n`.claude/skills/sync-event-from-slack/`. It automates the previously-\nmanual work of turning a Slack event channel into a published event\npage: it reads channel messages, thread replies, pinned items,\nbookmarks, speaker `.docx` bios (via `mammoth`), cover posters, and\nspeaker headshots; downloads images and renames them per convention;\ncomposes a structured `EventV3Schema` JSON entry against a strict\nZod schema; runs `verify-image-paths` as a CI gate; and on approval\ncommits to git or opens a PR. **The skill defaults to dry-run** —\nno file writes, no git, no network side-effects beyond reading\nSlack — unless the user explicitly says \"go ahead and apply\". Event\npublication has gone from hours of manual editing to a single\ncommand, with the AI bot's structured output Zod-validated as the\nlast line of defense before any git write.\n\nThe events surface now also carries fully data-driven event pages —\nfor example the Aotearoa AI Hackathon Festival 2026 page (hosted by\nAUT in partnership with She Sharp and the AI Forum NZ), with a judging\npanel, schedule, prizes, sponsors, and photo galleries composed from a\nsingle Zod-validated `EventV3Schema` entry rather than hand-built\nmarkup.\n",
-        "businessLogic": "The platform is the operational substrate that lets each channel\nscale without proportional staff load: dashboards, matching,\nmembership lifecycle, communications, recruitment, and event\nmanagement are automated. The organisation's mission scaling — from\nthe 1,500 active members publicly cited a year ago toward the 2,200+\nregistered base it reports today — depends directly on this technical\ncapability.\n",
+        "businessLogic": "The platform is the operational substrate that lets each channel\nscale without proportional staff load: dashboards, matching,\nmembership lifecycle, communications, recruitment, and event\nmanagement are automated. The organisation's mission scaling — from\nthe 1,500 active members publicly cited two years ago toward the 3,500+\nregistered base it reports today — depends directly on this technical\ncapability.\n",
         "technicalApproach": "Next.js 15.6 canary (App Router, Turbopack dev) + React 19.1.2 +\nTypeScript 5.8 over Drizzle ORM 0.43 on Neon Postgres (serverless\nconnection pool), authenticated via NextAuth 5 beta with bcrypt\ncredentials and Google + GitHub OAuth (via `@auth/drizzle-adapter`),\ndeployed on Vercel's edge network with documented sub-second TTFB.\nTailwind CSS 4.1 + shadcn/ui + Radix UI (20+ primitives) for the UI;\nFramer Motion + Lenis + Three.js/OGL for landing-page polish;\n@dnd-kit for admin kanban workflows; Recharts 3 + @number-flow/react\nfor dashboard analytics.\n\n**The schema runs to 1,411 lines, 30 pgEnums, and 35 pgTables** —\na deliberate type-safety investment. Membership tiers (free / basic /\npremium), mentorship-relationship states (pending / active / paused /\ncompleted / rejected), meeting types (intro / regular / milestone /\nfinal), event types (workshop / networking / training / social /\nthrive), location types (online / in_person / hybrid), career stages\n(undergraduate → postgraduate → early_career → mid_career → senior →\ncareer_transition), MBTI 16 personality types, recruitment stages,\ninvitation-code redemption states, activity-log action types — every\nbusiness concept is a typed enum rather than a string column, so\ninvalid states are unrepresentable at the database level. **26 SQL\nmigration files** (0000_soft_the_anarchist → 0027_bitter_fallen_one)\napplied via a custom safe-migration wrapper with pre-deployment\nsnapshots and rollback SQL generation.\n\n**95 API routes** across `app/api/**/route.ts` covering auth (11\nroutes including OAuth callbacks, password reset, email\nverification), admin (21 routes for matching/mentee-mentor reviews/\nrecruitment/programmes/users/permissions/analytics/zombie-cleanup),\nmentorship lifecycle (apply / approve / relationships / meetings),\nevents (browse / register / my-registrations / QR check-in), forms\n(mentee / mentor / volunteer with public-vs-authenticated variants),\nStripe (checkout / donate / webhook), Slack (events / interactive),\ncron (process-queue / weekly-funding-crawl / weekly-mentorship-stats),\nresources (download with access control), notifications, file\nuploads (CV + profile photo via Cloudinary). **53 pages, 160\ncomponents.**\n\n**The AI matching engine** combines a deterministic rule-based\npre-filter with GPT-4o-mini for high-potential pairs only. The\n`lib/matching/` namespace has clear separation: `prompts.ts` holds\nthe system rubric and per-pair prompt builder, `openai-service.ts`\nowns the LLM call with retry/cache/fallback, `cache.ts` interfaces\nUpstash Redis, `queue-service.ts` manages the FIFO/priority queue\nfor over-capacity scenarios, `service.ts` orchestrates the full\nmatch flow, and `types.ts` defines `AIMatchResponseSchema` (Zod)\nthat every LLM output must satisfy. Cost stays predictable because\nStage 1 filters out incompatible pairs before they reach the LLM;\noutputs stay explainable because the rubric is explicit;\navailability stays high because the rule-based fallback uses the\nsame weighted formula. Admin override is the final gate.\n\n**Slack integration** uses **scoped read-only tokens** by design\n(`channels:history`, `channels:read`, `groups:history`,\n`groups:read`, `files:read`, `users:read`, `pins:read`,\n`bookmarks:read` — never `chat:write` from the collector). The\n`sync-event-from-slack` agent skill composes existing CLI tools\n(Slack fetch → image download with rename → docx parse via\n`mammoth` → JSON validate against `EventV3Schema` Zod → git commit\nvia `@octokit/rest` or local) into a single intent-driven workflow.\n**Strict Zod validation is the last line of defense before any\ngit write** — an invalid LLM patch is rejected with a Slack-\nfriendly error, never persisted. The `weekly-funding-crawl` cron\nruns `lib/funding/{fetcher,dedup,scoring,keywords}.ts` over 6\ngovernment RSS/HTML sources, scores by relevance keywords, dedups\nacross sources, and posts a curated Slack digest. The recent\n`weekly-mentorship-stats` hardening (`84f788f`) is a small but\nrevealing detail: Neon's serverless pool can return stale\nconnections to a cold Vercel Cron worker, so the cron now retries\nonce on the specific `ECONNRESET`/`Connection terminated` error\nclass before failing the run.\n\n**Image storage on Cloudinary** with on-the-fly transformations;\n**transactional email via Resend** with role-specific templates\n(mentorship-emails.ts + recruitment-emails.ts + membership\nconfirmation); **payments via Stripe** with Customer Portal for\nself-service membership management; **audit logging** uses\n`deep-diff` to capture JSONB before/after on every admin mutation.\n\nThe role spans beyond the main platform. Three supporting projects\nround out the contribution. **she-sharp-crawl** — a Python crawler\n(BeautifulSoup4, Requests) that migrated content from the old\nWebflow site: 1,748 images totaling 707 MB across 11 modular JSON\nfiles, covering 85 SheSharp events, 50 Humanitix ticketed events\n(with banner images upgraded 500 px → 1,600 px), 15 podcasts, 121\nphoto galleries, 7 news / press articles, and 118 site pages. Image\ndeduplication and Wayback Machine fallback for dead links.\n**her-waka** — the Mintlify-powered teaching site at\nherwaka.shesharp.org.nz for the MSD-funded Her Waka programme; I\nauthored both the platform and the curriculum (four workshops\ncovering AI & Future of Work, #IAmRemarkable + Vibe Coding,\nCybersecurity, Personal Branding, plus 8+ self-paced tutorials at\nthree difficulty tiers). **serpdata-api-test** — a professional SEO\naudit on shesharp.org.nz built on Node 22 native fetch over the\nSerpData API, running ~20 live Google queries across eight analysis\nsections (brand visibility, topical keyword rankings, NZ competitor\nmatrix, mobile-vs-desktop gap, cross-market reach, SERP feature\ninventory) plus a 10-point prioritized recommendations report\n(e.g., \"SheSharp ranks #4 desktop / not in mobile top 10 for 'women\nin tech New Zealand' — high-priority technical SEO gap\").\n",
-        "outcomes": "Production-deployed and operating She Sharp's full member lifecycle\nfor about a year (first commit 2025-07-22, latest 2026-07-14) — still\nin active build-out, not maintenance. Commit volume: **936 commits,\n793 (85%) authored solo by Chan Meng**, with 140 (15%) by Lesley Gao\non frontend design and code and 3 by an automation bot. **541 of\nthose commits landed since 2026-01-01 alone.** The platform now runs\nShe Sharp's membership, mentorship, events, sponsor relationships,\nvolunteer recruitment pipeline, and internal team operations across\n**95 API routes, 53 pages, 160 components, 26 SQL migrations, and an\n11-namespace `lib/` library** (matching, slack-bot, stripe, funding,\nprogrammes, recruitment, invitations, mentorship, email, auth, db) —\nthe technical infrastructure for an organisation that reports 2,200+\nregistered members, 1,000+ active, 8,000+ women supported lifetime,\n50+ corporate partners, 84+ events since 2014, 18 industry mentors,\nand an 85% mentorship success rate.\n\nThe most recent build-out extended the public site into a photo-rich\n\"Editorial\" visual system and full event pages — including the\nAotearoa AI Hackathon Festival 2026 page (AUT × She Sharp × AI Forum\nNZ, 7–8 August 2026 at AUT City Campus), assembled from a single\nZod-validated event entry. **The Her Waka programme launched in March\n2026** with NZ Ministry of Social Development funding, using the\ndedicated teaching site I built (herwaka.shesharp.org.nz) and the\ncurriculum I authored — 4 workshops + 8 tutorials in 3 tiers. **The\nSEO audit** identified actionable competitive gaps, notably the\ndesktop/mobile ranking disparity on \"women in tech New Zealand.\"\n**The migration crawler** enabled a clean cutover from Webflow\nwithout losing institutional knowledge. **The Slack-bot + agent-skill\npairing** replaced an hours-long manual event-publication workflow\nwith a single dry-run-default command.\n",
+        "outcomes": "Production-deployed and operating She Sharp's full member lifecycle\nfor about a year (first commit 2025-07-22, latest 2026-07-14) — still\nin active build-out, not maintenance. Commit volume: **936 commits,\n793 (85%) authored solo by Chan Meng**, with 140 (15%) by Lesley Gao\non frontend design and code and 3 by an automation bot. **541 of\nthose commits landed since 2026-01-01 alone.** The platform now runs\nShe Sharp's membership, mentorship, events, sponsor relationships,\nvolunteer recruitment pipeline, and internal team operations across\n**95 API routes, 53 pages, 160 components, 26 SQL migrations, and an\n11-namespace `lib/` library** (matching, slack-bot, stripe, funding,\nprogrammes, recruitment, invitations, mentorship, email, auth, db) —\nthe technical infrastructure for an organisation that reports 3,500+\nmembers, 5,000+ women reached lifetime, 50+ corporate partners,\n96+ events since 2014, 18 industry mentors, and an 85% mentorship\nsuccess rate.\n\nThe most recent build-out extended the public site into a photo-rich\n\"Editorial\" visual system and full event pages — including the\nAotearoa AI Hackathon Festival 2026 page (AUT × She Sharp × AI Forum\nNZ, 7–8 August 2026 at AUT City Campus), assembled from a single\nZod-validated event entry. **The Her Waka programme launched in March\n2026** with NZ Ministry of Social Development funding, using the\ndedicated teaching site I built (herwaka.shesharp.org.nz) and the\ncurriculum I authored — 4 workshops + 8 tutorials in 3 tiers. **The\nSEO audit** identified actionable competitive gaps, notably the\ndesktop/mobile ranking disparity on \"women in tech New Zealand.\"\n**The migration crawler** enabled a clean cutover from Webflow\nwithout losing institutional knowledge. **The Slack-bot + agent-skill\npairing** replaced an hours-long manual event-publication workflow\nwith a single dry-run-default command.\n",
         "myRole": "Senior Full Stack Engineer and Website Team Lead. Recruited directly\nby founder Dr Mahsa Mohaghegh (McCauley) — AI/NLP researcher and Head\nof Computer and Information Sciences at AUT — specifically to deliver\nthe AI and full-stack senior engineering that Webflow couldn't, and\nthat the She Sharp team didn't have in-house.\n\nSolo full-stack ownership of the main platform: product architecture,\ndatabase schema (1,411 lines, 30 pgEnums, 35 pgTables, 26 SQL\nmigrations), AI matching pipeline (5-weight rubric + Upstash Redis\ncache + rule-based fallback + admin human-in-the-loop), Stripe\nbilling with the form→checkout→invitation-code activation flow,\nSlack ecosystem (read-only event-collector, 3 weekly Cron digests,\ninteractive event handlers), the `sync-event-from-slack` Claude\nagent skill with strict Zod validation and dry-run default, admin\nsystems, deployments, observability, and operational support. Lesley\nGao contributed frontend design and frontend code (140 commits, 15%);\nthe remaining 793 commits (85%) are mine. Beyond the main platform I\nalso built the data-migration crawler that bootstrapped the launch\n(she-sharp-crawl), the Her Waka teaching site (her-waka) and its\ncomplete four-workshop + 8-tutorial curriculum, and the professional\nSEO audit and recommendations report (serpdata-api-test) on\nshesharp.org.nz — working across engineering, instructional design,\nand strategic analysis under one role.\n"
       },
       "_relatedProjects": [
@@ -1377,7 +1386,7 @@
           "url": "https://shesharp.org.nz",
           "logoLight": "/public/organizations/she-sharp-logo-purple-dark.svg",
           "logoDark": "/public/organizations/she-sharp-logo-purple-dark.svg",
-          "context": "Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since May 2023"
+          "context": "Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since Jul 2025"
         }
       ],
       "_affiliationOrg": {
@@ -1386,7 +1395,7 @@
         "url": "https://shesharp.org.nz",
         "logoLight": "/public/organizations/she-sharp-logo-purple-dark.svg",
         "logoDark": "/public/organizations/she-sharp-logo-purple-dark.svg",
-        "context": "Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since May 2023"
+        "context": "Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since Jul 2025"
       },
       "_clientOrg": {
         "id": "she-sharp",
@@ -9241,11 +9250,20 @@
       "name": "Femtech At Work — From Math Teacher to FemTech CTO (Greater China Edition, Ep 21)",
       "tier": "secondary",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
-      "publisher": "Spotify",
+      "lastUpdated": "2026-08-25",
+      "publisher": "Femtech At Work",
+      "releaseDate": "2025-04-22",
       "url": "https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2",
       "image": "/public/articles/femtech-at-work.png",
-      "summary": "Chan Meng on AI and Women's Health Innovation — Greater China\nEdition Episode 21 of the Femtech At Work podcast.\n",
+      "summary": "Chan Meng on AI and Women's Health Innovation — Greater China\nEdition Episode 21 of the Femtech At Work podcast, the episode that\nclosed Season 1 of the Greater China Edition.\n",
+      "evidence": [
+        {
+          "src": "/public/evidence/femtech-at-work-ep21-host-announcement-linkedin.jpg",
+          "alt": "LinkedIn post by host Maaike Steinebach announcing Chan Meng as the Episode 21 guest and the close of Season 1",
+          "caption": "The host's own public announcement of the episode — third-party\nattestation of the appearance, distinct from the cover art itself.\n",
+          "credit": "Maaike Steinebach (LinkedIn)"
+        }
+      ],
       "meta": {
         "x_brand": {
           "type": "podcastEpisode"
@@ -11395,7 +11413,7 @@
         "countryCode": "NZ"
       },
       "founded": "2014",
-      "description": "Auckland-based women-in-tech nonprofit bridging the STEM gender gap\n— networking, mentorship, skill-building for women in computer\nscience, IT, and tech-related fields; inspires young girls via\nworkshops and role models. 2,200+ registered members, 1,000+ active.\nFounded by Dr Mahsa McCauley (Mohaghegh).\n",
+      "description": "Auckland-based women-in-tech nonprofit bridging the STEM gender gap\n— networking, mentorship, skill-building for women in computer\nscience, IT, and tech-related fields; inspires young girls via\nworkshops and role models. 3,500+ members, 1,000+ active.\nFounded by Dr Mahsa McCauley (Mohaghegh).\n",
       "sameAs": [
         "https://www.linkedin.com/company/shesharpnz/"
       ],
@@ -11406,7 +11424,7 @@
         "x_brand": {
           "displayTier": "primary",
           "category": "employer",
-          "context": "Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since May 2023",
+          "context": "Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since Jul 2025",
           "relatedWorkId": "she-sharp",
           "relatedVolunteerId": "she-sharp-ambassador",
           "relatedProjectId": "she-sharp"
@@ -12513,12 +12531,12 @@
       "role": "Speaker",
       "type": "talk",
       "date": "2025-03-14",
-      "location": "United Nations Headquarters, New York, USA",
+      "location": "United Nations Headquarters, New York, USA (Chan presented remotely by video link)",
       "organizer": "United Nations (Beyond Beijing 30 Conference)",
       "url": "https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg",
       "tier": "flagship",
       "recency": "recent",
-      "lastUpdated": "2026-07-07",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "UN CSW",
         "FemTech",
@@ -12527,20 +12545,28 @@
       ],
       "relatedAwardTitle": "UN CSW 69 Speaker — Beyond Beijing 30 Conference",
       "relatedWorkId": "sanicle",
-      "summary": "Invited as a featured speaker at the 69th session of the UN Commission on\nthe Status of Women to present **Sanicle AI** to international delegates.\nFielded interest from IBM representatives and praise from the Minister of\nGender and Children's Affairs of Sierra Leone; the talk generated multiple\nfollow-up collaboration requests from NGOs and UN member states. Full\nrecognition detail lives in `awards[]`; this entry records the appearance.\n"
+      "photos": [
+        {
+          "src": "/public/articles/un-women-csw69.jpeg",
+          "alt": "Chan Meng's video feed on the main screen of the UN CSW 69 session room at UN Headquarters, New York, with the UN and delegation flags on the stage below",
+          "caption": "Speaking at UN CSW69, UN HQ New York — March 2025.",
+          "date": "2025-03-14"
+        }
+      ],
+      "summary": "Invited as a featured speaker at the 69th session of the UN Commission on\nthe Status of Women to present **Sanicle AI** to international delegates.\nFielded interest from IBM representatives and praise from the Minister of\nGender and Children's Affairs of Sierra Leone; the talk generated multiple\nfollow-up collaboration requests from NGOs and UN member states.\n\n**Delivered remotely.** The Beyond Beijing 30 Conference was a physical\nevent at UN Headquarters in New York; Chan presented her project to the\nroom by video link from New Zealand, which is what the photo above shows.\nRecorded in this offline log because the audience, the venue and the\nfollow-on conversations were all in the room. Full recognition detail\nlives in `awards[]`; this entry records the appearance.\n"
     },
     {
       "id": "ai-hackathon-festival-2025-mentor",
       "name": "AI Hackathon Festival 2025 — Expert Mentor",
       "role": "Mentor",
       "type": "hackathon",
-      "date": "2025-08",
+      "date": "2025-08-15",
       "location": "Auckland University of Technology, Auckland, New Zealand",
       "organizer": "AI Forum NZ × She Sharp × Auckland University of Technology",
-      "url": "https://www.linkedin.com/in/chanmeng666/details/honors/",
+      "url": "https://www.shesharp.org.nz/events/ai-hackathon-festival-2025",
       "tier": "flagship",
       "recency": "recent",
-      "lastUpdated": "2026-07-07",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "hackathon",
         "mentorship",
@@ -12549,35 +12575,78 @@
       ],
       "relatedAwardTitle": "Outstanding Mentor Award",
       "relatedProjectId": "ai-hackathon-assistant",
-      "summary": "One of 14 expert mentors, guiding 11 teams (80+ participants, including\nstudents from Westlake Girls High School) to ship AI solutions aligned with\nthe UN Sustainable Development Goals across food insecurity, digital\naccessibility, workforce upskilling, and indigenous environmental\nstewardship. Received the Outstanding Mentor Award (recorded in `awards[]`);\nthe event's AI Q&A assistant is the `ai-hackathon-assistant` project.\n"
+      "photos": [
+        {
+          "src": "/public/photos/chan-keynote-ai-hackathon-2025.jpg",
+          "alt": "Chan Meng speaking on stage at the AI Hackathon Festival 2025",
+          "caption": "AI Hackathon Festival 2025, Auckland University of Technology."
+        }
+      ],
+      "summary": "One of 14 expert mentors, guiding 11 teams (80+ participants, including\nstudents from Westlake Girls High School) to ship AI solutions aligned with\nthe UN Sustainable Development Goals across food insecurity, digital\naccessibility, workforce upskilling, and indigenous environmental\nstewardship. The host's own registration record for the festival is 98\nregistered / 69 checked in. Received the Outstanding Mentor Award (recorded\nin `awards[]`); the event's AI Q&A assistant is the `ai-hackathon-assistant`\nproject.\n\nEVIDENCE GAP (2026-08-25): the Outstanding Mentor Award itself has no\ncertificate image in `public/certificates/`, although that folder already\nholds participation certificates for smaller things.\n"
     },
     {
       "id": "aotearoa-ai-hackathon-festival-2026",
       "name": "Aotearoa AI Hackathon Festival 2026",
-      "role": "Mentor",
+      "role": "MC & Mentor",
       "type": "hackathon",
       "date": "2026-08-07",
       "endDate": "2026-08-08",
-      "location": "AUT City Campus, Auckland, New Zealand",
+      "location": "AUT City Campus, 55 Wellesley Street East, Auckland, New Zealand",
       "organizer": "AUT × She Sharp × AI Forum NZ × Fisher & Paykel Healthcare",
       "url": "https://www.shesharp.org.nz/events/aotearoa-ai-hackathon-festival-2026",
       "tier": "flagship",
       "recency": "recent",
-      "lastUpdated": "2026-08-11",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "hackathon",
+        "MC",
         "mentorship",
         "AI for good",
         "UN SDGs"
       ],
       "relatedWorkId": "she-sharp",
       "relatedProjectId": "ai-hackathon-assistant",
-      "summary": "Returning as one of 14 named mentors for the two-day 2026 festival, a year\nafter the 2025 edition that produced the Outstanding Mentor Award — this\ntime billed on the public mentor roster as **Founding Engineer, ArchCanvas**\nalongside mentors from AUT, Fisher & Paykel Healthcare, Southern Cross and\nPossibl.ai. Teams build against five real-world SDG themes and pitch to a\njudging panel. The festival's voice-first event assistant is\n`ai-hackathon-assistant`, relaunched for 2026.\n\nA second thread outlived the festival. One of the problem statements —\n**Accessible UI Generation for Developers** — was set by **My Life My\nVoice**, a disability-led NZ organisation whose *AI For People* programme\nargues for AI built to work for disabled people rather than the reverse.\nIts brief names the same bottleneck the `a11y-loop` project attacks:\naccessibility as a manual, late audit sitting outside the tools developers\nuse, auditing what is already broken instead of preventing it. With the\ncompetition closed and nothing being scored, Chan sent that finished,\nMIT-licensed project to the organisation unsolicited on **2026-08-11** —\ncontact form plus an email to `info@mylifemyvoice.org.nz`, offering a free\nwalkthrough and a roadmap open to feedback from disabled testers — and\npublished a LinkedIn post crediting them the same day. Recorded as\noutreach, **not** adoption: see `projects[a11y-loop].narrative.outcomes`\nand the `my-life-my-voice` organisation entry.\n"
+      "photos": [
+        {
+          "src": "/public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-opening.jpg",
+          "alt": "Chan Meng MCing the opening of the Aotearoa AI Hackathon Festival 2026 from the AUT podium, the festival title slide projected behind her",
+          "caption": "Opening the two-day festival, AUT City Campus, 7 August 2026.",
+          "date": "2026-08-07"
+        },
+        {
+          "src": "/public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-karakia.jpg",
+          "alt": "Chan Meng at the AUT podium during the Karakia Tīmatanga that opened the festival",
+          "caption": "Karakia Tīmatanga — the opening karakia.",
+          "date": "2026-08-07"
+        }
+      ],
+      "summary": "**MC'd the opening** of the two-day 2026 festival — welcome and Karakia\nTīmatanga from the AUT podium — and returned as one of the mentors, a year\nafter the 2025 edition that produced the Outstanding Mentor Award. On the\npublic mentor roster (17 mentors) she is billed as **Founding Engineer,\nArchCanvas**, alongside mentors from AUT, Fisher & Paykel Healthcare,\nSouthern Cross, Red Hat and Possibl.ai. 125 registered. Teams built against\nfive real-world SDG themes and pitched to a judging panel; four national\nfinalists go on to pitch at the Aotearoa AI Summit, 8–9 September 2026 in\nWellington. The festival's voice-first event assistant is\n`ai-hackathon-assistant`, relaunched for 2026.\n\nA second thread outlived the festival. One of the problem statements —\n**Accessible UI Generation for Developers** — was set by **My Life My\nVoice**, a disability-led NZ organisation whose *AI For People* programme\nargues for AI built to work for disabled people rather than the reverse.\nIts brief names the same bottleneck the `a11y-loop` project attacks:\naccessibility as a manual, late audit sitting outside the tools developers\nuse, auditing what is already broken instead of preventing it. With the\ncompetition closed and nothing being scored, Chan sent that finished,\nMIT-licensed project to the organisation unsolicited on **2026-08-11** —\ncontact form plus an email to `info@mylifemyvoice.org.nz`, offering a free\nwalkthrough and a roadmap open to feedback from disabled testers — and\npublished a LinkedIn post crediting them the same day. Recorded as\noutreach, **not** adoption: see `projects[a11y-loop].narrative.outcomes`\nand the `my-life-my-voice` organisation entry.\n"
+    },
+    {
+      "id": "she-sharp-lesmills-ai-2026",
+      "name": "No Pain, All Gain — Getting Fit for AI",
+      "role": "MC",
+      "type": "panel",
+      "date": "2026-09-03",
+      "location": "Les Mills Auckland City, Level 2, 200 Victoria Street West, Auckland, New Zealand",
+      "organizer": "She Sharp × Les Mills",
+      "url": "https://www.shesharp.org.nz/events/event-lesmills-03-september-2026",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-08-25",
+      "keywords": [
+        "MC",
+        "diversity and AI",
+        "cross-functional",
+        "panel"
+      ],
+      "relatedWorkId": "she-sharp",
+      "summary": "**MC for the evening** — billed on the host's own event page as \"Your MC\nfor the Evening\", under the title *AI Lead and Website Team Lead, She\nSharp*. A cross-functional panel on diversity and AI for impact with four\nLes Mills leaders — Keryn McKenzie (Senior Director, Data & AI), Carolina\nLobos (Head of Finance, LM Media & Automation Lead), Ben Sullivan (Legal\nCounsel) and Gemma Lynskey (Global Comms + Org Development Director) —\ncovering the legal/privacy, commercial, change-management and technical\nviews of the same rollout, followed by table discussions. 25 registered at\ntime of writing.\n\nEVIDENCE GAP (2026-08-25): upcoming — capture a podium shot on the night.\n"
     },
     {
       "id": "her-waka-workshops-2026",
-      "name": "Her Waka — AI × Career Empowerment In-Person Workshops",
-      "role": "Curriculum Author, Panelist & Technical Mentor",
+      "name": "Her Waka — AI × Career Empowerment Programme",
+      "role": "Curriculum Author",
       "type": "workshop",
       "date": "2026-03",
       "endDate": "2026-06",
@@ -12586,28 +12655,127 @@
       "url": "https://herwaka.shesharp.org.nz/",
       "tier": "primary",
       "recency": "recent",
-      "lastUpdated": "2026-08-05",
+      "lastUpdated": "2026-08-25",
+      "keywords": [
+        "curriculum authorship",
+        "teaching",
+        "AI literacy",
+        "women returning to work"
+      ],
+      "relatedWorkId": "she-sharp",
+      "relatedProjectId": "her-waka",
+      "summary": "**Authored the programme solo** — the teaching platform and all four\nworkshops' content — for an NZ Ministry of Social Development-funded\nemployment-readiness programme for women returning to the workforce.\nDelivered monthly March→June 2026 at academyEX, 25-person session cap, by\ninvitation only, paired with 10 self-paced AI tutorials and a job-search\nlibrary. Dr Mahsa McCauley facilitated; RCSA recruiters from Potentia,\nAbsolute IT, Randstad Digital, Elevate Consulting, Younity and BrightSpark\nran the networking half of each session.\n\nThe individual sessions are recorded separately —\n`her-waka-2026-03-ai-future-of-work`, `her-waka-2026-04-iamremarkable`,\n`her-waka-2026-05-cybersecurity`, `her-waka-2026-06-personal-branding` —\nso that a year-end tally counts appearances rather than programmes.\nProgramme curriculum and cohort record: `meta.x_brand.teachingCohorts`\n(`her-waka-2026`).\n"
+    },
+    {
+      "id": "her-waka-2026-03-ai-future-of-work",
+      "name": "Her Waka — AI & The Future of Work",
+      "role": "Panelist",
+      "type": "workshop",
+      "date": "2026-03-25",
+      "location": "academyEX — Pikopiko Room, 99 Khyber Pass Road, Grafton, Auckland, New Zealand",
+      "organizer": "NZ Ministry of Social Development × She Sharp × academyEX",
+      "url": "https://www.shesharp.org.nz/events/her-waka",
+      "tier": "primary",
+      "recency": "recent",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "teaching",
         "AI literacy",
         "women returning to work",
-        "in-person workshop"
+        "panel"
       ],
       "relatedWorkId": "she-sharp",
       "relatedProjectId": "her-waka",
-      "summary": "**Authored the programme solo** — the teaching platform and all four\nworkshops' content — then took part in the sessions themselves as a\n**panel speaker and technical mentor**. Four in-person workshops\n(25-person session cap) for women returning to the workforce,\nunder an NZ Ministry of Social\nDevelopment-funded programme: AI & the Future of Work (25 Mar), #IAmRemarkable\n+ Vibe Coding (7 Apr), Cybersecurity (5 May, invitation-only), and Personal\nBranding (2 Jun) — paired with 10 self-paced AI tutorials and a job-search\nlibrary. Chan was a named panelist in the March session and a speaker in\nApril, sharing the room with RCSA recruiters from Potentia, Randstad Digital\nand Elevate Consulting who ran the networking half, and Dr Mahsa McCauley\nfacilitating. Registrations across the four sessions: 39 / 32 / 5 / — , with\n27 and 24 checked in for the first two. Programme curriculum and cohort\nrecord: `meta.x_brand.teachingCohorts` (`her-waka-2026`).\n"
+      "photos": [
+        {
+          "src": "/public/photos/chan-panel-shesharp.jpg",
+          "alt": "Chan Meng on the Her Waka panel at academyEX",
+          "caption": "Her Waka — AI & The Future of Work, academyEX, 25 March 2026."
+        },
+        {
+          "src": "/public/photos/chan-panel-shesharp-gesturing.jpg",
+          "alt": "Chan Meng speaking and gesturing during the Her Waka panel at academyEX",
+          "caption": "Same session, mid-answer."
+        }
+      ],
+      "summary": "Cohort 1's opening session, and the one where Chan is on the public\nroster: billed under \"Meet Our Panelists\" as **Senior AI/ML Infrastructure\nand Full-Stack Engineer, Gavigo / Sanicle**, alongside Nikita Kumari\n(product and project manager) and Meeta Patel (academyEX). Guest speakers\nfrom RCSA: Abe Naus (Potentia), Paul Kelly (Absolute IT), Neekee\nReshamwala (Randstad Digital). Facilitated by Dr Mahsa McCauley.\nInvitation-only. 39 registered, 27 checked in.\n"
+    },
+    {
+      "id": "her-waka-2026-04-iamremarkable",
+      "name": "Her Waka — #IAmRemarkable + Vibe Coding",
+      "role": "Speaker",
+      "type": "workshop",
+      "date": "2026-04-07",
+      "location": "academyEX, 99 Khyber Pass Road, Grafton, Auckland, New Zealand",
+      "organizer": "NZ Ministry of Social Development × She Sharp × academyEX",
+      "url": "https://www.shesharp.org.nz/events/her-waka-april-2026",
+      "tier": "primary",
+      "recency": "recent",
+      "lastUpdated": "2026-08-25",
+      "keywords": [
+        "teaching",
+        "self-advocacy",
+        "vibe coding",
+        "women returning to work"
+      ],
+      "relatedWorkId": "she-sharp",
+      "relatedProjectId": "her-waka",
+      "summary": "Second Cohort 1 session: the #IAmRemarkable self-promotion workshop paired\nwith a vibe-coding segment from Chan's curriculum. Dr Mahsa McCauley\nspeaking; RCSA recruiters Abe Naus (Potentia), Anabella Bianchi (Elevate\nConsulting) and Sri Nanduri (Potentia) on the networking half.\n32 registered, 24 checked in.\n"
+    },
+    {
+      "id": "her-waka-2026-05-cybersecurity",
+      "name": "Her Waka — Cybersecurity Workshop",
+      "role": "Curriculum Author",
+      "type": "workshop",
+      "date": "2026-05-05",
+      "location": "academyEX, 99 Khyber Pass Road, Grafton, Auckland, New Zealand",
+      "organizer": "NZ Ministry of Social Development × She Sharp × academyEX",
+      "url": "https://www.shesharp.org.nz/events/her-waka-may-2026",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-08-25",
+      "keywords": [
+        "teaching",
+        "cybersecurity",
+        "women returning to work"
+      ],
+      "relatedWorkId": "she-sharp",
+      "relatedProjectId": "her-waka",
+      "summary": "Third Cohort 1 session, invitation-only. Speakers: Paula Gair (consultant,\neducator and advisor), Swapna Soni (agile coach and change leader) and\nPrasanth Pavithran (Senior Business Analyst, Office of the CTO, AUT). RCSA\nrecruiters: Sian Clements (Younity), Jenny Martin (Potentia).\n33 registered, 29 checked in. (This database previously recorded \"5\"\nregistered for this session — that figure was wrong.)\n"
+    },
+    {
+      "id": "her-waka-2026-06-personal-branding",
+      "name": "Her Waka — Personal Branding & Growth Tips",
+      "role": "Curriculum Author",
+      "type": "workshop",
+      "date": "2026-06-02",
+      "location": "academyEX, 99 Khyber Pass Road, Grafton, Auckland, New Zealand",
+      "organizer": "NZ Ministry of Social Development × She Sharp × academyEX",
+      "url": "https://www.shesharp.org.nz/events/her-waka-june-2026",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-08-25",
+      "keywords": [
+        "teaching",
+        "personal branding",
+        "women returning to work"
+      ],
+      "relatedWorkId": "she-sharp",
+      "relatedProjectId": "her-waka",
+      "summary": "Final Cohort 1 session — the same Personal Branding ground Chan teaches in\nher own module. Speaker: Andrea Halal (tech marketing leader, Ideqa / Big\nLeap Energy). RCSA: Lisa Cooley (BrightSpark), Sri Nanduri (Potentia).\n24 registered, 16 checked in.\n"
     },
     {
       "id": "peyvand-academy-makey-makey-2026",
-      "name": "Peyvand Academy — Touch the World, Talk to Code (IoT for teens)",
+      "name": "Youth Tech Series — Touch the World, Talk to Code (IoT for teens)",
       "role": "Instructor",
       "type": "workshop",
       "date": "2026-06-13",
-      "location": "Auckland, New Zealand",
-      "organizer": "She Sharp × Peyvand Academy",
+      "location": "Fruitvale Primary School, 40 Fruitvale Road, Auckland, New Zealand",
+      "organizer": "She Sharp × Peyvand Academy × NZ Ministry of Education",
+      "url": "https://www.shesharp.org.nz/events/peyvand-academy-13-june-2026",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-07-07",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "STEM outreach",
         "Makey Makey",
@@ -12616,27 +12784,55 @@
       ],
       "relatedWorkId": "she-sharp",
       "relatedProjectId": "makey-makey-iot-slides",
-      "summary": "Ran a hands-on IoT teaching session for 12–18-year-olds — a Banana Piano and\na Super Mario · Makey Makey build — turning everyday objects into controllers\nto make hardware and code tangible. Teaching deck: `makey-makey-iot-slides`;\nlive demo project: `super-mario-makey-makey`.\n"
+      "summary": "Ran a hands-on IoT teaching session for 12–18-year-olds — a Banana Piano and\na Super Mario · Makey Makey build — turning everyday objects into controllers\nto make hardware and code tangible. The host bills the session as \"Youth\nTech Series — AI & Electronics Workshop\" and credits the teaching resource\nto Chan by name on the event page. 24 attendees. Teaching deck:\n`makey-makey-iot-slides`; live demo project: `super-mario-makey-makey`.\n"
     },
     {
       "id": "peyvand-academy-electronics-2026",
-      "name": "Peyvand Academy — Youth Tech Series: Electronics Workshop (ages 12–18)",
+      "name": "Youth Tech Series — Electronics Workshop (ages 12–18)",
       "role": "Mentor",
       "type": "workshop",
       "date": "2026-06-20",
-      "location": "Fruitvale Primary School, Auckland, New Zealand",
+      "location": "Fruitvale Primary School, 40 Fruitvale Road, Auckland, New Zealand",
       "organizer": "She Sharp × Peyvand Academy × NZ Ministry of Education × Little Engineers",
       "url": "https://www.shesharp.org.nz/events/peyvand-academy-20-june-2026",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "STEM outreach",
         "electronics",
         "teens"
       ],
       "relatedWorkId": "she-sharp",
-      "summary": "Second session of the Youth Tech Series, one week after the Makey Makey\nworkshop and a deliberate step deeper: hands-on electronics for the same\n12–18 age group, run with Little Engineers joining the Peyvand Academy and\nMinistry of Education partnership. Chan mentored on the floor rather than\nleading the session. Recorded separately from\n`peyvand-academy-makey-makey-2026` because the subject and the partner set\nboth differ.\n"
+      "summary": "Second session of the Youth Tech Series, one week after the Makey Makey\nworkshop and a deliberate step deeper: hands-on electronics for the same\n12–18 age group, run with Little Engineers joining the Peyvand Academy and\nMinistry of Education partnership. 26 attendees. Chan mentored on the floor\nrather than leading the session. Recorded separately from\n`peyvand-academy-makey-makey-2026` because the subject and the partner set\nboth differ.\n"
+    },
+    {
+      "id": "claude-meetup-auckland-2026-07",
+      "name": "Auckland | Claude Meetup",
+      "role": "Attendee",
+      "type": "community",
+      "date": "2026-07-01",
+      "location": "Auckland University of Technology, 55 Wellesley Street East, Auckland CBD, New Zealand",
+      "organizer": "Claude Community Events — hosted by Adam Holt & Simon Conroy (TheColab), supported by AUT and AWS",
+      "url": "https://luma.com/claude-auckland-1-july",
+      "tier": "primary",
+      "recency": "recent",
+      "lastUpdated": "2026-08-25",
+      "keywords": [
+        "Claude",
+        "Anthropic",
+        "AI agents",
+        "developer community"
+      ],
+      "photos": [
+        {
+          "src": "/public/photos/events/2026-07-01-claude-meetup-auckland-group.jpg",
+          "alt": "Chan Meng with other attendees at the Auckland Claude Meetup in the AUT campus atrium",
+          "caption": "Auckland | Claude Meetup, AUT, 1 July 2026.",
+          "date": "2026-07-01"
+        }
+      ],
+      "summary": "Auckland's largest Claude community meetup to date — capped at 350\nattendees, sold out with a waitlist, from a community that has registered\n1,000+ people across its events in six months. The programme covered\nagentic workflows, enterprise AI adoption and legal AI, with an Anthropic\nteam member, a strategic advisor who worked on Anthropic's legal plugin,\nand Air New Zealand's Data & AI Lead speaking; organiser Adam Holt reported\nback from Code with Claude in Tokyo. Chan's own writeup of the evening:\nhttps://www.linkedin.com/posts/chanmeng666_claude-anthropic-thecolab-activity-7478282932139376640-Eu7v\n\nRecorded because it is the one piece of **in-person** evidence that Chan\nparticipates in the Anthropic developer community, not only through open\nsource and published writing — the same footprint that led Claude Code to\nrecommend her to Engram (see `work[engram]` and the evidence screenshot\nattached to that entry).\n"
     },
     {
       "id": "forward-with-her-mentorship-2024-2025",
@@ -12662,16 +12858,16 @@
     },
     {
       "id": "she-sharp-thrive-career-2025",
-      "name": "THRIVE: Your Career, Your Story",
+      "name": "THRIVE: Your Career, Your Story — Piki Ake: Rise up Auckland",
       "role": "Organizer",
       "type": "panel",
       "date": "2025-07-30",
-      "location": "HPE, Level 19 PwC Tower, Auckland, New Zealand",
+      "location": "HPE, Level 19 PwC Tower, 15 Customs Street West, Auckland, New Zealand",
       "organizer": "She Sharp × TechBabes NZ × Hewlett Packard Enterprise",
       "url": "https://www.shesharp.org.nz/events/thrive-your-career-your-story",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "careers",
         "personal branding",
@@ -12679,7 +12875,7 @@
         "women in tech"
       ],
       "relatedWorkId": "she-sharp",
-      "summary": "Career-transition evening for graduates and professionals changing track:\na keynote, a six-person industry panel (IBM, Microsoft, Spark, Veeam,\nPB Tech), and a hands-on CV-and-interview clinic staffed by 16 mentors.\n98 registered, 68 attended.\n"
+      "summary": "The first She Sharp event of Chan's tenure — she had opened the website\nrepository eight days earlier. A career-transition evening for graduates\nand professionals changing track: a keynote from Kathryn Sandford, a\nsix-person industry panel (IBM, Microsoft, Spark, Veeam, PB Tech), and a\nhands-on CV-and-interview clinic staffed by 16 mentors.\n98 registered, 68 attended.\n"
     },
     {
       "id": "she-sharp-fonterra-platforms-2025",
@@ -12687,12 +12883,12 @@
       "role": "Organizer",
       "type": "panel",
       "date": "2025-09-03",
-      "location": "Fonterra, Auckland, New Zealand",
+      "location": "Fonterra, 109 Fanshawe Street, Auckland, New Zealand",
       "organizer": "She Sharp × Fonterra",
       "url": "https://www.shesharp.org.nz/events/business-and-technology-transformation-through-platforms-and-products",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "platform engineering",
         "product operating model",
@@ -12702,17 +12898,37 @@
       "summary": "Panel with three women leading Fonterra's shift to a product-and-platform\noperating model — digital enablement, release-train practice, and Salesforce\nplatform ownership — on what that shift changes about IT delivery.\n96 registered, 61 attended.\n"
     },
     {
+      "id": "she-sharp-summer-of-tech-2025",
+      "name": "Summer of Tech Meet & Greet 2025 — She Sharp community stand",
+      "role": "Organizer",
+      "type": "community",
+      "date": "2025-09-16",
+      "location": "The Cloud, Auckland waterfront, Auckland, New Zealand",
+      "organizer": "Summer of Tech (She Sharp exhibiting)",
+      "url": "https://www.summeroftech.co.nz/",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-08-25",
+      "keywords": [
+        "student outreach",
+        "community stand",
+        "women in tech"
+      ],
+      "relatedWorkId": "she-sharp",
+      "summary": "Staffed the She Sharp stand at Summer of Tech's annual student-and-employer\nevening, on the waterfront at The Cloud — 500+ students and graduates\nexpected. An intake-funnel appearance rather than a programme event: the\naudience is students looking for internships, which is the top of the\npipeline She Sharp's mentorship and events feed into. No registration or\ncheck-in figures exist for booth appearances.\n"
+    },
+    {
       "id": "she-sharp-code-secure-2025",
       "name": "Code Secure. Lead the Future — Women in Cybersecurity Workshop",
       "role": "Organizer",
       "type": "workshop",
       "date": "2025-10-03",
-      "location": "Xero, Parnell, Auckland, New Zealand",
+      "location": "Xero, Level 2, 96 St Georges Bay Road, Parnell, Auckland, New Zealand",
       "organizer": "She Sharp × Xero × Secure Code Warrior",
       "url": "https://www.shesharp.org.nz/events/code-secure",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "cybersecurity",
         "secure coding",
@@ -12727,12 +12943,12 @@
       "role": "Organizer",
       "type": "panel",
       "date": "2025-11-12",
-      "location": "Vector, Newmarket, Auckland, New Zealand",
+      "location": "Vector, Level 6, 110 Carlton Gore Road, Newmarket, Auckland, New Zealand",
       "organizer": "She Sharp × Vector",
       "url": "https://www.shesharp.org.nz/events/she-sharp-vector-future-ready-data-ai-digital-innovation-inclusive-careers-at-vector",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "energy tech",
         "data and AI",
@@ -12752,7 +12968,7 @@
       "url": "https://www.shesharp.org.nz/events/she-sharp-hcltech-ai-empowerment-shaping-an-inclusive-digital-future",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "inclusive AI",
         "future of work",
@@ -12767,12 +12983,12 @@
       "role": "Organizer",
       "type": "community",
       "date": "2026-03-06",
-      "location": "academyEX, Grafton, Auckland, New Zealand",
+      "location": "academyEX, 99 Khyber Pass Road, Grafton, Auckland, New Zealand",
       "organizer": "She Sharp × academyEX",
       "url": "https://www.shesharp.org.nz/events/she-sharp-and-academyex-international-womens-day-2026",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "International Women's Day",
         "gender equity",
@@ -12787,12 +13003,12 @@
       "role": "Organizer",
       "type": "workshop",
       "date": "2026-04-16",
-      "location": "Metlifecare, Newmarket, Auckland, New Zealand",
+      "location": "Metlifecare, Level 4, 110 Carlton Gore Road, Newmarket, Auckland, New Zealand",
       "organizer": "She Sharp × Metlifecare",
       "url": "https://www.shesharp.org.nz/events/she-sharp-candice-murray-own-your-energy",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "career mindset",
         "coaching",
@@ -12807,19 +13023,19 @@
       "role": "Organizer",
       "type": "workshop",
       "date": "2026-05-15",
-      "location": "AUT City Campus, Auckland, New Zealand",
+      "location": "AUT City Campus, Building WZ416, 55 Wellesley Street East, Auckland, New Zealand",
       "organizer": "She Sharp × AUT (Engineering, Computer and Mathematical Sciences)",
-      "url": "https://www.shesharp.org.nz/events/event-aut-linkedin-15-may-2026",
+      "url": "https://www.shesharp.org.nz/events/making-linkedin-work-for-you-with-stuart-little",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "personal branding",
         "LinkedIn",
         "careers"
       ],
       "relatedWorkId": "she-sharp",
-      "summary": "Personal-branding masterclass with creative strategist Stuart Little\n(Agency8) and recruiter Janelle Wright on making a LinkedIn profile attract\nthe right opportunities — the same ground Chan teaches in her own Personal\nBranding module, run here for an AUT student audience.\n"
+      "summary": "Personal-branding masterclass with creative strategist Stuart Little\n(Agency8) and recruiter Janelle Wright on making a LinkedIn profile attract\nthe right opportunities — the same ground Chan teaches in her own Personal\nBranding module, run here for an AUT student audience.\n106 registered, 70 attended.\n"
     },
     {
       "id": "she-sharp-myob-working-smarter-2026",
@@ -12827,46 +13043,46 @@
       "role": "Organizer",
       "type": "workshop",
       "date": "2026-07-30",
-      "location": "MYOB, Auckland CBD, Auckland, New Zealand",
+      "location": "MYOB, 8/50 Albert Street, Auckland CBD, Auckland, New Zealand",
       "organizer": "She Sharp × MYOB",
       "url": "https://www.shesharp.org.nz/events/she-sharp-and-myob-working-smarter",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
         "AI in practice",
         "delivery",
         "product management"
       ],
       "relatedWorkId": "she-sharp",
-      "summary": "AI-in-practice session with MYOB product, domain and people leads on what\nactually changes in delivery work once AI is in the toolchain.\n"
+      "summary": "AI-in-practice session with MYOB product, domain and people leads — Jean\nFulop (Senior Product Manager), Marion Nicholas (Domain Expert, CA) and\nKaty Seel (GM People for SME & Practice) — on what actually changes in\ndelivery work once AI is in the toolchain. 87 registered, 51 attended.\n"
     },
     {
-      "id": "she-sharp-lesmills-ai-2026",
-      "name": "No Pain, All Gain — Getting Fit for AI",
+      "id": "she-sharp-code-secure-2026",
+      "name": "Code Secure. Lead the Future — Women in Cybersecurity (2026)",
       "role": "Organizer",
-      "type": "panel",
-      "date": "2026-09-03",
-      "location": "Les Mills Auckland City, Auckland, New Zealand",
-      "organizer": "She Sharp × Les Mills",
-      "url": "https://www.shesharp.org.nz/events/event-lesmills-03-september-2026",
+      "type": "workshop",
+      "date": "2026-10-08",
+      "location": "Xero, Level 2, 96 St Georges Bay Road, Parnell, Auckland, New Zealand",
+      "organizer": "She Sharp × Xero × Secure Code Warrior",
+      "url": "https://www.shesharp.org.nz/events/code-secure-2026",
       "tier": "secondary",
       "recency": "active",
-      "lastUpdated": "2026-08-04",
+      "lastUpdated": "2026-08-25",
       "keywords": [
-        "diversity and AI",
-        "cross-functional",
-        "panel"
+        "cybersecurity",
+        "secure coding",
+        "workshop"
       ],
       "relatedWorkId": "she-sharp",
-      "summary": "Upcoming cross-functional panel on diversity and AI for impact — legal and\nprivacy, commercial, change-management and technical views of the same\nrollout — followed by table discussions. Speaker line-up not yet published\nat the time of writing.\n"
+      "summary": "Second run of the Code Secure workshop, a year after the 2025 edition\n(`she-sharp-code-secure-2025`), back at Xero Parnell and again with Secure\nCode Warrior. Speaker: Fatemah Beydoun (Secure Code Warrior). 5:00–9:00pm\nNZDT. Registration had not opened at time of writing.\n"
     }
   ],
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-08-12",
+    "lastModified": "2026-08-24",
     "buildYear": "2026",
-    "buildTimestamp": "2026-08-12T07:40:34.242Z"
+    "buildTimestamp": "2026-08-24T13:18:12.064Z"
   }
 }

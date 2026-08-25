@@ -16,8 +16,8 @@ This compiles three PDFs, emits the GEO siblings, and writes the ATS resume's Wo
 | --- | --- |
 | `public/chan-meng-cv.pdf` | Canonical 2-page CV (linked from the README) |
 | `public/chan-meng-cv-extended.pdf` | 16-page «Subtraction / Addition» magazine companion |
-| `cv/exports/chan-meng-cv-ats.pdf` | 2-page single-column ATS resume — photo-free, black text only, clickable links. **Not** web-served, not linked anywhere; manual upload only. See [`exports/README.md`](./exports/README.md) |
-| `cv/exports/chan-meng-cv-ats.docx` | The **default upload artifact** — same resume as a real Word document, parsed out of `chan-meng-cv-ats.typ`, not hand-maintained |
+| `cv/exports/chan-meng-cv-ats.pdf` | The **default upload artifact** — 2-page single-column ATS resume, photo-free, black text only, clickable links. **Not** web-served, not linked anywhere; manual upload only. See [`exports/README.md`](./exports/README.md) |
+| `cv/exports/chan-meng-cv-ats.docx` | **Fallback** for portals that refuse the PDF — same resume as a real Word document, parsed out of `chan-meng-cv-ats.typ`, not hand-maintained |
 | `cv/exports/chan-meng-cv-ats.txt` | Plain UTF-8 of the same content for "paste your resume" fields |
 | `public/cv.jsonld` | schema.org Person + WorkExperience JSON-LD — recruiter LLMs (LinkedIn AI Search, Greenhouse AI ranking, Jobright) parse this directly |
 | `public/cv-llms.txt` | Plain-text agent-readable summary mirroring the [llms.txt](https://llmstxt.org/) convention |
@@ -25,6 +25,51 @@ This compiles three PDFs, emits the GEO siblings, and writes the ATS resume's Wo
 `public/chan-meng-cv-extended.pdf` is the 16-page image-led magazine companion to the 2-page CV, built by the same `pwsh cv/build.ps1`; its unshot/upgradeable photos are tracked in [`assets/extended/SHOT-LIST.md`](./assets/extended/SHOT-LIST.md).
 
 Requires [Typst 0.14+](https://typst.app/) and Node.js 22+ on PATH.
+
+## After every rebuild: sync the site (REQUIRED)
+
+`pwsh cv/build.ps1` is only half the job. The same two web-served PDFs are also
+served from Chan's own site at [chanmeng.org/cv](https://chanmeng.org/cv), out of
+a **separate repo** (`D:/github_repository/2d-portfolio`), and nothing syncs them
+automatically. Rebuilding here and stopping leaves the site serving an older CV
+than the one this repo calls canonical — the exact drift this repo exists to
+prevent.
+
+```powershell
+$src = "D:/github_repository/ChanMeng666/public"
+$dst = "D:/github_repository/2d-portfolio/public"
+Copy-Item "$src/chan-meng-cv.pdf"          "$dst/chan-meng-cv.pdf"          -Force
+Copy-Item "$src/chan-meng-cv-extended.pdf" "$dst/chan-meng-cv-extended.pdf" -Force
+
+cd D:/github_repository/2d-portfolio
+# STEP 2, NOT OPTIONAL: bump PREVIEW_V in src/app/cv/page.tsx (see below)
+git add public/chan-meng-cv.pdf public/chan-meng-cv-extended.pdf src/app/cv/page.tsx
+git commit -m "chore(cv): sync CV PDFs from the career database"
+git push origin main    # push IS the deploy
+```
+
+- **Bump `PREVIEW_V` in `src/app/cv/page.tsx` in the SAME commit.** The page
+  embeds each PDF as `<file>?v=${PREVIEW_V}`. Every Cloudflare colo caches
+  independently at `max-age` 4h, so new bytes at an unchanged URL are served
+  stale — the page renders the *previous* CV, looks perfectly fine, and is
+  wrong. This is the single easiest step to forget and the only one whose
+  failure is invisible.
+- **Exactly these two files.** `src/app/cv/page.tsx` in that repo embeds
+  `/chan-meng-cv.pdf` and `/chan-meng-cv-extended.pdf`, and nothing else.
+- **Never copy anything out of `cv/exports/`.** Those are the ATS artifacts, and
+  the whole reason they sit outside `public/` is that no crawler or recruiter LLM
+  should ever find a second, competing "current CV". See
+  [`exports/README.md`](./exports/README.md).
+- **Push is the deploy.** That repo has no deploy workflow — Cloudflare Pages
+  builds from its git integration. Do not `wrangler deploy` locally; that path is
+  broken and is deliberately not being fixed.
+- **Verify by hash, not by eye** — the extended PDF changes bytes on every build
+  while keeping its size, so "same file size" proves nothing:
+
+  ```bash
+  sha256sum public/chan-meng-cv.pdf ../2d-portfolio/public/chan-meng-cv.pdf
+  ```
+
 
 ## File map
 
@@ -123,23 +168,25 @@ The Anthropic Forward Deployed Engineer JD phrase `shipped MCP servers, sub-agen
 
 **Two pages is the budget**, and the content is shaped to it rather than the other way round:
 
-- The five *current* roles carry one bullet each. Sanicle (ended Feb 2026, but CTO plus the IBM Silver Partner result) carries one. The three older roles — Forward with Her, ByteDance, CORDE — are single-line entries under an "Earlier experience" sub-label: title, org, location and dates are all still present and delimited, so a parser extracts them as employment identically; only the prose is gone. That compression is what took the document from 4 pages to 2.
+- The five *current* roles carry one bullet each, except TechNest, which carries two — its single bullet had silently grown to three sentences. Sanicle (ended Feb 2026, but CTO plus the IBM Silver Partner result) carries one. The three older roles — Forward with Her, ByteDance, CORDE — are single-line entries under an "Earlier experience" sub-label: title, org, location and dates are all still present and delimited, so a parser extracts them as employment identically; only the prose is gone. That compression is what took the document from 4 pages to 2.
 - Job title and dates share two lines, not three (dates ride the org line behind a `|`). Contact items share two delimited lines, not seven — safe only *because* the separator is an explicit `|`; the failure measured in the designed CV was items running together with nothing but whitespace between them.
-- One sentence per bullet. If a role seems to need two, cut the second — never the metric.
+- One sentence per bullet. If a bullet grows to two sentences, split it into two bullets or cut the second — never cut the metric. `cv/verify-ats-exports.py::EXPECTED_BULLETS` counts them, so a split is a deliberate, recorded change.
 - Before adding anything, decide what comes out, then re-check the page count.
 
 **Spacing** is driven by one scale at the top of `ats-components.typ` (`gap-section` / `gap-rule` / `gap-entry` / `gap-intra` / `gap-line` / `gap-compact`). Change the scale, not individual call sites, so the rhythm stays proportional: a section break must read as clearly larger than an entry break, which must read as clearly larger than a line break inside an entry. Entry headers are `sticky: true` so a job title never orphans at the foot of a page with its bullets stranded overleaf.
 
-Definition of done for the PDF: **2 pages** · `pdfinfo` reports `Tagged: yes` · `pdfinfo` shows `CreationDate` + `ModDate` · pypdf finds 7 `/H1` elements · every `pdffonts` row shows `uni=yes` · `pdfimages -list` empty · poppler, xpdf, and pypdf all recover the 7 section headings in order · the hyphenated-keyword grep is clean · `node scripts/check-cv-sync.mjs --strict` passes.
+Definition of done for the PDF: **2 pages** (this is checked by `cv/verify-ats-exports.py`, which is NOT in CI — it drifted to 3 pages unnoticed between Aug 3 and Aug 26 2026, so run the verifier after any content edit, not just before an upload) · `pdfinfo` reports `Tagged: yes` · `pdfinfo` shows `CreationDate` + `ModDate` · pypdf finds 7 `/H1` elements · every `pdffonts` row shows `uni=yes` · `pdfimages -list` empty · poppler, xpdf, and pypdf all recover the 7 section headings in order · the hyphenated-keyword grep is clean · `node scripts/check-cv-sync.mjs --strict` passes.
 
 ## ATS variant — the .docx and .txt exports
 
-`cv/exports/chan-meng-cv-ats.docx` is now the **default upload**; the PDF is the
-fallback. Lever refused the PDF on 2026-08-03 with "Couldn't auto-read resume"
-despite it passing every check above, so the container — not the layout — was
-the problem. Word is Lever's own first recommended fix and the most reliably
-parsed format across Greenhouse, Workday and Taleo. `.txt` exists for
-"paste your resume" textareas.
+The **PDF is the default upload** (Chan's call, 2026-08-26); these two are the
+fallbacks. Lever refused the PDF on 2026-08-03 with "Couldn't auto-read resume"
+despite it passing every check above — the container, not the layout, was the
+problem, and nothing since has changed that. Word is Lever's own first
+recommended fix and the most reliably parsed format across Greenhouse, Workday
+and Taleo, so it is what to reach for the moment a portal balks. `.txt` exists
+for "paste your resume" textareas. See [`exports/README.md`](./exports/README.md)
+for the escalation order.
 
 Both are **parsed out of `cv/chan-meng-cv-ats.typ`** by
 `cv/build-ats-exports.mjs` — deliberately no second hand-maintained copy of the
@@ -166,8 +213,8 @@ gate. `npm run build:ats-exports` writes the two files — deliberately **not**
 part of `npm run build`, because CV artifacts stay manual.
 
 Definition of done for the .docx / .txt: valid OOXML package · docx token stream
-**identical** to `pdftotext` on the PDF (1,013 tokens) · `.txt` identical modulo
-the 5 appended URLs · 7 `Heading1` paragraphs in order · 9 real numbered bullets
+**identical** to `pdftotext` on the PDF (1,038 tokens) · `.txt` identical modulo
+the 5 appended URLs · 7 `Heading1` paragraphs in order · 10 real numbered bullets
 and zero literal `- ` runs · 29 hyperlinks with zero dangling relationships ·
 zero tables, drawings, text boxes, `framePr` or columns, and no header/footer/media
 parts · Arial only, `DM Sans` appears nowhere in the package · core properties

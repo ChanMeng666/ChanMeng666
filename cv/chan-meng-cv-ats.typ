@@ -9,15 +9,18 @@
 // the company/project name, so the extracted text stream is unchanged.
 //
 // TWO PAGES IS THE BUDGET. Everything here is sized to it:
-//   • The five CURRENT roles carry bullets. Sanicle (ended Feb 2026, but CTO +
-//     the IBM Silver Partner result) carries one. The three older roles are
+//   • The five CURRENT roles carry bullets — one each, except TechNest, which
+//     carries two. Sanicle (ended Feb 2026, but CTO + the IBM Silver Partner
+//     result) carries one. The three older roles are
 //     single-line entries under "Earlier experience" — title, org, location and
 //     dates are all still present and delimited, so a parser extracts them as
 //     employment exactly the same way; only the prose is gone.
 //   • Job title and dates share two lines, not three (dates ride the org line
 //     behind a "|"). Contact items share two delimited lines, not seven.
-//   • Every bullet is one sentence. If a role needs two, the second is cut, not
-//     the metric.
+//   • Every bullet is ONE sentence. A bullet that grows to two sentences gets
+//     split into two bullets or trimmed — the metric is never what goes.
+//     cv/verify-ats-exports.py::EXPECTED_BULLETS counts bullets, so a split is
+//     a deliberate change, not a silent one.
 // Before adding anything, decide what comes out. Check the page count.
 //
 // NOT a published surface. Output → cv/exports/chan-meng-cv-ats.pdf (tracked in
@@ -60,7 +63,7 @@
   // that would split one fact across two files and make a bare `typst compile`
   // produce a different PDF. cv/build-ats-exports.mjs PARSES this line and
   // reuses it for the .docx core properties, so it stays one fact in one file.
-  date: datetime(year: 2026, month: 8, day: 3),
+  date: datetime(year: 2026, month: 8, day: 26),
   // NO keywords: on purpose. The 70-term list in chan-meng-cv.typ is plainly
   // legible in `pdfinfo` and reads as keyword stuffing to an AI screener —
   // the same class of anti-pattern cv/README.md already bans. Everything that
@@ -88,7 +91,7 @@
 
 // Within-bullet leading 0.68em → 6.8pt at 10pt; between-bullet spacing 8.5pt.
 // See the spacing ladder at the top of ats-components.typ.
-#set par(leading: 0.68em, spacing: 0.95em, justify: false, first-line-indent: 0pt)
+#set par(leading: 0.68em, spacing: 0.90em, justify: false, first-line-indent: 0pt)
 
 // Typst 0.15 emits a PDF structure tree by default (verified: `pdfinfo` reports
 // Tagged: yes), so a native `= HEADING` becomes a real /H1 element — the
@@ -111,7 +114,7 @@
 
 // ASCII hyphen-minus markers, one level only. Nested lists are where
 // indentation-based parsers lose hierarchy or merge lines.
-#set list(marker: [-], indent: 0pt, body-indent: 7pt, spacing: 8.5pt)
+#set list(marker: [-], indent: 0pt, body-indent: 7pt, spacing: 8pt)
 
 // Links are real and clickable. Underlined in the same black as the body text
 // so the affordance is visible without introducing colour — a reader should
@@ -161,12 +164,11 @@
 // is. Same rule drives every heading in this file.
 = PROFESSIONAL SUMMARY
 
-Full-stack and AI engineer building production software with paying customers,
-private data, and regulated work behind it, not demos. Five concurrent
-engineering and CTO-level roles across four countries, in women's health
-technology, cultural technology, and startup infrastructure. Works AI-native by
-default: directs coding agents and builds on the Claude Agent SDK, Model Context
-Protocol (MCP), and agent skills.
+AI and full-stack engineer who has shipped MCP servers, sub-agents, and agent
+skills to production, behind paying customers, private health data, and
+regulated work, not demos. Five concurrent engineering and CTO-level roles
+across four countries. Works AI-native by default, directing coding agents and
+building on the Claude Agent SDK.
 
 // ═══ SKILLS ══════════════════════════════════════════════════════════════════
 // The designed CV splits this across three custom-named sidebar sections
@@ -176,29 +178,31 @@ Protocol (MCP), and agent skills.
 // nine — each row is a keyword payload, so rows were merged rather than cut.
 = TECHNICAL SKILLS
 
+#skills-line("AI and agent engineering", (
+  "Claude Agent SDK", "OpenAI Agents SDK", "Model Context Protocol (MCP)",
+  "LangGraph", "LangChain", "CopilotKit", "Vercel AI SDK",
+  "RAG pipelines", "multi-agent orchestration",
+  "structured outputs and JSON Schema", "prompt caching",
+  "model-tier routing with deterministic fallback", "evaluation harnesses",
+  "mcp-evals",
+))
 #skills-line("Languages and frameworks", (
-  "TypeScript", "Python", "Go", "Java", "SQL", "Typst", "Next.js 16", "React",
+  "TypeScript", "Python", "Go", "Java", "SQL", "Next.js 16", "React",
   "React Native", "Vue 3", "Spring Boot 3", "FastAPI", "TailwindCSS",
   "Drizzle ORM", "Zod",
 ))
-#skills-line("AI and agent engineering", (
-  "Claude Agent SDK", "OpenAI Agents SDK", "Model Context Protocol (MCP)",
-  "LangGraph", "LangChain", "CopilotKit", "Vercel AI SDK", "RAG pipelines",
-  "prompt caching", "model-tier routing", "evaluation harnesses", "mcp-evals",
-))
-#skills-line("Claude Code and Codex CLI (every extension surface shipped)", (
+#skills-line("Claude Code and Codex CLI", (
   "CLAUDE.md", "Agent Skills", "Subagents", "Hooks", "Status line", "Plugins",
   "AGENTS.md", "sandbox and approval policies", "headless mode",
 ))
 #skills-line("Models", (
-  "Anthropic Claude Opus, Sonnet, Haiku", "OpenAI gpt-5.5, GPT-4o and realtime",
-  "Google Gemini 2.x", "Meta Llama 3.x",
+  "Anthropic Claude Opus, Sonnet, Haiku", "OpenAI gpt-5.5, GPT-4o, realtime",
+  "Gemini", "Llama",
 ))
 #skills-line("Infrastructure, data, and quality", (
-  "Kubernetes (GKE)", "Cloudflare Workers and Vectorize", "Neon Postgres",
-  "pgvector", "Supabase", "Redis", "Docker", "Stripe", "NextAuth 5", "Vitest",
-  "Cypress", "Lighthouse", "web-vitals", "OpenTelemetry",
-  "multi-tenant isolation", "zero-downtime cloud migration", "CI/CD pipelines",
+  "Neon Postgres", "Supabase", "Docker", "Stripe", "NextAuth 5", "Vitest",
+  "Cypress", "web-vitals", "OpenTelemetry", "multi-tenant isolation",
+  "CI/CD pipelines",
 ))
 
 // ═══ EXPERIENCE ══════════════════════════════════════════════════════════════
@@ -222,7 +226,7 @@ Protocol (MCP), and agent skills.
   location: "Albuquerque, New Mexico, United States",
   arrangement: "Remote",
   bullets: (
-    [Recruited onto Anthropic's Partner Network architect track after the founder's Claude agent surfaced this open-source portfolio; completed the 45-day Architect Cohort, working through the Partner Network curriculum and contributing to the cohort's agent, skill and Model Context Protocol integration conventions.],
+    [Recruited onto Anthropic's Partner Network architect track after the founder's own Claude agent surfaced this open-source agentic-tooling portfolio, publicly confirmed by him; completed the 45-day Architect Cohort, contributing to its agent, skill, and MCP conventions.],
   ),
 )
 
@@ -234,7 +238,8 @@ Protocol (MCP), and agent skills.
   location: "St John's, Newfoundland, Canada",
   arrangement: "Remote",
   bullets: (
-    [Sole instructor of TechNest's first AI-specialised mentorship track, the fifth teaching cohort delivered since 2024; over 12 weeks students went from browser ChatGPT to shipping a live multi-user AI product by directing coding agents. Graduated 30 students who shipped 6 deployed multi-user AI products. Also built the bilingual platform that hosts it, with an in-course RAG assistant on Cloudflare Workers.],
+    [Sole instructor of TechNest's first AI-specialised track and the fifth cohort since 2024: over 12 weeks students went from browser ChatGPT to directing coding agents, and 30 graduated having shipped 6 multi-user AI products.],
+    [Authored the bilingual platform hosting all five cohorts (211 of 220 commits), behind a version-aware RAG assistant on Cloudflare Workers and Vectorize.],
   ),
 )
 
@@ -246,7 +251,7 @@ Protocol (MCP), and agent skills.
   location: "Wilmington, Delaware, United States",
   arrangement: "Remote",
   bullets: (
-    [Own the intelligence layer of an app-activation platform: built the AI scheduler that pre-warms content on Kubernetes (GKE) so a tapped game resumes in under a millisecond, and moved the platform across clouds (DigitalOcean to GCP) with zero downtime. Promoted from Core Engineer to Founding Principal Engineer across three renewals, building nearly the whole system solo.],
+    [Own the Intelligence Layer of an app-activation platform end to end: a Go orchestrator running a scorer, a seven-trigger AI rules engine, a warm-pool LRU manager and a five-state activation spine in Redis, measured on live Kubernetes (GKE) at sub-millisecond p50 restore, an 84.6% warm-pool hit rate and zero errors at 100 concurrent WebSocket clients; migrated it from DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contract iterations, 426 of 439 commits solo.],
   ),
 )
 
@@ -258,7 +263,7 @@ Protocol (MCP), and agent skills.
   location: "Auckland, New Zealand",
   arrangement: "Hybrid",
   bullets: (
-    [Rebuilt the member platform for New Zealand's leading women-in-STEM charity (3,500+ members, 5,000+ women reached lifetime) — one system for sign-ups, events, and AI-scored mentor matching, carrying 10+ years of content across with zero broken inbound links, \~85% solo over a year.],
+    [Rebuilt the member platform for a New Zealand women-in-STEM charity running 96+ events since 2014: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions with a rule-based fallback and an admin review gate, carrying 10+ years of content across with zero broken links, 793 of 936 commits.],
   ),
 )
 
@@ -270,7 +275,7 @@ Protocol (MCP), and agent skills.
   location: "Chengdu, Sichuan, China",
   arrangement: "Remote",
   bullets: (
-    [Sole engineer behind China's first women's-health-technology organisation; rebuilt its web platform twice as the mission grew, and ran the digital infrastructure for the 2026 Shanghai Summit, a four-day event with 20 speakers headlined by Ida Tin, who coined the term FemTech.],
+    [Sole engineer behind China's first organisation built specifically around women's health technology, across two platform generations (a Next.js site rebuilt as a Docusaurus editorial platform), and ran the digital infrastructure for the 2026 Shanghai Summit, a four-day event with 20 speakers headlined by Ida Tin, who coined the term FemTech.],
   ),
 )
 
@@ -282,7 +287,7 @@ Protocol (MCP), and agent skills.
   location: "Tulsa, Oklahoma, United States",
   arrangement: "Remote",
   bullets: (
-    [Joined as Senior AI/ML Infrastructure Engineer and was promoted to CTO; took the company from a no-code prototype to production B2B FemTech SaaS, and personally integrated IBM watsonx — the work that earned Sanicle its IBM Silver Partner certification.],
+    [Joined as Senior AI/ML Infrastructure Engineer and was promoted to CTO; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS, and integrated IBM watsonx behind a Gemini fallback after measuring watsonx's 28-second response baseline against a 10-second serverless timeout ceiling; the work earned Sanicle its IBM Silver Partner certification.],
   ),
 )
 
@@ -329,9 +334,9 @@ Protocol (MCP), and agent skills.
   target: "https://archcanvas.uk/",
 )[
   An AI design agent for architects and self-builders: invented ArchLang, the
-  open-source language that turns a floor plan into a precise program (34 npm
-  releases, full editor tooling), then built the commercial product on top — so
-  edits are exact, diffable, and replayable rather than regenerated.
+  open-source language that compiles a floor plan into a dimensioned drawing (34 npm
+  releases, 83 diagnostic codes), then built the commercial product on top: edits are exact and
+  replayable, not regenerated.
 ]
 
 #project-entry(
@@ -339,10 +344,11 @@ Protocol (MCP), and agent skills.
   url: "tamaiti.whiri-ai.com",
   target: "https://tamaiti.whiri-ai.com/",
 )[
-  A bilingual (te reo Māori and English) AI financial-wellness app built solo on
-  commission from Riria (Missy) Te Kanawa, Māori Executive Lead at ASB Bank;
-  culture is typed data in the schema (Maramataka phases, Te Whare Tapa Whā
-  domains); a 19-user cohort produced 181 journal entries over 4 months.
+  A bilingual te reo Māori and English AI financial-wellness app, built solo on
+  commission from Riria (Missy) Te Kanawa personally, not her employer ASB Bank:
+  three composed OpenAI models, one a realtime voice coach with server-side VAD,
+  and culture as typed schema (Maramataka phases, Te Whare Tapa Whā domains); a 19-user cohort
+  produced 181 journal entries over 4 months.
 ]
 
 #project-entry(
@@ -352,8 +358,7 @@ Protocol (MCP), and agent skills.
 )[
   Paste a job description, get a tailored resume and cover letter scored against
   its keywords in under 30 seconds; sole-authored over \~18 months, with Typst
-  compiling the finished PDF locally in under 100 ms across 7 templates — no
-  hosted Chromium, no third-party document service.
+  compiling the finished PDF locally in under 100 ms across 7 templates.
 ]
 
 #project-entry(
@@ -363,17 +368,14 @@ Protocol (MCP), and agent skills.
 )[
   An earliest-ecosystem Model Context Protocol server, shipped 35 days after
   Anthropic launched MCP and before a registry existed: a PulseMCP Top Pick, a
-  Glama A-rating, and \~125 GitHub stars.
+  Glama A-rating, and 126 GitHub stars.
 ]
 
 #block(above: 0pt, below: 0pt, {
   strong("Also built: ")
-  [#link("https://github.com/ChanMeng666/echook")[echook] (notifications for
-  Claude Code, Cursor, and Codex),
-  #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland food-festival
-  platform, solo in 9 days),
-  #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator]
-  (355 animated-SVG templates),
+  [#link("https://github.com/ChanMeng666/echook")[echook],
+  #link("https://eatropolis.co.nz/")[eatropolis.co.nz],
+  #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator],
   #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill]
   (typesets this resume), and #link("https://seismophone.chanmeng.org/")[Seismophone].]
 })
@@ -406,12 +408,11 @@ Protocol (MCP), and agent skills.
   "Building with the Claude API", "Introduction to MCP",
   "Introduction to Agent Skills", "Claude Code in Action",
   "AI Fluency: Framework and Foundations",
-  "Claude Certified Architect: Foundations curriculum (Partner Network track)",
+  "Claude Certified Architect (Foundations): curriculum completed, practice exam passed (Partner Network track)",
 ))
 #skills-line("Other (50+ total)", (
   "Google AI Essentials", "Microsoft Azure AI Essentials",
-  "GitHub Professional", "Docker Professional",
-  "HackerRank Software Engineer plus 22 skill certifications including SQL (Advanced)",
+  "HackerRank Software Engineer plus 22 skill certifications",
 ))
 
 // ═══ AWARDS ══════════════════════════════════════════════════════════════════
@@ -423,6 +424,6 @@ Protocol (MCP), and agent skills.
 // distinct awards. They may share a line, but never merge into one award.
 = AWARDS AND RECOGNITION
 
-- UN CSW 69 Speaker, UN Headquarters, New York City, March 2025 — attracted IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.
-- Outstanding Mentor Award, AI Hackathon Festival 2025 (1 of 14 expert mentors); Excellence Award, FemTech China Women's Health Technology Challenge, December 2024; Outstanding Performer, UN Women FemTech Hackathon, FemTech Weekend Beijing, March 2025.
-- Community reach: 5,856 LinkedIn followers, 26 recommendations, 1,103 newsletter subscribers, 480+ GitHub stars, CopilotKit contributor (2 merged PRs).
+- UN CSW 69 Speaker (by video link), UN Headquarters, New York, Mar 2025 — drew IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.
+- Outstanding Mentor Award, AI Hackathon Festival 2025 (1 of 14 mentors); Excellence Award, FemTech China Women's Health Technology Challenge (Dec 2024); Outstanding Performer, UN Women FemTech Hackathon, Beijing (Mar 2025).
+- Community: 480+ GitHub stars across own public repos, 26 LinkedIn recommendations, 2 PRs merged into CopilotKit.

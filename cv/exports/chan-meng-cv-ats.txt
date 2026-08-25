@@ -5,41 +5,42 @@ chanmeng.org | linkedin.com/in/chanmeng666 | github.com/ChanMeng666
 
 PROFESSIONAL SUMMARY
 
-Full-stack and AI engineer building production software with paying customers, private data, and regulated work behind it, not demos. Five concurrent engineering and CTO-level roles across four countries, in women's health technology, cultural technology, and startup infrastructure. Works AI-native by default: directs coding agents and builds on the Claude Agent SDK, Model Context Protocol (MCP), and agent skills.
+AI and full-stack engineer who has shipped MCP servers, sub-agents, and agent skills to production, behind paying customers, private health data, and regulated work, not demos. Five concurrent engineering and CTO-level roles across four countries. Works AI-native by default, directing coding agents and building on the Claude Agent SDK.
 
 TECHNICAL SKILLS
 
-Languages and frameworks: TypeScript, Python, Go, Java, SQL, Typst, Next.js 16, React, React Native, Vue 3, Spring Boot 3, FastAPI, TailwindCSS, Drizzle ORM, Zod
-AI and agent engineering: Claude Agent SDK, OpenAI Agents SDK, Model Context Protocol (MCP), LangGraph, LangChain, CopilotKit, Vercel AI SDK, RAG pipelines, prompt caching, model-tier routing, evaluation harnesses, mcp-evals
-Claude Code and Codex CLI (every extension surface shipped): CLAUDE.md, Agent Skills, Subagents, Hooks, Status line, Plugins, AGENTS.md, sandbox and approval policies, headless mode
-Models: Anthropic Claude Opus, Sonnet, Haiku, OpenAI gpt-5.5, GPT-4o and realtime, Google Gemini 2.x, Meta Llama 3.x
-Infrastructure, data, and quality: Kubernetes (GKE), Cloudflare Workers and Vectorize, Neon Postgres, pgvector, Supabase, Redis, Docker, Stripe, NextAuth 5, Vitest, Cypress, Lighthouse, web-vitals, OpenTelemetry, multi-tenant isolation, zero-downtime cloud migration, CI/CD pipelines
+AI and agent engineering: Claude Agent SDK, OpenAI Agents SDK, Model Context Protocol (MCP), LangGraph, LangChain, CopilotKit, Vercel AI SDK, RAG pipelines, multi-agent orchestration, structured outputs and JSON Schema, prompt caching, model-tier routing with deterministic fallback, evaluation harnesses, mcp-evals
+Languages and frameworks: TypeScript, Python, Go, Java, SQL, Next.js 16, React, React Native, Vue 3, Spring Boot 3, FastAPI, TailwindCSS, Drizzle ORM, Zod
+Claude Code and Codex CLI: CLAUDE.md, Agent Skills, Subagents, Hooks, Status line, Plugins, AGENTS.md, sandbox and approval policies, headless mode
+Models: Anthropic Claude Opus, Sonnet, Haiku, OpenAI gpt-5.5, GPT-4o, realtime, Gemini, Llama
+Infrastructure, data, and quality: Neon Postgres, Supabase, Docker, Stripe, NextAuth 5, Vitest, Cypress, web-vitals, OpenTelemetry, multi-tenant isolation, CI/CD pipelines
 
 PROFESSIONAL EXPERIENCE
 
 AI Agent Architect
 Engram | Albuquerque, New Mexico, United States | Remote | May 2026 - Jul 2026
-- Recruited onto Anthropic's Partner Network architect track after the founder's Claude agent surfaced this open-source portfolio; completed the 45-day Architect Cohort, working through the Partner Network curriculum and contributing to the cohort's agent, skill and Model Context Protocol integration conventions.
+- Recruited onto Anthropic's Partner Network architect track after the founder's own Claude agent surfaced this open-source agentic-tooling portfolio, publicly confirmed by him; completed the 45-day Architect Cohort, contributing to its agent, skill, and MCP conventions.
 
 AI Instructor & Mentor
 TechNest Community | St John's, Newfoundland, Canada | Remote | Apr 2026 - Aug 2026
-- Sole instructor of TechNest's first AI-specialised mentorship track, the fifth teaching cohort delivered since 2024; over 12 weeks students went from browser ChatGPT to shipping a live multi-user AI product by directing coding agents. Graduated 30 students who shipped 6 deployed multi-user AI products. Also built the bilingual platform that hosts it, with an in-course RAG assistant on Cloudflare Workers.
+- Sole instructor of TechNest's first AI-specialised track and the fifth cohort since 2024: over 12 weeks students went from browser ChatGPT to directing coding agents, and 30 graduated having shipped 6 multi-user AI products.
+- Authored the bilingual platform hosting all five cohorts (211 of 220 commits), behind a version-aware RAG assistant on Cloudflare Workers and Vectorize.
 
 Founding Principal Engineer, Activation, Execution & AI Systems
 GAVIGO Inc. | Wilmington, Delaware, United States | Remote | Oct 2025 - Present
-- Own the intelligence layer of an app-activation platform: built the AI scheduler that pre-warms content on Kubernetes (GKE) so a tapped game resumes in under a millisecond, and moved the platform across clouds (DigitalOcean to GCP) with zero downtime. Promoted from Core Engineer to Founding Principal Engineer across three renewals, building nearly the whole system solo.
+- Own the Intelligence Layer of an app-activation platform end to end: a Go orchestrator running a scorer, a seven-trigger AI rules engine, a warm-pool LRU manager and a five-state activation spine in Redis, measured on live Kubernetes (GKE) at sub-millisecond p50 restore, an 84.6% warm-pool hit rate and zero errors at 100 concurrent WebSocket clients; migrated it from DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contract iterations, 426 of 439 commits solo.
 
 Senior Full-Stack Engineer & Website Team Lead
 She Sharp | Auckland, New Zealand | Hybrid | Jul 2025 - Present
-- Rebuilt the member platform for New Zealand's leading women-in-STEM charity (3,500+ members, 5,000+ women reached lifetime) — one system for sign-ups, events, and AI-scored mentor matching, carrying 10+ years of content across with zero broken inbound links, ~85% solo over a year.
+- Rebuilt the member platform for a New Zealand women-in-STEM charity running 96+ events since 2014: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions with a rule-based fallback and an admin review gate, carrying 10+ years of content across with zero broken links, 793 of 936 commits.
 
 Chief Technology Officer
 FemTech Weekend | Chengdu, Sichuan, China | Remote | Mar 2025 - Present
-- Sole engineer behind China's first women's-health-technology organisation; rebuilt its web platform twice as the mission grew, and ran the digital infrastructure for the 2026 Shanghai Summit, a four-day event with 20 speakers headlined by Ida Tin, who coined the term FemTech.
+- Sole engineer behind China's first organisation built specifically around women's health technology, across two platform generations (a Next.js site rebuilt as a Docusaurus editorial platform), and ran the digital infrastructure for the 2026 Shanghai Summit, a four-day event with 20 speakers headlined by Ida Tin, who coined the term FemTech.
 
 Chief Technology Officer
 Sanicle | Tulsa, Oklahoma, United States | Remote | Mar 2025 - Feb 2026
-- Joined as Senior AI/ML Infrastructure Engineer and was promoted to CTO; took the company from a no-code prototype to production B2B FemTech SaaS, and personally integrated IBM watsonx — the work that earned Sanicle its IBM Silver Partner certification.
+- Joined as Senior AI/ML Infrastructure Engineer and was promoted to CTO; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS, and integrated IBM watsonx behind a Gemini fallback after measuring watsonx's 28-second response baseline against a 10-second serverless timeout ceiling; the work earned Sanicle its IBM Silver Partner certification.
 
 Earlier experience
 
@@ -50,18 +51,18 @@ Full Stack Developer & Lead Documenter, CORDE | Canterbury, New Zealand | Jun 20
 PROJECTS
 
 ArchCanvas and ArchLang | archcanvas.uk
-An AI design agent for architects and self-builders: invented ArchLang, the open-source language that turns a floor plan into a precise program (34 npm releases, full editor tooling), then built the commercial product on top — so edits are exact, diffable, and replayable rather than regenerated.
+An AI design agent for architects and self-builders: invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (34 npm releases, 83 diagnostic codes), then built the commercial product on top: edits are exact and replayable, not regenerated.
 
 Tam-AI-Ti | tamaiti.whiri-ai.com
-A bilingual (te reo Māori and English) AI financial-wellness app built solo on commission from Riria (Missy) Te Kanawa, Māori Executive Lead at ASB Bank; culture is typed data in the schema (Maramataka phases, Te Whare Tapa Whā domains); a 19-user cohort produced 181 journal entries over 4 months.
+A bilingual te reo Māori and English AI financial-wellness app, built solo on commission from Riria (Missy) Te Kanawa personally, not her employer ASB Bank: three composed OpenAI models, one a realtime voice coach with server-side VAD, and culture as typed schema (Maramataka phases, Te Whare Tapa Whā domains); a 19-user cohort produced 181 journal entries over 4 months.
 
 Vitex - AI Career Agent | vitex.org.nz
-Paste a job description, get a tailored resume and cover letter scored against its keywords in under 30 seconds; sole-authored over ~18 months, with Typst compiling the finished PDF locally in under 100 ms across 7 templates — no hosted Chromium, no third-party document service.
+Paste a job description, get a tailored resume and cover letter scored against its keywords in under 30 seconds; sole-authored over ~18 months, with Typst compiling the finished PDF locally in under 100 ms across 7 templates.
 
 Google News MCP Server | github.com/ChanMeng666/server-google-news
-An earliest-ecosystem Model Context Protocol server, shipped 35 days after Anthropic launched MCP and before a registry existed: a PulseMCP Top Pick, a Glama A-rating, and ~125 GitHub stars.
+An earliest-ecosystem Model Context Protocol server, shipped 35 days after Anthropic launched MCP and before a registry existed: a PulseMCP Top Pick, a Glama A-rating, and 126 GitHub stars.
 
-Also built: echook (https://github.com/ChanMeng666/echook) (notifications for Claude Code, Cursor, and Codex), eatropolis.co.nz (Auckland food-festival platform, solo in 9 days), gradient-svg-generator (https://gradient-svg-generator.vercel.app/) (355 animated-SVG templates), typst-claude-skill (https://github.com/ChanMeng666/typst-claude-skill) (typesets this resume), and Seismophone (https://seismophone.chanmeng.org/).
+Also built: echook (https://github.com/ChanMeng666/echook), eatropolis.co.nz, gradient-svg-generator (https://gradient-svg-generator.vercel.app/), typst-claude-skill (https://github.com/ChanMeng666/typst-claude-skill) (typesets this resume), and Seismophone (https://seismophone.chanmeng.org/).
 
 EDUCATION
 
@@ -70,11 +71,11 @@ Bachelor of Geography Science, Jiangsu Normal University, China | Sep 2012 - Jun
 
 CERTIFICATIONS
 
-Anthropic (6, 2025-2026): Building with the Claude API, Introduction to MCP, Introduction to Agent Skills, Claude Code in Action, AI Fluency: Framework and Foundations, Claude Certified Architect: Foundations curriculum (Partner Network track)
-Other (50+ total): Google AI Essentials, Microsoft Azure AI Essentials, GitHub Professional, Docker Professional, HackerRank Software Engineer plus 22 skill certifications including SQL (Advanced)
+Anthropic (6, 2025-2026): Building with the Claude API, Introduction to MCP, Introduction to Agent Skills, Claude Code in Action, AI Fluency: Framework and Foundations, Claude Certified Architect (Foundations): curriculum completed, practice exam passed (Partner Network track)
+Other (50+ total): Google AI Essentials, Microsoft Azure AI Essentials, HackerRank Software Engineer plus 22 skill certifications
 
 AWARDS AND RECOGNITION
 
-- UN CSW 69 Speaker, UN Headquarters, New York City, March 2025 — attracted IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.
-- Outstanding Mentor Award, AI Hackathon Festival 2025 (1 of 14 expert mentors); Excellence Award, FemTech China Women's Health Technology Challenge, December 2024; Outstanding Performer, UN Women FemTech Hackathon, FemTech Weekend Beijing, March 2025.
-- Community reach: 5,856 LinkedIn followers, 26 recommendations, 1,103 newsletter subscribers, 480+ GitHub stars, CopilotKit contributor (2 merged PRs).
+- UN CSW 69 Speaker (by video link), UN Headquarters, New York, Mar 2025 — drew IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.
+- Outstanding Mentor Award, AI Hackathon Festival 2025 (1 of 14 mentors); Excellence Award, FemTech China Women's Health Technology Challenge (Dec 2024); Outstanding Performer, UN Women FemTech Hackathon, Beijing (Mar 2025).
+- Community: 480+ GitHub stars across own public repos, 26 LinkedIn recommendations, 2 PRs merged into CopilotKit.

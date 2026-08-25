@@ -45,12 +45,12 @@
 // (0.72em / 13 / 19 / 28 at 10.5pt) and ran to 4 pages; getting to 2 cost both
 // content and air. If the page budget is ever relaxed, scale all five back up
 // together rather than reaching for one of them.
-#let gap-section = 17pt   // above a section heading
-#let gap-rule = 7pt       // below the heading's rule, before the first content
-#let gap-entry = 12pt     // between two employment / project / education entries
-#let gap-intra = 4.5pt    // identity lines → bullets inside one entry
-#let gap-line = 5.5pt     // between the one-line skill / certification rows
-#let gap-compact = 4pt    // between single-line earlier-experience entries
+#let gap-section = 14pt   // above a section heading
+#let gap-rule = 6pt       // below the heading's rule, before the first content
+#let gap-entry = 10pt     // between two employment / project / education entries
+#let gap-intra = 4pt    // identity lines → bullets inside one entry
+#let gap-line = 5pt     // between the one-line skill / certification rows
+#let gap-compact = 3.5pt    // between single-line earlier-experience entries
 
 // ─── Horizontal rule ─────────────────────────────────────────────────────────
 // Full width, hairline, pure black. Used under section headings only — enough

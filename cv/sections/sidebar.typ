@@ -178,7 +178,7 @@
 #let certifications() = sec("Certifications & Training", {
   cert-group("Anthropic (6)", (
     [*Building with the Claude API · Intro to MCP · Intro to Agent Skills · Claude Code in Action* (all May 2026; *Claude Code in Action* originally Aug 2025) · *AI Fluency: Framework & Foundations* (Aug 2025)],
-    [*Claude Certified Architect — Foundations* curriculum completed (on Anthropic Partner Network track via Engram)],
+    [*Claude Certified Architect — Foundations* — curriculum completed and practice exam passed, on the Anthropic Partner Network track via Engram],
   ))
   cert-group("Other AI / Cloud", (
     [*Google AI Essentials · Microsoft Azure AI Essentials · Generative AI Career Skills · Wolfram Machine Learning Foundations · GitHub Professional · Docker Professional · Microsoft Software Development* (Dec 2024 — Aug 2025)],
@@ -203,7 +203,7 @@
     indent: 0pt,
     body-indent: 6pt,
   )
-  list.item[*UN CSW 69 Speaker* — UN HQ NYC, Mar 2025 · attracted *IBM pilot interest* and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
+  list.item[*UN CSW 69 Speaker* — UN HQ NYC, Mar 2025 · presented by video link · attracted *IBM pilot interest* and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
   list.item[*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors · guided 11 teams / 80+ participants.]
   // FemTech China and FemTech Weekend are TWO DISTINCT organisations — separate
   // events, separate awards. Never combine them. (See data/profile/30-recognition.yaml awards[].)

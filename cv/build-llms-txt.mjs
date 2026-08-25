@@ -49,10 +49,10 @@ W(
 
 sect("Positioning");
 W("- AI Agent Architect · Full-stack Engineer · AI-Tooling Expert");
-W("- Builds the AI software companies run every day — products with paying customers, private data, and regulated work behind them, not demos.");
-W("- Works AI-native by default — directs coding agents (Claude Code, Codex) and builds on the Claude Agent SDK, MCP, and agent skills, shipping these as open-source reference implementations, while keeping the call on what actually ships a human one.");
+W("- Ships MCP servers, sub-agents, and agent skills to production — behind paying customers, private health data, and regulated work, not demos.");
+W("- Works AI-native by default — directs coding agents (Claude Code, Codex) and builds on the Claude Agent SDK, shipping these as open-source reference implementations, while keeping the call on what actually ships a human one.");
 W("- Focus areas: women's health, cultural technology, and early-stage startup infrastructure.");
-W("- Came through the Anthropic Partner Network architect track via Engram (May–Jul 2026) — Claude Certified Architect — Foundations curriculum.");
+W("- Came through the Anthropic Partner Network architect track via Engram (May–Jul 2026) — Claude Certified Architect (Foundations): curriculum completed, practice exam passed.");
 W("- Senior AI programming mentor · orchestrator of agents.");
 
 // Verified reach metrics with per-stat source URLs — the "statistics with

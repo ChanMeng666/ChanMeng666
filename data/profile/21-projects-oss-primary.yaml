@@ -69,7 +69,7 @@ projects:
     metrics:
       - { label: "Public v0.1 commit",    value: "2026-04-13 (commit 73f4fa8 — 'initial commit github-readme-suno-cards v0.1', extracted as a clean public-facing repo)" }
       - { label: "Internal cleanup",      value: "2026-04-13 commit 295756e — 'clean remaining internal reference' (post-extraction sanitization)" }
-      - { label: "Latest commit",         value: "2026-07-23" }
+      - { label: "Latest commit",         value: "2026-08-24" }
       - { label: "Total commits",         value: "28 (public repo, 2026-04-13 → 2026-07-06)" }
       - { label: "Live service",          value: "https://github-readme-suno-cards.vercel.app (Vercel serverless runtime)" }
       - { label: "GitHub Action",         value: "uses: ChanMeng666/github-readme-suno-cards@v0.1 (composite action, 'music' icon, purple branding)" }
@@ -232,7 +232,8 @@ projects:
     provenance: personal
     # primary, not flagship: on 2026-08-05 the README card band was cut to the
     # three projects Chan works on full-time, and echook moved to the AI-agents
-    # table. Still the most-starred project in the portfolio (78★) and still
+    # table. Still the second-most-starred project in the portfolio (84★, behind
+    # google-news-mcp at 126) and still
     # active — this is a band change, not a demotion of the work.
     tier: primary
     recency: active
@@ -249,7 +250,7 @@ projects:
           - src: /public/tech-logos/codex.svg
             alt: "OpenAI Codex"
             url: "https://github.com/openai/codex"
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-08-26"
     # Product name only. The "(Echo + Hook)" etymology gloss lived here until
     # 2026-08-05 and read as part of the name in every rendered surface.
     name: echook
@@ -280,7 +281,7 @@ projects:
       - "Suno (background music generation)"
     metrics:
       - { label: "Commits (solo)", value: "151 (2025-11-01 → 2026-07-16, ~8 months); effectively single-author" }
-      - { label: "GitHub stars",   value: "~75 (echook, renamed from claude-code-audio-hooks)" }
+      - { label: "GitHub stars",   value: "84 (measured 2026-08-26; renamed from claude-code-audio-hooks)" }
       - { label: "Version",        value: "v6.3.4 (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)" }
       - { label: "Hook events",    value: "37 canonical events (3 on by default), mapped per harness: Claude Code 37 · Cursor 18 native (8 via auto-bridge) · Codex 10" }
       - { label: "Harnesses",      value: "3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift" }
@@ -404,8 +405,8 @@ projects:
         validated by 248 test cases across Ubuntu, Windows, and macOS on
         Python 3.9, 3.12, and 3.13 in GitHub Actions.
       outcomes: |
-        ~76 GitHub stars (external — needs registry check; live 75),
-        151 commits across the 5.x → 6.x line (now v6.3.4), and 248
+        84 GitHub stars (measured 2026-08-26 via the GitHub API by
+        `npm run refresh-metrics`), 151 commits across the 5.x → 6.x line (now v6.3.4), and 248
         automated test cases. The defining release sequence: v5.0 (Jan
         2026) shipped the AI-first redesign — JSON command interface,
         `/audio-hooks` skill, NDJSON logging, plugin-native install;
@@ -914,7 +915,7 @@ projects:
     metrics:
       - { label: "Internal product name",    value: "Chromaflow (package.json) — public URL retains the descriptive 'gradient-svg-generator' for discoverability" }
       - { label: "First commit",             value: "2025-01-06 (commit 782c6f1)" }
-      - { label: "Latest commit",            value: "2026-07-10" }
+      - { label: "Latest commit",            value: "2026-08-04" }
       - { label: "Total commits",            value: "283 (solo, 2025-01-06 → 2026-07-10, ~18 months sustained)" }
       - { label: "gradientType effects",     value: "186 distinct gradientType references across 16 effect-family folders" }
       - { label: "Template count",           value: "355 across 19 categories (Pride 20, Tech, Nature, Material, Text-FX, Gaming, Weather 12, Light&Shadow 12, Art Movements 12, Culinary 12, Patterns 8, Metallic 8, Path-Text 12, Shapes 25, Experimental 29, GitHub-Profile 30)" }

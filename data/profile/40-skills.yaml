@@ -109,7 +109,7 @@ skills:
       - tool: Drizzle ORM
         since: "2024"
         depth: expert
-        notes: "17 repos — preferred ORM for new builds (She Sharp 1,392-line schema, 30 pgEnums, 34 pgTables)."
+        notes: "17 repos — preferred ORM for new builds (She Sharp 1,411-line schema, 30 pgEnums, 35 pgTables)."
       - tool: Prisma
         since: "2026"
         depth: learning
@@ -265,8 +265,12 @@ skills:
 # DOMAINS — vertical / problem-area expertise distinct from technical skills.
 # Drives JSON-LD knowsAbout enrichment with verticals so LLMs surface Chan
 # for domain-shaped queries (e.g. "Maori cultural tech", "FemTech engineer")
-# beyond raw tech stack matching. evidenceProjectIds auto-derived from a scan
-# of 105 Chan-owned repos.
+# beyond raw tech stack matching. evidenceProjectIds was originally auto-derived
+# from a scan of 105 Chan-owned repos, which is how it came to hold REPO SLUGS
+# rather than projects[].id values — 19 of them resolved to nothing until
+# 2026-08-26, and cultural-technology's list resolved to zero projects. Nothing
+# validates these (the schema types them as free-form strings), so entries here
+# must be checked by hand against `grep -rn "id: <slug>" data/profile/`.
 # =============================================================================
 domains:
   - id: ai-agent-architecture
@@ -278,21 +282,18 @@ domains:
       patterns, and the audio-feedback hook system that surfaces agent
       state to the operator.
     evidenceProjectIds:
-      - awesome-claude-skills
-      - awesome-claude-skills-1
+      - ai-hackathon-assistant
       - echook
-      - event-qa-ai-template
       - femtracker-agent
+      - google-news-mcp
       - hospital-roster-agent
       - panda-agent
       - server-google-jobs
-      - server-google-news
       - typst-claude-skill
-      - website-building-agent
       - wellness-agent
     tier: flagship
     recency: active
-    lastUpdated: "2026-05-22"
+    lastUpdated: "2026-08-26"
 
   - id: femtech
     name: "Women's Health Technology (FemTech)"
@@ -308,20 +309,18 @@ domains:
       - femtech-weekend-website
       - femtracker
       - femtracker-agent
-      - forward-with-her-mentorship-program
+      - forward-with-her-website
       - free-period-website
       - hospital-roster-agent
       - sanicle-ai
       - sanicle-ai-mobile
-      - sanicle-cloud
-      - sanicle-docs
+      - sanicle-platform
       - she-sharp
-      - she-sharp-crawl
-      - tam-ai-ti-web
+      - tam-ai-ti
       - wellness-agent
     tier: flagship
     recency: active
-    lastUpdated: "2026-05-22"
+    lastUpdated: "2026-08-26"
 
   - id: cultural-technology
     name: Māori Cultural Technology
@@ -333,10 +332,10 @@ domains:
       data ownership, and AI interaction design. Lead project:
       Tam-AI-Ti for Riria (Missy) Te Kanawa.
     evidenceProjectIds:
-      - tam-ai-ti-web
+      - tam-ai-ti
     tier: primary
     recency: active
-    lastUpdated: "2026-05-22"
+    lastUpdated: "2026-08-26"
 
   - id: ai-programming-education
     name: AI Programming Education
@@ -349,13 +348,12 @@ domains:
       curriculum authoring, live cohort facilitation, and post-cohort
       showcase artefacts.
     evidenceProjectIds:
+      - ai-hackathon-assistant
       - ai-programming-teaching-project
-      - awesome-claude-skills
-      - awesome-claude-skills-1
       - chinese-redefine
       - english-redefine
       - esol-learning-platform
-      - event-qa-ai-template
+      - her-waka
       - typst-claude-skill
     evidenceWorkIds:
       - forward-with-her
@@ -363,7 +361,7 @@ domains:
       - she-sharp
     tier: flagship
     recency: active
-    lastUpdated: "2026-05-22"
+    lastUpdated: "2026-08-26"
 
   - id: minimalist-design
     name: Minimalist Living + Minimalist UX
@@ -374,16 +372,13 @@ domains:
       product UI — calm dashboards, tight information density, and
       intentional removal as the primary design move.
     evidenceProjectIds:
-      - 2d-portfolio
-      - 3d-portfolio
-      - chan-meng-novel
-      - chan-meng-web
       - minimalist-good-post
-      - my-cv
+      - portfolio-v1
+      - portfolio-v2
       - who-i-am
     tier: primary
     recency: active
-    lastUpdated: "2026-05-22"
+    lastUpdated: "2026-08-26"
 
 # =============================================================================
 # LANGUAGES

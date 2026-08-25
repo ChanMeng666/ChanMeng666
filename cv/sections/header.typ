@@ -64,7 +64,7 @@
       // ── Social-proof stat row — the six metrics merged into FOUR source-
       //    grouped pills (LinkedIn · Newsletter · GitHub · CopilotKit) so the
       //    header reads concise; every number is preserved + bold-accented. ──
-      stat-pill-multi[#snum[5,856] LinkedIn followers · #snum[23] recommendations]
+      stat-pill-multi[#snum[5,856] LinkedIn followers · #snum[26] recommendations]
       h(space-pill-row)
       stat-pill("1,103", "newsletter subscribers")
       h(space-pill-row)

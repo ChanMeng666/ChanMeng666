@@ -71,7 +71,7 @@ work:
     featured: true
     tier: flagship
     recency: recent
-    lastUpdated: "2026-08-04"
+    lastUpdated: "2026-08-26"
     keywords:
       - AI System Architecture
       - Mission Control (internal product)
@@ -187,7 +187,7 @@ work:
         4. **Open-source IP preserved.** The cohort agreement explicitly
            carved out claude-code-audio-hooks (now **echook**) and the
            rest of Chan's prior work as her own property — echook has
-           since gone on to 78 GitHub stars independently of Engram.
+           since gone on to 84 GitHub stars independently of Engram.
 
         **Precise on the credential, deliberately.** The CCA-F
         *curriculum* was completed and the *practice* exam passed; the
@@ -459,10 +459,10 @@ work:
     featured: true
     tier: flagship
     recency: active
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-08-26"
     keywords: [Go, "Kubernetes (GKE)", "React Native", WebSocket, "Redis", "gpt-5.4-mini", "AI orchestration", "Distributed systems", "Founding engineer"]
     narrative:
-      impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owns the Intelligence Layer end-to-end (~97% solo on 426 of 439 commits) with a contractually protected technical domain."
+      impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owns the Intelligence Layer end-to-end (~97% solo on 426 of 439 non-merge commits) with a contractually protected technical domain."
       companyContext: |
         GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
         stage, Istanbul-founded by Saba Gecgil and registered in
@@ -517,7 +517,8 @@ work:
         Cloud GKE (Belgium) in a clean ~30-minute cutover on 2026-03-11
         when GAVIGO's Google Cloud partnership took effect — full
         production-grade expertise on both DigitalOcean and Google Cloud.
-        439 total commits, 426 (~97%) solo across my two git identities;
+        445 commits (439 non-merge), 426 of them (~97%) mine across my two
+        git identities;
         the remainder split between the GitHub Actions bot and a second
         engineer who joined in June 2026.
 
@@ -802,8 +803,11 @@ work:
     # contradictory figures (3,673+ and 3,767+, the second covering a SHORTER
     # period) and the founder separately said "over 3,000"; 3,500 is a midpoint.
     # `sponsors: 50` is UNSOURCED (archive says 33+ / 23; the logo wall has 39).
-    # The 85% mentorship success rate quoted in 20-projects-flagship.yaml is
-    # UNSOURCED and stats.ts is explicit that no such survey was ever run.
+    # The 85% mentorship success rate (and the "5-6x higher promotion
+    # likelihood" corollary) was REMOVED from every surface on 2026-08-26:
+    # stats.ts is explicit that no such survey was ever run, so it is not an
+    # unsourced estimate, it is a statistic that does not exist. Do not re-add
+    # it from the She Sharp about-us page — that page is where it came from.
     #
     # "8,000+ women supported" was worse than stale: the She Sharp site does not
     # publish it at all. Its nearest figure is the 10th-anniversary line
@@ -823,7 +827,7 @@ work:
     featured: true
     tier: flagship
     recency: active
-    lastUpdated: "2026-08-24"
+    lastUpdated: "2026-08-26"
     keywords: ["Next.js 15", "React 19", "Drizzle ORM", "Neon Postgres", Stripe, "GPT-4o-mini", Slack, "Agent skills", "NextAuth 5", "Tailwind 4"]
     narrative:
       impactHeadline: "Recruited directly by founder Dr Mahsa Mohaghegh as the senior AI + full-stack capability She Sharp didn't have in-house; led the cutover from Webflow to the new platform via a custom migration crawler preserving 10+ years of legacy content for 3,500+ members."
@@ -835,7 +839,7 @@ work:
         network, and a recurring events calendar that together support
         3,500+ members and 5,000+ women reached
         across its history. 50+ corporate partners, 96+ events since 2014,
-        85% mentorship success rate.
+        18 industry mentors.
       mission: |
         Close the representation gap in technology by connecting women in
         STEM with role models, mentors, employers, and each other — and by
@@ -930,7 +934,7 @@ work:
     featured: true
     tier: primary
     recency: active
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-08-26"
     keywords:
       - Next.js
       - Docusaurus
@@ -945,7 +949,7 @@ work:
       - Radix UI
       - earth-flyline
     narrative:
-      impactHeadline: "Sole technical leader and co-architect with the founder; tenure spans two platform generations (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite), serving as the sole engineering voice across all org events and the 2026 summit cycle."
+      impactHeadline: "Sole technical leader and co-architect with the founder; tenure spans two platform generations (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite), serving as the sole engineering voice across all org events and through the 2026 Shanghai Summit cycle, which ran to 25 June 2026."
       companyContext: |
         FemTech Weekend is China's first organisation built specifically around
         women's health technology — a community, research outfit, and event
@@ -1048,7 +1052,9 @@ work:
         "FemTech" in 2016), alongside Alice Zheng, Dominnique Karetsos,
         Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike
         Steinebach, Stella Fu, Peixian Lu, Sandy Lv, Chai Ke (柴可), Chen
-        Jian, Jazmin Seregi, Judy Lux, Abraham Morse, and Ira Evdokimova.
+        Jian, Jazmin Seregi, Abraham (Nick) Morse, Ira Evdokimova, Maryann
+        Selfe, Jonathan Y. Zhao, Rahul Agrawal, Giulia Paggiola, and
+        Michael Wang.
         The summit was structured as a flagship conference plus a dedicated
         capital and pitch day plus curated site visits, with named partners
         including AVPN and a multi-tier sponsor programme — all of it
@@ -2253,7 +2259,7 @@ education:
   - id: lincoln
     tier: flagship
     recency: recent
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-08-26"
     institution: Lincoln University, New Zealand
     url: https://www.lincoln.ac.nz/
     studyType: Master of Applied Computing (Distinction, Dean's List)

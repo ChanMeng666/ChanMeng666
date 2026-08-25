@@ -171,7 +171,7 @@ End-to-end AI-native product engineering — from agentic-system architecture th
 Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first.
 
 ### What is Chan's biggest shipped result?
-GAVIGO IRE — 426 of 439 commits (~97%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — 3,500+ members, 1,000+ active, 95 API routes, 1,411-line schema, 85% commits solo (793 of 936).
+GAVIGO IRE — 426 of 439 non-merge commits (~97%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — the member platform for a charity running 96+ events since 2014: 95 API routes, 1,411-line schema, 793 of 936 commits solo.
 
 
 ## Profiles
@@ -232,13 +232,13 @@ Next.js product that consumes it as a package: an AI agent writes
 ArchLang, compiles it, grounds a rendering on the compiled plan, and
 critiques it — then lets the user refine the plan in place.
 ### Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer) at Gavigo
-[tier=flagship · recency=active · updated=2026-05-18]
+[tier=flagship · recency=active · updated=2026-08-26]
 - **Period:** Oct 2025 -- Present
 - **Location:** USA (remote — Delaware-incorporated)
 - **URL:** https://gavigo.com/
 - **Keywords:** Go, Kubernetes (GKE), React Native, WebSocket, Redis, gpt-5.4-mini, AI orchestration, Distributed systems, Founding engineer
 
-**Impact:** Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owns the Intelligence Layer end-to-end (~97% solo on 426 of 439 commits) with a contractually protected technical domain.
+**Impact:** Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owns the Intelligence Layer end-to-end (~97% solo on 426 of 439 non-merge commits) with a contractually protected technical domain.
 
 **Company context:** GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
 stage, Istanbul-founded by Saba Gecgil and registered in
@@ -293,7 +293,8 @@ on DigitalOcean DOKS (Singapore); led the full migration to Google
 Cloud GKE (Belgium) in a clean ~30-minute cutover on 2026-03-11
 when GAVIGO's Google Cloud partnership took effect — full
 production-grade expertise on both DigitalOcean and Google Cloud.
-439 total commits, 426 (~97%) solo across my two git identities;
+445 commits (439 non-merge), 426 of them (~97%) mine across my two
+git identities;
 the remainder split between the GitHub Actions bot and a second
 engineer who joined in June 2026.
 
@@ -385,7 +386,7 @@ compatibility, and audio bug stability — vendored the top 9
 Stolen Sword, Brewing Disaster, Coup Ahoo, DEAD AGAIN,
 Norman the Necromancer, Idle Necromancer).
 ### Senior Full Stack Engineer & Website Team Lead at She Sharp
-[tier=flagship · recency=active · updated=2026-08-24]
+[tier=flagship · recency=active · updated=2026-08-26]
 - **Period:** Jul 2025 -- Present
 - **Location:** New Zealand
 - **URL:** https://www.shesharp.org.nz/
@@ -400,7 +401,7 @@ organization runs a mentorship programme, a corporate-partner
 network, and a recurring events calendar that together support
 3,500+ members and 5,000+ women reached
 across its history. 50+ corporate partners, 96+ events since 2014,
-85% mentorship success rate.
+18 industry mentors.
 
 **Mission:** Close the representation gap in technology by connecting women in
 STEM with role models, mentors, employers, and each other — and by
@@ -484,13 +485,13 @@ deduplication + Wayback Machine fallback), Mintlify / MDX (Her Waka
 teaching site authored solo), and Node 22 native fetch over the
 SerpData API (the SEO audit with mermaid-diagrammed report).
 ### Chief Technology Officer at FemTech Weekend
-[tier=primary · recency=active · updated=2026-05-18]
+[tier=primary · recency=active · updated=2026-08-26]
 - **Period:** Mar 2025 -- Present
 - **Location:** Chengdu, China (HQ) — fully remote
 - **URL:** https://www.femtechweekend.com/
 - **Keywords:** Next.js, Docusaurus, Drizzle ORM, Neon Postgres, Notion API, Cloudflare Pages, Cloudinary, Google Generative AI, i18next, Tailwind CSS, Radix UI, earth-flyline
 
-**Impact:** Sole technical leader and co-architect with the founder; tenure spans two platform generations (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite), serving as the sole engineering voice across all org events and the 2026 summit cycle.
+**Impact:** Sole technical leader and co-architect with the founder; tenure spans two platform generations (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite), serving as the sole engineering voice across all org events and through the 2026 Shanghai Summit cycle, which ran to 25 June 2026.
 
 **Company context:** FemTech Weekend is China's first organisation built specifically around
 women's health technology — a community, research outfit, and event
@@ -593,7 +594,9 @@ speakers headlined by **Ida Tin** (Clue co-founder; coined the term
 "FemTech" in 2016), alongside Alice Zheng, Dominnique Karetsos,
 Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike
 Steinebach, Stella Fu, Peixian Lu, Sandy Lv, Chai Ke (柴可), Chen
-Jian, Jazmin Seregi, Judy Lux, Abraham Morse, and Ira Evdokimova.
+Jian, Jazmin Seregi, Abraham (Nick) Morse, Ira Evdokimova, Maryann
+Selfe, Jonathan Y. Zhao, Rahul Agrawal, Giulia Paggiola, and
+Michael Wang.
 The summit was structured as a flagship conference plus a dedicated
 capital and pitch day plus curated site visits, with named partners
 including AVPN and a multi-tier sponsor programme — all of it
@@ -675,7 +678,7 @@ marketing.
 ## Past Roles
 
 ### AI Agent Architect at Engram
-[tier=flagship · recency=recent · updated=2026-08-04]
+[tier=flagship · recency=recent · updated=2026-08-26]
 - **Period:** May 2026 -- Jul 2026
 - **Location:** Albuquerque, New Mexico, United States (remote)
 - **URL:** https://engram.media/
@@ -759,7 +762,7 @@ came out of it:
 4. **Open-source IP preserved.** The cohort agreement explicitly
    carved out claude-code-audio-hooks (now **echook**) and the
    rest of Chan's prior work as her own property — echook has
-   since gone on to 78 GitHub stars independently of Engram.
+   since gone on to 84 GitHub stars independently of Engram.
 
 **Precise on the credential, deliberately.** The CCA-F
 *curriculum* was completed and the *practice* exam passed; the
@@ -2152,7 +2155,7 @@ Right after tailoring, a deterministic **faithfulness gate** re-checks for fabri
 
 **My role:** Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.
 ### echook — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
-[tier=primary · recency=active · updated=2026-07-17]
+[tier=primary · recency=active · updated=2026-08-26]
 - **Repository:** https://github.com/ChanMeng666/echook
 - **Tech stack:** Python 3.6+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13), Remotion 4 (promo video), React 19 (promo video), Suno (background music generation)
 
@@ -2270,8 +2273,8 @@ log line, never blocking the session. The whole contract is
 validated by 248 test cases across Ubuntu, Windows, and macOS on
 Python 3.9, 3.12, and 3.13 in GitHub Actions.
 
-**Outcomes:** ~76 GitHub stars (external — needs registry check; live 75),
-151 commits across the 5.x → 6.x line (now v6.3.4), and 248
+**Outcomes:** 84 GitHub stars (measured 2026-08-26 via the GitHub API by
+`npm run refresh-metrics`), 151 commits across the 5.x → 6.x line (now v6.3.4), and 248
 automated test cases. The defining release sequence: v5.0 (Jan
 2026) shipped the AI-first redesign — JSON command interface,
 `/audio-hooks` skill, NDJSON logging, plugin-native install;
@@ -2309,7 +2312,7 @@ transitions, wrote the ElevenLabs audio-generation script, and
 tuned the volume-ducking so the background music dips under
 voiceover and demo playback. Maintains both repos today.
 ### Google News MCP Server — Early-ecosystem MCP server (shipped 5 weeks after Anthropic's Nov 25 2024 MCP launch) — PulseMCP "Top Pick", featured in Skywork AI deep-dive review, distributed across 15+ MCP catalogs
-[tier=primary · recency=recent · updated=2026-08-05]
+[tier=primary · recency=recent · updated=2026-08-26]
 - **URL:** https://github.com/ChanMeng666/server-google-news
 - **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk, stdio transport, SerpAPI, axios, ES modules, npm (scoped @chanmeng666)
 
@@ -3318,7 +3321,7 @@ wrote the Gulp + LESS build pipeline, and authored the
 > The rest of the catalogue: every project not listed above, grouped by category. This is NOT an open-source list — it includes client deliverables and projects with no public repository, and a link here may point to a live site rather than to source code. Treat a project as open source only if it appears under "Notable Open Source Projects" above or carries a repository link on github.com/ChanMeng666.
 
 **web-apps:**
-- [She Sharp](https://github.com/NZ-SheSharp/she-sharp) [tier=flagship · recency=recent · updated=2026-07-17] -- live: https://www.shesharp.org.nz/
+- [She Sharp](https://github.com/NZ-SheSharp/she-sharp) [tier=flagship · recency=recent · updated=2026-08-26] -- live: https://www.shesharp.org.nz/
 - [TikTok Shop Go Template](https://github.com/ChanMeng666/douyin-mall-go-template) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [腾讯会议录屏下载助手 — Chrome Web Store-Published Extension](https://github.com/ChanMeng666/tencent-meeting-video-downloader) [tier=archive · recency=deprecated · updated=2026-08-05] -- live: https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
 - [FreePeriod Website](https://github.com/ChanMeng666/free-period-website) [tier=primary · recency=historical · updated=2026-08-05] -- live: https://free-period-website.pages.dev/
@@ -3362,7 +3365,7 @@ wrote the Gulp + LESS build pipeline, and authored the
 - [ArchCanvas](https://archcanvas.uk/) [tier=flagship · recency=active · updated=2026-07-17]
 - [AI Image Generator — Full-Stack Text-to-Image SaaS](https://github.com/ChanMeng666/image-generator) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://image-generator.chanmeng-dev.workers.dev/
 - [Chinese Redefine 汉语新解 — AI Word Redefinition](https://github.com/ChanMeng666/chinese-redefine) [tier=archive · recency=recent · updated=2026-07-04] -- live: https://chinese-redefine.chanmeng-dev.workers.dev/
-- [Typst Skill for Claude Code](https://github.com/ChanMeng666/typst-claude-skill) [tier=primary · recency=active · updated=2026-05-18]
+- [Typst Skill for Claude Code](https://github.com/ChanMeng666/typst-claude-skill) [tier=primary · recency=active · updated=2026-08-26]
 - [2D Portfolio — chanmeng.org](https://chanmeng.org/) [tier=primary · recency=active · updated=2026-07-10]
 - [Customer Insight](https://github.com/ChanMeng666/customer-insight) [tier=archive · recency=historical · updated=2026-05-18] -- live: https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/
 - [Hospital Roster Agent](https://github.com/ChanMeng666/hospital-roster-agent) [tier=archive · recency=historical · updated=2026-07-11]
@@ -3422,7 +3425,7 @@ wrote the Gulp + LESS build pipeline, and authored the
 
 ## Education
 
-- **Master of Applied Computing (Distinction, Dean's List)** at Lincoln University, New Zealand (Nov 2023 -- Dec 2024) -- https://www.lincoln.ac.nz/ [tier=flagship · recency=recent · updated=2026-05-18]
+- **Master of Applied Computing (Distinction, Dean's List)** at Lincoln University, New Zealand (Nov 2023 -- Dec 2024) -- https://www.lincoln.ac.nz/ [tier=flagship · recency=recent · updated=2026-08-26]
 - **Bachelor of Geography Science (Distinction)** at Jiangsu Normal University, China (Sep 2012 -- Jun 2016) -- http://www.jsnu.edu.cn/ [tier=secondary · recency=historical · updated=2026-05-18]
 - **High School Diploma (Science track — Mathematics, Physics, Chemistry, Biology)** at Nanning No.2 High School (南宁二中) (Sep 2008 -- Jun 2011) [tier=archive · recency=historical · updated=2026-05-18]
 
@@ -3444,7 +3447,8 @@ stewardship. [tier=primary · recency=recent · updated=2026-05-18]
 innovative women's workplace health management platform — at the
 historic **UN CSW 69 conference marking the 30th anniversary of
 the Beijing Declaration**, held at UN Headquarters in New York on
-March 14, 2025. Demonstrated how AI technology effectively
+March 14, 2025 — Chan presented remotely, by video link.
+Demonstrated how AI technology effectively
 addresses workplace gender inequities through practical health
 solutions to an audience of international delegates, UN officials,
 and global leaders. The presentation drew significant attention
@@ -3454,7 +3458,7 @@ officials including the **Minister of Gender and Children's
 Affairs from Sierra Leone**, who praised the platform as the first
 comprehensive solution connecting menstrual cycle data to
 actionable workplace policies through AI analysis. Generated
-multiple collaboration requests from NGOs and member states. [tier=flagship · recency=recent · updated=2026-05-18]
+multiple collaboration requests from NGOs and member states. [tier=flagship · recency=recent · updated=2026-08-26]
 - **UN Women FemTech Hackathon Outstanding Performer** (FemTech Weekend (Beijing), 2025-03-10) -- https://www.femtechweekend.com/: Recognised for exceptional performance as an independent developer
 during the **2025 UN Women FemTech Hackathon in Beijing**.
 Contributed to innovative solutions addressing women's health
@@ -3467,7 +3471,7 @@ of Environment, Society & Design. Awarded by Lincoln University,
 New Zealand's specialist land-based university. [tier=primary · recency=recent · updated=2026-05-18]
 - **Master of Applied Computing with Distinction** (Lincoln University, New Zealand, 2024-12-18) -- https://www.lincoln.ac.nz/: Awarded **Distinction** for achieving an average of **80%+ across
 all courses** in the Master of Applied Computing programme at
-Lincoln University, New Zealand's specialist land-based university. [tier=flagship · recency=historical · updated=2026-05-18]
+Lincoln University, New Zealand's specialist land-based university. [tier=flagship · recency=historical · updated=2026-08-26]
 - **Excellence Award — FemTech China Women's Health Technology Challenge** (FemTech China, 2024-12-01) -- https://femtechcn.com/: Won the Excellence Award as a core team member of the **FemTech China
 Women's Health Technology Challenge** (December 2024). Led product
 development through intensive workshops and mentoring sessions,
@@ -3931,7 +3935,7 @@ NZDT. Registration had not opened at time of writing.
 
 ## Publications, Podcast Episodes, Press Features
 
-- **Meet the FemTech Founders Redefining Women's Health at Work** -- THISDAYLIVE (2025-05-28) -- https://www.thisdaylive.com/2025/05/28/meet-the-femtech-founders-redefining-womens-health-at-work/ [tier=flagship · recency=recent · updated=2026-05-18]
+- **Meet the FemTech Founders Redefining Women's Health at Work** -- THISDAYLIVE (2025-05-28) -- https://www.thisdaylive.com/2025/05/28/meet-the-femtech-founders-redefining-womens-health-at-work/ [tier=flagship · recency=recent · updated=2026-08-26]
 - **Weekly Pulse: Remote MCP, Images, Screen Recording** -- PulseMCP -- https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording [tier=secondary · recency=historical · updated=2026-05-18]
 - **FemTech Weekend × UN Women CSW69** -- FemTech Weekend (2025-04-16) -- https://chanmeng.org/blog/from-code-to-care-un [tier=flagship · recency=recent · updated=2026-07-21]
 - **Solved Bug: Authentication Redirect Issue in Sanicle-AI Platform** -- Vercel Community (2025-03) -- https://community.vercel.com/t/solved-bug-authentication-redirect-issue-in-sanicle-ai-platform/6818 [tier=archive · recency=historical · updated=2026-05-18]
@@ -4051,7 +4055,7 @@ NZDT. Registration had not opened at time of writing.
   - **Redis** — since 2025, depth `intermediate`, frameworks: @upstash/redis, ioredis. Upstash Redis for She Sharp mentor-match cache; conventional Redis elsewhere.
   - **Docker** — since 2024, depth `expert`. 7 repos.
   - **Kubernetes** — since 2026, depth `intermediate`, frameworks: GKE, kubectl. GAVIGO cross-cloud migration to GCP/GKE; 30-min cutover with 84.6% warm-pool hit rate.
-  - **Drizzle ORM** — since 2024, depth `expert`. 17 repos — preferred ORM for new builds (She Sharp 1,392-line schema, 30 pgEnums, 34 pgTables).
+  - **Drizzle ORM** — since 2024, depth `expert`. 17 repos — preferred ORM for new builds (She Sharp 1,411-line schema, 30 pgEnums, 35 pgTables).
   - **Prisma** — since 2026, depth `learning`. Single experiment in fanfic-lab.
   - **Supabase** — since 2024, depth `intermediate`. femtracker-agent, library-management-system.
   - **Zod** — since 2024, depth `expert`. 19 repos — runtime validation contract for every new full-stack build.
@@ -4111,36 +4115,36 @@ NZDT. Registration had not opened at time of writing.
 > Vertical / problem-area expertise (distinct from technical skills). Drives JSON-LD knowsAbout enrichment with verticals so LLMs surface Chan for domain-shaped queries beyond raw tech stack matching.
 
 ### AI Agent Architecture (`ai-agent-architecture`)
-[tier=flagship · recency=active · updated=2026-05-22]
+[tier=flagship · recency=active · updated=2026-08-26]
 - **Since:** 2024
 Designs and ships agentic systems end-to-end — Claude Code skills,
 MCP servers, multi-step LangGraph/CopilotKit flows, agent-UI
 patterns, and the audio-feedback hook system that surfaces agent
 state to the operator.
-- **Evidence projects:** awesome-claude-skills, awesome-claude-skills-1, echook, event-qa-ai-template, femtracker-agent, hospital-roster-agent, panda-agent, server-google-jobs, server-google-news, typst-claude-skill, website-building-agent, wellness-agent
+- **Evidence projects:** ai-hackathon-assistant, echook, femtracker-agent, google-news-mcp, hospital-roster-agent, panda-agent, server-google-jobs, typst-claude-skill, wellness-agent
 
 ### Women's Health Technology (FemTech) (`femtech`)
-[tier=flagship · recency=active · updated=2026-05-22]
+[tier=flagship · recency=active · updated=2026-08-26]
 - **Since:** 2024
 Designs and ships full-stack FemTech products — workplace
 menstrual/menopausal wellness platforms, period-equity hardware,
 AI cycle companions, indigenous-women's health pilots, and
 FemTech ecosystem infrastructure for cross-border community
 building.
-- **Evidence projects:** femtech-weekend, femtech-weekend-website, femtracker, femtracker-agent, forward-with-her-mentorship-program, free-period-website, hospital-roster-agent, sanicle-ai, sanicle-ai-mobile, sanicle-cloud, sanicle-docs, she-sharp, she-sharp-crawl, tam-ai-ti-web, wellness-agent
+- **Evidence projects:** femtech-weekend, femtech-weekend-website, femtracker, femtracker-agent, forward-with-her-website, free-period-website, hospital-roster-agent, sanicle-ai, sanicle-ai-mobile, sanicle-platform, she-sharp, tam-ai-ti, wellness-agent
 
 ### Māori Cultural Technology (`cultural-technology`)
-[tier=primary · recency=active · updated=2026-05-22]
+[tier=primary · recency=active · updated=2026-08-26]
 - **Since:** 2025
 Builds research-pilot software with and for indigenous-led
 organisations — embedding cultural lens (Māori worldview,
 bilingual interface, customary protocols) into product structure,
 data ownership, and AI interaction design. Lead project:
 Tam-AI-Ti for Riria (Missy) Te Kanawa.
-- **Evidence projects:** tam-ai-ti-web
+- **Evidence projects:** tam-ai-ti
 
 ### AI Programming Education (`ai-programming-education`)
-[tier=flagship · recency=active · updated=2026-05-22]
+[tier=flagship · recency=active · updated=2026-08-26]
 - **Since:** 2024
 Leads multi-cohort AI-programming pedagogy — "natural language
 is the source code" doctrine — across five cohorts since 2024
@@ -4148,17 +4152,17 @@ is the source code" doctrine — across five cohorts since 2024
 2026) with full
 curriculum authoring, live cohort facilitation, and post-cohort
 showcase artefacts.
-- **Evidence projects:** ai-programming-teaching-project, awesome-claude-skills, awesome-claude-skills-1, chinese-redefine, english-redefine, esol-learning-platform, event-qa-ai-template, typst-claude-skill
+- **Evidence projects:** ai-hackathon-assistant, ai-programming-teaching-project, chinese-redefine, english-redefine, esol-learning-platform, her-waka, typst-claude-skill
 - **Evidence work entries:** forward-with-her, technest, she-sharp
 
 ### Minimalist Living + Minimalist UX (`minimalist-design`)
-[tier=primary · recency=active · updated=2026-05-22]
+[tier=primary · recency=active · updated=2026-08-26]
 - **Since:** 2020
 Public minimalist-living advocate (multi-platform articles +
 WeChat press features) translating subtraction-as-craft into
 product UI — calm dashboards, tight information density, and
 intentional removal as the primary design move.
-- **Evidence projects:** 2d-portfolio, 3d-portfolio, chan-meng-novel, chan-meng-web, minimalist-good-post, my-cv, who-i-am
+- **Evidence projects:** minimalist-good-post, portfolio-v1, portfolio-v2, who-i-am
 
 
 ## Languages
@@ -4570,7 +4574,7 @@ Sanicle Director of Program Operations 2020–2024; Chan's colleague during her 
 ## Verified Statistics (with citations)
 
 - **793 of 936 commits (85%) authored solo on the She Sharp full-stack member platform; remainder chiefly by Lesley Gao on frontend design (140 commits, 15%)** (source: https://github.com/NZ-SheSharp/she-sharp, verified 2026-07-16)
-- **She Sharp NZ: 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014, 85% mentorship success rate (5-6x higher promotion likelihood for mentees)** (source: https://www.shesharp.org.nz/about-us, verified 2026-05-16)
+- **She Sharp NZ: 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014, 18 industry mentors** (source: https://www.shesharp.org.nz/about-us, verified 2026-05-16)
 - **Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,411-line schema with 30 pgEnums + 35 pgTables + 26 SQL migrations across 95 API routes / 53 pages / 160 components** (source: https://github.com/NZ-SheSharp/she-sharp, verified 2026-07-16)
 - **She Sharp data migration crawler bootstrapped the new platform with 1,748 images / 707 MB / 11 JSON files / 85 events / 50 Humanitix tickets / 15 podcasts / 121 photo galleries from the old Webflow site** (source: https://www.shesharp.org.nz/, verified 2026-05-16)
 - **Authored solo the Her Waka teaching site (Mintlify) and full curriculum — four workshops covering AI & Future of Work, #IAmRemarkable + Vibe Coding, Cybersecurity, Personal Branding — for NZ Ministry of Social Development-funded employment-readiness programme at academyEX Auckland (Mar-Jun 2026)** (source: https://herwaka.shesharp.org.nz/, verified 2026-05-16)
@@ -4578,7 +4582,7 @@ Sanicle Director of Program Operations 2020–2024; Chan's colleague during her 
 - **Tam-AI-Ti 19-user research cohort produced 181 bilingual journal entries, 35 voice coaching sessions, 146 AI coach messages, and 74 daily Hauora check-ins over four months (Oct 2025 – Mar 2026)** (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
 - **Tam-AI-Ti built solo for Riria (Missy) Te Kanawa, former KPMG NZ National Māori Sector lead and lead author of KPMG's Maui Rau report series, as an independent research-pilot commission** (source: https://www.linkedin.com/in/riria-missy-te-kanawa-6137528b/, verified 2026-05-16)
 - **Tam-AI-Ti: 88+ CopilotKit AI actions, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, GPT-4o Realtime voice** (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
-- **GAVIGO IRE: 439 total commits, 426 solo (~97%), production-deployed at ire.gavigo.com** (source: https://ire.gavigo.com/, verified 2026-07-16)
+- **GAVIGO IRE: 445 commits (439 non-merge), 426 solo (~97%), production-deployed at ire.gavigo.com** (source: https://ire.gavigo.com/, verified 2026-07-16)
 - **Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud** (source: https://ire.gavigo.com/, verified 2026-05-16)
 - **Early-ecosystem MCP developer: opened modelcontextprotocol/servers issue #76 on 2024-11-27 (three weeks after MCP's public launch) documenting the Windows + NVM PATH workaround that became reference troubleshooting guidance for early Claude Desktop adopters** (source: https://github.com/modelcontextprotocol/servers/issues/76, verified 2026-05-16)
 - **Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with 26.1k visitors and #1,105 global popularity rank, Glama A license rating + 122 stars, listed across 15+ MCP catalogs including Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, Archestra, serp.ai, AIBase, AgentSkillsHub, MagicSlides) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); both servers covered in three independent media write-ups (Skywork AI x2, AgentSkillsHub)** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-05-16)

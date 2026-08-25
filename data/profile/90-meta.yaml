@@ -35,6 +35,13 @@ meta:
       # (`gh repo list ChanMeng666 --limit 300 --json isPrivate,stargazerCount`);
       # deliberately rounded DOWN to 480+ because this line is hand-written and
       # is NOT refreshed by `npm run refresh-metrics`, so a precise figure rots.
+      #
+      # "12 companies" is NOT a stale count of the 13 work[] entries. It is
+      # 13 minus `copilotkit`, which is an Open Source Contributor role, not an
+      # employer relationship — so it does not belong in a company count. The
+      # promo-video fact `work.companies` (scripts/build-video-data.mjs) computes
+      # work.length = 13 on purpose and measures a different thing. If a work[]
+      # entry is added or removed, re-derive this by hand; do not increment it.
       proofLine: "12 companies · 5 teaching cohorts · 480+ GitHub stars · Master's with Distinction"
 
     # ---------------------------------------------------------------------
@@ -112,7 +119,7 @@ meta:
       - question: "Where is Chan based and what timezones does she cover?"
         answer: "Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first."
       - question: "What is Chan's biggest shipped result?"
-        answer: "GAVIGO IRE — 426 of 439 commits (~97%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — 3,500+ members, 1,000+ active, 95 API routes, 1,411-line schema, 85% commits solo (793 of 936)."
+        answer: "GAVIGO IRE — 426 of 439 non-merge commits (~97%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — the member platform for a charity running 96+ events since 2014: 95 API routes, 1,411-line schema, 793 of 936 commits solo."
 
     # ---------------------------------------------------------------------
     # TEACHING COHORTS — the four AI-programming cohorts Chan has led
@@ -192,7 +199,7 @@ meta:
     # Project ordering for README
     # Drives the big editorial cards at the top of the README ("What I build").
     # 2026-07-14: PRODUCT-FIRST ORDER. The hero used to be client work; it is
-    # now the five things Chan leads herself (google-news-mcp 125★, echook 75★,
+    # now the five things Chan leads herself (google-news-mcp 126★, echook 84★,
     # archlang, archcanvas, vitex). All five are live; four have a public repo —
     # archcanvas is hosted with no public source. Any open-source count in
     # featured-work.hbs must be re-checked against projects[].repoUrl.
@@ -396,8 +403,8 @@ meta:
     # 2026-08-12: vitex LEADS this table, down from the flagship card band —
     # Chan has stopped developing it, but it is live, open source, and the only
     # other product with an MCP server + CLI, so it sits with echook and the
-    # MCP servers rather than under craft. echook follows: the most-starred
-    # project in the portfolio (78★).
+    # MCP servers rather than under craft. echook follows: the second-most-starred
+    # project in the portfolio (84★, behind google-news-mcp at 126).
     # Order = display order.
     aiAgentProjectIds:         [vitex, echook, google-news-mcp, server-google-jobs, ai-programming-teaching-project, a11y-loop]
     # Open source with a full llms.txt / llms-full.txt entry but NO README table
@@ -492,7 +499,14 @@ meta:
       - { claim: "793 of 936 commits (85%) authored solo on the She Sharp full-stack member platform; remainder chiefly by Lesley Gao on frontend design (140 commits, 15%)",
           source: "https://github.com/NZ-SheSharp/she-sharp",
           verifiedAt: "2026-07-16" }
-      - { claim: "She Sharp NZ: 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014, 85% mentorship success rate (5-6x higher promotion likelihood for mentees)",
+      # The org's own about-us page also carries an "85% mentorship success rate
+      # (5-6x higher promotion likelihood)". It was REMOVED from this claim on
+      # 2026-08-26 and is not to be re-added: She Sharp's stats.ts records that no
+      # such survey was ever run. See the SETTLED note in 10-career.yaml ::
+      # work[she-sharp]. `verifiedAt` deliberately stays at the last date the
+      # REMAINING figures were actually checked against the page — stripping a
+      # false claim is not the same as re-verifying the true ones.
+      - { claim: "She Sharp NZ: 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014, 18 industry mentors",
           source: "https://www.shesharp.org.nz/about-us",
           verifiedAt: "2026-05-16" }
       - { claim: "Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,411-line schema with 30 pgEnums + 35 pgTables + 26 SQL migrations across 95 API routes / 53 pages / 160 components",
@@ -516,7 +530,7 @@ meta:
       - { claim: "Tam-AI-Ti: 88+ CopilotKit AI actions, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, GPT-4o Realtime voice",
           source: "https://tamaiti.whiri-ai.com/",
           verifiedAt: "2026-05-16" }
-      - { claim: "GAVIGO IRE: 439 total commits, 426 solo (~97%), production-deployed at ire.gavigo.com",
+      - { claim: "GAVIGO IRE: 445 commits (439 non-merge), 426 solo (~97%), production-deployed at ire.gavigo.com",
           source: "https://ire.gavigo.com/",
           verifiedAt: "2026-07-16" }
       - { claim: "Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud",

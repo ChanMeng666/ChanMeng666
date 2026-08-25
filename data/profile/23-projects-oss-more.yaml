@@ -298,9 +298,7 @@ projects:
     tagline: Full-stack text-to-image SaaS pivoted onto Cloudflare Workers AI's FLUX.1 Schnell free tier (100k req/day) — auth + credits ledger + Stripe-integrated payments + image storage + gallery, deployed on Cloudflare Workers via OpenNext. Two architectural pivots (Vercel->CF Workers free-AI 2026-04-09, then full SaaS layer one day later) turned a 2024 demo into a production product.
     repoUrl: https://github.com/ChanMeng666/image-generator
     logo: /public/brands/image-generator.svg
-    url: https://image-generator.chanmeng-dev.workers.dev/
     extraLinks:
-      - { label: "Live app",                  url: "https://image-generator.chanmeng-dev.workers.dev/" }
       - { label: "Pivot commit (Vercel->CF)", url: "https://github.com/ChanMeng666/image-generator/commit/3aec6ce" }
       - { label: "SaaS-layer commit",         url: "https://github.com/ChanMeng666/image-generator/commit/8626be4" }
       - { label: "License (Apache-2.0)",      url: "https://github.com/ChanMeng666/image-generator/blob/main/LICENSE" }
@@ -371,7 +369,7 @@ projects:
       2026-04-20). Stack: Next.js 15.5 + React 19.2 + Drizzle ORM +
       Neon Postgres + Better Auth + Stripe 22 + OpenTelemetry +
       `@opennextjs/cloudflare` adapter. Live at
-      [image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/).
+      image-generator.chanmeng-dev.workers.dev.
       Apache-2.0 with patent grant. 24 solo commits across ~17 months
       of sustained iteration.
     narrative:
@@ -509,7 +507,7 @@ projects:
         Cloudflare environment.
       outcomes: |
         Live at
-        [image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/)
+        image-generator.chanmeng-dev.workers.dev
         with the full SaaS surface active and operating on the
         Cloudflare Workers free tier across both inference (Workers
         AI 100k/day) and database (Neon free tier). **17 months of
@@ -552,7 +550,7 @@ projects:
   - id: chinese-redefine
     provenance: personal
     tier: archive
-    recency: recent
+    recency: deprecated
     lastUpdated: "2026-07-04"
     name: Chinese Redefine 汉语新解 — AI Word Redefinition
     priority: 14
@@ -560,11 +558,8 @@ projects:
     tagline: "汉语新解 — a full-stack AI app that reinterprets everyday Chinese vocabulary with sharp, humorous, philosophically-loaded takes (productizing Li Jigang's 李继刚 viral prompt) via Google Gemini, exports shareable SVG cards, gated by a two-layer rate-limit quota system, deployed on Cloudflare Workers via OpenNext. Low on raw technical difficulty, high on cultural/philosophical depth"
     repoUrl: https://github.com/ChanMeng666/chinese-redefine
     logo: /public/brands/chinese-redefine-v2.svg
-    url: https://chinese-redefine.chanmeng-dev.workers.dev/
     extraLinks:
-      - { label: "Live demo", url: "https://chinese-redefine.chanmeng-dev.workers.dev/" }
       - { label: "GitHub repo", url: "https://github.com/ChanMeng666/chinese-redefine" }
-      - { label: "Public gallery", url: "https://chinese-redefine.chanmeng-dev.workers.dev/gallery" }
     techStack:
       - "Next.js 15 (App Router)"
       - "React 18"
@@ -580,7 +575,7 @@ projects:
       - "@opennextjs/cloudflare"
       - "Cloudflare Workers"
       - "Wrangler"
-    status: live
+    status: archived
     publicSummary: |
       Full-stack AI application that reinterprets traditional Chinese
       vocabulary through Google Gemini and exports the results as
@@ -1147,16 +1142,15 @@ projects:
   - id: leviathan
     provenance: personal
     tier: archive
-    recency: historical
+    recency: deprecated
     lastUpdated: "2026-07-04"
     name: The Birth of Leviathan (利维坦的诞生)
     priority: 71
     category: games
     tagline: "AI-as-game-master narrative strategy roguelike — the AI seeds a unique world (15-25 NPCs, fate lines, and fractures) each run, and the player lives an ordinary person's 80-day political fate across four acts; cold-realist tone in the vein of Disco Elysium / Suzerain"
     # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
-    url: https://leviathan-client.vercel.app/
     keywords: ["AI game master (non-decorative)", "Narrative strategy roguelike", "Procedurally-seeded world + NPCs", "Political-fate simulation"]
-    status: live
+    status: archived
   - id: html-brick-game
     provenance: personal
     tier: archive
@@ -1182,7 +1176,6 @@ projects:
     tagline: "AI-vs-Human content-detection quiz game across four categories (text, image, audio, video), 10 questions each — a playful pond-themed UI with real-time scoring, progressive difficulty, and performance analytics; doubles as an AI-literacy tool for spotting AI-generated content"
     repoUrl: https://github.com/ChanMeng666/ai-human-game
     logo: /public/brands/ai-human-game.svg
-    url: https://ai-human-game.chanmeng-dev.workers.dev/
     techStack: [Next.js, TypeScript, "Tailwind CSS", "Cloudflare Workers"]
     keywords: ["AI-content literacy game", "Text/image/audio/video detection", "Pond-themed UI", "Real-time scoring + analytics"]
     status: archived
@@ -1197,7 +1190,6 @@ projects:
     tagline: Interactive reincarnation simulator with multi-cultural life journeys and immersive UX
     repoUrl: https://github.com/ChanMeng666/journey-of-reincarnation
     logo: /public/brands/journey-of-reincarnation-2.svg
-    url: https://journey-of-reincarnation.pages.dev/
     techStack: [Next.js, Cloudflare Pages]
     status: archived
   - id: otherworld-god-farmer
@@ -1211,7 +1203,6 @@ projects:
     tagline: 2D pixel-style farm simulation game — farming, building, and social systems
     repoUrl: https://github.com/ChanMeng666/otherworld-god-farmer
     logo: /public/brands/otherworld-god-farmer-logo.svg
-    url: https://otherworld-god-farmer.pages.dev/
     techStack: [Angular 19, "Pixi.js 8", Cloudflare Pages]
     status: archived
   - id: kaboom-rpg-adventure
@@ -1617,7 +1608,7 @@ projects:
   - id: forward-with-her-website
     provenance: client
     tier: archive
-    recency: historical
+    recency: deprecated
     meta:
       x_brand:
         # Verified from package.json at D:/github_repository/forward-with-her-mentorship-program:
@@ -1633,11 +1624,10 @@ projects:
     tagline: Bilingual EN/CN mentorship-programme site with 3D model viewer — supports the same 360+-mentor / 800+-mentee Forward with Her programme through which 7 of Chan's LinkedIn testimonials came in
     logo: /public/brands/forward-with-her-logo.svg
     repoUrl: https://github.com/ChanMeng666/forward-with-her-mentorship-program
-    url: https://forward-with-her-mentorship-program.pages.dev/
     techStack: ["Next.js 15", "React 19", "Three.js", "Cloudflare Pages"]
     narrative:
       impactHeadline: "Bilingual EN/CN promo site for the Forward with Her mentorship programme — 3D-rendered landing page (Three.js + Cloudflare Pages) supporting the 360+-mentor / 800+-mentee cohort that produced 7 of Chan's LinkedIn testimonials."
-    status: live
+    status: archived
   - id: her-waka
     provenance: client
     tier: primary
@@ -1662,7 +1652,7 @@ projects:
   - id: agrihire-solutions
     provenance: coursework
     tier: archive
-    recency: historical
+    recency: deprecated
     lastUpdated: "2026-07-04"
     name: AgriHire Solutions
     priority: 31
@@ -1670,11 +1660,10 @@ projects:
     tagline: "Equipment-rental management SaaS for NZ agricultural businesses — rebuilt from a basic HTML/JS/CSS group project into a Next.js 16 + Neon Postgres app on Cloudflare Workers (OpenNext), with multi-store operations, role-based access, tiered pricing, real-time analytics dashboards, and file uploads"
     repoUrl: https://github.com/ChanMeng666/agrihire-solutions
     logo: /public/brands/agri-hire-solutions.svg
-    url: https://agrihire.chanmeng.org/
     techStack: ["Next.js 16", "React 19", TypeScript, "Tailwind CSS 4", "shadcn/ui", "Neon Postgres", "Drizzle ORM", "Better Auth", "Recharts (analytics dashboards)", "UploadThing (file uploads)", "Resend (email)", "Cloudflare Workers", OpenNext]
     narrative:
       impactHeadline: "Equipment-rental management SaaS for NZ agricultural businesses — rebuilt from a basic HTML/JS/CSS university group project into a Next.js 16 app on Cloudflare Workers (OpenNext), with multi-store operations, role-based access, tiered pricing, and real-time analytics dashboards."
-    status: live
+    status: archived
   - id: corde-mobile-application
     provenance: client
     tier: secondary
@@ -1910,7 +1899,6 @@ projects:
     priority: 33
     category: web-apps
     tagline: "Chan's first personal website (v1) — an interactive 3D portfolio in React + Three.js / react-three-fiber, built on a clean, professionally-structured content-template architecture that makes section and copy edits fast; migrated from Vercel to Cloudflare Pages"
-    url: https://3d-portfolio-3bb.pages.dev/
     techStack: ["Three.js", "react-three-fiber", "Framer Motion", React, Vite, TailwindCSS, "Cloudflare Pages"]
     status: archived
   - id: minimalist-good-post
@@ -1924,7 +1912,6 @@ projects:
     tagline: "Minimalist-living image-and-text blog whose signature is an interactive 3D model on the homepage — visitors rotate/explore it with the mouse, adding a tactile, aesthetic hook to the reading experience; built on Docusaurus"
     repoUrl: https://github.com/ChanMeng666/minimalist-good-post
     logo: /public/brands/minimalist-good-post.svg
-    url: https://minimalist-good-post.pages.dev/
     techStack: [Docusaurus, "Three.js (interactive homepage 3D model)", React]
     status: archived
 
@@ -2045,24 +2032,22 @@ projects:
     category: creative
     tagline: Modern redefinition of English words from a contemporary perspective via Google Gemini — sister project to Chinese Redefine
     repoUrl: https://github.com/ChanMeng666/english-redefine
-    url: https://english-redefine.chanmeng-dev.workers.dev/
     logo: /public/brands/english-redefine.svg
     techStack: [TypeScript, "Google Gemini", "Cloudflare Workers"]
     status: archived
   - id: biosecurity
     provenance: coursework
     tier: archive
-    recency: recent
+    recency: deprecated
     lastUpdated: "2026-07-04"
     name: NZ Biosecurity Guide
     priority: 35
     category: web-apps
     tagline: "Biosecurity guide for NZ agricultural pests and weeds with role-based access for agronomists, staff, and administrators — rebuilt from a basic HTML/CSS/Flask university group project into a modern Next.js + Neon Postgres + Drizzle full-stack app deployed on Cloudflare Workers"
     repoUrl: https://github.com/ChanMeng666/biosecurity
-    url: https://biosecurity.chanmeng-dev.workers.dev/
     logo: /public/brands/biosecurity.svg
     techStack: ["Next.js (App Router)", React, TypeScript, "Neon Postgres", "Drizzle ORM", "Better Auth (role-based access)", "shadcn/ui", "Tailwind CSS", "Cloudflare Workers (OpenNext)"]
-    status: live
+    status: archived
     narrative:
       impactHeadline: "NZ agricultural biosecurity guide with role-based access for agronomists/staff/admins — rebuilt from a basic HTML/CSS/Flask university group project into a modern Next.js + Neon Postgres + Drizzle app deployed on Cloudflare Workers (OpenNext)."
   - id: job-valuation
@@ -2095,17 +2080,16 @@ projects:
   - id: countryside-community-swimming-club
     provenance: coursework
     tier: archive
-    recency: recent
+    recency: deprecated
     lastUpdated: "2026-07-04"
     name: Swimming Club Management System
     priority: 38
     category: web-apps
     tagline: "Community swimming-club platform — members, class scheduling (FullCalendar), facility bookings, payments, and reporting; rebuilt from a basic HTML/CSS/Flask group project into a modern Next.js + Neon Postgres + Drizzle full-stack app on Cloudflare Workers"
     repoUrl: https://github.com/ChanMeng666/countryside-community-swimming-club
-    url: https://countryside-swimming-club.chanmeng-dev.workers.dev/
     logo: /public/brands/swimming-club-management-system.svg
     techStack: ["Next.js (App Router)", React, TypeScript, "Neon Postgres", "Drizzle ORM", "Better Auth", "FullCalendar (scheduling/bookings)", "shadcn/ui", "Tailwind CSS", "Cloudflare Workers (OpenNext)"]
-    status: live
+    status: archived
     narrative:
       impactHeadline: "Community swimming-club management platform (members, class scheduling, facility bookings, payments, reporting) — rebuilt from a basic HTML/CSS/Flask group project into a modern Next.js + Neon Postgres + Drizzle app on Cloudflare Workers with FullCalendar scheduling."
   - id: automotive-repair-management-system
@@ -2118,7 +2102,6 @@ projects:
     category: web-apps
     tagline: "Automotive repair-shop management platform — separate technician and admin interfaces, parts inventory, and billing; rebuilt from a basic HTML/CSS group project into a Flask 3 app-factory backed by PostgreSQL + SQLAlchemy ORM + Alembic migrations. Strongest community traction of Chan's learning-origin apps (29 stars, 11 forks)"
     repoUrl: https://github.com/ChanMeng666/automotive-repair-management-system
-    url: https://repairos.chanmeng.org/
     logo: /public/brands/repair-os-logo.svg
     techStack: [Python, "Flask 3 (app-factory)", PostgreSQL, "SQLAlchemy ORM", "Alembic (migrations)", Jinja2, "Gunicorn / WSGI"]
     status: archived
@@ -2719,7 +2702,6 @@ projects:
     priority: 95
     category: tools
     tagline: A curated public knowledge base of technical guides and integration playbooks from real projects — auth, payments, AI integrations, plugin architecture, SEO/GEO, DevOps migrations; authored in Obsidian, built with Quartz
-    repoUrl: https://github.com/ChanMeng666/chanmeng-knowledge-base
     url: https://chanmeng666.github.io/chanmeng-knowledge-base/
     extraLinks:
       - { label: "Live site", url: "https://chanmeng666.github.io/chanmeng-knowledge-base/" }

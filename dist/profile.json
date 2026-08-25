@@ -1034,7 +1034,6 @@
       "category": "web-apps",
       "tagline": "Solo-built production platform that digitized, automated, and AI-upgraded NZ's\nleading women-in-STEM nonprofit (charitable trust CC57025, 3,500+ members,\n5,000+ women reached) — replacing Webflow + spreadsheets with a real member\nengine. GPT-4o-mini AI mentor matching (5-weight scoring + admin review),\nthree role-permissioned dashboards (mentor / mentee / admin), Stripe billing,\nand a custom Slack ecosystem (event-collector bot, weekly mentorship-stats\ndigest, NZ government funding crawler, Claude `sync-event-from-slack` skill)\nthat turned hours of volunteer manual work into one-command automation.\n793/936 commits (85%) solo across ~12 months.\n",
       "url": "https://www.shesharp.org.nz/",
-      "repoUrl": "https://github.com/NZ-SheSharp/she-sharp",
       "extraLinks": [
         {
           "label": "She Sharp",
@@ -1268,8 +1267,7 @@
             {
               "id": "she-sharp",
               "name": "She Sharp",
-              "url": "https://www.shesharp.org.nz/",
-              "repoUrl": "https://github.com/NZ-SheSharp/she-sharp"
+              "url": "https://www.shesharp.org.nz/"
             }
           ],
           "_supersededByProject": null,
@@ -2856,12 +2854,7 @@
       "tagline": "18-month / 80-commit production multi-tenant SaaS on its own libraryos.live domain — 4-tier access model with deliberate regional accessibility design, 4-role RBAC, Supabase row-level security + keep-alive cron, survived two architectural pivots (single-tenant->multi-tenant Dec 2025, Vercel->Cloudflare Workers Feb 2026) and a 12-commit Stripe-SDK-on-Workers debugging saga that ended by switching the Stripe client to fetch-based HTTP.",
       "repoUrl": "https://github.com/ChanMeng666/library-os",
       "logo": "/public/brands/library-os-logo.svg",
-      "url": "https://libraryos.live/",
       "extraLinks": [
-        {
-          "label": "Live app (custom domain)",
-          "url": "https://libraryos.live/"
-        },
         {
           "label": "Multi-tenant SaaS pivot",
           "url": "https://github.com/ChanMeng666/library-os/commit/5e7e8c5"
@@ -2971,7 +2964,7 @@
         },
         {
           "label": "Live URL",
-          "value": "https://libraryos.live (purchased custom domain)"
+          "value": "libraryos.live (purchased custom domain)"
         },
         {
           "label": "License",
@@ -2980,7 +2973,7 @@
       ],
       "status": "archived",
       "startDate": "2024-10-30",
-      "publicSummary": "Production **multi-tenant library management SaaS** with its own\npurchased custom domain ([libraryos.live](https://libraryos.live)),\nbuilt over **18 months across 80 solo commits** spanning **two\nmajor architectural pivots and one infamous debugging saga**. The\nproduct offers a 4-tier access model with Stripe-integrated\nflows (Free / Basic / Pro / Enterprise), 4-role RBAC\n(Owner/Admin/Librarian/Member), per-tenant data isolation via\nSupabase row-level security policies, team invitations via Resend\ntransactional emails, multi-organization membership (users can\nbelong to multiple libraries and switch between them), and an\n**Africa-friendly accessibility tier** explicitly designed for\nlower-income markets. **Defining engineering moments**: (1) the\nsingle-tenant -> multi-tenant SaaS rebuild on 2025-12-30 (commit\n`5e7e8c5`); (2) the same-week rebrand from\n`library-management-system` -> `LibraryOS` (commit `4bd58b5`);\n(3) the **Supabase keep-alive cron** to prevent the free-tier\ndatabase from auto-pausing after 7 days of inactivity (commits\n`17344d6` + `64b03d0`); (4) the **Vercel -> Cloudflare Workers\nmigration** (commit `14c42fc`, 2026-02-03) with the custom\n`libraryos.live` domain switch (`ecf6c14`); (5) the\n**12-commit Stripe-SDK-on-Cloudflare-Workers debugging saga**\nending with the architectural fix in commit `e1ab824`\n*\"use fetch HTTP client for Stripe SDK on Cloudflare Workers\"*\nand the companion `85b6244` *\"read Stripe price IDs from database\ninstead of env vars\"*. Stack: Next.js 16.1 + React 19.2 +\nTailwind 4 + Supabase + Stripe 20 + Resend 6 + shadcn/ui +\nZod 4 + @opennextjs/cloudflare. Apache-2.0.\n",
+      "publicSummary": "Production **multi-tenant library management SaaS** with its own\npurchased custom domain (libraryos.live),\nbuilt over **18 months across 80 solo commits** spanning **two\nmajor architectural pivots and one infamous debugging saga**. The\nproduct offers a 4-tier access model with Stripe-integrated\nflows (Free / Basic / Pro / Enterprise), 4-role RBAC\n(Owner/Admin/Librarian/Member), per-tenant data isolation via\nSupabase row-level security policies, team invitations via Resend\ntransactional emails, multi-organization membership (users can\nbelong to multiple libraries and switch between them), and an\n**Africa-friendly accessibility tier** explicitly designed for\nlower-income markets. **Defining engineering moments**: (1) the\nsingle-tenant -> multi-tenant SaaS rebuild on 2025-12-30 (commit\n`5e7e8c5`); (2) the same-week rebrand from\n`library-management-system` -> `LibraryOS` (commit `4bd58b5`);\n(3) the **Supabase keep-alive cron** to prevent the free-tier\ndatabase from auto-pausing after 7 days of inactivity (commits\n`17344d6` + `64b03d0`); (4) the **Vercel -> Cloudflare Workers\nmigration** (commit `14c42fc`, 2026-02-03) with the custom\n`libraryos.live` domain switch (`ecf6c14`); (5) the\n**12-commit Stripe-SDK-on-Cloudflare-Workers debugging saga**\nending with the architectural fix in commit `e1ab824`\n*\"use fetch HTTP client for Stripe SDK on Cloudflare Workers\"*\nand the companion `85b6244` *\"read Stripe price IDs from database\ninstead of env vars\"*. Stack: Next.js 16.1 + React 19.2 +\nTailwind 4 + Supabase + Stripe 20 + Resend 6 + shadcn/ui +\nZod 4 + @opennextjs/cloudflare. Apache-2.0.\n",
       "narrative": {
         "impactHeadline": "Multi-tenant library-management SaaS with deliberate regional accessibility design — survived two architectural pivots (single→multi-tenant, Vercel→Cloudflare Workers), 4-tier access model, ready for community libraries, small schools, and makerspaces.",
         "problem": "Small libraries — community libraries, school libraries,\nstartup-office book collections, niche-genre clubs, university\nresidence hall libraries — are stuck between two bad options\nfor managing their book collections. Option A: enterprise-grade\nIntegrated Library Systems (Koha, Evergreen, ExLibris Alma)\nthat demand heavy operational overhead, require dedicated IT\nstaff to operate, and ship with UX patterns from 2005.\nOption B: spreadsheets and shared Google Sheets, which silently\nbreak the moment two librarians edit at once, give no role-based\npermissions, and can't handle email invitations or membership\nscoping. Both options also assume **one library per installation** —\nnone of them handle the case where a single platform should serve\nhundreds of independent organisations, each with its own books,\nmembers, and loans. That's the gap LibraryOS fills: a\n**multi-tenant library SaaS** with per-organisation data\nisolation, a tiered access model including an Africa-friendly\naccessibility tier for lower-income markets, and a modern\nNext.js 16 + React 19 frontend that any community librarian\ncan navigate without training.\n",
@@ -2988,7 +2981,7 @@
         "productLogic": "The product surface is structured around three concentric\nnouns: **users** (one person, one auth identity), **organisations**\n(one library entity with its own books, members, settings),\nand **memberships** (the join between user and organisation\ncarrying a role). A user signs up once and can belong to\nmany organisations — switching between them via the\n`OrganizationContext` provider in the React tree, which\nmirrors the same pattern Slack and Linear use. Within an\norganisation, four roles compose a granular permission\nmatrix: **Owners** can delete the organisation and manage\naccess; **Admins** can manage members but not delete the\norg; **Librarians** can add/edit books and manage loans;\n**Members** can browse, borrow, return, and review books.\nPer-tenant data isolation is enforced **at the database\nlayer** via Supabase row-level security (RLS) policies on\nevery table — `books`, `loans`, `members`, `reviews`,\n`categories` — so even a SQL injection in application code\ncan't leak across tenants. **Entitlement tiers**: the entry\nlevel covers 100 books / 5 users / 3 loans-per-user, and higher\nlevels scale those quotas progressively to unlimited — enforced\nserver-side against the tenant record, not hidden in the UI.\nStripe Checkout handles initial activation, Customer Portal\nhandles upgrades / downgrades / cancellations, and the\n`/api/stripe/webhook` endpoint atomically updates the\n`organizations.subscription_status` field based on signed\nStripe events. **Team invitations**: an Admin invites a new\nmember by email; Resend sends a transactional invite with a\nscoped token; the recipient clicks through, authenticates,\nand joins the organisation with the pre-assigned role.\n**The Africa-friendly accessibility tier** is a deliberate\nregional design decision (commit `16e81c1`) — lower-income\nmarkets need a region-aware entry point for the product to\nbe reachable at all.\n",
         "businessLogic": "The infrastructure choices are structurally favourable: Supabase\ncovers the database for typical small-library volume (the\nSupabase keep-alive cron — commit `17344d6` — prevents the\ndatabase from auto-pausing after extended idle periods, which is\nthe single load-bearing infrastructure decision); Cloudflare\nWorkers handle edge compute. The Africa-friendly accessibility\ntier is the non-obvious product decision: rather than ignoring\nlower-income markets, LibraryOS deliberately ships a region-aware\nentry point so the product reaches global communities that the\nKoha / Alma incumbents have priced out entirely.\n**Apache-2.0** with patent grant licensing makes the codebase\nexplicitly fork-and-deploy-able as a worked example for engineers\nwanting to ship their own multi-tenant SaaS — particularly useful\ngiven the Stripe-on-Workers compatibility solution baked in.\n",
         "technicalApproach": "**Multi-tenant SaaS architecture.** Single Supabase\nPostgres instance with strict row-level security policies\non every domain table — a policy like `organization_id =\nauth.jwt() ->> 'org_id'` enforces tenant isolation\nregardless of application bugs. Stored procedures for the\nnon-trivial loan-lifecycle logic (loan -> due-date\ncalculation -> return -> overdue triggers). The schema is\ndocumented as an ERD in the README covering\n`organizations`, `organization_members`, `books`, `loans`,\n`reviews`, `categories`, and the subscription-state\ncolumns on `organizations`. **The Stripe-on-Cloudflare-\nWorkers fight (March 2026).** The Stripe Node SDK uses the\nNode `https` module by default — which Workers don't have.\nFirst symptom: checkout endpoint times out silently.\nInitial debug attempts (commits `fdd1103` \"add visible\ndebug panel\", `2b54c48` \"add /api/stripe/debug endpoint\",\n`991af90` \"step-by-step server logging\") progressively\nisolated the failure to the Stripe SDK's HTTP client\nlayer. Final fix (commit `e1ab824`): configure the Stripe\nconstructor with `httpClient: Stripe.createFetchHttpClient()`\nso it uses the standard `fetch` API instead of `https`,\nmaking it Workers-compatible. The companion fix (commit\n`85b6244`): move Stripe price IDs from environment\nvariables to a database lookup, so the same deployment can\nserve different prices for different tenants or regions\nwithout env-var sprawl. The whole episode is a real\nproduction-debugging artefact, documented in the\nStripe + Cloudflare Workers integration guide (commit\n`12ddaef`). **Supabase keep-alive system** (commit\n`17344d6`, optimised in `64b03d0`). Supabase's free tier\nauto-pauses any database with 7 consecutive days of zero\nqueries. For a low-traffic SaaS this would silently break\nthe production deployment. The keep-alive system is a\nscheduled cron that pings the database with a no-op query\nevery few days, keeping it active without consuming\nmeaningful free-tier quota. **Custom domain\ninfrastructure**: registered `libraryos.live` (a purchased\ndomain, not a default Workers subdomain) on 2026-02-03\n(commit `ecf6c14`), wired DNS through Cloudflare, and\nco-located the Stripe live-mode account on the same\ndomain to keep the production billing surface\nsingle-origin. **Frontend stack**: Next.js 16.1 App Router\nwith React 19.2 + TypeScript 5.9, Tailwind 4 with custom\nbrand-gradient colours (#02FF73 / #09ADAA), shadcn/ui\ncomponent library on top of 10 Radix UI primitives,\nReact Hook Form with Zod 4 schema validation for typed\nforms end-to-end. **State**: two React Context providers\n— `AuthContext` for user/auth and `OrganizationContext`\nfor the currently-selected tenant — so component code\nreads the current tenant without prop drilling.\n**Security responsiveness**: Vercel's automated CVE\npatching system flagged two React Server Components +\nReact Flight RCE vulnerabilities in late 2025\n(`vercel/react-server-components-cve-vu-64tvuo` and\n`vercel/react-flight-and-nextjs-rce-ad-i38an0`); both PRs\nmerged within hours of discovery\n(commits `85fa6aa` + `101568a`).\n",
-        "outcomes": "Live and operational at\n[libraryos.live](https://libraryos.live) — a **purchased\ncustom domain**, not the default `*.workers.dev`\nsubdomain, signaling a commitment beyond a hobby\ndeployment. **80 solo commits across 18 months** from the\nfirst commit on 2024-10-30 through the most recent on\n2026-04-07 (commit `5c8d8e7`). The defining timeline is\nthe **Dec 2025 multi-tenant rebuild**: commit `2ad43de`\n(2025-12-30) upgrades the entire dependency stack to\nlatest tech (React 19, Next.js 16, Tailwind 4), commit\n`5e7e8c5` (same day) ships *\"add multi-tenant support\nwith Stripe billing and Resend emails\"* — the rebuild\nthat transformed a single-tenant library tool into a\nSaaS, followed by 10 more commits across Dec 30–31 wiring\nup Stripe live mode + auth + UI brand redesign + the\nrename to LibraryOS (`4bd58b5`) — a full multi-tenant\nSaaS shipped in ~36 hours. The **Feb 2026 Vercel ->\nCloudflare Workers migration** (commit `14c42fc`)\nconsolidated the production stack on Cloudflare's edge\nplatform. The **March 2026 Stripe-SDK-on-Workers debugging\nsaga** is documented across 12 commits and resolved with\n`e1ab824` — the kind of production issue that\ndemonstrates engineering ability to **debug across\nplatform boundaries**, not just ship features. Continuing\nmaintenance through April 2026 with README polish\n(`5c8d8e7`). The project serves as Chan's worked example\nof full-stack solo SaaS execution — multi-tenant\narchitecture, payment integration, security\nresponsiveness, persistence infrastructure (Supabase\nkeep-alive), and globalisation (Africa-friendly\naccessibility tier) — all on a purchased custom domain\nthat signals \"this is a real product\".\n",
+        "outcomes": "Live and operational at\nlibraryos.live — a **purchased\ncustom domain**, not the default `*.workers.dev`\nsubdomain, signaling a commitment beyond a hobby\ndeployment. **80 solo commits across 18 months** from the\nfirst commit on 2024-10-30 through the most recent on\n2026-04-07 (commit `5c8d8e7`). The defining timeline is\nthe **Dec 2025 multi-tenant rebuild**: commit `2ad43de`\n(2025-12-30) upgrades the entire dependency stack to\nlatest tech (React 19, Next.js 16, Tailwind 4), commit\n`5e7e8c5` (same day) ships *\"add multi-tenant support\nwith Stripe billing and Resend emails\"* — the rebuild\nthat transformed a single-tenant library tool into a\nSaaS, followed by 10 more commits across Dec 30–31 wiring\nup Stripe live mode + auth + UI brand redesign + the\nrename to LibraryOS (`4bd58b5`) — a full multi-tenant\nSaaS shipped in ~36 hours. The **Feb 2026 Vercel ->\nCloudflare Workers migration** (commit `14c42fc`)\nconsolidated the production stack on Cloudflare's edge\nplatform. The **March 2026 Stripe-SDK-on-Workers debugging\nsaga** is documented across 12 commits and resolved with\n`e1ab824` — the kind of production issue that\ndemonstrates engineering ability to **debug across\nplatform boundaries**, not just ship features. Continuing\nmaintenance through April 2026 with README polish\n(`5c8d8e7`). The project serves as Chan's worked example\nof full-stack solo SaaS execution — multi-tenant\narchitecture, payment integration, security\nresponsiveness, persistence infrastructure (Supabase\nkeep-alive), and globalisation (Africa-friendly\naccessibility tier) — all on a purchased custom domain\nthat signals \"this is a real product\".\n",
         "myRole": "Sole product designer, sole engineer, sole maintainer\nacross all 80 commits and 18 months. Designed the\nmulti-tenant schema with row-level security; designed the\n4-tier access model including the Africa-friendly regional\naccessibility decision; designed the 4-role RBAC\npermission matrix; built every API route under\n`/api/auth`, `/api/email`, `/api/stripe`, and `/api/health`;\nengineered the Supabase keep-alive cron preventing\nfree-tier auto-pause; executed the December 2025 single-\ntenant -> multi-tenant rebuild as a ~36-hour sprint;\nexecuted the February 2026 Vercel -> Cloudflare Workers\nmigration with the libraryos.live custom-domain switch;\ndebugged and fixed the March 2026 Stripe-SDK-on-Workers\ncompatibility issue (5 debug commits + 1 architectural\nfix moving price IDs from env to DB + 1 final fix\nswitching to fetch HTTP client + integration-guide docs);\napplied two React Server Components CVE patches within\nhours of Vercel-automated PRs; purchased and configured\nthe `libraryos.live` custom domain. Maintains the live\ndeployment today.\n"
       },
       "_clientOrg": null,
@@ -3708,7 +3701,7 @@
       "id": "friendscope",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "recent",
+      "recency": "deprecated",
       "lastUpdated": "2026-05-19",
       "name": "FriendScope — Privacy-First Relationship Assessment with Lottie-Animated Result Cards",
       "priority": 14,
@@ -3716,30 +3709,8 @@
       "tagline": "Evidence-based 4-domain relationship assessment tool (friendship / family / romantic / workplace) where 100% of user data never leaves the browser — Zustand-on-localStorage architecture, plugin-registry assessment engine across 72 questions and 36 weighted dimensions, score-band-mapped Lottie animations (9 buckets from `10-point-friendship.json` to `90-point-friendship.json`), and a 15-achievement gamification layer all running as a static client app deployed to Cloudflare Workers.",
       "repoUrl": "https://github.com/ChanMeng666/friendscope",
       "logo": "/public/brands/friendscope.svg",
-      "url": "https://friendscope.chanmeng-dev.workers.dev/",
-      "demoUrl": "https://friendscope.chanmeng-dev.workers.dev/",
-      "status": "live",
+      "status": "archived",
       "extraLinks": [
-        {
-          "label": "Live app",
-          "url": "https://friendscope.chanmeng-dev.workers.dev/"
-        },
-        {
-          "label": "About page",
-          "url": "https://friendscope.chanmeng-dev.workers.dev/about"
-        },
-        {
-          "label": "Achievements gallery",
-          "url": "https://friendscope.chanmeng-dev.workers.dev/achievements"
-        },
-        {
-          "label": "Assessment-type chooser",
-          "url": "https://friendscope.chanmeng-dev.workers.dev/assess"
-        },
-        {
-          "label": "Resources hub",
-          "url": "https://friendscope.chanmeng-dev.workers.dev/resources"
-        },
         {
           "label": "Multi-assessment refactor commit",
           "url": "https://github.com/ChanMeng666/friendscope/commit/f41b281"
@@ -3763,10 +3734,6 @@
         {
           "label": "Score-band Lottie commit",
           "url": "https://github.com/ChanMeng666/friendscope/commit/a4b3afb"
-        },
-        {
-          "label": "AI-agent llms.txt",
-          "url": "https://friendscope.chanmeng-dev.workers.dev/llms.txt"
         }
       ],
       "techStack": [
@@ -3880,7 +3847,7 @@
       "id": "send-joy",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "recent",
+      "recency": "deprecated",
       "lastUpdated": "2026-05-19",
       "name": "SendJoy — Visual Email Platform",
       "priority": 17,
@@ -3888,12 +3855,7 @@
       "tagline": "No-code visual abstraction layer over the Resend API — drag-and-drop block editor, 5-step send wizard, Resend Audiences sync, and onboarding designed explicitly for non-technical users. Born as a Christmas-greeting CLI; pivoted into a full visual platform in 4 days.",
       "repoUrl": "https://github.com/ChanMeng666/send-joy",
       "logo": "/public/brands/send-joy-logo.svg",
-      "url": "https://sendjoy.chanmeng-dev.workers.dev/",
       "extraLinks": [
-        {
-          "label": "Live app",
-          "url": "https://sendjoy.chanmeng-dev.workers.dev/"
-        },
         {
           "label": "Tutorial",
           "url": "https://github.com/ChanMeng666/send-joy/blob/master/TUTORIAL.md"
@@ -3978,9 +3940,9 @@
           "value": "4 (/emails, /templates, /audiences, /audiences/.../contacts)"
         }
       ],
-      "status": "live",
+      "status": "archived",
       "startDate": "2025-12-23",
-      "publicSummary": "A **no-code visual abstraction layer over the Resend API**, built\nso that **non-technical users never have to read Resend's docs,\nopen Resend's dashboard, or learn merge-field syntax** to send\nbeautiful personalised email campaigns. Started life on Christmas\nEve 2025 as a one-shot CLI for sending Christmas greetings; four\ndays later, on Dec 27 2025, the codebase pivoted in a single\ncommit (`fe16fdd`: *\"transform CLI tool into visual web\napplication platform\"*) into a full Next.js 15 web app with a\ndrag-and-drop block-based template editor (7 block types,\n`@dnd-kit`), a 5-step sending wizard, a Resend Audiences sync,\nand a deliberately authored **onboarding + context-aware help\nsystem \"for non-technical users\"** (commit `782731c`). Wraps four\nResend API surfaces — `/emails`, `/templates`, `/audiences`, and\n`/audiences/.../contacts` — behind a unified UI so the user\nnever sees a request body. Ships **6 Neobrutalism preset\ntemplates**, real-time desktop/mobile preview, undo/redo with\n50-state history, and CSV-import contact management.\nPrivacy-first: all user data (templates, contacts, settings)\nlives in browser localStorage, and the Resend API key is passed\nper-request rather than persisted on any server. Live at\n[sendjoy.chanmeng-dev.workers.dev](https://sendjoy.chanmeng-dev.workers.dev/),\nmigrated from Vercel to Cloudflare Workers in Feb 2026 with\nGitHub Actions auto-deploy.\n",
+      "publicSummary": "A **no-code visual abstraction layer over the Resend API**, built\nso that **non-technical users never have to read Resend's docs,\nopen Resend's dashboard, or learn merge-field syntax** to send\nbeautiful personalised email campaigns. Started life on Christmas\nEve 2025 as a one-shot CLI for sending Christmas greetings; four\ndays later, on Dec 27 2025, the codebase pivoted in a single\ncommit (`fe16fdd`: *\"transform CLI tool into visual web\napplication platform\"*) into a full Next.js 15 web app with a\ndrag-and-drop block-based template editor (7 block types,\n`@dnd-kit`), a 5-step sending wizard, a Resend Audiences sync,\nand a deliberately authored **onboarding + context-aware help\nsystem \"for non-technical users\"** (commit `782731c`). Wraps four\nResend API surfaces — `/emails`, `/templates`, `/audiences`, and\n`/audiences/.../contacts` — behind a unified UI so the user\nnever sees a request body. Ships **6 Neobrutalism preset\ntemplates**, real-time desktop/mobile preview, undo/redo with\n50-state history, and CSV-import contact management.\nPrivacy-first: all user data (templates, contacts, settings)\nlives in browser localStorage, and the Resend API key is passed\nper-request rather than persisted on any server. Live at\nsendjoy.chanmeng-dev.workers.dev,\nmigrated from Vercel to Cloudflare Workers in Feb 2026 with\nGitHub Actions auto-deploy.\n",
       "narrative": {
         "impactHeadline": "No-code visual abstraction layer over the Resend API — drag-and-drop block editor, 5-step send wizard, Audiences sync, onboarding designed for non-technical users. Born as a Christmas-greeting CLI, pivoted to a full visual platform in 4 days across 43 commits.",
         "problem": "Resend is the modern transactional-email API of choice for\ndevelopers — clean SDK, fast onboarding, MX-record sanity — but\nthe gap it leaves wide open is **non-technical users**.\nMarketers, community managers, school teachers, holiday-card\nsenders, small-business owners, and event organisers want\nexactly what Resend provides (high deliverability, real\nsender domains, real bounce handling) but **cannot get\nthrough the API on-ramp**. To send one campaign through\nvanilla Resend, a non-technical user has to (1) read SDK docs,\n(2) write Node code with the `Resend` client, (3) hand-author\nHTML or React Email JSX, (4) understand merge-field syntax\ndifferences between Resend's native templates and their own\ntemplating, (5) manage `Audiences` and `Contacts` through the\nREST API directly, and (6) deploy a serverless function or\nrun scripts locally. Every one of these steps is a wall.\nTools that **do** cater to non-technical users — Mailchimp,\nConvertKit, Substack — are either expensive at small list\nsizes, lock the user into their templating, or don't expose\nthe underlying mail infrastructure (custom domains, API key\nrotation, deliverability metrics) that Resend gives away\ncheaply.\n",
@@ -3988,7 +3950,7 @@
         "productLogic": "The product replaces six pieces of Resend's developer\nworkflow with visual surfaces. **(1) HTML authoring** becomes\na drag-and-drop block editor with 7 block types — Header,\nText, Image, Button, Wishes List, Divider, Footer — each with\na focused property panel; React Email renders to real\nemail-client-safe HTML on the server. **(2) Templating** is\nthe visual canvas plus a theme panel with 9+ colour pickers\n(`react-colorful`), 600px/375px device preview toggle, and\n50-state undo/redo. **(3) Recipient management** becomes a\nContacts page with three import modes — manual entry, CSV\nbulk import (Email/FirstName/LastName columns), and a\none-click sync from a Resend Audience (`audienceId` selected\nfrom a dropdown). **(4) Merge fields** become four named\nvariables — `{{recipientName}}`, `{{senderName}}`,\n`{{currentYear}}`, `{{nextYear}}` — with the server-side\nrenderer normalising between local camelCase syntax and\nResend native UPPER_SNAKE_CASE so a template can use either.\n**(5) Sending** becomes a 5-step wizard: pick template -> pick\nrecipients -> customise variables -> preview the actual\nrendered HTML (not a mockup) -> send-and-track with a real\nper-recipient success/failure result table; the server hits\nResend per recipient with progress streamed back. **(6) API\ninfrastructure** is replaced by a Settings page where the\nuser pastes their Resend API key and verified sender email\nonce; the key never leaves the browser except as a\nper-request header. A welcome-modal **onboarding flow**\n(commit `782731c`, *\"comprehensive onboarding and help\nsystem for non-technical users\"*) walks first-time visitors\nthrough these six surfaces step by step, and every screen\nhas a context-aware help modal pinned to it.\n",
         "businessLogic": "Open source under MIT. The product is **free to self-host**\n(deploy to Cloudflare Workers in under a minute via the\n`npm run deploy` script and `@opennextjs/cloudflare`) and\nfree to use on the public instance at\nsendjoy.chanmeng-dev.workers.dev (the user supplies their own\nResend API key, so Chan bears no email-delivery cost). The\ncommercial premise is asymmetric: Resend already monetises\nthrough their own free tier (3,000 emails/month) plus paid\nplans for higher volume; SendJoy makes their funnel reachable\nto a customer segment Resend can't service directly, which\nmakes it a complementary product rather than a competing\none. The build-in-public value for Chan: a portfolio-grade\nworked example of **\"abstract a developer API into a no-code\nproduct\"** — a pattern the agentic-AI economy will need\nrepeatedly as more APIs ship without UX layers. The codebase\nis deliberately reusable as a template for wrapping any\nother Resend-shaped API (transactional SMS, push\nnotifications, file delivery).\n",
         "technicalApproach": "Next.js 15.1.2 App Router with React 19 and TypeScript 5.7,\ndeployed on **Cloudflare Workers via\n`@opennextjs/cloudflare`** (migrated from Vercel on\n2026-02-04, commit `e9ace8a`, with a follow-up GitHub\nActions auto-deploy workflow in commit `a970c1a`). Four\nResend-wrapping API routes form the entire backend surface:\n**`POST /api/send`** takes `{apiKey, from, to, subject,\nhtml}` and forwards to the Resend SDK, returning\n`{success, data: {id}, error?}`; **`POST /api/preview`**\ntakes `{blocks, theme, variables}` and runs\n`@react-email/render` to produce email-client-safe HTML\nwith merge fields substituted; **`GET/POST/DELETE\n/api/contacts`** wraps the Resend Audiences contact CRUD;\n**`GET /api/resend-templates`** plus its `[id]/duplicate`\nand `[id]/publish` sub-routes wrap Resend's cloud\ntemplates. **State management** uses Zustand 5.0 with a\n50-state undo/redo history stack — every block move, edit,\ndelete, or theme change is reversible. **Templates and\ncontacts persist to browser localStorage** under six\nnamespaced keys (`email-platform-templates`,\n`email-platform-contacts`, `email-platform-settings`,\n`email-platform-onboarding`, `email-platform-emails-sent`,\n`email-platform-sidebar-collapsed`) — there is no\nserver-side database, no auth layer, and no telemetry. The\neditor itself uses **`@dnd-kit/core` + `@dnd-kit/sortable`**\nfor accessible drag-and-drop (commit `1dadb76`, *\"implement\ndrag-and-drop block reordering\"*). The visual language is a\ncustom **Neobrutalism design system** — 4px solid black\nborders, 8px hard-offset shadows (no blur), three brand\ncolours (`#DC2626` red, `#16A34A` green, `#F59E0B` gold),\ncustom Tailwind `shadow-neo-*` utilities — that signals\n\"approachable / playful\" while still feeling polished.\nPerformance: 95+ Lighthouse, <1s TTFB, <100ms API. **GEO\noptimisation** (commit `04fc131`, *\"add Generative Engine\nOptimization for AI discoverability\"*) ships\nmachine-readable metadata for LLM-driven discovery, same\npattern as Chan's other public projects.\n",
-        "outcomes": "Live and functional at\n[sendjoy.chanmeng-dev.workers.dev](https://sendjoy.chanmeng-dev.workers.dev/)\nsince end of December 2025; 43 solo commits across roughly\n6 weeks of active development with subsequent maintenance\nthrough April 2026. The defining engineering moment is the\n**4-day arc from CLI to visual platform**: Dec 23 ships\ncommit `16c7026` *\"initial release of Christmas greeting\nemail sender\"* (a CLI script using `tsx` and `dotenv` to\nsend one templated greeting via Resend), Dec 27 ships\ncommit `fe16fdd` *\"transform CLI tool into visual web\napplication platform\"*, and Dec 27–28 layers the visual\neditor, the 5-step wizard, the Resend cloud-templates\nintegration, the Resend Audiences sync, and the onboarding\nflow for non-technical users on top — all before the\nproduct gets its final name `send-joy` (commit `dba12bc`,\nDec 29) and brand identity (`0798540`). The Feb 2026\nCloudflare Workers migration cuts hosting cost to zero and\nadds GitHub Actions auto-deploy. The codebase serves as\nChan's worked example of the \"wrap a developer API into a\nno-code product for non-technical users\" pattern — directly\ncited in conversations with founders and recruiters as a\ndemonstration of full-stack product judgement (not just\nengineering): identifying the non-technical-user gap in a\ndeveloper-first API, then closing it in a week.\n",
+        "outcomes": "Live and functional at\nsendjoy.chanmeng-dev.workers.dev\nsince end of December 2025; 43 solo commits across roughly\n6 weeks of active development with subsequent maintenance\nthrough April 2026. The defining engineering moment is the\n**4-day arc from CLI to visual platform**: Dec 23 ships\ncommit `16c7026` *\"initial release of Christmas greeting\nemail sender\"* (a CLI script using `tsx` and `dotenv` to\nsend one templated greeting via Resend), Dec 27 ships\ncommit `fe16fdd` *\"transform CLI tool into visual web\napplication platform\"*, and Dec 27–28 layers the visual\neditor, the 5-step wizard, the Resend cloud-templates\nintegration, the Resend Audiences sync, and the onboarding\nflow for non-technical users on top — all before the\nproduct gets its final name `send-joy` (commit `dba12bc`,\nDec 29) and brand identity (`0798540`). The Feb 2026\nCloudflare Workers migration cuts hosting cost to zero and\nadds GitHub Actions auto-deploy. The codebase serves as\nChan's worked example of the \"wrap a developer API into a\nno-code product for non-technical users\" pattern — directly\ncited in conversations with founders and recruiters as a\ndemonstration of full-stack product judgement (not just\nengineering): identifying the non-technical-user gap in a\ndeveloper-first API, then closing it in a week.\n",
         "myRole": "Sole product designer, sole developer, sole maintainer. Made\nthe call to pivot from a one-off Christmas CLI into a\ngeneral-purpose visual platform after the CLI's 6th commit;\ndesigned the Neobrutalism visual language; designed the\n7-block schema; designed the 5-step wizard; designed the\nonboarding flow specifically for non-technical users (the\nexplicit framing in commit `782731c`); implemented every\nResend API wrapper route; engineered the localStorage\npersistence model with zero server-side state; executed the\nVercel -> Cloudflare Workers migration with GitHub Actions\nauto-deploy; authored the README, TUTORIAL.md, and GEO\nmetadata. Maintains the live deployment today.\n"
       },
       "_clientOrg": null,
@@ -4349,8 +4311,7 @@
         {
           "id": "she-sharp",
           "name": "She Sharp",
-          "url": "https://www.shesharp.org.nz/",
-          "repoUrl": "https://github.com/NZ-SheSharp/she-sharp"
+          "url": "https://www.shesharp.org.nz/"
         }
       ],
       "_supersededByProject": null,
@@ -4901,12 +4862,7 @@
       "tagline": "Full-stack text-to-image SaaS pivoted onto Cloudflare Workers AI's FLUX.1 Schnell free tier (100k req/day) — auth + credits ledger + Stripe-integrated payments + image storage + gallery, deployed on Cloudflare Workers via OpenNext. Two architectural pivots (Vercel->CF Workers free-AI 2026-04-09, then full SaaS layer one day later) turned a 2024 demo into a production product.",
       "repoUrl": "https://github.com/ChanMeng666/image-generator",
       "logo": "/public/brands/image-generator.svg",
-      "url": "https://image-generator.chanmeng-dev.workers.dev/",
       "extraLinks": [
-        {
-          "label": "Live app",
-          "url": "https://image-generator.chanmeng-dev.workers.dev/"
-        },
         {
           "label": "Pivot commit (Vercel->CF)",
           "url": "https://github.com/ChanMeng666/image-generator/commit/3aec6ce"
@@ -5010,7 +4966,7 @@
       ],
       "status": "archived",
       "startDate": "2024-11-27",
-      "publicSummary": "Production **full-stack text-to-image SaaS** — image generation\npowered by **Cloudflare Workers AI's FLUX.1 Schnell** 12B-parameter\nmodel accessed through the in-platform `env.AI` binding (no\nexternal API key, 100k requests/day on the free tier), wrapped in\na complete SaaS surface: **Neon Auth + Stripe credits ledger +\nNeon Postgres image storage + gallery + (auth) and (protected)\nNext.js route groups**. The interesting story is the **two\narchitectural pivots** the project went through to get here:\nit started 2024-11-27 as a Vercel-hosted Next.js demo using a\npaid AI provider, ran in that shape for ~16 months gathering\niteration ideas, then on **2026-04-09 pivoted to Cloudflare\nWorkers with free-tier FLUX.1 Schnell** (commit `3aec6ce`,\n*\"migrate from Vercel to Cloudflare Workers with free AI image\ngeneration\"*), and on **2026-04-10** — one day later —\ntransformed from \"free demo\" to **full SaaS in a single commit**\n`8626be4` *\"add authentication, credits, payments, and image\nstorage\"*. UI is a deliberate **Mondrian-inspired** geometric\ncomposition (later refined to minimalist grayscale on\n2026-04-20). Stack: Next.js 15.5 + React 19.2 + Drizzle ORM +\nNeon Postgres + Better Auth + Stripe 22 + OpenTelemetry +\n`@opennextjs/cloudflare` adapter. Live at\n[image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/).\nApache-2.0 with patent grant. 24 solo commits across ~17 months\nof sustained iteration.\n",
+      "publicSummary": "Production **full-stack text-to-image SaaS** — image generation\npowered by **Cloudflare Workers AI's FLUX.1 Schnell** 12B-parameter\nmodel accessed through the in-platform `env.AI` binding (no\nexternal API key, 100k requests/day on the free tier), wrapped in\na complete SaaS surface: **Neon Auth + Stripe credits ledger +\nNeon Postgres image storage + gallery + (auth) and (protected)\nNext.js route groups**. The interesting story is the **two\narchitectural pivots** the project went through to get here:\nit started 2024-11-27 as a Vercel-hosted Next.js demo using a\npaid AI provider, ran in that shape for ~16 months gathering\niteration ideas, then on **2026-04-09 pivoted to Cloudflare\nWorkers with free-tier FLUX.1 Schnell** (commit `3aec6ce`,\n*\"migrate from Vercel to Cloudflare Workers with free AI image\ngeneration\"*), and on **2026-04-10** — one day later —\ntransformed from \"free demo\" to **full SaaS in a single commit**\n`8626be4` *\"add authentication, credits, payments, and image\nstorage\"*. UI is a deliberate **Mondrian-inspired** geometric\ncomposition (later refined to minimalist grayscale on\n2026-04-20). Stack: Next.js 15.5 + React 19.2 + Drizzle ORM +\nNeon Postgres + Better Auth + Stripe 22 + OpenTelemetry +\n`@opennextjs/cloudflare` adapter. Live at\nimage-generator.chanmeng-dev.workers.dev.\nApache-2.0 with patent grant. 24 solo commits across ~17 months\nof sustained iteration.\n",
       "narrative": {
         "impactHeadline": "Full-stack text-to-image SaaS pivoted onto Cloudflare Workers AI's FLUX.1 Schnell free tier (100k req/day) — auth, credits ledger, Stripe-integrated payments, image storage, gallery; 17 months of sustained development from Vercel demo to free-tier production SaaS.",
         "problem": "Text-to-image AI tools sit in an awkward economic position:\nthe model inference (DALL-E, Stable Diffusion XL, Midjourney\nAPI) costs real money per image, so every demo on the\ninternet is either rate-limited to single-digit images per\nuser, hidden behind a sign-up wall, or quietly burning\nsomeone's API budget on every public generation. Building a\nconsumer-facing image generator that's **actually free at\nmeaningful volume** requires either subsidising the inference\ncost out of pocket or finding a provider whose free tier is\nlarge enough to underwrite a public deployment. At the same\ntime, the few \"free\" public image generators that do exist\ncap at a few hundred generations per day and ship as\nsingle-page demos with no persistence — you can't see your\nhistory, can't save generations to an account, can't share\na gallery, can't upgrade to higher volume even if you\nwanted to pay. The product gap is **a full-stack image SaaS\nwhose unit economics work because the inference layer is\nactually free at the volumes hobbyists need, with an upgrade\npath for users who want persistence + paid credits**.\n",
@@ -5018,7 +4974,7 @@
         "productLogic": "The product surface is intentionally split between **free\nanonymous mode** and **authenticated SaaS mode** through\nNext.js 15 route groups. The default `/` route is\nunauthenticated: a Mondrian-inspired geometric background\nwith a single text-area prompt input, generate button, and\nimage display. Anyone can generate images via the\n`/api/generate` POST endpoint which routes to the\nCloudflare Workers AI binding (`env.AI.run('@cf/black-\nforest-labs/flux-1-schnell', { prompt, steps: 4 })`), returns\na base64-encoded PNG, and the client renders it via a\n`data:image/png;base64,…` URI. **Free tier ceiling**:\n100,000 image-generation requests per day, enforced by\nCloudflare's Workers AI quota — that's enough to underwrite\na public deployment indefinitely for hobbyist traffic. Sign\nin (via the `(auth)/` route group) and the same prompt\ninput now lives in the `(protected)/` route group with\nadded persistence: every generation goes through the\n`/api/images` endpoint to write metadata + the base64 blob\nto Neon Postgres via Drizzle ORM, indexed by a `cuid2`\ncollision-resistant ID, and shows up in the `/gallery`\nview. Credits work as a usage cap on the authenticated\npath — `/api/credits` reads the user's ledger, `/api/stripe/\ncheckout` creates a Stripe Checkout session for the chosen\ncredit pack, and the `/api/stripe/webhook` route receives\nthe signed event from Stripe (using the `stripe:listen`\nand `stripe:trigger` dev scripts for local testing) and\natomically debits/credits the ledger. **The auto test/live\nStripe mode switch** (commit `00791c0`) detects the\n`STRIPE_SECRET_KEY` prefix and routes traffic accordingly\nso demos can run against test keys without environment\nre-config.\n",
         "businessLogic": "The architectural insight that makes the project viable:\n**the Cloudflare Workers AI free tier underwrites the\ninference path on public traffic**. 100,000 generations/day\nis the load-bearing constraint that lets the surface stay\nopen while a credits-ledger upgrade path scales power-user\ncapacity. Without that free-tier ceiling the choice would\nhave been: cap everyone, or rate-limit so aggressively the\ndemo isn't useful. The pivot to Cloudflare Workers AI (commit\n`3aec6ce`) was the structural decision that made the\nwhole SaaS shape workable. Above the free tier, a\nStripe-integrated credits ledger (test/live mode\nauto-switching, webhook-verified) provides the capacity\nupgrade path. Storage on Neon's serverless Postgres keeps\npersistence light at typical hobbyist volume. Net: the\nproduct is **open for the long-tail majority of users** and\nscales gracefully for the small minority who exhaust that\nfree-tier headroom. Apache-2.0 with patent grant — explicitly\nlicensed for commercial use, fork, and re-deployment.\n",
         "technicalApproach": "**AI layer.** Cloudflare Workers AI is accessed through\nthe **in-platform `env.AI` binding** declared in\n`wrangler.jsonc` (`{\"ai\": {\"binding\": \"AI\"}}`) — no\nexternal API key required, no network hop to a third-party\nprovider, all inference runs inside Cloudflare's edge.\nThe model is **FLUX.1 Schnell** (12B parameters,\n`@cf/black-forest-labs/flux-1-schnell`) called with\n`steps: 4` (1-8 range — fewer steps = faster, more\nsteps = higher quality). Response is base64-encoded PNG\nreturned as a JSON string, rendered client-side via a\n`data:image/png;base64,…` URI for zero-additional-request\ndisplay. **Full-stack SaaS layer.** Next.js 15.5 App\nRouter with `(auth)/` and `(protected)/` **route groups**\nfor clean separation of unauth/auth surfaces;\n`/api/generate` (free public path), `/api/auth/[...path]`\n(Neon Auth handler), `/api/credits` (ledger reads),\n`/api/images` (gallery persistence), `/api/gallery`\n(public gallery), `/api/stripe/checkout` + `/api/stripe/\nwebhook` (billing). **Database**: Neon Postgres via the\n`@neondatabase/serverless` HTTP driver (better fit for\nWorkers' stateless runtime than connection-pooled drivers\n— no pool exhaustion, no pgbouncer hop), schema in\nDrizzle ORM. **Auth**: Neon Auth (Better Auth beta) with\na committed `better-auth-migration.sql` for schema setup.\n**IDs**: `@paralleldrive/cuid2` for collision-resistant\nURL-safe identifiers (better than UUIDs for public-facing\nimage gallery URLs). **Observability**: `@opentelemetry/\napi` instrumentation hooks. **Deployment**: standard\n`@opennextjs/cloudflare` 1.18 adapter — `npm run deploy`\nruns `opennextjs-cloudflare build && opennextjs-cloudflare\ndeploy`, building the Next.js app and bundling it through\nthe OpenNext compiler into a Workers-compatible\nsingle-file bundle. Same deployment pattern Chan uses on\nsunostats, send-joy, chinese-redefine, and the event-qa\ntemplate — the pattern is now a portable skill. **UI**:\ndeliberate **Mondrian-inspired geometric composition** in\nthe initial design phase (`MondrianBackground.tsx` is a\nfirst-class component), later refined to a **minimalist\ngrayscale aesthetic** on 2026-04-20 (commit `10c5a0d`).\nBoth layers are intentional design choices, not\naccidental theming. **Build**: `npm run cf-typegen` runs\n`wrangler types --env-interface CloudflareEnv` to\nregenerate the TypeScript bindings file for the AI\nbinding, keeping the type system in sync with the live\nCloudflare environment.\n",
-        "outcomes": "Live at\n[image-generator.chanmeng-dev.workers.dev](https://image-generator.chanmeng-dev.workers.dev/)\nwith the full SaaS surface active and operating on the\nCloudflare Workers free tier across both inference (Workers\nAI 100k/day) and database (Neon free tier). **17 months of\nsustained development across 24 solo commits**, with the\ndefining narrative being the **two architectural pivots in\n48 hours**: 2026-04-09 (`3aec6ce`) migrated the inference\nlayer from Vercel + paid provider to Cloudflare Workers +\nfree FLUX.1 Schnell — cutting unit cost to zero; 2026-04-10\n(`8626be4`) added the entire SaaS layer (auth + credits +\nStripe + image storage) in a single commit, transforming a\nfree demo into a fully-monetisable product with an upgrade\npath. The Mondrian-inspired design layer was added across\nthe 2024-12 window (commits including `7717b8f` \"Add logo\")\nand refined to minimalist grayscale on 2026-04-20\n(`10c5a0d` *\"redesign UI/UX with minimalist grayscale\naesthetic\"*). Stripe test/live auto-mode-switching\n(`00791c0`) followed the next day. **Apache-2.0 with\npatent grant** licensing makes the codebase explicitly\nfork-and-deploy-able as a worked example for engineers\nwanting to ship their own free-tier AI SaaS on Cloudflare\nWorkers — the entire deployment fits inside Cloudflare's\nand Neon's free tiers for typical hobbyist volume.\n",
+        "outcomes": "Live at\nimage-generator.chanmeng-dev.workers.dev\nwith the full SaaS surface active and operating on the\nCloudflare Workers free tier across both inference (Workers\nAI 100k/day) and database (Neon free tier). **17 months of\nsustained development across 24 solo commits**, with the\ndefining narrative being the **two architectural pivots in\n48 hours**: 2026-04-09 (`3aec6ce`) migrated the inference\nlayer from Vercel + paid provider to Cloudflare Workers +\nfree FLUX.1 Schnell — cutting unit cost to zero; 2026-04-10\n(`8626be4`) added the entire SaaS layer (auth + credits +\nStripe + image storage) in a single commit, transforming a\nfree demo into a fully-monetisable product with an upgrade\npath. The Mondrian-inspired design layer was added across\nthe 2024-12 window (commits including `7717b8f` \"Add logo\")\nand refined to minimalist grayscale on 2026-04-20\n(`10c5a0d` *\"redesign UI/UX with minimalist grayscale\naesthetic\"*). Stripe test/live auto-mode-switching\n(`00791c0`) followed the next day. **Apache-2.0 with\npatent grant** licensing makes the codebase explicitly\nfork-and-deploy-able as a worked example for engineers\nwanting to ship their own free-tier AI SaaS on Cloudflare\nWorkers — the entire deployment fits inside Cloudflare's\nand Neon's free tiers for typical hobbyist volume.\n",
         "myRole": "Sole product designer, sole engineer, sole maintainer.\nIdentified the Cloudflare Workers AI free-tier free-FLUX\nopportunity in early 2026 and executed the pivot from\nVercel + paid AI provider to Workers + free Workers AI\nbinding within a single commit (`3aec6ce`); designed the\nSaaS layer extension (auth + credits + Stripe + image\nstorage) and shipped it the next day (`8626be4`);\ndesigned the dual-surface UX with Next.js 15\n`(auth)/`/`(protected)/` route groups so anonymous users\nkeep the free generation path; designed the\nMondrian-inspired geometric UI and the subsequent\nminimalist-grayscale refinement; engineered the Drizzle\nORM + Neon Postgres + Neon Auth (Better Auth)\npersistence stack; wrote the Stripe test/live auto-mode\nswitching logic; configured the @opennextjs/cloudflare\ndeployment pipeline. Maintains the live deployment today.\n"
       },
       "_clientOrg": null,
@@ -5030,7 +4986,7 @@
       "id": "chinese-redefine",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "recent",
+      "recency": "deprecated",
       "lastUpdated": "2026-07-04",
       "name": "Chinese Redefine 汉语新解 — AI Word Redefinition",
       "priority": 14,
@@ -5038,19 +4994,10 @@
       "tagline": "汉语新解 — a full-stack AI app that reinterprets everyday Chinese vocabulary with sharp, humorous, philosophically-loaded takes (productizing Li Jigang's 李继刚 viral prompt) via Google Gemini, exports shareable SVG cards, gated by a two-layer rate-limit quota system, deployed on Cloudflare Workers via OpenNext. Low on raw technical difficulty, high on cultural/philosophical depth",
       "repoUrl": "https://github.com/ChanMeng666/chinese-redefine",
       "logo": "/public/brands/chinese-redefine-v2.svg",
-      "url": "https://chinese-redefine.chanmeng-dev.workers.dev/",
       "extraLinks": [
-        {
-          "label": "Live demo",
-          "url": "https://chinese-redefine.chanmeng-dev.workers.dev/"
-        },
         {
           "label": "GitHub repo",
           "url": "https://github.com/ChanMeng666/chinese-redefine"
-        },
-        {
-          "label": "Public gallery",
-          "url": "https://chinese-redefine.chanmeng-dev.workers.dev/gallery"
         }
       ],
       "techStack": [
@@ -5069,7 +5016,7 @@
         "Cloudflare Workers",
         "Wrangler"
       ],
-      "status": "live",
+      "status": "archived",
       "publicSummary": "Full-stack AI application that reinterprets traditional Chinese\nvocabulary through Google Gemini and exports the results as\nshareable, vermillion-seal-themed SVG cards. Production deployment\nincludes user authentication (Neon Auth, migrated from self-hosted\nBetter Auth), Neon Postgres + Drizzle ORM for cards and quota\npersistence, a two-tier rate-limit system (per-user free/pro quotas\nplus a global daily/monthly circuit breaker), public gallery,\n\"My Cards\" private collection, Resend-powered OTP email\nverification, and Cloudflare Workers deployment via\n`@opennextjs/cloudflare`. Modern Chinese Ink aesthetic UI\nredesigned March 2026.\n",
       "narrative": {
         "impactHeadline": "Full-stack AI app reinterpreting traditional Chinese vocabulary through Google Gemini — exports shareable SVG cards, gated by a two-layer rate-limit quota system, ~95% solo across 60 commits, deployed on Cloudflare Workers via OpenNext.",
@@ -5582,20 +5529,19 @@
       "id": "leviathan",
       "provenance": "personal",
       "tier": "archive",
-      "recency": "historical",
+      "recency": "deprecated",
       "lastUpdated": "2026-07-04",
       "name": "The Birth of Leviathan (利维坦的诞生)",
       "priority": 71,
       "category": "games",
       "tagline": "AI-as-game-master narrative strategy roguelike — the AI seeds a unique world (15-25 NPCs, fate lines, and fractures) each run, and the player lives an ordinary person's 80-day political fate across four acts; cold-realist tone in the vein of Disco Elysium / Suzerain",
-      "url": "https://leviathan-client.vercel.app/",
       "keywords": [
         "AI game master (non-decorative)",
         "Narrative strategy roguelike",
         "Procedurally-seeded world + NPCs",
         "Political-fate simulation"
       ],
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5637,7 +5583,6 @@
       "tagline": "AI-vs-Human content-detection quiz game across four categories (text, image, audio, video), 10 questions each — a playful pond-themed UI with real-time scoring, progressive difficulty, and performance analytics; doubles as an AI-literacy tool for spotting AI-generated content",
       "repoUrl": "https://github.com/ChanMeng666/ai-human-game",
       "logo": "/public/brands/ai-human-game.svg",
-      "url": "https://ai-human-game.chanmeng-dev.workers.dev/",
       "techStack": [
         "Next.js",
         "TypeScript",
@@ -5668,7 +5613,6 @@
       "tagline": "Interactive reincarnation simulator with multi-cultural life journeys and immersive UX",
       "repoUrl": "https://github.com/ChanMeng666/journey-of-reincarnation",
       "logo": "/public/brands/journey-of-reincarnation-2.svg",
-      "url": "https://journey-of-reincarnation.pages.dev/",
       "techStack": [
         "Next.js",
         "Cloudflare Pages"
@@ -5691,7 +5635,6 @@
       "tagline": "2D pixel-style farm simulation game — farming, building, and social systems",
       "repoUrl": "https://github.com/ChanMeng666/otherworld-god-farmer",
       "logo": "/public/brands/otherworld-god-farmer-logo.svg",
-      "url": "https://otherworld-god-farmer.pages.dev/",
       "techStack": [
         "Angular 19",
         "Pixi.js 8",
@@ -5914,7 +5857,7 @@
       "id": "forward-with-her-website",
       "provenance": "client",
       "tier": "archive",
-      "recency": "historical",
+      "recency": "deprecated",
       "meta": {
         "x_brand": {
           "featuredStack": [
@@ -5934,7 +5877,6 @@
       "tagline": "Bilingual EN/CN mentorship-programme site with 3D model viewer — supports the same 360+-mentor / 800+-mentee Forward with Her programme through which 7 of Chan's LinkedIn testimonials came in",
       "logo": "/public/brands/forward-with-her-logo.svg",
       "repoUrl": "https://github.com/ChanMeng666/forward-with-her-mentorship-program",
-      "url": "https://forward-with-her-mentorship-program.pages.dev/",
       "techStack": [
         "Next.js 15",
         "React 19",
@@ -5944,7 +5886,7 @@
       "narrative": {
         "impactHeadline": "Bilingual EN/CN promo site for the Forward with Her mentorship programme — 3D-rendered landing page (Three.js + Cloudflare Pages) supporting the 360+-mentor / 800+-mentee cohort that produced 7 of Chan's LinkedIn testimonials."
       },
-      "status": "live",
+      "status": "archived",
       "_clientOrg": {
         "id": "forward-with-her",
         "name": "Forward with Her 她行 Mentorship",
@@ -5997,8 +5939,7 @@
         {
           "id": "she-sharp",
           "name": "She Sharp",
-          "url": "https://www.shesharp.org.nz/",
-          "repoUrl": "https://github.com/NZ-SheSharp/she-sharp"
+          "url": "https://www.shesharp.org.nz/"
         }
       ],
       "_supersededByProject": null,
@@ -6008,7 +5949,7 @@
       "id": "agrihire-solutions",
       "provenance": "coursework",
       "tier": "archive",
-      "recency": "historical",
+      "recency": "deprecated",
       "lastUpdated": "2026-07-04",
       "name": "AgriHire Solutions",
       "priority": 31,
@@ -6016,7 +5957,6 @@
       "tagline": "Equipment-rental management SaaS for NZ agricultural businesses — rebuilt from a basic HTML/JS/CSS group project into a Next.js 16 + Neon Postgres app on Cloudflare Workers (OpenNext), with multi-store operations, role-based access, tiered pricing, real-time analytics dashboards, and file uploads",
       "repoUrl": "https://github.com/ChanMeng666/agrihire-solutions",
       "logo": "/public/brands/agri-hire-solutions.svg",
-      "url": "https://agrihire.chanmeng.org/",
       "techStack": [
         "Next.js 16",
         "React 19",
@@ -6035,7 +5975,7 @@
       "narrative": {
         "impactHeadline": "Equipment-rental management SaaS for NZ agricultural businesses — rebuilt from a basic HTML/JS/CSS university group project into a Next.js 16 app on Cloudflare Workers (OpenNext), with multi-store operations, role-based access, tiered pricing, and real-time analytics dashboards."
       },
-      "status": "live",
+      "status": "archived",
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -6161,7 +6101,6 @@
       "priority": 33,
       "category": "web-apps",
       "tagline": "Chan's first personal website (v1) — an interactive 3D portfolio in React + Three.js / react-three-fiber, built on a clean, professionally-structured content-template architecture that makes section and copy edits fast; migrated from Vercel to Cloudflare Pages",
-      "url": "https://3d-portfolio-3bb.pages.dev/",
       "techStack": [
         "Three.js",
         "react-three-fiber",
@@ -6189,7 +6128,6 @@
       "tagline": "Minimalist-living image-and-text blog whose signature is an interactive 3D model on the homepage — visitors rotate/explore it with the mouse, adding a tactile, aesthetic hook to the reading experience; built on Docusaurus",
       "repoUrl": "https://github.com/ChanMeng666/minimalist-good-post",
       "logo": "/public/brands/minimalist-good-post.svg",
-      "url": "https://minimalist-good-post.pages.dev/",
       "techStack": [
         "Docusaurus",
         "Three.js (interactive homepage 3D model)",
@@ -6415,7 +6353,6 @@
       "category": "creative",
       "tagline": "Modern redefinition of English words from a contemporary perspective via Google Gemini — sister project to Chinese Redefine",
       "repoUrl": "https://github.com/ChanMeng666/english-redefine",
-      "url": "https://english-redefine.chanmeng-dev.workers.dev/",
       "logo": "/public/brands/english-redefine.svg",
       "techStack": [
         "TypeScript",
@@ -6432,14 +6369,13 @@
       "id": "biosecurity",
       "provenance": "coursework",
       "tier": "archive",
-      "recency": "recent",
+      "recency": "deprecated",
       "lastUpdated": "2026-07-04",
       "name": "NZ Biosecurity Guide",
       "priority": 35,
       "category": "web-apps",
       "tagline": "Biosecurity guide for NZ agricultural pests and weeds with role-based access for agronomists, staff, and administrators — rebuilt from a basic HTML/CSS/Flask university group project into a modern Next.js + Neon Postgres + Drizzle full-stack app deployed on Cloudflare Workers",
       "repoUrl": "https://github.com/ChanMeng666/biosecurity",
-      "url": "https://biosecurity.chanmeng-dev.workers.dev/",
       "logo": "/public/brands/biosecurity.svg",
       "techStack": [
         "Next.js (App Router)",
@@ -6452,7 +6388,7 @@
         "Tailwind CSS",
         "Cloudflare Workers (OpenNext)"
       ],
-      "status": "live",
+      "status": "archived",
       "narrative": {
         "impactHeadline": "NZ agricultural biosecurity guide with role-based access for agronomists/staff/admins — rebuilt from a basic HTML/CSS/Flask university group project into a modern Next.js + Neon Postgres + Drizzle app deployed on Cloudflare Workers (OpenNext)."
       },
@@ -6511,14 +6447,13 @@
       "id": "countryside-community-swimming-club",
       "provenance": "coursework",
       "tier": "archive",
-      "recency": "recent",
+      "recency": "deprecated",
       "lastUpdated": "2026-07-04",
       "name": "Swimming Club Management System",
       "priority": 38,
       "category": "web-apps",
       "tagline": "Community swimming-club platform — members, class scheduling (FullCalendar), facility bookings, payments, and reporting; rebuilt from a basic HTML/CSS/Flask group project into a modern Next.js + Neon Postgres + Drizzle full-stack app on Cloudflare Workers",
       "repoUrl": "https://github.com/ChanMeng666/countryside-community-swimming-club",
-      "url": "https://countryside-swimming-club.chanmeng-dev.workers.dev/",
       "logo": "/public/brands/swimming-club-management-system.svg",
       "techStack": [
         "Next.js (App Router)",
@@ -6532,7 +6467,7 @@
         "Tailwind CSS",
         "Cloudflare Workers (OpenNext)"
       ],
-      "status": "live",
+      "status": "archived",
       "narrative": {
         "impactHeadline": "Community swimming-club management platform (members, class scheduling, facility bookings, payments, reporting) — rebuilt from a basic HTML/CSS/Flask group project into a modern Next.js + Neon Postgres + Drizzle app on Cloudflare Workers with FullCalendar scheduling."
       },
@@ -6552,7 +6487,6 @@
       "category": "web-apps",
       "tagline": "Automotive repair-shop management platform — separate technician and admin interfaces, parts inventory, and billing; rebuilt from a basic HTML/CSS group project into a Flask 3 app-factory backed by PostgreSQL + SQLAlchemy ORM + Alembic migrations. Strongest community traction of Chan's learning-origin apps (29 stars, 11 forks)",
       "repoUrl": "https://github.com/ChanMeng666/automotive-repair-management-system",
-      "url": "https://repairos.chanmeng.org/",
       "logo": "/public/brands/repair-os-logo.svg",
       "techStack": [
         "Python",
@@ -7426,8 +7360,7 @@
         {
           "id": "she-sharp",
           "name": "She Sharp",
-          "url": "https://www.shesharp.org.nz/",
-          "repoUrl": "https://github.com/NZ-SheSharp/she-sharp"
+          "url": "https://www.shesharp.org.nz/"
         },
         {
           "id": "makey-makey-iot-slides",
@@ -7573,8 +7506,7 @@
         {
           "id": "she-sharp",
           "name": "She Sharp",
-          "url": "https://www.shesharp.org.nz/",
-          "repoUrl": "https://github.com/NZ-SheSharp/she-sharp"
+          "url": "https://www.shesharp.org.nz/"
         }
       ],
       "_supersededByProject": null,
@@ -7590,7 +7522,6 @@
       "priority": 95,
       "category": "tools",
       "tagline": "A curated public knowledge base of technical guides and integration playbooks from real projects — auth, payments, AI integrations, plugin architecture, SEO/GEO, DevOps migrations; authored in Obsidian, built with Quartz",
-      "repoUrl": "https://github.com/ChanMeng666/chanmeng-knowledge-base",
       "url": "https://chanmeng666.github.io/chanmeng-knowledge-base/",
       "extraLinks": [
         {
@@ -13074,6 +13005,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-08-25",
     "buildYear": "2026",
-    "buildTimestamp": "2026-08-25T23:18:50.248Z"
+    "buildTimestamp": "2026-08-25T23:27:08.732Z"
   }
 }

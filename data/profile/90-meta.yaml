@@ -497,7 +497,7 @@ meta:
     # as you verify them; freshness banner uses meta.lastModified for the date.
     statisticsClaims:
       - { claim: "793 of 936 commits (85%) authored solo on the She Sharp full-stack member platform; remainder chiefly by Lesley Gao on frontend design (140 commits, 15%)",
-          source: "https://github.com/NZ-SheSharp/she-sharp",
+          source: "https://github.com/NZ-SheSharp",
           verifiedAt: "2026-07-16" }
       # The org's own about-us page also carries an "85% mentorship success rate
       # (5-6x higher promotion likelihood)". It was REMOVED from this claim on
@@ -510,7 +510,7 @@ meta:
           source: "https://www.shesharp.org.nz/about-us",
           verifiedAt: "2026-05-16" }
       - { claim: "Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,411-line schema with 30 pgEnums + 35 pgTables + 26 SQL migrations across 95 API routes / 53 pages / 160 components",
-          source: "https://github.com/NZ-SheSharp/she-sharp",
+          source: "https://github.com/NZ-SheSharp",
           verifiedAt: "2026-07-16" }
       - { claim: "She Sharp data migration crawler bootstrapped the new platform with 1,748 images / 707 MB / 11 JSON files / 85 events / 50 Humanitix tickets / 15 podcasts / 121 photo galleries from the old Webflow site",
           source: "https://www.shesharp.org.nz/",
@@ -687,7 +687,6 @@ meta:
       - { title: "Digital Minimalism — Technology as a Tool, Not a Master",                url: "https://chanmeng.org/blog/digital-minimalism", platform: chanmeng.org }
       - { title: "Creating a Minimalist Living Space — Lessons from The Art of Discarding", url: "https://chanmeng.org/blog/minimalist-living-space", platform: chanmeng.org }
       - { title: "A Complete Guide to Legally Changing Your Name as an Adult",             url: "https://www.douban.com/group/topic/310015982/?_dtcc=1&_i=75245459vsCiSF",  platform: Douban }
-      - { title: "Minimalist Living Blog",                                                  url: "https://minimalist-good-post.pages.dev",                                  platform: "Cloudflare Pages" }
 
     # Footer link table (11 rows). The README footer renders a curated
     # subset (see _footerLinksReadme cache in scripts/build.mjs); the

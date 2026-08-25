@@ -47,9 +47,7 @@ projects:
     tagline: 18-month / 80-commit production multi-tenant SaaS on its own libraryos.live domain — 4-tier access model with deliberate regional accessibility design, 4-role RBAC, Supabase row-level security + keep-alive cron, survived two architectural pivots (single-tenant->multi-tenant Dec 2025, Vercel->Cloudflare Workers Feb 2026) and a 12-commit Stripe-SDK-on-Workers debugging saga that ended by switching the Stripe client to fetch-based HTTP.
     repoUrl: https://github.com/ChanMeng666/library-os
     logo: /public/brands/library-os-logo.svg
-    url: https://libraryos.live/
     extraLinks:
-      - { label: "Live app (custom domain)",      url: "https://libraryos.live/" }
       - { label: "Multi-tenant SaaS pivot",       url: "https://github.com/ChanMeng666/library-os/commit/5e7e8c5" }
       - { label: "LibraryOS rebrand commit",      url: "https://github.com/ChanMeng666/library-os/commit/4bd58b5" }
       - { label: "Vercel->CF Workers migration",  url: "https://github.com/ChanMeng666/library-os/commit/14c42fc" }
@@ -100,13 +98,13 @@ projects:
       - { label: "Entitlement model",           value: "4 quota levels enforced server-side, plus a deliberate region-aware accessibility level for lower-income markets" }
       - { label: "Role hierarchy",              value: "4 (Owner/Admin/Librarian/Member with granular permission matrix)" }
       - { label: "Entry-level quotas",          value: "100 books, 5 users, 3 loans/user; higher entitlement levels scale those ceilings to unlimited" }
-      - { label: "Live URL",                    value: "https://libraryos.live (purchased custom domain)" }
+      - { label: "Live URL",                    value: "libraryos.live (purchased custom domain)" }
       - { label: "License",                     value: "Apache-2.0" }
     status: archived
     startDate: "2024-10-30"
     publicSummary: |
       Production **multi-tenant library management SaaS** with its own
-      purchased custom domain ([libraryos.live](https://libraryos.live)),
+      purchased custom domain (libraryos.live),
       built over **18 months across 80 solo commits** spanning **two
       major architectural pivots and one infamous debugging saga**. The
       product offers a 4-tier access model with Stripe-integrated
@@ -282,7 +280,7 @@ projects:
         (commits `85fa6aa` + `101568a`).
       outcomes: |
         Live and operational at
-        [libraryos.live](https://libraryos.live) — a **purchased
+        libraryos.live — a **purchased
         custom domain**, not the default `*.workers.dev`
         subdomain, signaling a commitment beyond a hobby
         deployment. **80 solo commits across 18 months** from the
@@ -763,7 +761,7 @@ projects:
   - id: friendscope
     provenance: personal
     tier: archive
-    recency: recent
+    recency: deprecated
     lastUpdated: "2026-05-19"
     name: FriendScope — Privacy-First Relationship Assessment with Lottie-Animated Result Cards
     priority: 14
@@ -771,22 +769,14 @@ projects:
     tagline: Evidence-based 4-domain relationship assessment tool (friendship / family / romantic / workplace) where 100% of user data never leaves the browser — Zustand-on-localStorage architecture, plugin-registry assessment engine across 72 questions and 36 weighted dimensions, score-band-mapped Lottie animations (9 buckets from `10-point-friendship.json` to `90-point-friendship.json`), and a 15-achievement gamification layer all running as a static client app deployed to Cloudflare Workers.
     repoUrl: https://github.com/ChanMeng666/friendscope
     logo: /public/brands/friendscope.svg
-    url: https://friendscope.chanmeng-dev.workers.dev/
-    demoUrl: https://friendscope.chanmeng-dev.workers.dev/
-    status: live
+    status: archived
     extraLinks:
-      - { label: "Live app",                     url: "https://friendscope.chanmeng-dev.workers.dev/" }
-      - { label: "About page",                   url: "https://friendscope.chanmeng-dev.workers.dev/about" }
-      - { label: "Achievements gallery",         url: "https://friendscope.chanmeng-dev.workers.dev/achievements" }
-      - { label: "Assessment-type chooser",      url: "https://friendscope.chanmeng-dev.workers.dev/assess" }
-      - { label: "Resources hub",                url: "https://friendscope.chanmeng-dev.workers.dev/resources" }
       - { label: "Multi-assessment refactor commit", url: "https://github.com/ChanMeng666/friendscope/commit/f41b281" }
       - { label: "Gamification + types feature commit", url: "https://github.com/ChanMeng666/friendscope/commit/9582e2e" }
       - { label: "Architecture refactor commit", url: "https://github.com/ChanMeng666/friendscope/commit/4f0745a" }
       - { label: "CF Workers migration commit",  url: "https://github.com/ChanMeng666/friendscope/commit/ae0744e" }
       - { label: "GEO/AI-discovery feature commit", url: "https://github.com/ChanMeng666/friendscope/commit/35d02d0" }
       - { label: "Score-band Lottie commit",     url: "https://github.com/ChanMeng666/friendscope/commit/a4b3afb" }
-      - { label: "AI-agent llms.txt",            url: "https://friendscope.chanmeng-dev.workers.dev/llms.txt" }
     techStack:
       - "Next.js 15.0 (App Router, RSC, dynamic-imports for Lottie SSR safety)"
       - "React 18.2 (production runtime; README badge says React 19 but package.json pins ^18.2.0)"
@@ -873,7 +863,7 @@ projects:
   - id: send-joy
     provenance: personal
     tier: archive
-    recency: recent
+    recency: deprecated
     lastUpdated: "2026-05-19"
     name: SendJoy — Visual Email Platform
     priority: 17
@@ -881,9 +871,7 @@ projects:
     tagline: No-code visual abstraction layer over the Resend API — drag-and-drop block editor, 5-step send wizard, Resend Audiences sync, and onboarding designed explicitly for non-technical users. Born as a Christmas-greeting CLI; pivoted into a full visual platform in 4 days.
     repoUrl: https://github.com/ChanMeng666/send-joy
     logo: /public/brands/send-joy-logo.svg
-    url: https://sendjoy.chanmeng-dev.workers.dev/
     extraLinks:
-      - { label: "Live app",           url: "https://sendjoy.chanmeng-dev.workers.dev/" }
       - { label: "Tutorial",           url: "https://github.com/ChanMeng666/send-joy/blob/master/TUTORIAL.md" }
       - { label: "CF Workers migration commit", url: "https://github.com/ChanMeng666/send-joy/commit/e9ace8a" }
       - { label: "CLI->visual pivot commit",    url: "https://github.com/ChanMeng666/send-joy/commit/fe16fdd" }
@@ -925,7 +913,7 @@ projects:
       - { label: "Preset templates",       value: "6 (Classic Christmas, New Year 2025, Chinese New Year, Birthday, Product Launch, Weekly Newsletter)" }
       - { label: "Send wizard steps",      value: "5 (Template -> Recipients -> Variables -> Preview -> Send & Track)" }
       - { label: "Resend API surfaces wrapped", value: "4 (/emails, /templates, /audiences, /audiences/.../contacts)" }
-    status: live
+    status: archived
     startDate: "2025-12-23"
     publicSummary: |
       A **no-code visual abstraction layer over the Resend API**, built
@@ -948,7 +936,7 @@ projects:
       Privacy-first: all user data (templates, contacts, settings)
       lives in browser localStorage, and the Resend API key is passed
       per-request rather than persisted on any server. Live at
-      [sendjoy.chanmeng-dev.workers.dev](https://sendjoy.chanmeng-dev.workers.dev/),
+      sendjoy.chanmeng-dev.workers.dev,
       migrated from Vercel to Cloudflare Workers in Feb 2026 with
       GitHub Actions auto-deploy.
     narrative:
@@ -1080,7 +1068,7 @@ projects:
         pattern as Chan's other public projects.
       outcomes: |
         Live and functional at
-        [sendjoy.chanmeng-dev.workers.dev](https://sendjoy.chanmeng-dev.workers.dev/)
+        sendjoy.chanmeng-dev.workers.dev
         since end of December 2025; 43 solo commits across roughly
         6 weeks of active development with subsequent maintenance
         through April 2026. The defining engineering moment is the

@@ -32,9 +32,21 @@ npm run check        # validate (schema + linkedin sync) + build + asset audit
   (16-page magazine), and `cv/exports/chan-meng-cv-ats.pdf` (plain single-column
   ATS resume — tracked but deliberately OUTSIDE `public/`, never web-served or
   linked; see `cv/exports/README.md`). The same run also writes
-  `cv/exports/chan-meng-cv-ats.docx` (the DEFAULT upload artifact — Lever refused
-  the PDF) and `cv/exports/chan-meng-cv-ats.txt`, both parsed out of
-  `cv/chan-meng-cv-ats.typ` by `cv/build-ats-exports.mjs`
+  `cv/exports/chan-meng-cv-ats.docx` and `cv/exports/chan-meng-cv-ats.txt`, both
+  parsed out of `cv/chan-meng-cv-ats.typ` by `cv/build-ats-exports.mjs`. The
+  **ATS PDF is the default upload**; the `.docx` is the fallback for portals
+  that refuse it (Lever did, 2026-08-03) and the `.txt` is for paste-in fields
+- **A CV rebuild is not finished until the site is synced.** `public/chan-meng-cv.pdf`
+  and `public/chan-meng-cv-extended.pdf` are ALSO served from chanmeng.org/cv out
+  of a separate repo, `D:/github_repository/2d-portfolio/public/`, and nothing
+  syncs them automatically. After every `pwsh cv/build.ps1`: copy those two files
+  across, **bump `PREVIEW_V` in that repo's `src/app/cv/page.tsx` in the same
+  commit** (each Cloudflare colo caches 4h independently — new bytes at an
+  unchanged URL render the OLD CV, looking fine and being wrong), then
+  `git push origin main` — push IS the deploy (Cloudflare Pages git integration;
+  local `wrangler deploy` is broken on purpose). Copy **only** those two; never
+  anything from `cv/exports/`. Full procedure and the reasoning: `cv/README.md`
+  § "After every rebuild: sync the site".
 
 ## Truth maintenance
 

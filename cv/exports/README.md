@@ -18,15 +18,21 @@ Do not add a link to anything in this directory from `README.md`,
 | `chan-meng-cv-ats.docx` | The same resume as a real Word document — `Heading1` styles, `w:numPr` bullets, black underlined hyperlinks, Arial, no tables/images/text boxes. **Generated**, parsed straight out of `cv/chan-meng-cv-ats.typ`; its token stream is identical to `pdftotext` on the PDF. | `pwsh cv/build.ps1` |
 | `chan-meng-cv-ats.txt` | Plain UTF-8 for "paste your resume" textareas. LF endings, no hard wrapping (one logical unit per line, so a line-oriented parser can't read one bullet as three), macrons and em dashes kept. **Generated** from the same `.typ`. | `pwsh cv/build.ps1` |
 
-**Upload the `.docx` by default; the PDF is the fallback.** On 2026-08-03 Lever
-rejected the PDF with "Couldn't auto-read resume" even though that file is
-provably clean (single-column, tagged, image-free, 7,185 chars extracting in
-correct order under both poppler and pypdf) — the failure was in the PDF
-container, not the layout. Word format is Lever's own first recommended fix and
-is the most reliably parsed format across Greenhouse, Workday and Taleo. Send
-the PDF when a portal demands PDF or when a human will read it; paste the `.txt`
-into plain-text fields. This is decided — don't re-litigate it at 11pm before a
-deadline.
+**Upload the PDF by default; the `.docx` is the fallback.** Chan's call
+(2026-08-26): the Typst-built PDF is the resume, and the Word file exists for
+the portals that refuse it.
+
+**The known failure mode is real and unchanged.** On 2026-08-03 Lever rejected
+this PDF with "Couldn't auto-read resume" even though the file is provably clean
+(single-column, tagged, image-free, extracting in correct order under both
+poppler and pypdf) — the failure was in the PDF container, not the layout, so a
+content rewrite does not fix it. Word is Lever's own first recommended fix and
+the most reliably parsed format across Greenhouse, Workday and Taleo.
+
+So: **send the PDF; the moment a portal says it cannot read the resume, or
+fails to auto-fill name/email/experience, re-upload the `.docx`.** Paste the
+`.txt` into plain-text fields. That escalation order is the decision — don't
+re-litigate it at 11pm before a deadline.
 
 **The `.docx` and `.txt` are generated; never hand-edit them.** There is
 deliberately no second copy of the resume text: both are parsed out of
@@ -38,6 +44,6 @@ The public-facing CVs stay where they were: `public/chan-meng-cv.pdf` (canonical
 two-column design) and `public/chan-meng-cv-extended.pdf`.
 
 **Filename at upload time:** some portals surface the uploaded filename to
-recruiters. Rename to something like `Chan-Meng-Resume.docx` (or
-`Chan-Meng-Resume.pdf` when uploading the fallback); keep the in-repo names
+recruiters. Rename to something like `Chan-Meng-Resume.pdf` (or
+`Chan-Meng-Resume.docx` when falling back to Word); keep the in-repo names
 as-is so the build paths stay stable.

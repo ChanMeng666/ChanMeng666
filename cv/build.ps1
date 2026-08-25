@@ -17,8 +17,9 @@
 #
 # Three outputs deliberately do NOT go to public/ — they are tracked for
 # archival but must never be web-served or crawled as a competing "current CV":
-#   - cv/exports/chan-meng-cv-ats.docx (THE PRIMARY UPLOAD ARTIFACT — Word)
-#   - cv/exports/chan-meng-cv-ats.pdf  (same resume as PDF; fallback)
+#   - cv/exports/chan-meng-cv-ats.pdf  (THE PRIMARY UPLOAD ARTIFACT — Typst)
+#   - cv/exports/chan-meng-cv-ats.docx (same resume as Word; fallback for
+#                                       portals that refuse the PDF)
 #   - cv/exports/chan-meng-cv-ats.txt  ("paste your resume" fields)
 # All three are the same content: the .docx and .txt are PARSED out of
 # cv/chan-meng-cv-ats.typ, so there is no second copy of the resume text.
@@ -114,8 +115,8 @@ try {
     Write-Host "✓ Build complete"
     Write-Host "   public/chan-meng-cv.pdf            $($pdfBytes.ToString('N0')) bytes"
     Write-Host "   public/chan-meng-cv-extended.pdf   $($extBytes.ToString('N0')) bytes"
-    Write-Host "   cv/exports/chan-meng-cv-ats.docx   $($docxBytes.ToString('N0')) bytes  ← upload this one"
-    Write-Host "   cv/exports/chan-meng-cv-ats.pdf    $($atsBytes.ToString('N0')) bytes"
+    Write-Host "   cv/exports/chan-meng-cv-ats.pdf    $($atsBytes.ToString('N0')) bytes  ← upload this one"
+    Write-Host "   cv/exports/chan-meng-cv-ats.docx   $($docxBytes.ToString('N0')) bytes  (fallback if a portal refuses the PDF)"
     Write-Host "   cv/exports/chan-meng-cv-ats.txt    $($atsTxtB.ToString('N0')) bytes"
     Write-Host "   public/cv.jsonld                   $($jsonBytes.ToString('N0')) bytes"
     Write-Host "   public/cv-llms.txt                 $($txtBytes.ToString('N0')) bytes"

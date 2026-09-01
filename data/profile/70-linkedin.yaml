@@ -56,34 +56,30 @@ linkedin:
     websiteUrl: https://chanmeng.org/
   about:
     lead: |-
-      Building at the intersection of AI, cultural technology, and women's health — and founder of ArchCanvas + ArchLang, an AI architect for floor plans built on an open-source compiler I wrote.
+      Most AI projects demo beautifully and fall over in production. I'm the engineer you bring in so that doesn't happen: I design the agent architecture, build the platform around it, and leave your team able to keep shipping after I've gone.
 
-      I architect AI agents that survive production and build the platforms around them — for founders who need speed, teams who need depth, and users who aren't the Silicon Valley default.
+      I do my best work for founders who need speed, teams who need depth, and products built for people who aren't the Silicon Valley default. Right now I'm also my own client, as founder of ArchCanvas + ArchLang.
     sections:
       - emoji: 🏗️
         heading: Founder — ArchCanvas + ArchLang
-        body: 'My current flagship build — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that COMPILES a floor plan written as .arch source into dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture" (github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang). ArchCanvas is the AI architect built on it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you refine by talking to it (archcanvas.uk).'
+        body: |-
+          Proof rather than claims — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that compiles a floor plan written as .arch source into dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture". ArchCanvas is the AI architect built on top of it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you keep refining by talking to it (archcanvas.uk).
       - emoji: 🤖
         heading: AI Agent Engineering
-        body: 'Agentic systems end-to-end: retrieval (RAG, pgVector), memory, tool use, evaluations, model routing across Claude/OpenAI/Llama. Earliest-ecosystem MCP server author (Google News MCP — PulseMCP Top Pick). FemTracker Agent merged into CopilotKit (36.1k★).'
+        body: |-
+          The part teams underestimate: retrieval (RAG, pgVector), memory, tool use, evaluations and model routing across Claude/OpenAI/Llama all have to hold together before an agent is trustworthy. Earliest-ecosystem MCP server author (Google News MCP — PulseMCP Top Pick). FemTracker Agent merged into CopilotKit (36.1k★).
       - emoji: 💻
         heading: Full-Stack Foundations
-        body: Next.js, TypeScript, Drizzle/Postgres, Stripe, Kubernetes. Shipped voice-first interfaces, bilingual UX, and zero-downtime cloud migrations. GAVIGO IRE — p50 < 1 ms activation, validated by Google for Startups + NVIDIA Inception.
+        body: |-
+          The agent is never the whole product, so I build the rest of it too — Next.js, TypeScript, Drizzle/Postgres, Stripe, Kubernetes. Voice-first interfaces, bilingual UX and zero-downtime cloud migrations already shipped. GAVIGO IRE runs at p50 < 1 ms activation, validated by Google for Startups + NVIDIA Inception.
       - emoji: 🌿
         heading: Cultural-First Technology
-        body: 'Tam-AI-Ti — an AI Financial Wellness Coach for Māori communities — encodes Te Whare Tapa Whā as a first-class domain model, not UI decoration: 351 solo commits, voice-first te reo Māori + English.'
-      - emoji: 🚀
-        heading: Current & Recent Work
-        body: Founder @ ArchCanvas + ArchLang (current, full-time) · Senior Engineer @ She Sharp (NZ women-in-STEM nonprofit, current) · former AI Agent Architect @ Engram (Anthropic Partner Network) · former CTO @ Sanicle (IBM Silver Partner) · former AI-Engineering Instructor @ TechNest — see Experience for full roles.
-      - emoji: 🎓
-        heading: Credentials & Earlier Journey
-        body: Master of Applied Computing with Distinction, Lincoln University NZ · completed the Anthropic Partner Network architect-track curriculum via Engram (6 verifiable Anthropic course certificates) · former Backend Engineer @ ByteDance · UN CSW 69 Speaker · 480+ GitHub stars.
-      - emoji: 🎙️
-        heading: Public Voice
-        body: 'Host of three Spotify shows: Decoding the Future, Future Turing, Praxis and Pages. Media-featured for "Subtraction for life, addition for thought."'
-      - emoji: 📍
-        heading: Now
-        body: Based in Auckland, Aotearoa New Zealand. Building ArchCanvas + ArchLang full-time, and open now to founding-team, staff-IC, AI architecture, and AI-engineering instruction engagements.
+        body: |-
+          If your users aren't the default persona, this is why you'd call me. Tam-AI-Ti — an AI Financial Wellness Coach for Māori communities — encodes Te Whare Tapa Whā as a first-class domain model, not UI decoration: 351 solo commits, voice-first te reo Māori + English.
+      - emoji: 🤝
+        heading: Work With Me — and Who to Send My Way
+        body: |-
+          Send someone my way if they're a founder who needs an AI product built properly the first time, a team that needs agent architecture they can still maintain once I'm gone, or an organisation that wants its engineers taught to build with AI rather than around it. Auckland-based, remote or in person. Master of Applied Computing with Distinction (Lincoln University NZ). Open to founding-team, staff-IC, AI-architecture and AI-engineering-instruction work. Fastest way in: cal.com/chan-meng/30min
     topSkills:
       - AI Agent Architecture
       - Model Context Protocol (MCP)
@@ -93,7 +89,7 @@ linkedin:
   services:
     pageTitle: Chan's Services
     openToWork: true
-    overview: 'I take AI ideas from "we should build that" to systems production users actually rely on. Agentic infrastructure — retrieval, memory, tool use, evaluations — designed in from day one. Production-rigorous: load tests, zero-downtime migrations, privacy by default. Solo end-to-end when speed matters; paired with your team when continuity does. I document what I build and train your engineers to keep shipping after I leave.'
+    overview: 'I take AI ideas from "we should build that" to systems production users actually rely on. Agentic infrastructure — retrieval, memory, tool use, evaluations — designed in from day one. Production-rigorous: load tests, zero-downtime migrations, privacy by default. Solo end-to-end when speed matters; paired with your team when continuity does. I document what I build and train your engineers to keep shipping after I leave. Start with a 30-minute call: cal.com/chan-meng/30min'
     reviews: No reviews yet
     availability: Remote or in person (Auckland)
     pricing: Contact for pricing
@@ -104,14 +100,30 @@ linkedin:
       - Custom Software Development
   featured:
     - type: Link
-      title: View my resume ❤
-      url: https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf
+      title: 'My CV — two pages, or the sixteen-page long form'
+      site: chanmeng.org
+      url: https://chanmeng.org/cv
     - type: Link
-      title: View my projects 👩‍💻
+      title: 'ArchCanvas — describe a building, get a floor plan you can build from'
+      site: archcanvas.uk
+      url: https://archcanvas.uk/
+    - type: Link
+      title: 'ArchLang — the open-source compiler underneath. Run it in your browser'
+      site: playground.archlang.uk
+      url: https://playground.archlang.uk
+    # TODO — the intro / product-demo video does not exist yet (2026-09-02).
+    # Placeholder points at the channel; replace title + url once the film ships.
+    # The guidance calls video the strongest "real human" signal on a profile.
+    - type: Link
+      title: ⏳ TODO — intro / product demo video (not yet produced)
+      site: YouTube
+      url: https://www.youtube.com/@ChanMeng666
+    - type: Link
+      title: 'The code behind all of it'
       site: GitHub
       url: https://github.com/ChanMeng666
     - type: Link
-      title: Let's chat! 📞
+      title: 'Book 30 minutes with me'
       site: Cal.com
       url: https://cal.com/chan-meng/30min
   experience:
@@ -129,11 +141,11 @@ linkedin:
           duration: 4 mos
           location: Auckland, New Zealand · Remote
           description: |-
-            Founder and sole engineer of ArchCanvas — an AI architect that turns a plain-English brief into one strong, checkable, dimensioned floor plan you can actually build from, then lets you refine it conversationally on an infinite zoomable canvas. Also the sole author of ArchLang, the open-source declarative floor-plan language ArchCanvas compiles on: write a plan as .arch source and it compiles to dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture."
+            Type a brief in plain English and get back one strong, checkable, dimensioned floor plan you can actually build from — then refine it conversationally on an infinite zoomable canvas. That is ArchCanvas, an AI architect I founded and engineer alone. Underneath it sits ArchLang, the open-source declarative floor-plan language I also wrote solo and that ArchCanvas compiles on: write a plan as .arch source and it compiles to dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture."
 
-            • Designs that compile, not pixels: because every plan is real parametric ArchLang under the hood, edits are precise and re-editable — nudge a wall, tweak a parameter, or have the AI review circulation and pin fixes in place.
-            • ArchLang is published open-source to npm as @chanmeng666/archlang — a hand-written compiler (lexer + recursive-descent parser, zero runtime dependencies) with architectural-soundness linting, a CLI, LSP + VS Code tooling, and a client-side playground.
-            • Sole author of both the language and the product — every commit is mine — building in public.
+            • Edits stay precise and re-editable, because every plan is real parametric ArchLang under the hood rather than pixels — nudge a wall, tweak a parameter, or have the AI review circulation and pin the fixes in place.
+            • Anyone can build on the language, not only my product: ArchLang is published open-source to npm as @chanmeng666/archlang — a hand-written compiler (lexer + recursive-descent parser, zero runtime dependencies) with architectural-soundness linting, a CLI, LSP + VS Code tooling, and a client-side playground.
+            • Both the language and the product are mine end to end — every commit is mine — and built in public.
 
             Links: archcanvas.uk · github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang
           skills:
@@ -151,13 +163,11 @@ linkedin:
           location: Albuquerque, New Mexico, United States · Remote
           foundViaLinkedIn: true
           description: |-
-            Selected as AI Architect for Engram — a US AI-media agency rebuilding itself around AI agents that run a client's entire media department end-to-end.
+            A US AI-media agency is rebuilding itself around AI agents that run a client's entire media department end-to-end — natural language in, finished campaigns out. Designing the agent architecture that has to hold that up is my job at Engram.
 
-            How I was hired: founder Luka Madzarac asked Claude AI itself to recommend top AI engineers as the company entered Anthropic's Partner Network. My open-source portfolio came back as Claude's top recommendation. Luka confirmed publicly: "Claude Code surfaced Chan as one of the strongest matches."
+            Claude recommended me before anyone at the company had met me: as Engram entered Anthropic's Partner Network, founder Luka Madzarac asked Claude AI itself to recommend top AI engineers, and my open-source portfolio came back as Claude's top recommendation. Luka confirmed publicly: "Claude Code surfaced Chan as one of the strongest matches."
 
-            What I worked on:
-
-            • Designing Mission Control plus specialised agents that run a client's media operation — natural language in, finished campaigns out.
+            • Mission Control plus specialised agents that run a client's media operation — the work enters as a sentence and leaves as a finished campaign.
             • MCP (Model Context Protocol) integration patterns — Anthropic's open standard for letting AI agents safely use real tools, APIs, and data.
             • "API-as-UI" design — products where the AI's reasoning IS the interface, not a chat widget bolted onto a form.
             • Completed the Anthropic Partner Network curriculum and passed the Claude Certified Architect — Foundations practice exam, on top of held course certificates in AI Fluency, Claude Code in Action, the Claude API, MCP and Agent Skills.
@@ -177,13 +187,13 @@ linkedin:
         - duration: 5 mos
           location: St John's, Newfoundland and Labrador, Canada · Remote
           description: |-
-            Designed and sole-taught TechNest Community's first AI engineering mentorship track — the only AI cohort the Canadian nonprofit ran in 2026. Reported directly to TechNest leadership Abiodun Oyedele and Afolasade Bello.
+            30 students graduated able to ship real software by directing AI — the result of TechNest Community's first AI engineering mentorship track, which I designed and taught alone as the only AI cohort the Canadian nonprofit ran in 2026, reporting directly to TechNest leadership Abiodun Oyedele and Afolasade Bello.
 
-            Programme: 12 weeks, April 25 – July 17, 2026. Curriculum thesis: "natural language is now the source code." Students didn't write code by hand — they directed AI assistants (Cursor, Claude Code, Gemini CLI) to ship real applications. 30 students graduated.
+            12 weeks, April 25 – July 17, 2026, built on one thesis: "natural language is now the source code." Nobody wrote code by hand; students directed AI assistants (Cursor, Claude Code, Gemini CLI) to ship real applications.
 
-            • Week 8 outcome: each student owned a live AI-powered personal site — portfolio + AI-clone chatbot + blog + auto-generated CV — on Next.js + Neon Postgres + Drizzle + Vercel.
-            • Week 12 outcome: 6 deployed multi-user AI products shipped to a public capstone showcase — a language-learning coach, an AI job agent, a healthcare document translator and more — with a public Demo Day and audience voting (138 votes cast).
-            • Built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, ~96% solo (211 of 220 non-merge commits). Hosts 5 cohorts side-by-side with a version-aware RAG assistant — students query their cohort's own materials and get answers from inside the course content.
+            • By week 8 every student owned a live AI-powered personal site — portfolio + AI-clone chatbot + blog + auto-generated CV — on Next.js + Neon Postgres + Drizzle + Vercel.
+            • By week 12 the cohort had 6 deployed multi-user AI products in public — a language-learning coach, an AI job agent, a healthcare document translator and more — shown at a public capstone showcase and Demo Day with audience voting (138 votes cast).
+            • Students get answers from inside the course content, scoped to their own cohort's materials: I built the teaching platform myself at programming.chanmeng.org — Docusaurus on Cloudflare Pages, ~96% solo (211 of 220 non-merge commits), hosting 5 cohorts side-by-side with a version-aware RAG assistant.
             • Fully bilingual EN / CN.
           skills:
             - Curriculum Development
@@ -207,20 +217,15 @@ linkedin:
           location: 1007 N Orange St, 4th Floor, 4785, Wilmington, Delaware 19801, USA
           foundViaLinkedIn: true
           description: |-
-            Promoted from Core Engineer to Founding Principal Engineer at Gavigo across three formalised contracts in 6 months. I own the Intelligence Layer of Gavigo IRE — Gavigo's "Instant Reality Exchange" platform, which lets users open straight into a game without an app-store install. Reports to founder & CEO Saba Gecgil.
+            Users open straight into a game in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel, and with no install at all. That is Gavigo IRE, Gavigo's "Instant Reality Exchange" platform, and I own its Intelligence Layer: three formalised contracts in 6 months took me from Core Engineer to Founding Principal Engineer, reporting to founder & CEO Saba Gecgil.
 
-            What "instant" means in production:
-
-            • Users get into the experience in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel. Warm-pool hit rate 84.6%; 0 errors at 100 concurrent live users under load.
-            • 439 total platform commits, 426 (~97%) authored solo.
+            What "instant" measures out at in production: warm-pool hit rate 84.6% · 0 errors at 100 concurrent live users under load · 439 total platform commits, 426 (~97%) authored solo.
 
             External validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com.
 
-            Hardest work shipped:
-
-            • Sub-millisecond restore via a 5-state engine with atomic Redis transitions and timestamped proof signals — every speed claim is auditable in production logs, not asserted.
-            • Cross-cloud migration: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single 30-minute zero-downtime cutover.
-            • 7-trigger AI rules engine deciding which games to pre-load, for whom, when.
+            • Every speed claim is auditable in production logs instead of asserted — sub-millisecond restore runs on a 5-state engine with atomic Redis transitions and timestamped proof signals.
+            • The platform crossed continents without users noticing: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single 30-minute zero-downtime cutover.
+            • Games are already warm when someone arrives, because a 7-trigger AI rules engine decides which to pre-load, for whom, when.
 
             Stack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, gpt-5.4-mini.
           skills:
@@ -239,15 +244,13 @@ linkedin:
           location: Wilmington, Delaware, United States
           foundViaLinkedIn: true
           description: |-
-            Original consulting engagement at Gavigo (signed October 17, 2025) to architect and ship the M1 prototype for Gavigo's Instant Reality Exchange (IRE) platform — the foundational system for eliminating friction between user intent and digital experience in the "post-app world." The prototype shipped here is what led Gavigo to amend my contract twice and promote me to Founding Principal Engineer with founder-level equity.
+            The M1 prototype I architected and shipped here is the artefact Gavigo took into investor and partner conversations — and it is what led Gavigo to amend my contract twice and promote me to Founding Principal Engineer with founder-level equity. The original consulting engagement was signed October 17, 2025, to build the foundational system for Gavigo's Instant Reality Exchange (IRE) platform: eliminating friction between user intent and digital experience in the "post-app world."
 
-            What I built:
-
-            • End-to-end M1 visualisation prototype demonstrating cross-domain content switching, AI-driven orchestration, and zero-latency "Instant Interaction Points" — the artefact Gavigo took into investor and partner conversations.
-            • Microservices architecture on Kubernetes + Docker, Next.js / React frontend with Python AI services — simulating intelligent workload management and proactive scaling.
-            • Rule-based AI orchestration engine — the early ancestor of today's production 7-trigger Rules Engine.
-            • Real-time WebSocket protocol with millisecond-precision timestamps so investors could see the "decide → patch → respond" chain happen live.
-            • Investor-facing dashboard exposing AI decision-making and resource allocation in real time.
+            • Investors could watch content switch across domains, AI orchestrate it, and zero-latency "Instant Interaction Points" fire — an end-to-end M1 visualisation prototype rather than a slide describing one.
+            • It held up as a system, not a mock-up: microservices architecture on Kubernetes + Docker, Next.js / React frontend with Python AI services — simulating intelligent workload management and proactive scaling.
+            • A rule-based AI orchestration engine made the calls — the early ancestor of today's production 7-trigger Rules Engine.
+            • The "decide → patch → respond" chain happened live in front of the room, over a real-time WebSocket protocol with millisecond-precision timestamps.
+            • An investor-facing dashboard exposed AI decision-making and resource allocation in real time.
           skills:
             - Microservices Architecture
             - Kubernetes
@@ -266,16 +269,14 @@ linkedin:
           location: Auckland Central, Auckland, New Zealand · Hybrid
           foundViaLinkedIn: true
           description: |-
-            Recruited directly by founder Dr Mahsa Mohaghegh (Head of Computer and Information Sciences, School of Engineering, Computer and Mathematical Sciences at AUT) as the senior AI + full-stack engineer She Sharp didn't have in-house. She Sharp is New Zealand's leading women-in-STEM community — registered charitable trust (CC57025), 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014.
+            New Zealand's leading women-in-STEM community now runs on a real engineering platform instead of a no-code Webflow site — I built the replacement and own it operationally. Founder Dr Mahsa Mohaghegh (Head of Computer and Information Sciences, School of Engineering, Computer and Mathematical Sciences at AUT) recruited me directly as the senior AI + full-stack engineer She Sharp didn't have in-house: a registered charitable trust (CC57025), 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014.
 
-            Mandate: replace the no-code Webflow site with a real engineering platform, and own it operationally.
+            What that platform does, across ~12 months and 793 of 936 commits solo — 85%:
 
-            What shipped (793 of 936 commits solo — 85% — across ~12 months):
-
-            • AI mentor-mentee matching engine — GPT-4o-mini scoring potential pairs across 5 weighted dimensions (skill, goal, personality, industry, logistics) with explainable natural-language reasons, rule-based fallback, Redis caching, and human admin approval as the final gate.
-            • Three role-permissioned dashboards (mentor / mentee / admin), Stripe membership billing, audit logging.
-            • Custom Slack ecosystem: weekly stats digest, NZ funding-opportunities crawler (6 sources scored for member relevance, top 10 posted weekly), event-page publisher via Claude Code agent skill. Each automation removes hours of weekly volunteer work.
-            • Python migration crawler preserved 10+ years of legacy content with zero broken links.
+            • Mentors and mentees get matched by an engine, not a spreadsheet — GPT-4o-mini scores potential pairs across 5 weighted dimensions (skill, goal, personality, industry, logistics) and explains each match in plain language, with a rule-based fallback, Redis caching, and human admin approval as the final gate.
+            • Members, mentors and admins each work in their own view — three role-permissioned dashboards (mentor / mentee / admin), Stripe membership billing, audit logging.
+            • Hours of weekly volunteer work disappeared into a custom Slack ecosystem: a weekly stats digest, an NZ funding-opportunities crawler (6 sources scored for member relevance, top 10 posted weekly), and an event-page publisher via Claude Code agent skill.
+            • 10+ years of legacy content survived the move with zero broken links, carried over by a Python migration crawler.
 
             Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Tailwind 4, Vercel.
           skills:
@@ -301,16 +302,14 @@ linkedin:
           location: Chengdu, China · Remote
           foundViaLinkedIn: true
           description: |-
-            Sole technical leader and co-architect with founder Zhu Yihan at FemTech Weekend — China's first organisation built around women's health technology (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders). Delivered all engineering for the 2026 Shanghai Summit (June 22–25).
+            FemTech Weekend — China's first organisation built around women's health technology — publishes, partners and runs its summits on infrastructure I designed, built and operate alone: two complete platform generations from scratch. I am its sole technical leader, co-architecting with founder Zhu Yihan (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders), and delivered all engineering for the 2026 Shanghai Summit (June 22–25).
 
-            Built and shipped two complete platform generations from scratch, solo:
+            • A non-technical founder publishes the site herself — Generation 1, femtechweekend.com (Mar 2025–): Next.js 15 with Notion as the CMS, so she writes inside a tool she already used daily and the website renders it live. Bilingual EN / CN from day one. 58 commits, 100% solo.
+            • Research and multi-event programming outgrew the marketing site, so I rebuilt underneath it — Generation 2, the current platform (May 2025–), a deliberate move to Docusaurus when the centre of gravity shifted from "marketing site with CMS" to "research publication and multi-event hub." Drizzle + Neon Postgres for typed application data, deployed on Cloudflare Pages for global edge delivery. 564 commits, 534 solo (94.7%).
 
-            • Generation 1 — femtechweekend.com (Mar 2025–). Next.js 15 with Notion as the CMS so the non-technical founder could publish directly inside Notion (a tool she already used daily) and the website rendered it live. Bilingual EN / CN from day one. 58 commits, 100% solo.
-            • Generation 2 — current platform (May 2025–). Deliberate rebuild on Docusaurus when the site's centre of gravity shifted from "marketing site with CMS" to "research publication and multi-event hub." Adds Drizzle + Neon Postgres for typed application data, deployed on Cloudflare Pages for global edge delivery. 564 commits, 534 solo (94.7%).
+            The Shanghai Summit 2026 (June 22–25) drew 20 confirmed speakers headlined by Ida Tin — the Clue co-founder who coined the term "FemTech" in 2016 — with multi-tier sponsorship and AVPN among named partners. Every page rendered through infrastructure I designed and operate solo.
 
-            Shanghai Summit 2026 (June 22–25) drew 20 confirmed speakers headlined by Ida Tin — the Clue co-founder who coined the term "FemTech" in 2016. Multi-tier sponsorship; AVPN among named partners. Every page rendered through infrastructure I designed and operate solo.
-
-            Two original research reports published through the platform: FemTech Market Map for Greater China (May 2025), FemmeHealth Ventures Alliance announcement (June 2025).
+            The same platform carries two original research reports: FemTech Market Map for Greater China (May 2025) and the FemmeHealth Ventures Alliance announcement (June 2025).
           skills:
             - Technical Leadership
             - Bilingual Web Development
@@ -329,13 +328,13 @@ linkedin:
         - duration: 1 yr
           location: Seattle, Washington, United States · Remote
           description: |-
-            Two merged PRs in CopilotKit (36,100+ GitHub stars) — the open-source framework for building in-app AI copilots and agents — both publicly approved by named maintainers. Both contributions came directly from production systems I run.
+            CopilotKit's official demo collection and its MCP documentation both ship code I wrote — two merged PRs in the open-source framework for building in-app AI copilots and agents (36,100+ GitHub stars), each publicly approved by a named maintainer. Both contributions came straight out of production systems I run.
 
-            PR #2068 — FemTracker Agent demo (merged September 2025, after 10 weeks of review). Contributed an 8-agent women's-health companion to CopilotKit's official demos_2025 collection: a Main Coordinator routes requests to specialists in cycle tracking, fertility, symptoms, nutrition, exercise, lifestyle, and health insights, using WHO-standard scoring scales.
+            PR #2068 — an 8-agent women's-health companion now sits in CopilotKit's official demos_2025 collection: a Main Coordinator routes requests to specialists in cycle tracking, fertility, symptoms, nutrition, exercise, lifestyle, and health insights, using WHO-standard scoring scales. FemTracker Agent, merged September 2025 after 10 weeks of review.
 
             Maintainer Tyler Slaton: "This is awesome! Thank you for the cool showcase @ChanMeng666."
 
-            PR #2529 — Claude Code MCP setup guide (merged October 2025). Expanded CopilotKit's MCP (Model Context Protocol — Anthropic's open standard for AI agents to safely use tools and data) documentation with step-by-step Claude Code setup — bridging CopilotKit's React framework with Anthropic's Claude Code CLI.
+            PR #2529 — developers can now wire CopilotKit's React framework to Anthropic's Claude Code CLI by following the docs, because I wrote that path: a step-by-step Claude Code setup guide expanding CopilotKit's MCP (Model Context Protocol — Anthropic's open standard for AI agents to safely use tools and data) documentation. Merged October 2025.
 
             Maintainer Brandon McConnell: "This looks great. Thanks, @ChanMeng666 👏"
 
@@ -365,18 +364,16 @@ linkedin:
           duration: 6 mos
           foundViaLinkedIn: true
           description: |-
-            CTO of Sanicle.Cloud — a US-based FemTech B2B SaaS tackling menstrual and menopause workplace wellness. Direct managers: CEO Paige Afanu (Omopeju Afanu) and Chief Period Officer Chaste Christopher Inegbedion. Peers: CXO Gabrielle J. Hurst, Chief AI Officer Daryll Hall.
+            Sanicle became an IBM Silver Partner on the back of engineering I did: integrating IBM watsonx AI (running Llama 3.1 405B) inside employee dashboards anchored the company's entry into the IBM Business Partner Network, and Sanicle.Cloud is now listed in IBM's official PartnerPlus Solution Directory. The same partnership positioned Sanicle for strategic conversations with Google for investment.
 
-            Headline business outcome: IBM Silver Partner certification for Sanicle. My integration of IBM watsonx AI (running Llama 3.1 405B) inside employee dashboards was the engineering work that anchored Sanicle's entry into the IBM Business Partner Network. Sanicle.Cloud is now listed in IBM's official PartnerPlus Solution Directory. The same partnership positioned Sanicle for strategic conversations with Google for investment.
+            Sanicle.Cloud is a US-based FemTech B2B SaaS tackling menstrual and menopause workplace wellness. I owned 5 production codebases there — ~350+ commits, ~98% solo — reporting to CEO Paige Afanu (Omopeju Afanu) and Chief Period Officer Chaste Christopher Inegbedion, alongside CXO Gabrielle J. Hurst and Chief AI Officer Daryll Hall.
 
-            What I owned (5 production codebases, ~350+ commits, ~98% solo):
+            • Employees, HR managers and org admins each got a product surface built for them — Sanicle.AI, a multi-tenant FemTech platform with role-separated dashboards (Employee / HR Manager / Org Admin), cycle tracking, AI consultations, leave-request workflows, HR analytics.
+            • The corporate site left legacy Bubble no-code behind after I made the case for migrating, and I rebuilt it.
+            • AI features keep answering even when watsonx exceeds Vercel's timeout ceiling — dual-AI resilience with IBM watsonx primary and Google Gemini as fallback.
+            • A mobile PWA prototype and executive demo deck carried the product into IBM partner conversations.
 
-            • Sanicle.Cloud corporate site (migrated off legacy Bubble no-code after I recommended it).
-            • Sanicle.AI — multi-tenant FemTech platform with role-separated dashboards (Employee / HR Manager / Org Admin), cycle tracking, AI consultations, leave-request workflows, HR analytics.
-            • Dual-AI resilience: IBM watsonx primary, Google Gemini fallback when watsonx exceeds Vercel's timeout ceiling.
-            • Mobile PWA prototype + executive demo deck used in IBM partner conversations.
-
-            Public Next.js contribution: published a multi-cause production fix for a NextAuth 5 + Next.js 15 auth-redirect failure on the Vercel community forum. Publicly thanked by Vercel Staff (Amy Egan). Featured in THISDAYLIVE (May 2025) on FemTech founders.
+            Outside the company codebase: my multi-cause production fix for a NextAuth 5 + Next.js 15 auth-redirect failure is published on the Vercel community forum, where Vercel Staff (Amy Egan) publicly thanked me for it. Featured in THISDAYLIVE (May 2025) on FemTech founders.
           skills:
             - Technology Leadership
             - IBM watsonx
@@ -389,18 +386,16 @@ linkedin:
           dateRange: Mar 2025 - Oct 2025
           duration: 8 mos
           description: |-
-            Hired as Senior AI/ML Infrastructure Engineer in February 2025. The role covered Sanicle's intense active-build phase — 14 weeks of solo development that took the company from a legacy Bubble no-code site to a production B2B SaaS platform.
+            14 weeks of solo development took Sanicle from a legacy Bubble no-code site to a production B2B SaaS platform. That was the company's intense active-build phase, and this role covered it from February 2025. Two flagship products came out of it.
 
-            Two flagship products designed and shipped:
+            • Visitors get a conversational assistant instead of a contact form — the Sanicle.Cloud corporate website (Next.js 15 + React 19), rebuilt off the legacy no-code site after I recommended the migration, with IBM watsonx AI integrated as a customer-service assistant driving visitor engagement.
+            • HR can plan around health-driven leave patterns — Sanicle.AI, the core multi-tenant FemTech SaaS with role-separated dashboards for employees and HR, predictive absenteeism alerts and HRIS integration.
 
-            • Sanicle.Cloud corporate website (Next.js 15 + React 19) — replaced the legacy no-code site after I recommended the migration. Integrated IBM watsonx AI as a conversational customer-service assistant driving visitor engagement.
-            • Sanicle.AI — core multi-tenant FemTech SaaS with role-separated dashboards for employees and HR. Includes predictive absenteeism alerts (so HR can plan around health-driven leave patterns) and HRIS integration.
+            Where that engineering turned into business outcomes:
 
-            Engineering achievements that translated directly to business outcomes:
-
-            • Integrated IBM Cloud watsonx AI inside employee dashboards — AI health consultations and automated leave requests. Anchored Sanicle's IBM Silver Partner certification.
-            • Built secure multi-tenant architecture (one platform serving multiple employer organisations safely) with end-to-end encryption and GDPR compliance — PostgreSQL + Drizzle, NextAuth 5 with bcrypt + OAuth, Employee / HR Manager / Org Admin roles.
-            • Designed Vercel + Upstash Redis infrastructure for enterprise-scale tenants.
+            • Anchored Sanicle's IBM Silver Partner certification — IBM Cloud watsonx AI running inside employee dashboards, powering AI health consultations and automated leave requests.
+            • Multiple employer organisations share one platform safely — secure multi-tenant architecture with end-to-end encryption and GDPR compliance, on PostgreSQL + Drizzle, NextAuth 5 with bcrypt + OAuth, and Employee / HR Manager / Org Admin roles.
+            • Enterprise-scale tenants stay fast under load — Vercel + Upstash Redis infrastructure designed for that scale.
 
             This is the work that carried Sanicle into formal partnership conversations with IBM and Google.
           skills:
@@ -429,16 +424,14 @@ linkedin:
           duration: 2 mos
           location: Auckland Central, Auckland, New Zealand · Remote
           description: |-
-            Joined Crimson Academies' newly-formed Bandicoot engineering squad as Software Engineer for Aotearoa Infinite Academy (AIA) — New Zealand's first free online charter high school, confirmed October 14, 2025, opening Term 1 2026. Reports directly to founder/CEO Penelope Barton.
+            New Zealand's first free online charter high school — Aotearoa Infinite Academy (AIA), confirmed October 14, 2025 — opens Term 1 2026 with an ESOL learning platform I took from blank slate to v2 deployment over its first weekend, designed and shipped solo, end-to-end. I do that work inside Crimson Academies' newly-formed Bandicoot engineering squad, reporting directly to founder/CEO Penelope Barton.
 
-            Four parallel tracks:
+            • Every person around a student gets the view they actually need — a 6-role dashboard (System Admin / School Admin / Department Head / Teacher / Student / Parent) with conversation transcription and audio recording for AI dialogue practice, iterated against feedback from CGA Director of Curriculum & Pedagogy Becky Hancock.
+            • Two schools now run safely on one Firebase project instead of drifting apart. I refactored the existing Firestore-based Emi LMS onto Firebase DataConnect + PostgreSQL (Cloud SQL), so Emi Primary and AIA's Infinite-Learn share auth and a single source-of-truth database (Emi → Infinite, multi-tenant).
+            • The squad now works with AI tooling deliberately rather than ad hoc — I led Bandicoot's first systematic AI Tools Training Session (Wispr Flow, Claude Skills, Claude Code, Specification-Driven Development via Spec Kit, Mermaid).
+            • Emi's SMS/email vendor choice went to evidence, not instinct — a Twilio + Resend analysis with pricing breakdown.
 
-            • ESOL learning platform — designed and shipped solo, end-to-end. Blank slate to v2 deployment in the first weekend. 6-role dashboard (System Admin / School Admin / Department Head / Teacher / Student / Parent), conversation transcription, audio recording for AI dialogue practice. UI/UX iterated against feedback from CGA Director of Curriculum & Pedagogy Becky Hancock.
-            • LMS monorepo refactor (Emi → Infinite, multi-tenant). Took the existing Firestore-based Emi LMS and refactored it onto Firebase DataConnect + PostgreSQL (Cloud SQL) — one Firebase project safely hosting two distinct school deployments (Emi Primary + AIA's Infinite-Learn) with shared auth and a single source-of-truth database.
-            • Led Bandicoot's first systematic AI Tools Training Session (Wispr Flow, Claude Skills, Claude Code, Specification-Driven Development via Spec Kit, Mermaid).
-            • SMS/email vendor analysis (Twilio + Resend) with pricing breakdown for the Emi project.
-
-            Open-source artefact launched here: claude-code-audio-hooks — explicitly preserved as my IP in the subsequent Engram Architect Cohort engagement letter.
+            The open-source artefact launched here, claude-code-audio-hooks, is explicitly preserved as my IP in the subsequent Engram Architect Cohort engagement letter.
           skills:
             - Firebase
             - Multi-Tenant Architecture
@@ -455,11 +448,9 @@ linkedin:
           duration: 1 yr
           location: Beijing, China · Remote
           description: |-
-            Technology & Professional Development Mentor for one full annual cycle inside Forward with Her (她行 / taxing-mentorship) — a women-in-STEM mentor-mentee network connecting 360+ mentors with 800+ mentees globally across software engineering, data, product, and AI.
+            Seven of the twenty-six public LinkedIn recommendations on my profile come from Forward with Her mentees — the single-largest source of independently-attested mentorship impact across my career. I mentored for one full annual cycle inside Forward with Her (她行 / taxing-mentorship), a women-in-STEM mentor-mentee network connecting 360+ mentors with 800+ mentees globally across software engineering, data, product, and AI.
 
-            Independently-attested impact: seven of the twenty-six public LinkedIn recommendations on my profile come from mentees who specifically credit Forward with Her sessions — the single-largest source of attested mentorship impact across my career.
-
-            What I delivered: 1:1 mentorship across software engineering, AI tooling, and career navigation; group Office Hours; public lectures on AI programming, identity formation in tech, and career navigation for early-career women; a bilingual EN/CN promo site for the programme (3D Next.js 15 + Three.js, Cloudflare Pages).
+            Mentees left with a shipped site and a working method, not a reading list: 1:1 mentorship across software engineering, AI tooling, and career navigation; group Office Hours; public lectures on AI programming, identity formation in tech, and career navigation for early-career women. I also built the programme its bilingual EN/CN promo site — 3D Next.js 15 + Three.js on Cloudflare Pages.
 
             The teaching doctrine I built here — "natural language is the source code"; ship a real production site by Week 8 — later became the foundation for the 2026 TechNest AI Track curriculum.
           skills:
@@ -482,9 +473,7 @@ linkedin:
           duration: 8 mos
           location: Guangzhou, Guangdong, China · Remote
           description: |-
-            Solo CTO at FreePeriod — a Guangzhou-based public-health startup tackling period poverty through emergency sanitary-pad dispensers, reproductive-health education, and policy advocacy. Founded 2024 by Julia Zhu, incubated at HKUST(Guangzhou) Lab of Future Technology. The product combines software with off-grid solar-powered hardware deployed in public spaces.
-
-            Joined during the company's external-validation cycle. Six named awards in 2024–2025, with the website I built as the public artefact every judging panel was clicking through:
+            Every judging panel in FreePeriod's external-validation cycle was clicking through a website I had built and shipped end-to-end, solo — 53 commits, 100% authored by me. Seven recognitions landed in 2024–2025: six named awards plus a grant.
 
             • Best Award — Japan's 12th International Conference on Social Sciences and Humanities
             • Third Prize — HKUST Sustainable Smart Living Competition
@@ -494,15 +483,15 @@ linkedin:
             • Selected — Tsinghua University SDG Open Innovation Marathon
             • HKUST Entrepreneurship Bridge Grant
 
-            Built and shipped the official site end-to-end, solo — 53 commits, 100% authored by me.
+            What that site does for the people it serves:
 
-            What the site does:
+            • Visitors find free menstrual products near them — an interactive Google Maps directory of dispenser locations, where each rollout is one git commit with full audit history.
+            • Domestic Chinese policy partners and international academic/grant audiences read the same site in their own language — fully bilingual (EN / CN).
+            • Advocacy briefs and partnership decks open in place, for judges and partners who never download attachments — document and video preview pipelines.
 
-            • Interactive Google Maps directory of dispenser locations — visitors find free menstrual products near them; each rollout is one git commit with full audit history.
-            • Fully bilingual (EN / CN) — serving domestic Chinese policy partners and international academic/grant audiences.
-            • Document and video preview pipelines for advocacy briefs and partnership decks.
+            I was FreePeriod's sole technical leader. The company tackles period poverty in Guangzhou through emergency sanitary-pad dispensers, reproductive-health education, and policy advocacy — founded 2024 by Julia Zhu, incubated at HKUST(Guangzhou) Lab of Future Technology, combining software with off-grid solar-powered hardware deployed in public spaces.
 
-            Stayed on post-tenure as long-term technical custodian; executed Vercel → Cloudflare Pages migration in April 2026 without rebuilding the app.
+            I stayed on post-tenure as long-term technical custodian, and executed the Vercel → Cloudflare Pages migration in April 2026 without rebuilding the app.
           skills:
             - Next.js
             - TypeScript
@@ -524,14 +513,12 @@ linkedin:
           duration: 5 mos
           location: Beijing, China · Remote
           description: |-
-            Selected into ByteDance's Youth Training Camp — in the Team 115. ByteDance is the parent of Douyin (China's TikTok), TikTok, Toutiao, CapCut, Lark, and Doubao. One of the most competitive training entry points into China's consumer-internet stack.
+            Later ByteDance Youth Training Camp cohorts now scaffold their projects on two teaching templates I wrote. Most trainees deliver the algorithm submissions and the team capstone; I delivered those plus three artefacts beyond scope, in Team 115. ByteDance is the parent of Douyin (China's TikTok), TikTok, Toutiao, CapCut, Lark, and Doubao — one of the most competitive training entry points into China's consumer-internet stack.
 
-            Delivered a deliberately overcomplete portfolio (most trainees deliver the algorithm submissions and team capstone; I added three artefacts beyond scope):
-
-            • Algorithm curriculum — solved every problem in ByteDance MarsCode's Juejin track. 81 problems, fully written up with statement, approach, complexity analysis, and tested Python implementation (juejin-algorithm-practice, 66 commits, 100% solo).
-            • Team 115 capstone — Spring Boot 3 e-commerce platform (Douyin Mall): user management, products, cart, orders, AI customer service. #2-most-prolific committer on a 6-person team (45 of 174 commits, ~26%), behind only the team lead. Stack: Java 17 + Spring Boot 3 + MyBatis + MySQL + Redis + Alibaba Cloud + Docker.
-            • Solo Vue 3 frontend supplement (beyond scope) — built to integrate against the team backend, Cypress + Vitest coverage.
-            • Two open-source teaching templates (beyond scope), both bilingual EN + CN: Go + Gin (douyin-mall-go-template — 53 stars / 7 forks, my most-starred OSS project) and Spring Boot + Maven. Both now used by later camp cohorts as scaffolding.
+            • Cleared the algorithm curriculum outright — every problem in ByteDance MarsCode's Juejin track. 81 problems, each written up with statement, approach, complexity analysis, and a tested Python implementation (juejin-algorithm-practice, 66 commits, 100% solo).
+            • Carried the second-largest share of the Team 115 capstone, behind only the team lead — 45 of 174 commits, ~26% on a 6-person team building a Spring Boot 3 e-commerce platform (Douyin Mall: user management, products, cart, orders, AI customer service). Java 17 + Spring Boot 3 + MyBatis + MySQL + Redis + Alibaba Cloud + Docker.
+            • Gave that backend a front end nobody asked me for — a solo Vue 3 supplement built to integrate against the team's API, with Cypress + Vitest coverage.
+            • Left two open-source teaching templates behind, both bilingual EN + CN and both beyond scope: Go + Gin (douyin-mall-go-template — 53 stars / 7 forks, my most-starred OSS project) and Spring Boot + Maven.
           skills:
             - Go (Programming Language)
             - Spring Boot
@@ -552,16 +539,13 @@ linkedin:
           duration: 6 mos
           location: Christchurch City, Canterbury, New Zealand · Hybrid
           description: |-
-            CORDE — a 30+-year-old, 164-staff Canterbury infrastructure and civil-construction company (CCNZ Canterbury Contractor of the Year; Construction Excellence National Award). Five months on-site at CORDE's Rolleston head office, reporting to Barry Clark (business sponsor) with Kullum Ladley as Workbench API specification author.
+            CORDE's field crews still run the offline-first React Native app I built for them — kept current since with React Native upgrades and Android 16 KB page-size compliance. Their work is in rural Canterbury, where mobile coverage drops out, while the company's central operations platform assumes connectivity: the tablet in the worker's hand had to become the system of record for the moment of work, then reconcile cleanly when the signal came back.
 
-            The business problem: CORDE's field crews work in rural Canterbury where mobile coverage drops out, but the company's central operations platform assumes connectivity. They needed a mobile app that could become the system of record for the moment of work and reconcile cleanly when connectivity returned.
+            • A crew member captures text, photos, and GPS coordinates simultaneously with no signal, stored locally with integrity guarantees and synced back to Workbench on reconnection — including the cases that actually break field apps: duplicate IDs, partial sync, mid-batch connectivity drops.
+            • #1-most-prolific contributor on the build — 227 of 539 commits (42%).
+            • Left the team a documentation repository they could hand to the next developer — effectively sole author, 140 of 143 commits (97.9%).
 
-            What I built and shipped:
-
-            • Production-quality React Native offline-first mobile app — the field worker's tablet captures text, photos, and GPS coordinates simultaneously, stores them locally with integrity guarantees, and syncs back to Workbench on reconnection. Handles real conflict cases: duplicate IDs, partial sync, mid-batch connectivity drops.
-            • #1-most-prolific contributor — 227 of 539 commits (42%).
-            • Effectively sole author of the team documentation repository (140 of 143 commits, 97.9%).
-            • The app remains in active use today by CORDE's field crews — kept current with React Native upgrades and Android 16 KB page-size compliance.
+            Five months on-site at CORDE's Rolleston head office, reporting to Barry Clark (business sponsor), with Kullum Ladley as Workbench API specification author. CORDE is a 30+-year-old, 164-staff Canterbury infrastructure and civil-construction company — CCNZ Canterbury Contractor of the Year; Construction Excellence National Award.
 
             Stack: React Native 0.83 + TypeScript + Native Base + SQLite + native geolocation/camera/maps.
           skills:

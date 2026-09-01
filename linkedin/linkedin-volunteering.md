@@ -1,5 +1,5 @@
 <!-- GENERATED from linkedin-profile.json by scripts/build-linkedin-md.mjs — DO NOT EDIT BY HAND. -->
-<!-- Edit the JSON (the source of truth) and re-run the script. -->
+<!-- Source of truth is data/profile/*.yaml — edit the shard, then npm run build:linkedin. -->
 
 # LinkedIn — Volunteering
 

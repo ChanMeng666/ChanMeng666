@@ -1,42 +1,51 @@
 # `linkedin/` — LinkedIn profile copy & visuals
 
-Everything for Chan Meng's LinkedIn profile in one place: a structured **source-of-truth JSON**, the
-**human-readable markdown** generated from it, and the **profile visuals**.
+Everything for Chan Meng's LinkedIn profile in one place. **Every file in this directory is
+generated.** Nothing here is a source of truth — edit the data shards, then build.
 
-## Source of truth
+## Source of truth — NOT this directory
 
-[`linkedin-profile.json`](./linkedin-profile.json) is the single structured store for all LinkedIn
-section copy. It is a faithful snapshot of the **live LinkedIn page** (text finalised and confirmed
-by Chan), with one object per section: `banner`, `about`, `services`, `featured`, `experience`,
-`education`, `licensesAndCertifications`, `projects`, `volunteering`, `honorsAndAwards`,
-`publications`. Facts trace back to [`../data/profile/`](../data/profile/); live-only details
-(engagement stats, credential IDs, media captions) are captured in the JSON.
+The copy lives in [`../data/profile/70-linkedin.yaml`](../data/profile/70-linkedin.yaml) (the
+`linkedin:` block), with three facts injected from elsewhere at build time:
 
-## Generated markdown — kept in sync
+| Copy | Lives in |
+|------|----------|
+| Headline, name, pronouns | `../data/profile/00-basics.yaml` (`basics.headline`) |
+| Recommendation body text | `../data/profile/50-references.yaml` (`references[].reference`) |
+| Role titles + date ranges | `../data/profile/10-career.yaml` (`work[].position`, dates) |
+| Everything else | `../data/profile/70-linkedin.yaml` |
 
-The per-section `.md` files are **generated from the JSON** by
-[`../scripts/build-linkedin-md.mjs`](../scripts/build-linkedin-md.mjs) and carry a "DO NOT EDIT BY
-HAND" banner. Edit the JSON, then regenerate:
+The pipeline was **inverted on 2026-06-04** (see
+[`../data/_intake/linkedin-reconcile-wave-1-2026-06.md`](../data/_intake/linkedin-reconcile-wave-1-2026-06.md)):
+`linkedin-profile.json` used to be the hand-maintained record and is now a build artifact.
+
+## Build
 
 ```
-node scripts/build-linkedin-md.mjs
+npm run build:linkedin   # yaml → linkedin-profile.json → the .md files
+npm run validate         # includes scripts/check-linkedin-sync.mjs
 ```
+
+`scripts/build-linkedin-json.mjs` emits `linkedin-profile.json`; `scripts/build-linkedin-md.mjs`
+reads that JSON and emits the per-section `.md` files, which carry a "DO NOT EDIT BY HAND" banner
+and wrap each block in a fenced code block for copy-pasting into LinkedIn. CI runs the build and
+then `git diff --quiet`, so the regenerated outputs must be committed alongside any shard edit.
 
 | File | LinkedIn section | Entries |
 |------|------------------|---------|
 | [`linkedin-banner.md`](./linkedin-banner.md) | Banner / Intro (name, headline, location) | — |
-| [`linkedin-about.md`](./linkedin-about.md) | About | 7 blocks + top skills |
+| [`linkedin-about.md`](./linkedin-about.md) | About | 5 blocks + 5 top skills |
 | [`linkedin-services.md`](./linkedin-services.md) | Services | overview + 4 services |
-| [`linkedin-featured.md`](./linkedin-featured.md) | Featured | 3 links |
-| [`linkedin-experience.md`](./linkedin-experience.md) | Experience | 14 positions / 12 companies |
+| [`linkedin-featured.md`](./linkedin-featured.md) | Featured | 6 links |
+| [`linkedin-experience.md`](./linkedin-experience.md) | Experience | 15 positions / 13 companies |
 | [`linkedin-education.md`](./linkedin-education.md) | Education | 3 |
 | [`linkedin-licenses-and-certifications.md`](./linkedin-licenses-and-certifications.md) | Licenses & certifications | 51 |
-| [`linkedin-skills.md`](./linkedin-skills.md) | Skills | 97 |
+| [`linkedin-skills.md`](./linkedin-skills.md) | Skills | 95 |
 | [`linkedin-projects.md`](./linkedin-projects.md) | Projects | 15 |
 | [`linkedin-volunteering.md`](./linkedin-volunteering.md) | Volunteering | 3 |
 | [`linkedin-honors-and-awards.md`](./linkedin-honors-and-awards.md) | Honors & awards | 6 |
-| [`linkedin-recommendations.md`](./linkedin-recommendations.md) | Recommendations (received) | 18 |
-| [`linkedin-publications.md`](./linkedin-publications.md) | Publications | 12 (mirrors live page) |
+| [`linkedin-recommendations.md`](./linkedin-recommendations.md) | Recommendations (received) | 26 |
+| [`linkedin-publications.md`](./linkedin-publications.md) | Publications | 11 (mirrors live page) |
 | [`linkedin-languages.md`](./linkedin-languages.md) | Languages | 4 |
 
 ## `linkedin-services/` — rendered profile visuals

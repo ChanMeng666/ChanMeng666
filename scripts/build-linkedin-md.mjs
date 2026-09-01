@@ -17,7 +17,7 @@ const data = JSON.parse(readFileSync(path.join(dir, "linkedin-profile.json"), "u
 
 const banner = (title) =>
   `<!-- GENERATED from linkedin-profile.json by scripts/build-linkedin-md.mjs — DO NOT EDIT BY HAND. -->\n` +
-  `<!-- Edit the JSON (the source of truth) and re-run the script. -->\n\n# ${title}\n`;
+  `<!-- Source of truth is data/profile/*.yaml — edit the shard, then npm run build:linkedin. -->\n\n# ${title}\n`;
 
 const block = (text) => "```\n" + text + "\n```\n";
 

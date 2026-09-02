@@ -7952,7 +7952,7 @@
       "id": "mcp-servers-75-windows-nvm-solution",
       "tier": "flagship",
       "recency": "historical",
-      "lastUpdated": "2026-05-26",
+      "lastUpdated": "2026-09-02",
       "repo": "modelcontextprotocol/servers",
       "repoUrl": "https://github.com/modelcontextprotocol/servers",
       "type": "comment",
@@ -7962,8 +7962,8 @@
       "state": "closed",
       "date": "2024-11-27",
       "category": "mcp-ecosystem",
-      "summary": "Step-by-step Windows + NVM/NPM workaround for the early Claude Desktop\nMCP connection failure: install MCP server packages globally, locate\n`node.exe` and global npm root via `where node` and `npm root -g`, then\nrewrite `claude_desktop_config.json` with absolute paths instead of `npx`\ncommands. Posted as a comment on TristanLib's issue #75 (\"How to\nconfigure windows filesystem?\") three weeks after MCP's public launch.\n",
-      "impact": "32 GitHub reactions (30 hearts + 2 thumbs-up) — the most-reacted single\nartifact in Chan's OSS footprint. Thanked in-thread by multiple users\n(\"Thanks a ton! Solved my issue.\" — @El-Invierno; \"thanks a lot, it\nworks under windows 11\" — @rockywangxiaolei; \"Thank you, this worked for\nme\" — @ZubeidHendricks; \"Perfect! Thanks so much.\" — @angrysky56). Became\nreference troubleshooting guidance for early Windows + NVM Claude\nDesktop adopters. Indirectly acknowledged by Anthropic maintainer\n@jspahrsummers who pointed the thread at issue #40 as the upstream fix\ntracker. Preceded and informed Chan's subsequent authoring of two\nproduction MCP servers (server-google-news, server-google-jobs).\n",
+      "summary": "Step-by-step Windows + NVM/NPM workaround for the early Claude Desktop\nMCP connection failure: install MCP server packages globally, locate\n`node.exe` and global npm root via `where node` and `npm root -g`, then\nrewrite `claude_desktop_config.json` with absolute paths instead of `npx`\ncommands. Posted as a comment on TristanLib's issue #75 (\"How to\nconfigure windows filesystem?\") two days after MCP's public launch on\n2024-11-25.\n",
+      "impact": "32 GitHub reactions (30 hearts + 2 thumbs-up), re-verified 2026-09-02 —\nthe most-reacted single artifact in Chan's OSS footprint. Thanked\nin-thread by the issue author (\"It works, good job! Thx!\" — @TristanLib)\nand by @AutomatedMarketer (\"worked!!!\"). Became reference\ntroubleshooting guidance for early Windows + NVM Claude Desktop\nadopters. Preceded and informed Chan's subsequent authoring of two\nproduction MCP servers (server-google-news, server-google-jobs).\n",
       "reactions": 32,
       "comments": 14
     },
@@ -8032,7 +8032,7 @@
       "id": "mcp-servers-76-windows-nvm-issue",
       "tier": "primary",
       "recency": "historical",
-      "lastUpdated": "2026-05-26",
+      "lastUpdated": "2026-09-02",
       "repo": "modelcontextprotocol/servers",
       "repoUrl": "https://github.com/modelcontextprotocol/servers",
       "type": "issue",
@@ -8044,7 +8044,7 @@
       "closedAt": "2024-11-27",
       "category": "mcp-ecosystem",
       "summary": "Filed a standalone issue (companion to comment on #75) documenting the\nWindows + NVM/NPM connection failure and its workaround — chosen as\nthe canonical \"Chan-authored\" reference issue Anthropic maintainers\nand the broader community could link to. Self-resolved with the\ndetailed step-by-step solution in the comments.\n",
-      "impact": "Three weeks after MCP's public launch on 2024-11-25, this issue served\nas the standalone link target for the Windows + NVM workaround across\nDiscord servers, Stack Overflow, and downstream MCP catalog\ndocumentation. 14 comments, 2 thumbs-up reactions on the issue body\nitself. Closed same day after community confirmation the solution\nworked. Cited in `meta.x_brand.statisticsClaims` as \"early-ecosystem\nMCP developer\" evidence.\n",
+      "impact": "Two days after MCP's public launch on 2024-11-25, this issue served\nas the standalone link target for the Windows + NVM workaround across\nDiscord servers, Stack Overflow, and downstream MCP catalog\ndocumentation. 14 comments, 2 thumbs-up reactions on the issue body\nitself. Closed same day after community confirmation the solution\nworked. The thanks landed here: \"Thanks a ton! Solved my issue.\"\n(@El-Invierno); \"thanks a lot, it works under windows 11\"\n(@rockywangxiaolei); \"Perfect! Thanks so much.\" (@angrysky56); \"Thank\nyou, this worked for me\" (@ZubeidHendricks) — all verified in-thread\n2026-09-02. Anthropic maintainer @jspahrsummers replied here pointing\nat issue #40 as the upstream fix tracker. Cited in `meta.x_brand.statisticsClaims` as \"early-ecosystem\nMCP developer\" evidence.\n",
       "reactions": 2,
       "comments": 14
     },
@@ -8208,7 +8208,7 @@
       "id": "mintlify-docs-4828-mobile-sidebar",
       "tier": "archive",
       "recency": "active",
-      "lastUpdated": "2026-05-26",
+      "lastUpdated": "2026-09-02",
       "repo": "mintlify/docs",
       "repoUrl": "https://github.com/mintlify/docs",
       "type": "issue",
@@ -8219,7 +8219,7 @@
       "date": "2026-03-24",
       "category": "bug-report",
       "summary": "Reported that Mintlify's mobile sidebar navigation becomes unresponsive on iOS Safari and Android default browsers.",
-      "impact": "Open bug report awaiting Mintlify triage.",
+      "impact": "Verified 2026-09-02 — still open and untriaged, no maintainer response and no comments since it was filed on 2026-03-24.",
       "comments": 0
     },
     {
@@ -8334,38 +8334,40 @@
     {
       "id": "awesome-claude-skills-289-typst",
       "tier": "archive",
-      "recency": "active",
-      "lastUpdated": "2026-05-26",
+      "recency": "historical",
+      "lastUpdated": "2026-09-02",
       "repo": "travisvn/awesome-claude-skills",
       "repoUrl": "https://github.com/travisvn/awesome-claude-skills",
       "type": "listing",
       "number": 289,
       "url": "https://github.com/travisvn/awesome-claude-skills/pull/289",
       "title": "Add typst-claude-skill: Professional document/PDF generation with Typst",
-      "state": "open",
+      "state": "closed",
       "date": "2026-03-16",
+      "closedAt": "2026-06-06",
       "category": "listing",
       "relatedProjectId": "typst-claude-skill",
       "summary": "Submitted Chan's typst-claude-skill (Typst typesetting as a Claude Code skill) to the travisvn awesome-claude-skills list.",
-      "impact": "Open PR awaiting maintainer triage."
+      "impact": "Closed by Chan on 2026-06-06 after nearly three months with no maintainer review. Not merged; the skill is not in the list. The project itself remains public and active."
     },
     {
       "id": "awesome-claude-skills-397-typst",
       "tier": "archive",
-      "recency": "active",
-      "lastUpdated": "2026-05-26",
+      "recency": "historical",
+      "lastUpdated": "2026-09-02",
       "repo": "ComposioHQ/awesome-claude-skills",
       "repoUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
       "type": "listing",
       "number": 397,
       "url": "https://github.com/ComposioHQ/awesome-claude-skills/pull/397",
       "title": "Add Typst Claude Skill to Document Processing",
-      "state": "open",
+      "state": "closed",
       "date": "2026-03-16",
+      "closedAt": "2026-06-06",
       "category": "listing",
       "relatedProjectId": "typst-claude-skill",
       "summary": "Submitted typst-claude-skill to ComposioHQ's awesome-claude-skills list under the Document Processing category.",
-      "impact": "Open PR awaiting maintainer triage."
+      "impact": "Closed by Chan on 2026-06-06 after nearly three months with no maintainer review — the only reply was off-topic spam. Not merged; the skill is not in the list. The project itself remains public and active."
     },
     {
       "id": "awesome-agent-skills-224-typst",
@@ -8859,7 +8861,7 @@
       "url": "https://verify.skilljar.com/c/8yz7o8sxvicp",
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-26"
+      "lastUpdated": "2026-09-02"
     },
     {
       "name": "Claude Code in Action (Aug 2025)",
@@ -8898,7 +8900,7 @@
       "url": "https://verify.skilljar.com/c/c4v3j3vdcxxe",
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-26"
+      "lastUpdated": "2026-09-02"
     },
     {
       "name": "Introduction to Model Context Protocol",
@@ -8911,7 +8913,7 @@
       "url": "https://verify.skilljar.com/c/ocwksk2fwt2e",
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-26"
+      "lastUpdated": "2026-09-02"
     },
     {
       "name": "Introduction to Agent Skills",
@@ -8924,7 +8926,7 @@
       "url": "https://verify.skilljar.com/c/66thfskid4eu",
       "tier": "flagship",
       "recency": "active",
-      "lastUpdated": "2026-05-26"
+      "lastUpdated": "2026-09-02"
     },
     {
       "name": "Google AI Essentials",
@@ -13005,6 +13007,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-09-02",
     "buildYear": "2026",
-    "buildTimestamp": "2026-09-02T00:03:06.286Z"
+    "buildTimestamp": "2026-09-02T00:11:18.000Z"
   }
 }

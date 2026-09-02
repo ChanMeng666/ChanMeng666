@@ -1,6 +1,6 @@
 # LinkedIn Copy — Follow-ups (2026-09)
 
-> **STATUS: 3 of 6 closed 2026-09-02** — Chan answered the open questions
+> **STATUS: 4 of 6 closed 2026-09-02** — Chan answered the open questions
 > directly. Items 2, 3 and 5 are resolved and shipped; items 1, 4 and 7 remain.
 >
 > **STATUS (original): OPEN.** The main rewrite shipped 2026-09-02: headline, About (8 → 5
@@ -124,7 +124,7 @@ the partnership.
 
 ---
 
-## 7. Unrelated, but blocking the PR gate
+## 7. ~~Unrelated, but blocking the PR gate~~ — CLOSED 2026-09-02
 
 `npm run check:freshness -- --strict` exits 1 on a clean tree — three
 `openSourceContributions` entries are `recency: active` (3-month budget) and
@@ -136,6 +136,49 @@ awesome-claude-skills-289-typst
 awesome-claude-skills-397-typst
 ```
 
-Pre-existing, untouched by this pass. Fix by re-reading each entry and running
-`npm run reviewed -- "openSourceContributions.<id>" --apply` — never by
-bulk-bumping `lastUpdated`.
+**Resolved — all 8 overdue entries verified against their live sources, then
+bumped.** `check:freshness --strict` now exits 0. The list was longer than the
+three visible in the tail: 4 Anthropic certificates and 2 MCP contributions were
+also gated.
+
+The review found real drift rather than just stale dates:
+
+- Both `awesome-claude-skills` PRs (#289, #397) were recorded as `state: open`
+  awaiting triage. They were **closed by Chan herself on 2026-06-06**, 21
+  seconds apart, after ~3 months with no maintainer review; neither skill is in
+  either list today. Corrected to `state: closed` + `closedAt` +
+  `recency: historical`, with honest `impact` text.
+- `mintlify/docs#4828` genuinely is still open and untriaged — no comments, no
+  activity since it was filed 2026-03-24.
+- All 4 Anthropic certificate URLs still resolve (HTTP 200, name and course
+  title both present on the verify page).
+- **`mcp-servers#75` had borrowed `#76`'s social proof.** The four quoted
+  thanks (@El-Invierno, @rockywangxiaolei, @ZubeidHendricks, @angrysky56) and
+  the @jspahrsummers pointer to issue #40 are all on **#76**, not #75. Moved to
+  the entry they belong to; #75 now quotes its own two real thanks (@TristanLib,
+  @AutomatedMarketer). Its 32 reactions (30 hearts + 2 thumbs-up) re-verified
+  and correct.
+- **"Three weeks after MCP's public launch" was wrong in 4 places** — the
+  comment and issue are dated 2024-11-27 and MCP launched 2024-11-25, so it is
+  **two days**. Corrected in both contribution entries, the shard header
+  comment, and `90-meta.yaml` `statisticsClaims`. The true number is the
+  stronger claim.
+
+
+---
+
+## 8. OPEN — the repo disagrees with itself on the MCP launch date
+
+Found while fixing item 7. Two mutually exclusive claims:
+
+| Where | Implies MCP launched |
+|---|---|
+| `25-contributions.yaml` (both MCP entries), `70-linkedin.yaml:1474` ("35 days after Anthropic's Nov 25, 2024 MCP launch", and Dec 30 − Nov 25 = 35 ✓) | **2024-11-25** |
+| `21-projects-oss-primary.yaml:689` + `:826` — first commit `2024-11-25`, described as *"predates MCP public launch by 5 days"* | **2024-11-30** |
+
+Anthropic announced MCP on **2024-11-25**, and two of the three places already
+say so — which makes the "predates by 5 days" line the outlier. On that reading
+the first commit lands on **launch day itself**, not five days before.
+
+Left unchanged pending Chan's call: it is a flagship project's metric line and
+she may have a source for the later date.

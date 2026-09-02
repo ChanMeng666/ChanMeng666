@@ -1,6 +1,9 @@
 # LinkedIn Copy — Follow-ups (2026-09)
 
-> **STATUS: OPEN.** The main rewrite shipped 2026-09-02: headline, About (8 → 5
+> **STATUS: 3 of 6 closed 2026-09-02** — Chan answered the open questions
+> directly. Items 2, 3 and 5 are resolved and shipped; items 1, 4 and 7 remain.
+>
+> **STATUS (original): OPEN.** The main rewrite shipped 2026-09-02: headline, About (8 → 5
 > blocks), Services, Featured (3 → 6) and all 15 Experience descriptions were
 > rewritten against the *"LinkedIn for Life"* guidance (Stuart Little · Agency8 /
 > Janelle, She Sharp, 2026-05). Chan decided all 27 blocks individually.
@@ -29,7 +32,7 @@ straight-to-camera intro.
 
 ---
 
-## 2. Gavigo — one canonical role, two LinkedIn positions
+## 2. ~~Gavigo — one canonical role, two LinkedIn positions~~ — CLOSED 2026-09-02
 
 Three names for the same job:
 
@@ -47,14 +50,14 @@ exists canonically only as the `(prev. Core Engineer)` parenthetical.
 `check-linkedin-sync.mjs` does **not** catch this — its title check only runs on
 single-position companies, and Gavigo has two.
 
-**Options:** (a) align the LinkedIn display title to `Founding Principal
-Engineer`; (b) add a second `work[]` entry in `10-career.yaml` for the M1
-consulting engagement and register both in `expCompanyToWork`; (c) leave as-is
-and accept that the display title is a deliberate shortening.
+**Resolved (a):** the LinkedIn display title is now `Founding Principal
+Engineer`, matching the body and canonical. The two-positions-vs-one-work-entry
+asymmetry is accepted and left as-is — LinkedIn splits the tenure for readability,
+canonical keeps it as one role with a `(prev. Core Engineer)` parenthetical.
 
 ---
 
-## 3. FreePeriod — "six named awards" is loose in the canonical shard
+## 3. ~~FreePeriod — "six named awards" is loose~~ — CLOSED 2026-09-02
 
 The LinkedIn copy was fixed: it now says *"Seven recognitions landed in
 2024–2025: six named awards plus a grant"*, which agrees with the seven items
@@ -64,12 +67,12 @@ listed under it (6 awards + the HKUST Entrepreneurship Bridge Grant).
 (~L1617) and `6-award streak` in `impactHeadline` (~L1569) while narrating all
 seven. Same looseness, unfixed.
 
-**And a stricter question underneath it:** two of the "six named awards" are
-programme *selections*, not prizes — Tencent Technology Venture Capital Program
-and Tsinghua University SDG Open Innovation Marathon. Strictly the tally is
-**4 prizes + 2 programme selections + 1 grant**. If Chan wants that precision,
-the line becomes *"four prizes, two programme selections, and a grant"* and must
-change **here and in `10-career.yaml` L1569 + L1617 together**.
+**Resolved — strict tally adopted everywhere.** Two of the six were programme
+*selections*, not prizes (Tencent Technology Venture Capital Program, Tsinghua
+University SDG Open Innovation Marathon). All three places now say **four prizes,
+two programme selections and a grant**: the LinkedIn description, the
+`10-career.yaml` `impactHeadline`, and the narrative body. `work.freeperiod`
+`lastUpdated` bumped via `npm run reviewed`.
 
 ---
 
@@ -84,7 +87,7 @@ attendance/outcome fact. If it has not, move the sentence to future tense.
 
 ---
 
-## 5. Sanicle — the two positions repeat each other
+## 5. ~~Sanicle — the two positions repeat each other~~ — CLOSED 2026-09-02
 
 `Chief Technology Officer (CTO)` and `Senior AI/ML Infrastructure Engineer` both
 claim the **IBM Silver Partner** anchor and both narrate the **Bubble → Next.js
@@ -96,8 +99,13 @@ The guidance is explicit that a profile should *curate, not archive* — a visit
 scrolling two consecutive entries at the same company currently reads the same
 two facts twice.
 
-**To close:** decide which entry owns IBM Silver Partner and which owns the
-migration, then strip the duplicate from the other.
+**Resolved — split by altitude.** The CTO entry owns **IBM Silver Partner** (a
+commercial outcome at CTO level); the Senior AI/ML Infrastructure Engineer entry
+owns the **Bubble → Next.js migration** (hands-on delivery). It also matches the
+timeline: the migration happened in the earlier engineering tenure, the IBM
+partnership came later. Each claim now appears exactly once across the two
+entries; the engineer entry keeps the watsonx delivery detail without restating
+the partnership.
 
 ---
 

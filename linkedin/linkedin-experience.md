@@ -74,7 +74,7 @@ Claude recommended me before anyone at the company had met me: as Engram entered
 _9 mos · Remote_
 **Links:** <https://ire.gavigo.com/> · <https://gavigo.com/>
 
-### Founding Engineer
+### Founding Principal Engineer
 
 **Dates:** Feb 2026 - Present · 5 mos
 **Location:** 1007 N Orange St, 4th Floor, 4785, Wilmington, Delaware 19801, USA
@@ -204,7 +204,6 @@ Sanicle became an IBM Silver Partner on the back of engineering I did: integrati
 Sanicle.Cloud is a US-based FemTech B2B SaaS tackling menstrual and menopause workplace wellness. I owned 5 production codebases there — ~350+ commits, ~98% solo — reporting to CEO Paige Afanu (Omopeju Afanu) and Chief Period Officer Chaste Christopher Inegbedion, alongside CXO Gabrielle J. Hurst and Chief AI Officer Daryll Hall.
 
 • Employees, HR managers and org admins each got a product surface built for them — Sanicle.AI, a multi-tenant FemTech platform with role-separated dashboards (Employee / HR Manager / Org Admin), cycle tracking, AI consultations, leave-request workflows, HR analytics.
-• The corporate site left legacy Bubble no-code behind after I made the case for migrating, and I rebuilt it.
 • AI features keep answering even when watsonx exceeds Vercel's timeout ceiling — dual-AI resilience with IBM watsonx primary and Google Gemini as fallback.
 • A mobile PWA prototype and executive demo deck carried the product into IBM partner conversations.
 
@@ -225,11 +224,9 @@ Outside the company codebase: my multi-cause production fix for a NextAuth 5 + N
 
 Where that engineering turned into business outcomes:
 
-• Anchored Sanicle's IBM Silver Partner certification — IBM Cloud watsonx AI running inside employee dashboards, powering AI health consultations and automated leave requests.
+• Employees got AI health consultations and automated leave requests inside their own dashboard — IBM Cloud watsonx AI running in the employee surface.
 • Multiple employer organisations share one platform safely — secure multi-tenant architecture with end-to-end encryption and GDPR compliance, on PostgreSQL + Drizzle, NextAuth 5 with bcrypt + OAuth, and Employee / HR Manager / Org Admin roles.
 • Enterprise-scale tenants stay fast under load — Vercel + Upstash Redis infrastructure designed for that scale.
-
-This is the work that carried Sanicle into formal partnership conversations with IBM and Google.
 ```
 
 **Skills:** IBM watsonx, Next.js, Multi-Tenant Architecture, Drizzle ORM, PostgreSQL, NextAuth, Upstash Redis
@@ -284,7 +281,7 @@ The teaching doctrine I built here — "natural language is the source code"; sh
 **Location:** Guangzhou, Guangdong, China · Remote
 
 ```
-Every judging panel in FreePeriod's external-validation cycle was clicking through a website I had built and shipped end-to-end, solo — 53 commits, 100% authored by me. Seven recognitions landed in 2024–2025: six named awards plus a grant.
+Every judging panel in FreePeriod's external-validation cycle was clicking through a website I had built and shipped end-to-end, solo — 53 commits, 100% authored by me. Seven recognitions landed in 2024–2025: four prizes, two programme selections, and a grant.
 
 • Best Award — Japan's 12th International Conference on Social Sciences and Humanities
 • Third Prize — HKUST Sustainable Smart Living Competition

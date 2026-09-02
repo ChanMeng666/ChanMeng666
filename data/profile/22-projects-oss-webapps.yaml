@@ -447,7 +447,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [docusaurus, drizzle, neon, cloudflare-pages, react]
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-09-02"
     name: FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026
     priority: 17
     category: web-apps
@@ -463,7 +463,7 @@ projects:
       data + 16 Cloudflare Pages Functions (~5,373 LOC) for the entire
       server side, deployed on Cloudflare Pages for low-latency
       cross-border edge delivery. Carried Shanghai Summit 2026
-      (June 22-25, 20 confirmed speakers headlined by Ida Tin — Clue
+      (June 22-25, 20 speakers headlined by Ida Tin — Clue
       co-founder who coined the term "FemTech" in 2016): 10-section
       summit homepage + 3 sub-pages, 4 application pipelines
       (programme/speaker/pitch/ecosystem) writing to typed Postgres
@@ -511,7 +511,7 @@ projects:
       - 16 Cloudflare Pages Functions (~5,373 LOC) — entire server side without a Node backend
       - Drizzle ORM + Neon serverless Postgres (typed schema for application/subscription submissions, not Notion)
       - Notion-as-CMS retained for editorial content (founder edits directly in Notion, no developer-in-the-loop)
-      - Shanghai Summit 2026 (June 22-25; Ida Tin / Clue co-founder headlines; 20 confirmed speakers; 10 homepage sections + 3 sub-pages)
+      - Shanghai Summit 2026 (June 22-25; Ida Tin / Clue co-founder headlined; 20 speakers; 10 homepage sections + 3 sub-pages)
       - 4-pipeline application system (pitch, programme, speaker, ecosystem — each typed Postgres table with reference numbers + admin status workflow)
       - Double-opt-in newsletter with Resend Contacts API + segment assignment + brand-styled HTML welcome email
       - Admin dashboard with ADMIN_API_KEY-protected batch review + approval/rejection email automation
@@ -543,19 +543,19 @@ projects:
     publicSummary: |
       The website and application system for FemTech Weekend, China's first women's-health-technology community. It carried the community's Shanghai Summit 2026 (June 22–25) with a bilingual English / 简体中文 event site, four online application forms, a newsletter, and a founder-run admin dashboard, all on fast edge hosting for audiences inside and outside China. Built almost single-handed across 564 commits (534 solo) over roughly 13 months.
     narrative:
-      impactHeadline: "The bilingual website and sign-up system for FemTech Weekend — China's first women's-health-tech community — which carried Shanghai Summit 2026 and its 20 confirmed speakers, led by Ida Tin, who coined the term FemTech."
+      impactHeadline: "The bilingual website and sign-up system for FemTech Weekend — China's first women's-health-tech community — which carried Shanghai Summit 2026 and its 20 speakers, led by Ida Tin, who coined the term FemTech."
       problem: |
-        FemTech Weekend is China's first community built specifically around women's-health technology — part community, part research outfit, part event producer — headquartered in Chengdu, founded 2024 by Zhu Yihan, with a 2-10-person core team. Its remit is to take the international FemTech movement (a category named in 2016 by Ida Tin, the Clue co-founder who headlines the 2026 Shanghai Summit) and ground it in the Greater China market: connecting founders, investors, healthcare professionals, and researchers across the China-global divide. The community publishes original market research (the FemTech Market Map for Greater China and FemmeHealth Ventures Alliance reports) and runs recurring updates on China FemTech innovation.
+        FemTech Weekend is China's first community built specifically around women's-health technology — part community, part research outfit, part event producer — headquartered in Chengdu, founded 2024 by Zhu Yihan, with a 2-10-person core team. Its remit is to take the international FemTech movement (a category named in 2016 by Ida Tin, the Clue co-founder who headlined the 2026 Shanghai Summit) and ground it in the Greater China market: connecting founders, investors, healthcare professionals, and researchers across the China-global divide. The community publishes original market research (the FemTech Market Map for Greater China and FemmeHealth Ventures Alliance reports) and runs recurring updates on China FemTech innovation.
 
         Two website generations have lived inside a ~13-month window. Gen-1 (a separate repo, a Next.js + Notion marketing site — external claim: 58 commits, needs registry check) was replaced by a deliberate rewrite, not a refactor, once the community's centre of gravity shifted from "marketing site that publishes the occasional report" to "research-publication and multi-event hub with deep editorial content." That shift culminated in Shanghai Summit 2026 — a four-day flagship event, June 22-25, 2026, themed Where Global Women's Health Meets China. The summit needed its own first-class digital infrastructure: a 20-speaker lineup, an hour-by-hour agenda, four application pipelines, an ecosystem partner directory, a sponsor programme, and a press-ready editorial surface — all bilingual EN / 简体中文, all edge-delivered across the China-global divide, and all operable by a non-technical founder when I am not in the loop.
       audience: |
-        Three concentric audiences. Founders, investors, and ecosystem operators in women's-health technology — the people who apply to the programme, pitch competition, speaker pool, or ecosystem directory; subscribe to the newsletter; and read the research reports. They span Chinese and international markets, so every primary surface ships bilingually. Shanghai Summit 2026 attendees and prospective attendees — 20 confirmed speakers including Ida Tin, plus partners (PwC, Bayer, AVPN and others), multi-tier sponsors, and a delegate audience drawn from the global femtech community. The FemTech Weekend internal team — primarily founder Zhu Yihan, who edits Notion content directly without developer involvement and reviews applications through the ADMIN_API_KEY-protected admin dashboard, approving ecosystem applicants via the brand-styled email automation built into the platform.
+        Three concentric audiences. Founders, investors, and ecosystem operators in women's-health technology — the people who apply to the programme, pitch competition, speaker pool, or ecosystem directory; subscribe to the newsletter; and read the research reports. They span Chinese and international markets, so every primary surface ships bilingually. Shanghai Summit 2026 attendees and prospective attendees — 20 speakers headlined by Ida Tin, plus partners (PwC, Bayer, AVPN and others), multi-tier sponsors, and a delegate audience drawn from the global femtech community. The FemTech Weekend internal team — primarily founder Zhu Yihan, who edits Notion content directly without developer involvement and reviews applications through the ADMIN_API_KEY-protected admin dashboard, approving ecosystem applicants via the brand-styled email automation built into the platform.
       productLogic: |
         The platform is organised around four parallel surfaces the founder operates independently, plus a fifth founder-only surface (the admin backend).
 
         Surface 1 — the editorial spine. Docusaurus 3.9 with three blog-plugin instances: blog/ (research reports, currently 2 published — FemTech Market Map for Greater China 2025-05, and FemmeHealth Ventures Alliance 2025-06), opinions/ (commentary), and stories/ (founder profiles). Choosing Docusaurus over keeping Next.js was deliberate: for a research-publication-plus-event hub, the gain in MDX-native editorial ergonomics outweighed the loss of Next.js's rendering flexibility.
 
-        Surface 2 — the Shanghai Summit 2026 event site. A 10-section homepage at /shanghai-summit/ (SummitHero → FABGlobeSection → PartnersGrid → SpeakersGrid → AgendaTimeline → WhoShouldAttend → VenueShowcase → WhyDifferent → GlobalEcosystem → SponsorsSection, bookended by SummitCTA), with the venue set to the Qiantan Center, Shanghai. Sub-pages cover the programme application, the pitch-competition application (with deck upload), and an hour-by-hour agenda; the full agenda now sits behind a lead-capture modal that records interest to its own table. Speaker data lives in a typed src/data/shanghai-summit.ts module (20 confirmed speakers) so non-technical edits go through a single source of truth.
+        Surface 2 — the Shanghai Summit 2026 event site. A 10-section homepage at /shanghai-summit/ (SummitHero → FABGlobeSection → PartnersGrid → SpeakersGrid → AgendaTimeline → WhoShouldAttend → VenueShowcase → WhyDifferent → GlobalEcosystem → SponsorsSection, bookended by SummitCTA), with the venue set to the Qiantan Center, Shanghai. Sub-pages cover the programme application, the pitch-competition application (with deck upload), and an hour-by-hour agenda; the full agenda now sits behind a lead-capture modal that records interest to its own table. Speaker data lives in a typed src/data/shanghai-summit.ts module (20 speakers) so non-technical edits go through a single source of truth.
 
         Surface 3 — the four application pipelines. Each is a typed Drizzle table on Neon Postgres with its own Cloudflare Pages Function: pitch_applications, programme_applications (including the China-engagement fields — china_objectives, china_relevance, china_concerns, etc.), speaker_applications, and ecosystem submissions handled inline. Every submission gets a reference_number, defaults to status: 'submitted', and is reviewable in the admin dashboard. PDFs (pitch decks, company overviews) and headshots upload to Cloudinary through four dedicated upload-* endpoints, keeping object storage detached from Postgres row size.
 

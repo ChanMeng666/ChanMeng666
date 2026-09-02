@@ -1,6 +1,6 @@
 # LinkedIn Copy — Follow-ups (2026-09)
 
-> **STATUS: 4 of 6 closed 2026-09-02** — Chan answered the open questions
+> **STATUS: 5 of 6 closed 2026-09-02; item 8 also closed** — Chan answered the open questions
 > directly. Items 2, 3 and 5 are resolved and shipped; items 1, 4 and 7 remain.
 >
 > **STATUS (original): OPEN.** The main rewrite shipped 2026-09-02: headline, About (8 → 5
@@ -76,14 +76,27 @@ two programme selections and a grant**: the LinkedIn description, the
 
 ---
 
-## 4. FemTech Weekend — Shanghai Summit tense reads pre-event
+## 4. ~~FemTech Weekend — Shanghai Summit tense reads pre-event~~ — CLOSED 2026-09-02
 
 The description says the summit *"drew 20 confirmed speakers"* — past tense
 around the phrase "confirmed speakers", which reads like the event has not
 happened. Dates given as June 22–25, 2026. Kept verbatim in the rewrite.
 
-**To close:** if the summit has run, replace "confirmed speakers" with an actual
-attendance/outcome fact. If it has not, move the sentence to future tense.
+**Resolved — the summit ran, and the copy is now post-event.** Chan supplied
+the source material (FemTech Weekend's LinkedIn feed and attendee write-ups).
+Facts used, all attributable: it was **China's first global women's health
+summit**, in the same five-month window that produced Japan's and Korea's firsts
+(per Alice Zheng, Doximity); delegates came from Australia, Canada, China,
+Denmark, England, the Netherlands, Singapore, South Korea, the US and Central
+Asia (per Alexandra Belyanina's write-up); Bayer ran the pitch competition;
+HerAnova Lifesciences was a gold sponsor; the investor panel seated AVPN's
+Patient Lu and Gobi Partners' Leo Chen alongside Maryann Umoren Selfe and Alice
+Zheng; delivered with Femtech Across Borders as its 2026 Summer Programme.
+
+"20 confirmed speakers" was pre-event language in **five** places. Corrected to
+"20 speakers" across `70-linkedin.yaml`, `10-career.yaml` (×3, including
+"headlines" → "headlined") and `22-projects-oss-webapps.yaml` (×2). No
+attendance figure was invented — none was stated in the source.
 
 ---
 
@@ -167,7 +180,7 @@ The review found real drift rather than just stale dates:
 
 ---
 
-## 8. OPEN — the repo disagrees with itself on the MCP launch date
+## 8. ~~OPEN — the repo disagrees with itself on the MCP launch date~~ — CLOSED 2026-09-02
 
 Found while fixing item 7. Two mutually exclusive claims:
 
@@ -180,5 +193,11 @@ Anthropic announced MCP on **2024-11-25**, and two of the three places already
 say so — which makes the "predates by 5 days" line the outlier. On that reading
 the first commit lands on **launch day itself**, not five days before.
 
-Left unchanged pending Chan's call: it is a flagship project's metric line and
-she may have a source for the later date.
+**Resolved — launch date is 2024-11-25, so the first commit landed the same
+day.** Corrected in three places in `21-projects-oss-primary.yaml` (a metrics
+line and two prose blocks; the third was missed by the first sweep). The repo
+now agrees with itself everywhere.
+
+Checked while there and found **correct**, not drift: Google News MCP "35 days"
+(shipped Dec 30) and Google Jobs "36 days" (shipped Dec 31) are different
+projects with different dates, and both compute correctly from 2024-11-25.

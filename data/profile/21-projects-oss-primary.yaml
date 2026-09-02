@@ -649,7 +649,7 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-09-02"
     name: 腾讯会议录屏下载助手 — Chrome Web Store-Published Extension
     priority: 9
     category: web-apps
@@ -686,7 +686,7 @@ projects:
       - "Cross-platform shell path normalization"
     metrics:
       - { label: "Chrome Web Store ID",   value: "gdajdfngeonjmcclghkmeoacopnnfpnc" }
-      - { label: "First commit",          value: "2024-11-25 (predates MCP public launch by 5 days)" }
+      - { label: "First commit",          value: "2024-11-25 (the same day MCP launched publicly)" }
       - { label: "Latest commit",         value: "2026-06-16" }
       - { label: "Total commits",         value: "24 (solo)" }
       - { label: "Tagged releases",       value: "2 (v1.0.0, v1.1.0)" }
@@ -711,8 +711,8 @@ projects:
       command with the correct headers, problematic ones stripped, and
       Windows paths auto-rewritten to Git-Bash-compatible Unix paths.
       Listed live in the Chrome Web Store with a live-from-store rating
-      shield, **first committed Nov 25 2024** (5 days before
-      Anthropic's MCP launch), **still maintained through April 2026**
+      shield, **first committed Nov 25 2024** (the same day
+      Anthropic's MCP launched), **still maintained through April 2026**
       across 24 solo commits and 2 tagged releases (v1.0.0 + v1.1.0).
       Built with Chrome Manifest V3 APIs (webRequest + webRequestBlocking
       + storage + runtime messaging), JavaScript ES6+, Webpack 5, Babel.
@@ -823,7 +823,7 @@ projects:
         github-release badge for **two tagged releases (v1.0.0 +
         v1.1.0)**. Total **24 solo commits across 18 months** —
         from the first commit on **2024-11-25** (which incidentally
-        predates Anthropic's MCP public launch by 5 days) through
+        landed the same day as Anthropic's MCP public launch) through
         the most recent commit on **2026-04-07**, putting it in the
         same productive late-2024 shipping window that produced the
         two early MCP servers and the Christmas-greeting CLI that

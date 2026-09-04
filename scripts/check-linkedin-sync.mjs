@@ -144,7 +144,9 @@ for (const lc of ln?.licensesAndCertifications ?? []) {
 // and just confirm the canonical entry still has the dates). ---
 const projNameToId = {
   "Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)": "eatropolis-website",
-  "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)": "sunostats",
+  // Renamed SunoStats -> Seismophone in 70-linkedin.yaml; the old key silently
+  // matched nothing, so this project's dateRange went unguarded. Fixed 2026-09-05.
+  "Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)": "sunostats",
   "She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community": "she-sharp",
 };
 const genProj = (name) => generated?.projects?.find((p) => p.name === name);

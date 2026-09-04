@@ -1223,6 +1223,35 @@ linkedin:
         associations:
           - JavaScript Foundations Professional Certificate by Mozilla
   projects:
+    # Added 2026-09-05. Placed first as the newest entry with external
+    # validation; Chan controls the actual display order on the live page.
+    # WORDING IS LOAD-BEARING: this says VALIDATED, never "adopted". The
+    # meeting record supports a live walkthrough, a confirmation that the tool
+    # is what they needed, and their developer picking it up — it does not
+    # support a paid contract, a partnership, an endorsement of Chan, or a
+    # production deployment. See projects[a11y-loop].narrative.outcomes and the
+    # SELF-ATTESTED note there before strengthening a single verb here.
+    - name: a11y-loop — Accessibility Checked Where the Code Is Written, Not After
+      associatedWith: ArchCanvas
+      description: |-
+        Accessibility usually arrives too late: someone audits a finished product and files bugs against work that is already done. a11y-loop moves the check to the moment the code is written. It is a Claude Code skill plus a CLI that gets AI coding agents writing accessible UI by default, then proves what it can prove by driving Playwright and axe-core against WCAG 2.2 AA across the states the agent actually built.
+
+        What it refuses to claim matters as much as what it checks. Only 17 of the 55 WCAG 2.2 A/AA success criteria have any automated rule at all, so every run publishes an explicit "could not check" list. A green result is never allowed to imply compliance, and the tool states in writing that automation does not replace testing with disabled people.
+
+        • Built in the week before the Aotearoa AI Hackathon Festival 2026, where My Life My Voice — a disability-led New Zealand organisation — had set "Accessible UI Generation for Developers" as a challenge.
+        • With the competition closed and nothing left to win, I sent the finished MIT-licensed project to them unsolicited: a free walkthrough offered, and a roadmap open to feedback from disabled testers.
+        • On 4 September 2026 their CTO, Timothy Young, validated it in a live walkthrough. His verdict, hedge included: it "won't do the entire job, but it looks like it will be a big help." Their own developer is picking it up from there.
+        • The line I keep is from the person who wrote the brief. Vibe-coding tools, he said, can be asked to follow the accessibility guidelines and will do "an okay job" — but "what we really needed was a tool for programmers." That is this project's whole thesis, reached independently by the author of the problem.
+
+        Stack: TypeScript, Playwright, axe-core 4.12, Claude Code Agent Skills, npm.
+      skills:
+        - Web Accessibility
+        - WCAG 2.2
+        - Playwright
+        - axe-core
+        - TypeScript
+        - Claude Code Agent Skills
+        - CLI Development
     - name: Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)
       description: |-
         The official event website for Eatropolis — Auckland's award-winning culinary festival, at Shed 10 on Queens Wharf on 10 October 2026. Visitors buy tickets, browse the chef lineup, read the programme, and can ask a streaming AI host on the page for guidance instead of digging through nav.

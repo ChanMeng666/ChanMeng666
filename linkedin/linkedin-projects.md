@@ -3,7 +3,27 @@
 
 # LinkedIn — Projects
 
-## 1. Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)
+## 1. a11y-loop — Accessibility Checked Where the Code Is Written, Not After
+
+**Dates:** undefined
+**Associated with:** ArchCanvas
+
+```
+Accessibility usually arrives too late: someone audits a finished product and files bugs against work that is already done. a11y-loop moves the check to the moment the code is written. It is a Claude Code skill plus a CLI that gets AI coding agents writing accessible UI by default, then proves what it can prove by driving Playwright and axe-core against WCAG 2.2 AA across the states the agent actually built.
+
+What it refuses to claim matters as much as what it checks. Only 17 of the 55 WCAG 2.2 A/AA success criteria have any automated rule at all, so every run publishes an explicit "could not check" list. A green result is never allowed to imply compliance, and the tool states in writing that automation does not replace testing with disabled people.
+
+• Built in the week before the Aotearoa AI Hackathon Festival 2026, where My Life My Voice — a disability-led New Zealand organisation — had set "Accessible UI Generation for Developers" as a challenge.
+• With the competition closed and nothing left to win, I sent the finished MIT-licensed project to them unsolicited: a free walkthrough offered, and a roadmap open to feedback from disabled testers.
+• On 4 September 2026 their CTO, Timothy Young, validated it in a live walkthrough. His verdict, hedge included: it "won't do the entire job, but it looks like it will be a big help." Their own developer is picking it up from there.
+• The line I keep is from the person who wrote the brief. Vibe-coding tools, he said, can be asked to follow the accessibility guidelines and will do "an okay job" — but "what we really needed was a tool for programmers." That is this project's whole thesis, reached independently by the author of the problem.
+
+Stack: TypeScript, Playwright, axe-core 4.12, Claude Code Agent Skills, npm.
+```
+
+**Skills:** Web Accessibility, WCAG 2.2, Playwright, axe-core, TypeScript, Claude Code Agent Skills, CLI Development
+
+## 2. Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)
 
 **Dates:** May 2026 – Present
 **Other contributors:** yes
@@ -24,7 +44,7 @@ Stack: Next.js 16, OpenNext-on-Cloudflare-Workers, Drizzle + Neon Postgres, Rese
 
 **Skills:** Next.js, Cloudflare Pages / Workers, OpenNext, Drizzle ORM, Neon Postgres, OpenAI API
 
-## 2. Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
+## 3. Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
 **Dates:** undefined
 
@@ -42,7 +62,7 @@ Stack: Next.js 16, Drizzle + Neon Postgres, Stripe, Resend, Docker + Traefik VPS
 
 **Skills:** Drizzle ORM, Internationalization (i18n), Next.js, Neon Postgres, Stripe, Docker, PostgreSQL
 
-## 3. Vitex — AI Career Agent SaaS (vitex.org.nz)
+## 4. Vitex — AI Career Agent SaaS (vitex.org.nz)
 
 **Dates:** Feb 2026 – Present
 
@@ -59,7 +79,7 @@ Stack: Next.js 15, Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract),
 
 **Skills:** Vercel AI SDK, Typst, Next.js, Stripe, Neon Postgres, Drizzle ORM, Docker
 
-## 4. ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans
+## 5. ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans
 
 **Dates:** Jun 2026 – Present
 
@@ -76,7 +96,7 @@ Stack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.
 
 **Skills:** TypeScript, Programming Language Design, Node.js, Compiler Design, Language Server Protocol (LSP), CodeMirror, Vitest
 
-## 5. ArchCanvas — AI Design Agent for Architects That Productizes ArchLang
+## 6. ArchCanvas — AI Design Agent for Architects That Productizes ArchLang
 
 **Dates:** Jun 2026 – Present
 
@@ -93,7 +113,7 @@ Stack: Next.js, React 19, Vercel AI SDK + OpenAI (gpt-5.5 + GPT Image 2; GPT-4o 
 
 **Skills:** Vercel AI SDK, AI Agent Architecture, Next.js, React, OpenAI API, Neon Postgres, Drizzle ORM, Stripe, Cloudinary
 
-## 6. echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
+## 7. echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
 
 **Dates:** Nov 2025 – Present
 
@@ -110,7 +130,7 @@ Stack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Act
 
 **Skills:** Claude Code Plugins, Cursor IDE Hooks, Codex CLI Integration, Python (Programming Language), ElevenLabs TTS, Webhooks, GitHub Actions
 
-## 7. She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
+## 8. She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
 
 **Dates:** Jul 2025 – Present
 **Associated with:** She Sharp
@@ -128,7 +148,7 @@ Stack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.
 
 **Skills:** AI Matching Systems, Drizzle ORM, Next.js, Neon Postgres, NextAuth, Stripe, Slack API, Vercel
 
-## 8. FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
+## 9. FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
 
 **Dates:** Mar 2025 – Present
 **Other contributors:** yes
@@ -147,7 +167,7 @@ Stack: Docusaurus 3.9, React 18, Drizzle + Neon Postgres, Cloudflare Pages, Rese
 
 **Skills:** Bilingual Web Development, Cloudflare Pages / Workers, Docusaurus, React, Drizzle ORM, Neon Postgres, Notion API
 
-## 9. programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
+## 10. programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
 
 **Dates:** Oct 2024 – Present
 **Associated with:** TechNest Community
@@ -165,7 +185,7 @@ Stack: Docusaurus 3.8, Cloudflare Pages, Llama 3.1 8B via Cloudflare Workers AI 
 
 **Skills:** Docusaurus, Retrieval-Augmented Generation (RAG), Cloudflare Pages / Workers, Cloudflare Workers AI, Notion API, Algolia, Typst
 
-## 10. Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
+## 11. Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
 
 **Dates:** Sep 2025 – Apr 2026
 **Other contributors:** yes
@@ -184,7 +204,7 @@ Stack: Next.js 15.5, React 19.1, Drizzle + Neon Postgres + pgVector (1536-dim), 
 
 **Skills:** Voice AI (OpenAI Realtime), pgVector, Next.js, React, Drizzle ORM, Neon Postgres, OpenAI API, CopilotKit
 
-## 11. Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx
+## 12. Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx
 
 **Dates:** Feb 2025 – Feb 2026
 **Associated with:** Sanicle
@@ -203,7 +223,7 @@ Stack: Next.js 15, React 19, NextAuth 5, Drizzle + Neon Postgres, Upstash Redis,
 **Skills:** Multi-Tenant Architecture, IBM watsonx, Next.js, NextAuth, Drizzle ORM, Neon Postgres, Upstash Redis, Vercel AI SDK, Google Gemini
 **Media:** `Sanicle-AI: Women's Health Platform for Workplace Wellness` · `screencapture-sanicle-ai-vercel-app-chat-36a2b38e-be71-4c62-a459-ff43cb6d5c7c-2025-03-10-21_31_22.png` · `screencapture-sanicle-ai-vercel-app-employee-dashboard-f13eaf10-0a5b-49cf-b943-c35de5f631b4-events-2025-03-10-21_29_11.png`  _(Show all 10 media)_
 
-## 12. Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant
+## 13. Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant
 
 **Dates:** Apr 2025 – Feb 2026
 **Associated with:** Sanicle
@@ -221,7 +241,7 @@ Stack: Next.js 15, React 19, TypeScript, Tailwind, IBM watsonx, Vercel.
 **Skills:** Next.js, IBM watsonx, React, TypeScript, Tailwind CSS, Conversational AI, Vercel
 **Media:** `screencapture-sanicle-cloud-2025-04-18-16_24_26.png` · `screencapture-sanicle-cloud-team-chan-meng-2025-04-18-16_28_20.png` · `screencapture-sanicle-cloud-demo-2025-04-18-16_27_59.png`  _(Show all 13 media)_
 
-## 13. Google News MCP Server — Early-Ecosystem AI Tool-Use Server
+## 14. Google News MCP Server — Early-Ecosystem AI Tool-Use Server
 
 **Dates:** Dec 2024 – Dec 2024
 
@@ -238,7 +258,7 @@ Stack: TypeScript + Node.js + @modelcontextprotocol/sdk + SerpAPI; published as 
 **Skills:** Model Context Protocol (MCP), TypeScript, Node.js, SerpAPI, npm Publishing
 **Media:** `GitHub - ChanMeng666/server-google-news` · `2024-12-30 021446.png` · `2024-12-30 021524.png`  _(Show all 5 media)_
 
-## 14. CORDE Mobile — Offline-First Field-Operations App (React Native)
+## 15. CORDE Mobile — Offline-First Field-Operations App (React Native)
 
 **Dates:** Jun 2024 – Nov 2024
 **Associated with:** CORDE
@@ -257,7 +277,7 @@ Stack: React Native 0.83, TypeScript, Native Base, SQLite, native geolocation / 
 **Skills:** React Native, Offline-First Architecture, TypeScript, Native Base, SQLite, Mobile Application Development
 **Media:** `CORDE Mobile Application: Revolutionizing Field Operations` · `1-1-LoginScreen.png` · `1-2-3-LoginScreen.png`  _(Show all 9 media)_
 
-## 15. FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
+## 16. FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
 
 **Dates:** Nov 2024 – Nov 2024
 **Other contributors:** yes

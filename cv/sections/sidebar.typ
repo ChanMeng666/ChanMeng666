@@ -25,8 +25,12 @@
 
 // ─── 1. What I bring to a team (plain-English value statements) ─────────────
 // This is the recruiter/HR/founder-facing distillation of the architect-grade
-// patterns the technical sections demonstrate. Each line is one capability +
-// one concrete signal.
+// patterns the technical sections demonstrate. Each bullet LEADS ON WHAT THE
+// READER GETS (bold clause, written to them: "your feature", "your customers'
+// data"), then backs it with one concrete technical signal. Do not re-lead
+// these on the capability — a capability list is a duties list, and this is the
+// section a recruiter or founder reads first. Five bullets is the budget; the
+// signal half must survive any edit to the value half.
 #let what-i-bring() = sec("What I Bring to a Team", {
   set text(size: size-meta, fill: ink)
   // Within-bullet leading is tight; between-bullet spacing ~2× wider so the eye
@@ -39,19 +43,19 @@
     body-indent: 7pt,
   )
   list.item[
-    *Ship production AI agents that hold up under real use.* Compliance and money-handling steps guarded in code, not just prompts.
+    *Your AI feature survives contact with real users.* Compliance and money-handling steps guarded in code, not just in prompts.
   ]
   list.item[
-    *Keep AI fast and economical in production.* Evaluation harnesses with documented failure modes.
+    *Your latency and your AI spend stay predictable.* Evaluation harnesses with documented failure modes.
   ]
   list.item[
-    *Keep every customer's data separate and safe.* Per-customer isolation (multi-tenant), durable error handling, observability.
+    *Your customers' data stays separate, and stays theirs.* Per-customer isolation (multi-tenant), durable error handling, observability.
   ]
   list.item[
-    *Senior judgement on the calls that are hard to reverse.* Discovery-first planning, structured CI output, guardrails enforced in code rather than by instruction.
+    *The decisions that are expensive to undo get made once.* Discovery-first planning, structured CI output, guardrails enforced in code rather than by instruction.
   ]
   list.item[
-    *Make the whole team faster.* Internal CLIs, IDE hooks, and MCP servers that compound across the engineering org.
+    *Everyone around you ships faster too.* Internal CLIs, IDE hooks, and MCP servers that compound across the engineering org.
   ]
 })
 

@@ -5,7 +5,6 @@
 
 ## 1. a11y-loop — Accessibility Checked Where the Code Is Written, Not After
 
-**Dates:** undefined
 **Associated with:** ArchCanvas
 
 ```
@@ -46,7 +45,6 @@ Stack: Next.js 16, OpenNext-on-Cloudflare-Workers, Drizzle + Neon Postgres, Rese
 
 ## 3. Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
-**Dates:** undefined
 
 ```
 Seismophone is an independent observatory for AI music that maps how a Suno-generated song's lineage descends from its parent. Suno is the AI music platform; its own product doesn't expose lineage to creators. Seismophone does, because the research behind it discovered that Suno's API serializer leaks the parent→child UUID chain only on the trending feed and persona sub-trees — nowhere else, not even on the remix page.

@@ -148,7 +148,10 @@ const files = {};
   let s = banner("LinkedIn — Projects");
   data.projects.forEach((p, i) => {
     s += `\n## ${i + 1}. ${p.name}\n\n`;
-    s += `**Dates:** ${p.dateRange}\n`;
+    // Guarded like every other field in this block. A project whose dateRange
+    // is not injected (i.e. it is not in check-linkedin-sync's projNameToId
+    // map) was rendering the literal string "undefined" into published copy.
+    if (p.dateRange) s += `**Dates:** ${p.dateRange}\n`;
     if (p.associatedWith) s += `**Associated with:** ${p.associatedWith}\n`;
     if (p.hasOtherContributors) s += `**Other contributors:** yes\n`;
     s += `\n${block(p.description)}`;

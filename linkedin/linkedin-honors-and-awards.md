@@ -10,7 +10,7 @@
 **Issue date:** Aug 2026
 
 ```
-Named an Outstanding Mentor for the second consecutive year — the award carries no year in its name — at the Aotearoa AI Hackathon Festival 2026, held 7–8 August 2026 at AUT City Campus and hosted by Auckland University of Technology with She Sharp and AI Forum NZ, alongside Fisher & Paykel Healthcare.
+Named an Outstanding Mentor for the second consecutive year at the Aotearoa AI Hackathon Festival 2026, held 7–8 August 2026 at AUT City Campus and hosted by Auckland University of Technology with She Sharp and AI Forum NZ, alongside Fisher & Paykel Healthcare.
 
 125 registered participants, twelve teams, five UN Sustainable Development Goals, and five minutes each in front of the judging panel on the Saturday. Roughly a third of the room had never been to a hackathon before, and that set my brief: get a first-timer from a rough idea to something they can demo, inside two days.
 

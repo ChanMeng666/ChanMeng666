@@ -474,7 +474,15 @@ projects:
       mentors with mentees using AI scoring backed by a human reviewer,
       replacing a Webflow site and spreadsheets the team had outgrown.
     narrative:
-      impactHeadline: "The member platform for New Zealand's leading women-in-STEM charity — solo-built over a year, replacing spreadsheets and a drag-and-drop website with one system for member sign-ups, events, and mentor matching that pairs AI scoring with human review."
+      # 2026-09-04: rewritten. The old headline described a platform build; the
+      # 2026 work recorded in 10-career.yaml (work.she-sharp impactDelivered) is
+      # bigger — the charity's digital and AI-native transformation. Constraints
+      # this line is written under: no dev stats on the README surface (no
+      # commit counts, no authorship share — those live in metrics[] and the
+      # llms surfaces), and the settled scale figures (3,500+ members, 5,000+
+      # women reached, 96+ events since 2014, 50+ partners) are not touched.
+      # Schema cap is 280 chars.
+      impactHeadline: "The digital and AI-native transformation of New Zealand's leading women-in-STEM charity: a volunteer-run team moved off rented software onto infrastructure it owns, with event setup, newsletters, posters, video, mailing list rewritten as 11 agent skills a non-engineer can run."
       problem: |
         She Sharp is New Zealand's leading women-in-STEM nonprofit — a
         registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),

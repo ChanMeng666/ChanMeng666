@@ -12,15 +12,19 @@
 // ended ones. ArchCanvas (her own company) leads; GAVIGO ended Sep 2026.
 //
 // TWO PAGES IS THE BUDGET. Everything here is sized to it:
-//   • Seven roles carry bullets — one each, except She Sharp and TechNest,
-//     which carry two (each had a second result that will not compress into
-//     one sentence without losing a metric, and splitting beats trimming here).
+//   • Seven roles carry bullets — one each, except She Sharp, which carries
+//     two (its second result will not compress into one sentence without losing
+//     a metric, and splitting beats trimming here).
 //     The three CURRENT ones (ArchCanvas, She Sharp, FemTech Weekend) lead;
 //     GAVIGO, TechNest, Engram and Sanicle follow, ended but each carrying a
 //     result worth a bullet. The three oldest roles are single-line entries
 //     under "Earlier experience" — title, org, location and dates are all still
 //     present and delimited, so a parser extracts them as employment exactly
 //     the same way; only the prose is gone.
+//     TechNest carried a SECOND bullet for the teaching platform until Sep 2026.
+//     That platform is now a PROJECTS entry instead — it is Chan's own product,
+//     taught from by TWO separate organisations, not something built for that
+//     employer — so do not re-add the bullet here.
 //   • Job title and dates share two lines, not three (dates ride the org line
 //     behind a "|"). Contact items share two delimited lines, not seven.
 //   • Every bullet is ONE sentence. A bullet that grows to two sentences gets
@@ -254,8 +258,8 @@ building on the Claude Agent SDK.
   location: "Auckland, New Zealand",
   arrangement: "Hybrid",
   bullets: (
-    [Recruited by founder Dr Mahsa Mohaghegh to move a volunteer-run New Zealand women-in-STEM charity (96+ events since 2014) off rented software onto infrastructure it owns: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions with a rule-based fallback, at 1,381 commits, 251 merged pull requests and 94.5% of all lines added across 13.3 months.],
-    [Rewrote the charity's recurring work as 11 agent skills, 25,643 lines of written-down procedure, version-controlled and type-checked in CI, so non-engineers now run work that used to need an engineer.],
+    [Recruited by founder Dr Mahsa Mohaghegh to move a volunteer-run New Zealand women-in-STEM charity (96+ events since 2014) off rented software onto infrastructure it owns: sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions with a rule-based fallback: 1,381 commits, 251 merged pull requests and 94.5% of all lines added across 13.3 months.],
+    [Rewrote its recurring work as 11 agent skills, 25,643 lines of written-down procedure, version-controlled and type-checked in CI, so non-engineers now run work that once needed an engineer.],
   ),
 )
 
@@ -292,7 +296,6 @@ building on the Claude Agent SDK.
   arrangement: "Remote",
   bullets: (
     [Sole instructor of TechNest's first AI track, its fifth cohort since 2024: in 12 weeks students went from browser ChatGPT to directing coding agents, and 30 graduated having shipped 6 multi-user AI products.],
-    [Authored the bilingual platform hosting all five cohorts (211 of 220 commits) and its RAG assistant.],
   ),
 )
 
@@ -353,12 +356,15 @@ building on the Claude Agent SDK.
 )
 
 // ═══ PROJECTS ════════════════════════════════════════════════════════════════
-// Four independent projects Chan owns end to end, mirroring the designed CV's
-// four cards. No project here duplicates a product built at an employer or at
+// Five independent projects Chan owns end to end, mirroring the designed CV's
+// five cards. No project here duplicates a product built at an employer or at
 // Chan's own company — those live in Experience. ArchCanvas used to lead this
 // section; it moved up to Experience when ArchCanvas became a role rather than
 // a side build. echook was promoted from the "Also built" line in Sep 2026 and
-// must therefore no longer appear there. One sentence each.
+// must therefore no longer appear there. The AI Programming Education Platform
+// arrived in Sep 2026 and is Chan's own product, not TechNest's — two separate
+// organisations teach from it — so the TechNest entry above gave up its second
+// bullet when this entry was added. One sentence each.
 = PROJECTS
 
 #project-entry(
@@ -366,11 +372,10 @@ building on the Claude Agent SDK.
   url: "tamaiti.whiri-ai.com",
   target: "https://tamaiti.whiri-ai.com/",
 )[
-  A bilingual te reo Māori and English AI financial-wellness app, built solo on
-  commission from Riria (Missy) Te Kanawa personally, not her employer ASB Bank:
-  three composed OpenAI models, one a realtime voice coach, and culture as typed
-  schema (Maramataka phases, Te Whare Tapa Whā domains); a 19-user cohort
-  produced 181 journal entries over 4 months.
+  A te reo Māori and English AI financial-wellness app built solo on commission
+  from Riria (Missy) Te Kanawa herself, not her employer ASB Bank: three composed
+  OpenAI models, one a realtime voice coach, culture as typed schema (Maramataka,
+  Te Whare Tapa Whā); a 19-user cohort produced 181 journal entries in 4 months.
 ]
 
 #project-entry(
@@ -400,8 +405,19 @@ building on the Claude Agent SDK.
 )[
   An AI-operated hooks plugin for Claude Code, Cursor IDE and Codex CLI,
   installed and driven entirely in natural language, grown from audio
-  notifications into a context-window status line and richer session telemetry:
-  the production work behind having shipped every Claude Code extension surface.
+  notifications into a context-window status line and session telemetry: the
+  production work behind shipping every Claude Code extension surface.
+]
+
+#project-entry(
+  name: "AI Programming Education Platform",
+  url: "programming.chanmeng.org",
+  target: "https://programming.chanmeng.org/",
+)[
+  A bilingual Docusaurus platform (211 of 220 commits) carrying five cohort
+  versions of AI-programming teaching side by side, three concurrent in 2026, for
+  TechNest's 2026 AI Track and academyEX's Her Waka, with a Cloudflare Workers RAG
+  assistant doing version-aware retrieval over 4,800 chunks.
 ]
 
 // Everything else Chan built, one descriptor each. A bare link tells a reader
@@ -415,9 +431,9 @@ building on the Claude Agent SDK.
 // exactly once across the document.
 #block(above: 0pt, below: 0pt, {
   strong("Also built: ")
-  [#link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited as event partner),
+  [#link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited),
   #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates),
-  #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (an accessibility CLI and Claude Code skill, validated and taken up by the disability-led New Zealand organisation that set the problem), and #link("https://seismophone.chanmeng.org/")[Seismophone] (the first public Suno remix-lineage explorer).]
+  #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (an accessibility CLI and Claude Code skill, validated by the disability-led New Zealand organisation that set the problem), and #link("https://seismophone.chanmeng.org/")[Seismophone] (the first public Suno remix-lineage explorer).]
 })
 
 // ═══ EDUCATION ═══════════════════════════════════════════════════════════════
@@ -444,11 +460,11 @@ building on the Claude Agent SDK.
 // ampersand; "Certifications" is the lexicon entry.
 = CERTIFICATIONS
 
-#skills-line("Anthropic (6, 2025-2026)", (
+#skills-line("Anthropic (6)", (
   "Building with the Claude API", "Intro to MCP",
   "Intro to Agent Skills", "Claude Code in Action",
   "AI Fluency: Framework and Foundations",
-  "Claude Certified Architect (Foundations): practice exam passed, Partner Network track",
+  "Claude Certified Architect (Foundations): practice exam passed",
 ))
 #skills-line("Other (50+ total)", (
   "Google AI Essentials", "Microsoft Azure AI Essentials",

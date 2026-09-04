@@ -43,7 +43,7 @@ EXPECTED_HEADINGS = [
     "PROFESSIONAL SUMMARY", "TECHNICAL SKILLS", "PROFESSIONAL EXPERIENCE",
     "PROJECTS", "EDUCATION", "CERTIFICATIONS", "AWARDS AND RECOGNITION",
 ]
-EXPECTED_BULLETS = 12     # 9 role bullets (She Sharp and TechNest carry two) + 3 awards
+EXPECTED_BULLETS = 11     # 8 role bullets (She Sharp carries two) + 3 awards
 EXPECTED_PAGES = 2
 
 failures = []

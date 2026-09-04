@@ -696,7 +696,17 @@ projects:
     publicSummary: |
       The live public website for Eatropolis — Auckland's one-day culinary festival on 10 October 2026 at Shed 10, featuring 30+ award-winning chefs — solo-built under a signed freelance contract with Chow Luck Club Ltd. It runs on Next.js and Cloudflare's edge network, meets the NZ Government's WCAG 2.2 AA accessibility standard, and includes a voice-enabled AI guide that answers visitor questions about dishes, tickets, and getting there. It launched publicly in June 2026 after passing a 1,000-visitor load test with zero errors, and the non-technical client now edits all site content themselves.
     narrative:
-      impactHeadline: "The live website for Eatropolis, Auckland's one-day food festival — 30+ award-winning chefs at Shed 10 on 10 Oct 2026. Solo-built in a 9-day sprint: an accessible (WCAG 2.2 AA) site with a voice-enabled AI event guide that passed a 1,000-visitor load test with zero errors."
+      # 2026-09-04: the "Solo-built in a 9-day sprint" lead was removed. Leading
+      # with build speed made the work read as though quality was traded for
+      # pace; what actually signals reach is the event (Auckland's official
+      # culinary festival) and its reviewers (Chow Luck Club Ltd commissioned
+      # it; Tātaki Auckland Unlimited, Auckland Council's economic and cultural
+      # development agency, was event partner and co-reviewer — both render as
+      # the logo line directly above this text, so the names are not repeated
+      # here). The same fix was applied to both CVs. The 9-day build span is
+      # still a fact in metrics[] / businessLogic / outcomes — it just no
+      # longer leads.
+      impactHeadline: "The live site for Eatropolis, Auckland's official one-day culinary festival — 30+ award-winning chefs at Shed 10 on 10 Oct 2026. Commissioned work, reviewed by the council's development agency: WCAG 2.2 AA, a voice-enabled AI event guide, a 1,000-visitor load test, zero errors."
       problem: |
         Auckland-based Chow Luck Club Ltd — producer of the Eatropolis culinary festival, supported by Tātaki Auckland Unlimited on behalf of Auckland Council Events — needed a real, production-grade public website for its one-day festival on 2026-10-10 at Shed 10, Queens Wharf, Auckland, featuring 30+ award-winning chefs. The brief, set in a signed 4 May 2026 commercial agreement, called for a custom-designed site at eatropolis.co.nz released in two visibility phases (a teaser landing first, then the full site), conformance to the NZ Government Web Accessibility Standard 1.2 (WCAG 2.2 Level AA) with Tātaki Auckland Unlimited review gates before each launch, load-testing to 1,000 concurrent visitors, strong mobile performance, SEO plus AI-crawler discoverability, full contact and enquiry forms with branded email, an AI event assistant, privacy-compliant analytics, and — critically — a way for the non-technical client to edit every word on the site themselves after handoff. All delivered solo by one freelance developer in nine working days, with three months of post-launch maintenance included.
       audience: |

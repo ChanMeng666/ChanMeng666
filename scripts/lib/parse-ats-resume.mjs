@@ -62,10 +62,13 @@ export const EXPECT = {
   rolesWithBullets: 7,
   rolesCompact: 3,
   skillsLines: { "TECHNICAL SKILLS": 5, CERTIFICATIONS: 2 },
-  // 4 since Sep 2026: echook was promoted out of the "Also built" line into a
+  // 5 since Sep 2026: echook was promoted out of the "Also built" line into a
   // full entry, mirroring the designed CV's fourth project card — so the link
-  // count below went down by one as this one went up.
-  projects: 4,
+  // count below went down by one as this one went up. The AI Programming
+  // Education Platform then became the fifth, taking over the platform bullet
+  // the TechNest role entry used to carry (rolesWithBullets is unchanged; that
+  // role kept one bullet).
+  projects: 5,
   alsoBuiltLinks: 4,
   education: 2,
   awards: 3,

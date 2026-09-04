@@ -2162,7 +2162,10 @@ projects:
   - id: gavigo-website
     provenance: client
     tier: primary
-    recency: active
+    # 2026-09-04: active -> recent. Chan's GAVIGO engagement ended 2026-09
+    # (see work[gavigo].endDate and the same note on gavigo-ire); the site
+    # itself is still live, hence status: live.
+    recency: recent
     lastUpdated: "2026-08-05"
     name: GAVIGO Website
     # Shares gavigo-ire's company mark deliberately: same client, and the
@@ -2174,7 +2177,7 @@ projects:
     clientOrgId: gavigo
     relatedWorkId: gavigo
     relatedProjectIds: [gavigo-ire]
-    tagline: "GAVIGO Inc.'s public marketing and investor-readiness website (gavigo.com) — the standalone brand surface that links to the IRE product demo (ire.gavigo.com/mobile), with a Markdown content pipeline, Resend email capture, and a Cloud Run production deploy; Chan is the sole developer (66/66 commits, 100%), including the investor-readiness polish pass"
+    tagline: "GAVIGO Inc.'s public marketing and investor-readiness website (gavigo.com) — the standalone brand surface that links to the IRE product demo (ire.gavigo.com/mobile), with a Markdown content pipeline, Resend email capture, and a Cloud Run production deploy; Chan was the sole developer (66/66 commits, 100%), including the investor-readiness polish pass"
     # repoUrl omitted — private GAVIGO org repository (gavigo-inc/gavigo-website, 404s publicly); do not re-add.
     url: https://gavigo.com/
     entity: "GAVIGO Inc. (Delaware C-Corp; Founder & CEO: Saba Gecgil)"
@@ -2197,14 +2200,15 @@ projects:
       - { label: "Role",           value: "the standalone company/investor site, decoupled from the IRE product runtime (ire.gavigo.com) it links to" }
       - { label: "Content",        value: "Markdown/MDX pipeline (remark + rehype + gray-matter) so non-engineers can edit copy without touching code" }
       - { label: "Capture",        value: "Resend + React Email lead capture wired to Neon Postgres (Drizzle ORM)" }
-      - { label: "Company",        value: "GAVIGO Inc. (Delaware C-Corp; NVIDIA Inception + Google for Startups); Chan is founding principal engineer on the flagship IRE platform" }
+      - { label: "Company",        value: "GAVIGO Inc. (Delaware C-Corp; NVIDIA Inception + Google for Startups); Chan was Founding Principal Engineer on the flagship IRE platform, Oct 2025 - Sep 2026" }
     startDate: "2025-12"
+    endDate: "2026-09"
     publicSummary: |
       GAVIGO Inc.'s public marketing and investor-readiness website at
       gavigo.com — the company's standalone brand surface, deliberately
       decoupled from the IRE product runtime (ire.gavigo.com) so marketing
       copy and investor messaging can change without redeploying the product.
-      Chan built and maintains it solo (66 of 66 commits): a Next.js site with
+      Chan built it solo (66 of 66 commits): a Next.js site with
       a Markdown/MDX content pipeline (so non-engineers can edit copy),
       Motion-driven brand animation, Resend + React Email lead capture backed
       by Neon Postgres, and a Google Cloud Run production deploy — including
@@ -2905,7 +2909,14 @@ projects:
       (`npx a11y-loop`), with a contrast checker that proposes fixes and
       a CI mode. MIT.
     narrative:
-      impactHeadline: "Shifts accessibility left into the agent's own write step, then verifies it in a real browser across built states — and publishes an explicit 'could not check' list, so a passing run never overclaims WCAG 2.2 AA coverage."
+      # 2026-09-04: the validation was added to the headline in the exact
+      # framing outcomes[] uses. NOT "adopted" — that claim was retired the
+      # same day: no paid contract, no formal partnership, no endorsement,
+      # nothing in production. What is true is a live walkthrough with the CTO
+      # of the organisation that wrote the problem statement, his quoted words,
+      # and his stated intent to put it in front of their own developer. The
+      # honesty caveat stays in the same sentence it always was.
+      impactHeadline: 'Makes AI coding agents write accessible UI by default, verifies it in a real browser, and lists what it could not check so a pass never overclaims WCAG 2.2 AA. The disability-led NZ org that set the problem validated it live: "what we really needed was a tool for programmers."'
       problem: |
         AI coding agents produce interfaces fast, and they produce
         inaccessible ones by default: missing focus indicators, unlabelled

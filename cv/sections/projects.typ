@@ -8,16 +8,20 @@
   set text(size: size-body, fill: ink)
   set par(leading: leading-body, justify: false)
   [
-    Ships MCP servers, sub-agents, and agent skills to production — behind paying customers, private health data, and regulated work, not demos. Focus areas: *women's health, cultural technology, and early-stage startup infrastructure*. Works AI-native by default — directing coding agents (Claude Code, Codex) and building on the Claude Agent SDK, while keeping the call on what actually ships a human one.
+    Ships MCP servers, sub-agents, and agent skills to production — behind paying customers, private health data, and regulated work, not demos. Focus areas: *women's health, cultural technology, and early-stage startup infrastructure*. Works AI-native by default — directing coding agents and building on the Claude Agent SDK, while keeping the call on what actually ships a human one.
   ]
 })
 
 // ─── SELECTED PROJECTS & PRODUCTS ────────────────────────────────────────────
-// Four independent projects Chan owns end to end (open-source engines,
+// Five independent projects Chan owns end to end (open-source engines,
 // commissioned-solo research, and shipped products — hence "Projects &
 // Products", since Tam-AI-Ti is a live product, not a public repo). NOT
 // products built at an employer or at her own company — those live in
-// Experience, and no card here may duplicate one. ArchCanvas × ArchLang used to
+// Experience, and no card here may duplicate one. The AI Programming Education
+// Platform is hers, not TechNest's: two separate organisations teach from it,
+// and the TechNest role line in experience.typ was trimmed back to the teaching
+// outcome when this card was added (Sep 2026) so the platform is described
+// exactly once. ArchCanvas × ArchLang used to
 // lead this section; it moved to Experience when ArchCanvas became a role
 // (Founder & Sole Engineer) rather than a side build, and duplicating it here
 // would have cost the two-page budget a card it already pays for above. The
@@ -29,10 +33,9 @@
       logo: "/public/brands/tam-ai-ti-mark.svg",
       name: "Tam-AI-Ti",
       url: "https://tamaiti.whiri-ai.com/",
-      context-line: [An AI financial-wellness app for Māori communities, built around te ao Māori · an independent research commission from Riria (Missy) Te Kanawa personally (former KPMG NZ National Māori Sector lead; now Māori Executive Lead at ASB Bank, which was not a party to this commission).],
+      context-line: [An AI financial-wellness app for Māori communities, built around te ao Māori · an independent research commission from Riria (Missy) Te Kanawa personally (former KPMG NZ National Māori Sector lead, now Māori Executive Lead at ASB Bank; ASB was not a party to it).],
       bullets: (
-        [*A research question, not a spec:* can technology built natively on Māori culture engage a population that culturally-decorated technology does not? Built solo — a bilingual voice-and-journaling app where the culture is typed data in the database (Maramataka phases, Te Whare Tapa Whā domains), not labels bolted on.],
-        [The evidence: a *19-user cohort over 4 months* produced 181 bilingual journal entries and 74 daily check-ins — sustained engagement for a pilot with no marketing.],
+        [*A research question, not a spec:* can technology built natively on Māori culture engage people that culturally-decorated tech does not? Built solo: bilingual voice and journaling, culture as typed data (Maramataka phases, Te Whare Tapa Whā domains), not labels. Evidence: a *19-user cohort over 4 months*, 181 journal entries, 74 check-ins, no marketing.],
       ),
     ),
     (
@@ -41,26 +44,35 @@
       url: "https://www.vitex.org.nz/",
       context-line: [Paste a job description, get a tailored resume and cover letter scored against the job's keywords in under 30 seconds · sole-authored over \~18 months · Vercel AI SDK + gpt-5.5 / gpt-5.4-mini + Typst.],
       bullets: (
-        [The resume assembles live instead of behind a spinner, and *Typst compiles the finished PDF locally in under 100 ms* across 7 templates — no hosted Chromium or outside doc service.],
-        [*Metered around the product, not the clock* — a run counts only after a PDF compiles, so a failed retry is a non-event. Built for the NZ / AU / APAC market Chan needed; three migrations, zero downtime.],
+        [*Typst compiles the finished PDF locally in under 100 ms* across 7 templates — no hosted Chromium — and the resume assembles live, not behind a spinner. *Metered on the product, not the clock:* a run counts only after a PDF compiles; three migrations, zero downtime.],
       ),
     ),
     (
       logo: "/public/brands/server-google-news-mark.svg",
       name: "Google News MCP Server",
-      url: "https://glama.ai/mcp/servers/ChanMeng666/server-google-news",
-      context-line: [Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch.],
+      url: "https://github.com/ChanMeng666/server-google-news",
+      context-line: [Earliest-ecosystem MCP server — live Google News for AI assistants, shipped 35 days after Anthropic's Nov 2024 MCP launch.],
       bullets: (
-        [*Shipped before MCP had a registry* — 35 days after the standard launched — so it was listed by hand across 15+ catalogs. The first-mover position compounded: a PulseMCP "Top Pick", a Glama A-rating, and 126 GitHub stars.],
+        [*Shipped before MCP had a registry*, so listed by hand across 15+ catalogs — a first-mover position that compounded into a PulseMCP "Top Pick", a Glama A-rating and *126 GitHub stars*.],
       ),
     ),
     (
       logo: "/public/brands/echook-mark.svg",
       name: "echook",
       url: "https://github.com/ChanMeng666/echook",
-      context-line: [An AI-operated hooks plugin for *Claude Code, Cursor IDE and Codex CLI* — installed, configured and driven entirely in natural language.],
+      context-line: [An AI-operated hooks plugin for *Claude Code, Cursor IDE and Codex CLI*, installed and driven entirely in natural language.],
       bullets: (
-        [Started as audio notifications, now a *context-window status line* and session telemetry — the production work behind having shipped *every* Claude Code extension surface: CLAUDE.md, hooks, status line, plugins.],
+        [Audio notifications grew into a *context-window status line* and telemetry — the production work behind shipping *every* Claude Code extension surface: CLAUDE.md, hooks, status line, plugins.],
+      ),
+    ),
+    (
+      logo: "/public/brands/ai-programming-mark.svg",
+      name: "AI Programming Education Platform",
+      url: "https://programming.chanmeng.org/",
+      context-line: [Bilingual platform holding *three years of cohorts as five versions side by side, three concurrent in 2026* — taught from by *TechNest's 2026 AI Track* and *academyEX's Her Waka*. *211 of 220 commits, 95.9% solo.*],
+      bullets: (
+        [*In-course RAG assistant on Cloudflare Workers* (Llama 3.1 8B + Vectorize + KV) over *\~4,800 chunks, version-aware*, so each student is answered from their own cohort's material; a deprecated model was swapped out the same day.],
+        [*Mentorship at scale:* Demo Day ends in a *public Capstone Showcase* of student products (CreditHero, iCare, JobOrg-AI), with guest voting.],
       ),
     ),
   )
@@ -80,13 +92,13 @@
   //    project appears exactly once across the entire CV. A clear gap (≈ the
   //    inter-card rhythm) separates it from the last project card above so it
   //    doesn't read as part of the echook entry.
-  v(10pt)
+  v(8pt)
   block(
     {
       set text(size: size-tiny, fill: muted, style: "italic")
       set par(leading: 0.68em, justify: false)
       [
-        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited as event partner) · #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (accessibility CLI for coding agents; the disability-led NZ organisation that set the problem validated it and is working it in) · #link("https://seismophone.chanmeng.org/")[Seismophone] (first public Suno remix-lineage explorer) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
+        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, for Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited) · #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (accessibility CLI for coding agents, validated by the disability-led NZ organisation that set the problem) · #link("https://seismophone.chanmeng.org/")[Seismophone] (first public Suno remix-lineage explorer) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
       ]
     },
   )

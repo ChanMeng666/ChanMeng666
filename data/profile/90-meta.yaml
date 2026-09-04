@@ -194,7 +194,11 @@ meta:
       cohortCount: 5
       learnerReachClaim: "100+ direct learners across 5 cohorts since 2024"
       menteeRefsClaim: "7 LinkedIn references from Forward with Her mentees"
-      flagshipAwardClaim: "Outstanding Mentor Award — AI Hackathon Festival 2025"
+      # Two consecutive years, one award: the 2025 festival and the 2026
+      # Aotearoa AI Hackathon Festival (7–8 Aug 2026, AUT City Campus). The
+      # award's official name carries no year suffix — the "(2026)" in
+      # awards[] is only a database disambiguator, so don't mirror it here.
+      flagshipAwardClaim: "Outstanding Mentor Award, two years running — AI Hackathon Festival 2025 and Aotearoa AI Hackathon Festival 2026"
 
     # Project ordering for README
     # Drives the big editorial cards at the top of the README ("What I build").
@@ -632,6 +636,12 @@ meta:
       - { claim: "Recognised as one of 14 expert mentors at the AI Hackathon Festival 2025 (co-organised by AI Forum NZ, She Sharp, and Auckland University of Technology, August 2025), guiding 11 teams comprising 80+ participants — including students from Westlake Girls High School — to ship AI-powered solutions aligned with UN Sustainable Development Goals across food insecurity, digital accessibility, workforce upskilling, and indigenous environmental stewardship",
           source: "https://www.linkedin.com/in/chanmeng666/details/honors/",
           verifiedAt: "2026-05-17" }
+      # The same award a second consecutive year. Kept as its own claim rather
+      # than folded into the 2025 one: the two festivals have different names,
+      # hosts and numbers, and an LLM quoting either should get that year right.
+      - { claim: "Named an Outstanding Mentor a second consecutive year at the Aotearoa AI Hackathon Festival 2026 (7–8 August 2026, AUT City Campus; hosted by Auckland University of Technology with She Sharp and AI Forum NZ, with Fisher & Paykel Healthcare) — technical mentor to 125 registered participants across twelve teams building against five UN Sustainable Development Goals, billed on the host's public 'Meet the Mentors' roster as Founding Engineer, ArchCanvas, and MC of the festival opening",
+          source: "https://www.linkedin.com/in/chanmeng666/details/honors/",
+          verifiedAt: "2026-09-04" }
       - { claim: "UN CSW 69 Speaker (March 14, 2025, UN Headquarters New York, Beyond Beijing 30 Conference) — presented Sanicle AI to international delegates including IBM representatives who expressed interest in pilot collaboration and the Minister of Gender and Children's Affairs from Sierra Leone, who praised the platform as the first comprehensive solution connecting menstrual cycle data to actionable workplace policies through AI analysis; the presentation generated multiple follow-up collaboration requests from NGOs and UN member states",
           source: "https://chanmeng.org/blog/from-code-to-care-un",
           verifiedAt: "2026-05-17" }

@@ -43,7 +43,7 @@
     org-url: "https://www.shesharp.org.nz/",
     dates: "Jul 2025 — Present",
     location: [Auckland, New Zealand · *Hybrid*],
-    summary: [A volunteer-run NZ women-in-STEM charity (*96+ events since 2014*) now owns the software it runs on instead of renting it: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions. Recruited by founder Dr Mahsa Mohaghegh, built it as sole engineer across *13.3 months* and still operate it. Then rewrote the charity's recurring work as *11 agent skills — 25,643 lines of written-down procedure*, version-controlled and type-checked in CI, so non-engineers run work that used to need an engineer.],
+    summary: [A volunteer-run NZ women-in-STEM charity (*96+ events since 2014*) now owns the software it runs on instead of renting it: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions. Recruited by founder Dr Mahsa Mohaghegh, built it as sole engineer across *13.3 months* and still operate it. Then rewrote the charity's recurring work — event setup, newsletters, posters, video, mailing list — as *11 agent skills*, version-controlled and type-checked in CI, so non-engineers now run work that used to need an engineer.],
   )
   role-line(
     title: "Chief Technology Officer",

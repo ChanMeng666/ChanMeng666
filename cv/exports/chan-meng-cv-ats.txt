@@ -9,11 +9,11 @@ AI and full-stack engineer who has shipped MCP servers, sub-agents, and agent sk
 
 TECHNICAL SKILLS
 
-AI and agent engineering: Claude Agent SDK, OpenAI Agents SDK, Model Context Protocol (MCP), LangGraph, LangChain, CopilotKit, Vercel AI SDK, RAG pipelines, multi-agent orchestration, structured outputs and JSON Schema, prompt caching, model-tier routing with deterministic fallback, evaluation harnesses, mcp-evals
+AI and agent engineering: Claude Agent SDK, OpenAI Agents SDK, Model Context Protocol (MCP), LangGraph, LangChain, CopilotKit, Vercel AI SDK, RAG pipelines, multi-agent orchestration, JSON Schema outputs, prompt caching, model-tier routing with fallback, evaluation harnesses, mcp-evals
 Languages and frameworks: TypeScript, Python, Go, Java, SQL, Next.js 16, React, React Native, Vue 3, Spring Boot 3, FastAPI, TailwindCSS, Drizzle ORM, Zod
 Claude Code and Codex CLI: CLAUDE.md, Agent Skills, Subagents, Hooks, Status line, Plugins, AGENTS.md, sandbox and approval policies, headless mode
-Models: Anthropic Claude Opus, Sonnet, Haiku, OpenAI gpt-5.5, GPT-4o, realtime, Gemini, Llama
-Infrastructure, data, and quality: Neon Postgres, Supabase, Docker, Stripe, NextAuth 5, Vitest, Cypress, web-vitals, OpenTelemetry, multi-tenant isolation, CI/CD pipelines
+Models: Anthropic Claude Opus 5, Sonnet 5, Haiku 4.5, OpenAI gpt-5.5, GPT-4o, realtime, Gemini, Llama
+Infrastructure, data, and quality: Neon Postgres, Supabase, Redis, Cloudflare Workers, Docker, Stripe, NextAuth 5, Vitest, Cypress, web-vitals, OpenTelemetry, multi-tenant isolation, CI/CD pipelines
 
 PROFESSIONAL EXPERIENCE
 
@@ -24,7 +24,7 @@ ArchCanvas | Auckland, New Zealand | Remote | Apr 2026 - Present
 Senior Full-Stack Engineer & Website Team Lead
 She Sharp | Auckland, New Zealand | Hybrid | Jul 2025 - Present
 - Recruited by founder Dr Mahsa Mohaghegh to move a volunteer-run New Zealand women-in-STEM charity (96+ events since 2014) off rented software onto infrastructure it owns: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions with a rule-based fallback, at 1,381 commits, 251 merged pull requests and 94.5% of all lines added across 13.3 months.
-- Rewrote the charity's recurring work as 11 agent skills, 25,643 lines of written-down procedure that is version-controlled and type-checked in CI, so non-engineers can now run work that used to need an engineer.
+- Rewrote the charity's recurring work as 11 agent skills, 25,643 lines of written-down procedure, version-controlled and type-checked in CI, so non-engineers now run work that used to need an engineer.
 
 Chief Technology Officer
 FemTech Weekend | Chengdu, Sichuan, China | Remote | Mar 2025 - Present
@@ -36,12 +36,12 @@ GAVIGO Inc. | Wilmington, Delaware, United States | Remote | Oct 2025 - Sep 2026
 
 AI Instructor & Mentor
 TechNest Community | St John's, Newfoundland, Canada | Remote | Apr 2026 - Aug 2026
-- Sole instructor of TechNest's first AI-specialised track, the fifth cohort since 2024: over 12 weeks students went from browser ChatGPT to directing coding agents, and 30 graduated having shipped 6 multi-user AI products.
-- Authored the bilingual platform hosting all five cohorts (211 of 220 commits), behind a version-aware RAG assistant on Cloudflare Workers.
+- Sole instructor of TechNest's first AI track, its fifth cohort since 2024: in 12 weeks students went from browser ChatGPT to directing coding agents, and 30 graduated having shipped 6 multi-user AI products.
+- Authored the bilingual platform hosting all five cohorts (211 of 220 commits) and its RAG assistant.
 
 AI Agent Architect
 Engram | Albuquerque, New Mexico, United States | Remote | May 2026 - Jul 2026
-- Recruited onto Anthropic's Partner Network architect track after the founder's own Claude agent surfaced this open-source portfolio; completed the 45-day Architect Cohort, contributing to its agent, skill, and MCP conventions.
+- Recruited onto Anthropic's Partner Network architect track when the founder's Claude agent surfaced this portfolio; completed the 45-day Architect Cohort, contributing to its agent, skill and MCP conventions.
 
 Chief Technology Officer
 Sanicle | Tulsa, Oklahoma, United States | Remote | Mar 2025 - Feb 2026
@@ -64,7 +64,10 @@ Paste a job description, get a tailored resume and cover letter scored against i
 Google News MCP Server | github.com/ChanMeng666/server-google-news
 An earliest-ecosystem Model Context Protocol server, shipped 35 days after Anthropic launched MCP and before a registry existed: a PulseMCP Top Pick, a Glama A-rating, and 126 GitHub stars.
 
-Also built: echook (https://github.com/ChanMeng666/echook), eatropolis.co.nz, gradient-svg-generator (https://gradient-svg-generator.vercel.app/), a11y-loop (https://github.com/ChanMeng666/a11y-loop), and Seismophone (https://seismophone.chanmeng.org/).
+echook | github.com/ChanMeng666/echook
+An AI-operated hooks plugin for Claude Code, Cursor IDE and Codex CLI, installed and driven entirely in natural language, grown from audio notifications into a context-window status line and richer session telemetry: the production work behind having shipped every Claude Code extension surface.
+
+Also built: eatropolis.co.nz (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited as event partner), gradient-svg-generator (https://gradient-svg-generator.vercel.app/) (355 SVG templates), a11y-loop (https://github.com/ChanMeng666/a11y-loop) (an accessibility CLI and Claude Code skill, validated and taken up by the disability-led New Zealand organisation that set the problem), and Seismophone (https://seismophone.chanmeng.org/) (the first public Suno remix-lineage explorer).
 
 EDUCATION
 
@@ -73,11 +76,11 @@ Bachelor of Geography Science, Jiangsu Normal University, China | Sep 2012 - Jun
 
 CERTIFICATIONS
 
-Anthropic (6, 2025-2026): Building with the Claude API, Introduction to MCP, Introduction to Agent Skills, Claude Code in Action, AI Fluency: Framework and Foundations, Claude Certified Architect (Foundations): practice exam passed, Partner Network track
+Anthropic (6, 2025-2026): Building with the Claude API, Intro to MCP, Intro to Agent Skills, Claude Code in Action, AI Fluency: Framework and Foundations, Claude Certified Architect (Foundations): practice exam passed, Partner Network track
 Other (50+ total): Google AI Essentials, Microsoft Azure AI Essentials, HackerRank Software Engineer plus 22 skill certifications
 
 AWARDS AND RECOGNITION
 
 - UN CSW 69 Speaker (by video link), UN Headquarters, New York, Mar 2025 — drew IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.
 - Outstanding Mentor Award, Aotearoa AI Hackathon Festival, won in 2025 (1 of 14 mentors) and again in 2026, a second consecutive year; Excellence Award, FemTech China Women's Health Technology Challenge (Dec 2024); Outstanding Performer, UN Women FemTech Hackathon, Beijing (Mar 2025).
-- Community: 480+ GitHub stars across own public repos, 26 LinkedIn recommendations, 2 PRs merged into CopilotKit.
+- Community: 480+ GitHub stars on own repos, 26 LinkedIn recommendations, 2 merged CopilotKit PRs.

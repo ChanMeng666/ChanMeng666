@@ -86,7 +86,7 @@ thought."
 - **RCSA Australia and New Zealand** (partner) -- Industry insights partner — Her Waka 2026. URL: https://www.rcsa.com.au.
 - **Auckland University of Technology** (partner) -- Co-organiser — AI Hackathon Festival 2025. URL: https://www.aut.ac.nz.
 - **AI Forum New Zealand** (partner) -- Co-organiser — AI Hackathon Festival 2025. URL: https://aiforum.org.nz.
-- **My Life My Voice** (partner) -- Disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon Festival 2026, then adopted a11y-loop into its own project development on 2026-09-04 — Chan gives its team ongoing technical guidance; unpaid, no signed partnership. URL: https://www.mylifemyvoice.org.nz. Related project: a11y-loop.
+- **My Life My Voice** (partner) -- Disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon Festival 2026; its CTO took a live walkthrough of a11y-loop on 2026-09-04 and is working it in with the organisation's developer, with Chan advising — unpaid, no signed partnership, nothing deployed. URL: https://www.mylifemyvoice.org.nz. Related project: a11y-loop.
 - **UN Women** (partner) -- CSW 69 speaker — UN HQ NYC, Mar 14 2025. URL: https://www.unwomen.org.
 - **United Nations Headquarters** (partner) -- Beyond Beijing 30 Conference speaker (CSW 69). URL: https://www.un.org.
 - **Westlake Girls High School** (partner) -- Mentee school — AI Hackathon Festival 2025. URL: https://www.westlakegirls.school.nz.
@@ -2783,7 +2783,7 @@ Capstone classroom infrastructure. A Cloudflare Worker proxies writes into Notio
 
 **My role:** I built and run the entire platform end-to-end: Docusaurus configuration, the versioned-docs taxonomy across five cohorts, every cohort's curriculum content, the Cloudflare Worker RAG backend (worker entry, chat handler, RAG module, Vectorize seeding, KV session store), the BGE-Base embeddings ingestion pipeline, the Typst PDF handout build, the Mermaid dual-view component, the Notion-Worker proxy and Demo Day showcase for Capstone voting, the Algolia contextual-search configuration, and the bilingual i18n across every surface. I migrated production from Vercel to Cloudflare Pages in 2026-04, and in 2026-07 hardened the chat backend (custom domain, rate limiting, CORS allow-list, WAF) and restored it onto Cloudflare's current model after the old one was deprecated. I continue to ship the current cohort's recordings and lab content each week.
 ### a11y-loop — A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then proves what it can prove with a real Playwright + axe-core browser audit across the states the agent built — and states plainly what it could not check
-[tier=flagship · recency=active · updated=2026-09-04]
+[tier=primary · recency=active · updated=2026-09-04]
 - **Repository:** https://github.com/ChanMeng666/a11y-loop
 - **Tech stack:** Claude Code Skill (Agent Skills open standard), Node.js >= 20, Playwright, axe-core 4.12, WCAG 2.2 AA, JavaScript, GitHub Actions CI
 
@@ -2842,19 +2842,33 @@ README's most flattering number — the 35 → 1 → 0 benchmark — was
 deliberately left out of all three, because N=6, single-run and
 self-audited cannot be caveated properly in an email or a social post;
 the fully reproducible 163 → 0 demo was used instead.
-**Adopted on 2026-09-04.** In a meeting that day, **Timothy Young,
-CTO of My Life My Voice**, told Chan the organisation had decided to
-take the tool into its own project development, and that the two would
-keep working together — Chan providing technical guidance to the
-members of their team who need it. Three and a half weeks separate the
-unsolicited handover, made with nothing at stake, from a disability-led
-organisation choosing to build on it. What that is, precisely:
-**adoption into their development work plus an ongoing advisory
-arrangement**. What it is not: a paid contract, a formal partnership
-agreement, an endorsement of Chan, or evidence that the tool is
-deployed in production. The §3 honesty rules above bind harder now
-rather than less — an adopted accessibility tool that overclaims does
-more damage than an unadopted one.
+**Validated on 2026-09-04 by the organisation that set the problem.**
+Chan gave **Timothy Young**, CTO of My Life My Voice, a live
+screen-share walkthrough that day — pull the public repo, ask the coding
+agent to install the Agent Skill and the CLI, then invoke it with
+`/a11y-loop` — run against a real production site. Young wrote that
+challenge brief, and he had moved from the organisation's Chief
+Executive role into the CTO seat to lead its Workforce Futures–funded
+programme putting AI resources into New Zealand's social-sector
+organisations, which is why an accessibility tool for developers sits
+inside his remit at all. His verdict is recorded with its hedge intact:
+it **"won't do the entire job, but it looks like it will be a big
+help."** The stronger evidence is what he said about the gap itself —
+that vibe-coding tools can be asked to follow the accessibility
+guidelines and will do "an okay job", but **"what we really needed was a
+tool for programmers"**. That is a11y-loop's own thesis, arrived at
+independently by the author of the problem statement. He judged that
+applying it "doesn't seem like it would be that hard", is putting it in
+front of the organisation's own developer to work in, and the two
+discussed how to promote it so more people use it. The work continues
+with Chan advising: in the same call she walked him through installing
+Cursor and standing up a local development environment — GitHub CLI,
+git, Node.js — from scratch. Three and a half weeks separate the
+unsolicited handover, made with nothing at stake, from that walkthrough.
+What it is **not**: a paid contract, and not evidence that the tool is
+deployed in production — nothing has shipped, and no adoption decision
+was put on the record. The §3 honesty rules above bind harder as the
+tool reaches real teams, not less.
 
 **My role:** Sole author. Published to npm as `a11y-loop`; the repo is written
 agent-first, with an AGENTS.md alongside the README so an agent can
@@ -3854,14 +3868,20 @@ contact form plus an email to `info@mylifemyvoice.org.nz`, offering a free
 walkthrough and a roadmap open to feedback from disabled testers — and
 published a LinkedIn post crediting them the same day.
 
-**That handover was adopted on 2026-09-04.** Timothy Young, CTO of My
-Life My Voice, told Chan the organisation would take `a11y-loop` into its
-own project development and that the collaboration would continue, with
-Chan giving technical guidance to members of their team. Adoption plus an
-ongoing advisory arrangement — not a paid contract, not a formal
-partnership, not an endorsement, and not a production deployment; the
-whole account is Chan's own (see the SELF-ATTESTED note above the
-`a11y-loop` entry). Full record:
+**That handover got a live walkthrough on 2026-09-04.** Timothy Young —
+CTO of My Life My Voice, and the author of that challenge brief — took a
+screen-share demonstration of `a11y-loop` running against a real
+production site, and described the gap it was built for in his own terms:
+vibe-coding tools can be asked to follow the accessibility guidelines and
+do "an okay job", but "what we really needed was a tool for programmers".
+His verdict on the tool itself keeps its hedge — it "won't do the entire
+job, but it looks like it will be a big help." He is putting it in front
+of the organisation's own developer to work in, and Chan is providing
+technical guidance. Validation and in-progress uptake — not a recorded
+adoption decision, not a paid contract, not a formal partnership, not an
+endorsement, and not a production deployment; the meeting is evidenced by
+a transcript Chan holds privately and has not published (see the
+SELF-ATTESTED note above the `a11y-loop` entry). Full record:
 `projects[a11y-loop].narrative.outcomes` and the `my-life-my-voice`
 organisation entry.
 ### No Pain, All Gain — Getting Fit for AI — MC

@@ -2842,18 +2842,30 @@ projects:
     narrative:
       impactHeadline: "A Claude Code skill that probes a live URL, writes a committed scenario file, captures hero/mobile/full-page WebP shots and a size-capped demo GIF (plus MP4), and injects an idempotent SHOWCASE block into a README — with a human review gate before any commit."
 
-  # SELF-ATTESTED (2026-09-04) — read this before citing the adoption below.
-  # The BUILD and the OUTREACH are both independently verifiable: the repo's own
-  # commit history and the npm registry date the project before the festival,
-  # and the 2026-08-11 handover has a public LinkedIn post behind it. The
-  # ADOPTION does not. It rests entirely on Chan's own account of a meeting on
-  # 2026-09-04 with **Timothy Young, CTO of My Life My Voice**. There is no
-  # public announcement, no press release, and nothing in any repository — all
-  # of them were searched. Record it as testimony, and do not upgrade the
-  # language until an artefact exists.
+  # SELF-ATTESTED (2026-09-04) — read this before citing the 2026-09-04 meeting
+  # below. The BUILD and the OUTREACH are both independently verifiable: the
+  # repo's own commit history and the npm registry date the project before the
+  # festival, and the 2026-08-11 handover has a public LinkedIn post behind it.
+  # The MEETING has no public artefact. Its evidence base is a **transcript of
+  # the 2026-09-04 call, held privately by Chan and unpublished** — materially
+  # better than a recollection, but still not something a reader can check. The
+  # short quoted phrases below are the load-bearing ones and are all that is
+  # carried across from it. Timothy Young's roles (CTO of My Life My Voice since
+  # Oct 2025, previously its Chief Executive; founder and CEO of Smart Access
+  # Limited) ARE corroborated, by his public LinkedIn profile. There is still no
+  # public announcement, no press release and nothing in any repository — all
+  # were searched — and the wording below deliberately claims validation and
+  # in-progress uptake rather than adoption. Do not upgrade it until an
+  # artefact exists.
   - id: a11y-loop
     provenance: personal
-    tier: flagship
+    # Demoted flagship -> primary on 2026-09-04, same day it was promoted. The
+    # promotion rested on the word "adopted"; re-reading the meeting record
+    # against what was actually said retired that claim, so the basis for the
+    # promotion went with it. Nothing is deployed. The validation below is real
+    # and unusually strong evidence for a `primary` entry — it stays in the
+    # prose, it just does not buy a band.
+    tier: primary
     recency: active
     lastUpdated: "2026-09-04"
     name: a11y-loop
@@ -2935,19 +2947,33 @@ projects:
         deliberately left out of all three, because N=6, single-run and
         self-audited cannot be caveated properly in an email or a social post;
         the fully reproducible 163 → 0 demo was used instead.
-        **Adopted on 2026-09-04.** In a meeting that day, **Timothy Young,
-        CTO of My Life My Voice**, told Chan the organisation had decided to
-        take the tool into its own project development, and that the two would
-        keep working together — Chan providing technical guidance to the
-        members of their team who need it. Three and a half weeks separate the
-        unsolicited handover, made with nothing at stake, from a disability-led
-        organisation choosing to build on it. What that is, precisely:
-        **adoption into their development work plus an ongoing advisory
-        arrangement**. What it is not: a paid contract, a formal partnership
-        agreement, an endorsement of Chan, or evidence that the tool is
-        deployed in production. The §3 honesty rules above bind harder now
-        rather than less — an adopted accessibility tool that overclaims does
-        more damage than an unadopted one.
+        **Validated on 2026-09-04 by the organisation that set the problem.**
+        Chan gave **Timothy Young**, CTO of My Life My Voice, a live
+        screen-share walkthrough that day — pull the public repo, ask the coding
+        agent to install the Agent Skill and the CLI, then invoke it with
+        `/a11y-loop` — run against a real production site. Young wrote that
+        challenge brief, and he had moved from the organisation's Chief
+        Executive role into the CTO seat to lead its Workforce Futures–funded
+        programme putting AI resources into New Zealand's social-sector
+        organisations, which is why an accessibility tool for developers sits
+        inside his remit at all. His verdict is recorded with its hedge intact:
+        it **"won't do the entire job, but it looks like it will be a big
+        help."** The stronger evidence is what he said about the gap itself —
+        that vibe-coding tools can be asked to follow the accessibility
+        guidelines and will do "an okay job", but **"what we really needed was a
+        tool for programmers"**. That is a11y-loop's own thesis, arrived at
+        independently by the author of the problem statement. He judged that
+        applying it "doesn't seem like it would be that hard", is putting it in
+        front of the organisation's own developer to work in, and the two
+        discussed how to promote it so more people use it. The work continues
+        with Chan advising: in the same call she walked him through installing
+        Cursor and standing up a local development environment — GitHub CLI,
+        git, Node.js — from scratch. Three and a half weeks separate the
+        unsolicited handover, made with nothing at stake, from that walkthrough.
+        What it is **not**: a paid contract, and not evidence that the tool is
+        deployed in production — nothing has shipped, and no adoption decision
+        was put on the record. The §3 honesty rules above bind harder as the
+        tool reaches real teams, not less.
       myRole: |
         Sole author. Published to npm as `a11y-loop`; the repo is written
         agent-first, with an AGENTS.md alongside the README so an agent can

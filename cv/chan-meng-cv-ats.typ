@@ -188,8 +188,8 @@ building on the Claude Agent SDK.
   "Claude Agent SDK", "OpenAI Agents SDK", "Model Context Protocol (MCP)",
   "LangGraph", "LangChain", "CopilotKit", "Vercel AI SDK",
   "RAG pipelines", "multi-agent orchestration",
-  "structured outputs and JSON Schema", "prompt caching",
-  "model-tier routing with deterministic fallback", "evaluation harnesses",
+  "JSON Schema outputs", "prompt caching",
+  "model-tier routing with fallback", "evaluation harnesses",
   "mcp-evals",
 ))
 #skills-line("Languages and frameworks", (
@@ -201,22 +201,32 @@ building on the Claude Agent SDK.
   "CLAUDE.md", "Agent Skills", "Subagents", "Hooks", "Status line", "Plugins",
   "AGENTS.md", "sandbox and approval policies", "headless mode",
 ))
+// Name the GENERATION, not just the family: "Claude Opus" alone reads as a
+// model Chan last used in 2025. Mirrors the designed CV's Stack > Models row.
 #skills-line("Models", (
-  "Anthropic Claude Opus, Sonnet, Haiku", "OpenAI gpt-5.5, GPT-4o, realtime",
-  "Gemini", "Llama",
+  "Anthropic Claude Opus 5, Sonnet 5, Haiku 4.5",
+  "OpenAI gpt-5.5, GPT-4o, realtime", "Gemini", "Llama",
 ))
 #skills-line("Infrastructure, data, and quality", (
-  "Neon Postgres", "Supabase", "Docker", "Stripe", "NextAuth 5", "Vitest",
+  "Neon Postgres", "Supabase", "Redis", "Cloudflare Workers", "Docker", "Stripe",
+  "NextAuth 5", "Vitest",
   "Cypress", "web-vitals", "OpenTelemetry", "multi-tenant isolation",
   "CI/CD pipelines",
 ))
 
 // ═══ EXPERIENCE ══════════════════════════════════════════════════════════════
-// Ten employers, all machine-extractable. Seven mirror the designed CV;
-// ByteDance, CORDE, and Forward with Her are PROMOTED here from the italic
-// "Previously:" run-on sentence in cv/sections/experience.typ — a parser cannot
-// extract employment from prose, so those three are invisible to every machine
-// reader of the designed CV. Here they are real dated entries, just compact.
+// Ten employers, all machine-extractable. SIX mirror the designed CV's detailed
+// entries; the other four are PROMOTED here out of the italic "Previously:"
+// run-on sentence in cv/sections/experience.typ — Sanicle as a full entry with a
+// bullet, ByteDance, CORDE and Forward with Her as compact one-liners. A parser
+// cannot extract employment from prose, so all four are invisible to every
+// machine reader of the designed CV.
+//
+// THE SANICLE ASYMMETRY IS DELIBERATE — DO NOT "RECONCILE" IT. The designed CV
+// moved Sanicle (CTO, ended Feb 2026) down into that prose line in Sep 2026 to
+// free a slot for a fourth project card. Making this file match would delete a
+// real CTO job from every machine reader — the exact failure this variant exists
+// to prevent. cv/sections/experience.typ carries the same note on its side.
 //
 // Every title below is a token-subset of the matching work[].position in
 // data/profile/10-career.yaml so scripts/check-cv-sync.mjs stays quiet. The
@@ -245,7 +255,7 @@ building on the Claude Agent SDK.
   arrangement: "Hybrid",
   bullets: (
     [Recruited by founder Dr Mahsa Mohaghegh to move a volunteer-run New Zealand women-in-STEM charity (96+ events since 2014) off rented software onto infrastructure it owns: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions with a rule-based fallback, at 1,381 commits, 251 merged pull requests and 94.5% of all lines added across 13.3 months.],
-    [Rewrote the charity's recurring work as 11 agent skills, 25,643 lines of written-down procedure that is version-controlled and type-checked in CI, so non-engineers can now run work that used to need an engineer.],
+    [Rewrote the charity's recurring work as 11 agent skills, 25,643 lines of written-down procedure, version-controlled and type-checked in CI, so non-engineers now run work that used to need an engineer.],
   ),
 )
 
@@ -281,8 +291,8 @@ building on the Claude Agent SDK.
   location: "St John's, Newfoundland, Canada",
   arrangement: "Remote",
   bullets: (
-    [Sole instructor of TechNest's first AI-specialised track, the fifth cohort since 2024: over 12 weeks students went from browser ChatGPT to directing coding agents, and 30 graduated having shipped 6 multi-user AI products.],
-    [Authored the bilingual platform hosting all five cohorts (211 of 220 commits), behind a version-aware RAG assistant on Cloudflare Workers.],
+    [Sole instructor of TechNest's first AI track, its fifth cohort since 2024: in 12 weeks students went from browser ChatGPT to directing coding agents, and 30 graduated having shipped 6 multi-user AI products.],
+    [Authored the bilingual platform hosting all five cohorts (211 of 220 commits) and its RAG assistant.],
   ),
 )
 
@@ -294,7 +304,7 @@ building on the Claude Agent SDK.
   location: "Albuquerque, New Mexico, United States",
   arrangement: "Remote",
   bullets: (
-    [Recruited onto Anthropic's Partner Network architect track after the founder's own Claude agent surfaced this open-source portfolio; completed the 45-day Architect Cohort, contributing to its agent, skill, and MCP conventions.],
+    [Recruited onto Anthropic's Partner Network architect track when the founder's Claude agent surfaced this portfolio; completed the 45-day Architect Cohort, contributing to its agent, skill and MCP conventions.],
   ),
 )
 
@@ -343,10 +353,12 @@ building on the Claude Agent SDK.
 )
 
 // ═══ PROJECTS ════════════════════════════════════════════════════════════════
-// Independent work Chan owns end to end. No project here duplicates a product
-// built at an employer or at Chan's own company — those live in Experience.
-// ArchCanvas used to lead this section; it moved up to Experience when
-// ArchCanvas became a role rather than a side build. One sentence each.
+// Four independent projects Chan owns end to end, mirroring the designed CV's
+// four cards. No project here duplicates a product built at an employer or at
+// Chan's own company — those live in Experience. ArchCanvas used to lead this
+// section; it moved up to Experience when ArchCanvas became a role rather than
+// a side build. echook was promoted from the "Also built" line in Sep 2026 and
+// must therefore no longer appear there. One sentence each.
 = PROJECTS
 
 #project-entry(
@@ -381,12 +393,31 @@ building on the Claude Agent SDK.
   Glama A-rating, and 126 GitHub stars.
 ]
 
+#project-entry(
+  name: "echook",
+  url: "github.com/ChanMeng666/echook",
+  target: "https://github.com/ChanMeng666/echook",
+)[
+  An AI-operated hooks plugin for Claude Code, Cursor IDE and Codex CLI,
+  installed and driven entirely in natural language, grown from audio
+  notifications into a context-window status line and richer session telemetry:
+  the production work behind having shipped every Claude Code extension surface.
+]
+
+// Everything else Chan built, one descriptor each. A bare link tells a reader
+// nothing and a keyword matcher almost nothing, so each carries the same
+// explanation as the designed CV's italic closer line — in this file's register,
+// and with the same limits on what may be claimed (the disability-led NZ
+// organisation that set a11y-loop's problem validated it and is working it into
+// its own development, with Chan advising: NOT a paid contract, not a formal
+// partnership, not an endorsement, not a production deployment).
+// Nothing here may also appear above as a project entry — each project appears
+// exactly once across the document.
 #block(above: 0pt, below: 0pt, {
   strong("Also built: ")
-  [#link("https://github.com/ChanMeng666/echook")[echook],
-  #link("https://eatropolis.co.nz/")[eatropolis.co.nz],
-  #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator],
-  #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop], and #link("https://seismophone.chanmeng.org/")[Seismophone].]
+  [#link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited as event partner),
+  #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates),
+  #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (an accessibility CLI and Claude Code skill, validated and taken up by the disability-led New Zealand organisation that set the problem), and #link("https://seismophone.chanmeng.org/")[Seismophone] (the first public Suno remix-lineage explorer).]
 })
 
 // ═══ EDUCATION ═══════════════════════════════════════════════════════════════
@@ -414,8 +445,8 @@ building on the Claude Agent SDK.
 = CERTIFICATIONS
 
 #skills-line("Anthropic (6, 2025-2026)", (
-  "Building with the Claude API", "Introduction to MCP",
-  "Introduction to Agent Skills", "Claude Code in Action",
+  "Building with the Claude API", "Intro to MCP",
+  "Intro to Agent Skills", "Claude Code in Action",
   "AI Fluency: Framework and Foundations",
   "Claude Certified Architect (Foundations): practice exam passed, Partner Network track",
 ))
@@ -435,4 +466,4 @@ building on the Claude Agent SDK.
 
 - UN CSW 69 Speaker (by video link), UN Headquarters, New York, Mar 2025 — drew IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.
 - Outstanding Mentor Award, Aotearoa AI Hackathon Festival, won in 2025 (1 of 14 mentors) and again in 2026, a second consecutive year; Excellence Award, FemTech China Women's Health Technology Challenge (Dec 2024); Outstanding Performer, UN Women FemTech Hackathon, Beijing (Mar 2025).
-- Community: 480+ GitHub stars across own public repos, 26 LinkedIn recommendations, 2 PRs merged into CopilotKit.
+- Community: 480+ GitHub stars on own repos, 26 LinkedIn recommendations, 2 merged CopilotKit PRs.

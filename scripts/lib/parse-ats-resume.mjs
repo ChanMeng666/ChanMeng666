@@ -62,8 +62,11 @@ export const EXPECT = {
   rolesWithBullets: 7,
   rolesCompact: 3,
   skillsLines: { "TECHNICAL SKILLS": 5, CERTIFICATIONS: 2 },
-  projects: 3,
-  alsoBuiltLinks: 5,
+  // 4 since Sep 2026: echook was promoted out of the "Also built" line into a
+  // full entry, mirroring the designed CV's fourth project card — so the link
+  // count below went down by one as this one went up.
+  projects: 4,
+  alsoBuiltLinks: 4,
   education: 2,
   awards: 3,
   contactLines: 2,

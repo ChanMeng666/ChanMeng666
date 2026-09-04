@@ -86,7 +86,7 @@
       set text(size: size-tiny, fill: muted, style: "italic")
       set par(leading: 0.68em, justify: false)
       [
-        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited as event partner) · #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (accessibility CLI adopted by a disability-led NZ organisation) · #link("https://seismophone.chanmeng.org/")[Seismophone] (first public Suno remix-lineage explorer) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
+        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited as event partner) · #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (accessibility CLI for coding agents; the disability-led NZ organisation that set the problem validated it and is working it in) · #link("https://seismophone.chanmeng.org/")[Seismophone] (first public Suno remix-lineage explorer) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
       ]
     },
   )

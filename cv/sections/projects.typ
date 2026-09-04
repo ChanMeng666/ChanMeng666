@@ -13,7 +13,7 @@
 })
 
 // ─── SELECTED PROJECTS & PRODUCTS ────────────────────────────────────────────
-// Three independent projects Chan owns end to end (open-source engines,
+// Four independent projects Chan owns end to end (open-source engines,
 // commissioned-solo research, and shipped products — hence "Projects &
 // Products", since Tam-AI-Ti is a live product, not a public repo). NOT
 // products built at an employer or at her own company — those live in
@@ -54,6 +54,15 @@
         [*Shipped before MCP had a registry* — 35 days after the standard launched — so it was listed by hand across 15+ catalogs. The first-mover position compounded: a PulseMCP "Top Pick", a Glama A-rating, and 126 GitHub stars.],
       ),
     ),
+    (
+      logo: "/public/brands/echook-mark.svg",
+      name: "echook",
+      url: "https://github.com/ChanMeng666/echook",
+      context-line: [An AI-operated hooks plugin for *Claude Code, Cursor IDE and Codex CLI* — installed, configured and driven entirely in natural language.],
+      bullets: (
+        [Started as audio notifications, now a *context-window status line* and session telemetry — the production work behind having shipped *every* Claude Code extension surface: CLAUDE.md, hooks, status line, plugins.],
+      ),
+    ),
   )
 
   for (i, c) in cards.enumerate() {
@@ -70,14 +79,14 @@
   // ── Italic closer line — absorbs all other open-source tools so each ────
   //    project appears exactly once across the entire CV. A clear gap (≈ the
   //    inter-card rhythm) separates it from the last project card above so it
-  //    doesn't read as part of the Google News MCP entry.
+  //    doesn't read as part of the echook entry.
   v(10pt)
   block(
     {
       set text(size: size-tiny, fill: muted, style: "italic")
       set par(leading: 0.68em, justify: false)
       [
-        *Also built:* #link("https://github.com/ChanMeng666/echook")[echook] (agent notifications) · #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (9-day food-festival platform) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates) · #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill] (typesets this CV) · #link("https://seismophone.chanmeng.org/")[Seismophone].
+        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited as event partner) · #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (accessibility CLI adopted by a disability-led NZ organisation) · #link("https://seismophone.chanmeng.org/")[Seismophone] (first public Suno remix-lineage explorer) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
       ]
     },
   )

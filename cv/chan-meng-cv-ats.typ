@@ -386,7 +386,7 @@ building on the Claude Agent SDK.
   [#link("https://github.com/ChanMeng666/echook")[echook],
   #link("https://eatropolis.co.nz/")[eatropolis.co.nz],
   #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator],
-  #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill], and #link("https://seismophone.chanmeng.org/")[Seismophone].]
+  #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop], and #link("https://seismophone.chanmeng.org/")[Seismophone].]
 })
 
 // ═══ EDUCATION ═══════════════════════════════════════════════════════════════

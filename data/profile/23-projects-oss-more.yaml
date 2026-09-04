@@ -2842,11 +2842,20 @@ projects:
     narrative:
       impactHeadline: "A Claude Code skill that probes a live URL, writes a committed scenario file, captures hero/mobile/full-page WebP shots and a size-capped demo GIF (plus MP4), and injects an idempotent SHOWCASE block into a README — with a human review gate before any commit."
 
+  # SELF-ATTESTED (2026-09-04) — read this before citing the adoption below.
+  # The BUILD and the OUTREACH are both independently verifiable: the repo's own
+  # commit history and the npm registry date the project before the festival,
+  # and the 2026-08-11 handover has a public LinkedIn post behind it. The
+  # ADOPTION does not. It rests entirely on Chan's own account of a meeting on
+  # 2026-09-04 with **Timothy Young, CTO of My Life My Voice**. There is no
+  # public announcement, no press release, and nothing in any repository — all
+  # of them were searched. Record it as testimony, and do not upgrade the
+  # language until an artefact exists.
   - id: a11y-loop
     provenance: personal
-    tier: primary
+    tier: flagship
     recency: active
-    lastUpdated: "2026-08-11"
+    lastUpdated: "2026-09-04"
     name: a11y-loop
     priority: 104
     category: ai-apps
@@ -2926,8 +2935,19 @@ projects:
         deliberately left out of all three, because N=6, single-run and
         self-audited cannot be caveated properly in an email or a social post;
         the fully reproducible 163 → 0 demo was used instead.
-        **Unreciprocated at the time of writing** — this is a record of
-        outreach, not of adoption, endorsement or partnership.
+        **Adopted on 2026-09-04.** In a meeting that day, **Timothy Young,
+        CTO of My Life My Voice**, told Chan the organisation had decided to
+        take the tool into its own project development, and that the two would
+        keep working together — Chan providing technical guidance to the
+        members of their team who need it. Three and a half weeks separate the
+        unsolicited handover, made with nothing at stake, from a disability-led
+        organisation choosing to build on it. What that is, precisely:
+        **adoption into their development work plus an ongoing advisory
+        arrangement**. What it is not: a paid contract, a formal partnership
+        agreement, an endorsement of Chan, or evidence that the tool is
+        deployed in production. The §3 honesty rules above bind harder now
+        rather than less — an adopted accessibility tool that overclaims does
+        more damage than an unadopted one.
       myRole: |
         Sole author. Published to npm as `a11y-loop`; the repo is written
         agent-first, with an AGENTS.md alongside the README so an agent can

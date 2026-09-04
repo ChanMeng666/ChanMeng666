@@ -1,12 +1,13 @@
 #import "../theme.typ": *
 #import "../components.typ": *
 
-// Right-column sections use an explicit header top-gap. PAGE-1 sidebar sections
-// (What I Bring, AI Engineering, Stack) stay small (gap: 4pt) so the sticky
-// keep-with-next chain holds the Stack header + Models category on page 1;
-// PAGE-2 sections (Certifications, Recognition, Education) pass a larger gap to
-// spend the slack and fill page 2. The left narrative column keeps the roomy
-// default (tight: false).
+// Right-column sections use an explicit header top-gap, and it is the dial that
+// pays for the two-page budget. Certifications / Recognition / Education used to
+// pass 16 / 18 / 22pt to SPEND slack and fill page 2; there is no slack left
+// since Selected Projects grew to a fourth card (Sep 2026), so they now run at
+// the 4 / 4 / 0pt floor and page 2 fills on content alone. If content ever comes
+// back OUT of the right column, raise these again rather than leaving page 2
+// short. The left narrative column keeps the roomy default (tight: false).
 #let sec(title, body, gap: 4pt) = section(title, body, tight: gap)
 
 // ─── Education (terminal right-column section) ─────────────────────────────
@@ -20,7 +21,7 @@
     location: "New Zealand",
     note: "Distinction (80%+) · Dean's List, Top 5%",
   )
-}, tight: 22pt, sticky: false)
+}, tight: 0pt, sticky: false)
 
 // ─── 1. What I bring to a team (plain-English value statements) ─────────────
 // This is the recruiter/HR/founder-facing distillation of the architect-grade
@@ -41,7 +42,7 @@
     *Ship production AI agents that hold up under real use.* Compliance and money-handling steps guarded in code, not just prompts.
   ]
   list.item[
-    *Keep AI fast and economical in production.* Prompt caching, model-tier routing, and evaluation harnesses with documented failure modes.
+    *Keep AI fast and economical in production.* Evaluation harnesses with documented failure modes.
   ]
   list.item[
     *Keep every customer's data separate and safe.* Per-customer isolation (multi-tenant), durable error handling, observability.
@@ -66,16 +67,16 @@
 // the tools that actually appear in data/profile/*.yaml; the previous
 // Braintrust/Langfuse/Inspect AI list was inaccurate).
 #let ai-engineering-toolkit() = sec("AI Engineering & Tooling", {
-  // Each surface listed below appears in EXACTLY ONE row. MCP lives only in
-  // Agent protocols; Hooks lives only in Claude Code; LangGraph/LangChain/
-  // CopilotKit/Vercel AI SDK live only in Agent SDKs & frameworks (removed
-  // from Stack to dedup).
+  // Each surface listed below appears in EXACTLY ONE row. MCP, RAG and the
+  // production patterns live only in Production AI patterns; Hooks lives
+  // only in Claude Code; LangGraph/LangChain/CopilotKit/Vercel AI SDK live
+  // only in Agent SDKs & frameworks (removed from Stack to dedup).
   // Each Claude Code pill is backed by production work — echook ships
-  // CLAUDE.md/hooks/status-line/plugins; typst-claude-skill packages a
-  // reusable Skill on the awesome-skills lists; subagents drive Chan's
-  // multi-agent demos. No built-in-feature filler ("Slash commands",
-  // etc.) — quality over quantity.
-  skill-category("Claude Code — every extension surface shipped", (
+  // CLAUDE.md/hooks/status-line/plugins; a11y-loop packages a reusable
+  // Skill (plus a standalone CLI); subagents drive Chan's multi-agent
+  // demos. No built-in-feature filler ("Slash commands", etc.) — quality
+  // over quantity.
+  skill-category("Claude Code — every surface shipped", (
     "CLAUDE.md",
     "Skills",
     "Subagents",
@@ -108,8 +109,24 @@
     "CopilotKit",
     "Vercel AI SDK",
   ))
-  skill-category("How agents connect to tools & data", (
+  // ONE row, not two: MCP used to sit alone under "How agents connect to
+  // tools & data", and a second header for the rest cost a line the right
+  // column does not have. Every pill here has a shipped instance behind
+  // it — RAG is the TechNest course assistant on Cloudflare Workers +
+  // Vectorize and the teaching-site assistant; JSON Schema is the tool
+  // contract across the MCP servers and the She Sharp mentor matcher;
+  // model-tier routing with a deterministic fallback is that matcher
+  // dropping from GPT-4o-mini to rule-based scoring, and Sanicle's IBM
+  // watsonx → Gemini fallback; multi-agent orchestration is the
+  // hub-and-spoke subagent work. Mirrors the ATS resume's "AI and agent
+  // engineering" row, which already claims all of them.
+  skill-category("Production AI patterns", (
     "MCP (Model Context Protocol)",
+    "RAG pipelines",
+    "Prompt caching",
+    "Multi-agent orchestration",
+    "JSON Schema outputs",
+    "Model-tier routing + fallback",
   ))
   // Real tools from profile.yaml: Vitest (multiple projects), Cypress
   // (Douyin Mall Vue 3 supplement), mcp-evals 2.0.0 (early adopter, line
@@ -133,7 +150,7 @@
 // SDKs & frameworks" row — each surface appears exactly once.
 #let stack() = sec("Stack", {
   skill-category("Models", (
-    "Anthropic Opus / Sonnet / Haiku",
+    "Claude Opus 5 / Sonnet 5 / Haiku 4.5",
     "OpenAI gpt-5.5 / GPT-4o + realtime",
     "Gemini 2.x",
     "Llama 3.x",
@@ -176,20 +193,19 @@
 
 // ─── 5. Certifications & training ────────────────────────────────────────────
 #let certifications() = sec("Certifications & Training", {
-  cert-group("Anthropic (6)", (
-    [*Building with the Claude API · Intro to MCP · Intro to Agent Skills · Claude Code in Action* (all May 2026; *Claude Code in Action* originally Aug 2025) · *AI Fluency: Framework & Foundations* (Aug 2025)],
-    [*Claude Certified Architect — Foundations* — curriculum completed and practice exam passed, on the Anthropic Partner Network track via Engram],
+  cert-group("Anthropic (6 · 2025—2026)", (
+    [*Building with the Claude API · Intro to MCP · Intro to Agent Skills · Claude Code in Action* · *AI Fluency: Framework & Foundations*],
+    [*Claude Certified Architect — Foundations* — curriculum completed, practice exam passed; Anthropic Partner Network track via Engram],
   ))
-  cert-group("Other AI / Cloud", (
-    [*Google AI Essentials · Microsoft Azure AI Essentials · Generative AI Career Skills · Wolfram Machine Learning Foundations · GitHub Professional · Docker Professional · Microsoft Software Development* (Dec 2024 — Aug 2025)],
+  cert-group("Other AI / Cloud (2024—2025)", (
+    [*Google AI Essentials · Microsoft Azure AI Essentials · Generative AI Career Skills · Wolfram Machine Learning Foundations · GitHub Professional · Docker Professional · Microsoft Software Development*],
   ))
   // Engineering breadth — verified skill certifications (50+ total across issuers,
   // mostly Dec 2024). Surfaces the depth behind the headline AI/Cloud credentials.
   cert-group("Engineering & platforms (50+ total)", (
-    [*HackerRank Software Engineer* + 22 skill certifications — *SQL (Advanced)* · Problem Solving · Go · Node.js · React · Angular],
-    [*Microsoft* (Azure · System Administration · Project Management) · *C++ Institute* · *Anaconda Python* · *Atlassian Agile* · *Mozilla*],
+    [*HackerRank Software Engineer* + 22 skill certifications — *SQL (Advanced)* · Problem Solving · Go · Node.js · React · Angular · *Microsoft* (Azure · System Administration · Project Management) · *C++ Institute* · *Anaconda Python* · *Atlassian Agile* · *Mozilla*],
   ))
-}, gap: 16pt)
+}, gap: 4pt)
 
 // ─── 6. Recognition + reference quotes ───────────────────────────────────────
 #let recognition-and-reference() = sec("Recognition", {
@@ -199,17 +215,17 @@
   set par(leading: 0.7em)
   set list(
     marker: text(fill: accent, size: 5.5pt)[•],
-    spacing: 15pt,
+    spacing: 9pt,
     indent: 0pt,
     body-indent: 6pt,
   )
   list.item[*UN CSW 69 Speaker* — UN HQ NYC, Mar 2025 · presented by video link · attracted *IBM pilot interest* and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.]
-  list.item[*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors · guided 11 teams / 80+ participants.]
+  list.item[*Outstanding Mentor Award* — Aotearoa AI Hackathon Festival, *two years running* (2025: 1 of 14 expert mentors, 11 teams / 80+ participants · 2026: 12 teams, 125 registered, MC'd the opening).]
   // FemTech China and FemTech Weekend are TWO DISTINCT organisations — separate
   // events, separate awards. Never combine them. (See data/profile/30-recognition.yaml awards[].)
   list.item[*Excellence Award* — FemTech China (Women's Health Technology Challenge, Dec 2024).]
   list.item[*UN Women FemTech Hackathon — Outstanding Performer* — FemTech Weekend, Beijing (Mar 2025).]
-}, gap: 18pt)
+}, gap: 4pt)
 
 // ─── 7. Endorsements — removed ──────────────────────────────────────────────
 // Testimonial quote dropped in this iteration to make room for the wider

@@ -4,7 +4,15 @@
 // ─── EXPERIENCE ──────────────────────────────────────────────────────────────
 // ORDER: roles Chan is STILL DOING come first, ranked by importance, then the
 // ended ones in the same ranked spirit. ArchCanvas (her own company) leads;
-// GAVIGO ended Sep 2026 and TechNest, Engram and Sanicle sit behind it.
+// GAVIGO ended Sep 2026 and TechNest and Engram sit behind it.
+//
+// SIX detailed roles is the budget. Sanicle (CTO, ended Feb 2026) moved down
+// into the italic "Previously:" run-on in Sep 2026 so "Selected Projects &
+// Products" could carry a FOURTH card — it keeps its two strongest facts there
+// (the promotion, and the IBM watsonx work behind the IBM Silver Partner
+// certification). The ATS resume is deliberately NOT symmetrical: it keeps
+// Sanicle as a full dated entry with a bullet, because a parser cannot extract
+// employment from prose. Do not "reconcile" the two.
 //
 // Each role line carries one verifiable business-outcome metric pulled from
 // data/profile/10-career.yaml::work[].impactHeadline. Products built at these employers
@@ -60,20 +68,11 @@
     location: [Albuquerque, New Mexico, United States · *Remote*],
     summary: [Recruited onto *Anthropic's Partner Network architect track* — Engram's founder asked his own Claude agent to surface candidates, and Chan's open-source portfolio was the pick (publicly confirmed by founder Luka Madzarac). Spent the 45-day Architect Cohort on its agent, skill and MCP-integration conventions.],
   )
-  role-line(
-    title: "Chief Technology Officer",
-    org: "Sanicle",
-    org-url: "https://www.linkedin.com/company/sanicleofficial/",
-    dates: "Mar 2025 — Feb 2026",
-    location: [Tulsa, Oklahoma, United States · *Remote*],
-    summary: [Joined as Senior AI/ML Infrastructure Engineer, promoted to CTO. Took Sanicle from a no-code prototype to the production B2B FemTech SaaS employers buy for their staff — menstrual and menopause workplace wellness. Integrated IBM watsonx behind a Gemini fallback — its 28-second baseline did not fit a 10-second serverless timeout — the work that earned Sanicle its *#link("https://www.ibm.com/partnerplus/directory/solution/0638")[IBM Silver Partner]* certification.],
-  )
-
   v(4pt)
   block(above: 0pt, below: 0pt, {
     set par(leading: 0.7em, justify: false)
     text(size: size-tiny, fill: muted, style: "italic")[
-      *Previously:* *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* on the Douyin Mall capstone (Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ · hybrid; offline-first React Native field app, \#1 contributor) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 26 LinkedIn recommendations come from this cohort).
+      *Previously:* *CTO at #link("https://www.linkedin.com/company/sanicleofficial/")[Sanicle]* (Tulsa, OK · remote; promoted from Senior AI/ML Infrastructure Engineer; the IBM watsonx integration behind Sanicle's #link("https://www.ibm.com/partnerplus/directory/solution/0638")[IBM Silver Partner] certification) · *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* on the Douyin Mall capstone (Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ · hybrid; offline-first React Native field app, \#1 contributor) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 26 LinkedIn recommendations come from this cohort).
     ]
   })
 })

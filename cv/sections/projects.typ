@@ -13,25 +13,18 @@
 })
 
 // ─── SELECTED PROJECTS & PRODUCTS ────────────────────────────────────────────
-// Four independent projects Chan owns end to end (open-source engines,
+// Three independent projects Chan owns end to end (open-source engines,
 // commissioned-solo research, and shipped products — hence "Projects &
-// Products", since ArchCanvas and Tam-AI-Ti are live products, not public
-// repos). NOT products built at employers — those live in Experience, and no
-// card here may duplicate one. The lead card tells the invention→product story
-// (an open-source language and the commercial product built on it). The italic
-// closer line absorbs all other tools so each appears exactly once across the CV.
+// Products", since Tam-AI-Ti is a live product, not a public repo). NOT
+// products built at an employer or at her own company — those live in
+// Experience, and no card here may duplicate one. ArchCanvas × ArchLang used to
+// lead this section; it moved to Experience when ArchCanvas became a role
+// (Founder & Sole Engineer) rather than a side build, and duplicating it here
+// would have cost the two-page budget a card it already pays for above. The
+// italic closer line absorbs all other tools so each appears exactly once
+// across the CV.
 #let projects() = section("Selected Projects & Products", {
   let cards = (
-    (
-      logo: "/public/brands/archcanvas-logo.svg",
-      name: "ArchCanvas × ArchLang",
-      url: "https://archcanvas.uk/",
-      context-line: [An AI design agent for architects and self-builders — describe a building in plain words and get a dimensioned, buildable floor plan plus a realistic rendering, refined by talking on a zoomable canvas.],
-      bullets: (
-        [*A free open-source engine, then a paid product on top.* Chan invented #link("https://github.com/ChanMeng666/archlang")[ArchLang] — a language that turns a floor plan into a precise program (34 npm releases) — then built the commercial product it powers, ArchCanvas.],
-        [Because the plan is a *program, not a picture*, ArchCanvas can edit it exactly, show what changed, and replay its history — things an image generator structurally cannot, measured by a benchmark rather than asserted.],
-      ),
-    ),
     (
       logo: "/public/brands/tam-ai-ti-mark.svg",
       name: "Tam-AI-Ti",

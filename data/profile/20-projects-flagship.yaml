@@ -360,7 +360,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, drizzle, neon, stripe, vercel]
-    lastUpdated: "2026-08-26"
+    lastUpdated: "2026-09-04"
     name: She Sharp
     priority: 2
     category: web-apps
@@ -373,7 +373,8 @@ projects:
       and a custom Slack ecosystem (event-collector bot, weekly mentorship-stats
       digest, NZ government funding crawler, Claude `sync-event-from-slack` skill)
       that turned hours of volunteer manual work into one-command automation.
-      793/936 commits (85%) solo across ~12 months.
+      1,381 commits and 251 merged pull requests over 13.3 months, with 94.5%
+      of all lines added authored solo.
     url: https://www.shesharp.org.nz/
     extraLinks:
       - { label: "She Sharp", url: "https://www.shesharp.org.nz/" }
@@ -425,7 +426,7 @@ projects:
       - "Vercel Edge Network + Vercel Cron"
     keywords:
       - Women in STEM nonprofit (NZ registered charitable trust CC57025)
-      - Solo full-stack build (793 of 936 commits, 85% solo)
+      - Solo full-stack build (1,381 commits, 251 merged PRs, 94.5% of all lines added)
       - Three role-permissioned dashboards (mentor / mentee / admin) with native dual-role schema
       - AI mentor-mentee matching (GPT-4o-mini, explicit-weight 5-dimensional scoring)
       - Two-stage matching pipeline (rule-based pre-filter → GPT-4o-mini → admin human-in-the-loop)
@@ -440,15 +441,17 @@ projects:
       - Webflow → Next.js migration via Python crawler (she-sharp-crawl)
       - Her Waka MSD-funded teaching site authored solo (4 workshops + 8 tutorials)
     metrics:
-      - { label: "Total commits",            value: "936" }
-      - { label: "Solo commits",             value: "793 (85%) — Lesley Gao authored 140 frontend commits (15.0%)" }
-      - { label: "Commits since 2026-01-01", value: "541 (intensive H1 build-out)" }
-      - { label: "Build window",             value: "2025-07-22 → 2026-07-14 (~12 months active)" }
-      - { label: "API routes",               value: "95 (app/api/**/route.ts)" }
-      - { label: "Pages",                    value: "53 (app/**/page.tsx)" }
-      - { label: "Components",               value: "160 (components/**/*.tsx)" }
-      - { label: "Database schema",          value: "1,411 lines, 30 pgEnums, 35 pgTables" }
-      - { label: "SQL migrations",           value: "26 (0000_soft_the_anarchist → 0027_bitter_fallen_one)" }
+      - { label: "Total commits",            value: "1,381" }
+      - { label: "Merged pull requests",     value: "251" }
+      - { label: "Authorship share",         value: "94.5% of all lines added (801,609 of 847,827) — Lesley Gao contributed 151 frontend commits and 43 pull requests" }
+      - { label: "Commits since 2026-01-01", value: "979 (intensive H1 build-out)" }
+      - { label: "Build window",             value: "2025-07-22 → 2026-09-01 (13.3 months active)" }
+      - { label: "API routes",               value: "84 (app/api/**/route.ts)" }
+      - { label: "Pages",                    value: "63 (app/**/page.tsx)" }
+      - { label: "Components",               value: "198 (components/**/*.tsx)" }
+      - { label: "TypeScript",               value: "180,914 lines across 818 files" }
+      - { label: "Database schema",          value: "39 pgTables, 33 pgEnums" }
+      - { label: "SQL migrations",           value: "32 (0000_soft_the_anarchist → 0033_crazy_morg)" }
       - { label: "Lib modules",              value: "matching, slack-bot, stripe, funding, programmes, recruitment, invitations, mentorship, email, auth, db (11 namespaced)" }
       - { label: "Cron jobs",                value: "3 (process-queue, weekly-funding-crawl, weekly-mentorship-stats)" }
       - { label: "Funding crawler sources",  value: "6 NZ government feeds (beehive RSS, data.govt CKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML)" }
@@ -643,7 +646,7 @@ projects:
         @dnd-kit for admin kanban workflows; Recharts 3 + @number-flow/react
         for dashboard analytics.
 
-        **The schema runs to 1,411 lines, 30 pgEnums, and 35 pgTables** —
+        **The schema runs to 33 pgEnums across 39 pgTables** —
         a deliberate type-safety investment. Membership tiers (free / basic /
         premium), mentorship-relationship states (pending / active / paused /
         completed / rejected), meeting types (intro / regular / milestone /
@@ -653,14 +656,14 @@ projects:
         career_transition), MBTI 16 personality types, recruitment stages,
         invitation-code redemption states, activity-log action types — every
         business concept is a typed enum rather than a string column, so
-        invalid states are unrepresentable at the database level. **26 SQL
-        migration files** (0000_soft_the_anarchist → 0027_bitter_fallen_one)
+        invalid states are unrepresentable at the database level. **32 SQL
+        migration files** (0000_soft_the_anarchist → 0033_crazy_morg)
         applied via a custom safe-migration wrapper with pre-deployment
         snapshots and rollback SQL generation.
 
-        **95 API routes** across `app/api/**/route.ts` covering auth (11
+        **84 API routes** across `app/api/**/route.ts` covering auth (12
         routes including OAuth callbacks, password reset, email
-        verification), admin (21 routes for matching/mentee-mentor reviews/
+        verification), admin (24 routes for matching/mentee-mentor reviews/
         recruitment/programmes/users/permissions/analytics/zombie-cleanup),
         mentorship lifecycle (apply / approve / relationships / meetings),
         events (browse / register / my-registrations / QR check-in), forms
@@ -668,8 +671,8 @@ projects:
         Stripe (checkout / donate / webhook), Slack (events / interactive),
         cron (process-queue / weekly-funding-crawl / weekly-mentorship-stats),
         resources (download with access control), notifications, file
-        uploads (CV + profile photo via Cloudinary). **53 pages, 160
-        components.**
+        uploads (CV + profile photo via Cloudinary). **63 pages, 198
+        components**, 180,914 lines of TypeScript across 818 files.
 
         **The AI matching engine** combines a deterministic rule-based
         pre-filter with GPT-4o-mini for high-potential pairs only. The
@@ -735,16 +738,19 @@ projects:
         in tech New Zealand' — high-priority technical SEO gap").
       outcomes: |
         Production-deployed and operating She Sharp's full member lifecycle
-        for about a year (first commit 2025-07-22, latest 2026-07-14) — still
-        in active build-out, not maintenance. Commit volume: **936 commits,
-        793 (85%) authored solo by Chan Meng**, with 140 (15%) by Lesley Gao
-        on frontend design and code and 3 by an automation bot. **541 of
-        those commits landed since 2026-01-01 alone.** The platform now runs
-        She Sharp's membership, mentorship, events, sponsor relationships,
-        volunteer recruitment pipeline, and internal team operations across
-        **95 API routes, 53 pages, 160 components, 26 SQL migrations, and an
-        11-namespace `lib/` library** (matching, slack-bot, stripe, funding,
-        programmes, recruitment, invitations, mentorship, email, auth, db) —
+        for over 13 months (first commit 2025-07-22, measured to 2026-09-01)
+        — still in active build-out, not maintenance. Volume: **1,381 commits
+        and 251 merged pull requests, of which 94.5% of all lines added
+        (801,609 of 847,827) are mine**; Lesley Gao contributed 151 commits
+        and 43 pull requests of frontend design and code, with a handful more
+        from an automation bot. **979 of those commits landed since
+        2026-01-01 alone.** The platform now runs She Sharp's membership,
+        mentorship, events, sponsor relationships, volunteer recruitment
+        pipeline, and internal team operations across **84 API routes, 63
+        pages, 198 components, 32 SQL migrations, 180,914 lines of
+        TypeScript, and an 11-namespace `lib/` library** (matching,
+        slack-bot, stripe, funding, programmes, recruitment, invitations,
+        mentorship, email, auth, db) —
         the technical infrastructure for an organisation that reports 3,500+
         members, 5,000+ women reached lifetime, 50+ corporate partners,
         96+ events since 2014, and 18 industry mentors.
@@ -771,7 +777,7 @@ projects:
         that the She Sharp team didn't have in-house.
 
         Solo full-stack ownership of the main platform: product architecture,
-        database schema (1,411 lines, 30 pgEnums, 35 pgTables, 26 SQL
+        database schema (39 pgTables, 33 pgEnums, 32 SQL
         migrations), AI matching pipeline (5-weight rubric + Upstash Redis
         cache + rule-based fallback + admin human-in-the-loop), Stripe
         billing with the form→checkout→invitation-code activation flow,
@@ -779,8 +785,9 @@ projects:
         interactive event handlers), the `sync-event-from-slack` Claude
         agent skill with strict Zod validation and dry-run default, admin
         systems, deployments, observability, and operational support. Lesley
-        Gao contributed frontend design and frontend code (140 commits, 15%);
-        the remaining 793 commits (85%) are mine. Beyond the main platform I
+        Gao contributed frontend design and frontend code (151 commits, 43
+        pull requests); measured by lines added, 94.5% of the codebase
+        (801,609 of 847,827 lines) is mine. Beyond the main platform I
         also built the data-migration crawler that bootstrapped the launch
         (she-sharp-crawl), the Her Waka teaching site (her-waka) and its
         complete four-workshop + 8-tutorial curriculum, and the professional
@@ -791,11 +798,13 @@ projects:
   - id: gavigo-ire
     provenance: client
     tier: flagship
-    recency: active
+    # Chan's engagement ended 2026-09-01 (see endDate); the platform itself
+    # remains production-deployed at ire.gavigo.com, hence status: production.
+    recency: recent
     meta:
       x_brand:
         featuredStack: [kubernetes, nvidia, google-cloud, docker, typescript]
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-09-04"
     name: GAVIGO IRE
     priority: 3
     category: ai-apps
@@ -841,8 +850,8 @@ projects:
       - "WebSocket hub"
       - "Founding engineer"
     metrics:
-      - { label: "Total commits",       value: "445 (439 non-merge)" }
-      - { label: "Chan's commits",      value: "426 (~97%)" }
+      - { label: "Total commits",       value: "488 non-merge" }
+      - { label: "Chan's commits",      value: "471 (96.5% of non-merge)" }
       - { label: "Restore path p50",    value: "<1 ms" }
       - { label: "Cold path p50",       value: "~12 ms" }
       - { label: "Warm pool hit rate",  value: "84.6%" }
@@ -851,6 +860,7 @@ projects:
       - { label: "Games",               value: "23 across 4 studios (+2 ML/compute workloads)" }
     status: production
     startDate: "2025-10"
+    endDate: "2026-09"
     publicSummary: |
       GAVIGO IRE is the founding-engineer MVP for GAVIGO Inc., a Delaware
       startup (founder & CEO Saba Gecgil) building a way past the app-install
@@ -985,8 +995,8 @@ projects:
         DOKS (Singapore), then migrated to Google Cloud GKE (Belgium) on
         2026-03-11 in a clean ~30-minute cutover when GAVIGO's Google Cloud
         partnership came into effect — production-grade expertise demonstrated
-        on both clouds. **445 total commits (439 non-merge); I authored 426 of
-        them (~97%) across my two git identities**, with a second engineer
+        on both clouds. **488 non-merge commits; I authored 471 of them
+        (96.5%) across my two git identities**, with a second engineer
         onboarded in June 2026 and the remainder from the CI bot. Real
         measured platform metrics post-migration: restore path <1 ms p50,
         ~12 ms p50 on the orchestrator "cold" path (a genuine 0→1 container
@@ -1011,11 +1021,11 @@ projects:
       myRole: |
         Founding Principal Engineer, Activation, Execution & AI Systems
         (prior: Core Engineer), reporting to founder & CEO Saba Gecgil.
-        Joined Oct 17 2025; current title and scope formalized by the
-        Second Amended and Restated Consulting Agreement effective
-        Apr 16 2026.
+        Joined Oct 17 2025 and stepped down Sep 1 2026; the final title and
+        scope were formalized by the Second Amended and Restated Consulting
+        Agreement effective Apr 16 2026.
 
-        The contract defines a "Protected Technical Domain" that anchors
+        The contract defined a "Protected Technical Domain" that anchored
         my role: activation systems, activation flow and execution
         behavior, the activation-economics proof path, AI-assisted
         orchestration and execution-control systems, restore and reuse
@@ -1025,10 +1035,11 @@ projects:
         the natural forward extension of that area as the system evolves.
         Recognized in the contract record as "a core long-term technical
         builder of the Company's interactive workload platform" with
-        founder-level equity participation. I authored 426 of the project's
-        439 commits (~97%); a second engineer joined in mid-2026, so the
-        codebase is no longer solely mine, but activation, orchestration,
-        and AI-systems ownership remains my defined domain.
+        founder-level equity participation. I authored 471 of the project's
+        488 non-merge commits (96.5%); a second engineer joined in mid-2026,
+        so the codebase was no longer solely mine, but activation,
+        orchestration, and AI-systems ownership remained my defined domain
+        until I stepped down on 1 September 2026.
 
   - id: google-news-mcp
     provenance: personal

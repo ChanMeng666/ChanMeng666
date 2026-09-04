@@ -56,6 +56,7 @@ const CV_FILES = [
 // CV surface. A role with no work[] entry must use extra-role(...) in the ATS
 // resume so it is not parsed here at all.
 const CV_ORG_TO_WORK = {
+  "ArchCanvas": "archcanvas",
   "Engram": "engram",
   "TechNest Community": "technest",
   "GAVIGO Inc.": "gavigo",

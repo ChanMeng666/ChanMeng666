@@ -3,7 +3,25 @@
 
 # LinkedIn — Honors & Awards
 
-## 1. Outstanding Mentor Award - AI Hackathon Festival 2025
+## 1. Outstanding Mentor Award - Aotearoa AI Hackathon Festival 2026
+
+**Associated with:** She Sharp
+**Issuer:** AUT, She Sharp, AI Forum NZ, and Fisher & Paykel Healthcare
+**Issue date:** Aug 2026
+
+```
+Named an Outstanding Mentor for the second consecutive year — the award carries no year in its name — at the Aotearoa AI Hackathon Festival 2026, held 7–8 August 2026 at AUT City Campus and hosted by Auckland University of Technology with She Sharp and AI Forum NZ, alongside Fisher & Paykel Healthcare.
+
+125 registered participants, twelve teams, five UN Sustainable Development Goals, and five minutes each in front of the judging panel on the Saturday. Roughly a third of the room had never been to a hackathon before, and that set my brief: get a first-timer from a rough idea to something they can demo, inside two days.
+
+• Mentored teams end to end — scoping an idea small enough to finish, picking a stack they could actually ship on, and getting to a working demo rather than a slide describing one.
+• MC'd the festival opening from the AUT podium, including the Karakia Tīmatanga.
+• Worked on mentor recruitment in the run-up. The final roster of 17 drew from AUT, She Sharp, Fisher & Paykel Healthcare, Southern Cross Health Society and Red Hat, and billed me as Founding Engineer, ArchCanvas.
+
+Same award, second year, a different cohort — and the part I care about is that the first-timers left with something running.
+```
+
+## 2. Outstanding Mentor Award - AI Hackathon Festival 2025
 
 **Associated with:** She Sharp
 **Issuer:** AI Forum NZ, She Sharp, and Auckland University of Technology
@@ -24,7 +42,7 @@ What the mentoring covered:
 Worked alongside teams tackling real problems — food insecurity, digital accessibility, workforce upskilling, and indigenous environmental stewardship — giving each the technical depth to ship something demonstrable by the deadline.
 ```
 
-## 2. Outstanding Performer — UN Women FemTech Hackathon 2025
+## 3. Outstanding Performer — UN Women FemTech Hackathon 2025
 
 **Associated with:** Sanicle
 **Issuer:** FemTech Weekend
@@ -37,7 +55,7 @@ Recognised as an Outstanding Performer at the 2025 UN Women FemTech Hackathon in
 Competed as an independent developer, contributing innovative solutions to women's health challenges in professional environments and standing out in a field built around team entries. The recognition reflected both the technical quality of the build and its real-world fit for the workplace-health brief that the hackathon set.
 ```
 
-## 3. UN CSW 69 Speaker — Beyond Beijing 30 Conference
+## 4. UN CSW 69 Speaker — Beyond Beijing 30 Conference
 
 **Associated with:** Sanicle
 **Issuer:** United Nations Headquarters, New York
@@ -58,7 +76,7 @@ The presentation drew direct response from senior figures:
 Speaking at a UN forum of this stature placed an independently built FemTech platform in front of the people who shape global gender-equity policy — and turned a technical demo into concrete partnership interest.
 ```
 
-## 4. Dean's List - Top 5% Academic Performance
+## 5. Dean's List - Top 5% Academic Performance
 
 **Associated with:** Lincoln University (NZ)
 **Issuer:** Lincoln University, Faculty of Environment, Society & Design
@@ -72,7 +90,7 @@ Named to the Dean's List for academic excellence in Semester 2, 2024, placing am
 The recognition came during the Master of Applied Computing programme, alongside full-time engineering work — evidence of sustained academic performance maintained in parallel with shipping production software.
 ```
 
-## 5. Excellence Award — FemTech China Women's Health Technology Challenge
+## 6. Excellence Award — FemTech China Women's Health Technology Challenge
 
 **Associated with:** Lincoln University (NZ)
 **Issuer:** FemTech China
@@ -90,7 +108,7 @@ Entries were judged on product potential, technical innovation, commercial viabi
 This is the same FemTech Weekend organisation later joined as CTO in March 2025 — the award preceded and directly informed that subsequent leadership engagement.
 ```
 
-## 6. Master of Applied Computing with Distinction
+## 7. Master of Applied Computing with Distinction
 
 **Associated with:** Lincoln University (NZ)
 **Issuer:** Lincoln University (Te Whare Wānaka o Aoraki)

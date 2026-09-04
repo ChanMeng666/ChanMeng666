@@ -8,13 +8,19 @@
 // a column boundary, and every link's visible text is still the bare URL or
 // the company/project name, so the extracted text stream is unchanged.
 //
+// ORDER: roles Chan is STILL DOING come first, ranked by importance, then the
+// ended ones. ArchCanvas (her own company) leads; GAVIGO ended Sep 2026.
+//
 // TWO PAGES IS THE BUDGET. Everything here is sized to it:
-//   • The five CURRENT roles carry bullets — one each, except TechNest, which
-//     carries two. Sanicle (ended Feb 2026, but CTO + the IBM Silver Partner
-//     result) carries one. The three older roles are
-//     single-line entries under "Earlier experience" — title, org, location and
-//     dates are all still present and delimited, so a parser extracts them as
-//     employment exactly the same way; only the prose is gone.
+//   • Seven roles carry bullets — one each, except She Sharp and TechNest,
+//     which carry two (each had a second result that will not compress into
+//     one sentence without losing a metric, and splitting beats trimming here).
+//     The three CURRENT ones (ArchCanvas, She Sharp, FemTech Weekend) lead;
+//     GAVIGO, TechNest, Engram and Sanicle follow, ended but each carrying a
+//     result worth a bullet. The three oldest roles are single-line entries
+//     under "Earlier experience" — title, org, location and dates are all still
+//     present and delimited, so a parser extracts them as employment exactly
+//     the same way; only the prose is gone.
 //   • Job title and dates share two lines, not three (dates ride the org line
 //     behind a "|"). Contact items share two delimited lines, not seven.
 //   • Every bullet is ONE sentence. A bullet that grows to two sentences gets
@@ -63,7 +69,7 @@
   // that would split one fact across two files and make a bare `typst compile`
   // produce a different PDF. cv/build-ats-exports.mjs PARSES this line and
   // reuses it for the .docx core properties, so it stays one fact in one file.
-  date: datetime(year: 2026, month: 8, day: 26),
+  date: datetime(year: 2026, month: 9, day: 4),
   // NO keywords: on purpose. The 70-term list in chan-meng-cv.typ is plainly
   // legible in `pdfinfo` and reads as keyword stuffing to an AI screener —
   // the same class of anti-pattern cv/README.md already bans. Everything that
@@ -166,8 +172,8 @@
 
 AI and full-stack engineer who has shipped MCP servers, sub-agents, and agent
 skills to production, behind paying customers, private health data, and
-regulated work, not demos. Five concurrent engineering and CTO-level roles
-across four countries. Works AI-native by default, directing coding agents and
+regulated work, not demos. Has run five concurrent engineering and CTO-level
+roles across four countries. Works AI-native by default, directing coding agents and
 building on the Claude Agent SDK.
 
 // ═══ SKILLS ══════════════════════════════════════════════════════════════════
@@ -206,7 +212,7 @@ building on the Claude Agent SDK.
 ))
 
 // ═══ EXPERIENCE ══════════════════════════════════════════════════════════════
-// Nine employers, all machine-extractable. Six mirror the designed CV;
+// Ten employers, all machine-extractable. Seven mirror the designed CV;
 // ByteDance, CORDE, and Forward with Her are PROMOTED here from the italic
 // "Previously:" run-on sentence in cv/sections/experience.typ — a parser cannot
 // extract employment from prose, so those three are invisible to every machine
@@ -219,39 +225,14 @@ building on the Claude Agent SDK.
 = PROFESSIONAL EXPERIENCE
 
 #role-line(
-  title: "AI Agent Architect",
-  org: "Engram",
-  org-url: "https://engram.media/",
-  dates: "May 2026 - Jul 2026",
-  location: "Albuquerque, New Mexico, United States",
+  title: "Founder & Sole Engineer",
+  org: "ArchCanvas",
+  org-url: "https://archcanvas.uk/",
+  dates: "Apr 2026 - Present",
+  location: "Auckland, New Zealand",
   arrangement: "Remote",
   bullets: (
-    [Recruited onto Anthropic's Partner Network architect track after the founder's own Claude agent surfaced this open-source agentic-tooling portfolio, publicly confirmed by him; completed the 45-day Architect Cohort, contributing to its agent, skill, and MCP conventions.],
-  ),
-)
-
-#role-line(
-  title: "AI Instructor & Mentor",
-  org: "TechNest Community",
-  org-url: "https://www.technestcommunity.com/",
-  dates: "Apr 2026 - Aug 2026",
-  location: "St John's, Newfoundland, Canada",
-  arrangement: "Remote",
-  bullets: (
-    [Sole instructor of TechNest's first AI-specialised track and the fifth cohort since 2024: over 12 weeks students went from browser ChatGPT to directing coding agents, and 30 graduated having shipped 6 multi-user AI products.],
-    [Authored the bilingual platform hosting all five cohorts (211 of 220 commits), behind a version-aware RAG assistant on Cloudflare Workers and Vectorize.],
-  ),
-)
-
-#role-line(
-  title: "Founding Principal Engineer, Activation, Execution & AI Systems",
-  org: "GAVIGO Inc.",
-  org-url: "https://gavigo.com/",
-  dates: "Oct 2025 - Present",
-  location: "Wilmington, Delaware, United States",
-  arrangement: "Remote",
-  bullets: (
-    [Own the Intelligence Layer of an app-activation platform end to end: a Go orchestrator running a scorer, a seven-trigger AI rules engine, a warm-pool LRU manager and a five-state activation spine in Redis, measured on live Kubernetes (GKE) at sub-millisecond p50 restore, an 84.6% warm-pool hit rate and zero errors at 100 concurrent WebSocket clients; migrated it from DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contract iterations, 426 of 439 commits solo.],
+    [Build an AI design agent for architects and self-builders: invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (34 npm releases, 83 diagnostic codes), then built the commercial product on top so an edit is exact and replayable rather than regenerated.],
   ),
 )
 
@@ -263,7 +244,8 @@ building on the Claude Agent SDK.
   location: "Auckland, New Zealand",
   arrangement: "Hybrid",
   bullets: (
-    [Rebuilt the member platform for a New Zealand women-in-STEM charity running 96+ events since 2014: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions with a rule-based fallback and an admin review gate, carrying 10+ years of content across with zero broken links, 793 of 936 commits.],
+    [Recruited by founder Dr Mahsa Mohaghegh to move a volunteer-run New Zealand women-in-STEM charity (96+ events since 2014) off rented software onto infrastructure it owns: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions with a rule-based fallback, at 1,381 commits, 251 merged pull requests and 94.5% of all lines added across 13.3 months.],
+    [Rewrote the charity's recurring work as 11 agent skills, 25,643 lines of written-down procedure that is version-controlled and type-checked in CI, so non-engineers can now run work that used to need an engineer.],
   ),
 )
 
@@ -275,7 +257,44 @@ building on the Claude Agent SDK.
   location: "Chengdu, Sichuan, China",
   arrangement: "Remote",
   bullets: (
-    [Sole engineer behind China's first organisation built specifically around women's health technology, across two platform generations (a Next.js site rebuilt as a Docusaurus editorial platform), and ran the digital infrastructure for the 2026 Shanghai Summit, a four-day event with 20 speakers headlined by Ida Tin, who coined the term FemTech.],
+    [Sole engineer behind China's first organisation built around women's health technology, across two platform generations (Next.js, then Docusaurus), and ran the digital infrastructure for the 2026 Shanghai Summit: four days, 20 speakers, headlined by Ida Tin, who coined the term FemTech.],
+  ),
+)
+
+#role-line(
+  title: "Founding Principal Engineer, Activation, Execution & AI Systems",
+  org: "GAVIGO Inc.",
+  org-url: "https://gavigo.com/",
+  dates: "Oct 2025 - Sep 2026",
+  location: "Wilmington, Delaware, United States",
+  arrangement: "Remote",
+  bullets: (
+    [Owned the Intelligence Layer of an app-activation platform: a Go orchestrator running a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE): sub-millisecond p50 restore, an 84.6% warm-pool hit rate and zero errors at 100 concurrent WebSocket clients; migrated DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contracts, 471 of 488 commits solo.],
+  ),
+)
+
+#role-line(
+  title: "AI Instructor & Mentor",
+  org: "TechNest Community",
+  org-url: "https://www.technestcommunity.com/",
+  dates: "Apr 2026 - Aug 2026",
+  location: "St John's, Newfoundland, Canada",
+  arrangement: "Remote",
+  bullets: (
+    [Sole instructor of TechNest's first AI-specialised track, the fifth cohort since 2024: over 12 weeks students went from browser ChatGPT to directing coding agents, and 30 graduated having shipped 6 multi-user AI products.],
+    [Authored the bilingual platform hosting all five cohorts (211 of 220 commits), behind a version-aware RAG assistant on Cloudflare Workers.],
+  ),
+)
+
+#role-line(
+  title: "AI Agent Architect",
+  org: "Engram",
+  org-url: "https://engram.media/",
+  dates: "May 2026 - Jul 2026",
+  location: "Albuquerque, New Mexico, United States",
+  arrangement: "Remote",
+  bullets: (
+    [Recruited onto Anthropic's Partner Network architect track after the founder's own Claude agent surfaced this open-source portfolio; completed the 45-day Architect Cohort, contributing to its agent, skill, and MCP conventions.],
   ),
 )
 
@@ -287,7 +306,7 @@ building on the Claude Agent SDK.
   location: "Tulsa, Oklahoma, United States",
   arrangement: "Remote",
   bullets: (
-    [Joined as Senior AI/ML Infrastructure Engineer and was promoted to CTO; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS, and integrated IBM watsonx behind a Gemini fallback after measuring watsonx's 28-second response baseline against a 10-second serverless timeout ceiling; the work earned Sanicle its IBM Silver Partner certification.],
+    [Joined as Senior AI/ML Infrastructure Engineer and was promoted to CTO; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS and integrated IBM watsonx behind a Gemini fallback, the work that earned Sanicle its IBM Silver Partner certification.],
   ),
 )
 
@@ -325,19 +344,10 @@ building on the Claude Agent SDK.
 
 // ═══ PROJECTS ════════════════════════════════════════════════════════════════
 // Independent work Chan owns end to end. No project here duplicates a product
-// built at an employer — those live in Experience. One sentence each.
+// built at an employer or at Chan's own company — those live in Experience.
+// ArchCanvas used to lead this section; it moved up to Experience when
+// ArchCanvas became a role rather than a side build. One sentence each.
 = PROJECTS
-
-#project-entry(
-  name: "ArchCanvas and ArchLang",
-  url: "archcanvas.uk",
-  target: "https://archcanvas.uk/",
-)[
-  An AI design agent for architects and self-builders: invented ArchLang, the
-  open-source language that compiles a floor plan into a dimensioned drawing (34 npm
-  releases, 83 diagnostic codes), then built the commercial product on top: edits are exact and
-  replayable, not regenerated.
-]
 
 #project-entry(
   name: "Tam-AI-Ti",
@@ -346,8 +356,8 @@ building on the Claude Agent SDK.
 )[
   A bilingual te reo Māori and English AI financial-wellness app, built solo on
   commission from Riria (Missy) Te Kanawa personally, not her employer ASB Bank:
-  three composed OpenAI models, one a realtime voice coach with server-side VAD,
-  and culture as typed schema (Maramataka phases, Te Whare Tapa Whā domains); a 19-user cohort
+  three composed OpenAI models, one a realtime voice coach, and culture as typed
+  schema (Maramataka phases, Te Whare Tapa Whā domains); a 19-user cohort
   produced 181 journal entries over 4 months.
 ]
 
@@ -357,8 +367,8 @@ building on the Claude Agent SDK.
   target: "https://www.vitex.org.nz/",
 )[
   Paste a job description, get a tailored resume and cover letter scored against
-  its keywords in under 30 seconds; sole-authored over \~18 months, with Typst
-  compiling the finished PDF locally in under 100 ms across 7 templates.
+  its keywords in under 30 seconds, with Typst compiling the finished PDF
+  locally in under 100 ms across 7 templates.
 ]
 
 #project-entry(
@@ -376,8 +386,7 @@ building on the Claude Agent SDK.
   [#link("https://github.com/ChanMeng666/echook")[echook],
   #link("https://eatropolis.co.nz/")[eatropolis.co.nz],
   #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator],
-  #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill]
-  (typesets this resume), and #link("https://seismophone.chanmeng.org/")[Seismophone].]
+  #link("https://github.com/ChanMeng666/typst-claude-skill")[typst-claude-skill], and #link("https://seismophone.chanmeng.org/")[Seismophone].]
 })
 
 // ═══ EDUCATION ═══════════════════════════════════════════════════════════════
@@ -408,7 +417,7 @@ building on the Claude Agent SDK.
   "Building with the Claude API", "Introduction to MCP",
   "Introduction to Agent Skills", "Claude Code in Action",
   "AI Fluency: Framework and Foundations",
-  "Claude Certified Architect (Foundations): curriculum completed, practice exam passed (Partner Network track)",
+  "Claude Certified Architect (Foundations): practice exam passed, Partner Network track",
 ))
 #skills-line("Other (50+ total)", (
   "Google AI Essentials", "Microsoft Azure AI Essentials",
@@ -425,5 +434,5 @@ building on the Claude Agent SDK.
 = AWARDS AND RECOGNITION
 
 - UN CSW 69 Speaker (by video link), UN Headquarters, New York, Mar 2025 — drew IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.
-- Outstanding Mentor Award, AI Hackathon Festival 2025 (1 of 14 mentors); Excellence Award, FemTech China Women's Health Technology Challenge (Dec 2024); Outstanding Performer, UN Women FemTech Hackathon, Beijing (Mar 2025).
+- Outstanding Mentor Award, Aotearoa AI Hackathon Festival, won in 2025 (1 of 14 mentors) and again in 2026, a second consecutive year; Excellence Award, FemTech China Women's Health Technology Challenge (Dec 2024); Outstanding Performer, UN Women FemTech Hackathon, Beijing (Mar 2025).
 - Community: 480+ GitHub stars across own public repos, 26 LinkedIn recommendations, 2 PRs merged into CopilotKit.

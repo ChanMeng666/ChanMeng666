@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 480+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-09-03
+**Last updated:** 2026-09-04
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -65,7 +65,7 @@ thought."
 
 **Primary (employers / clients):**
 - **Engram LLC** (employer) -- AI Agent Architect (May 2026 — Jul 2026). URL: https://engram.media. Related work: engram.
-- **GAVIGO Inc.** (employer) -- Founding Principal Engineer (Oct 2025 — present). URL: https://gavigo.com. Related work: gavigo. Related project: gavigo-ire.
+- **GAVIGO Inc.** (employer) -- Founding Principal Engineer (Oct 2025 — Sep 2026). URL: https://gavigo.com. Related work: gavigo. Related project: gavigo-ire.
 - **Sanicle Inc.** (employer) -- CTO (Mar 2025 — Feb 2026). URL: https://www.linkedin.com/company/sanicleofficial/. Related work: sanicle.
 - **TechNest Community** (employer) -- AI Instructor & Mentor — 2026 AI Track Cohort 3 (Apr–Aug 2026). URL: https://www.technestcommunity.com/. Related work: technest.
 - **She Sharp** (employer) -- Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since Jul 2025. URL: https://shesharp.org.nz. Related work: she-sharp. Related volunteer: she-sharp-ambassador. Related project: she-sharp.
@@ -171,7 +171,7 @@ End-to-end AI-native product engineering — from agentic-system architecture th
 Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first.
 
 ### What is Chan's biggest shipped result?
-GAVIGO IRE — 426 of 439 non-merge commits (~97%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — the member platform for a charity running 96+ events since 2014: 95 API routes, 1,411-line schema, 793 of 936 commits solo.
+GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo.
 
 
 ## Profiles
@@ -231,162 +231,8 @@ client-side playground, published open-source to npm. ArchCanvas is the
 Next.js product that consumes it as a package: an AI agent writes
 ArchLang, compiles it, grounds a rendering on the compiled plan, and
 critiques it — then lets the user refine the plan in place.
-### Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer) at Gavigo
-[tier=flagship · recency=active · updated=2026-08-26]
-- **Period:** Oct 2025 -- Present
-- **Location:** USA (remote — Delaware-incorporated)
-- **URL:** https://gavigo.com/
-- **Keywords:** Go, Kubernetes (GKE), React Native, WebSocket, Redis, gpt-5.4-mini, AI orchestration, Distributed systems, Founding engineer
-
-**Impact:** Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owns the Intelligence Layer end-to-end (~97% solo on 426 of 439 non-merge commits) with a contractually protected technical domain.
-
-**Company context:** GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
-stage, Istanbul-founded by Saba Gecgil and registered in
-Wilmington, Delaware. Official LinkedIn positioning:
-**"Activation & Execution Layer for Interactive Software"**.
-Consumer-facing mission (from the company's own marketing):
-"Skip the Store. Start the Play" — eliminate the friction between
-user intent and digital experience. Internally framed as building
-the "Post-App World" through proprietary "Instant Reality
-Switching" technology. The architecture is publicly described as
-two pillars: the Technology Platform (the CTO-led foundation) and
-the Intelligence Layer (the autonomous predictive engine that
-makes Instant Reality possible). The current product wedge is
-mobile gaming; the underlying activation engine is platform-
-shaped and applies to any interactive content category where
-install gap and cold-start latency dominate the funnel. External
-validation during my tenure: accepted into both **Google for
-Startups Cloud Program** and **NVIDIA Inception Program**
-(Feb 2026), and featured publicly by tech-business press
-(feedvoice.com, *"How GAVIGO Is Ending App Store Friction for
-Instant Digital Play"*, 2026-02-10).
-
-**Mission:** Replace the native-app install funnel — discover → app-store
-landing → install → onboard → first interaction — with
-sub-millisecond intent-to-experience activation. The problem
-being solved is industry-wide: cold-start latency, install
-friction, and re-engagement cost on mobile interactive content
-(games, video, AI experiences) where perception of instantaneity
-drives engagement.
-
-**My mandate:** Own the Intelligence Layer end-to-end — GAVIGO's term for the
-autonomous, predictive engine that powers Instant Reality
-activation. The role is contractually defined with a "Protected
-Technical Domain" that includes activation systems, activation
-flow and execution behavior, activation-economics proof path,
-AI-assisted orchestration and execution-control systems, restore
-and reuse boundary work, heavier-workload validation, and the
-core activation / execution / AI-enabled systems architecture of
-GAVIGO's interactive workload platform — plus the natural forward
-extension of that domain as the system evolves. Reporting to
-founder & CEO Saba Gecgil.
-
-Title progression formalized over three contract iterations:
-Original Consulting Agreement (Oct 17 2025), Amended and Restated
-(Feb 9 2026), Second Amended and Restated (Apr 16 2026) which
-ratified the current title: **Founding Principal Engineer,
-Activation, Execution & AI Systems**.
-
-**Impact delivered:** Shipped GAVIGO IRE — the Instant Reality Exchange platform — from
-M1 prototype to live production at ire.gavigo.com. First shipped
-on DigitalOcean DOKS (Singapore); led the full migration to Google
-Cloud GKE (Belgium) in a clean ~30-minute cutover on 2026-03-11
-when GAVIGO's Google Cloud partnership took effect — full
-production-grade expertise on both DigitalOcean and Google Cloud.
-445 commits (439 non-merge), 426 of them (~97%) mine across my two
-git identities;
-the remainder split between the GitHub Actions bot and a second
-engineer who joined in June 2026.
-
-Real measured platform performance, from the production benchmark
-spine: restore path <1 ms p50, cold path ~12 ms p50, 84.6%
-warm-pool hit rate, 0 errors at 100 concurrent WebSocket clients
-under load test. Architectural deliverables include the
-deterministic five-state Activation Spine
-(COLD → READY → ACTIVE → REUSABLE → restore) with atomic Redis
-transitions and proof-signal timestamps; the seven-trigger AI
-rules engine (Swarm Boost, Proactive Warm, Cross-Domain Inject,
-Mode Change, Lookahead Warm, Initial Warm, Checkpoint Restore);
-the warm-pool LRU manager with ProtectSlot reservations; the
-cross-platform state-sync protocol bridging MMKV / localStorage /
-Redis; and the Phase 9 audience-aware WebSocket broadcast filter
-that lets investors, operators, and the public see different
-slices of the same catalog. Recognized in the corporate record
-as "a core long-term technical builder of the Company's
-interactive workload platform" with founder-level equity
-participation.
-
-**External validation during my tenure (Feb 2026 cluster):**
-the company was accepted into the **Google for Startups Cloud
-Program** (announced by founder Saba Gecgil) — the partnership
-that directly enabled the GCP migration I led the following
-month, and the platform under which the sub-millisecond
-activation claims are now being validated in production-grade
-Google infrastructure. The same window brought acceptance into
-the **NVIDIA Inception Program** (supporting startups building
-GPU-intensive infrastructure-level technologies), and
-third-party press coverage at feedvoice.com — *"How GAVIGO Is
-Ending App Store Friction for Instant Digital Play"*
-(2026-02-10) — which surfaced GAVIGO's sub-0.2-second
-end-to-end activation claim, the patented execution-layer IP
-positioning, and the "Watch and Play era" public narrative the
-company is operating against. My contractual scope was
-re-amended in the same window (Second Amended and Restated
-Consulting Agreement, Apr 16 2026) to formalise the **Founding
-Principal Engineer, Activation, Execution & AI Systems** title
-and the Protected Technical Domain backing it.
-
-**Technical highlights:** **Cross-cloud production expertise — DigitalOcean and Google Cloud.**
-Originally architected on **DigitalOcean DOKS (Singapore, sgp1)**
-with DO Container Registry, DO LoadBalancer, and Let's Encrypt
-+ manual certbot rotation. Led the full migration to **Google
-Cloud GKE Standard Zonal (Belgium, europe-west1-b)** on
-2026-03-11 in a single ~30-minute cutover when GAVIGO's Google
-Cloud partnership took effect. Migration rebuilt every layer of
-the infrastructure: DO Container Registry → Artifact Registry
-(cross-region europe-west3 pulls); DO LoadBalancer → GCE Ingress
-+ Global HTTP(S) Load Balancer with Google-managed certs (auto-
-renewal replacing certbot toil); DO LB annotations → FrontendConfig
-/ BackendConfig with WebSocket-aware 86400 s timeouts; service
-types reshaped LoadBalancer-per-frontend → ClusterIP-behind-Ingress;
-static IP swapped to a GCP Global static IP. All five deployments
-migrated cleanly with `strategy: Recreate` to avoid CPU deadlock
-on single-node clusters. Full migration record archived in the
-repo for institutional memory.
-
-Single Go binary orchestrator combining a gorilla/websocket hub,
-the Scorer (weighted personal / global / trend signals into a
-combined activation score), the seven-trigger Rules Engine, and a
-Kubernetes client-go integration that patches deployment replicas
-in real time. Companion services: React + Vite dashboard, React
-Native + Expo 54 mobile build served via nginx, always-warm shared
-game-server pod baking ~25 FOSS games for zero per-game cold
-start, Node + Express AI-service pod with gpt-5.4-mini, Phase 6+
-compute / inference workloads, Redis 7 with allkeys-LRU and a
-400 MB warm-pool budget, optional Postgres 16 for social data.
-
-Hardest engineering problems solved: (1) Sub-millisecond restore
-via the Activation Spine state machine with deterministic atomic
-transitions, not optimistic ones. (2) Cross-platform state sync
-across MMKV, localStorage, postMessage, and Redis with a single
-canonical source of truth. (3) Async K8s coordination (EndpointSlice
-and Pod-status watches) feeding real-time WebSocket telemetry
-with millisecond-precision phase timestamps that prove the
-decision → patch → observation chain rather than asserting it.
-(4) Warm-pool LRU without cascade eviction, via ProtectSlot
-reservations for controlled and benchmark workloads. (5)
-Audience-aware broadcast filtering at the WebSocket envelope
-layer so each client preset sees a different catalog slice
-without N broadcast topics.
-
-FOSS curation: cloned 11 open-source game repos, scored against
-license (MIT / Apache-2.0), build size (<50 KB), web-first
-compatibility, and audio bug stability — vendored the top 9
-(Hextris, Clumsy Bird, Tiny Yurts, Catculus, Casual Crusade,
-Stolen Sword, Brewing Disaster, Coup Ahoo, DEAD AGAIN,
-Norman the Necromancer, Idle Necromancer).
 ### Senior Full Stack Engineer & Website Team Lead at She Sharp
-[tier=flagship · recency=active · updated=2026-08-26]
+[tier=flagship · recency=active · updated=2026-09-04]
 - **Period:** Jul 2025 -- Present
 - **Location:** New Zealand
 - **URL:** https://www.shesharp.org.nz/
@@ -423,8 +269,13 @@ infrastructure, and serve as technical lead on adjacent initiatives
 (Her Waka MSD-funded programme, SEO strategy).
 
 **Impact delivered:** Shipped and operate the new full-stack She Sharp platform replacing
-the legacy Webflow site. 793 of 936 commits authored solo (85% of
-total). Headline systems delivered: AI mentor-mentee matching
+the legacy Webflow site. Over 13.3 months (2025-07-22 → 2026-09-01,
+pinned at commit b1d49d88): 1,381 commits and 251 merged pull
+requests — I opened 207 of the 254 — and 94.5% of all lines added
+(801,609 of 847,827). One other developer worked alongside me:
+Lesley Gao, 151 commits and 43 pull requests, mostly on the
+dashboard and mentorship surfaces. Headline systems delivered:
+AI mentor-mentee matching
 (GPT-4o-mini, 5-dimensional scoring with human-in-the-loop review),
 three role-permissioned dashboards (mentor / mentee / admin) with
 dual-role support, Stripe membership-tier billing, the Slack
@@ -433,6 +284,110 @@ digest, weekly NZ funding-opportunities crawler), a Claude agent
 skill `sync-event-from-slack` that automates event-page publication
 from Slack content, comprehensive audit logging, and a database
 version-control system.
+
+**Led the organisation's digital and AI-native transformation —
+three platform migrations, a data-sovereignty programme and a
+governance audit.** The three migrations are not equally finished
+and the honest headline says so: the website is done; the mailing
+list is technically done and proven in production; marketing
+production has shipped, and has been chosen over building a
+hand-made duplicate exactly once, on my own say-so. Shipping a
+capability and shipping its adoption are two different projects,
+and only the first was scheduled.
+
+**Mailing list.** Moved 1,549 people onto infrastructure the
+charity owns — double opt-in where confirmation requires a button
+press and never a GET, as defence against link scanners; a
+four-stream sender model; exactly one Resend call site in the
+whole application; and the consent record in the organisation's
+own Postgres rather than a vendor's. The cutover went out in 16
+idempotent batches with 0 failures and a 0.45% bounce rate. The
+sending-domain move was 29 DNS records before and 29 after with a
+single value different, because the region and Return-Path were
+matched deliberately rather than discovered afterwards. Consent
+became auditable for the first time by classifying every
+subscriber against the act that put them on the list — and I
+reported the unflattering result, that 75.4% arrived by an act
+that was not a subscription. 2,129 non-consenting contacts are
+held as one-way hashes so a future import cannot resurrect them,
+and a CI gate fails the build if an email address or a ticketing
+access code reaches a committed file.
+
+**Data sovereignty.** Recovered 1.15 GB of the organisation's own
+operating record out of four platforms: eleven years of Slack
+(208 conversations, 56,119 messages), the full ticketing and
+mailing history, and the only copy of the previous website held
+outside the vendor's own account. 97 archived Slack channels were
+invisible to the standard listing API and would have been missed
+entirely. Two findings that transfer to any migration: a checksum
+over a mapped object proves only what your mapper kept, and an API
+key is not a replacement for an export.
+
+**Digital governance audit.** 7 of the 11 email addresses
+published on the website did not exist — including the headline
+contact address — proven by sending one real message to each and
+reading delivery back, not inferred from configuration; all fixed,
+plus a funder-facing PDF the sweep had missed. Removed 17
+fabricated testimonials attributed to real companies from the
+charity's public site. Proved 3 of the 4 full-bleed photographs in
+a published funder report came from outside the period they
+illustrated, using perceptual hashing over a 225-image corpus.
+Catalogued 24 credential and personal-data exposures by location
+without recording a single value, and identified the same
+access-ownership failure recurring across 5 separate incidents in
+7 years.
+
+**Financial governance and audit capability.** Diagnosed a 60%
+rise in a SaaS bill as an unbounded data-growth problem rather
+than a price rise: the vendor's base price had not moved in 25
+billing periods, and every dollar of the increase was buying
+contacts who could not lawfully be emailed (1,585 of 3,145 billed
+contacts, 50.4%). Finding the mechanism mattered more than the
+number. Identified NZ$1,876.44 and US$400.20 of annual spend as
+removable against a US$240 replacement — realisable, not
+realised: the founder is the cardholder and pressing the button
+was not mine to press. Found an unclaimed nonprofit entitlement
+worth US$1,566 a year, the workspace collaboration tool's free
+upgrade for registered charities under 250 members; the
+organisation has 18 and was paying full price. And established
+that the ticketing account had been billed at the charity rate
+(3% + $0.30) until 27 October 2023 and at the full commercial rate
+from 31 October, unnoticed for nearly three years — not by
+assuming either rate but by fitting every fee-bearing ticket
+against both published formulas, which split cleanly into two eras
+with no overlap. The twist that makes it matter: absorbed fees are
+$0.00 on every event, so the difference sits on the ticket price.
+It is money taken from women buying tickets to a women-in-tech
+event, not from the charity's accounts.
+
+**Enablement and business-process mapping.** Delivered six
+enablement sessions for the volunteer team (sessions delivered; no
+attendance was ever logged, so no headcount is claimed): a
+recorded content-update guide (2026-03-29) aimed at getting a
+non-technical member updating the site inside three minutes; a
+browser-automation demo (2026-05-04); four recorded agent-skill
+tutorials (2026-07-28); 1:1 Typst coaching for a teammate
+(2026-08-02); a recorded end-to-end event-lifecycle tutorial
+(2026-08-24); and a two-hour in-person workshop in Auckland on
+2026-08-29, during which I produced usable promo videos live while
+explaining the process. The written interface to all of it is an
+AI skills guide addressed to anyone on the team "whether or not
+you have ever written a line of code". Alongside it I derived a
+1,714-line event-lifecycle standard operating procedure by
+crawling eleven years of Slack — a phase × owner × method table
+covering partner acquisition, go/no-go, channel kickoff,
+ticketing, website page, poster set, campaign calendar, social,
+mailing-list and registrant email, deck, photography, gallery
+close-out, feedback digest and newsletter, marking where the
+published title and the observed practice diverge. It is served as
+a live internal page and hash-verified against its source Markdown
+in CI, so the page cannot silently drift from the procedure it
+serves. Beside it sit 52 recorded organisational decisions (51 of
+them mine), each with structured frontmatter, which turns "has
+anyone already thought about this?" from a question you ask a
+person into one you can grep. I also ran a published-vs-recorded
+reconciliation of the organisation's own headline numbers — a
+measurement, not an accusation.
 
 **Custom Slack ecosystem for the She Sharp workspace.** Beyond
 the admin-side Claude Code skill, I shipped a portfolio of
@@ -444,9 +399,18 @@ numbers each Monday; and a **weekly NZ funding-opportunities
 digest bot** that crawls 6 government RSS/HTML sources, scores
 each opportunity for member relevance (60+ threshold), and
 posts the top 10 to a dedicated `#funding-opportunities`
-channel via Incoming Webhook. Together these collapse work
-that previously consumed volunteer-team hours each week into
-background automation members notice as "the Slack just knows."
+channel via Incoming Webhook; contact-form and AI-screening
+notifications; and a weekday `slack-triage` cron that reads with
+`--no-record` so it never advances a read position — an automated
+reader that marks things read is an automated way to lose them.
+The most involved of them is an **AI-powered `/event` slash
+command** that turns a plain-English request into a validated
+patch: it pulls channel history, the events JSON and the naming
+conventions as context, produces a structured-output patch,
+Zod-validates it, commits to a draft branch, shows an ephemeral
+Block Kit preview with a JSON diff, and on confirm opens a GitHub
+pull request. Work that used to mean opening a console now
+arrives as a reviewable change.
 
 Beyond the main platform, I shipped three supporting projects: the
 Python migration crawler (1,748 images / 707 MB / 11 JSON files
@@ -462,10 +426,14 @@ canary + React 19.1.2 + TypeScript 5.8 on Drizzle 0.43 over Neon
 Postgres, NextAuth 5 with bcrypt + Google/GitHub OAuth, Tailwind 4
 + shadcn/ui, Resend transactional email, Cloudinary image pipeline,
 Stripe-integrated membership flow, Vercel edge deployment +
-3 Vercel Cron jobs. Schema runs 1,411 lines / 30 pgEnums / 35
-pgTables / 26 SQL migrations — every business concept is a typed
-enum so invalid states are unrepresentable. 95 API routes, 53
-pages, 160 components.
+3 scheduled jobs. Schema runs 39 tables / 33 enums / 32 SQL
+migrations — every business concept is a typed enum so invalid
+states are unrepresentable. 84 API routes, 63 pages, 198
+components; 180,914 lines of TS/TSX/CSS across 818 files and
+35,062 lines of Markdown across 105 files, with 5 CI jobs gating
+every pull request and 33 test files behind them. The Markdown is
+not documentation debt — it is the interface, and the reference
+documents in it are the rules the product must not break.
 
 The AI matching engine is a deliberate two-stage pipeline:
 rule-based pre-filter for cost control, then GPT-4o-mini at
@@ -475,7 +443,7 @@ promising pairs along five **explicitly weighted** dimensions
 with explainable natural-language justifications, Upstash Redis
 cache by pair, exponential-backoff retries, deterministic rule-
 based fallback when AI is unavailable, and admin human-in-the-loop
-approval as the final gate. The Slack agent
+approval as the final gate. The `sync-event-from-slack` agent
 skill composes existing CLI tools (Slack fetch, image download,
 docx parse, JSON validate, git commit) into a single intent-driven
 workflow with dry-run preview and CI gating — collapsing event
@@ -484,6 +452,72 @@ three supporting projects I worked in Python (crawler with image
 deduplication + Wayback Machine fallback), Mintlify / MDX (Her Waka
 teaching site authored solo), and Node 22 native fetch over the
 SerpData API (the SEO audit with mermaid-diagrammed report).
+
+**The AI-native operating model.** An AI-native team is not a team
+that talks to a chatbot; it is a team whose recurring work has
+been written down precisely enough that an agent can execute it,
+and whose non-engineers can therefore run work that previously
+needed an engineer. She Sharp's version of that is 11 agent skills
+under `.claude/skills/`, spread over 97 files: 25,643 lines of
+written-down procedure and tooling — the honest figure, after
+subtracting one skill's 22,786-line machine-written state ledger
+from the 48,429 raw total — comprising 12,550 lines of instruction
+and reference prose across 27 reference documents and 11,995 lines
+of script across 34 executables. Each skill lives in the
+repository like code: version-controlled, changed by pull request,
+and type-checked in CI, which needs a second tsconfig because the
+root one skips `.claude/`. That is the whole argument. A procedure
+in someone's memory cannot be reviewed, diffed, or made to fail a
+test; a procedure in a SaaS console can be changed by anyone with
+the login and leaves no record of who changed it or why.
+
+Each of the eleven replaces a named manual tool:
+`sync-event-from-slack` (the largest), `monthly-newsletter` (1,424
+lines, the longest instruction file in the repository),
+`build-event-slides`, `update-mailing-list`, `email-the-community`,
+`reply-to-contact-messages`, `promote-event`, `make-event-poster`,
+`run-event-playbook`, `make-event-video`, `tweak-event-slides`.
+`run-event-playbook` is the orchestrator and the reason eleven
+tools behave as one workflow: it runs 10 offline checks for an
+event and, for each gap, names the skill that closes it. It builds
+nothing itself — it turns "what still has to happen for this
+event?" into a command whose answer arrives with its next action
+attached. The agent's own memory is layered the same way: 9
+`CLAUDE.md` files, 933 lines, split by *when* a rule must bind
+rather than by subject. A nested file loads only when a file in
+that subtree is read, so rules about creating a new file, running
+a command, or trusting a `grep` hit have to live in the root file
+— none of those actions begins by reading a file in the directory
+they govern.
+
+The four automations worth naming. **Newsletter** —
+`monthly-newsletter`, 4 issues shipped in the new system, with a
+two-block JSON schema separating the machine-generated snapshot
+from human-owned editorial, and a three-stage approval chain (test
+send → review → founder approval) tracked in a state file. Writing
+the loop down did not move the decision to an agent; it made the
+stage legible. The founder alone approves a broadcast. **Poster** —
+`make-event-poster` generates a *textless* plate with gpt-image-2
+and then sets every word in code across six platform sizes plus a
+per-speaker set and a line-up tile. The reasoning is the good
+part: text rendered by a diffusion model cannot be corrected when
+a speaker's title changes and cannot be proofread by a test; text
+set in code is a string in a file. **Promo video** —
+`make-event-video`, one Remotion composition rendering four aspect
+ratios (vertical, portrait, square, landscape) cut to a
+soundtrack, where a scene asks the layout for the shape of the
+frame it is being rendered into and recomposes; the vertical cut
+is not the landscape cut with its sides thrown away. **Report** —
+a Typst pipeline producing funder-facing and internal reports from
+real platform exports rather than placeholders.
+
+No before-and-after timing study was run, so there is no
+hours-saved figure here and none should be inferred. What is
+structural and checkable is narrower and more useful: work that
+required a vendor console now runs from a command, so it can be
+scheduled, reviewed and re-run; and work that required an engineer
+now has a written procedure someone else can follow, which changes
+who is able to do it rather than only how long it takes.
 ### Chief Technology Officer at FemTech Weekend
 [tier=primary · recency=active · updated=2026-09-02]
 - **Period:** Mar 2025 -- Present
@@ -1007,6 +1041,207 @@ search — so the teaching platform is itself a worked example of
 the doctrine being taught. Students can literally read the
 instructor's repo to see how the patterns they're learning
 compose in a real production system.
+### Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer) at Gavigo
+[tier=flagship · recency=recent · updated=2026-09-04]
+- **Period:** Oct 2025 -- Sep 2026
+- **Location:** USA (remote — Delaware-incorporated)
+- **URL:** https://gavigo.com/
+
+**Impact:** Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owned the Intelligence Layer end-to-end (96.5% solo on 471 of 488 non-merge commits) with a contractually protected technical domain.
+
+**Company context:** GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
+stage, Istanbul-founded by Saba Gecgil and registered in
+Wilmington, Delaware. Official LinkedIn positioning:
+**"Activation & Execution Layer for Interactive Software"**.
+Consumer-facing mission (from the company's own marketing):
+"Skip the Store. Start the Play" — eliminate the friction between
+user intent and digital experience. Internally framed as building
+the "Post-App World" through proprietary "Instant Reality
+Switching" technology. The architecture is publicly described as
+two pillars: the Technology Platform (the CTO-led foundation) and
+the Intelligence Layer (the autonomous predictive engine that
+makes Instant Reality possible). The current product wedge is
+mobile gaming; the underlying activation engine is platform-
+shaped and applies to any interactive content category where
+install gap and cold-start latency dominate the funnel. External
+validation during my tenure: accepted into both **Google for
+Startups Cloud Program** and **NVIDIA Inception Program**
+(Feb 2026), and featured publicly by tech-business press
+(feedvoice.com, *"How GAVIGO Is Ending App Store Friction for
+Instant Digital Play"*, 2026-02-10).
+
+**Mission:** Replace the native-app install funnel — discover → app-store
+landing → install → onboard → first interaction — with
+sub-millisecond intent-to-experience activation. The problem
+being solved is industry-wide: cold-start latency, install
+friction, and re-engagement cost on mobile interactive content
+(games, video, AI experiences) where perception of instantaneity
+drives engagement.
+
+**My mandate:** Own the Intelligence Layer end-to-end — GAVIGO's term for the
+autonomous, predictive engine that powers Instant Reality
+activation. The role is contractually defined with a "Protected
+Technical Domain" that includes activation systems, activation
+flow and execution behavior, activation-economics proof path,
+AI-assisted orchestration and execution-control systems, restore
+and reuse boundary work, heavier-workload validation, and the
+core activation / execution / AI-enabled systems architecture of
+GAVIGO's interactive workload platform — plus the natural forward
+extension of that domain as the system evolves. Reporting to
+founder & CEO Saba Gecgil.
+
+Title progression formalized over three contract iterations:
+Original Consulting Agreement (Oct 17 2025), Amended and Restated
+(Feb 9 2026), Second Amended and Restated (Apr 16 2026) which
+ratified the current title: **Founding Principal Engineer,
+Activation, Execution & AI Systems**.
+
+**Impact delivered:** Shipped GAVIGO IRE — the Instant Reality Exchange platform — from
+M1 prototype to live production at ire.gavigo.com. First shipped
+on DigitalOcean DOKS (Singapore); led the full migration to Google
+Cloud GKE (Belgium) in a clean ~30-minute cutover on 2026-03-11
+when GAVIGO's Google Cloud partnership took effect — full
+production-grade expertise on both DigitalOcean and Google Cloud.
+488 non-merge commits, 471 of them (96.5%) mine across my two
+git identities; the remainder split between the GitHub Actions bot
+and a second engineer, Olga Adam, who joined in June 2026 and owned
+the game-loading adapter architecture.
+
+Real measured platform performance, from the production benchmark
+spine: restore path <1 ms p50, cold path ~12 ms p50, 84.6%
+warm-pool hit rate, 0 errors at 100 concurrent WebSocket clients
+under load test. Architectural deliverables include the
+deterministic five-state Activation Spine
+(COLD → READY → ACTIVE → REUSABLE → restore) with atomic Redis
+transitions and proof-signal timestamps; the seven-trigger AI
+rules engine (Swarm Boost, Proactive Warm, Cross-Domain Inject,
+Mode Change, Lookahead Warm, Initial Warm, Checkpoint Restore);
+the warm-pool LRU manager with ProtectSlot reservations; the
+cross-platform state-sync protocol bridging MMKV / localStorage /
+Redis; and the Phase 9 audience-aware WebSocket broadcast filter
+that lets investors, operators, and the public see different
+slices of the same catalog. Recognized in the corporate record
+as "a core long-term technical builder of the Company's
+interactive workload platform" with founder-level equity
+participation.
+
+**External validation during my tenure (Feb 2026 cluster):**
+the company was accepted into the **Google for Startups Cloud
+Program** (announced by founder Saba Gecgil) — the partnership
+that directly enabled the GCP migration I led the following
+month, and the platform under which the sub-millisecond
+activation claims are now being validated in production-grade
+Google infrastructure. The same window brought acceptance into
+the **NVIDIA Inception Program** (supporting startups building
+GPU-intensive infrastructure-level technologies), and
+third-party press coverage at feedvoice.com — *"How GAVIGO Is
+Ending App Store Friction for Instant Digital Play"*
+(2026-02-10) — which surfaced GAVIGO's sub-0.2-second
+end-to-end activation claim, the patented execution-layer IP
+positioning, and the "Watch and Play era" public narrative the
+company is operating against. My contractual scope was
+re-amended in the same window (Second Amended and Restated
+Consulting Agreement, Apr 16 2026) to formalise the **Founding
+Principal Engineer, Activation, Execution & AI Systems** title
+and the Protected Technical Domain backing it.
+
+**How the role closed (Sept 2026).** The last mandate I was named
+on was the CEO's v1.7 *Activation Platform MVP Build Mandate*
+(2026-08-28), which made me **build lead and Phase 0 owner**; the
+company filed a USPTO nonprovisional patent on 2026-08-08 covering
+the activation / execution layer I built. (Application serial
+deliberately omitted: the filing had not published at time of
+writing, so the number is GAVIGO's to disclose, not mine.)
+The handover needed no handover document, because project context
+had been written into the repository as the work happened rather
+than carried in my head: a 26.6 KB agent operating manual
+(`CLAUDE.md`), `docs/onboarding/`, `docs/deployment/`, and
+`docs/phases/` holding 13 numbered phase records. Writing the
+context down where the code lives is the practice; a clean exit
+is what that practice looks like when it is tested.
+
+**Technical highlights:** **Cross-cloud production expertise — DigitalOcean and Google Cloud.**
+Originally architected on **DigitalOcean DOKS (Singapore, sgp1)**
+with DO Container Registry, DO LoadBalancer, and Let's Encrypt
++ manual certbot rotation. Led the full migration to **Google
+Cloud GKE Standard Zonal (Belgium, europe-west1-b)** on
+2026-03-11 in a single ~30-minute cutover when GAVIGO's Google
+Cloud partnership took effect. Migration rebuilt every layer of
+the infrastructure: DO Container Registry → Artifact Registry
+(cross-region europe-west3 pulls); DO LoadBalancer → GCE Ingress
++ Global HTTP(S) Load Balancer with Google-managed certs (auto-
+renewal replacing certbot toil); DO LB annotations → FrontendConfig
+/ BackendConfig with WebSocket-aware 86400 s timeouts; service
+types reshaped LoadBalancer-per-frontend → ClusterIP-behind-Ingress;
+static IP swapped to a GCP Global static IP. All five deployments
+migrated cleanly with `strategy: Recreate` to avoid CPU deadlock
+on single-node clusters. Full migration record archived in the
+repo for institutional memory.
+
+Single Go binary orchestrator combining a gorilla/websocket hub,
+the Scorer (weighted personal / global / trend signals into a
+combined activation score), the seven-trigger Rules Engine, and a
+Kubernetes client-go integration that patches deployment replicas
+in real time. Companion services: React + Vite dashboard, React
+Native + Expo 54 mobile build served via nginx, always-warm shared
+game-server pod baking ~25 FOSS games for zero per-game cold
+start, Node + Express AI-service pod with gpt-5.4-mini, Phase 6+
+compute / inference workloads, Redis 7 with allkeys-LRU and a
+400 MB warm-pool budget, optional Postgres 16 for social data.
+
+Hardest engineering problems solved: (1) Sub-millisecond restore
+via the Activation Spine state machine with deterministic atomic
+transitions, not optimistic ones. (2) Cross-platform state sync
+across MMKV, localStorage, postMessage, and Redis with a single
+canonical source of truth. (3) Async K8s coordination (EndpointSlice
+and Pod-status watches) feeding real-time WebSocket telemetry
+with millisecond-precision phase timestamps that prove the
+decision → patch → observation chain rather than asserting it.
+(4) Warm-pool LRU without cascade eviction, via ProtectSlot
+reservations for controlled and benchmark workloads. (5)
+Audience-aware broadcast filtering at the WebSocket envelope
+layer so each client preset sees a different catalog slice
+without N broadcast topics.
+
+**Production diligence — the work of checking what was assumed.**
+Response compression had never actually been enabled in
+production: an nginx default that only misbehaves behind a load
+balancer, so it worked correctly on every developer machine and
+nowhere that mattered. Found and fixed, the dashboard bundle went
+1.2 MB → 350 KB (−71%), the mobile app bundle 2.99 MB → 748 KB
+(−75%), a typical game 37 KB → 16 KB. I took the first *measured*
+read of cloud cost — Google Cloud was running at ~$89/month against
+a documented "~$67/month" that turned out to be list-price
+arithmetic never checked against a bill, so the estimate was 31%
+low — and found a budget alert that could never fire, 7,500% over
+its limit and reporting zero; I requested the minimum role needed
+to fix it (Billing Account Costs Manager) and explicitly declined
+Billing Account Administrator. I established branch protection and
+then proved it by being blocked by it: PRs required, 1 approval,
+three CI checks green, admins unable to bypass — the gate being a
+3-job pipeline (`go build/vet/test -race`, `vite build`,
+`tsc --noEmit`), where the mobile typecheck job is load-bearing
+because `expo export` transpiles without typechecking. Redis had
+been silently gone for 10 days while the service reported healthy;
+the fix was to reconnect rather than give up at boot, and to stop
+reporting healthy while degraded. A one-day T4 GPU experiment
+falsified its own hypothesis — the conclusion was "a GPU is a
+throughput/cost lever, not a latency lever" — and was torn down
+the same day with a reusable harness and the raw results committed.
+The acceptance criteria I wrote for a vendor smoke test (no
+pre-roll before first play, documented `game_ready` /
+`game_started` lifecycle events, wrapper telemetry without
+touching game code, programmatic licence verification) were
+adopted by the CEO as company process — converted into a
+six-vendor procurement questionnaire that disqualified a vendor
+within four hours.
+
+FOSS curation: cloned 11 open-source game repos, scored against
+license (MIT / Apache-2.0), build size (<50 KB), web-first
+compatibility, and audio bug stability — vendored the top 9
+(Hextris, Clumsy Bird, Tiny Yurts, Catculus, Casual Crusade,
+Stolen Sword, Brewing Disaster, Coup Ahoo, DEAD AGAIN,
+Norman the Necromancer, Idle Necromancer).
 ### Software Engineer (Bandicoot squad · Crimson Academies) at Aotearoa Infinite Academy
 [tier=primary · recency=historical · updated=2026-05-27]
 - **Period:** Oct 2025 -- Nov 2025
@@ -3329,7 +3564,7 @@ wrote the Gulp + LESS build pipeline, and authored the
 > The rest of the catalogue: every project not listed above, grouped by category. This is NOT an open-source list — it includes client deliverables and projects with no public repository, and a link here may point to a live site rather than to source code. Treat a project as open source only if it appears under "Notable Open Source Projects" above or carries a repository link on github.com/ChanMeng666.
 
 **web-apps:**
-- [She Sharp](https://www.shesharp.org.nz/) [tier=flagship · recency=recent · updated=2026-08-26]
+- [She Sharp](https://www.shesharp.org.nz/) [tier=flagship · recency=recent · updated=2026-09-04]
 - [TikTok Shop Go Template](https://github.com/ChanMeng666/douyin-mall-go-template) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [腾讯会议录屏下载助手 — Chrome Web Store-Published Extension](https://github.com/ChanMeng666/tencent-meeting-video-downloader) [tier=archive · recency=deprecated · updated=2026-09-02] -- live: https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
 - [FreePeriod Website](https://github.com/ChanMeng666/free-period-website) [tier=primary · recency=historical · updated=2026-08-05] -- live: https://free-period-website.pages.dev/
@@ -3365,7 +3600,7 @@ wrote the Gulp + LESS build pipeline, and authored the
 - FemTech Weekend Website (Gen-1, deprecated) [tier=archive · recency=deprecated · updated=2026-07-04]
 **ai-apps:**
 - [Tam-AI-Ti](https://tamaiti.whiri-ai.com/) [tier=flagship · recency=active · updated=2026-07-17]
-- [GAVIGO IRE](https://ire.gavigo.com/) [tier=flagship · recency=active · updated=2026-07-17]
+- [GAVIGO IRE](https://ire.gavigo.com/) [tier=flagship · recency=recent · updated=2026-09-04]
 - [FemTracker Agent](https://github.com/ChanMeng666/femtracker-agent) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [AI-Powered ESOL Learning Platform](https://github.com/ChanMeng666/esol-learning-platform) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [Wellness Support Agent](https://github.com/ChanMeng666/wellness-agent) [tier=archive · recency=historical · updated=2026-07-11] -- live: https://sanicle-wellness-agent-2lxj5uw.gamma.site/
@@ -3439,6 +3674,26 @@ wrote the Gulp + LESS build pipeline, and authored the
 
 ## Awards & Honors
 
+- **Outstanding Mentor Award (2026)** (Aotearoa AI Hackathon Festival 2026 (AUT, She Sharp, AI Forum NZ, Fisher & Paykel Healthcare), 2026-08) -- https://www.linkedin.com/in/chanmeng666/details/honors/: Named an **Outstanding Mentor** — the award's official name, carrying no
+year suffix — at the **Aotearoa AI Hackathon Festival 2026**, held 7–8
+August 2026 at AUT City Campus and hosted by Auckland University of
+Technology with She Sharp and AI Forum NZ, with Fisher & Paykel
+Healthcare. The **second year running**: Chan received the same
+recognition at the 2025 edition of the festival.
+
+Served as a technical mentor to a field of **125 registered
+participants** across **twelve teams**, building AI solutions mapped to
+**five UN Sustainable Development Goals** and pitching in five minutes to
+a judging panel on the Saturday. Roughly **a third of participants had
+never been to a hackathon before**, which set the mentoring brief: get a
+first-timer from a rough idea to something demonstrable inside two days.
+Mentors were drawn from AUT, She Sharp, Fisher & Paykel Healthcare,
+Southern Cross Health Society and Red Hat; Chan appears on the host's
+public "Meet the Mentors" roster (17 names) billed as **Founding
+Engineer, ArchCanvas**. She also MC'd the festival opening and worked on
+mentor recruitment in the run-up. Appearance detail, the mentor-count
+discrepancy and the follow-on outreach:
+`events[aotearoa-ai-hackathon-festival-2026]`. [tier=primary · recency=recent · updated=2026-09-04]
 - **Outstanding Mentor Award** (AI Hackathon Festival 2025 (AI Forum NZ, She Sharp, AUT), 2025-08) -- https://www.linkedin.com/in/chanmeng666/details/honors/: Recognised as an Outstanding Mentor at the AI Hackathon Festival
 2025, co-organised by AI Forum NZ, She Sharp, and Auckland
 University of Technology. Served as **one of 14 expert mentors**
@@ -3535,7 +3790,7 @@ EVIDENCE GAP (2026-08-25): the Outstanding Mentor Award itself has no
 certificate image in `public/certificates/`, although that folder already
 holds participation certificates for smaller things.
 ### Aotearoa AI Hackathon Festival 2026 — MC & Mentor
-[tier=flagship · recency=recent · updated=2026-08-25]
+[tier=flagship · recency=recent · updated=2026-09-04]
 - **Type:** hackathon
 - **Date:** Aug 2026
 - **Location:** AUT City Campus, 55 Wellesley Street East, Auckland, New Zealand
@@ -3547,15 +3802,33 @@ holds participation certificates for smaller things.
   - Chan Meng at the AUT podium during the Karakia Tīmatanga that opened the festival — /public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-karakia.jpg
 
 **MC'd the opening** of the two-day 2026 festival — welcome and Karakia
-Tīmatanga from the AUT podium — and returned as one of the mentors, a year
-after the 2025 edition that produced the Outstanding Mentor Award. On the
-public mentor roster (17 mentors) she is billed as **Founding Engineer,
-ArchCanvas**, alongside mentors from AUT, Fisher & Paykel Healthcare,
-Southern Cross, Red Hat and Possibl.ai. 125 registered. Teams built against
-five real-world SDG themes and pitched to a judging panel; four national
-finalists go on to pitch at the Aotearoa AI Summit, 8–9 September 2026 in
-Wellington. The festival's voice-first event assistant is
-`ai-hackathon-assistant`, relaunched for 2026.
+Tīmatanga from the AUT podium — and returned as a technical mentor, a year
+after the 2025 edition that produced the first Outstanding Mentor Award.
+**Received the Outstanding Mentor Award a second consecutive year** for
+the 2026 festival (`awards[Outstanding Mentor Award (2026)]` — recorded on
+Chan's own testimony; see the self-attestation note there). She was in the
+room in **two capacities at once**: on the public mentor roster in her own
+right, and as part of the **She Sharp team** that ran the venue, working
+mentor recruitment alongside the organising group in the weeks before.
+On the public roster she is billed as **Founding Engineer, ArchCanvas**,
+alongside mentors from AUT, Fisher & Paykel Healthcare, Southern Cross
+Health Society, Red Hat and Possibl.ai.
+
+**How many mentors — two figures, both real.** The host's public "Meet
+the Mentors" roster lists **17**; the organisers' own running count
+reached **28**, which includes volunteers and staff who registered under
+the mentor code. Neither is wrong; they count different things, and this
+database records both rather than picking the flattering one.
+
+**Scale and outcome.** 125 registered. **Twelve teams** built against five
+real-world UN SDG themes; free online pre-event training ran through July,
+and roughly **a third of participants had never been to a hackathon
+before**. On the Saturday each team pitched for five minutes to a local
+judging panel: one team took the venue prize with two runners-up, and the
+winning pitch went forward to national judging. **Four national finalists**
+pitch at the Aotearoa AI Summit, 8–9 September 2026 in Wellington. The
+festival's voice-first event assistant is `ai-hackathon-assistant`,
+relaunched for 2026.
 
 A second thread outlived the festival. One of the problem statements —
 **Accessible UI Generation for Developers** — was set by **My Life My
@@ -3572,10 +3845,10 @@ published a LinkedIn post crediting them the same day. Recorded as
 outreach, **not** adoption: see `projects[a11y-loop].narrative.outcomes`
 and the `my-life-my-voice` organisation entry.
 ### No Pain, All Gain — Getting Fit for AI — MC
-[tier=primary · recency=active · updated=2026-08-25]
+[tier=primary · recency=recent · updated=2026-09-04]
 - **Type:** panel
 - **Date:** Sep 2026
-- **Location:** Les Mills Auckland City, Level 2, 200 Victoria Street West, Auckland, New Zealand
+- **Location:** Les Mills International, Level 2, 200 Victoria Street West, Auckland, New Zealand
 - **Organizer:** She Sharp × Les Mills
 - **URL:** https://www.shesharp.org.nz/events/event-lesmills-03-september-2026
 - **Keywords:** MC, diversity and AI, cross-functional, panel
@@ -3587,10 +3860,15 @@ Les Mills leaders — Keryn McKenzie (Senior Director, Data & AI), Carolina
 Lobos (Head of Finance, LM Media & Automation Lead), Ben Sullivan (Legal
 Counsel) and Gemma Lynskey (Global Comms + Org Development Director) —
 covering the legal/privacy, commercial, change-management and technical
-views of the same rollout, followed by table discussions. 25 registered at
-time of writing.
+views of the same rollout, followed by table discussions.
+**87 registered, 66 checked in** — the host's final figures, backfilled
+2026-09-04. (This entry previously read "25 registered at time of
+writing", a mid-campaign snapshot taken while registration was still
+open.) Chan also updated the four panellists' profiles on the event page
+from the run sheet in the week before the evening.
 
-EVIDENCE GAP (2026-08-25): upcoming — capture a podium shot on the night.
+EVIDENCE GAP (2026-09-04): the event has now happened and no photo of the
+night is attached yet — a podium shot would close this.
 ### Her Waka — AI × Career Empowerment Programme — Curriculum Author
 [tier=primary · recency=recent · updated=2026-08-25]
 - **Type:** workshop
@@ -3633,21 +3911,33 @@ and Full-Stack Engineer, Gavigo / Sanicle**, alongside Nikita Kumari
 (product and project manager) and Meeta Patel (academyEX). Guest speakers
 from RCSA: Abe Naus (Potentia), Paul Kelly (Absolute IT), Neekee
 Reshamwala (Randstad Digital). Facilitated by Dr Mahsa McCauley.
-Invitation-only. 39 registered, 27 checked in.
-### Her Waka — #IAmRemarkable + Vibe Coding — Speaker
-[tier=primary · recency=recent · updated=2026-08-25]
+Invitation-only. 39 registered, 27 checked in. This is also the session
+the Her Waka teaching site Chan built went out from: the programme lead
+asked for its About page to be sent to every attendee afterwards, making
+it the cohort's standing reference between monthly sessions.
+### Her Waka — #IAmRemarkable — Organizer
+[tier=primary · recency=recent · updated=2026-09-04]
 - **Type:** workshop
 - **Date:** Apr 2026
 - **Location:** academyEX, 99 Khyber Pass Road, Grafton, Auckland, New Zealand
 - **Organizer:** NZ Ministry of Social Development × She Sharp × academyEX
 - **URL:** https://www.shesharp.org.nz/events/her-waka-april-2026
-- **Keywords:** teaching, self-advocacy, vibe coding, women returning to work
+- **Keywords:** teaching, self-advocacy, recruiter networking, women returning to work
 
-Second Cohort 1 session: the #IAmRemarkable self-promotion workshop paired
-with a vibe-coding segment from Chan's curriculum. Dr Mahsa McCauley
-speaking; RCSA recruiters Abe Naus (Potentia), Anabella Bianchi (Elevate
-Consulting) and Sri Nanduri (Potentia) on the networking half.
+Second Cohort 1 session, as it actually ran: a 55-minute **#IAmRemarkable**
+self-promotion workshop led by Dr Mahsa McCauley, then a 30-minute
+recruiter-networking round with RCSA — Abe Naus (Potentia), Anabella
+Bianchi (Elevate Consulting) and Sri Nanduri (Potentia).
 32 registered, 24 checked in.
+
+**Chan's contribution here is authorship and organising, not delivery.**
+A vibe-coding workshop from her curriculum was on the original programme
+with her as speaker; the funder asked for it to be dropped and the agenda
+was rebuilt without it, so that segment never ran. The module itself is
+real and still published on the Her Waka teaching site she built solo
+(`projects[her-waka]`), and that site was put in front of this cohort by
+QR code on the day. She was on site as part of the She Sharp team.
+Recorded this way deliberately — see the correction note above.
 ### Her Waka — Cybersecurity Workshop — Curriculum Author
 [tier=secondary · recency=recent · updated=2026-08-25]
 - **Type:** workshop
@@ -3704,9 +3994,12 @@ Second session of the Youth Tech Series, one week after the Makey Makey
 workshop and a deliberate step deeper: hands-on electronics for the same
 12–18 age group, run with Little Engineers joining the Peyvand Academy and
 Ministry of Education partnership. 26 attendees. Chan mentored on the floor
-rather than leading the session. Recorded separately from
-`peyvand-academy-makey-makey-2026` because the subject and the partner set
-both differ.
+rather than leading the session, and built the session's **digital welcome
+board** — a small web page
+(https://chanmeng666.github.io/she-sharp-event-black-board/) that went
+into the room's slides in place of a printed sign. Recorded separately
+from `peyvand-academy-makey-makey-2026` because the subject and the
+partner set both differ.
 ### Auckland | Claude Meetup — Attendee
 [tier=primary · recency=recent · updated=2026-08-25]
 - **Type:** community
@@ -3858,7 +4151,7 @@ Interactive career-mindset workshop with coach Candice Murray on shifting
 your own energy before the moments that matter, hosted by Metlifecare's CIO.
 81 registered, 60 attended.
 ### Making LinkedIn Work for You, with Stuart Little — Organizer
-[tier=secondary · recency=recent · updated=2026-08-25]
+[tier=secondary · recency=recent · updated=2026-09-04]
 - **Type:** workshop
 - **Date:** May 2026
 - **Location:** AUT City Campus, Building WZ416, 55 Wellesley Street East, Auckland, New Zealand
@@ -3870,7 +4163,10 @@ Personal-branding masterclass with creative strategist Stuart Little
 (Agency8) and recruiter Janelle Wright on making a LinkedIn profile attract
 the right opportunities — the same ground Chan teaches in her own Personal
 Branding module, run here for an AUT student audience.
-106 registered, 70 attended.
+106 registered, 70 attended. Registration was capped and closed at 100;
+the room was full. Chan was on the floor as part of the running team —
+when attendees reported the mentorship sign-up QR code failing, she
+tested the flow live and supplied a working direct link.
 ### Working Smarter: AI, MYOB, and the New Delivery Landscape — Organizer
 [tier=secondary · recency=recent · updated=2026-08-25]
 - **Type:** workshop
@@ -3884,8 +4180,8 @@ AI-in-practice session with MYOB product, domain and people leads — Jean
 Fulop (Senior Product Manager), Marion Nicholas (Domain Expert, CA) and
 Katy Seel (GM People for SME & Practice) — on what actually changes in
 delivery work once AI is in the toolchain. 87 registered, 51 attended.
-### Code Secure. Lead the Future — Women in Cybersecurity (2026) — Organizer
-[tier=secondary · recency=active · updated=2026-08-25]
+### Beyond the Code: Women Leading the Future of Cybersecurity and AI — Organizer
+[tier=secondary · recency=active · updated=2026-09-04]
 - **Type:** workshop
 - **Date:** Oct 2026
 - **Location:** Xero, Level 2, 96 St Georges Bay Road, Parnell, Auckland, New Zealand
@@ -3893,10 +4189,16 @@ delivery work once AI is in the toolchain. 87 registered, 51 attended.
 - **URL:** https://www.shesharp.org.nz/events/code-secure-2026
 - **Keywords:** cybersecurity, secure coding, workshop
 
-Second run of the Code Secure workshop, a year after the 2025 edition
-(`she-sharp-code-secure-2025`), back at Xero Parnell and again with Secure
-Code Warrior. Speaker: Fatemah Beydoun (Secure Code Warrior). 5:00–9:00pm
-NZDT. Registration had not opened at time of writing.
+The 2026 return of the Xero × Secure Code Warrior evening, a year after
+`she-sharp-code-secure-2025`, back at Xero Parnell — rebranded from "Code
+Secure. Lead the Future" to **Beyond the Code**, and rebuilt around two
+halves: a 45-minute gamified secure-coding tournament on Secure Code
+Warrior's platform (real vulnerable code, leaderboard, prizes; Java
+Spring, Python, JavaScript, Ruby or a language-free pseudocode track) and
+a panel of women leaders on the critical role of cybersecurity in AI and
+the routes that took them into it. Speaker: Fatemah Beydoun (Secure Code
+Warrior). 5:00–8:00pm NZDT — corrected 2026-09-04 from the 9:00pm end time
+this entry previously carried. Registration figures not yet published.
 
 ## Certifications (50+)
 
@@ -4580,16 +4882,16 @@ Sanicle Director of Program Operations 2020–2024; Chan's colleague during her 
 
 ## Verified Statistics (with citations)
 
-- **793 of 936 commits (85%) authored solo on the She Sharp full-stack member platform; remainder chiefly by Lesley Gao on frontend design (140 commits, 15%)** (source: https://github.com/NZ-SheSharp, verified 2026-07-16)
+- **1,381 commits and 251 merged pull requests on the She Sharp full-stack member platform over 13.3 months (2025-07-22 → 2026-09-01), of which 94.5% of all lines added (801,609 of 847,827) are Chan's; remainder chiefly by Lesley Gao on frontend design (151 commits, 43 pull requests)** (source: https://github.com/NZ-SheSharp, verified 2026-09-01)
 - **She Sharp NZ: 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014, 18 industry mentors** (source: https://www.shesharp.org.nz/about-us, verified 2026-05-16)
-- **Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,411-line schema with 30 pgEnums + 35 pgTables + 26 SQL migrations across 95 API routes / 53 pages / 160 components** (source: https://github.com/NZ-SheSharp, verified 2026-07-16)
+- **Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, a schema of 39 pgTables + 33 pgEnums with 32 SQL migrations across 84 API routes / 63 pages / 198 components / 180,914 lines of TypeScript in 818 files** (source: https://github.com/NZ-SheSharp, verified 2026-09-01)
 - **She Sharp data migration crawler bootstrapped the new platform with 1,748 images / 707 MB / 11 JSON files / 85 events / 50 Humanitix tickets / 15 podcasts / 121 photo galleries from the old Webflow site** (source: https://www.shesharp.org.nz/, verified 2026-05-16)
 - **Authored solo the Her Waka teaching site (Mintlify) and full curriculum — four workshops covering AI & Future of Work, #IAmRemarkable + Vibe Coding, Cybersecurity, Personal Branding — for NZ Ministry of Social Development-funded employment-readiness programme at academyEX Auckland (Mar-Jun 2026)** (source: https://herwaka.shesharp.org.nz/, verified 2026-05-16)
 - **Conducted professional SEO audit on shesharp.org.nz across 8 analysis sections (brand visibility, topical keyword rankings, NZ competitor matrix, mobile-vs-desktop gap, AI Overview presence) with 10-point prioritized recommendations report** (source: https://www.shesharp.org.nz/, verified 2026-05-16)
 - **Tam-AI-Ti 19-user research cohort produced 181 bilingual journal entries, 35 voice coaching sessions, 146 AI coach messages, and 74 daily Hauora check-ins over four months (Oct 2025 – Mar 2026)** (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
 - **Tam-AI-Ti built solo for Riria (Missy) Te Kanawa, former KPMG NZ National Māori Sector lead and lead author of KPMG's Maui Rau report series, as an independent research-pilot commission** (source: https://www.linkedin.com/in/riria-missy-te-kanawa-6137528b/, verified 2026-05-16)
 - **Tam-AI-Ti: 88+ CopilotKit AI actions, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, GPT-4o Realtime voice** (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
-- **GAVIGO IRE: 445 commits (439 non-merge), 426 solo (~97%), production-deployed at ire.gavigo.com** (source: https://ire.gavigo.com/, verified 2026-07-16)
+- **GAVIGO IRE (Oct 2025 — Sep 2026): 488 non-merge commits, 471 of them (96.5%) authored solo by Chan, production-deployed at ire.gavigo.com** (source: https://ire.gavigo.com/, verified 2026-09-01)
 - **Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud** (source: https://ire.gavigo.com/, verified 2026-05-16)
 - **Early-ecosystem MCP developer: opened modelcontextprotocol/servers issue #76 on 2024-11-27 (two days after MCP's public launch) documenting the Windows + NVM PATH workaround that became reference troubleshooting guidance for early Claude Desktop adopters** (source: https://github.com/modelcontextprotocol/servers/issues/76, verified 2026-05-16)
 - **Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with 26.1k visitors and #1,105 global popularity rank, Glama A license rating + 122 stars, listed across 15+ MCP catalogs including Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, Archestra, serp.ai, AIBase, AgentSkillsHub, MagicSlides) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); both servers covered in three independent media write-ups (Skywork AI x2, AgentSkillsHub)** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-05-16)
@@ -4598,7 +4900,7 @@ Sanicle Director of Program Operations 2020–2024; Chan's colleague during her 
 - **Built five production codebases for Sanicle as solo CTO — sanicle-cloud (Next.js company site replacing legacy Bubble no-code), sanicle-ai (multi-tenant FemTech platform with dual-AI architecture: IBM watsonx llama-3-405b + Google Gemini fallback), sanicle-ai-mobile (PWA prototype), reveal.js presentation deck, and a documented internal work archive — totalling ~350+ commits with ~98% solo authorship** (source: https://www.linkedin.com/company/sanicleofficial/, verified 2026-05-16)
 - **Two merged pull requests to the CopilotKit main repository (36.1k+ GitHub stars) — PR #2068 adding the 8-agent FemTracker Agent demo to CopilotKit's official demos_2025 collection (merged 2025-09-11, approved by maintainer Tyler Slaton), and PR #2529 adding Claude Code setup instructions to the CopilotKit MCP server documentation (merged 2025-10-09, approved by maintainer Brandon McConnell)** (source: https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666, verified 2026-07-17)
 - **GAVIGO IRE measured platform performance: restore path <1 ms p50, cold path ~12 ms p50, 84.6% warm-pool hit rate, 0 errors at 100 concurrent WebSocket clients under load test** (source: https://ire.gavigo.com/, verified 2026-05-16)
-- **Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil); role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026)** (source: https://gavigo.com/, verified 2026-05-16)
+- **Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil) from Oct 2025 to Sep 2026; role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026)** (source: https://gavigo.com/, verified 2026-05-16)
 - **GAVIGO public mission per company marketing: 'Skip the Store. Start the Play' — eliminate the friction between user intent and digital experience by building the Post-App World through proprietary Instant Reality Switching technology** (source: https://gavigo.com/, verified 2026-05-16)
 - **GAVIGO accepted into the Google for Startups Cloud Program (announced Feb 2026 by founder & CEO Saba Gecgil); per the founder's public statement the partnership value 'isn't about cloud credits — it's about validating an execution layer under real-world constraints', and the partnership is what enabled the DigitalOcean → Google Cloud production migration I led on 2026-03-11** (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)
 - **GAVIGO accepted into the NVIDIA Inception Program (announced Feb 2026) — the track supporting startups building GPU-intensive, infrastructure-level technologies, providing GPU ecosystem visibility and deep-tech credibility** (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)

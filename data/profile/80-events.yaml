@@ -31,8 +31,16 @@
 # below: the She Sharp site's own event data —
 #   D:\github_repository\she-sharp\lib\data\json\shesharp_events_v3.json  (historical)
 #   D:\github_repository\she-sharp\lib\data\json\events-custom.json       (2026)
-# merged by lib/data/events.ts. Reconciled 2026-08-25. Every `url` slug below was
-# checked against that data — a slug that is not in it 404s on the live site.
+# merged by lib/data/events.ts. Reconciled 2026-08-25, and every 2026 entry
+# re-checked against it on 2026-09-04 (date, venue, organiser chain, url slug
+# and the registered/attended line). Entries whose facts came back unchanged and
+# so were NOT touched: she-sharp-academyex-iwd-2026 (103/72),
+# she-sharp-own-your-energy-2026 (81/60), she-sharp-myob-working-smarter-2026
+# (87/51), her-waka-2026-05-cybersecurity (33/29),
+# her-waka-2026-06-personal-branding (24/16), peyvand-academy-makey-makey-2026
+# (24) — their `lastUpdated` is deliberately left at the earlier date rather
+# than bulk-bumped. Every `url` slug below was checked against that data — a
+# slug that is not in it 404s on the live site.
 # =============================================================================
 events:
   - id: un-csw69-speaker
@@ -150,7 +158,7 @@ events:
     tier: flagship
     # Ran 2026-08-07/08; flipped active → recent once the festival concluded.
     recency: recent
-    lastUpdated: "2026-08-25"
+    lastUpdated: "2026-09-04"
     keywords:
       - hackathon
       - MC
@@ -158,6 +166,7 @@ events:
       - AI for good
       - UN SDGs
     relatedWorkId: she-sharp
+    relatedAwardTitle: "Outstanding Mentor Award (2026)"
     relatedProjectId: ai-hackathon-assistant
     photos:
       - src: /public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-opening.jpg
@@ -170,15 +179,33 @@ events:
         date: "2026-08-07"
     summary: |
       **MC'd the opening** of the two-day 2026 festival — welcome and Karakia
-      Tīmatanga from the AUT podium — and returned as one of the mentors, a year
-      after the 2025 edition that produced the Outstanding Mentor Award. On the
-      public mentor roster (17 mentors) she is billed as **Founding Engineer,
-      ArchCanvas**, alongside mentors from AUT, Fisher & Paykel Healthcare,
-      Southern Cross, Red Hat and Possibl.ai. 125 registered. Teams built against
-      five real-world SDG themes and pitched to a judging panel; four national
-      finalists go on to pitch at the Aotearoa AI Summit, 8–9 September 2026 in
-      Wellington. The festival's voice-first event assistant is
-      `ai-hackathon-assistant`, relaunched for 2026.
+      Tīmatanga from the AUT podium — and returned as a technical mentor, a year
+      after the 2025 edition that produced the first Outstanding Mentor Award.
+      **Received the Outstanding Mentor Award a second consecutive year** for
+      the 2026 festival (`awards[Outstanding Mentor Award (2026)]` — recorded on
+      Chan's own testimony; see the self-attestation note there). She was in the
+      room in **two capacities at once**: on the public mentor roster in her own
+      right, and as part of the **She Sharp team** that ran the venue, working
+      mentor recruitment alongside the organising group in the weeks before.
+      On the public roster she is billed as **Founding Engineer, ArchCanvas**,
+      alongside mentors from AUT, Fisher & Paykel Healthcare, Southern Cross
+      Health Society, Red Hat and Possibl.ai.
+
+      **How many mentors — two figures, both real.** The host's public "Meet
+      the Mentors" roster lists **17**; the organisers' own running count
+      reached **28**, which includes volunteers and staff who registered under
+      the mentor code. Neither is wrong; they count different things, and this
+      database records both rather than picking the flattering one.
+
+      **Scale and outcome.** 125 registered. **Twelve teams** built against five
+      real-world UN SDG themes; free online pre-event training ran through July,
+      and roughly **a third of participants had never been to a hackathon
+      before**. On the Saturday each team pitched for five minutes to a local
+      judging panel: one team took the venue prize with two runners-up, and the
+      winning pitch went forward to national judging. **Four national finalists**
+      pitch at the Aotearoa AI Summit, 8–9 September 2026 in Wellington. The
+      festival's voice-first event assistant is `ai-hackathon-assistant`,
+      relaunched for 2026.
 
       A second thread outlived the festival. One of the problem statements —
       **Accessible UI Generation for Developers** — was set by **My Life My
@@ -205,12 +232,15 @@ events:
     role: MC
     type: panel
     date: "2026-09-03"
-    location: "Les Mills Auckland City, Level 2, 200 Victoria Street West, Auckland, New Zealand"
+    # Venue name corrected 2026-09-04: the host's record says "Les Mills
+    # International", not "Les Mills Auckland City". Same address.
+    location: "Les Mills International, Level 2, 200 Victoria Street West, Auckland, New Zealand"
     organizer: "She Sharp × Les Mills"
     url: "https://www.shesharp.org.nz/events/event-lesmills-03-september-2026"
     tier: primary
-    recency: active
-    lastUpdated: "2026-08-25"
+    # Ran 2026-09-03; flipped active → recent the day after.
+    recency: recent
+    lastUpdated: "2026-09-04"
     keywords:
       - MC
       - diversity and AI
@@ -225,10 +255,15 @@ events:
       Lobos (Head of Finance, LM Media & Automation Lead), Ben Sullivan (Legal
       Counsel) and Gemma Lynskey (Global Comms + Org Development Director) —
       covering the legal/privacy, commercial, change-management and technical
-      views of the same rollout, followed by table discussions. 25 registered at
-      time of writing.
+      views of the same rollout, followed by table discussions.
+      **87 registered, 66 checked in** — the host's final figures, backfilled
+      2026-09-04. (This entry previously read "25 registered at time of
+      writing", a mid-campaign snapshot taken while registration was still
+      open.) Chan also updated the four panellists' profiles on the event page
+      from the run sheet in the week before the evening.
 
-      EVIDENCE GAP (2026-08-25): upcoming — capture a podium shot on the night.
+      EVIDENCE GAP (2026-09-04): the event has now happened and no photo of the
+      night is attached yet — a podium shot would close this.
 
   - id: her-waka-workshops-2026
     name: "Her Waka — AI × Career Empowerment Programme"
@@ -309,16 +344,44 @@ events:
       (product and project manager) and Meeta Patel (academyEX). Guest speakers
       from RCSA: Abe Naus (Potentia), Paul Kelly (Absolute IT), Neekee
       Reshamwala (Randstad Digital). Facilitated by Dr Mahsa McCauley.
-      Invitation-only. 39 registered, 27 checked in.
+      Invitation-only. 39 registered, 27 checked in. This is also the session
+      the Her Waka teaching site Chan built went out from: the programme lead
+      asked for its About page to be sent to every attendee afterwards, making
+      it the cohort's standing reference between monthly sessions.
 
   - id: her-waka-2026-04-iamremarkable
-    name: "Her Waka — #IAmRemarkable + Vibe Coding"
-    # CONFIRMED by Chan 2026-08-25: she spoke at this session. The host's
-    # published roster names only Dr Mahsa McCauley and the RCSA recruiters, so
-    # the public page understates her involvement — do not "correct" this role
-    # against that roster. (The orphaned `her-waka-april-2026/chan-meng.png`
-    # headshot in the She Sharp repo is consistent with her being billed here.)
-    role: Speaker
+    name: "Her Waka — #IAmRemarkable"
+    # CORRECTED 2026-09-04 — this entry previously claimed a speaking credit for
+    # a session that never ran. A Vibe Coding workshop with Chan as speaker WAS
+    # scheduled for this date and was then **cancelled at the funder's request**
+    # (MSD) on 2026-03-26, three weeks after the announcement: the agenda was
+    # rebuilt as #IAmRemarkable plus recruiter networking only, and the standing
+    # instruction was to drop Chan from the speaker list once the change was
+    # confirmed. The event's authoritative run sheet names only Dr Mahsa
+    # McCauley and three RCSA recruiters — no Vibe Coding, no Chan Meng — and
+    # the host's own event record (she-sharp `events-custom.json` id 89) has
+    # since been corrected to match: the title is now "#IAmRemarkable" alone and
+    # Chan is no longer listed as a speaker. The earlier "CONFIRMED … she spoke
+    # at this session" note and the orphaned `her-waka-april-2026/chan-meng.png`
+    # headshot both date from the pre-cancellation billing.
+    #
+    # TWO SEPARATE THINGS, and the distinction is the whole point of this fix:
+    # Chan **authored the vibe-coding teaching module** — it is a section of the
+    # Her Waka teaching site she built and still lives there — but she **did not
+    # deliver that session**, because the session did not happen. The module
+    # stays credited; the delivery claim goes.
+    #
+    # What she actually did on the day is an organising contribution: she was
+    # part of the She Sharp team on site (one of the ambassadors called in ahead
+    # of the noon start), and the run-of-show deck carried a QR code pointing at
+    # the Her Waka teaching site she built. Hence `role: Organizer`, which is
+    # what the evidence supports and no more.
+    #
+    # Third-party copy elsewhere may lag: the She Sharp public site was
+    # advertising the cancelled Vibe Coding segment for months after the event
+    # and may still do so in cached or reprinted material. Do not "restore" this
+    # entry from such a page.
+    role: Organizer
     type: workshop
     date: "2026-04-07"
     location: "academyEX, 99 Khyber Pass Road, Grafton, Auckland, New Zealand"
@@ -326,20 +389,29 @@ events:
     url: "https://www.shesharp.org.nz/events/her-waka-april-2026"
     tier: primary
     recency: recent
-    lastUpdated: "2026-08-25"
+    lastUpdated: "2026-09-04"
     keywords:
       - teaching
       - self-advocacy
-      - vibe coding
+      - recruiter networking
       - women returning to work
     relatedWorkId: she-sharp
     relatedProjectId: her-waka
     summary: |
-      Second Cohort 1 session: the #IAmRemarkable self-promotion workshop paired
-      with a vibe-coding segment from Chan's curriculum. Dr Mahsa McCauley
-      speaking; RCSA recruiters Abe Naus (Potentia), Anabella Bianchi (Elevate
-      Consulting) and Sri Nanduri (Potentia) on the networking half.
+      Second Cohort 1 session, as it actually ran: a 55-minute **#IAmRemarkable**
+      self-promotion workshop led by Dr Mahsa McCauley, then a 30-minute
+      recruiter-networking round with RCSA — Abe Naus (Potentia), Anabella
+      Bianchi (Elevate Consulting) and Sri Nanduri (Potentia).
       32 registered, 24 checked in.
+
+      **Chan's contribution here is authorship and organising, not delivery.**
+      A vibe-coding workshop from her curriculum was on the original programme
+      with her as speaker; the funder asked for it to be dropped and the agenda
+      was rebuilt without it, so that segment never ran. The module itself is
+      real and still published on the Her Waka teaching site she built solo
+      (`projects[her-waka]`), and that site was put in front of this cohort by
+      QR code on the day. She was on site as part of the She Sharp team.
+      Recorded this way deliberately — see the correction note above.
 
   - id: her-waka-2026-05-cybersecurity
     name: "Her Waka — Cybersecurity Workshop"
@@ -442,9 +514,12 @@ events:
       workshop and a deliberate step deeper: hands-on electronics for the same
       12–18 age group, run with Little Engineers joining the Peyvand Academy and
       Ministry of Education partnership. 26 attendees. Chan mentored on the floor
-      rather than leading the session. Recorded separately from
-      `peyvand-academy-makey-makey-2026` because the subject and the partner set
-      both differ.
+      rather than leading the session, and built the session's **digital welcome
+      board** — a small web page
+      (https://chanmeng666.github.io/she-sharp-event-black-board/) that went
+      into the room's slides in place of a printed sign. Recorded separately
+      from `peyvand-academy-makey-makey-2026` because the subject and the
+      partner set both differ.
 
   - id: claude-meetup-auckland-2026-07
     name: "Auckland | Claude Meetup"
@@ -529,6 +604,23 @@ events:
   # from THRIVE (2025-07-30) to the end of the published calendar (2026-10-08).
   # The 2025-11-21 → 2026-03-06 hole is real — the host ran no events over the
   # NZ summer — and is not a recording failure.
+  #
+  # 2026 PROGRAMME SCALE (verified 2026-09-04). **Thirteen events scheduled in
+  # 2026 — more than any prior year — of which eleven were held between March
+  # and August.** Registration totals for those eleven are where the two public
+  # sources disagree, so both are recorded here with the reason:
+  #
+  #   * **680 registrations** — the figure She Sharp's own site puts on its 2026
+  #     timeline entry.
+  #   * **570 registrations, 349 checked in (69.1%) across 11 ticketed events**
+  #     — the ticketing-derived figure, from the archive's own 2026 row. A
+  #     distinct-person count of 387 has been quoted for the same set; the
+  #     committed aggregate file publishes unique-person figures only across all
+  #     years, so that one is repeated here as reported rather than as verified.
+  #
+  # The gap is a counting boundary, not a contradiction: the ticketing series
+  # counts only the events that sold tickets through it. **Prefer 570 wherever
+  # one number is needed** — it is the sourced, reproducible one.
   #
   # EVIDENCE GAP: every event below carries a public Google Photos gallery on
   # the She Sharp site. One photo of Chan per event would close ten entries at
@@ -737,10 +829,17 @@ events:
     # Corrected 2026-08-25. The previous slug (event-aut-linkedin-15-may-2026) is
     # an internal asset alias, not a route — it 404s. The live route uses the
     # event's own slug.
+    #
+    # RE-VERIFIED 2026-09-04, because the host's own record is self-contradictory
+    # here and will tempt a future editor to "fix" this back: the record's
+    # `detailPageUrl` field still points at the old alias, while its `slug` field
+    # is `making-linkedin-work-for-you-with-stuart-little`. The site routes on
+    # `slug` (`getEventBySlug` in the host repo's lib/data/events.ts), so the URL
+    # below is the live one and `detailPageUrl` is the stale field. Leave as is.
     url: "https://www.shesharp.org.nz/events/making-linkedin-work-for-you-with-stuart-little"
     tier: secondary
     recency: recent
-    lastUpdated: "2026-08-25"
+    lastUpdated: "2026-09-04"
     keywords:
       - personal branding
       - LinkedIn
@@ -751,7 +850,10 @@ events:
       (Agency8) and recruiter Janelle Wright on making a LinkedIn profile attract
       the right opportunities — the same ground Chan teaches in her own Personal
       Branding module, run here for an AUT student audience.
-      106 registered, 70 attended.
+      106 registered, 70 attended. Registration was capped and closed at 100;
+      the room was full. Chan was on the floor as part of the running team —
+      when attendees reported the mentorship sign-up QR code failing, she
+      tested the flow live and supplied a working direct link.
 
   - id: she-sharp-myob-working-smarter-2026
     name: "Working Smarter: AI, MYOB, and the New Delivery Landscape"
@@ -777,7 +879,19 @@ events:
 
   - id: she-sharp-code-secure-2026
     # Added 2026-08-25: this event was missing from the database entirely.
-    name: "Code Secure. Lead the Future — Women in Cybersecurity (2026)"
+    #
+    # NAME RECONCILED 2026-09-04. This entry was carrying "Code Secure. Lead the
+    # Future", inherited from the 2025 edition. That is NOT what the host
+    # publishes for 2026: its own event record titles the evening **"Beyond the
+    # Code: Women Leading the Future of Cybersecurity and AI"** — title,
+    # subtitle ("Leading the Way to a Secure Aotearoa"), cover artwork and body
+    # copy all agree, and the cover alt text spells the same name out. Only the
+    # URL slug (`code-secure-2026`) still carries the old branding, which is why
+    # the stale name survived here. The published name wins; the slug is left
+    # alone because it is the live route. `id` kept as-is — it is a stable key,
+    # not a display string, and it pairs this entry with
+    # `she-sharp-code-secure-2025`.
+    name: "Beyond the Code: Women Leading the Future of Cybersecurity and AI"
     role: Organizer
     type: workshop
     date: "2026-10-08"
@@ -786,14 +900,20 @@ events:
     url: "https://www.shesharp.org.nz/events/code-secure-2026"
     tier: secondary
     recency: active
-    lastUpdated: "2026-08-25"
+    lastUpdated: "2026-09-04"
     keywords:
       - cybersecurity
       - secure coding
       - workshop
     relatedWorkId: she-sharp
     summary: |
-      Second run of the Code Secure workshop, a year after the 2025 edition
-      (`she-sharp-code-secure-2025`), back at Xero Parnell and again with Secure
-      Code Warrior. Speaker: Fatemah Beydoun (Secure Code Warrior). 5:00–9:00pm
-      NZDT. Registration had not opened at time of writing.
+      The 2026 return of the Xero × Secure Code Warrior evening, a year after
+      `she-sharp-code-secure-2025`, back at Xero Parnell — rebranded from "Code
+      Secure. Lead the Future" to **Beyond the Code**, and rebuilt around two
+      halves: a 45-minute gamified secure-coding tournament on Secure Code
+      Warrior's platform (real vulnerable code, leaderboard, prizes; Java
+      Spring, Python, JavaScript, Ruby or a language-free pseudocode track) and
+      a panel of women leaders on the critical role of cybersecurity in AI and
+      the routes that took them into it. Speaker: Fatemah Beydoun (Secure Code
+      Warrior). 5:00–8:00pm NZDT — corrected 2026-09-04 from the 9:00pm end time
+      this entry previously carried. Registration figures not yet published.

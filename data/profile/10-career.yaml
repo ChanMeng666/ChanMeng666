@@ -452,17 +452,17 @@ work:
     name: Gavigo
     position: "Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer)"
     startDate: "2025-10"
-    endDate: null
+    endDate: "2026-09"
     location: USA (remote — Delaware-incorporated)
     url: https://gavigo.com/
     logo: /public/organizations/gavigo-logo.jpg
     featured: true
     tier: flagship
-    recency: active
-    lastUpdated: "2026-08-26"
+    recency: recent
+    lastUpdated: "2026-09-04"
     keywords: [Go, "Kubernetes (GKE)", "React Native", WebSocket, "Redis", "gpt-5.4-mini", "AI orchestration", "Distributed systems", "Founding engineer"]
     narrative:
-      impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owns the Intelligence Layer end-to-end (~97% solo on 426 of 439 non-merge commits) with a contractually protected technical domain."
+      impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owned the Intelligence Layer end-to-end (96.5% solo on 471 of 488 non-merge commits) with a contractually protected technical domain."
       companyContext: |
         GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
         stage, Istanbul-founded by Saba Gecgil and registered in
@@ -517,10 +517,10 @@ work:
         Cloud GKE (Belgium) in a clean ~30-minute cutover on 2026-03-11
         when GAVIGO's Google Cloud partnership took effect — full
         production-grade expertise on both DigitalOcean and Google Cloud.
-        445 commits (439 non-merge), 426 of them (~97%) mine across my two
-        git identities;
-        the remainder split between the GitHub Actions bot and a second
-        engineer who joined in June 2026.
+        488 non-merge commits, 471 of them (96.5%) mine across my two
+        git identities; the remainder split between the GitHub Actions bot
+        and a second engineer, Olga Adam, who joined in June 2026 and owned
+        the game-loading adapter architecture.
 
         Real measured platform performance, from the production benchmark
         spine: restore path <1 ms p50, cold path ~12 ms p50, 84.6%
@@ -559,6 +559,21 @@ work:
         Consulting Agreement, Apr 16 2026) to formalise the **Founding
         Principal Engineer, Activation, Execution & AI Systems** title
         and the Protected Technical Domain backing it.
+
+        **How the role closed (Sept 2026).** The last mandate I was named
+        on was the CEO's v1.7 *Activation Platform MVP Build Mandate*
+        (2026-08-28), which made me **build lead and Phase 0 owner**; the
+        company filed a USPTO nonprovisional patent on 2026-08-08 covering
+        the activation / execution layer I built. (Application serial
+        deliberately omitted: the filing had not published at time of
+        writing, so the number is GAVIGO's to disclose, not mine.)
+        The handover needed no handover document, because project context
+        had been written into the repository as the work happened rather
+        than carried in my head: a 26.6 KB agent operating manual
+        (`CLAUDE.md`), `docs/onboarding/`, `docs/deployment/`, and
+        `docs/phases/` holding 13 numbered phase records. Writing the
+        context down where the code lives is the practice; a clean exit
+        is what that practice looks like when it is tested.
       technicalHighlights: |
         **Cross-cloud production expertise — DigitalOcean and Google Cloud.**
         Originally architected on **DigitalOcean DOKS (Singapore, sgp1)**
@@ -602,6 +617,39 @@ work:
         Audience-aware broadcast filtering at the WebSocket envelope
         layer so each client preset sees a different catalog slice
         without N broadcast topics.
+
+        **Production diligence — the work of checking what was assumed.**
+        Response compression had never actually been enabled in
+        production: an nginx default that only misbehaves behind a load
+        balancer, so it worked correctly on every developer machine and
+        nowhere that mattered. Found and fixed, the dashboard bundle went
+        1.2 MB → 350 KB (−71%), the mobile app bundle 2.99 MB → 748 KB
+        (−75%), a typical game 37 KB → 16 KB. I took the first *measured*
+        read of cloud cost — Google Cloud was running at ~$89/month against
+        a documented "~$67/month" that turned out to be list-price
+        arithmetic never checked against a bill, so the estimate was 31%
+        low — and found a budget alert that could never fire, 7,500% over
+        its limit and reporting zero; I requested the minimum role needed
+        to fix it (Billing Account Costs Manager) and explicitly declined
+        Billing Account Administrator. I established branch protection and
+        then proved it by being blocked by it: PRs required, 1 approval,
+        three CI checks green, admins unable to bypass — the gate being a
+        3-job pipeline (`go build/vet/test -race`, `vite build`,
+        `tsc --noEmit`), where the mobile typecheck job is load-bearing
+        because `expo export` transpiles without typechecking. Redis had
+        been silently gone for 10 days while the service reported healthy;
+        the fix was to reconnect rather than give up at boot, and to stop
+        reporting healthy while degraded. A one-day T4 GPU experiment
+        falsified its own hypothesis — the conclusion was "a GPU is a
+        throughput/cost lever, not a latency lever" — and was torn down
+        the same day with a reusable harness and the raw results committed.
+        The acceptance criteria I wrote for a vendor smoke test (no
+        pre-roll before first play, documented `game_ready` /
+        `game_started` lifecycle events, wrapper telemetry without
+        touching game code, programmatic licence verification) were
+        adopted by the CEO as company process — converted into a
+        six-vendor procurement questionnaire that disqualified a vendor
+        within four hours.
 
         FOSS curation: cloned 11 open-source game repos, scored against
         license (MIT / Apache-2.0), build size (<50 KB), web-first
@@ -827,7 +875,7 @@ work:
     featured: true
     tier: flagship
     recency: active
-    lastUpdated: "2026-08-26"
+    lastUpdated: "2026-09-04"
     keywords: ["Next.js 15", "React 19", "Drizzle ORM", "Neon Postgres", Stripe, "GPT-4o-mini", Slack, "Agent skills", "NextAuth 5", "Tailwind 4"]
     narrative:
       impactHeadline: "Recruited directly by founder Dr Mahsa Mohaghegh as the senior AI + full-stack capability She Sharp didn't have in-house; led the cutover from Webflow to the new platform via a custom migration crawler preserving 10+ years of legacy content for 3,500+ members."
@@ -861,8 +909,13 @@ work:
         (Her Waka MSD-funded programme, SEO strategy).
       impactDelivered: |
         Shipped and operate the new full-stack She Sharp platform replacing
-        the legacy Webflow site. 793 of 936 commits authored solo (85% of
-        total). Headline systems delivered: AI mentor-mentee matching
+        the legacy Webflow site. Over 13.3 months (2025-07-22 → 2026-09-01,
+        pinned at commit b1d49d88): 1,381 commits and 251 merged pull
+        requests — I opened 207 of the 254 — and 94.5% of all lines added
+        (801,609 of 847,827). One other developer worked alongside me:
+        Lesley Gao, 151 commits and 43 pull requests, mostly on the
+        dashboard and mentorship surfaces. Headline systems delivered:
+        AI mentor-mentee matching
         (GPT-4o-mini, 5-dimensional scoring with human-in-the-loop review),
         three role-permissioned dashboards (mentor / mentee / admin) with
         dual-role support, Stripe membership-tier billing, the Slack
@@ -871,6 +924,110 @@ work:
         skill `sync-event-from-slack` that automates event-page publication
         from Slack content, comprehensive audit logging, and a database
         version-control system.
+
+        **Led the organisation's digital and AI-native transformation —
+        three platform migrations, a data-sovereignty programme and a
+        governance audit.** The three migrations are not equally finished
+        and the honest headline says so: the website is done; the mailing
+        list is technically done and proven in production; marketing
+        production has shipped, and has been chosen over building a
+        hand-made duplicate exactly once, on my own say-so. Shipping a
+        capability and shipping its adoption are two different projects,
+        and only the first was scheduled.
+
+        **Mailing list.** Moved 1,549 people onto infrastructure the
+        charity owns — double opt-in where confirmation requires a button
+        press and never a GET, as defence against link scanners; a
+        four-stream sender model; exactly one Resend call site in the
+        whole application; and the consent record in the organisation's
+        own Postgres rather than a vendor's. The cutover went out in 16
+        idempotent batches with 0 failures and a 0.45% bounce rate. The
+        sending-domain move was 29 DNS records before and 29 after with a
+        single value different, because the region and Return-Path were
+        matched deliberately rather than discovered afterwards. Consent
+        became auditable for the first time by classifying every
+        subscriber against the act that put them on the list — and I
+        reported the unflattering result, that 75.4% arrived by an act
+        that was not a subscription. 2,129 non-consenting contacts are
+        held as one-way hashes so a future import cannot resurrect them,
+        and a CI gate fails the build if an email address or a ticketing
+        access code reaches a committed file.
+
+        **Data sovereignty.** Recovered 1.15 GB of the organisation's own
+        operating record out of four platforms: eleven years of Slack
+        (208 conversations, 56,119 messages), the full ticketing and
+        mailing history, and the only copy of the previous website held
+        outside the vendor's own account. 97 archived Slack channels were
+        invisible to the standard listing API and would have been missed
+        entirely. Two findings that transfer to any migration: a checksum
+        over a mapped object proves only what your mapper kept, and an API
+        key is not a replacement for an export.
+
+        **Digital governance audit.** 7 of the 11 email addresses
+        published on the website did not exist — including the headline
+        contact address — proven by sending one real message to each and
+        reading delivery back, not inferred from configuration; all fixed,
+        plus a funder-facing PDF the sweep had missed. Removed 17
+        fabricated testimonials attributed to real companies from the
+        charity's public site. Proved 3 of the 4 full-bleed photographs in
+        a published funder report came from outside the period they
+        illustrated, using perceptual hashing over a 225-image corpus.
+        Catalogued 24 credential and personal-data exposures by location
+        without recording a single value, and identified the same
+        access-ownership failure recurring across 5 separate incidents in
+        7 years.
+
+        **Financial governance and audit capability.** Diagnosed a 60%
+        rise in a SaaS bill as an unbounded data-growth problem rather
+        than a price rise: the vendor's base price had not moved in 25
+        billing periods, and every dollar of the increase was buying
+        contacts who could not lawfully be emailed (1,585 of 3,145 billed
+        contacts, 50.4%). Finding the mechanism mattered more than the
+        number. Identified NZ$1,876.44 and US$400.20 of annual spend as
+        removable against a US$240 replacement — realisable, not
+        realised: the founder is the cardholder and pressing the button
+        was not mine to press. Found an unclaimed nonprofit entitlement
+        worth US$1,566 a year, the workspace collaboration tool's free
+        upgrade for registered charities under 250 members; the
+        organisation has 18 and was paying full price. And established
+        that the ticketing account had been billed at the charity rate
+        (3% + $0.30) until 27 October 2023 and at the full commercial rate
+        from 31 October, unnoticed for nearly three years — not by
+        assuming either rate but by fitting every fee-bearing ticket
+        against both published formulas, which split cleanly into two eras
+        with no overlap. The twist that makes it matter: absorbed fees are
+        $0.00 on every event, so the difference sits on the ticket price.
+        It is money taken from women buying tickets to a women-in-tech
+        event, not from the charity's accounts.
+
+        **Enablement and business-process mapping.** Delivered six
+        enablement sessions for the volunteer team (sessions delivered; no
+        attendance was ever logged, so no headcount is claimed): a
+        recorded content-update guide (2026-03-29) aimed at getting a
+        non-technical member updating the site inside three minutes; a
+        browser-automation demo (2026-05-04); four recorded agent-skill
+        tutorials (2026-07-28); 1:1 Typst coaching for a teammate
+        (2026-08-02); a recorded end-to-end event-lifecycle tutorial
+        (2026-08-24); and a two-hour in-person workshop in Auckland on
+        2026-08-29, during which I produced usable promo videos live while
+        explaining the process. The written interface to all of it is an
+        AI skills guide addressed to anyone on the team "whether or not
+        you have ever written a line of code". Alongside it I derived a
+        1,714-line event-lifecycle standard operating procedure by
+        crawling eleven years of Slack — a phase × owner × method table
+        covering partner acquisition, go/no-go, channel kickoff,
+        ticketing, website page, poster set, campaign calendar, social,
+        mailing-list and registrant email, deck, photography, gallery
+        close-out, feedback digest and newsletter, marking where the
+        published title and the observed practice diverge. It is served as
+        a live internal page and hash-verified against its source Markdown
+        in CI, so the page cannot silently drift from the procedure it
+        serves. Beside it sit 52 recorded organisational decisions (51 of
+        them mine), each with structured frontmatter, which turns "has
+        anyone already thought about this?" from a question you ask a
+        person into one you can grep. I also ran a published-vs-recorded
+        reconciliation of the organisation's own headline numbers — a
+        measurement, not an accusation.
 
         **Custom Slack ecosystem for the She Sharp workspace.** Beyond
         the admin-side Claude Code skill, I shipped a portfolio of
@@ -882,9 +1039,18 @@ work:
         digest bot** that crawls 6 government RSS/HTML sources, scores
         each opportunity for member relevance (60+ threshold), and
         posts the top 10 to a dedicated `#funding-opportunities`
-        channel via Incoming Webhook. Together these collapse work
-        that previously consumed volunteer-team hours each week into
-        background automation members notice as "the Slack just knows."
+        channel via Incoming Webhook; contact-form and AI-screening
+        notifications; and a weekday `slack-triage` cron that reads with
+        `--no-record` so it never advances a read position — an automated
+        reader that marks things read is an automated way to lose them.
+        The most involved of them is an **AI-powered `/event` slash
+        command** that turns a plain-English request into a validated
+        patch: it pulls channel history, the events JSON and the naming
+        conventions as context, produces a structured-output patch,
+        Zod-validates it, commits to a draft branch, shows an ephemeral
+        Block Kit preview with a JSON diff, and on confirm opens a GitHub
+        pull request. Work that used to mean opening a console now
+        arrives as a reviewable change.
 
         Beyond the main platform, I shipped three supporting projects: the
         Python migration crawler (1,748 images / 707 MB / 11 JSON files
@@ -900,10 +1066,14 @@ work:
         Postgres, NextAuth 5 with bcrypt + Google/GitHub OAuth, Tailwind 4
         + shadcn/ui, Resend transactional email, Cloudinary image pipeline,
         Stripe-integrated membership flow, Vercel edge deployment +
-        3 Vercel Cron jobs. Schema runs 1,411 lines / 30 pgEnums / 35
-        pgTables / 26 SQL migrations — every business concept is a typed
-        enum so invalid states are unrepresentable. 95 API routes, 53
-        pages, 160 components.
+        3 scheduled jobs. Schema runs 39 tables / 33 enums / 32 SQL
+        migrations — every business concept is a typed enum so invalid
+        states are unrepresentable. 84 API routes, 63 pages, 198
+        components; 180,914 lines of TS/TSX/CSS across 818 files and
+        35,062 lines of Markdown across 105 files, with 5 CI jobs gating
+        every pull request and 33 test files behind them. The Markdown is
+        not documentation debt — it is the interface, and the reference
+        documents in it are the rules the product must not break.
 
         The AI matching engine is a deliberate two-stage pipeline:
         rule-based pre-filter for cost control, then GPT-4o-mini at
@@ -913,7 +1083,7 @@ work:
         with explainable natural-language justifications, Upstash Redis
         cache by pair, exponential-backoff retries, deterministic rule-
         based fallback when AI is unavailable, and admin human-in-the-loop
-        approval as the final gate. The Slack agent
+        approval as the final gate. The `sync-event-from-slack` agent
         skill composes existing CLI tools (Slack fetch, image download,
         docx parse, JSON validate, git commit) into a single intent-driven
         workflow with dry-run preview and CI gating — collapsing event
@@ -922,6 +1092,72 @@ work:
         deduplication + Wayback Machine fallback), Mintlify / MDX (Her Waka
         teaching site authored solo), and Node 22 native fetch over the
         SerpData API (the SEO audit with mermaid-diagrammed report).
+
+        **The AI-native operating model.** An AI-native team is not a team
+        that talks to a chatbot; it is a team whose recurring work has
+        been written down precisely enough that an agent can execute it,
+        and whose non-engineers can therefore run work that previously
+        needed an engineer. She Sharp's version of that is 11 agent skills
+        under `.claude/skills/`, spread over 97 files: 25,643 lines of
+        written-down procedure and tooling — the honest figure, after
+        subtracting one skill's 22,786-line machine-written state ledger
+        from the 48,429 raw total — comprising 12,550 lines of instruction
+        and reference prose across 27 reference documents and 11,995 lines
+        of script across 34 executables. Each skill lives in the
+        repository like code: version-controlled, changed by pull request,
+        and type-checked in CI, which needs a second tsconfig because the
+        root one skips `.claude/`. That is the whole argument. A procedure
+        in someone's memory cannot be reviewed, diffed, or made to fail a
+        test; a procedure in a SaaS console can be changed by anyone with
+        the login and leaves no record of who changed it or why.
+
+        Each of the eleven replaces a named manual tool:
+        `sync-event-from-slack` (the largest), `monthly-newsletter` (1,424
+        lines, the longest instruction file in the repository),
+        `build-event-slides`, `update-mailing-list`, `email-the-community`,
+        `reply-to-contact-messages`, `promote-event`, `make-event-poster`,
+        `run-event-playbook`, `make-event-video`, `tweak-event-slides`.
+        `run-event-playbook` is the orchestrator and the reason eleven
+        tools behave as one workflow: it runs 10 offline checks for an
+        event and, for each gap, names the skill that closes it. It builds
+        nothing itself — it turns "what still has to happen for this
+        event?" into a command whose answer arrives with its next action
+        attached. The agent's own memory is layered the same way: 9
+        `CLAUDE.md` files, 933 lines, split by *when* a rule must bind
+        rather than by subject. A nested file loads only when a file in
+        that subtree is read, so rules about creating a new file, running
+        a command, or trusting a `grep` hit have to live in the root file
+        — none of those actions begins by reading a file in the directory
+        they govern.
+
+        The four automations worth naming. **Newsletter** —
+        `monthly-newsletter`, 4 issues shipped in the new system, with a
+        two-block JSON schema separating the machine-generated snapshot
+        from human-owned editorial, and a three-stage approval chain (test
+        send → review → founder approval) tracked in a state file. Writing
+        the loop down did not move the decision to an agent; it made the
+        stage legible. The founder alone approves a broadcast. **Poster** —
+        `make-event-poster` generates a *textless* plate with gpt-image-2
+        and then sets every word in code across six platform sizes plus a
+        per-speaker set and a line-up tile. The reasoning is the good
+        part: text rendered by a diffusion model cannot be corrected when
+        a speaker's title changes and cannot be proofread by a test; text
+        set in code is a string in a file. **Promo video** —
+        `make-event-video`, one Remotion composition rendering four aspect
+        ratios (vertical, portrait, square, landscape) cut to a
+        soundtrack, where a scene asks the layout for the shape of the
+        frame it is being rendered into and recomposes; the vertical cut
+        is not the landscape cut with its sides thrown away. **Report** —
+        a Typst pipeline producing funder-facing and internal reports from
+        real platform exports rather than placeholders.
+
+        No before-and-after timing study was run, so there is no
+        hours-saved figure here and none should be inferred. What is
+        structural and checkable is narrower and more useful: work that
+        required a vendor console now runs from a command, so it can be
+        scheduled, reviewed and re-run; and work that required an engineer
+        now has a written procedure someone else can follow, which changes
+        who is able to do it rather than only how long it takes.
 
   - id: femtech-weekend
     name: FemTech Weekend

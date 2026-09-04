@@ -52,7 +52,7 @@ Two more habits worth keeping, from the same discipline:
 
 ## Theme A — production agent systems
 
-- Owns the Intelligence Layer of GAVIGO's app-activation platform end to end: a
+- Owned the Intelligence Layer of GAVIGO's app-activation platform end to end: a
   Go orchestrator running a content scorer, a seven-trigger AI rules engine, a
   warm-pool LRU manager and a five-state activation spine in Redis. — `work[gavigo]`
 - Designed the dual-model path at Sanicle after measuring IBM watsonx's
@@ -92,10 +92,12 @@ Every number here carries its measurement basis; keep the basis in the sentence.
 Always with the denominator. "Solo" without a denominator is an adjective; with
 one it is evidence.
 
-- 426 of 439 commits on GAVIGO's platform; promoted Core Engineer → Founding
-  Principal Engineer across three contract iterations, with a contractually
-  defined protected technical domain. — `work[gavigo]`
-- 793 of 936 commits on the She Sharp platform over about a year of active
+- 471 of 488 non-merge commits on GAVIGO's platform (Oct 2025 — Sep 2026);
+  promoted Core Engineer → Founding Principal Engineer across three contract
+  iterations, with a contractually defined protected technical domain.
+  — `work[gavigo]`
+- 94.5% of all lines added on the She Sharp platform (801,609 of 847,827)
+  across 1,381 commits and 251 merged pull requests over 13.3 months of active
   build. — `projects[she-sharp]`
 - 534 of 564 commits on FemTech Weekend's second-generation platform, and 100%
   of the 58 commits on the first. — `work[femtech-weekend]`

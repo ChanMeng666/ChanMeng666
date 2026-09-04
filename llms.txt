@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 480+ GitHub stars · Master's with Distinction
 
-Last updated: 2026-09-03
+Last updated: 2026-09-04
 Canonical: https://chanmeng.org/
 Preferred citation: "Chan Meng, full-stack engineer and CTO"
 
@@ -39,7 +39,7 @@ Email: mailto:chanmeng.dev@gmail.com
 
 **Primary (employers / clients):**
 - **Engram LLC** -- AI Agent Architect (May 2026 — Jul 2026) (https://engram.media)
-- **GAVIGO Inc.** -- Founding Principal Engineer (Oct 2025 — present) (https://gavigo.com)
+- **GAVIGO Inc.** -- Founding Principal Engineer (Oct 2025 — Sep 2026) (https://gavigo.com)
 - **Sanicle Inc.** -- CTO (Mar 2025 — Feb 2026) (https://www.linkedin.com/company/sanicleofficial/)
 - **TechNest Community** -- AI Instructor & Mentor — 2026 AI Track Cohort 3 (Apr–Aug 2026) (https://www.technestcommunity.com/)
 - **She Sharp** -- Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since Jul 2025 (https://shesharp.org.nz)
@@ -78,7 +78,6 @@ Email: mailto:chanmeng.dev@gmail.com
 ## Current Roles
 
 - Founder & Sole Engineer at ArchCanvas (Auckland, New Zealand (remote)) -- https://archcanvas.uk/
-- Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer) at Gavigo (USA (remote — Delaware-incorporated)) -- https://gavigo.com/
 - Senior Full Stack Engineer & Website Team Lead at She Sharp (New Zealand) -- https://www.shesharp.org.nz/
 - Chief Technology Officer at FemTech Weekend (Chengdu, China (HQ) — fully remote) -- https://www.femtechweekend.com/
 
@@ -113,7 +112,7 @@ A. End-to-end AI-native product engineering — from agentic-system architecture
 A. Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first.
 
 **Q. What is Chan's biggest shipped result?**
-A. GAVIGO IRE — 426 of 439 non-merge commits (~97%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — the member platform for a charity running 96+ events since 2014: 95 API routes, 1,411-line schema, 793 of 936 commits solo.
+A. GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo.
 
 
 ## Notable Open Source
@@ -154,6 +153,7 @@ Full index (all 47, newest first): https://chanmeng.org/blog
 
 - **UN CSW 69 Speaker — Beyond Beijing 30 Conference** (United Nations Headquarters, New York, 2025-03-14) -- https://mp.weixin.qq.com/s/cP4NCMXRNgpkxky65mHQyg
 - **Master of Applied Computing with Distinction** (Lincoln University, New Zealand, 2024-12-18) -- https://www.lincoln.ac.nz/
+- **Outstanding Mentor Award (2026)** (Aotearoa AI Hackathon Festival 2026 (AUT, She Sharp, AI Forum NZ, Fisher & Paykel Healthcare), 2026-08) -- https://www.linkedin.com/in/chanmeng666/details/honors/
 - **Outstanding Mentor Award** (AI Hackathon Festival 2025 (AI Forum NZ, She Sharp, AUT), 2025-08) -- https://www.linkedin.com/in/chanmeng666/details/honors/
 - **UN Women FemTech Hackathon Outstanding Performer** (FemTech Weekend (Beijing), 2025-03-10) -- https://www.femtechweekend.com/
 - **Dean's List — Top 5% Academic Performance** (Lincoln University, Faculty of Environment, Society & Design, 2025-01-23) -- https://www.lincoln.ac.nz/
@@ -194,16 +194,16 @@ BuyMeACoffee: https://buymeacoffee.com/chanmeng66u
 
 ## Verified Statistics
 
-- 793 of 936 commits (85%) authored solo on the She Sharp full-stack member platform; remainder chiefly by Lesley Gao on frontend design (140 commits, 15%) (source: https://github.com/NZ-SheSharp, verified 2026-07-16)
+- 1,381 commits and 251 merged pull requests on the She Sharp full-stack member platform over 13.3 months (2025-07-22 → 2026-09-01), of which 94.5% of all lines added (801,609 of 847,827) are Chan's; remainder chiefly by Lesley Gao on frontend design (151 commits, 43 pull requests) (source: https://github.com/NZ-SheSharp, verified 2026-09-01)
 - She Sharp NZ: 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014, 18 industry mentors (source: https://www.shesharp.org.nz/about-us, verified 2026-05-16)
-- Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,411-line schema with 30 pgEnums + 35 pgTables + 26 SQL migrations across 95 API routes / 53 pages / 160 components (source: https://github.com/NZ-SheSharp, verified 2026-07-16)
+- Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, a schema of 39 pgTables + 33 pgEnums with 32 SQL migrations across 84 API routes / 63 pages / 198 components / 180,914 lines of TypeScript in 818 files (source: https://github.com/NZ-SheSharp, verified 2026-09-01)
 - She Sharp data migration crawler bootstrapped the new platform with 1,748 images / 707 MB / 11 JSON files / 85 events / 50 Humanitix tickets / 15 podcasts / 121 photo galleries from the old Webflow site (source: https://www.shesharp.org.nz/, verified 2026-05-16)
 - Authored solo the Her Waka teaching site (Mintlify) and full curriculum — four workshops covering AI & Future of Work, #IAmRemarkable + Vibe Coding, Cybersecurity, Personal Branding — for NZ Ministry of Social Development-funded employment-readiness programme at academyEX Auckland (Mar-Jun 2026) (source: https://herwaka.shesharp.org.nz/, verified 2026-05-16)
 - Conducted professional SEO audit on shesharp.org.nz across 8 analysis sections (brand visibility, topical keyword rankings, NZ competitor matrix, mobile-vs-desktop gap, AI Overview presence) with 10-point prioritized recommendations report (source: https://www.shesharp.org.nz/, verified 2026-05-16)
 - Tam-AI-Ti 19-user research cohort produced 181 bilingual journal entries, 35 voice coaching sessions, 146 AI coach messages, and 74 daily Hauora check-ins over four months (Oct 2025 – Mar 2026) (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
 - Tam-AI-Ti built solo for Riria (Missy) Te Kanawa, former KPMG NZ National Māori Sector lead and lead author of KPMG's Maui Rau report series, as an independent research-pilot commission (source: https://www.linkedin.com/in/riria-missy-te-kanawa-6137528b/, verified 2026-05-16)
 - Tam-AI-Ti: 88+ CopilotKit AI actions, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, GPT-4o Realtime voice (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
-- GAVIGO IRE: 445 commits (439 non-merge), 426 solo (~97%), production-deployed at ire.gavigo.com (source: https://ire.gavigo.com/, verified 2026-07-16)
+- GAVIGO IRE (Oct 2025 — Sep 2026): 488 non-merge commits, 471 of them (96.5%) authored solo by Chan, production-deployed at ire.gavigo.com (source: https://ire.gavigo.com/, verified 2026-09-01)
 - Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud (source: https://ire.gavigo.com/, verified 2026-05-16)
 - Early-ecosystem MCP developer: opened modelcontextprotocol/servers issue #76 on 2024-11-27 (two days after MCP's public launch) documenting the Windows + NVM PATH workaround that became reference troubleshooting guidance for early Claude Desktop adopters (source: https://github.com/modelcontextprotocol/servers/issues/76, verified 2026-05-16)
 - Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with 26.1k visitors and #1,105 global popularity rank, Glama A license rating + 122 stars, listed across 15+ MCP catalogs including Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, Archestra, serp.ai, AIBase, AgentSkillsHub, MagicSlides) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); both servers covered in three independent media write-ups (Skywork AI x2, AgentSkillsHub) (source: https://github.com/ChanMeng666/server-google-news, verified 2026-05-16)
@@ -212,7 +212,7 @@ BuyMeACoffee: https://buymeacoffee.com/chanmeng66u
 - Built five production codebases for Sanicle as solo CTO — sanicle-cloud (Next.js company site replacing legacy Bubble no-code), sanicle-ai (multi-tenant FemTech platform with dual-AI architecture: IBM watsonx llama-3-405b + Google Gemini fallback), sanicle-ai-mobile (PWA prototype), reveal.js presentation deck, and a documented internal work archive — totalling ~350+ commits with ~98% solo authorship (source: https://www.linkedin.com/company/sanicleofficial/, verified 2026-05-16)
 - Two merged pull requests to the CopilotKit main repository (36.1k+ GitHub stars) — PR #2068 adding the 8-agent FemTracker Agent demo to CopilotKit's official demos_2025 collection (merged 2025-09-11, approved by maintainer Tyler Slaton), and PR #2529 adding Claude Code setup instructions to the CopilotKit MCP server documentation (merged 2025-10-09, approved by maintainer Brandon McConnell) (source: https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666, verified 2026-07-17)
 - GAVIGO IRE measured platform performance: restore path <1 ms p50, cold path ~12 ms p50, 84.6% warm-pool hit rate, 0 errors at 100 concurrent WebSocket clients under load test (source: https://ire.gavigo.com/, verified 2026-05-16)
-- Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil); role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026) (source: https://gavigo.com/, verified 2026-05-16)
+- Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil) from Oct 2025 to Sep 2026; role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026) (source: https://gavigo.com/, verified 2026-05-16)
 - GAVIGO public mission per company marketing: 'Skip the Store. Start the Play' — eliminate the friction between user intent and digital experience by building the Post-App World through proprietary Instant Reality Switching technology (source: https://gavigo.com/, verified 2026-05-16)
 - GAVIGO accepted into the Google for Startups Cloud Program (announced Feb 2026 by founder & CEO Saba Gecgil); per the founder's public statement the partnership value 'isn't about cloud credits — it's about validating an execution layer under real-world constraints', and the partnership is what enabled the DigitalOcean → Google Cloud production migration I led on 2026-03-11 (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)
 - GAVIGO accepted into the NVIDIA Inception Program (announced Feb 2026) — the track supporting startups building GPU-intensive, infrastructure-level technologies, providing GPU ecosystem visibility and deep-tech credibility (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)

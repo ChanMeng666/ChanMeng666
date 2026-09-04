@@ -119,7 +119,7 @@ meta:
       - question: "Where is Chan based and what timezones does she cover?"
         answer: "Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first."
       - question: "What is Chan's biggest shipped result?"
-        answer: "GAVIGO IRE — 426 of 439 non-merge commits (~97%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — the member platform for a charity running 96+ events since 2014: 95 API routes, 1,411-line schema, 793 of 936 commits solo."
+        answer: "GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo."
 
     # ---------------------------------------------------------------------
     # TEACHING COHORTS — the four AI-programming cohorts Chan has led
@@ -496,9 +496,9 @@ meta:
     # rate when prose includes verifiable numbers with sources. Add new claims
     # as you verify them; freshness banner uses meta.lastModified for the date.
     statisticsClaims:
-      - { claim: "793 of 936 commits (85%) authored solo on the She Sharp full-stack member platform; remainder chiefly by Lesley Gao on frontend design (140 commits, 15%)",
+      - { claim: "1,381 commits and 251 merged pull requests on the She Sharp full-stack member platform over 13.3 months (2025-07-22 → 2026-09-01), of which 94.5% of all lines added (801,609 of 847,827) are Chan's; remainder chiefly by Lesley Gao on frontend design (151 commits, 43 pull requests)",
           source: "https://github.com/NZ-SheSharp",
-          verifiedAt: "2026-07-16" }
+          verifiedAt: "2026-09-01" }
       # The org's own about-us page also carries an "85% mentorship success rate
       # (5-6x higher promotion likelihood)". It was REMOVED from this claim on
       # 2026-08-26 and is not to be re-added: She Sharp's stats.ts records that no
@@ -509,9 +509,9 @@ meta:
       - { claim: "She Sharp NZ: 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014, 18 industry mentors",
           source: "https://www.shesharp.org.nz/about-us",
           verifiedAt: "2026-05-16" }
-      - { claim: "Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, 1,411-line schema with 30 pgEnums + 35 pgTables + 26 SQL migrations across 95 API routes / 53 pages / 160 components",
+      - { claim: "Built solo for She Sharp NZ: AI mentor-mentee matching (GPT-4o-mini at temp 0.3 + Upstash Redis cache + rule-based fallback, explicit five-weight scoring: MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%, admin human-in-the-loop final gate), three role-permissioned dashboards (mentor/mentee/admin) with native dual-role schema, custom Slack ecosystem (read-only event-collector bot, 3 weekly Cron digests including funding crawler over 6 NZ government RSS/HTML sources), a Claude agent skill `sync-event-from-slack` with strict Zod validation + dry-run default that replaces hours of manual event publication, Stripe NZD subscription billing with payment→invitation-code activation flow, a schema of 39 pgTables + 33 pgEnums with 32 SQL migrations across 84 API routes / 63 pages / 198 components / 180,914 lines of TypeScript in 818 files",
           source: "https://github.com/NZ-SheSharp",
-          verifiedAt: "2026-07-16" }
+          verifiedAt: "2026-09-01" }
       - { claim: "She Sharp data migration crawler bootstrapped the new platform with 1,748 images / 707 MB / 11 JSON files / 85 events / 50 Humanitix tickets / 15 podcasts / 121 photo galleries from the old Webflow site",
           source: "https://www.shesharp.org.nz/",
           verifiedAt: "2026-05-16" }
@@ -530,9 +530,9 @@ meta:
       - { claim: "Tam-AI-Ti: 88+ CopilotKit AI actions, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, GPT-4o Realtime voice",
           source: "https://tamaiti.whiri-ai.com/",
           verifiedAt: "2026-05-16" }
-      - { claim: "GAVIGO IRE: 445 commits (439 non-merge), 426 solo (~97%), production-deployed at ire.gavigo.com",
+      - { claim: "GAVIGO IRE (Oct 2025 — Sep 2026): 488 non-merge commits, 471 of them (96.5%) authored solo by Chan, production-deployed at ire.gavigo.com",
           source: "https://ire.gavigo.com/",
-          verifiedAt: "2026-07-16" }
+          verifiedAt: "2026-09-01" }
       - { claim: "Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud",
           source: "https://ire.gavigo.com/",
           verifiedAt: "2026-05-16" }
@@ -557,7 +557,7 @@ meta:
       - { claim: "GAVIGO IRE measured platform performance: restore path <1 ms p50, cold path ~12 ms p50, 84.6% warm-pool hit rate, 0 errors at 100 concurrent WebSocket clients under load test",
           source: "https://ire.gavigo.com/",
           verifiedAt: "2026-05-16" }
-      - { claim: "Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil); role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026)",
+      - { claim: "Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil) from Oct 2025 to Sep 2026; role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026)",
           source: "https://gavigo.com/",
           verifiedAt: "2026-05-16" }
       - { claim: "GAVIGO public mission per company marketing: 'Skip the Store. Start the Play' — eliminate the friction between user intent and digital experience by building the Post-App World through proprietary Instant Reality Switching technology",

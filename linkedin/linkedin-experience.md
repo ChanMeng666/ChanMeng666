@@ -71,25 +71,27 @@ Claude recommended me before anyone at the company had met me: as Engram entered
 **Media:** `AI Programming Learning Platform - Master AI Programming`
 
 ## Gavigo
-_9 mos · Remote_
+_12 mos · Remote_
 **Links:** <https://ire.gavigo.com/> · <https://gavigo.com/>
 
 ### Founding Principal Engineer
 
-**Dates:** Feb 2026 - Present · 5 mos
+**Dates:** Feb 2026 - Sep 2026 · 8 mos
 **Location:** 1007 N Orange St, 4th Floor, 4785, Wilmington, Delaware 19801, USA
 **LinkedIn helped me get this job**
 
 ```
-Users open straight into a game in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel, and with no install at all. That is Gavigo IRE, Gavigo's "Instant Reality Exchange" platform, and I own its Intelligence Layer: three formalised contracts in 6 months took me from Core Engineer to Founding Principal Engineer, reporting to founder & CEO Saba Gecgil.
+Users opened straight into a game in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel, and with no install at all. That is Gavigo IRE, Gavigo's "Instant Reality Exchange" platform, and I owned its Intelligence Layer end to end: three formalised contracts took me from Core Engineer to Founding Principal Engineer, reporting to founder & CEO Saba Gecgil.
 
-What "instant" measures out at in production: warm-pool hit rate 84.6% · 0 errors at 100 concurrent live users under load · 439 total platform commits, 426 (~97%) authored solo.
+What "instant" measured out at in production: warm-pool hit rate 84.6% · 0 errors at 100 concurrent live users under load · 488 non-merge commits, 471 (96.5%) authored solo.
 
-External validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com.
+External validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com. A USPTO nonprovisional patent covering the activation and execution layer I built was filed 8 August 2026, and the CEO's v1.7 Activation Platform MVP Build Mandate (28 Aug 2026) named me build lead and Phase 0 owner.
 
-• Every speed claim is auditable in production logs instead of asserted — sub-millisecond restore runs on a 5-state engine with atomic Redis transitions and timestamped proof signals.
-• The platform crossed continents without users noticing: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single 30-minute zero-downtime cutover.
-• Games are already warm when someone arrives, because a 7-trigger AI rules engine decides which to pre-load, for whom, when.
+• Every speed claim is auditable in production logs instead of asserted — sub-millisecond restore runs on a 5-state activation engine with atomic Redis transitions and timestamped proof signals.
+• The platform crossed continents without users noticing: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single ~30-minute zero-downtime cutover.
+• Games were already warm when someone arrived, because a 7-trigger AI rules engine decided which to pre-load, for whom, when.
+• Response compression had never been enabled in production — a default that only misbehaves behind a load balancer, so it looked correct on every developer machine. Switching it on took the dashboard bundle from 1.2 MB to 350 KB and the mobile bundle from 2.99 MB to 748 KB.
+• Nobody had to reconstruct what I knew: project context went into the repository as the work happened — an agent operating manual, onboarding docs, deployment runbooks, 13 numbered phase records — so the handover was written before I left.
 
 Stack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, gpt-5.4-mini.
 ```
@@ -121,24 +123,26 @@ The M1 prototype I architected and shipped here is the artefact Gavigo took into
 
 ### Senior Full Stack Engineer & Website Team Lead
 
-**Dates:** Jul 2025 - Present · 1 yr
+**Dates:** Jul 2025 - Present · 1 yr 2 mos
 **Location:** Auckland Central, Auckland, New Zealand · Hybrid
 **LinkedIn helped me get this job**
 
 ```
-New Zealand's leading women-in-STEM community now runs on a real engineering platform instead of a no-code Webflow site — I built the replacement and own it operationally. Founder Dr Mahsa Mohaghegh (Head of Computer and Information Sciences, School of Engineering, Computer and Mathematical Sciences at AUT) recruited me directly as the senior AI + full-stack engineer She Sharp didn't have in-house: a registered charitable trust (CC57025), 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014.
+A volunteer-run charity had built its working life out of rented software — the website inside one vendor's product, the mailing list inside another's, the artwork in a third, eleven years of decisions inside a chat tool — all of it one lapsed card away from being out of reach. I moved She Sharp onto infrastructure it owns, and rewrote its recurring work as procedures an agent can run and a non-engineer can read. Founder Dr Mahsa Mohaghegh (AUT) recruited me as the senior engineer this 3,500-member charity didn't have in-house.
 
-What that platform does, across ~12 months and 793 of 936 commits solo — 85%:
+13.3 months: 1,381 commits, 251 merged PRs, 94.5% of all lines added — 63 pages, 84 API routes, 39 tables, 180,914 lines of TypeScript. Lesley Gao contributed 151 commits and 43 PRs alongside me.
 
-• Mentors and mentees get matched by an engine, not a spreadsheet — GPT-4o-mini scores potential pairs across 5 weighted dimensions (skill, goal, personality, industry, logistics) and explains each match in plain language, with a rule-based fallback, Redis caching, and human admin approval as the final gate.
-• Members, mentors and admins each work in their own view — three role-permissioned dashboards (mentor / mentee / admin), Stripe membership billing, audit logging.
-• Hours of weekly volunteer work disappeared into a custom Slack ecosystem: a weekly stats digest, an NZ funding-opportunities crawler (6 sources scored for member relevance, top 10 posted weekly), and an event-page publisher via Claude Code agent skill.
-• 10+ years of legacy content survived the move with zero broken links, carried over by a Python migration crawler.
+• An AI-native team isn't one that talks to a chatbot — it's one whose recurring work is written down precisely enough that an agent can execute it, so non-engineers can run what used to need an engineer. 11 agent skills, 25,643 lines of procedure and tooling — event setup, newsletter, posters, video, mailing list — reviewed by pull request and type-checked in CI, each replacing a SaaS console or someone's memory.
+• A 1,549-person mailing list moved off its vendor onto infrastructure the charity owns, with double opt-in and the consent record in its own database. The cutover shipped in 16 idempotent batches: 0 failures, 0.45% bounce.
+• Consent became auditable for the first time, including the unflattering finding that 75.4% arrived by an act that was not a subscription. 2,129 non-consenting contacts are held as one-way hashes so a future import can't resurrect them.
+• A mailbox audit found 7 of the 11 addresses printed on the website did not exist, including the headline contact one. People writing in were turned away at the door and nobody knew — all fixed.
+• 1.15 GB of the charity's own record recovered from four platforms, including eleven years of Slack (56,119 messages) — which also became a 1,714-line event-lifecycle SOP, hash-verified in CI so it can't drift.
+• A two-hour Auckland workshop and recorded tutorials taught the team to run all of it; the guide is written for anyone "whether or not you have ever written a line of code."
 
-Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Tailwind 4, Vercel.
+Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Resend, Tailwind 4, Vercel.
 ```
 
-**Skills:** Next.js, Full-Stack Development, React, Drizzle ORM, Neon Postgres, NextAuth, Stripe, Slack API
+**Skills:** Next.js, Full-Stack Development, React, Drizzle ORM, Neon Postgres, NextAuth, Stripe, Slack API, Resend, AI Agents, Data Migration, Technical Documentation, Typst
 **Media:** `She Sharp - Connecting Women in Technology` · `1755385997508.jpeg` · `1755253595927.jpeg`  _(Show all 4 media)_
 
 ## FemTech Weekend

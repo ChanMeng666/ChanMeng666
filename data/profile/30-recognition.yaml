@@ -11,6 +11,52 @@
 # AWARDS & HONORS
 # =============================================================================
 awards:
+  # SELF-ATTESTED (2026-09-04) — read this before citing the entry below.
+  # Chan's MENTOR ROLE at both festivals is independently corroborated: 2025 by
+  # her own in-person-mentor registration, 2026 by the host's public "Meet the
+  # Mentors" roster (she-sharp `lib/data/json/events-custom.json` id 96, 17
+  # names, billing her *Founding Engineer, ArchCanvas*) and by the organisers'
+  # own planning records. The 2026 AWARD ITSELF has NO supporting artefact in
+  # any of the four repositories searched — no certificate image, no
+  # announcement, no Slack record. It is recorded on Chan's own testimony.
+  # That mirrors the existing evidence gap on the 2025 award, which likewise
+  # has no certificate in `public/certificates/`.
+  #
+  # The "(2026)" in the title is a DISAMBIGUATOR, not part of the award's name.
+  # Three guards join awards on identity — `events[].relatedAwardTitle` by
+  # title, scripts/check-linkedin-sync.mjs by awarder string,
+  # scripts/check-freshness.mjs by title — and two awards sharing a title would
+  # collide on `.find()`. Keep the suffix in the key only; the prose below
+  # gives the official name.
+  - title: "Outstanding Mentor Award (2026)"
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-09-04"
+    date: "2026-08"
+    awarder: "Aotearoa AI Hackathon Festival 2026 (AUT, She Sharp, AI Forum NZ, Fisher & Paykel Healthcare)"
+    url: "https://www.linkedin.com/in/chanmeng666/details/honors/"
+    summary: |
+      Named an **Outstanding Mentor** — the award's official name, carrying no
+      year suffix — at the **Aotearoa AI Hackathon Festival 2026**, held 7–8
+      August 2026 at AUT City Campus and hosted by Auckland University of
+      Technology with She Sharp and AI Forum NZ, with Fisher & Paykel
+      Healthcare. The **second year running**: Chan received the same
+      recognition at the 2025 edition of the festival.
+
+      Served as a technical mentor to a field of **125 registered
+      participants** across **twelve teams**, building AI solutions mapped to
+      **five UN Sustainable Development Goals** and pitching in five minutes to
+      a judging panel on the Saturday. Roughly **a third of participants had
+      never been to a hackathon before**, which set the mentoring brief: get a
+      first-timer from a rough idea to something demonstrable inside two days.
+      Mentors were drawn from AUT, She Sharp, Fisher & Paykel Healthcare,
+      Southern Cross Health Society and Red Hat; Chan appears on the host's
+      public "Meet the Mentors" roster (17 names) billed as **Founding
+      Engineer, ArchCanvas**. She also MC'd the festival opening and worked on
+      mentor recruitment in the run-up. Appearance detail, the mentor-count
+      discrepancy and the follow-on outreach:
+      `events[aotearoa-ai-hackathon-festival-2026]`.
+
   - title: Outstanding Mentor Award
     tier: primary
     recency: recent

@@ -28,7 +28,7 @@ linkedin:
     source: Live LinkedIn page text, finalised and confirmed by Chan Meng. Facts trace to the data/profile/*.yaml shards; live-only details (engagement stats, credential IDs, media captions) captured here.
     notes:
       skills: Flat list mirroring the live Skills 'All' view (order preserved). Each skill records its associated experiences/projects/certificates and any endorsement signals. LinkedIn groups skills under the tabs in skills.categories, but the 'All' view does not expose which tab each skill belongs to, so per-skill category is not recorded.
-      honorsAndAwards: 'Six entries in live display order (newest first), captured verbatim from the live profile (all six now live, UN CSW 69 Speaker included). FemTech Weekend and FemTech China are DISTINCT organisations: the Excellence Award (Dec 2024) is issued by FemTech China; the UN Women FemTech Hackathon Outstanding Performer award (Mar 2025) is from FemTech Weekend. All ''issuer'' and ''associatedWith'' values are taken exactly as shown on the live page.'
+      honorsAndAwards: 'Seven entries in live display order (newest first), captured verbatim from the live profile (all seven now live, UN CSW 69 Speaker included). The two Outstanding Mentor entries are the SAME award won in consecutive years (the 2025 and 2026 festivals); its official name carries no year suffix, and the ''(2026)'' in the awards[] title is only a database disambiguator. FemTech Weekend and FemTech China are DISTINCT organisations: the Excellence Award (Dec 2024) is issued by FemTech China; the UN Women FemTech Hackathon Outstanding Performer award (Mar 2025) is from FemTech Weekend. All ''issuer'' and ''associatedWith'' values are taken exactly as shown on the live page.'
       publications: Mirrors the live Publications section (11 entries, newest first, with the dates LinkedIn displays). Chan's LinkedIn Pulse technical articles are NOT on the live page and are omitted here — they now live at chanmeng.org/blog and are catalogued in 30-recognition.yaml. The LinkedIn Newsletter entry was retired 2026-07-21; the remaining newsletter entry is Chan's own "What's Shipping in AI" at chanmeng.org/#newsletter, which is a different publication.
       recommendations: Received recommendations only (26), newest first, captured verbatim including bilingual (Chinese + English) text where the recommender wrote both.
     sections:
@@ -205,27 +205,29 @@ linkedin:
           media:
             - AI Programming Learning Platform - Master AI Programming
     - company: Gavigo
-      companyDuration: 9 mos
+      companyDuration: 12 mos
       companyLocation: Remote
       links:
         - https://ire.gavigo.com/
         - https://gavigo.com/
       positions:
         - title: Founding Principal Engineer
-          dateRange: Feb 2026 - Present
-          duration: 5 mos
+          dateRange: Feb 2026 - Sep 2026
+          duration: 8 mos
           location: 1007 N Orange St, 4th Floor, 4785, Wilmington, Delaware 19801, USA
           foundViaLinkedIn: true
           description: |-
-            Users open straight into a game in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel, and with no install at all. That is Gavigo IRE, Gavigo's "Instant Reality Exchange" platform, and I own its Intelligence Layer: three formalised contracts in 6 months took me from Core Engineer to Founding Principal Engineer, reporting to founder & CEO Saba Gecgil.
+            Users opened straight into a game in under 1 millisecond on average — roughly 5,000× faster than a normal app-store install funnel, and with no install at all. That is Gavigo IRE, Gavigo's "Instant Reality Exchange" platform, and I owned its Intelligence Layer end to end: three formalised contracts took me from Core Engineer to Founding Principal Engineer, reporting to founder & CEO Saba Gecgil.
 
-            What "instant" measures out at in production: warm-pool hit rate 84.6% · 0 errors at 100 concurrent live users under load · 439 total platform commits, 426 (~97%) authored solo.
+            What "instant" measured out at in production: warm-pool hit rate 84.6% · 0 errors at 100 concurrent live users under load · 488 non-merge commits, 471 (96.5%) authored solo.
 
-            External validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com.
+            External validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com. A USPTO nonprovisional patent covering the activation and execution layer I built was filed 8 August 2026, and the CEO's v1.7 Activation Platform MVP Build Mandate (28 Aug 2026) named me build lead and Phase 0 owner.
 
-            • Every speed claim is auditable in production logs instead of asserted — sub-millisecond restore runs on a 5-state engine with atomic Redis transitions and timestamped proof signals.
-            • The platform crossed continents without users noticing: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single 30-minute zero-downtime cutover.
-            • Games are already warm when someone arrives, because a 7-trigger AI rules engine decides which to pre-load, for whom, when.
+            • Every speed claim is auditable in production logs instead of asserted — sub-millisecond restore runs on a 5-state activation engine with atomic Redis transitions and timestamped proof signals.
+            • The platform crossed continents without users noticing: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single ~30-minute zero-downtime cutover.
+            • Games were already warm when someone arrived, because a 7-trigger AI rules engine decided which to pre-load, for whom, when.
+            • Response compression had never been enabled in production — a default that only misbehaves behind a load balancer, so it looked correct on every developer machine. Switching it on took the dashboard bundle from 1.2 MB to 350 KB and the mobile bundle from 2.99 MB to 748 KB.
+            • Nobody had to reconstruct what I knew: project context went into the repository as the work happened — an agent operating manual, onboarding docs, deployment runbooks, 13 numbered phase records — so the handover was written before I left.
 
             Stack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, gpt-5.4-mini.
           skills:
@@ -265,20 +267,22 @@ linkedin:
         - https://shesharp.org.nz/
         - https://www.shesharp.org.nz/
       positions:
-        - duration: 1 yr
+        - duration: 1 yr 2 mos
           location: Auckland Central, Auckland, New Zealand · Hybrid
           foundViaLinkedIn: true
           description: |-
-            New Zealand's leading women-in-STEM community now runs on a real engineering platform instead of a no-code Webflow site — I built the replacement and own it operationally. Founder Dr Mahsa Mohaghegh (Head of Computer and Information Sciences, School of Engineering, Computer and Mathematical Sciences at AUT) recruited me directly as the senior AI + full-stack engineer She Sharp didn't have in-house: a registered charitable trust (CC57025), 3,500+ members, 5,000+ women reached lifetime, 50+ corporate partners, 96+ events since 2014.
+            A volunteer-run charity had built its working life out of rented software — the website inside one vendor's product, the mailing list inside another's, the artwork in a third, eleven years of decisions inside a chat tool — all of it one lapsed card away from being out of reach. I moved She Sharp onto infrastructure it owns, and rewrote its recurring work as procedures an agent can run and a non-engineer can read. Founder Dr Mahsa Mohaghegh (AUT) recruited me as the senior engineer this 3,500-member charity didn't have in-house.
 
-            What that platform does, across ~12 months and 793 of 936 commits solo — 85%:
+            13.3 months: 1,381 commits, 251 merged PRs, 94.5% of all lines added — 63 pages, 84 API routes, 39 tables, 180,914 lines of TypeScript. Lesley Gao contributed 151 commits and 43 PRs alongside me.
 
-            • Mentors and mentees get matched by an engine, not a spreadsheet — GPT-4o-mini scores potential pairs across 5 weighted dimensions (skill, goal, personality, industry, logistics) and explains each match in plain language, with a rule-based fallback, Redis caching, and human admin approval as the final gate.
-            • Members, mentors and admins each work in their own view — three role-permissioned dashboards (mentor / mentee / admin), Stripe membership billing, audit logging.
-            • Hours of weekly volunteer work disappeared into a custom Slack ecosystem: a weekly stats digest, an NZ funding-opportunities crawler (6 sources scored for member relevance, top 10 posted weekly), and an event-page publisher via Claude Code agent skill.
-            • 10+ years of legacy content survived the move with zero broken links, carried over by a Python migration crawler.
+            • An AI-native team isn't one that talks to a chatbot — it's one whose recurring work is written down precisely enough that an agent can execute it, so non-engineers can run what used to need an engineer. 11 agent skills, 25,643 lines of procedure and tooling — event setup, newsletter, posters, video, mailing list — reviewed by pull request and type-checked in CI, each replacing a SaaS console or someone's memory.
+            • A 1,549-person mailing list moved off its vendor onto infrastructure the charity owns, with double opt-in and the consent record in its own database. The cutover shipped in 16 idempotent batches: 0 failures, 0.45% bounce.
+            • Consent became auditable for the first time, including the unflattering finding that 75.4% arrived by an act that was not a subscription. 2,129 non-consenting contacts are held as one-way hashes so a future import can't resurrect them.
+            • A mailbox audit found 7 of the 11 addresses printed on the website did not exist, including the headline contact one. People writing in were turned away at the door and nobody knew — all fixed.
+            • 1.15 GB of the charity's own record recovered from four platforms, including eleven years of Slack (56,119 messages) — which also became a 1,714-line event-lifecycle SOP, hash-verified in CI so it can't drift.
+            • A two-hour Auckland workshop and recorded tutorials taught the team to run all of it; the guide is written for anyone "whether or not you have ever written a line of code."
 
-            Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Tailwind 4, Vercel.
+            Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Resend, Tailwind 4, Vercel.
           skills:
             - Next.js
             - Full-Stack Development
@@ -288,6 +292,11 @@ linkedin:
             - NextAuth
             - Stripe
             - Slack API
+            - Resend
+            - AI Agents
+            - Data Migration
+            - Technical Documentation
+            - Typst
           media:
             - She Sharp - Connecting Women in Technology
             - 1755385997508.jpeg
@@ -1338,7 +1347,7 @@ linkedin:
         The member-lifecycle platform that now runs She Sharp — NZ's largest women-in-tech community (charitable trust CC57025; 3,500+ members, 50+ corporate partners, 96+ events since 2014). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.
 
         • AI mentor–mentee matcher: GPT-4o-mini scoring pairs across five weighted dimensions (Skill 35%, Goal 30%, MBTI 15%, Industry 10%, Logistics 10%) with explainable reasons and a rule-based fallback; admin as final gate.
-        • 793 of 936 commits solo (85%) across ~12 months. Frontend designer Lesley Gao authored 140 (15%).
+        • 1,381 commits and 251 merged PRs across 13.3 months, 94.5% of all lines added mine. Lesley Gao contributed 151 commits and 43 PRs alongside me.
         • Slack ecosystem: weekly stats digest, NZ funding-opportunities crawler over six government sources, Claude Code skill that publishes new events with one dry-run-default command.
 
         Stack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.
@@ -1608,6 +1617,24 @@ linkedin:
       mediaTotal: 12
       url: https://www.cebucia.com/en/
   honorsAndAwards:
+    - title: Outstanding Mentor Award - Aotearoa AI Hackathon Festival 2026
+      associatedWith: She Sharp
+      issuer: AUT, She Sharp, AI Forum NZ, and Fisher & Paykel Healthcare
+      onLiveProfile: true
+      description: |-
+        Named an Outstanding Mentor for the second consecutive year — the award carries no year in its name — at the Aotearoa AI Hackathon Festival 2026, held 7–8 August 2026 at AUT City Campus and hosted by Auckland University of Technology with She Sharp and AI Forum NZ, alongside Fisher & Paykel Healthcare.
+
+        125 registered participants, twelve teams, five UN Sustainable Development Goals, and five minutes each in front of the judging panel on the Saturday. Roughly a third of the room had never been to a hackathon before, and that set my brief: get a first-timer from a rough idea to something they can demo, inside two days.
+
+        • Mentored teams end to end — scoping an idea small enough to finish, picking a stack they could actually ship on, and getting to a working demo rather than a slide describing one.
+        • MC'd the festival opening from the AUT podium, including the Karakia Tīmatanga.
+        • Worked on mentor recruitment in the run-up. The final roster of 17 drew from AUT, She Sharp, Fisher & Paykel Healthcare, Southern Cross Health Society and Red Hat, and billed me as Founding Engineer, ArchCanvas.
+
+        Same award, second year, a different cohort — and the part I care about is that the first-timers left with something running.
+      _sourceAward:
+        awarder: Aotearoa AI Hackathon Festival 2026 (AUT, She Sharp, AI Forum NZ, Fisher & Paykel Healthcare)
+        fields:
+          - issueDate
     - title: Outstanding Mentor Award - AI Hackathon Festival 2025
       associatedWith: She Sharp
       issuer: AI Forum NZ, She Sharp, and Auckland University of Technology

@@ -67,12 +67,22 @@ const FACTS = [
   // — beat 05, range —
   { key: "gavigo.restoreP50", project: "gavigo-ire", metric: "Restore path p50",
     rule: /^(<?\s*\d+\s*ms)/, cast: "string" },
+  // Was /~(\d+)%/ against "426 (~97%)". The 2026-09-04 refresh restated the
+  // same measure — share of NON-MERGE commits — at 471 of 488, and the honest
+  // figure has a decimal. Captured as a string so 96.5 is not truncated to 96.
+  // The film's super moves 97% -> 96.5%.
   { key: "gavigo.soloPct", project: "gavigo-ire", metric: "Chan's commits",
-    rule: /~(\d+)%/, cast: "int" },
+    rule: /\((\d+\.\d+)% of non-merge\)/, cast: "string" },
   { key: "shesharp.members", project: "she-sharp", metric: "Members",
     rule: /^([\d,]+\+)/, cast: "string" },
-  { key: "shesharp.soloPct", project: "she-sharp", metric: "Solo commits",
-    rule: /\((\d+)%\)/, cast: "int" },
+  // RENAMED 2026-09-04, and the rename is the point: this used to be
+  // `shesharp.soloPct` reading "793 (85%)" — a share of COMMITS. The refresh
+  // replaced it with share of LINES ADDED (94.5%), a different quantity.
+  // Re-pointing the old key would have left the film saying "85% solo" with a
+  // number that no longer measures that. The film's super must change to
+  // "94.5% of all lines added"; a bare "94.5% solo" would be wrong.
+  { key: "shesharp.linesShare", project: "she-sharp", metric: "Authorship share",
+    rule: /(\d+\.\d+)% of all lines added/, cast: "string" },
   { key: "shesharp.eventsSince", project: "she-sharp", metric: "Events since 2014",
     rule: /^(\d+\+)/, cast: "string" },
   { key: "tamaiti.commits", project: "tam-ai-ti", metric: "Commits (solo)",

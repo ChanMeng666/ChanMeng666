@@ -88,7 +88,7 @@ What "instant" measured out at in production: warm-pool hit rate 84.6% · 0 erro
 External validation (Feb 2026): Gavigo accepted into Google for Startups Cloud Program and NVIDIA Inception, with press coverage from feedvoice.com. A USPTO nonprovisional patent covering the activation and execution layer I built was filed 8 August 2026, and the CEO's v1.7 Activation Platform MVP Build Mandate (28 Aug 2026) named me build lead and Phase 0 owner.
 
 • Every speed claim is auditable in production logs instead of asserted — sub-millisecond restore runs on a 5-state activation engine with atomic Redis transitions and timestamped proof signals.
-• The platform crossed continents without users noticing: DigitalOcean (Singapore) → Google Cloud GKE (Belgium) in a single ~30-minute zero-downtime cutover.
+• The platform crossed continents in one planned window: DigitalOcean (Singapore) → Google Cloud GKE (Belgium), a ~30-minute cutover.
 • Games were already warm when someone arrived, because a 7-trigger AI rules engine decided which to pre-load, for whom, when.
 • Response compression had never been enabled in production — a default that only misbehaves behind a load balancer, so it looked correct on every developer machine. Switching it on took the dashboard bundle from 1.2 MB to 350 KB and the mobile bundle from 2.99 MB to 748 KB.
 • Nobody had to reconstruct what I knew: project context went into the repository as the work happened — an agent operating manual, onboarding docs, deployment runbooks, 13 numbered phase records — so the handover was written before I left.
@@ -128,15 +128,13 @@ The M1 prototype I architected and shipped here is the artefact Gavigo took into
 **LinkedIn helped me get this job**
 
 ```
-A volunteer-run charity had built its working life out of rented software — the website inside one vendor's product, the mailing list inside another's, the artwork in a third, eleven years of decisions inside a chat tool — all of it one lapsed card away from being out of reach. I moved She Sharp onto infrastructure it owns, and rewrote its recurring work as procedures an agent can run and a non-engineer can read. Founder Dr Mahsa Mohaghegh (AUT) recruited me as the senior engineer this 3,500-member charity didn't have in-house.
+A volunteer-run charity ran on rented software — the website inside one vendor's product, the mailing list inside another's, the artwork in a third, eleven years of decisions inside a chat tool — all of it one lapsed card away from being out of reach. I moved She Sharp onto infrastructure it owns, and rewrote its recurring work as procedures an agent can run and a non-engineer can read. Founder Dr Mahsa Mohaghegh (AUT) recruited me as the senior engineer this charity didn't have in-house.
 
-13.3 months: 1,381 commits, 251 merged PRs, 94.5% of all lines added — 63 pages, 84 API routes, 39 tables, 180,914 lines of TypeScript. Lesley Gao contributed 151 commits and 43 PRs alongside me.
+13.3 months: 1,381 commits, 251 merged PRs, 94.5% of all lines added. Lesley Gao contributed 151 commits and 43 PRs alongside me.
 
-• An AI-native team isn't one that talks to a chatbot — it's one whose recurring work is written down precisely enough that an agent can execute it, so non-engineers can run what used to need an engineer. 11 agent skills, 25,643 lines of procedure and tooling — event setup, newsletter, posters, video, mailing list — reviewed by pull request and type-checked in CI, each replacing a SaaS console or someone's memory.
-• A 1,549-person mailing list moved off its vendor onto infrastructure the charity owns, with double opt-in and the consent record in its own database. The cutover shipped in 16 idempotent batches: 0 failures, 0.45% bounce.
-• Consent became auditable for the first time, including the unflattering finding that 75.4% arrived by an act that was not a subscription. 2,129 non-consenting contacts are held as one-way hashes so a future import can't resurrect them.
-• A mailbox audit found 7 of the 11 addresses printed on the website did not exist, including the headline contact one. People writing in were turned away at the door and nobody knew — all fixed.
-• 1.15 GB of the charity's own record recovered from four platforms, including eleven years of Slack (56,119 messages) — which also became a 1,714-line event-lifecycle SOP, hash-verified in CI so it can't drift.
+• An AI-native team is one whose recurring work is written down precisely enough that an agent can execute it, so non-engineers run what used to need an engineer. 11 agent skills — event setup, newsletter, posters, video, mailing list — reviewed by PR and type-checked in CI, each replacing a SaaS console or someone's memory.
+• A 1,549-person mailing list moved off its vendor onto infrastructure the charity owns — double opt-in, consent in its own database, 16 idempotent batches, 0 failures, 0.45% bounce. Consent became auditable for the first time, including the unflattering 75.4% that arrived by something other than a subscription; 2,129 non-consenting contacts are held as one-way hashes so a future import can't resurrect them.
+• 1.15 GB of the charity's own record recovered from four platforms — eleven years of Slack (56,119 messages) became a 1,714-line event-lifecycle SOP, hash-verified in CI so it can't drift. The same pass found 7 of the 11 contact addresses on the website did not exist, including the headline one — people writing in were turned away and nobody knew.
 • A two-hour Auckland workshop and recorded tutorials taught the team to run all of it; the guide is written for anyone "whether or not you have ever written a line of code."
 
 Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Resend, Tailwind 4, Vercel.

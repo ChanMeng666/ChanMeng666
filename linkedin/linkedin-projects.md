@@ -135,7 +135,7 @@ Stack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Act
 **Other contributors:** yes
 
 ```
-The member-lifecycle platform that now runs She Sharp — NZ's largest women-in-tech community (charitable trust CC57025; 3,500+ members, 50+ corporate partners, 96+ events since 2014). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.
+The member-lifecycle platform that now runs She Sharp — a New Zealand women-in-tech charity (charitable trust CC57025; 96+ events since 2014, and a membership the organisation reports at 3,500+). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.
 
 • AI mentor–mentee matcher: GPT-4o-mini scoring pairs across five weighted dimensions (Skill 35%, Goal 30%, MBTI 15%, Industry 10%, Logistics 10%) with explainable reasons and a rule-based fallback; admin as final gate.
 • 1,381 commits and 251 merged PRs across 13.3 months, 94.5% of all lines added mine. Lesley Gao contributed 151 commits and 43 PRs alongside me.

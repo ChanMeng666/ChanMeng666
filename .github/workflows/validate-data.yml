@@ -42,6 +42,15 @@ jobs:
       # before an application, when the exports are actually rebuilt. Needs no
       # typst, so it is cheap to gate every PR with.
       - run: npm run check:ats
+      # The prose gate. Nothing else in this workflow reads the copy itself, and
+      # the two failures that motivated it were both invisible to every check
+      # above: a banned word sitting in a project tagline, and one stale shard
+      # entry whose numbers had been copied onto five surfaces. Error-class rules
+      # only under --strict: a banned word, a claim-shaped number that exists in
+      # no shard, and a LinkedIn field over its platform cap (LinkedIn truncates
+      # silently, so nobody notices without counting). Style findings stay
+      # advisory and never block.
+      - run: node scripts/check-copy.mjs --strict
       - run: npm run build
       - name: Check that committed outputs match what build would generate
         run: |

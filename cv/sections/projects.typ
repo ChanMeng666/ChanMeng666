@@ -72,7 +72,7 @@
       logo: "/public/brands/google-news-mcp-mark.svg",
       name: "Google News MCP Server",
       url: "https://github.com/ChanMeng666/server-google-news",
-      context-line: [Earliest-ecosystem MCP server — live Google News for AI assistants, shipped 35 days after Anthropic's Nov 2024 MCP launch.],
+      context-line: [One of the earliest MCP servers — live Google News for AI assistants, shipped 35 days after Anthropic's Nov 2024 MCP launch.],
       bullets: (
         [*Shipped before MCP had a registry*, so listed by hand across 15+ catalogs — a first-mover position that compounded into a PulseMCP "Top Pick", a Glama A-rating and *126 GitHub stars*.],
       ),
@@ -83,7 +83,7 @@
       url: "https://github.com/ChanMeng666/echook",
       context-line: [An AI-operated hooks plugin for *Claude Code, Cursor IDE and Codex CLI*, installed and driven entirely in natural language.],
       bullets: (
-        [Audio notifications grew into a *context-window status line* and telemetry — the production work behind shipping *every* Claude Code extension surface: CLAUDE.md, hooks, status line, plugins.],
+        [Audio notifications grew into a *context-window status line* and session telemetry — the production work behind shipping *four* Claude Code extension surfaces: hooks, skills, status line and plugin packaging.],
       ),
     ),
     (

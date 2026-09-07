@@ -134,6 +134,12 @@ agentic practice rather than just receive it.
   mentoring impact in the record. — `work[forward-with-her]`
 - Ran the AI-tools training session for a full engineering squad (Claude Code,
   Skills, spec-driven development) as the squad's knowledge lead. — `work[aotearoa-infinite-academy]`
+  **⚠ Use this one only in a letter that also explains the employer.** Aotearoa
+  Infinite Academy is the one work[] entry cited here that appears on *neither*
+  CV — there is no room for it in either two-page budget (see the note in
+  `cv/chan-meng-cv-ats.typ` under "Earlier experience"). A reader who follows
+  this claim to the resume finds nothing, so either name the dates and the
+  squad in the sentence itself, or pick another line from this theme.
 
 ## Theme F — cross-cultural and bilingual engineering
 
@@ -143,8 +149,10 @@ agentic practice rather than just receive it.
 - Bilingual (English / 简体中文) as a first-class architectural constraint across
   the FemTech Weekend platforms and the teaching platform, including
   locale-filtered search and translated tag taxonomies. — `work[femtech-weekend]`, `work[technest]`
-- Works across NZ, China, the United States and Canada simultaneously — five
-  concurrent engineering and CTO-level roles across four countries. — `10-career.yaml`
+- Ran five concurrent engineering and CTO-level roles across four countries
+  (NZ, China, the United States, Canada) through 2026, peaking May–Jul 2026.
+  Three are current, across NZ and China — keep the tense honest: only
+  ArchCanvas, She Sharp and FemTech Weekend have no end date. — `10-career.yaml`
 
 ## Theme G — open source and early-protocol work
 

@@ -46,7 +46,7 @@
     *Your AI feature survives contact with real users.* Compliance and money-handling steps guarded in code, not just in prompts.
   ]
   list.item[
-    *Your latency and your AI spend stay predictable.* Evaluation harnesses with documented failure modes.
+    *Your latency and your AI spend stay predictable.* Model-tier routing with a measured fallback, prompt caching, and evaluation harnesses with documented failure modes.
   ]
   list.item[
     *Your customers' data stays separate, and stays theirs.* Per-customer isolation (multi-tenant), durable error handling, observability.
@@ -75,12 +75,18 @@
   // production patterns live only in Production AI patterns; Hooks lives
   // only in Claude Code; LangGraph/LangChain/CopilotKit/Vercel AI SDK live
   // only in Agent SDKs & frameworks (removed from Stack to dedup).
-  // Each Claude Code pill is backed by production work — echook ships
-  // CLAUDE.md/hooks/status-line/plugins; a11y-loop packages a reusable
-  // Skill (plus a standalone CLI); subagents drive Chan's multi-agent
-  // demos. No built-in-feature filler ("Slash commands", etc.) — quality
-  // over quantity.
-  skill-category("Claude Code — every surface shipped", (
+  // Each Claude Code pill is backed by production work — echook ships four of
+  // them (hooks/, skills/, the status line, and the marketplace plugin itself;
+  // verified against the plugin tree 2026-09-07, NOT CLAUDE.md, which is that
+  // repo's own contributor file); a11y-loop packages a reusable Skill (plus a
+  // standalone CLI); CLAUDE.md and subagents come from Chan's other repos and
+  // multi-agent demos. The heading says "shipped surfaces", not "every
+  // surface": Claude Code has more extension points than this row claims
+  // (slash commands, MCP servers, output styles), and a superlative whose
+  // comparison set cannot be enumerated is exactly what EVIDENCE.md bans.
+  // No built-in-feature filler ("Slash commands", etc.) — quality over
+  // quantity.
+  skill-category("Claude Code — shipped surfaces", (
     "CLAUDE.md",
     "Skills",
     "Subagents",

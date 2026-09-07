@@ -73,7 +73,7 @@
   // that would split one fact across two files and make a bare `typst compile`
   // produce a different PDF. cv/build-ats-exports.mjs PARSES this line and
   // reuses it for the .docx core properties, so it stays one fact in one file.
-  date: datetime(year: 2026, month: 9, day: 4),
+  date: datetime(year: 2026, month: 9, day: 7),
   // NO keywords: on purpose. The 70-term list in chan-meng-cv.typ is plainly
   // legible in `pdfinfo` and reads as keyword stuffing to an AI screener —
   // the same class of anti-pattern cv/README.md already bans. Everything that
@@ -177,8 +177,8 @@
 AI and full-stack engineer who has shipped MCP servers, sub-agents, and agent
 skills to production, behind paying customers, private health data, and
 regulated work, not demos. Has run five concurrent engineering and CTO-level
-roles across four countries. Works AI-native by default, directing coding agents and
-building on the Claude Agent SDK.
+roles across four countries through 2026. Works AI-native by default, directing
+coding agents and building on the Claude Agent SDK.
 
 // ═══ SKILLS ══════════════════════════════════════════════════════════════════
 // The designed CV splits this across three custom-named sidebar sections
@@ -259,7 +259,7 @@ building on the Claude Agent SDK.
   arrangement: "Hybrid",
   bullets: (
     [Recruited by founder Dr Mahsa Mohaghegh to move a volunteer-run New Zealand women-in-STEM charity (96+ events since 2014) off rented software onto infrastructure it owns: sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions with a rule-based fallback: 1,381 commits, 251 merged pull requests and 94.5% of all lines added across 13.3 months.],
-    [Rewrote its recurring work as 11 agent skills, 25,643 lines of written-down procedure, version-controlled and type-checked in CI, so non-engineers now run work that once needed an engineer.],
+    [Rewrote its recurring work as 11 agent skills, version-controlled, reviewed by pull request and type-checked in CI, so non-engineers now run work that once needed an engineer.],
   ),
 )
 
@@ -271,7 +271,7 @@ building on the Claude Agent SDK.
   location: "Chengdu, Sichuan, China",
   arrangement: "Remote",
   bullets: (
-    [Sole engineer behind China's first organisation built around women's health technology, across two platform generations (Next.js, then Docusaurus), and ran the digital infrastructure for the 2026 Shanghai Summit: four days, 20 speakers, headlined by Ida Tin, who coined the term FemTech.],
+    [Sole engineer across two platform generations (Next.js, then Docusaurus) for an organisation self-described as China's first in women's health technology, and ran the digital infrastructure for the 2026 Shanghai Summit: four days, 20 speakers, headlined by Ida Tin, who coined the term FemTech.],
   ),
 )
 
@@ -283,7 +283,7 @@ building on the Claude Agent SDK.
   location: "Wilmington, Delaware, United States",
   arrangement: "Remote",
   bullets: (
-    [Owned the Intelligence Layer of an app-activation platform: a Go orchestrator running a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE): sub-millisecond p50 restore, an 84.6% warm-pool hit rate and zero errors at 100 concurrent WebSocket clients; migrated DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contracts, 471 of 488 commits solo.],
+    [Owned the Intelligence Layer of an app-activation platform: a Go orchestrator running a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE) — sub-millisecond p50 restore, an 84.6% warm-pool hit rate, zero errors at 100 concurrent WebSocket clients; migrated DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contracts, 471 of 488 commits solo.],
   ),
 )
 
@@ -319,7 +319,7 @@ building on the Claude Agent SDK.
   location: "Tulsa, Oklahoma, United States",
   arrangement: "Remote",
   bullets: (
-    [Joined as Senior AI/ML Infrastructure Engineer and was promoted to CTO; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS and integrated IBM watsonx behind a Gemini fallback, the work that earned Sanicle its IBM Silver Partner certification.],
+    [Joined as Senior AI/ML Infrastructure Engineer and was promoted to CTO; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS and integrated IBM watsonx behind a Gemini fallback, the integration behind Sanicle's IBM Silver Partner certification.],
   ),
 )
 
@@ -328,6 +328,13 @@ building on the Claude Agent SDK.
 // prose is gone. This is where the 4-page draft lost two pages.
 #block(above: gap-entry, below: 3pt, { strong("Earlier experience") })
 
+// Aotearoa Infinite Academy (Crimson Academies, Oct-Nov 2025) is deliberately
+// ABSENT. It was added here in Sep 2026 and taken straight back out: the entry
+// costs ~3 lines and this document has under one line of slack, so it pushed the
+// PDF to 3 pages. Chan's call (2026-09-07) was to keep the AWARDS "Community"
+// line instead. EVIDENCE.md's Theme E was rewritten in the same pass so no cover
+// letter cites an employer this resume does not list. Re-adding it means finding
+// ~4 lines somewhere first, then EXPECT.roles 10 -> 11 and rolesCompact 3 -> 4.
 #role-line(
   title: "Technology & Professional Development Mentor",
   org: "Forward with Her",
@@ -393,7 +400,7 @@ building on the Claude Agent SDK.
   url: "github.com/ChanMeng666/server-google-news",
   target: "https://github.com/ChanMeng666/server-google-news",
 )[
-  An earliest-ecosystem Model Context Protocol server, shipped 35 days after
+  One of the earliest Model Context Protocol servers, shipped 35 days after
   Anthropic launched MCP and before a registry existed: a PulseMCP Top Pick, a
   Glama A-rating, and 126 GitHub stars.
 ]
@@ -405,8 +412,8 @@ building on the Claude Agent SDK.
 )[
   An AI-operated hooks plugin for Claude Code, Cursor IDE and Codex CLI,
   installed and driven entirely in natural language, grown from audio
-  notifications into a context-window status line and session telemetry: the
-  production work behind shipping every Claude Code extension surface.
+  notifications into session telemetry and four shipped Claude Code extension
+  surfaces: hooks, skills, a context-window status line and plugin packaging.
 ]
 
 #project-entry(

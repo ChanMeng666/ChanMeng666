@@ -51,7 +51,7 @@
         size: size-role,
         fill: primary,       // ink — role line is key copy, must stay readable
         weight: "medium",
-      )[AI Agent Architect · Full-stack Engineer · AI-Tooling Expert]
+      )[AI Agent Architect · Full-stack Engineer · AI Tooling Engineer]
       linebreak()
       v(1pt)
       text(
@@ -70,7 +70,13 @@
       h(space-pill-row)
       stat-pill-multi[#snum[480+] GitHub stars · #snum[218] followers]
       h(space-pill-row)
-      stat-pill-multi[CopilotKit contributor · #snum[2] merged PRs · #snum[36.1k] stars]
+      // The star count belongs to CopilotKit, not to Chan — EVIDENCE.md's
+      // "CopilotKit's 36.1k stars are context, not achievements". This pill sits
+      // in a row of HER numbers (followers, subscribers, own-repo stars), so the
+      // attribution has to be carried by the wording: the parenthetical marks
+      // 36.1k as a property of the project. Do not re-flatten it to
+      // "CopilotKit contributor · 36.1k stars".
+      stat-pill-multi[#snum[2] merged PRs into CopilotKit (#snum[36.1k]-star project)]
     },
 
     // ── Contact items (stacked, LEFT-aligned within the right slot) ────────

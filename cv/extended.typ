@@ -229,7 +229,7 @@
   block(above: 0pt, below: 30pt, {
     set par(leading: leading-lead-x, justify: false)
     text(size: size-body-x, fill: ink)[
-      These are the products I keep coming back to — the ones that show what I care about when I build: precise artifacts over pretty pictures, tools you operate in plain language, and systems small enough to hold in your head. Each one below I designed and shipped end to end.
+      These are the products I keep coming back to — the ones that show what I care about when I build: precise artifacts over pretty pictures, tools you operate in plain language, and systems small enough to hold in your head.
     ]
   })
   product-tile("/public/brands/archcanvas-logo.svg", [ArchCanvas],

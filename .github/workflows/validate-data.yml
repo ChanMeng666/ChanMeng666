@@ -45,12 +45,13 @@ jobs:
       - run: npm run build
       - name: Check that committed outputs match what build would generate
         run: |
-          if git diff --quiet README.md llms.txt llms-full.txt dist/profile.json; then
+          if git diff --quiet README.md llms.txt llms-full.txt dist/profile.json public/cv-llms.txt public/cv.jsonld; then
             echo "✓ Committed outputs are in sync with data/."
           else
             echo "✗ Committed README.md / llms.txt / llms-full.txt / dist/profile.json"
-            echo "  are stale relative to data/profile/*.yaml. Run 'npm run build'"
-            echo "  locally and commit the regenerated files, or rely on the"
-            echo "  build-readme.yml workflow to do it after merge."
-            git diff --stat README.md llms.txt llms-full.txt dist/profile.json
+            echo "  / public/cv-llms.txt / public/cv.jsonld are stale relative to"
+            echo "  data/profile/*.yaml. Run 'npm run build' locally and commit the"
+            echo "  regenerated files, or rely on the build-readme.yml workflow to"
+            echo "  do it after merge."
+            git diff --stat README.md llms.txt llms-full.txt dist/profile.json public/cv-llms.txt public/cv.jsonld
           fi

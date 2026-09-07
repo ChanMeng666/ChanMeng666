@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 480+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-09-06
+**Last updated:** 2026-09-07
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -1457,7 +1457,7 @@ of a 36.1k-star project.
 - **Location:** USA (remote)
 - **URL:** https://www.linkedin.com/company/sanicleofficial/
 
-**Impact:** Took Sanicle from a no-code prototype to a production B2B FemTech SaaS — and personally integrated IBM watsonx AI into the product, which earned Sanicle their IBM Silver Partner certification + PartnerPlus directory listing. ~98% solo on 350+ commits.
+**Impact:** Took Sanicle from a no-code prototype to a production B2B FemTech SaaS — and personally integrated IBM watsonx AI into the product, the integration behind Sanicle's IBM Silver Partner certification + PartnerPlus directory listing. ~98% solo on 350+ commits.
 
 **Company context:** Sanicle (sanicle.cloud) is a US-based FemTech B2B / B2G SaaS
 platform tackling menstrual and menopause workplace wellness.
@@ -2398,7 +2398,7 @@ Right after tailoring, a deterministic **faithfulness gate** re-checks for fabri
 
 **My role:** Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.
 ### echook — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
-[tier=primary · recency=active · updated=2026-08-26]
+[tier=primary · recency=active · updated=2026-09-07]
 - **Repository:** https://github.com/ChanMeng666/echook
 - **Tech stack:** Python 3.6+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13), Remotion 4 (promo video), React 19 (promo video), Suno (background music generation)
 
@@ -2407,12 +2407,12 @@ IDE, and Codex CLI. The core idea: you never have to learn the
 tool. You talk to your AI agent in plain English — "install
 audio-hooks," "switch to chimes," "snooze for 30 minutes," "send
 alerts to my Slack" — and the agent runs the commands, reads the
-results, and reports back. It ships 37 hook events (3 on by
+results, and reports back. It ships 39 hook events (3 on by
 default), two audio themes, warnings before you hit your 5-hour
 and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,
 text-to-speech that reads the agent's actual reply aloud, and a
 29-segment status bar that tracks how much of the context window
-is left. Now on v6.3.4 with 248 automated tests running on
+is left. Now on v6.5.1 with 399 automated tests running on
 Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
 under MIT; runs on the Python standard library with no extra
 dependencies. A sister repo, echook-promo-video, ships an
@@ -2466,8 +2466,8 @@ telemetry. The value is build-in-public credibility: echook is
 the demonstration piece for Chan's AI-first product philosophy,
 and it shows up in Engram-cohort interviews, recruiter
 conversations, and the README of downstream client projects. A
-sustained release cadence (now v6.3.4), a three-OS
-continuous-integration matrix, and a 248-case test suite
+sustained release cadence (now v6.5.1), a three-OS
+continuous-integration matrix, and a 399-case test suite
 guarding the cross-editor contract make it visibly production
 engineering, not a weekend script. The Remotion promo-video
 sister repo extends the same proof — it shows Chan can ship not
@@ -2475,22 +2475,25 @@ only the product but the marketing film for it, end to end and
 entirely in code, with no video-production tooling.
 
 **Technical approach:** AI-first design at every layer. The `audio-hooks` command-line
-tool exposes a stable, JSON-only interface with roughly 40
+tool exposes a stable, JSON-only interface with 40
 subcommands, no prompts and no spinners, versioned NDJSON event
 logging (schema `audio-hooks.v1`, 5 MB rotation × 3 files), and
 a fixed set of error codes (`AUDIO_FILE_MISSING`,
 `WEBHOOK_TIMEOUT`, `DUAL_INSTALL_DETECTED`, and so on) where
 each error carries a `suggested_command` field so an agent can
 recover on its own without scraping text. Hook coverage spans
-37 canonical events — session start and end, tool execution,
+39 canonical events — session start and end, tool execution,
 permission requests, file changes, MCP elicitation, and
 usage-limit warnings (5-hour and 7-day windows with configurable
 80%/95% thresholds, each `(window, threshold, resets_at)` firing
-exactly once via debounce markers). Two audio themes ship: an
-ElevenLabs "Jessica" voice or modern UI chimes; rebuilds are
-declarative via `config/audio_manifest.json` plus the ElevenLabs
-generator. Webhooks fan out to Slack, Discord, Teams, and ntfy
-through a fire-and-forget subprocess with a versioned
+exactly once via debounce markers), and beneath those events sit
+44 matcher variants — a variant is a separately switchable
+matcher under a canonical event (`session_start_resume`,
+`stop_failure_rate_limit`), not an event of its own. Two audio
+themes ship: an ElevenLabs "Jessica" voice or modern UI chimes;
+rebuilds are declarative via `config/audio_manifest.json` plus
+the ElevenLabs generator. Webhooks fan out to Slack, Discord,
+Teams, and ntfy through a fire-and-forget subprocess with a versioned
 `audio-hooks.webhook.v1` payload, so they never block the hook.
 The status bar offers 29 configurable segments, including
 color-coded context-window and usage bars with absolute token
@@ -2513,12 +2516,12 @@ one — echook never round-trips a user's TOML, because that would
 destroy comments and formatting. Canonical events with no Codex
 equivalent no-op cleanly under the Codex invoker with a debug
 log line, never blocking the session. The whole contract is
-validated by 248 test cases across Ubuntu, Windows, and macOS on
+validated by 399 test cases across Ubuntu, Windows, and macOS on
 Python 3.9, 3.12, and 3.13 in GitHub Actions.
 
-**Outcomes:** 84 GitHub stars (measured 2026-08-26 via the GitHub API by
-`npm run refresh-metrics`), 151 commits across the 5.x → 6.x line (now v6.3.4), and 248
-automated test cases. The defining release sequence: v5.0 (Jan
+**Outcomes:** 86 GitHub stars (measured 2026-09-07 via the GitHub API by
+`npm run refresh-metrics`), 156 commits across the 5.x → 6.x line (now v6.5.1), and 399
+automated test cases. The defining release sequence: v5.0 (April
 2026) shipped the AI-first redesign — JSON command interface,
 `/audio-hooks` skill, NDJSON logging, plugin-native install;
 v5.2.0 (May 2026) added native Codex CLI support with +33

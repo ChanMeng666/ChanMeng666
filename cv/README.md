@@ -123,7 +123,14 @@ scripts/lib/
 
 ## Source of truth
 
-Where possible, content is sourced from [`../data/profile/`](../data/profile/) — the same single-source-of-truth that builds the GitHub profile README. The Typst sections currently hardcode hero project narratives (so they can include architect-grade vocabulary like "PostToolUse hook" and "hub-and-spoke coordinator" that doesn't belong in profile.yaml), but the JSON-LD and `cv-llms.txt` generators pull directly from YAML.
+Where possible, content is sourced from [`../data/profile/`](../data/profile/) — the same single-source-of-truth that builds the GitHub profile README. The Typst sections currently hardcode hero project narratives (so they can include architect-grade vocabulary like "PostToolUse hook" and "hub-and-spoke coordinator" that doesn't belong in the shards).
+
+`build-jsonld.mjs` is fully YAML-derived. `build-llms-txt.mjs` is split, and the split is deliberate:
+
+- **Generated from the shards** — everything factual: identity and summary, positioning focus areas (`domains[]`), reach metrics, Selected work (`projects[]` on `tier: flagship`, plus `echook` and `google-news-mcp` named in the generator's `SELECTED_EXTRA_PROJECT_IDS`), Experience (`work[]` on `tier: flagship|primary`), Education, Recognition (`awards[]`), the Anthropic credential-ID pairs (`certificates[]`), press coverage (`publications[]`), the reference pull quote (`references[]` via `meta.x_brand.readmePullQuoteId`), and availability/booking (`meta.x_brand.engagementAvailability`).
+- **Hardcoded, ~30 lines, each marked `HARDCODED:` with its reason** — the Claude Code 5-layer stack, the architect-grade patterns, the anti-patterns rejected, the CV-artifact pointers, the developer-leverage tooling framing, and the two positioning claims about working method. These describe how this repo and Chan's agent work are engineered rather than what she has shipped; they have no shard home by design, and they are the only thing making `cv-llms.txt` non-redundant with the root `llms.txt`.
+
+Both files are emitted by `npm run build:cv-geo` (chained into `npm run build`, and what `build.ps1` calls), and both are gated: `validate-data.yml` fails a PR whose committed `public/cv-llms.txt` / `public/cv.jsonld` are stale relative to the shards. Never hand-edit either output.
 
 ## Word blacklist (strip before compile)
 

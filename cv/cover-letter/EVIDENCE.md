@@ -163,7 +163,7 @@ agentic practice rather than just receive it.
   founder asked his own Claude agent to surface architects and this open-source
   portfolio was the match — publicly confirmed by the founder. — `work[engram]`
 - echook: one canonical hook-event source shipped to three harnesses (Claude
-  Code, Cursor, Codex) with CI-enforced no-drift, 248 unit tests on a 3-OS ×
+  Code, Cursor, Codex) with CI-enforced no-drift, 399 unit tests on a 3-OS ×
   3-Python matrix, and zero third-party runtime dependencies. — `projects[echook]`
 
 ---

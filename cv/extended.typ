@@ -255,7 +255,7 @@
   v(1fr)
   product-tile("/public/brands/echook-logo.svg", [echook],
     [An audio-and-status plugin for Claude Code, Cursor, and Codex — you never learn it; you just tell your AI agent "install echook" or "snooze for 30 minutes."],
-    [Pure Python standard library, 37 hook events and a context-window status bar, tested on Windows, macOS, and Linux. Open source under MIT.],
+    [Pure Python standard library, 39 hook events and a context-window status bar, tested on Windows, macOS, and Linux. Open source under MIT.],
     "https://github.com/ChanMeng666/echook", "github.com/ChanMeng666/echook")
   v(1fr)
   product-tile("/public/brands/server-google-news.svg", [Google News MCP Server],

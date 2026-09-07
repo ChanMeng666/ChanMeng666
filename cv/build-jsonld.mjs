@@ -1,18 +1,31 @@
 #!/usr/bin/env node
 // Build schema.org Person + WorkExperience JSON-LD sibling for the CV.
-// Usage: node build-jsonld.mjs ../data/profile > ../public/cv.jsonld
+// Usage: node build-jsonld.mjs data/profile --out public/cv.jsonld
+//        node build-jsonld.mjs data/profile > public/cv.jsonld   (stdout fallback)
 //        (accepts either the data/profile shard directory or a single .yaml file)
 //
 // Recruiter-LLMs (LinkedIn AI search, Greenhouse AI ranking, Jobright)
 // hit the canonical /cv URL, follow the alternate link to cv.jsonld, and
 // parse this file. JSON-LD bypasses LLM inference entirely.
 
-import { readFileSync, statSync } from "node:fs";
+import { readFileSync, statSync, writeFileSync } from "node:fs";
 import yaml from "js-yaml";
 
-const argv = process.argv.slice(2);
-if (argv.length < 1) {
-  console.error("usage: build-jsonld.mjs <data/profile dir | profile.yaml>");
+const args = process.argv.slice(2);
+let outPath = null;
+const argv = [];
+for (let i = 0; i < args.length; i += 1) {
+  if (args[i] === "--out") {
+    outPath = args[i + 1];
+    i += 1;
+    continue;
+  }
+  argv.push(args[i]);
+}
+if (argv.length < 1 || (outPath !== null && !outPath)) {
+  console.error(
+    "usage: build-jsonld.mjs <data/profile dir | profile.yaml> [--out <path>]",
+  );
   process.exit(2);
 }
 
@@ -201,4 +214,10 @@ const doc = {
   alumniOf: education,
 };
 
-process.stdout.write(JSON.stringify(doc, null, 2) + "\n");
+// Node-side write, never a shell redirect: PowerShell's `| Out-File` rejoins
+// stdout with CRLF on Windows (fighting .gitattributes `* text=auto eol=lf`)
+// and still CREATES the destination when the generator dies, which is how
+// public/cv.jsonld was once truncated to zero bytes by a "successful" build.
+const text = JSON.stringify(doc, null, 2) + "\n";
+if (outPath) writeFileSync(outPath, text, "utf8");
+else process.stdout.write(text);

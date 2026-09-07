@@ -116,9 +116,9 @@ Stack: Next.js, React 19, Vercel AI SDK + OpenAI (gpt-5.5 + GPT Image 2; GPT-4o 
 **Dates:** Nov 2025 – Present
 
 ```
-echook adds audio cues to AI coding assistants so you stop staring at the terminal waiting for them to finish. Thirty-seven hook events — task started, permission needed, build failed, agent stopped, rate-limit hit, context nearing 100% — each play a sound and optionally fire Slack / Discord / Teams / ntfy webhooks. Same product on Claude Code, Cursor IDE, and Codex CLI. Install via natural language ("install echook with the Focus Flow theme").
+echook adds audio cues to AI coding assistants so you stop staring at the terminal waiting for them to finish. Thirty-nine hook events — task started, permission needed, build failed, agent stopped, rate-limit hit, context nearing 100% — each play a sound and optionally fire Slack / Discord / Teams / ntfy webhooks. Same product on Claude Code, Cursor IDE, and Codex CLI. Install via natural language ("install echook with the Focus Flow theme").
 
-• 42 releases, 248 tests on triple-platform CI (Ubuntu / Windows / macOS × Python 3.9 / 3.12 / 3.13). 37 hook events, 2 themes.
+• 55 releases, 399 tests on triple-platform CI (Ubuntu / Windows / macOS × Python 3.9 / 3.12 / 3.13). 39 hook events plus 44 separately switchable matcher variants, 2 themes.
 • Context-window status line with live quota bars — see remaining budget without alt-tabbing.
 • Explicitly preserved as the author's IP in the Engram Architect Cohort Engagement Letter (9 May 2026); Engram is in Anthropic's Partner Network.
 • Sister repo echook-promo-video: 88.7-second product film built in React + Remotion + AI-generated audio — zero Premiere, zero voice actors.

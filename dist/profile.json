@@ -507,7 +507,7 @@
         "Solo CTO"
       ],
       "narrative": {
-        "impactHeadline": "Took Sanicle from a no-code prototype to a production B2B FemTech SaaS — and personally integrated IBM watsonx AI into the product, which earned Sanicle their IBM Silver Partner certification + PartnerPlus directory listing. ~98% solo on 350+ commits.",
+        "impactHeadline": "Took Sanicle from a no-code prototype to a production B2B FemTech SaaS — and personally integrated IBM watsonx AI into the product, the integration behind Sanicle's IBM Silver Partner certification + PartnerPlus directory listing. ~98% solo on 350+ commits.",
         "companyContext": "Sanicle (sanicle.cloud) is a US-based FemTech B2B / B2G SaaS\nplatform tackling menstrual and menopause workplace wellness.\nSelf-description from the company README: \"an innovative FemTech\nB2B-B2G SaaS platform that leverages AI-powered technology to\nrevolutionize menstrual and menopause health in the workplace.\nSupports comprehensive health tracking, predictive analytics,\nand workplace integration with enterprise-grade security.\nPowered by IBM Cloud watsonx AI for intelligent health insights\nand personalized support.\" Founding leadership Chan worked with\ndirectly: Chief Executive Officer Paige Afanu (Omopeju Afanu)\nand Chief Period Officer Chaste Christopher Inegbedion (both\nof whom managed Chan directly), Chief Experience Officer\nGabrielle J. Hurst (peer on the same team; now Remote Pilot\n& Product Marketing Manager at Houston Robotics), and Chief\nAI Officer Daryll Hall — three of whom contributed LinkedIn\ntestimonials referenced in this profile. The company was\nfeatured in THISDAYLIVE's May 2025 piece on FemTech founders\nredefining women's workplace health.\n",
         "mission": "Scale menstrual and menopause wellness benefits to working\nwomen — through employer-provided AI health consultations,\ncycle and symptom tracking, automated leave-request workflows\nwith health-context awareness, and HR-side workforce health\nanalytics — while keeping the experience privacy-first and\nenterprise-deployable. The strategic wedge into enterprises\nruns through the IBM partnership: Sanicle is listed in the\nofficial IBM PartnerPlus Solution Directory, and the watsonx\nintegration is a major credibility surface for B2B sales.\n",
         "myMandate": "Hired initially as **Senior AI/ML Infrastructure Engineer** in\nFebruary 2025 (initial sanicle-ai commit on Feb 26 2025);\npromoted to **CTO** in March 2025. Operating mandate covered\nthe entire technology surface of the company: replace the\nlegacy Bubble no-code site with a real full-stack system,\nship a multi-tenant women's-health SaaS with role-separated\nemployee and HR dashboards, integrate IBM watsonx for AI\nhealth consultations and leave-request workflows, build the\nmarketing site, prototype the mobile app, and produce the\nexecutive-deck demos used in IBM partner conversations. The\nrole through to Feb 2026 spanned active build (Feb–Jun 2025,\n14 weeks of intense solo development) and ongoing\nmaintenance, IBM partnership work, and product evolution\nthrough close-out.\n",
@@ -1820,7 +1820,7 @@
         },
         {
           "label": "Glama quality",
-          "value": "A (license) · 122 stars"
+          "value": "A (license) · 122 stars by Glama's own count"
         },
         {
           "label": "Skywork review",
@@ -2088,7 +2088,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-08-26",
+      "lastUpdated": "2026-09-07",
       "name": "echook",
       "priority": 6,
       "category": "ai-apps",
@@ -2103,7 +2103,7 @@
         },
         {
           "label": "Claude Code Marketplace listing",
-          "url": "https://github.com/ChanMeng666/echook#install-in-60-seconds"
+          "url": "https://github.com/ChanMeng666/echook#get-started"
         }
       ],
       "techStack": [
@@ -2126,19 +2126,19 @@
       "metrics": [
         {
           "label": "Commits (solo)",
-          "value": "151 (2025-11-01 → 2026-07-16, ~8 months); effectively single-author"
+          "value": "156 (2025-11-01 → 2026-09-01, ~10 months); effectively single-author"
         },
         {
           "label": "GitHub stars",
-          "value": "84 (measured 2026-08-26; renamed from claude-code-audio-hooks)"
+          "value": "86 (measured 2026-09-07; renamed from claude-code-audio-hooks)"
         },
         {
           "label": "Version",
-          "value": "v6.3.4 (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)"
+          "value": "v6.5.1 (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)"
         },
         {
           "label": "Hook events",
-          "value": "37 canonical events (3 on by default), mapped per harness: Claude Code 37 · Cursor 18 native (8 via auto-bridge) · Codex 10"
+          "value": "39 canonical events (3 on by default), plus 44 matcher variants — separately switchable matchers beneath a canonical event (`session_start_resume`, `stop_failure_rate_limit`), not extra events; mapped per harness: Claude Code 30 of 39 canonical + all 44 variants · Cursor 18 native (8 via auto-bridge) · Codex 11"
         },
         {
           "label": "Harnesses",
@@ -2150,7 +2150,7 @@
         },
         {
           "label": "CLI",
-          "value": "~40 JSON-in/JSON-out subcommands; a `manifest` command emits the entire surface (subcommands, hooks, config keys, error codes) as machine-readable JSON so an agent can self-orient"
+          "value": "40 JSON-in/JSON-out subcommands; a `manifest` command emits the entire surface (subcommands, hooks, config keys, error codes) as machine-readable JSON so an agent can self-orient"
         },
         {
           "label": "Status line",
@@ -2162,18 +2162,18 @@
         },
         {
           "label": "Tests / CI",
-          "value": "248 unittest cases on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate"
+          "value": "399 unittest cases on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate"
         }
       ],
-      "publicSummary": "An audio-and-status notification system for Claude Code, Cursor\nIDE, and Codex CLI. The core idea: you never have to learn the\ntool. You talk to your AI agent in plain English — \"install\naudio-hooks,\" \"switch to chimes,\" \"snooze for 30 minutes,\" \"send\nalerts to my Slack\" — and the agent runs the commands, reads the\nresults, and reports back. It ships 37 hook events (3 on by\ndefault), two audio themes, warnings before you hit your 5-hour\nand 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,\ntext-to-speech that reads the agent's actual reply aloud, and a\n29-segment status bar that tracks how much of the context window\nis left. Now on v6.3.4 with 248 automated tests running on\nUbuntu, Windows, and macOS across Python 3.9–3.13. Open source\nunder MIT; runs on the Python standard library with no extra\ndependencies. A sister repo, echook-promo-video, ships an\n88-second product film built entirely in code.\n",
+      "publicSummary": "An audio-and-status notification system for Claude Code, Cursor\nIDE, and Codex CLI. The core idea: you never have to learn the\ntool. You talk to your AI agent in plain English — \"install\naudio-hooks,\" \"switch to chimes,\" \"snooze for 30 minutes,\" \"send\nalerts to my Slack\" — and the agent runs the commands, reads the\nresults, and reports back. It ships 39 hook events (3 on by\ndefault), two audio themes, warnings before you hit your 5-hour\nand 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,\ntext-to-speech that reads the agent's actual reply aloud, and a\n29-segment status bar that tracks how much of the context window\nis left. Now on v6.5.1 with 399 automated tests running on\nUbuntu, Windows, and macOS across Python 3.9–3.13. Open source\nunder MIT; runs on the Python standard library with no extra\ndependencies. A sister repo, echook-promo-video, ships an\n88-second product film built entirely in code.\n",
       "narrative": {
         "impactHeadline": "A notification system for AI coding assistants — Claude Code, Cursor, and Codex — that you install and set up just by talking to the AI in plain English. It plays sounds, reads the agent's reply aloud, warns you before you hit usage limits, and shows a live status bar.",
         "problem": "Developers running long AI coding sessions on Claude Code,\nCursor IDE, and Codex CLI have no easy way to *hear* what their\nagent is doing. They alt-tab to check progress, miss\nusage-limit warnings, and only notice a stuck session by\nlooking at it. Add-on notification tools exist, but they all\nshare the same flaw: the human sits downstream of the command\nline. You have to read docs, memorize flags, copy commands, and\nre-learn the same surface every time it changes. That breaks\ndown the moment a serious user rotates between three editors,\neach with its own configuration language and its own muscle\nmemory. The real mismatch isn't audio — it's the working\ncontract between humans, AI agents, and developer tooling.\n",
         "audience": "Software engineers operating Claude Code, Cursor IDE, or Codex\nCLI at the \"AI-first\" level — people comfortable telling their\ncoding agent to install, theme, snooze, webhook, or reconfigure\nthings in plain English rather than memorizing subcommands.\nAlso: power users debugging long-running workflows where a\nsound is faster than watching a screen; teams rolling out\nshared notification defaults across several developers; and\nresearchers who want a working reference implementation of an\nAI-first plugin contract.\n",
         "productLogic": "echook flips the usual relationship: the human is upstream, and\nthe AI agent learns the tool on the human's behalf. One install\nprompt — *\"install the audio-hooks plugin from\ngithub.com/ChanMeng666/echook\"* — starts the whole flow. The\nagent runs `claude plugin marketplace add` and `claude plugin\ninstall`, the user types `/reload-plugins` exactly once (the\nonly manual step in the tool's entire lifetime, because Claude\nCode's reload has no command-line equivalent), and from then on\nevery interaction is a sentence. *\"Switch to chimes.\" \"Snooze\nfor 8 hours.\" \"Send alerts to my Slack at this webhook and test\nit.\" \"Turn everything off except stop and permission\nrequests.\"* The `/audio-hooks` skill reads the intent, runs the\nright `audio-hooks` command, reads its JSON output, and tells\nyou what happened. You memorize nothing. Cross-editor parity is\npart of the same contract: every prompt works the same way on\nCursor's agent and on Codex CLI, because all three drive the\nsame Python program against the same JSON interface.\n",
-        "businessLogic": "Open source under MIT — no paywall, no premium tier, no\ntelemetry. The value is build-in-public credibility: echook is\nthe demonstration piece for Chan's AI-first product philosophy,\nand it shows up in Engram-cohort interviews, recruiter\nconversations, and the README of downstream client projects. A\nsustained release cadence (now v6.3.4), a three-OS\ncontinuous-integration matrix, and a 248-case test suite\nguarding the cross-editor contract make it visibly production\nengineering, not a weekend script. The Remotion promo-video\nsister repo extends the same proof — it shows Chan can ship not\nonly the product but the marketing film for it, end to end and\nentirely in code, with no video-production tooling.\n",
-        "technicalApproach": "AI-first design at every layer. The `audio-hooks` command-line\ntool exposes a stable, JSON-only interface with roughly 40\nsubcommands, no prompts and no spinners, versioned NDJSON event\nlogging (schema `audio-hooks.v1`, 5 MB rotation × 3 files), and\na fixed set of error codes (`AUDIO_FILE_MISSING`,\n`WEBHOOK_TIMEOUT`, `DUAL_INSTALL_DETECTED`, and so on) where\neach error carries a `suggested_command` field so an agent can\nrecover on its own without scraping text. Hook coverage spans\n37 canonical events — session start and end, tool execution,\npermission requests, file changes, MCP elicitation, and\nusage-limit warnings (5-hour and 7-day windows with configurable\n80%/95% thresholds, each `(window, threshold, resets_at)` firing\nexactly once via debounce markers). Two audio themes ship: an\nElevenLabs \"Jessica\" voice or modern UI chimes; rebuilds are\ndeclarative via `config/audio_manifest.json` plus the ElevenLabs\ngenerator. Webhooks fan out to Slack, Discord, Teams, and ntfy\nthrough a fire-and-forget subprocess with a versioned\n`audio-hooks.webhook.v1` payload, so they never block the hook.\nThe status bar offers 29 configurable segments, including\ncolor-coded context-window and usage bars with absolute token\ncounts (e.g. `Context: 83% (166K/200K)`) so users see the\n\"agent dumb zone\" before they reach it. The deepest piece is the\ncross-editor architecture: canonical sources live in `/hooks/`,\n`/bin/`, `/audio/`, `/cursor-hooks/`, and `/codex-hooks/`, and\n`build-plugin.sh` syncs them into the Claude Code plugin layout\n— one source of truth, three editor targets — with continuous\nintegration enforcing no-drift via `build-plugin.sh --check`.\nCursor rides its 3.2.16+ auto-bridge so most users get support\nfor free; Cursor-only installs use a native\n`~/.cursor/hooks.json` registration guarded by a\n`DUPLICATE_BRIDGE` error that aborts if both paths would run at\nonce. The Codex path handles OpenAI's required\n`[features]\\ncodex_hooks = true` flag by writing a fresh\n`~/.codex/config.toml` when none exists and emitting\nmachine-readable `next_steps` for the agent to edit an existing\none — echook never round-trips a user's TOML, because that would\ndestroy comments and formatting. Canonical events with no Codex\nequivalent no-op cleanly under the Codex invoker with a debug\nlog line, never blocking the session. The whole contract is\nvalidated by 248 test cases across Ubuntu, Windows, and macOS on\nPython 3.9, 3.12, and 3.13 in GitHub Actions.\n",
-        "outcomes": "84 GitHub stars (measured 2026-08-26 via the GitHub API by\n`npm run refresh-metrics`), 151 commits across the 5.x → 6.x line (now v6.3.4), and 248\nautomated test cases. The defining release sequence: v5.0 (Jan\n2026) shipped the AI-first redesign — JSON command interface,\n`/audio-hooks` skill, NDJSON logging, plugin-native install;\nv5.2.0 (May 2026) added native Codex CLI support with +33\ncontract tests; v5.2.1 (May 2026) executed the echook rebrand —\na \"door-only\" GitHub rename from `claude-code-audio-hooks` to\n`echook` (leading with \"Claude Code\" had become misleading once\nnative Cursor and Codex paths shipped) that preserved every\nexisting install via GitHub's repo redirect and kept the\n`audio-hooks` command name, the `chanmeng-audio-hooks`\nmarketplace name, and all state directories unchanged. The\nEngram Architect Cohort Engagement Letter (May 9, 2026)\nexplicitly names *claude-code-audio-hooks* among Chan's\npreserved IP — formal recognition by a commercial\nagentic-infrastructure firm that this is portfolio-grade\nengineering, not a hobby script. The sister repo\nechook-promo-video then closed the loop on the thesis: an\n88-second 1080p product film composed entirely in code (React +\nRemotion, with Suno-generated background music and ElevenLabs\nvoice and effects — no video-editing suites and no human voice\nactors), fully reproducible from two commands.\n",
+        "businessLogic": "Open source under MIT — no paywall, no premium tier, no\ntelemetry. The value is build-in-public credibility: echook is\nthe demonstration piece for Chan's AI-first product philosophy,\nand it shows up in Engram-cohort interviews, recruiter\nconversations, and the README of downstream client projects. A\nsustained release cadence (now v6.5.1), a three-OS\ncontinuous-integration matrix, and a 399-case test suite\nguarding the cross-editor contract make it visibly production\nengineering, not a weekend script. The Remotion promo-video\nsister repo extends the same proof — it shows Chan can ship not\nonly the product but the marketing film for it, end to end and\nentirely in code, with no video-production tooling.\n",
+        "technicalApproach": "AI-first design at every layer. The `audio-hooks` command-line\ntool exposes a stable, JSON-only interface with 40\nsubcommands, no prompts and no spinners, versioned NDJSON event\nlogging (schema `audio-hooks.v1`, 5 MB rotation × 3 files), and\na fixed set of error codes (`AUDIO_FILE_MISSING`,\n`WEBHOOK_TIMEOUT`, `DUAL_INSTALL_DETECTED`, and so on) where\neach error carries a `suggested_command` field so an agent can\nrecover on its own without scraping text. Hook coverage spans\n39 canonical events — session start and end, tool execution,\npermission requests, file changes, MCP elicitation, and\nusage-limit warnings (5-hour and 7-day windows with configurable\n80%/95% thresholds, each `(window, threshold, resets_at)` firing\nexactly once via debounce markers), and beneath those events sit\n44 matcher variants — a variant is a separately switchable\nmatcher under a canonical event (`session_start_resume`,\n`stop_failure_rate_limit`), not an event of its own. Two audio\nthemes ship: an ElevenLabs \"Jessica\" voice or modern UI chimes;\nrebuilds are declarative via `config/audio_manifest.json` plus\nthe ElevenLabs generator. Webhooks fan out to Slack, Discord,\nTeams, and ntfy through a fire-and-forget subprocess with a versioned\n`audio-hooks.webhook.v1` payload, so they never block the hook.\nThe status bar offers 29 configurable segments, including\ncolor-coded context-window and usage bars with absolute token\ncounts (e.g. `Context: 83% (166K/200K)`) so users see the\n\"agent dumb zone\" before they reach it. The deepest piece is the\ncross-editor architecture: canonical sources live in `/hooks/`,\n`/bin/`, `/audio/`, `/cursor-hooks/`, and `/codex-hooks/`, and\n`build-plugin.sh` syncs them into the Claude Code plugin layout\n— one source of truth, three editor targets — with continuous\nintegration enforcing no-drift via `build-plugin.sh --check`.\nCursor rides its 3.2.16+ auto-bridge so most users get support\nfor free; Cursor-only installs use a native\n`~/.cursor/hooks.json` registration guarded by a\n`DUPLICATE_BRIDGE` error that aborts if both paths would run at\nonce. The Codex path handles OpenAI's required\n`[features]\\ncodex_hooks = true` flag by writing a fresh\n`~/.codex/config.toml` when none exists and emitting\nmachine-readable `next_steps` for the agent to edit an existing\none — echook never round-trips a user's TOML, because that would\ndestroy comments and formatting. Canonical events with no Codex\nequivalent no-op cleanly under the Codex invoker with a debug\nlog line, never blocking the session. The whole contract is\nvalidated by 399 test cases across Ubuntu, Windows, and macOS on\nPython 3.9, 3.12, and 3.13 in GitHub Actions.\n",
+        "outcomes": "86 GitHub stars (measured 2026-09-07 via the GitHub API by\n`npm run refresh-metrics`), 156 commits across the 5.x → 6.x line (now v6.5.1), and 399\nautomated test cases. The defining release sequence: v5.0 (April\n2026) shipped the AI-first redesign — JSON command interface,\n`/audio-hooks` skill, NDJSON logging, plugin-native install;\nv5.2.0 (May 2026) added native Codex CLI support with +33\ncontract tests; v5.2.1 (May 2026) executed the echook rebrand —\na \"door-only\" GitHub rename from `claude-code-audio-hooks` to\n`echook` (leading with \"Claude Code\" had become misleading once\nnative Cursor and Codex paths shipped) that preserved every\nexisting install via GitHub's repo redirect and kept the\n`audio-hooks` command name, the `chanmeng-audio-hooks`\nmarketplace name, and all state directories unchanged. The\nEngram Architect Cohort Engagement Letter (May 9, 2026)\nexplicitly names *claude-code-audio-hooks* among Chan's\npreserved IP — formal recognition by a commercial\nagentic-infrastructure firm that this is portfolio-grade\nengineering, not a hobby script. The sister repo\nechook-promo-video then closed the loop on the thesis: an\n88-second 1080p product film composed entirely in code (React +\nRemotion, with Suno-generated background music and ElevenLabs\nvoice and effects — no video-editing suites and no human voice\nactors), fully reproducible from two commands.\n",
         "myRole": "Sole author of both repos. On echook proper: designed the\nAI-first contract (JSON interface + NDJSON log + fixed error\ncodes + `suggested_command` recovery), wrote every hook-event\nintegration, engineered the three-editor synchronization\npipeline (canonical sources synced into the plugin layout via\n`build-plugin.sh`, with CI enforcement), authored the Codex\nTOML feature-flag bootstrap pattern, and executed the 5.2.1\nrebrand without breaking compatibility. On echook-promo-video:\ndesigned the nine-section narrative arc, built the reusable\nvisual primitives (TypewriterText, Terminal, SoundWave,\nGreenGrid, CounterNumber, GlowText), orchestrated the Remotion\ntransitions, wrote the ElevenLabs audio-generation script, and\ntuned the volume-ducking so the background music dips under\nvoiceover and demo playback. Maintains both repos today.\n"
       },
       "_featuredStackResolved": [
@@ -6337,7 +6337,7 @@
       "name": "Design Pages",
       "priority": 44,
       "category": "creative",
-      "tagline": "A gallery site showcasing 14+ interactive front-end visual experiments — pure CSS3 / HTML5 / JavaScript with 3D effects, geometric patterns, gradient systems, and experimental interactions",
+      "tagline": "A gallery site of 14+ interactive front-end visual experiments — pure CSS3 / HTML5 / JavaScript with 3D effects, geometric patterns, gradient systems, and experimental interactions",
       "repoUrl": "https://github.com/ChanMeng666/design-pages",
       "url": "https://chanmeng666.github.io/design-pages/",
       "logo": "/public/brands/design-pages-logo.svg",
@@ -6881,7 +6881,7 @@
         "sanicle-ai",
         "sanicle-ai-mobile"
       ],
-      "tagline": "Sanicle's official website and production platform (sanicle.cloud) — menstrual & menopause workplace-wellness SaaS powered by IBM watsonx AI ('Ask Sani' assistant), with predictive analytics and B2B/B2G deployment; Chan's IBM watsonx integration earned Sanicle its IBM Silver Partner certification (~98% solo, 350+ commits)",
+      "tagline": "Sanicle's official website and production platform (sanicle.cloud) — menstrual & menopause workplace-wellness SaaS powered by IBM watsonx AI ('Ask Sani' assistant), with predictive analytics and B2B/B2G deployment; Chan's IBM watsonx integration the integration behind Sanicle's IBM Silver Partner certification (~98% solo, 350+ commits)",
       "repoUrl": "https://github.com/ChanMeng666/sanicle-cloud",
       "entity": "Sanicle (US-based FemTech B2B/B2G SaaS)",
       "roles": [
@@ -6920,7 +6920,7 @@
       ],
       "status": "live",
       "narrative": {
-        "impactHeadline": "Sanicle's official sanicle.cloud platform — took the company from no-code prototype to production B2B FemTech with IBM watsonx AI ('Ask Sani'); Chan's integration earned Sanicle its IBM Silver Partner certification and PartnerPlus listing (~98% solo across 350+ commits)."
+        "impactHeadline": "Sanicle's official sanicle.cloud platform — took the company from no-code prototype to production B2B FemTech with IBM watsonx AI ('Ask Sani'); Chan's integration sits behind Sanicle's IBM Silver Partner certification and PartnerPlus listing (~98% solo across 350+ commits)."
       },
       "_clientOrg": {
         "id": "sanicle",
@@ -13027,8 +13027,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-09-06",
+    "lastModified": "2026-09-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-09-06T18:49:58.082Z"
+    "buildTimestamp": "2026-09-07T04:02:06.859Z"
   }
 }

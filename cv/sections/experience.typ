@@ -51,6 +51,12 @@
     org-url: "https://www.femtechweekend.com/",
     dates: "Mar 2025 — Present",
     location: [Chengdu, Sichuan, China · *Remote*],
+    // "China's first" is pre-cleared in cv/cover-letter/EVIDENCE.md: it
+    // survives the enumerable-comparison-set rule ONLY because it is FemTech
+    // Weekend's own published self-description. The ATS resume states the
+    // attribution out loud ("self-described as"); this two-page document has
+    // no slack for the extra clause. Do not delete this marker without also
+    // rewording the claim.  copy-lint-ok:R2
     summary: [China's first women's-health-technology organisation outgrew its web platform twice as the mission grew; rebuilt it both times as sole engineer, Next.js marketing site to Docusaurus editorial and research platform. Ran the digital infrastructure behind the 2026 Shanghai Summit: four days, *20 confirmed speakers*, headlined by Ida Tin, who coined "FemTech".],
   )
   role-line(

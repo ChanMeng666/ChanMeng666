@@ -1,6 +1,7 @@
 name: Build README
 
-# Rebuild README.md, llms.txt, llms-full.txt, and dist/profile.json from
+# Rebuild README.md, llms.txt, llms-full.txt, dist/profile.json, and the two
+# published CV GEO siblings (public/cv-llms.txt, public/cv.jsonld) from
 # data/profile/*.yaml whenever the source data, templates, schema, or build
 # scripts change. Also runs daily to refresh meta.lastModified (freshness
 # signal for GEO).
@@ -13,6 +14,12 @@ on:
       - "templates/**"
       - "scripts/**"
       - "schema/**"
+      # public/cv-llms.txt + public/cv.jsonld are npm-run-build outputs now, so
+      # a change to either generator must rebuild them the same way a data
+      # change does. Scoped to the generators: the .typ sources next to them
+      # do not feed these files.
+      - "cv/build-llms-txt.mjs"
+      - "cv/build-jsonld.mjs"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/build-readme.yml"
@@ -57,7 +64,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md llms.txt llms-full.txt dist/profile.json
+          git add README.md llms.txt llms-full.txt dist/profile.json public/cv-llms.txt public/cv.jsonld
           if git diff --staged --quiet; then
             echo "No output changes."
           else

@@ -18,7 +18,7 @@ Proof rather than claims — sole author, every commit mine, building in public.
 ## 🤖 AI Agent Engineering
 
 ```
-The part teams underestimate: retrieval (RAG, pgVector), memory, tool use, evaluations and model routing across Claude/OpenAI/Llama all have to hold together before an agent is trustworthy. Earliest-ecosystem MCP server author (Google News MCP — PulseMCP Top Pick). FemTracker Agent merged into CopilotKit (36.1k★).
+The part teams underestimate: retrieval (RAG, pgVector), memory, tool use, evaluations and model routing across Claude/OpenAI/Llama all have to hold together before an agent is trustworthy. Author of one of the earliest MCP servers (Google News MCP — a PulseMCP Top Pick). FemTracker Agent merged into CopilotKit (36.1k★).
 ```
 
 ## 💻 Full-Stack Foundations

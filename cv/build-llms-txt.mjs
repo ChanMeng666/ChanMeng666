@@ -1,24 +1,106 @@
 #!/usr/bin/env node
 // Build agent-readable plain-text CV summary sibling.
-// Usage: node build-llms-txt.mjs ../data/profile > ../public/cv-llms.txt
+// Usage: node build-llms-txt.mjs data/profile --out public/cv-llms.txt
+//        node build-llms-txt.mjs data/profile > public/cv-llms.txt   (stdout fallback)
 //        (accepts either the data/profile shard directory or a single .yaml file)
 //
 // Mirrors the llms.txt convention: a deterministic, parseable summary
 // for AI sourcer agents that don't (yet) handle JSON-LD.
+//
+// --------------------------------------------------------------------------
+// WHAT IS GENERATED AND WHAT IS HARDCODED — read before editing
+// --------------------------------------------------------------------------
+// public/cv-llms.txt is a PUBLISHED, sitemap-indexed URL. Everything factual
+// in it — roles, dates, project stats, awards, credential IDs, the reference
+// quote — is derived from data/profile/*.yaml so it cannot drift away from the
+// shards. Until 2026-09 roughly 120 of this file's lines hardcoded CV prose,
+// and nothing gated it; it had drifted into publishing claims the shards
+// contradicted (a role that had ended shown as "Present", a star count from a
+// third-party catalog, a "zero downtime" migration the shard records as
+// "~30 min downtime", a credential ID attached to the wrong certificate).
+//
+// The small hardcoded remainder below is deliberate and is marked HARDCODED
+// with the reason. It is the repo's own engineering vocabulary — the Claude
+// Code 5-layer stack, the architect-grade patterns, the anti-patterns — which
+// has no shard home by design (see cv/README.md § "Source of truth" and
+// § "Architect-grade vocabulary"). It is also the only thing that makes this
+// file non-redundant with the root llms.txt. Do not add new facts here; add
+// them to the shards and render them.
 
-import { readFileSync, statSync } from "node:fs";
+import { readFileSync, statSync, writeFileSync } from "node:fs";
 import yaml from "js-yaml";
 
-const argv = process.argv.slice(2);
-if (argv.length < 1) {
-  console.error("usage: build-llms-txt.mjs <data/profile dir | profile.yaml>");
+const args = process.argv.slice(2);
+let outPath = null;
+const positional = [];
+for (let i = 0; i < args.length; i += 1) {
+  if (args[i] === "--out") {
+    outPath = args[i + 1];
+    i += 1;
+    continue;
+  }
+  positional.push(args[i]);
+}
+if (positional.length < 1 || (outPath !== null && !outPath)) {
+  console.error(
+    "usage: build-llms-txt.mjs <data/profile dir | profile.yaml> [--out <path>]",
+  );
   process.exit(2);
 }
 
-const profile = statSync(argv[0]).isDirectory()
+const profile = statSync(positional[0]).isDirectory()
   ? (await import("../scripts/lib/load-profile.mjs")).loadProfile()
-  : yaml.load(readFileSync(argv[0], "utf8"));
+  : yaml.load(readFileSync(positional[0], "utf8"));
 const b = profile.basics ?? {};
+const xb = profile.meta?.x_brand ?? {};
+
+// --------------------------------------------------------------------------
+// Rendering helpers
+// --------------------------------------------------------------------------
+
+const MONTHS = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+];
+
+// YAML prose uses `|` literal blocks with markdown inside. This file is plain
+// text on one line per fact, so collapse the wrapping and drop the emphasis
+// markers — never the words.
+// The `**…**` PAIR is matched, not the bare `**`: metric values carry glob
+// patterns (`app/api/**/route.ts`, `components/**/*.tsx`) that a blanket strip
+// silently mangles into `app/api//route.ts`.
+const flat = (s) =>
+  String(s ?? "")
+    .replace(/\*\*(?!\s)([^*]+?)\*\*/g, "$1")
+    .replace(/`/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+// "2025-03" / "2025-03-14" → "Mar 2025". Anything else passes through.
+const mon = (d) => {
+  const m = /^(\d{4})-(\d{2})/.exec(String(d ?? ""));
+  if (!m) return String(d ?? "").trim();
+  return `${MONTHS[Number(m[2]) - 1]} ${m[1]}`;
+};
+
+const dateRange = (start, end) =>
+  `${mon(start)} — ${end ? mon(end) : "Present"}`;
+
+// Truncation in a published CV must never cut a claim in half — a caveat lives
+// at the end of its sentence ("…— Chan presented remotely, by video link."),
+// so a mid-sentence clip is exactly how a true statement becomes a false one.
+// Take whole sentences while under budget; always emit at least the first.
+const clipSentences = (s, budget) => {
+  const text = flat(s);
+  if (text.length <= budget) return text;
+  const parts = text.split(/(?<=[.!?])\s+/);
+  let acc = parts[0] ?? text;
+  for (const part of parts.slice(1)) {
+    if (acc.length + 1 + part.length > budget) break;
+    acc += ` ${part}`;
+  }
+  return acc;
+};
 
 const out = [];
 const W = (s) => out.push(s);
@@ -28,8 +110,20 @@ const sect = (title) => {
   W("");
 };
 
+const byId = (list, id) => (list ?? []).find((x) => x.id === id);
+
+// --------------------------------------------------------------------------
+// Header — identity, contact, summary
+// --------------------------------------------------------------------------
+
+// Identity string comes from basics.label so this file cannot invent a fourth
+// variant of Chan's title. (basics.label, meta.x_brand.valueProposition.identity
+// and the CV header currently differ; that divergence is a data decision, not
+// one for a generator to make.)
 W(`# ${b.name} — ${b.label}`);
 W("");
+// HARDCODED: pointers to the CV artifacts this file is a sibling of. These are
+// build outputs and repo paths, not profile facts, so they have no shard home.
 W(`> Two-page CV — for AI sourcers, recruiter LLMs, and Anthropic Partner Network agents.`);
 W(`> Canonical PDF: https://github.com/ChanMeng666/ChanMeng666/raw/main/public/chan-meng-cv.pdf`);
 W(`> JSON-LD: https://chanmeng.org/cv.jsonld`);
@@ -41,17 +135,26 @@ W(`URL: ${b.url ?? "https://chanmeng.org/"}`);
 W("");
 W(`## Summary`);
 W("");
-W(
-  (b.summary ?? "")
-    .replace(/\s+/g, " ")
-    .trim(),
-);
+W(flat(b.summary));
+
+// --------------------------------------------------------------------------
+// Positioning
+// --------------------------------------------------------------------------
 
 sect("Positioning");
-W("- AI Agent Architect · Full-stack Engineer · AI-Tooling Expert");
+W(`- ${b.label}`);
+// HARDCODED: production-posture and working-method claims. These describe how
+// Chan works rather than what she has shipped, and have no shard analogue.
 W("- Ships MCP servers, sub-agents, and agent skills to production — behind paying customers, private health data, and regulated work, not demos.");
 W("- Works AI-native by default — directs coding agents (Claude Code, Codex) and builds on the Claude Agent SDK, shipping these as open-source reference implementations, while keeping the call on what actually ships a human one.");
-W("- Focus areas: women's health, cultural technology, and early-stage startup infrastructure.");
+if (profile.domains?.length) {
+  const focus = profile.domains
+    .filter((d) => d.tier === "flagship" || d.tier === "primary")
+    .map((d) => d.name);
+  if (focus.length) W(`- Focus areas: ${focus.join(" · ")}.`);
+}
+// HARDCODED: the Partner Network architect track and the practice-exam pass are
+// recorded in work[engram]'s narrative prose but exist as no structured field.
 W("- Came through the Anthropic Partner Network architect track via Engram (May–Jul 2026) — Claude Certified Architect (Foundations): curriculum completed, practice exam passed.");
 W("- Senior AI programming mentor · orchestrator of agents.");
 
@@ -66,6 +169,17 @@ if (b.reach?.metrics?.length) {
     W(`- ${m.value} ${m.label}${note}${src}`);
   }
 }
+
+// --------------------------------------------------------------------------
+// HARDCODED BLOCK — the repo's own engineering vocabulary.
+//
+// Three sections, ~26 bullets. Kept hardcoded on purpose: they are claims about
+// how this repo and Chan's agent work are engineered, not entries in a career
+// database, and cv/README.md § "Architect-grade vocabulary" documents that they
+// exist so recruiter LLMs reading the Anthropic Partner Network JD hit the same
+// phrase patterns. They are also what makes cv-llms.txt worth publishing next
+// to the root llms.txt. Add facts to the shards, not here.
+// --------------------------------------------------------------------------
 
 sect("Claude Code stack (canonical 5-layer vocabulary)");
 W("- CLAUDE.md");
@@ -99,111 +213,318 @@ W("- Arbitrary retry of valid empty results (distinguish from access failures)")
 W("- Sentiment-based escalation (use explicit criteria + few-shot)");
 W("- Self-rated confidence as primary escalation signal");
 
-sect("Selected work");
-const projects = [
-  {
-    name: "Tam-AI-Ti",
-    url: "https://tamaiti.whiri-ai.com/",
-    role: "Solo full-stack — independent research commission from Riria (Missy) Te Kanawa personally (former KPMG NZ National Māori Sector lead; now Māori Executive Lead at ASB Bank, her employer — ASB did not commission this work)",
-    summary:
-      "AI financial-wellness app built around te ao Māori — a bilingual (te reo Māori / English) product with voice coaching, journaling, and daily check-ins, composing three OpenAI models (one a realtime voice coach). Culture lives in the data model, not the translation layer — Maramataka lunar phases and Te Whare Tapa Whā wellness domains are first-class Drizzle types, so they can't decay into English-only labels. A 19-user research cohort over 4 months produced 181 bilingual journal entries and 74 daily check-ins — strong engagement for a pre-commercial pilot with no marketing. 351 commits solo · 48 tables / 494 columns / 22 migrations · 3-model OpenAI composition (gpt-4o-mini coach turns + gpt-4o synthesis + gpt-4o-realtime-preview voice) · 35 voice sessions · 146 AI coach messages.",
-  },
-  {
-    name: "GAVIGO IRE (Instant Reality Exchange)",
-    url: "https://ire.gavigo.com/",
-    role: "Founding Principal Engineer, Activation/Execution/AI Systems",
-    summary:
-      "Tap a game in a feed and it plays instantly — no app-store install. An AI scheduler keeps content pre-warmed on Kubernetes (GKE) so a tapped game resumes in under a millisecond, and the platform moved across clouds (DigitalOcean → GCP) with zero downtime. Tail-latency-aware: p50 < 1 ms restore · 84.6% warm-pool hit rate · structured error propagation with errorCategory + isRetryable · cross-cloud DigitalOcean → GCP GKE migration in ~30 min zero-downtime cutover · promoted Core Engineer → Founding Principal Engineer across three contract iterations · 96.5% solo on 471 of 488 non-merge commits.",
-  },
-  {
-    name: "She Sharp Platform",
-    url: "https://she-sharp-zeta.vercel.app/",
-    role: "Senior Full-Stack Engineer & Website Team Lead — recruited by founder Dr Mahsa Mohaghegh",
-    summary:
-      "Rebuilt New Zealand's leading women-in-STEM platform (3,500+ members, 5,000+ women reached lifetime) — moved the community off a drag-and-drop website onto one system for sign-ups, events, and mentor matching, with 10+ years of legacy content carried over via a custom crawler and zero broken inbound links. Mentors and mentees are paired by an AI mentor-matching engine (GPT-4o-mini, 5-dimensional scoring) with human review. 94.5% of all lines added authored solo across 13.3 months · 1,381 commits and 251 merged PRs · Webflow → Next.js cutover · 39 pgTables · 32 migrations · multi-tenant isolation · PostToolUse normalisation hook for heterogeneous Stripe / Slack / Webflow webhook timestamps.",
-  },
-  {
-    name: "Vitex — AI Career Agent",
-    url: "https://www.vitex.org.nz/",
-    role: "Solo author & maintainer (essentially sole-authored · 379 commits over ~18 months)",
-    summary:
-      "Paste a job description, get a tailored resume and cover letter scored against the job's keywords in under 30 seconds. The user watches their resume assemble live instead of a spinner — each stage streams over SSE (Vercel AI SDK), validated by Zod. Typst compiles the PDFs locally in under 100 ms across 7 auto-selected templates — no hosted Chromium or external doc API. Kept running through three production migrations (Railway → Cloudflare Workers → DigitalOcean) and a LaTeX → Typst engine swap, zero downtime. 8-step AI pipeline (JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → template render → PDF compile) · gpt-5.5 (reasoning) / gpt-5.4-mini (extract) · Docker + Traefik + GitHub Actions CD · Stripe credits ledger + share-token URLs.",
-  },
-  {
-    name: "ArchCanvas × ArchLang",
-    url: "https://archcanvas.uk/",
-    role: "Sole author — an original programming language (free, open source) and the commercial product built on top of it",
-    summary:
-      "Chan invented a floor-plan programming language, then built the paid product it powers. ArchLang turns a floor plan into a precise program rather than a picture; ArchCanvas is the AI design agent on top of it — describe a building in plain words, get a dimensioned, buildable floor plan plus a grounded rendering, then refine it conversationally on an infinite zoomable canvas where edits morph the plan in place instead of regenerating it. Because the plan is a deterministic program, ArchCanvas offers exact editing, parametric sliders, semantic diffs, and full design-history export that an image generator structurally cannot — and a built-in bench harness runs each brief through both the DSL pipeline and a freehand-pixel control, so the advantage is measured, not asserted. Open-source engine as credential + commercial product as the business is the two-layer strategy. ArchLang: @chanmeng666/archlang on npm · 34 tagged releases · hand-written zero-dependency isomorphic TypeScript compiler · 83-diagnostic error system · architectural-soundness linting · LSP + VS Code extension. ArchCanvas: live at archcanvas.uk · Next.js 15 + Vercel AI SDK + gpt-5.5 orchestration + GPT Image 2 grounded renderings · Stripe credit ledger · design history exported as a real git repo · canary-then-swap deploy on a DigitalOcean VPS.",
-  },
-  {
-    name: "echook — claude-code-audio-hooks",
-    url: "https://github.com/ChanMeng666/echook",
-    role: "Solo author & maintainer (MIT)",
-    summary:
-      "Noise-control system for AI coding assistants — quiets their constant audio chatter during deep work, alerts only on what matters, so developers can run long agent sessions unattended. A reference implementation of the Claude Agent SDK hooks lifecycle — PreToolUse · PostToolUse · status line · context-window quota. One hook system, three IDE surfaces — Claude Code, Cursor, and OpenAI Codex; now adopted across all three. 37 hook events · 42 releases · 248 tests on triple-platform CI (Linux/macOS/Windows). Started as an internal noise-fix for long-running background agents; open-sourced after teammates asked for it.",
-  },
-  {
-    name: "Google News MCP Server",
-    url: "https://glama.ai/mcp/servers/ChanMeng666/server-google-news",
-    role: "Solo author & maintainer (MIT)",
-    summary:
-      "Earliest-ecosystem MCP server — gives AI assistants live Google News access. Shipped 35 days after Anthropic's Nov 2024 MCP launch, before MCP had a registry, so it built its own discovery path — a first-mover index advantage that compounded as catalogs came online. Listed across 15+ MCP catalogs · PulseMCP 'Top Pick' · Glama A-rating · 122 stars · featured in Skywork AI's AI-engineer deep-dive guide · @chanmeng666/google-news-server on npm.",
-  },
+// --------------------------------------------------------------------------
+// Selected work — from projects[]
+// --------------------------------------------------------------------------
+
+// SELECTION (not facts) lives here, the same way the README's shopfront buckets
+// live as id lists in 90-meta.yaml. Every flagship project, plus two primary-tier
+// open-source entries the CV has always carried because they are the MCP- and
+// hooks-ecosystem credentials a sourcer LLM searches for by name. A typo fails
+// the build rather than silently dropping a project.
+const SELECTED_EXTRA_PROJECT_IDS = ["echook", "google-news-mcp"];
+
+const selectedProjects = [
+  ...(profile.projects ?? []).filter((p) => p.tier === "flagship"),
+  ...SELECTED_EXTRA_PROJECT_IDS.map((id) => {
+    const p = byId(profile.projects, id);
+    if (!p) {
+      throw new Error(
+        `SELECTED_EXTRA_PROJECT_IDS names "${id}", which is not a projects[].id ` +
+          `in data/profile/. Fix the id or drop it from cv/build-llms-txt.mjs.`,
+      );
+    }
+    return p;
+  }),
 ];
-for (const p of projects) {
-  W(`### ${p.name}`);
-  W(`- URL: ${p.url}`);
-  W(`- Role: ${p.role}`);
-  W(`- ${p.summary}`);
+
+// Several shard names carry a full positioning line after an em-dash
+// ("Eatropolis Website — Production-grade Next.js 16 + OpenNext-on-…").
+// A heading wants the name; the positioning is already in publicSummary.
+const headingName = (name) => {
+  const n = flat(name);
+  if (n.length <= 60) return n;
+  const cut = n.split(" — ")[0];
+  return cut.length ? cut : n;
+};
+
+// The stats tail is drawn from metrics[] in shard order. Long metric values are
+// paragraphs of methodology, not stats — they belong in llms-full.txt, not in a
+// file whose whole point is fitting in one prompt alongside a job description.
+// 150 is not cosmetic: google-news-mcp's `Stars` value ("126 GitHub (measured
+// 2026-08-26) · 20 forks · listed on …") is 137 chars, and excluding it left the
+// shorter `Glama quality: A (license) · 122 stars` as the only star figure in the
+// file — which is how a third-party catalog's count came to be published as the
+// repo's own.
+const STAT_MAX_VALUE = 150;
+const STAT_MAX_COUNT = 7;
+// Guard rail against a future runaway publicSummary. No current one is clipped.
+const PROJECT_SUMMARY_BUDGET = 900;
+const statsTail = (metrics) =>
+  (metrics ?? [])
+    .filter((m) => m?.value != null && flat(m.value).length <= STAT_MAX_VALUE)
+    .slice(0, STAT_MAX_COUNT)
+    .map((m) => `${flat(m.label)}: ${flat(m.value)}`)
+    .join(" · ");
+
+// techStack[] entries are prose ("Next.js 15.5 (App Router + Turbopack build +
+// Edge Runtime AI endpoints)"), and rendering them whole would add 2 KB to a
+// single card. Keep the name, drop the parenthetical and the em-dash gloss:
+// this line exists so a sourcer LLM matching a job description's stack finds
+// the words, which is exactly what the hand-typed cards used to supply.
+const STACK_BUDGET = 320;
+const stackLine = (techStack) => {
+  if (!Array.isArray(techStack)) return "";
+  const items = [];
+  let len = 0;
+  for (const raw of techStack) {
+    const item = flat(raw)
+      .replace(/\s*\([^)]*\)/g, "")
+      .split(/\s+—\s+/)[0]
+      .replace(/[,;:]+$/, "")
+      .trim();
+    if (!item) continue;
+    const add = items.length ? item.length + 3 : item.length;
+    if (len + add > STACK_BUDGET) break;
+    items.push(item);
+    len += add;
+  }
+  return items.join(" · ");
+};
+
+sect("Selected work");
+for (const p of selectedProjects) {
+  W(`### ${headingName(p.name)}`);
+  const url = p.url ?? p.repoUrl;
+  if (url) W(`- URL: ${url}`);
+  // roles[] where the shard has it; entity (the commissioning party) otherwise.
+  // Projects carrying neither get no Role line — better a missing line than an
+  // invented one.
+  const role = p.roles?.length ? p.roles.map(flat).join(" · ") : flat(p.entity);
+  if (role) W(`- Role: ${role}`);
+  const stats = statsTail(p.metrics);
+  const body = clipSentences(p.publicSummary, PROJECT_SUMMARY_BUDGET);
+  W(`- ${body}${stats ? ` ${stats}.` : ""}`);
+  const stack = stackLine(p.techStack);
+  if (stack) W(`- Stack: ${stack}`);
   W("");
 }
 
+// --------------------------------------------------------------------------
+// Developer-leverage tooling.
+//
+// HARDCODED framing ("builds for self and team", "listed here as the reference
+// example of…") over projects that are already in projects[]. The framing is
+// the point and has no shard home; the URLs and the one number are read from
+// the shards, because those are what drift. A wrong id fails the build.
+// --------------------------------------------------------------------------
+
+const proj = (id) => {
+  const p = byId(profile.projects, id);
+  if (!p) {
+    throw new Error(
+      `cv/build-llms-txt.mjs references projects[].id "${id}", which is not in ` +
+        `data/profile/. Fix the id or drop the line that uses it.`,
+    );
+  }
+  return p;
+};
+const metric = (p, label) =>
+  flat((p.metrics ?? []).find((m) => flat(m.label) === label)?.value ?? "");
+
+const gradientSvg = proj("gradient-svg-generator");
+const seismophone = proj("sunostats");
+const archlangP = proj("archlang");
+const archcanvasP = proj("archcanvas");
+
 sect("Developer-leverage tooling (builds for self and team)");
 W("- echook (Claude Code / Cursor / Codex audio hooks — above)");
-W("- gradient-svg-generator (https://gradient-svg-generator.vercel.app/) — 355 animated-SVG templates for READMEs across 19 categories");
-W("- typst-claude-skill — official Typst skill for Claude Code (typesets this CV)");
-W("- Seismophone (https://seismophone.chanmeng.org/) — an independent observatory for AI music · trilingual English / Simplified Chinese / Japanese · Docker + Traefik VPS");
-W("- ArchLang (https://github.com/ChanMeng666/archlang) — the floor-plan language above, packaged as a standalone dev tool: `.arch` source in, dimensioned SVG/DXF/PDF out; agent-native CLI + LSP + VS Code extension; @chanmeng666/archlang on npm (details under Selected work → ArchCanvas × ArchLang)");
-W("- ArchCanvas (https://archcanvas.uk/) — listed here as the reference example of building a commercial product directly on a self-authored open-source engine (full write-up under Selected work → ArchCanvas × ArchLang)");
+W(
+  `- gradient-svg-generator (${gradientSvg.url}) — animated-SVG templates for ` +
+    `READMEs · ${metric(gradientSvg, "Template count").split(" (")[0]}`,
+);
+W(`- typst-claude-skill (${proj("typst-claude-skill").repoUrl}) — a Typst skill for Claude Code (typesets this CV)`);
+W(`- Seismophone (${seismophone.url}) — an independent observatory for AI music`);
+W(`- ArchLang (${archlangP.repoUrl}) — the floor-plan language above, packaged as a standalone dev tool: .arch source in, dimensioned SVG/DXF/PDF out; agent-native CLI + LSP + VS Code extension (details under Selected work)`);
+W(`- ArchCanvas (${archcanvasP.url}) — listed here as the reference example of building a commercial product directly on a self-authored open-source engine (full write-up under Selected work)`);
+
+// --------------------------------------------------------------------------
+// Experience — from work[]
+// --------------------------------------------------------------------------
 
 sect("Experience (most recent)");
-const roles = [
-  ["AI Agent Architect", "Engram", "May 2026 — Jul 2026", "Recruited onto Anthropic's Partner Network architect track — Engram's founder asked his own Claude agent to surface candidates, and Chan's open-source portfolio was the pick (publicly confirmed by founder Luka Madzarac). Completed the 45-day Architect Cohort on the Claude Certified Architect — Foundations curriculum, contributing to the cohort's agent, skill and MCP-integration conventions."],
-  ["AI Instructor & Mentor", "TechNest Community", "Apr 2026 — Aug 2026", "Sole instructor of TechNest's first AI-specialised mentorship track — her fifth teaching cohort since 2024. Students arrived knowing only browser ChatGPT and, over 12 weeks, learned to build by directing coding agents; 30 graduated, shipping 6 deployed multi-user AI products to a public capstone showcase. Also built the bilingual teaching platform that hosts it, ~96% solo, including an in-course RAG assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV)."],
-  ["Founding Principal Engineer (Activation, Execution & AI Systems)", "Gavigo", "Oct 2025 — Sep 2026", "Owned the intelligence layer of GAVIGO's app-activation platform — tap a game in a feed and it plays instantly, no app-store install. Built the AI scheduler that keeps content pre-warmed on Kubernetes (GKE) so a tapped game resumes in under a millisecond, and moved the platform across clouds (DigitalOcean → GCP) with zero downtime. Promoted Core Engineer → Founding Principal Engineer across three contract iterations, building nearly the whole system solo · p50 < 1 ms · 84.6% warm-pool hit rate · 96.5% solo on 471 of 488 non-merge commits."],
-  ["Senior Full-Stack Engineer & Website Team Lead", "She Sharp", "Jul 2025 — Present", "Recruited by founder Dr Mahsa Mohaghegh to rebuild the member platform for New Zealand's leading women-in-STEM charity (3,500+ members, 5,000+ women reached lifetime). Moved the community off a drag-and-drop website onto one system for sign-ups, events, and mentor matching — 10+ years of content carried over with zero broken inbound links, and 94.5% of all lines added authored solo over 13.3 months. Mentors and mentees are paired by AI scoring (GPT-4o-mini, 5-dimensional scoring) with human review · 1,381 commits and 251 merged PRs · Webflow → Next.js."],
-  ["Chief Technology Officer", "FemTech Weekend", "Mar 2025 — Present", "Sole engineer behind China's first women's-health-technology organisation — built, then rebuilt its entire web platform twice as the mission grew, from a marketing site on Next.js to an editorial and research platform on Docusaurus. Ran the digital infrastructure for the 2026 Shanghai Summit (June 22–25), a four-day event with 20 confirmed speakers headlined by Ida Tin, who coined the term \"FemTech\"."],
-  ["Open Source Contributor", "CopilotKit (36.1k stars)", "Jun 2025 — Present", "2 merged PRs · 8-agent FemTracker demo + Claude Code MCP setup guide"],
-  ["CTO (prev. Senior AI/ML Infrastructure Engineer)", "Sanicle", "Mar 2025 — Feb 2026", "Joined as Senior AI/ML Infrastructure Engineer, promoted to CTO. Took Sanicle from a no-code prototype to the production B2B FemTech SaaS employers buy for their staff — menstrual and menopause workplace wellness. Personally integrated IBM watsonx into the product, the work that earned Sanicle its IBM Silver Partner certification · solo build, 350+ commits · OpenAI + pgvector."],
-  ["Full-Stack Engineer (Douyin Mall capstone)", "ByteDance", "—", "Spring Boot 3 + solo Vue 3 build · #2 of 6 contributors"],
-];
-for (const [role, org, dates, detail] of roles) {
-  W(`- ${role} · ${org} · ${dates} — ${detail}`);
+const roleRank = (w) => (w.endDate ? 1 : 0);
+const roles = (profile.work ?? [])
+  .filter((w) => w.tier === "flagship" || w.tier === "primary")
+  .slice()
+  .sort((a, x) => {
+    // Current roles first (endDate: null), then most-recently-ended first.
+    if (roleRank(a) !== roleRank(x)) return roleRank(a) - roleRank(x);
+    if (a.endDate && x.endDate && a.endDate !== x.endDate) {
+      return a.endDate < x.endDate ? 1 : -1;
+    }
+    if (a.startDate !== x.startDate) return a.startDate < x.startDate ? 1 : -1;
+    return a.id < x.id ? -1 : 1;
+  });
+for (const w of roles) {
+  const detail = flat(w.narrative?.impactHeadline ?? w.summary ?? "");
+  W(
+    `- ${flat(w.position)} · ${flat(w.name)} · ` +
+      `${dateRange(w.startDate, w.endDate)}${detail ? ` — ${detail}` : ""}`,
+  );
 }
 
+// --------------------------------------------------------------------------
+// Education — from education[]
+// --------------------------------------------------------------------------
+
 sect("Education");
-W("- Master of Applied Computing, Distinction — Lincoln University, New Zealand (Nov 2023 — Dec 2024) · Dean's List Top 5%");
-W("- Bachelor of Geography Science, Distinction — Jiangsu Normal University, China (Sep 2012 — Jun 2016)");
+for (const e of (profile.education ?? []).filter((x) => x.tier !== "archive")) {
+  // studyType already carries "(Distinction, Dean's List)"; only append a
+  // highlight that adds a number the studyType doesn't have.
+  const extra = (e.highlights ?? [])
+    .map(flat)
+    .filter((h) => /\d/.test(h) && !flat(e.studyType).includes(h));
+  W(
+    `- ${flat(e.studyType)} — ${flat(e.institution)} ` +
+      `(${dateRange(e.startDate, e.endDate)})` +
+      (extra.length ? ` · ${extra.join(" · ")}` : ""),
+  );
+}
+
+// --------------------------------------------------------------------------
+// Recognition & training — from awards[], certificates[], publications[]
+// --------------------------------------------------------------------------
 
 sect("Recognition & training");
-W("- UN CSW 69 Speaker (Beyond Beijing 30) — UN HQ NYC, Mar 14 2025 · attracted IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs");
-W("- Outstanding Mentor Award — AI Hackathon Festival 2025 (1 of 14 expert mentors · guided 11 teams / 80+ participants)");
-W("- FemTech Excellence Award — FemTech China (Dec 2024)");
-W("- UN Women FemTech Hackathon Outstanding Performer — FemTech Weekend (Beijing, Mar 2025)");
-W("- Claude Certified Architect — Foundations curriculum completed (Agent SDK · MCP · Claude Code · Claude API · on Anthropic Partner Network track via Engram)");
-W("- Anthropic certificates (6): Building with the Claude API · Intro to MCP · Intro to Agent Skills · Claude Code in Action (all May 2026; Claude Code in Action originally Aug 2025) · AI Fluency: Framework & Foundations (Aug 2025, JHIY9NPYTR2D)");
-W("- Featured in THISDAYLIVE · PulseMCP · 小宇宙FM (Xiaoyuzhou) · WeChat (FemTech Weekend)");
 
-sect("Reference quote");
-W('"Not only her technical ability, but the way she turns ambiguous founder-level direction into working systems, measurable proof, and reliable product surfaces."');
-W("— Saba Gecgil · Founder & CEO, GAVIGO Inc.");
+// Academic honours (Distinction, Dean's List) are awards[] entries awarded by
+// an institution already listed under Education — don't print them twice in a
+// file this size. Matched on the institution name, so a new school needs no
+// code change.
+const eduAwarders = (profile.education ?? []).map((e) =>
+  flat(e.institution).split(",")[0].trim(),
+);
+// Generous on purpose. The proof points a sourcer actually cares about sit in
+// an award summary's THIRD sentence ("…IBM representatives who expressed
+// interest in pilot collaboration, and … the Minister of Gender and Children's
+// Affairs from Sierra Leone…"), and the UN CSW 69 entry's load-bearing caveat —
+// Chan presented remotely, by video link — is the tail of its first, which is
+// 312 characters on its own. Five award lines, so the budget is bounded.
+const AWARD_PROSE_BUDGET = 900;
+const awards = (profile.awards ?? [])
+  .filter((a) => a.tier === "flagship" || a.tier === "primary")
+  .filter((a) => !eduAwarders.some((inst) => inst && flat(a.awarder).startsWith(inst)))
+  .slice()
+  .sort((a, x) => (a.date < x.date ? 1 : a.date > x.date ? -1 : 0));
+for (const a of awards) {
+  const prose = clipSentences(a.summary, AWARD_PROSE_BUDGET);
+  W(
+    `- ${flat(a.title)} — ${flat(a.awarder)} · ${mon(a.date)}` +
+      (prose ? ` — ${prose}` : ""),
+  );
+}
+
+// HARDCODED: the Foundations curriculum + practice exam. Recorded in
+// work[engram]'s narrative prose; there is no certificates[] entry to render
+// because Anthropic issued no certificate for it.
+W("- Claude Certified Architect — Foundations curriculum completed (Agent SDK · MCP · Claude Code · Claude API · on Anthropic Partner Network track via Engram)");
+
+// Name and credentialId are emitted as one unit so they cannot be mismatched.
+// (Until 2026-09 this file published JHIY9NPYTR2D against "AI Fluency"; that ID
+// belongs to the Aug 2025 "Claude Code in Action".)
+const anthropicCerts = (profile.certificates ?? [])
+  .filter((c) => flat(c.issuer) === "Anthropic")
+  .slice()
+  .sort((a, x) =>
+    a.date !== x.date
+      ? a.date < x.date
+        ? 1
+        : -1
+      : flat(a.name) < flat(x.name)
+        ? -1
+        : 1,
+  );
+if (anthropicCerts.length) {
+  W(
+    `- Anthropic certificates (${anthropicCerts.length}): ` +
+      anthropicCerts
+        .map((c) => {
+          const name = flat(c.name);
+          // "Claude Code in Action (Aug 2025)" already carries its own date.
+          const when = name.includes(mon(c.date)) ? "" : `${mon(c.date)}, `;
+          return `${name} (${when}${flat(c.credentialId)})`;
+        })
+        .join(" · "),
+  );
+}
+
+// Third-party coverage: press pieces and podcast appearances, deduplicated by
+// publisher. Archive-tier entries are the older minimalist-lifestyle features
+// and are out of scope for a CV.
+const featuredIn = [];
+for (const pub of profile.publications ?? []) {
+  const type = pub.meta?.x_brand?.type;
+  if (type !== "press" && type !== "podcastEpisode") continue;
+  if (pub.tier === "archive") continue;
+  const publisher = flat(pub.publisher);
+  if (publisher && !featuredIn.includes(publisher)) featuredIn.push(publisher);
+}
+if (featuredIn.length) W(`- Featured in ${featuredIn.join(" · ")}`);
+
+// --------------------------------------------------------------------------
+// Reference quote — from references[], selected by meta.x_brand.readmePullQuoteId
+// --------------------------------------------------------------------------
+
+const pullQuoteRef = byId(profile.references, xb.readmePullQuoteId);
+if (pullQuoteRef) {
+  // A pull quote must be a VERBATIM span of the recommendation. references[]
+  // carries no field marking which span to pull, so take the LEADING paragraphs
+  // while they fit the budget: contiguous source text, in source order, never
+  // re-punctuated, re-capitalised, or stitched together out of order. (The
+  // hand-typed excerpt this replaced dropped a five-word lead-in and
+  // recapitalised what was left, so it was not a substring of the shard at all.)
+  const paragraphs = String(pullQuoteRef.reference ?? "")
+    .split(/\n\s*\n/)
+    .map((p) => p.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+  const QUOTE_BUDGET = 320;
+  let quote = paragraphs[0] ?? "";
+  for (const para of paragraphs.slice(1)) {
+    if (quote.length + 1 + para.length > QUOTE_BUDGET) break;
+    quote += ` ${para}`;
+  }
+  if (quote) {
+    // relationship reads "Founder & CEO at GAVIGO Inc. (Activation & …); managed
+    // Chan directly" — the title is everything before the first paren/semicolon.
+    const relationship = flat(pullQuoteRef.meta?.x_brand?.relationship ?? "")
+      .split(/[(;]/)[0]
+      .trim()
+      .replace(/[,\s]+$/, "");
+    sect("Reference quote");
+    W(`"${quote}"`);
+    W(`— ${flat(pullQuoteRef.name)}${relationship ? ` · ${relationship}` : ""}`);
+  }
+}
+
+// --------------------------------------------------------------------------
+// For agents / sourcer LLMs
+// --------------------------------------------------------------------------
 
 sect("For agents / sourcer LLMs");
-W("- Two-page Typst-sourced CV regenerated from data/profile/*.yaml.");
+// The CV's own prose is hand-curated Typst (cv/sections/*.typ) — only THIS
+// summary is generated. Saying otherwise was itself a published false claim.
+W("- Two-page CV typeset in Typst; this summary is generated from data/profile/*.yaml.");
 W("- Source under cv/ in the GitHub profile repo (https://github.com/ChanMeng666/ChanMeng666).");
-W("- Open to founding-team / staff-IC / AI architecture engagements starting Q3 2026.");
-W("- Booking: https://cal.com/chan-meng/30min");
+if (xb.engagementAvailability?.current) W(`- ${flat(xb.engagementAvailability.current)}`);
+const bookingUrl = xb.engagementAvailability?.cta?.primary?.url;
+if (bookingUrl) W(`- Booking: ${bookingUrl}`);
 W("");
 
-process.stdout.write(out.join("\n") + "\n");
+// Node-side write, never a shell redirect: `node … | Out-File` on Windows once
+// truncated this file to zero bytes while the build still reported success, and
+// Out-File rejoins stdout with CRLF, which fights .gitattributes (`* text=auto
+// eol=lf`). writeFileSync gives LF, UTF-8, no BOM, on every platform.
+const text = out.join("\n") + "\n";
+if (outPath) writeFileSync(outPath, text, "utf8");
+else process.stdout.write(text);

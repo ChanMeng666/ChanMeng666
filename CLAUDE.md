@@ -6,6 +6,23 @@ else — README.md, llms.txt, llms-full.txt, dist/profile.json,
 dist/video-data.json, linkedin/linkedin-profile.json + linkedin/*.md — is
 **generated**. Never edit generated files by hand; edit the shard, then build.
 
+## Changing career COPY? Use the `career-copy` skill
+
+`.claude/skills/career-copy/` is this repo's own skill for the case that comes up
+most: a fact changed and the copy has to change with it — a new role or project,
+a metric that moved, a title correction, or "make this entry sound stronger".
+
+It carries the propagation map (which surfaces a fact earns, and which gate
+checks each one), the per-surface register and budget table, the claim-strength
+rules, and the LinkedIn profile doctrine. Read it before writing any bullet that
+contains a number or an ownership word.
+
+The gate it adds is `npm run check:copy` (`--strict` in PR mode), which lints the
+prose the structural gates never read. Its most important rule: **every
+claim-shaped number on a CV, LinkedIn or cover-letter surface must also appear in
+`data/profile/`** — the check that catches a number going stale on four surfaces
+at once.
+
 ## Edit workflow
 
 ```bash
@@ -146,8 +163,12 @@ by the loader. To find an entry: `grep -rn "id: <slug>" data/profile/`.
 ## Facts live in FOUR places — fix all of them
 
 1. `data/profile/*.yaml` — canonical
-2. `cv/sections/*.typ` — CV prose is **hand-curated Typst**, not generated;
-   `cv/build-llms-txt.mjs` also hardcodes some copy
+2. `cv/sections/*.typ` — CV prose is **hand-curated Typst**, not generated.
+   (`cv/build-llms-txt.mjs` used to be a fifth place hiding here. Since
+   2026-09-07 every fact in `public/cv-llms.txt` is rendered from the shards and
+   the file is gated by CI like README.md; only ~25 lines of Claude-Code
+   architect vocabulary remain hardcoded, marked `HARDCODED` in the script with
+   the reason. Do not add new facts there.)
 3. `70-linkedin.yaml` — LinkedIn display copy is curated (dates/banner facts
    are auto-injected by the generator, titles/narrative are not)
 4. `cv/chan-meng-cv-ats.typ` — the ATS resume carries its own copy on purpose:

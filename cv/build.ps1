@@ -96,13 +96,16 @@ try {
     Assert-Generated cv/exports/chan-meng-cv-ats.docx "cv/build-ats-exports.mjs" 4096
     Assert-Generated cv/exports/chan-meng-cv-ats.txt  "cv/build-ats-exports.mjs" 4096
 
-    Write-Host "→ Emitting public/cv.jsonld (schema.org JSON-LD for recruiter LLMs)"
-    node cv/build-jsonld.mjs data/profile | Out-File -Encoding utf8 public/cv.jsonld
-    Assert-Generated public/cv.jsonld "cv/build-jsonld.mjs"
-
-    Write-Host "→ Emitting public/cv-llms.txt (agent-readable plain-text summary)"
-    node cv/build-llms-txt.mjs data/profile | Out-File -Encoding utf8 public/cv-llms.txt
-    Assert-Generated public/cv-llms.txt "cv/build-llms-txt.mjs"
+    Write-Host "→ Emitting public/cv-llms.txt + public/cv.jsonld (npm run build:cv-geo)"
+    # Delegated to the npm script so there is ONE code path: `npm run build`
+    # runs the same command, and CI (ubuntu, no pwsh) gates the committed
+    # outputs against it. Both generators now take `--out` and write their own
+    # files, so no `| Out-File` — that rejoined stdout with CRLF against
+    # .gitattributes and, when a generator died, still created the destination
+    # empty while this script printed "✓ Build complete".
+    npm run build:cv-geo
+    Assert-Generated public/cv-llms.txt "npm run build:cv-geo"
+    Assert-Generated public/cv.jsonld "npm run build:cv-geo"
 
     $pdfBytes  = (Get-Item public/chan-meng-cv.pdf).Length
     $extBytes  = (Get-Item public/chan-meng-cv-extended.pdf).Length

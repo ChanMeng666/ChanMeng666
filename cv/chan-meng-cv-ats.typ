@@ -432,16 +432,17 @@ coding agents and building on the Claude Agent SDK.
 // nothing and a keyword matcher almost nothing, so each carries the same
 // explanation as the designed CV's italic closer line — in this file's register,
 // and with the same limits on what may be claimed (the disability-led NZ
-// organisation that set a11y-loop's problem validated it and is working it into
-// its own development, with Chan advising: NOT a paid contract, not a formal
-// partnership, not an endorsement, not a production deployment).
+// organisation that set a11y-loop's problem is adopting it — its CTO told Chan
+// after the 2026-09-04 walkthrough that it will adopt the tool and promote it
+// within its development team: NOT a paid contract, not a formal partnership,
+// not an endorsement, not yet a production deployment).
 // Nothing here may also appear above as a project entry — each project appears
 // exactly once across the document.
 #block(above: 0pt, below: 0pt, {
   strong("Also built: ")
   [#link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited),
   #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates),
-  #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (an accessibility CLI and Claude Code skill, validated by the disability-led New Zealand organisation that set the problem), and #link("https://seismophone.chanmeng.org/")[Seismophone] (the first public Suno remix-lineage explorer).]
+  #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (an accessibility CLI and Claude Code skill, being adopted by My Life My Voice, the disability-led New Zealand organisation that set the problem), and #link("https://seismophone.chanmeng.org/")[Seismophone] (the first public Suno remix-lineage explorer).]
 })
 
 // ═══ EDUCATION ═══════════════════════════════════════════════════════════════

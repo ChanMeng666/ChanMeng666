@@ -2863,6 +2863,9 @@ projects:
   # artefact exists.
   - id: a11y-loop
     provenance: personal
+    # 2026-09-17: the "adopted" question was reopened by Chan's first-hand
+    # account — see my-life-my-voice in 60-network.yaml. Surfaces now say "being
+    # adopted by My Life My Voice"; tier stays primary until something ships.
     # Demoted flagship -> primary on 2026-09-04, same day it was promoted. The
     # promotion rested on the word "adopted"; re-reading the meeting record
     # against what was actually said retired that claim, so the basis for the
@@ -2871,7 +2874,7 @@ projects:
     # prose, it just does not buy a band.
     tier: primary
     recency: active
-    lastUpdated: "2026-09-04"
+    lastUpdated: "2026-09-16"
     name: a11y-loop
     priority: 104
     category: ai-apps
@@ -2916,7 +2919,7 @@ projects:
       # of the organisation that wrote the problem statement, his quoted words,
       # and his stated intent to put it in front of their own developer. The
       # honesty caveat stays in the same sentence it always was.
-      impactHeadline: 'Makes AI coding agents write accessible UI by default, verifies it in a real browser, and lists what it could not check so a pass never overclaims WCAG 2.2 AA. The disability-led NZ org that set the problem validated it live: "what we really needed was a tool for programmers."'
+      impactHeadline: "Makes AI coding agents write accessible UI by default, verifies it in a real browser, and lists what it could not check so a pass never overclaims WCAG 2.2 AA. Built for the accessible-UI challenge set at the Aotearoa AI Hackathon 2026 by the organisation now adopting it."
       problem: |
         AI coding agents produce interfaces fast, and they produce
         inaccessible ones by default: missing focus indicators, unlabelled
@@ -2981,9 +2984,11 @@ projects:
         Cursor and standing up a local development environment — GitHub CLI,
         git, Node.js — from scratch. Three and a half weeks separate the
         unsolicited handover, made with nothing at stake, from that walkthrough.
-        What it is **not**: a paid contract, and not evidence that the tool is
-        deployed in production — nothing has shipped, and no adoption decision
-        was put on the record. The §3 honesty rules above bind harder as the
+        **Adoption (confirmed by Chan, 2026-09-17).** After the walkthrough
+        Young told Chan that My Life My Voice will adopt a11y-loop and promote
+        it within its development team — the first organisation to take the
+        tool up. What it is **not**: a paid contract, a signed partnership, or
+        yet evidence that the tool is running in production. The §3 honesty rules above bind harder as the
         tool reaches real teams, not less.
       myRole: |
         Sole author. Published to npm as `a11y-loop`; the repo is written

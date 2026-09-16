@@ -86,7 +86,7 @@ thought."
 - **RCSA Australia and New Zealand** (partner) -- Industry insights partner — Her Waka 2026. URL: https://www.rcsa.com.au.
 - **Auckland University of Technology** (partner) -- Co-organiser — AI Hackathon Festival 2025. URL: https://www.aut.ac.nz.
 - **AI Forum New Zealand** (partner) -- Co-organiser — AI Hackathon Festival 2025. URL: https://aiforum.org.nz.
-- **My Life My Voice** (partner) -- Disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon Festival 2026; its CTO took a live walkthrough of a11y-loop on 2026-09-04 and is working it in with the organisation's developer, with Chan advising — unpaid, no signed partnership, nothing deployed. URL: https://www.mylifemyvoice.org.nz. Related project: a11y-loop.
+- **My Life My Voice** (adopter) -- Disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon Festival 2026; after a live walkthrough on 2026-09-04 its CTO committed to adopting a11y-loop and promoting it within its development team, with Chan advising — unpaid, no signed partnership. URL: https://www.mylifemyvoice.org.nz. Related project: a11y-loop.
 - **UN Women** (partner) -- CSW 69 speaker — UN HQ NYC, Mar 14 2025. URL: https://www.unwomen.org.
 - **United Nations Headquarters** (partner) -- Beyond Beijing 30 Conference speaker (CSW 69). URL: https://www.un.org.
 - **Westlake Girls High School** (partner) -- Mentee school — AI Hackathon Festival 2025. URL: https://www.westlakegirls.school.nz.
@@ -2920,7 +2920,7 @@ Capstone classroom infrastructure. A Cloudflare Worker proxies writes into Notio
 
 **My role:** I built and run the entire platform end-to-end: Docusaurus configuration, the versioned-docs taxonomy across five cohorts, every cohort's curriculum content, the Cloudflare Worker RAG backend (worker entry, chat handler, RAG module, Vectorize seeding, KV session store), the BGE-Base embeddings ingestion pipeline, the Typst PDF handout build, the Mermaid dual-view component, the Notion-Worker proxy and Demo Day showcase for Capstone voting, the Algolia contextual-search configuration, and the bilingual i18n across every surface. I migrated production from Vercel to Cloudflare Pages in 2026-04, and in 2026-07 hardened the chat backend (custom domain, rate limiting, CORS allow-list, WAF) and restored it onto Cloudflare's current model after the old one was deprecated. I continue to ship the current cohort's recordings and lab content each week.
 ### a11y-loop — A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then proves what it can prove with a real Playwright + axe-core browser audit across the states the agent built — and states plainly what it could not check
-[tier=primary · recency=active · updated=2026-09-04]
+[tier=primary · recency=active · updated=2026-09-16]
 - **Repository:** https://github.com/ChanMeng666/a11y-loop
 - **Tech stack:** Claude Code Skill (Agent Skills open standard), Node.js >= 20, Playwright, axe-core 4.12, WCAG 2.2 AA, JavaScript, GitHub Actions CI
 
@@ -2937,7 +2937,7 @@ claim. Ships as both a Claude Code skill and a standalone CLI
 (`npx a11y-loop`), with a contrast checker that proposes fixes and
 a CI mode. MIT.
 
-**Impact:** Makes AI coding agents write accessible UI by default, verifies it in a real browser, and lists what it could not check so a pass never overclaims WCAG 2.2 AA. The disability-led NZ org that set the problem validated it live: "what we really needed was a tool for programmers."
+**Impact:** Makes AI coding agents write accessible UI by default, verifies it in a real browser, and lists what it could not check so a pass never overclaims WCAG 2.2 AA. Built for the accessible-UI challenge set at the Aotearoa AI Hackathon 2026 by the organisation now adopting it.
 
 **Problem:** AI coding agents produce interfaces fast, and they produce
 inaccessible ones by default: missing focus indicators, unlabelled
@@ -3002,9 +3002,11 @@ with Chan advising: in the same call she walked him through installing
 Cursor and standing up a local development environment — GitHub CLI,
 git, Node.js — from scratch. Three and a half weeks separate the
 unsolicited handover, made with nothing at stake, from that walkthrough.
-What it is **not**: a paid contract, and not evidence that the tool is
-deployed in production — nothing has shipped, and no adoption decision
-was put on the record. The §3 honesty rules above bind harder as the
+**Adoption (confirmed by Chan, 2026-09-17).** After the walkthrough
+Young told Chan that My Life My Voice will adopt a11y-loop and promote
+it within its development team — the first organisation to take the
+tool up. What it is **not**: a paid contract, a signed partnership, or
+yet evidence that the tool is running in production. The §3 honesty rules above bind harder as the
 tool reaches real teams, not less.
 
 **My role:** Sole author. Published to npm as `a11y-loop`; the repo is written

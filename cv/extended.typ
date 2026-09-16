@@ -235,7 +235,15 @@
   product-tile("/public/brands/archcanvas-logo.svg", [ArchCanvas],
     [An AI design agent for architects and self-builders: describe a building and it draws a dimensioned floor plan you can actually build from, plus a realistic rendering.],
     [Refine it by talking, on an infinite zoomable canvas; every plan is real ArchLang underneath, exportable as a full git history.],
-    "https://archcanvas.uk/", "archcanvas.uk", logo-h: 315pt)
+    "https://archcanvas.uk/", "archcanvas.uk", logo-h: 150pt)
+  // 2026-09-17: the page foot was dead space. Filled with a real event photo
+  // (public/photos/events/, file name = event; facts from 80-events.yaml
+  // claude-meetup-auckland-2026-07). The bridge to this chapter is the point of
+  // the caption: the room is the builder community she makes these products
+  // in. Role there was ATTENDEE — never caption it as speaking or organising.
+  v(1fr)
+  photo-band("/public/photos/events/2026-07-01-claude-meetup-auckland-group.jpg", h: 170pt,
+    caption: [Where I build from: among Auckland's Claude builders at the Claude Meetup, AUT — July 2026.])
   v(1fr)
   pagebreak()
   // p9 — ArchLang (the engine under ArchCanvas) + Vitex
@@ -432,11 +440,21 @@
   // Outstanding Mentor Award bullet below. Fixed-height cover crops align.
   v(0.5fr)
   grid(columns: (1fr, 1fr), column-gutter: gap-photo-x,
-    photo-band("/public/articles/un-women-csw69.jpeg", h: 190pt,
-      caption: [Speaking at UN CSW69, UN HQ New York — March 2025.]),
-    photo-band("/public/photos/chan-keynote-ai-hackathon-2025.jpg", h: 190pt,
-      caption: [Presenting at the AI Hackathon Festival 2025, Auckland.]),
+    photo-band("/public/articles/un-women-csw69.jpeg", h: 125pt,
+      caption: [UN CSW69, UN HQ New York — March 2025.]),
+    photo-band("/public/photos/chan-keynote-ai-hackathon-2025.jpg", h: 125pt,
+      caption: [Presenting at the 2025 festival, Auckland.]),
   )
+  // 2026-09-17: second row from public/photos/events/ — the 2026 festival, where
+  // she MC'd the opening and was named Outstanding Mentor a second year running
+  // (80-events.yaml aotearoa-ai-hackathon-festival-2026; 30-recognition.yaml).
+  v(14pt)
+  // photo-row (contain, cream gutters) rather than photo-band: a cover crop
+  // cut her head off at the podium.
+  photo-row((
+    ("/public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-opening.jpg", [MC'ing the 2026 festival opening.]),
+    ("/public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-karakia.jpg", [Karakia Tīmatanga — AUT, August 2026.]),
+  ), h: 125pt)
   v(0.5fr)
   block(above: 0pt, below: 0pt, {
     set text(size: size-body-x, fill: ink)
@@ -444,7 +462,8 @@
     set list(marker: text(fill: accent, size: 6pt)[•], indent: 0pt, body-indent: 8pt, spacing: 11pt)
     list(
       [*UN CSW69 Speaker* — UN HQ, New York, March 2025 · drew IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.],
-      [*Outstanding Mentor Award* — AI Hackathon Festival 2025 · 1 of 14 expert mentors, guiding 11 teams / 80+ participants.],
+      [*Outstanding Mentor Award, two years running* — AI Hackathon Festival 2025 (1 of 14 expert mentors, 11 teams / 80+ participants) and Aotearoa AI Hackathon Festival 2026 (125 registered participants, twelve teams), where I also MC'd the opening.],
+      [*a11y-loop, being adopted by My Life My Voice* — the disability-led NZ organisation that set the accessible-UI challenge at the 2026 festival is taking up the open-source tool I built for it, for its own development team.],
       [*UN Women FemTech Hackathon — Outstanding Performer* — FemTech Weekend, Beijing, March 2025.],
       [*Excellence Award* — FemTech China, Women's Health Technology Challenge, December 2024.],
     )

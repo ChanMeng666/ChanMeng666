@@ -502,7 +502,7 @@
               "additionalProperties": true,
               "properties": {
                 "displayTier":         { "type": "string", "enum": ["primary", "secondary"] },
-                "category":            { "type": "string", "enum": ["employer", "partner", "vendor"] },
+                "category":            { "type": "string", "enum": ["employer", "partner", "vendor", "adopter"] },
                 "context":             { "type": "string" },
                 "relatedWorkId":       { "type": ["string", "null"] },
                 "relatedVolunteerId":  { "type": ["string", "null"] },

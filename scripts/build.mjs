@@ -728,10 +728,17 @@ for (const p of visibleProjects) {
   // entire organizations[] record), and attaching that to every client project
   // duplicated ~100 lines per card into dist/profile.json. These six fields are
   // everything the card and table markup reads.
-  p._affiliationOrgs       = (data._orgsByProjectId[p.id] ?? []).map((o) => ({
+  // category "adopter" (added 2026-09-17 for My Life My Voice → a11y-loop) is
+  // an organisation that took up one of Chan's open-source tools, NOT one that
+  // commissioned it. It must never render as "For <org>", which reads as a
+  // client; it renders as its own "Being adopted by" line instead.
+  const projOrg = (o) => ({
     id: o.id, name: o.name, url: o.url,
     logoLight: o.logoLight, logoDark: o.logoDark, context: o.context,
-  }));
+  });
+  const orgsForProject     = data._orgsByProjectId[p.id] ?? [];
+  p._affiliationOrgs       = orgsForProject.filter((o) => o.category !== "adopter").map(projOrg);
+  p._adopterOrgs           = orgsForProject.filter((o) => o.category === "adopter").map(projOrg);
   p._affiliationOrg        = p._affiliationOrgs[0] ?? null;
 }
 

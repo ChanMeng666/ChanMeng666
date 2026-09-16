@@ -14,7 +14,7 @@ What it refuses to claim matters as much as what it checks. Only 17 of the 55 WC
 
 • Built in the week before the Aotearoa AI Hackathon Festival 2026, where My Life My Voice — a disability-led New Zealand organisation — had set "Accessible UI Generation for Developers" as a challenge.
 • With the competition closed and nothing left to win, I sent the finished MIT-licensed project to them unsolicited: a free walkthrough offered, and a roadmap open to feedback from disabled testers.
-• On 4 September 2026 their CTO, Timothy Young, validated it in a live walkthrough. His verdict, hedge included: it "won't do the entire job, but it looks like it will be a big help." Their own developer is picking it up from there.
+• On 4 September 2026 their CTO, Timothy Young, validated it in a live walkthrough. His verdict, hedge included: it "won't do the entire job, but it looks like it will be a big help." Afterwards he told me My Life My Voice will adopt it and promote it within its development team.
 • The line I keep is from the person who wrote the brief. Vibe-coding tools, he said, can be asked to follow the accessibility guidelines and will do "an okay job" — but "what we really needed was a tool for programmers." That is this project's whole thesis, reached independently by the author of the problem.
 
 Stack: TypeScript, Playwright, axe-core 4.12, Claude Code Agent Skills, npm.

@@ -569,16 +569,26 @@ organizations:
   # holds privately and has not published, so a reader cannot check it. No
   # public announcement, no press release, nothing in any repository. Timothy
   # Young's roles ARE corroborated, by his public LinkedIn profile.
-  # Still carries NO logo: build.mjs renders the README organisation band only
-  # for entries whose logo file exists on disk, and no asset exists here. The
-  # entry still reaches llms.txt / llms-full.txt and JSON-LD, which is the
-  # point. Adding one is now a live question rather than a closed one — but it
-  # is Chan's call, and it needs a real logo file plus her sign-off on appearing
-  # in a "Trusted by" strip.
+  # ADOPTION — UPDATED 2026-09-17 on Chan's first-hand account. The 2026-09-04
+  # note above read the call transcript as "no adoption decision put on the
+  # record". Chan, who was on the call, confirms that after the walkthrough Tim
+  # Young told her My Life My Voice WILL adopt a11y-loop and promote it within
+  # the team's development work. So the claim is now "being adopted" — a stated
+  # commitment by the CTO — and still NOT "deployed in production", not a paid
+  # engagement and not a signed partnership. Say "being adopted by", never
+  # "used in production by" or "partnered with".
+  # LOGO — supplied by Chan 2026-09-17 with her sign-off to show it as the
+  # adopter on the a11y-loop row. The mark is ink on transparency, so the README
+  # swaps a derived white mark in on GitHub's dark canvas. The full lockups are
+  # kept alongside for other surfaces: my-life-my-voice-logo-tagline-black.png
+  # and my-life-my-voice-logo-white.png. Category "adopter" (not "partner")
+  # stops the card from rendering it as a "For <org>" client line.
   - id: my-life-my-voice
     name: My Life My Voice
     aliases: ["MLMV", "AI For People"]
     url: https://www.mylifemyvoice.org.nz
+    logo: /public/organizations/my-life-my-voice-mark-black.png
+    logoDark: /public/organizations/my-life-my-voice-mark-white.png
     type: nonprofit
     industry: Non-profit Organizations — disability-led peer support and advocacy (Aotearoa New Zealand)
     hq: { countryCode: NZ }
@@ -612,10 +622,11 @@ organizations:
       author of the problem statement — that what was "really needed was a tool
       for programmers", which is the tool's own premise. He is putting it in
       front of the organisation's developer to work in, the two discussed how to
-      promote it more widely, and Chan is providing technical guidance.
-      Validation and in-progress uptake — not a recorded adoption decision, not
-      a paid engagement, not a signed partnership, not an endorsement of Chan,
-      and not evidence of a production deployment.
+      promote it more widely, and Chan is providing technical guidance. After
+      the walkthrough Young told Chan that My Life My Voice will adopt
+      a11y-loop and promote it within its development team. A stated adoption
+      commitment — not a paid engagement, not a signed partnership, not an
+      endorsement of Chan, and not yet evidence of a production deployment.
     sameAs:
       - https://nz.linkedin.com/company/mylifemyvoice
     tier: secondary
@@ -627,8 +638,13 @@ organizations:
         # `partner` was the least-wrong value in the employer|partner|vendor
         # enum while this was one-way outreach; since the 2026-09-04 walkthrough
         # it is closer to accurate. The context string still carries the limits.
-        category: partner
-        context: "Disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon Festival 2026; its CTO took a live walkthrough of a11y-loop on 2026-09-04 and is working it in with the organisation's developer, with Chan advising — unpaid, no signed partnership, nothing deployed"
+        category: adopter
+        # Full lockups from the organisation (2026-09-17), for surfaces with room
+        # for a wordmark; the README row uses the square mark above.
+        logoLockups:
+          light: /public/organizations/my-life-my-voice-logo-tagline-black.png
+          dark: /public/organizations/my-life-my-voice-logo-white.png
+        context: "Disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon Festival 2026; after a live walkthrough on 2026-09-04 its CTO committed to adopting a11y-loop and promoting it within its development team, with Chan advising — unpaid, no signed partnership"
         relatedProjectId: a11y-loop
 
   - id: un-women

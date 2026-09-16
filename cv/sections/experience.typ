@@ -7,11 +7,15 @@
 // then FemTech Weekend — the only two current roles since Sep 2026. She Sharp
 // and GAVIGO both ended Sep 2026; TechNest sits behind them.
 //
-// FIVE detailed roles is the budget. Two roles have moved down into the italic
-// "Previously:" run-on rather than being cut: Sanicle (CTO, ended Feb 2026,
-// moved Sep 2026 so "Selected Projects & Products" could carry a FOURTH card —
-// it keeps its promotion and the IBM watsonx work behind the IBM Silver Partner
-// certification) and Engram (AI Agent Architect, a 45-day cohort that ended
+// SIX detailed roles is the budget (was five). 2026-09-17: Sanicle came back up
+// from the "Previously:" run-on as a full role — Chan asked for the dead space
+// at the foot of page 2's left column to go to Experience, and Sanicle is the
+// role with the most to say that the run-on was compressing (CTO leading a team
+// of five; the watsonx integration and demo IBM's Silver Partner certification
+// required). Adding it moved ~4 lines of height into the left column; the
+// page-2 foot is now the slack. If anything is added above, check the PDF is
+// still 2 pages before anything else.
+// Engram stays in the italic "Previously:" run-on (AI Agent Architect, a 45-day cohort that ended
 // Jul 2026 — it keeps the fact that matters, the Anthropic Partner Network
 // architect-track recruitment and how it happened). The ATS resume is
 // deliberately NOT symmetrical: it keeps both as full dated entries with
@@ -81,11 +85,19 @@
     // platform clause — the section rule is that no card duplicates a role.
     summary: [*30 students graduated and shipped 6 deployed multi-user AI products* in 12 weeks: they arrived knowing only browser ChatGPT and left able to build by directing coding agents. Sole instructor of TechNest's first AI-specialised track, and a *fifth teaching cohort since 2024*.],
   )
+  role-line(
+    title: "Chief Technology Officer",
+    org: "Sanicle",
+    org-url: "https://www.linkedin.com/company/sanicleofficial/",
+    dates: "Mar 2025 — Feb 2026",
+    location: [Tulsa, Oklahoma, United States · *Remote*],
+    summary: [A US women's-health startup needed its product off a no-code prototype and into IBM's partner network. Promoted from Senior AI/ML Infrastructure Engineer to CTO leading a *team of five*; rebuilt it as a multi-tenant B2B SaaS for employees and HR teams, and built the IBM watsonx integration and live demo behind Sanicle's #link("https://www.ibm.com/partnerplus/directory/solution/0638")[*IBM Silver Partner*] certification.],
+  )
   v(4pt)
   block(above: 0pt, below: 0pt, {
     set par(leading: 0.7em, justify: false)
     text(size: size-tiny, fill: muted, style: "italic")[
-      *Previously:* *AI Agent Architect at #link("https://engram.media/")[Engram]* (Albuquerque, NM · remote; recruited onto *Anthropic's Partner Network architect track* after founder Luka Madzarac's own Claude agent surfaced Chan's open-source portfolio — publicly confirmed by him; credentials behind Engram's Partner Network approval) · *CTO at #link("https://www.linkedin.com/company/sanicleofficial/")[Sanicle]* (Tulsa, OK; promoted from Senior AI/ML Infrastructure Engineer; led a team of five; the IBM watsonx integration behind Sanicle's #link("https://www.ibm.com/partnerplus/directory/solution/0638")[IBM Silver Partner] certification) · *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* (Douyin Mall capstone, Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ; offline-first React Native field app, \#1 contributor) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 26 LinkedIn recommendations).
+      *Previously:* *AI Agent Architect at #link("https://engram.media/")[Engram]* (Albuquerque, NM · remote; recruited onto *Anthropic's Partner Network architect track* after founder Luka Madzarac's own Claude agent surfaced Chan's open-source portfolio — publicly confirmed by him; credentials behind Engram's Partner Network approval) · *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* (Douyin Mall capstone, Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ; offline-first React Native field app, \#1 contributor) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 26 LinkedIn recommendations).
     ]
   })
 })

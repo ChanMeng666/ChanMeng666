@@ -1006,6 +1006,7 @@
       ],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": {
         "id": "whiri-ai",
@@ -1388,6 +1389,7 @@
           "context": "Senior Full Stack Engineer & Website Team Lead and Ambassador (Jul 2025 — Sep 2026)"
         }
       ],
+      "_adopterOrgs": [],
       "_affiliationOrg": {
         "id": "she-sharp",
         "name": "She Sharp",
@@ -1677,6 +1679,7 @@
           "context": "Founding Principal Engineer (Oct 2025 — Sep 2026)"
         }
       ],
+      "_adopterOrgs": [],
       "_affiliationOrg": {
         "id": "gavigo",
         "name": "GAVIGO Inc.",
@@ -1873,6 +1876,7 @@
       ],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -2043,6 +2047,7 @@
       ],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -2205,6 +2210,7 @@
         }
       ],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -2381,6 +2387,7 @@
       "_featuredStackResolved": [],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -2674,6 +2681,7 @@
       ],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -2817,6 +2825,7 @@
           "context": "Chief Technology Officer (Nov 2024 — Jun 2025)"
         }
       ],
+      "_adopterOrgs": [],
       "_affiliationOrg": {
         "id": "freeperiod",
         "name": "FreePeriod",
@@ -3422,6 +3431,7 @@
           "context": "CTO (Mar 2025 — present)"
         }
       ],
+      "_adopterOrgs": [],
       "_affiliationOrg": {
         "id": "femtech-weekend",
         "name": "FemTech Weekend",
@@ -3683,6 +3693,7 @@
           "context": "Event partner and co-reviewer of the eatropolis-website build, on behalf of Auckland Council Events"
         }
       ],
+      "_adopterOrgs": [],
       "_affiliationOrg": {
         "id": "chow-luck-club",
         "name": "Chow Luck Club Ltd",
@@ -4129,6 +4140,7 @@
       ],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -4538,6 +4550,7 @@
       ],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -4847,6 +4860,7 @@
       ],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -5390,6 +5404,7 @@
       ],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -5522,6 +5537,7 @@
       "_featuredStackResolved": [],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -7145,6 +7161,7 @@
       ],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -7813,7 +7830,7 @@
       "provenance": "personal",
       "tier": "primary",
       "recency": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-16",
       "name": "a11y-loop",
       "priority": 104,
       "category": "ai-apps",
@@ -7857,16 +7874,26 @@
       "startDate": "2026-07",
       "publicSummary": "Accessible interfaces usually fail at the moment the code is\nwritten, not at the audit months later. a11y-loop moves the check\nto that moment: it gives an AI coding agent the rules up front so\nit writes accessible markup by default, then drives a real browser\nover what it built — Playwright plus axe-core, across the actual\ninteraction states rather than one static snapshot — and reports\nwhat passed. Its distinguishing habit is the honest part: it\npublishes an explicit list of what it could NOT verify, so a green\nrun never implies full WCAG 2.2 AA coverage it has no standing to\nclaim. Ships as both a Claude Code skill and a standalone CLI\n(`npx a11y-loop`), with a contrast checker that proposes fixes and\na CI mode. MIT.\n",
       "narrative": {
-        "impactHeadline": "Makes AI coding agents write accessible UI by default, verifies it in a real browser, and lists what it could not check so a pass never overclaims WCAG 2.2 AA. The disability-led NZ org that set the problem validated it live: \"what we really needed was a tool for programmers.\"",
+        "impactHeadline": "Makes AI coding agents write accessible UI by default, verifies it in a real browser, and lists what it could not check so a pass never overclaims WCAG 2.2 AA. Built for the accessible-UI challenge set at the Aotearoa AI Hackathon 2026 by the organisation now adopting it.",
         "problem": "AI coding agents produce interfaces fast, and they produce\ninaccessible ones by default: missing focus indicators, unlabelled\ncontrols, contrast that fails at a ratio nobody measured. The usual\nremedy is a late audit against a static page, which misses every\nstate a user actually reaches and reports a pass the tool has no\nstanding to claim.\n",
         "audience": "Developers who build UI by directing coding agents, and the teams\nwho inherit that code — plus anyone who needs a defensible\naccessibility position rather than a badge.\n",
         "technicalApproach": "Two halves sharing one rule set. The authoring half is an Agent\nSkill on the open standard, so Claude Code, Cursor and Copilot pick\nup the same defaults. The verification half drives Playwright over\nthe built states and runs axe-core 4.12 against WCAG 2.2 AA, then\npartitions the result into checked, failed, and — the part most\ntools omit — not checkable by automation.\n",
-        "outcomes": "Built 26 Jul – 1 Aug 2026 and published to npm (v0.2.4, 31 Jul) —\ndates verifiable from the repo's own commit history, and both *before*\nthe **Aotearoa AI Hackathon Festival 2026** (7–8 Aug, AUT City Campus),\nwhere **My Life My Voice**, a disability-led NZ organisation, had set\n*Accessible UI Generation for Developers* as a problem statement\narguing that the bottleneck is workflow rather than developer intent.\nChan mentored at that festival. With the competition closed, nothing\nbeing scored and no prize at stake, she handed the finished project to\nthe organisation that had raised the problem: contact-form submission\nand an email to `info@mylifemyvoice.org.nz` on **2026-08-11**, offering\nthe MIT licence at no cost, a free walkthrough for their team or the\nproviders they work with, and a roadmap open to feedback from disabled\ntesters — plus a public LinkedIn post crediting them the same day.\nAll three carried the project's own §3 honesty rules rather than\nsuspending them for outreach: no compliance claim anywhere, coverage\ncited with its denominator (17 of the 55 WCAG 2.2 A/AA success criteria\nhave any automated rule at all), and an explicit statement that\nautomation does not replace testing with disabled people. The\nREADME's most flattering number — the 35 → 1 → 0 benchmark — was\ndeliberately left out of all three, because N=6, single-run and\nself-audited cannot be caveated properly in an email or a social post;\nthe fully reproducible 163 → 0 demo was used instead.\n**Validated on 2026-09-04 by the organisation that set the problem.**\nChan gave **Timothy Young**, CTO of My Life My Voice, a live\nscreen-share walkthrough that day — pull the public repo, ask the coding\nagent to install the Agent Skill and the CLI, then invoke it with\n`/a11y-loop` — run against a real production site. Young wrote that\nchallenge brief, and he had moved from the organisation's Chief\nExecutive role into the CTO seat to lead its Workforce Futures–funded\nprogramme putting AI resources into New Zealand's social-sector\norganisations, which is why an accessibility tool for developers sits\ninside his remit at all. His verdict is recorded with its hedge intact:\nit **\"won't do the entire job, but it looks like it will be a big\nhelp.\"** The stronger evidence is what he said about the gap itself —\nthat vibe-coding tools can be asked to follow the accessibility\nguidelines and will do \"an okay job\", but **\"what we really needed was a\ntool for programmers\"**. That is a11y-loop's own thesis, arrived at\nindependently by the author of the problem statement. He judged that\napplying it \"doesn't seem like it would be that hard\", is putting it in\nfront of the organisation's own developer to work in, and the two\ndiscussed how to promote it so more people use it. The work continues\nwith Chan advising: in the same call she walked him through installing\nCursor and standing up a local development environment — GitHub CLI,\ngit, Node.js — from scratch. Three and a half weeks separate the\nunsolicited handover, made with nothing at stake, from that walkthrough.\nWhat it is **not**: a paid contract, and not evidence that the tool is\ndeployed in production — nothing has shipped, and no adoption decision\nwas put on the record. The §3 honesty rules above bind harder as the\ntool reaches real teams, not less.\n",
+        "outcomes": "Built 26 Jul – 1 Aug 2026 and published to npm (v0.2.4, 31 Jul) —\ndates verifiable from the repo's own commit history, and both *before*\nthe **Aotearoa AI Hackathon Festival 2026** (7–8 Aug, AUT City Campus),\nwhere **My Life My Voice**, a disability-led NZ organisation, had set\n*Accessible UI Generation for Developers* as a problem statement\narguing that the bottleneck is workflow rather than developer intent.\nChan mentored at that festival. With the competition closed, nothing\nbeing scored and no prize at stake, she handed the finished project to\nthe organisation that had raised the problem: contact-form submission\nand an email to `info@mylifemyvoice.org.nz` on **2026-08-11**, offering\nthe MIT licence at no cost, a free walkthrough for their team or the\nproviders they work with, and a roadmap open to feedback from disabled\ntesters — plus a public LinkedIn post crediting them the same day.\nAll three carried the project's own §3 honesty rules rather than\nsuspending them for outreach: no compliance claim anywhere, coverage\ncited with its denominator (17 of the 55 WCAG 2.2 A/AA success criteria\nhave any automated rule at all), and an explicit statement that\nautomation does not replace testing with disabled people. The\nREADME's most flattering number — the 35 → 1 → 0 benchmark — was\ndeliberately left out of all three, because N=6, single-run and\nself-audited cannot be caveated properly in an email or a social post;\nthe fully reproducible 163 → 0 demo was used instead.\n**Validated on 2026-09-04 by the organisation that set the problem.**\nChan gave **Timothy Young**, CTO of My Life My Voice, a live\nscreen-share walkthrough that day — pull the public repo, ask the coding\nagent to install the Agent Skill and the CLI, then invoke it with\n`/a11y-loop` — run against a real production site. Young wrote that\nchallenge brief, and he had moved from the organisation's Chief\nExecutive role into the CTO seat to lead its Workforce Futures–funded\nprogramme putting AI resources into New Zealand's social-sector\norganisations, which is why an accessibility tool for developers sits\ninside his remit at all. His verdict is recorded with its hedge intact:\nit **\"won't do the entire job, but it looks like it will be a big\nhelp.\"** The stronger evidence is what he said about the gap itself —\nthat vibe-coding tools can be asked to follow the accessibility\nguidelines and will do \"an okay job\", but **\"what we really needed was a\ntool for programmers\"**. That is a11y-loop's own thesis, arrived at\nindependently by the author of the problem statement. He judged that\napplying it \"doesn't seem like it would be that hard\", is putting it in\nfront of the organisation's own developer to work in, and the two\ndiscussed how to promote it so more people use it. The work continues\nwith Chan advising: in the same call she walked him through installing\nCursor and standing up a local development environment — GitHub CLI,\ngit, Node.js — from scratch. Three and a half weeks separate the\nunsolicited handover, made with nothing at stake, from that walkthrough.\n**Adoption (confirmed by Chan, 2026-09-17).** After the walkthrough\nYoung told Chan that My Life My Voice will adopt a11y-loop and promote\nit within its development team — the first organisation to take the\ntool up. What it is **not**: a paid contract, a signed partnership, or\nyet evidence that the tool is running in production. The §3 honesty rules above bind harder as the\ntool reaches real teams, not less.\n",
         "myRole": "Sole author. Published to npm as `a11y-loop`; the repo is written\nagent-first, with an AGENTS.md alongside the README so an agent can\norient itself without a human intermediary.\n"
       },
       "_featuredStackResolved": [],
       "_contextLogo": [],
       "_affiliationOrgs": [],
+      "_adopterOrgs": [
+        {
+          "id": "my-life-my-voice",
+          "name": "My Life My Voice",
+          "url": "https://www.mylifemyvoice.org.nz",
+          "logoLight": "/public/organizations/my-life-my-voice-mark-black.png",
+          "logoDark": "/public/organizations/my-life-my-voice-mark-white.png",
+          "context": "Disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon Festival 2026; after a live walkthrough on 2026-09-04 its CTO committed to adopting a11y-loop and promoting it within its development team, with Chan advising — unpaid, no signed partnership"
+        }
+      ],
       "_affiliationOrg": null,
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -11826,12 +11853,14 @@
         "AI For People"
       ],
       "url": "https://www.mylifemyvoice.org.nz",
+      "logo": "/public/organizations/my-life-my-voice-mark-black.png",
+      "logoDark": "/public/organizations/my-life-my-voice-mark-white.png",
       "type": "nonprofit",
       "industry": "Non-profit Organizations — disability-led peer support and advocacy (Aotearoa New Zealand)",
       "hq": {
         "countryCode": "NZ"
       },
-      "description": "Disability-led New Zealand organisation — \"where disabled people connect\nand grow\" — running peer support and peer-support training, Kaitūhono /\nConnector support on an Enabling Good Lives approach, and regional\ncommunity groups (Waikato, Palmerston North). Its **AI For People**\nprogramme is a disability-led project helping organisations use AI \"in\nsafe, practical, and inclusive ways\", grounded in Te Tiriti o Waitangi and\nEnabling Good Lives, and stating its own principle as \"making sure AI works\nfor us — not the other way around\". Member of NZDSN; AI For People is\nfunded through the Workforce Futures Fund | Tahua Rāngaimahi Amatata.\n\n**Timothy Young** (Tim Young) is its Chief Technology Officer — since\nOctober 2025, part-time, having been the organisation's Chief Executive\nfrom October 2022. He stepped across into the CTO seat to lead the\nWorkforce Futures–funded programme putting AI resources into New Zealand's\nsocial-sector organisations, which is what places developer tooling inside\nhis remit. Separately he is founder and CEO of **Smart Access Limited**\n(Hamilton, NZ), whose **Access Quest** product line — Smart Access's own\nbranding, not a separate company — builds accessibility and\nfootpath-condition data collection plus a pedestrian-navigation service.\n\n**Working relationship since 2026-09-04.** Having set the *Accessible UI\nGeneration for Developers* challenge at the Aotearoa AI Hackathon Festival\n2026 and received Chan's unsolicited handover of `a11y-loop` on\n2026-08-11, the organisation took a live walkthrough of the tool on\n2026-09-04. Young's verdict was that it \"won't do the entire job, but it\nlooks like it will be a big help\", and — the stronger point, from the\nauthor of the problem statement — that what was \"really needed was a tool\nfor programmers\", which is the tool's own premise. He is putting it in\nfront of the organisation's developer to work in, the two discussed how to\npromote it more widely, and Chan is providing technical guidance.\nValidation and in-progress uptake — not a recorded adoption decision, not\na paid engagement, not a signed partnership, not an endorsement of Chan,\nand not evidence of a production deployment.\n",
+      "description": "Disability-led New Zealand organisation — \"where disabled people connect\nand grow\" — running peer support and peer-support training, Kaitūhono /\nConnector support on an Enabling Good Lives approach, and regional\ncommunity groups (Waikato, Palmerston North). Its **AI For People**\nprogramme is a disability-led project helping organisations use AI \"in\nsafe, practical, and inclusive ways\", grounded in Te Tiriti o Waitangi and\nEnabling Good Lives, and stating its own principle as \"making sure AI works\nfor us — not the other way around\". Member of NZDSN; AI For People is\nfunded through the Workforce Futures Fund | Tahua Rāngaimahi Amatata.\n\n**Timothy Young** (Tim Young) is its Chief Technology Officer — since\nOctober 2025, part-time, having been the organisation's Chief Executive\nfrom October 2022. He stepped across into the CTO seat to lead the\nWorkforce Futures–funded programme putting AI resources into New Zealand's\nsocial-sector organisations, which is what places developer tooling inside\nhis remit. Separately he is founder and CEO of **Smart Access Limited**\n(Hamilton, NZ), whose **Access Quest** product line — Smart Access's own\nbranding, not a separate company — builds accessibility and\nfootpath-condition data collection plus a pedestrian-navigation service.\n\n**Working relationship since 2026-09-04.** Having set the *Accessible UI\nGeneration for Developers* challenge at the Aotearoa AI Hackathon Festival\n2026 and received Chan's unsolicited handover of `a11y-loop` on\n2026-08-11, the organisation took a live walkthrough of the tool on\n2026-09-04. Young's verdict was that it \"won't do the entire job, but it\nlooks like it will be a big help\", and — the stronger point, from the\nauthor of the problem statement — that what was \"really needed was a tool\nfor programmers\", which is the tool's own premise. He is putting it in\nfront of the organisation's developer to work in, the two discussed how to\npromote it more widely, and Chan is providing technical guidance. After\nthe walkthrough Young told Chan that My Life My Voice will adopt\na11y-loop and promote it within its development team. A stated adoption\ncommitment — not a paid engagement, not a signed partnership, not an\nendorsement of Chan, and not yet evidence of a production deployment.\n",
       "sameAs": [
         "https://nz.linkedin.com/company/mylifemyvoice"
       ],
@@ -11841,8 +11870,12 @@
       "meta": {
         "x_brand": {
           "displayTier": "secondary",
-          "category": "partner",
-          "context": "Disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon Festival 2026; its CTO took a live walkthrough of a11y-loop on 2026-09-04 and is working it in with the organisation's developer, with Chan advising — unpaid, no signed partnership, nothing deployed",
+          "category": "adopter",
+          "logoLockups": {
+            "light": "/public/organizations/my-life-my-voice-logo-tagline-black.png",
+            "dark": "/public/organizations/my-life-my-voice-logo-white.png"
+          },
+          "context": "Disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon Festival 2026; after a live walkthrough on 2026-09-04 its CTO committed to adopting a11y-loop and promoting it within its development team, with Chan advising — unpaid, no signed partnership",
           "relatedProjectId": "a11y-loop"
         }
       }
@@ -13002,6 +13035,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-09-16",
     "buildYear": "2026",
-    "buildTimestamp": "2026-09-16T12:02:20.700Z"
+    "buildTimestamp": "2026-09-16T12:48:10.965Z"
   }
 }

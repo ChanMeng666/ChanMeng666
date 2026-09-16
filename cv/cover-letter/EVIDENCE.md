@@ -99,12 +99,12 @@ one it is evidence.
 - 94.5% of all lines added on the She Sharp platform (801,609 of 847,827)
   across 1,381 commits and 251 merged pull requests over 13.3 months of active
   build. — `projects[she-sharp]`
-- 534 of 564 commits on FemTech Weekend's second-generation platform, and 100%
+- 538 of 570 commits on FemTech Weekend's second-generation platform, and 100%
   of the 58 commits on the first. — `work[femtech-weekend]`
 - 211 of 220 non-merge commits on the bilingual teaching platform that serves
   five cohort versions side by side. — `work[technest]`
 - Invented ArchLang — a hand-written compiler with a lexer, recursive-descent
-  parser and zero runtime dependencies, 83 diagnostic codes each carrying a byte
+  parser and zero runtime dependencies, 139 diagnostic codes each carrying a byte
   span and a machine-applicable fix — then built the commercial product on top
   of it. — `projects[archlang]`, `projects[archcanvas]`
 

@@ -22,7 +22,7 @@ work:
     featured: true
     tier: flagship
     recency: active
-    lastUpdated: "2026-07-23"
+    lastUpdated: "2026-09-16"
     keywords:
       - ArchCanvas (AI architect for floor plans)
       - ArchLang (declarative floor-plan language)
@@ -33,34 +33,126 @@ work:
       - Vercel AI SDK
       - Next.js
       - Building in public
+    # EVIDENCE (re-read 2026-09-16 from the archcanvas, archlang and
+    # archcanvas-growth repos; archcanvas + archcanvas-growth are PRIVATE — never
+    # link them; github.com/ChanMeng666/archlang and github.com/archcanvas/archcanvas
+    # are public).
+    #
+    # ORDER OF EVENTS — easy to get backwards, and the CV once did: the PRODUCT
+    # came first (first commit 2026-04-08, drawing plans as freehand GPT-4o SVG).
+    # ArchLang was invented eleven weeks later (npm 0.1.0 on 2026-06-24) and
+    # replaced the freehand engine on 2026-06-25. Never write "first invented the
+    # language, then built the product".
+    #
+    # TRACTION — do not claim any. As of the 2026-09-01 reconciliation: 5 external
+    # signups ever, 0 paying users, $0 live revenue, no public launch yet (Show HN
+    # and Product Hunt are drafts; Product Hunt planned 2026-10-05). npm downloads
+    # and GitHub stars are release-driven and the growth repo bans citing them as
+    # traction. The 26/26 benchmark is founder-run and offline; with outside users
+    # 1 of 5 first plans came out clean. Copy about this role is engineering
+    # evidence only. Banned words from the founder brief: "first", "only",
+    # "permit-ready", "code-compliant".
+    #
+    # AUTHORSHIP — sole engineer, built WITH AI coding agents (612 of 853 archcanvas
+    # commits carry a Claude co-author line). Say "sole engineer"; never "every
+    # commit is mine" or anything implying unassisted hand-coding.
     narrative:
-      impactHeadline: "Founder of ArchCanvas — an AI architect that turns a plain-English brief into one strong, checkable, dimensioned floor plan — built on ArchLang, the open-source floor-plan language I wrote that compiles code to real drawings (\"Typst/LaTeX for architecture\")."
+      impactHeadline: "Founder and sole engineer of ArchCanvas, an AI architect that turns a plain-English brief into a dimensioned floor plan — and of ArchLang, the open-source floor-plan language I invented so every plan it draws can be compiled, checked and edited exactly."
       companyContext: |
         ArchCanvas ([archcanvas.uk](https://archcanvas.uk/)) is an AI design
         agent for architects and self-builders: describe a building in plain
         language and it designs a dimensioned floor plan you can actually build
         from — with room labels and measurements — alongside a grounded AI
         rendering, then stays conversational on an infinite zoomable canvas
-        where you refine the plan by talking to it. It is productised on top of
-        **ArchLang** ([github.com/ChanMeng666/archlang](https://github.com/ChanMeng666/archlang) ·
+        where you refine the plan by talking to it. It is live and takes real
+        payments on a pay-per-result model (a free first generation, then credit
+        packs through Stripe; no subscription). Underneath it is **ArchLang**
+        ([github.com/ChanMeng666/archlang](https://github.com/ChanMeng666/archlang) ·
         [playground.archlang.uk](https://playground.archlang.uk) · npm
         [@chanmeng666/archlang](https://www.npmjs.com/package/@chanmeng666/archlang)),
         the open-source declarative floor-plan language I designed and wrote.
       mission: |
-        Make a floor plan a **program, not a picture**. Because every ArchCanvas
-        plan is real parametric ArchLang rather than pixels, edits are precise
-        and re-editable — nudge a wall, tweak a parameter, or have the AI review
-        circulation and pin fixes in place — capabilities an image-generation
-        tool structurally cannot offer.
+        Make a floor plan a **program, not a picture**. In 2026 generating a
+        pretty image of a floor plan is a commodity; what is scarce is a design
+        that can be proven right. A picture cannot be compiled, linted or
+        measured — text can. Because every ArchCanvas plan is real ArchLang
+        rather than pixels, iterating means recompiling rather than re-prompting:
+        nudge a wall, change a parameter or ask the AI to fix circulation, and
+        exactly that thing changes.
       myMandate: |
-        Sole author of both the language and the product — every commit is mine —
-        building in public. ArchLang is a hand-written compiler (lexer +
-        recursive-descent parser, zero runtime dependencies) with
-        architectural-soundness linting, a CLI, LSP + VS Code tooling, and a
-        client-side playground, published open-source to npm. ArchCanvas is the
-        Next.js product that consumes it as a package: an AI agent writes
-        ArchLang, compiles it, grounds a rendering on the compiled plan, and
-        critiques it — then lets the user refine the plan in place.
+        Founder and sole engineer of both the product and the language, working
+        with AI coding agents and building in public. Everything from product
+        positioning and pricing to the compiler, the agent loop, payments,
+        deployment and the launch plan is mine to decide and to ship.
+      impactDelivered: |
+        **The product came first, and it taught me what was wrong with it.**
+        I started ArchCanvas on 2026-04-08 with the obvious architecture: ask a
+        model to draw the floor plan as an SVG. The drawings looked plausible
+        and could not be trusted — a model drawing a picture cannot tell you
+        whether a door collides with a wall, and it redraws the whole plan when
+        you ask it to move one thing. So eleven weeks in I stopped and built the
+        thing that was missing: a language. ArchLang 0.1.0 went to npm on
+        2026-06-24, and the next day it replaced the freehand drawing engine
+        inside ArchCanvas. Since then the AI writes ArchLang, the compiler turns
+        it into a dimensioned drawing, and the edits are exact and replayable.
+
+        **ArchLang — an original programming language, published and
+        maintained.** 53 published npm versions through v1.36.0
+        (2026-09-13); a hand-written, zero-runtime-dependency TypeScript
+        compiler whose error system carries 139 stable diagnostic codes (92
+        errors, 47 warnings), each pointing at the exact span of source it
+        refers to; 4,338 passing tests (measured 2026-09-04); and 19
+        architecture decision records. Around the compiler I shipped a CLI, a
+        language server with a VS Code extension, a browser playground, a docs
+        site, an MCP server so other AI agents can write and check floor plans
+        (`@chanmeng666/archlang-mcp`), and a 1,600-row open dataset of example
+        plans. One design rule holds all of it together, written down as an
+        ADR: *the compiler computes facts and gives advice; it never designs.*
+        Arranging rooms is the agent's job, which keeps the language honest
+        about what it can and cannot promise.
+
+        **ArchCanvas — the agent that uses it.** Nine agent tools, five of them
+        on the live path: ask design questions, generate a plan, edit a plan
+        with a minimal diff, render it, and critique it. Every generated plan
+        goes through a ship gate — compile, auto-fix, topology check, repair,
+        annotate — and anything still wrong is written on the plan rather than
+        hidden. On my offline benchmark of 26 briefs (run 2026-09-07), all 26
+        passed every check, with a median of one design round at 33 seconds.
+        Around the agent sits a complete product: multi-storey plans,
+        select-to-act editing, parametric sliders, a review mode, DXF and PDF
+        export, share links, and Stripe credit packs with idempotent refunds.
+
+        **Where it stands.** Live at archcanvas.uk with real payments wired,
+        and pre-launch: the public launch is planned for October 2026, and the
+        commercial test that decides the next step is written down with its
+        pass and stop thresholds before the result is known.
+      technicalHighlights: |
+        ArchCanvas: Next.js 15 + React 19 + TypeScript strict, Tailwind 4,
+        Vercel AI SDK v4 over OpenAI models for design and GPT Image for
+        rendering, Neon Postgres with Drizzle ORM and Neon Auth, Stripe,
+        Cloudinary. Shipped as a Docker image through GitHub Actions and GHCR
+        with a canary-then-swap deploy (boot the new container, poll its health
+        endpoint, swap only if healthy) onto a DigitalOcean server behind
+        Cloudflare. 853 commits since 2026-04-08.
+
+        ArchLang: pure TypeScript with zero runtime dependencies — a
+        hand-written lexer, a recursive-descent parser that recovers from errors
+        instead of throwing, a separate expression evaluator, SVG and DXF
+        backends with optional PDF/PNG add-ons, and architectural-soundness lint
+        rules (reachability, door-swing collision, windowless bedrooms, wet-room
+        enclosure, circulation). `compile()` returns
+        `{ svg, errors, warnings, diagnostics, ast, scene }` and never throws on
+        a bad plan, which is what lets an agent read its own mistakes and fix
+        them.
+    publicSummary: |
+      Founder and sole engineer of ArchCanvas (archcanvas.uk), an AI design
+      agent that turns a plain-English brief into a dimensioned floor plan you
+      can build from, then lets you refine it by talking. Invented ArchLang, an
+      open-source floor-plan language (53 npm releases, 139 diagnostic codes,
+      4,338 tests), when drawing plans as pictures proved impossible to check —
+      so every plan ArchCanvas draws can be compiled, checked and edited
+      exactly.
+
   - id: engram
     name: Engram
     position: AI Agent Architect
@@ -71,7 +163,7 @@ work:
     featured: true
     tier: flagship
     recency: recent
-    lastUpdated: "2026-08-26"
+    lastUpdated: "2026-09-16"
     keywords:
       - AI System Architecture
       - Mission Control (internal product)
@@ -81,7 +173,7 @@ work:
       - Notion knowledge base
       - API-as-UI experiences
     narrative:
-      impactHeadline: "Recruited by Claude itself — when Engram's founder asked the LLM to surface an AI architect for their Anthropic Partner Network track, Chan was the recommendation. Founder Luka Madzarac publicly confirmed it — empirical proof that GEO + open-source portfolios work."
+      impactHeadline: "Recruited through Claude itself — founder Luka Madzarac publicly confirmed it surfaced Chan as a top match — then completed the Anthropic Partner Network Learning Path and passed the CCA-F practice exam, credentials behind Engram's approval into the Partner Network."
       companyContext: |
         Engram LLC ([engram.media](https://engram.media/) /
         [LinkedIn company](https://www.linkedin.com/company/engrammedia/))
@@ -183,8 +275,15 @@ work:
            agentic tooling experience (claude-code-audio-hooks,
            CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based
            media generation) into cohort discussions on production-grade
-           agent design.
-        4. **Open-source IP preserved.** The cohort agreement explicitly
+           agent design, including architecture discussions for Engram's
+           own product (still in development and unreleased when she left,
+           so no delivery outcome is claimed).
+        4. **The Partner Network goal was reached.** Chan's completed
+           Learning Path and passed CCA-F practice exam were part of the
+           architect credentials behind Engram's approval to join the
+           Anthropic Partner Network. With that done, she left the cohort
+           in July 2026 to focus on her own products.
+        5. **Open-source IP preserved.** The cohort agreement explicitly
            carved out claude-code-audio-hooks (now **echook**) and the
            rest of Chan's prior work as her own property — echook has
            since gone on to 84 GitHub stars independently of Engram.
@@ -234,7 +333,7 @@ work:
     featured: true
     tier: primary
     recency: recent
-    lastUpdated: "2026-08-04"
+    lastUpdated: "2026-09-16"
     keywords:
       - Cursor
       - Claude Code
@@ -446,7 +545,8 @@ work:
       and capstone voting, Typst PDF handout pipeline). The programme ran April
       25 – July 17, 2026 and graduated 30 students, who shipped 6 deployed
       multi-user AI products to the public capstone showcase; reported to
-      Abiodun Oyedele and Afolasade Bello.
+      Abiodun Oyedele and Afolasade Bello. TechNest kept using the curriculum
+      and teaching platform after the course ended.
 
   - id: gavigo
     name: Gavigo
@@ -560,7 +660,10 @@ work:
         Principal Engineer, Activation, Execution & AI Systems** title
         and the Protected Technical Domain backing it.
 
-        **How the role closed (Sept 2026).** The last mandate I was named
+        **How the role closed (Sept 2026).** I left GAVIGO in September 2026,
+        at the end of a project phase, to focus on ArchCanvas. Founder & CEO
+        Saba Gecgil, engineer Olga Adam and colleague Lutfullah Ugurer worked
+        alongside me and can speak to the work. The last mandate I was named
         on was the CEO's v1.7 *Activation Platform MVP Build Mandate*
         (2026-08-28), which made me **build lead and Phase 0 owner**; the
         company filed a USPTO nonprovisional patent on 2026-08-08 covering
@@ -669,7 +772,7 @@ work:
     featured: true
     tier: primary
     recency: historical
-    lastUpdated: "2026-05-27"
+    lastUpdated: "2026-09-16"
     keywords:
       - EdTech
       - Charter school launch
@@ -811,7 +914,8 @@ work:
       the newly-formed **Bandicoot** engineering squad for a focused
       three-week delivery (22 October – 9 November 2025) under
       founder/CEO Penelope Barton. Designed and shipped the ESOL
-      learning platform end-to-end; refactored the existing Emi LMS
+      learning platform end-to-end (still in use in September 2026, by
+      roughly 500 students); refactored the existing Emi LMS
       into a multi-tenant monorepo on Firebase DataConnect +
       PostgreSQL (Cloud SQL) serving both Emi (primary) and
       Infinite-Learn (AIA high school) on a single codebase; led
@@ -830,7 +934,17 @@ work:
     # host's own billing is recorded where it belongs — in that event's summary
     # in 80-events.yaml — not promoted into `position`.
     #
-    # SHE SHARP SCALE FIGURES — resolved 2026-08-25 on Chan's instruction that
+    # SHE SHARP SCALE FIGURES — RE-DECIDED 2026-09-16 (Chan, career-stories
+    # intake wave 1): use only figures the records support. That supersedes the
+    # 2026-08-25 decision described below, which is kept for history. Use:
+    #   events since 2014   96+   (computed from the event register — SOURCED)
+    #   people registered   2,919 distinct event registrants on record
+    #   sponsors            39 on the logo wall
+    # (the last two from the transformation record's published-vs-recorded
+    # table, chapter 07). Do NOT use 3,500+ members, 5,000+ women reached, 50+
+    # partners or 18/120 mentors on any surface.
+    #
+    # HISTORY — resolved 2026-08-25 on Chan's instruction that
     # the numbers the She Sharp site displays are authoritative. Source of truth:
     # she-sharp/lib/data/stats.ts (+ the live event register). Aligned across all
     # eight surfaces that carried them: here, 20-projects-flagship.yaml,
@@ -896,14 +1010,13 @@ work:
     narrative:
       impactHeadline: "Recruited by founder Dr Mahsa Mohaghegh as the senior engineer She Sharp lacked; over 13.3 months moved the charity's website and 1,549-person mailing list onto infrastructure it owns, and wrote its recurring work down as 11 agent skills a non-engineer can follow."
       companyContext: |
-        She Sharp is New Zealand's leading women-in-STEM community — a
+        She Sharp is a volunteer-run New Zealand women-in-STEM community — a
         registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
         AI/NLP researcher and Head of Computer and Information Sciences at AUT. The
-        organization runs a mentorship programme, a corporate-partner
-        network, and a recurring events calendar that together support
-        3,500+ members and 5,000+ women reached
-        across its history. 50+ corporate partners, 96+ events since 2014,
-        18 industry mentors.
+        organisation runs a mentorship programme, a sponsor network and a
+        recurring events calendar: 96+ events since 2014, 2,919 distinct
+        people registered for its events on record, and 39 sponsors on its
+        logo wall.
       mission: |
         Close the representation gap in technology by connecting women in
         STEM with role models, mentors, employers, and each other — and by
@@ -1043,8 +1156,9 @@ work:
         tutorials (2026-07-28); 1:1 Typst coaching for a teammate
         (2026-08-02); a recorded end-to-end event-lifecycle tutorial
         (2026-08-24); and a two-hour in-person workshop in Auckland on
-        2026-08-29, during which I produced usable promo videos live while
-        explaining the process. The written interface to all of it is an
+        2026-08-29 for the marketing and events teams, during which I
+        produced usable promo videos live while teaching them to run the
+        agent skills and to work in Cursor themselves. The written interface to all of it is an
         AI skills guide addressed to anyone on the team "whether or not
         you have ever written a line of code". Alongside it I derived a
         1,714-line event-lifecycle standard operating procedure by
@@ -1095,14 +1209,16 @@ work:
         shesharp.org.nz that identified the high-priority mobile-vs-desktop
         ranking gap on "women in tech New Zealand."
 
-        **How the role closed (Sept 2026).** I left She Sharp in September
-        2026. The aim all along had been to make the answer to "how does
-        this work?" a file rather than a person, and the exit is where that
-        was tested: 35,062 lines of Markdown across 105 files in the
-        repository, the non-coder AI skills guide, two live playbooks
-        hash-verified against their source, the 52 recorded decisions, and
-        a 36-page transformation record in which every figure is measured,
-        cited or derived. It also says plainly what was not finished. Three
+        **How the role closed (Sept 2026).** The transformation reached a
+        natural milestone and I left She Sharp in September 2026 to focus on
+        ArchCanvas. The remaining website team maintains the platform, and it
+        and the agent skills are still in use. The aim all along had been to
+        make the answer to "how does this work?" a file rather than a person,
+        and the exit is where that was tested: 35,062 lines of Markdown across
+        105 files in the repository, the non-coder AI skills guide, two live
+        playbooks hash-verified against their source, and the 52 recorded
+        decisions. I kept my own account of the work, with every figure
+        measured, cited or derived, and it says plainly what was not finished. Three
         money decisions were prepared and left with the founder, who holds
         the accounts: the nonprofit collaboration-tool upgrade, the mailing
         vendor downgrade, and the website vendor's renewal before
@@ -1230,7 +1346,14 @@ work:
     featured: true
     tier: primary
     recency: active
-    lastUpdated: "2026-09-02"
+    lastUpdated: "2026-09-16"
+    # EVIDENCE re-read 2026-09-16 from femtech-weekend-website (PRIVATE repo —
+    # never link it). Chan supported the 2026 Shanghai Summit REMOTELY; she was
+    # not on site. Summit tickets were sold on Humanitix, not through her system —
+    # never claim registration or attendance numbers (none exist in the repo).
+    # The published agenda PDF is a Canva file authored by Zhu Yihan; do not claim
+    # a Typst agenda. Zhu Yihan's praise was informal (Slack/WeChat), not a
+    # written recommendation — do not quote it.
     keywords:
       - Next.js
       - Docusaurus
@@ -1245,10 +1368,10 @@ work:
       - Radix UI
       - earth-flyline
     narrative:
-      impactHeadline: "Sole technical leader and co-architect with the founder; tenure spans two platform generations (Next.js Gen-1 → Docusaurus Gen-2 editorial rewrite), serving as the sole engineering voice across all org events and through the 2026 Shanghai Summit cycle, which ran to 25 June 2026."
+      impactHeadline: "Sole engineer behind every digital surface of FemTech Weekend: two platform generations, plus the summit pages, application system and admin review tools that carried its four-day 2026 Shanghai Summit — built and run remotely from Auckland."
       companyContext: |
-        FemTech Weekend is China's first organisation built specifically around
-        women's health technology — a community, research outfit, and event
+        FemTech Weekend describes itself as China's first organisation built
+        specifically around women's health technology — a community, research outfit, and event
         producer rolled into one, **headquartered in Chengdu, founded 2024
         by Zhu Yihan**, with a 2–10-person core team. Its remit is to take
         the international FemTech movement (a category coined in 2016 by
@@ -1317,7 +1440,8 @@ work:
         addresses before unlocking research reports.
 
         **Generation 2 — the current platform (femtech-weekend-website).**
-        564 commits, 534 of them (94.7%) authored solo by me. A
+        570 commits to 2026-07-30, 538 of them (94.4%) mine; the other 32 are
+        founder Zhu Yihan's content edits (speakers, venue photos, copy). A
         substantially larger and more ambitious system: Docusaurus 3.9 as
         the editorial spine (chosen deliberately over keeping Next.js,
         because the site's centre of gravity had shifted from "marketing
@@ -1340,12 +1464,29 @@ work:
         the *FemmeHealth Ventures Alliance* partnership announcement
         (2025-06).
 
+        **The summit system I built.** From the first summit commit on
+        2026-03-06 I built everything the summit ran on online, working
+        remotely: four summit routes (the main summit page, programme, pitch
+        and an hour-by-hour agenda) from 20 purpose-built components — a 3D
+        globe of 40 countries, speaker and partner grids, an agenda timeline,
+        a venue showcase and a programme price calculator — and the
+        application system behind them. Founders applying to pitch, companies
+        applying to the international programme and speakers applying to
+        speak each land in their own Postgres table with document and
+        headshot uploads; a gated agenda download captures leads with a
+        newsletter opt-in. The founder reviews applications in an admin
+        dashboard I built, approves or rejects them in batches, and each
+        approval sends a branded email carrying the payment link and a free
+        conference-access code — so the team ran selection without an
+        engineer in the loop. Ticket sales themselves went through an
+        external ticketing platform.
+
         **Shanghai Summit 2026 delivery.** The platform carried the
         organisation's largest event: a four-day Shanghai
         Summit held **June 22–25, 2026** with the theme *Where Global
-        Women's Health Meets China* — China's first global women's health
-        summit, in the same five-month window that produced Japan's and
-        Korea's firsts. The lineup ran to 20 speakers headlined by **Ida Tin** (Clue co-founder; coined the term
+        Women's Health Meets China* — billed by the organisers as China's
+        first global women's health summit, in the same five-month window
+        that produced Japan's and Korea's firsts. The lineup ran to 20 speakers headlined by **Ida Tin** (Clue co-founder; coined the term
         "FemTech" in 2016), alongside Alice Zheng, Dominnique Karetsos,
         Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike
         Steinebach, Stella Fu, Peixian Lu, Sandy Lv, Chai Ke (柴可), Chen
@@ -1430,21 +1571,22 @@ work:
         check the dashboard.
 
         **Effectively no team to lean on.** Generation 1 was 100% solo;
-        Generation 2 received 30 commits from one occasional contributor
-        out of 564 total — 94.7% solo. Every architectural decision,
+        Generation 2's other 32 commits of 570 are the founder's own content
+        edits — 94.4% mine. Every architectural decision,
         deployment incident, schema migration, and last-minute speaker
         update is on me, and the platform has remained continuously
         operational through both generations and through active summit
         marketing.
     publicSummary: |
-      CTO at FemTech Weekend, China's first women's health-tech organisation.
-      Solo-built two generations of the public platform — original Next.js +
-      Notion site (58 commits, 100% solo) and the current Docusaurus +
-      Drizzle/Neon + Cloudflare Pages platform (564 commits, 94.7% solo) — and
-      delivered the digital infrastructure for the 2026 Shanghai
-      Summit (June 22–25, 20 speakers headlined by Ida Tin) — China's first
-      global women's health summit and the organisation's largest event to
-      date.
+      CTO at FemTech Weekend, which describes itself as China's first
+      women's-health-technology organisation. Sole engineer, working remotely,
+      across two generations of its platform — a Next.js + Notion site the
+      founder publishes to herself, then a Docusaurus + Drizzle/Neon +
+      Cloudflare platform — and of everything its 2026 Shanghai Summit ran on
+      online: the summit pages, an application system for pitch, programme
+      and speaker applicants, and an admin dashboard where the founder reviews
+      and approves them in batches. Four days, June 22–25, 20 speakers
+      headlined by Ida Tin.
 
   - id: copilotkit
     name: CopilotKit
@@ -1558,7 +1700,7 @@ work:
     featured: true
     tier: primary
     recency: recent
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-09-16"
     keywords:
       - FemTech
       - "Women's health"
@@ -1573,9 +1715,9 @@ work:
       - "Multi-tenant architecture"
       - "Role-based auth"
       - Vercel
-      - "Solo CTO"
+      - "CTO"
     narrative:
-      impactHeadline: "Took Sanicle from a no-code prototype to a production B2B FemTech SaaS — and personally integrated IBM watsonx AI into the product, the integration behind Sanicle's IBM Silver Partner certification + PartnerPlus directory listing. ~98% solo on 350+ commits."
+      impactHeadline: "Took Sanicle from a no-code prototype to a production B2B FemTech SaaS as CTO leading a team of five — and built, on my own, the IBM watsonx integration and live demo that were the engineering work behind Sanicle's IBM Silver Partner certification."
       companyContext: |
         Sanicle (sanicle.cloud) is a US-based FemTech B2B / B2G SaaS
         platform tackling menstrual and menopause workplace wellness.
@@ -1621,18 +1763,24 @@ work:
         maintenance, IBM partnership work, and product evolution
         through close-out.
       impactDelivered: |
-        **IBM Silver Partner certification for Sanicle.** My watsonx
-        integration into employee dashboards — AI-powered health
-        consultations and automated leave requests — was the
-        engineering work that anchored Sanicle's entry into the IBM
-        Business Partner Network. Sanicle.Cloud is now listed in IBM's
+        **IBM Silver Partner certification for Sanicle.** The
+        certification required two things of the company's technology: a
+        working IBM watsonx integration inside the product, and a recorded
+        demonstration of it running. I did both on my own — watsonx inside
+        the employee dashboards for AI health consultations and automated
+        leave requests, and the live product demo video — the engineering
+        work behind Sanicle's entry into the IBM Business Partner Network. Sanicle.Cloud is now listed in IBM's
         official PartnerPlus Solution Directory (ibm.com/partnerplus/
         directory/solution/0638) as a partner solution delivered on
         watsonx generative AI, hybrid cloud integration, and secure
         data tooling.
 
-        **Five production codebases, ~98% solo authorship across
-        ~350+ commits:**
+        **As CTO I led a team of five**, while writing the code myself:
+        377 commits across Sanicle's four repositories, every one authored
+        by me (GitHub contributor statistics, 2026-09-16 — sanicle-ai 208,
+        sanicle-cloud 136, sanicle-docs 20, sanicle-ai-mobile 13).
+
+        **Five production codebases:**
         - `sanicle-cloud` — official company website on Next.js
           (live at sanicle.cloud), replacing the legacy Bubble no-code
           site with a proper full-stack build (a migration I
@@ -1716,7 +1864,7 @@ work:
     featured: true
     tier: primary
     recency: recent
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-09-16"
     keywords:
       - Mentorship
       - "Women in STEM"
@@ -1725,7 +1873,7 @@ work:
       - "Cohort teaching"
       - "Office Hours"
     narrative:
-      impactHeadline: "Mentored inside a 360-mentor / 800-mentee STEM programme — 7 of Chan's 26 public LinkedIn recommendations come from this cohort. The AI-teaching platform Chan first built for these mentees now hosts 4 coexisting cohorts including TechNest 2026."
+      impactHeadline: "Mentored two cohorts in a 1,000+-member women-in-STEM network — four 1:1 mentees plus a 20-person group each time — and 7 of Chan's 26 public LinkedIn recommendations come from them. The teaching platform built for these mentees later hosted TechNest 2026."
       companyContext: |
         **Forward with Her (她行 / "Forward with Her Mentorship")** is a
         China-rooted, internationally-reaching women-in-STEM mentorship
@@ -1736,8 +1884,9 @@ work:
         technical disciplines guide cohorts of early-career women
         through one-on-one mentoring, group sessions, and topic-specific
         public lectures and office-hour discussions. **Network scale:
-        360+ mentors supporting 800+ mentees** across the programme's
-        operating lifetime.
+        over 1,000 members.** Chan mentored two cohorts (Winter 2024 and
+        Summer 2025); in each she took four mentees one-to-one and ran a
+        group of 20, so 8 one-to-one mentees and 40 group places in total.
       mission: |
         Open accelerated, mentor-led pathways into technology careers
         for women who would otherwise face the harder, slower, often
@@ -1834,9 +1983,9 @@ work:
         cohort docs.
     publicSummary: |
       Technology & Professional Development Mentor in the Forward with Her
-      (她行) Mentorship programme — a women-in-STEM mentor-mentee network
-      of 360+ mentors supporting 800+ mentees — from October 2024 through
-      September 2025. **Seven of the 26 public LinkedIn recommendations on
+      (她行) Mentorship programme — a women-in-STEM network of over 1,000
+      members — from October 2024 through September 2025, across two cohorts:
+      four one-to-one mentees and a 20-person group in each. **Seven of the 26 public LinkedIn recommendations on
       Chan's profile come from mentees who specifically credit Forward with
       Her sessions for their learning**, including students at the
       University of Chinese Academy of Sciences, ShanghaiTech University,
@@ -1858,7 +2007,7 @@ work:
     featured: true
     tier: primary
     recency: recent
-    lastUpdated: "2026-09-02"
+    lastUpdated: "2026-09-16"
     keywords:
       - Next.js
       - TypeScript
@@ -2038,20 +2187,23 @@ work:
       directory + bilingual EN/中文 + document and video preview pipelines;
       53 commits, 100% solo) — and stayed on as long-term technical custodian
       after the active CTO engagement, executing the production migration to
-      Cloudflare Pages and ongoing security maintenance.
+      Cloudflare Pages and ongoing security maintenance, before the team
+      brought in another developer to maintain it. FreePeriod's dispensers now
+      serve the public areas of 10 store locations in Guangzhou.
 
   - id: bytedance
     name: ByteDance
     position: Backend Developer — Youth Training Camp
+    # tier lowered flagship -> primary 2026-09-16 (Chan): a training-camp role.
     startDate: "2024-11"
     endDate: "2025-03"
     location: China (remote)
     url: "https://youthcamp.bytedance.com/"
     logo: /public/organizations/bytedance-logo-english.svg
     featured: true
-    tier: flagship
+    tier: primary
     recency: recent
-    lastUpdated: "2026-07-25"
+    lastUpdated: "2026-09-16"
     keywords:
       - Go
       - Java
@@ -2238,7 +2390,7 @@ work:
     featured: true
     tier: secondary
     recency: historical
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-09-16"
     keywords:
       - React Native
       - TypeScript
@@ -2253,7 +2405,7 @@ work:
       - Jest
       - Apifox
     narrative:
-      impactHeadline: "#1-most-prolific contributor (42% of 539 commits) on CORDE's offline-first React Native field-operations app — still widely used today by CORDE's water/civil-infrastructure crews. Also owned 97.9% of the documentation track end-to-end."
+      impactHeadline: "#1-most-prolific contributor (42% of 539 commits) on CORDE's offline-first React Native field-operations app, built for CORDE's water/civil-infrastructure crews. Also owned 97.9% of the documentation track end-to-end."
       companyContext: |
         **CORDE** is a Canterbury-based **New Zealand infrastructure
         and civil-construction company** — 30+ years of operations,
@@ -2465,7 +2617,7 @@ volunteer:
     logo: /public/organizations/forward-with-her-logo.jpg
     tier: primary
     recency: recent
-    lastUpdated: "2026-06-04"
+    lastUpdated: "2026-09-16"
     keywords:
       - STEM mentorship
       - Women in tech

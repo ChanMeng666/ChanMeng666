@@ -135,7 +135,7 @@ Stack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Act
 **Other contributors:** yes
 
 ```
-The member-lifecycle platform that now runs She Sharp — a New Zealand women-in-tech charity (charitable trust CC57025; 96+ events since 2014, and a membership the organisation reports at 3,500+). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.
+The member-lifecycle platform that now runs She Sharp — a New Zealand women-in-tech charity (charitable trust CC57025; 96+ events since 2014). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.
 
 • AI mentor–mentee matcher: GPT-4o-mini scoring pairs across five weighted dimensions (Skill 35%, Goal 30%, MBTI 15%, Industry 10%, Logistics 10%) with explainable reasons and a rule-based fallback; admin as final gate.
 • 1,381 commits and 251 merged PRs across 13.3 months, 94.5% of all lines added mine. Lesley Gao contributed 151 commits and 43 PRs alongside me.
@@ -156,7 +156,7 @@ The official site and submissions hub for FemTech Weekend — China's first wome
 
 Gen-2 was a deliberate rewrite from Next.js to Docusaurus when the site's centre of gravity shifted from "marketing site" to "research publication and multi-event hub". Visitors today read original research reports (FemTech Market Map for Greater China; FemmeHealth Ventures Alliance), browse the speaker programme, and submit pitches / programme entries / speaker applications / ecosystem partnerships through four review pipelines.
 
-• 534 of 564 commits solo (94.7%) over ~13.5 months.
+• 538 of 570 commits mine (94.4%) from May 2025 to July 2026; the rest are the founder's content edits.
 • Bilingual EN / CN from day one — the non-technical founder Zhu Yihan edits the live site directly.
 • 15 Cloudflare Pages Functions (~3,839 LOC) replace a separate backend; submissions + email + admin review run on edge serverless.
 
@@ -213,7 +213,7 @@ Sanicle.AI is the multi-tenant FemTech platform that lets US employers offer men
 
 • Integrated IBM watsonx (running Llama 3.1 405B) inside the employee dashboard — the engineering work that anchored Sanicle's IBM Silver Partner certification and PartnerPlus directory listing.
 • Dual-AI resilience: watsonx primary, Google Gemini fallback when watsonx exceeds Vercel's function-timeout ceiling — no user sees a stalled assistant.
-• ~98% solo across ~350 commits over 12 months. A NextAuth 5 auth-redirect production fix I published was acknowledged by Vercel Staff Amy Egan on the Vercel community forum.
+• 377 commits across four repositories, every one mine, over 12 months. A NextAuth 5 auth-redirect production fix I published was acknowledged by Vercel Staff Amy Egan on the Vercel community forum.
 
 Stack: Next.js 15, React 19, NextAuth 5, Drizzle + Neon Postgres, Upstash Redis, Vercel AI SDK, IBM watsonx + Google Gemini fallback.
 ```

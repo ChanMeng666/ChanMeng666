@@ -247,7 +247,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Auckland, New Zealand",
   arrangement: "Remote",
   bullets: (
-    [Build an AI design agent for architects and self-builders: invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (34 npm releases, 83 diagnostic codes), then built the commercial product on top so an edit is exact and replayable rather than regenerated.],
+    [Build an AI design agent for architects and self-builders; invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (53 npm releases, 139 diagnostic codes), so every plan is checked and an edit is exact.],
   ),
 )
 
@@ -259,7 +259,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Chengdu, Sichuan, China",
   arrangement: "Remote",
   bullets: (
-    [Sole engineer across two platform generations (Next.js, then Docusaurus) for an organisation self-described as China's first in women's health technology, and ran the digital infrastructure for the 2026 Shanghai Summit: four days, 20 speakers, headlined by Ida Tin, who coined the term FemTech.],
+    [Sole engineer, remotely, across two platform generations for an organisation self-described as China's first in women's health technology; built the pages and application system for its 2026 Shanghai Summit (four days, 20 speakers, headlined by Ida Tin).],
   ),
 )
 
@@ -308,7 +308,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Albuquerque, New Mexico, United States",
   arrangement: "Remote",
   bullets: (
-    [Recruited onto Anthropic's Partner Network architect track when the founder's Claude agent surfaced this portfolio; completed the 45-day Architect Cohort, contributing to its agent, skill and MCP conventions.],
+    [Recruited onto Anthropic's Partner Network architect track when the founder's Claude agent surfaced this portfolio; completed its Learning Path and passed the Claude Certified Architect practice exam.],
   ),
 )
 
@@ -320,7 +320,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Tulsa, Oklahoma, United States",
   arrangement: "Remote",
   bullets: (
-    [Joined as Senior AI/ML Infrastructure Engineer and was promoted to CTO; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS and integrated IBM watsonx behind a Gemini fallback, the integration behind Sanicle's IBM Silver Partner certification.],
+    [Promoted to CTO leading a team of five; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS and built the IBM watsonx integration behind Sanicle's IBM Silver Partner certification.],
   ),
 )
 

@@ -36,7 +36,7 @@
     org-url: "https://archcanvas.uk/",
     dates: "Apr 2026 — Present",
     location: [Auckland, New Zealand · *Remote*],
-    summary: [Architects and self-builders describe a building in plain words and get back a dimensioned, buildable floor plan. Made that work by first inventing *#link("https://github.com/ChanMeng666/archlang")[ArchLang]*, the open-source language that compiles a floor plan into a precise drawing (*34 npm releases*, *83 diagnostic codes*), then building the commercial product on top — so an edit is exact and replayable, not regenerated.],
+    summary: [Architects and self-builders describe a building in plain words and get back a dimensioned, buildable floor plan. When plans drawn as pictures proved impossible to check, invented *#link("https://github.com/ChanMeng666/archlang")[ArchLang]*, the open-source language that compiles a plan into a precise drawing (*53 npm releases*, *139 diagnostic codes*), and rebuilt the product on it — so an edit is exact, not regenerated.],
   )
   role-line(
     title: "Chief Technology Officer",
@@ -50,7 +50,7 @@
     // attribution out loud ("self-described as"); this two-page document has
     // no slack for the extra clause. Do not delete this marker without also
     // rewording the claim.  copy-lint-ok:R2
-    summary: [China's first women's-health-technology organisation outgrew its web platform twice as the mission grew; rebuilt it both times as sole engineer, Next.js marketing site to Docusaurus editorial and research platform. Ran the digital infrastructure behind the 2026 Shanghai Summit: four days, *20 confirmed speakers*, headlined by Ida Tin, who coined "FemTech".],
+    summary: [China's first women's-health-technology organisation outgrew its web platform twice; rebuilt it both times as sole engineer, remotely. Built everything the 2026 Shanghai Summit ran on online, including an application system the founder reviews in batches: four days, *20 confirmed speakers*, headlined by Ida Tin.],
   )
   role-line(
     title: "Senior Full-Stack Engineer & Website Team Lead",
@@ -85,7 +85,7 @@
   block(above: 0pt, below: 0pt, {
     set par(leading: 0.7em, justify: false)
     text(size: size-tiny, fill: muted, style: "italic")[
-      *Previously:* *AI Agent Architect at #link("https://engram.media/")[Engram]* (Albuquerque, NM · remote; recruited onto *Anthropic's Partner Network architect track* after founder Luka Madzarac's own Claude agent surfaced Chan's open-source portfolio — publicly confirmed by him; 45-day Architect Cohort on agent, skill and MCP-integration conventions) · *CTO at #link("https://www.linkedin.com/company/sanicleofficial/")[Sanicle]* (Tulsa, OK; promoted from Senior AI/ML Infrastructure Engineer; the IBM watsonx integration behind Sanicle's #link("https://www.ibm.com/partnerplus/directory/solution/0638")[IBM Silver Partner] certification) · *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* (Douyin Mall capstone, Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ; offline-first React Native field app, \#1 contributor) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 26 LinkedIn recommendations).
+      *Previously:* *AI Agent Architect at #link("https://engram.media/")[Engram]* (Albuquerque, NM · remote; recruited onto *Anthropic's Partner Network architect track* after founder Luka Madzarac's own Claude agent surfaced Chan's open-source portfolio — publicly confirmed by him; credentials behind Engram's Partner Network approval) · *CTO at #link("https://www.linkedin.com/company/sanicleofficial/")[Sanicle]* (Tulsa, OK; promoted from Senior AI/ML Infrastructure Engineer; led a team of five; the IBM watsonx integration behind Sanicle's #link("https://www.ibm.com/partnerplus/directory/solution/0638")[IBM Silver Partner] certification) · *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* (Douyin Mall capstone, Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ; offline-first React Native field app, \#1 contributor) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 26 LinkedIn recommendations).
     ]
   })
 })

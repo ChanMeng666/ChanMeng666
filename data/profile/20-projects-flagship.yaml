@@ -457,11 +457,9 @@ projects:
       - { label: "AI matching weights",      value: "MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%" }
       - { label: "AI matching score range",  value: "0-100 overall + 5 per-dimension subscores + confidence (high/medium/low)" }
       - { label: "AI retry policy",          value: "3 attempts with exponential backoff (1s × 2^n), batch concurrency 5, 100ms inter-batch delay" }
-      - { label: "Members",                  value: "3,500+" }
-      - { label: "Women reached",            value: "5,000+ lifetime" }
-      - { label: "Corporate partners",       value: "50+" }
+      - { label: "Distinct event registrants", value: "2,919 (on record, per the transformation record's published-vs-recorded table)" }
+      - { label: "Sponsors on logo wall",    value: "39" }
       - { label: "Events since 2014",        value: "96+" }
-      - { label: "Industry mentors",         value: "18" }
       - { label: "Migration crawler assets", value: "1,748 images / 707 MB / 11 JSON files / 85 events + 50 Humanitix tickets + 15 podcasts + 121 photo galleries + 7 press articles + 118 pages" }
     status: production
     startDate: "2025-07"
@@ -478,25 +476,25 @@ projects:
       # bigger — the charity's digital and AI-native transformation. Constraints
       # this line is written under: no dev stats on the README surface (no
       # commit counts, no authorship share — those live in metrics[] and the
-      # llms surfaces), and the settled scale figures (3,500+ members, 5,000+
-      # women reached, 96+ events since 2014, 50+ partners) are not touched.
+      # llms surfaces), and — re-decided 2026-09-16 — only record-backed scale
+      # figures are used (96+ events since 2014; 2,919 distinct registrants; 39
+      # sponsors). 3,500+ members / 5,000+ women / 50+ partners are retired.
       # Schema cap is 280 chars.
-      impactHeadline: "The digital and AI-native transformation of New Zealand's leading women-in-STEM charity: a volunteer-run team moved off rented software onto infrastructure it owns, with event setup, newsletters, posters, video, mailing list rewritten as 11 agent skills a non-engineer can run."
+      impactHeadline: "The digital and AI-native transformation of a volunteer-run New Zealand women-in-STEM charity: moved off rented software onto infrastructure it owns, with event setup, newsletters, posters, video and the mailing list rewritten as 11 agent skills a non-engineer can run."
       problem: |
-        She Sharp is New Zealand's leading women-in-STEM nonprofit — a
+        She Sharp is a volunteer-run New Zealand women-in-STEM nonprofit — a
         registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
         AI/NLP researcher and Head of Computer and Information Sciences at
         AUT, after she experienced first-hand the gap of being part of the
-        20% minority of women in technology. The community reports 3,500+
-        members, 5,000+ women reached across its history, 50+
-        corporate partners, and 96+ events since 2014. The original website
+        20% minority of women in technology. It has run 96+ events since
+        2014, with 2,919 distinct people registered for them on record. The original website
         was a Webflow build, and Webflow had become the bottleneck: the
         capabilities the mission required — membership tiers, mentor / mentee
         / admin role permissions, AI-driven mentor matching, Stripe billing,
         Slack-integrated operations, automated event management, recruitment
         pipelines, audit logging — are precisely what no drag-and-drop site
-        builder can express. The leadership team was running a 3,500-member
-        community through spreadsheets, Slack threads, and manual outreach.
+        builder can express. The volunteer team was running its community
+        through spreadsheets, Slack threads, and manual outreach.
         She Sharp needed a real platform.
       audience: |
         Active members of the She Sharp community: women in technology at
@@ -509,11 +507,10 @@ projects:
         surfaces: Her Waka programme participants (women re-entering the
         workforce, served by the dedicated MSD-funded teaching site at
         herwaka.shesharp.org.nz), volunteer and ambassador candidates
-        (screened through the AI recruitment pipeline), the 50+ corporate
-        partners (sponsor packages tied to event visibility and member
+        (screened through the AI recruitment pipeline), sponsors (39 on the
+        logo wall; sponsor packages tied to event visibility and member
         access), and She Sharp's operational team (Slack-integrated
-        workflows). The organisation reports 3,500+ members today and a lifetime
-        reach of 5,000+ women.
+        workflows).
       productLogic: |
         The new platform replaces the old Webflow site with a real member
         system anchored on three coexisting dashboards. A user signs up via
@@ -638,9 +635,8 @@ projects:
         The platform is the operational substrate that lets each channel
         scale without proportional staff load: dashboards, matching,
         membership lifecycle, communications, recruitment, and event
-        management are automated. The organisation's mission scaling — from
-        the 1,500 active members publicly cited two years ago toward the 3,500+
-        registered base it reports today — depends directly on this technical
+        management are automated. The organisation's ability to grow its
+        programmes with a volunteer team depends directly on this technical
         capability.
       technicalApproach: |
         Next.js 15.6 canary (App Router, Turbopack dev) + React 19.1.2 +
@@ -760,9 +756,8 @@ projects:
         TypeScript, and an 11-namespace `lib/` library** (matching,
         slack-bot, stripe, funding, programmes, recruitment, invitations,
         mentorship, email, auth, db) —
-        the technical infrastructure for an organisation that reports 3,500+
-        members, 5,000+ women reached lifetime, 50+ corporate partners,
-        96+ events since 2014, and 18 industry mentors.
+        the technical infrastructure for an organisation that has run 96+
+        events since 2014.
 
         The most recent build-out extended the public site into a photo-rich
         "Editorial" visual system and full event pages — including the

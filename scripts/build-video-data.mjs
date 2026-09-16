@@ -51,8 +51,11 @@ const FACTS = [
     rule: /^(\d[\d,]*)/, cast: "int" },
   { key: "archlang.version", project: "archlang", metric: "npm package",
     rule: /(v\d+\.\d+\.\d+)/, cast: "string" },
+  // 2026-09-16: the count is npm's (`npm view @chanmeng666/archlang versions`,
+  // 53 through v1.36.0), which is what "releases" means on screen; the metric
+  // now says "published versions", so the rule follows the claim.
   { key: "archlang.releases", project: "archlang", metric: "npm package",
-    rule: /\((\d+) tagged releases/, cast: "int" },
+    rule: /\((\d+) published versions/, cast: "int" },
   { key: "archlang.diagnostics", project: "archlang", metric: "Diagnostics",
     rule: /^(\d+)/, cast: "int" },
   { key: "archlang.exportFormats", project: "archlang", metric: "Export formats",
@@ -73,8 +76,13 @@ const FACTS = [
   // The film's super moves 97% -> 96.5%.
   { key: "gavigo.soloPct", project: "gavigo-ire", metric: "Chan's commits",
     rule: /\((\d+\.\d+)% of non-merge\)/, cast: "string" },
-  { key: "shesharp.members", project: "she-sharp", metric: "Members",
-    rule: /^([\d,]+\+)/, cast: "string" },
+  // RENAMED 2026-09-16 from `shesharp.members` ("3,500+"): Chan retired the
+  // unsourced membership figure. The record-backed replacement measures a
+  // different thing (distinct people who registered for an event), so it gets a
+  // new key rather than a re-pointed old one. The film's super must say
+  // "people registered", never "members".
+  { key: "shesharp.registrants", project: "she-sharp", metric: "Distinct event registrants",
+    rule: /^([\d,]+) \(on record/, cast: "string" },
   // RENAMED 2026-09-04, and the rename is the point: this used to be
   // `shesharp.soloPct` reading "793 (85%)" — a share of COMMITS. The refresh
   // replaced it with share of LINES ADDED (94.5%), a different quantity.

@@ -259,7 +259,7 @@ floor plans — change one number, exactly one thing moves.
   4. The twist — it checks whether a plan is *livable*: can you reach the bathroom?
      does a bedroom have a window? does a door swing into another door?
   5. Agent-native — returns a plan "as facts" over `describe --json`, whole language
-     in a ~2k-token spec, 83 diagnostic codes each with a machine-applicable fix.
+     in a ~2k-token spec, 139 diagnostic codes each with a machine-applicable fix.
   6. Proof — published to npm, and it's the engine behind ArchCanvas (a real product
      depends on it, not a toy).
   7. CTA — "Try it in the browser, nothing leaves your machine:

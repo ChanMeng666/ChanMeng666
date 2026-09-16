@@ -447,7 +447,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [docusaurus, drizzle, neon, cloudflare-pages, react]
-    lastUpdated: "2026-09-02"
+    lastUpdated: "2026-09-16"
     name: FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026
     priority: 17
     category: web-apps
@@ -456,7 +456,7 @@ projects:
     relatedProjectIds: [femtech-radar]   # FemTech Radar — the FemTech Weekend intelligence sub-project; cross-linked so it renders as a "↳ Related:" link under this card (same treatment as gavigo-ire → gavigo-website, she-sharp → her-waka)
     supersedes: [femtech-weekend]
     tagline: |
-      Solo-built (94.7% of 564 commits across ~1 year) Gen-2 platform for
+      Solo-built (538 of 570 commits, 94.4%, to 2026-07-30) Gen-2 platform for
       FemTech Weekend — China's first women's-health-technology
       organisation, founded 2024 by Zhu Yihan in Chengdu. Docusaurus 3.9
       editorial spine + Drizzle ORM on Neon serverless Postgres for form
@@ -483,7 +483,7 @@ projects:
       - { label: "Founder Zhu Yihan (organisation)", url: "https://www.femtechweekend.com/about-us" }
     logo: /public/brands/femtech-weekend-mark.svg
     entity: "FemTech Weekend (Chengdu, China; founded 2024 by Zhu Yihan; positioned publicly as China's representative for cross-border women's-health initiatives)"
-    roles: ["Chief Technology Officer", "Solo Engineer (94.7% of 564 commits)", "Sole Architect of Gen-1 and Gen-2 platforms"]
+    roles: ["Chief Technology Officer", "Solo Engineer (538 of 570 commits)", "Sole Architect of Gen-1 and Gen-2 platforms"]
     techStack:
       - "Docusaurus 3.9.2 (classic preset + @docusaurus/theme-mermaid)"
       - "React 18.2 + TypeScript 5.6 (typecheck via `tsc --noEmit` in CI)"
@@ -505,7 +505,7 @@ projects:
       - "Node 22.x (pinned in engines)"
     keywords:
       - China's first women's-health-tech organisation (FemTech Weekend, founded 2024, Chengdu)
-      - Solo-built Gen-2 platform (534 of 564 commits = 94.7% solo; 30 commits from one occasional contributor)
+      - Solo-built Gen-2 platform (538 of 570 commits = 94.4%; the other 32 are the founder's content edits)
       - Docusaurus 3.9 as editorial spine (deliberate rewrite from Gen-1 Next.js — chosen for research-publication centre of gravity)
       - Cloudflare Pages global edge delivery (matters for cross-border China ↔ international audience)
       - 16 Cloudflare Pages Functions (~5,373 LOC) — entire server side without a Node backend
@@ -522,7 +522,7 @@ projects:
       - Two-generation architectural evolution (Gen-1 Next.js + Notion → Gen-2 Docusaurus + Drizzle/Neon)
     metrics:
       - { label: "Total commits",              value: "564 (Gen-2 only; Gen-1 was a separate repo with 58 commits)" }
-      - { label: "Solo commits",               value: "534 (94.7%); ~30 from one occasional contributor" }
+      - { label: "Solo commits",               value: "538 of 570 (94.4%, to 2026-07-30); 32 content edits by founder Zhu Yihan" }
       - { label: "Build window",               value: "2025-05-08 → 2026-06-26 (~13.5 months active development)" }
       - { label: "Cloudflare Pages Functions", value: "16 endpoints (~5,373 LOC of server-side .js)" }
       - { label: "Application pipelines",      value: "4 (pitch / programme / speaker / ecosystem) — each typed Postgres table with reference numbers + admin status workflow" }

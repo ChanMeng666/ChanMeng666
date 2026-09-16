@@ -107,7 +107,7 @@
 
         text(font: mono, size: mk-tiny, weight: "bold", fill: accent, tracking: 0.18em)[LONG BIO]
         v(6pt)
-        block(width: 94%, { set par(leading: mk-lead-loose); text(size: mk-body, fill: ink)[Creator of Tam-AI-Ti (a Te Whare Tapa Whā AI wellness coach), CTO of FemTech Weekend, and website lead at She Sharp. She spoke at UN CSW 69 in New York; her credo — #emph[“subtraction for life, addition for thought.”]] })
+        block(width: 94%, { set par(leading: mk-lead-loose); text(size: mk-body, fill: ink)[Creator of Tam-AI-Ti (a Te Whare Tapa Whā AI wellness coach), CTO of FemTech Weekend, and former website team lead at She Sharp. She spoke at UN CSW 69 in New York; her credo — #emph[“subtraction for life, addition for thought.”]] })
 
         v(1fr)
 

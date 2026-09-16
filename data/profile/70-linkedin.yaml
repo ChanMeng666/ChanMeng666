@@ -267,7 +267,7 @@ linkedin:
         - https://shesharp.org.nz/
         - https://www.shesharp.org.nz/
       positions:
-        - duration: 1 yr 2 mos
+        - duration: 1 yr 3 mos
           location: Auckland Central, Auckland, New Zealand · Hybrid
           foundViaLinkedIn: true
           description: |-
@@ -275,10 +275,10 @@ linkedin:
 
             13.3 months: 1,381 commits, 251 merged PRs, 94.5% of all lines added. Lesley Gao contributed 151 commits and 43 PRs alongside me.
 
-            • An AI-native team is one whose recurring work is written down precisely enough that an agent can execute it, so non-engineers run what used to need an engineer. 11 agent skills — event setup, newsletter, posters, video, mailing list — reviewed by PR and type-checked in CI, each replacing a SaaS console or someone's memory.
+            • An AI-native team is one whose recurring work is written down precisely enough for an agent to run it. 11 agent skills — event setup, newsletter, posters, video, mailing list — reviewed by PR and type-checked in CI, each replacing a SaaS console or someone's memory.
             • A 1,549-person mailing list moved off its vendor onto infrastructure the charity owns — double opt-in, consent in its own database, 16 idempotent batches, 0 failures, 0.45% bounce. Consent became auditable for the first time, including the unflattering 75.4% that arrived by something other than a subscription; 2,129 non-consenting contacts are held as one-way hashes so a future import can't resurrect them.
-            • 1.15 GB of the charity's own record recovered from four platforms — eleven years of Slack (56,119 messages) became a 1,714-line event-lifecycle SOP, hash-verified in CI so it can't drift. The same pass found 7 of the 11 contact addresses on the website did not exist, including the headline one — people writing in were turned away and nobody knew.
-            • A two-hour Auckland workshop and recorded tutorials taught the team to run all of it; the guide is written for anyone "whether or not you have ever written a line of code."
+            • 1.15 GB of the charity's own record recovered from four platforms — eleven years of Slack (56,119 messages) became a 1,714-line event-lifecycle SOP, hash-verified in CI so it can't drift. The same pass found 7 of the 11 contact addresses on the website did not exist, including the headline one — people writing in were turned away.
+            • I left in September 2026 with the handover written: a two-hour Auckland workshop, recorded tutorials, a guide for anyone "whether or not you have ever written a line of code", and 52 recorded decisions — so how it works is a file, not a person.
 
             Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Resend, Tailwind 4, Vercel.
           skills:

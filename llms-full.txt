@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 480+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-09-15
+**Last updated:** 2026-09-16
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -68,7 +68,7 @@ thought."
 - **GAVIGO Inc.** (employer) -- Founding Principal Engineer (Oct 2025 — Sep 2026). URL: https://gavigo.com. Related work: gavigo. Related project: gavigo-ire.
 - **Sanicle Inc.** (employer) -- CTO (Mar 2025 — Feb 2026). URL: https://www.linkedin.com/company/sanicleofficial/. Related work: sanicle.
 - **TechNest Community** (employer) -- AI Instructor & Mentor — 2026 AI Track Cohort 3 (Apr–Aug 2026). URL: https://www.technestcommunity.com/. Related work: technest.
-- **She Sharp** (employer) -- Senior Full Stack Engineer & Website Team Lead (Jul 2025 — present); Ambassador since Jul 2025. URL: https://shesharp.org.nz. Related work: she-sharp. Related volunteer: she-sharp-ambassador. Related project: she-sharp.
+- **She Sharp** (employer) -- Senior Full Stack Engineer & Website Team Lead and Ambassador (Jul 2025 — Sep 2026). URL: https://shesharp.org.nz. Related work: she-sharp. Related volunteer: she-sharp-ambassador. Related project: she-sharp.
 - **FemTech Weekend** (employer) -- CTO (Mar 2025 — present). URL: https://www.femtechweekend.com. Related work: femtech-weekend. Related project: femtech-weekend-website.
 - **Forward with Her 她行 Mentorship** (employer) -- Tech & Professional Development Mentor (Oct 2024 — Sep 2025). URL: https://www.linkedin.com/company/taxing-mentorship/. Related work: forward-with-her. Related volunteer: forward-with-her-mentor.
 - **Lincoln University, NZ** (employer) -- Master of Applied Computing (Distinction) + Full-Stack Developer. URL: https://www.lincoln.ac.nz. Related work: lincoln.
@@ -171,7 +171,7 @@ End-to-end AI-native product engineering — from agentic-system architecture th
 Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first.
 
 ### What is Chan's biggest shipped result?
-GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo.
+GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp (Jul 2025 — Sep 2026) — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo.
 
 
 ## Profiles
@@ -231,293 +231,6 @@ client-side playground, published open-source to npm. ArchCanvas is the
 Next.js product that consumes it as a package: an AI agent writes
 ArchLang, compiles it, grounds a rendering on the compiled plan, and
 critiques it — then lets the user refine the plan in place.
-### Senior Full Stack Engineer & Website Team Lead at She Sharp
-[tier=flagship · recency=active · updated=2026-09-04]
-- **Period:** Jul 2025 -- Present
-- **Location:** New Zealand
-- **URL:** https://www.shesharp.org.nz/
-- **Keywords:** Next.js 15, React 19, Drizzle ORM, Neon Postgres, Stripe, GPT-4o-mini, Slack, Agent skills, NextAuth 5, Tailwind 4
-
-**Impact:** Recruited directly by founder Dr Mahsa Mohaghegh as the senior AI + full-stack capability She Sharp didn't have in-house; led the cutover from Webflow to the new platform via a custom migration crawler preserving 10+ years of legacy content across 96+ events since 2014.
-
-**Company context:** She Sharp is New Zealand's leading women-in-STEM community — a
-registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
-AI/NLP researcher and Head of Computer and Information Sciences at AUT. The
-organization runs a mentorship programme, a corporate-partner
-network, and a recurring events calendar that together support
-3,500+ members and 5,000+ women reached
-across its history. 50+ corporate partners, 96+ events since 2014,
-18 industry mentors.
-
-**Mission:** Close the representation gap in technology by connecting women in
-STEM with role models, mentors, employers, and each other — and by
-running flagship programmes (mentorship, Her Waka workforce re-entry,
-THRIVE) that operationalize that mission at scale. The bottleneck on
-scale, when I joined, was the technical capability of the platform:
-the old Webflow site had become incompatible with the membership
-system, AI matching, billing, and Slack-integrated operations the
-mission required.
-
-**My mandate:** Recruited directly by Dr Mahsa Mohaghegh (McCauley) as Senior Full
-Stack Engineer & Website Team Lead — specifically as the AI and
-senior development capability She Sharp didn't have in-house — to
-build the new member platform end-to-end and own it operationally.
-Mandate explicitly includes: replace the Webflow site, design and
-ship the AI mentor-mentee matching system, integrate Slack across
-the organization's operations, run events and recruitment
-infrastructure, and serve as technical lead on adjacent initiatives
-(Her Waka MSD-funded programme, SEO strategy).
-
-**Impact delivered:** Shipped and operate the new full-stack She Sharp platform replacing
-the legacy Webflow site. Over 13.3 months (2025-07-22 → 2026-09-01,
-pinned at commit b1d49d88): 1,381 commits and 251 merged pull
-requests — I opened 207 of the 254 — and 94.5% of all lines added
-(801,609 of 847,827). One other developer worked alongside me:
-Lesley Gao, 151 commits and 43 pull requests, mostly on the
-dashboard and mentorship surfaces. Headline systems delivered:
-AI mentor-mentee matching
-(GPT-4o-mini, 5-dimensional scoring with human-in-the-loop review),
-three role-permissioned dashboards (mentor / mentee / admin) with
-dual-role support, Stripe membership-tier billing, the Slack
-ecosystem (event-collector bot, volunteer webhooks, weekly stats
-digest, weekly NZ funding-opportunities crawler), a Claude agent
-skill `sync-event-from-slack` that automates event-page publication
-from Slack content, comprehensive audit logging, and a database
-version-control system.
-
-**Led the organisation's digital and AI-native transformation —
-three platform migrations, a data-sovereignty programme and a
-governance audit.** The three migrations are not equally finished
-and the honest headline says so: the website is done; the mailing
-list is technically done and proven in production; marketing
-production has shipped, and has been chosen over building a
-hand-made duplicate exactly once, on my own say-so. Shipping a
-capability and shipping its adoption are two different projects,
-and only the first was scheduled.
-
-**Mailing list.** Moved 1,549 people onto infrastructure the
-charity owns — double opt-in where confirmation requires a button
-press and never a GET, as defence against link scanners; a
-four-stream sender model; exactly one Resend call site in the
-whole application; and the consent record in the organisation's
-own Postgres rather than a vendor's. The cutover went out in 16
-idempotent batches with 0 failures and a 0.45% bounce rate. The
-sending-domain move was 29 DNS records before and 29 after with a
-single value different, because the region and Return-Path were
-matched deliberately rather than discovered afterwards. Consent
-became auditable for the first time by classifying every
-subscriber against the act that put them on the list — and I
-reported the unflattering result, that 75.4% arrived by an act
-that was not a subscription. 2,129 non-consenting contacts are
-held as one-way hashes so a future import cannot resurrect them,
-and a CI gate fails the build if an email address or a ticketing
-access code reaches a committed file.
-
-**Data sovereignty.** Recovered 1.15 GB of the organisation's own
-operating record out of four platforms: eleven years of Slack
-(208 conversations, 56,119 messages), the full ticketing and
-mailing history, and the only copy of the previous website held
-outside the vendor's own account. 97 archived Slack channels were
-invisible to the standard listing API and would have been missed
-entirely. Two findings that transfer to any migration: a checksum
-over a mapped object proves only what your mapper kept, and an API
-key is not a replacement for an export.
-
-**Digital governance audit.** 7 of the 11 email addresses
-published on the website did not exist — including the headline
-contact address — proven by sending one real message to each and
-reading delivery back, not inferred from configuration; all fixed,
-plus a funder-facing PDF the sweep had missed. Removed 17
-fabricated testimonials attributed to real companies from the
-charity's public site. Proved 3 of the 4 full-bleed photographs in
-a published funder report came from outside the period they
-illustrated, using perceptual hashing over a 225-image corpus.
-Catalogued 24 credential and personal-data exposures by location
-without recording a single value, and identified the same
-access-ownership failure recurring across 5 separate incidents in
-7 years.
-
-**Financial governance and audit capability.** Diagnosed a 60%
-rise in a SaaS bill as an unbounded data-growth problem rather
-than a price rise: the vendor's base price had not moved in 25
-billing periods, and every dollar of the increase was buying
-contacts who could not lawfully be emailed (1,585 of 3,145 billed
-contacts, 50.4%). Finding the mechanism mattered more than the
-number. Identified NZ$1,876.44 and US$400.20 of annual spend as
-removable against a US$240 replacement — realisable, not
-realised: the founder is the cardholder and pressing the button
-was not mine to press. Found an unclaimed nonprofit entitlement
-worth US$1,566 a year, the workspace collaboration tool's free
-upgrade for registered charities under 250 members; the
-organisation has 18 and was paying full price. And established
-that the ticketing account had been billed at the charity rate
-(3% + $0.30) until 27 October 2023 and at the full commercial rate
-from 31 October, unnoticed for nearly three years — not by
-assuming either rate but by fitting every fee-bearing ticket
-against both published formulas, which split cleanly into two eras
-with no overlap. The twist that makes it matter: absorbed fees are
-$0.00 on every event, so the difference sits on the ticket price.
-It is money taken from women buying tickets to a women-in-tech
-event, not from the charity's accounts.
-
-**Enablement and business-process mapping.** Delivered six
-enablement sessions for the volunteer team (sessions delivered; no
-attendance was ever logged, so no headcount is claimed): a
-recorded content-update guide (2026-03-29) aimed at getting a
-non-technical member updating the site inside three minutes; a
-browser-automation demo (2026-05-04); four recorded agent-skill
-tutorials (2026-07-28); 1:1 Typst coaching for a teammate
-(2026-08-02); a recorded end-to-end event-lifecycle tutorial
-(2026-08-24); and a two-hour in-person workshop in Auckland on
-2026-08-29, during which I produced usable promo videos live while
-explaining the process. The written interface to all of it is an
-AI skills guide addressed to anyone on the team "whether or not
-you have ever written a line of code". Alongside it I derived a
-1,714-line event-lifecycle standard operating procedure by
-crawling eleven years of Slack — a phase × owner × method table
-covering partner acquisition, go/no-go, channel kickoff,
-ticketing, website page, poster set, campaign calendar, social,
-mailing-list and registrant email, deck, photography, gallery
-close-out, feedback digest and newsletter, marking where the
-published title and the observed practice diverge. It is served as
-a live internal page and hash-verified against its source Markdown
-in CI, so the page cannot silently drift from the procedure it
-serves. Beside it sit 52 recorded organisational decisions (51 of
-them mine), each with structured frontmatter, which turns "has
-anyone already thought about this?" from a question you ask a
-person into one you can grep. I also ran a published-vs-recorded
-reconciliation of the organisation's own headline numbers — a
-measurement, not an accusation.
-
-**Custom Slack ecosystem for the She Sharp workspace.** Beyond
-the admin-side Claude Code skill, I shipped a portfolio of
-integrations that run inside the She Sharp Slack workspace
-itself: an event-collector endpoint (`/api/slack/events`) that
-ingests workspace activity for the database; a **weekly
-mentorship-stats digest bot** that auto-publishes engagement
-numbers each Monday; and a **weekly NZ funding-opportunities
-digest bot** that crawls 6 government RSS/HTML sources, scores
-each opportunity for member relevance (60+ threshold), and
-posts the top 10 to a dedicated `#funding-opportunities`
-channel via Incoming Webhook; contact-form and AI-screening
-notifications; and a weekday `slack-triage` cron that reads with
-`--no-record` so it never advances a read position — an automated
-reader that marks things read is an automated way to lose them.
-The most involved of them is an **AI-powered `/event` slash
-command** that turns a plain-English request into a validated
-patch: it pulls channel history, the events JSON and the naming
-conventions as context, produces a structured-output patch,
-Zod-validates it, commits to a draft branch, shows an ephemeral
-Block Kit preview with a JSON diff, and on confirm opens a GitHub
-pull request. Work that used to mean opening a console now
-arrives as a reviewable change.
-
-Beyond the main platform, I shipped three supporting projects: the
-Python migration crawler (1,748 images / 707 MB / 11 JSON files
-bootstrapping the new platform from the old Webflow site), the Her
-Waka MSD-funded teaching site at herwaka.shesharp.org.nz with
-complete authored curriculum (4 workshops + 8+ tutorials), and a
-professional SEO audit and 10-point recommendations report on
-shesharp.org.nz that identified the high-priority mobile-vs-desktop
-ranking gap on "women in tech New Zealand."
-
-**Technical highlights:** Architected and built every layer of the platform: Next.js 15.6
-canary + React 19.1.2 + TypeScript 5.8 on Drizzle 0.43 over Neon
-Postgres, NextAuth 5 with bcrypt + Google/GitHub OAuth, Tailwind 4
-+ shadcn/ui, Resend transactional email, Cloudinary image pipeline,
-Stripe-integrated membership flow, Vercel edge deployment +
-3 scheduled jobs. Schema runs 39 tables / 33 enums / 32 SQL
-migrations — every business concept is a typed enum so invalid
-states are unrepresentable. 84 API routes, 63 pages, 198
-components; 180,914 lines of TS/TSX/CSS across 818 files and
-35,062 lines of Markdown across 105 files, with 5 CI jobs gating
-every pull request and 33 test files behind them. The Markdown is
-not documentation debt — it is the interface, and the reference
-documents in it are the rules the product must not break.
-
-The AI matching engine is a deliberate two-stage pipeline:
-rule-based pre-filter for cost control, then GPT-4o-mini at
-temp 0.3 / max_tokens 1000 / JSON-object response_format scoring on
-promising pairs along five **explicitly weighted** dimensions
-(MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%)
-with explainable natural-language justifications, Upstash Redis
-cache by pair, exponential-backoff retries, deterministic rule-
-based fallback when AI is unavailable, and admin human-in-the-loop
-approval as the final gate. The `sync-event-from-slack` agent
-skill composes existing CLI tools (Slack fetch, image download,
-docx parse, JSON validate, git commit) into a single intent-driven
-workflow with dry-run preview and CI gating — collapsing event
-publication from hours of manual work to one command. Across the
-three supporting projects I worked in Python (crawler with image
-deduplication + Wayback Machine fallback), Mintlify / MDX (Her Waka
-teaching site authored solo), and Node 22 native fetch over the
-SerpData API (the SEO audit with mermaid-diagrammed report).
-
-**The AI-native operating model.** An AI-native team is not a team
-that talks to a chatbot; it is a team whose recurring work has
-been written down precisely enough that an agent can execute it,
-and whose non-engineers can therefore run work that previously
-needed an engineer. She Sharp's version of that is 11 agent skills
-under `.claude/skills/`, spread over 97 files: 25,643 lines of
-written-down procedure and tooling — the honest figure, after
-subtracting one skill's 22,786-line machine-written state ledger
-from the 48,429 raw total — comprising 12,550 lines of instruction
-and reference prose across 27 reference documents and 11,995 lines
-of script across 34 executables. Each skill lives in the
-repository like code: version-controlled, changed by pull request,
-and type-checked in CI, which needs a second tsconfig because the
-root one skips `.claude/`. That is the whole argument. A procedure
-in someone's memory cannot be reviewed, diffed, or made to fail a
-test; a procedure in a SaaS console can be changed by anyone with
-the login and leaves no record of who changed it or why.
-
-Each of the eleven replaces a named manual tool:
-`sync-event-from-slack` (the largest), `monthly-newsletter` (1,424
-lines, the longest instruction file in the repository),
-`build-event-slides`, `update-mailing-list`, `email-the-community`,
-`reply-to-contact-messages`, `promote-event`, `make-event-poster`,
-`run-event-playbook`, `make-event-video`, `tweak-event-slides`.
-`run-event-playbook` is the orchestrator and the reason eleven
-tools behave as one workflow: it runs 10 offline checks for an
-event and, for each gap, names the skill that closes it. It builds
-nothing itself — it turns "what still has to happen for this
-event?" into a command whose answer arrives with its next action
-attached. The agent's own memory is layered the same way: 9
-`CLAUDE.md` files, 933 lines, split by *when* a rule must bind
-rather than by subject. A nested file loads only when a file in
-that subtree is read, so rules about creating a new file, running
-a command, or trusting a `grep` hit have to live in the root file
-— none of those actions begins by reading a file in the directory
-they govern.
-
-The four automations worth naming. **Newsletter** —
-`monthly-newsletter`, 4 issues shipped in the new system, with a
-two-block JSON schema separating the machine-generated snapshot
-from human-owned editorial, and a three-stage approval chain (test
-send → review → founder approval) tracked in a state file. Writing
-the loop down did not move the decision to an agent; it made the
-stage legible. The founder alone approves a broadcast. **Poster** —
-`make-event-poster` generates a *textless* plate with gpt-image-2
-and then sets every word in code across six platform sizes plus a
-per-speaker set and a line-up tile. The reasoning is the good
-part: text rendered by a diffusion model cannot be corrected when
-a speaker's title changes and cannot be proofread by a test; text
-set in code is a string in a file. **Promo video** —
-`make-event-video`, one Remotion composition rendering four aspect
-ratios (vertical, portrait, square, landscape) cut to a
-soundtrack, where a scene asks the layout for the shape of the
-frame it is being rendered into and recomposes; the vertical cut
-is not the landscape cut with its sides thrown away. **Report** —
-a Typst pipeline producing funder-facing and internal reports from
-real platform exports rather than placeholders.
-
-No before-and-after timing study was run, so there is no
-hours-saved figure here and none should be inferred. What is
-structural and checkable is narrower and more useful: work that
-required a vendor console now runs from a command, so it can be
-scheduled, reviewed and re-run; and work that required an engineer
-now has a written procedure someone else can follow, which changes
-who is able to do it rather than only how long it takes.
 ### Chief Technology Officer at FemTech Weekend
 [tier=primary · recency=active · updated=2026-09-02]
 - **Period:** Mar 2025 -- Present
@@ -1042,7 +755,7 @@ the doctrine being taught. Students can literally read the
 instructor's repo to see how the patterns they're learning
 compose in a real production system.
 ### Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer) at Gavigo
-[tier=flagship · recency=recent · updated=2026-09-04]
+[tier=flagship · recency=recent · updated=2026-09-16]
 - **Period:** Oct 2025 -- Sep 2026
 - **Location:** USA (remote — Delaware-incorporated)
 - **URL:** https://gavigo.com/
@@ -1093,8 +806,8 @@ founder & CEO Saba Gecgil.
 Title progression formalized over three contract iterations:
 Original Consulting Agreement (Oct 17 2025), Amended and Restated
 (Feb 9 2026), Second Amended and Restated (Apr 16 2026) which
-ratified the current title: **Founding Principal Engineer,
-Activation, Execution & AI Systems**.
+ratified the title I held until the role closed in September 2026:
+**Founding Principal Engineer, Activation, Execution & AI Systems**.
 
 **Impact delivered:** Shipped GAVIGO IRE — the Instant Reality Exchange platform — from
 M1 prototype to live production at ire.gavigo.com. First shipped
@@ -1236,12 +949,12 @@ adopted by the CEO as company process — converted into a
 six-vendor procurement questionnaire that disqualified a vendor
 within four hours.
 
-FOSS curation: cloned 11 open-source game repos, scored against
-license (MIT / Apache-2.0), build size (<50 KB), web-first
-compatibility, and audio bug stability — vendored the top 9
-(Hextris, Clumsy Bird, Tiny Yurts, Catculus, Casual Crusade,
-Stolen Sword, Brewing Disaster, Coup Ahoo, DEAD AGAIN,
-Norman the Necromancer, Idle Necromancer).
+FOSS curation: cloned 11 open-source game repos (Hextris, Clumsy
+Bird, Tiny Yurts, Catculus, Casual Crusade, Stolen Sword, Brewing
+Disaster, Coup Ahoo, DEAD AGAIN, Norman the Necromancer, Idle
+Necromancer), scored them against license (MIT / Apache-2.0), build
+size (<50 KB), web-first compatibility, and audio bug stability, and
+vendored the top 9.
 ### Software Engineer (Bandicoot squad · Crimson Academies) at Aotearoa Infinite Academy
 [tier=primary · recency=historical · updated=2026-05-27]
 - **Period:** Oct 2025 -- Nov 2025
@@ -1370,6 +1083,326 @@ Claude Skills into Bandicoot's everyday workflow — the
 squad's first systematic AI-tools onboarding session, and
 the basis for ongoing developer-productivity gains across
 the team.
+### Senior Full Stack Engineer & Website Team Lead at She Sharp
+[tier=flagship · recency=recent · updated=2026-09-16]
+- **Period:** Jul 2025 -- Sep 2026
+- **Location:** New Zealand
+- **URL:** https://www.shesharp.org.nz/
+
+**Impact:** Recruited by founder Dr Mahsa Mohaghegh as the senior engineer She Sharp lacked; over 13.3 months moved the charity's website and 1,549-person mailing list onto infrastructure it owns, and wrote its recurring work down as 11 agent skills a non-engineer can follow.
+
+**Company context:** She Sharp is New Zealand's leading women-in-STEM community — a
+registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
+AI/NLP researcher and Head of Computer and Information Sciences at AUT. The
+organization runs a mentorship programme, a corporate-partner
+network, and a recurring events calendar that together support
+3,500+ members and 5,000+ women reached
+across its history. 50+ corporate partners, 96+ events since 2014,
+18 industry mentors.
+
+**Mission:** Close the representation gap in technology by connecting women in
+STEM with role models, mentors, employers, and each other — and by
+running flagship programmes (mentorship, Her Waka workforce re-entry,
+THRIVE) that operationalize that mission at scale. The bottleneck on
+scale, when I joined, was the technical capability of the platform:
+the old Webflow site had become incompatible with the membership
+system, AI matching, billing, and Slack-integrated operations the
+mission required.
+
+**My mandate:** Recruited directly by Dr Mahsa Mohaghegh (McCauley) as Senior Full
+Stack Engineer & Website Team Lead — specifically as the AI and
+senior development capability She Sharp didn't have in-house — to
+build the new member platform end-to-end and run it operationally.
+The mandate covered: replace the Webflow site, design and ship the
+AI mentor-mentee matching system, integrate Slack across the
+organisation's operations, run events and recruitment
+infrastructure, and serve as technical lead on adjacent initiatives
+(Her Waka MSD-funded programme, SEO strategy). It grew, in 2026,
+into leading the charity's digital and AI-native transformation.
+I held the role from July 2025 to September 2026.
+
+**Impact delivered:** **The problem I was handed.** In July 2025 a volunteer-run charity
+ran on rented software: the website inside one vendor's product,
+the mailing list and its consent record inside another's, the
+artwork in a third, and eleven years of decisions inside a chat
+tool — all of it one lapsed card or one departed volunteer away
+from being out of reach. The previous move, WordPress to Webflow
+in 2023, had cost the second half of that year re-entering every
+event since 2014 by hand. I chose the new stack by one question
+first: how does the data come back out?
+
+**What I built, and how much of it was mine.** Over 13.3 months
+(2025-07-22 → 2026-09-01, pinned at commit b1d49d88): 1,381
+commits and 251 merged pull requests — I opened 207 of the 254 —
+and 94.5% of all lines added (801,609 of 847,827). One other
+developer worked alongside me: Lesley Gao, 151 commits and 43 pull
+requests, mostly on the dashboard and mentorship surfaces. The
+share is a description of how much depended on one person, which
+is exactly why the handover below was written as the work went.
+
+**Website — done.** Replaced the Webflow site with a Next.js 15
+application in a repository the charity holds: 63 pages, 84 API
+routes and 198 components over a 39-table Postgres schema. Beyond
+what Webflow did, it carries AI mentor-mentee matching
+(GPT-4o-mini, five weighted dimensions, human-in-the-loop review),
+three role-permissioned dashboards (mentor / mentee / admin), Stripe
+membership billing, and an AI chatbot answering from the site's
+live data rather than a hand-kept FAQ. A migration is finished when
+the old world's links still work, not when the new site goes live:
+Webflow's pagination URLs redirect permanently to their clean
+equivalents, and 903 legacy images were rebuilt from the old
+site's markup — it had no bulk media export — with a CI check that
+fails if an event page ever loses one.
+
+**Mailing list — technically done and proven in production.**
+Moved 1,549 people onto infrastructure the charity owns — double
+opt-in where confirmation requires a button press and never a GET,
+as defence against link scanners; a four-stream sender model;
+exactly one Resend call site in the whole application; and the
+consent record in the organisation's own Postgres rather than a
+vendor's. The first send went out on 2026-08-31 in 16 idempotent
+batches with 0 failures and a 0.45% bounce rate. The sending-domain
+move was 29 DNS records before and 29 after with a single value
+different, because the region and Return-Path were matched
+deliberately rather than discovered afterwards. Consent became
+auditable for the first time by classifying every subscriber
+against the act that put them on the list — and I reported the
+unflattering result, that 75.4% arrived by an act that was not a
+subscription. 2,129 non-consenting contacts are held as one-way
+hashes so a future import cannot resurrect them, and a CI gate
+fails the build if an email address or a ticketing access code
+reaches a committed file. 179 past newsletters were recovered from
+the vendor and are now served from the charity's own site.
+
+**Marketing production — shipped, not yet adopted.** Posters, event
+decks and promo videos became code generated from event data (see
+technical highlights). The honest status: it has been chosen over
+a hand-made duplicate once, and the committee still makes most
+artwork the old way. Shipping a capability and shipping its
+adoption are two different projects, and only the first was
+scheduled.
+
+**Data sovereignty.** Recovered 1.15 GB of the organisation's own
+operating record out of four platforms: eleven years of Slack
+(208 conversations, 56,119 messages), the full ticketing and
+mailing history, and the only copy of the previous website held
+outside the vendor's own account. 97 archived Slack channels were
+invisible to the standard listing API and would have been missed
+entirely. Two findings that transfer to any migration: a checksum
+over a mapped object proves only what your mapper kept, and an API
+key is not a replacement for an export.
+
+**Digital governance audit.** 7 of the 11 email addresses
+published on the website did not exist — including the headline
+contact address — proven by sending one real message to each and
+reading delivery back, not inferred from configuration; all fixed,
+plus a funder-facing PDF the sweep had missed. Removed 17
+fabricated testimonials attributed to real companies from the
+charity's public site. Proved 3 of the 4 full-bleed photographs in
+a published funder report came from outside the period they
+illustrated, using perceptual hashing over a 225-image corpus.
+Catalogued 24 credential and personal-data exposures by location
+without recording a single value, and identified the same
+access-ownership failure recurring across 5 separate incidents in
+7 years.
+
+**Financial governance and audit capability.** Diagnosed a 60%
+rise in a SaaS bill as an unbounded data-growth problem rather
+than a price rise: the vendor's base price had not moved in 25
+billing periods, and every dollar of the increase was buying
+contacts who could not lawfully be emailed (1,585 of 3,145 billed
+contacts, 50.4%). Finding the mechanism mattered more than the
+number. Identified NZ$1,876.44 and US$400.20 of annual spend as
+removable against a US$240 replacement — realisable, not
+realised: the founder is the cardholder and pressing the button
+was not mine to press. Found an unclaimed nonprofit entitlement
+worth US$1,566 a year, the workspace collaboration tool's free
+upgrade for registered charities under 250 members; the
+organisation has 18 and was paying full price. And established
+that the ticketing account had been billed at the charity rate
+(3% + $0.30) until 27 October 2023 and at the full commercial rate
+from 31 October, unnoticed for nearly three years — not by
+assuming either rate but by fitting every fee-bearing ticket
+against both published formulas, which split cleanly into two eras
+with no overlap. The twist that makes it matter: absorbed fees are
+$0.00 on every event, so the difference sits on the ticket price.
+It is money taken from women buying tickets to a women-in-tech
+event, not from the charity's accounts.
+
+**Enablement and business-process mapping.** Delivered six
+enablement sessions for the volunteer team (sessions delivered; no
+attendance was ever logged, so no headcount is claimed): a
+recorded content-update guide (2026-03-29) aimed at getting a
+non-technical member updating the site inside three minutes; a
+browser-automation demo (2026-05-04); four recorded agent-skill
+tutorials (2026-07-28); 1:1 Typst coaching for a teammate
+(2026-08-02); a recorded end-to-end event-lifecycle tutorial
+(2026-08-24); and a two-hour in-person workshop in Auckland on
+2026-08-29, during which I produced usable promo videos live while
+explaining the process. The written interface to all of it is an
+AI skills guide addressed to anyone on the team "whether or not
+you have ever written a line of code". Alongside it I derived a
+1,714-line event-lifecycle standard operating procedure by
+crawling eleven years of Slack — a phase × owner × method table
+covering partner acquisition, go/no-go, channel kickoff,
+ticketing, website page, poster set, campaign calendar, social,
+mailing-list and registrant email, deck, photography, gallery
+close-out, feedback digest and newsletter, marking where the
+published title and the observed practice diverge. It is served as
+a live internal page and hash-verified against its source Markdown
+in CI, so the page cannot silently drift from the procedure it
+serves. Beside it sit 52 recorded organisational decisions (51 of
+them mine), each with structured frontmatter, which turns "has
+anyone already thought about this?" from a question you ask a
+person into one you can grep. I also ran a published-vs-recorded
+reconciliation of the organisation's own headline numbers — a
+measurement, not an accusation.
+
+**Custom Slack ecosystem for the She Sharp workspace.** Beyond
+the admin-side Claude Code skill, I shipped a portfolio of
+integrations that run inside the She Sharp Slack workspace
+itself: an event-collector endpoint (`/api/slack/events`) that
+ingests workspace activity for the database; a **weekly
+mentorship-stats digest bot** that auto-publishes engagement
+numbers each Monday; and a **weekly NZ funding-opportunities
+digest bot** that crawls 6 government RSS/HTML sources, scores
+each opportunity for member relevance (60+ threshold), and
+posts the top 10 to a dedicated `#funding-opportunities`
+channel via Incoming Webhook; contact-form and AI-screening
+notifications; and a weekday `slack-triage` cron that reads with
+`--no-record` so it never advances a read position — an automated
+reader that marks things read is an automated way to lose them.
+The most involved of them is an **AI-powered `/event` slash
+command** that turns a plain-English request into a validated
+patch: it pulls channel history, the events JSON and the naming
+conventions as context, produces a structured-output patch,
+Zod-validates it, commits to a draft branch, shows an ephemeral
+Block Kit preview with a JSON diff, and on confirm opens a GitHub
+pull request. Work that used to mean opening a console now
+arrives as a reviewable change.
+
+Beyond the main platform, I shipped three supporting projects: the
+Python migration crawler (1,748 images / 707 MB / 11 JSON files
+bootstrapping the new platform from the old Webflow site), the Her
+Waka MSD-funded teaching site at herwaka.shesharp.org.nz with
+complete authored curriculum (4 workshops + 8+ tutorials), and a
+professional SEO audit and 10-point recommendations report on
+shesharp.org.nz that identified the high-priority mobile-vs-desktop
+ranking gap on "women in tech New Zealand."
+
+**How the role closed (Sept 2026).** I left She Sharp in September
+2026. The aim all along had been to make the answer to "how does
+this work?" a file rather than a person, and the exit is where that
+was tested: 35,062 lines of Markdown across 105 files in the
+repository, the non-coder AI skills guide, two live playbooks
+hash-verified against their source, the 52 recorded decisions, and
+a 36-page transformation record in which every figure is measured,
+cited or derived. It also says plainly what was not finished. Three
+money decisions were prepared and left with the founder, who holds
+the accounts: the nonprofit collaboration-tool upgrade, the mailing
+vendor downgrade, and the website vendor's renewal before
+2027-06-18. And one gap I named as mine: a safeguarding reporting
+route for the community was proposed but not built. The charity's
+data and its sending identity now live in accounts the organisation
+owns, regardless of who is still there to open them.
+
+**Technical highlights:** Architected and built every layer of the platform: Next.js 15.6
+canary + React 19.1.2 + TypeScript 5.8 on Drizzle 0.43 over Neon
+Postgres, NextAuth 5 with bcrypt + Google/GitHub OAuth, Tailwind 4
++ shadcn/ui, Resend transactional email, Cloudinary image pipeline,
+Stripe-integrated membership flow, Vercel edge deployment +
+3 scheduled jobs. Schema runs 39 tables / 33 enums / 32 SQL
+migrations — every business concept is a typed enum so invalid
+states are unrepresentable. 84 API routes, 63 pages, 198
+components; 180,914 lines of TS/TSX/CSS across 818 files and
+35,062 lines of Markdown across 105 files, with 5 CI jobs gating
+every pull request and 33 test files behind them. The Markdown is
+not documentation debt — it is the interface, and the reference
+documents in it are the rules the product must not break.
+
+The AI matching engine is a deliberate two-stage pipeline:
+rule-based pre-filter for cost control, then GPT-4o-mini at
+temp 0.3 / max_tokens 1000 / JSON-object response_format scoring on
+promising pairs along five **explicitly weighted** dimensions
+(MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%)
+with explainable natural-language justifications, Upstash Redis
+cache by pair, exponential-backoff retries, deterministic rule-
+based fallback when AI is unavailable, and admin human-in-the-loop
+approval as the final gate. The `sync-event-from-slack` agent
+skill composes existing CLI tools (Slack fetch, image download,
+docx parse, JSON validate, git commit) into a single intent-driven
+workflow with dry-run preview and CI gating — collapsing event
+publication from hours of manual work to one command. Across the
+three supporting projects I worked in Python (crawler with image
+deduplication + Wayback Machine fallback), Mintlify / MDX (Her Waka
+teaching site authored solo), and Node 22 native fetch over the
+SerpData API (the SEO audit with mermaid-diagrammed report).
+
+**The AI-native operating model.** An AI-native team is not a team
+that talks to a chatbot; it is a team whose recurring work has
+been written down precisely enough that an agent can execute it,
+and whose non-engineers can therefore run work that previously
+needed an engineer. She Sharp's version of that is 11 agent skills
+under `.claude/skills/`, spread over 97 files: 25,643 lines of
+written-down procedure and tooling — the honest figure, after
+subtracting one skill's 22,786-line machine-written state ledger
+from the 48,429 raw total — comprising 12,550 lines of instruction
+and reference prose across 27 reference documents and 11,995 lines
+of script across 34 executables. Each skill lives in the
+repository like code: version-controlled, changed by pull request,
+and type-checked in CI, which needs a second tsconfig because the
+root one skips `.claude/`. That is the whole argument. A procedure
+in someone's memory cannot be reviewed, diffed, or made to fail a
+test; a procedure in a SaaS console can be changed by anyone with
+the login and leaves no record of who changed it or why.
+
+Each of the eleven replaces a named manual tool:
+`sync-event-from-slack` (the largest), `monthly-newsletter` (1,424
+lines, the longest instruction file in the repository),
+`build-event-slides`, `update-mailing-list`, `email-the-community`,
+`reply-to-contact-messages`, `promote-event`, `make-event-poster`,
+`run-event-playbook`, `make-event-video`, `tweak-event-slides`.
+`run-event-playbook` is the orchestrator and the reason eleven
+tools behave as one workflow: it runs 10 offline checks for an
+event and, for each gap, names the skill that closes it. It builds
+nothing itself — it turns "what still has to happen for this
+event?" into a command whose answer arrives with its next action
+attached. The agent's own memory is layered the same way: 9
+`CLAUDE.md` files, 933 lines, split by *when* a rule must bind
+rather than by subject. A nested file loads only when a file in
+that subtree is read, so rules about creating a new file, running
+a command, or trusting a `grep` hit have to live in the root file
+— none of those actions begins by reading a file in the directory
+they govern.
+
+The four automations worth naming. **Newsletter** —
+`monthly-newsletter`, 4 issues shipped in the new system, with a
+two-block JSON schema separating the machine-generated snapshot
+from human-owned editorial, and a three-stage approval chain (test
+send → review → founder approval) tracked in a state file. Writing
+the loop down did not move the decision to an agent; it made the
+stage legible. The founder alone approves a broadcast. **Poster** —
+`make-event-poster` generates a *textless* plate with gpt-image-2
+and then sets every word in code across six platform sizes plus a
+per-speaker set and a line-up tile. The reasoning is the good
+part: text rendered by a diffusion model cannot be corrected when
+a speaker's title changes and cannot be proofread by a test; text
+set in code is a string in a file. **Promo video** —
+`make-event-video`, one Remotion composition rendering four aspect
+ratios (vertical, portrait, square, landscape) cut to a
+soundtrack, where a scene asks the layout for the shape of the
+frame it is being rendered into and recomposes; the vertical cut
+is not the landscape cut with its sides thrown away. **Report** —
+a Typst pipeline producing funder-facing and internal reports from
+real platform exports rather than placeholders.
+
+No before-and-after timing study was run, so there is no
+hours-saved figure here and none should be inferred. What is
+structural and checkable is narrower and more useful: work that
+required a vendor console now runs from a command, so it can be
+scheduled, reviewed and re-run; and work that required an engineer
+now has a written procedure someone else can follow, which changes
+who is able to do it rather than only how long it takes.
 ### Open Source Contributor at CopilotKit
 [tier=primary · recency=recent · updated=2026-06-04]
 - **Period:** Jun 2025 -- May 2026
@@ -2223,18 +2256,20 @@ development, personal growth, and practical problem-solving in STEM
 environments — coordinated through a dedicated volunteer liaison.
 Holds 2024 and 2025 official mentor certificates.
 ### Ambassador — Website Team at She Sharp
-[tier=primary · recency=active · updated=2026-08-24]
-- **Period:** Jul 2025 -- Present
+[tier=primary · recency=recent · updated=2026-09-16]
+- **Period:** Jul 2025 -- Sep 2026
 - **Location:** Auckland, New Zealand (remote)
 - **URL:** https://shesharp.org.nz/
 - **Keywords:** Volunteer ambassador, Women in STEM, Community outreach, Website team
 
-Ambassador on the She Sharp Website Team — a nonprofit dedicated to
-bridging the gender gap in STEM (where female representation sits at
-~20%). She Sharp has built a **3,500+ member community** and organised
-**96+ events since 2014**. Continues Chan's relationship with the
-organisation after the formal Lead Engineer role, focused on
-sustaining the digital infrastructure that powers community growth.
+Ambassador on the She Sharp Website Team, held alongside the Senior Full
+Stack Engineer & Website Team Lead role (see work[] she-sharp) from July
+2025 to September 2026. She Sharp is a volunteer-run New Zealand charity
+closing the gender gap in STEM, with **96+ events since 2014**. As an
+ambassador Chan represented the charity at its events — MC, organiser
+and workshop host — and taught the volunteer team to run the digital
+infrastructure she built. Both roles ended when she left in September
+2026.
 ### Volunteer Educator at Cebu International Academy (CIA)
 [tier=archive · recency=historical · updated=2026-05-18]
 - **Period:** Mar 2023 -- Aug 2023
@@ -3592,7 +3627,7 @@ wrote the Gulp + LESS build pipeline, and authored the
 > The rest of the catalogue: every project not listed above, grouped by category. This is NOT an open-source list — it includes client deliverables and projects with no public repository, and a link here may point to a live site rather than to source code. Treat a project as open source only if it appears under "Notable Open Source Projects" above or carries a repository link on github.com/ChanMeng666.
 
 **web-apps:**
-- [She Sharp](https://www.shesharp.org.nz/) [tier=flagship · recency=recent · updated=2026-09-04]
+- [She Sharp](https://www.shesharp.org.nz/) [tier=flagship · recency=recent · updated=2026-09-16]
 - [TikTok Shop Go Template](https://github.com/ChanMeng666/douyin-mall-go-template) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [腾讯会议录屏下载助手 — Chrome Web Store-Published Extension](https://github.com/ChanMeng666/tencent-meeting-video-downloader) [tier=archive · recency=deprecated · updated=2026-09-02] -- live: https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
 - [FreePeriod Website](https://github.com/ChanMeng666/free-period-website) [tier=primary · recency=historical · updated=2026-08-05] -- live: https://free-period-website.pages.dev/
@@ -4223,25 +4258,6 @@ AI-in-practice session with MYOB product, domain and people leads — Jean
 Fulop (Senior Product Manager), Marion Nicholas (Domain Expert, CA) and
 Katy Seel (GM People for SME & Practice) — on what actually changes in
 delivery work once AI is in the toolchain. 87 registered, 51 attended.
-### Beyond the Code: Women Leading the Future of Cybersecurity and AI — Organizer
-[tier=secondary · recency=active · updated=2026-09-04]
-- **Type:** workshop
-- **Date:** Oct 2026
-- **Location:** Xero, Level 2, 96 St Georges Bay Road, Parnell, Auckland, New Zealand
-- **Organizer:** She Sharp × Xero × Secure Code Warrior
-- **URL:** https://www.shesharp.org.nz/events/code-secure-2026
-- **Keywords:** cybersecurity, secure coding, workshop
-
-The 2026 return of the Xero × Secure Code Warrior evening, a year after
-`she-sharp-code-secure-2025`, back at Xero Parnell — rebranded from "Code
-Secure. Lead the Future" to **Beyond the Code**, and rebuilt around two
-halves: a 45-minute gamified secure-coding tournament on Secure Code
-Warrior's platform (real vulnerable code, leaderboard, prizes; Java
-Spring, Python, JavaScript, Ruby or a language-free pseudocode track) and
-a panel of women leaders on the critical role of cybersecurity in AI and
-the routes that took them into it. Speaker: Fatemah Beydoun (Secure Code
-Warrior). 5:00–8:00pm NZDT — corrected 2026-09-04 from the 9:00pm end time
-this entry previously carried. Registration figures not yet published.
 
 ## Certifications (50+)
 
@@ -4869,7 +4885,7 @@ Tam-AI-Ti commissioner; former KPMG NZ National Māori Sector lead and Maui Rau 
 
 FemTech Weekend founder (Sep 2024—); engaged Chan as CTO; commissioned the official site. Ex Co-Founder of FemTech China; ex Barclays UK New Product Development Manager.
 ### Lesley Gao
-[tier=secondary · recency=active · updated=2026-05-22]
+[tier=secondary · recency=recent · updated=2026-05-22]
 - **Current title:** Frontend Designer & Developer
 - **Pronouns:** she/her
 - **LinkedIn:** https://www.linkedin.com/in/lesley-gao/
@@ -4877,9 +4893,9 @@ FemTech Weekend founder (Sep 2024—); engaged Chan as CTO; commissioned the off
 - **Relationship to Chan:** collaborator
 - **Current org id:** she-sharp
 - **Worked together on:**
-  - work:she-sharp — UI/UX optimization partner on the She Sharp full-stack member platform; authored ~100 of 748 commits (13.4%) on frontend design & code while Chan led core development
+  - work:she-sharp — UI/UX optimization partner on the She Sharp full-stack member platform; authored 151 of 1,381 commits (10.9%) and 43 pull requests, mostly the dashboard and mentorship surfaces, while Chan led core development (Jul 2025 — Sep 2026)
 
-She Sharp platform UI/UX & frontend collaborator; ~100 commits (13.4%) in the design + code partnership.
+She Sharp platform UI/UX & frontend collaborator; 151 commits and 43 pull requests in the design + code partnership.
 ### Armand Bentigan
 [tier=secondary · recency=recent · updated=2026-05-22]
 - **Current title:** Creative Producer; MTF Student

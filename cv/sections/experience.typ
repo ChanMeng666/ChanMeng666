@@ -3,8 +3,9 @@
 
 // ─── EXPERIENCE ──────────────────────────────────────────────────────────────
 // ORDER: roles Chan is STILL DOING come first, ranked by importance, then the
-// ended ones in the same ranked spirit. ArchCanvas (her own company) leads;
-// GAVIGO ended Sep 2026 and TechNest sits behind it.
+// ended ones in the same ranked spirit. ArchCanvas (her own company) leads,
+// then FemTech Weekend — the only two current roles since Sep 2026. She Sharp
+// and GAVIGO both ended Sep 2026; TechNest sits behind them.
 //
 // FIVE detailed roles is the budget. Two roles have moved down into the italic
 // "Previously:" run-on rather than being cut: Sanicle (CTO, ended Feb 2026,
@@ -24,7 +25,7 @@
 // data/profile/10-career.yaml::work[].impactHeadline. Commit counts and
 // solo-percentage ratios are deliberately ABSENT from this CV — they measure
 // typing, not the problem solved; where ownership is load-bearing it is stated
-// in words ("sole engineer", "built it solo", "still operate it"). Do not
+// in words ("sole engineer", "built it solo", "led the build"). Do not
 // re-add them. Products built at these employers (GAVIGO IRE, She Sharp
 // Platform) are referenced by name but NOT re-described — the deep narrative
 // lives in Selected Projects for independent OSS work.
@@ -36,14 +37,6 @@
     dates: "Apr 2026 — Present",
     location: [Auckland, New Zealand · *Remote*],
     summary: [Architects and self-builders describe a building in plain words and get back a dimensioned, buildable floor plan. Made that work by first inventing *#link("https://github.com/ChanMeng666/archlang")[ArchLang]*, the open-source language that compiles a floor plan into a precise drawing (*34 npm releases*, *83 diagnostic codes*), then building the commercial product on top — so an edit is exact and replayable, not regenerated.],
-  )
-  role-line(
-    title: "Senior Full-Stack Engineer & Website Team Lead",
-    org: "She Sharp",
-    org-url: "https://www.shesharp.org.nz/",
-    dates: "Jul 2025 — Present",
-    location: [Auckland, New Zealand · *Hybrid*],
-    summary: [A volunteer-run NZ women-in-STEM charity (*96+ events since 2014*) now owns the software it runs on instead of renting it: one system for sign-ups, memberships, events, and mentor matching scored by GPT-4o-mini across five weighted dimensions. Recruited by founder Dr Mahsa Mohaghegh, built it as sole engineer across *13.3 months* and still operate it. Then rewrote the charity's recurring work — event setup, newsletters, posters, video, mailing list — as *11 agent skills*, version-controlled and type-checked in CI, so non-engineers now run work that used to need an engineer.],
   )
   role-line(
     title: "Chief Technology Officer",
@@ -58,6 +51,14 @@
     // no slack for the extra clause. Do not delete this marker without also
     // rewording the claim.  copy-lint-ok:R2
     summary: [China's first women's-health-technology organisation outgrew its web platform twice as the mission grew; rebuilt it both times as sole engineer, Next.js marketing site to Docusaurus editorial and research platform. Ran the digital infrastructure behind the 2026 Shanghai Summit: four days, *20 confirmed speakers*, headlined by Ida Tin, who coined "FemTech".],
+  )
+  role-line(
+    title: "Senior Full-Stack Engineer & Website Team Lead",
+    org: "She Sharp",
+    org-url: "https://www.shesharp.org.nz/",
+    dates: "Jul 2025 — Sep 2026",
+    location: [Auckland, New Zealand · *Hybrid*],
+    summary: [A volunteer-run NZ women-in-STEM charity (*96+ events since 2014*) moved off rented software onto a system it owns: sign-ups, memberships, events, and GPT-4o-mini mentor matching. Recruited by founder Dr Mahsa Mohaghegh, led the build across *13.3 months*, including a *1,549-person* mailing-list cutover with *0 failures*. Rewrote the charity's recurring work — event setup, newsletters, posters, video — as *11 agent skills* a non-engineer can follow, so the handover was written down before leaving.],
   )
   role-line(
     title: "Founding Principal Engineer, Activation, Execution & AI Systems",

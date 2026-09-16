@@ -46,7 +46,7 @@ panel), restated for who-follows-you-on-X terms.
 | # | Archetype | Who follows for this | What they want from the feed | Proof asset (link/pin) |
 |---|-----------|----------------------|------------------------------|------------------------|
 | A1 | **AI Agent Architect** | AI engineers, agent builders, MCP/Claude Code devs | How to actually architect agents that ship — retrieval, tool use, eval, idempotency, faithfulness gates | Vitex (8-step pipeline, agent-ready over HTTP/CLI/MCP) · Google News MCP · Tam-AI-Ti (88+ CopilotKit actions) |
-| A2 | **Founding / principal engineer** | Founders, early-stage hiring managers, VCs scouting talent | Evidence one person can own a product from schema to production migration | GAVIGO IRE (sub-1ms restore, DOKS→GKE 30-min cutover) · She Sharp (95 API routes, solo platform) |
+| A2 | **Founding / principal engineer** | Founders, early-stage hiring managers, VCs scouting talent | Evidence one person can own a product from schema to production migration | GAVIGO IRE (sub-1ms restore, DOKS→GKE 30-min cutover) · She Sharp (84 API routes; Jul 2025 — Sep 2026) |
 | A3 | **CTO-class operator** | Startup operators, technical co-founder seekers | Someone who sets engineering direction and ships at startup velocity across a whole org | Cross-cloud migration story · Slack/agent-skill automation · shipping cadence across 5 live products |
 | A4 | **AI educator** | Learners, junior devs, the Chinese-speaking + women-in-tech communities | Clear, jargon-glossed explanations they can act on; the "how" behind the build | ArchLang playground · AI Programming Teaching Platform · 5 teaching cohorts, 100+ learners |
 
@@ -90,9 +90,9 @@ The receipts that one person took a product from empty repo to production.
   wrote first." (GAVIGO IRE)
 - "**Sub-1ms p50 restore, 84.6% warm-pool hit rate.** How container pre-warming
   makes a 'tap and it's instantly playing' feed possible." (GAVIGO IRE)
-- "I built New Zealand's leading women-in-STEM charity a real member platform —
-  **95 API routes, a 1,411-line schema** — to replace the spreadsheets they'd
-  outgrown. Thread on the AI matching engine." (She Sharp)
+- "I led the build of a real member platform for a volunteer-run NZ women-in-STEM
+  charity — **84 API routes, a 39-table schema** — to replace the spreadsheets
+  they'd outgrown. Thread on the AI matching engine." (She Sharp)
 - "Zero-downtime production migration from my personal Vercel to the client's team
   account, documented as a reusable 12-step playbook. The boring parts are the
   whole job." (Tam-AI-Ti)
@@ -100,9 +100,9 @@ The receipts that one person took a product from empty repo to production.
 ### Pillar 3 — CTO-class / operator (→ A3)
 Direction-setting, automation, and velocity across a whole product.
 
-- "I gave a 2,200-member nonprofit a **Claude agent skill** that turns a Slack
+- "I gave a volunteer-run charity a **Claude agent skill** that turns a Slack
   channel into a published event page — dry-run by default, Zod-validated before
-  any git write. Hours of manual work → one command." (She Sharp)
+  any git write. A console chore became one reviewable command." (She Sharp)
 - "A weekly cron crawls **6 NZ government funding sources**, dedupes, scores, and
   posts a digest to Slack. Operators shouldn't have to remember to check." (She Sharp)
 - "Five live products, one person. Here's how I decide what gets an AI surface and

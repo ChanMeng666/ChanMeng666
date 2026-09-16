@@ -459,7 +459,7 @@ work:
     featured: true
     tier: flagship
     recency: recent
-    lastUpdated: "2026-09-04"
+    lastUpdated: "2026-09-16"
     keywords: [Go, "Kubernetes (GKE)", "React Native", WebSocket, "Redis", "gpt-5.4-mini", "AI orchestration", "Distributed systems", "Founding engineer"]
     narrative:
       impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owned the Intelligence Layer end-to-end (96.5% solo on 471 of 488 non-merge commits) with a contractually protected technical domain."
@@ -508,8 +508,8 @@ work:
         Title progression formalized over three contract iterations:
         Original Consulting Agreement (Oct 17 2025), Amended and Restated
         (Feb 9 2026), Second Amended and Restated (Apr 16 2026) which
-        ratified the current title: **Founding Principal Engineer,
-        Activation, Execution & AI Systems**.
+        ratified the title I held until the role closed in September 2026:
+        **Founding Principal Engineer, Activation, Execution & AI Systems**.
       impactDelivered: |
         Shipped GAVIGO IRE — the Instant Reality Exchange platform — from
         M1 prototype to live production at ire.gavigo.com. First shipped
@@ -651,12 +651,12 @@ work:
         six-vendor procurement questionnaire that disqualified a vendor
         within four hours.
 
-        FOSS curation: cloned 11 open-source game repos, scored against
-        license (MIT / Apache-2.0), build size (<50 KB), web-first
-        compatibility, and audio bug stability — vendored the top 9
-        (Hextris, Clumsy Bird, Tiny Yurts, Catculus, Casual Crusade,
-        Stolen Sword, Brewing Disaster, Coup Ahoo, DEAD AGAIN,
-        Norman the Necromancer, Idle Necromancer).
+        FOSS curation: cloned 11 open-source game repos (Hextris, Clumsy
+        Bird, Tiny Yurts, Catculus, Casual Crusade, Stolen Sword, Brewing
+        Disaster, Coup Ahoo, DEAD AGAIN, Norman the Necromancer, Idle
+        Necromancer), scored them against license (MIT / Apache-2.0), build
+        size (<50 KB), web-first compatibility, and audio bug stability, and
+        vendored the top 9.
 
   - id: aotearoa-infinite-academy
     name: Aotearoa Infinite Academy
@@ -864,21 +864,37 @@ work:
     # re-conflating the two.
     #
     # The event count is COMPUTED and drifts as events run — 96 held as of
-    # 2026-08-25, with two more scheduled (2026-09-03, 2026-10-08). Re-derive it
-    # rather than incrementing by hand.
+    # 2026-08-25. Re-derive it rather than incrementing by hand.
+    #
+    # ROLE CLOSED Sept 2026 (Chan, 2026-09-16): she left She Sharp and holds no
+    # position there, engineering or ambassador. The 2026-10-08 Code Secure
+    # event was removed from 80-events.yaml for that reason. Write this entry in
+    # the past tense; the platform itself is still the charity's live site, so
+    # sentences about what the SYSTEM does may stay in the present.
+    #
+    # SOURCE for the transformation facts: Chan's private report repo
+    # she-sharp-transformation-record (2026-09-01; every figure there is
+    # measured, cited or derived). PRIVATE — never link it. Its RESUME.md
+    # "What not to claim" list binds every surface:
+    #   - never say the Mailchimp/Webflow subscriptions were cancelled
+    #     (savings are realisable, not realised — the founder is the cardholder)
+    #   - never put a number on a Canva saving
+    #   - never quote an hours-saved or productivity-multiple figure (none measured)
+    #   - never describe community reach from the charity's published figures
+    #     (3,500 members / 120 mentors are not what the records show)
     position: Senior Full Stack Engineer & Website Team Lead
     startDate: "2025-07"
-    endDate: null
+    endDate: "2026-09"
     location: New Zealand
     url: https://www.shesharp.org.nz/
     logo: /public/organizations/she-sharp-logo-purple-dark.svg
     featured: true
     tier: flagship
-    recency: active
-    lastUpdated: "2026-09-04"
+    recency: recent
+    lastUpdated: "2026-09-16"
     keywords: ["Next.js 15", "React 19", "Drizzle ORM", "Neon Postgres", Stripe, "GPT-4o-mini", Slack, "Agent skills", "NextAuth 5", "Tailwind 4"]
     narrative:
-      impactHeadline: "Recruited directly by founder Dr Mahsa Mohaghegh as the senior AI + full-stack capability She Sharp didn't have in-house; led the cutover from Webflow to the new platform via a custom migration crawler preserving 10+ years of legacy content across 96+ events since 2014."
+      impactHeadline: "Recruited by founder Dr Mahsa Mohaghegh as the senior engineer She Sharp lacked; over 13.3 months moved the charity's website and 1,549-person mailing list onto infrastructure it owns, and wrote its recurring work down as 11 agent skills a non-engineer can follow."
       companyContext: |
         She Sharp is New Zealand's leading women-in-STEM community — a
         registered charitable trust founded by Dr Mahsa Mohaghegh (McCauley),
@@ -901,57 +917,75 @@ work:
         Recruited directly by Dr Mahsa Mohaghegh (McCauley) as Senior Full
         Stack Engineer & Website Team Lead — specifically as the AI and
         senior development capability She Sharp didn't have in-house — to
-        build the new member platform end-to-end and own it operationally.
-        Mandate explicitly includes: replace the Webflow site, design and
-        ship the AI mentor-mentee matching system, integrate Slack across
-        the organization's operations, run events and recruitment
+        build the new member platform end-to-end and run it operationally.
+        The mandate covered: replace the Webflow site, design and ship the
+        AI mentor-mentee matching system, integrate Slack across the
+        organisation's operations, run events and recruitment
         infrastructure, and serve as technical lead on adjacent initiatives
-        (Her Waka MSD-funded programme, SEO strategy).
+        (Her Waka MSD-funded programme, SEO strategy). It grew, in 2026,
+        into leading the charity's digital and AI-native transformation.
+        I held the role from July 2025 to September 2026.
       impactDelivered: |
-        Shipped and operate the new full-stack She Sharp platform replacing
-        the legacy Webflow site. Over 13.3 months (2025-07-22 → 2026-09-01,
-        pinned at commit b1d49d88): 1,381 commits and 251 merged pull
-        requests — I opened 207 of the 254 — and 94.5% of all lines added
-        (801,609 of 847,827). One other developer worked alongside me:
-        Lesley Gao, 151 commits and 43 pull requests, mostly on the
-        dashboard and mentorship surfaces. Headline systems delivered:
-        AI mentor-mentee matching
-        (GPT-4o-mini, 5-dimensional scoring with human-in-the-loop review),
-        three role-permissioned dashboards (mentor / mentee / admin) with
-        dual-role support, Stripe membership-tier billing, the Slack
-        ecosystem (event-collector bot, volunteer webhooks, weekly stats
-        digest, weekly NZ funding-opportunities crawler), a Claude agent
-        skill `sync-event-from-slack` that automates event-page publication
-        from Slack content, comprehensive audit logging, and a database
-        version-control system.
+        **The problem I was handed.** In July 2025 a volunteer-run charity
+        ran on rented software: the website inside one vendor's product,
+        the mailing list and its consent record inside another's, the
+        artwork in a third, and eleven years of decisions inside a chat
+        tool — all of it one lapsed card or one departed volunteer away
+        from being out of reach. The previous move, WordPress to Webflow
+        in 2023, had cost the second half of that year re-entering every
+        event since 2014 by hand. I chose the new stack by one question
+        first: how does the data come back out?
 
-        **Led the organisation's digital and AI-native transformation —
-        three platform migrations, a data-sovereignty programme and a
-        governance audit.** The three migrations are not equally finished
-        and the honest headline says so: the website is done; the mailing
-        list is technically done and proven in production; marketing
-        production has shipped, and has been chosen over building a
-        hand-made duplicate exactly once, on my own say-so. Shipping a
-        capability and shipping its adoption are two different projects,
-        and only the first was scheduled.
+        **What I built, and how much of it was mine.** Over 13.3 months
+        (2025-07-22 → 2026-09-01, pinned at commit b1d49d88): 1,381
+        commits and 251 merged pull requests — I opened 207 of the 254 —
+        and 94.5% of all lines added (801,609 of 847,827). One other
+        developer worked alongside me: Lesley Gao, 151 commits and 43 pull
+        requests, mostly on the dashboard and mentorship surfaces. The
+        share is a description of how much depended on one person, which
+        is exactly why the handover below was written as the work went.
 
-        **Mailing list.** Moved 1,549 people onto infrastructure the
-        charity owns — double opt-in where confirmation requires a button
-        press and never a GET, as defence against link scanners; a
-        four-stream sender model; exactly one Resend call site in the
-        whole application; and the consent record in the organisation's
-        own Postgres rather than a vendor's. The cutover went out in 16
-        idempotent batches with 0 failures and a 0.45% bounce rate. The
-        sending-domain move was 29 DNS records before and 29 after with a
-        single value different, because the region and Return-Path were
-        matched deliberately rather than discovered afterwards. Consent
-        became auditable for the first time by classifying every
-        subscriber against the act that put them on the list — and I
-        reported the unflattering result, that 75.4% arrived by an act
-        that was not a subscription. 2,129 non-consenting contacts are
-        held as one-way hashes so a future import cannot resurrect them,
-        and a CI gate fails the build if an email address or a ticketing
-        access code reaches a committed file.
+        **Website — done.** Replaced the Webflow site with a Next.js 15
+        application in a repository the charity holds: 63 pages, 84 API
+        routes and 198 components over a 39-table Postgres schema. Beyond
+        what Webflow did, it carries AI mentor-mentee matching
+        (GPT-4o-mini, five weighted dimensions, human-in-the-loop review),
+        three role-permissioned dashboards (mentor / mentee / admin), Stripe
+        membership billing, and an AI chatbot answering from the site's
+        live data rather than a hand-kept FAQ. A migration is finished when
+        the old world's links still work, not when the new site goes live:
+        Webflow's pagination URLs redirect permanently to their clean
+        equivalents, and 903 legacy images were rebuilt from the old
+        site's markup — it had no bulk media export — with a CI check that
+        fails if an event page ever loses one.
+
+        **Mailing list — technically done and proven in production.**
+        Moved 1,549 people onto infrastructure the charity owns — double
+        opt-in where confirmation requires a button press and never a GET,
+        as defence against link scanners; a four-stream sender model;
+        exactly one Resend call site in the whole application; and the
+        consent record in the organisation's own Postgres rather than a
+        vendor's. The first send went out on 2026-08-31 in 16 idempotent
+        batches with 0 failures and a 0.45% bounce rate. The sending-domain
+        move was 29 DNS records before and 29 after with a single value
+        different, because the region and Return-Path were matched
+        deliberately rather than discovered afterwards. Consent became
+        auditable for the first time by classifying every subscriber
+        against the act that put them on the list — and I reported the
+        unflattering result, that 75.4% arrived by an act that was not a
+        subscription. 2,129 non-consenting contacts are held as one-way
+        hashes so a future import cannot resurrect them, and a CI gate
+        fails the build if an email address or a ticketing access code
+        reaches a committed file. 179 past newsletters were recovered from
+        the vendor and are now served from the charity's own site.
+
+        **Marketing production — shipped, not yet adopted.** Posters, event
+        decks and promo videos became code generated from event data (see
+        technical highlights). The honest status: it has been chosen over
+        a hand-made duplicate once, and the committee still makes most
+        artwork the old way. Shipping a capability and shipping its
+        adoption are two different projects, and only the first was
+        scheduled.
 
         **Data sovereignty.** Recovered 1.15 GB of the organisation's own
         operating record out of four platforms: eleven years of Slack
@@ -1060,6 +1094,22 @@ work:
         professional SEO audit and 10-point recommendations report on
         shesharp.org.nz that identified the high-priority mobile-vs-desktop
         ranking gap on "women in tech New Zealand."
+
+        **How the role closed (Sept 2026).** I left She Sharp in September
+        2026. The aim all along had been to make the answer to "how does
+        this work?" a file rather than a person, and the exit is where that
+        was tested: 35,062 lines of Markdown across 105 files in the
+        repository, the non-coder AI skills guide, two live playbooks
+        hash-verified against their source, the 52 recorded decisions, and
+        a 36-page transformation record in which every figure is measured,
+        cited or derived. It also says plainly what was not finished. Three
+        money decisions were prepared and left with the founder, who holds
+        the accounts: the nonprofit collaboration-tool upgrade, the mailing
+        vendor downgrade, and the website vendor's renewal before
+        2027-06-18. And one gap I named as mine: a safeguarding reporting
+        route for the community was proposed but not built. The charity's
+        data and its sending identity now live in accounts the organisation
+        owns, regardless of who is still there to open them.
       technicalHighlights: |
         Architected and built every layer of the platform: Next.js 15.6
         canary + React 19.1.2 + TypeScript 5.8 on Drizzle 0.43 over Neon
@@ -1158,6 +1208,16 @@ work:
         scheduled, reviewed and re-run; and work that required an engineer
         now has a written procedure someone else can follow, which changes
         who is able to do it rather than only how long it takes.
+    publicSummary: |
+      Senior Full Stack Engineer & Website Team Lead at She Sharp, a
+      volunteer-run New Zealand women-in-STEM charity (96+ events since 2014),
+      from July 2025 to September 2026. Recruited by founder Dr Mahsa
+      Mohaghegh, moved the charity off rented software onto infrastructure it
+      owns: a Next.js 15 platform with AI mentor matching replacing Webflow,
+      and a 1,549-person mailing list cut over from Mailchimp with 0 failures.
+      Wrote its recurring work — events, newsletter, posters, video, mailing
+      list — down as 11 agent skills a non-engineer can follow, and left a
+      written handover instead of a dependency on one person.
 
   - id: femtech-weekend
     name: FemTech Weekend
@@ -2426,25 +2486,27 @@ volunteer:
     name: She Sharp
     position: Ambassador — Website Team
     startDate: "2025-07"
-    endDate: null
+    endDate: "2026-09"
     location: Auckland, New Zealand (remote)
     url: "https://shesharp.org.nz/"
     logo: /public/organizations/she-sharp-logo-purple-dark.svg
     tier: primary
-    recency: active
-    lastUpdated: "2026-08-24"
+    recency: recent
+    lastUpdated: "2026-09-16"
     keywords:
       - Volunteer ambassador
       - Women in STEM
       - Community outreach
       - Website team
     summary: |
-      Ambassador on the She Sharp Website Team — a nonprofit dedicated to
-      bridging the gender gap in STEM (where female representation sits at
-      ~20%). She Sharp has built a **3,500+ member community** and organised
-      **96+ events since 2014**. Continues Chan's relationship with the
-      organisation after the formal Lead Engineer role, focused on
-      sustaining the digital infrastructure that powers community growth.
+      Ambassador on the She Sharp Website Team, held alongside the Senior Full
+      Stack Engineer & Website Team Lead role (see work[] she-sharp) from July
+      2025 to September 2026. She Sharp is a volunteer-run New Zealand charity
+      closing the gender gap in STEM, with **96+ events since 2014**. As an
+      ambassador Chan represented the charity at its events — MC, organiser
+      and workshop host — and taught the volunteer team to run the digital
+      infrastructure she built. Both roles ended when she left in September
+      2026.
 
   - id: cebu-international-academy
     name: Cebu International Academy (CIA)

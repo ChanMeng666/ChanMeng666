@@ -122,9 +122,10 @@ calibration, not as targets.
 | Experience description, **per position** | **2,000** | median 1,374, max 2,297 |
 | Projects description | **2,000** | median 1,045, max 1,784 |
 
-> `[verified]` Two entries are over the cap today and are therefore truncated on
+> `[verified 2026-09-07]` Two entries were over the cap and therefore truncated on
 > the live profile: She Sharp at 2,297 (297 over) and Gavigo's Founding Principal
-> Engineer at 2,019 (19 over). `check:copy` R9 now catches this class, and warns
+> Engineer at 2,019 (19 over). Both were cut back under 2,000 (She Sharp 1,991 and
+> Gavigo 1,995 as of 2026-09-16). `check:copy` R9 now catches this class, and warns
 > at 90% of any cap so a near-miss is visible before an edit pushes it over.
 
 Only the first **~300 characters** of About render before "See more" on desktop

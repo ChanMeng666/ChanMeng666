@@ -360,21 +360,20 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, drizzle, neon, stripe, vercel]
-    lastUpdated: "2026-09-04"
+    lastUpdated: "2026-09-16"
     name: She Sharp
     priority: 2
     category: web-apps
     tagline: |
-      Solo-built production platform that digitized, automated, and AI-upgraded NZ's
-      leading women-in-STEM nonprofit (charitable trust CC57025, 3,500+ members,
-      5,000+ women reached) — replacing Webflow + spreadsheets with a real member
-      engine. GPT-4o-mini AI mentor matching (5-weight scoring + admin review),
+      Production platform that moved a volunteer-run NZ women-in-STEM charity
+      (charitable trust CC57025, 96+ events since 2014) off Webflow and
+      spreadsheets onto a member engine it owns. GPT-4o-mini AI mentor matching (5-weight scoring + admin review),
       three role-permissioned dashboards (mentor / mentee / admin), Stripe billing,
       and a custom Slack ecosystem (event-collector bot, weekly mentorship-stats
       digest, NZ government funding crawler, Claude `sync-event-from-slack` skill)
-      that turned hours of volunteer manual work into one-command automation.
-      1,381 commits and 251 merged pull requests over 13.3 months, with 94.5%
-      of all lines added authored solo.
+      that turns manual event publishing into a reviewable one-command change.
+      1,381 commits and 251 merged pull requests over 13.3 months
+      (Jul 2025 — Sep 2026), 94.5% of all lines added mine.
     url: https://www.shesharp.org.nz/
     extraLinks:
       - { label: "She Sharp", url: "https://www.shesharp.org.nz/" }
@@ -398,7 +397,7 @@ projects:
     # removed on 2026-07-14 for exactly that reason.
     relatedProjectIds: [her-waka, ai-hackathon-assistant]
     entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
-    roles: ["Senior Full Stack Engineer", "Website Team Lead", "Solo Architect of New Platform"]
+    roles: ["Senior Full Stack Engineer", "Website Team Lead", "Lead Architect of New Platform"]
     techStack:
       - "Next.js 15.6 canary (App Router, Turbopack dev)"
       - "React 19.1.2"
@@ -463,13 +462,13 @@ projects:
       - { label: "Corporate partners",       value: "50+" }
       - { label: "Events since 2014",        value: "96+" }
       - { label: "Industry mentors",         value: "18" }
-      - { label: "Mentorship success rate",  value: "85% (5-6× higher promotion likelihood for mentees per She Sharp's outcomes data)" }
       - { label: "Migration crawler assets", value: "1,748 images / 707 MB / 11 JSON files / 85 events + 50 Humanitix tickets + 15 podcasts + 121 photo galleries + 7 press articles + 118 pages" }
     status: production
     startDate: "2025-07"
+    endDate: "2026-09"
     publicSummary: |
-      Solo-built member platform for She Sharp — New Zealand's leading
-      women-in-STEM charity (a registered charitable trust). It handles
+      Member platform I led the build of for She Sharp, a volunteer-run New
+      Zealand women-in-STEM charity (a registered charitable trust). It handles
       member sign-ups and billing, runs the events calendar, and matches
       mentors with mentees using AI scoring backed by a human reviewer,
       replacing a Webflow site and spreadsheets the team had outgrown.
@@ -745,9 +744,11 @@ projects:
         (e.g., "SheSharp ranks #4 desktop / not in mobile top 10 for 'women
         in tech New Zealand' — high-priority technical SEO gap").
       outcomes: |
-        Production-deployed and operating She Sharp's full member lifecycle
-        for over 13 months (first commit 2025-07-22, measured to 2026-09-01)
-        — still in active build-out, not maintenance. Volume: **1,381 commits
+        Production-deployed and running She Sharp's full member lifecycle
+        across my 13.3 months on it (first commit 2025-07-22, measured to
+        2026-09-01) — in active build-out, not maintenance, until I left the
+        charity in September 2026; the platform stays in production as its
+        live site. Volume: **1,381 commits
         and 251 merged pull requests, of which 94.5% of all lines added
         (801,609 of 847,827) are mine**; Lesley Gao contributed 151 commits
         and 43 pull requests of frontend design and code, with a handful more

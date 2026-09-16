@@ -130,7 +130,7 @@ Stack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Act
 
 ## 8. She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
 
-**Dates:** Jul 2025 – Present
+**Dates:** Jul 2025 – Sep 2026
 **Associated with:** She Sharp
 **Other contributors:** yes
 

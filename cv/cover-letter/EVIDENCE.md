@@ -118,6 +118,10 @@ one it is evidence.
 - Guardrails enforced in code rather than by prompt instruction, with
   comprehensive audit logging and a database version-control system on the She
   Sharp platform. — `work[she-sharp]`
+- Left She Sharp in Sep 2026 with the handover already in the repository rather
+  than in anyone's head: 35,062 lines of Markdown, a guide written for teammates
+  who do not code, and 52 recorded decisions. It also names what was not
+  finished. — `work[she-sharp]`
 
 ## Theme E — teaching and levelling others up
 
@@ -151,8 +155,9 @@ agentic practice rather than just receive it.
   locale-filtered search and translated tag taxonomies. — `work[femtech-weekend]`, `work[technest]`
 - Ran five concurrent engineering and CTO-level roles across four countries
   (NZ, China, the United States, Canada) through 2026, peaking May–Jul 2026.
-  Three are current, across NZ and China — keep the tense honest: only
-  ArchCanvas, She Sharp and FemTech Weekend have no end date. — `10-career.yaml`
+  Two are current, across NZ and China — keep the tense honest: only
+  ArchCanvas and FemTech Weekend have no end date. She Sharp and GAVIGO both
+  ended Sep 2026; write them in the past tense. — `10-career.yaml`
 
 ## Theme G — open source and early-protocol work
 

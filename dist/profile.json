@@ -9475,6 +9475,21 @@
       }
     },
     {
+      "name": "Suno Closed Its Public MP3. The Only Audio Left Won't Identify Itself.",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-09-18",
+      "publisher": "chanmeng.org",
+      "releaseDate": "2026-09-18",
+      "url": "https://chanmeng.org/blog/suno-public-mp3-closed",
+      "summary": "Follow-up to the trending-feed investigation, from daily automated\ncaptures running since 2026-04-12: a dated record of Suno's public API\ndropping the plain MP3 that always played and leaving only an\nunidentifiable `m4a-opus` address — what was measured on 24 August, what\nchanged three weeks later, and where the trail stopped.\n",
+      "meta": {
+        "x_brand": {
+          "type": "article"
+        }
+      }
+    },
+    {
       "name": "The Explore Feed That Froze",
       "tier": "primary",
       "recency": "active",
@@ -9498,6 +9513,21 @@
       "releaseDate": "2026-07-14",
       "url": "https://chanmeng.org/blog/neon-auth-email-verification",
       "summary": "Wiring Neon Auth's email-OTP verification and password-reset flows into\na React + TypeScript frontend — the part Neon's dashboard enables but\ndoes not document: the type gap, the form state machine, and gating on\nemailVerified.\n",
+      "meta": {
+        "x_brand": {
+          "type": "article"
+        }
+      }
+    },
+    {
+      "name": "Tokenless npm Publishing for AI Agents: The OIDC Trusted-Publishing Playbook",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-09-18",
+      "publisher": "chanmeng.org",
+      "releaseDate": "2026-07-12",
+      "url": "https://chanmeng.org/blog/npm-oidc-trusted-publishing",
+      "summary": "Letting a coding agent own the whole npm release lifecycle — version,\ntag, publish, verify — with no stored token and no 2FA prompt on any\npublish, using npm's sanctioned trusted-publishing path over GitHub\nActions OIDC. The setup that shipped @chanmeng666/archlang@1.14.0, and\nthe honest boundary: an agent publishes, a human blesses the setup once.\n",
       "meta": {
         "x_brand": {
           "type": "article"
@@ -9580,6 +9610,36 @@
       }
     },
     {
+      "name": "Driving Claude Code From Your Phone Over Telegram",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-09-18",
+      "publisher": "chanmeng.org",
+      "releaseDate": "2026-06-25",
+      "url": "https://chanmeng.org/blog/telegram-remote-claude-code",
+      "summary": "Injecting messages from Telegram into a running Claude Code session so it\nworks against the real files on your desktop and replies to your phone,\nusing Anthropic's official Channels plugin — the setup, the three rules\nthat keep it working, and the silent failure that costs the most time.\n",
+      "meta": {
+        "x_brand": {
+          "type": "article"
+        }
+      }
+    },
+    {
+      "name": "Upgrading PowerShell 7 Without Killing Your Claude Code Session",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-09-18",
+      "publisher": "chanmeng.org",
+      "releaseDate": "2026-06-24",
+      "url": "https://chanmeng.org/blog/upgrading-powershell-without-killing-claude-code",
+      "summary": "Why installing a PowerShell 7 update from inside a Claude Code session\nforce-closes it — Windows Restart Manager reclaiming the host terminal —\nand three ways around it.\n",
+      "meta": {
+        "x_brand": {
+          "type": "article"
+        }
+      }
+    },
+    {
       "name": "Generative Engine Optimization (GEO) Strategy",
       "tier": "primary",
       "recency": "active",
@@ -9648,6 +9708,21 @@
       "releaseDate": "2026-06-09",
       "url": "https://chanmeng.org/blog/youtube-github-actions-automation",
       "summary": "A GitHub Actions workflow that regenerates the video cards in a profile\nREADME on a schedule, so the showcase never goes stale: channel ID,\nmarker comments, card options, and the permission settings that trip\npeople up.\n",
+      "meta": {
+        "x_brand": {
+          "type": "article"
+        }
+      }
+    },
+    {
+      "name": "Four Bugs in One Vercel Blob Integration — Including a Firewall",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-09-18",
+      "publisher": "chanmeng.org",
+      "releaseDate": "2026-05-24",
+      "url": "https://chanmeng.org/blog/vercel-blob-upload-debugging",
+      "summary": "Adding image uploads to a Next.js comment system produced four distinct\nbugs across several deploys — including one that only reproduces from\nmainland China, where vercel.com is blocked — which is why server-side\nput() beat the SDK's recommended client upload. What the documented\nhappy path leaves out.\n",
       "meta": {
         "x_brand": {
           "type": "article"
@@ -13035,6 +13110,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-09-18",
     "buildYear": "2026",
-    "buildTimestamp": "2026-09-18T11:50:24.815Z"
+    "buildTimestamp": "2026-09-18T12:07:29.180Z"
   }
 }

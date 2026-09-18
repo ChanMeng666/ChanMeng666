@@ -1062,6 +1062,21 @@ publications:
   # while building the thing they describe. Ranked above the older Pulse
   # tutorials because they document production decisions, not walkthroughs.
   # ============================================================================
+  - name: "Suno Closed Its Public MP3. The Only Audio Left Won't Identify Itself."
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-18"
+    publisher: chanmeng.org
+    releaseDate: "2026-09-18"
+    url: https://chanmeng.org/blog/suno-public-mp3-closed
+    summary: |
+      Follow-up to the trending-feed investigation, from daily automated
+      captures running since 2026-04-12: a dated record of Suno's public API
+      dropping the plain MP3 that always played and leaving only an
+      unidentifiable `m4a-opus` address — what was measured on 24 August, what
+      changed three weeks later, and where the trail stopped.
+    meta: { x_brand: { type: article } }
+
   - name: The Explore Feed That Froze
     tier: primary
     recency: active
@@ -1088,6 +1103,21 @@ publications:
       a React + TypeScript frontend — the part Neon's dashboard enables but
       does not document: the type gap, the form state machine, and gating on
       emailVerified.
+    meta: { x_brand: { type: article } }
+
+  - name: "Tokenless npm Publishing for AI Agents: The OIDC Trusted-Publishing Playbook"
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-18"
+    publisher: chanmeng.org
+    releaseDate: "2026-07-12"
+    url: https://chanmeng.org/blog/npm-oidc-trusted-publishing
+    summary: |
+      Letting a coding agent own the whole npm release lifecycle — version,
+      tag, publish, verify — with no stored token and no 2FA prompt on any
+      publish, using npm's sanctioned trusted-publishing path over GitHub
+      Actions OIDC. The setup that shipped @chanmeng666/archlang@1.14.0, and
+      the honest boundary: an agent publishes, a human blesses the setup once.
     meta: { x_brand: { type: article } }
 
   - name: Neon Auth + Flask Integration Guide
@@ -1157,6 +1187,33 @@ publications:
       caching, and a graceful fallback when Notion is unavailable.
     meta: { x_brand: { type: article } }
 
+  - name: Driving Claude Code From Your Phone Over Telegram
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-09-18"
+    publisher: chanmeng.org
+    releaseDate: "2026-06-25"
+    url: https://chanmeng.org/blog/telegram-remote-claude-code
+    summary: |
+      Injecting messages from Telegram into a running Claude Code session so it
+      works against the real files on your desktop and replies to your phone,
+      using Anthropic's official Channels plugin — the setup, the three rules
+      that keep it working, and the silent failure that costs the most time.
+    meta: { x_brand: { type: article } }
+
+  - name: Upgrading PowerShell 7 Without Killing Your Claude Code Session
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-09-18"
+    publisher: chanmeng.org
+    releaseDate: "2026-06-24"
+    url: https://chanmeng.org/blog/upgrading-powershell-without-killing-claude-code
+    summary: |
+      Why installing a PowerShell 7 update from inside a Claude Code session
+      force-closes it — Windows Restart Manager reclaiming the host terminal —
+      and three ways around it.
+    meta: { x_brand: { type: article } }
+
   - name: Generative Engine Optimization (GEO) Strategy
     tier: primary
     recency: active
@@ -1223,6 +1280,21 @@ publications:
       README on a schedule, so the showcase never goes stale: channel ID,
       marker comments, card options, and the permission settings that trip
       people up.
+    meta: { x_brand: { type: article } }
+
+  - name: "Four Bugs in One Vercel Blob Integration — Including a Firewall"
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-18"
+    publisher: chanmeng.org
+    releaseDate: "2026-05-24"
+    url: https://chanmeng.org/blog/vercel-blob-upload-debugging
+    summary: |
+      Adding image uploads to a Next.js comment system produced four distinct
+      bugs across several deploys — including one that only reproduces from
+      mainland China, where vercel.com is blocked — which is why server-side
+      put() beat the SDK's recommended client upload. What the documented
+      happy path leaves out.
     meta: { x_brand: { type: article } }
 
   # ============================================================================

@@ -140,12 +140,15 @@ events:
     # role in the name renders as "… — Mentor — Mentor".
     name: "Aotearoa AI Hackathon Festival 2026"
     # TWO roles, from two different sources, both true:
-    #   MC      — Chan opened the festival from the podium; the two photos below
-    #             show the title slide and the Karakia Tīmatanga. The host's
-    #             public event record has NO `hosts` group for this festival at
-    #             all, so those photos are the only evidence of the MC role.
+    #   MC      — Chan opened the festival from the podium; the opening and
+    #             Karakia Tīmatanga photos show the title slide and the karakia.
+    #             The host's public event record has NO `hosts` group for this
+    #             festival at all, so those photos are the only evidence of the
+    #             MC role.
     #   Mentor  — the public roster (events-custom.json id 96, "Meet the
     #             Mentors", 17 names) bills her "Founding Engineer, ArchCanvas".
+    #             The mentors-group and table-mentoring photos (supplied
+    #             2026-09-19) are the visual evidence of that role.
     # Do not collapse to "Mentor" (erases the MC work) or to "MC" (contradicts
     # the public billing).
     role: MC & Mentor
@@ -158,7 +161,7 @@ events:
     tier: flagship
     # Ran 2026-08-07/08; flipped active → recent once the festival concluded.
     recency: recent
-    lastUpdated: "2026-09-04"
+    lastUpdated: "2026-09-19"
     keywords:
       - hackathon
       - MC
@@ -176,6 +179,14 @@ events:
       - src: /public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-karakia.jpg
         alt: "Chan Meng at the AUT podium during the Karakia Tīmatanga that opened the festival"
         caption: "Karakia Tīmatanga — the opening karakia."
+        date: "2026-08-07"
+      - src: /public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mentors.jpg
+        alt: "Chan Meng kneeling front-left with the 2026 festival mentor cohort on the AUT stage, She Sharp neon sign in front and Meet the Mentors on the screen behind"
+        caption: "Meet the Mentors — the 2026 festival mentor cohort, AUT, 7 August 2026."
+        date: "2026-08-07"
+      - src: /public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mentoring.jpg
+        alt: "Chan Meng standing with a laptop, mentoring a team at their table; her AI Forum Aotearoa mentor badge is visible"
+        caption: "Mentoring a team at their table during the 2026 festival."
         date: "2026-08-07"
     summary: |
       **MC'd the opening** of the two-day 2026 festival — welcome and Karakia

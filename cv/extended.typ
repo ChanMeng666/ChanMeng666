@@ -435,27 +435,37 @@
 #let x-recognition() = {
   chapter-opener("6", "Recognition",
     kicker: [Where the work has been seen.])
-  // Two-up recognition band (was one photo + a blank lower third): the UN CSW69
-  // frame beside the AI Hackathon Festival stage — the latter illustrates the
-  // Outstanding Mentor Award bullet below. Fixed-height cover crops align.
-  v(0.5fr)
-  grid(columns: (1fr, 1fr), column-gutter: gap-photo-x,
-    photo-band("/public/articles/un-women-csw69.jpeg", h: 125pt,
-      caption: [UN CSW69, UN HQ New York — March 2025.]),
-    photo-band("/public/photos/chan-keynote-ai-hackathon-2025.jpg", h: 125pt,
-      caption: [Presenting at the 2025 festival, Auckland.]),
+  // Three-up stage row: UN CSW69, the 2025 festival keynote (Outstanding Mentor
+  // year one), and MCing the 2026 opening. The 2026 karakia podium frame was
+  // dropped 2026-09-19 — it was a near-twin of the opening shot (same lectern,
+  // same coat, same crop; MANIFEST no-duplicates rule). Cover crop is safe
+  // here: each cell is taller than 3∶2, so the crop takes the sides, not heads.
+  v(0.3fr)
+  grid(columns: (1fr, 1fr, 1fr), column-gutter: gap-photo-x,
+    photo-band("/public/articles/un-women-csw69.jpeg", h: 112pt,
+      caption: [UN CSW69, New York, March 2025.]),
+    photo-band("/public/photos/chan-keynote-ai-hackathon-2025.jpg", h: 112pt,
+      caption: [2025 festival keynote, Auckland.]),
+    photo-band("/public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-opening.jpg", h: 112pt,
+      caption: [MC'ing the 2026 opening.]),
   )
-  // 2026-09-17: second row from public/photos/events/ — the 2026 festival, where
-  // she MC'd the opening and was named Outstanding Mentor a second year running
-  // (80-events.yaml aotearoa-ai-hackathon-festival-2026; 30-recognition.yaml).
-  v(14pt)
-  // photo-row (contain, cream gutters) rather than photo-band: a cover crop
-  // cut her head off at the podium.
-  photo-row((
-    ("/public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-opening.jpg", [MC'ing the 2026 festival opening.]),
-    ("/public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-karakia.jpg", [Karakia Tīmatanga — AUT, August 2026.]),
-  ), h: 125pt)
-  v(0.5fr)
+  // 2026-09-19: the 2026 festival as technical mentor — Meet the Mentors group
+  // (Chan front-left, the slide behind the cohort) beside a table-side session
+  // (AI Forum Aotearoa mentor badge visible). Source frames Hackathon-69 and
+  // Hackathon-96 from Chan's 2026-09-18 dump; compressed into
+  // public/photos/events/ (80-events.yaml aotearoa-ai-hackathon-festival-2026).
+  // Held back from that dump: rainbow-wig portrait (not this page); two atrium
+  // group panoramas and the indoor all-hands (Chan is one of fifty); a
+  // She#-neon winners frame with a minor's face head-on; two more podium
+  // twins of the opening shot; two more frames of the same mentoring table.
+  v(12pt)
+  grid(columns: (1fr, 1fr), column-gutter: gap-photo-x,
+    photo-band("/public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mentors.jpg", h: 158pt,
+      caption: [Meet the Mentors — the 2026 festival cohort, AUT.]),
+    photo-band("/public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mentoring.jpg", h: 158pt,
+      caption: [Mentoring a team at their table, August 2026.]),
+  )
+  v(20pt)
   block(above: 0pt, below: 0pt, {
     set text(size: size-body-x, fill: ink)
     set par(leading: leading-body-x, justify: false)
@@ -468,7 +478,7 @@
       [*Excellence Award* — FemTech China, Women's Health Technology Challenge, December 2024.],
     )
   })
-  v(0.5fr)
+  v(0.4fr)
   pagebreak()
 }
 

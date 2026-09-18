@@ -45,6 +45,7 @@ Data flows outward only. Nothing imports into this repo from external sources.
 │       ├── tokens.css          # CSS variables for web surfaces
 │       └── tokens.json         # canonical machine-readable tokens
 ├── docs/
+│   ├── ecosystem/              # ArchLang × ArchCanvas repo topology — not loaded by the build
 │   └── brand/
 │       ├── DESIGN.md           # human-readable design system documentation
 │       └── snapshots/          # token snapshots for drift detection

@@ -1,0 +1,230 @@
+# ArchLang × ArchCanvas ecosystem catalog
+#
+# Hand-authored topology for Cursor / agents. NOT career data.
+# NOT loaded by scripts/lib/load-profile.mjs. NOT validated by schema/profile.schema.json.
+# Human map: docs/ecosystem/archlang-archcanvas.md
+#
+# Last verified against local checkouts and git remotes: 2026-09-18.
+
+lastVerified: "2026-09-18"
+localRoot: "D:/github_repository"
+
+products:
+  - id: archlang
+    name: ArchLang
+    kind: language
+    tagline: Open-source DSL and compiler for floor plans (.arch → SVG / DXF / PDF).
+    brand: SOURCE mark — "Designs that compile"
+    publicUrls:
+      - https://archlang.uk
+      - https://playground.archlang.uk
+      - https://www.npmjs.com/package/@chanmeng666/archlang
+      - https://github.com/ChanMeng666/archlang
+  - id: archcanvas
+    name: ArchCanvas
+    kind: product
+    tagline: Closed-source AI design agent that compiles floor plans from ArchLang on an infinite canvas.
+    brand: COMPILED mark — same identity family as ArchLang
+    publicUrls:
+      - https://archcanvas.uk
+      - https://github.com/archcanvas/archcanvas
+
+# Origin order is load-bearing for any career / marketing copy.
+origin:
+  productFirstCommit: "2026-04-08"
+  languageNpm010: "2026-06-24"
+  languageReplacedFreehandEngine: "2026-06-25"
+  neverWrite: "first invented the language, then built the product"
+
+repos:
+  - id: archlang
+    kind: git-repo
+    localPath: "D:/github_repository/archlang"
+    gitRemote: https://github.com/ChanMeng666/archlang.git
+    github: ChanMeng666/archlang
+    visibility: public
+    license: MIT
+    npm: "@chanmeng666/archlang"
+    role: Core language, compiler, CLI, agent surface. Hosts the docs site and playground as npm workspaces.
+    dependsOn: []
+    urls:
+      docs: https://archlang.uk
+      playground: https://playground.archlang.uk
+      npm: https://www.npmjs.com/package/@chanmeng666/archlang
+      vscode: ChanMeng.archlang
+    hostsWorkspaces:
+      - archlang-docs
+      - archlang-playground
+    alsoContains:
+      - packages/mcp
+      - editors/vscode
+      - eval
+      - dataset
+      - examples
+      - docs
+
+  - id: archcanvas
+    kind: git-repo
+    localPath: "D:/github_repository/archcanvas"
+    gitRemote: https://github.com/ChanMeng666/archcanvas.git
+    github: ChanMeng666/archcanvas
+    visibility: private
+    license: proprietary
+    role: Commercial Next.js app — the ArchCanvas product source. Never link this remote in public copy.
+    dependsOn:
+      - { id: archlang, how: "npm @chanmeng666/archlang" }
+    urls:
+      product: https://archcanvas.uk
+
+  - id: archcanvas-public
+    kind: git-repo
+    localPath: "D:/github_repository/archcanvas-public"
+    gitRemote: https://github.com/archcanvas/archcanvas.git
+    github: archcanvas/archcanvas
+    visibility: public
+    license: "proprietary product; docs and examples CC BY 4.0"
+    role: Public product home — examples, docs, roadmap, community. Not the application source.
+    dependsOn: []
+    urls:
+      product: https://archcanvas.uk
+      repo: https://github.com/archcanvas/archcanvas
+
+  - id: archcanvas-org-profile
+    kind: git-repo
+    localPath: "D:/github_repository/archcanvas-org-profile"
+    gitRemote: https://github.com/archcanvas/.github.git
+    github: archcanvas/.github
+    visibility: public
+    license: none-stated
+    role: GitHub org profile README for the archcanvas organisation.
+    dependsOn: []
+    urls:
+      product: https://archcanvas.uk
+      publicRepo: https://github.com/archcanvas/archcanvas
+      language: https://github.com/ChanMeng666/archlang
+
+  - id: archcanvas-growth
+    kind: git-repo
+    localPath: "D:/github_repository/archcanvas-growth"
+    gitRemote: https://github.com/ChanMeng666/archcanvas-growth.git
+    github: ChanMeng666/archcanvas-growth
+    visibility: private
+    license: none-stated
+    role: Private growth / strategy / marketing HQ (second brain) for both products. Zero product truth. Never link in public copy.
+    dependsOn: []
+    editorialAuthorityFor:
+      - archcanvas-promo-video
+      - archcanvas-promo-remotion
+    urls:
+      product: https://archcanvas.uk
+      language: https://archlang.uk
+
+  - id: archcanvas-promo-video
+    kind: git-repo
+    localPath: "D:/github_repository/archcanvas-promo-video"
+    gitRemote: https://github.com/ChanMeng666/archcanvas-promo-video.git
+    github: ChanMeng666/archcanvas-promo-video
+    visibility: private
+    license: none-stated
+    role: First ArchCanvas promo archive — HyperFrames hero film plus shorts.
+    dependsOn:
+      - { id: archcanvas, how: "path — stages assets from ../archcanvas" }
+      - { id: archcanvas-growth, how: "editorial / positioning authority" }
+    urls:
+      product: https://archcanvas.uk
+
+  - id: archcanvas-promo-remotion
+    kind: git-repo
+    localPath: "D:/github_repository/archcanvas-promo-remotion"
+    gitRemote: https://github.com/ChanMeng666/archcanvas-promo-remotion.git
+    github: ChanMeng666/archcanvas-promo-remotion
+    visibility: private
+    license: none-stated
+    role: Second ArchCanvas promo film — Remotion "Zoom Out" in four aspect ratios. Deliberately does not name ArchLang on screen.
+    dependsOn:
+      - { id: archcanvas-promo-video, how: "path — npm run sync:assets from ../archcanvas-promo-video" }
+      - { id: archcanvas-growth, how: "editorial / positioning authority" }
+    urls:
+      product: https://archcanvas.uk
+
+  - id: archlang-paper
+    kind: git-repo
+    localPath: "D:/github_repository/archlang-paper"
+    gitRemote: https://github.com/ChanMeng666/archlang-paper.git
+    github: ChanMeng666/archlang-paper
+    visibility: private
+    license: none-stated
+    role: Academic papers plus reproduction scripts for ArchLang. Must stay private until acceptance.
+    dependsOn:
+      - { id: archlang, how: "path — tooling reads sibling ../archlang" }
+    urls: {}
+
+  - id: archlang-showcase
+    kind: git-repo
+    localPath: "D:/github_repository/archlang-showcase"
+    gitRemote: https://github.com/ChanMeng666/archlang-showcase.git
+    github: ChanMeng666/archlang-showcase
+    visibility: public
+    license: MIT
+    role: Curated gallery of famous / TV / game floor plans written as .arch and compiled to SVG. package.json private means not published to npm.
+    dependsOn:
+      - { id: archlang, how: "npm @chanmeng666/archlang" }
+    urls:
+      gallery: https://archlang.uk/showcase
+      playground: https://playground.archlang.uk
+
+workspaces:
+  - id: archlang-docs
+    kind: npm-workspace
+    parent: archlang
+    packageName: archlang-docs
+    localPath: "D:/github_repository/archlang/docs-site"
+    gitRemote: null
+    visibility: in-repo
+    license: MIT
+    role: VitePress documentation site. Not a sibling git repo. Pushing archlang main deploys it.
+    dependsOn:
+      - { id: archlang, how: "same monorepo; syncs docs/ into the site" }
+    urls:
+      live: https://archlang.uk
+
+  - id: archlang-playground
+    kind: npm-workspace
+    parent: archlang
+    packageName: archlang-playground
+    localPath: "D:/github_repository/archlang/playground"
+    gitRemote: null
+    visibility: in-repo
+    license: MIT
+    role: Live CodeMirror editor plus SVG preview. Not ArchCanvas. Not a sibling git repo. Depends on built core ../dist.
+    dependsOn:
+      - { id: archlang, how: "same monorepo; consumes ../dist" }
+    urls:
+      live: https://playground.archlang.uk
+
+careerDb:
+  repo: ChanMeng666
+  localPath: "D:/github_repository/ChanMeng666"
+  note: Career narrative only. This catalog is topology, not a profile shard.
+  workId: archcanvas
+  projectIds:
+    - archlang
+    - archcanvas
+  shards:
+    - data/profile/10-career.yaml
+    - data/profile/23-projects-oss-more.yaml
+    - data/profile/90-meta.yaml
+
+excluded:
+  - id: readme-showcase
+    localPath: "D:/github_repository/readme-showcase"
+    gitRemote: https://github.com/ChanMeng666/readme-showcase.git
+    reason: Unrelated Claude skill for capturing README screenshots. Name collision only.
+  - id: ChanMeng666
+    localPath: "D:/github_repository/ChanMeng666"
+    reason: Personal career database (this repo). Holds this map; is not an ArchLang or ArchCanvas product repo.
+
+scanNote: >
+  Top-level scan of D:/github_repository on 2026-09-18 found exactly these nine
+  matching git folders. docs-site and playground have no sibling clones.
+  No other top-level names matched archlang / archcanvas / playground / docs-site.

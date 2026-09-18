@@ -6,6 +6,9 @@ else — README.md, llms.txt, llms-full.txt, dist/profile.json,
 dist/video-data.json, linkedin/linkedin-profile.json + linkedin/*.md — is
 **generated**. Never edit generated files by hand; edit the shard, then build.
 
+ArchLang ↔ ArchCanvas sibling-repo map (local paths, private vs public, subprojects):
+`docs/ecosystem/archlang-archcanvas.md`. Career narrative stays in the profile shards.
+
 ## Changing career COPY? Use the `career-copy` skill
 
 `.claude/skills/career-copy/` is this repo's own skill for the case that comes up

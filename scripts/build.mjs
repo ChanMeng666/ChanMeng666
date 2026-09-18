@@ -740,6 +740,22 @@ for (const p of visibleProjects) {
   p._affiliationOrgs       = orgsForProject.filter((o) => o.category !== "adopter").map(projOrg);
   p._adopterOrgs           = orgsForProject.filter((o) => o.category === "adopter").map(projOrg);
   p._affiliationOrg        = p._affiliationOrgs[0] ?? null;
+  // cohortPartners: display-only teaching-partner brands for the AI-agents-row
+  // "Cohorts taught for …" logo strip (see 23-projects-oss-more.yaml,
+  // ai-programming-teaching-project). NOT organizations[] entries — these are
+  // brands Chan taught cohorts for, some of which (a She Sharp programme) are
+  // not standalone orgs at all, so they must never mint a "Trusted by" roster
+  // row. Theme-aware: logoDark defaults to logoLight (fine for jpgs carrying
+  // their own plate; the ink-on-transparency wordmark supplies its own dark
+  // variant). An entry whose logoLight is missing on disk is dropped silently.
+  p._cohortPartners        = (xb.cohortPartners ?? [])
+    .filter((c) => c?.logoLight && fileExists(c.logoLight))
+    .map((c) => ({
+      name: c.name,
+      url: c.url,
+      logoLight: c.logoLight,
+      logoDark: c.logoDark ?? c.logoLight,
+    }));
 }
 
 // ---------------------------------------------------------------------------
@@ -759,6 +775,18 @@ const liteProj = (p) => (p ? { id: p.id, name: p.name, url: p.url, repoUrl: p.re
 const liteOrg = (o) => (o ? { id: o.id, name: o.name, url: o.url } : null);
 for (const p of data.projects ?? []) {
   p._clientOrg = p.clientOrgId ? liteOrg(orgByIdAll[p.clientOrgId]) : null;
+  // _entityLinked: when a project supplies entityUrl, split the plain-text
+  // `entity` on the em-dash so the commissioned-work row can render the
+  // commissioner's NAME as a link and keep the descriptor as prose. `entity`
+  // itself stays plain (it feeds llms/CV/etc.), so the link lives only here.
+  if (p.entityUrl && p.entity) {
+    const parts = String(p.entity).split(/\s+—\s+/);
+    p._entityLinked = {
+      name: parts[0],
+      rest: parts.slice(1).join(" — "),
+      url: p.entityUrl,
+    };
+  }
   const relIds = p.relatedProjectIds ?? (p.relatedProjectId ? [p.relatedProjectId] : []);
   p._relatedProjectsResolved = relIds.map((id) => liteProj(data._index.projects[id])).filter(Boolean);
   p._supersededByProject = p.supersededBy ? liteProj(data._index.projects[p.supersededBy]) : null;

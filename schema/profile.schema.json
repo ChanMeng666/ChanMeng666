@@ -685,6 +685,7 @@
         "keywords": { "type": "array", "items": { "type": "string" } },
         "roles": { "type": "array", "items": { "type": "string" } },
         "entity": { "type": "string" },
+        "entityUrl": { "type": "string", "format": "uri", "description": "Optional URL for the commissioner/client named at the START of `entity` (the text before the em-dash). Renders that name as a link in the commissioned-work table's 'For …' line — e.g. an independent commissioner's LinkedIn — without polluting the plain-text `entity` string used on every other surface. build.mjs splits `entity` on ' — ' into _entityLinked.{name,rest}." },
         "type": { "type": "string" },
         "provenance": {
           "type": "string",

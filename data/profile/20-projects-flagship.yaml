@@ -19,7 +19,7 @@ projects:
     provenance: client
     tier: flagship
     recency: active
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-09-18"
     # Product name only — "(tam-ai-ti-web)" was the repo slug and read as part
     # of the name in every rendered surface, including the img alt text.
     name: Tam-AI-Ti
@@ -35,6 +35,13 @@ projects:
     # repoUrl omitted — private client repository (Whiri-AI/tam-ai-ti-web, 404s publicly); do not re-add.
     logo: /public/brands/tam-ai-ti-mark.svg
     entity: "Riria (Missy) Te Kanawa — an independent research commission from her personally"
+    # entityUrl links ONLY the commissioner's name (the substring before the em-dash)
+    # in the "For …" line on the commissioned-work table row — same treatment
+    # FreePeriod gets, so a third-party commissioner is a clickable, verifiable
+    # party. The descriptor after the em-dash stays plain prose. build.mjs splits
+    # `entity` on " — " into _entityLinked.{name,rest}; the shard string is the SoT
+    # for every other (plain-text) surface, so DON'T put HTML in `entity`.
+    entityUrl: https://www.linkedin.com/in/riria-missy-te-kanawa/
     roles: ["Solo Independent Developer", "Full-Stack Engineer", "Maintainer"]
     extraLinks:
       - { label: "Live app",                        url: "https://tamaiti.whiri-ai.com/" }

@@ -843,10 +843,39 @@ projects:
     # satisfies that. Removing it from every bucket would fail the build.
     tier: primary
     recency: active
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-09-18"
     meta:
       x_brand:
         featuredStack: [docusaurus, react, cloudflare, typst]
+        # cohortPartners — the organisations whose cohorts Chan taught ON this
+        # platform, rendered as a logo strip ("Cohorts taught for …") on the
+        # README AI-agents row: teaching-partner brands backing Chan's educator
+        # credibility. This is DISPLAY social proof, deliberately NOT organizations[]
+        # entries — TechNest and Forward with Her are already in the org roster via
+        # their work relationships, Peyvand Academy is an external youth-workshop
+        # co-host, and Her Waka is a She Sharp programme (not a standalone org) — so
+        # none should mint a duplicate roster / "Trusted by" entry. Logos are
+        # theme-safe: the three jpgs carry their own background plate; the Her Waka
+        # wordmark is ink-on-transparency, so it ships light+dark SVGs swapped by
+        # <picture> (logoLight #9b2e83 for light canvas, logoDark #c846ab for dark).
+        # build.mjs resolves _cohortPartners and drops any whose logoLight is
+        # missing on disk. Keep in sync with the cohort versions the platform hosts
+        # (see extraLinks + narrative: 2026 TechNest, 2026 Peyvand Academy, 2026 Her
+        # Waka, 2025 Summer + 2024 Winter Forward with Her).
+        cohortPartners:
+          - name: TechNest Community
+            url: https://www.technestcommunity.com/
+            logoLight: /public/organizations/technest-community-logo.jpg
+          - name: Peyvand Academy
+            url: https://shesharp.org.nz/events/peyvand-academy-13-june-2026
+            logoLight: /public/organizations/peyvand-academy-logo.jpg
+          - name: Her Waka
+            url: https://programming.chanmeng.org/docs/2026-her-waka/programme/about-her-waka/
+            logoLight: /public/organizations/her-waka-logo.svg
+            logoDark: /public/organizations/her-waka-logo-dark.svg
+          - name: Forward with Her
+            url: https://www.linkedin.com/company/taxing-mentorship/
+            logoLight: /public/organizations/forward-with-her-logo.jpg
     # Product name only — the URL is already the card/row link.
     name: AI Programming Education Platform
     priority: 13

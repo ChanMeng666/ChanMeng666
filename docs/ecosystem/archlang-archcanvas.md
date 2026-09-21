@@ -2,7 +2,7 @@
 
 Hand-authored topology for Cursor and other agents. **Not career data.** The machine catalog is [`archlang-archcanvas.yaml`](./archlang-archcanvas.yaml). That YAML is **not** loaded by `scripts/lib/load-profile.mjs` and is **not** schema-validated.
 
-Last verified against local checkouts and git remotes: **2026-09-18**.
+Last verified against local checkouts and git remotes: **2026-09-21**.
 
 ## Why this file exists
 
@@ -62,19 +62,23 @@ flowchart TB
     growth["archcanvas-growth"]
     promoVideo["archcanvas-promo-video"]
     promoRemotion["archcanvas-promo-remotion"]
+    promoStudio["archcanvas-promo-studio"]
     growth --> promoVideo
+    growth --> promoRemotion
+    growth --> promoStudio
     promoVideo --> promoRemotion
   end
 
   archlang -->|"npm @chanmeng666/archlang"| app
   archlang -->|"engine behind"| publicFace
+  app -->|"sync:replica one way"| promoStudio
 ```
 
 Two GitHub homes: the **language** lives under the personal account `ChanMeng666`; the product’s **public face** lives under the org `archcanvas`. The private application source is still `ChanMeng666/archcanvas`. The public repo `archcanvas/archcanvas` is **not** that source.
 
 ## Repo catalog
 
-Nine top-level git checkouts under `D:/github_repository`, plus two **in-repo** sites that are not sibling clones.
+Ten top-level git checkouts under `D:/github_repository`, plus two **in-repo** sites that are not sibling clones.
 
 ### ArchLang
 
@@ -105,6 +109,7 @@ Pushing `archlang` `main` deploys both sites (Cloudflare Workers).
 | `archcanvas-growth` | `D:/github_repository/archcanvas-growth` | `https://github.com/ChanMeng666/archcanvas-growth.git` | **PRIVATE** | Strategy / research / marketing / ops HQ for **both** products. Second brain. English-only. |
 | `archcanvas-promo-video` | `D:/github_repository/archcanvas-promo-video` | `https://github.com/ChanMeng666/archcanvas-promo-video.git` | **PRIVATE** | First promo archive: HyperFrames hero + shorts. |
 | `archcanvas-promo-remotion` | `D:/github_repository/archcanvas-promo-remotion` | `https://github.com/ChanMeng666/archcanvas-promo-remotion.git` | **PRIVATE** | Second promo: Remotion “Zoom Out” (four aspect ratios). |
+| `archcanvas-promo-studio` | `D:/github_repository/archcanvas-promo-studio` | `https://github.com/ChanMeng666/archcanvas-promo-studio.git` | **PRIVATE** | Third promo: Remotion film of a **coded replica** of the studio (not a screen recording). Four cuts (15 / 30 / 60 / 120 s) × two aspect ratios = eight masters. Music + synthesised SFX, no voiceover. Does not name ArchLang on screen. |
 
 ## Dependencies
 
@@ -117,6 +122,8 @@ Pushing `archlang` `main` deploys both sites (Cloudflare Workers).
 | `archcanvas-promo-video` | editorial | `archcanvas-growth` positioning |
 | `archcanvas-promo-remotion` | `npm run sync:assets` | `../archcanvas-promo-video` |
 | `archcanvas-promo-remotion` | editorial | `archcanvas-growth` positioning |
+| `archcanvas-promo-studio` | `npm run sync:replica` (one way, sha256 lock) | `../archcanvas` studio-replica component |
+| `archcanvas-promo-studio` | editorial | `archcanvas-growth` positioning |
 
 **No code dependency:** `archcanvas-growth`, `archcanvas-public`, `archcanvas-org-profile` (docs, links, examples only).
 
@@ -132,6 +139,7 @@ Pushing `archlang` `main` deploys both sites (Cloudflare Workers).
 | `archcanvas-growth` is the product | It is the private second brain. Product facts stay in `archcanvas` and `archlang`. Growth must not restate them. |
 | `package.json` `"private": true` on showcase | Means “not published to npm”, **not** “the GitHub repo is private”. Showcase is public MIT. |
 | `readme-showcase` under `D:/github_repository` | Unrelated README-screenshot skill. Name collision only. |
+| `app-promo-studio` in ChanMeng666 career shards | Unrelated project id. The ArchCanvas film checkout is **`archcanvas-promo-studio`**. |
 
 ## Truth ownership
 
@@ -141,7 +149,7 @@ Pushing `archlang` `main` deploys both sites (Cloudflare Workers).
 | Product behaviour, pricing implementation, app architecture | `archcanvas` (`CLAUDE.md`, `README.md`, `src/`) | Restate them in growth |
 | Strategy, research, launch copy, kill criteria | `archcanvas-growth` | Treat growth as product truth; do not edit product repos from growth |
 | Career / CV / LinkedIn / README profile | this repo’s `data/profile/` — work `id: archcanvas`, projects `id: archlang` and `id: archcanvas` | Put topology into the shards (it would leak onto generated surfaces) |
-| Promo on-screen copy | growth for positioning; each promo repo for cleared phrases | Invent taglines; the Remotion film does not name ArchLang on screen |
+| Promo on-screen copy | growth for positioning; each promo repo for cleared phrases | Invent taglines; Zoom Out and the studio replica film do not name ArchLang on screen |
 
 Public copy rules (from the work-entry evidence comments in `data/profile/10-career.yaml`):
 
@@ -160,7 +168,7 @@ Do not add this map’s local `D:/` paths to product-repo `AGENTS.md` files. Tho
 
 ## Checked and excluded
 
-Top-level scan of `D:/github_repository` on 2026-09-18: **nine** matching git folders, listed above. `docs-site` and `playground` exist only inside `archlang`.
+Top-level scan of `D:/github_repository` on 2026-09-21: **ten** matching git folders, listed above. `docs-site` and `playground` exist only inside `archlang`. The third promo checkout is `archcanvas-promo-studio` — not `app-promo-studio` (an unrelated career-shard project).
 
 | Path | Why it is not in the catalog |
 |---|---|

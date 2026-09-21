@@ -4,7 +4,9 @@
      2026-07-15: the 18px tech-stack icon strips (_featuredStackResolved) were
      removed from both tables — see the note in project-cards.hbs. The
      _contextLogo strip in the AI-agents table (which harnesses a product
-     supports) is NOT a stack strip and stays.
+     supports) is NOT a stack strip and stays. 2026-09-21: it moved from the
+     name cell into the description cell as a "↳ Works with …" line, matching
+     the "↳ Cohorts taught for …" and "↳ Being adopted by …" strips.
      2026-08-12: a THIRD sub-bucket, "Client & commissioned work", moved here
      from commissioned.hbs along with its <details> overflow. It renders
      commissionedProjectIds — client builds that are real paid engagements but
@@ -36,8 +38,8 @@
   </colgroup>
 {{#each _aiAgentProjects}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
-    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _contextLogo.length}}<br><sub>{{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"></a>{{#unless @last}} {{/unless}}{{/each}}</sub>{{/if}}</td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _cohortPartners.length}}<br><sub>↳ Cohorts taught for {{#each _cohortPartners}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{logoDark}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _adopterOrgs.length}}<br><sub>↳ Being adopted by {{#each _adopterOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Sub-projects I built solo: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
+    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _contextLogo.length}}<br><sub>↳ Works with {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _cohortPartners.length}}<br><sub>↳ Cohorts taught for {{#each _cohortPartners}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{logoDark}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _adopterOrgs.length}}<br><sub>↳ Being adopted by {{#each _adopterOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Sub-projects I built solo: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
   </tr>
 {{/each}}</table>
 

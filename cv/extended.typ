@@ -1,4 +1,4 @@
-// Chan Meng — EXTENDED CV content: the 16-page «Subtraction / Addition» magazine.
+// Chan Meng — EXTENDED CV content: the 20-page «Subtraction / Addition» magazine.
 // Each x-*() renders one chapter. Facts mirror data/profile/*.yaml; dates anchor
 // to data/profile/10-career.yaml. All English, first person. See the plan +
 // spec under docs/superpowers/ for page architecture and red lines.
@@ -285,7 +285,179 @@
   pagebreak()
 }
 
-// ── p12: Chapter 4 — Teaching ────────────────────────────────────────────────
+// ── pp12–15: Chapter 4 — What I Make Beyond Code ─────────────────────────────
+// The craft evidence from data/profile/45-showcase.yaml, typeset natively: per
+// capability an eyebrow, a title, one or two sentences, a facts line and its
+// links, then the RAW source frames from evidence/src/ (not the plated README
+// collages — their baked-in text shrank to unreadable at page width; Chan,
+// 2026-09-24). Facts and numbers only from that shard.
+// Page map DETERMINISTIC (4 pagebreaks → pp12–15): p12 opener + PDF report;
+// p13 promo films + pitch deck; p14 event slides + transformation record;
+// p15 newsletters + SEO/GEO.
+// CONFIDENTIALITY is the shard's: GAVIGO deck = cover/problem/solution only and
+// never the gated URL; the transformation record = headline numbers, no PDF.
+#let craft-gap = 14pt
+#let craft-frame(path, h) = box(width: 100%, height: h, radius: radius-photo-x, clip: true,
+  stroke: frame-photo-x + rule.lighten(25%), image(path, width: 100%, height: 100%, fit: "cover"))
+// Top-anchored crop of a tall screenshot (emails, the LinkedIn post): the image
+// keeps its natural height inside a clipped box, so the frame shows its top.
+// `ratio` (height ÷ width) must be explicit: an image taller than its region is
+// otherwise fitted with the default "cover", which re-centres the crop.
+#let craft-top(path, h, ratio) = box(width: 100%, height: h, radius: radius-photo-x, clip: true,
+  stroke: frame-photo-x + rule.lighten(25%),
+  layout(sz => place(top + left, image(path, width: sz.width, height: sz.width * ratio))))
+#let craft-cap(body) = block(above: 5pt, below: 0pt, text(size: size-tiny-x, fill: muted, style: "italic", body))
+#let craft-links(..items) = block(above: 0pt, below: 0pt, {
+  set text(size: size-meta-x)
+  items.pos().map(it => box(icon-link(it.at(0), it.at(1), it.at(2), size: size-meta-x))).join(h(16pt))
+})
+
+#let craft-entry(eyebrow, title, body, facts: (), links: ()) = block(above: 0pt, below: 12pt, breakable: false, {
+  block(above: 0pt, below: 6pt, text(size: 8.5pt, weight: "bold", fill: accent, tracking: 0.14em)[#upper(eyebrow)])
+  block(above: 0pt, below: 8pt, text(weight: "bold", size: 15pt, fill: primary, title))
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-body-x, justify: false)
+    text(size: size-body-x, fill: ink, body)
+  })
+  if facts.len() > 0 {
+    block(above: 7pt, below: 0pt, text(size: size-meta-x, fill: muted)[#facts.join([#h(5pt)#text(fill: accent)[·]#h(5pt)])])
+  }
+  if links.len() > 0 { block(above: 7pt, below: 0pt, craft-links(..links)) }
+})
+
+// One large 16:9 frame beside two stacked ones, filling the column exactly:
+// h = (content-width − gutter) ÷ (16/9 + 8/9) ≈ 182pt for a 487pt column.
+#let craft-feature(big, a, b, caption) = {
+  let h = 182pt
+  grid(columns: (h * 16 / 9, 1fr), column-gutter: craft-gap,
+    craft-frame(big, h),
+    { craft-frame(a, (h - craft-gap) / 2); v(craft-gap); craft-frame(b, (h - craft-gap) / 2) })
+  craft-cap(caption)
+}
+
+#let craft-stat(num, label) = block(above: 0pt, below: 0pt, breakable: false, {
+  block(above: 0pt, below: 4pt, text(font: sans-display, size: 26pt, fill: primary, num))
+  set par(leading: 0.8em, justify: false)
+  text(size: size-tiny-x, fill: muted, label)
+})
+
+#let x-craft() = {
+  chapter-opener("4", "What I Make Beyond Code",
+    kicker: [Software is half of what an organisation needs from me. The other half is what it shows the world.])
+  block(above: 0pt, below: 0pt, {
+    set par(leading: leading-lead-x, justify: false)
+    text(size: size-body-x, fill: ink)[
+      I typeset reports in code, cut promo films in code, and build the decks, slides and newsletters an organisation runs on — then make the record findable by the AI models people now ask instead of a search box. Everything on these four pages shipped for a real organisation; all of it is on #link("https://chanmeng.org/work")[chanmeng.org/work].
+    ]
+  })
+  v(1fr)
+  craft-entry("Typeset PDF reports", "She Sharp 2026 Half-Year Report",
+    [A 31-page funder report for a New Zealand women-in-STEM charity, typeset in Typst from the charity's own records — with a build gate that refuses to ship a figure not traced to a source.],
+    facts: ("31 pages", "Typst + CeTZ charts", "every figure source-traced"),
+    links: (("link", "https://chanmeng.org/work/she-sharp-half-year-report-2026-h1.pdf", "Download the PDF"),))
+  {
+    let h = 216pt
+    grid(columns: (1fr, 1fr, 1fr), column-gutter: craft-gap,
+      craft-frame("/evidence/src/pdf-report/she-sharp-h1-p01.jpg", h),
+      craft-frame("/evidence/src/pdf-report/she-sharp-h1-p05.jpg", h),
+      craft-frame("/evidence/src/pdf-report/she-sharp-h1-p16.jpg", h))
+    craft-cap[Cover · H1 at a glance · a chapter opener]
+  }
+  v(1fr)
+  pagebreak()
+
+  // p13 — promo films + pitch deck
+  craft-entry("Promo films", "Two films, built as code in Remotion",
+    [Neither is a screen recording: every frame is rendered from code, scored with Suno and cut on the beat, in every aspect ratio a channel needs.])
+  {
+    let h = 133pt
+    let film(still, name, facts, url, icon-name, where) = block(above: 0pt, below: 0pt, breakable: false, {
+      craft-frame(still, h)
+      block(above: 9pt, below: 4pt, text(weight: "bold", size: size-h3-x, fill: ink, name))
+      block(above: 0pt, below: 6pt, text(size: size-meta-x, fill: muted, facts))
+      icon-link(icon-name, url, where, size: size-meta-x)
+    })
+    grid(columns: (1fr, 1fr), column-gutter: craft-gap,
+      film("/evidence/src/promo-film/archcanvas-02-plan.jpg", [ArchCanvas studio film],
+        [A coded replica of the product · 15 / 30 / 60 / 120 s · 16:9 + 9:16],
+        "https://youtu.be/rUZAiXgt9JY", "youtube", "Watch on YouTube"),
+      film("/evidence/src/promo-film/lesmills-L-5-title.jpg", [She Sharp × Les Mills — “No Pain, All Gain”],
+        [A 30 s event promo from event photographs · 4 aspect ratios],
+        "https://www.linkedin.com/posts/shesharpnz_no-pain-all-gain-getting-fit-for-ai-activity-7499713162410156032-62zA", "linkedin", "Watch on LinkedIn"))
+  }
+  v(1fr)
+  craft-entry("Pitch decks", "GAVIGO technical proof deck",
+    [A 19-slide investor deck in a Swiss international-style grid, built as a single HTML file for the founder to present live and send.],
+    facts: ("19 slides", "single-file HTML", "Swiss grid"))
+  craft-feature("/evidence/src/pitch-deck/gavigo-deck-01-cover.jpg",
+    "/evidence/src/pitch-deck/gavigo-deck-03-problem.jpg",
+    "/evidence/src/pitch-deck/gavigo-deck-04-solution.jpg",
+    [Cover · problem · solution — the only slides shown; the deck itself stays private])
+  v(1fr)
+  pagebreak()
+
+  // p14 — event slides + transformation record
+  craft-entry("Event slides", "Aotearoa AI Hackathon Festival 2026",
+    [The 91-slide deck that ran two days of She Sharp's hackathon at AUT, rendered in the browser from the event's own data — timers, team slides and the winners reveal included.],
+    facts: ("91 slides", "2 days", "12 teams"),
+    links: (("link", "https://www.shesharp.org.nz/present/aotearoa-ai-hackathon-festival-2026", "Open the deck live"),))
+  craft-feature("/evidence/src/slides/hackathon-01-cover.jpg",
+    "/evidence/src/slides/hackathon-19-challenges.jpg",
+    "/evidence/src/slides/hackathon-86-winners.jpg",
+    [Cover · the challenges · the winners reveal])
+  v(1fr)
+  craft-entry("Digital transformation", "From rented software to a system the charity owns",
+    [She Sharp's website, mailing list and records moved off Webflow, Mailchimp, Humanitix and Slack onto infrastructure it owns — written up as a record where every number is tagged measured, cited or derived.])
+  grid(columns: (1fr, 1fr, 1fr), column-gutter: 22pt, row-gutter: 18pt,
+    craft-stat("13.3", [months to move the website and mailing list onto owned infrastructure]),
+    craft-stat("1,549", [people on the mailing list cut over, with 0 failures]),
+    craft-stat("1.15 GB", [of the charity's own operating record recovered from four platforms]),
+    craft-stat("179", [past newsletters recovered and served from its own site]),
+    craft-stat("11", [recurring jobs written down as agent skills a non-engineer can follow]),
+    craft-stat("2,129", [non-consenting contacts held as one-way hashes, so no import brings them back]))
+  craft-cap[Headline figures only; the full record stays with the charity.]
+  v(1fr)
+  pagebreak()
+
+  // p15 — newsletters + SEO/GEO
+  craft-entry("Newsletters", "Two newsletters, on owned infrastructure",
+    [Chan's AI Weekly, a five-minute briefing written with Claude Code and sent through Resend; and She Sharp's monthly, moved off Mailchimp with a 1,549-person cutover and 0 failures.],
+    links: (("link", "https://chanmeng.org/newsletter", "chanmeng.org/newsletter"),
+            ("link", "https://www.shesharp.org.nz/resources/newsletters", "shesharp.org.nz/resources/newsletters")))
+  {
+    let h = 232pt
+    grid(columns: (1fr, 1fr, 1fr, 1fr), column-gutter: 10pt,
+      craft-top("/evidence/src/newsletter/chanmeng-email-2026-09-21.jpg", h, 3300 / 1080),
+      craft-top("/evidence/src/newsletter/chanmeng-email-2026-09-14.jpg", h, 3300 / 1080),
+      craft-top("/evidence/src/newsletter/shesharp-email-2026-09.jpg", h, 3300 / 1080),
+      craft-top("/evidence/src/newsletter/shesharp-email-2026-08.jpg", h, 3300 / 1080))
+    craft-cap[Chan's AI Weekly, the top of one issue and the inside of another · The Monthly She\#, the same]
+  }
+  v(1fr)
+  craft-entry("SEO & GEO", "Surfaced by Claude, confirmed by the founder",
+    [When Engram's founder asked Claude Code to find an AI architect, it surfaced me. The public footprint it read — llms.txt, JSON-LD and an open-source record, all generated from one data source — is built for exactly that reader.],
+    facts: ("4,264 impressions", "llms.txt + JSON-LD", "geo-markdown-mirror skill"))
+  grid(columns: (128pt, 1fr), column-gutter: 22pt, align: (left + top, left + horizon),
+    craft-top("/evidence/src/seo-geo/engram-founder-linkedin-post.jpg", 190pt, 1512 / 700),
+    block(above: 0pt, below: 0pt, breakable: false,
+      block(inset: (left: 16pt), stroke: (left: 4pt + accent), {
+        set par(leading: leading-lead-x, justify: false)
+        text(size: 15pt, style: "italic", fill: primary)[“It's true, Claude Code surfaced Chan as one of the strongest matches for what we're looking for.”]
+        v(12pt)
+        grid(columns: (36pt, auto), column-gutter: 11pt, align: (center + horizon, left + horizon),
+          box(radius: 50%, clip: true, width: 34pt, height: 34pt, stroke: 1pt + accent,
+            image("/public/people/luka-madzarac.jpg", width: 100%, height: 100%, fit: "cover")),
+          {
+            text(size: size-meta-x, fill: ink, weight: "bold")[#link("https://www.linkedin.com/in/omgluka/")[Luka Madzarac]]
+            linebreak()
+            text(size: size-meta-x, fill: muted)[Founder, Engram · #link("https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-share-7459724143593246720-SD5v")[the post]]
+          })
+      })))
+  v(1fr)
+  pagebreak()
+}
+
+// ── p16: Chapter 5 — Teaching ────────────────────────────────────────────────
 // EXACTLY one page (single trailing pagebreak). Manifesto line big, a short
 // method paragraph, the enlarged banana-workshop photo pair, and a REAL
 // attributed student quote (verbatim from data/profile/50-references.yaml,
@@ -303,7 +475,7 @@
 // (30-recognition.yaml) and the adult end is TechNest / Her Waka;
 // "university students" has zero support in the data. Do not reach for either.
 #let x-teaching() = {
-  chapter-opener("4", "Teaching",
+  chapter-opener("5", "Teaching",
     kicker: [Three years, five cohorts. My whole method in one line.])
   block(above: 0pt, below: 12pt, {
     set par(leading: leading-lead-x, justify: false)
@@ -349,7 +521,7 @@
   })
   pagebreak()
 }
-// ── pp13–14: Chapter 5 — Voices ──────────────────────────────────────────────
+// ── pp17–18: Chapter 6 — Voices ──────────────────────────────────────────────
 // ALL 27 recommenders appear (avatar wall = exactly 27, incl. historical-archive
 // Daryll Hall — controller ruling). Extensions are the ON-DISK truth, not the
 // brief draft: Gabby/Mi Su/Shushu/Patricia are .jpeg (not .jpg), and Amy-Li's
@@ -387,7 +559,7 @@
   ("/public/recommendations/Daryll-Hall.jpeg", "Daryll"),
 )
 #let x-voices() = {
-  chapter-opener("5", "Voices",
+  chapter-opener("6", "Voices",
     kicker: [Twenty-seven people who've worked with me — every one of them, in their own words.])
   // Enlarged 6-across wall, centered below the opener so it fills the page rather
   // than sitting as a small band at the top. 27 no longer divides by 6, so the
@@ -419,21 +591,21 @@
   block(above: 0pt, below: 0pt, {
     set par(leading: leading-body-x, justify: false)
     text(size: size-tiny-x, fill: muted, style: "italic")[
-      All 26 public recommendations in full: #link("https://www.linkedin.com/in/chanmeng666/")[linkedin.com/in/chanmeng666].
+      All 27 recommendations; the live ones in full: #link("https://www.linkedin.com/in/chanmeng666/")[linkedin.com/in/chanmeng666].
     ]
   })
   v(0.4fr)
   pagebreak()
 }
 
-// ── p15: Chapter 6 — Recognition ─────────────────────────────────────────────
+// ── p19: Chapter 7 — Recognition ─────────────────────────────────────────────
 // One page. UN CSW69 photo + awards. Award titles/dates verified against
 // data/profile/30-recognition.yaml. No pricing framing; the only named third
 // parties are a company (IBM) and a government minister by title — both from the
 // canonical UN CSW69 award summary, no private individuals. (The discontinued
 // audio-show row was removed 2026-07-24; awards now fill the page.)
 #let x-recognition() = {
-  chapter-opener("6", "Recognition",
+  chapter-opener("7", "Recognition",
     kicker: [Where the work has been seen.])
   // Three-up stage row: UN CSW69, the 2025 festival keynote (Outstanding Mentor
   // year one), and MCing the 2026 opening. The 2026 karakia podium frame was
@@ -482,7 +654,7 @@
   pagebreak()
 }
 
-// ── p16: back cover (centered, non-bleed — keeps Task 4 geometry) ────────────
+// ── p20: back cover (centered, non-bleed — keeps Task 4 geometry) ────────────
 #let x-backcover() = {
   set page(footer: none)
   v(1fr)

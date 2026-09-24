@@ -247,7 +247,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Auckland, New Zealand",
   arrangement: "Remote",
   bullets: (
-    [Build an AI design agent for architects and self-builders; invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (53 npm releases, 139 diagnostic codes), so every plan is checked and an edit is exact.],
+    [Build an AI design agent for architects and self-builders; invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (53 npm releases, 139 diagnostic codes), so every plan is checked and an edit is exact; live at archcanvas.uk and archlang.uk.],
   ),
 )
 
@@ -259,7 +259,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Chengdu, Sichuan, China",
   arrangement: "Remote",
   bullets: (
-    [Sole engineer, remotely, across two platform generations for an organisation self-described as China's first in women's health technology; built the pages and application system for its 2026 Shanghai Summit (four days, 20 speakers, headlined by Ida Tin).],
+    [Sole engineer, remotely, across two platform generations for an organisation self-described as China's first in women's health technology; built the pages and application system for its 2026 Shanghai Summit (four days, 20 speakers, headlined by Ida Tin); site: femtechweekend.com.],
   ),
 )
 
@@ -272,7 +272,7 @@ coding agents and building on the Claude Agent SDK.
   arrangement: "Hybrid",
   bullets: (
     [Recruited by founder Dr Mahsa Mohaghegh to move a volunteer-run New Zealand women-in-STEM charity (96+ events since 2014) off rented software onto infrastructure it owns, leading a 13.3-month build of sign-ups, memberships, events and GPT-4o-mini mentor matching (251 merged pull requests, 94.5% of lines added).],
-    [Cut a 1,549-person mailing list over from Mailchimp to self-hosted double opt-in with 0 failures, and rewrote the charity's recurring work as 11 agent skills, reviewed by pull request and type-checked in CI, that non-engineers can follow.],
+    [Cut a 1,549-person mailing list over from Mailchimp to self-hosted double opt-in with 0 failures, and rewrote the charity's recurring work as 11 agent skills, reviewed by pull request and type-checked in CI, that non-engineers can follow; built shesharp.org.nz, its newsletter and its event decks.],
   ),
 )
 
@@ -284,7 +284,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Wilmington, Delaware, United States",
   arrangement: "Remote",
   bullets: (
-    [Owned the Intelligence Layer of an app-activation platform: a Go orchestrator running a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE) — sub-millisecond p50 restore, an 84.6% warm-pool hit rate, zero errors at 100 concurrent WebSocket clients; migrated DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contracts, 471 of 488 commits solo.],
+    [Owned the Intelligence Layer of an app-activation platform: a Go orchestrator running a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE) — sub-millisecond p50 restore, an 84.6% warm-pool hit rate, zero errors at 100 concurrent WebSocket clients; migrated DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contracts, 471 of 488 commits solo, and live at ire.gavigo.com.],
   ),
 )
 
@@ -320,7 +320,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Tulsa, Oklahoma, United States",
   arrangement: "Remote",
   bullets: (
-    [Promoted to CTO leading a team of five; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS and built the IBM watsonx integration behind Sanicle's IBM Silver Partner certification.],
+    [Promoted to CTO leading a team of five; took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS and built the company website and the IBM watsonx integration behind Sanicle's IBM Silver Partner certification.],
   ),
 )
 
@@ -364,8 +364,9 @@ coding agents and building on the Claude Agent SDK.
 )
 
 // ═══ PROJECTS ════════════════════════════════════════════════════════════════
-// Five independent projects Chan owns end to end, mirroring the designed CV's
-// five cards. No project here duplicates a product built at an employer or at
+// Four independent projects Chan owns end to end, mirroring the designed CV's
+// four cards (re-chosen 2026-09-24: Tam-AI-Ti and Vitex moved to "Also built",
+// a11y-loop came up from it). No project here duplicates a product built at an employer or at
 // Chan's own company — those live in Experience. ArchCanvas used to lead this
 // section; it moved up to Experience when ArchCanvas became a role rather than
 // a side build. echook was promoted from the "Also built" line in Sep 2026 and
@@ -376,34 +377,13 @@ coding agents and building on the Claude Agent SDK.
 = PROJECTS
 
 #project-entry(
-  name: "Tam-AI-Ti",
-  url: "tamaiti.whiri-ai.com",
-  target: "https://tamaiti.whiri-ai.com/",
-)[
-  A te reo Māori and English AI financial-wellness app built solo on commission
-  from Riria (Missy) Te Kanawa herself, not her employer ASB Bank: three composed
-  OpenAI models, one a realtime voice coach, culture as typed schema (Maramataka,
-  Te Whare Tapa Whā); a 19-user cohort produced 181 journal entries in 4 months.
-]
-
-#project-entry(
-  name: "Vitex - AI Career Agent",
-  url: "vitex.org.nz",
-  target: "https://www.vitex.org.nz/",
-)[
-  Paste a job description, get a tailored resume and cover letter scored against
-  its keywords in under 30 seconds, with Typst compiling the finished PDF
-  locally in under 100 ms across 7 templates.
-]
-
-#project-entry(
   name: "Google News MCP Server",
   url: "github.com/ChanMeng666/server-google-news",
   target: "https://github.com/ChanMeng666/server-google-news",
 )[
   One of the earliest Model Context Protocol servers, shipped 35 days after
   Anthropic launched MCP and before a registry existed: a PulseMCP Top Pick, a
-  Glama A-rating, and 126 GitHub stars.
+  Glama A-rating, and 129 GitHub stars.
 ]
 
 #project-entry(
@@ -428,6 +408,17 @@ coding agents and building on the Claude Agent SDK.
   assistant doing version-aware retrieval over 4,800 chunks.
 ]
 
+#project-entry(
+  name: "a11y-loop",
+  url: "github.com/ChanMeng666/a11y-loop",
+  target: "https://github.com/ChanMeng666/a11y-loop",
+)[
+  A Claude Code skill and CLI that makes AI coding agents write accessible UI,
+  audits it in a real browser (Playwright, axe-core, WCAG 2.2 AA) and lists what
+  it could not check; being adopted by My Life My Voice, the disability-led New
+  Zealand organisation that set the problem.
+]
+
 // Everything else Chan built, one descriptor each. A bare link tells a reader
 // nothing and a keyword matcher almost nothing, so each carries the same
 // explanation as the designed CV's italic closer line — in this file's register,
@@ -441,8 +432,10 @@ coding agents and building on the Claude Agent SDK.
 #block(above: 0pt, below: 0pt, {
   strong("Also built: ")
   [#link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited),
-  #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates),
-  #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (an accessibility CLI and Claude Code skill, being adopted by My Life My Voice, the disability-led New Zealand organisation that set the problem), and #link("https://seismophone.chanmeng.org/")[Seismophone] (the first public Suno remix-lineage explorer).]
+  #link("https://www.vitex.org.nz/")[Vitex - AI Career Agent] (a tailored resume and cover letter in under 30 seconds),
+  #link("https://seismophone.chanmeng.org/")[Seismophone] (the first public Suno remix-lineage explorer),
+  #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (a te reo Māori and English AI financial-wellness app; a 19-user cohort produced 181 journal entries in 4 months), and
+  #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).]
 })
 
 // ═══ EDUCATION ═══════════════════════════════════════════════════════════════
@@ -491,4 +484,4 @@ coding agents and building on the Claude Agent SDK.
 
 - UN CSW 69 Speaker (by video link), UN Headquarters, New York, Mar 2025 — drew IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.
 - Outstanding Mentor Award, Aotearoa AI Hackathon Festival, won in 2025 (1 of 14 mentors) and again in 2026, a second consecutive year; Excellence Award, FemTech China Women's Health Technology Challenge (Dec 2024); Outstanding Performer, UN Women FemTech Hackathon, Beijing (Mar 2025).
-- Community: 480+ GitHub stars on own repos, 26 LinkedIn recommendations, 2 merged CopilotKit PRs.
+- Community: 530+ GitHub stars on own repos, 27 LinkedIn recommendations, 2 merged CopilotKit PRs.

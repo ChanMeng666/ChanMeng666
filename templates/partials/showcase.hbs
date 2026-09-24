@@ -1,0 +1,40 @@
+{{!-- ═══════════════════════════════════════════════════════════════════════
+     What I make beyond code — craft evidence from data/profile/45-showcase.yaml
+     (_showcase, grouped by showcaseCapabilities in display order). Every
+     capability is collapsed so the README stays short; its collage is rendered
+     from evidence/collages/<id>.html by `npm run build:collages` and carries
+     its own background plate (safe on light and dark canvases).
+     Videos with `url: null` render a visible "video coming soon" line plus an
+     HTML comment marking the slot: the MP4 is uploaded by
+     hand through GitHub user-attachments, and a bare user-attachments URL on
+     its own line is what GitHub turns into an inline player.
+     ═══════════════════════════════════════════════════════════════════════ --}}
+
+## What I make beyond code
+
+<sub>The software is half of it. I also make what an organisation shows the world: reports typeset in code, promo films, pitch decks, event slides and newsletters, plus the data work and findability underneath. Open any row to see the work.</sub>
+
+{{#each _showcase}}<details>
+<summary><kbd>&nbsp;{{label}}&nbsp;</kbd>&nbsp; <sub>{{blurb}}</sub></summary>
+
+<br>
+
+<img src="{{collage}}" width="100%" alt="{{label}}: {{#each items}}{{title}}{{#unless @last}}; {{/unless}}{{/each}}">
+
+{{#each items}}<p><strong>{{title}}</strong>{{#if org}} · <sub>{{org}}</sub>{{/if}}<br>
+{{summary}}{{#if watchUrl}}<br><sub><a href="{{watchUrl}}">Watch the film →</a></sub>{{/if}}{{#if liveUrl}}<br><sub><a href="{{liveUrl}}">Open it live →</a></sub>{{/if}}{{#if download}}<br><sub><a href="{{download.src}}">{{download.label}} ↓</a></sub>{{/if}}</p>
+
+{{#if quote}}
+> *“{{quote.text}}”*
+>
+> {{#if quote.avatar}}<img src="{{quote.avatar}}" width="28" height="28" alt="{{quote.author}}">&nbsp; {{/if}}— **{{#if quote.profileUrl}}[{{quote.author}}]({{quote.profileUrl}}){{else}}{{quote.author}}{{/if}}**, {{quote.role}} · [the post]({{quote.url}})
+
+{{/if}}
+{{#each _videos}}
+{{url}}
+{{/each}}{{#each _pendingVideos}}<!-- VIDEO PLACEHOLDER: {{../id}} · {{label}} — upload the MP4 via GitHub user-attachments, then set videos[].url in data/profile/45-showcase.yaml -->
+<p><sub>▶ <b>Film · {{label}}</b> — video coming soon</sub></p>
+{{/each}}
+{{/each}}
+</details>
+{{/each}}

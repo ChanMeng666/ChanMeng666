@@ -96,6 +96,12 @@ windows, and the six packaging constructions to refuse outright — are in
 [`references/claim-discipline.md`](references/claim-discipline.md). Read it
 before writing any bullet that contains a number or an ownership word.
 
+**Reach counts are shown at their historical maximum** — recommendations,
+followers, subscribers, stars. Raise them when the live number is higher; never
+lower them because a platform number dropped (27 recommendations stays 27
+while LinkedIn shows 26). Details: `CLAUDE.md` § "Display the historical
+maximum".
+
 ## Workflow
 
 1. **Land the fact.** Edit the right shard (`CLAUDE.md` has the data map;

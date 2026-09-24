@@ -231,6 +231,43 @@ data._spotlightProjects = resolveIds(spotlightIds);
   }
 }
 
+// ---------------------------------------------------------------------------
+// Showcase (45-showcase.yaml) — craft evidence grouped by capability, in
+// showcaseCapabilities order. Broken references and missing files fail the
+// build: a collage or PDF that is not on disk renders as a dead image/link on
+// GitHub with no other signal.
+// ---------------------------------------------------------------------------
+{
+  const caps = data.showcaseCapabilities ?? [];
+  const capIds = new Set(caps.map((c) => c.id));
+  const workIdSet = new Set((data.work ?? []).map((w) => w.id));
+  const onDisk = (p) => fs.existsSync(path.join(repoRoot, p.replace(/^\//, "")));
+  const errs = [];
+  for (const c of caps) {
+    if (!onDisk(c.collage)) errs.push(`showcaseCapabilities.${c.id}.collage → missing file ${c.collage} (run npm run build:collages)`);
+  }
+  for (const s of data.showcase ?? []) {
+    if (!capIds.has(s.capability)) errs.push(`showcase.${s.id}.capability → unknown capability '${s.capability}'`);
+    if (s.relatedWorkId && !workIdSet.has(s.relatedWorkId)) errs.push(`showcase.${s.id}.relatedWorkId → unknown work '${s.relatedWorkId}'`);
+    if (s.relatedProjectId && !projectIds.has(s.relatedProjectId)) errs.push(`showcase.${s.id}.relatedProjectId → unknown project '${s.relatedProjectId}'`);
+    if (s.download && !onDisk(s.download.src)) errs.push(`showcase.${s.id}.download → missing file ${s.download.src}`);
+    for (const src of s.sources ?? []) if (!onDisk(src)) errs.push(`showcase.${s.id}.sources → missing file ${src}`);
+    if (s.quote?.avatar && !onDisk(s.quote.avatar)) errs.push(`showcase.${s.id}.quote.avatar → missing file ${s.quote.avatar}`);
+  }
+  if (errs.length) {
+    console.error(`✗ showcase error(s):\n  ${errs.join("\n  ")}`);
+    process.exit(1);
+  }
+  data._showcase = caps
+    .map((c) => ({
+      ...c,
+      items: (data.showcase ?? [])
+        .filter((s) => s.capability === c.id)
+        .map((s) => ({ ...s, _pendingVideos: (s.videos ?? []).filter((v) => !v.url), _videos: (s.videos ?? []).filter((v) => v.url) })),
+    }))
+    .filter((c) => c.items.length);
+}
+
 // Open Source overflow (rendered inside the Open Source <details>):
 // excludes commissioned overflow, which now lives under Commissioned work.
 data._moreProjectsByGroup = [

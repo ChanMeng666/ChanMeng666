@@ -1,0 +1,105 @@
+/* Shared frame for every evidence collage. Rendered by scripts/render-collages.mjs
+   at 1600 CSS px wide. The plate carries its own background, so the output reads
+   the same on GitHub's light (#ffffff) and dark (#0d1117) canvases. Colours and
+   families are data/brand.yaml tokens. */
+@font-face { font-family: "Anton"; src: url("../../cv/fonts/Anton-Regular.ttf"); }
+@font-face { font-family: "DM Sans"; font-weight: 400; src: url("../../cv/fonts/DMSans-Regular.ttf"); }
+@font-face { font-family: "DM Sans"; font-weight: 500; src: url("../../cv/fonts/DMSans-Medium.ttf"); }
+@font-face { font-family: "DM Sans"; font-weight: 700; src: url("../../cv/fonts/DMSans-Bold.ttf"); }
+@font-face { font-family: "JetBrains Mono"; src: url("../../cv/fonts/JetBrainsMono-Regular.ttf"); }
+
+:root {
+  --canvas: #E2E2DF;
+  --card: #F7F6F2;
+  --ink: #070607;
+  --orange: #FC5000;
+  --violet: #524AE9;
+  --glare: #F5F28E;
+  --muted: #55524E;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { width: 1600px; background: var(--canvas); }
+
+body {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  color: var(--ink);
+  padding: 56px 64px 60px;
+}
+
+.plate { display: flex; flex-direction: column; gap: 36px; }
+
+header { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 32px; }
+
+.kicker {
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 18px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex; align-items: center; gap: 14px;
+}
+.kicker::before { content: ""; width: 44px; height: 6px; background: var(--orange); }
+
+h1 {
+  font-family: "Anton", Impact, sans-serif;
+  font-weight: 400;
+  font-size: 68px;
+  line-height: 1.02;
+  letter-spacing: .005em;
+  margin-top: 14px;
+}
+
+.chips { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; max-width: 620px; }
+.chip {
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 17px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  white-space: nowrap;
+}
+.chip.o { background: var(--orange); color: var(--ink); }
+.chip.v { background: var(--violet); color: #fff; }
+
+.shot {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 2px 0 rgba(7,6,7,.08), 0 18px 40px -18px rgba(7,6,7,.45);
+  background: #fff;
+}
+
+.caption {
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 15px;
+  color: var(--muted);
+  margin-top: 10px;
+  letter-spacing: .04em;
+}
+
+.group-title {
+  font-family: "Anton", Impact, sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 14px;
+  display: flex; align-items: baseline; gap: 14px;
+}
+.group-title small {
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 16px;
+  color: var(--muted);
+  letter-spacing: .06em;
+}
+
+footer {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 16px;
+  color: var(--muted);
+  border-top: 2px solid rgba(7,6,7,.14);
+  padding-top: 18px;
+}
+footer b { color: var(--ink); font-weight: 400; }

@@ -1,6 +1,6 @@
 # Extended-CV magazine — curated photo set
 
-Compressed selects for `chan-meng-cv-extended.pdf` (16-page image-led magazine).
+Compressed selects for `chan-meng-cv-extended.pdf` (20-page image-led magazine).
 Each file is resized to max 1400px on the long edge, progressive mozjpeg q80
 (q68 auto-retry if over), asserted ≤ 400 KB. Referenced by later layout tasks
 via relative path `/cv/assets/extended/<name>.jpg`.
@@ -27,13 +27,13 @@ committed; only the outputs below land in the repo.
 | `namechange-hero.jpg` | `D:\github_repository\2d-portfolio\public\blog\threw-away-my-old-name\01.png` | pp5–7 "A Minimalist" (chapter hero / title card) |
 | ~~`teach-banana-1.jpg`~~ | `…peyvand-academy-13-june-2026-photo-6.webp` | **retired 2026-07-26 (wave 4)** — see "Retired" below |
 | ~~`teach-banana-2.jpg`~~ | `…peyvand-academy-13-june-2026-photo-2.webp` | **retired 2026-07-26** — see "Retired" below |
-| `teach-westlake-hackathon.jpg` | `C:\Users\0\Downloads\photo\Teaching.png` (supplied by Chan 2026-07-26) | p12 Teaching |
-| `teach-kids-laptop.jpg` | `C:\Users\0\Downloads\photo\Teaching.HEIC` | p12 Teaching |
+| `teach-westlake-hackathon.jpg` | `C:\Users\0\Downloads\photo\Teaching.png` (supplied by Chan 2026-07-26) | p16 Teaching |
+| `teach-kids-laptop.jpg` | `C:\Users\0\Downloads\photo\Teaching.HEIC` | p16 Teaching |
 | `story-lincoln.jpg` | `C:\Users\0\Downloads\photo\lincoln university.jpg` | p4 "My Story" |
 | `story-nanning.jpg` | `C:\Users\0\Downloads\photo\china-nanning.jpg` | p4 "My Story" |
 | `story-corde.jpg` | `C:\Users\0\Downloads\photo\CORDE-1.jpg` | p4 "My Story" |
 | `douban-logo.svg` | Wikimedia Commons `File:Douban logo.svg` — https://commons.wikimedia.org/wiki/File:Douban_logo.svg (**public domain**, trademarked; credited to Douban, transferred from zh.wikipedia). Downloaded from `https://upload.wikimedia.org/wikipedia/commons/a/aa/Douban_logo.svg`, byte-identical, not re-encoded. | p6 "A Minimalist" — 2nd article-row cover |
-| `rec-amy-li.png` | `public\recommendations\Amy-Li.jpg` (repo-local re-copy) | pp13–14 "Voices" avatar wall |
+| `rec-amy-li.png` | `public\recommendations\Amy-Li.jpg` (repo-local re-copy) | pp17–18 "Voices" avatar wall |
 
 ## Selection notes
 
@@ -78,7 +78,7 @@ piano is pictured):**
   excluded.
 
 **`rec-amy-li.png`** — a repo-local copy of Amy Li's recommender avatar for the
-pp13–14 "Voices" wall. The shared asset `public/recommendations/Amy-Li.jpg` is
+pp17–18 "Voices" wall. The shared asset `public/recommendations/Amy-Li.jpg` is
 **PNG bytes behind a `.jpg` name**; Typst picks its decoder from the file
 extension and fails to load it. The shared file is left untouched (other
 surfaces rely on its path); this correctly-named `.png` copy sits beside the
@@ -88,7 +88,7 @@ it's an avatar-sized image kept as-is.
 ## Revision wave 3 (2026-07-26) — Chan's own photo library
 
 **NO-DUPLICATES RULE (book-wide invariant).** A distinct photo appears in the
-16-page magazine **at most once**, and near-identical frames of the same moment
+20-page magazine **at most once**, and near-identical frames of the same moment
 count as the same photo. Two violations were found and fixed in this wave:
 
 1. `public/articles/p658073376.webp` (the cover of p6's 2nd media feature) was the **same
@@ -141,7 +141,7 @@ date anyway); CORDE is the Lincoln **COMP693 industry placement**, Canterbury,
 `2024-06`→`2024-11`; Nanning is where Chan went to school (`education: nanning-no2`,
 Nanning No.2 High School, Guangxi). Captions state only those verified facts.
 
-**`teach-kids-laptop.jpg`** (p12) — converted from `Teaching.HEIC` (4284×5712;
+**`teach-kids-laptop.jpg`** (p16) — converted from `Teaching.HEIC` (4284×5712;
 `heic-convert` in scratch, since ImageMagick is not on PATH). It is **not** a
 duplicate of `Teaching.jpg`/`Teaching.png` despite the shared stem — it is a
 different moment: Chan leaning over a laptop running a browser game, explaining
@@ -215,7 +215,7 @@ its row-mate `min-empty-room`'s 1.3383, so the p5 top row aligns exactly.
 Both candidate renders are kept for Chan in
 `D:\.claude-scratch\2026-07-26\cv-w4\`.
 
-**`teach-westlake-hackathon.jpg`** (p12, left) — supplied by Chan 2026-07-26,
+**`teach-westlake-hackathon.jpg`** (p16, left) — supplied by Chan 2026-07-26,
 **included at Chan's explicit direction, 2026-07-26; her event, her call on
 consent.** This frame was excluded in wave 3 for minors' faces (four Westlake
 Girls High School students are identifiable at mid-distance). It shows a
@@ -230,7 +230,7 @@ School") and `80-events.yaml` (`ai-hackathon-festival-2025-mentor`, venue AUT).
 The caption does **not** claim she is presenting to the room; she is at the
 laptop, which is what the frame shows.
 
-_Bound for the mentee-range sentence on p12:_ the data supports **12–18-year-olds**,
+_Bound for the mentee-range sentence on p16:_ the data supports **12–18-year-olds**,
 **high-school students** (Westlake Girls, above), and **adults** (TechNest's
 12-week AI track, Her Waka's women returning to work).
 
@@ -258,7 +258,7 @@ Every frame the three new files could collide with, checked by eye at page size:
 | `min-room-panorama.jpg` (p5) | `min-empty-room` (p5), `min-city-livingroom` (p5) | Different wall, different corner. Clear. |
 | `min-room-panorama.jpg` | `min-one-bag` (p5) | ⚠ **Overlap, accepted.** Both show the entrance door and the mop, from roughly opposite oblique angles. Different composition, different moment, different subject (packed bag vs. empty room). Placed diagonally in the 2×2 — the furthest apart the grid allows. |
 | `min-room-panorama.jpg` | `min-desk` (p7) | ⚠ **Overlap, accepted.** Both show the bathroom doorway, purple bucket, hanging toiletries and mop. Different camera position, different moment (quilt / no quilt), different subject; two pages apart. |
-| `teach-westlake-hackathon.jpg` (p12) | `teach-kids-laptop` (p12) | Different event, venue, age group and year. Clear. |
+| `teach-westlake-hackathon.jpg` (p16) | `teach-kids-laptop` (p16) | Different event, venue, age group and year. Clear. |
 | `teach-westlake-hackathon.jpg` | `chan-keynote-ai-hackathon-2025.jpg` (p15) | Same festival, but a lectern-and-auditorium keynote vs. a small boardroom. No shared framing. Clear. |
 
 The two ⚠ rows are an **establishing-frame / detail-frame relationship**, not the
@@ -299,7 +299,7 @@ false. It went because it was the weakest claim on the page: a chapter about how
 Chan teaches was spending half its picture budget on Chan standing in a row. Its
 replacement shows her teaching. With `teach-banana-2` gone in wave 3, no frame
 from that workshop's stage remains; `teach-kids-laptop` still carries the workshop
-on p12's right, and the banana piano stays prose-only as before.
+on p16's right, and the banana piano stays prose-only as before.
 
 The file is regenerable from
 `ai-programming-teaching-project\static\img\peyvand-academy\peyvand-academy-13-june-2026-photo-6.webp`.

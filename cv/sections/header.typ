@@ -64,19 +64,21 @@
       // ── Social-proof stat row — the six metrics merged into FOUR source-
       //    grouped pills (LinkedIn · Newsletter · GitHub · CopilotKit) so the
       //    header reads concise; every number is preserved + bold-accented. ──
-      stat-pill-multi[#snum[5,856] LinkedIn followers · #snum[26] recommendations]
+      stat-pill-multi[#snum[6,232] LinkedIn followers · #snum[27] recommendations]
       h(space-pill-row)
-      stat-pill("1,103", "newsletter subscribers")
+      stat-pill("1,098", "newsletter subscribers")
       h(space-pill-row)
-      stat-pill-multi[#snum[480+] GitHub stars · #snum[218] followers]
+      // GitHub numbers measured 2026-09-24 (00-basics.yaml reach.metrics): 537
+      // stars across own non-fork public repos, floored to 530+.
+      stat-pill-multi[#snum[530+] GitHub stars · #snum[237] followers]
       h(space-pill-row)
       // The star count belongs to CopilotKit, not to Chan — EVIDENCE.md's
-      // "CopilotKit's 36.1k stars are context, not achievements". This pill sits
+      // "CopilotKit's stars are context, not achievements". This pill sits
       // in a row of HER numbers (followers, subscribers, own-repo stars), so the
       // attribution has to be carried by the wording: the parenthetical marks
-      // 36.1k as a property of the project. Do not re-flatten it to
-      // "CopilotKit contributor · 36.1k stars".
-      stat-pill-multi[#snum[2] merged PRs into CopilotKit (#snum[36.1k]-star project)]
+      // 37.5k (25-contributions.yaml, 2026-09-24) as a property of the project.
+      // Do not re-flatten it to "CopilotKit contributor · 37.5k stars".
+      stat-pill-multi[#snum[2] merged PRs into CopilotKit (#snum[37.5k]-star project)]
     },
 
     // ── Contact items (stacked, LEFT-aligned within the right slot) ────────

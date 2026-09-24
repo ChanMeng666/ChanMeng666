@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="collage.css">
+<style>
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+  .pair .shot { height: 760px; object-fit: cover; object-position: center top; }
+</style>
+</head>
+<body>
+<div class="plate">
+  <header>
+    <div>
+      <div class="kicker">Newsletters · designed, written, sent</div>
+      <h1>Two newsletters, on owned infrastructure</h1>
+    </div>
+    <div class="chips">
+      <span class="chip o">weekly + monthly</span>
+      <span class="chip">Resend + React Email</span>
+      <span class="chip v">1,549-person cutover · 0 failures</span>
+    </div>
+  </header>
+  <div class="cols">
+    <section>
+      <div class="group-title">Chan's AI Weekly <small>chanmeng.org</small></div>
+      <div class="pair">
+        <img class="shot" src="../src/newsletter/chanmeng-email-2026-09-21.jpg">
+        <img class="shot" src="../src/newsletter/chanmeng-email-2026-09-14.jpg">
+      </div>
+    </section>
+    <section>
+      <div class="group-title">The Monthly She# <small>She Sharp</small></div>
+      <div class="pair">
+        <img class="shot" src="../src/newsletter/shesharp-email-2026-09.jpg">
+        <img class="shot" src="../src/newsletter/shesharp-email-2026-08.jpg">
+      </div>
+    </section>
+  </div>
+  <footer><span>Finished issues as they render in the inbox: the top of one issue, and the inside of another</span><b>chanmeng.org/work</b></footer>
+</div>
+</body>
+</html>

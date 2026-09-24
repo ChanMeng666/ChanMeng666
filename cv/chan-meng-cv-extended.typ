@@ -1,4 +1,4 @@
-// Chan Meng — EXTENDED CV, «Subtraction / Addition» 16-page magazine.
+// Chan Meng — EXTENDED CV, «Subtraction / Addition» 20-page magazine.
 // Image-led personal-brand magazine: minimalist × independent developer.
 // Build: pwsh cv/build.ps1 → public/chan-meng-cv-extended.pdf.
 #import "theme-extended.typ": *
@@ -7,7 +7,7 @@
 #set document(
   title: "Chan Meng — Subtraction / Addition (Extended)",
   author: "Chan Meng",
-  description: "A 16-page image-led personal-brand magazine: minimalist and independent developer. Companion to the 2-page CV. Canonical: https://chanmeng.org/cv",
+  description: "A 20-page image-led personal-brand magazine: minimalist and independent developer. Companion to the 2-page CV. Canonical: https://chanmeng.org/cv",
   keywords: ("minimalist", "independent developer", "AI-native", "Claude Code", "product design", "Auckland New Zealand"),
 )
 
@@ -33,6 +33,7 @@
 #x-story()
 #x-minimalist()
 #x-build()
+#x-craft()
 #x-teaching()
 #x-voices()
 #x-recognition()

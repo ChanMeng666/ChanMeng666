@@ -268,6 +268,9 @@
 //
 // Visual hierarchy: inter-entry gap (9pt) >> intra-entry gap (~3pt), so the
 // reader's eye binds each title to its own summary, not to the previous one.
+// `built:` (optional) — content for a tiny "Built:" line under the summary
+// (links to the sites/products she built there). No marker on the org name:
+// Chan asked (2026-09-24) for the Built line alone to carry this, no legend.
 #let role-line(
   title: "",
   org: "",
@@ -275,6 +278,7 @@
   dates: "",
   location: none,
   summary: none,
+  built: none,
 ) = block(
   above: 0pt,
   below: gap-inter-entry,
@@ -311,6 +315,17 @@
       block(above: 0pt, below: 0pt, {
         set par(leading: leading-body, justify: false)
         text(size: size-body, fill: ink, summary)
+      })
+    }
+
+    if built != none {
+      v(2.5pt)
+      block(above: 0pt, below: 0pt, breakable: false, {
+        set par(leading: 0.6em, justify: false)
+        set text(size: size-tiny, fill: muted)
+        text(fill: accent, weight: "bold")[Built:]
+        h(3pt)
+        built
       })
     }
   },

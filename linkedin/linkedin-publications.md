@@ -53,7 +53,7 @@ The article situates Sanicle's work within the wider FemTech movement — buildi
 ```
 An English-language podcast I host, exploring the landmark research papers driving innovation in Artificial Intelligence, Large Language Models, and beyond — translating dense research into something a working engineer or curious listener can actually use.
 
-The show runs alongside a companion LinkedIn newsletter of the same name, with 800+ subscribers, so each episode reaches both audio and reading audiences.
+The show runs alongside a companion LinkedIn newsletter of the same name, with 1,098 subscribers, so each episode reaches both audio and reading audiences.
 ```
 
 ## 4. [Podcast — host] Future Turing 未来图灵

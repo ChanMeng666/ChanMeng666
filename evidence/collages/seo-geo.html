@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="collage.css">
+<style>
+  .body { display: grid; grid-template-columns: 560px 1fr; gap: 40px; align-items: start; }
+  .body .shot { height: 820px; object-fit: cover; object-position: top; }
+  .quote { background: var(--ink); color: #fff; border-radius: 18px; padding: 48px 52px; }
+  .quote .mark { font-family: "Anton", Impact, sans-serif; font-size: 120px; line-height: .6; color: var(--orange); }
+  .quote blockquote { font-family: "Anton", Impact, sans-serif; font-size: 56px; line-height: 1.12; margin-top: 18px; }
+  .quote cite { display: block; font-style: normal; margin-top: 30px; font-size: 22px; }
+  .quote cite small { display: block; font-family: "JetBrains Mono", monospace; font-size: 16px; opacity: .75; margin-top: 6px; letter-spacing: .06em; }
+  .layers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 26px; }
+  .layer { background: var(--card); border-radius: 14px; padding: 22px 24px; }
+  .layer b { font-family: "JetBrains Mono", monospace; font-weight: 400; font-size: 19px; color: var(--violet); }
+  .layer p { font-size: 18px; line-height: 1.45; color: var(--muted); margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="plate">
+  <header>
+    <div>
+      <div class="kicker">SEO & GEO · findable by people and by models</div>
+      <h1>Surfaced by Claude, confirmed by the founder</h1>
+    </div>
+    <div class="chips">
+      <span class="chip o">4,264 impressions</span>
+      <span class="chip v">Engram · 2026</span>
+    </div>
+  </header>
+  <div class="body">
+    <img class="shot" src="../src/seo-geo/engram-founder-linkedin-post.jpg">
+    <div>
+      <div class="quote">
+        <div class="mark">“</div>
+        <blockquote>It's true, Claude Code surfaced Chan as one of the strongest matches for what we're looking for.</blockquote>
+        <cite>Luka Madzarac<small>FOUNDER, ENGRAM · LINKEDIN REPLY</small></cite>
+      </div>
+      <div class="layers">
+        <div class="layer"><b>llms.txt · llms-full.txt</b><p>A plain-text career record written for language models, generated from one data source.</p></div>
+        <div class="layer"><b>JSON-LD</b><p>Person, Service and FAQ schema, so search engines and agents read the same facts.</p></div>
+        <div class="layer"><b>geo-markdown-mirror</b><p>A Claude Code skill that mirrors JS-heavy pages as Markdown AI crawlers can cite.</p></div>
+        <div class="layer"><b>one source of truth</b><p>README, CV, LinkedIn copy and site all built from the same YAML shards.</p></div>
+      </div>
+    </div>
+  </div>
+  <footer><span>LinkedIn post and the founder's public reply</span><b>chanmeng.org/work</b></footer>
+</div>
+</body>
+</html>

@@ -40,7 +40,7 @@
 // ─── Larger pill radius to match the bigger type ─────────────────────────────
 #let cv-radius-pill-x = 7pt
 
-// ─── Magazine tokens (16-page image-led extended CV) ─────────────────────────
+// ─── Magazine tokens (20-page image-led extended CV) ─────────────────────────
 #let radius-photo-x   = 10pt    // rounded photo frame
 #let frame-photo-x    = 0.8pt   // hairline photo stroke (uses rule.lighten(25%))
 #let size-pull-x      = 20pt    // pull-quote display size

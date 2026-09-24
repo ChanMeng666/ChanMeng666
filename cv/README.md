@@ -15,14 +15,14 @@ This compiles three PDFs, emits the GEO siblings, and writes the ATS resume's Wo
 | File | Purpose |
 | --- | --- |
 | `public/chan-meng-cv.pdf` | Canonical 2-page CV (linked from the README) |
-| `public/chan-meng-cv-extended.pdf` | 16-page «Subtraction / Addition» magazine companion |
+| `public/chan-meng-cv-extended.pdf` | 20-page «Subtraction / Addition» magazine companion |
 | `cv/exports/chan-meng-cv-ats.pdf` | The **default upload artifact** — 2-page single-column ATS resume, photo-free, black text only, clickable links. **Not** web-served, not linked anywhere; manual upload only. See [`exports/README.md`](./exports/README.md) |
 | `cv/exports/chan-meng-cv-ats.docx` | **Fallback** for portals that refuse the PDF — same resume as a real Word document, parsed out of `chan-meng-cv-ats.typ`, not hand-maintained |
 | `cv/exports/chan-meng-cv-ats.txt` | Plain UTF-8 of the same content for "paste your resume" fields |
 | `public/cv.jsonld` | schema.org Person + WorkExperience JSON-LD — recruiter LLMs (LinkedIn AI Search, Greenhouse AI ranking, Jobright) parse this directly |
 | `public/cv-llms.txt` | Plain-text agent-readable summary mirroring the [llms.txt](https://llmstxt.org/) convention |
 
-`public/chan-meng-cv-extended.pdf` is the 16-page image-led magazine companion to the 2-page CV, built by the same `pwsh cv/build.ps1`; its unshot/upgradeable photos are tracked in [`assets/extended/SHOT-LIST.md`](./assets/extended/SHOT-LIST.md).
+`public/chan-meng-cv-extended.pdf` is the 20-page image-led magazine companion to the 2-page CV, built by the same `pwsh cv/build.ps1`; its unshot/upgradeable photos are tracked in [`assets/extended/SHOT-LIST.md`](./assets/extended/SHOT-LIST.md).
 
 Requires [Typst 0.14+](https://typst.app/) and Node.js 22+ on PATH.
 
@@ -85,7 +85,7 @@ cv/
 │   ├── experience.typ
 │   ├── recognition.typ
 │   └── footer.typ
-├── chan-meng-cv-extended.typ  # entry point — 16-page «Subtraction / Addition» magazine
+├── chan-meng-cv-extended.typ  # entry point — 20-page «Subtraction / Addition» magazine
 ├── extended.typ               # magazine chapter content (x-cover … x-backcover)
 ├── extended-components.typ    # magazine primitives: photo, article-card, avatar-wall, …
 ├── theme-extended.typ         # spacious *-x tokens + magazine tokens

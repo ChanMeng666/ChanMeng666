@@ -22,59 +22,35 @@
 })
 
 // ─── SELECTED PROJECTS & PRODUCTS ────────────────────────────────────────────
-// Five independent projects Chan owns end to end (open-source engines,
-// commissioned-solo research, and shipped products — hence "Projects &
-// Products", since Tam-AI-Ti is a live product, not a public repo). NOT
-// products built at an employer or at her own company — those live in
+// Four independent projects Chan owns end to end, re-chosen with her on
+// 2026-09-24: Google News MCP, echook, the AI Programming Education Platform and
+// a11y-loop — the agent-tooling and teaching work a hiring reader asks about
+// first. Tam-AI-Ti and Vitex moved down into the italic "Also built:" closer
+// (the space paid for the "Built:" lines added to Experience), and a11y-loop
+// left the closer for its own card, so each project still appears exactly once.
+// NOT products built at an employer or at her own company — those live in
 // Experience, and no card here may duplicate one. The AI Programming Education
 // Platform is hers, not TechNest's: two separate organisations teach from it,
 // and the TechNest role line in experience.typ was trimmed back to the teaching
 // outcome when this card was added (Sep 2026) so the platform is described
-// exactly once. ArchCanvas × ArchLang used to
-// lead this section; it moved to Experience when ArchCanvas became a role
-// (Founder & Sole Engineer) rather than a side build, and duplicating it here
-// would have cost the two-page budget a card it already pays for above. The
-// italic closer line absorbs all other tools so each appears exactly once
-// across the CV.
+// exactly once.
 //
-// Tam-AI-Ti and Vitex carry TWO bullets each again (restored Sep 2026 with the
-// space freed by moving Engram down into the Experience "Previously:" line).
-// They had been merged into one dense bullet apiece to pay for the fifth card,
-// which buried each project's second idea. Keep them split.
+// a11y-loop is "being adopted", never "adopted": nothing is deployed at My Life
+// My Voice yet (23-projects-oss-more.yaml, a11y-loop comments). Keep the verb.
 //
 // NO COMMIT COUNTS OR SOLO PERCENTAGES anywhere on this CV — a ratio of commits
 // does not answer "what problem can I solve?". Where ownership is load-bearing
 // it is said in words instead ("built solo", "built and maintained solo").
-// Outcome metrics stay: the 19-user cohort, 126 stars, the ~4,800 RAG chunks.
+// Outcome metrics stay: 129 stars (measured 2026-09-24), the ~4,800 RAG chunks.
 #let projects() = section("Selected Projects & Products", {
   let cards = (
-    (
-      logo: "/public/brands/tam-ai-ti-mark.svg",
-      name: "Tam-AI-Ti",
-      url: "https://tamaiti.whiri-ai.com/",
-      context-line: [An AI financial-wellness app for Māori communities, built around te ao Māori · an independent research commission from Riria (Missy) Te Kanawa personally (former KPMG NZ National Māori Sector lead, now Māori Executive Lead at ASB Bank; ASB was not a party to it).],
-      bullets: (
-        [*A research question, not a spec:* can technology built natively on Māori culture engage people that culturally-decorated tech does not? Built solo — bilingual voice and journaling, with culture as typed data (Maramataka phases, Te Whare Tapa Whā domains), not labels.],
-        [*Answered with users, not opinion:* a *19-user cohort over 4 months*, 181 journal entries, 74 check-ins, no marketing.],
-      ),
-    ),
-    (
-      logo: "/public/brands/vitex-mark.svg",
-      name: "Vitex — AI Career Agent",
-      url: "https://www.vitex.org.nz/",
-      context-line: [Paste a job description, get a tailored resume and cover letter scored against the job's keywords in under 30 seconds · sole-authored over \~18 months · Vercel AI SDK + gpt-5.5 / gpt-5.4-mini + Typst.],
-      bullets: (
-        [*Typst compiles the finished PDF locally in under 100 ms* across 7 templates — no hosted Chromium — so the resume assembles in front of the job seeker instead of behind a spinner.],
-        [*Metered on the product, not the clock:* a run counts only after a PDF compiles. Three migrations, zero downtime.],
-      ),
-    ),
     (
       logo: "/public/brands/google-news-mcp-mark.svg",
       name: "Google News MCP Server",
       url: "https://github.com/ChanMeng666/server-google-news",
       context-line: [One of the earliest MCP servers — live Google News for AI assistants, shipped 35 days after Anthropic's Nov 2024 MCP launch.],
       bullets: (
-        [*Shipped before MCP had a registry*, so listed by hand across 15+ catalogs — a first-mover position that compounded into a PulseMCP "Top Pick", a Glama A-rating and *126 GitHub stars*.],
+        [*Shipped before MCP had a registry*, so listed by hand across 15+ catalogs — a first-mover position that compounded into a PulseMCP "Top Pick", a Glama A-rating and *129 GitHub stars*.],
       ),
     ),
     (
@@ -94,6 +70,16 @@
       bullets: (
         [*In-course RAG assistant on Cloudflare Workers* (Llama 3.1 8B + Vectorize + KV) over *\~4,800 chunks, version-aware*, so each student is answered from their own cohort's material; a deprecated model was swapped out the same day.],
         [*Mentorship at scale:* Demo Day ends in a *public Capstone Showcase* of student products (CreditHero, iCare, JobOrg-AI), with guest voting.],
+      ),
+    ),
+    (
+      logo: "/public/brands/a11y-loop-mark.svg",
+      name: "a11y-loop",
+      url: "https://github.com/ChanMeng666/a11y-loop",
+      context-line: [A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then checks it in a real browser · Playwright + axe-core against WCAG 2.2 AA · on npm, MIT.],
+      bullets: (
+        [*Honest by design:* it audits the interaction states the agent built, not one static snapshot, and lists what automation could *not* check — so a green run never claims WCAG coverage it has no standing to claim.],
+        [*Being adopted by My Life My Voice*, the disability-led NZ organisation that set the accessible-UI challenge at the Aotearoa AI Hackathon 2026, after a live walkthrough with its CTO.],
       ),
     ),
   )
@@ -119,7 +105,7 @@
       set text(size: size-tiny, fill: muted, style: "italic")
       set par(leading: 0.68em, justify: false)
       [
-        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, for Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited) · #link("https://github.com/ChanMeng666/a11y-loop")[a11y-loop] (accessibility CLI for coding agents, being adopted by My Life My Voice, the disability-led NZ organisation that set the problem) · #link("https://seismophone.chanmeng.org/")[Seismophone] (first public Suno remix-lineage explorer) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
+        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, for Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited) · #link("https://www.vitex.org.nz/")[Vitex] (AI career agent: a tailored resume and cover letter in under 30 seconds) · #link("https://seismophone.chanmeng.org/")[Seismophone] (first public Suno remix-lineage explorer) · #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (AI financial-wellness app built around te ao Māori; a 19-user cohort over 4 months) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
       ]
     },
   )

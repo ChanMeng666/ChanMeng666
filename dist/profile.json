@@ -106,34 +106,37 @@
       }
     ],
     "reach": {
-      "asOf": "2026-07",
+      "asOf": "2026-09",
       "metrics": [
         {
           "label": "newsletter subscribers",
-          "value": "1,103",
-          "source": "https://chanmeng.org/#newsletter"
+          "value": "1,098",
+          "source": "https://www.linkedin.com/newsletters/7359054938187984896/",
+          "note": "Decoding the Future LinkedIn newsletter, reported by Chan 2026-09-24. Check the count on the source page while signed in — LinkedIn hides it from logged-out visitors"
         },
         {
           "label": "LinkedIn followers",
-          "value": "5,856",
-          "source": "https://www.linkedin.com/in/chanmeng666/"
+          "value": "6,232",
+          "source": "https://www.linkedin.com/in/chanmeng666/",
+          "note": "reported by Chan 2026-09-24"
         },
         {
           "label": "LinkedIn recommendations",
-          "value": "26",
+          "value": "27",
           "source": "https://www.linkedin.com/in/chanmeng666/",
-          "note": "public recommendations as of 2026-08-11; 7 from the Forward With Her cohort, 5 from the TechNest Community AI cohorts"
+          "note": "historical maximum (display rule: CLAUDE.md § Display the historical maximum) — 27 received, all in 50-references.yaml; LinkedIn showed 26 on 2026-08-11 after one was hidden; 7 from the Forward With Her cohort, 5 from the TechNest Community AI cohorts"
         },
         {
           "label": "GitHub followers",
-          "value": "218",
-          "source": "https://github.com/ChanMeng666"
+          "value": "237",
+          "source": "https://github.com/ChanMeng666",
+          "note": "measured 2026-09-24 (gh api users/ChanMeng666)"
         },
         {
           "label": "GitHub stars",
-          "value": "480+",
+          "value": "530+",
           "source": "https://github.com/ChanMeng666",
-          "note": "measured 487 across own non-fork public repos (gh repo list, 2026-07-14), published as a stable 480+; org/commercial repos are private"
+          "note": "measured 537 across own non-fork public repos (gh api users/ChanMeng666/repos, 2026-09-24), published as a stable 530+; org/commercial repos are private"
         }
       ]
     }
@@ -303,7 +306,7 @@
         "companyContext": "TechNest Community is a Newfoundland-based nonprofit, established\nNovember 1, 2024, with the stated mission of \"making technology\naccessible, creative, and impactful\" for youth, newcomers, and\nlocal communities across Atlantic Canada. It operates four\npillars: a structured **Mentorship Programme** that pairs learners\nwith industry professionals on year-long tracks (software\nengineering, product management, cybersecurity, data analysis, 3D\nanimation, and — for 2026 — Artificial Intelligence); **Creative\nConnections** networking events such as *Tech in the Park*\n(100+ attendees) and *Sip & Paint*; **Product Development** of\ncommunity-serving software (their flagship is *Library Labs*,\nan AI-powered 3D learning platform); and **Tech for Children**\ncoding-and-robotics workshops run in partnership with NCANL.\nLeadership is led by Abiodun (Magret) Oyedele and Afolasade Bello,\nboth of whom I report to directly as the AI Track instructor.\n",
         "mission": "Make modern tech careers reachable for groups that the Canadian\ntech industry typically under-serves — youth, newcomers to Canada,\nand people living outside the country's major tech hubs. The\nunderlying conviction is that the best lever for regional economic\nmobility is not generic \"learn to code\" content but mentored,\ncohort-based programmes that connect learners with working\nprofessionals and ship a portfolio-grade product by the end.\n",
         "myMandate": "Designed and delivered the **2026 AI Track** end-to-end as sole\ninstructor — the first AI-specialised cohort in the organisation's\nhistory, and the only mentorship track running in 2026 dedicated\nto AI engineering. The mandate covers full curriculum authorship,\nlive instruction, ongoing mentorship through the capstone, and the\nteaching infrastructure students use throughout the cohort.\nReporting line is direct to TechNest's leadership (Abiodun Oyedele\nand Afolasade Bello). Authority over: curriculum doctrine, weekly\ntopic sequencing, assessment rubric, capstone tracks, tooling\nchoices, and the public teaching platform that hosts every\nartefact — slides, lab handouts, recorded sessions, downloadable\nPDFs, capstone showcase, and an AI assistant trained on the course\ncorpus itself.\n",
-        "impactDelivered": "**Authored and ran the 2026 AI Track — a 12-week prompt-first AI\nengineering curriculum** that became TechNest's flagship 2026\ncohort. The programme ran **April 25 – July 17, 2026**\n(Matriculation Ceremony April 25, official start April 27,\ncompletion July 17), delivered as one two-hour live session per\nweek plus self-paced lab time, on a fixed five-phase session shape\n(Recap → Concept → Live Demo → Hands-On Lab → Q&A).\n**30 students graduated.**\n\n**The curriculum doctrine is original and opinionated:** *\"Natural\nlanguage is the source code.\"* Students arrive having used only\nChatGPT in a browser. By Week 8 they own a live, polished,\nAI-powered personal website that doubles as their portfolio,\nAI-clone chatbot, guestbook, blog, contact funnel, and the\nsource-of-truth for their auto-generated CV and cover letter — all\ndriven by prompting Cursor, Claude Code, and Gemini CLI rather\nthan hand-writing code. By Week 12, every student team has shipped\na multi-user AI product that strangers can actually use.\n\n**8-week teaching phase** evolves one progressively-built personal\nsite, grafting a meaningful full-stack feature each week onto the\nsame codebase: (1) AI Developer Toolkit Setup — Cursor, Claude\nCode, Gemini CLI, MCP servers, Skills, GitHub; (2) Deploy via\nVercel CLI; (3) AI Clone — Gemini 2.5 Flash chat widget with a\nstudent-voiced system prompt; (4) Full-Stack — Neon Postgres +\nNeon Auth + Drizzle, guestbook; (5) Vercel Blob image uploads;\n(6) MDX blog + RSS; (7) Real-Time Slack notifications via webhook;\n(8) Typst PDF automation through the Typst skill in Claude Code,\nwhich becomes the engine for an auto-generated CV and cover letter.\n\n**4-week capstone** ran June 22 – July 17, 2026: students evolved\ntheir personal-site codebase into a deployed multi-user AI SaaS on\none of three tracks — *Campus Life* (event finder, roommate\nmatcher, dorm chore-and-bill splitter), *Personal Growth* (habit\ncoach with weekly AI reviews, reading companion, journaling\nassistant), or *Creative Tools* (AI short-story studio,\nmusic-prompt playground, comic-panel generator). Demo Day was a\n5-minute live demonstration plus 3-minute Q&A in front of invited\nguests, with public voting powered through the showcase platform\nI built.\n\n**Capstone outcome (as of 2026-08-04): 6 projects shipped and\npublished to the public showcase** — 5 on the *Personal Growth*\ntrack and 1 on *Campus Life* — drawing **138 public votes**\nbetween them. The most-voted project was **LinguaPath** with 66\nvotes, ahead of Joborg AI (31) and iCare (21); every one is a\nlive, deployed, multi-user AI product with a public repo and a\ndemo video. Counts are point-in-time: the `/capstone-showcase`\npage is a deliberately temporary cohort artefact and its Notion\ndatabase, not the page, is the durable record.\n\n**Independently attested by both sides of the programme.** Five of\nthe 26 public LinkedIn recommendations on Chan's profile come from\nthe TechNest AI cohorts — and they run in both directions of the\nreporting line. TechNest leadership vouched for the teaching:\nco-founder and fellow mentor **Suliat Alaga** (\"the feedback from\nour mentees was overwhelmingly positive… an outstanding AI\neducator, mentor, or technical trainer\", Aug 2026) and **Abiodun\n(Magret) Oyedele**, one of the two TechNest leads Chan reports to,\nwho took the Cohort 3 course herself. Learners attested to the\nsame thing independently: **Kwame Essuman** (\"she consistently\nmade time for everyone to ensure no one was left behind… a\ntop-tier AI instructor and mentor\"), **Swayam Dhir**, and\n**Mahdieh Najmi**. This is the second-largest source of\nindependently-attested teaching impact in Chan's career after\nForward with Her (7 recommendations).\n\n**Assessment rhythm baked into the doctrine.** Weekly assignments\ncarry 50% weight and require students to submit both (a) the\nupdated live site URL and (b) a screenshot of the Cursor /\nClaude Code conversation that drove the change — the screenshot\nrule operationalises the doctrine: *the prompt is the work*. The\nremaining weight is split across participation (10%), capstone\n(30%), and final demo (10%).\n\n**Public artefacts shipped through the platform** during the\ncohort include downloadable PDF handouts (curriculum-outline.pdf\n586 KB, capstone-spec.pdf 604 KB, and per-week lab guides),\nper-week recorded video tutorials sidebar-indexed in the docs,\nthe Notion-backed Capstone 2026 public showcase page with live\nvoting, an AI assistant that answers questions about the course\nmaterial via retrieval over all four course versions plus the\nblog, and a Notion-powered classroom message board.\n",
+        "impactDelivered": "**Authored and ran the 2026 AI Track — a 12-week prompt-first AI\nengineering curriculum** that became TechNest's flagship 2026\ncohort. The programme ran **April 25 – July 17, 2026**\n(Matriculation Ceremony April 25, official start April 27,\ncompletion July 17), delivered as one two-hour live session per\nweek plus self-paced lab time, on a fixed five-phase session shape\n(Recap → Concept → Live Demo → Hands-On Lab → Q&A).\n**30 students graduated.**\n\n**The curriculum doctrine is original and opinionated:** *\"Natural\nlanguage is the source code.\"* Students arrive having used only\nChatGPT in a browser. By Week 8 they own a live, polished,\nAI-powered personal website that doubles as their portfolio,\nAI-clone chatbot, guestbook, blog, contact funnel, and the\nsource-of-truth for their auto-generated CV and cover letter — all\ndriven by prompting Cursor, Claude Code, and Gemini CLI rather\nthan hand-writing code. By Week 12, every student team has shipped\na multi-user AI product that strangers can actually use.\n\n**8-week teaching phase** evolves one progressively-built personal\nsite, grafting a meaningful full-stack feature each week onto the\nsame codebase: (1) AI Developer Toolkit Setup — Cursor, Claude\nCode, Gemini CLI, MCP servers, Skills, GitHub; (2) Deploy via\nVercel CLI; (3) AI Clone — Gemini 2.5 Flash chat widget with a\nstudent-voiced system prompt; (4) Full-Stack — Neon Postgres +\nNeon Auth + Drizzle, guestbook; (5) Vercel Blob image uploads;\n(6) MDX blog + RSS; (7) Real-Time Slack notifications via webhook;\n(8) Typst PDF automation through the Typst skill in Claude Code,\nwhich becomes the engine for an auto-generated CV and cover letter.\n\n**4-week capstone** ran June 22 – July 17, 2026: students evolved\ntheir personal-site codebase into a deployed multi-user AI SaaS on\none of three tracks — *Campus Life* (event finder, roommate\nmatcher, dorm chore-and-bill splitter), *Personal Growth* (habit\ncoach with weekly AI reviews, reading companion, journaling\nassistant), or *Creative Tools* (AI short-story studio,\nmusic-prompt playground, comic-panel generator). Demo Day was a\n5-minute live demonstration plus 3-minute Q&A in front of invited\nguests, with public voting powered through the showcase platform\nI built.\n\n**Capstone outcome (as of 2026-08-04): 6 projects shipped and\npublished to the public showcase** — 5 on the *Personal Growth*\ntrack and 1 on *Campus Life* — drawing **138 public votes**\nbetween them. The most-voted project was **LinguaPath** with 66\nvotes, ahead of Joborg AI (31) and iCare (21); every one is a\nlive, deployed, multi-user AI product with a public repo and a\ndemo video. Counts are point-in-time: the `/capstone-showcase`\npage is a deliberately temporary cohort artefact and its Notion\ndatabase, not the page, is the durable record.\n\n**Independently attested by both sides of the programme.** Five of\nthe 27 LinkedIn recommendations on Chan's profile come from\nthe TechNest AI cohorts — and they run in both directions of the\nreporting line. TechNest leadership vouched for the teaching:\nco-founder and fellow mentor **Suliat Alaga** (\"the feedback from\nour mentees was overwhelmingly positive… an outstanding AI\neducator, mentor, or technical trainer\", Aug 2026) and **Abiodun\n(Magret) Oyedele**, one of the two TechNest leads Chan reports to,\nwho took the Cohort 3 course herself. Learners attested to the\nsame thing independently: **Kwame Essuman** (\"she consistently\nmade time for everyone to ensure no one was left behind… a\ntop-tier AI instructor and mentor\"), **Swayam Dhir**, and\n**Mahdieh Najmi**. This is the second-largest source of\nindependently-attested teaching impact in Chan's career after\nForward with Her (7 recommendations).\n\n**Assessment rhythm baked into the doctrine.** Weekly assignments\ncarry 50% weight and require students to submit both (a) the\nupdated live site URL and (b) a screenshot of the Cursor /\nClaude Code conversation that drove the change — the screenshot\nrule operationalises the doctrine: *the prompt is the work*. The\nremaining weight is split across participation (10%), capstone\n(30%), and final demo (10%).\n\n**Public artefacts shipped through the platform** during the\ncohort include downloadable PDF handouts (curriculum-outline.pdf\n586 KB, capstone-spec.pdf 604 KB, and per-week lab guides),\nper-week recorded video tutorials sidebar-indexed in the docs,\nthe Notion-backed Capstone 2026 public showcase page with live\nvoting, an AI assistant that answers questions about the course\nmaterial via retrieval over all four course versions plus the\nblog, and a Notion-powered classroom message board.\n",
         "technicalHighlights": "**Designed and built the teaching platform itself** — published as\nmy personal teaching site at *ai-programming-teaching-project*\n(Docusaurus 3.8+ with `@docusaurus/faster`, deployed on\nCloudflare Pages) and authored 100% by me, with 211 of 220 non-merge\ncommits from my two GitHub identities and the remaining 9 from\nautomated bots (Claude code-review automation and Dependabot security\nbumps). The platform serves five cohort versions side by side\nthrough Docusaurus versioned docs: `2024-winter`, `2025-summer`,\n`2026-her-waka` (the academyEX / Her Waka programme),\n`2026-technest` (the active cohort, set as default), and\n`2026-peyvand-academy` (the She Sharp × Peyvand Academy youth\nworkshop). New cohorts\nslot in without disturbing older ones, and students who took a\nprior cohort retain a stable URL for their materials.\n\n**In-course AI assistant** indexes all four course versions plus\nthe blog into a retrieval corpus with stable hash chunk IDs and\nversion-aware retrieval, so a student in the 2026 cohort gets\nanswers from 2026 materials by default. Implemented with a secure\nseeding flow and resilient retrieval logic — a teaching-platform\nfeature most cohort sites simply don't have.\n\n**Notion-powered classroom infrastructure**, two surfaces: a\ncourse-wide message board with a Cloudflare Worker backend that\nproxies writes into Notion (so the cohort owners can moderate\nand review in the tool they already use), and a Capstone 2026\npublic-showcase page that lists every team's demo with live\nNotion-backed voting open to invited guests — both bilingual.\n\n**Bilingual i18n by default** (English primary, 简体中文 secondary)\nacross every cohort version. The build pipeline includes\ncontextual Algolia search filtered by locale, localised Mermaid\ntoolbar labels, locale-aware table-of-contents headings, and\ntranslated tag taxonomies — so a Mandarin-speaking student gets\na fully localised experience including search results.\n\n**PDF handout pipeline** built on Typst — the same tool taught in\nWeek 8 of the curriculum — so the printable curriculum outline,\ncapstone spec, and per-week lab guides are generated through the\nskill students learn to use themselves. The pedagogical loop is\nintentional: students see, in production, the artefact they're\nbeing taught to build.\n\n**Engineering hygiene visible in the commit log**: full migration\nof the production deployment from Vercel to Cloudflare Pages\n(with SEO URL migration and Algolia config update); 13\nDependabot security vulnerabilities resolved in one pass and\nongoing patches managed cleanly; Mermaid dual-view component for\ndiagram-heavy lessons; per-version sidebar customisation; SEO\nimprovements with keyword-targeted blog posts written to support\nstudent discovery; trailingSlash and Algolia contextualSearch\nconfiguration to keep cross-locale and cross-version search\ncoherent.\n\n**The choice of stack mirrors the curriculum.** I deliberately\nchose tools the students are learning — Next.js / React, Notion\nAPIs, Cloudflare deployment, Typst PDF generation, Algolia\nsearch — so the teaching platform is itself a worked example of\nthe doctrine being taught. Students can literally read the\ninstructor's repo to see how the patterns they're learning\ncompose in a real production system.\n"
       },
       "publicSummary": "AI Instructor & Mentor at TechNest Community, a Newfoundland nonprofit\ndemocratising tech careers across Atlantic Canada. Designed and delivered\nthe 2026 AI Track — a 12-week prompt-first AI engineering curriculum\n(\"natural language is the source code\") with 8 teaching weeks plus a\n4-week multi-user-AI capstone — and built the bilingual Docusaurus\nteaching platform that hosts it (versioned cohort docs, in-course AI\nassistant with RAG over all five cohorts, Notion-backed message board\nand capstone voting, Typst PDF handout pipeline). The programme ran April\n25 – July 17, 2026 and graduated 30 students, who shipped 6 deployed\nmulti-user AI products to the public capstone showcase; reported to\nAbiodun Oyedele and Afolasade Bello.\n"
@@ -462,7 +465,7 @@
       "recency": "recent",
       "lastUpdated": "2026-06-04",
       "keywords": [
-        "CopilotKit (36.1k+ stars)",
+        "CopilotKit (37.5k+ stars)",
         "Open source",
         "TypeScript",
         "React",
@@ -473,12 +476,12 @@
         "Documentation as contribution"
       ],
       "narrative": {
-        "impactHeadline": "Two merged PRs landed in CopilotKit's official demos & docs (36.1k+ stars): contributed the 8-agent FemTracker multi-specialist demo and the Claude Code MCP setup guide — entries that other LLMs and dev tools now index when teaching agentic UIs.",
-        "companyContext": "CopilotKit is the open-source framework for building in-app AI\ncopilots and AI agents — 36,100+ GitHub stars and a thriving\ncontributor community. It provides React components for embedding\nLLM-powered AI assistants directly into web applications\n(chat interfaces, command palettes, in-app actions), a runtime\nlayer for tool and action registration that LLMs can invoke,\nand a Python SDK for multi-agent systems orchestrated through\nLangGraph. The framework is one of the standard ways to add\nsophisticated AI UX to a React app.\n",
+        "impactHeadline": "Two merged PRs landed in CopilotKit's official demos & docs (37.5k+ stars): contributed the 8-agent FemTracker multi-specialist demo and the Claude Code MCP setup guide — entries that other LLMs and dev tools now index when teaching agentic UIs.",
+        "companyContext": "CopilotKit is the open-source framework for building in-app AI\ncopilots and AI agents — 37,500+ GitHub stars and a thriving\ncontributor community. It provides React components for embedding\nLLM-powered AI assistants directly into web applications\n(chat interfaces, command palettes, in-app actions), a runtime\nlayer for tool and action registration that LLMs can invoke,\nand a Python SDK for multi-agent systems orchestrated through\nLangGraph. The framework is one of the standard ways to add\nsophisticated AI UX to a React app.\n",
         "mission": "Make it trivially easy for any web application to add a\nsophisticated AI copilot or agent system. Lower the floor for\nbuilding agentic UX so AI capabilities aren't gated by the\ncomplexity of state management, LLM orchestration, and\nframework integration plumbing.\n",
         "myMandate": "Open Source Contributor — adding capabilities, demos, and\ndocumentation downstream of real-world production use. I run\nCopilotKit + LangGraph in two production systems\n(Tam-AI-Ti's 88+ AI actions; FemTracker Agent's 8-agent\nwomen's-health pipeline) and contribute back the missing\nshowcases, integration paths, and ecosystem bridges I\nencountered along the way.\n",
         "impactDelivered": "Two merged pull requests to the CopilotKit main repository,\nboth publicly approved and thanked by named maintainers:\n\n**[PR #2068](https://github.com/CopilotKit/CopilotKit/pull/2068)\n— `chore(demos): Add FemTracker Agent + CopilotKit Demo to\nthe demos_2025 folder`** (merged 2025-09-11, after ~10 weeks\nof review, 341 additions): contributed FemTracker Agent to\nCopilotKit's official `demos_2025` collection — an AI-powered\nwomen's health companion orchestrating **eight specialized\nagents** (Main Coordinator + Cycle Tracker + Fertility\nTracker + Symptom Mood + Nutrition Guide + Exercise Coach +\nLifestyle Manager + Health Insights) through CopilotKit's\nagent-routing layer. Shipped with a public demo deployment (since retired), with\nsource on GitHub and a YouTube demo walkthrough. Maintainer\nTyler Slaton (`@tylerslaton`) approved with:\n*\"This is awesome! Thank you for the cool showcase\n@ChanMeng666.\"*\n\n**[PR #2529](https://github.com/CopilotKit/CopilotKit/pull/2529)\n— `docs: add Claude Code setup instructions to MCP server\nguide`** (merged 2025-10-09, 62 additions): expanded the\nCopilotKit MCP server documentation with step-by-step Claude\nCode CLI setup commands, expected output examples, verification\nflow, and management commands — positioned between the\nexisting Cline and GitHub Copilot sections. This contribution\nconnects CopilotKit's MCP-server capability with Anthropic's\nClaude Code, building on my earlier early-MCP-developer work.\nMaintainer Brandon McConnell (`@brandonmcconnell`) approved:\n*\"This looks great. Thanks, @ChanMeng666 👏\"*\n",
-        "technicalHighlights": "Both contributions come from real production usage: Tam-AI-Ti\n(88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and\nFemTracker Agent (8-agent CopilotKit + LangGraph + Python\norchestration). The FemTracker Agent demo is the most\nsubstantive multi-agent showcase in CopilotKit's demos\ncollection — Next.js 15 + React 19 + TypeScript on the\nfrontend, Python 3.12 + LangGraph for agent orchestration,\nSupabase PostgreSQL persistence with WHO-standard health\nscoring (0-100 metric scales), Redis caching reportedly\nsustaining 90%+ hit rates.\n\nThe MCP-docs PR is a deliberate ecosystem bridge: it connects\nCopilotKit's MCP-server capability to Anthropic's Claude Code,\nwhich extends the same early-MCP-developer thread I established\nin November 2024 (issue #76 in modelcontextprotocol/servers)\nand December 2024 (server-google-news, server-google-jobs).\nBoth PRs are docs- and demo-shaped — the highest-leverage\ncontribution surface for someone outside the maintainer team\nof a 36.1k-star project.\n"
+        "technicalHighlights": "Both contributions come from real production usage: Tam-AI-Ti\n(88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and\nFemTracker Agent (8-agent CopilotKit + LangGraph + Python\norchestration). The FemTracker Agent demo is the most\nsubstantive multi-agent showcase in CopilotKit's demos\ncollection — Next.js 15 + React 19 + TypeScript on the\nfrontend, Python 3.12 + LangGraph for agent orchestration,\nSupabase PostgreSQL persistence with WHO-standard health\nscoring (0-100 metric scales), Redis caching reportedly\nsustaining 90%+ hit rates.\n\nThe MCP-docs PR is a deliberate ecosystem bridge: it connects\nCopilotKit's MCP-server capability to Anthropic's Claude Code,\nwhich extends the same early-MCP-developer thread I established\nin November 2024 (issue #76 in modelcontextprotocol/servers)\nand December 2024 (server-google-news, server-google-jobs).\nBoth PRs are docs- and demo-shaped — the highest-leverage\ncontribution surface for someone outside the maintainer team\nof a 37.5k-star project.\n"
       }
     },
     {
@@ -541,14 +544,14 @@
         "Office Hours"
       ],
       "narrative": {
-        "impactHeadline": "Mentored two cohorts in a 1,000+-member women-in-STEM network — four 1:1 mentees plus a 20-person group each time — and 7 of Chan's 26 public LinkedIn recommendations come from them. The teaching platform built for these mentees later hosted TechNest 2026.",
+        "impactHeadline": "Mentored two cohorts in a 1,000+-member women-in-STEM network — four 1:1 mentees plus a 20-person group each time — and 7 of Chan's 27 LinkedIn recommendations come from them. The teaching platform built for these mentees later hosted TechNest 2026.",
         "companyContext": "**Forward with Her (她行 / \"Forward with Her Mentorship\")** is a\nChina-rooted, internationally-reaching women-in-STEM mentorship\nprogramme operating under the corporate brand\n*taxing-mentorship* on LinkedIn. The programme is structured as\na curated mentor-mentee network where established professionals\nacross software engineering, data, product, AI, and adjacent\ntechnical disciplines guide cohorts of early-career women\nthrough one-on-one mentoring, group sessions, and topic-specific\npublic lectures and office-hour discussions. **Network scale:\nover 1,000 members.** Chan mentored two cohorts (Winter 2024 and\nSummer 2025); in each she took four mentees one-to-one and ran a\ngroup of 20, so 8 one-to-one mentees and 40 group places in total.\n",
         "mission": "Open accelerated, mentor-led pathways into technology careers\nfor women who would otherwise face the harder, slower, often\nisolated route. The programme's theory of change is that\nsustained 1:1 mentorship at a critical career transition\noutperforms generic learn-to-code content because it transfers\nnot just skills but agency, judgment, and the soft\ninfrastructure (peer networks, role models, navigation\nliteracy) that compounds.\n",
         "myMandate": "Served as a **Technology & Professional Development Mentor**\nfrom October 2024 through September 2025 (one full annual\ncycle). Mandate covered: one-on-one mentorship sessions with\nassigned mentees across software engineering, AI tooling, and\ncareer navigation; group mentoring sessions and shared Office\nHours with multiple cohort sisters; public lectures on AI\nprogramming, identity formation in tech, and career\ntransitions; and ongoing availability as a long-term contact\nfor mentees beyond the formal programme cycle.\n",
         "impactDelivered": "**The mentorship engagement is the umbrella under which seven\nof the twenty-six public LinkedIn recommendations on Chan's\nprofile were given** — making Forward with Her the\nsingle-largest source of independently-attested mentorship\nimpact across Chan's career to date. Mentees who gave\nLinkedIn recommendations specifically attributing their\nlearning to Forward with Her sessions include:\n\n- **Siyu Xing** (Ph.D. Candidate in CS / AIGC, University of\n  Chinese Academy of Sciences) — attended Chan's AI\n  programming public course and Office Hours; cites \"insights\n  on identity and self-awareness\" and the spiritual-power\n  framing of the cohort culture\n- **Amy Li** (student at China West Normal University) —\n  connected twice 1:1 plus a cohort tea-party; cites Chan as\n  \"not only a mentor… also my role model\"\n- **Di Peng** (student at ShanghaiTech University) — completed\n  Chan's AI-assisted development course on Cursor, shipped her\n  first personal website end-to-end\n- **Mi Su (苏米)** (Student at Guangxi University) — cohort\n  mentee\n- **Shushu Qin** (Master of Computational Science at Laurentian\n  University / Université Laurentienne) — cohort mentee who\n  went on to AWS certifications (SAA + ML)\n- **Yijia (Robin) Lee** (Student at Tianjin Normal University)\n  — cohort mentee\n- **Shiyu Fang** (Web Developer at GDS Communication) — cohort\n  mentee who carried the AI-with-web-development integration\n  methodology into her own subsequent practice\n\nThe programme also produced a public-lecture series whose\naccumulated topics — AI programming using natural-language\nprompts, identity formation in tech, career navigation for\nearly-career women — informed both the eventual TechNest\nCommunity AI Track curriculum (2026) and the AI Programming\nEducation teaching platform that's now my open-source\nteaching repository.\n\n**The AI Programming Education teaching platform\n(`programming.chanmeng.org`) was first built specifically for\nthis Forward with Her cohort.** Its earliest cohort version\n(`2024-winter`) exists precisely because I needed a structured\nplace to host the tutorials, lecture recordings, and exercises\nI was delivering live to mentees. It has since grown into the\nopen-source teaching platform now serving 4 coexisting cohort\nversions across TechNest, HER WAKA, and the original Forward\nwith Her audience — but its origin is here.\n\nI also built and shipped a dedicated **bilingual EN/CN promo\nsite** for the programme\n(`forward-with-her-mentorship-program.pages.dev`) — a\n3D-rendered Next.js 15 + Three.js landing page on Cloudflare\nPages that supported the programme's external visibility\nwhile I was in the cohort.\n",
         "technicalHighlights": "The substance of this role is **pedagogical and relational\nrather than technical-implementation**, but the technical\ncontent of the mentorship was concrete: students learned to\nprompt Cursor, Claude Code, and AI editors to ship a complete\npersonal website end-to-end; how to evaluate AI tools as\ncollaborative partners rather than autocomplete; how to read\nand act on LLM output critically; and how to integrate\nbilingual content (EN/简体中文) into modern web projects.\n\nThe teaching methodology developed here — prompt-first\ndevelopment, learn-by-shipping a real production site,\ncohort accountability through Office Hours, screenshot-as-\nevidence assessment — is the same doctrine that later\nanchored the **2026 TechNest Community AI Track curriculum**\nand the personal AI Programming Education teaching platform\n(`programming.chanmeng.org`). The cohort recordings and\nmaterials from this period are preserved in the teaching\nrepository as the `2024-winter` and `2025-summer` versioned\ncohort docs.\n"
       },
-      "publicSummary": "Technology & Professional Development Mentor in the Forward with Her\n(她行) Mentorship programme — a women-in-STEM network of over 1,000\nmembers — from October 2024 through September 2025, across two cohorts:\nfour one-to-one mentees and a 20-person group in each. **Seven of the 26 public LinkedIn recommendations on\nChan's profile come from mentees who specifically credit Forward with\nHer sessions for their learning**, including students at the\nUniversity of Chinese Academy of Sciences, ShanghaiTech University,\nTianjin Normal University, China West Normal University, Guangxi\nUniversity, and Laurentian University. The teaching doctrine\ndeveloped here (\"natural language is the source code\"; ship a real\nproduction site by Week 8) became the foundation for the later 2026\nTechNest AI Track curriculum and Chan's AI Programming Education\nteaching platform.\n"
+      "publicSummary": "Technology & Professional Development Mentor in the Forward with Her\n(她行) Mentorship programme — a women-in-STEM network of over 1,000\nmembers — from October 2024 through September 2025, across two cohorts:\nfour one-to-one mentees and a 20-person group in each. **Seven of the 27 LinkedIn recommendations on\nChan's profile come from mentees who specifically credit Forward with\nHer sessions for their learning**, including students at the\nUniversity of Chinese Academy of Sciences, ShanghaiTech University,\nTianjin Normal University, China West Normal University, Guangxi\nUniversity, and Laurentian University. The teaching doctrine\ndeveloped here (\"natural language is the source code\"; ship a real\nproduction site by Week 8) became the foundation for the later 2026\nTechNest AI Track curriculum and Chan's AI Programming Education\nteaching platform.\n"
     },
     {
       "id": "freeperiod",
@@ -1833,7 +1836,7 @@
         },
         {
           "label": "Stars",
-          "value": "126 GitHub (measured 2026-08-26) · 20 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai"
+          "value": "129 GitHub (measured 2026-09-24) · 20 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai"
         },
         {
           "label": "Forks",
@@ -2139,7 +2142,7 @@
         },
         {
           "label": "GitHub stars",
-          "value": "86 (measured 2026-09-07; renamed from claude-code-audio-hooks)"
+          "value": "87 (measured 2026-09-24; renamed from claude-code-audio-hooks)"
         },
         {
           "label": "Version",
@@ -8107,7 +8110,7 @@
       "category": "ai-tooling",
       "relatedProjectId": "femtracker-agent",
       "summary": "Added the 8-agent FemTracker Agent demo (a women's-health AI tracker\nbuilt on CopilotKit + LangGraph) to CopilotKit's official `demos_2025`\nfolder. 341 lines added.\n",
-      "impact": "Merged by maintainer @tyler-slaton into CopilotKit/CopilotKit (36.1k+\nGitHub stars). Public showcase of Chan's FemTracker Agent project\ninside the canonical CopilotKit demo collection that ships with the\nframework's example documentation.\n",
+      "impact": "Merged by maintainer @tyler-slaton into CopilotKit/CopilotKit (37.5k\nGitHub stars as of 2026-09-24; 36.1k at the time of the 2026-05 review).\nPublic showcase of Chan's FemTracker Agent project\ninside the canonical CopilotKit demo collection that ships with the\nframework's example documentation.\n",
       "reactions": 0,
       "comments": 4
     },
@@ -9324,7 +9327,7 @@
       "publisher": "Spotify (English-language host show)",
       "url": "https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj",
       "image": "/public/podcasts/decoding-the-future-cover-en.png",
-      "summary": "Chan-hosted English-language podcast exploring landmark research\npapers driving innovation in Artificial Intelligence, LLMs, and\nbeyond. Companion LinkedIn newsletter (\"Decoding the Future\") with\n800+ subscribers.\n",
+      "summary": "Chan-hosted English-language podcast exploring landmark research\npapers driving innovation in Artificial Intelligence, LLMs, and\nbeyond. Companion LinkedIn newsletter (\"Decoding the Future\") with\n1,098 subscribers (2026-09-24).\n",
       "meta": {
         "x_brand": {
           "type": "podcastShow",
@@ -9385,8 +9388,8 @@
       "recency": "deprecated",
       "lastUpdated": "2026-07-21",
       "publisher": "LinkedIn Newsletter",
-      "url": "https://www.linkedin.com/build-relation/newsletter-follow/?entityUrn=7359054938187984896",
-      "summary": "Companion LinkedIn newsletter to the Decoding the Future podcast —\ncutting-edge AI research papers and LLM innovations. 800+ tech\nenthusiasts subscribed (as of the historical README snapshot).\n",
+      "url": "https://www.linkedin.com/newsletters/7359054938187984896/",
+      "summary": "Companion LinkedIn newsletter to the Decoding the Future podcast —\ncutting-edge AI research papers and LLM innovations. 1,098\nsubscribers as of 2026-09-24.\n",
       "meta": {
         "x_brand": {
           "type": "newsletter",
@@ -10613,7 +10616,7 @@
           "tool": "CopilotKit",
           "since": "2025",
           "depth": "intermediate",
-          "notes": "4 repos. Active open-source contributor — merged PRs into the 36.1k★ upstream repo."
+          "notes": "4 repos. Active open-source contributor — merged PRs into the 37.5k★ upstream repo."
         },
         {
           "tool": "MCP (Model Context Protocol)",
@@ -10924,6 +10927,287 @@
       "keywords": [
         "te reo Maori",
         "Cross-cultural product design"
+      ]
+    }
+  ],
+  "showcaseCapabilities": [
+    {
+      "id": "pdf-report",
+      "label": "Typeset PDF reports",
+      "blurb": "Funder-grade reports typeset in code (Typst), where every figure traces to a named source.",
+      "collage": "/public/evidence/collages/pdf-report.jpg"
+    },
+    {
+      "id": "promo-film",
+      "label": "Promo films",
+      "blurb": "Short promotional films built in Remotion as code, scored and cut to the beat, in every aspect ratio a channel needs.",
+      "collage": "/public/evidence/collages/promo-film.jpg"
+    },
+    {
+      "id": "pitch-deck",
+      "label": "Pitch decks",
+      "blurb": "Investor-facing HTML decks in a Swiss grid, built for a founder to present and send.",
+      "collage": "/public/evidence/collages/pitch-deck.jpg"
+    },
+    {
+      "id": "slides",
+      "label": "Event slides",
+      "blurb": "Live, data-driven presentation decks that run a room for two days.",
+      "collage": "/public/evidence/collages/slides.jpg"
+    },
+    {
+      "id": "newsletter",
+      "label": "Newsletters",
+      "blurb": "Email newsletters designed, written and sent from infrastructure the sender owns.",
+      "collage": "/public/evidence/collages/newsletter.jpg"
+    },
+    {
+      "id": "data-transformation",
+      "label": "Digital transformation",
+      "blurb": "Turning an organisation's scattered SaaS data into a structured, owned, auditable record.",
+      "collage": "/public/evidence/collages/data-transformation.jpg"
+    },
+    {
+      "id": "seo-geo",
+      "label": "SEO & GEO",
+      "blurb": "Making work findable by search engines and by the AI models people now ask instead.",
+      "collage": "/public/evidence/collages/seo-geo.jpg"
+    }
+  ],
+  "showcase": [
+    {
+      "id": "she-sharp-h1-2026-report",
+      "capability": "pdf-report",
+      "title": "She Sharp 2026 Half-Year Report",
+      "org": "She Sharp",
+      "relatedWorkId": "she-sharp",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-09-24",
+      "date": "2026-09",
+      "summary": "A 31-page funder report for a NZ women-in-STEM charity, typeset in Typst from the charity's own event register, member-platform database and booking exports — with a build gate that refuses to ship a figure not traced to a source.",
+      "facts": [
+        "31 pages",
+        "Typst + CeTZ charts",
+        "every figure source-traced"
+      ],
+      "download": {
+        "src": "/public/evidence/pdf-report/she-sharp-half-year-report-2026-h1.pdf",
+        "label": "Download the PDF (4 MB)"
+      },
+      "sources": [
+        "/evidence/src/pdf-report/she-sharp-h1-p01.jpg",
+        "/evidence/src/pdf-report/she-sharp-h1-p05.jpg",
+        "/evidence/src/pdf-report/she-sharp-h1-p10.jpg",
+        "/evidence/src/pdf-report/she-sharp-h1-p20.jpg",
+        "/evidence/src/pdf-report/she-sharp-h1-p16.jpg"
+      ]
+    },
+    {
+      "id": "she-sharp-lesmills-promo",
+      "capability": "promo-film",
+      "title": "She Sharp × Les Mills — “No Pain, All Gain” promo",
+      "org": "She Sharp",
+      "relatedWorkId": "she-sharp",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-09-24",
+      "date": "2026-08",
+      "summary": "A 30-second event promo rebuilt from photographs of the May 2024 Les Mills evening, rendered in Remotion to four aspect ratios with a Suno score cut on the beat.",
+      "facts": [
+        "30 s",
+        "4 aspect ratios",
+        "Remotion + Suno"
+      ],
+      "watchUrl": "https://www.linkedin.com/posts/shesharpnz_no-pain-all-gain-getting-fit-for-ai-activity-7499713162410156032-62zA",
+      "videos": [
+        {
+          "label": "Landscape 16:9",
+          "url": null
+        },
+        {
+          "label": "Vertical 9:16",
+          "url": null
+        }
+      ],
+      "sources": [
+        "/evidence/src/promo-film/lesmills-L-1-open.jpg",
+        "/evidence/src/promo-film/lesmills-L-2-stat.jpg",
+        "/evidence/src/promo-film/lesmills-L-5-title.jpg",
+        "/evidence/src/promo-film/lesmills-L-7-panel.jpg"
+      ]
+    },
+    {
+      "id": "archcanvas-promo-studio",
+      "capability": "promo-film",
+      "title": "ArchCanvas studio film",
+      "org": "ArchCanvas",
+      "relatedWorkId": "archcanvas",
+      "relatedProjectId": "archcanvas",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-09-24",
+      "date": "2026-09",
+      "summary": "A product film whose picture is a coded replica of the ArchCanvas studio, not a screen recording — four lengths by two aspect ratios, in two cuts, from one scene library.",
+      "facts": [
+        "15 / 30 / 60 / 120 s",
+        "16:9 + 9:16",
+        "coded UI replica"
+      ],
+      "watchUrl": "https://youtu.be/rUZAiXgt9JY",
+      "liveUrl": "https://archcanvas.uk/",
+      "videos": [
+        {
+          "label": "30 s · 16:9",
+          "url": null
+        },
+        {
+          "label": "30 s · 9:16",
+          "url": null
+        }
+      ],
+      "sources": [
+        "/evidence/src/promo-film/archcanvas-01-describe.jpg",
+        "/evidence/src/promo-film/archcanvas-02-plan.jpg",
+        "/evidence/src/promo-film/archcanvas-05-written-list.jpg",
+        "/evidence/src/promo-film/archcanvas-07-end-card.jpg"
+      ]
+    },
+    {
+      "id": "gavigo-pitch-deck",
+      "capability": "pitch-deck",
+      "title": "GAVIGO technical proof deck",
+      "org": "GAVIGO Inc.",
+      "relatedWorkId": "gavigo",
+      "relatedProjectId": "gavigo-ire",
+      "tier": "primary",
+      "recency": "recent",
+      "lastUpdated": "2026-09-24",
+      "date": "2026-07",
+      "summary": "A 19-slide investor deck in a Swiss international-style grid, built as a single HTML file for the founder to present live and send behind a password.",
+      "facts": [
+        "19 slides",
+        "single-file HTML",
+        "Swiss grid"
+      ],
+      "sources": [
+        "/evidence/src/pitch-deck/gavigo-deck-01-cover.jpg",
+        "/evidence/src/pitch-deck/gavigo-deck-03-problem.jpg",
+        "/evidence/src/pitch-deck/gavigo-deck-04-solution.jpg"
+      ]
+    },
+    {
+      "id": "aotearoa-ai-hackathon-deck",
+      "capability": "slides",
+      "title": "Aotearoa AI Hackathon Festival 2026 — event deck",
+      "org": "She Sharp",
+      "relatedWorkId": "she-sharp",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-09-24",
+      "date": "2026-08",
+      "summary": "The 91-slide deck that ran two days of She Sharp's hackathon at AUT City Campus (7–8 August 2026), rendered in the browser from the event's own data — timers, team slides and the winners reveal included.",
+      "facts": [
+        "91 slides",
+        "2 days",
+        "12 teams"
+      ],
+      "liveUrl": "https://www.shesharp.org.nz/present/aotearoa-ai-hackathon-festival-2026",
+      "sources": [
+        "/evidence/src/slides/hackathon-01-cover.jpg",
+        "/evidence/src/slides/hackathon-19-challenges.jpg",
+        "/evidence/src/slides/hackathon-28-team-forming.jpg",
+        "/evidence/src/slides/hackathon-86-winners.jpg"
+      ]
+    },
+    {
+      "id": "chans-ai-weekly",
+      "capability": "newsletter",
+      "title": "Chan's AI Weekly",
+      "org": "chanmeng.org",
+      "relatedProjectId": "portfolio-v2",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-09-24",
+      "date": "2026-07",
+      "summary": "A weekly five-minute AI briefing, written with Claude Code against a house style guide and sent through Resend from chanmeng.org — with the whole workflow published at chanmeng.org/newsletter/how-its-made.",
+      "facts": [
+        "weekly since 2026-07",
+        "Resend + React Email",
+        "how-it's-made page"
+      ],
+      "liveUrl": "https://chanmeng.org/newsletter",
+      "sources": [
+        "/evidence/src/newsletter/chanmeng-email-2026-09-21.jpg",
+        "/evidence/src/newsletter/chanmeng-email-2026-09-14.jpg"
+      ]
+    },
+    {
+      "id": "she-sharp-monthly",
+      "capability": "newsletter",
+      "title": "The Monthly She#",
+      "org": "She Sharp",
+      "relatedWorkId": "she-sharp",
+      "tier": "primary",
+      "recency": "active",
+      "lastUpdated": "2026-09-24",
+      "date": "2026-08",
+      "summary": "She Sharp's monthly newsletter, moved off Mailchimp onto infrastructure the charity owns — a 1,549-person list cut over with 0 failures, 179 past issues recovered and served from the charity's own site.",
+      "facts": [
+        "1,549-person list",
+        "0 failures",
+        "179 past issues recovered"
+      ],
+      "liveUrl": "https://www.shesharp.org.nz/resources/newsletters",
+      "sources": [
+        "/evidence/src/newsletter/shesharp-email-2026-09.jpg",
+        "/evidence/src/newsletter/shesharp-email-2026-08.jpg"
+      ]
+    },
+    {
+      "id": "she-sharp-transformation-record",
+      "capability": "data-transformation",
+      "title": "She Sharp digital & AI transformation record",
+      "org": "She Sharp",
+      "relatedWorkId": "she-sharp",
+      "tier": "primary",
+      "recency": "recent",
+      "lastUpdated": "2026-09-24",
+      "date": "2026-09",
+      "summary": "An evidence-backed record of a charity's move off rented software onto a system it owns — three platform migrations, a data-sovereignty programme and a governance audit — where every number is tagged measured, cited or derived.",
+      "facts": [
+        "13.3 months",
+        "11 agent skills",
+        "1,549-person cutover, 0 failures"
+      ]
+    },
+    {
+      "id": "engram-geo-confirmation",
+      "capability": "seo-geo",
+      "title": "Surfaced by Claude, confirmed by the founder",
+      "org": "Engram",
+      "relatedWorkId": "engram",
+      "relatedProjectId": "geo-markdown-mirror",
+      "tier": "flagship",
+      "recency": "recent",
+      "lastUpdated": "2026-09-24",
+      "date": "2026-05",
+      "summary": "When Engram founder Luka Madzarac asked Claude Code to find an AI architect, it surfaced Chan Meng, and he confirmed it publicly on LinkedIn. The public footprint it read is built for exactly that reader — llms.txt, JSON-LD and an open-source record, all generated from one data source.",
+      "quote": {
+        "text": "It's true, Claude Code surfaced Chan as one of the strongest matches for what we're looking for.",
+        "author": "Luka Madzarac",
+        "role": "Founder, Engram",
+        "avatar": "/public/people/luka-madzarac.jpg",
+        "profileUrl": "https://www.linkedin.com/in/omgluka/",
+        "url": "https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-share-7459724143593246720-SD5v"
+      },
+      "facts": [
+        "4,264 impressions",
+        "llms.txt + JSON-LD",
+        "geo-markdown-mirror skill"
+      ],
+      "sources": [
+        "/evidence/src/seo-geo/engram-founder-linkedin-post.jpg"
       ]
     }
   ],
@@ -11731,7 +12015,7 @@
         "x_brand": {
           "displayTier": "primary",
           "category": "employer",
-          "context": "Open-source contributor — 2 merged PRs into a 36.1k★ repo",
+          "context": "Open-source contributor — 2 merged PRs into a 37.5k★ repo",
           "relatedWorkId": "copilotkit"
         }
       }
@@ -13207,8 +13491,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-09-23",
+    "lastModified": "2026-09-24",
     "buildYear": "2026",
-    "buildTimestamp": "2026-09-23T19:56:56.233Z"
+    "buildTimestamp": "2026-09-24T09:16:43.814Z"
   }
 }

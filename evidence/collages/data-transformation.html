@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="collage.css">
+<style>
+  .body { display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px; }
+  .cover {
+    background: var(--violet); color: #fff; border-radius: 18px;
+    padding: 48px 52px; display: flex; flex-direction: column; justify-content: space-between; min-height: 620px;
+  }
+  .cover .tag { font-family: "JetBrains Mono", monospace; font-size: 17px; letter-spacing: .16em; text-transform: uppercase; opacity: .9; }
+  .cover h2 { font-family: "Anton", Impact, sans-serif; font-weight: 400; font-size: 76px; line-height: 1.02; margin: 26px 0; }
+  .cover p { font-size: 22px; line-height: 1.5; max-width: 34ch; }
+  .flow { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 30px; font-family: "JetBrains Mono", monospace; font-size: 17px; }
+  .flow span { padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.16); }
+  .flow .to { background: none; padding: 0 4px; font-size: 22px; }
+  .flow .own { background: var(--glare); color: var(--ink); }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .stat { background: var(--card); border-radius: 16px; padding: 30px 30px 26px; display: flex; flex-direction: column; justify-content: space-between; }
+  .stat b { font-family: "Anton", Impact, sans-serif; font-weight: 400; font-size: 64px; line-height: 1; }
+  .stat span { font-size: 19px; line-height: 1.4; color: var(--muted); margin-top: 14px; }
+  .stat.o { background: var(--orange); }
+  .stat.o span { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="plate">
+  <header>
+    <div>
+      <div class="kicker">Digital transformation · She Sharp</div>
+      <h1>Transformation record</h1>
+    </div>
+    <div class="chips">
+      <span class="chip o">every number tagged</span>
+      <span class="chip">measured · cited · derived</span>
+    </div>
+  </header>
+  <div class="body">
+    <div class="cover">
+      <div>
+        <div class="tag">She Sharp · 2025 – 2026</div>
+        <h2>From rented software to a system the charity owns</h2>
+        <p>Platform migrations, a data-sovereignty programme and a governance audit, written up as an evidence-backed record.</p>
+      </div>
+      <div class="flow">
+        <span>Webflow</span><span>Mailchimp</span><span>Humanitix</span><span>Slack</span>
+        <span class="to">→</span><span class="own">one owned, version-controlled record</span>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat o"><b>13.3</b><span>months, website and mailing list moved onto infrastructure the charity owns</span></div>
+      <div class="stat"><b>1,549</b><span>people on the mailing list cut over, with 0 failures</span></div>
+      <div class="stat"><b>1.15 GB</b><span>of the charity's own operating record recovered from four platforms</span></div>
+      <div class="stat"><b>179</b><span>past newsletters recovered and served from the charity's own site</span></div>
+      <div class="stat"><b>11</b><span>recurring jobs written down as agent skills a non-engineer can follow</span></div>
+      <div class="stat"><b>2,129</b><span>non-consenting contacts held as one-way hashes, so no import can bring them back</span></div>
+    </div>
+  </div>
+  <footer><span>Headline figures from the record; the full record stays with the charity</span><b>chanmeng.org/work</b></footer>
+</div>
+</body>
+</html>

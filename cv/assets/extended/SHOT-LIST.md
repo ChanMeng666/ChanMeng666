@@ -1,10 +1,10 @@
 # Extended-CV magazine — shot list
 
-What Chan can supply to finish and upgrade the 16-page
+What Chan can supply to finish and upgrade the 20-page
 `chan-meng-cv-extended.pdf`. Two kinds of task:
 
 1. **In-PDF placeholders (`IMG-XX`)** — currently render as a plain cream
-   block stamped with the id. The book compiles at 16 pages either way, but each
+   block stamped with the id. The book compiles at 20 pages either way, but each
    one should be replaced with a real photo before the magazine is called done.
 2. **Swap-in upgrades** — the layout already shows a real image (a logo, an
    existing screenshot, or a watermarked press picture). Supplying a better
@@ -25,7 +25,7 @@ What Chan can supply to finish and upgrade the 16-page
   logo → screenshot upgrade you also change that one path in the `photo-grid`
   tuple.)
 - **Rebuild + verify:** `pwsh cv/build.ps1`, then confirm the PDF is still
-  16 pages and ≤ 10 MB.
+  20 pages and ≤ 10 MB.
 
 ---
 

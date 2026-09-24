@@ -85,6 +85,16 @@ is the only mechanism that catches a number going stale on four surfaces at once
 > five wrong surfaces, and every existing gate passed the whole time. R8 exists
 > because of this.
 
+**Reach and recognition counts show their historical maximum** (Chan's
+standing rule, 2026-09-24; full text in `CLAUDE.md` § "Display the historical
+maximum"). Recommendations, followers, subscribers and stars only ever go UP
+on a surface: raise them when the live number beats the shard, never lower
+them when a platform number drops. That is why the CV says 27 LinkedIn
+recommendations while LinkedIn displays 26 — one was hidden after it was
+given. Word it so the maximum stays true ("27 recommendations", "received"),
+never "27 public" or "currently", and put a lower live reading in the
+metric's `note:`.
+
 ---
 
 ## 4. A superlative needs a comparison set you can enumerate
@@ -136,7 +146,7 @@ Reference checks are where this breaks.
 The same applies to a project's popularity sitting next to your contribution:
 
 > **Before** `CopilotKit contributor · 2 merged PRs · 36.1k stars`
-> **After** `2 merged PRs into CopilotKit (36.1k-star project)`
+> **After** `2 merged PRs into CopilotKit (37.5k-star project)`
 >
 > The stars belong to CopilotKit. In a row of Chan's own numbers — followers,
 > subscribers, own-repo stars — the halo does the work whether or not you intend

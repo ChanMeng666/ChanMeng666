@@ -68,8 +68,10 @@ export const EXPECT = {
   // Education Platform then became the fifth, taking over the platform bullet
   // the TechNest role entry used to carry (rolesWithBullets is unchanged; that
   // role kept one bullet).
-  projects: 5,
-  alsoBuiltLinks: 4,
+  // 4 since 2026-09-24: Tam-AI-Ti and Vitex moved into "Also built" and
+  // a11y-loop came up out of it, mirroring the designed CV's four cards.
+  projects: 4,
+  alsoBuiltLinks: 5,
   education: 2,
   awards: 3,
   contactLines: 2,

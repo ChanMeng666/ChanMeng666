@@ -133,7 +133,7 @@ agentic practice rather than just receive it.
   shipped and published. Students arrive using only browser ChatGPT. — `work[technest]`
 - Outstanding Mentor Award at the AI Hackathon Festival 2025, as 1 of 14 expert
   mentors guiding 11 teams and 80+ participants. — `awards[]`
-- Seven of 26 public LinkedIn recommendations come from a single mentorship
+- Seven of 27 LinkedIn recommendations come from a single mentorship
   cohort (Forward with Her) — the largest independently attested source of
   mentoring impact in the record. — `work[forward-with-her]`
 - Ran the AI-tools training session for a full engineering squad (Claude Code,
@@ -161,7 +161,7 @@ agentic practice rather than just receive it.
 
 ## Theme G — open source and early-protocol work
 
-- Two PRs merged into CopilotKit (36.1k stars): an eight-agent demo contributed
+- Two PRs merged into CopilotKit (37.5k stars): an eight-agent demo contributed
   into the official `demos_2025` folder, and Claude Code setup instructions added
   to the MCP server guide. — `work[copilotkit]`
 - Recruited onto Anthropic's Partner Network architect track after Engram's

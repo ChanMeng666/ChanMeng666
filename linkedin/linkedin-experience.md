@@ -177,7 +177,7 @@ The same platform carries two original research reports: FemTech Market Map for 
 **Location:** Seattle, Washington, United States · Remote
 
 ```
-CopilotKit's official demo collection and its MCP documentation both ship code I wrote — two merged PRs in the open-source framework for building in-app AI copilots and agents (36,100+ GitHub stars), each publicly approved by a named maintainer. Both contributions came straight out of production systems I run.
+CopilotKit's official demo collection and its MCP documentation both ship code I wrote — two merged PRs in the open-source framework for building in-app AI copilots and agents (37,500+ GitHub stars), each publicly approved by a named maintainer. Both contributions came straight out of production systems I run.
 
 PR #2068 — an 8-agent women's-health companion now sits in CopilotKit's official demos_2025 collection: a Main Coordinator routes requests to specialists in cycle tracking, fertility, symptoms, nutrition, exercise, lifestyle, and health insights, using WHO-standard scoring scales. FemTracker Agent, merged September 2025 after 10 weeks of review.
 

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="collage.css">
+<style>
+  .deck { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; align-items: start; }
+  .deck .shot { aspect-ratio: 16 / 9; object-fit: cover; }
+  .deck .side { display: grid; gap: 20px; }
+</style>
+</head>
+<body>
+<div class="plate">
+  <header>
+    <div>
+      <div class="kicker">Pitch deck · GAVIGO Inc.</div>
+      <h1>Technical proof deck</h1>
+    </div>
+    <div class="chips">
+      <span class="chip o">19 slides</span>
+      <span class="chip">single-file HTML</span>
+      <span class="chip v">Swiss grid</span>
+    </div>
+  </header>
+  <div class="deck">
+    <img class="shot" src="../src/pitch-deck/gavigo-deck-01-cover.jpg">
+    <div class="side">
+      <img class="shot" src="../src/pitch-deck/gavigo-deck-03-problem.jpg">
+      <img class="shot" src="../src/pitch-deck/gavigo-deck-04-solution.jpg">
+    </div>
+  </div>
+  <footer><span>Investor deck, excerpt: cover, problem and solution slides only</span><b>chanmeng.org/work</b></footer>
+</div>
+</body>
+</html>

@@ -281,7 +281,7 @@ projects:
       - "Suno (background music generation)"
     metrics:
       - { label: "Commits (solo)", value: "156 (2025-11-01 → 2026-09-01, ~10 months); effectively single-author" }
-      - { label: "GitHub stars",   value: "86 (measured 2026-09-07; renamed from claude-code-audio-hooks)" }
+      - { label: "GitHub stars",   value: "87 (measured 2026-09-24; renamed from claude-code-audio-hooks)" }
       - { label: "Version",        value: "v6.5.1 (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)" }
       - { label: "Hook events",    value: "39 canonical events (3 on by default), plus 44 matcher variants — separately switchable matchers beneath a canonical event (`session_start_resume`, `stop_failure_rate_limit`), not extra events; mapped per harness: Claude Code 30 of 39 canonical + all 44 variants · Cursor 18 native (8 via auto-bridge) · Codex 11" }
       - { label: "Harnesses",      value: "3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift" }

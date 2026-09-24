@@ -49,7 +49,7 @@ npm run check        # validate (schema + linkedin sync) + build + asset audit
   archived-but-active, activity gaps) for every GitHub-linked project.
 - CV PDFs: `pwsh cv/build.ps1` (manual; needs typst). Emits three:
   `public/chan-meng-cv.pdf` (canonical 2-page), `public/chan-meng-cv-extended.pdf`
-  (16-page magazine), and `cv/exports/chan-meng-cv-ats.pdf` (plain single-column
+  (20-page magazine), and `cv/exports/chan-meng-cv-ats.pdf` (plain single-column
   ATS resume — tracked but deliberately OUTSIDE `public/`, never web-served or
   linked; see `cv/exports/README.md`). The same run also writes
   `cv/exports/chan-meng-cv-ats.docx` and `cv/exports/chan-meng-cv-ats.txt`, both
@@ -67,6 +67,25 @@ npm run check        # validate (schema + linkedin sync) + build + asset audit
   local `wrangler deploy` is broken on purpose). Copy **only** those two; never
   anything from `cv/exports/`. Full procedure and the reasoning: `cv/README.md`
   § "After every rebuild: sync the site".
+
+## Display the historical maximum (Chan's standing rule, 2026-09-24)
+
+Every count that measures reach or recognition — LinkedIn recommendations,
+followers, newsletter subscribers, GitHub stars and followers, an upstream
+project's stars, and the like — is shown at its **historical maximum** on every
+surface: the shards, README, llms*.txt, the CVs (all three), the extended CV,
+LinkedIn copy, cover letters and chanmeng.org.
+
+- **Never lower a displayed number because the live platform number dropped.**
+  A recommendation that LinkedIn hides or the recommender withdraws still
+  counts (27 received, although LinkedIn shows 26); a dip in followers or stars
+  is not a correction.
+- **Raise it whenever the live number beats the recorded one.** Refresh with
+  the measurement date in the metric's `note:` (and `asOf`).
+- Word the claim so the maximum is true: "27 LinkedIn recommendations" or
+  "received", never "27 *public*" or "currently shown". If the live figure is
+  lower, record it in the `note:`, not on the surface.
+- `refresh-metrics` output that is LOWER than the shard value is not applied.
 
 ## Truth maintenance
 
@@ -112,6 +131,7 @@ hand-typed facts on a review cadence:
 | `25-contributions.yaml` | openSourceContributions | 23 | `id` |
 | `30-recognition.yaml` | awards, certificates, publications | 6 + 53 + 55 | `title`+`awarder` / `name` |
 | `40-skills.yaml` | skills, domains, languages, interests | — | `name` |
+| `45-showcase.yaml` | showcaseCapabilities, showcase (craft evidence: reports, films, decks, slides, newsletters, GEO) | 7 + 9 | `id` |
 | `50-references.yaml` | references | 27 | `id` |
 | `60-network.yaml` | organizations, collaborators | 30 + 10 | `id` |
 | `70-linkedin.yaml` | linkedin | curated live-page snapshot | — |

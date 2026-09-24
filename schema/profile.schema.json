@@ -148,6 +148,88 @@
       }
     },
 
+    "showcaseCapabilities": {
+      "type": "array",
+      "description": "Display-ordered capability groups for the craft-evidence showcase (data/profile/45-showcase.yaml). Each owns one collage image.",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "blurb", "collage"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "label": { "type": "string" },
+          "blurb": { "type": "string" },
+          "collage": { "type": "string", "pattern": "^/public/evidence/collages/[a-z0-9-]+\\.jpg$" }
+        }
+      }
+    },
+
+    "showcase": {
+      "type": "array",
+      "description": "Craft-evidence artefacts (PDF reports, promo films, decks, slides, newsletters, data transformation, SEO/GEO). capability → showcaseCapabilities[].id; relatedWorkId → work[].id; relatedProjectId → projects[].id — all enforced by scripts/build.mjs.",
+      "items": {
+        "type": "object",
+        "required": ["id", "capability", "title", "summary", "lastUpdated"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "capability": { "type": "string" },
+          "title": { "type": "string" },
+          "org": { "type": "string" },
+          "relatedWorkId": { "type": "string" },
+          "relatedProjectId": { "type": "string" },
+          "tier": { "$ref": "#/$defs/tierEnum" },
+          "recency": { "$ref": "#/$defs/recencyEnum" },
+          "lastUpdated": { "$ref": "#/$defs/loosePartialDate" },
+          "date": { "$ref": "#/$defs/loosePartialDate" },
+          "summary": { "type": "string" },
+          "facts": { "type": "array", "items": { "type": "string" }, "maxItems": 3 },
+          "liveUrl": { "type": "string", "format": "uri" },
+          "watchUrl": { "type": "string", "format": "uri", "description": "Public page where the finished film can be watched (YouTube, LinkedIn post, …) — independent of the MP4 slots in videos[]." },
+          "download": {
+            "type": "object",
+            "required": ["src", "label"],
+            "additionalProperties": false,
+            "properties": {
+              "src": { "type": "string", "pattern": "^/public/evidence/" },
+              "label": { "type": "string" }
+            }
+          },
+          "videos": {
+            "type": "array",
+            "description": "url stays null until Chan uploads the MP4 via GitHub user-attachments; templates render a placeholder meanwhile.",
+            "items": {
+              "type": "object",
+              "required": ["label", "url"],
+              "additionalProperties": false,
+              "properties": {
+                "label": { "type": "string" },
+                "url": { "type": ["string", "null"] }
+              }
+            }
+          },
+          "quote": {
+            "type": "object",
+            "required": ["text", "author"],
+            "additionalProperties": false,
+            "properties": {
+              "text": { "type": "string" },
+              "author": { "type": "string" },
+              "role": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "avatar": { "type": "string", "pattern": "^/public/people/[a-z0-9-]+\\.(jpg|png)$" },
+              "profileUrl": { "type": "string", "format": "uri" }
+            }
+          },
+          "sources": {
+            "type": "array",
+            "description": "Collage input images, repo-rooted (/evidence/src/...).",
+            "items": { "type": "string", "pattern": "^/evidence/src/" }
+          }
+        }
+      }
+    },
+
     "certificates": {
       "type": "array",
       "items": {

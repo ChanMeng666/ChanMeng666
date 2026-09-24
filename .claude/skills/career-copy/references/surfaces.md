@@ -129,7 +129,7 @@ drifted to three pages unnoticed for three weeks once.
 
 ## The extended CV — `cv/extended.typ`
 
-**Register:** first person, present tense, magazine. 16 pages. This is the brand
+**Register:** first person, present tense, magazine. 20 pages. This is the brand
 document, not the hiring document — it opens by saying so and points at the
 two-page CV.
 

@@ -1,0 +1,234 @@
+# =============================================================================
+# SHOWCASE — craft evidence beyond code
+# =============================================================================
+# The deliverables a visitor can LOOK at: typeset PDF reports, promo films,
+# pitch decks, event slides, newsletters, data-transformation records and
+# SEO/GEO proof. Rendered as the README "What I make beyond code" block, the
+# extended CV `x-craft` chapter, and chanmeng.org/work.
+#
+# Two keys:
+#   showcaseCapabilities — one row per capability, in display order. Each owns
+#     ONE collage (public/evidence/collages/<id>.jpg, rendered from
+#     evidence/collages/<id>.html by `npm run build:collages`).
+#   showcase — one row per artefact; `capability` must be a showcaseCapabilities
+#     id, `relatedWorkId` a work[].id, `relatedProjectId` a projects[].id. The
+#     build fails on any broken reference.
+#
+# CONFIDENTIALITY (decided by Chan, 2026-09-24) — do not widen without asking:
+#   - GAVIGO pitch deck: cover, problem and solution slides ONLY. No slide with
+#     a figure, and never the gated deck URL.
+#   - She Sharp H1 2026 funder report: public screenshots + downloadable PDF OK
+#     (public release confirmed by Chan, 2026-09-24).
+#     The Youth Tech chapter page (photos of children) is not used in any
+#     collage.
+#   - She Sharp transformation record: a cover card and the headline numbers
+#     already public in work.she-sharp. No PDF, no chapter content.
+#   - The internal She Sharp metrics record is never copied here.
+#
+# VIDEOS: MP4s are NOT committed (10-30 MB each). Each film carries
+# `videos[]` with `url: null` until Chan uploads the file through GitHub's
+# user-attachments and pastes the returned URL here; templates render a
+# placeholder while `url` is null. `watchUrl` is separate: the public page
+# (YouTube, LinkedIn post) where the finished film can be watched today.
+#
+# The extended CV (cv/extended.typ x-craft) does NOT use the collages: it
+# typesets each item's text natively and shows the raw `sources` frames, so
+# keep sources and the chapter in step when one changes.
+# =============================================================================
+
+showcaseCapabilities:
+  - id: pdf-report
+    label: Typeset PDF reports
+    blurb: Funder-grade reports typeset in code (Typst), where every figure traces to a named source.
+    collage: /public/evidence/collages/pdf-report.jpg
+  - id: promo-film
+    label: Promo films
+    blurb: Short promotional films built in Remotion as code, scored and cut to the beat, in every aspect ratio a channel needs.
+    collage: /public/evidence/collages/promo-film.jpg
+  - id: pitch-deck
+    label: Pitch decks
+    blurb: Investor-facing HTML decks in a Swiss grid, built for a founder to present and send.
+    collage: /public/evidence/collages/pitch-deck.jpg
+  - id: slides
+    label: Event slides
+    blurb: Live, data-driven presentation decks that run a room for two days.
+    collage: /public/evidence/collages/slides.jpg
+  - id: newsletter
+    label: Newsletters
+    blurb: Email newsletters designed, written and sent from infrastructure the sender owns.
+    collage: /public/evidence/collages/newsletter.jpg
+  - id: data-transformation
+    label: Digital transformation
+    blurb: Turning an organisation's scattered SaaS data into a structured, owned, auditable record.
+    collage: /public/evidence/collages/data-transformation.jpg
+  - id: seo-geo
+    label: SEO & GEO
+    blurb: Making work findable by search engines and by the AI models people now ask instead.
+    collage: /public/evidence/collages/seo-geo.jpg
+
+showcase:
+  - id: she-sharp-h1-2026-report
+    capability: pdf-report
+    title: She Sharp 2026 Half-Year Report
+    org: She Sharp
+    relatedWorkId: she-sharp
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-24"
+    date: "2026-09"
+    summary: A 31-page funder report for a NZ women-in-STEM charity, typeset in Typst from the charity's own event register, member-platform database and booking exports — with a build gate that refuses to ship a figure not traced to a source.
+    facts: ["31 pages", "Typst + CeTZ charts", "every figure source-traced"]
+    download:
+      src: /public/evidence/pdf-report/she-sharp-half-year-report-2026-h1.pdf
+      label: Download the PDF (4 MB)
+    sources:
+      - /evidence/src/pdf-report/she-sharp-h1-p01.jpg
+      - /evidence/src/pdf-report/she-sharp-h1-p05.jpg
+      - /evidence/src/pdf-report/she-sharp-h1-p10.jpg
+      - /evidence/src/pdf-report/she-sharp-h1-p20.jpg
+      - /evidence/src/pdf-report/she-sharp-h1-p16.jpg
+
+  - id: she-sharp-lesmills-promo
+    capability: promo-film
+    title: "She Sharp × Les Mills — “No Pain, All Gain” promo"
+    org: She Sharp
+    relatedWorkId: she-sharp
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-24"
+    date: "2026-08"
+    summary: A 30-second event promo rebuilt from photographs of the May 2024 Les Mills evening, rendered in Remotion to four aspect ratios with a Suno score cut on the beat.
+    facts: ["30 s", "4 aspect ratios", "Remotion + Suno"]
+    watchUrl: "https://www.linkedin.com/posts/shesharpnz_no-pain-all-gain-getting-fit-for-ai-activity-7499713162410156032-62zA"
+    videos:
+      - { label: "Landscape 16:9", url: null }
+      - { label: "Vertical 9:16", url: null }
+    sources:
+      - /evidence/src/promo-film/lesmills-L-1-open.jpg
+      - /evidence/src/promo-film/lesmills-L-2-stat.jpg
+      - /evidence/src/promo-film/lesmills-L-5-title.jpg
+      - /evidence/src/promo-film/lesmills-L-7-panel.jpg
+
+  - id: archcanvas-promo-studio
+    capability: promo-film
+    title: ArchCanvas studio film
+    org: ArchCanvas
+    relatedWorkId: archcanvas
+    relatedProjectId: archcanvas
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-24"
+    date: "2026-09"
+    summary: A product film whose picture is a coded replica of the ArchCanvas studio, not a screen recording — four lengths by two aspect ratios, in two cuts, from one scene library.
+    facts: ["15 / 30 / 60 / 120 s", "16:9 + 9:16", "coded UI replica"]
+    watchUrl: "https://youtu.be/rUZAiXgt9JY"
+    liveUrl: https://archcanvas.uk/
+    videos:
+      - { label: "30 s · 16:9", url: null }
+      - { label: "30 s · 9:16", url: null }
+    sources:
+      - /evidence/src/promo-film/archcanvas-01-describe.jpg
+      - /evidence/src/promo-film/archcanvas-02-plan.jpg
+      - /evidence/src/promo-film/archcanvas-05-written-list.jpg
+      - /evidence/src/promo-film/archcanvas-07-end-card.jpg
+
+  - id: gavigo-pitch-deck
+    capability: pitch-deck
+    title: GAVIGO technical proof deck
+    org: GAVIGO Inc.
+    relatedWorkId: gavigo
+    relatedProjectId: gavigo-ire
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-09-24"
+    date: "2026-07"
+    summary: A 19-slide investor deck in a Swiss international-style grid, built as a single HTML file for the founder to present live and send behind a password.
+    facts: ["19 slides", "single-file HTML", "Swiss grid"]
+    sources:
+      - /evidence/src/pitch-deck/gavigo-deck-01-cover.jpg
+      - /evidence/src/pitch-deck/gavigo-deck-03-problem.jpg
+      - /evidence/src/pitch-deck/gavigo-deck-04-solution.jpg
+
+  - id: aotearoa-ai-hackathon-deck
+    capability: slides
+    title: Aotearoa AI Hackathon Festival 2026 — event deck
+    org: She Sharp
+    relatedWorkId: she-sharp
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-24"
+    date: "2026-08"
+    summary: The 91-slide deck that ran two days of She Sharp's hackathon at AUT City Campus (7–8 August 2026), rendered in the browser from the event's own data — timers, team slides and the winners reveal included.
+    facts: ["91 slides", "2 days", "12 teams"]
+    liveUrl: https://www.shesharp.org.nz/present/aotearoa-ai-hackathon-festival-2026
+    sources:
+      - /evidence/src/slides/hackathon-01-cover.jpg
+      - /evidence/src/slides/hackathon-19-challenges.jpg
+      - /evidence/src/slides/hackathon-28-team-forming.jpg
+      - /evidence/src/slides/hackathon-86-winners.jpg
+
+  - id: chans-ai-weekly
+    capability: newsletter
+    title: Chan's AI Weekly
+    org: chanmeng.org
+    relatedProjectId: portfolio-v2
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-24"
+    date: "2026-07"
+    summary: A weekly five-minute AI briefing, written with Claude Code against a house style guide and sent through Resend from chanmeng.org — with the whole workflow published at chanmeng.org/newsletter/how-its-made.
+    facts: ["weekly since 2026-07", "Resend + React Email", "how-it's-made page"]
+    liveUrl: https://chanmeng.org/newsletter
+    sources:
+      - /evidence/src/newsletter/chanmeng-email-2026-09-21.jpg
+      - /evidence/src/newsletter/chanmeng-email-2026-09-14.jpg
+
+  - id: she-sharp-monthly
+    capability: newsletter
+    title: The Monthly She#
+    org: She Sharp
+    relatedWorkId: she-sharp
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-24"
+    date: "2026-08"
+    summary: She Sharp's monthly newsletter, moved off Mailchimp onto infrastructure the charity owns — a 1,549-person list cut over with 0 failures, 179 past issues recovered and served from the charity's own site.
+    facts: ["1,549-person list", "0 failures", "179 past issues recovered"]
+    liveUrl: https://www.shesharp.org.nz/resources/newsletters
+    sources:
+      - /evidence/src/newsletter/shesharp-email-2026-09.jpg
+      - /evidence/src/newsletter/shesharp-email-2026-08.jpg
+
+  - id: she-sharp-transformation-record
+    capability: data-transformation
+    title: She Sharp digital & AI transformation record
+    org: She Sharp
+    relatedWorkId: she-sharp
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-09-24"
+    date: "2026-09"
+    summary: An evidence-backed record of a charity's move off rented software onto a system it owns — three platform migrations, a data-sovereignty programme and a governance audit — where every number is tagged measured, cited or derived.
+    facts: ["13.3 months", "11 agent skills", "1,549-person cutover, 0 failures"]
+
+  - id: engram-geo-confirmation
+    capability: seo-geo
+    title: Surfaced by Claude, confirmed by the founder
+    org: Engram
+    relatedWorkId: engram
+    relatedProjectId: geo-markdown-mirror
+    tier: flagship
+    recency: recent
+    lastUpdated: "2026-09-24"
+    date: "2026-05"
+    summary: When Engram founder Luka Madzarac asked Claude Code to find an AI architect, it surfaced Chan Meng, and he confirmed it publicly on LinkedIn. The public footprint it read is built for exactly that reader — llms.txt, JSON-LD and an open-source record, all generated from one data source.
+    quote:
+      text: "It's true, Claude Code surfaced Chan as one of the strongest matches for what we're looking for."
+      author: Luka Madzarac
+      role: Founder, Engram
+      avatar: /public/people/luka-madzarac.jpg
+      profileUrl: https://www.linkedin.com/in/omgluka/
+      url: "https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-share-7459724143593246720-SD5v"
+    facts: ["4,264 impressions", "llms.txt + JSON-LD", "geo-markdown-mirror skill"]
+    sources:
+      - /evidence/src/seo-geo/engram-founder-linkedin-post.jpg

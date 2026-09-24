@@ -1,4 +1,4 @@
-// Reusable magazine primitives for the 16-page extended CV.
+// Reusable magazine primitives for the 20-page extended CV.
 // Styled after cv/components.typ (deterministic block gaps, breakable:false for
 // callouts). Consumes the *-x tokens from theme-extended.typ.
 #import "theme-extended.typ": *

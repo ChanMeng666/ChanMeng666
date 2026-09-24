@@ -709,7 +709,7 @@ certificates:
     # Recognition certificate for serving as Mentor in the 2024 Winter cohort of the
     # "Forward With Her" (她行) Mentorship Program — the 360+-mentor, 800+-mentee
     # women-in-STEM programme. This is the single-largest source of independently
-    # attested mentorship impact in Chan's career (7 of 26 LinkedIn recommendations
+    # attested mentorship impact in Chan's career (7 of 27 LinkedIn recommendations
     # come from FWH mentees) — see statisticsClaims block + work[id=forward-with-her].
   - name: "#IAmRemarkable Workshop Participation"
     issuer: Rmrkblty.org
@@ -860,7 +860,7 @@ publications:
       Chan-hosted English-language podcast exploring landmark research
       papers driving innovation in Artificial Intelligence, LLMs, and
       beyond. Companion LinkedIn newsletter ("Decoding the Future") with
-      800+ subscribers.
+      1,098 subscribers (2026-09-24).
     meta: { x_brand: { type: podcastShow, role: host } }
 
   - name: Future Turing 未来图灵
@@ -924,17 +924,18 @@ publications:
   # ============================================================================
   # Retired 2026-07-21. Kept as historical record only; removed from the
   # 70-linkedin.yaml live-page mirror. URL normalised to the trailing-slash
-  # form LinkedIn actually serves (the two shards disagreed).
+  # form LinkedIn actually serves (the two shards disagreed). 2026-09-24: URL is
+  # the public newsletter page, where Chan checks the subscriber count.
   - name: Decoding the Future (LinkedIn Newsletter)
     tier: secondary
     recency: deprecated
     lastUpdated: "2026-07-21"
     publisher: LinkedIn Newsletter
-    url: https://www.linkedin.com/build-relation/newsletter-follow/?entityUrn=7359054938187984896
+    url: https://www.linkedin.com/newsletters/7359054938187984896/
     summary: |
       Companion LinkedIn newsletter to the Decoding the Future podcast —
-      cutting-edge AI research papers and LLM innovations. 800+ tech
-      enthusiasts subscribed (as of the historical README snapshot).
+      cutting-edge AI research papers and LLM innovations. 1,098
+      subscribers as of 2026-09-24.
     meta: { x_brand: { type: newsletter, role: host } }
 
   - name: What's Shipping in AI (Weekly AI Digest)

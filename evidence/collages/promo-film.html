@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="collage.css">
+<style>
+  .film { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .film .shot { aspect-ratio: 16 / 9; object-fit: cover; }
+  section + section { margin-top: 30px; }
+</style>
+</head>
+<body>
+<div class="plate">
+  <header>
+    <div>
+      <div class="kicker">Promo films · Remotion, as code</div>
+      <h1>Cut to the beat, in every aspect ratio</h1>
+    </div>
+    <div class="chips">
+      <span class="chip o">Remotion</span>
+      <span class="chip">Suno score</span>
+      <span class="chip v">16:9 · 9:16 · 4:5 · 1:1</span>
+    </div>
+  </header>
+  <div>
+    <section>
+      <div class="group-title">ArchCanvas studio film <small>coded UI replica · 15 / 30 / 60 / 120 s · 16:9 + 9:16</small></div>
+      <div class="film">
+        <img class="shot" src="../src/promo-film/archcanvas-01-describe.jpg">
+        <img class="shot" src="../src/promo-film/archcanvas-02-plan.jpg">
+        <img class="shot" src="../src/promo-film/archcanvas-05-written-list.jpg">
+        <img class="shot" src="../src/promo-film/archcanvas-07-end-card.jpg">
+      </div>
+    </section>
+    <section>
+      <div class="group-title">She Sharp × Les Mills event promo <small>30 s · four aspect ratios · built from 2024 event photos</small></div>
+      <div class="film">
+        <img class="shot" src="../src/promo-film/lesmills-L-1-open.jpg">
+        <img class="shot" src="../src/promo-film/lesmills-L-2-stat.jpg">
+        <img class="shot" src="../src/promo-film/lesmills-L-5-title.jpg">
+        <img class="shot" src="../src/promo-film/lesmills-L-7-panel.jpg">
+      </div>
+    </section>
+  </div>
+  <footer><span>Stills from the rendered masters</span><b>chanmeng.org/work</b></footer>
+</div>
+</body>
+</html>

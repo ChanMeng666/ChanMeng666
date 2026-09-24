@@ -33,6 +33,13 @@
 // re-add them. Products built at these employers (GAVIGO IRE, She Sharp
 // Platform) are referenced by name but NOT re-described — the deep narrative
 // lives in Selected Projects for independent OSS work.
+//
+// BUILT LINES (2026-09-24): the "Built:" line under a summary links to the
+// public website or product Chan built for that employer — so a reader sees
+// the employer sites are part of her portfolio. No markers and no legend
+// (Chan's call). Only where the shard backs it (10-career.yaml): none on
+// TechNest (the course platform is her own product, not TechNest's), and
+// Sanicle's line carries no links because sanicle.cloud is offline.
 #let experience() = section("Experience", {
   role-line(
     title: "Founder & Sole Engineer",
@@ -41,6 +48,7 @@
     dates: "Apr 2026 — Present",
     location: [Auckland, New Zealand · *Remote*],
     summary: [Architects and self-builders describe a building in plain words and get back a dimensioned, buildable floor plan. When plans drawn as pictures proved impossible to check, invented *#link("https://github.com/ChanMeng666/archlang")[ArchLang]*, the open-source language that compiles a plan into a precise drawing (*53 npm releases*, *139 diagnostic codes*), and rebuilt the product on it — so an edit is exact, not regenerated.],
+    built: [#link("https://archcanvas.uk/")[archcanvas.uk] · #link("https://archlang.uk/")[archlang.uk]],
   )
   role-line(
     title: "Chief Technology Officer",
@@ -55,6 +63,7 @@
     // no slack for the extra clause. Do not delete this marker without also
     // rewording the claim.  copy-lint-ok:R2
     summary: [China's first women's-health-technology organisation outgrew its web platform twice; rebuilt it both times as sole engineer, remotely. Built everything the 2026 Shanghai Summit ran on online, including an application system the founder reviews in batches: four days, *20 confirmed speakers*, headlined by Ida Tin.],
+    built: [#link("https://www.femtechweekend.com/")[femtechweekend.com], both generations · the 2026 Summit pages and application system],
   )
   role-line(
     title: "Senior Full-Stack Engineer & Website Team Lead",
@@ -63,6 +72,7 @@
     dates: "Jul 2025 — Sep 2026",
     location: [Auckland, New Zealand · *Hybrid*],
     summary: [A volunteer-run NZ women-in-STEM charity (*96+ events since 2014*) moved off rented software onto a system it owns: sign-ups, memberships, events, and GPT-4o-mini mentor matching. Recruited by founder Dr Mahsa Mohaghegh, led the build across *13.3 months*, including a *1,549-person* mailing-list cutover with *0 failures*. Rewrote the charity's recurring work — event setup, newsletters, posters, video — as *11 agent skills* a non-engineer can follow, so the handover was written down before leaving.],
+    built: [#link("https://www.shesharp.org.nz/")[shesharp.org.nz] · #link("https://www.shesharp.org.nz/resources/newsletters")[the newsletter] · #link("https://www.shesharp.org.nz/present/aotearoa-ai-hackathon-festival-2026")[the AI Hackathon deck]],
   )
   role-line(
     title: "Founding Principal Engineer, Activation, Execution & AI Systems",
@@ -71,6 +81,7 @@
     dates: "Oct 2025 — Sep 2026",
     location: [Wilmington, Delaware, United States · *Remote*],
     summary: [Tap a game in a feed and it plays instantly, with no app-store install — built the Intelligence Layer that makes GAVIGO's activation platform hold that promise under load. Go orchestrator: a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE) — *sub-millisecond p50 restore*, an *84.6% warm-pool hit rate*, *zero errors at 100 concurrent WebSocket clients*, and a DigitalOcean → GCP move in a *30-minute cutover*. Built it solo; promoted Core Engineer → Founding Principal across three contracts.],
+    built: [#link("https://ire.gavigo.com/")[ire.gavigo.com], the live activation platform],
   )
   role-line(
     title: "AI Instructor & Mentor",
@@ -92,12 +103,13 @@
     dates: "Mar 2025 — Feb 2026",
     location: [Tulsa, Oklahoma, United States · *Remote*],
     summary: [A US women's-health startup needed its product off a no-code prototype and into IBM's partner network. Promoted from Senior AI/ML Infrastructure Engineer to CTO leading a *team of five*; rebuilt it as a multi-tenant B2B SaaS for employees and HR teams, and built the IBM watsonx integration and live demo behind Sanicle's #link("https://www.ibm.com/partnerplus/directory/solution/0638")[*IBM Silver Partner*] certification.],
+    built: [the company website (Next.js) and the IBM watsonx demo app],
   )
   v(4pt)
   block(above: 0pt, below: 0pt, {
     set par(leading: 0.7em, justify: false)
     text(size: size-tiny, fill: muted, style: "italic")[
-      *Previously:* *AI Agent Architect at #link("https://engram.media/")[Engram]* (Albuquerque, NM · remote; recruited onto *Anthropic's Partner Network architect track* after founder Luka Madzarac's own Claude agent surfaced Chan's open-source portfolio — publicly confirmed by him; credentials behind Engram's Partner Network approval) · *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* (Douyin Mall capstone, Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ; offline-first React Native field app, \#1 contributor) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 26 LinkedIn recommendations).
+      *Previously:* *AI Agent Architect at #link("https://engram.media/")[Engram]* (Albuquerque, NM · remote; recruited onto *Anthropic's Partner Network architect track* after founder Luka Madzarac's own Claude agent surfaced Chan's open-source portfolio — publicly confirmed by him; credentials behind Engram's Partner Network approval) · *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* (Douyin Mall capstone, Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ; offline-first React Native field app, \#1 contributor) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 27 LinkedIn recommendations).
     ]
   })
 })

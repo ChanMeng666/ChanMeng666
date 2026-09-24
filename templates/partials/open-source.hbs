@@ -14,10 +14,12 @@
      this section leads with the work Chan owns herself. Its rows must always
      name the client, which is the whole reason the band exists rather than
      folding these two into the tables above.
-     The commissioned row's "For …" line prefers _affiliationOrgs (logo+link),
-     then _entityLinked (commissioner NAME linked via projects[].entityUrl, with
-     the em-dash descriptor kept as prose — tam-ai-ti → Riria Te Kanawa's
-     LinkedIn), then plain `entity`, then the _clientOrg text link.
+     The commissioned row's "↳ For …" line sits in the description cell, the
+     same <br><sub> slot as "↳ Works with …" — never under the project title.
+     It prefers _affiliationOrgs (logo+link), then _entityLinked (commissioner
+     NAME linked via projects[].entityUrl, with the em-dash descriptor kept as
+     prose — tam-ai-ti → Riria Te Kanawa's LinkedIn), then plain `entity`, then
+     the _clientOrg text link.
      The AI-agents row carries a "↳ Cohorts taught for …" logo strip from
      _cohortPartners (projects[].meta.x_brand.cohortPartners) — teaching-partner
      brands as display-only social proof, NOT organizations[] entries. Only
@@ -67,12 +69,13 @@
      outside the conditional so it is still correct when the list is empty.
      Client builds below card weight. The partner line
      is REQUIRED reading here — these rows exist to show who commissioned the
-     work, so a row must never render without one. _affiliationOrgs gives the
-     logo treatment. When the client has no logo on disk the fallback is the
-     project's own `entity` prose (tam-ai-ti → "Riria (Missy) Te Kanawa — an
-     independent research commission from her personally", which says far more
-     than the bare org name "Whiri-AI" its clientOrgId resolves to), and only
-     then the _clientOrg text link. --~}}
+     work, so a row must never render without one. It lives in the description
+     cell (right), prefixed "↳ For", matching the AI-agents "↳ Works with …"
+     line. _affiliationOrgs gives the logo treatment. When the client has no
+     logo on disk the fallback is the project's own `entity` prose (tam-ai-ti →
+     "Riria (Missy) Te Kanawa — an independent research commission from her
+     personally", which says far more than the bare org name "Whiri-AI" its
+     clientOrgId resolves to), and only then the _clientOrg text link. --~}}
 #### Client & commissioned work
 
 <table>
@@ -83,8 +86,8 @@
   </colgroup>
 {{#each _commissionedProjects}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
-    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong>{{#if _affiliationOrgs.length}}<br><sub>For {{#each _affiliationOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{else}}{{#if _entityLinked}}<br><sub>For <a href="{{_entityLinked.url}}">{{_entityLinked.name}}</a>{{#if _entityLinked.rest}} — {{_entityLinked.rest}}{{/if}}.</sub>{{else}}{{#if entity}}<br><sub>For {{entity}}.</sub>{{else}}{{#if _clientOrg}}<br><sub>For <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{/if}}{{/if}}{{/if}}</td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}</td>
+    <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _affiliationOrgs.length}}<br><sub>↳ For {{#each _affiliationOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{else}}{{#if _entityLinked}}<br><sub>↳ For <a href="{{_entityLinked.url}}">{{_entityLinked.name}}</a>{{#if _entityLinked.rest}} — {{_entityLinked.rest}}{{/if}}.</sub>{{else}}{{#if entity}}<br><sub>↳ For {{entity}}.</sub>{{else}}{{#if _clientOrg}}<br><sub>↳ For <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{/if}}{{/if}}{{/if}}</td>
   </tr>
 {{/each}}</table>
 

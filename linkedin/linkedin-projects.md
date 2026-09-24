@@ -191,7 +191,7 @@ Stack: Docusaurus 3.8, Cloudflare Pages, Llama 3.1 8B via Cloudflare Workers AI 
 ```
 Tam-AI-Ti is a voice-first AI financial-wellness coach grounded in Te Whare Tapa Whā — the Māori model of holistic health where physical, mental, spiritual, and family wellbeing are inseparable from financial decisions. Users talk to the coach in te reo Māori or English; the coach reflects back in the same cultural frame, not as a Western budgeting app with a cultural wrapper.
 
-Commissioned by Riria (Missy) Te Kanawa — former KPMG NZ Māori Sector Partner, now ASB Bank Māori Executive Lead — introduced by Dr Mahsa Mohaghegh.
+A development commission from Riria (Missy) Te Kanawa, Māori Executive Lead — Strategy & Governance at ASB Bank (former KPMG NZ Māori Sector Partner), introduced by Dr Mahsa Mohaghegh.
 
 • 351 solo commits over six months. 48-table / 494-column schema across 10 modules where every Hauora dimension is a typed column, not UI decoration: culture is in the schema.
 • 19-user research cohort (Oct 2025 – Mar 2026): 181 bilingual journal entries, 35 voice sessions, 146 AI coach messages — sustained engagement on a pre-commercial product with zero marketing.

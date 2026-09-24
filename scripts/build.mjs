@@ -829,10 +829,20 @@ for (const p of data.projects ?? []) {
   // itself stays plain (it feeds llms/CV/etc.), so the link lives only here.
   if (p.entityUrl && p.entity) {
     const parts = String(p.entity).split(/\s+—\s+/);
+    // A client collaborator on this project can supply a headshot
+    // (collaborators[].meta.x_brand.image). The commissioned-work row shows
+    // it in the "↳ For …" line, in the same slot as an organisation logo.
+    const client = (data.collaborators ?? []).find((c) =>
+      (c.relationship ?? []).includes("client") &&
+      (c.worksTogether ?? []).some((w) => w.contextType === "project" && w.contextId === p.id) &&
+      c.meta?.x_brand?.image &&
+      fileExists(c.meta.x_brand.image),
+    );
     p._entityLinked = {
       name: parts[0],
       rest: parts.slice(1).join(" — "),
       url: p.entityUrl,
+      image: client ? client.meta.x_brand.image : null,
     };
   }
   const relIds = p.relatedProjectIds ?? (p.relatedProjectId ? [p.relatedProjectId] : []);

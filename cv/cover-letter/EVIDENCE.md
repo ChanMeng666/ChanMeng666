@@ -27,9 +27,7 @@ five-minute search would contradict.
    UNSOURCED in the org's own `stats.ts`, and the file states explicitly that no
    such mentorship survey was ever run. The **only** computed, sourced figure is
    **96+ events since 2014**. Use that one. — `10-career.yaml :: work[she-sharp]`
-4. **Tam-AI-Ti was commissioned by Riria (Missy) Te Kanawa personally.** ASB Bank,
-   her employer, was **not a party** to the commission. Naming her current role is
-   fine; implying an ASB engagement is not. — `20-projects-flagship.yaml :: tam-ai-ti`
+4. **Tam-AI-Ti is a development commission from Riria (Missy) Te Kanawa, Māori Executive Lead — Strategy & Governance at ASB Bank.** The commissioner is her, in that role. Do not write that ASB Bank the institution commissioned or paid for the work. — `20-projects-flagship.yaml :: tam-ai-ti`
 5. **The She Sharp title is "Senior Full Stack Engineer & Website Team Lead".**
    Not "AI Lead", not "Ambassador" — those are the organisation's own billing on
    its site and at events, not the role. — `10-career.yaml :: work[she-sharp]`

@@ -897,19 +897,18 @@ organizations:
     hq: { city: Auckland, countryCode: NZ }
     description: |
       Research/venture vehicle associated with Riria (Missy) Te Kanawa
-      (former KPMG NZ National Māori Sector lead; now Māori Executive Lead at
-      ASB Bank — her employer, unrelated to this commission) — the vehicle
-      through which she personally commissioned the Tam-AI-Ti AI
-      financial-wellness research pilot for Māori communities, and the
-      repository home for tam-ai-ti-web.
+      (Māori Executive Lead — Strategy & Governance at ASB Bank; former KPMG
+      NZ National Māori Sector lead) — the vehicle through which she
+      commissioned the Tam-AI-Ti development, and the repository home for
+      tam-ai-ti-web.
     tier: secondary
     recency: active
-    lastUpdated: "2026-07-11"
+    lastUpdated: "2026-09-24"
     meta:
       x_brand:
         displayTier: secondary
         category: employer
-        context: "Research-commission client for Tam-AI-Ti (Māori AI financial wellness)"
+        context: "Development-commission client for Tam-AI-Ti (Māori AI financial wellness)"
         relatedProjectId: tam-ai-ti
 
   - id: techrosie
@@ -1001,8 +1000,13 @@ collaborators:
     note: "Tam-AI-Ti commissioner; former KPMG NZ National Māori Sector lead and Maui Rau report-series author; now Māori Executive Lead at ASB Bank."
     tier: flagship
     recency: active
-    lastUpdated: "2026-05-22"
+    lastUpdated: "2026-09-24"
     publicListing: true
+    meta:
+      x_brand:
+        # Public LinkedIn headshot. The commissioned-work "↳ For …" line
+        # renders this beside her name, the same slot as an org logo.
+        image: /public/people/riria-te-kanawa.jpg
 
   - id: zhu-yihan
     name: Zhu Yihan

@@ -18,8 +18,9 @@
      same <br><sub> slot as "↳ Works with …" — never under the project title.
      It prefers _affiliationOrgs (logo+link), then _entityLinked (commissioner
      NAME linked via projects[].entityUrl, with the em-dash descriptor kept as
-     prose — tam-ai-ti → Riria Te Kanawa's LinkedIn), then plain `entity`, then
-     the _clientOrg text link.
+     prose — tam-ai-ti → Riria Te Kanawa's LinkedIn, with her headshot from
+     collaborators[].meta.x_brand.image when that file is on disk), then plain
+     `entity`, then the _clientOrg text link.
      The AI-agents row carries a "↳ Cohorts taught for …" logo strip from
      _cohortPartners (projects[].meta.x_brand.cohortPartners) — teaching-partner
      brands as display-only social proof, NOT organizations[] entries. Only
@@ -72,9 +73,10 @@
      work, so a row must never render without one. It lives in the description
      cell (right), prefixed "↳ For", matching the AI-agents "↳ Works with …"
      line. _affiliationOrgs gives the logo treatment. When the client has no
-     logo on disk the fallback is the project's own `entity` prose (tam-ai-ti →
-     "Riria (Missy) Te Kanawa — an independent research commission from her
-     personally", which says far more than the bare org name "Whiri-AI" its
+     logo on disk the fallback is the      project's own `entity` prose (tam-ai-ti →
+     "Riria (Missy) Te Kanawa — Māori Executive Lead, Strategy & Governance at
+     ASB Bank — a development commission", which says far more than the bare
+     org name "Whiri-AI" its
      clientOrgId resolves to), and only then the _clientOrg text link. --~}}
 #### Client & commissioned work
 
@@ -87,7 +89,7 @@
 {{#each _commissionedProjects}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _affiliationOrgs.length}}<br><sub>↳ For {{#each _affiliationOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{else}}{{#if _entityLinked}}<br><sub>↳ For <a href="{{_entityLinked.url}}">{{_entityLinked.name}}</a>{{#if _entityLinked.rest}} — {{_entityLinked.rest}}{{/if}}.</sub>{{else}}{{#if entity}}<br><sub>↳ For {{entity}}.</sub>{{else}}{{#if _clientOrg}}<br><sub>↳ For <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{/if}}{{/if}}{{/if}}</td>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _affiliationOrgs.length}}<br><sub>↳ For {{#each _affiliationOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{else}}{{#if _entityLinked}}<br><sub>↳ For <a href="{{_entityLinked.url}}">{{#if _entityLinked.image}}<img src="{{_entityLinked.image}}" height="20" alt="{{_entityLinked.name}}"> {{/if}}{{_entityLinked.name}}</a>{{#if _entityLinked.rest}} — {{_entityLinked.rest}}{{/if}}.</sub>{{else}}{{#if entity}}<br><sub>↳ For {{entity}}.</sub>{{else}}{{#if _clientOrg}}<br><sub>↳ For <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{/if}}{{/if}}{{/if}}</td>
   </tr>
 {{/each}}</table>
 

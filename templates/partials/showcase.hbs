@@ -6,8 +6,9 @@
      its own background plate (safe on light and dark canvases).
      Videos with `url: null` render a visible "video coming soon" line plus an
      HTML comment marking the slot: the MP4 is uploaded by
-     hand through GitHub user-attachments, and a bare user-attachments URL on
-     its own line is what GitHub turns into an inline player.
+     hand through GitHub user-attachments. Uploaded cuts of one film sit in a
+     single table row as <video> tags (GitHub turns each into a player; a bare
+     URL only does so as its own paragraph, never inside a cell).
      ═══════════════════════════════════════════════════════════════════════ --}}
 
 ## What I make beyond code
@@ -30,10 +31,11 @@
 > {{#if quote.avatar}}<img src="{{quote.avatar}}" width="28" height="28" alt="{{quote.author}}">&nbsp; {{/if}}— **{{#if quote.profileUrl}}[{{quote.author}}]({{quote.profileUrl}}){{else}}{{quote.author}}{{/if}}**, {{quote.role}} · [the post]({{quote.url}})
 
 {{/if}}
-{{#each _videos}}
-{{url}}
+{{#if _videos.length}}<table><tr>
+{{#each _videos}}<td width="{{_width}}%" valign="top"><video src="{{url}}" controls width="100%"></video><br><sub>{{label}}</sub></td>
+{{/each}}</tr></table>
 
-{{/each}}{{#each _pendingVideos}}<!-- VIDEO PLACEHOLDER: {{../id}} · {{label}} — upload the MP4 via GitHub user-attachments, then set videos[].url in data/profile/45-showcase.yaml -->
+{{/if}}{{#each _pendingVideos}}<!-- VIDEO PLACEHOLDER: {{../id}} · {{label}} — upload the MP4 via GitHub user-attachments, then set videos[].url in data/profile/45-showcase.yaml -->
 <p><sub>▶ <b>Film · {{label}}</b> — video coming soon</sub></p>
 {{/each}}
 {{/each}}

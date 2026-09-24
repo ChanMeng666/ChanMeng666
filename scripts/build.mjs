@@ -258,12 +258,23 @@ data._spotlightProjects = resolveIds(spotlightIds);
     console.error(`✗ showcase error(s):\n  ${errs.join("\n  ")}`);
     process.exit(1);
   }
+  // One table row per film: each cell's width is proportional to its aspect
+  // ratio (read from the label, "16:9" / "9:16"), so every cut in the row
+  // renders at the same height side by side.
+  const videoCells = (vs) => {
+    const ratio = (v) => {
+      const m = /(\d+)\s*:\s*(\d+)/.exec(v.label);
+      return m ? Number(m[1]) / Number(m[2]) : 16 / 9;
+    };
+    const total = vs.reduce((n, v) => n + ratio(v), 0);
+    return vs.map((v) => ({ ...v, _width: Math.round((ratio(v) / total) * 100) }));
+  };
   data._showcase = caps
     .map((c) => ({
       ...c,
       items: (data.showcase ?? [])
         .filter((s) => s.capability === c.id)
-        .map((s) => ({ ...s, _pendingVideos: (s.videos ?? []).filter((v) => !v.url), _videos: (s.videos ?? []).filter((v) => v.url) })),
+        .map((s) => ({ ...s, _pendingVideos: (s.videos ?? []).filter((v) => !v.url), _videos: videoCells((s.videos ?? []).filter((v) => v.url)) })),
     }))
     .filter((c) => c.items.length);
 }

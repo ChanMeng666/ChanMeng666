@@ -119,6 +119,41 @@ const FACTS = [
   { key: "teaching.cohorts", metaPath: "x_brand.teachingImpact.cohortCount",
     cast: "int" },
 
+  // — `intro` film (2026-09-28): the 64-second business card in
+  //   chan-meng-promo-video/films/intro. Its claims ledger is that film's
+  //   claims.md; each rule below asserts the sentence the on-screen number was
+  //   lifted from, so a rewrite that changes what the number counts fails here.
+  //
+  // "11" on screen is captioned "agent skills a non-engineer can run" — the
+  // capability wording. The record says the marketing half is "shipped, not yet
+  // adopted", so the rule pins "can run": a rewrite to "runs" or "used by" is a
+  // different claim and must be re-reviewed, not silently re-matched.
+  { key: "shesharp.agentSkills", project: "she-sharp", field: "narrative.impactHeadline",
+    rule: /as (\d+) agent skills a non-engineer can run/, cast: "int" },
+  // Headline, not the metric row, because the film's basis is "four-month
+  // research cohort" and only the headline carries both halves.
+  { key: "tamaiti.cohort", project: "tam-ai-ti", field: "narrative.impactHeadline",
+    rule: /A (\d+)-person research cohort used it over four months/, cast: "int" },
+  { key: "teaching.learnerReach", metaPath: "x_brand.teachingImpact.learnerReachClaim",
+    rule: /^(\d+\+) direct learners across \d+ cohorts since 2024/, cast: "string" },
+  // Both awards are self-attested (see the note above awards[] in
+  // 30-recognition.yaml); Chan approved the claim on video 2026-09-28. The
+  // rule pins the enumerable form — two named festivals — that makes "two
+  // years running" checkable.
+  { key: "recognition.mentorTwoYears", metaPath: "x_brand.teachingImpact.flagshipAwardClaim",
+    rule: /^(Outstanding Mentor Award, two years running) — AI Hackathon Festival 2025 and Aotearoa AI Hackathon Festival 2026/,
+    cast: "string" },
+  // The film's caption is "By video link · UN HQ, 2025". The rule asserts the
+  // record still says the talk was remote: if that annotation ever goes, the
+  // film would be implying an in-person appearance the record settled against.
+  { key: "recognition.unCsw69Remote", event: "un-csw69-speaker", field: "location",
+    rule: /(presented remotely by video link)/, cast: "string" },
+  // A verbatim contiguous excerpt; the film shows it between ellipses. Matching
+  // the recommendation text itself means an edited recommendation fails the
+  // build instead of leaving a quote on screen that no longer exists.
+  { key: "testimonial.sabaGecgil", reference: "saba-gecgil", field: "reference",
+    rule: /(she turns ambiguous founder-level direction into working systems)/, cast: "string" },
+
   // — beat 09 and end card —
   { key: "reach.githubStars", reach: "GitHub stars", rule: /^([\d,]+\+?)/, cast: "string" },
   { key: "reach.linkedinFollowers", reach: "LinkedIn followers", rule: /^([\d,]+)/, cast: "string" },
@@ -154,7 +189,19 @@ function resolve(spec) {
     if (v === undefined) {
       throw new Error(`meta.${spec.metaPath} does not exist`);
     }
+    if (spec.rule) return finish(spec, String(v), `meta.${spec.metaPath}`);
     return { n: v, display: format(v), path: `meta.${spec.metaPath}`, rule: "direct" };
+  }
+
+  // Sources keyed by id (events, references), read from one prose field.
+  const byId = { event: "events", reference: "references" };
+  for (const [kind, coll] of Object.entries(byId)) {
+    if (!spec[kind]) continue;
+    const e = (profile[coll] ?? []).find((x) => x.id === spec[kind]);
+    if (!e) throw new Error(`no ${kind} with id "${spec[kind]}"`);
+    const v = spec.field.split(".").reduce((o, k) => o?.[k], e);
+    if (v === undefined) throw new Error(`${coll}[${spec[kind]}].${spec.field} does not exist`);
+    return finish(spec, String(v), `${coll}[${spec[kind]}].${spec.field}`);
   }
 
   let raw;
@@ -323,7 +370,9 @@ const payload = {
   people: {
     // The narrative red line, encoded as data so the film's verify:copy gate
     // can enforce it mechanically rather than by review.
-    nameAllowlist: ["Luka Madzarac"],
+    // Saba Gecgil added 2026-09-28 with Chan's approval: the `intro` film
+    // attributes the testimonial.sabaGecgil excerpt to her by name.
+    nameAllowlist: ["Luka Madzarac", "Saba Gecgil"],
     organizationAllowlist: (profile.organizations ?? []).map((o) => o.name).filter(Boolean),
   },
 };

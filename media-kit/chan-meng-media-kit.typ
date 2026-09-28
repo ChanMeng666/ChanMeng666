@@ -283,7 +283,7 @@
     column-gutter: 15pt,
     align: (top, top, top),
     testimonial-card(
-      "He turns ambiguous founder-level direction into working systems and measurable proof. He combines speed with discipline — I would strongly recommend Chan for any ambitious technical team.",
+      "…she turns ambiguous founder-level direction into working systems, measurable proof, and reliable product surfaces. … She combines speed with discipline. … I would strongly recommend Chan for any ambitious technical team…",
       "Saba Gecgil", "Founder & CEO, GAVIGO Inc.",
     ),
     testimonial-card(

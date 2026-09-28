@@ -43,7 +43,7 @@ showcaseCapabilities:
     collage: /public/evidence/collages/pdf-report.jpg
   - id: promo-film
     label: Promo films
-    blurb: Short promotional films built in Remotion as code, scored and cut to the beat, in every aspect ratio a channel needs.
+    blurb: Short promotional films built as code (Remotion, p5.js), scored and cut to the beat, in every aspect ratio a channel needs.
     collage: /public/evidence/collages/promo-film.jpg
   - id: pitch-deck
     label: Pitch decks
@@ -131,6 +131,26 @@ showcase:
       - /evidence/src/promo-film/lesmills-L-2-stat.jpg
       - /evidence/src/promo-film/lesmills-L-5-title.jpg
       - /evidence/src/promo-film/lesmills-L-7-panel.jpg
+
+  - id: chan-meng-monkey-sting
+    capability: promo-film
+    title: "Chan Meng monkey — brand sting"
+    org: Chan Meng
+    relatedProjectId: portfolio-v2
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-28"
+    date: "2026-09"
+    summary: "A wordless 12-second sting for my own mark: one orange pixel left behind by the site's dither field circles the monkey, bursts, and swirls back into a disc as the monkey settles into the exact logo."
+    facts: ["12 s", "p5.js + p5.brush", "every frame a pure function of t"]
+    liveUrl: https://chanmeng.org/work
+    videos:
+      - { label: "12 s", url: null }
+    sources:
+      - /evidence/src/promo-film/chan-monkey-sting-01-peek.jpg
+      - /evidence/src/promo-film/chan-monkey-sting-02-idea.jpg
+      - /evidence/src/promo-film/chan-monkey-sting-03-happy.jpg
+      - /evidence/src/promo-film/chan-monkey-sting-04-logo.jpg
 
   - id: gavigo-pitch-deck
     capability: pitch-deck

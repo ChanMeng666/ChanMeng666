@@ -99,8 +99,12 @@ events:
       lives in `awards[]`; this entry records the appearance.
 
   - id: ai-hackathon-festival-2025-mentor
-    name: "AI Hackathon Festival 2025 — Expert Mentor"
-    role: Mentor
+    # No "— Mentor" suffix (was "— Expert Mentor"): llms-full.txt appends `role`
+    # to the heading. TWO roles (Chan, 2026-09-29, first-hand): venue MC and
+    # technical mentor at the AUT site, as in 2026. The host's public record
+    # bills her as a mentor only, so the MC role rests on her own account.
+    name: "AI Hackathon Festival 2025"
+    role: MC & Mentor
     type: hackathon
     # Was "2025-08"; the host's own record dates the festival 15 August 2025.
     date: "2025-08-15"
@@ -109,9 +113,10 @@ events:
     url: "https://www.shesharp.org.nz/events/ai-hackathon-festival-2025"
     tier: flagship
     recency: recent
-    lastUpdated: "2026-08-25"
+    lastUpdated: "2026-09-29"
     keywords:
       - hackathon
+      - MC
       - mentorship
       - AI for good
       - UN SDGs
@@ -122,8 +127,9 @@ events:
         alt: "Chan Meng speaking on stage at the AI Hackathon Festival 2025"
         caption: "AI Hackathon Festival 2025, Auckland University of Technology."
     summary: |
-      One of 14 expert mentors, guiding 11 teams (80+ participants, including
-      students from Westlake Girls High School) to ship AI solutions aligned with
+      Venue MC at the AUT site, and one of 14 expert mentors, guiding 11
+      teams (80+ participants, including students from Westlake Girls High
+      School) to ship AI solutions aligned with
       the UN Sustainable Development Goals across food insecurity, digital
       accessibility, workforce upskilling, and indigenous environmental
       stewardship. The host's own registration record for the festival is 98

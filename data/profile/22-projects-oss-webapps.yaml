@@ -592,7 +592,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, opennext, cloudflare-workers, react, typescript]
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-09-29"
     name: Eatropolis Website — Production-grade Next.js 16 + OpenNext-on-Cloudflare-Workers event platform for Auckland's award-winning culinary festival (2026-10-10, Shed 10)
     priority: 18
     category: web-apps
@@ -619,6 +619,11 @@ projects:
       the non-technical client edits MDX + JSON directly in the browser.
     url: https://eatropolis.co.nz/
     # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
+    # EVENT EMAIL SYSTEM (Chan, 2026-09-29, first-hand): the team is currently
+    # using an event email system Chan built for bulk invitations and marketing
+    # communications ahead of the festival. Not traced to a file in the
+    # eatropolis-website repo on 2026-09-29 (that repo holds the contracted
+    # launch broadcast only) — claim that it is in use, never a send volume.
     extraLinks:
       - { label: "Phase 1 coming-soon landing", url: "https://eatropolis.co.nz/coming-soon" }
       - { label: "Client — Chow Luck Club", url: "https://chowluckclub.com/" }
@@ -759,6 +764,8 @@ projects:
         Live and public at eatropolis.co.nz since 2026-06-05. The pre-launch access lockdown was opened on launch morning and the full site went public in one step, with a single launch-announcement email sent to every Phase 1 newsletter subscriber. The newsletter pipeline was verified end-to-end (form → database rows → email service → Gmail delivery webhook) in 5.96 seconds.
 
         115 commits, sole developer, across the contracted 9-day intensive build (2026-05-07 → 2026-05-15), with 0 TypeScript errors and 0 schema errors at build time. The 1,000-visitor k6 load test passed with a 0.00% error rate over 113,320 requests in five minutes (the response-time percentile ran above target, attributable to a single local test runner rather than server errors). Lighthouse accessibility, SEO, and best-practices scores meet or exceed 90 on the measured routes; mail-tester scores 10/10.
+
+        The email side outgrew its one contracted launch broadcast. Ahead of the 10 October festival, the Chow Luck Club team is using an event email system I built for its bulk invitations and marketing sends.
 
         The GitHub-as-CMS handoff is proven in practice: after launch, the non-technical client independently made a dozen content edits — home page, coming-soon, tickets, announcement copy — through the browser editor, exactly as the workflow intended.
 

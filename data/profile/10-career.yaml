@@ -22,7 +22,7 @@ work:
     featured: true
     tier: flagship
     recency: active
-    lastUpdated: "2026-09-16"
+    lastUpdated: "2026-09-29"
     keywords:
       - ArchCanvas (AI architect for floor plans)
       - ArchLang (declarative floor-plan language)
@@ -52,6 +52,19 @@ work:
     # 1 of 5 first plans came out clean. Copy about this role is engineering
     # evidence only. Banned words from the founder brief: "first", "only",
     # "permit-ready", "code-compliant".
+    #
+    # EARLY TESTER (Chan, 2026-09-29): Knight Hou, Co-Founder of Relab (PropTech
+    # SaaS), tested ArchCanvas early and showed strong interest in the product
+    # and its applications. Interest from one tester — NOT a customer, pilot,
+    # partnership or traction signal; never upgrade it to any of those.
+    #
+    # PAPER (re-read 2026-09-29 from archlang-paper/PUBLICATION-STATUS.md; that
+    # repo is PRIVATE — never link it). Zenodo preprint published 2026-09-25
+    # (DOI 10.5281/zenodo.22958002, public). arXiv submission received
+    # 2026-09-25, cs.SE, NOT yet announced — say "submitted to arXiv", never
+    # cite an arXiv id until one exists. Two further papers are under
+    # double-anonymous review at a named venue: NEVER mention them, the venue,
+    # or any submission there on any surface (de-anonymisation risk).
     #
     # AUTHORSHIP — sole engineer, built WITH AI coding agents (612 of 853 archcanvas
     # commits carry a Claude co-author line). Say "sole engineer"; never "every
@@ -125,7 +138,19 @@ work:
         **Where it stands.** Live at archcanvas.uk with real payments wired,
         and pre-launch: the public launch is planned for October 2026, and the
         commercial test that decides the next step is written down with its
-        pass and stop thresholds before the result is known.
+        pass and stop thresholds before the result is known. Among the early
+        testers was **Knight Hou, Co-Founder of Relab**, a PropTech SaaS
+        company, who took a close interest in the product and where it could
+        be applied.
+
+        **The research write-up.** Building ArchLang with AI coding agents
+        turned into a software-engineering paper, *Reproducible Is Not
+        Correct: Reflexive Gates and the Self-Descriptions We Ship to Language
+        Models* — a census of the npm packages behind the Model Context
+        Protocol registry, with ArchLang as its depth study. Published as a
+        preprint on Zenodo on 2026-09-25
+        ([doi.org/10.5281/zenodo.22958002](https://doi.org/10.5281/zenodo.22958002))
+        and submitted to arXiv (cs.SE) the same day, awaiting announcement.
       technicalHighlights: |
         ArchCanvas: Next.js 15 + React 19 + TypeScript strict, Tailwind 4,
         Vercel AI SDK v4 over OpenAI models for design and GPT Image for
@@ -558,7 +583,7 @@ work:
     featured: true
     tier: flagship
     recency: recent
-    lastUpdated: "2026-09-16"
+    lastUpdated: "2026-09-29"
     keywords: [Go, "Kubernetes (GKE)", "React Native", WebSocket, "Redis", "gpt-5.4-mini", "AI orchestration", "Distributed systems", "Founding engineer"]
     narrative:
       impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owned the Intelligence Layer end-to-end (96.5% solo on 471 of 488 non-merge commits) with a contractually protected technical domain."
@@ -658,6 +683,12 @@ work:
         Consulting Agreement, Apr 16 2026) to formalise the **Founding
         Principal Engineer, Activation, Execution & AI Systems** title
         and the Protected Technical Domain backing it.
+
+        **What it added up to for the product.** Seen from the user's side,
+        the work was the mobile application and the creator platform for
+        GAVIGO's AI-powered mini-game ecosystem: the feed where games and
+        short videos play instantly, and the profiles, followers and content
+        overlays creators publish through.
 
         **How the role closed (Sept 2026).** I left GAVIGO in September 2026,
         at the end of a project phase, to focus on ArchCanvas. Founder & CEO
@@ -1345,11 +1376,19 @@ work:
     featured: true
     tier: primary
     recency: active
-    lastUpdated: "2026-09-16"
+    lastUpdated: "2026-09-29"
     # EVIDENCE re-read 2026-09-16 from femtech-weekend-website (PRIVATE repo —
     # never link it). Chan supported the 2026 Shanghai Summit REMOTELY; she was
     # not on site. Summit tickets were sold on Humanitix, not through her system —
     # never claim registration or attendance numbers (none exist in the repo).
+    # SCALE, VENUE, SUPPORT (Chan, 2026-09-29, first-hand): around 20 FemTech
+    # founders and business leaders from around the world (= the 20-speaker
+    # lineup) and "hundreds of attendees", held in the PwC building at Qiantan
+    # Center, Pudong, Shanghai (confirmed by Chan 2026-09-29), with strong support
+    # from the Shanghai Pudong New Area Government. Use "hundreds of attendees"
+    # verbatim — no exact figure exists, so never invent one. Chan recommended
+    # Maaike Steinebach (Founder & CEO, FemTech Future) as a speaker; Maaike
+    # travelled from Hong Kong for the summit.
     # AGENDA (Chan, 2026-09-16): she wrote a Typst starter project for the summit
     # agenda and sent it to Zhu Yihan, who built the full agenda document on it
     # and dropped her original Canva version. The Typst project lives with the
@@ -1504,7 +1543,12 @@ work:
         and operate solo.
         It ran as delegates from Australia, Canada, China, Denmark, England,
         the Netherlands, Singapore, South Korea, the United States and
-        Central Asia came through four days: Bayer ran the pitch
+        Central Asia came through four days — around 20 FemTech founders and
+        business leaders on stage and hundreds of attendees in the PwC
+        building at Qiantan Center in Shanghai's Pudong, with strong support
+        from the Shanghai Pudong New Area Government. One of those speakers came through me: I
+        recommended **Maaike Steinebach**, Founder & CEO of FemTech Future,
+        who travelled from Hong Kong to speak. Bayer ran the pitch
         competition, HerAnova Lifesciences was a gold sponsor, and the
         investor panel put AVPN's Patient Lu and Gobi Partners' Leo Chen on
         stage alongside Maryann Umoren Selfe and Alice Zheng. Delivered with
@@ -1590,7 +1634,9 @@ work:
       online: the summit pages, an application system for pitch, programme
       and speaker applicants, and an admin dashboard where the founder reviews
       and approves them in batches. Four days, June 22–25, 20 speakers
-      headlined by Ida Tin.
+      headlined by Ida Tin and hundreds of attendees in the PwC building at
+      Qiantan Center, Pudong, with support from the Pudong New Area
+      Government.
 
   - id: copilotkit
     name: CopilotKit

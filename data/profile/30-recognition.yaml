@@ -951,6 +951,34 @@ publications:
     meta: { x_brand: { type: newsletter, role: host } }
 
   # ============================================================================
+  # RESEARCH PAPERS — Chan-authored preprints
+  # ============================================================================
+  # Source: archlang-paper/PUBLICATION-STATUS.md (PRIVATE repo — never link it).
+  # Only the flagship preprint is public. Two further papers from the same repo
+  # are under double-anonymous review: never add them here, never name the
+  # venue. Replace the arXiv note with the arXiv id once it is announced.
+  - name: "Reproducible Is Not Correct: Reflexive Gates and the Self-Descriptions We Ship to Language Models"
+    tier: primary
+    recency: active
+    lastUpdated: "2026-09-29"
+    publisher: Zenodo (preprint)
+    releaseDate: "2026-09-25"
+    url: https://doi.org/10.5281/zenodo.22958002
+    summary: |
+      Sole-authored software-engineering paper (cs.SE; CC BY 4.0). Software now
+      ships descriptions of itself written for language models — schemas,
+      grammars, context files, a server's self-reported identity — and the gate
+      usually guarding them only proves the file regenerates, not that it is
+      true. The paper names the precondition that makes that gate sound, and
+      measures what happens without it: a census of the npm packages behind
+      the Model Context Protocol registry, third-party compiler cases, and a
+      depth study of ArchLang, the floor-plan language Chan built. Preprint
+      published on Zenodo 2026-09-25 (software archive DOI
+      10.5281/zenodo.22950936); submitted to arXiv the same day, awaiting
+      announcement as of 2026-09-29.
+    meta: { x_brand: { type: article } }
+
+  # ============================================================================
   # AI & ML TECHNICAL ARTICLES — Chan-authored on LinkedIn Pulse
   # ============================================================================
   - name: The AI Fluency Framework

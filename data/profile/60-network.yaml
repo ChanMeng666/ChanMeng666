@@ -1025,6 +1025,19 @@ collaborators:
     lastUpdated: "2026-05-22"
     publicListing: true
 
+  - id: maaike-steinebach
+    name: Maaike Steinebach
+    pronouns: she/her
+    currentTitle: Founder & CEO, FemTech Future
+    relationship: [collaborator]
+    worksTogether:
+      - { contextType: work, contextId: femtech-weekend, role: "Shanghai Summit 2026 speaker (22–25 June 2026) on Chan's recommendation; travelled from Hong Kong for the summit" }
+    note: "Founder & CEO of FemTech Future. Chan recommended her to FemTech Weekend as a Shanghai Summit 2026 speaker, and she travelled from Hong Kong to speak (Chan, 2026-09-29). Also hosted the Femtech At Work podcast episode on which Chan was the Episode 21 guest (see publications[])."
+    tier: primary
+    recency: recent
+    lastUpdated: "2026-09-29"
+    publicListing: true
+
   # ---- SECONDARY — confirmed collaborators on specific projects ----
   - id: lesley-gao
     name: Lesley Gao
@@ -1100,3 +1113,33 @@ collaborators:
     recency: recent
     lastUpdated: "2026-05-22"
     publicListing: true
+
+  - id: knight-hou
+    name: Knight Hou
+    currentTitle: Co-Founder, Relab (PropTech SaaS)
+    relationship: [collaborator]
+    worksTogether:
+      - { contextType: work, contextId: archcanvas, role: "Early ArchCanvas tester; showed strong interest in the product and its potential applications" }
+    # One interested tester — not a customer, pilot or partner. Keep the wording
+    # at "early tester" everywhere (see the TRACTION note on work[archcanvas]).
+    note: "Co-Founder of Relab, a PropTech SaaS company. One of ArchCanvas's early testers; showed strong interest in the product and where it could be applied (Chan, 2026-09-29)."
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-09-29"
+    publicListing: true
+
+  # PROSPECTIVE — in discussion, nothing agreed. publicListing: false keeps it
+  # off every generated surface (Chan's call, 2026-09-29: database only until
+  # a collaboration actually lands). No organizations[] entry for NZiFOCUS for
+  # the same reason: the org roster renders publicly.
+  - id: nga-blanchard
+    name: Nga Blanchard
+    currentTitle: Founder, NZiFOCUS
+    relationship: [collaborator]
+    worksTogether:
+      - { contextType: project, contextId: ai-programming-teaching-project, role: "Potential collaboration under discussion (2026-09): technology support for international education and end-to-end services for Vietnamese students" }
+    note: "Founder of NZiFOCUS (international education). As of 2026-09-29 Chan is discussing a potential collaboration: technology support for international education and end-to-end services for Vietnamese students. Prospective only — do not surface until agreed."
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-09-29"
+    publicListing: false

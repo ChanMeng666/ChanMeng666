@@ -36,6 +36,9 @@ const EXTERNAL_REFERENCES = new Set([
   // PDF's alternate links and by recruiter LLMs — not orphan assets.
   "/public/cv.jsonld",
   "/public/cv-llms.txt",
+  // Extended CV (cv/build.ps1). The README footer links the chanmeng.org copy
+  // (synced from here), so no rendered surface names this path any more.
+  "/public/chan-meng-cv-extended.pdf",
   // Media-kit PDF output (media-kit/build.ps1) — a downloadable deliverable,
   // not linked from any rendered surface. The photos/logos it features are
   // picked up by the Typst-source scan below.

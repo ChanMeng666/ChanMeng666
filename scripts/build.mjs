@@ -274,7 +274,9 @@ data._spotlightProjects = resolveIds(spotlightIds);
       ...c,
       items: (data.showcase ?? [])
         .filter((s) => s.capability === c.id)
-        .map((s) => ({ ...s, _pendingVideos: (s.videos ?? []).filter((v) => !v.url), _videos: videoCells((s.videos ?? []).filter((v) => v.url)) })),
+        // A repo-relative download.src is a blob page on GitHub (a click opens
+        // the viewer, not the file); /raw/ serves the bytes so the link downloads.
+        .map((s) => ({ ...s, _downloadHref: s.download && (s.download.src.startsWith("/") ? `https://github.com/ChanMeng666/ChanMeng666/raw/main${s.download.src}` : s.download.src), _pendingVideos: (s.videos ?? []).filter((v) => !v.url), _videos: videoCells((s.videos ?? []).filter((v) => v.url)) })),
     }))
     .filter((c) => c.items.length);
 }
@@ -875,7 +877,7 @@ data._teachingImpact = data.meta?.x_brand?.teachingImpact ?? null;
 // so personal links (Medium, HF, Discord, YouTube, etc.) stay reachable
 // for AI agents and other surfaces without crowding the visible README.
 {
-  const readmeOrder = ["Newsletter", "Resume", "Extended CV", "Buy Me a Coffee"];
+  const readmeOrder = ["Newsletter", "Resume", "My Story", "Buy Me a Coffee"];
   const all = data.meta?.x_brand?.footerLinks ?? [];
   const byLabel = new Map(all.map((l) => [l.label, l]));
   data._footerLinksReadme = readmeOrder.map((label) => byLabel.get(label)).filter(Boolean);

@@ -23,7 +23,7 @@
 <img src="{{collage}}" width="100%" alt="{{label}}: {{#each items}}{{title}}{{#unless @last}}; {{/unless}}{{/each}}">
 
 {{#each items}}<p><strong>{{title}}</strong>{{#if org}} · <sub>{{org}}</sub>{{/if}}<br>
-{{summary}}{{#if watchUrl}}<br><sub><a href="{{watchUrl}}">Watch the film →</a></sub>{{/if}}{{#if liveUrl}}<br><sub><a href="{{liveUrl}}">Open it live →</a></sub>{{/if}}{{#if download}}<br><sub><a href="{{download.src}}">{{download.label}} ↓</a></sub>{{/if}}</p>
+{{summary}}{{#if watchUrl}}<br><sub><a href="{{watchUrl}}">Watch the film →</a></sub>{{/if}}{{#if liveUrl}}<br><sub><a href="{{liveUrl}}">Open it live →</a></sub>{{/if}}{{#if download}}<br><sub><a href="{{_downloadHref}}">{{download.label}} ↓</a></sub>{{/if}}</p>
 
 {{#if quote}}
 > *“{{quote.text}}”*

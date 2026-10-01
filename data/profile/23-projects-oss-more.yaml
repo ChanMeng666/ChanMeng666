@@ -12,12 +12,12 @@ projects:
   # AI Applications & Agents
   - id: vitex
     provenance: personal
-    tier: flagship
-    recency: recent
+    tier: archive
+    recency: historical
     meta:
       x_brand:
         featuredStack: [vercel-ai-sdk, typst, stripe, digitalocean, docker]
-    lastUpdated: "2026-07-17"
+    lastUpdated: "2026-10-01"
     name: Vitex — AI Career Agent (vitex.org.nz)
     priority: 16
     category: ai-apps
@@ -937,9 +937,9 @@ projects:
         I built and run the entire platform end-to-end: Docusaurus configuration, the versioned-docs taxonomy across five cohorts, every cohort's curriculum content, the Cloudflare Worker RAG backend (worker entry, chat handler, RAG module, Vectorize seeding, KV session store), the BGE-Base embeddings ingestion pipeline, the Typst PDF handout build, the Mermaid dual-view component, the Notion-Worker proxy and Demo Day showcase for Capstone voting, the Algolia contextual-search configuration, and the bilingual i18n across every surface. I migrated production from Vercel to Cloudflare Pages in 2026-04, and in 2026-07 hardened the chat backend (custom domain, rate limiting, CORS allow-list, WAF) and restored it onto Cloudflare's current model after the old one was deprecated. I continue to ship the current cohort's recordings and lab content each week.
   - id: readme-profile-generator
     provenance: personal
-    tier: archive
+    tier: secondary
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-01"
     name: README Profile Generator
     priority: 61
     category: branding
@@ -1279,9 +1279,9 @@ projects:
   # ------- AI Applications & Agents (continued) -------
   - id: typst-claude-skill
     provenance: personal
-    tier: primary
-    recency: active
-    lastUpdated: "2026-08-26"
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: Typst Skill for Claude Code
     priority: 10
     category: ai-apps
@@ -1358,9 +1358,9 @@ projects:
   # ------- Commercial / Partnership Web Applications -------
   - id: ai-hackathon-assistant
     provenance: hackathon
-    tier: primary
+    tier: secondary
     recency: recent
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-10-01"
     name: Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)
     priority: 14
     category: ai-apps
@@ -1659,12 +1659,12 @@ projects:
     status: archived
   - id: her-waka
     provenance: client
-    tier: primary
+    tier: secondary
     recency: historical
     meta:
       x_brand:
         featuredStack: [mintlify, github]
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-10-01"
     name: HER WAKA — Employment Programme for Women in Auckland
     priority: 30
     category: web-apps
@@ -1722,9 +1722,9 @@ projects:
       impactHeadline: "#1-most-prolific contributor (42% of 539 commits) on CORDE's offline-first React Native field-operations app — still in active use by CORDE's water- and civil-infrastructure crews across Canterbury; also owned 97.9% of the documentation track."
   - id: portfolio-v2
     provenance: personal
-    tier: primary
+    tier: secondary
     recency: active
-    lastUpdated: "2026-07-10"
+    lastUpdated: "2026-10-01"
     name: 2D Portfolio — chanmeng.org
     priority: 12
     category: ai-apps
@@ -1995,8 +1995,8 @@ projects:
   - id: github-visitor-counter
     provenance: personal
     tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-07"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: GitHub Visitor Counter
     priority: 64
     category: branding
@@ -2039,9 +2039,9 @@ projects:
     status: archived
   - id: design-pages
     provenance: personal
-    tier: archive
+    tier: secondary
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-01"
     name: Design Pages
     priority: 44
     category: creative
@@ -2094,9 +2094,9 @@ projects:
     status: archived
   - id: flip-book-template
     provenance: personal
-    tier: archive
+    tier: secondary
     recency: historical
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-10-01"
     name: Flip Book Template
     priority: 37
     category: web-apps
@@ -2139,8 +2139,8 @@ projects:
   - id: fishing-club-project
     provenance: coursework
     tier: archive
-    recency: recent
-    lastUpdated: "2026-07-04"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: East Coast Anglers Club (Fishing Club Website)
     priority: 40
     category: web-apps
@@ -2315,8 +2315,8 @@ projects:
   - id: gavigo-logo
     provenance: client
     tier: archive
-    recency: recent
-    lastUpdated: "2026-07-04"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: GAVIGO Logo
     priority: 62
     category: branding
@@ -2477,6 +2477,7 @@ projects:
     extraLinks:
       - { label: "Playground", url: "https://playground.archlang.uk" }
       - { label: "npm (@chanmeng666/archlang)", url: "https://www.npmjs.com/package/@chanmeng666/archlang" }
+      - { label: "Showcase gallery (repo)", url: "https://github.com/ChanMeng666/archlang-showcase" }
     techStack: ["TypeScript 5.7 (ESM, zero runtime dependencies)", "Hand-written lexer + recursive-descent parser + expression evaluator", "tsup (build)", "Biome 2.5 (lint/format)", "Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression)", "Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF)", "LSP (hover/completion/rename/signature)", "VS Code extension (ChanMeng.archlang, TextMate grammar)", "Vite + CodeMirror 6 playground (100% client-side)", "VitePress docs", "GitHub Action (renders ```arch fences to images)"]
     metrics:
       - { label: "Commits (solo)",   value: "810 (803 by Chan + 7 automated dependency bumps) (2026-06-25 → 2026-09-13); sole engineer, built with AI coding agents" }
@@ -2512,9 +2513,9 @@ projects:
         I invented the language and wrote everything — the language design, the hand-written lexer / parser / evaluator, the 139-code diagnostic system, all five export backends, the lint / circulation / repair / intent / suggest pipelines, the LSP and VS Code extension, the CodeMirror playground, the docs site, the MCP server, and the npm packaging. 803 of the 810 commits are mine, written with AI coding agents; the remaining 7 are automated dependency bumps. No outside contributors so far.
   - id: femtech-radar
     provenance: client
-    tier: secondary
-    recency: active
-    lastUpdated: "2026-07-04"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: FemTech Radar
     priority: 86
     category: ai-apps
@@ -2588,8 +2589,8 @@ projects:
   - id: svg-animation-studio
     provenance: personal
     tier: secondary
-    recency: active
-    lastUpdated: "2026-07-04"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: SVG Animation Studio
     priority: 88
     category: creative
@@ -2616,9 +2617,9 @@ projects:
         Sole author of the primitive library, skills, subagents, and preview.
   - id: cloud-canals
     provenance: personal
-    tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-16"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: Cloud Canals
     priority: 89
     category: games
@@ -2632,8 +2633,8 @@ projects:
   - id: super-mario-makey-makey
     provenance: personal
     tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: Super Mario · Makey Makey Edition
     priority: 90
     category: games
@@ -2767,8 +2768,8 @@ projects:
   - id: geo-markdown-mirror
     provenance: personal
     tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: geo-markdown-mirror
     priority: 97
     category: ai-apps
@@ -2782,8 +2783,8 @@ projects:
   - id: professional-repo-docs-skill
     provenance: personal
     tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: professional-repo-docs
     priority: 98
     category: ai-apps
@@ -2797,8 +2798,8 @@ projects:
   - id: academic-paper-review-skill
     provenance: personal
     tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: Academic Paper Review Skill
     priority: 99
     category: ai-apps
@@ -2812,8 +2813,8 @@ projects:
   - id: app-promo-studio
     provenance: personal
     tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: app-promo-studio
     priority: 100
     category: creative
@@ -2842,8 +2843,8 @@ projects:
   - id: logo-as-code-skill
     provenance: personal
     tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: logo-as-code Skill
     priority: 102
     category: branding
@@ -2862,8 +2863,8 @@ projects:
   - id: readme-showcase
     provenance: personal
     tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    recency: active
+    lastUpdated: "2026-10-01"
     name: readme-showcase
     priority: 103
     category: ai-apps
@@ -3070,8 +3071,8 @@ projects:
   - id: product-reality-check
     provenance: personal
     tier: secondary
-    recency: active
-    lastUpdated: "2026-08-05"
+    recency: recent
+    lastUpdated: "2026-10-01"
     name: product-reality-check
     priority: 106
     category: ai-apps
@@ -3105,3 +3106,134 @@ projects:
         Sole author. MIT. Triggers on the questions people actually ask —
         "who would pay for this?", "why is nobody using it?" — rather than
         requiring a command to be memorised.
+
+  # Added 2026-10-02 (repo triage round 2, data/_intake/repo-triage-wave-2-2026-10.md):
+  # three public repos that had no catalog entry. All SHELVED — tier secondary, in no
+  # README bucket — so they live in dist/profile.json and the llms-full.txt long tail.
+  - id: slack-waterline-skill
+    provenance: personal
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-10-02"
+    name: slack-waterline
+    priority: 107
+    category: ai-apps
+    tagline: A Claude Code skill that reads every message in a Slack workspace and proves nothing was missed — thread-aware catch-up, a daily or weekly DM digest, drafted replies, and two audit gates that fail differently. Zero dependencies, many workspaces from one install
+    repoUrl: https://github.com/ChanMeng666/slack-waterline-skill
+    techStack:
+      - "Claude Code Skill (Agent Skills open standard)"
+      - "Node.js 18+ (zero dependencies, plain fetch against the Slack Web API)"
+      - "node --test"
+      - "GitHub Actions"
+    status: active
+    startDate: "2026-09"
+    narrative:
+      impactHeadline: "Catches the Slack messages unread-counts cannot see — replies buried in old threads — and refuses to mark anything read until a payload was actually delivered, so a missed message cannot quietly disappear."
+      problem: |
+        Slack tools report what is unread, not what you missed. A reply never
+        moves its parent thread, so a channel whose live conversation sits
+        inside one older thread reads as clean from the top level, every day.
+        Most catch-up tooling also marks a message read when it fetches it, so
+        a run that dies halfway, or a summary the model never saw, loses the
+        message for good.
+      technicalApproach: |
+        Three read positions with one writer each: what was read, what the
+        triage scored, and what Slack is still holding on a row it could not
+        clear. A read receipt may only describe what was delivered, never what
+        exists. Two audit gates that fail differently — one walks the local
+        record for self-consistency, the other interrogates Slack for
+        conversations nobody ever enumerated. Per-thread reply counts surface
+        a reply on a months-old parent. Linked Google Sheets are read tab by
+        tab. HTTP 200 is not treated as success, because Slack's file CDN and
+        Google both serve a login page with a 200 when auth fails. Zero
+        dependencies, so nothing lands in the repo it is pointed at.
+      myRole: |
+        Sole author. MIT. Generalised from two Slack ingestion systems Chan ran
+        daily for a year — a personal reply queue for a startup workspace and a
+        conversation archive for a nonprofit — and the library's state tests name
+        the real missed messages each rule came from.
+
+  - id: archlang-showcase
+    provenance: personal
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-10-02"
+    name: ArchLang Showcase
+    priority: 108
+    category: creative
+    tagline: A gallery of floor plans compiled from a few dozen lines of ArchLang source each — famous buildings, TV homes and game maps written as text, each with its story, source, a playground permalink and a social-card kit
+    repoUrl: https://github.com/ChanMeng666/archlang-showcase
+    url: https://archlang.uk/showcase
+    extraLinks:
+      - { label: "Showcase gallery", url: "https://archlang.uk/showcase" }
+      - { label: "ArchLang playground", url: "https://playground.archlang.uk" }
+    techStack:
+      - "ArchLang (.arch source)"
+      - "@chanmeng666/archlang"
+      - "Node.js"
+      - "SVG / PNG render scripts"
+    relatedProjectIds: [archlang]
+    status: active
+    startDate: "2026-08"
+    narrative:
+      impactHeadline: "Every drawing is compiled, not drawn: change a line of .arch source, recompile, get a new building — which is the fastest way to show what the ArchLang compiler does."
+      problem: |
+        A floor-plan language is hard to explain in the abstract. People need
+        to see a recognisable building produced from text, and be able to edit
+        the text themselves.
+      productLogic: |
+        Twelve plans — the West Wing, Villa La Rotonda, a building-code lint of
+        de_dust2, the Skeld from Among Us, a Simpsons ground floor and others —
+        each in its own folder with the .arch source, a story page, the
+        rendered drawing and a link that opens the source in the ArchLang
+        playground.
+      technicalApproach: |
+        One npm script renders every plan to SVG and PNG; a second builds a
+        playground permalink with the source in the URL. Annotation overlays
+        (routes, numbered beats, highlighted rooms, a caption) are appended to
+        the SVG without modifying the plan. A per-plan social.json and
+        overlay.json drive a generated cover and code card for sharing.
+      myRole: |
+        Sole author. The drawings are original fan-art and illustrative
+        approximations from public information — not measured surveys, and not
+        affiliated with or endorsed by any rights holder.
+
+  - id: readme-theme-assets-skill
+    provenance: personal
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-10-02"
+    name: readme-theme-assets-skill
+    priority: 109
+    category: ai-apps
+    tagline: A Claude Code skill that makes README images work in GitHub's light and dark themes — four techniques, a one-question decision between them, and three scripts that check the result against GitHub's own renderer rather than by eye
+    repoUrl: https://github.com/ChanMeng666/readme-theme-assets-skill
+    techStack:
+      - "Claude Code Skill (Agent Skills open standard)"
+      - "Node.js"
+      - "Playwright"
+      - "GitHub Markdown API"
+    status: active
+    startDate: "2026-08"
+    narrative:
+      impactHeadline: "Stops the silent failure where a logo drawn in near-black is invisible on GitHub's dark canvas — picks the right of four fixes and verifies that a different file actually loads in each theme."
+      problem: |
+        A README renders on a canvas the author does not control: white in
+        GitHub light, near-black in dark. Single-colour artwork on transparency
+        fails completely and silently, and nobody notices because authors look
+        at one theme.
+      technicalApproach: |
+        The choice collapses to one question — do you control the markup, or
+        only a URL? — which selects between a picture element with a
+        prefers-color-scheme source, a baked-in background, a parameterised
+        generator, or an in-SVG media query. Three scripts verify instead of
+        assuming: one asks GitHub's Markdown API whether the markup survives its
+        sanitiser, one reads the resolved image under both emulated schemes and
+        fails if both resolve to the same file, and one probes whether the
+        browser propagates the colour scheme into an SVG loaded as an image.
+        Every factual claim in the references is tagged verified or inferred,
+        and two claims that started out wrong are corrected in the history
+        rather than quietly edited away.
+      myRole: |
+        Sole author. MIT. Written from fixing a real profile README and a real
+        logo repository, not from documentation.

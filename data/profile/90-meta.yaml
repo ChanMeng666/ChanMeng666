@@ -233,8 +233,12 @@ meta:
     # band it gets only a one-line long-tail entry in llms-full.txt instead of a
     # full narrative. archcanvas is also repo-less but stays flagship, so it is
     # unaffected. Keep this in mind before demoting any repo-less project.
-    # 2026-08-12 — CUT TO TWO. vitex moved DOWN to aiAgentProjectIds: Chan has
-    # stopped developing it. It is NOT archived and must not be (still
+    # 2026-10-02 SUPERSEDES the vitex paragraph below: Chan archived easy-resume in
+    # repo triage round 2, so vitex is now tier archive (status stays live — the
+    # site is up) and is in no bucket or spotlight. It stays in the database; its
+    # llms-full.txt entry is the long-tail one-liner. History, kept for the record:
+    # 2026-08-12 — CUT TO TWO. vitex moved DOWN to aiAgentProjectIds: Chan had
+    # stopped developing it. It was NOT archived then (still
     # status: live, still tier: flagship, still in spotlightProjectIds) — it
     # simply no longer belongs in a band whose promise is "what I work on
     # full-time". The band is now exactly the ArchLang → ArchCanvas pair, and
@@ -255,10 +259,12 @@ meta:
       - echook
       - archlang
       - archcanvas
-      - vitex                           # easy-resume
       - gradient-svg-generator
       - ai-programming-teaching-project
       - portfolio-v2                    # 2d-portfolio / chanmeng.org
+    # 2026-10-02 (repo triage round 2): vitex removed — archived, no longer a focus.
+    # portfolio-v2 stays although it is now tier secondary: spotlight renders on NO
+    # README surface (only dist/profile.json meta), so it is a data signal, not shelf space.
     # Set 2026-07-14 from Chan's own triage (7 of 53 projects marked "still
     # investing"). Orthogonal to the display buckets: portfolio-v2 is spotlight
     # but shows in no README table, and that is intended. Dropped vs the
@@ -405,7 +411,7 @@ meta:
     # This bucket is part of build.mjs's `displayedIds`, which matters:
     # engagementRoles[].proofProjectId pins tam-ai-ti to a DISPLAYED bucket and
     # the build fails if it lands in a more* list instead.
-    commissionedProjectIds:    [tam-ai-ti, free-period-website]
+    commissionedProjectIds:    [tam-ai-ti]   # 2026-10-02: free-period-website archived (tier archive) and dropped
     # 2026-08-05 second pass: ai-hackathon-assistant REMOVED — it is a
     # sub-project of the She Sharp website and now renders only as a
     # "↳ Sub-projects I built solo:" link on that card, with
@@ -416,13 +422,13 @@ meta:
     # MCP servers rather than under craft. echook follows: the second-most-starred
     # project in the portfolio (86★, behind google-news-mcp at 126).
     # Order = display order.
-    aiAgentProjectIds:         [vitex, echook, google-news-mcp, server-google-jobs, ai-programming-teaching-project, a11y-loop]
+    aiAgentProjectIds:         [echook, google-news-mcp, server-google-jobs, ai-programming-teaching-project, a11y-loop]
     # Open source with a full llms.txt / llms-full.txt entry but NO README table
     # row of its own (already visible as a "↳ Related" link on a card above).
     # ai-hackathon-assistant is back here 2026-08-05: without it, de-listing the
     # project from aiAgentProjectIds would silently drop its narrative from BOTH
     # llms.txt and llms-full.txt (see the _openSourcePrimary note in CLAUDE.md).
-    llmsOnlyOpenSourceIds:     [ai-hackathon-assistant]
+    llmsOnlyOpenSourceIds:     []   # 2026-10-02: ai-hackathon-assistant shelved (tier secondary) -> long-tail line only
     # 2026-08-05 second pass: portfolio-v2 REMOVED — chanmeng.org is already the
     # "Portfolio" pill in the header, so a row here showed the same site twice.
     # css-tower-defense joined; gradient-svg-generator and sunostats came back

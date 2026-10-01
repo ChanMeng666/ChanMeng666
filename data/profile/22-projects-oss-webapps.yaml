@@ -14,12 +14,12 @@ projects:
   # Web Applications
   - id: free-period-website
     provenance: client
-    tier: primary
+    tier: archive
     recency: historical
     meta:
       x_brand:
         featuredStack: [nextjs, react, typescript, tailwindcss, cloudflare-pages]
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-10-01"
     name: FreePeriod Website
     priority: 22
     category: web-apps
@@ -453,7 +453,8 @@ projects:
     category: web-apps
     clientOrgId: femtech-weekend
     relatedWorkId: femtech-weekend
-    relatedProjectIds: [femtech-radar]   # FemTech Radar — the FemTech Weekend intelligence sub-project; cross-linked so it renders as a "↳ Related:" link under this card (same treatment as gavigo-ire → gavigo-website, she-sharp → her-waka)
+    # 2026-10-02: femtech-radar is archived (tier archive), so it no longer renders as a sub-project line here.
+    relatedProjectIds: []
     supersedes: [femtech-weekend]
     tagline: |
       Solo-built (538 of 570 commits, 94.4%, to 2026-07-30) Gen-2 platform for
@@ -1323,9 +1324,9 @@ projects:
         both frontend and backend.
   - id: she-sharp-event-black-board
     provenance: client
-    tier: secondary
-    recency: recent
-    lastUpdated: "2026-07-04"
+    tier: archive
+    recency: historical
+    lastUpdated: "2026-10-01"
     name: She Sharp — Event Welcome Board
     priority: 83
     category: web-apps

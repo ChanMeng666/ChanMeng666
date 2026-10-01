@@ -2513,47 +2513,6 @@ Compilation is a returned value, not a side effect: `compile()` hands back `{ sv
 **Outcomes:** A complete, published language: 810 commits (803 mine, the rest automated dependency bumps) from 2026-06-25 to 2026-09-13, 4,338 passing tests (measured 2026-09-04), released to npm at v1.36.0 over 53 published versions with 19 architecture decision records. The surface area is unusually complete for a solo language project — 8 primitives, 5 export formats, 8 lint-rule modules, a circulation analyzer, a repair pass, an intent-scoring channel, a ~20-command CLI, a full LSP, a VS Code extension, an optional MCP server, a client-side playground, a docs site, a published HuggingFace dataset of self-verifying repair trajectories, and a GitHub Action that renders every ```arch fence in a repo's Markdown. Most tellingly, it is already load-bearing: ArchCanvas's in-browser use of the core drove real hardening, proving the engine under a downstream product rather than in isolation.
 
 **My role:** I invented the language and wrote everything — the language design, the hand-written lexer / parser / evaluator, the 139-code diagnostic system, all five export backends, the lint / circulation / repair / intent / suggest pipelines, the LSP and VS Code extension, the CodeMirror playground, the docs site, the MCP server, and the npm packaging. 803 of the 810 commits are mine, written with AI coding agents; the remaining 7 are automated dependency bumps. No outside contributors so far.
-### Vitex — AI Career Agent (vitex.org.nz) — Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions
-[tier=flagship · recency=recent · updated=2026-07-17]
-- **URL:** https://www.vitex.org.nz/
-- **Repository:** https://github.com/ChanMeng666/easy-resume
-- **Tech stack:** Next.js 15, React 19, TypeScript 5, Vercel AI SDK v6, @ai-sdk/openai, OpenAI gpt-5.5 (reasoning) / gpt-5.4-mini (extract), Zod schemas, Typst (local binary), Neon Postgres, Drizzle ORM, Upstash Redis, Stack Auth, Stripe, Cloudinary, shadcn/ui + Phantom design system, Framer Motion, Public v1 HTTP API (OpenAPI spec + curl playbook in skill.md), vitex-cli (thin API client, bin `vitex`), MCP server (`vitex mcp` via npx, stdio — Claude Desktop/Code, Cursor), Docker, Traefik, DigitalOcean VPS, GitHub Actions CI/CD
-
-**Summary:** AI career agent live at **vitex.org.nz**. Paste a job ad and describe your background in plain text, and an 8-step AI pipeline writes a resume and cover letter tailored to that specific job, then compiles them into a polished, ATS-ready PDF in about 30 seconds across 7 auto-selected templates — no document is rendered by an outside service. Vitex is **agent-ready**: everything the website does is also reachable over a public API, a command-line tool, and an MCP server, so a terminal or an AI assistant (Claude, Cursor, ChatGPT) can drive the whole product without a browser.
-
-**Impact:** Paste a job ad and describe your background — it writes a resume and cover letter tailored to that job and builds them into a polished PDF in about 30 seconds. Works from a browser, the command line, or inside an AI assistant.
-
-**Problem:** Most AI resume tools fail in one of two ways: (a) a thin chatbot wrapper that hands you a paragraph and calls it a resume — no PDF, no ATS-aware structure, no template intelligence; or (b) a form-filling site that spends a minute-plus rendering the same generic template every other user gets. Both miss the real job: the resume has to be tailored to the *specific* job ad, the document has to survive automated applicant-tracking (ATS) parsing, the visual template has to fit the target industry, and the whole round-trip has to feel instant. None of that is true of "paste your CV into ChatGPT."
-
-**Audience:** Three groups. **Job seekers in live applications** — especially in the NZ / Australia / Asia-Pacific markets where Chan personally needed the tool and where vitex.org.nz deliberately lives. **Career-changers** who have to re-tailor every application — the people for whom rewriting a resume per job ad is the actual bottleneck. And **AI-engineering reviewers** assessing Chan's ability to ship a production multi-step AI agent with real users, real billing, and real operations — not a demo.
-
-**Product logic:** The flow is deliberately short. (1) **Homepage** — paste a job ad and describe your background in free text; no CV upload, no field-by-field form. (2) **Generate** — click run and the 8-step pipeline streams its progress live (reading the job ad → reading your background → matching → tailoring → ATS scoring → cover letter → building the PDF), so you watch each stage finish instead of staring at a spinner, then land in the **Editor** with a PDF preview, an ATS score with concrete feedback, and the matching cover letter. (3) **Refine & export** — a plain-English box ("make the leadership section stronger", "shorten the intro") re-does just that slice rather than regenerating everything; then download the PDF or publish a share link. A dashboard keeps a searchable history for signed-in users.
-
-**Business logic:** Each run is a multi-call AI pipeline plus a document compile, so capacity is metered per successful result rather than left open-ended: the ledger records a run **exactly once, and only after a PDF actually compiles**, which makes a failed or retried attempt a non-event. Public **share links** give the product organic reach — a candidate who lands a job can credit Vitex, and the shared resume is itself a live demo of what the product produces. The full stack (auth, database, cache, payments, AI, PDF rendering) is shaped for a real user base, not a showcase.
-
-**Technical approach:** **AI agent layer.** The pipeline runs on the **Vercel AI SDK** with the OpenAI provider across **eight sequential stages**, on two-tier model routing — a cheaper **extract** model (default `gpt-5.4-mini`) for parsing and a stronger **reasoning** model (default `gpt-5.5`) for tailoring, both overridable per deployment, with per-tier reasoning-effort control. Each stage emits a **Zod-validated** structured output:
-1. **JD parsing** — role, seniority, must-have and nice-to-have skills, company signals
-2. **Background parsing** — free-text description → structured skills/experience
-3. **Match analysis** — candidate↔job fit profile
-4. **Tailoring** — reorder, rewrite, and emphasise history toward the parsed job ad
-5. **ATS scoring** — a **deterministic, no-LLM** check of parse-ability, with actionable feedback
-6. **Cover letter** — generated from the same parsed pair
-7. **Render** — auto-select a template + seeded design tokens, emit Typst source
-8. **Compile** — Typst → PDF server-side; the PDF is the deliverable, so the run is committed only here
-
-Right after tailoring, a deterministic **faithfulness gate** re-checks for fabricated skills or employers and triggers one bounded corrective re-tailor — an anti-hallucination guard with no model in the check itself. Every stage streams progress over **Server-Sent Events**. Inputs are read from `sessionStorage` rather than URL params so deep links can't leak a user's data.
-
-**Document engine — Typst, not LaTeX.** PDFs are compiled by a **local Typst binary** inside the Docker image, with no call to any outside service; the project migrated from LaTeX to Typst on 2026-04-06 (same day as the Cloudflare Workers → DigitalOcean VPS move) because Typst compiles in milliseconds where LaTeX needs seconds and Workers couldn't run the binary at all. The image pre-warms the Typst package cache (FontAwesome) so cold starts don't pay a fetch cost. **7 templates** (academic, banking, compact, creative, executive, modern-cv, two-column) are auto-selected from parsed industry/role signals.
-
-**Persistence + product stack.** Neon serverless Postgres + Drizzle ORM (resumes, history, credit ledger); Upstash Redis for short-lived cache; Stack Auth for sign-in and agent API keys; Stripe for the credit ledger; Cloudinary for uploads and rendered PDFs; nanoid for share tokens.
-
-**UI — Phantom.** Next.js 15 App Router + React 19 + TypeScript. The **Phantom** design system — a soft, flat, single-hue aubergine-and-lavender look with light-weight type and generous whitespace — is the deliberate visual identity, and replaced an earlier Neobrutalism (thick borders, hard shadows) treatment in a 2026 UI pass. shadcn/ui + Tailwind for primitives, Framer Motion for transitions, react-hook-form + Zod for validation.
-
-**Deployment + hardening.** Production runs as a single **Docker container** on a **DigitalOcean VPS** behind **Traefik** (reverse proxy + automatic TLS), shipped by **GitHub Actions** with **health-gated rolling deploys** and automatic database migrations. Recent hardening added site-wide security headers (Content-Security-Policy + HSTS in production), request rate-limiting on the API-key/credit/billing routes, and auth + rate-limiting + sandboxing on the PDF-compile endpoint. Two earlier platform migrations (Railway → CF Workers → VPS) and the LaTeX → Typst swap all shipped without an outage.
-
-**Outcomes:** Live and operational at **vitex.org.nz**, serving real users end-to-end from a pasted job ad to a compiled PDF. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.
-
-**My role:** Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.
 ### echook — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
 [tier=primary · recency=active · updated=2026-09-07]
 - **Repository:** https://github.com/ChanMeng666/echook
@@ -3035,229 +2994,6 @@ tool reaches real teams, not less.
 **My role:** Sole author. Published to npm as `a11y-loop`; the repo is written
 agent-first, with an AGENTS.md alongside the README so an agent can
 orient itself without a human intermediary.
-### Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp) — Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template
-[tier=primary · recency=recent · updated=2026-08-05]
-- **URL:** https://hackathon.shesharp.org.nz/
-- **Repository:** https://github.com/ChanMeng666/event-qa-ai-template
-- **Tech stack:** Next.js 16.1 (App Router), React 18 + TypeScript 5, Tailwind CSS v3 + Framer Motion v12, Vercel AI SDK v4.3, @ai-sdk/openai (GPT-4o-mini-2024-07-18 streaming), Three.js 0.182 + @react-three/fiber 8.16, Custom Quantum Orb 3D mascot (CSS 3D transforms + Three.js particles), Sprite affection gamification engine (gesture detection, mood weighting, time-of-day bias), Notion REST API (raw fetch, CF Workers compatible — replaced @notionhq/client SDK), shadcn/ui + Radix primitives, @opennextjs/cloudflare adapter, Cloudflare Workers deployment (migrated from Vercel), wrangler v4 CI/CD, localStorage state persistence (50-msg chat history + sprite affection state), 5-min FAQ client cache + optimistic vote/view updates, AI rate limiting + per-session token budgets + prompt guardrails (2026-07 security hardening), OpenAI Realtime API over WebRTC — two-way voice (2026 relaunch), Ephemeral client secrets minted server-side (OPENAI_API_KEY never reaches the browser), Audio-reactive Three.js orb voice UI + live captions (2026), Vercel deployment (2026 edition — she-sharp1/aihackathon-2026)
-- **Part of:** She Sharp (https://shesharp.org.nz)
-
-**Summary:** Real industry-partnered AI event assistant built for the **AI
-Hackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised
-by **Auckland University of Technology**, **AI Forum New Zealand**,
-and **She Sharp**, with **UN Sustainable Development Goals** as
-the innovation brief. The platform serves participants and mentors
-through three interlocking systems: (1) an **interactive 3D sprite
-mascot** with a 6-tier "Stranger → Soulmate" affection system,
-7-state dynamic mood engine, 17 emotion categories, gesture
-recognition (circle/pat/swipe), negative-behaviour penalties,
-streak bonuses, and time-of-day emotion biases — a fully gamified
-personality layer that responds to how users actually touch the
-page; (2) a **Notion-as-database community FAQ** with up/downvote
-ranking, view tracking, 5-minute client cache, and graceful static
-fallback when Notion is unreachable; (3) an **OpenAI GPT-4o-mini
-streaming chat** with markdown-rendered responses and one-click
-FAQ-to-chat hand-off. After the live deployment, the codebase was
-generalised into a reusable open-source template
-(`event-qa-ai-template` on GitHub, MIT) so any future hackathon /
-conference can fork-and-config the same stack. Chan was
-subsequently recognised among the **14 expert mentors** at the
-festival.
-
-For the **2026 festival** (Aotearoa AI Hackathon Festival 2026,
-AUT City Campus) the project was **rebuilt from the ground up** as
-a single-page **voice-first** agent: the whole site is a centered,
-audio-reactive Three.js orb that starts a **two-way voice
-conversation over the OpenAI Realtime API via WebRTC** (the client
-exchanges SDP directly with OpenAI using a short-lived ephemeral
-secret, so the real API key never reaches the browser), with a
-text-input fallback answered by gpt-4o-mini via the Vercel AI SDK,
-live captions, and a collapsible event-info panel. Agent
-instructions build from a Neon `knowledge` table (graceful
-fallback to config), transcripts persist best-effort, and Upstash
-KV rate-limits token minting. Deployed on Vercel
-(`she-sharp1/aihackathon-2026`, live at aihackathon-2026.vercel.app).
-
-**Impact:** Voice-first AI event agent for the Aotearoa AI Hackathon Festival — relaunched 2026 (AUT) as an audio-reactive orb driving two-way OpenAI Realtime voice + gpt-4o-mini text chat; the 2025 edition served 11 teams / 80+ participants with a gamified 3D sprite mascot + Notion FAQ.
-
-**Problem:** Hackathons and conferences generate the same Q&A surface every
-year: participants ask the same 30 questions ("how do I form a
-team", "what counts as AI", "when do I have to be on site",
-"what's the prize structure", "where do I find a mentor"), and
-organisers answer them via static PDFs that go stale the moment
-the schedule shifts. Bolt-on chatbots exist but they treat
-humans as passive consumers — a popup widget in the corner, a
-knowledge base scraped at build time, no memory of what the
-community itself finds helpful. Three structural gaps stack up:
-(1) the FAQ is **authored once** rather than **curated by the
-community**, so quality drifts; (2) the AI is a generic
-wrapper around a chat API, with no event-specific personality
-or theme tie-in; (3) organisers cannot update content without
-a code redeploy, so the platform calcifies the moment the
-original developer hands it off. The AI Hackathon Festival
-2025 organisers needed a platform that solved all three on the
-timeline of a real event with 80+ participants and three
-co-organising institutions reviewing every word on screen.
-
-**Audience:** Direct users were the **80+ participants and 14 expert mentors**
-of AI Hackathon Festival 2025 — students from Auckland
-universities, **Westlake Girls High School** secondary students,
-and AI Forum NZ industry mentors all asking the same FAQ-style
-questions across a 26-hour residential event. Secondary
-audience: the **three co-organising institutions** (AUT, AI
-Forum NZ, She Sharp) who use the platform as a public-facing
-artefact of their joint programme. Tertiary audience: future
-hackathon and conference organisers in NZ and abroad who can
-fork the open-source template (`event-qa-ai-template`) and
-deploy their own event Q&A AI in under an hour by editing four
-configuration files — `site.config.ts`, `ai.config.ts`,
-`content.config.ts`, `branding.config.ts` — without touching
-component code.
-
-**Product logic:** The product is structured as three layers that compose
-independently. Layer one is the **3D welcoming surface**: the
-landing page renders a particle sphere with a "WELCOME TO AI
-HACKATHON!" greeting set against a `CosmicBackground` Three.js
-scene, with `Calendar` / `MapPin` event-info widgets, sponsor
-logos for the three co-organisers, and a glassmorphism Google
-Maps modal showing AUT WG Building. Layer two is the **chat
-page** — a 70/30 desktop split between a full-screen OpenAI
-chat (with `react-markdown` + `rehype-highlight` for
-code-block syntax highlighting) and a community FAQ sidebar.
-Layer three — the differentiator — is the **interactive sprite
-mascot** that lives alongside the chat: a CSS-3D **Quantum
-Singularity Orb** (accretion disk + photon ring + event
-horizon + energy jets, all built from layered divs with
-`transform-style: preserve-3d` and `rotateX(60deg)`) that
-becomes a fully gamified personality. The user can **circle**,
-**swipe vertically/horizontally**, **pat**, or **click** the
-orb; the gesture detection engine tracks each interaction and
-feeds it through an affection/mood scoring system. Five
-gestures grant affection (circle x5 = +10 affection / "Wheee~!
-So dizzy but fun!"), five negative behaviours penalise it
-(`roughMovement`, `spamClick`, `suddenLeave`, `longIgnore`,
-`excessiveCircle`), and the resulting state drives which of
-17 emotions the sprite expresses — including three **rare**
-emotions (`devoted`, `starry`, `mischievous`) only unlocked
-at the top affection tiers. The result: users do not just chat
-with an AI, they **build a relationship with a tiny digital
-creature** while doing so — a memorable, shareable layer that
-turns a Q&A bot into a piece of event identity.
-
-**Business logic:** Three intertwined value propositions. For the **organising
-institutions**, the platform is a public-facing demonstration
-artefact of the joint AUT × AI Forum NZ × She Sharp programme,
-running on Cloudflare Workers (free tier covers an event-week
-traffic spike with zero cost) with a Notion database that
-**non-developer event staff can edit live** during the event —
-adding new FAQ entries through the Notion UI, watching them
-appear within the 5-minute client cache window. For **future
-event organisers**, after the live event, the codebase was
-deliberately generalised into a **reusable MIT template**
-(`event-qa-ai-template`) with all event-specific content
-extracted into `config/*.ts` files and full setup
-documentation, so the same stack ships any hackathon /
-conference / community event Q&A platform in under an hour of
-configuration. For **Chan**, the project established a
-verifiable, AI-Forum-NZ-endorsed track record of shipping
-commercial-grade AI infrastructure for an industry partner —
-a credential cited in the public LinkedIn announcement of the
-14-mentor cohort and in the Engram Architect Cohort
-Engagement Letter narrative.
-
-**Technical approach:** **AI layer.** OpenAI GPT-4o-mini-2024-07-18 served through
-Vercel AI SDK v4.3's `streamText` with `convertToCoreMessages`,
-returning `toDataStreamResponse()` for character-by-character
-SSE streaming. The system prompt is **generated from
-siteConfig at runtime** so any organiser fork inherits an
-event-specific prompt without code edits — it embeds event
-name, dates, venue, theme (UN SDGs), team-formation rules
-(3-6 members, Hacker/Hipster/Hustler composition), schedule
-(Friday 8 PM venue close, Discord for mentor requests), and
-prize tiers ($250 venue, $1,000 national, $5,000 national
-Agentic AI winner) plus Markdown formatting guidelines. The
-codebase pivoted from Google Gemini 2.5 Flash to OpenAI
-GPT-4o-mini mid-build (commit `5eb3e70`) for cost + Cloudflare
-Workers compatibility reasons; the system prompt generator
-remained provider-agnostic. **3D sprite gamification.** A
-~960-line `sprite-affection.config.ts` declaratively encodes
-the entire gameplay model: 5 gestures, 5 negative behaviours,
-7 mood states (`ecstatic` 80–100 → `upset` -100 to -80),
-17 emotions with per-emotion ear-colour RGB, glow-colour,
-particle-colour, animation type (`bounce` / `shake` / `pulse`
-/ `spin` / `wobble` / `tremble` / `droop`) and eye shape
-(`sphere` / `arc` / `star` / `heart` / `crescent` / `spiral`
-/ `teardrop`), 6 affection tiers (Stranger 0–9 → Acquaintance
-10–29 → Friend 30–59 → Good Friend 60–99 → Best Friend
-100–149 → Soulmate 150+), 7 time-of-day biases (late-night
-boosts `sleepy` x3, evening boosts `love` x1.3), and 5 streak
-bonus levels (1/3/7/14/30 days, 30-day streak unlocks the
-`devoted` rare emotion). Two relational systems link mood
-and affection: a **mood multiplier** scales affection gains
-from 0.5x (depressed) to 1.5x (euphoric), and **affection
-mood protection** sets a floor that rises with tier (Soulmate
-gets a -10 floor + 5 mood/min recovery toward +20). All state
-persists to `localStorage` under `sprite-affection-data`.
-The Quantum Orb itself is rendered with **CSS-only 3D**
-(preserve-3d transforms + rotateX) + Three.js particle
-accents — no GLB / heavy 3D pipeline — so the bundle stays
-small enough for Cloudflare Workers. **Notion backend.** A
-non-obvious engineering call: the project initially used
-`@notionhq/client`, but migrating to Cloudflare Workers
-(commit `5b1dc7e`) broke the Node-dependent SDK; the fix
-(commit `20eaf2e`) replaced it with **direct REST calls
-against `api.notion.com/v1` using native `fetch`** — version
-header `Notion-Version: 2022-06-28`, filter by
-`IsActive` checkbox, parse `Title` / `RichText` / `Select` /
-`Number` properties via small typed getters. Four API routes
-— `/api/chat`, `/api/faq/questions`, `/api/faq/vote`,
-`/api/faq/view` — wrap the same client. **Deployment.**
-Migrated from Vercel to Cloudflare Workers using
-`@opennextjs/cloudflare` v1.3 + wrangler v4; the entire stack
-now ships on Cloudflare's free tier including the AI streaming
-endpoint. The build command `opennextjs-cloudflare build &&
-opennextjs-cloudflare deploy` handles the Next.js → Workers
-adapter step.
-
-**Outcomes:** Delivered live for the **AI Hackathon Festival 2025** at AUT
-City Campus WG Building, **15–16 August 2025**. Used by **11
-teams and 80+ participants** during the residential event —
-AI Forum NZ's public LinkedIn cohort announcement (with full
-Westlake Girls High School student attendance) cites Chan as
-**1 of 14 expert mentors**, recognised at the event. The
-teams shipped solutions across the UN SDG brief — food
-insecurity, digital accessibility, workforce upskilling, and
-indigenous environmental stewardship — with national-tier
-prizes flowing through the AI Forum NZ pipeline (AI Summit
-entry worth $1,499, $1,000 national winner, $5,000 national
-Agentic AI winner, ArcGIS licences). Post-event, the codebase
-was **refactored into a reusable MIT template** (commit
-`948bdf0` "transform project into reusable event Q&A
-template"), documented in `docs/TEMPLATE-SETUP.md`,
-`docs/NOTION-INTEGRATION.md`, and `docs/UI-DESIGN-SYSTEM.md`,
-with the live deployment retained as the canonical worked
-example. Listed alongside Chan's other commercial-grade AI
-platforms (echook, vitex, chinese-redefine,
-ai-programming-teaching-project) as portfolio evidence of
-end-to-end industry-partner delivery — design, AI integration,
-gameplay engineering, database, deployment, and post-delivery
-productisation as a reusable open-source artefact.
-
-**My role:** Sole developer end-to-end. Owned the discovery phase with the
-three co-organising institutions, designed the dual-layer
-product (chat surface + gamified mascot + Notion FAQ), built
-every component, authored both the Gemini and the OpenAI
-provider implementations, designed the entire ~960-line
-affection / mood / emotion gameplay schema, engineered the
-CSS-3D Quantum Orb visualisation, migrated the deployment
-from Vercel to Cloudflare Workers when free-tier economics
-and Notion-SDK incompatibility forced the move, refactored
-the codebase into a reusable open-source template after the
-live event, and authored the three setup-documentation files.
-On the mentorship side: served as one of the 14 expert
-mentors during the 26-hour event itself, guiding teams on
-prompt design, SDG framing, and product narrative —
-simultaneously building the platform and using it.
 ### Chromaflow — 355 parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
 [tier=primary · recency=active · updated=2026-08-05]
 - **URL:** https://gradient-svg-generator.vercel.app/
@@ -3754,7 +3490,7 @@ wrote the Gulp + LESS build pipeline, and authored the
 - [She Sharp](https://www.shesharp.org.nz/) [tier=flagship · recency=recent · updated=2026-09-16]
 - [TikTok Shop Go Template](https://github.com/ChanMeng666/douyin-mall-go-template) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [腾讯会议录屏下载助手 — Chrome Web Store-Published Extension](https://github.com/ChanMeng666/tencent-meeting-video-downloader) [tier=archive · recency=deprecated · updated=2026-09-02] -- live: https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
-- [FreePeriod Website](https://github.com/ChanMeng666/free-period-website) [tier=primary · recency=historical · updated=2026-08-05] -- live: https://free-period-website.pages.dev/
+- [FreePeriod Website](https://github.com/ChanMeng666/free-period-website) [tier=archive · recency=historical · updated=2026-10-01] -- live: https://free-period-website.pages.dev/
 - [LibraryOS — Multi-Tenant Library SaaS](https://github.com/ChanMeng666/library-os) [tier=archive · recency=deprecated · updated=2026-07-14]
 - LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026](https://www.femtechweekend.com/) [tier=flagship · recency=active · updated=2026-09-16]
@@ -3763,12 +3499,12 @@ wrote the Gulp + LESS build pipeline, and authored the
 - [SendJoy — Visual Email Platform](https://github.com/ChanMeng666/send-joy) [tier=archive · recency=deprecated · updated=2026-05-19]
 - [Seismophone — The independent observatory for AI music](https://seismophone.chanmeng.org/) [tier=primary · recency=recent · updated=2026-08-05]
 - [TikTok Shop Java Template](https://github.com/ChanMeng666/douyin-mall-java-template) [tier=archive · recency=deprecated · updated=2026-07-14]
-- [She Sharp — Event Welcome Board](https://github.com/ChanMeng666/she-sharp-event-black-board) [tier=secondary · recency=recent · updated=2026-07-04]
+- [She Sharp — Event Welcome Board](https://github.com/ChanMeng666/she-sharp-event-black-board) [tier=archive · recency=historical · updated=2026-10-01]
 - [Douyin Mall (Spring Boot Backend)](https://github.com/ChanMeng666/douyin-mall) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [Douyin Mall Frontend](https://github.com/ChanMeng666/douyin-mall-frontend) [tier=archive · recency=deprecated · updated=2026-07-14]
 - ESOL Platform (NZCEL Prep) [tier=archive · recency=historical · updated=2026-05-18]
 - [Forward with Her Mentorship Programme Website](https://github.com/ChanMeng666/forward-with-her-mentorship-program) [tier=archive · recency=deprecated · updated=2026-05-30]
-- [HER WAKA — Employment Programme for Women in Auckland](https://herwaka.shesharp.org.nz/) [tier=primary · recency=historical · updated=2026-08-05]
+- [HER WAKA — Employment Programme for Women in Auckland](https://herwaka.shesharp.org.nz/) [tier=secondary · recency=historical · updated=2026-10-01]
 - [AgriHire Solutions](https://github.com/ChanMeng666/agrihire-solutions) [tier=archive · recency=deprecated · updated=2026-07-04]
 - [CORDE Field-Operations Mobile App](https://corde-mobile-application-4yw7mtt.gamma.site/) [tier=secondary · recency=historical · updated=2026-07-04]
 - Chan's Portfolio v1.0.0 [tier=archive · recency=deprecated · updated=2026-07-04]
@@ -3777,10 +3513,10 @@ wrote the Gulp + LESS build pipeline, and authored the
 - [Mental Wellness Podcast App Prototype](https://github.com/ChanMeng666/podcast-app-prototype) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://chanmeng666.github.io/podcast-app-prototype/
 - [NZ Biosecurity Guide](https://github.com/ChanMeng666/biosecurity) [tier=archive · recency=deprecated · updated=2026-07-04]
 - [Job Valuation](https://github.com/ChanMeng666/job-valuation) [tier=archive · recency=historical · updated=2026-05-18]
-- [Flip Book Template](https://github.com/ChanMeng666/flip-book-template) [tier=archive · recency=historical · updated=2026-05-18] -- live: https://chanmeng666.github.io/flip-book-template/
+- [Flip Book Template](https://github.com/ChanMeng666/flip-book-template) [tier=secondary · recency=historical · updated=2026-10-01] -- live: https://chanmeng666.github.io/flip-book-template/
 - [Swimming Club Management System](https://github.com/ChanMeng666/countryside-community-swimming-club) [tier=archive · recency=deprecated · updated=2026-07-04]
 - [RepairOS (Automotive Repair Management)](https://github.com/ChanMeng666/automotive-repair-management-system) [tier=archive · recency=deprecated · updated=2026-07-14]
-- [East Coast Anglers Club (Fishing Club Website)](https://github.com/ChanMeng666/fishing-club-project) [tier=archive · recency=recent · updated=2026-07-04] -- live: https://fishing-club.pages.dev/
+- [East Coast Anglers Club (Fishing Club Website)](https://github.com/ChanMeng666/fishing-club-project) [tier=archive · recency=historical · updated=2026-10-01] -- live: https://fishing-club.pages.dev/
 - Who I Am (Personal Intro Site) [tier=archive · recency=historical · updated=2026-05-18]
 - [FemTracker (Mobile)](https://github.com/ChanMeng666/femtracker) [tier=archive · recency=historical · updated=2026-07-04]
 - [GAVIGO Website](https://gavigo.com/) [tier=primary · recency=recent · updated=2026-08-05]
@@ -3791,35 +3527,40 @@ wrote the Gulp + LESS build pipeline, and authored the
 - [FemTracker Agent](https://github.com/ChanMeng666/femtracker-agent) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [AI-Powered ESOL Learning Platform](https://github.com/ChanMeng666/esol-learning-platform) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [Wellness Support Agent](https://github.com/ChanMeng666/wellness-agent) [tier=archive · recency=historical · updated=2026-07-11] -- live: https://sanicle-wellness-agent-2lxj5uw.gamma.site/
+- [Vitex — AI Career Agent (vitex.org.nz)](https://github.com/ChanMeng666/easy-resume) [tier=archive · recency=historical · updated=2026-10-01] -- live: https://www.vitex.org.nz/
 - [FanFic Lab — HSR DreamWriter, an Adaptive LangGraph Agent Powering a Gaming Fan-Creation Community](https://github.com/ChanMeng666/fanfic-lab) [tier=archive · recency=deprecated · updated=2026-07-07]
 - [ArchCanvas](https://archcanvas.uk/) [tier=flagship · recency=active · updated=2026-09-16]
 - [AI Image Generator — Full-Stack Text-to-Image SaaS](https://github.com/ChanMeng666/image-generator) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [Chinese Redefine 汉语新解 — AI Word Redefinition](https://github.com/ChanMeng666/chinese-redefine) [tier=archive · recency=deprecated · updated=2026-07-04]
-- [Typst Skill for Claude Code](https://github.com/ChanMeng666/typst-claude-skill) [tier=primary · recency=active · updated=2026-08-26]
-- [2D Portfolio — chanmeng.org](https://chanmeng.org/) [tier=primary · recency=active · updated=2026-07-10]
+- [Typst Skill for Claude Code](https://github.com/ChanMeng666/typst-claude-skill) [tier=secondary · recency=historical · updated=2026-10-01]
+- [Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)](https://github.com/ChanMeng666/event-qa-ai-template) [tier=secondary · recency=recent · updated=2026-10-01] -- live: https://hackathon.shesharp.org.nz/
+- [2D Portfolio — chanmeng.org](https://chanmeng.org/) [tier=secondary · recency=active · updated=2026-10-01]
 - [Customer Insight](https://github.com/ChanMeng666/customer-insight) [tier=archive · recency=historical · updated=2026-05-18] -- live: https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/
 - [Hospital Roster Agent](https://github.com/ChanMeng666/hospital-roster-agent) [tier=archive · recency=historical · updated=2026-07-11]
 - [Sanicle AI — Multi-Tenant B2B FemTech SaaS](https://github.com/ChanMeng666/sanicle-ai) [tier=archive · recency=historical · updated=2026-07-04]
 - [Sanicle Cloud — Official Website (sanicle.cloud)](https://github.com/ChanMeng666/sanicle-cloud) [tier=archive · recency=historical · updated=2026-07-04]
-- [FemTech Radar](https://github.com/ChanMeng666/femtech-radar) [tier=secondary · recency=active · updated=2026-07-04] -- live: https://chanmeng666.github.io/femtech-radar/
+- [FemTech Radar](https://github.com/ChanMeng666/femtech-radar) [tier=archive · recency=historical · updated=2026-10-01] -- live: https://chanmeng666.github.io/femtech-radar/
 - [Panda — Agentic AI Code Verification](https://github.com/ChanMeng666/panda-agent) [tier=archive · recency=historical · updated=2026-07-04]
-- [geo-markdown-mirror](https://github.com/ChanMeng666/geo-markdown-mirror) [tier=secondary · recency=recent · updated=2026-07-04]
-- [professional-repo-docs](https://github.com/ChanMeng666/professional-repo-docs-skill) [tier=secondary · recency=recent · updated=2026-07-04]
-- [Academic Paper Review Skill](https://github.com/ChanMeng666/academic-paper-review-skill) [tier=secondary · recency=recent · updated=2026-07-04]
+- [geo-markdown-mirror](https://github.com/ChanMeng666/geo-markdown-mirror) [tier=secondary · recency=historical · updated=2026-10-01]
+- [professional-repo-docs](https://github.com/ChanMeng666/professional-repo-docs-skill) [tier=secondary · recency=historical · updated=2026-10-01]
+- [Academic Paper Review Skill](https://github.com/ChanMeng666/academic-paper-review-skill) [tier=secondary · recency=historical · updated=2026-10-01]
 - [linkedin-post Skill](https://github.com/ChanMeng666/linkedin-post-skill) [tier=secondary · recency=recent · updated=2026-07-04]
-- [readme-showcase](https://github.com/ChanMeng666/readme-showcase) [tier=secondary · recency=recent · updated=2026-07-04]
-- [product-reality-check](https://github.com/ChanMeng666/product-reality-check) [tier=secondary · recency=active · updated=2026-08-05]
+- [readme-showcase](https://github.com/ChanMeng666/readme-showcase) [tier=secondary · recency=active · updated=2026-10-01]
+- [product-reality-check](https://github.com/ChanMeng666/product-reality-check) [tier=secondary · recency=recent · updated=2026-10-01]
+- [slack-waterline](https://github.com/ChanMeng666/slack-waterline-skill) [tier=secondary · recency=active · updated=2026-10-02]
+- [readme-theme-assets-skill](https://github.com/ChanMeng666/readme-theme-assets-skill) [tier=secondary · recency=recent · updated=2026-10-02]
 **creative:**
 - [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) [tier=archive · recency=deprecated · updated=2026-08-05] -- live: https://huggingface.co/spaces/ChanMeng666/interactive-story-generator
 - [Emoji Story Generator](https://github.com/ChanMeng666/emoji-story-generator) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://huggingface.co/spaces/ChanMeng666/emoji-story-generator
-- [Design Pages](https://github.com/ChanMeng666/design-pages) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://chanmeng666.github.io/design-pages/
+- [Design Pages](https://github.com/ChanMeng666/design-pages) [tier=secondary · recency=historical · updated=2026-10-01] -- live: https://chanmeng666.github.io/design-pages/
 - [English Redefine](https://github.com/ChanMeng666/english-redefine) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [Sanicle AI — reveal.js Demo Slides](https://github.com/ChanMeng666/reveal.js) [tier=archive · recency=historical · updated=2026-07-04]
-- [SVG Animation Studio](https://github.com/ChanMeng666/svg-animation-studio) [tier=secondary · recency=active · updated=2026-07-04]
+- [SVG Animation Studio](https://github.com/ChanMeng666/svg-animation-studio) [tier=secondary · recency=historical · updated=2026-10-01]
 - [Perfume 3D Viewer](https://github.com/ChanMeng666/perfume_obj) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://perfume-3d-viewer.pages.dev
 - [Touch the World, Talk to Code](https://github.com/ChanMeng666/makey-makey-iot-slides) [tier=secondary · recency=recent · updated=2026-07-04] -- live: https://chanmeng666.github.io/makey-makey-iot-slides/#1
-- [app-promo-studio](https://github.com/ChanMeng666/app-promo-studio) [tier=secondary · recency=recent · updated=2026-07-04]
+- [app-promo-studio](https://github.com/ChanMeng666/app-promo-studio) [tier=secondary · recency=historical · updated=2026-10-01]
 - [a11y-loop — Promo Video](https://github.com/ChanMeng666/a11y-loop-promo-video) [tier=secondary · recency=recent · updated=2026-08-05]
+- [ArchLang Showcase](https://github.com/ChanMeng666/archlang-showcase) [tier=secondary · recency=recent · updated=2026-10-02] -- live: https://archlang.uk/showcase
 **ml-research:**
 - [Advanced Neural Network Applications](https://github.com/ChanMeng666/advanced-neural-network-applications) [tier=archive · recency=historical · updated=2026-07-04]
 - [Body Fat Prediction (MLP)](https://github.com/ChanMeng666/bodyfat-estimation-mlp) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://huggingface.co/ChanMeng666/bodyfat-estimation-mlp
@@ -3827,15 +3568,15 @@ wrote the Gulp + LESS build pipeline, and authored the
 - [MNIST Digit Recognition](https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project) [tier=archive · recency=historical · updated=2026-07-04]
 - [Water Quality Analysis](https://github.com/ChanMeng666/water-quality-testing-data-analysis) [tier=archive · recency=historical · updated=2026-07-04]
 **branding:**
-- [README Profile Generator](https://github.com/ChanMeng666/readme-profile-generator) [tier=archive · recency=historical · updated=2026-07-04] -- live: https://huggingface.co/spaces/ChanMeng666/readme-profile-generator
+- [README Profile Generator](https://github.com/ChanMeng666/readme-profile-generator) [tier=secondary · recency=historical · updated=2026-10-01] -- live: https://huggingface.co/spaces/ChanMeng666/readme-profile-generator
 - [Juejin Algorithm Practice](https://github.com/ChanMeng666/juejin-algorithm-practice) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [chan-meng-cli](https://github.com/ChanMeng666/chan-meng-cli) [tier=archive · recency=deprecated · updated=2026-08-05]
-- [GitHub Visitor Counter](https://github.com/ChanMeng666/github-visitor-counter) [tier=secondary · recency=recent · updated=2026-07-07] -- live: https://github-visitor-counter-tau.vercel.app/
-- GAVIGO Logo [tier=archive · recency=recent · updated=2026-07-04]
+- [GitHub Visitor Counter](https://github.com/ChanMeng666/github-visitor-counter) [tier=secondary · recency=historical · updated=2026-10-01] -- live: https://github-visitor-counter-tau.vercel.app/
+- GAVIGO Logo [tier=archive · recency=historical · updated=2026-10-01]
 - [Douban Elite Posts Scraper](https://github.com/ChanMeng666/douban-elite-scraper) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [Douban Review Scraper](https://github.com/ChanMeng666/douban-review-scraper) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [Chan Meng — Personal Brand Logo](https://github.com/ChanMeng666/chan-meng-personal-brand-logo) [tier=secondary · recency=recent · updated=2026-07-04]
-- [logo-as-code Skill](https://github.com/ChanMeng666/logo-as-code-skill) [tier=secondary · recency=recent · updated=2026-07-04]
+- [logo-as-code Skill](https://github.com/ChanMeng666/logo-as-code-skill) [tier=secondary · recency=historical · updated=2026-10-01]
 **games:**
 - The Birth of Leviathan (利维坦的诞生) [tier=archive · recency=deprecated · updated=2026-07-04]
 - [Brick Breaker (Starlight Breaker)](https://github.com/ChanMeng666/html-brick-game) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://chanmeng666.github.io/html-brick-game/
@@ -3845,8 +3586,8 @@ wrote the Gulp + LESS build pipeline, and authored the
 - [Kaboom RPG Adventure](https://github.com/ChanMeng666/kaboom-rpg-adventure) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://chanmeng666.github.io/kaboom-rpg-adventure/
 - [Memory Rush](https://chanmeng666.itch.io/memory-rush) [tier=archive · recency=historical · updated=2026-05-18]
 - [Slime Split](https://github.com/ChanMeng666/slime-split) [tier=archive · recency=deprecated · updated=2026-07-14] -- live: https://chanmeng666.itch.io/slime-split
-- [Cloud Canals](https://github.com/ChanMeng666/cloud-canals) [tier=secondary · recency=recent · updated=2026-07-16]
-- [Super Mario · Makey Makey Edition](https://github.com/ChanMeng666/super-mario-makey-makey) [tier=secondary · recency=recent · updated=2026-07-04] -- live: https://chanmeng666.github.io/super-mario-makey-makey/
+- [Cloud Canals](https://github.com/ChanMeng666/cloud-canals) [tier=archive · recency=historical · updated=2026-10-01]
+- [Super Mario · Makey Makey Edition](https://github.com/ChanMeng666/super-mario-makey-makey) [tier=secondary · recency=historical · updated=2026-10-01] -- live: https://chanmeng666.github.io/super-mario-makey-makey/
 **tools:**
 - [Lottie Theme Converter](https://github.com/ChanMeng666/lottie-edit) [tier=archive · recency=deprecated · updated=2026-07-14]
 - Popup Image App [tier=archive · recency=deprecated · updated=2026-07-14]

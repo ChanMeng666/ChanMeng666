@@ -88,24 +88,55 @@ no-duplicates rule in MANIFEST.md.
 
 ### 2b. Product logos → live app screenshots
 
-Chapter 3 ("What I Build", pp9–11) was rebuilt 2026-07-24 around Chan's own
-flagship set. Each product now sits in a **uniform `product-tile`** whose fixed
-logo box shows the product's **brand logo** (SVG). A real, in-context
-**screenshot of the running app** would make each more tangible — but the tile is
-deliberately uniform, so any swap-in should be a **1200×630-style branded cover**
-or a clean landscape frame that letterboxes cleanly onto the cream box (`contain`
-fit). Optional; supply any subset. Drop the JPG in `cv/assets/extended/` and
-update the one `product-tile(...)` logo path in `cv/extended.typ`.
+Chapter 3 ("What I Build", **pp8-13**) was rebuilt 2026-10-02 as **eleven uniform
+standard `product-tile`s, two per page** (seven Chan-owned products, four systems
+built for organisations — the four client tiles carry a violet "For <Org>" line).
+Every tile's fixed logo box (`build-logo-h` = 160pt, `contain` fit on the cream
+ground) shows a **brand mark/logo only** — all SVG, all under `public/brands/`.
+The old 2026-07-24 five-product layout (Vitex, the gradient-svg-generator page and
+the p8 event photo band) is gone, and **no product screenshots exist for any of
+the eleven**. Nothing here is a placeholder: the chapter is complete as it stands.
 
-| Product | Page | Currently shows | Suggested shot | Orientation |
+| Page | Tile | Logo file (`/public/brands/…`) | Notes |
+|---|---|---|---|
+| p8 | opener + **ArchCanvas** | `archcanvas-logo.svg` | own product |
+| p8 | **ArchLang** | `archlang-logo.svg` | own product |
+| p9 | **GAVIGO IRE** | `gavigo-mark.svg` | client line "For GAVIGO Inc."; second link gavigo.com |
+| p9 | **She Sharp member platform** | `she-sharp-mark.svg` | client |
+| p10 | **FemTech Weekend website** | `femtech-weekend-mark.svg` | client |
+| p10 | **Eatropolis festival website** | `eatropolis-mark.svg` | client |
+| p11 | **echook** | `echook-logo.svg` | own product |
+| p11 | **Google News MCP Server** | `server-google-news.svg` | own product |
+| p12 | **Seismophone** | `seismophone-logo.svg` | own product |
+| p12 | **a11y-loop** | `a11y-loop-logo.svg` | own product |
+| p13 | **AI Programming Education Platform** | `ai-programming-logo.svg` | own product; page also holds the chapter's closing pull-quote |
+
+**Dropped from Chapter 3:** the p8 event photo band
+(`/public/photos/events/2026-07-01-claude-meetup-auckland-group.jpg`) is no
+longer used there, and it is not used anywhere else in the extended CV either —
+a grep of `cv/` finds no reference; it now lives only in
+`data/profile/80-events.yaml`. Vitex and gradient-svg-generator no longer appear
+in the extended CV at all.
+
+**Optional later upgrades — logo → screenshot.** A real, in-context frame would
+make a tile more tangible, but the tiles are deliberately uniform, so any swap-in
+should be a **1200x630-style branded cover** or a clean landscape frame that
+letterboxes onto the cream box (`contain`). Supply any subset; drop the JPG in
+`cv/assets/extended/` and change that one `product-tile(...)` logo path in
+`cv/extended.typ`. Don't add images just to fill layout — the logo-only tile is
+the intended design, and a mismatched frame on one tile breaks the uniform pair.
+
+| Tile | Page | Currently shows | What exists / suggested shot | Orientation |
 |---|---|---|---|---|
-| **ArchCanvas** | p9 | `archcanvas-logo.svg` | The zoomable canvas with a dimensioned plan + its grounded rendering | Landscape 16:10 |
-| **ArchLang** | p9 | `archlang-logo.svg` | The playground: `.arch` source on the left, compiled dimensioned SVG on the right | Landscape 16:10 |
-| **Vitex** | p10 | `vitex.svg` | The generated ATS-ready resume PDF preview (a real screenshot already exists at `cv/assets/thumbs/vitex.jpg`) | Landscape 16:10 |
-| **echook** | p10 | `echook-logo.svg` | The context-window status bar / a webhook alert in Slack | Landscape 16:10 |
+| **ArchCanvas** | p8 | `archcanvas-logo.svg` | **Already in hand:** 7 coded-replica UI frames of the real product, `evidence/src/promo-film/archcanvas-01-describe.jpg` through `-07-end-card.jpg` (e.g. `-03-real-plan.jpg`); crop/compress to the recipe above | Landscape |
+| **ArchLang** | p8 | `archlang-logo.svg` | Playground: `.arch` source left, compiled dimensioned SVG right | Landscape 16:10 |
+| **GAVIGO IRE**, **She Sharp**, **FemTech Weekend**, **Eatropolis** | p9-p10 | org marks | **None exist.** Client sites; a screenshot needs the client's OK and a live-page capture | Landscape 16:10 |
+| **echook** | p11 | `echook-logo.svg` | The context-window status bar / a webhook alert in Slack | Landscape 16:10 |
 | **Google News MCP Server** | p11 | `server-google-news.svg` | A PulseMCP "Top Pick" listing, or Claude calling the tool | Landscape 16:10 |
-| **gradient-svg-generator** | p11 | `gradient-svg-generator-logo.svg` | The generator UI with a rendered animated banner | Landscape 16:10 |
+| **Seismophone** | p12 | `seismophone-logo.svg` | The live app mid-event (seismophone.chanmeng.org) | Landscape 16:10 |
+| **a11y-loop** | p12 | `a11y-loop-logo.svg` | A terminal run showing the audit-fix loop | Landscape 16:10 |
+| **AI Programming Education Platform** | p13 | `ai-programming-logo.svg` | The site with the in-site AI tutor answering | Landscape 16:10 |
 
-> If Chan ever generates branded 1200×630 OG covers for these flagship repos
-> (the `og-covers/` generator writes `og-cover.png` into each project's own
-> repo), those are the ideal swap-in — same aspect for every tile by design.
+> If Chan ever generates branded 1200x630 OG covers for these repos (the
+> `og-covers/` generator writes `og-cover.png` into each project's own repo),
+> those are the ideal swap-in — same aspect for every tile by design.

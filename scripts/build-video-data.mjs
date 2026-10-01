@@ -337,7 +337,7 @@ if (errors.length) {
   process.exit(1);
 }
 
-const projects = ["archlang", "archcanvas", "vitex", "gavigo-ire", "she-sharp", "tam-ai-ti"]
+const projects = ["archlang", "archcanvas", "gavigo-ire", "she-sharp", "tam-ai-ti"]
   .map((id) => {
     const p = profile.projects.find((x) => x.id === id);
     if (!p) {

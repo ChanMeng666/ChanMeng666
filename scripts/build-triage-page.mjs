@@ -86,6 +86,34 @@ function loadCommits() {
   return new Map(Object.entries(raw).map(([k, v]) => [k.toLowerCase(), Number(v) || 0]));
 }
 
+// ---------------------------------------------------------------------------
+// --mode repos — repo-centric triage (one card per live repo, all owners).
+//   node scripts/build-triage-page.mjs --mode repos --repos-json repos.json \
+//     --commits-full-json commits.json --local-map local-map.json --out triage.html
+// Rendered by scripts/lib/triage-repos-page.mjs (+ triage-repos-client.js); the
+// project-centric flow below is untouched and still the default.
+// ---------------------------------------------------------------------------
+if (argOf("--mode") === "repos") {
+  const need = (flag) => {
+    const v = argOf(flag);
+    if (!v) throw new Error(`--mode repos requires ${flag}`);
+    return JSON.parse(fs.readFileSync(v, "utf8"));
+  };
+  const { buildReposPage } = await import("./lib/triage-repos-page.mjs");
+  const { html, stats } = buildReposPage({
+    repoRoot,
+    profile: loadProfile(),
+    repos: need("--repos-json"),
+    commitsFull: need("--commits-full-json"),
+    localMap: need("--local-map"),
+    generatedAt: new Date().toISOString().slice(0, 10),
+  });
+  process.stderr.write(`[triage:repos] ${JSON.stringify(stats, null, 1)}\n`);
+  if (OUT) fs.writeFileSync(OUT, html);
+  else process.stdout.write(html);
+  process.exit(0);
+}
+
 const repoNameOf = (repoUrl) => {
   if (!repoUrl) return null;
   const m = String(repoUrl).match(/github\.com\/([^/]+)\/([^/#?]+)/i);

@@ -1083,10 +1083,7 @@
       "logo": "/public/brands/she-sharp-mark.svg",
       "clientOrgId": "she-sharp",
       "relatedWorkId": "she-sharp",
-      "relatedProjectIds": [
-        "her-waka",
-        "ai-hackathon-assistant"
-      ],
+      "relatedProjectIds": [],
       "entity": "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)",
       "roles": [
         "Senior Full Stack Engineer",
@@ -1236,137 +1233,7 @@
         "outcomes": "Production-deployed and running She Sharp's full member lifecycle\nacross my 13.3 months on it (first commit 2025-07-22, measured to\n2026-09-01) — in active build-out, not maintenance, until I left the\ncharity in September 2026; the platform stays in production as its\nlive site. Volume: **1,381 commits\nand 251 merged pull requests, of which 94.5% of all lines added\n(801,609 of 847,827) are mine**; Lesley Gao contributed 151 commits\nand 43 pull requests of frontend design and code, with a handful more\nfrom an automation bot. **979 of those commits landed since\n2026-01-01 alone.** The platform now runs She Sharp's membership,\nmentorship, events, sponsor relationships, volunteer recruitment\npipeline, and internal team operations across **84 API routes, 63\npages, 198 components, 32 SQL migrations, 180,914 lines of\nTypeScript, and an 11-namespace `lib/` library** (matching,\nslack-bot, stripe, funding, programmes, recruitment, invitations,\nmentorship, email, auth, db) —\nthe technical infrastructure for an organisation that has run 96+\nevents since 2014.\n\nThe most recent build-out extended the public site into a photo-rich\n\"Editorial\" visual system and full event pages — including the\nAotearoa AI Hackathon Festival 2026 page (AUT × She Sharp × AI Forum\nNZ, 7–8 August 2026 at AUT City Campus), assembled from a single\nZod-validated event entry. **The Her Waka programme launched in March\n2026** with NZ Ministry of Social Development funding, using the\ndedicated teaching site I built (herwaka.shesharp.org.nz) and the\ncurriculum I authored — 4 workshops + 8 tutorials in 3 tiers. **The\nSEO audit** identified actionable competitive gaps, notably the\ndesktop/mobile ranking disparity on \"women in tech New Zealand.\"\n**The migration crawler** enabled a clean cutover from Webflow\nwithout losing institutional knowledge. **The Slack-bot + agent-skill\npairing** replaced an hours-long manual event-publication workflow\nwith a single dry-run-default command.\n",
         "myRole": "Senior Full Stack Engineer and Website Team Lead. Recruited directly\nby founder Dr Mahsa Mohaghegh (McCauley) — AI/NLP researcher and Head\nof Computer and Information Sciences at AUT — specifically to deliver\nthe AI and full-stack senior engineering that Webflow couldn't, and\nthat the She Sharp team didn't have in-house.\n\nSolo full-stack ownership of the main platform: product architecture,\ndatabase schema (39 pgTables, 33 pgEnums, 32 SQL\nmigrations), AI matching pipeline (5-weight rubric + Upstash Redis\ncache + rule-based fallback + admin human-in-the-loop), Stripe\nbilling with the form→checkout→invitation-code activation flow,\nSlack ecosystem (read-only event-collector, 3 weekly Cron digests,\ninteractive event handlers), the `sync-event-from-slack` Claude\nagent skill with strict Zod validation and dry-run default, admin\nsystems, deployments, observability, and operational support. Lesley\nGao contributed frontend design and frontend code (151 commits, 43\npull requests); measured by lines added, 94.5% of the codebase\n(801,609 of 847,827 lines) is mine. Beyond the main platform I\nalso built the data-migration crawler that bootstrapped the launch\n(she-sharp-crawl), the Her Waka teaching site (her-waka) and its\ncomplete four-workshop + 8-tutorial curriculum, and the professional\nSEO audit and recommendations report (serpdata-api-test) on\nshesharp.org.nz — working across engineering, instructional design,\nand strategic analysis under one role.\n"
       },
-      "_relatedProjects": [
-        {
-          "id": "her-waka",
-          "provenance": "client",
-          "tier": "primary",
-          "recency": "historical",
-          "meta": {
-            "x_brand": {
-              "featuredStack": [
-                "mintlify",
-                "github"
-              ]
-            }
-          },
-          "lastUpdated": "2026-08-05",
-          "name": "HER WAKA — Employment Programme for Women in Auckland",
-          "priority": 30,
-          "category": "web-apps",
-          "clientOrgId": "she-sharp",
-          "relatedWorkId": "she-sharp",
-          "relatedProjectIds": [
-            "she-sharp"
-          ],
-          "tagline": "Mintlify documentation platform for the She Sharp × NZ Ministry of Social Development (MSD) employment-readiness programme delivered at academyEX Auckland (Mar-Jun 2026); 4 workshops authored solo by Chan",
-          "url": "https://herwaka.shesharp.org.nz/",
-          "logo": "/public/brands/her-waka.jpg",
-          "techStack": [
-            "Mintlify",
-            "MDX",
-            "She Sharp × MSD partnership"
-          ],
-          "narrative": {
-            "impactHeadline": "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
-          },
-          "status": "live",
-          "_clientOrg": {
-            "id": "she-sharp",
-            "name": "She Sharp",
-            "url": "https://shesharp.org.nz"
-          },
-          "_relatedProjectsResolved": [
-            {
-              "id": "she-sharp",
-              "name": "She Sharp",
-              "url": "https://www.shesharp.org.nz/"
-            }
-          ],
-          "_supersededByProject": null,
-          "_supersedesProjects": []
-        },
-        {
-          "id": "ai-hackathon-assistant",
-          "provenance": "hackathon",
-          "tier": "primary",
-          "recency": "recent",
-          "lastUpdated": "2026-08-05",
-          "name": "Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)",
-          "priority": 14,
-          "category": "ai-apps",
-          "clientOrgId": "she-sharp",
-          "relatedWorkId": "she-sharp",
-          "tagline": "Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template",
-          "url": "https://hackathon.shesharp.org.nz/",
-          "repoUrl": "https://github.com/ChanMeng666/event-qa-ai-template",
-          "logo": "/public/brands/ai-hackathon-logo-full.svg",
-          "extraLinks": [
-            {
-              "label": "Live site — 2026 voice agent",
-              "url": "https://aihackathon-2026.vercel.app"
-            },
-            {
-              "label": "Hackathon partner — AI Forum NZ",
-              "url": "https://aiforum.org.nz/hackathon"
-            },
-            {
-              "label": "Partner — AUT (host venue)",
-              "url": "https://www.aut.ac.nz/"
-            },
-            {
-              "label": "Partner — She Sharp",
-              "url": "https://www.shesharp.org.nz/"
-            },
-            {
-              "label": "Template setup guide",
-              "url": "https://github.com/ChanMeng666/event-qa-ai-template/blob/master/docs/TEMPLATE-SETUP.md"
-            }
-          ],
-          "techStack": [
-            "Next.js 16.1 (App Router)",
-            "React 18 + TypeScript 5",
-            "Tailwind CSS v3 + Framer Motion v12",
-            "Vercel AI SDK v4.3",
-            "@ai-sdk/openai (GPT-4o-mini-2024-07-18 streaming)",
-            "Three.js 0.182 + @react-three/fiber 8.16",
-            "Custom Quantum Orb 3D mascot (CSS 3D transforms + Three.js particles)",
-            "Sprite affection gamification engine (gesture detection, mood weighting, time-of-day bias)",
-            "Notion REST API (raw fetch, CF Workers compatible — replaced @notionhq/client SDK)",
-            "shadcn/ui + Radix primitives",
-            "@opennextjs/cloudflare adapter",
-            "Cloudflare Workers deployment (migrated from Vercel)",
-            "wrangler v4 CI/CD",
-            "localStorage state persistence (50-msg chat history + sprite affection state)",
-            "5-min FAQ client cache + optimistic vote/view updates",
-            "AI rate limiting + per-session token budgets + prompt guardrails (2026-07 security hardening)",
-            "OpenAI Realtime API over WebRTC — two-way voice (2026 relaunch)",
-            "Ephemeral client secrets minted server-side (OPENAI_API_KEY never reaches the browser)",
-            "Audio-reactive Three.js orb voice UI + live captions (2026)",
-            "Vercel deployment (2026 edition — she-sharp1/aihackathon-2026)"
-          ],
-          "status": "live",
-          "publicSummary": "Real industry-partnered AI event assistant built for the **AI\nHackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised\nby **Auckland University of Technology**, **AI Forum New Zealand**,\nand **She Sharp**, with **UN Sustainable Development Goals** as\nthe innovation brief. The platform serves participants and mentors\nthrough three interlocking systems: (1) an **interactive 3D sprite\nmascot** with a 6-tier \"Stranger → Soulmate\" affection system,\n7-state dynamic mood engine, 17 emotion categories, gesture\nrecognition (circle/pat/swipe), negative-behaviour penalties,\nstreak bonuses, and time-of-day emotion biases — a fully gamified\npersonality layer that responds to how users actually touch the\npage; (2) a **Notion-as-database community FAQ** with up/downvote\nranking, view tracking, 5-minute client cache, and graceful static\nfallback when Notion is unreachable; (3) an **OpenAI GPT-4o-mini\nstreaming chat** with markdown-rendered responses and one-click\nFAQ-to-chat hand-off. After the live deployment, the codebase was\ngeneralised into a reusable open-source template\n(`event-qa-ai-template` on GitHub, MIT) so any future hackathon /\nconference can fork-and-config the same stack. Chan was\nsubsequently recognised among the **14 expert mentors** at the\nfestival.\n\nFor the **2026 festival** (Aotearoa AI Hackathon Festival 2026,\nAUT City Campus) the project was **rebuilt from the ground up** as\na single-page **voice-first** agent: the whole site is a centered,\naudio-reactive Three.js orb that starts a **two-way voice\nconversation over the OpenAI Realtime API via WebRTC** (the client\nexchanges SDP directly with OpenAI using a short-lived ephemeral\nsecret, so the real API key never reaches the browser), with a\ntext-input fallback answered by gpt-4o-mini via the Vercel AI SDK,\nlive captions, and a collapsible event-info panel. Agent\ninstructions build from a Neon `knowledge` table (graceful\nfallback to config), transcripts persist best-effort, and Upstash\nKV rate-limits token minting. Deployed on Vercel\n(`she-sharp1/aihackathon-2026`, live at aihackathon-2026.vercel.app).\n",
-          "narrative": {
-            "impactHeadline": "Voice-first AI event agent for the Aotearoa AI Hackathon Festival — relaunched 2026 (AUT) as an audio-reactive orb driving two-way OpenAI Realtime voice + gpt-4o-mini text chat; the 2025 edition served 11 teams / 80+ participants with a gamified 3D sprite mascot + Notion FAQ.",
-            "problem": "Hackathons and conferences generate the same Q&A surface every\nyear: participants ask the same 30 questions (\"how do I form a\nteam\", \"what counts as AI\", \"when do I have to be on site\",\n\"what's the prize structure\", \"where do I find a mentor\"), and\norganisers answer them via static PDFs that go stale the moment\nthe schedule shifts. Bolt-on chatbots exist but they treat\nhumans as passive consumers — a popup widget in the corner, a\nknowledge base scraped at build time, no memory of what the\ncommunity itself finds helpful. Three structural gaps stack up:\n(1) the FAQ is **authored once** rather than **curated by the\ncommunity**, so quality drifts; (2) the AI is a generic\nwrapper around a chat API, with no event-specific personality\nor theme tie-in; (3) organisers cannot update content without\na code redeploy, so the platform calcifies the moment the\noriginal developer hands it off. The AI Hackathon Festival\n2025 organisers needed a platform that solved all three on the\ntimeline of a real event with 80+ participants and three\nco-organising institutions reviewing every word on screen.\n",
-            "audience": "Direct users were the **80+ participants and 14 expert mentors**\nof AI Hackathon Festival 2025 — students from Auckland\nuniversities, **Westlake Girls High School** secondary students,\nand AI Forum NZ industry mentors all asking the same FAQ-style\nquestions across a 26-hour residential event. Secondary\naudience: the **three co-organising institutions** (AUT, AI\nForum NZ, She Sharp) who use the platform as a public-facing\nartefact of their joint programme. Tertiary audience: future\nhackathon and conference organisers in NZ and abroad who can\nfork the open-source template (`event-qa-ai-template`) and\ndeploy their own event Q&A AI in under an hour by editing four\nconfiguration files — `site.config.ts`, `ai.config.ts`,\n`content.config.ts`, `branding.config.ts` — without touching\ncomponent code.\n",
-            "productLogic": "The product is structured as three layers that compose\nindependently. Layer one is the **3D welcoming surface**: the\nlanding page renders a particle sphere with a \"WELCOME TO AI\nHACKATHON!\" greeting set against a `CosmicBackground` Three.js\nscene, with `Calendar` / `MapPin` event-info widgets, sponsor\nlogos for the three co-organisers, and a glassmorphism Google\nMaps modal showing AUT WG Building. Layer two is the **chat\npage** — a 70/30 desktop split between a full-screen OpenAI\nchat (with `react-markdown` + `rehype-highlight` for\ncode-block syntax highlighting) and a community FAQ sidebar.\nLayer three — the differentiator — is the **interactive sprite\nmascot** that lives alongside the chat: a CSS-3D **Quantum\nSingularity Orb** (accretion disk + photon ring + event\nhorizon + energy jets, all built from layered divs with\n`transform-style: preserve-3d` and `rotateX(60deg)`) that\nbecomes a fully gamified personality. The user can **circle**,\n**swipe vertically/horizontally**, **pat**, or **click** the\norb; the gesture detection engine tracks each interaction and\nfeeds it through an affection/mood scoring system. Five\ngestures grant affection (circle x5 = +10 affection / \"Wheee~!\nSo dizzy but fun!\"), five negative behaviours penalise it\n(`roughMovement`, `spamClick`, `suddenLeave`, `longIgnore`,\n`excessiveCircle`), and the resulting state drives which of\n17 emotions the sprite expresses — including three **rare**\nemotions (`devoted`, `starry`, `mischievous`) only unlocked\nat the top affection tiers. The result: users do not just chat\nwith an AI, they **build a relationship with a tiny digital\ncreature** while doing so — a memorable, shareable layer that\nturns a Q&A bot into a piece of event identity.\n",
-            "businessLogic": "Three intertwined value propositions. For the **organising\ninstitutions**, the platform is a public-facing demonstration\nartefact of the joint AUT × AI Forum NZ × She Sharp programme,\nrunning on Cloudflare Workers (free tier covers an event-week\ntraffic spike with zero cost) with a Notion database that\n**non-developer event staff can edit live** during the event —\nadding new FAQ entries through the Notion UI, watching them\nappear within the 5-minute client cache window. For **future\nevent organisers**, after the live event, the codebase was\ndeliberately generalised into a **reusable MIT template**\n(`event-qa-ai-template`) with all event-specific content\nextracted into `config/*.ts` files and full setup\ndocumentation, so the same stack ships any hackathon /\nconference / community event Q&A platform in under an hour of\nconfiguration. For **Chan**, the project established a\nverifiable, AI-Forum-NZ-endorsed track record of shipping\ncommercial-grade AI infrastructure for an industry partner —\na credential cited in the public LinkedIn announcement of the\n14-mentor cohort and in the Engram Architect Cohort\nEngagement Letter narrative.\n",
-            "technicalApproach": "**AI layer.** OpenAI GPT-4o-mini-2024-07-18 served through\nVercel AI SDK v4.3's `streamText` with `convertToCoreMessages`,\nreturning `toDataStreamResponse()` for character-by-character\nSSE streaming. The system prompt is **generated from\nsiteConfig at runtime** so any organiser fork inherits an\nevent-specific prompt without code edits — it embeds event\nname, dates, venue, theme (UN SDGs), team-formation rules\n(3-6 members, Hacker/Hipster/Hustler composition), schedule\n(Friday 8 PM venue close, Discord for mentor requests), and\nprize tiers ($250 venue, $1,000 national, $5,000 national\nAgentic AI winner) plus Markdown formatting guidelines. The\ncodebase pivoted from Google Gemini 2.5 Flash to OpenAI\nGPT-4o-mini mid-build (commit `5eb3e70`) for cost + Cloudflare\nWorkers compatibility reasons; the system prompt generator\nremained provider-agnostic. **3D sprite gamification.** A\n~960-line `sprite-affection.config.ts` declaratively encodes\nthe entire gameplay model: 5 gestures, 5 negative behaviours,\n7 mood states (`ecstatic` 80–100 → `upset` -100 to -80),\n17 emotions with per-emotion ear-colour RGB, glow-colour,\nparticle-colour, animation type (`bounce` / `shake` / `pulse`\n/ `spin` / `wobble` / `tremble` / `droop`) and eye shape\n(`sphere` / `arc` / `star` / `heart` / `crescent` / `spiral`\n/ `teardrop`), 6 affection tiers (Stranger 0–9 → Acquaintance\n10–29 → Friend 30–59 → Good Friend 60–99 → Best Friend\n100–149 → Soulmate 150+), 7 time-of-day biases (late-night\nboosts `sleepy` x3, evening boosts `love` x1.3), and 5 streak\nbonus levels (1/3/7/14/30 days, 30-day streak unlocks the\n`devoted` rare emotion). Two relational systems link mood\nand affection: a **mood multiplier** scales affection gains\nfrom 0.5x (depressed) to 1.5x (euphoric), and **affection\nmood protection** sets a floor that rises with tier (Soulmate\ngets a -10 floor + 5 mood/min recovery toward +20). All state\npersists to `localStorage` under `sprite-affection-data`.\nThe Quantum Orb itself is rendered with **CSS-only 3D**\n(preserve-3d transforms + rotateX) + Three.js particle\naccents — no GLB / heavy 3D pipeline — so the bundle stays\nsmall enough for Cloudflare Workers. **Notion backend.** A\nnon-obvious engineering call: the project initially used\n`@notionhq/client`, but migrating to Cloudflare Workers\n(commit `5b1dc7e`) broke the Node-dependent SDK; the fix\n(commit `20eaf2e`) replaced it with **direct REST calls\nagainst `api.notion.com/v1` using native `fetch`** — version\nheader `Notion-Version: 2022-06-28`, filter by\n`IsActive` checkbox, parse `Title` / `RichText` / `Select` /\n`Number` properties via small typed getters. Four API routes\n— `/api/chat`, `/api/faq/questions`, `/api/faq/vote`,\n`/api/faq/view` — wrap the same client. **Deployment.**\nMigrated from Vercel to Cloudflare Workers using\n`@opennextjs/cloudflare` v1.3 + wrangler v4; the entire stack\nnow ships on Cloudflare's free tier including the AI streaming\nendpoint. The build command `opennextjs-cloudflare build &&\nopennextjs-cloudflare deploy` handles the Next.js → Workers\nadapter step.\n",
-            "outcomes": "Delivered live for the **AI Hackathon Festival 2025** at AUT\nCity Campus WG Building, **15–16 August 2025**. Used by **11\nteams and 80+ participants** during the residential event —\nAI Forum NZ's public LinkedIn cohort announcement (with full\nWestlake Girls High School student attendance) cites Chan as\n**1 of 14 expert mentors**, recognised at the event. The\nteams shipped solutions across the UN SDG brief — food\ninsecurity, digital accessibility, workforce upskilling, and\nindigenous environmental stewardship — with national-tier\nprizes flowing through the AI Forum NZ pipeline (AI Summit\nentry worth $1,499, $1,000 national winner, $5,000 national\nAgentic AI winner, ArcGIS licences). Post-event, the codebase\nwas **refactored into a reusable MIT template** (commit\n`948bdf0` \"transform project into reusable event Q&A\ntemplate\"), documented in `docs/TEMPLATE-SETUP.md`,\n`docs/NOTION-INTEGRATION.md`, and `docs/UI-DESIGN-SYSTEM.md`,\nwith the live deployment retained as the canonical worked\nexample. Listed alongside Chan's other commercial-grade AI\nplatforms (echook, vitex, chinese-redefine,\nai-programming-teaching-project) as portfolio evidence of\nend-to-end industry-partner delivery — design, AI integration,\ngameplay engineering, database, deployment, and post-delivery\nproductisation as a reusable open-source artefact.\n",
-            "myRole": "Sole developer end-to-end. Owned the discovery phase with the\nthree co-organising institutions, designed the dual-layer\nproduct (chat surface + gamified mascot + Notion FAQ), built\nevery component, authored both the Gemini and the OpenAI\nprovider implementations, designed the entire ~960-line\naffection / mood / emotion gameplay schema, engineered the\nCSS-3D Quantum Orb visualisation, migrated the deployment\nfrom Vercel to Cloudflare Workers when free-tier economics\nand Notion-SDK incompatibility forced the move, refactored\nthe codebase into a reusable open-source template after the\nlive event, and authored the three setup-documentation files.\nOn the mentorship side: served as one of the 14 expert\nmentors during the 26-hour event itself, guiding teams on\nprompt design, SDG framing, and product narrative —\nsimultaneously building the platform and using it.\n"
-          },
-          "_clientOrg": {
-            "id": "she-sharp",
-            "name": "She Sharp",
-            "url": "https://shesharp.org.nz"
-          },
-          "_relatedProjectsResolved": [],
-          "_supersededByProject": null,
-          "_supersedesProjects": []
-        }
-      ],
+      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "nextjs",
@@ -1415,19 +1282,7 @@
         "name": "She Sharp",
         "url": "https://shesharp.org.nz"
       },
-      "_relatedProjectsResolved": [
-        {
-          "id": "her-waka",
-          "name": "HER WAKA — Employment Programme for Women in Auckland",
-          "url": "https://herwaka.shesharp.org.nz/"
-        },
-        {
-          "id": "ai-hackathon-assistant",
-          "name": "Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)",
-          "url": "https://hackathon.shesharp.org.nz/",
-          "repoUrl": "https://github.com/ChanMeng666/event-qa-ai-template"
-        }
-      ],
+      "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
     },
@@ -2772,7 +2627,7 @@
     {
       "id": "free-period-website",
       "provenance": "client",
-      "tier": "primary",
+      "tier": "archive",
       "recency": "historical",
       "meta": {
         "x_brand": {
@@ -2785,7 +2640,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-08-05",
+      "lastUpdated": "2026-10-01",
       "name": "FreePeriod Website",
       "priority": 22,
       "category": "web-apps",
@@ -2810,49 +2665,6 @@
         "impactHeadline": "Bilingual period-poverty advocacy site for a Guangzhou HKUST(GZ)-incubated startup — integrated Google Maps dispenser directory helping end-users locate menstrual-access resources in underserved markets."
       },
       "status": "live",
-      "_featuredStackResolved": [
-        {
-          "name": "nextjs",
-          "src": "/public/tech-logos/nextjs.svg"
-        },
-        {
-          "name": "react",
-          "src": "/public/tech-logos/react.svg"
-        },
-        {
-          "name": "typescript",
-          "src": "/public/tech-logos/typescript.svg"
-        },
-        {
-          "name": "tailwindcss",
-          "src": "/public/tech-logos/tailwindcss.svg"
-        },
-        {
-          "name": "cloudflare-pages",
-          "src": "/public/tech-logos/cloudflare-pages.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrgs": [
-        {
-          "id": "freeperiod",
-          "name": "FreePeriod",
-          "url": "https://www.linkedin.com/company/free-period/",
-          "logoLight": "/public/organizations/free-period-logo.png",
-          "logoDark": "/public/organizations/free-period-logo.png",
-          "context": "Chief Technology Officer (Nov 2024 — Jun 2025)"
-        }
-      ],
-      "_adopterOrgs": [],
-      "_affiliationOrg": {
-        "id": "freeperiod",
-        "name": "FreePeriod",
-        "url": "https://www.linkedin.com/company/free-period/",
-        "logoLight": "/public/organizations/free-period-logo.png",
-        "logoDark": "/public/organizations/free-period-logo.png",
-        "context": "Chief Technology Officer (Nov 2024 — Jun 2025)"
-      },
-      "_cohortPartners": [],
       "_clientOrg": {
         "id": "freeperiod",
         "name": "FreePeriod",
@@ -3182,9 +2994,7 @@
       "category": "web-apps",
       "clientOrgId": "femtech-weekend",
       "relatedWorkId": "femtech-weekend",
-      "relatedProjectIds": [
-        "femtech-radar"
-      ],
+      "relatedProjectIds": [],
       "supersedes": [
         "femtech-weekend"
       ],
@@ -3348,75 +3158,7 @@
         "outcomes": "Production-deployed at femtechweekend.com and operating the full organisational pipeline (ecosystem applications, newsletter, summit forms, research distribution) across both EN and 简体中文 audiences. 564 commits, 534 (94.7%) authored solo across ~13 months (2025-05-08 → 2026-06-26). Shanghai Summit 2026 ran June 22–25, 2026 with the platform as its sole operational substrate.\n\nCommit cadence shows active delivery, not maintenance: recent work includes growing the confirmed lineup to 20 speakers, setting the venue to Shanghai's Qiantan Center, building the gated \"download full agenda\" lead-capture flow (new endpoint + agenda_downloads table), and rebuilding the social/OG card — all solo, on a live site marketing a flagship event.\n\nThe platform demonstrates a design call worth flagging: Generation 2 was a deliberate rewrite, not a refactor. As the centre of gravity shifted from \"marketing site\" to \"research-publication and multi-event hub,\" it was rebuilt on Docusaurus 3.9 — not the default choice for a brand website, but the right one for an editorial platform whose long-term value lives in its market research, opinion pieces, founder stories, and event archives. Two original research reports have been published through it — FemTech Market Map for Greater China (2025-05) and the FemmeHealth Ventures Alliance partnership announcement (2025-06) — both functioning as lead-generation artefacts and thought-leadership positioning in Chinese and international markets.\n",
         "myRole": "I am Chief Technology Officer, hired 2025-03 by founder Zhu Yihan (hire date is a career fact, not repo-verifiable), with full ownership of every digital surface the organisation operates. I run a solo engineering team, with one occasional contributor accounting for ~30 of 564 commits. I hold end-to-end authority over architecture, vendor choice, deployment infrastructure, content-management workflow, application and subscription pipelines, and the live infrastructure for Shanghai Summit 2026.\n\nSpecifically: I designed and built both website generations from scratch (Gen-1 Next.js + Notion — external claim: 100% solo across 58 commits in a separate repo, needs registry check; Gen-2 — this entry — at 94.7% solo across 564 commits over ~13 months). I wrote the entire Drizzle schema, every migration, all 16 Cloudflare Pages Functions, every email template (HTML + plain-text twins, brand-coloured, XSS-defended), the admin dashboard, the four application-pipeline forms, the Shanghai Summit 10-section homepage plus sub-pages and gated agenda, the Notion-as-CMS integration, the bilingual EN / 简体中文 routing and content layer, the Gemini chatbot, the earth-flyline global-network visualisation, and the image-performance pass. I operate the production Cloudflare Pages deployment and make every speaker / sponsor / agenda update directly on main, reporting to founder Zhu Yihan and collaborating with the 2-10-person core team on editorial calendar, summit programming, and ecosystem partnerships.\n"
       },
-      "_relatedProjects": [
-        {
-          "id": "femtech-radar",
-          "provenance": "client",
-          "tier": "secondary",
-          "recency": "active",
-          "lastUpdated": "2026-07-04",
-          "name": "FemTech Radar",
-          "priority": 86,
-          "category": "ai-apps",
-          "clientOrgId": "femtech-weekend",
-          "relatedWorkId": "femtech-weekend",
-          "relatedProjectIds": [
-            "femtech-weekend-website"
-          ],
-          "tagline": "Agent-first FemTech intelligence — an MCP server that fetches, dedupes, and scores women's-health & FemTech research and news, feeding a weekly GitHub Agentic Workflow and an auto-updating Astro + RSS site",
-          "repoUrl": "https://github.com/ChanMeng666/femtech-radar",
-          "url": "https://chanmeng666.github.io/femtech-radar/",
-          "extraLinks": [
-            {
-              "label": "Live site",
-              "url": "https://chanmeng666.github.io/femtech-radar/"
-            },
-            {
-              "label": "RSS feed",
-              "url": "https://chanmeng666.github.io/femtech-radar/rss.xml"
-            },
-            {
-              "label": "npm (@chanmeng666/femtech-radar-mcp)",
-              "url": "https://www.npmjs.com/package/@chanmeng666/femtech-radar-mcp"
-            }
-          ],
-          "techStack": [
-            "TypeScript",
-            "MCP (@modelcontextprotocol/sdk)",
-            "Zod",
-            "Vitest",
-            "tsup",
-            "Astro 5",
-            "GitHub Agentic Workflows",
-            "GitHub Pages",
-            "RSS"
-          ],
-          "status": "live",
-          "startDate": "2026-06",
-          "publicSummary": "A three-unit pipeline that turns scattered FemTech / women's-health\nsignal into a curated weekly digest: an MCP server (fetch -> normalize\n-> dedupe -> score), a weekly GitHub Agentic Workflow where Copilot\ncurates review-gated JSON, and an Astro site that auto-deploys to\nGitHub Pages with RSS subscriptions.\n",
-          "narrative": {
-            "impactHeadline": "Agent-first FemTech intelligence — a deterministic MCP core (fetch, dedupe, relevance × popularity × freshness scoring) feeds a review-gated weekly GitHub Agentic Workflow and an auto-deploying Astro + RSS site across four sections.",
-            "problem": "FemTech news, research, opportunities, and discussions are scattered\nacross dozens of sources with too much noise to track manually.\n",
-            "audience": "FemTech practitioners, researchers, and community members who want a\ncurated weekly digest and an MCP tool their own agents can query.\n",
-            "technicalApproach": "A deterministic MCP core (injected Fetcher adapters, dedupe,\nrelevance × popularity × freshness scoring) is separated from\neditorial judgment in the agentic workflow; a shared Zod schema\ncontract links the MCP server and the Astro site. 28 unit tests;\nnpm package at v0.3.0.\n",
-            "myRole": "Sole author of the MCP server, scoring model, agentic workflow, and\nAstro site.\n"
-          },
-          "_clientOrg": {
-            "id": "femtech-weekend",
-            "name": "FemTech Weekend",
-            "url": "https://www.femtechweekend.com"
-          },
-          "_relatedProjectsResolved": [
-            {
-              "id": "femtech-weekend-website",
-              "name": "FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026",
-              "url": "https://www.femtechweekend.com/"
-            }
-          ],
-          "_supersededByProject": null,
-          "_supersedesProjects": []
-        }
-      ],
+      "_relatedProjects": [],
       "_featuredStackResolved": [
         {
           "name": "docusaurus",
@@ -3465,14 +3207,7 @@
         "name": "FemTech Weekend",
         "url": "https://www.femtechweekend.com"
       },
-      "_relatedProjectsResolved": [
-        {
-          "id": "femtech-radar",
-          "name": "FemTech Radar",
-          "url": "https://chanmeng666.github.io/femtech-radar/",
-          "repoUrl": "https://github.com/ChanMeng666/femtech-radar"
-        }
-      ],
+      "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": [
         {
@@ -4310,9 +4045,9 @@
     {
       "id": "she-sharp-event-black-board",
       "provenance": "client",
-      "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "tier": "archive",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "She Sharp — Event Welcome Board",
       "priority": 83,
       "category": "web-apps",
@@ -4442,8 +4177,8 @@
     {
       "id": "vitex",
       "provenance": "personal",
-      "tier": "flagship",
-      "recency": "recent",
+      "tier": "archive",
+      "recency": "historical",
       "meta": {
         "x_brand": {
           "featuredStack": [
@@ -4455,7 +4190,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-10-01",
       "name": "Vitex — AI Career Agent (vitex.org.nz)",
       "priority": 16,
       "category": "ai-apps",
@@ -4548,33 +4283,6 @@
         "outcomes": "Live and operational at **vitex.org.nz**, serving real users end-to-end from a pasted job ad to a compiled PDF. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.\n",
         "myRole": "Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.\n"
       },
-      "_featuredStackResolved": [
-        {
-          "name": "vercel-ai-sdk",
-          "src": "/public/tech-logos/vercel-ai-sdk.svg"
-        },
-        {
-          "name": "typst",
-          "src": "/public/tech-logos/typst.svg"
-        },
-        {
-          "name": "stripe",
-          "src": "/public/tech-logos/stripe.svg"
-        },
-        {
-          "name": "digitalocean",
-          "src": "/public/tech-logos/digitalocean.svg"
-        },
-        {
-          "name": "docker",
-          "src": "/public/tech-logos/docker.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrgs": [],
-      "_adopterOrgs": [],
-      "_affiliationOrg": null,
-      "_cohortPartners": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5487,9 +5195,9 @@
     {
       "id": "readme-profile-generator",
       "provenance": "personal",
-      "tier": "archive",
+      "tier": "secondary",
       "recency": "historical",
-      "lastUpdated": "2026-07-04",
+      "lastUpdated": "2026-10-01",
       "name": "README Profile Generator",
       "priority": 61,
       "category": "branding",
@@ -5812,9 +5520,9 @@
     {
       "id": "typst-claude-skill",
       "provenance": "personal",
-      "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-08-26",
+      "tier": "secondary",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "Typst Skill for Claude Code",
       "priority": 10,
       "category": "ai-apps",
@@ -5844,9 +5552,9 @@
     {
       "id": "ai-hackathon-assistant",
       "provenance": "hackathon",
-      "tier": "primary",
+      "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-05",
+      "lastUpdated": "2026-10-01",
       "name": "Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)",
       "priority": 14,
       "category": "ai-apps",
@@ -5992,7 +5700,7 @@
     {
       "id": "her-waka",
       "provenance": "client",
-      "tier": "primary",
+      "tier": "secondary",
       "recency": "historical",
       "meta": {
         "x_brand": {
@@ -6002,7 +5710,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-08-05",
+      "lastUpdated": "2026-10-01",
       "name": "HER WAKA — Employment Programme for Women in Auckland",
       "priority": 30,
       "category": "web-apps",
@@ -6130,9 +5838,9 @@
     {
       "id": "portfolio-v2",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "secondary",
       "recency": "active",
-      "lastUpdated": "2026-07-10",
+      "lastUpdated": "2026-10-01",
       "name": "2D Portfolio — chanmeng.org",
       "priority": 12,
       "category": "ai-apps",
@@ -6333,8 +6041,8 @@
       "id": "github-visitor-counter",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-07",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "GitHub Visitor Counter",
       "priority": 64,
       "category": "branding",
@@ -6414,9 +6122,9 @@
     {
       "id": "design-pages",
       "provenance": "personal",
-      "tier": "archive",
+      "tier": "secondary",
       "recency": "historical",
-      "lastUpdated": "2026-07-04",
+      "lastUpdated": "2026-10-01",
       "name": "Design Pages",
       "priority": 44,
       "category": "creative",
@@ -6515,9 +6223,9 @@
     {
       "id": "flip-book-template",
       "provenance": "personal",
-      "tier": "archive",
+      "tier": "secondary",
       "recency": "historical",
-      "lastUpdated": "2026-05-18",
+      "lastUpdated": "2026-10-01",
       "name": "Flip Book Template",
       "priority": 37,
       "category": "web-apps",
@@ -6603,8 +6311,8 @@
       "id": "fishing-club-project",
       "provenance": "coursework",
       "tier": "archive",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "East Coast Anglers Club (Fishing Club Website)",
       "priority": 40,
       "category": "web-apps",
@@ -6817,8 +6525,8 @@
       "id": "gavigo-logo",
       "provenance": "client",
       "tier": "archive",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "GAVIGO Logo",
       "priority": 62,
       "category": "branding",
@@ -7148,6 +6856,10 @@
         {
           "label": "npm (@chanmeng666/archlang)",
           "url": "https://www.npmjs.com/package/@chanmeng666/archlang"
+        },
+        {
+          "label": "Showcase gallery (repo)",
+          "url": "https://github.com/ChanMeng666/archlang-showcase"
         }
       ],
       "techStack": [
@@ -7246,9 +6958,9 @@
     {
       "id": "femtech-radar",
       "provenance": "client",
-      "tier": "secondary",
-      "recency": "active",
-      "lastUpdated": "2026-07-04",
+      "tier": "archive",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "FemTech Radar",
       "priority": 86,
       "category": "ai-apps",
@@ -7351,8 +7063,8 @@
       "id": "svg-animation-studio",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "active",
-      "lastUpdated": "2026-07-04",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "SVG Animation Studio",
       "priority": 88,
       "category": "creative",
@@ -7384,9 +7096,9 @@
     {
       "id": "cloud-canals",
       "provenance": "personal",
-      "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-16",
+      "tier": "archive",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "Cloud Canals",
       "priority": 89,
       "category": "games",
@@ -7413,8 +7125,8 @@
       "id": "super-mario-makey-makey",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "Super Mario · Makey Makey Edition",
       "priority": 90,
       "category": "games",
@@ -7688,8 +7400,8 @@
       "id": "geo-markdown-mirror",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "geo-markdown-mirror",
       "priority": 97,
       "category": "ai-apps",
@@ -7716,8 +7428,8 @@
       "id": "professional-repo-docs-skill",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "professional-repo-docs",
       "priority": 98,
       "category": "ai-apps",
@@ -7743,8 +7455,8 @@
       "id": "academic-paper-review-skill",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "Academic Paper Review Skill",
       "priority": 99,
       "category": "ai-apps",
@@ -7772,8 +7484,8 @@
       "id": "app-promo-studio",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "app-promo-studio",
       "priority": 100,
       "category": "creative",
@@ -7832,8 +7544,8 @@
       "id": "logo-as-code-skill",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "recency": "historical",
+      "lastUpdated": "2026-10-01",
       "name": "logo-as-code Skill",
       "priority": 102,
       "category": "branding",
@@ -7876,8 +7588,8 @@
       "id": "readme-showcase",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "recent",
-      "lastUpdated": "2026-07-04",
+      "recency": "active",
+      "lastUpdated": "2026-10-01",
       "name": "readme-showcase",
       "priority": 103,
       "category": "ai-apps",
@@ -8029,8 +7741,8 @@
       "id": "product-reality-check",
       "provenance": "personal",
       "tier": "secondary",
-      "recency": "active",
-      "lastUpdated": "2026-08-05",
+      "recency": "recent",
+      "lastUpdated": "2026-10-01",
       "name": "product-reality-check",
       "priority": 106,
       "category": "ai-apps",
@@ -8047,6 +7759,118 @@
         "problem": "Most side projects are validated by vibes: build the thing, write a\nREADME calling it the first tool that does X, post it, watch\nnothing happen, and never learn which of the three possible\nreasons it was.\n",
         "technicalApproach": "An Agent Skill that forces five things hand-waved validation skips.\nA falsification section on every report — specific, cheap-to-check\nobservations that would overturn the conclusion. A prior-art audit\non every superlative, since a stranger can refute \"first\" in one\nsearch and that refutation discredits everything beside it. A claim\nledger, where each externally checkable number carries a source URL\nfetched in-session and a verification date, and numbers without a\nrow get deleted rather than softened. Bottom-up sizing from named\nbuyer archetypes and sourced price anchors, never \"1% of a $40B\nmarket\". And a red-team kill memo followed by numeric go/kill\nthresholds set before the evidence they will judge.\n",
         "myRole": "Sole author. MIT. Triggers on the questions people actually ask —\n\"who would pay for this?\", \"why is nobody using it?\" — rather than\nrequiring a command to be memorised.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
+    },
+    {
+      "id": "slack-waterline-skill",
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-10-02",
+      "name": "slack-waterline",
+      "priority": 107,
+      "category": "ai-apps",
+      "tagline": "A Claude Code skill that reads every message in a Slack workspace and proves nothing was missed — thread-aware catch-up, a daily or weekly DM digest, drafted replies, and two audit gates that fail differently. Zero dependencies, many workspaces from one install",
+      "repoUrl": "https://github.com/ChanMeng666/slack-waterline-skill",
+      "techStack": [
+        "Claude Code Skill (Agent Skills open standard)",
+        "Node.js 18+ (zero dependencies, plain fetch against the Slack Web API)",
+        "node --test",
+        "GitHub Actions"
+      ],
+      "status": "active",
+      "startDate": "2026-09",
+      "narrative": {
+        "impactHeadline": "Catches the Slack messages unread-counts cannot see — replies buried in old threads — and refuses to mark anything read until a payload was actually delivered, so a missed message cannot quietly disappear.",
+        "problem": "Slack tools report what is unread, not what you missed. A reply never\nmoves its parent thread, so a channel whose live conversation sits\ninside one older thread reads as clean from the top level, every day.\nMost catch-up tooling also marks a message read when it fetches it, so\na run that dies halfway, or a summary the model never saw, loses the\nmessage for good.\n",
+        "technicalApproach": "Three read positions with one writer each: what was read, what the\ntriage scored, and what Slack is still holding on a row it could not\nclear. A read receipt may only describe what was delivered, never what\nexists. Two audit gates that fail differently — one walks the local\nrecord for self-consistency, the other interrogates Slack for\nconversations nobody ever enumerated. Per-thread reply counts surface\na reply on a months-old parent. Linked Google Sheets are read tab by\ntab. HTTP 200 is not treated as success, because Slack's file CDN and\nGoogle both serve a login page with a 200 when auth fails. Zero\ndependencies, so nothing lands in the repo it is pointed at.\n",
+        "myRole": "Sole author. MIT. Generalised from two Slack ingestion systems Chan ran\ndaily for a year — a personal reply queue for a startup workspace and a\nconversation archive for a nonprofit — and the library's state tests name\nthe real missed messages each rule came from.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
+    },
+    {
+      "id": "archlang-showcase",
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-10-02",
+      "name": "ArchLang Showcase",
+      "priority": 108,
+      "category": "creative",
+      "tagline": "A gallery of floor plans compiled from a few dozen lines of ArchLang source each — famous buildings, TV homes and game maps written as text, each with its story, source, a playground permalink and a social-card kit",
+      "repoUrl": "https://github.com/ChanMeng666/archlang-showcase",
+      "url": "https://archlang.uk/showcase",
+      "extraLinks": [
+        {
+          "label": "Showcase gallery",
+          "url": "https://archlang.uk/showcase"
+        },
+        {
+          "label": "ArchLang playground",
+          "url": "https://playground.archlang.uk"
+        }
+      ],
+      "techStack": [
+        "ArchLang (.arch source)",
+        "@chanmeng666/archlang",
+        "Node.js",
+        "SVG / PNG render scripts"
+      ],
+      "relatedProjectIds": [
+        "archlang"
+      ],
+      "status": "active",
+      "startDate": "2026-08",
+      "narrative": {
+        "impactHeadline": "Every drawing is compiled, not drawn: change a line of .arch source, recompile, get a new building — which is the fastest way to show what the ArchLang compiler does.",
+        "problem": "A floor-plan language is hard to explain in the abstract. People need\nto see a recognisable building produced from text, and be able to edit\nthe text themselves.\n",
+        "productLogic": "Twelve plans — the West Wing, Villa La Rotonda, a building-code lint of\nde_dust2, the Skeld from Among Us, a Simpsons ground floor and others —\neach in its own folder with the .arch source, a story page, the\nrendered drawing and a link that opens the source in the ArchLang\nplayground.\n",
+        "technicalApproach": "One npm script renders every plan to SVG and PNG; a second builds a\nplayground permalink with the source in the URL. Annotation overlays\n(routes, numbered beats, highlighted rooms, a caption) are appended to\nthe SVG without modifying the plan. A per-plan social.json and\noverlay.json drive a generated cover and code card for sharing.\n",
+        "myRole": "Sole author. The drawings are original fan-art and illustrative\napproximations from public information — not measured surveys, and not\naffiliated with or endorsed by any rights holder.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [
+        {
+          "id": "archlang",
+          "name": "ArchLang",
+          "url": "https://archlang.uk/",
+          "repoUrl": "https://github.com/ChanMeng666/archlang"
+        }
+      ],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
+    },
+    {
+      "id": "readme-theme-assets-skill",
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-10-02",
+      "name": "readme-theme-assets-skill",
+      "priority": 109,
+      "category": "ai-apps",
+      "tagline": "A Claude Code skill that makes README images work in GitHub's light and dark themes — four techniques, a one-question decision between them, and three scripts that check the result against GitHub's own renderer rather than by eye",
+      "repoUrl": "https://github.com/ChanMeng666/readme-theme-assets-skill",
+      "techStack": [
+        "Claude Code Skill (Agent Skills open standard)",
+        "Node.js",
+        "Playwright",
+        "GitHub Markdown API"
+      ],
+      "status": "active",
+      "startDate": "2026-08",
+      "narrative": {
+        "impactHeadline": "Stops the silent failure where a logo drawn in near-black is invisible on GitHub's dark canvas — picks the right of four fixes and verifies that a different file actually loads in each theme.",
+        "problem": "A README renders on a canvas the author does not control: white in\nGitHub light, near-black in dark. Single-colour artwork on transparency\nfails completely and silently, and nobody notices because authors look\nat one theme.\n",
+        "technicalApproach": "The choice collapses to one question — do you control the markup, or\nonly a URL? — which selects between a picture element with a\nprefers-color-scheme source, a baked-in background, a parameterised\ngenerator, or an in-SVG media query. Three scripts verify instead of\nassuming: one asks GitHub's Markdown API whether the markup survives its\nsanitiser, one reads the resolved image under both emulated schemes and\nfails if both resolve to the same file, and one probes whether the\nbrowser propagates the colour scheme into an SVG loaded as an image.\nEvery factual claim in the references is tagged verified or inferred,\nand two claims that started out wrong are corrected in the history\nrather than quietly edited away.\n",
+        "myRole": "Sole author. MIT. Written from fixing a real profile README and a real\nlogo repository, not from documentation.\n"
       },
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -13638,6 +13462,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-01",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-01T21:32:59.171Z"
+    "buildTimestamp": "2026-10-01T22:08:36.067Z"
   }
 }

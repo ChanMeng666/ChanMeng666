@@ -872,9 +872,6 @@ linkedin:
       - name: Codex CLI Integration
         associations:
           - echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
-      - name: Vercel AI SDK
-        associations:
-          - Vitex — AI Career Agent SaaS (vitex.org.nz)
       - name: Conversational AI
         associations:
           - Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant
@@ -896,12 +893,6 @@ linkedin:
       - name: Python (Programming Language)
         associations:
           - echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
-      - name: ATS-Optimised Resume Generation
-        associations:
-          - Vitex — AI Career Agent SaaS (vitex.org.nz)
-      - name: Typst
-        associations:
-          - Vitex — AI Career Agent SaaS (vitex.org.nz)
       - name: Web Accessibility (WCAG 2.2 AA)
         associations:
           - Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)
@@ -969,7 +960,6 @@ linkedin:
       - name: Google Maps API
         associations:
           - Chief Technology Officer (CTO) at FreePeriod
-          - FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
       - name: Women in STEM
         associations:
           - Mentor - Technology & Professional Development at Forward with Her 她行 Mentorship
@@ -1068,7 +1058,6 @@ linkedin:
       - name: Cloudflare Pages / Workers
         associations:
           - Chief Technology Officer (CTO) at FreePeriod
-          - FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
           - FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
         endorsements:
           detailsTotal: 5
@@ -1160,7 +1149,6 @@ linkedin:
       - name: Next.js
         associations:
           - 3 experiences at She Sharp and 2 other companies
-          - FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
           - Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx
         endorsements:
           detailsTotal: 8
@@ -1172,7 +1160,6 @@ linkedin:
       - name: Internationalization (i18n)
         associations:
           - Chief Technology Officer (CTO) at FreePeriod
-          - FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
           - Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
       - name: Mobile Application Development
         associations:
@@ -1196,7 +1183,6 @@ linkedin:
         associations:
           - 2 experiences at FreePeriod and 1 other company
           - CORDE Mobile — Offline-First Field-Operations App (React Native)
-          - FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
         endorsements:
           detailsTotal: 4
       - name: SQLite
@@ -1292,25 +1278,6 @@ linkedin:
         - Stripe
         - Docker
         - PostgreSQL
-    - name: Vitex — AI Career Agent SaaS (vitex.org.nz)
-      dateRange: Feb 2026 – Present
-      description: |-
-        Vitex turns a job description plus a candidate's background into an ATS-optimised resume PDF and matching cover letter in about 30 seconds. The user pastes a job ad, uploads their existing CV, and an 8-step AI pipeline streams the tailored documents back. A natural-language refinement box then lets them iterate — "make the leadership section stronger" — and the AI regenerates just that slice.
-
-        • Pipeline: JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → template render (Typst source) → PDF compile, streamed via SSE.
-        • Typst compiles each PDF locally in under 100ms — the user sees the document before finishing the reasoning summary.
-        • Three production migrations (including a LaTeX → Typst engine swap) shipped with zero outage.
-        • Stripe credit ledger; public shareable links via per-document tokens for organic distribution.
-
-        Stack: Next.js 15, Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract), Typst, Stripe, Neon Postgres + Drizzle, Docker + Traefik on DigitalOcean.
-      skills:
-        - Vercel AI SDK
-        - Typst
-        - Next.js
-        - Stripe
-        - Neon Postgres
-        - Drizzle ORM
-        - Docker
     - name: ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans
       dateRange: Jun 2026 – Present
       description: |-
@@ -1549,36 +1516,6 @@ linkedin:
         - 1-1-LoginScreen.png
         - 1-2-3-LoginScreen.png
       mediaTotal: 9
-    - name: FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
-      dateRange: Nov 2024 – Nov 2024
-      description: |-
-        The public site for FreePeriod — a Guangzhou-incubated startup tackling period poverty through solar-powered emergency sanitary-pad dispensers, reproductive-health education, and policy advocacy. Visitors land on a bilingual page, locate the nearest free-pad dispenser on an interactive Google Maps directory, and read FreePeriod's policy briefs and partnership decks.
-
-        The site was the public artefact every judging panel clicked through during FreePeriod's six-award streak in 2024–25:
-
-        • Best Award, Japan 12th Int'l Conference on Social Sciences & Humanities
-        • Third Prize, HKUST Sustainable Smart Living Competition
-        • Best Social Media, China's inaugural FemTech Weekend Challenge
-        • First Prize, Shenzhen Nanshan Philanthropic Creative Star Contest
-        • Selected, Tencent Technology Venture Capital Program
-        • Selected, Tsinghua University SDG Open Innovation Marathon
-
-        53 commits, 100% solo. Stayed on after CTO tenure as long-term custodian and executed the Vercel → Cloudflare Pages migration in April 2026.
-
-        Stack: Next.js 15, TypeScript, Tailwind, Google Maps API, Cloudflare Pages.
-      skills:
-        - Next.js
-        - Internationalization (i18n)
-        - TypeScript
-        - Tailwind CSS
-        - Google Maps API
-        - Cloudflare Pages / Workers
-      hasOtherContributors: true
-      media:
-        - screencapture-free-period-website-vercel-app-2024-12-01-20_11_54.png
-        - screencapture-free-period-website-vercel-app-products-2024-12-01-19_38_55.png
-        - screencapture-free-period-website-vercel-app-impact-2024-12-01-19_39_15.png
-      mediaTotal: 5
   volunteering:
     - role: STEM Mentor
       organization: Forward with Her 她行 Mentorship

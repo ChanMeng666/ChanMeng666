@@ -365,7 +365,7 @@ coding agents and building on the Claude Agent SDK.
 
 // ═══ PROJECTS ════════════════════════════════════════════════════════════════
 // Four independent projects Chan owns end to end, mirroring the designed CV's
-// four cards (re-chosen 2026-09-24: Tam-AI-Ti and Vitex moved to "Also built",
+// four cards (re-chosen 2026-09-24: Tam-AI-Ti moved to "Also built",
 // a11y-loop came up from it). No project here duplicates a product built at an employer or at
 // Chan's own company — those live in Experience. ArchCanvas used to lead this
 // section; it moved up to Experience when ArchCanvas became a role rather than
@@ -432,7 +432,6 @@ coding agents and building on the Claude Agent SDK.
 #block(above: 0pt, below: 0pt, {
   strong("Also built: ")
   [#link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited),
-  #link("https://www.vitex.org.nz/")[Vitex - AI Career Agent] (a tailored resume and cover letter in under 30 seconds),
   #link("https://seismophone.chanmeng.org/")[Seismophone] (the first public Suno remix-lineage explorer),
   #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (a te reo Māori and English AI financial-wellness app; a 19-user cohort produced 181 journal entries in 4 months), and
   #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).]

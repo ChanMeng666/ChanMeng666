@@ -208,7 +208,7 @@
 // ── pp8–11: Chapter 3 — What I Build ─────────────────────────────────────────
 // The book's largest chapter, rebuilt 2026-07-24 around Chan's OWN flagship set
 // (data/profile/90-meta.yaml flagshipProjectIds: google-news-mcp · echook ·
-// archlang · archcanvas · vitex, plus spotlight member gradient-svg-generator).
+// archlang · archcanvas (vitex since archived), plus spotlight member gradient-svg-generator).
 // Client/community work (Tam-AI-Ti, FemTracker, She Sharp, Eatropolis, redefine,
 // tower defence) moved OUT — the chapter is now her products and product taste.
 // Page map DETERMINISTIC (4 pagebreaks → exactly pp8–11): p8 opener + framing,
@@ -219,13 +219,13 @@
 // dev-stat bragging in prose (product feature counts like "355 templates" fine).
 #let x-build() = {
   // Page map (deterministic, 4 pagebreaks → pp8–11), rebalanced 2026-07-24 so no
-  // page is airy: opener MERGES onto p8 above the flagship, then 1/2/2/1+quote —
-  // p8 opener + ArchCanvas (feature), p9 ArchLang + Vitex, p10 echook + Google
-  // News MCP, p11 gradient-svg-generator (feature) + a closing pull-quote. Six
+  // page is airy: opener MERGES onto p8 above the flagship, then 1/1/2/1+quote —
+  // p8 opener + ArchCanvas (feature), p9 ArchLang (feature), p10 echook + Google
+  // News MCP, p11 gradient-svg-generator (feature) + a closing pull-quote. Five
   // products, same order; product cards are full-width and large so each page
   // fills top to bottom.
   chapter-opener("3", "What I Build",
-    kicker: [The largest chapter — because the work is the argument. Six products I designed and shipped; every name is a link you can open.])
+    kicker: [The largest chapter — because the work is the argument. Five products I designed and shipped; every name is a link you can open.])
   block(above: 0pt, below: 30pt, {
     set par(leading: leading-lead-x, justify: false)
     text(size: size-body-x, fill: ink)[
@@ -246,17 +246,12 @@
     caption: [Where I build from: among Auckland's Claude builders at the Claude Meetup, AUT — July 2026.])
   v(1fr)
   pagebreak()
-  // p9 — ArchLang (the engine under ArchCanvas) + Vitex
+  // p9 — ArchLang (the engine under ArchCanvas), feature tile (Vitex dropped 2026-10-02: archived)
   v(1fr)
   product-tile("/public/brands/archlang-logo.svg", [ArchLang],
     [A small language for floor plans: write walls and rooms in plain text, get back a precise dimensioned drawing, change one number and exactly one thing moves.],
     [A zero-dependency TypeScript compiler exporting SVG, DXF, PDF, and PNG — and it checks whether a plan is actually livable. The engine behind ArchCanvas.],
-    "https://archlang.uk/", "archlang.uk")
-  v(1fr)
-  product-tile("/public/brands/vitex.svg", [Vitex — AI Career Agent],
-    [Paste a job ad and describe your background, and Vitex writes a resume and cover letter tailored to that job as an ATS-ready PDF in about thirty seconds.],
-    [Reachable over the web, a public API, a command-line tool, and an MCP server — so an AI assistant can drive the whole product without a browser.],
-    "https://www.vitex.org.nz/", "vitex.org.nz")
+    "https://archlang.uk/", "archlang.uk", logo-h: 300pt)
   v(1fr)
   pagebreak()
   // p10 — echook (dev-tooling plugin) + Google News MCP (ecosystem server)

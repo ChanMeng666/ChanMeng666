@@ -1081,12 +1081,6 @@
         ]
       },
       {
-        "name": "Vercel AI SDK",
-        "associations": [
-          "Vitex — AI Career Agent SaaS (vitex.org.nz)"
-        ]
-      },
-      {
         "name": "Conversational AI",
         "associations": [
           "Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant"
@@ -1126,18 +1120,6 @@
         "name": "Python (Programming Language)",
         "associations": [
           "echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI"
-        ]
-      },
-      {
-        "name": "ATS-Optimised Resume Generation",
-        "associations": [
-          "Vitex — AI Career Agent SaaS (vitex.org.nz)"
-        ]
-      },
-      {
-        "name": "Typst",
-        "associations": [
-          "Vitex — AI Career Agent SaaS (vitex.org.nz)"
         ]
       },
       {
@@ -1262,8 +1244,7 @@
       {
         "name": "Google Maps API",
         "associations": [
-          "Chief Technology Officer (CTO) at FreePeriod",
-          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)"
+          "Chief Technology Officer (CTO) at FreePeriod"
         ]
       },
       {
@@ -1449,7 +1430,6 @@
         "name": "Cloudflare Pages / Workers",
         "associations": [
           "Chief Technology Officer (CTO) at FreePeriod",
-          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)",
           "FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages"
         ],
         "endorsements": {
@@ -1609,7 +1589,6 @@
         "name": "Next.js",
         "associations": [
           "3 experiences at She Sharp and 2 other companies",
-          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)",
           "Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx"
         ],
         "endorsements": {
@@ -1629,7 +1608,6 @@
         "name": "Internationalization (i18n)",
         "associations": [
           "Chief Technology Officer (CTO) at FreePeriod",
-          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)",
           "Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)"
         ]
       },
@@ -1669,8 +1647,7 @@
         "name": "TypeScript",
         "associations": [
           "2 experiences at FreePeriod and 1 other company",
-          "CORDE Mobile — Offline-First Field-Operations App (React Native)",
-          "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)"
+          "CORDE Mobile — Offline-First Field-Operations App (React Native)"
         ],
         "endorsements": {
           "detailsTotal": 4
@@ -1758,20 +1735,6 @@
         "Stripe",
         "Docker",
         "PostgreSQL"
-      ]
-    },
-    {
-      "name": "Vitex — AI Career Agent SaaS (vitex.org.nz)",
-      "dateRange": "Feb 2026 – Present",
-      "description": "Vitex turns a job description plus a candidate's background into an ATS-optimised resume PDF and matching cover letter in about 30 seconds. The user pastes a job ad, uploads their existing CV, and an 8-step AI pipeline streams the tailored documents back. A natural-language refinement box then lets them iterate — \"make the leadership section stronger\" — and the AI regenerates just that slice.\n\n• Pipeline: JD parsing → background parsing → match analysis → resume tailoring → ATS scoring → cover letter → template render (Typst source) → PDF compile, streamed via SSE.\n• Typst compiles each PDF locally in under 100ms — the user sees the document before finishing the reasoning summary.\n• Three production migrations (including a LaTeX → Typst engine swap) shipped with zero outage.\n• Stripe credit ledger; public shareable links via per-document tokens for organic distribution.\n\nStack: Next.js 15, Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract), Typst, Stripe, Neon Postgres + Drizzle, Docker + Traefik on DigitalOcean.",
-      "skills": [
-        "Vercel AI SDK",
-        "Typst",
-        "Next.js",
-        "Stripe",
-        "Neon Postgres",
-        "Drizzle ORM",
-        "Docker"
       ]
     },
     {
@@ -1965,26 +1928,6 @@
         "1-2-3-LoginScreen.png"
       ],
       "mediaTotal": 9
-    },
-    {
-      "name": "FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)",
-      "dateRange": "Nov 2024 – Nov 2024",
-      "description": "The public site for FreePeriod — a Guangzhou-incubated startup tackling period poverty through solar-powered emergency sanitary-pad dispensers, reproductive-health education, and policy advocacy. Visitors land on a bilingual page, locate the nearest free-pad dispenser on an interactive Google Maps directory, and read FreePeriod's policy briefs and partnership decks.\n\nThe site was the public artefact every judging panel clicked through during FreePeriod's six-award streak in 2024–25:\n\n• Best Award, Japan 12th Int'l Conference on Social Sciences & Humanities\n• Third Prize, HKUST Sustainable Smart Living Competition\n• Best Social Media, China's inaugural FemTech Weekend Challenge\n• First Prize, Shenzhen Nanshan Philanthropic Creative Star Contest\n• Selected, Tencent Technology Venture Capital Program\n• Selected, Tsinghua University SDG Open Innovation Marathon\n\n53 commits, 100% solo. Stayed on after CTO tenure as long-term custodian and executed the Vercel → Cloudflare Pages migration in April 2026.\n\nStack: Next.js 15, TypeScript, Tailwind, Google Maps API, Cloudflare Pages.",
-      "skills": [
-        "Next.js",
-        "Internationalization (i18n)",
-        "TypeScript",
-        "Tailwind CSS",
-        "Google Maps API",
-        "Cloudflare Pages / Workers"
-      ],
-      "hasOtherContributors": true,
-      "media": [
-        "screencapture-free-period-website-vercel-app-2024-12-01-20_11_54.png",
-        "screencapture-free-period-website-vercel-app-products-2024-12-01-19_38_55.png",
-        "screencapture-free-period-website-vercel-app-impact-2024-12-01-19_39_15.png"
-      ],
-      "mediaTotal": 5
     }
   ],
   "volunteering": [

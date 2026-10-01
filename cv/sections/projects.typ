@@ -25,7 +25,7 @@
 // Four independent projects Chan owns end to end, re-chosen with her on
 // 2026-09-24: Google News MCP, echook, the AI Programming Education Platform and
 // a11y-loop — the agent-tooling and teaching work a hiring reader asks about
-// first. Tam-AI-Ti and Vitex moved down into the italic "Also built:" closer
+// first. Tam-AI-Ti moved down into the italic "Also built:" closer
 // (the space paid for the "Built:" lines added to Experience), and a11y-loop
 // left the closer for its own card, so each project still appears exactly once.
 // NOT products built at an employer or at her own company — those live in
@@ -105,7 +105,7 @@
       set text(size: size-tiny, fill: muted, style: "italic")
       set par(leading: 0.68em, justify: false)
       [
-        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, for Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited) · #link("https://www.vitex.org.nz/")[Vitex] (AI career agent: a tailored resume and cover letter in under 30 seconds) · #link("https://seismophone.chanmeng.org/")[Seismophone] (first public Suno remix-lineage explorer) · #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (AI financial-wellness app built around te ao Māori; a 19-user cohort over 4 months) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
+        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, for Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited) · #link("https://seismophone.chanmeng.org/")[Seismophone] (first public Suno remix-lineage explorer) · #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (AI financial-wellness app built around te ao Māori; a 19-user cohort over 4 months) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
       ]
     },
   )

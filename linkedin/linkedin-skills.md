@@ -3,7 +3,7 @@
 
 # LinkedIn — Skills
 
-95 skills, in the order LinkedIn's "All" view displays them.
+92 skills, in the order LinkedIn's "All" view displays them.
 
 **Category tabs:** Industry Knowledge · Tools & Technologies · Interpersonal Skills · Other Skills
 
@@ -34,9 +34,6 @@
 ### Codex CLI Integration
 - echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
 
-### Vercel AI SDK
-- Vitex — AI Career Agent SaaS (vitex.org.nz)
-
 ### Conversational AI
 - Sanicle.Cloud — Corporate Site with IBM watsonx Conversational Assistant
 
@@ -57,12 +54,6 @@
 
 ### Python (Programming Language)
 - echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
-
-### ATS-Optimised Resume Generation
-- Vitex — AI Career Agent SaaS (vitex.org.nz)
-
-### Typst
-- Vitex — AI Career Agent SaaS (vitex.org.nz)
 
 ### Web Accessibility (WCAG 2.2 AA)
 - Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)
@@ -124,7 +115,6 @@
 
 ### Google Maps API
 - Chief Technology Officer (CTO) at FreePeriod
-- FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
 
 ### Women in STEM
 - Mentor - Technology & Professional Development at Forward with Her 她行 Mentorship
@@ -223,7 +213,6 @@
 
 ### Cloudflare Pages / Workers
 - Chief Technology Officer (CTO) at FreePeriod
-- FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
 - FemTech Weekend Gen-2 Platform — Docusaurus + Drizzle on Cloudflare Pages
   _Show all 5 details_
 
@@ -283,7 +272,6 @@
 
 ### Next.js
 - 3 experiences at She Sharp and 2 other companies
-- FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
 - Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx
   _Show all 8 details_
 
@@ -292,7 +280,6 @@
 
 ### Internationalization (i18n)
 - Chief Technology Officer (CTO) at FreePeriod
-- FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
 - Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
 ### Mobile Application Development
@@ -312,7 +299,6 @@
 ### TypeScript
 - 2 experiences at FreePeriod and 1 other company
 - CORDE Mobile — Offline-First Field-Operations App (React Native)
-- FreePeriod — Bilingual Period-Poverty Platform (Software + Hardware)
   _Show all 4 details_
 
 ### SQLite

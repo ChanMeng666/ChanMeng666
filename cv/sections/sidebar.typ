@@ -176,7 +176,7 @@
     "Zod",
   ))
   // Vercel + Stripe removed (brand names, not engineering depth). Docker
-  // + Traefik comes from the Vitex production VPS stack (Railway →
+  // + Traefik comes from a production VPS stack (Railway →
   // Cloudflare Workers → DigitalOcean migration); Redis comes from
   // multiple production projects (GAVIGO activation pool, Sanicle, She
   // Sharp mentor cache, ByteDance backend) — both backed by profile.yaml.

@@ -205,90 +205,120 @@
   v(0.4fr)
   pagebreak()
 }
-// ── pp8–11: Chapter 3 — What I Build ─────────────────────────────────────────
-// The book's largest chapter, rebuilt 2026-07-24 around Chan's OWN flagship set
-// (data/profile/90-meta.yaml flagshipProjectIds: google-news-mcp · echook ·
-// archlang · archcanvas (vitex since archived), plus spotlight member gradient-svg-generator).
-// Client/community work (Tam-AI-Ti, FemTracker, She Sharp, Eatropolis, redefine,
-// tower defence) moved OUT — the chapter is now her products and product taste.
-// Page map DETERMINISTIC (4 pagebreaks → exactly pp8–11): p8 opener + framing,
-// then 2 products per page pp9–11 via the uniform product-tile (fixed logo box +
-// one human line + one plain-technical line + a live link). Copy anchors + URLs
-// verified against data/profile/20–23-projects*.yaml (name / publicSummary /
-// tagline / url|repoUrl). Red lines held: no pricing; no commit-count/solo-%
-// dev-stat bragging in prose (product feature counts like "355 templates" fine).
+// ── pp8–13: Chapter 3 — What I Build ─────────────────────────────────────────
+// Eleven systems as uniform product tiles, two per page (rebuilt 2026-10-02 from
+// Chan's picks). Two kinds, told apart by the violet "For <Org>" line that only
+// client tiles carry: her own products (ArchCanvas, ArchLang, echook, Google
+// News MCP, Seismophone, a11y-loop, the teaching platform) and systems she built
+// for organisations (GAVIGO IRE, She Sharp, FemTech Weekend, Eatropolis).
+// Page map DETERMINISTIC (6 pagebreaks → exactly pp8–13): p8 opener + ArchCanvas
+// + ArchLang; p9 GAVIGO + She Sharp; p10 FemTech Weekend + Eatropolis (client
+// pairs); p11 echook + Google News MCP; p12 Seismophone + a11y-loop; p13 the
+// teaching platform + the closing pull-quote. Copy anchors + URLs verified
+// against data/profile/20–23-projects*.yaml; every number is in those shards.
+// Red lines: no pricing; no commit-count/solo-% dev-stat bragging (the She Sharp
+// 1,549 / 13.3-month figures live on the career pages, not here).
+#let build-logo-h = 160pt
 #let x-build() = {
-  // Page map (deterministic, 4 pagebreaks → pp8–11), rebalanced 2026-07-24 so no
-  // page is airy: opener MERGES onto p8 above the flagship, then 1/1/2/1+quote —
-  // p8 opener + ArchCanvas (feature), p9 ArchLang (feature), p10 echook + Google
-  // News MCP, p11 gradient-svg-generator (feature) + a closing pull-quote. Five
-  // products, same order; product cards are full-width and large so each page
-  // fills top to bottom.
   chapter-opener("3", "What I Build",
-    kicker: [The largest chapter — because the work is the argument. Five products I designed and shipped; every name is a link you can open.])
-  block(above: 0pt, below: 30pt, {
+    kicker: [The largest chapter — because the work is the argument. Eleven systems: seven products of my own and four I built for organisations. Every name is a link you can open.])
+  block(above: 0pt, below: 22pt, {
     set par(leading: leading-lead-x, justify: false)
     text(size: size-body-x, fill: ink)[
-      These are the products I keep coming back to — the ones that show what I care about when I build: precise artifacts over pretty pictures, tools you operate in plain language, and systems small enough to hold in your head.
+      Two kinds of work, told apart by a violet line: the products I keep coming back to, and systems I built for the organisations that trusted me with theirs (Chapter 4 covers what I make beyond code). Same taste in both — precise artifacts over pretty pictures, tools you operate in plain language, and systems small enough to hold in your head.
     ]
   })
+  v(1fr)
   product-tile("/public/brands/archcanvas-logo.svg", [ArchCanvas],
     [An AI design agent for architects and self-builders: describe a building and it draws a dimensioned floor plan you can actually build from, plus a realistic rendering.],
     [Refine it by talking, on an infinite zoomable canvas; every plan is real ArchLang underneath, exportable as a full git history.],
-    "https://archcanvas.uk/", "archcanvas.uk", logo-h: 150pt)
-  // 2026-09-17: the page foot was dead space. Filled with a real event photo
-  // (public/photos/events/, file name = event; facts from 80-events.yaml
-  // claude-meetup-auckland-2026-07). The bridge to this chapter is the point of
-  // the caption: the room is the builder community she makes these products
-  // in. Role there was ATTENDEE — never caption it as speaking or organising.
-  v(1fr)
-  photo-band("/public/photos/events/2026-07-01-claude-meetup-auckland-group.jpg", h: 170pt,
-    caption: [Where I build from: among Auckland's Claude builders at the Claude Meetup, AUT — July 2026.])
-  v(1fr)
-  pagebreak()
-  // p9 — ArchLang (the engine under ArchCanvas), feature tile (Vitex dropped 2026-10-02: archived)
+    "https://archcanvas.uk/", "archcanvas.uk", logo-h: build-logo-h)
   v(1fr)
   product-tile("/public/brands/archlang-logo.svg", [ArchLang],
     [A small language for floor plans: write walls and rooms in plain text, get back a precise dimensioned drawing, change one number and exactly one thing moves.],
     [A zero-dependency TypeScript compiler exporting SVG, DXF, PDF, and PNG — and it checks whether a plan is actually livable. The engine behind ArchCanvas.],
-    "https://archlang.uk/", "archlang.uk", logo-h: 300pt)
+    "https://archlang.uk/", "archlang.uk", logo-h: build-logo-h)
   v(1fr)
   pagebreak()
-  // p10 — echook (dev-tooling plugin) + Google News MCP (ecosystem server)
+  // p9 — client systems: GAVIGO + She Sharp
+  v(1fr)
+  product-tile("/public/brands/gavigo-mark.svg", [GAVIGO IRE],
+    [The "Instant Reality Exchange": a platform that switches a phone from one app experience to another instantly, built as the founding engineering effort behind a start-up.],
+    [Go and Kubernetes container pre-warming: restores in under 1 ms at the median, with an 84.6% warm-pool hit rate; moved from DigitalOcean to Google Cloud and validated by Google for Startups and NVIDIA Inception.],
+    "https://ire.gavigo.com/", "ire.gavigo.com", logo-h: build-logo-h,
+    client: [For GAVIGO Inc. — Founding Principal Engineer],
+    url2: "https://gavigo.com/", linktext2: "gavigo.com")
+  v(1fr)
+  product-tile("/public/brands/she-sharp-mark.svg", [She Sharp member platform],
+    [Moved a volunteer-run New Zealand women-in-STEM charity off Webflow and spreadsheets onto a platform it owns: AI mentor matching with human review, Stripe memberships, and a dashboard each for mentors, mentees, and admins.],
+    [Next.js, Drizzle, and Neon Postgres: 84 API routes and 63 pages, plus Slack automations that turn event publishing into a one-command change.],
+    "https://www.shesharp.org.nz/", "shesharp.org.nz", logo-h: build-logo-h,
+    client: [For She Sharp — Senior Full Stack Engineer & Website Team Lead])
+  v(1fr)
+  pagebreak()
+  // p10 — client systems: FemTech Weekend + Eatropolis
+  v(1fr)
+  product-tile("/public/brands/femtech-weekend-mark.svg", [FemTech Weekend website],
+    [The home of China's first women's-health-technology organisation, which carried its Shanghai Summit 2026: four application pipelines, an admin dashboard with review and approval emails, and a bilingual English / 简体中文 site.],
+    [Docusaurus on Cloudflare Pages with Drizzle and Neon Postgres; 16 serverless endpoints handle the whole server side.],
+    "https://www.femtechweekend.com/", "femtechweekend.com", logo-h: build-logo-h,
+    client: [For FemTech Weekend — Chief Technology Officer])
+  v(1fr)
+  product-tile("/public/brands/eatropolis-mark.svg", [Eatropolis festival website],
+    [The official site for Auckland's one-day culinary festival with 30+ award-winning chefs: a two-phase public reveal, and a content workflow the non-technical team edits straight from the browser.],
+    [Next.js 16 on Cloudflare Workers, built to a 1,000-concurrent-visitor load-test target and to the NZ Government Web Accessibility Standard (WCAG 2.2 AA).],
+    "https://eatropolis.co.nz/", "eatropolis.co.nz", logo-h: build-logo-h,
+    client: [For Chow Luck Club — commission, reviewed by Tātaki Auckland Unlimited])
+  v(1fr)
+  pagebreak()
+  // p11 — echook + Google News MCP
   v(1fr)
   product-tile("/public/brands/echook-logo.svg", [echook],
     [An audio-and-status plugin for Claude Code, Cursor, and Codex — you never learn it; you just tell your AI agent "install echook" or "snooze for 30 minutes."],
     [Pure Python standard library, 39 hook events and a context-window status bar, tested on Windows, macOS, and Linux. Open source under MIT.],
-    "https://github.com/ChanMeng666/echook", "github.com/ChanMeng666/echook")
+    "https://github.com/ChanMeng666/echook", "github.com/ChanMeng666/echook", logo-h: build-logo-h)
   v(1fr)
   product-tile("/public/brands/server-google-news.svg", [Google News MCP Server],
     [One of the earliest servers for the Model Context Protocol — the open standard Anthropic launched in late 2024 — and this one shipped just five weeks later.],
     [It lets Claude, Cursor, and Cline search live Google News by topic in ten languages; published on npm and carried across 15+ MCP catalogs, a PulseMCP "Top Pick."],
-    "https://github.com/ChanMeng666/server-google-news", "github.com/ChanMeng666/server-google-news")
+    "https://github.com/ChanMeng666/server-google-news", "github.com/ChanMeng666/server-google-news", logo-h: build-logo-h)
   v(1fr)
   pagebreak()
-  // p11 — gradient-svg-generator (feature) + the chapter's closing pull-quote
-  v(0.5fr)
-  product-tile("/public/brands/gradient-svg-generator-logo.svg", [gradient-svg-generator],
-    [Paste a URL into any Markdown file and your README grows an animated gradient banner that renders live in the browser — no image files, no build step.],
-    [355 parametric templates streamed as live SVG XML from a serverless function, using SMIL animation, CSS keyframes, and SVG filters.],
-    "https://gradient-svg-generator.vercel.app/", "gradient-svg-generator.vercel.app", logo-h: 300pt)
-  v(0.85fr)
+  // p12 — Seismophone + a11y-loop
+  v(1fr)
+  product-tile("/public/brands/seismophone-logo.svg", [Seismophone],
+    [An independent observatory for AI-generated music: it publishes the readings Suno hides, like proof that its "trending" chart froze in 2024, and a map of who remixes whom.],
+    [Next.js 16 on Neon Postgres, in English, 简体中文, and 日本語, with a read-only MCP server so AI agents can query it directly.],
+    "https://seismophone.chanmeng.org/", "seismophone.chanmeng.org", logo-h: build-logo-h)
+  v(1fr)
+  product-tile("/public/brands/a11y-loop-logo.svg", [a11y-loop],
+    [Makes AI coding agents write accessible interfaces by default, checks them in a real browser, and says plainly what it could not check.],
+    [A Claude Code skill and an npm CLI running Playwright and axe-core 4.12 against WCAG 2.2 AA. Open source under MIT.],
+    "https://github.com/ChanMeng666/a11y-loop", "github.com/ChanMeng666/a11y-loop", logo-h: build-logo-h)
+  v(1fr)
+  pagebreak()
+  // p13 — teaching platform + the chapter's closing pull-quote
+  v(0.6fr)
+  product-tile("/public/brands/ai-programming-logo.svg", [AI Programming Education Platform],
+    [A public site where beginners learn to build software with AI, with three years of cohorts kept side by side and an in-site AI tutor that answers from each class's own lessons.],
+    [Docusaurus in English and 简体中文, with a retrieval-based tutor on Cloudflare Workers; five course versions online, three of them running in 2026.],
+    "https://programming.chanmeng.org/", "programming.chanmeng.org", logo-h: build-logo-h)
+  v(1fr)
   pull-quote(
-    [Precise artifacts over pretty pictures. Every one of these you can open, run, and read the source of — that's the whole argument.])
-  v(0.5fr)
+    [Precise artifacts over pretty pictures. Every one of these you can open and try — that's the whole argument.])
+  v(0.6fr)
   pagebreak()
 }
 
-// ── pp12–15: Chapter 4 — What I Make Beyond Code ─────────────────────────────
+// ── pp14–17: Chapter 4 — What I Make Beyond Code ─────────────────────────────
 // The craft evidence from data/profile/45-showcase.yaml, typeset natively: per
 // capability an eyebrow, a title, one or two sentences, a facts line and its
 // links, then the RAW source frames from evidence/src/ (not the plated README
 // collages — their baked-in text shrank to unreadable at page width; Chan,
 // 2026-09-24). Facts and numbers only from that shard.
-// Page map DETERMINISTIC (4 pagebreaks → pp12–15): p12 opener + PDF report;
-// p13 promo films + pitch deck; p14 event slides + transformation record;
-// p15 newsletters + SEO/GEO.
+// Page map DETERMINISTIC (4 pagebreaks → pp14–17): p14 opener + PDF report;
+// p15 promo films + pitch deck; p16 event slides + transformation record;
+// p17 newsletters + SEO/GEO.
 // CONFIDENTIALITY is the shard's: GAVIGO deck = cover/problem/solution only and
 // never the gated URL; the transformation record = headline numbers, no PDF.
 #let craft-gap = 14pt
@@ -361,7 +391,7 @@
   v(1fr)
   pagebreak()
 
-  // p13 — promo films + pitch deck
+  // p15 — promo films + pitch deck
   craft-entry("Promo films", "Two films, built as code in Remotion",
     [Neither is a screen recording: every frame is rendered from code, scored with Suno and cut on the beat, in every aspect ratio a channel needs.])
   {
@@ -391,7 +421,7 @@
   v(1fr)
   pagebreak()
 
-  // p14 — event slides + transformation record
+  // p16 — event slides + transformation record
   craft-entry("Event slides", "Aotearoa AI Hackathon Festival 2026",
     [The 91-slide deck that ran two days of She Sharp's hackathon at AUT, rendered in the browser from the event's own data — timers, team slides and the winners reveal included.],
     facts: ("91 slides", "2 days", "12 teams"),
@@ -414,7 +444,7 @@
   v(1fr)
   pagebreak()
 
-  // p15 — newsletters + SEO/GEO
+  // p17 — newsletters + SEO/GEO
   craft-entry("Newsletters", "Two newsletters, on owned infrastructure",
     [Chan's AI Weekly, a five-minute briefing written with Claude Code and sent through Resend; and She Sharp's monthly, moved off Mailchimp with a 1,549-person cutover and 0 failures.],
     links: (("link", "https://chanmeng.org/newsletter", "chanmeng.org/newsletter"),
@@ -452,7 +482,7 @@
   pagebreak()
 }
 
-// ── p16: Chapter 5 — Teaching ────────────────────────────────────────────────
+// ── p18: Chapter 5 — Teaching ────────────────────────────────────────────────
 // EXACTLY one page (single trailing pagebreak). Manifesto line big, a short
 // method paragraph, the enlarged banana-workshop photo pair, and a REAL
 // attributed student quote (verbatim from data/profile/50-references.yaml,
@@ -516,7 +546,7 @@
   })
   pagebreak()
 }
-// ── pp17–18: Chapter 6 — Voices ──────────────────────────────────────────────
+// ── pp19–20: Chapter 6 — Voices ──────────────────────────────────────────────
 // ALL 27 recommenders appear (avatar wall = exactly 27, incl. historical-archive
 // Daryll Hall — controller ruling). Extensions are the ON-DISK truth, not the
 // brief draft: Gabby/Mi Su/Shushu/Patricia are .jpeg (not .jpg), and Amy-Li's
@@ -568,7 +598,7 @@
     avatar-wall(voices-people.slice(24), cols: 3, size: 66pt, row-gutter: 26pt, col-gutter: 12pt, cap-size: 9pt)))
   v(1fr)
   pagebreak()
-  // p14 — two featured quotes, each with the speaker's avatar in the byline and
+  // p20 — two featured quotes, each with the speaker's avatar in the byline and
   // distributed down the page. Both are exact verbatim substrings of the
   // corresponding entries in data/profile/50-references.yaml, joined by ellipses
   // where interior sentences are omitted; the source casing ("she"/"what") is
@@ -593,7 +623,7 @@
   pagebreak()
 }
 
-// ── p19: Chapter 7 — Recognition ─────────────────────────────────────────────
+// ── p21: Chapter 7 — Recognition ─────────────────────────────────────────────
 // One page. UN CSW69 photo + awards. Award titles/dates verified against
 // data/profile/30-recognition.yaml. No pricing framing; the only named third
 // parties are a company (IBM) and a government minister by title — both from the
@@ -649,7 +679,7 @@
   pagebreak()
 }
 
-// ── p20: back cover (centered, non-bleed — keeps Task 4 geometry) ────────────
+// ── p22: back cover (centered, non-bleed — keeps Task 4 geometry) ────────────
 #let x-backcover() = {
   set page(footer: none)
   v(1fr)

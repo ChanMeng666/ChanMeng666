@@ -49,7 +49,7 @@ npm run check        # validate (schema + linkedin sync) + build + asset audit
   archived-but-active, activity gaps) for every GitHub-linked project.
 - CV PDFs: `pwsh cv/build.ps1` (manual; needs typst). Emits three:
   `public/chan-meng-cv.pdf` (canonical 2-page), `public/chan-meng-cv-extended.pdf`
-  (20-page magazine), and `cv/exports/chan-meng-cv-ats.pdf` (plain single-column
+  (22-page magazine), and `cv/exports/chan-meng-cv-ats.pdf` (plain single-column
   ATS resume — tracked but deliberately OUTSIDE `public/`, never web-served or
   linked; see `cv/exports/README.md`). The same run also writes
   `cv/exports/chan-meng-cv-ats.docx` and `cv/exports/chan-meng-cv-ats.txt`, both

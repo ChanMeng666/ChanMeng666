@@ -1,6 +1,6 @@
 # Extended-CV magazine — curated photo set
 
-Compressed selects for `chan-meng-cv-extended.pdf` (20-page image-led magazine).
+Compressed selects for `chan-meng-cv-extended.pdf` (22-page image-led magazine).
 Each file is resized to max 1400px on the long edge, progressive mozjpeg q80
 (q68 auto-retry if over), asserted ≤ 400 KB. Referenced by later layout tasks
 via relative path `/cv/assets/extended/<name>.jpg`.
@@ -88,7 +88,7 @@ it's an avatar-sized image kept as-is.
 ## Revision wave 3 (2026-07-26) — Chan's own photo library
 
 **NO-DUPLICATES RULE (book-wide invariant).** A distinct photo appears in the
-20-page magazine **at most once**, and near-identical frames of the same moment
+22-page magazine **at most once**, and near-identical frames of the same moment
 count as the same photo. Two violations were found and fixed in this wave:
 
 1. `public/articles/p658073376.webp` (the cover of p6's 2nd media feature) was the **same

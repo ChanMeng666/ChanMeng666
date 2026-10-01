@@ -160,19 +160,24 @@
   }))
 
 // ─── Product tile — UNIFORM full-width product CARD (big logo + copy) ─────────
-// Every product on pp8–11 gets the identical treatment: a full-width cream card
-// (so the page reads as filled, not tiny marks floating in a void) holding a
-// large logo panel beside a name / one human line / one plain-technical line /
-// a live link. `logo-h` scales the logo panel: ~190pt for the 2-per-page pages,
-// larger for the single flagship feature on p8 / the closer on p11. Cards are
-// vertically distributed with v(1fr) spacers so each page fills top to bottom.
-#let product-tile(logo, name, human, tech, url, linktext, logo-h: 210pt, logo-w: 200pt) = block(above: 0pt, below: 0pt, breakable: false,
+// Every system in Chapter 3 gets the identical treatment: a full-width cream
+// card holding a logo panel beside a name / one human line / one plain-technical
+// line / a live link. Two cards per page, vertically distributed with v(1fr)
+// spacers so each page fills top to bottom. `logo-h` scales the logo panel.
+// `client` (optional, content) adds a small violet "For <Org> — <role>" line
+// under the name — set for work built for an organisation, omitted for Chan's
+// own products. `url2`/`linktext2` add an optional second link beside the first.
+#let product-tile(logo, name, human, tech, url, linktext, logo-h: 210pt, logo-w: 200pt, client: none, url2: none, linktext2: none) = block(above: 0pt, below: 0pt, breakable: false,
   box(width: 100%, fill: pill-bg, radius: radius-photo-x, stroke: frame-photo-x + rule.lighten(25%), inset: 22pt, {
     grid(columns: (logo-w, 1fr), column-gutter: 26pt, align: (center + horizon, left + horizon),
       box(width: 100%, height: logo-h, image(logo, width: 100%, height: 100%, fit: "contain")),
       {
-        block(above: 0pt, below: 9pt, breakable: false,
+        block(above: 0pt, below: if client == none { 9pt } else { 5pt }, breakable: false,
           text(weight: "bold", size: 15pt, fill: ink, name))
+        if client != none {
+          block(above: 0pt, below: 11pt, breakable: false,
+            text(size: size-meta-x, fill: raw-cyber-violet, weight: "bold", client))
+        }
         block(above: 0pt, below: 8pt, breakable: false, {
           set par(leading: leading-lead-x, justify: false)
           text(size: size-body-x, fill: ink, human)
@@ -181,8 +186,13 @@
           set par(leading: leading-body-x, justify: false)
           text(size: size-meta-x, fill: muted, tech)
         })
-        block(above: 0pt, below: 0pt, breakable: false,
-          icon-link("link", url, linktext))
+        block(above: 0pt, below: 0pt, breakable: false, {
+          icon-link("link", url, linktext)
+          if url2 != none {
+            h(14pt)
+            icon-link("link", url2, linktext2)
+          }
+        })
       })
   }))
 

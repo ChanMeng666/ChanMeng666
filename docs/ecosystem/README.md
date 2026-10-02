@@ -1,6 +1,6 @@
 # Repo lineage (ecosystem map)
 
-How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified 2026-10-02 against GitHub: **150 public-catalog repos** (51 of them private on GitHub) in **27 entities** and **37 families**, plus 114 typed relations. Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
+How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified 2026-10-02 against GitHub: **150 public-catalog repos** (51 of them private on GitHub) in **26 entities** and **37 families**, plus 117 typed relations. Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
 
 ## What the files are
 
@@ -56,8 +56,12 @@ A relation is `{from, type, to, evidence}`. `from` is always a repo in the catal
 | `data-for` | export/archive that feeds to |
 | `deployed-as` | from is deployed at url:... (live domain) |
 | `built-for` | from was built for an entity (entity:<id>), only where not obvious from the family |
+| `listing-submission-for` | from is Chan's fork of someone else's awesome-list, kept only to submit `to` (her own project) for listing; the fork itself is NOT her project (`ownProject: false`) |
+| `forked-by` | to (`external:owner/name`) is a fork of from, continued by someone else (handover); from stays the original build |
 
 Legend in the diagrams below: 🔒 private on GitHub, 📦 archived.
+
+**`ownProject: false`.** A repo that carries this flag in `lineage.yaml` is a fork or listing submission of someone else's work and is never counted as one of Chan's own repos or projects (see the external-upstreams entity below). The validator requires it on every fork and listing-submission under that entity.
 
 ## Entities with several repos
 
@@ -198,16 +202,14 @@ flowchart LR
     n11["github-visitor-counter"]
     n12["svg-animation-studio"]
   end
-  n1 -->|successor-of| n2
   n7 -->|data-for| n1
   n0 -->|data-for| n7
-  n0 -->|successor-of| n3
   n6 -->|companion-of| n0
   n1 -->|successor-of| n9
   n12 -->|companion-of| n0
 ```
 
-**Chan Meng personal brand surfaces** (`chan-meng-personal-brand`, 10 repos). chanmeng.org (2d-portfolio, apparent successor of 3d-portfolio and who-i-am), the GitHub profile README repo / career database (ChanMeng666), brand logo (chan-meng-personal-brand-logo, shipped as .github/brand/chan-meng-logo.svg in many READMEs), personal films (chan-meng-promo-video, public-videos), CV (my-cv Typst, superseded by cv/ inside ChanMeng666), CLI card, knowledge base (retired into chanmeng.org/blog).
+**Chan Meng personal brand surfaces** (`chan-meng-personal-brand`, 10 repos). chanmeng.org (2d-portfolio), the GitHub profile README repo / career database (ChanMeng666), brand logo (chan-meng-personal-brand-logo, shipped as .github/brand/chan-meng-logo.svg in many READMEs), personal films (chan-meng-promo-video, public-videos), knowledge base (retired into chanmeng.org/blog). 3d-portfolio, who-i-am, my-cv and chan-meng-cli were each a separate past attempt at building her personal brand: independent of each other and of the current surfaces, no predecessor/successor chain, all archived (verified on GitHub 2026-10-02).
 
 - 2024-07-12: ChanMeng666 profile repo created (now the career database)
 - 2024-10-24: 3d-portfolio (Three.js) created
@@ -216,6 +218,7 @@ flowchart LR
 - 2026-03-19: my-cv (Typst CV) created
 - 2026-06-05: chan-meng-personal-brand-logo created; logo-as-code-skill generalised from it next day
 - 2026-09-09: chan-meng-promo-video created (plays on chanmeng.org)
+- 2026-10-02: 3d-portfolio, who-i-am, my-cv and chan-meng-cli confirmed independent past personal-brand pieces (no succession) and archived on GitHub
 
 **README / profile decoration tools** (`github-readme-decoration-tools`, 3 repos). Chan's own README-visual products (gradient-svg-generator, github-visitor-counter, github-readme-suno-cards, svg-animation-studio, readme-profile-generator) plus skills readme-showcase and readme-theme-assets-skill. Evidence of use: sunostats README embeds gradient-svg-generator banners and readme-showcase blocks; career-repo rule restricts README visuals to these tools.
 
@@ -256,7 +259,7 @@ flowchart LR
 - 2026-08-04: product-reality-check created; same day echook-growth and gradient-svg-generator-growth appear
 - 2026-09-21: product-film-skill created (case study = archcanvas)
 
-**Google MCP servers** (`mcp-google-servers`, 2 repos). server-google-news and server-google-jobs MCP servers (Dec 2024). Chan's commit 'Add Google News MCP Server' sits in her fork of punkpeye/awesome-mcp-servers.
+**Google MCP servers** (`mcp-google-servers`, 2 repos). server-google-news and server-google-jobs MCP servers (Dec 2024). Chan's commit 'Add Google News MCP Server' sits in her fork of punkpeye/awesome-mcp-servers, a listing submission (the fork is not her project).
 
 Repos: server-google-news (product), server-google-jobs (product)
 
@@ -265,23 +268,25 @@ Repos: server-google-news (product), server-google-jobs (product)
 
 ### Personal workspaces and study copies
 
-`chan-meng-personal-workspaces` · personal · Owner · 3 repos in 1 family
+`chan-meng-personal-workspaces` · personal · Owner · 4 repos in 1 family
 
-**Personal workspaces and study copies** (`personal-workspaces`, 3 repos, +5 in the local overlay). Standalone personal tooling, research workspaces and offline study copies of external sites/games. No product lineage between them; some are private and described only in the local overlay.
+**Personal workspaces and study copies** (`personal-workspaces`, 4 repos, +5 in the local overlay). Standalone personal tooling, research workspaces and offline study copies of external sites/games. No product lineage between them; some are private and described only in the local overlay.
 
-Repos: 🔒 📦 linkedin-jobs-search (product), 🔒 📦 serpdata-api-test (experiment), 🔒 📦 drawio (archive-snapshot)
+Repos: 🔒 📦 linkedin-jobs-search (product; unrelated to Vitex), 🔒 📦 serpdata-api-test (experiment), 🔒 📦 drawio (archive-snapshot), 🔒 📦 mahsamccauley-web-crawl (crawl-archive; a design study only, no collaborator or project link)
 
 - 2026-10-02: Round-2 triage archived many of these
 
 ### External projects and sites Chan forked or studied
 
-`external-upstreams` · community · Fork owner / learner · 11 repos in 1 family
+`external-upstreams` · community · Fork owner / listing submitter · 11 repos in 1 family
 
-**Forks of external projects** (`upstream-forks`, 6 repos). Six public forks of other people's repos; no evidence of family linkage beyond topical relevance.
+> **None of these repos is Chan's own project** (`ownProject: false` in `lineage.yaml`). They must not be counted as her repos, projects or contributions.
 
-Repos: Awesome-AECO (fork), awesome-aec-mcp (fork), awesome-generative-ai (fork), awesome-mcp-servers (fork), awesome-typescript (fork), reveal.js (fork)
+**Forks of external projects** (`upstream-forks`, 6 repos). Public forks of other people's repos. Five are awesome-list forks created on 2026-09-14. The lists themselves (Awesome-AECO, awesome-aec-mcp, awesome-mcp-servers, awesome-generative-ai, awesome-typescript) are public promotion/listing projects led by other people; Chan forked each only to submit her own project (ArchLang; earlier also her Google News MCP server) for listing, as the `add-archlang*` branches on the forks show. Role: `listing-submission`, relation `listing-submission-for` pointing at her own project. reveal.js is a plain fork (`fork`), also not hers, as is the private `website-building-agent` (a fork archive of stackblitz-labs/bolt.diy).
 
-- 2026-09-14: Five awesome-list forks created on the same day
+Repos: Awesome-AECO (listing-submission), awesome-aec-mcp (listing-submission), awesome-generative-ai (listing-submission), awesome-mcp-servers (listing-submission), awesome-typescript (listing-submission), reveal.js (fork)
+
+- 2026-09-14: Five awesome-list forks created on the same day, each only to submit her own project for listing (add-archlang* branches); not her projects
 
 ### GAVIGO Inc.
 
@@ -339,25 +344,26 @@ flowchart LR
   n3 -->|documents| n0
   n2 -->|documents| n0
   n5 -->|studies| n0
+  n5 -->|data-for| n0
   n4 -->|promotes| n0
   n6 -->|companion-of| n0
   n7 -->|companion-of| n0
   n9 -->|companion-of| n8
 ```
 
-**She Sharp website / platform** (`she-sharp-platform`, 6 repos, +1 in the local overlay). The main shesharp.org.nz Next.js platform (NZ-SheSharp/she-sharp), its frozen pre-rewrite backup, and the report projects split out of it. Per the transformation record the charity moved off rented software (three platform migrations) onto owned infrastructure.
+**She Sharp website / platform** (`she-sharp-platform`, 6 repos, +1 in the local overlay). The main shesharp.org.nz Next.js platform (NZ-SheSharp/she-sharp), its frozen pre-rewrite backup, and the report projects split out of it. The pre-2025 site was Webflow (confirmed by owner 2026-10-02). Per the transformation record the charity moved off rented software (three platform migrations) onto owned infrastructure.
 
 - 2025-07-22: she-sharp initial commit (Next.js 15/TypeScript/PostgreSQL; early deploy she-sharp-zeta.vercel.app)
-- 2026-01-19: she-sharp-crawl scrapes shesharp.org.nz + Humanitix events with image archival (later archived)
+- 2026-01-19: she-sharp-crawl scrapes shesharp.org.nz + Humanitix events with image archival (later archived); its data fed the she-sharp migration (events import)
 - 2026-06-19: Offline welcome board for in-person events
 - 2026-08-13: Frozen backup taken as of 2026-08-14, before the rewrite (same root commit a19d429f as she-sharp)
-- 2026-08-14: Rewrite proceeds in place in NZ-SheSharp/she-sharp (1449 commits at 2026-09-25)
+- 2026-08-14: Rewrite proceeds in place in NZ-SheSharp/she-sharp (1449 commits at 2026-09-25; confirmed in place, history preserved)
 - 2026-08-31: Les Mills promo video project (event 2026-09-03) created in org
 - 2026-09-01: Typst funder + internal reports split out of the website repo into she-sharp-reports; transformation record created
 
 **She Sharp programmes and events (Her Waka, hackathon, Peyvand Academy)** (`she-sharp-programmes`, 4 repos). Separate sites/decks Chan built for She Sharp programmes: HER WAKA (She Sharp x MSD, academyEX), the Aotearoa AI Hackathon assistant, and the 13 June 2026 Peyvand Academy Makey Makey workshop.
 
-- 2025-08-13: event-qa-ai-template starts as the AI Hackathon Festival 2025 Assistant (11 teams, 80+ participants)
+- 2025-08-13: event-qa-ai-template starts as the AI Hackathon Festival 2025 Assistant (11 teams, 80+ participants); the 2025 deployment was a separate Vercel project from the same repo
 - 2026-02-20: her-waka Mintlify docs site created (4 workshops Mar-Jun 2026) at herwaka.shesharp.org.nz
 - 2026-06-10: makey-makey-iot-slides created for Peyvand Academy (13 June 2026)
 - 2026-06-13: super-mario-makey-makey ceiling demo for the same workshop
@@ -382,16 +388,17 @@ flowchart LR
   n3 -->|companion-of| n1
 ```
 
-**FemTech Weekend website generations** (`femtech-weekend-site`, 4 repos). Gen-1 Next.js site (2025-03, archived/private) -> Gen-2 Docusaurus + Drizzle/Neon + Cloudflare Pages site at femtechweekend.com (2025-05, carried Shanghai Summit 2026) -> 'The Red Thread' next-gen Next.js/three.js homepage (2026-09, preview only, production untouched).
+**FemTech Weekend website generations** (`femtech-weekend-site`, 4 repos). Gen-1 Next.js site (2025-03, archived/private) -> Gen-2 Docusaurus + Drizzle/Neon + Cloudflare Pages site at femtechweekend.com (2025-05, carried Shanghai Summit 2026) -> 'The Red Thread' next-gen Next.js/three.js homepage (2026-09), about to replace Gen-2 in production (imminent). femtech-radar is a FemTech Weekend deliverable, now archived and no longer developed.
 
 - 2025-03-16: Gen-1 femtech-weekend (Create Next App) created; later archived and made private
 - 2025-05-08: Gen-2 femtech-weekend-website initial commit; Docusaurus, bilingual; femtechweekend.com
 - 2026-06-30: femtech-radar - agent-first FemTech intelligence MCP + Astro/RSS site, uses the FemTech Weekend logo
 - 2026-09-28: Red Thread homepage repo created (HISTORY.md/CLAUDE.md treat femtech-weekend-website as read-only content source); homepage v3 approved, inner pages next
+- 2026-10: redthread replacing website in production - imminent
 
 ### Sanicle Inc.
 
-`sanicle` · employer · CTO (prev. Senior AI/ML Infrastructure Engineer) (2025-03 – 2026-02) · 6 repos in 2 families · career work id `sanicle` · network id `sanicle`
+`sanicle` · employer · CTO (prev. Senior AI/ML Infrastructure Engineer) (2025-03 – 2026-02) · 4 repos in 1 family · career work id `sanicle` · network id `sanicle`
 
 US FemTech B2B/B2G SaaS. Has its own GitHub org Sanicleai (private copies of three of her repos; NOT hers by ownership, not in scope).
 
@@ -403,27 +410,17 @@ flowchart LR
     n2["📦 sanicle-ai-mobile"]
     n3["📦 wellness-agent"]
   end
-  subgraph femtracker["FemTracker women's-health line (personal, adjacent to Sanicle)"]
-    n4["📦 femtracker"]
-    n5["📦 femtracker-agent"]
-  end
   n1 -->|companion-of| n0
   n2 -->|companion-of| n0
-  n5 -->|successor-of| n4
 ```
 
-**Sanicle platform (sanicle-ai, sanicle.cloud, mobile prototype, docs)** (`sanicle-platform`, 4 repos, +1 in the local overlay). Chan's Sanicle engineering repos: the multi-tenant B2B app (sanicle-ai), the official sanicle.cloud site (sanicle-cloud), a mobile prototype, and private weekly-report papers. The Sanicleai org holds private copies of three of them (identical root commits).
+**Sanicle platform (sanicle-ai, sanicle.cloud, mobile prototype, docs)** (`sanicle-platform`, 4 repos, +1 in the local overlay). Chan's Sanicle engineering repos: the multi-tenant B2B app (sanicle-ai), the official sanicle.cloud site (sanicle-cloud), a mobile prototype, and private weekly-report papers. The Sanicleai org holds private copies of three of them (identical root commits); these are deliberate client handover mirrors.
 
-- 2025-02-26: sanicle-ai created (before the 2025-03 CTO/engineer start date; root commit 'Initial commit')
+- 2025-02-26: sanicle-ai created as a pre-engagement prototype, before the 2025-03 CTO/engineer start date; root commit 'Initial commit'
 - 2025-03-25: sanicle-ai-mobile prototype
 - 2025-04-04: sanicle-cloud (catalog sanicle-platform) created; IBM watsonx 'Ask Sani'
-- 2025-05-17: Copies of sanicle-ai, sanicle-cloud, sanicle-ai-mobile created in client org Sanicleai/ (same root commits)
+- 2025-05-17: Deliberate client handover mirrors of sanicle-ai, sanicle-cloud, sanicle-ai-mobile created in client org Sanicleai/ (same root commits)
 - 2025-05-19: wellness-agent (Google ADK workplace wellness; Sanicle-linked in catalog)
-
-**FemTracker women's-health line (personal, adjacent to Sanicle)** (`femtracker`, 2 repos). FemTracker RN app -> FemTracker Agent (8-agent CopilotKit demo). Catalog marks both personal with no Sanicle link; they share the FemTech domain only.
-
-- 2024-11-15: femtracker React Native/Expo v1.0.0
-- 2025-06-13: femtracker-agent reimagines it as 8-agent CopilotKit app (merged into CopilotKit demos_2025, PR 2068)
 
 ### CORDE
 
@@ -440,13 +437,16 @@ flowchart LR
   end
   n1 -->|documents| n0
   n2 -->|promotes| n0
+  n0 -.->|forked-by: handover| x0["gentoo111/CORDE-Mobile-Application (external; production)"]
 ```
 
-**CORDE offline-first field app** (`corde-field-app`, 3 repos). Lincoln University COMP693 capstone for CORDE: team work log (2024-06-07), the React Native app repo (2024-06-17, 539 commits per catalog), and a 2026 code-generated promo film. A teammate-owned private fork of the app (gentoo111) is the local origin.
+**CORDE offline-first field app** (`corde-field-app`, 3 repos). Lincoln University COMP693 capstone for CORDE: team work log (2024-06-07), the React Native app repo (2024-06-17; Chan's principal build, now handed over), and a 2026 code-generated promo film.
+
+**Handover and the local folder's remotes.** `ChanMeng666/corde-mobile-application` is the original: Chan built the main body of the app and remains its principal developer. GitHub user `gentoo111` then took the project over and forked it (private fork, created 2024-10-12, `gentoo111/CORDE-Mobile-Application`) for continued development of the same product; **CORDE's production product today is that fork**. Hence the local folder `D:/github_repository/CORDE-Mobile-Application` has `origin` = the gentoo111 fork and `upstream` = her own repo. The map records this as relation `forked-by` (handover: maintained by gentoo111; CORDE production runs the fork). The catalog's commit metrics are unchanged.
 
 - 2024-06-07: team-corde work log (COMP693 notes, meetings; Chan, Clara, Luke)
 - 2024-06-17: corde-mobile-application created
-- 2024-10-12: gentoo111/CORDE-Mobile-Application created as a private fork of her repo (parent = ChanMeng666/corde-mobile-application)
+- 2024-10-12: gentoo111 took over and forked the app to gentoo111/CORDE-Mobile-Application (private; parent = ChanMeng666/corde-mobile-application) - handover; CORDE production runs the fork
 - 2026-09-30: corde-promo-studio: Remotion UI-replica promo film, 4 cuts (60/30 s x 16:9/9:16)
 
 ### Lincoln University, NZ
@@ -507,7 +507,7 @@ flowchart LR
 
 ### Chan personal projects (games, experiments, demos, study copies, analytics)
 
-`personal` · personal · sole author · 33 repos in 9 families
+`personal` · personal · sole author · 35 repos in 10 families
 
 ```mermaid
 flowchart LR
@@ -560,7 +560,7 @@ Repos: 📦 friendscope (product), 📦 library-os (product), 📦 job-valuation
 - 2024-12-06: job-valuation created
 - 2025-12-22: send-joy created as Christmas greeting email sender; pivoted to visual platform in 4 days
 
-**Browser/indie games and interactive simulations** (`web-games-sprint`, 7 repos). Personal game experiments across engines (Canvas, Angular+Pixi, Kaboom.js, LOVE2D, Next.js cards/quiz). A clear burst 2026-02-01 to 02-09 (kaboom, leviathan, slime-split) alongside css-tower-defense (02-02). ai-human-game credits UI/assets 'based on OOPTriviaGame (Pond Ponder) by PowerPuff People' (third-party/course-team asset origin).
+**Browser/indie games and interactive simulations** (`web-games-sprint`, 7 repos). Personal game experiments across engines (Canvas, Angular+Pixi, Kaboom.js, LOVE2D, Next.js cards/quiz). A clear burst 2026-02-01 to 02-09 (kaboom, leviathan, slime-split) alongside css-tower-defense (02-02), confirmed by owner as a game-jam / challenge month. ai-human-game credits UI/assets 'based on OOPTriviaGame (Pond Ponder) by PowerPuff People' (third-party/course-team asset origin).
 
 Repos: 📦 html-brick-game (game), 📦 journey-of-reincarnation (game), 📦 otherworld-god-farmer (game), 📦 ai-human-game (game), 📦 kaboom-rpg-adventure (game), 📦 leviathan (game), 📦 slime-split (game)
 
@@ -591,7 +591,7 @@ Repos: 📦 fanfic-lab (product)
 
 - 2024-11-17: douban-elite-scraper created
 - 2024-11-25: douban-review-scraper and tencent-meeting-video-downloader created the same day
-- 2024-12-08: lottie-edit created (catalog also lists it as lottie-theme-converter)
+- 2024-12-08: lottie-edit created
 
 **Design / UI experiments and templates** (`design-experiments`, 5 repos). Front-end showcase experiments: CSS/GSAP design gallery, flip-book e-book template, Docusaurus minimalist blog with 3D, Blender-OBJ Three.js viewer, iOS podcast app prototype. design-pages and flip-book-template remain live (unarchived).
 
@@ -603,11 +603,19 @@ Repos: 📦 minimalist-good-post (experiment), design-pages (showcase), 📦 pod
 - 2026-01-03: flip-book-template created as a generic e-book site template
 - 2026-02-21: perfume_obj created (Three.js viewer for Blender OBJ; catalog id perfume-3d-viewer)
 
+**Personal health / agent experiments (loose grouping, no relations)** (`personal-health-agent-experiments`, 4 repos). femtracker, femtracker-agent, panda-agent and hospital-roster-agent are each an independent personal project: not Sanicle-related and with no relations among them. They are grouped only so they are not scattered; the grouping asserts nothing.
+
+Repos: 📦 femtracker (product), 📦 femtracker-agent (prototype), 📦 panda-agent (experiment), 📦 hospital-roster-agent (experiment)
+
+- 2024-11-15: femtracker React Native/Expo v1.0.0
+- 2025-06-13: femtracker-agent 8-agent CopilotKit app (merged into CopilotKit demos_2025, PR 2068); independent project
+- 2025-07-13: hospital-roster-agent CopilotKit scheduling demo created
+- 2026-01-12: panda-agent created
+
 ## Entities with a single repo
 
 | Entity | Kind | Family | Repo | Role |
 |---|---|---|---|---|
-| Dr Mahsa McCauley (collaborator / NZ AI Hackathon founder) | community | personal-workspaces | 🔒 📦 mahsamccauley-web-crawl | crawl-archive |
 | FreePeriod (自在月行) | employer | freeperiod-site | 📦 free-period-website | marketing-site |
 | Forward with Her (她行) Mentorship | community | forward-with-her-site | 📦 forward-with-her-mentorship-program | marketing-site |
 | Chow Luck Club Ltd | client | eatropolis | 🔒 Chow-Luck-Club/eatropolis-website | product |
@@ -618,38 +626,7 @@ Repos: 📦 minimalist-good-post (experiment), design-pages (showcase), 📦 pod
 
 ## Open questions
 
-Things the research could not settle. Each needs an answer from Chan; ids are stable and listed with the repos they affect in `lineage.yaml`.
-
-1. **q01** Suno: confirm github-readme-suno-cards was extracted (new root commit) from the private suno-research-private monorepo and that the private repo remains the live working copy. Roots differ, so it is not a mirror.
-2. **q02** linkedin-jobs-search: related to Vitex (both career/job tools)? No code or README evidence, left standalone.
-3. **q03** mahsamccauley-web-crawl: study copy for a collaborator project (NZ AI Hackathon site) or a design study only? Linked to the mahsa-mccauley entity at medium confidence.
-4. **q04** awesome-aec-mcp and Awesome-AECO (forks created 2026-09-14): were they AEC research for ArchLang/ArchCanvas positioning? No commits or ArchLang mentions found.
-5. **q05** 3d-portfolio, who-i-am, my-cv, chan-meng-cli: predecessor/successor direction between them is inferred from dates and purpose only.
-6. **q06** website-building-agent: upstream assumed to be stackblitz-labs/bolt.diy; verify.
-7. **q07** Repos with no local folder (echook-growth, echook-promo-video, gradient-svg-generator-growth, a11y-loop-promo-video, public-videos, linkedin-jobs-search and others) were assessed from GitHub READMEs only; root-commit checks not done.
-8. **q08** Which skill/tool repos actually produced which promo/brand assets (app-promo-studio, product-film-skill, logo-as-code-skill) beyond the cited evidence is unknown.
-9. **q09** She Sharp: was the pre-2025 site Webflow, and which "three platform migrations" does she-sharp-transformation-record cover? No Webflow-generation repo found; the Next.js she-sharp repo starts 2025-07-22.
-10. **q10** She Sharp rewrite: the backup shares root a19d429f with she-sharp (688 vs 1449 commits). Confirm the rewrite happened in place (history preserved) rather than in a fresh repo.
-11. **q11** corde-mobile-application: private fork of gentoo111/CORDE-Mobile-Application (2024-10-12), set as local origin. Who owns gentoo111 (alt account, teammate?) and is origin the day-to-day push target?
-12. **q12** CORDE: the catalog says 539 commits but her repo has 413 and team-corde 147. Where does the canonical CORDE code live (client/Azure DevOps?)
-13. **q13** Sanicle: sanicle-ai first commit 2025-02-26 predates the 2025-03 role start. Pre-engagement prototype? And are the Sanicleai/* private copies deliberate client handover mirrors?
-14. **q14** femtracker, femtracker-agent, panda-agent, hospital-roster-agent have no Sanicle evidence (catalog marks personal); only wellness-agent is Sanicle-linked. Should they move to a separate womens-health personal entity?
-15. **q15** femtech-weekend-redthread: does it replace femtech-weekend-website in production or sit beside it? Is femtech-radar a FemTech Weekend deliverable or personal (catalog says client)?
-16. **q16** she-sharp-crawl: did the scraped data feed the she-sharp migration (events import)? Not evidenced.
-17. **q17** event-qa-ai-template: name says template but it is the live 2026 hackathon site. Was the 2025 deployment a separate Vercel project from the same repo?
-18. **q18** gavigo-ire-video lives under ChanMeng666, not gavigo-inc: confirm it was Chan own work product and whether a later film supersedes it.
-19. **q19** chow-luck-club and whiri-ai have no work id in 10-career.yaml, so chanRole is described from the catalog only.
-20. **q20** Lincoln coursework attribution is inferred from provenance=coursework, university group project wording and creation dates in the Masters window (2023-11 to 2024-12). Which paper did each of the 5 web systems and 5 ML repos belong to, and are the web systems from one course?
-21. **q21** Were the 5 Lincoln web-system repos originally owned by teammates and re-created under ChanMeng666, or always hers? All have Initial commit roots and no fork parent.
-22. **q22** douyin-mall (5 contributors, 178 commits, root Initial commit 2025-01-16): copy/import of a teammate-owned team repo? What was the original repo/owner?
-23. **q23** english-redefine vs chinese-redefine: sibling concepts (English port) or different codebases? README model claims differ (OpenAI vs Gemini).
-24. **q24** leviathan: the shard says private (owner decision 2026-06-12, do not re-add) but GitHub shows it PUBLIC and archived. Intentional? Make it private again?
-25. **q25** ai-human-game credits OOPTriviaGame (Pond Ponder) by PowerPuff People: derived from a course/team project? Entity left as personal.
-26. **q26** podcast-app-prototype (mental-wellness podcast with AI coaching): related to any client/brand (FemTech, my-life-my-voice, wellness-agent)? Left as personal.
-27. **q27** Feb 2026 burst (kaboom-rpg-adventure 02-01, css-tower-defense 02-02, leviathan 02-06, slime-split 02-09, perfume_obj 02-21): a game jam or challenge month? Not evidenced.
-28. **q28** esol-learning-platform and fanfic-lab both start from Create Next App with CopilotKit; code reuse is not evidenced and not asserted.
-29. **q29** lottie-edit is listed under two data/profile catalog ids (lottie-edit, lottie-theme-converter); one is a duplicate to clean up.
-30. **q30** customer-insight (2024-11, Lincoln era, archived) was assigned to the ai-generation-demos family; it may be coursework or a personal analytics experiment.
+None open. Chan answered all 30 public questions (q01-q30) on 2026-10-02; the answers are applied above and kept in `lineage.yaml` under `resolved:` (id, date, answer). Notable outcomes: the awesome-* forks are listing submissions and not her projects (`ownProject: false`); the early personal-brand repos are independent, not a succession chain; the CORDE app was handed over and production runs the gentoo111 fork; femtracker and its siblings are independent personal projects; femtech-weekend-redthread is about to replace femtech-weekend-website in production; lottie-edit and lottie-theme-converter were one repo, now a single catalog entry. Three answers were worded ambiguously (q21, q24, q26) and were recorded without changing the map.
 
 ## Maintenance
 

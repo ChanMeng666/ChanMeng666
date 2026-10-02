@@ -115,6 +115,11 @@ for (const e of entities.values()) {
   if (e.orgId && !orgIds.has(e.orgId) && !collabIds.has(e.orgId)) err(`entity ${e.id}: orgId "${e.orgId}" not in organizations/collaborators`);
   if (e.workId && !workIds.has(e.workId)) err(`entity ${e.id}: workId "${e.workId}" not in work/volunteer`);
 }
+// forks and listing submissions of other people's repos are never Chan's own project
+for (const r of allRepos)
+  if (["fork", "listing-submission"].includes(r.role) && r.entity === "external-upstreams" && r.ownProject !== false)
+    err(`repo ${r.repo}: role ${r.role} under external-upstreams must carry ownProject: false`);
+for (const r of allRepos) if (r.role === "listing-submission" && r.ownProject !== false) err(`repo ${r.repo}: listing-submission must carry ownProject: false`);
 // open questions
 for (const q of [...(pub.openQuestions ?? []), ...(priv?.openQuestions ?? [])])
   for (const x of q.affects ?? []) if (!repoKeys.has(x)) err(`openQuestion ${q.id}: affects unknown repo ${x}`);

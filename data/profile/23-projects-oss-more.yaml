@@ -2170,12 +2170,12 @@ projects:
     provenance: personal
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-02"
     name: FemTracker (Mobile)
     priority: 42
     category: web-apps
-    relatedProjectIds: [femtracker-agent]   # v1.0.0 origin product; also hosted under the TechRosie women-developers org (TechRosie/femtracker)
-    tagline: "React Native / Expo Android app for safer period care — tracks how long menstrual products have been worn and sends timely change reminders with usage history; a simple but complete native-mobile build that (alongside the CORDE field-ops app) evidences Chan's Android app-development capability, and the v1.0.0 origin product later reimagined as the AI-agent platform femtracker-agent"
+    # Independent personal project (Chan 2026-10-02): not related to femtracker-agent, panda-agent or hospital-roster-agent. Also hosted under the TechRosie women-developers org (TechRosie/femtracker).
+    tagline: "React Native / Expo Android app for safer period care — tracks how long menstrual products have been worn and sends timely change reminders with usage history; a simple but complete native-mobile build that (alongside the CORDE field-ops app) evidences Chan's Android app-development capability"
     repoUrl: https://github.com/ChanMeng666/femtracker
     extraLinks:
       - { label: "v1.0.0 release", url: "https://github.com/ChanMeng666/femtracker/releases/tag/version1.0.0" }
@@ -2188,7 +2188,7 @@ projects:
       - "Women's health"
     status: production
     narrative:
-      impactHeadline: "React Native / Expo mobile app for safer period care — reminds users when to change menstrual products and keeps a usage-duration history; the v1.0.0 product that seeded the later AI-agent reimagining, femtracker-agent."
+      impactHeadline: "React Native / Expo mobile app for safer period care — reminds users when to change menstrual products and keeps a usage-duration history; a standalone v1.0.0 release."
   - id: gavigo-website
     provenance: client
     tier: primary

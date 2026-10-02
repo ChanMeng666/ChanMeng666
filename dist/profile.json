@@ -5221,15 +5221,17 @@
       "provenance": "personal",
       "tier": "archive",
       "recency": "deprecated",
-      "lastUpdated": "2026-07-14",
+      "lastUpdated": "2026-10-02",
       "name": "Lottie Theme Converter",
       "priority": 67,
       "category": "tools",
       "tagline": "A Python tool that intelligently converts Lottie animations between light and dark themes — inverts embedded image colors while preserving transparency and animation quality, for one-click theme adaptation",
       "repoUrl": "https://github.com/ChanMeng666/lottie-edit",
       "techStack": [
-        "Python",
+        "Python 3.8+",
         "Pillow",
+        "JSON",
+        "Base64",
         "Lottie JSON"
       ],
       "keywords": [
@@ -5238,8 +5240,9 @@
         "Transparency-preserving color inversion"
       ],
       "status": "archived",
+      "startDate": "2024-12",
       "narrative": {
-        "impactHeadline": "A Python utility that flips Lottie animations between light and dark themes by inverting embedded image colors while preserving transparency and motion — a small, focused tool for theme-adapting Lottie assets."
+        "impactHeadline": "A single-script Python tool that inverts the RGB channels of base64 images embedded in Lottie JSON while leaving alpha untouched — giving dual-theme apps a dark-mode Lottie variant without re-exporting."
       },
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -7237,33 +7240,6 @@
       "startDate": "2026-01",
       "narrative": {
         "impactHeadline": "A frameless, always-on-top, transparent Electron window for keeping image references visible while you work — drag-and-drop import, an HTML5 Canvas crop/resize editor, text notes, and JSON save/load, with context-isolated IPC."
-      },
-      "_clientOrg": null,
-      "_relatedProjectsResolved": [],
-      "_supersededByProject": null,
-      "_supersedesProjects": []
-    },
-    {
-      "id": "lottie-theme-converter",
-      "provenance": "personal",
-      "tier": "archive",
-      "recency": "historical",
-      "lastUpdated": "2026-07-11",
-      "name": "Lottie Theme Converter",
-      "priority": 93,
-      "category": "tools",
-      "tagline": "A Python CLI that converts Lottie animations between light and dark themes by inverting embedded-image RGB channels while preserving alpha transparency",
-      "repoUrl": "https://github.com/ChanMeng666/lottie-edit",
-      "techStack": [
-        "Python 3.8+",
-        "Pillow",
-        "JSON",
-        "Base64"
-      ],
-      "status": "archived",
-      "startDate": "2024-12",
-      "narrative": {
-        "impactHeadline": "A single-script Python tool that inverts the RGB channels of base64 images embedded in Lottie JSON while leaving alpha untouched — giving dual-theme apps a dark-mode Lottie variant without re-exporting."
       },
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -13459,8 +13435,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-10-01",
+    "lastModified": "2026-10-02",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-01T23:26:15.099Z"
+    "buildTimestamp": "2026-10-02T08:14:10.298Z"
   }
 }

@@ -9,6 +9,22 @@ dist/video-data.json, linkedin/linkedin-profile.json + linkedin/*.md — is
 ArchLang ↔ ArchCanvas sibling-repo map (local paths, private vs public, subprojects):
 `docs/ecosystem/archlang-archcanvas.md`. Career narrative stays in the profile shards.
 
+## Project lineage (repo genealogy)
+
+How all of Chan's repos relate (which were built for the same company or brand,
+what replaced what, backups, forks, promo films, growth workspaces):
+`docs/ecosystem/README.md` (entry point, relation vocabulary, per-entity diagrams)
+and the machine catalog `docs/ecosystem/lineage.yaml`. Sensitive repos live only in
+the **local-only, gitignored** overlay `docs/ecosystem/lineage.private.yaml` (read it
+when present; never copy its contents or repo names into tracked files). Topology
+only: career facts stay in `data/profile/`. Validate with
+`npm run check:ecosystem [-- --live]` (offline mode runs inside `npm run validate`;
+`--live` compares with GitHub and needs the overlay to be present locally).
+
+**Rule:** when you create, archive, rename, transfer or delete a repo, update
+`lineage.yaml` (or the private overlay if its name is sensitive), then run
+`npm run check:ecosystem -- --live` and fix any drift it reports.
+
 ## Changing career COPY? Use the `career-copy` skill
 
 `.claude/skills/career-copy/` is this repo's own skill for the case that comes up

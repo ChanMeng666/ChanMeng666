@@ -1,6 +1,6 @@
 # Repo lineage (ecosystem map)
 
-How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified 2026-10-02 against GitHub: **150 public-catalog repos** (51 of them private on GitHub) in **26 entities** and **37 families**, plus 117 typed relations. Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
+How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified 2026-10-02 against GitHub and re-verified 2026-10-03 against cloned repo history: **150 public-catalog repos** (51 of them private on GitHub) in **26 entities** and **37 families**, plus 149 typed relations. Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
 
 ## What the files are
 
@@ -27,7 +27,7 @@ npm run check:ecosystem
 npm run check:ecosystem -- --live
 ```
 
-Or just grep: `grep -n "family: she-sharp-platform" docs/ecosystem/lineage.yaml`. A repo row looks like `{repo, family, entity, role, visibility, archived, catalogId, localFolder, created, liveUrls, oneLine, confidence}`; `localFolder` is relative to `localRoot` (`D:/github_repository`). `--live` run without the overlay reports the overlay repos as uncovered, so run it on the machine that has the overlay.
+Or just grep: `grep -n "family: she-sharp-platform" docs/ecosystem/lineage.yaml`. A repo row looks like `{repo, family, entity, role, visibility, archived, catalogId, localFolder, created, liveUrls, oneLine, chanCommitShare, confidence}` (`chanCommitShare: {pct, chan, humans, all}`: pct = Chan commits / non-bot commits, from `git shortlog` on a full-history clone, 2026-10-03); `localFolder` is relative to `localRoot` (`D:/github_repository`). `--live` run without the overlay reports the overlay repos as uncovered, so run it on the machine that has the overlay.
 
 ## Relation vocabulary
 
@@ -58,6 +58,7 @@ A relation is `{from, type, to, evidence}`. `from` is always a repo in the catal
 | `built-for` | from was built for an entity (entity:<id>), only where not obvious from the family |
 | `listing-submission-for` | from is Chan's fork of someone else's awesome-list, kept only to submit `to` (her own project) for listing; the fork itself is NOT her project (`ownProject: false`) |
 | `forked-by` | to (`external:owner/name`) is a fork of from, continued by someone else (handover); from stays the original build |
+| `shares-scaffold-with` | repos that start from the same boilerplate (byte-identical app files) with no shared commits; direction unknown |
 
 Legend in the diagrams below: 🔒 private on GitHub, 📦 archived.
 
@@ -248,7 +249,7 @@ flowchart LR
     n12["slack-waterline-skill"]
     n13["product-reality-check"]
   end
-  n4 -->|derived-from-template| n3
+  n4 -->|companion-of| n3
 ```
 
 **Claude skills and agent tooling** (`claude-skills`, 12 repos). Standalone repos packaging Chan's workflows as Claude Code skills. product-film-skill generalises the ArchCanvas promo-studio method; product-reality-check produced the echook and gradient-svg-generator growth corpora; logo-generator-skill is a private working copy (not a GitHub fork) of op7418/logo-generator-skill and is not Chan's own project (`ownProject: false`); website-building-agent is a bolt.diy fork archive.
@@ -528,8 +529,6 @@ flowchart LR
     n27["📦 lottie-edit"]
   end
   n6 -->|companion-of| n5
-  n10 -->|companion-of| n9
-  n25 -->|companion-of| n24
 ```
 
 **Personal games, study archives, analytics** (`personal-experiments`, 3 repos). Standalone personal repos with no organisation link; included only because the task listed them.
@@ -623,6 +622,16 @@ Repos: 📦 femtracker (product), 📦 femtracker-agent (prototype), 📦 panda-
 | TechNest Community (teaching programmes) | community | ai-programming-teaching | ai-programming-teaching-project | docs |
 | Aotearoa AI Hackathon Festival (AI Forum NZ x She Sharp x AUT) | programme | she-sharp-programmes | event-qa-ai-template | template |
 | Aotearoa Infinite Academy | employer | esol-learning-platform | 📦 esol-learning-platform | product |
+
+## Verification 2026-10-03 (cloned history)
+
+Every repo in scope was cloned (blobless, full history) and compared: root commits, shared commit hashes across all refs, shared file blobs, authorship, README/CLAUDE.md/AGENTS.md/package.json cross-references. Full change log: `revisions:` at the end of `lineage.yaml`.
+
+- **Shared roots:** the only repos sharing any commit are `NZ-SheSharp/she-sharp` and its pre-rewrite backup (root a19d429f, 141 shared commits), already a backup-of / snapshot-of pair. No other repo in scope shares a root or a commit.
+- **Confidence:** 21 medium rows became high (Sanicle pair, the five Lincoln web systems, the five Lincoln ML repos, paper-review, drawio, three personal apps, four overlay workspaces); only leviathan stays medium (public on GitHub vs the catalog do-not-link note).
+- **Changed or removed:** paper-review companion-of the review skill (direction unproven); the two story-generator and two Douban scraper companion-of links removed (no link, no shared code); the sunostats parser is a diverged copy, not a shared kernel; the douyin-mall templates are concept-level distillations with no shared bytes.
+- **New relations:** 34, among them femtech-radar extends linkedin-jobs-search and server-google-jobs, svg-animation-studio extends gradient-svg-generator and css-tower-defense, the Quartz origin of the retired knowledge base, the career repo feeding 2d-portfolio, and 22 showcases from public-videos.
+- **Authorship:** below 50 percent Chan: douyin-mall (28, team capstone), chanmeng-knowledge-base (1, Quartz instance), logo-generator-skill (20) and the awesome-* / reveal.js forks (not her projects). corde-mobile-application 57 and eatropolis-website 74 are shared builds. Never describe these as solo work.
 
 ## Open questions
 

@@ -251,7 +251,7 @@ flowchart LR
   n4 -->|derived-from-template| n3
 ```
 
-**Claude skills and agent tooling** (`claude-skills`, 12 repos). Standalone repos packaging Chan's workflows as Claude Code skills. product-film-skill generalises the ArchCanvas promo-studio method; product-reality-check produced the echook and gradient-svg-generator growth corpora; logo-generator-skill is a private working copy (not a GitHub fork) of op7418/logo-generator-skill; website-building-agent is a bolt.diy fork archive.
+**Claude skills and agent tooling** (`claude-skills`, 12 repos). Standalone repos packaging Chan's workflows as Claude Code skills. product-film-skill generalises the ArchCanvas promo-studio method; product-reality-check produced the echook and gradient-svg-generator growth corpora; logo-generator-skill is a private working copy (not a GitHub fork) of op7418/logo-generator-skill and is not Chan's own project (`ownProject: false`); website-building-agent is a bolt.diy fork archive.
 
 - 2026-03-16: typst-claude-skill created
 - 2026-06-05: app-promo-studio plugin created

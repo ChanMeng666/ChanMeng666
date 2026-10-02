@@ -114,6 +114,35 @@ if (argOf("--mode") === "repos") {
   process.exit(0);
 }
 
+// ---------------------------------------------------------------------------
+// --mode visibility — archive / public->private triage over ALL repos (active +
+// archived, public + private, forks, allowlisted org repos).
+//   node scripts/build-triage-page.mjs --mode visibility --repos-json repos-full.json //     --local-map local-map.json [--portfolio-dir D:/github_repository/2d-portfolio] --out triage.html
+// repos-full.json is the collector dump (REST fields + commit/PR/Pages/npm facts).
+// Rendered by scripts/lib/triage-visibility-page.mjs (+ triage-visibility-client.js).
+// ---------------------------------------------------------------------------
+if (argOf("--mode") === "visibility") {
+  const need = (flag) => {
+    const v = argOf(flag);
+    if (!v) throw new Error(`--mode visibility requires ${flag}`);
+    return JSON.parse(fs.readFileSync(v, "utf8"));
+  };
+  const { buildVisibilityPage } = await import("./lib/triage-visibility-page.mjs");
+  const { html, stats } = buildVisibilityPage({
+    repoRoot,
+    profile: loadProfile(),
+    repos: need("--repos-json"),
+    localMap: need("--local-map"),
+    portfolioDir: argOf("--portfolio-dir") ?? path.resolve(repoRoot, "..", "2d-portfolio"),
+    generatedAt: new Date().toISOString().slice(0, 10),
+  });
+  process.stderr.write(`[triage:visibility] ${JSON.stringify(stats, null, 1)}
+`);
+  if (OUT) fs.writeFileSync(OUT, html);
+  else process.stdout.write(html);
+  process.exit(0);
+}
+
 const repoNameOf = (repoUrl) => {
   if (!repoUrl) return null;
   const m = String(repoUrl).match(/github\.com\/([^/]+)\/([^/#?]+)/i);

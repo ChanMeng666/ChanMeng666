@@ -21,7 +21,7 @@ const repoUrlOf = (u) => {
 const esc = (s) =>
   String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-const DATA_ONLY_RE = /(-crawl$|-backup(-|$)|-archive$|-slack-archive$|^chrome-bookmarks$|-crawler$)/i;
+const DATA_ONLY_RE = /(-crawl$|-backup(-|$)|-archive$|-slack-archive$|bookmarks$|-crawler$)/i;
 const SENSITIVE_RE = /\b(growth|strategy|marketing|outreach|playbook|proposal|internal|client-material|seo|geo|sales|pitch)\b|-(growth|strategy|marketing)(-|$)/i;
 
 export function buildReposPage({ repoRoot, profile, repos, commitsFull, localMap, generatedAt }) {

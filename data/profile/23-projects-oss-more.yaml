@@ -1165,9 +1165,8 @@ projects:
     name: Brick Breaker (Starlight Breaker)
     priority: 72
     category: games
-    tagline: "Starlight Breaker — a browser brick-breaker (Breakout) game built on the HTML5 Canvas API with vanilla JavaScript, deployed free on GitHub Pages"
+    tagline: "Starlight Breaker — a browser brick-breaker (Breakout) game built on the HTML5 Canvas API with vanilla JavaScript"
     logo: /public/brands/html-brick-game.svg
-    url: https://chanmeng666.github.io/html-brick-game/
     techStack: ["HTML5 Canvas", JavaScript, "GitHub Pages"]
     status: archived
   - id: ai-human-game
@@ -1217,7 +1216,6 @@ projects:
     category: games
     tagline: 2D pixel-style RPG with NPC dialogues, quests, and turn-based combat
     logo: /public/brands/kaboom-rpg-adventure.svg
-    url: https://chanmeng666.github.io/kaboom-rpg-adventure/
     techStack: ["Kaboom.js", Vite, "GitHub Pages"]
     status: archived
   - id: memory-rush
@@ -1926,7 +1924,6 @@ projects:
     relatedWorkId: sanicle
     relatedProjectIds: [sanicle-ai]
     tagline: "Sanicle mobile-app prototype — period tracking, health analytics, and an AI health assistant in a React Native shell; an early clickable prototype from Chan's Sanicle CTO tenure, predating the production sanicle-ai platform"
-    url: https://chanmeng666.github.io/sanicle-ai-mobile/
     techStack: ["React Native", "GitHub Pages"]
     status: archived
   - id: podcast-app-prototype
@@ -1938,7 +1935,6 @@ projects:
     priority: 80
     category: web-apps
     tagline: "High-fidelity mental-wellness podcast app prototype — AI mental-coach chatbot + immersive audio player in iOS-compliant UI, built entirely in HTML/CSS/JS to prove that hand-writing HTML is a viable, fast path to clickable mobile-app prototypes (no native toolchain)"
-    url: https://chanmeng666.github.io/podcast-app-prototype/
     techStack: [HTML, CSS, JavaScript, "GitHub Pages"]
     keywords: ["HTML-based mobile-app prototyping", "High-fidelity clickable prototype", "iOS-compliant UI patterns", "Mental-wellness podcast UX"]
     status: archived
@@ -2463,7 +2459,7 @@ projects:
   - id: femtech-radar
     provenance: client
     tier: archive
-    recency: historical
+    recency: deprecated
     lastUpdated: "2026-10-03"
     name: FemTech Radar
     priority: 86
@@ -2472,13 +2468,10 @@ projects:
     relatedWorkId: femtech-weekend
     relatedProjectIds: [femtech-weekend-website]
     tagline: Agent-first FemTech intelligence — an MCP server that fetches, dedupes, and scores women's-health & FemTech research and news, feeding a weekly GitHub Agentic Workflow and an auto-updating Astro + RSS site
-    url: https://chanmeng666.github.io/femtech-radar/
     extraLinks:
-      - { label: "Live site", url: "https://chanmeng666.github.io/femtech-radar/" }
-      - { label: "RSS feed", url: "https://chanmeng666.github.io/femtech-radar/rss.xml" }
       - { label: "npm (@chanmeng666/femtech-radar-mcp)", url: "https://www.npmjs.com/package/@chanmeng666/femtech-radar-mcp" }
     techStack: [TypeScript, "MCP (@modelcontextprotocol/sdk)", Zod, Vitest, tsup, "Astro 5", "GitHub Agentic Workflows", "GitHub Pages", RSS]
-    status: live
+    status: archived
     startDate: "2026-06"
     publicSummary: |
       A three-unit pipeline that turns scattered FemTech / women's-health
@@ -2661,14 +2654,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-10-03"
     name: Chan Meng's Knowledge Base
     priority: 95
     category: tools
     tagline: A curated public knowledge base of technical guides and integration playbooks from real projects — auth, payments, AI integrations, plugin architecture, SEO/GEO, DevOps migrations; authored in Obsidian, built with Quartz
-    url: https://chanmeng666.github.io/chanmeng-knowledge-base/
-    extraLinks:
-      - { label: "Live site", url: "https://chanmeng666.github.io/chanmeng-knowledge-base/" }
     techStack: ["Quartz 4", Obsidian, Markdown, "Node.js", "GitHub Pages"]
     status: archived
     startDate: "2026-04"

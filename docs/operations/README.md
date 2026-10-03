@@ -179,5 +179,4 @@ programming and towerdefense subdomains and www.vitex.org.nz all answer 200.
 |---|---|
 | Delete the five listing forks once their PRs close (or all at once, one confirmation) | by 2026-11-14 |
 | Archive `css-tower-defense` (no further development; stays live for now); then disable its workflows and delete its dead Cloudflare API token secret | when Chan decides |
-| One unused provider API key awaits Chan's keep/revoke decision (see private file) | open |
 | Back up `femtech-weekend-assets` off this machine | open |

@@ -10,11 +10,14 @@ The profile data lives as **shards** in `data/profile/` — one file per theme, 
 | `25-contributions.yaml` | openSourceContributions |
 | `30-recognition.yaml` | awards, certificates, publications |
 | `40-skills.yaml` | skills, domains, languages, interests |
+| `45-showcase.yaml` | showcaseCapabilities, showcase (craft evidence: reports, films, decks, slides, newsletters, GEO) |
 | `50-references.yaml` | references (testimonials) |
 | `60-network.yaml` | organizations, collaborators |
 | `70-linkedin.yaml` | the curated LinkedIn snapshot block |
 | `80-events.yaml` | events — offline talks / hackathons / workshops / appearances |
 | `90-meta.yaml` | meta, incl. `meta.x_brand` display config |
+
+Repo lifecycle (archiving, making private, deleting, hosting retirement) is not data editing: see `docs/operations/README.md`. Removing a repo means stripping its links from every shard, never leaving a link to a private repo.
 
 To locate an entry: `grep -rn "id: <slug>" data/profile/`. See the repo-root `CLAUDE.md` for the full data map and cross-reference rules.
 

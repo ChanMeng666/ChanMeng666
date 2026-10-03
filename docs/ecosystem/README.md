@@ -1,13 +1,13 @@
 # Repo lineage (ecosystem map)
 
-How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified 2026-10-02 against GitHub and re-verified 2026-10-03 against cloned repo history: **150 public-catalog repos** (51 of them private on GitHub) in **26 entities** and **37 families**, plus 149 typed relations. Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
+How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified 2026-10-02 against GitHub and re-verified 2026-10-03 against cloned repo history: **150 public-catalog repos** (94 of them private on GitHub after the 2026-10-03 visibility round, 80 archived) in **26 entities** and **37 families**, plus 148 typed relations. Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
 
 ## What the files are
 
 | File | Tracked | Purpose |
 |---|---|---|
 | `docs/ecosystem/lineage.yaml` | yes | The machine catalog: entities, families (with dated timelines), repos, typed relations, non-git assets, open questions |
-| `docs/ecosystem/lineage.private.yaml` | **no** (gitignored, local-only) | Overlay with the sensitive repos and every relation touching them. Same schema subset. Read it when it exists; never copy its contents into tracked files |
+| `docs/ecosystem/lineage.private.yaml` | **no** (gitignored, local-only) | Overlay with the sensitive repos and every relation touching them. Same schema subset. Read it when it exists; never copy its contents into tracked files. Repo lifecycle procedures that keep this map true: `docs/operations/README.md` |
 | `docs/ecosystem/archlang-archcanvas.{md,yaml}` | yes | Deep dive for the ArchLang / ArchCanvas family (linked from its family via `detail:`) |
 | `scripts/check-ecosystem.mjs` | yes | Validator, `npm run check:ecosystem` (offline, part of `npm run validate`) and `npm run check:ecosystem -- --live` (compares with GitHub) |
 

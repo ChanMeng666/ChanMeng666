@@ -8,7 +8,7 @@ description: >-
   then propagates it to only the derivative surfaces that earn it, each in its
   own register and budget — the README shopfront, llms.txt and llms-full.txt,
   the designed two-page CV, the ATS resume and its .docx/.txt exports, the
-  sixteen-page extended CV, the LinkedIn headline, About, Experience and
+  22-page extended CV, the LinkedIn headline, About, Experience and
   Projects copy, chanmeng.org, and the cover-letter evidence bank. Enforces a
   claim-strength discipline — scope every ownership word, give every number a
   denominator and a window, attribute every superlative, never state a

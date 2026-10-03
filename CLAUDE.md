@@ -25,6 +25,32 @@ only: career facts stay in `data/profile/`. Validate with
 `lineage.yaml` (or the private overlay if its name is sensitive), then run
 `npm run check:ecosystem -- --live` and fix any drift it reports.
 
+## Repo & hosting operations
+
+Everything about the lifecycle of repos and deployments (archive, make private,
+delete, retire a deployment, npm publishing, hosting map, standing policies, dated
+pending list) is in `docs/operations/README.md`. Sensitive specifics (droplet,
+account scopes, token names, backup locations) live only in the local-only,
+gitignored `docs/operations/hosting.private.md`; read it when present, never copy
+it into tracked files. Key rules:
+
+- **Chan decides.** Bulk repo decisions go through the interactive triage page
+  (`node scripts/build-triage-page.mjs`, default / `--mode repos` /
+  `--mode visibility`; details in the runbook). Nothing is preselected; hints are
+  advisory. Delete a repo only after a second confirmation.
+- **No links to private repos** in any shard, CV, LinkedIn copy or on chanmeng.org.
+  Archiving or privatising a repo means stripping its links from all four fact
+  places plus 2d-portfolio, then updating lineage and running
+  `npm run check:ecosystem -- --live`.
+- Archive checklist: disable workflows, delete secrets, unpublish Pages/hosting
+  first (archived repos are read-only; settings need unarchive, change, re-archive).
+- Never delete the Coolify deploy SSH key; keep the Eatropolis deploy token; take
+  no action on client-org billing (Eatropolis, She Sharp are handed over).
+- Listing forks (the five `awesome-*` forks) are deleted once their PR closes, or
+  all on 2026-11-14. Never name the venue of the paper under review.
+- npm publishing needs Chan's browser auth: prepare the package, she runs
+  `npm publish`.
+
 ## Changing career COPY? Use the `career-copy` skill
 
 `.claude/skills/career-copy/` is this repo's own skill for the case that comes up
@@ -139,20 +165,24 @@ hand-typed facts on a review cadence:
 | Shard | Top-level keys | Entries | Entry key |
 |---|---|---|---|
 | `00-basics.yaml` | basics, builderTools | identity, 3 tools | — |
-| `10-career.yaml` | work, volunteer, education | 12 + 3 + 2 | `id` |
+| `10-career.yaml` | work, volunteer, education | 13 + 4 + 3 | `id` |
 | `20-projects-flagship.yaml` | projects (flagship band) | 4 | `id` |
 | `21-projects-oss-primary.yaml` | projects (OSS primary band) | 7 | `id` |
-| `22-projects-oss-webapps.yaml` | projects (collapsible: web apps) | 10 | `id` |
-| `23-projects-oss-more.yaml` | projects (AI/creative/ML/branding/games + commissioned) | 51 | `id` |
+| `22-projects-oss-webapps.yaml` | projects (collapsible: web apps) | 14 | `id` |
+| `23-projects-oss-more.yaml` | projects (AI/creative/ML/branding/games + commissioned) | 83 | `id` |
 | `25-contributions.yaml` | openSourceContributions | 23 | `id` |
-| `30-recognition.yaml` | awards, certificates, publications | 6 + 53 + 55 | `title`+`awarder` / `name` |
-| `40-skills.yaml` | skills, domains, languages, interests | — | `name` |
-| `45-showcase.yaml` | showcaseCapabilities, showcase (craft evidence: reports, films, decks, slides, newsletters, GEO) | 7 + 9 | `id` |
+| `30-recognition.yaml` | awards, certificates, publications | 7 + 53 + 74 | `title`+`awarder` / `name` |
+| `40-skills.yaml` | skills, domains, languages, interests | 6 + 5 + 4 + 3 | `name` |
+| `45-showcase.yaml` | showcaseCapabilities, showcase (craft evidence: reports, films, decks, slides, newsletters, GEO) | 7 + 11 | `id` |
 | `50-references.yaml` | references | 27 | `id` |
-| `60-network.yaml` | organizations, collaborators | 30 + 10 | `id` |
+| `60-network.yaml` | organizations, collaborators | 34 + 13 | `id` |
 | `70-linkedin.yaml` | linkedin | curated live-page snapshot | — |
-| `80-events.yaml` | events (offline talks/hackathons/workshops/appearances) | 5 | `id` |
+| `80-events.yaml` | events (offline talks/hackathons/workshops/appearances) | 23 | `id` |
 | `90-meta.yaml` | meta (incl. `meta.x_brand` display config) | — | — |
+
+Counts verified 2026-10-03 (`projects:` totals 108: 4 + 7 + 14 + 83; by tier
+7 flagship / 10 primary / 25 secondary / 66 archive). Recount with `loadProfile()`
+rather than trusting this table after a wave of edits.
 
 The `projects:` list spans shards 20→23 and is concatenated in filename order
 by the loader. To find an entry: `grep -rn "id: <slug>" data/profile/`.

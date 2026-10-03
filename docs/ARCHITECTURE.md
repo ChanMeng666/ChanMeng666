@@ -1,6 +1,6 @@
 # Architecture
 
-This repository is the **first-hand, central, single source of truth** for Chan Meng's personal career data. Every output surface — the GitHub profile `README.md`, `llms.txt`, `llms-full.txt`, the canonical JSON Resume at `dist/profile.json`, and any downstream consumer like `chanmeng.org`, a Typst CV repo, or a LinkedIn rebuild — is a derived view of one YAML file.
+This repository is the **first-hand, central, single source of truth** for Chan Meng's personal career data. Every output surface — the GitHub profile `README.md`, `llms.txt`, `llms-full.txt`, the canonical JSON Resume at `dist/profile.json`, and any downstream consumer like `chanmeng.org`, a Typst CV repo, or a LinkedIn rebuild — is a derived view of one merged YAML source (`data/profile/*.yaml`, 15 shards).
 
 Data flows outward only. Nothing imports into this repo from external sources.
 
@@ -9,7 +9,7 @@ Data flows outward only. Nothing imports into this repo from external sources.
 ```
 .
 ├── data/
-│   ├── profile.yaml            # CONTENT source of truth — work, projects, narrative
+│   ├── profile/*.yaml          # CONTENT source of truth — 15 shards (see CLAUDE.md data map)
 │   └── brand.yaml              # FORM source of truth — color, type, spacing, voice
 ├── schema/
 │   ├── profile.schema.json     # JSON Schema (extended JSON Resume v1.0.0)
@@ -23,7 +23,7 @@ Data flows outward only. Nothing imports into this repo from external sources.
 │       ├── jsonld-block.hbs    # hidden GEO/JSON-LD block
 │       ├── hero.hbs            # section 1
 │       ├── featured-work.hbs   # section 2 — flagship project cards
-│       ├── project-card.hbs    # one project card
+│       ├── project-cards.hbs   # project cards (partner-logo line comes from the org)
 │       ├── open-source.hbs     # section 3 — primary table + categories
 │       ├── experience.hbs      # section 4
 │       ├── recognition.hbs     # section 5 — credentials, testimonials, more
@@ -35,7 +35,11 @@ Data flows outward only. Nothing imports into this repo from external sources.
 ├── scripts/
 │   ├── build.mjs               # YAML → README, llms.txt, llms-full.txt, dist/
 │   ├── build-brand.mjs         # brand.yaml → tokens.css/json/typ + DESIGN.md + preview
-│   ├── validate.mjs            # ajv validates profile.yaml against schema
+│   ├── validate.mjs            # ajv validates the merged profile against schema
+│   ├── lib/load-profile.mjs    # merges data/profile/*.yaml shards in filename order
+│   ├── check-*.mjs             # gates: copy, cv, freshness, linkedin sync, links, ecosystem
+│   ├── build-triage-page.mjs   # interactive repo-triage Artifact generator (3 modes; docs/operations/)
+│   ├── refresh-github-metrics.mjs # stars/forks/commit-date refresh into shards
 │   ├── validate-brand.mjs      # ajv validates brand.yaml + semantic refs
 │   ├── lib/load-brand.mjs      # shared brand loader + semantic resolver
 │   └── audit-assets.mjs        # warns on orphans / missing /public files
@@ -45,7 +49,8 @@ Data flows outward only. Nothing imports into this repo from external sources.
 │       ├── tokens.css          # CSS variables for web surfaces
 │       └── tokens.json         # canonical machine-readable tokens
 ├── docs/
-│   ├── ecosystem/              # ArchLang × ArchCanvas repo topology — not loaded by the build
+│   ├── ecosystem/              # repo lineage map (lineage.yaml + local-only private overlay) — not loaded by the build
+│   ├── operations/             # repo lifecycle + hosting runbook (README.md; hosting.private.md is gitignored)
 │   └── brand/
 │       ├── DESIGN.md           # human-readable design system documentation
 │       └── snapshots/          # token snapshots for drift detection
@@ -77,7 +82,7 @@ data/brand.yaml ──► validate-brand.mjs ──► build-brand.mjs ──┬
                                                               └─► public/brand-system.html
 
 data/profile/*.yaml ──► load-profile.mjs ──► validate.mjs ──► build.mjs ──► README.md
-  (13 shards, merged      (concatenates the                      │ (reads      │  llms.txt
+  (15 shards, merged      (concatenates the                      │ (reads      │  llms.txt
    in filename order)      projects: list                        │  dist/brand)│  llms-full.txt
                            across shards 20-23)                  │             └─► dist/profile.json
                                                                  └──── data.brand + data.decorations injected from

@@ -15,7 +15,7 @@ projects:
   - id: free-period-website
     provenance: client
     tier: archive
-    recency: historical
+    recency: deprecated
     meta:
       x_brand:
         featuredStack: [nextjs, react, typescript, tailwindcss, cloudflare-pages]
@@ -26,12 +26,11 @@ projects:
     clientOrgId: freeperiod
     tagline: Bilingual public-health site for 自在月行 (Free Period), a Guangzhou-based menstrual-access startup (HKUST(GZ) incubated) — Google Maps dispenser directory, advocacy document previews, product demo
     logo: /public/brands/free-period-mark.svg
-    url: https://free-period-website.pages.dev/
     entity: "自在月行 (Free Period) — Guangzhou-based, HKUST(GZ)-incubated menstrual-access startup"
     techStack: [Next.js, TypeScript, Tailwind CSS, Radix UI, Framer Motion, Recharts, Zustand, Google Maps API, Cloudflare Pages]
     narrative:
       impactHeadline: "Bilingual period-poverty advocacy site for a Guangzhou HKUST(GZ)-incubated startup — integrated Google Maps dispenser directory helping end-users locate menstrual-access resources in underserved markets."
-    status: live
+    status: archived
   - id: library-os
     provenance: personal
     tier: archive
@@ -39,11 +38,11 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, cloudflare-workers, opennext, supabase, stripe]
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: LibraryOS — Multi-Tenant Library SaaS
     priority: 20
     category: web-apps
-    tagline: 18-month / 80-commit production multi-tenant SaaS on its own libraryos.live domain — 4-tier access model with deliberate regional accessibility design, 4-role RBAC, Supabase row-level security + keep-alive cron, survived two architectural pivots (single-tenant->multi-tenant Dec 2025, Vercel->Cloudflare Workers Feb 2026) and a 12-commit Stripe-SDK-on-Workers debugging saga that ended by switching the Stripe client to fetch-based HTTP.
+    tagline: 18-month / 80-commit production multi-tenant SaaS on its own purchased domain (since retired) — 4-tier access model with deliberate regional accessibility design, 4-role RBAC, Supabase row-level security + keep-alive cron, survived two architectural pivots (single-tenant->multi-tenant Dec 2025, Vercel->Cloudflare Workers Feb 2026) and a 12-commit Stripe-SDK-on-Workers debugging saga that ended by switching the Stripe client to fetch-based HTTP.
     repoUrl: https://github.com/ChanMeng666/library-os
     logo: /public/brands/library-os-logo.svg
     extraLinks:
@@ -70,7 +69,7 @@ projects:
       - "@opennextjs/cloudflare 1.16 adapter"
       - "Cloudflare Workers deployment (migrated from Vercel)"
       - "wrangler 4.61 CI/CD"
-      - "libraryos.live custom domain (purchased, not default subdomain)"
+      - "Custom domain (purchased, not default subdomain; libraryos.live, since retired)"
       - "Apache-2.0 license"
     keywords:
       - "Multi-tenant SaaS"
@@ -97,13 +96,14 @@ projects:
       - { label: "Entitlement model",           value: "4 quota levels enforced server-side, plus a deliberate region-aware accessibility level for lower-income markets" }
       - { label: "Role hierarchy",              value: "4 (Owner/Admin/Librarian/Member with granular permission matrix)" }
       - { label: "Entry-level quotas",          value: "100 books, 5 users, 3 loans/user; higher entitlement levels scale those ceilings to unlimited" }
-      - { label: "Live URL",                    value: "libraryos.live (purchased custom domain)" }
+      - { label: "Former URL",                  value: "libraryos.live (purchased custom domain; domain retired 2026-10, deployment taken down)" }
       - { label: "License",                     value: "Apache-2.0" }
     status: archived
     startDate: "2024-10-30"
     publicSummary: |
-      Production **multi-tenant library management SaaS** with its own
-      purchased custom domain (libraryos.live),
+      Formerly production **multi-tenant library management SaaS** with its own
+      purchased custom domain (libraryos.live, retired
+      2026-10 with the deployment),
       built over **18 months across 80 solo commits** spanning **two
       major architectural pivots and one infamous debugging saga**. The
       product offers a 4-tier access model with Stripe-integrated
@@ -128,7 +128,9 @@ projects:
       and the companion `85b6244` *"read Stripe price IDs from database
       instead of env vars"*. Stack: Next.js 16.1 + React 19.2 +
       Tailwind 4 + Supabase + Stripe 20 + Resend 6 + shadcn/ui +
-      Zod 4 + @opennextjs/cloudflare. Apache-2.0.
+      Zod 4 + @opennextjs/cloudflare. Apache-2.0. The deployment
+      and its domain have since been retired; the repository is
+      archived.
     narrative:
       impactHeadline: "Multi-tenant library-management SaaS with deliberate regional accessibility design — survived two architectural pivots (single→multi-tenant, Vercel→Cloudflare Workers), 4-tier access model, ready for community libraries, small schools, and makerspaces."
       problem: |
@@ -278,8 +280,8 @@ projects:
         merged within hours of discovery
         (commits `85fa6aa` + `101568a`).
       outcomes: |
-        Live and operational at
-        libraryos.live — a **purchased
+        Was live and operational at
+        libraryos.live (domain and deployment retired 2026-10) — a **purchased
         custom domain**, not the default `*.workers.dev`
         subdomain, signaling a commitment beyond a hobby
         deployment. **80 solo commits across 18 months** from the
@@ -308,8 +310,8 @@ projects:
         architecture, payment integration, security
         responsiveness, persistence infrastructure (Supabase
         keep-alive), and globalisation (Africa-friendly
-        accessibility tier) — all on a purchased custom domain
-        that signals "this is a real product".
+        accessibility tier) — all shipped on a purchased custom domain
+        (since retired) rather than a default subdomain.
       myRole: |
         Sole product designer, sole engineer, sole maintainer
         across all 80 commits and 18 months. Designed the
@@ -329,8 +331,8 @@ projects:
         switching to fetch HTTP client + integration-guide docs);
         applied two React Server Components CVE patches within
         hours of Vercel-automated PRs; purchased and configured
-        the `libraryos.live` custom domain. Maintains the live
-        deployment today.
+        the `libraryos.live` custom domain (retired 2026-10
+        together with the deployment).
   - id: linkedin-jobs-search
     provenance: personal
     tier: archive

@@ -277,7 +277,6 @@ The teaching doctrine I built here — "natural language is the source code"; sh
 **Media:** `Screenshot_2025-02-11-19-34-08-434_com.tencent.mm.jpg` · `IMG_20250215_130218.jpg` · `IMG_20250214_233035.jpg`  _(Show all 5 media)_
 
 ## FreePeriod
-**Links:** <https://free-period-website.pages.dev/>
 
 ### Chief Technology Officer (CTO)
 

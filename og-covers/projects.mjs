@@ -19,6 +19,9 @@
 //   metaFile    file that controls <head>/metadata (relative to repoDir)
 //   deployBranch branch whose push triggers the live deploy
 
+// Retired 2026-10-03 (deployments taken down, entries removed): free-period-website,
+// html-brick-game, kaboom-rpg-adventure. Add an entry back only if the site returns.
+
 export const projects = [
   {
     id: "fanfic-lab",
@@ -124,24 +127,6 @@ export const projects = [
     metaFile: "app/layout.tsx",
     deployBranch: "main",
     autoDeploy: false, // manual `opennextjs-cloudflare deploy`
-  },
-  {
-    id: "free-period-website",
-    repoDir: "D:/github_repository/free-period-website",
-    publicDir: "public",
-    siteUrl: "https://free-period-website.pages.dev",
-    name: "FreePeriod",
-    eyebrow: "Menstrual Care",
-    tagline: "Sustainable menstrual care, accessible to everyone.",
-    bg: "#F43F5E",
-    accent: "#0EA5E9",
-    tileBg: "#FFFFFF",
-    logo: "public/images/main-logo.svg",
-    logoPad: true,
-    framework: "app",
-    metaFile: "src/app/layout.tsx",
-    deployBranch: "main",
-    autoDeploy: false, // manual `wrangler pages deploy out`
   },
   {
     id: "archcanvas",
@@ -439,37 +424,5 @@ export const projects = [
     metaFile: "src/index.html",
     deployBranch: "main",
     autoDeploy: false, // manual: npm run deploy (ng build && wrangler pages deploy)
-  },
-  {
-    id: "html-brick-game",
-    repoDir: "D:/github_repository/html-brick-game",
-    publicDir: ".", // plain static site; png sits next to index.html at repo root
-    siteUrl: "https://chanmeng666.github.io/html-brick-game",
-    name: "Starlight Breaker",
-    eyebrow: "HTML5 Canvas",
-    tagline: "An artistic brick-breaking game in pure vanilla JavaScript.",
-    bg: "#1E3C72", // deep arcade blue
-    accent: "#00D4FF", // cyan
-    logo: null, // ships only a 1200×630 banner PNG → use the no-logo panel
-    framework: "static", // GitHub Pages subpath; absolute og url required
-    metaFile: "index.html",
-    deployBranch: "main", // GitHub Pages, auto on push to main (root)
-  },
-  {
-    id: "kaboom-rpg-adventure",
-    repoDir: "D:/github_repository/kaboom-rpg-adventure",
-    publicDir: "public", // Vite copies public/ → dist/ root
-    siteUrl: "https://chanmeng666.github.io/kaboom-rpg-adventure",
-    name: "Kaboom RPG",
-    eyebrow: "Pixel Adventure",
-    tagline: "A 2D pixel-art RPG adventure built with Kaboom.js.",
-    bg: "#311047", // dark purple
-    accent: "#6366F1", // indigo
-    tileBg: "#FFFFFF",
-    logo: "public/logo.svg",
-    logoPad: true,
-    framework: "static", // Vite + GitHub Actions → Pages subpath; absolute og url required
-    metaFile: "index.html",
-    deployBranch: "master", // GitHub Actions: vite build → Pages, auto on push
   },
 ];

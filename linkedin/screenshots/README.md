@@ -31,7 +31,7 @@ shots were pruned).
 | `femtech-weekend/` | FemTech Weekend Gen-2 Platform | https://www.femtechweekend.com/ (+ summit, insights, stories) | 8 |
 | `programming-chanmeng/` | programming.chanmeng.org teaching platform | https://programming.chanmeng.org/ (+ curriculum, message board) | 4 |
 | `tam-ai-ti/` | Tam-AI-Ti — financial-wellness coach | https://tamaiti.whiri-ai.com/ | 5 |
-| `free-period/` | FreePeriod — period-poverty platform | https://free-period-website.pages.dev/ (+ products, impact) | 6 |
+| `free-period/` | FreePeriod — period-poverty platform | site retired 2026-10-03 (was free-period-website.pages.dev); screenshots kept as archive, do not re-run | 6 |
 
 ## Notes / limitations
 

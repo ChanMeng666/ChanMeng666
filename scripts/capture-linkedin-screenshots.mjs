@@ -90,12 +90,7 @@ const TARGETS = [
     // public-facing artifact is the branded main menu (captured on the home pass).
     routes: [],
   },
-  {
-    slug: "free-period",
-    url: "https://free-period-website.pages.dev/",
-    name: "FreePeriod — period-poverty platform",
-    routes: ["/products", "/impact"],
-  },
+  // free-period (free-period-website.pages.dev) retired 2026-10-03: site taken down.
 ];
 
 const VIEWPORT = { width: 1440, height: 900 };

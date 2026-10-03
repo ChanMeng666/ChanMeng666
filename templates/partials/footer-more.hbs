@@ -14,7 +14,7 @@
 {{#if meta.x_brand.cli.screenshot}}
 **Interactive CLI** — run `{{meta.x_brand.cli.command}}` in your terminal.
 
-<a href="{{default meta.x_brand.cli.repoUrl 'https://github.com/ChanMeng666/chan-meng-cli'}}"><img src="{{meta.x_brand.cli.screenshot}}" width="420" alt="{{meta.x_brand.cli.command}} interactive preview"></a>
+{{#if meta.x_brand.cli.repoUrl}}<a href="{{meta.x_brand.cli.repoUrl}}"><img src="{{meta.x_brand.cli.screenshot}}" width="420" alt="{{meta.x_brand.cli.command}} interactive preview"></a>{{else}}<img src="{{meta.x_brand.cli.screenshot}}" width="420" alt="{{meta.x_brand.cli.command}} interactive preview">{{/if}}
 
 {{/if}}**Connect, subscribe, support**
 

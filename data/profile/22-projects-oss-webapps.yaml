@@ -19,7 +19,7 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, react, typescript, tailwindcss, cloudflare-pages]
-    lastUpdated: "2026-10-01"
+    lastUpdated: "2026-10-03"
     name: FreePeriod Website
     priority: 22
     category: web-apps
@@ -27,7 +27,6 @@ projects:
     tagline: Bilingual public-health site for 自在月行 (Free Period), a Guangzhou-based menstrual-access startup (HKUST(GZ) incubated) — Google Maps dispenser directory, advocacy document previews, product demo
     logo: /public/brands/free-period-mark.svg
     url: https://free-period-website.pages.dev/
-    repoUrl: https://github.com/ChanMeng666/free-period-website
     entity: "自在月行 (Free Period) — Guangzhou-based, HKUST(GZ)-incubated menstrual-access startup"
     techStack: [Next.js, TypeScript, Tailwind CSS, Radix UI, Framer Motion, Recharts, Zustand, Google Maps API, Cloudflare Pages]
     narrative:
@@ -882,18 +881,12 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-05-19"
+    lastUpdated: "2026-10-03"
     name: SendJoy — Visual Email Platform
     priority: 17
     category: web-apps
     tagline: No-code visual abstraction layer over the Resend API — drag-and-drop block editor, 5-step send wizard, Resend Audiences sync, and onboarding designed explicitly for non-technical users. Born as a Christmas-greeting CLI; pivoted into a full visual platform in 4 days.
-    repoUrl: https://github.com/ChanMeng666/send-joy
     logo: /public/brands/send-joy-logo.svg
-    extraLinks:
-      - { label: "Tutorial",           url: "https://github.com/ChanMeng666/send-joy/blob/master/TUTORIAL.md" }
-      - { label: "CF Workers migration commit", url: "https://github.com/ChanMeng666/send-joy/commit/e9ace8a" }
-      - { label: "CLI->visual pivot commit",    url: "https://github.com/ChanMeng666/send-joy/commit/fe16fdd" }
-      - { label: "Non-tech UX commit",          url: "https://github.com/ChanMeng666/send-joy/commit/782731c" }
     techStack:
       - "Next.js 15.1.2 (App Router)"
       - "React 19.0"
@@ -1028,10 +1021,7 @@ projects:
         through these six surfaces step by step, and every screen
         has a context-aware help modal pinned to it.
       businessLogic: |
-        Open source under MIT. The product is **free to self-host**
-        (deploy to Cloudflare Workers in under a minute via the
-        `npm run deploy` script and `@opennextjs/cloudflare`) and
-        free to use on the public instance at
+        The product is **free to use** on the public instance at
         sendjoy.chanmeng-dev.workers.dev (the user supplies their own
         Resend API key, so Chan bears no email-delivery cost). The
         commercial premise is asymmetric: Resend already monetises
@@ -1243,14 +1233,13 @@ projects:
     provenance: client
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: AI-Powered ESOL Learning Platform
     priority: 81
     category: ai-apps
     clientOrgId: aotearoa-infinite-academy
     relatedWorkId: aotearoa-infinite-academy
     tagline: Multi-path English-learning platform built for Aotearoa Infinite Academy — real-time AI speaking coach (OpenAI Realtime API), CEFR general practice, NZCEL exam prep, and gamified progress tracking on a multi-tenant Neon Postgres backend
-    repoUrl: https://github.com/ChanMeng666/esol-learning-platform
     entity: "Aotearoa Infinite Academy (New Zealand English-language academy)"
     extraLinks:
       - { label: "Client — Aotearoa Infinite Academy", url: "https://www.aotearoainfiniteacademy.school/" }
@@ -1285,18 +1274,16 @@ projects:
     provenance: client
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-11"
+    lastUpdated: "2026-10-03"
     name: Wellness Support Agent
     priority: 82
     category: ai-apps
     clientOrgId: sanicle
     relatedWorkId: sanicle
     tagline: "Sanicle-associated workplace-wellness demo on Google's Agent Development Kit — a root agent routes to five specialized sub-agents (employee support, HR manager, employer insights, search, leave requests) with privacy-first, role-based access for employees, HR, and employers"
-    repoUrl: https://github.com/ChanMeng666/wellness-agent
     url: https://sanicle-wellness-agent-2lxj5uw.gamma.site/
     extraLinks:
       - { label: "Overview site", url: "https://sanicle-wellness-agent-2lxj5uw.gamma.site/" }
-      - { label: "GitHub repo", url: "https://github.com/ChanMeng666/wellness-agent" }
     techStack: ["Next.js 15", React, TypeScript, "Python 3.9+", FastAPI, "Google ADK", "Gemini 1.5 Flash", Firestore, BigQuery]
     status: archived
     startDate: "2025-05"
@@ -1326,7 +1313,7 @@ projects:
     provenance: client
     tier: archive
     recency: historical
-    lastUpdated: "2026-10-01"
+    lastUpdated: "2026-10-03"
     name: She Sharp — Event Welcome Board
     priority: 83
     category: web-apps
@@ -1334,7 +1321,6 @@ projects:
     relatedWorkId: she-sharp
     relatedProjectIds: [she-sharp]
     tagline: Fullscreen, on-brand electronic welcome sign for She Sharp offline events — pure HTML/CSS/JS, no build step, works offline, with optional live event-data sync from shesharp.org.nz
-    repoUrl: https://github.com/ChanMeng666/she-sharp-event-black-board
     techStack: [HTML, CSS, JavaScript, "QR code"]
     status: live
     startDate: "2026-06"

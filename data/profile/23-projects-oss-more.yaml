@@ -17,17 +17,15 @@ projects:
     meta:
       x_brand:
         featuredStack: [vercel-ai-sdk, typst, stripe, digitalocean, docker]
-    lastUpdated: "2026-10-01"
+    lastUpdated: "2026-10-03"
     name: Vitex — AI Career Agent (vitex.org.nz)
     priority: 16
     category: ai-apps
     tagline: "Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions"
-    repoUrl: https://github.com/ChanMeng666/easy-resume
     logo: /public/brands/vitex-mark.svg
     url: https://www.vitex.org.nz/
     extraLinks:
       - { label: "Live product", url: "https://www.vitex.org.nz/" }
-      - { label: "GitHub repo", url: "https://github.com/ChanMeng666/easy-resume" }
     techStack:
       - "Next.js 15"
       - "React 19"
@@ -110,26 +108,14 @@ projects:
           - src: /public/tech-logos/honkai-star-rail.webp
             alt: "Honkai: Star Rail (HoYoverse)"
             url: "https://hsr.hoyoverse.com/"
-    lastUpdated: "2026-07-07"
+    lastUpdated: "2026-10-03"
     name: FanFic Lab — HSR DreamWriter, an Adaptive LangGraph Agent Powering a Gaming Fan-Creation Community
     priority: 15
     category: ai-apps
     tagline: A full-stack AI co-creation platform for the *Honkai&#58; Star Rail* (崩坏：星穹铁道) fandom — a 7-node LangGraph adaptive agent (intent parser → architect → writer → quality guard → revision loop → summarizer → delivery) with a self-revising quality loop, hand-curated 5-character HSR canon knowledge pack + RAG over a `KnowledgeChunk` pgvector index, and a UGC community layer with follows / nested-reply comments / notifications / pgvector related-story recommendations — split into two Docker services (`web` + `agent`) self-hosted on a DigitalOcean VPS via Coolify behind Cloudflare.
-    repoUrl: https://github.com/ChanMeng666/fanfic-lab
     logo: /public/brands/fanfic-lab-logo.svg
     # Live deployment (fanfic-lab.tech) retired 2026-07 — project shuttered; source repo remains public.
     status: archived
-    extraLinks:
-      - { label: "Migration playbook (Railway → DO + Coolify)", url: "https://github.com/ChanMeng666/fanfic-lab/blob/master/docs/MIGRATION_RAILWAY_TO_DIGITALOCEAN.md" }
-      - { label: "Deployment doc",                    url: "https://github.com/ChanMeng666/fanfic-lab/blob/master/docs/DEPLOYMENT.md" }
-      - { label: "DreamWriter graph",                 url: "https://github.com/ChanMeng666/fanfic-lab/blob/master/src/agent/dreamwriter/graph.ts" }
-      - { label: "HSR knowledge pack",                url: "https://github.com/ChanMeng666/fanfic-lab/tree/master/src/knowledge/hsr" }
-      - { label: "HSR DreamWriter pivot commit",      url: "https://github.com/ChanMeng666/fanfic-lab/commit/a288e25" }
-      - { label: "Adaptive quality-loop graph commit", url: "https://github.com/ChanMeng666/fanfic-lab/commit/a06d96f" }
-      - { label: "pgvector related-stories commit",   url: "https://github.com/ChanMeng666/fanfic-lab/commit/48428e6" }
-      - { label: "Trigram search-index commit",       url: "https://github.com/ChanMeng666/fanfic-lab/commit/9bd86a9" }
-      - { label: "Coolify migration commit",          url: "https://github.com/ChanMeng666/fanfic-lab/commit/734e69c" }
-      - { label: "GitHub Actions deploy workflow",    url: "https://github.com/ChanMeng666/fanfic-lab/blob/master/.github/workflows/deploy.yml" }
     techStack:
       - "Next.js 16.1 (App Router, Turbopack, Server Actions)"
       - "React 19.2 + TypeScript 5"
@@ -192,7 +178,7 @@ projects:
       productLogic: |
         The user flow collapses what would normally be 4-5 separate apps (writing assistant + character database + fanfic editor + social platform + recommendation engine) into one screen. (1) **Land on `fanfic-lab.tech`** — cinematic full-bleed hero with Honkai: Star Rail splash arts and KV (key-visual) imagery, plus a Honkai: Star Rail fan content attribution credit (the project takes the IP-attribution discipline seriously even though it's a non-commercial fan tool). (2) **Sign in via Stack Auth** — branded sign-in/up shell with explicit error classification, mobile + perf polish. (3) **Hit the "create" page** — type a Chinese prompt describing the CP you want to read about ("想看砂金和藿藿的现代AU虐转甜"). (4) **Backend kicks off a DreamWriter agent run**: the Next.js API route POSTs to `LANGGRAPH_URL=http://agent:8123` (Docker Compose internal hostname) which runs the 7-node graph; the frontend polls for `logs` updates and shows them in Chinese ("正在解析您的需求..." → "正在策划故事..." → "正在创作..." → "正在质量检查 (8/10)..." → "正在根据反馈修改第 1 版..." → "故事完成"). (5) **Story auto-publishes to the Fandom Feed** (a deliberate product decision in commit `b090c04` "auto-publish stories, remove shelf page and drafts tab" — friction kills first-time creators). (6) **Other users discover it via**: the feed (filterable by fandom / ships / tags / rating / status, sortable by recent / popular / comments / word count, with infinite scroll); SEO/OG tags + sitemap for organic search; **pgvector related-story recommendations** on each story page (commit `48428e6` — cosine similarity over title+summary+ships+tags embeddings, deliberately *not* over chapter content because we want thematic matching, not prose-style matching); **per-author public pages** at `/users/[username]` with their stories + followers + following. (7) **Engagement primitives**: like a story, follow an author, leave a nested-reply comment, like comments, get notified in the bell + notifications page when someone interacts with your work. (8) **Story reader page**: per-reader font / line-height preferences (commit `6551966`) + scroll position memory so the reader can pause + resume, plus dark mode toggle in the header (commit `b922cf8`). (9) **Author tools**: edit published stories, continue any story with a new chapter (with auto-generated chapter titles, commit `30df8fe`), avatar crop preview via react-easy-crop. The cumulative effect: **a fan-creation community where the friction from "I want to read this" to "this story exists and other fans are commenting on it" is one Chinese sentence**.
       businessLogic: |
-        This is an MIT-licensed open-source fan-creation tool with a non-commercial usage stance toward the HSR IP — it ships an explicit Honkai: Star Rail fan content attribution on the homepage and treats the canon knowledge pack as a *fan-curated* reference, not commercial use of HoYoverse assets. The infrastructure choices are however explicit and deliberate. **Deployment model**: the production stack runs on a self-hosted DigitalOcean droplet behind Coolify (the migration playbook records the rationale — moving off Railway gave full control over runtime + the ability to host more services on the same box). **Model tiering**: GPT-4o-mini handles the intent parser + quality guard nodes; GPT-4o handles the writer node where prose quality matters; the quality-guard revision budget is capped at MAX_REVISIONS=2 so the agent loop is bounded; embeddings use `text-embedding-3-small`; the `SourceResearchCache` Prisma model + Redis tier persist Tavily results for 30 days to avoid duplicate fandom research. **Credits scaffolding**: the Prisma schema includes `UserCredits` and `Generation` models with `creditsCharged: Int` — a June 2026 Claude×Codex adversarial-review pass (PRs #2-#3) moved credits from data-layer scaffolding to enforced billing by making story generation server-authoritative and fail-closed on QA, and calibrating story length to the paid tier — so generation cost and capacity are now controlled server-side rather than trusted from the client. **Build-time + runtime layout**: two services (web + agent) in one Docker Compose file means health checks, internal networking, restart policies, and rolling deploys are all handled by one Coolify project rather than fragmented across providers. **Discovery loop**: per-story SEO/OG tags + sitemap (commit `897a43d`) + the related-stories pgvector recommender compound organic discoverability over time.
+        This is a fan-creation tool with a non-commercial usage stance toward the HSR IP — it ships an explicit Honkai: Star Rail fan content attribution on the homepage and treats the canon knowledge pack as a *fan-curated* reference, not commercial use of HoYoverse assets. The infrastructure choices are however explicit and deliberate. **Deployment model**: the production stack runs on a self-hosted DigitalOcean droplet behind Coolify (the migration playbook records the rationale — moving off Railway gave full control over runtime + the ability to host more services on the same box). **Model tiering**: GPT-4o-mini handles the intent parser + quality guard nodes; GPT-4o handles the writer node where prose quality matters; the quality-guard revision budget is capped at MAX_REVISIONS=2 so the agent loop is bounded; embeddings use `text-embedding-3-small`; the `SourceResearchCache` Prisma model + Redis tier persist Tavily results for 30 days to avoid duplicate fandom research. **Credits scaffolding**: the Prisma schema includes `UserCredits` and `Generation` models with `creditsCharged: Int` — a June 2026 Claude×Codex adversarial-review pass (PRs #2-#3) moved credits from data-layer scaffolding to enforced billing by making story generation server-authoritative and fail-closed on QA, and calibrating story length to the paid tier — so generation cost and capacity are now controlled server-side rather than trusted from the client. **Build-time + runtime layout**: two services (web + agent) in one Docker Compose file means health checks, internal networking, restart policies, and rolling deploys are all handled by one Coolify project rather than fragmented across providers. **Discovery loop**: per-story SEO/OG tags + sitemap (commit `897a43d`) + the related-stories pgvector recommender compound organic discoverability over time.
       technicalApproach: |
         The system is organised around four orthogonal layers that together produce the user-visible behaviour.
 
@@ -551,15 +537,12 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Chinese Redefine 汉语新解 — AI Word Redefinition
     priority: 14
     category: ai-apps
     tagline: "汉语新解 — a full-stack AI app that reinterprets everyday Chinese vocabulary with sharp, humorous, philosophically-loaded takes (productizing Li Jigang's 李继刚 viral prompt) via Google Gemini, exports shareable SVG cards, gated by a two-layer rate-limit quota system, deployed on Cloudflare Workers via OpenNext. Low on raw technical difficulty, high on cultural/philosophical depth"
-    repoUrl: https://github.com/ChanMeng666/chinese-redefine
     logo: /public/brands/chinese-redefine-v2.svg
-    extraLinks:
-      - { label: "GitHub repo", url: "https://github.com/ChanMeng666/chinese-redefine" }
     techStack:
       - "Next.js 15 (App Router)"
       - "React 18"
@@ -729,12 +712,11 @@ projects:
     provenance: personal
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Emoji Story Generator
     priority: 43
     category: creative
     tagline: "AI emoji-to-story generator deployed as a Hugging Face Space — pick from 200+ emojis across 8 categories and Llama-3.1-8B-Instruct (via HF Inference Providers) writes the narrative, backed by a community story library with voting. Streamlit app, MIT, one-click deployable"
-    repoUrl: https://github.com/ChanMeng666/emoji-story-generator
     logo: /public/brands/emoji-story-generator-logo.svg
     url: https://huggingface.co/spaces/ChanMeng666/emoji-story-generator
     techStack: [Python, Streamlit, "Hugging Face Inference Providers API", "Llama-3.1-8B-Instruct", "Hugging Face Spaces"]
@@ -747,12 +729,11 @@ projects:
     provenance: coursework
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Advanced Neural Network Applications
     priority: 50
     category: ml-research
     tagline: "From-scratch perceptron (classification) and linear-neuron (regression) implementations with step-by-step weight-update math derivations and interactive Matplotlib visualizations in Jupyter — one-click runnable in the browser via Binder and Google Colab, no install"
-    repoUrl: https://github.com/ChanMeng666/advanced-neural-network-applications
     techStack: [Python, Jupyter, NumPy, pandas, Matplotlib, scikit-learn]
     keywords: ["Neural networks from scratch", "Perceptron + linear neuron", "Hand-derived gradient descent", "Binder + Google Colab one-click", "Educational ML notebooks"]
     status: archived
@@ -763,12 +744,11 @@ projects:
     provenance: coursework
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Body Fat Prediction (MLP)
     priority: 51
     category: ml-research
     tagline: "Two from-scratch MLP regressors predicting body-fat % from anthropometric measurements — a full model (14 inputs → 20 hidden, R²=0.9724) and an efficiency-reduced model (9 inputs → 5 hidden, R²=0.9617); published on Hugging Face with a full model card"
-    repoUrl: https://github.com/ChanMeng666/bodyfat-estimation-mlp
     url: https://huggingface.co/ChanMeng666/bodyfat-estimation-mlp
     techStack: [Python, TensorFlow, Keras, NumPy, pandas]
     metrics:
@@ -784,12 +764,11 @@ projects:
     provenance: coursework
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Heat Flux Neural Networks
     priority: 52
     category: ml-research
     tagline: "Feedforward neural nets predicting building heat-flux from insulation + orientation — compares 1/3/5-hidden-neuron architectures and SGD vs Adagrad; best model R²=0.9588 (MSE 0.0029). Published on Hugging Face with a full model card"
-    repoUrl: https://github.com/ChanMeng666/heat-flux-perceptrons-neural-networks
     url: https://huggingface.co/ChanMeng666/heat-flux-perceptrons-neural-networks
     techStack: [Python, TensorFlow, Keras, NumPy, pandas]
     metrics:
@@ -805,12 +784,11 @@ projects:
     provenance: coursework
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: MNIST Digit Recognition
     priority: 53
     category: ml-research
     tagline: "Handwritten-digit recognition comparing three neural-network architectures — a baseline MLP, an optimized MLP, and a deep CNN — with rich Plotly/seaborn training-and-error visualizations; upgraded from a student assignment into a documented, reproducible TensorFlow study"
-    repoUrl: https://github.com/ChanMeng666/mnist-handwritten-digit-recognition-project
     techStack: [Python, TensorFlow, Keras, NumPy, pandas, "scikit-learn", Matplotlib, seaborn, Plotly]
     keywords: ["MNIST digit recognition", "MLP vs optimized vs deep CNN", "Architecture comparison study", "TensorFlow / Keras", "Plotly + seaborn visualizations"]
     status: archived
@@ -821,12 +799,11 @@ projects:
     provenance: coursework
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Water Quality Analysis
     priority: 54
     category: ml-research
     tagline: "500-sample water-quality statistical study — correlation heatmaps, pair plots, and multi-parameter OLS regression predicting conductivity from pH, temperature, turbidity, and dissolved oxygen (strongest finding: pH↔DO r=0.705); upgraded from a student assignment into a reproducible Jupyter notebook"
-    repoUrl: https://github.com/ChanMeng666/water-quality-testing-data-analysis
     techStack: [Python, Jupyter, pandas, NumPy, Matplotlib, seaborn, statsmodels, scikit-learn]
     keywords: ["Water-quality statistical analysis", "OLS regression + correlation study", "500-sample dataset", "Conductivity prediction model"]
     status: archived
@@ -953,12 +930,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-10-02"
+    lastUpdated: "2026-10-03"
     name: Lottie Theme Converter
     priority: 67
     category: tools
     tagline: "A Python tool that intelligently converts Lottie animations between light and dark themes — inverts embedded image colors while preserving transparency and animation quality, for one-click theme adaptation"
-    repoUrl: https://github.com/ChanMeng666/lottie-edit
     techStack: ["Python 3.8+", Pillow, JSON, Base64, "Lottie JSON"]
     keywords: ["Lottie animation tooling", "Light/dark theme inversion", "Transparency-preserving color inversion"]
     status: archived
@@ -1185,12 +1161,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Brick Breaker (Starlight Breaker)
     priority: 72
     category: games
     tagline: "Starlight Breaker — a browser brick-breaker (Breakout) game built on the HTML5 Canvas API with vanilla JavaScript, deployed free on GitHub Pages"
-    repoUrl: https://github.com/ChanMeng666/html-brick-game
     logo: /public/brands/html-brick-game.svg
     url: https://chanmeng666.github.io/html-brick-game/
     techStack: ["HTML5 Canvas", JavaScript, "GitHub Pages"]
@@ -1199,12 +1174,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: AI vs Human Game
     priority: 73
     category: games
     tagline: "AI-vs-Human content-detection quiz game across four categories (text, image, audio, video), 10 questions each — a playful pond-themed UI with real-time scoring, progressive difficulty, and performance analytics; doubles as an AI-literacy tool for spotting AI-generated content"
-    repoUrl: https://github.com/ChanMeng666/ai-human-game
     logo: /public/brands/ai-human-game.svg
     techStack: [Next.js, TypeScript, "Tailwind CSS", "Cloudflare Workers"]
     keywords: ["AI-content literacy game", "Text/image/audio/video detection", "Pond-themed UI", "Real-time scoring + analytics"]
@@ -1213,12 +1187,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Reincarnation Journey
     priority: 74
     category: games
     tagline: Interactive reincarnation simulator with multi-cultural life journeys and immersive UX
-    repoUrl: https://github.com/ChanMeng666/journey-of-reincarnation
     logo: /public/brands/journey-of-reincarnation-2.svg
     techStack: [Next.js, Cloudflare Pages]
     status: archived
@@ -1226,12 +1199,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Otherworld God-Farmer
     priority: 75
     category: games
     tagline: 2D pixel-style farm simulation game — farming, building, and social systems
-    repoUrl: https://github.com/ChanMeng666/otherworld-god-farmer
     logo: /public/brands/otherworld-god-farmer-logo.svg
     techStack: [Angular 19, "Pixi.js 8", Cloudflare Pages]
     status: archived
@@ -1239,12 +1211,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Kaboom RPG Adventure
     priority: 76
     category: games
     tagline: 2D pixel-style RPG with NPC dialogues, quests, and turn-based combat
-    repoUrl: https://github.com/ChanMeng666/kaboom-rpg-adventure
     logo: /public/brands/kaboom-rpg-adventure.svg
     url: https://chanmeng666.github.io/kaboom-rpg-adventure/
     techStack: ["Kaboom.js", Vite, "GitHub Pages"]
@@ -1266,12 +1237,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Slime Split
     priority: 78
     category: games
     tagline: Physics-based puzzle platformer in LÖVE2D / Lua / Box2D — split-and-merge slimes across 5 handcrafted levels
-    repoUrl: https://github.com/ChanMeng666/slime-split
     logo: /public/brands/slime-split.png
     url: https://chanmeng666.itch.io/slime-split
     techStack: ["LÖVE (Love2D)", Lua, Box2D]
@@ -1683,12 +1653,11 @@ projects:
     provenance: coursework
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: AgriHire Solutions
     priority: 31
     category: web-apps
     tagline: "Equipment-rental management SaaS for NZ agricultural businesses — rebuilt from a basic HTML/JS/CSS group project into a Next.js 16 + Neon Postgres app on Cloudflare Workers (OpenNext), with multi-store operations, role-based access, tiered pricing, real-time analytics dashboards, and file uploads"
-    repoUrl: https://github.com/ChanMeng666/agrihire-solutions
     logo: /public/brands/agri-hire-solutions.svg
     techStack: ["Next.js 16", "React 19", TypeScript, "Tailwind CSS 4", "shadcn/ui", "Neon Postgres", "Drizzle ORM", "Better Auth", "Recharts (analytics dashboards)", "UploadThing (file uploads)", "Resend (email)", "Cloudflare Workers", OpenNext]
     narrative:
@@ -1935,12 +1904,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Minimalist Living Blog
     priority: 34
     category: web-apps
     tagline: "Minimalist-living image-and-text blog whose signature is an interactive 3D model on the homepage — visitors rotate/explore it with the mouse, adding a tactile, aesthetic hook to the reading experience; built on Docusaurus"
-    repoUrl: https://github.com/ChanMeng666/minimalist-good-post
     logo: /public/brands/minimalist-good-post.svg
     techStack: [Docusaurus, "Three.js (interactive homepage 3D model)", React]
     status: archived
@@ -1950,7 +1918,7 @@ projects:
     provenance: client
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Sanicle FemTech Mobile (Prototype)
     priority: 79
     category: web-apps
@@ -1958,7 +1926,6 @@ projects:
     relatedWorkId: sanicle
     relatedProjectIds: [sanicle-ai]
     tagline: "Sanicle mobile-app prototype — period tracking, health analytics, and an AI health assistant in a React Native shell; an early clickable prototype from Chan's Sanicle CTO tenure, predating the production sanicle-ai platform"
-    repoUrl: https://github.com/ChanMeng666/sanicle-ai-mobile
     url: https://chanmeng666.github.io/sanicle-ai-mobile/
     techStack: ["React Native", "GitHub Pages"]
     status: archived
@@ -1966,12 +1933,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Mental Wellness Podcast App Prototype
     priority: 80
     category: web-apps
     tagline: "High-fidelity mental-wellness podcast app prototype — AI mental-coach chatbot + immersive audio player in iOS-compliant UI, built entirely in HTML/CSS/JS to prove that hand-writing HTML is a viable, fast path to clickable mobile-app prototypes (no native toolchain)"
-    repoUrl: https://github.com/ChanMeng666/podcast-app-prototype
     url: https://chanmeng666.github.io/podcast-app-prototype/
     techStack: [HTML, CSS, JavaScript, "GitHub Pages"]
     keywords: ["HTML-based mobile-app prototyping", "High-fidelity clickable prototype", "iOS-compliant UI patterns", "Mental-wellness podcast UX"]
@@ -1982,12 +1948,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-10-03"
     name: chan-meng-cli
     priority: 63
     category: branding
     tagline: Interactive CLI introduction — `npx chan-meng` for a one-command interactive-storytelling intro to Chan's philosophy and work (v2.0 rebuilt on Ink); built spec-first with spec-driven development
-    repoUrl: https://github.com/ChanMeng666/chan-meng-cli
     logo: /public/brands/chan-meng-cli.svg
     image: /public/screenshots/chan-meng-cli-screenshot.png
     techStack: ["Node.js 18+ (ES2022)", "Ink (React for CLIs, v2.0 rewrite)", "npx-installable (npm: chan-meng)"]
@@ -2011,12 +1976,11 @@ projects:
     provenance: personal
     tier: archive
     recency: historical
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-10-03"
     name: Customer Insight
     priority: 33
     category: ai-apps
     tagline: Python AI sentiment + topic modeling platform for customer-review analysis — live on Streamlit
-    repoUrl: https://github.com/ChanMeng666/customer-insight
     url: https://chanmeng666-customerinsight-app-oeiu2h.streamlit.app/
     logo: /public/brands/customer-insight.svg
     techStack: [Python, Streamlit, "Sentiment analysis", "Topic modeling", "Anomaly detection"]
@@ -2027,12 +1991,11 @@ projects:
     provenance: personal
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-11"
+    lastUpdated: "2026-10-03"
     name: Hospital Roster Agent
     priority: 34
     category: ai-apps
     tagline: AI-powered hospital staff scheduling — Next.js + CopilotKit interactive calendar with natural-language operations
-    repoUrl: https://github.com/ChanMeng666/hospital-roster-agent
     logo: /public/brands/hospital-roster-agent-logo.svg
     techStack: ["Next.js", TypeScript, CopilotKit]
     narrative:
@@ -2056,12 +2019,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: English Redefine
     priority: 45
     category: creative
     tagline: Modern redefinition of English words from a contemporary perspective via Google Gemini — sister project to Chinese Redefine
-    repoUrl: https://github.com/ChanMeng666/english-redefine
     logo: /public/brands/english-redefine.svg
     techStack: [TypeScript, "Google Gemini", "Cloudflare Workers"]
     status: archived
@@ -2069,12 +2031,11 @@ projects:
     provenance: coursework
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: NZ Biosecurity Guide
     priority: 35
     category: web-apps
     tagline: "Biosecurity guide for NZ agricultural pests and weeds with role-based access for agronomists, staff, and administrators — rebuilt from a basic HTML/CSS/Flask university group project into a modern Next.js + Neon Postgres + Drizzle full-stack app deployed on Cloudflare Workers"
-    repoUrl: https://github.com/ChanMeng666/biosecurity
     logo: /public/brands/biosecurity.svg
     techStack: ["Next.js (App Router)", React, TypeScript, "Neon Postgres", "Drizzle ORM", "Better Auth (role-based access)", "shadcn/ui", "Tailwind CSS", "Cloudflare Workers (OpenNext)"]
     status: archived
@@ -2084,12 +2045,11 @@ projects:
     provenance: personal
     tier: archive
     recency: historical
-    lastUpdated: "2026-05-18"
+    lastUpdated: "2026-10-03"
     name: Job Valuation
     priority: 36
     category: web-apps
     tagline: Next.js quantitative job-evaluation tool — assess current roles across 10 dimensions (time, skill match, compensation, growth, environment)
-    repoUrl: https://github.com/ChanMeng666/job-valuation
     logo: /public/brands/job-valuation.svg
     techStack: ["Next.js", TypeScript]
     status: archived
@@ -2111,12 +2071,11 @@ projects:
     provenance: coursework
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Swimming Club Management System
     priority: 38
     category: web-apps
     tagline: "Community swimming-club platform — members, class scheduling (FullCalendar), facility bookings, payments, and reporting; rebuilt from a basic HTML/CSS/Flask group project into a modern Next.js + Neon Postgres + Drizzle full-stack app on Cloudflare Workers"
-    repoUrl: https://github.com/ChanMeng666/countryside-community-swimming-club
     logo: /public/brands/swimming-club-management-system.svg
     techStack: ["Next.js (App Router)", React, TypeScript, "Neon Postgres", "Drizzle ORM", "Better Auth", "FullCalendar (scheduling/bookings)", "shadcn/ui", "Tailwind CSS", "Cloudflare Workers (OpenNext)"]
     status: archived
@@ -2141,12 +2100,11 @@ projects:
     provenance: coursework
     tier: archive
     recency: historical
-    lastUpdated: "2026-10-01"
+    lastUpdated: "2026-10-03"
     name: East Coast Anglers Club (Fishing Club Website)
     priority: 40
     category: web-apps
     tagline: "Fishing-club website (East Coast Anglers Club) — polished landing page, video-background login, and guide showcase; rebuilt from a basic HTML/CSS/Flask group project into a Next.js 16 + Tailwind 4 + shadcn/ui site on Cloudflare Pages (the legacy Flask app is preserved in-repo)"
-    repoUrl: https://github.com/ChanMeng666/fishing-club-project
     url: https://fishing-club.pages.dev/
     logo: /public/brands/shipfishing.svg
     techStack: ["Next.js 16", React, "TypeScript 5", "Tailwind CSS 4", "shadcn/ui", "Cloudflare Pages"]
@@ -2170,15 +2128,12 @@ projects:
     provenance: personal
     tier: archive
     recency: historical
-    lastUpdated: "2026-10-02"
+    lastUpdated: "2026-10-03"
     name: FemTracker (Mobile)
     priority: 42
     category: web-apps
     # Independent personal project (Chan 2026-10-02): not related to femtracker-agent, panda-agent or hospital-roster-agent. Also hosted under the TechRosie women-developers org (TechRosie/femtracker).
     tagline: "React Native / Expo Android app for safer period care — tracks how long menstrual products have been worn and sends timely change reminders with usage history; a simple but complete native-mobile build that (alongside the CORDE field-ops app) evidences Chan's Android app-development capability"
-    repoUrl: https://github.com/ChanMeng666/femtracker
-    extraLinks:
-      - { label: "v1.0.0 release", url: "https://github.com/ChanMeng666/femtracker/releases/tag/version1.0.0" }
     techStack: ["React Native", "Expo (expo-router)", TypeScript, "React Navigation", "AsyncStorage", "expo-notifications (change reminders)", "expo-haptics", "react-native-paper", "Lottie", "react-native-reanimated"]
     keywords:
       - "Android app / native mobile development"
@@ -2356,7 +2311,7 @@ projects:
     provenance: client
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Sanicle AI — Multi-Tenant B2B FemTech SaaS
     priority: 43
     category: ai-apps
@@ -2364,7 +2319,6 @@ projects:
     relatedWorkId: sanicle
     relatedProjectIds: [sanicle-platform]
     tagline: "Multi-tenant B2B workplace FemTech SaaS — dual AI stack (IBM watsonx for quick interactions + Google Gemini for deep health consultations), org-scoped PostgreSQL data isolation, leave management, and HR-facing anonymized analytics; built for the UN Women × Sanicle.cloud Hackathon"
-    repoUrl: https://github.com/ChanMeng666/sanicle-ai
     entity: "Sanicle (US-based FemTech B2B/B2G SaaS)"
     roles: ["AI/ML Lead", "Full-Stack Engineer"]
     extraLinks:
@@ -2383,7 +2337,7 @@ projects:
     provenance: client
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Sanicle Cloud — Official Website (sanicle.cloud)
     priority: 44
     category: ai-apps
@@ -2394,13 +2348,9 @@ projects:
     # cluster is walkable from the data. All three are archived.
     relatedProjectIds: [sanicle-ai, sanicle-ai-mobile]
     tagline: "Sanicle's official website and production platform (sanicle.cloud) — menstrual & menopause workplace-wellness SaaS powered by IBM watsonx AI ('Ask Sani' assistant), with predictive analytics and B2B/B2G deployment; Chan's IBM watsonx integration the integration behind Sanicle's IBM Silver Partner certification (~98% solo, 350+ commits)"
-    repoUrl: https://github.com/ChanMeng666/sanicle-cloud
     # url omitted — sanicle.cloud deployment offline (DNS dead); source repo remains.
     entity: "Sanicle (US-based FemTech B2B/B2G SaaS)"
     roles: ["AI/ML Lead", "Full-Stack Engineer"]
-    extraLinks:
-      - { label: "sanicle-ai (multi-tenant B2B app + Gemini)", url: "https://github.com/ChanMeng666/sanicle-ai" }
-      - { label: "sanicle-ai-mobile (mobile prototype)", url: "https://github.com/ChanMeng666/sanicle-ai-mobile" }
     techStack: ["Next.js", React, TypeScript, "Neon Postgres (@neondatabase/serverless + @vercel/postgres)", "IBM watsonx AI (Ask Sani — IAM-token auth, us-south)", "Vercel AI SDK", "Upstash Redis", "Vercel Blob", FullCalendar, "Radix UI / shadcn", "Tailwind CSS"]
     keywords:
       - "Workplace FemTech SaaS"
@@ -2433,12 +2383,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Douban Elite Posts Scraper
     priority: 65
     category: branding
     tagline: Streamlined Python scraper for archiving elite posts from Douban groups into Markdown with images — content preservation for offline reading
-    repoUrl: https://github.com/ChanMeng666/douban-elite-scraper
     logo: /public/brands/vidu-douban-elite-scraper-demo.gif
     techStack: [Python, "Web scraping", Markdown]
     status: archived
@@ -2446,12 +2395,11 @@ projects:
     provenance: personal
     tier: archive
     recency: deprecated
-    lastUpdated: "2026-07-14"
+    lastUpdated: "2026-10-03"
     name: Douban Review Scraper
     priority: 66
     category: branding
     tagline: Python scraper for Douban movie reviews — comprehensive collection with data processing and analysis
-    repoUrl: https://github.com/ChanMeng666/douban-review-scraper
     logo: /public/brands/vidu-douban-review-scraper-demo.gif
     techStack: [Python, "Data analysis"]
     status: archived
@@ -2516,7 +2464,7 @@ projects:
     provenance: client
     tier: archive
     recency: historical
-    lastUpdated: "2026-10-01"
+    lastUpdated: "2026-10-03"
     name: FemTech Radar
     priority: 86
     category: ai-apps
@@ -2524,7 +2472,6 @@ projects:
     relatedWorkId: femtech-weekend
     relatedProjectIds: [femtech-weekend-website]
     tagline: Agent-first FemTech intelligence — an MCP server that fetches, dedupes, and scores women's-health & FemTech research and news, feeding a weekly GitHub Agentic Workflow and an auto-updating Astro + RSS site
-    repoUrl: https://github.com/ChanMeng666/femtech-radar
     url: https://chanmeng666.github.io/femtech-radar/
     extraLinks:
       - { label: "Live site", url: "https://chanmeng666.github.io/femtech-radar/" }
@@ -2560,12 +2507,11 @@ projects:
     provenance: personal
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Panda — Agentic AI Code Verification
     priority: 87
     category: ai-apps
     tagline: Autonomous agent that inspects backend code, detects bugs, proposes fixes, and iterates until tests pass — observe/reason/act loop with sandboxed Vitest, REST + WebSocket APIs, and a web UI
-    repoUrl: https://github.com/ChanMeng666/panda-agent
     # url + Railway deployment links removed — deployment offline (project shuttered); source repo remains.
     techStack: ["Node.js", "TypeScript 5.3", "Express.js", WebSocket, "Next.js 14", "Monaco Editor", "OpenAI GPT-4o", Vitest, Railway, Docker]
     status: archived
@@ -2620,12 +2566,11 @@ projects:
     provenance: personal
     tier: archive
     recency: historical
-    lastUpdated: "2026-10-01"
+    lastUpdated: "2026-10-03"
     name: Cloud Canals
     priority: 89
     category: games
     tagline: A small SVG browser game about routing water across floating islands — drag to build canal networks from cloud springs to crop fields, with reservoirs, seasonal objectives, and synthesized audio
-    repoUrl: https://github.com/ChanMeng666/cloud-canals
     techStack: ["Vite 8", JavaScript, SVG, CSS, "Web Audio API"]
     status: draft
     startDate: "2026-06"
@@ -2656,12 +2601,11 @@ projects:
     provenance: personal
     tier: archive
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-03"
     name: Perfume 3D Viewer
     priority: 91
     category: creative
     tagline: Interactive browser-based 3D viewer for Perfume (Japanese pop group) dance-pose models exported from Blender — Three.js with cinematic lighting, orbit controls, and a glass-morphism UI, zero build step
-    repoUrl: https://github.com/ChanMeng666/perfume_obj
     url: https://perfume-3d-viewer.pages.dev
     extraLinks:
       - { label: "Live viewer", url: "https://perfume-3d-viewer.pages.dev" }

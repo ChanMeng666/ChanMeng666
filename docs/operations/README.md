@@ -99,7 +99,12 @@ packages (`@chanmeng666/archlang-mcp`, `@chanmeng666/archlang-font-cjk`,
 authentication**: prepare the package (version bump, `npm pack --dry-run`), then
 Chan runs `npm publish` herself. `chan-meng` 2.0.2 (2026-10-03) was published with
 `homepage` https://chanmeng.org and no `repository` / `bugs`, because its source
-repo (`chan-meng-cli`) is private and archived.
+repo (`chan-meng-cli`) is private and archived. The same was done on 2026-10-03
+for `vitex-cli` 0.2.2 (homepage https://www.vitex.org.nz) and
+`@chanmeng666/femtech-radar-mcp` 0.4.2. A package whose source repo is private
+cannot carry npm provenance; publish it from a local folder
+(`npm publish <folder> --access public`). To release from an archived repo:
+unarchive, commit, push, re-archive.
 
 ## Where things are hosted (public-safe)
 

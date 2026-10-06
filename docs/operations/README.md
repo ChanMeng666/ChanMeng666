@@ -180,7 +180,7 @@ programming and towerdefense subdomains and www.vitex.org.nz all answer 200.
 
 ## Pending (as of 2026-10-07)
 
-Done 2026-10-07: `css-tower-defense` (Te Pā Tiaki) archived. Custom domain detached and the Worker's `workers.dev` URL disabled, deploy workflow disabled, Actions secret deleted, repo archived, links stripped from the shards and the tooling. Two leftovers need Chan in a dashboard (details in the private file): the Worker itself, and the game's database.
+Done 2026-10-07: `css-tower-defense` (Te Pā Tiaki) archived. Custom domain detached and the Worker's `workers.dev` URL disabled, deploy workflow disabled, Actions secret deleted, repo archived, links stripped from the shards and the tooling. The Worker was then deleted and the zone checked: no DNS record is left and the hostname no longer resolves. The game's database is left alone on purpose (Chan's call).
 
 | Item | Due |
 |---|---|

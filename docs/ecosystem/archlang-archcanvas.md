@@ -174,3 +174,14 @@ Top-level scan of `D:/github_repository` on 2026-09-21: **ten** matching git fol
 |---|---|
 | `D:/github_repository/readme-showcase` | Unrelated screenshot skill (`ChanMeng666/readme-showcase`). |
 | `D:/github_repository/ChanMeng666` | This career database. It **hosts** the map; it is not a product repo. |
+
+## Added after the 2026-09-21 scan
+
+| Repo | Local path | Visibility | What it is |
+|---|---|---|---|
+| `archlang-demo-video` | `D:/github_repository/archlang-demo-video` | **PRIVATE** | Narrated 4:47 demo of ArchLang 1.36.0, made to accompany the paper (2026-10-01). Not a promo and not shown publicly |
+| `archlang-promo` | `D:/github_repository/archlang-promo` | **PRIVATE** | The ArchLang promo film, 68 s, Remotion (2026-10-06). The ArchLang film on show on chanmeng.org |
+
+Film repos of one product coexist; none replaces another. Only one film per product is on public show: ArchCanvas shows `archcanvas-promo-studio`, ArchLang shows `archlang-promo`. The register is `productFilms` in `data/profile/45-showcase.yaml`.
+
+Chan's stance (2026-10-07): ArchCanvas and ArchLang keep being developed. See `docs/STATE.md`.

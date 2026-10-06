@@ -111,7 +111,7 @@ unarchive, commit, push, re-archive.
 | Platform | What |
 |---|---|
 | Cloudflare Pages | `2d-portfolio` (chanmeng.org; push to `main` deploys), `ai-programming-teaching-project` (programming.chanmeng.org), `femtech-weekend-website`, `femtech-weekend-redthread` |
-| Cloudflare Workers | `sunostats` (seismophone.chanmeng.org, with crons; moved off the droplet 2026-09-26), `archlang-docs` (archlang.uk), `archlang-playground`, `css-tower-defense` (towerdefense.chanmeng.org), `ai-chat-worker` (programming-api.chanmeng.org) |
+| Cloudflare Workers | `sunostats` (seismophone.chanmeng.org, with crons; moved off the droplet 2026-09-26; **pending archive**, see Pending), `archlang-docs` (archlang.uk), `archlang-playground`, `ai-chat-worker` (programming-api.chanmeng.org). `css-tower-defense` was deleted 2026-10-07 |
 | Vercel (personal scope) | `gradient-svg-generator`, `github-readme-suno-cards`, `github-visitor-counter` |
 | One DigitalOcean droplet | ArchCanvas and Vitex (www.vitex.org.nz stays live although the Vitex repo is archived and private), run through Coolify behind Traefik |
 | GitHub Pages | none of the archived repos any more (8 sites unpublished 2026-10-03) |
@@ -123,6 +123,7 @@ database, R2 caches and two Vercel database stores. The domains libraryos.live a
 fanfic-lab.tech are dead. Local backups of the retired items exist (location in the
 private file). HTTP check on 2026-10-03: chanmeng.org, archlang.uk, the seismophone,
 programming and towerdefense subdomains and www.vitex.org.nz all answer 200.
+Since 2026-10-07 towerdefense.chanmeng.org no longer resolves (retired on purpose).
 
 ## Standing policies
 
@@ -178,6 +179,26 @@ programming and towerdefense subdomains and www.vitex.org.nz all answer 200.
   cleared, 8 Pages sites unpublished.
 - 2d-portfolio has no Actions secrets left.
 
+### Since the cleanup (2026-10-06 and 2026-10-07)
+
+- 158 repos under `ChanMeng666` on 2026-10-07: 103 private, 87 archived, 41 public
+  and unarchived (6 forks). Eight repos were created after the cleanup: seven
+  promo-film repos (2026-10-06) and one private client-communications log.
+- `css-tower-defense` archived, its deployment retired and its Worker deleted
+  (2026-10-07). It is the 87th archived repo and got the same add-on shutdown.
+- README shopfront now: flagships ArchLang and ArchCanvas; client cards FemTech
+  Weekend Website, Eatropolis, GAVIGO IRE (+ GAVIGO website), She Sharp; rows
+  echook, Google News MCP, Google Jobs MCP, AI Programming Education Platform,
+  a11y-loop, Chromaflow, GitHub README Suno Cards, Tam-AI-Ti. Seismophone and
+  Te Pā Tiaki are gone from it.
+- Seismophone is pending archive: live, but off every visitor-facing surface.
+- GAVIGO: access to both org repos was withdrawn when Chan left; the catalog rows
+  carry `accessRevoked` and the live check skips them.
+- A new client repo lives in the client's own personal GitHub account and is on
+  the allowlist. Chan has write access only; its secrets and settings are the
+  client's.
+- Current priorities and display rules: `docs/STATE.md`.
+
 ## Pending (as of 2026-10-07)
 
 Done 2026-10-07: `css-tower-defense` (Te Pā Tiaki) archived. Custom domain detached and the Worker's `workers.dev` URL disabled, deploy workflow disabled, Actions secret deleted, repo archived, links stripped from the shards and the tooling. The Worker was then deleted and the zone checked: no DNS record is left and the hostname no longer resolves. The game's database is left alone on purpose (Chan's call).
@@ -186,4 +207,4 @@ Done 2026-10-07: `css-tower-defense` (Te Pā Tiaki) archived. Custom domain deta
 |---|---|
 | Delete the five listing forks once their PRs close (or all at once, one confirmation) | by 2026-11-14 |
 | Back up `femtech-weekend-assets` off this machine | open |
-| **Archive Seismophone** (`sunostats`, seismophone.chanmeng.org). Left live on purpose: CVs sent in early October 2026 name it. Already removed from every visitor-facing surface (2026-10-07). When Chan says go: (1) export the data that cannot be collected again from its database (the lineage edges and the trending snapshots) and archive it; (2) move the published and unpublished observatory reports to chanmeng.org/blog; (3) stop sign-in, sync, the scheduled jobs, the MCP endpoint and the database; (4) leave a static page on the domain that says the project is archived and keeps `/legal/data-sources` alive, because the Suno probe's User-Agent contact URL points there; (5) repoint the README-cards links that lead to Seismophone; (6) set the shard to `status: archived` + `recency: deprecated`, archive the repo and its growth repo, update lineage. The probe and the README cards keep running | when Chan says the applications have settled |
+| **Archive Seismophone** (`sunostats`, seismophone.chanmeng.org). Left online for now at Chan's request. Already removed from every visitor-facing surface (2026-10-07). When Chan says go: (1) export the data that cannot be collected again from its database (the lineage edges and the trending snapshots) and archive it; (2) move the published and unpublished observatory reports to chanmeng.org/blog; (3) stop sign-in, sync, the scheduled jobs, the MCP endpoint and the database; (4) leave a static page on the domain that says the project is archived and keeps `/legal/data-sources` alive, because the Suno probe's User-Agent contact URL points there; (5) repoint the README-cards links that lead to Seismophone; (6) set the shard to `status: archived` + `recency: deprecated`, archive the repo and its growth repo, update lineage. The probe and the README cards keep running | when Chan gives the word |

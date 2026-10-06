@@ -154,11 +154,13 @@ def main():
 
     print("== .txt ==")
 
-    # The only sanctioned divergence: the five "Also built:" prose links get
+    # The only sanctioned divergence: the "Also built:" prose links (three since
+    # 2026-10-07) get
     # " (url)" appended, because their visible text is a bare word and they
     # would otherwise carry no address at all in plain text. Stripped as
     # SUBSTRINGS — token-wise stripping would strand the trailing "." of
-    # "Seismophone (url)." as its own token and report a phantom difference.
+    # "gradient-svg-generator (url)." as its own token and report a phantom
+    # difference.
     t_txt = tokens(re.sub(r" \(https?://[^)\s]+\)", "", txt_text))
     first = [(i, a, b) for i, (a, b) in enumerate(zip(t_pdf, t_txt)) if a != b][:3]
     check("text identical to the PDF (modulo appended urls)", t_pdf == t_txt,

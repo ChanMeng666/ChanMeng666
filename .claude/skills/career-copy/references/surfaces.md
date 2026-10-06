@@ -98,8 +98,8 @@ throws, none warns:**
 | Section headings, exact strings, in order | 7 |
 | Roles | 10 (7 with bullets, 3 compact) |
 | Bullets total (`verify-ats-exports.py`) | 11 |
-| Projects | 5 |
-| "Also built" links | 4 |
+| Projects | 4 |
+| "Also built" links | 3 |
 | Education | 2 |
 | Awards | 3 |
 | `skills-line` rows | 5 under skills, 2 under certifications |

@@ -1,6 +1,6 @@
 # Repo lineage (ecosystem map)
 
-How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Updated 2026-10-06 (seven promo-film repos and the GenLAB family added: 158 public-catalog repos, 27 entities, 38 families; the counts in the rest of this sentence are the 2026-10-03 ones). Verified 2026-10-02 against GitHub and re-verified 2026-10-03 against cloned repo history: **150 public-catalog repos** (94 of them private on GitHub after the 2026-10-03 visibility round, 80 archived) in **26 entities** and **37 families**, plus 148 typed relations. Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
+How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified against GitHub on 2026-10-07: **158 public-catalog repos** plus 10 in the local overlay (87 archived, 81 active) in **27 entities** and **38 families**, with 173 typed relations. The repo history was last cloned and compared on 2026-10-03. Every active repo now also carries Chan's judgement fields (see "Judgement fields" below). Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
 
 ## What the files are
 
@@ -12,6 +12,8 @@ How all of Chan's repositories relate to each other: which repos were built for 
 | `scripts/check-ecosystem.mjs` | yes | Validator, `npm run check:ecosystem` (offline, part of `npm run validate`) and `npm run check:ecosystem -- --live` (compares with GitHub) |
 
 **Precedence.** Career facts (titles, dates, metrics, claims) live in `data/profile/*.yaml` and nothing here overrides them. This catalog is topology only: it is not loaded by `load-profile`, it feeds no README, CV or LinkedIn surface, and it is not career copy. Where it names a `catalogId`, `workId` or `orgId`, those ids are checked against `data/profile`.
+
+**Current priorities and display rules** (what must not be shown where) are summarised in `docs/STATE.md`.
 
 **Scope.** Personal account `ChanMeng666` plus exactly ten repos outside it that she built or led (`scope.orgRepoAllowlist`: nine org repos and one in a client's personal account). Holding admin access to an org does not make its repos hers (Chan, 2026-10-06): `Chow-Luck-Club/eatropolis-capacity`, for example, is not her work. A row with `accessRevoked` is still hers by authorship; her access ended with the engagement (both GAVIGO repos, 2026-09) and the live check skips it. Every other repo in the gavigo-inc, NZ-SheSharp, Chow-Luck-Club, Whiri-AI, archcanvas and Sanicleai orgs was NOT built by Chan: never attribute it to her.
 
@@ -28,6 +30,25 @@ npm run check:ecosystem -- --live
 ```
 
 Or just grep: `grep -n "family: she-sharp-platform" docs/ecosystem/lineage.yaml`. A repo row looks like `{repo, family, entity, role, visibility, archived, catalogId, localFolder, created, liveUrls, oneLine, chanCommitShare, confidence}` (`chanCommitShare: {pct, chan, humans, all}`: pct = Chan commits / non-bot commits, from `git shortlog` on a full-history clone, 2026-10-03); `localFolder` is relative to `localRoot` (`D:/github_repository`). `--live` run without the overlay reports the overlay repos as uncovered, so run it on the machine that has the overlay.
+
+## Judgement fields
+
+Every non-archived repo row carries three fields that record how Chan sees the repo (agreed 2026-10-06, filled 2026-10-06/07):
+
+| Field | Meaning | Values |
+|---|---|---|
+| `positioning` | one line: what the repo is for | free text |
+| `stage` | where development stands | `building`, `maintained`, `paused`, `done`, `handed-over` |
+| `showcase` | how prominently it is shown publicly | `flagship`, `featured`, `listed`, `hidden` |
+
+Chan delegated the filling-in to Claude, so most values are proposals she may overrule. The entries under `resolved:` that quote her (q31 to q38, q40, q42, q44) are her own words. `showcase: flagship` requires `tier: flagship` on the matching career project; the validator enforces the vocabularies and that rule. Do not fill these in for a new repo without asking her.
+
+```bash
+# everything still being built, and everything shown as flagship
+node -e "const y=require('js-yaml').load(require('fs').readFileSync('docs/ecosystem/lineage.yaml','utf8'));for(const r of y.repos.filter(r=>!r.archived&&(r.stage==='building'||r.showcase==='flagship')))console.log(r.repo,'|',r.stage,'|',r.showcase,'|',r.positioning)"
+```
+
+Two more optional row fields: `accessRevoked` (her access ended with the engagement; still her work; the live check skips the row) and `ownProject: false` (a fork or working copy of someone else's project).
 
 ## Relation vocabulary
 
@@ -87,12 +108,15 @@ flowchart LR
   n1 -->|markets| n0
 ```
 
+> **Seismophone is pending archive (Chan, 2026-10-07).** The site stays online for now, but it has been removed from every visitor-facing surface and must not be put back. The probe (private monorepo) and the public README cards are independent of the site and keep running. Archive steps: `docs/operations/README.md` § Pending.
+
 **Suno cards + Seismophone** (`suno-seismophone`, 2 repos). A private monorepo (local folder github-readme-suno-cards, remote suno-research-private) is the research probe and original codebase of the Suno README-cards product; on 2026-04-13 a public extraction (new root commit, 44 commits) became ChanMeng666/github-readme-suno-cards. The research fed Seismophone (repo sunostats; shared @suno-cards/parser kernel), whose growth HQ is seismophone-growth.
 
 - 2026-04-11: suno-research-private created (private monorepo, research + product)
 - 2026-04-12: sunostats (SunoStats) created
 - 2026-04-13: Public repo github-readme-suno-cards extracted from the private monorepo (v0.1 commit 73f4fa8)
 - 2026-07-18: seismophone-growth created; SunoStats rebranded Seismophone at seismophone.chanmeng.org
+- 2026-10-07: Seismophone marked pending archive and taken off every visitor-facing surface; site left live
 
 ### github-readme-suno-cards (Suno README cards)
 
@@ -571,11 +595,12 @@ Repos: 📦 html-brick-game (game), 📦 journey-of-reincarnation (game), 📦 o
 - 2026-02-06: leviathan created (AI-narrative political card game)
 - 2026-02-09: slime-split created (LOVE2D, published on itch.io)
 
-**Te Pa Tiaki - CSS Tower Defense (Guardians of Aotearoa)** (`te-pa-tiaki`, 1 repo). Chan's one still-live, still-showcased highlight in this partition (tier primary, not archived): 3D tower defense rendered purely with CSS 3D transforms, Maori-mythology themed, with a Cloudflare Workers + Hono + Neon backend, live at towerdefense.chanmeng.org. Created 2026-02-02 inside the Feb 2026 game burst; no sibling repos.
+**Te Pa Tiaki - CSS Tower Defense (Guardians of Aotearoa)** (`te-pa-tiaki`, 1 repo). **Archived 2026-10-07** (deployment retired, off every display surface): 3D tower defense rendered purely with CSS 3D transforms, Maori-mythology themed, with a Cloudflare Workers + Hono + Neon backend, formerly live at towerdefense.chanmeng.org. Created 2026-02-02 inside the Feb 2026 game burst; no sibling repos.
 
-Repos: css-tower-defense (product)
+Repos: 📦 css-tower-defense (product)
 
 - 2026-02-02: css-tower-defense initial release
+- 2026-10-07: archived on Chan's instruction; domain detached, Worker deleted, deploy workflow disabled, Actions secret deleted
 
 **FanFic Lab (shuttered AI fanfiction product)** (`fanfic-lab`, 1 repo). Single-repo product line: began 2025-12-31 as a generic CopilotKit + LangGraph fanfic editor, redesigned in 2026-04 into an HSR (Honkai: Star Rail) DreamWriter adaptive agent with pgvector RAG and community features. Deployed Railway then DigitalOcean+Coolify at fanfic-lab.tech; live deployment retired 2026-07 (decommission ledger committed 2026-07-05); source stays public.
 
@@ -627,11 +652,13 @@ A promo-film repo is filed under the family of the product it promotes, never as
 
 Films that chanmeng.org plays carry a `data-for` relation to `2d-portfolio`. The diagrams above predate these rows.
 
+**One film on show per product.** Which film each product publicly displays, and which film repos are deliberately not shown, is recorded in the register `productFilms` in `data/profile/45-showcase.yaml` (not here), and `check:ecosystem` checks that every film it names is a promo-film or demo repo in this catalog and that no product shows two.
+
 ### NZiFOCUS: GenLAB Career Academy (not shown externally yet)
 
 `nzifocus` · client · Lead developer, paid commission (2026-09-30 onward) · family `genlab`
 
-GenLAB Career Academy is a managed matchmaker placing trained Vietnamese hospitality students with 4-5 star hotels in New Zealand. The repo 🔒 `NgaBlanchard/nzifocus-contact` lives in the client's personal GitHub account (local folder `nzifocus-contact`) and began as the NZiFOCUS contact form. One more private repo is described only in the local overlay. **Database only for now** (Chan, 2026-10-06): no `organizations[]` or `projects[]` entry and no mention on any generated surface until she clears it.
+GenLAB Career Academy is a managed matchmaker placing trained Vietnamese hospitality students with 4-5 star hotels in New Zealand. The repo 🔒 `NgaBlanchard/nzifocus-contact` lives in the client's personal GitHub account (local folder `nzifocus-contact`) and began as the NZiFOCUS contact form. One more private repo is described only in the local overlay. Chan's rule (2026-10-06/07): GenLAB may be recorded in the database but must not appear where a visitor reads, that is `README.md`, chanmeng.org pages, any CV or LinkedIn copy. Its career entry is `projects[]` id `genlab-career-academy` (in no display bucket); there is no `organizations[]` entry yet. She is lead developer but not the sole decision-maker: the pace follows the client and the other collaborators.
 
 ## Entities with a single repo
 

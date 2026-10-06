@@ -202,7 +202,7 @@ resume text, because two copies drift and only one of them gets proofread.
 with a line number** on any construct it doesn't recognise, so nothing can be
 silently dropped from the Word file while still appearing in the PDF. Its
 `EXPECT` table asserts exact counts — 7 headings in order and by exact string,
-9 roles (6 with bullets, 3 compact), 4 projects, 5 "Also built" links,
+10 roles (7 with bullets, 3 compact), 4 projects, 3 "Also built" links,
 2 education, 3 awards, 2 contact lines, 6,800–9,000 chars. Every guard throws;
 none warn. A guard that silently parses zero entries is worse than no guard.
 

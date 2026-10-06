@@ -6,6 +6,16 @@ else — README.md, llms.txt, llms-full.txt, dist/profile.json,
 dist/video-data.json, linkedin/linkedin-profile.json + linkedin/*.md — is
 **generated**. Never edit generated files by hand; edit the shard, then build.
 
+**Read `docs/STATE.md` first.** It is the dated summary of what is true right now
+and what Chan has already decided: her current priorities, which projects must not
+be shown where (GenLAB, Seismophone, Te Pā Tiaki), the one-film-per-product rule,
+and the open items. Keep it current whenever she changes a priority, a project's
+fate or a display rule. Its candid half — her priorities in her own words, the
+reasons behind the rules, what her private market research concluded — is the
+**local-only, gitignored** `docs/STATE.private.md`: read it when present, never
+copy it into tracked files, commit messages or generated output. This repo is
+public, so tracked wording states decisions and rules, not motives.
+
 ArchLang ↔ ArchCanvas sibling-repo map (local paths, private vs public, subprojects):
 `docs/ecosystem/archlang-archcanvas.md`. Career narrative stays in the profile shards.
 

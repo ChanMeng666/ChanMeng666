@@ -162,6 +162,19 @@ repos:
     urls:
       product: https://archcanvas.uk
 
+  - id: archlang-promo
+    kind: git-repo
+    localPath: "D:/github_repository/archlang-promo"
+    gitRemote: https://github.com/ChanMeng666/archlang-promo.git
+    github: ChanMeng666/archlang-promo
+    visibility: private
+    license: none-stated
+    role: The ArchLang promo film (added 2026-10-06) — a 68-second Remotion video with a coded replica of the playground, plans compiled in-render by the real compiler. It is the ArchLang film on show on chanmeng.org (one film per product); the narrated archlang-demo-video accompanies the paper and is not shown.
+    dependsOn:
+      - { id: archlang, how: "compiles ArchLang source in-render" }
+    urls:
+      language: https://archlang.uk
+
   - id: archlang-paper
     kind: git-repo
     localPath: "D:/github_repository/archlang-paper"

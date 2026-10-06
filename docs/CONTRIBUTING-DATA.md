@@ -10,7 +10,7 @@ The profile data lives as **shards** in `data/profile/` — one file per theme, 
 | `25-contributions.yaml` | openSourceContributions |
 | `30-recognition.yaml` | awards, certificates, publications |
 | `40-skills.yaml` | skills, domains, languages, interests |
-| `45-showcase.yaml` | showcaseCapabilities, showcase (craft evidence: reports, films, decks, slides, newsletters, GEO) |
+| `45-showcase.yaml` | showcaseCapabilities, showcase, productFilms (craft evidence: reports, films, decks, slides, newsletters, GEO) |
 | `50-references.yaml` | references (testimonials) |
 | `60-network.yaml` | organizations, collaborators |
 | `70-linkedin.yaml` | the curated LinkedIn snapshot block |
@@ -270,3 +270,45 @@ git push -u origin update-tam-ai-ti-narrative
 ```
 
 After merge to main, `build-readme.yml` runs again as a safety net to ensure outputs are in sync.
+
+## Change which promo film a product shows
+
+`productFilms` in `45-showcase.yaml` is the register of films on public show. It
+renders nowhere by itself; it mirrors what chanmeng.org plays so the database and
+the site cannot drift apart unnoticed. Rule (Chan, 2026-10-06): **one film per
+product**.
+
+```yaml
+  - projectId: echook                      # projects[].id (omit for kind: personal-brand)
+    kind: product                          # product | event | personal-brand
+    title: echook film
+    filmRepo: ChanMeng666/echook-promo-studio   # a promo-film or demo repo in lineage.yaml; name it, never link a private one
+    showcaseId: some-showcase-id           # optional: the matching showcase[] entry
+    watchUrl: "https://youtu.be/..."       # optional public page
+    displayedOn:
+      - { surface: chanmeng.org, page: "/", slot: "home tools stage", cuts: ["30 s 16:9"] }
+    notDisplayed:                          # the product's other film repos, with the reason
+      - { filmRepo: ChanMeng666/echook-promo-video, what: "earlier promo", reason: "one film per product" }
+    lastVerified: "2026-10-06"
+```
+
+Then change the site (`2d-portfolio`: `src/data/showcase.ts`, `src/data/work.ts`,
+`src/data/resume.tsx`, `public/work/films/`) in the same piece of work, and run
+`npm run check:ecosystem`. A film on the site is not automatically README or
+extended-CV craft evidence: that needs its own `showcase` entry with frames.
+
+## A project that exists but must not be shown
+
+Some entries are recorded on purpose and kept off the visitor-facing surfaces
+(`genlab-career-academy`, and `sunostats` while it is pending archive). Each has a
+guard comment above it in its shard. There is no hide switch on a project, so the
+rule is kept by leaving the id out of every `90-meta.yaml` bucket, keeping the
+tier below `flagship` (flagship projects are auto-selected into
+`public/cv-llms.txt`), and not adding it to `cv/*.typ`, `70-linkedin.yaml` or the
+site. After any edit near one, grep the outputs:
+
+```bash
+grep -il "genlab\|nzifocus\|seismophone" README.md public/cv-llms.txt public/cv.jsonld linkedin/* cv/sections/*.typ cv/chan-meng-cv-ats.typ
+```
+
+The current list of such rules is in `docs/STATE.md`.

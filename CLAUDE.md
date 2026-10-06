@@ -184,7 +184,7 @@ hand-typed facts on a review cadence:
 | `90-meta.yaml` | meta (incl. `meta.x_brand` display config) | — | — |
 
 Counts verified 2026-10-06 (`projects:` totals 109: 4 + 7 + 14 + 84; by tier
-7 flagship / 9 primary / 27 secondary / 66 archive). One of them,
+7 flagship / 8 primary / 27 secondary / 67 archive). One of them,
 `genlab-career-academy`, is database-only, and `sunostats` (Seismophone) is pending
 archive and off every visitor-facing surface: read the guard comment above each
 before touching any display list, CV or LinkedIn copy. Recount with `loadProfile()`

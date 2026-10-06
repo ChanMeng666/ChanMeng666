@@ -355,23 +355,7 @@ export const projects = [
     metaFile: "packages/client/index.html",
     deployBranch: "main", // Vercel auto on push
   },
-  {
-    id: "css-tower-defense",
-    repoDir: "D:/github_repository/css-tower-defense",
-    publicDir: "assets/images", // gulp copies assets/ → dist/ (served by the worker)
-    siteUrl: "https://towerdefense.chanmeng.org",
-    name: "Guardians of Aotearoa",
-    eyebrow: "Te Pā Tiaki",
-    tagline: "A 3D tower defense game rendered entirely in CSS.",
-    bg: "#000000",
-    accent: "#2D8A8A", // cyan
-    tileBg: "#FFF8F0", // warm white frames the ornate Māori mark
-    logo: "assets/images/tower-defense-logo.svg",
-    logoPad: true,
-    framework: "static", // gulp-built; meta in index.src.html → built index.html (absolute og url)
-    metaFile: "index.src.html",
-    deployBranch: "main", // GitHub Actions: compile + wrangler, auto on push
-  },
+  // css-tower-defense (towerdefense.chanmeng.org) retired 2026-10-07: repo archived, deployment taken down.
   {
     id: "ai-human-game",
     repoDir: "D:/github_repository/ai-human-game",

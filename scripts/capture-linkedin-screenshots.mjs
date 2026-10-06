@@ -82,14 +82,7 @@ const TARGETS = [
     name: "Tam-AI-Ti — financial-wellness coach",
     routes: [],
   },
-  {
-    slug: "pa-tiaki",
-    url: "https://towerdefense.chanmeng.org/",
-    name: "Pa Tiaki — CSS 3D tower defense",
-    // Actual gameplay is gated behind a login wall ("LOGIN REQUIRED"), so the
-    // public-facing artifact is the branded main menu (captured on the home pass).
-    routes: [],
-  },
+  // pa-tiaki (towerdefense.chanmeng.org) retired 2026-10-07: deployment taken down.
   // free-period (free-period-website.pages.dev) retired 2026-10-03: site taken down.
 ];
 

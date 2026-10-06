@@ -1,6 +1,6 @@
 # Repo lineage (ecosystem map)
 
-How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified 2026-10-02 against GitHub and re-verified 2026-10-03 against cloned repo history: **150 public-catalog repos** (94 of them private on GitHub after the 2026-10-03 visibility round, 80 archived) in **26 entities** and **37 families**, plus 148 typed relations. Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
+How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Updated 2026-10-06 (seven promo-film repos and the GenLAB family added: 158 public-catalog repos, 27 entities, 38 families; the counts in the rest of this sentence are the 2026-10-03 ones). Verified 2026-10-02 against GitHub and re-verified 2026-10-03 against cloned repo history: **150 public-catalog repos** (94 of them private on GitHub after the 2026-10-03 visibility round, 80 archived) in **26 entities** and **37 families**, plus 148 typed relations. Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
 
 ## What the files are
 
@@ -13,7 +13,7 @@ How all of Chan's repositories relate to each other: which repos were built for 
 
 **Precedence.** Career facts (titles, dates, metrics, claims) live in `data/profile/*.yaml` and nothing here overrides them. This catalog is topology only: it is not loaded by `load-profile`, it feeds no README, CV or LinkedIn surface, and it is not career copy. Where it names a `catalogId`, `workId` or `orgId`, those ids are checked against `data/profile`.
 
-**Scope.** Personal account `ChanMeng666` plus exactly nine org repos she built or led (`scope.orgRepoAllowlist`). Every other repo in the gavigo-inc, NZ-SheSharp, Chow-Luck-Club, Whiri-AI, archcanvas and Sanicleai orgs was NOT built by Chan: never attribute it to her.
+**Scope.** Personal account `ChanMeng666` plus exactly ten repos outside it that she built or led (`scope.orgRepoAllowlist`: nine org repos and one in a client's personal account). Holding admin access to an org does not make its repos hers (Chan, 2026-10-06): `Chow-Luck-Club/eatropolis-capacity`, for example, is not her work. A row with `accessRevoked` is still hers by authorship; her access ended with the engagement (both GAVIGO repos, 2026-09) and the live check skips it. Every other repo in the gavigo-inc, NZ-SheSharp, Chow-Luck-Club, Whiri-AI, archcanvas and Sanicleai orgs was NOT built by Chan: never attribute it to her.
 
 ## How to query
 
@@ -610,6 +610,28 @@ Repos: 📦 femtracker (product), 📦 femtracker-agent (prototype), 📦 panda-
 - 2025-06-13: femtracker-agent 8-agent CopilotKit app (merged into CopilotKit demos_2025, PR 2068); independent project
 - 2025-07-13: hospital-roster-agent CopilotKit scheduling demo created
 - 2026-01-12: panda-agent created
+
+### Promo films (added 2026-10-06)
+
+A promo-film repo is filed under the family of the product it promotes, never as a separate film series. One product may have several film repos and they **coexist**: no `successor-of` between them unless Chan says so. Seven were added on 2026-10-06, all in her own account:
+
+| Film repo | Promotes | Family |
+|---|---|---|
+| 🔒 archlang-promo | archlang | archlang-archcanvas |
+| echook-promo-studio (public on purpose, a tie-in with the main repo; coexists with echook-promo-video) | echook | echook |
+| 🔒 gavigo-promo-film | gavigo-inc/gavigo-ire | gavigo-ire |
+| 🔒 she-sharp-promo-studio (coexists with the Les Mills event film) | NZ-SheSharp/she-sharp | she-sharp-platform |
+| 🔒 eatropolis-promo-film | Chow-Luck-Club/eatropolis-website | eatropolis |
+| 🔒 tamaiti-promo-studio | Whiri-AI/tam-ai-ti-web | tam-ai-ti |
+| 🔒 ai-programming-teaching-promo | ai-programming-teaching-project | ai-programming-teaching |
+
+Films that chanmeng.org plays carry a `data-for` relation to `2d-portfolio`. The diagrams above predate these rows.
+
+### NZiFOCUS: GenLAB Career Academy (not shown externally yet)
+
+`nzifocus` · client · Lead developer, paid commission (2026-09-30 onward) · family `genlab`
+
+GenLAB Career Academy is a managed matchmaker placing trained Vietnamese hospitality students with 4-5 star hotels in New Zealand. The repo 🔒 `NgaBlanchard/nzifocus-contact` lives in the client's personal GitHub account (local folder `nzifocus-contact`) and began as the NZiFOCUS contact form. One more private repo is described only in the local overlay. **Database only for now** (Chan, 2026-10-06): no `organizations[]` or `projects[]` entry and no mention on any generated surface until she clears it.
 
 ## Entities with a single repo
 

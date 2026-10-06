@@ -3702,9 +3702,9 @@
     {
       "id": "sunostats",
       "provenance": "personal",
-      "tier": "primary",
+      "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-08-05",
+      "lastUpdated": "2026-10-07",
       "meta": {
         "x_brand": {
           "featuredStack": [
@@ -3843,33 +3843,6 @@
         "outcomes": "Live at seismophone.chanmeng.org, solo-built across 99 commits over roughly three months (2026-04-12 → 2026-07-10). The apparatus runs 19 pages, 28 API route handlers, 57 components, and five cron pipelines over a 17-table schema, plus a 7-tool read-only MCP server. Its signature result is the sealed remix-lineage archive — ~102 real parent→child edges recovered in a single 2026-05-09 backfill before Suno closed the redaction gap — which makes the public lineage explorer a dataset that, by construction, cannot be collected again. The forensic teardown of Suno's frozen `/api/trending` fossil is itself a published finding; when that feed proved dead, the observatory added a live pulse on Suno's real curated Explore shelves as the forward-looking replacement. The build also went through structured hardening waves (Codex-reviewed) covering credits, privacy, query performance, observability, and the schema-drift and editorial-shelf sentinels.\n",
         "myRole": "I built the entire system solo — product concept and \"observatory\" positioning, the lineage-harvest discovery and parser, the 17-table schema and daily ingestion pipeline, the fossil-watch teardown and the live editorial-shelf pulse, all seven insight engines, the Stripe credit ledger and its concurrency hardening, the recursive-CTE lineage graph and SVG explorer, the read-only MCP server, the trilingual i18n system, and the self-hosted Docker + Traefik deployment with its cron and observability tooling. 99 of 99 commits are mine.\n"
       },
-      "_featuredStackResolved": [
-        {
-          "name": "nextjs",
-          "src": "/public/tech-logos/nextjs.svg"
-        },
-        {
-          "name": "react",
-          "src": "/public/tech-logos/react.svg"
-        },
-        {
-          "name": "drizzle",
-          "src": "/public/tech-logos/drizzle.svg"
-        },
-        {
-          "name": "neon",
-          "src": "/public/tech-logos/neon.svg"
-        },
-        {
-          "name": "stripe",
-          "src": "/public/tech-logos/stripe.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrgs": [],
-      "_adopterOrgs": [],
-      "_affiliationOrg": null,
-      "_cohortPartners": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -7669,6 +7642,84 @@
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "genlab-career-academy",
+      "provenance": "client",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-10-06",
+      "name": "GenLAB Career Academy — managed hotel-internship matchmaker",
+      "category": "ai-apps",
+      "tagline": "A managed matchmaker that places trained Vietnamese hospitality students in internships at 4–5 star hotels in New Zealand: AI prepares, scores and drafts, and a person approves every shortlist, offer and agreement.",
+      "entity": "NZiFOCUS (international education, founder Nga Blanchard) — paid development commission",
+      "roles": [
+        "Lead Developer"
+      ],
+      "techStack": [
+        "Astro 7",
+        "Cloudflare Workers",
+        "React (one island)",
+        "TypeScript",
+        "Neon Postgres",
+        "Drizzle",
+        "Cloudflare Hyperdrive",
+        "Cloudflare KV",
+        "Cloudflare Access",
+        "Resend",
+        "Vitest",
+        "Playwright",
+        "GitHub Actions"
+      ],
+      "keywords": [
+        "Managed matchmaker, not a self-serve marketplace",
+        "Human-in-the-loop AI: AI drafts, a person decides",
+        "Hospitality internship placement",
+        "Bilingual Vietnamese / English",
+        "Career-fit assessment",
+        "Edge-deployed on Cloudflare Workers"
+      ],
+      "status": "active",
+      "startDate": "2026-09",
+      "metrics": [
+        {
+          "label": "Career Fit test questions",
+          "value": "24",
+          "note": "four parts, one question per screen; item bank v1.0.0 (repo docs/status.md, 2026-10-05)"
+        },
+        {
+          "label": "Languages",
+          "value": "2",
+          "note": "Vietnamese and English"
+        },
+        {
+          "label": "Database tables",
+          "value": "51",
+          "note": "plus 2 views, defined by SQL migrations; as of 2026-10-05"
+        },
+        {
+          "label": "Automated tests",
+          "value": "130",
+          "note": "66 unit + 64 end-to-end at 360px and 1280px; as of 2026-10-05"
+        },
+        {
+          "label": "Milestones delivered",
+          "value": "2 of 6",
+          "note": "M0 foundations and M1 public site deployed 2026-10-04; M2–M5 not started"
+        }
+      ],
+      "publicSummary": "GenLAB Career Academy is a placement service being built for NZiFOCUS:\nit prepares Vietnamese hospitality students for internships at 4–5 star\nhotels in New Zealand and matches them to openings. It is designed as a\n**managed matchmaker**, not a self-serve marketplace — AI prepares,\nscores and drafts, and a person approves every shortlist, offer and\nagreement. I am the lead developer on a paid commission that started on\n30 September 2026. The first public milestone went live on 4 October\n2026: a bilingual Vietnamese / English site with a 24-question Career\nFit test, its scored result, an enquiry form for students, hotels and\nschools, and passwordless sign-in. Candidate profiles, the hotel board\nand matching are specified but not built yet.\n",
+      "narrative": {
+        "impactHeadline": "A placement service where the AI never has the last word: it scores and drafts, and a person signs off every shortlist, offer and internship agreement before a hotel or a student sees it.",
+        "businessLogic": "The client's Stage 1 design is a nine-step managed pipeline. Students,\nhotels and schools register through separate forms; a student builds a\nprofile and takes a hospitality career-fit assessment; the system\nproposes matches against internship openings; a hotel receives a\nshortlist of at most five anonymised candidate cards (initials, skills\nand scores — no photo, no contact details) and only sees the full\nprofile after it accepts; then interview, offer, a three-party\nagreement, pre-departure training and scheduled check-ins through to\ncompletion. At every step the split is the same: AI tags, scores,\ndrafts and reminds; a person verifies the hotel, reviews borderline\nscores, approves the shortlist, confirms the offer terms and reads the\nagreement before it is sent. Hotels are restricted to 4–5 star\nproperties able to sign a compliant internship contract. The target is\na shortlist in front of the hotel within five working days of an\nopening being posted.\n",
+        "technicalApproach": "Astro 7 on Cloudflare Workers, server-rendered with almost no client\nJavaScript: React is used for one island only, the Career Fit test.\nNeon Postgres through Hyperdrive, with the schema defined as SQL\nmigrations and validated on an in-memory Postgres before it is\napplied; the runtime database roles cannot change the schema. Scoring\nis deterministic and runs on the server, so the answer keys never\nreach the browser. Sign-in is passwordless — an emailed single-use\nlink with a six-digit code as the fallback — with rate limits and only\nkeyed hashes of tokens stored. The staff area sits behind Cloudflare\nAccess and the Worker verifies the Access token itself before\nchecking for an active staff record. Design tokens and component CSS\nare generated from a design system built for the brand, and the logo\nwas rebuilt as code. Every interpretation of the client's requirements\nis written down as a numbered decision in the repository.\n",
+        "outcomes": "Delivered so far (as of 5 October 2026): foundations (M0) and the\nfirst public milestone (M1), both deployed on 4 October 2026 — the\nbilingual site, the Career Fit test with its result, the enquiry form\nand sign-in. Covered by 66 unit tests and 64 end-to-end tests run at\nphone and desktop widths. Not built yet: candidate profiles, the hotel\nboard, matching and operations, and workflows (M2–M5). The project is\nnot shown publicly yet.\n",
+        "myRole": "Lead developer on a paid commission for NZiFOCUS; I wrote 22 of the\nrepository's 24 commits (as of 5 October 2026), the other two being\nthe client's. I own architecture, data model, implementation, design\nsystem, tests and deployment. The product model, the service design\nand the Career Fit question content are the client's; final say on\nbusiness decisions stays with her.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -7787,7 +7838,7 @@
       "date": "2025-01-01",
       "mergedAt": "2025-01-01",
       "category": "mcp-ecosystem",
-      "relatedProjectId": "server-google-news",
+      "relatedProjectId": "google-news-mcp",
       "summary": "Registered Chan's `@chanmeng666/google-news-server` MCP server in the\n`mcp-get` package registry — one of the early community MCP discovery\ntools — making it installable via `npx @michaellatman/mcp-get@latest\ninstall`.\n",
       "impact": "Merged within an hour of opening. Brought Chan's first authored MCP\nserver into one of the canonical early-ecosystem distribution\nchannels alongside Anthropic's own reference servers.\n",
       "comments": 0
@@ -7807,7 +7858,7 @@
       "date": "2024-12-30",
       "mergedAt": "2025-01-01",
       "category": "i18n",
-      "relatedProjectId": "server-google-news",
+      "relatedProjectId": "google-news-mcp",
       "summary": "Two-in-one PR: (1) registered the Google News MCP Server in the\n`awesome-mcp-servers` curated list, (2) synchronised the Chinese and\nJapanese README translations with content that had drifted behind the\nEnglish source.\n",
       "impact": "Merged into the most-starred awesome-list for MCP servers in the\nearly ecosystem. The i18n half restored language parity for zh/ja\nreaders; the listing half put server-google-news in front of the\ncommunity's primary discovery channel.\n",
       "comments": 0
@@ -7827,7 +7878,7 @@
       "date": "2024-12-30",
       "closedAt": "2024-12-30",
       "category": "mcp-ecosystem",
-      "relatedProjectId": "server-google-news",
+      "relatedProjectId": "google-news-mcp",
       "summary": "Proposed adding server-google-news to the official\nmodelcontextprotocol/servers README community-servers section.\n",
       "impact": "Closed (not merged) because the official repo's community-server\nlisting process was restructured shortly after; the server is now\nlisted in 15+ downstream MCP catalogs instead. Preserved here as an\nearly-ecosystem evidence trail.\n",
       "comments": 1
@@ -10905,6 +10956,309 @@
       ]
     }
   ],
+  "productFilms": [
+    {
+      "projectId": "archcanvas",
+      "kind": "product",
+      "title": "ArchCanvas studio film",
+      "filmRepo": "ChanMeng666/archcanvas-promo-studio",
+      "showcaseId": "archcanvas-promo-studio",
+      "watchUrl": "https://youtu.be/rUZAiXgt9JY",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/",
+          "slot": "home stage 1",
+          "cuts": [
+            "30 s 16:9"
+          ]
+        },
+        {
+          "surface": "chanmeng.org",
+          "page": "/work",
+          "slot": "promo films",
+          "cuts": [
+            "30 s 16:9"
+          ]
+        },
+        {
+          "surface": "github-readme",
+          "slot": "What I make beyond code › Promo films",
+          "cuts": [
+            "30 s 16:9",
+            "30 s 9:16"
+          ]
+        }
+      ],
+      "notDisplayed": [
+        {
+          "filmRepo": "ChanMeng666/archcanvas-promo-video",
+          "what": "92 s HyperFrames hero film + six shorts",
+          "reason": "one film per product"
+        },
+        {
+          "filmRepo": "ChanMeng666/archcanvas-promo-remotion",
+          "what": "Zoom Out, four aspect ratios",
+          "reason": "one film per product"
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "archlang",
+      "kind": "product",
+      "title": "ArchLang film",
+      "filmRepo": "ChanMeng666/archlang-promo",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/",
+          "slot": "home tools stage",
+          "cuts": [
+            "68 s 16:9"
+          ]
+        }
+      ],
+      "notDisplayed": [
+        {
+          "filmRepo": "ChanMeng666/archlang-demo-video",
+          "what": "narrated 4:47 demo of ArchLang 1.36.0",
+          "reason": "made to accompany the paper, not a promo; ArchLang already shows its promo film"
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "echook",
+      "kind": "product",
+      "title": "echook film",
+      "filmRepo": "ChanMeng666/echook-promo-studio",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/",
+          "slot": "home tools stage",
+          "cuts": [
+            "30 s 16:9"
+          ]
+        }
+      ],
+      "notDisplayed": [
+        {
+          "filmRepo": "ChanMeng666/echook-promo-video",
+          "what": "earlier Remotion + ElevenLabs + Suno promo",
+          "reason": "one film per product; the repo stays public beside echook"
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "a11y-loop",
+      "kind": "product",
+      "title": "a11y-loop film",
+      "filmRepo": "ChanMeng666/a11y-loop-promo-video",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/",
+          "slot": "home tools stage",
+          "cuts": [
+            "2 min 59 s 16:9"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "gavigo-ire",
+      "kind": "product",
+      "title": "GAVIGO IRE product film",
+      "filmRepo": "ChanMeng666/gavigo-promo-film",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/",
+          "slot": "home film stage",
+          "cuts": [
+            "30 s 16:9 loop",
+            "30 s 9:16 loop",
+            "60 s full"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "corde-mobile-application",
+      "kind": "product",
+      "title": "CORDE Mobile product film",
+      "filmRepo": "ChanMeng666/corde-promo-studio",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/",
+          "slot": "home film stage",
+          "cuts": [
+            "30 s 16:9 loop",
+            "30 s 9:16 loop",
+            "60 s full"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "she-sharp",
+      "kind": "product",
+      "title": "She Sharp product film",
+      "filmRepo": "ChanMeng666/she-sharp-promo-studio",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/",
+          "slot": "home film stage",
+          "cuts": [
+            "30 s 16:9 loop",
+            "30 s 9:16 loop",
+            "60 s full"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "tam-ai-ti",
+      "kind": "product",
+      "title": "Tam-AI-Ti product film",
+      "filmRepo": "ChanMeng666/tamaiti-promo-studio",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/",
+          "slot": "home film stage",
+          "cuts": [
+            "15 s 16:9 loop",
+            "15 s 9:16 loop",
+            "60 s full"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "eatropolis-website",
+      "kind": "product",
+      "title": "Eatropolis website film",
+      "filmRepo": "ChanMeng666/eatropolis-promo-film",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/work",
+          "slot": "Eatropolis project card",
+          "cuts": [
+            "30 s 16:9"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "ai-programming-teaching-project",
+      "kind": "product",
+      "title": "AI programming school product film",
+      "filmRepo": "ChanMeng666/ai-programming-teaching-promo",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/teaching",
+          "slot": "page film",
+          "cuts": [
+            "30 s 16:9 loop",
+            "30 s 9:16 loop",
+            "60 s full"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "projectId": "she-sharp",
+      "kind": "event",
+      "title": "She Sharp × Les Mills — “No Pain, All Gain” promo",
+      "filmRepo": "NZ-SheSharp/she-sharp-promo-video-event-lesmills-03-september-2026",
+      "showcaseId": "she-sharp-lesmills-promo",
+      "watchUrl": "https://www.linkedin.com/posts/shesharpnz_no-pain-all-gain-getting-fit-for-ai-activity-7499713162410156032-62zA",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/work",
+          "slot": "promo films",
+          "cuts": [
+            "30 s 16:9"
+          ]
+        },
+        {
+          "surface": "github-readme",
+          "slot": "What I make beyond code › Promo films",
+          "cuts": [
+            "16:9",
+            "9:16"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "kind": "personal-brand",
+      "title": "Chan Meng — 64-second video business card",
+      "filmRepo": "ChanMeng666/chan-meng-promo-video",
+      "showcaseId": "chan-meng-intro",
+      "watchUrl": "https://youtu.be/QC2fqBGp4Xg",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/about",
+          "slot": "intro film",
+          "cuts": [
+            "64 s 16:9"
+          ]
+        },
+        {
+          "surface": "github-readme",
+          "slot": "What I make beyond code › Promo films",
+          "cuts": [
+            "64 s 16:9"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    },
+    {
+      "kind": "personal-brand",
+      "title": "Chan Meng monkey — brand sting",
+      "filmRepo": "ChanMeng666/chan-meng-promo-video",
+      "showcaseId": "chan-meng-monkey-sting",
+      "watchUrl": "https://youtu.be/PoAYhd0KI4c",
+      "displayedOn": [
+        {
+          "surface": "chanmeng.org",
+          "page": "/work",
+          "slot": "promo films",
+          "cuts": [
+            "12 s 16:9"
+          ]
+        },
+        {
+          "surface": "github-readme",
+          "slot": "What I make beyond code › Promo films",
+          "cuts": [
+            "12 s 16:9"
+          ]
+        }
+      ],
+      "lastVerified": "2026-10-06"
+    }
+  ],
   "references": [
     {
       "name": "Kwame Essuman",
@@ -12690,14 +13044,14 @@
       "worksTogether": [
         {
           "contextType": "project",
-          "contextId": "ai-programming-teaching-project",
-          "role": "Potential collaboration under discussion (2026-09): technology support for international education and end-to-end services for Vietnamese students"
+          "contextId": "genlab-career-academy",
+          "role": "Client and product owner; Chan is the lead developer (paid commission, from 2026-09-30)"
         }
       ],
-      "note": "Founder of NZiFOCUS (international education). As of 2026-09-29 Chan is discussing a potential collaboration: technology support for international education and end-to-end services for Vietnamese students. Prospective only — do not surface until agreed.",
+      "note": "Founder of NZiFOCUS (international education); Chan's client for GenLAB Career Academy, a paid commission where Chan is the lead developer (build started 2026-09-30). Not shown externally yet — do not surface until Chan clears it.",
       "tier": "secondary",
       "recency": "active",
-      "lastUpdated": "2026-09-29",
+      "lastUpdated": "2026-10-06",
       "publicListing": false
     }
   ],
@@ -13252,8 +13606,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-10-05",
+    "lastModified": "2026-10-06",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-05T23:03:27.117Z"
+    "buildTimestamp": "2026-10-06T11:30:08.270Z"
   }
 }

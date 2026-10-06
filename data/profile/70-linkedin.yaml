@@ -877,11 +877,7 @@ linkedin:
         associations:
           - Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
       - name: PostgreSQL Recursive CTEs
-        associations:
-          - Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
       - name: Reverse Engineering
-        associations:
-          - Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
       - name: Cursor IDE Hooks
         associations:
           - echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
@@ -1158,7 +1154,6 @@ linkedin:
       - name: Internationalization (i18n)
         associations:
           - Chief Technology Officer (CTO) at FreePeriod
-          - Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
       - name: Mobile Application Development
         associations:
           - Full Stack Developer at CORDE
@@ -1257,25 +1252,6 @@ linkedin:
         - Neon Postgres
         - OpenAI API
       hasOtherContributors: true
-    - name: Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
-      description: |-
-        Seismophone is an independent observatory for AI music that maps how a Suno-generated song's lineage descends from its parent. Suno is the AI music platform; its own product doesn't expose lineage to creators. Seismophone does, because the research behind it discovered that Suno's API serializer leaks the parent→child UUID chain only on the trending feed and persona sub-trees — nowhere else, not even on the remix page.
-
-        • Three open public lenses (creator profiles, trending, lineage view) + single-purchase deep-dive reports, each a deterministic analysis of one creator's own catalog.
-        • Lineage traversal uses WITH RECURSIVE CTEs in Postgres so the graph walk happens at the database, not the application layer.
-        • Trilingual EN / CN / JP with cookie-driven server-resolved locale.
-        • oEmbed-discovered compliance posture; no scraping, no headless browsers.
-        • 46 solo commits across one month — same-day scaffold-to-live, then production hardening: Stripe webhook verification and a credits ledger that auto-switches keys by STRIPE_SECRET_KEY prefix.
-
-        Stack: Next.js 16, Drizzle + Neon Postgres, Stripe, Resend, Docker + Traefik VPS.
-      skills:
-        - Drizzle ORM
-        - Internationalization (i18n)
-        - Next.js
-        - Neon Postgres
-        - Stripe
-        - Docker
-        - PostgreSQL
     - name: ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans
       dateRange: Jun 2026 – Present
       description: |-

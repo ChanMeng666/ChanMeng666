@@ -17,7 +17,10 @@ what replaced what, backups, forks, promo films, growth workspaces):
 and the machine catalog `docs/ecosystem/lineage.yaml`. Sensitive repos live only in
 the **local-only, gitignored** overlay `docs/ecosystem/lineage.private.yaml` (read it
 when present; never copy its contents or repo names into tracked files). Topology
-only: career facts stay in `data/profile/`. Validate with
+only: career facts stay in `data/profile/`. Each repo row may also carry Chan's own
+judgement: `positioning` (what it is for), `stage` (building | maintained | paused |
+done | handed-over) and `showcase` (flagship | featured | listed | hidden); read them
+before deciding how prominently to present a project, and never fill them in for her. Validate with
 `npm run check:ecosystem [-- --live]` (offline mode runs inside `npm run validate`;
 `--live` compares with GitHub and needs the overlay to be present locally).
 
@@ -169,19 +172,22 @@ hand-typed facts on a review cadence:
 | `20-projects-flagship.yaml` | projects (flagship band) | 4 | `id` |
 | `21-projects-oss-primary.yaml` | projects (OSS primary band) | 7 | `id` |
 | `22-projects-oss-webapps.yaml` | projects (collapsible: web apps) | 14 | `id` |
-| `23-projects-oss-more.yaml` | projects (AI/creative/ML/branding/games + commissioned) | 83 | `id` |
+| `23-projects-oss-more.yaml` | projects (AI/creative/ML/branding/games + commissioned) | 84 | `id` |
 | `25-contributions.yaml` | openSourceContributions | 23 | `id` |
 | `30-recognition.yaml` | awards, certificates, publications | 7 + 53 + 74 | `title`+`awarder` / `name` |
 | `40-skills.yaml` | skills, domains, languages, interests | 6 + 5 + 4 + 3 | `name` |
-| `45-showcase.yaml` | showcaseCapabilities, showcase (craft evidence: reports, films, decks, slides, newsletters, GEO) | 7 + 11 | `id` |
+| `45-showcase.yaml` | showcaseCapabilities, showcase (craft evidence: reports, films, decks, slides, newsletters, GEO), productFilms (register: which product shows which promo film; one per product; must match chanmeng.org) | 7 + 11 + 13 | `id` / `projectId` |
 | `50-references.yaml` | references | 27 | `id` |
 | `60-network.yaml` | organizations, collaborators | 34 + 13 | `id` |
 | `70-linkedin.yaml` | linkedin | curated live-page snapshot | — |
 | `80-events.yaml` | events (offline talks/hackathons/workshops/appearances) | 23 | `id` |
 | `90-meta.yaml` | meta (incl. `meta.x_brand` display config) | — | — |
 
-Counts verified 2026-10-03 (`projects:` totals 108: 4 + 7 + 14 + 83; by tier
-7 flagship / 10 primary / 25 secondary / 66 archive). Recount with `loadProfile()`
+Counts verified 2026-10-06 (`projects:` totals 109: 4 + 7 + 14 + 84; by tier
+7 flagship / 9 primary / 27 secondary / 66 archive). One of them,
+`genlab-career-academy`, is database-only, and `sunostats` (Seismophone) is pending
+archive and off every visitor-facing surface: read the guard comment above each
+before touching any display list, CV or LinkedIn copy. Recount with `loadProfile()`
 rather than trusting this table after a wave of edits.
 
 The `projects:` list spans shards 20→23 and is concatenated in filename order

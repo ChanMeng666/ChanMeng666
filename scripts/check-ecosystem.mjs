@@ -120,6 +120,41 @@ for (const r of allRepos)
   if (["fork", "listing-submission"].includes(r.role) && r.entity === "external-upstreams" && r.ownProject !== false)
     err(`repo ${r.repo}: role ${r.role} under external-upstreams must carry ownProject: false`);
 for (const r of allRepos) if (r.role === "listing-submission" && r.ownProject !== false) err(`repo ${r.repo}: listing-submission must carry ownProject: false`);
+// Chan's per-repo judgement (2026-10-06): optional, but closed vocabularies when present.
+const STAGES = ["building", "maintained", "paused", "done", "handed-over"];
+const SHOWCASE = ["flagship", "featured", "listed", "hidden"];
+for (const r of allRepos) {
+  if (r.stage !== undefined && !STAGES.includes(r.stage)) err(`repo ${r.repo}: stage "${r.stage}" not one of ${STAGES.join(" | ")}`);
+  if (r.showcase !== undefined && !SHOWCASE.includes(r.showcase)) err(`repo ${r.repo}: showcase "${r.showcase}" not one of ${SHOWCASE.join(" | ")}`);
+  if (r.positioning !== undefined && (typeof r.positioning !== "string" || !r.positioning.trim())) err(`repo ${r.repo}: positioning must be a non-empty string`);
+  // a repo that maps to a career project may not contradict that project's tier
+  if (r.showcase === "flagship" && r.catalogId && (profile.projects ?? []).find((p) => p.id === r.catalogId)?.tier !== "flagship")
+    err(`repo ${r.repo}: showcase flagship but data/profile project "${r.catalogId}" is not tier flagship (the shard is the authority: change it there first)`);
+}
+// product-film register (data/profile/45-showcase.yaml `productFilms`): one film on show per product
+const repoByKey = new Map(allRepos.map((r) => [r.repo, r]));
+const showcaseIds = new Set((profile.showcase ?? []).map((s) => s.id));
+const filmRole = (key, where) => {
+  const r = repoByKey.get(key);
+  if (!r) return err(`productFilms ${where}: ${key} is not in the lineage catalog`);
+  if (!["promo-film", "demo"].includes(r.role)) err(`productFilms ${where}: ${key} has role ${r.role}, expected promo-film or demo`);
+};
+const shownPerProduct = new Map();
+for (const f of profile.productFilms ?? []) {
+  const where = `"${f.title}"`;
+  if (f.projectId && !projectIds.has(f.projectId)) err(`productFilms ${where}: projectId "${f.projectId}" not in data/profile projects`);
+  if (f.showcaseId && !showcaseIds.has(f.showcaseId)) err(`productFilms ${where}: showcaseId "${f.showcaseId}" not in showcase`);
+  filmRole(f.filmRepo, where);
+  for (const n of f.notDisplayed ?? []) {
+    filmRole(n.filmRepo, where);
+    if (n.filmRepo === f.filmRepo) err(`productFilms ${where}: ${n.filmRepo} is both displayed and notDisplayed`);
+  }
+  if (f.kind === "product") {
+    if (!f.projectId) err(`productFilms ${where}: kind product needs a projectId`);
+    else if (shownPerProduct.has(f.projectId)) err(`productFilms: project "${f.projectId}" shows two product films (${shownPerProduct.get(f.projectId)} and ${where}); the rule is one per product`);
+    else shownPerProduct.set(f.projectId, where);
+  }
+}
 // open questions
 for (const q of [...(pub.openQuestions ?? []), ...(priv?.openQuestions ?? [])])
   for (const x of q.affects ?? []) if (!repoKeys.has(x)) err(`openQuestion ${q.id}: affects unknown repo ${x}`);
@@ -133,6 +168,8 @@ if (live) {
   const list = gh(["repo", "list", owner, "--limit", "500", "--json", "name,isArchived,isPrivate"]);
   const liveMap = new Map(list.map((r) => [`${owner}/${r.name}`, r]));
   for (const key of pub.scope.orgRepoAllowlist) {
+    // Still Chan's work, but her access ended with the engagement: nothing to compare.
+    if (allRepos.find((r) => r.repo === key)?.accessRevoked) continue;
     try {
       const j = gh(["repo", "view", key, "--json", "isArchived,isPrivate"]);
       liveMap.set(key, j);

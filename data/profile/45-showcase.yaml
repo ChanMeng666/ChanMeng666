@@ -274,3 +274,153 @@ showcase:
     facts: ["4,264 impressions", "llms.txt + JSON-LD", "geo-markdown-mirror skill"]
     sources:
       - /evidence/src/seo-geo/engram-founder-linkedin-post.jpg
+
+# =============================================================================
+# PRODUCT FILMS — which product publicly displays which promo film
+# =============================================================================
+# The register of promo films that are actually ON SHOW, one row per product.
+# It records what chanmeng.org plays today (2d-portfolio: src/data/showcase.ts,
+# src/data/work.ts, src/data/resume.tsx, public/work/films/) so the database
+# and the site stay in step. It renders on no surface by itself.
+#
+# RULES (Chan, 2026-10-06):
+#   - ONE film per product on show. A product may have several film repos (they
+#     coexist, none replaces another); only `filmRepo` is displayed and the
+#     rest are listed under `notDisplayed` with the reason. Extra cuts of the
+#     displayed film (other lengths, vertical) are not separate films.
+#   - Changing which film a product shows = edit this row AND the site, then
+#     `npm run check:ecosystem`.
+#   - `filmRepo` and every `notDisplayed[].filmRepo` must be a repo of role
+#     promo-film (or demo) in docs/ecosystem/lineage.yaml; `projectId` a
+#     projects[].id; `showcaseId` a showcase[].id. Enforced by
+#     scripts/check-ecosystem.mjs. Most film repos are private: name them,
+#     never link them.
+#   - `kind: product` rows are subject to the one-per-product rule. `kind:
+#     event` (an event promo) and `kind: personal-brand` are separate works,
+#     recorded here so nothing the site plays is missing from the database.
+#   - A film on the site is not automatically README / extended-CV craft
+#     evidence: that needs its own `showcase` entry above (frames, collage).
+# =============================================================================
+productFilms:
+  - projectId: archcanvas
+    kind: product
+    title: ArchCanvas studio film
+    filmRepo: ChanMeng666/archcanvas-promo-studio
+    showcaseId: archcanvas-promo-studio
+    watchUrl: "https://youtu.be/rUZAiXgt9JY"
+    displayedOn:
+      - { surface: chanmeng.org, page: "/", slot: "home stage 1", cuts: ["30 s 16:9"] }
+      - { surface: chanmeng.org, page: /work, slot: "promo films", cuts: ["30 s 16:9"] }
+      - { surface: github-readme, slot: "What I make beyond code › Promo films", cuts: ["30 s 16:9", "30 s 9:16"] }
+    notDisplayed:
+      - { filmRepo: ChanMeng666/archcanvas-promo-video, what: "92 s HyperFrames hero film + six shorts", reason: "one film per product" }
+      - { filmRepo: ChanMeng666/archcanvas-promo-remotion, what: "Zoom Out, four aspect ratios", reason: "one film per product" }
+    lastVerified: "2026-10-06"
+
+  - projectId: archlang
+    kind: product
+    title: ArchLang film
+    filmRepo: ChanMeng666/archlang-promo
+    displayedOn:
+      - { surface: chanmeng.org, page: "/", slot: "home tools stage", cuts: ["68 s 16:9"] }
+    notDisplayed:
+      - { filmRepo: ChanMeng666/archlang-demo-video, what: "narrated 4:47 demo of ArchLang 1.36.0", reason: "made to accompany the paper, not a promo; ArchLang already shows its promo film" }
+    lastVerified: "2026-10-06"
+
+  - projectId: echook
+    kind: product
+    title: echook film
+    filmRepo: ChanMeng666/echook-promo-studio
+    displayedOn:
+      - { surface: chanmeng.org, page: "/", slot: "home tools stage", cuts: ["30 s 16:9"] }
+    notDisplayed:
+      - { filmRepo: ChanMeng666/echook-promo-video, what: "earlier Remotion + ElevenLabs + Suno promo", reason: "one film per product; the repo stays public beside echook" }
+    lastVerified: "2026-10-06"
+
+  - projectId: a11y-loop
+    kind: product
+    title: a11y-loop film
+    filmRepo: ChanMeng666/a11y-loop-promo-video
+    displayedOn:
+      - { surface: chanmeng.org, page: "/", slot: "home tools stage", cuts: ["2 min 59 s 16:9"] }
+    lastVerified: "2026-10-06"
+
+  - projectId: gavigo-ire
+    kind: product
+    title: GAVIGO IRE product film
+    filmRepo: ChanMeng666/gavigo-promo-film
+    displayedOn:
+      - { surface: chanmeng.org, page: "/", slot: "home film stage", cuts: ["30 s 16:9 loop", "30 s 9:16 loop", "60 s full"] }
+    lastVerified: "2026-10-06"
+
+  - projectId: corde-mobile-application
+    kind: product
+    title: CORDE Mobile product film
+    filmRepo: ChanMeng666/corde-promo-studio
+    displayedOn:
+      - { surface: chanmeng.org, page: "/", slot: "home film stage", cuts: ["30 s 16:9 loop", "30 s 9:16 loop", "60 s full"] }
+    lastVerified: "2026-10-06"
+
+  - projectId: she-sharp
+    kind: product
+    title: She Sharp product film
+    filmRepo: ChanMeng666/she-sharp-promo-studio
+    displayedOn:
+      - { surface: chanmeng.org, page: "/", slot: "home film stage", cuts: ["30 s 16:9 loop", "30 s 9:16 loop", "60 s full"] }
+    lastVerified: "2026-10-06"
+
+  - projectId: tam-ai-ti
+    kind: product
+    title: Tam-AI-Ti product film
+    filmRepo: ChanMeng666/tamaiti-promo-studio
+    displayedOn:
+      - { surface: chanmeng.org, page: "/", slot: "home film stage", cuts: ["15 s 16:9 loop", "15 s 9:16 loop", "60 s full"] }
+    lastVerified: "2026-10-06"
+
+  - projectId: eatropolis-website
+    kind: product
+    title: Eatropolis website film
+    filmRepo: ChanMeng666/eatropolis-promo-film
+    displayedOn:
+      - { surface: chanmeng.org, page: /work, slot: "Eatropolis project card", cuts: ["30 s 16:9"] }
+    lastVerified: "2026-10-06"
+
+  - projectId: ai-programming-teaching-project
+    kind: product
+    title: AI programming school product film
+    filmRepo: ChanMeng666/ai-programming-teaching-promo
+    displayedOn:
+      - { surface: chanmeng.org, page: /teaching, slot: "page film", cuts: ["30 s 16:9 loop", "30 s 9:16 loop", "60 s full"] }
+    lastVerified: "2026-10-06"
+
+  # ── Not product films: recorded so the register covers everything the site plays.
+  - projectId: she-sharp
+    kind: event
+    title: "She Sharp × Les Mills — “No Pain, All Gain” promo"
+    filmRepo: NZ-SheSharp/she-sharp-promo-video-event-lesmills-03-september-2026
+    showcaseId: she-sharp-lesmills-promo
+    watchUrl: "https://www.linkedin.com/posts/shesharpnz_no-pain-all-gain-getting-fit-for-ai-activity-7499713162410156032-62zA"
+    displayedOn:
+      - { surface: chanmeng.org, page: /work, slot: "promo films", cuts: ["30 s 16:9"] }
+      - { surface: github-readme, slot: "What I make beyond code › Promo films", cuts: ["16:9", "9:16"] }
+    lastVerified: "2026-10-06"
+
+  - kind: personal-brand
+    title: Chan Meng — 64-second video business card
+    filmRepo: ChanMeng666/chan-meng-promo-video
+    showcaseId: chan-meng-intro
+    watchUrl: "https://youtu.be/QC2fqBGp4Xg"
+    displayedOn:
+      - { surface: chanmeng.org, page: /about, slot: "intro film", cuts: ["64 s 16:9"] }
+      - { surface: github-readme, slot: "What I make beyond code › Promo films", cuts: ["64 s 16:9"] }
+    lastVerified: "2026-10-06"
+
+  - kind: personal-brand
+    title: Chan Meng monkey — brand sting
+    filmRepo: ChanMeng666/chan-meng-promo-video
+    showcaseId: chan-meng-monkey-sting
+    watchUrl: "https://youtu.be/PoAYhd0KI4c"
+    displayedOn:
+      - { surface: chanmeng.org, page: /work, slot: "promo films", cuts: ["12 s 16:9"] }
+      - { surface: github-readme, slot: "What I make beyond code › Promo films", cuts: ["12 s 16:9"] }
+    lastVerified: "2026-10-06"

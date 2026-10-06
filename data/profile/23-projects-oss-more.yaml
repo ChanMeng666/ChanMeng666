@@ -3154,3 +3154,109 @@ projects:
       myRole: |
         Sole author. MIT. Written from fixing a real profile README and a real
         logo repository, not from documentation.
+
+  # ── GenLAB Career Academy (client: NZiFOCUS) ─────────────────────────────
+  # NOT SHOWN EXTERNALLY YET (Chan, 2026-10-06). This entry may exist in the
+  # database, but GenLAB must NOT appear in README.md, on chanmeng.org pages,
+  # in any CV (designed, ATS, extended, cv-llms.txt) or in LinkedIn copy until
+  # Chan clears it. Concretely, until then:
+  #   - do NOT add this id to any 90-meta.yaml bucket (flagship / clientCard /
+  #     commissioned / aiAgent / craft / spotlight / more*) — that is what
+  #     puts a project on the README;
+  #   - do NOT raise tier to flagship (cv/build-llms-txt.mjs selects every
+  #     flagship project into public/cv-llms.txt);
+  #   - do NOT add it to cv/*.typ, 70-linkedin.yaml or 2d-portfolio;
+  #   - no organizations[] entry for NZiFOCUS yet, and no url / repoUrl here
+  #     (the repo is private, in the client's own GitHub account).
+  # Sources: the client's Stage 1 draft (2026-10-02) for the product model,
+  # and the repo's docs/status.md (2026-10-05) for what is actually built.
+  # Everything beyond milestone M1 is the client's SPEC, not delivered work —
+  # keep the two apart in any copy. No pricing or package framing in the
+  # narrative (repo rule). Topology and timeline: docs/ecosystem/lineage.yaml,
+  # family `genlab`.
+  - id: genlab-career-academy
+    provenance: client
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-10-06"
+    name: GenLAB Career Academy — managed hotel-internship matchmaker
+    category: ai-apps
+    tagline: "A managed matchmaker that places trained Vietnamese hospitality students in internships at 4–5 star hotels in New Zealand: AI prepares, scores and drafts, and a person approves every shortlist, offer and agreement."
+    entity: "NZiFOCUS (international education, founder Nga Blanchard) — paid development commission"
+    roles: ["Lead Developer"]
+    techStack: ["Astro 7", "Cloudflare Workers", "React (one island)", "TypeScript", "Neon Postgres", "Drizzle", "Cloudflare Hyperdrive", "Cloudflare KV", "Cloudflare Access", "Resend", "Vitest", "Playwright", "GitHub Actions"]
+    keywords:
+      - "Managed matchmaker, not a self-serve marketplace"
+      - "Human-in-the-loop AI: AI drafts, a person decides"
+      - "Hospitality internship placement"
+      - "Bilingual Vietnamese / English"
+      - "Career-fit assessment"
+      - "Edge-deployed on Cloudflare Workers"
+    status: active
+    startDate: "2026-09"
+    metrics:
+      - { label: "Career Fit test questions", value: "24", note: "four parts, one question per screen; item bank v1.0.0 (repo docs/status.md, 2026-10-05)" }
+      - { label: "Languages", value: "2", note: "Vietnamese and English" }
+      - { label: "Database tables", value: "51", note: "plus 2 views, defined by SQL migrations; as of 2026-10-05" }
+      - { label: "Automated tests", value: "130", note: "66 unit + 64 end-to-end at 360px and 1280px; as of 2026-10-05" }
+      - { label: "Milestones delivered", value: "2 of 6", note: "M0 foundations and M1 public site deployed 2026-10-04; M2–M5 not started" }
+    publicSummary: |
+      GenLAB Career Academy is a placement service being built for NZiFOCUS:
+      it prepares Vietnamese hospitality students for internships at 4–5 star
+      hotels in New Zealand and matches them to openings. It is designed as a
+      **managed matchmaker**, not a self-serve marketplace — AI prepares,
+      scores and drafts, and a person approves every shortlist, offer and
+      agreement. I am the lead developer on a paid commission that started on
+      30 September 2026. The first public milestone went live on 4 October
+      2026: a bilingual Vietnamese / English site with a 24-question Career
+      Fit test, its scored result, an enquiry form for students, hotels and
+      schools, and passwordless sign-in. Candidate profiles, the hotel board
+      and matching are specified but not built yet.
+    narrative:
+      impactHeadline: "A placement service where the AI never has the last word: it scores and drafts, and a person signs off every shortlist, offer and internship agreement before a hotel or a student sees it."
+      businessLogic: |
+        The client's Stage 1 design is a nine-step managed pipeline. Students,
+        hotels and schools register through separate forms; a student builds a
+        profile and takes a hospitality career-fit assessment; the system
+        proposes matches against internship openings; a hotel receives a
+        shortlist of at most five anonymised candidate cards (initials, skills
+        and scores — no photo, no contact details) and only sees the full
+        profile after it accepts; then interview, offer, a three-party
+        agreement, pre-departure training and scheduled check-ins through to
+        completion. At every step the split is the same: AI tags, scores,
+        drafts and reminds; a person verifies the hotel, reviews borderline
+        scores, approves the shortlist, confirms the offer terms and reads the
+        agreement before it is sent. Hotels are restricted to 4–5 star
+        properties able to sign a compliant internship contract. The target is
+        a shortlist in front of the hotel within five working days of an
+        opening being posted.
+      technicalApproach: |
+        Astro 7 on Cloudflare Workers, server-rendered with almost no client
+        JavaScript: React is used for one island only, the Career Fit test.
+        Neon Postgres through Hyperdrive, with the schema defined as SQL
+        migrations and validated on an in-memory Postgres before it is
+        applied; the runtime database roles cannot change the schema. Scoring
+        is deterministic and runs on the server, so the answer keys never
+        reach the browser. Sign-in is passwordless — an emailed single-use
+        link with a six-digit code as the fallback — with rate limits and only
+        keyed hashes of tokens stored. The staff area sits behind Cloudflare
+        Access and the Worker verifies the Access token itself before
+        checking for an active staff record. Design tokens and component CSS
+        are generated from a design system built for the brand, and the logo
+        was rebuilt as code. Every interpretation of the client's requirements
+        is written down as a numbered decision in the repository.
+      outcomes: |
+        Delivered so far (as of 5 October 2026): foundations (M0) and the
+        first public milestone (M1), both deployed on 4 October 2026 — the
+        bilingual site, the Career Fit test with its result, the enquiry form
+        and sign-in. Covered by 66 unit tests and 64 end-to-end tests run at
+        phone and desktop widths. Not built yet: candidate profiles, the hotel
+        board, matching and operations, and workflows (M2–M5). The project is
+        not shown publicly yet.
+      myRole: |
+        Lead developer on a paid commission for NZiFOCUS; I wrote 22 of the
+        repository's 24 commits (as of 5 October 2026), the other two being
+        the client's. I own architecture, data model, implementation, design
+        system, tests and deployment. The product model, the service design
+        and the Career Fit question content are the client's; final say on
+        business decisions stays with her.

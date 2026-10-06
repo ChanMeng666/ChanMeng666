@@ -1128,18 +1128,29 @@ collaborators:
     lastUpdated: "2026-09-29"
     publicListing: true
 
-  # PROSPECTIVE — in discussion, nothing agreed. publicListing: false keeps it
-  # off every generated surface (Chan's call, 2026-09-29: database only until
-  # a collaboration actually lands). No organizations[] entry for NZiFOCUS for
-  # the same reason: the org roster renders publicly.
+  # CLIENT, NOT SHOWN EXTERNALLY YET (Chan, 2026-10-06). The collaboration
+  # landed: GenLAB Career Academy is a paid commission for NZiFOCUS and Chan is
+  # the lead developer (build started 2026-09-30). publicListing: false keeps
+  # this entry off every generated surface. Chan's exact rule (2026-10-06):
+  # GenLAB must not appear in README.md, on chanmeng.org pages, in any CV or
+  # in LinkedIn copy; recording it in the data files is fine. The project
+  # entry is projects[] id genlab-career-academy (23-projects-oss-more.yaml,
+  # read the guard comment above it). There is still NO organizations[]
+  # entry. Repo topology and timeline: docs/ecosystem/lineage.yaml, family
+  # `genlab`.
   - id: nga-blanchard
     name: Nga Blanchard
     currentTitle: Founder, NZiFOCUS
     relationship: [collaborator]
     worksTogether:
-      - { contextType: project, contextId: ai-programming-teaching-project, role: "Potential collaboration under discussion (2026-09): technology support for international education and end-to-end services for Vietnamese students" }
-    note: "Founder of NZiFOCUS (international education). As of 2026-09-29 Chan is discussing a potential collaboration: technology support for international education and end-to-end services for Vietnamese students. Prospective only — do not surface until agreed."
+      - { contextType: project, contextId: genlab-career-academy, role: "Client and product owner; Chan is the lead developer (paid commission, from 2026-09-30)" }
+    # Longer record (note is capped at 280 chars): GenLAB is a managed
+    # matchmaker placing trained Vietnamese hospitality students with 4-5 star
+    # hotels in New Zealand. The repo sits in the client's GitHub account; M0
+    # foundations and M1 (public site with the Career Fit test) were deployed
+    # 2026-10-04. First discussed 2026-09-29.
+    note: "Founder of NZiFOCUS (international education); Chan's client for GenLAB Career Academy, a paid commission where Chan is the lead developer (build started 2026-09-30). Not shown externally yet — do not surface until Chan clears it."
     tier: secondary
     recency: active
-    lastUpdated: "2026-09-29"
+    lastUpdated: "2026-10-06"
     publicListing: false

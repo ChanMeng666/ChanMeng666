@@ -1114,6 +1114,15 @@ projects:
         Vercel -> Cloudflare Workers migration with GitHub Actions
         auto-deploy; authored the README, TUTORIAL.md, and GEO
         metadata. Maintains the live deployment today.
+  # PENDING ARCHIVE (Chan, 2026-10-07). Seismophone is still LIVE and is left
+  # running on purpose: a batch of job applications sent in early October 2026
+  # names it on the CV, and taking it down would break those links. But it is
+  # treated as already archived on every surface a visitor reads: it is NOT in
+  # any 90-meta display bucket, any CV, the LinkedIn copy or chanmeng.org, and
+  # must not be put back. When Chan says the applications have settled, archive
+  # it for real (export the unrepeatable data first — runbook item in
+  # docs/operations/README.md), then set status: archived + recency: deprecated.
+  # Until then status/recency below stay as they are, because they are true.
   - id: sunostats
     provenance: personal
     # Band change 2026-08-05: back to the "Craft & products" table when the card
@@ -1122,9 +1131,9 @@ projects:
     # on repoUrl, so outside the flagship band it gets only a one-line long-tail
     # entry in llms-full.txt rather than a full narrative. If that matters later,
     # the fix is to put it back in flagshipProjectIds, not to fake a repoUrl.
-    tier: primary
+    tier: secondary
     recency: recent
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-10-07"
     meta:
       x_brand:
         featuredStack: [nextjs, react, drizzle, neon, stripe]

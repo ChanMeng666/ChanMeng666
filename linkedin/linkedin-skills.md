@@ -41,10 +41,8 @@
 - Tam-AI-Ti — Voice-First AI Financial-Wellness Coach (Te Whare Tapa Whā)
 
 ### PostgreSQL Recursive CTEs
-- Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
 ### Reverse Engineering
-- Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
 ### Cursor IDE Hooks
 - echook — Audio Notification Hooks for Claude Code / Cursor / Codex CLI
@@ -280,7 +278,6 @@
 
 ### Internationalization (i18n)
 - Chief Technology Officer (CTO) at FreePeriod
-- Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)
 
 ### Mobile Application Development
 - Full Stack Developer at CORDE

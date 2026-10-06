@@ -178,10 +178,11 @@ programming and towerdefense subdomains and www.vitex.org.nz all answer 200.
   cleared, 8 Pages sites unpublished.
 - 2d-portfolio has no Actions secrets left.
 
-## Pending (as of 2026-10-03)
+## Pending (as of 2026-10-07)
 
 | Item | Due |
 |---|---|
 | Delete the five listing forks once their PRs close (or all at once, one confirmation) | by 2026-11-14 |
 | Archive `css-tower-defense` (no further development; stays live for now); then disable its workflows and delete its dead Cloudflare API token secret | when Chan decides |
 | Back up `femtech-weekend-assets` off this machine | open |
+| **Archive Seismophone** (`sunostats`, seismophone.chanmeng.org). Left live on purpose: CVs sent in early October 2026 name it. Already removed from every visitor-facing surface (2026-10-07). When Chan says go: (1) export the data that cannot be collected again from its database (the lineage edges and the trending snapshots) and archive it; (2) move the published and unpublished observatory reports to chanmeng.org/blog; (3) stop sign-in, sync, the scheduled jobs, the MCP endpoint and the database; (4) leave a static page on the domain that says the project is archived and keeps `/legal/data-sources` alive, because the Suno probe's User-Agent contact URL points there; (5) repoint the README-cards links that lead to Seismophone; (6) set the shard to `status: archived` + `recency: deprecated`, archive the repo and its growth repo, update lineage. The probe and the README cards keep running | when Chan says the applications have settled |

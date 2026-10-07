@@ -7712,7 +7712,7 @@
       "provenance": "personal",
       "tier": "secondary",
       "recency": "recent",
-      "lastUpdated": "2026-10-07",
+      "lastUpdated": "2026-10-08",
       "name": "October Rain · February Line — two code-drawn music videos",
       "category": "creative",
       "tagline": "Two music videos for Chan's own songs, drawn entirely by code: a hand-inked cel film and a one-line animation, rendered frame by frame with headless Chrome and ffmpeg.",
@@ -7739,6 +7739,16 @@
         "Creative coding"
       ],
       "startDate": "2026-10",
+      "extraLinks": [
+        {
+          "label": "Watch 《十月的微雨》 A Drizzle in October",
+          "url": "https://youtu.be/X3nUfLHawq4"
+        },
+        {
+          "label": "Watch 《二月的延长线》 February, on an Extended Line",
+          "url": "https://youtu.be/B1q5akx2zPk"
+        }
+      ],
       "metrics": [
         {
           "label": "Films",
@@ -7748,7 +7758,7 @@
         {
           "label": "Release",
           "value": "v1.0.0",
-          "note": "2026-10-07, on the private repository"
+          "note": "2026-10-07, on the private repository; both films published on YouTube on 2026-10-08"
         }
       ],
       "publicSummary": "Two music videos for two of my own songs, 《十月的微雨》 (*A Drizzle in\nOctober*) and 《二月的延长线》 (*February, on an Extended Line*). Every\nframe is drawn by code: a web page draws frame `t`, headless Chrome\ncaptures it, and ffmpeg adds the song. No image or video generation\nmodel and no footage is used for the picture. The first film is cel\nanimation with ink lines redrawn every second frame; the second is one\ncontinuous line that draws a single day. The songs were made with\nSuno, and the production method and two engine files come from the\nopen-source mg-styles-15 library (MIT).\n",
@@ -13720,6 +13730,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-07T13:33:01.274Z"
+    "buildTimestamp": "2026-10-07T14:20:50.001Z"
   }
 }

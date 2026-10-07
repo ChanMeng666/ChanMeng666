@@ -25,7 +25,7 @@ channel:
   handle: "@ChanMeng666"
   id: UCNfqqzosj2J6bBRVgz7qbJQ
   url: https://www.youtube.com/@ChanMeng666
-  asOf: "2026-10-07"
+  asOf: "2026-10-08"
   subscribers: 24          # historical maximum; never lower it
   description: |
     I'm Chan Meng, an AI agent architect and full-stack engineer based in Auckland, New Zealand.
@@ -46,8 +46,10 @@ channel:
     enabled: true
     trailer: QC2fqBGp4Xg   # shown to people who have not subscribed
     featuredVideo: null
-    # Order as published. The three playlist rows were appended after
-    # YouTube's default rows; moving them up is a drag in Studio (open item).
+    # Order as published on 2026-10-07. The three playlist rows were appended
+    # after YouTube's default rows. Order suggested to Chan on 2026-10-08, hers
+    # to drag in Studio: Product films, Short videos, Demos & walkthroughs,
+    # Brand films, Music videos, Videos, For You; remove Created playlists.
     sections:
       - For You
       - Videos
@@ -56,6 +58,7 @@ channel:
       - "Single playlist: Product films"
       - "Single playlist: Demos & walkthroughs"
       - "Single playlist: Brand films"
+      - "Single playlist: Music videos"
   # Video and playlist descriptions carry NO links (Chan, 2026-10-07): the
   # account has not done YouTube's one-time verification, so a link in a
   # description cannot be published as a link. Links live in `links:` above.
@@ -63,22 +66,36 @@ channel:
   linksInDescriptions: false
 
 counts:
-  asOf: "2026-10-07"
-  total: 317               # 307 on the Videos tab before the uploads, plus 9 films and 1 Short
-  public: 23               # 22 videos + 1 Short
+  asOf: "2026-10-08"
+  total: 326               # 307 on the Videos tab before the uploads, plus 9 films, 8 Shorts and 2 music videos
+  public: 32               # 24 videos + 8 Shorts
   unlisted: 60
   private: 234             # 178 of them are raw screen recordings titled by timestamp
   # The Shorts tab was not part of the count: it also holds a few older
   # unlisted clips (not read).
 
 # -----------------------------------------------------------------------------
-# Public videos, newest first. `kind`: film (rendered promo film) | short (9:16 cut) | demo
+# Public videos, newest first. `kind`: film (rendered promo film) | short (9:16 cut) | music-video | demo
 # (screen-recorded walkthrough) | personal. `projectId` → projects[].id.
 # `views` is the Studio count on 2026-10-07 (historical maximum).
 # `described: true` means the description was written and applied; the text
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # Uploaded and made public by Chan herself on 2026-10-08; titles and
+  # descriptions set afterwards. Both carry the full credit block (song hers,
+  # made with Suno; method and engine from mg-styles-15, MIT) and the full
+  # lyrics, taken from the film's lyrics.txt. YouTube is the ONLY place they
+  # are shown (Chan, 2026-10-08): not the README, a CV, LinkedIn or the site.
+  - { id: X3nUfLHawq4, kind: music-video, published: "2026-10-08", duration: "5:25", title: "十月的微雨 · A Drizzle in October | Music video drawn entirely by code", projectId: october-rain-february-line-mv, playlists: [Music videos], described: true }
+  - { id: B1q5akx2zPk, kind: music-video, published: "2026-10-08", duration: "5:15", title: "二月的延长线 · February, on an Extended Line | Music video drawn entirely by code", projectId: october-rain-february-line-mv, playlists: [Music videos], described: true }
+  - { id: M3mGpMDDO9I, kind: short, published: "2026-10-08", duration: "0:30", title: "AI Programming Education Platform — a bilingual course site with its own AI assistant #Shorts", projectId: ai-programming-teaching-project, described: true }
+  - { id: PXR3I_47At4, kind: short, published: "2026-10-08", duration: "0:30", title: "Eatropolis — the event website for Auckland’s culinary festival #Shorts", projectId: eatropolis-website, described: true }
+  - { id: zrxlw5Kh3vI, kind: short, published: "2026-10-08", duration: "0:30", title: "She Sharp — the member platform behind a NZ women-in-STEM charity #Shorts", projectId: she-sharp, described: true }
+  - { id: zf2mAMVHoT0, kind: short, published: "2026-10-08", duration: "0:30", title: "CORDE Mobile — offline-first field data collection #Shorts", projectId: corde-mobile-application, described: true }
+  - { id: k7xBJ6DXMnc, kind: short, published: "2026-10-08", duration: "0:30", title: "GAVIGO IRE — Instant Reality Exchange #Shorts", projectId: gavigo-ire, described: true }
+  - { id: OUgDbZG6-Hg, kind: short, published: "2026-10-08", duration: "0:30", title: "echook — hooks for Claude Code, Cursor and Codex, set up in plain language #Shorts", projectId: echook, described: true }
+  - { id: 3GrW5o63p5I, kind: short, published: "2026-10-08", duration: "0:30", title: "ArchCanvas — your AI architect: from a brief to a dimensioned floor plan #Shorts", projectId: archcanvas, described: true }
   - { id: j2_JCEs8Ucw, kind: film, published: "2026-10-07", duration: "0:29", title: "She Sharp × Les Mills — “No Pain, All Gain” | Event promo", projectId: she-sharp, showcaseId: she-sharp-lesmills-promo, playlists: [Product films], described: true }
   - { id: DKCzZCQTQgA, kind: film, published: "2026-10-07", duration: "1:01", title: "AI Programming Education Platform — a bilingual course site with its own AI assistant | Product film", projectId: ai-programming-teaching-project, playlists: [Product films], described: true }
   - { id: AdelJ4bezwo, kind: film, published: "2026-10-07", duration: "1:01", title: "Eatropolis — the event website for Auckland’s culinary festival | Product film", projectId: eatropolis-website, playlists: [Product films], described: true }
@@ -132,24 +149,15 @@ playlists:
     id: PLbFM9MQh6CSA
     onHomeTab: true
     videos: [QC2fqBGp4Xg, PoAYhd0KI4c]
+  - title: Music videos
+    id: PLUfF7nx_5Rg4
+    onHomeTab: true
+    videos: [X3nUfLHawq4, B1q5akx2zPk]   # created 2026-10-08 at Chan's request
 
-# -----------------------------------------------------------------------------
-# Shorts Chan approved on 2026-10-07 that are NOT uploaded yet: YouTube's daily
-# upload limit stopped the batch after the nine films and one Short. Staged
-# copies: D:/.claude-scratch/2026-10-07/youtube-upload/2-shorts/ (the staged
-# file name is the draft title YouTube shows). Masters are 1080x1920, 30 s;
-# paths are relative to D:/github_repository.
-# After Chan uploads them: set the title below; description = "A 30-second cut
-# of the <product> product film. The full film is on this channel, in the
-# Product films playlist." plus the sign-off line; not made for kids; public;
-# no playlist. Then move each row to `videos:` with its id.
-# ArchLang and a11y-loop have no vertical cut.
-# -----------------------------------------------------------------------------
-pendingUpload:
-  - { projectId: archcanvas, staged: "S1 ArchCanvas short.mp4", master: "archcanvas-promo-studio/out/masters/A-confident-arrival/archcanvas-studio-2026-09_30s_vertical_1080x1920.mp4", title: "ArchCanvas — your AI architect: from a brief to a dimensioned floor plan #Shorts" }
-  - { projectId: echook, staged: "S2 echook short.mp4", master: "echook-promo-studio/out/masters/echook_30s_vertical_1080x1920.mp4", title: "echook — hooks for Claude Code, Cursor and Codex, set up in plain language #Shorts" }
-  - { projectId: gavigo-ire, staged: "S3 GAVIGO IRE short.mp4", master: "gavigo-promo-film/out/masters/gavigo-ire-30s-portrait.mp4", title: "GAVIGO IRE — Instant Reality Exchange #Shorts" }
-  - { projectId: corde-mobile-application, staged: "S4 CORDE Mobile short.mp4", master: "corde-promo-studio/out/masters/corde-mobile_30s_vertical_1080x1920.mp4", title: "CORDE Mobile — offline-first field data collection #Shorts" }
-  - { projectId: she-sharp, staged: "S5 She Sharp short.mp4", master: "she-sharp-promo-studio/out/masters/chan-meng_she-sharp_30s_vertical_1080x1920.mp4", title: "She Sharp — the member platform behind a NZ women-in-STEM charity #Shorts" }
-  - { projectId: eatropolis-website, staged: "S7 Eatropolis short.mp4", master: "eatropolis-promo-film/out/masters/A-synth-market-day/Eatropolis-30-Portrait-9x16.mp4", title: "Eatropolis — the event website for Auckland’s culinary festival #Shorts" }
-  - { projectId: ai-programming-teaching-project, staged: "S8 AI Programming short.mp4", master: "ai-programming-teaching-promo/out/masters/Film-30-portrait.mp4", title: "AI Programming Education Platform — a bilingual course site with its own AI assistant #Shorts" }
+# Nothing is waiting to be uploaded (2026-10-08). Every product with a vertical
+# cut has its Short live; ArchLang and a11y-loop have no vertical cut. The Short
+# convention: title = the film's title with "| Product film" replaced by
+# "#Shorts"; description = "A 30-second cut of the <product> product film. The
+# full film is on this channel, in the Product films playlist." plus the
+# sign-off line; no playlist.
+pendingUpload: []

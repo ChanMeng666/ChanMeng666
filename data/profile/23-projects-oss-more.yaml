@@ -3267,6 +3267,11 @@ projects:
   # ------- Music videos (recorded 2026-10-07 at Chan's request) -------
   # DATABASE-ONLY until Chan says otherwise. These two entries are her own
   # music videos: she asked for them to be recorded, not displayed.
+  # 2026-10-08: she published the two films of october-rain-february-line-mv on
+  # her YouTube channel herself. That makes them public THERE (the entry's
+  # extraLinks point at those copies). Her rule, same day: YouTube ONLY. The
+  # project stays out of every display bucket, CV, LinkedIn copy and
+  # chanmeng.org.
   #   - in NO 90-meta.yaml display bucket, no CV, no LinkedIn copy, not on
   #     chanmeng.org; like every projects[] entry they do appear in
   #     llms-full.txt's long tail and in dist/profile.json;
@@ -3284,7 +3289,7 @@ projects:
     provenance: personal
     tier: secondary
     recency: recent
-    lastUpdated: "2026-10-07"
+    lastUpdated: "2026-10-08"
     name: "October Rain · February Line — two code-drawn music videos"
     category: creative
     tagline: "Two music videos for Chan's own songs, drawn entirely by code: a hand-inked cel film and a one-line animation, rendered frame by frame with headless Chrome and ffmpeg."
@@ -3298,9 +3303,12 @@ projects:
       - "Pinyin-aware lyric alignment"
       - "Creative coding"
     startDate: "2026-10"
+    extraLinks:
+      - { label: "Watch 《十月的微雨》 A Drizzle in October", url: "https://youtu.be/X3nUfLHawq4" }
+      - { label: "Watch 《二月的延长线》 February, on an Extended Line", url: "https://youtu.be/B1q5akx2zPk" }
     metrics:
       - { label: "Films", value: "2", note: "《十月的微雨》 A Drizzle in October (5:24, 24 fps, animated on twos) and 《二月的延长线》 February, on an Extended Line (5:14, 30 fps); both 1920×1080 H.264" }
-      - { label: "Release", value: "v1.0.0", note: "2026-10-07, on the private repository" }
+      - { label: "Release", value: "v1.0.0", note: "2026-10-07, on the private repository; both films published on YouTube on 2026-10-08" }
     publicSummary: |
       Two music videos for two of my own songs, 《十月的微雨》 (*A Drizzle in
       October*) and 《二月的延长线》 (*February, on an Extended Line*). Every

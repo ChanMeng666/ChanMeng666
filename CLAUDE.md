@@ -18,7 +18,8 @@ public, so tracked wording states decisions and rules, not motives.
 
 **Her platforms, as they stand:** the X account (@chanmeng666) is recorded in
 `x/account.yaml` and `x/posts.yaml` (every post, with a `summary` block; generated
-by `npm run build:x` from a browser capture, procedure in `x/README.md`), the
+by `npm run build:x` from a browser capture; to bring it up to date use the
+`x-sync` skill, `.claude/skills/x-sync/`), the
 YouTube channel in `youtube/channel.yaml`, and the LinkedIn account in
 `linkedin/account.yaml` and `linkedin/posts.yaml` (a `summary` block and one line
 per post; full text by year in `linkedin/posts/`; impressions only in the

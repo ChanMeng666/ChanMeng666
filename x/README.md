@@ -39,29 +39,49 @@ Rules:
 
 ### Refreshing the register
 
-There is no API key in this repo and none is needed: the read happens in Chan's own signed-in
-browser, and everything after that is a pure function of files.
+Use the **`x-sync` skill** ([`.claude/skills/x-sync/`](../.claude/skills/x-sync/SKILL.md)): ask
+Claude Code to "sync my X posts". It is the whole procedure, with what went wrong before. In
+short:
 
-1. Open `https://x.com/chanmeng666` signed in as the account (Claude in Chrome, a new tab).
-2. Run [`capture/snippet.js`](./capture/snippet.js) in the page. It scrolls the Posts and
-   Replies tabs to the end, reads the posts from the web client's own memory, and returns
-   `{ captured, profileSays, complete }`. It changes nothing on X and sends nothing anywhere.
-   `complete` must be `true`.
-3. Save `window.__xCapture` as `capture/latest.json`. From the DevTools console,
-   `copy(JSON.stringify(window.__xCapture, null, 1))`. Through Claude in Chrome the tool cuts
-   long strings, so read `window.__xCapture.user`, then `window.__xChunk(0)`, `(1)`, and so on
-   (twelve posts per call) and write the file from those.
-4. Update `account.yaml` (`asOf`, counts, anything on the profile that changed).
-5. `npm run build:x`. It lists threads that have no `topic` or `projectIds` yet: tag them in
-   `posts.yaml` and run it again.
-6. Commit `capture/latest.json`, `posts.yaml` and `account.yaml` together.
+1. Open `https://x.com/chanmeng666` in a new tab of Chan's signed-in Chrome and run
+   [`capture/snippet.js`](./capture/snippet.js). It scrolls the Replies and Posts tabs, reads the
+   posts from the web client's own memory, and reports `complete: true` when it holds as many
+   posts as the profile counts. It changes nothing on X and sends nothing anywhere. There is no
+   API key in this repo and none is needed.
+2. `await window.__xCopy()` puts the capture on the clipboard, and
+   `pwsh .claude/skills/x-sync/scripts/save-capture.ps1` writes it to `capture/latest.json`
+   (it refuses anything that is not a complete capture of this account).
+3. `npm run build:x -- --apply-account` rebuilds `posts.yaml` and copies the capture date and
+   the plain counts into `account.yaml`. A changed name, bio, website or pinned post stops the
+   build with a `DRIFT:` line, to be read and corrected by hand.
+4. Tag the threads the build lists as `untagged`, then `npm run build:x -- --changes` prints
+   what differs from the committed register: new posts, deleted posts, views gained.
+5. Commit `capture/latest.json`, `posts.yaml` and `account.yaml` together.
 
-A post that has gone from X stays in the register, marked `deletedSeen`. A capture with fewer
-posts than the profile's own count fails the build instead of being read as deletions.
+A post that has gone from X stays in the register, marked `deletedSeen`, and leaves the summary
+and the thread's totals. A thread stays one thread after its first post is deleted. A capture
+with fewer posts than the profile's own count is refused instead of being read as deletions.
 
-Refresh after a posting session and before each monthly review (`x-strategy.md` §8). X shows
+Sync after a posting session and before each monthly review (`x-strategy.md` §8). X shows
 profile visits and link taps only to Premium accounts, so the register holds the public counts:
 views, likes, replies, reposts, quotes, bookmarks.
+
+### Topics
+
+`topic` says why a thread exists, one per thread; the build rejects any other value.
+
+| Topic | Use it for |
+|---|---|
+| `intro` | Who Chan is and what the feed is for (the pinned thread) |
+| `launch` | The first announcement of a product or a major release |
+| `product` | What a product does, shown with an example or a status update |
+| `product-film` | A post whose point is a promo film or a cut of one |
+| `technical-deep-dive` | How something works, step by step |
+| `investigation` | A finding from measuring someone else's system |
+| `brand` | Chan's own brand pieces: the logo sting, the intro film |
+| `community` | Replies and quotes in other people's conversations |
+| `bug-report` | Telling a product's team that something is broken |
+| `personal` | A note that serves no product or pillar |
 
 ## What's here
 

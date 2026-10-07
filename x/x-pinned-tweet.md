@@ -19,7 +19,7 @@ and must never be linked or mentioned.
 > `2107777580908859706`. Tweet 1 carries `x/media/pinned-products.png` with the
 > alt text below; the auto link cards were removed from tweets 2 and 3. It
 > replaced v2 (root `2078727381859389815`, 2026-07-19), which named Vitex and
-> an older star count and stays on the timeline unpinned. What is live is
+> an older star count; Chan deleted it on 2026-10-08. What is live is
 > recorded in [`account.yaml`](./account.yaml).
 
 A pin shows only the first tweet, so Tweet 1 stands fully on its own: who Chan

@@ -27,12 +27,20 @@
 // kept, marked `deletedSeen`. An incomplete capture (fewer posts than the
 // profile's own count) fails instead: it must not be read as deletions.
 //
-//   node scripts/build-x-register.mjs [--check] [--curation <file.yaml>]
+//   node scripts/build-x-register.mjs [--check] [--apply-account] [--changes]
+//                                     [--curation <file.yaml>]
 //
-// --check      write nothing; exit 1 if posts.yaml would change
-// --curation   merge curated keys from a file ({ "<root id>": {…} }) on top of
-//              the ones already in posts.yaml
+// --check          write nothing; exit 1 if posts.yaml would change
+// --apply-account  first copy the plain counts and the capture date from the
+//                  capture into x/account.yaml (followers is only ever raised).
+//                  Name, bio, location, website and pinned post are NOT copied:
+//                  a change there is news, and a person should look at it
+// --changes        after building, print what differs from the committed
+//                  register (git HEAD): the report a sync ends with
+// --curation       merge curated keys from a file ({ "<root id>": {…} }) on top of
+//                  the ones already in posts.yaml
 
+import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -51,12 +59,19 @@ const METRICS = ["views", "likes", "replies", "reposts", "quotes", "bookmarks"];
 // P1–P4 are the content pillars of x/x-strategy.md §2; `none` is a post that
 // serves no pillar (a reply, a personal note, the intro).
 const PILLARS = ["P1", "P2", "P3", "P4", "none"];
+// Why the thread exists, one per thread. Described in x/README.md.
+const TOPICS = [
+  "intro", "launch", "product", "product-film", "technical-deep-dive",
+  "investigation", "brand", "community", "bug-report", "personal",
+];
 // Media posted from this date on is expected to carry alt text (rule adopted
 // 2026-10-07). X cannot add it after posting, so a miss is reported, not failed.
 const ALT_TEXT_FROM = "2026-10-08";
 
 const args = process.argv.slice(2);
 const check = args.includes("--check");
+const applyAccount = args.includes("--apply-account");
+const showChanges = args.includes("--changes");
 const curationArg = args.includes("--curation") ? args[args.indexOf("--curation") + 1] : null;
 
 const fail = (msg) => {
@@ -136,60 +151,69 @@ function toRow(p) {
 }
 
 const captured = new Map(capture.posts.map((p) => [p.id, p]));
+const previousThread = new Map((previous?.threads ?? []).map((t) => [t.id, t]));
 const groups = new Map();
 for (const p of capture.posts) {
   // A conversation Chan started is one thread, however much later she added
-  // to it. A post inside someone else's conversation stands alone.
-  const key = captured.has(p.conv) ? p.conv : p.id;
+  // to it, and it stays one thread after she deletes its first post (the
+  // register remembers the conversation). A post inside someone else's
+  // conversation stands alone.
+  const own = captured.has(p.conv) || (previousThread.has(p.conv) && previousThread.get(p.conv).kind !== "reply");
+  const key = own ? p.conv : p.id;
   if (!groups.has(key)) groups.set(key, []);
   groups.get(key).push(p);
 }
+// A thread whose posts are all gone from X is carried over whole.
+for (const [id, old] of previousPost) {
+  if (!captured.has(id) && !groups.has(old._thread)) groups.set(old._thread, []);
+}
 
+const byId = (x, y) => (BigInt(x.id) < BigInt(y.id) ? -1 : 1);
 const threads = [];
 for (const [rootId, members] of groups) {
-  members.sort((a, b) => (BigInt(a.id) < BigInt(b.id) ? -1 : 1));
-  const root = members[0];
-  const ownRoot = root.id === root.conv;
-  const kind = root.repostOf
-    ? "repost"
-    : !ownRoot
-      ? "reply"
-      : members.length > 1
-        ? "thread"
-        : root.quoted
-          ? "quote"
-          : "post";
+  const was = previousThread.get(rootId);
   const posts = members.map(toRow);
-  const thread = { id: rootId, url: statusUrl(rootId), kind, posted: nzDate(root.at) };
-  const lastDay = nzDate(members.at(-1).at);
+  // Posts the register had that X no longer shows.
+  for (const [id, old] of previousPost) {
+    if (old._thread !== rootId || captured.has(id)) continue;
+    const { _thread, ...row } = old;
+    row.deletedSeen ??= capture.capturedAt;
+    posts.push(row);
+  }
+  posts.sort(byId);
+  const livePosts = posts.filter((p) => !p.deletedSeen);
+
+  const root = captured.get(rootId);
+  let kind = was?.kind;
+  if (root) {
+    kind = root.repostOf
+      ? "repost"
+      : root.id !== root.conv
+        ? "reply"
+        : posts.length > 1
+          ? "thread"
+          : root.quoted
+            ? "quote"
+            : "post";
+  }
+  const thread = { id: rootId, url: statusUrl(rootId), kind, posted: nzDate(posts[0].at) };
+  const lastDay = nzDate(posts.at(-1).at);
   if (lastDay !== thread.posted) thread.continued = lastDay;
   if (user.pinned?.includes(rootId)) thread.pinned = true;
   if (kind === "reply") {
-    thread.inReplyTo = { user: root.replyToUser, url: statusUrl(root.replyTo, root.replyToUser) };
+    thread.inReplyTo = root
+      ? { user: root.replyToUser, url: statusUrl(root.replyTo, root.replyToUser) }
+      : was?.inReplyTo;
   }
   Object.assign(thread, curatedThread.get(rootId));
+  // Totals count what is still on X; rootViews is the first post still there.
   thread.totals = {
-    posts: posts.length,
-    rootViews: posts[0].metrics.views,
-    ...Object.fromEntries(METRICS.map((k) => [k, posts.reduce((n, r) => n + r.metrics[k], 0)])),
+    posts: livePosts.length,
+    rootViews: livePosts[0]?.metrics.views ?? 0,
+    ...Object.fromEntries(METRICS.map((k) => [k, livePosts.reduce((n, r) => n + r.metrics[k], 0)])),
   };
   thread.posts = posts;
   threads.push(thread);
-}
-
-// Posts the register had that X no longer shows.
-for (const [id, old] of previousPost) {
-  if (captured.has(id)) continue;
-  const { _thread, ...row } = old;
-  row.deletedSeen ??= capture.capturedAt;
-  let thread = threads.find((t) => t.id === _thread);
-  if (!thread) {
-    const was = previous.threads.find((t) => t.id === _thread);
-    thread = { ...was, posts: [] };
-    threads.push(thread);
-  }
-  thread.posts.push(row);
-  thread.posts.sort((a, b) => (BigInt(a.id) < BigInt(b.id) ? -1 : 1));
 }
 
 threads.sort((a, b) => (BigInt(a.id) < BigInt(b.id) ? 1 : -1)); // newest first
@@ -204,6 +228,9 @@ for (const t of threads) {
   for (const id of t.projectIds ?? []) {
     if (!projectIds.has(id)) fail(`thread ${t.id}: projectIds names "${id}", which is not a projects[].id`);
   }
+  if (t.topic && !TOPICS.includes(t.topic)) {
+    fail(`thread ${t.id}: topic "${t.topic}" is not one of ${TOPICS.join(", ")}`);
+  }
   if (t.pillar && !PILLARS.includes(t.pillar)) {
     fail(`thread ${t.id}: pillar "${t.pillar}" is not one of ${PILLARS.join(", ")}`);
   }
@@ -216,6 +243,23 @@ for (const t of threads) {
 // The hand-maintained account record must agree with what X showed
 // ---------------------------------------------------------------------------
 const drift = [];
+if (applyAccount && !check) {
+  // Line edits, so the comments and layout of the hand-kept file survive.
+  let text = fs.readFileSync(ACCOUNT, "utf8");
+  const recorded = yaml.load(text).account;
+  const set = (key, value) => {
+    const line = new RegExp(`^(\\s+${key}: )("?)[^"\\s#]+("?)`, "m");
+    if (!line.test(text)) fail(`x/account.yaml has no "${key}:" line to update`);
+    text = text.replace(line, `$1$2${value}$3`);
+  };
+  set("asOf", capture.capturedAt);
+  set("followers", Math.max(user.followers, recorded.counts?.followers ?? 0));
+  set("following", user.following);
+  set("posts", user.posts);
+  set("mediaPosts", user.media);
+  set("likesGiven", user.likesGiven);
+  fs.writeFileSync(ACCOUNT, text);
+}
 if (fs.existsSync(ACCOUNT)) {
   const account = yaml.load(fs.readFileSync(ACCOUNT, "utf8")).account;
   const same = { displayName: user.name, bio: user.bio, location: user.location, website: user.website };
@@ -278,7 +322,7 @@ const summary = {
   engagement: {
     ...Object.fromEntries(METRICS.map((k) => [k, sum(live, k)])),
     // X counts Chan's own thread continuations as replies; this is the rest.
-    repliesFromOthers: sum(live, "replies") - capture.posts.filter((p) => p.replyToUser === handle).length,
+    repliesFromOthers: sum(live, "replies") - capture.posts.filter((p) => captured.get(p.replyTo)?.id).length,
   },
   media: {
     postsWithMedia: live.filter((p) => p.media?.length).length,
@@ -311,7 +355,7 @@ const summary = {
   topByRootViews: [...liveThreads]
     .sort((a, b) => b.totals.rootViews - a.totals.rootViews)
     .slice(0, 5)
-    .map((t) => ({ id: t.id, posted: t.posted, kind: t.kind, rootViews: t.totals.rootViews, opens: firstLine(t.posts[0].text) })),
+    .map((t) => ({ id: t.id, posted: t.posted, kind: t.kind, rootViews: t.totals.rootViews, opens: firstLine(t.posts.find((p) => !p.deletedSeen).text) })),
   flagged: liveThreads.filter((t) => t.flags?.length).map((t) => ({ id: t.id, flags: t.flags })),
 };
 
@@ -380,14 +424,17 @@ if (JSON.stringify(yaml.load(next)) !== JSON.stringify(yaml.load(body))) {
 }
 const current = fs.existsSync(REGISTER) ? fs.readFileSync(REGISTER, "utf8") : "";
 
-const untagged = threads.filter((t) => (!t.projectIds && !t.topic) || !t.pillar);
+const untagged = liveThreads.filter((t) => !t.topic || !t.pillar || !t.summary);
 const missingAlt = live.filter((p) => nzDate(p.at) >= ALT_TEXT_FROM && p.media?.some((m) => !m.alt));
 const report = () => {
   console.log(
     `x/posts.yaml: ${summary.posts} posts in ${summary.threads} threads, ` +
       `${summary.firstPost} → ${summary.lastPost} (capture ${capture.capturedAt})`,
   );
-  for (const t of untagged) console.log(`  untagged: ${t.id} (${t.posted}) ${firstLine(t.posts[0].text)}`);
+  for (const t of untagged) {
+    const missing = ["topic", "pillar", "summary"].filter((k) => !t[k]).join(", ");
+    console.log(`  untagged (${missing}): ${t.id} (${t.posted}) ${firstLine(t.posts[0].text)}`);
+  }
   for (const p of missingAlt) console.log(`  no alt text: ${p.id} (${nzDate(p.at)}) ${firstLine(p.text)}`);
   for (const d of drift) console.error(`  DRIFT: ${d}`);
 };
@@ -401,4 +448,60 @@ if (check) {
 
 fs.writeFileSync(REGISTER, next);
 report();
+if (showChanges) printChanges();
 if (drift.length) fail("x/account.yaml disagrees with the capture: update it, then rebuild");
+
+// ---------------------------------------------------------------------------
+// --changes: this register against the committed one
+// ---------------------------------------------------------------------------
+function printChanges() {
+  const committed = (file) => {
+    try {
+      return yaml.load(execFileSync("git", ["show", `HEAD:${file}`], { cwd: repoRoot, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }));
+    } catch {
+      return null;
+    }
+  };
+  const before = committed("x/posts.yaml");
+  if (!before) return console.log("changes: no committed register to compare with");
+  const was = new Map(before.threads.flatMap((t) => t.posts.map((p) => [p.id, { ...p, _t: t }])));
+  const now = threads.flatMap((t) => t.posts.map((p) => ({ ...p, _t: t })));
+  const out = [`changes since the committed register (${before.asOf} → ${capture.capturedAt}):`];
+
+  const fresh = threads.filter((t) => t.posts.some((p) => !was.has(p.id)));
+  for (const t of fresh) {
+    const added = t.posts.filter((p) => !was.has(p.id));
+    const label = was.has(t.id) ? `${added.length} added to thread` : `new ${t.kind}${t.posts.length > 1 ? ` of ${t.posts.length}` : ""}`;
+    out.push(`  + ${label} ${t.id} (${t.posted}), ${t.totals.rootViews} views on the first post: ${firstLine(t.posts[0].text)}`);
+  }
+  for (const p of now.filter((p) => p.deletedSeen && !was.get(p.id)?.deletedSeen)) {
+    out.push(`  - deleted ${p.id}: ${firstLine(p.text)}`);
+  }
+  for (const p of now.filter((p) => was.has(p.id) && was.get(p.id).text !== p.text)) {
+    out.push(`  ~ text changed ${p.id}: ${firstLine(p.text)}`);
+  }
+  const moved = now
+    .filter((p) => was.has(p.id) && !p.deletedSeen)
+    .map((p) => ({ p, delta: Object.fromEntries(METRICS.map((k) => [k, p.metrics[k] - (was.get(p.id).metrics?.[k] ?? 0)]).filter(([, d]) => d > 0)) }))
+    .filter(({ delta }) => Object.keys(delta).length)
+    .sort((a, b) => (b.delta.views ?? 0) - (a.delta.views ?? 0));
+  for (const { p, delta } of moved.slice(0, 12)) {
+    const parts = Object.entries(delta).map(([k, d]) => `+${d} ${k}`).join(", ");
+    out.push(`  ↑ ${parts} (now ${p.metrics.views} views) ${p.id}: ${firstLine(p.text)}`);
+  }
+  if (moved.length > 12) out.push(`  … and ${moved.length - 12} more posts gained views`);
+
+  const pinnedWas = before.threads.find((t) => t.pinned)?.id;
+  const pinnedNow = threads.find((t) => t.pinned)?.id;
+  if (pinnedWas !== pinnedNow) out.push(`  pinned: ${pinnedWas ?? "none"} → ${pinnedNow ?? "none"}`);
+  const accountWas = committed("x/account.yaml")?.account?.counts ?? {};
+  for (const [key, live] of Object.entries({ followers: user.followers, following: user.following })) {
+    if (accountWas[key] != null && accountWas[key] !== live) out.push(`  ${key}: ${accountWas[key]} → ${live}`);
+  }
+  const total = (register, k) => register.summary?.engagement?.[k] ?? 0;
+  out.push(`  totals: ${before.summary.posts} → ${summary.posts} posts, ${total(before, "views")} → ${summary.engagement.views} views, ${total(before, "likes")} → ${summary.engagement.likes} likes, ${total(before, "repliesFromOthers")} → ${summary.engagement.repliesFromOthers} replies from others`);
+  if (out.length === 2 && before.summary.posts === summary.posts && total(before, "views") === summary.engagement.views) {
+    out.splice(1, 1, "  nothing changed");
+  }
+  console.log(out.join("\n"));
+}

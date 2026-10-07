@@ -57,11 +57,11 @@ question about them is answered from a file and not from memory:
 | Platform | Read | Kept current by |
 |---|---|---|
 | YouTube (@ChanMeng666) | `youtube/channel.yaml` (+ the gitignored `channel.private.yaml`) | Hand, after each change in Studio |
-| X (@chanmeng666) | `x/account.yaml`, then `x/posts.yaml` (every post; its `summary` block first) | A browser capture, then `npm run build:x`; `npm run check:x` fails when they disagree. Procedure: `x/README.md` |
+| X (@chanmeng666) | `x/account.yaml`, then `x/posts.yaml` (every post; its `summary` block first) | The `x-sync` skill: a browser capture, then `npm run build:x`; `npm run check:x` fails when they disagree |
 | LinkedIn (chanmeng666) | `linkedin/account.yaml`, then `linkedin/posts.yaml` (`summary`, then one line per post); full text in `linkedin/posts/<year>.yaml`; impressions in the gitignored `linkedin/posts.private.yaml` | A browser capture, then `npm run build:linkedin-register`; `npm run check:linkedin-register` fails when they disagree. Procedure: `linkedin/README.md` |
 | LinkedIn, the ArchCanvas company page | `linkedin/company/archcanvas/account.yaml`, then `posts.yaml` beside it | The same capture and build as her profile; no impressions (LinkedIn's feed does not carry them for a page) |
 
-On 2026-10-07 the X account stood at 50 posts in 18 live threads, 4 followers, with a new intro thread posted and pinned that day and one post deleted. The six observations made that day are settled: `x/account.yaml` › `openItems`. Posts
+On 2026-10-08 the X account stood at 47 posts in 17 live threads, 4 followers; a new intro thread was posted and pinned on 2026-10-07, and the old one and one other post are gone. The six observations made that day are settled: `x/account.yaml` › `openItems`. Posts
 are Chan's to edit, delete or pin: the register's `flags` and `openItems` are
 observations for her, never instructions.
 

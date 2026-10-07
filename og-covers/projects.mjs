@@ -87,8 +87,10 @@ export const projects = [
     tagline: "Turn your Suno tracks into dynamic GitHub README cards.",
     bg: "#0A0A0F",
     accent: "#8B5CF6",
-    tileBg: "#FFFFFF", // colorful transparent logo — pops on a white tile
-    logo: "apps/web/public/logo.svg",
+    tileBg: "#FFFFFF", // bare ink mark on transparency — needs the white tile
+    // Not apps/web/public/logo.svg: since 2026-10-07 that is the mark on its own
+    // dark tile (favicon / README), which would nest a tile inside this one.
+    logo: "docs/logo-mark.svg",
     logoPad: true,
     framework: "app",
     metaFile: "apps/web/app/layout.tsx",

@@ -73,12 +73,16 @@ Rules:
 
 ### Refreshing the register
 
+**Use the `linkedin-sync` skill** (`.claude/skills/linkedin-sync/`): ask Claude Code to "sync my
+LinkedIn posts". It carries these steps, a script that saves the capture, and the things that
+went wrong before. The steps, for reference:
+
 There is no API key in this repo and none is needed: the read happens in Chan's own signed-in
 browser, and everything after that is a pure function of files.
 
 1. Open the page signed in as her (Claude in Chrome, a new tab):
    `https://www.linkedin.com/in/chanmeng666/recent-activity/all/` for the profile,
-   `https://www.linkedin.com/company/archcanvas/posts/?feedView=all` for the company page. The
+   `https://www.linkedin.com/company/archcanvas/posts/?feedView=all&viewAsMember=true` for the company page. The
    snippet reads which one it is from the address.
 2. Run [`capture/snippet.js`](./capture/snippet.js) in the page. It asks LinkedIn's web API for
    the activity feed twenty updates at a time, pausing between pages (about a minute for 320

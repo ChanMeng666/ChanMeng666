@@ -544,6 +544,10 @@ function buildRegister(base) {
         `${summary.firstPost} → ${summary.lastPost} (capture ${capture.capturedAt})`,
     );
     for (const n of notes) console.log(at(`  note: ${n}`));
+    // A post nobody has tagged yet: add its line to curation.yaml.
+    for (const p of live.filter((p) => !curation[p.id])) {
+      console.log(`  untagged: "${p.id}" (${p.posted}) ${firstLine(p.text, 80)}`);
+    }
     for (const d of drift) console.error(`  DRIFT: ${d}`);
   };
 

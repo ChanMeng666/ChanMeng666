@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-10-07.** Read this first. It is the short, dated answer to "what is
+**As of 2026-10-08.** Read this first. It is the short, dated answer to "what is
 true right now and what has Chan already decided", so that nobody re-asks her or
 re-argues a settled point. It carries decisions and pointers, not the data:
 facts live in `data/profile/`, repo topology in `docs/ecosystem/lineage.yaml`,
@@ -51,17 +51,31 @@ rule; read it before touching a display list, a CV or LinkedIn copy.
 
 ## Platform registers
 
-Two of Chan's platforms are recorded in this repo as they stand, so that a
+Three of Chan's platforms (four pages) are recorded in this repo as they stand, so that a
 question about them is answered from a file and not from memory:
 
 | Platform | Read | Kept current by |
 |---|---|---|
 | YouTube (@ChanMeng666) | `youtube/channel.yaml` (+ the gitignored `channel.private.yaml`) | Hand, after each change in Studio |
 | X (@chanmeng666) | `x/account.yaml`, then `x/posts.yaml` (every post; its `summary` block first) | A browser capture, then `npm run build:x`; `npm run check:x` fails when they disagree. Procedure: `x/README.md` |
+| LinkedIn (chanmeng666) | `linkedin/account.yaml`, then `linkedin/posts.yaml` (`summary`, then one line per post); full text in `linkedin/posts/<year>.yaml`; impressions in the gitignored `linkedin/posts.private.yaml` | A browser capture, then `npm run build:linkedin-register`; `npm run check:linkedin-register` fails when they disagree. Procedure: `linkedin/README.md` |
+| LinkedIn, the ArchCanvas company page | `linkedin/company/archcanvas/account.yaml`, then `posts.yaml` beside it | The same capture and build as her profile; no impressions (LinkedIn's feed does not carry them for a page) |
 
 On 2026-10-07 the X account stood at 50 posts in 18 live threads, 4 followers, with a new intro thread posted and pinned that day and one post deleted. The six observations made that day are settled: `x/account.yaml` › `openItems`. Posts
 are Chan's to edit, delete or pin: the register's `flags` and `openItems` are
 observations for her, never instructions.
+
+On 2026-10-07 the LinkedIn account stood at 285 posts and 33 plain reposts since
+2023-12, and 6,452 followers. Chan delegated the decisions on what was noticed
+that day to Claude on 2026-10-08: impressions stay in gitignored files, the
+follower figure was raised to 6,452 on every surface that quotes it, and every
+post was read and tagged with a topic and its projects
+(`linkedin/curation.yaml`). One observation stays open, because what she posts
+is hers: `linkedin/account.yaml` › `openItems`. The profile copy is a separate
+matter and stays in `data/profile/70-linkedin.yaml`.
+
+On 2026-10-08 the ArchCanvas company page stood at eight posts since 2026-07-23
+and 11 followers.
 
 ## What the README shows today
 
@@ -91,7 +105,7 @@ secondary, 67 archive); 11 showcase items; 13 product-film rows.
   closed: Chan turned down the Google Jobs MCP Server as a substitute on
   2026-10-07, because a second MCP tile beside Google News is redundant. The
   chapter's closing quote now has page 13 to itself; still 22 pages.
-- All three were rebuilt and the site synced on 2026-10-07 (`PREVIEW_V` 19).
+- All three were rebuilt and the site synced on 2026-10-08 (`PREVIEW_V` 20), for the LinkedIn follower figure in the designed CV's header.
 
 ## Every active repo has been judged
 

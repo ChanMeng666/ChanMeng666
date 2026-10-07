@@ -1,0 +1,60 @@
+# =============================================================================
+# LinkedIn page register — linkedin.com/company/archcanvas
+# =============================================================================
+# The company page of ArchCanvas, the product Chan founded
+# (projects[].id `archcanvas` in data/profile/). She is its admin and its only
+# author. How it stands as a publishing surface: what the page says, its reach,
+# how it has been run, and what was noticed at the last capture.
+#
+# Hand-maintained: update it after every capture.
+# `npm run build:linkedin-register` compares the `account:` block with
+# capture/latest.json in this folder and fails when they disagree. Every post
+# is in posts.yaml beside this file. Her own profile is one level up:
+# linkedin/account.yaml.
+#
+# `followers` is recorded at its historical maximum and never lowered.
+#
+# This repo is public. Nothing private belongs here: no page analytics, no
+# visitor or follower lists, no admin inbox.
+# =============================================================================
+
+account:
+  handle: archcanvas
+  url: https://www.linkedin.com/company/archcanvas/
+  postsUrl: https://www.linkedin.com/company/archcanvas/posts/?feedView=all
+  asOf: "2026-10-08"
+  projectId: archcanvas
+  displayName: "ArchCanvas"
+  headline: "Describe your build. Get a floor plan you can act on."     # the page's tagline
+  website: https://archcanvas.uk
+  location: "Auckland, NZ"
+  admin: linkedin.com/in/chanmeng666
+  counts:
+    followers: 11            # historical maximum; never lower it
+
+# -----------------------------------------------------------------------------
+# How the page has been run (facts from posts.yaml › summary; rebuild that file
+# rather than editing numbers here).
+# -----------------------------------------------------------------------------
+history:
+  - { period: "2026-07", note: "First post on 2026-07-23: what ArchCanvas is and what it does not claim." }
+  - { period: "2026-08", note: "One post: the West Wing's first floor drawn in ArchLang, about the curved wall." }
+  - { period: "2026-09", note: "Six posts between the 21st and the 28th: three films and three example plans (garden office, three-bed house, studio loft)." }
+
+# -----------------------------------------------------------------------------
+# What was noticed on 2026-10-08, when the register was first built. These are
+# observations for Chan, not instructions: what is posted, edited or deleted on
+# the page is hers to decide. `status`: open (no decision yet) | done |
+# standing (a rule from now on) | hers (only she can do it on LinkedIn).
+# -----------------------------------------------------------------------------
+openItems:
+  - id: reach-comes-through-her-profile
+    what: "The page has 11 followers; her profile has 6,452. Four of the eight page posts were passed on from her profile (three reshares with her own words, one plain repost)."
+    status: open
+  - id: no-post-since-september
+    what: "The last page post is dated 2026-09-28."
+    status: open
+  - id: page-impressions-not-captured
+    what: "LinkedIn's feed carries impression counts for a member's own posts but not for a page's, so this register has reactions, comments and reposts only."
+    note: "The page's admin analytics has them. Reading it would be a separate capture and its figures would stay local, like the profile's."
+    status: open

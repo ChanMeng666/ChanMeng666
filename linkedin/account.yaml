@@ -1,0 +1,74 @@
+# =============================================================================
+# LinkedIn account register — linkedin.com/in/chanmeng666
+# =============================================================================
+# How the account stands as a publishing surface: its reach, how it has been
+# run, and what was noticed at the last capture. Hand-maintained: update it
+# after every capture. `npm run build:linkedin-register` compares the
+# `account:` block with linkedin/capture/latest.json and fails when they
+# disagree, so this file cannot quietly go stale.
+#
+# This file does not repeat the profile copy. The headline, About, Experience
+# and the other sections are in data/profile/70-linkedin.yaml (generated views:
+# linkedin/linkedin-*.md). Every post is in linkedin/posts.yaml.
+#
+# `followers` is recorded at its historical maximum and never lowered.
+#
+# This repo is public. Nothing private belongs here: no messages, no drafts, no
+# analytics, no connection list. Impressions are in the gitignored
+# linkedin/posts.private.yaml.
+# =============================================================================
+
+account:
+  handle: chanmeng666
+  url: https://www.linkedin.com/in/chanmeng666/
+  activityUrl: https://www.linkedin.com/in/chanmeng666/recent-activity/all/
+  asOf: "2026-10-07"
+  displayName: "Chan Meng"
+  headline: "I help founders and teams ship AI agents that survive production | Founder, ArchCanvas + ArchLang | AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Auckland, NZ"
+  profileCopy: data/profile/70-linkedin.yaml      # the rest of what the profile says
+  counts:
+    followers: 6452          # historical maximum; never lower it
+  relatedPages:
+    - { name: ArchCanvas, kind: company page, register: linkedin/company/archcanvas/, note: "Its posts are in its own register, not this one." }
+
+# -----------------------------------------------------------------------------
+# How the account has been run (facts from linkedin/posts.yaml › summary;
+# rebuild that file rather than editing numbers here).
+# -----------------------------------------------------------------------------
+history:
+  - { period: "2023-12 → 2024-06", note: "Two posts." }
+  - { period: "2024-07 → 2024-12", note: "The busiest stretch by volume: 102 posts, up to 28 a month. 47 are link cards, 38 carry images. Median one reaction a post." }
+  - { period: "2025", note: "122 posts, heaviest in March (22): 45 link cards, 38 with images, 17 native videos. Median seven reactions a post. The posts with the most reactions are new-position announcements and photos from events." }
+  - { period: "2026-01 → 2026-10", note: "59 posts, two to twelve a month. 24 are reshares: her own words above someone else's post. Median ten reactions a post, the highest of any year." }
+
+# -----------------------------------------------------------------------------
+# What was noticed on 2026-10-07, when the register was first built, and what
+# was decided. Chan delegated the four decisions to Claude on 2026-10-08 ("make
+# the best decision, then carry on"), so each `decision` is Claude's and she
+# may overrule it. `status`: open | done | standing (a rule from now on) |
+# hers (only she can do it on LinkedIn).
+#
+# Still hers and never delegated by this: editing or deleting a post, and
+# anything posted in her name without her seeing the exact text first.
+# -----------------------------------------------------------------------------
+openItems:
+  - id: impressions-stay-local
+    what: "Impressions are shown to the author only, and this repo is public."
+    decision: "They stay out of every tracked file: capture/latest.private.json and posts.private.yaml are gitignored, as the X register keeps analytics out. Written into linkedin/README.md."
+    status: standing
+  - id: followers-ahead-of-profile-data
+    what: "LinkedIn showed 6,452 followers; data/profile/00-basics.yaml › reach recorded 6,232 (2026-09-24)."
+    decision: "Raised to 6,452 under the historical-maximum rule: the shard, the designed CV's header, the brand-system page and chanmeng.org. CVs rebuilt and the site synced on 2026-10-08."
+    status: done
+  - id: posts-untagged
+    what: "No post had a `topic`, and `projectIds` was found by rule for 35 of 285 posts."
+    decision: "All 285 posts read and tagged in linkedin/curation.yaml (topic for every post, projectIds for 91). posts.yaml › summary now has byTopic and a by-project count that means something."
+    status: done
+  - id: own-products-rarely-posted
+    what: "ArchCanvas or ArchLang is the subject of three of 285 posts (2026-07-23, 2026-08-26, 2026-09-21), each a reshare of the ArchCanvas company page. docs/STATE.md lists them as the product she keeps developing."
+    decision: "Recorded, with the page itself now in its own register (linkedin/company/archcanvas/). What to post is hers."
+    status: open
+  - id: retired-surfaces-still-linked
+    what: "Posts from before 2026-07 link the surfaces retired since: six mention a podcast and three link Medium."
+    decision: "Keep them. A timeline is a dated record, the same reasoning as the Seismophone threads on X. No new posts point at the retired surfaces."
+    status: done

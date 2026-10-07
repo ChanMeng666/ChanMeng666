@@ -374,6 +374,13 @@ families:
       - {date: "2024-11-27", event: "image-generator created (Together AI, Mondrian UI); later Vercel-to-Cloudflare pivot + credits/Stripe SaaS layer", repos: [ChanMeng666/image-generator]}
       - {date: "2024-12-12", event: interactive-story-generator created (Gradio on HF Spaces), repos: [ChanMeng666/interactive-story-generator]}
       - {date: "2024-12-22", event: emoji-story-generator created (Streamlit on HF Spaces; later Llama-3.1-8B via HF Inference Providers), repos: [ChanMeng666/emoji-story-generator]}
+  - id: music-videos
+    entity: personal
+    name: Music videos drawn by code
+    summary: "Chan's own music videos (her statement, 2026-10-07): films for her own songs in which every frame is drawn by code and rendered with headless Chrome and ffmpeg. Two private repos created the same day, each with a v1.0.0 release holding the finished films. They share a method, not code: one is built on external mg-styles-15, the other on external Lemo-Opuscar. Not promo films and not tied to any product."
+    timeline:
+      - {date: "2026-10-07", event: "anti-marriage-universe-mv created with its v1.0.0 release (three films for the album Anti-Marriage Universe)", repos: [ChanMeng666/anti-marriage-universe-mv]}
+      - {date: "2026-10-07", event: "october-rain-february-line-mv created with its v1.0.0 release (two films)", repos: [ChanMeng666/october-rain-february-line-mv]}
   - id: personal-nextjs-apps
     entity: personal
     name: Personal Next.js web apps (relationship / job / library / email tools)
@@ -593,7 +600,11 @@ repos:
   - {repo: ChanMeng666/podcast-app-prototype, family: design-experiments, entity: personal, role: prototype, visibility: private, archived: true, catalogId: podcast-app-prototype, localFolder: null, created: "2025-08-15", liveUrls: [], oneLine: High-fidelity iOS-style mental-wellness podcast app prototype, chanCommitShare: {pct: 100, chan: 13, humans: 13, all: 15}, confidence: high}
   - {repo: ChanMeng666/flip-book-template, family: design-experiments, entity: personal, role: template, visibility: public, archived: false, catalogId: flip-book-template, localFolder: null, created: "2026-01-03", liveUrls: [https://chanmeng666.github.io/flip-book-template/], oneLine: "Config-driven page-flip e-book template; generic and standalone", positioning: "Finished generic e-book template", stage: done, showcase: listed, chanCommitShare: {pct: 100, chan: 30, humans: 30, all: 30}, confidence: high}
   - {repo: ChanMeng666/perfume_obj, family: design-experiments, entity: personal, role: experiment, visibility: private, archived: true, catalogId: perfume-3d-viewer, localFolder: null, created: "2026-02-21", liveUrls: [], oneLine: Three.js viewer for a Blender OBJ of Perfume; catalog id differs from repo name, chanCommitShare: {pct: 100, chan: 7, humans: 7, all: 7}, confidence: high}
+  - {repo: ChanMeng666/october-rain-february-line-mv, family: music-videos, entity: personal, role: music-video, visibility: private, archived: false, catalogId: october-rain-february-line-mv, localFolder: october-rain-february-line-mv, created: "2026-10-07", liveUrls: [], oneLine: "Two code-drawn music videos for Chan's own songs: a cel film (A Drizzle in October) and a one-line film (February, on an Extended Line)", positioning: "Chan's own music videos (her statement, 2026-10-07); recorded in the database at her request", stage: done, showcase: hidden, chanCommitShare: {pct: 100, chan: 2, humans: 2, all: 2}, confidence: high}
+  - {repo: ChanMeng666/anti-marriage-universe-mv, family: music-videos, entity: personal, role: music-video, visibility: private, archived: false, catalogId: anti-marriage-universe-mv, localFolder: anti-marriage-universe-mv, created: "2026-10-07", liveUrls: [], oneLine: "Three code-drawn music videos for Chan's album Anti-Marriage Universe: Warrior Ah Hua, Drifter Ah Fa, The Best Strangers", positioning: "Chan's own music videos (her statement, 2026-10-07); recorded in the database at her request", stage: done, showcase: hidden, chanCommitShare: {pct: 100, chan: 1, humans: 1, all: 1}, confidence: high}
 relations:
+  - {from: ChanMeng666/october-rain-february-line-mv, type: extends, to: "external:Vincentwei1021/mg-styles-15", evidence: "CREDITS.md: production method, harness/render.mjs and lib/cel-engine.js are from mg-styles-15, styles 05 (cel / line boil) and 02 (line animation), MIT"}
+  - {from: ChanMeng666/anti-marriage-universe-mv, type: depends-on, to: "external:lemomo-ai/lemo-opuscar", evidence: "README: each film uses a visual style from the Lemo-Opuscar style library, engine modules are copied from it (MIT) and the build needs a local clone of it"}
   - {from: ChanMeng666/archcanvas, type: depends-on, to: ChanMeng666/archlang, evidence: package.json @chanmeng666/archlang (docs/ecosystem yaml; shard cites ^1.18.0)}
   - {from: ChanMeng666/archlang, type: powers, to: ChanMeng666/archcanvas, evidence: ArchLang compiler is the plan engine; replaced the freehand engine 2026-06-25}
   - {from: archcanvas/archcanvas, type: companion-of, to: ChanMeng666/archcanvas, evidence: public product home; the app source stays private}

@@ -206,30 +206,31 @@
   pagebreak()
 }
 // ── pp8–13: Chapter 3 — What I Build ─────────────────────────────────────────
-// Eleven systems as uniform product tiles, two per page (rebuilt 2026-10-02 from
+// Ten systems as uniform product tiles, two per page (rebuilt 2026-10-02 from
 // Chan's picks). Two kinds, told apart by the violet "For <Org>" line that only
 // client tiles carry: her own products (ArchCanvas, ArchLang, echook, Google
-// News MCP, Google Jobs MCP, a11y-loop, the teaching platform) and systems she built
+// News MCP, a11y-loop, the teaching platform) and systems she built
 // for organisations (GAVIGO IRE, She Sharp, FemTech Weekend, Eatropolis).
 // Page map DETERMINISTIC (6 pagebreaks → exactly pp8–13): p8 opener + ArchCanvas
 // + ArchLang; p9 GAVIGO + She Sharp; p10 FemTech Weekend + Eatropolis (client
-// pairs); p11 echook + Google News MCP; p12 Google Jobs MCP + a11y-loop; p13 the
-// teaching platform + the closing pull-quote. Copy anchors + URLs verified
+// pairs); p11 echook + Google News MCP; p12 a11y-loop + the teaching platform; p13 the
+// chapter's closing pull-quote on a page of its own. Copy anchors + URLs verified
 // against data/profile/20–23-projects*.yaml; every number is in those shards.
 // 2026-10-07: the Seismophone tile was replaced by Chromaflow (gradient-svg-generator;
 // not css-tower-defense, which is itself due to be archived).
 // Seismophone is pending archive and is off every visitor-facing surface (Chan's
 // call); the substitute was Claude's pick, delegated — do not put Seismophone back.
 // 2026-10-07, later the same day: Chromaflow in turn left every visitor-facing
-// surface (Chan's call) and its tile became the Google Jobs MCP Server, again
-// Claude's pick, delegated. It and the Google News server are two independent
-// products: never describe one as a part of the other. Do not put Chromaflow back.
+// surface (Chan's call). Its tile was first given to the Google Jobs MCP Server
+// and Chan removed that too: with the Google News server already here, a second
+// MCP tile is redundant. The slot stays EMPTY — ten tiles, six of her own and
+// four for organisations. Do not put Chromaflow or a second MCP server back.
 // Red lines: no pricing; no commit-count/solo-% dev-stat bragging (the She Sharp
 // 1,549 / 13.3-month figures live on the career pages, not here).
 #let build-logo-h = 160pt
 #let x-build() = {
   chapter-opener("3", "What I Build",
-    kicker: [The largest chapter — because the work is the argument. Eleven systems: seven products of my own and four I built for organisations. Every name is a link you can open.])
+    kicker: [The largest chapter — because the work is the argument. Ten systems: six products of my own and four I built for organisations. Every name is a link you can open.])
   block(above: 0pt, below: 22pt, {
     set par(leading: leading-lead-x, justify: false)
     text(size: size-body-x, fill: ink)[
@@ -292,29 +293,24 @@
     "https://github.com/ChanMeng666/server-google-news", "github.com/ChanMeng666/server-google-news", logo-h: build-logo-h)
   v(1fr)
   pagebreak()
-  // p12 — Google Jobs MCP + a11y-loop
-  v(1fr)
-  product-tile("/public/brands/server-google-jobs.svg", [Google Jobs MCP Server],
-    [Lets AI assistants such as Claude search Google job listings in English, Chinese, Japanese, and Korean. Started 36 days after the Model Context Protocol launched — early enough that the founders of two major MCP catalogs contributed code to it.],
-    [A TypeScript server for the Model Context Protocol, published on npm and listed across MCP catalogs. Open source under MIT.],
-    "https://github.com/ChanMeng666/server-google-jobs", "github.com/ChanMeng666/server-google-jobs", logo-h: build-logo-h)
+  // p12 — a11y-loop + the teaching platform
   v(1fr)
   product-tile("/public/brands/a11y-loop-logo.svg", [a11y-loop],
     [Makes AI coding agents write accessible interfaces by default, checks them in a real browser, and says plainly what it could not check.],
     [A Claude Code skill and an npm CLI running Playwright and axe-core 4.12 against WCAG 2.2 AA. Open source under MIT.],
     "https://github.com/ChanMeng666/a11y-loop", "github.com/ChanMeng666/a11y-loop", logo-h: build-logo-h)
   v(1fr)
-  pagebreak()
-  // p13 — teaching platform + the chapter's closing pull-quote
-  v(0.6fr)
   product-tile("/public/brands/ai-programming-logo.svg", [AI Programming Education Platform],
     [A public site where beginners learn to build software with AI, with three years of cohorts kept side by side and an in-site AI tutor that answers from each class's own lessons.],
     [Docusaurus in English and 简体中文, with a retrieval-based tutor on Cloudflare Workers; five course versions online, three of them running in 2026.],
     "https://programming.chanmeng.org/", "programming.chanmeng.org", logo-h: build-logo-h)
   v(1fr)
+  pagebreak()
+  // p13 — the chapter's closing pull-quote
+  v(1fr)
   pull-quote(
     [Precise artifacts over pretty pictures. Every one of these you can open and try — that's the whole argument.])
-  v(0.6fr)
+  v(1.3fr)
   pagebreak()
 }
 

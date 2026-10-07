@@ -88,7 +88,7 @@ no-duplicates rule in MANIFEST.md.
 
 ### 2b. Product logos → live app screenshots
 
-Chapter 3 ("What I Build", **pp8-13**) was rebuilt 2026-10-02 as **eleven uniform
+Chapter 3 ("What I Build", **pp8-13**) was rebuilt 2026-10-02 as eleven and has stood at **ten since 2026-10-07**: uniform
 standard `product-tile`s, two per page** (seven Chan-owned products, four systems
 built for organisations — the four client tiles carry a violet "For <Org>" line).
 Every tile's fixed logo box (`build-logo-h` = 160pt, `contain` fit on the cream

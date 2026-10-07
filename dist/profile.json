@@ -7706,6 +7706,117 @@
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "october-rain-february-line-mv",
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-10-07",
+      "name": "October Rain · February Line — two code-drawn music videos",
+      "category": "creative",
+      "tagline": "Two music videos for Chan's own songs, drawn entirely by code: a hand-inked cel film and a one-line animation, rendered frame by frame with headless Chrome and ffmpeg.",
+      "roles": [
+        "Director",
+        "Creative Coder",
+        "Songwriter"
+      ],
+      "techStack": [
+        "JavaScript (Canvas 2D)",
+        "Headless Chrome (puppeteer-core)",
+        "ffmpeg",
+        "Python",
+        "faster-whisper",
+        "simplex-noise",
+        "Claude Code"
+      ],
+      "keywords": [
+        "Music video drawn by code",
+        "Cel animation with line boil",
+        "One-continuous-line animation",
+        "Deterministic frame-by-frame rendering",
+        "Pinyin-aware lyric alignment",
+        "Creative coding"
+      ],
+      "startDate": "2026-10",
+      "metrics": [
+        {
+          "label": "Films",
+          "value": "2",
+          "note": "《十月的微雨》 A Drizzle in October (5:24, 24 fps, animated on twos) and 《二月的延长线》 February, on an Extended Line (5:14, 30 fps); both 1920×1080 H.264"
+        },
+        {
+          "label": "Release",
+          "value": "v1.0.0",
+          "note": "2026-10-07, on the private repository"
+        }
+      ],
+      "publicSummary": "Two music videos for two of my own songs, 《十月的微雨》 (*A Drizzle in\nOctober*) and 《二月的延长线》 (*February, on an Extended Line*). Every\nframe is drawn by code: a web page draws frame `t`, headless Chrome\ncaptures it, and ffmpeg adds the song. No image or video generation\nmodel and no footage is used for the picture. The first film is cel\nanimation with ink lines redrawn every second frame; the second is one\ncontinuous line that draws a single day. The songs were made with\nSuno, and the production method and two engine files come from the\nopen-source mg-styles-15 library (MIT).\n",
+      "narrative": {
+        "impactHeadline": "Two music videos for my own songs, drawn entirely by code — a hand-inked cel film and a single continuous line — with every frame a pure function of time.",
+        "businessLogic": "A personal creative project, not a product. Each film is one page\nthat exposes `window.renderAt(t)`; nothing depends on wall-clock\ntime, randomness is hashed from seeds and motion is closed-form, so\nany frame can be drawn alone and the render is repeatable. Timing\ncomes from the song itself: faster-whisper gives word timestamps\nfor the sung vocal, and an alignment step matches the known lyric\nsheet to that transcript by pinyin, so a homophone error in the\ntranscript still lands on the right character. In the cel film no\nface is ever drawn, a rule taken from one line of the lyric; in the\nline film the two visible lines are parallel offsets of one path,\nwhich is why they can never touch.\n",
+        "myRole": "The songs, the treatment of both films, and the drawing and\nanimation code for each film are mine, built with Claude Code. The\nproduction method, the frame renderer and the cel brush engine are\nfrom mg-styles-15 by Vincentwei1021 (styles 05 and 02, MIT); paper\ntextures and fonts are openly licensed and listed in the repo's\nCREDITS file.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
+    },
+    {
+      "id": "anti-marriage-universe-mv",
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-10-07",
+      "name": "Anti-Marriage Universe (反婚宇宙) — three code-drawn music videos",
+      "category": "creative",
+      "tagline": "Three music videos for Chan's album 《反婚宇宙》: one blind date seen three ways, in red paper-cut, 80s cel anime and risograph print, every frame drawn in code.",
+      "roles": [
+        "Director",
+        "Creative Coder",
+        "Songwriter"
+      ],
+      "techStack": [
+        "JavaScript (Canvas 2D)",
+        "Lemo-Opuscar style library",
+        "Headless Chromium",
+        "ffmpeg",
+        "Python",
+        "librosa",
+        "faster-whisper",
+        "Claude Code"
+      ],
+      "keywords": [
+        "Music video drawn by code",
+        "Paper-cut animation",
+        "80s cel anime",
+        "Risograph print look",
+        "Beat-grid editing",
+        "Creative coding"
+      ],
+      "startDate": "2026-10",
+      "metrics": [
+        {
+          "label": "Films",
+          "value": "3",
+          "note": "《战士阿花》 Warrior Ah Hua (3:59, Red Paper-cut), 《浪子阿发》 Drifter Ah Fa (4:55, 80s Cel Anime), 《最佳路人》 The Best Strangers (5:55, Risograph Print); all 1920×1080, 24 fps, mastered to −14 LUFS"
+        },
+        {
+          "label": "Release",
+          "value": "v1.0.0",
+          "note": "2026-10-07, on the private repository"
+        }
+      ],
+      "publicSummary": "Three music videos for my album 《反婚宇宙》 (*Anti-Marriage Universe*),\na trilogy about one blind date in a café seen three times: hers, his,\nand from above. Each film has its own visual style — red paper-cut,\n80s cel anime, risograph print — and every frame is drawn in code,\nwith no video generation and no stock footage. The Chinese lyrics are\nburned in as subtitles. The songs, lyrics and recordings are mine;\nthe films are built on the open-source Lemo-Opuscar style library,\nwhose engine modules (MIT) are credited film by film.\n",
+      "narrative": {
+        "impactHeadline": "One blind date told three times in three visual styles — red paper-cut, 80s cel anime and risograph print — as music videos where every frame is drawn in code.",
+        "businessLogic": "A personal creative project, not a product. Each film is a page\nthat exposes `window.render(t)`, so rendering is deterministic and\nany frame can be drawn alone and in any order. The song is analysed\nfirst: librosa gives a beat grid and faster-whisper gives word\ntimings, which are used for timing only — the official lyric text\nalways wins. Cuts and key actions sit on the beat grid. The song is\nthe whole soundtrack: no voice-over, no added score, no foley. Each\nfilm has a written treatment with three candidate structures, a\nshot list and a cue map.\n",
+        "myRole": "The album (music, lyrics, recordings), the direction and treatment\nof each film, and each film's own source are mine, built with\nClaude Code. The visual styles and the engine modules copied into\neach film come from the Lemo-Opuscar style library (MIT, LemoLab),\nand rendering uses that library's tools; fonts are self-hosted\nsubsets under the SIL Open Font License. Each film's CREDITS file\nlists them.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -13609,6 +13720,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-07T09:03:14.029Z"
+    "buildTimestamp": "2026-10-07T09:15:27.222Z"
   }
 }

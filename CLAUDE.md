@@ -226,7 +226,7 @@ hand-typed facts on a review cadence:
 | `20-projects-flagship.yaml` | projects (flagship band) | 4 | `id` |
 | `21-projects-oss-primary.yaml` | projects (OSS primary band) | 7 | `id` |
 | `22-projects-oss-webapps.yaml` | projects (collapsible: web apps) | 14 | `id` |
-| `23-projects-oss-more.yaml` | projects (AI/creative/ML/branding/games + commissioned) | 84 | `id` |
+| `23-projects-oss-more.yaml` | projects (AI/creative/ML/branding/games + commissioned) | 86 | `id` |
 | `25-contributions.yaml` | openSourceContributions | 23 | `id` |
 | `30-recognition.yaml` | awards, certificates, publications | 7 + 53 + 75 | `title`+`awarder` / `name` |
 | `40-skills.yaml` | skills, domains, languages, interests | 6 + 5 + 4 + 3 | `name` |
@@ -237,9 +237,12 @@ hand-typed facts on a review cadence:
 | `80-events.yaml` | events (offline talks/hackathons/workshops/appearances) | 23 | `id` |
 | `90-meta.yaml` | meta (incl. `meta.x_brand` display config) | — | — |
 
-Counts verified 2026-10-06 (`projects:` totals 109: 4 + 7 + 14 + 84; by tier
-7 flagship / 8 primary / 27 secondary / 67 archive). One of them,
-`genlab-career-academy`, is database-only, and `sunostats` (Seismophone) is pending
+Counts verified 2026-10-07 (`projects:` totals 111: 4 + 7 + 14 + 86; by tier
+7 flagship / 8 primary / 29 secondary / 67 archive). Three of them are
+database-only (`genlab-career-academy` and the two music-video entries,
+`october-rain-february-line-mv` and `anti-marriage-universe-mv`),
+`gradient-svg-generator` (Chromaflow) is off every visitor-facing surface, and
+`sunostats` (Seismophone) is pending
 archive and off every visitor-facing surface: read the guard comment above each
 before touching any display list, CV or LinkedIn copy. Recount with `loadProfile()`
 rather than trusting this table after a wave of edits.

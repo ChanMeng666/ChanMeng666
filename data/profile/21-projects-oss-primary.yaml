@@ -1109,7 +1109,6 @@ projects:
     repoUrl: https://github.com/ChanMeng666/femtracker-agent
     logo: /public/brands/femtracker.svg
     extraLinks:
-      - { label: "Demo video", url: "https://youtu.be/VVCQKmeEtRs" }
       - { label: "CopilotKit PR #2068", url: "https://github.com/CopilotKit/CopilotKit/pull/2068" }
     techStack: ["Next.js 15", "React 19", TypeScript, CopilotKit, "Python 3.12", LangGraph, Supabase, Redis]
     status: archived
@@ -1175,8 +1174,7 @@ projects:
         recognition of production-grade quality from the framework's
         own maintainers, not just a self-published demo. The demo
         deployment measured a 95+ Lighthouse score, sub-second TTFB,
-        and 99.9% uptime while it was live. Demo video at the linked
-        YouTube URL. 90 sustained commits.
+        and 99.9% uptime while it was live. 90 sustained commits.
       myRole: |
         Sole author of the agent architecture, the WHO-scoring engine,
         the Supabase schema with Row Level Security, and the CopilotKit

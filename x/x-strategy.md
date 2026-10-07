@@ -88,8 +88,8 @@ The receipts that one person took a product from empty repo to production.
 - "We moved GAVIGO's whole platform from DigitalOcean Kubernetes (Singapore) to
   Google Cloud GKE (Belgium) in a **~30-minute cutover**. Here's the runbook I
   wrote first." (GAVIGO IRE)
-- "**Sub-1ms p50 restore, 84.6% warm-pool hit rate.** How container pre-warming
-  makes a 'tap and it's instantly playing' feed possible." (GAVIGO IRE)
+- "**Keep the next game on standby, activate it as the viewer arrives.** How an
+  orchestrator behind a feed decides what to warm." (GAVIGO IRE)
 - "I led the build of a real member platform for a volunteer-run NZ women-in-STEM
   charity — **84 API routes, a 39-table schema** — to replace the spreadsheets
   they'd outgrown. Thread on the AI matching engine." (She Sharp)

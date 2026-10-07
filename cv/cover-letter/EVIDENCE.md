@@ -73,9 +73,13 @@ Two more habits worth keeping, from the same discipline:
 
 Every number here carries its measurement basis; keep the basis in the sentence.
 
-- Sub-millisecond p50 restore and a 84.6% warm-pool hit rate, measured over 20
-  iterations per path on live Kubernetes — not a local benchmark. — `projects[gavigo-ire]`
-- Zero errors at 100 concurrent WebSocket clients under load test. — `projects[gavigo-ire]`
+- A 78% application-level reduction in startup work and a startup path cut from
+  4.45 s to 1.00 s, measured under controlled conditions in GAVIGO's proof stage —
+  not a production SLA or an end-to-end activation time. — `projects[gavigo-ire]`
+- About 140 ms to restore preserved AI state into a fresh process (controlled
+  proof-stage measurement). — `projects[gavigo-ire]`
+- GAVIGO's figures are these three and only these three. The orchestrator's
+  internal path timings and hit rates are not public figures: do not quote them.
 - A cross-cloud migration from DigitalOcean DOKS to Google Kubernetes Engine in a
   ~30-minute cutover on 2026-03-11, rebuilding registry, ingress, managed
   certificates and WebSocket-aware timeouts across five deployments. — `work[gavigo]`

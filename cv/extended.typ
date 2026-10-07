@@ -247,8 +247,8 @@
   // p9 — client systems: GAVIGO + She Sharp
   v(1fr)
   product-tile("/public/brands/gavigo-mark.svg", [GAVIGO IRE],
-    [The "Instant Reality Exchange": a platform that switches a phone from one app experience to another instantly, built as the founding engineering effort behind a start-up.],
-    [Go and Kubernetes container pre-warming: restores in under 1 ms at the median, with an 84.6% warm-pool hit rate; moved from DigitalOcean to Google Cloud and validated by Google for Startups and NVIDIA Inception.],
+    [The "Instant Reality Exchange": a platform that keeps the next game in a phone feed on standby and activates it as you arrive, built as the founding engineering effort behind a start-up.],
+    [Go and Kubernetes orchestration: in controlled proof-stage tests, 78% less application-level startup work and a startup path cut from 4.45 s to 1.00 s; moved from DigitalOcean to Google Cloud in a 30-minute cutover.],
     "https://ire.gavigo.com/", "ire.gavigo.com", logo-h: build-logo-h,
     client: [For GAVIGO Inc. — Founding Principal Engineer],
     url2: "https://gavigo.com/", linktext2: "gavigo.com")

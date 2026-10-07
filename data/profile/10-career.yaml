@@ -583,13 +583,13 @@ work:
     featured: true
     tier: flagship
     recency: recent
-    lastUpdated: "2026-09-29"
+    lastUpdated: "2026-10-07"
     keywords: [Go, "Kubernetes (GKE)", "React Native", WebSocket, "Redis", "gpt-5.4-mini", "AI orchestration", "Distributed systems", "Founding engineer"]
     narrative:
       impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owned the Intelligence Layer end-to-end (96.5% solo on 471 of 488 non-merge commits) with a contractually protected technical domain."
       companyContext: |
-        GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
-        stage, Istanbul-founded by Saba Gecgil and registered in
+        GAVIGO Inc. is a Delaware-incorporated C-Corp, Istanbul-founded
+        by Saba Gecgil and registered in
         Wilmington, Delaware. Official LinkedIn positioning:
         **"Activation & Execution Layer for Interactive Software"**.
         Consumer-facing mission (from the company's own marketing):
@@ -602,20 +602,22 @@ work:
         makes Instant Reality possible). The current product wedge is
         mobile gaming; the underlying activation engine is platform-
         shaped and applies to any interactive content category where
-        install gap and cold-start latency dominate the funnel. External
-        validation during my tenure: accepted into both **Google for
-        Startups Cloud Program** and **NVIDIA Inception Program**
-        (Feb 2026), and featured publicly by tech-business press
-        (feedvoice.com, *"How GAVIGO Is Ending App Store Friction for
-        Instant Digital Play"*, 2026-02-10).
+        install gap and cold-start latency dominate the funnel. During
+        my tenure GAVIGO joined the **Google for Startups Cloud
+        Program** and the **NVIDIA Inception Program** (Feb 2026) —
+        programme participation, not an endorsement of the product —
+        and was covered by tech-business press (feedvoice.com, *"How
+        GAVIGO Is Ending App Store Friction for Instant Digital
+        Play"*, 2026-02-10).
       mission: |
         Replace the native-app install funnel — discover → app-store
         landing → install → onboard → first interaction — with
-        sub-millisecond intent-to-experience activation. The problem
+        activation inside the feed: the experience is prepared before
+        the viewer arrives, not installed after they ask. The problem
         being solved is industry-wide: cold-start latency, install
         friction, and re-engagement cost on mobile interactive content
-        (games, video, AI experiences) where perception of instantaneity
-        drives engagement.
+        (games, video, AI experiences) where the wait between intent and
+        interaction costs engagement.
       myMandate: |
         Own the Intelligence Layer end-to-end — GAVIGO's term for the
         autonomous, predictive engine that powers Instant Reality
@@ -646,10 +648,12 @@ work:
         and a second engineer, Olga Adam, who joined in June 2026 and owned
         the game-loading adapter architecture.
 
-        Real measured platform performance, from the production benchmark
-        spine: restore path <1 ms p50, cold path ~12 ms p50, 84.6%
-        warm-pool hit rate, 0 errors at 100 concurrent WebSocket clients
-        under load test. Architectural deliverables include the
+        Measured in GAVIGO's proof stage, under controlled conditions:
+        a 78% application-level reduction in startup work, a controlled
+        startup path cut from 4.45 s to 1.00 s, and about 140 ms to
+        restore preserved AI state into a fresh process. These are
+        controlled application-level measurements, not a production SLA
+        or a complete end-to-end activation time. Architectural deliverables include the
         deterministic five-state Activation Spine
         (COLD → READY → ACTIVE → REUSABLE → restore) with atomic Redis
         transitions and proof-signal timestamps; the seven-trigger AI
@@ -664,21 +668,14 @@ work:
         interactive workload platform" with founder-level equity
         participation.
 
-        **External validation during my tenure (Feb 2026 cluster):**
-        the company was accepted into the **Google for Startups Cloud
-        Program** (announced by founder Saba Gecgil) — the partnership
-        that directly enabled the GCP migration I led the following
-        month, and the platform under which the sub-millisecond
-        activation claims are now being validated in production-grade
-        Google infrastructure. The same window brought acceptance into
-        the **NVIDIA Inception Program** (supporting startups building
-        GPU-intensive infrastructure-level technologies), and
-        third-party press coverage at feedvoice.com — *"How GAVIGO Is
-        Ending App Store Friction for Instant Digital Play"*
-        (2026-02-10) — which surfaced GAVIGO's sub-0.2-second
-        end-to-end activation claim, the patented execution-layer IP
-        positioning, and the "Watch and Play era" public narrative the
-        company is operating against. My contractual scope was
+        **Programmes and press during my tenure (Feb 2026).** GAVIGO
+        joined the **Google for Startups Cloud Program** (announced by
+        founder Saba Gecgil), the arrangement under which I led the GCP
+        migration the following month, and the **NVIDIA Inception
+        Program**. Both are programme participation, not endorsements
+        or product validation. Tech-business press covered the company
+        at feedvoice.com — *"How GAVIGO Is Ending App Store Friction
+        for Instant Digital Play"* (2026-02-10). My contractual scope was
         re-amended in the same window (Second Amended and Restated
         Consulting Agreement, Apr 16 2026) to formalise the **Founding
         Principal Engineer, Activation, Execution & AI Systems** title
@@ -687,7 +684,8 @@ work:
         **What it added up to for the product.** Seen from the user's side,
         the work was the mobile application and the creator platform for
         GAVIGO's AI-powered mini-game ecosystem: the feed where games and
-        short videos play instantly, and the profiles, followers and content
+        short videos play in the scroll with no app-store install, and the
+        profiles, followers and content
         overlays creators publish through.
 
         **How the role closed (Sept 2026).** I left GAVIGO in September 2026,
@@ -696,10 +694,9 @@ work:
         alongside me and can speak to the work. The last mandate I was named
         on was the CEO's v1.7 *Activation Platform MVP Build Mandate*
         (2026-08-28), which made me **build lead and Phase 0 owner**; the
-        company filed a USPTO nonprovisional patent on 2026-08-08 covering
-        the activation / execution layer I built. (Application serial
-        deliberately omitted: the filing had not published at time of
-        writing, so the number is GAVIGO's to disclose, not mine.)
+        company has filed patent applications with the USPTO covering
+        the activation / execution layer I built. (The filing details
+        are GAVIGO's to disclose, not mine.)
         The handover needed no handover document, because project context
         had been written into the repository as the work happened rather
         than carried in my head: a 26.6 KB agent operating manual
@@ -732,13 +729,13 @@ work:
         Kubernetes client-go integration that patches deployment replicas
         in real time. Companion services: React + Vite dashboard, React
         Native + Expo 54 mobile build served via nginx, always-warm shared
-        game-server pod baking ~25 FOSS games for zero per-game cold
-        start, Node + Express AI-service pod with gpt-5.4-mini, Phase 6+
+        game-server pod baking ~25 FOSS games so no game needs a cold
+        start of its own, Node + Express AI-service pod with gpt-5.4-mini, Phase 6+
         compute / inference workloads, Redis 7 with allkeys-LRU and a
         400 MB warm-pool budget, optional Postgres 16 for social data.
 
-        Hardest engineering problems solved: (1) Sub-millisecond restore
-        via the Activation Spine state machine with deterministic atomic
+        Hardest engineering problems solved: (1) A restore path through
+        the Activation Spine state machine with deterministic atomic
         transitions, not optimistic ones. (2) Cross-platform state sync
         across MMKV, localStorage, postMessage, and Redis with a single
         canonical source of truth. (3) Async K8s coordination (EndpointSlice

@@ -284,7 +284,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Wilmington, Delaware, United States",
   arrangement: "Remote",
   bullets: (
-    [Owned the Intelligence Layer of an app-activation platform: a Go orchestrator running a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE) — sub-millisecond p50 restore, an 84.6% warm-pool hit rate, zero errors at 100 concurrent WebSocket clients; migrated DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contracts, 471 of 488 commits solo, and live at ire.gavigo.com.],
+    [Owned the Intelligence Layer of an app-activation platform: a Go orchestrator running a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE) — 78% less application-level startup work and a 4.45 s to 1.00 s startup path in controlled proof-stage tests; migrated DigitalOcean to Google Cloud in a 30-minute cutover; promoted from Core Engineer across three contracts, 471 of 488 commits solo, and live at ire.gavigo.com.],
   ),
 )
 

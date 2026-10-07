@@ -80,7 +80,7 @@
     org-url: "https://gavigo.com/",
     dates: "Oct 2025 — Sep 2026",
     location: [Wilmington, Delaware, United States · *Remote*],
-    summary: [Tap a game in a feed and it plays instantly, with no app-store install — built the Intelligence Layer that makes GAVIGO's activation platform hold that promise under load. Go orchestrator: a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE) — *sub-millisecond p50 restore*, an *84.6% warm-pool hit rate*, *zero errors at 100 concurrent WebSocket clients*, and a DigitalOcean → GCP move in a *30-minute cutover*. Built it solo; promoted Core Engineer → Founding Principal across three contracts.],
+    summary: [Scroll a feed and the next game is already on standby, with no app-store install — built the Intelligence Layer behind GAVIGO's activation platform. Go orchestrator: a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE) — in controlled proof-stage tests, *78% less application-level startup work* and a startup path cut from *4.45 s to 1.00 s* (not a production SLA), and a DigitalOcean → GCP move in a *30-minute cutover*. Built it solo; promoted Core Engineer → Founding Principal across three contracts.],
     built: [#link("https://ire.gavigo.com/")[ire.gavigo.com], the live activation platform],
   )
   role-line(

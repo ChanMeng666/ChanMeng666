@@ -24,7 +24,7 @@ The part teams underestimate: retrieval (RAG, pgVector), memory, tool use, evalu
 ## 💻 Full-Stack Foundations
 
 ```
-The agent is never the whole product, so I build the rest of it too — Next.js, TypeScript, Drizzle/Postgres, Stripe, Kubernetes. Voice-first interfaces, bilingual UX and zero-downtime cloud migrations already shipped. GAVIGO IRE runs at p50 < 1 ms activation, validated by Google for Startups + NVIDIA Inception.
+The agent is never the whole product, so I build the rest of it too — Next.js, TypeScript, Drizzle/Postgres, Stripe, Kubernetes. Voice-first interfaces, bilingual UX and zero-downtime cloud migrations already shipped. GAVIGO IRE keeps the next game in a feed on standby and activates it as the viewer arrives.
 ```
 
 ## 🌿 Cultural-First Technology

@@ -68,8 +68,14 @@ const FACTS = [
     rule: /^(\d+)/, cast: "int" },
 
   // — beat 05, range —
-  { key: "gavigo.restoreP50", project: "gavigo-ire", metric: "Restore path p50",
-    rule: /^(<?\s*\d+\s*ms)/, cast: "string" },
+  // RENAMED 2026-10-07 from `gavigo.restoreP50` ("<1 ms"): that figure is the
+  // orchestrator's internal restore-path timing, which GAVIGO does not clear for
+  // public use, and it left the shard. The replacement measures a different thing
+  // (application-level startup work, controlled proof stage), so it gets a new
+  // key rather than a re-pointed old one. A film super that shows it must carry
+  // the words "controlled" and "not a production SLA" on the same card.
+  { key: "gavigo.appLevelReduction", project: "gavigo-ire", metric: "Application-Level Reduction",
+    rule: /^(\d+%) \(controlled proof-stage measurement/, cast: "string" },
   // Was /~(\d+)%/ against "426 (~97%)". The 2026-09-04 refresh restated the
   // same measure — share of NON-MERGE commits — at 471 of 488, and the honest
   // figure has a decimal. Captured as a string so 96.5 is not truncated to 96.

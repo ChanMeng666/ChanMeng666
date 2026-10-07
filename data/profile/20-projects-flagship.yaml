@@ -820,11 +820,11 @@ projects:
     meta:
       x_brand:
         featuredStack: [kubernetes, nvidia, google-cloud, docker, typescript]
-    lastUpdated: "2026-09-04"
+    lastUpdated: "2026-10-07"
     name: GAVIGO IRE
     priority: 3
     category: ai-apps
-    tagline: "Founding-engineer MVP for GAVIGO Inc. (Delaware C-Corp) — the 'Instant Reality Exchange' post-app activation platform with sub-millisecond container pre-warming (p50 <1 ms restore, 84.6% warm-pool hit), AI-orchestrated Kubernetes scaling, and a TikTok-style mobile feed; validated by Google for Startups + NVIDIA Inception (Feb 2026) after a DOKS→GKE production migration"
+    tagline: "Founding-engineer MVP for GAVIGO Inc. (Delaware C-Corp) — the 'Instant Reality Exchange' activation and execution layer: an AI orchestrator keeps the next game in a TikTok-style feed on standby and activates it as the viewer arrives, on Kubernetes, with no app-store install; shipped to production and migrated DOKS→GKE"
     url: https://ire.gavigo.com/
     # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     extraLinks:
@@ -859,7 +859,7 @@ projects:
     keywords:
       - Post-App World
       - Instant Reality Switching
-      - "Sub-millisecond activation"
+      - "Activation and execution layer"
       - "AI orchestration"
       - "Kubernetes container pre-warming"
       - "Distributed real-time systems"
@@ -868,9 +868,14 @@ projects:
     metrics:
       - { label: "Total commits",       value: "488 non-merge" }
       - { label: "Chan's commits",      value: "471 (96.5% of non-merge)" }
-      - { label: "Restore path p50",    value: "<1 ms" }
-      - { label: "Cold path p50",       value: "~12 ms" }
-      - { label: "Warm pool hit rate",  value: "84.6%" }
+      # The ONLY performance figures GAVIGO clears for public use, under
+      # GAVIGO's own labels. Each must travel with the boundary note below it.
+      # The orchestrator's internal path timings and hit rates are not public
+      # figures and are deliberately absent from this entry: do not re-add them.
+      - { label: "Application-Level Reduction",        value: "78% (controlled proof-stage measurement: same workload and output, less application-level work)" }
+      - { label: "Controlled Startup Path Comparison", value: "4.45s → 1.00s (controlled proof-stage measurement)" }
+      - { label: "Preserved AI State Restore",         value: "~140ms (preserved AI state restored into a fresh process; controlled proof-stage measurement)" }
+      - { label: "Measurement boundary",               value: "Real, controlled application-level measurements, not a production SLA or a complete end-to-end activation time" }
       - { label: "Cloud platforms",     value: "DigitalOcean DOKS → Google Cloud GKE" }
       - { label: "Cross-cloud cutover", value: "~30 min downtime (2026-03-11)" }
       - { label: "Games",               value: "23 across 4 studios (+2 ML/compute workloads)" }
@@ -880,23 +885,27 @@ projects:
     publicSummary: |
       GAVIGO IRE is the founding-engineer MVP for GAVIGO Inc., a Delaware
       startup (founder & CEO Saba Gecgil) building a way past the app-install
-      step: scroll a phone feed and tap a game or short video that starts
-      playing instantly, with no download and no loading screen. Behind the
-      feed, an AI scheduler predicts the next tap and pre-warms that content
-      on a Kubernetes cluster, so a chosen game resumes in under a
-      millisecond and, in benchmarks, was already warm 84.6% of the time.
-      Built as the founding-engineer platform — the activation and
-      AI-orchestration systems that make instant play work — deployed to
-      production on Google Cloud after a live migration from DigitalOcean.
+      step: scroll a phone feed and a game plays right in the scroll, with
+      no app-store install. Behind the feed, an AI orchestrator watches
+      every scroll, keeps the next game on standby on a Kubernetes cluster
+      and activates it as the viewer arrives; scroll back and the session
+      is reattached rather than rebuilt. Built as the founding-engineer
+      platform — the activation and AI-orchestration systems behind that
+      feed — deployed to production on Google Cloud after a live migration
+      from DigitalOcean. In GAVIGO's proof stage the work measured a 78%
+      application-level reduction in startup work, a controlled startup
+      path cut from 4.45 s to 1.00 s, and about 140 ms to restore preserved
+      AI state: controlled application-level measurements, not a
+      production SLA or a complete end-to-end activation time.
     narrative:
-      impactHeadline: "Founding-engineer build for GAVIGO, a Delaware startup: tap a game or short video in a phone feed and it plays instantly — no app install, no loading wait. An AI scheduler pre-warms content on Kubernetes, so a tapped game resumes in under 1 ms, already warm 84.6% of the time."
+      impactHeadline: "Founding-engineer build for GAVIGO, a Delaware startup: scroll a phone feed and a game plays right in the scroll, with no app-store install. An AI orchestrator on Kubernetes keeps the next game on standby and activates it as you arrive; scroll back and the session is reattached."
       problem: |
         The native-app paradigm puts a friction tax on every interactive
         digital experience: discover an app → app-store landing page → install
         → onboard → first interaction. By the time the user reaches the thing
         they actually wanted, the moment has passed. For games, video, and
-        AI experiences — where the feeling of instantaneity drives engagement
-        — the install gap is the single largest leak in the funnel. GAVIGO's
+        AI experiences — where the wait between intent and interaction costs
+        engagement — the install gap is the single largest leak in the funnel. GAVIGO's
         thesis, in its own marketing language: we are building the
         "Post-App World," eliminating the friction between user intent and
         digital experience through proprietary "Instant Reality Switching"
@@ -917,7 +926,7 @@ projects:
         presets) at WebSocket broadcast time, and a Phase 11 partner-pilot
         layer adds per-session telemetry and an operator-gated proof report
         for named-partner trials. The ultimate addressable surface is any
-        market where the feeling of instantaneity drives engagement — mobile
+        market where the wait between intent and interaction costs engagement — mobile
         games, short-form video, AI chat, generative content.
       productLogic: |
         A user scrolls a vertical feed; the orchestrator watches focus events
@@ -930,26 +939,27 @@ projects:
         replicas through the K8s client-go API to scale a game container to
         READY before the user taps.
 
-        When the user taps, the experience is already live — either served
-        instantly from a single always-warm shared game-server pod (the
-        ~12 ms "cold" path here is orchestrator overhead, not a real
-        container start) or restored from the Reusable pool of
-        recently-active containers (<1 ms restore path). State survives
+        When the user arrives, the experience has already been prepared —
+        either served from a single always-warm shared game-server pod or
+        restored from the Reusable pool of recently-active containers.
+        (The orchestrator's own path timings are engineering telemetry,
+        not public performance figures, and are not quoted here.) State
+        survives
         across scrolls via a postMessage protocol on web and MMKV storage on
         native; both reconcile against Redis as a single source of truth
         through a deterministic five-state Activation Spine (COLD → READY →
         ACTIVE → REUSABLE → restore). When mobile gaming meets the install
-        gap, the GAVIGO answer is: there is no install gap.
+        gap, the GAVIGO answer is to remove the install step.
       businessLogic: |
-        GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
-        stage, founder Saba Gecgil. The product wedge is mobile gaming
+        GAVIGO Inc. is a Delaware-incorporated C-Corp, founder Saba
+        Gecgil. The product wedge is mobile gaming
         (public tagline: "Skip the Store. Start the Play") — but the
         underlying activation engine is platform-shaped: any interactive
         content category where the install gap or cold-start latency is
         the dominant funnel leak. The defensibility is architectural,
         not feature-level: a proprietary Activation Spine plus a measured
-        sub-millisecond restore path is the kind of capability that
-        compounds rather than decays. GAVIGO frames its architecture
+        restore path is the kind of capability that compounds rather
+        than decays. GAVIGO frames its architecture
         publicly as "Two Pillars": the Technology Platform (CTO-led
         foundation) and the Intelligence Layer (the autonomous predictive
         engine that makes Instant Reality possible). I own the Intelligence
@@ -961,8 +971,8 @@ projects:
         Kubernetes cluster. Companion pods: a React + Vite dashboard, a React
         Native / Expo mobile-web build served from an nginx pod, a single
         always-warm nginx game-server pod baking the 25-entry catalog (23 web
-        games across four studios plus 2 ML/compute workloads) for zero
-        per-game startup latency, an AI-service pod (Node + Express calling
+        games across four studios plus 2 ML/compute workloads) so no game
+        needs a cold start of its own, an AI-service pod (Node + Express calling
         OpenAI `gpt-5.4-mini`, with a simulated-response fallback when no key
         is set) that scales 0→1, Redis 7 (allkeys-LRU eviction, 400 MB
         budget) for warm-pool state and activation metrics, and optional
@@ -983,12 +993,11 @@ projects:
         ClusterIP-behind-Ingress, and a GCP global static IP. All five
         deployments migrated with `strategy: Recreate` to avoid CPU deadlock
         on single-node clusters; total downtime was **~30 minutes**. GCP
-        remains the only production cloud; a separate AWS account (funded by
-        NVIDIA Inception AWS Activate credits, with a live GPU **spot** quota)
-        runs nothing in production and is reserved for short, torn-down
+        remains the only production cloud; a separate AWS account (with a
+        live GPU **spot** quota) runs nothing in production and is reserved for short, torn-down
         inference/runtime experiments.
 
-        Hard problems solved. **Sub-millisecond restore** through a
+        Hard problems solved. **A restore path** through a
         deterministic five-state Activation Spine with atomic Redis
         transitions and phase-by-phase timestamps that prove the decision →
         K8s patch → client-observation chain. **Warm-pool LRU without cascade
@@ -1003,9 +1012,8 @@ projects:
         per-session records joining WebSocket session ↔ user ↔ device ↔
         activation count, typed failure classes, time-to-playable p50/p95, an
         operator-gated proof report, and the project's first CI pipeline (`go
-        build/vet/test -race`, `vite build`, `tsc`). Benchmarks run 20
-        iterations per path on real K8s, validating <1 ms restore p50 against
-        100 concurrent WebSocket clients.
+        build/vet/test -race`, `vite build`, `tsc`). Every activation path
+        is benchmarked on real Kubernetes rather than asserted.
       outcomes: |
         Production-deployed at ire.gavigo.com. First shipped on DigitalOcean
         DOKS (Singapore), then migrated to Google Cloud GKE (Belgium) on
@@ -1013,27 +1021,27 @@ projects:
         partnership came into effect — production-grade expertise demonstrated
         on both clouds. **488 non-merge commits; I authored 471 of them
         (96.5%) across my two git identities**, with a second engineer
-        onboarded in June 2026 and the remainder from the CI bot. Real
-        measured platform metrics post-migration: restore path <1 ms p50,
-        ~12 ms p50 on the orchestrator "cold" path (a genuine 0→1 container
-        start measures ~18 s and is a deliberate Phase 6+ boundary, not the
-        demo path), 84.6% warm-pool hit rate, 0 errors at 100 concurrent
-        WebSocket clients. Catalog: 23 self-hosted games across four studios
+        onboarded in June 2026 and the remainder from the CI bot. Measured
+        in GAVIGO's proof stage, under controlled conditions: a 78%
+        application-level reduction in startup work, a controlled startup
+        path cut from 4.45 s to 1.00 s, and about 140 ms to restore
+        preserved AI state into a fresh process. These are controlled
+        application-level measurements, not a production SLA or a complete
+        end-to-end activation time: infrastructure work such as scheduling,
+        container creation, networking and readiness also affects the full
+        path. Catalog: 23 self-hosted games across four studios
         plus 2 ML/compute workloads and a 197-video bundle. Phase 9
         audience-segmentation and Phase 11 partner-pilot telemetry are live.
-        Pre-Series A; the product is the working artifact for upcoming
-        investor conversations. Role formalized over three contract iterations
+        Role formalized over three contract iterations
         (Original Oct 17 2025; Amended Feb 9 2026; Second Amended Apr 16
         2026), each escalating recognition of my technical ownership.
 
-        **External validation.** GAVIGO holds NVIDIA Inception membership —
-        evidenced by a $10,000 AWS Activate credit issued through the NVIDIA
-        Inception path (active 2026-07-01, running to 2028-07-31). GAVIGO also
-        states acceptance into the **Google for Startups Cloud Program** (the
-        partnership that unlocked the GCP migration executed on March 11) and
-        was profiled by tech-business press (feedvoice.com, 2026-02-10) — both
-        are company/external claims a reviewer should confirm with the team
-        before citing.
+        **Programmes and press.** GAVIGO takes part in the **NVIDIA
+        Inception Program** and the **Google for Startups Cloud Program**
+        (the arrangement under which the GCP migration of March 11 was
+        done), and was profiled by tech-business press (feedvoice.com,
+        2026-02-10). These are programme participation and press coverage,
+        not endorsements or product validation.
       myRole: |
         Founding Principal Engineer, Activation, Execution & AI Systems
         (prior: Core Engineer), reporting to founder & CEO Saba Gecgil.

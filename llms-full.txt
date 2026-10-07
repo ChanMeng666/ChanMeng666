@@ -171,7 +171,7 @@ End-to-end AI-native product engineering — from agentic-system architecture th
 Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first.
 
 ### What is Chan's biggest shipped result?
-GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo, <1ms p50 restore latency, 84.6% warm-pool hit rate at scale, Kubernetes cross-cloud migration in 30-minute cutover. Plus She Sharp (Jul 2025 — Sep 2026) — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo.
+GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo on an activation and execution layer that keeps the next game in a feed on standby and activates it as the viewer arrives; shipped to production and moved across clouds in a ~30-minute cutover. In GAVIGO's proof stage it measured a 78% application-level reduction in startup work (controlled measurement, not a production SLA). Plus She Sharp (Jul 2025 — Sep 2026) — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo.
 
 
 ## Profiles
@@ -859,15 +859,15 @@ the doctrine being taught. Students can literally read the
 instructor's repo to see how the patterns they're learning
 compose in a real production system.
 ### Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer) at Gavigo
-[tier=flagship · recency=recent · updated=2026-09-29]
+[tier=flagship · recency=recent · updated=2026-10-07]
 - **Period:** Oct 2025 -- Sep 2026
 - **Location:** USA (remote — Delaware-incorporated)
 - **URL:** https://gavigo.com/
 
 **Impact:** Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owned the Intelligence Layer end-to-end (96.5% solo on 471 of 488 non-merge commits) with a contractually protected technical domain.
 
-**Company context:** GAVIGO Inc. is a Delaware-incorporated C-Corp at the pre-Series A
-stage, Istanbul-founded by Saba Gecgil and registered in
+**Company context:** GAVIGO Inc. is a Delaware-incorporated C-Corp, Istanbul-founded
+by Saba Gecgil and registered in
 Wilmington, Delaware. Official LinkedIn positioning:
 **"Activation & Execution Layer for Interactive Software"**.
 Consumer-facing mission (from the company's own marketing):
@@ -880,20 +880,22 @@ the Intelligence Layer (the autonomous predictive engine that
 makes Instant Reality possible). The current product wedge is
 mobile gaming; the underlying activation engine is platform-
 shaped and applies to any interactive content category where
-install gap and cold-start latency dominate the funnel. External
-validation during my tenure: accepted into both **Google for
-Startups Cloud Program** and **NVIDIA Inception Program**
-(Feb 2026), and featured publicly by tech-business press
-(feedvoice.com, *"How GAVIGO Is Ending App Store Friction for
-Instant Digital Play"*, 2026-02-10).
+install gap and cold-start latency dominate the funnel. During
+my tenure GAVIGO joined the **Google for Startups Cloud
+Program** and the **NVIDIA Inception Program** (Feb 2026) —
+programme participation, not an endorsement of the product —
+and was covered by tech-business press (feedvoice.com, *"How
+GAVIGO Is Ending App Store Friction for Instant Digital
+Play"*, 2026-02-10).
 
 **Mission:** Replace the native-app install funnel — discover → app-store
 landing → install → onboard → first interaction — with
-sub-millisecond intent-to-experience activation. The problem
+activation inside the feed: the experience is prepared before
+the viewer arrives, not installed after they ask. The problem
 being solved is industry-wide: cold-start latency, install
 friction, and re-engagement cost on mobile interactive content
-(games, video, AI experiences) where perception of instantaneity
-drives engagement.
+(games, video, AI experiences) where the wait between intent and
+interaction costs engagement.
 
 **My mandate:** Own the Intelligence Layer end-to-end — GAVIGO's term for the
 autonomous, predictive engine that powers Instant Reality
@@ -924,10 +926,12 @@ git identities; the remainder split between the GitHub Actions bot
 and a second engineer, Olga Adam, who joined in June 2026 and owned
 the game-loading adapter architecture.
 
-Real measured platform performance, from the production benchmark
-spine: restore path <1 ms p50, cold path ~12 ms p50, 84.6%
-warm-pool hit rate, 0 errors at 100 concurrent WebSocket clients
-under load test. Architectural deliverables include the
+Measured in GAVIGO's proof stage, under controlled conditions:
+a 78% application-level reduction in startup work, a controlled
+startup path cut from 4.45 s to 1.00 s, and about 140 ms to
+restore preserved AI state into a fresh process. These are
+controlled application-level measurements, not a production SLA
+or a complete end-to-end activation time. Architectural deliverables include the
 deterministic five-state Activation Spine
 (COLD → READY → ACTIVE → REUSABLE → restore) with atomic Redis
 transitions and proof-signal timestamps; the seven-trigger AI
@@ -942,21 +946,14 @@ as "a core long-term technical builder of the Company's
 interactive workload platform" with founder-level equity
 participation.
 
-**External validation during my tenure (Feb 2026 cluster):**
-the company was accepted into the **Google for Startups Cloud
-Program** (announced by founder Saba Gecgil) — the partnership
-that directly enabled the GCP migration I led the following
-month, and the platform under which the sub-millisecond
-activation claims are now being validated in production-grade
-Google infrastructure. The same window brought acceptance into
-the **NVIDIA Inception Program** (supporting startups building
-GPU-intensive infrastructure-level technologies), and
-third-party press coverage at feedvoice.com — *"How GAVIGO Is
-Ending App Store Friction for Instant Digital Play"*
-(2026-02-10) — which surfaced GAVIGO's sub-0.2-second
-end-to-end activation claim, the patented execution-layer IP
-positioning, and the "Watch and Play era" public narrative the
-company is operating against. My contractual scope was
+**Programmes and press during my tenure (Feb 2026).** GAVIGO
+joined the **Google for Startups Cloud Program** (announced by
+founder Saba Gecgil), the arrangement under which I led the GCP
+migration the following month, and the **NVIDIA Inception
+Program**. Both are programme participation, not endorsements
+or product validation. Tech-business press covered the company
+at feedvoice.com — *"How GAVIGO Is Ending App Store Friction
+for Instant Digital Play"* (2026-02-10). My contractual scope was
 re-amended in the same window (Second Amended and Restated
 Consulting Agreement, Apr 16 2026) to formalise the **Founding
 Principal Engineer, Activation, Execution & AI Systems** title
@@ -965,7 +962,8 @@ and the Protected Technical Domain backing it.
 **What it added up to for the product.** Seen from the user's side,
 the work was the mobile application and the creator platform for
 GAVIGO's AI-powered mini-game ecosystem: the feed where games and
-short videos play instantly, and the profiles, followers and content
+short videos play in the scroll with no app-store install, and the
+profiles, followers and content
 overlays creators publish through.
 
 **How the role closed (Sept 2026).** I left GAVIGO in September 2026,
@@ -974,10 +972,9 @@ Saba Gecgil, engineer Olga Adam and colleague Lutfullah Ugurer worked
 alongside me and can speak to the work. The last mandate I was named
 on was the CEO's v1.7 *Activation Platform MVP Build Mandate*
 (2026-08-28), which made me **build lead and Phase 0 owner**; the
-company filed a USPTO nonprovisional patent on 2026-08-08 covering
-the activation / execution layer I built. (Application serial
-deliberately omitted: the filing had not published at time of
-writing, so the number is GAVIGO's to disclose, not mine.)
+company has filed patent applications with the USPTO covering
+the activation / execution layer I built. (The filing details
+are GAVIGO's to disclose, not mine.)
 The handover needed no handover document, because project context
 had been written into the repository as the work happened rather
 than carried in my head: a 26.6 KB agent operating manual
@@ -1010,13 +1007,13 @@ combined activation score), the seven-trigger Rules Engine, and a
 Kubernetes client-go integration that patches deployment replicas
 in real time. Companion services: React + Vite dashboard, React
 Native + Expo 54 mobile build served via nginx, always-warm shared
-game-server pod baking ~25 FOSS games for zero per-game cold
-start, Node + Express AI-service pod with gpt-5.4-mini, Phase 6+
+game-server pod baking ~25 FOSS games so no game needs a cold
+start of its own, Node + Express AI-service pod with gpt-5.4-mini, Phase 6+
 compute / inference workloads, Redis 7 with allkeys-LRU and a
 400 MB warm-pool budget, optional Postgres 16 for social data.
 
-Hardest engineering problems solved: (1) Sub-millisecond restore
-via the Activation Spine state machine with deterministic atomic
+Hardest engineering problems solved: (1) A restore path through
+the Activation Spine state machine with deterministic atomic
 transitions, not optimistic ones. (2) Cross-platform state sync
 across MMKV, localStorage, postMessage, and Redis with a single
 canonical source of truth. (3) Async K8s coordination (EndpointSlice
@@ -3355,7 +3352,7 @@ Seismophone sibling.
 - FemTech Weekend Website (Gen-1, deprecated) [tier=archive · recency=deprecated · updated=2026-07-04]
 **ai-apps:**
 - [Tam-AI-Ti](https://tamaiti.whiri-ai.com/) [tier=flagship · recency=active · updated=2026-09-24]
-- [GAVIGO IRE](https://ire.gavigo.com/) [tier=flagship · recency=recent · updated=2026-09-04]
+- [GAVIGO IRE](https://ire.gavigo.com/) [tier=flagship · recency=recent · updated=2026-10-07]
 - [FemTracker Agent](https://github.com/ChanMeng666/femtracker-agent) [tier=archive · recency=deprecated · updated=2026-10-02]
 - AI-Powered ESOL Learning Platform [tier=archive · recency=deprecated · updated=2026-10-03]
 - [Wellness Support Agent](https://sanicle-wellness-agent-2lxj5uw.gamma.site/) [tier=archive · recency=historical · updated=2026-10-03]
@@ -4129,7 +4126,7 @@ delivery work once AI is in the toolchain. 87 registered, 51 attended.
   - **pgVector** — since 2025, depth `intermediate`. Postgres vector extension for Sanicle / She Sharp embedding workflows.
   - **Redis** — since 2025, depth `intermediate`, frameworks: @upstash/redis, ioredis. Upstash Redis for She Sharp mentor-match cache; conventional Redis elsewhere.
   - **Docker** — since 2024, depth `expert`. 7 repos.
-  - **Kubernetes** — since 2026, depth `intermediate`, frameworks: GKE, kubectl. GAVIGO cross-cloud migration to GCP/GKE; 30-min cutover with 84.6% warm-pool hit rate.
+  - **Kubernetes** — since 2026, depth `intermediate`, frameworks: GKE, kubectl. GAVIGO cross-cloud migration to GCP/GKE in a ~30-minute cutover.
   - **Drizzle ORM** — since 2024, depth `expert`. 17 repos — preferred ORM for new builds (She Sharp 1,411-line schema, 30 pgEnums, 35 pgTables).
   - **Prisma** — since 2026, depth `learning`. Single experiment in fanfic-lab.
   - **Supabase** — since 2024, depth `intermediate`. femtracker-agent, library-management-system.
@@ -4174,7 +4171,7 @@ delivery work once AI is in the toolchain. 87 registered, 51 attended.
 - **Per-tool expertise:**
   - **Vercel** — since 2024, depth `expert`. Primary deploy target — every flagship full-stack project.
   - **AWS** — since 2024, depth `intermediate`, frameworks: S3. AWS SheBuilds mentee programme (mentor: Cecilia Yin); HackerRank resume artefact hosted on S3.
-  - **GCP** — since 2026, depth `intermediate`, frameworks: GKE, Cloud Run. GAVIGO DigitalOcean -> Google Cloud production migration (cutover 2026-03-11). Google for Startups Cloud Program partnership.
+  - **GCP** — since 2026, depth `intermediate`, frameworks: GKE, Cloud Run. GAVIGO DigitalOcean -> Google Cloud production migration (cutover 2026-03-11). Done under GAVIGO's participation in the Google for Startups Cloud Program.
   - **Cloudflare Workers** — since 2024, depth `expert`, frameworks: Workers, Vectorize, KV, Workers AI. 25 repos — primary edge runtime for OpenNext deployments; RAG backbone for the teaching platform.
   - **Coolify** — since 2024, depth `intermediate`. Self-hosted PaaS for personal infrastructure + early GAVIGO experiments.
   - **Mintlify** — since 2024, depth `intermediate`. Her Waka teaching site and other documentation sites.
@@ -4682,12 +4679,12 @@ Co-Founder of Relab, a PropTech SaaS company. One of ArchCanvas's early testers;
 - **Published a community write-up on the Vercel forum solving a production Next.js 15 + NextAuth 5 auth-redirect failure encountered during the Sanicle-AI build; publicly acknowledged by Vercel Staff (Amy Egan)** (source: https://community.vercel.com/t/solved-bug-authentication-redirect-issue-in-sanicle-ai-platform/6818, verified 2026-05-16)
 - **As CTO leading a team of five, wrote the code for five Sanicle production codebases — sanicle-cloud (Next.js company site replacing legacy Bubble no-code), sanicle-ai (multi-tenant FemTech platform with dual-AI architecture: IBM watsonx llama-3-405b + Google Gemini fallback), sanicle-ai-mobile (PWA prototype), reveal.js presentation deck, and a documented internal work archive — totalling 377 commits across four GitHub repositories, every one authored by Chan (GitHub contributor statistics, 2026-09-16)** (source: https://www.linkedin.com/company/sanicleofficial/, verified 2026-05-16)
 - **Two merged pull requests to the CopilotKit main repository (37.5k+ GitHub stars) — PR #2068 adding the 8-agent FemTracker Agent demo to CopilotKit's official demos_2025 collection (merged 2025-09-11, approved by maintainer Tyler Slaton), and PR #2529 adding Claude Code setup instructions to the CopilotKit MCP server documentation (merged 2025-10-09, approved by maintainer Brandon McConnell)** (source: https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666, verified 2026-07-17)
-- **GAVIGO IRE measured platform performance: restore path <1 ms p50, cold path ~12 ms p50, 84.6% warm-pool hit rate, 0 errors at 100 concurrent WebSocket clients under load test** (source: https://ire.gavigo.com/, verified 2026-05-16)
+- **GAVIGO IRE proof-stage measurements, under GAVIGO's own labels: 78% Application-Level Reduction; 4.45s → 1.00s Controlled Startup Path Comparison; ~140ms Preserved AI State Restore. Real, controlled application-level measurements, not a production SLA or a complete end-to-end activation time** (source: https://gavigo.com/, verified 2026-10-07)
 - **Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil) from Oct 2025 to Sep 2026; role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026)** (source: https://gavigo.com/, verified 2026-05-16)
 - **GAVIGO public mission per company marketing: 'Skip the Store. Start the Play' — eliminate the friction between user intent and digital experience by building the Post-App World through proprietary Instant Reality Switching technology** (source: https://gavigo.com/, verified 2026-05-16)
-- **GAVIGO accepted into the Google for Startups Cloud Program (announced Feb 2026 by founder & CEO Saba Gecgil); per the founder's public statement the partnership value 'isn't about cloud credits — it's about validating an execution layer under real-world constraints', and the partnership is what enabled the DigitalOcean → Google Cloud production migration I led on 2026-03-11** (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)
-- **GAVIGO accepted into the NVIDIA Inception Program (announced Feb 2026) — the track supporting startups building GPU-intensive, infrastructure-level technologies, providing GPU ecosystem visibility and deep-tech credibility** (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)
-- **GAVIGO publicly profiled by tech-business press in 'How GAVIGO Is Ending App Store Friction for Instant Digital Play' (feedvoice.com, 2026-02-10, by Robert Bloomingfield) — the article publicly cites GAVIGO's sub-0.2-second activation claim, patented execution-layer IP, the 'Watch and Play era' positioning, and the cross-border Istanbul-to-global ambition; LinkedIn-verified company positioning is 'Activation & Execution Layer for Interactive Software'** (source: https://feedvoice.com/how-gavigo-is-ending-app-store-friction-for-instant-digital-play/, verified 2026-05-16)
+- **GAVIGO takes part in the Google for Startups Cloud Program (announced Feb 2026 by founder & CEO Saba Gecgil); the DigitalOcean → Google Cloud production migration I led on 2026-03-11 was done under it. Programme participation, not an endorsement or product validation** (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)
+- **GAVIGO takes part in the NVIDIA Inception Program (announced Feb 2026). Programme participation, not an endorsement or product validation** (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)
+- **GAVIGO publicly profiled by tech-business press in 'How GAVIGO Is Ending App Store Friction for Instant Digital Play' (feedvoice.com, 2026-02-10, by Robert Bloomingfield) — the article covers the 'Watch and Play era' positioning and the cross-border Istanbul-to-global ambition; LinkedIn-verified company positioning is 'Activation & Execution Layer for Interactive Software'** (source: https://feedvoice.com/how-gavigo-is-ending-app-store-friction-for-instant-digital-play/, verified 2026-05-16)
 - **As CTO at FemTech Weekend (self-described as China's first women's health-tech organisation), solo-built two complete generations of the public platform — original femtechweekend.com on Next.js 15 + Notion CMS (58 commits, 100% solo) and the current Docusaurus 3.9 + Drizzle ORM + Neon Postgres + Cloudflare Pages platform (570 commits to 2026-07-30, 538 / 94.4% mine) — which hosted the Shanghai Summit 2026 (June 22–25, 2026; 20 speakers headlined by Ida Tin, the Clue co-founder who coined the term 'FemTech' in 2016)** (source: https://www.femtechweekend.com/shanghai-summit, verified 2026-07-16)
 - **Sole instructor and curriculum author of TechNest Community's 2026 AI Track — a 12-week prompt-first AI engineering programme (April 25 – July 17, 2026) on the doctrine 'natural language is the source code' — comprising 8 teaching weeks (Cursor / Claude Code / Gemini CLI / MCPs → Vercel deploy → Gemini chat clone → Neon Postgres + Auth → Vercel Blob → MDX blog → Slack webhooks → Typst PDF automation) plus a 4-week multi-user-AI-SaaS capstone across three tracks (Campus Life, Personal Growth, Creative Tools)** (source: https://programming.chanmeng.org/docs/curriculum-outline, verified 2026-05-16)
 - **Built the bilingual Docusaurus teaching platform hosting five cohort versions side by side (2024-winter, 2025-summer, 2026-her-waka, 2026-technest, 2026-peyvand-academy) with an in-course AI assistant using version-aware RAG over all five cohorts plus the blog, a Notion-powered classroom message board on a Cloudflare Worker backend, and a Notion-backed Capstone 2026 public-voting showcase — 211 of 220 commits authored by me, balance from Claude code-review and Dependabot automation** (source: https://github.com/ChanMeng666/ai-programming-teaching-project, verified 2026-07-16)

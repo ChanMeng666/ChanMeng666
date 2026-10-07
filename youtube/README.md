@@ -1,4 +1,4 @@
-# `youtube/` — YouTube channel banner package
+# `youtube/` — YouTube channel: register and banner
 
 Everything for Chan Meng's YouTube channel (**[@ChanMeng666](https://www.youtube.com/@ChanMeng666)**)
 in one place: the **Caldera-branded banner asset** and its render pipeline. All outward copy is
@@ -6,10 +6,59 @@ English. Facts trace back to [`../data/profile/`](../data/profile/) — the repo
 of truth. The channel URL itself is registered in
 [`00-basics.yaml`](../data/profile/00-basics.yaml) `basics.profiles` (`network: YouTube`).
 
+## The channel register
+
+[`channel.yaml`](./channel.yaml) records what the channel publicly shows: channel
+description, links, home-tab layout, every public video with its title and
+playlists, the public playlists, and the films approved for upload with their
+titles and descriptions. Read it before answering any question about the channel.
+
+- **It is hand-maintained.** There is no API sync. After any change on YouTube,
+  update the file and its `asOf`.
+- **Unlisted and private videos are not in it.** This repo is public, and an
+  unlisted video is open to anyone who has its id. Their ids, titles and the
+  client playlists are in the gitignored `channel.private.yaml`. Those videos are
+  client handover walkthroughs and course recordings whose links other people
+  hold: do not change their visibility or delete them without Chan's word.
+- **Chan decides visibility, titles and playlists.** For a batch, build a triage
+  page and let her choose per row; suggestions are hints only.
+- **Private means unlinkable.** When a video goes private, remove its link from
+  `data/profile/`, the CVs, LinkedIn copy and chanmeng.org, then `npm run check`.
+- **Copy rules.** Titles: `Product — what it does | Product film` (or `| Demo`),
+  100 characters at most. Descriptions: what the product is, in plain words; one
+  line saying the film is a coded replica where that is true; a one-line
+  sign-off. **No links in any description** (Chan, 2026-10-07): the account has
+  not done YouTube's link verification; links live in the channel's Links
+  section. Facts come from `data/profile/`. No commit counts, no pricing, and
+  no personal claim for a result that belongs to a client.
+- **Reading and editing Studio with browser automation** (worked on 2026-10-07):
+  the content table is `ytcp-video-row`; a video's edit page is
+  `studio.youtube.com/video/<id>/edit`, where title and description are the two
+  `#textbox` elements (select the node contents, then
+  `document.execCommand('insertText')`), visibility is the `#select-button`
+  inside `ytcp-video-metadata-visibility` followed by the
+  `tp-yt-paper-radio-button[name=PRIVATE|UNLISTED|PUBLIC]`, and a playlist is
+  ticked through `ytcp-checkbox-lit[test-id="<playlist id>"]`. Save with `#save`
+  and confirm it goes back to `aria-disabled="true"`. Keep batches to three or
+  four videos, or the call times out.
+- **Publishing a draft.** A fresh upload is a draft. Fill it on its normal edit
+  page first (title, description, "not made for kids", save and wait for `#save`
+  to disable, then the playlist as a separate step), and only then press
+  "Edit draft", go to the Visibility step, choose Public and Publish. In that
+  order a film never goes public under its file name. The playlist picker
+  ignores a click made while a save is still pending.
+- **Uploading is manual.** Browser automation cannot attach files over 10 MB and
+  uploads through an unverified API project are locked private. YouTube also
+  caps uploads per day (the cap hit after 10 files on 2026-10-07). Chan drags the
+  files into Studio; titles, descriptions, playlists and visibility are then set
+  as above.
+
 ## What's here
 
 | File / folder | Kind | Purpose |
 |---|---|---|
+| [`channel.yaml`](./channel.yaml) | hand-maintained | The channel register described above. |
+| `channel.private.yaml` | **LOCAL ONLY** | Unlisted and private inventory; gitignored. |
 | [`banner/banner.html`](./banner/banner.html) | hand-curated | Caldera-branded banner source of truth, 1280×720 CSS surface (`data-out="youtube-banner.png"`). |
 | `banner/youtube-banner.png` | **RENDERED** | The 2560×1440 (2×) banner image uploaded to YouTube Studio — **0.075 MB**, well under YouTube's 6 MB cap. **Never hand-edit.** Edit `banner.html`, then re-render (below). |
 | [`../scripts/check-youtube-banner-safe.mjs`](../scripts/check-youtube-banner-safe.mjs) | tooling | Asserts all six banner elements stay inside the all-device safe area and the text→composition gutter stays above 60px; exits non-zero on failure. |

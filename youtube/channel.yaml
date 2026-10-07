@@ -1,0 +1,155 @@
+# =============================================================================
+# YouTube channel register — @ChanMeng666
+# =============================================================================
+# What the channel PUBLICLY shows, as read from and applied in YouTube Studio.
+# Hand-maintained after each change on YouTube (there is no API sync); `asOf`
+# is the date a block was last compared with Studio. Not wired into
+# `npm run build`. How to read and change the channel: youtube/README.md.
+#
+# This repo is public. So this file lists PUBLIC videos and PUBLIC playlists
+# only, plus counts for the rest. An unlisted video is reachable by anyone who
+# has its id, so unlisted and private ids, titles and client playlists live in
+# the local-only, gitignored `channel.private.yaml`. One unlisted id appears
+# here because a profile shard already links it on purpose.
+#
+# Facts in titles and descriptions trace to `data/profile/`; display rules in
+# `docs/STATE.md` apply here too (one film per product; GenLAB and Seismophone
+# are not shown). Which film a product shows is decided in
+# `data/profile/45-showcase.yaml` › productFilms, not here.
+#
+# Chan decided every row on 2026-10-07 (triage page). Do not change a video's
+# visibility, title or playlist without asking her.
+# =============================================================================
+
+channel:
+  handle: "@ChanMeng666"
+  id: UCNfqqzosj2J6bBRVgz7qbJQ
+  url: https://www.youtube.com/@ChanMeng666
+  asOf: "2026-10-07"
+  subscribers: 24          # historical maximum; never lower it
+  description: |
+    I'm Chan Meng, an AI agent architect and full-stack engineer based in Auckland, New Zealand.
+
+    This channel shows what I build: product films for my own products and for client work, and demos of the tools behind them. The films are made in code, and each one is a coded replica of the product's real interface rather than a screen recording.
+
+    Portfolio and CV: https://chanmeng.org
+    Code: https://github.com/ChanMeng666
+  links:
+    - { title: "Portfolio & CV", url: "https://chanmeng.org" }
+    - { title: LinkedIn, url: "https://www.linkedin.com/in/chanmeng666/" }
+    - { title: GitHub, url: "https://github.com/ChanMeng666" }
+    - { title: ArchCanvas, url: "https://archcanvas.uk/" }
+  contactEmail: chanmeng.dev@gmail.com
+  banner: youtube/banner/youtube-banner.png   # uploaded
+  watermark: profile photo, shown at end of video
+  homeTab:
+    enabled: true
+    trailer: QC2fqBGp4Xg   # shown to people who have not subscribed
+    featuredVideo: null
+    # Order as published. The three playlist rows were appended after
+    # YouTube's default rows; moving them up is a drag in Studio (open item).
+    sections:
+      - For You
+      - Videos
+      - Short videos
+      - Created playlists
+      - "Single playlist: Product films"
+      - "Single playlist: Demos & walkthroughs"
+      - "Single playlist: Brand films"
+  # Video and playlist descriptions carry NO links (Chan, 2026-10-07): the
+  # account has not done YouTube's one-time verification, so a link in a
+  # description cannot be published as a link. Links live in `links:` above.
+  # Do not add URLs to a description until she says the verification is done.
+  linksInDescriptions: false
+
+counts:
+  asOf: "2026-10-07"
+  total: 317               # 307 on the Videos tab before the uploads, plus 9 films and 1 Short
+  public: 23               # 22 videos + 1 Short
+  unlisted: 60
+  private: 234             # 178 of them are raw screen recordings titled by timestamp
+  # The Shorts tab was not part of the count: it also holds a few older
+  # unlisted clips (not read).
+
+# -----------------------------------------------------------------------------
+# Public videos, newest first. `kind`: film (rendered promo film) | short (9:16 cut) | demo
+# (screen-recorded walkthrough) | personal. `projectId` → projects[].id.
+# `views` is the Studio count on 2026-10-07 (historical maximum).
+# `described: true` means the description was written and applied; the text
+# lives on YouTube, the wording rules in youtube/README.md.
+# -----------------------------------------------------------------------------
+videos:
+  - { id: j2_JCEs8Ucw, kind: film, published: "2026-10-07", duration: "0:29", title: "She Sharp × Les Mills — “No Pain, All Gain” | Event promo", projectId: she-sharp, showcaseId: she-sharp-lesmills-promo, playlists: [Product films], described: true }
+  - { id: DKCzZCQTQgA, kind: film, published: "2026-10-07", duration: "1:01", title: "AI Programming Education Platform — a bilingual course site with its own AI assistant | Product film", projectId: ai-programming-teaching-project, playlists: [Product films], described: true }
+  - { id: AdelJ4bezwo, kind: film, published: "2026-10-07", duration: "1:01", title: "Eatropolis — the event website for Auckland’s culinary festival | Product film", projectId: eatropolis-website, playlists: [Product films], described: true }
+  - { id: rJb7A_Ljmrs, kind: film, published: "2026-10-07", duration: "1:01", title: "Tam-AI-Ti — an AI financial wellness coach grounded in Te Whare Tapa Whā | Product film", projectId: tam-ai-ti, playlists: [Product films], described: true }
+  - { id: lKPR3rNw7Ng, kind: short, published: "2026-10-07", duration: "0:30", title: "Tam-AI-Ti — an AI financial wellness coach grounded in Te Whare Tapa Whā #Shorts", projectId: tam-ai-ti, described: true }
+  - { id: RBcGF6X4esY, kind: film, published: "2026-10-07", duration: "1:09", title: "ArchLang — a language that compiles to dimensioned floor plans | Product film", projectId: archlang, playlists: [Product films], described: true }
+  - { id: 43vcdxFDbTg, kind: film, published: "2026-10-07", duration: "1:01", title: "echook — hooks for Claude Code, Cursor and Codex, set up in plain language | Product film", projectId: echook, playlists: [Product films], described: true }
+  - { id: qoTYuK0Xdsk, kind: film, published: "2026-10-07", duration: "1:01", title: "GAVIGO IRE — Instant Reality Exchange | Product film", projectId: gavigo-ire, playlists: [Product films], described: true }
+  - { id: RiL7m159I7w, kind: film, published: "2026-10-07", duration: "1:01", title: "CORDE Mobile — offline-first field data collection | Product film", projectId: corde-mobile-application, playlists: [Product films], described: true }
+  - { id: Yf25U5uysho, kind: film, published: "2026-10-07", duration: "1:01", title: "She Sharp — the member platform behind a NZ women-in-STEM charity | Product film", projectId: she-sharp, playlists: [Product films], described: true }
+  - { id: QC2fqBGp4Xg, kind: film, published: "2026-09-29", duration: "1:04", views: 22, title: "Chan Meng — AI Agent Architect & Full-Stack Engineer | 64-second intro", showcaseId: chan-meng-intro, playlists: [Brand films], described: true }
+  - { id: HXI5QozwHkk, kind: personal, published: "2026-09-29", duration: "0:21", views: 11, title: "Opening Karakia - Chan Meng", described: false }
+  - { id: FZS7rbgCaB4, kind: personal, published: "2026-09-29", duration: "0:21", views: 5, title: "Closing Karakia - Chan Meng", described: false }
+  - { id: PoAYhd0KI4c, kind: film, published: "2026-09-29", duration: "0:13", views: 18, title: "My logo learned to move | Chan Meng brand sting", showcaseId: chan-meng-monkey-sting, playlists: [Brand films], described: true }
+  - { id: rUZAiXgt9JY, kind: film, published: "2026-09-21", duration: "2:01", views: 13, title: "ArchCanvas — your AI architect: from a brief to a dimensioned floor plan | Product film", projectId: archcanvas, showcaseId: archcanvas-promo-studio, playlists: [Product films], described: true }
+  - { id: HIjLTA7HS64, kind: film, published: "2026-07-28", duration: "3:00", views: 26, title: "a11y-loop — make AI coding agents write accessible UI, then prove it | Product film", projectId: a11y-loop, playlists: [Product films], described: true, note: "July render; the local master was re-rendered 2026-10-06. Chan chose to keep this upload." }
+  - { id: OO8uqNiQXcY, kind: demo, published: "2026-07-03", duration: "1:35", views: 47, title: "Aotearoa AI Hackathon Festival 2026 — the event’s voice AI assistant | Demo", projectId: ai-hackathon-assistant, playlists: ["Demos & walkthroughs"], described: true }
+  - { id: LFFML4zqHu0, kind: demo, published: "2026-03-17", duration: "4:53", views: 65, title: "GAVIGO IRE — feature walkthrough", projectId: gavigo-ire, playlists: ["Demos & walkthroughs"], described: true }
+  - { id: Y9l7Wz9kLRA, kind: demo, published: "2026-01-02", duration: "8:12", views: 29, title: "Bulk personalised email with Resend — an automation workflow walkthrough", playlists: ["Demos & walkthroughs"], described: true }
+  - { id: saBoG1HCvfY, kind: personal, published: "2025-12-10", duration: "1:06", views: 40, title: "The end of year thank you video", described: true, note: "made for She Sharp" }
+  - { id: IZi3EJLEpb4, kind: demo, published: "2025-11-04", duration: "2:34", views: 45, title: "echook (formerly Claude Code Audio Hooks) — audio notifications demo", projectId: echook, playlists: ["Demos & walkthroughs"], described: true }
+  - { id: EXIh1f7vk30, kind: demo, published: "2025-06-25", duration: "2:54", views: 14, title: "Chromaflow (gradient-svg-generator) — animated SVG gradients for any README | Demo", projectId: gradient-svg-generator, playlists: ["Demos & walkthroughs"], described: true }
+  - { id: erXRl-PPBC8, kind: personal, published: "2025-04-15", duration: "0:33", views: 201, title: "Chan Meng — 30 seconds describing myself (April 2025)", described: true }
+
+# Made private on 2026-10-07 (Chan's decision: the projects are archived).
+# Ids are in channel.private.yaml. None may be linked from any surface.
+madePrivate:
+  - { projectId: panda-agent, was: "Website Building Agent Demo" }
+  - { projectId: femtracker-agent, was: "FemTracker Agent - Menstrual Cycle", note: "its link was removed from 21-projects-oss-primary.yaml" }
+  - { projectId: wellness-agent, was: "Wellness Agent Demonstration + one timestamp-titled demo" }
+  - { projectId: sanicle-ai, was: "three Sanicle-AI demos + the IBM watsonx solution demo" }
+
+# Unlisted on purpose and already linked from a profile shard.
+linkedUnlisted:
+  - { id: NtT7_q6xhlk, duration: "12:35", title: "20250930 1421", projectId: tam-ai-ti, linkedFrom: "20-projects-flagship.yaml (demoUrl)", note: "still carries its working title" }
+
+# Public playlists. Everything else is private (see channel.private.yaml),
+# including "ArchLang", which holds only the unlisted demo made for the paper
+# (never name the venue), "FemTracker Agent", "sanicle-public" and "FreePriod"
+# (all four made private on 2026-10-07).
+playlists:
+  - title: Product films
+    id: PLSvppR4RMlF0
+    onHomeTab: true
+    videos: [rUZAiXgt9JY, HIjLTA7HS64, Yf25U5uysho, RiL7m159I7w, qoTYuK0Xdsk, 43vcdxFDbTg, RBcGF6X4esY, rJb7A_Ljmrs, AdelJ4bezwo, DKCzZCQTQgA, j2_JCEs8Ucw]
+  - title: "Demos & walkthroughs"
+    id: PLXEw5x660aDc
+    onHomeTab: true
+    videos: [OO8uqNiQXcY, LFFML4zqHu0, Y9l7Wz9kLRA, IZi3EJLEpb4, EXIh1f7vk30]
+  - title: Brand films
+    id: PLbFM9MQh6CSA
+    onHomeTab: true
+    videos: [QC2fqBGp4Xg, PoAYhd0KI4c]
+
+# -----------------------------------------------------------------------------
+# Shorts Chan approved on 2026-10-07 that are NOT uploaded yet: YouTube's daily
+# upload limit stopped the batch after the nine films and one Short. Staged
+# copies: D:/.claude-scratch/2026-10-07/youtube-upload/2-shorts/ (the staged
+# file name is the draft title YouTube shows). Masters are 1080x1920, 30 s;
+# paths are relative to D:/github_repository.
+# After Chan uploads them: set the title below; description = "A 30-second cut
+# of the <product> product film. The full film is on this channel, in the
+# Product films playlist." plus the sign-off line; not made for kids; public;
+# no playlist. Then move each row to `videos:` with its id.
+# ArchLang and a11y-loop have no vertical cut.
+# -----------------------------------------------------------------------------
+pendingUpload:
+  - { projectId: archcanvas, staged: "S1 ArchCanvas short.mp4", master: "archcanvas-promo-studio/out/masters/A-confident-arrival/archcanvas-studio-2026-09_30s_vertical_1080x1920.mp4", title: "ArchCanvas — your AI architect: from a brief to a dimensioned floor plan #Shorts" }
+  - { projectId: echook, staged: "S2 echook short.mp4", master: "echook-promo-studio/out/masters/echook_30s_vertical_1080x1920.mp4", title: "echook — hooks for Claude Code, Cursor and Codex, set up in plain language #Shorts" }
+  - { projectId: gavigo-ire, staged: "S3 GAVIGO IRE short.mp4", master: "gavigo-promo-film/out/masters/gavigo-ire-30s-portrait.mp4", title: "GAVIGO IRE — Instant Reality Exchange #Shorts" }
+  - { projectId: corde-mobile-application, staged: "S4 CORDE Mobile short.mp4", master: "corde-promo-studio/out/masters/corde-mobile_30s_vertical_1080x1920.mp4", title: "CORDE Mobile — offline-first field data collection #Shorts" }
+  - { projectId: she-sharp, staged: "S5 She Sharp short.mp4", master: "she-sharp-promo-studio/out/masters/chan-meng_she-sharp_30s_vertical_1080x1920.mp4", title: "She Sharp — the member platform behind a NZ women-in-STEM charity #Shorts" }
+  - { projectId: eatropolis-website, staged: "S7 Eatropolis short.mp4", master: "eatropolis-promo-film/out/masters/A-synth-market-day/Eatropolis-30-Portrait-9x16.mp4", title: "Eatropolis — the event website for Auckland’s culinary festival #Shorts" }
+  - { projectId: ai-programming-teaching-project, staged: "S8 AI Programming short.mp4", master: "ai-programming-teaching-promo/out/masters/Film-30-portrait.mp4", title: "AI Programming Education Platform — a bilingual course site with its own AI assistant #Shorts" }

@@ -12,6 +12,7 @@
     "build:brand": "node scripts/build-brand.mjs",
     "build:video-data": "node scripts/build-video-data.mjs",
     "build:collages": "node scripts/render-collages.mjs",
+    "build:cards": "node scripts/build-readme-cards.mjs",
     "build:cv-geo": "node cv/build-llms-txt.mjs data/profile --out public/cv-llms.txt && node cv/build-jsonld.mjs data/profile --out public/cv.jsonld",
     "build:linkedin": "node scripts/build-linkedin-json.mjs && node scripts/build-linkedin-md.mjs",
     "validate": "node scripts/validate.mjs && node scripts/validate-brand.mjs && node scripts/check-linkedin-sync.mjs && node scripts/check-ecosystem.mjs",
@@ -35,6 +36,8 @@
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
+    "@chanmeng666/archlang": "^1.41.0",
+    "opentype.js": "^1.3.4",
     "playwright-core": "^1.63.0"
   }
 }

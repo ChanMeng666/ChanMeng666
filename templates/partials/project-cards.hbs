@@ -6,7 +6,8 @@
        {{> project-cards _clientCardProjects}} (commissioned.hbs — client work)
      Both sections must render IDENTICALLY — priority is expressed by order on
      the page, not by card size — so this markup exists exactly once. Per card:
-     logo (right-float 80px) · H3 name · "For <org>" line · impact headline ·
+     logo (right-float 80px), or the animated card under the H3 when
+     public/cards/<id>.svg exists (npm run build:cards) · H3 name · "For <org>" line · impact headline ·
      optional sub-project cross-links.
      The "For <org>" line iterates _affiliationOrgs (PLURAL) — eatropolis-website
      names two, Chow Luck Club Ltd and Tātaki Auckland Unlimited, because both
@@ -34,10 +35,13 @@
      nested Handlebars comment inside THIS block: the inner close-marker ends
      the outer comment early and the rest of the file stops parsing.)
 --}}
-{{#each this}}{{#if logo}}<img src="{{logo}}" align="right" height="80" alt="{{name}}" title="{{name}}">
+{{#each this}}{{#if _card}}### [{{briefTagline name}}]({{default url repoUrl}})
+
+<a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a>
+{{else}}{{#if logo}}<img src="{{logo}}" align="right" height="80" alt="{{name}}" title="{{name}}">
 
 {{/if}}### [{{briefTagline name}}]({{default url repoUrl}})
-
+{{/if}}
 {{#if _affiliationOrgs.length}}<sub>For {{#each _affiliationOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="22" alt="{{name}}"></picture> {{name}}</a>{{#if context}} — {{context}}{{/if}}{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
 {{else}}{{#if _contextLogo.length}}<sub>For {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="22" alt="{{alt}}" style="vertical-align:middle"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}.</sub>
 {{else}}{{#if entity}}<sub>{{entity}}.</sub>

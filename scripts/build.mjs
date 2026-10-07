@@ -774,6 +774,14 @@ for (const p of visibleProjects) {
   const xb = p?.meta?.x_brand ?? {};
   p._featuredStackResolved = resolveStack(xb.featuredStack);
   p._contextLogo           = normalizeContextLogo(xb.contextLogo);
+  // An animated card (npm run build:cards → public/cards/<id>.svg) takes the
+  // place of the right-floated logo on a big editorial card. Its alt text is
+  // the card's own <title>, so the two cannot drift apart.
+  const cardSrc = `/public/cards/${p.id}.svg`;
+  if (fileExists(cardSrc)) {
+    const title = fs.readFileSync(path.join(repoRoot, cardSrc.slice(1)), "utf8").match(/<title[^>]*>([^<]*)<\/title>/);
+    p._card = { src: cardSrc, alt: title ? title[1] : p.name };
+  }
   // Projected, not the raw org object: the raw one carries `_enriched` (the
   // entire organizations[] record), and attaching that to every client project
   // duplicated ~100 lines per card into dist/profile.json. These six fields are

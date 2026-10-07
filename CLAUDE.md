@@ -64,6 +64,32 @@ it into tracked files. Key rules:
 - npm publishing needs Chan's browser auth: prepare the package, she runs
   `npm publish`.
 
+## Animated project cards (the SVGs at the top of the README)
+
+The big project cards in `README.md` are generated SVGs in `public/cards/<id>.svg`,
+built by `npm run build:cards [-- id …]` (not part of `npm run build`) from
+`scripts/cards/<id>.mjs`. **Read `docs/animated-svg-cards.md` before making or
+changing one**: it is the method (the `<img>` sandbox, glyph-subset text, build-time
+evidence, shared keyframes, verification) and the mistakes already made. Rules that
+bite:
+
+- A card is drawn in **the product's own design system** (its tokens, typefaces,
+  wordmark file and brand rules, read from the product's repo), never in this
+  profile's Caldera frame by default.
+- **Nothing on a stage is drawn by hand**: compile it, quote it, or cut it from the
+  film or the live site, and let the build fail when it stops agreeing.
+- Copy and figures come from an already-cleared source (the film's copy file, the
+  product's strings, `data/profile/`), each claim with its caveat on the same frame.
+- A card whose outside inputs (a private checkout, a film master, a system font) are
+  missing is skipped and its committed SVG stands; never copy those inputs in.
+- `build.mjs` sets `projects[]._card` when the file exists and
+  `project-cards.hbs` renders it under the H3; the `alt` is the SVG's `<title>`.
+- Verify by screenshots at timestamps on both canvases, the reduced-motion still
+  (load the SVG as a document; emulation does not reach `<img>`), then on GitHub.
+
+The same guide is published at chanmeng.org/blog/animated-svg-project-cards; the
+file in `docs/` is the source, so edit it first and republish.
+
 ## Changing career COPY? Use the `career-copy` skill
 
 `.claude/skills/career-copy/` is this repo's own skill for the case that comes up
@@ -184,7 +210,7 @@ hand-typed facts on a review cadence:
 | `22-projects-oss-webapps.yaml` | projects (collapsible: web apps) | 14 | `id` |
 | `23-projects-oss-more.yaml` | projects (AI/creative/ML/branding/games + commissioned) | 84 | `id` |
 | `25-contributions.yaml` | openSourceContributions | 23 | `id` |
-| `30-recognition.yaml` | awards, certificates, publications | 7 + 53 + 74 | `title`+`awarder` / `name` |
+| `30-recognition.yaml` | awards, certificates, publications | 7 + 53 + 75 | `title`+`awarder` / `name` |
 | `40-skills.yaml` | skills, domains, languages, interests | 6 + 5 + 4 + 3 | `name` |
 | `45-showcase.yaml` | showcaseCapabilities, showcase (craft evidence: reports, films, decks, slides, newsletters, GEO), productFilms (register: which product shows which promo film; one per product; must match chanmeng.org) | 7 + 11 + 13 | `id` / `projectId` |
 | `50-references.yaml` | references | 27 | `id` |

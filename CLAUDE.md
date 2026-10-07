@@ -16,6 +16,12 @@ reasons behind the rules, what her private market research concluded — is the
 copy it into tracked files, commit messages or generated output. This repo is
 public, so tracked wording states decisions and rules, not motives.
 
+**Her platforms, as they stand:** the X account (@chanmeng666) is recorded in
+`x/account.yaml` and `x/posts.yaml` (every post, with a `summary` block; generated
+by `npm run build:x` from a browser capture, procedure in `x/README.md`), and the
+YouTube channel in `youtube/channel.yaml`. Read those before answering anything
+about either platform. What is posted there is hers to change: ask first.
+
 ArchLang ↔ ArchCanvas sibling-repo map (local paths, private vs public, subprojects):
 `docs/ecosystem/archlang-archcanvas.md`. Career narrative stays in the profile shards.
 

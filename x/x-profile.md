@@ -31,6 +31,12 @@ _Previous bio (v1, applied live 2026-07-19, superseded same day) — kept for hi
 
 _v2 applied live 2026-07-19 (@chanmeng666): the primary bio above was set live (renders with clean bare-domain links `archcanvas.uk` / `vitex.org.nz`); the header was replaced with the redesigned minimal `x/header/x-header.png`; the v1 pinned intro thread (root status `2078709504532000825`, 3 tweets) was deleted and a fresh 3-tweet thread from `x/x-pinned-tweet.md` was posted, with `x/media/pinned-products.png` attached to tweet 1 and pinned (new root status `2078727381859389815`). Auto-generated link cards were removed from tweets 2 and 3 so the thread's only media is tweet 1's product lineup. Display name, location, and website were left unchanged. The v0 rollback table above is preserved as the original pre-July baseline._
 
+_Live on 2026-10-07 (read from x.com; the record of what is live is now [`account.yaml`](./account.yaml)): the bio no longer names Vitex. It reads:_
+
+> AI agent architect & full-stack engineer. ArchCanvas (archcanvas.uk): describe a building → buildable floor plan.
+
+_(113 chars.) The v2 bio and both alternates in this file still name Vitex, which was archived on 2026-10-02: do not reapply them as written._
+
 **Location** — `Auckland, New Zealand`
 
 **Website** — `https://chanmeng.org/`

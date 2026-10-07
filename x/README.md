@@ -1,14 +1,77 @@
-# `x/` — X (Twitter) personal-brand package
+# `x/` — X (Twitter): account register and brand package
 
 Everything for Chan Meng's X presence (**[@chanmeng666](https://x.com/chanmeng666)**) in one place:
-the **profile copy**, a **pinned-tweet kit**, the **build-in-public strategy**, an **execution
-runbook**, and the **header asset**. All outward copy is English. Facts trace back to
+the **register of the live account and every post**, the **profile copy**, a **pinned-tweet kit**,
+the **build-in-public strategy**, an **execution runbook**, and the **header asset**. All outward copy is English. Facts trace back to
 [`../data/profile/`](../data/profile/) — the repository-wide source of truth.
+
+## The account register
+
+To understand the account, read two files, in this order:
+
+1. [`account.yaml`](./account.yaml): what the profile shows (name, bio, links, pinned post,
+   counts), how the account has been run so far, and `openItems`, the places where something
+   live on X disagrees with a decision made since.
+2. [`posts.yaml`](./posts.yaml): every post, newest thread first. Its `summary` block is the
+   short read (volume by month and by project, engagement, the most-viewed posts, flagged
+   threads). Below it each thread carries its posts in full: text, links, media, public counts.
+
+Rules:
+
+- **`posts.yaml` is generated.** `npm run build:x` rebuilds it from
+  [`capture/latest.json`](./capture/latest.json). Never hand-edit what X reports. The curated
+  keys on a thread (`topic`, `projectIds`, `showcaseId`, `pillar`, `summary`, `flags`, `note`)
+  are edited in `posts.yaml` itself and survive a rebuild. `projectIds` and `showcaseId` must
+  exist in `data/profile/`, or the build fails.
+- **`account.yaml` is hand-maintained and checked.** The build fails when its name, bio,
+  location, website, pinned post or counts disagree with the capture.
+- **Counts are historical maximums**, as everywhere in this repo: a rebuild never lowers a
+  post's views or likes, and `followers` is never lowered by hand.
+- **`pillar` is P1–P4 (`x-strategy.md` §2) or `none`.** Chan delegated the tagging on
+  2026-10-07, so the tags are Claude's and she may overrule any of them. Tag new threads the
+  same way; the build lists a thread that has none.
+- **`flags` and `openItems` are observations, not instructions.** Editing or deleting a post,
+  re-pinning and changing the profile are Chan's decisions. Ask before doing any of them.
+- **Public data only.** This repo is public. No DMs, drafts, analytics exports or the following
+  list in this folder, tracked or not.
+- **`npm run check:x`** (part of `npm run check`) fails when `posts.yaml` is stale against the
+  capture or `account.yaml` disagrees with it. It reads files only and never contacts X.
+
+### Refreshing the register
+
+There is no API key in this repo and none is needed: the read happens in Chan's own signed-in
+browser, and everything after that is a pure function of files.
+
+1. Open `https://x.com/chanmeng666` signed in as the account (Claude in Chrome, a new tab).
+2. Run [`capture/snippet.js`](./capture/snippet.js) in the page. It scrolls the Posts and
+   Replies tabs to the end, reads the posts from the web client's own memory, and returns
+   `{ captured, profileSays, complete }`. It changes nothing on X and sends nothing anywhere.
+   `complete` must be `true`.
+3. Save `window.__xCapture` as `capture/latest.json`. From the DevTools console,
+   `copy(JSON.stringify(window.__xCapture, null, 1))`. Through Claude in Chrome the tool cuts
+   long strings, so read `window.__xCapture.user`, then `window.__xChunk(0)`, `(1)`, and so on
+   (twelve posts per call) and write the file from those.
+4. Update `account.yaml` (`asOf`, counts, anything on the profile that changed).
+5. `npm run build:x`. It lists threads that have no `topic` or `projectIds` yet: tag them in
+   `posts.yaml` and run it again.
+6. Commit `capture/latest.json`, `posts.yaml` and `account.yaml` together.
+
+A post that has gone from X stays in the register, marked `deletedSeen`. A capture with fewer
+posts than the profile's own count fails the build instead of being read as deletions.
+
+Refresh after a posting session and before each monthly review (`x-strategy.md` §8). X shows
+profile visits and link taps only to Premium accounts, so the register holds the public counts:
+views, likes, replies, reposts, quotes, bookmarks.
 
 ## What's here
 
 | File / folder | Kind | Purpose |
 |---|---|---|
+| [`account.yaml`](./account.yaml) | hand-maintained, checked | The live profile, its history and the open items. |
+| [`posts.yaml`](./posts.yaml) | **GENERATED** + curated keys | Every post, grouped into threads, with a summary block. |
+| [`capture/latest.json`](./capture/latest.json) | captured | What X showed at the last capture; the input to `npm run build:x`. |
+| [`capture/snippet.js`](./capture/snippet.js) | tooling | The read-only in-page capture. |
+| [`../scripts/build-x-register.mjs`](../scripts/build-x-register.mjs) | tooling | Builds and checks `posts.yaml`. |
 | [`x-profile.md`](./x-profile.md) | hand-curated | Profile-field copy: display name, bio (+ alternates), location, website, category. Holds the **Previous-live-state** rollback table filled during execution. |
 | [`x-pinned-tweet.md`](./x-pinned-tweet.md) | hand-curated | Copy-paste-ready 3-tweet pinned intro thread + reusable tweet templates. |
 | [`x-strategy.md`](./x-strategy.md) | hand-curated | Build-in-public operating playbook: positioning, four archetypes, content pillars, cadence, launch playbooks, metrics. A doc you *run from*; monthly reviews append to its log. |
@@ -41,6 +104,8 @@ render time.
    - Human-stakes lead, outcome before stack; gloss jargon only when load-bearing.
    - **ArchCanvas → link `archcanvas.uk` only** — the repo is private; never link or imply a
      public source. Tam-AI-Ti and GAVIGO IRE are also private: link the live product, never the repo.
+   - Every image and video is posted with alt text. X cannot add it afterwards;
+     `npm run build:x` lists any post from 2026-10-08 on that has media without it.
    - Visuals only from Chan's own tools / Caldera brand (`#E2E2DF` / `#070607` / `#FC5000`) —
      no shields.io, trophies, or third-party chrome.
 3. **Character limits are verified by command**, not by eye. `x-profile.md` (display name ≤50,
@@ -50,8 +115,9 @@ render time.
 ## Build-surface impact: none
 
 This folder is **not wired into `npm run build`, `npm run validate`, or the asset audit** — editing
-anything here has zero effect on README.md / llms.txt / dist. The only automation is
-`scripts/export-x-header.mjs`, which is **run manually**. Nothing here regenerates on `npm run check`.
+anything here has zero effect on README.md / llms.txt / dist. `npm run check` runs `check:x`, which
+only compares the register with its capture. `scripts/export-x-header.mjs` and `npm run build:x`
+are **run manually**.
 
 ## Future upgrade path (documented, not built)
 

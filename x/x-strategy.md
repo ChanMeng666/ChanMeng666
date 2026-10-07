@@ -25,7 +25,7 @@ On X, Chan Meng is **the engineer who ships AI agents end-to-end and narrates th
 real build** — the architecture decisions, the migrations that didn't go down, the
 day a spec dropped and she shipped against it. Not a thread-guru reselling other
 people's launches, and not a demo account that posts a GIF and disappears. The
-feed is proof-of-work: live products (vitex.org.nz, archcanvas.uk, archlang.uk),
+feed is proof-of-work: live products (archcanvas.uk, archlang.uk),
 early-ecosystem credibility (an MCP server shipped 35 days after the protocol
 launched; two merged PRs into CopilotKit at 36.1k stars; Anthropic Partner Network),
 and the teaching instinct that turns each of those into something another engineer
@@ -45,7 +45,7 @@ panel), restated for who-follows-you-on-X terms.
 
 | # | Archetype | Who follows for this | What they want from the feed | Proof asset (link/pin) |
 |---|-----------|----------------------|------------------------------|------------------------|
-| A1 | **AI Agent Architect** | AI engineers, agent builders, MCP/Claude Code devs | How to actually architect agents that ship — retrieval, tool use, eval, idempotency, faithfulness gates | Vitex (8-step pipeline, agent-ready over HTTP/CLI/MCP) · Google News MCP · Tam-AI-Ti (88+ CopilotKit actions) |
+| A1 | **AI Agent Architect** | AI engineers, agent builders, MCP/Claude Code devs | How to actually architect agents that ship — retrieval, tool use, eval, idempotency, faithfulness gates | Google News MCP · Tam-AI-Ti (88+ CopilotKit actions) |
 | A2 | **Founding / principal engineer** | Founders, early-stage hiring managers, VCs scouting talent | Evidence one person can own a product from schema to production migration | GAVIGO IRE (sub-1ms restore, DOKS→GKE 30-min cutover) · She Sharp (84 API routes; Jul 2025 — Sep 2026) |
 | A3 | **CTO-class operator** | Startup operators, technical co-founder seekers | Someone who sets engineering direction and ships at startup velocity across a whole org | Cross-cloud migration story · Slack/agent-skill automation · shipping cadence across 5 live products |
 | A4 | **AI educator** | Learners, junior devs, the Chinese-speaking + women-in-tech communities | Clear, jargon-glossed explanations they can act on; the "how" behind the build | ArchLang playground · AI Programming Teaching Platform · 5 teaching cohorts, 100+ learners |
@@ -70,15 +70,9 @@ The craft of building agents that survive contact with real users.
 
 - "What shipping an MCP server **35 days** after Anthropic launched the protocol
   taught me about being early to a standard." (Google News MCP)
-- "Vitex is **agent-ready**: the same career agent runs from a browser, a CLI, and
-  an MCP server. Here's why I built one core with N thin adapters instead of three
-  products." (Vitex)
-- "A generation is committed **exactly once, and only after a PDF actually
-  compiles.** How a partial-unique DB index makes an AI pipeline idempotent under
-  SSE reconnects and concurrent retries." (Vitex)
-- "I put a **deterministic faithfulness gate** right after the tailoring step — no
-  model in the check itself — so the agent can't invent a job you never had."
-  (Vitex anti-hallucination)
+- "How the AI's output gets checked before anyone sees it." (ArchCanvas +
+  ArchLang; the follow-up promised in the 2026-07-16 launch thread. Take the
+  specifics from the shard and the product on the day)
 - "I optimised a CopilotKit build **down** from 8 AI-enabled routes to 3. Removing
   agent surface area was the feature." (Tam-AI-Ti)
 
@@ -206,7 +200,7 @@ trophies, or third-party chrome (see §9).
 
 ## 5. Launch playbooks (per flagship)
 
-Five flagships, each with (a) a pre-launch tease, (b) a launch-day thread skeleton
+Four flagships, each with (a) a pre-launch tease, (b) a launch-day thread skeleton
 written tweet-by-tweet, and (c) a follow-up cadence. Skeletons are *skeletons* —
 fill the specifics from the shard the day you post. Every product uses its **real
 hook**.
@@ -268,32 +262,9 @@ floor plans — change one number, exactly one thing moves.
   its own post Day+3; the ```arch-fence GitHub Action (renders plans in Markdown) as
   a dev-tooling tip Day+7; post notable release notes.
 
-### 5.3 Vitex — *job ad → tailored resume in ~30s*
-**Hook:** paste a job ad + describe your background in plain text → a tailored,
-ATS-ready resume PDF + cover letter in about 30 seconds, from browser, CLI, or an
-AI assistant.
-
-- **Pre-launch tease:** screen-recording of the 8-step pipeline streaming its
-  stages live (reading the job ad → matching → tailoring → ATS → PDF). Caption:
-  "No spinner. You watch each stage finish."
-- **Launch-day thread skeleton:**
-  1. Hook — "Paste a job ad, describe yourself in plain text, get a tailored resume
-     *and* cover letter as a real PDF in ~30 seconds. Live at vitex.org.nz." + clip.
-  2. Problem — AI resume tools are either a chatbot that hands you a paragraph, or a
-     form site rendering the same generic template everyone gets.
-  3. The pipeline — 8 Zod-validated stages on the Vercel AI SDK; two-tier model
-     routing (cheap extract tier + reasoning tier).
-  4. ATS + honesty — a *deterministic, no-LLM* ATS score, and a faithfulness gate
-     that catches fabricated skills before they ship.
-  5. The PDF is the deliverable — local Typst compile <100ms, no outside document
-     service; 7 templates auto-selected by industry.
-  6. Agent-ready — the whole product is reachable over a public API, a `vitex` CLI,
-     and an MCP server; Claude/Cursor/ChatGPT can drive it without a browser.
-  7. CTA — "Try it: vitex.org.nz" (single link).
-- **Follow-up cadence:** Day+2 the "refine in plain English — 'make the leadership
-  section stronger' re-does just that slice" clip; Day+5 the MCP-driven demo for the
-  agent crowd; ongoing, quietly share (with permission) a public share-link resume as
-  a live artifact.
+### 5.3 (retired)
+Vitex was archived on 2026-10-02 and its playbook was removed. The numbering of
+the other playbooks is unchanged.
 
 ### 5.4 Google News MCP — *the early-MCP-ecosystem story*
 **Hook:** shipped one of the first useful MCP servers 35 days after Anthropic
@@ -314,7 +285,7 @@ launched the protocol — now a PulseMCP Top Pick listed across 15+ catalogs.
   5. Distribution *is* the strategy — listed on 15+ registries because that's how AI
      devs actually find servers; PulseMCP Top Pick, Glama A rating.
   6. The lesson — being early to a standard compounds; the same instinct now runs
-     through Vitex and ArchLang shipping MCP surfaces.
+     through ArchLang shipping an MCP surface.
   7. CTA — "github.com/ChanMeng666/server-google-news" (single link).
 - **Follow-up cadence:** use this as evergreen credibility — re-share the issue-#76
   screenshot whenever MCP trends; quote-repost Anthropic/MCP ecosystem news with "I
@@ -366,7 +337,7 @@ the protocol's first month. Engagement should sound like a peer, because she is 
   replies from a credible account are the single best follower source.
 - **Quote-repost to extend, not to amplify.** When Anthropic ships a Claude Code
   feature or the MCP spec updates, add your take + a concrete example from your own
-  work. "Here's how this changes the idempotency story in Vitex" > "🔥 huge."
+  work. "Here's what this changes for echook's hooks" > "🔥 huge."
 - **Ship-in-the-open reactions.** When you fix a real bug against a new SDK version
   (e.g. an OpenAI strict-JSON-schema regression), post the fix. The ecosystem
   rewards people who debug in daylight.
@@ -388,8 +359,8 @@ keep a private list.)
   LangGraph, Vercel AI SDK team.
 - **AI-native founders & early-stage operators** hiring or building in public — the
   A2/A3 audience.
-- **Dev-tool builders** in adjacent lanes (Typst community for ArchLang, resume/ATS
-  and careers tools for Vitex).
+- **Dev-tool builders** in adjacent lanes (Typst community for ArchLang, architecture
+  and CAD tooling for ArchCanvas).
 - **Women-in-tech & AI-education communities** (She Sharp, TechRosie-adjacent, AI
   educators) — the A4 audience and Chan's genuine community.
 - **The "build in public" indie-hacker cohort** — high-reciprocity, teaches you the
@@ -407,9 +378,9 @@ extends an ecosystem post with your own example. Done. Consistency beats volume.
 X is the fast, public, dev-facing top of the funnel. It should both feed and be fed
 by everything else. Current reach to route through the loop:
 
-- **LinkedIn — 5,856 followers** (recruiter / founder / professional audience)
+- **LinkedIn — 6,232 followers** (recruiter / founder / professional audience)
 - **Newsletter — 1,103 subscribers** (chanmeng.org/#newsletter; depth audience)
-- **GitHub — 218 followers / 480+ stars** (proof-of-work; where devs verify you)
+- **GitHub — 237 followers / 530+ stars** (proof-of-work; where devs verify you)
 - **chanmeng.org** (the hub every link should ultimately serve)
 
 ### Concrete repurposing rules
@@ -453,7 +424,7 @@ architecture inbound + ecosystem credibility).
 - **Profile visits** — the real leading indicator; a post's job is to earn the click
   to your profile.
 - **Pinned-post engagement** — is your current best proof still pulling?
-- **Link taps** — to vitex.org.nz / archcanvas.uk / playground.archlang.uk / repos /
+- **Link taps** — to archcanvas.uk / playground.archlang.uk / repos /
   chanmeng.org. This is intent.
 - **Which pillar performs** — tag each post P1–P4; review which archetype your
   audience actually rewards, and reweight §1's mix accordingly.
@@ -509,11 +480,14 @@ post and find it honest, clear, and credible.
   GAVIGO IRE are also private — link the live product, never the repo. Never say
   "source coming" for a private product.
 - **Visuals only from Chan's own tools / brand.** Caldera frame (`#E2E2DF` /
-  `#070607` / `#FC5000`), her own product UIs, her own generators (gradient-svg-
-  generator, github-visitor-counter, github-readme-suno-cards). No shields.io badges,
+  `#070607` / `#FC5000`), her own product UIs, her own generators (github-visitor-counter,
+  github-readme-suno-cards). No shields.io badges,
   trophy graphics, wakatime, or third-party chrome.
+- **Alt text on every image and video.** Written before posting, because X cannot
+  add it afterwards. `npm run build:x` lists any post from 2026-10-08 on that has
+  media without it.
 - **Honest metrics only.** Every number must be backed by `data/profile/*.yaml` or a
-  cited source. Round *down* when hand-typing (480+ stars, not a precise figure that
+  cited source. Round *down* when hand-typing (530+ stars, not a precise figure that
   rots). If a claim would need a "*needs verification*" asterisk, don't post it as
   fact. When a number changes, **fix the shard first, then post.**
 - **Don't present training-camp / coursework as flagship evidence** on X — the feed
@@ -537,3 +511,21 @@ post and find it honest, clear, and credible.
 <!-- - Notable inbound: ____                                      -->
 <!-- - Decisions for next month: ____                             -->
 <!-- ============================================================ -->
+
+### Review — 2026-10 (first review; written by Claude from `x/posts.yaml`, capture 2026-10-07)
+- Followers: 4 (first measurement; no earlier figure recorded)
+- Profile visits / link taps: not available. X shows them to Premium accounts only.
+- Volume: 48 posts in 18 threads. July 28 posts, August 6, September 10, October 3 so far.
+- Top 3 by views of the first post: 1) the pinned intro thread, 154  2) a two-word reply in someone else's conversation, 74  3) the Suno trending thread, 41
+- What flopped: nothing drew a reply from anyone else; one like in total. Later posts of a thread are read by a fraction of those who saw the first (ArchLang launch: 28 on the first, 3 on the third).
+- Pillar performance: P4 is 9 of 18 threads; P1, P2 and P3 have none. The other 9 serve no pillar (intro, the two Suno threads, brand films, replies, a personal note). The target mix in §1 is 40/25/15/20.
+- Pinned post: v2 kept until v3 (`x-pinned-tweet.md`) is posted; v3 drops Vitex and updates the star count.
+- Daily reply window happened? No: two replies to other accounts in the whole period.
+- Notable inbound: none recorded.
+- Decisions for next month:
+  1. Write the first P1 post: how ArchCanvas's output is checked by the compiler, promised in the launch thread on 2026-07-16 and not yet written.
+  2. Write one P2 post from finished client work (She Sharp or GAVIGO, within the GAVIGO wording rules in `docs/STATE.md`).
+  3. Reply in other people's conversations: the one reply that happened outdrew every product post.
+  4. Put the link and the claim in the first post. Readers do not reach the sixth.
+  5. Alt text on all media.
+  6. The Suno threads stay as a dated record; no new Seismophone posts.

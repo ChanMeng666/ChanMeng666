@@ -1,0 +1,86 @@
+# =============================================================================
+# X account register — @chanmeng666
+# =============================================================================
+# What the profile PUBLICLY shows, as read from x.com. Hand-maintained: update
+# it after any change on X and after every capture. `npm run build:x` compares
+# the `account:` block with x/capture/latest.json and fails when they disagree,
+# so this file cannot quietly go stale. Every post is in x/posts.yaml.
+#
+# Counts that measure reach (followers) are recorded at their historical
+# maximum and never lowered. `following` and `posts` are plain current counts.
+#
+# The copy and its reasoning are in x-profile.md; the header source is
+# header/header.html. This file records which of them is live.
+#
+# This repo is public. Nothing private belongs here: no DMs, no drafts, no
+# analytics export, no following list.
+# =============================================================================
+
+account:
+  handle: "@chanmeng666"
+  id: "1872396440271777792"
+  url: https://x.com/chanmeng666
+  asOf: "2026-10-07"
+  joined: "2024-12-26"
+  verified: false            # no X Premium: 280-character posts, no analytics page
+  displayName: "Chan Meng — AI Agent Architect"
+  bio: "AI agent architect & full-stack engineer. ArchCanvas (archcanvas.uk): describe a building → buildable floor plan."
+  location: "Auckland, New Zealand"
+  website: https://chanmeng.org/
+  header: x/header/x-header.png      # uploaded 2026-07-19
+  avatar: profile photo              # replaced on X around 2026-10-05
+  pinned: "2107777580908859706"      # intro thread v3, posted and pinned 2026-10-07
+  counts:
+    followers: 4             # historical maximum; never lower it
+    following: 76
+    posts: 50                # X's own count: every post, reply and quote
+    mediaPosts: 15
+    likesGiven: 6
+
+# -----------------------------------------------------------------------------
+# How the account has been run so far (facts from x/posts.yaml › summary;
+# rebuild that file rather than editing numbers here).
+# -----------------------------------------------------------------------------
+history:
+  - { period: "2024-12 → 2026-07", note: "Dormant. One reply (2025-08) and no profile copy." }
+  - { period: "2026-07", note: "Relaunch: branded header, bio and the pinned intro thread on 2026-07-19; ArchLang launch thread; two Suno investigation threads. 28 of the 48 posts." }
+  - { period: "2026-08", note: "One thread: the Oval Office drawn in ArchLang." }
+  - { period: "2026-09 → 2026-10", note: "Mostly single posts with a film or images: ArchCanvas examples and vertical cuts, the logo sting, the intro film, echook." }
+
+# -----------------------------------------------------------------------------
+# Where the live account disagreed with something decided since, found on
+# 2026-10-07, and what was decided. Chan delegated the six decisions to Claude
+# the same day ("make the best decision, then carry on"), so each `decision` is
+# Claude's and she may overrule it. `status`: done | staged (ready, waiting for
+# her yes to publish) | hers (only she can do it on X) | standing (a rule from
+# now on). The threads concerned carry the same notes as `flags` in posts.yaml.
+#
+# Still hers and never delegated by this: deleting a post, and anything posted
+# in her name without her seeing the exact text first.
+# -----------------------------------------------------------------------------
+openItems:
+  - id: pinned-thread-stale
+    what: "The pinned thread named and linked Vitex (archived 2026-10-02) and said 480+ GitHub stars; the profile data publishes 530+."
+    decision: "Replaced. Chan approved the v3 text on 2026-10-07; it was posted and pinned the same day (root 2107777580908859706; five products, no Vitex, 530+, image with alt text). v2 stays on the timeline unpinned: it is the most-viewed post and a dated record."
+    status: done
+  - id: seismophone-posts-live
+    what: "Two threads (17 posts) are about Seismophone and link seismophone.chanmeng.org, which is off every other visitor-facing surface and pending archive."
+    decision: "Keep them. A timeline is a dated record, not a shopfront; the threads are investigations with their corrections left in, and removing them would take 17 of 48 posts. No new Seismophone posts. Look again when the site is archived for real, because the links will break then."
+    status: done
+    next: "Revisit with the archive itself (docs/operations/README.md § Pending)."
+  - id: pricing-line
+    what: "Post 2104347619799794139 is a pricing line, which x/README.md copy rule 2 rules out."
+    decision: "Deleted and not reposted: the 60-second and two-minute cuts of the same film are on the timeline with copy that follows the rule. Chan deleted it herself on 2026-10-07; posts.yaml keeps its text, marked `deletedSeen`."
+    status: done
+  - id: no-alt-text
+    what: "None of the 23 images and videos posted has alt text. X does not allow adding it after posting."
+    decision: "From 2026-10-08 every image and video is posted with alt text. Written into x/README.md, x-strategy.md §9 and x-pinned-tweet.md; `npm run build:x` lists any later post that misses it. Past posts are left as they are."
+    status: standing
+  - id: pillars-untagged
+    what: "x-strategy.md §8 asks for each post to be tagged P1–P4. No thread carried `pillar`."
+    decision: "All 18 threads tagged in posts.yaml: 9 are P4, 9 serve no pillar, and P1, P2 and P3 have none. That gap is the finding; it is in the 2026-10 review in x-strategy.md."
+    status: done
+  - id: strategy-doc-stale
+    what: "x-strategy.md carried a Vitex launch playbook and Vitex examples, and old follower and star counts."
+    decision: "Revised: Vitex removed throughout (§5.3 retired), counts brought to the profile data, the alt-text rule added, and the first monthly review appended from the register."
+    status: done

@@ -49,6 +49,20 @@ rule; read it before touching a display list, a CV or LinkedIn copy.
 | chanmeng.org | Never presented as a project; it is the venue | Decided 2026-10-02 |
 | **YouTube channel** | The channel is a portfolio surface: product films, public demos and brand films. Chan chose each video's visibility and title on 2026-10-07; demos of archived projects (Panda, FemTracker, Wellness Agent, Sanicle) were made private and must not be linked. Descriptions carry no links. Unlisted client and course recordings are left alone | Register `youtube/channel.yaml`; unlisted and private inventory only in the gitignored `youtube/channel.private.yaml` |
 
+## Platform registers
+
+Two of Chan's platforms are recorded in this repo as they stand, so that a
+question about them is answered from a file and not from memory:
+
+| Platform | Read | Kept current by |
+|---|---|---|
+| YouTube (@ChanMeng666) | `youtube/channel.yaml` (+ the gitignored `channel.private.yaml`) | Hand, after each change in Studio |
+| X (@chanmeng666) | `x/account.yaml`, then `x/posts.yaml` (every post; its `summary` block first) | A browser capture, then `npm run build:x`; `npm run check:x` fails when they disagree. Procedure: `x/README.md` |
+
+On 2026-10-07 the X account stood at 50 posts in 18 live threads, 4 followers, with a new intro thread posted and pinned that day and one post deleted. The six observations made that day are settled: `x/account.yaml` › `openItems`. Posts
+are Chan's to edit, delete or pin: the register's `flags` and `openItems` are
+observations for her, never instructions.
+
 ## What the README shows today
 
 Rebuilt from `data/profile/90-meta.yaml`. Verify with `npm run build` rather than

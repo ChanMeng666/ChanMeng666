@@ -15,39 +15,50 @@ and must never be linked or mentioned.
 
 ## The pinned thread (3 tweets)
 
-> **Live status (v2, 2026-07-19):** Tweet 1 is posted with
-> `x/media/pinned-products.png` attached (the image suppresses the auto link
-> card that the profile URL would otherwise render). Thread root status id:
-> `2078727381859389815`.
+> **Live status (v3, 2026-10-07):** posted and pinned, root status id
+> `2107777580908859706`. Tweet 1 carries `x/media/pinned-products.png` with the
+> alt text below; the auto link cards were removed from tweets 2 and 3. It
+> replaced v2 (root `2078727381859389815`, 2026-07-19), which named Vitex and
+> an older star count and stays on the timeline unpinned. What is live is
+> recorded in [`account.yaml`](./account.yaml).
 
 A pin shows only the first tweet, so Tweet 1 stands fully on its own: who Chan
-is, the human-stakes value, and the compressed proof (480+ GitHub stars across
-shipped AI tools). Tweets 2 and 3 continue for anyone who expands the thread.
+is, the human-stakes value, and the compressed proof (530+ GitHub stars, from
+`00-basics.yaml`). Tweets 2 and 3 continue for anyone who expands the thread.
+Tweet 1 carries `x/media/pinned-products.png`, whose five rows are the five
+products of Tweet 2 in the same order.
 
 **Tweet 1** — standalone intro + proof
 
 ```
 I'm Chan Meng — I architect AI agents and ship full-stack products, then teach others to do the same.
 
-480+ GitHub stars across AI tools I've shipped solo: MCP servers, coding-agent plugins, a floor-plan language, an AI career agent.
+530+ GitHub stars across AI tools I've built: MCP servers, coding-agent plugins, a floor-plan language and an AI architect on top.
 
 Auckland, NZ → https://chanmeng.org/
 ```
 
-**Tweet 2** — flagship rollcall with links
+**Alt text for the image on Tweet 1** (X allows 1,000 characters; it cannot be
+added after posting)
+
+```
+What I build. ArchCanvas: describe a building, get a buildable plan. ArchLang: a text language for floor plans. echook: talk-to-configure notifications for coding agents. Google News MCP: live news for AI assistants. a11y-loop: accessible UI from AI coding agents, audited. Chan Meng.
+```
+
+**Tweet 2** — product rollcall with links
 
 ```
 Five I build:
 
-Google News MCP (PulseMCP Top Pick) https://github.com/ChanMeng666/server-google-news
+ArchCanvas AI architect https://archcanvas.uk
+
+ArchLang floor-plan language https://playground.archlang.uk
 
 echook for coding agents https://github.com/ChanMeng666/echook
 
-ArchLang, a floor-plan language https://playground.archlang.uk
+Google News MCP (PulseMCP Top Pick) https://github.com/ChanMeng666/server-google-news
 
-ArchCanvas AI architect https://archcanvas.uk
-
-Vitex AI career agent https://vitex.org.nz
+a11y-loop, accessible UI https://github.com/ChanMeng666/a11y-loop
 ```
 
 **Tweet 3** — what this feed does + CTA
@@ -60,6 +71,8 @@ Follow for the work as it ships. Everything in one place:
 https://chanmeng.org/
 ```
 
+The v2 text (2026-07-19) is in `posts.yaml` under thread `2078727381859389815`.
+
 ---
 
 ## Alternates & templates
@@ -70,8 +83,11 @@ Use this instead of the thread if you'd rather pin one tweet. Self-sufficient;
 no follow-on required.
 
 ```
-I'm Chan Meng — AI Agent Architect & full-stack engineer in Auckland, NZ. I architect AI agents, ship products end-to-end, and teach others to do the same. 480+ GitHub stars across tools I've built solo. Work + writing: https://chanmeng.org/
+I'm Chan Meng — AI Agent Architect & full-stack engineer in Auckland, NZ. I architect AI agents, ship products end-to-end, and teach others to do the same. 530+ GitHub stars across tools I've built. Work + writing: https://chanmeng.org/
 ```
+
+**Every image and video gets alt text**, written before posting (rule adopted
+2026-10-07). Say what the picture shows, including any text in it.
 
 ### (b) Product-launch template
 
@@ -135,17 +151,20 @@ Verification script replaces every URL with a 23-char token, then prints
 
 ```js
 const urlRe = /https?:\/\/\S+/g;
-const len = (s) => s.replace(urlRe, "x".repeat(23)).length;
+const light = (c) => c <= 4351 || (c >= 8192 && c <= 8205) || (c >= 8208 && c <= 8223) || (c >= 8242 && c <= 8247);
+const len = (s) => [...s.replace(urlRe, "x".repeat(23))].reduce((n, ch) => n + (light(ch.codePointAt(0)) ? 1 : 2), 0);
+// X counts a character outside its light ranges as 2: the arrow, emoji, CJK.
 // len(tweet) run for each of T1, T2, T3, and Alternate (a)
 ```
 
 Actual output for the three thread tweets and alternate (a):
 
 ```
-T1: 273 OK
+T1: 274 OK
 T2: 277 OK
 T3: 210 OK
-ALT-a: 243 OK
+ALT-a: 238 OK
+Image alt text: 284 OK (limit 1,000)
 ```
 
 All ≤ 280. Templates (b)/(c)/(d) contain `<slots>` and carry budget notes

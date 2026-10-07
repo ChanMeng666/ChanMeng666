@@ -1908,33 +1908,6 @@
         "outcomes": "Live production service at\ngithub-readme-suno-cards.vercel.app with `/gallery` and\n`/builder` routes and three SVG endpoints (`/api/card`,\n`/api/profile`, `/api/cards`). The current public repository\nis the clean-extract release — first commit `73f4fa8`\n\"initial commit — github-readme-suno-cards v0.1\" on\n2026-04-13, immediately followed by `295756e` \"clean remaining\ninternal reference\" (the post-extraction sanitization sweep) —\ncarried forward to its latest commit `86167f4` on 2026-07-06,\nwhich recorded a 2026-07-05 health audit confirming all three\nrender surfaces against live Suno data. That audit produced\ntwo durable API decisions: the `/api/trending` fossil was\nquarantined out of the public parser surface, and HTTP 422 got\nits own error type. The shared parser kernel with Seismophone\nis the architecturally important outcome: rather than two Suno\nintegrations drifting apart, both products are pinned to one\nValibot contract and one typed-error hierarchy. Roadmap:\nwaveform card variant, lyrics-excerpt cards, playlist cards, a\nJSON API, and PNG export via `@resvg/resvg`.\n",
         "myRole": "Sole author across both the original internal monorepo and\nthe public v0.1 extraction. Designed the pnpm monorepo split\nwith the parser and renderer as reusable workspace packages;\nwrote the Valibot schemas against Suno's oEmbed contract;\ndesigned the typed Suno error hierarchy (including the\n422-vs-404 split); engineered the `<foreignObject>` +\nCSS-keyframes technique that handles CJK text and animated\nequalizers in a single card; built the GitHub Marketplace\nAction with its esbuild-bundled dist and its 36-input surface\nwith three-format ID normalization; designed the\n`<!-- SUNO-CARDS:START/END -->` marker-based README\nreplacement; built the visual `/builder` with live preview\nover all 12 base combinations, 11 toggles, and hex overrides;\nran the 2026-04-13 public-extract release and the 2026-07\nhealth audit that quarantined the trending fossil; and\ncoordinate parser updates across this project and its\nSeismophone sibling.\n"
       },
-      "_featuredStackResolved": [
-        {
-          "name": "github",
-          "src": "/public/tech-logos/github.svg"
-        },
-        {
-          "name": "nextjs",
-          "src": "/public/tech-logos/nextjs.svg"
-        },
-        {
-          "name": "vercel",
-          "src": "/public/tech-logos/vercel.svg"
-        },
-        {
-          "name": "typescript",
-          "src": "/public/tech-logos/typescript.svg"
-        },
-        {
-          "name": "react",
-          "src": "/public/tech-logos/react.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrgs": [],
-      "_adopterOrgs": [],
-      "_affiliationOrg": null,
-      "_cohortPartners": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -2275,12 +2248,6 @@
         "outcomes": "75 commits on the main branch, about 48 by Chan and the rest\nsplit between Renovate dependency updates and outside\ncontributors — notably the founders of the Smithery (Henry Mao)\nand Glama (Frank Fiegel) MCP catalogs, a real early-ecosystem\nsignal. Carries security-assessment badges from MseeP.ai and\nGlama.ai in the README. Listed across MCP discovery catalogs —\nGlama, PulseMCP, mcp.so, Smithery, and others (10+ surfaces,\nA-rating, PulseMCP visitor count, and the Skywork AI deep-dive\nreview are external claims — need registry/catalog check).\nShipped one day after its companion Google News MCP server,\nmaking the pair one of the earliest public sets of locale-aware\nMCP servers.\n",
         "myRole": "Sole author. I designed the single-table localization approach,\nwrote every translation, built the multi-channel distribution\n(npm, Smithery, Docker, `.mcpb`), and maintain it alongside its\nGoogle News MCP counterpart. External contributions have been\ndependency bumps and catalog-integration commits; the tool\ndesign and localization are mine.\n"
       },
-      "_featuredStackResolved": [],
-      "_contextLogo": [],
-      "_affiliationOrgs": [],
-      "_adopterOrgs": [],
-      "_affiliationOrg": null,
-      "_cohortPartners": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -13790,6 +13757,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-07T22:39:04.899Z"
+    "buildTimestamp": "2026-10-07T22:45:29.006Z"
   }
 }

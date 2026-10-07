@@ -2791,83 +2791,6 @@ troubleshooting contribution. Together these make the
 early-MCP-developer story concrete: not a theoretical early adopter,
 but someone who shipped, distributed, documented, and supported a
 working MCP server within the protocol's first month.
-### Google Jobs MCP Server — Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
-[tier=primary · recency=recent · updated=2026-09-18]
-- **URL:** https://github.com/ChanMeng666/server-google-jobs
-- **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk 1.25.1, stdio transport, SerpAPI, node-fetch, ES modules, npm (scoped @chanmeng666), Dockerfile, .mcpb compiled binary, mcp-evals (v2.0.0 early adoption)
-
-**Summary:** A Model Context Protocol (MCP) server — the open standard that
-lets AI assistants call outside tools — that searches Google job
-listings through SerpAPI and returns results in English,
-Simplified Chinese, Japanese, or Korean. Built on Dec 31 2024,
-just 36 days after MCP's public launch, as a companion to the
-Google News MCP server from the same author. Installs from npm,
-Smithery, Docker, or a one-file `.mcpb` bundle, and is listed
-across MCP discovery catalogs including Glama, PulseMCP, mcp.so,
-and Smithery (catalog ratings and visitor counts are external
-claims — needs registry check).
-
-**Impact:** The companion to the Google News server: lets AI assistants search Google job listings in English, Chinese, Japanese, and Korean. Built 36 days after MCP's launch — early enough that the founders of two major MCP catalogs contributed code to it.
-
-**Problem:** When it was built at the very end of December 2024, the Model
-Context Protocol was only weeks old and there was no ready-made
-way for an AI assistant to look up job listings — least of all
-in more than one language. A job seeker in Greater China, Japan,
-or Korea who wanted Claude Desktop to find relevant openings had
-to translate their own query and hand-assemble search-URL
-parameters.
-
-**Audience:** Three groups: (a) developers wiring job search into an AI
-application; (b) multilingual job seekers using Claude Desktop
-or another MCP-aware assistant; and (c) other early MCP authors
-looking for a worked example of locale-aware integration with a
-third-party API. (Skywork AI's write-up describes it as a
-reference pattern from the early MCP ecosystem — external claim,
-needs registry check.)
-
-**Product logic:** The server exposes Google Jobs (through SerpAPI) as a single MCP
-tool, `search_jobs`. A caller passes a `query` plus optional
-filters — `location`, `radius`, `employment_type`, `salary`,
-`posted_age`, `sort_by`, and `page` — and picks the output
-language with `hl` (`en`, `zh-CN`, `ja`, or `ko`). It returns up
-to 10 results per page, with every label, status message, and
-suggestion translated into the chosen language (24 translated
-strings per locale) so the assistant can present results
-directly without extra formatting.
-
-**Technical approach:** TypeScript on Node.js, built against the official
-`@modelcontextprotocol/sdk` (kept current at 1.25.1). Rather
-than branch on language throughout the code, the four locales
-live in one translation table keyed to shared field names, so
-the same query logic serves every language and only the output
-strings swap. Distribution is deliberately wide for an early MCP
-server: npm (`@chanmeng666/google-jobs-server`), one-command
-Smithery install, a Dockerfile for containers, and a
-self-contained `.mcpb` bundle. `package.json` also carries a
-structured `ai:` block (use cases, capabilities, target
-audience) so LLM-driven catalogs can index it — the same
-discovery-oriented authoring pattern across this portfolio's MCP
-work.
-
-**Outcomes:** 75 commits on the main branch, about 48 by Chan and the rest
-split between Renovate dependency updates and outside
-contributors — notably the founders of the Smithery (Henry Mao)
-and Glama (Frank Fiegel) MCP catalogs, a real early-ecosystem
-signal. Carries security-assessment badges from MseeP.ai and
-Glama.ai in the README. Listed across MCP discovery catalogs —
-Glama, PulseMCP, mcp.so, Smithery, and others (10+ surfaces,
-A-rating, PulseMCP visitor count, and the Skywork AI deep-dive
-review are external claims — need registry/catalog check).
-Shipped one day after its companion Google News MCP server,
-making the pair one of the earliest public sets of locale-aware
-MCP servers.
-
-**My role:** Sole author. I designed the single-table localization approach,
-wrote every translation, built the multi-channel distribution
-(npm, Smithery, Docker, `.mcpb`), and maintain it alongside its
-Google News MCP counterpart. External contributions have been
-dependency bumps and catalog-integration commits; the tool
-design and localization are mine.
 ### AI Programming Education Platform — Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
 [tier=primary · recency=active · updated=2026-09-18]
 - **URL:** https://programming.chanmeng.org/
@@ -3159,6 +3082,83 @@ JS→TS migration with Zod validation, gallery virtualization) and
 the July 2026 site redesign; set up the Vercel + GitHub Actions +
 Vitest + Husky pipeline. I use the service across every personal
 repo as a live test signal for the project itself.
+### Google Jobs MCP Server — Companion early-MCP Google Jobs server (Dec 31 2024, 36 days post-MCP-launch) — subject of dedicated Skywork AI deep-dive review, 4-language localized, listed across 10+ MCP catalogs
+[tier=primary · recency=recent · updated=2026-09-18]
+- **URL:** https://github.com/ChanMeng666/server-google-jobs
+- **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk 1.25.1, stdio transport, SerpAPI, node-fetch, ES modules, npm (scoped @chanmeng666), Dockerfile, .mcpb compiled binary, mcp-evals (v2.0.0 early adoption)
+
+**Summary:** A Model Context Protocol (MCP) server — the open standard that
+lets AI assistants call outside tools — that searches Google job
+listings through SerpAPI and returns results in English,
+Simplified Chinese, Japanese, or Korean. Built on Dec 31 2024,
+just 36 days after MCP's public launch, as a companion to the
+Google News MCP server from the same author. Installs from npm,
+Smithery, Docker, or a one-file `.mcpb` bundle, and is listed
+across MCP discovery catalogs including Glama, PulseMCP, mcp.so,
+and Smithery (catalog ratings and visitor counts are external
+claims — needs registry check).
+
+**Impact:** The companion to the Google News server: lets AI assistants search Google job listings in English, Chinese, Japanese, and Korean. Built 36 days after MCP's launch — early enough that the founders of two major MCP catalogs contributed code to it.
+
+**Problem:** When it was built at the very end of December 2024, the Model
+Context Protocol was only weeks old and there was no ready-made
+way for an AI assistant to look up job listings — least of all
+in more than one language. A job seeker in Greater China, Japan,
+or Korea who wanted Claude Desktop to find relevant openings had
+to translate their own query and hand-assemble search-URL
+parameters.
+
+**Audience:** Three groups: (a) developers wiring job search into an AI
+application; (b) multilingual job seekers using Claude Desktop
+or another MCP-aware assistant; and (c) other early MCP authors
+looking for a worked example of locale-aware integration with a
+third-party API. (Skywork AI's write-up describes it as a
+reference pattern from the early MCP ecosystem — external claim,
+needs registry check.)
+
+**Product logic:** The server exposes Google Jobs (through SerpAPI) as a single MCP
+tool, `search_jobs`. A caller passes a `query` plus optional
+filters — `location`, `radius`, `employment_type`, `salary`,
+`posted_age`, `sort_by`, and `page` — and picks the output
+language with `hl` (`en`, `zh-CN`, `ja`, or `ko`). It returns up
+to 10 results per page, with every label, status message, and
+suggestion translated into the chosen language (24 translated
+strings per locale) so the assistant can present results
+directly without extra formatting.
+
+**Technical approach:** TypeScript on Node.js, built against the official
+`@modelcontextprotocol/sdk` (kept current at 1.25.1). Rather
+than branch on language throughout the code, the four locales
+live in one translation table keyed to shared field names, so
+the same query logic serves every language and only the output
+strings swap. Distribution is deliberately wide for an early MCP
+server: npm (`@chanmeng666/google-jobs-server`), one-command
+Smithery install, a Dockerfile for containers, and a
+self-contained `.mcpb` bundle. `package.json` also carries a
+structured `ai:` block (use cases, capabilities, target
+audience) so LLM-driven catalogs can index it — the same
+discovery-oriented authoring pattern across this portfolio's MCP
+work.
+
+**Outcomes:** 75 commits on the main branch, about 48 by Chan and the rest
+split between Renovate dependency updates and outside
+contributors — notably the founders of the Smithery (Henry Mao)
+and Glama (Frank Fiegel) MCP catalogs, a real early-ecosystem
+signal. Carries security-assessment badges from MseeP.ai and
+Glama.ai in the README. Listed across MCP discovery catalogs —
+Glama, PulseMCP, mcp.so, Smithery, and others (10+ surfaces,
+A-rating, PulseMCP visitor count, and the Skywork AI deep-dive
+review are external claims — need registry/catalog check).
+Shipped one day after its companion Google News MCP server,
+making the pair one of the earliest public sets of locale-aware
+MCP servers.
+
+**My role:** Sole author. I designed the single-table localization approach,
+wrote every translation, built the multi-channel distribution
+(npm, Smithery, Docker, `.mcpb`), and maintain it alongside its
+Google News MCP counterpart. External contributions have been
+dependency bumps and catalog-integration commits; the tool
+design and localization are mine.
 ### Github README Suno Cards — GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 36 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.
 [tier=primary · recency=active · updated=2026-07-17]
 - **URL:** https://github-readme-suno-cards.vercel.app

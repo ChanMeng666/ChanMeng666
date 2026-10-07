@@ -88,9 +88,12 @@ trusting this list after edits.
   2026-10-08 the CORDE field-operations mobile app (Chan's decision). Its commit
   share is counted on the original repository (236 of 413, 57%), with that
   basis beside the figure on every surface.
-- AI agents and tooling: echook, Google News MCP Server, Google Jobs MCP Server,
-  AI Programming Education Platform, a11y-loop.
-- Craft and products: GitHub README Suno Cards.
+- AI agents and tooling: echook, Google News MCP Server, AI Programming Education
+  Platform, a11y-loop. Google Jobs MCP Server was taken off on 2026-10-08 (Chan:
+  a second MCP server repeats Google News); it keeps its narrative in the llms files.
+- Craft and products: empty since 2026-10-08, so the table does not render. GitHub
+  README Suno Cards was taken off (Chan: the "Sound I make" block already shows the
+  cards and credits the project); it keeps its narrative in the llms files.
 - Commissioned: Tam-AI-Ti.
 
 Counts on 2026-10-07: 111 projects in `data/profile` (7 flagship, 8 primary, 29

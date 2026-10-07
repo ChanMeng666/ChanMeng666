@@ -56,7 +56,7 @@
 {{!-- "Craft & products", not "Craft & open-source products": Seismophone
      (sunostats) is self-hosted with no public repo, so the group is not
      uniformly open source. --}}
-#### Craft & products
+{{#if _openSourceCraftProjects.length}}#### Craft & products
 
 <table>
   <colgroup>
@@ -74,7 +74,7 @@
   </tr>
 {{/each}}</table>
 
-{{#if _commissionedProjects.length}}{{!-- NOTE the ~ on this comment's closing marker: it
+{{/if}}{{#if _commissionedProjects.length}}{{!-- NOTE the ~ on this comment's closing marker: it
      eats the newline that would otherwise stack a SECOND blank line on top of
      the one above, between the craft table and this H4. The blank line stays
      outside the conditional so it is still correct when the list is empty.

@@ -421,7 +421,10 @@ meta:
     # MCP servers rather than under craft. echook follows: the second-most-starred
     # project in the portfolio (86★, behind google-news-mcp at 126).
     # Order = display order.
-    aiAgentProjectIds:         [echook, google-news-mcp, server-google-jobs, ai-programming-teaching-project, a11y-loop]
+    # 2026-10-08 (Chan): server-google-jobs REMOVED from the README: a second MCP
+    # server beside Google News repeats it, so only Google News is shown. It keeps
+    # its llms narrative through llmsOnlyOpenSourceIds. Do not re-add.
+    aiAgentProjectIds:         [echook, google-news-mcp, ai-programming-teaching-project, a11y-loop]
     # Open source with a full llms.txt / llms-full.txt entry but NO README table
     # row of its own (already visible as a "↳ Related" link on a card above).
     # ai-hackathon-assistant is back here 2026-08-05: without it, de-listing the
@@ -430,7 +433,7 @@ meta:
     # 2026-10-07: gradient-svg-generator is here because it left the README (see
     # openSourceCraftProjectIds below) but keeps its narrative in llms.txt and
     # llms-full.txt, where it is a factual record of the engineering.
-    llmsOnlyOpenSourceIds:     [gradient-svg-generator]   # 2026-10-02: ai-hackathon-assistant shelved (tier secondary) -> long-tail line only
+    llmsOnlyOpenSourceIds:     [gradient-svg-generator, server-google-jobs, github-readme-suno-cards]   # 2026-10-02: ai-hackathon-assistant shelved (tier secondary) -> long-tail line only
     # 2026-08-05 second pass: portfolio-v2 REMOVED — chanmeng.org is already the
     # "Portfolio" pill in the header, so a row here showed the same site twice.
     # css-tower-defense joined; gradient-svg-generator and sunostats came back
@@ -449,7 +452,11 @@ meta:
     # Do not re-add it here or to any other display bucket.
     # 2026-10-07 (Chan): css-tower-defense / Te Pa Tiaki REMOVED — repo archived and
     # deployment retired the same day. Do not re-add.
-    openSourceCraftProjectIds: [github-readme-suno-cards]
+    # 2026-10-08 (Chan): github-readme-suno-cards REMOVED: the "Sound I make" block
+    # already shows the cards with a credit line to the project, which is its
+    # showing. It keeps its llms narrative through llmsOnlyOpenSourceIds. The
+    # bucket is empty, so the "Craft & products" table no longer renders.
+    openSourceCraftProjectIds: []
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []
     moreOpenSourceProjectIds:     []

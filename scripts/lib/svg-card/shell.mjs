@@ -26,14 +26,15 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
 export const pct = (t, total, digits = 2) => `${Math.max(0, Math.min(100, (t / total) * 100)).toFixed(digits)}%`;
 
 // The identity panel. `mark` is an SVG fragment drawn in a 58px box at (40, 84).
-export function panel(glyphs, { eyebrow, name, headline, underline, sub, chips, mark }) {
+export function panel(glyphs, { eyebrow, name, headline, underline, sub, chips, mark, headlineSize = 25 }) {
   const out = [`<rect width="${CARD.panel}" height="${CARD.h}" fill="${BRAND.ink}"/>`];
   out.push(glyphs.text(eyebrow, { font: "mono", size: 12.5, x: 40, y: 52, fill: BRAND.muted, tracking: 0.16 }));
   out.push(`<g transform="translate(40 84)">${mark}</g>`);
   out.push(glyphs.text(name, { font: "display", size: 56, x: 114, y: 137, fill: BRAND.ash }));
 
   // The one orange accent: a rule that draws itself under part of the headline.
-  const hl = { font: "sansBold", size: 25 };
+  const hl = { font: "sansBold", size: headlineSize };
+  if (40 + glyphs.measure(headline, hl) > CARD.panel - 24) throw new Error(`svg-card: headline "${headline}" does not fit the panel at ${headlineSize}px`);
   if (underline) {
     const at = headline.indexOf(underline);
     if (at < 0) throw new Error(`svg-card: underline "${underline}" is not in the headline`);

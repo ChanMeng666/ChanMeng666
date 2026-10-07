@@ -2992,7 +2992,7 @@ tool reaches real teams, not less.
 agent-first, with an AGENTS.md alongside the README so an agent can
 orient itself without a human intermediary.
 ### Chromaflow — 355 parametric animated SVG templates served as live XML via Vercel serverless — paste a URL in any Markdown file and the browser animates the gradient locally using SVG <animate>/SMIL + CSS @keyframes + SVG filters (feTurbulence, feDisplacementMap, feGaussianBlur). 18-month / 283-commit codebase taken through a documented 4-phase refactor (extract primitives -> truth-up marketing numbers -> JS->TS migration with Zod validation -> virtualized template gallery). Internal product name "Chromaflow".
-[tier=primary · recency=active · updated=2026-08-05]
+[tier=primary · recency=active · updated=2026-10-07]
 - **URL:** https://gradient-svg-generator.vercel.app/
 - **Repository:** https://github.com/ChanMeng666/gradient-svg-generator
 - **Tech stack:** Next.js 16.2 (App Router + Vercel serverless runtime), React 19.2 + TypeScript 5.4 (gradual JS->TS migration through Phase 7), Tailwind CSS 4.2 + @tailwindcss/typography + @tailwindcss/forms, Zustand 5.0 (template gallery state), @tanstack/react-query 5.83 (data fetching), @tanstack/react-virtual 3.13 (virtualized template grid for 355 entries), Zod 3.23 (runtime validation of /api/svg query params, 400-on-bad-input), fuse.js 7.1 (fuzzy template search), framer-motion 12.23 (visual editor micro-interactions), SVG <animate> / <animateTransform> (SMIL animation primitives), CSS @keyframes embedded in <style> inside the streamed SVG, Animated linearGradient / radialGradient stop offsets, SVG filters: <feTurbulence>, <feDisplacementMap>, <feGaussianBlur>, <feColorMatrix>, <textPath> for text-following-path animations, @vercel/node 2.15 serverless function (/api/svg endpoint streams XML), Vitest 1.6 + @testing-library/* (tests/contract/ + tests/unit/), ESLint 9 + TypeScript-ESLint 8 + Prettier 3 + Husky 9 + lint-staged 15, web-vitals 5.0 (production performance telemetry), ISC license
@@ -3003,10 +3003,9 @@ Markdown file and the banner animates on its own, with nothing to
 install. It ships 355 ready-made designs across 19 themes (pride
 flags, tech, nature, gaming, and more) and a point-and-click
 editor for people who don't want to hand-write links. Open-source
-and built solo over 18 months; it powers every badge on this
-profile, so a broken render shows up here first.
+and built solo over 18 months.
 
-**Impact:** Paste one URL into any GitHub README and a live animated banner appears, no install. 355 free, open-source banner designs power every badge in this profile.
+**Impact:** Paste one URL into any GitHub README and a live animated banner appears, no install. 355 banner designs, free and open source.
 
 **Problem:** Giving a GitHub profile, project README, or docs site a
 striking animated header usually means one of three bad
@@ -3061,11 +3060,10 @@ whole service runs as a Vercel serverless function that streams
 the SVG document straight back to the browser
 (`Content-Type: image/svg+xml`), cached at Vercel's edge. The
 build-in-public value: the project is shared infrastructure for
-Chan's other work — every visual badge across every
-Chan-authored README pulls from this one service, so the service
-is its own continuous test signal (any rendering regression
-breaks visible branding on her own portfolio, forcing a same-day
-fix). It's also the project that took the most explicit honesty
+Chan's other work — the banners and badges in the READMEs of her
+other public repositories pull from this one service, so the
+service is its own continuous test signal (a rendering regression
+shows up on her own repositories first). It's also the project that took the most explicit honesty
 audit: commits `fdcb7dd` "truth up marketing numbers",
 `db724e0` "drop 50+ Effects claim", and `8fd7886` "catch older
 stale counts" walked the codebase correcting every exaggerated
@@ -3128,9 +3126,8 @@ social-share card.
 2026-07-10), effectively solo — every commit is Chan's except
 one automated GitHub Action commit. Production availability on
 Vercel's global edge, ISC-licensed for broad reuse. Dogfooded
-across every Chan-authored repo: the badges, banners, and
-section headers in every public README (including the one that
-ships this profile) come from
+across Chan's other public repositories: the badges, banners and
+section headers in their READMEs come from
 `gradient-svg-generator.vercel.app/api/svg` URLs, so any
 rendering regression breaks visible branding immediately and
 forces a same-day fix — a continuous, self-testing loop. The

@@ -50,13 +50,25 @@ if (!fs.existsSync(brandTokensPath)) {
 const brand = JSON.parse(fs.readFileSync(brandTokensPath, "utf8"));
 data.brand = brand;
 
-// Adapter: reshape brand.signatures.* into the legacy data.decorations.* shape
-// so templates/partials/{banner,featured-work,builder-tools,suno-cards,...}.hbs
-// keep working unchanged. profile.yaml's decorations: block is no longer the
-// source of truth.
+// Adapter: reshape brand.signatures.* into the data.decorations.* shape the
+// partials read. Banners and pills are the README's own artwork
+// (brand.signatures.readmeArt → public/readme/*.svg, `npm run build:art`);
+// a banner or pill whose file is missing fails the build here instead of
+// shipping a broken image.
+const readmeArt = brand.signatures.readmeArt;
+const artSlug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const artFile = (name, what) => {
+  const src = `/${readmeArt.dir}/${name}.svg`;
+  if (!fs.existsSync(path.join(repoRoot, src.slice(1)))) {
+    console.error(`✗ ${src} is missing (${what}). List it in data/brand.yaml › signatures.readmeArt and run \`npm run build:art\`.`);
+    process.exit(1);
+  }
+  return src;
+};
 data.decorations = {
-  banners: brand.signatures.banners,
-  buttons: brand.signatures.pillRotation?.templates ?? {},
+  banners: Object.fromEntries(
+    Object.entries(readmeArt.banners).map(([id, b]) => [id, { text: b.text, src: artFile(id, `banner "${id}"`) }]),
+  ),
   visitorCounter: brand.signatures.visitorCounter,
   sunoCards: brand.signatures.sunoCards,
 };
@@ -1126,16 +1138,15 @@ Handlebars.registerHelper("join", (arr, sep) =>
 Handlebars.registerHelper("pillsParam", (arr) =>
   Array.isArray(arr) ? encodeURIComponent(arr.join(" | ")) : "",
 );
-// Build the gradient-svg-generator color/effect query suffix from a button or
-// banner config (brand.signatures.pillRotation.templates.* / banners.*). Lets
-// the inline badge URLs in hero/footer inherit the Caldera palette without
-// duplicating the color list. Returns e.g. "&gradientType=pixelArt&color0=FC5000&color1=070607".
-Handlebars.registerHelper("pillParams", (cfg) => {
-  if (!cfg || typeof cfg !== "object") return "";
-  let s = "";
-  if (cfg.gradientType) s += `&gradientType=${cfg.gradientType}`;
-  for (const [i, c] of (cfg.colors ?? []).entries()) s += `&color${i}=${c}`;
-  return s;
+// A link pill: the README's own SVG for this label (public/readme/pill-*.svg).
+// The label is the alt text, so the picture and the words cannot drift apart.
+Handlebars.registerHelper("pill", (label) => {
+  if (!(label in readmeArt.pills)) {
+    console.error(`✗ No pill for "${label}". Add it to data/brand.yaml › signatures.readmeArt.pills and run \`npm run build:art\`.`);
+    process.exit(1);
+  }
+  const src = artFile(`pill-${artSlug(label)}`, `pill "${label}"`);
+  return new Handlebars.SafeString(`<img src="${src}" height="40" alt="${Handlebars.escapeExpression(label)}">`);
 });
 const fmtDate = (d) => {
   if (!d) return "";

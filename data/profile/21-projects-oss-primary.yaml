@@ -858,14 +858,22 @@ projects:
   - id: gradient-svg-generator
     provenance: personal
     # Band change 2026-08-05: back to the "Craft & products" table when the card
-    # band was cut to three. It still renders every banner and pill on the
-    # README, so it stays highly visible through the credit captions.
+    # band was cut to three.
+    # 2026-10-07 (Chan): this profile's README no longer uses it. The hero, the
+    # section strips, the footer and the pills are now the README's own files
+    # (public/readme, `npm run build:art`), and the credit captions are gone.
+    # Do NOT write that it powers this profile, on any surface. Her other
+    # project READMEs still embed it.
+    # DISPLAY RULE, same day (Chan): off every visitor-facing surface — README,
+    # all three CVs, LinkedIn copy, chanmeng.org. It stays in the database and
+    # in the LLM narrative (meta.x_brand.llmsOnlyOpenSourceIds). The repo is
+    # public and maintained, not archived. Do not re-add it to a display list.
     tier: primary
     recency: active
     meta:
       x_brand:
         featuredStack: [nextjs, react, typescript, tailwindcss, vercel]
-    lastUpdated: "2026-08-05"
+    lastUpdated: "2026-10-07"
     # Product name only — "Chromaflow" is what it is called; the repo is still
     # ChanMeng666/gradient-svg-generator and the service still runs at
     # gradient-svg-generator.vercel.app. The old value carried the repo slug and
@@ -926,7 +934,7 @@ projects:
       - { label: "URL parameters",           value: "10 (text, template, height, duration, color0-N, gradientType, stroke, strokeWidth, rotate, textBg)" }
       - { label: "API endpoint",             value: "GET /api/svg — streams XML with Content-Type: image/svg+xml" }
       - { label: "Anti-hype commit",         value: "fdcb7dd 'truth up marketing numbers across the codebase' + db724e0 'drop 50+ Effects claim'" }
-      - { label: "Dogfooding",               value: "Powers every visual badge / banner in every Chan-authored README — including this profile" }
+      - { label: "Dogfooding",               value: "Renders the banners and badges in the READMEs of Chan's other public repositories" }
       - { label: "License",                  value: "ISC" }
     status: live
     startDate: "2025-01-06"
@@ -937,10 +945,9 @@ projects:
       install. It ships 355 ready-made designs across 19 themes (pride
       flags, tech, nature, gaming, and more) and a point-and-click
       editor for people who don't want to hand-write links. Open-source
-      and built solo over 18 months; it powers every badge on this
-      profile, so a broken render shows up here first.
+      and built solo over 18 months.
     narrative:
-      impactHeadline: "Paste one URL into any GitHub README and a live animated banner appears, no install. 355 free, open-source banner designs power every badge in this profile."
+      impactHeadline: "Paste one URL into any GitHub README and a live animated banner appears, no install. 355 banner designs, free and open source."
       problem: |
         Giving a GitHub profile, project README, or docs site a
         striking animated header usually means one of three bad
@@ -995,11 +1002,10 @@ projects:
         the SVG document straight back to the browser
         (`Content-Type: image/svg+xml`), cached at Vercel's edge. The
         build-in-public value: the project is shared infrastructure for
-        Chan's other work — every visual badge across every
-        Chan-authored README pulls from this one service, so the service
-        is its own continuous test signal (any rendering regression
-        breaks visible branding on her own portfolio, forcing a same-day
-        fix). It's also the project that took the most explicit honesty
+        Chan's other work — the banners and badges in the READMEs of her
+        other public repositories pull from this one service, so the
+        service is its own continuous test signal (a rendering regression
+        shows up on her own repositories first). It's also the project that took the most explicit honesty
         audit: commits `fdcb7dd` "truth up marketing numbers",
         `db724e0` "drop 50+ Effects claim", and `8fd7886` "catch older
         stale counts" walked the codebase correcting every exaggerated
@@ -1062,9 +1068,8 @@ projects:
         2026-07-10), effectively solo — every commit is Chan's except
         one automated GitHub Action commit. Production availability on
         Vercel's global edge, ISC-licensed for broad reuse. Dogfooded
-        across every Chan-authored repo: the badges, banners, and
-        section headers in every public README (including the one that
-        ships this profile) come from
+        across Chan's other public repositories: the badges, banners and
+        section headers in their READMEs come from
         `gradient-svg-generator.vercel.app/api/svg` URLs, so any
         rendering regression breaks visible branding immediately and
         forces a same-day fix — a continuous, self-testing loop. The

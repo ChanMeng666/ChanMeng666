@@ -209,17 +209,21 @@
 // Eleven systems as uniform product tiles, two per page (rebuilt 2026-10-02 from
 // Chan's picks). Two kinds, told apart by the violet "For <Org>" line that only
 // client tiles carry: her own products (ArchCanvas, ArchLang, echook, Google
-// News MCP, Chromaflow, a11y-loop, the teaching platform) and systems she built
+// News MCP, Google Jobs MCP, a11y-loop, the teaching platform) and systems she built
 // for organisations (GAVIGO IRE, She Sharp, FemTech Weekend, Eatropolis).
 // Page map DETERMINISTIC (6 pagebreaks → exactly pp8–13): p8 opener + ArchCanvas
 // + ArchLang; p9 GAVIGO + She Sharp; p10 FemTech Weekend + Eatropolis (client
-// pairs); p11 echook + Google News MCP; p12 Chromaflow + a11y-loop; p13 the
+// pairs); p11 echook + Google News MCP; p12 Google Jobs MCP + a11y-loop; p13 the
 // teaching platform + the closing pull-quote. Copy anchors + URLs verified
 // against data/profile/20–23-projects*.yaml; every number is in those shards.
 // 2026-10-07: the Seismophone tile was replaced by Chromaflow (gradient-svg-generator;
 // not css-tower-defense, which is itself due to be archived).
 // Seismophone is pending archive and is off every visitor-facing surface (Chan's
 // call); the substitute was Claude's pick, delegated — do not put Seismophone back.
+// 2026-10-07, later the same day: Chromaflow in turn left every visitor-facing
+// surface (Chan's call) and its tile became the Google Jobs MCP Server, again
+// Claude's pick, delegated. It and the Google News server are two independent
+// products: never describe one as a part of the other. Do not put Chromaflow back.
 // Red lines: no pricing; no commit-count/solo-% dev-stat bragging (the She Sharp
 // 1,549 / 13.3-month figures live on the career pages, not here).
 #let build-logo-h = 160pt
@@ -288,12 +292,12 @@
     "https://github.com/ChanMeng666/server-google-news", "github.com/ChanMeng666/server-google-news", logo-h: build-logo-h)
   v(1fr)
   pagebreak()
-  // p12 — Chromaflow + a11y-loop
+  // p12 — Google Jobs MCP + a11y-loop
   v(1fr)
-  product-tile("/public/brands/gradient-svg-generator-logo.svg", [Chromaflow],
-    [Paste one URL into any GitHub README and a live animated banner appears, with nothing to install. Every banner and badge on my own profile is drawn by it.],
-    [A Node.js service on Vercel that returns animated gradient SVG, with 355 ready-made designs. Open source under MIT.],
-    "https://gradient-svg-generator.vercel.app/", "gradient-svg-generator.vercel.app", logo-h: build-logo-h)
+  product-tile("/public/brands/server-google-jobs.svg", [Google Jobs MCP Server],
+    [Lets AI assistants such as Claude search Google job listings in English, Chinese, Japanese, and Korean. Started 36 days after the Model Context Protocol launched — early enough that the founders of two major MCP catalogs contributed code to it.],
+    [A TypeScript server for the Model Context Protocol, published on npm and listed across MCP catalogs. Open source under MIT.],
+    "https://github.com/ChanMeng666/server-google-jobs", "github.com/ChanMeng666/server-google-jobs", logo-h: build-logo-h)
   v(1fr)
   product-tile("/public/brands/a11y-loop-logo.svg", [a11y-loop],
     [Makes AI coding agents write accessible interfaces by default, checks them in a real browser, and says plainly what it could not check.],

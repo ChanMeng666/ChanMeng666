@@ -431,9 +431,8 @@ coding agents and building on the Claude Agent SDK.
 // exactly once across the document.
 #block(above: 0pt, below: 0pt, {
   strong("Also built: ")
-  [#link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited),
-  #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (a te reo Māori and English AI financial-wellness app; a 19-user cohort produced 181 journal entries in 4 months), and
-  #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).]
+  [#link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited) and
+  #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (a te reo Māori and English AI financial-wellness app; a 19-user cohort produced 181 journal entries in 4 months).]
 })
 
 // ═══ EDUCATION ═══════════════════════════════════════════════════════════════

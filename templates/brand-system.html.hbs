@@ -466,7 +466,7 @@
       </div>
       <p class="mono" style="margin-top: var(--space-3);">v{{version}} · {{lastUpdated}} · Caldera clone</p>
     </div>
-    <img class="panel" src="https://gradient-svg-generator.vercel.app/api/svg?text=Subtraction%20%2F%20Addition&template={{signatures.heroBand.template}}&height=340&duration={{signatures.heroBand.duration}}" alt="Chan Meng brand hero band — animated Digital Orange gradient">
+    <img class="panel" src="../{{signatures.readmeArt.dir}}/footerDivider.svg" alt="Chan Meng brand band — display type on Digital Orange with the dither field">
   </header>
 
   <!-- STAT GRID — interconnected cards (signatures.connectedCards) -->
@@ -715,14 +715,14 @@
   <!-- SIGNATURES -->
   <section>
     <h2 class="section">Decorative signatures</h2>
-    <p class="lead">All built on assets Chan owns: gradient-svg-generator banners + pills, the monogram, and the datestamp. External services (shields.io, trophies, wakatime, streaks) are forbidden.</p>
+    <p class="lead">All built on assets Chan owns: the README's own banners + pills (files in this repo), the monogram, and the datestamp. External services (shields.io, trophies, wakatime, streaks) are forbidden.</p>
     <div class="sig-gallery">
 
       <div class="sig-card">
         <h3>1. Hero band — heroBand</h3>
-        <p class="meta"><span>Template: <code class="mono">{{signatures.heroBand.template}}</code></span><span>Height: {{signatures.heroBand.height}}px</span><span>Duration: {{signatures.heroBand.duration}}</span></p>
+        <p class="meta"><span>File: <code class="mono">{{signatures.heroBand.file}}</code></span></p>
         <div class="preview">
-          <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Chan%20Meng&template={{signatures.heroBand.template}}&height={{signatures.heroBand.height}}&duration={{signatures.heroBand.duration}}" alt="Hero band preview" loading="lazy">
+          <img src="..{{signatures.heroBand.file}}" alt="Hero band preview" loading="lazy" style="width: 100%;">
         </div>
         <p class="meta"><strong>Use:</strong> {{signatures.heroBand.useWhen}}</p>
       </div>
@@ -758,17 +758,14 @@
       </div>
 
       <div class="sig-card">
-        <h3>5. Pill rotation — pillRotation</h3>
+        <h3>5. README artwork — readmeArt</h3>
         <div class="preview">
-          <p class="meta">Recoloured to the Caldera palette ({{pillRotationCount}} configured)</p>
+          <p class="meta">Flat Caldera capsules, one file per label ({{pillCount}} configured)</p>
           <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 12px;">
-            <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Primary&template=brand-pill-mixed&height=40&duration=8s" alt="" height="40">
-            <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Violet&template=brand-pill-violet&height=40&duration=8s" alt="" height="40">
-            <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Source&template=brand-pill-ink&height=40&duration=8s" alt="" height="40">
-            <img src="https://gradient-svg-generator.vercel.app/api/svg?text=Orange&template=brand-pill-orange&height=40&duration=8s" alt="" height="40">
-          </div>
+{{#each pillSamples}}            <img src="{{src}}" alt="{{label}}" height="40">
+{{/each}}          </div>
         </div>
-        <p class="meta"><strong>Use:</strong> {{signatures.pillRotation.useWhen}}</p>
+        <p class="meta"><strong>Use:</strong> {{signatures.readmeArt.useWhen}}</p>
       </div>
 
     </div>

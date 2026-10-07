@@ -90,6 +90,24 @@ bite:
 The same guide is published at chanmeng.org/blog/animated-svg-project-cards; the
 file in `docs/` is the source, so edit it first and republish.
 
+## The README's own banners and pills
+
+The hero, the two section strips, the footer band and every link pill are
+committed SVGs in `public/readme/`, built by `npm run build:art` (not part of
+`npm run build`) from `scripts/build-readme-art.mjs` + `scripts/readme-art/`.
+The list is `data/brand.yaml › signatures.readmeArt`: a banner id with its text
+and drawing, and each pill's label with its variant. They follow the same
+`<img>` sandbox rules as the cards (`docs/animated-svg-cards.md`) but are drawn
+in this profile's own Caldera system, since they are the profile's, not a
+product's.
+
+- A pill's label must be the exact text the README shows. `scripts/build.mjs`
+  fails when a banner or pill it needs has no file: add the label to
+  `readmeArt.pills`, run `npm run build:art`, commit the SVG.
+- The build deletes any `public/readme/*.svg` that `readmeArt` no longer lists.
+- Verify on both GitHub canvases before pushing; plates near the canvas colour
+  (ink on dark, ash on light) rely on the hairline edge each file carries.
+
 ## Changing career COPY? Use the `career-copy` skill
 
 `.claude/skills/career-copy/` is this repo's own skill for the case that comes up
@@ -311,9 +329,11 @@ Changing a role title, date, or award in one place ≠ done. Check the other thr
 - `lastUpdated`: bump (YYYY-MM-DD) whenever you meaningfully review/edit an entry
 - Dates are `"YYYY-MM"` or `"YYYY-MM-DD"` strings, quoted
 - Long prose uses YAML `|` literal blocks; markdown allowed inside
-- No pricing/cost framings in project narratives; README visuals only from
-  Chan's own tools (gradient-svg-generator, github-visitor-counter,
-  github-readme-suno-cards)
+- No pricing/cost framings in project narratives; README visuals are either
+  files in this repo (the project cards, and since 2026-10-07 the hero, section
+  strips, footer and pills in `public/readme/`) or Chan's own live tools
+  (github-visitor-counter, github-readme-suno-cards). The README no longer
+  embeds gradient-svg-generator: do not bring it back
 - Any README visual must work on BOTH GitHub canvases (`#ffffff` and `#0d1117`).
   The failure mode is narrow: **ink on transparency** (the hero mark, now fixed
   with a `<picture>` swap). An asset carrying its own background plate — the

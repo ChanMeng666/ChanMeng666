@@ -23,7 +23,7 @@ Keep the wording in tracked files neutral: decisions and rules, not motives.
 | Own product | **ArchCanvas + ArchLang** keep being developed | ArchCanvas is the commercial AI agent product she values most; its stack (ArchLang) is hers alone. Her decision, 2026-10-07: keep developing. **Do not re-argue it; help validate** (user interviews, launch) |
 | Client work | **GenLAB Career Academy** for NZiFOCUS (paid commission) | Lead developer, but not the sole decision-maker: the pace follows the client and the other collaborators. It cannot be "sped up" by her alone |
 | Role | **FemTech Weekend** CTO; the Red Thread site is in founder review | Small revisions expected; pace set by the founder |
-| Maintenance only | echook, gradient-svg-generator (Chromaflow), a11y-loop, the Google News and Google Jobs MCP servers, the agent skills | Free open-source tools, kept as community projects and demonstrations of her engineering. Do not propose paid tiers for them. Keep them healthy (issues, accurate READMEs), add no features |
+| Maintenance only | echook, gradient-svg-generator (Chromaflow; not shown, see the display rules), a11y-loop, the Google News and Google Jobs MCP servers, the agent skills | Free open-source tools, kept as community projects and demonstrations of her engineering. Do not propose paid tiers for them. Keep them healthy (issues, accurate READMEs), add no features |
 | Ended | GAVIGO (left 2026-09, repo access withdrawn), She Sharp (handed over 2026-09), CORDE (handed over 2024) | Still her lead-developer work and still shown as case studies |
 
 ## Display rules decided in October 2026
@@ -43,7 +43,10 @@ rule; read it before touching a display list, a CV or LinkedIn copy.
 | **Two MCP servers** | `server-google-news` (project id `google-news-mcp`) and `server-google-jobs` are two independent products that share a stack. Never describe one as a part of the other | `resolved` q38 in `lineage.yaml` |
 | **GAVIGO figures and wording** | Stated the way GAVIGO states them, on every surface. The only performance figures are its three approved proof metrics (78%, 4.45s → 1.00s, ~140ms), under its labels and with the boundary note ("controlled", "not a production SLA"). The orchestrator's internal timings and hit rate are not public figures. No "instant" or "no wait" promises. Google for Startups and NVIDIA Inception are programme participation, never validation or endorsement | Chan's instruction, 2026-10-07. Guard comment above `metrics` in the `gavigo-ire` entry; `cv/cover-letter/EVIDENCE.md` Theme B; the comment above `GAVIGO` in the site's `src/data/showcase.ts` |
 | **README project cards** | The six big cards open with a generated animated SVG (`public/cards/<id>.svg`, `npm run build:cards`). Each is drawn in the product's own design system, shows the product at work from real evidence, and ends on a frame about the work with every figure's basis beside it. Method, rules and past mistakes: `docs/animated-svg-cards.md` (also published on the blog; the docs file is the source). The reusable toolkit lives in `svg-animation-studio` | Chan's review, 2026-10-07. `CLAUDE.md` § Animated project cards |
+| **Chromaflow** (`gradient-svg-generator`) | Off every surface a visitor reads: `README.md`, all three CVs, LinkedIn copy, chanmeng.org. It stays in the database and keeps its narrative in `llms.txt` / `llms-full.txt`. The repo is public and maintained, not archived. Do not re-add it to a display list | Chan's decision, 2026-10-07. Out of `openSourceCraftProjectIds` and `spotlightProjectIds`, in `llmsOnlyOpenSourceIds`; `showcase: listed` in `lineage.yaml`; guard comment above the shard entry |
+| **README banners and pills** | The README no longer embeds gradient-svg-generator. The hero, the two section strips, the footer band and the eight link pills are committed SVGs in `public/readme/`, drawn in the Caldera system (`npm run build:art`); the credit captions that pointed at the tool are gone, and no surface may say it powers this profile. Her other repos' READMEs still embed it and were not touched | Chan's decision, 2026-10-07. `data/brand.yaml` › `signatures.readmeArt`; `CLAUDE.md` § The README's own banners and pills; guard comment above the `gradient-svg-generator` entry |
 | chanmeng.org | Never presented as a project; it is the venue | Decided 2026-10-02 |
+| **YouTube channel** | The channel is a portfolio surface: product films, public demos and brand films. Chan chose each video's visibility and title on 2026-10-07; demos of archived projects (Panda, FemTracker, Wellness Agent, Sanicle) were made private and must not be linked. Descriptions carry no links. Unlisted client and course recordings are left alone | Register `youtube/channel.yaml`; unlisted and private inventory only in the gitignored `youtube/channel.private.yaml` |
 
 ## What the README shows today
 
@@ -55,7 +58,7 @@ trusting this list after edits.
   GAVIGO IRE (with the GAVIGO website as a sub-project), She Sharp.
 - AI agents and tooling: echook, Google News MCP Server, Google Jobs MCP Server,
   AI Programming Education Platform, a11y-loop.
-- Craft and products: Chromaflow, GitHub README Suno Cards.
+- Craft and products: GitHub README Suno Cards.
 - Commissioned: Tam-AI-Ti.
 
 Counts on 2026-10-07: 109 projects in `data/profile` (7 flagship, 8 primary, 27
@@ -63,14 +66,16 @@ secondary, 67 archive); 11 showcase items; 13 product-film rows.
 
 ## What the CVs show today
 
-- Designed two-page CV: the "Also built" aside lists eatropolis.co.nz, Tam-AI-Ti
-  and gradient-svg-generator (three links).
-- ATS resume: 10 roles, 4 projects, 3 "Also built" links
+- Designed two-page CV: the "Also built" aside lists eatropolis.co.nz and
+  Tam-AI-Ti (two links).
+- ATS resume: 10 roles, 4 projects, 2 "Also built" links
   (`scripts/lib/parse-ats-resume.mjs` `EXPECT`).
 - Extended CV, Chapter 3: eleven tiles. ArchCanvas, ArchLang; GAVIGO IRE, She
-  Sharp, FemTech Weekend, Eatropolis; echook, Google News MCP; **Chromaflow**
-  (took the Seismophone slot on 2026-10-07), a11y-loop; the teaching platform.
-- All three were rebuilt and the site synced on 2026-10-07 (`PREVIEW_V` 16).
+  Sharp, FemTech Weekend, Eatropolis; echook, Google News MCP; **Google Jobs
+  MCP** (the slot was Seismophone's, then Chromaflow's for a few hours on
+  2026-10-07; the pick was delegated to Claude and Chan may change it),
+  a11y-loop; the teaching platform.
+- All three were rebuilt and the site synced on 2026-10-07 (`PREVIEW_V` 18).
 
 ## Every active repo has been judged
 
@@ -108,6 +113,8 @@ On 2026-10-07, of 81 active rows: 8 building, 24 maintained, 2 paused, 42 done,
 | Delete the five listing forks | Their PRs closing, or 2026-11-14 |
 | Back up `femtech-weekend-assets` off this machine | open |
 | Google OAuth client and Resend key used by Te Pā Tiaki | Chan: revoke if they were dedicated to the game (not reviewed) |
+| Upload seven remaining Shorts to YouTube | Chan: drag the staged files into Studio once the daily upload limit resets (`youtube/channel.yaml` › pendingUpload); Claude then sets titles and descriptions and publishes |
+| YouTube home tab order | Chan: drag the three playlist rows above the default rows in Studio |
 | GenLAB career copy | When Chan clears GenLAB for display: add the org entry, choose a tier, then follow the `career-copy` skill for each surface |
 
 ## How these decisions were made

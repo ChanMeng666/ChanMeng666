@@ -44,9 +44,9 @@ function withUrls(frags) {
       // URL is appended to the contact line.
       const bare = f.href.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
       if (f.text === bare) return f.text;
-      // Deliberately an EXACT match, not startsWith: "gradient-svg-generator"
-      // is a prefix of "gradient-svg-generator.vercel.app" but is not itself a
-      // resolvable address, so that project would otherwise be left with none.
+      // Deliberately an EXACT match, not startsWith: a bare project name can be
+      // a prefix of its own host ("name" vs "name.vercel.app") without being a
+      // resolvable address, and that project would otherwise be left with none.
       return `${f.text} (${f.href})`;
     })
     .join("");

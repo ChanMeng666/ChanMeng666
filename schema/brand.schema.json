@@ -197,27 +197,37 @@
       "required": ["adoptedInReadme"],
       "properties": {
         "adoptedInReadme": { "type": "boolean" },
-        "heroBand":        { "$ref": "#/$defs/signatureGradient" },
+        "heroBand":        { "$ref": "#/$defs/signatureOwnSvg" },
         "goldEyebrow":     { "$ref": "#/$defs/signatureTypographic" },
         "monoDatestamp":   { "$ref": "#/$defs/signatureTypographic" },
         "monogramDivider": { "$ref": "#/$defs/signatureComposite" },
-        "pillRotation": {
+        "readmeArt": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["type", "templates"],
+          "required": ["dir", "banners", "pills"],
+          "description": "The README's own artwork: built by scripts/build-readme-art.mjs into <dir>/*.svg.",
           "properties": {
-            "type": { "const": "gradient-svg" },
-            "templates": {
+            "dir": { "type": "string", "pattern": "^public/" },
+            "banners": {
               "type": "object",
-              "additionalProperties": { "$ref": "#/$defs/bannerSpec" }
+              "additionalProperties": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["art", "text"],
+                "properties": {
+                  "art":  { "enum": ["hero", "footer", "meter", "arrivals"] },
+                  "text": { "type": "string", "minLength": 1 }
+                }
+              }
+            },
+            "pills": {
+              "type": "object",
+              "description": "Label as the README shows it → capsule variant.",
+              "additionalProperties": { "enum": ["ink", "ash", "orange", "violet"] }
             },
             "useWhen": { "type": "string" },
             "doNotUseWhen": { "type": "string" }
           }
-        },
-        "banners": {
-          "type": "object",
-          "additionalProperties": { "$ref": "#/$defs/bannerSpec" }
         },
         "visitorCounter": {
           "type": "object",
@@ -320,15 +330,13 @@
         "note":               { "type": "string" }
       }
     },
-    "signatureGradient": {
+    "signatureOwnSvg": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "template"],
+      "required": ["type", "file"],
       "properties": {
-        "type":     { "const": "gradient-svg" },
-        "template": { "type": "string", "minLength": 1 },
-        "height":   { "type": "integer", "minimum": 10, "maximum": 400 },
-        "duration": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?s$" },
+        "type":         { "const": "own-svg" },
+        "file":         { "type": "string", "pattern": "^/public/.+\\.svg$" },
         "useWhen":      { "type": "string" },
         "doNotUseWhen": { "type": "string" }
       }
@@ -356,19 +364,6 @@
         "ruleStyle":    { "type": "string", "enum": ["dotted", "solid", "dashed"] },
         "useWhen":      { "type": "string" },
         "doNotUseWhen": { "type": "string" }
-      }
-    },
-    "bannerSpec": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["template", "height", "duration"],
-      "properties": {
-        "template":     { "type": "string", "minLength": 1 },
-        "height":       { "type": "integer", "minimum": 10, "maximum": 400 },
-        "text":         { "type": "string" },
-        "duration":     { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+)?s$" },
-        "gradientType": { "type": "string", "minLength": 1, "description": "Optional gradient-svg-generator effect override (e.g. pixelArt)." },
-        "colors":       { "type": "array", "items": { "type": "string", "pattern": "^[0-9A-Fa-f]{6}$" }, "description": "Optional custom gradient stop colors (hex WITHOUT '#'), mapped to color0..colorN." }
       }
     }
   }

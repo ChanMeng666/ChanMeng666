@@ -105,7 +105,7 @@
       set text(size: size-tiny, fill: muted, style: "italic")
       set par(leading: 0.68em, justify: false)
       [
-        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, for Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited) · #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (AI financial-wellness app built around te ao Māori; a 19-user cohort over 4 months) · #link("https://gradient-svg-generator.vercel.app/")[gradient-svg-generator] (355 SVG templates).
+        *Also built:* #link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, for Chow Luck Club Ltd with council agency Tātaki Auckland Unlimited) · #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (AI financial-wellness app built around te ao Māori; a 19-user cohort over 4 months).
       ]
     },
   )

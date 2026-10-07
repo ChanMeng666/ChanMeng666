@@ -396,23 +396,21 @@ voice:
 
 # -----------------------------------------------------------------------------
 # SIGNATURES — Chan's "decorative micro-signatures". All built on assets Chan
-# owns (gradient-svg-generator, the monogram, OpenType features). The arcade
-# banners use the pixelArt gradientType recoloured to the Caldera palette.
+# owns (the README's own artwork in public/readme, the monogram, OpenType
+# features).
 # -----------------------------------------------------------------------------
 signatures:
   # Master kill-switch for the two GitHub-stripped typographic signatures
   # (goldEyebrow, monogramDivider). Banners render regardless of this flag.
   adoptedInReadme: false
 
-  # 1. Hero band — once per page, top only. Holographic orange/violet/glare.
-  # Uses the brand-coloured gradient-svg-generator templates (brand-*), which
-  # reuse the original animation effects in the Caldera palette. The colours
-  # live in the template definition, so no color params are needed here.
+  # 1. Hero band — once per page, top only. An ink plate, the name in the
+  # display face, the dither field, and the one orange pixel that leaves the
+  # field and comes to rest as the full stop. Drawn by scripts/readme-art
+  # (see readmeArt below); the file is public/readme/hero.svg.
   heroBand:
-    type: "gradient-svg"
-    template: "brand-hero"
-    height: 200
-    duration: "8s"
+    type: "own-svg"
+    file: "/public/readme/hero.svg"
     useWhen: "Top of any long-form surface."
     doNotUseWhen: "Internal sections. Multiple per page. Cards."
 
@@ -503,43 +501,38 @@ signatures:
       rule: "keyboard :focus-visible shows the orange focus ring (shadow.focusRing); pill inputs thicken the border to 2px — no glow on mouse interaction"
     reducedMotion: "honour prefers-reduced-motion: reduce — disable all transitions/animation"
 
-  # 5. Pill gradient rotation — the CTA / badge button vocabulary.
-  #    Brand-coloured skillPills/badge/banner templates (colours baked in).
-  pillRotation:
-    type: "gradient-svg"
-    templates:
-      primary:         { template: "brand-pill-mixed",  height: 28, duration: "8s" }
-      secondary:       { template: "brand-badge",        height: 24, duration: "6s" }
-      accent:          { template: "brand-banner",       height: 26, duration: "6s" }
-      live:            { template: "brand-pill-violet",  height: 22, duration: "6s" }
-      source:          { template: "brand-pill-ink",     height: 22, duration: "6s" }
-      caseStudy:       { template: "brand-pill-violet",  height: 22, duration: "6s" }
-      badgePortfolio:  { template: "brand-pill-mixed",   height: 40, duration: "8s" }
-      badgeLinkedin:   { template: "brand-pill-violet",  height: 40, duration: "8s" }
-      badgeGithub:     { template: "brand-pill-ink",     height: 40, duration: "8s" }
-      badgeEmail:      { template: "brand-pill-violet",  height: 40, duration: "8s" }
-      badgeBook:       { template: "brand-pill-ink",     height: 40, duration: "8s" }
-      badgeNewsletter: { template: "brand-pill-violet",  height: 40, duration: "8s" }
-      badgeResume:     { template: "brand-pill-ink",     height: 40, duration: "8s" }
-      badgeExtended:   { template: "brand-pill-violet",  height: 40, duration: "8s" }
-      badgeCoffee:     { template: "brand-pill-orange",  height: 40, duration: "8s" }
-    useWhen: "CTAs, social badges, action pills."
-    doNotUseWhen: "Inside body prose. As decoration. Outside Chan's own tools."
+  # 5. README artwork — the hero, the section strips, the footer and the link
+  #    pills. Since 2026-10-07 these are files in this repo, drawn in the
+  #    Caldera system by `npm run build:art` (scripts/build-readme-art.mjs →
+  #    public/readme/*.svg) and committed; the README no longer fetches a
+  #    banner or a pill from any outside service (Chan's decision). Method and
+  #    sandbox rules: docs/animated-svg-cards.md.
+  #    banners: id → file name. `art` picks the drawing: hero / footer are
+  #      nameplates (display type + dither field + the resting pixel); meter and
+  #      arrivals are section strips with a motif for what follows.
+  #    pills: label → variant (ink | ash | orange | violet). The label must be
+  #      the exact text the README shows; scripts/build.mjs fails when a pill it
+  #      needs has no file, so add the label here and rebuild the art.
+  readmeArt:
+    dir: "public/readme"   # repo-relative folder, no leading slash (it is a folder, not an asset)
+    banners:
+      hero:           { art: "hero",     text: "Chan Meng" }
+      soundIMake:     { art: "meter",    text: "Sound I make" }
+      visitorsHeader: { art: "arrivals", text: "Visitors from around the world" }
+      footerDivider:  { art: "footer",   text: "Thanks for visiting" }
+    pills:
+      "Book a 30-min intro": ink
+      "Portfolio":           ash
+      "LinkedIn":            violet
+      "Email":               violet
+      "Newsletter":          violet
+      "Resume":              ink
+      "My Story":            violet
+      "Buy Me a Coffee":     orange
+    useWhen: "The README's banners and its CTA / link pills."
+    doNotUseWhen: "Inside body prose. As decoration between sibling items."
 
-  # Banner registry — gradient-svg-generator banner configs used in
-  # templates/partials/banner.hbs. Original animation styles, Caldera palette
-  # (brand-* templates). Colours are baked into each template definition.
-  banners:
-    hero:           { template: "brand-hero",            height: 200, text: "Chan Meng",                             duration: "8s" }
-    featuredWork:   { template: "brand-shimmer-orange",  height: 80,  text: "Featured Work",                          duration: "8s" }
-    openSource:     { template: "brand-shimmer-violet",  height: 80,  text: "Open Source",                            duration: "8s" }
-    skills:         { template: "brand-shimmer-glare",   height: 80,  text: "What I can do",                          duration: "8s" }
-    freeTools:      { template: "brand-shimmer-glare",   height: 60,  text: "Free tools I built for the community",  duration: "6s" }
-    soundIMake:     { template: "brand-shimmer-violet",  height: 60,  text: "Sound I make",                           duration: "6s" }
-    visitorsHeader: { template: "brand-shimmer-orange",  height: 60,  text: "Visitors from around the world",         duration: "6s" }
-    footerDivider:  { template: "brand-footer",          height: 240, text: "Thanks for visiting",                    duration: "8s" }
-
-  # External own-tools (gradient-svg-generator / github-visitor-counter / github-readme-suno-cards).
+  # External own-tools (github-visitor-counter / github-readme-suno-cards).
   visitorCounter:
     username: "ChanMeng666"
     miniCounter: { theme: "transparent", maxflags: 5, displayMode: "miniCounter" }

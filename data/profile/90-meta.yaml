@@ -259,8 +259,8 @@ meta:
       - echook
       - archlang
       - archcanvas
-      - gradient-svg-generator
       - ai-programming-teaching-project
+    # 2026-10-07 (Chan): gradient-svg-generator removed — maintained, no longer a focus.
     # 2026-10-02 (repo triage round 2): vitex removed — archived, no longer a focus.
     # 2026-10-02 (Chan's decision): portfolio-v2 (chanmeng.org) removed — the site is
     # never presented as a showcase project; it stays in the catalog as a venue only.
@@ -426,20 +426,29 @@ meta:
     # ai-hackathon-assistant is back here 2026-08-05: without it, de-listing the
     # project from aiAgentProjectIds would silently drop its narrative from BOTH
     # llms.txt and llms-full.txt (see the _openSourcePrimary note in CLAUDE.md).
-    llmsOnlyOpenSourceIds:     []   # 2026-10-02: ai-hackathon-assistant shelved (tier secondary) -> long-tail line only
+    # 2026-10-07: gradient-svg-generator is here because it left the README (see
+    # openSourceCraftProjectIds below) but keeps its narrative in llms.txt and
+    # llms-full.txt, where it is a factual record of the engineering.
+    llmsOnlyOpenSourceIds:     [gradient-svg-generator]   # 2026-10-02: ai-hackathon-assistant shelved (tier secondary) -> long-tail line only
     # 2026-08-05 second pass: portfolio-v2 REMOVED — chanmeng.org is already the
     # "Portfolio" pill in the header, so a row here showed the same site twice.
     # css-tower-defense joined; gradient-svg-generator and sunostats came back
-    # down from the flagship card band. gradient-svg-generator leads — it is the
-    # tool every banner and pill on this README is rendered with, so the credit
-    # captions throughout point at this row.
+    # down from the flagship card band.
+    # 2026-10-07 (Chan): the README's banners and pills are no longer rendered by
+    # gradient-svg-generator (they are files in public/readme), and the credit
+    # captions that pointed at this row are gone.
+    # 2026-10-07 (Chan), same day: gradient-svg-generator REMOVED from this bucket
+    # and from every other surface a visitor reads (both CVs' "Also built" line,
+    # the extended CV tile, chanmeng.org). Her reason is in docs/STATE.private.md.
+    # The repo stays public and maintained; it stays in the LLM narrative through
+    # llmsOnlyOpenSourceIds. Do not re-add it to a display bucket.
     # 2026-10-07 (Chan): sunostats / Seismophone REMOVED. It is pending archive: the
     # site stays online for now, but it must not appear on the README, chanmeng.org,
     # any CV or LinkedIn copy.
     # Do not re-add it here or to any other display bucket.
     # 2026-10-07 (Chan): css-tower-defense / Te Pa Tiaki REMOVED — repo archived and
     # deployment retired the same day. Do not re-add.
-    openSourceCraftProjectIds: [gradient-svg-generator, github-readme-suno-cards]
+    openSourceCraftProjectIds: [github-readme-suno-cards]
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []
     moreOpenSourceProjectIds:     []

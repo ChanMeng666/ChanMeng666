@@ -13,6 +13,7 @@
     "build:video-data": "node scripts/build-video-data.mjs",
     "build:collages": "node scripts/render-collages.mjs",
     "build:cards": "node scripts/build-readme-cards.mjs",
+    "build:art": "node scripts/build-readme-art.mjs",
     "build:cv-geo": "node cv/build-llms-txt.mjs data/profile --out public/cv-llms.txt && node cv/build-jsonld.mjs data/profile --out public/cv.jsonld",
     "build:linkedin": "node scripts/build-linkedin-json.mjs && node scripts/build-linkedin-md.mjs",
     "validate": "node scripts/validate.mjs && node scripts/validate-brand.mjs && node scripts/check-linkedin-sync.mjs && node scripts/check-ecosystem.mjs",

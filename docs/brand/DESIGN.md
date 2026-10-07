@@ -12,7 +12,7 @@ The **v2.0.0 "Caldera" re-skin** clones the [Caldera "Pixelated Cyber-Playground
 
 This system serves four cross-surface needs:
 
-- **GitHub README** — the canonical landing page. Markdown + own-decoration SVGs only (pixelated orange/violet banners via `gradient-svg-generator`).
+- **GitHub README** — the canonical landing page. Markdown + own-decoration SVGs only (the banners and pills are files in this repo, `public/readme/`, built by `npm run build:art`).
 - **CV** — print-tuned Typst PDF + JSON-LD + agent-readable text. "Tuned-for-print" Caldera: compact ultrabold name/headers, orange accent rules, recruiter/ATS-safe density.
 - **Web** — future personal site at `chanmeng.org`. Consumes `dist/brand/tokens.json` (or the Caldera-format `design-tokens.json` / `theme.css`) as its source of truth.
 - **Social/Newsletter** — single-screen surfaces (LinkedIn services cards, newsletter headers, share images).
@@ -244,11 +244,11 @@ Cards and content blocks use `--radius-card` (40 px). Inputs use `--radius-input
 
 ## 8. Decorative Signatures
 
-Five micro-signatures Chan owns — every one built on assets she controls (`gradient-svg-generator`, the monogram, OpenType features). External decoration services (shields.io, trophies, wakatime, streak counters) are **forbidden**.
+Five micro-signatures Chan owns — every one built on assets she controls (the README's own artwork in `public/readme/`, the monogram, OpenType features). External decoration services (shields.io, trophies, wakatime, streak counters) are **forbidden**.
 
 ### 8.1 Hero band (`heroBand`)
 
-`gradient-svg-generator` template `pixel-art-retro` with `gradientType=pixelArt`, recoloured to the Caldera palette (`color0=FC5000 color1=524AE9 color2=F5F28E color3=070607`), h=200, dur=4s. The README's top-of-page identity statement.
+`public/readme/hero.svg`: an ink plate, the name in the display face, an ordered-dither field whose tone rises and falls, and one orange pixel that leaves the field and comes to rest as the full stop. The README's top-of-page identity statement.
 
 - **Use:** top of any long-form surface, once per page.
 - **Do not use:** internal sections, multiple per page, cards.
@@ -274,12 +274,12 @@ Five micro-signatures Chan owns — every one built on assets she controls (`gra
 - **Use:** between major narrative shifts (e.g. between *Featured work* and *Open source*). Replaces bare `---` between sections.
 - **Do not use:** between sibling cards or list items.
 
-### 8.5 Pill gradient rotation (`pillRotation`)
+### 8.5 README artwork (`readmeArt`)
 
-The CTA / badge vocabulary — `pixel-art-retro` + `gradientType=pixelArt` recoloured to two-tone Caldera palettes per role, centrally tunable from `brand.yaml signatures.pillRotation.templates`.
+The section strips, the footer band and the CTA / link pills: flat Caldera capsules and plates, one committed SVG per label, listed in `brand.yaml signatures.readmeArt` and drawn by `scripts/build-readme-art.mjs`. Pill variants: `ink`, `ash`, `orange`, `violet`. Nothing is fetched from an outside service.
 
-- **Use:** CTAs, social badges, action pills.
-- **Do not use:** inside body prose. As decoration. Outside Chan's own tools.
+- **Use:** the README's banners and its CTA / link pills.
+- **Do not use:** inside body prose. As decoration between sibling items.
 
 ---
 
@@ -287,7 +287,7 @@ The CTA / badge vocabulary — `pixel-art-retro` + `gradientType=pixelArt` recol
 
 | Surface | Canvas | Fonts | Allowed signatures |
 |---|---|---|---|
-| **README** | GitHub renders white; the basalt look reaches it only through images Chan controls | GitHub controls typography (semantic tokens advisory for img/SVG) | heroBand, monoDatestamp, monogramDivider, pillRotation |
+| **README** | GitHub renders white; the basalt look reaches it only through images Chan controls | GitHub controls typography (semantic tokens advisory for img/SVG) | heroBand, monoDatestamp, monogramDivider, readmeArt |
 | **CV (PDF)** | white page (print/ATS-safe); palette via ink + orange accent rules | `--font-display` (Bebas, name + headers), `--font-body-sans` (DM Sans), `--font-mono` | monoDatestamp |
 | **Webpage** | `--color-canvas-page` basalt | `--font-display`, `--font-body-sans`, `--font-mono` | All five |
 | **Social card** | `--color-canvas-page` basalt | display + sans | goldEyebrow only |

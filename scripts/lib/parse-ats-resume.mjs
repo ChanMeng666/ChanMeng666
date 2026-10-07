@@ -71,7 +71,8 @@ export const EXPECT = {
   // 4 since 2026-09-24: Tam-AI-Ti and Vitex moved into "Also built" and
   // a11y-loop came up out of it, mirroring the designed CV's four cards.
   projects: 4,
-  alsoBuiltLinks: 3,
+  // 2 since 2026-10-07: gradient-svg-generator left every visitor-facing surface.
+  alsoBuiltLinks: 2,
   education: 2,
   awards: 3,
   contactLines: 2,

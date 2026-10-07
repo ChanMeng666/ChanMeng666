@@ -2407,7 +2407,7 @@
           ]
         }
       },
-      "lastUpdated": "2026-08-05",
+      "lastUpdated": "2026-10-07",
       "name": "Chromaflow",
       "priority": 10,
       "category": "creative",
@@ -2517,7 +2517,7 @@
         },
         {
           "label": "Dogfooding",
-          "value": "Powers every visual badge / banner in every Chan-authored README — including this profile"
+          "value": "Renders the banners and badges in the READMEs of Chan's other public repositories"
         },
         {
           "label": "License",
@@ -2526,44 +2526,17 @@
       ],
       "status": "live",
       "startDate": "2025-01-06",
-      "publicSummary": "A free tool that turns a single link into a live, animated banner\nfor GitHub profiles and README files — paste the URL into any\nMarkdown file and the banner animates on its own, with nothing to\ninstall. It ships 355 ready-made designs across 19 themes (pride\nflags, tech, nature, gaming, and more) and a point-and-click\neditor for people who don't want to hand-write links. Open-source\nand built solo over 18 months; it powers every badge on this\nprofile, so a broken render shows up here first.\n",
+      "publicSummary": "A free tool that turns a single link into a live, animated banner\nfor GitHub profiles and README files — paste the URL into any\nMarkdown file and the banner animates on its own, with nothing to\ninstall. It ships 355 ready-made designs across 19 themes (pride\nflags, tech, nature, gaming, and more) and a point-and-click\neditor for people who don't want to hand-write links. Open-source\nand built solo over 18 months.\n",
       "narrative": {
-        "impactHeadline": "Paste one URL into any GitHub README and a live animated banner appears, no install. 355 free, open-source banner designs power every badge in this profile.",
+        "impactHeadline": "Paste one URL into any GitHub README and a live animated banner appears, no install. 355 banner designs, free and open source.",
         "problem": "Giving a GitHub profile, project README, or docs site a\nstriking animated header usually means one of three bad\noptions: hand-authoring SVG (a multi-day job per banner),\npaying a third-party service that adds a watermark or a narrow\nstyle range, or dropping in a static image that looks dated\nwithin months. None of these scale to the modern norm of\n*hundreds* of repos per developer, each wanting its own look.\nThe specific gap: no zero-install service lets you drop a\nsingle link into Markdown and get a live animated banner the\nbrowser renders on its own — no JavaScript, no video player —\nthat also survives GitHub's image proxy (which strips most\ninteractivity). The gap is widest for identity-coded\ncommunities: pride creators wanting accurate flag palettes,\ntechnical writers wanting one consistent capsule shape across\ndocs, niche aesthetics (cyberpunk, art deco, impressionist)\nwith no ready-made gallery.\n",
         "audience": "Three concentric audiences. (1) Open-source maintainers and\ndeveloper-builders who want polished READMEs and profile pages\nwithout pulling in extra dependencies — the primary daily\nusers. (2) Identity-coded communities with template subsets\nauthored for them: 20 pride-flag templates (Progress, Trans,\nBi, Pan, Lesbian, Nonbinary, Ace, Genderfluid, Aromantic,\nRainbow, and more), a large GitHub-Profile set oriented around\ndeveloper branding, and experimental/creative-technologist\ndesigns. (3) Engineers studying the project as a worked example\nof parametric SVG animation built without a heavy graphics\nframework, a deliberately documented multi-phase refactor, and\nthe \"truth up marketing numbers\" discipline of correcting your\nown inflated counts.\n",
         "productLogic": "Single-URL contract. The user pastes one Markdown image line:\n`![banner](https://gradient-svg-generator.vercel.app/api/svg?text=Hello&template=neural-network&height=120)`\nand GitHub (or any Markdown renderer) embeds the live animated\nSVG. Ten URL parameters control everything: `text=` (the\ndisplay string, `;`-separated for skill-pill grids), `template=`\n(any of the 355 template names), `height=`, `duration=` (loop\ntime), `color0=`…`colorN=` (gradient-stop overrides, hex without\n`#`), `gradientType=` (an effect-style override that bypasses\nthe template default), `stroke=`, `strokeWidth=`, `rotate=`,\n`textBg=`. People who don't want to hand-write parameters open\nthe /create visual editor — a point-and-click composer with live\npreview that emits the final URL to copy. People who want to\nbrowse first hit /templates, a virtualized gallery\n(`@tanstack/react-virtual`) with fuzzy search across names,\ncategories, and tags, so all 355 entries scroll smoothly on any\ndevice.\n",
-        "businessLogic": "Free, ISC-licensed, no paywall, no API key, no watermark. The\nwhole service runs as a Vercel serverless function that streams\nthe SVG document straight back to the browser\n(`Content-Type: image/svg+xml`), cached at Vercel's edge. The\nbuild-in-public value: the project is shared infrastructure for\nChan's other work — every visual badge across every\nChan-authored README pulls from this one service, so the service\nis its own continuous test signal (any rendering regression\nbreaks visible branding on her own portfolio, forcing a same-day\nfix). It's also the project that took the most explicit honesty\naudit: commits `fdcb7dd` \"truth up marketing numbers\",\n`db724e0` \"drop 50+ Effects claim\", and `8fd7886` \"catch older\nstale counts\" walked the codebase correcting every exaggerated\nfigure to the real template count — engineering discipline that\nturns marketing claims into checkable numbers instead of letting\ngenerated copy inflate them.\n",
+        "businessLogic": "Free, ISC-licensed, no paywall, no API key, no watermark. The\nwhole service runs as a Vercel serverless function that streams\nthe SVG document straight back to the browser\n(`Content-Type: image/svg+xml`), cached at Vercel's edge. The\nbuild-in-public value: the project is shared infrastructure for\nChan's other work — the banners and badges in the READMEs of her\nother public repositories pull from this one service, so the\nservice is its own continuous test signal (a rendering regression\nshows up on her own repositories first). It's also the project that took the most explicit honesty\naudit: commits `fdcb7dd` \"truth up marketing numbers\",\n`db724e0` \"drop 50+ Effects claim\", and `8fd7886` \"catch older\nstale counts\" walked the codebase correcting every exaggerated\nfigure to the real template count — engineering discipline that\nturns marketing claims into checkable numbers instead of letting\ngenerated copy inflate them.\n",
         "technicalApproach": "**The SVG-animation technique is the load-bearing engineering\nhere.** Every banner is a small live XML document — typically\n2–8 KB — that the browser animates on its own with no\nJavaScript runtime, using three orthogonal SVG mechanisms in\ncombination:\n\n(1) **SMIL animation elements** (`<animate>`,\n`<animateTransform>`, `<animateMotion>`) animate XML attributes\nover time — most often animating a\n`<linearGradient>`/`<radialGradient>`'s stop `offset` values so\ncolors flow (rainbow-wave, hologram-blue, northern-aurora), or\nrotating a pattern (zigzag-energy, cyber-matrix). This is the\ndeclarative channel: the whole timeline is XML, no scripting.\n\n(2) **CSS `@keyframes` embedded in a `<style>` block inside the\nSVG.** Where SMIL falls short (animating filter strength,\n`stroke-dasharray` reveals), CSS keyframes take over —\ntypewriter-terminal, glitch-cyber, neon-flicker, luminance-glow,\nchrome-flow. Same technique used in the sister project\ngithub-readme-suno-cards: CSS keyframes survive GitHub's\nimage-proxy sanitization pass.\n\n(3) **SVG filter primitives** for organic effects neither SMIL\nnor CSS can produce — turbulent-waves, liquid-mercury,\nplasma-blob, caustic-underwater all feed `<feTurbulence>`\n(fractal noise) into `<feDisplacementMap>` for distortion, plus\n`<feGaussianBlur>` and `<feColorMatrix>` for bloom/glow.\nPath-text templates layer `<textPath>` on a moving `<path>` so\ntext follows a curve.\n\n**Template organisation is the architectural bet.** 355\ntemplates split across 19 named categories (Pride, Tech, Nature,\nMaterial, Text-FX, Gaming, Weather, Light & Shadow, Art\nMovements, Culinary, Patterns, Metallic, Path-Text, Shapes,\nExperimental, GitHub-Profile, and more) plus base gradient\ntypes. A documented refactor saga did the structural work:\nPhase 5 extracted shared `svgPrimitives` factories and\n`_shared/palettes.js` and moved to feature-folders; Phase 7 was\na JavaScript→TypeScript migration in seven sub-phases plus\nZod-validated /api/svg query params (a request like\n`?height=99999999999` returns a clean typed error instead of\ncrashing the function); Phase 8 virtualized the gallery.\nDeployment: Vercel serverless. Testing: Vitest with\n`tests/contract/` guarding the URL-parameter contract across\nrefactors, plus `tests/unit/`. Quality gates: Husky pre-commit\n`eslint --fix` + `prettier --write` via `lint-staged`;\n`web-vitals` telemetry in production. The July 2026 \"Ink Room ×\nLiving Color\" redesign refreshed the whole site UI, added a\ngradient footer wordmark, and gave the project its own OG\nsocial-share card.\n",
-        "outcomes": "283 commits across 18 months (first commit 2025-01-06, latest\n2026-07-10), effectively solo — every commit is Chan's except\none automated GitHub Action commit. Production availability on\nVercel's global edge, ISC-licensed for broad reuse. Dogfooded\nacross every Chan-authored repo: the badges, banners, and\nsection headers in every public README (including the one that\nships this profile) come from\n`gradient-svg-generator.vercel.app/api/svg` URLs, so any\nrendering regression breaks visible branding immediately and\nforces a same-day fix — a continuous, self-testing loop. The\nmulti-phase refactor saga is itself an outcome worth surfacing:\nPhase 5 (extract primitives, palettes, feature-folders), Phase 6\n(truth up the marketing numbers; author `docs/architecture.md`\nand an `adding-an-effect` walkthrough), Phase 7 (JS→TS in seven\nsub-phases plus Zod validation), Phase 8 (gallery\nvirtualization), followed by the July 2026 \"Ink Room × Living\nColor\" full-site redesign and a new OG share card. The honesty\ndiscipline is rare enough in solo open source to flag on its\nown: Chan went through the codebase and corrected exaggerated\ncounts rather than letting generated copy inflate them. Roadmap:\ncontinued template additions and broader category coverage.\n",
+        "outcomes": "283 commits across 18 months (first commit 2025-01-06, latest\n2026-07-10), effectively solo — every commit is Chan's except\none automated GitHub Action commit. Production availability on\nVercel's global edge, ISC-licensed for broad reuse. Dogfooded\nacross Chan's other public repositories: the badges, banners and\nsection headers in their READMEs come from\n`gradient-svg-generator.vercel.app/api/svg` URLs, so any\nrendering regression breaks visible branding immediately and\nforces a same-day fix — a continuous, self-testing loop. The\nmulti-phase refactor saga is itself an outcome worth surfacing:\nPhase 5 (extract primitives, palettes, feature-folders), Phase 6\n(truth up the marketing numbers; author `docs/architecture.md`\nand an `adding-an-effect` walkthrough), Phase 7 (JS→TS in seven\nsub-phases plus Zod validation), Phase 8 (gallery\nvirtualization), followed by the July 2026 \"Ink Room × Living\nColor\" full-site redesign and a new OG share card. The honesty\ndiscipline is rare enough in solo open source to flag on its\nown: Chan went through the codebase and corrected exaggerated\ncounts rather than letting generated copy inflate them. Roadmap:\ncontinued template additions and broader category coverage.\n",
         "myRole": "Sole author. Designed the URL-parameterised streaming-SVG\ncontract; authored every one of the 355 template generators\nacross 19 categories; designed the parametric template system so\neach template is a self-contained function rather than a\nmonolithic switch; engineered the SVG-animation toolkit\ncombining SMIL, CSS keyframes, and SVG filters; built the\n`/create` visual editor with live preview and the `/templates`\nvirtualized gallery; ran the full multi-phase refactor\n(primitive extraction, marketing-number truth-up plus docs,\nJS→TS migration with Zod validation, gallery virtualization) and\nthe July 2026 site redesign; set up the Vercel + GitHub Actions +\nVitest + Husky pipeline. I use the service across every personal\nrepo as a live test signal for the project itself.\n"
       },
-      "_featuredStackResolved": [
-        {
-          "name": "nextjs",
-          "src": "/public/tech-logos/nextjs.svg"
-        },
-        {
-          "name": "react",
-          "src": "/public/tech-logos/react.svg"
-        },
-        {
-          "name": "typescript",
-          "src": "/public/tech-logos/typescript.svg"
-        },
-        {
-          "name": "tailwindcss",
-          "src": "/public/tech-logos/tailwindcss.svg"
-        },
-        {
-          "name": "vercel",
-          "src": "/public/tech-logos/vercel.svg"
-        }
-      ],
-      "_contextLogo": [],
-      "_affiliationOrgs": [],
-      "_adopterOrgs": [],
-      "_affiliationOrg": null,
-      "_cohortPartners": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -13636,6 +13609,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-07T06:48:02.188Z"
+    "buildTimestamp": "2026-10-07T09:02:23.124Z"
   }
 }

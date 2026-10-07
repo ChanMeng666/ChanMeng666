@@ -814,7 +814,12 @@ if (fs.existsSync(previewTemplatePath)) {
     ...Object.entries(brand.spacing.scale).map(([n, v]) => ({ name: String(n).replace(/\./g, "-"), value: v })),
   ];
 
-  const pillRotationCount = Object.keys(brand.signatures?.pillRotation?.templates ?? {}).length;
+  // one sample pill per variant, for the brand-system preview
+  const art = brand.signatures?.readmeArt ?? { pills: {} };
+  const artSlug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const pillSamples = [...new Map(Object.entries(art.pills).map(([label, variant]) => [variant, label])).values()]
+    .map((label) => ({ label, src: `../${art.dir}/pill-${artSlug(label)}.svg` }));
+  const pillCount = Object.keys(art.pills).length;
 
   const context = {
     identity: brand.identity,
@@ -825,7 +830,8 @@ if (fs.existsSync(previewTemplatePath)) {
     spacingList,
     signatures: brand.signatures,
     voice: brand.voice,
-    pillRotationCount,
+    pillSamples,
+    pillCount,
   };
 
   const src = fs.readFileSync(previewTemplatePath, "utf8");

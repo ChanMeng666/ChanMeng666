@@ -14,6 +14,7 @@ import { GlyphSet } from "./lib/svg-card/glyphs.mjs";
 import { FONTS } from "./lib/svg-card/shell.mjs";
 import { ARCHCANVAS_FONTS, ARCHCANVAS_INPUTS, buildArchcanvasCard } from "./cards/archcanvas.mjs";
 import { ARCHLANG_FONTS, buildArchlangCard } from "./cards/archlang.mjs";
+import { GAVIGO_FONTS, GAVIGO_INPUTS, buildGavigoCard } from "./cards/gavigo.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..").replace(/\\/g, "/");
 const outDir = path.join(root, "public", "cards");
@@ -25,6 +26,7 @@ const outDir = path.join(root, "public", "cards");
 const CARDS = {
   archlang: { build: buildArchlangCard, fonts: ARCHLANG_FONTS },
   archcanvas: { build: buildArchcanvasCard, fonts: ARCHCANVAS_FONTS, inputs: Object.values(ARCHCANVAS_INPUTS) },
+  "gavigo-ire": { build: buildGavigoCard, fonts: GAVIGO_FONTS, inputs: Object.values(GAVIGO_INPUTS) },
 };
 
 const profile = loadProfile();

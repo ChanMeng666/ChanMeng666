@@ -9,5 +9,6 @@ License 1.1.
 |---|---|---|
 | `archlang/` | Archivo 400/600/700, Public Sans 400/600, IBM Plex Mono 400 | `scripts/cards/archlang.mjs` |
 | `archcanvas/` | Space Grotesk 400/500/700, Geist Mono 400/500 | `scripts/cards/archcanvas.mjs` |
+| `gavigo/` | Inter 400/500/600, Space Grotesk 600 (the other Space Grotesk weights are read from `archcanvas/`) | `scripts/cards/gavigo.mjs` |
 
 The Caldera faces (Anton, DM Sans, JetBrains Mono) are read from `cv/fonts/`.

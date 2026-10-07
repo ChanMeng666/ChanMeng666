@@ -1,6 +1,6 @@
 # Animated SVG project cards: a field guide
 
-How the six animated cards at the top of this profile README were made, written so
+How the animated project cards on this profile README were made (six at first, twelve since 2026-10-08), written so
 that a person or a coding agent can make the next one. Everything here was learned
 on the cards in `public/cards/` and is implemented in `scripts/cards/` and
 `scripts/lib/svg-card/`; where a rule exists because something went wrong, the
@@ -29,6 +29,12 @@ a phone scrolls a feed and an orchestrator's log reacts.
 | She Sharp | What was built around the platform, ten strands of it, and whose history it is | 400 KB | 51.2 s |
 | Eatropolis | Three things the site does, then what the delivery was held to | 288 KB | 21.6 s |
 | FemTech Weekend | Three things the site does, then what stands behind it | 262 KB | 21.6 s |
+| echook | Events with their own sounds, three channels, setup by asking the agent, the status line | 270 KB | 37.4 s |
+| Google News MCP | The tool call and its schema, the category rules, the response template, languages | 180 KB | 33.2 s |
+| AI Programming | Course versions side by side, a lesson, the tutor citing its sources, the showcase | 358 KB | 31.0 s |
+| a11y-loop | Write, audit, fix, re-audit, with the list of what automation could not check | 233 KB | 41.4 s |
+| Tam-AI-Ti | Six things the coach does, then how a research cohort used it | 436 KB | 35.4 s |
+| CORDE Mobile | Eight beats of a field crew's day in the app, then Chan's part in a team build | 399 KB | 41.6 s |
 
 ## 2. The sandbox: what an SVG may do inside `<img>`
 

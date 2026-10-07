@@ -1668,13 +1668,13 @@ projects:
     provenance: client
     tier: secondary
     recency: historical
-    lastUpdated: "2026-07-04"
+    lastUpdated: "2026-10-08"
     name: CORDE Field-Operations Mobile App
     priority: 31
     category: web-apps
     clientOrgId: corde
     relatedWorkId: corde
-    tagline: "Offline-first React Native field-data-collection app for CORDE's Canterbury water- and civil-infrastructure crews — capture text, photos, and GPS with local integrity guarantees and clean sync back to CORDE's Workbench platform when connectivity returns. Lincoln University COMP693 industry-placement capstone; Chan was the #1-most-prolific contributor (42% of 539 commits) and documentation lead."
+    tagline: "Offline-first React Native field-data-collection app for CORDE's Canterbury water- and civil-infrastructure crews — capture text, photos, and GPS with local integrity guarantees and clean sync back to CORDE's Workbench platform when connectivity returns. Lincoln University COMP693 industry-placement capstone; Chan was the #1-most-prolific contributor (57% of the 413 commits in the original repository) and documentation lead."
     # repoUrl omitted — private/removed client capstone repository (404s publicly); do not re-add.
     url: https://corde-mobile-application-4yw7mtt.gamma.site/
     entity: "CORDE (Canterbury NZ infrastructure & civil-construction company) — Lincoln University COMP693 capstone"
@@ -1687,10 +1687,19 @@ projects:
       - "Sync + conflict handling to a central Workbench platform"
       - "NZ infrastructure / civil construction"
       - "Lincoln University COMP693 industry-placement capstone"
+    # 2026-10-08 (Chan): the commit share is counted on the ORIGINAL repository
+    # (236 of 413, 57%), not on the teammate's later fork (227 of 541). Recounted
+    # from the repository that day. Keep the basis ("in the original repository")
+    # beside the figure on every surface.
+    metrics:
+      - { label: "Commits", value: "236 of 413 in the original repository (57%), the largest share of three contributors", note: "Counted 2026-10-08 on the repository the app was first built in. A teammate later forked it to take the project over; the fork has 541 commits, 227 of them Chan's." }
+      - { label: "Documentation", value: "140 of 143 commits in the team's documentation repository (97.9%)" }
     status: production
     startDate: "2024-06"
     narrative:
-      impactHeadline: "#1-most-prolific contributor (42% of 539 commits) on CORDE's offline-first React Native field-operations app — still in active use by CORDE's water- and civil-infrastructure crews across Canterbury; also owned 97.9% of the documentation track."
+      # 2026-10-08: on the README as a big card since this date, so the headline
+      # leads with what the app does; the commit figures stay in metrics and the tagline.
+      impactHeadline: "An offline-first React Native app for CORDE's field crews in rural Canterbury: capture text, photos and GPS with no signal, then sync when coverage returns. Built in a university placement team of three, where I wrote the largest share of the code and led the documentation."
   - id: portfolio-v2
     provenance: personal
     tier: secondary

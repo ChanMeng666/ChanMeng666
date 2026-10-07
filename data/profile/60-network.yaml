@@ -384,6 +384,7 @@ organizations:
     aliases: ["CORDE Ltd"]
     url: https://corde.nz
     logo: /public/brands/corde-transparent.svg
+    logoDark: /public/organizations/corde-logo.jpg
     type: enterprise
     industry: Construction — parks & reserves, water services, three waters, roading
     hq: { city: Rolleston, region: Canterbury, countryCode: NZ }
@@ -403,6 +404,8 @@ organizations:
         category: employer
         context: "Full Stack Developer & Lead Documenter — Lincoln University COMP693 industry placement (Jun — Nov 2024)"
         relatedWorkId: corde
+        # 2026-10-08: renders the "For CORDE" line under the README card.
+        relatedProjectId: corde-mobile-application
 
   - id: aotearoa-infinite-academy
     name: Aotearoa Infinite Academy

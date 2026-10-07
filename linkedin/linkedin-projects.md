@@ -231,7 +231,7 @@ Stack: TypeScript + Node.js + @modelcontextprotocol/sdk + SerpAPI; published as 
 ```
 A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Canterbury civil-construction contractor whose crews work in rural areas where mobile coverage drops out. The tablet becomes the system of record at the moment of work: text + photos + GPS + timestamps captured locally, integrity-checked, and reconciled to CORDE's central Workbench platform on reconnection — including the awkward cases: duplicate IDs, partial sync, mid-batch drops.
 
-• #1-most-prolific contributor on the codebase: 227 of 539 commits (42%), ahead of teammates Luke Shi (28.6%) and Xue Zheng (25.8%).
+• #1-most-prolific contributor on the codebase: 236 of 413 commits in the original repository (57%), ahead of teammates Xue Zheng (32.7%) and Luke Shi (10.2%).
 • Sole author of the team documentation repository (140 of 143 commits, 97.9%), built against 15 Workbench API specifications authored by Kullum Ladley.
 • Still in active use today by CORDE's field crews; kept current through React Native upgrades and Android 16 KB page-size compliance.
 

@@ -25,6 +25,10 @@
      _cohortPartners (projects[].meta.x_brand.cohortPartners) — teaching-partner
      brands as display-only social proof, NOT organizations[] entries. Only
      ai-programming-teaching-project uses it today.
+     2026-10-08: a row whose project has an animated card
+     (public/cards/<id>.svg, npm run build:cards; build.mjs sets _card) gets a
+     full-width card row above it, in all three visible tables. The logo, name
+     and description row underneath is unchanged.
      ═══════════════════════════════════════════════════════════════════════ --}}
 
 ## More I've built
@@ -39,7 +43,10 @@
     <col style="width:200px">
     <col>
   </colgroup>
-{{#each _aiAgentProjects}}  <tr>
+{{#each _aiAgentProjects}}{{#if _card}}  <tr>
+    <td colspan="3"><a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a></td>
+  </tr>
+{{/if}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
     <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _contextLogo.length}}<br><sub>↳ Works with {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _cohortPartners.length}}<br><sub>↳ Cohorts taught for {{#each _cohortPartners}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{logoDark}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _adopterOrgs.length}}<br><sub>↳ Being adopted by {{#each _adopterOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Sub-projects I built solo: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
@@ -57,7 +64,10 @@
     <col style="width:200px">
     <col>
   </colgroup>
-{{#each _openSourceCraftProjects}}  <tr>
+{{#each _openSourceCraftProjects}}{{#if _card}}  <tr>
+    <td colspan="3"><a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a></td>
+  </tr>
+{{/if}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
     <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _adopterOrgs.length}}<br><sub>↳ Being adopted by {{#each _adopterOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Sub-projects I built solo: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}</td>
@@ -86,7 +96,10 @@
     <col style="width:200px">
     <col>
   </colgroup>
-{{#each _commissionedProjects}}  <tr>
+{{#each _commissionedProjects}}{{#if _card}}  <tr>
+    <td colspan="3"><a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a></td>
+  </tr>
+{{/if}}  <tr>
     <td>{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
     <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{#if _affiliationOrgs.length}}<br><sub>↳ For {{#each _affiliationOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{else}}{{#if _entityLinked}}<br><sub>↳ For <a href="{{_entityLinked.url}}">{{#if _entityLinked.image}}<img src="{{_entityLinked.image}}" height="20" alt="{{_entityLinked.name}}"> {{/if}}{{_entityLinked.name}}</a>{{#if _entityLinked.rest}} — {{_entityLinked.rest}}{{/if}}.</sub>{{else}}{{#if entity}}<br><sub>↳ For {{entity}}.</sub>{{else}}{{#if _clientOrg}}<br><sub>↳ For <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{/if}}{{/if}}{{/if}}</td>

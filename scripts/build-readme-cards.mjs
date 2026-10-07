@@ -12,12 +12,18 @@ import { fileURLToPath } from "node:url";
 import { loadProfile } from "./lib/load-profile.mjs";
 import { GlyphSet } from "./lib/svg-card/glyphs.mjs";
 import { FONTS } from "./lib/svg-card/shell.mjs";
+import { A11Y_LOOP_FONTS, A11Y_LOOP_INPUTS, buildA11yLoopCard } from "./cards/a11y-loop.mjs";
+import { AI_PROGRAMMING_FONTS, AI_PROGRAMMING_INPUTS, buildAiProgrammingCard } from "./cards/ai-programming.mjs";
 import { ARCHCANVAS_FONTS, ARCHCANVAS_INPUTS, buildArchcanvasCard } from "./cards/archcanvas.mjs";
 import { ARCHLANG_FONTS, buildArchlangCard } from "./cards/archlang.mjs";
+import { CORDE_FONTS, CORDE_INPUTS, buildCordeCard } from "./cards/corde.mjs";
 import { EATROPOLIS_FONTS, EATROPOLIS_INPUTS, buildEatropolisCard } from "./cards/eatropolis.mjs";
+import { ECHOOK_FONTS, ECHOOK_INPUTS, buildEchookCard } from "./cards/echook.mjs";
 import { FEMTECH_FONTS, FEMTECH_INPUTS, buildFemtechCard } from "./cards/femtech.mjs";
 import { GAVIGO_FONTS, GAVIGO_INPUTS, buildGavigoCard } from "./cards/gavigo.mjs";
+import { GOOGLE_NEWS_FONTS, GOOGLE_NEWS_INPUTS, buildGoogleNewsCard } from "./cards/google-news-mcp.mjs";
 import { SHESHARP_FONTS, SHESHARP_INPUTS, buildShesharpCard } from "./cards/shesharp.mjs";
+import { TAM_AI_TI_FONTS, TAM_AI_TI_INPUTS, buildTamAiTiCard } from "./cards/tam-ai-ti.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..").replace(/\\/g, "/");
 const outDir = path.join(root, "public", "cards");
@@ -33,6 +39,12 @@ const CARDS = {
   "she-sharp": { build: buildShesharpCard, fonts: SHESHARP_FONTS, inputs: Object.values(SHESHARP_INPUTS) },
   "eatropolis-website": { build: buildEatropolisCard, fonts: EATROPOLIS_FONTS, inputs: Object.values(EATROPOLIS_INPUTS) },
   "femtech-weekend-website": { build: buildFemtechCard, fonts: FEMTECH_FONTS, inputs: Object.values(FEMTECH_INPUTS) },
+  echook: { build: buildEchookCard, fonts: ECHOOK_FONTS, inputs: Object.values(ECHOOK_INPUTS) },
+  "google-news-mcp": { build: buildGoogleNewsCard, fonts: GOOGLE_NEWS_FONTS, inputs: Object.values(GOOGLE_NEWS_INPUTS) },
+  "ai-programming-teaching-project": { build: buildAiProgrammingCard, fonts: AI_PROGRAMMING_FONTS, inputs: Object.values(AI_PROGRAMMING_INPUTS) },
+  "a11y-loop": { build: buildA11yLoopCard, fonts: A11Y_LOOP_FONTS, inputs: Object.values(A11Y_LOOP_INPUTS) },
+  "tam-ai-ti": { build: buildTamAiTiCard, fonts: TAM_AI_TI_FONTS, inputs: Object.values(TAM_AI_TI_INPUTS) },
+  "corde-mobile-application": { build: buildCordeCard, fonts: CORDE_FONTS, inputs: Object.values(CORDE_INPUTS) },
 };
 
 const profile = loadProfile();

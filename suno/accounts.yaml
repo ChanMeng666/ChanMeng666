@@ -1,0 +1,65 @@
+# =============================================================================
+# Suno account register — @chanmeng666 and @chanmeng
+# =============================================================================
+# Chan has two Suno accounts and both are hers. This file is the hand-kept part:
+# who each account is and what is known about how the two are used. Every song,
+# every playlist and every count is in the generated suno/songs.yaml; read its
+# `summary` block first.
+#
+# `npm run build:suno` compares each `accounts[]` block with the capture
+# (handle, userId, displayName, bio) and fails when they disagree, so this file
+# cannot quietly go stale. `npm run capture:suno` reads the handles from here:
+# to track another account, add it below and capture again.
+#
+# The capture reads Suno's public API without signing in, so the register holds
+# what a stranger sees: published songs and public playlists. Unpublished
+# generations and the Library are not in it. How it works: suno/README.md.
+#
+# This repo is public and so is everything here: what suno.com shows a visitor
+# who is not signed in. The words (lyrics, captions, playlist descriptions) are
+# in suno/words.yaml.
+# =============================================================================
+
+accounts:
+  - handle: "@chanmeng666"
+    userId: 4519a052-caa3-4fa7-93c1-f6e1fa670976
+    url: https://suno.com/@chanmeng666
+    displayName: Chan
+    bio: ""
+    # The account the README shows: the "Sound I make" block renders its cards
+    # (data/brand.yaml › signatures.sunoCards, through github-readme-suno-cards).
+    shownOn: [README.md]
+
+  - handle: "@chanmeng"
+    userId: 43e4d44d-6b8a-4886-82e7-dd47701711f7
+    url: https://suno.com/@chanmeng
+    displayName: Chan
+    bio: ""
+    shownOn: []
+
+# -----------------------------------------------------------------------------
+# How the two accounts relate: the first line is Chan's own answer, the rest
+# are observations from the capture.
+# -----------------------------------------------------------------------------
+observations:
+  - "Both are working accounts for one catalogue (Chan, 2026-10-09): there is no division by theme, language or project between them."
+  - "The two accounts publish in the same weeks, and a playlist on one holds songs from the other: an album can be split across both. Read songs by playlist, not by account."
+  - "The playlist \"Chan's Creation\" on @chanmeng collects songs from both accounts and is the nearest thing to a single catalogue."
+  - "Neither profile has a bio, and no song is pinned."
+
+# -----------------------------------------------------------------------------
+# Open items: things only Chan can say, and what she said. Observations, never
+# instructions. `status`: done | hers | standing.
+# -----------------------------------------------------------------------------
+openItems:
+  - id: two-accounts-role
+    what: "How the two accounts relate was not recorded."
+    decision: "Answered by Chan on 2026-10-09: one catalogue made on two accounts, with no division between them. Treat them as one body of work."
+    status: done
+  - id: words-tracked-or-local
+    what: "Whether lyrics, captions and playlist descriptions may be tracked in this public repo."
+    decision: "Yes (Chan, 2026-10-09). They are in suno/words.yaml and suno/capture/words.json."
+    status: done
+  - id: display-of-at-chanmeng
+    what: "@chanmeng is shown on no surface of hers (the README cards use @chanmeng666). Recording it here does not change that."
+    status: standing

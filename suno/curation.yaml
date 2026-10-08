@@ -1,0 +1,26 @@
+# =============================================================================
+# Suno curation — the hand-edited tags `npm run build:suno` merges into
+# suno/songs.yaml. Keyed by Suno id; an id the capture does not hold fails the
+# build. Everything here is optional.
+#
+#   playlists.<id>: projectIds, note
+#   songs.<id>:     projectIds, language, note
+#
+# `projectIds` → projects[].id in data/profile/ (the build fails on an unknown
+# id). A song inherits the projectIds of every playlist it is in. A song whose
+# title is the `titleZh` of a music video in data/profile/46-films.yaml gets
+# that film's `filmId`, English title and project without a line here.
+# `language` overrides what the capture detected from the script of the lyrics
+# (zh | yue | ja | en | …): the detection cannot tell Mandarin from Cantonese
+# except by the word "Cantopop" in the style prompt.
+#
+# Only links the data proves belong here. What an album means, which songs
+# matter most and how they should be shown are Chan's to say.
+# =============================================================================
+
+playlists:
+  25d149d0-0b0b-46cf-a43f-29cfff1d480c:
+    projectIds: [leviathan]
+    note: "The playlist carries the game's name and five of its songs are titled 利维坦的诞生bgm-*: the game's soundtrack."
+
+songs: {}

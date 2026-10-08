@@ -52,7 +52,7 @@ rule; read it before touching a display list, a CV or LinkedIn copy.
 
 ## Platform registers
 
-Three of Chan's platforms (four pages) are recorded in this repo as they stand, so that a
+Four of Chan's platforms (six accounts and pages) are recorded in this repo as they stand, so that a
 question about them is answered from a file and not from memory:
 
 | Platform | Read | Kept current by |
@@ -61,6 +61,7 @@ question about them is answered from a file and not from memory:
 | X (@chanmeng666) | `x/account.yaml`, then `x/posts.yaml` (every post; its `summary` block first) | The `x-sync` skill: a browser capture, then `npm run build:x`; `npm run check:x` fails when they disagree |
 | LinkedIn (chanmeng666) | `linkedin/account.yaml`, then `linkedin/posts.yaml` (`summary`, then one line per post); full text in `linkedin/posts/<year>.yaml`; impressions in the gitignored `linkedin/posts.private.yaml` | A browser capture, then `npm run build:linkedin-register`; `npm run check:linkedin-register` fails when they disagree. Procedure: `linkedin/README.md` |
 | LinkedIn, the ArchCanvas company page | `linkedin/company/archcanvas/account.yaml`, then `posts.yaml` beside it | The same capture and build as her profile; no impressions (LinkedIn's feed does not carry them for a page) |
+| Suno (@chanmeng666 and @chanmeng) | `suno/accounts.yaml`, then `suno/songs.yaml` (`summary`, the playlists, then every public song); lyrics and captions in `suno/words.yaml` | The `suno-sync` skill: `npm run capture:suno` (an anonymous read of Suno's public API, no sign-in), then `npm run build:suno`; `npm run check:suno` fails when they disagree. Procedure: `suno/README.md` |
 
 On 2026-10-08 the X account stood at 47 posts in 17 live threads, 4 followers; a new intro thread was posted and pinned on 2026-10-07, and the old one and one other post are gone. The six observations made that day are settled: `x/account.yaml` › `openItems`. Posts
 are Chan's to edit, delete or pin: the register's `flags` and `openItems` are
@@ -77,6 +78,14 @@ matter and stays in `data/profile/70-linkedin.yaml`.
 
 On 2026-10-08 the ArchCanvas company page stood at eight posts since 2026-07-23
 and 11 followers.
+
+On 2026-10-09 the two Suno accounts stood at 69 public songs (41 on @chanmeng666,
+28 on @chanmeng) in 7 public playlists, the newest from 2026-08-18, and 8
+followers between them. Albums are playlists and can span both accounts.
+Thirteen songs have a music video in `46-films.yaml`. The register is a record
+and puts no song on any surface; the music videos' display rule above is
+unchanged. Chan's answers that day: the lyrics are tracked (`suno/words.yaml`),
+and the two accounts are one catalogue with no division between them.
 
 ## What the README shows today
 

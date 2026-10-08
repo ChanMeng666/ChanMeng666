@@ -241,21 +241,23 @@ hand-typed facts on a review cadence:
 | `20-projects-flagship.yaml` | projects (flagship band) | 4 | `id` |
 | `21-projects-oss-primary.yaml` | projects (OSS primary band) | 7 | `id` |
 | `22-projects-oss-webapps.yaml` | projects (collapsible: web apps) | 14 | `id` |
-| `23-projects-oss-more.yaml` | projects (AI/creative/ML/branding/games + commissioned) | 86 | `id` |
+| `23-projects-oss-more.yaml` | projects (AI/creative/ML/branding/games + commissioned) | 87 | `id` |
 | `25-contributions.yaml` | openSourceContributions | 23 | `id` |
 | `30-recognition.yaml` | awards, certificates, publications | 7 + 53 + 75 | `title`+`awarder` / `name` |
 | `40-skills.yaml` | skills, domains, languages, interests | 6 + 5 + 4 + 3 | `name` |
 | `45-showcase.yaml` | showcaseCapabilities, showcase (craft evidence: reports, films, decks, slides, newsletters, GEO), productFilms (register: which product shows which promo film; one per product; must match chanmeng.org) | 7 + 11 + 13 | `id` / `projectId` |
+| `46-films.yaml` | filmCollections, films (the complete filmography, one row per finished film; source of chanmeng.org/films through `dist/films.json`, then `node scripts/sync-films.mjs` in 2d-portfolio; read its header before adding a film or showing one anywhere) | 4 + 36 | `id` |
 | `50-references.yaml` | references | 27 | `id` |
 | `60-network.yaml` | organizations, collaborators | 34 + 13 | `id` |
 | `70-linkedin.yaml` | linkedin | curated live-page snapshot | — |
 | `80-events.yaml` | events (offline talks/hackathons/workshops/appearances) | 23 | `id` |
 | `90-meta.yaml` | meta (incl. `meta.x_brand` display config) | — | — |
 
-Counts verified 2026-10-07 (`projects:` totals 111: 4 + 7 + 14 + 86; by tier
-7 flagship / 8 primary / 29 secondary / 67 archive). Three of them are
-database-only (`genlab-career-academy` and the two music-video entries,
-`october-rain-february-line-mv` and `anti-marriage-universe-mv`),
+Counts verified 2026-10-09 (`projects:` totals 112: 4 + 7 + 14 + 87; by tier
+7 flagship / 8 primary / 30 secondary / 67 archive). Four of them are
+database-only (`genlab-career-academy` and the three music-video entries,
+`october-rain-february-line-mv`, `anti-marriage-universe-mv` and
+`memory-amber-2022-mv`),
 `gradient-svg-generator` (Chromaflow) is off every visitor-facing surface, and
 `sunostats` (Seismophone) is pending
 archive and off every visitor-facing surface: read the guard comment above each

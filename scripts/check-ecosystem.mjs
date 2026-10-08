@@ -155,6 +155,49 @@ for (const f of profile.productFilms ?? []) {
     else shownPerProduct.set(f.projectId, where);
   }
 }
+// filmography (data/profile/46-films.yaml `films` + `filmCollections`): every film names a film repo in the
+// catalog, and the film a product shows (productFilms) is the one row marked primary.
+{
+  const FILM_ROLES = ["promo-film", "demo", "music-video"];
+  const filmRepo = (key, where) => {
+    const r = repoByKey.get(key);
+    if (!r) return err(`films ${where}: ${key} is not in the lineage catalog`);
+    if (!FILM_ROLES.includes(r.role)) err(`films ${where}: ${key} has role ${r.role}, expected ${FILM_ROLES.join(" | ")}`);
+  };
+  const collectionIds = new Set();
+  for (const c of profile.filmCollections ?? []) {
+    if (collectionIds.has(c.id)) err(`filmCollections: duplicate id "${c.id}"`);
+    collectionIds.add(c.id);
+    filmRepo(c.repo, `collection "${c.id}"`);
+    if (c.projectId && !projectIds.has(c.projectId)) err(`filmCollections "${c.id}": projectId "${c.projectId}" not in data/profile projects`);
+  }
+  const filmIds = new Set();
+  const primaryRepo = new Map();
+  for (const f of profile.films ?? []) {
+    const where = `"${f.id}"`;
+    if (filmIds.has(f.id)) err(`films: duplicate id ${where}`);
+    filmIds.add(f.id);
+    filmRepo(f.repo, where);
+    if (f.projectId && !projectIds.has(f.projectId)) err(`films ${where}: projectId "${f.projectId}" not in data/profile projects`);
+    if (f.showcaseId && !showcaseIds.has(f.showcaseId)) err(`films ${where}: showcaseId "${f.showcaseId}" not in showcase`);
+    if (f.collection && !collectionIds.has(f.collection)) err(`films ${where}: collection "${f.collection}" not in filmCollections`);
+    if (f.kind === "music-video" && !f.collection) err(`films ${where}: a music video needs a collection`);
+    if (f.onFilmsPage && !(f.media?.mp4 || f.media?.hls)) err(`films ${where}: onFilmsPage needs media.mp4 or media.hls`);
+    if (!f.onFilmsPage && !f.notShownReason) err(`films ${where}: a film kept off /films needs notShownReason`);
+    if (f.primary) {
+      if (f.kind !== "product-film" || !f.projectId) err(`films ${where}: primary is for a product-film with a projectId`);
+      else if (primaryRepo.has(f.projectId)) err(`films: project "${f.projectId}" has two primary films`);
+      else primaryRepo.set(f.projectId, f.repo);
+    }
+  }
+  if (profile.films)
+    for (const p of profile.productFilms ?? []) {
+      if (p.kind !== "product") continue;
+      const repo = primaryRepo.get(p.projectId);
+      if (!repo) err(`films: productFilms shows "${p.title}" but no film of "${p.projectId}" is marked primary`);
+      else if (repo !== p.filmRepo) err(`films: the primary film of "${p.projectId}" is from ${repo}, productFilms shows ${p.filmRepo}`);
+    }
+}
 // open questions
 for (const q of [...(pub.openQuestions ?? []), ...(priv?.openQuestions ?? [])])
   for (const x of q.affects ?? []) if (!repoKeys.has(x)) err(`openQuestion ${q.id}: affects unknown repo ${x}`);

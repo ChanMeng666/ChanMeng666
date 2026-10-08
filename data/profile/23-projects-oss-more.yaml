@@ -3278,11 +3278,14 @@ projects:
   # music videos: she asked for them to be recorded, not displayed.
   # 2026-10-08: she published the two films of october-rain-february-line-mv on
   # her YouTube channel herself. That makes them public THERE (the entry's
-  # extraLinks point at those copies). Her rule, same day: YouTube ONLY. The
-  # project stays out of every display bucket, CV, LinkedIn copy and
-  # chanmeng.org.
-  #   - in NO 90-meta.yaml display bucket, no CV, no LinkedIn copy, not on
-  #     chanmeng.org; like every projects[] entry they do appear in
+  # extraLinks point at those copies). Her rule, same day: YouTube ONLY.
+  # 2026-10-09: she widened it by one place. All thirteen films of the three
+  # music-video projects are shown on chanmeng.org/films (rows in
+  # 46-films.yaml), which publishes the eleven that were never on YouTube.
+  # Still out of every display bucket, CV, LinkedIn copy and every OTHER page
+  # of chanmeng.org.
+  #   - in NO 90-meta.yaml display bucket, no CV, no LinkedIn copy, and on
+  #     chanmeng.org only at /films; like every projects[] entry they do appear in
   #     llms-full.txt's long tail and in dist/profile.json;
   #   - both repos are PRIVATE: no repoUrl, and no url (the finished films are
   #     release assets of the private repos, not published anywhere public).
@@ -3298,7 +3301,7 @@ projects:
     provenance: personal
     tier: secondary
     recency: recent
-    lastUpdated: "2026-10-08"
+    lastUpdated: "2026-10-09"
     name: "October Rain · February Line — two code-drawn music videos"
     category: creative
     tagline: "Two music videos for Chan's own songs, drawn entirely by code: a hand-inked cel film and a one-line animation, rendered frame by frame with headless Chrome and ffmpeg."
@@ -3313,6 +3316,7 @@ projects:
       - "Creative coding"
     startDate: "2026-10"
     extraLinks:
+      - { label: "Watch both films on chanmeng.org", url: "https://chanmeng.org/films#october-rain-february-line" }
       - { label: "Watch 《十月的微雨》 A Drizzle in October", url: "https://youtu.be/X3nUfLHawq4" }
       - { label: "Watch 《二月的延长线》 February, on an Extended Line", url: "https://youtu.be/B1q5akx2zPk" }
     metrics:
@@ -3354,7 +3358,7 @@ projects:
     provenance: personal
     tier: secondary
     recency: recent
-    lastUpdated: "2026-10-07"
+    lastUpdated: "2026-10-09"
     name: "Anti-Marriage Universe (反婚宇宙) — three code-drawn music videos"
     category: creative
     tagline: "Three music videos for Chan's album 《反婚宇宙》: one blind date seen three ways, in red paper-cut, 80s cel anime and risograph print, every frame drawn in code."
@@ -3368,6 +3372,8 @@ projects:
       - "Beat-grid editing"
       - "Creative coding"
     startDate: "2026-10"
+    extraLinks:
+      - { label: "Watch the three films on chanmeng.org", url: "https://chanmeng.org/films#anti-marriage-universe" }
     metrics:
       - { label: "Films", value: "3", note: "《战士阿花》 Warrior Ah Hua (3:59, Red Paper-cut), 《浪子阿发》 Drifter Ah Fa (4:55, 80s Cel Anime), 《最佳路人》 The Best Strangers (5:55, Risograph Print); all 1920×1080, 24 fps, mastered to −14 LUFS" }
       - { label: "Release", value: "v1.0.0", note: "2026-10-07, on the private repository" }
@@ -3400,3 +3406,75 @@ projects:
         and rendering uses that library's tools; fonts are self-hosted
         subsets under the SIL Open Font License. Each film's CREDITS file
         lists them.
+
+  # Added 2026-10-09 (Chan's answers the same day): same rule as the two
+  # entries above. Private repo, no repoUrl, no url. Its eight films are on
+  # chanmeng.org/films and nowhere else (see the note above the first
+  # music-video entry). Describe the PICTURE and the method
+  # only: the public copy says what each film is drawn as, and nothing about
+  # what the album is about beyond "a memoir of one year". Do not expand it
+  # from the repo's README. Every fact below is from that README, album.json
+  # and the per-film CREDITS files (2026-10-09).
+  - id: memory-amber-2022-mv
+    provenance: personal
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-10-09"
+    name: "Memory Amber 2022 (记忆琥珀2022) — eight code-drawn music videos"
+    category: creative
+    tagline: "Eight music videos for Chan's album 《记忆琥珀2022》, each drawn in a different way and entirely by code: watercolour, shadow theatre, CRT glitch, crayon, woodcut, gouache and risograph."
+    roles: ["Director", "Creative Coder", "Songwriter"]
+    techStack: ["JavaScript (Canvas 2D)", "WebGL2", "Headless Chrome (puppeteer-core)", "ffmpeg", "Python", "NumPy", "OpenCV", "faster-whisper", "librosa", "Claude Code"]
+    keywords:
+      - "Music video drawn by code"
+      - "Procedural watercolour and gouache"
+      - "Woodcut and risograph print looks"
+      - "Shadow-puppet paper theatre"
+      - "Deterministic frame-by-frame rendering"
+      - "Pinyin-aware lyric alignment"
+      - "Creative coding"
+    startDate: "2026-10"
+    extraLinks:
+      - { label: "Watch the eight films on chanmeng.org", url: "https://chanmeng.org/films#memory-amber-2022" }
+    metrics:
+      - { label: "Films", value: "8", note: "one per song of the album, each in its own technique: procedural watercolour with parallax (5:06), shadow-puppet paper theatre (2:55), CRT damage with halftone and character cells (4:03), wax-crayon picture book (5:25), black-and-white woodcut (4:32), grey gouache with a single colour (3:33), three-ink risograph zine (5:30), gouache skies folded along the horizon (3:35); all 1920×1080, 24 fps, H.264" }
+      - { label: "Runtime", value: "34 min", note: "the eight films together, as the repository's README states it (2026-10-08)" }
+    publicSummary: |
+      Eight music videos for my album 《记忆琥珀2022》 (*Memory Amber 2022*), a
+      memoir of one year, with one film per song and a different way of
+      drawing for each: procedural watercolour, shadow-puppet paper theatre,
+      CRT damage, wax crayon, woodcut, gouache and risograph. Every frame is
+      drawn by code: a web page draws frame `t`, headless Chrome captures
+      it, and ffmpeg adds the song. No image or video generation model, no
+      photograph and no footage is used for the picture. The songs were
+      made with Suno; the renderer, the timing tools and the method are
+      adapted from the open-source mg-styles-15 library (MIT), and several
+      films adapt techniques from the Lemo-Opuscar style library.
+    narrative:
+      impactHeadline: "Eight music videos for one album, each drawn a different way — watercolour, shadow theatre, CRT glitch, crayon, woodcut, gouache, risograph — with every frame a pure function of time."
+      businessLogic: |
+        A personal creative project, not a product. Each film is a web page
+        that draws the frame for any time `t`; nothing depends on the clock
+        and all randomness is seeded, so frames can be rendered in any
+        order by several browsers at once. Timing comes from the song:
+        faster-whisper gives word timestamps and an alignment step matches
+        the known lyric sheet to that transcript by pinyin, so a homophone
+        error still lands on the right character; a separate pass adds
+        beats, onsets and loudness envelopes. Three of the films first
+        paint their bitmap layers in Python (NumPy and OpenCV: layered
+        translucent washes, paper grain, brush strokes) and then animate
+        them in the page with parallax, light and weather. Three rules run
+        through all eight: one amber light per film, on which the film
+        ends; one white that changes meaning from film to film; and no
+        faces, every figure being a silhouette, a back or a distant shape.
+        Lyric timing is automatic, about ±0.3 s per character, and has not
+        been checked by ear.
+      myRole: |
+        The album (songs and lyrics, generated with Suno), the treatment of
+        all eight films, and each film's drawing and animation code are
+        mine, built with Claude Code. The renderer, the timing tools and
+        the method are adapted from mg-styles-15 by Vincentwei1021 (MIT).
+        Several films adapt techniques from the Lemo-Opuscar style library
+        (LemoLab): mostly ideas re-implemented from its style notes, and in
+        the risograph film an adapted print module. Fonts are under the SIL
+        Open Font License. Each film's CREDITS file lists what it adapts.

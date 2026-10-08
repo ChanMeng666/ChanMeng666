@@ -300,6 +300,11 @@ showcase:
 #     recorded here so nothing the site plays is missing from the database.
 #   - A film on the site is not automatically README / extended-CV craft
 #     evidence: that needs its own `showcase` entry above (frames, collage).
+#   - ONE EXCEPTION (Chan, 2026-10-09): chanmeng.org/films is the filmography
+#     and shows every version, including the films listed under
+#     `notDisplayed` here (not the ArchLang narrated demo). That page is fed
+#     by `films` in 46-films.yaml, where `primary: true` must name the same
+#     film repo as this register. Everywhere else the rule stands.
 # =============================================================================
 productFilms:
   - projectId: archcanvas
@@ -313,8 +318,8 @@ productFilms:
       - { surface: chanmeng.org, page: /work, slot: "promo films", cuts: ["30 s 16:9"] }
       - { surface: github-readme, slot: "What I make beyond code › Promo films", cuts: ["30 s 16:9", "30 s 9:16"] }
     notDisplayed:
-      - { filmRepo: ChanMeng666/archcanvas-promo-video, what: "92 s HyperFrames hero film + six shorts", reason: "one film per product" }
-      - { filmRepo: ChanMeng666/archcanvas-promo-remotion, what: "Zoom Out, four aspect ratios", reason: "one film per product" }
+      - { filmRepo: ChanMeng666/archcanvas-promo-video, what: "92 s HyperFrames hero film + six shorts", reason: "one film per product; shown on /films only" }
+      - { filmRepo: ChanMeng666/archcanvas-promo-remotion, what: "Zoom Out, four aspect ratios", reason: "one film per product; shown on /films only" }
     lastVerified: "2026-10-06"
 
   - projectId: archlang
@@ -334,7 +339,7 @@ productFilms:
     displayedOn:
       - { surface: chanmeng.org, page: "/", slot: "home tools stage", cuts: ["30 s 16:9"] }
     notDisplayed:
-      - { filmRepo: ChanMeng666/echook-promo-video, what: "earlier Remotion + ElevenLabs + Suno promo", reason: "one film per product; the repo stays public beside echook" }
+      - { filmRepo: ChanMeng666/echook-promo-video, what: "earlier Remotion + ElevenLabs + Suno promo", reason: "one film per product; shown on /films only; the repo stays public beside echook" }
     lastVerified: "2026-10-06"
 
   - projectId: a11y-loop

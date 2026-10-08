@@ -277,6 +277,177 @@
       }
     },
 
+    "filmCollections": {
+      "type": "array",
+      "description": "Albums and series that group rows of `films` (data/profile/46-films.yaml). repo → a film repo in docs/ecosystem/lineage.yaml, projectId → projects[].id; enforced by scripts/check-ecosystem.mjs.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "repo",
+          "summary"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "album",
+              "songs",
+              "series"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "titleZh": {
+            "type": "string"
+          },
+          "repo": {
+            "type": "string",
+            "pattern": "^[\\w.-]+/[\\w.-]+$"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "credits": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "films": {
+      "type": "array",
+      "description": "The complete filmography, one row per finished film (data/profile/46-films.yaml). Source of chanmeng.org/films through dist/films.json (scripts/build-films-data.mjs). `primary: true` marks the film a product shows under the one-per-product rule of `productFilms`. Cross-references are enforced by scripts/check-ecosystem.mjs.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "repo",
+          "date",
+          "seconds",
+          "onFilmsPage"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "kind": {
+            "enum": [
+              "product-film",
+              "brand-film",
+              "event-promo",
+              "music-video",
+              "demo-film"
+            ]
+          },
+          "primary": {
+            "type": "boolean"
+          },
+          "collection": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "title": {
+            "type": "string"
+          },
+          "titleZh": {
+            "type": "string"
+          },
+          "for": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "showcaseId": {
+            "type": "string"
+          },
+          "repo": {
+            "type": "string",
+            "pattern": "^[\\w.-]+/[\\w.-]+$"
+          },
+          "repoPublic": {
+            "type": "boolean"
+          },
+          "date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$"
+          },
+          "seconds": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "cuts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "madeWith": {
+            "type": "string"
+          },
+          "drawnAs": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "youtubeId": {
+            "type": "string",
+            "pattern": "^[\\w-]{11}$"
+          },
+          "shortYoutubeId": {
+            "type": "string",
+            "pattern": "^[\\w-]{11}$"
+          },
+          "media": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "poster"
+            ],
+            "properties": {
+              "poster": {
+                "type": "string"
+              },
+              "mp4": {
+                "type": "string"
+              },
+              "webm": {
+                "type": "string"
+              },
+              "hls": {
+                "type": "string"
+              }
+            }
+          },
+          "onFilmsPage": {
+            "type": "boolean"
+          },
+          "notShownReason": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "certificates": {
       "type": "array",
       "items": {

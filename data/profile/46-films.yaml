@@ -1,0 +1,375 @@
+# =============================================================================
+# FILMS — every finished film Chan has made, one row per film
+# =============================================================================
+# The complete filmography: product films, brand films, the event promo and the
+# music videos. It is the source of chanmeng.org/films (the page that shows all
+# of them): `npm run build:films-data` writes dist/films.json from the rows
+# marked `onFilmsPage: true`, and 2d-portfolio's `scripts/sync-films.mjs`
+# copies that file into the site. Edit a film here, never in the site.
+#
+# HOW THIS RELATES TO `productFilms` (45-showcase.yaml):
+#   - `productFilms` decides which ONE film a product shows on the home page,
+#     /work, /teaching, /about and the README. That rule is unchanged.
+#   - /films is the one place that shows every version (Chan, 2026-10-09), so a
+#     product may have several rows here. `primary: true` marks the row that
+#     `productFilms` displays; the others are earlier or alternative films.
+#
+# RULES
+#   - `repo` must be a promo-film, demo or music-video repo in
+#     docs/ecosystem/lineage.yaml; `projectId` a projects[].id; `collection` a
+#     filmCollections[].id. Enforced by scripts/check-ecosystem.mjs. Most film
+#     repos are private: name them, never link them.
+#   - Music videos (Chan, 2026-10-09): shown on YouTube and on chanmeng.org/films,
+#     and nowhere else: not the README, a CV, LinkedIn copy or another page of
+#     the site. Their copy says how each film is drawn and how it is made, not
+#     what the album is about. Keep both credits: the songs are hers (made with
+#     Suno); "no image or video generation models" is a claim about the PICTURE.
+#   - ArchCanvas copy law holds here too: "AI architectural designer", never
+#     "AI architect"; never "buildable", "permit-ready", "code-compliant" or
+#     "in seconds". GAVIGO: no figures beyond the film's own; CORDE: the app is
+#     in use at CORDE, the film is not endorsed by CORDE.
+#   - `media` paths are site paths. `/work/films/*` are files in 2d-portfolio's
+#     public/; `/media/*` is the R2 bucket `chanmeng-media`, served by the
+#     site's Worker. `hls` is an adaptive stream (1080p / 720p / 360p),
+#     `mp4` one progressive 720p file. `seconds` is the length of what plays.
+#   - `youtubeId` only for PUBLIC uploads (youtube/channel.yaml is the register).
+# =============================================================================
+
+filmCollections:
+  - id: archcanvas-feature-shorts
+    kind: series
+    title: ArchCanvas feature shorts
+    repo: ChanMeng666/archcanvas-promo-video
+    projectId: archcanvas
+    summary: Six 21 to 29 second shorts, one product feature each, cut from the same session on the live product as the 92-second film and reusing its on-screen copy word for word. Each exists in 16:9 and 9:16.
+
+  - id: october-rain-february-line
+    kind: songs
+    title: "October Rain · February Line"
+    repo: ChanMeng666/october-rain-february-line-mv
+    projectId: october-rain-february-line-mv
+    summary: Two films for two of Chan's songs. Every frame is drawn by code, a web page draws frame t, headless Chrome captures it and ffmpeg adds the song.
+    credits: "Songs by Chan Meng, made with Suno. Production method, frame renderer and cel brush engine from the open-source mg-styles-15 library (MIT). No image or video generation model is used for the picture."
+
+  - id: anti-marriage-universe
+    kind: album
+    title: Anti-Marriage Universe
+    titleZh: 反婚宇宙
+    repo: ChanMeng666/anti-marriage-universe-mv
+    projectId: anti-marriage-universe-mv
+    summary: A trilogy, one blind date in a café seen three times, hers, his and from above, each film in its own visual style. Every frame is drawn in code and cut to the song's beat grid.
+    credits: "Music, lyrics and recordings by Chan Meng. Visual styles and engine modules from the open-source Lemo-Opuscar style library (MIT). No video generation and no stock footage."
+
+  - id: memory-amber-2022
+    kind: album
+    title: Memory Amber 2022
+    titleZh: 记忆琥珀2022
+    repo: ChanMeng666/memory-amber-2022-mv
+    projectId: memory-amber-2022-mv
+    summary: Eight films for one album, a memoir of one year, with one film per song and a different way of drawing for each. Three rules run through all eight, one amber light per film, one white that changes meaning from film to film, and no faces.
+    credits: "Songs and lyrics by Chan Meng, generated with Suno. Renderer, timing tools and method adapted from the open-source mg-styles-15 library (MIT); several films adapt techniques from the Lemo-Opuscar style library. No image or video generation model, no photograph and no footage is used for the picture."
+
+films:
+  # ── Product films: the one each product shows (productFilms) ───────────────
+  - id: archcanvas-studio-film
+    kind: product-film
+    primary: true
+    title: ArchCanvas studio film
+    for: ArchCanvas
+    projectId: archcanvas
+    repo: ChanMeng666/archcanvas-promo-studio
+    date: "2026-09"
+    seconds: 120
+    cuts: ["15 / 30 / 60 / 120 s", "16:9 + 9:16"]
+    madeWith: "Remotion, coded UI replica"
+    summary: A product film whose picture is a coded replica of the ArchCanvas studio, not a screen recording. Four lengths by two aspect ratios, in two cuts, from one scene library.
+    youtubeId: rUZAiXgt9JY
+    shortYoutubeId: 3GrW5o63p5I
+    media: { poster: /work/posters/archcanvas-poster.jpg, mp4: /media/films/archcanvas-studio-120s.mp4 }
+    onFilmsPage: true
+
+  - id: archlang-film
+    kind: product-film
+    primary: true
+    title: ArchLang film
+    for: ArchLang
+    projectId: archlang
+    repo: ChanMeng666/archlang-promo
+    date: "2026-10"
+    seconds: 68
+    cuts: ["68 s", "16:9"]
+    madeWith: "Remotion, real compiler in the render"
+    summary: A coded replica of the ArchLang playground in which every floor plan is compiled during the render by the real compiler, with real command-line output and a synthesised soundtrack.
+    youtubeId: RBcGF6X4esY
+    media: { poster: /work/posters/archlang-poster.jpg, mp4: /work/films/archlang-68s.mp4 }
+    onFilmsPage: true
+
+  - id: echook-film
+    kind: product-film
+    primary: true
+    title: echook film
+    for: echook
+    projectId: echook
+    repo: ChanMeng666/echook-promo-studio
+    date: "2026-10"
+    seconds: 60
+    cuts: ["15 / 30 / 60 s", "16:9 + 9:16"]
+    madeWith: "Remotion, procedural watercolour, synthesised score"
+    summary: A replica of the product's terminal interface that is a pure function of time, set in a procedurally painted watercolour world with a synthesised score.
+    youtubeId: 43vcdxFDbTg
+    shortYoutubeId: OUgDbZG6-Hg
+    media: { poster: /work/posters/echook-poster.jpg, mp4: /media/films/echook-60s.mp4 }
+    onFilmsPage: true
+
+  - id: a11y-loop-film
+    kind: product-film
+    primary: true
+    title: a11y-loop film
+    for: a11y-loop
+    projectId: a11y-loop
+    repo: ChanMeng666/a11y-loop-promo-video
+    date: "2026-07"
+    seconds: 179
+    cuts: ["2 min 59 s", "16:9", "narrated, captions burned in"]
+    madeWith: "Remotion, figures captured from the real CLI"
+    summary: A narrated film in which every number on screen is captured from the real command-line tool and gated by an automated verify step.
+    youtubeId: HIjLTA7HS64
+    media: { poster: /work/posters/a11y-loop-poster.jpg, mp4: /work/films/a11y-loop-179s.mp4 }
+    onFilmsPage: true
+
+  - id: gavigo-ire-film
+    kind: product-film
+    primary: true
+    title: GAVIGO IRE product film
+    for: GAVIGO
+    projectId: gavigo-ire
+    repo: ChanMeng666/gavigo-promo-film
+    date: "2026-10"
+    seconds: 60
+    cuts: ["30 / 60 s", "16:9 + 9:16"]
+    madeWith: "Remotion, coded UI replica"
+    summary: The product interface recreated in code as a pure function of time and cut to measured downbeats.
+    note: "Product UI recreated in code; sequence shortened. Controlled measurements, not a production SLA."
+    youtubeId: qoTYuK0Xdsk
+    shortYoutubeId: k7xBJ6DXMnc
+    media: { poster: /work/posters/gavigo-ire-poster.jpg, mp4: /work/films/gavigo-ire-60s.mp4 }
+    onFilmsPage: true
+
+  - id: corde-mobile-film
+    kind: product-film
+    primary: true
+    title: CORDE Mobile product film
+    for: CORDE
+    projectId: corde-mobile-application
+    repo: ChanMeng666/corde-promo-studio
+    date: "2026-09"
+    seconds: 60
+    cuts: ["30 / 60 s", "16:9 + 9:16"]
+    madeWith: "Remotion, procedural watercolour map, synthesised score"
+    summary: A coded replica of the offline-first field app over a procedurally painted watercolour map, with a synthesised score and sound effects.
+    note: "The interface is a coded replica of the app. Every name and place shown is fictional."
+    youtubeId: RiL7m159I7w
+    shortYoutubeId: zf2mAMVHoT0
+    media: { poster: /work/posters/corde-mobile-poster.jpg, mp4: /work/films/corde-mobile-60s.mp4 }
+    onFilmsPage: true
+
+  - id: she-sharp-film
+    kind: product-film
+    primary: true
+    title: She Sharp product film
+    for: She Sharp
+    projectId: she-sharp
+    repo: ChanMeng666/she-sharp-promo-studio
+    date: "2026-10"
+    seconds: 60
+    cuts: ["30 / 60 s", "16:9 + 9:16"]
+    madeWith: "Remotion, coded UI replica, synthesised audio"
+    summary: The member platform's interface rebuilt in code, with gates that trace every on-screen string and figure to its source.
+    youtubeId: Yf25U5uysho
+    shortYoutubeId: zrxlw5Kh3vI
+    media: { poster: /work/posters/she-sharp-poster.jpg, mp4: /work/films/she-sharp-60s.mp4 }
+    onFilmsPage: true
+
+  - id: tam-ai-ti-film
+    kind: product-film
+    primary: true
+    title: Tam-AI-Ti product film
+    for: Whiri-AI
+    projectId: tam-ai-ti
+    repo: ChanMeng666/tamaiti-promo-studio
+    date: "2026-10"
+    seconds: 60
+    cuts: ["15 / 30 / 60 s", "16:9 + 9:16"]
+    madeWith: "Remotion, procedural watercolour, synthesised score"
+    summary: A coded replica of the product interface with procedural watercolour art and a synthesised score.
+    note: "Interface recreated in code for this film. Demo account and figures are illustrative."
+    youtubeId: rJb7A_Ljmrs
+    shortYoutubeId: lKPR3rNw7Ng
+    media: { poster: /work/posters/tam-ai-ti-poster.jpg, mp4: /work/films/tam-ai-ti-60s.mp4 }
+    onFilmsPage: true
+
+  - id: eatropolis-film
+    kind: product-film
+    primary: true
+    title: Eatropolis website film
+    for: Eatropolis
+    projectId: eatropolis-website
+    repo: ChanMeng666/eatropolis-promo-film
+    date: "2026-10"
+    seconds: 60
+    cuts: ["15 / 30 / 60 s", "16:9 + 9:16"]
+    madeWith: "Remotion, coded UI replica"
+    summary: The festival website's own interface rebuilt in code as a pure function of time, with gates that keep every frame true to the product.
+    youtubeId: AdelJ4bezwo
+    shortYoutubeId: PXR3I_47At4
+    media: { poster: /work/posters/eatropolis-poster.jpg, mp4: /media/films/eatropolis-60s.mp4 }
+    onFilmsPage: true
+
+  - id: ai-programming-school-film
+    kind: product-film
+    primary: true
+    title: AI programming school product film
+    for: AI Programming Education Platform
+    projectId: ai-programming-teaching-project
+    repo: ChanMeng666/ai-programming-teaching-promo
+    date: "2026-10"
+    seconds: 60
+    cuts: ["30 / 60 s", "16:9 + 9:16"]
+    madeWith: "Remotion, coded UI replica"
+    summary: A coded replica of the free bilingual course site and its AI assistant.
+    youtubeId: DKCzZCQTQgA
+    shortYoutubeId: M3mGpMDDO9I
+    media: { poster: /work/posters/ai-programming-poster.jpg, mp4: /work/films/ai-programming-60s.mp4 }
+    onFilmsPage: true
+
+  # ── Product films: earlier and alternative versions (shown on /films only) ──
+  - id: archcanvas-hero-film
+    kind: product-film
+    title: "ArchCanvas, the 92-second film"
+    for: ArchCanvas
+    projectId: archcanvas
+    repo: ChanMeng666/archcanvas-promo-video
+    date: "2026-09"
+    seconds: 92
+    cuts: ["92 s", "16:9 + 9:16"]
+    madeWith: "HyperFrames, footage of one real product session"
+    summary: A film with no voiceover, built from one continuous session on the live product. Music, sound design and text cards carry the argument, and five build gates enforce cleared copy and honest footage.
+    media: { poster: /media/films/archcanvas-hero-92s.jpg, mp4: /media/films/archcanvas-hero-92s.mp4 }
+    onFilmsPage: true
+
+  - { id: archcanvas-short-talk-to-your-plan, kind: product-film, collection: archcanvas-feature-shorts, order: 1, title: Talk to your plan, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, date: "2026-09", seconds: 29, cuts: ["29 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-1.jpg, mp4: /media/films/archcanvas-short-1.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-the-check, kind: product-film, collection: archcanvas-feature-shorts, order: 2, title: The check, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, date: "2026-09", seconds: 26, cuts: ["26 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-2.jpg, mp4: /media/films/archcanvas-short-2.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-it-opens-in-real-cad, kind: product-film, collection: archcanvas-feature-shorts, order: 3, title: It opens in real CAD, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, date: "2026-09", seconds: 27, cuts: ["27 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-3.jpg, mp4: /media/films/archcanvas-short-3.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-tweaks, kind: product-film, collection: archcanvas-feature-shorts, order: 4, title: Tweaks, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, date: "2026-09", seconds: 24, cuts: ["24 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-4.jpg, mp4: /media/films/archcanvas-short-4.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-grounded-rendering, kind: product-film, collection: archcanvas-feature-shorts, order: 5, title: Grounded rendering, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, date: "2026-09", seconds: 25, cuts: ["25 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-5.jpg, mp4: /media/films/archcanvas-short-5.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-pay-per-result, kind: product-film, collection: archcanvas-feature-shorts, order: 6, title: Pay per result, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, date: "2026-09", seconds: 21, cuts: ["21 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-6.jpg, mp4: /media/films/archcanvas-short-6.mp4 }, onFilmsPage: true }
+
+  - id: archcanvas-zoom-out
+    kind: product-film
+    title: "ArchCanvas «Zoom Out»"
+    for: ArchCanvas
+    projectId: archcanvas
+    repo: ChanMeng666/archcanvas-promo-remotion
+    date: "2026-09"
+    seconds: 73
+    cuts: ["73 s", "16:9, 9:16, 4:5 and 1:1 from one edit"]
+    madeWith: Remotion
+    summary: One continuous zoom across the product's infinite canvas, told backwards. A silent film carried by text set in the canvas and one music bed, with four aspect ratios out of one edit.
+    media: { poster: /media/films/archcanvas-zoom-out-73s.jpg, mp4: /media/films/archcanvas-zoom-out-73s.mp4 }
+    onFilmsPage: true
+
+  - id: echook-first-film
+    kind: product-film
+    title: "echook, the first film"
+    for: echook
+    projectId: echook
+    repo: ChanMeng666/echook-promo-video
+    repoPublic: true
+    date: "2026-02"
+    seconds: 89
+    cuts: ["89 s", "16:9"]
+    madeWith: "Remotion, ElevenLabs, Suno"
+    summary: The earlier promo, made when the product was still called claude-code-audio-hooks, with React-based animation, generated voice and sound effects, and a Suno score.
+    media: { poster: /media/films/echook-first-89s.jpg, mp4: /media/films/echook-first-89s.mp4 }
+    onFilmsPage: true
+
+  # Not on the site: made to accompany the ArchLang paper (never name the
+  # venue). Unlisted on YouTube; its id is in youtube/channel.private.yaml.
+  - id: archlang-demo
+    kind: demo-film
+    title: ArchLang narrated demo
+    for: ArchLang
+    projectId: archlang
+    repo: ChanMeng666/archlang-demo-video
+    date: "2026-10"
+    seconds: 287
+    cuts: ["4 min 47 s", "16:9", narrated]
+    madeWith: Remotion
+    summary: A narrated demo of ArchLang 1.36.0, built as code.
+    onFilmsPage: false
+    notShownReason: "made to accompany the paper, not a promo"
+
+  # ── Event promo ────────────────────────────────────────────────────────────
+  - id: she-sharp-lesmills-promo
+    kind: event-promo
+    title: "She Sharp × Les Mills, “No Pain, All Gain”"
+    for: She Sharp
+    projectId: she-sharp
+    showcaseId: she-sharp-lesmills-promo
+    repo: NZ-SheSharp/she-sharp-promo-video-event-lesmills-03-september-2026
+    date: "2026-08"
+    seconds: 30
+    cuts: ["30 s", "4 aspect ratios"]
+    madeWith: "Remotion, Suno"
+    summary: An event promo rebuilt from photographs of the May 2024 Les Mills evening, with a Suno score cut on the beat.
+    youtubeId: j2_JCEs8Ucw
+    media: { poster: /work/posters/lesmills-poster-landscape.jpg, mp4: /work/films/she-sharp-lesmills-30s.mp4 }
+    onFilmsPage: true
+
+  # ── Brand films ────────────────────────────────────────────────────────────
+  - id: chan-meng-intro
+    kind: brand-film
+    title: "Chan Meng, 64-second video business card"
+    for: Chan Meng
+    showcaseId: chan-meng-intro
+    repo: ChanMeng666/chan-meng-promo-video
+    date: "2026-09"
+    seconds: 64
+    cuts: ["64 s", "16:9"]
+    madeWith: "p5.js, p5.brush, code-synthesised score"
+    summary: The brand monkey escorts eight on-screen facts about Chan's work, each one traced to the career database, painted in the sting's world and cut to a code-synthesised score.
+    youtubeId: QC2fqBGp4Xg
+    media: { poster: /work/posters/chan-meng-intro-poster.jpg, mp4: /work/films/chan-meng-intro-64s.mp4, webm: /work/films/chan-meng-intro-64s.webm }
+    onFilmsPage: true
+
+  - id: chan-meng-monkey-sting
+    kind: brand-film
+    title: "Chan Meng monkey, brand sting"
+    for: Chan Meng
+    showcaseId: chan-meng-monkey-sting
+    repo: ChanMeng666/chan-meng-promo-video
+    date: "2026-09"
+    seconds: 12
+    cuts: ["12 s", "16:9"]
+    madeWith: "p5.js, p5.brush, code-synthesised score"
+    summary: A wordless sting for Chan's own mark. One orange pixel circles the monkey, bursts, and swirls back into a disc as the monkey settles into the exact logo. Every frame is a pure function of time.
+    youtubeId: PoAYhd0KI4c
+    media: { poster: /work/posters/chan-monkey-sting-poster.jpg, mp4: /work/films/chan-monkey-sting-12s.mp4, webm: /work/films/chan-monkey-sting-12s.webm }
+    onFilmsPage: true
+
+  # ── Music videos ───────────────────────────────────────────────────────────
+  - { id: a-drizzle-in-october, kind: music-video, collection: october-rain-february-line, order: 1, title: A Drizzle in October, titleZh: 十月的微雨, repo: ChanMeng666/october-rain-february-line-mv, projectId: october-rain-february-line-mv, date: "2026-10", seconds: 325, drawnAs: "Hand-inked cel animation, the ink lines redrawn every second frame", youtubeId: X3nUfLHawq4, media: { poster: /media/mv/october-rain-february-line/a-drizzle-in-october/poster.jpg, hls: /media/mv/october-rain-february-line/a-drizzle-in-october/master.m3u8 }, onFilmsPage: true }
+  - { id: february-on-an-extended-line, kind: music-video, collection: october-rain-february-line, order: 2, title: "February, on an Extended Line", titleZh: 二月的延长线, repo: ChanMeng666/october-rain-february-line-mv, projectId: october-rain-february-line-mv, date: "2026-10", seconds: 315, drawnAs: "One continuous line that draws a single day", youtubeId: B1q5akx2zPk, media: { poster: /media/mv/october-rain-february-line/february-on-an-extended-line/poster.jpg, hls: /media/mv/october-rain-february-line/february-on-an-extended-line/master.m3u8 }, onFilmsPage: true }
+
+  - { id: warrior-ah-hua, kind: music-video, collection: anti-marriage-universe, order: 1, title: Warrior Ah Hua, titleZh: 战士阿花, repo: ChanMeng666/anti-marriage-universe-mv, projectId: anti-marriage-universe-mv, date: "2026-10", seconds: 239, drawnAs: Red paper-cut, media: { poster: /media/mv/anti-marriage-universe/warrior-ah-hua/poster.jpg, hls: /media/mv/anti-marriage-universe/warrior-ah-hua/master.m3u8 }, onFilmsPage: true }
+  - { id: drifter-ah-fa, kind: music-video, collection: anti-marriage-universe, order: 2, title: Drifter Ah Fa, titleZh: 浪子阿发, repo: ChanMeng666/anti-marriage-universe-mv, projectId: anti-marriage-universe-mv, date: "2026-10", seconds: 295, drawnAs: 80s cel anime, media: { poster: /media/mv/anti-marriage-universe/drifter-ah-fa/poster.jpg, hls: /media/mv/anti-marriage-universe/drifter-ah-fa/master.m3u8 }, onFilmsPage: true }
+  - { id: the-best-strangers, kind: music-video, collection: anti-marriage-universe, order: 3, title: The Best Strangers, titleZh: 最佳路人, repo: ChanMeng666/anti-marriage-universe-mv, projectId: anti-marriage-universe-mv, date: "2026-10", seconds: 355, drawnAs: Risograph print, media: { poster: /media/mv/anti-marriage-universe/the-best-strangers/poster.jpg, hls: /media/mv/anti-marriage-universe/the-best-strangers/master.m3u8 }, onFilmsPage: true }
+
+  - { id: sleepwalker-in-the-clouds, kind: music-video, collection: memory-amber-2022, order: 1, title: Sleepwalker in the Clouds, titleZh: 云端的梦游者, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 306, drawnAs: Procedural watercolour bitmaps with parallax, media: { poster: /media/mv/memory-amber-2022/01-sleepwalker-in-the-clouds/poster.jpg, hls: /media/mv/memory-amber-2022/01-sleepwalker-in-the-clouds/master.m3u8 }, onFilmsPage: true }
+  - { id: dust-in-the-lock, kind: music-video, collection: memory-amber-2022, order: 2, title: Dust in the Lock, titleZh: 锁芯的灰尘, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 175, drawnAs: Shadow-puppet paper theatre, media: { poster: /media/mv/memory-amber-2022/02-dust-in-the-lock/poster.jpg, hls: /media/mv/memory-amber-2022/02-dust-in-the-lock/master.m3u8 }, onFilmsPage: true }
+  - { id: echoes-of-april, kind: music-video, collection: memory-amber-2022, order: 3, title: Echoes of April, titleZh: 四月的残响, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 243, drawnAs: "CRT damage, halftone and character cells", media: { poster: /media/mv/memory-amber-2022/03-echoes-of-april/poster.jpg, hls: /media/mv/memory-amber-2022/03-echoes-of-april/master.m3u8 }, onFilmsPage: true }
+  - { id: empty-lullaby, kind: music-video, collection: memory-amber-2022, order: 4, title: Empty Lullaby, titleZh: 空摇篮曲, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 325, drawnAs: "Wax-crayon picture book, drawn and rubbed out", media: { poster: /media/mv/memory-amber-2022/04-empty-lullaby/poster.jpg, hls: /media/mv/memory-amber-2022/04-empty-lullaby/master.m3u8 }, onFilmsPage: true }
+  - { id: the-wordless-book, kind: music-video, collection: memory-amber-2022, order: 5, title: The Wordless Book, titleZh: 无字书, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 272, drawnAs: Black-and-white woodcut, media: { poster: /media/mv/memory-amber-2022/05-the-wordless-book/poster.jpg, hls: /media/mv/memory-amber-2022/05-the-wordless-book/master.m3u8 }, onFilmsPage: true }
+  - { id: yellow-flowers-in-the-fog, kind: music-video, collection: memory-amber-2022, order: 6, title: Yellow Flowers in the Fog, titleZh: 雾里的黄花, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 213, drawnAs: Grey gouache with a single colour, media: { poster: /media/mv/memory-amber-2022/06-yellow-flowers-in-the-fog/poster.jpg, hls: /media/mv/memory-amber-2022/06-yellow-flowers-in-the-fog/master.m3u8 }, onFilmsPage: true }
+  - { id: sheet-metal, kind: music-video, collection: memory-amber-2022, order: 7, title: Sheet Metal, titleZh: 铁皮, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 330, drawnAs: Three-ink risograph punk zine, media: { poster: /media/mv/memory-amber-2022/07-sheet-metal/poster.jpg, hls: /media/mv/memory-amber-2022/07-sheet-metal/master.m3u8 }, onFilmsPage: true }
+  - { id: off-season, kind: music-video, collection: memory-amber-2022, order: 8, title: Off Season, titleZh: 反季, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 215, drawnAs: "Gouache skies, folded along the horizon", media: { poster: /media/mv/memory-amber-2022/08-off-season/poster.jpg, hls: /media/mv/memory-amber-2022/08-off-season/master.m3u8 }, onFilmsPage: true }

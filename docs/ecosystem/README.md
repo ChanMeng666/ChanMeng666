@@ -1,6 +1,6 @@
 # Repo lineage (ecosystem map)
 
-How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified against GitHub on 2026-10-07: **158 public-catalog repos** plus 10 in the local overlay (87 archived, 81 active) in **27 entities** and **38 families**, with 173 typed relations. The repo history was last cloned and compared on 2026-10-03. Every active repo now also carries Chan's judgement fields (see "Judgement fields" below). Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
+How all of Chan's repositories relate to each other: which repos were built for the same company or brand, which one replaced which, and which are backups, forks, promo films or growth workspaces. Verified against GitHub on 2026-10-09: **161 public-catalog repos** plus 10 in the local overlay (87 archived, 84 active) in **27 entities** and **39 families**, with 178 typed relations. The repo history was last cloned and compared on 2026-10-03. Every active repo now also carries Chan's judgement fields (see "Judgement fields" below). Repos with sensitive names live only in a local overlay (see below); 9 such repos hang off families here and are counted in each family's `privateRepoCount`.
 
 ## What the files are
 
@@ -574,6 +574,13 @@ Repos: 🔒 📦 JIEJOE (experiment), 🔒 📦 memory-rush (game), 📦 cloud-c
 - 2024-11-27: image-generator created (Together AI, Mondrian UI); later Vercel-to-Cloudflare pivot + credits/Stripe SaaS layer
 - 2024-12-12: interactive-story-generator created (Gradio on HF Spaces)
 - 2024-12-22: emoji-story-generator created (Streamlit on HF Spaces; later Llama-3.1-8B via HF Inference Providers)
+
+**Music videos drawn by code** (`music-videos`, 3 repos). Chan's own music videos for her own songs: every frame is drawn by code and rendered with headless Chrome and ffmpeg. Not promo films and not tied to any product. All three repos are private. Since 2026-10-09 their films are shown on chanmeng.org/films and, for two of them, YouTube, and nowhere else (`showcase: listed`); the display rule is in `docs/STATE.md`.
+
+Repos: 🔒 october-rain-february-line-mv (music-video), 🔒 anti-marriage-universe-mv (music-video), 🔒 memory-amber-2022-mv (music-video)
+
+- 2026-10-07: october-rain-february-line-mv (two films) and anti-marriage-universe-mv (three films) created, each with a v1.0.0 release
+- 2026-10-08: memory-amber-2022-mv created (eight films for one album)
 
 **Personal Next.js web apps (relationship / job / library / email tools)** (`personal-nextjs-apps`, 4 repos). Independent self-initiated product experiments, 2024-10 to 2025-12, no shared code: friendscope (assessment tool), job-valuation (job scoring), library-os (multi-tenant library SaaS with live domain), send-joy (visual layer over Resend, started as a Christmas CLI).
 

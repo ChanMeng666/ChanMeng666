@@ -1,7 +1,7 @@
 // Chan Meng — EXTENDED CV content: the 22-page «Subtraction / Addition» magazine.
 // Each x-*() renders one chapter. Facts mirror data/profile/*.yaml; dates anchor
-// to data/profile/10-career.yaml. All English, first person. See the plan +
-// spec under docs/superpowers/ for page architecture and red lines.
+// to data/profile/10-career.yaml. All English, first person. What may never
+// appear here is listed in the local-only docs/STATE.private.md.
 #import "theme-extended.typ": *
 #import "extended-components.typ": *
 

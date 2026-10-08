@@ -5,8 +5,7 @@
 # Shard of Chan Meng's profile data. Top-level key: events.
 # All data/profile/*.yaml shards are merged (in filename order) by
 # scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
-# After editing: npm run check. Data map + field template: CLAUDE.md /
-# docs/CONTRIBUTING-DATA.md.
+# After editing: npm run check. Data map: CLAUDE.md.
 #
 # Purpose: a running log of braggable offline appearances so that at year-end an
 # AI reading this database can generate summaries and personal-brand copy, and so
@@ -14,7 +13,7 @@
 # awards[]/work[]/projects[] (relatedAwardTitle / relatedWorkId / relatedProjectId)
 # rather than duplicating their prose.
 #
-# Field template (see docs/CONTRIBUTING-DATA.md "Adding an event"):
+# Field template:
 #   id, name, role (Speaker|Panelist|Mentor|Judge|Instructor|Organizer|Attendee|MC),
 #   type (talk|panel|hackathon|workshop|conference|community|award|media),
 #   date ("YYYY-MM-DD"), endDate (optional), location, organizer, url,
@@ -24,8 +23,9 @@
 # PHOTOS. `photos[].src` points at /public/photos/events/, named
 # YYYY-MM-DD-<event-slug>-<what>.jpg. scripts/audit-assets.mjs HARD-FAILS (exit 1)
 # if a referenced file is absent, so place the file before writing the reference.
-# Recipe + naming rules: docs/CONTRIBUTING-DATA.md "Event photos & evidence
-# screenshots".
+# Photos: max 1400 px long edge, mozjpeg q80, <= 400 KB, EXIF rotation baked.
+# Evidence screenshots go in /public/evidence/<claim-slug>.png (no date prefix),
+# kept PNG, <= 600 KB, still readable.
 #
 # SOURCE OF TRUTH for every She Sharp date, venue, roster and attendance figure
 # below: the She Sharp site's own event data —

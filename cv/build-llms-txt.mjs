@@ -159,7 +159,7 @@ W("- Came through the Anthropic Partner Network architect track via Engram (May�
 W("- Senior AI programming mentor · orchestrator of agents.");
 
 // Verified reach metrics with per-stat source URLs — the "statistics with
-// citations" GEO tactic (highest-impact signal per docs/GEO-STRATEGY.md).
+// citations" GEO tactic.
 // Rendered from data/profile/00-basics.yaml::basics.reach so it never drifts.
 if (b.reach?.metrics?.length) {
   sect(`Reach & social proof (verified ${b.reach.asOf ?? ""})`.trim());

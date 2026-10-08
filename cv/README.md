@@ -1,136 +1,35 @@
 # cv/ — Chan Meng's Typst-sourced CV
 
-Two-page CV positioned for **AI Agent Architect / agentic-engineer / Anthropic Partner Network** roles. Rendered by [Typst](https://typst.app/) from this folder; emits the canonical PDF, two GEO sibling artifacts (JSON-LD and an agent-readable plain-text summary), and a plain single-column ATS resume for job-portal uploads — the last of which also ships as a Word document and a plain-text file.
+`pwsh cv/build.ps1` builds everything; read the script for inputs and outputs.
+It does not check its own prerequisites: Typst 0.14+ and Node.js 22+ on PATH,
+and `npm ci` done. `cv/verify-ats-exports.py` also needs poppler on PATH
+(here: `D:\tools\poppler\poppler-26.02.0\Library\bin`) and `pypdf`.
 
-The README's "Resume" pill in [`templates/partials/footer.hbs`](../templates/partials/footer.hbs) links to `public/chan-meng-cv.pdf`. This folder regenerates that file in place — the URL never changes.
-
-## Build
-
-```powershell
-pwsh cv/build.ps1
-```
-
-This compiles three PDFs, emits the GEO siblings, and writes the ATS resume's Word and plain-text exports. Everything lands in `public/` **except** the ATS artifacts, which are tracked but deliberately kept off the web-served path. Outputs:
-
-| File | Purpose |
-| --- | --- |
-| `public/chan-meng-cv.pdf` | Canonical 2-page CV (linked from the README) |
-| `public/chan-meng-cv-extended.pdf` | 22-page «Subtraction / Addition» magazine companion |
-| `cv/exports/chan-meng-cv-ats.pdf` | The **default upload artifact** — 2-page single-column ATS resume, photo-free, black text only, clickable links. **Not** web-served, not linked anywhere; manual upload only. See [`exports/README.md`](./exports/README.md) |
-| `cv/exports/chan-meng-cv-ats.docx` | **Fallback** for portals that refuse the PDF — same resume as a real Word document, parsed out of `chan-meng-cv-ats.typ`, not hand-maintained |
-| `cv/exports/chan-meng-cv-ats.txt` | Plain UTF-8 of the same content for "paste your resume" fields |
-| `public/cv.jsonld` | schema.org Person + WorkExperience JSON-LD — recruiter LLMs (LinkedIn AI Search, Greenhouse AI ranking, Jobright) parse this directly |
-| `public/cv-llms.txt` | Plain-text agent-readable summary mirroring the [llms.txt](https://llmstxt.org/) convention |
-
-`public/chan-meng-cv-extended.pdf` is the 22-page image-led magazine companion to the 2-page CV, built by the same `pwsh cv/build.ps1`; its unshot/upgradeable photos are tracked in [`assets/extended/SHOT-LIST.md`](./assets/extended/SHOT-LIST.md).
-
-Requires [Typst 0.14+](https://typst.app/) and Node.js 22+ on PATH.
+Before editing any `.typ`, read [`TYPST_PITFALLS.md`](./TYPST_PITFALLS.md).
+Do not rename `public/chan-meng-cv.pdf`: the README "Resume" pill links to it.
 
 ## After every rebuild: sync the site (REQUIRED)
 
-`pwsh cv/build.ps1` is only half the job. The same two web-served PDFs are also
-served from Chan's own site at [chanmeng.org/cv](https://chanmeng.org/cv), out of
-a **separate repo** (`D:/github_repository/2d-portfolio`), and nothing syncs them
-automatically. Rebuilding here and stopping leaves the site serving an older CV
-than the one this repo calls canonical — the exact drift this repo exists to
-prevent.
+chanmeng.org/cv serves the two public PDFs from a separate repo, and nothing
+syncs them.
 
-```powershell
-$src = "D:/github_repository/ChanMeng666/public"
-$dst = "D:/github_repository/2d-portfolio/public"
-Copy-Item "$src/chan-meng-cv.pdf"          "$dst/chan-meng-cv.pdf"          -Force
-Copy-Item "$src/chan-meng-cv-extended.pdf" "$dst/chan-meng-cv-extended.pdf" -Force
-
-cd D:/github_repository/2d-portfolio
-# STEP 2, NOT OPTIONAL: bump PREVIEW_V in src/app/cv/page.tsx (see below)
-git add public/chan-meng-cv.pdf public/chan-meng-cv-extended.pdf src/app/cv/page.tsx
-git commit -m "chore(cv): sync CV PDFs from the career database"
-git push origin main    # push IS the deploy
-```
-
-- **Bump `PREVIEW_V` in `src/app/cv/page.tsx` in the SAME commit.** The page
-  embeds each PDF as `<file>?v=${PREVIEW_V}`. Every Cloudflare colo caches
-  independently at `max-age` 4h, so new bytes at an unchanged URL are served
-  stale — the page renders the *previous* CV, looks perfectly fine, and is
-  wrong. This is the single easiest step to forget and the only one whose
-  failure is invisible.
-- **Exactly these two files.** `src/app/cv/page.tsx` in that repo embeds
-  `/chan-meng-cv.pdf` and `/chan-meng-cv-extended.pdf`, and nothing else.
-- **Never copy anything out of `cv/exports/`.** Those are the ATS artifacts, and
-  the whole reason they sit outside `public/` is that no crawler or recruiter LLM
-  should ever find a second, competing "current CV". See
-  [`exports/README.md`](./exports/README.md).
-- **Push is the deploy.** That repo has no deploy workflow — Cloudflare Pages
-  builds from its git integration. Do not `wrangler deploy` locally; that path is
-  broken and is deliberately not being fixed.
-- **Verify by hash, not by eye** — the extended PDF changes bytes on every build
-  while keeping its size, so "same file size" proves nothing:
-
-  ```bash
-  sha256sum public/chan-meng-cv.pdf ../2d-portfolio/public/chan-meng-cv.pdf
-  ```
-
-
-## File map
-
-```
-cv/
-├── chan-meng-cv.typ           # entry point — 2-page CV: geometry, PDF metadata, layout
-├── theme.typ                  # design tokens (colors, fonts, spacing)
-├── components.typ             # reusable: project-card, pill, section-header, ...
-├── sections/                  # 2-page CV body sections
-│   ├── header.typ
-│   ├── sidebar.typ
-│   ├── projects.typ
-│   ├── experience.typ
-│   ├── recognition.typ
-│   └── footer.typ
-├── chan-meng-cv-extended.typ  # entry point — 22-page «Subtraction / Addition» magazine
-├── extended.typ               # magazine chapter content (x-cover … x-backcover)
-├── extended-components.typ    # magazine primitives: photo, article-card, avatar-wall, …
-├── theme-extended.typ         # spacious *-x tokens + magazine tokens
-├── chan-meng-cv-ats.typ       # entry point — plain single-column ATS resume (content lives here)
-├── ats-components.typ         # style-free renderers: role-line, skills-line, project-entry
-├── ats-txt.mjs                # renderer: parsed ATS model → plain UTF-8
-├── ats-docx.mjs               # renderer: parsed ATS model → OOXML (Heading1, w:numPr, w:hyperlink)
-├── build-ats-exports.mjs      # CLI: .typ → exports/*.docx + *.txt; owns writing + the determinism freeze
-├── verify-ats-exports.py      # runs BOTH definitions of done below against the built artifacts
-├── exports/                   # TRACKED manual-upload deliverables (NOT web-served)
-│   ├── chan-meng-cv-ats.pdf
-│   ├── chan-meng-cv-ats.docx  # GENERATED — never hand-edit
-│   └── chan-meng-cv-ats.txt   # GENERATED — never hand-edit
-├── assets/
-│   ├── extended/              # curated+compressed magazine photos + MANIFEST + SHOT-LIST
-│   └── thumbs/                # legacy small screenshots
-├── build.ps1                  # one-shot build (all three PDFs + JSON-LD + llms.txt)
-├── build-jsonld.mjs           # data/profile/*.yaml → schema.org JSON-LD
-├── build-llms-txt.mjs         # data/profile/*.yaml → agent-readable summary
-└── README.md
-```
-
-Two of the ATS export's parts live under `scripts/lib/` because they are
-scanning machinery, not CV content:
-
-```
-scripts/lib/
-├── typst-ast.mjs              # comment/string-aware Typst scanning primitives
-│                              # (stripComments, scanBalanced, callBodies, stringArg, …) —
-│                              # hardened generalisations of the regexes check-cv-sync.mjs
-│                              # already runs over the same file
-└── parse-ats-resume.mjs       # ordered left-to-right scan of chan-meng-cv-ats.typ → data model;
-                               # throws with a line number on any unrecognised construct
-```
+1. Copy exactly `public/chan-meng-cv.pdf` and `public/chan-meng-cv-extended.pdf`
+   to `D:/github_repository/2d-portfolio/public/`. Never copy anything from
+   `cv/exports/`.
+2. In the same commit, bump `PREVIEW_V` in that repo's `src/app/cv/page.tsx`.
+   The page embeds `<file>?v=${PREVIEW_V}` and each Cloudflare colo caches 4 h
+   on its own, so new bytes at an unchanged URL show the old CV with no error.
+3. `git push origin main`. Push is the deploy (Cloudflare Pages git
+   integration); local `wrangler deploy` is broken on purpose.
+4. Verify by `sha256sum`, not size: the extended PDF changes bytes on every
+   build while keeping its size.
 
 ## Source of truth
 
-Where possible, content is sourced from [`../data/profile/`](../data/profile/) — the same single-source-of-truth that builds the GitHub profile README. The Typst sections currently hardcode hero project narratives (so they can include architect-grade vocabulary like "PostToolUse hook" and "hub-and-spoke coordinator" that doesn't belong in the shards).
-
-`build-jsonld.mjs` is fully YAML-derived. `build-llms-txt.mjs` is split, and the split is deliberate:
-
-- **Generated from the shards** — everything factual: identity and summary, positioning focus areas (`domains[]`), reach metrics, Selected work (`projects[]` on `tier: flagship`, plus `echook` and `google-news-mcp` named in the generator's `SELECTED_EXTRA_PROJECT_IDS`), Experience (`work[]` on `tier: flagship|primary`), Education, Recognition (`awards[]`), the Anthropic credential-ID pairs (`certificates[]`), press coverage (`publications[]`), the reference pull quote (`references[]` via `meta.x_brand.readmePullQuoteId`), and availability/booking (`meta.x_brand.engagementAvailability`).
-- **Hardcoded, ~30 lines, each marked `HARDCODED:` with its reason** — the Claude Code 5-layer stack, the architect-grade patterns, the anti-patterns rejected, the CV-artifact pointers, the developer-leverage tooling framing, and the two positioning claims about working method. These describe how this repo and Chan's agent work are engineered rather than what she has shipped; they have no shard home by design, and they are the only thing making `cv-llms.txt` non-redundant with the root `llms.txt`.
-
-Both files are emitted by `npm run build:cv-geo` (chained into `npm run build`, and what `build.ps1` calls), and both are gated: `validate-data.yml` fails a PR whose committed `public/cv-llms.txt` / `public/cv.jsonld` are stale relative to the shards. Never hand-edit either output.
+`data/profile/`. The `.typ` prose is hand-curated; `public/cv.jsonld` and
+`public/cv-llms.txt` are generated (`npm run build:cv-geo`) and CI-gated, never
+hand-edited. The only hardcoded lines in `build-llms-txt.mjs` are marked
+`HARDCODED:` with their reason; add no facts there.
 
 ## Word blacklist (strip before compile)
 
@@ -143,115 +42,117 @@ These phrases trip AI-resume detectors and trigger up to 49% auto-dismissal. Do 
 
 ## Architect-grade vocabulary (deliberately present)
 
-The CV mirrors the Claude Certified Architect — Foundations curriculum vocabulary so that recruiter LLMs reading the Anthropic Partner Network JD recognise the same phrase patterns. Keep these terms in the source:
-
-- *Claude Agent SDK · AgentDefinition · Task tool · hub-and-spoke · PostToolUse hook · PreToolUse hook · stop_reason · tool_use · JSON Schema · MCP server · MCP gateway · A2A · AGNTCY · agentic engineer · orchestrator of agents · case-facts block · scratchpad files · structured error propagation · errorCategory · isRetryable · claim-source provenance · scoped subagent tools · context: fork · plan mode · `-p` + `--output-format json`*.
-
-The Anthropic Forward Deployed Engineer JD phrase `shipped MCP servers, sub-agents, and agent skills to production` appears verbatim in the summary so LLM-based screeners get an exact phrase-match.
-
-## Anti-patterns deliberately absent
-
-- No invisible prompt-injection text. Greenhouse-class screeners detect this and auto-reject. (The ATS resume goes further and carries no `/Keywords` metadata at all — a 70-term hidden list is plainly legible in `pdfinfo` and reads as keyword stuffing.)
-- The 2-page CV **is** a two-column design, and its raw extraction order does interleave — measurable with `pdftotext -raw public/chan-meng-cv.pdf -`, where the sidebar heading "What I Bring to a Team" lands right after "Introduction" and its bullets appear ~1,200 words later. That is an accepted trade for a human-facing document. Machine parsing is served by a dedicated single-column variant instead: `cv/exports/chan-meng-cv-ats.pdf`.
+The Claude Certified Architect (Foundations) terms in the CV sections and in the
+hardcoded block of `build-llms-txt.mjs` (hub-and-spoke, PostToolUse hook,
+`stop_reason`, case-facts block and the rest) are there so recruiter LLMs
+reading an Anthropic Partner Network job description match the same phrases. Do
+not simplify them away. The summary keeps the Anthropic Forward Deployed
+Engineer phrase `shipped MCP servers, sub-agents, and agent skills to
+production` verbatim for the same reason.
 
 ## ATS variant — hard rules
 
 `cv/chan-meng-cv-ats.typ` + `cv/ats-components.typ` exist to be read by machines. Every rule below was chosen against measured extractor behaviour; do not relax one for looks.
 
-- **Single column, no grids, no tables.** Grids are the most common cause of scrambled reading order. Dates are stacked under the org line, never right-aligned.
-- **No images, no icons, no boxes, no colour.** `pdfimages -list` on the output must return zero rows. Full-width hairline rules under section headings ARE allowed — a rule spanning the whole measure cannot be read as a column boundary the way a vertical or short inline rule can.
-- **No italics** — `cv/fonts` has no DM Sans Italic, so italic here is a synthesized oblique.
-- **Links are real, but their visible text never becomes decorative.** Every `link()` shows the bare URL, the company name, or the project name; the annotation sits on top of unchanged text, so an extractor loses nothing while a human never has to retype a URL. Links are underlined in black — the affordance must be visible without introducing colour. Never hide a URL behind words like "here" or "portfolio".
-- **No page header or footer.** Legacy parsers either drop those runs or splice them into the body stream between pages.
-- **`hyphenate: false` is NOT enough on its own.** It only disables *automatic* hyphenation; Typst still breaks lines at an *explicit* hyphen, and `pdftotext` then deletes a hyphen sitting at a line end. Measured: `AI-native` → `AInative` (designed CV), `web-vitals` → `webvitals`, `multi-user` → `multiuser`, `gpt-5.4-mini` → `gpt-5.4mini` (first build of the ATS file). The fix in place is `#show regex("[\w.]+(-[\w.]+)+"): it => box(it)`, which removes the break opportunity inside every hyphenated compound. Also avoid a bare ` - ` mid-sentence — `Architect - Foundations` extracted as `Architect Foundations`. Use a colon or parentheses.
-- **Commas, never spaces, between list items.** The designed CV's skill pills extract as `Status line Plugins` — two skills indistinguishable from one.
-- **ASCII throughout where meaning allows**: `-` bullet markers, `-` date ranges, `|` separators, straight quotes (`smartquote` disabled). Māori macrons stay — they carry meaning and extract byte-exact.
-- **3-letter months** (`Mar 2025 - Feb 2026`). `scripts/check-cv-sync.mjs` derives the expected range with 3-letter months; `March` fails the gate.
-- **Every contact item explicitly delimited** — a literal ` | ` between items, never a plain space or a bare line break. Items may then share a line (they do; see the page budget below). The designed CV's stacked contact column has no delimiter and extracts as one undelimited run of five fields.
-- **A document date must be PRESENT, and pinned.** `cv/chan-meng-cv-ats.typ` sets `date: datetime(year: …, month: …, day: …)`, never `auto` and never `none`. A PDF with no `/CreationDate` and no `/ModDate` is a known trip-hazard for legacy resume parsers and was the clearest structural anomaly in the file Lever refused on 2026-08-03. Pinning keeps what `date: none` was protecting — this PDF is committed, so identical input must produce identical bytes (verified: two builds, identical SHA-256). Bump it by hand when the resume's *content* changes; it is the document's revision date, not the build's wall clock.
-- **Only section names a parser's lexicon knows**: `PROFESSIONAL SUMMARY`, `TECHNICAL SKILLS`, `PROFESSIONAL EXPERIENCE`, `PROJECTS`, `EDUCATION`, `CERTIFICATIONS`, `AWARDS AND RECOGNITION`. Anything else gets absorbed into the neighbouring section.
-- **Native `= HEADING`; a transforming show rule must RE-EMIT `it`.** Typst tags PDFs by default, so `=` emits a real `/H1`. The rule that attaches the hairline wraps `it` in a block rather than rebuilding the heading from `it.body`, which keeps the tag. Re-verify the `/H1` count with pypdf after touching that rule.
-- **Escape `\@` in emails and `\~` before numbers** (see [`TYPST_PITFALLS.md`](./TYPST_PITFALLS.md) §9, §10).
+- **Single column, no grids, no tables**: grids scramble reading order. Dates
+  sit on the org line behind a `|`, never right-aligned.
+- **No images, icons, boxes or colour**: `pdfimages -list` must be empty.
+  Full-width hairlines under section headings are allowed; a rule spanning the
+  measure cannot be read as a column boundary.
+- **No italics**: `cv/fonts` has no DM Sans Italic, so italic is a synthesized
+  oblique.
+- **DM Sans 10pt, pure black**: below about 9.5pt OCR-fallback parsers degrade.
+- **Margin 1.6cm, never below 1.5cm**: it clears the "within 0.5in of the edge
+  is header/footer, discard" heuristic of legacy parsers.
+- **No page header or footer**: legacy parsers drop those runs or splice them
+  into the body between pages.
+- **No `/Keywords` metadata and no invisible text**: a hidden term list is
+  legible in `pdfinfo` and reads as keyword stuffing; Greenhouse-class
+  screeners auto-reject injected text.
+- **Links show the bare URL, the company name or the project name**, underlined
+  in black. Never "here" or "portfolio": the extractor must lose nothing.
+- **Box every hyphenated compound**; `hyphenate: false` is not enough. Typst
+  still breaks at an explicit hyphen and `pdftotext` deletes a hyphen at a line
+  end (measured: `AI-native` → `AInative`, `gpt-5.4-mini` → `gpt-5.4mini`). The
+  fix in place is `#show regex("[\w.]+(-[\w.]+)+"): it => box(it)`. No bare
+  ` - ` mid-sentence either (`Architect - Foundations` → `Architect
+  Foundations`); use a colon or parentheses.
+- **Commas between list items, never spaces**: the designed CV's pills extract
+  as `Status line Plugins`.
+- **Every contact item delimited by a literal ` | `**: the designed CV's
+  stacked contact column extracts as one run of five fields.
+- **ASCII where meaning allows**: `-` bullets and date ranges, `|` separators,
+  straight quotes (`smartquote` off). Māori macrons stay; they extract
+  byte-exact.
+- **3-letter months** (`Mar 2025 - Feb 2026`): `scripts/check-cv-sync.mjs`
+  derives that shape, so `March` fails the gate.
+- **Document date present and pinned** (`date: datetime(...)`, never `auto` or
+  `none`): a PDF with no `/CreationDate` or `/ModDate` trips legacy parsers and
+  was the clearest anomaly in the file Lever refused on 2026-08-03; pinning
+  keeps the committed PDF byte-reproducible. Bump it by hand when the content
+  changes.
+- **Only the seven section names a parser's lexicon knows** (listed in
+  `EXPECT.headings`, `scripts/lib/parse-ats-resume.mjs`); anything else is
+  absorbed into the neighbouring section.
+- **Native `= HEADING`, and a transforming show rule must re-emit `it`**, not
+  rebuild from `it.body`, or the `/H1` tag is lost. Re-check the `/H1` count
+  with pypdf after touching that rule.
+- **Escape `\@` and `\~`** ([`TYPST_PITFALLS.md`](./TYPST_PITFALLS.md) §9, §10).
 
-**Two pages is the budget**, and the content is shaped to it rather than the other way round:
+**Two pages is the budget.** One sentence per bullet; if a bullet grows, split
+it or cut the second sentence, never the metric (`EXPECTED_BULLETS` in the
+verifier records the count). The three oldest roles are single-line entries
+under "Earlier experience", still with title, org, location and dates, so they
+parse as employment; that took the file from 4 pages to 2. Before adding
+anything, decide what comes out.
 
-- The five *current* roles carry one bullet each, except TechNest, which carries two — its single bullet had silently grown to three sentences. Sanicle (ended Feb 2026, but CTO plus the IBM Silver Partner result) carries one. The three older roles — Forward with Her, ByteDance, CORDE — are single-line entries under an "Earlier experience" sub-label: title, org, location and dates are all still present and delimited, so a parser extracts them as employment identically; only the prose is gone. That compression is what took the document from 4 pages to 2.
-- Job title and dates share two lines, not three (dates ride the org line behind a `|`). Contact items share two delimited lines, not seven — safe only *because* the separator is an explicit `|`; the failure measured in the designed CV was items running together with nothing but whitespace between them.
-- One sentence per bullet. If a bullet grows to two sentences, split it into two bullets or cut the second — never cut the metric. `cv/verify-ats-exports.py::EXPECTED_BULLETS` counts them, so a split is a deliberate, recorded change.
-- Before adding anything, decide what comes out, then re-check the page count.
+**Spacing** comes from the one scale at the top of `ats-components.typ`. Change
+the scale, not call sites.
 
-**Spacing** is driven by one scale at the top of `ats-components.typ` (`gap-section` / `gap-rule` / `gap-entry` / `gap-intra` / `gap-line` / `gap-compact`). Change the scale, not individual call sites, so the rhythm stays proportional: a section break must read as clearly larger than an entry break, which must read as clearly larger than a line break inside an entry. Entry headers are `sticky: true` so a job title never orphans at the foot of a page with its bullets stranded overleaf.
-
-Definition of done for the PDF: **2 pages** (this is checked by `cv/verify-ats-exports.py`, which is NOT in CI — it drifted to 3 pages unnoticed between Aug 3 and Aug 26 2026, so run the verifier after any content edit, not just before an upload) · `pdfinfo` reports `Tagged: yes` · `pdfinfo` shows `CreationDate` + `ModDate` · pypdf finds 7 `/H1` elements · every `pdffonts` row shows `uni=yes` · `pdfimages -list` empty · poppler, xpdf, and pypdf all recover the 7 section headings in order · the hyphenated-keyword grep is clean · `node scripts/check-cv-sync.mjs --strict` passes.
+**Definition of done for the PDF:** 2 pages · `Tagged: yes` · `CreationDate` +
+`ModDate` present · 7 `/H1` · every `pdffonts` row `uni=yes` · `pdfimages -list`
+empty · poppler, xpdf and pypdf recover the 7 headings in order ·
+hyphenated-keyword grep clean · `node scripts/check-cv-sync.mjs --strict`
+passes. `python cv/verify-ats-exports.py` runs all of it but is not in CI: the
+PDF drifted to 3 pages unnoticed between 2026-08-03 and 2026-08-26, so run it
+after every content edit.
 
 ## ATS variant — the .docx and .txt exports
 
-The **PDF is the default upload** (Chan's call, 2026-08-26); these two are the
-fallbacks. Lever refused the PDF on 2026-08-03 with "Couldn't auto-read resume"
-despite it passing every check above — the container, not the layout, was the
-problem, and nothing since has changed that. Word is Lever's own first
+The **PDF is the default upload** (Chan's call, 2026-08-26). Lever refused it on
+2026-08-03 ("Couldn't auto-read resume") although it passed every check above:
+the container was the problem, not the layout. Word is Lever's own first
 recommended fix and the most reliably parsed format across Greenhouse, Workday
-and Taleo, so it is what to reach for the moment a portal balks. `.txt` exists
-for "paste your resume" textareas. See [`exports/README.md`](./exports/README.md)
-for the escalation order.
+and Taleo, so the `.docx` is the fallback; the `.txt` is for paste-in fields.
+Both are generated from `chan-meng-cv-ats.typ` (`npm run build:ats-exports`,
+not part of `npm run build`); `npm run check:ats` is the PR gate.
 
-Both are **parsed out of `cv/chan-meng-cv-ats.typ`** by
-`cv/build-ats-exports.mjs` — deliberately no second hand-maintained copy of the
-resume text, because two copies drift and only one of them gets proofread.
-`scripts/lib/parse-ats-resume.mjs` scans the file left to right and **throws
-with a line number** on any construct it doesn't recognise, so nothing can be
-silently dropped from the Word file while still appearing in the PDF. Its
-`EXPECT` table asserts exact counts — 7 headings in order and by exact string,
-10 roles (7 with bullets, 3 compact), 4 projects, 2 "Also built" links,
-2 education, 3 awards, 2 contact lines, 6,800–9,000 chars. Every guard throws;
-none warn. A guard that silently parses zero entries is worse than no guard.
+- **Arial, not DM Sans**: DM Sans is not on a recruiter's machine, so naming it
+  means silent substitution, and embedding it inflates the file, is ignored by
+  Google Docs and makes some ATS pipelines choke on `word/fonts/`. Arial over
+  Calibri because Calibri is missing on macOS and Linux.
+- **Real Word structure**: `Heading1` styles, `w:numPr` bullets, `w:hyperlink`
+  relationships; headings and links restyled black, as in the PDF.
+- **The name is a bold 16pt paragraph, not a Heading1**: a parser would open a
+  section called "Chan Meng" and file everything under it.
+- **No `cp:keywords`**; `dcterms:created` / `modified` are set from the `.typ`
+  date.
+- **Page count is not a criterion for the .docx**: Word repaginates per
+  machine. Do not add a page check.
+- **Byte-reproducible**: the build freezes `Date` and `Math.random` around the
+  pack, because `cv/exports/` is tracked.
+- **The `.txt` keeps macrons and em dashes, uses LF, and does not hard-wrap**
+  (one logical unit per line, so a bullet is not read as three). The "Also
+  built" links get ` (url)` appended, as their visible text carries no address.
 
-- **Arial, not DM Sans.** DM Sans is vendored under `cv/fonts` for Typst's `--font-path` and is not installed on a recruiter's machine, so *naming* it in the .docx means silent substitution and *embedding* it is worse: it inflates the file, Google Docs ignores embedded fonts anyway, and some ATS pipelines choke on a `word/fonts/` part. Arial over Calibri because Calibri ships with Office but not with macOS or Linux; Arial is native on Windows and macOS, native in Google Docs, and metric-substituted by Liberation Sans on Linux.
-- **Real Word structure, not typed-out lookalikes.** `Heading1` paragraph styles are the .docx analogue of the PDF's `/H1` tags; bullets are real `w:numPr` numbering, never a literal `-` typed into a run; links are real `w:hyperlink` relationships. Word's stock Heading1 (blue Calibri Light) is overridden to black Arial bold, and hyperlinks are styled black + underline rather than Word's blue — same rule as the PDF: the affordance stays visible without introducing colour.
-- **The name is a plain bold 16pt paragraph, not a Heading1.** A Heading1 reading "Chan Meng" invites a parser to open a section called "Chan Meng" and file everything under it.
-- **No `cp:keywords`** — same anti-keyword-stuffing rule the PDF follows. But `dcterms:created` / `dcterms:modified` **are** set, pinned to the .typ's document date.
-- **Page count is explicitly NOT an acceptance criterion for the .docx.** Word repaginates against whatever fonts and page size the reader's machine has; the two-page budget is a PDF constraint. Do not add a page check here.
-- **Determinism is engineered, not assumed.** `docx`'s packer and its bundled `nanoid/non-secure` (which is `Math.random()`) both introduce churn, so `cv/build-ats-exports.mjs` freezes `Date` **and** `Math.random` around the pack and restores both in a `finally`. Verified byte-identical across three builds. This matters because `cv/exports/` is tracked in git — non-determinism would put a diff in every rebuild.
-- **The `.txt` keeps meaning over ASCII purity.** Māori macrons and em dashes stay (no folding), endings are LF, and it does **not** hard-wrap: one logical unit per line, so a line-oriented parser can't read one bullet as three. Its only divergence from the PDF's token stream is that the five "Also built:" prose links get ` (url)` appended — their visible text is a bare word, so in plain text they would otherwise carry no address at all.
+**Definition of done for the .docx / .txt:** valid OOXML · docx token stream
+identical to `pdftotext` on the PDF · `.txt` identical apart from the appended
+URLs · 7 `Heading1` in order · real numbered bullets, zero typed `- ` · no
+dangling hyperlink relationships · no tables, drawings, text boxes, `framePr`,
+columns, header/footer or media parts · Arial only · core properties without
+keywords · byte-identical across three builds. `python
+cv/verify-ats-exports.py` checks all of it and holds the exact counts.
 
-`npm run check:ats` parses the file and runs every guard without writing
-anything and without needing typst; it is wired into `npm run check` and the PR
-gate. `npm run build:ats-exports` writes the two files — deliberately **not**
-part of `npm run build`, because CV artifacts stay manual.
-
-Definition of done for the .docx / .txt: valid OOXML package · docx token stream
-**identical** to `pdftotext` on the PDF (1,038 tokens) · `.txt` identical modulo
-the 5 appended URLs · 7 `Heading1` paragraphs in order · 10 real numbered bullets
-and zero literal `- ` runs · 29 hyperlinks with zero dangling relationships ·
-zero tables, drawings, text boxes, `framePr` or columns, and no header/footer/media
-parts · Arial only, `DM Sans` appears nowhere in the package · core properties
-present with no keywords · byte-identical across three consecutive builds.
-
-### Checking it — `python cv/verify-ats-exports.py`
-
-Both definitions of done above are **runnable**, and were prose until they
-weren't: the failure they guard against is silent, because a Word file quietly
-missing a job still opens fine and still looks like a resume. The script reads
-the `.docx` back with nothing but `zipfile` and two regexes (a `.docx` is a ZIP
-of XML, and this machine has no Word, LibreOffice, pandoc or Java), diffs its
-token stream against `pdftotext` on the PDF, and re-runs the whole PDF
-regression suite including the hyphenated-keyword grep. Exit 0 means safe to
-upload.
-
-Requires poppler on `PATH` plus `pypdf`, which is why it is **not** in CI —
-`npm run check:ats` is the cheap gate that runs on every PR. Run this one before
-an actual upload, and after touching `chan-meng-cv-ats.typ`, `ats-docx.mjs` or
-`ats-txt.mjs`.
-
-The two checks it cannot make are the two that matter most, and both need a
-human: open the `.docx` in Google Docs or Word Online to confirm it *looks*
-right, and attach it to a real Lever or Greenhouse apply form to confirm the
-parser auto-fills name, email and experience (don't submit).
-
-## Regenerating
-
-Whenever `data/profile/*.yaml` changes (work entries, recommendations, project metrics), rerun `pwsh cv/build.ps1` to refresh `public/chan-meng-cv.pdf` + the JSON-LD and llms.txt siblings.
-
-## Before editing any `.typ` file — read [`TYPST_PITFALLS.md`](./TYPST_PITFALLS.md)
-
-That file documents eight non-obvious Typst layout bugs that have already been fixed in this CV and **must not be reintroduced**. Notable: `v(N, weak: true)` after `linebreak()` silently renders as zero (use `block(below: ...)` instead); `block` margins are max-not-sum; list `spacing` must be ≥ 1.7× of within-item leading or bullets blur into one paragraph. Every entry / project / bullet in the CV depends on these rules.
+Two checks need a person: open the `.docx` in Google Docs or Word Online to see
+that it looks right, and attach it to a real Lever or Greenhouse form to see
+that name, email and experience auto-fill (do not submit).

@@ -5,6 +5,8 @@
 # Hand-maintained after each change on YouTube (there is no API sync); `asOf`
 # is the date a block was last compared with Studio. Not wired into
 # `npm run build`. How to read and change the channel: youtube/README.md.
+# The published title and full description of every public video are in the
+# generated `videos.yaml` beside this file (`npm run capture:youtube`).
 #
 # This repo is public. So this file lists PUBLIC videos and PUBLIC playlists
 # only, plus counts for the rest. An unlisted video is reachable by anyone who
@@ -25,7 +27,7 @@ channel:
   handle: "@ChanMeng666"
   id: UCNfqqzosj2J6bBRVgz7qbJQ
   url: https://www.youtube.com/@ChanMeng666
-  asOf: "2026-10-08"
+  asOf: "2026-10-09"
   subscribers: 24          # historical maximum; never lower it
   description: |
     I'm Chan Meng, an AI agent architect and full-stack engineer based in Auckland, New Zealand.
@@ -46,46 +48,66 @@ channel:
     enabled: true
     trailer: QC2fqBGp4Xg   # shown to people who have not subscribed
     featuredVideo: null
-    # Order as published on 2026-10-07. The three playlist rows were appended
-    # after YouTube's default rows. Order suggested to Chan on 2026-10-08, hers
-    # to drag in Studio: Product films, Short videos, Demos & walkthroughs,
-    # Brand films, Music videos, Videos, For You; remove Created playlists.
+    # Layout as Studio showed it on 2026-10-09 (Chan's paste). The Music videos
+    # row is not on the page. Order suggested to her the same day, hers to
+    # apply in Studio: Product films, Short videos, Music videos (add the
+    # row), Demos & walkthroughs, Brand films, For You; remove Videos, whose
+    # first five tiles are now music videos; featured video for returning
+    # subscribers: the ArchCanvas film (rUZAiXgt9JY).
     sections:
-      - For You
-      - Videos
-      - Short videos
-      - Created playlists
       - "Single playlist: Product films"
+      - Short videos
       - "Single playlist: Demos & walkthroughs"
       - "Single playlist: Brand films"
-      - "Single playlist: Music videos"
-  # Video and playlist descriptions carry NO links (Chan, 2026-10-07): the
-  # account has not done YouTube's one-time verification, so a link in a
-  # description cannot be published as a link. Links live in `links:` above.
-  # Do not add URLs to a description until she says the verification is done.
-  linksInDescriptions: false
+      - Videos
+      - For You
+  # Video descriptions carry links since 2026-10-09: Chan completed YouTube's
+  # verification and asked for them. Every public video's description ends in
+  # a "Links" block (what goes in it: youtube/README.md). The two karakia
+  # recordings have no description to speak of and were left alone. Playlist
+  # descriptions still carry no links.
+  linksInDescriptions: true
 
 counts:
-  asOf: "2026-10-08"
-  total: 326               # 307 on the Videos tab before the uploads, plus 9 films, 8 Shorts and 2 music videos
-  public: 32               # 24 videos + 8 Shorts
+  asOf: "2026-10-09"
+  total: 339               # 331 on the Videos tab (Studio's visibility filters) plus the 8 public Shorts
+  public: 43               # 35 videos + 8 Shorts
   unlisted: 60
-  private: 234             # 178 of them are raw screen recordings titled by timestamp
+  private: 236             # 180 of them are raw screen recordings titled by timestamp
   # The Shorts tab was not part of the count: it also holds a few older
   # unlisted clips (not read).
 
 # -----------------------------------------------------------------------------
 # Public videos, newest first. `kind`: film (rendered promo film) | short (9:16 cut) | music-video | demo
 # (screen-recorded walkthrough) | personal. `projectId` → projects[].id.
-# `views` is the Studio count on 2026-10-07 (historical maximum).
+# `views` is the historical maximum (Studio on 2026-10-07, the public count on
+# 2026-10-09 where that is higher).
 # `described: true` means the description was written and applied; the text
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # Uploaded and made public by Chan on 2026-10-08 and 2026-10-09 under their
+  # file names; titles, descriptions and the playlist were set on 2026-10-09.
+  # Their copy follows the music-video rule (data/profile/46-films.yaml): how
+  # the film is drawn and how it is made, the album in one cleared phrase, both
+  # credits. Each lists its album's films. No music video's description
+  # carries lyrics (Chan, 2026-10-09): the Suno link in it has the song and
+  # its lyrics.
+  - { id: TCNJ5v6AoOw, kind: music-video, published: "2026-10-09", duration: "5:06", title: "云端的梦游者 · Sleepwalker in the Clouds | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
+  - { id: al6Ybmsnn2A, kind: music-video, published: "2026-10-09", duration: "2:55", title: "锁芯的灰尘 · Dust in the Lock | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
+  - { id: YKRB3VnDDqo, kind: music-video, published: "2026-10-09", duration: "4:03", title: "四月的残响 · Echoes of April | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
+  - { id: Cs4LGUjyDqI, kind: music-video, published: "2026-10-09", duration: "5:25", title: "空摇篮曲 · Empty Lullaby | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
+  - { id: UTnIN2npW14, kind: music-video, published: "2026-10-09", duration: "4:33", title: "无字书 · The Wordless Book | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
+  - { id: "2RXDQgN8HMQ", kind: music-video, published: "2026-10-09", duration: "3:33", title: "雾里的黄花 · Yellow Flowers in the Fog | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
+  - { id: Y20RZOOACys, kind: music-video, published: "2026-10-09", duration: "5:31", title: "铁皮 · Sheet Metal | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
+  - { id: XCRbi0YCIz0, kind: music-video, published: "2026-10-09", duration: "3:35", title: "反季 · Off Season | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
+  - { id: GS_eawacEVs, kind: music-video, published: "2026-10-08", duration: "4:00", title: "战士阿花 · Warrior Ah Hua | Music video drawn entirely by code", projectId: anti-marriage-universe-mv, playlists: [Music videos], described: true }
+  - { id: btSFv9OVoDc, kind: music-video, published: "2026-10-09", duration: "4:56", title: "浪子阿发 · Drifter Ah Fa | Music video drawn entirely by code", projectId: anti-marriage-universe-mv, playlists: [Music videos], described: true }
+  - { id: V5X91IMEmiw, kind: music-video, published: "2026-10-09", duration: "5:55", title: "最佳路人 · The Best Strangers | Music video drawn entirely by code", projectId: anti-marriage-universe-mv, playlists: [Music videos], described: true }
   # Uploaded and made public by Chan herself on 2026-10-08; titles and
   # descriptions set afterwards. Both carry the full credit block (song hers,
-  # made with Suno; method and engine from mg-styles-15, MIT) and the full
-  # lyrics, taken from the film's lyrics.txt. They are shown here and, since
+  # made with Suno; method and engine from mg-styles-15, MIT). Their lyrics
+  # were taken out of the description on 2026-10-09. They are shown here and, since
   # 2026-10-09, on chanmeng.org/films (Chan): not the README, a CV, LinkedIn
   # or any other page of the site.
   - { id: X3nUfLHawq4, kind: music-video, published: "2026-10-08", duration: "5:25", title: "十月的微雨 · A Drizzle in October | Music video drawn entirely by code", projectId: october-rain-february-line-mv, playlists: [Music videos], described: true }
@@ -107,14 +129,14 @@ videos:
   - { id: qoTYuK0Xdsk, kind: film, published: "2026-10-07", duration: "1:01", title: "GAVIGO IRE — Instant Reality Exchange | Product film", projectId: gavigo-ire, playlists: [Product films], described: true }
   - { id: RiL7m159I7w, kind: film, published: "2026-10-07", duration: "1:01", title: "CORDE Mobile — offline-first field data collection | Product film", projectId: corde-mobile-application, playlists: [Product films], described: true }
   - { id: Yf25U5uysho, kind: film, published: "2026-10-07", duration: "1:01", title: "She Sharp — the member platform behind a NZ women-in-STEM charity | Product film", projectId: she-sharp, playlists: [Product films], described: true }
-  - { id: QC2fqBGp4Xg, kind: film, published: "2026-09-29", duration: "1:04", views: 22, title: "Chan Meng — AI Agent Architect & Full-Stack Engineer | 64-second intro", showcaseId: chan-meng-intro, playlists: [Brand films], described: true }
+  - { id: QC2fqBGp4Xg, kind: film, published: "2026-09-29", duration: "1:04", views: 44, title: "Chan Meng — AI Agent Architect & Full-Stack Engineer | 64-second intro", showcaseId: chan-meng-intro, playlists: [Brand films], described: true }
   - { id: HXI5QozwHkk, kind: personal, published: "2026-09-29", duration: "0:21", views: 11, title: "Opening Karakia - Chan Meng", described: false }
   - { id: FZS7rbgCaB4, kind: personal, published: "2026-09-29", duration: "0:21", views: 5, title: "Closing Karakia - Chan Meng", described: false }
   - { id: PoAYhd0KI4c, kind: film, published: "2026-09-29", duration: "0:13", views: 18, title: "My logo learned to move | Chan Meng brand sting", showcaseId: chan-meng-monkey-sting, playlists: [Brand films], described: true }
-  - { id: rUZAiXgt9JY, kind: film, published: "2026-09-21", duration: "2:01", views: 13, title: "ArchCanvas — your AI architect: from a brief to a dimensioned floor plan | Product film", projectId: archcanvas, showcaseId: archcanvas-promo-studio, playlists: [Product films], described: true }
+  - { id: rUZAiXgt9JY, kind: film, published: "2026-09-21", duration: "2:01", views: 17, title: "ArchCanvas — your AI architect: from a brief to a dimensioned floor plan | Product film", projectId: archcanvas, showcaseId: archcanvas-promo-studio, playlists: [Product films], described: true }
   - { id: HIjLTA7HS64, kind: film, published: "2026-07-28", duration: "3:00", views: 26, title: "a11y-loop — make AI coding agents write accessible UI, then prove it | Product film", projectId: a11y-loop, playlists: [Product films], described: true, note: "July render; the local master was re-rendered 2026-10-06. Chan chose to keep this upload." }
   - { id: OO8uqNiQXcY, kind: demo, published: "2026-07-03", duration: "1:35", views: 47, title: "Aotearoa AI Hackathon Festival 2026 — the event’s voice AI assistant | Demo", projectId: ai-hackathon-assistant, playlists: ["Demos & walkthroughs"], described: true }
-  - { id: LFFML4zqHu0, kind: demo, published: "2026-03-17", duration: "4:53", views: 65, title: "GAVIGO IRE — feature walkthrough", projectId: gavigo-ire, playlists: ["Demos & walkthroughs"], described: true }
+  - { id: LFFML4zqHu0, kind: demo, published: "2026-03-17", duration: "4:53", views: 66, title: "GAVIGO IRE — feature walkthrough", projectId: gavigo-ire, playlists: ["Demos & walkthroughs"], described: true }
   - { id: Y9l7Wz9kLRA, kind: demo, published: "2026-01-02", duration: "8:12", views: 29, title: "Bulk personalised email with Resend — an automation workflow walkthrough", playlists: ["Demos & walkthroughs"], described: true }
   - { id: saBoG1HCvfY, kind: personal, published: "2025-12-10", duration: "1:06", views: 40, title: "The end of year thank you video", described: true, note: "made for She Sharp" }
   - { id: IZi3EJLEpb4, kind: demo, published: "2025-11-04", duration: "2:34", views: 45, title: "echook (formerly Claude Code Audio Hooks) — audio notifications demo", projectId: echook, playlists: ["Demos & walkthroughs"], described: true }
@@ -152,13 +174,20 @@ playlists:
     videos: [QC2fqBGp4Xg, PoAYhd0KI4c]
   - title: Music videos
     id: PLUfF7nx_5Rg4
-    onHomeTab: true
-    videos: [X3nUfLHawq4, B1q5akx2zPk]   # created 2026-10-08 at Chan's request
+    onHomeTab: false
+    # Created 2026-10-08 at Chan's request. Order as YouTube shows it on
+    # 2026-10-09 (the order the films were added in, not album order).
+    videos: [Y20RZOOACys, 2RXDQgN8HMQ, XCRbi0YCIz0, YKRB3VnDDqo, UTnIN2npW14, Cs4LGUjyDqI, al6Ybmsnn2A, TCNJ5v6AoOw, V5X91IMEmiw, btSFv9OVoDc, GS_eawacEVs, X3nUfLHawq4, B1q5akx2zPk]
 
-# Nothing is waiting to be uploaded (2026-10-08). Every product with a vertical
-# cut has its Short live; ArchLang and a11y-loop have no vertical cut. The Short
-# convention: title = the film's title with "| Product film" replaced by
-# "#Shorts"; description = "A 30-second cut of the <product> product film. The
-# full film is on this channel, in the Product films playlist." plus the
-# sign-off line; no playlist.
+# Nothing is waiting to be uploaded (checked against 46-films.yaml and the film
+# folders on 2026-10-09): all thirteen music videos and every product's film
+# on show are on the channel. Every product with a vertical cut has its Short
+# live; ArchLang and a11y-loop have no vertical cut. Not uploaded on purpose
+# (one film per product on this channel): the earlier and alternative films
+# that chanmeng.org/films shows, namely the ArchCanvas 92-second film, its six
+# feature shorts, «Zoom Out» and the first echook film. The Short convention:
+# title = the film's title with "| Product film" replaced by "#Shorts";
+# description = "A 30-second cut of the <product> product film. The full film
+# is on this channel, in the Product films playlist.", the sign-off line and a
+# Links block that starts with the full film; no playlist.
 pendingUpload: []

@@ -24,6 +24,7 @@
     "capture:suno": "node scripts/capture-suno.mjs",
     "build:suno": "node scripts/build-suno-register.mjs",
     "check:suno": "node scripts/build-suno-register.mjs --check",
+    "capture:youtube": "node scripts/capture-youtube.mjs",
     "validate": "node scripts/validate.mjs && node scripts/validate-brand.mjs && node scripts/check-linkedin-sync.mjs && node scripts/check-ecosystem.mjs",
     "audit": "node scripts/audit-assets.mjs",
     "check": "npm run validate && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit",

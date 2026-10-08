@@ -43,14 +43,14 @@ LinkedIn copy.
 | **Org repos** | Administering a GitHub org does not make its repos hers: only those in `scope.orgRepoAllowlist` (`lineage.yaml`) are recorded |
 | **Lost access** | Not lost authorship: the GAVIGO repos carry `accessRevoked` and stay hers |
 | **chanmeng.org** | Never presented as a project; it is the venue |
-| **YouTube** | A portfolio surface. Chan set each video's visibility on 2026-10-07; demos of archived projects (Panda, FemTracker, Wellness Agent, Sanicle) are private and must not be linked. Descriptions carry no links. Unlisted client and course recordings are left alone |
+| **YouTube** | A portfolio surface. Chan set each video's visibility on 2026-10-07; demos of archived projects (Panda, FemTracker, Wellness Agent, Sanicle) are private and must not be linked. Descriptions carry links since 2026-10-09 (the account is verified; what goes in the block: `youtube/README.md`). Unlisted client and course recordings are left alone |
 | **Podcasts** | Discontinued 2026-07: shown on no surface; the data entries stay |
 
 ## Platform registers
 
 | Platform | Read | Kept current by |
 |---|---|---|
-| YouTube | `youtube/channel.yaml` (+ gitignored `channel.private.yaml`) | Hand, after each change in Studio |
+| YouTube | `youtube/channel.yaml` (+ gitignored `channel.private.yaml`); published titles and descriptions in `youtube/videos.yaml` | Hand, after each change in Studio; then `npm run capture:youtube` |
 | X | `x/account.yaml`, then `x/posts.yaml` (`summary` first) | `x-sync` skill |
 | LinkedIn profile | `linkedin/account.yaml`, `linkedin/posts.yaml`; full text in `posts/<year>.yaml` | `linkedin-sync` skill |
 | LinkedIn, ArchCanvas page | `linkedin/company/archcanvas/` | `linkedin-sync` skill |
@@ -87,4 +87,4 @@ asking, unless she delegates again. `showcase: flagship` requires
 | Delete the five listing forks | Their PRs closing, or 2026-11-14 |
 | Back up `femtech-weekend-assets` off this machine | open |
 | Google OAuth client and Resend key used by Te Pā Tiaki | Chan: revoke if they were dedicated to the game |
-| YouTube home tab order | Chan: drag the rows in Studio into the order in `youtube/channel.yaml` › homeTab |
+| YouTube home tab | Chan: apply the layout suggested in `youtube/channel.yaml` › homeTab (2026-10-09), or say what to change |

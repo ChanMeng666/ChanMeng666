@@ -24,10 +24,24 @@ question about the channel.
 - **Copy rules.** Titles: `Product — what it does | Product film` (or `| Demo`),
   100 characters at most. Descriptions: what the product is, in plain words; one
   line saying the film is a coded replica where that is true; a one-line
-  sign-off. **No links in any description** (Chan, 2026-10-07): the account has
-  not done YouTube's link verification; links live in the channel's Links
-  section. Facts come from `data/profile/`. No commit counts, no pricing, and
+  sign-off. Facts come from `data/profile/`. No commit counts, no pricing, and
   no personal claim for a result that belongs to a client.
+- **Links in descriptions** (Chan, 2026-10-09, after YouTube's verification):
+  every description ends in a `Links` block, one `Label: URL` per line. In
+  order: the product's own links (the `url`, `repoUrl` and `extraLinks` of its
+  entry in `data/profile/`), `More films: https://chanmeng.org/films` on a
+  film, then `Portfolio and CV: https://chanmeng.org` and
+  `GitHub: https://github.com/ChanMeng666`. A Short's block starts with the
+  full film. A music video's block has the song on Suno and its album's anchor
+  on chanmeng.org/films, and its credits link the style library; it carries no
+  lyrics, because the Suno link has the song and its lyrics. Hashtags stay
+  on the last line. Never a private repo, a private or unlisted video, or a
+  link the profile does not already carry; check that a URL resolves first.
+- **Reading the channel without Studio.** `npm run capture:youtube` (needs
+  yt-dlp) writes [`videos.yaml`](./videos.yaml): the published title and full
+  description of every public video and Short. Run it after any change in
+  Studio; it also lists public ids missing from `channel.yaml` and
+  descriptions with no link.
 - **Reading and editing Studio with browser automation** (worked on 2026-10-07):
   the content table is `ytcp-video-row`; a video's edit page is
   `studio.youtube.com/video/<id>/edit`, where title and description are the two
@@ -37,7 +51,8 @@ question about the channel.
   `tp-yt-paper-radio-button[name=PRIVATE|UNLISTED|PUBLIC]`, and a playlist is
   ticked through `ytcp-checkbox-lit[test-id="<playlist id>"]`. Save with `#save`
   and confirm it goes back to `aria-disabled="true"`. Keep batches to three or
-  four videos, or the call times out.
+  four videos, or the call times out. The playlist dialog can take several
+  seconds to fill: wait for the checkbox instead of sleeping a fixed time.
 - **Publishing a draft.** A fresh upload is a draft. Fill it on its normal edit
   page first (title, description, "not made for kids", save and wait for `#save`
   to disable, then the playlist as a separate step), and only then press

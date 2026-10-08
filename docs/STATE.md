@@ -87,4 +87,3 @@ asking, unless she delegates again. `showcase: flagship` requires
 | Delete the five listing forks | Their PRs closing, or 2026-11-14 |
 | Back up `femtech-weekend-assets` off this machine | open |
 | Google OAuth client and Resend key used by Te Pā Tiaki | Chan: revoke if they were dedicated to the game |
-| YouTube home tab | Chan: apply the layout suggested in `youtube/channel.yaml` › homeTab (2026-10-09), or say what to change |

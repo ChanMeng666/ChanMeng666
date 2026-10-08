@@ -53,6 +53,11 @@ question about the channel.
   and confirm it goes back to `aria-disabled="true"`. Keep batches to three or
   four videos, or the call times out. The playlist dialog can take several
   seconds to fill: wait for the checkbox instead of sleeping a fixed time.
+  A custom thumbnail goes into the hidden `input#file-loader` inside
+  `ytcp-thumbnail-uploader` on the same edit page (JPEG or PNG, 16:9, under
+  2 MB), then `#save`. A playlist is reordered on youtube.com, not in Studio:
+  each row's menu has "Move to top" and "Move to bottom", and using either
+  switches the playlist's sort to Manual.
 - **Publishing a draft.** A fresh upload is a draft. Fill it on its normal edit
   page first (title, description, "not made for kids", save and wait for `#save`
   to disable, then the playlist as a separate step), and only then press

@@ -47,19 +47,16 @@ channel:
   homeTab:
     enabled: true
     trailer: QC2fqBGp4Xg   # shown to people who have not subscribed
-    featuredVideo: null
-    # Layout as Studio showed it on 2026-10-09 (Chan's paste). The Music videos
-    # row is not on the page. Order suggested to her the same day, hers to
-    # apply in Studio: Product films, Short videos, Music videos (add the
-    # row), Demos & walkthroughs, Brand films, For You; remove Videos, whose
-    # first five tiles are now music videos; featured video for returning
-    # subscribers: the ArchCanvas film (rUZAiXgt9JY).
+    featuredVideo: rUZAiXgt9JY   # shown to returning subscribers
+    # Layout as published, read in Studio on 2026-10-09 after Chan applied
+    # the order suggested to her that day. The Videos row was removed: its
+    # first tiles repeated the music videos.
     sections:
       - "Single playlist: Product films"
       - Short videos
+      - "Single playlist: Music videos"
       - "Single playlist: Demos & walkthroughs"
       - "Single playlist: Brand films"
-      - Videos
       - For You
   # Video descriptions carry links since 2026-10-09: Chan completed YouTube's
   # verification and asked for them. Every public video's description ends in
@@ -92,7 +89,9 @@ videos:
   # the film is drawn and how it is made, the album in one cleared phrase, both
   # credits. Each lists its album's films. No music video's description
   # carries lyrics (Chan, 2026-10-09): the Suno link in it has the song and
-  # its lyrics.
+  # its lyrics. All thirteen music videos have a custom thumbnail since
+  # 2026-10-09: the film's own poster.jpg (the two October films use the
+  # posters chanmeng.org/films serves).
   - { id: TCNJ5v6AoOw, kind: music-video, published: "2026-10-09", duration: "5:06", title: "云端的梦游者 · Sleepwalker in the Clouds | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
   - { id: al6Ybmsnn2A, kind: music-video, published: "2026-10-09", duration: "2:55", title: "锁芯的灰尘 · Dust in the Lock | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
   - { id: YKRB3VnDDqo, kind: music-video, published: "2026-10-09", duration: "4:03", title: "四月的残响 · Echoes of April | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
@@ -174,10 +173,12 @@ playlists:
     videos: [QC2fqBGp4Xg, PoAYhd0KI4c]
   - title: Music videos
     id: PLUfF7nx_5Rg4
-    onHomeTab: false
-    # Created 2026-10-08 at Chan's request. Order as YouTube shows it on
-    # 2026-10-09 (the order the films were added in, not album order).
-    videos: [Y20RZOOACys, 2RXDQgN8HMQ, XCRbi0YCIz0, YKRB3VnDDqo, UTnIN2npW14, Cs4LGUjyDqI, al6Ybmsnn2A, TCNJ5v6AoOw, V5X91IMEmiw, btSFv9OVoDc, GS_eawacEVs, X3nUfLHawq4, B1q5akx2zPk]
+    onHomeTab: true
+    # Created 2026-10-08 at Chan's request. Sorted manually into album order
+    # on 2026-10-09: Memory Amber 2022 (1 to 8), Anti-Marriage Universe (1 to
+    # 3), then the two October films. A new film is added at the end of its
+    # album ("Move to top" / "Move to bottom" in the row menu on youtube.com).
+    videos: [TCNJ5v6AoOw, al6Ybmsnn2A, YKRB3VnDDqo, Cs4LGUjyDqI, UTnIN2npW14, 2RXDQgN8HMQ, Y20RZOOACys, XCRbi0YCIz0, GS_eawacEVs, btSFv9OVoDc, V5X91IMEmiw, X3nUfLHawq4, B1q5akx2zPk]
 
 # Nothing is waiting to be uploaded (checked against 46-films.yaml and the film
 # folders on 2026-10-09): all thirteen music videos and every product's film

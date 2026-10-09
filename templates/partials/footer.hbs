@@ -1,5 +1,5 @@
 {{!-- ═══════════════════════════════════════════════════════════════════════
-     Footer — quiet em-dash separator + minimalist tagline + a single
+     Footer — quiet em-dash separator + a single
      inline subscribe/resume/coffee line + AI-agent file refs.
      The banner and pills are the README's own artwork (public/readme).
      ═══════════════════════════════════════════════════════════════════════ --}}
@@ -7,8 +7,6 @@
 {{> banner decorations.banners.footerDivider}}
 
 ---
-
-*{{basics.taglines.secondary}}*
 
 {{#if _footerLinksReadme.length}}<p>
 {{#each _footerLinksReadme}}<a href="{{url}}">{{pill label}}</a>{{#unless @last}} {{/unless}}{{/each}}

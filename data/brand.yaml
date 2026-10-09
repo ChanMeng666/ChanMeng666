@@ -501,15 +501,17 @@ signatures:
       rule: "keyboard :focus-visible shows the orange focus ring (shadow.focusRing); pill inputs thicken the border to 2px — no glow on mouse interaction"
     reducedMotion: "honour prefers-reduced-motion: reduce — disable all transitions/animation"
 
-  # 5. README artwork — the hero, the section strips, the footer and the link
-  #    pills. Since 2026-10-07 these are files in this repo, drawn in the
+  # 5. README artwork — the hero, the section strips, the footer, the closing
+  #    cover and the link pills. Since 2026-10-07 these are files in this repo, drawn in the
   #    Caldera system by `npm run build:art` (scripts/build-readme-art.mjs →
   #    public/readme/*.svg) and committed; the README no longer fetches a
   #    banner or a pill from any outside service (Chan's decision). Method and
   #    sandbox rules: docs/animated-svg-cards.md.
   #    banners: id → file name. `art` picks the drawing: hero / footer are
-  #      nameplates (display type + dither field + the resting pixel); meter and
-  #      arrivals are section strips with a motif for what follows.
+  #      nameplates (display type + dither field + the resting pixel); cover is
+  #      the closing plate (the motto, one field emptying and one filling);
+  #      meter and arrivals are section strips with a motif for what follows.
+  #      Every plate carries the same faint grid and corner crop marks.
   #    pills: label → variant (ink | ash | orange | violet). The label must be
   #      the exact text the README shows; scripts/build.mjs fails when a pill it
   #      needs has no file, so add the label here and rebuild the art.
@@ -520,6 +522,12 @@ signatures:
       soundIMake:     { art: "meter",    text: "Sound I make" }
       visitorsHeader: { art: "arrivals", text: "Visitors from around the world" }
       footerDivider:  { art: "footer",   text: "Thanks for visiting" }
+      # the closing plate: the motto on two lines (split at " / "), the second
+      # ending in the full stop that the orange pixel becomes
+      cover:          { art: "cover",    text: "Subtraction for life, / addition for thought." }
+    cover:
+      mark: "/public/brands/chan-meng-monkey-white-transparent.svg"
+      signature: "Chan Meng"
     pills:
       "Book a 30-min intro": ink
       "Portfolio":           ash

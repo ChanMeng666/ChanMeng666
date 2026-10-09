@@ -18,6 +18,7 @@ export const C = {
 export const FONTS = {
   display: "cv/fonts/Anton-Regular.ttf",
   sansBold: "cv/fonts/DMSans-Bold.ttf",
+  mono: "cv/fonts/JetBrainsMono-Regular.ttf",
 };
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
@@ -52,6 +53,24 @@ export function sheet({ w, h, title, css = "", defs = "", body, radius, edge = "
   );
 }
 
+// The furniture every plate shares, so the set reads as one printed series: a
+// faint ruled grid under the artwork, and a crop mark in each corner.
+// `ink` is the colour of the type on that plate; `grid: 0` leaves the grid out.
+export function furniture({ w, h, ink, grid = 20, inset = 16, arm = 9 }) {
+  const lines = [];
+  for (let x = grid; grid && x < w; x += grid) lines.push(`M${x} 0v${h}`);
+  for (let y = grid; grid && y < h; y += grid) lines.push(`M0 ${y}h${w}`);
+  const r = w - inset;
+  const b = h - inset;
+  const marks =
+    `M${inset} ${inset + arm}v-${arm}h${arm}M${r - arm} ${inset}h${arm}v${arm}` +
+    `M${r} ${b - arm}v${arm}h-${arm}M${inset + arm} ${b}h-${arm}v-${arm}`;
+  return (
+    (grid ? `<path d="${lines.join("")}" fill="none" stroke="${ink}" stroke-opacity=".055"/>` : "") +
+    `<path d="${marks}" fill="none" stroke="${ink}" stroke-opacity=".5" stroke-width="1.5"/>`
+  );
+}
+
 // 8×8 Bayer matrix: the threshold map of an ordered dither.
 const BAYER = (() => {
   let m = [[0]];
@@ -77,7 +96,10 @@ const BAYER = (() => {
 // the way a dithered gradient brightens: pixel by pixel, with hard cuts.
 // Pixels that never change are one path; the rest are grouped into `bands` by
 // how far the tide must rise to light them. The still frame is mid-tide.
-export function ditherField({ x, y, cols, rows, cell, px, value, fill, loop, swing = 0.2, bands = 8, name = "f" }) {
+// `mode` changes what the bands do with the loop: "tide" rises and falls,
+// "drain" starts full and loses its bands one by one, "fill" starts at its
+// sparsest and gains them. Both hold at each end and reset together.
+export function ditherField({ x, y, cols, rows, cell, px, value, fill, loop, swing = 0.2, bands = 8, name = "f", mode = "tide" }) {
   const off = (cell - px) / 2;
   const fixed = [];
   const banded = Array.from({ length: bands }, () => []);
@@ -95,10 +117,11 @@ export function ditherField({ x, y, cols, rows, cell, px, value, fill, loop, swi
   banded.forEach((cells, k) => {
     if (!cells.length) return;
     // band centre, as the tide level (−swing…swing) at which it lights
-    const level = swing - ((k + 0.5) / bands) * 2 * swing;
-    const rise = ((level + swing) / (2 * swing)) * (loop / 2);
-    const a = pct(rise, loop);
-    const b = pct(loop - rise, loop);
+    const u = (k + 0.5) / bands;
+    const level = swing - u * 2 * swing;
+    // band 0 needs the highest tide: the last to light, the first to go
+    const a = pct(mode === "tide" ? (1 - u) * (loop / 2) : mode === "fill" ? loop * (0.12 + (1 - u) * 0.66) : 0, loop);
+    const b = pct(mode === "tide" ? loop - (1 - u) * (loop / 2) : mode === "drain" ? loop * (0.12 + u * 0.66) : loop, loop);
     css.push(`@keyframes ${name}${k}{0%,${a}{opacity:0}${a},${b}{opacity:1}${b},100%{opacity:0}}.${name}${k}{animation:${name}${k} ${loop}s step-end infinite}`);
     out.push(`<path class="${name}${k}" fill="${fill}"${level > 0 ? ' opacity="0"' : ""} d="${cells.join("")}"/>`);
   });

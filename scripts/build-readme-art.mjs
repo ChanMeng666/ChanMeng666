@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url";
 import yaml from "js-yaml";
 
 import { GlyphSet } from "./lib/svg-card/glyphs.mjs";
-import { nameplate, strip } from "./readme-art/banners.mjs";
+import { cover, nameplate, strip } from "./readme-art/banners.mjs";
 import { C, FONTS, slug } from "./readme-art/kit.mjs";
 import { pill } from "./readme-art/pills.mjs";
 
@@ -30,9 +30,19 @@ const NAMEPLATES = {
   footer: { h: 240, size: 124, plate: C.orange, ink: C.ink, field: C.ink, dot: C.ash },
 };
 
+// The logo's artwork, recoloured for the ink plate: the cover's signature.
+function mark() {
+  const src = fs.readFileSync(path.join(root, art.cover.mark.replace(/^\//, "")), "utf8");
+  const [, w, h] = src.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/);
+  const inner = src.replace(/^[\s\S]*?<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "").replace(/<!--[\s\S]*?-->/g, "").replace(/>\s+</g, "><").trim();
+  return { w: Number(w), h: Number(h), svg: inner.replace(/#fff(?:fff)?\b/gi, C.ash) };
+}
+
 const files = [];
 for (const [id, b] of Object.entries(art.banners)) {
-  const svg = NAMEPLATES[b.art]
+  const svg = b.art === "cover"
+    ? cover({ glyphs: glyphs(), lines: b.text.split(" / "), signature: art.cover.signature, mark: mark(), title: b.text.replace(" / ", " ") })
+    : NAMEPLATES[b.art]
     ? nameplate({ glyphs: glyphs(), text: b.text, title: b.text, ...NAMEPLATES[b.art] })
     : strip({ glyphs: glyphs(), text: b.text, motif: b.art });
   files.push([`${id}.svg`, svg]);

@@ -14,4 +14,6 @@ Cards read faces from each other's folders, so removing a folder can break anoth
 - The Caldera faces (Anton, DM Sans, JetBrains Mono) are read from `cv/fonts/`.
 - `tam-ai-ti/` is Inter 4.1 subset with the macron vowels; do not swap in `gavigo/`'s Inter.
 - The FemTech Weekend card uses the site's own system faces (Georgia, Segoe UI), read from the
-  operating system at build time and not kept in this repo.
+  operating system at build time and not kept in this repo. `femtech/` holds only its Chinese:
+  Noto Sans SC cut down to the characters the card draws, so a new Chinese character needs a
+  new subset (the builder's header says how).

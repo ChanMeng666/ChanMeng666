@@ -28,8 +28,8 @@ const brand = fs.existsSync(brandPath)
 
 // Files that are intentionally used outside the README pipeline. Add a path
 // here only for assets referenced OUTSIDE the rendered README — e.g. a GitHub
-// repo Settings → Social Preview image consumed via the GitHub UI. (The animated
-// hero public/github-cover.svg is embedded in the README, so the rendered-README
+// repo Settings → Social Preview image consumed via the GitHub UI. (The README's
+// own artwork in public/readme/ is embedded in the README, so the rendered-README
 // scan below already covers it.)
 const EXTERNAL_REFERENCES = new Set([
   // CV pipeline outputs (cv/build.ps1), consumed via raw URLs from the CV

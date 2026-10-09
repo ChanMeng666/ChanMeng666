@@ -1,8 +1,10 @@
 // echook card. echook is Chan's own open-source product: per-event sounds,
 // desktop toasts, webhooks and a status line for AI coding agents (Claude Code,
 // Cursor, Codex), set up by asking the agent. The card plays one terminal
-// session in which the product does those four things, then says what stands
-// behind it.
+// session, and beside it the notifications that session sets off: an event line
+// arrives in the terminal, its sound plays, a desktop toast and a phone
+// notification slide in; then a setting is changed by typing a sentence, and
+// the status line's quota and context bars fill through the product's bands.
 //
 // It is drawn in the product's own look, as its promo film (echook-promo-studio)
 // fixed it: a near-black terminal in JetBrains Mono, the brand green of the
@@ -18,17 +20,21 @@
 //   - the toast and the phone notification carry the title and body the
 //     product's runner builds (channels.toasts, channels.webhooks);
 //   - the command and its JSON result are the real CLI's (talk.steps);
+//   - the meters beside the status line repeat the figures and colours of the
+//     baked renders, and their two marks are the bands of the product README;
 //   - the session around them (repo, files, the agent's reply) is the film's
-//     demo session (demo.ts), and the captions are the film's cleared copy
-//     (copy.ts, docs/copy-clearance.md), including its honesty caption.
+//     demo session (demo.ts), and the panel's words are the film's cleared copy
+//     (copy.ts, docs/copy-clearance.md), including its honesty caption, which
+//     stays on the card once, under the terminal.
 // The film's constraints bind the card: `stop` is never said to mean the task is
 // done (C2), editors are plain words with no logos (C5), no speed or outcome
 // claim (C4), green stays an accent (C8).
 //
-// The closing figures are read from the product repo at build time (AGENTS.md,
-// its CI workflow, README) and from projects[echook].metrics, and the build
-// throws when a pattern stops matching or the film's bake and the product's
-// README disagree on a count.
+// The panel's three figures are the film's bake, and the build throws when the
+// bake and the product's README disagree on a count.
+//
+// The still frame is the first scene with all three channels up; everything
+// later in the loop carries opacity="0" and is shown only by its animation.
 //
 // The product and film checkouts are NOT in this repo (ECHOOK_INPUTS); where
 // either is absent the card is not rebuilt and the committed SVG stands.
@@ -52,8 +58,6 @@ export const ECHOOK_INPUTS = {
   demo: "../echook-promo-studio/src/replica/demo.ts",
   logo: "../claude-code-audio-hooks/public/echook-logo.svg",
   readme: "../claude-code-audio-hooks/README.md",
-  agents: "../claude-code-audio-hooks/AGENTS.md",
-  ci: "../claude-code-audio-hooks/.github/workflows/smoke.yml",
   licence: "../claude-code-audio-hooks/LICENSE",
 };
 
@@ -61,13 +65,11 @@ const need = (v, what) => {
   if (v === undefined || v === null || v === false) throw new Error(`echook card: ${what}`);
   return v;
 };
-const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 export function buildEchookCard({ glyphs, root, project }) {
   const read = (key) => readFileSync(`${root}/${ECHOOK_INPUTS[key]}`, "utf8");
   const baked = JSON.parse(read("baked"));
   const readme = read("readme");
-  const agents = read("agents");
 
   // ── The film's tokens, copy and demo session, quoted from its sources ──────
   const tokens = Object.fromEntries([...read("tokens").matchAll(/^\s+(\w+): "([^"]+)",/gm)].map((m) => [m[1], m[2]]));
@@ -112,46 +114,32 @@ export function buildEchookCard({ glyphs, root, project }) {
   const COLS = render("green").columns;
   const perm = toastOf("permission_request");
   const idle = toastOf("notification_idle_prompt");
-  const ntfy = need(baked.channels.webhooks.find((w) => w.event === "notification_idle_prompt" && w.format === "ntfy"), "no ntfy webhook");
-  const schema = need(baked.channels.webhooks.find((w) => w.format === "raw"), "no raw webhook").payload.schema;
+  const ntfyOf = (name) => need(baked.channels.webhooks.find((w) => w.event === name && w.format === "ntfy"), `no ntfy webhook for ${name}`);
   const talk = need(baked.talk.steps.find((s) => s.command === "audio-hooks snooze 1h"), "no snooze step");
   const talkJson = JSON.stringify(Object.fromEntries(Object.entries(talk.parsed).filter(([k]) => !talk.volatileFields.includes(k))));
 
-  // What a user can say, as the product's README lists it; the first is the one played.
-  const asks = need(readme.match(/\*"(mute audio for an hour)"\*, \*"(switch to chimes)"\*, \*"(watch my `\.env` file)"\*, \*"(put a context-usage bar in my status line)"\*/), "the product README no longer lists its example sentences").slice(1).map((s) => s.replace(/`/g, ""));
-  need(asks[0] === talk.said, "the README's first example is not the sentence the bake ran");
+  // The sentence typed in the terminal is the first example in the product's README.
+  const asked = need(readme.match(/in plain English: \*"([^"]+)"\*/),"the product README no longer lists its example sentences")[1];
+  need(asked === talk.said, "the README's first example is not the sentence the bake ran");
   // The README's context table: band, share of the window, what to do.
   const bands = ["Green", "Yellow", "Red"].map((name) => {
     const m = need(readme.match(new RegExp(`\\| \\S+ ${name} \\| ([^|]+) \\| [^|]+ \\| ([^|]+) \\|`)), `the product README has no ${name} context row`);
     return { used: m[1].trim(), action: m[2].trim().replace(/`/g, "") };
   });
-  const intro = need(readme.match(/\*\*(Audio and out-of-band notifications for Claude Code, Cursor IDE, and Codex CLI\.)\*\*<br\/>\s*(You configure it by talking to your agent) — (every setting is one sentence, not a JSON edit\.)/), "the product README's opening lines changed");
 
-  // ── What stands behind it ──────────────────────────────────────────────────
   need(/^MIT License/.test(read("licence").trim()), "the product is no longer MIT licensed");
-  need(/owns a distinct sound \(\d+ slots/.test(agents) && agents.includes("in both themes"), "AGENTS.md no longer states the one-sound-per-event rule");
-  const tests = need(agents.match(/\((\d+) tests;/), "AGENTS.md no longer states its test count")[1];
-  const ci = read("ci");
-  const osList = need(ci.match(/os: \[([^\]]+)\]/), "the CI workflow has no os matrix")[1].split(",").map((s) => s.trim().replace(/-latest$/, ""));
-  const pyList = [...need(ci.match(/python-version: \[([^\]]+)\]/), "the CI workflow has no python matrix")[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]);
-  const OS = { ubuntu: "Ubuntu", windows: "Windows", macos: "macOS" };
   const list = (a) => `${a.slice(0, -1).join(", ")} and ${a.at(-1)}`;
-  const metric = (name) => need(project.metrics.find((m) => m.label === name), `projects[echook] has no "${name}" metric`).value;
-  const stars = need(metric("GitHub stars").match(/^(\d+) \(measured (\d{4}-\d{2}-\d{2})/), "the stars metric changed shape");
-  const runtime = need(metric("Runtime").match(/^(Python [\d.]+\+) standard library only \(no third-party runtime deps\)/), "the runtime metric changed shape");
-  need(/Creator & Lead Developer/.test(readme), "the product README no longer names its creator");
-  const BEHIND = [
-    [String(counts.events), "HOOK EVENTS", [`${counts.variants} matcher variants beneath them.`, "Each owns a sound in both themes."]],
-    [`${osList.length} × ${pyList.length}`, "CI MATRIX", [`${list(osList.map((o) => need(OS[o], `unknown CI os ${o}`)))} on`, `Python ${list(pyList)}; ${tests} tests.`]],
-    ["0", "RUNTIME DEPENDENCIES", [`${runtime[1]} standard library only;`, "no third-party runtime packages."]],
-  ];
 
-  // ── Timeline ───────────────────────────────────────────────────────────────
-  const D = [8.6, 6.6, 7.6, 7.6];
-  const OUTRO = 7.0;
-  const at = D.map((_, i) => D.slice(0, i).reduce((a, b) => a + b, 0));
-  const outroAt = at[3] + D[3];
-  const T = outroAt + OUTRO;
+  // ── Timeline: four scenes on one terminal ──────────────────────────────────
+  // 1 a permission request on three channels · 2 the next event, its own sound ·
+  // 3 a setting changed by asking · 4 the status line through its bands
+  const A = { run: 0.6, ask: 1.0, sound: 1.1, toast: 1.7, phone: 2.4, wait: 4.4, sound2: 4.5, toast2: 4.9, phone2: 5.3, ok: 6.8 };
+  const tB = 8.4;
+  const B = { type: [0.7, 2.1], send: 2.4, ran: 2.9, json: 3.4, muted: 3.9, said: 4.5 };
+  const tC = 14.6;
+  const TURN = [0, 2.0, 4.2, 6.4];
+  const T = tC + TURN[3];
+  const SCENES = [[0, A.wait], [A.wait, tB], [tB, tC], [tC, T]];
   const p = (t) => pct(t, T, 3);
   const css = [];
   const made = new Map();
@@ -164,17 +152,25 @@ export function buildEchookCard({ glyphs, root, project }) {
     }
     return `class="${made.get(key)}"`;
   };
+  const STEP = ";animation-timing-function:step-end";
+  const fade = (a, b, f) => `0%${a > 0 ? `,${p(a)}` : ""}{opacity:0}${p(a + f)},${p(b - f)}{opacity:1}${p(b)},100%{opacity:0}`;
+  const hard = (a, b) => `0%{opacity:${a > 0 ? 0 : 1}}${a > 0 ? `${p(a)}{opacity:1}` : ""}${p(b)},100%{opacity:0}`;
+  // Part of the still frame: on(t) from t onward, held(a, b) between a and b, cutHeld the same with hard edges.
   const on = (t, f = 0.25) => kf(`0%,${p(t)}{opacity:0}${p(t + f)},100%{opacity:1}`);
-  const span = (a, b, f = 0.25) => `${kf(`0%,${p(a)}{opacity:0}${p(a + f)},${p(b - f)}{opacity:1}${p(b)},100%{opacity:0}`)} opacity="0"`;
-  // hard cut: shown exactly from a to b
-  const cut = (a, b) => `${kf(`0%{opacity:0}${p(a)}{opacity:1}${p(b)},100%{opacity:0}`, ";animation-timing-function:step-end")} opacity="0"`;
+  const held = (a, b, f = 0.25) => kf(fade(a, b, f));
+  const cutHeld = (a, b) => kf(hard(a, b), STEP);
+  // Absent from the still frame: the attribute hides what the animation shows.
+  const span = (a, b, f = 0.25) => `${kf(fade(a, b, f))} opacity="0"`;
+  const cut = (a, b) => `${kf(hard(a, b), STEP)} opacity="0"`;
+  // slides in from the right at a, leaves at b
+  const slide = (a, b) => kf(`0%,${p(a)}{opacity:0;transform:translateX(14px)}${p(a + 0.32)},${p(b - 0.3)}{opacity:1;transform:none}${p(b)},100%{opacity:0;transform:none}`);
   // one shared rule for every waveform bar: lit from its own moment (a negative delay) for LIT seconds
   const LIT = 8;
   css.push(`@keyframes wb{0%{opacity:1}${p(LIT)},100%{opacity:0}}.wb{animation:wb ${T}s step-end infinite}`);
 
   // ── Type ───────────────────────────────────────────────────────────────────
-  const F = 13, CW = F * 0.6, LH = 18, BASE = 13.3;
-  const mono = (s, x, y, fill, o = {}) => glyphs.text(s, { font: o.bold ? "monoBold" : "mono", size: o.size || F, x, y, fill, tracking: o.tracking || 0 });
+  const F = 14, CW = F * 0.6, LH = 18.5, BASE = 13.7;
+  const mono = (s, x, y, fill, o = {}) => glyphs.text(s, { font: o.bold ? "monoBold" : "mono", size: o.size || F, x, y, fill, tracking: o.tracking || 0, anchor: o.anchor });
   const voice = (s, x, y, fill, size, o = {}) => glyphs.text(s, { font: o.bold === false ? "voice" : "voiceBold", size, x, y, fill, anchor: o.anchor });
   const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" });
   const isWide = (g) => g.codePointAt(0) >= 0x1f000 || g.codePointAt(0) === 0x26a1 || g.includes("️");
@@ -193,13 +189,13 @@ export function buildEchookCard({ glyphs, root, project }) {
       for (const { segment: g } of segmenter.segment(s.text)) {
         if (g === "█" || g === "░") {
           flush();
-          parts.push(`<rect x="${(x + col * CW).toFixed(1)}" y="${top + 3.5}" width="${(CW + 0.4).toFixed(1)}" height="12" fill="${fill}"${g === "░" ? ' opacity=".55"' : ""}/>`);
+          parts.push(`<rect x="${(x + col * CW).toFixed(1)}" y="${top + 3.5}" width="${(CW + 0.4).toFixed(1)}" height="13" fill="${fill}"${g === "░" ? ' opacity=".55"' : ""}/>`);
           col += 1;
           runCol = col;
         } else if (isWide(g)) {
           flush();
           const ch = g.replace(/️/g, "");
-          const style = { font: "emoji", size: 11.4 };
+          const style = { font: "emoji", size: 12.2 };
           parts.push(glyphs.text(ch, { ...style, x: x + col * CW + (2 * CW - glyphs.measure(ch, style)) / 2, y: top + BASE - 0.6, fill }));
           col += 2;
           runCol = col;
@@ -218,19 +214,19 @@ export function buildEchookCard({ glyphs, root, project }) {
 
   // ── The terminal ───────────────────────────────────────────────────────────
   const X = CARD.panel;
-  const CAP = { x: X + 26, w: 254 };
-  const TERM = { x: X + 296, y: 12, w: 490, h: 336 };
+  const TERM = { x: X + 14, y: 10, w: 516, h: 324 };
+  const SIDE = { x: TERM.x + TERM.w + 14, y: TERM.y, w: CARD.w - 14 - (TERM.x + TERM.w + 14), h: TERM.h };
   const PAD = (TERM.w - COLS * CW) / 2;
   const TX = TERM.x + PAD;
-  const SES = { top: TERM.y + 28, rows: 5 };
-  const PROMPT = { y: SES.top + SES.rows * LH + 5, h: 24 };
-  const STATUS = { top: PROMPT.y + PROMPT.h + 7 };
+  const SES = { top: TERM.y + 27, rows: 4 };
+  const PROMPT = { y: SES.top + SES.rows * LH + 4, h: 24 };
+  const STATUS = { top: PROMPT.y + PROMPT.h + 6 };
   const defs = [
     `<clipPath id="ses"><rect x="${TERM.x}" y="${SES.top}" width="${TERM.w}" height="${SES.rows * LH}"/></clipPath>`,
     `<clipPath id="pr"><rect x="${TX}" y="${PROMPT.y + 1}" width="${TERM.w - 2 * PAD}" height="${PROMPT.h - 2}"/></clipPath>`,
   ];
-  const dot = (y, color, hollow) => `<circle cx="${TX + 4}" cy="${y - 4.4}" r="${hollow ? 2.4 : 3}" ${hollow ? `fill="none" stroke="${color}" stroke-width="1.3"` : `fill="${color}"`}/>`;
-  const IND = 15;
+  const dot = (y, color, hollow) => `<circle cx="${TX + 4}" cy="${y - 4.8}" r="${hollow ? 2.6 : 3.2}" ${hollow ? `fill="none" stroke="${color}" stroke-width="1.3"` : `fill="${color}"`}/>`;
+  const IND = 16;
   const VERB = { read: C.dim, edit: WARN, write: ADD, run: RUN };
   const line = {
     user: (t) => (y) => mono("›", TX, y, C.green, { bold: true }) + mono(t, TX + 2 * CW, y, C.user, { bold: true }),
@@ -248,7 +244,7 @@ export function buildEchookCard({ glyphs, root, project }) {
   const reply = toastOf("stop").stdin.last_assistant_message;
   const replyAt = reply.lastIndexOf(" ", COLS);
   const cmd = talk.command;
-  // the whole session, top to bottom; scenes show a five-row window of it
+  // the whole session, top to bottom; scenes show a four-row window of it
   const SESSION = [
     line.user(fits(demo("request"), 2 * CW)),
     ...edits.map((t) => line.tool(t)),
@@ -263,20 +259,21 @@ export function buildEchookCard({ glyphs, root, project }) {
     line.json(fits(talkJson, IND)),
     line.agent(demo("mutedReply")),
   ];
-  // Rows [first, first+5) are up when the scene opens; `arrivals` are the times later rows come in.
-  const session = (t0, first, arrivals, hush = false) => {
+  // Rows [first, first+4) are up when the stretch opens; `arrivals` are the loop times later rows
+  // come in. `rest` is how many arrivals the still frame has taken.
+  const session = (first, arrivals, rest = arrivals.length) => {
     const rows = [];
     for (let i = first; i < first + SES.rows + arrivals.length; i++) {
       const y = SES.top + (i - first) * LH + BASE;
       const k = i - first - SES.rows;
-      rows.push(k < 0 ? SESSION[i](y) : `<g ${on(t0 + arrivals[k], 0.18)}>${SESSION[i](y)}</g>`);
+      rows.push(k < 0 ? SESSION[i](y) : `<g ${on(arrivals[k], 0.18)}${k >= rest ? ' opacity="0"' : ""}>${SESSION[i](y)}</g>`);
     }
-    const steps = arrivals.map((a, k) => `${p(t0 + a)}{transform:translateY(${-k * LH}px)}${p(t0 + a + 0.16)}{transform:translateY(${-(k + 1) * LH}px)}`).join("");
+    const steps = arrivals.map((a, k) => `${p(a)}{transform:translateY(${-k * LH}px)}${p(a + 0.16)}{transform:translateY(${-(k + 1) * LH}px)}`).join("");
     const scroll = arrivals.length ? ` ${kf(`0%{transform:none}${steps}100%{transform:translateY(${-arrivals.length * LH}px)}`)}` : "";
-    return `<g clip-path="url(#ses)"${hush ? ' opacity=".28"' : ""}><g${scroll}>${rows.join("")}</g></g>`;
+    return `<g clip-path="url(#ses)"><g${scroll}${rest ? ` transform="translate(0 ${-rest * LH})"` : ""}>${rows.join("")}</g></g>`;
   };
-  // The status line: `states` are [state, from, to] in loop seconds. A row that is the same in
-  // consecutive states is drawn once.
+  // The status line: `states` are [state, from, to] in loop seconds, the first of them the still
+  // frame's. A row that is the same in consecutive states is drawn once.
   const status = (states) => {
     const out = [];
     const rowsOf = states.map(([s]) => render(s).rows);
@@ -288,36 +285,70 @@ export function buildEchookCard({ glyphs, root, project }) {
         while (b + 1 < states.length && JSON.stringify(rowsOf[b + 1][i] || null) === key) b++;
         if (rowsOf[a][i]) {
           const body = statusRow(rowsOf[a][i], TX, STATUS.top + i * LH);
-          out.push(a === 0 && b === states.length - 1 ? body : `<g ${cut(states[a][1], states[b][2])}>${body}</g>`);
+          out.push(a === 0 && b === states.length - 1 ? body : `<g ${a === 0 ? cutHeld(states[a][1], states[b][2]) : cut(states[a][1], states[b][2])}>${body}</g>`);
         }
         a = b + 1;
       }
     }
     return out.join("");
   };
-  const terminal = ({ body, prompt = "" }) =>
+  const caret = `<rect x="${TX + 2 * CW}" y="${PROMPT.y + 5}" width="7.5" height="14.5" fill="${C.user}" opacity=".9"/>`;
+
+  // 1, 2 ── an event line arrives; 3 ── a sentence is typed and run; 4 ── the session rests
+  const sessions =
+    `<g ${held(0, tB, 0.3)}>${session(0, [A.run, A.ask, A.wait, A.ok], 2)}</g>` +
+    `<g ${span(tB, tC, 0.3)}>${session(6, [B.send, B.ran, B.json, B.said].map((t) => tB + t))}</g>` +
+    `<g ${span(tC, T, 0.3)}><g opacity=".28">${session(10, [])}</g></g>`;
+  const tw = talk.said.length * CW;
+  const typed = [tB + B.type[0] - 0.4, tB + B.send];
+  const prompt =
+    `<g clip-path="url(#pr)"><g ${span(typed[0], typed[1], 0.05)}>${mono(talk.said, TX + 2 * CW, PROMPT.y + 17, C.user)}` +
+    `<g ${kf(`0%,${p(tB + B.type[0])}{transform:none;animation-timing-function:steps(${talk.said.length},end)}${p(tB + B.type[1])},100%{transform:translateX(${tw.toFixed(1)}px)}`)}>` +
+    `<rect x="${TX + 2 * CW}" y="${PROMPT.y + 2}" width="${tw + 12}" height="${PROMPT.h - 4}" fill="${C.bg}"/>${caret}</g></g></g>` +
+    `<g ${kf(`0%{opacity:1}${p(typed[0])}{opacity:0}${p(typed[1])},100%{opacity:1}`, STEP)}>${caret}</g>`;
+  // the row the mute lands on is marked for a moment
+  const mutedRow = render("snooze").rows.findIndex((r) => r.some((s) => s.text.includes("MUTED")));
+  const mutedTag = need(render("snooze").rows[mutedRow]?.find((s) => s.text.includes("MUTED")), "the snooze render has no MUTED segment");
+  const tMute = tB + B.muted;
+  const flash = `<rect ${span(tMute, tMute + 1.6, 0.2)} x="${TX - 5}" y="${STATUS.top + mutedRow * LH + 1}" width="${mutedTag.text.length * CW + 10}" height="${LH - 1}" rx="3" fill="none" stroke="${mutedTag.fg}"/>`;
+  // the quota and context rows are framed; the frame follows the context row down when the line reflows
+  const BANDS = ["green", "yellow", "red"];
+  const rowWith = (s, what) => need(render(s).rows.find((r) => r.some((x) => x.text.includes(what))), `the ${s} render has no "${what}" row`);
+  const frames = BANDS.map((s, n) => {
+    const rows = render(s).rows;
+    const a = rows.indexOf(rowWith(s, "API Quota:")), b = rows.indexOf(rowWith(s, "Context:"));
+    need(b >= a, `the ${s} render lost the order of its quota and context rows`);
+    const c = rowWith(s, "Context:")[0].fg;
+    return `<rect ${cut(tC + TURN[n], tC + TURN[n + 1])} x="${TX - 6}" y="${STATUS.top + a * LH - 1}" width="${TERM.w - 2 * PAD + 12}" height="${(b - a + 1) * LH + 3}" rx="4" fill="${c}" fill-opacity=".07" stroke="${c}" stroke-opacity=".7"/>`;
+  });
+  const statusLine = status([
+    ["green", 0, tMute], ["snooze", tMute, tC],
+    ...BANDS.map((s, n) => [s, tC + TURN[n], tC + TURN[n + 1]]),
+  ]);
+  const terminal =
     `<rect x="${TERM.x}" y="${TERM.y}" width="${TERM.w}" height="${TERM.h}" rx="9" fill="${C.bg}"/>` +
     `<path d="M${TERM.x} ${TERM.y + 22}V${TERM.y + 9}a9 9 0 0 1 9-9H${TERM.x + TERM.w - 9}a9 9 0 0 1 9 9V${TERM.y + 22}Z" fill="${C.bar}"/>` +
     `<path d="M${TERM.x} ${TERM.y + 22.5}H${TERM.x + TERM.w}" stroke="${C.line}"/>` +
     [0, 1, 2].map((i) => `<circle cx="${TERM.x + 16 + i * 12}" cy="${TERM.y + 11.5}" r="3.2" fill="${C.faint}"/>`).join("") +
-    glyphs.text(demo("title"), { font: "mono", size: 10.5, x: TERM.x + TERM.w / 2, y: TERM.y + 15.5, fill: C.dim, anchor: "middle" }) +
-    body +
+    glyphs.text(demo("title"), { font: "mono", size: 11, x: TERM.x + TERM.w / 2, y: TERM.y + 15.5, fill: C.dim, anchor: "middle" }) +
+    sessions + frames.join("") + statusLine + flash +
     `<rect x="${TX - 7.5}" y="${PROMPT.y + 0.5}" width="${TERM.w - 2 * PAD + 15}" height="${PROMPT.h - 1}" rx="5" fill="none" stroke="${C.line}"/>` +
-    mono("›", TX, PROMPT.y + 16.8, C.green, { bold: true }) + prompt +
+    mono("›", TX, PROMPT.y + 17, C.green, { bold: true }) + prompt +
     `<rect x="${TERM.x + 0.5}" y="${TERM.y + 0.5}" width="${TERM.w - 1}" height="${TERM.h - 1}" rx="8.5" fill="none" stroke="${C.line}"/>`;
-  const caret = (extra = "") => `<rect x="${TX + 2 * CW}" y="${PROMPT.y + 5.5}" width="7" height="13.5" fill="${C.user}" opacity=".9"${extra}/>`;
 
-  // ── Film furniture: the sound chip, the toast, the phone ───────────────────
-  const waveform = (peaks, n, x, y, w, h, fireAt, playSec) => {
+  // ── Beside it: the sound, the toast, the phone ─────────────────────────────
+  const SX = SIDE.x, SW = SIDE.w;
+  const CHIP = { y: SIDE.y, h: 100 }, TOAST = { y: SIDE.y + 112, h: 86 }, PHONE = { y: SIDE.y + 210, h: SIDE.h - 210 };
+  const waveform = (peaks, n, x, y, w, h, fireAt, playSec, lit = 0) => {
     const bars = Array.from({ length: n }, (_, i) => Math.max(0.06, ...peaks.slice(Math.floor((i * peaks.length) / n), Math.floor(((i + 1) * peaks.length) / n))));
     const step = w / n;
     const bar = (v, i, extra) => `<rect x="${(x + i * step).toFixed(1)}" y="${(y + (h * (1 - v)) / 2).toFixed(1)}" width="${(step * 0.66).toFixed(1)}" height="${Math.max(1.5, h * v).toFixed(1)}"${extra}/>`;
     return `<g fill="#3a4252">${bars.map((v, i) => bar(v, i, "")).join("")}</g>` +
-      `<g fill="${C.green}">${bars.map((v, i) => bar(v, i, ` class="wb" opacity="0" style="animation-delay:${(fireAt + (i / n) * playSec - T).toFixed(2)}s"`)).join("")}</g>`;
+      (fireAt === null ? "" : `<g fill="${C.green}">${bars.map((v, i) => bar(v, i, ` class="wb"${i < lit * n ? "" : ' opacity="0"'} style="animation-delay:${(fireAt + (i / n) * playSec - T).toFixed(2)}s"`)).join("")}</g>`);
   };
-  const speaker = (cx, cy, r) => {
+  const speaker = (cx, cy, r, color = C.green) => {
     const u = (2 * r) / 44, ox = cx - r, oy = cy - r;
-    return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${C.green}"/>` +
+    return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}"/>` +
       `<rect x="${ox + 13 * u}" y="${oy + 15 * u}" width="${8 * u}" height="${14 * u}" rx="${1.5 * u}" fill="${C.chip}"/>` +
       `<path d="M${ox + 17 * u} ${oy + 18.7 * u}L${ox + 31 * u} ${oy + 11 * u}V${oy + 33 * u}L${ox + 17 * u} ${oy + 25.3 * u}Z" fill="${C.chip}"/>`;
   };
@@ -327,234 +358,151 @@ export function buildEchookCard({ glyphs, root, project }) {
     `<rect x="${x + s * 0.22}" y="${y + s * 0.62}" width="${s * 0.56}" height="${s * 0.08}" rx="${s * 0.04}" fill="${ink}"/>` +
     `<rect x="${x + s * 0.44}" y="${y + s * 0.73}" width="${s * 0.12}" height="${s * 0.08}" rx="${s * 0.04}" fill="${ink}"/>`;
   const quoted = (s) => `“${s}”`;
-  const fileLine = (s) => `${s.file} · ${s.durationSec.toFixed(1)} s`;
-  // the caption-column chip: event, what the voice file says, the file's own waveform, the file
-  const chip = (name, y, fireAt, until) => {
-    const s = soundOf(name), x = CAP.x, w = CAP.w, h = 104;
-    const play = Math.min(s.durationSec, until - fireAt - 0.3);
-    return `<g ${span(fireAt, until, 0.2)}>` +
-      `<rect x="${x + 0.5}" y="${y + 0.5}" width="${w - 1}" height="${h - 1}" rx="10" fill="${C.chip}" stroke="${C.chipLine}"/>` +
-      `<rect ${span(fireAt, fireAt + play + 0.3, 0.15)} x="${x + 0.75}" y="${y + 0.75}" width="${w - 1.5}" height="${h - 1.5}" rx="10" fill="none" stroke="${C.greenLine}" stroke-width="1.5"/>` +
-      speaker(x + 22, y + 21, 9) + mono(name, x + 38, y + 25.5, C.green, { size: 12 }) +
-      voice(quoted(s.e.voiceText), x + 14, y + 52, C.white, 17.5) +
-      waveform(s.peaks, 30, x + 14, y + 61, w - 28, 20, fireAt, play) +
-      mono(fileLine(s), x + 14, y + 96, "#8791a3", { size: 10.5 }) + "</g>";
+  const slot = (y, h) => `<rect x="${SX + 0.75}" y="${y + 0.75}" width="${SW - 1.5}" height="${h - 1.5}" rx="10" fill="none" stroke="${C.faint}" stroke-opacity=".7" stroke-width="1.2" stroke-dasharray="4 5"/>`;
+  const chipPlate = (stroke) => `<rect x="${SX + 0.5}" y="${CHIP.y + 0.5}" width="${SW - 1}" height="${CHIP.h - 1}" rx="10" fill="${C.chip}" stroke="${stroke}"/>`;
+  // the sound: event, what the voice file says, the file's own waveform, the file
+  const chip = (name, fireAt, playFor, lit) => {
+    const s = soundOf(name), y = CHIP.y;
+    const play = Math.min(s.durationSec, playFor);
+    return chipPlate(C.chipLine) +
+      `<rect ${span(fireAt, fireAt + play + 0.4, 0.15)} x="${SX + 0.75}" y="${y + 0.75}" width="${SW - 1.5}" height="${CHIP.h - 1.5}" rx="10" fill="none" stroke="${C.greenLine}" stroke-width="1.5"/>` +
+      speaker(SX + 23, y + 22, 9.5) + mono(name, SX + 40, y + 26.5, C.green, { size: 11.5 }) +
+      voice(quoted(s.e.voiceText), SX + 14, y + 54, C.white, 17.5) +
+      waveform(s.peaks, 30, SX + 14, y + 62, SW - 28, 18, fireAt, play, lit) +
+      mono(`${s.file} · ${s.durationSec.toFixed(1)} s`, SX + 14, y + 92, "#8791a3", { size: 10 });
   };
+  // the same chip once the snooze has landed: the status line's own tag, the command, its result
+  const mutedChip = (() => {
+    const y = CHIP.y, tone = mutedTag.fg;
+    need(talk.parsed.active === true && Number.isInteger(talk.parsed.remaining_seconds), "the snooze result changed shape");
+    return chipPlate(tone) + speaker(SX + 23, y + 22, 9.5, tone) +
+      `<path d="M${SX + 15.5} ${y + 29.5}L${SX + 30.5} ${y + 14.5}" stroke="${C.chip}" stroke-width="4.2"/><path d="M${SX + 15.5} ${y + 29.5}L${SX + 30.5} ${y + 14.5}" stroke="${tone}" stroke-width="1.8" stroke-linecap="round"/>` +
+      mono(mutedTag.text, SX + 40, y + 26.5, tone, { size: 12, bold: true }) +
+      mono(cmd, SX + 14, y + 53, C.white, { size: 13.5, bold: true }) +
+      waveform([0], 30, SX + 14, y + 62, SW - 28, 18, null) +
+      mono(`remaining_seconds: ${talk.parsed.remaining_seconds}`, SX + 14, y + 92, "#8791a3", { size: 10 });
+  })();
+  const bodyLines = (text, style, width, what) => {
+    const lines = wrap(glyphs, text, style, width);
+    need(lines.length <= 2, `${what} "${text}" no longer fits two lines`);
+    return lines;
+  };
+  // the desktop toast: the title and body the product's runner builds
+  const toastText = (t) =>
+    voice(t.title, SX + 58, TOAST.y + 31, C.white, 14.5) +
+    bodyLines(t.body, { font: "voice", size: 12 }, SW - 58 - 12, "the toast body").map((l, n) => voice(l, SX + 58, TOAST.y + 51 + n * 16, "#c3c9d4", 12, { bold: false })).join("");
+  // the phone: a lock screen with the ntfy webhook's title and message
+  const NOTE = { x: SX + 8, y: PHONE.y + 40, w: SW - 16, h: PHONE.h - 48 };
+  const noteText = (w) =>
+    voice(w.headers.Title, NOTE.x + 34, NOTE.y + 20, "#15171c", 13) +
+    bodyLines(String(w.payload), { font: "voice", size: 11.5 }, NOTE.w - 24, "the phone message").map((l, n) => voice(l, NOTE.x + 12, NOTE.y + 39 + n * 15, "#2a2d35", 11.5, { bold: false })).join("");
+  defs.push(`<linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a5c"/><stop offset=".5" stop-color="#4b3a6e"/><stop offset="1" stop-color="#b0694a"/></linearGradient>`);
+  const leave = tB + 0.4;
+  const swap = (t, first, second) => `<g ${kf(`0%,${p(t)}{opacity:1}${p(t + 0.2)},100%{opacity:0}`)}>${first}</g><g ${span(t, leave + 0.1, 0.2)}>${second}</g>`;
+  const channels =
+    slot(CHIP.y, CHIP.h) + slot(TOAST.y, TOAST.h) +
+    `<g ${slide(A.sound, A.sound2 + 0.1)}>${chip("permission_request", A.sound, 2.8, 0.6)}</g>` +
+    `<g ${span(A.sound2, tMute + 0.1, 0.15)}>${chip("notification_idle_prompt", A.sound2, 2)}</g>` +
+    `<g ${span(tMute, tC + 0.3, 0.15)}>${mutedChip}</g>` +
+    `<g ${slide(A.toast, leave)}>` +
+    `<rect x="${SX + 0.5}" y="${TOAST.y + 0.5}" width="${SW - 1}" height="${TOAST.h - 1}" rx="10" fill="#20242d" stroke="#3a4150"/>` +
+    bell(SX + 14, TOAST.y + 16, 32, C.green, C.bg) + swap(A.toast2, toastText(perm), toastText(idle)) + "</g>" +
+    `<rect x="${SX + 1}" y="${PHONE.y + 1}" width="${SW - 2}" height="${PHONE.h - 2}" rx="15" fill="url(#ph)" stroke="#2c313c" stroke-width="2"/>` +
+    voice(demo("phoneClock"), SX + 16, PHONE.y + 29, C.white, 22) +
+    `<g opacity=".82">${voice(demo("phoneDay"), SX + SW - 16, PHONE.y + 27, C.white, 11, { bold: false, anchor: "end" })}</g>` +
+    `<g ${slide(A.phone, leave)}>` +
+    `<rect x="${NOTE.x}" y="${NOTE.y}" width="${NOTE.w}" height="${NOTE.h}" rx="10" fill="#f6f4ee" fill-opacity=".96"/>` +
+    bell(NOTE.x + 12, NOTE.y + 8, 16, "#11141a", C.green) + swap(A.phone2, noteText(ntfyOf("permission_request")), noteText(ntfyOf("notification_idle_prompt"))) + "</g>";
 
-  // ── Captions ───────────────────────────────────────────────────────────────
-  const total = D.length + 1;
-  const counter = (i, fill = C.dim) => mono(`0${i + 1} / 0${total}`, CAP.x, 40, fill, { size: 9.5, tracking: 0.12 });
-  const TITLE = { size: 24, lh: 28, y: 76 };
-  const title = (text) => {
-    const lines = wrap(glyphs, text, { font: "voiceBold", size: TITLE.size }, CAP.w);
-    return { svg: lines.map((l, n) => voice(l, CAP.x, TITLE.y + n * TITLE.lh, C.white, TITLE.size)).join(""), end: TITLE.y + (lines.length - 1) * TITLE.lh };
-  };
-  const honestyLines = [`${honesty[0]} ·`, `${honesty[1]} · ${honesty[2]}`];
-  const honestySvg = honestyLines.map((l, n) => {
-    need(glyphs.measure(l, { font: "mono", size: 9.5 }) <= CAP.w, "the honesty caption does not fit its column");
-    return mono(l, CAP.x, 325 + n * 14, C.dim, { size: 9.5 });
+  // ── Beside it in the last scene: the status line's three meters, enlarged ──
+  // Figures and colours are those of the baked renders; the two marks are the README's bands.
+  const edges = need(bands[1].used.match(/^(\d+)–(\d+)%$/), "the README's yellow band is no longer a range").slice(1).map(Number);
+  need(bands[0].used === `< ${edges[0]}%` && bands[2].used === `> ${edges[1]}%`, "the README's context bands no longer meet at the same two values");
+  const METERS = ["API Quota", "Weekly", "Context"].map((lab) => ({
+    lab,
+    states: BANDS.map((s) => {
+      const row = rowWith(s, `${lab}:`), text = row.map((x) => x.text).join("");
+      const value = Number(need(text.match(new RegExp(`${lab}: (\\d+)%`)), `the ${s} render has no ${lab} figure`)[1]);
+      const detail = need(text.match(/· (resets [\w ]*\w)/) || text.match(/\((\w+\/\w+)\)/), `the ${s} render has no ${lab} detail`)[1];
+      return { value, detail, color: need(row[0].fg, `the ${s} ${lab} bar has no colour`) };
+    }),
+  }));
+  METERS[2].states.forEach((m, n) => need(n === 0 ? m.value < edges[0] : n === 1 ? m.value >= edges[0] && m.value <= edges[1] : m.value > edges[1], `the ${BANDS[n]} render's context figure is outside the README's ${BANDS[n]} band`));
+  const meters = (() => {
+    const out = [`<rect x="${SX + 0.5}" y="${SIDE.y + 0.5}" width="${SW - 1}" height="${SIDE.h - 1}" rx="10" fill="${C.chip}" stroke="${C.chipLine}"/>`];
+    const bx = SX + 16, bw = SW - 32;
+    const win = (n) => [tC + TURN[n], n === 2 ? T : tC + TURN[n + 1]];
+    METERS.forEach(({ lab, states }, i) => {
+      const top = SIDE.y + 16 + i * 88;
+      const grow = states.map((m, n) => `${p(tC + TURN[n] + (n ? 0 : 0.2))}{transform:scaleX(${n ? states[n - 1].value / 100 : 0})}${p(tC + TURN[n] + 0.7)}{transform:scaleX(${m.value / 100})}`).join("");
+      out.push(
+        mono(lab.toUpperCase(), bx, top + 11, C.dim, { size: 10.5, tracking: 0.14 }),
+        ...states.map((m, n) => `<g ${cut(...win(n))}>${voice(`${m.value}%`, bx, top + 44, m.color, 30)}</g>`),
+        ...states.map((m, n) => (n && states[n - 1].detail === m.detail ? "" : `<g ${cut(win(n)[0], win(states.findLastIndex((o) => o.detail === m.detail))[1])}>${mono(m.detail, bx + bw, top + 43, C.fg, { size: 11, anchor: "end" })}</g>`)),
+        `<rect x="${bx}" y="${top + 54}" width="${bw}" height="9" fill="${C.line}"/>`,
+        `<g ${kf(`0%{transform:scaleX(0)}${grow}100%{transform:scaleX(${states[2].value / 100})}`, ";transform-box:fill-box;transform-origin:0 50%")}>` +
+          states.map((m, n) => `<rect ${cut(...win(n))} x="${bx}" y="${top + 54}" width="${bw}" height="9" fill="${m.color}"/>`).join("") + "</g>",
+      );
+      if (lab !== "Context") return;
+      edges.forEach((e) => {
+        const x = bx + (bw * e) / 100;
+        out.push(`<path d="M${x} ${top + 50}V${top + 67}" stroke="${C.white}" stroke-width="1.2"/>`, mono(`${e}%`, x, top + 80, C.dim, { size: 10, anchor: "middle" }));
+      });
+      states.forEach((m, n) => {
+        need(26 + glyphs.measure(bands[n].action, { font: "voiceBold", size: 13.5 }) <= bw, `"${bands[n].action}" does not fit the meter`);
+        out.push(`<g ${cut(...win(n))}><rect x="${bx}" y="${top + 95}" width="11" height="11" fill="${m.color}"/>${voice(bands[n].action, bx + 19, top + 105, C.white, 13.5)}</g>`);
+      });
+    });
+    return `<g ${span(tC, T, 0.3)}>${out.join("")}</g>`;
+  })();
+
+  // ── Under the stage: the honesty caption, once, and one tick per scene ─────
+  const caption = honesty.join(" · ");
+  need(glyphs.measure(caption, { font: "mono", size: 10 }) <= TERM.w - 4, "the honesty caption does not fit under the terminal");
+  const TICK = { w: 22, gap: 6, y: 344.5 };
+  const ticks = SCENES.map(([a, b], i) => {
+    const x = SX + SW - (SCENES.length - i) * (TICK.w + TICK.gap) + TICK.gap;
+    return `<rect x="${x}" y="${TICK.y}" width="${TICK.w}" height="3" rx="1.5" fill="${C.faint}"/><rect ${i ? cut(a, b) : cutHeld(a, b)} x="${x}" y="${TICK.y}" width="${TICK.w}" height="3" rx="1.5" fill="${C.green}"/>`;
   }).join("");
-  const scene = (i, parts) => {
-    const a = at[i], b = a + D[i];
-    const cls = kf(`0%,${p(a)}{opacity:0}${p(a + 0.35)},${p(b - 0.35)}{opacity:1}${p(b)},100%{opacity:0}`);
-    return `<g ${cls} opacity="0">${counter(i)}${parts.join("")}${honestySvg}</g>`;
-  };
-
-  // 1 ── Every event has its own sound ────────────────────────────────────────
-  const s1 = (() => {
-    const t0 = at[0];
-    const fire = { ask: 0.9, wait: 3.7, ok: 4.9, reply: 5.2, stop: 6.3 };
-    const t = title(copy("events"));
-    const chipY = t.end + 20;
-    const countLine = [`${counts.events} ${words.events}`, `${counts.variants} ${words.variants}`, `${counts.defaultOnEvents} ${words.onByDefault}`].join(" · ");
-    const countStyle = { font: "voice", size: 13 };
-    need(glyphs.measure(countLine, countStyle) <= CAP.w, "the count line does not fit its column");
-    return scene(0, [
-      t.svg,
-      chip("permission_request", chipY, t0 + fire.ask, t0 + fire.wait - 0.1),
-      chip("notification_idle_prompt", chipY, t0 + fire.wait, t0 + fire.stop - 0.1),
-      chip("stop", chipY, t0 + fire.stop, t0 + D[0]),
-      voice(countLine, CAP.x, chipY + 104 + 26, C.fg, 13, { bold: false }),
-      terminal({
-        body: session(t0, 0, [fire.ask, fire.wait, fire.ok, fire.reply, fire.reply + 0.12]) + status([["green", t0, t0 + D[0]]]),
-        prompt: caret(),
-      }),
-    ]);
-  })();
-
-  // 2 ── At your desk. In another window. On your phone. ──────────────────────
-  const s2 = (() => {
-    const t0 = at[1];
-    const PX = TERM.x, PW = TERM.w, PH = 98, GAP = 12, PY = 21;
-    const arrive = [0.5, 2.2, 3.9];
-    const caps = [copy("channelDesk"), copy("channelWindow"), copy("channelPhone")];
-    const rowY = (n) => PY + n * (PH + GAP);
-    const out = caps.map((c, n) =>
-      `<g opacity=".34">${voice(c, CAP.x, rowY(n) + PH / 2 + 2, C.white, 23)}</g>` +
-      `<g ${on(t0 + arrive[n], 0.3)}>${voice(c, CAP.x, rowY(n) + PH / 2 + 2, C.white, 23)}<rect x="${CAP.x}" y="${rowY(n) + PH / 2 + 13}" width="30" height="3" fill="${C.green}"/></g>`);
-    const slide = (n) => kf(`0%,${p(t0 + arrive[n])}{opacity:0;transform:translateX(14px)}${p(t0 + arrive[n] + 0.32)},100%{opacity:1;transform:none}`);
-    // the sound, at the desk
-    const s = soundOf("permission_request");
-    const y0 = rowY(0);
-    out.push(`<g ${slide(0)}>` +
-      `<rect x="${PX + 0.5}" y="${y0 + 0.5}" width="${PW - 1}" height="${PH - 1}" rx="12" fill="${C.chip}" stroke="${C.greenLine}" stroke-width="1.2"/>` +
-      speaker(PX + 40, y0 + PH / 2, 20) +
-      mono(s.e.name, PX + 76, y0 + 30, C.green, { size: 12.5 }) + voice(quoted(s.e.voiceText), PX + 76, y0 + 56, C.white, 20) + mono(fileLine(s), PX + 76, y0 + 78, "#8791a3", { size: 11 }) +
-      waveform(s.peaks, 30, PX + PW - 152, y0 + 24, 132, 50, t0 + arrive[0] + 0.3, Math.min(s.durationSec, 3)) + "</g>");
-    // the toast, in another window
-    const y1 = rowY(1);
-    out.push(`<g ${slide(1)}>` +
-      `<rect x="${PX + 0.5}" y="${y1 + 0.5}" width="${PW - 1}" height="${PH - 1}" rx="12" fill="#20242d" stroke="#3a4150"/>` +
-      bell(PX + 20, y1 + PH / 2 - 21, 42, C.green, C.bg) +
-      voice(perm.title, PX + 78, y1 + 43, C.white, 18) + voice(perm.body, PX + 78, y1 + 67, "#c3c9d4", 15, { bold: false }) + "</g>");
-    // the webhook, on a phone
-    const y2 = rowY(2);
-    defs.push(`<linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2a5c"/><stop offset=".5" stop-color="#4b3a6e"/><stop offset="1" stop-color="#b0694a"/></linearGradient>`);
-    out.push(`<g ${slide(2)}>` +
-      `<rect x="${PX + 0.5}" y="${y2 + 0.5}" width="${PW - 1}" height="${PH - 1}" rx="12" fill="url(#ph)" stroke="#2c313c"/>` +
-      voice(demo("phoneClock"), PX + 62, y2 + 62, C.white, 36, { anchor: "middle" }) +
-      `<rect x="${PX + 126}" y="${y2 + 12}" width="${PW - 140}" height="${PH - 24}" rx="10" fill="#f6f4ee" fill-opacity=".95"/>` +
-      bell(PX + 138, y2 + 21, 17, "#11141a", C.green) +
-      voice(ntfy.headers.Title, PX + 162, y2 + 34.5, "#15171c", 14.5) + voice(String(ntfy.payload), PX + 138, y2 + 56, "#2a2d35", 14, { bold: false }) +
-      mono(schema, PX + 138, y2 + 75, "#6c7280", { size: 10 }) + "</g>");
-    const a = at[1], b = a + D[1];
-    return `<g ${kf(`0%,${p(a)}{opacity:0}${p(a + 0.35)},${p(b - 0.35)}{opacity:1}${p(b)},100%{opacity:0}`)} opacity="0">${counter(1)}${out.join("")}${honestySvg}</g>`;
-  })();
-
-  // 3 ── Set it up by asking your agent ───────────────────────────────────────
-  const s3 = (() => {
-    const t0 = at[2];
-    const type = [0.7, 2.1], send = 2.4, ran = 3.0, json = 3.6, muted = 4.2, said = 4.8;
-    const t = title(copy("talk"));
-    const askStyle = { font: "voice", size: 14 };
-    let y = t.end + 36;
-    const list = asks.map((a, n) => {
-      const lines = wrap(glyphs, quoted(a), askStyle, CAP.w - 16);
-      const svg = lines.map((l, k) => voice(l, CAP.x + 16, y + k * 19, n ? C.dim : C.white, 14, { bold: false })).join("") +
-        `<rect x="${CAP.x}" y="${y - 10}" width="3" height="${lines.length * 19 - 5}" fill="${n ? C.faint : C.green}"/>`;
-      y += lines.length * 19 + 9;
-      return svg;
-    });
-    need(y < 312, "the example sentences run into the honesty caption");
-    const tw = talk.said.length * CW;
-    const typing = `<g clip-path="url(#pr)"><g ${span(t0 + type[0] - 0.4, t0 + send, 0.05)}>${mono(talk.said, TX + 2 * CW, PROMPT.y + 16.8, C.user)}` +
-      `<g ${kf(`0%,${p(t0 + type[0])}{transform:none;animation-timing-function:steps(${talk.said.length},end)}${p(t0 + type[1])},100%{transform:translateX(${tw.toFixed(1)}px)}`)}>` +
-      `<rect x="${TX + 2 * CW}" y="${PROMPT.y + 2}" width="${tw + 12}" height="${PROMPT.h - 4}" fill="${C.bg}"/>${caret()}</g></g></g>` +
-      `<g ${cut(t0, t0 + type[0] - 0.35)}>${caret()}</g><g ${on(t0 + send, 0.05)}>${caret()}</g>`;
-    // the row the mute lands on is marked for a moment
-    const mutedRow = render("snooze").rows.findIndex((r) => r.some((s) => s.text.includes("MUTED")));
-    need(mutedRow >= 0, "the snooze render has no MUTED segment");
-    const flash = `<rect ${span(t0 + muted, t0 + muted + 1.6, 0.2)} x="${TX - 5}" y="${STATUS.top + mutedRow * LH + 0.5}" width="${11 * CW + 10}" height="${LH - 1}" rx="3" fill="none" stroke="${WARN}"/>`;
-    return scene(2, [
-      t.svg, ...list,
-      terminal({
-        body: session(t0, 5, [send, ran, json, said]) + status([["green", t0, t0 + muted], ["snooze", t0 + muted, t0 + D[2]]]) + flash,
-        prompt: typing,
-      }),
-    ]);
-  })();
-
-  // 4 ── A status line that keeps context and quota in view ───────────────────
-  const s4 = (() => {
-    const t0 = at[3];
-    const turn = [0, 2.5, 5.0, D[3]];
-    const states = ["green", "yellow", "red"];
-    const t = title(copy("statusline"));
-    // the colour of each band is the colour the script gave the context bar in that render
-    const ctxRow = (s) => need(render(s).rows.find((r) => r.some((x) => x.text.includes("Context:"))), `no context row in ${s}`);
-    let y = t.end + 34;
-    const head = mono("CONTEXT USED", CAP.x, y, C.dim, { size: 9.5, tracking: 0.14 });
-    const table = states.map((s, n) => {
-      y += 27;
-      const row = `<rect x="${CAP.x}" y="${y - 11}" width="12" height="12" fill="${ctxRow(s)[0].fg}"/>` + voice(bands[n].used, CAP.x + 22, y, C.white, 14.5) + voice(bands[n].action, CAP.x + 92, y, C.fg, 13.5, { bold: false });
-      need(92 + glyphs.measure(bands[n].action, { font: "voice", size: 13.5 }) <= CAP.w, `"${bands[n].action}" does not fit its column`);
-      return `<g opacity=".3">${row}</g><g ${cut(t0 + turn[n], t0 + turn[n + 1])}>${row}</g>`;
-    });
-    need(y < 308, "the context table runs into the honesty caption");
-    // the quota and context rows are framed; the frame follows the context row down when the line reflows
-    const frames = states.map((s, n) => {
-      const rows = render(s).rows;
-      const a = rows.findIndex((r) => r.some((x) => x.text.includes("API Quota:")));
-      const b = rows.findIndex((r) => r.some((x) => x.text.includes("Context:")));
-      need(a >= 0 && b >= a, `the ${s} render lost its quota or context row`);
-      return `<rect ${cut(t0 + turn[n], t0 + turn[n + 1])} x="${TX - 6}" y="${STATUS.top + a * LH - 1.5}" width="${TERM.w - 2 * PAD + 12}" height="${(b - a + 1) * LH + 3}" rx="4" fill="${ctxRow(s)[0].fg}" fill-opacity=".07" stroke="${ctxRow(s)[0].fg}" stroke-opacity=".7"/>`;
-    });
-    return scene(3, [
-      t.svg, head, ...table,
-      terminal({
-        body: session(t0, 9, [], true) + frames.join("") + status(states.map((s, n) => [s, t0 + turn[n], t0 + turn[n + 1]])),
-        prompt: caret(),
-      }),
-    ]);
-  })();
-
-  // 5 ── What stands behind it (the still frame) ──────────────────────────────
-  const outro = (() => {
-    const x0 = CAP.x + 4, right = CARD.w - 30;
-    const out = [
-      counter(D.length),
-      `<rect x="${x0}" y="62" width="34" height="3" fill="${C.green}"/>`,
-      mono("WHAT STANDS BEHIND IT", x0 + 46, 67.5, C.green, { size: 10.5, tracking: 0.14 }),
-      voice("One canonical source for three editors.", x0, 102, C.white, 21),
-      voice("Created by Chan Meng, its lead developer.", x0, 128, C.dim, 16.5, { bold: false }),
-      `<path d="M${x0} 146.5H${right}" stroke="${C.line}"/>`,
-    ];
-    const colW = (right - x0) / 3;
-    BEHIND.forEach(([value, lab, lines], n) => {
-      const x = x0 + n * colW + (n ? 18 : 0);
-      const body = lines.map((l, k) => {
-        need(glyphs.measure(l, { font: "voice", size: 13 }) <= colW - 22, `"${l}" does not fit its column`);
-        return voice(l, x, 256 + k * 18, C.fg, 13, { bold: false });
-      }).join("");
-      out.push(`<g ${kf(`0%,${p(outroAt + 0.5 + n * 0.3)}{opacity:0;transform:translateY(6px)}${p(outroAt + 0.85 + n * 0.3)},100%{opacity:1;transform:none}`)}>` +
-        voice(value, x, 206, C.green, 50) + mono(lab, x, 231, C.white, { size: 10.5, tracking: 0.14 }) + body + "</g>");
-      if (n) out.push(`<path d="M${x - 18.5} 162V282" stroke="${C.line}"/>`);
-    });
-    const works = label("worksIn");
-    const worksW = glyphs.measure(works, { font: "voice", size: 13.5 });
-    const tail = `${label("licence")} · ${stars[1]} GitHub stars (measured ${stars[2]})`;
-    out.push(
-      `<path d="M${x0} 298.5H${right}" stroke="${C.line}"/>`,
-      voice(works, x0, 326, C.dim, 13.5, { bold: false }),
-      voice(editors.join(" · "), x0 + worksW + 10, 326, C.white, 14.5),
-      glyphs.text(tail, { font: "mono", size: 11.5, x: right, y: 325.5, fill: C.fg, anchor: "end" }),
-    );
-    return `<g ${kf(`0%,${p(outroAt)}{opacity:0}${p(outroAt + 0.35)},${p(T - 0.35)}{opacity:1}100%{opacity:0}`)}>${out.join("")}</g>`;
-  })();
+  const foot = mono(caption, TERM.x + 2, 350, C.dim, { size: 10 }) + ticks;
 
   // ── Identity: the film's end card, on the terminal's own ground ────────────
   const logoSvg = read("logo");
   const logoBox = need(logoSvg.match(/viewBox="0 0 (\d+) (\d+)"/), "the logo has no viewBox");
   const logoInner = need(logoSvg.match(/<svg[^>]*>([\s\S]*)<\/svg>/), "the logo is not an svg")[1];
-  defs.push('<clipPath id="lg"><circle cx="72" cy="104" r="32"/></clipPath>');
-  const url = need(project.repoUrl, "projects[echook] has no repoUrl").replace(/^https:\/\//, "");
-  const urlW = glyphs.measure(url, { font: "monoBold", size: 13.5 });
-  const sub = wrap(glyphs, `${intro[1]} ${intro[2]}: ${intro[3]}`, { font: "voice", size: 14.5 }, CARD.panel - 62);
-  need(sub.length <= 3, "the README's opening lines no longer fit the panel");
+  defs.push('<clipPath id="lg"><circle cx="74" cy="112" r="34"/></clipPath>');
+  const works = label("worksIn");
+  const worksW = glyphs.measure(works, { font: "voice", size: 16 });
+  need(40 + worksW + 9 + glyphs.measure(editors.join(" · "), { font: "voiceBold", size: 16 }) <= X - 30, "the editors line no longer fits the panel");
+  let fx = 40;
+  const figures = [[counts.events, words.events], [counts.variants, words.variants], [counts.defaultOnEvents, words.onByDefault]].map(([value, word]) => {
+    const svg = voice(String(value), fx, 310, C.green, 34) + voice(word, fx, 331, C.fg, 13.5, { bold: false });
+    fx += Math.max(glyphs.measure(String(value), { font: "voiceBold", size: 34 }), glyphs.measure(word, { font: "voice", size: 13.5 })) + 38;
+    return svg;
+  });
   const identity =
     `<rect width="${X}" height="${CARD.h}" fill="${C.bg}"/>` +
-    mono(`${label("licence").toUpperCase()} · ${editors.join(" · ").toUpperCase()}`, 40, 46, C.dim, { size: 10.5, tracking: 0.12 }) +
-    `<g clip-path="url(#lg)"><svg x="40" y="72" width="64" height="64" viewBox="0 0 ${logoBox[1]} ${logoBox[2]}">${logoInner}</svg></g>` +
-    voice(project.name, 120, 122, C.white, 50) +
-    voice(copy("end"), 40, 180, C.white, 24) +
-    sub.map((l, n) => voice(l, 40, 209 + n * 21, C.fg, 14.5, { bold: false })).join("") +
-    `<rect x="40.75" y="300.75" width="${(urlW + 26).toFixed(1)}" height="31" rx="7" fill="${C.green}" fill-opacity=".07" stroke="${C.green}" stroke-width="1.5"/>` +
-    glyphs.text(url, { font: "monoBold", size: 13.5, x: 54, y: 321, fill: C.green });
+    mono(label("licence").toUpperCase(), 40, 48, C.dim, { size: 11.5, tracking: 0.16 }) +
+    `<g clip-path="url(#lg)"><svg x="40" y="78" width="68" height="68" viewBox="0 0 ${logoBox[1]} ${logoBox[2]}">${logoInner}</svg></g>` +
+    voice(project.name, 124, 132, C.white, 56) +
+    voice(copy("end"), 40, 200, C.white, 34) +
+    voice(works, 40, 232, C.dim, 16, { bold: false }) + voice(editors.join(" · "), 40 + worksW + 9, 232, C.white, 16) +
+    figures.join("");
 
-  const stage = `<rect x="${X}" width="${CARD.w - X}" height="${CARD.h}" fill="${C.bg}"/>` + s1 + s2 + s3 + s4 + outro;
+  const stage = `<rect x="${X}" width="${CARD.w - X}" height="${CARD.h}" fill="${C.bg}"/>` + terminal +
+    `<g ${kf(`0%{opacity:0}${p(0.3)},${p(tC)}{opacity:1}${p(tC + 0.3)},100%{opacity:0}`)}>${channels}</g>` + meters + foot;
 
   return {
     svg: card({
       title:
-        `echook, an open-source notification system for AI coding agents, created by Chan Meng, shown working in a terminal session recreated in code from the product's own output: ` +
-        `each hook event plays its own sound (${counts.events} events, ${counts.variants} matcher variants, ${counts.defaultOnEvents} on by default); the same alert can reach you as a sound at your desk, a desktop toast or a phone notification; ` +
-        `settings are changed by asking the agent, here “${talk.said}”; and a status line keeps context and quota in view. ` +
-        `Works in ${list(editors)}. MIT licensed, ${runtime[1]} standard library only, with a ${tests}-test suite run on ${list(osList.map((o) => OS[o]))}.`,
+        `echook is an open-source notification system for the AI coding agents ${list(editors)}. ` +
+        `The card shows a terminal session recreated in code from the product's own output: a permission request reaches you as a sound, a desktop toast and a phone notification, ` +
+        `a setting is changed by asking the agent (“${talk.said}”), and the status line's quota and context bars change colour as they fill.`,
       css: css.join(""),
       defs: `${glyphs.defs()}${defs.join("")}`,
       body: stage + identity + `<rect x="${X - 0.5}" width="1" height="${CARD.h}" fill="${C.line}"/>`,
       radius: 14,
     }),
-    facts: { scenes: total, events: counts.events, variants: counts.variants, tests: Number(tests), statusColumns: COLS, bakedVersion: baked.source.version, loop: `${T.toFixed(1)}s` },
+    facts: { scenes: SCENES.length, events: counts.events, variants: counts.variants, statusColumns: COLS, bakedVersion: baked.source.version, loop: `${T.toFixed(1)}s` },
   };
 }

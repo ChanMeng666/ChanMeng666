@@ -16,25 +16,31 @@ One self-contained SVG file, 1300 × 360, that plays inside an `<img>` tag on Gi
 The left 500 px is an identity panel. The right 800 px is a stage where **the product
 does its job**.
 
-That last sentence is the whole idea. An animated name with drifting confetti is a
+The identity panel holds at most five things and no prose: an eyebrow of up to four
+words, the product's real wordmark, one headline, an optional single sub-line, and a
+bottom row of up to three chips or figure pairs. The stage holds the product's
+interface, redrawn in vectors and running; a scene may carry one label of up to four
+words and nothing else that is not part of that interface.
+
+The stage is the whole idea. An animated name with drifting confetti is a
 business card. A card earns its place when the motion carries information: source
 code is typed and a floor plan compiles; an agent drafts, checks and fixes in passes;
 a phone scrolls a feed and an orchestrator's log reacts.
 
 | Card | What the stage shows | Size | Loop |
 |---|---|---|---|
-| ArchLang | Eight capability sheets, each a real plan compiled at build time | 619 KB | 44.8 s |
-| ArchCanvas | One studio session, brief to export | 305 KB | 38.8 s |
-| GAVIGO IRE | A phone playing film frames beside a redrawn orchestration log | 495 KB | 9.8 s |
-| She Sharp | What was built around the platform, ten strands of it, and whose history it is | 400 KB | 51.2 s |
-| Eatropolis | Three things the site does, then what the delivery was held to | 288 KB | 21.6 s |
-| FemTech Weekend | Three things the site does, then what stands behind it | 262 KB | 21.6 s |
-| echook | Events with their own sounds, three channels, setup by asking the agent, the status line | 270 KB | 37.4 s |
-| Google News MCP | The tool call and its schema, the category rules, the response template, languages | 180 KB | 33.2 s |
-| AI Programming | Course versions side by side, a lesson, the tutor citing its sources, the showcase | 358 KB | 31.0 s |
-| a11y-loop | Write, audit, fix, re-audit, with the list of what automation could not check | 233 KB | 41.4 s |
-| Tam-AI-Ti | Six things the coach does, then how a research cohort used it | 436 KB | 35.4 s |
-| CORDE Mobile | Eight beats of a field crew's day in the app, then Chan's part in a team build | 399 KB | 41.6 s |
+| ArchLang | Code typed beside the plan it compiles, one number scrubbed, a lint finding raised and cleared | 313 KB | 30.0 s |
+| ArchCanvas | One studio session: brief, draft in passes, an edit in plain words, the agent's own advisory, render and export | 197 KB | 29.2 s |
+| GAVIGO IRE | A phone feed beside the orchestration log, each reacting to the other | 193 KB | 21.0 s |
+| She Sharp | A Slack sync, the visitor assistant's tool call, mentor matching, the mailing list's first send, the agent skills | 180 KB | 27.0 s |
+| Eatropolis | The dish browser filtered by a click, the kitchen lineup, the concierge answering | 240 KB | 21.0 s |
+| FemTech Weekend | The language switch, the summit agenda by day, an application submitted and reviewed | 242 KB | 21.4 s |
+| echook | A terminal whose events raise a sound chip, a desktop toast and a phone notification; a mute by asking; the meters | 198 KB | 21.0 s |
+| Google News MCP | A chat calls the tool, article cards drop into topic groups, country and language switch | 133 KB | 21.0 s |
+| AI Programming | The version switcher, a lesson's code block, the tutor citing its lessons, the capstone showcase | 171 KB | 27.6 s |
+| a11y-loop | Write, audit across five passes, fix, re-audit, with the checks automation could not judge | 233 KB | 27.4 s |
+| Tam-AI-Ti | The daily check-in, the maramataka, a goal's action plan, the journal filled by voice, whānau permissions | 261 KB | 27.6 s |
+| CORDE Mobile | Two phones and a connectivity rail: a log saved with no signal, a sync when coverage returns, jobs on a map | 184 KB | 26.5 s |
 
 ## 2. The sandbox: what an SVG may do inside `<img>`
 
@@ -49,7 +55,7 @@ profile on 2026-10-07, light and dark:
 | A nested `<svg>` with its own `viewBox` | Hover or click interaction |
 | `<image href="data:image/jpeg;base64,…">` | |
 | `@media (prefers-reduced-motion: reduce)` | |
-| Files of at least 619 KB | |
+| Files of at least 619 KB (the largest card is now 313 KB) | |
 
 Three consequences shape everything below: text must be outlines, pictures must be
 inlined, and every moving thing must be a CSS animation with its timing written
@@ -107,9 +113,12 @@ build fails when the real thing stops agreeing.
   asserts the count it expects.
 - **Follow its script.** ArchCanvas plays the product's own demo: the same brief,
   plans, edit command and interface strings the product's site plays.
-- **Cut it.** Where a product film exists, stills and frames are cut from the film's
-  master with ffmpeg. Where none exists, the windows are captures of the public
-  site.
+- **Redraw it.** An interface is rebuilt as vector components from the product's own
+  tokens, typefaces, component shapes and interface strings, with the sample content
+  the product or its film really shows. A screenshot or a film still is soft at this
+  size and says less than a component that moves, so a raster image stays only where
+  the content is a picture by nature (a dish, a rendered building, game footage),
+  small, inside a vector component.
 
 Two rules about what the picture may contain:
 
@@ -125,16 +134,24 @@ And one about what it must not contain: a person's face, a partner-logo wall, a
 price, a private repository's source text. Captures and stills are chosen to avoid
 them.
 
-## 5. End on a frame about the work
+## 5. The card shows; the README tells
 
-Each client card closes on a frame that says what the work was held to: a nine-day
-solo build, 39 of 39 accessibility tests, a load test at 1,000 concurrent visitors;
-or two platform generations and 538 of 570 commits with the remainder explained.
-The reader of a profile is deciding what the author can do. Show the product first,
-then say plainly what stood behind it, each figure with its basis in the same line.
+The README prints a paragraph about the project directly under its card, and a line
+naming the client, the role and the dates. Anything the card repeats from those is
+read twice. The first twelve cards did exactly that: a descriptive paragraph in the
+panel, a headline and a sentence beside every scene, and a closing frame of delivery
+figures. They were redrawn on 2026-10-09 to the rule in section 1.
 
-That closing frame is also the **still frame** (section 7), so it is what a reader
-with motion turned off sees.
+- **No paragraph anywhere on the card.** If a scene needs a sentence to be
+  understood, the scene is not showing enough: add the motion, not the caption.
+- **No role, tenure, credit or client line.** The README line under the card has them.
+- **No closing frame about the work.** Commit counts, authorship shares, timelines
+  and test tallies are not on the card. A figure about the *product* may be one of
+  the panel's three figure pairs.
+- **A caveat stays with its claim.** The cheapest way to shed a caveat is to drop the
+  claim it qualifies.
+- **The still frame** (section 7) is the richest single scene, drawn in full: it is
+  what a reader with motion turned off sees.
 
 ## 6. Techniques
 
@@ -249,7 +266,9 @@ the compiler, and the build fails if any of them has an error.
 
 ### 6.7 A film strip
 
-For moving pictures, stack JPEG frames in a column and step through them:
+A last resort since the 2026-10-09 redraw (section 4, "Redraw it"): no card uses one
+now. For footage that cannot be redrawn, stack JPEG frames in a column and step
+through them:
 
 ```css
 @keyframes film {
@@ -264,9 +283,9 @@ Four frames a second is enough for interface footage.
 
 ### 6.8 Stills that cross-fade
 
-A window that changes little does not need a strip. Two stills and a 0.45 s
-cross-fade, or one still with a slow 4.5% push-in, cost a tenth as much. This is
-the default for anything that is mostly an interface screenshot.
+A picture that changes little does not need a strip. Two stills and a 0.45 s
+cross-fade, or one still with a slow 4.5% push-in, cost a tenth as much. Use it for
+the few pictures a card keeps; an interface is redrawn, not captured.
 
 ### 6.9 Small things that carry a lot
 
@@ -332,6 +351,10 @@ Looking at one frame in a browser is not verification.
 
 ## 11. Mistakes worth not repeating
 
+- Repeating the README on the card: a paragraph in the panel, a sentence beside every
+  scene, a closing frame of figures (all twelve cards redone).
+- Showing an interface as a screenshot or a film still. At card size it is soft, and
+  it cannot type, tick, scroll or switch.
 - Drawing in the profile's brand instead of the product's (three cards redone).
 - Typing a product's name instead of using its wordmark file.
 - A stage that showed one small example when the product's own site already had a
@@ -350,8 +373,8 @@ Looking at one frame in a browser is not verification.
 2. Read what already describes it: its site's own feature list, its film's copy,
    its entry in the career database.
 3. Decide the stage: what does this product **do** that can be shown happening?
-4. Decide the closing frame: what was the work held to?
-5. Find the evidence source for every element: compile, quote, ask, cut or capture.
+4. Decide the still frame: the one scene you would keep if the card could not move.
+5. Find the evidence source for every element: compile, quote, ask, follow or redraw.
 6. Write `scripts/cards/<id>.mjs`, exporting the builder, its fonts and its outside
    inputs; register it in `scripts/build-readme-cards.mjs`.
 7. `npm run build:cards -- <id>`, then verify as in section 10.
@@ -367,9 +390,9 @@ Looking at one frame in a browser is not verification.
 | `scripts/lib/svg-card/glyphs.mjs` | Glyph subsetting and `<text>` rewriting |
 | `scripts/lib/svg-card/shell.mjs` | The 1300 × 360 file, the reduced-motion rule |
 | `scripts/lib/svg-card/plan.mjs` | Splitting compiler output into layers, extents |
-| `scripts/lib/svg-card/film.mjs` | Stills from a film with ffmpeg, word wrap |
+| `scripts/lib/svg-card/film.mjs` | Word wrap; stills from a film with ffmpeg (no card uses it now) |
 | `scripts/cards/fonts/` | Each product's typefaces, with their sources |
-| `scripts/cards/assets/` | Committed inputs: site captures, a rendering |
+| `scripts/cards/assets/` | Committed inputs: the few pictures a card keeps (dish photographs, a rendering, two game stills) |
 | `public/cards/<id>.svg` | The committed cards the README shows |
 
 The reference that set the bar was the profile README of

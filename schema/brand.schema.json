@@ -215,9 +215,19 @@
                 "additionalProperties": false,
                 "required": ["art", "text"],
                 "properties": {
-                  "art":  { "enum": ["hero", "footer", "meter", "arrivals"] },
+                  "art":  { "enum": ["hero", "footer", "cover", "meter", "arrivals"] },
                   "text": { "type": "string", "minLength": 1 }
                 }
+              }
+            },
+            "cover": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["mark", "signature"],
+              "description": "The closing plate's signature: the logo file drawn beside the name.",
+              "properties": {
+                "mark": { "type": "string", "pattern": "^/public/.+\\.svg$" },
+                "signature": { "type": "string", "minLength": 1 }
               }
             },
             "pills": {

@@ -18,7 +18,7 @@ An earlier revision listed three more "offenders". All three are fine in both
 themes and were deliberately not changed, verified by rendering on `#ffffff` and
 `#0d1117`:
 
-- `public/github-cover.svg`: its first paint op is a full-bleed `#E2E2DF` rect.
+- `public/readme/cover.svg`: an ink plate, like the hero.
   The `#070607` is ink on that plate, never on transparency.
 - The visitor flag map (`theme=github_dark`) and the Suno cards (`theme=dark`):
   self-contained dark assets carrying their own background. A dark card on a

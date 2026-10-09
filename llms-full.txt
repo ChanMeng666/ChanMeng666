@@ -2527,8 +2527,8 @@ results, and reports back. It ships 39 hook events (3 on by
 default), two audio themes, warnings before you hit your 5-hour
 and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,
 text-to-speech that reads the agent's actual reply aloud, and a
-29-segment status bar that tracks how much of the context window
-is left. Now on v6.5.1 with 399 automated tests running on
+33-segment status bar that tracks how much of the context window
+is left. Now on v6.8.0 with 747 automated tests running on
 Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
 under MIT; runs on the Python standard library with no extra
 dependencies. A sister repo, echook-promo-video, ships an
@@ -2582,8 +2582,8 @@ telemetry. The value is build-in-public credibility: echook is
 the demonstration piece for Chan's AI-first product philosophy,
 and it shows up in Engram-cohort interviews, recruiter
 conversations, and the README of downstream client projects. A
-sustained release cadence (now v6.5.1), a three-OS
-continuous-integration matrix, and a 399-case test suite
+sustained release cadence (now v6.8.0), a three-OS
+continuous-integration matrix, and a 747-case test suite
 guarding the cross-editor contract make it visibly production
 engineering, not a weekend script. The Remotion promo-video
 sister repo extends the same proof — it shows Chan can ship not
@@ -2591,7 +2591,7 @@ only the product but the marketing film for it, end to end and
 entirely in code, with no video-production tooling.
 
 **Technical approach:** AI-first design at every layer. The `audio-hooks` command-line
-tool exposes a stable, JSON-only interface with 40
+tool exposes a stable, JSON-only interface with 41
 subcommands, no prompts and no spinners, versioned NDJSON event
 logging (schema `audio-hooks.v1`, 5 MB rotation × 3 files), and
 a fixed set of error codes (`AUDIO_FILE_MISSING`,
@@ -2603,7 +2603,7 @@ permission requests, file changes, MCP elicitation, and
 usage-limit warnings (5-hour and 7-day windows with configurable
 80%/95% thresholds, each `(window, threshold, resets_at)` firing
 exactly once via debounce markers), and beneath those events sit
-44 matcher variants — a variant is a separately switchable
+47 matcher variants — a variant is a separately switchable
 matcher under a canonical event (`session_start_resume`,
 `stop_failure_rate_limit`), not an event of its own. Two audio
 themes ship: an ElevenLabs "Jessica" voice or modern UI chimes;
@@ -2611,7 +2611,7 @@ rebuilds are declarative via `config/audio_manifest.json` plus
 the ElevenLabs generator. Webhooks fan out to Slack, Discord,
 Teams, and ntfy through a fire-and-forget subprocess with a versioned
 `audio-hooks.webhook.v1` payload, so they never block the hook.
-The status bar offers 29 configurable segments, including
+The status bar offers 33 configurable segments, including
 color-coded context-window and usage bars with absolute token
 counts (e.g. `Context: 83% (166K/200K)`) so users see the
 "agent dumb zone" before they reach it. The deepest piece is the
@@ -2632,11 +2632,11 @@ one — echook never round-trips a user's TOML, because that would
 destroy comments and formatting. Canonical events with no Codex
 equivalent no-op cleanly under the Codex invoker with a debug
 log line, never blocking the session. The whole contract is
-validated by 399 test cases across Ubuntu, Windows, and macOS on
+validated by 747 test cases across Ubuntu, Windows, and macOS on
 Python 3.9, 3.12, and 3.13 in GitHub Actions.
 
 **Outcomes:** 86 GitHub stars (measured 2026-09-07 via the GitHub API by
-`npm run refresh-metrics`), 156 commits across the 5.x → 6.x line (now v6.5.1), and 399
+`npm run refresh-metrics`), 168 commits across the 5.x → 6.x line (now v6.8.0), and 747
 automated test cases. The defining release sequence: v5.0 (April
 2026) shipped the AI-first redesign — JSON command interface,
 `/audio-hooks` skill, NDJSON logging, plugin-native install;

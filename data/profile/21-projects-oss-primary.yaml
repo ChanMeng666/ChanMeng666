@@ -280,16 +280,16 @@ projects:
       - "React 19 (promo video)"
       - "Suno (background music generation)"
     metrics:
-      - { label: "Commits (solo)", value: "156 (2025-11-01 → 2026-09-01, ~10 months); effectively single-author" }
+      - { label: "Commits (solo)", value: "168 (2025-11-01 → 2026-10-07, ~11 months); effectively single-author" }
       - { label: "GitHub stars",   value: "87 (measured 2026-09-24; renamed from claude-code-audio-hooks)" }
-      - { label: "Version",        value: "v6.5.1 (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)" }
-      - { label: "Hook events",    value: "39 canonical events (3 on by default), plus 44 matcher variants — separately switchable matchers beneath a canonical event (`session_start_resume`, `stop_failure_rate_limit`), not extra events; mapped per harness: Claude Code 30 of 39 canonical + all 44 variants · Cursor 18 native (8 via auto-bridge) · Codex 11" }
+      - { label: "Version",        value: "v6.8.0, released 2026-10-07; 60 releases (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)" }
+      - { label: "Hook events",    value: "39 canonical events (3 on by default), plus 47 matcher variants — separately switchable matchers beneath a canonical event (`session_start_resume`, `stop_failure_rate_limit`), not extra events; mapped per harness: Claude Code 30 of 39 canonical + all 47 variants · Cursor 18 native (8 via auto-bridge) · Codex 11" }
       - { label: "Harnesses",      value: "3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift" }
       - { label: "Runtime",        value: "Python 3.6+ standard library only (no third-party runtime deps); distributed via plugin marketplaces + source, not npm" }
-      - { label: "CLI",            value: "40 JSON-in/JSON-out subcommands; a `manifest` command emits the entire surface (subcommands, hooks, config keys, error codes) as machine-readable JSON so an agent can self-orient" }
-      - { label: "Status line",    value: "29 configurable segments (context-window color bands, quota bars, model/branch/cost), auto-reflowing to terminal width" }
+      - { label: "CLI",            value: "41 JSON-in/JSON-out subcommands; a `manifest` command emits the entire surface (subcommands, hooks, config keys, error codes) as machine-readable JSON so an agent can self-orient" }
+      - { label: "Status line",    value: "33 configurable segments (context-window color bands, quota bars, model/branch/cost), auto-reflowing to terminal width" }
       - { label: "Channels",       value: "audio · desktop toast · TTS (speaks the agent's actual final message) · webhook (Slack/Discord/Teams/ntfy, versioned payload)" }
-      - { label: "Tests / CI",     value: "399 unittest cases on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate" }
+      - { label: "Tests / CI",     value: "747 unittest cases (v6.8.0) on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate" }
     publicSummary: |
       An audio-and-status notification system for Claude Code, Cursor
       IDE, and Codex CLI. The core idea: you never have to learn the
@@ -300,8 +300,8 @@ projects:
       default), two audio themes, warnings before you hit your 5-hour
       and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,
       text-to-speech that reads the agent's actual reply aloud, and a
-      29-segment status bar that tracks how much of the context window
-      is left. Now on v6.5.1 with 399 automated tests running on
+      33-segment status bar that tracks how much of the context window
+      is left. Now on v6.8.0 with 747 automated tests running on
       Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
       under MIT; runs on the Python standard library with no extra
       dependencies. A sister repo, echook-promo-video, ships an
@@ -355,8 +355,8 @@ projects:
         the demonstration piece for Chan's AI-first product philosophy,
         and it shows up in Engram-cohort interviews, recruiter
         conversations, and the README of downstream client projects. A
-        sustained release cadence (now v6.5.1), a three-OS
-        continuous-integration matrix, and a 399-case test suite
+        sustained release cadence (now v6.8.0), a three-OS
+        continuous-integration matrix, and a 747-case test suite
         guarding the cross-editor contract make it visibly production
         engineering, not a weekend script. The Remotion promo-video
         sister repo extends the same proof — it shows Chan can ship not
@@ -364,7 +364,7 @@ projects:
         entirely in code, with no video-production tooling.
       technicalApproach: |
         AI-first design at every layer. The `audio-hooks` command-line
-        tool exposes a stable, JSON-only interface with 40
+        tool exposes a stable, JSON-only interface with 41
         subcommands, no prompts and no spinners, versioned NDJSON event
         logging (schema `audio-hooks.v1`, 5 MB rotation × 3 files), and
         a fixed set of error codes (`AUDIO_FILE_MISSING`,
@@ -376,7 +376,7 @@ projects:
         usage-limit warnings (5-hour and 7-day windows with configurable
         80%/95% thresholds, each `(window, threshold, resets_at)` firing
         exactly once via debounce markers), and beneath those events sit
-        44 matcher variants — a variant is a separately switchable
+        47 matcher variants — a variant is a separately switchable
         matcher under a canonical event (`session_start_resume`,
         `stop_failure_rate_limit`), not an event of its own. Two audio
         themes ship: an ElevenLabs "Jessica" voice or modern UI chimes;
@@ -384,7 +384,7 @@ projects:
         the ElevenLabs generator. Webhooks fan out to Slack, Discord,
         Teams, and ntfy through a fire-and-forget subprocess with a versioned
         `audio-hooks.webhook.v1` payload, so they never block the hook.
-        The status bar offers 29 configurable segments, including
+        The status bar offers 33 configurable segments, including
         color-coded context-window and usage bars with absolute token
         counts (e.g. `Context: 83% (166K/200K)`) so users see the
         "agent dumb zone" before they reach it. The deepest piece is the
@@ -405,11 +405,11 @@ projects:
         destroy comments and formatting. Canonical events with no Codex
         equivalent no-op cleanly under the Codex invoker with a debug
         log line, never blocking the session. The whole contract is
-        validated by 399 test cases across Ubuntu, Windows, and macOS on
+        validated by 747 test cases across Ubuntu, Windows, and macOS on
         Python 3.9, 3.12, and 3.13 in GitHub Actions.
       outcomes: |
         86 GitHub stars (measured 2026-09-07 via the GitHub API by
-        `npm run refresh-metrics`), 156 commits across the 5.x → 6.x line (now v6.5.1), and 399
+        `npm run refresh-metrics`), 168 commits across the 5.x → 6.x line (now v6.8.0), and 747
         automated test cases. The defining release sequence: v5.0 (April
         2026) shipped the AI-first redesign — JSON command interface,
         `/audio-hooks` skill, NDJSON logging, plugin-native install;

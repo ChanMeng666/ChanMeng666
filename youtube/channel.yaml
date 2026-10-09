@@ -27,7 +27,7 @@ channel:
   handle: "@ChanMeng666"
   id: UCNfqqzosj2J6bBRVgz7qbJQ
   url: https://www.youtube.com/@ChanMeng666
-  asOf: "2026-10-09"
+  asOf: "2026-10-10"
   subscribers: 24          # historical maximum; never lower it
   description: |
     I'm Chan Meng, an AI agent architect and full-stack engineer based in Auckland, New Zealand.
@@ -89,9 +89,15 @@ videos:
   # the film is drawn and how it is made, the album in one cleared phrase, both
   # credits. Each lists its album's films. No music video's description
   # carries lyrics (Chan, 2026-10-09): the Suno link in it has the song and
-  # its lyrics. All thirteen music videos have a custom thumbnail since
-  # 2026-10-09: the film's own poster.jpg (the two October films use the
-  # posters chanmeng.org/films serves).
+  # its lyrics. Every music video has a custom thumbnail: the film's own
+  # poster.jpg (the two October films use the posters chanmeng.org/films
+  # serves).
+  # 2026-10-10: Chan uploaded A Coffee for One and the showreel in its two
+  # cuts; titles, descriptions, thumbnails and playlists were set that day.
+  # The showreel's thumbnails are frames of the film (8 s; 19 s of the short).
+  - { id: qoYcFszDnHA, kind: film, published: "2026-10-10", duration: "1:53", title: "Chan Meng — eleven projects, each playing in its own film | Showreel", playlists: [Brand films], described: true }
+  - { id: 8n--dCv4tSQ, kind: film, published: "2026-10-10", duration: "0:56", title: "Chan Meng — five projects in 55 seconds | Showreel, short cut", playlists: [Brand films], described: true, note: "the short cut of the showreel; the films row is chan-meng-showreel (cuts)" }
+  - { id: ZZGf4xiduVI, kind: music-video, published: "2026-10-10", duration: "4:12", title: "独身主义的咖啡 · A Coffee for One | Music video drawn entirely by code", projectId: solo-coffee-mv, playlists: [Music videos], described: true }
   - { id: TCNJ5v6AoOw, kind: music-video, published: "2026-10-09", duration: "5:06", title: "云端的梦游者 · Sleepwalker in the Clouds | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
   - { id: al6Ybmsnn2A, kind: music-video, published: "2026-10-09", duration: "2:55", title: "锁芯的灰尘 · Dust in the Lock | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
   - { id: YKRB3VnDDqo, kind: music-video, published: "2026-10-09", duration: "4:03", title: "四月的残响 · Echoes of April | Music video drawn entirely by code", projectId: memory-amber-2022-mv, playlists: [Music videos], described: true }
@@ -170,18 +176,20 @@ playlists:
   - title: Brand films
     id: PLbFM9MQh6CSA
     onHomeTab: true
-    videos: [QC2fqBGp4Xg, PoAYhd0KI4c]
+    # Order set 2026-10-10: the intro, the showreel, its short cut, the sting.
+    videos: [QC2fqBGp4Xg, qoYcFszDnHA, 8n--dCv4tSQ, PoAYhd0KI4c]
   - title: Music videos
     id: PLUfF7nx_5Rg4
     onHomeTab: true
     # Created 2026-10-08 at Chan's request. Sorted manually into album order
     # on 2026-10-09: Memory Amber 2022 (1 to 8), Anti-Marriage Universe (1 to
-    # 3), then the two October films. A new film is added at the end of its
-    # album ("Move to top" / "Move to bottom" in the row menu on youtube.com).
-    videos: [TCNJ5v6AoOw, al6Ybmsnn2A, YKRB3VnDDqo, Cs4LGUjyDqI, UTnIN2npW14, 2RXDQgN8HMQ, Y20RZOOACys, XCRbi0YCIz0, GS_eawacEVs, btSFv9OVoDc, V5X91IMEmiw, X3nUfLHawq4, B1q5akx2zPk]
+    # 3), the two October films, then A Coffee for One. A new film is added at
+    # the end of its album ("Move to top" / "Move to bottom" in the row menu on
+    # youtube.com).
+    videos: [TCNJ5v6AoOw, al6Ybmsnn2A, YKRB3VnDDqo, Cs4LGUjyDqI, UTnIN2npW14, 2RXDQgN8HMQ, Y20RZOOACys, XCRbi0YCIz0, GS_eawacEVs, btSFv9OVoDc, V5X91IMEmiw, X3nUfLHawq4, B1q5akx2zPk, ZZGf4xiduVI]
 
 # Nothing is waiting to be uploaded (checked against 46-films.yaml and the film
-# folders on 2026-10-09): all thirteen music videos and every product's film
+# folders on 2026-10-10): all fourteen music videos and every product's film
 # on show are on the channel. Every product with a vertical cut has its Short
 # live; ArchLang and a11y-loop have no vertical cut. Not uploaded on purpose
 # (one film per product on this channel): the earlier and alternative films

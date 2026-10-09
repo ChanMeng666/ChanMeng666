@@ -7943,6 +7943,70 @@
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "solo-coffee-mv",
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-10-10",
+      "name": "A Coffee for One (独身主义的咖啡) — a code-drawn music video",
+      "category": "creative",
+      "tagline": "A music video for Chan's song 《独身主义的咖啡》, drawn entirely by code: Python paints the watercolour layers, a web page animates them with rain on glass, and headless Chrome and ffmpeg render it frame by frame.",
+      "roles": [
+        "Director",
+        "Creative Coder",
+        "Songwriter"
+      ],
+      "techStack": [
+        "Python",
+        "NumPy",
+        "OpenCV",
+        "Pillow",
+        "JavaScript (Canvas 2D)",
+        "WebGL2",
+        "Headless Chrome (puppeteer-core)",
+        "ffmpeg",
+        "faster-whisper",
+        "librosa",
+        "Claude Code"
+      ],
+      "keywords": [
+        "Music video drawn by code",
+        "Procedural watercolour",
+        "Rain on glass in WebGL",
+        "Deterministic frame-by-frame rendering",
+        "Pinyin-aware lyric alignment",
+        "Creative coding"
+      ],
+      "startDate": "2026-10",
+      "extraLinks": [
+        {
+          "label": "Watch the film on chanmeng.org",
+          "url": "https://chanmeng.org/films#a-coffee-for-one"
+        },
+        {
+          "label": "Watch 《独身主义的咖啡》 A Coffee for One",
+          "url": "https://youtu.be/ZZGf4xiduVI"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Films",
+          "value": "1",
+          "note": "《独身主义的咖啡》 A Coffee for One (4:12, 32 shots, 68 painted layers in nine sets); 1920×1080, 24 fps, H.264"
+        }
+      ],
+      "publicSummary": "A music video for my song 《独身主义的咖啡》 (*A Coffee for One*). Every\nframe is drawn by code, in three steps: Python paints the watercolour\nlayers, a web page animates them as a pure function of time, and\nheadless Chrome captures each frame before ffmpeg adds the song. No\nimage or video generation model, no photograph and no footage is used\nfor the picture. The song was made with Suno and is the whole\nsoundtrack, unedited.\n",
+      "narrative": {
+        "impactHeadline": "A four-minute music video for my own song, painted and animated entirely by code — procedural watercolour seen through rain on glass — with every frame a pure function of time.",
+        "businessLogic": "A personal creative project, not a product. A small watercolour\nengine in Python (NumPy and OpenCV) stores absorbance per channel\nover a paper-white ground, so washes laid over each other mix the\nway transparent pigment does, with pooled edges, granulation and\npen lines that overshoot their corners. It paints nine sets, split\nby depth into 68 layers. The page then draws the frame for any time\n`t` with no clock and no unseeded randomness, so frames can be\nrendered out of order and in parallel: a multi-plane parallax\ncamera for the 32 shots, and a WebGL2 pass in which water on the\nwindow is a height field that refracts the scene, transitions\nbehave like wet paint and saturation can spread outward from one\npoint. Timing comes from the song: faster-whisper gives word\ntimestamps, an alignment step matches the known lyric sheet to that\ntranscript by pinyin, and librosa adds beats, onsets and loudness\nenvelopes; shot boundaries come from those lyric times and the beat\ngrid. No face is drawn anywhere in the film.\n",
+        "myRole": "The song and lyrics (made with Suno), the treatment, and the film's\npainting and animation code are mine, built with Claude Code. The\nrender harness and the timing tools are copied from my two earlier\nmusic-video repos, and the watercolour engine was first written\nfor one of those films. Pen-and-wash habits and one transition idea\nare adapted from the notes of the Lemo-Opuscar style library, with\nno code copied. Fonts are under the SIL Open Font License. The\nfilm's CREDITS file lists every source and library.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -10862,7 +10926,21 @@
       "id": "promo-film",
       "label": "Promo films",
       "blurb": "Short promotional films built as code (Remotion, p5.js), scored and cut to the beat, in every aspect ratio a channel needs.",
-      "collage": "/public/evidence/collages/promo-film.jpg"
+      "wall": {
+        "art": "/public/readme/films.svg",
+        "url": "https://chanmeng.org/films",
+        "line": "Product films whose picture is a coded replica of the product's own interface, not a screen recording; an event promo; films for my own mark; and music videos for my own songs (made with Suno), their picture drawn frame by frame in code with no image or video generation model.",
+        "links": [
+          {
+            "label": "Watch the films",
+            "url": "https://chanmeng.org/films"
+          },
+          {
+            "label": "YouTube",
+            "url": "https://www.youtube.com/@ChanMeng666"
+          }
+        ]
+      }
     },
     {
       "id": "pitch-deck",
@@ -11218,14 +11296,6 @@
           "cuts": [
             "30 s 16:9"
           ]
-        },
-        {
-          "surface": "github-readme",
-          "slot": "What I make beyond code › Promo films",
-          "cuts": [
-            "30 s 16:9",
-            "30 s 9:16"
-          ]
         }
       ],
       "notDisplayed": [
@@ -11434,14 +11504,6 @@
           "cuts": [
             "30 s 16:9"
           ]
-        },
-        {
-          "surface": "github-readme",
-          "slot": "What I make beyond code › Promo films",
-          "cuts": [
-            "16:9",
-            "9:16"
-          ]
         }
       ],
       "lastVerified": "2026-10-06"
@@ -11460,13 +11522,6 @@
           "cuts": [
             "64 s 16:9"
           ]
-        },
-        {
-          "surface": "github-readme",
-          "slot": "What I make beyond code › Promo films",
-          "cuts": [
-            "64 s 16:9"
-          ]
         }
       ],
       "lastVerified": "2026-10-06"
@@ -11482,13 +11537,6 @@
           "surface": "chanmeng.org",
           "page": "/work",
           "slot": "promo films",
-          "cuts": [
-            "12 s 16:9"
-          ]
-        },
-        {
-          "surface": "github-readme",
-          "slot": "What I make beyond code › Promo films",
           "cuts": [
             "12 s 16:9"
           ]
@@ -11534,6 +11582,16 @@
       "projectId": "memory-amber-2022-mv",
       "summary": "Eight films for one album, a memoir of one year, with one film per song and a different way of drawing for each. Three rules run through all eight, one amber light per film, one white that changes meaning from film to film, and no faces.",
       "credits": "Songs and lyrics by Chan Meng, generated with Suno. Renderer, timing tools and method adapted from the open-source mg-styles-15 library (MIT); several films adapt techniques from the Lemo-Opuscar style library. No image or video generation model, no photograph and no footage is used for the picture."
+    },
+    {
+      "id": "a-coffee-for-one",
+      "kind": "songs",
+      "title": "A Coffee for One",
+      "titleZh": "独身主义的咖啡",
+      "repo": "ChanMeng666/solo-coffee-mv",
+      "projectId": "solo-coffee-mv",
+      "summary": "One film for one of Chan's songs. Python paints the watercolour layers, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the song.",
+      "credits": "Song and lyrics by Chan Meng, made with Suno. Painted with numpy, OpenCV and Pillow, timed with faster-whisper, librosa, pypinyin and OpenCC, rendered with puppeteer-core and ffmpeg. Pen-and-wash habits and one transition idea are adapted from the notes of the Lemo-Opuscar style library, with no code copied. No image or video generation model, no photograph and no footage is used for the picture."
     }
   ],
   "films": [
@@ -12064,6 +12122,27 @@
       "onFilmsPage": true
     },
     {
+      "id": "chan-meng-showreel",
+      "kind": "brand-film",
+      "title": "Chan Meng, showreel",
+      "for": "Chan Meng",
+      "repo": "ChanMeng666/chan-meng-promo-video",
+      "date": "2026-10",
+      "seconds": 112.5,
+      "cuts": [
+        "55 / 112.5 s",
+        "16:9"
+      ],
+      "madeWith": "p5.js, p5.brush, score played by sampled instruments",
+      "summary": "Eleven projects, one print and one figure each. The brand monkey's pixel pins up a print in which the project's own finished film plays (for the two projects without a film, its animated README card or a screen capture of its site) and stamps one figure traced to the career database. Painted in the intro's world; the short cut shows the first five.",
+      "youtubeId": "qoYcFszDnHA",
+      "media": {
+        "poster": "/media/films/chan-meng-showreel-113s.jpg",
+        "mp4": "/media/films/chan-meng-showreel-113s.mp4"
+      },
+      "onFilmsPage": true
+    },
+    {
       "id": "a-drizzle-in-october",
       "kind": "music-video",
       "collection": "october-rain-february-line",
@@ -12307,6 +12386,25 @@
       "media": {
         "poster": "/media/mv/memory-amber-2022/08-off-season/poster.jpg",
         "hls": "/media/mv/memory-amber-2022/08-off-season/master.m3u8"
+      },
+      "onFilmsPage": true
+    },
+    {
+      "id": "a-coffee-for-one",
+      "kind": "music-video",
+      "collection": "a-coffee-for-one",
+      "order": 1,
+      "title": "A Coffee for One",
+      "titleZh": "独身主义的咖啡",
+      "repo": "ChanMeng666/solo-coffee-mv",
+      "projectId": "solo-coffee-mv",
+      "date": "2026-10",
+      "seconds": 252,
+      "drawnAs": "Procedural pen-and-wash watercolour, with rain on glass",
+      "youtubeId": "ZZGf4xiduVI",
+      "media": {
+        "poster": "/media/mv/a-coffee-for-one/a-coffee-for-one/poster.jpg",
+        "hls": "/media/mv/a-coffee-for-one/a-coffee-for-one/master.m3u8"
       },
       "onFilmsPage": true
     }
@@ -14662,6 +14760,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-09",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-09T08:13:48.999Z"
+    "buildTimestamp": "2026-10-09T13:00:00.740Z"
   }
 }

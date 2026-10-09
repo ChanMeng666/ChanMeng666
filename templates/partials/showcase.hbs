@@ -3,7 +3,10 @@
      (_showcase, grouped by showcaseCapabilities in display order). Every
      capability is collapsed so the README stays short; its collage is rendered
      from evidence/collages/<id>.html by `npm run build:collages` and carries
-     its own background plate (safe on light and dark canvases).
+     its own background plate (safe on light and dark canvases). A capability
+     with a `wall` has no folded row: its linked artwork, one line and link
+     pills stand open above the rows (promo films: the film wall; the films
+     themselves play on chanmeng.org/films).
      Videos with `url: null` render a visible "video coming soon" line plus an
      HTML comment marking the slot: the MP4 is uploaded by
      hand through GitHub user-attachments. Uploaded cuts of one film sit in a
@@ -15,7 +18,15 @@
 
 <sub>The software is half of it. I also make what an organisation shows the world: reports typeset in code, promo films, pitch decks, event slides and newsletters, plus the data work and findability underneath. Open any row to see the work.</sub>
 
-{{#each _showcase}}<details>
+{{#each _showcase}}{{#if wall}}<a href="{{wall.url}}"><img src="{{wall.art}}" width="100%" alt="{{label}}: a wall of film posters, one for each film"></a>
+
+<p>{{wall.line}}</p>
+
+<p>
+{{#each wall.links}}<a href="{{url}}">{{pill label}}</a>{{#unless @last}} {{/unless}}{{/each}}
+</p>
+
+{{/if}}{{/each}}{{#each _showcase}}{{#unless wall}}<details>
 <summary><kbd>&nbsp;{{label}}&nbsp;</kbd>&nbsp; <sub>{{blurb}}</sub></summary>
 
 <br>
@@ -40,4 +51,4 @@
 {{/each}}
 {{/each}}
 </details>
-{{/each}}
+{{/unless}}{{/each}}

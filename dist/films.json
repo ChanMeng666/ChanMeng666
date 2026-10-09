@@ -1,10 +1,10 @@
 {
   "source": "data/profile/46-films.yaml",
   "counts": {
-    "films": 35,
+    "films": 37,
     "productFilms": 19,
-    "musicVideos": 13,
-    "minutes": 82
+    "musicVideos": 14,
+    "minutes": 88
   },
   "productFilms": [
     {
@@ -431,6 +431,25 @@
         "mp4": "/work/films/chan-monkey-sting-12s.mp4",
         "webm": "/work/films/chan-monkey-sting-12s.webm"
       }
+    },
+    {
+      "id": "chan-meng-showreel",
+      "title": "Chan Meng, showreel",
+      "for": "Chan Meng",
+      "date": "2026-10",
+      "seconds": 112.5,
+      "duration": "1:53",
+      "cuts": [
+        "55 / 112.5 s",
+        "16:9"
+      ],
+      "madeWith": "p5.js, p5.brush, score played by sampled instruments",
+      "summary": "Eleven projects, one print and one figure each. The brand monkey's pixel pins up a print in which the project's own finished film plays (for the two projects without a film, its animated README card or a screen capture of its site) and stamps one figure traced to the career database. Painted in the intro's world; the short cut shows the first five.",
+      "youtube": "https://youtu.be/qoYcFszDnHA",
+      "media": {
+        "poster": "/media/films/chan-meng-showreel-113s.jpg",
+        "mp4": "/media/films/chan-meng-showreel-113s.mp4"
+      }
     }
   ],
   "musicVideos": [
@@ -641,6 +660,30 @@
           "media": {
             "poster": "/media/mv/memory-amber-2022/08-off-season/poster.jpg",
             "hls": "/media/mv/memory-amber-2022/08-off-season/master.m3u8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "a-coffee-for-one",
+      "title": "A Coffee for One",
+      "titleZh": "独身主义的咖啡",
+      "summary": "One film for one of Chan's songs. Python paints the watercolour layers, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the song.",
+      "credits": "Song and lyrics by Chan Meng, made with Suno. Painted with numpy, OpenCV and Pillow, timed with faster-whisper, librosa, pypinyin and OpenCC, rendered with puppeteer-core and ffmpeg. Pen-and-wash habits and one transition idea are adapted from the notes of the Lemo-Opuscar style library, with no code copied. No image or video generation model, no photograph and no footage is used for the picture.",
+      "seconds": 252,
+      "films": [
+        {
+          "id": "a-coffee-for-one",
+          "title": "A Coffee for One",
+          "titleZh": "独身主义的咖啡",
+          "date": "2026-10",
+          "seconds": 252,
+          "duration": "4:12",
+          "drawnAs": "Procedural pen-and-wash watercolour, with rain on glass",
+          "youtube": "https://youtu.be/ZZGf4xiduVI",
+          "media": {
+            "poster": "/media/mv/a-coffee-for-one/a-coffee-for-one/poster.jpg",
+            "hls": "/media/mv/a-coffee-for-one/a-coffee-for-one/master.m3u8"
           }
         }
       ]

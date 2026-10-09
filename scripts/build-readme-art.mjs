@@ -13,8 +13,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import yaml from "js-yaml";
 
+import { loadProfile } from "./lib/load-profile.mjs";
 import { GlyphSet } from "./lib/svg-card/glyphs.mjs";
 import { cover, nameplate, strip } from "./readme-art/banners.mjs";
+import { films } from "./readme-art/films.mjs";
 import { C, FONTS, slug } from "./readme-art/kit.mjs";
 import { pill } from "./readme-art/pills.mjs";
 import { story } from "./readme-art/story.mjs";
@@ -47,6 +49,22 @@ for (const [id, b] of Object.entries(art.banners)) {
     ? nameplate({ glyphs: glyphs(), text: b.text, title: b.text, ...NAMEPLATES[b.art] })
     : strip({ glyphs: glyphs(), text: b.text, motif: b.art });
   files.push([`${id}.svg`, svg]);
+}
+if (art.films) {
+  // One tile per film: each product's primary film, the brand and event films
+  // and the music videos (on the wall since 2026-10-10, Chan's call). Earlier
+  // and alternative versions and demos are left out. Kinds are dealt out in
+  // turn, so neighbouring tiles are not all one kind.
+  const all = loadProfile().films ?? [];
+  const product = all.filter((f) => f.kind === "product-film" && f.primary);
+  const brand = all.filter((f) => f.kind === "brand-film" || f.kind === "event-promo");
+  const music = all.filter((f) => f.kind === "music-video");
+  const list = [];
+  for (let i = 0; i < Math.max(product.length, brand.length, music.length); i++) for (const kind of [product, music, brand]) if (kind[i]) list.push(kind[i]);
+  const clock = (s) => `${Math.floor(s / 60)}:${String(Math.round(s) % 60).padStart(2, "0")}`;
+  const counts = [[list.length, "films"], [product.length, "products"], [music.length, "music videos"]];
+  const title = `${art.films.headline.replace(" / ", " ")} ${list.length} films: ${product.length} product films, ${brand.length} brand and event films and ${music.length} music videos. Watch them at ${art.films.link}.`;
+  files.push(["films.svg", films({ glyphs: glyphs(), root, ...art.films, counts, list: list.map((f) => ({ id: f.id, duration: clock(f.seconds) })), title })]);
 }
 if (art.story) {
   // the image's alt text: the whole story, as sentences

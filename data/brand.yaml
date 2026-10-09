@@ -528,6 +528,14 @@ signatures:
     cover:
       mark: "/public/brands/chan-meng-monkey-white-transparent.svg"
       signature: "Chan Meng"
+    # The film wall (public/readme/films.svg): the poster of every film,
+    # drifting in columns. Films and lengths come from data/profile/46-films.yaml
+    # (each product's primary film, the brand and event films, the music
+    # videos); the headline splits at " / ".
+    films:
+      eyebrow: "Films"
+      headline: "Films, / built as code."
+      link: "chanmeng.org/films"
     # The story card (public/readme/story.svg): who Chan is, in seven short
     # chapters, each with a photograph and one small moving picture. First
     # person, plain words. Every line restates the extended CV's chapters 1 and 2
@@ -589,6 +597,8 @@ signatures:
       "Resume":              ink
       "My Story":            violet
       "Buy Me a Coffee":     orange
+      "Watch the films":     orange
+      "YouTube":             ink
     useWhen: "The README's banners and its CTA / link pills."
     doNotUseWhen: "Inside body prose. As decoration between sibling items."
 

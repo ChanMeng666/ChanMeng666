@@ -59,6 +59,9 @@ const group = (id) => {
   };
 };
 
+// A collection whose films are all off the page is left out, not shown empty.
+const shown = (g) => g.films.length > 0;
+
 const product = films.filter((f) => f.kind === "product-film");
 const out = {
   source: "data/profile/46-films.yaml",
@@ -71,10 +74,10 @@ const out = {
   productFilms: product.filter((f) => f.primary).map(view),
   otherVersions: {
     films: product.filter((f) => !f.primary && !f.collection).map(view),
-    series: [...collections.values()].filter((c) => c.kind === "series").map((c) => group(c.id)),
+    series: [...collections.values()].filter((c) => c.kind === "series").map((c) => group(c.id)).filter(shown),
   },
   brandAndEvent: films.filter((f) => f.kind === "brand-film" || f.kind === "event-promo").map(view),
-  musicVideos: [...collections.values()].filter((c) => c.kind !== "series").map((c) => group(c.id)),
+  musicVideos: [...collections.values()].filter((c) => c.kind !== "series").map((c) => group(c.id)).filter(shown),
 };
 
 const json = JSON.stringify(out, null, 2) + "\n";

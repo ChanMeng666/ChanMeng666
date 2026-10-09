@@ -19,9 +19,10 @@
 #     docs/ecosystem/lineage.yaml; `projectId` a projects[].id; `collection` a
 #     filmCollections[].id. Enforced by scripts/check-ecosystem.mjs. Most film
 #     repos are private: name them, never link them.
-#   - Music videos (Chan, 2026-10-09): shown on YouTube and on chanmeng.org/films,
-#     and nowhere else: not the README, a CV, LinkedIn copy or another page of
-#     the site. Their copy says how each film is drawn and how it is made, not
+#   - Music videos (Chan, 2026-10-09; the wall added 2026-10-10): shown on YouTube,
+#     on chanmeng.org/films and as poster tiles on the README film wall
+#     (public/readme/films.svg), and nowhere else: not a project card, a CV,
+#     LinkedIn copy or another page of the site. Their copy says how each film is drawn and how it is made, not
 #     what the album is about. Keep both credits: the songs are hers (made with
 #     Suno); "no image or video generation models" is a claim about the PICTURE.
 #   - ArchCanvas copy law holds here too: "AI architectural designer", never
@@ -68,6 +69,15 @@ filmCollections:
     projectId: memory-amber-2022-mv
     summary: Eight films for one album, a memoir of one year, with one film per song and a different way of drawing for each. Three rules run through all eight, one amber light per film, one white that changes meaning from film to film, and no faces.
     credits: "Songs and lyrics by Chan Meng, generated with Suno. Renderer, timing tools and method adapted from the open-source mg-styles-15 library (MIT); several films adapt techniques from the Lemo-Opuscar style library. No image or video generation model, no photograph and no footage is used for the picture."
+
+  - id: a-coffee-for-one
+    kind: songs
+    title: A Coffee for One
+    titleZh: 独身主义的咖啡
+    repo: ChanMeng666/solo-coffee-mv
+    projectId: solo-coffee-mv
+    summary: One film for one of Chan's songs. Python paints the watercolour layers, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the song.
+    credits: "Song and lyrics by Chan Meng, made with Suno. Painted with numpy, OpenCV and Pillow, timed with faster-whisper, librosa, pypinyin and OpenCC, rendered with puppeteer-core and ffmpeg. Pen-and-wash habits and one transition idea are adapted from the notes of the Lemo-Opuscar style library, with no code copied. No image or video generation model, no photograph and no footage is used for the picture."
 
 films:
   # ── Product films: the one each product shows (productFilms) ───────────────
@@ -357,6 +367,22 @@ films:
     media: { poster: /work/posters/chan-monkey-sting-poster.jpg, mp4: /work/films/chan-monkey-sting-12s.mp4, webm: /work/films/chan-monkey-sting-12s.webm }
     onFilmsPage: true
 
+  # Finished, not shipped yet: no upload, no media on the site. The short cut
+  # (55 s, the first five projects) is the same scene, so it is a cut, not a row.
+  - id: chan-meng-showreel
+    kind: brand-film
+    title: "Chan Meng, showreel"
+    for: Chan Meng
+    repo: ChanMeng666/chan-meng-promo-video
+    date: "2026-10"
+    seconds: 112.5
+    cuts: ["55 / 112.5 s", "16:9"]
+    madeWith: "p5.js, p5.brush, score played by sampled instruments"
+    summary: Eleven projects, one print and one figure each. The brand monkey's pixel pins up a print in which the project's own finished film plays (for the two projects without a film, its animated README card or a screen capture of its site) and stamps one figure traced to the career database. Painted in the intro's world; the short cut shows the first five.
+    youtubeId: qoYcFszDnHA
+    media: { poster: /media/films/chan-meng-showreel-113s.jpg, mp4: /media/films/chan-meng-showreel-113s.mp4 }
+    onFilmsPage: true
+
   # ── Music videos ───────────────────────────────────────────────────────────
   - { id: a-drizzle-in-october, kind: music-video, collection: october-rain-february-line, order: 1, title: A Drizzle in October, titleZh: 十月的微雨, repo: ChanMeng666/october-rain-february-line-mv, projectId: october-rain-february-line-mv, date: "2026-10", seconds: 325, drawnAs: "Hand-inked cel animation, the ink lines redrawn every second frame", youtubeId: X3nUfLHawq4, media: { poster: /media/mv/october-rain-february-line/a-drizzle-in-october/poster.jpg, hls: /media/mv/october-rain-february-line/a-drizzle-in-october/master.m3u8 }, onFilmsPage: true }
   - { id: february-on-an-extended-line, kind: music-video, collection: october-rain-february-line, order: 2, title: "February, on an Extended Line", titleZh: 二月的延长线, repo: ChanMeng666/october-rain-february-line-mv, projectId: october-rain-february-line-mv, date: "2026-10", seconds: 315, drawnAs: "One continuous line that draws a single day", youtubeId: B1q5akx2zPk, media: { poster: /media/mv/october-rain-february-line/february-on-an-extended-line/poster.jpg, hls: /media/mv/october-rain-february-line/february-on-an-extended-line/master.m3u8 }, onFilmsPage: true }
@@ -373,3 +399,5 @@ films:
   - { id: yellow-flowers-in-the-fog, kind: music-video, collection: memory-amber-2022, order: 6, title: Yellow Flowers in the Fog, titleZh: 雾里的黄花, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 213, drawnAs: Grey gouache with a single colour, youtubeId: "2RXDQgN8HMQ", media: { poster: /media/mv/memory-amber-2022/06-yellow-flowers-in-the-fog/poster.jpg, hls: /media/mv/memory-amber-2022/06-yellow-flowers-in-the-fog/master.m3u8 }, onFilmsPage: true }
   - { id: sheet-metal, kind: music-video, collection: memory-amber-2022, order: 7, title: Sheet Metal, titleZh: 铁皮, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 330, drawnAs: Three-ink risograph punk zine, youtubeId: Y20RZOOACys, media: { poster: /media/mv/memory-amber-2022/07-sheet-metal/poster.jpg, hls: /media/mv/memory-amber-2022/07-sheet-metal/master.m3u8 }, onFilmsPage: true }
   - { id: off-season, kind: music-video, collection: memory-amber-2022, order: 8, title: Off Season, titleZh: 反季, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 215, drawnAs: "Gouache skies, folded along the horizon", youtubeId: XCRbi0YCIz0, media: { poster: /media/mv/memory-amber-2022/08-off-season/poster.jpg, hls: /media/mv/memory-amber-2022/08-off-season/master.m3u8 }, onFilmsPage: true }
+
+  - { id: a-coffee-for-one, kind: music-video, collection: a-coffee-for-one, order: 1, title: A Coffee for One, titleZh: 独身主义的咖啡, repo: ChanMeng666/solo-coffee-mv, projectId: solo-coffee-mv, date: "2026-10", seconds: 252, drawnAs: "Procedural pen-and-wash watercolour, with rain on glass", youtubeId: ZZGf4xiduVI, media: { poster: /media/mv/a-coffee-for-one/a-coffee-for-one/poster.jpg, hls: /media/mv/a-coffee-for-one/a-coffee-for-one/master.m3u8 }, onFilmsPage: true }

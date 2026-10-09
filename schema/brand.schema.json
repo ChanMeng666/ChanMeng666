@@ -230,6 +230,17 @@
                 "signature": { "type": "string", "minLength": 1 }
               }
             },
+            "films": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["eyebrow", "headline", "link"],
+              "description": "The film wall (films.svg): its panel copy. The films themselves come from dist/films.json.",
+              "properties": {
+                "eyebrow": { "type": "string", "minLength": 1 },
+                "headline": { "type": "string", "minLength": 1 },
+                "link": { "type": "string", "minLength": 1 }
+              }
+            },
             "story": {
               "type": "object",
               "additionalProperties": false,

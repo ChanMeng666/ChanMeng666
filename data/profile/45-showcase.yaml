@@ -44,7 +44,18 @@ showcaseCapabilities:
   - id: promo-film
     label: Promo films
     blurb: Short promotional films built as code (Remotion, p5.js), scored and cut to the beat, in every aspect ratio a channel needs.
-    collage: /public/evidence/collages/promo-film.jpg
+    # Since 2026-10-10 the README does not embed the films or a collage of
+    # stills (Chan's call: the project cards already play each product). In
+    # their place the film wall (public/readme/films.svg, `npm run build:art`)
+    # stands open above the folded rows, with one line and two ways out: the
+    # page that plays every film, and YouTube. It has no folded row of its own.
+    wall:
+      art: /public/readme/films.svg
+      url: https://chanmeng.org/films
+      line: "Product films whose picture is a coded replica of the product's own interface, not a screen recording; an event promo; films for my own mark; and music videos for my own songs (made with Suno), their picture drawn frame by frame in code with no image or video generation model."
+      links:
+        - { label: "Watch the films", url: "https://chanmeng.org/films" }
+        - { label: "YouTube", url: "https://www.youtube.com/@ChanMeng666" }
   - id: pitch-deck
     label: Pitch decks
     blurb: Investor-facing HTML decks in a Swiss grid, built for a founder to present and send.
@@ -316,7 +327,6 @@ productFilms:
     displayedOn:
       - { surface: chanmeng.org, page: "/", slot: "home stage 1", cuts: ["30 s 16:9"] }
       - { surface: chanmeng.org, page: /work, slot: "promo films", cuts: ["30 s 16:9"] }
-      - { surface: github-readme, slot: "What I make beyond code › Promo films", cuts: ["30 s 16:9", "30 s 9:16"] }
     notDisplayed:
       - { filmRepo: ChanMeng666/archcanvas-promo-video, what: "92 s HyperFrames hero film + six shorts", reason: "one film per product; shown on /films only" }
       - { filmRepo: ChanMeng666/archcanvas-promo-remotion, what: "Zoom Out, four aspect ratios", reason: "one film per product; shown on /films only" }
@@ -407,7 +417,6 @@ productFilms:
     watchUrl: "https://www.linkedin.com/posts/shesharpnz_no-pain-all-gain-getting-fit-for-ai-activity-7499713162410156032-62zA"
     displayedOn:
       - { surface: chanmeng.org, page: /work, slot: "promo films", cuts: ["30 s 16:9"] }
-      - { surface: github-readme, slot: "What I make beyond code › Promo films", cuts: ["16:9", "9:16"] }
     lastVerified: "2026-10-06"
 
   - kind: personal-brand
@@ -417,7 +426,6 @@ productFilms:
     watchUrl: "https://youtu.be/QC2fqBGp4Xg"
     displayedOn:
       - { surface: chanmeng.org, page: /about, slot: "intro film", cuts: ["64 s 16:9"] }
-      - { surface: github-readme, slot: "What I make beyond code › Promo films", cuts: ["64 s 16:9"] }
     lastVerified: "2026-10-06"
 
   - kind: personal-brand
@@ -427,5 +435,4 @@ productFilms:
     watchUrl: "https://youtu.be/PoAYhd0KI4c"
     displayedOn:
       - { surface: chanmeng.org, page: /work, slot: "promo films", cuts: ["12 s 16:9"] }
-      - { surface: github-readme, slot: "What I make beyond code › Promo films", cuts: ["12 s 16:9"] }
     lastVerified: "2026-10-06"

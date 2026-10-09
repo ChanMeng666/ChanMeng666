@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-10-09.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-10-10.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -33,8 +33,9 @@ LinkedIn copy.
 | **Seismophone** (`sunostats`) | Pending archive. The site stays online at her request, but it is off every visitor-facing surface and `cv-llms.txt` since 2026-10-07. The Suno probe and the README Suno cards are independent and keep running |
 | **Chromaflow** (`gradient-svg-generator`) | Off every visitor-facing surface since 2026-10-07; keeps its narrative in the llms files (`llmsOnlyOpenSourceIds`). Repo stays public and maintained. No surface may say it powers this profile. Her other repos' READMEs still embed it and are not to be touched |
 | **Te Pā Tiaki** (`css-tower-defense`) | Archived 2026-10-07, deployment retired. Its Neon database was left alone on purpose |
-| **Music videos** (three `*-mv` projects, thirteen films) | Shown on YouTube and chanmeng.org/films, nowhere else (her rule, 2026-10-09). The repos are private: no repo links. Copy says how a film is drawn, never what the album is about |
+| **Music videos** (four `*-mv` projects, fourteen films) | Shown on YouTube, on chanmeng.org/films, and as poster tiles on the README's film wall (the wall added 2026-10-10, her call); nowhere else: no project card, no CV, no LinkedIn copy, no other page of the site. The repos are private: no repo links. Copy says how a film is drawn, never what the album is about |
 | **Promo films** | One film on show per product (`productFilms` in `45-showcase.yaml`, checked by `check:ecosystem`). A product's film repos coexist; none replaces another. Exception: chanmeng.org/films shows every version |
+| **Films on the README** | Not embedded since 2026-10-10. The film wall (`public/readme/films.svg`) stands open under "What I make beyond code", with one line and two links: chanmeng.org/films and YouTube. One tile per film: each product's primary film, the brand and event films, the music videos |
 | **chanmeng.org/films** | Every finished film. Not shown: the ArchLang narrated demo. Screen-recorded demos are not films and stay on YouTube. Source `46-films.yaml` → `dist/films.json` → the site's `scripts/sync-films.mjs` |
 | **GAVIGO** | Only its three approved figures (78%, 4.45s → 1.00s, ~140ms), under its labels, with the boundary note ("controlled", "not a production SLA"). No internal timings, no "instant" or "no wait". Google for Startups and NVIDIA Inception are programme participation, never validation (Chan, 2026-10-07) |
 | **CORDE** | On the README since 2026-10-08. Its commit share is counted on the original repository (236 of 413), with that basis beside the figure on every surface |

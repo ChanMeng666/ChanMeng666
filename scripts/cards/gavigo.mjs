@@ -19,16 +19,28 @@
 //   - every product string is the product's own (C-08);
 //   - the disclosure line is on screen whenever the recreated UI is (C-09).
 //
-// Everything is vector except one still per game, cut from the film's captured
-// gameplay and cropped below the game's own HUD (scripts/cards/assets/gavigo).
+// The phone's body and the product UI on it are vector. What plays on its
+// screen is the film's own source footage, cut into stepped JPEG frames at build
+// time with ffmpeg: the two feed videos, and each game's captured run.
+//   - A feed video that shows a person is not used (the card carries no
+//     person), so the two videos are the film's architecture and city plates.
+//   - Each game is cropped below its own HUD (score, lives, ammo), and DEAD
+//     AGAIN is cut from after its "Level 1" label has faded, so no number in
+//     the footage reaches the card (C-03).
+//   - Clumsy Bird plays only the flight between its title screen and the next
+//     game-over, as the film does (G1_PLATE in src/replica/screenplay.ts), at
+//     half speed so the one flight spans both visits: the return resumes on
+//     the frame the game was parked on.
 // The log follows the replica's rules (src/replica/at.ts in the film repo):
 // AI, Loading and Standby light at page load; Interest when the game becomes
 // the next thing in the feed; Active, Running and Ready as the viewer arrives;
 // the current game sorts first; a return swaps the pipeline for the reuse line.
-// The film's copy, strings and data files are read to assert every string
-// (GAVIGO_INPUTS); where they are absent the card is not rebuilt and the
+// The film's copy, strings and data files are read to assert every string, and
+// its footage is read for the frames (GAVIGO_INPUTS); where they are absent the card is not rebuilt and the
 // committed SVG stands.
-import { readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync, readFileSync, readdirSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
 import path from "node:path";
 
 import { card, pct } from "../lib/svg-card/shell.mjs";
@@ -46,8 +58,15 @@ export const GAVIGO_INPUTS = {
   strings: "../gavigo-promo-film/src/replica/strings.ts",
   catalog: "../gavigo-promo-film/src/data/catalog.json",
   videos: "../gavigo-promo-film/src/data/videos.json",
+  gameplay: "../gavigo-promo-film/src/data/gameplay.json",
+  videoA: "../gavigo-promo-film/public/videos/16646786.mp4",
+  videoB: "../gavigo-promo-film/public/videos/18131601.mp4",
+  clumsyBird: "../gavigo-promo-film/public/gameplay/clumsy-bird.mp4",
+  deadAgain: "../gavigo-promo-film/public/gameplay/dead-again.mp4",
 };
-const STILLS = "scripts/cards/assets/gavigo";
+// The phone's content area, and how each kind of footage is fitted to it.
+const FRAME = { w: 154, h: 268 };
+const FIT = { video: "scale=154:274,crop=154:268", clumsyBird: "crop=408:710:14:130,scale=154:268", deadAgain: "crop=379:660:28:180,scale=154:268" };
 
 // Film ground (F), dashboard (D) and mobile (M) tokens, from the film's replica/tokens.ts.
 const F = { ground: "#070a1f", deep: "#03051a", ink: "#eef1f8", body: "#c4ccdf", muted: "#9aa6c4", accent: "#0082fb" };
@@ -79,12 +98,17 @@ const STR = {
 };
 
 // The feed the phone scrolls, shortened: a video, a game, a video, a game.
+// `cuts` are [from second, frames a second, frames] of the source file, in order. `q` is the
+// JPEG quality: the videos sit under the feed card's scrim and carry most of the weight.
 const FEED = [
-  { kind: "video", by: "Ex Route Adventures", tint: ["#0f4a4a", "#0a1830", "#34d399"] },
-  { kind: "game", id: "game-clumsy-bird", still: "clumsy-bird.jpg" },
-  { kind: "video", by: "DARKMODE CINEMA", tint: ["#4a2416", "#160f24", "#f59e0b"] },
-  { kind: "game", id: "game-dead-again", still: "dead-again.jpg" },
+  { kind: "video", by: "Abhishek  Shekhawat", input: "videoA", fit: FIT.video, q: 13, cuts: [[0, 4, 16]] },
+  // the title screen, then the flight at half speed (8 a second, stepped at 4)
+  { kind: "game", id: "game-clumsy-bird", input: "clumsyBird", fit: FIT.clumsyBird, q: 9, cuts: [[3.1, 4, 1], [3.5, 8, 22]] },
+  { kind: "video", by: "Ray .", input: "videoB", fit: FIT.video, q: 13, cuts: [[2, 2, 7]] },
+  { kind: "game", id: "game-dead-again", input: "deadAgain", fit: FIT.deadAgain, q: 9, cuts: [[3.75, 4, 14]] },
 ];
+// Seconds between two frames of a strip as it plays.
+const STEP = 0.25;
 // Seconds. The feed comes to rest SWIPE after a swipe starts; the last two swipes scroll back.
 const SWIPE = 0.55;
 const SWIPES = [{ at: 4, to: 1 }, { at: 8.6, to: 2 }, { at: 11.6, to: 3 }, { at: 15.55, to: 2 }, { at: 16.1, to: 1 }];
@@ -93,12 +117,31 @@ const T = PLAY + 0.6;
 // The still frame (animations off) is the first activation, complete.
 const STILL = 7;
 
+// JPEG frames (base64) of one feed item, cut from its source file with ffmpeg.
+function footage(root, item) {
+  const dir = mkdtempSync(path.join(tmpdir(), "gavigo-card-"));
+  try {
+    return item.cuts.flatMap(([from, fps, count], n) => {
+      execFileSync("ffmpeg", [
+        "-loglevel", "error", "-y", "-ss", String(from), "-t", String((count + 1) / fps), "-i", path.join(root, GAVIGO_INPUTS[item.input]),
+        "-vf", `fps=${fps},${item.fit}`, "-frames:v", String(count), "-q:v", String(item.q), path.join(dir, `c${n}-%03d.jpg`),
+      ]);
+      const files = readdirSync(dir).filter((f) => f.startsWith(`c${n}-`)).sort();
+      if (files.length !== count) throw new Error(`gavigo card: expected ${count} frames of ${item.input}, ffmpeg wrote ${files.length}`);
+      return files.map((f) => readFileSync(path.join(dir, f)).toString("base64"));
+    });
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+}
+
 function sources(root) {
   const read = (key) => readFileSync(path.join(root, GAVIGO_INPUTS[key]), "utf8");
   const copy = read("copy");
   const strings = read("strings");
   const catalog = JSON.parse(read("catalog"));
   const videos = JSON.parse(read("videos"));
+  const gameplay = JSON.parse(read("gameplay"));
   const need = (ok, what) => {
     if (!ok) throw new Error(`gavigo card: ${what} is no longer in the film's source`);
   };
@@ -111,11 +154,13 @@ function sources(root) {
     if (item.kind === "game") {
       const g = games.find((x) => x.id === item.id);
       need(g, `game ${item.id}`);
-      return { ...item, title: g.title, theme: g.theme, image: readFileSync(path.join(root, STILLS, item.still)).toString("base64") };
+      const plate = gameplay.find((x) => `game-${x.slug}` === item.id);
+      need(plate && GAVIGO_INPUTS[item.input].endsWith(`/${plate.file}`), `captured gameplay of ${item.id}`);
+      return { ...item, title: g.title, theme: g.theme, frames: footage(root, item) };
     }
     const v = videos.find((x) => x.photographer === item.by);
-    need(v, `video by ${item.by}`);
-    return { ...item, title: v.title, theme: v.theme };
+    need(v && GAVIGO_INPUTS[item.input].endsWith(`/${v.file}`), `video by ${item.by}`);
+    return { ...item, title: v.title, theme: v.theme, frames: footage(root, item) };
   });
 }
 
@@ -166,6 +211,20 @@ export function buildGavigoCard({ glyphs, root }) {
     for (let i = 1; i < steps.length; i += 1) body += `${p(steps[i][0])}{${tf(steps[i - 1][1])};animation-timing-function:${EASE}}${p(steps[i][0] + dur)}{${tf(steps[i][1])}}`;
     body += `100%{${tf(steps.at(-1)[1])}}`;
     return rule(body, `;${tf(steps.filter(([t]) => t <= STILL).at(-1)[1])}`);
+  };
+  // a column of frames stepped through in place. plays [[t, first frame, last frame], …]: one
+  // frame every STEP from t, holding between plays and on the last frame after them
+  const strip = (frames, plays) => {
+    const tf = (i) => `transform:translateY(${-i * FRAME.h}px)`;
+    let body = `0%{${tf(plays[0][1])}}`;
+    let still = plays[0][1];
+    for (const [t, a, b] of plays) {
+      body += `${p(t)}{${tf(a)};animation-timing-function:steps(${b - a},end)}${p(t + (b - a) * STEP)}{${tf(b)}}`;
+      if (STILL > t) still = Math.min(b, a + Math.floor((STILL - t) / STEP));
+    }
+    body += `100%{${tf(plays.at(-1)[2])}}`;
+    const images = frames.map((b64, i) => `<image y="${i * FRAME.h}" width="${FRAME.w}" height="${FRAME.h}" href="data:image/jpeg;base64,${b64}"/>`).join("");
+    return `<g clip-path="url(#fc)"><g class="${rule(body, `;${tf(still)}`)}">${images}</g></g>`;
   };
   // a ring that leaves a dot as it lights
   const pulse = (t) => rule(`0%,${p(t)}{opacity:0;transform:scale(1)}${p(t + 0.04)}{opacity:.9;transform:scale(1)}${p(t + 0.7)},100%{opacity:0;transform:scale(2.3)}`, ";transform-box:fill-box;transform-origin:center");
@@ -227,7 +286,9 @@ export function buildGavigoCard({ glyphs, root }) {
   const SC = { x: PH.x + 10, y: PH.y + 26, w: 154, h: 292 };
   const TAB = 24;
   const CH = SC.h - TAB;
+  if (SC.w !== FRAME.w || CH !== FRAME.h) throw new Error("gavigo card: the footage frame no longer matches the phone's content area");
   defs.push(`<clipPath id="scr"><rect x="${SC.x}" y="${SC.y}" width="${SC.w}" height="${SC.h}" rx="14"/></clipPath>`);
+  defs.push(`<clipPath id="fc"><rect width="${FRAME.w}" height="${FRAME.h}"/></clipPath>`);
   const avatar = (name, cx, cy) => {
     let h = 0;
     for (let i = 0; i < name.length; i += 1) h = (h * 31 + name.charCodeAt(i)) | 0;
@@ -258,10 +319,8 @@ export function buildGavigoCard({ glyphs, root }) {
   const cards = feed.map((item, n) => {
     const out = [];
     if (item.kind === "video") {
-      const [a, b, c] = item.tint;
-      defs.push(`<linearGradient id="v${n}" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient>`);
-      defs.push(`<radialGradient id="w${n}" cx=".3" cy=".3" r=".6"><stop offset="0" stop-color="${c}" stop-opacity=".4"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></radialGradient>`);
-      out.push(`<rect width="${SC.w}" height="${CH}" fill="url(#v${n})"/><rect width="${SC.w}" height="${CH}" fill="url(#w${n})"/>`);
+      // the video plays from just before its card comes to rest
+      out.push(strip(item.frames, [[n ? arrive(n) - 0.25 : 0.1, 0, item.frames.length - 1]]));
       out.push(`<rect y="${CH - 150}" width="${SC.w}" height="150" fill="url(#scrim)"/>`);
       const title = wrap(item.title, { font: "uiBold", size: 9.5 }, SC.w - 48);
       const top = CH - 36 - title.length * 12.5;
@@ -276,7 +335,12 @@ export function buildGavigoCard({ glyphs, root }) {
       out.push(`<rect y="${CH - 2}" width="${SC.w}" height="2" fill="#fff" fill-opacity=".15"/><rect class="${run}" y="${CH - 2}" width="${SC.w * 0.62}" height="2" fill="#fff"/>`);
     } else {
       const live = arrive(n) + 0.3;
-      out.push(`<rect width="${SC.w}" height="${CH}" fill="${M.base}"/><image width="${SC.w}" height="${CH}" preserveAspectRatio="xMidYMid slice" href="data:image/jpeg;base64,${item.image}"/>`);
+      // the game runs once it is live, is parked when the viewer leaves, and on a return
+      // carries on from the frame it was parked on
+      const last = item.frames.length - 1;
+      const parked = Math.min(last, Math.floor((leave(n) - live - 0.3) / STEP));
+      const back = n === 1 && parked < last ? [[RETURN + 0.25, parked, last]] : [];
+      out.push(strip(item.frames, [[live + 0.3, 0, parked], ...back]));
       // on standby the feed card is the dimmed preview and the product's loading line
       out.push(
         `<g${show([[0, live]], 0.2)}><rect width="${SC.w}" height="${CH}" fill="${M.base}" fill-opacity=".78"/>` +
@@ -425,6 +489,6 @@ export function buildGavigoCard({ glyphs, root }) {
       body,
       radius: 16,
     }),
-    facts: { scenes: SCENES.length - 1, stills: rows.length, loop: `${T.toFixed(1)}s` },
+    facts: { scenes: SCENES.length - 1, frames: feed.reduce((sum, f) => sum + f.frames.length, 0), loop: `${T.toFixed(1)}s` },
   };
 }

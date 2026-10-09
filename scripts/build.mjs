@@ -261,7 +261,8 @@ data._spotlightProjects = resolveIds(spotlightIds);
   const onDisk = (p) => fs.existsSync(path.join(repoRoot, p.replace(/^\//, "")));
   const errs = [];
   for (const c of caps) {
-    if (!onDisk(c.collage)) errs.push(`showcaseCapabilities.${c.id}.collage → missing file ${c.collage} (run npm run build:collages)`);
+    if (c.collage && !onDisk(c.collage)) errs.push(`showcaseCapabilities.${c.id}.collage → missing file ${c.collage} (run npm run build:collages)`);
+    if (c.wall && !onDisk(c.wall.art)) errs.push(`showcaseCapabilities.${c.id}.wall.art → missing file ${c.wall.art} (run npm run build:art)`);
   }
   for (const s of data.showcase ?? []) {
     if (!capIds.has(s.capability)) errs.push(`showcase.${s.id}.capability → unknown capability '${s.capability}'`);

@@ -31,7 +31,7 @@ a phone scrolls a feed and an orchestrator's log reacts.
 |---|---|---|---|
 | ArchLang | Code typed beside the plan it compiles, one number scrubbed, a lint finding raised and cleared | 313 KB | 30.0 s |
 | ArchCanvas | One studio session: brief, draft in passes, an edit in plain words, the agent's own advisory, render and export | 197 KB | 29.2 s |
-| GAVIGO IRE | A phone feed beside the orchestration log, each reacting to the other | 193 KB | 21.0 s |
+| GAVIGO IRE | A phone playing the feed’s real videos and gameplay beside the orchestration log, each reacting to the other | 466 KB | 21.0 s |
 | She Sharp | A Slack sync, the visitor assistant's tool call, mentor matching, the mailing list's first send, the agent skills | 180 KB | 27.0 s |
 | Eatropolis | The dish browser filtered by a click, the kitchen lineup, the concierge answering | 240 KB | 21.0 s |
 | FemTech Weekend | The language switch, the summit agenda by day, an application submitted and reviewed | 242 KB | 21.4 s |
@@ -266,9 +266,11 @@ the compiler, and the build fails if any of them has an error.
 
 ### 6.7 A film strip
 
-A last resort since the 2026-10-09 redraw (section 4, "Redraw it"): no card uses one
-now. For footage that cannot be redrawn, stack JPEG frames in a column and step
-through them:
+For footage that cannot be redrawn, stack JPEG frames in a column and step through
+them. An interface is redrawn (section 4); what plays *inside* it may be footage. The
+GAVIGO phone was redrawn with two stills on 2026-10-09 and read as dead: a feed of
+videos and games has to move, so its screen plays 60 frames cut from the film’s own
+source clips, under a vector phone and feed.
 
 ```css
 @keyframes film {
@@ -390,9 +392,9 @@ Looking at one frame in a browser is not verification.
 | `scripts/lib/svg-card/glyphs.mjs` | Glyph subsetting and `<text>` rewriting |
 | `scripts/lib/svg-card/shell.mjs` | The 1300 × 360 file, the reduced-motion rule |
 | `scripts/lib/svg-card/plan.mjs` | Splitting compiler output into layers, extents |
-| `scripts/lib/svg-card/film.mjs` | Word wrap; stills from a film with ffmpeg (no card uses it now) |
+| `scripts/lib/svg-card/film.mjs` | Word wrap; stills from a film with ffmpeg |
 | `scripts/cards/fonts/` | Each product's typefaces, with their sources |
-| `scripts/cards/assets/` | Committed inputs: the few pictures a card keeps (dish photographs, a rendering, two game stills) |
+| `scripts/cards/assets/` | Committed inputs: the few pictures a card keeps (dish photographs, a rendering) |
 | `public/cards/<id>.svg` | The committed cards the README shows |
 
 The reference that set the bar was the profile README of

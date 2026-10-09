@@ -54,6 +54,7 @@ for (const c of caps) {
     failed++;
     continue;
   }
+  if (!c.collage) continue; // a capability shown as a wall has no collage
   const out = path.join(repoRoot, c.collage.replace(/^\//, ""));
   await page.screenshot({ path: out, fullPage: true, type: "jpeg", quality: 86 });
   const kb = Math.round(fs.statSync(out).size / 1024);

@@ -153,13 +153,35 @@
       "description": "Display-ordered capability groups for the craft-evidence showcase (data/profile/45-showcase.yaml). Each owns one collage image.",
       "items": {
         "type": "object",
-        "required": ["id", "label", "blurb", "collage"],
+        "required": ["id", "label", "blurb"],
+        "anyOf": [{ "required": ["collage"] }, { "required": ["wall"] }],
         "additionalProperties": false,
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
           "label": { "type": "string" },
           "blurb": { "type": "string" },
-          "collage": { "type": "string", "pattern": "^/public/evidence/collages/[a-z0-9-]+\\.jpg$" }
+          "collage": { "type": "string", "pattern": "^/public/evidence/collages/[a-z0-9-]+\\.jpg$" },
+          "wall": {
+            "type": "object",
+            "description": "Shown in place of the collage and the items: one linked artwork, one line, and link pills.",
+            "required": ["art", "url", "line", "links"],
+            "additionalProperties": false,
+            "properties": {
+              "art": { "type": "string", "pattern": "^/public/readme/[a-zA-Z0-9-]+\\.svg$" },
+              "url": { "type": "string", "format": "uri" },
+              "line": { "type": "string", "minLength": 1 },
+              "links": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": ["label", "url"],
+                  "additionalProperties": false,
+                  "properties": { "label": { "type": "string" }, "url": { "type": "string", "format": "uri" } }
+                }
+              }
+            }
+          }
         }
       }
     },

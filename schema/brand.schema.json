@@ -230,6 +230,32 @@
                 "signature": { "type": "string", "minLength": 1 }
               }
             },
+            "story": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["eyebrow", "chapters"],
+              "description": "The story card (story.svg): short chapters, each a headline, one line, a photograph and a moving picture.",
+              "properties": {
+                "eyebrow": { "type": "string", "minLength": 1 },
+                "chapters": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["headline", "line", "photo", "picture"],
+                    "properties": {
+                      "headline": { "type": "string", "minLength": 1 },
+                      "line": { "type": "string", "minLength": 1 },
+                      "photo": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+                      "caption": { "type": "string" },
+                      "picture": { "enum": ["maps", "vanish", "crossing", "agent", "subtract", "surfaced", "today"] },
+                      "labels": { "type": "array", "items": { "type": "string" } }
+                    }
+                  }
+                }
+              }
+            },
             "pills": {
               "type": "object",
               "description": "Label as the README shows it → capsule variant.",

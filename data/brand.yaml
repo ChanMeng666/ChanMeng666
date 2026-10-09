@@ -501,8 +501,8 @@ signatures:
       rule: "keyboard :focus-visible shows the orange focus ring (shadow.focusRing); pill inputs thicken the border to 2px — no glow on mouse interaction"
     reducedMotion: "honour prefers-reduced-motion: reduce — disable all transitions/animation"
 
-  # 5. README artwork — the hero, the section strips, the footer, the closing
-  #    cover and the link pills. Since 2026-10-07 these are files in this repo, drawn in the
+  # 5. README artwork — the hero, the story card, the section strips, the
+  #    footer, the closing cover and the link pills. Since 2026-10-07 these are files in this repo, drawn in the
   #    Caldera system by `npm run build:art` (scripts/build-readme-art.mjs →
   #    public/readme/*.svg) and committed; the README no longer fetches a
   #    banner or a pill from any outside service (Chan's decision). Method and
@@ -528,6 +528,58 @@ signatures:
     cover:
       mark: "/public/brands/chan-meng-monkey-white-transparent.svg"
       signature: "Chan Meng"
+    # The story card (public/readme/story.svg): who Chan is, in seven short
+    # chapters, each with a photograph and one small moving picture. First
+    # person, plain words. Every line restates the extended CV's chapters 1 and 2
+    # (cv/extended.typ) or the README's own facts: change those first. Life
+    # detail outside those two chapters does not go on this card.
+    #   photo:   a crop in scripts/readme-art/assets/story/
+    #   caption: the tab on the photograph (optional)
+    #   picture: which moving picture the chapter draws; labels: its words
+    story:
+      eyebrow: "My story"
+      chapters:
+        - headline: "I started with maps."
+          line: "A geography degree, then a first job teaching maths to teenagers in China."
+          photo: nanning
+          caption: "Nanning, my hometown"
+          picture: maps
+          labels: ["Geography", "Maths"]
+        - headline: "Then the industry vanished."
+          line: "Almost overnight, private tutoring was regulated out of existence."
+          photo: nanning
+          caption: "Nanning, my hometown"
+          picture: vanish
+          labels: ["Private tutoring"]
+        - headline: "At thirty, I began again."
+          line: "I moved to New Zealand and read for a Master of Applied Computing."
+          photo: lincoln
+          caption: "Lincoln University, 2023"
+          picture: crossing
+          labels: ["Nanning, China", "Lincoln, New Zealand", "Master of Applied Computing", "with Distinction"]
+        - headline: "I learned to build with AI."
+          line: "From my first assignment I paired with a model. Today I direct coding agents."
+          photo: corde
+          caption: "On site at CORDE, 2024"
+          picture: agent
+          labels: ["I choose what to build", "The agent types"]
+        - headline: "I am a minimalist."
+          line: "Everything I own fits in one backpack and one suitcase. I subtract until only the idea is left."
+          photo: room
+          caption: "One room, almost empty"
+          picture: subtract
+          labels: ["1 backpack", "1 suitcase"]
+        - headline: "The work spoke first."
+          line: "A founder asked Claude Code to find an AI architect. It surfaced me. I hadn't applied; the work had."
+          photo: keynote
+          caption: "AI Hackathon Festival, 2025"
+          picture: surfaced
+          labels: ["Chan Meng", "It's true, Claude Code surfaced Chan as one of the strongest matches for what we're looking for.", "Luka Madzarac, Founder, Engram"]
+        - headline: "Now I build AI agents."
+          line: "Founder of ArchCanvas. CTO at FemTech Weekend. Based in Auckland."
+          photo: portrait
+          picture: today
+          labels: ["UN CSW 69", "speaker, New York", "27", "recommendations", "2 years", "Outstanding Mentor Award"]
     pills:
       "Book a 30-min intro": ink
       "Portfolio":           ash

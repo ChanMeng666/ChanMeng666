@@ -17,6 +17,7 @@ export const C = {
 
 export const FONTS = {
   display: "cv/fonts/Anton-Regular.ttf",
+  sans: "cv/fonts/DMSans-Regular.ttf",
   sansBold: "cv/fonts/DMSans-Bold.ttf",
   mono: "cv/fonts/JetBrainsMono-Regular.ttf",
 };

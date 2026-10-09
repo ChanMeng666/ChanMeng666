@@ -276,7 +276,7 @@ Five micro-signatures Chan owns — every one built on assets she controls (the 
 
 ### 8.5 README artwork (`readmeArt`)
 
-The section strips, the footer band, the closing cover (`cover.svg`: the motto on an ink plate, one dither field emptying beside “Subtraction for life,” and one filling beside “addition for thought.”) and the CTA / link pills: flat Caldera capsules and plates that share one faint grid and corner crop marks, one committed SVG per label, listed in `brand.yaml signatures.readmeArt` and drawn by `scripts/build-readme-art.mjs`. Pill variants: `ink`, `ash`, `orange`, `violet`. Nothing is fetched from an outside service.
+The story card (`story.svg`: who Chan is in seven short chapters, a photograph beside a headline, one line and a small moving picture; its copy is `readmeArt.story` and restates the extended CV's first two chapters), the section strips, the footer band, the closing cover (`cover.svg`: the motto on an ink plate, one dither field emptying beside “Subtraction for life,” and one filling beside “addition for thought.”) and the CTA / link pills: flat Caldera capsules and plates that share one faint grid and corner crop marks, one committed SVG per label, listed in `brand.yaml signatures.readmeArt` and drawn by `scripts/build-readme-art.mjs`. Pill variants: `ink`, `ash`, `orange`, `violet`. Nothing is fetched from an outside service.
 
 - **Use:** the README's banners and its CTA / link pills.
 - **Do not use:** inside body prose. As decoration between sibling items.

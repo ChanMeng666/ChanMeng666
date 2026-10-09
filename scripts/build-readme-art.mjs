@@ -17,6 +17,7 @@ import { GlyphSet } from "./lib/svg-card/glyphs.mjs";
 import { cover, nameplate, strip } from "./readme-art/banners.mjs";
 import { C, FONTS, slug } from "./readme-art/kit.mjs";
 import { pill } from "./readme-art/pills.mjs";
+import { story } from "./readme-art/story.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..").replace(/\\/g, "/");
 const art = yaml.load(fs.readFileSync(path.join(root, "data", "brand.yaml"), "utf8")).signatures.readmeArt;
@@ -46,6 +47,11 @@ for (const [id, b] of Object.entries(art.banners)) {
     ? nameplate({ glyphs: glyphs(), text: b.text, title: b.text, ...NAMEPLATES[b.art] })
     : strip({ glyphs: glyphs(), text: b.text, motif: b.art });
   files.push([`${id}.svg`, svg]);
+}
+if (art.story) {
+  // the image's alt text: the whole story, as sentences
+  const title = art.story.chapters.map((c) => `${c.headline} ${c.line}`).join(" ");
+  files.push(["story.svg", story({ glyphs: glyphs(), root, eyebrow: art.story.eyebrow, chapters: art.story.chapters, title })]);
 }
 Object.entries(art.pills).forEach(([label, variant], index) => {
   files.push([`pill-${slug(label)}.svg`, pill({ glyphs: glyphs(), label, variant, index })]);

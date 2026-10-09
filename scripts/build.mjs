@@ -69,6 +69,11 @@ data.decorations = {
   banners: Object.fromEntries(
     Object.entries(readmeArt.banners).map(([id, b]) => [id, { text: b.text, src: artFile(id, `banner "${id}"`) }]),
   ),
+  // the story card: its alt text is the story itself, as sentences
+  story: readmeArt.story && {
+    src: artFile("story", "the story card"),
+    text: readmeArt.story.chapters.map((c) => `${c.headline} ${c.line}`).join(" "),
+  },
   visitorCounter: brand.signatures.visitorCounter,
   sunoCards: brand.signatures.sunoCards,
 };

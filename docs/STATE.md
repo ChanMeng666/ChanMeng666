@@ -35,6 +35,7 @@ LinkedIn copy.
 | **Chromaflow** (`gradient-svg-generator`) | Off every visitor-facing surface since 2026-10-07; keeps its narrative in the llms files (`llmsOnlyOpenSourceIds`). Repo stays public and maintained. No surface may say it powers this profile. Her other repos' READMEs still embed it and are not to be touched |
 | **Te Pā Tiaki** (`css-tower-defense`) | Archived 2026-10-07, deployment retired. Its Neon database was left alone on purpose |
 | **Music videos** (four `*-mv` projects, fourteen films) | Shown on YouTube, on chanmeng.org/films, and as poster tiles on the README's film wall (the wall added 2026-10-10, her call); nowhere else: no project card, no CV, no LinkedIn copy, no other page of the site. The repos are private: no repo links. Copy says how a film is drawn, never what the album is about |
+| **Posting films** | Two films a week on LinkedIn and X, Tuesday and Thursday, posted by Chan by hand (2026-10-12). Music videos are not posted to X or LinkedIn (confirmed the same day). Draft text stays in the gitignored `distribution/drafts/` until she has approved and posted it |
 | **Promo films** | One film on show per product (`productFilms` in `45-showcase.yaml`, checked by `check:ecosystem`). A product's film repos coexist; none replaces another. Exception: chanmeng.org/films shows every version |
 | **Films on the README** | Not embedded since 2026-10-10. The film wall (`public/readme/films.svg`) stands open under "What I make beyond code", with one line and two links: chanmeng.org/films and YouTube. One tile per film: each product's primary film, the brand and event films, the music videos |
 | **chanmeng.org/films** | Every finished film. Not shown: the ArchLang narrated demo. Screen-recorded demos are not films and stay on YouTube. Source `46-films.yaml` → `dist/films.json` → the site's `scripts/sync-films.mjs` |
@@ -58,6 +59,8 @@ LinkedIn copy.
 | LinkedIn profile | `linkedin/account.yaml`, `linkedin/posts.yaml`; full text in `posts/<year>.yaml` | `linkedin-sync` skill |
 | LinkedIn, ArchCanvas page | `linkedin/company/archcanvas/` | `linkedin-sync` skill |
 | Suno (two accounts) | `suno/accounts.yaml`, `suno/songs.yaml`; lyrics in `suno/words.yaml` | `suno-sync` skill |
+
+| Film distribution (all platforms) | `distribution/status.yaml`, `distribution/calendar.md`; the plan is `distribution/plan.yaml` | Hand (the plan), then `npm run build:distribution`; how to run the calendar: `distribution/README.md` |
 
 Current figures are in each register's `summary`, not here.
 

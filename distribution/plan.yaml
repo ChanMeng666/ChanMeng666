@@ -1,0 +1,167 @@
+# =============================================================================
+# FILM DISTRIBUTION PLAN — where each finished film is published, and when
+# =============================================================================
+# HAND-EDITED. This is the only file in distribution/ a person or Claude edits.
+# `npm run build:distribution` reads it with the filmography
+# (data/profile/46-films.yaml) and the platform registers (youtube/, x/,
+# linkedin/) and writes status.yaml (film x platform matrix) and calendar.md.
+# How to run the calendar with Chan: distribution/README.md.
+#
+# What lives where:
+#   - WHICH films exist, their YouTube ids and whether the site shows them:
+#     46-films.yaml. Never repeat those facts here.
+#   - WHICH platforms a film is meant for: `policy` below (by kind of film),
+#     with per-film exceptions in `overrides`.
+#   - A social post that already carries a film: `posted` below, one row per
+#     post, pointing at the post's id in the X or LinkedIn register. Dates and
+#     counts are read from the register, not typed here.
+#   - A post still to make: `schedule` below.
+#
+# This repo is public. Draft post text is NOT kept in a tracked file: it lives
+# in the gitignored distribution/drafts/ until Chan has posted it, after which
+# the X or LinkedIn register holds the published text. The video files staged
+# for upload live in the gitignored distribution/_staging/.
+# =============================================================================
+
+schemaVersion: 1
+asOf: "2026-10-12"
+
+platforms:
+  youtube:       { name: YouTube, account: "@ChanMeng666", register: youtube/videos.yaml }
+  youtube-short: { name: YouTube Shorts, account: "@ChanMeng666", register: youtube/videos.yaml }
+  site:          { name: chanmeng.org/films, register: data/profile/46-films.yaml }
+  linkedin:      { name: LinkedIn (personal), account: linkedin.com/in/chanmeng666, register: linkedin/posts.yaml }
+  x:             { name: X, account: "@chanmeng666", register: x/posts.yaml }
+  linkedin-page: { name: LinkedIn (ArchCanvas page), account: linkedin.com/company/archcanvas, register: linkedin/company/archcanvas/posts.yaml }
+
+# Platform facts the schedule depends on. Re-check before relying on one.
+constraints:
+  x: { maxVideoSeconds: 140, maxChars: 280, urlChars: 23, editable: false, note: "No Premium on the account: a film longer than 140 s goes up as a YouTube link" }
+  linkedin: { linkPlacement: first-comment, note: "Upload the video natively; put links in the first comment" }
+
+# Which platforms a kind of film is meant for. First matching rule wins.
+# `reason` is shown wherever a platform is not targeted.
+policy:
+  - id: not-shown
+    match: { notShown: true }
+    targets: []
+    reason: "Recorded, shown nowhere (docs/STATE.md): the project is not public, or the film was not made as a promo"
+  - id: music-video
+    match: { kind: music-video }
+    targets: [youtube, site]
+    reason: "Music videos are shown on YouTube and chanmeng.org/films only (Chan, 2026-10-09; confirmed 2026-10-12)"
+  - id: earlier-version
+    match: { kind: product-film, primary: false }
+    targets: [site]
+    reason: "One film on show per product; earlier and alternative versions are on chanmeng.org/films only"
+  - id: product-film
+    match: { kind: product-film, primary: true }
+    targets: [youtube, youtube-short, site, linkedin, x]
+  - id: brand-film
+    match: { kind: brand-film }
+    targets: [youtube, site, linkedin, x]
+  - id: event-promo
+    match: { kind: event-promo }
+    targets: [youtube, site, linkedin, x]
+
+# Per-film exceptions to the policy.
+overrides:
+  - film: archcanvas-studio-film
+    add: [linkedin-page]
+    owner: archcanvas-growth
+    note: "ArchCanvas and ArchLang posts are scheduled in the private archcanvas-growth repo (marketing/content/calendar.md), not here"
+  - film: archlang-film
+    owner: archcanvas-growth
+    note: "Scheduled with the ArchCanvas and ArchLang content, not here"
+  - film: archlang-film
+    remove: [youtube-short]
+    note: "One cut, 16:9: no Short"
+  - film: a11y-loop-film
+    remove: [youtube-short]
+    note: "One narrated cut, 16:9: no Short"
+
+# Social posts that already carry a film. `post` is the id in the platform's
+# register; `via` says how the film appears in the post.
+posted:
+  - { film: chan-meng-intro, platform: x, post: "2104838939353964848", via: native-video, cut: "64 s, 16:9" }
+  - { film: chan-meng-intro, platform: linkedin, post: "7510604261312081922", via: native-video, cut: "64 s, 16:9" }
+  - { film: chan-meng-monkey-sting, platform: x, post: "2104816112890482878", via: native-video, cut: "12 s, 16:9" }
+  - { film: chan-meng-monkey-sting, platform: linkedin, post: "7510578557501304832", via: native-video, cut: "12 s, 16:9" }
+  - { film: archcanvas-studio-film, platform: x, post: "2101913504966164915", via: native-video, cut: "120 s, 9:16" }
+  - { film: archcanvas-studio-film, platform: x, post: "2103302844887843169", via: native-video, cut: "60 s, 9:16" }
+  - { film: archcanvas-studio-film, platform: x, post: "2104347619799794139", via: native-video, cut: "30 s, 9:16" }
+  - { film: archcanvas-studio-film, platform: linkedin-page, post: "7507675519014879232", via: native-video, cut: "120 s" }
+  - { film: archcanvas-studio-film, platform: linkedin-page, post: "7509068305861672961", via: native-video, cut: "60 s" }
+  - { film: archcanvas-studio-film, platform: linkedin-page, post: "7510108568793096192", via: native-video, cut: "30 s" }
+  - { film: archcanvas-studio-film, platform: linkedin, post: "7507678365529800704", via: reshare, cut: "120 s", note: "Reshare of the ArchCanvas page's post, not a native upload" }
+  - { film: a11y-loop-film, platform: linkedin, post: "7492769690893635584", via: youtube-link, cut: "2 min 59 s" }
+  - { film: echook-first-film, platform: linkedin, post: "7427973506908409856", via: native-video, cut: "57 s", note: "Posted when the film was new; the film is no longer the one on show" }
+
+# Posts still to make. One row per post. Two films a week (Chan, 2026-10-12),
+# on Tuesday and Thursday: LinkedIn's Monday, Wednesday and Friday belong to
+# the ArchCanvas calendar. X goes out the same day as LinkedIn.
+#   status: draft     text exists in distribution/drafts/, not yet approved
+#           approved  Chan approved that exact text
+#           posted    live; move the row to `posted` above once the register
+#                     has the post (run the x-sync / linkedin-sync skill)
+#           skipped   decided against; keep the row and say why in `note`
+#   asset:  file under distribution/_staging/ (see README for how it is filled)
+#   draft:  file under distribution/drafts/ and the key inside it
+schedule:
+  - { date: "2026-10-20", film: chan-meng-showreel, platform: linkedin, cut: "112.5 s, 16:9", asset: "01-chan-meng-showreel/showreel_112s_16x9.mp4", draft: "chan-meng-showreel.yaml#linkedin", status: draft }
+  - { date: "2026-10-20", film: chan-meng-showreel, platform: x, cut: "55 s, 16:9", asset: "01-chan-meng-showreel/showreel-short_55s_16x9.mp4", draft: "chan-meng-showreel.yaml#x", status: draft }
+  - { date: "2026-10-22", film: eatropolis-film, platform: linkedin, cut: "60 s, 16:9", asset: "02-eatropolis-film/eatropolis_60s_16x9.mp4", draft: "eatropolis-film.yaml#linkedin", status: draft }
+  - { date: "2026-10-22", film: eatropolis-film, platform: x, cut: "30 s, 16:9", asset: "02-eatropolis-film/eatropolis_30s_16x9.mp4", draft: "eatropolis-film.yaml#x", status: draft }
+  - { date: "2026-10-27", film: echook-film, platform: linkedin, cut: "60 s, 16:9", asset: "03-echook-film/echook_60s_16x9.mp4", draft: "echook-film.yaml#linkedin", status: draft }
+  - { date: "2026-10-27", film: echook-film, platform: x, cut: "60 s, 16:9", asset: "03-echook-film/echook_60s_16x9.mp4", draft: "echook-film.yaml#x", status: draft }
+  - { date: "2026-10-29", film: she-sharp-film, platform: linkedin, cut: "60 s, 16:9", asset: "04-she-sharp-film/she-sharp_60s_16x9.mp4", draft: "she-sharp-film.yaml#linkedin", status: draft }
+  - { date: "2026-10-29", film: she-sharp-film, platform: x, cut: "30 s, 16:9", asset: "04-she-sharp-film/she-sharp_30s_16x9.mp4", draft: "she-sharp-film.yaml#x", status: draft }
+  - { date: "2026-11-03", film: tam-ai-ti-film, platform: linkedin, cut: "60 s, 16:9", asset: "05-tam-ai-ti-film/tam-ai-ti_60s_16x9.mp4", draft: "tam-ai-ti-film.yaml#linkedin", status: draft }
+  - { date: "2026-11-03", film: tam-ai-ti-film, platform: x, cut: "30 s, 16:9", asset: "05-tam-ai-ti-film/tam-ai-ti_30s_16x9.mp4", draft: "tam-ai-ti-film.yaml#x", status: draft }
+  - { date: "2026-11-05", film: corde-mobile-film, platform: linkedin, cut: "60 s, 16:9", asset: "06-corde-mobile-film/corde-mobile_60s_16x9.mp4", draft: "corde-mobile-film.yaml#linkedin", status: draft }
+  - { date: "2026-11-05", film: corde-mobile-film, platform: x, cut: "30 s, 16:9", asset: "06-corde-mobile-film/corde-mobile_30s_16x9.mp4", draft: "corde-mobile-film.yaml#x", status: draft }
+  - { date: "2026-11-10", film: ai-programming-school-film, platform: linkedin, cut: "60 s, 16:9", asset: "07-ai-programming-school-film/ai-programming_60s_16x9.mp4", draft: "ai-programming-school-film.yaml#linkedin", status: draft }
+  - { date: "2026-11-10", film: ai-programming-school-film, platform: x, cut: "30 s, 16:9", asset: "07-ai-programming-school-film/ai-programming_30s_16x9.mp4", draft: "ai-programming-school-film.yaml#x", status: draft }
+  - { date: "2026-11-12", film: a11y-loop-film, platform: x, cut: "2 min 59 s, as a YouTube link", asset: null, draft: "a11y-loop-film.yaml#x", status: draft, note: "Longer than X allows as an upload. LinkedIn already has this film (2026-08-11)" }
+  - { date: "2026-11-17", film: gavigo-ire-film, platform: linkedin, cut: "60 s, 16:9", asset: "08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4", draft: "gavigo-ire-film.yaml#linkedin", status: draft }
+  - { date: "2026-11-17", film: gavigo-ire-film, platform: x, cut: "30 s, 16:9", asset: "08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4", draft: "gavigo-ire-film.yaml#x", status: draft }
+  - { date: "2026-11-19", film: she-sharp-lesmills-promo, platform: linkedin, cut: "30 s, 16:9", asset: "09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4", draft: "she-sharp-lesmills-promo.yaml#linkedin", status: draft, note: "Optional: the event has passed. Post it as a piece of craft, or mark it skipped" }
+  - { date: "2026-11-19", film: she-sharp-lesmills-promo, platform: x, cut: "30 s, 16:9", asset: "09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4", draft: "she-sharp-lesmills-promo.yaml#x", status: draft, note: "Optional, as above" }
+
+# Where each staged file comes from: path under distribution/_staging/ ->
+# path under D:/github_repository (the film repo's own render). The staged
+# copies are local and gitignored; `npm run stage:distribution` refreshes them
+# and removes what the schedule no longer needs. Each folder also gets the
+# vertical cut where one exists, as the alternative upload.
+assets:
+  01-chan-meng-showreel/showreel_112s_16x9.mp4: chan-meng-promo-video/out/showreel/master-1080p.mp4
+  01-chan-meng-showreel/showreel-short_55s_16x9.mp4: chan-meng-promo-video/out/showreel-short/master-1080p.mp4
+  02-eatropolis-film/eatropolis_60s_16x9.mp4: eatropolis-promo-film/out/masters/A-synth-market-day/Eatropolis-60-Landscape-16x9.mp4
+  02-eatropolis-film/eatropolis_30s_16x9.mp4: eatropolis-promo-film/out/masters/A-synth-market-day/Eatropolis-30-Landscape-16x9.mp4
+  02-eatropolis-film/eatropolis_60s_9x16.mp4: eatropolis-promo-film/out/masters/A-synth-market-day/Eatropolis-60-Portrait-9x16.mp4
+  02-eatropolis-film/eatropolis_30s_9x16.mp4: eatropolis-promo-film/out/masters/A-synth-market-day/Eatropolis-30-Portrait-9x16.mp4
+  03-echook-film/echook_60s_16x9.mp4: echook-promo-studio/out/masters/echook_60s_landscape_1920x1080.mp4
+  03-echook-film/echook_30s_16x9.mp4: echook-promo-studio/out/masters/echook_30s_landscape_1920x1080.mp4
+  03-echook-film/echook_60s_9x16.mp4: echook-promo-studio/out/masters/echook_60s_vertical_1080x1920.mp4
+  04-she-sharp-film/she-sharp_60s_16x9.mp4: she-sharp-promo-studio/out/masters/chan-meng_she-sharp_60s_landscape_1920x1080.mp4
+  04-she-sharp-film/she-sharp_30s_16x9.mp4: she-sharp-promo-studio/out/masters/chan-meng_she-sharp_30s_landscape_1920x1080.mp4
+  04-she-sharp-film/she-sharp_60s_9x16.mp4: she-sharp-promo-studio/out/masters/chan-meng_she-sharp_60s_vertical_1080x1920.mp4
+  04-she-sharp-film/she-sharp_30s_9x16.mp4: she-sharp-promo-studio/out/masters/chan-meng_she-sharp_30s_vertical_1080x1920.mp4
+  05-tam-ai-ti-film/tam-ai-ti_60s_16x9.mp4: tamaiti-promo-studio/out/masters/tam-ai-ti_60s_landscape_1920x1080.mp4
+  05-tam-ai-ti-film/tam-ai-ti_30s_16x9.mp4: tamaiti-promo-studio/out/masters/tam-ai-ti_30s_landscape_1920x1080.mp4
+  05-tam-ai-ti-film/tam-ai-ti_60s_9x16.mp4: tamaiti-promo-studio/out/masters/tam-ai-ti_60s_vertical_1080x1920.mp4
+  05-tam-ai-ti-film/tam-ai-ti_30s_9x16.mp4: tamaiti-promo-studio/out/masters/tam-ai-ti_30s_vertical_1080x1920.mp4
+  06-corde-mobile-film/corde-mobile_60s_16x9.mp4: corde-promo-studio/out/masters/corde-mobile_60s_landscape_1920x1080.mp4
+  06-corde-mobile-film/corde-mobile_30s_16x9.mp4: corde-promo-studio/out/masters/corde-mobile_30s_landscape_1920x1080.mp4
+  06-corde-mobile-film/corde-mobile_60s_9x16.mp4: corde-promo-studio/out/masters/corde-mobile_60s_vertical_1080x1920.mp4
+  06-corde-mobile-film/corde-mobile_30s_9x16.mp4: corde-promo-studio/out/masters/corde-mobile_30s_vertical_1080x1920.mp4
+  07-ai-programming-school-film/ai-programming_60s_16x9.mp4: ai-programming-teaching-promo/out/masters/Film-60-landscape.mp4
+  07-ai-programming-school-film/ai-programming_30s_16x9.mp4: ai-programming-teaching-promo/out/masters/Film-30-landscape.mp4
+  07-ai-programming-school-film/ai-programming_60s_9x16.mp4: ai-programming-teaching-promo/out/masters/Film-60-portrait.mp4
+  07-ai-programming-school-film/ai-programming_30s_9x16.mp4: ai-programming-teaching-promo/out/masters/Film-30-portrait.mp4
+  08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4: gavigo-promo-film/out/masters/gavigo-ire-60s-landscape.mp4
+  08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4: gavigo-promo-film/out/masters/gavigo-ire-30s-landscape.mp4
+  08-gavigo-ire-film/gavigo-ire_60s_9x16.mp4: gavigo-promo-film/out/masters/gavigo-ire-60s-portrait.mp4
+  08-gavigo-ire-film/gavigo-ire_30s_9x16.mp4: gavigo-promo-film/out/masters/gavigo-ire-30s-portrait.mp4
+  09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4: she-sharp-promo-video-event-lesmills-03-september-2026/out/she-sharp-lesmills-2026-09-03_landscape_1920x1080.mp4
+  09-she-sharp-lesmills-promo/lesmills_30s_9x16.mp4: she-sharp-promo-video-event-lesmills-03-september-2026/out/she-sharp-lesmills-2026-09-03_vertical_1080x1920.mp4

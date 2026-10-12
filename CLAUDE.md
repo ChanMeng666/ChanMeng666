@@ -21,8 +21,8 @@ Edit the shard, run `npm run check`, commit the shard and the regenerated
 outputs together. Find an entry with `grep -rn "id: <slug>" data/profile/`.
 
 Not part of `npm run build`, run by hand when their inputs change:
-`npm run build:cards`, `npm run build:art`, `pwsh cv/build.ps1`, the platform
-syncs.
+`npm run build:cards`, `npm run build:art`, `npm run build:distribution`,
+`pwsh cv/build.ps1`, the platform syncs.
 
 | Shard | Top-level keys |
 |---|---|
@@ -122,6 +122,11 @@ the bump Cloudflare serves the old CV for hours and it looks fine.
   before answering anything about a platform; bring one up to date with the
   `x-sync`, `linkedin-sync` or `suno-sync` skill. What is posted there is
   Chan's to change: ask first.
+- **Film distribution** (which film is published where, and the posting
+  calendar): `distribution/`. Read `distribution/README.md` before answering
+  what is due or drafting a post; edit only `plan.yaml`, then
+  `npm run build:distribution`. Draft text and staged video files are local
+  and gitignored.
 - **Repo lineage**: `docs/ecosystem/lineage.yaml` (sensitive repos only in the
   gitignored `lineage.private.yaml`). When a repo is created, archived,
   renamed, transferred or deleted, update it and run

@@ -80,13 +80,19 @@ for (const cal of plan.otherCalendars ?? []) {
   const abs = path.join(lineage.localRoot, cal.path);
   if (!fs.existsSync(abs)) { notes.push(`${cal.id}: ${cal.path} is not on this machine, so its items are missing below.`); continue; }
   const lines = fs.readFileSync(abs, "utf8").split(/\r?\n/);
-  const from = lines.findIndex((l) => /^## The schedule\s*$/.test(l));
-  if (from < 0) { notes.push(`${cal.id}: no "## The schedule" section found in ${cal.path}.`); continue; }
-  let to = lines.findIndex((l, i) => i > from && /^## /.test(l));
-  if (to < 0) to = lines.length;
+  // Every section whose heading starts "## The schedule" is read (a calendar may
+  // keep one schedule per account); a section ends at the next "## " heading.
+  const inSchedule = [];
+  let on = false;
+  for (const l of lines) {
+    if (/^## /.test(l)) on = /^## The schedule\b/.test(l);
+    inSchedule.push(on && !/^## /.test(l));
+  }
+  if (!inSchedule.some(Boolean)) { notes.push(`${cal.id}: no "## The schedule" section found in ${cal.path}.`); continue; }
   let cur = null;
   const flush = () => { if (cur) items.push(cur); cur = null; };
-  for (let i = from + 1; i < to; i++) {
+  for (let i = 0; i < lines.length; i++) {
+    if (!inSchedule[i]) continue;
     const line = lines[i];
     const h = line.match(/^### (.+)$/);
     if (h) {
@@ -107,7 +113,7 @@ for (const cal of plan.otherCalendars ?? []) {
   }
   flush();
   for (const it of items.filter((x) => x.source === cal.id))
-    for (const s of it.steps) if (!s.done && s.owner === "you" && !/^(Posted|X thread posted|Community post|Week's best post|Final text approved)/i.test(s.text)) it.blockers.push(`waits on you: ${s.text.replace(/\*\*/g, "").slice(0, 110)}${s.text.length > 110 ? "…" : ""}`);
+    for (const s of it.steps) if (!s.done && s.owner === "you" && !/^(Posted|X thread posted|Community post|Week's best post|Final text approved|Images attached|Video attached)/i.test(s.text)) it.blockers.push(`waits on you: ${s.text.replace(/\*\*/g, "").slice(0, 110)}${s.text.length > 110 ? "…" : ""}`);
 }
 
 // ---- 3. render --------------------------------------------------------------

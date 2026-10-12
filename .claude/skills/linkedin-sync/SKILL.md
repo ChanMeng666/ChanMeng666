@@ -82,6 +82,7 @@ page.
 | A value shows as `[BLOCKED: …]` | The tool's display, not the data; the clipboard copy is unaffected |
 | `this is the page's admin address` | Without `viewAsMember=true` LinkedIn redirects an admin: use the address above |
 | The loader on the second page returns `undefined` | A new tab was opened, so sessionStorage is empty: pass the snippet file again |
+| The loader throws `EvalError` (Content Security Policy, `unsafe-eval`) | LinkedIn's pages no longer allow `new Function` (seen 2026-10-12 on the company page): pass the snippet file again on the second page |
 | `LinkedIn answered 4xx` for the feed | An endpoint was renamed. Watch the network for the request the page itself makes and update `snippet.js`; do not guess endpoints |
 | `signed in as X, not chanmeng666` | Ask her to switch accounts; never sign in yourself |
 | Mentions shifted by a letter | Offsets are code points and an emoji is two UTF-16 units: keep `[...text].slice` in the snippet |

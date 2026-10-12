@@ -86,7 +86,7 @@ bump, `npm pack --dry-run`), then she runs `npm publish` herself.
 
 | Platform | What |
 |---|---|
-| Cloudflare Pages | `2d-portfolio` (chanmeng.org; push to `main` deploys), `ai-programming-teaching-project` (programming.chanmeng.org), `femtech-weekend-website`, `femtech-weekend-redthread` |
+| Cloudflare Pages | `2d-portfolio` (chanmeng.org; push to `main` deploys), `ai-programming-teaching-project` (programming.chanmeng.org), `femtech-weekend-website` |
 | Cloudflare Workers | `sunostats` (seismophone.chanmeng.org, with crons; pending archive), `archlang-docs` (archlang.uk), `archlang-playground`, `ai-chat-worker` (programming-api.chanmeng.org) |
 | Vercel (personal scope) | `gradient-svg-generator`, `github-readme-suno-cards`, `github-visitor-counter` |
 | One DigitalOcean droplet | ArchCanvas and Vitex, run through Coolify behind Traefik. www.vitex.org.nz stays live although the Vitex repo is archived and private |
@@ -130,9 +130,6 @@ items exist (location in the private file).
 
 ## Folders deliberately without a GitHub repo
 
-- `D:\github_repository\femtech-weekend-assets`: non-git asset vault feeding
-  `femtech-weekend-redthread`. It contains a file over 100 MB, so it cannot go to
-  GitHub.
 - `D:\github_repository\obsidian`: personal notes, not a project.
 
 ## Pending
@@ -142,5 +139,4 @@ As of 2026-10-07.
 | Item | Due |
 |---|---|
 | Delete the five listing forks once their PRs close (or all at once, one confirmation) | by 2026-11-14 |
-| Back up `femtech-weekend-assets` off this machine | open |
 | **Archive Seismophone** (`sunostats`, seismophone.chanmeng.org). Left online for now at Chan's request; already off every visitor-facing surface (2026-10-07). When Chan says go: (1) export the data that cannot be collected again from its database (the lineage edges and the trending snapshots) and archive it; (2) move the published and unpublished observatory reports to chanmeng.org/blog; (3) stop sign-in, sync, the scheduled jobs, the MCP endpoint and the database; (4) leave a static page on the domain that says the project is archived and keeps `/legal/data-sources` alive, because the Suno probe's User-Agent contact URL points there; (5) repoint the README-cards links that lead to Seismophone; (6) set the shard to `status: archived` + `recency: deprecated`, archive the repo and its growth repo, update lineage. The probe and the README cards keep running | when Chan gives the word |

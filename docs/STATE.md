@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-10-10.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-10-12.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -16,8 +16,8 @@ gitignored `docs/STATE.private.md`. Read it when present; never copy from it.
 |---|---|---|
 | **Main focus** | See the private state file | Weigh every "where should effort go" question against it |
 | Own product | **ArchCanvas + ArchLang** | Her decision, 2026-10-07: keep developing. Do not re-argue it; help validate (user interviews, launch) |
-| Client work | **GenLAB Career Academy** for NZiFOCUS | Lead developer, not the sole decision-maker: the pace follows the client |
-| Role | **FemTech Weekend** CTO; the Red Thread site is in founder review | Pace set by the founder |
+| Client work | **GenLAB Career Academy** for NZiFOCUS, in development | Lead developer, not the sole decision-maker: the pace follows the client |
+| Role | **FemTech Weekend** CTO; the **LYZEN** company site (repo `femtech-weekend-redthread`) is in founder review | Pace set by the founder |
 | Maintenance only | echook, gradient-svg-generator, a11y-loop, the Google News and Google Jobs MCP servers, the agent skills | Free open-source tools. Never propose paid tiers. Keep them healthy, add no features |
 | Ended | GAVIGO (left 2026-09, access withdrawn), She Sharp (handed over 2026-09), CORDE (handed over 2024) | Still her lead-developer work, still shown as case studies |
 
@@ -29,7 +29,8 @@ LinkedIn copy.
 
 | Subject | Rule |
 |---|---|
-| **GenLAB Career Academy** (`genlab-career-academy`) | In the database, `llms-full.txt` and `dist/profile.json` only; on no visitor-facing surface. Kept so by: no `90-meta.yaml` bucket, tier never `flagship` (flagship is auto-selected into `public/cv-llms.txt`), no `organizations[]` entry for NZiFOCUS, collaborator `nga-blanchard` has `publicListing: false`. When Chan clears it: add the org, choose a tier, then the `career-copy` skill |
+| **GenLAB Career Academy** (`genlab-career-academy`) | In development (Chan, 2026-10-12). In the database, `llms-full.txt` and `dist/profile.json` only; on no visitor-facing surface; it may be named openly in the data files. Its how-it-works film (`genlab-how-it-works`, repo `genlab-promo-studio`) follows the same rule and its content is not published: no media, not on /films, no `productFilms` row, no tile on the film wall. Kept so by: no `90-meta.yaml` bucket, tier never `flagship` (flagship is auto-selected into `public/cv-llms.txt`), no `organizations[]` entry for NZiFOCUS, collaborator `nga-blanchard` has `publicListing: false`. When Chan clears it: add the org, choose a tier, then the `career-copy` skill |
+| **LYZEN company site** (`lyzen-website`, repo `femtech-weekend-redthread`) | The official site of the LYZEN brand, live at lyzenglobal.com. It is not a redesign or a new generation of the FemTech Weekend site, which stays on its own domain: never describe it that way (Chan, 2026-10-12). LYZEN is the company above FemTech Weekend, its community arm; the chart is `organizations[]` id `lyzen`. Recorded in the database; in no display bucket, CV or LinkedIn copy and not on chanmeng.org until Chan chooses where it is shown. The LYZEN org has no logo on purpose (a logo file would put it in the README organisation band). Naming LYZEN in a job title is her decision |
 | **Seismophone** (`sunostats`) | Pending archive. The site stays online at her request, but it is off every visitor-facing surface and `cv-llms.txt` since 2026-10-07. The Suno probe and the README Suno cards are independent and keep running |
 | **Chromaflow** (`gradient-svg-generator`) | Off every visitor-facing surface since 2026-10-07; keeps its narrative in the llms files (`llmsOnlyOpenSourceIds`). Repo stays public and maintained. No surface may say it powers this profile. Her other repos' READMEs still embed it and are not to be touched |
 | **Te Pā Tiaki** (`css-tower-defense`) | Archived 2026-10-07, deployment retired. Its Neon database was left alone on purpose |
@@ -41,6 +42,7 @@ LinkedIn copy.
 | **CORDE** | On the README since 2026-10-08. Its commit share is counted on the original repository (236 of 413), with that basis beside the figure on every surface |
 | **Google Jobs MCP Server**, **GitHub README Suno Cards** | Taken off the README on 2026-10-08 (a second MCP server repeats Google News; the "Sound I make" block already shows the cards). Both keep their llms narrative. The two MCP servers are independent products: never describe one as part of the other |
 | **Extended CV, Chapter 3** | Ten tiles. The eleventh slot is closed: Seismophone, Chromaflow and a second MCP server were each turned down for it |
+| **Not recorded** | Repositories of third-party technical assessments and local clones of other people's repositories: not her projects, in no data file (Chan, 2026-10-12) |
 | **Org repos** | Administering a GitHub org does not make its repos hers: only those in `scope.orgRepoAllowlist` (`lineage.yaml`) are recorded |
 | **Lost access** | Not lost authorship: the GAVIGO repos carry `accessRevoked` and stay hers |
 | **chanmeng.org** | Never presented as a project; it is the venue |
@@ -86,5 +88,4 @@ asking, unless she delegates again. `showcase: flagship` requires
 | LinkedIn, by hand | Chan: delete the Seismophone entry under Projects and its association on three skills (PostgreSQL Recursive CTEs, Reverse Engineering, Internationalization) |
 | LinkedIn Featured video slot | The intro film does not exist yet; the slot in `70-linkedin.yaml` is a held-open placeholder |
 | Delete the five listing forks | Their PRs closing, or 2026-11-14 |
-| Back up `femtech-weekend-assets` off this machine | open |
 | Google OAuth client and Resend key used by Te Pā Tiaki | Chan: revoke if they were dedicated to the game |

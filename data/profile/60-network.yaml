@@ -199,6 +199,75 @@ organizations:
         # Drives the "For <logo> FemTech Weekend" line on the
         # femtech-weekend-website project card.
         relatedProjectId: femtech-weekend-website
+      # Where FemTech Weekend sits in the LYZEN group. The whole chart is on
+      # the parent record (id lyzen, below); this is the pointer back to it.
+      x_structure:
+        parentOrgId: lyzen
+        unit: community
+        function: "Community, media, events"
+        ownSite: https://www.femtechweekend.com
+        asOf: "2026-10-12"
+
+  # ── LYZEN: the company above FemTech Weekend ─────────────────────────────
+  # Recorded 2026-10-12 at Chan's request, from the LYZEN site she built
+  # (private repo femtech-weekend-redthread: src/content/brand.ts, the firm
+  # chart in src/content/pages/the-firm.ts, docs/HISTORY.md sections 6-7,
+  # docs/DESIGN.md section 7). Rules that come with it:
+  #   - LYZEN and FemTech Weekend are TWO organisations. LYZEN is the
+  #     advisory firm; FemTech Weekend is its community arm and keeps its own
+  #     site, femtechweekend.com. Never write that the LYZEN site replaced or
+  #     redesigned the FemTech Weekend site (Chan, 2026-10-12).
+  #   - LYZEN has no Chinese name: write LYZEN in both languages. 她域 is a
+  #     separate entity on the firm chart, not a translation of LYZEN.
+  #   - The LinkedIn page and the WeChat / 小红书 accounts linked from the
+  #     LYZEN site are FemTech Weekend's: no sameAs here until LYZEN has its
+  #     own, and never invent a handle.
+  #   - Chan's career role stays work[] id femtech-weekend (Chief Technology
+  #     Officer). The LYZEN site's team page lists her as Chief Technology
+  #     Officer too; whether a CV or LinkedIn title should name LYZEN is hers
+  #     to decide (career-copy skill), so no relatedWorkId here: it would
+  #     also take over the logo of that work entry.
+  #   - No logo: on purpose. Without a logo file the README organisation
+  #     band skips this record; putting LYZEN there is Chan's call.
+  - id: lyzen
+    name: LYZEN
+    url: https://lyzenglobal.com
+    type: agency
+    industry: Cross-border women's health advisory
+    description: |
+      A cross-border advisory firm advancing women's health innovation
+      between China and global markets, founded by Zhu Yihan. It works with
+      innovators, investors and institutions on market entry, partnerships
+      and growth across borders. FemTech Weekend is its community arm.
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-10-12"
+    meta:
+      x_brand:
+        displayTier: secondary
+        category: employer
+        context: "Parent company of FemTech Weekend; Chan built its company site, lyzenglobal.com"
+        relatedProjectId: lyzen-website
+      x_structure:
+        # The firm chart as the LYZEN site publishes it (The Firm page).
+        source: "lyzenglobal.com, The Firm: firm structure; client brief of 2026-10-03"
+        asOf: "2026-10-12"
+        parentName: "LYZEN — Cross-Border Women's Health Advisory"
+        descriptor: { en: "Cross-Border Women's Health Advisory", zh: "跨境女性健康咨询" }
+        tagline: { en: "Rooted in China, Connecting globally", zh: "植根中国，连接全球" }
+        founderCollaboratorId: zhu-yihan
+        founderTitle: "Founder & Managing Partner, CEO"
+        units:
+          - { unit: china, name: "她域", function: "China advisory and execution", orgId: null, note: "Separate entity on the chart; not a translation of LYZEN" }
+          - { unit: global, name: "LYZEN", function: "International advisory and partnerships", orgId: lyzen }
+          - { unit: community, name: "FemTech Weekend", function: "Community, media, events", orgId: femtech-weekend, site: "https://www.femtechweekend.com" }
+        chanOnTeamPage: "Chief Technology Officer (core team)"
+        sharedWithFemtechWeekend: ["LinkedIn company page", "WeChat official account", "小红书 account"]
+        separateFromFemtechWeekend: ["domain and site", "contact address", "newsletter list"]
+        timeline:
+          - { date: "2026-10-01", event: "The site Chan was building is repositioned from the FemTech Weekend event brand to LYZEN" }
+          - { date: "2026-10-03", event: "The site goes to production as the LYZEN company site on lyzenglobal.com" }
+          - { date: "2026-10-04", event: "LYZEN adopts its own mark, the meander (回纹)" }
 
   - id: femtech-china
     name: FemTech China
@@ -1015,14 +1084,15 @@ collaborators:
     name: Zhu Yihan
     aliases: ["朱依含"]
     pronouns: she/her
-    currentTitle: Founder, FemTech Weekend; Tech Brews Chapter Lead (Johannesburg & Shenzhen)
+    currentTitle: Founder & Managing Partner, CEO, LYZEN; Founder, FemTech Weekend; Tech Brews Chapter Lead (Johannesburg & Shenzhen)
     currentOrgId: femtech-weekend
     linkedin: https://www.linkedin.com/in/yihanzhu/
     relationship: [client, sponsor]
     worksTogether:
       - { contextType: work, contextId: femtech-weekend, role: "Founder; engaged Chan as CTO of FemTech Weekend" }
       - { contextType: project, contextId: femtech-weekend-website, role: "Commissioned the official FemTech Weekend website build" }
-    note: "FemTech Weekend founder (Sep 2024—); engaged Chan as CTO; commissioned the official site. Ex Co-Founder of FemTech China; ex Barclays UK New Product Development Manager."
+      - { contextType: project, contextId: lyzen-website, role: "Founder of LYZEN; client and owner of the LYZEN company site, approved its visual system" }
+    note: "Founder of LYZEN and of FemTech Weekend, its community arm (Sep 2024—); engaged Chan as CTO; commissioned both sites. Ex Co-Founder of FemTech China; ex Barclays UK New Product Development Manager."
     tier: flagship
     recency: active
     lastUpdated: "2026-05-22"

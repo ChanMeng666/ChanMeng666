@@ -587,6 +587,105 @@ projects:
 
         Specifically: I designed and built both website generations from scratch (Gen-1 Next.js + Notion — external claim: 100% solo across 58 commits in a separate repo, needs registry check; Gen-2 — this entry — at 94.7% solo across 564 commits over ~13 months). I wrote the entire Drizzle schema, every migration, all 16 Cloudflare Pages Functions, every email template (HTML + plain-text twins, brand-coloured, XSS-defended), the admin dashboard, the four application-pipeline forms, the Shanghai Summit 10-section homepage plus sub-pages and gated agenda, the Notion-as-CMS integration, the bilingual EN / 简体中文 routing and content layer, the Gemini chatbot, the earth-flyline global-network visualisation, and the image-performance pass. I operate the production Cloudflare Pages deployment and make every speaker / sponsor / agenda update directly on main, reporting to founder Zhu Yihan and collaborating with the 2-10-person core team on editorial calendar, summit programming, and ecosystem partnerships.
 
+  # ── LYZEN company site ("The Red Thread") ────────────────────────────────
+  # Recorded 2026-10-12. POSITIONING (Chan, 2026-10-12): this is the official
+  # site of the LYZEN brand. It is NOT a redesign, a rebuild or a third
+  # generation of the FemTech Weekend website above, which stays live on its
+  # own domain: no supersedes / supersededBy between the two, and never
+  # "the new FemTech Weekend site" in any copy. How the two organisations
+  # relate: organizations[] id lyzen (60-network.yaml).
+  #   - The repo (femtech-weekend-redthread, the name is historical) is
+  #     PRIVATE: no repoUrl. Its asset archive (femtech-weekend-assets) is
+  #     private too and is not a project.
+  #   - In no 90-meta.yaml display bucket, no CV, no LinkedIn copy and not on
+  #     chanmeng.org: the site is in the founder's review and where it is
+  #     shown is Chan's call. tier is not flagship, so cv-llms.txt does not
+  #     pick it up. When she clears it: choose a tier and a bucket, then the
+  #     career-copy skill.
+  #   - Copy rule taken from the site itself: only verifiable facts; LYZEN's
+  #     clients, figures and testimonials are LYZEN's to state, not Chan's.
+  # Every fact below is from the repo's README, CLAUDE.md, docs/HISTORY.md,
+  # docs/INFRASTRUCTURE.md and package.json, read 2026-10-12.
+  - id: lyzen-website
+    provenance: client
+    tier: secondary
+    recency: active
+    lastUpdated: "2026-10-12"
+    name: LYZEN — The Red Thread, the company site of a cross-border women's health advisory
+    category: web-apps
+    clientOrgId: lyzen
+    relatedWorkId: femtech-weekend
+    tagline: "The official site of LYZEN, a cross-border women's health advisory connecting China and the global ecosystem: a bilingual, statically exported site whose red thread is pre-rendered film, never drawn at runtime."
+    url: https://lyzenglobal.com
+    entity: "LYZEN (cross-border women's health advisory; founder Zhu Yihan). FemTech Weekend is its community arm"
+    roles: ["Sole developer", "Designer"]
+    techStack: ["Next.js 16 (static export)", "React 19", "TypeScript", "GSAP", "Lenis", "Cloudflare Pages", "Cloudflare Pages Functions", "Cloudflare D1", "Resend", "GitHub Actions", "Python media pipelines"]
+    keywords:
+      - "Corporate site for an advisory firm"
+      - "Bilingual English / 中文"
+      - "Film-first design: pre-rendered, graded media"
+      - "Static export on Cloudflare Pages"
+      - "Gated report downloads with signed, expiring links"
+      - "Reproducible offline media pipeline"
+    status: live
+    startDate: "2026-09"
+    metrics:
+      - { label: "Languages", value: "2", note: "English and 中文; the Chinese is written, not machine-translated" }
+      - { label: "URLs in the sitemap", value: "26", note: "production check of 2026-10-04 (repo docs/INFRASTRUCTURE.md)" }
+      - { label: "Hero film loop", value: "36 s", note: "graded summit footage, re-cut on 2026-10-04" }
+      - { label: "Design directions before approval", value: "3", note: "two runtime-drawn threads were turned down by the client; the third, the thread as film, was approved" }
+    publicSummary: |
+      The official website of **LYZEN**, a cross-border advisory firm for
+      women's health innovation between China and global markets, whose
+      community arm is FemTech Weekend. I designed and built it alone: a
+      bilingual English / 中文 site, statically exported from Next.js and
+      served from Cloudflare Pages at lyzenglobal.com. Its idea is 红线, the
+      red thread of fate, and the thread is film: graded summit footage in
+      which only the red lanyards keep their colour, red silk on rice paper,
+      a silk thread crossing the world map. The site has pages for the firm,
+      its services, global engagement and impact, article sections, a
+      newsletter signup and gated report downloads. It began in September
+      2026 as a redesign for FemTech Weekend and was redefined by the client
+      as the LYZEN company site, live since 3 October 2026.
+    narrative:
+      impactHeadline: "A company site where the signature motion is film, not code: the red thread was simulated live twice and rejected twice, then pre-rendered, and that version is the one the client approved."
+      businessLogic: |
+        LYZEN presents itself as one platform in three parts: a China
+        advisory and execution entity (她域), an international advisory and
+        partnerships firm (LYZEN) and a community arm for events, media and
+        community (FemTech Weekend). The site is the firm's front door: who
+        it is, what it does, where it has worked, and the evidence, which is
+        the Shanghai Summit 2026 and its Impact Report. Reports are gated
+        behind a short form, so a download is also a lead, kept apart from
+        the newsletter list and from FemTech Weekend's own subscribers.
+        FemTech Weekend's site stays where it was, on its own domain.
+      technicalApproach: |
+        Next.js 16 with static export, React 19 and TypeScript; GSAP and
+        Lenis for scroll and motion. The rule that shaped the build is
+        "never draw the thread at runtime": every thread on the site is
+        pre-rendered film, plates or graded media played back by time or by
+        scroll, produced by offline pipelines kept in the repository so any
+        asset can be regenerated from its source. The server side is a small
+        set of Cloudflare Pages Functions: newsletter signup, report request,
+        signed download links that expire. A Cloudflare D1 database is the
+        system of record for everything the forms collect, with Resend for
+        mail. The site runs in the owner's Cloudflare account under a
+        deliberately narrow collaborator role, deployed by GitHub Actions on
+        push with a smoke test. Canonical URLs, hreflang and the sitemap are
+        generated per page for both languages.
+      outcomes: |
+        Live at lyzenglobal.com since 3 October 2026; the restructured site
+        with its inner pages, article sections and gated reports since
+        4 October 2026. The visual system was approved by the client, and
+        newsletter signup and report download were verified end to end on
+        production. The site is in the founder's review, so further
+        revisions are expected.
+      myRole: |
+        Sole developer and designer: concept, design system, front end, the
+        media pipelines, the Functions and database, infrastructure and
+        deployment, and the LYZEN mark the site uses. The positioning, the
+        copy brief and every business decision are the founder's; LYZEN's
+        figures and testimonials come from its own published material.
   - id: eatropolis-website
     provenance: client
     tier: flagship

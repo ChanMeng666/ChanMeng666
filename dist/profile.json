@@ -3171,6 +3171,85 @@
       ]
     },
     {
+      "id": "lyzen-website",
+      "provenance": "client",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-10-12",
+      "name": "LYZEN — The Red Thread, the company site of a cross-border women's health advisory",
+      "category": "web-apps",
+      "clientOrgId": "lyzen",
+      "relatedWorkId": "femtech-weekend",
+      "tagline": "The official site of LYZEN, a cross-border women's health advisory connecting China and the global ecosystem: a bilingual, statically exported site whose red thread is pre-rendered film, never drawn at runtime.",
+      "url": "https://lyzenglobal.com",
+      "entity": "LYZEN (cross-border women's health advisory; founder Zhu Yihan). FemTech Weekend is its community arm",
+      "roles": [
+        "Sole developer",
+        "Designer"
+      ],
+      "techStack": [
+        "Next.js 16 (static export)",
+        "React 19",
+        "TypeScript",
+        "GSAP",
+        "Lenis",
+        "Cloudflare Pages",
+        "Cloudflare Pages Functions",
+        "Cloudflare D1",
+        "Resend",
+        "GitHub Actions",
+        "Python media pipelines"
+      ],
+      "keywords": [
+        "Corporate site for an advisory firm",
+        "Bilingual English / 中文",
+        "Film-first design: pre-rendered, graded media",
+        "Static export on Cloudflare Pages",
+        "Gated report downloads with signed, expiring links",
+        "Reproducible offline media pipeline"
+      ],
+      "status": "live",
+      "startDate": "2026-09",
+      "metrics": [
+        {
+          "label": "Languages",
+          "value": "2",
+          "note": "English and 中文; the Chinese is written, not machine-translated"
+        },
+        {
+          "label": "URLs in the sitemap",
+          "value": "26",
+          "note": "production check of 2026-10-04 (repo docs/INFRASTRUCTURE.md)"
+        },
+        {
+          "label": "Hero film loop",
+          "value": "36 s",
+          "note": "graded summit footage, re-cut on 2026-10-04"
+        },
+        {
+          "label": "Design directions before approval",
+          "value": "3",
+          "note": "two runtime-drawn threads were turned down by the client; the third, the thread as film, was approved"
+        }
+      ],
+      "publicSummary": "The official website of **LYZEN**, a cross-border advisory firm for\nwomen's health innovation between China and global markets, whose\ncommunity arm is FemTech Weekend. I designed and built it alone: a\nbilingual English / 中文 site, statically exported from Next.js and\nserved from Cloudflare Pages at lyzenglobal.com. Its idea is 红线, the\nred thread of fate, and the thread is film: graded summit footage in\nwhich only the red lanyards keep their colour, red silk on rice paper,\na silk thread crossing the world map. The site has pages for the firm,\nits services, global engagement and impact, article sections, a\nnewsletter signup and gated report downloads. It began in September\n2026 as a redesign for FemTech Weekend and was redefined by the client\nas the LYZEN company site, live since 3 October 2026.\n",
+      "narrative": {
+        "impactHeadline": "A company site where the signature motion is film, not code: the red thread was simulated live twice and rejected twice, then pre-rendered, and that version is the one the client approved.",
+        "businessLogic": "LYZEN presents itself as one platform in three parts: a China\nadvisory and execution entity (她域), an international advisory and\npartnerships firm (LYZEN) and a community arm for events, media and\ncommunity (FemTech Weekend). The site is the firm's front door: who\nit is, what it does, where it has worked, and the evidence, which is\nthe Shanghai Summit 2026 and its Impact Report. Reports are gated\nbehind a short form, so a download is also a lead, kept apart from\nthe newsletter list and from FemTech Weekend's own subscribers.\nFemTech Weekend's site stays where it was, on its own domain.\n",
+        "technicalApproach": "Next.js 16 with static export, React 19 and TypeScript; GSAP and\nLenis for scroll and motion. The rule that shaped the build is\n\"never draw the thread at runtime\": every thread on the site is\npre-rendered film, plates or graded media played back by time or by\nscroll, produced by offline pipelines kept in the repository so any\nasset can be regenerated from its source. The server side is a small\nset of Cloudflare Pages Functions: newsletter signup, report request,\nsigned download links that expire. A Cloudflare D1 database is the\nsystem of record for everything the forms collect, with Resend for\nmail. The site runs in the owner's Cloudflare account under a\ndeliberately narrow collaborator role, deployed by GitHub Actions on\npush with a smoke test. Canonical URLs, hreflang and the sitemap are\ngenerated per page for both languages.\n",
+        "outcomes": "Live at lyzenglobal.com since 3 October 2026; the restructured site\nwith its inner pages, article sections and gated reports since\n4 October 2026. The visual system was approved by the client, and\nnewsletter signup and report download were verified end to end on\nproduction. The site is in the founder's review, so further\nrevisions are expected.\n",
+        "myRole": "Sole developer and designer: concept, design system, front end, the\nmedia pipelines, the Functions and database, infrastructure and\ndeployment, and the LYZEN mark the site uses. The positioning, the\ncopy brief and every business decision are the founder's; LYZEN's\nfigures and testimonials come from its own published material.\n"
+      },
+      "_clientOrg": {
+        "id": "lyzen",
+        "name": "LYZEN",
+        "url": "https://lyzenglobal.com"
+      },
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
+    },
+    {
       "id": "eatropolis-website",
       "provenance": "client",
       "tier": "flagship",
@@ -12053,6 +12132,24 @@
       "notShownReason": "made to accompany the paper, not a promo"
     },
     {
+      "id": "genlab-how-it-works",
+      "kind": "product-film",
+      "title": "GenLAB Career Academy, how it works",
+      "for": "GenLAB Career Academy",
+      "projectId": "genlab-career-academy",
+      "repo": "ChanMeng666/genlab-promo-studio",
+      "date": "2026-10",
+      "seconds": 199,
+      "cuts": [
+        "3 min 19 s",
+        "16:9"
+      ],
+      "madeWith": "Remotion",
+      "summary": "A film that walks through how the platform works, step by step, with a coded replica of its pages in place of screen recordings.",
+      "onFilmsPage": false,
+      "notShownReason": "the project is in development and not shown publicly"
+    },
+    {
       "id": "she-sharp-lesmills-promo",
       "kind": "event-promo",
       "title": "She Sharp × Les Mills, “No Pain, All Gain”",
@@ -13068,6 +13165,94 @@
           "context": "CTO (Mar 2025 — present)",
           "relatedWorkId": "femtech-weekend",
           "relatedProjectId": "femtech-weekend-website"
+        },
+        "x_structure": {
+          "parentOrgId": "lyzen",
+          "unit": "community",
+          "function": "Community, media, events",
+          "ownSite": "https://www.femtechweekend.com",
+          "asOf": "2026-10-12"
+        }
+      }
+    },
+    {
+      "id": "lyzen",
+      "name": "LYZEN",
+      "url": "https://lyzenglobal.com",
+      "type": "agency",
+      "industry": "Cross-border women's health advisory",
+      "description": "A cross-border advisory firm advancing women's health innovation\nbetween China and global markets, founded by Zhu Yihan. It works with\ninnovators, investors and institutions on market entry, partnerships\nand growth across borders. FemTech Weekend is its community arm.\n",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-10-12",
+      "meta": {
+        "x_brand": {
+          "displayTier": "secondary",
+          "category": "employer",
+          "context": "Parent company of FemTech Weekend; Chan built its company site, lyzenglobal.com",
+          "relatedProjectId": "lyzen-website"
+        },
+        "x_structure": {
+          "source": "lyzenglobal.com, The Firm: firm structure; client brief of 2026-10-03",
+          "asOf": "2026-10-12",
+          "parentName": "LYZEN — Cross-Border Women's Health Advisory",
+          "descriptor": {
+            "en": "Cross-Border Women's Health Advisory",
+            "zh": "跨境女性健康咨询"
+          },
+          "tagline": {
+            "en": "Rooted in China, Connecting globally",
+            "zh": "植根中国，连接全球"
+          },
+          "founderCollaboratorId": "zhu-yihan",
+          "founderTitle": "Founder & Managing Partner, CEO",
+          "units": [
+            {
+              "unit": "china",
+              "name": "她域",
+              "function": "China advisory and execution",
+              "orgId": null,
+              "note": "Separate entity on the chart; not a translation of LYZEN"
+            },
+            {
+              "unit": "global",
+              "name": "LYZEN",
+              "function": "International advisory and partnerships",
+              "orgId": "lyzen"
+            },
+            {
+              "unit": "community",
+              "name": "FemTech Weekend",
+              "function": "Community, media, events",
+              "orgId": "femtech-weekend",
+              "site": "https://www.femtechweekend.com"
+            }
+          ],
+          "chanOnTeamPage": "Chief Technology Officer (core team)",
+          "sharedWithFemtechWeekend": [
+            "LinkedIn company page",
+            "WeChat official account",
+            "小红书 account"
+          ],
+          "separateFromFemtechWeekend": [
+            "domain and site",
+            "contact address",
+            "newsletter list"
+          ],
+          "timeline": [
+            {
+              "date": "2026-10-01",
+              "event": "The site Chan was building is repositioned from the FemTech Weekend event brand to LYZEN"
+            },
+            {
+              "date": "2026-10-03",
+              "event": "The site goes to production as the LYZEN company site on lyzenglobal.com"
+            },
+            {
+              "date": "2026-10-04",
+              "event": "LYZEN adopts its own mark, the meander (回纹)"
+            }
+          ]
         }
       }
     },
@@ -14000,7 +14185,7 @@
         "朱依含"
       ],
       "pronouns": "she/her",
-      "currentTitle": "Founder, FemTech Weekend; Tech Brews Chapter Lead (Johannesburg & Shenzhen)",
+      "currentTitle": "Founder & Managing Partner, CEO, LYZEN; Founder, FemTech Weekend; Tech Brews Chapter Lead (Johannesburg & Shenzhen)",
       "currentOrgId": "femtech-weekend",
       "linkedin": "https://www.linkedin.com/in/yihanzhu/",
       "relationship": [
@@ -14017,9 +14202,14 @@
           "contextType": "project",
           "contextId": "femtech-weekend-website",
           "role": "Commissioned the official FemTech Weekend website build"
+        },
+        {
+          "contextType": "project",
+          "contextId": "lyzen-website",
+          "role": "Founder of LYZEN; client and owner of the LYZEN company site, approved its visual system"
         }
       ],
-      "note": "FemTech Weekend founder (Sep 2024—); engaged Chan as CTO; commissioned the official site. Ex Co-Founder of FemTech China; ex Barclays UK New Product Development Manager.",
+      "note": "Founder of LYZEN and of FemTech Weekend, its community arm (Sep 2024—); engaged Chan as CTO; commissioned both sites. Ex Co-Founder of FemTech China; ex Barclays UK New Product Development Manager.",
       "tier": "flagship",
       "recency": "active",
       "lastUpdated": "2026-05-22",
@@ -14758,8 +14948,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-10-11",
+    "lastModified": "2026-10-12",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-11T20:47:10.009Z"
+    "buildTimestamp": "2026-10-12T04:55:23.084Z"
   }
 }

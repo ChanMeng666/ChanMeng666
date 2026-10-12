@@ -319,6 +319,25 @@ films:
     onFilmsPage: false
     notShownReason: "made to accompany the paper, not a promo"
 
+  # Recorded, not shown (Chan, 2026-10-12): GenLAB Career Academy is in
+  # development and on no visitor-facing surface, and neither is this film.
+  # Its content is not published anywhere: no media, no YouTube id, never
+  # `onFilmsPage: true`, never `primary`, no `productFilms` row and no tile on
+  # the README film wall until Chan clears the project.
+  - id: genlab-how-it-works
+    kind: product-film
+    title: GenLAB Career Academy, how it works
+    for: GenLAB Career Academy
+    projectId: genlab-career-academy
+    repo: ChanMeng666/genlab-promo-studio
+    date: "2026-10"
+    seconds: 199
+    cuts: ["3 min 19 s", "16:9"]
+    madeWith: Remotion
+    summary: A film that walks through how the platform works, step by step, with a coded replica of its pages in place of screen recordings.
+    onFilmsPage: false
+    notShownReason: "the project is in development and not shown publicly"
+
   # ── Event promo ────────────────────────────────────────────────────────────
   - id: she-sharp-lesmills-promo
     kind: event-promo

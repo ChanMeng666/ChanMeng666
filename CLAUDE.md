@@ -124,9 +124,11 @@ the bump Cloudflare serves the old CV for hours and it looks fine.
   Chan's to change: ask first.
 - **Film distribution** (which film is published where, and the posting
   calendar): `distribution/`. Read `distribution/README.md` before answering
-  what is due or drafting a post; edit only `plan.yaml`, then
-  `npm run build:distribution`. Draft text and staged video files are local
-  and gitignored.
+  what is due, drafting a post or publishing one; edit only `plan.yaml`, then
+  `npm run calendar`, which also merges the ArchCanvas calendar into the local
+  `master-calendar.md`. Publishing goes through her Chrome only after she has
+  approved the exact text and said yes for that post. Draft text, staged video
+  files and the master calendar are local and gitignored.
 - **Repo lineage**: `docs/ecosystem/lineage.yaml` (sensitive repos only in the
   gitignored `lineage.private.yaml`). When a repo is created, archived,
   renamed, transferred or deleted, update it and run

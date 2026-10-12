@@ -39,6 +39,14 @@ constraints:
   x: { maxVideoSeconds: 140, maxChars: 280, urlChars: 23, editable: false, note: "No Premium on the account: a film longer than 140 s goes up as a YouTube link" }
   linkedin: { linkPlacement: first-comment, note: "Upload the video natively; put links in the first comment" }
 
+# Other posting calendars, merged with the film schedule into the local
+# master-calendar.md by `npm run calendar`. Each stays the authority on its own
+# dates and checkboxes; `path` is under the lineage localRoot.
+otherCalendars:
+  - id: archcanvas-growth
+    label: ArchCanvas
+    path: archcanvas-growth/marketing/content/calendar.md
+
 # Which platforms a kind of film is meant for. First matching rule wins.
 # `reason` is shown wherever a platform is not targeted.
 policy:

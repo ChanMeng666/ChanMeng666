@@ -26,11 +26,15 @@
 *{{#each (split basics.taglines.heroLabel "|")}}{{trim this}}{{#unless @last}} · {{/unless}}{{/each}}.*
 *{{default basics.location.region "Auckland, New Zealand"}}.*
 
-{{_valueProposition.tagline}} {{basics.taglines.primary}}
+{{!-- 2026-10-13: the value-proposition sentence ("I architect AI agents, ship
+     full-stack platforms end-to-end, and teach others…") no longer prints here
+     (Chan): the label above it and the three "What I can do" statements say the
+     same thing. It stays in the data and the llms files. --}}
+{{basics.taglines.primary}}
 
 {{#if _engagementAvailability}}**{{_engagementAvailability.current}}**{{#if _engagementAvailability.cta.primary}} <a href="{{_engagementAvailability.cta.primary.url}}">{{pill _engagementAvailability.cta.primary.label}}</a>{{/if}}
 
-{{/if}}{{#if _mediaAppearances.length}}<sub>Featured in {{#each (slice _mediaAppearances 0 4)}}[{{publisher}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
+{{/if}}{{#if _mediaAppearances.length}}<sub>Featured in {{#each (slice _mediaAppearances 0 5)}}[{{publisher}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
 {{/if}}
 
 <p>

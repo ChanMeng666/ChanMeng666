@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 530+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-10-12
+**Last updated:** 2026-10-13
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -97,8 +97,8 @@ thought."
 - **Vercel** (vendor) -- Primary deploy target — every flagship project. URL: https://vercel.com.
 - **Cloudflare** (vendor) -- Workers AI + Vectorize + KV — teaching platform RAG. URL: https://www.cloudflare.com.
 - **Neon** (vendor) -- Postgres backbone — She Sharp, FemTech Weekend. URL: https://neon.tech.
-- **Chow Luck Club Ltd** (employer) -- Commissioning client for eatropolis-website (Auckland, NZ). URL: https://www.linkedin.com/company/chowluckclub/. Related project: eatropolis-website.
-- **Tātaki Auckland Unlimited** (partner) -- Event partner and co-reviewer of the eatropolis-website build, on behalf of Auckland Council Events. URL: https://www.aucklandunlimited.com/. Related project: eatropolis-website.
+- **Chow Luck Club Ltd** (employer) -- Commissioning client. URL: https://www.linkedin.com/company/chowluckclub/. Related project: eatropolis-website.
+- **Tātaki Auckland Unlimited** (partner) -- Event partner and co-reviewer, on behalf of Auckland Council Events. URL: https://www.aucklandunlimited.com/. Related project: eatropolis-website.
 - **Whiri-AI** (employer) -- Development-commission client for Tam-AI-Ti (Māori AI financial wellness). URL: https://tamaiti.whiri-ai.com/. Related project: tam-ai-ti.
 - **TechRosie** (partner) -- Women-developer community Chan contributes to (hosts femtracker). URL: https://github.com/TechRosie.
 
@@ -2675,7 +2675,7 @@ transitions, wrote the ElevenLabs audio-generation script, and
 tuned the volume-ducking so the background music dips under
 voiceover and demo playback. Maintains both repos today.
 ### Google News MCP Server — Early-ecosystem MCP server (shipped 5 weeks after Anthropic's Nov 25 2024 MCP launch) — PulseMCP "Top Pick", featured in Skywork AI deep-dive review, distributed across 15+ MCP catalogs
-[tier=primary · recency=recent · updated=2026-08-26]
+[tier=primary · recency=recent · updated=2026-10-13]
 - **URL:** https://github.com/ChanMeng666/server-google-news
 - **Tech stack:** TypeScript, Node.js, @modelcontextprotocol/sdk, stdio transport, SerpAPI, axios, ES modules, npm (scoped @chanmeng666)
 
@@ -2769,15 +2769,20 @@ server's README.
 **Outcomes:** The server is published on npm as `@chanmeng666/google-news-server`
 and listed across multiple MCP discovery surfaces, with third-party
 recognition:
-- PulseMCP "Top Pick" badge *(external claim — needs registry check)*
-- Glama A-grade license rating *(external claim — needs registry check)*
-- Smithery one-command install, plus listings on mcp.so, Awesome MCP
-  Servers, Archestra, and other catalogs *(exact catalog count is
-  external — needs registry check)*
-- Independent deep-dive write-ups by third-party reviewers (Skywork
-  AI, AgentSkillsHub) *(external claim — needs registry check)*
-- A hosted deployment listed on Fronteir AI *(external claim — needs
-  registry check)*
+- DataCamp's "Top 10 MCP Servers & Clients for AI Workflow Automation
+  in 2026" lists it as no. 10
+- PulseMCP "Top Pick" badge, and a mention in its Weekly Pulse
+  newsletter the week the server shipped
+- Glama A grades for license and quality
+- Smithery one-command install, plus listings on mcp.so, MCP Market,
+  Augment Code's registry, Archestra and other directories
+- Carried in punkpeye/awesome-mcp-servers and eleven other curated
+  lists and registries on GitHub
+- A dedicated article by Skywork AI
+- Republished on npm by a third party (@iflow-mcp)
+
+Each of these was checked against the page itself on 2026-10-13; the
+rows are in `meta.x_brand.reach`.
 
 Alongside it, the companion `server-google-jobs` (first commit late
 December 2024) applies the same pattern to Google Jobs search
@@ -4007,6 +4012,7 @@ delivery work once AI is in the toolchain. 87 registered, 51 attended.
 
 ## Publications, Podcast Episodes, Press Features
 
+- **Top 10 MCP Servers & Clients for AI Workflow Automation in 2026** -- DataCamp (2025-07-10) -- https://www.datacamp.com/blog/top-mcp-servers-and-clients [tier=secondary · recency=recent · updated=2026-10-13]
 - **Meet the FemTech Founders Redefining Women's Health at Work** -- THISDAYLIVE (2025-05-28) -- https://www.thisdaylive.com/2025/05/28/meet-the-femtech-founders-redefining-womens-health-at-work/ [tier=flagship · recency=recent · updated=2026-08-26]
 - **Weekly Pulse: Remote MCP, Images, Screen Recording** -- PulseMCP -- https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording [tier=secondary · recency=historical · updated=2026-05-18]
 - **FemTech Weekend × UN Women CSW69** -- FemTech Weekend (2025-04-16) -- https://chanmeng.org/blog/from-code-to-care-un [tier=flagship · recency=recent · updated=2026-07-21]
@@ -4682,7 +4688,7 @@ Co-Founder of Relab, a PropTech SaaS company. One of ArchCanvas's early testers;
 - **GAVIGO IRE (Oct 2025 — Sep 2026): 488 non-merge commits, 471 of them (96.5%) authored solo by Chan, production-deployed at ire.gavigo.com** (source: https://ire.gavigo.com/, verified 2026-09-01)
 - **Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud** (source: https://ire.gavigo.com/, verified 2026-05-16)
 - **Early-ecosystem MCP developer: opened modelcontextprotocol/servers issue #76 on 2024-11-27 (two days after MCP's public launch) documenting the Windows + NVM PATH workaround that became reference troubleshooting guidance for early Claude Desktop adopters** (source: https://github.com/modelcontextprotocol/servers/issues/76, verified 2026-05-16)
-- **Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with 26.1k visitors and #1,105 global popularity rank, Glama A license rating + 122 stars, listed across 15+ MCP catalogs including Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, Archestra, serp.ai, AIBase, AgentSkillsHub, MagicSlides) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); both servers covered in three independent media write-ups (Skywork AI x2, AgentSkillsHub)** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-05-16)
+- **Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with PulseMCP's own estimate of 38k visitors and a #1,060 popularity rank, Glama A grades for license and quality + 122 stars, no. 10 in DataCamp's 'Top 10 MCP Servers & Clients for AI Workflow Automation in 2026', listed across 15+ MCP catalogs including punkpeye/awesome-mcp-servers, Smithery, mcp.so, Glama, PulseMCP, MCP Market, Augment Code, Archestra) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); each server is the subject of its own Skywork AI article** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-10-13)
 - **As CTO at Sanicle, the IBM Cloud watsonx AI integration I built into employee dashboards — AI-powered health consultations and automated leave requests — anchored Sanicle's entry into the IBM Business Partner Network and IBM Silver Partner certification; Sanicle.Cloud now listed in IBM's official PartnerPlus Solution Directory** (source: https://www.ibm.com/partnerplus/directory/solution/0638, verified 2026-05-16)
 - **Published a community write-up on the Vercel forum solving a production Next.js 15 + NextAuth 5 auth-redirect failure encountered during the Sanicle-AI build; publicly acknowledged by Vercel Staff (Amy Egan)** (source: https://community.vercel.com/t/solved-bug-authentication-redirect-issue-in-sanicle-ai-platform/6818, verified 2026-05-16)
 - **As CTO leading a team of five, wrote the code for five Sanicle production codebases — sanicle-cloud (Next.js company site replacing legacy Bubble no-code), sanicle-ai (multi-tenant FemTech platform with dual-AI architecture: IBM watsonx llama-3-405b + Google Gemini fallback), sanicle-ai-mobile (PWA prototype), reveal.js presentation deck, and a documented internal work archive — totalling 377 commits across four GitHub repositories, every one authored by Chan (GitHub contributor statistics, 2026-09-16)** (source: https://www.linkedin.com/company/sanicleofficial/, verified 2026-05-16)

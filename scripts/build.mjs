@@ -832,6 +832,20 @@ for (const p of visibleProjects) {
       logoLight: c.logoLight,
       logoDark: c.logoDark ?? c.logoLight,
     }));
+  // proofStrips: third-party platforms that featured or list an open-source
+  // project ("↳ Featured by …", "↳ Listed on …" under the card; first used by
+  // google-news-mcp, whose evidence register is meta.x_brand.reach). Unlike
+  // cohortPartners an item survives a missing logo file: the claim is the
+  // link, so it renders as a plain name until the file lands.
+  p._proofStrips           = (xb.proofStrips ?? [])
+    .map((strip) => ({
+      label: strip.label,
+      items: (strip.items ?? []).filter((i) => i?.name && i?.url).map((i) => {
+        const logo = fileExists(i.logo) ? i.logo : null;
+        return { name: i.name, url: i.url, logo, logoDark: logo && fileExists(i.logoDark) ? i.logoDark : logo, wordmark: Boolean(logo && i.wordmark) };
+      }),
+    }))
+    .filter((strip) => strip.label && strip.items.length);
 }
 
 // ---------------------------------------------------------------------------

@@ -4,8 +4,10 @@
 
 ## Experience
 
+{{!-- 2026-10-13: current roles are title, organisation and dates only (Chan).
+      The impact headline under each repeated the project cards above. --}}
 {{#each _currentRoles}}
-- **{{position}}** at **[{{name}}]({{url}})** &nbsp;·&nbsp; {{dateRange startDate endDate}}{{#if narrative.impactHeadline}}<br>&nbsp;&nbsp;<sub>{{narrative.impactHeadline}}</sub>{{/if}}
+- **{{position}}** at **[{{name}}]({{url}})** &nbsp;·&nbsp; {{dateRange startDate endDate}}
 {{/each}}
 
 {{!-- Hand-curated, newest first. This list is NOT derived from _pastRoles —

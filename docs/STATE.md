@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-10-12.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-10-13.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -38,6 +38,10 @@ LinkedIn copy.
 | **Posting through Chrome** | Claude may publish a post from Chan's signed-in browser once she has approved the exact text and said yes for that post; each post and each platform needs its own yes. She attaches videos by hand when the tool cannot. Claude never deletes or edits a published post, answers other people or changes a setting (Chan, 2026-10-12; steps: `distribution/README.md`). All calendars are run from the merged `npm run calendar` view |
 | **Posting films** | Two films a week on LinkedIn and X, Tuesday and Thursday (2026-10-12). Music videos are not posted to X or LinkedIn (confirmed the same day). Draft text stays in the gitignored `distribution/drafts/` until she has approved and posted it |
 | **Promo films** | One film on show per product (`productFilms` in `45-showcase.yaml`, checked by `check:ecosystem`). A product's film repos coexist; none replaces another. Exception: chanmeng.org/films shows every version |
+| **Project copy on the README** | A project shown with an animated card has no description beside it: no impact headline, no mark and name row (Chan, 2026-10-13). What stays is the heading on the large cards and every line that names a partner with its logo ("For", "Works with", "Cohorts taught for", "Being adopted by") plus the sub-project links. The narrative stays in the shards and the llms files. A project without a card keeps its text |
+| **One statement, once, on the README** | Nothing on the README restates what another part of it already says (Chan, 2026-10-13). Removed on that date and not to be written back: the intro lines under "What I build", "Client & organisation work", "More I've built" and "What I make beyond code"; the impact line under each current role in Experience; the value-proposition sentence in the hero. The data keeps all of it |
+| **Hero "Featured in"** | Five names, in the file order of `publications[]`: DataCamp was added on 2026-10-13 and none of the other four was dropped (Chan) |
+| **Third-party proof on a project** | "Featured by" and "Listed on" lines under a card come from `projects[].meta.x_brand.proofStrips`; each name must have a row in that project's `reach` register, read from the page itself. Logos are in `public/platform-logos/`. Only the Google News MCP Server has them today |
 | **Films on the README** | Not embedded since 2026-10-10. The film wall (`public/readme/films.svg`) stands open under "What I make beyond code", with one line and two links: chanmeng.org/films and YouTube. One tile per film: each product's primary film, the brand and event films, the music videos |
 | **chanmeng.org/films** | Every finished film. Not shown: the ArchLang narrated demo. Screen-recorded demos are not films and stay on YouTube. Source `46-films.yaml` → `dist/films.json` → the site's `scripts/sync-films.mjs` |
 | **GAVIGO** | Only its three approved figures (78%, 4.45s → 1.00s, ~140ms), under its labels, with the boundary note ("controlled", "not a production SLA"). No internal timings, no "instant" or "no wait". Google for Startups and NVIDIA Inception are programme participation, never validation (Chan, 2026-10-07) |

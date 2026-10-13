@@ -1013,6 +1013,7 @@
       "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": {
         "id": "whiri-ai",
         "name": "Whiri-AI",
@@ -1281,6 +1282,7 @@
         "context": "Senior Full Stack Engineer & Website Team Lead and Ambassador (Jul 2025 — Sep 2026)"
       },
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": {
         "id": "she-sharp",
         "name": "She Sharp",
@@ -1568,6 +1570,7 @@
         "context": "Founding Principal Engineer (Oct 2025 — Sep 2026)"
       },
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": {
         "id": "gavigo",
         "name": "GAVIGO Inc.",
@@ -1596,10 +1599,277 @@
             "npm",
             "typescript",
             "nodejs"
-          ]
+          ],
+          "proofStrips": [
+            {
+              "label": "Featured by",
+              "items": [
+                {
+                  "name": "DataCamp",
+                  "url": "https://www.datacamp.com/blog/top-mcp-servers-and-clients",
+                  "logo": "/public/platform-logos/datacamp.png"
+                },
+                {
+                  "name": "PulseMCP",
+                  "url": "https://www.pulsemcp.com/servers/chanmeng666-google-news",
+                  "logo": "/public/platform-logos/pulsemcp.svg"
+                },
+                {
+                  "name": "Skywork AI",
+                  "url": "https://skywork.ai/skypage/en/google-news-ai-integration/1978665953022038016",
+                  "logo": "/public/platform-logos/skywork.svg"
+                }
+              ]
+            },
+            {
+              "label": "Listed on",
+              "items": [
+                {
+                  "name": "awesome-mcp-servers",
+                  "url": "https://github.com/punkpeye/awesome-mcp-servers",
+                  "logo": "/public/tech-logos/github.svg",
+                  "logoDark": "/public/tech-logos/github-white.svg"
+                },
+                {
+                  "name": "Smithery",
+                  "url": "https://smithery.ai/server/@chanmeng666/google-news-server",
+                  "logo": "/public/platform-logos/smithery.png"
+                },
+                {
+                  "name": "Glama",
+                  "url": "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news",
+                  "logo": "/public/platform-logos/glama.svg"
+                },
+                {
+                  "name": "mcp.so",
+                  "url": "https://mcp.so/server/server-google-news/ChanMeng666",
+                  "logo": "/public/platform-logos/mcp-so.png"
+                },
+                {
+                  "name": "MCP Market",
+                  "url": "https://mcpmarket.com/server/google-news",
+                  "logo": "/public/platform-logos/mcp-market.png",
+                  "wordmark": true
+                },
+                {
+                  "name": "Augment Code",
+                  "url": "https://www.augmentcode.com/mcp/server-google-news",
+                  "logo": "/public/platform-logos/augment-code.svg",
+                  "logoDark": "/public/platform-logos/augment-code-dark.svg"
+                },
+                {
+                  "name": "Archestra",
+                  "url": "https://archestra.ai/mcp-catalog/chanmeng666__server-google-news",
+                  "logo": "/public/platform-logos/archestra.png"
+                }
+              ]
+            }
+          ],
+          "reach": {
+            "measuredOn": "2026-10-13",
+            "usage": [
+              {
+                "label": "GitHub stars",
+                "value": 129,
+                "source": "https://github.com/ChanMeng666/server-google-news"
+              },
+              {
+                "label": "GitHub forks",
+                "value": 21,
+                "source": "https://github.com/ChanMeng666/server-google-news/forks"
+              },
+              {
+                "label": "npm downloads, 2025-04-13 to 2026-10-13",
+                "value": 10354,
+                "source": "https://api.npmjs.org/downloads/point/2025-04-13:2026-10-13/@chanmeng666/google-news-server",
+                "note": "npm keeps 18 months of history; 233 in the last 30 days"
+              },
+              {
+                "label": "Public GitHub repositories that reference the repo or the npm package",
+                "value": 83,
+                "basis": "GitHub code search, first 200 hits per query; includes her own 3"
+              },
+              {
+                "label": "PulseMCP estimated visitors",
+                "value": "38k",
+                "source": "https://www.pulsemcp.com/servers/chanmeng666-google-news",
+                "note": "PulseMCP's own estimate across the MCP ecosystem"
+              },
+              {
+                "label": "PulseMCP popularity ranking",
+                "value": "#1,060",
+                "source": "https://www.pulsemcp.com/servers/chanmeng666-google-news"
+              }
+            ],
+            "press": [
+              {
+                "name": "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026",
+                "publisher": "DataCamp",
+                "author": "Abid Ali Awan",
+                "date": "2025-07-10",
+                "url": "https://www.datacamp.com/blog/top-mcp-servers-and-clients",
+                "evidence": "Listed as no. 10, \"Google News\", linking to the repo. datacamp.com is the top referrer in the repo's GitHub traffic (14 unique visitors in the 14 days to 2026-10-13).",
+                "basis": "Page blocks plain fetches; read through a fetch tool and confirmed by the traffic referrer"
+              },
+              {
+                "name": "Weekly Pulse: Remote MCP, Images, Screen Recording",
+                "publisher": "PulseMCP",
+                "author": "Tadas Antanavicius",
+                "url": "https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording",
+                "evidence": "\"Google News (Mon, Dec 30) by @ChanMeng666 → A newly-released, well-documented approach to pulling news data into MCP clients like Claude.\" The server page carries PulseMCP's Top Pick badge, which links to this issue."
+              },
+              {
+                "name": "Chan Meng's Google News MCP Server: The AI Engineer's Guide to Real-Time News Integration",
+                "publisher": "Skywork AI",
+                "url": "https://skywork.ai/skypage/en/google-news-ai-integration/1978665953022038016",
+                "evidence": "A dedicated article on this server."
+              },
+              {
+                "name": "ChanMeng666/server-google-news",
+                "publisher": "tom-doerr/repo_posts",
+                "date": "2026-01-27",
+                "url": "https://tom-doerr.github.io/repo_posts/2026/01/27/ChanMeng666-server-google-news.html",
+                "evidence": "A post in a daily feed of notable repositories."
+              }
+            ],
+            "directories": [
+              {
+                "name": "PulseMCP",
+                "url": "https://www.pulsemcp.com/servers/chanmeng666-google-news",
+                "figure": "Top Pick badge · 38k est. visitors · #1,060"
+              },
+              {
+                "name": "Smithery",
+                "url": "https://smithery.ai/server/@chanmeng666/google-news-server"
+              },
+              {
+                "name": "Glama",
+                "url": "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news",
+                "figure": "license A · quality A"
+              },
+              {
+                "name": "mcp.so",
+                "url": "https://mcp.so/server/server-google-news/ChanMeng666"
+              },
+              {
+                "name": "Awesome MCP Servers (mcpservers.org)",
+                "url": "https://mcpservers.org/servers/ChanMeng666/server-google-news"
+              },
+              {
+                "name": "MCP Market",
+                "url": "https://mcpmarket.com/server/google-news"
+              },
+              {
+                "name": "Augment Code MCP registry",
+                "url": "https://www.augmentcode.com/mcp/server-google-news"
+              },
+              {
+                "name": "Archestra",
+                "url": "https://archestra.ai/mcp-catalog/chanmeng666__server-google-news"
+              },
+              {
+                "name": "MCP Server Finder",
+                "url": "https://www.mcpserverfinder.com/servers/chanmeng666/server-google-news"
+              },
+              {
+                "name": "AgentSeal",
+                "url": "https://agentseal.org/mcp/chanmeng666-google-news-server",
+                "figure": "98.5/100 (Safe)",
+                "basis": "Search-result title; the page blocks fetches"
+              }
+            ],
+            "lists": [
+              {
+                "repo": "punkpeye/awesome-mcp-servers",
+                "stars": 96248,
+                "note": "English README and seven translations"
+              },
+              {
+                "repo": "yzfly/Awesome-MCP-ZH",
+                "stars": 7723
+              },
+              {
+                "repo": "archestra-ai/archestra",
+                "stars": 4371,
+                "note": "catalogue data and an evaluation file"
+              },
+              {
+                "repo": "wong2/awesome-mcp-servers",
+                "stars": 4358
+              },
+              {
+                "repo": "YuzeHao2023/Awesome-MCP-Servers",
+                "stars": 1072
+              },
+              {
+                "repo": "metorial/metorial-index",
+                "stars": 282,
+                "note": "packaged as a container variant"
+              },
+              {
+                "repo": "toolsdk-ai/toolsdk-mcp-registry",
+                "stars": 196,
+                "note": "marked validated, 1 tool"
+              },
+              {
+                "repo": "tolkonepiu/best-of-mcp-servers",
+                "stars": 152,
+                "note": "ranked weekly since 2025-08-04"
+              },
+              {
+                "repo": "ever-works/awesome-mcp-servers",
+                "stars": 118
+              },
+              {
+                "repo": "mcpgod/cli",
+                "stars": 115
+              },
+              {
+                "repo": "particlefuture/1mcpserver",
+                "stars": 52
+              },
+              {
+                "repo": "0xBabatunde/awesome-seo-mcp",
+                "stars": 37
+              }
+            ],
+            "redistributions": [
+              {
+                "name": "@iflow-mcp/google-news-server",
+                "url": "https://www.npmjs.com/package/@iflow-mcp/google-news-server",
+                "note": "A third party republished the server on npm (2025-08-08)"
+              },
+              {
+                "name": "mcp-get",
+                "url": "https://github.com/michaellatman/mcp-get/pull/62",
+                "note": "Registered by merged PR, 2025-01-01"
+              }
+            ],
+            "gone": [
+              {
+                "name": "Playbooks",
+                "url": "https://playbooks.com/mcp/chanmeng666-google-news",
+                "status": 404
+              },
+              {
+                "name": "MCP Archive",
+                "url": "https://mcp-archive.com/server/server-google-news",
+                "status": 404
+              },
+              {
+                "name": "MagicSlides",
+                "url": "https://www.magicslides.app/mcps/chanmeng666-google-news",
+                "status": "error page"
+              },
+              {
+                "name": "mcpnow.io",
+                "status": "domain does not resolve"
+              }
+            ]
+          }
         }
       },
-      "lastUpdated": "2026-08-26",
+      "lastUpdated": "2026-10-13",
       "name": "Google News MCP Server",
       "priority": 4,
       "category": "ai-apps",
@@ -1612,12 +1882,12 @@
           "url": "https://github.com/ChanMeng666/server-google-jobs"
         },
         {
-          "label": "Skywork review (News)",
-          "url": "https://skywork.ai/skypage/en/google-news-ai-integration/1978665953022038016"
+          "label": "DataCamp Top 10",
+          "url": "https://www.datacamp.com/blog/top-mcp-servers-and-clients"
         },
         {
-          "label": "Skywork deep-dive",
-          "url": "https://skywork.ai/skypage/en/google-news-ai-engineer-dive/1978706891771256832"
+          "label": "Skywork review (News)",
+          "url": "https://skywork.ai/skypage/en/google-news-ai-integration/1978665953022038016"
         },
         {
           "label": "PulseMCP (Top Pick)",
@@ -1642,6 +1912,14 @@
         {
           "label": "Archestra",
           "url": "https://archestra.ai/mcp-catalog/chanmeng666__server-google-news"
+        },
+        {
+          "label": "MCP Market",
+          "url": "https://mcpmarket.com/server/google-news"
+        },
+        {
+          "label": "Augment Code",
+          "url": "https://www.augmentcode.com/mcp/server-google-news"
         },
         {
           "label": "Issue #76",
@@ -1688,27 +1966,37 @@
         },
         {
           "label": "Registry listings",
-          "value": "15+ MCP catalogs (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, MCP Server Finder, MCP Archive, Playbooks, mcpservers.org, Archestra, serp.ai, mcp-archive.com, AIBase, AgentSkillsHub, MagicSlides)"
+          "value": "15+ MCP catalogs: 10 directory sites (PulseMCP, Smithery, Glama, mcp.so, mcpservers.org, MCP Market, Augment Code, Archestra, MCP Server Finder, AgentSeal) and 12 curated lists and registries on GitHub, led by punkpeye/awesome-mcp-servers",
+          "note": "Checked 2026-10-13; the rows are in meta.x_brand.reach"
+        },
+        {
+          "label": "Press",
+          "value": "DataCamp, \"Top 10 MCP Servers & Clients for AI Workflow Automation in 2026\" (no. 10, by Abid Ali Awan, 2025-07-10); PulseMCP Weekly Pulse newsletter; a dedicated Skywork AI article"
+        },
+        {
+          "label": "npm downloads",
+          "value": "10,354 between 2025-04-13 and 2026-10-13 (the 18 months npm reports)"
         },
         {
           "label": "PulseMCP badge",
-          "value": "Top Pick · 26.1k visitors · #1,105 global rank"
+          "value": "Top Pick · 38k estimated visitors · #1,060 global rank",
+          "note": "Read 2026-10-13; earlier reading 26.1k and #1,105"
         },
         {
           "label": "Glama quality",
-          "value": "A (license) · 122 stars by Glama's own count"
+          "value": "A (license) · A (quality) · 122 stars by Glama's own count"
         },
         {
           "label": "Skywork review",
-          "value": "Dedicated Oct 2025 deep-dive article + AI-Engineer's Guide companion piece"
+          "value": "One dedicated article, \"The AI Engineer's Guide to Real-Time News Integration\""
         },
         {
           "label": "Stars",
-          "value": "129 GitHub (measured 2026-09-24) · 20 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, Enterprise DNA, Augment Code, serp.ai"
+          "value": "129 GitHub (measured 2026-09-24) · 21 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, MCP Market, Augment Code"
         },
         {
           "label": "Forks",
-          "value": "20"
+          "value": "21"
         },
         {
           "label": "Commits",
@@ -1729,7 +2017,7 @@
         "productLogic": "A user asks their AI assistant something like \"what's happening with\n[topic] in [region] this week.\" The assistant calls the server's one\ntool, `google_news_search`, with a query plus optional `gl` (country)\nand `hl` (language) codes. The server passes the request to SerpAPI's\nGoogle News engine, gets structured results back, sorts them into\ntopics (AI & Technology, Business, Science & Research, Healthcare,\nGeneral) with lightweight pattern matching, and returns clean output\nwith each article's source, date, snippet, and link intact. It also\nsupports search by news topic, publisher, full-story coverage, and\nsection via token parameters, and falls back to English for\nunsupported language codes.\n\nThe server runs over MCP's stdio channel — the default for desktop AI\nclients — and installs in one command through Smithery's CLI (`npx -y\n@smithery/cli install @chanmeng666/google-news-server --client\nclaude`), or via a packaged `.mcpb` bundle for one-click setup in\nClaude Desktop.\n",
         "businessLogic": "Open source, MIT licensed, no direct monetization. The intent is\necosystem positioning: be a canonical Google News server during the\nformative months of the Model Context Protocol, so the project keeps\nsurfacing wherever a developer looks for an MCP tool. Distribution\nacross many registries (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP\nServers, Archestra, and others) is the discovery strategy. The README\nalso carries JSON-LD `SoftwareApplication` metadata and an `llms.txt`\nguide so that AI agents themselves can read the server's identity,\nparameters, and use cases without parsing marketing prose — the same\ndiscovery-by-machine approach used across the rest of this portfolio.\n",
         "technicalApproach": "TypeScript on Node.js, built against `@modelcontextprotocol/sdk` v1.x,\nshipped as an ES-module CLI binary (`google-news-server`) declared in\n`package.json`. Transport is stdio, so the server runs as a subprocess\nthe desktop AI client launches. HTTP calls go through axios; SerpAPI is\nthe underlying data source (2 requests/second, 5 concurrent, 1-hour\ncache). On top of the raw API the server adds a thin intelligence\nlayer: parameter validation, topic categorization, multi-language\nformatting, and error handling with clear messages.\n\nThe repo also ships production packaging — a Dockerfile, a Smithery\nconfig, a `manifest.json`, a JSON-LD `structured-data.json`, an\n`llms.txt`, and a downloadable `.mcpb` install bundle — plus a full\nset of community-health docs (CONTRIBUTING, SECURITY, SUPPORT,\nGOVERNANCE, CHANGELOG, issue/PR templates) added in 2026.\n\nThe third contribution is community, not code: **issue #76** in the\nofficial `modelcontextprotocol/servers` repo (opened Nov 27 2024, two\ndays after MCP's launch) documented the Windows + NVM PATH failure that\nstopped Claude Desktop from launching npm-based MCP servers. The fix —\npoint the client config at the absolute path of `node.exe` instead of\nrelying on PATH — is cited as the primary troubleshooting step in this\nserver's README.\n",
-        "outcomes": "The server is published on npm as `@chanmeng666/google-news-server`\nand listed across multiple MCP discovery surfaces, with third-party\nrecognition:\n- PulseMCP \"Top Pick\" badge *(external claim — needs registry check)*\n- Glama A-grade license rating *(external claim — needs registry check)*\n- Smithery one-command install, plus listings on mcp.so, Awesome MCP\n  Servers, Archestra, and other catalogs *(exact catalog count is\n  external — needs registry check)*\n- Independent deep-dive write-ups by third-party reviewers (Skywork\n  AI, AgentSkillsHub) *(external claim — needs registry check)*\n- A hosted deployment listed on Fronteir AI *(external claim — needs\n  registry check)*\n\nAlongside it, the companion `server-google-jobs` (first commit late\nDecember 2024) applies the same pattern to Google Jobs search\n*(Jobs-repo specifics not verifiable from the News clone — see\nflags)*. Issue #76 remains visible in the official MCP servers\nrepository as a record of an early ecosystem contribution.\n",
+        "outcomes": "The server is published on npm as `@chanmeng666/google-news-server`\nand listed across multiple MCP discovery surfaces, with third-party\nrecognition:\n- DataCamp's \"Top 10 MCP Servers & Clients for AI Workflow Automation\n  in 2026\" lists it as no. 10\n- PulseMCP \"Top Pick\" badge, and a mention in its Weekly Pulse\n  newsletter the week the server shipped\n- Glama A grades for license and quality\n- Smithery one-command install, plus listings on mcp.so, MCP Market,\n  Augment Code's registry, Archestra and other directories\n- Carried in punkpeye/awesome-mcp-servers and eleven other curated\n  lists and registries on GitHub\n- A dedicated article by Skywork AI\n- Republished on npm by a third party (@iflow-mcp)\n\nEach of these was checked against the page itself on 2026-10-13; the\nrows are in `meta.x_brand.reach`.\n\nAlongside it, the companion `server-google-jobs` (first commit late\nDecember 2024) applies the same pattern to Google Jobs search\n*(Jobs-repo specifics not verifiable from the News clone — see\nflags)*. Issue #76 remains visible in the official MCP servers\nrepository as a record of an early ecosystem contribution.\n",
         "myRole": "I built and maintain the server solo — the code, the README, the npm\npublish, the registry submissions, the packaging, and the\nissue-tracker responses. I also filed the early issue #76\ntroubleshooting contribution. Together these make the\nearly-MCP-developer story concrete: not a theoretical early adopter,\nbut someone who shipped, distributed, documented, and supported a\nworking MCP server within the protocol's first month.\n"
       },
       "_featuredStackResolved": [
@@ -1763,6 +2051,88 @@
       "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_cohortPartners": [],
+      "_proofStrips": [
+        {
+          "label": "Featured by",
+          "items": [
+            {
+              "name": "DataCamp",
+              "url": "https://www.datacamp.com/blog/top-mcp-servers-and-clients",
+              "logo": "/public/platform-logos/datacamp.png",
+              "logoDark": "/public/platform-logos/datacamp.png",
+              "wordmark": false
+            },
+            {
+              "name": "PulseMCP",
+              "url": "https://www.pulsemcp.com/servers/chanmeng666-google-news",
+              "logo": "/public/platform-logos/pulsemcp.svg",
+              "logoDark": "/public/platform-logos/pulsemcp.svg",
+              "wordmark": false
+            },
+            {
+              "name": "Skywork AI",
+              "url": "https://skywork.ai/skypage/en/google-news-ai-integration/1978665953022038016",
+              "logo": "/public/platform-logos/skywork.svg",
+              "logoDark": "/public/platform-logos/skywork.svg",
+              "wordmark": false
+            }
+          ]
+        },
+        {
+          "label": "Listed on",
+          "items": [
+            {
+              "name": "awesome-mcp-servers",
+              "url": "https://github.com/punkpeye/awesome-mcp-servers",
+              "logo": "/public/tech-logos/github.svg",
+              "logoDark": "/public/tech-logos/github-white.svg",
+              "wordmark": false
+            },
+            {
+              "name": "Smithery",
+              "url": "https://smithery.ai/server/@chanmeng666/google-news-server",
+              "logo": "/public/platform-logos/smithery.png",
+              "logoDark": "/public/platform-logos/smithery.png",
+              "wordmark": false
+            },
+            {
+              "name": "Glama",
+              "url": "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news",
+              "logo": "/public/platform-logos/glama.svg",
+              "logoDark": "/public/platform-logos/glama.svg",
+              "wordmark": false
+            },
+            {
+              "name": "mcp.so",
+              "url": "https://mcp.so/server/server-google-news/ChanMeng666",
+              "logo": "/public/platform-logos/mcp-so.png",
+              "logoDark": "/public/platform-logos/mcp-so.png",
+              "wordmark": false
+            },
+            {
+              "name": "MCP Market",
+              "url": "https://mcpmarket.com/server/google-news",
+              "logo": "/public/platform-logos/mcp-market.png",
+              "logoDark": "/public/platform-logos/mcp-market.png",
+              "wordmark": true
+            },
+            {
+              "name": "Augment Code",
+              "url": "https://www.augmentcode.com/mcp/server-google-news",
+              "logo": "/public/platform-logos/augment-code.svg",
+              "logoDark": "/public/platform-logos/augment-code-dark.svg",
+              "wordmark": false
+            },
+            {
+              "name": "Archestra",
+              "url": "https://archestra.ai/mcp-catalog/chanmeng666__server-google-news",
+              "logo": "/public/platform-logos/archestra.png",
+              "logoDark": "/public/platform-logos/archestra.png",
+              "wordmark": false
+            }
+          ]
+        }
+      ],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -2076,6 +2446,7 @@
       "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -3156,6 +3527,7 @@
         "context": "CTO (Mar 2025 — present)"
       },
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": {
         "id": "femtech-weekend",
         "name": "FemTech Weekend",
@@ -3474,7 +3846,7 @@
           "url": "https://www.linkedin.com/company/chowluckclub/",
           "logoLight": "/public/organizations/chow-luck-club-logo.png",
           "logoDark": "/public/organizations/chow-luck-club-logo.png",
-          "context": "Commissioning client for eatropolis-website (Auckland, NZ)"
+          "context": "Commissioning client"
         },
         {
           "id": "tataki-auckland-unlimited",
@@ -3482,7 +3854,7 @@
           "url": "https://www.aucklandunlimited.com/",
           "logoLight": "/public/organizations/tataki-auckland-unlimited-colour.svg",
           "logoDark": "/public/organizations/tataki-auckland-unlimited-white.svg",
-          "context": "Event partner and co-reviewer of the eatropolis-website build, on behalf of Auckland Council Events"
+          "context": "Event partner and co-reviewer, on behalf of Auckland Council Events"
         }
       ],
       "_adopterOrgs": [],
@@ -3492,9 +3864,10 @@
         "url": "https://www.linkedin.com/company/chowluckclub/",
         "logoLight": "/public/organizations/chow-luck-club-logo.png",
         "logoDark": "/public/organizations/chow-luck-club-logo.png",
-        "context": "Commissioning client for eatropolis-website (Auckland, NZ)"
+        "context": "Commissioning client"
       },
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": {
         "id": "chow-luck-club",
         "name": "Chow Luck Club Ltd",
@@ -4534,6 +4907,7 @@
       "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5118,6 +5492,7 @@
           "logoDark": "/public/organizations/forward-with-her-logo.jpg"
         }
       ],
+      "_proofStrips": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -5777,6 +6152,7 @@
         "context": "Full Stack Developer & Lead Documenter — Lincoln University COMP693 industry placement (Jun — Nov 2024)"
       },
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": {
         "id": "corde",
         "name": "CORDE",
@@ -6856,6 +7232,7 @@
       "_adopterOrgs": [],
       "_affiliationOrg": null,
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -7539,6 +7916,7 @@
       ],
       "_affiliationOrg": null,
       "_cohortPartners": [],
+      "_proofStrips": [],
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
@@ -9253,6 +9631,21 @@
     }
   ],
   "publications": [
+    {
+      "name": "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-10-13",
+      "publisher": "DataCamp",
+      "releaseDate": "2025-07-10",
+      "url": "https://www.datacamp.com/blog/top-mcp-servers-and-clients",
+      "summary": "DataCamp's round-up of ten MCP servers, by Abid Ali Awan, lists Chan's\nGoogle News MCP Server as no. 10 and links to its repository, beside\nFilesystem, Playwright, GitHub, Notion and Tavily.\n",
+      "meta": {
+        "x_brand": {
+          "type": "press"
+        }
+      }
+    },
     {
       "name": "Meet the FemTech Founders Redefining Women's Health at Work",
       "tier": "flagship",
@@ -13982,7 +14375,7 @@
         "x_brand": {
           "displayTier": "secondary",
           "category": "employer",
-          "context": "Commissioning client for eatropolis-website (Auckland, NZ)",
+          "context": "Commissioning client",
           "relatedProjectId": "eatropolis-website"
         }
       }
@@ -14011,7 +14404,7 @@
         "x_brand": {
           "displayTier": "secondary",
           "category": "partner",
-          "context": "Event partner and co-reviewer of the eatropolis-website build, on behalf of Auckland Council Events",
+          "context": "Event partner and co-reviewer, on behalf of Auckland Council Events",
           "relatedProjectId": "eatropolis-website"
         }
       }
@@ -14948,8 +15341,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-10-12",
+    "lastModified": "2026-10-13",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-12T23:28:16.991Z"
+    "buildTimestamp": "2026-10-13T04:21:30.918Z"
   }
 }

@@ -213,8 +213,9 @@ Stack: Next.js 15, React 19, TypeScript, Tailwind, IBM watsonx, Vercel.
 A Model Context Protocol (MCP — Anthropic's open standard that lets AI agents safely use real tools and data) server that gives AI assistants live access to Google News with topical categorisation, region/language targeting, and full-coverage drill-down. Used by people whose AI assistant needs to know what happened today, not what was true at the training cutoff.
 
 • Shipped Dec 30, 2024 — 35 days after Anthropic's Nov 25, 2024 MCP launch. One of the earliest community MCP servers in existence.
-• Carries the PulseMCP "Top Pick" badge with 26.1k visitors and a #1,105 global popularity rank; Glama gives it an A license rating.
-• Listed across 15+ MCP catalogs (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP Servers, MCP Server Finder, mcpservers.org, AgentSkillsHub, and more) and featured in three independent deep-dives, including Skywork AI's "AI Engineer's Guide".
+• Listed as no. 10 in DataCamp's "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026", named in PulseMCP's Weekly Pulse newsletter the week it shipped, and the subject of a Skywork AI article, "The AI Engineer's Guide to Real-Time News Integration".
+• Carries the PulseMCP "Top Pick" badge, with PulseMCP's own estimate of 38k visitors and a #1,060 popularity rank (read Oct 2026); Glama grades it A for license and for quality.
+• Listed across 15+ MCP catalogs, including punkpeye/awesome-mcp-servers, Smithery, Glama, mcp.so, MCP Market and Augment Code's registry.
 
 Stack: TypeScript + Node.js + @modelcontextprotocol/sdk + SerpAPI; published as @chanmeng666/google-news-server on npm.
 ```

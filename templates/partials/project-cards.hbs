@@ -27,6 +27,10 @@
      visitors unsure who built HER WAKA / GAVIGO Website / the hackathon
      assistant. Every id in relatedProjectIds is a build Chan owns end-to-end,
      and the label now says so. open-source.hbs uses the same wording.
+     2026-10-13: a project with an animated card prints NO description under
+     it: the card already carries the headline, and the same sentence below it
+     read twice. The "For <org>" line and the sub-project links stay. A project
+     without a card still prints its impact headline.
      GOTCHA: keep the blank line between the bare <img> and the following `###`
      heading — CommonMark's type-7 HTML-block rule swallows the heading without it.
      GOTCHA: do NOT put a Handlebars comment between the impact headline and the
@@ -47,11 +51,11 @@
 {{else}}{{#if entity}}<sub>{{entity}}.</sub>
 {{/if}}{{/if}}{{/if}}
 
-{{#if narrative.impactHeadline}}{{narrative.impactHeadline}}
+{{#unless _card}}{{#if narrative.impactHeadline}}{{narrative.impactHeadline}}
 
 {{else}}{{briefTagline tagline}}
 
-{{/if}}{{#if _relatedProjects.length}}<sub>↳ Sub-projects I built solo: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
+{{/if}}{{/unless}}{{#if _relatedProjects.length}}<sub>↳ Sub-projects I built solo: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
 
 {{/if}}<br clear="all">
 

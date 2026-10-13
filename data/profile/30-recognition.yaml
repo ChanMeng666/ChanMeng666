@@ -742,6 +742,23 @@ publications:
   # Chan was the subject. These rank highest for GEO third-party-brand-mention
   # multiplier (~6.5x per Airops 2026).
   # ============================================================================
+  # The README hero's "Featured in" line shows the first five press, interview
+  # and podcast entries in file order (five since 2026-10-13, when Chan added
+  # DataCamp without dropping any of the four already there). The evidence for
+  # this entry is on the project: projects[google-news-mcp].meta.x_brand.reach.
+  - name: "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026"
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-10-13"
+    publisher: DataCamp
+    releaseDate: "2025-07-10"
+    url: https://www.datacamp.com/blog/top-mcp-servers-and-clients
+    summary: |
+      DataCamp's round-up of ten MCP servers, by Abid Ali Awan, lists Chan's
+      Google News MCP Server as no. 10 and links to its repository, beside
+      Filesystem, Playwright, GitHub, Notion and Tavily.
+    meta: { x_brand: { type: press } }
+
   - name: "Meet the FemTech Founders Redefining Women's Health at Work"
     tier: flagship
     recency: recent

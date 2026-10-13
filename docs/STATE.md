@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-10-13.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-10-14.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -42,6 +42,9 @@ LinkedIn copy.
 | **One statement, once, on the README** | Nothing on the README restates what another part of it already says (Chan, 2026-10-13). Removed on that date and not to be written back: the intro lines under "What I build", "Client & organisation work", "More I've built" and "What I make beyond code"; the impact line under each current role in Experience; the value-proposition sentence in the hero. The data keeps all of it |
 | **Hero "Featured in"** | Five names, in the file order of `publications[]`: DataCamp was added on 2026-10-13 and none of the other four was dropped (Chan) |
 | **Third-party proof on a project** | "Featured by" and "Listed on" lines under a card come from `projects[].meta.x_brand.proofStrips`; each name must have a row in that project's `reach` register, read from the page itself. Logos are in `public/platform-logos/`. Only the Google News MCP Server has them today |
+| **Film links on the README** | A project whose product has a film on YouTube ends with the "Watch on YouTube" pill, linking to that one film (Chan, 2026-10-14): the `primary` row of `films[]` with a `youtubeId`. A link, not an embed |
+| **"More I've built" spacing** | Each project is its own block with an empty line before the next, not a row of one table (Chan, 2026-10-14: the table packed the cards edge to edge) |
+| **A project on chanmeng.org** | Shows its film where the site plays it, otherwise its animated card, never a still alone (Chan, 2026-10-14). A project shown on the site with neither gets a card made. `github-readme-suno-cards` has a card for this reason and stays off the README |
 | **Films on the README** | Not embedded since 2026-10-10. The film wall (`public/readme/films.svg`) stands open under "What I make beyond code", with one line and two links: chanmeng.org/films and YouTube. One tile per film: each product's primary film, the brand and event films, the music videos |
 | **chanmeng.org/films** | Every finished film. Not shown: the ArchLang narrated demo. Screen-recorded demos are not films and stay on YouTube. Source `46-films.yaml` → `dist/films.json` → the site's `scripts/sync-films.mjs` |
 | **GAVIGO** | Only its three approved figures (78%, 4.45s → 1.00s, ~140ms), under its labels, with the boundary note ("controlled", "not a production SLA"). No internal timings, no "instant" or "no wait". Google for Startups and NVIDIA Inception are programme participation, never validation (Chan, 2026-10-07) |

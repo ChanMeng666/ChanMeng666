@@ -35,6 +35,7 @@ const CARDS = {
   "a11y-loop": { file: "a11y-loop", prefix: "A11Y_LOOP", build: "buildA11yLoopCard" },
   "tam-ai-ti": { file: "tam-ai-ti", prefix: "TAM_AI_TI", build: "buildTamAiTiCard" },
   "corde-mobile-application": { file: "corde", prefix: "CORDE", build: "buildCordeCard" },
+  "github-readme-suno-cards": { file: "github-readme-suno-cards", prefix: "SUNO_CARDS", build: "buildSunoCardsCard" },
 };
 
 const profile = loadProfile();

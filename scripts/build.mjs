@@ -817,6 +817,11 @@ for (const p of visibleProjects) {
     const title = fs.readFileSync(path.join(repoRoot, cardSrc.slice(1)), "utf8").match(/<title[^>]*>([^<]*)<\/title>/);
     p._card = { src: cardSrc, alt: title ? title[1] : p.name };
   }
+  // The door to the product's film: the one film the product shows (`primary`
+  // in 46-films.yaml, the row productFilms names), when it is public on
+  // YouTube. Rendered as the "Watch on YouTube" pill under the card.
+  const film = (data.films ?? []).find((f) => f.primary && f.projectId === p.id && f.youtubeId);
+  if (film) p._film = { url: `https://youtu.be/${film.youtubeId}`, label: "Watch on YouTube" };
   // Projected, not the raw org object: the raw one carries `_enriched` (the
   // entire organizations[] record), and attaching that to every client project
   // duplicated ~100 lines per card into dist/profile.json. These six fields are

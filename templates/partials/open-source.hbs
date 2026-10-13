@@ -40,6 +40,13 @@
      wrote about or list an open-source project, each linked to the page that
      shows it. Only google-news-mcp uses it today. Every item
      prints its name, including one whose logo is a wordmark.
+     2026-10-14: the three visible lists are no longer one table each. Every
+     project is its own block with an empty line (a bare <br>) between it and
+     the next, because a table of full-width cards packed them edge to edge
+     (Chan). A row with a card is a <p>: the card and its strips. A row
+     without a card is a one-row table of the old three cells. Either ends
+     with the "Watch on YouTube" pill when the product has a film on YouTube
+     (_film, see project-cards.hbs).
      ═══════════════════════════════════════════════════════════════════════ --}}
 {{#*inline "agentStrips"}}
 {{#if _contextLogo.length}}<br><sub>↳ Works with {{#each _contextLogo}}<a href="{{url}}"><img src="{{src}}" height="20" alt="{{alt}}"> {{alt}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _cohortPartners.length}}<br><sub>↳ Cohorts taught for {{#each _cohortPartners}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{logoDark}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#each _proofStrips}}<br><sub>↳ {{label}} {{#each items}}<a href="{{url}}">{{#if logo}}<picture><source media="(prefers-color-scheme: dark)" srcset="{{logoDark}}"><img src="{{logo}}" height="20" alt="{{name}}"></picture> {{/if}}{{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/each}}{{#if _clientOrg}}<br><sub>↳ Part of <a href="{{_clientOrg.url}}">{{_clientOrg.name}}</a></sub>{{/if}}{{#if _adopterOrgs.length}}<br><sub>↳ Being adopted by {{#each _adopterOrgs}}<a href="{{url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="{{default logoDark logoLight}}"><img src="{{logoLight}}" height="20" alt="{{name}}"></picture> {{name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}{{#if _relatedProjectsResolved.length}}<br><sub>↳ Sub-projects I built solo: {{#each _relatedProjectsResolved}}<a href="{{default url repoUrl}}">{{briefTagline name}}</a>{{#unless @last}} · {{/unless}}{{/each}}</sub>{{/if}}
@@ -58,39 +65,47 @@
 
 #### AI agents & tooling
 
-<table>
+{{#each _aiAgentProjects}}{{#if _card}}<p><a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a>{{> agentStrips}}</p>
+{{#if _film}}<p><a href="{{_film.url}}">{{pill _film.label}}</a></p>
+{{/if}}{{else}}<table>
   <colgroup>
     <col style="width:120px">
     <col style="width:200px">
     <col>
   </colgroup>
-{{#each _aiAgentProjects}}  <tr>
-{{#if _card}}    <td colspan="3"><a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a>{{> agentStrips}}</td>
-{{else}}    <td width="100">{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
+  <tr>
+    <td width="100">{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{> agentStrips}}</td>
-{{/if}}  </tr>
-{{/each}}</table>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{> agentStrips}}{{#if _film}}<br><a href="{{_film.url}}">{{pill _film.label}}</a>{{/if}}</td>
+  </tr>
+</table>
+{{/if}}{{#unless @last}}
+<br>
 
+{{/unless}}{{/each}}
 {{!-- "Craft & products", not "Craft & open-source products": Seismophone
      (sunostats) is self-hosted with no public repo, so the group is not
      uniformly open source. --}}
 {{#if _openSourceCraftProjects.length}}#### Craft & products
 
-<table>
+{{#each _openSourceCraftProjects}}{{#if _card}}<p><a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a>{{> craftStrips}}</p>
+{{#if _film}}<p><a href="{{_film.url}}">{{pill _film.label}}</a></p>
+{{/if}}{{else}}<table>
   <colgroup>
     <col style="width:120px">
     <col style="width:200px">
     <col>
   </colgroup>
-{{#each _openSourceCraftProjects}}  <tr>
-{{#if _card}}    <td colspan="3"><a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a>{{> craftStrips}}</td>
-{{else}}    <td width="100">{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
+  <tr>
+    <td width="100">{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{> craftStrips}}</td>
-{{/if}}  </tr>
-{{/each}}</table>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{> craftStrips}}{{#if _film}}<br><a href="{{_film.url}}">{{pill _film.label}}</a>{{/if}}</td>
+  </tr>
+</table>
+{{/if}}{{#unless @last}}
+<br>
 
+{{/unless}}{{/each}}
 {{/if}}{{#if _commissionedProjects.length}}{{!-- NOTE the ~ on this comment's closing marker: it
      eats the newline that would otherwise stack a SECOND blank line on top of
      the one above, between the craft table and this H4. The blank line stays
@@ -107,20 +122,24 @@
      clientOrgId resolves to), and only then the _clientOrg text link. --~}}
 #### Client & commissioned work
 
-<table>
+{{#each _commissionedProjects}}{{#if _card}}<p><a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a>{{> commissionedStrips}}</p>
+{{#if _film}}<p><a href="{{_film.url}}">{{pill _film.label}}</a></p>
+{{/if}}{{else}}<table>
   <colgroup>
     <col style="width:120px">
     <col style="width:200px">
     <col>
   </colgroup>
-{{#each _commissionedProjects}}  <tr>
-{{#if _card}}    <td colspan="3"><a href="{{default url repoUrl}}"><img src="{{_card.src}}" width="100%" alt="{{{_card.alt}}}"></a>{{> commissionedStrips}}</td>
-{{else}}    <td width="100">{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
+  <tr>
+    <td width="100">{{#if logo}}<img src="{{logo}}" height="72" alt="{{name}}" title="{{name}}">{{else}}&nbsp;{{/if}}</td>
     <td><strong><a href="{{default url repoUrl}}">{{briefTagline name}}</a></strong></td>
-    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{> commissionedStrips}}</td>
-{{/if}}  </tr>
-{{/each}}</table>
+    <td>{{#if narrative.impactHeadline}}<em>{{narrative.impactHeadline}}</em>{{else}}{{briefTagline tagline}}{{/if}}{{> commissionedStrips}}{{#if _film}}<br><a href="{{_film.url}}">{{pill _film.label}}</a>{{/if}}</td>
+  </tr>
+</table>
+{{/if}}{{#unless @last}}
+<br>
 
+{{/unless}}{{/each}}
 {{/if}}{{#if _moreCommissionedProjects.length}}<details>
 <summary><kbd>&nbsp;More commissioned work&nbsp;</kbd></summary>
 

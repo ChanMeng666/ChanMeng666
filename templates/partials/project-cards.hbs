@@ -31,6 +31,9 @@
      it: the card already carries the headline, and the same sentence below it
      read twice. The "For <org>" line and the sub-project links stay. A project
      without a card still prints its impact headline.
+     2026-10-14: a project whose product has a film on YouTube (_film, from
+     the primary row of films[] in 46-films.yaml) ends with the "Watch on
+     YouTube" pill, linking to that film. The films are still not embedded.
      GOTCHA: keep the blank line between the bare <img> and the following `###`
      heading — CommonMark's type-7 HTML-block rule swallows the heading without it.
      GOTCHA: do NOT put a Handlebars comment between the impact headline and the
@@ -56,6 +59,8 @@
 {{else}}{{briefTagline tagline}}
 
 {{/if}}{{/unless}}{{#if _relatedProjects.length}}<sub>↳ Sub-projects I built solo: {{#each _relatedProjects}}<a href="{{default url repoUrl}}">{{briefTagline name}} ↗</a>{{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}</sub>
+
+{{/if}}{{#if _film}}<p><a href="{{_film.url}}">{{pill _film.label}}</a></p>
 
 {{/if}}<br clear="all">
 

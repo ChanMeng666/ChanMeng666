@@ -96,7 +96,9 @@ Caldera palette: a muted basalt canvas, ash-white surfaces, near-black ink, and 
 
 ## 4. Typography
 
-Two voices plus a mono house-extension. Display is ultra-bold compact (**Bebas Neue**); body is **DM Sans 500**; mono is reserved for data signatures.
+Two voices plus a mono house-extension. Display is a heavy compact grotesque (**Anton**); body is **DM Sans 500**; mono is reserved for data signatures.
+
+**The display face goes by surface.** Every rendered asset (README artwork, CV, media kit, OG covers and share images, LinkedIn / X / YouTube banners, social cards and post visuals) is Anton. Live web text on chanmeng.org and in the newsletter emails is Bebas Neue, loaded by that repo, which is why Bebas stays in the stack. Do not unify one to the other without asking Chan.
 
 <!-- AUTO:typography-families -->
 | Family | Stack | Weights | Role |
@@ -124,13 +126,13 @@ Two voices plus a mono house-extension. Display is ultra-bold compact (**Bebas N
 
 **Principles**
 
-- Display (Bebas Neue) is the name, every heading, and stat numbers — ultra-bold compact, `0.02em` tracking on display only.
-- Eyebrow (`--text-eyebrow-*`) is an uppercased DM Sans label; the display face is uppercase by nature.
+- Display (Anton) is the name, every heading, and stat numbers — heavy compact, mixed case, `0.02em` tracking on display only.
+- Eyebrow (`--text-eyebrow-*`) is an uppercased DM Sans label; the display face is set in mixed case.
 - Mono is reserved for data signatures: datestamps, paths, version numbers.
 - Body never below 16 px on web or 9 pt in print; DM Sans 500 is the workhorse.
 - Flat by default: hierarchy comes from solid color blocks, not shadows or gradients.
 
-**License notes.** Bebas Neue, DM Sans, and JetBrains Mono are all OFL (free for web embed and self-host). They are **vendored at [`cv/fonts/`](../../cv/fonts/)** and loaded via `typst compile --font-path cv/fonts`, so the CV PDF renders deterministically on any machine / CI regardless of the OS font book. On the web, Google Fonts serves the same families; Segoe UI / Consolas remain system fallbacks.
+**License notes.** Anton, Bebas Neue, DM Sans, and JetBrains Mono are all OFL (free for web embed and self-host). They are **vendored at [`cv/fonts/`](../../cv/fonts/)** and loaded via `typst compile --font-path cv/fonts`, so the CV PDF renders deterministically on any machine / CI regardless of the OS font book. On the web, Google Fonts serves the same families; Segoe UI / Consolas remain system fallbacks.
 
 ---
 
@@ -288,7 +290,7 @@ The story card (`story.svg`: who Chan is in seven short chapters, a photograph b
 | Surface | Canvas | Fonts | Allowed signatures |
 |---|---|---|---|
 | **README** | GitHub renders white; the basalt look reaches it only through images Chan controls | GitHub controls typography (semantic tokens advisory for img/SVG) | heroBand, monoDatestamp, monogramDivider, readmeArt |
-| **CV (PDF)** | white page (print/ATS-safe); palette via ink + orange accent rules | `--font-display` (Bebas, name + headers), `--font-body-sans` (DM Sans), `--font-mono` | monoDatestamp |
+| **CV (PDF)** | white page (print/ATS-safe); palette via ink + orange accent rules | `--font-display` (Anton, name + headers), `--font-body-sans` (DM Sans), `--font-mono` | monoDatestamp |
 | **Webpage** | `--color-canvas-page` basalt | `--font-display`, `--font-body-sans`, `--font-mono` | All five |
 | **Social card** | `--color-canvas-page` basalt | display + sans | goldEyebrow only |
 
@@ -302,7 +304,7 @@ Each surface **inherits** the brand tokens and **may override** when constraints
 |---|---|
 | Use `--color-canvas-page` (`#E2E2DF`) as the page background. | Use pure white as a page background. |
 | Use `--color-surface-accent` (orange) as a block fill / accent rule. | Use orange as small body or link text (it fails contrast). |
-| Apply the display face (Bebas Neue) to the name, headings, and stat numbers. | Set headlines in a generic sans. |
+| Apply the display face (Anton) to the name, headings, and stat numbers. | Set headlines in a generic sans. |
 | Keep `--color-surface-decor` (violet) to large background shapes. | Use violet as text or a UI color. |
 | Keep cards at `--radius-card` (40 px) and pill buttons at `--radius-pill`. | Mix radii inside one component. |
 | Rely on solid color blocks for hierarchy. | Add shadows or elevation gradients. |

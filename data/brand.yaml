@@ -111,6 +111,12 @@ color:
 # -----------------------------------------------------------------------------
 # TYPOGRAPHY — two voices + a mono house-extension.
 # Display = heavy compact grotesque (Anton). Body = DM Sans. Mono = datestamps.
+#
+# The display face goes by surface. Every RENDERED asset (README artwork, CV,
+# media kit, OG covers and share images, LinkedIn / X / YouTube banners, social
+# cards and post visuals) is Anton. LIVE WEB TEXT on chanmeng.org and in the
+# newsletter emails is Bebas Neue, loaded by that repo; it is why Bebas stays
+# in the stack below. Do not "unify" one to the other without asking Chan.
 # -----------------------------------------------------------------------------
 typography:
   families:
@@ -661,7 +667,7 @@ surfaces:
     signatures: ["heroBand", "monoDatestamp", "monogramDivider", "pillRotation"]
   cv:
     canvas: "canvasPage basalt grey (print-tuned, recruiter-safe)"
-    fontFamilies: ["display", "bodySans", "mono"]   # Bebas name + DM Sans body
+    fontFamilies: ["display", "bodySans", "mono"]   # Anton name + DM Sans body
     signatures: ["monoDatestamp"]
   webpage:
     canvas: "canvasPage basalt grey"
@@ -671,4 +677,4 @@ surfaces:
     canvas: "canvasPage basalt grey"
     fontFamilies: ["display", "bodySans"]
     signatures: ["goldEyebrow"]
-    note: "Square / 1.91:1 export. Bebas name + DM Sans label, one orange rule/chip."
+    note: "Square / 1.91:1 export. Anton name + DM Sans label, one orange rule/chip."

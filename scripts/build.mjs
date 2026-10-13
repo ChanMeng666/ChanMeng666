@@ -158,9 +158,27 @@ data._flagshipProjects = flagshipIds
 // singular relatedProjectId) — e.g. GAVIGO surfaces its company site, and She
 // Sharp surfaces its extension sub-projects, all under one brand card. Only
 // cards that set the field render the extra links.
-for (const p of data._flagshipProjects) {
+// A card may also name showcase items as sub-projects
+// (meta.x_brand.relatedShowcase: [{ id, label }], first used by she-sharp for
+// its event deck and newsletter, which are builds but not projects[] entries).
+// They follow the projects on the same line, linked to the item's liveUrl. A
+// sub-project may set meta.x_brand.subProjectLabel when its own name, cut at
+// the dash, would not say what it is.
+const resolveSubProjects = (p) => {
   const ids = p.relatedProjectIds ?? (p.relatedProjectId ? [p.relatedProjectId] : []);
-  p._relatedProjects = ids.map((id) => data._index.projects[id]).filter(Boolean);
+  const projects = ids.map((id) => data._index.projects[id]).filter(Boolean).map((r) => {
+    const label = r.meta?.x_brand?.subProjectLabel;
+    return label ? { name: label, url: r.url, repoUrl: r.repoUrl } : r;
+  });
+  const showcase = (p.meta?.x_brand?.relatedShowcase ?? []).map((ref) => {
+    const item = (data.showcase ?? []).find((s) => s.id === ref.id);
+    if (!item?.liveUrl) throw new Error(`${p.id}.meta.x_brand.relatedShowcase → '${ref.id}' is not a showcase item with a liveUrl`);
+    return { name: ref.label ?? item.title, url: item.liveUrl };
+  });
+  return [...projects, ...showcase];
+};
+for (const p of data._flagshipProjects) {
+  p._relatedProjects = resolveSubProjects(p);
 }
 
 const flagshipIdSet = new Set(flagshipIds);
@@ -188,8 +206,7 @@ const resolveIds = (ids) =>
 // clientCardProjectIds are cards, commissionedProjectIds are the table below.
 data._clientCardProjects       = resolveIds(data.meta?.x_brand?.clientCardProjectIds);
 for (const p of data._clientCardProjects) {
-  const ids = p.relatedProjectIds ?? (p.relatedProjectId ? [p.relatedProjectId] : []);
-  p._relatedProjects = ids.map((id) => data._index.projects[id]).filter(Boolean);
+  p._relatedProjects = resolveSubProjects(p);
 }
 
 data._commissionedProjects     = resolveIds(data.meta?.x_brand?.commissionedProjectIds);

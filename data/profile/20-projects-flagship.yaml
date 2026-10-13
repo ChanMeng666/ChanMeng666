@@ -370,6 +370,11 @@ projects:
     meta:
       x_brand:
         featuredStack: [nextjs, drizzle, neon, stripe, vercel]
+        # Showcase items (45-showcase.yaml) shown as sub-projects on the README
+        # card, after relatedProjectIds. See the note above that field.
+        relatedShowcase:
+          - { id: aotearoa-ai-hackathon-deck, label: "AI Hackathon event deck" }
+          - { id: she-sharp-monthly, label: "The Monthly She# newsletter" }
     lastUpdated: "2026-09-16"
     name: She Sharp
     priority: 2
@@ -408,10 +413,16 @@ projects:
     # 2026-10-02 (repo triage round 2): her-waka and ai-hackathon-assistant were
     # shelved (tier secondary) and this list was emptied.
     # 2026-10-13 (Chan): the She Sharp sub-projects are shown again, as links on
-    # this line only: the four live builds of the she-sharp-programmes family
-    # (lineage.yaml). Their tier is unchanged and none has a row of its own.
-    # she-sharp-event-black-board is archived and stays off.
-    relatedProjectIds: [her-waka, ai-hackathon-assistant, makey-makey-iot-slides, super-mario-makey-makey]
+    # this line only. Their tier is unchanged and none has a row of its own.
+    # Every one is a build Chan made alone (her word, same day). Not here:
+    # super-mario-makey-makey, which is a part of makey-makey-iot-slides that
+    # is deployed separately, not a She Sharp sub-project; and
+    # she-sharp-event-black-board, which is archived.
+    # The event deck and the newsletter are also sub-projects she built for
+    # She Sharp. They are showcase items, not projects[] entries, so they are
+    # named in meta.x_brand.relatedShowcase on this entry and follow these on
+    # the same line.
+    relatedProjectIds: [her-waka, ai-hackathon-assistant, makey-makey-iot-slides]
     entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
     roles: ["Senior Full Stack Engineer", "Website Team Lead", "Lead Architect of New Platform"]
     techStack:

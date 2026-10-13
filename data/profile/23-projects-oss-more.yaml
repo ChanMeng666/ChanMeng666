@@ -1332,6 +1332,9 @@ projects:
     provenance: hackathon
     tier: secondary
     recency: recent
+    meta:
+      x_brand:
+        subProjectLabel: "AI Hackathon event assistant"
     lastUpdated: "2026-10-01"
     name: Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)
     priority: 14
@@ -2589,7 +2592,10 @@ projects:
     name: Super Mario · Makey Makey Edition
     priority: 90
     category: games
-    relatedProjectIds: [she-sharp, makey-makey-iot-slides]
+    # A part of makey-makey-iot-slides, deployed on its own. It is not a
+    # She Sharp sub-project and is not listed under the She Sharp card
+    # (Chan, 2026-10-13).
+    relatedProjectIds: [makey-makey-iot-slides]
     tagline: "A faithful Canvas remake of Super Mario World 1-1 playable with a Makey Makey or keyboard — every pixel and sound drawn/synthesized in code, no assets; the bonus showcase demo for the She Sharp × Peyvand Academy Makey Makey IoT workshop (13 June 2026), featured in the makey-makey-iot-slides teaching deck"
     repoUrl: https://github.com/ChanMeng666/super-mario-makey-makey
     url: https://chanmeng666.github.io/super-mario-makey-makey/

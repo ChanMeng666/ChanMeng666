@@ -405,9 +405,13 @@ projects:
     # Only ids that have NO row of their own may sit here — scripts/build.mjs
     # fails the build otherwise (duplicate display). makey-makey-iot-slides was
     # removed on 2026-07-14 for exactly that reason.
-    # 2026-10-02 (repo triage round 2): her-waka and ai-hackathon-assistant are SHELVED
-    # (tier secondary, off every README surface), so no sub-project line renders here.
-    relatedProjectIds: []
+    # 2026-10-02 (repo triage round 2): her-waka and ai-hackathon-assistant were
+    # shelved (tier secondary) and this list was emptied.
+    # 2026-10-13 (Chan): the She Sharp sub-projects are shown again, as links on
+    # this line only: the four live builds of the she-sharp-programmes family
+    # (lineage.yaml). Their tier is unchanged and none has a row of its own.
+    # she-sharp-event-black-board is archived and stays off.
+    relatedProjectIds: [her-waka, ai-hackathon-assistant, makey-makey-iot-slides, super-mario-makey-makey]
     entity: "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)"
     roles: ["Senior Full Stack Engineer", "Website Team Lead", "Lead Architect of New Platform"]
     techStack:

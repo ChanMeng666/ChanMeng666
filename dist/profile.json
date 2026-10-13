@@ -1084,7 +1084,12 @@
       "logo": "/public/brands/she-sharp-mark.svg",
       "clientOrgId": "she-sharp",
       "relatedWorkId": "she-sharp",
-      "relatedProjectIds": [],
+      "relatedProjectIds": [
+        "her-waka",
+        "ai-hackathon-assistant",
+        "makey-makey-iot-slides",
+        "super-mario-makey-makey"
+      ],
       "entity": "She Sharp (NZ charitable trust CC57025, NZBN 9429047458970, founded 4 June 2019 by Dr Mahsa Mohaghegh / McCauley — community programming since 2014)",
       "roles": [
         "Senior Full Stack Engineer",
@@ -1234,7 +1239,246 @@
         "outcomes": "Production-deployed and running She Sharp's full member lifecycle\nacross my 13.3 months on it (first commit 2025-07-22, measured to\n2026-09-01) — in active build-out, not maintenance, until I left the\ncharity in September 2026; the platform stays in production as its\nlive site. Volume: **1,381 commits\nand 251 merged pull requests, of which 94.5% of all lines added\n(801,609 of 847,827) are mine**; Lesley Gao contributed 151 commits\nand 43 pull requests of frontend design and code, with a handful more\nfrom an automation bot. **979 of those commits landed since\n2026-01-01 alone.** The platform now runs She Sharp's membership,\nmentorship, events, sponsor relationships, volunteer recruitment\npipeline, and internal team operations across **84 API routes, 63\npages, 198 components, 32 SQL migrations, 180,914 lines of\nTypeScript, and an 11-namespace `lib/` library** (matching,\nslack-bot, stripe, funding, programmes, recruitment, invitations,\nmentorship, email, auth, db) —\nthe technical infrastructure for an organisation that has run 96+\nevents since 2014.\n\nThe most recent build-out extended the public site into a photo-rich\n\"Editorial\" visual system and full event pages — including the\nAotearoa AI Hackathon Festival 2026 page (AUT × She Sharp × AI Forum\nNZ, 7–8 August 2026 at AUT City Campus), assembled from a single\nZod-validated event entry. **The Her Waka programme launched in March\n2026** with NZ Ministry of Social Development funding, using the\ndedicated teaching site I built (herwaka.shesharp.org.nz) and the\ncurriculum I authored — 4 workshops + 8 tutorials in 3 tiers. **The\nSEO audit** identified actionable competitive gaps, notably the\ndesktop/mobile ranking disparity on \"women in tech New Zealand.\"\n**The migration crawler** enabled a clean cutover from Webflow\nwithout losing institutional knowledge. **The Slack-bot + agent-skill\npairing** replaced an hours-long manual event-publication workflow\nwith a single dry-run-default command.\n",
         "myRole": "Senior Full Stack Engineer and Website Team Lead. Recruited directly\nby founder Dr Mahsa Mohaghegh (McCauley) — AI/NLP researcher and Head\nof Computer and Information Sciences at AUT — specifically to deliver\nthe AI and full-stack senior engineering that Webflow couldn't, and\nthat the She Sharp team didn't have in-house.\n\nSolo full-stack ownership of the main platform: product architecture,\ndatabase schema (39 pgTables, 33 pgEnums, 32 SQL\nmigrations), AI matching pipeline (5-weight rubric + Upstash Redis\ncache + rule-based fallback + admin human-in-the-loop), Stripe\nbilling with the form→checkout→invitation-code activation flow,\nSlack ecosystem (read-only event-collector, 3 weekly Cron digests,\ninteractive event handlers), the `sync-event-from-slack` Claude\nagent skill with strict Zod validation and dry-run default, admin\nsystems, deployments, observability, and operational support. Lesley\nGao contributed frontend design and frontend code (151 commits, 43\npull requests); measured by lines added, 94.5% of the codebase\n(801,609 of 847,827 lines) is mine. Beyond the main platform I\nalso built the data-migration crawler that bootstrapped the launch\n(she-sharp-crawl), the Her Waka teaching site (her-waka) and its\ncomplete four-workshop + 8-tutorial curriculum, and the professional\nSEO audit and recommendations report (serpdata-api-test) on\nshesharp.org.nz — working across engineering, instructional design,\nand strategic analysis under one role.\n"
       },
-      "_relatedProjects": [],
+      "_relatedProjects": [
+        {
+          "id": "her-waka",
+          "provenance": "client",
+          "tier": "secondary",
+          "recency": "historical",
+          "meta": {
+            "x_brand": {
+              "featuredStack": [
+                "mintlify",
+                "github"
+              ]
+            }
+          },
+          "lastUpdated": "2026-10-01",
+          "name": "HER WAKA — Employment Programme for Women in Auckland",
+          "priority": 30,
+          "category": "web-apps",
+          "clientOrgId": "she-sharp",
+          "relatedWorkId": "she-sharp",
+          "relatedProjectIds": [
+            "she-sharp"
+          ],
+          "tagline": "Mintlify documentation platform for the She Sharp × NZ Ministry of Social Development (MSD) employment-readiness programme delivered at academyEX Auckland (Mar-Jun 2026); 4 workshops authored solo by Chan",
+          "url": "https://herwaka.shesharp.org.nz/",
+          "logo": "/public/brands/her-waka.jpg",
+          "techStack": [
+            "Mintlify",
+            "MDX",
+            "She Sharp × MSD partnership"
+          ],
+          "narrative": {
+            "impactHeadline": "Employment-readiness teaching platform built for the She Sharp × NZ Ministry of Social Development HER WAKA programme at academyEX Auckland — 4 workshops authored solo + 8+ self-paced tutorials across three difficulty tiers."
+          },
+          "status": "live",
+          "_clientOrg": {
+            "id": "she-sharp",
+            "name": "She Sharp",
+            "url": "https://shesharp.org.nz"
+          },
+          "_relatedProjectsResolved": [
+            {
+              "id": "she-sharp",
+              "name": "She Sharp",
+              "url": "https://www.shesharp.org.nz/"
+            }
+          ],
+          "_supersededByProject": null,
+          "_supersedesProjects": []
+        },
+        {
+          "id": "ai-hackathon-assistant",
+          "provenance": "hackathon",
+          "tier": "secondary",
+          "recency": "recent",
+          "lastUpdated": "2026-10-01",
+          "name": "Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)",
+          "priority": 14,
+          "category": "ai-apps",
+          "clientOrgId": "she-sharp",
+          "relatedWorkId": "she-sharp",
+          "tagline": "Industry-partnered AI event assistant for the Aotearoa AI Hackathon Festival — relaunched for 2026 (AUT City Campus) as a single-page voice-first agent: an audio-reactive Three.js orb driving a two-way OpenAI Realtime voice conversation (WebRTC + ephemeral keys) plus gpt-4o-mini text chat, over a Neon knowledge base + transcripts with KV rate-limiting, on Vercel. The 2025 edition (AUT × AI Forum NZ × She Sharp) shipped a 3D sprite mascot with 6-tier affection gamification + a Notion-as-database FAQ on Cloudflare Workers; generalized into an open-source MIT template",
+          "url": "https://hackathon.shesharp.org.nz/",
+          "repoUrl": "https://github.com/ChanMeng666/event-qa-ai-template",
+          "logo": "/public/brands/ai-hackathon-logo-full.svg",
+          "extraLinks": [
+            {
+              "label": "Live site — 2026 voice agent",
+              "url": "https://aihackathon-2026.vercel.app"
+            },
+            {
+              "label": "Hackathon partner — AI Forum NZ",
+              "url": "https://aiforum.org.nz/hackathon"
+            },
+            {
+              "label": "Partner — AUT (host venue)",
+              "url": "https://www.aut.ac.nz/"
+            },
+            {
+              "label": "Partner — She Sharp",
+              "url": "https://www.shesharp.org.nz/"
+            },
+            {
+              "label": "Template setup guide",
+              "url": "https://github.com/ChanMeng666/event-qa-ai-template/blob/master/docs/TEMPLATE-SETUP.md"
+            }
+          ],
+          "techStack": [
+            "Next.js 16.1 (App Router)",
+            "React 18 + TypeScript 5",
+            "Tailwind CSS v3 + Framer Motion v12",
+            "Vercel AI SDK v4.3",
+            "@ai-sdk/openai (GPT-4o-mini-2024-07-18 streaming)",
+            "Three.js 0.182 + @react-three/fiber 8.16",
+            "Custom Quantum Orb 3D mascot (CSS 3D transforms + Three.js particles)",
+            "Sprite affection gamification engine (gesture detection, mood weighting, time-of-day bias)",
+            "Notion REST API (raw fetch, CF Workers compatible — replaced @notionhq/client SDK)",
+            "shadcn/ui + Radix primitives",
+            "@opennextjs/cloudflare adapter",
+            "Cloudflare Workers deployment (migrated from Vercel)",
+            "wrangler v4 CI/CD",
+            "localStorage state persistence (50-msg chat history + sprite affection state)",
+            "5-min FAQ client cache + optimistic vote/view updates",
+            "AI rate limiting + per-session token budgets + prompt guardrails (2026-07 security hardening)",
+            "OpenAI Realtime API over WebRTC — two-way voice (2026 relaunch)",
+            "Ephemeral client secrets minted server-side (OPENAI_API_KEY never reaches the browser)",
+            "Audio-reactive Three.js orb voice UI + live captions (2026)",
+            "Vercel deployment (2026 edition — she-sharp1/aihackathon-2026)"
+          ],
+          "status": "live",
+          "publicSummary": "Real industry-partnered AI event assistant built for the **AI\nHackathon Festival 2025** (Auckland, Aug 15–16, 2025), co-organised\nby **Auckland University of Technology**, **AI Forum New Zealand**,\nand **She Sharp**, with **UN Sustainable Development Goals** as\nthe innovation brief. The platform serves participants and mentors\nthrough three interlocking systems: (1) an **interactive 3D sprite\nmascot** with a 6-tier \"Stranger → Soulmate\" affection system,\n7-state dynamic mood engine, 17 emotion categories, gesture\nrecognition (circle/pat/swipe), negative-behaviour penalties,\nstreak bonuses, and time-of-day emotion biases — a fully gamified\npersonality layer that responds to how users actually touch the\npage; (2) a **Notion-as-database community FAQ** with up/downvote\nranking, view tracking, 5-minute client cache, and graceful static\nfallback when Notion is unreachable; (3) an **OpenAI GPT-4o-mini\nstreaming chat** with markdown-rendered responses and one-click\nFAQ-to-chat hand-off. After the live deployment, the codebase was\ngeneralised into a reusable open-source template\n(`event-qa-ai-template` on GitHub, MIT) so any future hackathon /\nconference can fork-and-config the same stack. Chan was\nsubsequently recognised among the **14 expert mentors** at the\nfestival.\n\nFor the **2026 festival** (Aotearoa AI Hackathon Festival 2026,\nAUT City Campus) the project was **rebuilt from the ground up** as\na single-page **voice-first** agent: the whole site is a centered,\naudio-reactive Three.js orb that starts a **two-way voice\nconversation over the OpenAI Realtime API via WebRTC** (the client\nexchanges SDP directly with OpenAI using a short-lived ephemeral\nsecret, so the real API key never reaches the browser), with a\ntext-input fallback answered by gpt-4o-mini via the Vercel AI SDK,\nlive captions, and a collapsible event-info panel. Agent\ninstructions build from a Neon `knowledge` table (graceful\nfallback to config), transcripts persist best-effort, and Upstash\nKV rate-limits token minting. Deployed on Vercel\n(`she-sharp1/aihackathon-2026`, live at aihackathon-2026.vercel.app).\n",
+          "narrative": {
+            "impactHeadline": "Voice-first AI event agent for the Aotearoa AI Hackathon Festival — relaunched 2026 (AUT) as an audio-reactive orb driving two-way OpenAI Realtime voice + gpt-4o-mini text chat; the 2025 edition served 11 teams / 80+ participants with a gamified 3D sprite mascot + Notion FAQ.",
+            "problem": "Hackathons and conferences generate the same Q&A surface every\nyear: participants ask the same 30 questions (\"how do I form a\nteam\", \"what counts as AI\", \"when do I have to be on site\",\n\"what's the prize structure\", \"where do I find a mentor\"), and\norganisers answer them via static PDFs that go stale the moment\nthe schedule shifts. Bolt-on chatbots exist but they treat\nhumans as passive consumers — a popup widget in the corner, a\nknowledge base scraped at build time, no memory of what the\ncommunity itself finds helpful. Three structural gaps stack up:\n(1) the FAQ is **authored once** rather than **curated by the\ncommunity**, so quality drifts; (2) the AI is a generic\nwrapper around a chat API, with no event-specific personality\nor theme tie-in; (3) organisers cannot update content without\na code redeploy, so the platform calcifies the moment the\noriginal developer hands it off. The AI Hackathon Festival\n2025 organisers needed a platform that solved all three on the\ntimeline of a real event with 80+ participants and three\nco-organising institutions reviewing every word on screen.\n",
+            "audience": "Direct users were the **80+ participants and 14 expert mentors**\nof AI Hackathon Festival 2025 — students from Auckland\nuniversities, **Westlake Girls High School** secondary students,\nand AI Forum NZ industry mentors all asking the same FAQ-style\nquestions across a 26-hour residential event. Secondary\naudience: the **three co-organising institutions** (AUT, AI\nForum NZ, She Sharp) who use the platform as a public-facing\nartefact of their joint programme. Tertiary audience: future\nhackathon and conference organisers in NZ and abroad who can\nfork the open-source template (`event-qa-ai-template`) and\ndeploy their own event Q&A AI in under an hour by editing four\nconfiguration files — `site.config.ts`, `ai.config.ts`,\n`content.config.ts`, `branding.config.ts` — without touching\ncomponent code.\n",
+            "productLogic": "The product is structured as three layers that compose\nindependently. Layer one is the **3D welcoming surface**: the\nlanding page renders a particle sphere with a \"WELCOME TO AI\nHACKATHON!\" greeting set against a `CosmicBackground` Three.js\nscene, with `Calendar` / `MapPin` event-info widgets, sponsor\nlogos for the three co-organisers, and a glassmorphism Google\nMaps modal showing AUT WG Building. Layer two is the **chat\npage** — a 70/30 desktop split between a full-screen OpenAI\nchat (with `react-markdown` + `rehype-highlight` for\ncode-block syntax highlighting) and a community FAQ sidebar.\nLayer three — the differentiator — is the **interactive sprite\nmascot** that lives alongside the chat: a CSS-3D **Quantum\nSingularity Orb** (accretion disk + photon ring + event\nhorizon + energy jets, all built from layered divs with\n`transform-style: preserve-3d` and `rotateX(60deg)`) that\nbecomes a fully gamified personality. The user can **circle**,\n**swipe vertically/horizontally**, **pat**, or **click** the\norb; the gesture detection engine tracks each interaction and\nfeeds it through an affection/mood scoring system. Five\ngestures grant affection (circle x5 = +10 affection / \"Wheee~!\nSo dizzy but fun!\"), five negative behaviours penalise it\n(`roughMovement`, `spamClick`, `suddenLeave`, `longIgnore`,\n`excessiveCircle`), and the resulting state drives which of\n17 emotions the sprite expresses — including three **rare**\nemotions (`devoted`, `starry`, `mischievous`) only unlocked\nat the top affection tiers. The result: users do not just chat\nwith an AI, they **build a relationship with a tiny digital\ncreature** while doing so — a memorable, shareable layer that\nturns a Q&A bot into a piece of event identity.\n",
+            "businessLogic": "Three intertwined value propositions. For the **organising\ninstitutions**, the platform is a public-facing demonstration\nartefact of the joint AUT × AI Forum NZ × She Sharp programme,\nrunning on Cloudflare Workers (free tier covers an event-week\ntraffic spike with zero cost) with a Notion database that\n**non-developer event staff can edit live** during the event —\nadding new FAQ entries through the Notion UI, watching them\nappear within the 5-minute client cache window. For **future\nevent organisers**, after the live event, the codebase was\ndeliberately generalised into a **reusable MIT template**\n(`event-qa-ai-template`) with all event-specific content\nextracted into `config/*.ts` files and full setup\ndocumentation, so the same stack ships any hackathon /\nconference / community event Q&A platform in under an hour of\nconfiguration. For **Chan**, the project established a\nverifiable, AI-Forum-NZ-endorsed track record of shipping\ncommercial-grade AI infrastructure for an industry partner —\na credential cited in the public LinkedIn announcement of the\n14-mentor cohort and in the Engram Architect Cohort\nEngagement Letter narrative.\n",
+            "technicalApproach": "**AI layer.** OpenAI GPT-4o-mini-2024-07-18 served through\nVercel AI SDK v4.3's `streamText` with `convertToCoreMessages`,\nreturning `toDataStreamResponse()` for character-by-character\nSSE streaming. The system prompt is **generated from\nsiteConfig at runtime** so any organiser fork inherits an\nevent-specific prompt without code edits — it embeds event\nname, dates, venue, theme (UN SDGs), team-formation rules\n(3-6 members, Hacker/Hipster/Hustler composition), schedule\n(Friday 8 PM venue close, Discord for mentor requests), and\nprize tiers ($250 venue, $1,000 national, $5,000 national\nAgentic AI winner) plus Markdown formatting guidelines. The\ncodebase pivoted from Google Gemini 2.5 Flash to OpenAI\nGPT-4o-mini mid-build (commit `5eb3e70`) for cost + Cloudflare\nWorkers compatibility reasons; the system prompt generator\nremained provider-agnostic. **3D sprite gamification.** A\n~960-line `sprite-affection.config.ts` declaratively encodes\nthe entire gameplay model: 5 gestures, 5 negative behaviours,\n7 mood states (`ecstatic` 80–100 → `upset` -100 to -80),\n17 emotions with per-emotion ear-colour RGB, glow-colour,\nparticle-colour, animation type (`bounce` / `shake` / `pulse`\n/ `spin` / `wobble` / `tremble` / `droop`) and eye shape\n(`sphere` / `arc` / `star` / `heart` / `crescent` / `spiral`\n/ `teardrop`), 6 affection tiers (Stranger 0–9 → Acquaintance\n10–29 → Friend 30–59 → Good Friend 60–99 → Best Friend\n100–149 → Soulmate 150+), 7 time-of-day biases (late-night\nboosts `sleepy` x3, evening boosts `love` x1.3), and 5 streak\nbonus levels (1/3/7/14/30 days, 30-day streak unlocks the\n`devoted` rare emotion). Two relational systems link mood\nand affection: a **mood multiplier** scales affection gains\nfrom 0.5x (depressed) to 1.5x (euphoric), and **affection\nmood protection** sets a floor that rises with tier (Soulmate\ngets a -10 floor + 5 mood/min recovery toward +20). All state\npersists to `localStorage` under `sprite-affection-data`.\nThe Quantum Orb itself is rendered with **CSS-only 3D**\n(preserve-3d transforms + rotateX) + Three.js particle\naccents — no GLB / heavy 3D pipeline — so the bundle stays\nsmall enough for Cloudflare Workers. **Notion backend.** A\nnon-obvious engineering call: the project initially used\n`@notionhq/client`, but migrating to Cloudflare Workers\n(commit `5b1dc7e`) broke the Node-dependent SDK; the fix\n(commit `20eaf2e`) replaced it with **direct REST calls\nagainst `api.notion.com/v1` using native `fetch`** — version\nheader `Notion-Version: 2022-06-28`, filter by\n`IsActive` checkbox, parse `Title` / `RichText` / `Select` /\n`Number` properties via small typed getters. Four API routes\n— `/api/chat`, `/api/faq/questions`, `/api/faq/vote`,\n`/api/faq/view` — wrap the same client. **Deployment.**\nMigrated from Vercel to Cloudflare Workers using\n`@opennextjs/cloudflare` v1.3 + wrangler v4; the entire stack\nnow ships on Cloudflare's free tier including the AI streaming\nendpoint. The build command `opennextjs-cloudflare build &&\nopennextjs-cloudflare deploy` handles the Next.js → Workers\nadapter step.\n",
+            "outcomes": "Delivered live for the **AI Hackathon Festival 2025** at AUT\nCity Campus WG Building, **15–16 August 2025**. Used by **11\nteams and 80+ participants** during the residential event —\nAI Forum NZ's public LinkedIn cohort announcement (with full\nWestlake Girls High School student attendance) cites Chan as\n**1 of 14 expert mentors**, recognised at the event. The\nteams shipped solutions across the UN SDG brief — food\ninsecurity, digital accessibility, workforce upskilling, and\nindigenous environmental stewardship — with national-tier\nprizes flowing through the AI Forum NZ pipeline (AI Summit\nentry worth $1,499, $1,000 national winner, $5,000 national\nAgentic AI winner, ArcGIS licences). Post-event, the codebase\nwas **refactored into a reusable MIT template** (commit\n`948bdf0` \"transform project into reusable event Q&A\ntemplate\"), documented in `docs/TEMPLATE-SETUP.md`,\n`docs/NOTION-INTEGRATION.md`, and `docs/UI-DESIGN-SYSTEM.md`,\nwith the live deployment retained as the canonical worked\nexample. Listed alongside Chan's other commercial-grade AI\nplatforms (echook, vitex, chinese-redefine,\nai-programming-teaching-project) as portfolio evidence of\nend-to-end industry-partner delivery — design, AI integration,\ngameplay engineering, database, deployment, and post-delivery\nproductisation as a reusable open-source artefact.\n",
+            "myRole": "Sole developer end-to-end. Owned the discovery phase with the\nthree co-organising institutions, designed the dual-layer\nproduct (chat surface + gamified mascot + Notion FAQ), built\nevery component, authored both the Gemini and the OpenAI\nprovider implementations, designed the entire ~960-line\naffection / mood / emotion gameplay schema, engineered the\nCSS-3D Quantum Orb visualisation, migrated the deployment\nfrom Vercel to Cloudflare Workers when free-tier economics\nand Notion-SDK incompatibility forced the move, refactored\nthe codebase into a reusable open-source template after the\nlive event, and authored the three setup-documentation files.\nOn the mentorship side: served as one of the 14 expert\nmentors during the 26-hour event itself, guiding teams on\nprompt design, SDG framing, and product narrative —\nsimultaneously building the platform and using it.\n"
+          },
+          "_clientOrg": {
+            "id": "she-sharp",
+            "name": "She Sharp",
+            "url": "https://shesharp.org.nz"
+          },
+          "_relatedProjectsResolved": [],
+          "_supersededByProject": null,
+          "_supersedesProjects": []
+        },
+        {
+          "id": "makey-makey-iot-slides",
+          "provenance": "personal",
+          "tier": "secondary",
+          "recency": "recent",
+          "lastUpdated": "2026-07-04",
+          "name": "Touch the World, Talk to Code",
+          "priority": 94,
+          "category": "creative",
+          "clientOrgId": "she-sharp",
+          "relatedWorkId": "she-sharp",
+          "relatedProjectIds": [
+            "she-sharp"
+          ],
+          "tagline": "A 20-minute IoT-hardware teaching slideshow for ages 12-18 — vibe-code a Banana Piano with a free AI tool, then play it with a Makey Makey board; static HTML on the Caldera brand system, deployable to GitHub Pages. Built for the She Sharp × Peyvand Academy workshop (13 June 2026)",
+          "url": "https://chanmeng666.github.io/makey-makey-iot-slides/#1",
+          "repoUrl": "https://github.com/ChanMeng666/makey-makey-iot-slides",
+          "extraLinks": [
+            {
+              "label": "She Sharp event — Peyvand Academy (13 June 2026)",
+              "url": "https://www.shesharp.org.nz/events/peyvand-academy-13-june-2026"
+            }
+          ],
+          "techStack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Web Audio API"
+          ],
+          "status": "live",
+          "startDate": "2026-06",
+          "publicSummary": "An 11-slide deck for a Youth Tech Series workshop (the She Sharp ×\nPeyvand Academy event, 13 June 2026, Auckland) teaching that a\nMakey Makey emulates a USB keyboard, so\nkeypress web toys work with bananas. It bundles three build-along\ndemos (Banana Piano, Simon Says, Catch & Dodge), a student handout,\nspeaker notes, and a bonus Super Mario showcase.\n",
+          "narrative": {
+            "impactHeadline": "A zero-build teaching slideshow taking students 12-18 from 'touch objects' to 'code responds' in 20 minutes — three vibe-coded Web Audio build-alongs for the Makey Makey, on Chan's Caldera brand, deployable to GitHub Pages."
+          },
+          "_clientOrg": {
+            "id": "she-sharp",
+            "name": "She Sharp",
+            "url": "https://shesharp.org.nz"
+          },
+          "_relatedProjectsResolved": [
+            {
+              "id": "she-sharp",
+              "name": "She Sharp",
+              "url": "https://www.shesharp.org.nz/"
+            }
+          ],
+          "_supersededByProject": null,
+          "_supersedesProjects": []
+        },
+        {
+          "id": "super-mario-makey-makey",
+          "provenance": "personal",
+          "tier": "secondary",
+          "recency": "historical",
+          "lastUpdated": "2026-10-01",
+          "name": "Super Mario · Makey Makey Edition",
+          "priority": 90,
+          "category": "games",
+          "relatedProjectIds": [
+            "she-sharp",
+            "makey-makey-iot-slides"
+          ],
+          "tagline": "A faithful Canvas remake of Super Mario World 1-1 playable with a Makey Makey or keyboard — every pixel and sound drawn/synthesized in code, no assets; the bonus showcase demo for the She Sharp × Peyvand Academy Makey Makey IoT workshop (13 June 2026), featured in the makey-makey-iot-slides teaching deck",
+          "repoUrl": "https://github.com/ChanMeng666/super-mario-makey-makey",
+          "url": "https://chanmeng666.github.io/super-mario-makey-makey/",
+          "extraLinks": [
+            {
+              "label": "Play now",
+              "url": "https://chanmeng666.github.io/super-mario-makey-makey/"
+            },
+            {
+              "label": "Teaching slides (makey-makey-iot-slides)",
+              "url": "https://github.com/ChanMeng666/makey-makey-iot-slides"
+            },
+            {
+              "label": "She Sharp event — Peyvand Academy (13 June 2026)",
+              "url": "https://www.shesharp.org.nz/events/peyvand-academy-13-june-2026"
+            }
+          ],
+          "techStack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Canvas 2D",
+            "Fable 5"
+          ],
+          "status": "live",
+          "startDate": "2026-06",
+          "narrative": {
+            "impactHeadline": "A pure-Canvas Super Mario World 1-1 remake — every pixel and sound drawn or synthesized in code, no assets, no build step — playing on Arrows + Space + Click so it runs on a Makey Makey. The ceiling demo for the youth IoT workshop."
+          },
+          "_clientOrg": null,
+          "_relatedProjectsResolved": [
+            {
+              "id": "she-sharp",
+              "name": "She Sharp",
+              "url": "https://www.shesharp.org.nz/"
+            },
+            {
+              "id": "makey-makey-iot-slides",
+              "name": "Touch the World, Talk to Code",
+              "url": "https://chanmeng666.github.io/makey-makey-iot-slides/#1",
+              "repoUrl": "https://github.com/ChanMeng666/makey-makey-iot-slides"
+            }
+          ],
+          "_supersededByProject": null,
+          "_supersedesProjects": []
+        }
+      ],
       "_featuredStackResolved": [
         {
           "name": "nextjs",
@@ -1288,7 +1532,31 @@
         "name": "She Sharp",
         "url": "https://shesharp.org.nz"
       },
-      "_relatedProjectsResolved": [],
+      "_relatedProjectsResolved": [
+        {
+          "id": "her-waka",
+          "name": "HER WAKA — Employment Programme for Women in Auckland",
+          "url": "https://herwaka.shesharp.org.nz/"
+        },
+        {
+          "id": "ai-hackathon-assistant",
+          "name": "Aotearoa AI Hackathon 2026 — Event Q&A AI Assistant (She Sharp)",
+          "url": "https://hackathon.shesharp.org.nz/",
+          "repoUrl": "https://github.com/ChanMeng666/event-qa-ai-template"
+        },
+        {
+          "id": "makey-makey-iot-slides",
+          "name": "Touch the World, Talk to Code",
+          "url": "https://chanmeng666.github.io/makey-makey-iot-slides/#1",
+          "repoUrl": "https://github.com/ChanMeng666/makey-makey-iot-slides"
+        },
+        {
+          "id": "super-mario-makey-makey",
+          "name": "Super Mario · Makey Makey Edition",
+          "url": "https://chanmeng666.github.io/super-mario-makey-makey/",
+          "repoUrl": "https://github.com/ChanMeng666/super-mario-makey-makey"
+        }
+      ],
       "_supersededByProject": null,
       "_supersedesProjects": []
     },
@@ -15343,6 +15611,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-13",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-13T04:30:48.278Z"
+    "buildTimestamp": "2026-10-13T04:31:22.677Z"
   }
 }

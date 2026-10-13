@@ -1091,9 +1091,10 @@ projects:
         # ("↳ Featured by …", "↳ Listed on …"). Display subset only: the full
         # evidence register is `reach` below, and every item here must have a
         # row there. `logo` is optional (a missing file leaves the name as a
-        # plain link); `logoDark` only where the mark is ink on transparency;
-        # `wordmark: true` when the logo spells the name (the name is then not
-        # printed beside it).
+        # plain link); `logoDark` only where the mark is ink on transparency.
+        # The name is always printed beside the logo, even when the logo is a
+        # wordmark (MCP Market): a reader counts the names to see how many
+        # organisations there are (Chan, 2026-10-13).
         proofStrips:
           - label: "Featured by"
             items:
@@ -1106,7 +1107,7 @@ projects:
               - { name: "Smithery", url: "https://smithery.ai/server/@chanmeng666/google-news-server", logo: /public/platform-logos/smithery.png }
               - { name: "Glama", url: "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news", logo: /public/platform-logos/glama.svg }
               - { name: "mcp.so", url: "https://mcp.so/server/server-google-news/ChanMeng666", logo: /public/platform-logos/mcp-so.png }
-              - { name: "MCP Market", url: "https://mcpmarket.com/server/google-news", logo: /public/platform-logos/mcp-market.png, wordmark: true }
+              - { name: "MCP Market", url: "https://mcpmarket.com/server/google-news", logo: /public/platform-logos/mcp-market.png }
               - { name: "Augment Code", url: "https://www.augmentcode.com/mcp/server-google-news", logo: /public/platform-logos/augment-code.svg, logoDark: /public/platform-logos/augment-code-dark.svg }
               - { name: "Archestra", url: "https://archestra.ai/mcp-catalog/chanmeng666__server-google-news", logo: /public/platform-logos/archestra.png }
         # Evidence register for the server's reach. Every row was read on

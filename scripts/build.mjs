@@ -859,7 +859,7 @@ for (const p of visibleProjects) {
       label: strip.label,
       items: (strip.items ?? []).filter((i) => i?.name && i?.url).map((i) => {
         const logo = fileExists(i.logo) ? i.logo : null;
-        return { name: i.name, url: i.url, logo, logoDark: logo && fileExists(i.logoDark) ? i.logoDark : logo, wordmark: Boolean(logo && i.wordmark) };
+        return { name: i.name, url: i.url, logo, logoDark: logo && fileExists(i.logoDark) ? i.logoDark : logo };
       }),
     }))
     .filter((strip) => strip.label && strip.items.length);

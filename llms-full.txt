@@ -2536,7 +2536,7 @@ default), two audio themes, warnings before you hit your 5-hour
 and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,
 text-to-speech that reads the agent's actual reply aloud, and a
 33-segment status bar that tracks how much of the context window
-is left. Now on v7.0.0 with 783 automated tests running on
+is left. Now on v7.1.0 with 795 automated tests running on
 Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
 under MIT; runs on the Python standard library with no extra
 dependencies. A sister repo, echook-promo-video, ships an
@@ -2590,8 +2590,8 @@ telemetry. The value is build-in-public credibility: echook is
 the demonstration piece for Chan's AI-first product philosophy,
 and it shows up in Engram-cohort interviews, recruiter
 conversations, and the README of downstream client projects. A
-sustained release cadence (now v7.0.0), a three-OS
-continuous-integration matrix, and a 783-case test suite
+sustained release cadence (now v7.1.0), a three-OS
+continuous-integration matrix, and a 795-case test suite
 guarding the cross-editor contract make it visibly production
 engineering, not a weekend script. The Remotion promo-video
 sister repo extends the same proof — it shows Chan can ship not
@@ -2640,11 +2640,11 @@ one — echook never round-trips a user's TOML, because that would
 destroy comments and formatting. Canonical events with no Codex
 equivalent no-op cleanly under the Codex invoker with a debug
 log line, never blocking the session. The whole contract is
-validated by 783 test cases across Ubuntu, Windows, and macOS on
+validated by 795 test cases across Ubuntu, Windows, and macOS on
 Python 3.9, 3.12, and 3.13 in GitHub Actions.
 
 **Outcomes:** 88 GitHub stars (measured 2026-10-15 via the GitHub API), 168
-commits across the 5.x → 6.x line (now v7.0.0), and 783
+commits across the 5.x → 6.x line (now v7.1.0), and 795
 automated test cases. The defining release sequence: v5.0 (April
 2026) shipped the AI-first redesign — JSON command interface,
 `/audio-hooks` skill, NDJSON logging, plugin-native install;

@@ -22,6 +22,7 @@ sources:
   - docs/ecosystem/lineage.yaml (echook rows)
   - data/profile/70-linkedin.yaml (echook project)
   - ChanMeng666/echook at v7.0.0 (README, AGENTS.md, CHANGELOG.md, docs/ARCHITECTURE.md, docs/PROJECT_STATUS.md, docs/RELEASING.md, docs/DIRECTORY_LISTING.md, hooks/, bin/, tests/, .github/workflows/smoke.yml)
+  - ChanMeng666/echook v7.1.0 (CHANGELOG 7.1.0, docs/PROJECT_STATUS.md, docs/EVENT_BEHAVIOR_NOTES.md), released 2026-10-15
   - git log of ChanMeng666/echook, 2025-11-01 to 2026-10-13
   - GitHub issues #1-#14 and pull requests #2-#24 on ChanMeng666/echook, forks, code search
   - GitHub issue and code search for both names, web search (English, Chinese, Japanese), Hacker News, Reddit archive (2026-10-15)
@@ -170,7 +171,7 @@ clauses, that is the answer: I read the clause, and I ask for the carve-out up f
   and runs the unit suite, on Ubuntu, Windows and macOS with Python 3.9, 3.12 and 3.13. I
   also aligned every in-tree version string.
 - **Result**: Shipped as v5.1.1 the next day. That 3 x 3 matrix is still the project's CI;
-  by v7.0.0 it ran 783 test cases, and it later gained a no-drift check of the plugin copy
+  by v7.1.0 it ran 795 test cases, and it later gained a no-drift check of the plugin copy
   and Claude Code's own plugin validator.
 - **Engineer's angle**: The bug was trivial; the lesson was that nothing had ever imported
   the shipped file on a clean interpreter. The smoke job tests the artefact users run, not
@@ -203,7 +204,12 @@ clauses, that is the answer: I read the clause, and I ask for the carve-out up f
   add. Events Codex lacks are clean no-ops.
 - **Result**: Native Cursor support shipped in v5.1.6 and Codex in v5.2.0 (May 2026), each
   with its own bridge-contract tests. Today the manifest maps Claude Code to 30 of the 39
-  canonical events plus all 47 variants, Cursor to 18 native events, Codex to 11.
+  canonical events plus all 47 variants, Cursor to 18 native events, Codex to 11. Codex
+  support was not run against the real Codex binary until v7.1.0 (October 2026). That
+  first live run, `codex exec` on Codex 0.143.0 and 0.162.1, found Codex refusing both of
+  echook's hook files over extra top-level keys, so no Codex user had heard anything. v7.1.0
+  fixed the files, made `Stop` synchronous so headless runs play it, and was verified
+  against the real binary on both versions and both install routes.
 - **Engineer's angle**: The interesting failure mode is silent: a misnamed matcher becomes
   a permanent no-op, not an error. A contract test pins the chain from registration to
   handler to sound file in both directions, which is what makes such a break loud.
@@ -333,7 +339,7 @@ clauses, that is the answer: I read the clause, and I ask for the carve-out up f
   that no supported path needed, while keeping uninstall working for machines that still
   had it.
 - **Result**: Tests now pin each rule (help is side-effect-free, install argument safety,
-  read-only reporting commands). At v7.0.0 the suite has 783 tests passing; I also split the
+  read-only reporting commands). At v7.1.0 the suite has 795 tests passing; I also split the
   4,972-line CLI and 3,155-line runner into one module per concern and checked the split by
   replaying 431 invocations against the old code with no difference.
 - **Engineer's angle**: A tool built for agents will be probed by agents, and `--help` is
@@ -361,8 +367,8 @@ clauses, that is the answer: I read the clause, and I ask for the carve-out up f
 | 39 canonical hook events (3 on by default) plus 47 matcher variants; Claude Code 30 of 39 + all 47 variants, Cursor 18 native, Codex 11 | same, metrics "Hook events" |
 | 41 JSON-in/JSON-out CLI subcommands | same, metrics "CLI" |
 | 33 status-line segments | same, metrics "Status line" |
-| 783 unit tests (v7.0.0) on Ubuntu, Windows and macOS × Python 3.9 / 3.12 / 3.13 | same, metrics "Tests / CI" |
-| v7.0.0, released 2026-10-13; 61 releases | same, metrics "Version" |
+| 795 unit tests (v7.1.0) on Ubuntu, Windows and macOS × Python 3.9 / 3.12 / 3.13 | same, metrics "Tests / CI" |
+| v7.1.0, released 2026-10-15, the first release run against the real Codex binary; 62 releases | same, metrics "Version" |
 | Python 3.9+ standard library only, no third-party runtime dependencies | same, metrics "Runtime" |
 | Four channels: audio, desktop toast, TTS, webhook (Slack/Discord/Teams/ntfy) | same, metrics "Channels" |
 

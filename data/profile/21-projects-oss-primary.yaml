@@ -284,14 +284,14 @@ projects:
     metrics:
       - { label: "Commits (solo)", value: "168 (2025-11-01 → 2026-10-07, ~11 months); effectively single-author" }
       - { label: "GitHub stars",   value: "88 (measured 2026-10-15; renamed from claude-code-audio-hooks)" }
-      - { label: "Version",        value: "v7.0.0, released 2026-10-13; 61 releases (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)" }
+      - { label: "Version",        value: "v7.1.0, released 2026-10-15, the first release run against the real Codex binary (0.143.0 and 0.162.1); 62 releases (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)" }
       - { label: "Hook events",    value: "39 canonical events (3 on by default), plus 47 matcher variants — separately switchable matchers beneath a canonical event (`session_start_resume`, `stop_failure_rate_limit`), not extra events; mapped per harness: Claude Code 30 of 39 canonical + all 47 variants · Cursor 18 native (8 via auto-bridge) · Codex 11" }
       - { label: "Harnesses",      value: "3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift" }
       - { label: "Runtime",        value: "Python 3.9+ standard library only (no third-party runtime deps); distributed via plugin marketplaces + source, not npm" }
       - { label: "CLI",            value: "41 JSON-in/JSON-out subcommands; a `manifest` command emits the entire surface (subcommands, hooks, config keys, error codes) as machine-readable JSON so an agent can self-orient" }
       - { label: "Status line",    value: "33 configurable segments (context-window color bands, quota bars, model/branch/cost), auto-reflowing to terminal width" }
       - { label: "Channels",       value: "audio · desktop toast · TTS (speaks the agent's actual final message) · webhook (Slack/Discord/Teams/ntfy, versioned payload)" }
-      - { label: "Tests / CI",     value: "783 unittest cases (v7.0.0, run 2026-10-15) on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate" }
+      - { label: "Tests / CI",     value: "795 unittest cases (v7.1.0, run 2026-10-15) on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate" }
     publicSummary: |
       An audio-and-status notification system for Claude Code, Cursor
       IDE, and Codex CLI. The core idea: you never have to learn the
@@ -303,7 +303,7 @@ projects:
       and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,
       text-to-speech that reads the agent's actual reply aloud, and a
       33-segment status bar that tracks how much of the context window
-      is left. Now on v7.0.0 with 783 automated tests running on
+      is left. Now on v7.1.0 with 795 automated tests running on
       Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
       under MIT; runs on the Python standard library with no extra
       dependencies. A sister repo, echook-promo-video, ships an
@@ -357,8 +357,8 @@ projects:
         the demonstration piece for Chan's AI-first product philosophy,
         and it shows up in Engram-cohort interviews, recruiter
         conversations, and the README of downstream client projects. A
-        sustained release cadence (now v7.0.0), a three-OS
-        continuous-integration matrix, and a 783-case test suite
+        sustained release cadence (now v7.1.0), a three-OS
+        continuous-integration matrix, and a 795-case test suite
         guarding the cross-editor contract make it visibly production
         engineering, not a weekend script. The Remotion promo-video
         sister repo extends the same proof — it shows Chan can ship not
@@ -407,11 +407,11 @@ projects:
         destroy comments and formatting. Canonical events with no Codex
         equivalent no-op cleanly under the Codex invoker with a debug
         log line, never blocking the session. The whole contract is
-        validated by 783 test cases across Ubuntu, Windows, and macOS on
+        validated by 795 test cases across Ubuntu, Windows, and macOS on
         Python 3.9, 3.12, and 3.13 in GitHub Actions.
       outcomes: |
         88 GitHub stars (measured 2026-10-15 via the GitHub API), 168
-        commits across the 5.x → 6.x line (now v7.0.0), and 783
+        commits across the 5.x → 6.x line (now v7.1.0), and 795
         automated test cases. The defining release sequence: v5.0 (April
         2026) shipped the AI-first redesign — JSON command interface,
         `/audio-hooks` skill, NDJSON logging, plugin-native install;

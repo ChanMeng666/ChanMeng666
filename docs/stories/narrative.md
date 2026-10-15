@@ -1,7 +1,7 @@
 ---
 title: The threads through Chan Meng's engineering work
 lastResearched: "2026-10-15"
-sources: [archcanvas, archlang, gavigo-ire, she-sharp, eatropolis-website, femtech-weekend-website, tam-ai-ti, corde-mobile-application, ai-programming-teaching-project, echook, a11y-loop, google-news-mcp]
+sources: [archcanvas, archlang, gavigo-ire, she-sharp, eatropolis-website, femtech-weekend-website, lyzen-website, tam-ai-ti, corde-mobile-application, ai-programming-teaching-project, echook, a11y-loop, google-news-mcp]
 ---
 
 # The threads through my engineering work
@@ -46,6 +46,7 @@ The failures I learn most from are the ones that looked like success.
 - [archcanvas S7](archcanvas.md#s7-a-check-that-can-never-fail-is-not-a-check): when every layer mocks the database, the one probe that touches it must be allowed to block the release.
 - [gavigo-ire S7](gavigo-ire.md#s7-redis-had-gone-and-the-health-check-said-healthy): production ran without Redis while the health endpoint said healthy; I made the client self-heal and the status honest.
 - [she-sharp S4](she-sharp.md#s4-incidents-that-taught-me-to-break-my-own-guards): a guard is not verified until it has been handed the input it should refuse.
+- [lyzen-website S7](lyzen-website.md#s7-push-to-deploy-that-checks-what-the-last-site-taught-me): after a secret listed as present proved empty on the FemTech Weekend site, the next site's pipeline makes a live call with every credential and posts invalid input to production before a deploy counts.
 
 ### 3. Designing for handover from the first week
 
@@ -54,6 +55,7 @@ A system is finished when someone else can run it without asking me.
 - [corde-mobile-application S8](corde-mobile-application.md#s8-leaving-it-ready-for-the-next-developer): a build guide, translated comments and a work log let a teammate carry the app on after the placement.
 - [she-sharp S6](she-sharp.md#s6-designing-the-handover-so-the-answer-is-a-file-not-a-person): every recurring obligation got exactly one named owner, and the handover answers "what stops working when I stop answering?".
 - [tam-ai-ti S5](tam-ai-ti.md#s5-handing-production-to-the-client-without-signing-anyone-out): production moved into the client's accounts mid-cohort with no downtime and no one signed out.
+- [lyzen-website S5](lyzen-website.md#s5-hosting-in-the-owners-account-with-a-deliberately-narrow-role): the site runs in the owner's own account under a narrow role, and steps outside it became guides in her language rather than requests for more access.
 
 ### 4. Building for owners who do not write code
 
@@ -98,6 +100,7 @@ A figure goes out with its boundary, or it does not go out.
 | Ownership end to end | [eatropolis-website S6](eatropolis-website.md#s6-proving-the-site-would-hold-up-on-launch-day) (contract to launch-day load test); [archcanvas S7](archcanvas.md#s7-a-check-that-can-never-fail-is-not-a-check) (the release pipeline of my own product) |
 | Learning something fast | [google-news-mcp S1](google-news-mcp.md#s1-shipping-into-a-protocol-that-was-five-weeks-old) (shipping on a five-week-old protocol); [eatropolis-website S1](eatropolis-website.md#s1-making-nextjs-16-run-on-cloudflares-edge-where-build-green-did-not-mean-works) (Next.js on a runtime that is not Node) |
 | An incident under pressure | [gavigo-ire S3](gavigo-ire.md#s3-the-nightly-benchmark-that-took-every-game-offline); [she-sharp S4](she-sharp.md#s4-incidents-that-taught-me-to-break-my-own-guards) |
+| Design feedback that rejected your work | [lyzen-website S1](lyzen-website.md#s1-the-thread-that-would-not-sit-still-three-directions-one-approved) (two runtime threads turned down, then a rule that removed both failures); [lyzen-website S3](lyzen-website.md#s3-the-brief-changed-from-an-event-brand-to-a-company) (the brief changed mid-build, the approved design kept) |
 | Data migration | [she-sharp S3](she-sharp.md#s3-moving-1549-people-off-mailchimp-without-losing-consent); [gavigo-ire S2](gavigo-ire.md#s2-moving-production-from-digitalocean-to-google-cloud-in-one-evening) |
 
 ## Recruiter version

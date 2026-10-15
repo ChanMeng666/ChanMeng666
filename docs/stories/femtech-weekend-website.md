@@ -18,7 +18,8 @@ sources:
   - data/profile/22-projects-oss-webapps.yaml (femtech-weekend-website)
   - data/profile/10-career.yaml (work femtech-weekend)
   - data/profile/23-projects-oss-more.yaml (femtech-weekend, femtech-radar)
-  - data/profile/30-recognition.yaml, 50-references.yaml, 60-network.yaml
+  - data/profile/30-recognition.yaml, 50-references.yaml, 60-network.yaml (incl. organizations lyzen)
+  - docs/stories/lyzen-website.md
   - docs/ecosystem/lineage.yaml (femtech-weekend-site)
   - linkedin/posts/2025.yaml, linkedin/posts/2026.yaml
   - the client's private repository (code, commit history, developer docs), read 2026-10-15
@@ -35,6 +36,11 @@ companies, a newsletter, and an admin page where the founder approves applicants
 in batches. The summit ran June 22–25, 2026, with 20 speakers headlined by Ida
 Tin, the Clue co-founder who coined the term "FemTech", and hundreds of
 attendees.
+
+FemTech Weekend is the community arm of LYZEN, a cross-border women's health
+advisory firm with the same founder. I also designed and built LYZEN's own
+company site, lyzenglobal.com; the two sites are separate, and that one has
+its own story file, [lyzen-website.md](lyzen-website.md).
 
 ## The problem
 
@@ -78,6 +84,19 @@ Postgres; files go to Cloudinary; every email goes through Resend.
   welcome email.
 - **Assistant**: a Gemini-backed chat endpoint for questions about the
   organisation.
+
+**Two related organisations, two separate sites.** FemTech Weekend sits under
+LYZEN, the firm its founder leads, as its community arm (community, media,
+events). When LYZEN needed a company site, I built it as a new, separate site
+on its own domain rather than turning this one into it: femtechweekend.com
+stays the community's editorial platform and summit home, unchanged.
+LYZEN's site runs in its owner's Cloudflare account with its own database,
+newsletter list and contact address, and treats this site as a read-only
+source for the articles it also carries. What the two share is practice, not
+code: server logic as Cloudflare Pages Functions, guides written in the
+founder's language, and, learned here in S3, a deploy that is only verified
+by a real request. That lesson became an automated smoke test on the LYZEN
+site ([lyzen-website S7](lyzen-website.md#s7-push-to-deploy-that-checks-what-the-last-site-taught-me)).
 
 ## Stories
 

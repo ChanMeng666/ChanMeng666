@@ -89,9 +89,10 @@ This repo is public. On top of the rules in `CLAUDE.md` and `docs/STATE.md`:
 - **GAVIGO**: only the three approved figures, with their labels and the
   boundary note. **CORDE**: its commit share only with its basis beside it.
 - **No pricing or cost framing**, no commit counts or solo percentages.
-- **Projects held off visitor surfaces** (GenLAB, LYZEN, Seismophone,
-  Chromaflow, the music videos) get no tracked story; GenLAB's is in the
-  private layer until Chan clears it.
+- **Projects held off visitor surfaces** (GenLAB, Seismophone, Chromaflow,
+  the music videos) get no tracked story; GenLAB's is in the private layer
+  until Chan clears it. LYZEN is told here since 2026-10-15 (Chan) and stays
+  off every other visitor-facing surface.
 - Decisions, not motives: say what was chosen and the technical reason, not
   private reasons.
 
@@ -128,6 +129,7 @@ party to.
 | She Sharp | client | [she-sharp.md](she-sharp.md) | yes | 11 |
 | Eatropolis website | client | [eatropolis-website.md](eatropolis-website.md) | yes | 13 |
 | FemTech Weekend website | client | [femtech-weekend-website.md](femtech-weekend-website.md) | yes | 2 |
+| LYZEN company site | client | [lyzen-website.md](lyzen-website.md) | yes | 4 |
 | CORDE field-operations app | client | [corde-mobile-application.md](corde-mobile-application.md) | yes | 9 |
 | Tam-AI-Ti | commissioned | [tam-ai-ti.md](tam-ai-ti.md) | yes | 15 |
 | AI Programming Education Platform | teaching | [ai-programming-teaching-project.md](ai-programming-teaching-project.md) | yes | 0 |

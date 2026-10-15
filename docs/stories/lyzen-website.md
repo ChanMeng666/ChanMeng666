@@ -421,11 +421,6 @@ Resend sends the mail.
 
 ## Open questions
 
-- **Shard wording.** The `lyzen-website` publicSummary says the site "began in
-  September 2026 as a redesign for FemTech Weekend". `docs/STATE.md` says
-  never to describe it as a redesign of the FemTech Weekend site. This story
-  says it started under the FemTech Weekend event brand as a separate new
-  site; Chan to decide whether the shard sentence should change.
 - **Summit figures.** The shards say the summit had 20 speakers. The LYZEN
   site now follows the Shanghai 2026 Impact Report, which the founder made
   the source of record and which gives different figures; those are LYZEN's to

@@ -378,7 +378,7 @@ page and is marked public; the private layer holds the saved copies.
 
 ## Open questions
 
-- **The Smithery listing returns 404** (resolved 2026-10-15). Both
+None open. Settled on 2026-10-15: the Smithery listing returns 404. Both
   `smithery.ai/server/@chanmeng666/google-news-server` and Smithery's registry
   API answer "not found". Chan took Smithery off: it moved to `reach.gone`,
   and the "Listed on" strip, the listings metric (9 directory sites) and the

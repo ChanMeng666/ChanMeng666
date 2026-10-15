@@ -370,18 +370,16 @@ site ([lyzen-website S7](lyzen-website.md#s7-push-to-deploy-that-checks-what-the
 - **A recommendation.** Chan will ask Zhu Yihan for a LinkedIn recommendation
   that names the summit application system and the admin review; it would be
   the first public endorsement of this work.
-- **Newsletter sign-up.** The shard's description of the sign-up flow and the
-  production code differ; the detail is in the private notes. Chan is fixing
-  the site, after which the shard is right.
-
-Settled on 2026-10-15: the shards now say that Generation 2's content is MDX
+Settled on 2026-10-15: the newsletter sign-up in production again checks a
+hidden field and Cloudflare Turnstile on the server and adds a contact only
+when the emailed confirmation link is followed, so the shard's double opt-in is
+true; the shards now say that Generation 2's content is MDX
 the founder edits herself, with Notion receiving two form types; that three
 summit forms write to Postgres and ecosystem applications go to Notion; that
 the agenda is a gated PDF since 2026-05-26; that there is no CI workflow and
 broken links only warn; that Drizzle defines the schema and migrations while
 the functions use tagged-template SQL, with Gemini and Cloudinary over REST;
-that the site ran on Vercel from 2025-05 and on Cloudflare from 2026-01; a
-single commit total (570, 538 hers); and the two image passes as separate pieces of
+that the site ran on Vercel from 2025-05 and on Cloudflare from 2026-01; and the two image passes as separate pieces of
 work. The tables replaced on 2026-03-10 held real applications (told in S6);
 the speaker page came down on 2026-03-30 because the line-up had enough
 speakers. Generation 2 was chosen because the client valued article

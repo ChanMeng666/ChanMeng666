@@ -367,6 +367,3 @@ shards.
   financial coach; the correspondence shows testers asking for speech input
   and the voice coach arriving in November 2025 without a written request.
   S4 keeps the shard's wording until Chan confirms.
-- **README placement.** The task brief tied this project to `work[]` `engram`;
-  the shards do not. It is commissioned work shown under "Client &
-  commissioned work", and it predates Engram.

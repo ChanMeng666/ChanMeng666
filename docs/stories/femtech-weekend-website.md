@@ -38,7 +38,10 @@ Tin, the Clue co-founder who coined the term "FemTech", and 26 organisers and
 partners.
 
 FemTech Weekend is the community arm of LYZEN, a cross-border women's health
-advisory firm with the same founder. I also designed and built LYZEN's own
+advisory firm with the same founder. LYZEN describes itself as one platform in
+three parts: 她域 for advisory and execution in China, LYZEN for international
+advisory and partnerships, and FemTech Weekend for community, media and
+events. I also designed and built LYZEN's own
 company site, lyzenglobal.com; the two sites are separate, and that one has
 its own story file, [lyzen-website.md](lyzen-website.md).
 

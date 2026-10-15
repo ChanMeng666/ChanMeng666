@@ -92,6 +92,11 @@ videos:
   # its lyrics. Every music video has a custom thumbnail: the film's own
   # poster.jpg (the two October films use the posters chanmeng.org/films
   # serves).
+  # 2026-10-16: Chan uploaded the all-in-one film (chan-meng-promo-video,
+  # films/all-in-one) and made it public; title, description (text approved by
+  # her), category Science & Technology, the Brand films playlist and the
+  # film's own poster.jpg as thumbnail were set the same day.
+  - { id: "-RsnZLNrKf0", kind: film, published: "2026-10-16", duration: "3:22", title: "Chan Meng — who I am, what I've built, who vouches for me | All-in-one film", playlists: [Brand films], described: true }
   # 2026-10-10: Chan uploaded A Coffee for One and the showreel in its two
   # cuts; titles, descriptions, thumbnails and playlists were set that day.
   # The showreel's thumbnails are frames of the film (8 s; 19 s of the short).
@@ -177,7 +182,8 @@ playlists:
     id: PLbFM9MQh6CSA
     onHomeTab: true
     # Order set 2026-10-10: the intro, the showreel, its short cut, the sting.
-    videos: [QC2fqBGp4Xg, qoYcFszDnHA, 8n--dCv4tSQ, PoAYhd0KI4c]
+    # The all-in-one film was added 2026-10-16, at the end.
+    videos: [QC2fqBGp4Xg, qoYcFszDnHA, 8n--dCv4tSQ, PoAYhd0KI4c, "-RsnZLNrKf0"]
   - title: Music videos
     id: PLUfF7nx_5Rg4
     onHomeTab: true

@@ -192,9 +192,12 @@ them, seeing only what the user allows.
 ### S4. A voice coach without the server touching audio
 
 - **Kind**: implementation
-- **Situation**: The commissioner asked for a financial coach users could
-  talk to. Voice means low latency, and audio is personal; relaying it through
-  the server adds delay and puts the API key at risk if done in the browser.
+- **Situation**: The commissioner had asked for a financial coach; voice was
+  not in the brief. In November 2025, reading the cohort's feedback, I saw
+  testers asking to speak rather than type, so I proposed a coach they could
+  talk to and built it. Voice means low latency, and audio is personal;
+  relaying it through the server adds delay and puts the API key at risk if
+  done in the browser.
 - **What I did**: The server mints a short-lived key from OpenAI for each
   session; the browser connects to the Realtime API over WebRTC with that key,
   so the long-lived key never leaves the server and audio never passes through
@@ -213,6 +216,8 @@ them, seeing only what the user allows.
 - **Plain version**: People can talk to the coach out loud, and only the words
   are kept, never the recording.
 - **Follow-ups**:
+  - *Whose idea was voice?* Mine. The brief was a financial coach; the
+    testers' feedback asked for speech input, and I proposed and built it.
   - *Why not store audio?* Text is searchable and far smaller; a voice
     recording of someone's money worries is more sensitive than it is useful.
   - *How do you stop it giving financial advice?* The instructions forbid
@@ -360,10 +365,10 @@ shards.
 
 ## Open questions
 
+Settled on 2026-10-15: the voice coach was Chan's own initiative, added in
+November 2025 after testers asked for speech input; the financial coach itself
+was the commissioner's request. S4 and the shard's `myRole` now say so.
+
 - **A line from the commissioner.** Her written remarks exist privately
   (counted above). A LinkedIn recommendation was requested in March 2026 and
   none is recorded. Ask her before quoting her or naming her as a referee.
-- **Voice coach origin.** The shard says the commissioner asked for a
-  financial coach; the correspondence shows testers asking for speech input
-  and the voice coach arriving in November 2025 without a written request.
-  S4 keeps the shard's wording until Chan confirms.

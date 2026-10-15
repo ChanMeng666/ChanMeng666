@@ -333,7 +333,7 @@ Later ByteDance Youth Training Camp cohorts now scaffold their projects on two t
 
 ### Full Stack Developer
 
-**Dates:** Jun 2024 - Nov 2024 · 6 mos
+**Dates:** Jun 2024 - Oct 2024 · 6 mos
 **Location:** Canterbury, New Zealand · Hybrid
 
 ```

@@ -520,7 +520,7 @@
       "positions": [
         {
           "title": "Full Stack Developer",
-          "dateRange": "Jun 2024 - Nov 2024",
+          "dateRange": "Jun 2024 - Oct 2024",
           "duration": "6 mos",
           "location": "Canterbury, New Zealand · Hybrid",
           "description": "I built CORDE's field crews an offline-first React Native app. Their work is in rural Canterbury, where mobile coverage drops out, while the company's central operations platform assumes connectivity: the tablet in the worker's hand had to become the system of record for the moment of work, then sync when the signal came back.\n\n• A crew member captures text, photos, and GPS coordinates with no signal; the log is stored on the device and uploaded to Workbench on reconnection. Each log keeps its own sync status, retries on timers, and a local id apart from the server's, so offline logs never collide.\n• #1-most-prolific contributor on the build — 236 of 413 commits in the original repository (57%).\n• Left the team a documentation repository they could hand to the next developer — effectively sole author, 140 of 143 commits (97.9%).\n\nFive months with weekly on-site sprint meetings at CORDE and remote development in between, reporting to Barry Clark (Digital Development Manager, business sponsor), with Kullum Ladley (Business System Analyst) writing the Workbench API documents. CORDE is a 30+-year-old, 164-staff Canterbury infrastructure and civil-construction company — CCNZ Canterbury Contractor of the Year; Construction Excellence National Award.\n\nStack: React Native 0.74 + TypeScript + Native Base + SQLite + native geolocation/camera/maps.",
@@ -1887,7 +1887,7 @@
     },
     {
       "name": "CORDE Mobile — Offline-First Field-Operations App (React Native)",
-      "dateRange": "Jun 2024 – Nov 2024",
+      "dateRange": "Jun 2024 – Oct 2024",
       "associatedWith": "CORDE",
       "description": "A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Canterbury civil-construction contractor whose crews work in rural areas where mobile coverage drops out. The tablet becomes the system of record at the moment of work: text + photos + GPS + timestamps captured on the device and uploaded to CORDE's central Workbench platform on reconnection. Each log keeps its own sync status and timed retries, and a local id apart from the server's, so offline logs never collide.\n\n• #1-most-prolific contributor on the codebase: 236 of 413 commits in the original repository (57%), ahead of teammates Xue Zheng (32.7%) and Luke Shi (10.2%).\n• Sole author of the team documentation repository (140 of 143 commits, 97.9%), built against the Workbench API documents written by CORDE's Business System Analyst, Kullum Ladley.\n• Handed over in October 2024, with a project-structure guide and a release-packaging guide, to a teammate who has carried it on for CORDE since.\n\nStack: React Native 0.74, TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.",
       "skills": [

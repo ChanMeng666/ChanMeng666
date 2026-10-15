@@ -315,7 +315,8 @@ checkable by automation. An optional Claude Code plugin enforces the planning st
   leave; once back, the CTO asked to go through it. On 2026-09-04 I gave them,
   as the person who wrote the challenge brief, an hour-long online screen-share:
   pull the public repo, have the coding agent read the docs and install the skill
-  and CLI, then run it against a real production site. In the same call I helped
+  and CLI, then run it against my own production sites, such as ArchLang's
+  (archlang.uk) and ArchCanvas's (archcanvas.uk). In the same call I helped
   them set up a local development environment from scratch (Git, Node.js, the
   GitHub and Vercel CLIs).
 - **Result**: their verdict, hedge included: it "won't do the entire job, but it
@@ -383,7 +384,9 @@ checkable by automation. An optional Claude Code plugin enforces the planning st
 
 ## Open questions
 
-- **"A real production site"** (S7, from the shard): the contemporaneous record
-  of the call names no site and does not say production. Which site was it?
+Settled on 2026-10-15: the production sites in the S7 walkthrough were Chan's
+own live products, such as ArchLang's (archlang.uk) and ArchCanvas's
+(archcanvas.uk).
+
 - **No GitHub stars, forks or outside issues** as of 2026-10-15; npm downloads
   are the only public usage signal and are not in the shard.

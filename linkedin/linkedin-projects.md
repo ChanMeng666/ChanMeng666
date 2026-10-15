@@ -226,7 +226,7 @@ Stack: TypeScript + Node.js + @modelcontextprotocol/sdk + SerpAPI; published as 
 
 ## 13. CORDE Mobile — Offline-First Field-Operations App (React Native)
 
-**Dates:** Jun 2024 – Nov 2024
+**Dates:** Jun 2024 – Oct 2024
 **Associated with:** CORDE
 **Other contributors:** yes
 

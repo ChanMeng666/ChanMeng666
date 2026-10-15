@@ -2,7 +2,7 @@
 id: corde-mobile-application
 title: CORDE Field-Operations Mobile App
 role: Full Stack Developer and Lead Documenter (Lincoln University COMP693 industry placement)
-period: "2024-06 – 2024-11"
+period: "2024-06 – 2024-10"
 status: production
 kind: client
 repos:
@@ -321,7 +321,7 @@ Business System Analyst.
 
 | Figure | Source |
 |---|---|
-| Five months, June to November 2024 | `data/profile/10-career.yaml` › `work[corde]` |
+| Five months, June to October 2024 | `data/profile/10-career.yaml` › `work[corde]` |
 | CORDE: 30+ years of operations, about 164 staff | `data/profile/10-career.yaml` › `work[corde].narrative.companyContext` |
 | 14 API documents on eight topics (revisions included) and one priority list from CORDE's Business System Analyst | `data/profile/23-projects-oss-more.yaml` › `projects[corde-mobile-application].metrics` |
 | Commit share on the code: say it only together with its basis ("counted on the original repository"), exactly as worded in the shard metric, or not at all | `data/profile/23-projects-oss-more.yaml` › `projects[corde-mobile-application].metrics` |
@@ -362,10 +362,10 @@ Business System Analyst.
 
 ## Open questions
 
-- **Period end.** The team's records end in mid-October 2024: the last client
-  build, the teammate's takeover and an extra debugging session with the
-  client. Nothing is dated November. If `2024-11` is the course's end, the
-  client work should be described as delivered in October.
+Settled on 2026-10-15: the client work ended in October 2024, with the last
+client build and the teammate's takeover; the period and `work[corde]` now end
+2024-10.
+
 - **Written praise.** The team's records hold no email, chat, supervisor
   feedback or grade. A reference from CORDE would have to be asked for
   (Chan will ask).

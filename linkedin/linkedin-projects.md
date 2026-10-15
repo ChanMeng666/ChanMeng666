@@ -119,7 +119,7 @@ Stack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.
 **Other contributors:** yes
 
 ```
-The official site and submissions hub for FemTech Weekend — China's first women's-health-technology organisation — which delivered Shanghai Summit 2026 (June 22–25). 20 speakers were headlined by Ida Tin, the Clue co-founder who coined the term "FemTech" in 2016.
+The official site and submissions hub for FemTech Weekend — China's first women's-health-technology organisation — which delivered Shanghai Summit 2026 (June 22–25). Its 33 speakers were headlined by Ida Tin, the Clue co-founder who coined the term "FemTech" in 2016.
 
 Gen-2 was a deliberate rewrite from Next.js to Docusaurus because the founder valued how articles are presented and how easily they can be searched. Visitors today read original research reports (FemTech Market Map for Greater China; FemmeHealth Ventures Alliance), browse the speaker programme, and submit pitches and programme entries for review (speaker applications closed once the line-up was full); ecosystem partnership requests go to the team's Notion.
 

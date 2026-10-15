@@ -62,7 +62,7 @@
     // attribution out loud ("self-described as"); this two-page document has
     // no slack for the extra clause. Do not delete this marker without also
     // rewording the claim.  copy-lint-ok:R2
-    summary: [China's first women's-health-technology organisation outgrew its web platform twice; rebuilt it both times as sole engineer, remotely. Built everything the 2026 Shanghai Summit ran on online, including an application system the founder reviews in batches: four days, *20 confirmed speakers*, headlined by Ida Tin.],
+    summary: [China's first women's-health-technology organisation outgrew its web platform twice; rebuilt it both times as sole engineer, remotely. Built everything the 2026 Shanghai Summit ran on online, including an application system the founder reviews in batches: four days, *33 speakers*, headlined by Ida Tin.],
     built: [#link("https://www.femtechweekend.com/")[femtechweekend.com], both generations · the 2026 Summit pages and application system],
   )
   role-line(

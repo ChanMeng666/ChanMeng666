@@ -33,9 +33,9 @@ own from Auckland: a bilingual English and Simplified Chinese site with research
 reports, founder stories and opinion pieces, plus everything its Shanghai Summit
 2026 needed online: the event pages, application forms for founders and
 companies, a newsletter, and an admin page where the founder approves applicants
-in batches. The summit ran June 22–25, 2026, with 20 speakers headlined by Ida
-Tin, the Clue co-founder who coined the term "FemTech", and hundreds of
-attendees.
+in batches. The summit ran June 22–25, 2026, with 33 speakers headlined by Ida
+Tin, the Clue co-founder who coined the term "FemTech", and 26 organisers and
+partners.
 
 FemTech Weekend is the community arm of LYZEN, a cross-border women's health
 advisory firm with the same founder. I also designed and built LYZEN's own
@@ -320,8 +320,8 @@ site ([lyzen-website S7](lyzen-website.md#s7-push-to-deploy-that-checks-what-the
 
 | Figure | Source |
 |---|---|
-| Summit June 22–25, 2026, 20 speakers headlined by Ida Tin, the Clue co-founder who coined "FemTech" | `data/profile/22-projects-oss-webapps.yaml` (femtech-weekend-website); https://www.femtechweekend.com/shanghai-summit |
-| "Hundreds of attendees" (verbatim, no exact figure), PwC building at Qiantan Center, Pudong | `data/profile/10-career.yaml` (femtech-weekend) |
+| Summit June 22–25, 2026, 33 speakers headlined by Ida Tin, the Clue co-founder who coined "FemTech"; 26 organisers and partners | The summit's Shanghai 2026 Impact Report, the founder's source of record; `data/profile/22-projects-oss-webapps.yaml` (femtech-weekend-website) metrics |
+| PwC building at Qiantan Center, Pudong; no attendee count is stated anywhere | `data/profile/10-career.yaml` (femtech-weekend) |
 | 2 languages, English and Simplified Chinese, on every page | `22-projects-oss-webapps.yaml` metrics |
 | 16 Cloudflare Pages Functions | `22-projects-oss-webapps.yaml` metrics |
 | 4 Postgres tables, 4 migrations | `22-projects-oss-webapps.yaml` metrics |

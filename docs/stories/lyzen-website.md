@@ -421,10 +421,6 @@ Resend sends the mail.
 
 ## Open questions
 
-- **Summit figures.** The shards say the summit had 20 speakers. The LYZEN
-  site now follows the Shanghai 2026 Impact Report, which the founder made
-  the source of record and which gives different figures; those are LYZEN's to
-  state. Chan to decide whether the shards should change.
 - **A recommendation.** A LinkedIn recommendation from the founder that names
   this site would be the first public endorsement of it.
 - **Founder review.** The site is in the founder's review; this file should be

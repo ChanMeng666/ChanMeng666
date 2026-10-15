@@ -259,7 +259,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Chengdu, Sichuan, China",
   arrangement: "Remote",
   bullets: (
-    [Sole engineer, remotely, across two platform generations for an organisation self-described as China's first in women's health technology; built the pages and application system for its 2026 Shanghai Summit (four days, 20 speakers, headlined by Ida Tin); site: femtechweekend.com.],
+    [Sole engineer, remotely, across two platform generations for an organisation self-described as China's first in women's health technology; built the pages and application system for its 2026 Shanghai Summit (four days, 33 speakers, headlined by Ida Tin); site: femtechweekend.com.],
   ),
 )
 

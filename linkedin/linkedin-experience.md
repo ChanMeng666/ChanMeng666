@@ -160,7 +160,7 @@ FemTech Weekend describes itself as China's first organisation built around wome
 • The founder valued how articles read and how easily they can be searched, so I rebuilt underneath the site — Generation 2 (May 2025–): Docusaurus for article presentation and search, Drizzle + Neon Postgres for application data, Cloudflare Pages for edge delivery. 538 of 570 commits are mine; the rest are the founder's content edits.
 • The founder ran summit selection without an engineer: pitch, programme and speaker applications each land in their own database table, and she approves them in batches from an admin dashboard I built — each approval sends a branded email with the payment link and a conference-access code.
 
-The Shanghai Summit ran June 22–25, 2026, billed as China's first global women's health summit: four days, delegates from Australia, Canada, China, Denmark, England, the Netherlands, Singapore, South Korea, the United States and Central Asia, and 20 speakers headlined by Ida Tin, the Clue co-founder who coined "FemTech". I built everything it ran on online — the summit pages, 20 components including a 3D globe of 40 countries, the agenda download and the application pipeline.
+The Shanghai Summit ran June 22–25, 2026, billed as China's first global women's health summit: four days, 33 speakers headlined by Ida Tin, the Clue co-founder who coined "FemTech", and 26 organisers and partners. I built everything it ran on online — the summit pages, 20 components including a 3D globe of 40 countries, the agenda download and the application pipeline.
 
 The same platform carries two original research reports: FemTech Market Map for Greater China (May 2025) and the FemmeHealth Ventures Alliance announcement (June 2025).
 ```

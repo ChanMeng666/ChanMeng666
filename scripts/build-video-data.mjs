@@ -160,10 +160,41 @@ const FACTS = [
   { key: "testimonial.sabaGecgil", reference: "saba-gecgil", field: "reference",
     rule: /(she turns ambiguous founder-level direction into working systems)/, cast: "string" },
 
+  // — the `brand` film (who / what / done / impact) —
+  // Its four client voices: each a whole verbatim sentence or clause of the
+  // recommendation, shown with the speaker's name and relationship.
+  { key: "testimonial.sabaSpeed", reference: "saba-gecgil", field: "reference",
+    rule: /(She combines speed with discipline)\./, cast: "string" },
+  { key: "testimonial.paigeAfanu", reference: "paige-afanu-omopeju-afanu", field: "reference",
+    rule: /(She consistently delivered high-quality work),/, cast: "string" },
+  { key: "testimonial.lesleyGao", reference: "lesley-gao", field: "reference",
+    rule: /(She naturally becomes the technical backbone of the team),/, cast: "string" },
+  { key: "testimonial.gabrielleHurst", reference: "gabrielle-j-hurst", field: "reference",
+    rule: /(Chan brings structure and calm to ambiguity),/, cast: "string" },
+  // — the `all-in-one` film —
+  // Engram's founder, as quoted in the work entry (his public LinkedIn post); the
+  // source wraps across lines, so the film collapses the whitespace.
+  { key: "testimonial.lukaMadzarac", work: "engram", field: "narrative.myMandate",
+    rule: /\*"(Claude Code surfaced Chan as one of the strongest matches\s+for what we're looking for\.)"\*/, cast: "string" },
+  // Two learners, each a whole verbatim sentence or clause of their recommendation.
+  { key: "testimonial.kwameEssuman", reference: "kwame-essuman", field: "reference",
+    rule: /(Chan has a rare talent for making complex AI concepts accessible and intuitive)\./, cast: "string" },
+  { key: "testimonial.shiyuFang", reference: "shiyu-fang", field: "reference",
+    rule: /(A fantastic mentor who makes tech learning fun)!/, cast: "string" },
+  // "A minimalist." is the self-description the film's who-I-am chapter opens on.
+  { key: "identity.minimalist", basics: "taglines.secondary",
+    rule: /^(A minimalist)\. Subtraction for life, addition for thought\.$/, cast: "string" },
+  // The bridge from the minimalist life to the engineering, in Chan's own
+  // words on the LinkedIn publication entry.
+  { key: "minimalism.engineeringInstinct", linkedinPublication: "A Glimpse of My Minimalist Home", field: "description",
+    rule: /the same instinct I bring to engineering — (stripping away what isn't needed so the essential works better)/, cast: "string" },
+
   // — beat 09 and end card —
   { key: "reach.githubStars", reach: "GitHub stars", rule: /^([\d,]+\+?)/, cast: "string" },
   { key: "reach.linkedinFollowers", reach: "LinkedIn followers", rule: /^([\d,]+)/, cast: "string" },
   { key: "reach.newsletter", reach: "newsletter subscribers", rule: /^([\d,]+)/, cast: "string" },
+  // The historical maximum (CLAUDE.md): worded on screen as "27 recommendations".
+  { key: "reach.recommendations", reach: "LinkedIn recommendations", rule: /^(\d+)$/, cast: "int" },
 
   // — computed —
   { key: "projects.total", compute: () => profile.projects.length, cast: "int" },
@@ -208,6 +239,20 @@ function resolve(spec) {
     const v = spec.field.split(".").reduce((o, k) => o?.[k], e);
     if (v === undefined) throw new Error(`${coll}[${spec[kind]}].${spec.field} does not exist`);
     return finish(spec, String(v), `${coll}[${spec[kind]}].${spec.field}`);
+  }
+
+  if (spec.basics) {
+    const v = spec.basics.split(".").reduce((o, k) => o?.[k], profile.basics);
+    if (v === undefined) throw new Error(`basics.${spec.basics} does not exist`);
+    return finish(spec, String(v), `basics.${spec.basics}`);
+  }
+
+  if (spec.linkedinPublication) {
+    const e = (profile.linkedin?.publications ?? []).find((x) => x.title === spec.linkedinPublication);
+    if (!e) throw new Error(`no linkedin.publications entry titled "${spec.linkedinPublication}"`);
+    const v = e[spec.field];
+    if (v === undefined) throw new Error(`linkedin.publications[${spec.linkedinPublication}].${spec.field} does not exist`);
+    return finish(spec, String(v), `linkedin.publications[${spec.linkedinPublication}].${spec.field}`);
   }
 
   let raw;
@@ -378,7 +423,13 @@ const payload = {
     // can enforce it mechanically rather than by review.
     // Saba Gecgil added 2026-09-28 with Chan's approval: the `intro` film
     // attributes the testimonial.sabaGecgil excerpt to her by name.
-    nameAllowlist: ["Luka Madzarac", "Saba Gecgil"],
+    // Paige Afanu, Lesley Gao and Gabrielle J. Hurst added 2026-10-15 for the
+    // `brand` film, which quotes their LinkedIn recommendations by name (all
+    // three are public on her LinkedIn recommendations page and listed by name
+    // in 90-meta.yaml). Pending Chan's review before the film ships.
+    // Kwame Essuman and Shiyu Fang added the same day for the `all-in-one` film
+    // (learner voices), also pending her review.
+    nameAllowlist: ["Luka Madzarac", "Saba Gecgil", "Paige Afanu", "Lesley Gao", "Gabrielle J. Hurst", "Kwame Essuman", "Shiyu Fang"],
     organizationAllowlist: (profile.organizations ?? []).map((o) => o.name).filter(Boolean),
   },
 };

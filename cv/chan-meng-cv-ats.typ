@@ -74,7 +74,7 @@
   // that would split one fact across two files and make a bare `typst compile`
   // produce a different PDF. cv/build-ats-exports.mjs PARSES this line and
   // reuses it for the .docx core properties, so it stays one fact in one file.
-  date: datetime(year: 2026, month: 9, day: 16),
+  date: datetime(year: 2026, month: 10, day: 15),
   // NO keywords: on purpose. The 70-term list in chan-meng-cv.typ is plainly
   // legible in `pdfinfo` and reads as keyword stuffing to an AI screener —
   // the same class of anti-pattern cv/README.md already bans. Everything that
@@ -247,7 +247,7 @@ coding agents and building on the Claude Agent SDK.
   location: "Auckland, New Zealand",
   arrangement: "Remote",
   bullets: (
-    [Build an AI design agent for architects and self-builders; invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (53 npm releases, 139 diagnostic codes), so every plan is checked and an edit is exact; live at archcanvas.uk and archlang.uk.],
+    [Build an AI design agent for architects and self-builders; invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (62 npm releases, 139 diagnostic codes), so every plan is checked and an edit is exact; live at archcanvas.uk and archlang.uk.],
   ),
 )
 
@@ -280,7 +280,7 @@ coding agents and building on the Claude Agent SDK.
   title: "Founding Principal Engineer, Activation, Execution & AI Systems",
   org: "GAVIGO Inc.",
   org-url: "https://gavigo.com/",
-  dates: "Oct 2025 - Sep 2026",
+  dates: "Oct 2025 - Oct 2026",
   location: "Wilmington, Delaware, United States",
   arrangement: "Remote",
   bullets: (
@@ -405,7 +405,7 @@ coding agents and building on the Claude Agent SDK.
   A bilingual Docusaurus platform (211 of 220 commits) carrying five cohort
   versions of AI-programming teaching side by side, three concurrent in 2026, for
   TechNest's 2026 AI Track and academyEX's Her Waka, with a Cloudflare Workers RAG
-  assistant doing version-aware retrieval over 4,800 chunks.
+  assistant doing version-aware retrieval over about 1,200 chunks.
 ]
 
 #project-entry(

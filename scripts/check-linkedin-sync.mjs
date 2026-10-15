@@ -147,7 +147,7 @@ const projNameToId = {
   // Renamed SunoStats -> Seismophone in 70-linkedin.yaml; the old key silently
   // matched nothing, so this project's dateRange went unguarded. Fixed 2026-09-05.
   "Seismophone — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)": "sunostats",
-  "She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community": "she-sharp",
+  "She Sharp Member Platform — AI Mentor Matching with Human Approval for a NZ Women-in-STEM Charity": "she-sharp",
 };
 const genProj = (name) => generated?.projects?.find((p) => p.name === name);
 for (const [name, pid] of Object.entries(projNameToId)) {

@@ -139,13 +139,13 @@ We also talked about my minimalist lifestyle and my observations on the job mark
 
 **Publication/Publisher:** PulseMCP
 **Publication date:** Jan 4, 2025
-**Author:** Tadas Antanavicius (PulseMCP) — Chan Meng's MCP servers featured
+**Author:** Tadas Antanavicius (PulseMCP) — Chan Meng's MCP server featured
 **URL:** <https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording>
 
 ```
-Third-party coverage in the PulseMCP newsletter, where the Model Context Protocol (MCP) servers I built — server-google-news and server-google-jobs — were featured among the week's notable ecosystem contributions. MCP is Anthropic's open standard that lets AI agents safely use real tools and data.
+Third-party coverage in the PulseMCP newsletter, where the Model Context Protocol (MCP) server I built, server-google-news, was featured among the week's notable ecosystem contributions. MCP is Anthropic's open standard that lets AI agents safely use real tools and data.
 
-Being picked up by an independent MCP-ecosystem newsletter, written by Tadas Antanavicius, is external validation of an early contribution to the agent-tooling space — the servers were useful enough that a curator chose to surface them to a specialist audience.
+Being picked up by an independent MCP-ecosystem newsletter, written by Tadas Antanavicius, is external validation of an early contribution to the agent-tooling space — the server was useful enough that a curator chose to surface it to a specialist audience.
 ```
 
 ---

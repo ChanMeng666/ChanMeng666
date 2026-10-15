@@ -268,7 +268,7 @@
   // p10 — client systems: FemTech Weekend + Eatropolis
   v(1fr)
   product-tile("/public/brands/femtech-weekend-mark.svg", [FemTech Weekend website],
-    [The home of China's first women's-health-technology organisation, which carried its Shanghai Summit 2026: four application pipelines, an admin dashboard with review and approval emails, and a bilingual English / 简体中文 site.],
+    [The home of China's first women's-health-technology organisation, which carried its Shanghai Summit 2026: summit application forms, an admin dashboard with review and approval emails, and a bilingual English / 简体中文 site.],
     [Docusaurus on Cloudflare Pages with Drizzle and Neon Postgres; 16 serverless endpoints handle the whole server side.],
     "https://www.femtechweekend.com/", "femtechweekend.com", logo-h: build-logo-h,
     client: [For FemTech Weekend — Chief Technology Officer])

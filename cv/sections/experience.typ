@@ -5,7 +5,7 @@
 // ORDER: roles Chan is STILL DOING come first, ranked by importance, then the
 // ended ones in the same ranked spirit. ArchCanvas (her own company) leads,
 // then FemTech Weekend — the only two current roles since Sep 2026. She Sharp
-// and GAVIGO both ended Sep 2026; TechNest sits behind them.
+// ended Sep 2026 and GAVIGO Oct 2026; TechNest sits behind them.
 //
 // SIX detailed roles is the budget (was five). 2026-09-17: Sanicle came back up
 // from the "Previously:" run-on as a full role — Chan asked for the dead space
@@ -47,7 +47,7 @@
     org-url: "https://archcanvas.uk/",
     dates: "Apr 2026 — Present",
     location: [Auckland, New Zealand · *Remote*],
-    summary: [Architects and self-builders describe a building in plain words and get back a dimensioned, buildable floor plan. When plans drawn as pictures proved impossible to check, invented *#link("https://github.com/ChanMeng666/archlang")[ArchLang]*, the open-source language that compiles a plan into a precise drawing (*53 npm releases*, *139 diagnostic codes*), and rebuilt the product on it — so an edit is exact, not regenerated.],
+    summary: [Architects and self-builders describe a building in plain words and get back a dimensioned, buildable floor plan. When plans drawn as pictures proved impossible to check, invented *#link("https://github.com/ChanMeng666/archlang")[ArchLang]*, the open-source language that compiles a plan into a precise drawing (*62 npm releases*, *139 diagnostic codes*), and rebuilt the product on it — so an edit is exact, not regenerated.],
     built: [#link("https://archcanvas.uk/")[archcanvas.uk] · #link("https://archlang.uk/")[archlang.uk]],
   )
   role-line(
@@ -71,14 +71,14 @@
     org-url: "https://www.shesharp.org.nz/",
     dates: "Jul 2025 — Sep 2026",
     location: [Auckland, New Zealand · *Hybrid*],
-    summary: [A volunteer-run NZ women-in-STEM charity (*96+ events since 2014*) moved off rented software onto a system it owns: sign-ups, memberships, events, and GPT-4o-mini mentor matching. Recruited by founder Dr Mahsa Mohaghegh, led the build across *13.3 months*, including a *1,549-person* mailing-list cutover with *0 failures*. Rewrote the charity's recurring work — event setup, newsletters, posters, video — as *11 agent skills* a non-engineer can follow, so the handover was written down before leaving.],
+    summary: [A volunteer-run NZ women-in-STEM charity (*96+ events since 2014*) moved off rented software onto a system it owns: sign-ups, memberships, events, and GPT-4o-mini mentor matching a human approves. Recruited by founder Dr Mahsa Mohaghegh, led the build across *13.3 months*, including a *1,549-person* mailing-list cutover with *0 failures*. Rewrote the charity's recurring work — event setup, newsletters, posters, video — as *11 agent skills* a non-engineer can follow, so the handover was written down before leaving.],
     built: [#link("https://www.shesharp.org.nz/")[shesharp.org.nz] · #link("https://www.shesharp.org.nz/resources/newsletters")[the newsletter] · #link("https://www.shesharp.org.nz/present/aotearoa-ai-hackathon-festival-2026")[the AI Hackathon deck]],
   )
   role-line(
     title: "Founding Principal Engineer, Activation, Execution & AI Systems",
     org: "GAVIGO Inc.",
     org-url: "https://gavigo.com/",
-    dates: "Oct 2025 — Sep 2026",
+    dates: "Oct 2025 — Oct 2026",
     location: [Wilmington, Delaware, United States · *Remote*],
     summary: [Scroll a feed and the next game is already on standby, with no app-store install — built the Intelligence Layer behind GAVIGO's activation platform. Go orchestrator: a seven-trigger AI rules engine, a warm-pool manager and a five-state activation spine in Redis, on live Kubernetes (GKE) — in controlled proof-stage tests, *78% less application-level startup work* and a startup path cut from *4.45 s to 1.00 s* (not a production SLA), and a DigitalOcean → GCP move in a *30-minute cutover*. Built it solo; promoted Core Engineer → Founding Principal across three contracts.],
     built: [#link("https://ire.gavigo.com/")[ire.gavigo.com], the live activation platform],
@@ -109,7 +109,7 @@
   block(above: 0pt, below: 0pt, {
     set par(leading: 0.7em, justify: false)
     text(size: size-tiny, fill: muted, style: "italic")[
-      *Previously:* *AI Agent Architect at #link("https://engram.media/")[Engram]* (Albuquerque, NM · remote; recruited onto *Anthropic's Partner Network architect track* after founder Luka Madzarac's own Claude agent surfaced Chan's open-source portfolio — publicly confirmed by him; credentials behind Engram's Partner Network approval) · *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* (Douyin Mall capstone, Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ; offline-first React Native field app, \#1 contributor) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 27 LinkedIn recommendations).
+      *Previously:* *AI Agent Architect at #link("https://engram.media/")[Engram]* (Albuquerque, NM · remote; recruited onto *Anthropic's Partner Network architect track* after founder Luka Madzarac's own Claude agent surfaced Chan's open-source portfolio — publicly confirmed by him; credentials behind Engram's Partner Network approval) · *#link("https://www.bytedance.com/en/")[ByteDance] backend developer* (Douyin Mall capstone, Youth Training Camp; Spring Boot 3) · *full-stack developer & lead documenter at #link("https://corde.nz/")[CORDE]* (Canterbury, NZ; offline-first React Native field app; 236 of 413 commits on the original repository, the largest share) · *#link("https://www.linkedin.com/company/taxing-mentorship/")[Forward With Her] mentor* (China · remote; 7 of 27 LinkedIn recommendations).
     ]
   })
 })

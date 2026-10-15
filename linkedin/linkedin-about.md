@@ -12,7 +12,7 @@ I do my best work for founders who need speed, teams who need depth, and product
 ## 🏗️ Founder — ArchCanvas + ArchLang
 
 ```
-Proof rather than claims — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that compiles a floor plan written as .arch source into dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture". ArchCanvas is the AI architect built on top of it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you keep refining by talking to it (archcanvas.uk).
+Proof rather than claims — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that compiles a floor plan written as .arch source into dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture". ArchCanvas is the AI architectural designer built on top of it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you keep refining by talking to it (archcanvas.uk).
 ```
 
 ## 🤖 AI Agent Engineering

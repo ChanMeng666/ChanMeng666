@@ -13,11 +13,11 @@
 **Location:** Auckland, New Zealand · Remote
 
 ```
-Type a brief in plain English and get back one strong, checkable, dimensioned floor plan you can actually build from — then refine it conversationally on an infinite zoomable canvas. That is ArchCanvas, an AI architect I founded and engineer alone. Underneath it sits ArchLang, the open-source declarative floor-plan language I also wrote solo and that ArchCanvas compiles on: write a plan as .arch source and it compiles to dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture."
+Type a brief in plain English and get back one strong, checkable, dimensioned floor plan you can actually build from — then refine it conversationally on an infinite zoomable canvas. That is ArchCanvas, an AI architectural designer I founded and engineer alone. Underneath it sits ArchLang, the open-source declarative floor-plan language I also wrote solo and that ArchCanvas compiles on: write a plan as .arch source and it compiles to dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture."
 
 • Edits stay precise and re-editable, because every plan is real parametric ArchLang under the hood rather than pixels — nudge a wall, tweak a parameter, or have the AI review circulation and pin the fixes in place.
 • Anyone can build on the language, not only my product: ArchLang is published open-source to npm as @chanmeng666/archlang — a hand-written compiler (lexer + recursive-descent parser, zero runtime dependencies) with architectural-soundness linting, a CLI, LSP + VS Code tooling, and a client-side playground.
-• I built the product first and the language when the product needed it: drawing plans as pictures could not be checked, so eleven weeks in I wrote a compiler instead. ArchLang now has 53 npm releases, 139 diagnostic codes and 4,338 tests. Sole engineer on both, working with AI coding agents, built in public.
+• I built the product first and the language when the product needed it: drawing plans as pictures could not be checked, so eleven weeks in I wrote a compiler instead. ArchLang now has 62 npm releases, 139 diagnostic codes and 4,338 tests. Sole engineer on both, working with AI coding agents, built in public.
 
 Links: archcanvas.uk · github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang
 ```
@@ -72,12 +72,12 @@ With the Partner Network approval in place, I left in July 2026 to focus on my o
 **Media:** `AI Programming Learning Platform - Master AI Programming`
 
 ## Gavigo
-_12 mos · Remote_
+_1 yr 1 mo · Remote_
 **Links:** <https://ire.gavigo.com/> · <https://gavigo.com/>
 
 ### Founding Principal Engineer
 
-**Dates:** Feb 2026 - Sep 2026 · 8 mos
+**Dates:** Feb 2026 - Oct 2026 · 9 mos
 **Location:** 1007 N Orange St, 4th Floor, 4785, Wilmington, Delaware 19801, USA
 **LinkedIn helped me get this job**
 
@@ -91,7 +91,7 @@ Feb 2026: Gavigo joined the Google for Startups Cloud Program and NVIDIA Incepti
 • Every activation is recorded instead of asserted — a 5-state activation engine with atomic Redis transitions and timestamped proof signals.
 • The platform crossed continents in one planned window: DigitalOcean (Singapore) → Google Cloud GKE (Belgium), a ~30-minute cutover.
 • The next game was on standby before someone arrived, because a 7-trigger AI rules engine decided which to pre-load, for whom, when.
-• Response compression had never been enabled in production — a default that only misbehaves behind a load balancer, so it looked correct on every developer machine. Switching it on took the dashboard bundle from 1.2 MB to 350 KB and the mobile bundle from 2.99 MB to 748 KB.
+• Response compression had never been enabled in production — a default that only misbehaves behind a load balancer, so it looked correct on every developer machine. I found it and switched it on, so every bundle and game the feed serves now ships compressed.
 • Nobody had to reconstruct what I knew: project context went into the repository as the work happened — an agent operating manual, onboarding docs, deployment runbooks, 13 numbered phase records — so the handover was written before I left.
 
 Stack: Go, GKE Kubernetes, Redis, WebSocket, React Native + Expo, gpt-5.4-mini.
@@ -157,10 +157,10 @@ Stack: Next.js 15, React 19, Drizzle + Neon Postgres, NextAuth 5, Stripe, Resend
 FemTech Weekend describes itself as China's first organisation built around women's health technology. It publishes research, builds partnerships and runs its summits on infrastructure I designed, built and run alone, remotely from Auckland: two complete platform generations from scratch. I am its sole technical leader, co-architecting with founder Zhu Yihan (HQ Chengdu; ecosystem partnerships with Bayer, PwC, FemTech Across Borders).
 
 • A non-technical founder publishes the site herself — Generation 1 (Mar 2025–): Next.js 15 with Notion as the CMS, so she writes in a tool she already used daily and the website renders it live. Bilingual EN / CN from day one. 58 commits, 100% solo.
-• Research and multi-event programming outgrew the marketing site, so I rebuilt underneath it — Generation 2 (May 2025–): Docusaurus for editorial depth, Drizzle + Neon Postgres for application data, Cloudflare Pages for edge delivery. 538 of 570 commits are mine; the rest are the founder's content edits.
+• The founder valued how articles read and how easily they can be searched, so I rebuilt underneath the site — Generation 2 (May 2025–): Docusaurus for article presentation and search, Drizzle + Neon Postgres for application data, Cloudflare Pages for edge delivery. 538 of 570 commits are mine; the rest are the founder's content edits.
 • The founder ran summit selection without an engineer: pitch, programme and speaker applications each land in their own database table, and she approves them in batches from an admin dashboard I built — each approval sends a branded email with the payment link and a conference-access code.
 
-The Shanghai Summit ran June 22–25, 2026, billed as China's first global women's health summit: four days, delegates from Australia, Canada, China, Denmark, England, the Netherlands, Singapore, South Korea, the United States and Central Asia, and 20 speakers headlined by Ida Tin, the Clue co-founder who coined "FemTech". I built everything it ran on online — four summit routes, 20 components including a 3D globe of 40 countries, the agenda and the application pipeline.
+The Shanghai Summit ran June 22–25, 2026, billed as China's first global women's health summit: four days, delegates from Australia, Canada, China, Denmark, England, the Netherlands, Singapore, South Korea, the United States and Central Asia, and 20 speakers headlined by Ida Tin, the Clue co-founder who coined "FemTech". I built everything it ran on online — the summit pages, 20 components including a 3D globe of 40 countries, the agenda download and the application pipeline.
 
 The same platform carries two original research reports: FemTech Market Map for Greater China (May 2025) and the FemmeHealth Ventures Alliance announcement (June 2025).
 ```
@@ -334,18 +334,18 @@ Later ByteDance Youth Training Camp cohorts now scaffold their projects on two t
 ### Full Stack Developer
 
 **Dates:** Jun 2024 - Nov 2024 · 6 mos
-**Location:** Christchurch City, Canterbury, New Zealand · Hybrid
+**Location:** Canterbury, New Zealand · Hybrid
 
 ```
-I built CORDE's field crews an offline-first React Native app. Their work is in rural Canterbury, where mobile coverage drops out, while the company's central operations platform assumes connectivity: the tablet in the worker's hand had to become the system of record for the moment of work, then reconcile cleanly when the signal came back.
+I built CORDE's field crews an offline-first React Native app. Their work is in rural Canterbury, where mobile coverage drops out, while the company's central operations platform assumes connectivity: the tablet in the worker's hand had to become the system of record for the moment of work, then sync when the signal came back.
 
-• A crew member captures text, photos, and GPS coordinates simultaneously with no signal, stored locally with integrity guarantees and synced back to Workbench on reconnection — including the cases that actually break field apps: duplicate IDs, partial sync, mid-batch connectivity drops.
+• A crew member captures text, photos, and GPS coordinates with no signal; the log is stored on the device and uploaded to Workbench on reconnection. Each log keeps its own sync status, retries on timers, and a local id apart from the server's, so offline logs never collide.
 • #1-most-prolific contributor on the build — 236 of 413 commits in the original repository (57%).
 • Left the team a documentation repository they could hand to the next developer — effectively sole author, 140 of 143 commits (97.9%).
 
-Five months on-site at CORDE's Rolleston head office, reporting to Barry Clark (business sponsor), with Kullum Ladley as Workbench API specification author. CORDE is a 30+-year-old, 164-staff Canterbury infrastructure and civil-construction company — CCNZ Canterbury Contractor of the Year; Construction Excellence National Award.
+Five months with weekly on-site sprint meetings at CORDE and remote development in between, reporting to Barry Clark (Digital Development Manager, business sponsor), with Kullum Ladley (Business System Analyst) writing the Workbench API documents. CORDE is a 30+-year-old, 164-staff Canterbury infrastructure and civil-construction company — CCNZ Canterbury Contractor of the Year; Construction Excellence National Award.
 
-Stack: React Native 0.83 + TypeScript + Native Base + SQLite + native geolocation/camera/maps.
+Stack: React Native 0.74 + TypeScript + Native Base + SQLite + native geolocation/camera/maps.
 ```
 
 **Skills:** React Native, TypeScript, Offline-First Architecture, Native Base, SQLite, Mobile Application Development

@@ -1136,8 +1136,8 @@ collaborators:
     linkedin: https://www.linkedin.com/in/armand-bentigan-5b614137/
     relationship: [client]
     worksTogether:
-      - { contextType: project, contextId: eatropolis-website, role: "Chow Luck Club client-side contact" }
-    note: "Chow Luck Club client-side contact for the eatropolis-website build."
+      - { contextType: project, contextId: eatropolis-website, role: "Chow Luck Club project manager; commissioned the build and maintains the site after handover" }
+    note: "Chow Luck Club project manager for the eatropolis-website build; maintains the site himself since the June 2026 handover training."
     tier: secondary
     recency: recent
     lastUpdated: "2026-05-22"
@@ -1199,6 +1199,35 @@ collaborators:
     tier: secondary
     recency: active
     lastUpdated: "2026-09-29"
+    publicListing: true
+
+  # CORDE contacts (Chan, 2026-10-15: add them here rather than stop naming
+  # them; both were already named in work[corde] and the LinkedIn copy).
+  # Titles are as of June 2024, from CORDE's project brief to the team; their
+  # current titles were not checked, so no currentTitle. Neither has written a
+  # recommendation: they are client contacts, not references.
+  - id: barry-clark
+    name: Barry Clark
+    linkedin: https://www.linkedin.com/in/barry-clark-b92644/
+    relationship: [client, sponsor]
+    worksTogether:
+      - { contextType: work, contextId: corde, role: "Digital Development Manager, CORDE (2024); business sponsor of the COMP693 placement, received the weekly demos" }
+    note: "CORDE's Digital Development Manager at the time of the 2024 COMP693 placement; business sponsor the team reported to."
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-10-15"
+    publicListing: true
+
+  - id: kullum-ladley
+    name: Kullum Ladley
+    linkedin: https://www.linkedin.com/in/kullum-ladley-4496b316a/
+    relationship: [client]
+    worksTogether:
+      - { contextType: work, contextId: corde, role: "Business System Analyst, CORDE (2024); wrote the Workbench API documents and the team's priority lists" }
+    note: "CORDE's Business System Analyst at the time of the 2024 COMP693 placement; author of the Workbench API documents the app was built against."
+    tier: secondary
+    recency: historical
+    lastUpdated: "2026-10-15"
     publicListing: true
 
   # CLIENT, NOT SHOWN EXTERNALLY YET (Chan, 2026-10-06). The collaboration

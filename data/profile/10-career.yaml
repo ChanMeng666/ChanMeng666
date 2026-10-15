@@ -24,7 +24,7 @@ work:
     recency: active
     lastUpdated: "2026-09-29"
     keywords:
-      - ArchCanvas (AI architect for floor plans)
+      - ArchCanvas (AI architectural designer for floor plans)
       - ArchLang (declarative floor-plan language)
       - Designs that compile (parametric, not pixels)
       - Programming Language Design
@@ -70,7 +70,7 @@ work:
     # commits carry a Claude co-author line). Say "sole engineer"; never "every
     # commit is mine" or anything implying unassisted hand-coding.
     narrative:
-      impactHeadline: "Founder and sole engineer of ArchCanvas, an AI architect that turns a plain-English brief into a dimensioned floor plan — and of ArchLang, the open-source floor-plan language I invented so every plan it draws can be compiled, checked and edited exactly."
+      impactHeadline: "Founder and sole engineer of ArchCanvas, an AI architectural designer that turns a plain-English brief into a dimensioned floor plan — and of ArchLang, the open-source floor-plan language I invented so every plan it draws can be compiled, checked and edited exactly."
       companyContext: |
         ArchCanvas ([archcanvas.uk](https://archcanvas.uk/)) is an AI design
         agent for architects and self-builders: describe a building in plain
@@ -110,15 +110,16 @@ work:
         it into a dimensioned drawing, and the edits are exact and replayable.
 
         **ArchLang — an original programming language, published and
-        maintained.** 53 published npm versions through v1.36.0
-        (2026-09-13); a hand-written, zero-runtime-dependency TypeScript
+        maintained.** 62 published npm versions through v1.43.0
+        (2026-10-14); a hand-written, zero-runtime-dependency TypeScript
         compiler whose error system carries 139 stable diagnostic codes (92
         errors, 47 warnings), each pointing at the exact span of source it
-        refers to; 4,338 passing tests (measured 2026-09-04); and 19
+        refers to; 4,338 passing tests (measured 2026-09-04); and 27
         architecture decision records. Around the compiler I shipped a CLI, a
         language server with a VS Code extension, a browser playground, a docs
         site, an MCP server so other AI agents can write and check floor plans
-        (`@chanmeng666/archlang-mcp`), and a 1,600-row open dataset of example
+        (`@chanmeng666/archlang-mcp`, also hosted at mcp.archlang.uk), and a
+        1,600-row open dataset of example
         plans. One design rule holds all of it together, written down as an
         ADR: *the compiler computes facts and gives advice; it never designs.*
         Arranging rooms is the agent's job, which keeps the language honest
@@ -173,7 +174,7 @@ work:
       Founder and sole engineer of ArchCanvas (archcanvas.uk), an AI design
       agent that turns a plain-English brief into a dimensioned floor plan you
       can build from, then lets you refine it by talking. Invented ArchLang, an
-      open-source floor-plan language (53 npm releases, 139 diagnostic codes,
+      open-source floor-plan language (62 npm releases, 139 diagnostic codes,
       4,338 tests), when drawing plans as pictures proved impossible to check —
       so every plan ArchCanvas draws can be compiled, checked and edited
       exactly.
@@ -311,7 +312,8 @@ work:
         5. **Open-source IP preserved.** The cohort agreement explicitly
            carved out claude-code-audio-hooks (now **echook**) and the
            rest of Chan's prior work as her own property — echook has
-           since gone on to 84 GitHub stars independently of Engram.
+           since gone on to 88 GitHub stars (2026-10-15) independently
+           of Engram.
 
         **Precise on the credential, deliberately.** The CCA-F
         *curriculum* was completed and the *practice* exam passed; the
@@ -374,7 +376,7 @@ work:
       - Notion API
       - Algolia DocSearch
     narrative:
-      impactHeadline: "TechNest's first AI-specialised mentorship track — sole instructor of a 12-week prompt-first curriculum with weekly live classes, recordings, an in-course RAG assistant, and capstone voting. Students ship portfolio-grade AI apps by week 8 on a ~96%-solo platform."
+      impactHeadline: "TechNest's first AI-specialised mentorship track — sole instructor of a 12-week prompt-first curriculum with weekly live classes, recordings, an in-course RAG assistant, and capstone voting. Students ship portfolio-grade AI apps by week 8 on a platform I built."
       companyContext: |
         TechNest Community is a Newfoundland-based nonprofit, established
         November 1, 2024, with the stated mission of "making technology
@@ -486,8 +488,9 @@ work:
         updated live site URL and (b) a screenshot of the Cursor /
         Claude Code conversation that drove the change — the screenshot
         rule operationalises the doctrine: *the prompt is the work*. The
-        remaining weight is split across participation (10%), capstone
-        (30%), and final demo (10%).
+        remaining weight is split across participation (10%) and the
+        capstone (40%, live demo included), as the published curriculum
+        outline states.
 
         **Public artefacts shipped through the platform** during the
         cohort include downloadable PDF handouts (curriculum-outline.pdf
@@ -495,7 +498,7 @@ work:
         per-week recorded video tutorials sidebar-indexed in the docs,
         the Notion-backed Capstone 2026 public showcase page with live
         voting, an AI assistant that answers questions about the course
-        material via retrieval over all four course versions plus the
+        material via retrieval over all five course versions plus the
         blog, and a Notion-powered classroom message board.
       technicalHighlights: |
         **Designed and built the teaching platform itself** — published as
@@ -513,7 +516,7 @@ work:
         slot in without disturbing older ones, and students who took a
         prior cohort retain a stable URL for their materials.
 
-        **In-course AI assistant** indexes all four course versions plus
+        **In-course AI assistant** indexes all five course versions plus
         the blog into a retrieval corpus with stable hash chunk IDs and
         version-aware retrieval, so a student in the 2026 cohort gets
         answers from 2026 materials by default. Implemented with a secure
@@ -543,6 +546,7 @@ work:
 
         **Engineering hygiene visible in the commit log**: full migration
         of the production deployment from Vercel to Cloudflare Pages
+        (February 2026)
         (with SEO URL migration and Algolia config update); 13
         Dependabot security vulnerabilities resolved in one pass and
         ongoing patches managed cleanly; Mermaid dual-view component for
@@ -576,14 +580,15 @@ work:
     name: Gavigo
     position: "Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer)"
     startDate: "2025-10"
-    endDate: "2026-09"
+    # Last working day 2026-10-05 (notice given 2026-09-01; Chan, 2026-10-15).
+    endDate: "2026-10"
     location: USA (remote — Delaware-incorporated)
     url: https://gavigo.com/
     logo: /public/organizations/gavigo-logo.jpg
     featured: true
     tier: flagship
     recency: recent
-    lastUpdated: "2026-10-07"
+    lastUpdated: "2026-10-15"
     keywords: [Go, "Kubernetes (GKE)", "React Native", WebSocket, "Redis", "gpt-5.4-mini", "AI orchestration", "Distributed systems", "Founding engineer"]
     narrative:
       impactHeadline: "Promoted from Core Engineer to Founding Principal Engineer across three formalised contract iterations; owned the Intelligence Layer end-to-end (96.5% solo on 471 of 488 non-merge commits) with a contractually protected technical domain."
@@ -634,7 +639,7 @@ work:
         Title progression formalized over three contract iterations:
         Original Consulting Agreement (Oct 17 2025), Amended and Restated
         (Feb 9 2026), Second Amended and Restated (Apr 16 2026) which
-        ratified the title I held until the role closed in September 2026:
+        ratified the title I held until the role closed in October 2026:
         **Founding Principal Engineer, Activation, Execution & AI Systems**.
       impactDelivered: |
         Shipped GAVIGO IRE — the Instant Reality Exchange platform — from
@@ -654,11 +659,13 @@ work:
         restore preserved AI state into a fresh process. These are
         controlled application-level measurements, not a production SLA
         or a complete end-to-end activation time. Architectural deliverables include the
-        deterministic five-state Activation Spine
-        (COLD → READY → ACTIVE → REUSABLE → restore) with atomic Redis
-        transitions and proof-signal timestamps; the seven-trigger AI
-        rules engine (Swarm Boost, Proactive Warm, Cross-Domain Inject,
-        Mode Change, Lookahead Warm, Initial Warm, Checkpoint Restore);
+        Activation Spine: a five-state container lifecycle
+        (COLD → PREPARING → READY → ACTIVE → REUSABLE) with atomic Redis
+        transitions, recorded as a nine-phase activation timeline with
+        proof-signal timestamps, restore being one activation path through
+        it; the seven-trigger AI rules engine (Cross-Domain, Swarm Boost,
+        Proactive Warm, Mode Change, Resource Throttle, Initial Warm,
+        Lookahead Warm, plus a manual demo control);
         the warm-pool LRU manager with ProtectSlot reservations; the
         cross-platform state-sync protocol bridging MMKV / localStorage /
         Redis; and the Phase 9 audience-aware WebSocket broadcast filter
@@ -688,8 +695,8 @@ work:
         profiles, followers and content
         overlays creators publish through.
 
-        **How the role closed (Sept 2026).** I left GAVIGO in September 2026,
-        at the end of a project phase, to focus on ArchCanvas. Founder & CEO
+        **How the role closed (Oct 2026).** My last working day was
+        2026-10-05, after a handover through September. Founder & CEO
         Saba Gecgil, engineer Olga Adam and colleague Lutfullah Ugurer worked
         alongside me and can speak to the work. The last mandate I was named
         on was the CEO's v1.7 *Activation Platform MVP Build Mandate*
@@ -752,16 +759,11 @@ work:
         Response compression had never actually been enabled in
         production: an nginx default that only misbehaves behind a load
         balancer, so it worked correctly on every developer machine and
-        nowhere that mattered. Found and fixed, the dashboard bundle went
-        1.2 MB → 350 KB (−71%), the mobile app bundle 2.99 MB → 748 KB
-        (−75%), a typical game 37 KB → 16 KB. I took the first *measured*
-        read of cloud cost — Google Cloud was running at ~$89/month against
-        a documented "~$67/month" that turned out to be list-price
-        arithmetic never checked against a bill, so the estimate was 31%
-        low — and found a budget alert that could never fire, 7,500% over
-        its limit and reporting zero; I requested the minimum role needed
-        to fix it (Billing Account Costs Manager) and explicitly declined
-        Billing Account Administrator. I established branch protection and
+        nowhere that mattered. I found it, switched it on, and every
+        bundle and game the feed serves now ships compressed. I found a
+        budget alert that could never fire; to fix it I requested the
+        minimum role needed (Billing Account Costs Manager) and explicitly
+        declined Billing Account Administrator. I established branch protection and
         then proved it by being blocked by it: PRs required, 1 approval,
         three CI checks green, admins unable to bypass — the gate being a
         3-job pipeline (`go build/vet/test -race`, `vite build`,
@@ -1231,7 +1233,7 @@ work:
         Python migration crawler (1,748 images / 707 MB / 11 JSON files
         bootstrapping the new platform from the old Webflow site), the Her
         Waka MSD-funded teaching site at herwaka.shesharp.org.nz with
-        complete authored curriculum (4 workshops + 8+ tutorials), and a
+        complete authored curriculum (4 workshops + 12 tutorials), and a
         professional SEO audit and 10-point recommendations report on
         shesharp.org.nz that identified the high-priority mobile-vs-desktop
         ranking gap on "women in tech New Zealand."
@@ -1254,10 +1256,12 @@ work:
         data and its sending identity now live in accounts the organisation
         owns, regardless of who is still there to open them.
       technicalHighlights: |
-        Architected and built every layer of the platform: Next.js 15.6
+        Architected the platform and built its back end and database (Lesley
+        Gao built the new website's front end, including much of the
+        mentorship dashboard): Next.js 15.6
         canary + React 19.1.2 + TypeScript 5.8 on Drizzle 0.43 over Neon
         Postgres, NextAuth 5 with bcrypt + Google/GitHub OAuth, Tailwind 4
-        + shadcn/ui, Resend transactional email, Cloudinary image pipeline,
+        + shadcn/ui, Resend transactional email, Vercel Blob uploads,
         Stripe-integrated membership flow, Vercel edge deployment +
         3 scheduled jobs. Schema runs 39 tables / 33 enums / 32 SQL
         migrations — every business concept is a typed enum so invalid
@@ -1324,7 +1328,8 @@ work:
         they govern.
 
         The four automations worth naming. **Newsletter** —
-        `monthly-newsletter`, 4 issues shipped in the new system, with a
+        `monthly-newsletter`, four issues (June to September 2026) composed
+        in the new system and one, August 2026, broadcast through it, with a
         two-block JSON schema separating the machine-generated snapshot
         from human-owned editorial, and a three-stage approval chain (test
         send → review → founder approval) tracked in a state file. Writing
@@ -1489,20 +1494,22 @@ work:
         founder Zhu Yihan's content edits (speakers, venue photos, copy). A
         substantially larger and more ambitious system: Docusaurus 3.9 as
         the editorial spine (chosen deliberately over keeping Next.js,
-        because the site's centre of gravity had shifted from "marketing
-        site with a CMS" to "research publication and event platform with
-        deep editorial content"), backed by Drizzle ORM against Neon
-        serverless Postgres for application and subscription data, with
-        Notion retained for content the founder edits directly. Deployed on
-        Cloudflare Pages via Wrangler for global edge delivery. Adds:
+        because the client valued how articles are presented and how easily
+        they can be searched), backed by Drizzle ORM against Neon
+        serverless Postgres for summit application data (Drizzle defines
+        the schema and migrations; the functions query with tagged-template
+        SQL), with content as MDX in the repository that the founder edits
+        herself and Notion receiving two form types. Hosted on Vercel from
+        2025-05 and on Cloudflare Pages via Wrangler from 2026-01 for global
+        edge delivery. Adds:
         comprehensive bilingual content (EN/简体中文 across every section,
         not just the blog), a full **Shanghai Summit 2026** event site with
         ten distinct sections (Hero, FAB Globe, Partners, Speakers, Agenda,
-        Audience, Venue, Why Different, Global Network, Sponsors), three
-        sub-pages (programme, pitch, hour-by-hour agenda), an admin
+        Audience, Venue, Why Different, Global Network, Sponsors), programme
+        and pitch sub-pages and a gated agenda download, an admin
         applications dashboard, an interactive 2D world-map visualisation
         of the global network (powered by earth-flyline with count-up
-        statistics), Google Generative AI integration, transactional email
+        statistics), a Gemini chat endpoint called over REST, transactional email
         templates for pitch and programme review workflows, and a research
         publications hub. Two original research reports published through
         the platform: *FemTech Market Map for Greater China* (2025-05) and
@@ -1511,14 +1518,16 @@ work:
 
         **The summit system I built.** From the first summit commit on
         2026-03-06 I built everything the summit ran on online, working
-        remotely: four summit routes (the main summit page, programme, pitch
-        and an hour-by-hour agenda) from 20 purpose-built components — a 3D
+        remotely: the summit routes (the main summit page, programme and
+        pitch; an hour-by-hour agenda page until 2026-05-26, when the
+        agenda moved into a gated PDF) from 20 purpose-built components — a 3D
         globe of 40 countries, speaker and partner grids, an agenda timeline,
         a venue showcase and a programme price calculator — and the
         application system behind them. Founders applying to pitch, companies
         applying to the international programme and speakers applying to
         speak each land in their own Postgres table with document and
-        headshot uploads; a gated agenda download captures leads with a
+        headshot uploads (the speaker form closed on 2026-03-30, once the
+        line-up was full); a gated agenda download captures leads with a
         newsletter opt-in. The founder reviews applications in an admin
         dashboard I built, approves or rejects them in batches, and each
         approval sends a branded email carrying the payment link and a free
@@ -1562,34 +1571,35 @@ work:
         generation an intentional rewrite rather than a refactor.** The
         decisive call was whether to grow Generation 1 (Next.js + Notion)
         forward, or to admit that the platform's centre of gravity had
-        shifted from "marketing site that publishes the occasional report"
-        to "research publication and multi-event hub with deep editorial
-        content," and rebuild on a stack actually optimised for that
-        shape. I chose to rebuild on Docusaurus 3.9 — not the default
+        shifted to its research and editorial content — the client valued
+        how articles are presented and how easily they can be searched —
+        and rebuild on a stack actually optimised for that shape. I chose
+        to rebuild on Docusaurus 3.9 — not the default
         choice for a brand website, but the right one for an editorial
         platform whose long-term value lives in its market research,
         opinion pieces, founder stories, and event archives.
 
-        **Notion-as-CMS for a non-technical founder.** In both generations,
-        the founder edits content directly inside Notion — articles,
-        ecosystem profiles, event reports — and the website renders it
-        live. This is the single most important UX decision in the system:
-        it removes me from the publishing critical path and gives the
-        founder full editorial control without needing to learn a custom
-        CMS or speak markdown. Implemented in Gen 1 with `react-notion-x`
-        for richly-rendered article bodies, and in Gen 2 with the modern
-        `@notionhq/client` v3 SDK pulling structured content into
-        Docusaurus pages.
+        **A founder who publishes without me.** In Generation 1 the founder
+        edited content inside Notion and the site rendered it live
+        (`react-notion-x`). In Generation 2 the content is MDX in the
+        repository: speakers, partners and agenda data sit in one typed
+        module, and a step-by-step guide in Chinese shows how to add a
+        story in one or both languages. Because a push to the main branch is
+        the deploy, the founder publishes stories, opinion pieces and
+        speaker updates herself. Notion now only receives two form types,
+        written over its REST API. Either way, I am off the publishing
+        critical path.
 
         **Drizzle ORM + Neon serverless Postgres** in Generation 2 for
         application submissions, subscription confirmations, and admin
         dashboards — moving structured form data off Notion (which was a
         clever fit for content but the wrong fit for relational submission
-        data) onto a real schema-versioned Postgres database with
-        type-safe queries.
+        data) onto a schema-versioned Postgres database. Drizzle defines
+        the schema and migrations; the Pages Functions query with
+        tagged-template SQL through the Neon driver.
 
         **Cloudflare Pages + Wrangler** for global edge deployment of
-        Generation 2: low-latency delivery to both Chinese and
+        Generation 2 since 2026-01 (it ran on Vercel from 2025-05): low-latency delivery to both Chinese and
         international visitors, which matters more for this audience than
         for most products, since the whole proposition is cross-border.
 
@@ -1603,12 +1613,12 @@ work:
 
         **Image performance discipline.** The summit content is
         image-heavy (speaker headshots, venue photography, partner
-        logos), so I ran a deliberate pass that compressed and optimised
-        14 large images and shrank the social-card image from 6 MB to
-        240 KB — overall reducing site image weight by roughly 67%
-        without losing visual fidelity. The full-build pipeline keeps
-        this regression-tested with TypeScript checks and Docusaurus's
-        build warnings treated as errors.
+        logos), so I ran two passes weeks apart: in April 2026 I
+        compressed 14 large images and shrank the social-card image from
+        6 MB to 240 KB, and in May 2026 I cut the site's image weight by
+        roughly 67% without losing visual fidelity. There is no CI
+        workflow; the production build is the check, and broken links
+        only warn.
 
         **Interactive global-network map** built with `earth-flyline` —
         a 2D world-map visualisation with count-up statistics rendered
@@ -1686,7 +1696,7 @@ work:
         Open Source Contributor — adding capabilities, demos, and
         documentation downstream of real-world production use. I run
         CopilotKit + LangGraph in two production systems
-        (Tam-AI-Ti's 88+ AI actions; FemTracker Agent's 8-agent
+        (Tam-AI-Ti's 45 AI actions; FemTracker Agent's 8-agent
         women's-health pipeline) and contribute back the missing
         showcases, integration paths, and ecosystem bridges I
         encountered along the way.
@@ -1722,7 +1732,7 @@ work:
         *"This looks great. Thanks, @ChanMeng666 👏"*
       technicalHighlights: |
         Both contributions come from real production usage: Tam-AI-Ti
-        (88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and
+        (45 AI actions, CopilotKit + GPT-4o-mini for tool calls) and
         FemTracker Agent (8-agent CopilotKit + LangGraph + Python
         orchestration). The FemTracker Agent demo is the most
         substantive multi-agent showcase in CopilotKit's demos
@@ -1962,7 +1972,7 @@ work:
         for mentees beyond the formal programme cycle.
       impactDelivered: |
         **The mentorship engagement is the umbrella under which seven
-        of the twenty-six public LinkedIn recommendations on Chan's
+        of the twenty-seven LinkedIn recommendations on Chan's
         profile were given** — making Forward with Her the
         single-largest source of independently-attested mentorship
         impact across Chan's career to date. Mentees who gave
@@ -2005,9 +2015,9 @@ work:
         (`2024-winter`) exists precisely because I needed a structured
         place to host the tutorials, lecture recordings, and exercises
         I was delivering live to mentees. It has since grown into the
-        open-source teaching platform now serving 4 coexisting cohort
-        versions across TechNest, HER WAKA, and the original Forward
-        with Her audience — but its origin is here.
+        open-source teaching platform now serving 5 coexisting cohort
+        versions across TechNest, HER WAKA, Peyvand Academy and the
+        original Forward with Her audience — but its origin is here.
 
         I also built and shipped a dedicated **bilingual EN/CN promo
         site** for the programme
@@ -2450,13 +2460,11 @@ work:
       - TypeScript
       - Native Base
       - SQLite
-      - ArcGIS
       - Azure DevOps
       - Figma
       - REST APIs
       - Offline-First
       - Android
-      - Jest
       - Apifox
     narrative:
       impactHeadline: "#1-most-prolific contributor (57% of the 413 commits in the original repository) on CORDE's offline-first React Native field-operations app, built for CORDE's water/civil-infrastructure crews. Also owned 97.9% of the documentation track end-to-end."
@@ -2502,18 +2510,20 @@ work:
         based and assumes connectivity. The mobile app's job was to
         make the field worker's tablet the **system of record for
         the moment of work**, capture text and photos and GPS
-        simultaneously, hold it locally with integrity guarantees,
-        and synchronise back to Workbench cleanly when connectivity
-        returned — including handling the conflict cases that real
-        offline-first systems have to handle. This is a real
+        simultaneously, hold it locally,
+        and synchronise back to Workbench when connectivity returned,
+        without a log created offline colliding with the ids the
+        server issues. This is a real
         productivity problem worth real engineering for a 164-staff
         infrastructure operator.
       myMandate: |
-        Full-stack developer on a two-active-developer Lincoln
-        University team (myself plus Luke Shi / Zhenzhou Shi),
-        reporting directly to **Barry Clark** on CORDE's side as
-        the business sponsor and to **Kullum Ladley** as CORDE's
-        technical liaison and Workbench API specification author.
+        Full-stack developer and documentation lead on a three-person
+        Lincoln University team (myself, Xue Zheng and Luke Shi /
+        Zhenzhou Shi, all three from the first day), reporting to
+        **Barry Clark**, CORDE's Digital Development Manager, as the
+        business sponsor, and working with **Kullum Ladley**, CORDE's
+        Business System Analyst, who wrote the Workbench API
+        documents and the team's written priority list.
         Mandate covered: front-end implementation across the entire
         React Native + Native Base UI layer, database design (ERD
         work co-designed with CORDE's existing database slices),
@@ -2538,14 +2548,14 @@ work:
         that fork has since grown to 541 commits, of which 227 are
         mine.) The app integrates with CORDE's
         Workbench central operations platform via the API contract
-        documented across a sequence of **15 specifications
-        authored by Kullum Ladley** (the same Kullum named in every
-        API document's filename prefix `YYYYMMDD_Kullum_...`),
-        covering Workbench API calls, log creation, mobile-app
-        authentication, log extension fields, file-upload pipelines,
-        and group completion workflow — all captured under version
-        control as the API/ folder of the team's documentation
-        repository.
+        Kullum Ladley documented: **14 API documents on eight
+        topics, revisions included**, plus one written priority list
+        (15 files, each prefixed `YYYYMMDD_Kullum_...`), covering
+        Workbench API calls, reading logs, log creation, mobile-app
+        authentication, log extension fields, file upload, log
+        completion and the group completion workflow — all captured
+        under version control as the API/ folder of the team's
+        documentation repository.
 
         **Owned the documentation track end-to-end.** The team's
         documentation repository (`team-corde`) has 143 commits;
@@ -2572,30 +2582,24 @@ work:
         for its Figma-component-library integration so design and
         implementation stayed close; ran the demo cadence in front
         of Barry Clark and the CORDE technical team every week
-        across five months; and made the team's GitHub one-branch
-        policy work even though it required disciplined sequencing
-        of two developers' parallel work.
+        across five months; and moved the team from a one-branch
+        policy (agreed June 2024) to a main branch plus a develop
+        branch with pull requests in mid-July 2024, merging most of
+        those pull requests into main myself.
 
-        **Kept the codebase modern after the engagement ended.**
-        Continued making targeted commits in subsequent years for
-        React Native version currency, Android 16 KB page-size
-        linker compliance, husky + lint-staged pre-commit hooks,
-        and dependency upgrades — keeping the repository a usable
-        portfolio piece rather than an archived snapshot of
-        mid-2024 React Native conventions.
-
-        **The application remains in active use today by CORDE's
-        field crews** for offline data collection — GPS-tagged
-        photos and structured form data captured on water-
-        infrastructure and civil-construction sites where mobile
-        coverage drops out, then syncing back when crews return
-        to coverage. The codebase-currency commits aren't archive
-        maintenance; they're keeping a production tool aligned
-        with the platform conventions of the year the crews are
-        actually running it on.
+        **Handed over, still carried on for CORDE.** In
+        mid-September 2024 one teammate stepped back, and the
+        client's test rounds, fixes and release builds for the last
+        month fell to me. In October 2024 Luke Shi took the project
+        over in his own fork of the repository and has carried it
+        on for CORDE since, with releases into 2026. The platform
+        upgrades in that fork since 2024 (React Native upgrades,
+        Android 16 KB page-size compliance, pre-commit hooks) are
+        his work, not mine; my later commits to the original
+        repository are documentation only.
       technicalHighlights: |
-        **React Native 0.83 + TypeScript + Native Base** on the
-        client, deliberately chosen over Expo because the project's
+        **React Native 0.74 + TypeScript + Native Base** on the
+        client (the version at handover), deliberately chosen over Expo because the project's
         offline-first requirements pushed against Expo's managed
         workflow (and over React Native Elements because Native
         Base shipped a Figma component library that let the team
@@ -2608,13 +2612,15 @@ work:
         Local-first storage of text + photo + GPS coordinates +
         timestamps captured in the field, with a synchronisation
         pipeline that reconciles back to CORDE's Workbench central
-        database when connectivity returns. The sync model had to
-        handle the real conflict cases offline-first systems
-        actually face — duplicate-key collisions when a worker's
-        local IDs and the server's IDs both move forward, partial
-        sync where one log uploads but its attachments don't,
-        connectivity drop mid-batch, and the file-upload
-        sub-protocol covered separately in Kullum's API specifications.
+        database when connectivity returns. What the code does: the
+        local id and the server id are separate columns, so a log
+        created offline never collides with one the server issues;
+        each log carries its own sync status and retry count; a
+        background queue retries uploads on timers; attachments go
+        through the separate file-upload protocol in Kullum's API
+        documents; and a pull replaces the local copy with the
+        server's. A failed upload is not re-queued and there is no
+        conflict prompt: both were the next things to build.
 
         **Heavy native-integration surface:** geolocation +
         geolocation-service (foreground and background), camera-

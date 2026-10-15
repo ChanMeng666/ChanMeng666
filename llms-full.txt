@@ -2,8 +2,8 @@
 
 > AI agent architect, full-stack engineer, and minimalist living advocate
 building at the intersection of AI, cultural technology, and women's
-health. Current flagship build: ArchCanvas — an AI architect for floor
-plans — on ArchLang, the open-source declarative floor-plan language she
+health. Current flagship build: ArchCanvas — an AI architectural designer
+for floor plans — on ArchLang, the open-source declarative floor-plan language she
 wrote that compiles source to dimensioned drawings. Based in Auckland, New
 Zealand. Holds a Master of Applied Computing with Distinction from Lincoln
 University, New Zealand. Featured in multiple media interviews for her
@@ -14,7 +14,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 530+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-10-14
+**Last updated:** 2026-10-15
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -132,7 +132,7 @@ thought."
 - **Partner org:** MSD × SheSharp × academyEX (Auckland, NZ)
 - **Dates:** Mar — Jun 2026
 - **Audience:** Women returning to the workforce (25 ppl / session cap)
-- **Format:** 4 in-person workshops + 10 self-paced AI tutorials + job-search library
+- **Format:** 4 in-person workshops + 12 self-paced AI tutorials + job-search library
 - **Outcome:** NZ Ministry of Social Development-funded; full curriculum authored solo
 - **Curriculum URL:** https://programming.chanmeng.org/docs/2026-her-waka/programme/about-her-waka
 - **Related work entry:** she-sharp
@@ -172,7 +172,7 @@ End-to-end AI-native product engineering — from agentic-system architecture th
 Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first.
 
 ### What is Chan's biggest shipped result?
-GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo on an activation and execution layer that keeps the next game in a feed on standby and activates it as the viewer arrives; shipped to production and moved across clouds in a ~30-minute cutover. In GAVIGO's proof stage it measured a 78% application-level reduction in startup work (controlled measurement, not a production SLA). Plus She Sharp (Jul 2025 — Sep 2026) — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo.
+GAVIGO IRE (Oct 2025 — Oct 2026) — 471 of 488 non-merge commits (96.5%) solo on an activation and execution layer that keeps the next game in a feed on standby and activates it as the viewer arrives; shipped to production and moved across clouds in a ~30-minute cutover. In GAVIGO's proof stage it measured a 78% application-level reduction in startup work (controlled measurement, not a production SLA). Plus She Sharp (Jul 2025 — Sep 2026) — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo.
 
 
 ## Profiles
@@ -203,9 +203,9 @@ GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo
 - **Period:** Apr 2026 -- Present
 - **Location:** Auckland, New Zealand (remote)
 - **URL:** https://archcanvas.uk/
-- **Keywords:** ArchCanvas (AI architect for floor plans), ArchLang (declarative floor-plan language), Designs that compile (parametric, not pixels), Programming Language Design, Compilers, AI Agent Architecture, Vercel AI SDK, Next.js, Building in public
+- **Keywords:** ArchCanvas (AI architectural designer for floor plans), ArchLang (declarative floor-plan language), Designs that compile (parametric, not pixels), Programming Language Design, Compilers, AI Agent Architecture, Vercel AI SDK, Next.js, Building in public
 
-**Impact:** Founder and sole engineer of ArchCanvas, an AI architect that turns a plain-English brief into a dimensioned floor plan — and of ArchLang, the open-source floor-plan language I invented so every plan it draws can be compiled, checked and edited exactly.
+**Impact:** Founder and sole engineer of ArchCanvas, an AI architectural designer that turns a plain-English brief into a dimensioned floor plan — and of ArchLang, the open-source floor-plan language I invented so every plan it draws can be compiled, checked and edited exactly.
 
 **Company context:** ArchCanvas ([archcanvas.uk](https://archcanvas.uk/)) is an AI design
 agent for architects and self-builders: describe a building in plain
@@ -245,15 +245,16 @@ inside ArchCanvas. Since then the AI writes ArchLang, the compiler turns
 it into a dimensioned drawing, and the edits are exact and replayable.
 
 **ArchLang — an original programming language, published and
-maintained.** 53 published npm versions through v1.36.0
-(2026-09-13); a hand-written, zero-runtime-dependency TypeScript
+maintained.** 62 published npm versions through v1.43.0
+(2026-10-14); a hand-written, zero-runtime-dependency TypeScript
 compiler whose error system carries 139 stable diagnostic codes (92
 errors, 47 warnings), each pointing at the exact span of source it
-refers to; 4,338 passing tests (measured 2026-09-04); and 19
+refers to; 4,338 passing tests (measured 2026-09-04); and 27
 architecture decision records. Around the compiler I shipped a CLI, a
 language server with a VS Code extension, a browser playground, a docs
 site, an MCP server so other AI agents can write and check floor plans
-(`@chanmeng666/archlang-mcp`), and a 1,600-row open dataset of example
+(`@chanmeng666/archlang-mcp`, also hosted at mcp.archlang.uk), and a
+1,600-row open dataset of example
 plans. One design rule holds all of it together, written down as an
 ADR: *the compiler computes facts and gives advice; it never designs.*
 Arranging rooms is the agent's job, which keeps the language honest
@@ -387,20 +388,22 @@ addresses before unlocking research reports.
 founder Zhu Yihan's content edits (speakers, venue photos, copy). A
 substantially larger and more ambitious system: Docusaurus 3.9 as
 the editorial spine (chosen deliberately over keeping Next.js,
-because the site's centre of gravity had shifted from "marketing
-site with a CMS" to "research publication and event platform with
-deep editorial content"), backed by Drizzle ORM against Neon
-serverless Postgres for application and subscription data, with
-Notion retained for content the founder edits directly. Deployed on
-Cloudflare Pages via Wrangler for global edge delivery. Adds:
+because the client valued how articles are presented and how easily
+they can be searched), backed by Drizzle ORM against Neon
+serverless Postgres for summit application data (Drizzle defines
+the schema and migrations; the functions query with tagged-template
+SQL), with content as MDX in the repository that the founder edits
+herself and Notion receiving two form types. Hosted on Vercel from
+2025-05 and on Cloudflare Pages via Wrangler from 2026-01 for global
+edge delivery. Adds:
 comprehensive bilingual content (EN/简体中文 across every section,
 not just the blog), a full **Shanghai Summit 2026** event site with
 ten distinct sections (Hero, FAB Globe, Partners, Speakers, Agenda,
-Audience, Venue, Why Different, Global Network, Sponsors), three
-sub-pages (programme, pitch, hour-by-hour agenda), an admin
+Audience, Venue, Why Different, Global Network, Sponsors), programme
+and pitch sub-pages and a gated agenda download, an admin
 applications dashboard, an interactive 2D world-map visualisation
 of the global network (powered by earth-flyline with count-up
-statistics), Google Generative AI integration, transactional email
+statistics), a Gemini chat endpoint called over REST, transactional email
 templates for pitch and programme review workflows, and a research
 publications hub. Two original research reports published through
 the platform: *FemTech Market Map for Greater China* (2025-05) and
@@ -409,14 +412,16 @@ the *FemmeHealth Ventures Alliance* partnership announcement
 
 **The summit system I built.** From the first summit commit on
 2026-03-06 I built everything the summit ran on online, working
-remotely: four summit routes (the main summit page, programme, pitch
-and an hour-by-hour agenda) from 20 purpose-built components — a 3D
+remotely: the summit routes (the main summit page, programme and
+pitch; an hour-by-hour agenda page until 2026-05-26, when the
+agenda moved into a gated PDF) from 20 purpose-built components — a 3D
 globe of 40 countries, speaker and partner grids, an agenda timeline,
 a venue showcase and a programme price calculator — and the
 application system behind them. Founders applying to pitch, companies
 applying to the international programme and speakers applying to
 speak each land in their own Postgres table with document and
-headshot uploads; a gated agenda download captures leads with a
+headshot uploads (the speaker form closed on 2026-03-30, once the
+line-up was full); a gated agenda download captures leads with a
 newsletter opt-in. The founder reviews applications in an admin
 dashboard I built, approves or rejects them in batches, and each
 approval sends a branded email carrying the payment link and a free
@@ -460,34 +465,35 @@ Femtech Across Borders as the 2026 Summer Programme.
 generation an intentional rewrite rather than a refactor.** The
 decisive call was whether to grow Generation 1 (Next.js + Notion)
 forward, or to admit that the platform's centre of gravity had
-shifted from "marketing site that publishes the occasional report"
-to "research publication and multi-event hub with deep editorial
-content," and rebuild on a stack actually optimised for that
-shape. I chose to rebuild on Docusaurus 3.9 — not the default
+shifted to its research and editorial content — the client valued
+how articles are presented and how easily they can be searched —
+and rebuild on a stack actually optimised for that shape. I chose
+to rebuild on Docusaurus 3.9 — not the default
 choice for a brand website, but the right one for an editorial
 platform whose long-term value lives in its market research,
 opinion pieces, founder stories, and event archives.
 
-**Notion-as-CMS for a non-technical founder.** In both generations,
-the founder edits content directly inside Notion — articles,
-ecosystem profiles, event reports — and the website renders it
-live. This is the single most important UX decision in the system:
-it removes me from the publishing critical path and gives the
-founder full editorial control without needing to learn a custom
-CMS or speak markdown. Implemented in Gen 1 with `react-notion-x`
-for richly-rendered article bodies, and in Gen 2 with the modern
-`@notionhq/client` v3 SDK pulling structured content into
-Docusaurus pages.
+**A founder who publishes without me.** In Generation 1 the founder
+edited content inside Notion and the site rendered it live
+(`react-notion-x`). In Generation 2 the content is MDX in the
+repository: speakers, partners and agenda data sit in one typed
+module, and a step-by-step guide in Chinese shows how to add a
+story in one or both languages. Because a push to the main branch is
+the deploy, the founder publishes stories, opinion pieces and
+speaker updates herself. Notion now only receives two form types,
+written over its REST API. Either way, I am off the publishing
+critical path.
 
 **Drizzle ORM + Neon serverless Postgres** in Generation 2 for
 application submissions, subscription confirmations, and admin
 dashboards — moving structured form data off Notion (which was a
 clever fit for content but the wrong fit for relational submission
-data) onto a real schema-versioned Postgres database with
-type-safe queries.
+data) onto a schema-versioned Postgres database. Drizzle defines
+the schema and migrations; the Pages Functions query with
+tagged-template SQL through the Neon driver.
 
 **Cloudflare Pages + Wrangler** for global edge deployment of
-Generation 2: low-latency delivery to both Chinese and
+Generation 2 since 2026-01 (it ran on Vercel from 2025-05): low-latency delivery to both Chinese and
 international visitors, which matters more for this audience than
 for most products, since the whole proposition is cross-border.
 
@@ -501,12 +507,12 @@ has parallel locales rather than fall-through defaults.
 
 **Image performance discipline.** The summit content is
 image-heavy (speaker headshots, venue photography, partner
-logos), so I ran a deliberate pass that compressed and optimised
-14 large images and shrank the social-card image from 6 MB to
-240 KB — overall reducing site image weight by roughly 67%
-without losing visual fidelity. The full-build pipeline keeps
-this regression-tested with TypeScript checks and Docusaurus's
-build warnings treated as errors.
+logos), so I ran two passes weeks apart: in April 2026 I
+compressed 14 large images and shrank the social-card image from
+6 MB to 240 KB, and in May 2026 I cut the site's image weight by
+roughly 67% without losing visual fidelity. There is no CI
+workflow; the production build is the check, and broken links
+only warn.
 
 **Interactive global-network map** built with `earth-flyline` —
 a 2D world-map visualisation with count-up statistics rendered
@@ -622,7 +628,8 @@ came out of it:
 5. **Open-source IP preserved.** The cohort agreement explicitly
    carved out claude-code-audio-hooks (now **echook**) and the
    rest of Chan's prior work as her own property — echook has
-   since gone on to 84 GitHub stars independently of Engram.
+   since gone on to 88 GitHub stars (2026-10-15) independently
+   of Engram.
 
 **Precise on the credential, deliberately.** The CCA-F
 *curriculum* was completed and the *practice* exam passed; the
@@ -674,7 +681,7 @@ the user interface — not a chat widget bolted onto a form.
 - **Location:** Newfoundland, Canada (remote instruction)
 - **URL:** https://www.technestcommunity.com/
 
-**Impact:** TechNest's first AI-specialised mentorship track — sole instructor of a 12-week prompt-first curriculum with weekly live classes, recordings, an in-course RAG assistant, and capstone voting. Students ship portfolio-grade AI apps by week 8 on a ~96%-solo platform.
+**Impact:** TechNest's first AI-specialised mentorship track — sole instructor of a 12-week prompt-first curriculum with weekly live classes, recordings, an in-course RAG assistant, and capstone voting. Students ship portfolio-grade AI apps by week 8 on a platform I built.
 
 **Company context:** TechNest Community is a Newfoundland-based nonprofit, established
 November 1, 2024, with the stated mission of "making technology
@@ -786,8 +793,9 @@ carry 50% weight and require students to submit both (a) the
 updated live site URL and (b) a screenshot of the Cursor /
 Claude Code conversation that drove the change — the screenshot
 rule operationalises the doctrine: *the prompt is the work*. The
-remaining weight is split across participation (10%), capstone
-(30%), and final demo (10%).
+remaining weight is split across participation (10%) and the
+capstone (40%, live demo included), as the published curriculum
+outline states.
 
 **Public artefacts shipped through the platform** during the
 cohort include downloadable PDF handouts (curriculum-outline.pdf
@@ -795,7 +803,7 @@ cohort include downloadable PDF handouts (curriculum-outline.pdf
 per-week recorded video tutorials sidebar-indexed in the docs,
 the Notion-backed Capstone 2026 public showcase page with live
 voting, an AI assistant that answers questions about the course
-material via retrieval over all four course versions plus the
+material via retrieval over all five course versions plus the
 blog, and a Notion-powered classroom message board.
 
 **Technical highlights:** **Designed and built the teaching platform itself** — published as
@@ -813,7 +821,7 @@ workshop). New cohorts
 slot in without disturbing older ones, and students who took a
 prior cohort retain a stable URL for their materials.
 
-**In-course AI assistant** indexes all four course versions plus
+**In-course AI assistant** indexes all five course versions plus
 the blog into a retrieval corpus with stable hash chunk IDs and
 version-aware retrieval, so a student in the 2026 cohort gets
 answers from 2026 materials by default. Implemented with a secure
@@ -843,6 +851,7 @@ being taught to build.
 
 **Engineering hygiene visible in the commit log**: full migration
 of the production deployment from Vercel to Cloudflare Pages
+(February 2026)
 (with SEO URL migration and Algolia config update); 13
 Dependabot security vulnerabilities resolved in one pass and
 ongoing patches managed cleanly; Mermaid dual-view component for
@@ -860,8 +869,8 @@ the doctrine being taught. Students can literally read the
 instructor's repo to see how the patterns they're learning
 compose in a real production system.
 ### Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer) at Gavigo
-[tier=flagship · recency=recent · updated=2026-10-07]
-- **Period:** Oct 2025 -- Sep 2026
+[tier=flagship · recency=recent · updated=2026-10-15]
+- **Period:** Oct 2025 -- Oct 2026
 - **Location:** USA (remote — Delaware-incorporated)
 - **URL:** https://gavigo.com/
 
@@ -913,7 +922,7 @@ founder & CEO Saba Gecgil.
 Title progression formalized over three contract iterations:
 Original Consulting Agreement (Oct 17 2025), Amended and Restated
 (Feb 9 2026), Second Amended and Restated (Apr 16 2026) which
-ratified the title I held until the role closed in September 2026:
+ratified the title I held until the role closed in October 2026:
 **Founding Principal Engineer, Activation, Execution & AI Systems**.
 
 **Impact delivered:** Shipped GAVIGO IRE — the Instant Reality Exchange platform — from
@@ -933,11 +942,13 @@ startup path cut from 4.45 s to 1.00 s, and about 140 ms to
 restore preserved AI state into a fresh process. These are
 controlled application-level measurements, not a production SLA
 or a complete end-to-end activation time. Architectural deliverables include the
-deterministic five-state Activation Spine
-(COLD → READY → ACTIVE → REUSABLE → restore) with atomic Redis
-transitions and proof-signal timestamps; the seven-trigger AI
-rules engine (Swarm Boost, Proactive Warm, Cross-Domain Inject,
-Mode Change, Lookahead Warm, Initial Warm, Checkpoint Restore);
+Activation Spine: a five-state container lifecycle
+(COLD → PREPARING → READY → ACTIVE → REUSABLE) with atomic Redis
+transitions, recorded as a nine-phase activation timeline with
+proof-signal timestamps, restore being one activation path through
+it; the seven-trigger AI rules engine (Cross-Domain, Swarm Boost,
+Proactive Warm, Mode Change, Resource Throttle, Initial Warm,
+Lookahead Warm, plus a manual demo control);
 the warm-pool LRU manager with ProtectSlot reservations; the
 cross-platform state-sync protocol bridging MMKV / localStorage /
 Redis; and the Phase 9 audience-aware WebSocket broadcast filter
@@ -967,8 +978,8 @@ short videos play in the scroll with no app-store install, and the
 profiles, followers and content
 overlays creators publish through.
 
-**How the role closed (Sept 2026).** I left GAVIGO in September 2026,
-at the end of a project phase, to focus on ArchCanvas. Founder & CEO
+**How the role closed (Oct 2026).** My last working day was
+2026-10-05, after a handover through September. Founder & CEO
 Saba Gecgil, engineer Olga Adam and colleague Lutfullah Ugurer worked
 alongside me and can speak to the work. The last mandate I was named
 on was the CEO's v1.7 *Activation Platform MVP Build Mandate*
@@ -1031,16 +1042,11 @@ without N broadcast topics.
 Response compression had never actually been enabled in
 production: an nginx default that only misbehaves behind a load
 balancer, so it worked correctly on every developer machine and
-nowhere that mattered. Found and fixed, the dashboard bundle went
-1.2 MB → 350 KB (−71%), the mobile app bundle 2.99 MB → 748 KB
-(−75%), a typical game 37 KB → 16 KB. I took the first *measured*
-read of cloud cost — Google Cloud was running at ~$89/month against
-a documented "~$67/month" that turned out to be list-price
-arithmetic never checked against a bill, so the estimate was 31%
-low — and found a budget alert that could never fire, 7,500% over
-its limit and reporting zero; I requested the minimum role needed
-to fix it (Billing Account Costs Manager) and explicitly declined
-Billing Account Administrator. I established branch protection and
+nowhere that mattered. I found it, switched it on, and every
+bundle and game the feed serves now ships compressed. I found a
+budget alert that could never fire; to fix it I requested the
+minimum role needed (Billing Account Costs Manager) and explicitly
+declined Billing Account Administrator. I established branch protection and
 then proved it by being blocked by it: PRs required, 1 approval,
 three CI checks green, admins unable to bypass — the gate being a
 3-job pipeline (`go build/vet/test -race`, `vite build`,
@@ -1396,7 +1402,7 @@ Beyond the main platform, I shipped three supporting projects: the
 Python migration crawler (1,748 images / 707 MB / 11 JSON files
 bootstrapping the new platform from the old Webflow site), the Her
 Waka MSD-funded teaching site at herwaka.shesharp.org.nz with
-complete authored curriculum (4 workshops + 8+ tutorials), and a
+complete authored curriculum (4 workshops + 12 tutorials), and a
 professional SEO audit and 10-point recommendations report on
 shesharp.org.nz that identified the high-priority mobile-vs-desktop
 ranking gap on "women in tech New Zealand."
@@ -1419,10 +1425,12 @@ route for the community was proposed but not built. The charity's
 data and its sending identity now live in accounts the organisation
 owns, regardless of who is still there to open them.
 
-**Technical highlights:** Architected and built every layer of the platform: Next.js 15.6
+**Technical highlights:** Architected the platform and built its back end and database (Lesley
+Gao built the new website's front end, including much of the
+mentorship dashboard): Next.js 15.6
 canary + React 19.1.2 + TypeScript 5.8 on Drizzle 0.43 over Neon
 Postgres, NextAuth 5 with bcrypt + Google/GitHub OAuth, Tailwind 4
-+ shadcn/ui, Resend transactional email, Cloudinary image pipeline,
++ shadcn/ui, Resend transactional email, Vercel Blob uploads,
 Stripe-integrated membership flow, Vercel edge deployment +
 3 scheduled jobs. Schema runs 39 tables / 33 enums / 32 SQL
 migrations — every business concept is a typed enum so invalid
@@ -1489,7 +1497,8 @@ a command, or trusting a `grep` hit have to live in the root file
 they govern.
 
 The four automations worth naming. **Newsletter** —
-`monthly-newsletter`, 4 issues shipped in the new system, with a
+`monthly-newsletter`, four issues (June to September 2026) composed
+in the new system and one, August 2026, broadcast through it, with a
 two-block JSON schema separating the machine-generated snapshot
 from human-owned editorial, and a three-stage approval chain (test
 send → review → founder approval) tracked in a state file. Writing
@@ -1543,7 +1552,7 @@ framework integration plumbing.
 **My mandate:** Open Source Contributor — adding capabilities, demos, and
 documentation downstream of real-world production use. I run
 CopilotKit + LangGraph in two production systems
-(Tam-AI-Ti's 88+ AI actions; FemTracker Agent's 8-agent
+(Tam-AI-Ti's 45 AI actions; FemTracker Agent's 8-agent
 women's-health pipeline) and contribute back the missing
 showcases, integration paths, and ecosystem bridges I
 encountered along the way.
@@ -1579,7 +1588,7 @@ Maintainer Brandon McConnell (`@brandonmcconnell`) approved:
 *"This looks great. Thanks, @ChanMeng666 👏"*
 
 **Technical highlights:** Both contributions come from real production usage: Tam-AI-Ti
-(88+ AI actions, CopilotKit + GPT-4o-mini for tool calls) and
+(45 AI actions, CopilotKit + GPT-4o-mini for tool calls) and
 FemTracker Agent (8-agent CopilotKit + LangGraph + Python
 orchestration). The FemTracker Agent demo is the most
 substantive multi-agent showcase in CopilotKit's demos
@@ -1779,7 +1788,7 @@ transitions; and ongoing availability as a long-term contact
 for mentees beyond the formal programme cycle.
 
 **Impact delivered:** **The mentorship engagement is the umbrella under which seven
-of the twenty-six public LinkedIn recommendations on Chan's
+of the twenty-seven LinkedIn recommendations on Chan's
 profile were given** — making Forward with Her the
 single-largest source of independently-attested mentorship
 impact across Chan's career to date. Mentees who gave
@@ -1822,9 +1831,9 @@ this Forward with Her cohort.** Its earliest cohort version
 (`2024-winter`) exists precisely because I needed a structured
 place to host the tutorials, lecture recordings, and exercises
 I was delivering live to mentees. It has since grown into the
-open-source teaching platform now serving 4 coexisting cohort
-versions across TechNest, HER WAKA, and the original Forward
-with Her audience — but its origin is here.
+open-source teaching platform now serving 5 coexisting cohort
+versions across TechNest, HER WAKA, Peyvand Academy and the
+original Forward with Her audience — but its origin is here.
 
 I also built and shipped a dedicated **bilingual EN/CN promo
 site** for the programme
@@ -2219,18 +2228,20 @@ is unreliable. The company's central operations platform
 based and assumes connectivity. The mobile app's job was to
 make the field worker's tablet the **system of record for
 the moment of work**, capture text and photos and GPS
-simultaneously, hold it locally with integrity guarantees,
-and synchronise back to Workbench cleanly when connectivity
-returned — including handling the conflict cases that real
-offline-first systems have to handle. This is a real
+simultaneously, hold it locally,
+and synchronise back to Workbench when connectivity returned,
+without a log created offline colliding with the ids the
+server issues. This is a real
 productivity problem worth real engineering for a 164-staff
 infrastructure operator.
 
-**My mandate:** Full-stack developer on a two-active-developer Lincoln
-University team (myself plus Luke Shi / Zhenzhou Shi),
-reporting directly to **Barry Clark** on CORDE's side as
-the business sponsor and to **Kullum Ladley** as CORDE's
-technical liaison and Workbench API specification author.
+**My mandate:** Full-stack developer and documentation lead on a three-person
+Lincoln University team (myself, Xue Zheng and Luke Shi /
+Zhenzhou Shi, all three from the first day), reporting to
+**Barry Clark**, CORDE's Digital Development Manager, as the
+business sponsor, and working with **Kullum Ladley**, CORDE's
+Business System Analyst, who wrote the Workbench API
+documents and the team's written priority list.
 Mandate covered: front-end implementation across the entire
 React Native + Native Base UI layer, database design (ERD
 work co-designed with CORDE's existing database slices),
@@ -2255,14 +2266,14 @@ under his GitHub handle gentoo111 to take the project over;
 that fork has since grown to 541 commits, of which 227 are
 mine.) The app integrates with CORDE's
 Workbench central operations platform via the API contract
-documented across a sequence of **15 specifications
-authored by Kullum Ladley** (the same Kullum named in every
-API document's filename prefix `YYYYMMDD_Kullum_...`),
-covering Workbench API calls, log creation, mobile-app
-authentication, log extension fields, file-upload pipelines,
-and group completion workflow — all captured under version
-control as the API/ folder of the team's documentation
-repository.
+Kullum Ladley documented: **14 API documents on eight
+topics, revisions included**, plus one written priority list
+(15 files, each prefixed `YYYYMMDD_Kullum_...`), covering
+Workbench API calls, reading logs, log creation, mobile-app
+authentication, log extension fields, file upload, log
+completion and the group completion workflow — all captured
+under version control as the API/ folder of the team's
+documentation repository.
 
 **Owned the documentation track end-to-end.** The team's
 documentation repository (`team-corde`) has 143 commits;
@@ -2289,30 +2300,24 @@ React Native Elements → Native Base) and chose Native Base
 for its Figma-component-library integration so design and
 implementation stayed close; ran the demo cadence in front
 of Barry Clark and the CORDE technical team every week
-across five months; and made the team's GitHub one-branch
-policy work even though it required disciplined sequencing
-of two developers' parallel work.
+across five months; and moved the team from a one-branch
+policy (agreed June 2024) to a main branch plus a develop
+branch with pull requests in mid-July 2024, merging most of
+those pull requests into main myself.
 
-**Kept the codebase modern after the engagement ended.**
-Continued making targeted commits in subsequent years for
-React Native version currency, Android 16 KB page-size
-linker compliance, husky + lint-staged pre-commit hooks,
-and dependency upgrades — keeping the repository a usable
-portfolio piece rather than an archived snapshot of
-mid-2024 React Native conventions.
+**Handed over, still carried on for CORDE.** In
+mid-September 2024 one teammate stepped back, and the
+client's test rounds, fixes and release builds for the last
+month fell to me. In October 2024 Luke Shi took the project
+over in his own fork of the repository and has carried it
+on for CORDE since, with releases into 2026. The platform
+upgrades in that fork since 2024 (React Native upgrades,
+Android 16 KB page-size compliance, pre-commit hooks) are
+his work, not mine; my later commits to the original
+repository are documentation only.
 
-**The application remains in active use today by CORDE's
-field crews** for offline data collection — GPS-tagged
-photos and structured form data captured on water-
-infrastructure and civil-construction sites where mobile
-coverage drops out, then syncing back when crews return
-to coverage. The codebase-currency commits aren't archive
-maintenance; they're keeping a production tool aligned
-with the platform conventions of the year the crews are
-actually running it on.
-
-**Technical highlights:** **React Native 0.83 + TypeScript + Native Base** on the
-client, deliberately chosen over Expo because the project's
+**Technical highlights:** **React Native 0.74 + TypeScript + Native Base** on the
+client (the version at handover), deliberately chosen over Expo because the project's
 offline-first requirements pushed against Expo's managed
 workflow (and over React Native Elements because Native
 Base shipped a Figma component library that let the team
@@ -2325,13 +2330,15 @@ needed it.
 Local-first storage of text + photo + GPS coordinates +
 timestamps captured in the field, with a synchronisation
 pipeline that reconciles back to CORDE's Workbench central
-database when connectivity returns. The sync model had to
-handle the real conflict cases offline-first systems
-actually face — duplicate-key collisions when a worker's
-local IDs and the server's IDs both move forward, partial
-sync where one log uploads but its attachments don't,
-connectivity drop mid-batch, and the file-upload
-sub-protocol covered separately in Kullum's API specifications.
+database when connectivity returns. What the code does: the
+local id and the server id are separate columns, so a log
+created offline never collides with one the server issues;
+each log carries its own sync status and retry count; a
+background queue retries uploads on timers; attachments go
+through the separate file-upload protocol in Kullum's API
+documents; and a pull replaces the local copy with the
+server's. A failed upload is not re-queued and there is no
+conflict prompt: both were the next things to build.
 
 **Heavy native-integration surface:** geolocation +
 geolocation-service (foreground and background), camera-
@@ -2424,14 +2431,14 @@ orientation that later anchored Chan's work between China and NZ.
 ## Flagship Projects
 
 ### 1. ArchLang — An original declarative floor-plan language that compiles .arch source into professional, dimensioned floor plans — 'Typst/LaTeX for architecture.' Zero-dependency, isomorphic TypeScript (hand-written lexer + recursive-descent parser), errors returned as data not thrown, with architectural-soundness linting, human-circulation analysis, a deterministic repair pass, five export formats (SVG/DXF/PDF/PNG/text), an agent-native CLI, full LSP + VS Code extension, and a client-side playground. Published to npm; the compiler engine behind ArchCanvas.
-[tier=flagship · recency=active · updated=2026-09-16]
+[tier=flagship · recency=active · updated=2026-10-15]
 - **URL:** https://archlang.uk/
 - **Repository:** https://github.com/ChanMeng666/archlang
 - **Tech stack:** TypeScript 5.7 (ESM, zero runtime dependencies), Hand-written lexer + recursive-descent parser + expression evaluator, tsup (build), Biome 2.5 (lint/format), Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression), Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF), LSP (hover/completion/rename/signature), VS Code extension (ChanMeng.archlang, TextMate grammar), Vite + CodeMirror 6 playground (100% client-side), VitePress docs, GitHub Action (renders ```arch fences to images)
 - **Commits (solo):** 810 (803 by Chan + 7 automated dependency bumps) (2026-06-25 → 2026-09-13); sole engineer, built with AI coding agents
-- **npm package:** @chanmeng666/archlang v1.36.0 (53 published versions through 2026-09-13, 19 ADRs)
+- **npm package:** @chanmeng666/archlang v1.43.0 (62 published versions through 2026-10-14, 27 ADRs)
 - **Tests:** 4,338 passing, 0 skipped, across 216 test files (measured 2026-09-04)
-- **Primitives:** 8 elements (wall · room · door · window · opening · furniture · dim · column) + fixture-symbol catalog
+- **Primitives:** 15 element kinds (wall · room · door · window · opening · furniture · dim · column · stair · elevator · escalator · roof · void · outdoor · fence), read from the element registry 2026-10-15, + fixture-symbol catalog
 - **Export formats:** 5 — SVG + DXF (zero-dep) · PDF + PNG (lazily-loaded optional add-ons) · text-only plan
 - **Diagnostics:** 139 stable E_*/W_* codes (92 errors · 47 warnings), each carrying a byte span + a machine-applicable fix
 - **Lint rules:** 8 architectural-soundness rule modules (reachability, door-swing collision, windowless bedroom, wet-room enclosure, circulation)
@@ -2449,20 +2456,20 @@ orientation that later anchored Chan's work between China and NZ.
 
 Compilation is a returned value, not a side effect: `compile()` hands back `{ svg, errors, warnings, diagnostics, ast, scene }` and **never throws** on a bad plan — every diagnostic carries a byte span and a machine-applicable `fix`, and the SVG is simply left empty. On top of the compiler sit several analysis surfaces: a **lint** pass over eight architectural-soundness rules (reachability, door-swing collision, windowless bedroom, unenclosed wet room, too-narrow door…); a **circulation** analysis that models how a person actually walks the plan on a clearance-eroded nav grid (per-room walk distance, narrowest pinch, path circuitousness) with an optional route overlay; a deterministic **repair** pass that nudges furniture out of walls and door swings and emits a change log; an **intent** check that scores the plan against a written brief and returns a pass/fail exit code; and a **suggest** surface that emits candidate door/window statements to fix reachability problems. All of it is reachable from a ~20-subcommand CLI where every command supports `--json` and returns deterministic exit codes, plus an LSP, a VS Code extension, four render themes, accessibility annotations, and a fully client-side playground.
 
-**Business logic:** ArchLang is free and open-source, MIT, published on npm as `@chanmeng666/archlang`. Its strategic role is twofold. As an artifact it is a credential — an original programming language with a hand-written compiler, a 139-code diagnostic system, domain-specific static analysis, and full IDE tooling, built and versioned with engineering discipline (19 ADRs, 53 published versions). As infrastructure it is the **engine that makes a commercial product possible**: ArchCanvas (the AI design agent) depends on it, writing parametric ArchLang rather than freehand SVG so that its select-to-act editing, parametric sliders, and semantic diffs all work — capabilities that only exist because the underlying plan is a deterministic program. Agent access is designed CLI-first: a CLI costs zero context until it is called, whereas an MCP tool schema sits in an agent's window permanently. ArchLang still publishes an optional MCP server (`@chanmeng666/archlang-mcp`, on the official registry) so MCP-native hosts can discover it, but keeps the SDK quarantined in that one package so the core stays zero-dependency.
+**Business logic:** ArchLang is free and open-source, MIT, published on npm as `@chanmeng666/archlang`. Its strategic role is twofold. As an artifact it is a credential — an original programming language with a hand-written compiler, a 139-code diagnostic system, domain-specific static analysis, and full IDE tooling, built and versioned with engineering discipline (27 ADRs and 62 published versions by 2026-10-14). As infrastructure it is the **engine that makes a commercial product possible**: ArchCanvas (the AI design agent) depends on it, writing parametric ArchLang rather than freehand SVG so that its select-to-act editing, parametric sliders, and semantic diffs all work — capabilities that only exist because the underlying plan is a deterministic program. Agent access is designed CLI-first: a CLI costs zero context until it is called, whereas an MCP tool schema sits in an agent's window permanently. ArchLang still publishes an optional MCP server (`@chanmeng666/archlang-mcp`, on the official registry) so MCP-native hosts can discover it, but keeps the SDK quarantined in that one package so the core stays zero-dependency. Since 2026-10 the same server is also hosted at mcp.archlang.uk (ADR 0026), for hosts that take a URL and cannot start a local process; it is the only scripted Worker in the repository, and the two public sites stay static.
 
 **Technical approach:** A pure-TypeScript, zero-runtime-dependency compiler: a hand-written lexer (line/col tracking), a recursive-descent parser that recovers rather than throwing, and a separate expression evaluator, all isomorphic so the same code runs in Node and in the browser — the playground sends nothing to a server. The heavy or native pieces (resvg for PNG raster, clipper2-wasm for polygon geometry, pdfkit for PDF) are **optional and lazily imported** behind bundler-ignore guards, so a browser bundle never tries to resolve them and a default install pulls none of them. Output determinism is enforced with property tests (fast-check) and visual-regression tests (pixelmatch). The diagnostic layer — 139 stable `E_*`/`W_*` codes, each with a byte span and a suggested fix, surfaced as data and even as a self-describing error-SVG card — is the deliberate foundation of the agent story: an LLM can author a plan, read the structured errors, and self-correct in a tight loop without a human or an image in the middle.
 
-**Outcomes:** A complete, published language: 810 commits (803 mine, the rest automated dependency bumps) from 2026-06-25 to 2026-09-13, 4,338 passing tests (measured 2026-09-04), released to npm at v1.36.0 over 53 published versions with 19 architecture decision records. The surface area is unusually complete for a solo language project — 8 primitives, 5 export formats, 8 lint-rule modules, a circulation analyzer, a repair pass, an intent-scoring channel, a ~20-command CLI, a full LSP, a VS Code extension, an optional MCP server, a client-side playground, a docs site, a published HuggingFace dataset of self-verifying repair trajectories, and a GitHub Action that renders every ```arch fence in a repo's Markdown. Most tellingly, it is already load-bearing: ArchCanvas's in-browser use of the core drove real hardening, proving the engine under a downstream product rather than in isolation.
+**Outcomes:** A complete, published language: 810 commits (803 mine, the rest automated dependency bumps) from 2026-06-25 to 2026-09-13, 4,338 passing tests (measured 2026-09-04), released to npm over 62 published versions through v1.43.0 (2026-10-14), with 27 architecture decision records. The surface area is unusually complete for a solo language project — 15 element kinds, 5 export formats, 8 lint-rule modules, a circulation analyzer, a repair pass, an intent-scoring channel, a ~20-command CLI, a full LSP, a VS Code extension, an optional MCP server (also hosted at mcp.archlang.uk), a client-side playground, a docs site, a published HuggingFace dataset of self-verifying repair trajectories, and a GitHub Action that renders every ```arch fence in a repo's Markdown. Most tellingly, it is already load-bearing: ArchCanvas's in-browser use of the core drove real hardening, proving the engine under a downstream product rather than in isolation.
 
-**My role:** I invented the language and wrote everything — the language design, the hand-written lexer / parser / evaluator, the 139-code diagnostic system, all five export backends, the lint / circulation / repair / intent / suggest pipelines, the LSP and VS Code extension, the CodeMirror playground, the docs site, the MCP server, and the npm packaging. 803 of the 810 commits are mine, written with AI coding agents; the remaining 7 are automated dependency bumps. No outside contributors so far.
-### 2. ArchCanvas — 'Your AI architect — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Refinement mutates the plan in place — it never regenerates it.
-[tier=flagship · recency=active · updated=2026-09-16]
+**My role:** I invented the language and wrote everything — the language design, the hand-written lexer / parser / evaluator, the 139-code diagnostic system, all five export backends, the lint / circulation / repair / intent / suggest pipelines, the LSP and VS Code extension, the CodeMirror playground, the docs site, the MCP server, and the npm packaging. 803 of the 810 commits are mine, written with AI coding agents; the remaining 7 are automated dependency bumps. Outside users have since filed issues, and the first outside pull request (a PDF Unicode-font fix) was reviewed and merged on 2026-09-23.
+### 2. ArchCanvas — 'Your AI architectural designer — dimensioned floor plans you can actually build from.' An AI design agent that turns a natural-language brief into ONE strong floor plan — written as parametric ArchLang (Chan's own DSL), compiled to real dimensioned SVG, plus a GPT-Image rendering grounded on that exact plan — then refined conversationally on an infinite zoomable canvas where edits morph in place. Select-to-act editing, a review mode that overlays circulation and pins critique, parametric sliders, and export of the whole design history as a real git repo. Refinement mutates the plan in place — it never regenerates it.
+[tier=flagship · recency=active · updated=2026-10-15]
 - **URL:** https://archcanvas.uk/
-- **Tech stack:** Next.js 15.3 (App Router) + React 19 + TypeScript 5.8, Vercel AI SDK (ai 4.3, @ai-sdk/openai) + OpenAI 6.45 — orchestrator migrated off GPT-4o to a newer reasoning model for tool use; GPT-4o retained for vision, GPT Image grounded renderings (view-aware model chain: aerial vs eye-level), @chanmeng666/archlang ^1.18.0 (Chan's own declarative floor-plan compiler, consumed as a package), Neon Postgres + Drizzle ORM (9 tables, schema-push), Stripe 17 (credits ledger, dual live/test mode), Cloudinary (rendering storage), react-zoom-pan-pinch (infinite zoomable canvas), isomorphic-git + memfs + fflate (export design history as a real git repo, in-memory), jose (JWT/JWKS auth), Zod validation · shadcn/ui + Tailwind 4 + Framer Motion + GSAP, Docker canary-then-swap deploy over SSH (DigitalOcean VPS, Traefik + Let's Encrypt, Cloudflare Full-Strict)
+- **Tech stack:** Next.js 15.3 (App Router) + React 19 + TypeScript 5.8, Vercel AI SDK (ai 4.3, @ai-sdk/openai) + OpenAI 6.45 — orchestrator on gpt-5.6-terra since 2026-07-31 (off GPT-4o, then gpt-5.5); a separate, env-configurable designer model writes the plan; vision on the same tier, GPT Image grounded renderings (one model, gpt-image-2, for every view since 2026-09-01), @chanmeng666/archlang ^1.42.0 (Chan's own declarative floor-plan compiler, consumed as a package), Neon Postgres + Drizzle ORM (13 tables, schema-push), Stripe 17 (credits ledger, dual live/test mode), Cloudinary (rendering storage), react-zoom-pan-pinch (infinite zoomable canvas), isomorphic-git + memfs + fflate (export design history as a real git repo, in-memory), jose (JWT/JWKS auth), Zod validation · shadcn/ui + Tailwind 4 + Framer Motion + GSAP, Docker canary-then-swap deploy over SSH (DigitalOcean VPS, Traefik + Let's Encrypt, Cloudflare Full-Strict)
 - **Commits (solo):** 853 (837 by Chan, the rest bot/agent commits) (2026-04-08 → 2026-09-16); sole engineer, built with AI coding agents
 - **Surfaces:** 13 pages · 28 API route handlers · 71 components · 205 source files
-- **Database:** 9 Drizzle tables on Neon (projects · designFrames · agentThreads · credits · creditTransactions · shares · generationAttempts · uploads · stripeWebhookEvents)
+- **Database:** 13 Drizzle tables on Neon (projects · designFrames · agentThreads · credits · creditTransactions · shares · generationAttempts · uploads · stripeWebhookEvents · newsletterIssues · agentTurnSteps · funnelEvents · renderAttempts), read from the schema 2026-10-12
 - **Agent tools:** 9 (7 user-facing: askDesignQuestions · generateFloorPlanDSL[new plan] · editFloorPlanDSL[minimal diff] · generateRendering · critiquePlan · analyzeReference[vision] · analyzeFloorPlan)
 - **Generation unit:** one generation = plan + grounded rendering + critique, produced as a single atomic set; edits, parametric tweaks, re-renders, and review mode all operate on that set without re-generating it
 - **Git export:** in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)
@@ -2481,16 +2488,16 @@ Compilation is a returned value, not a side effect: `compile()` hands back `{ sv
 
 **Business logic:** The unit of work is one generation turn — plan + grounded rendering + critique, produced as a single atomic set — and everything downstream of it is refinement rather than regeneration. That split is deliberate: a design task's value is lumpy (you want a few strong plans, then iterate on them for a long time), so every edit, parametric tweak, re-render, and review action mutates the existing frame in place, and the model is re-invoked only when the user genuinely asks for new work. The advantage is the ArchLang pairing: because plans are a deterministic program rather than pixels, ArchCanvas can offer editing, tweaking, diffing, and change-history export that an image-generation competitor structurally cannot.
 
-**Technical approach:** A single Next.js 15 monolith (React 19, TypeScript 5.8) over a 9-table Drizzle schema on Neon Postgres, with Stripe credits, Cloudinary rendering storage, and jose-based auth. The AI layer is an orchestrated tool-agent on the Vercel AI SDK: the orchestrator was deliberately migrated off GPT-4o (which under-used tools and wrote non-parametric DSL) to **gpt-5.5**, while GPT-4o is retained for vision (reference-image analysis). Its tools center on `generateFloorPlanDSL` — write parametric ArchLang, compile it through the `@chanmeng666/archlang` package (^1.36), pass a ship-gate, save a frame — with `editFloorPlanDSL` as the minimal-diff follow-up. Renderings are a **grounded, view-aware chain**: the compiled plan is rasterized and sent as the grounding image to GPT Image 2, with model order chosen per view (aerial vs eye-level) so the render matches the real geometry instead of hallucinating a layout. `designFrames` stores each version's ArchLang source, compiled SVG, rendering URLs, lint warnings, review findings, and a self-referential `parentFrameId` for lineage — which is exactly what the in-memory change-history export (isomorphic-git + memfs, zipped with fflate) walks root-to-tip. Deployment is a canary-then-swap over SSH: build a Docker image, push to GHCR, boot a health-checked canary, and swap traffic only if `/api/health` passes — otherwise abort untouched.
+**Technical approach:** A single Next.js 15 monolith (React 19, TypeScript 5.8) over a 13-table Drizzle schema on Neon Postgres, with Stripe credits, Cloudinary rendering storage, and jose-based auth. The AI layer is an orchestrated tool-agent on the Vercel AI SDK: the orchestrator was deliberately migrated off GPT-4o (which under-used tools and wrote non-parametric DSL), first to gpt-5.5 and on 2026-07-31 to **gpt-5.6-terra**; the plan itself is written by a separate designer model (its own env-configurable constant, so the designer can move without moving the orchestrator), and reference-image vision moved off GPT-4o to the same tier on 2026-08-15. Its tools center on `generateFloorPlanDSL` — write parametric ArchLang, compile it through the `@chanmeng666/archlang` package (^1.42), pass a ship-gate, save a frame — with `editFloorPlanDSL` as the minimal-diff follow-up. Renderings are **grounded**: the compiled plan is rasterized and sent as the grounding image to GPT Image 2 so the render matches the real geometry instead of hallucinating a layout. Since 2026-09-01 one image model renders every view; resilience comes from two request shapes (a grounded edit, then a text-only generate), not from a second model. `designFrames` stores each version's ArchLang source, compiled SVG, rendering URLs, lint warnings, review findings, and a self-referential `parentFrameId` for lineage — which is exactly what the in-memory change-history export (isomorphic-git + memfs, zipped with fflate) walks root-to-tip. Deployment is a canary-then-swap over SSH: build a Docker image, push to GHCR, boot a health-checked canary, and swap traffic only if `/api/health` passes — otherwise abort untouched.
 
-**Outcomes:** Live in production at archcanvas.uk and pre-launch, built by one engineer with AI coding agents across 853 commits (2026-04-08 → 2026-09-16) and 30 API routes. On the founder-run offline benchmark of 26 briefs (2026-09-07) all 26 plans passed every check, at a median of one design round. The product is unusually rigorous about testing its own thesis — a `generationAttempts` telemetry table tracks first-pass ArchLang validity per model, and a `bench` harness runs briefs through both the DSL pipeline and a legacy freehand-pixel pipeline as a control group (now with timing and token axes), so the "DSL beats pixels" claim is measured, not asserted. It is also the proving ground that hardened ArchLang: real in-browser use of the compiler drove concrete upstream fixes, most recently the 1.18 topology work.
+**Outcomes:** Live in production at archcanvas.uk and pre-launch, built by one engineer with AI coding agents across 853 commits (2026-04-08 → 2026-09-16) and 28 API route handlers. On the founder-run offline benchmark of 26 briefs (2026-09-07) all 26 plans passed every check, at a median of one design round. The product is unusually rigorous about testing its own thesis — a `generationAttempts` telemetry table tracks first-pass ArchLang validity per model, and a `bench` harness runs briefs through both the DSL pipeline and a legacy freehand-pixel pipeline as a control group (now with timing and token axes), so the "DSL beats pixels" claim is measured, not asserted. It is also the proving ground that hardened ArchLang: real in-browser use of the compiler drove concrete upstream fixes, most recently the 1.18 topology work.
 
-**My role:** Sole author of the entire product — the two-act studio and canvas UX, the AI orchestrator and its tools, the grounded view-aware rendering chain, the ArchLang integration, the schema and credit/billing system, the change-history export, the falsifiability instruments, and the canary-then-swap deployment. And of ArchLang itself, the floor-plan language it is built on — invented eleven weeks into this product, when drawing plans as freehand SVG proved impossible to check. Sole engineer, working with AI coding agents.
+**My role:** Sole author of the entire product — the two-act studio and canvas UX, the AI orchestrator and its tools, the grounded rendering chain, the ArchLang integration, the schema and credit/billing system, the change-history export, the falsifiability instruments, and the canary-then-swap deployment. And of ArchLang itself, the floor-plan language it is built on — invented eleven weeks into this product, when drawing plans as freehand SVG proved impossible to check. Sole engineer, working with AI coding agents.
 
 ## Notable Open Source Projects
 
 ### ArchLang — An original declarative floor-plan language that compiles .arch source into professional, dimensioned floor plans — 'Typst/LaTeX for architecture.' Zero-dependency, isomorphic TypeScript (hand-written lexer + recursive-descent parser), errors returned as data not thrown, with architectural-soundness linting, human-circulation analysis, a deterministic repair pass, five export formats (SVG/DXF/PDF/PNG/text), an agent-native CLI, full LSP + VS Code extension, and a client-side playground. Published to npm; the compiler engine behind ArchCanvas.
-[tier=flagship · recency=active · updated=2026-09-16]
+[tier=flagship · recency=active · updated=2026-10-15]
 - **URL:** https://archlang.uk/
 - **Repository:** https://github.com/ChanMeng666/archlang
 - **Tech stack:** TypeScript 5.7 (ESM, zero runtime dependencies), Hand-written lexer + recursive-descent parser + expression evaluator, tsup (build), Biome 2.5 (lint/format), Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression), Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF), LSP (hover/completion/rename/signature), VS Code extension (ChanMeng.archlang, TextMate grammar), Vite + CodeMirror 6 playground (100% client-side), VitePress docs, GitHub Action (renders ```arch fences to images)
@@ -2507,17 +2514,17 @@ Compilation is a returned value, not a side effect: `compile()` hands back `{ sv
 
 Compilation is a returned value, not a side effect: `compile()` hands back `{ svg, errors, warnings, diagnostics, ast, scene }` and **never throws** on a bad plan — every diagnostic carries a byte span and a machine-applicable `fix`, and the SVG is simply left empty. On top of the compiler sit several analysis surfaces: a **lint** pass over eight architectural-soundness rules (reachability, door-swing collision, windowless bedroom, unenclosed wet room, too-narrow door…); a **circulation** analysis that models how a person actually walks the plan on a clearance-eroded nav grid (per-room walk distance, narrowest pinch, path circuitousness) with an optional route overlay; a deterministic **repair** pass that nudges furniture out of walls and door swings and emits a change log; an **intent** check that scores the plan against a written brief and returns a pass/fail exit code; and a **suggest** surface that emits candidate door/window statements to fix reachability problems. All of it is reachable from a ~20-subcommand CLI where every command supports `--json` and returns deterministic exit codes, plus an LSP, a VS Code extension, four render themes, accessibility annotations, and a fully client-side playground.
 
-**Business logic:** ArchLang is free and open-source, MIT, published on npm as `@chanmeng666/archlang`. Its strategic role is twofold. As an artifact it is a credential — an original programming language with a hand-written compiler, a 139-code diagnostic system, domain-specific static analysis, and full IDE tooling, built and versioned with engineering discipline (19 ADRs, 53 published versions). As infrastructure it is the **engine that makes a commercial product possible**: ArchCanvas (the AI design agent) depends on it, writing parametric ArchLang rather than freehand SVG so that its select-to-act editing, parametric sliders, and semantic diffs all work — capabilities that only exist because the underlying plan is a deterministic program. Agent access is designed CLI-first: a CLI costs zero context until it is called, whereas an MCP tool schema sits in an agent's window permanently. ArchLang still publishes an optional MCP server (`@chanmeng666/archlang-mcp`, on the official registry) so MCP-native hosts can discover it, but keeps the SDK quarantined in that one package so the core stays zero-dependency.
+**Business logic:** ArchLang is free and open-source, MIT, published on npm as `@chanmeng666/archlang`. Its strategic role is twofold. As an artifact it is a credential — an original programming language with a hand-written compiler, a 139-code diagnostic system, domain-specific static analysis, and full IDE tooling, built and versioned with engineering discipline (27 ADRs and 62 published versions by 2026-10-14). As infrastructure it is the **engine that makes a commercial product possible**: ArchCanvas (the AI design agent) depends on it, writing parametric ArchLang rather than freehand SVG so that its select-to-act editing, parametric sliders, and semantic diffs all work — capabilities that only exist because the underlying plan is a deterministic program. Agent access is designed CLI-first: a CLI costs zero context until it is called, whereas an MCP tool schema sits in an agent's window permanently. ArchLang still publishes an optional MCP server (`@chanmeng666/archlang-mcp`, on the official registry) so MCP-native hosts can discover it, but keeps the SDK quarantined in that one package so the core stays zero-dependency. Since 2026-10 the same server is also hosted at mcp.archlang.uk (ADR 0026), for hosts that take a URL and cannot start a local process; it is the only scripted Worker in the repository, and the two public sites stay static.
 
 **Technical approach:** A pure-TypeScript, zero-runtime-dependency compiler: a hand-written lexer (line/col tracking), a recursive-descent parser that recovers rather than throwing, and a separate expression evaluator, all isomorphic so the same code runs in Node and in the browser — the playground sends nothing to a server. The heavy or native pieces (resvg for PNG raster, clipper2-wasm for polygon geometry, pdfkit for PDF) are **optional and lazily imported** behind bundler-ignore guards, so a browser bundle never tries to resolve them and a default install pulls none of them. Output determinism is enforced with property tests (fast-check) and visual-regression tests (pixelmatch). The diagnostic layer — 139 stable `E_*`/`W_*` codes, each with a byte span and a suggested fix, surfaced as data and even as a self-describing error-SVG card — is the deliberate foundation of the agent story: an LLM can author a plan, read the structured errors, and self-correct in a tight loop without a human or an image in the middle.
 
-**Outcomes:** A complete, published language: 810 commits (803 mine, the rest automated dependency bumps) from 2026-06-25 to 2026-09-13, 4,338 passing tests (measured 2026-09-04), released to npm at v1.36.0 over 53 published versions with 19 architecture decision records. The surface area is unusually complete for a solo language project — 8 primitives, 5 export formats, 8 lint-rule modules, a circulation analyzer, a repair pass, an intent-scoring channel, a ~20-command CLI, a full LSP, a VS Code extension, an optional MCP server, a client-side playground, a docs site, a published HuggingFace dataset of self-verifying repair trajectories, and a GitHub Action that renders every ```arch fence in a repo's Markdown. Most tellingly, it is already load-bearing: ArchCanvas's in-browser use of the core drove real hardening, proving the engine under a downstream product rather than in isolation.
+**Outcomes:** A complete, published language: 810 commits (803 mine, the rest automated dependency bumps) from 2026-06-25 to 2026-09-13, 4,338 passing tests (measured 2026-09-04), released to npm over 62 published versions through v1.43.0 (2026-10-14), with 27 architecture decision records. The surface area is unusually complete for a solo language project — 15 element kinds, 5 export formats, 8 lint-rule modules, a circulation analyzer, a repair pass, an intent-scoring channel, a ~20-command CLI, a full LSP, a VS Code extension, an optional MCP server (also hosted at mcp.archlang.uk), a client-side playground, a docs site, a published HuggingFace dataset of self-verifying repair trajectories, and a GitHub Action that renders every ```arch fence in a repo's Markdown. Most tellingly, it is already load-bearing: ArchCanvas's in-browser use of the core drove real hardening, proving the engine under a downstream product rather than in isolation.
 
-**My role:** I invented the language and wrote everything — the language design, the hand-written lexer / parser / evaluator, the 139-code diagnostic system, all five export backends, the lint / circulation / repair / intent / suggest pipelines, the LSP and VS Code extension, the CodeMirror playground, the docs site, the MCP server, and the npm packaging. 803 of the 810 commits are mine, written with AI coding agents; the remaining 7 are automated dependency bumps. No outside contributors so far.
+**My role:** I invented the language and wrote everything — the language design, the hand-written lexer / parser / evaluator, the 139-code diagnostic system, all five export backends, the lint / circulation / repair / intent / suggest pipelines, the LSP and VS Code extension, the CodeMirror playground, the docs site, the MCP server, and the npm packaging. 803 of the 810 commits are mine, written with AI coding agents; the remaining 7 are automated dependency bumps. Outside users have since filed issues, and the first outside pull request (a PDF Unicode-font fix) was reviewed and merged on 2026-09-23.
 ### echook — AI-operated hooks plugin for Claude Code, Cursor IDE, and Codex CLI — install, configure, and use with natural language only; grew from audio notifications into a context-window status line and richer session telemetry
 [tier=primary · recency=active · updated=2026-09-07]
 - **Repository:** https://github.com/ChanMeng666/echook
-- **Tech stack:** Python 3.6+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13), Remotion 4 (promo video), React 19 (promo video), Suno (background music generation)
+- **Tech stack:** Python 3.9+, Claude Code Plugin SDK, Cursor IDE 3.2.16+ third-party hooks, Codex CLI hooks API, hooks.json native matcher routing, NDJSON structured logging (schema audio-hooks.v1), ElevenLabs TTS API, Slack / Discord / Teams / ntfy webhooks, PowerShell MediaPlayer (Windows), afplay (macOS), mpg123 / ffplay / paplay / aplay (Linux auto-detect), GitHub Actions CI (Ubuntu/Windows/macOS × Python 3.9/3.12/3.13)
 
 **Summary:** An audio-and-status notification system for Claude Code, Cursor
 IDE, and Codex CLI. The core idea: you never have to learn the
@@ -2529,7 +2536,7 @@ default), two audio themes, warnings before you hit your 5-hour
 and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,
 text-to-speech that reads the agent's actual reply aloud, and a
 33-segment status bar that tracks how much of the context window
-is left. Now on v6.8.0 with 747 automated tests running on
+is left. Now on v7.0.0 with 783 automated tests running on
 Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
 under MIT; runs on the Python standard library with no extra
 dependencies. A sister repo, echook-promo-video, ships an
@@ -2583,8 +2590,8 @@ telemetry. The value is build-in-public credibility: echook is
 the demonstration piece for Chan's AI-first product philosophy,
 and it shows up in Engram-cohort interviews, recruiter
 conversations, and the README of downstream client projects. A
-sustained release cadence (now v6.8.0), a three-OS
-continuous-integration matrix, and a 747-case test suite
+sustained release cadence (now v7.0.0), a three-OS
+continuous-integration matrix, and a 783-case test suite
 guarding the cross-editor contract make it visibly production
 engineering, not a weekend script. The Remotion promo-video
 sister repo extends the same proof — it shows Chan can ship not
@@ -2633,11 +2640,11 @@ one — echook never round-trips a user's TOML, because that would
 destroy comments and formatting. Canonical events with no Codex
 equivalent no-op cleanly under the Codex invoker with a debug
 log line, never blocking the session. The whole contract is
-validated by 747 test cases across Ubuntu, Windows, and macOS on
+validated by 783 test cases across Ubuntu, Windows, and macOS on
 Python 3.9, 3.12, and 3.13 in GitHub Actions.
 
-**Outcomes:** 86 GitHub stars (measured 2026-09-07 via the GitHub API by
-`npm run refresh-metrics`), 168 commits across the 5.x → 6.x line (now v6.8.0), and 747
+**Outcomes:** 88 GitHub stars (measured 2026-10-15 via the GitHub API), 168
+commits across the 5.x → 6.x line (now v7.0.0), and 783
 automated test cases. The defining release sequence: v5.0 (April
 2026) shipped the AI-first redesign — JSON command interface,
 `/audio-hooks` skill, NDJSON logging, plugin-native install;
@@ -2686,7 +2693,7 @@ like Claude, Cursor, and Cline search live Google News through SerpAPI,
 automatically sorted into topics (technology, business, science,
 health) and offered in 10 languages. Published on npm as
 `@chanmeng666/google-news-server`, it carries a PulseMCP "Top Pick"
-badge and ships a one-click install bundle for Claude Desktop.
+badge.
 
 **Impact:** Lets AI assistants like Claude search live Google News — sorted into topics, in 10 languages. One of the first tools built for Anthropic's Model Context Protocol: shipped 35 days after the standard launched, and it's now listed across 15+ MCP directories.
 
@@ -2723,14 +2730,15 @@ topics (AI & Technology, Business, Science & Research, Healthcare,
 General) with lightweight pattern matching, and returns clean output
 with each article's source, date, snippet, and link intact. It also
 supports search by news topic, publisher, full-story coverage, and
-section via token parameters, and falls back to English for
-unsupported language codes.
+section via token parameters. Chinese (`zh`), which SerpAPI's Google
+News engine rejects as an interface language, is sent as English;
+other language codes are passed through as given.
 
 The server runs over MCP's stdio channel — the default for desktop AI
 clients — and installs in one command through Smithery's CLI (`npx -y
 @smithery/cli install @chanmeng666/google-news-server --client
-claude`), or via a packaged `.mcpb` bundle for one-click setup in
-Claude Desktop.
+claude`). The repo also carries a packaged `.mcpb` bundle, not yet
+tested as a one-click install in Claude Desktop.
 
 **Business logic:** Open source, MIT licensed, no direct monetization. The intent is
 ecosystem positioning: be a canonical Google News server during the
@@ -2747,14 +2755,17 @@ discovery-by-machine approach used across the rest of this portfolio.
 shipped as an ES-module CLI binary (`google-news-server`) declared in
 `package.json`. Transport is stdio, so the server runs as a subprocess
 the desktop AI client launches. HTTP calls go through axios; SerpAPI is
-the underlying data source (2 requests/second, 5 concurrent, 1-hour
-cache). On top of the raw API the server adds a thin intelligence
-layer: parameter validation, topic categorization, multi-language
-formatting, and error handling with clear messages.
+the underlying data source, called once per tool call (the server
+itself adds no rate limit, concurrency cap or cache). On top of the
+raw API the server adds a thin intelligence layer: parameter
+validation, topic categorization, multi-language formatting, and
+error handling with clear messages. Releases are tagged on GitHub;
+1.0.1 (2026-10-15) is built from the current source and reads the
+user's own `SERP_API_KEY`.
 
 The repo also ships production packaging — a Dockerfile, a Smithery
 config, a `manifest.json`, a JSON-LD `structured-data.json`, an
-`llms.txt`, and a downloadable `.mcpb` install bundle — plus a full
+`llms.txt`, and a `.mcpb` bundle — plus a full
 set of community-health docs (CONTRIBUTING, SECURITY, SUPPORT,
 GOVERNANCE, CHANGELOG, issue/PR templates) added in 2026.
 
@@ -2763,8 +2774,8 @@ official `modelcontextprotocol/servers` repo (opened Nov 27 2024, two
 days after MCP's launch) documented the Windows + NVM PATH failure that
 stopped Claude Desktop from launching npm-based MCP servers. The fix —
 point the client config at the absolute path of `node.exe` instead of
-relying on PATH — is cited as the primary troubleshooting step in this
-server's README.
+relying on PATH — is the troubleshooting section of this server's
+documentation (`docs/overview.md`).
 
 **Outcomes:** The server is published on npm as `@chanmeng666/google-news-server`
 and listed across multiple MCP discovery surfaces, with third-party
@@ -2790,20 +2801,22 @@ December 2024) applies the same pattern to Google Jobs search
 flags)*. Issue #76 remains visible in the official MCP servers
 repository as a record of an early ecosystem contribution.
 
-**My role:** I built and maintain the server solo — the code, the README, the npm
-publish, the registry submissions, the packaging, and the
-issue-tracker responses. I also filed the early issue #76
+**My role:** I wrote the server and maintain it — the code, the README, the npm
+publish, the registry submissions and the issue-tracker responses.
+Outside contributors added the Dockerfile and Smithery config and an
+end-to-end evaluation, which I reviewed and merged. I also filed the
+early issue #76
 troubleshooting contribution. Together these make the
 early-MCP-developer story concrete: not a theoretical early adopter,
 but someone who shipped, distributed, documented, and supported a
 working MCP server within the protocol's first month.
 ### AI Programming Education Platform — Bilingual Docusaurus teaching platform — three years of AI/programming cohorts running (five cohort versions side-by-side, three of them concurrent in 2026) with an in-course RAG AI assistant on Cloudflare Workers (Llama 3.1 8B + Vectorize + KV), Notion-backed Capstone voting, and Typst-generated PDF handouts; the active home for the 2026 TechNest AI Track and the clearest evidence of Chan as an AI educator/evangelist, not only a builder
-[tier=primary · recency=active · updated=2026-09-18]
+[tier=primary · recency=active · updated=2026-10-15]
 - **URL:** https://programming.chanmeng.org/
 - **Repository:** https://github.com/ChanMeng666/ai-programming-teaching-project
 - **Tech stack:** Docusaurus 3.8.1, @docusaurus/faster, React 18, MDX, Cloudflare Workers, Workers AI (Llama 3.1 8B Instruct (fp8)), Cloudflare Vectorize, BGE Base EN v1.5 (768-dim embeddings), Cloudflare KV, Cloudflare Pages, Notion API, Algolia DocSearch (contextual), Typst, Mermaid (dual-view), i18next (EN + 简体中文), Server-Sent Events
 
-**Summary:** Production teaching platform at programming.chanmeng.org where beginners learn to build real software with AI tools, taught across three years of cohorts. Five course versions stay online side by side — from the 2024 class to three separate 2026 tracks (TechNest, Peyvand Academy, Her Waka) — each with video lessons, lab guides, and downloadable Typst-generated PDF notes. A built-in AI tutor (a RAG assistant on Cloudflare Workers AI, Llama 3.1 8B) answers questions from a student's own cohort material, and a Demo Day page publishes the projects students shipped. Bilingual EN + 简体中文. 211 of 220 non-merge commits solo (~96%), actively maintained through the 2026 TechNest cohort.
+**Summary:** Production teaching platform at programming.chanmeng.org where beginners learn to build real software with AI tools, taught across three years of cohorts. Five course versions stay online side by side — from the 2024 class to three separate 2026 tracks (TechNest, Peyvand Academy, Her Waka) — each with video lessons, lab guides, and downloadable Typst-generated PDF notes. A built-in AI tutor (a RAG assistant on Cloudflare Workers AI, Llama 3.1 8B) answers questions from a student's own cohort material, and a Demo Day page publishes the projects students shipped. Bilingual EN + 简体中文. Actively maintained through the 2026 TechNest cohort.
 
 **Impact:** A public website that teaches beginners to build software with AI — three years of cohorts kept side by side (five course versions, three running in 2026), plus an in-site AI tutor that answers from each class's own lessons and a Demo Day page for students' finished projects.
 
@@ -2818,7 +2831,7 @@ working MCP server within the protocol's first month.
 **Technical approach:** Built on Docusaurus 3.8.1 with the experimental @docusaurus/faster build pipeline. Five cohort versions coexist through Docusaurus versioned docs — each version is a self-contained doc tree with its own sidebar, blog feed, and tags. Bilingual i18n is end-to-end: EN primary, 简体中文 secondary, with Algolia DocSearch set to contextual locale + version filtering so a Mandarin-speaking 2026 TechNest student gets 2026 TechNest results in Chinese by default.
 
 RAG AI assistant on Cloudflare Workers AI. A separate Cloudflare Worker (worker/src/index.ts) handles POST /api/chat behind the custom domain programming-api.chanmeng.org:
-- the query is embedded with BGE Base EN v1.5 (768-dim) and sent to Cloudflare Vectorize, which returns the top chunks from the indexed corpus (~4,800 chunks spanning all five cohort versions + the blog, keyed by stable content-addressed chunk IDs so re-indexing is idempotent)
+- the query is embedded with BGE Base EN v1.5 (768-dim) and sent to Cloudflare Vectorize, which returns the top chunks from the indexed corpus (about 1,200 chunks from the English pages of all five cohort versions + the blog, counted by a seeding dry run on 2026-10-15; keyed by stable content-addressed chunk IDs so re-indexing is idempotent)
 - retrieval is version-aware: a 2026-technest student gets 2026-technest results by default, with older cohorts available on explicit ask
 - the context is passed to Workers AI Llama 3.1 8B Instruct (fp8) which generates the answer, streamed back to the in-site ChatWidget over Server-Sent Events; per-session history persists in Cloudflare KV
 - the chat endpoint is rate-limited (per-IP, plus a Cloudflare WAF burst rule) with an explicit CORS allow-list
@@ -2827,11 +2840,11 @@ Typst PDF handout pipeline. The same Typst skill taught in the curriculum is the
 
 Capstone classroom infrastructure. A Cloudflare Worker proxies writes into Notion so cohort owners moderate inside the tool they already use; the Capstone 2026 public showcase lists each team's demo with live Notion-backed voting open to invited guests. Deployed end-to-end on Cloudflare's edge: Pages for the static Docusaurus build, Workers for the chat + capstone backend, Vectorize for the vector index, KV for sessions and votes.
 
-**Outcomes:** Live at programming.chanmeng.org; it was the official platform for the 2026 TechNest AI Track (April–July 2026) and the 2026 academyEX Her Waka programme. 211 of 220 non-merge commits (95.9%) solo across Chan's two GitHub identities; the remainder is AI auto-review + Dependabot. Five cohort versions run side by side without interfering. The RAG index covers all five versions + the blog (~4,800 chunks), with version-aware retrieval and stable chunk IDs. After Cloudflare deprecated the original chat model, the assistant was restored on 2026-07-10 by swapping to Llama 3.1 8B Instruct (fp8), alongside a move to a custom API domain, per-IP rate limiting, a CORS allow-list, and a WAF rule. Course recordings continue through the TechNest cohort's 8-week curriculum, and Demo Day 2026 now has a public Capstone Showcase with published student projects (CreditHero, iCare, JobOrg-AI) and guest voting. DeepWiki provides an external AI doc-Q&A surface at deepwiki.com/ChanMeng666/ai-programming-teaching-project.
+**Outcomes:** Live at programming.chanmeng.org; it was the official platform for the 2026 TechNest AI Track (April–July 2026) and the 2026 academyEX Her Waka programme. 211 of 220 non-merge commits (95.9%) solo across Chan's two GitHub identities; the remainder is AI auto-review + Dependabot. Five cohort versions run side by side without interfering. The RAG index covers all five versions + the blog (about 1,200 chunks, measured 2026-10-15), with version-aware retrieval and stable chunk IDs. After Cloudflare deprecated the original chat model, the assistant was restored on 2026-07-10 by swapping to Llama 3.1 8B Instruct (fp8), alongside a move to a custom API domain, per-IP rate limiting, a CORS allow-list, and a WAF rule. Course recordings continue through the TechNest cohort's 8-week curriculum, and Demo Day 2026 now has a public Capstone Showcase with published student projects (CreditHero, iCare, JobOrg-AI) and guest voting. DeepWiki provides an external AI doc-Q&A surface at deepwiki.com/ChanMeng666/ai-programming-teaching-project.
 
-**My role:** I built and run the entire platform end-to-end: Docusaurus configuration, the versioned-docs taxonomy across five cohorts, every cohort's curriculum content, the Cloudflare Worker RAG backend (worker entry, chat handler, RAG module, Vectorize seeding, KV session store), the BGE-Base embeddings ingestion pipeline, the Typst PDF handout build, the Mermaid dual-view component, the Notion-Worker proxy and Demo Day showcase for Capstone voting, the Algolia contextual-search configuration, and the bilingual i18n across every surface. I migrated production from Vercel to Cloudflare Pages in 2026-04, and in 2026-07 hardened the chat backend (custom domain, rate limiting, CORS allow-list, WAF) and restored it onto Cloudflare's current model after the old one was deprecated. I continue to ship the current cohort's recordings and lab content each week.
+**My role:** I built and run the entire platform end-to-end: Docusaurus configuration, the versioned-docs taxonomy across five cohorts, every cohort's curriculum content, the Cloudflare Worker RAG backend (worker entry, chat handler, RAG module, Vectorize seeding, KV session store), the BGE-Base embeddings ingestion pipeline, the Typst PDF handout build, the Mermaid dual-view component, the Notion-Worker proxy and Demo Day showcase for Capstone voting, the Algolia contextual-search configuration, and the bilingual i18n across every surface. I migrated production from Vercel to Cloudflare Pages in 2026-02 (the site's URLs moved on 2026-02-09; the docs caught up on 2026-04-29), and in 2026-07 hardened the chat backend (custom domain, rate limiting, CORS allow-list, WAF) and restored it onto Cloudflare's current model after the old one was deprecated. I continue to ship the current cohort's recordings and lab content each week.
 ### a11y-loop — A Claude Code skill plus CLI that makes AI coding agents write accessible UI by default, then proves what it can prove with a real Playwright + axe-core browser audit across the states the agent built — and states plainly what it could not check
-[tier=primary · recency=active · updated=2026-09-16]
+[tier=primary · recency=active · updated=2026-10-15]
 - **Repository:** https://github.com/ChanMeng666/a11y-loop
 - **Tech stack:** Claude Code Skill (Agent Skills open standard), Node.js >= 20, Playwright, axe-core 4.12, WCAG 2.2 AA, JavaScript, GitHub Actions CI
 
@@ -2919,6 +2932,16 @@ it within its development team — the first organisation to take the
 tool up. What it is **not**: a paid contract, a signed partnership, or
 yet evidence that the tool is running in production. The §3 honesty rules above bind harder as the
 tool reaches real teams, not less.
+**Dogfooded on her own live product (v0.2.5, 2026-09-13).** Running
+it over archcanvas.uk exposed a blind spot in the tool itself: a
+correctly trapped portalled dialog (the Base UI mobile menu) was
+reported as broken, because the keyboard survey only recognised a
+native `<dialog>` as modal. Measured on that menu and recorded in the
+public changelog: v0.2.4 reported 2 `keyboard-unreachable` and 1
+`focus-order-diverges` row in each of three runs, and 1
+`dialog-focus-not-trapped` in two of them; v0.2.5 reported 0 of each in
+all five runs, while the
+no-trap fixture still reports all three of its failures.
 
 **My role:** Sole author. Published to npm as `a11y-loop`; the repo is written
 agent-first, with an AGENTS.md alongside the README so an agent can
@@ -3322,13 +3345,13 @@ Seismophone sibling.
 > The rest of the catalogue: every project not listed above, grouped by category. This is NOT an open-source list — it includes client deliverables and projects with no public repository, and a link here may point to a live site rather than to source code. Treat a project as open source only if it appears under "Notable Open Source Projects" above or carries a repository link on github.com/ChanMeng666.
 
 **web-apps:**
-- [She Sharp](https://www.shesharp.org.nz/) [tier=flagship · recency=recent · updated=2026-09-16]
+- [She Sharp](https://www.shesharp.org.nz/) [tier=flagship · recency=recent · updated=2026-10-15]
 - [TikTok Shop Go Template](https://github.com/ChanMeng666/douyin-mall-go-template) [tier=archive · recency=deprecated · updated=2026-07-14]
 - [腾讯会议录屏下载助手 — Chrome Web Store-Published Extension](https://github.com/ChanMeng666/tencent-meeting-video-downloader) [tier=archive · recency=deprecated · updated=2026-09-02] -- live: https://chromewebstore.google.com/detail/gdajdfngeonjmcclghkmeoacopnnfpnc
 - FreePeriod Website [tier=archive · recency=deprecated · updated=2026-10-03]
 - [LibraryOS — Multi-Tenant Library SaaS](https://github.com/ChanMeng666/library-os) [tier=archive · recency=deprecated · updated=2026-10-03]
 - LinkedIn Jobs Search — Dual-Audience Job Search Platform (Same Operations via SPA, HTTP API, MCP, or CLI) [tier=archive · recency=deprecated · updated=2026-07-14]
-- [FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026](https://www.femtechweekend.com/) [tier=flagship · recency=active · updated=2026-09-16]
+- [FemTech Weekend Website — Docusaurus + Drizzle/Neon + Cloudflare Pages platform for China's first women's-health-tech organisation, which delivered Shanghai Summit 2026](https://www.femtechweekend.com/) [tier=flagship · recency=active · updated=2026-10-15]
 - [LYZEN — The Red Thread, the company site of a cross-border women's health advisory](https://lyzenglobal.com) [tier=secondary · recency=active · updated=2026-10-12]
 - [Eatropolis Website — Production-grade Next.js 16 + OpenNext-on-Cloudflare-Workers event platform for Auckland's award-winning culinary festival (2026-10-10, Shed 10)](https://eatropolis.co.nz/) [tier=flagship · recency=active · updated=2026-09-29]
 - [FriendScope — Privacy-First Relationship Assessment with Lottie-Animated Result Cards](https://github.com/ChanMeng666/friendscope) [tier=archive · recency=deprecated · updated=2026-05-19]
@@ -3365,7 +3388,7 @@ Seismophone sibling.
 - [Wellness Support Agent](https://sanicle-wellness-agent-2lxj5uw.gamma.site/) [tier=archive · recency=historical · updated=2026-10-03]
 - [Vitex — AI Career Agent (vitex.org.nz)](https://www.vitex.org.nz/) [tier=archive · recency=historical · updated=2026-10-03]
 - FanFic Lab — HSR DreamWriter, an Adaptive LangGraph Agent Powering a Gaming Fan-Creation Community [tier=archive · recency=deprecated · updated=2026-10-03]
-- [ArchCanvas](https://archcanvas.uk/) [tier=flagship · recency=active · updated=2026-09-16]
+- [ArchCanvas](https://archcanvas.uk/) [tier=flagship · recency=active · updated=2026-10-15]
 - [AI Image Generator — Full-Stack Text-to-Image SaaS](https://github.com/ChanMeng666/image-generator) [tier=archive · recency=deprecated · updated=2026-07-14]
 - Chinese Redefine 汉语新解 — AI Word Redefinition [tier=archive · recency=deprecated · updated=2026-10-03]
 - [Typst Skill for Claude Code](https://github.com/ChanMeng666/typst-claude-skill) [tier=secondary · recency=historical · updated=2026-10-01]
@@ -3385,7 +3408,7 @@ Seismophone sibling.
 - [product-reality-check](https://github.com/ChanMeng666/product-reality-check) [tier=secondary · recency=recent · updated=2026-10-01]
 - [slack-waterline](https://github.com/ChanMeng666/slack-waterline-skill) [tier=secondary · recency=active · updated=2026-10-02]
 - [readme-theme-assets-skill](https://github.com/ChanMeng666/readme-theme-assets-skill) [tier=secondary · recency=recent · updated=2026-10-02]
-- GenLAB Career Academy — managed hotel-internship matchmaker [tier=secondary · recency=active · updated=2026-10-06]
+- GenLAB Career Academy — managed hotel-internship matchmaker [tier=secondary · recency=active · updated=2026-10-15]
 **creative:**
 - [Interactive Story Generator](https://github.com/ChanMeng666/interactive-story-generator) [tier=archive · recency=deprecated · updated=2026-08-05] -- live: https://huggingface.co/spaces/ChanMeng666/interactive-story-generator
 - [Emoji Story Generator](https://huggingface.co/spaces/ChanMeng666/emoji-story-generator) [tier=archive · recency=historical · updated=2026-10-03]
@@ -3624,9 +3647,11 @@ do "an okay job", but "what we really needed was a tool for programmers".
 His verdict on the tool itself keeps its hedge — it "won't do the entire
 job, but it looks like it will be a big help." He is putting it in front
 of the organisation's own developer to work in, and Chan is providing
-technical guidance. Validation and in-progress uptake — not a recorded
-adoption decision, not a paid contract, not a formal partnership, not an
-endorsement, and not a production deployment; the meeting is evidenced by
+technical guidance. On 2026-09-17 Chan recorded that, after the
+walkthrough, he told her My Life My Voice will adopt a11y-loop and
+promote it within its development team: being adopted, by her first-hand
+account. Not a paid contract, not a formal partnership, not a written
+endorsement, and not yet a production deployment; the meeting is evidenced by
 a transcript Chan holds privately and has not published (see the
 SELF-ATTESTED note above the `a11y-loop` entry). Full record:
 `projects[a11y-loop].narrative.outcomes` and the `my-life-my-voice`
@@ -3669,7 +3694,7 @@ night is attached yet — a podium shot would close this.
 workshops' content — for an NZ Ministry of Social Development-funded
 employment-readiness programme for women returning to the workforce.
 Delivered monthly March→June 2026 at academyEX, 25-person session cap, by
-invitation only, paired with 10 self-paced AI tutorials and a job-search
+invitation only, paired with 12 self-paced AI tutorials and a job-search
 library. Dr Mahsa McCauley facilitated; RCSA recruiters from Potentia,
 Absolute IT, Randstad Digital, Elevate Consulting, Younity and BrightSpark
 ran the networking half of each session.
@@ -4174,8 +4199,8 @@ delivery work once AI is in the toolchain. 87 registered, 51 attended.
   - **Multi-agent Systems** — since 2025, depth `expert`, frameworks: LangGraph, CopilotKit, MCP. 7-node LangGraph orchestration in fanfic-lab; hospital-roster-agent.
   - **Microservices Architecture** — since 2024, depth `expert`, frameworks: Kubernetes, GKE. GAVIGO Activation/Execution Layer; cross-cloud GKE migration.
   - **Multi-Tenant Architecture** — since 2025, depth `expert`. Sanicle.AI corporate-tenant FemTech SaaS; library-os.
-  - **Retrieval-Augmented Generation (RAG)** — since 2024, depth `expert`, frameworks: pgVector, Cloudflare Vectorize. ~4,800 bilingual chunks in the teaching platform; Tam-AI-Ti.
-  - **Voice AI** — since 2025, depth `intermediate`, frameworks: OpenAI Realtime (gpt-4o-realtime). Voice-first coaching in Tam-AI-Ti (te reo Māori + English).
+  - **Retrieval-Augmented Generation (RAG)** — since 2024, depth `expert`, frameworks: pgVector, Cloudflare Vectorize. About 1,200 chunks in the teaching platform (measured 2026-10-15); Tam-AI-Ti.
+  - **Voice AI** — since 2025, depth `intermediate`, frameworks: OpenAI Realtime (gpt-realtime). Voice-first coaching in Tam-AI-Ti (te reo Māori + English).
 
 
 ### Tools
@@ -4631,9 +4656,9 @@ She Sharp platform UI/UX & frontend collaborator; 151 commits and 43 pull reques
 - **Relationship to Chan:** client
 - **Current org id:** chow-luck-club
 - **Worked together on:**
-  - project:eatropolis-website — Chow Luck Club client-side contact
+  - project:eatropolis-website — Chow Luck Club project manager; commissioned the build and maintains the site after handover
 
-Chow Luck Club client-side contact for the eatropolis-website build.
+Chow Luck Club project manager for the eatropolis-website build; maintains the site himself since the June 2026 handover training.
 ### Bee Keng Koh
 [tier=secondary · recency=recent · updated=2026-05-22]
 - **Current title:** Director — Events and Marketing, Chow Luck Club Ltd
@@ -4673,6 +4698,22 @@ Sanicle Director of Program Operations 2020–2024; Chan's colleague during her 
   - work:archcanvas — Early ArchCanvas tester; showed strong interest in the product and its potential applications
 
 Co-Founder of Relab, a PropTech SaaS company. One of ArchCanvas's early testers; showed strong interest in the product and where it could be applied (Chan, 2026-09-29).
+### Barry Clark
+[tier=secondary · recency=historical · updated=2026-10-15]
+- **LinkedIn:** https://www.linkedin.com/in/barry-clark-b92644/
+- **Relationship to Chan:** client, sponsor
+- **Worked together on:**
+  - work:corde — Digital Development Manager, CORDE (2024); business sponsor of the COMP693 placement, received the weekly demos
+
+CORDE's Digital Development Manager at the time of the 2024 COMP693 placement; business sponsor the team reported to.
+### Kullum Ladley
+[tier=secondary · recency=historical · updated=2026-10-15]
+- **LinkedIn:** https://www.linkedin.com/in/kullum-ladley-4496b316a/
+- **Relationship to Chan:** client
+- **Worked together on:**
+  - work:corde — Business System Analyst, CORDE (2024); wrote the Workbench API documents and the team's priority lists
+
+CORDE's Business System Analyst at the time of the 2024 COMP693 placement; author of the Workbench API documents the app was built against.
 
 ## Verified Statistics (with citations)
 
@@ -4684,8 +4725,8 @@ Co-Founder of Relab, a PropTech SaaS company. One of ArchCanvas's early testers;
 - **Conducted professional SEO audit on shesharp.org.nz across 8 analysis sections (brand visibility, topical keyword rankings, NZ competitor matrix, mobile-vs-desktop gap, AI Overview presence) with 10-point prioritized recommendations report** (source: https://www.shesharp.org.nz/, verified 2026-05-16)
 - **Tam-AI-Ti 19-user research cohort produced 181 bilingual journal entries, 35 voice coaching sessions, 146 AI coach messages, and 74 daily Hauora check-ins over four months (Oct 2025 – Mar 2026)** (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
 - **Tam-AI-Ti built solo as a development commission from Riria (Missy) Te Kanawa, Māori Executive Lead — Strategy & Governance at ASB Bank, former KPMG NZ National Māori Sector lead and lead author of KPMG's Maui Rau report series** (source: https://www.linkedin.com/in/riria-missy-te-kanawa-6137528b/, verified 2026-05-16)
-- **Tam-AI-Ti: 88+ CopilotKit AI actions, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, GPT-4o Realtime voice** (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
-- **GAVIGO IRE (Oct 2025 — Sep 2026): 488 non-merge commits, 471 of them (96.5%) authored solo by Chan, production-deployed at ire.gavigo.com** (source: https://ire.gavigo.com/, verified 2026-09-01)
+- **Tam-AI-Ti: 45 CopilotKit AI actions in the shipped code, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, OpenAI Realtime voice** (source: https://tamaiti.whiri-ai.com/, verified 2026-05-16)
+- **GAVIGO IRE (Oct 2025 — Oct 2026): 488 non-merge commits, 471 of them (96.5%) authored solo by Chan, production-deployed at ire.gavigo.com** (source: https://ire.gavigo.com/, verified 2026-09-01)
 - **Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud** (source: https://ire.gavigo.com/, verified 2026-05-16)
 - **Early-ecosystem MCP developer: opened modelcontextprotocol/servers issue #76 on 2024-11-27 (two days after MCP's public launch) documenting the Windows + NVM PATH workaround that became reference troubleshooting guidance for early Claude Desktop adopters** (source: https://github.com/modelcontextprotocol/servers/issues/76, verified 2026-05-16)
 - **Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with PulseMCP's own estimate of 38k visitors and a #1,060 popularity rank, Glama A grades for license and quality + 122 stars, no. 10 in DataCamp's 'Top 10 MCP Servers & Clients for AI Workflow Automation in 2026', listed across 15+ MCP catalogs including punkpeye/awesome-mcp-servers, Smithery, mcp.so, Glama, PulseMCP, MCP Market, Augment Code, Archestra) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); each server is the subject of its own Skywork AI article** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-10-13)
@@ -4694,7 +4735,7 @@ Co-Founder of Relab, a PropTech SaaS company. One of ArchCanvas's early testers;
 - **As CTO leading a team of five, wrote the code for five Sanicle production codebases — sanicle-cloud (Next.js company site replacing legacy Bubble no-code), sanicle-ai (multi-tenant FemTech platform with dual-AI architecture: IBM watsonx llama-3-405b + Google Gemini fallback), sanicle-ai-mobile (PWA prototype), reveal.js presentation deck, and a documented internal work archive — totalling 377 commits across four GitHub repositories, every one authored by Chan (GitHub contributor statistics, 2026-09-16)** (source: https://www.linkedin.com/company/sanicleofficial/, verified 2026-05-16)
 - **Two merged pull requests to the CopilotKit main repository (37.5k+ GitHub stars) — PR #2068 adding the 8-agent FemTracker Agent demo to CopilotKit's official demos_2025 collection (merged 2025-09-11, approved by maintainer Tyler Slaton), and PR #2529 adding Claude Code setup instructions to the CopilotKit MCP server documentation (merged 2025-10-09, approved by maintainer Brandon McConnell)** (source: https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666, verified 2026-07-17)
 - **GAVIGO IRE proof-stage measurements, under GAVIGO's own labels: 78% Application-Level Reduction; 4.45s → 1.00s Controlled Startup Path Comparison; ~140ms Preserved AI State Restore. Real, controlled application-level measurements, not a production SLA or a complete end-to-end activation time** (source: https://gavigo.com/, verified 2026-10-07)
-- **Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil) from Oct 2025 to Sep 2026; role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026)** (source: https://gavigo.com/, verified 2026-05-16)
+- **Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil) from Oct 2025 to Oct 2026; role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026)** (source: https://gavigo.com/, verified 2026-05-16)
 - **GAVIGO public mission per company marketing: 'Skip the Store. Start the Play' — eliminate the friction between user intent and digital experience by building the Post-App World through proprietary Instant Reality Switching technology** (source: https://gavigo.com/, verified 2026-05-16)
 - **GAVIGO takes part in the Google for Startups Cloud Program (announced Feb 2026 by founder & CEO Saba Gecgil); the DigitalOcean → Google Cloud production migration I led on 2026-03-11 was done under it. Programme participation, not an endorsement or product validation** (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)
 - **GAVIGO takes part in the NVIDIA Inception Program (announced Feb 2026). Programme participation, not an endorsement or product validation** (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)
@@ -4704,7 +4745,7 @@ Co-Founder of Relab, a PropTech SaaS company. One of ArchCanvas's early testers;
 - **Built the bilingual Docusaurus teaching platform hosting five cohort versions side by side (2024-winter, 2025-summer, 2026-her-waka, 2026-technest, 2026-peyvand-academy) with an in-course AI assistant using version-aware RAG over all five cohorts plus the blog, a Notion-powered classroom message board on a Cloudflare Worker backend, and a Notion-backed Capstone 2026 public-voting showcase — 211 of 220 commits authored by me, balance from Claude code-review and Dependabot automation** (source: https://github.com/ChanMeng666/ai-programming-teaching-project, verified 2026-07-16)
 - **As CTO at FreePeriod — a Guangzhou-based public-health startup incubated at the Hong Kong University of Science and Technology (Guangzhou) Lab of Future Technology, tackling period poverty through sanitary-pad dispensers, reproductive-health education, and policy advocacy under founder Julia Zhu (朱楠) — solo-built and shipped the official website (Next.js 15 + TypeScript + Google Maps location directory + bilingual EN/中文; 53 commits, 100% solo); during my tenure the company was recognised with Best Award at Japan's 12th International Conference on Social Sciences and Humanities, Third Prize at the HKUST Sustainable Smart Living Competition, Best Social Media Award at China's inaugural FemTech Weekend Challenge, First Prize at the Shenzhen Nanshan District Philanthropic Creative Star Contest, and selections into Tencent's Technology Venture Capital Program, Tsinghua's SDG Open Innovation Marathon, and the HKUST Entrepreneurship Bridge Grant** (source: https://www.linkedin.com/company/free-period/, verified 2026-05-16)
 - **ByteDance Youth Training Camp backend developer in Team 115 — completed ByteDance MarsCode's 81-problem algorithm curriculum on Juejin with full per-problem write-ups (juejin-algorithm-practice, 66 commits 100% solo); placed #2-most-prolific committer (49 of 178 team commits, ~28%) on the team's Spring Boot 3 + MySQL + Redis Douyin Mall capstone among six contributors; voluntarily built three additional open-source artefacts beyond camp scope — a solo Vue 3 frontend (douyin-mall-frontend, 15 commits 100% solo), the Go + Gin clean-architecture TikTok Shop template douyin-mall-go-template (27 commits 100% solo, 53 GitHub stars), and the Spring Boot Java counterpart (douyin-mall-java-template, 13 commits 100% solo)** (source: https://github.com/ChanMeng666/douyin-mall, verified 2026-05-16)
-- **Full-Stack Developer & lead documenter on a Lincoln University COMP693 industry-placement team building a React Native + Native Base + SQLite offline-first field-data-collection mobile app (text + photo + GPS capture, conflict-resolved sync) for CORDE — a 30+-year-old, 164-staff Canterbury-based NZ infrastructure and civil-construction company (corde.nz; head office Rolleston; tagline 'Trusted Connections'; CCNZ Canterbury Contractor of the Year + Construction Excellence National Award); reported directly to Barry Clark on CORDE's side with Kullum Ladley as Workbench API specification author; #1-most-prolific contributor on the code repository (236 of 413 commits in the original repository, 57%) ahead of teammate Xue Zheng (32.7%), and effectively sole author of the team documentation repository (140 of 143 commits, 97.9%) preserving five months of weekly meeting records, 15 Kullum-authored API specifications, database schema iterations, UI library evaluations, and itemised contribution sub-folders** (source: https://corde.nz/, verified 2026-05-16)
+- **Full-Stack Developer & lead documenter on a Lincoln University COMP693 industry-placement team building a React Native + Native Base + SQLite offline-first field-data-collection mobile app (text + photo + GPS capture, per-log sync status with timed retries) for CORDE — a 30+-year-old, 164-staff Canterbury-based NZ infrastructure and civil-construction company (corde.nz; head office Rolleston; tagline 'Trusted Connections'; CCNZ Canterbury Contractor of the Year + Construction Excellence National Award); reported to Barry Clark (Digital Development Manager) on CORDE's side with Kullum Ladley (Business System Analyst) as Workbench API document author; #1-most-prolific contributor on the code repository (236 of 413 commits in the original repository, 57%) ahead of teammate Xue Zheng (32.7%), and effectively sole author of the team documentation repository (140 of 143 commits, 97.9%) preserving five months of weekly meeting records, Kullum's 14 API documents (eight topics, revisions included) and priority list, database schema iterations, UI library evaluations, and itemised contribution sub-folders** (source: https://corde.nz/, verified 2026-05-16)
 - **TechNest Community direct reports-to relationships verifiable on LinkedIn: Abiodun (Magret) Oyedele (https://www.linkedin.com/in/oyedele-abiodun/) and Afolasade Bello (https://www.linkedin.com/in/afolasade-bello-6a3795202/); TechNest Community is a Newfoundland-based Canadian tech-mentorship nonprofit (founded 2024, LinkedIn category 11-50 employees with 14 staff currently public) running the 2026 AI Track as part of Cohort 3** (source: https://www.linkedin.com/company/technestcommunity/, verified 2026-05-16)
 - **GAVIGO Inc. founder & CEO Saba Gecgil personally identifiable at https://www.linkedin.com/in/saba-gecgil/ — the direct reports-to relationship for my Founding Principal Engineer, Activation, Execution & AI Systems role; GAVIGO is publicly described on LinkedIn as 'Activation & Execution Layer for Interactive Software', Software Development, Wilmington Delaware-registered, 2-10 employees, 95 followers** (source: https://www.linkedin.com/company/gavigo/, verified 2026-05-16)
 - **She Sharp is a New Zealand registered charity, verifiable at the NZ Charities Register: registration number CC57025, NZBN 9429047458970, current status Registered, date of registration 4 June 2019, Nationwide areas of operation, postal address 12 Basra Drive Henderson Auckland 0612, email info@shesharp.org.nz — gold-standard government verification of the charitable-trust framing** (source: https://register.charities.govt.nz/Charity/CC57025, verified 2026-05-16)
@@ -4713,7 +4754,7 @@ Co-Founder of Relab, a PropTech SaaS company. One of ArchCanvas's early testers;
 - **Sanicle company entity verifiable on LinkedIn: industry Wellness and Fitness Services, headquartered Tulsa Oklahoma, founded 2021, 2-10 employees, pre-seed $160,000 (December 2021 per Crunchbase) — corroborates the CTO context for my Mar 2025 – Feb 2026 tenure leading the engineering rebuild that took the platform from a Bubble no-code prototype to the multi-tenant Next.js + IBM watsonx FemTech platform** (source: https://www.linkedin.com/company/sanicleofficial/, verified 2026-05-16)
 - **ByteDance Youth Training Camp cohort lead Guangming Luo personally identifiable at https://www.linkedin.com/in/guangmingluo1994/ — corroborates the Team 115 engagement context; ByteDance is the world's largest TikTok / Douyin / Toutiao / CapCut / Lark / Doubao operator (LinkedIn company page https://www.linkedin.com/company/bytedance/)** (source: https://www.linkedin.com/company/bytedance/, verified 2026-05-16)
 - **CORDE direct reports-to Barry Clark personally identifiable at https://www.linkedin.com/in/barry-clark-b92644/ — CORDE-side business sponsor of the Lincoln University COMP693 industry-placement engagement (Jun-Nov 2024) and the weekly demo-cadence recipient over the five-month delivery** (source: https://www.linkedin.com/company/corde-ltd/, verified 2026-05-16)
-- **CORDE Workbench API specification author Kullum Ladley personally identifiable at https://www.linkedin.com/in/kullum-ladley-4496b316a/ — CORDE's technical liaison on the engagement; the same Kullum named in every API document filename prefix `YYYYMMDD_Kullum_...` in the 15-document API specification set captured under version control in the team-corde documentation repository** (source: https://www.linkedin.com/in/kullum-ladley-4496b316a/, verified 2026-05-16)
+- **CORDE Workbench API specification author Kullum Ladley personally identifiable at https://www.linkedin.com/in/kullum-ladley-4496b316a/ — CORDE's Business System Analyst at the time and technical contact on the engagement; the same Kullum named in every filename prefix `YYYYMMDD_Kullum_...` in the 15-file API folder (14 API documents and one priority list) captured under version control in the team-corde documentation repository** (source: https://www.linkedin.com/in/kullum-ladley-4496b316a/, verified 2026-05-16)
 - **CORDE student teammate Luke Shi (Zhenzhou Shi) personally identifiable at https://www.linkedin.com/in/zhenzhou-shi/ — the gentoo111 GitHub handle, under which he took the app over from my original repository and maintains the fork that CORDE's production runs; the second-most-prolific contributor to that fork, which has grown to 541 commits (227 of them mine); in the original 413-commit repository his share is 10.2% against my 57%** (source: https://www.linkedin.com/in/zhenzhou-shi/, verified 2026-05-16)
 - **27 LinkedIn Recommendations Received (historical total; one is no longer displayed) on Chan's LinkedIn profile (linkedin.com/in/chanmeng666/details/recommendations/) spanning Nov 2024 – Aug 2026, from a representative mix of founders, senior managers, peers, academic supervisor, big-tech mentor, co-founders of a teaching community, and mentees: GAVIGO founder/CEO Saba Gecgil (managed Chan directly during the GAVIGO engagement); Sanicle managers Paige Afanu (Omopeju) and Chaste Christopher Inegbedion; Sanicle peer Gabrielle J. Hurst; AWS SheBuilds mentor Cecilia Yin (AWS Solutions Architect); Lincoln University Associate Professor Patricia Anthony (Chan's teacher during the Master of Applied Computing with Distinction); She Sharp Ambassadors and website-team collaborators Prasanth Pavithran (MBA; She Sharp Ambassador / AI Evangelist), Lesley Gao (Product Designer / Web Developer), Nirmala Chinnappan (Project Coordinator at AUT; Master of IT Project Management), and Yesha Kaniyawala (AI Engineer at Possibl.ai); TechNest Community leadership — co-founder and fellow mentor Suliat Alaga (Senior Frontend Engineer) and Abiodun (Magret) Oyedele (Full Stack Developer), one of the two TechNest leads Chan reported to as AI Track instructor — plus TechNest AI-cohort learners Kwame Essuman (Data & Full-Stack AI Engineer), Swayam Dhir (Software Developer), and Mahdieh Najmi (System Analyst / Full-Stack Developer); Forward with Her 她行 mentees Siyu Xing (PhD candidate at University of Chinese Academy of Sciences), Amy Li, and Di Peng (ShanghaiTech); cross-org collaborators Jixuan Jessie Wan (Deloitte) and Qiao Jun (Tsinghua University); AI cloud engineer Ikenna Anasieze; infrastructure engineer Shivani Dhandabani; and mentees Mi Su, Shushu Qin, Yijia (Robin) Lee, and Shiyu Fang** (source: https://www.linkedin.com/in/chanmeng666/details/recommendations/, verified 2026-08-11)
 - **Paige Afanu (Omopeju Afanu, LinkedIn handle peju-afanu-7b9367110) was the Chief Executive Officer of Sanicle during Chan's CTO tenure (Mar 2025 – Feb 2026); attribution verified from this repository's own historical README snapshot at git commit d01e0f7129ada279bd2ffa17f8cf45b07cfc85f8 (Apr 14 2026) which renders 'Omopeju Afanu | Sanicle | Chief Executive Officer' as the explicit relationship label** (source: https://github.com/ChanMeng666/ChanMeng666/blob/d01e0f7129ada279bd2ffa17f8cf45b07cfc85f8/README.md, verified 2026-05-17)

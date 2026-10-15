@@ -41,7 +41,7 @@
 // NO COMMIT COUNTS OR SOLO PERCENTAGES anywhere on this CV — a ratio of commits
 // does not answer "what problem can I solve?". Where ownership is load-bearing
 // it is said in words instead ("built solo", "built and maintained solo").
-// Outcome metrics stay: 129 stars (measured 2026-09-24), the ~4,800 RAG chunks.
+// Outcome metrics stay: 129 stars (measured 2026-09-24), the ~1,200 RAG chunks (measured 2026-10-15).
 #let projects() = section("Selected Projects & Products", {
   let cards = (
     (
@@ -68,7 +68,7 @@
       url: "https://programming.chanmeng.org/",
       context-line: [Bilingual platform holding *three years of cohorts as five versions side by side, three concurrent in 2026* — taught from by *TechNest's 2026 AI Track* and *academyEX's Her Waka*, and built and maintained solo.],
       bullets: (
-        [*In-course RAG assistant on Cloudflare Workers* (Llama 3.1 8B + Vectorize + KV) over *\~4,800 chunks, version-aware*, so each student is answered from their own cohort's material; a deprecated model was swapped out the same day.],
+        [*In-course RAG assistant on Cloudflare Workers* (Llama 3.1 8B + Vectorize + KV) over *\~1,200 chunks, version-aware*, so each student is answered from their own cohort's material; restored and rate-limited after a model retirement.],
         [*Mentorship at scale:* Demo Day ends in a *public Capstone Showcase* of student products (CreditHero, iCare, JobOrg-AI), with guest voting.],
       ),
     ),

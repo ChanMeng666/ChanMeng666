@@ -17,10 +17,10 @@ What it refuses to claim matters as much as what it checks. Only 17 of the 55 WC
 • On 4 September 2026 their CTO, Timothy Young, validated it in a live walkthrough. His verdict, hedge included: it "won't do the entire job, but it looks like it will be a big help." Afterwards he told me My Life My Voice will adopt it and promote it within its development team.
 • The line I keep is from the person who wrote the brief. Vibe-coding tools, he said, can be asked to follow the accessibility guidelines and will do "an okay job" — but "what we really needed was a tool for programmers." That is this project's whole thesis, reached independently by the author of the problem.
 
-Stack: TypeScript, Playwright, axe-core 4.12, Claude Code Agent Skills, npm.
+Stack: JavaScript (Node.js), Playwright, axe-core 4.12, Claude Code Agent Skills, npm.
 ```
 
-**Skills:** Web Accessibility, WCAG 2.2, Playwright, axe-core, TypeScript, Claude Code Agent Skills, CLI Development
+**Skills:** Web Accessibility, WCAG 2.2, Playwright, axe-core, JavaScript, Claude Code Agent Skills, CLI Development
 
 ## 2. Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)
 
@@ -33,10 +33,11 @@ The official event website for Eatropolis — Auckland's award-winning culinary 
 Solo-built freelance commission under a signed 4 May 2026 agreement with Chow Luck Club Ltd (Director Bee Keng Koh; PM Armand Bentigan). Event partner: Tātaki Auckland Unlimited (Auckland Council).
 
 • Engineered for 1,000 concurrent visitors under k6 load testing per contract.
-• Hardened to NZ Government Web Accessibility Standard 1.2 (WCAG 2.2 AA) with Tātaki Auckland Unlimited review gates before each launch phase.
+• Built to NZ Government Web Accessibility Standard 1.2 (WCAG 2.2 AA), as the contract required for Tātaki Auckland Unlimited's review before each launch phase.
 • Streaming OpenAI chat + Whisper + TTS gated behind Cloudflare Turnstile and per-IP KV rate-limiting.
 • GitHub-as-CMS so the non-technical client edits MDX directly in-browser via one-click web-editor links.
-• 115 solo commits in 9 days.
+• All 115 build-phase commits mine, in a nine-day contracted build.
+• Handed over with a recorded training session: the client's project manager has maintained the site himself since launch.
 
 Stack: Next.js 16, OpenNext-on-Cloudflare-Workers, Drizzle + Neon Postgres, Resend, OpenAI streaming.
 ```
@@ -65,14 +66,14 @@ Stack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.
 **Dates:** Jun 2026 – Present
 
 ```
-ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it generates real SVG floor plans through the ArchLang compiler plus gpt-5.5 orchestration + GPT Image 2 renderings grounded on the compiled plan, then lets you iterate on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.
+ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it generates real SVG floor plans through the ArchLang compiler plus GPT-5.6 orchestration + GPT Image 2 renderings grounded on the compiled plan, then lets you iterate on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.
 
 • Sister product to my ArchLang language — consumes @chanmeng666/archlang as a package, so it produces editable parametric plans, not just images.
 • AI review mode surfaces anchored findings directly on the canvas with one-click "have AI fix".
 • Export any project as a real git repo (isomorphic-git + memfs).
 • Refinement mutates the plan in place — edits, parametric tweaks and re-renders never regenerate it from scratch.
 
-Stack: Next.js, React 19, Vercel AI SDK + OpenAI (gpt-5.5 + GPT Image 2; GPT-4o for vision), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.
+Stack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-5.6 + GPT Image 2), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.
 ```
 
 **Skills:** Vercel AI SDK, AI Agent Architecture, Next.js, React, OpenAI API, Neon Postgres, Drizzle ORM, Stripe, Cloudinary
@@ -84,24 +85,24 @@ Stack: Next.js, React 19, Vercel AI SDK + OpenAI (gpt-5.5 + GPT Image 2; GPT-4o 
 ```
 echook adds audio cues to AI coding assistants so you stop staring at the terminal waiting for them to finish. Thirty-nine hook events — task started, permission needed, build failed, agent stopped, rate-limit hit, context nearing 100% — each play a sound and optionally fire Slack / Discord / Teams / ntfy webhooks. Same product on Claude Code, Cursor IDE, and Codex CLI. Install via natural language ("install echook with the Focus Flow theme").
 
-• 60 releases, 747 tests on triple-platform CI (Ubuntu / Windows / macOS × Python 3.9 / 3.12 / 3.13). 39 hook events plus 47 separately switchable matcher variants, 2 themes.
+• 61 releases, 783 tests on triple-platform CI (Ubuntu / Windows / macOS × Python 3.9 / 3.12 / 3.13). 39 hook events plus 47 separately switchable matcher variants, 2 themes.
 • Context-window status line with live quota bars — see remaining budget without alt-tabbing.
 • Explicitly preserved as the author's IP in the Engram Architect Cohort Engagement Letter (9 May 2026); Engram is in Anthropic's Partner Network.
 • Sister repo echook-promo-video: 88.7-second product film built in React + Remotion + AI-generated audio — zero Premiere, zero voice actors.
 
-Stack: Python 3.6+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Actions CI.
+Stack: Python 3.9+, Claude Code Plugin SDK, ElevenLabs TTS, webhooks, GitHub Actions CI.
 ```
 
 **Skills:** Claude Code Plugins, Cursor IDE Hooks, Codex CLI Integration, Python (Programming Language), ElevenLabs TTS, Webhooks, GitHub Actions
 
-## 6. She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
+## 6. She Sharp Member Platform — AI Mentor Matching with Human Approval for a NZ Women-in-STEM Charity
 
 **Dates:** Jul 2025 – Sep 2026
 **Associated with:** She Sharp
 **Other contributors:** yes
 
 ```
-The member-lifecycle platform that now runs She Sharp — a New Zealand women-in-tech charity (charitable trust CC57025; 96+ events since 2014). Members get matched to mentors by an AI scoring engine with admin approval, browse events, pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand.
+The member-lifecycle platform that now runs She Sharp — a New Zealand women-in-tech charity (charitable trust CC57025; 96+ events since 2014). Its centre is a mentor-matching engine: AI scores each pair and a human approves every match before it is made. Members browse events and pay through Stripe; the volunteer team gets automated Slack digests instead of doing it by hand. The charity has paused mentorship applications since June 2026; the engine stays in place for re-opening.
 
 • AI mentor–mentee matcher: GPT-4o-mini scoring pairs across five weighted dimensions (Skill 35%, Goal 30%, MBTI 15%, Industry 10%, Logistics 10%) with explainable reasons and a rule-based fallback; admin as final gate.
 • 1,381 commits and 251 merged PRs across 13.3 months, 94.5% of all lines added mine. Lesley Gao contributed 151 commits and 43 PRs alongside me.
@@ -120,26 +121,26 @@ Stack: Next.js 15, Drizzle + Neon Postgres, NextAuth 5, Stripe, Slack, Vercel.
 ```
 The official site and submissions hub for FemTech Weekend — China's first women's-health-technology organisation — which delivered Shanghai Summit 2026 (June 22–25). 20 speakers were headlined by Ida Tin, the Clue co-founder who coined the term "FemTech" in 2016.
 
-Gen-2 was a deliberate rewrite from Next.js to Docusaurus when the site's centre of gravity shifted from "marketing site" to "research publication and multi-event hub". Visitors today read original research reports (FemTech Market Map for Greater China; FemmeHealth Ventures Alliance), browse the speaker programme, and submit pitches / programme entries / speaker applications / ecosystem partnerships through four review pipelines.
+Gen-2 was a deliberate rewrite from Next.js to Docusaurus because the founder valued how articles are presented and how easily they can be searched. Visitors today read original research reports (FemTech Market Map for Greater China; FemmeHealth Ventures Alliance), browse the speaker programme, and submit pitches and programme entries for review (speaker applications closed once the line-up was full); ecosystem partnership requests go to the team's Notion.
 
 • 538 of 570 commits mine (94.4%) from May 2025 to July 2026; the rest are the founder's content edits.
 • Bilingual EN / CN from day one — the non-technical founder Zhu Yihan edits the live site directly.
-• 15 Cloudflare Pages Functions (~3,839 LOC) replace a separate backend; submissions + email + admin review run on edge serverless.
+• 16 Cloudflare Pages Functions (~5,373 LOC) replace a separate backend; submissions + email + admin review run on edge serverless.
 
-Stack: Docusaurus 3.9, React 18, Drizzle + Neon Postgres, Cloudflare Pages, Resend, Notion-as-CMS.
+Stack: Docusaurus 3.9, React 18, Drizzle + Neon Postgres, Cloudflare Pages, Resend, Notion API.
 ```
 
 **Skills:** Bilingual Web Development, Cloudflare Pages / Workers, Docusaurus, React, Drizzle ORM, Neon Postgres, Notion API
 
 ## 8. programming.chanmeng.org — 5-Cohort Bilingual AI Programming Teaching Platform with RAG Assistant
 
-**Dates:** Oct 2024 – Present
+**Dates:** Nov 2024 – Present
 **Associated with:** TechNest Community
 
 ```
 The bilingual teaching site behind every AI programming cohort I've run since late 2024 — Forward with Her (2024-winter, 2025-summer), Her Waka 2026 (NZ Ministry of Social Development funded, at academyEX Auckland), Peyvand Academy 2026, and TechNest 2026 (Canada). All five cohorts coexist on one platform; each student gets their own version-aware course.
 
-• In-course AI assistant: ~4,800 bilingual document chunks indexed with RAG (retrieval-augmented generation — the AI looks up the cohort's actual materials before answering, so students don't get hallucinations from the wrong version).
+• In-course AI assistant: about 1,200 chunks of course material indexed with RAG (retrieval-augmented generation — the AI looks up the cohort's actual materials before answering, so students don't get hallucinations from the wrong version).
 • 211 of 220 non-merge commits solo (~96%); the remainder are bot commits (Claude code-review automation + Dependabot).
 • Notion-as-CMS classroom: course-wide message board, capstone-showcase page with live audience voting, Typst PDF handouts auto-built from MDX.
 • Bilingual EN / CN with Algolia contextual search.
@@ -161,9 +162,9 @@ A development commission from Riria (Missy) Te Kanawa, Māori Executive Lead —
 
 • 351 solo commits over six months. 48-table / 494-column schema across 10 modules where every Hauora dimension is a typed column, not UI decoration: culture is in the schema.
 • 19-user research cohort (Oct 2025 – Mar 2026): 181 bilingual journal entries, 35 voice sessions, 146 AI coach messages — sustained engagement on a pre-commercial product with zero marketing.
-• Voice via GPT-4o-realtime with server-side VAD.
+• Voice via OpenAI's Realtime API over WebRTC, with server-side VAD.
 
-Stack: Next.js 15.5, React 19.1, Drizzle + Neon Postgres + pgVector (1536-dim), OpenAI (gpt-4o-mini / gpt-4o / gpt-4o-realtime), CopilotKit.
+Stack: Next.js 15.5, React 19.1, Drizzle + Neon Postgres + pgVector (1536-dim), OpenAI (gpt-4o-mini / gpt-4o / gpt-realtime), CopilotKit.
 ```
 
 **Skills:** Voice AI (OpenAI Realtime), pgVector, Next.js, React, Drizzle ORM, Neon Postgres, OpenAI API, CopilotKit
@@ -230,13 +231,13 @@ Stack: TypeScript + Node.js + @modelcontextprotocol/sdk + SerpAPI; published as 
 **Other contributors:** yes
 
 ```
-A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Canterbury civil-construction contractor whose crews work in rural areas where mobile coverage drops out. The tablet becomes the system of record at the moment of work: text + photos + GPS + timestamps captured locally, integrity-checked, and reconciled to CORDE's central Workbench platform on reconnection — including the awkward cases: duplicate IDs, partial sync, mid-batch drops.
+A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Canterbury civil-construction contractor whose crews work in rural areas where mobile coverage drops out. The tablet becomes the system of record at the moment of work: text + photos + GPS + timestamps captured on the device and uploaded to CORDE's central Workbench platform on reconnection. Each log keeps its own sync status and timed retries, and a local id apart from the server's, so offline logs never collide.
 
 • #1-most-prolific contributor on the codebase: 236 of 413 commits in the original repository (57%), ahead of teammates Xue Zheng (32.7%) and Luke Shi (10.2%).
-• Sole author of the team documentation repository (140 of 143 commits, 97.9%), built against 15 Workbench API specifications authored by Kullum Ladley.
-• Still in active use today by CORDE's field crews; kept current through React Native upgrades and Android 16 KB page-size compliance.
+• Sole author of the team documentation repository (140 of 143 commits, 97.9%), built against the Workbench API documents written by CORDE's Business System Analyst, Kullum Ladley.
+• Handed over in October 2024, with a project-structure guide and a release-packaging guide, to a teammate who has carried it on for CORDE since.
 
-Stack: React Native 0.83, TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.
+Stack: React Native 0.74, TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.
 ```
 
 **Skills:** React Native, Offline-First Architecture, TypeScript, Native Base, SQLite, Mobile Application Development

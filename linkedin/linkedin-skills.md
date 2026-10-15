@@ -135,7 +135,7 @@
 ### NextAuth
 - Senior AI/ML Infrastructure Engineer at Sanicle
 - Sanicle.AI — Multi-Tenant FemTech SaaS with IBM watsonx
-- She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
+- She Sharp Member Platform — AI Mentor Matching with Human Approval for a NZ Women-in-STEM Charity
 
 ### Multi-Tenant Architecture
 - 2 experiences at Aotearoa Infinite Academy and 1 other company
@@ -181,11 +181,11 @@
 
 ### Slack Integrations
 - Senior Full Stack Engineer & Website Team Lead at She Sharp
-- She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
+- She Sharp Member Platform — AI Mentor Matching with Human Approval for a NZ Women-in-STEM Charity
 
 ### AI Matching Systems
 - Senior Full Stack Engineer & Website Team Lead at She Sharp
-- She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community
+- She Sharp Member Platform — AI Mentor Matching with Human Approval for a NZ Women-in-STEM Charity
 
 ### Prototyping
 - Core Engineer (M1 Prototype) at GAVIGO

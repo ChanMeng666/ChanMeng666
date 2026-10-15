@@ -261,7 +261,7 @@ for (const lc of ln.licensesAndCertifications) {
 const projNameToId = {
   "Eatropolis — Auckland Culinary Festival Platform (Chow Luck Club × Tātaki Auckland Unlimited)": "eatropolis-website",
   "SunoStats — Trilingual Suno Music-Lineage Explorer (EN / CN / JP)": "sunostats",
-  "She Sharp Member Platform — AI Mentor-Matching SaaS for NZ's Largest Women-in-Tech Community": "she-sharp",
+  "She Sharp Member Platform — AI Mentor Matching with Human Approval for a NZ Women-in-STEM Charity": "she-sharp",
 };
 for (const p of ln.projects) {
   const pid = projNameToId[p.name];

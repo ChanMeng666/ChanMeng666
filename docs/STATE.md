@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-10-14.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-10-15.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -19,7 +19,7 @@ gitignored `docs/STATE.private.md`. Read it when present; never copy from it.
 | Client work | **GenLAB Career Academy** for NZiFOCUS, in development | Lead developer, not the sole decision-maker: the pace follows the client |
 | Role | **FemTech Weekend** CTO; the **LYZEN** company site (repo `femtech-weekend-redthread`) is in founder review | Pace set by the founder |
 | Maintenance only | echook, a11y-loop, the Google News and Google Jobs MCP servers, the agent skills | Free open-source tools. Never propose paid tiers. Keep them healthy, add no features |
-| Ended | GAVIGO (left 2026-09, access withdrawn), She Sharp (handed over 2026-09), CORDE (handed over 2024) | Still her lead-developer work, still shown as case studies |
+| Ended | GAVIGO (left 2026-10, last working day 2026-10-05; access withdrawn), She Sharp (handed over 2026-09), CORDE (handed over 2024) | Still shown as case studies. CORDE is stated in its placement title, Full Stack Developer and Lead Documenter, in copy and in interviews (Chan, 2026-10-15) |
 
 ## Display rules
 
@@ -29,7 +29,7 @@ LinkedIn copy.
 
 | Subject | Rule |
 |---|---|
-| **GenLAB Career Academy** (`genlab-career-academy`) | In development (Chan, 2026-10-12). In the database, `llms-full.txt` and `dist/profile.json` only; on no visitor-facing surface; it may be named openly in the data files. Its how-it-works film (`genlab-how-it-works`, repo `genlab-promo-studio`) follows the same rule and its content is not published: no media, not on /films, no `productFilms` row, no tile on the film wall. Kept so by: no `90-meta.yaml` bucket, tier never `flagship` (flagship is auto-selected into `public/cv-llms.txt`), no `organizations[]` entry for NZiFOCUS, collaborator `nga-blanchard` has `publicListing: false`. When Chan clears it: add the org, choose a tier, then the `career-copy` skill |
+| **GenLAB Career Academy** (`genlab-career-academy`) | In development (Chan, 2026-10-12). In the database, `llms-full.txt` and `dist/profile.json` only; on no visitor-facing surface; it may be named openly in the data files. Its how-it-works film (`genlab-how-it-works`, repo `genlab-promo-studio`) follows the same rule and its content is not published: no media, not on /films, no `productFilms` row, no tile on the film wall. Kept so by: no `90-meta.yaml` bucket, tier never `flagship` (flagship is auto-selected into `public/cv-llms.txt`), no `organizations[]` entry for NZiFOCUS, collaborator `nga-blanchard` has `publicListing: false`. In interviews (Chan, 2026-10-15): she may discuss the project without naming the client; the live site is not shown until she clears it. When Chan clears it: add the org, choose a tier, then the `career-copy` skill |
 | **LYZEN company site** (`lyzen-website`, repo `femtech-weekend-redthread`) | The official site of the LYZEN brand, live at lyzenglobal.com. It is not a redesign or a new generation of the FemTech Weekend site, which stays on its own domain: never describe it that way (Chan, 2026-10-12). LYZEN is the company above FemTech Weekend, its community arm; the chart is `organizations[]` id `lyzen`. Not shown for now (Chan, 2026-10-12): recorded in the database, but in no README bucket, no CV, no LinkedIn copy and not on chanmeng.org, and her CV and LinkedIn titles do not name LYZEN. The LYZEN org has no logo on purpose (a logo file would put it in the README organisation band). Do not raise any of this again until she does |
 | **Seismophone** (`sunostats`) | Pending archive. The site stays online at her request, but it is off every visitor-facing surface and `cv-llms.txt` since 2026-10-07. The Suno probe and the README Suno cards are independent and keep running |
 | **Chromaflow** (`gradient-svg-generator`) | Off every visitor-facing surface since 2026-10-07; keeps its narrative in the llms files (`llmsOnlyOpenSourceIds`). No longer maintained (Chan, 2026-10-12); the repo stays public. No surface may say it powers this profile. Its banners may be taken out of her other repos' READMEs, and are taken out wherever a README is rewritten |

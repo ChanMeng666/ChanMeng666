@@ -746,7 +746,8 @@ publications:
   # and podcast entries in file order (five since 2026-10-13, when Chan added
   # DataCamp without dropping any of the four already there). The evidence for
   # this entry is on the project: projects[google-news-mcp].meta.x_brand.reach.
-  - name: "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026"
+  - id: datacamp-top-mcp-servers
+    name: "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026"
     tier: secondary
     recency: recent
     lastUpdated: "2026-10-13"
@@ -759,7 +760,8 @@ publications:
       Filesystem, Playwright, GitHub, Notion and Tavily.
     meta: { x_brand: { type: press } }
 
-  - name: "Meet the FemTech Founders Redefining Women's Health at Work"
+  - id: thisdaylive-femtech-founders
+    name: "Meet the FemTech Founders Redefining Women's Health at Work"
     tier: flagship
     recency: recent
     lastUpdated: "2026-08-26"
@@ -771,7 +773,8 @@ publications:
       mission, published during the period Chan served as CTO at Sanicle.
     meta: { x_brand: { type: press } }
 
-  - name: "Weekly Pulse: Remote MCP, Images, Screen Recording"
+  - id: pulsemcp-weekly-pulse
+    name: "Weekly Pulse: Remote MCP, Images, Screen Recording"
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-18"
@@ -779,13 +782,14 @@ publications:
     url: https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording
     image: /public/articles/weekly-pulse-remote-mcp.png
     summary: |
-      The MCP server Chan developed (server-google-news / server-google-jobs)
-      was featured in this PulseMCP newsletter article by Tadas Antanavicius
+      Chan's Google News MCP Server (server-google-news) was featured in
+      this PulseMCP newsletter article by Tadas Antanavicius
       (https://www.pulsemcp.com/authors/tadas-antanavicius) — third-party
       coverage of an early-ecosystem MCP contribution.
     meta: { x_brand: { type: press } }
 
-  - name: FemTech Weekend × UN Women CSW69
+  - id: femtech-weekend-un-women-csw69
+    name: FemTech Weekend × UN Women CSW69
     tier: flagship
     recency: recent
     lastUpdated: "2026-07-21"
@@ -803,7 +807,8 @@ publications:
       cycle data to actionable workplace policies through AI analysis.
     meta: { x_brand: { type: press } }
 
-  - name: "Solved Bug: Authentication Redirect Issue in Sanicle-AI Platform"
+  - id: sanicle-auth-redirect-bug
+    name: "Solved Bug: Authentication Redirect Issue in Sanicle-AI Platform"
     tier: archive
     recency: historical
     lastUpdated: "2026-05-18"
@@ -823,7 +828,8 @@ publications:
   # ============================================================================
   # PODCAST EPISODES — Chan as guest
   # ============================================================================
-  - name: 码农姐妹 — From Math Teacher to Full-Stack Developer
+  - id: manong-jiemei-interview
+    name: 码农姐妹 — From Math Teacher to Full-Stack Developer
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-18"
@@ -836,7 +842,8 @@ publications:
       to full-stack engineering.
     meta: { x_brand: { type: podcastEpisode } }
 
-  - name: Femtech At Work — From Math Teacher to FemTech CTO (Greater China Edition, Ep 21)
+  - id: femtech-at-work-ep21
+    name: Femtech At Work — From Math Teacher to FemTech CTO (Greater China Edition, Ep 21)
     tier: secondary
     recency: historical
     lastUpdated: "2026-08-25"
@@ -866,7 +873,8 @@ publications:
   # ============================================================================
   # PODCASTS CHAN HOSTS — original audio content
   # ============================================================================
-  - name: Decoding the Future
+  - id: decoding-the-future-podcast
+    name: Decoding the Future
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-18"
@@ -880,7 +888,8 @@ publications:
       1,098 subscribers (2026-09-24).
     meta: { x_brand: { type: podcastShow, role: host } }
 
-  - name: Future Turing 未来图灵
+  - id: future-turing-podcast
+    name: Future Turing 未来图灵
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-18"
@@ -895,7 +904,8 @@ publications:
       future be shaped by code?"*
     meta: { x_brand: { type: podcastShow, role: host } }
 
-  - name: Praxis and Pages 知行书话
+  - id: praxis-and-pages-podcast
+    name: Praxis and Pages 知行书话
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-18"
@@ -921,7 +931,8 @@ publications:
   # can present it as a live hosted show. The cover art is real work and is
   # retained. Do NOT move this back under "PODCASTS CHAN HOSTS" unless the show
   # actually ships — at which point add the real Spotify URL.
-  - name: Beyond Thirty 不止三十 (unlaunched concept)
+  - id: beyond-thirty-concept
+    name: Beyond Thirty 不止三十 (unlaunched concept)
     tier: archive
     recency: deprecated
     lastUpdated: "2026-07-21"
@@ -943,7 +954,8 @@ publications:
   # 70-linkedin.yaml live-page mirror. URL normalised to the trailing-slash
   # form LinkedIn actually serves (the two shards disagreed). 2026-09-24: URL is
   # the public newsletter page, where Chan checks the subscriber count.
-  - name: Decoding the Future (LinkedIn Newsletter)
+  - id: decoding-the-future-newsletter
+    name: Decoding the Future (LinkedIn Newsletter)
     tier: secondary
     recency: deprecated
     lastUpdated: "2026-07-21"
@@ -955,7 +967,8 @@ publications:
       subscribers as of 2026-09-24.
     meta: { x_brand: { type: newsletter, role: host } }
 
-  - name: What's Shipping in AI (Weekly AI Digest)
+  - id: whats-shipping-in-ai
+    name: What's Shipping in AI (Weekly AI Digest)
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-18"
@@ -974,7 +987,8 @@ publications:
   # Only the flagship preprint is public. Two further papers from the same repo
   # are under double-anonymous review: never add them here, never name the
   # venue. Replace the arXiv note with the arXiv id once it is announced.
-  - name: "Reproducible Is Not Correct: Reflexive Gates and the Self-Descriptions We Ship to Language Models"
+  - id: reproducible-is-not-correct
+    name: "Reproducible Is Not Correct: Reflexive Gates and the Self-Descriptions We Ship to Language Models"
     tier: primary
     recency: active
     lastUpdated: "2026-09-29"
@@ -998,7 +1012,8 @@ publications:
   # ============================================================================
   # AI & ML TECHNICAL ARTICLES — Chan-authored on LinkedIn Pulse
   # ============================================================================
-  - name: The AI Fluency Framework
+  - id: ai-fluency-framework
+    name: The AI Fluency Framework
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1013,7 +1028,8 @@ publications:
       currently falls short.
     meta: { x_brand: { type: article } }
 
-  - name: "The Future is Small: Why Small Language Models (SLMs) Are Powering the Next Wave of AI Agents"
+  - id: future-small-why-small-language
+    name: "The Future is Small: Why Small Language Models (SLMs) Are Powering the Next Wave of AI Agents"
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1028,7 +1044,8 @@ publications:
       could be converted.
     meta: { x_brand: { type: article } }
 
-  - name: CopilotKit + LangGraph.js HITL Integration Guide
+  - id: copilotkit-langgraph-js-hitl-integration
+    name: CopilotKit + LangGraph.js HITL Integration Guide
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1043,7 +1060,8 @@ publications:
       the working solution.
     meta: { x_brand: { type: article } }
 
-  - name: Solution for MCP Servers Connection Issues with NVM/NPM
+  - id: solution-mcp-servers-connection-issues
+    name: Solution for MCP Servers Connection Issues with NVM/NPM
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1053,7 +1071,8 @@ publications:
     image: /public/articles/solution-for-mcp-servers-connection-issues.png
     meta: { x_brand: { type: article } }
 
-  - name: "Creating a Python MCP Server: A Step-by-Step Guide"
+  - id: creating-python-mcp-server-step
+    name: "Creating a Python MCP Server: A Step-by-Step Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1063,7 +1082,8 @@ publications:
     image: /public/articles/creating-a-python-mcp-server.png
     meta: { x_brand: { type: article } }
 
-  - name: "Building an AI Dialogue System: A Comprehensive Guide"
+  - id: building-ai-dialogue-system-comprehensive
+    name: "Building an AI Dialogue System: A Comprehensive Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-05-18"
@@ -1072,7 +1092,8 @@ publications:
     image: /public/articles/building-an-ai-dialogue-system.png
     meta: { x_brand: { type: article } }
 
-  - name: AI Chatbot Integration Guide for Website
+  - id: ai-chatbot-integration-guide-website
+    name: AI Chatbot Integration Guide for Website
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1082,7 +1103,8 @@ publications:
     image: /public/articles/ai-chatbot-integration-guide-for-website.png
     meta: { x_brand: { type: article } }
 
-  - name: AI Conversation Implementation Tutorial
+  - id: ai-conversation-implementation-tutorial
+    name: AI Conversation Implementation Tutorial
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1092,7 +1114,8 @@ publications:
     image: /public/articles/ai-conversation-implementation-tutorial.jpg
     meta: { x_brand: { type: article } }
 
-  - name: "Creating Educational Animations with Manim: From Script to Final Video"
+  - id: creating-educational-animations-manim-script
+    name: "Creating Educational Animations with Manim: From Script to Final Video"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1108,7 +1131,8 @@ publications:
   # while building the thing they describe. Ranked above the older Pulse
   # tutorials because they document production decisions, not walkthroughs.
   # ============================================================================
-  - name: "Suno Closed Its Public MP3. The Only Audio Left Won't Identify Itself."
+  - id: suno-closed-public-mp3-only
+    name: "Suno Closed Its Public MP3. The Only Audio Left Won't Identify Itself."
     tier: primary
     recency: active
     lastUpdated: "2026-09-18"
@@ -1123,7 +1147,8 @@ publications:
       changed three weeks later, and where the trail stopped.
     meta: { x_brand: { type: article } }
 
-  - name: The Explore Feed That Froze
+  - id: explore-feed-that-froze
+    name: The Explore Feed That Froze
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1137,7 +1162,8 @@ publications:
       collected from 2026-04-12 while building github-readme-suno-cards.
     meta: { x_brand: { type: article } }
 
-  - name: "Neon Auth Email Verification & Password Reset"
+  - id: neon-auth-email-verification-password
+    name: "Neon Auth Email Verification & Password Reset"
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1151,7 +1177,8 @@ publications:
       emailVerified.
     meta: { x_brand: { type: article } }
 
-  - name: "Tokenless npm Publishing for AI Agents: The OIDC Trusted-Publishing Playbook"
+  - id: tokenless-npm-publishing-ai-agents
+    name: "Tokenless npm Publishing for AI Agents: The OIDC Trusted-Publishing Playbook"
     tier: primary
     recency: active
     lastUpdated: "2026-09-18"
@@ -1166,7 +1193,8 @@ publications:
       the honest boundary: an agent publishes, a human blesses the setup once.
     meta: { x_brand: { type: article } }
 
-  - name: Neon Auth + Flask Integration Guide
+  - id: neon-auth-flask-integration-guide
+    name: Neon Auth + Flask Integration Guide
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1179,7 +1207,8 @@ publications:
       and the pitfalls hit during a production deployment.
     meta: { x_brand: { type: article } }
 
-  - name: Stripe Payments + Cloudflare Workers Integration
+  - id: stripe-payments-cloudflare-workers-integration
+    name: Stripe Payments + Cloudflare Workers Integration
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1193,7 +1222,8 @@ publications:
       two-layer environment-variable setup.
     meta: { x_brand: { type: article } }
 
-  - name: "Migration Guide: Railway to DigitalOcean + Coolify"
+  - id: migration-guide-railway-digitalocean-coolify
+    name: "Migration Guide: Railway to DigitalOcean + Coolify"
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1207,7 +1237,8 @@ publications:
       and a troubleshooting reference.
     meta: { x_brand: { type: article } }
 
-  - name: "Claude Code Audio Hooks: System Architecture"
+  - id: claude-code-audio-hooks-system
+    name: "Claude Code Audio Hooks: System Architecture"
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1220,7 +1251,8 @@ publications:
       a human: no interactive prompts, NDJSON logs, single-shot config.
     meta: { x_brand: { type: article } }
 
-  - name: Notion API Integration Guide
+  - id: notion-api-integration-guide
+    name: Notion API Integration Guide
     tier: secondary
     recency: recent
     lastUpdated: "2026-07-21"
@@ -1233,7 +1265,8 @@ publications:
       caching, and a graceful fallback when Notion is unavailable.
     meta: { x_brand: { type: article } }
 
-  - name: Driving Claude Code From Your Phone Over Telegram
+  - id: driving-claude-code-phone-over
+    name: Driving Claude Code From Your Phone Over Telegram
     tier: secondary
     recency: recent
     lastUpdated: "2026-09-18"
@@ -1247,7 +1280,8 @@ publications:
       that keep it working, and the silent failure that costs the most time.
     meta: { x_brand: { type: article } }
 
-  - name: Upgrading PowerShell 7 Without Killing Your Claude Code Session
+  - id: upgrading-powershell-7-without-killing
+    name: Upgrading PowerShell 7 Without Killing Your Claude Code Session
     tier: secondary
     recency: recent
     lastUpdated: "2026-09-18"
@@ -1260,7 +1294,8 @@ publications:
       and three ways around it.
     meta: { x_brand: { type: article } }
 
-  - name: Generative Engine Optimization (GEO) Strategy
+  - id: generative-engine-optimization-geo-strategy
+    name: Generative Engine Optimization (GEO) Strategy
     tier: primary
     recency: active
     lastUpdated: "2026-07-21"
@@ -1274,7 +1309,8 @@ publications:
       measuring any of it. Design, not results.
     meta: { x_brand: { type: article } }
 
-  - name: "SVG Animation Generation: Capsule-Render Integration"
+  - id: svg-animation-generation-capsule-render
+    name: "SVG Animation Generation: Capsule-Render Integration"
     tier: secondary
     recency: recent
     lastUpdated: "2026-07-21"
@@ -1287,7 +1323,8 @@ publications:
       styles, and the API surface that exposes them.
     meta: { x_brand: { type: article } }
 
-  - name: "Animated SVG Project Cards for a GitHub README: A Field Guide"
+  - id: animated-svg-project-cards-github
+    name: "Animated SVG Project Cards for a GitHub README: A Field Guide"
     tier: secondary
     recency: active
     lastUpdated: "2026-10-07"
@@ -1301,7 +1338,8 @@ publications:
       design system, and how to verify the result.
     meta: { x_brand: { type: article } }
 
-  - name: Claude Code Skip Permission Confirmation
+  - id: claude-code-skip-permission-confirmation
+    name: Claude Code Skip Permission Confirmation
     tier: secondary
     recency: recent
     lastUpdated: "2026-07-21"
@@ -1314,7 +1352,8 @@ publications:
       what a global bypass actually turns off.
     meta: { x_brand: { type: article } }
 
-  - name: Making a Canvas Game Playable on Phones
+  - id: making-canvas-game-playable-phones
+    name: Making a Canvas Game Playable on Phones
     tier: secondary
     recency: recent
     lastUpdated: "2026-07-21"
@@ -1328,7 +1367,8 @@ publications:
       scales down with the device.
     meta: { x_brand: { type: article } }
 
-  - name: Automating a YouTube Video Showcase in a Profile README
+  - id: automating-youtube-video-showcase-profile
+    name: Automating a YouTube Video Showcase in a Profile README
     tier: secondary
     recency: recent
     lastUpdated: "2026-07-21"
@@ -1342,7 +1382,8 @@ publications:
       people up.
     meta: { x_brand: { type: article } }
 
-  - name: "Four Bugs in One Vercel Blob Integration — Including a Firewall"
+  - id: four-bugs-one-vercel-blob
+    name: "Four Bugs in One Vercel Blob Integration — Including a Firewall"
     tier: primary
     recency: active
     lastUpdated: "2026-09-18"
@@ -1360,7 +1401,8 @@ publications:
   # ============================================================================
   # GITHUB / OPEN-SOURCE / TOOLING TECHNICAL ARTICLES — Chan-authored
   # ============================================================================
-  - name: "Essential Files for a Professional GitHub Repository: A Comprehensive Guide"
+  - id: essential-files-professional-github-repository
+    name: "Essential Files for a Professional GitHub Repository: A Comprehensive Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1370,7 +1412,8 @@ publications:
     image: /public/articles/essential-files-for-a-professional-github-repository.png
     meta: { x_brand: { type: article } }
 
-  - name: How to Add a GitHub Contribution Snake to Your Profile README
+  - id: add-github-contribution-snake-profile
+    name: How to Add a GitHub Contribution Snake to Your Profile README
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1380,7 +1423,8 @@ publications:
     image: /public/articles/how-to-add-a-github-contribution-snake-to-your-profile-readme.png
     meta: { x_brand: { type: article } }
 
-  - name: "From Git Log to Insights: Evaluating Team Contributions in GitHub Projects"
+  - id: git-log-insights-evaluating-team
+    name: "From Git Log to Insights: Evaluating Team Contributions in GitHub Projects"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1390,7 +1434,8 @@ publications:
     image: /public/articles/from-git-log-to-insights.png
     meta: { x_brand: { type: article } }
 
-  - name: "Protecting Your Open Source Project: A Comprehensive Guide to Combating Code Plagiarism"
+  - id: protecting-open-source-project-comprehensive
+    name: "Protecting Your Open Source Project: A Comprehensive Guide to Combating Code Plagiarism"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1400,7 +1445,8 @@ publications:
     image: /public/articles/protecting-your-open-source-project.png
     meta: { x_brand: { type: article } }
 
-  - name: "Creating a Comprehensive File List Documentation System: A Technical Guide"
+  - id: creating-comprehensive-file-list-documentation
+    name: "Creating a Comprehensive File List Documentation System: A Technical Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1410,7 +1456,8 @@ publications:
     image: /public/articles/creating-a-comprehensive-file-list-documentation-system.png
     meta: { x_brand: { type: article } }
 
-  - name: A Complete Guide to Publishing Your First npm Package
+  - id: complete-guide-publishing-first-npm
+    name: A Complete Guide to Publishing Your First npm Package
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1420,7 +1467,8 @@ publications:
     image: /public/articles/publish-your-first-npm-package.png
     meta: { x_brand: { type: article } }
 
-  - name: "Apifox API Testing Tool Guide: From Beginner to Practitioner"
+  - id: apifox-api-testing-tool-guide
+    name: "Apifox API Testing Tool Guide: From Beginner to Practitioner"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1430,7 +1478,8 @@ publications:
     image: /public/articles/apifox-api-testing-tool-guide.png
     meta: { x_brand: { type: article } }
 
-  - name: "Git Branch Management and Project Initialization: A Comprehensive Guide"
+  - id: git-branch-management-project-initialization
+    name: "Git Branch Management and Project Initialization: A Comprehensive Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1440,7 +1489,8 @@ publications:
     image: /public/articles/git-branch-management-and-project-initialization.png
     meta: { x_brand: { type: article } }
 
-  - name: "Conventional Commits: A Comprehensive Guide"
+  - id: conventional-commits-comprehensive-guide
+    name: "Conventional Commits: A Comprehensive Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1450,7 +1500,8 @@ publications:
     image: /public/articles/conventional-commits.png
     meta: { x_brand: { type: article } }
 
-  - name: "How to Deploy Your React Project to Vercel: A Complete Guide"
+  - id: deploy-react-project-vercel-complete
+    name: "How to Deploy Your React Project to Vercel: A Complete Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1460,7 +1511,8 @@ publications:
     image: /public/articles/how-to-deploy-your-react-project-to-vercel.png
     meta: { x_brand: { type: article } }
 
-  - name: "The Power of Index Files: A Guide to Better Code Organization in React Projects"
+  - id: power-index-files-guide-better
+    name: "The Power of Index Files: A Guide to Better Code Organization in React Projects"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1470,7 +1522,8 @@ publications:
     image: /public/articles/the-power-of-index-files.png
     meta: { x_brand: { type: article } }
 
-  - name: Spring Boot Project Database Configuration Guide for Local and Cloud Environments
+  - id: spring-boot-project-database-configuration
+    name: Spring Boot Project Database Configuration Guide for Local and Cloud Environments
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1480,7 +1533,8 @@ publications:
     image: /public/articles/spring-boot-project-database-configuration-guide.png
     meta: { x_brand: { type: article } }
 
-  - name: "Solving Language Switching in Next.js: A Guide to Client-Server Component Architecture"
+  - id: solving-language-switching-next-js
+    name: "Solving Language Switching in Next.js: A Guide to Client-Server Component Architecture"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1490,7 +1544,8 @@ publications:
     image: /public/articles/solving-language-switching-in-nextjs.png
     meta: { x_brand: { type: article } }
 
-  - name: Setting Up Algolia DocSearch in Docusaurus
+  - id: setting-up-algolia-docsearch-docusaurus
+    name: Setting Up Algolia DocSearch in Docusaurus
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1500,7 +1555,8 @@ publications:
     image: /public/articles/setting-up-algolia-doc-search-in-docusaurus.png
     meta: { x_brand: { type: article } }
 
-  - name: "Implementing Internationalization in a Docusaurus Website: Experience and Lessons Learned"
+  - id: implementing-internationalization-docusaurus-website-experience
+    name: "Implementing Internationalization in a Docusaurus Website: Experience and Lessons Learned"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1510,7 +1566,8 @@ publications:
     image: /public/articles/implementing-internationalization-in-a-docusaurus.png
     meta: { x_brand: { type: article } }
 
-  - name: "Building a PDF Download Form with Notion Integration in Docusaurus: A Complete Guide"
+  - id: building-pdf-download-form-notion
+    name: "Building a PDF Download Form with Notion Integration in Docusaurus: A Complete Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1520,7 +1577,8 @@ publications:
     image: /public/articles/building-a-pdf-download-form-with-notion-integration-in-docusaurus.png
     meta: { x_brand: { type: article } }
 
-  - name: "Building a Website with Notion Integration: Form Submission and Content Display"
+  - id: building-website-notion-integration-form
+    name: "Building a Website with Notion Integration: Form Submission and Content Display"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1530,7 +1588,8 @@ publications:
     image: /public/articles/building-a-website-with-notion-integration.png
     meta: { x_brand: { type: article } }
 
-  - name: "Docusaurus Navbar Styling Guide: Lessons Learned"
+  - id: docusaurus-navbar-styling-guide-lessons
+    name: "Docusaurus Navbar Styling Guide: Lessons Learned"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1540,7 +1599,8 @@ publications:
     image: /public/articles/docusaurus-navbar-styling-guide.png
     meta: { x_brand: { type: article } }
 
-  - name: "Fixing Google Fonts in Next.js 13+: A Pixel-Perfect Guide"
+  - id: fixing-google-fonts-next-js
+    name: "Fixing Google Fonts in Next.js 13+: A Pixel-Perfect Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1550,7 +1610,8 @@ publications:
     image: /public/articles/stop-using--import-for-fonts-in-next-js.png
     meta: { x_brand: { type: article } }
 
-  - name: "The Developer's Guide: Configuring AWS SES for Bulk Email"
+  - id: developers-guide-configuring-aws-ses
+    name: "The Developer's Guide: Configuring AWS SES for Bulk Email"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1560,7 +1621,8 @@ publications:
     image: /public/articles/configuring-aws-ses-for-bulk-email.png
     meta: { x_brand: { type: article } }
 
-  - name: Building a Web Scraper for Douban Group Posts
+  - id: building-web-scraper-douban-group
+    name: Building a Web Scraper for Douban Group Posts
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1570,7 +1632,8 @@ publications:
     image: /public/articles/building-a-web-scraper-for-douban-group-posts.png
     meta: { x_brand: { type: article } }
 
-  - name: Tencent Meeting Screen Recording Download Guide
+  - id: tencent-meeting-screen-recording-download
+    name: Tencent Meeting Screen Recording Download Guide
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1580,7 +1643,8 @@ publications:
     image: /public/articles/tencent-meeting-screen-recording-download-guide.png
     meta: { x_brand: { type: article } }
 
-  - name: Planning Overseas Education and Career Development
+  - id: planning-overseas-education-career-development
+    name: Planning Overseas Education and Career Development
     tier: archive
     recency: historical
     lastUpdated: "2026-05-18"
@@ -1589,7 +1653,8 @@ publications:
     image: /public/articles/planning-overseas-education-and-career-development.png
     meta: { x_brand: { type: article } }
 
-  - name: "📺 My Video Tutorial Resources Collection"
+  - id: video-tutorial-resources-collection
+    name: "📺 My Video Tutorial Resources Collection"
     tier: archive
     recency: historical
     lastUpdated: "2026-05-18"
@@ -1598,7 +1663,8 @@ publications:
     image: /public/articles/my-video-tutorial-resources-collection.png
     meta: { x_brand: { type: article } }
 
-  - name: Steal these Brand Secrets from Linear's CEO
+  - id: steal-these-brand-secrets-linears
+    name: Steal these Brand Secrets from Linear's CEO
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1611,7 +1677,8 @@ publications:
   # ============================================================================
   # MINIMALIST LIVING / LIFESTYLE ARTICLES — Chan-authored
   # ============================================================================
-  - name: Digital Minimalism — Technology as a Tool, Not a Master
+  - id: digital-minimalism-technology-tool-not
+    name: Digital Minimalism — Technology as a Tool, Not a Master
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1621,7 +1688,8 @@ publications:
     image: /public/articles/digital-minimalism.png
     meta: { x_brand: { type: article } }
 
-  - name: Creating a Minimalist Living Space — Lessons from The Art of Discarding
+  - id: creating-minimalist-living-space-lessons
+    name: Creating a Minimalist Living Space — Lessons from The Art of Discarding
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1631,7 +1699,8 @@ publications:
     image: /public/articles/creating-a-minimalist-living-space.png
     meta: { x_brand: { type: article } }
 
-  - name: "Getting Started with Minimalism — A Beginner's Guide"
+  - id: getting-started-minimalism-beginners-guide
+    name: "Getting Started with Minimalism — A Beginner's Guide"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1641,7 +1710,8 @@ publications:
     image: /public/articles/getting-started-with-minimalism.png
     meta: { x_brand: { type: article } }
 
-  - name: "My Home's Minimalist Transformation: Before and After"
+  - id: homes-minimalist-transformation-before-after
+    name: "My Home's Minimalist Transformation: Before and After"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1651,7 +1721,8 @@ publications:
     image: /public/articles/p658085706.webp
     meta: { x_brand: { type: article } }
 
-  - name: "Experience Sharing | The Minimalist Learning Method"
+  - id: experience-sharing-minimalist-learning-method
+    name: "Experience Sharing | The Minimalist Learning Method"
     tier: archive
     recency: historical
     lastUpdated: "2026-09-19"
@@ -1664,7 +1735,8 @@ publications:
       updated for a general reader.
     meta: { x_brand: { type: article } }
 
-  - name: A Complete Guide to Legally Changing Your Name as an Adult
+  - id: complete-guide-legally-changing-name
+    name: A Complete Guide to Legally Changing Your Name as an Adult
     tier: archive
     recency: historical
     lastUpdated: "2026-05-18"
@@ -1676,7 +1748,8 @@ publications:
   # ============================================================================
   # WECHAT PRESS / LIFESTYLE COVERAGE — Chinese-language platforms
   # ============================================================================
-  - name: A Glimpse of My Minimalist Home
+  - id: glimpse-minimalist-home
+    name: A Glimpse of My Minimalist Home
     tier: archive
     recency: historical
     lastUpdated: "2026-05-18"
@@ -1684,7 +1757,8 @@ publications:
     url: https://mp.weixin.qq.com/s/eZx_Mo5F6BRfVNVceQCS8Q
     meta: { x_brand: { type: press } }
 
-  - name: Girl on Mattress
+  - id: girl-mattress
+    name: Girl on Mattress
     tier: archive
     recency: historical
     lastUpdated: "2026-05-18"
@@ -1693,7 +1767,8 @@ publications:
     image: /public/articles/girl-on-mattress.jpg
     meta: { x_brand: { type: press } }
 
-  - name: "Minimalist to the End, I Threw Away My Old Name"
+  - id: minimalist-end-i-threw-away
+    name: "Minimalist to the End, I Threw Away My Old Name"
     tier: archive
     recency: historical
     lastUpdated: "2026-07-21"
@@ -1703,7 +1778,8 @@ publications:
     image: /public/articles/kan-kein-sight.jpg
     meta: { x_brand: { type: press } }
 
-  - name: A Genderless Girl
+  - id: genderless-girl
+    name: A Genderless Girl
     tier: archive
     recency: historical
     lastUpdated: "2026-05-18"

@@ -119,7 +119,7 @@ meta:
       - question: "Where is Chan based and what timezones does she cover?"
         answer: "Auckland, New Zealand. Comfortable with NZ / AU / SEA / NA timezones; flexible for CN-overlap hours; remote-first."
       - question: "What is Chan's biggest shipped result?"
-        answer: "GAVIGO IRE (Oct 2025 — Sep 2026) — 471 of 488 non-merge commits (96.5%) solo on an activation and execution layer that keeps the next game in a feed on standby and activates it as the viewer arrives; shipped to production and moved across clouds in a ~30-minute cutover. In GAVIGO's proof stage it measured a 78% application-level reduction in startup work (controlled measurement, not a production SLA). Plus She Sharp (Jul 2025 — Sep 2026) — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo."
+        answer: "GAVIGO IRE (Oct 2025 — Oct 2026) — 471 of 488 non-merge commits (96.5%) solo on an activation and execution layer that keeps the next game in a feed on standby and activates it as the viewer arrives; shipped to production and moved across clouds in a ~30-minute cutover. In GAVIGO's proof stage it measured a 78% application-level reduction in startup work (controlled measurement, not a production SLA). Plus She Sharp (Jul 2025 — Sep 2026) — the member platform for a charity running 96+ events since 2014: 84 API routes, 39-table schema, 1,381 commits and 251 merged PRs with 94.5% of all lines added authored solo."
 
     # ---------------------------------------------------------------------
     # TEACHING COHORTS — the four AI-programming cohorts Chan has led
@@ -159,7 +159,7 @@ meta:
         partnerOrg: "MSD × SheSharp × academyEX (Auckland, NZ)"
         partnerOrgIds: [msd-nz, she-sharp, academyex]
         audience: "Women returning to the workforce (25 ppl / session cap)"
-        format: "4 in-person workshops + 10 self-paced AI tutorials + job-search library"
+        format: "4 in-person workshops + 12 self-paced AI tutorials + job-search library"
         dateRange: "Mar — Jun 2026"
         keyOutcome: "NZ Ministry of Social Development-funded; full curriculum authored solo"
         curriculumUrl: https://programming.chanmeng.org/docs/2026-her-waka/programme/about-her-waka
@@ -182,6 +182,9 @@ meta:
         cohortLabel: Peyvand Academy 2026
         programName: "Youth Tech Series — AI & Electronics Workshop"
         partnerOrg: "She Sharp × Peyvand Academy × Ministry of Education (Auckland, NZ)"
+        # Only She Sharp has an organizations[] record; Peyvand Academy and the
+        # Ministry of Education stay in the partnerOrg prose.
+        partnerOrgIds: [she-sharp]
         audience: "Youth aged 12–18; zero coding experience"
         format: "2-hour in-person workshop (AI + basic electronics; Makey Makey IoT toys) + self-paced tutorial"
         dateRange: "13 June 2026"
@@ -203,7 +206,7 @@ meta:
     # Project ordering for README
     # Drives the big editorial cards at the top of the README ("What I build").
     # 2026-07-14: PRODUCT-FIRST ORDER. The hero used to be client work; it is
-    # now the five things Chan leads herself (google-news-mcp 126★, echook 86★,
+    # now the five things Chan leads herself (google-news-mcp 129★, echook 88★ as of 2026-10-15,
     # archlang, archcanvas, vitex). All five are live; four have a public repo —
     # archcanvas is hosted with no public source. Any open-source count in
     # featured-work.hbs must be re-checked against projects[].repoUrl.
@@ -419,7 +422,7 @@ meta:
     # Chan has stopped developing it, but it is live, open source, and the only
     # other product with an MCP server + CLI, so it sits with echook and the
     # MCP servers rather than under craft. echook follows: the second-most-starred
-    # project in the portfolio (86★, behind google-news-mcp at 126).
+    # project in the portfolio (88★, behind google-news-mcp at 129; 2026-10-15).
     # Order = display order.
     # 2026-10-08 (Chan): server-google-jobs REMOVED from the README: a second MCP
     # server beside Google News repeats it, so only Google News is shown. It keeps
@@ -564,10 +567,10 @@ meta:
       - { claim: "Tam-AI-Ti built solo as a development commission from Riria (Missy) Te Kanawa, Māori Executive Lead — Strategy & Governance at ASB Bank, former KPMG NZ National Māori Sector lead and lead author of KPMG's Maui Rau report series",
           source: "https://www.linkedin.com/in/riria-missy-te-kanawa-6137528b/",
           verifiedAt: "2026-05-16" }
-      - { claim: "Tam-AI-Ti: 88+ CopilotKit AI actions, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, GPT-4o Realtime voice",
+      - { claim: "Tam-AI-Ti: 45 CopilotKit AI actions in the shipped code, 48 database tables (494 columns), 76 API routes, 38 pages, 115+ React components — solo full-stack build on Next.js 15, Drizzle, Neon Postgres + pgVector, OpenAI Realtime voice",
           source: "https://tamaiti.whiri-ai.com/",
           verifiedAt: "2026-05-16" }
-      - { claim: "GAVIGO IRE (Oct 2025 — Sep 2026): 488 non-merge commits, 471 of them (96.5%) authored solo by Chan, production-deployed at ire.gavigo.com",
+      - { claim: "GAVIGO IRE (Oct 2025 — Oct 2026): 488 non-merge commits, 471 of them (96.5%) authored solo by Chan, production-deployed at ire.gavigo.com",
           source: "https://ire.gavigo.com/",
           verifiedAt: "2026-09-01" }
       - { claim: "Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud",
@@ -594,7 +597,7 @@ meta:
       - { claim: "GAVIGO IRE proof-stage measurements, under GAVIGO's own labels: 78% Application-Level Reduction; 4.45s → 1.00s Controlled Startup Path Comparison; ~140ms Preserved AI State Restore. Real, controlled application-level measurements, not a production SLA or a complete end-to-end activation time",
           source: "https://gavigo.com/",
           verifiedAt: "2026-10-07" }
-      - { claim: "Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil) from Oct 2025 to Sep 2026; role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026)",
+      - { claim: "Founding Principal Engineer, Activation, Execution & AI Systems at GAVIGO Inc. (Delaware C-Corp, founder & CEO Saba Gecgil) from Oct 2025 to Oct 2026; role and Protected Technical Domain formalized through three contract iterations (Original Oct 17 2025, Amended Feb 9 2026, Second Amended Apr 16 2026)",
           source: "https://gavigo.com/",
           verifiedAt: "2026-05-16" }
       - { claim: "GAVIGO public mission per company marketing: 'Skip the Store. Start the Play' — eliminate the friction between user intent and digital experience by building the Post-App World through proprietary Instant Reality Switching technology",
@@ -624,7 +627,7 @@ meta:
       - { claim: "ByteDance Youth Training Camp backend developer in Team 115 — completed ByteDance MarsCode's 81-problem algorithm curriculum on Juejin with full per-problem write-ups (juejin-algorithm-practice, 66 commits 100% solo); placed #2-most-prolific committer (49 of 178 team commits, ~28%) on the team's Spring Boot 3 + MySQL + Redis Douyin Mall capstone among six contributors; voluntarily built three additional open-source artefacts beyond camp scope — a solo Vue 3 frontend (douyin-mall-frontend, 15 commits 100% solo), the Go + Gin clean-architecture TikTok Shop template douyin-mall-go-template (27 commits 100% solo, 53 GitHub stars), and the Spring Boot Java counterpart (douyin-mall-java-template, 13 commits 100% solo)",
           source: "https://github.com/ChanMeng666/douyin-mall",
           verifiedAt: "2026-05-16" }
-      - { claim: "Full-Stack Developer & lead documenter on a Lincoln University COMP693 industry-placement team building a React Native + Native Base + SQLite offline-first field-data-collection mobile app (text + photo + GPS capture, conflict-resolved sync) for CORDE — a 30+-year-old, 164-staff Canterbury-based NZ infrastructure and civil-construction company (corde.nz; head office Rolleston; tagline 'Trusted Connections'; CCNZ Canterbury Contractor of the Year + Construction Excellence National Award); reported directly to Barry Clark on CORDE's side with Kullum Ladley as Workbench API specification author; #1-most-prolific contributor on the code repository (236 of 413 commits in the original repository, 57%) ahead of teammate Xue Zheng (32.7%), and effectively sole author of the team documentation repository (140 of 143 commits, 97.9%) preserving five months of weekly meeting records, 15 Kullum-authored API specifications, database schema iterations, UI library evaluations, and itemised contribution sub-folders",
+      - { claim: "Full-Stack Developer & lead documenter on a Lincoln University COMP693 industry-placement team building a React Native + Native Base + SQLite offline-first field-data-collection mobile app (text + photo + GPS capture, per-log sync status with timed retries) for CORDE — a 30+-year-old, 164-staff Canterbury-based NZ infrastructure and civil-construction company (corde.nz; head office Rolleston; tagline 'Trusted Connections'; CCNZ Canterbury Contractor of the Year + Construction Excellence National Award); reported to Barry Clark (Digital Development Manager) on CORDE's side with Kullum Ladley (Business System Analyst) as Workbench API document author; #1-most-prolific contributor on the code repository (236 of 413 commits in the original repository, 57%) ahead of teammate Xue Zheng (32.7%), and effectively sole author of the team documentation repository (140 of 143 commits, 97.9%) preserving five months of weekly meeting records, Kullum's 14 API documents (eight topics, revisions included) and priority list, database schema iterations, UI library evaluations, and itemised contribution sub-folders",
           source: "https://corde.nz/",
           verifiedAt: "2026-05-16" }
       - { claim: "TechNest Community direct reports-to relationships verifiable on LinkedIn: Abiodun (Magret) Oyedele (https://www.linkedin.com/in/oyedele-abiodun/) and Afolasade Bello (https://www.linkedin.com/in/afolasade-bello-6a3795202/); TechNest Community is a Newfoundland-based Canadian tech-mentorship nonprofit (founded 2024, LinkedIn category 11-50 employees with 14 staff currently public) running the 2026 AI Track as part of Cohort 3",
@@ -651,7 +654,7 @@ meta:
       - { claim: "CORDE direct reports-to Barry Clark personally identifiable at https://www.linkedin.com/in/barry-clark-b92644/ — CORDE-side business sponsor of the Lincoln University COMP693 industry-placement engagement (Jun-Nov 2024) and the weekly demo-cadence recipient over the five-month delivery",
           source: "https://www.linkedin.com/company/corde-ltd/",
           verifiedAt: "2026-05-16" }
-      - { claim: "CORDE Workbench API specification author Kullum Ladley personally identifiable at https://www.linkedin.com/in/kullum-ladley-4496b316a/ — CORDE's technical liaison on the engagement; the same Kullum named in every API document filename prefix `YYYYMMDD_Kullum_...` in the 15-document API specification set captured under version control in the team-corde documentation repository",
+      - { claim: "CORDE Workbench API specification author Kullum Ladley personally identifiable at https://www.linkedin.com/in/kullum-ladley-4496b316a/ — CORDE's Business System Analyst at the time and technical contact on the engagement; the same Kullum named in every filename prefix `YYYYMMDD_Kullum_...` in the 15-file API folder (14 API documents and one priority list) captured under version control in the team-corde documentation repository",
           source: "https://www.linkedin.com/in/kullum-ladley-4496b316a/",
           verifiedAt: "2026-05-16" }
       - { claim: "CORDE student teammate Luke Shi (Zhenzhou Shi) personally identifiable at https://www.linkedin.com/in/zhenzhou-shi/ — the gentoo111 GitHub handle, under which he took the app over from my original repository and maintains the fork that CORDE's production runs; the second-most-prolific contributor to that fork, which has grown to 541 commits (227 of them mine); in the original 413-commit repository his share is 10.2% against my 57%",

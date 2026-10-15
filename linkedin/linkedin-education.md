@@ -15,7 +15,7 @@
 **Activities and societies:**
 
 ```
-COMP693 Industry Placement at CORDE (NZ infrastructure & civil construction) — five-month on-site capstone, #1-most-prolific contributor on the team's React Native offline-first field-operations app, still in active production use by CORDE's field crews.
+COMP693 Industry Placement at CORDE (NZ infrastructure & civil construction) — five months with weekly on-site sprint meetings; full-stack developer and lead documenter on the team's React Native offline-first field-operations app, with the largest share of its code (236 of 413 commits in the original repository).
 ```
 
 **Description:**

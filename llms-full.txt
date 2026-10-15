@@ -2735,16 +2735,15 @@ News engine rejects as an interface language, is sent as English;
 other language codes are passed through as given.
 
 The server runs over MCP's stdio channel — the default for desktop AI
-clients — and installs in one command through Smithery's CLI (`npx -y
-@smithery/cli install @chanmeng666/google-news-server --client
-claude`). The repo also carries a packaged `.mcpb` bundle, not yet
+clients — and runs in one command from npm (`npx -y
+@chanmeng666/google-news-server`, with `SERP_API_KEY` set). The repo also carries a packaged `.mcpb` bundle, not yet
 tested as a one-click install in Claude Desktop.
 
 **Business logic:** Open source, MIT licensed, no direct monetization. The intent is
 ecosystem positioning: be a canonical Google News server during the
 formative months of the Model Context Protocol, so the project keeps
 surfacing wherever a developer looks for an MCP tool. Distribution
-across many registries (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP
+across many registries (mcp.so, Glama, PulseMCP, Awesome MCP
 Servers, Archestra, and others) is the discovery strategy. The README
 also carries JSON-LD `SoftwareApplication` metadata and an `llms.txt`
 guide so that AI agents themselves can read the server's identity,
@@ -2785,7 +2784,7 @@ recognition:
 - PulseMCP "Top Pick" badge, and a mention in its Weekly Pulse
   newsletter the week the server shipped
 - Glama A grades for license and quality
-- Smithery one-command install, plus listings on mcp.so, MCP Market,
+- Listings on mcp.so, MCP Market,
   Augment Code's registry, Archestra and other directories
 - Carried in punkpeye/awesome-mcp-servers and eleven other curated
   lists and registries on GitHub
@@ -3121,10 +3120,11 @@ lets AI assistants call outside tools — that searches Google job
 listings through SerpAPI and returns results in English,
 Simplified Chinese, Japanese, or Korean. Built on Dec 31 2024,
 just 36 days after MCP's public launch, as a companion to the
-Google News MCP server from the same author. Installs from npm,
-Smithery, Docker, or a one-file `.mcpb` bundle, and is listed
-across MCP discovery catalogs including Glama, PulseMCP, mcp.so,
-and Smithery (catalog ratings and visitor counts are external
+Google News MCP server from the same author. Installs from npm
+(`npx -y @chanmeng666/google-jobs-server` with `SERP_API_KEY`
+set), Docker, or a one-file `.mcpb` bundle, and is listed across
+MCP discovery catalogs including Glama, PulseMCP and mcp.so
+(catalog ratings and visitor counts are external
 claims — needs registry check).
 
 **Impact:** The companion to the Google News server: lets AI assistants search Google job listings in English, Chinese, Japanese, and Korean. Built 36 days after MCP's launch — early enough that the founders of two major MCP catalogs contributed code to it.
@@ -3161,8 +3161,8 @@ than branch on language throughout the code, the four locales
 live in one translation table keyed to shared field names, so
 the same query logic serves every language and only the output
 strings swap. Distribution is deliberately wide for an early MCP
-server: npm (`@chanmeng666/google-jobs-server`), one-command
-Smithery install, a Dockerfile for containers, and a
+server: npm (`@chanmeng666/google-jobs-server`, run with `npx -y
+@chanmeng666/google-jobs-server` and `SERP_API_KEY` set), a Dockerfile for containers, and a
 self-contained `.mcpb` bundle. `package.json` also carries a
 structured `ai:` block (use cases, capabilities, target
 audience) so LLM-driven catalogs can index it — the same
@@ -3175,7 +3175,7 @@ contributors — notably the founders of the Smithery (Henry Mao)
 and Glama (Frank Fiegel) MCP catalogs, a real early-ecosystem
 signal. Carries security-assessment badges from MseeP.ai and
 Glama.ai in the README. Listed across MCP discovery catalogs —
-Glama, PulseMCP, mcp.so, Smithery, and others (10+ surfaces,
+Glama, PulseMCP, mcp.so and others (the
 A-rating, PulseMCP visitor count, and the Skywork AI deep-dive
 review are external claims — need registry/catalog check).
 Shipped one day after its companion Google News MCP server,
@@ -3184,7 +3184,7 @@ MCP servers.
 
 **My role:** Sole author. I designed the single-table localization approach,
 wrote every translation, built the multi-channel distribution
-(npm, Smithery, Docker, `.mcpb`), and maintain it alongside its
+(npm, Docker, `.mcpb`), and maintain it alongside its
 Google News MCP counterpart. External contributions have been
 dependency bumps and catalog-integration commits; the tool
 design and localization are mine.
@@ -4729,7 +4729,7 @@ CORDE's Business System Analyst at the time of the 2024 COMP693 placement; autho
 - **GAVIGO IRE (Oct 2025 — Oct 2026): 488 non-merge commits, 471 of them (96.5%) authored solo by Chan, production-deployed at ire.gavigo.com** (source: https://ire.gavigo.com/, verified 2026-09-01)
 - **Led the GAVIGO IRE cross-cloud production migration from DigitalOcean DOKS (Singapore) to Google Cloud GKE (Belgium) in a single ~30-minute cutover on 2026-03-11, rebuilding container registry, ingress, load balancer, TLS, and all five service deployments — full production expertise on both DigitalOcean and Google Cloud** (source: https://ire.gavigo.com/, verified 2026-05-16)
 - **Early-ecosystem MCP developer: opened modelcontextprotocol/servers issue #76 on 2024-11-27 (two days after MCP's public launch) documenting the Windows + NVM PATH workaround that became reference troubleshooting guidance for early Claude Desktop adopters** (source: https://github.com/modelcontextprotocol/servers/issues/76, verified 2026-05-16)
-- **Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with PulseMCP's own estimate of 38k visitors and a #1,060 popularity rank, Glama A grades for license and quality + 122 stars, no. 10 in DataCamp's 'Top 10 MCP Servers & Clients for AI Workflow Automation in 2026', listed across 15+ MCP catalogs including punkpeye/awesome-mcp-servers, Smithery, mcp.so, Glama, PulseMCP, MCP Market, Augment Code, Archestra) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); each server is the subject of its own Skywork AI article** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-10-13)
+- **Authored two early-ecosystem MCP servers within 35-36 days of Anthropic's Nov 25 2024 public launch of the Model Context Protocol — server-google-news (first commit 2024-12-30, 98 commits, npm `@chanmeng666/google-news-server`, **PulseMCP Top Pick badge** with PulseMCP's own estimate of 38k visitors and a #1,060 popularity rank, Glama A grades for license and quality + 122 stars, no. 10 in DataCamp's 'Top 10 MCP Servers & Clients for AI Workflow Automation in 2026', listed across 15+ MCP catalogs including punkpeye/awesome-mcp-servers, mcp.so, Glama, PulseMCP, MCP Market, Augment Code, Archestra) and server-google-jobs (first commit 2024-12-31, 71 commits, 4-language localized, npm `@chanmeng666/google-jobs-server`, subject of dedicated Skywork AI deep-dive review *'The Ultimate Guide to Chan Meng's Google Jobs MCP Server'* Oct 27 2025 that calls it 'one of the most elegant, production-ready solutions'); each server is the subject of its own Skywork AI article** (source: https://github.com/ChanMeng666/server-google-news, verified 2026-10-13)
 - **As CTO at Sanicle, the IBM Cloud watsonx AI integration I built into employee dashboards — AI-powered health consultations and automated leave requests — anchored Sanicle's entry into the IBM Business Partner Network and IBM Silver Partner certification; Sanicle.Cloud now listed in IBM's official PartnerPlus Solution Directory** (source: https://www.ibm.com/partnerplus/directory/solution/0638, verified 2026-05-16)
 - **Published a community write-up on the Vercel forum solving a production Next.js 15 + NextAuth 5 auth-redirect failure encountered during the Sanicle-AI build; publicly acknowledged by Vercel Staff (Amy Egan)** (source: https://community.vercel.com/t/solved-bug-authentication-redirect-issue-in-sanicle-ai-platform/6818, verified 2026-05-16)
 - **As CTO leading a team of five, wrote the code for five Sanicle production codebases — sanicle-cloud (Next.js company site replacing legacy Bubble no-code), sanicle-ai (multi-tenant FemTech platform with dual-AI architecture: IBM watsonx llama-3-405b + Google Gemini fallback), sanicle-ai-mobile (PWA prototype), reveal.js presentation deck, and a documented internal work archive — totalling 377 commits across four GitHub repositories, every one authored by Chan (GitHub contributor statistics, 2026-09-16)** (source: https://www.linkedin.com/company/sanicleofficial/, verified 2026-05-16)

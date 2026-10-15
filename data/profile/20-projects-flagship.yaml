@@ -1131,7 +1131,6 @@ projects:
           - label: "Listed on"
             items:
               - { name: "awesome-mcp-servers", url: "https://github.com/punkpeye/awesome-mcp-servers", logo: /public/tech-logos/github.svg, logoDark: /public/tech-logos/github-white.svg }
-              - { name: "Smithery", url: "https://smithery.ai/server/@chanmeng666/google-news-server", logo: /public/platform-logos/smithery.png }
               - { name: "Glama", url: "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news", logo: /public/platform-logos/glama.svg }
               - { name: "mcp.so", url: "https://mcp.so/server/server-google-news/ChanMeng666", logo: /public/platform-logos/mcp-so.png }
               - { name: "MCP Market", url: "https://mcpmarket.com/server/google-news", logo: /public/platform-logos/mcp-market.png }
@@ -1173,7 +1172,6 @@ projects:
               evidence: "A post in a daily feed of notable repositories."
           directories:
             - { name: PulseMCP, url: "https://www.pulsemcp.com/servers/chanmeng666-google-news", figure: "Top Pick badge · 38k est. visitors · #1,060" }
-            - { name: Smithery, url: "https://smithery.ai/server/@chanmeng666/google-news-server" }
             - { name: Glama, url: "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news", figure: "license A · quality A" }
             - { name: mcp.so, url: "https://mcp.so/server/server-google-news/ChanMeng666" }
             - { name: "Awesome MCP Servers (mcpservers.org)", url: "https://mcpservers.org/servers/ChanMeng666/server-google-news" }
@@ -1206,6 +1204,7 @@ projects:
             - { name: MCP Archive, url: "https://mcp-archive.com/server/server-google-news", status: 404 }
             - { name: MagicSlides, url: "https://www.magicslides.app/mcps/chanmeng666-google-news", status: "error page" }
             - { name: mcpnow.io, status: "domain does not resolve" }
+            - { name: Smithery, url: "https://smithery.ai/server/@chanmeng666/google-news-server", status: 404, note: "Listing withdrawn; the page and Smithery's registry API both report it gone (checked 2026-10-15). Taken off every surface that day" }
           # skywork.ai/skypage/en/google-news-ai-engineer-dive/1978706891771256832
           # was recorded here as a second review until 2026-10-13. It is about
           # a different project (jmanek/google-news-trends-mcp): never cite it.
@@ -1221,7 +1220,6 @@ projects:
       - { label: "DataCamp Top 10",        url: "https://www.datacamp.com/blog/top-mcp-servers-and-clients" }
       - { label: "Skywork review (News)",  url: "https://skywork.ai/skypage/en/google-news-ai-integration/1978665953022038016" }
       - { label: "PulseMCP (Top Pick)",    url: "https://www.pulsemcp.com/servers/chanmeng666-google-news" }
-      - { label: "Smithery",     url: "https://smithery.ai/server/@chanmeng666/google-news-server" }
       - { label: "Glama",        url: "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news" }
       - { label: "mcp.so",       url: "https://mcp.so/server/server-google-news/ChanMeng666" }
       - { label: "Awesome MCP Servers", url: "https://mcpservers.org/servers/ChanMeng666/server-google-news" }
@@ -1255,7 +1253,7 @@ projects:
     metrics:
       - { label: "First commit",       value: "2024-12-30 — 35 days after MCP's Nov 25 2024 public launch" }
       - { label: "npm package",        value: "@chanmeng666/google-news-server" }
-      - { label: "Registry listings",  value: "15+ MCP catalogs: 10 directory sites (PulseMCP, Smithery, Glama, mcp.so, mcpservers.org, MCP Market, Augment Code, Archestra, MCP Server Finder, AgentSeal) and 12 curated lists and registries on GitHub, led by punkpeye/awesome-mcp-servers", note: "Checked 2026-10-13; the rows are in meta.x_brand.reach" }
+      - { label: "Registry listings",  value: "15+ MCP catalogs: 9 directory sites (PulseMCP, Glama, mcp.so, mcpservers.org, MCP Market, Augment Code, Archestra, MCP Server Finder, AgentSeal) and 12 curated lists and registries on GitHub, led by punkpeye/awesome-mcp-servers", note: "Checked 2026-10-13; Smithery withdrawn 2026-10-15; the rows are in meta.x_brand.reach" }
       - { label: "Press",              value: "DataCamp, \"Top 10 MCP Servers & Clients for AI Workflow Automation in 2026\" (no. 10, by Abid Ali Awan, 2025-07-10); PulseMCP Weekly Pulse newsletter; a dedicated Skywork AI article" }
       - { label: "npm downloads",      value: "10,354 between 2025-04-13 and 2026-10-13 (the 18 months npm reports)" }
       - { label: "PulseMCP badge",     value: "Top Pick · 38k estimated visitors · #1,060 global rank", note: "Read 2026-10-13; earlier reading 26.1k and #1,105" }
@@ -1264,7 +1262,7 @@ projects:
       # so the source of each is named here.
       - { label: "Glama quality",      value: "A (license) · A (quality) · 122 stars by Glama's own count" }
       - { label: "Skywork review",     value: "One dedicated article, \"The AI Engineer's Guide to Real-Time News Integration\"" }
-      - { label: "Stars",              value: "129 GitHub (measured 2026-09-24) · 21 forks · listed on Smithery, Glama, PulseMCP (Top Pick), Archestra, mcp.so, MCP Market, Augment Code" }
+      - { label: "Stars",              value: "129 GitHub (measured 2026-09-24) · 21 forks · listed on Glama, PulseMCP (Top Pick), Archestra, mcp.so, MCP Market, Augment Code" }
       - { label: "Forks",              value: "21" }
       - { label: "Commits",            value: "not tracked (shallow history) — see repos" }
       - { label: "Early MCP contrib",  value: "Issue #76 (Nov 27 2024 — Windows/NVM workaround)" }
@@ -1320,16 +1318,15 @@ projects:
         other language codes are passed through as given.
 
         The server runs over MCP's stdio channel — the default for desktop AI
-        clients — and installs in one command through Smithery's CLI (`npx -y
-        @smithery/cli install @chanmeng666/google-news-server --client
-        claude`). The repo also carries a packaged `.mcpb` bundle, not yet
+        clients — and runs in one command from npm (`npx -y
+        @chanmeng666/google-news-server`, with `SERP_API_KEY` set). The repo also carries a packaged `.mcpb` bundle, not yet
         tested as a one-click install in Claude Desktop.
       businessLogic: |
         Open source, MIT licensed, no direct monetization. The intent is
         ecosystem positioning: be a canonical Google News server during the
         formative months of the Model Context Protocol, so the project keeps
         surfacing wherever a developer looks for an MCP tool. Distribution
-        across many registries (Smithery, mcp.so, Glama, PulseMCP, Awesome MCP
+        across many registries (mcp.so, Glama, PulseMCP, Awesome MCP
         Servers, Archestra, and others) is the discovery strategy. The README
         also carries JSON-LD `SoftwareApplication` metadata and an `llms.txt`
         guide so that AI agents themselves can read the server's identity,
@@ -1370,7 +1367,7 @@ projects:
         - PulseMCP "Top Pick" badge, and a mention in its Weekly Pulse
           newsletter the week the server shipped
         - Glama A grades for license and quality
-        - Smithery one-command install, plus listings on mcp.so, MCP Market,
+        - Listings on mcp.so, MCP Market,
           Augment Code's registry, Archestra and other directories
         - Carried in punkpeye/awesome-mcp-servers and eleven other curated
           lists and registries on GitHub

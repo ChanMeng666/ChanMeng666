@@ -573,7 +573,7 @@ projects:
       - { label: "Glama quality",     value: "A (license) · MIT" }
       - { label: "Locales",           value: "English, Simplified Chinese, Japanese, Korean (24 strings each)" }
       - { label: "Commits",           value: "75 (48 by Chan; incl. community + bot commits)" }
-      - { label: "GitHub stars",      value: "22 stars (measured 2026-09-18) · 10 forks · npm @chanmeng666/google-jobs-server · Smithery + Glama + serp.ai listings" }
+      - { label: "GitHub stars",      value: "22 stars (measured 2026-09-18) · 10 forks · npm @chanmeng666/google-jobs-server · Glama + serp.ai listings" }
     status: live
     startDate: "2024-12-31"
     publicSummary: |
@@ -582,10 +582,11 @@ projects:
       listings through SerpAPI and returns results in English,
       Simplified Chinese, Japanese, or Korean. Built on Dec 31 2024,
       just 36 days after MCP's public launch, as a companion to the
-      Google News MCP server from the same author. Installs from npm,
-      Smithery, Docker, or a one-file `.mcpb` bundle, and is listed
-      across MCP discovery catalogs including Glama, PulseMCP, mcp.so,
-      and Smithery (catalog ratings and visitor counts are external
+      Google News MCP server from the same author. Installs from npm
+      (`npx -y @chanmeng666/google-jobs-server` with `SERP_API_KEY`
+      set), Docker, or a one-file `.mcpb` bundle, and is listed across
+      MCP discovery catalogs including Glama, PulseMCP and mcp.so
+      (catalog ratings and visitor counts are external
       claims — needs registry check).
     narrative:
       impactHeadline: "The companion to the Google News server: lets AI assistants search Google job listings in English, Chinese, Japanese, and Korean. Built 36 days after MCP's launch — early enough that the founders of two major MCP catalogs contributed code to it."
@@ -622,8 +623,8 @@ projects:
         live in one translation table keyed to shared field names, so
         the same query logic serves every language and only the output
         strings swap. Distribution is deliberately wide for an early MCP
-        server: npm (`@chanmeng666/google-jobs-server`), one-command
-        Smithery install, a Dockerfile for containers, and a
+        server: npm (`@chanmeng666/google-jobs-server`, run with `npx -y
+        @chanmeng666/google-jobs-server` and `SERP_API_KEY` set), a Dockerfile for containers, and a
         self-contained `.mcpb` bundle. `package.json` also carries a
         structured `ai:` block (use cases, capabilities, target
         audience) so LLM-driven catalogs can index it — the same
@@ -636,7 +637,7 @@ projects:
         and Glama (Frank Fiegel) MCP catalogs, a real early-ecosystem
         signal. Carries security-assessment badges from MseeP.ai and
         Glama.ai in the README. Listed across MCP discovery catalogs —
-        Glama, PulseMCP, mcp.so, Smithery, and others (10+ surfaces,
+        Glama, PulseMCP, mcp.so and others (the
         A-rating, PulseMCP visitor count, and the Skywork AI deep-dive
         review are external claims — need registry/catalog check).
         Shipped one day after its companion Google News MCP server,
@@ -645,7 +646,7 @@ projects:
       myRole: |
         Sole author. I designed the single-table localization approach,
         wrote every translation, built the multi-channel distribution
-        (npm, Smithery, Docker, `.mcpb`), and maintain it alongside its
+        (npm, Docker, `.mcpb`), and maintain it alongside its
         Google News MCP counterpart. External contributions have been
         dependency bumps and catalog-integration commits; the tool
         design and localization are mine.

@@ -8,7 +8,7 @@ kind: open-source-tool
 repos:
   - ChanMeng666/server-google-news
 live: https://www.npmjs.com/package/@chanmeng666/google-news-server
-stack: [TypeScript, Node.js, "@modelcontextprotocol/sdk", stdio transport, SerpAPI, axios, npm, Docker, Smithery]
+stack: [TypeScript, Node.js, "@modelcontextprotocol/sdk", stdio transport, SerpAPI, axios, npm, Docker]
 stories: 6
 publicEvidence: [datacamp-top-mcp-servers, pulsemcp-weekly-pulse]
 privateEvidence: 0
@@ -69,9 +69,11 @@ each. It is MIT licensed and published on npm as
 - **Post-processing for the model**: results flattened from SerpAPI's nested
   shape, grouped (AI & Technology, Business, Science & Research, Healthcare,
   General) and sorted by date.
-- **Three ways in**: `npx` from npm, Smithery's one-command install (built from
-  the repository through a Dockerfile and `smithery.yaml`), and a `.mcpb`
-  bundle (not yet tested as a one-click install).
+- **Ways in**: `npx -y @chanmeng666/google-news-server` from npm with
+  `SERP_API_KEY` set, a Docker image built from the repository's Dockerfile,
+  and a `.mcpb` bundle (not yet tested as a one-click install). Smithery also
+  built it from `smithery.yaml` until the listing was withdrawn (gone by
+  2026-10-15).
 - **Readable by machines**: `llms.txt`, a `manifest.json`, schema.org
   `structured-data.json`, and since 2026-10 a one-screen README with the full
   text in `docs/overview.md` for the reader's own coding agent.
@@ -199,13 +201,15 @@ each. It is MIT licensed and published on npm as
   model-graded evaluations from the author of the `mcp-evals` package (PR #18).
 - **Result**: By 2026-10-13 the server was on 10 directory sites and in 12
   curated lists and registries on GitHub, led by punkpeye/awesome-mcp-servers.
-  It carries PulseMCP's Top Pick badge, was named no. 10 in DataCamp's Top 10
+  Smithery's listing was withdrawn by 2026-10-15, which leaves 9 directory
+  sites. It carries PulseMCP's Top Pick badge, was named no. 10 in DataCamp's Top 10
   (2025-07-10), and has a dedicated Skywork AI article. A third party
   republished it on npm as `@iflow-mcp/google-news-server`. DataCamp was still
   the top referrer in the repository's GitHub traffic in the 14 days to
   2026-10-13.
-- **Engineer's angle**: Each channel builds a different artefact. Smithery and
-  Docker build from the repository, so they track `main`; the npm package is
+- **Engineer's angle**: Each channel builds a different artefact. Docker (and
+  Smithery, while it was listed) builds from the repository, so it tracks
+  `main`; the npm package is
   the snapshot that was published. Knowing which install path runs which code
   matters when a user reports a bug.
 - **Plain version**: I put the tool where AI developers look for tools, and
@@ -279,7 +283,7 @@ each. It is MIT licensed and published on npm as
 | 129 GitHub stars, 21 forks | same entry › `meta.x_brand.reach.usage` (2026-10-13) |
 | 10,354 npm downloads, 2025-04-13 to 2026-10-13 (the 18 months npm reports) | same › `reach.usage` |
 | 83 public GitHub repositories reference the repo or the npm package (incl. 3 of mine) | same › `reach.usage`, basis: GitHub code search |
-| Listed on 15+ MCP catalogues: 10 directory sites and 12 curated lists and registries on GitHub | same › metrics, "Registry listings" |
+| Listed on 15+ MCP catalogues: 9 directory sites and 12 curated lists and registries on GitHub | same › metrics, "Registry listings" |
 | DataCamp "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026": no. 10 | same › `reach.press`; `30-recognition.yaml` › publications |
 | PulseMCP Top Pick badge, about 38k estimated visitors, rank #1,060 (PulseMCP's own estimates) | same › `reach.usage`, `reach.directories` |
 | Glama: A for licence, A for quality | same › `reach.directories` |
@@ -289,7 +293,7 @@ each. It is MIT licensed and published on npm as
 
 - **Release from a pipeline, not by hand.** For almost two years the npm
   package was the 1.0.0 published on 1 January 2025, built from an early
-  commit, while the repository moved on (SDK 1.x, later fixes). Smithery and Docker built from `main`, so the
+  commit, while the repository moved on (SDK 1.x, later fixes). Smithery (while listed) and Docker built from `main`, so the
   install paths ran different code. In October 2026 I cut 1.0.1 from the
   current source (tagged and released on GitHub, notes in the changelog). A
   tag-triggered publish workflow would have kept them in step from the
@@ -374,10 +378,9 @@ page and is marked public; the private layer holds the saved copies.
 
 ## Open questions
 
-- **The Smithery listing returns 404.** Checked again on 2026-10-15: both
+- **The Smithery listing returns 404** (resolved 2026-10-15). Both
   `smithery.ai/server/@chanmeng666/google-news-server` and Smithery's registry
-  API answer "not found", and a registry search finds no server of hers. The
-  shard still names Smithery under "Listed on" (`meta.x_brand.proofStrips`),
-  in `reach.directories`, in the listings metric and in the one-command
-  install in `productLogic`; S4 describes the Smithery build. Whether to move
-  it to `reach.gone` is Chan's call.
+  API answer "not found". Chan took Smithery off: it moved to `reach.gone`,
+  and the "Listed on" strip, the listings metric (9 directory sites) and the
+  install sentence no longer name it. PR #13 and `smithery.yaml` stay as
+  history.

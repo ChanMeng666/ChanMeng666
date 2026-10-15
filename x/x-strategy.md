@@ -281,7 +281,7 @@ launched the protocol — now a PulseMCP Top Pick listed across 15+ catalogs.
   3. The other gap — Windows + NVM users couldn't launch *any* npm MCP server; I
      filed issue #76 with the PATH fix that became early reference guidance.
   4. What it does — one tool, `google_news_search`, topic-sorted, 10 languages, one-
-     command Smithery install + a one-click Claude Desktop bundle.
+     command npx install from npm + a one-click Claude Desktop bundle.
   5. Distribution *is* the strategy — listed on 15+ registries because that's how AI
      devs actually find servers; PulseMCP Top Pick, Glama A rating.
   6. The lesson — being early to a standard compounds; the same instinct now runs

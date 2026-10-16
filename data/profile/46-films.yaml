@@ -304,9 +304,9 @@ films:
     media: { poster: /media/films/echook-first-89s.jpg, mp4: /media/films/echook-first-89s.mp4 }
     onFilmsPage: true
 
-  # Not on the site: made to accompany the ArchLang paper (never name the
-  # venue). Unlisted on YouTube; its id is in youtube/channel.private.yaml.
+  # NOT ON /films (Chan): made to accompany the ArchLang paper (never name the venue); unlisted on YouTube, id in youtube/channel.private.yaml. See show:.
   - id: archlang-demo
+    show: { site: false }
     kind: demo-film
     title: ArchLang narrated demo
     for: ArchLang
@@ -320,12 +320,9 @@ films:
     onFilmsPage: false
     notShownReason: "made to accompany the paper, not a promo"
 
-  # Recorded, not shown (Chan, 2026-10-12): GenLAB Career Academy is in
-  # development and on no visitor-facing surface, and neither is this film.
-  # Its content is not published anywhere: no media, no YouTube id, never
-  # `onFilmsPage: true`, never `primary`, no `productFilms` row and no tile on
-  # the README film wall until Chan clears the project.
+  # NOT SHOWN (Chan, 2026-10-12), with its project: no media, no YouTube id, never onFilmsPage or primary, no productFilms row, no film-wall tile. See show:.
   - id: genlab-how-it-works
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     kind: product-film
     title: GenLAB Career Academy, how it works
     for: GenLAB Career Academy

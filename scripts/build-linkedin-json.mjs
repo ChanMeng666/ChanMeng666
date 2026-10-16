@@ -98,7 +98,8 @@ ln.banner = {
 
 // --- inject: honorsAndAwards facts from awards[] ---
 // Each honor that should pull facts from a canonical award carries a
-// `_sourceAward` marker: { awarder, fields }. We inject ONLY the listed fields
+// `_sourceAward` marker: { id, fields } (id = awards[].id), or a bare id string
+// meaning all four fields. We inject ONLY the listed fields
 // (the subset that reproduces the live LinkedIn display); everything else
 // (notably the curated `description`, and any non-matching title/issuer) stays
 // verbatim in the block. `issueDate` is derived from the award's date; `links`
@@ -108,15 +109,14 @@ ln.banner = {
 // only injected where the canonical award value reproduces golden exactly. The
 // drift-check guard (scripts/check-linkedin-sync.mjs) covers the residual
 // duplicated fields (titles/issuers left in the block).
-const awardByAwarder = (awarder) =>
-  (profile.awards ?? []).find((a) => a.awarder === awarder);
+const awardById = (id) => (profile.awards ?? []).find((a) => a.id === id);
 for (const h of ln.honorsAndAwards) {
   if (!h._sourceAward) continue;
   const marker = typeof h._sourceAward === "string"
-    ? { awarder: h._sourceAward, fields: ["title", "issuer", "issueDate", "links"] }
+    ? { id: h._sourceAward, fields: ["title", "issuer", "issueDate", "links"] }
     : h._sourceAward;
-  const a = awardByAwarder(marker.awarder);
-  if (!a) throw new Error(`honor _sourceAward awarder not found in awards[]: ${marker.awarder}`);
+  const a = awardById(marker.id);
+  if (!a) throw new Error(`honor _sourceAward id not found in awards[]: ${marker.id ?? JSON.stringify(marker)}`);
   delete h._sourceAward;
   const fields = marker.fields ?? [];
   const inj = {

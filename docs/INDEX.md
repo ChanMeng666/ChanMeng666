@@ -10,9 +10,9 @@ else (L2) is opened on demand, when its "read when" matches the task.
 
 | File | Lines | Read when |
 |---|---|---|
-| `CLAUDE.md` | 152 | always: the schema, hard rules and workflow |
+| `CLAUDE.md` | 156 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 103 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 93 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 111 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -26,19 +26,19 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/00-basics.yaml` | 146 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
 | `data/profile/10-career.yaml` | 2835 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
-| `data/profile/21-projects-oss-primary.yaml` | 1193 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
-| `data/profile/22-projects-oss-webapps.yaml` | 1505 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
-| `data/profile/23-projects-oss-more.yaml` | 3602 | projects (88) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
+| `data/profile/21-projects-oss-primary.yaml` | 1195 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
+| `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
+| `data/profile/23-projects-oss-more.yaml` | 3578 | projects (88) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
-| `data/profile/30-recognition.yaml` | 1789 | awards (7), certificates (53), publications (76) | RECOGNITION — awards, certificates, publications & media … |
+| `data/profile/30-recognition.yaml` | 1857 | awards (7), certificates (53), publications (76) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
-| `data/profile/45-showcase.yaml` | 438 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
-| `data/profile/46-films.yaml` | 423 | filmCollections (5), films (39) | FILMS — every finished film Chan has made, one row per film … |
+| `data/profile/45-showcase.yaml` | 451 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
+| `data/profile/46-films.yaml` | 420 | filmCollections (5), films (39) | FILMS — every finished film Chan has made, one row per film … |
 | `data/profile/50-references.yaml` | 577 | references (27) | REFERENCES — testimonials & recommendations … |
-| `data/profile/60-network.yaml` | 1259 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
-| `data/profile/70-linkedin.yaml` | 1957 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
-| `data/profile/80-events.yaml` | 913 | events (23) | EVENTS — offline / in-person activities: talks, panels, hackathons mentored, workshops taught, community appearances. |
-| `data/profile/90-meta.yaml` | 773 | meta (4 keys) | META — build metadata, x_brand display configuration … |
+| `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
+| `data/profile/70-linkedin.yaml` | 1958 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
+| `data/profile/80-events.yaml` | 915 | events (23) | EVENTS — offline / in-person activities: talks, panels, hackathons mentored, workshops taught, community appearances. |
+| `data/profile/90-meta.yaml` | 761 | meta (4 keys) | META — build metadata, x_brand display configuration … |
 
 Other knowledge files:
 
@@ -48,7 +48,7 @@ Other knowledge files:
 | `docs/ecosystem/lineage.yaml` | 888 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
 | `docs/ecosystem/archlang-archcanvas.yaml` | 259 | ArchLang × ArchCanvas ecosystem catalog … |
 | `schema/brand.schema.json` | 417 | ChanMeng666 Brand System Schema … |
-| `schema/profile.schema.json` | 1354 | ChanMeng666 Profile Data Schema … |
+| `schema/profile.schema.json` | 1436 | ChanMeng666 Profile Data Schema … |
 
 ## Guidance docs
 
@@ -84,7 +84,7 @@ Other knowledge files:
 | `docs/stories/tam-ai-ti.md` | 374 | Story. Tam-AI-Ti: Sole developer (full-stack, AI, deployment and maintenance) | preparing an interview or cover letter about this project |
 | `linkedin/README.md` | 92 | linkedin/ — LinkedIn: account register, profile copy and visuals | anything about LinkedIn posts, profile copy or visuals |
 | `media-kit/README.md` | 18 | Speaker & Media Kit | rebuilding the speaker and media kit PDF |
-| `scripts/README.md` | 61 | scripts/ | finding which script does what, and how to run it |
+| `scripts/README.md` | 62 | scripts/ | finding which script does what, and how to run it |
 | `suno/README.md` | 64 | suno/ — Suno: the register of both accounts | anything about Chan's Suno songs, playlists or the register |
 | `x/README.md` | 80 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
 | `x/x-strategy.md` | 531 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
@@ -106,10 +106,10 @@ Rules in `.claude/rules/` load when a file matching their `paths:` is touched.
 | Rule | Lines | Applies to | Purpose |
 |---|---|---|---|
 | `.claude/rules/cv.md` | 33 | `cv/**` | Rules for the CVs and cover letters |
-| `.claude/rules/data-profile.md` | 45 | `data/profile/**` | Rules for the profile shards |
-| `.claude/rules/projects.md` | 46 | `data/profile/20-projects-flagship.yaml`, `data/profile/21-projects-oss-primary.yaml`, `data/profile/22-projects-oss-webapps.yaml`, `data/profile/23-projects-oss-more.yaml`, `data/profile/60-network.yaml`, `data/profile/90-meta.yaml` | Rules for projects and the README buckets |
+| `.claude/rules/data-profile.md` | 82 | `data/profile/**` | Rules for the profile shards |
+| `.claude/rules/projects.md` | 47 | `data/profile/20-projects-flagship.yaml`, `data/profile/21-projects-oss-primary.yaml`, `data/profile/22-projects-oss-webapps.yaml`, `data/profile/23-projects-oss-more.yaml`, `data/profile/60-network.yaml`, `data/profile/90-meta.yaml` | Rules for projects and the README buckets |
 | `.claude/rules/readme-art.md` | 40 | `scripts/cards/**`, `scripts/readme-art/**`, `scripts/build-readme-cards.mjs`, `scripts/build-readme-art.mjs`, `public/cards/**`, `public/readme/**`, `templates/**` | Rules for README cards, banners, pills and templates |
-| `.claude/rules/recognition-linkedin.md` | 36 | `data/profile/30-recognition.yaml`, `data/profile/70-linkedin.yaml`, `data/profile/80-events.yaml` | Rules for awards, publications, LinkedIn copy and events |
+| `.claude/rules/recognition-linkedin.md` | 37 | `data/profile/30-recognition.yaml`, `data/profile/70-linkedin.yaml`, `data/profile/80-events.yaml` | Rules for awards, publications, LinkedIn copy and events |
 | `.claude/rules/registers.md` | 31 | `x/**`, `linkedin/**`, `suno/**`, `youtube/**`, `distribution/**` | Rules for the platform registers and film distribution |
 
 ## Platform registers
@@ -198,7 +198,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | npm script | Runs |
 |---|---|
 | `audit` | `node scripts/audit-assets.mjs` |
-| `check` | `npm run validate && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit` |
+| `check` | `npm run validate && npm run lint:kb && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit` |
 | `check:ats` | `node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --check` |
 | `check:copy` | `node scripts/check-copy.mjs` |
 | `check:cv` | `node scripts/check-cv-sync.mjs` |
@@ -210,6 +210,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `check:links` | `node scripts/check-links.mjs` |
 | `check:suno` | `node scripts/build-suno-register.mjs --check` |
 | `check:x` | `node scripts/build-x-register.mjs --check` |
+| `lint:kb` | `node scripts/lint-kb.mjs` |
 | `validate` | `node scripts/validate.mjs && node scripts/validate-brand.mjs && node scripts/check-linkedin-sync.mjs && node scripts/check-ecosystem.mjs` |
 
 ### Sync and capture
@@ -264,10 +265,11 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/export-x-media.mjs` | Render X (Twitter) inline media (e.g. the pinned-post product lineup) to PNG. | **orphan**: named nowhere |
 | `scripts/export-youtube-banner.mjs` | Render the YouTube channel banner to PNG. | named in code: `scripts/check-youtube-banner-safe.mjs`, `scripts/export-youtube-crops.mjs` |
 | `scripts/export-youtube-crops.mjs` | Render the three device crops of the exported YouTube banner PNG so you can see what each surface actually shows. | run by hand; named in `youtube/README.md` |
+| `scripts/lint-kb.mjs` | Knowledge-base lint: the one place that knows every cross-reference field and every per-surface display declaration. | npm |
 | `scripts/make-brand-mark.mjs` | Wrap a brand logo in the standard README "mark" card. | named in code: `scripts/audit-assets.mjs` |
 | `scripts/mark-reviewed.mjs` | Deliberate "I reviewed this entry" bump: rewrites ONLY the lastUpdated line of the named entries, in place, in whichever data/profile/*.yaml shard owns them. | npm |
 | `scripts/refresh-github-metrics.mjs` | Refreshes machine-derivable GitHub metrics for projects in the data/profile/2*-projects-*.yaml shards. | npm |
 | `scripts/render-collages.mjs` | Renders evidence/collages/<capability>.html → public/evidence/collages/<capability>.jpg for every showcaseCapabilities[] entry in data/profile/45-showcase.yaml. | npm |
 | `scripts/stage-distribution.mjs` | Copy the video files the schedule needs into distribution/_staging/ (local, gitignored), from the film repos beside this one. | npm |
 | `scripts/validate-brand.mjs` | Validates data/brand.yaml against schema/brand.schema.json. | npm |
-| `scripts/validate.mjs` | Validates the merged data/profile/*.yaml shards against schema/profile.schema.json. | npm |
+| `scripts/validate.mjs` | Validates the merged data/profile/*.yaml shards against schema/profile.schema.json, then checks that ids are unique within every top-level list that has them (ids are NOT unique across lists: one slug names one real… | npm |

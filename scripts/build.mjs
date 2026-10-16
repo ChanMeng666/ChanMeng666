@@ -11,6 +11,7 @@ import Handlebars from "handlebars";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { loadProfile } from "./lib/load-profile.mjs";
+import { expandOrgContexts } from "./lib/org-context.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -35,6 +36,10 @@ if (!validate(data)) {
   }
   process.exit(1);
 }
+// organizations[].meta.x_brand.context: "auto" -> the generated title + dates
+// (scripts/lib/org-context.mjs), before anything reads it, so the README,
+// llms*.txt and dist/profile.json all carry the expanded string.
+expandOrgContexts(data);
 
 // ---------------------------------------------------------------------------
 // Load brand tokens (dist/brand/tokens.json must exist — run `npm run build:brand`
@@ -705,6 +710,7 @@ const allOrgs = sourceOrgs.map((o) => ({
   context:            o.meta?.x_brand?.context            ?? o.context            ?? (o.description ? String(o.description).split("\n")[0] : ""),
   relatedWorkId:      o.meta?.x_brand?.relatedWorkId      ?? o.relatedWorkId      ?? null,
   relatedVolunteerId: o.meta?.x_brand?.relatedVolunteerId ?? o.relatedVolunteerId ?? null,
+  relatedEducationId: o.meta?.x_brand?.relatedEducationId ?? o.relatedEducationId ?? null,
   relatedProjectId:   o.meta?.x_brand?.relatedProjectId   ?? o.relatedProjectId   ?? null,
   // Carry the enriched record through for JSON-LD Organization emission.
   _enriched: o,

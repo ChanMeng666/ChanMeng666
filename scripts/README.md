@@ -45,17 +45,18 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `export-x-media.mjs` | Render X (Twitter) inline media (e.g. the pinned-post product lineup) to PNG. | `node scripts/export-x-media.mjs` | **orphan**: named nowhere |
 | `export-youtube-banner.mjs` | Render the YouTube channel banner to PNG. | `node scripts/export-youtube-banner.mjs` | named in code: `scripts/check-youtube-banner-safe.mjs`, `scripts/export-youtube-crops.mjs` |
 | `export-youtube-crops.mjs` | Render the three device crops of the exported YouTube banner PNG so you can see what each surface actually shows. | `node scripts/export-youtube-crops.mjs` | run by hand; named in `youtube/README.md` |
+| `lint-kb.mjs` | Knowledge-base lint: the one place that knows every cross-reference field and every per-surface display declaration. | `npm run lint:kb` | npm |
 | `make-brand-mark.mjs` | Wrap a brand logo in the standard README "mark" card. | `node scripts/make-brand-mark.mjs` | named in code: `scripts/audit-assets.mjs` |
 | `mark-reviewed.mjs` | Deliberate "I reviewed this entry" bump: rewrites ONLY the lastUpdated line of the named entries, in place, in whichever data/profile/*.yaml shard owns them. | `npm run reviewed` | npm |
 | `refresh-github-metrics.mjs` | Refreshes machine-derivable GitHub metrics for projects in the data/profile/2*-projects-*.yaml shards. | `npm run refresh-metrics` | npm |
 | `render-collages.mjs` | Renders evidence/collages/<capability>.html → public/evidence/collages/<capability>.jpg for every showcaseCapabilities[] entry in data/profile/45-showcase.yaml. | `npm run build:collages` | npm |
 | `stage-distribution.mjs` | Copy the video files the schedule needs into distribution/_staging/ (local, gitignored), from the film repos beside this one. | `npm run stage:distribution` | npm |
 | `validate-brand.mjs` | Validates data/brand.yaml against schema/brand.schema.json. | `npm run validate` | npm |
-| `validate.mjs` | Validates the merged data/profile/*.yaml shards against schema/profile.schema.json. | `npm run validate` | npm |
+| `validate.mjs` | Validates the merged data/profile/*.yaml shards against schema/profile.schema.json, then checks that ids are unique within every top-level list that has them (ids are NOT unique across lists: one slug names one real… | `npm run validate` | npm |
 
 ## Subdirectories
 
 - `scripts/cards/` (13 modules): One module per README project card, run by `npm run build:cards`
-- `scripts/lib/` (13 modules): Shared modules: the profile and brand loaders, copy surfaces, ATS and Typst parsers, triage pages
+- `scripts/lib/` (14 modules): Shared modules: the profile and brand loaders, copy surfaces, ATS and Typst parsers, triage pages
 - `scripts/lib/svg-card/` (4 modules): The animated-card kit: shell, glyph outlining, film frames, layout plan
 - `scripts/readme-art/` (5 modules): Banners, pills, the film wall and story art, run by `npm run build:art`

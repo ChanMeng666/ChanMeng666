@@ -958,10 +958,9 @@ projects:
     status: archived
 
   # Games & Interactive
-  # ARCHIVED 2026-10-07 (Chan): repo archived on GitHub, towerdefense.chanmeng.org
-  # retired. Off every display bucket; the public repo link stays (archived repos
-  # are still readable). Do not re-add a live url.
+  # ARCHIVED 2026-10-07 (Chan): deployment retired, off every README bucket (see show:); the public repo link stays, no live url.
   - id: css-tower-defense
+    show: { readme: false }
     provenance: personal
     tier: archive
     recency: deprecated
@@ -3199,21 +3198,8 @@ projects:
         logo repository, not from documentation.
 
   # ── GenLAB Career Academy (client: NZiFOCUS) ─────────────────────────────
-  # IN DEVELOPMENT, NOT SHOWN EXTERNALLY (Chan, 2026-10-06; confirmed
-  # 2026-10-12). This entry may appear openly in the data files, but GenLAB
-  # must NOT appear in README.md, on chanmeng.org pages, in any CV (designed,
-  # ATS, extended, cv-llms.txt) or in LinkedIn copy until Chan clears it. The
-  # same rule covers its how-it-works film (films[] id genlab-how-it-works,
-  # repo genlab-promo-studio): named in the data, shown nowhere, and its
-  # content is not published. Concretely, until then:
-  #   - do NOT add this id to any 90-meta.yaml bucket (flagship / clientCard /
-  #     commissioned / aiAgent / craft / spotlight / more*) — that is what
-  #     puts a project on the README;
-  #   - do NOT raise tier to flagship (cv/build-llms-txt.mjs selects every
-  #     flagship project into public/cv-llms.txt);
-  #   - do NOT add it to cv/*.typ, 70-linkedin.yaml or 2d-portfolio;
-  #   - no organizations[] entry for NZiFOCUS yet, and no url / repoUrl here
-  #     (the repo is private, in the client's own GitHub account).
+  # IN DEVELOPMENT, NOT SHOWN (Chan, 2026-10-06; confirmed 2026-10-12): data files, llms-full.txt and dist/profile.json only; also its film genlab-how-it-works. See show:.
+  # Kept so by: no 90-meta bucket, tier never flagship, no NZiFOCUS org, no url / repoUrl (private client repo).
   # Sources: the client's Stage 1 draft (2026-10-02) for the product model,
   # and the repo's docs/status.md (2026-10-05) for what is actually built.
   # Everything beyond milestone M1 is the client's SPEC, not delivered work —
@@ -3221,6 +3207,7 @@ projects:
   # narrative (repo rule). Topology and timeline: docs/ecosystem/lineage.yaml,
   # family `genlab`.
   - id: genlab-career-academy
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: client
     tier: secondary
     recency: active
@@ -3322,19 +3309,7 @@ projects:
         business decisions stays with her.
 
   # ------- Music videos (recorded 2026-10-07 at Chan's request) -------
-  # DATABASE-ONLY until Chan says otherwise. These two entries are her own
-  # music videos: she asked for them to be recorded, not displayed.
-  # 2026-10-08: she published the two films of october-rain-february-line-mv on
-  # her YouTube channel herself. That makes them public THERE (the entry's
-  # extraLinks point at those copies). Her rule, same day: YouTube ONLY.
-  # 2026-10-09: she widened it by one place. All thirteen films of the three
-  # music-video projects are shown on chanmeng.org/films (rows in
-  # 46-films.yaml), which publishes the eleven that were never on YouTube.
-  # Still out of every display bucket, CV, LinkedIn copy and every OTHER page
-  # of chanmeng.org.
-  #   - in NO 90-meta.yaml display bucket, no CV, no LinkedIn copy, and on
-  #     chanmeng.org only at /films; like every projects[] entry they do appear in
-  #     llms-full.txt's long tail and in dist/profile.json;
+  # MUSIC VIDEOS (Chan, 2026-10-08 YouTube; 2026-10-09 chanmeng.org/films; 2026-10-10 README film wall): the films are shown there only, the project nowhere. See show:.
   #   - both repos are PRIVATE: no repoUrl, and no url (the finished films are
   #     release assets of the private repos, not published anywhere public).
   #     Do not add either link; if she publishes a film, link the public copy.
@@ -3346,6 +3321,7 @@ projects:
   # startDate is the month the repos and their v1.0.0 releases were created;
   # when the work began is not recorded.
   - id: october-rain-february-line-mv
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
     tier: secondary
     recency: recent
@@ -3403,6 +3379,7 @@ projects:
         CREDITS file.
 
   - id: anti-marriage-universe-mv
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
     tier: secondary
     recency: recent
@@ -3459,14 +3436,13 @@ projects:
         lists them.
 
   # Added 2026-10-09 (Chan's answers the same day): same rule as the two
-  # entries above. Private repo, no repoUrl, no url. Its eight films are on
-  # chanmeng.org/films and nowhere else (see the note above the first
-  # music-video entry). Describe the PICTURE and the method
+  # entries above (see show:). Private repo, no repoUrl, no url. Describe the PICTURE and the method
   # only: the public copy says what each film is drawn as, and nothing about
   # what the album is about beyond "a memoir of one year". Do not expand it
   # from the repo's README. Every fact below is from that README, album.json
   # and the per-film CREDITS files (2026-10-09).
   - id: memory-amber-2022-mv
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
     tier: secondary
     recency: recent
@@ -3534,14 +3510,14 @@ projects:
   # Recorded 2026-10-10. A fourth music-video repo, private: no repoUrl, no
   # url. Published 2026-10-10 on YouTube and chanmeng.org/films; extraLinks
   # carry those two public copies.
-  # Held to the terms of the three entries above: in NO 90-meta.yaml display
-  # bucket, no CV, no LinkedIn copy. Describe the PICTURE and the method only,
+  # Held to the terms of the three entries above (see show:). Describe the PICTURE and the method only,
   # nothing about what the song is about; do not expand it from the repo's
   # README. Keep both credits (the song is hers, made with Suno; "no image or
   # video generation models" is a claim about the picture). Every fact below
   # is from that README, films/solo-coffee/CREDITS and timing.json
   # (2026-10-10); that the song was made with Suno is from suno/songs.yaml.
   - id: solo-coffee-mv
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
     tier: secondary
     recency: recent

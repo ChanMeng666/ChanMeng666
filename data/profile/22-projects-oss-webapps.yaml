@@ -601,15 +601,13 @@ projects:
   #   - The repo (femtech-weekend-redthread, the name is historical) is
   #     PRIVATE: no repoUrl. Its asset archive (femtech-weekend-assets) is
   #     private too and is not a project.
-  #   - NOT SHOWN FOR NOW (Chan, 2026-10-12): in no 90-meta.yaml display
-  #     bucket, no CV, no LinkedIn copy and not on chanmeng.org. tier is not flagship, so cv-llms.txt does not
-  #     pick it up. When she clears it: choose a tier and a bucket, then the
-  #     career-copy skill.
+  #   - NOT SHOWN FOR NOW (Chan, 2026-10-12): see show:; tier stays below flagship. Cleared: tier, bucket, career-copy.
   #   - Copy rule taken from the site itself: only verifiable facts; LYZEN's
   #     clients, figures and testimonials are LYZEN's to state, not Chan's.
   # Every fact below is from the repo's README, CLAUDE.md, docs/HISTORY.md,
   # docs/INFRASTRUCTURE.md and package.json, read 2026-10-12.
   - id: lyzen-website
+    show: { readme: false, site: false, cv: false, linkedin: false }
     provenance: client
     tier: secondary
     recency: active
@@ -1218,15 +1216,10 @@ projects:
         Vercel -> Cloudflare Workers migration with GitHub Actions
         auto-deploy; authored the README, TUTORIAL.md, and GEO
         metadata. Maintains the live deployment today.
-  # PENDING ARCHIVE (Chan, 2026-10-07). Seismophone is still online and stays
-  # that way until Chan says otherwise, but it is treated as already archived on
-  # every surface a visitor reads: it is NOT in any 90-meta display bucket, any
-  # CV, the LinkedIn copy or chanmeng.org, and must not be put back. When she
-  # gives the word, archive it for real (export the unrepeatable data first —
-  # runbook item in docs/operations/README.md), then set status: archived +
-  # recency: deprecated. Until then status/recency below stay as they are,
-  # because they are true. Background: local-only docs/STATE.private.md.
+  # PENDING ARCHIVE (Chan, 2026-10-07): online, but off every visitor-facing surface and cv-llms.txt. See show:.
+  # On her word: runbook in docs/operations/README.md, then status: archived + recency: deprecated (until then the values below are true).
   - id: sunostats
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
     # Band change 2026-08-05: back to the "Craft & products" table when the card
     # band was cut to three. NOTE the side effect Chan accepted knowingly —

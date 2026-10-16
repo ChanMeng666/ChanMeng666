@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 // Validates the merged data/profile/*.yaml shards against
-// schema/profile.schema.json. Exits non-zero on validation errors so CI can
+// schema/profile.schema.json, then checks that ids are unique within every
+// top-level list that has them (ids are NOT unique across lists: one slug names
+// one real thing wherever it appears). Exits non-zero on any error so CI can
 // gate on this. Each error is attributed to the shard file that owns it.
+// Cross-references between lists are resolved by scripts/lint-kb.mjs.
 
 import fs from "node:fs";
 import path from "node:path";
@@ -38,7 +41,29 @@ if (!ok) {
   process.exit(1);
 }
 
+// Id uniqueness within each list.
+const dupErrors = [];
+let listsWithIds = 0;
+for (const [key, list] of Object.entries(data)) {
+  if (!Array.isArray(list) || !list.some((e) => e && typeof e === "object" && "id" in e)) continue;
+  listsWithIds++;
+  const seen = new Map();
+  list.forEach((e, i) => {
+    if (!e || e.id == null) return;
+    if (seen.has(e.id)) {
+      const shard = shardForInstancePath(provenance, `/${key}/${i}`);
+      dupErrors.push(`  ${shard ? `[${shard}] ` : ""}${key}: id "${e.id}" is used by items ${seen.get(e.id)} and ${i}`);
+    } else seen.set(e.id, i);
+  });
+}
+if (dupErrors.length) {
+  console.error("✗ duplicate ids within a list:");
+  for (const m of dupErrors) console.error(m);
+  process.exit(1);
+}
+
 console.log(`✓ data/profile/*.yaml is valid against schema/profile.schema.json`);
+console.log(`  ids unique within  = ${listsWithIds} lists`);
 console.log(`  basics.name        = ${data.basics.name}`);
 console.log(`  work entries       = ${(data.work ?? []).length}`);
 console.log(`  education entries  = ${(data.education ?? []).length}`);

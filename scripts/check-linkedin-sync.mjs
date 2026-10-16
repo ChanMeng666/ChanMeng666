@@ -46,22 +46,23 @@ const work = (id) => (profile.work ?? []).find((w) => w.id === id);
 const volunteer = (id) => (profile.volunteer ?? []).find((v) => v.id === id);
 const education = (id) => (profile.education ?? []).find((e) => e.id === id);
 const project = (id) => (profile.projects ?? []).find((p) => p.id === id);
-const awardByAwarder = (a) => (profile.awards ?? []).find((x) => x.awarder === a);
+const awardById = (id) => (profile.awards ?? []).find((x) => x.id === id);
 
-// --- honorsAndAwards: every _sourceAward marker must resolve; the awarder/date
-// must still produce the injected values. Titles/issuers that the block keeps
+// --- honorsAndAwards: every _sourceAward marker must resolve by awards[].id;
+// the award's date/url must still produce the injected values. Titles/issuers that the block keeps
 // (i.e. NOT listed in the marker's `fields`) are curated and not checked. ---
 let honorsChecked = 0;
 for (const h of ln?.honorsAndAwards ?? []) {
   if (!h._sourceAward) continue;
   honorsChecked++;
   const marker = typeof h._sourceAward === "string"
-    ? { awarder: h._sourceAward, fields: ["title", "issuer", "issueDate", "links"] }
+    ? { id: h._sourceAward, fields: ["title", "issuer", "issueDate", "links"] }
     : h._sourceAward;
-  const a = awardByAwarder(marker.awarder);
-  if (!a) { err(`honor _sourceAward awarder not found in awards[]: "${marker.awarder}"`); continue; }
-  if (!a.date) err(`award "${a.awarder}" has no date (needed for honor issueDate).`);
-  if ((marker.fields ?? []).includes("links") && !a.url) err(`award "${a.awarder}" has no url (needed for honor links).`);
+  if (!marker.id) { err(`honor "${h.title ?? "(untitled)"}" _sourceAward has no id (markers name awards[].id; the old awarder key is gone).`); continue; }
+  const a = awardById(marker.id);
+  if (!a) { err(`honor _sourceAward id not found in awards[]: "${marker.id}"`); continue; }
+  if (!a.date) err(`award "${a.id}" has no date (needed for honor issueDate).`);
+  if ((marker.fields ?? []).includes("links") && !a.url) err(`award "${a.id}" has no url (needed for honor links).`);
 }
 
 // --- experience: every mapped company must resolve to one work entry with the

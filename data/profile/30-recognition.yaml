@@ -23,13 +23,14 @@ awards:
   # That mirrors the existing evidence gap on the 2025 award, which likewise
   # has no certificate in `public/certificates/`.
   #
-  # The "(2026)" in the title is a DISAMBIGUATOR, not part of the award's name.
-  # Three guards join awards on identity — `events[].relatedAwardTitle` by
-  # title, scripts/check-linkedin-sync.mjs by awarder string,
-  # scripts/check-freshness.mjs by title — and two awards sharing a title would
-  # collide on `.find()`. Keep the suffix in the key only; the prose below
-  # gives the official name.
-  - title: "Outstanding Mentor Award (2026)"
+  # Awards join by `id` (since 2026-10-16): events[].relatedAwardId, the
+  # LinkedIn honours' _sourceAward markers and check-freshness all use it, so a
+  # title can change without breaking a join. The "(2026)" in the title below
+  # is not part of the award's official name (the prose gives that); it stays
+  # because the title is rendered on several surfaces, and dropping it is a copy
+  # change (career-copy skill).
+  - id: outstanding-mentor-award-2026
+    title: "Outstanding Mentor Award (2026)"
     tier: primary
     recency: recent
     lastUpdated: "2026-09-04"
@@ -58,7 +59,8 @@ awards:
       discrepancy and the follow-on outreach:
       `events[aotearoa-ai-hackathon-festival-2026]`.
 
-  - title: Outstanding Mentor Award
+  - id: outstanding-mentor-award-2025
+    title: Outstanding Mentor Award
     tier: primary
     recency: recent
     lastUpdated: "2026-05-18"
@@ -79,7 +81,8 @@ awards:
       accessibility, workforce upskilling, and indigenous environmental
       stewardship.
 
-  - title: UN CSW 69 Speaker — Beyond Beijing 30 Conference
+  - id: un-csw69-speaker-2025
+    title: UN CSW 69 Speaker — Beyond Beijing 30 Conference
     # The conference was a physical event at UN HQ New York; Chan presented
     # REMOTELY by video link (confirmed 2026-08-25). "held at UN Headquarters"
     # below describes the conference and stays accurate — but do not add
@@ -108,7 +111,8 @@ awards:
       actionable workplace policies through AI analysis. Generated
       multiple collaboration requests from NGOs and member states.
 
-  - title: UN Women FemTech Hackathon Outstanding Performer
+  - id: un-women-femtech-hackathon-outstanding-performer-2025
+    title: UN Women FemTech Hackathon Outstanding Performer
     tier: primary
     recency: recent
     lastUpdated: "2026-05-18"
@@ -123,7 +127,8 @@ awards:
       with multiple organisations including **Sanicle** and the **NGO
       CSW Forum**.
 
-  - title: "Dean's List — Top 5% Academic Performance"
+  - id: deans-list-top-5-percent-2025
+    title: "Dean's List — Top 5% Academic Performance"
     tier: primary
     recency: recent
     lastUpdated: "2026-05-18"
@@ -136,7 +141,8 @@ awards:
       of Environment, Society & Design. Awarded by Lincoln University,
       New Zealand's specialist land-based university.
 
-  - title: Master of Applied Computing with Distinction
+  - id: master-of-applied-computing-distinction-2024
+    title: Master of Applied Computing with Distinction
     tier: flagship
     recency: historical
     lastUpdated: "2026-08-26"
@@ -148,7 +154,8 @@ awards:
       all courses** in the Master of Applied Computing programme at
       Lincoln University, New Zealand's specialist land-based university.
 
-  - title: Excellence Award — FemTech China Women's Health Technology Challenge
+  - id: femtech-china-excellence-award-2024
+    title: Excellence Award — FemTech China Women's Health Technology Challenge
     tier: primary
     recency: historical
     lastUpdated: "2026-06-04"
@@ -173,7 +180,8 @@ certificates:
   # =========================================================================
 
   # ---- HackerRank (23 — all Dec 2024, credential URLs at hackerrank.com/certificates/<id>) ----
-  - name: "Software Engineer"
+  - id: hackerrank-software-engineer-2024
+    name: "Software Engineer"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/software-engineer-certificate.png
@@ -184,7 +192,8 @@ certificates:
     tier: primary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Software Engineer Intern"
+  - id: hackerrank-software-engineer-intern-2024
+    name: "Software Engineer Intern"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/software-engineer-intern-certificate.png
@@ -194,7 +203,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-26"
-  - name: "Frontend Developer (React)"
+  - id: hackerrank-frontend-developer-react-2024
+    name: "Frontend Developer (React)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/frontend-developer-react-certificate.png
@@ -204,7 +214,8 @@ certificates:
     tier: primary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Problem Solving (Intermediate)"
+  - id: hackerrank-problem-solving-intermediate-2024
+    name: "Problem Solving (Intermediate)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/problem-solving-intermediate-certificate.png
@@ -214,7 +225,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Problem Solving (Basic)"
+  - id: hackerrank-problem-solving-basic-2024
+    name: "Problem Solving (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/problem-solving-basic-certificate.png
@@ -224,7 +236,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-26"
-  - name: "REST API (Intermediate)"
+  - id: hackerrank-rest-api-intermediate-2024
+    name: "REST API (Intermediate)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/rest-api-intermediate-certificate.png
@@ -234,7 +247,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "SQL (Advanced)"
+  - id: hackerrank-sql-advanced-2024
+    name: "SQL (Advanced)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/sql-advanced-certificate.png
@@ -244,7 +258,8 @@ certificates:
     tier: primary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "SQL (Intermediate)"
+  - id: hackerrank-sql-intermediate-2024
+    name: "SQL (Intermediate)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/sql-intermediate-certificate.png
@@ -254,7 +269,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-26"
-  - name: "SQL (Basic)"
+  - id: hackerrank-sql-basic-2024
+    name: "SQL (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/sql-basic-certificate.png
@@ -264,7 +280,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-26"
-  - name: "Node.js (Intermediate)"
+  - id: hackerrank-node-js-intermediate-2024
+    name: "Node.js (Intermediate)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/nodejs-intermediate-certificate.png
@@ -274,7 +291,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "JavaScript (Intermediate)"
+  - id: hackerrank-javascript-intermediate-2024
+    name: "JavaScript (Intermediate)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/javascript-intermediate-certificate.png
@@ -284,7 +302,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "JavaScript (Basic)"
+  - id: hackerrank-javascript-basic-2024
+    name: "JavaScript (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/javascript-basic-certificate.png
@@ -294,7 +313,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Go (Intermediate)"
+  - id: hackerrank-go-intermediate-2024
+    name: "Go (Intermediate)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/go-intermediate-certificate.png
@@ -304,7 +324,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Go (Basic)"
+  - id: hackerrank-go-basic-2024
+    name: "Go (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/go-basic-certificate.png
@@ -314,7 +335,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-26"
-  - name: "Angular (Intermediate)"
+  - id: hackerrank-angular-intermediate-2024
+    name: "Angular (Intermediate)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/angular-intermediate-certificate.png
@@ -324,7 +346,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Angular (Basic)"
+  - id: hackerrank-angular-basic-2024
+    name: "Angular (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/angular-basic-certificate.png
@@ -334,7 +357,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-26"
-  - name: "React (Basic)"
+  - id: hackerrank-react-basic-2024
+    name: "React (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/react-basic-certificate.png
@@ -344,7 +368,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "R (Intermediate)"
+  - id: hackerrank-r-intermediate-2024
+    name: "R (Intermediate)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/r-intermediate-certificate.png
@@ -354,7 +379,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "R (Basic)"
+  - id: hackerrank-r-basic-2024
+    name: "R (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/r-basic-certificate.png
@@ -364,7 +390,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-26"
-  - name: "Python (Basic)"
+  - id: hackerrank-python-basic-2024
+    name: "Python (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/python-basic-certificate.png
@@ -374,7 +401,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Java (Basic)"
+  - id: hackerrank-java-basic-2024
+    name: "Java (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/java-basic-certificate.png
@@ -384,7 +412,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "CSS (Basic)"
+  - id: hackerrank-css-basic-2024
+    name: "CSS (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/css-basic-certificate.png
@@ -394,7 +423,8 @@ certificates:
     tier: archive
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "C# (Basic)"
+  - id: hackerrank-csharp-basic-2024
+    name: "C# (Basic)"
     issuer: HackerRank
     category: hackerrank
     image: /public/certificates/csharp-basic-certificate.png
@@ -406,7 +436,8 @@ certificates:
     lastUpdated: "2026-05-22"
 
   # ---- Microsoft Career Essentials series (10 — Dec 2024 + Feb 2025; LinkedIn Learning direct URLs) ----
-  - name: "Azure AI Essentials"
+  - id: microsoft-azure-ai-essentials-2025
+    name: "Azure AI Essentials"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/microsoft-azure-ai-essentials-professional-certificate.jpg
@@ -417,7 +448,8 @@ certificates:
     tier: primary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Generative AI Career Skills Fundamentals"
+  - id: microsoft-generative-ai-career-skills-fundamentals-2024
+    name: "Generative AI Career Skills Fundamentals"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/generative-ai-career-skills-fundamentals.jpg
@@ -427,7 +459,8 @@ certificates:
     tier: primary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Software Development"
+  - id: microsoft-software-development-2024
+    name: "Software Development"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/career-essentials-software-development-microsoft-linkedin.jpg
@@ -437,7 +470,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "System Administration"
+  - id: microsoft-system-administration-2024
+    name: "System Administration"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/career-essentials-system-administration-microsoft-linkedin.jpg
@@ -447,7 +481,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Project Management"
+  - id: microsoft-project-management-2024
+    name: "Project Management"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/career-essentials-project-management-microsoft-linkedin.jpg
@@ -457,7 +492,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Cybersecurity"
+  - id: microsoft-cybersecurity-2024
+    name: "Cybersecurity"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/career-essentials-cybersecurity-microsoft-linkedin.jpg
@@ -467,7 +503,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Data Analysis"
+  - id: microsoft-data-analysis-2024
+    name: "Data Analysis"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/career-essentials-data-analysis-microsoft-linkedin.jpg
@@ -477,7 +514,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Business Analysis"
+  - id: microsoft-business-analysis-2024
+    name: "Business Analysis"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/career-essentials-business-analysis-microsoft-linkedin.jpg
@@ -487,7 +525,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Administrative Assistance"
+  - id: microsoft-administrative-assistance-2024
+    name: "Administrative Assistance"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/career-essentials-administrative-assistance-microsoft-linkedin.jpg
@@ -497,7 +536,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Sustainable Tech"
+  - id: microsoft-sustainable-tech-2024
+    name: "Sustainable Tech"
     issuer: Microsoft
     category: microsoft
     image: /public/certificates/career-essentials-sustainable-tech-microsoft-linkedin.jpg
@@ -509,7 +549,8 @@ certificates:
     lastUpdated: "2026-05-22"
 
   # ---- Other (16 — Anthropic ×6 + Google + 9 LinkedIn Learning) ----
-  - name: "Claude Code in Action"
+  - id: anthropic-claude-code-in-action-2026
+    name: "Claude Code in Action"
     issuer: Anthropic
     category: other
     image: /public/certificates/anthropic-claude-code-in-action.jpg
@@ -520,7 +561,8 @@ certificates:
     tier: flagship
     recency: active
     lastUpdated: "2026-09-02"
-  - name: "Claude Code in Action (Aug 2025)"
+  - id: anthropic-claude-code-in-action-2025
+    name: "Claude Code in Action (Aug 2025)"
     issuer: Anthropic
     category: other
     image: /public/certificates/anthropic-claude-code-in-action-2025-08.jpg
@@ -531,7 +573,8 @@ certificates:
     tier: primary
     recency: historical
     lastUpdated: "2026-05-26"
-  - name: "AI Fluency: Framework & Foundations"
+  - id: anthropic-ai-fluency-framework-foundations-2025
+    name: "AI Fluency: Framework & Foundations"
     issuer: Anthropic
     category: other
     image: /public/certificates/anthropic-ai-fluency-framework-and-foundations.jpg
@@ -542,7 +585,8 @@ certificates:
     tier: flagship
     recency: historical
     lastUpdated: "2026-08-26"
-  - name: "Building with the Claude API"
+  - id: anthropic-building-with-the-claude-api-2026
+    name: "Building with the Claude API"
     issuer: Anthropic
     category: other
     image: /public/certificates/anthropic-building-with-the-claude-api.jpg
@@ -553,7 +597,8 @@ certificates:
     tier: flagship
     recency: active
     lastUpdated: "2026-09-02"
-  - name: "Introduction to Model Context Protocol"
+  - id: anthropic-introduction-to-model-context-protocol-2026
+    name: "Introduction to Model Context Protocol"
     issuer: Anthropic
     category: other
     image: /public/certificates/anthropic-introduction-to-model-context-protocol.jpg
@@ -564,7 +609,8 @@ certificates:
     tier: flagship
     recency: active
     lastUpdated: "2026-09-02"
-  - name: "Introduction to Agent Skills"
+  - id: anthropic-introduction-to-agent-skills-2026
+    name: "Introduction to Agent Skills"
     issuer: Anthropic
     category: other
     image: /public/certificates/anthropic-introduction-to-agent-skills.jpg
@@ -575,7 +621,8 @@ certificates:
     tier: flagship
     recency: active
     lastUpdated: "2026-09-02"
-  - name: "Google AI Essentials"
+  - id: google-ai-essentials-2025
+    name: "Google AI Essentials"
     issuer: Google
     category: other
     image: /public/certificates/Google-AI-Essentials.jpg
@@ -586,7 +633,8 @@ certificates:
     tier: primary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "GitHub Professional"
+  - id: github-professional-2024
+    name: "GitHub Professional"
     issuer: GitHub
     category: other
     image: /public/certificates/career-essentials-github-professional-certificate.jpg
@@ -597,7 +645,8 @@ certificates:
     tier: primary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Docker Professional"
+  - id: docker-professional-2025
+    name: "Docker Professional"
     issuer: Docker
     category: other
     image: /public/certificates/docker-foundations-professional-certificate.jpg
@@ -608,7 +657,8 @@ certificates:
     tier: primary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Ubuntu Linux"
+  - id: canonical-ubuntu-linux-2025
+    name: "Ubuntu Linux"
     issuer: Canonical
     category: other
     image: /public/certificates/completion-ubuntu-linux-professional-certificate-canonical.jpg
@@ -619,7 +669,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Anaconda Data Science"
+  - id: anaconda-data-science-2025
+    name: "Anaconda Data Science"
     issuer: Anaconda
     category: other
     image: /public/certificates/completion-anaconda-python-data-science-professional-certificate.jpg
@@ -630,7 +681,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Atlassian Agile"
+  - id: atlassian-agile-2025
+    name: "Atlassian Agile"
     issuer: Atlassian
     category: other
     image: /public/certificates/completion-atlassian-agile-project-management-professional-certificate.jpg
@@ -641,7 +693,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "Machine Learning"
+  - id: wolfram-machine-learning-2025
+    name: "Machine Learning"
     issuer: Wolfram Research
     category: other
     image: /public/certificates/completion-machine-learning-statistical-foundations-wolfram-research.jpg
@@ -651,7 +704,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "JavaScript Foundations"
+  - id: mozilla-javascript-foundations-2025
+    name: "JavaScript Foundations"
     issuer: Mozilla
     category: other
     image: /public/certificates/javascript-foundations-professional-certificate-mozilla.jpg
@@ -662,7 +716,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-22"
-  - name: "C++ Programming Professional"
+  - id: cpp-institute-programming-professional-2025
+    name: "C++ Programming Professional"
     issuer: "C++ Institute (OpenEDG)"
     category: other
     image: /public/certificates/completion-c-programming-professional-certificate-openedgc.jpg
@@ -673,7 +728,8 @@ certificates:
     tier: secondary
     recency: historical
     lastUpdated: "2026-05-26"
-  - name: "Java Foundations Professional"
+  - id: jetbrains-java-foundations-professional-2025
+    name: "Java Foundations Professional"
     issuer: JetBrains
     category: other
     image: /public/certificates/completion-java-foundations-professional-certificate-jetbrains.jpg
@@ -686,7 +742,8 @@ certificates:
     lastUpdated: "2026-05-22"
 
   # ---- Academic (1 — NZ Record of Achievement, the formal Master verification) ----
-  - name: "Master of Applied Computing (Level 9)"
+  - id: nzqa-master-of-applied-computing-2025
+    name: "Master of Applied Computing (Level 9)"
     issuer: "New Zealand Qualifications Authority | Mana Tohu Mātauranga o Aotearoa"
     category: academic
     image: /public/certificates/nzqa-master-of-applied-computing-level-9.jpg
@@ -698,7 +755,8 @@ certificates:
     lastUpdated: "2026-08-26"
 
   # ---- Community / Volunteer (3 — non-technical credentials that humanise the profile) ----
-  - name: "Forward With Her — Winter 2024 Mentor Volunteer Service Certificate"
+  - id: forward-with-her-winter-2024-mentor-certificate-2025
+    name: "Forward With Her — Winter 2024 Mentor Volunteer Service Certificate"
     issuer: "Forward With Her (她行)"
     category: community
     image: /public/certificates/forward-with-her-winter-2024-mentor-certificate.jpg
@@ -711,7 +769,8 @@ certificates:
     # women-in-STEM programme. This is the single-largest source of independently
     # attested mentorship impact in Chan's career (7 of 27 LinkedIn recommendations
     # come from FWH mentees) — see statisticsClaims block + work[id=forward-with-her].
-  - name: "#IAmRemarkable Workshop Participation"
+  - id: iamremarkable-workshop-2026
+    name: "#IAmRemarkable Workshop Participation"
     issuer: Rmrkblty.org
     category: community
     image: /public/certificates/iamremarkable-workshop-2026-participation.jpg
@@ -723,7 +782,8 @@ certificates:
     # in-person by Dr. Mahsa McCauley on 2026-04-07 (She Sharp / iamremarkable.org).
     # Distinct from Chan's role as facilitator of similar workshops; this is the
     # attendee credential.
-  - name: "Southern Cross Round the Bays Auckland 2026 — 8.4km Finisher"
+  - id: round-the-bays-auckland-2026-finisher
+    name: "Southern Cross Round the Bays Auckland 2026 — 8.4km Finisher"
     issuer: Stuff
     category: community
     image: /public/certificates/southern-cross-round-the-bays-auckland-2026.jpg
@@ -874,6 +934,8 @@ publications:
   # PODCASTS CHAN HOSTS — original audio content
   # ============================================================================
   - id: decoding-the-future-podcast
+    # PODCASTS DISCONTINUED (Chan, 2026-07): shown on no surface, the entry stays. See show:; LinkedIn copy and llms.txt still name it (open item).
+    show: { readme: false, site: false, cv: false }
     name: Decoding the Future
     tier: secondary
     recency: historical
@@ -889,6 +951,8 @@ publications:
     meta: { x_brand: { type: podcastShow, role: host } }
 
   - id: future-turing-podcast
+    # PODCASTS DISCONTINUED (Chan, 2026-07): shown on no surface, the entry stays. See show:; LinkedIn copy and llms.txt still name it (open item).
+    show: { readme: false, site: false, cv: false }
     name: Future Turing 未来图灵
     tier: secondary
     recency: historical
@@ -905,6 +969,8 @@ publications:
     meta: { x_brand: { type: podcastShow, role: host } }
 
   - id: praxis-and-pages-podcast
+    # PODCASTS DISCONTINUED (Chan, 2026-07): shown on no surface, the entry stays. See show:; llms.txt still names it (open item).
+    show: { readme: false, site: false, cv: false, linkedin: false }
     name: Praxis and Pages 知行书话
     tier: secondary
     recency: historical
@@ -932,6 +998,8 @@ publications:
   # retained. Do NOT move this back under "PODCASTS CHAN HOSTS" unless the show
   # actually ships — at which point add the real Spotify URL.
   - id: beyond-thirty-concept
+    # PODCASTS DISCONTINUED (Chan, 2026-07): shown on no surface, the entry stays. See show:.
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     name: Beyond Thirty 不止三十 (unlaunched concept)
     tier: archive
     recency: deprecated

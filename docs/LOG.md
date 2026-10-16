@@ -91,3 +91,21 @@ docs/stories/lyzen-website.md (from STATE.md)
 
 ## [2026-10-16] add | Knowledge-base navigation layer
 docs/INDEX.md, docs/LOG.md, .claude/rules/, scripts/README.md, scripts/build-kb-index.mjs, CLAUDE.md rewrite, .gitignore global private patterns
+
+## [2026-10-16] add | show: per-surface visibility field
+schema/profile.schema.json, data/profile/*.yaml, .claude/rules/data-profile.md
+
+## [2026-10-16] add | ids for awards, certificates, productFilms; typed reference fields
+data/profile/30-recognition.yaml, 45-showcase.yaml, 60-network.yaml, 70-linkedin.yaml, 80-events.yaml, scripts/validate.mjs
+
+## [2026-10-16] add | lint-kb: leak, reference, context and provenance checks
+scripts/lint-kb.mjs, package.json
+
+## [2026-10-16] change | org context strings generated from work[] dates
+data/profile/60-network.yaml, scripts/lib/org-context.mjs, scripts/build.mjs
+
+## [2026-10-16] fix | GAVIGO org context end date Oct 2026; CORDE org context end date Oct 2024
+data/profile/60-network.yaml, README.md, llms.txt, llms-full.txt
+
+## [2026-10-16] add | metric source/asOf in the schema; backfill queued in data/_intake
+schema/profile.schema.json, .claude/rules/data-profile.md

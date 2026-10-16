@@ -15,7 +15,8 @@
 # This block holds LinkedIn-specific narrative/curation copy. Drift-prone FACTS
 # are injected by the generator from the canonical main sections above and must
 # NOT be duplicated here: languages; banner name/headline/pronouns; honorsAndAwards
-# title/issuer/issueDate/links (per-honor, via _sourceAward markers); single-
+# title/issuer/issueDate/links (per-honor, via _sourceAward markers, which name
+# the award by awards[].id: { id, fields } or a bare id string); single-
 # position experience title+dateRange; volunteering Forward-with-Her dateRange;
 # education dateRange/credentialId/grade; certificate issued+credentialUrl;
 # and the 3 derivable project dateRanges. The check-linkedin-sync.mjs guard
@@ -1575,7 +1576,7 @@ linkedin:
 
         Same award, second year, a different cohort — and the part I care about is that the first-timers left with something running.
       _sourceAward:
-        awarder: Aotearoa AI Hackathon Festival 2026 (AUT, She Sharp, AI Forum NZ, Fisher & Paykel Healthcare)
+        id: outstanding-mentor-award-2026
         fields:
           - issueDate
     - title: Outstanding Mentor Award - AI Hackathon Festival 2025
@@ -1598,7 +1599,7 @@ linkedin:
 
         Worked alongside teams tackling real problems — food insecurity, digital accessibility, workforce upskilling, and indigenous environmental stewardship — giving each the technical depth to ship something demonstrable by the deadline.
       _sourceAward:
-        awarder: AI Hackathon Festival 2025 (AI Forum NZ, She Sharp, AUT)
+        id: outstanding-mentor-award-2025
         fields:
           - issueDate
     - title: Outstanding Performer — UN Women FemTech Hackathon 2025
@@ -1612,7 +1613,7 @@ linkedin:
 
         Competed as an independent developer, contributing innovative solutions to women's health challenges in professional environments and standing out in a field built around team entries. The recognition reflected both the technical quality of the build and its real-world fit for the workplace-health brief that the hackathon set.
       _sourceAward:
-        awarder: FemTech Weekend (Beijing)
+        id: un-women-femtech-hackathon-outstanding-performer-2025
         fields:
           - issueDate
     - associatedWith: Sanicle
@@ -1637,7 +1638,7 @@ linkedin:
         - https://www.unwomen.org/en/how-we-work/commission-on-the-status-of-women
         - https://www.unwomen.org/en/how-we-work/commission-on-the-status-of-women/csw69-2025
       _sourceAward:
-        awarder: United Nations Headquarters, New York
+        id: un-csw69-speaker-2025
         fields:
           - title
           - issuer
@@ -1652,7 +1653,7 @@ linkedin:
 
         The recognition came during the Master of Applied Computing programme, alongside full-time engineering work — evidence of sustained academic performance maintained in parallel with shipping production software.
       _sourceAward:
-        awarder: Lincoln University, Faculty of Environment, Society & Design
+        id: deans-list-top-5-percent-2025
         fields:
           - issuer
           - issueDate
@@ -1670,7 +1671,7 @@ linkedin:
         Entries were judged on product potential, technical innovation, commercial viability, and team collaboration by a panel of industry experts and Chengdu Regional Science and Technology Consulting Co., Ltd.
 
         This is the same FemTech Weekend organisation later joined as CTO in March 2025 — the award preceded and directly informed that subsequent leadership engagement.
-      _sourceAward: FemTech China
+      _sourceAward: femtech-china-excellence-award-2024
     - associatedWith: Lincoln University (NZ)
       issuer: Lincoln University (Te Whare Wānaka o Aoraki)
       onLiveProfile: true
@@ -1684,7 +1685,7 @@ linkedin:
 
         Distinction is the programme's highest classification, marking consistent top-tier performance across advanced computing coursework and research rather than a single strong result.
       _sourceAward:
-        awarder: Lincoln University, New Zealand
+        id: master-of-applied-computing-distinction-2024
         fields:
           - title
           - issueDate

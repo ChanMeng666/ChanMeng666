@@ -425,9 +425,7 @@ meta:
     # MCP servers rather than under craft. echook follows: the second-most-starred
     # project in the portfolio (88★, behind google-news-mcp at 129; 2026-10-15).
     # Order = display order.
-    # 2026-10-08 (Chan): server-google-jobs REMOVED from the README: a second MCP
-    # server beside Google News repeats it, so only Google News is shown. It keeps
-    # its llms narrative through llmsOnlyOpenSourceIds. Do not re-add.
+    # 2026-10-08 (Chan): server-google-jobs off the README, keeps its llms narrative (its show:; lint-kb fails on a hidden id in a bucket).
     aiAgentProjectIds:         [echook, google-news-mcp, ai-programming-teaching-project, a11y-loop]
     # Open source with a full llms.txt / llms-full.txt entry but NO README table
     # row of its own (already visible as a "↳ Related" link on a card above).
@@ -448,21 +446,11 @@ meta:
     # 2026-10-07 (Chan): the README's banners and pills are no longer rendered by
     # gradient-svg-generator (they are files in public/readme), and the credit
     # captions that pointed at this row are gone.
-    # 2026-10-07 (Chan), same day: gradient-svg-generator REMOVED from this bucket
-    # and from every other surface a visitor reads (both CVs' "Also built" line,
-    # the extended CV tile, chanmeng.org). Her reason is in docs/STATE.private.md.
-    # The repo stays public and maintained; it stays in the LLM narrative through
-    # llmsOnlyOpenSourceIds. Do not re-add it to a display bucket.
-    # 2026-10-07 (Chan): sunostats / Seismophone REMOVED. It is pending archive: the
-    # site stays online for now, but it must not appear on the README, chanmeng.org,
-    # any CV or LinkedIn copy.
-    # Do not re-add it here or to any other display bucket.
-    # 2026-10-07 (Chan): css-tower-defense / Te Pa Tiaki REMOVED — repo archived and
-    # deployment retired the same day. Do not re-add.
-    # 2026-10-08 (Chan): github-readme-suno-cards REMOVED: the "Sound I make" block
-    # already shows the cards with a credit line to the project, which is its
-    # showing. It keeps its llms narrative through llmsOnlyOpenSourceIds. The
-    # bucket is empty, so the "Craft & products" table no longer renders.
+    # 2026-10-07 (Chan): gradient-svg-generator off every visitor-facing surface, keeps its llms narrative (its show:).
+    # 2026-10-07 (Chan): sunostats / Seismophone off every visitor-facing surface, pending archive (its show:).
+    # 2026-10-07 (Chan): css-tower-defense / Te Pa Tiaki off the README, archived (its show:).
+    # 2026-10-08 (Chan): github-readme-suno-cards off the README: the "Sound I make" cards and credit line are its showing (its show:).
+    # The bucket is empty, so the "Craft & products" table no longer renders. lint-kb fails on a hidden id in any bucket.
     openSourceCraftProjectIds: []
     # Overflow buckets — intentionally empty (see curation note above).
     moreAiAgentProjectIds:        []

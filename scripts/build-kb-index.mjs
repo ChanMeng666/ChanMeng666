@@ -88,6 +88,7 @@ const NPM_GROUP = {
   calendar: "build",
   validate: "check",
   audit: "check",
+  "lint:kb": "check",
   "refresh-metrics": "sync-capture",
   reviewed: "edit-helper",
 };

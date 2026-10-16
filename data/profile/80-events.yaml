@@ -11,15 +11,17 @@
 # Purpose: a running log of braggable offline appearances so that at year-end an
 # AI reading this database can generate summaries and personal-brand copy, and so
 # every public-facing surface can cite where Chan showed up. Entries CROSS-REFER
-# awards[]/work[]/projects[] (relatedAwardTitle / relatedWorkId / relatedProjectId)
-# rather than duplicating their prose.
+# awards[]/work[]/volunteer[]/projects[] by id (relatedAwardId / relatedWorkId /
+# relatedVolunteerId / relatedProjectId) rather than duplicating their prose.
+# Every reference is resolved by scripts/lint-kb.mjs.
 #
 # Field template:
 #   id, name, role (Speaker|Panelist|Mentor|Judge|Instructor|Organizer|Attendee|MC),
 #   type (talk|panel|hackathon|workshop|conference|community|award|media),
 #   date ("YYYY-MM-DD"), endDate (optional), location, organizer, url,
 #   keywords[], photos[] ({src, alt, caption}), summary (| block), tier, recency,
-#   lastUpdated, optional relatedAwardTitle / relatedWorkId / relatedProjectId.
+#   lastUpdated, optional relatedAwardId / relatedWorkId / relatedVolunteerId /
+#   relatedProjectId.
 #
 # PHOTOS. `photos[].src` points at /public/photos/events/, named
 # YYYY-MM-DD-<event-slug>-<what>.jpg. scripts/audit-assets.mjs HARD-FAILS (exit 1)
@@ -60,7 +62,7 @@ events:
       - FemTech
       - public speaking
       - women's health
-    relatedAwardTitle: "UN CSW 69 Speaker — Beyond Beijing 30 Conference"
+    relatedAwardId: un-csw69-speaker-2025
     relatedWorkId: sanicle
     # The photo below was in the repo the whole time — `public/articles/` rather
     # than `public/photos/`, because it entered as the image for the FemTech
@@ -121,7 +123,7 @@ events:
       - mentorship
       - AI for good
       - UN SDGs
-    relatedAwardTitle: "Outstanding Mentor Award"
+    relatedAwardId: outstanding-mentor-award-2025
     relatedProjectId: ai-hackathon-assistant
     photos:
       - src: /public/photos/chan-keynote-ai-hackathon-2025.jpg
@@ -176,7 +178,7 @@ events:
       - AI for good
       - UN SDGs
     relatedWorkId: she-sharp
-    relatedAwardTitle: "Outstanding Mentor Award (2026)"
+    relatedAwardId: outstanding-mentor-award-2026
     relatedProjectId: ai-hackathon-assistant
     photos:
       - src: /public/photos/events/2026-08-07-aotearoa-ai-hackathon-festival-mc-opening.jpg
@@ -609,7 +611,7 @@ events:
       - mentorship
       - women in STEM
       - AI programming
-    relatedWorkId: forward-with-her-mentor
+    relatedVolunteerId: forward-with-her-mentor
     relatedProjectId: ai-programming-teaching-project
     summary: |
       Served as a Technology & Professional Development Mentor in a 360+-mentor,

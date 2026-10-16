@@ -30,13 +30,14 @@ Derived from current membership 2026-10-16; Chan may overrule.
 - `tier: flagship` is auto-selected into `public/cv-llms.txt` (`docs/STATE.md`, GenLAB row). A hidden project never gets that tier.
 
 ## Ids that must not return to a display bucket
-- `server-google-jobs` (`:428-430`), `gradient-svg-generator` (`:451-455`, and `21-projects-oss-primary.yaml` guard above its entry), `sunostats` (`:456-459`), `css-tower-defense` (`:460-461`).
-- `github-readme-suno-cards` left on 2026-10-08 (`:462-465`); it stays off the README (`docs/STATE.md`).
-- `genlab-career-academy`: no bucket, never flagship (guard above its entry in `23`). `lyzen-website`: not shown (guard above its entry in `22`).
-- The four `*-mv` music-video projects: no card, no bucket (`docs/STATE.md`, Music videos row).
+- Every project with `show.readme: false`: `server-google-jobs`, `github-readme-suno-cards`, `gradient-svg-generator`, `sunostats`, `css-tower-defense`, `lyzen-website`, `genlab-career-academy` and the four `*-mv` music-video projects (2026-10-16). `npm run lint:kb` fails when one of them is in any `*ProjectIds` bucket.
+- `genlab-career-academy` also never gets `tier: flagship`: the lint fails on flagship with `show.cv` or `show.llms` false.
+- A project that left the README but keeps its llms narrative has `show: { readme: false, llms: true }` and must be in `llmsOnlyOpenSourceIds` (the lint checks both).
+- What `show:` means per surface and each surface's default: `.claude/rules/data-profile.md` § Display.
 
 ## Cards and partner logos
 - The partner-logo line on a card comes from `organizations[].meta.x_brand.relatedProjectId`, not `projects[].clientOrgId` (`90-meta.yaml:396-401`). The org's `logo:` file must exist, or the card silently falls back to prose. Several orgs may name one project; they render in `60-network.yaml` file order.
+- **Org `context`** (the text after the org name on that line, llms.txt, llms-full.txt, `dist/profile.json`): `context: auto` is generated from the related work/volunteer/education entry as "<contextTitle or position> (<Mon YYYY> — <Mon YYYY|Present>)" (`scripts/lib/org-context.mjs`); put a short curated title in `contextTitle`, never the dates. A hand-written `context` is prose only, and `npm run lint:kb` fails on a hand-written title + date string.
 - A project with an animated card prints no description beside it; one without a card keeps its text (`docs/STATE.md`; `templates/partials/project-cards.hbs:30-34`).
 - A project shown on chanmeng.org shows its film or its animated card, never a still alone; if it has neither, a card gets made (`docs/STATE.md`). Card rules: `.claude/rules/readme-art.md`.
 - "Featured by" / "Listed on" lines come from `meta.x_brand.proofStrips`, each backed by a row in that project's `reach` register (`docs/STATE.md`).

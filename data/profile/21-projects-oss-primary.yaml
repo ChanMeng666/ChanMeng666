@@ -13,6 +13,8 @@ projects:
   # ------- OPEN SOURCE — PRIMARY (visible in the table by default) -------
   - id: github-readme-suno-cards
     provenance: personal
+    # OFF THE README (Chan, 2026-10-08): the "Sound I make" cards and their credit line are its showing; keeps its llms narrative. See show:.
+    show: { readme: false, llms: true }
     tier: primary
     recency: active
     meta:
@@ -526,6 +528,8 @@ projects:
 
   - id: server-google-jobs
     provenance: personal
+    # OFF THE README (Chan, 2026-10-08): Google News is the one MCP server shown; keeps its llms narrative. See show:.
+    show: { readme: false, llms: true }
     tier: primary
     recency: recent
     lastUpdated: "2026-09-18"
@@ -868,10 +872,8 @@ projects:
     # (public/readme, `npm run build:art`), and the credit captions are gone.
     # Do NOT write that it powers this profile, on any surface. Her other
     # project READMEs still embed it.
-    # DISPLAY RULE, same day (Chan): off every visitor-facing surface — README,
-    # all three CVs, LinkedIn copy, chanmeng.org. It stays in the database and
-    # in the LLM narrative (meta.x_brand.llmsOnlyOpenSourceIds). The repo is
-    # public and maintained, not archived. Do not re-add it to a display list.
+    # OFF EVERY VISITOR-FACING SURFACE (Chan, 2026-10-07), keeps the llms narrative (llmsOnlyOpenSourceIds); repo stays public. See show:.
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: true }
     tier: primary
     recency: active
     meta:

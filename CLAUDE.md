@@ -62,6 +62,9 @@ when you touch matching files.
 - Some entries are recorded but kept off visitor-facing surfaces. Each has a
   guard comment above it: read it before touching a display list, a CV or
   LinkedIn copy, and never act against it.
+- `show:` is the per-surface visibility declaration (readme, site, cv,
+  linkedin, llms). A guard comment is the reminder, `show:` the fact,
+  `npm run lint:kb` the gate.
 
 Area rules, loaded by path:
 
@@ -69,7 +72,7 @@ Area rules, loaded by path:
 |---|---|
 | `.claude/rules/data-profile.md` | all shards: ids, references, guards, provenance |
 | `.claude/rules/projects.md` | shards 20–23, 60, 90: shard choice, README buckets, cards, partner logos |
-| `.claude/rules/recognition-linkedin.md` | shards 30, 70, 80: awards by title, LinkedIn injected facts |
+| `.claude/rules/recognition-linkedin.md` | shards 30, 70, 80: awards by id, LinkedIn injected facts |
 | `.claude/rules/readme-art.md` | cards, banners, pills, templates |
 | `.claude/rules/cv.md` | `cv/`: fact copies, Typst traps, site sync steps |
 | `.claude/rules/registers.md` | `x/`, `linkedin/`, `suno/`, `youtube/`, `distribution/` |
@@ -77,7 +80,8 @@ Area rules, loaded by path:
 ## Workflow
 
 - Edit the shard, run `npm run check`, commit the shard and the regenerated
-  outputs together. `npm run validate` is the quick schema and reference pass.
+  outputs together. `npm run validate` is the quick schema and id pass;
+  `npm run lint:kb` checks references, `show:` leaks and metric provenance.
 - Not part of `npm run build`, run by hand when their inputs change:
   `npm run build:cards`, `npm run build:art`, `npm run build:distribution`,
   `pwsh cv/build.ps1`, the platform syncs.

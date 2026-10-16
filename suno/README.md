@@ -61,4 +61,4 @@ Also:
 The capture method comes from Chan's Suno probe (the local checkout of
 github-readme-suno-cards; its API reference is not in the public repo). If Suno changes the
 shape of its responses, the probe will have seen it first: read `docs/agents/current-state.md`
-there before changing `scripts/capture-suno.mjs`.
+in that checkout (not in this repo) before changing `scripts/capture-suno.mjs`.

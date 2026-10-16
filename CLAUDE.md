@@ -6,23 +6,36 @@ merged in filename order by `scripts/lib/load-profile.mjs`) plus
 `linkedin/linkedin-*.md`, `linkedin/linkedin-profile.json`, `public/cv-llms.txt`,
 `public/cv.jsonld`, `cv/tokens.typ`, `cv/exports/*.{docx,txt}` and the platform
 registers (`*/posts.yaml`, `suno/songs.yaml`, `suno/words.yaml`) are
-**generated**: edit the source, then build. Scripts and what they do:
-`package.json`.
+**generated**: edit the source, then build.
 
 **Read `docs/STATE.md` first**: what Chan has decided and which projects must
 not be shown where. Its candid half is the gitignored `docs/STATE.private.md`.
-This repo is public: nothing from a `*.private.*` file goes into a tracked file,
-a commit message or generated output, and tracked wording states decisions, not
-motives.
+This repo is public: nothing from a `*.private.*` file or a `_private/`
+directory goes into a tracked file, a commit message or generated output, and
+tracked wording states decisions, not motives.
 
-## Workflow
+## Always read
 
-Edit the shard, run `npm run check`, commit the shard and the regenerated
-outputs together. Find an entry with `grep -rn "id: <slug>" data/profile/`.
+1. `CLAUDE.md` (this file): hard rules and pointers.
+2. `docs/STATE.md`: decisions and display rules.
+3. `docs/INDEX.md`: the generated map of every source, doc, register and script,
+   with when to read each. Scripts in detail: `scripts/README.md`.
 
-Not part of `npm run build`, run by hand when their inputs change:
-`npm run build:cards`, `npm run build:art`, `npm run build:distribution`,
-`pwsh cv/build.ps1`, the platform syncs.
+`docs/LOG.md` is the chronology: what changed, when. Everything else is read on
+demand through the index. Area rules load by themselves from `.claude/rules/`
+when you touch matching files.
+
+## Knowledge base layout
+
+- **Raw sources**, immutable: `evidence/`, `*/capture/latest.json`, screenshots,
+  and the local-only `docs/stories/_private/`. Never edit or move them.
+- **Knowledge**, edited by hand or by an agent: the shards, `data/brand.yaml`,
+  `docs/stories/*.md`, `docs/ecosystem/lineage.yaml`, the hand-kept register
+  files (`account.yaml`, `curation.yaml`, `youtube/channel.yaml`,
+  `distribution/plan.yaml`), the hand-written CV `.typ` files.
+- **Derived**, generated: everything in the first paragraph above. Never edit it.
+
+## Data map + cross-reference rules
 
 | Shard | Top-level keys |
 |---|---|
@@ -40,16 +53,48 @@ Not part of `npm run build`, run by hand when their inputs change:
 | `80-events` | events |
 | `90-meta` | meta (`meta.x_brand` holds the README display buckets) |
 
-Some entries are recorded but kept off visitor-facing surfaces. Each has a guard
-comment above it: read it before touching a display list, a CV or LinkedIn copy.
+- `docs/INDEX.md` is the generated map of what each shard and doc holds.
+- Ids are kebab-case slugs, unique within their list. One slug names one real
+  thing in every list it appears in, so a reference means that id in the list
+  its field names. Every cross-reference field, and what it points to, is listed
+  in `.claude/rules/data-profile.md`.
+- Find an entry with `grep -rn "id: <slug>" data/profile/`.
+- Some entries are recorded but kept off visitor-facing surfaces. Each has a
+  guard comment above it: read it before touching a display list, a CV or
+  LinkedIn copy, and never act against it.
+
+Area rules, loaded by path:
+
+| File | Covers |
+|---|---|
+| `.claude/rules/data-profile.md` | all shards: ids, references, guards, provenance |
+| `.claude/rules/projects.md` | shards 20–23, 60, 90: shard choice, README buckets, cards, partner logos |
+| `.claude/rules/recognition-linkedin.md` | shards 30, 70, 80: awards by title, LinkedIn injected facts |
+| `.claude/rules/readme-art.md` | cards, banners, pills, templates |
+| `.claude/rules/cv.md` | `cv/`: fact copies, Typst traps, site sync steps |
+| `.claude/rules/registers.md` | `x/`, `linkedin/`, `suno/`, `youtube/`, `distribution/` |
+
+## Workflow
+
+- Edit the shard, run `npm run check`, commit the shard and the regenerated
+  outputs together. `npm run validate` is the quick schema and reference pass.
+- Not part of `npm run build`, run by hand when their inputs change:
+  `npm run build:cards`, `npm run build:art`, `npm run build:distribution`,
+  `pwsh cv/build.ps1`, the platform syncs.
+- Multi-entry edits that need Chan's per-entry review are staged in
+  `data/_intake/{topic}-wave-{N}-{YYYY-MM}.md` first.
+- **Log.** Every change that alters a decision, a fact or a display rule, or
+  adds or removes an entry, appends one line to `docs/LOG.md` in the same
+  commit, in the format its header gives.
 
 ## Rules the gates do not enforce
 
 - **Facts live in four places.** The shards; `cv/sections/*.typ` (hand-written);
-  `70-linkedin.yaml` (titles and narrative are hand-written, dates are
-  injected); `cv/chan-meng-cv-ats.typ` (its own copy on purpose). Changing a
-  title, date, metric or award in one is not done until the other three agree.
-  Use the `career-copy` skill for any copy change.
+  `70-linkedin.yaml` (titles and narrative hand-written, dates injected);
+  `cv/chan-meng-cv-ats.typ` (its own copy on purpose). Changing a title, date,
+  metric or award in one is not done until the other three agree. More
+  unchecked copies: `.claude/rules/cv.md`. Use the `career-copy` skill for any
+  copy change.
 - **Reach counts show their historical maximum** on every surface
   (recommendations, followers, subscribers, stars; Chan, 2026-09-24). Raise
   when the live number is higher, never lower. Word it so the maximum is true
@@ -61,40 +106,13 @@ comment above it: read it before touching a display list, a CV or LinkedIn copy.
   public.
 - **No pricing or cost framing** in project narratives. No commit counts or
   solo percentages in README-facing copy.
-- **README visuals are files in this repo or Chan's own live tools**
-  (github-visitor-counter, github-readme-suno-cards). No third-party badges.
-  gradient-svg-generator is not embedded: do not bring it back.
-- **Both GitHub canvases.** The only real failure is ink on transparency. An
-  asset with its own background plate is fine; render before calling anything
-  broken (`docs/github-theme-aware-assets.md`).
-- **The partner-logo line on a project card comes from the organisation**:
-  `organizations[].meta.x_brand.relatedProjectId`, not `projects[].clientOrgId`.
-  The org's `logo:` file must exist or the card silently falls back to prose.
-  Several orgs may name one project; they render in file order, so the order
-  in `60-network.yaml` matters.
-- **Taking a project off the README can drop it from llms.txt.** The LLM
-  narrative block is derived from the README buckets. To keep the narrative,
-  add the id to `meta.x_brand.llmsOnlyOpenSourceIds`.
-- **`provenance`** is the project's origin (client, personal, coursework,
-  bootcamp, hackathon), judged from evidence. A shut-down project is
-  `status: archived` + `recency: deprecated`, not a provenance.
-- **`dist/video-data.json`**: each fact is a regex over a metric's prose and the
-  build fails when it stops matching. Fix the rule or the claim; never loosen
-  the regex. `\b` is ASCII-only, so it never matches after te reo or 中文.
-- **`check:cv` is not comment-aware.** Never write `role-line` followed by `(`
-  inside a comment in a CV `.typ` file.
-- A LinkedIn title that differs from `work[].position` on purpose needs
-  `_titleCurated: true`.
-- Multi-entry edits that need Chan's per-entry review are staged in
-  `data/_intake/{topic}-wave-{N}-{YYYY-MM}.md` first.
+- **Never name the venue of the paper under review.**
 
 ## CVs
 
 `pwsh cv/build.ps1` (needs typst) builds the two-page CV, the 22-page extended
-CV and the ATS resume. The ATS PDF in `cv/exports/` is the default upload, the
-`.docx` the fallback, the `.txt` for paste-in fields; `cv/exports/` is never
-web-served. Hard rules and layout pitfalls: `cv/README.md`,
-`cv/TYPST_PITFALLS.md`.
+CV and the ATS resume. Rules: `cv/README.md`, `cv/TYPST_PITFALLS.md`,
+`.claude/rules/cv.md`.
 
 **A rebuild is not finished until the site is synced.** Copy
 `public/chan-meng-cv.pdf` and `public/chan-meng-cv-extended.pdf` (only those) to
@@ -104,31 +122,19 @@ the bump Cloudflare serves the old CV for hours and it looks fine.
 
 ## README art
 
-- **Project cards** (`public/cards/<id>.svg`, from `scripts/cards/<id>.mjs`):
-  read `docs/animated-svg-cards.md` before making or changing one. A card is
-  drawn in the product's own design system; nothing on it is drawn by hand
-  (compile it, quote it, or cut it from the film or the live site); copy comes
-  from an already-cleared source. A card whose outside inputs are missing is
-  skipped and its committed SVG stands. That doc is also a published blog post:
-  edit the file first, then republish.
-- **Banners and pills** (`public/readme/`): listed in
-  `data/brand.yaml › signatures.readmeArt`, drawn in this profile's Caldera
-  system. A pill's label must be the exact text the README shows.
+Read `docs/animated-svg-cards.md` before making or changing a project card.
+Cards, banners, pills and templates: `.claude/rules/readme-art.md`. README
+visuals are this repo's own files or Chan's own live tools: no third-party
+badges.
 
 ## Platforms, repos, hosting
 
-- **X, LinkedIn (profile and the ArchCanvas page), Suno, YouTube** are recorded
-  as registers in `x/`, `linkedin/`, `suno/`, `youtube/`. Read the register
-  before answering anything about a platform; bring one up to date with the
-  `x-sync`, `linkedin-sync` or `suno-sync` skill. What is posted there is
-  Chan's to change: ask first.
-- **Film distribution** (which film is published where, and the posting
-  calendar): `distribution/`. Read `distribution/README.md` before answering
-  what is due, drafting a post or publishing one; edit only `plan.yaml`, then
-  `npm run calendar`, which also merges the ArchCanvas calendar into the local
-  `master-calendar.md`. Publishing goes through her Chrome only after she has
-  approved the exact text and said yes for that post. Draft text, staged video
-  files and the master calendar are local and gitignored.
+- **Registers** for X, LinkedIn (profile and the ArchCanvas page), Suno and
+  YouTube are in `x/`, `linkedin/`, `suno/`, `youtube/`; film distribution is in
+  `distribution/`. Read the register before answering anything about a
+  platform. What is posted there is Chan's to change: ask first.
+- **Posting through Chrome** happens only after Chan has approved the exact
+  text and said yes for that post.
 - **Repo lineage**: `docs/ecosystem/lineage.yaml` (sensitive repos only in the
   gitignored `lineage.private.yaml`). When a repo is created, archived,
   renamed, transferred or deleted, update it and run
@@ -136,11 +142,11 @@ the bump Cloudflare serves the old CV for hours and it looks fine.
   are Chan's judgement: never fill them in for her.
 - **Repo and hosting operations**: `docs/operations/README.md` (specifics in the
   gitignored `hosting.private.md`). Chan decides, through the triage page
-  (`node scripts/build-triage-page.mjs`), with nothing preselected. Delete a
-  repo only after a second confirmation. Never delete the Coolify deploy SSH
-  key; keep the Eatropolis deploy token; take no action on client-org billing.
-  npm publishing needs her browser auth: prepare the package, she publishes.
-  Never name the venue of the paper under review.
+  (`node scripts/build-triage-page.mjs`), with nothing preselected.
+  - Delete a repo only after a second confirmation.
+  - Never delete the Coolify deploy SSH key. Keep the Eatropolis deploy token.
+  - Take no action on client-org billing.
+  - npm publishing needs her browser auth: prepare the package, she publishes.
 - **chanmeng.org** is the separate repo `D:/github_repository/2d-portfolio`.
   Changing which film a product shows means editing `productFilms` and the site
   in the same piece of work.

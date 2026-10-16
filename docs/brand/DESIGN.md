@@ -14,7 +14,7 @@ This system serves four cross-surface needs:
 
 - **GitHub README** — the canonical landing page. Markdown + own-decoration SVGs only (the banners and pills are files in this repo, `public/readme/`, built by `npm run build:art`).
 - **CV** — print-tuned Typst PDF + JSON-LD + agent-readable text. "Tuned-for-print" Caldera: compact ultrabold name/headers, orange accent rules, recruiter/ATS-safe density.
-- **Web** — future personal site at `chanmeng.org`. Consumes `dist/brand/tokens.json` (or the Caldera-format `design-tokens.json` / `theme.css`) as its source of truth.
+- **Web** — the personal site at `chanmeng.org` (live). Consumes `dist/brand/tokens.json` (or the Caldera-format `design-tokens.json` / `theme.css`) as its source of truth.
 - **Social/Newsletter** — single-screen surfaces (LinkedIn services cards, newsletter headers, share images).
 
 The brand is a **pixelated cyber-playground**: a muted basalt-grey canvas backdrops vivid pixelated orange/violet forms and ultra-bold compact display type. Cards and buttons use generous rounded corners for a friendly, toy-like solidity. Color is used sparingly for impact; hierarchy comes from **solid color blocks**, and the system stays **flat** — no shadows, no elevation gradients. Every change should make the system *smaller*, not bigger.

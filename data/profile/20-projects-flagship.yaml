@@ -4,14 +4,14 @@
 # Shard of Chan Meng's profile data. Top-level keys: projects.
 # All data/profile/*.yaml shards are merged (in filename order) by
 # scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
-# After editing: npm run check. Data map + cross-reference rules: CLAUDE.md.
+# After editing: npm run check. Data map: docs/INDEX.md. Cross-reference rules:
+# CLAUDE.md § Data map + cross-reference rules.
 # NOTE: the projects list continues across shards 20→23 (concatenated in
 # filename order by the loader).
 # =============================================================================
 
 # =============================================================================
 # PROJECTS — flagship (priority 1-4) + open source (priority 5+)
-# Phase 2 will fill `narrative.*` for the four flagships one at a time.
 # =============================================================================
 projects:
   # ------- FLAGSHIP -------

@@ -448,7 +448,7 @@ template at the very bottom of this file.
 
 > **Future upgrade (documented, not built):** promote the operating data — pillar
 > tags, per-post performance, monthly-review rows, the account-types watchlist — into
-> a proper profile shard at `data/profile/75-x.yaml`, merged by the loader like every
+> a proper profile shard at `data/profile/75-x.yaml` (a proposal, not yet adopted), merged by the loader like every
 > other shard and surfaced on the profile/LLM surfaces the same way. Until then, this
 > markdown file *is* the shard: hand-curated, version-controlled, reviewed monthly.
 > When 75-x.yaml is built, this doc becomes its prose companion (the way

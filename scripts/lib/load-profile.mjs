@@ -8,7 +8,7 @@
 //     (e.g. refresh-github-metrics.mjs) keep working on individual shards.
 //   - If the same top-level key appears in multiple shards and both values
 //     are arrays, they are concatenated in shard order (this is how the
-//     `projects` list spans 20-/21-/22-projects-*.yaml). Any other collision
+//     `projects` list spans 20-/21-/22-/23-projects-*.yaml). Any other collision
 //     is an error: shards must not silently overwrite each other.
 //
 // Provenance is tracked per top-level key (and per array segment) so that
@@ -30,7 +30,7 @@ export function listShardFiles() {
   if (!fs.existsSync(PROFILE_DIR)) {
     throw new Error(
       `Profile shard directory missing: ${PROFILE_DIR}\n` +
-        `Expected data/profile/*.yaml (see CLAUDE.md "Data map").`
+        `Expected data/profile/*.yaml (data map: docs/INDEX.md; cross-reference rules: CLAUDE.md § Data map + cross-reference rules).`
     );
   }
   return fs

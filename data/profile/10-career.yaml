@@ -4,12 +4,12 @@
 # Shard of Chan Meng's profile data. Top-level keys: work, volunteer, education.
 # All data/profile/*.yaml shards are merged (in filename order) by
 # scripts/lib/load-profile.mjs and validated against schema/profile.schema.json.
-# After editing: npm run check. Data map + cross-reference rules: CLAUDE.md.
+# After editing: npm run check. Data map: docs/INDEX.md. Cross-reference rules:
+# CLAUDE.md § Data map + cross-reference rules.
 # =============================================================================
 
 # =============================================================================
 # WORK — career roles, in chronological-relevance order (most recent first).
-# Phase 3 will fill in `narrative.*` for each role one at a time.
 # =============================================================================
 work:
   - id: archcanvas

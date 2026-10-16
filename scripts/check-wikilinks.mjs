@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Check every [[wikilink]] in the tracked markdown under docs/ (stories and answers included,
+// Check every `[[wikilink]]` in the tracked markdown under docs/ (stories and answers included,
 // `_private/` never read) and warn about orphan story files.
 //
 // A link resolves when it is either

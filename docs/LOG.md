@@ -112,3 +112,9 @@ schema/profile.schema.json, .claude/rules/data-profile.md
 
 ## [2026-10-16] add | wiki view (build:wiki, gitignored), wikilink check, docs/answers
 scripts/build-wiki.mjs, scripts/check-wikilinks.mjs, docs/answers/, docs/stories/README.md, .gitignore, package.json
+
+## [2026-10-16] add | project hooks: guard generated files, validate after shard edits; CI runs lint-kb and wikilink check
+.claude/settings.json, .claude/hooks/, .github/workflows/validate-data.yml, CLAUDE.md
+
+## [2026-10-16] fix | wikilink check no longer trips on the `[[wikilink]]` example the index copies from its header
+scripts/check-wikilinks.mjs, docs/INDEX.md

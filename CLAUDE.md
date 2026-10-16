@@ -90,6 +90,8 @@ Area rules, loaded by path:
   `pwsh cv/build.ps1`, the platform syncs.
 - Multi-entry edits that need Chan's per-entry review are staged in
   `data/_intake/{topic}-wave-{N}-{YYYY-MM}.md` first.
+- **Hooks.** Project hooks in `.claude/settings.json` block edits to generated
+  files and run `npm run validate` after a shard edit (`.claude/hooks/README.md`).
 - **Log.** Every change that alters a decision, a fact or a display rule, or
   adds or removes an entry, appends one line to `docs/LOG.md` in the same
   commit, in the format its header gives.

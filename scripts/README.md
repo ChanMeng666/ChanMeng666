@@ -40,7 +40,7 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `check-freshness.mjs` | Staleness budget / review-SLA checker for the profile data. | `npm run check:freshness` | npm |
 | `check-linkedin-sync.mjs` | Drift guard for the LinkedIn data store. | `npm run validate` | npm |
 | `check-links.mjs` | Link-liveness checker for every URL in the data/profile/*.yaml shards. | `npm run check:links` | npm |
-| `check-wikilinks.mjs` | Check every [[wikilink]] in the tracked markdown under docs/ (stories and answers included, `_private/` never read) and warn about orphan story files. | `npm run check:wikilinks` | npm |
+| `check-wikilinks.mjs` | Check every `[[wikilink]]` in the tracked markdown under docs/ (stories and answers included, `_private/` never read) and warn about orphan story files. | `npm run check:wikilinks` | npm |
 | `check-youtube-banner-safe.mjs` | Assert the YouTube banner keeps every visible element inside the all-device safe area. | `node scripts/check-youtube-banner-safe.mjs` | run by hand; named in `youtube/README.md` |
 | `export-linkedin-cards.mjs` | Render the LinkedIn brand surfaces (testimonial cards, profile cover, Featured CTA cards) to PNG. | `node scripts/export-linkedin-cards.mjs` | named in code: `og-covers/render.mjs`, `og-covers/template.mjs` |
 | `export-x-header.mjs` | Render the X (Twitter) profile header to PNG. | `node scripts/export-x-header.mjs` | run by hand; named in `x/README.md` |

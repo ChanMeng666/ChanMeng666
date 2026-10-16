@@ -10,9 +10,9 @@ else (L2) is opened on demand, when its "read when" matches the task.
 
 | File | Lines | Read when |
 |---|---|---|
-| `CLAUDE.md` | 159 | always: the schema, hard rules and workflow |
+| `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 103 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 114 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 120 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -265,7 +265,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/check-freshness.mjs` | Staleness budget / review-SLA checker for the profile data. | npm |
 | `scripts/check-linkedin-sync.mjs` | Drift guard for the LinkedIn data store. | npm |
 | `scripts/check-links.mjs` | Link-liveness checker for every URL in the data/profile/*.yaml shards. | npm |
-| `scripts/check-wikilinks.mjs` | Check every [[wikilink]] in the tracked markdown under docs/ (stories and answers included, `_private/` never read) and warn about orphan story files. | npm |
+| `scripts/check-wikilinks.mjs` | Check every `[[wikilink]]` in the tracked markdown under docs/ (stories and answers included, `_private/` never read) and warn about orphan story files. | npm |
 | `scripts/check-youtube-banner-safe.mjs` | Assert the YouTube banner keeps every visible element inside the all-device safe area. | run by hand; named in `youtube/README.md` |
 | `scripts/export-linkedin-cards.mjs` | Render the LinkedIn brand surfaces (testimonial cards, profile cover, Featured CTA cards) to PNG. | named in code: `og-covers/render.mjs`, `og-covers/template.mjs` |
 | `scripts/export-x-header.mjs` | Render the X (Twitter) profile header to PNG. | run by hand; named in `x/README.md` |

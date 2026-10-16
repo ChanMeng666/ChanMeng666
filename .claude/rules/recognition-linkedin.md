@@ -15,6 +15,7 @@ Sources are `file:line` as of 2026-10-16. If a line has drifted, grep the quoted
 - The "(2026)" in "Outstanding Mentor Award (2026)" is not part of the award's official name (the prose gives that). It stays because the title is rendered on several surfaces; dropping it is a copy change (`30-recognition.yaml`, comment above the first award).
 - Certificates have ids too (issuer + name + year). The LinkedIn certificate join still uses `credentialId` or `url`.
 - Read the evidence comment above an award before citing it. Example: the 2026 award is self-attested (`30-recognition.yaml:15-25`).
+- **FemTech China and FemTech Weekend** are two unrelated organisations (Chan, 2026-10-16). FreePeriod's Best Social Media Award and the 2024 Excellence Award came from FemTech China; never describe either as a FemTech Weekend award or the two bodies as related.
 - The UN CSW 69 entry: she presented remotely. Add no travel or attendance wording (`30-recognition.yaml:83-86`).
 
 ## Publications

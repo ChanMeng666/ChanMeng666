@@ -51,6 +51,7 @@ LinkedIn copy.
 | **CORDE** | On the README since 2026-10-08. Its commit share is counted on the original repository (236 of 413), with that basis beside the figure on every surface |
 | **Google Jobs MCP Server**, **GitHub README Suno Cards** | Taken off the README on 2026-10-08 (a second MCP server repeats Google News; the "Sound I make" block already shows the cards). Both keep their llms narrative. The two MCP servers are independent products: never describe one as part of the other |
 | **Extended CV, Chapter 3** | Ten tiles. The eleventh slot is closed: Seismophone, Chromaflow and a second MCP server were each turned down for it |
+| **FemTech China and FemTech Weekend** | Two unrelated organisations (Chan, 2026-10-16). FreePeriod's Best Social Media Award and the 2024 Excellence Award came from FemTech China; never describe either as a FemTech Weekend award or the two bodies as related |
 | **Not recorded** | Repositories of third-party technical assessments and local clones of other people's repositories: not her projects, in no data file (Chan, 2026-10-12) |
 | **Org repos** | Administering a GitHub org does not make its repos hers: only those in `scope.orgRepoAllowlist` (`lineage.yaml`) are recorded |
 | **Lost access** | Not lost authorship: the GAVIGO repos carry `accessRevoked` and stay hers |
@@ -101,7 +102,6 @@ asking, unless she delegates again. `showcase: flagship` requires
 | LinkedIn, by hand | Chan: delete the Seismophone entry under Projects and its association on three skills (PostgreSQL Recursive CTEs, Reverse Engineering, Internationalization) |
 | LinkedIn, by hand | Chan: delete the two podcast entries under Publications (Decoding the Future, Future Turing) |
 | LinkedIn, by hand | Chan: update the FemTech China award description (`70-linkedin.yaml:1667` and `:1673`): the challenge name in the first sentence and the last sentence |
-| Which organisation ran the inaugural Challenge where FreePeriod won Best Social Media Award | Chan: three places say "FemTech Weekend Challenge" (`10-career.yaml` FreePeriod narrative, `70-linkedin.yaml:486`, `90-meta.yaml:616`), the award entry says "FemTech China Women's Health Technology Challenge". Align once she confirms |
 | LinkedIn Featured video slot | The intro film does not exist yet; the slot in `70-linkedin.yaml` is a held-open placeholder |
 | Delete the five listing forks | Their PRs closing, or 2026-11-14 |
 | Google OAuth client and Resend key used by Te Pā Tiaki | Chan: revoke if they were dedicated to the game |

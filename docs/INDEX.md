@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 107 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 141 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 143 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -112,7 +112,7 @@ Rules in `.claude/rules/` load when a file matching their `paths:` is touched.
 | `.claude/rules/data-profile.md` | 82 | `data/profile/**` | Rules for the profile shards |
 | `.claude/rules/projects.md` | 47 | `data/profile/20-projects-flagship.yaml`, `data/profile/21-projects-oss-primary.yaml`, `data/profile/22-projects-oss-webapps.yaml`, `data/profile/23-projects-oss-more.yaml`, `data/profile/60-network.yaml`, `data/profile/90-meta.yaml` | Rules for projects and the README buckets |
 | `.claude/rules/readme-art.md` | 40 | `scripts/cards/**`, `scripts/readme-art/**`, `scripts/build-readme-cards.mjs`, `scripts/build-readme-art.mjs`, `public/cards/**`, `public/readme/**`, `templates/**` | Rules for README cards, banners, pills and templates |
-| `.claude/rules/recognition-linkedin.md` | 37 | `data/profile/30-recognition.yaml`, `data/profile/70-linkedin.yaml`, `data/profile/80-events.yaml` | Rules for awards, publications, LinkedIn copy and events |
+| `.claude/rules/recognition-linkedin.md` | 38 | `data/profile/30-recognition.yaml`, `data/profile/70-linkedin.yaml`, `data/profile/80-events.yaml` | Rules for awards, publications, LinkedIn copy and events |
 | `.claude/rules/registers.md` | 31 | `x/**`, `linkedin/**`, `suno/**`, `youtube/**`, `distribution/**` | Rules for the platform registers and film distribution |
 
 ## Platform registers

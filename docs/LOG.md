@@ -139,3 +139,5 @@ data/profile/00-basics.yaml
 
 ## [2026-10-16] fix | FreePeriod narrative no longer conflates FemTech China with FemTech Weekend
 data/profile/10-career.yaml
+
+## [2026-10-16] fix | FreePeriod Best Social Media Award attributed to FemTech China everywhere; the two organisations are unrelated (Chan)

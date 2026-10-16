@@ -288,7 +288,7 @@ Every judging panel in FreePeriod's external-validation cycle was clicking throu
 
 • Best Award — Japan's 12th International Conference on Social Sciences and Humanities
 • Third Prize — HKUST Sustainable Smart Living Competition
-• Best Social Media — China's inaugural FemTech Weekend Challenge
+• Best Social Media — FemTech China's inaugural Women's Health Technology Challenge
 • First Prize — Shenzhen Nanshan District Philanthropic Creative Star Contest
 • Selected — Tencent Technology Venture Capital Program
 • Selected — Tsinghua University SDG Open Innovation Marathon

@@ -65,8 +65,8 @@ The two polymorphic references found on 2026-10-16 are fixed: `organizations[lin
 ## Metric provenance: `source` and `asOf`
 - Every `{ label, value }` metric (`projects[].metrics`, `basics.reach.metrics`, `projects[].meta.x_brand.reach.usage`) takes `source` (where the number comes from) and `asOf` (`YYYY-MM-DD`, or `YYYY-MM` when only the month is known). Schema: `$defs.metricSource`, `metricAsOf`. A block-level `reach.asOf` / `measuredOn` is not inherited.
 - `source` forms: a URL, a repo path, an evidence or story file, a platform register path (`register: linkedin/account.yaml`), `self-attested`, or `private: <what> (not linked)`. Never a link to a private repo.
-- Rule (d3, 2026-10-16): required on visitor-facing metrics, meaning those picked into `public/cv-llms.txt` or found on README, the CVs, the `linkedin:` copy or chanmeng.org. `node scripts/lint-kb.mjs` lists each miss as `file:line`. It is a warning until the 2026-10 backfill lands, then `--strict-provenance` makes it an error. Metrics on no visitor page stay a one-line warning.
-- The backfill is staged for Chan's review in `data/_intake/metrics-provenance-wave-1-2026-10.md`. Do not write `source`/`asOf` values before she has marked a row.
+- Rule (d3, 2026-10-16): required on visitor-facing metrics, meaning those picked into `public/cv-llms.txt` or found on README, the CVs, the `linkedin:` copy or chanmeng.org. A miss is an error: `npm run check` and CI run `lint-kb --strict-provenance`, which lists it as `file:line`. Metrics on no visitor page stay a one-line warning.
+- The 2026-10 backfill (every visitor-facing metric sourced by 2026-10-16) is recorded in `data/_intake/metrics-provenance-wave-1-2026-10.md`. A new metric's `source`/`asOf` comes from evidence; when there is none, stage it there for Chan rather than guessing.
 
 ## Guard comments
 - A guard is the comment directly above an entry or field that says what must not happen ("do not re-add", "never link", "not shown"). A display guard is one line naming the rule, Chan's date and "See show:"; the `show:` field below it is the structured form. Other guards (private repo, copy and claim limits) stay as prose.

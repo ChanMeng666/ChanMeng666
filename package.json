@@ -34,7 +34,7 @@
     "lint:kb": "node scripts/lint-kb.mjs",
     "build:wiki": "node scripts/build-wiki.mjs",
     "check:wikilinks": "node scripts/check-wikilinks.mjs",
-    "check": "npm run validate && npm run lint:kb && npm run check:wikilinks && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit",
+    "check": "npm run validate && npm run lint:kb -- --strict-provenance && npm run check:wikilinks && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit",
     "check:freshness": "node scripts/check-freshness.mjs",
     "check:cv": "node scripts/check-cv-sync.mjs",
     "check:ats": "node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --check",

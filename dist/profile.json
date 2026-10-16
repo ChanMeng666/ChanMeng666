@@ -1245,7 +1245,9 @@
         },
         {
           "label": "AI matching weights",
-          "value": "MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%"
+          "value": "MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%",
+          "source": "private: she-sharp lib/matching/prompts.ts and lib/matching/openai-service.ts (not linked)",
+          "asOf": "2025-12-02"
         },
         {
           "label": "AI matching score range",
@@ -1584,19 +1586,27 @@
         },
         {
           "label": "Application-Level Reduction",
-          "value": "78% (controlled proof-stage measurement: same workload and output, less application-level work)"
+          "value": "78% (controlled proof-stage measurement: same workload and output, less application-level work)",
+          "source": "private: gavigo docs/phases/07a-tier-measurements/tier-measurements.md (not linked)",
+          "asOf": "2026-04-18"
         },
         {
           "label": "Controlled Startup Path Comparison",
-          "value": "4.45s → 1.00s (controlled proof-stage measurement)"
+          "value": "4.45s → 1.00s (controlled proof-stage measurement)",
+          "source": "private: gavigo docs/phases/07a-tier-measurements/tier-measurements.md (not linked)",
+          "asOf": "2026-04-18"
         },
         {
           "label": "Preserved AI State Restore",
-          "value": "~140ms (preserved AI state restored into a fresh process; controlled proof-stage measurement)"
+          "value": "~140ms (preserved AI state restored into a fresh process; controlled proof-stage measurement)",
+          "source": "private: gavigo docs/phases/08-proof-pack/d3-m5-kv-cache.md (not linked)",
+          "asOf": "2026-04-20"
         },
         {
           "label": "Measurement boundary",
-          "value": "Real, controlled application-level measurements, not a production SLA or a complete end-to-end activation time"
+          "value": "Real, controlled application-level measurements, not a production SLA or a complete end-to-end activation time",
+          "source": "private: gavigo docs/investor/INVESTOR_TECHNICAL_PROOF_DEMO_RUNBOOK.md section 5 and docs/phases/07a-tier-measurements/tier-measurements.md (not linked)",
+          "asOf": "2026-06-05"
         },
         {
           "label": "Cloud platforms",
@@ -3736,7 +3746,9 @@
         },
         {
           "label": "Summit organisers and partners",
-          "value": "26 on the Organizers & Partners page of the Shanghai 2026 Impact Report (2 hosts, 2 co-conveners, 2 strategic partners, 2 gold sponsors, 18 partners)"
+          "value": "26 on the Organizers & Partners page of the Shanghai 2026 Impact Report (2 hosts, 2 co-conveners, 2 strategic partners, 2 gold sponsors, 18 partners)",
+          "source": "Shanghai 2026 Impact Report, Organizers & Partners page (the summit's source of record)",
+          "asOf": "2026-06-25"
         },
         {
           "label": "Editorial content directories",
@@ -16013,6 +16025,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-16",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-16T08:28:41.178Z"
+    "buildTimestamp": "2026-10-16T08:31:12.077Z"
   }
 }

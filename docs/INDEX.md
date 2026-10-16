@@ -11,8 +11,8 @@ else (L2) is opened on demand, when its "read when" matches the task.
 | File | Lines | Read when |
 |---|---|---|
 | `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
-| `docs/STATE.md` | 107 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 143 | to see what changed recently; append an entry after a change |
+| `docs/STATE.md` | 108 | always: Chan's decisions and display rules, before any edit |
+| `docs/LOG.md` | 146 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -202,7 +202,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | npm script | Runs |
 |---|---|
 | `audit` | `node scripts/audit-assets.mjs` |
-| `check` | `npm run validate && npm run lint:kb && npm run check:wikilinks && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit` |
+| `check` | `npm run validate && npm run lint:kb -- --strict-provenance && npm run check:wikilinks && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit` |
 | `check:ats` | `node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --check` |
 | `check:copy` | `node scripts/check-copy.mjs` |
 | `check:cv` | `node scripts/check-cv-sync.mjs` |

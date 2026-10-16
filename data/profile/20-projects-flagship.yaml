@@ -496,7 +496,7 @@ projects:
       - { label: "Lib modules",              value: "matching, slack-bot, stripe, funding, programmes, recruitment, invitations, mentorship, email, auth, db (11 namespaced)" }
       - { label: "Cron jobs",                value: "3 scheduled in vercel.json at handover (weekly-mentorship-stats, weekly-funding-crawl, event-feedback-digest); the process-queue route exists but was never scheduled", source: "private: charity's platform repository, vercel.json at handover (not linked)", asOf: "2026-09-01" }
       - { label: "Funding crawler sources",  value: "6 NZ government feeds (beehive RSS, data.govt CKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML)", source: "private: charity's platform repository, funding crawler (not linked)", asOf: "2026-05-19" }
-      - { label: "AI matching weights",      value: "MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%" }
+      - { label: "AI matching weights",      value: "MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%", source: "private: she-sharp lib/matching/prompts.ts and lib/matching/openai-service.ts (not linked)", asOf: "2025-12-02" }
       - { label: "AI matching score range",  value: "0-100 overall + 5 per-dimension subscores + confidence (high/medium/low)" }
       - { label: "AI retry policy",          value: "3 attempts with exponential backoff (1s × 2^n), batch concurrency 5, 100ms inter-batch delay" }
       - { label: "Distinct event registrants", value: "2,919 (on record, per the transformation record's published-vs-recorded table)", source: "private: Chan's transformation record, chapter 07 published-vs-recorded table (not linked)", asOf: "2026-09-01" }
@@ -914,10 +914,10 @@ projects:
       # GAVIGO's own labels. Each must travel with the boundary note below it.
       # The orchestrator's internal path timings and hit rates are not public
       # figures and are deliberately absent from this entry: do not re-add them.
-      - { label: "Application-Level Reduction",        value: "78% (controlled proof-stage measurement: same workload and output, less application-level work)" }
-      - { label: "Controlled Startup Path Comparison", value: "4.45s → 1.00s (controlled proof-stage measurement)" }
-      - { label: "Preserved AI State Restore",         value: "~140ms (preserved AI state restored into a fresh process; controlled proof-stage measurement)" }
-      - { label: "Measurement boundary",               value: "Real, controlled application-level measurements, not a production SLA or a complete end-to-end activation time" }
+      - { label: "Application-Level Reduction",        value: "78% (controlled proof-stage measurement: same workload and output, less application-level work)", source: "private: gavigo docs/phases/07a-tier-measurements/tier-measurements.md (not linked)", asOf: "2026-04-18" }
+      - { label: "Controlled Startup Path Comparison", value: "4.45s → 1.00s (controlled proof-stage measurement)", source: "private: gavigo docs/phases/07a-tier-measurements/tier-measurements.md (not linked)", asOf: "2026-04-18" }
+      - { label: "Preserved AI State Restore",         value: "~140ms (preserved AI state restored into a fresh process; controlled proof-stage measurement)", source: "private: gavigo docs/phases/08-proof-pack/d3-m5-kv-cache.md (not linked)", asOf: "2026-04-20" }
+      - { label: "Measurement boundary",               value: "Real, controlled application-level measurements, not a production SLA or a complete end-to-end activation time", source: "private: gavigo docs/investor/INVESTOR_TECHNICAL_PROOF_DEMO_RUNBOOK.md section 5 and docs/phases/07a-tier-measurements/tier-measurements.md (not linked)", asOf: "2026-06-05" }
       - { label: "Cloud platforms",     value: "DigitalOcean DOKS → Google Cloud GKE", source: "private: client repository, deployment configuration and phase records (not linked)", asOf: "2026-03-11" }
       - { label: "Cross-cloud cutover", value: "~30 min downtime (2026-03-11)", source: "private: client repository, phase records of the cutover (not linked)", asOf: "2026-03-11" }
       - { label: "Games",               value: "23 across 4 studios (+2 ML/compute workloads)" }

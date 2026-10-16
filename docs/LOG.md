@@ -141,3 +141,6 @@ data/profile/00-basics.yaml
 data/profile/10-career.yaml
 
 ## [2026-10-16] fix | FreePeriod Best Social Media Award attributed to FemTech China everywhere; the two organisations are unrelated (Chan)
+
+## [2026-10-16] add | source and asOf on the last six visitor-facing metrics, verified in the she-sharp, gavigo and femtech-weekend-redthread repositories; lint-kb --strict-provenance is now the gate in check and CI
+data/profile/20-projects-flagship.yaml, data/profile/22-projects-oss-webapps.yaml, package.json, .github/workflows/validate-data.yml, .claude/rules/data-profile.md, docs/STATE.md

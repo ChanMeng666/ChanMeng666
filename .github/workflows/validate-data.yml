@@ -35,8 +35,9 @@ jobs:
       # validate = schema + brand + LinkedIn sync + check:ecosystem (offline
       # structural lineage checks; --live needs gh auth and stays local).
       - run: npm run validate
-      # Knowledge-base lint: show: leaks, references, org context, provenance.
-      - run: npm run lint:kb
+      # Knowledge-base lint: show: leaks, references, org context, provenance
+      # (a visitor-facing metric without source or asOf is an error).
+      - run: npm run lint:kb -- --strict-provenance
       # [[list/id]] links in docs/ must resolve.
       - run: npm run check:wikilinks
       # Freshness SLA: deterministic logic errors always fail; under --strict an

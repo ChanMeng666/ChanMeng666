@@ -102,6 +102,7 @@ asking, unless she delegates again. `showcase: flagship` requires
 | LinkedIn, by hand | Chan: delete the Seismophone entry under Projects and its association on three skills (PostgreSQL Recursive CTEs, Reverse Engineering, Internationalization) |
 | LinkedIn, by hand | Chan: delete the two podcast entries under Publications (Decoding the Future, Future Turing) |
 | LinkedIn, by hand | Chan: update the FemTech China award description (`70-linkedin.yaml:1667` and `:1673`): the challenge name in the first sentence and the last sentence |
+| LinkedIn, by hand | Chan: the live FreePeriod experience bullet still says "FemTech Weekend Challenge"; change it to FemTech China's Women's Health Technology Challenge, as in `70-linkedin.yaml:486` |
 | LinkedIn Featured video slot | The intro film does not exist yet; the slot in `70-linkedin.yaml` is a held-open placeholder |
 | Delete the five listing forks | Their PRs closing, or 2026-11-14 |
 | Google OAuth client and Resend key used by Te Pā Tiaki | Chan: revoke if they were dedicated to the game |

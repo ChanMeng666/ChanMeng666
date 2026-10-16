@@ -12,6 +12,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", ".
 const RULES = [
   [/^README\.md$/, "data/profile/*.yaml (buckets in 90-meta.yaml) or templates/", "npm run build"],
   [/^llms(-full)?\.txt$/, "data/profile/*.yaml or templates/", "npm run build"],
+  [/^dist\/voice\.json$/, "data/voice.yaml (rules: .claude/rules/twin.md)", "npm run build:twin"],
+  [/^dist\/llms-twin\.txt$/, "data/profile/*.yaml, docs/stories/*.md or scripts/build-llms-twin.mjs", "npm run build:twin"],
   [/^dist\//, "data/profile/*.yaml, data/brand.yaml (dist/brand/)", "npm run build (dist/brand: npm run build:brand)"],
   [/^linkedin\/linkedin-[^/]+\.md$/, "data/profile/70-linkedin.yaml (facts in the other shards)", "npm run build:linkedin"],
   [/^linkedin\/linkedin-profile\.json$/, "data/profile/70-linkedin.yaml (facts in the other shards)", "npm run build:linkedin"],

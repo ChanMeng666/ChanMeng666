@@ -281,6 +281,7 @@ const shards = shardFiles.map((rel) => {
 
 const otherData = [
   "data/brand.yaml",
+  "data/voice.yaml",
   "docs/ecosystem/lineage.yaml",
   "docs/ecosystem/archlang-archcanvas.yaml",
   ...under("schema/").filter((f) => f.endsWith(".json")),

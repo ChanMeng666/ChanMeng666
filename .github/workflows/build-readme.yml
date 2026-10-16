@@ -1,6 +1,7 @@
 name: Build README
 
-# Rebuild README.md, llms.txt, llms-full.txt, dist/profile.json, and the two
+# Rebuild README.md, llms.txt, llms-full.txt, dist/profile.json, the twin outputs
+# (dist/llms-twin.txt, dist/voice.json), and the two
 # published CV GEO siblings (public/cv-llms.txt, public/cv.jsonld) from
 # data/profile/*.yaml whenever the source data, templates, schema, or build
 # scripts change. Also runs daily to refresh meta.lastModified (freshness
@@ -64,7 +65,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md llms.txt llms-full.txt dist/profile.json public/cv-llms.txt public/cv.jsonld
+          git add README.md llms.txt llms-full.txt dist/profile.json dist/llms-twin.txt dist/voice.json public/cv-llms.txt public/cv.jsonld
           if git diff --staged --quiet; then
             echo "No output changes."
           else

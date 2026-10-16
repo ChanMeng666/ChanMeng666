@@ -11,8 +11,8 @@ else (L2) is opened on demand, when its "read when" matches the task.
 | File | Lines | Read when |
 |---|---|---|
 | `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
-| `docs/STATE.md` | 108 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 146 | to see what changed recently; append an entry after a change |
+| `docs/STATE.md` | 109 | always: Chan's decisions and display rules, before any edit |
+| `docs/LOG.md` | 155 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -45,6 +45,7 @@ Other knowledge files:
 | File | Lines | Purpose |
 |---|---|---|
 | `data/brand.yaml` | 682 | Chan Meng's personal visual + verbal design system. |
+| `data/voice.yaml` | 432 | VOICE — how the chanmeng.org digital twin sounds, and what it will not say … |
 | `docs/ecosystem/lineage.yaml` | 888 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
 | `docs/ecosystem/archlang-archcanvas.yaml` | 259 | ArchLang × ArchCanvas ecosystem catalog … |
 | `schema/brand.schema.json` | 417 | ChanMeng666 Brand System Schema … |
@@ -87,7 +88,7 @@ Other knowledge files:
 | `docs/stories/tam-ai-ti.md` | 374 | Story. Tam-AI-Ti: Sole developer (full-stack, AI, deployment and maintenance) | preparing an interview or cover letter about this project |
 | `linkedin/README.md` | 92 | linkedin/ — LinkedIn: account register, profile copy and visuals | anything about LinkedIn posts, profile copy or visuals |
 | `media-kit/README.md` | 18 | Speaker & Media Kit | rebuilding the speaker and media kit PDF |
-| `scripts/README.md` | 64 | scripts/ | finding which script does what, and how to run it |
+| `scripts/README.md` | 67 | scripts/ | finding which script does what, and how to run it |
 | `suno/README.md` | 64 | suno/ — Suno: the register of both accounts | anything about Chan's Suno songs, playlists or the register |
 | `x/README.md` | 80 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
 | `x/x-strategy.md` | 531 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
@@ -114,6 +115,7 @@ Rules in `.claude/rules/` load when a file matching their `paths:` is touched.
 | `.claude/rules/readme-art.md` | 40 | `scripts/cards/**`, `scripts/readme-art/**`, `scripts/build-readme-cards.mjs`, `scripts/build-readme-art.mjs`, `public/cards/**`, `public/readme/**`, `templates/**` | Rules for README cards, banners, pills and templates |
 | `.claude/rules/recognition-linkedin.md` | 38 | `data/profile/30-recognition.yaml`, `data/profile/70-linkedin.yaml`, `data/profile/80-events.yaml` | Rules for awards, publications, LinkedIn copy and events |
 | `.claude/rules/registers.md` | 31 | `x/**`, `linkedin/**`, `suno/**`, `youtube/**`, `distribution/**` | Rules for the platform registers and film distribution |
+| `.claude/rules/twin.md` | 17 | `data/voice.yaml`, `scripts/build-voice.mjs`, `scripts/build-llms-twin.mjs`, `scripts/check-llms-twin.mjs`, `scripts/lib/twin-guards.mjs` | Rules for the digital twin's voice and knowledge |
 
 ## Platform registers
 
@@ -179,7 +181,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 
 | npm script | Runs |
 |---|---|
-| `build` | `npm run build:brand && node scripts/build.mjs && npm run build:linkedin && npm run build:video-data && npm run build:films-data && npm run build:cv-geo && npm run build:index` |
+| `build` | `npm run build:brand && node scripts/build.mjs && npm run build:linkedin && npm run build:video-data && npm run build:films-data && npm run build:twin && npm run build:cv-geo && npm run build:index` |
 | `build:art` | `node scripts/build-readme-art.mjs` |
 | `build:ats-exports` | `node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --docx cv/exports/chan-meng-cv-ats.docx --txt cv/exports/chan-meng-cv-ats.txt` |
 | `build:brand` | `node scripts/build-brand.mjs` |
@@ -192,6 +194,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `build:linkedin` | `node scripts/build-linkedin-json.mjs && node scripts/build-linkedin-md.mjs` |
 | `build:linkedin-register` | `node scripts/build-linkedin-register.mjs` |
 | `build:suno` | `node scripts/build-suno-register.mjs` |
+| `build:twin` | `node scripts/build-voice.mjs --offline && node scripts/build-llms-twin.mjs` |
 | `build:video-data` | `node scripts/build-video-data.mjs` |
 | `build:wiki` | `node scripts/build-wiki.mjs` |
 | `build:x` | `node scripts/build-x-register.mjs` |
@@ -202,7 +205,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | npm script | Runs |
 |---|---|
 | `audit` | `node scripts/audit-assets.mjs` |
-| `check` | `npm run validate && npm run lint:kb -- --strict-provenance && npm run check:wikilinks && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit` |
+| `check` | `npm run validate && npm run lint:kb -- --strict-provenance && npm run check:twin && npm run check:wikilinks && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit` |
 | `check:ats` | `node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --check` |
 | `check:copy` | `node scripts/check-copy.mjs` |
 | `check:cv` | `node scripts/check-cv-sync.mjs` |
@@ -213,6 +216,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `check:linkedin-register` | `node scripts/build-linkedin-register.mjs --check` |
 | `check:links` | `node scripts/check-links.mjs` |
 | `check:suno` | `node scripts/build-suno-register.mjs --check` |
+| `check:twin` | `node scripts/build-voice.mjs --check && node scripts/build-llms-twin.mjs --check && node scripts/check-llms-twin.mjs` |
 | `check:wikilinks` | `node scripts/check-wikilinks.mjs` |
 | `check:x` | `node scripts/build-x-register.mjs --check` |
 | `lint:kb` | `node scripts/lint-kb.mjs` |
@@ -245,6 +249,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/build-linkedin-json.mjs` | Generate linkedin/linkedin-profile.json from data/profile/*.yaml. | npm |
 | `scripts/build-linkedin-md.mjs` | Generate human-readable markdown companions from linkedin/linkedin-profile.json. | npm |
 | `scripts/build-linkedin-register.mjs` | Build the LinkedIn post registers — every post and repost on each LinkedIn page Chan runs — from the last capture of the live page. | npm |
+| `scripts/build-llms-twin.mjs` | Emit dist/llms-twin.txt, the knowledge text of the chanmeng.org digital twin. | npm |
 | `scripts/build-master-calendar.mjs` | Write distribution/master-calendar.md — every posting calendar Chan runs, merged into one view by date: the film schedule (distribution/plan.yaml) and the calendars named under `otherCalendars` there (today: the… | npm |
 | `scripts/build-product-pills.mjs` | Draw link pills for a product repository's README, in the same capsule the profile README uses (scripts/readme-art/pills.mjs). | run by hand; named in `docs/STATE.md` |
 | `scripts/build-readme-art.mjs` | Build the README's own artwork (public/readme/*.svg): the hero, the section strips, the footer and the link pills. | npm |
@@ -253,6 +258,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/build-suno-register.mjs` | Build the Suno register — every public song and playlist on Chan's two Suno accounts — from the last capture of Suno's public API. | npm |
 | `scripts/build-triage-page.mjs` | Generate the interactive project-triage page. | named in code: `scripts/lib/triage-repos-page.mjs`, `scripts/lib/triage-visibility-page.mjs` |
 | `scripts/build-video-data.mjs` | Emit dist/video-data.json — the curated slice the promo film renders from. | npm |
+| `scripts/build-voice.mjs` | Validate data/voice.yaml and emit dist/voice.json, the voice pack the chanmeng.org digital twin reads. | npm |
 | `scripts/build-wiki.mjs` | Generate wiki/: a local, Obsidian-browsable view of the profile shards, one page per entity. | npm |
 | `scripts/build-x-register.mjs` | Build x/posts.yaml — the register of every post on @chanmeng666 — from the last capture of the live account. | npm |
 | `scripts/build.mjs` | Build pipeline: data/profile/*.yaml -> README.md, llms.txt, llms-full.txt, dist/profile.json. | npm |
@@ -265,6 +271,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/check-freshness.mjs` | Staleness budget / review-SLA checker for the profile data. | npm |
 | `scripts/check-linkedin-sync.mjs` | Drift guard for the LinkedIn data store. | npm |
 | `scripts/check-links.mjs` | Link-liveness checker for every URL in the data/profile/*.yaml shards. | npm |
+| `scripts/check-llms-twin.mjs` | Check dist/llms-twin.txt against the twin's display rules; exit 1 on any hit. | npm |
 | `scripts/check-wikilinks.mjs` | Check every `[[wikilink]]` in the tracked markdown under docs/ (stories and answers included, `_private/` never read) and warn about orphan story files. | npm |
 | `scripts/check-youtube-banner-safe.mjs` | Assert the YouTube banner keeps every visible element inside the all-device safe area. | run by hand; named in `youtube/README.md` |
 | `scripts/export-linkedin-cards.mjs` | Render the LinkedIn brand surfaces (testimonial cards, profile cover, Featured CTA cards) to PNG. | named in code: `og-covers/render.mjs`, `og-covers/template.mjs` |

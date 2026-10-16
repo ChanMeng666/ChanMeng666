@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-10-15.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-10-17.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -58,6 +58,7 @@ LinkedIn copy.
 | **chanmeng.org** | Never presented as a project; it is the venue |
 | **YouTube** | A portfolio surface. Chan set each video's visibility on 2026-10-07; demos of archived projects (Panda, FemTracker, Wellness Agent, Sanicle) are private and must not be linked. Descriptions carry links since 2026-10-09 (the account is verified; what goes in the block: `youtube/README.md`). Unlisted client and course recordings are left alone |
 | **Podcasts** | Discontinued 2026-07: shown on no surface; the data entries stay |
+| **Digital twin (chanmeng.org chat)** | A visitor-facing surface (decided 2026-10-17). The twin Worker reads `dist/llms-twin.txt` and `dist/voice.json` only, never `llms-full.txt`. Both follow `show.site` and `show.llms`: an entry hidden from either is absent, with every sentence that names it. Commit counts, solo shares and every contact address but hello@chanmeng.org are off. The lines in `data/voice.yaml` are Chan's approved public wording: no former name, no pricing, nothing about visas or work rights. Rules: `.claude/rules/twin.md` |
 | **Blog posts on chanmeng.org** | A dated record. A post that names a project is not edited when that project leaves the shopfront (Chan, 2026-10-16, delegated). `show.site: false` therefore covers the site's pages and data, not `content/*.mdx` |
 | **Product READMEs** | One screen (Chan, 2026-10-12): wordmark, one sentence, link pills, the animated card, the film, the shortest way in, at most one mermaid diagram, then a pointer for the reader's own coding agent. What was cut moves to `docs/overview.md` in that repo, not deleted. No third-party badges; buttons are pills from `scripts/build-product-pills.mjs`, committed in the product repo. Chan uploads each film by hand on github.com, at the placeholder comment. Scope: ArchLang, the two ArchCanvas front pages, echook, a11y-loop, both MCP servers, github-visitor-counter, github-readme-suno-cards, the AI Programming platform |
 

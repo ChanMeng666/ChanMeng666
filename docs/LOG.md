@@ -144,3 +144,12 @@ data/profile/10-career.yaml
 
 ## [2026-10-16] add | source and asOf on the last six visitor-facing metrics, verified in the she-sharp, gavigo and femtech-weekend-redthread repositories; lint-kb --strict-provenance is now the gate in check and CI
 data/profile/20-projects-flagship.yaml, data/profile/22-projects-oss-webapps.yaml, package.json, .github/workflows/validate-data.yml, .claude/rules/data-profile.md, docs/STATE.md
+
+## [2026-10-17] decide | The chanmeng.org digital twin is a visitor-facing surface: it reads dist/llms-twin.txt and dist/voice.json only, follows show.site and show.llms, carries no commit counts or solo shares and no contact address but hello@chanmeng.org (Chan, delegated)
+docs/STATE.md, .claude/rules/twin.md
+
+## [2026-10-17] add | data/voice.yaml, the twin's voice pack in Chan's approved public wording, validated into dist/voice.json by scripts/build-voice.mjs
+data/voice.yaml, scripts/build-voice.mjs, scripts/lib/twin-guards.mjs, dist/voice.json, package.json, .claude/hooks/guard-generated.mjs, scripts/build-kb-index.mjs
+
+## [2026-10-17] add | dist/llms-twin.txt, the twin's knowledge text built from the profile and docs/stories, with scripts/check-llms-twin.mjs as its gate (npm run build:twin, npm run check:twin)
+scripts/build-llms-twin.mjs, scripts/check-llms-twin.mjs, dist/llms-twin.txt, package.json

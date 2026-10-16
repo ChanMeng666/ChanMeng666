@@ -243,12 +243,12 @@ projects:
       - "Design history exported as a real git repository"
       - "Refine-in-place editing (never regenerates the plan)"
     metrics:
-      - { label: "Commits (solo)",   value: "853 (837 by Chan, the rest bot/agent commits) (2026-04-08 → 2026-09-16); sole engineer, built with AI coding agents" }
-      - { label: "Surfaces",         value: "13 pages · 28 API route handlers · 71 components · 205 source files" }
+      - { label: "Commits (solo)",   value: "853 (837 by Chan, the rest bot/agent commits) (2026-04-08 → 2026-09-16); sole engineer, built with AI coding agents", source: "private: product repository git log (not linked)", asOf: "2026-09-16" }
+      - { label: "Surfaces",         value: "13 pages · 28 API route handlers · 71 components · 205 source files", source: "private: product repository (not linked)", asOf: "2026-10-15" }
       - { label: "Database",         value: "13 Drizzle tables on Neon (projects · designFrames · agentThreads · credits · creditTransactions · shares · generationAttempts · uploads · stripeWebhookEvents · newsletterIssues · agentTurnSteps · funnelEvents · renderAttempts), read from the schema 2026-10-12" }
       - { label: "Agent tools",      value: "9 (7 user-facing: askDesignQuestions · generateFloorPlanDSL[new plan] · editFloorPlanDSL[minimal diff] · generateRendering · critiquePlan · analyzeReference[vision] · analyzeFloorPlan)" }
       - { label: "Generation unit",  value: "one generation = plan + grounded rendering + critique, produced as a single atomic set; edits, parametric tweaks, re-renders, and review mode all operate on that set without re-generating it" }
-      - { label: "Git export",       value: "in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)" }
+      - { label: "Git export",       value: "in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)", source: "private: product repository (not linked)", asOf: "2026-07-11" }
       - { label: "Deploy",           value: "private repo → GitHub Actions → GHCR → canary-then-swap over SSH (boot canary, poll /api/health, swap only if healthy) on a DO VPS behind Traefik + Cloudflare" }
     status: live
     startDate: "2026-04"
@@ -1707,8 +1707,8 @@ projects:
     # from the repository that day. Keep the basis ("in the original repository")
     # beside the figure on every surface.
     metrics:
-      - { label: "Commits", value: "236 of 413 in the original repository (57%), the largest share of three contributors", note: "Counted 2026-10-08 on the repository the app was first built in. A teammate later forked it to take the project over; the fork has 541 commits, 227 of them Chan's." }
-      - { label: "Documentation", value: "140 of 143 commits in the team's documentation repository (97.9%)" }
+      - { label: "Commits", value: "236 of 413 in the original repository (57%), the largest share of three contributors", source: "private: the original client repository, git log (not linked)", asOf: "2026-10-08", note: "Counted 2026-10-08 on the repository the app was first built in. A teammate later forked it to take the project over; the fork has 541 commits, 227 of them Chan's." }
+      - { label: "Documentation", value: "140 of 143 commits in the team's documentation repository (97.9%)", source: "private: the team's documentation repository, archived 2024, git log (not linked)", asOf: "2026-10-08" }
       - { label: "API documents", value: "15 files from CORDE's Business System Analyst: 14 API documents on eight topics, revisions included, and one priority list", note: "Counted 2026-10-15 in the API/ folder of the team's documentation repository." }
     status: production
     startDate: "2024-06"
@@ -2453,14 +2453,14 @@ projects:
       - { label: "Showcase gallery (repo)", url: "https://github.com/ChanMeng666/archlang-showcase" }
     techStack: ["TypeScript 5.7 (ESM, zero runtime dependencies)", "Hand-written lexer + recursive-descent parser + expression evaluator", "tsup (build)", "Biome 2.5 (lint/format)", "Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression)", "Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF)", "LSP (hover/completion/rename/signature)", "VS Code extension (ChanMeng.archlang, TextMate grammar)", "Vite + CodeMirror 6 playground (100% client-side)", "VitePress docs", "GitHub Action (renders ```arch fences to images)"]
     metrics:
-      - { label: "Commits (solo)",   value: "810 (803 by Chan + 7 automated dependency bumps) (2026-06-25 → 2026-09-13); sole engineer, built with AI coding agents" }
-      - { label: "npm package",      value: "@chanmeng666/archlang v1.43.0 (62 published versions through 2026-10-14, 27 ADRs)" }
-      - { label: "Tests",            value: "4,338 passing, 0 skipped, across 216 test files (measured 2026-09-04)" }
+      - { label: "Commits (solo)",   value: "810 (803 by Chan + 7 automated dependency bumps) (2026-06-25 → 2026-09-13); sole engineer, built with AI coding agents", source: "https://github.com/ChanMeng666/archlang (git log)", asOf: "2026-09-13" }
+      - { label: "npm package",      value: "@chanmeng666/archlang v1.43.0 (62 published versions through 2026-10-14, 27 ADRs)", source: "https://www.npmjs.com/package/@chanmeng666/archlang", asOf: "2026-10-14" }
+      - { label: "Tests",            value: "4,338 passing, 0 skipped, across 216 test files (measured 2026-09-04)", source: "https://github.com/ChanMeng666/archlang (vitest run)", asOf: "2026-09-04" }
       - { label: "Primitives",       value: "15 element kinds (wall · room · door · window · opening · furniture · dim · column · stair · elevator · escalator · roof · void · outdoor · fence), read from the element registry 2026-10-15, + fixture-symbol catalog" }
-      - { label: "Export formats",   value: "5 — SVG + DXF (zero-dep) · PDF + PNG (lazily-loaded optional add-ons) · text-only plan" }
-      - { label: "Diagnostics",      value: "139 stable E_*/W_* codes (92 errors · 47 warnings), each carrying a byte span + a machine-applicable fix" }
-      - { label: "Lint rules",       value: "8 architectural-soundness rule modules (reachability, door-swing collision, windowless bedroom, wet-room enclosure, circulation)" }
-      - { label: "CLI",             value: "~20 subcommands, all with --json + deterministic exit codes (0 ok / 1 IO / 2 source / 3 usage)" }
+      - { label: "Export formats",   value: "5 — SVG + DXF (zero-dep) · PDF + PNG (lazily-loaded optional add-ons) · text-only plan", source: "https://github.com/ChanMeng666/archlang", asOf: "2026-10-15" }
+      - { label: "Diagnostics",      value: "139 stable E_*/W_* codes (92 errors · 47 warnings), each carrying a byte span + a machine-applicable fix", source: "https://github.com/ChanMeng666/archlang (src/diagnostics.ts)", asOf: "2026-10-15" }
+      - { label: "Lint rules",       value: "8 architectural-soundness rule modules (reachability, door-swing collision, windowless bedroom, wet-room enclosure, circulation)", source: "https://github.com/ChanMeng666/archlang", asOf: "2026-10-15" }
+      - { label: "CLI",             value: "~20 subcommands, all with --json + deterministic exit codes (0 ok / 1 IO / 2 source / 3 usage)", source: "https://github.com/ChanMeng666/archlang", asOf: "2026-10-15" }
       - { label: "Downstream",       value: "the compiler engine behind ArchCanvas, which consumes frozen-API contracts (data-arch-id anchors, diffPlans()) verbatim" }
     status: production
     startDate: "2026-06"

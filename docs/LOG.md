@@ -121,3 +121,6 @@ scripts/check-wikilinks.mjs, docs/INDEX.md
 
 ## [2026-10-16] remove | .github/profile/README.md, a byte-identical mirror of the TechRosie org profile that rendered nowhere from this repo
 .github/profile/README.md
+
+## [2026-10-16] add | source and asOf on 92 visitor-facing and llms metrics (delegated review of data/_intake/metrics-provenance-wave-1-2026-10.md); 6 rows left for Chan
+data/profile/20-projects-flagship.yaml, data/profile/21-projects-oss-primary.yaml, data/profile/22-projects-oss-webapps.yaml, data/profile/23-projects-oss-more.yaml

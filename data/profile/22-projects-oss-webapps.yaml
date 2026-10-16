@@ -525,20 +525,20 @@ projects:
       - 2 original research reports (FemTech Market Map for Greater China 2025-05, FemmeHealth Ventures Alliance 2025-06)
       - Two-generation architectural evolution (Gen-1 Next.js + Notion → Gen-2 Docusaurus + Drizzle/Neon)
     metrics:
-      - { label: "Total commits",              value: "570 to 2026-07-30 (Gen-2 only; Gen-1 was a separate repo with 58 commits)" }
-      - { label: "Solo commits",               value: "538 of 570 (94.4%, to 2026-07-30); 32 content edits by founder Zhu Yihan" }
-      - { label: "Build window",               value: "2025-05-08 → 2026-06-26 (~13.5 months active development)" }
-      - { label: "Cloudflare Pages Functions", value: "16 endpoints (~5,373 LOC of server-side .js)" }
+      - { label: "Total commits",              value: "570 to 2026-07-30 (Gen-2 only; Gen-1 was a separate repo with 58 commits)", source: "private: client repository git log (not linked)", asOf: "2026-07-30" }
+      - { label: "Solo commits",               value: "538 of 570 (94.4%, to 2026-07-30); 32 content edits by founder Zhu Yihan", source: "private: client repository git log (not linked)", asOf: "2026-07-30" }
+      - { label: "Build window",               value: "2025-05-08 → 2026-06-26 (~13.5 months active development)", source: "private: client repository git log (not linked)", asOf: "2026-06-26" }
+      - { label: "Cloudflare Pages Functions", value: "16 endpoints (~5,373 LOC of server-side .js)", source: "private: client repository functions/ (not linked)", asOf: "2026-10-15" }
       - { label: "Application pipelines",      value: "3 summit forms (pitch / programme / speaker) — each a typed Postgres table with reference numbers + admin status workflow; the speaker page was taken offline 2026-03-30 with its table and API kept; ecosystem applications write to Notion" }
-      - { label: "Newsletter system",          value: "Resend Contacts API + contact segment + double-opt-in confirm + brand-styled welcome email" }
-      - { label: "Admin endpoints",            value: "3 (admin/applications, admin/batch-review, admin/send-approval — ADMIN_API_KEY-protected)" }
-      - { label: "Email automation",           value: "Brand-styled HTML + plain-text (newsletter welcome, approval, rejection) — primary #AA7C52, success #10b981" }
+      - { label: "Newsletter system",          value: "Resend Contacts API + contact segment + double-opt-in confirm + brand-styled welcome email", source: "private: client repository (not linked)", asOf: "2026-10-15" }
+      - { label: "Admin endpoints",            value: "3 (admin/applications, admin/batch-review, admin/send-approval — ADMIN_API_KEY-protected)", source: "private: client repository functions/admin (not linked)", asOf: "2026-10-15" }
+      - { label: "Email automation",           value: "Brand-styled HTML + plain-text (newsletter welcome, approval, rejection) — primary #AA7C52, success #10b981", source: "private: client repository (not linked)", asOf: "2026-05-19" }
       - { label: "File upload endpoints",      value: "4 (headshot, image, company-overview PDF, pitch-deck) → Cloudinary" }
       - { label: "Database tables",            value: "4 (pitch_applications + programme_applications + speaker_applications + agenda_downloads) — the three application tables carry ~20 cols each with status / statusUpdatedAt / adminNotes / referenceNumber; agenda_downloads is the summit-agenda lead-capture table" }
       - { label: "SQL migrations",             value: "4 (0000_luxuriant_riptide → 0001_programme_overhaul → 0002_speaker_overhaul → 0003_agenda_downloads)" }
       - { label: "Shanghai Summit homepage",   value: "10 sections (SummitHero / FABGlobeSection / PartnersGrid / SpeakersGrid / AgendaTimeline / WhoShouldAttend / VenueShowcase / WhyDifferent / GlobalEcosystem / SponsorsSection) + SummitCTA" }
       - { label: "Shanghai Summit sub-pages",  value: "2 form pages (programme / pitch); the agenda page has redirected since 2026-05-26 and the full agenda is a PDF behind a lead-capture form" }
-      - { label: "Summit speakers", value: "33 on the Speakers page of the Shanghai 2026 Impact Report, the founder's source of record — Ida Tin (Clue co-founder, coined 'FemTech' 2016) headlines; among them Alice Zheng, Dominnique Karetsos, Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike Steinebach, Stella Fu, Patient Lu, Sandy Lv, Ke Chai, Jian Chen, Jazmin Seregi, Abraham (Nick) Morse, Ira Evdokimova, Maryann Selfe, Jonathan Y. Zhao, Rahul Agrawal, Giulia Paggiola, Michael Wang" }
+      - { label: "Summit speakers", value: "33 on the Speakers page of the Shanghai 2026 Impact Report, the founder's source of record — Ida Tin (Clue co-founder, coined 'FemTech' 2016) headlines; among them Alice Zheng, Dominnique Karetsos, Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike Steinebach, Stella Fu, Patient Lu, Sandy Lv, Ke Chai, Jian Chen, Jazmin Seregi, Abraham (Nick) Morse, Ira Evdokimova, Maryann Selfe, Jonathan Y. Zhao, Rahul Agrawal, Giulia Paggiola, Michael Wang", source: "the summit's Shanghai 2026 Impact Report, Speakers page (the founder's source of record)", asOf: "2026-06-25" }
       - { label: "Summit organisers and partners", value: "26 on the Organizers & Partners page of the Shanghai 2026 Impact Report (2 hosts, 2 co-conveners, 2 strategic partners, 2 gold sponsors, 18 partners)" }
       - { label: "Editorial content directories", value: "3 (blog/ research reports, opinions/ commentary, stories/ founder profiles) — Docusaurus blog plugin instances" }
       - { label: "Bilingual locales",          value: "2 (en + zh-Hans) across every page from day one — not retrofit" }
@@ -780,13 +780,13 @@ projects:
       - 5 Cloudflare Zero Trust Access apps (pre-launch lockdown + webhook, newsletter, legal-page and hero-video bypasses)
       - Client-owned infrastructure (Cloudflare account, GitHub org, Resend, OpenAI all owned by Chow Luck Club)
     metrics:
-      - { label: "Engagement type",          value: "Signed commercial commission, three-stage delivery schedule (Phase 1 internal delivery + Phase 2 internal delivery + final acceptance)" }
-      - { label: "Build span",                value: "2026-05-07 → 2026-05-15 (a nine-day contracted build per contract §5; build-phase commits 2026-05-07 → 2026-05-13)" }
-      - { label: "Phase 1 public launch",     value: "2026-05-22 (teaser landing page with newsletter capture)" }
-      - { label: "Phase 2 public launch",     value: "2026-06-05 (full site went public)" }
-      - { label: "Event day",                 value: "2026-10-10 at Shed 10, Queens Wharf, Tāmaki Makaurau" }
-      - { label: "Free maintenance window",   value: "5 June 2026 → 5 September 2026 (hard expiry per contract §15.1)" }
-      - { label: "Total commits",             value: "115 (solo; in the client's private organisation repository)" }
+      - { label: "Engagement type",          value: "Signed commercial commission, three-stage delivery schedule (Phase 1 internal delivery + Phase 2 internal delivery + final acceptance)", source: "private: the signed agreement with the client (not linked)", asOf: "2026-05-04" }
+      - { label: "Build span",                value: "2026-05-07 → 2026-05-15 (a nine-day contracted build per contract §5; build-phase commits 2026-05-07 → 2026-05-13)", source: "private: the signed agreement §5 and the client repository's git log (not linked)", asOf: "2026-05-15" }
+      - { label: "Phase 1 public launch",     value: "2026-05-22 (teaser landing page with newsletter capture)", source: "https://eatropolis.co.nz/ (public launch) and the client repository's status log", asOf: "2026-05-22" }
+      - { label: "Phase 2 public launch",     value: "2026-06-05 (full site went public)", source: "https://eatropolis.co.nz/ (public launch) and the client repository's status log", asOf: "2026-06-05" }
+      - { label: "Event day",                 value: "2026-10-10 at Shed 10, Queens Wharf, Tāmaki Makaurau", source: "https://eatropolis.co.nz/", asOf: "2026-10-10" }
+      - { label: "Free maintenance window",   value: "5 June 2026 → 5 September 2026 (hard expiry per contract §15.1)", source: "private: the signed agreement §15.1 (not linked)", asOf: "2026-06-05" }
+      - { label: "Total commits",             value: "115 (solo; in the client's private organisation repository)", source: "private: client repository git log (not linked)", asOf: "2026-05-13" }
       - { label: "API routes",                value: "9 (chat + chat/feedback + contact + newsletter + partnership + transcribe + tts + unsubscribe + webhooks/resend)" }
       - { label: "Pages (page.tsx files)",    value: "11 marketing pages" }
       - { label: "React components",          value: "57 (.tsx) across 14 namespaces (analytics, cards, chat, consent, dishes, faq, forms, hero, legal, mdx, motion, nav, tickets, ui)" }
@@ -795,9 +795,9 @@ projects:
       - { label: "Drizzle schema modules",    value: "3 domain modules (chat / email / forms) re-exported from an index, with 4 repositories (chat / email-events / forms / subscribers)" }
       - { label: "SQL migrations",            value: "2 (0000_elite_molecule_man + 0001_green_hex — the second a partial-index ON CONFLICT mismatch hotfix)" }
       - { label: "Lighthouse Mobile target",  value: "≥ 90 per contract §3.8; achieved 71 → 84 Performance on the dishes page via an offline AVIF/WebP pipeline + font-weight trim + lazy-mount AIAssistant + deferred hero video sources; the home page, with the autoplay hero video, stayed below target (the client replaced the video with a photo slideshow on 2026-09-17)" }
-      - { label: "Accessibility verification", value: "39/39 axe-core Playwright tests pass; WAI-ARIA APG NavDropdown menu keyboard pattern; conformance statement per WCAG 2.2 AA contract §3.10" }
+      - { label: "Accessibility verification", value: "39/39 axe-core Playwright tests pass; WAI-ARIA APG NavDropdown menu keyboard pattern; conformance statement per WCAG 2.2 AA contract §3.10", source: "private: client repository accessibility statement and CI axe suite (not linked)", asOf: "2026-05-19" }
       - { label: "Email deliverability",      value: "mail-tester 10/10 — SPF + DKIM + DMARC all live on eatropolis.co.nz; Gmail.email-delivered webhook round-trip 5.96s end-to-end" }
-      - { label: "Load testing",              value: "k6 to 1,000 concurrent VUs per contract §3.8 — passed with 0.00% error rate over 113,320 requests in five minutes" }
+      - { label: "Load testing",              value: "k6 to 1,000 concurrent VUs per contract §3.8 — passed with 0.00% error rate over 113,320 requests in five minutes", source: "private: client repository k6 load-test report (not linked)", asOf: "2026-05-19" }
       - { label: "Deploy pipeline",           value: "GitHub Actions push-to-main → opennextjs-cloudflare build + deploy, ~55-70s end-to-end" }
       - { label: "Cloudflare Zero Trust apps", value: "5 self-hosted Access apps (pre-launch lockdown + webhook bypass 05-09, newsletter bypass 05-12, legal-page and hero-video bypasses 05-22); newsletter bypass used 5/5 hostname destination slots (platform limit); launch done by attaching a public bypass policy to the gate" }
     status: production

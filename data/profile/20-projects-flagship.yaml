@@ -81,22 +81,22 @@ projects:
       - "Production Vercel-to-client-team migration playbook"
       - "Deliberate CopilotKit optimisation: 8 routes → 3 (anti-bloat UX discipline)"
     metrics:
-      - { label: "Research cohort",        value: "19 users, no test or staff accounts among them (Oct 2025 – Mar 2026)" }
-      - { label: "Journal entries",        value: "181 bilingual (EN + te reo Māori)" }
-      - { label: "Voice sessions",         value: "35 (OpenAI Realtime, text transcripts only — audio deliberately not stored)" }
-      - { label: "AI coach messages",      value: "146" }
-      - { label: "Hauora daily check-ins", value: "74" }
-      - { label: "Active financial goals", value: "18" }
-      - { label: "AI actions defined",     value: "45 across 12 hooks in the shipped code (counted 2026-10-15), after the goals assistant's 28 were cut (Nov 2025); CopilotKit live on 3 routes after optimisation" }
-      - { label: "DB schema scale",        value: "48 tables · 494 columns · 10 schema modules · 22 migrations (0000-0021)" }
+      - { label: "Research cohort",        value: "19 users, no test or staff accounts among them (Oct 2025 – Mar 2026)", source: "private: Chan's analysis of the cohort's records in the client's production database (not linked)", asOf: "2026-03" }
+      - { label: "Journal entries",        value: "181 bilingual (EN + te reo Māori)", source: "private: Chan's analysis of the cohort's records in the client's production database (not linked)", asOf: "2026-03" }
+      - { label: "Voice sessions",         value: "35 (OpenAI Realtime, text transcripts only — audio deliberately not stored)", source: "private: Chan's analysis of the cohort's records in the client's production database (not linked)", asOf: "2026-03" }
+      - { label: "AI coach messages",      value: "146", source: "private: Chan's analysis of the cohort's records in the client's production database (not linked)", asOf: "2026-03" }
+      - { label: "Hauora daily check-ins", value: "74", source: "private: Chan's analysis of the cohort's records in the client's production database (not linked)", asOf: "2026-03" }
+      - { label: "Active financial goals", value: "18", source: "private: Chan's analysis of the cohort's records in the client's production database (not linked)", asOf: "2026-03" }
+      - { label: "AI actions defined",     value: "45 across 12 hooks in the shipped code (counted 2026-10-15), after the goals assistant's 28 were cut (Nov 2025); CopilotKit live on 3 routes after optimisation", source: "private: client repository, shipped code (AI hooks) (not linked)", asOf: "2026-10-15" }
+      - { label: "DB schema scale",        value: "48 tables · 494 columns · 10 schema modules · 22 migrations (0000-0021)", source: "private: client repository, schema and migrations 0000–0021 (not linked)", asOf: "2026-10-15" }
       - { label: "9 psychological factors", value: "self_belief · long_term_focus · resilience · self_control · growth_mindset · financial_confidence · social_comparison · mindfulness · gratitude (one is reverse-coded as Present Bias)" }
       - { label: "5 Hauora dimensions",    value: "Wairua (spiritual, 3 metrics) · Tinana (physical, 4 metrics) · Whānau (family, 2 metrics) · Hinengaro (mental, 2 metrics) · Whenua (environmental, integrated in Wairua)" }
       - { label: "4 Maramataka activities", value: "Toitoi (spiritual/cultural) · Hi ika (water harvesting) · Pouraka (hunting/gathering) · Mahi māra (gardening/planting) — across 30-day lunar cycle + 8 main moon phases" }
       - { label: "7 SMART action plans",   value: "Option A Spending Reduction · B Savings Increase · C Savings Rate · D Debt Reduction · E Income Growth · F Budget Review · G Accountability Partner (each with dedicated React component family — 38 goal components total)" }
       - { label: "5 Whānau permission tiers", value: "canSeeGoals · canSeeProgress · canSeeMood · canSeeAchievements · canSendMessages" }
       - { label: "Whakatauki library",     value: "74 Māori proverbs across 37+ categories, AI-driven contextual delivery, bilingual" }
-      - { label: "Pages · API routes · components", value: "38 pages · 76 API route files · 100+ endpoints across 20 modules · 115+ components (44 main · 38 goal-specific · 28 shadcn/ui · 5+ cultural)" }
-      - { label: "Commits (solo)",         value: "351 (2025-09-19 → 2026-03-29)" }
+      - { label: "Pages · API routes · components", value: "38 pages · 76 API route files · 100+ endpoints across 20 modules · 115+ components (44 main · 38 goal-specific · 28 shadcn/ui · 5+ cultural)", source: "private: client repository, app/ and components/ trees (not linked)", asOf: "2026-05-19" }
+      - { label: "Commits (solo)",         value: "351 (2025-09-19 → 2026-03-29)", source: "private: client repository, git log (not linked)", asOf: "2026-03-29" }
       - { label: "Production migration",   value: "Vercel personal Hobby → client Whiri-AI Pro team executed March 2026 with zero downtime; documented as `docs/implementation/PROJECT_MIGRATION_GUIDE.md` — a reusable playbook covering GH org transfer, Blob/KV recreation, OAuth re-config, DNS cutover, blob-data migration, and `NEXTAUTH_SECRET` preservation for session survival; every registered user was emailed the new address" }
     status: production
     startDate: "2025-10"
@@ -482,27 +482,27 @@ projects:
       - Webflow → Next.js migration via Python crawler (she-sharp-crawl)
       - Her Waka MSD-funded teaching site authored solo (4 workshops + 12 tutorials)
     metrics:
-      - { label: "Total commits",            value: "1,381" }
-      - { label: "Merged pull requests",     value: "251" }
-      - { label: "Authorship share",         value: "94.5% of all lines added (801,609 of 847,827) — Lesley Gao contributed 151 frontend commits and 43 pull requests" }
-      - { label: "Commits since 2026-01-01", value: "979 (intensive H1 build-out)" }
-      - { label: "Build window",             value: "2025-07-22 → 2026-09-01 (13.3 months active)" }
-      - { label: "API routes",               value: "84 (app/api/**/route.ts)" }
-      - { label: "Pages",                    value: "63 (app/**/page.tsx)" }
-      - { label: "Components",               value: "198 (components/**/*.tsx)" }
-      - { label: "TypeScript",               value: "180,914 lines across 818 files" }
-      - { label: "Database schema",          value: "39 pgTables, 33 pgEnums" }
-      - { label: "SQL migrations",           value: "32 (0000_soft_the_anarchist → 0033_crazy_morg)" }
+      - { label: "Total commits",            value: "1,381", source: "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)", asOf: "2026-09-01" }
+      - { label: "Merged pull requests",     value: "251", source: "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)", asOf: "2026-09-01" }
+      - { label: "Authorship share",         value: "94.5% of all lines added (801,609 of 847,827) — Lesley Gao contributed 151 frontend commits and 43 pull requests", source: "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)", asOf: "2026-09-01" }
+      - { label: "Commits since 2026-01-01", value: "979 (intensive H1 build-out)", source: "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)", asOf: "2026-09-01" }
+      - { label: "Build window",             value: "2025-07-22 → 2026-09-01 (13.3 months active)", source: "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)", asOf: "2026-09-01" }
+      - { label: "API routes",               value: "84 (app/api/**/route.ts)", source: "private: charity's platform repository, app/api/**/route.ts (not linked)", asOf: "2026-09-01" }
+      - { label: "Pages",                    value: "63 (app/**/page.tsx)", source: "private: charity's platform repository, app/**/page.tsx (not linked)", asOf: "2026-09-01" }
+      - { label: "Components",               value: "198 (components/**/*.tsx)", source: "private: charity's platform repository, components/**/*.tsx (not linked)", asOf: "2026-09-01" }
+      - { label: "TypeScript",               value: "180,914 lines across 818 files", source: "private: charity's platform repository, TypeScript line count (not linked)", asOf: "2026-09-01" }
+      - { label: "Database schema",          value: "39 pgTables, 33 pgEnums", source: "private: charity's platform repository, Drizzle schema (not linked)", asOf: "2026-10-15" }
+      - { label: "SQL migrations",           value: "32 (0000_soft_the_anarchist → 0033_crazy_morg)", source: "private: charity's platform repository, migrations folder (not linked)", asOf: "2026-10-15" }
       - { label: "Lib modules",              value: "matching, slack-bot, stripe, funding, programmes, recruitment, invitations, mentorship, email, auth, db (11 namespaced)" }
-      - { label: "Cron jobs",                value: "3 scheduled in vercel.json at handover (weekly-mentorship-stats, weekly-funding-crawl, event-feedback-digest); the process-queue route exists but was never scheduled" }
-      - { label: "Funding crawler sources",  value: "6 NZ government feeds (beehive RSS, data.govt CKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML)" }
+      - { label: "Cron jobs",                value: "3 scheduled in vercel.json at handover (weekly-mentorship-stats, weekly-funding-crawl, event-feedback-digest); the process-queue route exists but was never scheduled", source: "private: charity's platform repository, vercel.json at handover (not linked)", asOf: "2026-09-01" }
+      - { label: "Funding crawler sources",  value: "6 NZ government feeds (beehive RSS, data.govt CKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML)", source: "private: charity's platform repository, funding crawler (not linked)", asOf: "2026-05-19" }
       - { label: "AI matching weights",      value: "MBTI 15% + Skill 35% + Goal 30% + Industry 10% + Logistics 10%" }
       - { label: "AI matching score range",  value: "0-100 overall + 5 per-dimension subscores + confidence (high/medium/low)" }
       - { label: "AI retry policy",          value: "3 attempts with exponential backoff (1s × 2^n), batch concurrency 5, 100ms inter-batch delay" }
-      - { label: "Distinct event registrants", value: "2,919 (on record, per the transformation record's published-vs-recorded table)" }
-      - { label: "Sponsors on logo wall",    value: "39" }
-      - { label: "Events since 2014",        value: "96+" }
-      - { label: "Migration crawler assets", value: "1,748 images / 707 MB / 11 JSON files / 85 events + 50 Humanitix tickets + 15 podcasts + 121 photo galleries + 7 press articles + 118 pages" }
+      - { label: "Distinct event registrants", value: "2,919 (on record, per the transformation record's published-vs-recorded table)", source: "private: Chan's transformation record, chapter 07 published-vs-recorded table (not linked)", asOf: "2026-09-01" }
+      - { label: "Sponsors on logo wall",    value: "39", source: "private: Chan's transformation record, chapter 07 published-vs-recorded table (not linked)", asOf: "2026-09-01" }
+      - { label: "Events since 2014",        value: "96+", source: "computed from the She Sharp event register (tagged SOURCED in the charity's stats.ts)", asOf: "2026-08-25" }
+      - { label: "Migration crawler assets", value: "1,748 images / 707 MB / 11 JSON files / 85 events + 50 Humanitix tickets + 15 podcasts + 121 photo galleries + 7 press articles + 118 pages", source: "private: migration crawler output, archived repository (not linked)", asOf: "2026-05-19" }
     status: production
     startDate: "2025-07"
     endDate: "2026-09"
@@ -908,8 +908,8 @@ projects:
       - "WebSocket hub"
       - "Founding engineer"
     metrics:
-      - { label: "Total commits",       value: "488 non-merge" }
-      - { label: "Chan's commits",      value: "471 (96.5% of non-merge)" }
+      - { label: "Total commits",       value: "488 non-merge", source: "private: client repository, git history (not linked)", asOf: "2026-09-04" }
+      - { label: "Chan's commits",      value: "471 (96.5% of non-merge)", source: "private: client repository, git history (not linked)", asOf: "2026-09-04" }
       # The ONLY performance figures GAVIGO clears for public use, under
       # GAVIGO's own labels. Each must travel with the boundary note below it.
       # The orchestrator's internal path timings and hit rates are not public
@@ -918,8 +918,8 @@ projects:
       - { label: "Controlled Startup Path Comparison", value: "4.45s → 1.00s (controlled proof-stage measurement)" }
       - { label: "Preserved AI State Restore",         value: "~140ms (preserved AI state restored into a fresh process; controlled proof-stage measurement)" }
       - { label: "Measurement boundary",               value: "Real, controlled application-level measurements, not a production SLA or a complete end-to-end activation time" }
-      - { label: "Cloud platforms",     value: "DigitalOcean DOKS → Google Cloud GKE" }
-      - { label: "Cross-cloud cutover", value: "~30 min downtime (2026-03-11)" }
+      - { label: "Cloud platforms",     value: "DigitalOcean DOKS → Google Cloud GKE", source: "private: client repository, deployment configuration and phase records (not linked)", asOf: "2026-03-11" }
+      - { label: "Cross-cloud cutover", value: "~30 min downtime (2026-03-11)", source: "private: client repository, phase records of the cutover (not linked)", asOf: "2026-03-11" }
       - { label: "Games",               value: "23 across 4 studios (+2 ML/compute workloads)" }
     status: production
     startDate: "2025-10"
@@ -1144,12 +1144,12 @@ projects:
         reach:
           measuredOn: "2026-10-13"
           usage:
-            - { label: "GitHub stars", value: 129, source: "https://github.com/ChanMeng666/server-google-news" }
+            - { label: "GitHub stars", value: 129, source: "https://github.com/ChanMeng666/server-google-news", asOf: "2026-10-13" }
             - { label: "GitHub forks", value: 21, source: "https://github.com/ChanMeng666/server-google-news/forks" }
             - { label: "npm downloads, 2025-04-13 to 2026-10-13", value: 10354, source: "https://api.npmjs.org/downloads/point/2025-04-13:2026-10-13/@chanmeng666/google-news-server", note: "npm keeps 18 months of history; 233 in the last 30 days" }
             - { label: "Public GitHub repositories that reference the repo or the npm package", value: 83, basis: "GitHub code search, first 200 hits per query; includes her own 3" }
-            - { label: "PulseMCP estimated visitors", value: "38k", source: "https://www.pulsemcp.com/servers/chanmeng666-google-news", note: "PulseMCP's own estimate across the MCP ecosystem" }
-            - { label: "PulseMCP popularity ranking", value: "#1,060", source: "https://www.pulsemcp.com/servers/chanmeng666-google-news" }
+            - { label: "PulseMCP estimated visitors", value: "38k", source: "https://www.pulsemcp.com/servers/chanmeng666-google-news", asOf: "2026-10-13", note: "PulseMCP's own estimate across the MCP ecosystem" }
+            - { label: "PulseMCP popularity ranking", value: "#1,060", source: "https://www.pulsemcp.com/servers/chanmeng666-google-news", asOf: "2026-10-13" }
           press:
             - name: "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026"
               publisher: DataCamp
@@ -1253,21 +1253,21 @@ projects:
       - "Multi-language search"
       - "GEO-optimized README"
     metrics:
-      - { label: "First commit",       value: "2024-12-30 — 35 days after MCP's Nov 25 2024 public launch" }
-      - { label: "npm package",        value: "@chanmeng666/google-news-server" }
-      - { label: "Registry listings",  value: "15+ MCP catalogs: 9 directory sites (PulseMCP, Glama, mcp.so, mcpservers.org, MCP Market, Augment Code, Archestra, MCP Server Finder, AgentSeal) and 12 curated lists and registries on GitHub, led by punkpeye/awesome-mcp-servers", note: "Checked 2026-10-13; Smithery withdrawn 2026-10-15; the rows are in meta.x_brand.reach" }
-      - { label: "Press",              value: "DataCamp, \"Top 10 MCP Servers & Clients for AI Workflow Automation in 2026\" (no. 10, by Abid Ali Awan, 2025-07-10); PulseMCP Weekly Pulse newsletter; a dedicated Skywork AI article" }
-      - { label: "npm downloads",      value: "10,354 between 2025-04-13 and 2026-10-13 (the 18 months npm reports)" }
-      - { label: "PulseMCP badge",     value: "Top Pick · 38k estimated visitors · #1,060 global rank", note: "Read 2026-10-13; earlier reading 26.1k and #1,105" }
+      - { label: "First commit",       value: "2024-12-30 — 35 days after MCP's Nov 25 2024 public launch", source: "https://github.com/ChanMeng666/server-google-news (git log)", asOf: "2024-12-30" }
+      - { label: "npm package",        value: "@chanmeng666/google-news-server", source: "https://www.npmjs.com/package/@chanmeng666/google-news-server", asOf: "2026-10-15" }
+      - { label: "Registry listings",  value: "15+ MCP catalogs: 9 directory sites (PulseMCP, Glama, mcp.so, mcpservers.org, MCP Market, Augment Code, Archestra, MCP Server Finder, AgentSeal) and 12 curated lists and registries on GitHub, led by punkpeye/awesome-mcp-servers", source: "data/profile/20-projects-flagship.yaml › google-news-mcp › meta.x_brand.reach (directories rows)", asOf: "2026-10-15", note: "Checked 2026-10-13; Smithery withdrawn 2026-10-15; the rows are in meta.x_brand.reach" }
+      - { label: "Press",              value: "DataCamp, \"Top 10 MCP Servers & Clients for AI Workflow Automation in 2026\" (no. 10, by Abid Ali Awan, 2025-07-10); PulseMCP Weekly Pulse newsletter; a dedicated Skywork AI article", source: "https://www.datacamp.com/blog/top-mcp-servers-and-clients", asOf: "2025-07-10" }
+      - { label: "npm downloads",      value: "10,354 between 2025-04-13 and 2026-10-13 (the 18 months npm reports)", source: "https://api.npmjs.org/downloads/point/2025-04-13:2026-10-13/@chanmeng666/google-news-server", asOf: "2026-10-13" }
+      - { label: "PulseMCP badge",     value: "Top Pick · 38k estimated visitors · #1,060 global rank", source: "https://www.pulsemcp.com/servers/chanmeng666-google-news", asOf: "2026-10-13", note: "Read 2026-10-13; earlier reading 26.1k and #1,105" }
       # Glama publishes its own star tally, which lags GitHub's. Both numbers
       # rendering into one line of public/cv-llms.txt read as a contradiction,
       # so the source of each is named here.
-      - { label: "Glama quality",      value: "A (license) · A (quality) · 122 stars by Glama's own count" }
-      - { label: "Skywork review",     value: "One dedicated article, \"The AI Engineer's Guide to Real-Time News Integration\"" }
-      - { label: "Stars",              value: "129 GitHub (measured 2026-09-24) · 21 forks · listed on Glama, PulseMCP (Top Pick), Archestra, mcp.so, MCP Market, Augment Code" }
+      - { label: "Glama quality",      value: "A (license) · A (quality) · 122 stars by Glama's own count", source: "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news", asOf: "2026-10-13" }
+      - { label: "Skywork review",     value: "One dedicated article, \"The AI Engineer's Guide to Real-Time News Integration\"", source: "https://skywork.ai/skypage/en/google-news-ai-integration/1978665953022038016", asOf: "2026-10-13" }
+      - { label: "Stars",              value: "129 GitHub (measured 2026-09-24) · 21 forks · listed on Glama, PulseMCP (Top Pick), Archestra, mcp.so, MCP Market, Augment Code", source: "https://github.com/ChanMeng666/server-google-news", asOf: "2026-10-13" }
       - { label: "Forks",              value: "21" }
       - { label: "Commits",            value: "not tracked (shallow history) — see repos" }
-      - { label: "Early MCP contrib",  value: "Issue #76 (Nov 27 2024 — Windows/NVM workaround)" }
+      - { label: "Early MCP contrib",  value: "Issue #76 (Nov 27 2024 — Windows/NVM workaround)", source: "https://github.com/modelcontextprotocol/servers/issues/76", asOf: "2024-11-27" }
     status: production
     startDate: "2024-12-30"
     publicSummary: |

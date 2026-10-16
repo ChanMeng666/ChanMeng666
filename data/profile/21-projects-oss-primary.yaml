@@ -77,7 +77,7 @@ projects:
       - { label: "Live service",          value: "https://github-readme-suno-cards.vercel.app (Vercel serverless runtime)" }
       - { label: "GitHub Action",         value: "uses: ChanMeng666/github-readme-suno-cards@v0.1 (composite action, 'music' icon, purple branding)" }
       - { label: "Action inputs",         value: "36 (handle, manifest_path, song_ids, sort, max, include_tags, exclude_tags, min/max_duration)" }
-      - { label: "Card combinations",     value: "12 base (2 layouts x 2 presets x 3 themes)" }
+      - { label: "Card combinations",     value: "12 base (2 layouts x 2 presets x 3 themes)", source: "https://github.com/ChanMeng666/github-readme-suno-cards (card renderer)", asOf: "2026-05-19" }
       - { label: "Customization toggles", value: "11 element show/hide flags + hex color overrides" }
       - { label: "id input formats",      value: "3 (UUID / suno.com URL / suno.com/s/<shortcode>) — parser-normalized" }
       - { label: "Sister project",        value: "Seismophone shares the @suno-cards/parser workspace kernel (parser extracted between the two repos)" }
@@ -285,16 +285,16 @@ projects:
     # The promo films' stack (Remotion, React, Suno) lives in the sister repos,
     # not in echook itself; removed from techStack 2026-10-15.
     metrics:
-      - { label: "Commits (solo)", value: "168 (2025-11-01 → 2026-10-07, ~11 months); effectively single-author" }
-      - { label: "GitHub stars",   value: "88 (measured 2026-10-15; renamed from claude-code-audio-hooks)" }
-      - { label: "Version",        value: "v7.1.0, released 2026-10-15, the first release run against the real Codex binary (0.143.0 and 0.162.1); 62 releases (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)" }
-      - { label: "Hook events",    value: "39 canonical events (3 on by default), plus 47 matcher variants — separately switchable matchers beneath a canonical event (`session_start_resume`, `stop_failure_rate_limit`), not extra events; mapped per harness: Claude Code 30 of 39 canonical + all 47 variants · Cursor 18 native (8 via auto-bridge) · Codex 11" }
-      - { label: "Harnesses",      value: "3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift" }
-      - { label: "Runtime",        value: "Python 3.9+ standard library only (no third-party runtime deps); distributed via plugin marketplaces + source, not npm" }
+      - { label: "Commits (solo)", value: "168 (2025-11-01 → 2026-10-07, ~11 months); effectively single-author", source: "https://github.com/ChanMeng666/echook (git log)", asOf: "2026-10-07" }
+      - { label: "GitHub stars",   value: "88 (measured 2026-10-15; renamed from claude-code-audio-hooks)", source: "https://github.com/ChanMeng666/echook", asOf: "2026-10-15" }
+      - { label: "Version",        value: "v7.1.0, released 2026-10-15, the first release run against the real Codex binary (0.143.0 and 0.162.1); 62 releases (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)", source: "https://github.com/ChanMeng666/echook/releases", asOf: "2026-10-15" }
+      - { label: "Hook events",    value: "39 canonical events (3 on by default), plus 47 matcher variants — separately switchable matchers beneath a canonical event (`session_start_resume`, `stop_failure_rate_limit`), not extra events; mapped per harness: Claude Code 30 of 39 canonical + all 47 variants · Cursor 18 native (8 via auto-bridge) · Codex 11", source: "https://github.com/ChanMeng666/echook at v7.1.0 (hooks/)", asOf: "2026-10-15" }
+      - { label: "Harnesses",      value: "3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift", source: "https://github.com/ChanMeng666/echook at v7.1.0", asOf: "2026-10-15" }
+      - { label: "Runtime",        value: "Python 3.9+ standard library only (no third-party runtime deps); distributed via plugin marketplaces + source, not npm", source: "https://github.com/ChanMeng666/echook at v7.1.0", asOf: "2026-10-15" }
       - { label: "CLI",            value: "41 JSON-in/JSON-out subcommands; a `manifest` command emits the entire surface (subcommands, hooks, config keys, error codes) as machine-readable JSON so an agent can self-orient" }
-      - { label: "Status line",    value: "33 configurable segments (context-window color bands, quota bars, model/branch/cost), auto-reflowing to terminal width" }
-      - { label: "Channels",       value: "audio · desktop toast · TTS (speaks the agent's actual final message) · webhook (Slack/Discord/Teams/ntfy, versioned payload)" }
-      - { label: "Tests / CI",     value: "795 unittest cases (v7.1.0, run 2026-10-15) on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate" }
+      - { label: "Status line",    value: "33 configurable segments (context-window color bands, quota bars, model/branch/cost), auto-reflowing to terminal width", source: "https://github.com/ChanMeng666/echook at v7.1.0", asOf: "2026-10-15" }
+      - { label: "Channels",       value: "audio · desktop toast · TTS (speaks the agent's actual final message) · webhook (Slack/Discord/Teams/ntfy, versioned payload)", source: "https://github.com/ChanMeng666/echook at v7.1.0", asOf: "2026-10-15" }
+      - { label: "Tests / CI",     value: "795 unittest cases (v7.1.0, run 2026-10-15) on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate", source: "https://github.com/ChanMeng666/echook unit test suite, run locally at v7.1.0", asOf: "2026-10-15" }
     publicSummary: |
       An audio-and-status notification system for Claude Code, Cursor
       IDE, and Codex CLI. The core idea: you never have to learn the
@@ -571,8 +571,8 @@ projects:
       - "MCP Registry"
       - "Anthropic MCP ecosystem"
     metrics:
-      - { label: "First commit",      value: "2024-12-31 — 36 days after MCP's Nov 25 2024 public launch" }
-      - { label: "npm package",       value: "@chanmeng666/google-jobs-server" }
+      - { label: "First commit",      value: "2024-12-31 — 36 days after MCP's Nov 25 2024 public launch", source: "https://github.com/ChanMeng666/server-google-jobs (git log)", asOf: "2024-12-31" }
+      - { label: "npm package",       value: "@chanmeng666/google-jobs-server", source: "https://www.npmjs.com/package/@chanmeng666/google-jobs-server", asOf: "2026-05-17" }
       - { label: "PulseMCP",          value: "4.6k visitors · registered Jan 1 2025" }
       - { label: "Skywork review",    value: '"one of the most elegant, production-ready solutions" (Oct 27 2025)' }
       - { label: "Glama quality",     value: "A (license) · MIT" }
@@ -933,9 +933,9 @@ projects:
       - { label: "Internal product name",    value: "Chromaflow (package.json) — public URL retains the descriptive 'gradient-svg-generator' for discoverability" }
       - { label: "First commit",             value: "2025-01-06 (commit 782c6f1)" }
       - { label: "Latest commit",            value: "2026-08-04" }
-      - { label: "Total commits",            value: "283 (solo, 2025-01-06 → 2026-07-10, ~18 months sustained)" }
+      - { label: "Total commits",            value: "283 (solo, 2025-01-06 → 2026-07-10, ~18 months sustained)", source: "https://github.com/ChanMeng666/gradient-svg-generator (git log)", asOf: "2026-07-10" }
       - { label: "gradientType effects",     value: "186 distinct gradientType references across 16 effect-family folders" }
-      - { label: "Template count",           value: "355 across 19 categories (Pride 20, Tech, Nature, Material, Text-FX, Gaming, Weather 12, Light&Shadow 12, Art Movements 12, Culinary 12, Patterns 8, Metallic 8, Path-Text 12, Shapes 25, Experimental 29, GitHub-Profile 30)" }
+      - { label: "Template count",           value: "355 across 19 categories (Pride 20, Tech, Nature, Material, Text-FX, Gaming, Weather 12, Light&Shadow 12, Art Movements 12, Culinary 12, Patterns 8, Metallic 8, Path-Text 12, Shapes 25, Experimental 29, GitHub-Profile 30)", source: "https://github.com/ChanMeng666/gradient-svg-generator (templates)", asOf: "2026-07-17" }
       - { label: "Refactor phases",          value: "4 documented phases (5: extract svgPrimitives factory + _shared/palettes; 6: truth-up-marketing-numbers + docs/architecture.md; 7: JS->TS migration + Zod validation; 8: gallery virtualization)" }
       - { label: "URL parameters",           value: "10 (text, template, height, duration, color0-N, gradientType, stroke, strokeWidth, rotate, textBg)" }
       - { label: "API endpoint",             value: "GET /api/svg — streams XML with Content-Type: image/svg+xml" }

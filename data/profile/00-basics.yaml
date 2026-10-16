@@ -63,9 +63,6 @@ basics:
     - { network: YouTube,     username: "@ChanMeng666", url: "https://www.youtube.com/@ChanMeng666" }
     - { network: Discord,     username: chanmeng666,    url: "https://discord.gg/T3NJG5n98a",            label: "Community server + DM @chanmeng666" }
     - { network: Newsletter,  url: "https://chanmeng.org/#newsletter",                                   label: "Personal newsletter" }
-    - { network: Spotify,     label: "Decoding the Future",          url: "https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj" }
-    - { network: Spotify,     label: "Future Turing (未来图灵)",       url: "https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4" }
-    - { network: Spotify,     label: "Praxis and Pages (知行书话)",    url: "https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL" }
     - { network: TechRosie,   url: "https://github.com/TechRosie" }
     - { network: Cal,         label: "Book a meeting",                 url: "https://cal.com/chan-meng/30min" }
     - { network: BuyMeACoffee, url: "https://buymeacoffee.com/chanmeng66u" }
@@ -79,11 +76,11 @@ basics:
   reach:
     asOf: "2026-09"
     metrics:
-      - { label: "newsletter subscribers",  value: "1,098", source: "https://www.linkedin.com/newsletters/7359054938187984896/", note: "Decoding the Future LinkedIn newsletter, reported by Chan 2026-09-24. Check the count on the source page while signed in — LinkedIn hides it from logged-out visitors" }
-      - { label: "LinkedIn followers",       value: "6,452", source: "https://www.linkedin.com/in/chanmeng666/", note: "measured on the live profile 2026-10-07 (linkedin/account.yaml); 6,232 reported by Chan 2026-09-24" }
-      - { label: "LinkedIn recommendations", value: "27",    source: "https://www.linkedin.com/in/chanmeng666/", note: "historical maximum (display rule: CLAUDE.md § Display the historical maximum) — 27 received, all in 50-references.yaml; LinkedIn showed 26 on 2026-08-11 after one was hidden; 7 from the Forward With Her cohort, 5 from the TechNest Community AI cohorts" }
-      - { label: "GitHub followers",         value: "237",   source: "https://github.com/ChanMeng666", note: "measured 2026-09-24 (gh api users/ChanMeng666)" }
-      - { label: "GitHub stars",             value: "530+",  source: "https://github.com/ChanMeng666", note: "measured 537 across own non-fork public repos (gh api users/ChanMeng666/repos, 2026-09-24), published as a stable 530+; org/commercial repos are private" }
+      - { label: "newsletter subscribers",  value: "1,098", source: "https://www.linkedin.com/newsletters/7359054938187984896/", asOf: "2026-09-24", note: "Decoding the Future LinkedIn newsletter, reported by Chan 2026-09-24. Check the count on the source page while signed in — LinkedIn hides it from logged-out visitors" }
+      - { label: "LinkedIn followers",       value: "6,452", source: "https://www.linkedin.com/in/chanmeng666/", asOf: "2026-10-07", note: "measured on the live profile 2026-10-07 (linkedin/account.yaml); 6,232 reported by Chan 2026-09-24" }
+      - { label: "LinkedIn recommendations", value: "27",    source: "https://www.linkedin.com/in/chanmeng666/", asOf: "2026-09-24", note: "historical maximum (display rule: CLAUDE.md § Display the historical maximum) — 27 received, all in 50-references.yaml; LinkedIn showed 26 on 2026-08-11 after one was hidden; 7 from the Forward With Her cohort, 5 from the TechNest Community AI cohorts" }
+      - { label: "GitHub followers",         value: "237",   source: "https://github.com/ChanMeng666", asOf: "2026-09-24", note: "measured 2026-09-24 (gh api users/ChanMeng666)" }
+      - { label: "GitHub stars",             value: "530+",  source: "https://github.com/ChanMeng666", asOf: "2026-09-24", note: "measured 537 across own non-fork public repos (gh api users/ChanMeng666/repos, 2026-09-24), published as a stable 530+; org/commercial repos are private" }
 
 # =============================================================================
 # DECORATIONS — moved to data/brand.yaml (signatures.banners,

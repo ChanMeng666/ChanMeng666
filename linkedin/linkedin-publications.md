@@ -3,7 +3,7 @@
 
 # LinkedIn — Publications
 
-Curated subset (11) — grouped for reference; LinkedIn shows them flat, date-ordered.
+Curated subset (9) — grouped for reference; LinkedIn shows them flat, date-ordered.
 
 ---
 
@@ -41,39 +41,9 @@ The article situates Sanicle's work within the wider FemTech movement — buildi
 
 ---
 
-### Hosted podcasts
-
-## 3. [Podcast — host] Decoding the Future
-
-**Publication/Publisher:** Spotify
-**Publication date:** May 4, 2025
-**Author:** Chan Meng (host)
-**URL:** <https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj>
-
-```
-An English-language podcast I host, exploring the landmark research papers driving innovation in Artificial Intelligence, Large Language Models, and beyond — translating dense research into something a working engineer or curious listener can actually use.
-
-The show runs alongside a companion LinkedIn newsletter of the same name, with 1,098 subscribers, so each episode reaches both audio and reading audiences.
-```
-
-## 4. [Podcast — host] Future Turing 未来图灵
-
-**Publication/Publisher:** Spotify
-**Publication date:** May 4, 2025
-**Author:** Chan Meng (host)
-**URL:** <https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4>
-
-```
-The Chinese-language counterpart to Decoding the Future — a podcast I host that decodes landmark research papers in Artificial Intelligence, LLMs, and other cutting-edge fields for a Chinese audience.
-
-The framing question of the show: "Where is the boundary of intelligence? How will the future be shaped by code?" Running parallel English and Chinese editions lets the same research reach listeners across both language communities.
-```
-
----
-
 ### Podcast guest appearances
 
-## 5. [Podcast] From Math Teacher to FemTech CTO: Chan Meng on AI and Women's Health Innovation
+## 3. [Podcast] From Math Teacher to FemTech CTO: Chan Meng on AI and Women's Health Innovation
 
 **Publication/Publisher:** Femtech At Work
 **Publication date:** Apr 22, 2025
@@ -95,7 +65,7 @@ What the episode covers:
 
 ### Press features about Chan
 
-## 6. AI-Driven Health Solutions for Women in the Workplace — UN CSW69 & Columbia University SIPA
+## 4. AI-Driven Health Solutions for Women in the Workplace — UN CSW69 & Columbia University SIPA
 
 **Publication/Publisher:** FemTech Weekend
 **Publication date:** Apr 2, 2025
@@ -118,7 +88,7 @@ The feature reflects a consistent approach to FemTech: minimalist architecture a
 
 ### Podcast guest appearances
 
-## 7. From Math Teacher to Full-Stack Developer
+## 5. From Math Teacher to Full-Stack Developer
 
 **Publication/Publisher:** 小宇宙FM — 码农姐妹 (Xiaoyuzhou FM, "Coder Sisters")
 **Publication date:** Feb 22, 2025
@@ -135,7 +105,7 @@ We also talked about my minimalist lifestyle and my observations on the job mark
 
 ### Press features about Chan
 
-## 8. Weekly Pulse: Remote MCP, Images, Screen Recording
+## 6. Weekly Pulse: Remote MCP, Images, Screen Recording
 
 **Publication/Publisher:** PulseMCP
 **Publication date:** Jan 4, 2025
@@ -152,7 +122,7 @@ Being picked up by an independent MCP-ecosystem newsletter, written by Tadas Ant
 
 ### Minimalism / lifestyle press
 
-## 9. Minimalist to the End, I Threw Away My Old Name
+## 7. Minimalist to the End, I Threw Away My Old Name
 
 **Publication/Publisher:** NetEase — Kan Ke inSight (网易看客 inSight)
 **Publication date:** Oct 18, 2024
@@ -166,7 +136,7 @@ A personal narrative on radical minimalism that goes well beyond ordinary declut
 Engagement: 29,000+ reads · 534 audio listens · 569 likes · 1,118 shares · 136 bookmarks · 106 comments.
 ```
 
-## 10. Girl on Mattress
+## 8. Girl on Mattress
 
 **Publication/Publisher:** The Most People (最人物)
 **Publication date:** Sep 23, 2024
@@ -180,7 +150,7 @@ A feature article sharing my experience and reflections as a practitioner of rad
 Engagement: 100,000+ reads · 2,234 audio listens · 1,779 likes · 3,864 shares · 454 bookmarks · 74 comments.
 ```
 
-## 11. A Glimpse of My Minimalist Home
+## 9. A Glimpse of My Minimalist Home
 
 **Publication/Publisher:** Douban — Daily Douban Feature
 **Publication date:** Aug 14, 2024

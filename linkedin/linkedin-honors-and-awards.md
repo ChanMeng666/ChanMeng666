@@ -99,13 +99,13 @@ The recognition came during the Master of Applied Computing programme, alongside
 **Media:** `HONOR CERTIFICATE` · `FemTech China`
 
 ```
-Won the Excellence Award at China's inaugural FemTech Weekend Women's Health Technology Challenge as a core member of Team BuXun.
+Won the Excellence Award at the FemTech China Women's Health Technology Challenge as a core member of Team BuXun.
 
 Run in partnership with C2C Startups, the competition set out to advance technological innovation in women's healthcare. Led product development through intensive workshops, mentoring sessions, and collaborative team work, culminating in a complete pitch deck and prototype addressing a specific women's-health challenge.
 
 Entries were judged on product potential, technical innovation, commercial viability, and team collaboration by a panel of industry experts and Chengdu Regional Science and Technology Consulting Co., Ltd.
 
-This is the same FemTech Weekend organisation later joined as CTO in March 2025 — the award preceded and directly informed that subsequent leadership engagement.
+The award came from FemTech China, a separate organisation from FemTech Weekend, which I joined as CTO three months later, in March 2025.
 ```
 
 ## 7. Master of Applied Computing with Distinction

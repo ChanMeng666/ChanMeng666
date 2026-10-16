@@ -16,8 +16,9 @@
 //               markers, skipped) + linkedin/linkedin-*.md
 //      site     films: dist/films.json. Everything else: the sibling repo
 //               ../2d-portfolio (src/, comments stripped, its films.json copy
-//               excluded). Its blog posts (content/*.mdx) only WARN: a dated
-//               article is not a project listing.
+//               excluded). Its blog posts (content/*.mdx) are not scanned:
+//               a published post is a dated record (docs/STATE.md, Blog posts
+//               on chanmeng.org); one info line gives the count of mentions.
 //    Plus structural cross-checks: a `show.readme: false` project is in no
 //    90-meta bucket; a `show.llms: false` project is not in
 //    llmsOnlyOpenSourceIds; `show.llms: true` with `show.readme: false` needs
@@ -150,6 +151,19 @@ function termsFor(e) {
   }
   return out.sort((a, b) => b.term.length - a.term.length);
 }
+// Entries whose display name is shared with another entry that may be shown:
+// their identifiers are narrowed to what names only them. Each says why.
+const NARROW_TERMS = {
+  // The retired LinkedIn newsletter is also called "Decoding the Future" and is
+  // not hidden; match the podcast only by its id, the word "podcast" and its
+  // Spotify show id.
+  "publications/decoding-the-future-podcast": [
+    { term: "[Podcast — host] Decoding the Future", kind: "name" },
+    { term: "decoding-the-future-podcast", kind: "id" },
+    { term: "Decoding the Future podcast", kind: "name" },
+    { term: "0PDYYnZhKwV7PdWHeK7nbj", kind: "name" },
+  ],
+};
 const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 function termRe({ term, kind }) {
   const w = kind === "id" ? "A-Za-z0-9-" : "A-Za-z0-9";
@@ -195,13 +209,14 @@ const llmsOnly = new Set(xb.llmsOnlyOpenSourceIds ?? []);
 const onFilmWall = (f) => (f.kind === "product-film" && f.primary) || f.kind === "brand-film" || f.kind === "event-promo" || f.kind === "music-video";
 
 let declared = 0;
+let blogMentions = 0; // chanmeng.org blog posts: a dated record, counted, not checked
 const termReport = [];
 for (const list of SHOW_LISTS) {
   for (const e of profile[list] ?? []) {
     if (!e?.show) continue;
     declared++;
     const key = `${list}/${e.id ?? e.title ?? e.name}`;
-    const terms = termsFor(e);
+    const terms = NARROW_TERMS[key] ?? termsFor(e);
     termReport.push(`  ${key}: ${terms.map((t) => JSON.stringify(t.term)).join(", ")}`);
 
     for (const s of SURF) {
@@ -216,10 +231,7 @@ for (const list of SHOW_LISTS) {
           if (ex) notes.push(`decided mention: ${key} on ${s} at ${h.file}:${h.line} ("${h.term}"): ${ex.why}`);
           else err(`${key}: show.${s} is false but ${h.file}:${h.line} names it ("${h.term}", ${h.kind})`);
         }
-        if (s === "site" && list !== "films") {
-          for (const h of findHits(terms, SURFACES.blog))
-            warn(`${key}: show.site is false and a chanmeng.org blog post names it at ${h.file.replace(/^\.\.\//, "")}:${h.line} ("${h.term}"); a dated article, Chan decides`);
-        }
+        if (s === "site" && list !== "films") blogMentions += findHits(terms, SURFACES.blog).length;
         if (s === "readme" && list === "films" && onFilmWall(e))
           err(`${key}: show.readme is false but the README film wall selects it (kind ${e.kind}${e.primary ? ", primary" : ""}; rule in scripts/build-readme-art.mjs)`);
       } else if (e.show[s] === true && docs.length && !hits.length) {
@@ -247,6 +259,8 @@ for (const list of SHOW_LISTS) {
       err(`${key}: onFilmsPage ${e.onFilmsPage} disagrees with show.site ${e.show.site}`);
   }
 }
+
+if (SURFACES.blog.length) notes.push(`site: blog posts are a dated record; ${blogMentions} mention(s) of hidden entries, not checked (docs/STATE.md, Blog posts on chanmeng.org)`);
 
 // ---------------------------------------------------------------------------
 // Part 2: typed references

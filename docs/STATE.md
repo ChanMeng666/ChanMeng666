@@ -57,6 +57,7 @@ LinkedIn copy.
 | **chanmeng.org** | Never presented as a project; it is the venue |
 | **YouTube** | A portfolio surface. Chan set each video's visibility on 2026-10-07; demos of archived projects (Panda, FemTracker, Wellness Agent, Sanicle) are private and must not be linked. Descriptions carry links since 2026-10-09 (the account is verified; what goes in the block: `youtube/README.md`). Unlisted client and course recordings are left alone |
 | **Podcasts** | Discontinued 2026-07: shown on no surface; the data entries stay |
+| **Blog posts on chanmeng.org** | A dated record. A post that names a project is not edited when that project leaves the shopfront (Chan, 2026-10-16, delegated). `show.site: false` therefore covers the site's pages and data, not `content/*.mdx` |
 | **Product READMEs** | One screen (Chan, 2026-10-12): wordmark, one sentence, link pills, the animated card, the film, the shortest way in, at most one mermaid diagram, then a pointer for the reader's own coding agent. What was cut moves to `docs/overview.md` in that repo, not deleted. No third-party badges; buttons are pills from `scripts/build-product-pills.mjs`, committed in the product repo. Chan uploads each film by hand on github.com, at the placeholder comment. Scope: ArchLang, the two ArchCanvas front pages, echook, a11y-loop, both MCP servers, github-visitor-counter, github-readme-suno-cards, the AI Programming platform |
 
 ## Platform registers
@@ -98,6 +99,9 @@ asking, unless she delegates again. `showcase: flagship` requires
 |---|---|
 | Archive Seismophone for real | Chan's word. Steps: `docs/operations/README.md` § Pending |
 | LinkedIn, by hand | Chan: delete the Seismophone entry under Projects and its association on three skills (PostgreSQL Recursive CTEs, Reverse Engineering, Internationalization) |
+| LinkedIn, by hand | Chan: delete the two podcast entries under Publications (Decoding the Future, Future Turing) |
+| LinkedIn, by hand | Chan: update the FemTech China award description (`70-linkedin.yaml:1667` and `:1673`): the challenge name in the first sentence and the last sentence |
+| Which organisation ran the inaugural Challenge where FreePeriod won Best Social Media Award | Chan: three places say "FemTech Weekend Challenge" (`10-career.yaml` FreePeriod narrative, `70-linkedin.yaml:486`, `90-meta.yaml:616`), the award entry says "FemTech China Women's Health Technology Challenge". Align once she confirms |
 | LinkedIn Featured video slot | The intro film does not exist yet; the slot in `70-linkedin.yaml` is a held-open placeholder |
 | Delete the five listing forks | Their PRs closing, or 2026-11-14 |
 | Google OAuth client and Resend key used by Te Pā Tiaki | Chan: revoke if they were dedicated to the game |

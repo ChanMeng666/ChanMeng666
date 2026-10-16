@@ -124,3 +124,18 @@ scripts/check-wikilinks.mjs, docs/INDEX.md
 
 ## [2026-10-16] add | source and asOf on 92 visitor-facing and llms metrics (delegated review of data/_intake/metrics-provenance-wave-1-2026-10.md); 6 rows left for Chan
 data/profile/20-projects-flagship.yaml, data/profile/21-projects-oss-primary.yaml, data/profile/22-projects-oss-webapps.yaml, data/profile/23-projects-oss-more.yaml
+
+## [2026-10-16] remove | podcasts out of LinkedIn publications copy and the llms claim
+data/profile/70-linkedin.yaml, data/profile/90-meta.yaml, data/profile/30-recognition.yaml, docs/STATE.md
+
+## [2026-10-16] decide | blog posts on chanmeng.org are a dated record, exempt from show.site
+docs/STATE.md, .claude/rules/data-profile.md, scripts/lint-kb.mjs
+
+## [2026-10-16] fix | FemTech China award copy no longer calls the two organisations the same
+data/profile/70-linkedin.yaml, docs/STATE.md
+
+## [2026-10-16] remove | Spotify podcast rows out of basics.profiles
+data/profile/00-basics.yaml
+
+## [2026-10-16] fix | FreePeriod narrative no longer conflates FemTech China with FemTech Weekend
+data/profile/10-career.yaml

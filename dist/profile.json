@@ -77,21 +77,6 @@
         "label": "Personal newsletter"
       },
       {
-        "network": "Spotify",
-        "label": "Decoding the Future",
-        "url": "https://open.spotify.com/show/0PDYYnZhKwV7PdWHeK7nbj"
-      },
-      {
-        "network": "Spotify",
-        "label": "Future Turing (未来图灵)",
-        "url": "https://open.spotify.com/show/201m2sZ5VNAEGKRBzf2ZZ4"
-      },
-      {
-        "network": "Spotify",
-        "label": "Praxis and Pages (知行书话)",
-        "url": "https://open.spotify.com/show/03tRh6SNm92ut5zpMmR0LL"
-      },
-      {
         "network": "TechRosie",
         "url": "https://github.com/TechRosie"
       },
@@ -112,30 +97,35 @@
           "label": "newsletter subscribers",
           "value": "1,098",
           "source": "https://www.linkedin.com/newsletters/7359054938187984896/",
+          "asOf": "2026-09-24",
           "note": "Decoding the Future LinkedIn newsletter, reported by Chan 2026-09-24. Check the count on the source page while signed in — LinkedIn hides it from logged-out visitors"
         },
         {
           "label": "LinkedIn followers",
           "value": "6,452",
           "source": "https://www.linkedin.com/in/chanmeng666/",
+          "asOf": "2026-10-07",
           "note": "measured on the live profile 2026-10-07 (linkedin/account.yaml); 6,232 reported by Chan 2026-09-24"
         },
         {
           "label": "LinkedIn recommendations",
           "value": "27",
           "source": "https://www.linkedin.com/in/chanmeng666/",
+          "asOf": "2026-09-24",
           "note": "historical maximum (display rule: CLAUDE.md § Display the historical maximum) — 27 received, all in 50-references.yaml; LinkedIn showed 26 on 2026-08-11 after one was hidden; 7 from the Forward With Her cohort, 5 from the TechNest Community AI cohorts"
         },
         {
           "label": "GitHub followers",
           "value": "237",
           "source": "https://github.com/ChanMeng666",
+          "asOf": "2026-09-24",
           "note": "measured 2026-09-24 (gh api users/ChanMeng666)"
         },
         {
           "label": "GitHub stars",
           "value": "530+",
           "source": "https://github.com/ChanMeng666",
+          "asOf": "2026-09-24",
           "note": "measured 537 across own non-fork public repos (gh api users/ChanMeng666/repos, 2026-09-24), published as a stable 530+; org/commercial repos are private"
         }
       ]
@@ -579,7 +569,7 @@
         "companyContext": "FreePeriod is a Guangzhou-based public-health startup tackling\nperiod poverty and menstrual access through a combined hardware,\nsoftware, and advocacy approach. Founded in 2024 by Julia Zhu\n(朱楠) and incubated at the **Hong Kong University of Science and\nTechnology (Guangzhou) Lab of Future Technology**, the company\ndesigns and deploys emergency sanitary-pad dispensers based on\nvending-machine technology for public spaces, runs reproductive\nhealth education programmes, and advocates for \"women-friendly\nplaces\" that supply free sanitary products in public restrooms —\norganised under the founder's strapline that *sanitary pads\nshould be public infrastructure, like toilet paper, not a luxury\npurchase*. The team is 2–10 strong and operates as a\nuniversity-incubated venture with strong academic and competition\nbacking.\n",
         "mission": "Normalise menstrual products as a free, universally-available\npublic good — starting in mainland China, where period poverty\nis still under-discussed and where women in transit, on campus,\nin low-income workplaces, or in emergencies routinely face\naccess gaps. The theory of change is to combine concrete\nhardware deployments (so the access gap is visibly solved in\nspecific real places) with reproductive health education (so\nthe cultural conversation moves) and policy advocacy (so the\ncommitment institutionalises). The March 2024 policy win\ninstalling free sanitary pads in HKUST(GZ) women's restrooms is\nthe proof-of-model the rest of the strategy builds on.\n",
         "myMandate": "Brought in as CTO in November 2024 to own every piece of\nFreePeriod's digital presence. Reporting directly to founder\nJulia Zhu, my mandate covered the public website end-to-end —\narchitecture, build, deployment, and ongoing maintenance —\nalongside the digital infrastructure that supports the\ncompany's advocacy and product-rollout work (location directory\nof dispenser installations, advocacy document distribution,\nproduct demonstration, event scheduling, bilingual content for\ncross-border audiences). Solo engineering team throughout.\n",
-        "impactDelivered": "**Built and shipped the FreePeriod official website\nend-to-end, solo** — 53 commits in the repository, 100%\nauthored by me across my two GitHub identities (49 + 4 from\nChan Meng / ChanMeng666; zero outside contributors). The site\nis the public face of every product, advocacy, and education\nthread the company runs.\n\n**What the site has to do, and does:** present the dispenser\nproduct and the company's mission to a press- and grant-\nevaluator audience (the company collected four prizes, two\nprogramme selections and a grant in its 2024 cycle); host an interactive\n**Google Maps directory** of dispenser locations and\nwomen-friendly places so visitors can find free menstrual\nproducts near them; serve a product introduction video and\ndownloadable advocacy documents (research summaries, policy\nbriefs, partnership decks); run a Google Calendar embed for\ncommunity-event scheduling; and operate fully bilingually\n(English / 简体中文) for both domestic Chinese audiences and the\ninternational academic, competition, and grant ecosystem the\ncompany sits inside.\n\n**Stayed on the site post-tenure as the long-term technical\ncustodian** — the founder kept me on for ongoing infrastructure\nwork after the active CTO engagement ended in June 2025. In\nthat capacity I shipped the **production migration from Vercel\nto Cloudflare Pages** in April 2026 (re-pointing DNS, rebuilding\nthe static export pipeline around `wrangler pages deploy`,\nupdating CI), upgraded Next.js to 15.5.9 to clear all then-open\nDependabot security alerts in a single pass, refined the i18n\nlayer to handle developer-credit footer attribution in both\nlocales, and kept locations data current as new dispensers were\ninstalled.\n\n**Joined during the company's external-validation cycle.**\nDuring the period of my active CTO tenure and immediately\nleading into it, FreePeriod accumulated a striking concentration\nof recognition: **Best Award at Japan's 12th International\nConference on Social Sciences and Humanities** (2024); **Third\nPrize in the HKUST Sustainable Smart Living Competition**\n(2024); **Best Social Media Award at China's inaugural FemTech\nWeekend Challenge** — the same FemTech Weekend organisation I\nlater joined as CTO, which is part of how that next role came\nabout; **First Prize at the Shenzhen Nanshan District\nPhilanthropic Creative Star Contest**; selection into\n**Tencent's Technology Venture Capital Program**; selection\ninto **Tsinghua University's SDG Open Innovation Marathon**;\nand the **HKUST Entrepreneurship Bridge Grant**. The site I\nbuilt was the public artefact those judging panels were\nclicking through.\n",
+        "impactDelivered": "**Built and shipped the FreePeriod official website\nend-to-end, solo** — 53 commits in the repository, 100%\nauthored by me across my two GitHub identities (49 + 4 from\nChan Meng / ChanMeng666; zero outside contributors). The site\nis the public face of every product, advocacy, and education\nthread the company runs.\n\n**What the site has to do, and does:** present the dispenser\nproduct and the company's mission to a press- and grant-\nevaluator audience (the company collected four prizes, two\nprogramme selections and a grant in its 2024 cycle); host an interactive\n**Google Maps directory** of dispenser locations and\nwomen-friendly places so visitors can find free menstrual\nproducts near them; serve a product introduction video and\ndownloadable advocacy documents (research summaries, policy\nbriefs, partnership decks); run a Google Calendar embed for\ncommunity-event scheduling; and operate fully bilingually\n(English / 简体中文) for both domestic Chinese audiences and the\ninternational academic, competition, and grant ecosystem the\ncompany sits inside.\n\n**Stayed on the site post-tenure as the long-term technical\ncustodian** — the founder kept me on for ongoing infrastructure\nwork after the active CTO engagement ended in June 2025. In\nthat capacity I shipped the **production migration from Vercel\nto Cloudflare Pages** in April 2026 (re-pointing DNS, rebuilding\nthe static export pipeline around `wrangler pages deploy`,\nupdating CI), upgraded Next.js to 15.5.9 to clear all then-open\nDependabot security alerts in a single pass, refined the i18n\nlayer to handle developer-credit footer attribution in both\nlocales, and kept locations data current as new dispensers were\ninstalled.\n\n**Joined during the company's external-validation cycle.**\nDuring the period of my active CTO tenure and immediately\nleading into it, FreePeriod accumulated a striking concentration\nof recognition: **Best Award at Japan's 12th International\nConference on Social Sciences and Humanities** (2024); **Third\nPrize in the HKUST Sustainable Smart Living Competition**\n(2024); **Best Social Media Award at China's inaugural FemTech\nWeekend Challenge**; **First Prize at the Shenzhen Nanshan District\nPhilanthropic Creative Star Contest**; selection into\n**Tencent's Technology Venture Capital Program**; selection\ninto **Tsinghua University's SDG Open Innovation Marathon**;\nand the **HKUST Entrepreneurship Bridge Grant**. The site I\nbuilt was the public artefact those judging panels were\nclicking through.\n",
         "technicalHighlights": "**Static-export Next.js 15 + TypeScript** site deployed as a\nfully static bundle (the build script wipes `.next` and `out/`\nthen writes a clean static export), which is the right shape\nfor a high-traffic, low-mutation marketing-and-advocacy site\nsitting in front of grant judges, press, and policy\nstakeholders. Cheap to host, instantly cacheable, and trivial\nto move between hosts — a property I exercised when I migrated\nproduction from Vercel to Cloudflare Pages via `wrangler` in\nApril 2026 without rebuilding the application.\n\n**Google Maps as a directory primitive.** Rather than building\na custom database-backed location service, I used\n`@react-google-maps/api` with a hand-curated TypeScript module\n(`locations.ts`) as the source of truth for dispenser and\nwomen-friendly-place installations. Each install or location\nupdate flows through a Git commit, so the founder gets full\naudit history of where and when each pin moved, and the\nMaps-rendered front end stays one PR away from edits. Several\ncommits in the log are `Update locations.ts` — that's the\nrollout cadence visible in version control.\n\n**Bilingual i18n by design, not bolt-on** — Chinese and English\nrun side by side across the marketing copy, the dispenser\nproduct descriptions, the impact narrative, the advocacy\ndocument previews, and the footer credit. The audience split\nis genuinely bilingual (domestic Chinese policy and partner\naudiences on one side; international academic, competition,\nand grant audiences on the other), so the language layer is a\nfirst-class architectural concern, not a translation\nafterthought.\n\n**Document and video preview pipelines** for the policy\nbriefs, research summaries, partnership decks, and the\ncompany's product introduction video — in-browser preview plus\ndownloadable original — so external evaluators can review\nartefacts without leaving the site.\n\n**Radix UI primitives + Framer Motion** for accessibility-\ncorrect interactive components (dialogs, toasts, checkboxes,\npopovers) with motion polish, and **Recharts** for impact-\nmetric visualisations on the dashboard. **Zustand** for the\nsmall amount of client-side state the marketing surface needs\n(language toggle, dialog state).\n\n**Engineering hygiene maintained through the long tail.**\nEven after the active CTO engagement ended I kept the site\nsecure and modern: a clean Dependabot-driven Next.js 15.5.9\nupgrade resolved all then-open security alerts in a single\ncommit; the Cloudflare Pages migration was executed without\ndowntime; i18n strings stayed current with footer attribution\nchanges; and locations data continued to track installations\nas the company rolled out.\n\n**Software-meets-hardware integration as a deliberate\nskill surface.** FreePeriod is not a pure-software play —\nthe product is a vending-machine-class hardware deployment\nfor emergency sanitary pads, with solar-powered variants\nfor lower-grid-access locations, deployed across public\nspaces and partner institutions. My engineering job was\nto make the software side of that combined operation\nlegible and useful: the live Google Maps dispenser\ndirectory that lets users locate the nearest installation;\nthe bilingual advocacy document distribution flow; the\nlive product-demo interface; and the locations dataset\nthat tracks each rollout. This was an explicit exercise\nin shipping software that is judged not on technical\nnovelty but on whether it makes physical-world deployments\nvisible, addressable, and trustworthy to non-technical\naudiences.\n"
       },
       "publicSummary": "CTO at FreePeriod (Guangzhou, China; HKUST(GZ) Lab of Future Technology\nincubated), the public-health startup tackling period poverty through\nsanitary-pad dispensers, reproductive-health education, and policy\nadvocacy under founder Julia Zhu. Solo-built and shipped the company's\nofficial website (Next.js 15 + TypeScript + Google Maps location\ndirectory + bilingual EN/中文 + document and video preview pipelines;\n53 commits, 100% solo) — and stayed on as long-term technical custodian\nafter the active CTO engagement, executing the production migration to\nCloudflare Pages and ongoing security maintenance, before the team\nbrought in another developer to maintain it. FreePeriod's dispensers now\nserve the public areas of 10 store locations in Guangzhou.\n"
@@ -900,35 +890,51 @@
       "metrics": [
         {
           "label": "Research cohort",
-          "value": "19 users, no test or staff accounts among them (Oct 2025 – Mar 2026)"
+          "value": "19 users, no test or staff accounts among them (Oct 2025 – Mar 2026)",
+          "source": "private: Chan's analysis of the cohort's records in the client's production database (not linked)",
+          "asOf": "2026-03"
         },
         {
           "label": "Journal entries",
-          "value": "181 bilingual (EN + te reo Māori)"
+          "value": "181 bilingual (EN + te reo Māori)",
+          "source": "private: Chan's analysis of the cohort's records in the client's production database (not linked)",
+          "asOf": "2026-03"
         },
         {
           "label": "Voice sessions",
-          "value": "35 (OpenAI Realtime, text transcripts only — audio deliberately not stored)"
+          "value": "35 (OpenAI Realtime, text transcripts only — audio deliberately not stored)",
+          "source": "private: Chan's analysis of the cohort's records in the client's production database (not linked)",
+          "asOf": "2026-03"
         },
         {
           "label": "AI coach messages",
-          "value": "146"
+          "value": "146",
+          "source": "private: Chan's analysis of the cohort's records in the client's production database (not linked)",
+          "asOf": "2026-03"
         },
         {
           "label": "Hauora daily check-ins",
-          "value": "74"
+          "value": "74",
+          "source": "private: Chan's analysis of the cohort's records in the client's production database (not linked)",
+          "asOf": "2026-03"
         },
         {
           "label": "Active financial goals",
-          "value": "18"
+          "value": "18",
+          "source": "private: Chan's analysis of the cohort's records in the client's production database (not linked)",
+          "asOf": "2026-03"
         },
         {
           "label": "AI actions defined",
-          "value": "45 across 12 hooks in the shipped code (counted 2026-10-15), after the goals assistant's 28 were cut (Nov 2025); CopilotKit live on 3 routes after optimisation"
+          "value": "45 across 12 hooks in the shipped code (counted 2026-10-15), after the goals assistant's 28 were cut (Nov 2025); CopilotKit live on 3 routes after optimisation",
+          "source": "private: client repository, shipped code (AI hooks) (not linked)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "DB schema scale",
-          "value": "48 tables · 494 columns · 10 schema modules · 22 migrations (0000-0021)"
+          "value": "48 tables · 494 columns · 10 schema modules · 22 migrations (0000-0021)",
+          "source": "private: client repository, schema and migrations 0000–0021 (not linked)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "9 psychological factors",
@@ -956,11 +962,15 @@
         },
         {
           "label": "Pages · API routes · components",
-          "value": "38 pages · 76 API route files · 100+ endpoints across 20 modules · 115+ components (44 main · 38 goal-specific · 28 shadcn/ui · 5+ cultural)"
+          "value": "38 pages · 76 API route files · 100+ endpoints across 20 modules · 115+ components (44 main · 38 goal-specific · 28 shadcn/ui · 5+ cultural)",
+          "source": "private: client repository, app/ and components/ trees (not linked)",
+          "asOf": "2026-05-19"
         },
         {
           "label": "Commits (solo)",
-          "value": "351 (2025-09-19 → 2026-03-29)"
+          "value": "351 (2025-09-19 → 2026-03-29)",
+          "source": "private: client repository, git log (not linked)",
+          "asOf": "2026-03-29"
         },
         {
           "label": "Production migration",
@@ -1153,47 +1163,69 @@
       "metrics": [
         {
           "label": "Total commits",
-          "value": "1,381"
+          "value": "1,381",
+          "source": "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Merged pull requests",
-          "value": "251"
+          "value": "251",
+          "source": "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Authorship share",
-          "value": "94.5% of all lines added (801,609 of 847,827) — Lesley Gao contributed 151 frontend commits and 43 pull requests"
+          "value": "94.5% of all lines added (801,609 of 847,827) — Lesley Gao contributed 151 frontend commits and 43 pull requests",
+          "source": "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Commits since 2026-01-01",
-          "value": "979 (intensive H1 build-out)"
+          "value": "979 (intensive H1 build-out)",
+          "source": "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Build window",
-          "value": "2025-07-22 → 2026-09-01 (13.3 months active)"
+          "value": "2025-07-22 → 2026-09-01 (13.3 months active)",
+          "source": "private: Chan's transformation record (2026-09-01), counted from the charity's repository history (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "API routes",
-          "value": "84 (app/api/**/route.ts)"
+          "value": "84 (app/api/**/route.ts)",
+          "source": "private: charity's platform repository, app/api/**/route.ts (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Pages",
-          "value": "63 (app/**/page.tsx)"
+          "value": "63 (app/**/page.tsx)",
+          "source": "private: charity's platform repository, app/**/page.tsx (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Components",
-          "value": "198 (components/**/*.tsx)"
+          "value": "198 (components/**/*.tsx)",
+          "source": "private: charity's platform repository, components/**/*.tsx (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "TypeScript",
-          "value": "180,914 lines across 818 files"
+          "value": "180,914 lines across 818 files",
+          "source": "private: charity's platform repository, TypeScript line count (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Database schema",
-          "value": "39 pgTables, 33 pgEnums"
+          "value": "39 pgTables, 33 pgEnums",
+          "source": "private: charity's platform repository, Drizzle schema (not linked)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "SQL migrations",
-          "value": "32 (0000_soft_the_anarchist → 0033_crazy_morg)"
+          "value": "32 (0000_soft_the_anarchist → 0033_crazy_morg)",
+          "source": "private: charity's platform repository, migrations folder (not linked)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Lib modules",
@@ -1201,11 +1233,15 @@
         },
         {
           "label": "Cron jobs",
-          "value": "3 scheduled in vercel.json at handover (weekly-mentorship-stats, weekly-funding-crawl, event-feedback-digest); the process-queue route exists but was never scheduled"
+          "value": "3 scheduled in vercel.json at handover (weekly-mentorship-stats, weekly-funding-crawl, event-feedback-digest); the process-queue route exists but was never scheduled",
+          "source": "private: charity's platform repository, vercel.json at handover (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Funding crawler sources",
-          "value": "6 NZ government feeds (beehive RSS, data.govt CKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML)"
+          "value": "6 NZ government feeds (beehive RSS, data.govt CKAN, GETS RSS, MBIE HTML, Treasury RSS, women.govt HTML)",
+          "source": "private: charity's platform repository, funding crawler (not linked)",
+          "asOf": "2026-05-19"
         },
         {
           "label": "AI matching weights",
@@ -1221,19 +1257,27 @@
         },
         {
           "label": "Distinct event registrants",
-          "value": "2,919 (on record, per the transformation record's published-vs-recorded table)"
+          "value": "2,919 (on record, per the transformation record's published-vs-recorded table)",
+          "source": "private: Chan's transformation record, chapter 07 published-vs-recorded table (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Sponsors on logo wall",
-          "value": "39"
+          "value": "39",
+          "source": "private: Chan's transformation record, chapter 07 published-vs-recorded table (not linked)",
+          "asOf": "2026-09-01"
         },
         {
           "label": "Events since 2014",
-          "value": "96+"
+          "value": "96+",
+          "source": "computed from the She Sharp event register (tagged SOURCED in the charity's stats.ts)",
+          "asOf": "2026-08-25"
         },
         {
           "label": "Migration crawler assets",
-          "value": "1,748 images / 707 MB / 11 JSON files / 85 events + 50 Humanitix tickets + 15 podcasts + 121 photo galleries + 7 press articles + 118 pages"
+          "value": "1,748 images / 707 MB / 11 JSON files / 85 events + 50 Humanitix tickets + 15 podcasts + 121 photo galleries + 7 press articles + 118 pages",
+          "source": "private: migration crawler output, archived repository (not linked)",
+          "asOf": "2026-05-19"
         }
       ],
       "status": "production",
@@ -1528,11 +1572,15 @@
       "metrics": [
         {
           "label": "Total commits",
-          "value": "488 non-merge"
+          "value": "488 non-merge",
+          "source": "private: client repository, git history (not linked)",
+          "asOf": "2026-09-04"
         },
         {
           "label": "Chan's commits",
-          "value": "471 (96.5% of non-merge)"
+          "value": "471 (96.5% of non-merge)",
+          "source": "private: client repository, git history (not linked)",
+          "asOf": "2026-09-04"
         },
         {
           "label": "Application-Level Reduction",
@@ -1552,11 +1600,15 @@
         },
         {
           "label": "Cloud platforms",
-          "value": "DigitalOcean DOKS → Google Cloud GKE"
+          "value": "DigitalOcean DOKS → Google Cloud GKE",
+          "source": "private: client repository, deployment configuration and phase records (not linked)",
+          "asOf": "2026-03-11"
         },
         {
           "label": "Cross-cloud cutover",
-          "value": "~30 min downtime (2026-03-11)"
+          "value": "~30 min downtime (2026-03-11)",
+          "source": "private: client repository, phase records of the cutover (not linked)",
+          "asOf": "2026-03-11"
         },
         {
           "label": "Games",
@@ -1834,7 +1886,8 @@
               {
                 "label": "GitHub stars",
                 "value": 129,
-                "source": "https://github.com/ChanMeng666/server-google-news"
+                "source": "https://github.com/ChanMeng666/server-google-news",
+                "asOf": "2026-10-13"
               },
               {
                 "label": "GitHub forks",
@@ -1856,12 +1909,14 @@
                 "label": "PulseMCP estimated visitors",
                 "value": "38k",
                 "source": "https://www.pulsemcp.com/servers/chanmeng666-google-news",
+                "asOf": "2026-10-13",
                 "note": "PulseMCP's own estimate across the MCP ecosystem"
               },
               {
                 "label": "PulseMCP popularity ranking",
                 "value": "#1,060",
-                "source": "https://www.pulsemcp.com/servers/chanmeng666-google-news"
+                "source": "https://www.pulsemcp.com/servers/chanmeng666-google-news",
+                "asOf": "2026-10-13"
               }
             ],
             "press": [
@@ -2119,41 +2174,59 @@
       "metrics": [
         {
           "label": "First commit",
-          "value": "2024-12-30 — 35 days after MCP's Nov 25 2024 public launch"
+          "value": "2024-12-30 — 35 days after MCP's Nov 25 2024 public launch",
+          "source": "https://github.com/ChanMeng666/server-google-news (git log)",
+          "asOf": "2024-12-30"
         },
         {
           "label": "npm package",
-          "value": "@chanmeng666/google-news-server"
+          "value": "@chanmeng666/google-news-server",
+          "source": "https://www.npmjs.com/package/@chanmeng666/google-news-server",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Registry listings",
           "value": "15+ MCP catalogs: 9 directory sites (PulseMCP, Glama, mcp.so, mcpservers.org, MCP Market, Augment Code, Archestra, MCP Server Finder, AgentSeal) and 12 curated lists and registries on GitHub, led by punkpeye/awesome-mcp-servers",
+          "source": "data/profile/20-projects-flagship.yaml › google-news-mcp › meta.x_brand.reach (directories rows)",
+          "asOf": "2026-10-15",
           "note": "Checked 2026-10-13; Smithery withdrawn 2026-10-15; the rows are in meta.x_brand.reach"
         },
         {
           "label": "Press",
-          "value": "DataCamp, \"Top 10 MCP Servers & Clients for AI Workflow Automation in 2026\" (no. 10, by Abid Ali Awan, 2025-07-10); PulseMCP Weekly Pulse newsletter; a dedicated Skywork AI article"
+          "value": "DataCamp, \"Top 10 MCP Servers & Clients for AI Workflow Automation in 2026\" (no. 10, by Abid Ali Awan, 2025-07-10); PulseMCP Weekly Pulse newsletter; a dedicated Skywork AI article",
+          "source": "https://www.datacamp.com/blog/top-mcp-servers-and-clients",
+          "asOf": "2025-07-10"
         },
         {
           "label": "npm downloads",
-          "value": "10,354 between 2025-04-13 and 2026-10-13 (the 18 months npm reports)"
+          "value": "10,354 between 2025-04-13 and 2026-10-13 (the 18 months npm reports)",
+          "source": "https://api.npmjs.org/downloads/point/2025-04-13:2026-10-13/@chanmeng666/google-news-server",
+          "asOf": "2026-10-13"
         },
         {
           "label": "PulseMCP badge",
           "value": "Top Pick · 38k estimated visitors · #1,060 global rank",
+          "source": "https://www.pulsemcp.com/servers/chanmeng666-google-news",
+          "asOf": "2026-10-13",
           "note": "Read 2026-10-13; earlier reading 26.1k and #1,105"
         },
         {
           "label": "Glama quality",
-          "value": "A (license) · A (quality) · 122 stars by Glama's own count"
+          "value": "A (license) · A (quality) · 122 stars by Glama's own count",
+          "source": "https://glama.ai/mcp/servers/@ChanMeng666/server-google-news",
+          "asOf": "2026-10-13"
         },
         {
           "label": "Skywork review",
-          "value": "One dedicated article, \"The AI Engineer's Guide to Real-Time News Integration\""
+          "value": "One dedicated article, \"The AI Engineer's Guide to Real-Time News Integration\"",
+          "source": "https://skywork.ai/skypage/en/google-news-ai-integration/1978665953022038016",
+          "asOf": "2026-10-13"
         },
         {
           "label": "Stars",
-          "value": "129 GitHub (measured 2026-09-24) · 21 forks · listed on Glama, PulseMCP (Top Pick), Archestra, mcp.so, MCP Market, Augment Code"
+          "value": "129 GitHub (measured 2026-09-24) · 21 forks · listed on Glama, PulseMCP (Top Pick), Archestra, mcp.so, MCP Market, Augment Code",
+          "source": "https://github.com/ChanMeng666/server-google-news",
+          "asOf": "2026-10-13"
         },
         {
           "label": "Forks",
@@ -2165,7 +2238,9 @@
         },
         {
           "label": "Early MCP contrib",
-          "value": "Issue #76 (Nov 27 2024 — Windows/NVM workaround)"
+          "value": "Issue #76 (Nov 27 2024 — Windows/NVM workaround)",
+          "source": "https://github.com/modelcontextprotocol/servers/issues/76",
+          "asOf": "2024-11-27"
         }
       ],
       "status": "production",
@@ -2396,7 +2471,9 @@
         },
         {
           "label": "Card combinations",
-          "value": "12 base (2 layouts x 2 presets x 3 themes)"
+          "value": "12 base (2 layouts x 2 presets x 3 themes)",
+          "source": "https://github.com/ChanMeng666/github-readme-suno-cards (card renderer)",
+          "asOf": "2026-05-19"
         },
         {
           "label": "Customization toggles",
@@ -2500,27 +2577,39 @@
       "metrics": [
         {
           "label": "Commits (solo)",
-          "value": "168 (2025-11-01 → 2026-10-07, ~11 months); effectively single-author"
+          "value": "168 (2025-11-01 → 2026-10-07, ~11 months); effectively single-author",
+          "source": "https://github.com/ChanMeng666/echook (git log)",
+          "asOf": "2026-10-07"
         },
         {
           "label": "GitHub stars",
-          "value": "88 (measured 2026-10-15; renamed from claude-code-audio-hooks)"
+          "value": "88 (measured 2026-10-15; renamed from claude-code-audio-hooks)",
+          "source": "https://github.com/ChanMeng666/echook",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Version",
-          "value": "v7.1.0, released 2026-10-15, the first release run against the real Codex binary (0.143.0 and 0.162.1); 62 releases (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)"
+          "value": "v7.1.0, released 2026-10-15, the first release run against the real Codex binary (0.143.0 and 0.162.1); 62 releases (plugin `audio-hooks` on the chanmeng-audio-hooks marketplace)",
+          "source": "https://github.com/ChanMeng666/echook/releases",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Hook events",
-          "value": "39 canonical events (3 on by default), plus 47 matcher variants — separately switchable matchers beneath a canonical event (`session_start_resume`, `stop_failure_rate_limit`), not extra events; mapped per harness: Claude Code 30 of 39 canonical + all 47 variants · Cursor 18 native (8 via auto-bridge) · Codex 11"
+          "value": "39 canonical events (3 on by default), plus 47 matcher variants — separately switchable matchers beneath a canonical event (`session_start_resume`, `stop_failure_rate_limit`), not extra events; mapped per harness: Claude Code 30 of 39 canonical + all 47 variants · Cursor 18 native (8 via auto-bridge) · Codex 11",
+          "source": "https://github.com/ChanMeng666/echook at v7.1.0 (hooks/)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Harnesses",
-          "value": "3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift"
+          "value": "3 (Claude Code · Cursor IDE · Codex CLI) from one canonical source, CI-enforced no-drift",
+          "source": "https://github.com/ChanMeng666/echook at v7.1.0",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Runtime",
-          "value": "Python 3.9+ standard library only (no third-party runtime deps); distributed via plugin marketplaces + source, not npm"
+          "value": "Python 3.9+ standard library only (no third-party runtime deps); distributed via plugin marketplaces + source, not npm",
+          "source": "https://github.com/ChanMeng666/echook at v7.1.0",
+          "asOf": "2026-10-15"
         },
         {
           "label": "CLI",
@@ -2528,15 +2617,21 @@
         },
         {
           "label": "Status line",
-          "value": "33 configurable segments (context-window color bands, quota bars, model/branch/cost), auto-reflowing to terminal width"
+          "value": "33 configurable segments (context-window color bands, quota bars, model/branch/cost), auto-reflowing to terminal width",
+          "source": "https://github.com/ChanMeng666/echook at v7.1.0",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Channels",
-          "value": "audio · desktop toast · TTS (speaks the agent's actual final message) · webhook (Slack/Discord/Teams/ntfy, versioned payload)"
+          "value": "audio · desktop toast · TTS (speaks the agent's actual final message) · webhook (Slack/Discord/Teams/ntfy, versioned payload)",
+          "source": "https://github.com/ChanMeng666/echook at v7.1.0",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Tests / CI",
-          "value": "795 unittest cases (v7.1.0, run 2026-10-15) on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate"
+          "value": "795 unittest cases (v7.1.0, run 2026-10-15) on a 3-OS × 3-Python matrix (Ubuntu/Windows/macOS × 3.9/3.12/3.13) + build-drift gate",
+          "source": "https://github.com/ChanMeng666/echook unit test suite, run locally at v7.1.0",
+          "asOf": "2026-10-15"
         }
       ],
       "publicSummary": "An audio-and-status notification system for Claude Code, Cursor\nIDE, and Codex CLI. The core idea: you never have to learn the\ntool. You talk to your AI agent in plain English — \"install\naudio-hooks,\" \"switch to chimes,\" \"snooze for 30 minutes,\" \"send\nalerts to my Slack\" — and the agent runs the commands, reads the\nresults, and reports back. It ships 39 hook events (3 on by\ndefault), two audio themes, warnings before you hit your 5-hour\nand 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy,\ntext-to-speech that reads the agent's actual reply aloud, and a\n33-segment status bar that tracks how much of the context window\nis left. Now on v7.1.0 with 795 automated tests running on\nUbuntu, Windows, and macOS across Python 3.9–3.13. Open source\nunder MIT; runs on the Python standard library with no extra\ndependencies. A sister repo, echook-promo-video, ships an\n88-second product film built entirely in code.\n",
@@ -2731,11 +2826,15 @@
       "metrics": [
         {
           "label": "First commit",
-          "value": "2024-12-31 — 36 days after MCP's Nov 25 2024 public launch"
+          "value": "2024-12-31 — 36 days after MCP's Nov 25 2024 public launch",
+          "source": "https://github.com/ChanMeng666/server-google-jobs (git log)",
+          "asOf": "2024-12-31"
         },
         {
           "label": "npm package",
-          "value": "@chanmeng666/google-jobs-server"
+          "value": "@chanmeng666/google-jobs-server",
+          "source": "https://www.npmjs.com/package/@chanmeng666/google-jobs-server",
+          "asOf": "2026-05-17"
         },
         {
           "label": "PulseMCP",
@@ -3001,7 +3100,9 @@
         },
         {
           "label": "Total commits",
-          "value": "283 (solo, 2025-01-06 → 2026-07-10, ~18 months sustained)"
+          "value": "283 (solo, 2025-01-06 → 2026-07-10, ~18 months sustained)",
+          "source": "https://github.com/ChanMeng666/gradient-svg-generator (git log)",
+          "asOf": "2026-07-10"
         },
         {
           "label": "gradientType effects",
@@ -3009,7 +3110,9 @@
         },
         {
           "label": "Template count",
-          "value": "355 across 19 categories (Pride 20, Tech, Nature, Material, Text-FX, Gaming, Weather 12, Light&Shadow 12, Art Movements 12, Culinary 12, Patterns 8, Metallic 8, Path-Text 12, Shapes 25, Experimental 29, GitHub-Profile 30)"
+          "value": "355 across 19 categories (Pride 20, Tech, Nature, Material, Text-FX, Gaming, Weather 12, Light&Shadow 12, Art Movements 12, Culinary 12, Patterns 8, Metallic 8, Path-Text 12, Shapes 25, Experimental 29, GitHub-Profile 30)",
+          "source": "https://github.com/ChanMeng666/gradient-svg-generator (templates)",
+          "asOf": "2026-07-17"
         },
         {
           "label": "Refactor phases",
@@ -3561,19 +3664,27 @@
       "metrics": [
         {
           "label": "Total commits",
-          "value": "570 to 2026-07-30 (Gen-2 only; Gen-1 was a separate repo with 58 commits)"
+          "value": "570 to 2026-07-30 (Gen-2 only; Gen-1 was a separate repo with 58 commits)",
+          "source": "private: client repository git log (not linked)",
+          "asOf": "2026-07-30"
         },
         {
           "label": "Solo commits",
-          "value": "538 of 570 (94.4%, to 2026-07-30); 32 content edits by founder Zhu Yihan"
+          "value": "538 of 570 (94.4%, to 2026-07-30); 32 content edits by founder Zhu Yihan",
+          "source": "private: client repository git log (not linked)",
+          "asOf": "2026-07-30"
         },
         {
           "label": "Build window",
-          "value": "2025-05-08 → 2026-06-26 (~13.5 months active development)"
+          "value": "2025-05-08 → 2026-06-26 (~13.5 months active development)",
+          "source": "private: client repository git log (not linked)",
+          "asOf": "2026-06-26"
         },
         {
           "label": "Cloudflare Pages Functions",
-          "value": "16 endpoints (~5,373 LOC of server-side .js)"
+          "value": "16 endpoints (~5,373 LOC of server-side .js)",
+          "source": "private: client repository functions/ (not linked)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Application pipelines",
@@ -3581,15 +3692,21 @@
         },
         {
           "label": "Newsletter system",
-          "value": "Resend Contacts API + contact segment + double-opt-in confirm + brand-styled welcome email"
+          "value": "Resend Contacts API + contact segment + double-opt-in confirm + brand-styled welcome email",
+          "source": "private: client repository (not linked)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Admin endpoints",
-          "value": "3 (admin/applications, admin/batch-review, admin/send-approval — ADMIN_API_KEY-protected)"
+          "value": "3 (admin/applications, admin/batch-review, admin/send-approval — ADMIN_API_KEY-protected)",
+          "source": "private: client repository functions/admin (not linked)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Email automation",
-          "value": "Brand-styled HTML + plain-text (newsletter welcome, approval, rejection) — primary #AA7C52, success #10b981"
+          "value": "Brand-styled HTML + plain-text (newsletter welcome, approval, rejection) — primary #AA7C52, success #10b981",
+          "source": "private: client repository (not linked)",
+          "asOf": "2026-05-19"
         },
         {
           "label": "File upload endpoints",
@@ -3613,7 +3730,9 @@
         },
         {
           "label": "Summit speakers",
-          "value": "33 on the Speakers page of the Shanghai 2026 Impact Report, the founder's source of record — Ida Tin (Clue co-founder, coined 'FemTech' 2016) headlines; among them Alice Zheng, Dominnique Karetsos, Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike Steinebach, Stella Fu, Patient Lu, Sandy Lv, Ke Chai, Jian Chen, Jazmin Seregi, Abraham (Nick) Morse, Ira Evdokimova, Maryann Selfe, Jonathan Y. Zhao, Rahul Agrawal, Giulia Paggiola, Michael Wang"
+          "value": "33 on the Speakers page of the Shanghai 2026 Impact Report, the founder's source of record — Ida Tin (Clue co-founder, coined 'FemTech' 2016) headlines; among them Alice Zheng, Dominnique Karetsos, Lindsay Davis, Vanessa Julia Carpenter, Rachel Bartholomew, Maaike Steinebach, Stella Fu, Patient Lu, Sandy Lv, Ke Chai, Jian Chen, Jazmin Seregi, Abraham (Nick) Morse, Ira Evdokimova, Maryann Selfe, Jonathan Y. Zhao, Rahul Agrawal, Giulia Paggiola, Michael Wang",
+          "source": "the summit's Shanghai 2026 Impact Report, Speakers page (the founder's source of record)",
+          "asOf": "2026-06-25"
         },
         {
           "label": "Summit organisers and partners",
@@ -3895,31 +4014,45 @@
       "metrics": [
         {
           "label": "Engagement type",
-          "value": "Signed commercial commission, three-stage delivery schedule (Phase 1 internal delivery + Phase 2 internal delivery + final acceptance)"
+          "value": "Signed commercial commission, three-stage delivery schedule (Phase 1 internal delivery + Phase 2 internal delivery + final acceptance)",
+          "source": "private: the signed agreement with the client (not linked)",
+          "asOf": "2026-05-04"
         },
         {
           "label": "Build span",
-          "value": "2026-05-07 → 2026-05-15 (a nine-day contracted build per contract §5; build-phase commits 2026-05-07 → 2026-05-13)"
+          "value": "2026-05-07 → 2026-05-15 (a nine-day contracted build per contract §5; build-phase commits 2026-05-07 → 2026-05-13)",
+          "source": "private: the signed agreement §5 and the client repository's git log (not linked)",
+          "asOf": "2026-05-15"
         },
         {
           "label": "Phase 1 public launch",
-          "value": "2026-05-22 (teaser landing page with newsletter capture)"
+          "value": "2026-05-22 (teaser landing page with newsletter capture)",
+          "source": "https://eatropolis.co.nz/ (public launch) and the client repository's status log",
+          "asOf": "2026-05-22"
         },
         {
           "label": "Phase 2 public launch",
-          "value": "2026-06-05 (full site went public)"
+          "value": "2026-06-05 (full site went public)",
+          "source": "https://eatropolis.co.nz/ (public launch) and the client repository's status log",
+          "asOf": "2026-06-05"
         },
         {
           "label": "Event day",
-          "value": "2026-10-10 at Shed 10, Queens Wharf, Tāmaki Makaurau"
+          "value": "2026-10-10 at Shed 10, Queens Wharf, Tāmaki Makaurau",
+          "source": "https://eatropolis.co.nz/",
+          "asOf": "2026-10-10"
         },
         {
           "label": "Free maintenance window",
-          "value": "5 June 2026 → 5 September 2026 (hard expiry per contract §15.1)"
+          "value": "5 June 2026 → 5 September 2026 (hard expiry per contract §15.1)",
+          "source": "private: the signed agreement §15.1 (not linked)",
+          "asOf": "2026-06-05"
         },
         {
           "label": "Total commits",
-          "value": "115 (solo; in the client's private organisation repository)"
+          "value": "115 (solo; in the client's private organisation repository)",
+          "source": "private: client repository git log (not linked)",
+          "asOf": "2026-05-13"
         },
         {
           "label": "API routes",
@@ -3955,7 +4088,9 @@
         },
         {
           "label": "Accessibility verification",
-          "value": "39/39 axe-core Playwright tests pass; WAI-ARIA APG NavDropdown menu keyboard pattern; conformance statement per WCAG 2.2 AA contract §3.10"
+          "value": "39/39 axe-core Playwright tests pass; WAI-ARIA APG NavDropdown menu keyboard pattern; conformance statement per WCAG 2.2 AA contract §3.10",
+          "source": "private: client repository accessibility statement and CI axe suite (not linked)",
+          "asOf": "2026-05-19"
         },
         {
           "label": "Email deliverability",
@@ -3963,7 +4098,9 @@
         },
         {
           "label": "Load testing",
-          "value": "k6 to 1,000 concurrent VUs per contract §3.8 — passed with 0.00% error rate over 113,320 requests in five minutes"
+          "value": "k6 to 1,000 concurrent VUs per contract §3.8 — passed with 0.00% error rate over 113,320 requests in five minutes",
+          "source": "private: client repository k6 load-test report (not linked)",
+          "asOf": "2026-05-19"
         },
         {
           "label": "Deploy pipeline",
@@ -5022,11 +5159,15 @@
       "metrics": [
         {
           "label": "Commits (solo)",
-          "value": "853 (837 by Chan, the rest bot/agent commits) (2026-04-08 → 2026-09-16); sole engineer, built with AI coding agents"
+          "value": "853 (837 by Chan, the rest bot/agent commits) (2026-04-08 → 2026-09-16); sole engineer, built with AI coding agents",
+          "source": "private: product repository git log (not linked)",
+          "asOf": "2026-09-16"
         },
         {
           "label": "Surfaces",
-          "value": "13 pages · 28 API route handlers · 71 components · 205 source files"
+          "value": "13 pages · 28 API route handlers · 71 components · 205 source files",
+          "source": "private: product repository (not linked)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Database",
@@ -5042,7 +5183,9 @@
         },
         {
           "label": "Git export",
-          "value": "in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)"
+          "value": "in-memory isomorphic-git repo (memfs), one commit per design version — the commit log replays the design conversation (cap 200 commits / 25 MB)",
+          "source": "private: product repository (not linked)",
+          "asOf": "2026-07-11"
         },
         {
           "label": "Deploy",
@@ -6330,11 +6473,15 @@
         {
           "label": "Commits",
           "value": "236 of 413 in the original repository (57%), the largest share of three contributors",
+          "source": "private: the original client repository, git log (not linked)",
+          "asOf": "2026-10-08",
           "note": "Counted 2026-10-08 on the repository the app was first built in. A teammate later forked it to take the project over; the fork has 541 commits, 227 of them Chan's."
         },
         {
           "label": "Documentation",
-          "value": "140 of 143 commits in the team's documentation repository (97.9%)"
+          "value": "140 of 143 commits in the team's documentation repository (97.9%)",
+          "source": "private: the team's documentation repository, archived 2024, git log (not linked)",
+          "asOf": "2026-10-08"
         },
         {
           "label": "API documents",
@@ -7382,15 +7529,21 @@
       "metrics": [
         {
           "label": "Commits (solo)",
-          "value": "810 (803 by Chan + 7 automated dependency bumps) (2026-06-25 → 2026-09-13); sole engineer, built with AI coding agents"
+          "value": "810 (803 by Chan + 7 automated dependency bumps) (2026-06-25 → 2026-09-13); sole engineer, built with AI coding agents",
+          "source": "https://github.com/ChanMeng666/archlang (git log)",
+          "asOf": "2026-09-13"
         },
         {
           "label": "npm package",
-          "value": "@chanmeng666/archlang v1.43.0 (62 published versions through 2026-10-14, 27 ADRs)"
+          "value": "@chanmeng666/archlang v1.43.0 (62 published versions through 2026-10-14, 27 ADRs)",
+          "source": "https://www.npmjs.com/package/@chanmeng666/archlang",
+          "asOf": "2026-10-14"
         },
         {
           "label": "Tests",
-          "value": "4,338 passing, 0 skipped, across 216 test files (measured 2026-09-04)"
+          "value": "4,338 passing, 0 skipped, across 216 test files (measured 2026-09-04)",
+          "source": "https://github.com/ChanMeng666/archlang (vitest run)",
+          "asOf": "2026-09-04"
         },
         {
           "label": "Primitives",
@@ -7398,19 +7551,27 @@
         },
         {
           "label": "Export formats",
-          "value": "5 — SVG + DXF (zero-dep) · PDF + PNG (lazily-loaded optional add-ons) · text-only plan"
+          "value": "5 — SVG + DXF (zero-dep) · PDF + PNG (lazily-loaded optional add-ons) · text-only plan",
+          "source": "https://github.com/ChanMeng666/archlang",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Diagnostics",
-          "value": "139 stable E_*/W_* codes (92 errors · 47 warnings), each carrying a byte span + a machine-applicable fix"
+          "value": "139 stable E_*/W_* codes (92 errors · 47 warnings), each carrying a byte span + a machine-applicable fix",
+          "source": "https://github.com/ChanMeng666/archlang (src/diagnostics.ts)",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Lint rules",
-          "value": "8 architectural-soundness rule modules (reachability, door-swing collision, windowless bedroom, wet-room enclosure, circulation)"
+          "value": "8 architectural-soundness rule modules (reachability, door-swing collision, windowless bedroom, wet-room enclosure, circulation)",
+          "source": "https://github.com/ChanMeng666/archlang",
+          "asOf": "2026-10-15"
         },
         {
           "label": "CLI",
-          "value": "~20 subcommands, all with --json + deterministic exit codes (0 ok / 1 IO / 2 source / 3 usage)"
+          "value": "~20 subcommands, all with --json + deterministic exit codes (0 ok / 1 IO / 2 source / 3 usage)",
+          "source": "https://github.com/ChanMeng666/archlang",
+          "asOf": "2026-10-15"
         },
         {
           "label": "Downstream",
@@ -10087,7 +10248,9 @@
       "show": {
         "readme": false,
         "site": false,
-        "cv": false
+        "cv": false,
+        "linkedin": false,
+        "llms": false
       },
       "name": "Decoding the Future",
       "tier": "secondary",
@@ -10109,7 +10272,9 @@
       "show": {
         "readme": false,
         "site": false,
-        "cv": false
+        "cv": false,
+        "linkedin": false,
+        "llms": false
       },
       "name": "Future Turing 未来图灵",
       "tier": "secondary",
@@ -10132,7 +10297,8 @@
         "readme": false,
         "site": false,
         "cv": false,
-        "linkedin": false
+        "linkedin": false,
+        "llms": false
       },
       "name": "Praxis and Pages 知行书话",
       "tier": "secondary",
@@ -15847,6 +16013,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-16",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-16T07:25:40.200Z"
+    "buildTimestamp": "2026-10-16T07:55:24.885Z"
   }
 }

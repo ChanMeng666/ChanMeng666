@@ -11,8 +11,8 @@ else (L2) is opened on demand, when its "read when" matches the task.
 | File | Lines | Read when |
 |---|---|---|
 | `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
-| `docs/STATE.md` | 103 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 120 | to see what changed recently; append an entry after a change |
+| `docs/STATE.md` | 107 | always: Chan's decisions and display rules, before any edit |
+| `docs/LOG.md` | 141 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -23,8 +23,8 @@ against `schema/profile.schema.json`. Find an entry with
 
 | Shard | Lines | Top-level keys (entries) | Purpose |
 |---|---|---|---|
-| `data/profile/00-basics.yaml` | 146 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
-| `data/profile/10-career.yaml` | 2835 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
+| `data/profile/00-basics.yaml` | 143 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
+| `data/profile/10-career.yaml` | 2833 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1195 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
@@ -36,9 +36,9 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/46-films.yaml` | 420 | filmCollections (5), films (39) | FILMS — every finished film Chan has made, one row per film … |
 | `data/profile/50-references.yaml` | 577 | references (27) | REFERENCES — testimonials & recommendations … |
 | `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
-| `data/profile/70-linkedin.yaml` | 1958 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
+| `data/profile/70-linkedin.yaml` | 1938 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
 | `data/profile/80-events.yaml` | 915 | events (23) | EVENTS — offline / in-person activities: talks, panels, hackathons mentored, workshops taught, community appearances. |
-| `data/profile/90-meta.yaml` | 761 | meta (4 keys) | META — build metadata, x_brand display configuration … |
+| `data/profile/90-meta.yaml` | 758 | meta (4 keys) | META — build metadata, x_brand display configuration … |
 
 Other knowledge files:
 

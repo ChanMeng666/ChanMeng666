@@ -69,6 +69,7 @@ const out = {
     films: films.length,
     productFilms: product.length,
     musicVideos: films.filter((f) => f.kind === "music-video").length,
+    explainers: films.filter((f) => f.kind === "explainer").length,
     minutes: Math.round(films.reduce((n, f) => n + f.seconds, 0) / 60),
   },
   productFilms: product.filter((f) => f.primary).map(view),
@@ -77,7 +78,8 @@ const out = {
     series: [...collections.values()].filter((c) => c.kind === "series").map((c) => group(c.id)).filter(shown),
   },
   brandAndEvent: films.filter((f) => f.kind === "brand-film" || f.kind === "event-promo").map(view),
-  musicVideos: [...collections.values()].filter((c) => c.kind !== "series").map((c) => group(c.id)).filter(shown),
+  musicVideos: [...collections.values()].filter((c) => c.kind !== "series" && c.kind !== "explainer-series").map((c) => group(c.id)).filter(shown),
+  explainers: [...collections.values()].filter((c) => c.kind === "explainer-series").map((c) => group(c.id)).filter(shown),
 };
 
 const json = JSON.stringify(out, null, 2) + "\n";
@@ -91,5 +93,5 @@ if (process.argv.includes("--check")) {
 } else {
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, json);
-  console.log(`dist/films.json: ${out.counts.films} films (${out.counts.productFilms} product, ${out.counts.musicVideos} music videos), ${out.counts.minutes} min`);
+  console.log(`dist/films.json: ${out.counts.films} films (${out.counts.productFilms} product, ${out.counts.musicVideos} music videos, ${out.counts.explainers} explainers), ${out.counts.minutes} min`);
 }

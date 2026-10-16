@@ -159,3 +159,6 @@ data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, docs/ecosyst
 
 ## [2026-10-17] decide | Music videos may also be published on bilibili, starting with Save Me a Little of Today (Chan)
 docs/STATE.md
+
+## [2026-10-17] add | Liu Zhongjing in Watercolour: ten explainer films, repo lzj-watercolor-films, on chanmeng.org/films only (new film kind explainer, collection kind explainer-series)
+data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md, distribution/plan.yaml, schema/profile.schema.json, scripts/check-ecosystem.mjs, scripts/build-films-data.mjs

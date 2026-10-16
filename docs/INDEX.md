@@ -11,8 +11,8 @@ else (L2) is opened on demand, when its "read when" matches the task.
 | File | Lines | Read when |
 |---|---|---|
 | `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
-| `docs/STATE.md` | 109 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 161 | to see what changed recently; append an entry after a change |
+| `docs/STATE.md` | 110 | always: Chan's decisions and display rules, before any edit |
+| `docs/LOG.md` | 164 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -28,12 +28,12 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1195 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
-| `data/profile/23-projects-oss-more.yaml` | 3648 | projects (89) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
+| `data/profile/23-projects-oss-more.yaml` | 3709 | projects (90) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
 | `data/profile/30-recognition.yaml` | 1857 | awards (7), certificates (53), publications (76) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
 | `data/profile/45-showcase.yaml` | 451 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
-| `data/profile/46-films.yaml` | 431 | filmCollections (6), films (40) | FILMS — every finished film Chan has made, one row per film … |
+| `data/profile/46-films.yaml` | 452 | filmCollections (7), films (50) | FILMS — every finished film Chan has made, one row per film … |
 | `data/profile/50-references.yaml` | 577 | references (27) | REFERENCES — testimonials & recommendations … |
 | `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
 | `data/profile/70-linkedin.yaml` | 1938 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
@@ -46,10 +46,10 @@ Other knowledge files:
 |---|---|---|
 | `data/brand.yaml` | 682 | Chan Meng's personal visual + verbal design system. |
 | `data/voice.yaml` | 432 | VOICE — how the chanmeng.org digital twin sounds, and what it will not say … |
-| `docs/ecosystem/lineage.yaml` | 891 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
+| `docs/ecosystem/lineage.yaml` | 898 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
 | `docs/ecosystem/archlang-archcanvas.yaml` | 259 | ArchLang × ArchCanvas ecosystem catalog … |
 | `schema/brand.schema.json` | 417 | ChanMeng666 Brand System Schema … |
-| `schema/profile.schema.json` | 1436 | ChanMeng666 Profile Data Schema … |
+| `schema/profile.schema.json` | 1438 | ChanMeng666 Profile Data Schema … |
 
 ## Guidance docs
 

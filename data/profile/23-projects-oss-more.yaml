@@ -3646,3 +3646,64 @@ projects:
         render harness and timing tools are carried over from my previous
         music-video repo. Fonts are under the SIL Open Font License. The
         film's CREDITS file lists every source and library.
+
+  # Recorded 2026-10-17. Ten explainer films, private repo: no repoUrl, no url.
+  # Shown on chanmeng.org/films only (Chan, 2026-10-17); the show: block below
+  # keeps it off the README, the site's other pages, the CV, LinkedIn copy and
+  # llms. Not uploaded to YouTube. Every fact below is from the repo's README,
+  # docs/STORYBOARD*.md and the rendered files (2026-10-17).
+  - id: lzj-watercolor-films
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
+    provenance: personal
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-10-17"
+    name: "Liu Zhongjing in Watercolour — ten code-drawn explainer films"
+    category: creative
+    tagline: "Ten short explainer films on the thought of Liu Zhongjing, drawn entirely by code: Python paints procedural watercolour layers, WebGL animates them with ink-bleed captions, and headless Chrome and ffmpeg render them frame by frame with scores played on recorded instruments."
+    roles: ["Director", "Creative Coder", "Composer"]
+    techStack: ["Python", "NumPy", "OpenCV", "SciPy", "JavaScript (Canvas 2D)", "WebGL2", "Headless Chrome (playwright-core)", "ffmpeg", "OpenCC", "Claude Code"]
+    keywords:
+      - "Explainer films drawn by code"
+      - "Procedural watercolour"
+      - "Kubelka-Munk glazing"
+      - "Deterministic frame-by-frame rendering"
+      - "Scores from sampled instruments"
+      - "Creative coding"
+    startDate: "2026-10"
+    extraLinks:
+      - { label: "Watch the series on chanmeng.org", url: "https://chanmeng.org/films#liu-zhongjing-in-watercolour" }
+    metrics:
+      - { label: "Films", value: "10", note: "105 painted scenes; 1:38 to 2:59 each, 26 minutes in all; 1920×1080, 30 fps, H.264" }
+    publicSummary: |
+      Ten short explainer films on the thought of the historian and political
+      theorist Liu Zhongjing, one framework each (the growth of order, the
+      seasons of a civilisation, order imported and exported, atomised
+      subjects, invented nations, common law, martial virtue, three
+      generations of civilisation, and his advice on life), told as an
+      argument in seven to thirteen chapters with Traditional Chinese
+      captions. Every captioned quotation is verbatim and names its source.
+      Every frame is drawn by code; no image or video generation model, no
+      photograph and no footage is used for the picture.
+    narrative:
+      impactHeadline: "Ten explainer films, 105 scenes painted in procedural watercolour and scored on recorded instruments, all drawn and rendered by code."
+      businessLogic: |
+        A personal creative project, not a product. A watercolour engine in
+        Python (NumPy and OpenCV) keeps each layer as a transmittance map and
+        glazes transparent pigment onto it, with paper grain, edge pooling,
+        wet-in-wet bleeding and generated pen lines with pressure and tremor.
+        Each scene is split into depth layers with growth maps and sprites. A
+        WebGL page composites them with a parallax camera, draws lamps, snow,
+        fireworks and fire, and sets the captions (ink bleeding in character
+        by character, red-seal chapter cards, notes that point at objects in
+        the picture), with a watercolour-bleed transition between scenes.
+        Every frame is a pure function of time, so headless Chrome workers
+        capture frames in parallel before ffmpeg adds the score.
+      myRole: |
+        The concept, the selection and checking of the quotations, the
+        painting engine, the 105 scenes, the animation and the ten scores are
+        mine, built with Claude Code. The sampler that plays the scores is
+        adapted from the Lemo-Opuscar library (MIT); the instrument samples
+        are VSCO 2 Community Edition, Salamander Grand Piano, VCSL and
+        Karoryfer; the fonts are under the SIL Open Font License. The ideas
+        and the quotations are Liu Zhongjing's.

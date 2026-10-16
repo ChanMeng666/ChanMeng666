@@ -158,7 +158,7 @@ for (const f of profile.productFilms ?? []) {
 // filmography (data/profile/46-films.yaml `films` + `filmCollections`): every film names a film repo in the
 // catalog, and the film a product shows (productFilms) is the one row marked primary.
 {
-  const FILM_ROLES = ["promo-film", "demo", "music-video"];
+  const FILM_ROLES = ["promo-film", "demo", "music-video", "explainer"];
   const filmRepo = (key, where) => {
     const r = repoByKey.get(key);
     if (!r) return err(`films ${where}: ${key} is not in the lineage catalog`);
@@ -182,6 +182,7 @@ for (const f of profile.productFilms ?? []) {
     if (f.showcaseId && !showcaseIds.has(f.showcaseId)) err(`films ${where}: showcaseId "${f.showcaseId}" not in showcase`);
     if (f.collection && !collectionIds.has(f.collection)) err(`films ${where}: collection "${f.collection}" not in filmCollections`);
     if (f.kind === "music-video" && !f.collection) err(`films ${where}: a music video needs a collection`);
+    if (f.kind === "explainer" && !f.collection) err(`films ${where}: an explainer film needs a collection`);
     if (f.onFilmsPage && !(f.media?.mp4 || f.media?.hls)) err(`films ${where}: onFilmsPage needs media.mp4 or media.hls`);
     if (!f.onFilmsPage && !f.notShownReason) err(`films ${where}: a film kept off /films needs notShownReason`);
     if (f.primary) {

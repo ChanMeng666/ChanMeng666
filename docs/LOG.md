@@ -118,3 +118,6 @@ scripts/build-wiki.mjs, scripts/check-wikilinks.mjs, docs/answers/, docs/stories
 
 ## [2026-10-16] fix | wikilink check no longer trips on the `[[wikilink]]` example the index copies from its header
 scripts/check-wikilinks.mjs, docs/INDEX.md
+
+## [2026-10-16] remove | .github/profile/README.md, a byte-identical mirror of the TechRosie org profile that rendered nowhere from this repo
+.github/profile/README.md

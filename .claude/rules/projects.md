@@ -30,7 +30,7 @@ Derived from current membership 2026-10-16; Chan may overrule.
 - `tier: flagship` is auto-selected into `public/cv-llms.txt` (`docs/STATE.md`, GenLAB row). A hidden project never gets that tier.
 
 ## Ids that must not return to a display bucket
-- Every project with `show.readme: false`: `server-google-jobs`, `github-readme-suno-cards`, `gradient-svg-generator`, `sunostats`, `css-tower-defense`, `lyzen-website`, `genlab-career-academy` and the four `*-mv` music-video projects (2026-10-16). `npm run lint:kb` fails when one of them is in any `*ProjectIds` bucket.
+- Every project with `show.readme: false`: `server-google-jobs`, `github-readme-suno-cards`, `gradient-svg-generator`, `sunostats`, `css-tower-defense`, `lyzen-website`, `genlab-career-academy` and the five `*-mv` music-video projects (2026-10-17). `npm run lint:kb` fails when one of them is in any `*ProjectIds` bucket.
 - `genlab-career-academy` also never gets `tier: flagship`: the lint fails on flagship with `show.cv` or `show.llms` false.
 - A project that left the README but keeps its llms narrative has `show: { readme: false, llms: true }` and must be in `llmsOnlyOpenSourceIds` (the lint checks both).
 - What `show:` means per surface and each surface's default: `.claude/rules/data-profile.md` § Display.

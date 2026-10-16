@@ -153,3 +153,9 @@ data/voice.yaml, scripts/build-voice.mjs, scripts/lib/twin-guards.mjs, dist/voic
 
 ## [2026-10-17] add | dist/llms-twin.txt, the twin's knowledge text built from the profile and docs/stories, with scripts/check-llms-twin.mjs as its gate (npm run build:twin, npm run check:twin)
 scripts/build-llms-twin.mjs, scripts/check-llms-twin.mjs, dist/llms-twin.txt, package.json
+
+## [2026-10-17] add | Save Me a Little of Today (把今天留一小块给我): music video, repo a-little-of-today-mv, on YouTube (fgIGrYIczxc), chanmeng.org/films and the README film wall
+data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, youtube/channel.yaml, scripts/readme-art/assets/films/save-me-a-little-of-today.jpg
+
+## [2026-10-17] decide | Music videos may also be published on bilibili, starting with Save Me a Little of Today (Chan)
+docs/STATE.md

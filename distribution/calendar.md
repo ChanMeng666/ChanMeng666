@@ -6,7 +6,7 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-10-09, X 2026-10-12, LinkedIn 2026-10-12, ArchCanvas page 2026-10-12.
+Plan as of 2026-10-12. Registers read: YouTube 2026-10-15, X 2026-10-12, LinkedIn 2026-10-12, ArchCanvas page 2026-10-12.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
@@ -110,5 +110,16 @@ Scheduled in another calendar:
 | Sheet Metal | published 2026-10-08 | — | published | — | — | — |
 | Off Season | published 2026-10-08 | — | published | — | — | — |
 | A Coffee for One | published 2026-10-09 | — | published | — | — | — |
+| Save Me a Little of Today | published | — | published | — | — | — |
+| Roots | — | — | published | — | — | — |
+| Four Seasons | — | — | published | — | — | — |
+| Keeping the Seed | — | — | published | — | — | — |
+| The Basin | — | — | published | — | — | — |
+| Scattered Sand | — | — | published | — | — | — |
+| Invention | — | — | published | — | — | — |
+| The Footpath | — | — | published | — | — | — |
+| Blood Reward | — | — | published | — | — | — |
+| The Black Box | — | — | published | — | — | — |
+| The Carrot | — | — | published | — | — | — |
 
 "—" means the film is not meant for that platform; the reason is the film's `reason` in status.yaml.

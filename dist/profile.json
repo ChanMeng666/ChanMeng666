@@ -8905,6 +8905,77 @@
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "a-little-of-today-mv",
+      "show": {
+        "readme": false,
+        "site": false,
+        "cv": false,
+        "linkedin": false,
+        "llms": false
+      },
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "recent",
+      "lastUpdated": "2026-10-17",
+      "name": "Save Me a Little of Today (把今天留一小块给我) — a code-drawn music video",
+      "category": "creative",
+      "tagline": "A music video for Chan's song 《把今天留一小块给我》, drawn entirely by code: Python paints the watercolour layers, a web page animates them with handwriting, rain on glass and sticky-note transitions, and headless Chrome and ffmpeg render it frame by frame.",
+      "roles": [
+        "Director",
+        "Creative Coder",
+        "Songwriter"
+      ],
+      "techStack": [
+        "Python",
+        "NumPy",
+        "OpenCV",
+        "Pillow",
+        "JavaScript (Canvas 2D)",
+        "WebGL2",
+        "Headless Chrome (puppeteer-core)",
+        "ffmpeg",
+        "faster-whisper",
+        "librosa",
+        "Claude Code"
+      ],
+      "keywords": [
+        "Music video drawn by code",
+        "Procedural watercolour",
+        "Handwriting timed to the vocal",
+        "Deterministic frame-by-frame rendering",
+        "Parallel painter agents",
+        "Creative coding"
+      ],
+      "startDate": "2026-10",
+      "extraLinks": [
+        {
+          "label": "Watch the film on chanmeng.org",
+          "url": "https://chanmeng.org/films#save-me-a-little-of-today"
+        },
+        {
+          "label": "Watch 《把今天留一小块给我》 Save Me a Little of Today",
+          "url": "https://youtu.be/fgIGrYIczxc"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Films",
+          "value": "1",
+          "note": "《把今天留一小块给我》 Save Me a Little of Today (3:16, 41 shots, 82 painted layers in thirteen sets); 1920×1080, 24 fps, H.264"
+        }
+      ],
+      "publicSummary": "A music video for my song 《把今天留一小块给我》 (*Save Me a Little of\nToday*). Every frame is drawn by code, in three steps: Python paints the\nwatercolour layers, a web page animates them as a pure function of time,\nand headless Chrome captures each frame before ffmpeg adds the song. No\nimage or video generation model, no photograph and no footage is used\nfor the picture. The song was made with Suno and is the whole\nsoundtrack, unedited.\n",
+      "narrative": {
+        "impactHeadline": "A three-minute music video for my own song, painted and animated entirely by code — procedural pen-and-wash watercolour with handwriting that writes itself as it is sung — with every frame a pure function of time.",
+        "businessLogic": "A personal creative project, not a product. The watercolour engine of\nmy earlier music video (NumPy and OpenCV: absorbance per channel over\na paper-white ground, pooled edges, granulation, pen lines that\novershoot their corners) paints thirteen sets, split by depth into 82\nlayers; several sets are laid out through a real perspective camera,\nso people and light can be placed in them at the right size. The page\ndraws the frame for any time `t` with no clock and no unseeded\nrandomness: a multi-plane parallax camera for the 41 shots, sticky\nnotes written character by character in time with the vocal, a patch\nof sunlight projected through a window onto the floor, and a WebGL2\npass with rain on glass and transitions in which the picture peels off\nlike a sticky note or closes into one lit window. Timing comes from\nthe song: faster-whisper word timestamps, the known lyric sheet\naligned to them by pinyin, and librosa beats; shot boundaries come\nfrom those lyric times. No face is drawn anywhere in the film.\n",
+        "myRole": "The song and lyrics (made with Suno), the treatment and storyboard,\nand the film's animation code are mine, built with Claude Code; the\nthirteen sets were painted by Claude Code agents working in parallel\nfrom one film bible, and the finished cut was checked by two reviewer\nagents that saw only the rendered video. The watercolour engine,\nrender harness and timing tools are carried over from my previous\nmusic-video repo. Fonts are under the SIL Open Font License. The\nfilm's CREDITS file lists every source and library.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -12682,6 +12753,16 @@
       "projectId": "solo-coffee-mv",
       "summary": "One film for one of Chan's songs. Python paints the watercolour layers, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the song.",
       "credits": "Song and lyrics by Chan Meng, made with Suno. Painted with numpy, OpenCV and Pillow, timed with faster-whisper, librosa, pypinyin and OpenCC, rendered with puppeteer-core and ffmpeg. Pen-and-wash habits and one transition idea are adapted from the notes of the Lemo-Opuscar style library, with no code copied. No image or video generation model, no photograph and no footage is used for the picture."
+    },
+    {
+      "id": "save-me-a-little-of-today",
+      "kind": "songs",
+      "title": "Save Me a Little of Today",
+      "titleZh": "把今天留一小块给我",
+      "repo": "ChanMeng666/a-little-of-today-mv",
+      "projectId": "a-little-of-today-mv",
+      "summary": "One film for one of Chan's songs. Python paints the watercolour layers for thirteen sets, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the song.",
+      "credits": "Song and lyrics by Chan Meng, made with Suno. Painted with numpy, OpenCV and Pillow, timed with faster-whisper, librosa, pypinyin and OpenCC, rendered with puppeteer-core and ffmpeg; the watercolour engine, render harness and timing tools are carried over from A Coffee for One. No image or video generation model, no photograph and no footage is used for the picture."
     }
   ],
   "films": [
@@ -13523,6 +13604,25 @@
       "media": {
         "poster": "/media/mv/a-coffee-for-one/a-coffee-for-one/poster.jpg",
         "hls": "/media/mv/a-coffee-for-one/a-coffee-for-one/master.m3u8"
+      },
+      "onFilmsPage": true
+    },
+    {
+      "id": "save-me-a-little-of-today",
+      "kind": "music-video",
+      "collection": "save-me-a-little-of-today",
+      "order": 1,
+      "title": "Save Me a Little of Today",
+      "titleZh": "把今天留一小块给我",
+      "repo": "ChanMeng666/a-little-of-today-mv",
+      "projectId": "a-little-of-today-mv",
+      "date": "2026-10",
+      "seconds": 196,
+      "drawnAs": "Procedural pen-and-wash watercolour, with sticky-note transitions",
+      "youtubeId": "fgIGrYIczxc",
+      "media": {
+        "poster": "/media/mv/save-me-a-little-of-today/save-me-a-little-of-today/poster.jpg",
+        "hls": "/media/mv/save-me-a-little-of-today/save-me-a-little-of-today/master.m3u8"
       },
       "onFilmsPage": true
     }
@@ -16025,6 +16125,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-16",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-16T12:35:29.464Z"
+    "buildTimestamp": "2026-10-16T12:45:07.722Z"
   }
 }

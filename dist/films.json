@@ -1,10 +1,10 @@
 {
   "source": "data/profile/46-films.yaml",
   "counts": {
-    "films": 37,
+    "films": 38,
     "productFilms": 19,
-    "musicVideos": 14,
-    "minutes": 88
+    "musicVideos": 15,
+    "minutes": 91
   },
   "productFilms": [
     {
@@ -684,6 +684,30 @@
           "media": {
             "poster": "/media/mv/a-coffee-for-one/a-coffee-for-one/poster.jpg",
             "hls": "/media/mv/a-coffee-for-one/a-coffee-for-one/master.m3u8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "save-me-a-little-of-today",
+      "title": "Save Me a Little of Today",
+      "titleZh": "把今天留一小块给我",
+      "summary": "One film for one of Chan's songs. Python paints the watercolour layers for thirteen sets, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the song.",
+      "credits": "Song and lyrics by Chan Meng, made with Suno. Painted with numpy, OpenCV and Pillow, timed with faster-whisper, librosa, pypinyin and OpenCC, rendered with puppeteer-core and ffmpeg; the watercolour engine, render harness and timing tools are carried over from A Coffee for One. No image or video generation model, no photograph and no footage is used for the picture.",
+      "seconds": 196,
+      "films": [
+        {
+          "id": "save-me-a-little-of-today",
+          "title": "Save Me a Little of Today",
+          "titleZh": "把今天留一小块给我",
+          "date": "2026-10",
+          "seconds": 196,
+          "duration": "3:16",
+          "drawnAs": "Procedural pen-and-wash watercolour, with sticky-note transitions",
+          "youtube": "https://youtu.be/fgIGrYIczxc",
+          "media": {
+            "poster": "/media/mv/save-me-a-little-of-today/save-me-a-little-of-today/poster.jpg",
+            "hls": "/media/mv/save-me-a-little-of-today/save-me-a-little-of-today/master.m3u8"
           }
         }
       ]

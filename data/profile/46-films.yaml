@@ -80,6 +80,15 @@ filmCollections:
     summary: One film for one of Chan's songs. Python paints the watercolour layers, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the song.
     credits: "Song and lyrics by Chan Meng, made with Suno. Painted with numpy, OpenCV and Pillow, timed with faster-whisper, librosa, pypinyin and OpenCC, rendered with puppeteer-core and ffmpeg. Pen-and-wash habits and one transition idea are adapted from the notes of the Lemo-Opuscar style library, with no code copied. No image or video generation model, no photograph and no footage is used for the picture."
 
+  - id: save-me-a-little-of-today
+    kind: songs
+    title: Save Me a Little of Today
+    titleZh: 把今天留一小块给我
+    repo: ChanMeng666/a-little-of-today-mv
+    projectId: a-little-of-today-mv
+    summary: One film for one of Chan's songs. Python paints the watercolour layers for thirteen sets, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the song.
+    credits: "Song and lyrics by Chan Meng, made with Suno. Painted with numpy, OpenCV and Pillow, timed with faster-whisper, librosa, pypinyin and OpenCC, rendered with puppeteer-core and ffmpeg; the watercolour engine, render harness and timing tools are carried over from A Coffee for One. No image or video generation model, no photograph and no footage is used for the picture."
+
 films:
   # ── Product films: the one each product shows (productFilms) ───────────────
   - id: archcanvas-studio-film
@@ -418,3 +427,5 @@ films:
   - { id: off-season, kind: music-video, collection: memory-amber-2022, order: 8, title: Off Season, titleZh: 反季, repo: ChanMeng666/memory-amber-2022-mv, projectId: memory-amber-2022-mv, date: "2026-10", seconds: 215, drawnAs: "Gouache skies, folded along the horizon", youtubeId: XCRbi0YCIz0, media: { poster: /media/mv/memory-amber-2022/08-off-season/poster.jpg, hls: /media/mv/memory-amber-2022/08-off-season/master.m3u8 }, onFilmsPage: true }
 
   - { id: a-coffee-for-one, kind: music-video, collection: a-coffee-for-one, order: 1, title: A Coffee for One, titleZh: 独身主义的咖啡, repo: ChanMeng666/solo-coffee-mv, projectId: solo-coffee-mv, date: "2026-10", seconds: 252, drawnAs: "Procedural pen-and-wash watercolour, with rain on glass", youtubeId: ZZGf4xiduVI, media: { poster: /media/mv/a-coffee-for-one/a-coffee-for-one/poster.jpg, hls: /media/mv/a-coffee-for-one/a-coffee-for-one/master.m3u8 }, onFilmsPage: true }
+
+  - { id: save-me-a-little-of-today, kind: music-video, collection: save-me-a-little-of-today, order: 1, title: Save Me a Little of Today, titleZh: 把今天留一小块给我, repo: ChanMeng666/a-little-of-today-mv, projectId: a-little-of-today-mv, date: "2026-10", seconds: 196, drawnAs: "Procedural pen-and-wash watercolour, with sticky-note transitions", youtubeId: fgIGrYIczxc, media: { poster: /media/mv/save-me-a-little-of-today/save-me-a-little-of-today/poster.jpg, hls: /media/mv/save-me-a-little-of-today/save-me-a-little-of-today/master.m3u8 }, onFilmsPage: true }

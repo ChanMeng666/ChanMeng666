@@ -10,9 +10,9 @@ else (L2) is opened on demand, when its "read when" matches the task.
 
 | File | Lines | Read when |
 |---|---|---|
-| `CLAUDE.md` | 156 | always: the schema, hard rules and workflow |
+| `CLAUDE.md` | 159 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 103 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 111 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 114 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -62,12 +62,15 @@ Other knowledge files:
 | `cv/exports/README.md` | 26 | cv/exports/ — manual-upload deliverables | uploading a CV to a job portal, or touching cv/exports/ |
 | `distribution/README.md` | 162 | distribution/ — where each film is published, and the posting calendar | what is due to post; drafting or publishing a film post; editing plan.yaml |
 | `docs/animated-svg-cards.md` | 402 | Animated SVG project cards: a field guide | making or changing a README project card |
+| `docs/answers/2026-10-16-entries-kept-off-visitor-surfaces.md` | 73 | Entries kept off visitor-facing surfaces | — |
+| `docs/answers/README.md` | 64 | Filed answers | — |
+| `docs/answers/TEMPLATE.md` | 25 | The question, shortened to a title | — |
 | `docs/brand/DESIGN.md` | 339 | Chan Meng — Personal Brand & Design System | drawing anything in the Caldera brand system (colour, type, voice) |
 | `docs/ecosystem/README.md` | 58 | Repo lineage (ecosystem map) | a repo is created, archived, renamed, transferred or deleted; editing lineage.yaml |
 | `docs/ecosystem/archlang-archcanvas.md` | 46 | ArchLang × ArchCanvas ecosystem map | working across the ArchLang / ArchCanvas repos |
 | `docs/github-theme-aware-assets.md` | 31 | Theme-aware visual assets — this repo's status | an image may break on GitHub's light or dark canvas |
 | `docs/operations/README.md` | 142 | Repo lifecycle and hosting operations | archiving, deleting or making a repo private; retiring a hosted site; npm publishing |
-| `docs/stories/README.md` | 141 | Project stories | writing or editing a project story |
+| `docs/stories/README.md` | 157 | Project stories | writing or editing a project story |
 | `docs/stories/a11y-loop.md` | 392 | Story. a11y-loop: Creator and sole developer | preparing an interview or cover letter about this project |
 | `docs/stories/ai-programming-teaching-project.md` | 370 | Story. AI Programming Education Platform: Creator, developer and instructor | preparing an interview or cover letter about this project |
 | `docs/stories/archcanvas.md` | 376 | Story. ArchCanvas: Founder and sole engineer | preparing an interview or cover letter about this project |
@@ -84,7 +87,7 @@ Other knowledge files:
 | `docs/stories/tam-ai-ti.md` | 374 | Story. Tam-AI-Ti: Sole developer (full-stack, AI, deployment and maintenance) | preparing an interview or cover letter about this project |
 | `linkedin/README.md` | 92 | linkedin/ — LinkedIn: account register, profile copy and visuals | anything about LinkedIn posts, profile copy or visuals |
 | `media-kit/README.md` | 18 | Speaker & Media Kit | rebuilding the speaker and media kit PDF |
-| `scripts/README.md` | 62 | scripts/ | finding which script does what, and how to run it |
+| `scripts/README.md` | 64 | scripts/ | finding which script does what, and how to run it |
 | `suno/README.md` | 64 | suno/ — Suno: the register of both accounts | anything about Chan's Suno songs, playlists or the register |
 | `x/README.md` | 80 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
 | `x/x-strategy.md` | 531 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
@@ -190,6 +193,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `build:linkedin-register` | `node scripts/build-linkedin-register.mjs` |
 | `build:suno` | `node scripts/build-suno-register.mjs` |
 | `build:video-data` | `node scripts/build-video-data.mjs` |
+| `build:wiki` | `node scripts/build-wiki.mjs` |
 | `build:x` | `node scripts/build-x-register.mjs` |
 | `calendar` | `node scripts/build-distribution.mjs && node scripts/build-master-calendar.mjs` |
 
@@ -198,7 +202,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | npm script | Runs |
 |---|---|
 | `audit` | `node scripts/audit-assets.mjs` |
-| `check` | `npm run validate && npm run lint:kb && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit` |
+| `check` | `npm run validate && npm run lint:kb && npm run check:wikilinks && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit` |
 | `check:ats` | `node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --check` |
 | `check:copy` | `node scripts/check-copy.mjs` |
 | `check:cv` | `node scripts/check-cv-sync.mjs` |
@@ -209,6 +213,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `check:linkedin-register` | `node scripts/build-linkedin-register.mjs --check` |
 | `check:links` | `node scripts/check-links.mjs` |
 | `check:suno` | `node scripts/build-suno-register.mjs --check` |
+| `check:wikilinks` | `node scripts/check-wikilinks.mjs` |
 | `check:x` | `node scripts/build-x-register.mjs --check` |
 | `lint:kb` | `node scripts/lint-kb.mjs` |
 | `validate` | `node scripts/validate.mjs && node scripts/validate-brand.mjs && node scripts/check-linkedin-sync.mjs && node scripts/check-ecosystem.mjs` |
@@ -248,6 +253,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/build-suno-register.mjs` | Build the Suno register — every public song and playlist on Chan's two Suno accounts — from the last capture of Suno's public API. | npm |
 | `scripts/build-triage-page.mjs` | Generate the interactive project-triage page. | named in code: `scripts/lib/triage-repos-page.mjs`, `scripts/lib/triage-visibility-page.mjs` |
 | `scripts/build-video-data.mjs` | Emit dist/video-data.json — the curated slice the promo film renders from. | npm |
+| `scripts/build-wiki.mjs` | Generate wiki/: a local, Obsidian-browsable view of the profile shards, one page per entity. | npm |
 | `scripts/build-x-register.mjs` | Build x/posts.yaml — the register of every post on @chanmeng666 — from the last capture of the live account. | npm |
 | `scripts/build.mjs` | Build pipeline: data/profile/*.yaml -> README.md, llms.txt, llms-full.txt, dist/profile.json. | npm |
 | `scripts/capture-linkedin-screenshots.mjs` | Capture production screenshots of Chan's live projects for manual upload to the matching LinkedIn project sections. | run by hand; named in `linkedin/screenshots/README.md` |
@@ -259,6 +265,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/check-freshness.mjs` | Staleness budget / review-SLA checker for the profile data. | npm |
 | `scripts/check-linkedin-sync.mjs` | Drift guard for the LinkedIn data store. | npm |
 | `scripts/check-links.mjs` | Link-liveness checker for every URL in the data/profile/*.yaml shards. | npm |
+| `scripts/check-wikilinks.mjs` | Check every [[wikilink]] in the tracked markdown under docs/ (stories and answers included, `_private/` never read) and warn about orphan story files. | npm |
 | `scripts/check-youtube-banner-safe.mjs` | Assert the YouTube banner keeps every visible element inside the all-device safe area. | run by hand; named in `youtube/README.md` |
 | `scripts/export-linkedin-cards.mjs` | Render the LinkedIn brand surfaces (testimonial cards, profile cover, Featured CTA cards) to PNG. | named in code: `og-covers/render.mjs`, `og-covers/template.mjs` |
 | `scripts/export-x-header.mjs` | Render the X (Twitter) profile header to PNG. | run by hand; named in `x/README.md` |

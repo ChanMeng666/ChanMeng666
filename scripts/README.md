@@ -28,6 +28,7 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `build-suno-register.mjs` | Build the Suno register — every public song and playlist on Chan's two Suno accounts — from the last capture of Suno's public API. | `npm run build:suno`, `npm run check:suno` | npm |
 | `build-triage-page.mjs` | Generate the interactive project-triage page. | `node scripts/build-triage-page.mjs` | named in code: `scripts/lib/triage-repos-page.mjs`, `scripts/lib/triage-visibility-page.mjs` |
 | `build-video-data.mjs` | Emit dist/video-data.json — the curated slice the promo film renders from. | `npm run build:video-data` | npm |
+| `build-wiki.mjs` | Generate wiki/: a local, Obsidian-browsable view of the profile shards, one page per entity. | `npm run build:wiki` | npm |
 | `build-x-register.mjs` | Build x/posts.yaml — the register of every post on @chanmeng666 — from the last capture of the live account. | `npm run build:x`, `npm run check:x` | npm |
 | `build.mjs` | Build pipeline: data/profile/*.yaml -> README.md, llms.txt, llms-full.txt, dist/profile.json. | `npm run build` | npm |
 | `capture-linkedin-screenshots.mjs` | Capture production screenshots of Chan's live projects for manual upload to the matching LinkedIn project sections. | `node scripts/capture-linkedin-screenshots.mjs` | run by hand; named in `linkedin/screenshots/README.md` |
@@ -39,6 +40,7 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `check-freshness.mjs` | Staleness budget / review-SLA checker for the profile data. | `npm run check:freshness` | npm |
 | `check-linkedin-sync.mjs` | Drift guard for the LinkedIn data store. | `npm run validate` | npm |
 | `check-links.mjs` | Link-liveness checker for every URL in the data/profile/*.yaml shards. | `npm run check:links` | npm |
+| `check-wikilinks.mjs` | Check every [[wikilink]] in the tracked markdown under docs/ (stories and answers included, `_private/` never read) and warn about orphan story files. | `npm run check:wikilinks` | npm |
 | `check-youtube-banner-safe.mjs` | Assert the YouTube banner keeps every visible element inside the all-device safe area. | `node scripts/check-youtube-banner-safe.mjs` | run by hand; named in `youtube/README.md` |
 | `export-linkedin-cards.mjs` | Render the LinkedIn brand surfaces (testimonial cards, profile cover, Featured CTA cards) to PNG. | `node scripts/export-linkedin-cards.mjs` | named in code: `og-covers/render.mjs`, `og-covers/template.mjs` |
 | `export-x-header.mjs` | Render the X (Twitter) profile header to PNG. | `node scripts/export-x-header.mjs` | run by hand; named in `x/README.md` |

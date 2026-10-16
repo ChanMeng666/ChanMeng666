@@ -56,3 +56,6 @@ docs/stories/_private/
 # Any private file or folder, anywhere: the repo is public (specific lines above are kept)
 **/*.private.*
 **/_private/
+
+# Local Obsidian-browsable view of the shards, rebuilt by scripts/build-wiki.mjs
+/wiki/

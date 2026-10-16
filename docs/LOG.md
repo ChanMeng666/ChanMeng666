@@ -109,3 +109,6 @@ data/profile/60-network.yaml, README.md, llms.txt, llms-full.txt
 
 ## [2026-10-16] add | metric source/asOf in the schema; backfill queued in data/_intake
 schema/profile.schema.json, .claude/rules/data-profile.md
+
+## [2026-10-16] add | wiki view (build:wiki, gitignored), wikilink check, docs/answers
+scripts/build-wiki.mjs, scripts/check-wikilinks.mjs, docs/answers/, docs/stories/README.md, .gitignore, package.json

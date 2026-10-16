@@ -119,6 +119,22 @@ decision that followed her work (a contract extended, a feature adopted). Not
 counted: generic pleasantries, praise for someone else, anything she was not
 party to.
 
+## Wikilinks
+
+Link to a shard entry as `[[<list>/<id>]]`, for example `[[projects/echook]]`,
+`[[work/she-sharp]]` or `[[organizations/lyzen]]`. Always name the list: ids are
+unique within a list, not across lists. Link to another doc by its path under
+`docs/`, without `.md`: `[[stories/narrative]]`, `[[STATE]]`. A label goes after a
+bar: `[[projects/echook|echook]]`. Never link into `_private/`.
+
+`node scripts/check-wikilinks.mjs` (`npm run check:wikilinks`) resolves every link
+in `docs/` against the shards and fails on a broken one. It also warns about a
+story file whose name is no project, work or organisation id.
+
+`wiki/` is a local, gitignored view of the shards built by
+`npm run build:wiki`: one page per entry, with links, backlinks, guards and the
+shard line. It opens as an Obsidian vault. Edit the shard, never the page.
+
 ## Index
 
 | Project | Kind | Story file | Diagrams | Private evidence |

@@ -34,6 +34,9 @@ when you touch matching files.
   files (`account.yaml`, `curation.yaml`, `youtube/channel.yaml`,
   `distribution/plan.yaml`), the hand-written CV `.typ` files.
 - **Derived**, generated: everything in the first paragraph above. Never edit it.
+- `npm run build:wiki` writes `wiki/`, a local, gitignored Obsidian view of
+  every entity.
+- Filed answers live in `docs/answers/`; candid versions go in its `_private/`.
 
 ## Data map + cross-reference rules
 

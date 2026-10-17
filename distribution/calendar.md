@@ -6,7 +6,7 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-10-15, X 2026-10-12, LinkedIn 2026-10-12, ArchCanvas page 2026-10-12.
+Plan as of 2026-10-12. Registers read: YouTube 2026-10-17, X 2026-10-12, LinkedIn 2026-10-12, ArchCanvas page 2026-10-12.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
@@ -62,32 +62,6 @@ A post made after those dates is not known here until its register is synced.
 
 ## Not yet published and not scheduled here
 
-- Roots: YouTube
-- Four Seasons: YouTube
-- Keeping the Seed: YouTube
-- The Basin: YouTube
-- Scattered Sand: YouTube
-- Invention: YouTube
-- The Footpath: YouTube
-- Blood Reward: YouTube
-- The Black Box: YouTube
-- The Carrot: YouTube
-- Mould: YouTube
-- The Ladder: YouTube
-- The Clan: YouTube
-- The Station: YouTube
-- Dawn of the Xia States: YouTube
-- The Qin System: YouTube
-- Order Imported from Inner Asia: YouTube
-- The Xia States Speak: YouTube
-- The Branch: YouTube
-- Gift Box and Bottomless Pit: YouTube
-- The Missing Middle: YouTube
-- Where the Fire Started: YouTube
-- The Inner Asian Ocean: YouTube
-- The Seed Bank: YouTube
-- Two Bulls and a Frog: YouTube
-
 Scheduled in another calendar:
 
 - ArchLang film: LinkedIn (personal) (archcanvas-growth)
@@ -136,31 +110,31 @@ Scheduled in another calendar:
 | Sheet Metal | published 2026-10-08 | — | published | — | — | — |
 | Off Season | published 2026-10-08 | — | published | — | — | — |
 | A Coffee for One | published 2026-10-09 | — | published | — | — | — |
-| Save Me a Little of Today | published | — | published | — | — | — |
-| Roots | **to do** | — | published | — | — | — |
-| Four Seasons | **to do** | — | published | — | — | — |
-| Keeping the Seed | **to do** | — | published | — | — | — |
-| The Basin | **to do** | — | published | — | — | — |
-| Scattered Sand | **to do** | — | published | — | — | — |
-| Invention | **to do** | — | published | — | — | — |
-| The Footpath | **to do** | — | published | — | — | — |
-| Blood Reward | **to do** | — | published | — | — | — |
-| The Black Box | **to do** | — | published | — | — | — |
-| The Carrot | **to do** | — | published | — | — | — |
-| Mould | **to do** | — | published | — | — | — |
-| The Ladder | **to do** | — | published | — | — | — |
-| The Clan | **to do** | — | published | — | — | — |
-| The Station | **to do** | — | published | — | — | — |
-| Dawn of the Xia States | **to do** | — | published | — | — | — |
-| The Qin System | **to do** | — | published | — | — | — |
-| Order Imported from Inner Asia | **to do** | — | published | — | — | — |
-| The Xia States Speak | **to do** | — | published | — | — | — |
-| The Branch | **to do** | — | published | — | — | — |
-| Gift Box and Bottomless Pit | **to do** | — | published | — | — | — |
-| The Missing Middle | **to do** | — | published | — | — | — |
-| Where the Fire Started | **to do** | — | published | — | — | — |
-| The Inner Asian Ocean | **to do** | — | published | — | — | — |
-| The Seed Bank | **to do** | — | published | — | — | — |
-| Two Bulls and a Frog | **to do** | — | published | — | — | — |
+| Save Me a Little of Today | published 2026-10-16 | — | published | — | — | — |
+| Roots | published 2026-10-17 | — | published | — | — | — |
+| Four Seasons | published 2026-10-17 | — | published | — | — | — |
+| Keeping the Seed | published 2026-10-17 | — | published | — | — | — |
+| The Basin | published 2026-10-17 | — | published | — | — | — |
+| Scattered Sand | published 2026-10-17 | — | published | — | — | — |
+| Invention | published 2026-10-17 | — | published | — | — | — |
+| The Footpath | published 2026-10-17 | — | published | — | — | — |
+| Blood Reward | published 2026-10-17 | — | published | — | — | — |
+| The Black Box | published 2026-10-17 | — | published | — | — | — |
+| The Carrot | published 2026-10-17 | — | published | — | — | — |
+| Mould | published 2026-10-17 | — | published | — | — | — |
+| The Ladder | published 2026-10-17 | — | published | — | — | — |
+| The Clan | published 2026-10-17 | — | published | — | — | — |
+| The Station | published 2026-10-17 | — | published | — | — | — |
+| Dawn of the Xia States | published 2026-10-17 | — | published | — | — | — |
+| The Qin System | published 2026-10-17 | — | published | — | — | — |
+| Order Imported from Inner Asia | published 2026-10-17 | — | published | — | — | — |
+| The Xia States Speak | published 2026-10-17 | — | published | — | — | — |
+| The Branch | published 2026-10-17 | — | published | — | — | — |
+| Gift Box and Bottomless Pit | published 2026-10-17 | — | published | — | — | — |
+| The Missing Middle | published 2026-10-17 | — | published | — | — | — |
+| Where the Fire Started | published 2026-10-17 | — | published | — | — | — |
+| The Inner Asian Ocean | published 2026-10-17 | — | published | — | — | — |
+| The Seed Bank | published 2026-10-17 | — | published | — | — | — |
+| Two Bulls and a Frog | published 2026-10-17 | — | published | — | — | — |
 
 "—" means the film is not meant for that platform; the reason is the film's `reason` in status.yaml.

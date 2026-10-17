@@ -165,3 +165,6 @@ data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, docs/ecosyst
 
 ## [2026-10-17] add | Liu Zhongjing explainer films: four more watercolour films (fourteen) and a new repo lzj-history-maps (eleven map documentaries), on chanmeng.org/films and YouTube (all 25 uploaded by Chan)
 data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md, distribution/plan.yaml
+
+## [2026-10-17] update | YouTube ids for the 25 Liu Zhongjing explainer films, now public on the channel
+data/profile/46-films.yaml, youtube/channel.yaml, youtube/videos.yaml

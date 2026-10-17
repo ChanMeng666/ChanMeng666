@@ -162,3 +162,6 @@ docs/STATE.md
 
 ## [2026-10-17] add | Liu Zhongjing in Watercolour: ten explainer films, repo lzj-watercolor-films, on chanmeng.org/films only (new film kind explainer, collection kind explainer-series)
 data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md, distribution/plan.yaml, schema/profile.schema.json, scripts/check-ecosystem.mjs, scripts/build-films-data.mjs
+
+## [2026-10-17] add | Liu Zhongjing explainer films: four more watercolour films (fourteen) and a new repo lzj-history-maps (eleven map documentaries), on chanmeng.org/films and YouTube (all 25 uploaded by Chan)
+data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md, distribution/plan.yaml

@@ -3647,20 +3647,21 @@ projects:
         music-video repo. Fonts are under the SIL Open Font License. The
         film's CREDITS file lists every source and library.
 
-  # Recorded 2026-10-17. Ten explainer films, private repo: no repoUrl, no url.
-  # Shown on chanmeng.org/films only (Chan, 2026-10-17); the show: block below
-  # keeps it off the README, the site's other pages, the CV, LinkedIn copy and
-  # llms. Not uploaded to YouTube. Every fact below is from the repo's README,
-  # docs/STORYBOARD*.md and the rendered files (2026-10-17).
+  # Recorded 2026-10-17, fourteen films since the same day. Explainer films,
+  # private repo: no repoUrl, no url. Shown on chanmeng.org/films and on
+  # YouTube (her upload, 2026-10-17); the show: block below keeps it off the
+  # README, the site's other pages, the CV, LinkedIn copy and llms. Every fact
+  # below is from the repo's README, docs/STORYBOARD*.md and the rendered
+  # files (2026-10-17).
   - id: lzj-watercolor-films
     show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
     tier: secondary
     recency: recent
     lastUpdated: "2026-10-17"
-    name: "Liu Zhongjing in Watercolour — ten code-drawn explainer films"
+    name: "Liu Zhongjing in Watercolour — fourteen code-drawn explainer films"
     category: creative
-    tagline: "Ten short explainer films on the thought of Liu Zhongjing, drawn entirely by code: Python paints procedural watercolour layers, WebGL animates them with ink-bleed captions, and headless Chrome and ffmpeg render them frame by frame with scores played on recorded instruments."
+    tagline: "Fourteen short explainer films on the thought of Liu Zhongjing, drawn entirely by code: Python paints procedural watercolour layers, WebGL animates them with ink-bleed captions, and headless Chrome and ffmpeg render them frame by frame with scores played on recorded instruments."
     roles: ["Director", "Creative Coder", "Composer"]
     techStack: ["Python", "NumPy", "OpenCV", "SciPy", "JavaScript (Canvas 2D)", "WebGL2", "Headless Chrome (playwright-core)", "ffmpeg", "OpenCC", "Claude Code"]
     keywords:
@@ -3674,19 +3675,21 @@ projects:
     extraLinks:
       - { label: "Watch the series on chanmeng.org", url: "https://chanmeng.org/films#liu-zhongjing-in-watercolour" }
     metrics:
-      - { label: "Films", value: "10", note: "105 painted scenes; 1:38 to 2:59 each, 26 minutes in all; 1920×1080, 30 fps, H.264" }
+      - { label: "Films", value: "14", note: "153 painted scenes; 1:38 to 2:59 each, 35 minutes in all; 1920×1080, 30 fps, H.264" }
     publicSummary: |
-      Ten short explainer films on the thought of the historian and political
-      theorist Liu Zhongjing, one framework each (the growth of order, the
-      seasons of a civilisation, order imported and exported, atomised
-      subjects, invented nations, common law, martial virtue, three
-      generations of civilisation, and his advice on life), told as an
+      Fourteen short explainer films on the thought of the historian and
+      political theorist Liu Zhongjing, one framework each (the growth of
+      order, the seasons of a civilisation, order imported and exported,
+      atomised subjects, invented nations, common law, martial virtue, three
+      generations of civilisation, his advice on life, fervent belief as the
+      producer of order, liberal education, the clan and the small community,
+      and historical nodes and founding), told as an
       argument in seven to thirteen chapters with Traditional Chinese
       captions. Every captioned quotation is verbatim and names its source.
       Every frame is drawn by code; no image or video generation model, no
       photograph and no footage is used for the picture.
     narrative:
-      impactHeadline: "Ten explainer films, 105 scenes painted in procedural watercolour and scored on recorded instruments, all drawn and rendered by code."
+      impactHeadline: "Fourteen explainer films, 153 scenes painted in procedural watercolour and scored on recorded instruments, all drawn and rendered by code."
       businessLogic: |
         A personal creative project, not a product. A watercolour engine in
         Python (NumPy and OpenCV) keeps each layer as a transmittance map and
@@ -3701,9 +3704,69 @@ projects:
         capture frames in parallel before ffmpeg adds the score.
       myRole: |
         The concept, the selection and checking of the quotations, the
-        painting engine, the 105 scenes, the animation and the ten scores are
+        painting engine, the 153 scenes, the animation and the fourteen scores are
         mine, built with Claude Code. The sampler that plays the scores is
         adapted from the Lemo-Opuscar library (MIT); the instrument samples
         are VSCO 2 Community Edition, Salamander Grand Piano, VCSL and
         Karoryfer; the fonts are under the SIL Open Font License. The ideas
         and the quotations are Liu Zhongjing's.
+
+  # Recorded 2026-10-17. Eleven animated map documentaries, private repo: no
+  # repoUrl, no url. Shown on chanmeng.org/films and on YouTube (her upload,
+  # 2026-10-17); the show: block keeps it off the README, the site's other
+  # pages, the CV, LinkedIn copy and llms. Every fact below is from the repo's
+  # README, docs/STORYBOARD.md and the rendered files (2026-10-17).
+  - id: lzj-history-maps
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
+    provenance: personal
+    tier: secondary
+    recency: recent
+    lastUpdated: "2026-10-17"
+    name: "Liu Zhongjing's History, in Maps — eleven code-drawn map documentaries"
+    category: creative
+    tagline: "Eleven animated map documentaries that retell the history of the Chinese mainland, the People's Republic and the world as Liu Zhongjing reads it, drawn entirely by code: a WebGL and Canvas globe built from Natural Earth data, rendered frame by frame in headless Chrome and scored on recorded instruments."
+    roles: ["Director", "Creative Coder", "Composer"]
+    techStack: ["JavaScript (Canvas 2D)", "WebGL", "d3-geo", "TopoJSON", "Natural Earth", "mapshaper", "Python", "NumPy", "SciPy", "Headless Chrome (playwright)", "ffmpeg", "Claude Code"]
+    keywords:
+      - "Animated map documentaries"
+      - "Historical cartography in code"
+      - "Orthographic globe camera"
+      - "Deterministic frame-by-frame rendering"
+      - "Scores from sampled instruments"
+      - "Creative coding"
+    startDate: "2026-10"
+    extraLinks:
+      - { label: "Watch the series on chanmeng.org", url: "https://chanmeng.org/films#liu-zhongjing-history-in-maps" }
+    metrics:
+      - { label: "Films", value: "11", note: "Three series: This Land (four), The Republic (three), The World (four); 2:13 to 2:42 each, 27 minutes in all; 1920×1080, 30 fps, H.264" }
+    publicSummary: |
+      Eleven animated map documentaries in three series: four on the East
+      Asian mainland from c. 3300 BC to 1949, three on the People's Republic
+      from 1920 to today, and four on world history from the first cities to
+      the dollar cycle, each told as Liu Zhongjing reads it in ten to twelve
+      chapters with Traditional Chinese captions. Every captioned quotation is
+      verbatim and names its source; plain historical facts are labelled as
+      such. The maps are drawn entirely by code; no image or video generation
+      model, no photograph and no footage is used for the picture.
+    narrative:
+      impactHeadline: "Eleven map documentaries in three series, a code-drawn globe that flies, colours historical regions and draws campaigns, trade streams and fronts, scored on recorded instruments."
+      businessLogic: |
+        A personal creative project, not a product. Natural Earth countries,
+        provinces, rivers and lakes are simplified with mapshaper into
+        TopoJSON, and historical regions are named groups of modern units. Each
+        film is data: a list of beats written in a small DSL that sets a
+        camera (a box to fit or keyframes to fly through), a year counter, a
+        chapter seal, region fills, hatching, pulsing cities, progressive
+        arrows with flowing light, particle streams, walls, fronts and
+        captions. A d3-geo renderer draws an orthographic globe with shaded
+        relief as a WebGL texture and zooms out on long flights so the viewer
+        keeps their bearings. Every frame is a pure function of time, so
+        headless Chrome workers capture frames in parallel before ffmpeg adds
+        the score.
+      myRole: |
+        The concept, the selection and checking of the quotations, the map
+        renderer and DSL, the eleven films and their scores are mine, built
+        with Claude Code. Map data is Natural Earth (public domain); d3 and
+        topojson are ISC; the sampler that plays the scores is adapted from
+        the Lemo-Opuscar library (MIT); the fonts are under the SIL Open Font
+        License. The ideas and the quotations are Liu Zhongjing's.

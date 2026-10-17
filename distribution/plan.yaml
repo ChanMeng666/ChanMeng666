@@ -60,8 +60,8 @@ policy:
     reason: "Music videos are shown on YouTube and chanmeng.org/films only (Chan, 2026-10-09; confirmed 2026-10-12)"
   - id: explainer
     match: { kind: explainer }
-    targets: [site]
-    reason: "The Liu Zhongjing explainer series is shown on chanmeng.org/films only (Chan, 2026-10-17); not uploaded to YouTube"
+    targets: [youtube, site]
+    reason: "The Liu Zhongjing explainer films (watercolour and maps) are shown on chanmeng.org/films and YouTube (Chan uploaded all 25, 2026-10-17)"
   - id: earlier-version
     match: { kind: product-film, primary: false }
     targets: [site]

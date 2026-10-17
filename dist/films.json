@@ -1,11 +1,11 @@
 {
   "source": "data/profile/46-films.yaml",
   "counts": {
-    "films": 48,
+    "films": 63,
     "productFilms": 19,
     "musicVideos": 15,
-    "explainers": 10,
-    "minutes": 115
+    "explainers": 25,
+    "minutes": 153
   },
   "productFilms": [
     {
@@ -719,9 +719,9 @@
       "id": "liu-zhongjing-in-watercolour",
       "title": "Liu Zhongjing in Watercolour",
       "titleZh": "劉仲敬思想 · 水彩短片",
-      "summary": "Ten short explainer films on the thought of the historian and political theorist Liu Zhongjing, one framework each, built as an argument in seven to thirteen chapters with Traditional Chinese captions. Every captioned quotation is verbatim from his writings, lectures and interviews and names its source on screen. Python paints the watercolour layers, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the score.",
+      "summary": "Fourteen short explainer films on the thought of the historian and political theorist Liu Zhongjing, one framework each, built as an argument in seven to thirteen chapters with Traditional Chinese captions. Every captioned quotation is verbatim from his writings, lectures and interviews and names its source on screen. Python paints the watercolour layers, a web page animates them as a pure function of time, headless Chrome captures every frame and ffmpeg adds the score.",
       "credits": "Ideas and quotations: Liu Zhongjing. Concept, painting engine, animation and scores by Chan Meng, built with Claude Code. Scores played back from recorded instruments (VSCO 2 Community Edition, Salamander Grand Piano, VCSL, Karoryfer) with a sampler adapted from the Lemo-Opuscar library (MIT); fonts LXGW WenKai TC and Noto Serif TC (SIL OFL). No image or video generation model, no photograph and no footage is used for the picture.",
-      "seconds": 1449,
+      "seconds": 2097,
       "films": [
         {
           "id": "liu-zhongjing-roots",
@@ -851,6 +851,211 @@
           "media": {
             "poster": "/media/explainers/liu-zhongjing-in-watercolour/10-the-carrot/poster.jpg",
             "hls": "/media/explainers/liu-zhongjing-in-watercolour/10-the-carrot/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-mould",
+          "title": "Mould",
+          "titleZh": "霉菌",
+          "date": "2026-10",
+          "seconds": 166,
+          "duration": "2:46",
+          "drawnAs": "Fervent belief as the producer of order: candles in a dark nave, mould ringing a dish so bacteria cannot enter, a hand wiping it away, a church granary feeding the poor, summer leaves over hidden roots, light reflected by the moon, a match girl in the snow, seeds through winter",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-in-watercolour/11-mould/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-in-watercolour/11-mould/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-the-ladder",
+          "title": "The Ladder",
+          "titleZh": "梯子",
+          "date": "2026-10",
+          "seconds": 159,
+          "duration": "2:39",
+          "drawnAs": "Liberal education: copying before asking why, a go board, rows of examination desks, a seed holding its paths, a master and his apprentices, a page being erased, maps drawn for different purposes, a water spider skimming a pond, and a ladder climbing out of the dark",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-in-watercolour/12-the-ladder/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-in-watercolour/12-the-ladder/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-the-clan",
+          "title": "The Clan",
+          "titleZh": "宗族",
+          "date": "2026-10",
+          "seconds": 162,
+          "duration": "2:42",
+          "drawnAs": "Family and the small community: a clan courtyard, a household split into strangers, a net of kin, lanterns, a shared store of rice, a banyan whose roots make the grove, a wedding as an alliance, a jar of the grandchildren's rice, generations climbing, a child backstage",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-in-watercolour/13-the-clan/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-in-watercolour/13-the-clan/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-the-station",
+          "title": "The Station",
+          "titleZh": "車站",
+          "date": "2026-10",
+          "seconds": 161,
+          "duration": "2:41",
+          "drawnAs": "Nodes and founding: a valley that sets the path, a train riding the rails between stations, a sluice gate opened, a wager, a furrow ploughed round a new city, wandering scholars and rooted strongmen on the grass, an assembly of founders, and an oak for those who can wait",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-in-watercolour/14-the-station/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-in-watercolour/14-the-station/master.m3u8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "liu-zhongjing-history-in-maps",
+      "title": "Liu Zhongjing's History, in Maps",
+      "titleZh": "劉仲敬史觀 · 地圖紀錄片",
+      "summary": "Eleven animated map documentaries in three series, This Land (the East Asian mainland), The Republic (the People's Republic) and The World, that retell history as Liu Zhongjing reads it in ten to twelve chapters with Traditional Chinese captions. Every captioned quotation is verbatim and names its source on screen. A WebGL and Canvas globe built from Natural Earth data flies between regions, colours historical polities and draws campaigns, trade streams, walls and fronts; headless Chrome captures every frame and ffmpeg adds the score.",
+      "credits": "Ideas and quotations: Liu Zhongjing. Concept, map renderer, animation and scores by Chan Meng, built with Claude Code. Map data from Natural Earth (public domain), drawn with d3-geo and topojson (ISC); present-day borders are a stage for historical regions, not a claim about sovereignty. Scores played back from recorded instruments (VSCO 2 Community Edition, Salamander Grand Piano, VCSL, Karoryfer) with a sampler adapted from the Lemo-Opuscar library (MIT); fonts LXGW WenKai TC and Noto Serif TC (SIL OFL). No image or video generation model, no photograph and no footage is used for the picture.",
+      "seconds": 1598,
+      "films": [
+        {
+          "id": "liu-zhongjing-dawn-of-the-xia-states",
+          "title": "Dawn of the Xia States",
+          "titleZh": "諸夏之黎明",
+          "date": "2026-10",
+          "seconds": 133,
+          "duration": "2:13",
+          "drawnAs": "This Land, c. 3300 BC to 660 BC: a broken, many-peopled mainland, chariots arriving from the steppe, Shang strongholds, Zhou military colonies, and the Xia states as islands in a barbarian sea",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/01-dawn-of-the-xia-states/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/01-dawn-of-the-xia-states/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-the-qin-system",
+          "title": "The Qin System",
+          "titleZh": "秦政",
+          "date": "2026-10",
+          "seconds": 137,
+          "duration": "2:17",
+          "drawnAs": "This Land, c. 450 BC to AD 220: commanderies spreading from the frontier, the registered household, the steppe answering, mercenaries marching and the grid falling apart",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/02-the-qin-system/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/02-the-qin-system/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-order-imported-from-inner-asia",
+          "title": "Order Imported from Inner Asia",
+          "titleZh": "內亞輸入秩序",
+          "date": "2026-10",
+          "seconds": 150,
+          "duration": "2:30",
+          "drawnAs": "This Land, 280 to 1912: from Yongjia and the Xianbei north through Sui-Tang, Liao, Jin, the Yuan provinces and the Ming to a Qing facing China from an Inner Asian base",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/03-order-imported-from-inner-asia/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/03-order-imported-from-inner-asia/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-the-xia-states-speak",
+          "title": "The Xia States Speak",
+          "titleZh": "諸夏發聲",
+          "date": "2026-10",
+          "seconds": 162,
+          "duration": "2:42",
+          "drawnAs": "This Land, 1842 to 1949: the Royal Navy replacing Inner Asia as the source of order, provinces before the republic, and Wu-Yue, Ba-Shu, Hunan, Yunnan, Guangdong, Manchuria and Taiwan each lit with its own resources",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/04-the-xia-states-speak/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/04-the-xia-states-speak/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-the-branch",
+          "title": "The Branch",
+          "titleZh": "支部",
+          "date": "2026-10",
+          "seconds": 150,
+          "duration": "2:30",
+          "drawnAs": "The Republic, 1920 to 1953: a small Comintern branch, money and discipline flowing from Moscow, the party-state template, the nodes of 1928 and 1937, and the Manchurian party",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/05-the-branch/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/05-the-branch/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-gift-box-and-bottomless-pit",
+          "title": "Gift Box and Bottomless Pit",
+          "titleZh": "大禮包與無底洞",
+          "date": "2026-10",
+          "seconds": 135,
+          "duration": "2:15",
+          "drawnAs": "The Republic, 1950 to 1972: Manchuria as a prize for Moscow, the 156 projects, the Third Front moving inland, the factions of the Cultural Revolution and the 1972 node",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/06-gift-box-and-bottomless-pit/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/06-gift-box-and-bottomless-pit/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-the-missing-middle",
+          "title": "The Missing Middle",
+          "titleZh": "中間那一節",
+          "date": "2026-10",
+          "seconds": 135,
+          "duration": "2:15",
+          "drawnAs": "The Republic, 1972 to today: the sluice gate opened, the American order imported to the coast, special zones, round-tripped capital, migrant workers streaming to the coast, and the end of technology transfer",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/07-the-missing-middle/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/07-the-missing-middle/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-where-the-fire-started",
+          "title": "Where the Fire Started",
+          "titleZh": "起火點",
+          "date": "2026-10",
+          "seconds": 150,
+          "duration": "2:30",
+          "drawnAs": "The World, c. 3500 BC to 330 BC: the greater-Europe core and its four secondary zones, Sumerian city-states, chariots, the Indo-European waves and Persia",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/08-where-the-fire-started/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/08-where-the-fire-started/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-the-inner-asian-ocean",
+          "title": "The Inner Asian Ocean",
+          "titleZh": "內亞海洋",
+          "date": "2026-10",
+          "seconds": 139,
+          "duration": "2:19",
+          "drawnAs": "The World, 800 BC to AD 1500: Rome and Han, the Xiongnu, Sogdian caravans and the Sasanians, the Turks and the Mongols crossing a sea of grass, and the return of the sea route",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/09-the-inner-asian-ocean/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/09-the-inner-asian-ocean/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-the-seed-bank",
+          "title": "The Seed Bank",
+          "titleZh": "種子銀行",
+          "date": "2026-10",
+          "seconds": 146,
+          "duration": "2:26",
+          "drawnAs": "The World, 376 to 1789: a church that would not die, the many-centred Latin world, Roman law spreading from Bologna, England as a seed of Germanic feudalism, and America as England's own seed",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/10-the-seed-bank/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/10-the-seed-bank/master.m3u8"
+          }
+        },
+        {
+          "id": "liu-zhongjing-two-bulls-and-a-frog",
+          "title": "Two Bulls and a Frog",
+          "titleZh": "兩頭牛與青蛙",
+          "date": "2026-10",
+          "seconds": 161,
+          "duration": "2:41",
+          "drawnAs": "The World, 1842 to today: the British gold standard, two world wars, the dollar cycle and the Cold War, with two bulls fighting while a frog is trampled",
+          "media": {
+            "poster": "/media/explainers/liu-zhongjing-history-in-maps/11-two-bulls-and-a-frog/poster.jpg",
+            "hls": "/media/explainers/liu-zhongjing-history-in-maps/11-two-bulls-and-a-frog/master.m3u8"
           }
         }
       ]

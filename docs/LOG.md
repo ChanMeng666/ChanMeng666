@@ -168,3 +168,6 @@ data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, docs/ecosyst
 
 ## [2026-10-17] update | YouTube ids for the 25 Liu Zhongjing explainer films, now public on the channel
 data/profile/46-films.yaml, youtube/channel.yaml, youtube/videos.yaml
+
+## [2026-10-17] update | YouTube playlists: three new public playlists (Liu Zhongjing films, Product shorts, Community & events), so every public video is in exactly one
+youtube/channel.yaml

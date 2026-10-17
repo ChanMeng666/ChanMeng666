@@ -68,9 +68,11 @@ channel:
 counts:
   asOf: "2026-10-09"
   total: 339               # 331 on the Videos tab (Studio's visibility filters) plus the 8 public Shorts
-  public: 43               # 35 videos + 8 Shorts
+  public: 73               # 65 videos + 8 Shorts (2026-10-17)
   unlisted: 60
   private: 236             # 180 of them are raw screen recordings titled by timestamp
+  # 2026-10-17: the public count was read again, signed out: 73 (65 videos
+  # and 8 Shorts). The other counts were not read again.
   # The Shorts tab was not part of the count: it also holds a few older
   # unlisted clips (not read).
 
@@ -87,31 +89,31 @@ videos:
   # watercolour films, lzj-watercolor-films; eleven map documentaries,
   # lzj-history-maps) and Claude filled in titles and descriptions in Studio
   # and made them public the same day, at her request.
-  - { id: gZBkrnX34X4, kind: explainer, published: "2026-10-17", duration: "2:41", title: "兩頭牛與青蛙 · Two Bulls and a Frog｜劉仲敬史觀地圖紀錄片 · 世界 4", projectId: lzj-history-maps, described: true }
-  - { id: J7JfhzHmBos, kind: explainer, published: "2026-10-17", duration: "2:26", title: "種子銀行 · The Seed Bank｜劉仲敬史觀地圖紀錄片 · 世界 3", projectId: lzj-history-maps, described: true }
-  - { id: RnMtqdJTSk4, kind: explainer, published: "2026-10-17", duration: "2:19", title: "內亞海洋 · The Inner Asian Ocean｜劉仲敬史觀地圖紀錄片 · 世界 2", projectId: lzj-history-maps, described: true }
-  - { id: I5XjoNquyzc, kind: explainer, published: "2026-10-17", duration: "2:30", title: "起火點 · Where the Fire Started｜劉仲敬史觀地圖紀錄片 · 世界 1", projectId: lzj-history-maps, described: true }
-  - { id: "8TsZnOn1j-0", kind: explainer, published: "2026-10-17", duration: "2:15", title: "中間那一節 · The Missing Middle｜劉仲敬史觀地圖紀錄片 · 共和國 3", projectId: lzj-history-maps, described: true }
-  - { id: hdcYtqPiQaI, kind: explainer, published: "2026-10-17", duration: "2:15", title: "大禮包與無底洞 · Gift Box and Bottomless Pit｜劉仲敬史觀地圖紀錄片 · 共和國 2", projectId: lzj-history-maps, described: true }
-  - { id: M9BZTNBXwxY, kind: explainer, published: "2026-10-17", duration: "2:30", title: "支部 · The Branch｜劉仲敬史觀地圖紀錄片 · 共和國 1", projectId: lzj-history-maps, described: true }
-  - { id: WyrCKbSdGkU, kind: explainer, published: "2026-10-17", duration: "2:42", title: "諸夏發聲 · The Xia States Speak｜劉仲敬史觀地圖紀錄片 · 這片土地 4", projectId: lzj-history-maps, described: true }
-  - { id: "4c6nYTUqOLM", kind: explainer, published: "2026-10-17", duration: "2:30", title: "內亞輸入秩序 · Order Imported from Inner Asia｜劉仲敬史觀地圖紀錄片 · 這片土地 3", projectId: lzj-history-maps, described: true }
-  - { id: KQ_b0XPLwPU, kind: explainer, published: "2026-10-17", duration: "2:17", title: "秦政 · The Qin System｜劉仲敬史觀地圖紀錄片 · 這片土地 2", projectId: lzj-history-maps, described: true }
-  - { id: uJd7ewPNMFY, kind: explainer, published: "2026-10-17", duration: "2:13", title: "諸夏之黎明 · Dawn of the Xia States｜劉仲敬史觀地圖紀錄片 · 這片土地 1", projectId: lzj-history-maps, described: true }
-  - { id: uRqo56M73dk, kind: explainer, published: "2026-10-17", duration: "2:41", title: "車站 · The Station｜劉仲敬思想水彩動畫 14", projectId: lzj-watercolor-films, described: true }
-  - { id: V81DCtHuvAs, kind: explainer, published: "2026-10-17", duration: "2:42", title: "宗族 · The Clan｜劉仲敬思想水彩動畫 13", projectId: lzj-watercolor-films, described: true }
-  - { id: hNqoy6IL4b4, kind: explainer, published: "2026-10-17", duration: "2:39", title: "梯子 · The Ladder｜劉仲敬思想水彩動畫 12", projectId: lzj-watercolor-films, described: true }
-  - { id: nCmURADzMoY, kind: explainer, published: "2026-10-17", duration: "2:46", title: "霉菌 · Mould｜劉仲敬思想水彩動畫 11", projectId: lzj-watercolor-films, described: true }
-  - { id: Bir_XTmdCfw, kind: explainer, published: "2026-10-17", duration: "2:47", title: "胡蘿蔔 · The Carrot｜劉仲敬思想水彩動畫 10", projectId: lzj-watercolor-films, described: true }
-  - { id: iBLGHhoRL5g, kind: explainer, published: "2026-10-17", duration: "2:47", title: "黑匣子 · The Black Box｜劉仲敬思想水彩動畫 09", projectId: lzj-watercolor-films, described: true }
-  - { id: uo0T_Bdtbew, kind: explainer, published: "2026-10-17", duration: "2:34", title: "血酬 · Blood Reward｜劉仲敬思想水彩動畫 08", projectId: lzj-watercolor-films, described: true }
-  - { id: ZKPJGwkNdsk, kind: explainer, published: "2026-10-17", duration: "2:48", title: "小路 · The Footpath｜劉仲敬思想水彩動畫 07", projectId: lzj-watercolor-films, described: true }
-  - { id: kNxHbWrHNOs, kind: explainer, published: "2026-10-17", duration: "2:59", title: "發明 · Invention｜劉仲敬思想水彩動畫 06", projectId: lzj-watercolor-films, described: true }
-  - { id: zKfOdkfVyLY, kind: explainer, published: "2026-10-17", duration: "2:34", title: "散沙 · Scattered Sand｜劉仲敬思想水彩動畫 05", projectId: lzj-watercolor-films, described: true }
-  - { id: PXzgyn3u4bA, kind: explainer, published: "2026-10-17", duration: "2:30", title: "窪地 · The Basin｜劉仲敬思想水彩動畫 04", projectId: lzj-watercolor-films, described: true }
-  - { id: "98k0f22QKtc", kind: explainer, published: "2026-10-17", duration: "1:38", title: "守先待後 · Keeping the Seed｜劉仲敬思想水彩動畫 03", projectId: lzj-watercolor-films, described: true }
-  - { id: en5LAyvK8Kw, kind: explainer, published: "2026-10-17", duration: "1:46", title: "四季 · Four Seasons｜劉仲敬思想水彩動畫 02", projectId: lzj-watercolor-films, described: true }
-  - { id: p-LRdBfJyuI, kind: explainer, published: "2026-10-17", duration: "1:46", title: "根 · Roots｜劉仲敬思想水彩動畫 01", projectId: lzj-watercolor-films, described: true }
+  - { id: gZBkrnX34X4, kind: explainer, published: "2026-10-17", duration: "2:41", title: "兩頭牛與青蛙 · Two Bulls and a Frog｜劉仲敬史觀地圖紀錄片 · 世界 4", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: J7JfhzHmBos, kind: explainer, published: "2026-10-17", duration: "2:26", title: "種子銀行 · The Seed Bank｜劉仲敬史觀地圖紀錄片 · 世界 3", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: RnMtqdJTSk4, kind: explainer, published: "2026-10-17", duration: "2:19", title: "內亞海洋 · The Inner Asian Ocean｜劉仲敬史觀地圖紀錄片 · 世界 2", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: I5XjoNquyzc, kind: explainer, published: "2026-10-17", duration: "2:30", title: "起火點 · Where the Fire Started｜劉仲敬史觀地圖紀錄片 · 世界 1", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: "8TsZnOn1j-0", kind: explainer, published: "2026-10-17", duration: "2:15", title: "中間那一節 · The Missing Middle｜劉仲敬史觀地圖紀錄片 · 共和國 3", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: hdcYtqPiQaI, kind: explainer, published: "2026-10-17", duration: "2:15", title: "大禮包與無底洞 · Gift Box and Bottomless Pit｜劉仲敬史觀地圖紀錄片 · 共和國 2", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: M9BZTNBXwxY, kind: explainer, published: "2026-10-17", duration: "2:30", title: "支部 · The Branch｜劉仲敬史觀地圖紀錄片 · 共和國 1", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: WyrCKbSdGkU, kind: explainer, published: "2026-10-17", duration: "2:42", title: "諸夏發聲 · The Xia States Speak｜劉仲敬史觀地圖紀錄片 · 這片土地 4", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: "4c6nYTUqOLM", kind: explainer, published: "2026-10-17", duration: "2:30", title: "內亞輸入秩序 · Order Imported from Inner Asia｜劉仲敬史觀地圖紀錄片 · 這片土地 3", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: KQ_b0XPLwPU, kind: explainer, published: "2026-10-17", duration: "2:17", title: "秦政 · The Qin System｜劉仲敬史觀地圖紀錄片 · 這片土地 2", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: uJd7ewPNMFY, kind: explainer, published: "2026-10-17", duration: "2:13", title: "諸夏之黎明 · Dawn of the Xia States｜劉仲敬史觀地圖紀錄片 · 這片土地 1", projectId: lzj-history-maps, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: uRqo56M73dk, kind: explainer, published: "2026-10-17", duration: "2:41", title: "車站 · The Station｜劉仲敬思想水彩動畫 14", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: V81DCtHuvAs, kind: explainer, published: "2026-10-17", duration: "2:42", title: "宗族 · The Clan｜劉仲敬思想水彩動畫 13", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: hNqoy6IL4b4, kind: explainer, published: "2026-10-17", duration: "2:39", title: "梯子 · The Ladder｜劉仲敬思想水彩動畫 12", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: nCmURADzMoY, kind: explainer, published: "2026-10-17", duration: "2:46", title: "霉菌 · Mould｜劉仲敬思想水彩動畫 11", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: Bir_XTmdCfw, kind: explainer, published: "2026-10-17", duration: "2:47", title: "胡蘿蔔 · The Carrot｜劉仲敬思想水彩動畫 10", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: iBLGHhoRL5g, kind: explainer, published: "2026-10-17", duration: "2:47", title: "黑匣子 · The Black Box｜劉仲敬思想水彩動畫 09", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: uo0T_Bdtbew, kind: explainer, published: "2026-10-17", duration: "2:34", title: "血酬 · Blood Reward｜劉仲敬思想水彩動畫 08", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: ZKPJGwkNdsk, kind: explainer, published: "2026-10-17", duration: "2:48", title: "小路 · The Footpath｜劉仲敬思想水彩動畫 07", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: kNxHbWrHNOs, kind: explainer, published: "2026-10-17", duration: "2:59", title: "發明 · Invention｜劉仲敬思想水彩動畫 06", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: zKfOdkfVyLY, kind: explainer, published: "2026-10-17", duration: "2:34", title: "散沙 · Scattered Sand｜劉仲敬思想水彩動畫 05", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: PXzgyn3u4bA, kind: explainer, published: "2026-10-17", duration: "2:30", title: "窪地 · The Basin｜劉仲敬思想水彩動畫 04", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: "98k0f22QKtc", kind: explainer, published: "2026-10-17", duration: "1:38", title: "守先待後 · Keeping the Seed｜劉仲敬思想水彩動畫 03", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: en5LAyvK8Kw, kind: explainer, published: "2026-10-17", duration: "1:46", title: "四季 · Four Seasons｜劉仲敬思想水彩動畫 02", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
+  - { id: p-LRdBfJyuI, kind: explainer, published: "2026-10-17", duration: "1:46", title: "根 · Roots｜劉仲敬思想水彩動畫 01", projectId: lzj-watercolor-films, playlists: ["Liu Zhongjing films · 劉仲敬系列"], described: true }
   # Uploaded and made public by Chan on 2026-10-08 and 2026-10-09 under their
   # file names; titles, descriptions and the playlist were set on 2026-10-09.
   # Their copy follows the music-video rule (data/profile/46-films.yaml): how
@@ -157,36 +159,36 @@ videos:
   # or any other page of the site.
   - { id: X3nUfLHawq4, kind: music-video, published: "2026-10-08", duration: "5:25", title: "十月的微雨 · A Drizzle in October | Music video drawn entirely by code", projectId: october-rain-february-line-mv, playlists: [Music videos], described: true }
   - { id: B1q5akx2zPk, kind: music-video, published: "2026-10-08", duration: "5:15", title: "二月的延长线 · February, on an Extended Line | Music video drawn entirely by code", projectId: october-rain-february-line-mv, playlists: [Music videos], described: true }
-  - { id: M3mGpMDDO9I, kind: short, published: "2026-10-08", duration: "0:30", title: "AI Programming Education Platform — a bilingual course site with its own AI assistant #Shorts", projectId: ai-programming-teaching-project, described: true }
-  - { id: PXR3I_47At4, kind: short, published: "2026-10-08", duration: "0:30", title: "Eatropolis — the event website for Auckland’s culinary festival #Shorts", projectId: eatropolis-website, described: true }
-  - { id: zrxlw5Kh3vI, kind: short, published: "2026-10-08", duration: "0:30", title: "She Sharp — the member platform behind a NZ women-in-STEM charity #Shorts", projectId: she-sharp, described: true }
-  - { id: zf2mAMVHoT0, kind: short, published: "2026-10-08", duration: "0:30", title: "CORDE Mobile — offline-first field data collection #Shorts", projectId: corde-mobile-application, described: true }
-  - { id: k7xBJ6DXMnc, kind: short, published: "2026-10-08", duration: "0:30", title: "GAVIGO IRE — Instant Reality Exchange #Shorts", projectId: gavigo-ire, described: true }
-  - { id: OUgDbZG6-Hg, kind: short, published: "2026-10-08", duration: "0:30", title: "echook — hooks for Claude Code, Cursor and Codex, set up in plain language #Shorts", projectId: echook, described: true }
-  - { id: 3GrW5o63p5I, kind: short, published: "2026-10-08", duration: "0:30", title: "ArchCanvas — your AI architect: from a brief to a dimensioned floor plan #Shorts", projectId: archcanvas, described: true }
+  - { id: M3mGpMDDO9I, kind: short, published: "2026-10-08", duration: "0:30", title: "AI Programming Education Platform — a bilingual course site with its own AI assistant #Shorts", projectId: ai-programming-teaching-project, playlists: [Product shorts], described: true }
+  - { id: PXR3I_47At4, kind: short, published: "2026-10-08", duration: "0:30", title: "Eatropolis — the event website for Auckland’s culinary festival #Shorts", projectId: eatropolis-website, playlists: [Product shorts], described: true }
+  - { id: zrxlw5Kh3vI, kind: short, published: "2026-10-08", duration: "0:30", title: "She Sharp — the member platform behind a NZ women-in-STEM charity #Shorts", projectId: she-sharp, playlists: [Product shorts], described: true }
+  - { id: zf2mAMVHoT0, kind: short, published: "2026-10-08", duration: "0:30", title: "CORDE Mobile — offline-first field data collection #Shorts", projectId: corde-mobile-application, playlists: [Product shorts], described: true }
+  - { id: k7xBJ6DXMnc, kind: short, published: "2026-10-08", duration: "0:30", title: "GAVIGO IRE — Instant Reality Exchange #Shorts", projectId: gavigo-ire, playlists: [Product shorts], described: true }
+  - { id: OUgDbZG6-Hg, kind: short, published: "2026-10-08", duration: "0:30", title: "echook — hooks for Claude Code, Cursor and Codex, set up in plain language #Shorts", projectId: echook, playlists: [Product shorts], described: true }
+  - { id: 3GrW5o63p5I, kind: short, published: "2026-10-08", duration: "0:30", title: "ArchCanvas — your AI architect: from a brief to a dimensioned floor plan #Shorts", projectId: archcanvas, playlists: [Product shorts], described: true }
   - { id: j2_JCEs8Ucw, kind: film, published: "2026-10-07", duration: "0:29", title: "She Sharp × Les Mills — “No Pain, All Gain” | Event promo", projectId: she-sharp, showcaseId: she-sharp-lesmills-promo, playlists: [Product films], described: true }
   - { id: DKCzZCQTQgA, kind: film, published: "2026-10-07", duration: "1:01", title: "AI Programming Education Platform — a bilingual course site with its own AI assistant | Product film", projectId: ai-programming-teaching-project, playlists: [Product films], described: true }
   - { id: AdelJ4bezwo, kind: film, published: "2026-10-07", duration: "1:01", title: "Eatropolis — the event website for Auckland’s culinary festival | Product film", projectId: eatropolis-website, playlists: [Product films], described: true }
   - { id: rJb7A_Ljmrs, kind: film, published: "2026-10-07", duration: "1:01", title: "Tam-AI-Ti — an AI financial wellness coach grounded in Te Whare Tapa Whā | Product film", projectId: tam-ai-ti, playlists: [Product films], described: true }
-  - { id: lKPR3rNw7Ng, kind: short, published: "2026-10-07", duration: "0:30", title: "Tam-AI-Ti — an AI financial wellness coach grounded in Te Whare Tapa Whā #Shorts", projectId: tam-ai-ti, described: true }
+  - { id: lKPR3rNw7Ng, kind: short, published: "2026-10-07", duration: "0:30", title: "Tam-AI-Ti — an AI financial wellness coach grounded in Te Whare Tapa Whā #Shorts", projectId: tam-ai-ti, playlists: [Product shorts], described: true }
   - { id: RBcGF6X4esY, kind: film, published: "2026-10-07", duration: "1:09", title: "ArchLang — a language that compiles to dimensioned floor plans | Product film", projectId: archlang, playlists: [Product films], described: true }
   - { id: 43vcdxFDbTg, kind: film, published: "2026-10-07", duration: "1:01", title: "echook — hooks for Claude Code, Cursor and Codex, set up in plain language | Product film", projectId: echook, playlists: [Product films], described: true }
   - { id: qoTYuK0Xdsk, kind: film, published: "2026-10-07", duration: "1:01", title: "GAVIGO IRE — Instant Reality Exchange | Product film", projectId: gavigo-ire, playlists: [Product films], described: true }
   - { id: RiL7m159I7w, kind: film, published: "2026-10-07", duration: "1:01", title: "CORDE Mobile — offline-first field data collection | Product film", projectId: corde-mobile-application, playlists: [Product films], described: true }
   - { id: Yf25U5uysho, kind: film, published: "2026-10-07", duration: "1:01", title: "She Sharp — the member platform behind a NZ women-in-STEM charity | Product film", projectId: she-sharp, playlists: [Product films], described: true }
   - { id: QC2fqBGp4Xg, kind: film, published: "2026-09-29", duration: "1:04", views: 44, title: "Chan Meng — AI Agent Architect & Full-Stack Engineer | 64-second intro", showcaseId: chan-meng-intro, playlists: [Brand films], described: true }
-  - { id: HXI5QozwHkk, kind: personal, published: "2026-09-29", duration: "0:21", views: 11, title: "Opening Karakia - Chan Meng", described: false }
-  - { id: FZS7rbgCaB4, kind: personal, published: "2026-09-29", duration: "0:21", views: 5, title: "Closing Karakia - Chan Meng", described: false }
+  - { id: HXI5QozwHkk, kind: personal, published: "2026-09-29", duration: "0:21", views: 11, title: "Opening Karakia - Chan Meng", playlists: ["Community & events"], described: false }
+  - { id: FZS7rbgCaB4, kind: personal, published: "2026-09-29", duration: "0:21", views: 5, title: "Closing Karakia - Chan Meng", playlists: ["Community & events"], described: false }
   - { id: PoAYhd0KI4c, kind: film, published: "2026-09-29", duration: "0:13", views: 18, title: "My logo learned to move | Chan Meng brand sting", showcaseId: chan-meng-monkey-sting, playlists: [Brand films], described: true }
   - { id: rUZAiXgt9JY, kind: film, published: "2026-09-21", duration: "2:01", views: 17, title: "ArchCanvas — your AI architect: from a brief to a dimensioned floor plan | Product film", projectId: archcanvas, showcaseId: archcanvas-promo-studio, playlists: [Product films], described: true }
   - { id: HIjLTA7HS64, kind: film, published: "2026-07-28", duration: "3:00", views: 26, title: "a11y-loop — make AI coding agents write accessible UI, then prove it | Product film", projectId: a11y-loop, playlists: [Product films], described: true, note: "July render; the local master was re-rendered 2026-10-06. Chan chose to keep this upload." }
   - { id: OO8uqNiQXcY, kind: demo, published: "2026-07-03", duration: "1:35", views: 47, title: "Aotearoa AI Hackathon Festival 2026 — the event’s voice AI assistant | Demo", projectId: ai-hackathon-assistant, playlists: ["Demos & walkthroughs"], described: true }
   - { id: LFFML4zqHu0, kind: demo, published: "2026-03-17", duration: "4:53", views: 66, title: "GAVIGO IRE — feature walkthrough", projectId: gavigo-ire, playlists: ["Demos & walkthroughs"], described: true }
   - { id: Y9l7Wz9kLRA, kind: demo, published: "2026-01-02", duration: "8:12", views: 29, title: "Bulk personalised email with Resend — an automation workflow walkthrough", playlists: ["Demos & walkthroughs"], described: true }
-  - { id: saBoG1HCvfY, kind: personal, published: "2025-12-10", duration: "1:06", views: 40, title: "The end of year thank you video", described: true, note: "made for She Sharp" }
+  - { id: saBoG1HCvfY, kind: personal, published: "2025-12-10", duration: "1:06", views: 40, title: "The end of year thank you video", playlists: ["Community & events"], described: true, note: "made for She Sharp" }
   - { id: IZi3EJLEpb4, kind: demo, published: "2025-11-04", duration: "2:34", views: 45, title: "echook (formerly Claude Code Audio Hooks) — audio notifications demo", projectId: echook, playlists: ["Demos & walkthroughs"], described: true }
   - { id: EXIh1f7vk30, kind: demo, published: "2025-06-25", duration: "2:54", views: 14, title: "Chromaflow (gradient-svg-generator) — animated SVG gradients for any README | Demo", projectId: gradient-svg-generator, playlists: ["Demos & walkthroughs"], described: true }
-  - { id: erXRl-PPBC8, kind: personal, published: "2025-04-15", duration: "0:33", views: 201, title: "Chan Meng — 30 seconds describing myself (April 2025)", described: true }
+  - { id: erXRl-PPBC8, kind: personal, published: "2025-04-15", duration: "0:33", views: 201, title: "Chan Meng — 30 seconds describing myself (April 2025)", playlists: [Brand films], described: true }
 
 # Made private on 2026-10-07 (Chan's decision: the projects are archived).
 # Ids are in channel.private.yaml. None may be linked from any surface.
@@ -218,16 +220,40 @@ playlists:
     onHomeTab: true
     # Order set 2026-10-10: the intro, the showreel, its short cut, the sting.
     # The all-in-one film was added 2026-10-16, at the end.
-    videos: [QC2fqBGp4Xg, qoYcFszDnHA, 8n--dCv4tSQ, PoAYhd0KI4c, "-RsnZLNrKf0"]
+    # The April 2025 self-introduction was added 2026-10-17, at the end.
+    videos: [QC2fqBGp4Xg, qoYcFszDnHA, 8n--dCv4tSQ, PoAYhd0KI4c, "-RsnZLNrKf0", erXRl-PPBC8]
   - title: Music videos
     id: PLUfF7nx_5Rg4
     onHomeTab: true
     # Created 2026-10-08 at Chan's request. Sorted manually into album order
     # on 2026-10-09: Memory Amber 2022 (1 to 8), Anti-Marriage Universe (1 to
-    # 3), the two October films, then A Coffee for One. A new film is added at
+    # 3), the two October films, then A Coffee for One; Save Me a Little of
+    # Today followed on 2026-10-16. A new film is added at
     # the end of its album ("Move to top" / "Move to bottom" in the row menu on
     # youtube.com).
-    videos: [TCNJ5v6AoOw, al6Ybmsnn2A, YKRB3VnDDqo, Cs4LGUjyDqI, UTnIN2npW14, 2RXDQgN8HMQ, Y20RZOOACys, XCRbi0YCIz0, GS_eawacEVs, btSFv9OVoDc, V5X91IMEmiw, X3nUfLHawq4, B1q5akx2zPk, ZZGf4xiduVI]
+    videos: [TCNJ5v6AoOw, al6Ybmsnn2A, YKRB3VnDDqo, Cs4LGUjyDqI, UTnIN2npW14, 2RXDQgN8HMQ, Y20RZOOACys, XCRbi0YCIz0, GS_eawacEVs, btSFv9OVoDc, V5X91IMEmiw, X3nUfLHawq4, B1q5akx2zPk, ZZGf4xiduVI, fgIGrYIczxc]
+
+  # The three below were created on 2026-10-17 at Chan's request, so that
+  # every public video sits in exactly one public playlist (checked signed
+  # out that day: 65 videos and 8 Shorts, none outside a playlist). Their
+  # descriptions end in a chanmeng.org link.
+  - title: "Liu Zhongjing films · 劉仲敬系列"
+    id: PLYeSuUYAYC9Q
+    onHomeTab: false   # suggested to Chan: second, below Product films
+    # Sorted by date published (oldest), which is the viewing order: the
+    # fourteen watercolour films, then This Land 1-4, The Republic 1-3, The
+    # World 1-4 (they were published in that order).
+    videos: [p-LRdBfJyuI, en5LAyvK8Kw, "98k0f22QKtc", PXzgyn3u4bA, zKfOdkfVyLY, kNxHbWrHNOs, ZKPJGwkNdsk, uo0T_Bdtbew, iBLGHhoRL5g, Bir_XTmdCfw, nCmURADzMoY, hNqoy6IL4b4, V81DCtHuvAs, uRqo56M73dk, uJd7ewPNMFY, KQ_b0XPLwPU, "4c6nYTUqOLM", WyrCKbSdGkU, M9BZTNBXwxY, hdcYtqPiQaI, "8TsZnOn1j-0", I5XjoNquyzc, RnMtqdJTSk4, J7JfhzHmBos, gZBkrnX34X4]
+  - title: Product shorts
+    id: PLLUAf0PEf-xQ
+    onHomeTab: false   # the home tab already has its own Short videos row
+    # The 30-second vertical cuts of the product films, newest first.
+    videos: [M3mGpMDDO9I, PXR3I_47At4, zrxlw5Kh3vI, zf2mAMVHoT0, k7xBJ6DXMnc, OUgDbZG6-Hg, 3GrW5o63p5I, lKPR3rNw7Ng]
+  - title: "Community & events"
+    id: PLXfeTCvT9ezU
+    onHomeTab: false
+    # The two karakia recordings and the She Sharp end-of-year video.
+    videos: [HXI5QozwHkk, FZS7rbgCaB4, saBoG1HCvfY]
 
 # Nothing is waiting to be uploaded (checked against 46-films.yaml and the film
 # folders on 2026-10-10): all fourteen music videos and every product's film
@@ -239,5 +265,6 @@ playlists:
 # title = the film's title with "| Product film" replaced by "#Shorts";
 # description = "A 30-second cut of the <product> product film. The full film
 # is on this channel, in the Product films playlist.", the sign-off line and a
-# Links block that starts with the full film; no playlist.
+# Links block that starts with the full film. Since 2026-10-17 every Short
+# is in the Product shorts playlist.
 pendingUpload: []

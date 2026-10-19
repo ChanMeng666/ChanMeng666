@@ -311,7 +311,7 @@ Its dispensers now serve the public areas of 10 store locations in Guangzhou. I 
 ## ByteDance
 **Links:** <https://juejin.cn/post/7437020309973155849> · <https://www.bytedance.com/en/>
 
-### Backend Developer
+### Backend Developer — Youth Training Camp
 
 **Dates:** Nov 2024 - Mar 2025 · 5 mos
 **Location:** Beijing, China · Remote

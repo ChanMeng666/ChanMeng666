@@ -1,0 +1,378 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Chan Meng — ATS resume, VARIANT: frontend-platform
+//
+// Tier-matched variant of cv/chan-meng-cv-ats.typ (nz-job-immigration-strategy
+// tk-032, dec-034). Same ATS rules as the base file (cv/README.md "ATS variant —
+// hard rules"): single column, 3-letter months, the seven known headings, two
+// pages. Content is a re-ordering and re-weighting of facts already in the base
+// resume and data/profile/*.yaml — no new titles, dates, metrics or employers.
+// Credibility fixes vs the base: the overlapping 2025-2026 remote roles sit in
+// ONE grouped block; verifiable artefacts lead; no engagement-type labels.
+// Positioning (2026-10-18, dec-035): product & full-stack AI engineer with
+// founder experience, no seniority word in the headline; each role's first
+// bullet opens with its scope (solo / team size / users) as recorded in the
+// SSOT; the Youth Training Camp is named in the ByteDance title and CopilotKit
+// appears as an open-source contribution.
+// NOT parsed by scripts/check-cv-sync.mjs or the .docx/.txt exporter — if a
+// title or date changes in 10-career.yaml, grep cv/variants/ too.
+//
+// Build: typst compile --root . --font-path cv/fonts cv/variants/frontend-platform.typ cv/variants/exports/chan-meng-cv-frontend-platform.pdf
+// ─────────────────────────────────────────────────────────────────────────────
+
+#import "../ats-components.typ": *
+
+#set document(
+  title: "Chan Meng — Resume",
+  author: "Chan Meng",
+  // PINNED, not `auto` and not `none`. A date must be PRESENT: a PDF carrying
+  // no /CreationDate and no /ModDate is a known trip-hazard for legacy resume
+  // parsers, and it was the clearest structural difference between this file
+  // and the designed CV when Lever returned "Couldn't auto-read resume" on an
+  // upload of THIS pdf (2026-08-03). Pinning still keeps what `date: none` was
+  // protecting: this PDF is COMMITTED, so identical input must produce
+  // identical bytes or every rebuild is a diff.
+  //
+  // Bump this BY HAND when the resume's CONTENT changes — it is the document's
+  // revision date, not the build's wall clock. Do NOT switch to `auto`, and do
+  // NOT move it to a `typst compile --creation-timestamp` flag in build.ps1:
+  // that would split one fact across two files and make a bare `typst compile`
+  // produce a different PDF. cv/build-ats-exports.mjs PARSES this line and
+  // reuses it for the .docx core properties, so it stays one fact in one file.
+  date: datetime(year: 2026, month: 10, day: 15),
+  // NO keywords: on purpose. The 70-term list in chan-meng-cv.typ is plainly
+  // legible in `pdfinfo` and reads as keyword stuffing to an AI screener —
+  // the same class of anti-pattern cv/README.md already bans. Everything that
+  // should be matched here is visible text.
+)
+
+#set page(paper: "a4", margin: 1.6cm, header: none, footer: none, numbering: none)
+
+// 1.6cm ≈ 0.63in still clears the "within 0.5in of the page edge =
+// header/footer, discard" heuristic several legacy parsers apply. Do not go
+// below 1.5cm — past that the margin itself starts reading as a header band.
+
+#set text(
+  font: "DM Sans",   // vendored via --font-path cv/fonts → deterministic on CI
+  size: 10pt,        // the floor: below ~9.5pt, OCR-fallback parsers degrade
+  fill: black,       // pure #000000, not the brand ink #070607
+  lang: "en",
+  // Only disables AUTOMATIC hyphenation — see the box() show rule below for the
+  // explicit-hyphen half of the problem.
+  hyphenate: false,
+  features: (liga: 0),
+)
+// Straight ASCII quotes and apostrophes instead of typographic ones.
+#set smartquote(enabled: false)
+
+// Within-bullet leading 0.68em → 6.8pt at 10pt; between-bullet spacing 8.5pt.
+// See the spacing ladder at the top of ats-components.typ.
+#set par(leading: 0.68em, spacing: 0.90em, justify: false, first-line-indent: 0pt)
+
+// Typst 0.15 emits a PDF structure tree by default (verified: `pdfinfo` reports
+// Tagged: yes), so a native `= HEADING` becomes a real /H1 element — the
+// strongest section signal available to a modern parser.
+#set heading(numbering: none)
+#show heading.where(level: 1): set text(size: 11.5pt, weight: "bold")
+// The heading's OWN margins must be near-zero: the wrapper block below owns the
+// section gap. Leaving them non-zero would push the rule away from its heading
+// (block margins are max-not-sum against par.spacing).
+#show heading.where(level: 1): set block(above: 0pt, below: 3pt)
+// Attach the hairline by RE-EMITTING `it` inside a wrapper rather than
+// rebuilding the heading from its .body — the original element stays in the
+// frame, so its /H1 tag survives. breakable: false keeps a heading and its rule
+// on the same page. Verified with pypdf (7 headings → 7 /H1 elements) after
+// every change to this rule.
+#show heading.where(level: 1): it => block(
+  above: gap-section, below: gap-rule, breakable: false,
+  { it; hrule() },
+)
+
+// ASCII hyphen-minus markers, one level only. Nested lists are where
+// indentation-based parsers lose hierarchy or merge lines.
+#set list(marker: [-], indent: 0pt, body-indent: 7pt, spacing: 8pt)
+
+// Links are real and clickable. Underlined in the same black as the body text
+// so the affordance is visible without introducing colour — a reader should
+// never have to guess what is clickable, and should never have to retype a URL.
+#show link: it => underline(stroke: 0.4pt + black, offset: 2.5pt, evade: false, it)
+
+// `hyphenate: false` only disables AUTOMATIC hyphenation. Typst still treats an
+// EXPLICIT hyphen as a line-break opportunity, and pdftotext then reads a
+// hyphen sitting at a line end as a soft hyphen and DELETES it. Measured on the
+// first build of this very file: "web-vitals" extracted as "webvitals",
+// "multi-user" as "multiuser", "gpt-5.4-mini" as "gpt-5.4mini" — three silent
+// keyword losses. Boxing every hyphenated compound removes the break
+// opportunity inside it, so a hyphen can never land at a line end. Every token
+// this matches is far shorter than the measure, so nothing overflows.
+// Re-verify by grepping the extraction, never by eye.
+#show regex("[\w.]+(-[\w.]+)+"): it => box(it)
+
+// ═══ IDENTITY + CONTACT ══════════════════════════════════════════════════════
+// Unlabelled by convention — parsers expect the name block first, with no
+// heading above it. Contact items were one-per-line in the 4-page draft; at two
+// pages they share two lines. That is safe because the separator is an explicit
+// " | ": the failure mode measured in the designed CV was items running
+// together with nothing but whitespace between them
+// ("chanmeng.career@gmail.com +64 028 8510 9245 Auckland, New Zealand ...").
+#block(above: 0pt, below: 5pt, breakable: false, {
+  text(size: 17pt, weight: "bold")[Chan Meng]
+  linebreak()
+  v(1.5pt)
+  [Frontend & Full-stack Engineer | React, Next.js, TypeScript | Web Accessibility (WCAG 2.2)]
+})
+#block(above: 0pt, below: 7pt, breakable: false, {
+  link("mailto:chanmeng.career@gmail.com")[chanmeng.career\@gmail.com]
+  [ | ]
+  link("tel:+642885109245")[+64 28 8510 9245]
+  [ | Auckland, New Zealand]
+  linebreak()
+  link("https://chanmeng.org/")[chanmeng.org]
+  [ | ]
+  link("https://www.linkedin.com/in/chanmeng666/")[linkedin.com/in/chanmeng666]
+  [ | ]
+  link("https://github.com/ChanMeng666")[github.com/ChanMeng666]
+})
+#hrule()
+
+// ═══ SUMMARY ═════════════════════════════════════════════════════════════════
+= PROFESSIONAL SUMMARY
+
+Frontend-focused full-stack engineer with founder experience: React, Next.js and TypeScript
+interfaces for sign-ups, memberships, events and summit applications, tested in
+CI with Vitest and Cypress and measured with web-vitals. Built a11y-loop, a tool
+that audits UI in a real browser against WCAG 2.2 AA (Playwright, axe-core), now
+being adopted by a disability-led New Zealand organisation. Works AI-native,
+directing coding agents with review by pull request.
+
+// ═══ SKILLS ══════════════════════════════════════════════════════════════════
+= TECHNICAL SKILLS
+
+#skills-line("Frontend and accessibility", (
+  "TypeScript", "React", "Next.js 16", "React Native", "Vue 3", "TailwindCSS", "Docusaurus", "web-vitals", "Playwright", "axe-core", "WCAG 2.2 AA", "Vitest", "Cypress",
+))
+#skills-line("Backend and languages", (
+  "Python", "Go", "Java", "SQL", "Spring Boot 3", "FastAPI", "Drizzle ORM", "Zod", "Neon Postgres", "Supabase", "Redis",
+))
+#skills-line("AI and agent engineering", (
+  "Claude Agent SDK", "OpenAI Agents SDK", "Model Context Protocol (MCP)", "LangGraph", "Vercel AI SDK", "RAG pipelines", "multi-agent orchestration", "evaluation harnesses",
+))
+#skills-line("Claude Code and Codex CLI", (
+  "CLAUDE.md", "Agent Skills", "Subagents", "Hooks", "Status line", "Plugins", "AGENTS.md", "sandbox and approval policies", "headless mode",
+))
+#skills-line("Models", (
+  "Anthropic Claude Opus 5, Sonnet 5, Haiku 4.5", "OpenAI gpt-5.5, GPT-4o, realtime", "Gemini", "Llama",
+))
+
+// ═══ EXPERIENCE ══════════════════════════════════════════════════════════════
+= PROFESSIONAL EXPERIENCE
+
+#role-line(
+  title: "Senior Full-Stack Engineer & Website Team Lead",
+  org: "She Sharp",
+  org-url: "https://www.shesharp.org.nz/",
+  dates: "Jul 2025 - Sep 2026",
+  location: "Auckland, New Zealand",
+  arrangement: "Hybrid",
+  bullets: (
+    [Scope: one of two developers (opened 207 of 254 pull requests) for a volunteer-run New Zealand women-in-STEM charity (96+ events since 2014) with a 1,549-person mailing list. Recruited by founder Dr Mahsa Mohaghegh to move it off rented software onto infrastructure it owns, leading a 13.3-month build of sign-ups, memberships, events and GPT-4o-mini mentor matching (251 merged pull requests, 94.5% of lines added).],
+    [Cut the mailing list over from Mailchimp to self-hosted double opt-in with 0 failures, and rewrote the charity's recurring work as 11 agent skills, reviewed by pull request and type-checked in CI, that non-engineers can follow; built shesharp.org.nz, its newsletter and its event decks.],
+  ),
+)
+
+#role-line(
+  title: "Founder & Sole Engineer",
+  org: "ArchCanvas",
+  org-url: "https://archcanvas.uk/",
+  dates: "Apr 2026 - Present",
+  location: "Auckland, New Zealand",
+  arrangement: "Remote",
+  bullets: (
+    [Scope: solo founder and engineer; live with payments, ahead of public launch. Building an AI design agent for architects and self-builders; invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (62 npm releases, 139 diagnostic codes), so every plan is checked and an edit is exact; live at archcanvas.uk and archlang.uk.],
+  ),
+)
+
+// ONE grouped block for the overlapping 2025-2026 remote work (credibility fix,
+// nz-job-immigration-strategy tk-032): the roles ran in parallel, so they sit
+// under one label instead of reading as five separate full jobs. Each org keeps
+// its real title and dates; no engagement-type labels (dec-032).
+#block(above: 0pt, below: gap-intra, { strong("Remote work for overseas teams, in parallel (Mar 2025 - Present)") })
+
+#role-line(
+  title: "Chief Technology Officer",
+  org: "FemTech Weekend",
+  org-url: "https://www.femtechweekend.com/",
+  dates: "Mar 2025 - Present",
+  location: "Chengdu, Sichuan, China",
+  arrangement: "Remote",
+  bullets: (
+    [Scope: sole engineer, remote, reporting to the founder. Built two platform generations for an organisation self-described as China's first in women's health technology, including the pages and application system for its 2026 Shanghai Summit (four days, 33 speakers, headlined by Ida Tin); site: femtechweekend.com.],
+  ),
+)
+
+#role-line(
+  title: "Chief Technology Officer",
+  org: "Sanicle",
+  org-url: "https://www.linkedin.com/company/sanicleofficial/",
+  dates: "Mar 2025 - Feb 2026",
+  location: "Tulsa, Oklahoma, United States",
+  arrangement: "Remote",
+  bullets: (
+    [Scope: promoted to CTO leading a team of five; did the 14-week core build solo. Took the product from a no-code prototype to a multi-tenant B2B FemTech SaaS and built the company website and the IBM watsonx integration behind Sanicle's IBM Silver Partner certification.],
+  ),
+)
+
+#role-line(
+  title: "Founding Principal Engineer, Activation, Execution & AI Systems",
+  org: "GAVIGO Inc.",
+  org-url: "https://gavigo.com/",
+  dates: "Oct 2025 - Oct 2026",
+  location: "Wilmington, Delaware, United States",
+  compact: true,
+)
+
+#role-line(
+  title: "AI Instructor & Mentor",
+  org: "TechNest Community",
+  org-url: "https://www.technestcommunity.com/",
+  dates: "Apr 2026 - Aug 2026",
+  location: "St John's, Newfoundland, Canada",
+  compact: true,
+)
+
+#role-line(
+  title: "AI Agent Architect",
+  org: "Engram",
+  org-url: "https://engram.media/",
+  dates: "May 2026 - Jul 2026",
+  location: "Albuquerque, New Mexico, United States",
+  compact: true,
+)
+
+#block(above: gap-entry, below: 3pt, { strong("Earlier experience") })
+
+#role-line(
+  title: "Technology & Professional Development Mentor",
+  org: "Forward with Her",
+  org-url: "https://www.linkedin.com/company/taxing-mentorship/",
+  dates: "Oct 2024 - Sep 2025",
+  location: "China",
+  compact: true,
+)
+
+#role-line(
+  title: "Backend Developer — Youth Training Camp",
+  org: "ByteDance",
+  org-url: "https://youthcamp.bytedance.com/",
+  dates: "Nov 2024 - Mar 2025",
+  location: "China",
+  compact: true,
+)
+
+#role-line(
+  title: "Full Stack Developer & Lead Documenter",
+  org: "CORDE",
+  org-url: "https://corde.nz/",
+  dates: "Jun 2024 - Oct 2024",
+  location: "Canterbury, New Zealand",
+  compact: true,
+)
+
+// ═══ PROJECTS ════════════════════════════════════════════════════════════════
+= PROJECTS
+
+#project-entry(
+  name: "a11y-loop",
+  url: "github.com/ChanMeng666/a11y-loop",
+  target: "https://github.com/ChanMeng666/a11y-loop",
+)[
+  A Claude Code skill and CLI that makes AI coding agents write accessible UI,
+  audits it in a real browser (Playwright, axe-core, WCAG 2.2 AA) and lists what
+  it could not check; being adopted by My Life My Voice, the disability-led New
+  Zealand organisation that set the problem.
+]
+
+#project-entry(
+  name: "AI Programming Education Platform",
+  url: "programming.chanmeng.org",
+  target: "https://programming.chanmeng.org/",
+)[
+  A bilingual Docusaurus platform (211 of 220 commits) carrying five cohort
+  versions of AI-programming teaching side by side, three concurrent in 2026, for
+  TechNest's 2026 AI Track and academyEX's Her Waka, with a Cloudflare Workers RAG
+  assistant doing version-aware retrieval over about 1,200 chunks.
+]
+
+#project-entry(
+  name: "Google News MCP Server",
+  url: "github.com/ChanMeng666/server-google-news",
+  target: "https://github.com/ChanMeng666/server-google-news",
+)[
+  One of the earliest Model Context Protocol servers, shipped 35 days after
+  Anthropic launched MCP and before a registry existed: a PulseMCP Top Pick, a
+  Glama A-rating, and 129 GitHub stars.
+]
+
+#project-entry(
+  name: "echook",
+  url: "github.com/ChanMeng666/echook",
+  target: "https://github.com/ChanMeng666/echook",
+)[
+  An AI-operated hooks plugin for Claude Code, Cursor IDE and Codex CLI,
+  installed and driven entirely in natural language, grown from audio
+  notifications into session telemetry and four shipped Claude Code extension
+  surfaces: hooks, skills, a context-window status line and plugin packaging.
+]
+
+#block(above: 0pt, below: 0pt, {
+  strong("Also built: ")
+  [#link("https://eatropolis.co.nz/")[eatropolis.co.nz] (Auckland's official culinary festival, commissioned by Chow Luck Club Ltd with Auckland Council's agency Tātaki Auckland Unlimited) and
+  #link("https://tamaiti.whiri-ai.com/")[Tam-AI-Ti] (a te reo Māori and English AI financial-wellness app; a 19-user cohort produced 181 journal entries in 4 months).]
+})
+
+// ═══ EDUCATION ═══════════════════════════════════════════════════════════════
+= EDUCATION
+
+#education-entry(
+  degree: "Master of Applied Computing",
+  school: "Lincoln University, New Zealand",
+  school-url: "https://www.lincoln.ac.nz/",
+  dates: "Nov 2023 - Dec 2024",
+  note: "Distinction, Dean's List (Top 5%)",
+)
+
+#education-entry(
+  degree: "Bachelor of Geography Science",
+  school: "Jiangsu Normal University, China",
+  school-url: "http://www.jsnu.edu.cn/",
+  dates: "Sep 2012 - Jun 2016",
+  note: "Distinction",
+)
+
+// ═══ CERTIFICATIONS ══════════════════════════════════════════════════════════
+// "Certifications & Training" occasionally splits a section classifier on the
+// ampersand; "Certifications" is the lexicon entry.
+= CERTIFICATIONS
+
+#skills-line("Anthropic (6)", (
+  "Building with the Claude API", "Intro to MCP",
+  "Intro to Agent Skills", "Claude Code in Action",
+  "AI Fluency: Framework and Foundations",
+  "Claude Certified Architect (Foundations): practice exam passed",
+))
+#skills-line("Other (50+ total)", (
+  "Google AI Essentials", "Microsoft Azure AI Essentials",
+  "HackerRank Software Engineer plus 22 skill certifications",
+))
+
+// ═══ AWARDS ══════════════════════════════════════════════════════════════════
+// "Recognition" alone is weakly recognised; spell out "AND". The four stat
+// pills from the designed CV's header land in the last line — as pills they
+// extract as one unreadable run.
+//
+// FemTech China and FemTech Weekend are TWO DISTINCT organisations with two
+// distinct awards. They may share a line, but never merge into one award.
+= AWARDS AND RECOGNITION
+
+- UN CSW 69 Speaker (by video link), UN Headquarters, New York, Mar 2025 — drew IBM pilot interest and an endorsement from Sierra Leone's Minister of Gender and Children's Affairs.
+- Outstanding Mentor Award, Aotearoa AI Hackathon Festival, won in 2025 (1 of 14 mentors) and again in 2026, a second consecutive year; Excellence Award, FemTech China Women's Health Technology Challenge (Dec 2024); Outstanding Performer, UN Women FemTech Hackathon, Beijing (Mar 2025).
+- Community: 530+ GitHub stars on own repos, 27 LinkedIn recommendations. Open-source contribution: 2 merged, maintainer-approved pull requests to CopilotKit.

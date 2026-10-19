@@ -347,6 +347,9 @@
             "type": "string",
             "pattern": "^[\\w.-]+/[\\w.-]+$"
           },
+          "repoPublic": {
+            "type": "boolean"
+          },
           "projectId": {
             "type": "string"
           },

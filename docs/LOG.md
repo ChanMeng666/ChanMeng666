@@ -186,3 +186,6 @@ docs/STATE.md, docs/ecosystem/lineage.yaml, data/profile/23-projects-oss-more.ya
 
 ## [2026-10-19] archive | Every finished film (130 files) moved to the gitignored film-archive/; the 23 local film folders deleted
 film-archive/README.md, .gitignore, docs/ecosystem/lineage.yaml
+
+## [2026-10-19] add | `repoPublic` on every film and film collection (46 true, 27 false), checked against the repo's visibility in lineage.yaml
+data/profile/46-films.yaml, schema/profile.schema.json, scripts/check-ecosystem.mjs, docs/STATE.md

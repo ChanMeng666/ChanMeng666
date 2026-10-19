@@ -164,11 +164,19 @@ for (const f of profile.productFilms ?? []) {
     if (!r) return err(`films ${where}: ${key} is not in the lineage catalog`);
     if (!FILM_ROLES.includes(r.role)) err(`films ${where}: ${key} has role ${r.role}, expected ${FILM_ROLES.join(" | ")}`);
   };
+  // repoPublic says whether the film's repo may be linked; it must match the repo's visibility in the catalog.
+  const repoPublic = (row, where) => {
+    const r = repoByKey.get(row.repo);
+    if (!r) return;
+    if (row.repoPublic !== (r.visibility === "public"))
+      err(`films ${where}: repoPublic is ${row.repoPublic}, but ${row.repo} is ${r.visibility} in the lineage catalog`);
+  };
   const collectionIds = new Set();
   for (const c of profile.filmCollections ?? []) {
     if (collectionIds.has(c.id)) err(`filmCollections: duplicate id "${c.id}"`);
     collectionIds.add(c.id);
     filmRepo(c.repo, `collection "${c.id}"`);
+    repoPublic(c, `collection "${c.id}"`);
     if (c.projectId && !projectIds.has(c.projectId)) err(`filmCollections "${c.id}": projectId "${c.projectId}" not in data/profile projects`);
   }
   const filmIds = new Set();
@@ -178,6 +186,7 @@ for (const f of profile.productFilms ?? []) {
     if (filmIds.has(f.id)) err(`films: duplicate id ${where}`);
     filmIds.add(f.id);
     filmRepo(f.repo, where);
+    repoPublic(f, where);
     if (f.projectId && !projectIds.has(f.projectId)) err(`films ${where}: projectId "${f.projectId}" not in data/profile projects`);
     if (f.showcaseId && !showcaseIds.has(f.showcaseId)) err(`films ${where}: showcaseId "${f.showcaseId}" not in showcase`);
     if (f.collection && !collectionIds.has(f.collection)) err(`films ${where}: collection "${f.collection}" not in filmCollections`);

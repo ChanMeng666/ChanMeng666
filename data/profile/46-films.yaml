@@ -301,7 +301,7 @@ films:
     media: { poster: /work/posters/ai-programming-poster.jpg, mp4: /work/films/ai-programming-60s.mp4 }
     onFilmsPage: true
 
-  # ── Product films: earlier and alternative versions (shown on /films only) ──
+  # ── Product films: earlier and alternative versions (on /films and YouTube, not the README) ──
   - id: archcanvas-hero-film
     kind: product-film
     title: "ArchCanvas, the 92-second film"
@@ -314,15 +314,16 @@ films:
     cuts: ["92 s", "16:9 + 9:16"]
     madeWith: "HyperFrames, footage of one real product session"
     summary: A film with no voiceover, built from one continuous session on the live product. Music, sound design and text cards carry the argument, and five build gates enforce cleared copy and honest footage.
+    youtubeId: MB4eGPWtgNo
     media: { poster: /media/films/archcanvas-hero-92s.jpg, mp4: /media/films/archcanvas-hero-92s.mp4 }
     onFilmsPage: true
 
-  - { id: archcanvas-short-talk-to-your-plan, kind: product-film, collection: archcanvas-feature-shorts, order: 1, title: Talk to your plan, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 29, cuts: ["29 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-1.jpg, mp4: /media/films/archcanvas-short-1.mp4 }, onFilmsPage: true }
-  - { id: archcanvas-short-the-check, kind: product-film, collection: archcanvas-feature-shorts, order: 2, title: The check, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 26, cuts: ["26 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-2.jpg, mp4: /media/films/archcanvas-short-2.mp4 }, onFilmsPage: true }
-  - { id: archcanvas-short-it-opens-in-real-cad, kind: product-film, collection: archcanvas-feature-shorts, order: 3, title: It opens in real CAD, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 27, cuts: ["27 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-3.jpg, mp4: /media/films/archcanvas-short-3.mp4 }, onFilmsPage: true }
-  - { id: archcanvas-short-tweaks, kind: product-film, collection: archcanvas-feature-shorts, order: 4, title: Tweaks, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 24, cuts: ["24 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-4.jpg, mp4: /media/films/archcanvas-short-4.mp4 }, onFilmsPage: true }
-  - { id: archcanvas-short-grounded-rendering, kind: product-film, collection: archcanvas-feature-shorts, order: 5, title: Grounded rendering, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 25, cuts: ["25 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-5.jpg, mp4: /media/films/archcanvas-short-5.mp4 }, onFilmsPage: true }
-  - { id: archcanvas-short-pay-per-result, kind: product-film, collection: archcanvas-feature-shorts, order: 6, title: Pay per result, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 21, cuts: ["21 s", "16:9 + 9:16"], madeWith: HyperFrames, media: { poster: /media/films/archcanvas-short-6.jpg, mp4: /media/films/archcanvas-short-6.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-talk-to-your-plan, kind: product-film, collection: archcanvas-feature-shorts, order: 1, title: Talk to your plan, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 29, cuts: ["29 s", "16:9 + 9:16"], madeWith: HyperFrames, youtubeId: omcd23TWvd0, media: { poster: /media/films/archcanvas-short-1.jpg, mp4: /media/films/archcanvas-short-1.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-the-check, kind: product-film, collection: archcanvas-feature-shorts, order: 2, title: The check, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 26, cuts: ["26 s", "16:9 + 9:16"], madeWith: HyperFrames, youtubeId: 4grKmyUPwMk, media: { poster: /media/films/archcanvas-short-2.jpg, mp4: /media/films/archcanvas-short-2.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-it-opens-in-real-cad, kind: product-film, collection: archcanvas-feature-shorts, order: 3, title: It opens in real CAD, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 27, cuts: ["27 s", "16:9 + 9:16"], madeWith: HyperFrames, youtubeId: Vy21QUUHWJ4, media: { poster: /media/films/archcanvas-short-3.jpg, mp4: /media/films/archcanvas-short-3.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-tweaks, kind: product-film, collection: archcanvas-feature-shorts, order: 4, title: Tweaks, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 24, cuts: ["24 s", "16:9 + 9:16"], madeWith: HyperFrames, youtubeId: DRUtCRGvAok, media: { poster: /media/films/archcanvas-short-4.jpg, mp4: /media/films/archcanvas-short-4.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-grounded-rendering, kind: product-film, collection: archcanvas-feature-shorts, order: 5, title: Grounded rendering, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 25, cuts: ["25 s", "16:9 + 9:16"], madeWith: HyperFrames, youtubeId: G6XGcmD4Vco, media: { poster: /media/films/archcanvas-short-5.jpg, mp4: /media/films/archcanvas-short-5.mp4 }, onFilmsPage: true }
+  - { id: archcanvas-short-pay-per-result, kind: product-film, collection: archcanvas-feature-shorts, order: 6, title: Pay per result, for: ArchCanvas, projectId: archcanvas, repo: ChanMeng666/archcanvas-promo-video, repoPublic: false, date: "2026-09", seconds: 21, cuts: ["21 s", "16:9 + 9:16"], madeWith: HyperFrames, youtubeId: D9sN1d7hWlw, media: { poster: /media/films/archcanvas-short-6.jpg, mp4: /media/films/archcanvas-short-6.mp4 }, onFilmsPage: true }
 
   - id: archcanvas-zoom-out
     kind: product-film
@@ -336,6 +337,7 @@ films:
     cuts: ["73 s", "16:9, 9:16, 4:5 and 1:1 from one edit"]
     madeWith: Remotion
     summary: One continuous zoom across the product's infinite canvas, told backwards. A silent film carried by text set in the canvas and one music bed, with four aspect ratios out of one edit.
+    youtubeId: KuCYju-jY0w
     media: { poster: /media/films/archcanvas-zoom-out-73s.jpg, mp4: /media/films/archcanvas-zoom-out-73s.mp4 }
     onFilmsPage: true
 
@@ -351,6 +353,7 @@ films:
     cuts: ["89 s", "16:9"]
     madeWith: "Remotion, ElevenLabs, Suno"
     summary: The earlier promo, made when the product was still called claude-code-audio-hooks, with React-based animation, generated voice and sound effects, and a Suno score.
+    youtubeId: rwcbV4FpHho
     media: { poster: /media/films/echook-first-89s.jpg, mp4: /media/films/echook-first-89s.mp4 }
     onFilmsPage: true
 

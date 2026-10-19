@@ -15,8 +15,9 @@
 # here because a profile shard already links it on purpose.
 #
 # Facts in titles and descriptions trace to `data/profile/`; display rules in
-# `docs/STATE.md` apply here too (one film per product; GenLAB and Seismophone
-# are not shown). Which film a product shows is decided in
+# `docs/STATE.md` apply here too (GenLAB and Seismophone are not shown). Since
+# 2026-10-19 the channel also carries a product's earlier and alternative
+# films, as chanmeng.org/films does. Which film a product shows is decided in
 # `data/profile/45-showcase.yaml` › productFilms, not here.
 #
 # Chan decided every row on 2026-10-07 (triage page). Do not change a video's
@@ -68,8 +69,8 @@ channel:
 counts:
   asOf: "2026-10-09"
   total: 339               # 331 on the Videos tab (Studio's visibility filters) plus the 8 public Shorts
-  public: 73               # 65 videos + 8 Shorts (2026-10-17)
-  unlisted: 60
+  public: 82               # 74 videos + 8 Shorts (2026-10-19, capture:youtube)
+  unlisted: 61             # +1 uploaded 2026-10-12, seen in Studio 2026-10-19 (channel.private.yaml)
   private: 236             # 180 of them are raw screen recordings titled by timestamp
   # 2026-10-17: the public count was read again, signed out: 73 (65 videos
   # and 8 Shorts). The other counts were not read again.
@@ -85,6 +86,20 @@ counts:
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # 2026-10-19: Chan uploaded the earlier and alternative films that
+  # chanmeng.org/films shows (the ArchCanvas 92-second film, its six feature
+  # shorts, «Zoom Out», the first echook film). Claude filled in titles and
+  # descriptions in Studio and made them public the same day, at her request.
+  # The six shorts are in their own playlist; the other three in Product films.
+  - { id: KuCYju-jY0w, kind: film, published: "2026-10-19", duration: "1:13", title: "ArchCanvas «Zoom Out» — one continuous zoom across the canvas | Product film", projectId: archcanvas, playlists: [Product films], described: true }
+  - { id: D9sN1d7hWlw, kind: film, published: "2026-10-19", duration: "0:21", title: "ArchCanvas — Pay per result | Feature short", projectId: archcanvas, playlists: [ArchCanvas feature shorts], described: true }
+  - { id: G6XGcmD4Vco, kind: film, published: "2026-10-19", duration: "0:25", title: "ArchCanvas — Grounded rendering | Feature short", projectId: archcanvas, playlists: [ArchCanvas feature shorts], described: true }
+  - { id: DRUtCRGvAok, kind: film, published: "2026-10-19", duration: "0:24", title: "ArchCanvas — Tweaks | Feature short", projectId: archcanvas, playlists: [ArchCanvas feature shorts], described: true }
+  - { id: Vy21QUUHWJ4, kind: film, published: "2026-10-19", duration: "0:27", title: "ArchCanvas — It opens in real CAD | Feature short", projectId: archcanvas, playlists: [ArchCanvas feature shorts], described: true }
+  - { id: 4grKmyUPwMk, kind: film, published: "2026-10-19", duration: "0:26", title: "ArchCanvas — The check | Feature short", projectId: archcanvas, playlists: [ArchCanvas feature shorts], described: true }
+  - { id: omcd23TWvd0, kind: film, published: "2026-10-19", duration: "0:29", title: "ArchCanvas — Talk to your plan | Feature short", projectId: archcanvas, playlists: [ArchCanvas feature shorts], described: true }
+  - { id: MB4eGPWtgNo, kind: film, published: "2026-10-19", duration: "1:32", title: "ArchCanvas — the 92-second film | Product film", projectId: archcanvas, playlists: [Product films], described: true }
+  - { id: rwcbV4FpHho, kind: film, published: "2026-10-19", duration: "1:29", title: "echook — the first film, from when it was Claude Code Audio Hooks | Product film", projectId: echook, playlists: [Product films], described: true }
   # 2026-10-17: Chan uploaded the 25 Liu Zhongjing explainer films (fourteen
   # watercolour films, lzj-watercolor-films; eleven map documentaries,
   # lzj-history-maps) and Claude filled in titles and descriptions in Studio
@@ -210,7 +225,9 @@ playlists:
   - title: Product films
     id: PLSvppR4RMlF0
     onHomeTab: true
-    videos: [rUZAiXgt9JY, HIjLTA7HS64, Yf25U5uysho, RiL7m159I7w, qoTYuK0Xdsk, 43vcdxFDbTg, RBcGF6X4esY, rJb7A_Ljmrs, AdelJ4bezwo, DKCzZCQTQgA, j2_JCEs8Ucw]
+    videos: [rUZAiXgt9JY, HIjLTA7HS64, Yf25U5uysho, RiL7m159I7w, qoTYuK0Xdsk, 43vcdxFDbTg, RBcGF6X4esY, rJb7A_Ljmrs, AdelJ4bezwo, DKCzZCQTQgA, j2_JCEs8Ucw, MB4eGPWtgNo, KuCYju-jY0w, rwcbV4FpHho]
+    # The last three (2026-10-19) are the earlier and alternative films of
+    # ArchCanvas and echook; the primary film of each product stays first.
   - title: "Demos & walkthroughs"
     id: PLXEw5x660aDc
     onHomeTab: true
@@ -249,6 +266,13 @@ playlists:
     onHomeTab: false   # the home tab already has its own Short videos row
     # The 30-second vertical cuts of the product films, newest first.
     videos: [M3mGpMDDO9I, PXR3I_47At4, zrxlw5Kh3vI, zf2mAMVHoT0, k7xBJ6DXMnc, OUgDbZG6-Hg, 3GrW5o63p5I, lKPR3rNw7Ng]
+  - title: ArchCanvas feature shorts
+    id: PLXWXSlesO_IM
+    onHomeTab: false
+    # Created 2026-10-19 (Claude, at Chan's request), sorted by date added
+    # (oldest): shorts 1 to 6 in order. Its description ends in a
+    # chanmeng.org/films link.
+    videos: [omcd23TWvd0, 4grKmyUPwMk, Vy21QUUHWJ4, DRUtCRGvAok, G6XGcmD4Vco, D9sN1d7hWlw]
   - title: "Community & events"
     id: PLXfeTCvT9ezU
     onHomeTab: false
@@ -258,10 +282,11 @@ playlists:
 # Nothing is waiting to be uploaded (checked against 46-films.yaml and the film
 # folders on 2026-10-10): all fourteen music videos and every product's film
 # on show are on the channel. Every product with a vertical cut has its Short
-# live; ArchLang and a11y-loop have no vertical cut. Not uploaded on purpose
-# (one film per product on this channel): the earlier and alternative films
-# that chanmeng.org/films shows, namely the ArchCanvas 92-second film, its six
-# feature shorts, «Zoom Out» and the first echook film. The Short convention:
+# live; ArchLang and a11y-loop have no vertical cut. The earlier and
+# alternative films that chanmeng.org/films shows (the ArchCanvas 92-second
+# film, its six feature shorts, «Zoom Out» and the first echook film) were held
+# back until 2026-10-19, when Chan uploaded them (16:9 only; their 9:16 cuts
+# are not on the channel). The Short convention:
 # title = the film's title with "| Product film" replaced by "#Shorts";
 # description = "A 30-second cut of the <product> product film. The full film
 # is on this channel, in the Product films playlist.", the sign-off line and a

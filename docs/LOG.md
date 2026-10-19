@@ -189,3 +189,6 @@ film-archive/README.md, .gitignore, docs/ecosystem/lineage.yaml
 
 ## [2026-10-19] add | `repoPublic` on every film and film collection (46 true, 27 false), checked against the repo's visibility in lineage.yaml
 data/profile/46-films.yaml, schema/profile.schema.json, scripts/check-ecosystem.mjs, docs/STATE.md
+
+## [2026-10-19] add | Nine earlier and alternative films public on YouTube (ArchCanvas 92-second film, six feature shorts, «Zoom Out», the first echook film); new playlist "ArchCanvas feature shorts"
+youtube/channel.yaml, youtube/videos.yaml, data/profile/46-films.yaml, dist/films.json

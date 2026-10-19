@@ -198,3 +198,6 @@ data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/STATE.
 
 ## [2026-10-19] decide | Videos go only into public film repos' READMEs; the upload placeholders removed from the six private film repos
 docs/STATE.md
+
+## [2026-10-19] decide | Film videos uploaded to the READMEs of twelve public film repos; the two Liu Zhongjing repos keep YouTube links only
+docs/STATE.md

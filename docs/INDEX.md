@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 114 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 206 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 209 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -285,6 +285,6 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/mark-reviewed.mjs` | Deliberate "I reviewed this entry" bump: rewrites ONLY the lastUpdated line of the named entries, in place, in whichever data/profile/*.yaml shard owns them. | npm |
 | `scripts/refresh-github-metrics.mjs` | Refreshes machine-derivable GitHub metrics for projects in the data/profile/2*-projects-*.yaml shards. | npm |
 | `scripts/render-collages.mjs` | Renders evidence/collages/<capability>.html → public/evidence/collages/<capability>.jpg for every showcaseCapabilities[] entry in data/profile/45-showcase.yaml. | npm |
-| `scripts/stage-distribution.mjs` | Copy the video files the schedule needs into distribution/_staging/ (local, gitignored), from the film repos beside this one. | npm |
+| `scripts/stage-distribution.mjs` | Copy the video files the schedule needs into distribution/_staging/ (local, gitignored). | npm |
 | `scripts/validate-brand.mjs` | Validates data/brand.yaml against schema/brand.schema.json. | npm |
 | `scripts/validate.mjs` | Validates the merged data/profile/*.yaml shards against schema/profile.schema.json, then checks that ids are unique within every top-level list that has them (ids are NOT unique across lists: one slug names one real… | npm |

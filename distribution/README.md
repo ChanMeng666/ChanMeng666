@@ -14,7 +14,7 @@ publishes it through her browser (§ "Running the calendar").
 | [`calendar.md`](./calendar.md) | The film schedule week by week, and the whole matrix as one table | generated |
 | `master-calendar.md` | Every posting calendar merged by date: the films and the calendars under `otherCalendars` in the plan. What is overdue, due today and next | generated, **local only** |
 | `drafts/<film>.yaml` | Draft text per platform, with what to check before posting | hand, **local only** |
-| `_staging/<nn>-<film>/` | The video files to upload, copied from the film repos | generated, **local only** |
+| `_staging/<nn>-<film>/` | The video files to upload, downloaded from GitHub (`docs/film-masters.md`) when no film repo is checked out. Delete it any time; stage again before posting | generated, **local only** |
 
 `drafts/`, `_staging/` and `master-calendar.md` are gitignored (the last one quotes a
 private repository and depends on the date). This repository is public: text is not
@@ -40,7 +40,7 @@ A post made after a register's date is unknown here until the register is synced
 npm run calendar              # rebuild everything and write the master calendar for today
 npm run build:distribution    # write status.yaml and calendar.md
 npm run check:distribution    # fail if they are stale or the plan is inconsistent
-npm run stage:distribution    # copy the scheduled video files into _staging/
+npm run stage:distribution    # fetch the scheduled video files into _staging/ (needs gh)
 ```
 
 The build also checks the local drafts when they are present: an X post over

@@ -4,12 +4,12 @@ Every finished film master from Chan's film repos is stored on GitHub, in the re
 made it. Checked on 2026-10-20: each of the 130 files was compared by SHA-256 with the
 copy on GitHub before the local `film-archive/` folder was deleted to free disk space.
 Most masters are in a release tagged `masters-2026-10` (not marked latest); the rest
-were already tracked in the repo, attached to an earlier release, or uploaded by Chan
-as the README video. A private repo's release is private like the repo: it is not linked
+were already tracked in the repo or attached to an earlier release. A private repo's release is private like the repo: it is not linked
 from any surface (`docs/STATE.md`, "Film repos"). Smaller web versions are on YouTube
 and chanmeng.org/films; film ids are in `data/profile/46-films.yaml`.
 
 To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
+`npm run stage:distribution` reads this file to download the films a post needs.
 
 ## ChanMeng666/a-little-of-today-mv (public)
 
@@ -29,7 +29,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 |---|---|---|
 | `out/masters/Film-30-landscape.mp4` | 6 | release `masters-2026-10` › `Film-30-landscape.mp4` |
 | `out/masters/Film-30-portrait.mp4` | 8 | release `masters-2026-10` › `Film-30-portrait.mp4` |
-| `out/masters/Film-60-landscape.mp4` | 13 | README video (uploaded by Chan) |
+| `out/masters/Film-60-landscape.mp4` | 13 | release `masters-2026-10` › `Film-60-landscape.mp4` (also the README video) |
 | `out/masters/Film-60-portrait.mp4` | 16 | release `masters-2026-10` › `Film-60-portrait.mp4` |
 
 ## ChanMeng666/anti-marriage-universe-mv (public)
@@ -61,7 +61,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/masters/A-confident-arrival/archcanvas-studio-2026-09_30s_vertical_1080x1920.mp4` | 8 | release `masters-2026-10` › `A-confident-arrival__archcanvas-studio-2026-09_30s_vertical_1080x1920.mp4` |
 | `out/masters/A-confident-arrival/archcanvas-studio-2026-09_60s_landscape_1920x1080.mp4` | 16 | release `masters-2026-10` › `A-confident-arrival__archcanvas-studio-2026-09_60s_landscape_1920x1080.mp4` |
 | `out/masters/A-confident-arrival/archcanvas-studio-2026-09_60s_vertical_1080x1920.mp4` | 16 | release `masters-2026-10` › `A-confident-arrival__archcanvas-studio-2026-09_60s_vertical_1080x1920.mp4` |
-| `out/masters/B-daylight-forward/archcanvas-studio-2026-09_120s_landscape_1920x1080.mp4` | 28 | README video (uploaded by Chan) |
+| `out/masters/B-daylight-forward/archcanvas-studio-2026-09_120s_landscape_1920x1080.mp4` | 28 | release `masters-2026-10` › `B-daylight-forward__archcanvas-studio-2026-09_120s_landscape_1920x1080.mp4` (also the README video) |
 | `out/masters/B-daylight-forward/archcanvas-studio-2026-09_120s_vertical_1080x1920.mp4` | 29 | release `masters-2026-10` › `B-daylight-forward__archcanvas-studio-2026-09_120s_vertical_1080x1920.mp4` |
 | `out/masters/B-daylight-forward/archcanvas-studio-2026-09_15s_landscape_1920x1080.mp4` | 3 | release `masters-2026-10` › `B-daylight-forward__archcanvas-studio-2026-09_15s_landscape_1920x1080.mp4` |
 | `out/masters/B-daylight-forward/archcanvas-studio-2026-09_15s_vertical_1080x1920.mp4` | 3 | release `masters-2026-10` › `B-daylight-forward__archcanvas-studio-2026-09_15s_vertical_1080x1920.mp4` |
@@ -99,7 +99,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
-| `out/archlang-promo.mp4` | 46 | README video (uploaded by Chan) |
+| `out/archlang-promo.mp4` | 46 | release `masters-2026-10` › `archlang-promo.mp4` (also the README video) |
 
 ## ChanMeng666/chan-meng-promo-video (private)
 
@@ -146,7 +146,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/masters/echook_15s_vertical_1080x1920.mp4` | 10 | release `masters-2026-10` › `echook_15s_vertical_1080x1920.mp4` |
 | `out/masters/echook_30s_landscape_1920x1080.mp4` | 16 | release `masters-2026-10` › `echook_30s_landscape_1920x1080.mp4` |
 | `out/masters/echook_30s_vertical_1080x1920.mp4` | 16 | release `masters-2026-10` › `echook_30s_vertical_1080x1920.mp4` |
-| `out/masters/echook_60s_landscape_1920x1080.mp4` | 25 | README video (uploaded by Chan) |
+| `out/masters/echook_60s_landscape_1920x1080.mp4` | 25 | release `masters-2026-10` › `echook_60s_landscape_1920x1080.mp4` (also the README video) |
 | `out/masters/echook_60s_vertical_1080x1920.mp4` | 25 | release `masters-2026-10` › `echook_60s_vertical_1080x1920.mp4` |
 
 ## ChanMeng666/echook-promo-video (public)
@@ -258,5 +258,5 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/masters/tam-ai-ti_15s_vertical_1080x1920.mp4` | 9 | release `masters-2026-10` › `tam-ai-ti_15s_vertical_1080x1920.mp4` |
 | `out/masters/tam-ai-ti_30s_landscape_1920x1080.mp4` | 16 | release `masters-2026-10` › `tam-ai-ti_30s_landscape_1920x1080.mp4` |
 | `out/masters/tam-ai-ti_30s_vertical_1080x1920.mp4` | 17 | release `masters-2026-10` › `tam-ai-ti_30s_vertical_1080x1920.mp4` |
-| `out/masters/tam-ai-ti_60s_landscape_1920x1080.mp4` | 26 | README video (uploaded by Chan) |
+| `out/masters/tam-ai-ti_60s_landscape_1920x1080.mp4` | 26 | release `masters-2026-10` › `tam-ai-ti_60s_landscape_1920x1080.mp4` (also the README video) |
 | `out/masters/tam-ai-ti_60s_vertical_1080x1920.mp4` | 27 | release `masters-2026-10` › `tam-ai-ti_60s_vertical_1080x1920.mp4` |

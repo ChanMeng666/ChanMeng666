@@ -207,3 +207,6 @@ docs/film-masters.md, docs/STATE.md, .gitignore
 
 ## [2026-10-20] change | stage:distribution downloads the films from GitHub (docs/film-masters.md); the 5 README-only masters added to masters-2026-10 releases; local distribution/_staging removed
 scripts/stage-distribution.mjs, docs/film-masters.md, distribution/README.md
+
+## [2026-10-20] archive | polygon-heartbeat: lossless master (FLAC) uploaded to its masters-2026-10 release, stems not kept, local folder deleted
+docs/ecosystem/lineage.yaml, docs/STATE.md

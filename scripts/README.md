@@ -55,7 +55,7 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `mark-reviewed.mjs` | Deliberate "I reviewed this entry" bump: rewrites ONLY the lastUpdated line of the named entries, in place, in whichever data/profile/*.yaml shard owns them. | `npm run reviewed` | npm |
 | `refresh-github-metrics.mjs` | Refreshes machine-derivable GitHub metrics for projects in the data/profile/2*-projects-*.yaml shards. | `npm run refresh-metrics` | npm |
 | `render-collages.mjs` | Renders evidence/collages/<capability>.html → public/evidence/collages/<capability>.jpg for every showcaseCapabilities[] entry in data/profile/45-showcase.yaml. | `npm run build:collages` | npm |
-| `stage-distribution.mjs` | Copy the video files the schedule needs into distribution/_staging/ (local, gitignored), from the film repos beside this one. | `npm run stage:distribution` | npm |
+| `stage-distribution.mjs` | Copy the video files the schedule needs into distribution/_staging/ (local, gitignored). | `npm run stage:distribution` | npm |
 | `validate-brand.mjs` | Validates data/brand.yaml against schema/brand.schema.json. | `npm run validate` | npm |
 | `validate.mjs` | Validates the merged data/profile/*.yaml shards against schema/profile.schema.json, then checks that ids are unique within every top-level list that has them (ids are NOT unique across lists: one slug names one real… | `npm run validate` | npm |
 

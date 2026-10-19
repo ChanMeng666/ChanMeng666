@@ -1477,6 +1477,17 @@ A Claude Code skill that makes README images work in GitHub's light and dark the
 
 **Impact.** Stops the silent failure where a logo drawn in near-black is invisible on GitHub's dark canvas — picks the right of four fixes and verifies that a different file actually loads in each theme.
 
+### AI Product Manager Skill
+
+An agent skill that gives any AI agent the judgment of a senior AI product manager — turn "we want an agent" into a verified problem, choose rules, workflow, RAG or agent for the right reasons, run POCs that try to fail, build evals that produce verdicts and pass launch gates with a way back
+
+- Repository: https://github.com/ChanMeng666/ai-product-manager-skill
+- Started: October 2026
+- Status: active
+- Tech stack: Claude Code Skill (Agent Skills open standard), Claude Code plugin marketplace, Markdown references and templates (progressive disclosure), GitHub Actions
+
+**Impact.** Makes an agent stop cheerleading an AI project and judge it the way a seasoned AI PM does: a verdict first, red flags ranked by cost, a one-page artifact filled in, and one next action with an owner.
+
 ### Contributions to other open-source projects
 
 - modelcontextprotocol/servers #75, "Solution for MCP Servers Connection Issues with NVM/NPM (Windows)" (closed, November 2024): Step-by-step Windows + NVM/NPM workaround for the early Claude Desktop MCP connection failure: install MCP server packages globally, locate `node.exe` and global npm root via `where node` and `npm root -g`, then rewrite `claude_desktop_config.json` with absolute paths instead of `npx` commands. Posted as a comment on TristanLib's issue #75 ("How to configure windows filesystem?") two days after MCP's public launch on 2024-11-25. https://github.com/modelcontextprotocol/servers/issues/75#issuecomment-2502877979

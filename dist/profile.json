@@ -9110,6 +9110,36 @@
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "ai-product-manager-skill",
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-10-19",
+      "name": "AI Product Manager Skill",
+      "priority": 110,
+      "category": "ai-apps",
+      "tagline": "An agent skill that gives any AI agent the judgment of a senior AI product manager — turn \"we want an agent\" into a verified problem, choose rules, workflow, RAG or agent for the right reasons, run POCs that try to fail, build evals that produce verdicts and pass launch gates with a way back",
+      "repoUrl": "https://github.com/ChanMeng666/ai-product-manager-skill",
+      "techStack": [
+        "Claude Code Skill (Agent Skills open standard)",
+        "Claude Code plugin marketplace",
+        "Markdown references and templates (progressive disclosure)",
+        "GitHub Actions"
+      ],
+      "status": "active",
+      "startDate": "2026-10",
+      "narrative": {
+        "impactHeadline": "Makes an agent stop cheerleading an AI project and judge it the way a seasoned AI PM does: a verdict first, red flags ranked by cost, a one-page artifact filled in, and one next action with an owner.",
+        "problem": "Most enterprise AI projects do not die because the model is weak; they\ndie after a good demo. Nobody measured a baseline, nobody owned errors,\nthe scope grew back, a headline accuracy figure hid a weak slice, a\npilot quietly became production, or an incident had no runbook. That\njudgment is usually learned one failed project at a time.\n",
+        "technicalApproach": "A SKILL.md with sixteen operating principles, a stage router, field\ndiagnostics and a red-flag phrase table, backed by thirteen references\nloaded only when relevant (discovery, solution selection along the\nrules → workflow → RAG → agent certainty axis, vertical-slice scoping,\nguardrails, POCs, a four-layer eval matrix, lifecycle gates, production\nreadiness, risk and governance, case studies, a 73-entry pitfall\ncatalog and sourced industry evidence) and twelve one-page templates,\nfrom the project charter and AI PRD to the launch gate and the\ncontinue/shrink/stop memo. A benchmark ran three scenarios with and\nwithout the skill on the same model, scored by an independent grader\nagent against objective assertions (34/34 with, 26/34 without; repo\nevals/benchmark.md).\n",
+        "myRole": "Sole author. MIT. Installs as a Claude Code plugin or by copying the\nskill folder; works in any language.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -16752,8 +16782,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-10-18",
+    "lastModified": "2026-10-19",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-18T19:13:00.772Z"
+    "buildTimestamp": "2026-10-19T01:55:13.388Z"
   }
 }

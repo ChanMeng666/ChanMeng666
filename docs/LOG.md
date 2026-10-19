@@ -171,3 +171,6 @@ data/profile/46-films.yaml, youtube/channel.yaml, youtube/videos.yaml
 
 ## [2026-10-17] update | YouTube playlists: three new public playlists (Liu Zhongjing films, Product shorts, Community & events), so every public video is in exactly one
 youtube/channel.yaml
+
+## [2026-10-19] add | AI Product Manager Skill (`ai-product-manager-skill`), public repo created 2026-10-16: project entry (tier secondary, no README bucket) and lineage row
+data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml

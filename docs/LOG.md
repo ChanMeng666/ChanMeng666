@@ -201,3 +201,6 @@ docs/STATE.md
 
 ## [2026-10-19] decide | Film videos uploaded to the READMEs of twelve public film repos; the two Liu Zhongjing repos keep YouTube links only
 docs/STATE.md
+
+## [2026-10-20] archive | 92 film masters uploaded to `masters-2026-10` releases in their repos; all 130 checked by SHA-256 against GitHub, then the local film-archive/ deleted
+docs/film-masters.md, docs/STATE.md, .gitignore

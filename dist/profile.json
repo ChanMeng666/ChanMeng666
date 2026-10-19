@@ -9150,6 +9150,69 @@
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "polygon-heartbeat",
+      "show": {
+        "readme": false,
+        "site": false,
+        "cv": false,
+        "linkedin": false,
+        "llms": false
+      },
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-10-19",
+      "name": "Polygon Heartbeat (ポリゴン・ハートビート) — a technopop song produced in code",
+      "priority": 111,
+      "category": "creative",
+      "tagline": "An original Japanese technopop song in the style of Perfume and Yasutaka Nakata, composed, arranged, sung, mixed and mastered entirely in code with real-instrument samplers and a Japanese singing synthesizer.",
+      "repoUrl": "https://github.com/ChanMeng666/polygon-heartbeat",
+      "roles": [
+        "Producer",
+        "Creative Coder",
+        "Lyricist"
+      ],
+      "techStack": [
+        "Node.js",
+        "FluidSynth",
+        "sfizz",
+        "SoundFont 2 / SFZ",
+        "VOICEVOX",
+        "ffmpeg",
+        "DSP (supersaw, vocoder, sidechain)",
+        "MIDI",
+        "Claude Code"
+      ],
+      "keywords": [
+        "Music produced in code",
+        "Japanese technopop",
+        "Real-instrument sample playback",
+        "Singing synthesis with hard-tuned pitch",
+        "Channel vocoder",
+        "Lyric video"
+      ],
+      "startDate": "2026-10",
+      "metrics": [
+        {
+          "label": "Song",
+          "value": "1",
+          "note": "3:06, 128 BPM, A♭ major / F minor, 96 bars; master at -9 LUFS, -1.3 dBTP; a 720p lyric video in the repo README",
+          "source": "https://github.com/ChanMeng666/polygon-heartbeat",
+          "asOf": "2026-10-19"
+        }
+      ],
+      "publicSummary": "An original Japanese technopop song in the style of Perfume, produced\nwithout a DAW. The chords, melodies, lyrics and every instrument part\nare data in one file; real multi-sampled instruments (grand piano,\nRhodes, glockenspiel, claps, snare, hi-hats, cymbal swells) are played\nby FluidSynth and sfizz; three VOICEVOX singers trade lines and sing\nthe choruses in unison; ffmpeg mixes and masters the stems.\n",
+      "narrative": {
+        "impactHeadline": "A complete pop song, from chords and Japanese lyrics to a mastered file and a lyric video, written as code.",
+        "businessLogic": "A personal creative project, not a product. The composition is note\nevents in beats. Sampled parts render through FluidSynth with the\nGeneralUser GS soundfont and through sfizz with the Salamander Grand\nPiano, jRhodes3d and VCSL libraries (the VCSL kit and glockenspiel\nmaps are generated). Vocals come from the local VOICEVOX singing API;\nevery voiced frame's pitch is snapped to the written note for the\nauto-tune step, and a 24-band channel vocoder plays the robot chants\nover supersaw chords. Supersaw, pluck, bass, square lead, risers and\nthe sidechain pump are DSP code. ffmpeg gain-stages the stems by\nmeasured loudness, adds a convolution reverb and a dotted-8th delay,\nand limits the master with oversampling. Sung lyrics were checked by\ntranscribing the mix with Whisper.\n",
+        "myRole": "The concept, the lyrics and the build are mine, made with Claude\nCode. Code under MIT. Voices are VOICEVOX characters under their\nterms of use; sample libraries keep their own licences (GeneralUser\nGS, Salamander CC BY 3.0, jRhodes3d CC BY 4.0, VCSL CC0). A stylistic\nhomage only: no Perfume recordings or samples are used.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -16875,6 +16938,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-19",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-19T08:48:05.935Z"
+    "buildTimestamp": "2026-10-19T09:37:30.382Z"
   }
 }

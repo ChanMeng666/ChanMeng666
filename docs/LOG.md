@@ -192,3 +192,6 @@ data/profile/46-films.yaml, schema/profile.schema.json, scripts/check-ecosystem.
 
 ## [2026-10-19] add | Nine earlier and alternative films public on YouTube (ArchCanvas 92-second film, six feature shorts, «Zoom Out», the first echook film); new playlist "ArchCanvas feature shorts"
 youtube/channel.yaml, youtube/videos.yaml, data/profile/46-films.yaml, dist/films.json
+
+## [2026-10-19] add | Polygon Heartbeat (`polygon-heartbeat`), a technopop song produced in code: recorded only, on no visitor-facing surface and no video platform
+data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md

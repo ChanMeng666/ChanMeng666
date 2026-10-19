@@ -195,3 +195,6 @@ youtube/channel.yaml, youtube/videos.yaml, data/profile/46-films.yaml, dist/film
 
 ## [2026-10-19] add | Polygon Heartbeat (`polygon-heartbeat`), a technopop song produced in code: recorded only, on no visitor-facing surface and no video platform
 data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md
+
+## [2026-10-19] decide | Videos go only into public film repos' READMEs; the upload placeholders removed from the six private film repos
+docs/STATE.md

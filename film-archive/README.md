@@ -34,3 +34,23 @@ clone the repo again. Which repos are public: `docs/STATE.md`, "Film repos".
 | she-sharp-promo-video-event-lesmills-03-september-2026 | she-sharp-lesmills-promo | 4 (44 MB) |
 | solo-coffee-mv | a-coffee-for-one | 1 (648 MB) |
 | tamaiti-promo-studio | tam-ai-ti-film | 6 (99 MB) |
+
+## Upload versions (`<repo>/upload/<film-id>.mp4`)
+
+GitHub takes a video of at most 100 MB in a README, so every finished film of a public
+repo that is larger has an upload version next to it, named by the film id in the
+README's `<!-- FILM: <id> -->` placeholder (2026-10-19). Two-pass H.264 High and
+160 kb/s AAC, `+faststart`, about 95 MB each (92 MiB target):
+
+- 1080p: the 25 Liu Zhongjing films, Warrior Ah Hua, Save Me a Little of Today.
+- 720p: A Drizzle in October, February on an Extended Line, Drifter Ah Fa,
+  The Best Strangers, A Coffee for One (longer films; 1080p left too little bitrate).
+
+32 files, 3.06 GB. Films under 100 MB are uploaded as they are, from the paths above.
+To re-make one when a master changes, with `V` = 92 MiB × 8 ÷ seconds − 200 kb/s:
+
+    ffmpeg -i <master> -vf scale=1920:-2 -c:v libx264 -preset slow -b:v <V>k -pass 1 -an -f null -
+    ffmpeg -i <master> -vf scale=1920:-2 -c:v libx264 -preset slow -b:v <V>k -maxrate <2V>k \
+      -bufsize <4V>k -pass 2 -pix_fmt yuv420p -c:a aac -b:a 160k -movflags +faststart <id>.mp4
+
+(`scale=1280:-2:flags=lanczos` when `V` is under 3000.)

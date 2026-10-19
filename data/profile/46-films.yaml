@@ -17,8 +17,8 @@
 # RULES
 #   - `repo` must be a promo-film, demo or music-video repo in
 #     docs/ecosystem/lineage.yaml; `projectId` a projects[].id; `collection` a
-#     filmCollections[].id. Enforced by scripts/check-ecosystem.mjs. Most film
-#     repos are private: name them, never link them.
+#     filmCollections[].id. Enforced by scripts/check-ecosystem.mjs. A film repo
+#     may be linked only when it is public (docs/STATE.md "Film repos", 2026-10-19).
 #   - Music videos (Chan, 2026-10-09; the wall added 2026-10-10): shown on YouTube,
 #     on chanmeng.org/films and as poster tiles on the README film wall
 #     (public/readme/films.svg), and nowhere else: not a project card, a CV,

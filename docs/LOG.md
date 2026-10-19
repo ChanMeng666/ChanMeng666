@@ -180,3 +180,9 @@ docs/STATE.md, data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.ya
 
 ## [2026-10-19] fix | Paige Afanu's LinkedIn URL is now /in/paige-afanu-7b9367110/ (the old peju-afanu vanity redirects there)
 data/profile/50-references.yaml, data/profile/60-network.yaml, data/profile/70-linkedin.yaml
+
+## [2026-10-19] decide | Film repos open-sourced: 11 made public (MIT code, CC BY 4.0 media, one-screen READMEs); ten kept private; MV and Liu Zhongjing repos that are public may be linked
+docs/STATE.md, docs/ecosystem/lineage.yaml, data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml
+
+## [2026-10-19] archive | Every finished film (130 files) moved to the gitignored film-archive/; the 23 local film folders deleted
+film-archive/README.md, .gitignore, docs/ecosystem/lineage.yaml

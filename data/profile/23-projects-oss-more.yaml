@@ -3320,6 +3320,8 @@ projects:
   # Every fact below is from the repos' own README and CREDITS (2026-10-07).
   # startDate is the month the repos and their v1.0.0 releases were created;
   # when the work began is not recorded.
+  # 2026-10-19 (Chan): the repo is now public and may be linked, so repoUrl is set;
+  # any line above calling it private is superseded. The show: block is unchanged.
   - id: october-rain-february-line-mv
     show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
@@ -3329,6 +3331,7 @@ projects:
     name: "October Rain · February Line — two code-drawn music videos"
     category: creative
     tagline: "Two music videos for Chan's own songs, drawn entirely by code: a hand-inked cel film and a one-line animation, rendered frame by frame with headless Chrome and ffmpeg."
+    repoUrl: https://github.com/ChanMeng666/october-rain-february-line-mv
     roles: ["Director", "Creative Coder", "Songwriter"]
     techStack: ["JavaScript (Canvas 2D)", "Headless Chrome (puppeteer-core)", "ffmpeg", "Python", "faster-whisper", "simplex-noise", "Claude Code"]
     keywords:
@@ -3378,6 +3381,8 @@ projects:
         textures and fonts are openly licensed and listed in the repo's
         CREDITS file.
 
+  # 2026-10-19 (Chan): the repo is now public and may be linked, so repoUrl is set;
+  # any line above calling it private is superseded. The show: block is unchanged.
   - id: anti-marriage-universe-mv
     show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
@@ -3387,6 +3392,7 @@ projects:
     name: "Anti-Marriage Universe (反婚宇宙) — three code-drawn music videos"
     category: creative
     tagline: "Three music videos for Chan's album 《反婚宇宙》: one blind date seen three ways, in red paper-cut, 80s cel anime and risograph print, every frame drawn in code."
+    repoUrl: https://github.com/ChanMeng666/anti-marriage-universe-mv
     roles: ["Director", "Creative Coder", "Songwriter"]
     techStack: ["JavaScript (Canvas 2D)", "Lemo-Opuscar style library", "Headless Chromium", "ffmpeg", "Python", "librosa", "faster-whisper", "Claude Code"]
     keywords:
@@ -3516,6 +3522,8 @@ projects:
   # video generation models" is a claim about the picture). Every fact below
   # is from that README, films/solo-coffee/CREDITS and timing.json
   # (2026-10-10); that the song was made with Suno is from suno/songs.yaml.
+  # 2026-10-19 (Chan): the repo is now public and may be linked, so repoUrl is set;
+  # any line above calling it private is superseded. The show: block is unchanged.
   - id: solo-coffee-mv
     show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
@@ -3525,6 +3533,7 @@ projects:
     name: "A Coffee for One (独身主义的咖啡) — a code-drawn music video"
     category: creative
     tagline: "A music video for Chan's song 《独身主义的咖啡》, drawn entirely by code: Python paints the watercolour layers, a web page animates them with rain on glass, and headless Chrome and ffmpeg render it frame by frame."
+    repoUrl: https://github.com/ChanMeng666/solo-coffee-mv
     roles: ["Director", "Creative Coder", "Songwriter"]
     techStack: ["Python", "NumPy", "OpenCV", "Pillow", "JavaScript (Canvas 2D)", "WebGL2", "Headless Chrome (puppeteer-core)", "ffmpeg", "faster-whisper", "librosa", "Claude Code"]
     keywords:
@@ -3587,6 +3596,8 @@ projects:
   # picture). Every fact below is from that README, films/today/CREDITS and
   # timing.json (2026-10-17); that the song was made with Suno is from the
   # recording's own Suno tag.
+  # 2026-10-19 (Chan): the repo is now public and may be linked, so repoUrl is set;
+  # any line above calling it private is superseded. The show: block is unchanged.
   - id: a-little-of-today-mv
     show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
@@ -3596,6 +3607,7 @@ projects:
     name: "Save Me a Little of Today (把今天留一小块给我) — a code-drawn music video"
     category: creative
     tagline: "A music video for Chan's song 《把今天留一小块给我》, drawn entirely by code: Python paints the watercolour layers, a web page animates them with handwriting, rain on glass and sticky-note transitions, and headless Chrome and ffmpeg render it frame by frame."
+    repoUrl: https://github.com/ChanMeng666/a-little-of-today-mv
     roles: ["Director", "Creative Coder", "Songwriter"]
     techStack: ["Python", "NumPy", "OpenCV", "Pillow", "JavaScript (Canvas 2D)", "WebGL2", "Headless Chrome (puppeteer-core)", "ffmpeg", "faster-whisper", "librosa", "Claude Code"]
     keywords:
@@ -3653,6 +3665,8 @@ projects:
   # README, the site's other pages, the CV, LinkedIn copy and llms. Every fact
   # below is from the repo's README, docs/STORYBOARD*.md and the rendered
   # files (2026-10-17).
+  # 2026-10-19 (Chan): the repo is now public and may be linked, so repoUrl is set;
+  # any line above calling it private is superseded. The show: block is unchanged.
   - id: lzj-watercolor-films
     show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
@@ -3662,6 +3676,7 @@ projects:
     name: "Liu Zhongjing in Watercolour — fourteen code-drawn explainer films"
     category: creative
     tagline: "Fourteen short explainer films on the thought of Liu Zhongjing, drawn entirely by code: Python paints procedural watercolour layers, WebGL animates them with ink-bleed captions, and headless Chrome and ffmpeg render them frame by frame with scores played on recorded instruments."
+    repoUrl: https://github.com/ChanMeng666/lzj-watercolor-films
     roles: ["Director", "Creative Coder", "Composer"]
     techStack: ["Python", "NumPy", "OpenCV", "SciPy", "JavaScript (Canvas 2D)", "WebGL2", "Headless Chrome (playwright-core)", "ffmpeg", "OpenCC", "Claude Code"]
     keywords:
@@ -3716,6 +3731,8 @@ projects:
   # 2026-10-17); the show: block keeps it off the README, the site's other
   # pages, the CV, LinkedIn copy and llms. Every fact below is from the repo's
   # README, docs/STORYBOARD.md and the rendered files (2026-10-17).
+  # 2026-10-19 (Chan): the repo is now public and may be linked, so repoUrl is set;
+  # any line above calling it private is superseded. The show: block is unchanged.
   - id: lzj-history-maps
     show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
@@ -3725,6 +3742,7 @@ projects:
     name: "Liu Zhongjing's History, in Maps — eleven code-drawn map documentaries"
     category: creative
     tagline: "Eleven animated map documentaries that retell the history of the Chinese mainland, the People's Republic and the world as Liu Zhongjing reads it, drawn entirely by code: a WebGL and Canvas globe built from Natural Earth data, rendered frame by frame in headless Chrome and scored on recorded instruments."
+    repoUrl: https://github.com/ChanMeng666/lzj-history-maps
     roles: ["Director", "Creative Coder", "Composer"]
     techStack: ["JavaScript (Canvas 2D)", "WebGL", "d3-geo", "TopoJSON", "Natural Earth", "mapshaper", "Python", "NumPy", "SciPy", "Headless Chrome (playwright)", "ffmpeg", "Claude Code"]
     keywords:

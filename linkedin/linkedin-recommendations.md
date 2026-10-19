@@ -224,7 +224,7 @@ Chan is not only a mentor to me, but also my role model. Her strong motivation a
 I highly recommend Chan to everyone, you will gain a lot from talking to her.
 ```
 
-## 16. [Paige Afanu](https://www.linkedin.com/in/peju-afanu-7b9367110/)
+## 16. [Paige Afanu](https://www.linkedin.com/in/paige-afanu-7b9367110/)
 
 _ICP-ACC POPM SSM CMC FIMC CMP | GRC Analyst | Cybersecurity Analyst | Product Owner | Business Analyst | Agile Coach | Development Expert | Expert Resource for Government | Business Management_
 

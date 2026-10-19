@@ -177,3 +177,6 @@ data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
 
 ## [2026-10-19] decide | AI Product Manager Skill (`ai-product-manager-skill`) off the README and chanmeng.org, no animated card; lineage positioning, stage (maintained) and showcase (listed) set by Claude on her delegation (q52)
 docs/STATE.md, data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-10-19] fix | Paige Afanu's LinkedIn URL is now /in/paige-afanu-7b9367110/ (the old peju-afanu vanity redirects there)
+data/profile/50-references.yaml, data/profile/60-network.yaml, data/profile/70-linkedin.yaml

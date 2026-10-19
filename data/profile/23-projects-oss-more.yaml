@@ -3771,10 +3771,11 @@ projects:
         the Lemo-Opuscar library (MIT); the fonts are under the SIL Open Font
         License. The ideas and the quotations are Liu Zhongjing's.
 
-  # Added 2026-10-19 (new-repo sweep): public repo created 2026-10-16 with no catalog
-  # entry. Tier secondary, in no README bucket, so it lives in dist/profile.json and the
-  # llms-full.txt long tail until Chan places it.
+  # Added 2026-10-19 (new-repo sweep): public repo created 2026-10-16. Tier secondary,
+  # in no README bucket, so it lives in dist/profile.json and the llms-full.txt long tail.
+  # Not on the README or chanmeng.org and no animated card (Chan, 2026-10-19). See show:.
   - id: ai-product-manager-skill
+    show: { readme: false, site: false }
     provenance: personal
     tier: secondary
     recency: active

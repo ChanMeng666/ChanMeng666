@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-10-17.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-10-19.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -33,6 +33,7 @@ LinkedIn copy.
 | **LYZEN company site** (`lyzen-website`, repo `femtech-weekend-redthread`) | The official site of the LYZEN brand, live at lyzenglobal.com. It is not a redesign or a new generation of the FemTech Weekend site, which stays on its own domain: never describe it that way (Chan, 2026-10-12). LYZEN is the company above FemTech Weekend, its community arm; the chart is `organizations[]` id `lyzen`. Not shown for now (Chan, 2026-10-12): recorded in the database, but in no README bucket, no CV, no LinkedIn copy and not on chanmeng.org, and her CV and LinkedIn titles do not name LYZEN. The LYZEN org has no logo on purpose (a logo file would put it in the README organisation band). Do not raise any of this again until she does. Told in docs/stories/ since 2026-10-15 (Chan); still on no other visitor-facing surface. |
 | **Seismophone** (`sunostats`) | Pending archive. The site stays online at her request, but it is off every visitor-facing surface and `cv-llms.txt` since 2026-10-07. The Suno probe and the README Suno cards are independent and keep running |
 | **Chromaflow** (`gradient-svg-generator`) | Off every visitor-facing surface since 2026-10-07; keeps its narrative in the llms files (`llmsOnlyOpenSourceIds`). No longer maintained (Chan, 2026-10-12); the repo stays public. No surface may say it powers this profile. Its banners may be taken out of her other repos' READMEs, and are taken out wherever a README is rewritten |
+| **AI Product Manager Skill** (`ai-product-manager-skill`) | Not on the README or chanmeng.org, and no animated card (Chan, 2026-10-19). Recorded in the database and `llms-full.txt`; tier secondary, in no `90-meta.yaml` bucket |
 | **Te Pā Tiaki** (`css-tower-defense`) | Archived 2026-10-07, deployment retired. Its Neon database was left alone on purpose |
 | **Music videos** (five `*-mv` projects, fifteen films) | Shown on YouTube, on chanmeng.org/films, and as poster tiles on the README's film wall (the wall added 2026-10-10, her call); from 2026-10-17 also on bilibili, starting with Save Me a Little of Today (her upload); nowhere else: no project card, no CV, no LinkedIn copy, no other page of the site. The repos are private: no repo links. Copy says how a film is drawn, never what the album is about |
 | **Liu Zhongjing explainer films** (`lzj-watercolor-films`, fourteen watercolour films; `lzj-history-maps`, eleven map documentaries) | Shown on chanmeng.org/films, one group per repo in the Explainer films section (Chan, 2026-10-17), and on YouTube (all 25 uploaded by her the same day). Not on the README film wall, a project card, a CV, LinkedIn copy or another page of the site until she decides otherwise. Both repos are private: no repo links |

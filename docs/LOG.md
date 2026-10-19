@@ -174,3 +174,6 @@ youtube/channel.yaml
 
 ## [2026-10-19] add | AI Product Manager Skill (`ai-product-manager-skill`), public repo created 2026-10-16: project entry (tier secondary, no README bucket) and lineage row
 data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-10-19] decide | AI Product Manager Skill (`ai-product-manager-skill`) off the README and chanmeng.org, no animated card; lineage positioning, stage (maintained) and showcase (listed) set by Claude on her delegation (q52)
+docs/STATE.md, data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml

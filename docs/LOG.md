@@ -228,3 +228,6 @@ data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
 
 ## [2026-10-20] change | `linkedin-post-skill` copy brought to 2.3.0: LinkedIn and X, four modes, a visual for every post, no browser step
 data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-10-20] change | `a11y-loop-film` (2:59) served from R2 (`/media/films/a11y-loop-179s.mp4` and `.jpg`) instead of the site's public/, as a film on /films only; its unused README film-wall thumbnail removed
+data/profile/46-films.yaml, dist/films.json, dist/profile.json, scripts/readme-art/assets/films/a11y-loop-film.jpg

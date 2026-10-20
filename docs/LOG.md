@@ -234,3 +234,6 @@ data/profile/46-films.yaml, dist/films.json, dist/profile.json, scripts/readme-a
 
 ## [2026-10-20] change | a11y-loop launch film posted on LinkedIn by Chan, early (planned 2026-11-12): native 64 s upload, post 7518202494695493632; schedule row marked posted until linkedin-sync adds it to the register; X stays on 2026-11-12
 distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md
+
+## [2026-10-20] posted | chan-meng-showreel on LinkedIn (7518257065660919809) and X (2112491529579425996), by Chan by hand; schedule rows marked posted until the registers are synced
+distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md

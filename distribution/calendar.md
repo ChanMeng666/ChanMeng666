@@ -15,10 +15,13 @@ A post made after those dates is not known here until its register is synced.
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-10-20 | Tuesday | Chan Meng, showreel | LinkedIn (personal) | 112.5 s, 16:9 | `_staging/01-chan-meng-showreel/showreel_112s_16x9.mp4` | `drafts/chan-meng-showreel.yaml#linkedin` | draft |
-| 2026-10-20 | Tuesday | Chan Meng, showreel | X | 55 s, 16:9 | `_staging/01-chan-meng-showreel/showreel-short_55s_16x9.mp4` | `drafts/chan-meng-showreel.yaml#x` | draft |
+| 2026-10-20 | Tuesday | Chan Meng, showreel | LinkedIn (personal) | 112.5 s, 16:9 | `_staging/01-chan-meng-showreel/showreel_112s_16x9.mp4` | `drafts/chan-meng-showreel.yaml#linkedin` | posted |
+| 2026-10-20 | Tuesday | Chan Meng, showreel | X | 55 s, 16:9 | `_staging/01-chan-meng-showreel/showreel-short_55s_16x9.mp4` | `drafts/chan-meng-showreel.yaml#x` | posted |
 | 2026-10-22 | Thursday | Eatropolis website film | LinkedIn (personal) | 60 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_60s_16x9.mp4` | `drafts/eatropolis-film.yaml#linkedin` | draft |
 | 2026-10-22 | Thursday | Eatropolis website film | X | 30 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_30s_16x9.mp4` | `drafts/eatropolis-film.yaml#x` | draft |
+
+- Chan Meng, showreel: Posted by Chan by hand on 2026-10-20, the same day as the a11y-loop launch film (her call). Moves to posted once linkedin-sync has the post in the register
+- Chan Meng, showreel: Posted by Chan by hand on 2026-10-20 with her own text. Moves to posted once x-sync has the post in the register
 
 ### Week of 2026-10-26
 

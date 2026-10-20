@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 114 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 230 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 245 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data

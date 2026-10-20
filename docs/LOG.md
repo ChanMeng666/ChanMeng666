@@ -240,3 +240,6 @@ distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md
 
 ## [2026-10-20] ingest | LinkedIn (profile and ArchCanvas page) and X registers synced; the a11y-loop launch film and showreel posts moved from schedule to posted (the X showreel post carries the 112.5 s cut, not the scheduled 55 s); five profile posts, one page post and three X threads tagged
 linkedin/, x/, distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md
+
+## [2026-10-21] change | LinkedIn followers raised from 6,452 to 6,502 (live profile, register sync 2026-10-20) under the historical-maximum rule; CVs rebuilt and chanmeng.org synced
+data/profile/00-basics.yaml, cv/sections/header.typ, templates/brand-system.html.hbs

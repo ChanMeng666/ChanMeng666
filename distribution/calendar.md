@@ -44,10 +44,10 @@ A post made after those dates is not known here until its register is synced.
 |---|---|---|---|---|---|---|---|
 | 2026-11-10 | Tuesday | AI programming school product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_60s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#linkedin` | draft |
 | 2026-11-10 | Tuesday | AI programming school product film | X | 30 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_30s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#x` | draft |
-| 2026-11-12 | Thursday | a11y-loop launch film | LinkedIn (personal) | 64 s, 16:9 | `_staging/10-a11y-loop-launch-film/a11y-loop-launch_64s_16x9.mp4` | `drafts/a11y-loop-launch-film.yaml#linkedin` | draft |
+| 2026-11-12 | Thursday | a11y-loop launch film | LinkedIn (personal) | 64 s, 16:9 | `_staging/10-a11y-loop-launch-film/a11y-loop-launch_64s_16x9.mp4` | `drafts/a11y-loop-launch-film.yaml#linkedin` | posted |
 | 2026-11-12 | Thursday | a11y-loop launch film | X | 64 s, 16:9, as a YouTube link | none (link post) | `drafts/a11y-loop-launch-film.yaml#x` | draft |
 
-- a11y-loop launch film: Chan chose to post the launch film on LinkedIn (2026-10-20); LinkedIn carried the earlier 2:59 a11y-loop film on 2026-08-11
+- a11y-loop launch film: Posted early, on 2026-10-20, by Chan by hand: native 64 s upload, links in the first comment. Moves to posted once linkedin-sync has the post in the register
 - a11y-loop launch film: The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (the LinkedIn file is staged); the draft links YouTube
 
 ### Week of 2026-11-16

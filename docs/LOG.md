@@ -231,3 +231,6 @@ data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
 
 ## [2026-10-20] change | `a11y-loop-film` (2:59) served from R2 (`/media/films/a11y-loop-179s.mp4` and `.jpg`) instead of the site's public/, as a film on /films only; its unused README film-wall thumbnail removed
 data/profile/46-films.yaml, dist/films.json, dist/profile.json, scripts/readme-art/assets/films/a11y-loop-film.jpg
+
+## [2026-10-20] change | a11y-loop launch film posted on LinkedIn by Chan, early (planned 2026-11-12): native 64 s upload, post 7518202494695493632; schedule row marked posted until linkedin-sync adds it to the register; X stays on 2026-11-12
+distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md

@@ -1337,7 +1337,7 @@ Personal-brand monkey logo reconstructed from hand-drawn art into smooth cubic B
 - Started: June 2026
 - Status: production
 - Tech stack: Python 3, Node.js, Sharp, SVG
-- Related projects: logo-as-code Skill
+- Related projects: logo-as-code Skill, Chan Monkey Illustrations
 
 **Impact.** A hand-drawn monkey + 'CHAN' wordmark rebuilt as mathematically fitted cubic Bézier contours with exact circular eyes — 8 ready-to-use SVG variants (four color schemes × full/monkey-only) regenerated from one archived source by a zero-dependency Python generator.
 
@@ -1387,14 +1387,15 @@ A Claude Code plugin that generates cross-platform app promo images (App Store, 
 
 ### linkedin-post Skill
 
-A Claude Code skill that writes on-brand English LinkedIn posts (idea + event-recap), generates Caldera-branded visuals (Mermaid, HTML-to-PNG via Playwright, OpenAI fallback), and drafts them into the composer for review — never auto-posts
+A Claude Code skill that turns an idea into on-brand LinkedIn and X posts (story, idea, take, recap) and gives every post a visual — a Mermaid diagram or HTML layout rendered to PNG when the content has a shape, otherwise a hand-drawn brand-monkey illustration — handed back as one markdown file; it never opens LinkedIn or X
 
 - Repository: https://github.com/ChanMeng666/linkedin-post-skill
 - Started: June 2026
 - Status: active
-- Tech stack: Claude Code Skill, Node.js, Playwright, Mermaid CLI, OpenAI gpt-image-1, claude-in-chrome, HTML/CSS
+- Tech stack: Claude Code Skill, Node.js, Playwright, Mermaid CLI, HTML/CSS, ffmpeg, OpenAI gpt-image-2 (via chan-monkey-illustrations)
+- Related projects: Chan Monkey Illustrations
 
-**Impact.** A Claude Code skill for Chan's personal-brand LinkedIn presence — two modes (idea posts and verified-mention event recaps), one on-brand visual per post via a Mermaid -> HTML-card -> OpenAI-image priority chain, staged into the composer for review, never auto-posted.
+**Impact.** A Claude Code skill for Chan's LinkedIn and X posts — four modes (story, idea, take, verified-mention recap) in a studied voice, each platform written separately, one on-brand visual per post, and one handoff file she publishes herself.
 
 ### logo-as-code Skill
 
@@ -1476,6 +1477,18 @@ A Claude Code skill that makes README images work in GitHub's light and dark the
 - Tech stack: Claude Code Skill (Agent Skills open standard), Node.js, Playwright, GitHub Markdown API
 
 **Impact.** Stops the silent failure where a logo drawn in near-black is invisible on GitHub's dark canvas — picks the right of four fixes and verifies that a different file actually loads in each theme.
+
+### Chan Monkey Illustrations
+
+An agent skill that turns articles and LinkedIn / X posts into hand-drawn illustrations starring Chan's brand monkey — a fresh visual metaphor for each idea, with the logo sent to the image model as a reference so the character stays on-model
+
+- Repository: https://github.com/ChanMeng666/chan-monkey-illustrations
+- Started: October 2026
+- Status: active
+- Tech stack: Claude Code Skill, Codex Skill, Python 3, OpenAI gpt-image-2 (Images edit), Pillow, NumPy
+- Related projects: Chan Meng, linkedin-post Skill
+
+**Impact.** Gives every article and post a picture of its one idea, drawn as a physical metaphor that Chan's brand monkey acts out, with the monkey's head reproduced from the real logo instead of reinterpreted.
 
 ### Contributions to other open-source projects
 

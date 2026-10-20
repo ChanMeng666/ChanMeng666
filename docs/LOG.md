@@ -222,3 +222,9 @@ docs/STATE.md
 
 ## [2026-10-20] plan | a11y-loop launch film goes on LinkedIn too (Chan): native 64 s upload on 2026-11-12, same day as X; draft local, not yet approved
 distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md
+
+## [2026-10-20] add | `chan-monkey-illustrations`: agent skill for article and post illustrations starring the brand monkey; in the personal-brand family, linked to the logo and to linkedin-post-skill; no display bucket yet (Chan's call)
+data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-10-20] change | `linkedin-post-skill` copy brought to 2.3.0: LinkedIn and X, four modes, a visual for every post, no browser step
+data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml

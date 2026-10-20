@@ -219,3 +219,6 @@ data/profile/45-showcase.yaml, data/profile/46-films.yaml, data/profile/23-proje
 
 ## [2026-10-20] decide | `awesome-a11y` and `awesome-accessibility` (forks made only to submit a11y-loop for listing) are not registered in lineage.yaml; `check:ecosystem --live` reports them, as expected
 docs/STATE.md
+
+## [2026-10-20] plan | a11y-loop launch film goes on LinkedIn too (Chan): native 64 s upload on 2026-11-12, same day as X; draft local, not yet approved
+distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md

@@ -11,8 +11,8 @@ summary:
   complete: 55
   cells:
     published: 145
-    planned: 19
-    gap: 3
+    planned: 20
+    gap: 2
     skipped: 0
     not-planned: 229
   byPlatform:
@@ -30,8 +30,8 @@ summary:
       gap: 0
     linkedin:
       published: 5
-      planned: 9
-      gap: 2
+      planned: 10
+      gap: 1
     x:
       published: 3
       planned: 10
@@ -47,8 +47,6 @@ gaps:
   - film: archlang-film
     platform: x
     scheduledIn: archcanvas-growth
-  - film: a11y-loop-launch-film
-    platform: linkedin
 films:
   - film: archcanvas-studio-film
     title: ArchCanvas studio film
@@ -231,15 +229,17 @@ films:
         state: published
         url: https://chanmeng.org/films
       linkedin:
-        state: gap
+        state: planned
+        date: '2026-11-12'
+        status: draft
+        cut: 64 s, 16:9
+        note: Chan chose to post the launch film on LinkedIn (2026-10-20); LinkedIn carried the earlier 2:59 a11y-loop film on 2026-08-11
       x:
         state: planned
         date: '2026-11-12'
         status: draft
         cut: 64 s, 16:9, as a YouTube link
-        note: >-
-          The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (master: a11y-loop-promo-film release v1.0.0); the draft links YouTube. LinkedIn carried the
-          earlier a11y-loop film (2026-08-11)
+        note: The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (the LinkedIn file is staged); the draft links YouTube
       linkedin-page:
         state: not-planned
     complete: false

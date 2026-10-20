@@ -17,6 +17,12 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 |---|---|---|
 | `films/today/out/video.mp4` | 500 | release `masters-2026-10` › `save-me-a-little-of-today-master-1080p.mp4` |
 
+## ChanMeng666/a11y-loop-promo-film (public)
+
+| Rendered to | MB | On GitHub |
+|---|---|---|
+| `out/2026-10-promo-film-v6.mp4` | 21 | release `v1.0.0` › `a11y-loop-launch-film-2026-10.mp4` (also the README video; SHA-256 checked 2026-10-20) |
+
 ## ChanMeng666/a11y-loop-promo-video (public)
 
 | Rendered to | MB | On GitHub |

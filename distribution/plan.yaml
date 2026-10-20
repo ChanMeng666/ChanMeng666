@@ -91,6 +91,9 @@ overrides:
   - film: a11y-loop-film
     remove: [youtube-short]
     note: "One narrated cut, 16:9: no Short"
+  - film: a11y-loop-launch-film
+    add: [youtube]
+    note: "Alternative a11y-loop film (2026-10-20): on YouTube and in the a11y-loop README; not on chanmeng.org/films until the site hosts it. Social posts wait for Chan's call on which a11y-loop film is on show"
 
 # Social posts that already carry a film. `post` is the id in the platform's
 # register; `via` says how the film appears in the post.

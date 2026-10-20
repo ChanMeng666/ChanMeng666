@@ -8260,6 +8260,10 @@
           "url": "https://github.com/ChanMeng666/a11y-loop-promo-video"
         },
         {
+          "label": "Launch film repo (huashu-motion)",
+          "url": "https://github.com/ChanMeng666/a11y-loop-promo-film"
+        },
+        {
           "label": "Benchmark results",
           "url": "https://github.com/ChanMeng666/a11y-loop/blob/main/evals/benchmark-results.md"
         }
@@ -13497,6 +13501,27 @@
       "onFilmsPage": true
     },
     {
+      "id": "a11y-loop-launch-film",
+      "kind": "product-film",
+      "title": "a11y-loop launch film",
+      "for": "a11y-loop",
+      "projectId": "a11y-loop",
+      "repo": "ChanMeng666/a11y-loop-promo-film",
+      "repoPublic": true,
+      "date": "2026-10",
+      "seconds": 64,
+      "cuts": [
+        "64 s",
+        "16:9",
+        "no narration, on-screen copy"
+      ],
+      "madeWith": "huashu-motion (HTML + GSAP), sampled-instrument score",
+      "summary": "One full loop of the tool, plan, write, audit, fix and report, walked by a simulated keyboard, cursor and agent window. Written as code, a huashu-motion composition rendered frame by frame in Chrome, with a score composed in ABC notation and played by sampled instruments. Every command-line string on screen comes from real runs of a11y-loop 0.4.1 and every browser shot is a real screenshot of its demo page.",
+      "youtubeId": "Qg5QCE_V0Pg",
+      "onFilmsPage": false,
+      "notShownReason": "not yet hosted by the site; which a11y-loop film is on show is open for Chan"
+    },
+    {
       "id": "archlang-demo",
       "show": {
         "site": false
@@ -16936,8 +16961,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-10-19",
+    "lastModified": "2026-10-20",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-19T21:19:41.459Z"
+    "buildTimestamp": "2026-10-20T04:46:46.284Z"
   }
 }

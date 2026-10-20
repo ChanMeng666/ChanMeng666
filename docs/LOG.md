@@ -210,3 +210,6 @@ scripts/stage-distribution.mjs, docs/film-masters.md, distribution/README.md
 
 ## [2026-10-20] archive | polygon-heartbeat: lossless master (FLAC) uploaded to its masters-2026-10 release, stems not kept, local folder deleted
 docs/ecosystem/lineage.yaml, docs/STATE.md
+
+## [2026-10-20] add | a11y-loop launch film (`a11y-loop-launch-film`, repo a11y-loop-promo-film, YouTube Qg5QCE_V0Pg) recorded beside the 2:59 film, which stays on show; master in release v1.0.0; which film a11y-loop shows is open for Chan
+data/profile/46-films.yaml, data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/film-masters.md, docs/STATE.md, youtube/channel.yaml, distribution/plan.yaml

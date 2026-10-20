@@ -4,7 +4,7 @@
 # Endpoint forms in relations: owner/name (a repo in this catalog), external:owner/name or external:<label>,
 # url:https://..., entity:<id>, asset:<id> (see nonGitAssets). A relation "from" is always a repo.
 schemaVersion: 1
-lastVerified: "2026-10-12"
+lastVerified: "2026-10-20"
 localRoot: "D:/github_repository"
 scope:
   personalAccount: ChanMeng666
@@ -141,10 +141,11 @@ families:
   - id: a11y-loop
     entity: a11y-loop
     name: a11y-loop
-    summary: Accessibility tool for AI coding agents plus its Remotion promo film. Also an npm devDependency of sunostats.
+    summary: Accessibility tool for AI coding agents plus two promo films (Remotion, 2026-07; huashu-motion launch film, 2026-10). Also an npm devDependency of sunostats.
     timeline:
       - {date: "2026-07-25", event: a11y-loop created, repos: [ChanMeng666/a11y-loop]}
       - {date: "2026-07-28", event: a11y-loop-promo-video created, repos: [ChanMeng666/a11y-loop-promo-video]}
+      - {date: "2026-10-20", event: "a11y-loop-promo-film created (64 s launch film, huashu-motion composition; master in release v1.0.0)", repos: [ChanMeng666/a11y-loop-promo-film]}
   - id: chan-meng-personal-brand
     entity: chan-meng-brand
     name: Chan Meng personal brand surfaces
@@ -506,6 +507,7 @@ repos:
   - {repo: ChanMeng666/vitex-growth, family: vitex, entity: vitex, role: growth, visibility: private, archived: true, catalogId: null, localFolder: vitex-growth, created: "2026-07-19", liveUrls: [], oneLine: Private growth/GTM repo for Vitex; no product code, chanCommitShare: {pct: 100, chan: 8, humans: 8, all: 8}, confidence: high}
   - {repo: ChanMeng666/a11y-loop, family: a11y-loop, entity: a11y-loop, role: product, visibility: public, archived: false, catalogId: a11y-loop, localFolder: a11y-loop, created: "2026-07-25", liveUrls: [https://chanmeng666.github.io/a11y-loop/], oneLine: Makes AI coding agents write accessible UI by default and proves what it can, positioning: "Free open-source tool, kept as a community project and a demonstration of Chan's engineering (her positioning, 2026-10-07). The one own tool with a named organisation adopting it", stage: maintained, showcase: featured, chanCommitShare: {pct: 100, chan: 26, humans: 26, all: 26}, confidence: high}
   - {repo: ChanMeng666/a11y-loop-promo-video, family: a11y-loop, entity: a11y-loop, role: promo-film, visibility: public, archived: false, catalogId: a11y-loop-promo-video, localFolder: null, created: "2026-07-28", liveUrls: [], oneLine: "2:59 Remotion film for a11y-loop, narrated with ElevenLabs, scored with Suno", positioning: "The a11y-loop film on show", stage: done, showcase: listed, chanCommitShare: {pct: 100, chan: 2, humans: 2, all: 2}, confidence: high}
+  - {repo: ChanMeng666/a11y-loop-promo-film, family: a11y-loop, entity: a11y-loop, role: promo-film, visibility: public, archived: false, catalogId: null, localFolder: a11y-loop-promo-film, created: "2026-10-20", liveUrls: [], oneLine: "64 s launch film for a11y-loop: a huashu-motion composition (HTML + GSAP) of one full loop, score in ABC notation played by sampled instruments; master in release v1.0.0", chanCommitShare: {pct: 100, chan: 3, humans: 3, all: 3}, confidence: high}
   - {repo: ChanMeng666/ChanMeng666, family: chan-meng-personal-brand, entity: chan-meng-brand, role: profile, visibility: public, archived: false, catalogId: null, localFolder: ChanMeng666, created: "2024-07-12", liveUrls: [https://chanmeng.org/], oneLine: "GitHub profile README repo, now Chan's generated career database (shards to README, llms.txt, CVs, LinkedIn copy)", positioning: "The career database and GitHub profile: single source of truth for the README, CVs, LinkedIn copy and site facts", stage: maintained, showcase: listed, chanCommitShare: {pct: 100, chan: 1524, humans: 1524, all: 2110}, confidence: high}
   - {repo: ChanMeng666/2d-portfolio, family: chan-meng-personal-brand, entity: chan-meng-brand, role: product, visibility: private, archived: false, catalogId: null, localFolder: 2d-portfolio, created: "2024-12-03", liveUrls: [https://chanmeng.org/], oneLine: Next.js portfolio site serving chanmeng.org (also /cv and /blog), positioning: "chanmeng.org: the venue that presents the work, never presented as a project itself", stage: maintained, showcase: hidden, chanCommitShare: {pct: 100, chan: 341, humans: 341, all: 343}, confidence: high}
   - {repo: ChanMeng666/3d-portfolio, family: chan-meng-personal-brand, entity: chan-meng-brand, role: archive-snapshot, visibility: private, archived: true, catalogId: null, localFolder: null, created: "2024-10-24", liveUrls: [https://3d-portfolio-3bb.pages.dev/], oneLine: "Early Three.js 3D portfolio site; one of several independent past personal-brand pieces (no succession chain); archived", chanCommitShare: {pct: 100, chan: 42, humans: 42, all: 46}, confidence: high}
@@ -686,6 +688,7 @@ relations:
   - {from: ChanMeng666/vitex-growth, type: markets, to: ChanMeng666/easy-resume, evidence: "README: private companion to the product repo easy-resume"}
   - {from: ChanMeng666/easy-resume, type: deployed-as, to: url:https://www.vitex.org.nz/, evidence: homepageUrl; shard vitex repoUrl is easy-resume}
   - {from: ChanMeng666/a11y-loop-promo-video, type: promotes, to: ChanMeng666/a11y-loop, evidence: "README links a11y-loop; shard relatedProjectIds [a11y-loop]"}
+  - {from: ChanMeng666/a11y-loop-promo-film, type: promotes, to: ChanMeng666/a11y-loop, evidence: "README and GitHub description name a11y-loop; the a11y-loop README embeds the film"}
   - {from: ChanMeng666/2d-portfolio, type: deployed-as, to: url:https://chanmeng.org, evidence: homepageUrl}
   - {from: ChanMeng666/chan-meng-promo-video, type: data-for, to: ChanMeng666/2d-portfolio, evidence: "README/CLAUDE.md: outputs are the files chanmeng.org plays; mentions 2d-portfolio"}
   - {from: ChanMeng666/ChanMeng666, type: data-for, to: ChanMeng666/chan-meng-promo-video, evidence: "README: facts come from Chan's career database"}
@@ -910,3 +913,4 @@ revisions:
   - {date: "2026-10-12", kind: "localFolder-corrected", subject: "a11y-loop-promo-video, emoji-story-generator, gradient-svg-generator-growth, her-waka, serpdata-api-test, server-google-news, svg-animation-studio, Whiri-AI/tam-ai-ti-web", old: "localFolder null", new: "localFolder set to the folder of the same name under localRoot", evidence: "git remote of each folder read 2026-10-12"}
   - {date: "2026-10-15", kind: "liveUrl-removed", subject: "server-google-jobs", old: "liveUrls smithery.ai/server/@chanmeng666/google-jobs-server", new: "liveUrls npm package page; Smithery taken off every surface (Chan, 2026-10-15)", evidence: "the Smithery page redirects to 404 and its registry API returns Server not found, checked 2026-10-15"}
   - {date: "2026-10-19", kind: "visibility-and-localFolder", subject: "23 film repos", old: "11 of them private; localFolder set for all 23", new: "the 11 named in q53 public; localFolder null for all 23 (local folders deleted after the finished films were moved to film-archive/)", evidence: "gh repo view visibility read after the change, 2026-10-19"}
+  - {date: "2026-10-20", kind: "repo-added", subject: "a11y-loop-promo-film", old: "not in the catalog", new: "public promo-film repo in family a11y-loop; positioning, stage and showcase left for Chan", evidence: "gh repo view 2026-10-20: created 2026-10-20, public, MIT"}

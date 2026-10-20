@@ -69,7 +69,7 @@ channel:
 counts:
   asOf: "2026-10-09"
   total: 339               # 331 on the Videos tab (Studio's visibility filters) plus the 8 public Shorts
-  public: 82               # 74 videos + 8 Shorts (2026-10-19, capture:youtube)
+  public: 83               # 75 videos + 8 Shorts (2026-10-19 capture:youtube, +1 on 2026-10-20)
   unlisted: 61             # +1 uploaded 2026-10-12, seen in Studio 2026-10-19 (channel.private.yaml)
   private: 236             # 180 of them are raw screen recordings titled by timestamp
   # 2026-10-17: the public count was read again, signed out: 73 (65 videos
@@ -86,6 +86,12 @@ counts:
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # 2026-10-20: Chan uploaded the a11y-loop launch film (a11y-loop-promo-film,
+  # 64 s) and made it public; title, description and the Product films
+  # playlist (at the top) were set the same day. The 2:59 a11y-loop film
+  # stays in the same playlist; which of the two a11y-loop shows is Chan's
+  # call (productFilms, docs/STATE.md open items).
+  - { id: Qg5QCE_V0Pg, kind: film, published: "2026-10-20", duration: "1:05", title: "a11y-loop — one full loop: plan, write, audit, fix, report | Product film", projectId: a11y-loop, playlists: [Product films], described: true }
   # 2026-10-19: Chan uploaded the earlier and alternative films that
   # chanmeng.org/films shows (the ArchCanvas 92-second film, its six feature
   # shorts, «Zoom Out», the first echook film). Claude filled in titles and
@@ -225,9 +231,10 @@ playlists:
   - title: Product films
     id: PLSvppR4RMlF0
     onHomeTab: true
-    videos: [rUZAiXgt9JY, HIjLTA7HS64, Yf25U5uysho, RiL7m159I7w, qoTYuK0Xdsk, 43vcdxFDbTg, RBcGF6X4esY, rJb7A_Ljmrs, AdelJ4bezwo, DKCzZCQTQgA, j2_JCEs8Ucw, MB4eGPWtgNo, KuCYju-jY0w, rwcbV4FpHho]
+    videos: [Qg5QCE_V0Pg, rUZAiXgt9JY, HIjLTA7HS64, Yf25U5uysho, RiL7m159I7w, qoTYuK0Xdsk, 43vcdxFDbTg, RBcGF6X4esY, rJb7A_Ljmrs, AdelJ4bezwo, DKCzZCQTQgA, j2_JCEs8Ucw, MB4eGPWtgNo, KuCYju-jY0w, rwcbV4FpHho]
     # The last three (2026-10-19) are the earlier and alternative films of
     # ArchCanvas and echook; the primary film of each product stays first.
+    # The a11y-loop launch film (2026-10-20) sits at the top of the playlist.
   - title: "Demos & walkthroughs"
     id: PLXEw5x660aDc
     onHomeTab: true

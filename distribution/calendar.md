@@ -6,7 +6,7 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-10-17, X 2026-10-12, LinkedIn 2026-10-12, ArchCanvas page 2026-10-12.
+Plan as of 2026-10-12. Registers read: YouTube 2026-10-20, X 2026-10-12, LinkedIn 2026-10-12, ArchCanvas page 2026-10-12.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
@@ -81,15 +81,16 @@ Scheduled in another calendar:
 | Tam-AI-Ti product film | published 2026-10-06 | published 2026-10-06 | published | planned 2026-11-03 | planned 2026-11-03 | — |
 | Eatropolis website film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-10-22 | planned 2026-10-22 | — |
 | AI programming school product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-10 | planned 2026-11-10 | — |
-| ArchCanvas, the 92-second film | — | — | published | — | — | — |
-| Talk to your plan | — | — | published | — | — | — |
-| The check | — | — | published | — | — | — |
-| It opens in real CAD | — | — | published | — | — | — |
-| Tweaks | — | — | published | — | — | — |
-| Grounded rendering | — | — | published | — | — | — |
-| Pay per result | — | — | published | — | — | — |
-| ArchCanvas «Zoom Out» | — | — | published | — | — | — |
-| echook, the first film | — | — | published | published 2026-02-13 | — | — |
+| ArchCanvas, the 92-second film | published 2026-10-19 | — | published | — | — | — |
+| Talk to your plan | published 2026-10-19 | — | published | — | — | — |
+| The check | published 2026-10-19 | — | published | — | — | — |
+| It opens in real CAD | published 2026-10-19 | — | published | — | — | — |
+| Tweaks | published 2026-10-19 | — | published | — | — | — |
+| Grounded rendering | published 2026-10-19 | — | published | — | — | — |
+| Pay per result | published 2026-10-19 | — | published | — | — | — |
+| ArchCanvas «Zoom Out» | published 2026-10-19 | — | published | — | — | — |
+| echook, the first film | published 2026-10-19 | — | published | published 2026-02-13 | — | — |
+| a11y-loop launch film | published 2026-10-20 | — | — | — | — | — |
 | ArchLang narrated demo | — | — | — | — | — | — |
 | GenLAB Career Academy, how it works | — | — | — | — | — | — |
 | She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | planned 2026-11-19 | planned 2026-11-19 | — |

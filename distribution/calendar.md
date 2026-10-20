@@ -6,7 +6,7 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-10-20, X 2026-10-12, LinkedIn 2026-10-12, ArchCanvas page 2026-10-12.
+Plan as of 2026-10-12. Registers read: YouTube 2026-10-20, X 2026-10-20, LinkedIn 2026-10-20, ArchCanvas page 2026-10-20.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
@@ -15,13 +15,8 @@ A post made after those dates is not known here until its register is synced.
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-10-20 | Tuesday | Chan Meng, showreel | LinkedIn (personal) | 112.5 s, 16:9 | `_staging/01-chan-meng-showreel/showreel_112s_16x9.mp4` | `drafts/chan-meng-showreel.yaml#linkedin` | posted |
-| 2026-10-20 | Tuesday | Chan Meng, showreel | X | 55 s, 16:9 | `_staging/01-chan-meng-showreel/showreel-short_55s_16x9.mp4` | `drafts/chan-meng-showreel.yaml#x` | posted |
 | 2026-10-22 | Thursday | Eatropolis website film | LinkedIn (personal) | 60 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_60s_16x9.mp4` | `drafts/eatropolis-film.yaml#linkedin` | draft |
 | 2026-10-22 | Thursday | Eatropolis website film | X | 30 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_30s_16x9.mp4` | `drafts/eatropolis-film.yaml#x` | draft |
-
-- Chan Meng, showreel: Posted by Chan by hand on 2026-10-20, the same day as the a11y-loop launch film (her call). Moves to posted once linkedin-sync has the post in the register
-- Chan Meng, showreel: Posted by Chan by hand on 2026-10-20 with her own text. Moves to posted once x-sync has the post in the register
 
 ### Week of 2026-10-26
 
@@ -47,10 +42,8 @@ A post made after those dates is not known here until its register is synced.
 |---|---|---|---|---|---|---|---|
 | 2026-11-10 | Tuesday | AI programming school product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_60s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#linkedin` | draft |
 | 2026-11-10 | Tuesday | AI programming school product film | X | 30 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_30s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#x` | draft |
-| 2026-11-12 | Thursday | a11y-loop launch film | LinkedIn (personal) | 64 s, 16:9 | `_staging/10-a11y-loop-launch-film/a11y-loop-launch_64s_16x9.mp4` | `drafts/a11y-loop-launch-film.yaml#linkedin` | posted |
 | 2026-11-12 | Thursday | a11y-loop launch film | X | 64 s, 16:9, as a YouTube link | none (link post) | `drafts/a11y-loop-launch-film.yaml#x` | draft |
 
-- a11y-loop launch film: Posted early, on 2026-10-20, by Chan by hand: native 64 s upload, links in the first comment. Moves to posted once linkedin-sync has the post in the register
 - a11y-loop launch film: The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (the LinkedIn file is staged); the draft links YouTube
 
 ### Week of 2026-11-16
@@ -79,7 +72,7 @@ Scheduled in another calendar:
 | ArchCanvas studio film | published 2026-09-21 | published 2026-10-07 | published | published 2026-09-21 | published 2026-09-21 | published 2026-09-21 |
 | ArchLang film | published 2026-10-06 | — | published | to do (other calendar) | to do (other calendar) | — |
 | echook film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-10-27 | planned 2026-10-27 | — |
-| a11y-loop launch film | published 2026-10-20 | — | published | planned 2026-11-12 | planned 2026-11-12 | — |
+| a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | planned 2026-11-12 | — |
 | GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-17 | planned 2026-11-17 | — |
 | CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-05 | planned 2026-11-05 | — |
 | She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-10-29 | planned 2026-10-29 | — |
@@ -101,7 +94,7 @@ Scheduled in another calendar:
 | She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | planned 2026-11-19 | planned 2026-11-19 | — |
 | Chan Meng, 64-second video business card | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng monkey, brand sting | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
-| Chan Meng, showreel | published 2026-10-09 | — | published | planned 2026-10-20 | planned 2026-10-20 | — |
+| Chan Meng, showreel | published 2026-10-09 | — | published | published 2026-10-20 | published 2026-10-20 | — |
 | A Drizzle in October | published 2026-10-07 | — | published | — | — | — |
 | February, on an Extended Line | published 2026-10-07 | — | published | — | — | — |
 | Warrior Ah Hua | published 2026-10-07 | — | published | — | — | — |

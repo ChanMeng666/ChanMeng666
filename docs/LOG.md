@@ -237,3 +237,6 @@ distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md
 
 ## [2026-10-20] posted | chan-meng-showreel on LinkedIn (7518257065660919809) and X (2112491529579425996), by Chan by hand; schedule rows marked posted until the registers are synced
 distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md
+
+## [2026-10-20] ingest | LinkedIn (profile and ArchCanvas page) and X registers synced; the a11y-loop launch film and showreel posts moved from schedule to posted (the X showreel post carries the 112.5 s cut, not the scheduled 55 s); five profile posts, one page post and three X threads tagged
+linkedin/, x/, distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md

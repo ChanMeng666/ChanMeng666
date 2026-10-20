@@ -95,6 +95,9 @@ overrides:
 # Social posts that already carry a film. `post` is the id in the platform's
 # register; `via` says how the film appears in the post.
 posted:
+  - { film: chan-meng-showreel, platform: linkedin, post: "7518257065660919809", via: native-video, cut: "112.5 s, 16:9" }
+  - { film: chan-meng-showreel, platform: x, post: "2112491529579425996", via: native-video, cut: "112.5 s, 16:9", note: "Chan posted the full 112.5 s cut, not the 55 s cut the schedule named (the X register reads 112,500 ms)" }
+  - { film: a11y-loop-launch-film, platform: linkedin, post: "7518202494695493632", via: native-video, cut: "64 s, 16:9", note: "Posted on 2026-10-20, ahead of its 2026-11-12 slot; links in the first comment" }
   - { film: chan-meng-intro, platform: x, post: "2104838939353964848", via: native-video, cut: "64 s, 16:9" }
   - { film: chan-meng-intro, platform: linkedin, post: "7510604261312081922", via: native-video, cut: "64 s, 16:9" }
   - { film: chan-meng-monkey-sting, platform: x, post: "2104816112890482878", via: native-video, cut: "12 s, 16:9" }
@@ -120,8 +123,6 @@ posted:
 #   asset:  file under distribution/_staging/ (see README for how it is filled)
 #   draft:  file under distribution/drafts/ and the key inside it
 schedule:
-  - { date: "2026-10-20", film: chan-meng-showreel, platform: linkedin, cut: "112.5 s, 16:9", asset: "01-chan-meng-showreel/showreel_112s_16x9.mp4", draft: "chan-meng-showreel.yaml#linkedin", status: posted, url: "https://www.linkedin.com/posts/chanmeng666_aiengineer-aiagents-fullstackdeveloper-ugcPost-7518256974812061697--z2I/", post: "7518257065660919809", via: native-video, note: "Posted by Chan by hand on 2026-10-20, the same day as the a11y-loop launch film (her call). Moves to posted once linkedin-sync has the post in the register" }
-  - { date: "2026-10-20", film: chan-meng-showreel, platform: x, cut: "55 s, 16:9", asset: "01-chan-meng-showreel/showreel-short_55s_16x9.mp4", draft: "chan-meng-showreel.yaml#x", status: posted, url: "https://x.com/chanmeng666/status/2112491529579425996", post: "2112491529579425996", via: native-video, note: "Posted by Chan by hand on 2026-10-20 with her own text. Moves to posted once x-sync has the post in the register" }
   - { date: "2026-10-22", film: eatropolis-film, platform: linkedin, cut: "60 s, 16:9", asset: "02-eatropolis-film/eatropolis_60s_16x9.mp4", draft: "eatropolis-film.yaml#linkedin", status: draft }
   - { date: "2026-10-22", film: eatropolis-film, platform: x, cut: "30 s, 16:9", asset: "02-eatropolis-film/eatropolis_30s_16x9.mp4", draft: "eatropolis-film.yaml#x", status: draft }
   - { date: "2026-10-27", film: echook-film, platform: linkedin, cut: "60 s, 16:9", asset: "03-echook-film/echook_60s_16x9.mp4", draft: "echook-film.yaml#linkedin", status: draft }
@@ -134,7 +135,6 @@ schedule:
   - { date: "2026-11-05", film: corde-mobile-film, platform: x, cut: "30 s, 16:9", asset: "06-corde-mobile-film/corde-mobile_30s_16x9.mp4", draft: "corde-mobile-film.yaml#x", status: draft }
   - { date: "2026-11-10", film: ai-programming-school-film, platform: linkedin, cut: "60 s, 16:9", asset: "07-ai-programming-school-film/ai-programming_60s_16x9.mp4", draft: "ai-programming-school-film.yaml#linkedin", status: draft }
   - { date: "2026-11-10", film: ai-programming-school-film, platform: x, cut: "30 s, 16:9", asset: "07-ai-programming-school-film/ai-programming_30s_16x9.mp4", draft: "ai-programming-school-film.yaml#x", status: draft }
-  - { date: "2026-11-12", film: a11y-loop-launch-film, platform: linkedin, cut: "64 s, 16:9", asset: "10-a11y-loop-launch-film/a11y-loop-launch_64s_16x9.mp4", draft: "a11y-loop-launch-film.yaml#linkedin", status: posted, url: "https://www.linkedin.com/posts/chanmeng666_accessibility-a11y-aiagents-ugcPost-7518202436025679872-JaJX/", post: "7518202494695493632", via: native-video, note: "Posted early, on 2026-10-20, by Chan by hand: native 64 s upload, links in the first comment. Moves to posted once linkedin-sync has the post in the register" }
   - { date: "2026-11-12", film: a11y-loop-launch-film, platform: x, cut: "64 s, 16:9, as a YouTube link", asset: null, draft: "a11y-loop-launch-film.yaml#x", status: draft, note: "The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (the LinkedIn file is staged); the draft links YouTube" }
   - { date: "2026-11-17", film: gavigo-ire-film, platform: linkedin, cut: "60 s, 16:9", asset: "08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4", draft: "gavigo-ire-film.yaml#linkedin", status: draft }
   - { date: "2026-11-17", film: gavigo-ire-film, platform: x, cut: "30 s, 16:9", asset: "08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4", draft: "gavigo-ire-film.yaml#x", status: draft }

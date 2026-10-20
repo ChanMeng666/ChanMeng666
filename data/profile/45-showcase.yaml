@@ -355,14 +355,17 @@ productFilms:
       - { filmRepo: ChanMeng666/echook-promo-video, what: "earlier Remotion + ElevenLabs + Suno promo", reason: "one film per product; shown on /films only; the repo stays public beside echook" }
     lastVerified: "2026-10-06"
 
-  - id: a11y-loop-film
+  - id: a11y-loop-launch-film
     projectId: a11y-loop
     kind: product
-    title: a11y-loop film
-    filmRepo: ChanMeng666/a11y-loop-promo-video
+    title: a11y-loop launch film
+    filmRepo: ChanMeng666/a11y-loop-promo-film
+    watchUrl: "https://youtu.be/Qg5QCE_V0Pg"
     displayedOn:
-      - { surface: chanmeng.org, page: "/", slot: "home tools stage", cuts: ["2 min 59 s 16:9"] }
-    lastVerified: "2026-10-06"
+      - { surface: chanmeng.org, page: "/", slot: "home tools stage", cuts: ["64 s 16:9"] }
+    notDisplayed:
+      - { filmRepo: ChanMeng666/a11y-loop-promo-video, what: "narrated 2 min 59 s Remotion film (2026-07)", reason: "one film per product; the launch film replaced it on show (Chan, 2026-10-20); shown on /films only, the repo stays public beside a11y-loop" }
+    lastVerified: "2026-10-20"
 
   - id: gavigo-ire-film
     projectId: gavigo-ire

@@ -11,8 +11,8 @@ else (L2) is opened on demand, when its "read when" matches the task.
 | File | Lines | Read when |
 |---|---|---|
 | `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
-| `docs/STATE.md` | 115 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 215 | to see what changed recently; append an entry after a change |
+| `docs/STATE.md` | 114 | always: Chan's decisions and display rules, before any edit |
+| `docs/LOG.md` | 221 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -32,8 +32,8 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
 | `data/profile/30-recognition.yaml` | 1857 | awards (7), certificates (53), publications (76) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
-| `data/profile/45-showcase.yaml` | 451 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
-| `data/profile/46-films.yaml` | 529 | filmCollections (8), films (66) | FILMS — every finished film Chan has made, one row per film … |
+| `data/profile/45-showcase.yaml` | 454 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
+| `data/profile/46-films.yaml` | 525 | filmCollections (8), films (66) | FILMS — every finished film Chan has made, one row per film … |
 | `data/profile/50-references.yaml` | 577 | references (27) | REFERENCES — testimonials & recommendations … |
 | `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
 | `data/profile/70-linkedin.yaml` | 1938 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |

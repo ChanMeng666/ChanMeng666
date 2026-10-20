@@ -10,11 +10,11 @@ summary:
   films: 66
   complete: 55
   cells:
-    published: 144
+    published: 145
     planned: 19
-    gap: 2
+    gap: 3
     skipped: 0
-    not-planned: 231
+    not-planned: 229
   byPlatform:
     youtube:
       published: 64
@@ -25,13 +25,13 @@ summary:
       planned: 0
       gap: 0
     site:
-      published: 63
+      published: 64
       planned: 0
       gap: 0
     linkedin:
       published: 5
       planned: 9
-      gap: 1
+      gap: 2
     x:
       published: 3
       planned: 10
@@ -47,6 +47,8 @@ gaps:
   - film: archlang-film
     platform: x
     scheduledIn: archcanvas-growth
+  - film: a11y-loop-launch-film
+    platform: linkedin
 films:
   - film: archcanvas-studio-film
     title: ArchCanvas studio film
@@ -210,42 +212,34 @@ films:
       linkedin-page:
         state: not-planned
     complete: false
-  - film: a11y-loop-film
-    title: a11y-loop film
+  - film: a11y-loop-launch-film
+    title: a11y-loop launch film
     kind: product-film
     for: a11y-loop
     policy: product-film
     platforms:
       youtube:
         state: published
-        id: HIjLTA7HS64
-        url: https://youtu.be/HIjLTA7HS64
-        date: '2026-07-28'
+        id: Qg5QCE_V0Pg
+        url: https://youtu.be/Qg5QCE_V0Pg
+        date: '2026-10-20'
         counts:
-          views: 28
+          views: 0
       youtube-short:
         state: not-planned
       site:
         state: published
         url: https://chanmeng.org/films
       linkedin:
-        state: published
-        posts:
-          - post: '7492769690893635584'
-            via: youtube-link
-            cut: 2 min 59 s
-            date: '2026-08-11'
-            url: https://www.linkedin.com/posts/chanmeng666_a11y-loop-promo-activity-7492769690893635584-WbYJ
-            counts:
-              reactions: 12
-              comments: 4
-              reposts: 0
+        state: gap
       x:
         state: planned
         date: '2026-11-12'
         status: draft
-        cut: 2 min 59 s, as a YouTube link
-        note: Longer than X allows as an upload. LinkedIn already has this film (2026-08-11)
+        cut: 64 s, 16:9, as a YouTube link
+        note: >-
+          The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (master: a11y-loop-promo-film release v1.0.0); the draft links YouTube. LinkedIn carried the
+          earlier a11y-loop film (2026-08-11)
       linkedin-page:
         state: not-planned
     complete: false
@@ -720,30 +714,44 @@ films:
         state: not-planned
     reason: One film on show per product; earlier and alternative versions are on chanmeng.org/films only
     complete: true
-  - film: a11y-loop-launch-film
-    title: a11y-loop launch film
+  - film: a11y-loop-film
+    title: a11y-loop, the narrated film
     kind: product-film
     for: a11y-loop
-    policy: not-shown
+    policy: earlier-version
     platforms:
       youtube:
         state: published
-        id: Qg5QCE_V0Pg
-        url: https://youtu.be/Qg5QCE_V0Pg
-        date: '2026-10-20'
+        id: HIjLTA7HS64
+        url: https://youtu.be/HIjLTA7HS64
+        date: '2026-07-28'
         counts:
-          views: 0
+          views: 28
+        outsidePolicy: true
       youtube-short:
         state: not-planned
       site:
-        state: not-planned
+        state: published
+        url: https://chanmeng.org/films
       linkedin:
-        state: not-planned
+        state: published
+        posts:
+          - post: '7492769690893635584'
+            via: youtube-link
+            cut: 2 min 59 s
+            date: '2026-08-11'
+            url: https://www.linkedin.com/posts/chanmeng666_a11y-loop-promo-activity-7492769690893635584-WbYJ
+            counts:
+              reactions: 12
+              comments: 4
+              reposts: 0
+            note: Posted when the film was the one on show; the launch film replaced it on 2026-10-20
+        outsidePolicy: true
       x:
         state: not-planned
       linkedin-page:
         state: not-planned
-    reason: 'Recorded, shown nowhere (docs/STATE.md): the project is not public, or the film was not made as a promo'
+    reason: One film on show per product; earlier and alternative versions are on chanmeng.org/films only
     complete: true
   - film: archlang-demo
     title: ArchLang narrated demo

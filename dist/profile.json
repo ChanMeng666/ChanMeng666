@@ -8256,12 +8256,12 @@
           "url": "https://www.npmjs.com/package/a11y-loop"
         },
         {
-          "label": "Promo video repo (Remotion)",
-          "url": "https://github.com/ChanMeng666/a11y-loop-promo-video"
-        },
-        {
           "label": "Launch film repo (huashu-motion)",
           "url": "https://github.com/ChanMeng666/a11y-loop-promo-film"
+        },
+        {
+          "label": "Earlier film repo (Remotion)",
+          "url": "https://github.com/ChanMeng666/a11y-loop-promo-video"
         },
         {
           "label": "Benchmark results",
@@ -8305,7 +8305,7 @@
         "alt": "a11y-loop, an open-source Agent Skill and command-line tool that has a coding agent write accessible UI, audit the rendered page in a real browser, fix what was found and audit again. The card follows one turn of that loop on the demo page: 163 detectable failures across five rendering passes fall to 0, beside the 44 findings left for review and the 15 manual checks automation cannot judge."
       },
       "_film": {
-        "url": "https://youtu.be/HIjLTA7HS64",
+        "url": "https://youtu.be/Qg5QCE_V0Pg",
         "label": "Watch on YouTube"
       },
       "_affiliationOrgs": [],
@@ -12753,22 +12753,30 @@
       "lastVerified": "2026-10-06"
     },
     {
-      "id": "a11y-loop-film",
+      "id": "a11y-loop-launch-film",
       "projectId": "a11y-loop",
       "kind": "product",
-      "title": "a11y-loop film",
-      "filmRepo": "ChanMeng666/a11y-loop-promo-video",
+      "title": "a11y-loop launch film",
+      "filmRepo": "ChanMeng666/a11y-loop-promo-film",
+      "watchUrl": "https://youtu.be/Qg5QCE_V0Pg",
       "displayedOn": [
         {
           "surface": "chanmeng.org",
           "page": "/",
           "slot": "home tools stage",
           "cuts": [
-            "2 min 59 s 16:9"
+            "64 s 16:9"
           ]
         }
       ],
-      "lastVerified": "2026-10-06"
+      "notDisplayed": [
+        {
+          "filmRepo": "ChanMeng666/a11y-loop-promo-video",
+          "what": "narrated 2 min 59 s Remotion film (2026-07)",
+          "reason": "one film per product; the launch film replaced it on show (Chan, 2026-10-20); shown on /films only, the repo stays public beside a11y-loop"
+        }
+      ],
+      "lastVerified": "2026-10-20"
     },
     {
       "id": "gavigo-ire-film",
@@ -13110,27 +13118,27 @@
       "onFilmsPage": true
     },
     {
-      "id": "a11y-loop-film",
+      "id": "a11y-loop-launch-film",
       "kind": "product-film",
       "primary": true,
-      "title": "a11y-loop film",
+      "title": "a11y-loop launch film",
       "for": "a11y-loop",
       "projectId": "a11y-loop",
-      "repo": "ChanMeng666/a11y-loop-promo-video",
+      "repo": "ChanMeng666/a11y-loop-promo-film",
       "repoPublic": true,
-      "date": "2026-07",
-      "seconds": 179,
+      "date": "2026-10",
+      "seconds": 64,
       "cuts": [
-        "2 min 59 s",
+        "64 s",
         "16:9",
-        "narrated, captions burned in"
+        "no narration, on-screen copy"
       ],
-      "madeWith": "Remotion, figures captured from the real CLI",
-      "summary": "A narrated film in which every number on screen is captured from the real command-line tool and gated by an automated verify step.",
-      "youtubeId": "HIjLTA7HS64",
+      "madeWith": "huashu-motion (HTML + GSAP), sampled-instrument score",
+      "summary": "One full loop of the tool, plan, write, audit, fix and report, walked by a simulated keyboard, cursor and agent window. Written as code, a huashu-motion composition rendered frame by frame in Chrome, with a score composed in ABC notation and played by sampled instruments. Every command-line string on screen comes from real runs of a11y-loop 0.4.1 and every browser shot is a real screenshot of its demo page.",
+      "youtubeId": "Qg5QCE_V0Pg",
       "media": {
-        "poster": "/work/posters/a11y-loop-poster.jpg",
-        "mp4": "/work/films/a11y-loop-179s.mp4"
+        "poster": "/work/posters/a11y-loop-launch-poster.jpg",
+        "mp4": "/work/films/a11y-loop-64s.mp4"
       },
       "onFilmsPage": true
     },
@@ -13501,25 +13509,28 @@
       "onFilmsPage": true
     },
     {
-      "id": "a11y-loop-launch-film",
+      "id": "a11y-loop-film",
       "kind": "product-film",
-      "title": "a11y-loop launch film",
+      "title": "a11y-loop, the narrated film",
       "for": "a11y-loop",
       "projectId": "a11y-loop",
-      "repo": "ChanMeng666/a11y-loop-promo-film",
+      "repo": "ChanMeng666/a11y-loop-promo-video",
       "repoPublic": true,
-      "date": "2026-10",
-      "seconds": 64,
+      "date": "2026-07",
+      "seconds": 179,
       "cuts": [
-        "64 s",
+        "2 min 59 s",
         "16:9",
-        "no narration, on-screen copy"
+        "narrated, captions burned in"
       ],
-      "madeWith": "huashu-motion (HTML + GSAP), sampled-instrument score",
-      "summary": "One full loop of the tool, plan, write, audit, fix and report, walked by a simulated keyboard, cursor and agent window. Written as code, a huashu-motion composition rendered frame by frame in Chrome, with a score composed in ABC notation and played by sampled instruments. Every command-line string on screen comes from real runs of a11y-loop 0.4.1 and every browser shot is a real screenshot of its demo page.",
-      "youtubeId": "Qg5QCE_V0Pg",
-      "onFilmsPage": false,
-      "notShownReason": "not yet hosted by the site; which a11y-loop film is on show is open for Chan"
+      "madeWith": "Remotion, figures captured from the real CLI",
+      "summary": "A narrated film in which every number on screen is captured from the real command-line tool and gated by an automated verify step.",
+      "youtubeId": "HIjLTA7HS64",
+      "media": {
+        "poster": "/work/posters/a11y-loop-poster.jpg",
+        "mp4": "/work/films/a11y-loop-179s.mp4"
+      },
+      "onFilmsPage": true
     },
     {
       "id": "archlang-demo",
@@ -16963,6 +16974,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-20",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-20T04:47:41.808Z"
+    "buildTimestamp": "2026-10-20T06:15:03.951Z"
   }
 }

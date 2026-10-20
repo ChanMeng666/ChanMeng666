@@ -1,11 +1,11 @@
 {
   "source": "data/profile/46-films.yaml",
   "counts": {
-    "films": 63,
-    "productFilms": 19,
+    "films": 64,
+    "productFilms": 20,
     "musicVideos": 15,
     "explainers": 25,
-    "minutes": 153
+    "minutes": 154
   },
   "productFilms": [
     {
@@ -66,23 +66,23 @@
       }
     },
     {
-      "id": "a11y-loop-film",
-      "title": "a11y-loop film",
+      "id": "a11y-loop-launch-film",
+      "title": "a11y-loop launch film",
       "for": "a11y-loop",
-      "date": "2026-07",
-      "seconds": 179,
-      "duration": "2:59",
+      "date": "2026-10",
+      "seconds": 64,
+      "duration": "1:04",
       "cuts": [
-        "2 min 59 s",
+        "64 s",
         "16:9",
-        "narrated, captions burned in"
+        "no narration, on-screen copy"
       ],
-      "madeWith": "Remotion, figures captured from the real CLI",
-      "summary": "A narrated film in which every number on screen is captured from the real command-line tool and gated by an automated verify step.",
-      "youtube": "https://youtu.be/HIjLTA7HS64",
+      "madeWith": "huashu-motion (HTML + GSAP), sampled-instrument score",
+      "summary": "One full loop of the tool, plan, write, audit, fix and report, walked by a simulated keyboard, cursor and agent window. Written as code, a huashu-motion composition rendered frame by frame in Chrome, with a score composed in ABC notation and played by sampled instruments. Every command-line string on screen comes from real runs of a11y-loop 0.4.1 and every browser shot is a real screenshot of its demo page.",
+      "youtube": "https://youtu.be/Qg5QCE_V0Pg",
       "media": {
-        "poster": "/work/posters/a11y-loop-poster.jpg",
-        "mp4": "/work/films/a11y-loop-179s.mp4"
+        "poster": "/work/posters/a11y-loop-launch-poster.jpg",
+        "mp4": "/work/films/a11y-loop-64s.mp4"
       }
     },
     {
@@ -260,6 +260,26 @@
         "media": {
           "poster": "/media/films/echook-first-89s.jpg",
           "mp4": "/media/films/echook-first-89s.mp4"
+        }
+      },
+      {
+        "id": "a11y-loop-film",
+        "title": "a11y-loop, the narrated film",
+        "for": "a11y-loop",
+        "date": "2026-07",
+        "seconds": 179,
+        "duration": "2:59",
+        "cuts": [
+          "2 min 59 s",
+          "16:9",
+          "narrated, captions burned in"
+        ],
+        "madeWith": "Remotion, figures captured from the real CLI",
+        "summary": "A narrated film in which every number on screen is captured from the real command-line tool and gated by an automated verify step.",
+        "youtube": "https://youtu.be/HIjLTA7HS64",
+        "media": {
+          "poster": "/work/posters/a11y-loop-poster.jpg",
+          "mp4": "/work/films/a11y-loop-179s.mp4"
         }
       }
     ],

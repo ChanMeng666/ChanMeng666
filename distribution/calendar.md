@@ -44,9 +44,9 @@ A post made after those dates is not known here until its register is synced.
 |---|---|---|---|---|---|---|---|
 | 2026-11-10 | Tuesday | AI programming school product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_60s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#linkedin` | draft |
 | 2026-11-10 | Tuesday | AI programming school product film | X | 30 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_30s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#x` | draft |
-| 2026-11-12 | Thursday | a11y-loop film | X | 2 min 59 s, as a YouTube link | none (link post) | `drafts/a11y-loop-film.yaml#x` | draft |
+| 2026-11-12 | Thursday | a11y-loop launch film | X | 64 s, 16:9, as a YouTube link | none (link post) | `drafts/a11y-loop-launch-film.yaml#x` | draft |
 
-- a11y-loop film: Longer than X allows as an upload. LinkedIn already has this film (2026-08-11)
+- a11y-loop launch film: The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (master: a11y-loop-promo-film release v1.0.0); the draft links YouTube. LinkedIn carried the earlier a11y-loop film (2026-08-11)
 
 ### Week of 2026-11-16
 
@@ -62,6 +62,8 @@ A post made after those dates is not known here until its register is synced.
 
 ## Not yet published and not scheduled here
 
+- a11y-loop launch film: LinkedIn (personal)
+
 Scheduled in another calendar:
 
 - ArchLang film: LinkedIn (personal) (archcanvas-growth)
@@ -74,7 +76,7 @@ Scheduled in another calendar:
 | ArchCanvas studio film | published 2026-09-21 | published 2026-10-07 | published | published 2026-09-21 | published 2026-09-21 | published 2026-09-21 |
 | ArchLang film | published 2026-10-06 | — | published | to do (other calendar) | to do (other calendar) | — |
 | echook film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-10-27 | planned 2026-10-27 | — |
-| a11y-loop film | published 2026-07-28 | — | published | published 2026-08-11 | planned 2026-11-12 | — |
+| a11y-loop launch film | published 2026-10-20 | — | published | **to do** | planned 2026-11-12 | — |
 | GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-17 | planned 2026-11-17 | — |
 | CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-05 | planned 2026-11-05 | — |
 | She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-10-29 | planned 2026-10-29 | — |
@@ -90,7 +92,7 @@ Scheduled in another calendar:
 | Pay per result | published 2026-10-19 | — | published | — | — | — |
 | ArchCanvas «Zoom Out» | published 2026-10-19 | — | published | — | — | — |
 | echook, the first film | published 2026-10-19 | — | published | published 2026-02-13 | — | — |
-| a11y-loop launch film | published 2026-10-20 | — | — | — | — | — |
+| a11y-loop, the narrated film | published 2026-07-28 | — | published | published 2026-08-11 | — | — |
 | ArchLang narrated demo | — | — | — | — | — | — |
 | GenLAB Career Academy, how it works | — | — | — | — | — | — |
 | She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | planned 2026-11-19 | planned 2026-11-19 | — |

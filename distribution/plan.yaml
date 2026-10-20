@@ -88,12 +88,9 @@ overrides:
   - film: archlang-film
     remove: [youtube-short]
     note: "One cut, 16:9: no Short"
-  - film: a11y-loop-film
-    remove: [youtube-short]
-    note: "One narrated cut, 16:9: no Short"
   - film: a11y-loop-launch-film
-    add: [youtube]
-    note: "Alternative a11y-loop film (2026-10-20): on YouTube and in the a11y-loop README; not on chanmeng.org/films until the site hosts it. Social posts wait for Chan's call on which a11y-loop film is on show"
+    remove: [youtube-short]
+    note: "One cut, 64 s, 16:9: no Short. The a11y-loop film on show since 2026-10-20 (Chan); the 2:59 narrated film is now its earlier version, on /films"
 
 # Social posts that already carry a film. `post` is the id in the platform's
 # register; `via` says how the film appears in the post.
@@ -109,7 +106,7 @@ posted:
   - { film: archcanvas-studio-film, platform: linkedin-page, post: "7509068305861672961", via: native-video, cut: "60 s" }
   - { film: archcanvas-studio-film, platform: linkedin-page, post: "7510108568793096192", via: native-video, cut: "30 s" }
   - { film: archcanvas-studio-film, platform: linkedin, post: "7507678365529800704", via: reshare, cut: "120 s", note: "Reshare of the ArchCanvas page's post, not a native upload" }
-  - { film: a11y-loop-film, platform: linkedin, post: "7492769690893635584", via: youtube-link, cut: "2 min 59 s" }
+  - { film: a11y-loop-film, platform: linkedin, post: "7492769690893635584", via: youtube-link, cut: "2 min 59 s", note: "Posted when the film was the one on show; the launch film replaced it on 2026-10-20" }
   - { film: echook-first-film, platform: linkedin, post: "7427973506908409856", via: native-video, cut: "57 s", note: "Posted when the film was new; the film is no longer the one on show" }
 
 # Posts still to make. One row per post. Two films a week (Chan, 2026-10-12),
@@ -137,7 +134,7 @@ schedule:
   - { date: "2026-11-05", film: corde-mobile-film, platform: x, cut: "30 s, 16:9", asset: "06-corde-mobile-film/corde-mobile_30s_16x9.mp4", draft: "corde-mobile-film.yaml#x", status: draft }
   - { date: "2026-11-10", film: ai-programming-school-film, platform: linkedin, cut: "60 s, 16:9", asset: "07-ai-programming-school-film/ai-programming_60s_16x9.mp4", draft: "ai-programming-school-film.yaml#linkedin", status: draft }
   - { date: "2026-11-10", film: ai-programming-school-film, platform: x, cut: "30 s, 16:9", asset: "07-ai-programming-school-film/ai-programming_30s_16x9.mp4", draft: "ai-programming-school-film.yaml#x", status: draft }
-  - { date: "2026-11-12", film: a11y-loop-film, platform: x, cut: "2 min 59 s, as a YouTube link", asset: null, draft: "a11y-loop-film.yaml#x", status: draft, note: "Longer than X allows as an upload. LinkedIn already has this film (2026-08-11)" }
+  - { date: "2026-11-12", film: a11y-loop-launch-film, platform: x, cut: "64 s, 16:9, as a YouTube link", asset: null, draft: "a11y-loop-launch-film.yaml#x", status: draft, note: "The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (master: a11y-loop-promo-film release v1.0.0); the draft links YouTube. LinkedIn carried the earlier a11y-loop film (2026-08-11)" }
   - { date: "2026-11-17", film: gavigo-ire-film, platform: linkedin, cut: "60 s, 16:9", asset: "08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4", draft: "gavigo-ire-film.yaml#linkedin", status: draft }
   - { date: "2026-11-17", film: gavigo-ire-film, platform: x, cut: "30 s, 16:9", asset: "08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4", draft: "gavigo-ire-film.yaml#x", status: draft }
   - { date: "2026-11-19", film: she-sharp-lesmills-promo, platform: linkedin, cut: "30 s, 16:9", asset: "09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4", draft: "she-sharp-lesmills-promo.yaml#linkedin", status: draft, note: "Optional: the event has passed. Post it as a piece of craft, or mark it skipped" }

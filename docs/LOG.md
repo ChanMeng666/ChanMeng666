@@ -213,3 +213,9 @@ docs/ecosystem/lineage.yaml, docs/STATE.md
 
 ## [2026-10-20] add | a11y-loop launch film (`a11y-loop-launch-film`, repo a11y-loop-promo-film, YouTube Qg5QCE_V0Pg) recorded beside the 2:59 film, which stays on show; master in release v1.0.0; which film a11y-loop shows is open for Chan
 data/profile/46-films.yaml, data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/film-masters.md, docs/STATE.md, youtube/channel.yaml, distribution/plan.yaml
+
+## [2026-10-20] decide | a11y-loop shows its 64 s launch film (`a11y-loop-launch-film`, YouTube Qg5QCE_V0Pg): primary, productFilms row, on chanmeng.org (home tools stage and /films); the 2:59 narrated film (`a11y-loop-film`) becomes its earlier version, kept on /films; the 2026-11-12 X post now carries the launch film
+data/profile/45-showcase.yaml, data/profile/46-films.yaml, data/profile/23-projects-oss-more.yaml, distribution/plan.yaml, youtube/channel.yaml, docs/STATE.md, public/readme/films.svg (new tile scripts/readme-art/assets/films/a11y-loop-launch-film.jpg)
+
+## [2026-10-20] decide | `awesome-a11y` and `awesome-accessibility` (forks made only to submit a11y-loop for listing) are not registered in lineage.yaml; `check:ecosystem --live` reports them, as expected
+docs/STATE.md

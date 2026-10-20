@@ -173,21 +173,21 @@ films:
     media: { poster: /work/posters/echook-poster.jpg, mp4: /media/films/echook-60s.mp4 }
     onFilmsPage: true
 
-  - id: a11y-loop-film
+  - id: a11y-loop-launch-film
     kind: product-film
     primary: true
-    title: a11y-loop film
+    title: a11y-loop launch film
     for: a11y-loop
     projectId: a11y-loop
-    repo: ChanMeng666/a11y-loop-promo-video
+    repo: ChanMeng666/a11y-loop-promo-film
     repoPublic: true
-    date: "2026-07"
-    seconds: 179
-    cuts: ["2 min 59 s", "16:9", "narrated, captions burned in"]
-    madeWith: "Remotion, figures captured from the real CLI"
-    summary: A narrated film in which every number on screen is captured from the real command-line tool and gated by an automated verify step.
-    youtubeId: HIjLTA7HS64
-    media: { poster: /work/posters/a11y-loop-poster.jpg, mp4: /work/films/a11y-loop-179s.mp4 }
+    date: "2026-10"
+    seconds: 64
+    cuts: ["64 s", "16:9", "no narration, on-screen copy"]
+    madeWith: "huashu-motion (HTML + GSAP), sampled-instrument score"
+    summary: One full loop of the tool, plan, write, audit, fix and report, walked by a simulated keyboard, cursor and agent window. Written as code, a huashu-motion composition rendered frame by frame in Chrome, with a score composed in ABC notation and played by sampled instruments. Every command-line string on screen comes from real runs of a11y-loop 0.4.1 and every browser shot is a real screenshot of its demo page.
+    youtubeId: Qg5QCE_V0Pg
+    media: { poster: /work/posters/a11y-loop-launch-poster.jpg, mp4: /work/films/a11y-loop-64s.mp4 }
     onFilmsPage: true
 
   - id: gavigo-ire-film
@@ -357,25 +357,21 @@ films:
     media: { poster: /media/films/echook-first-89s.jpg, mp4: /media/films/echook-first-89s.mp4 }
     onFilmsPage: true
 
-  # NOT ON /films YET: chanmeng.org/films needs its poster and mp4 hosted by the
-  # site (2d-portfolio) or R2; set onFilmsPage true when they land. Not the a11y-loop
-  # film on show: which film a11y-loop shows (productFilms) is Chan's call, open
-  # since 2026-10-20; the 2:59 film stays primary until she decides.
-  - id: a11y-loop-launch-film
+  - id: a11y-loop-film
     kind: product-film
-    title: a11y-loop launch film
+    title: "a11y-loop, the narrated film"
     for: a11y-loop
     projectId: a11y-loop
-    repo: ChanMeng666/a11y-loop-promo-film
+    repo: ChanMeng666/a11y-loop-promo-video
     repoPublic: true
-    date: "2026-10"
-    seconds: 64
-    cuts: ["64 s", "16:9", "no narration, on-screen copy"]
-    madeWith: "huashu-motion (HTML + GSAP), sampled-instrument score"
-    summary: One full loop of the tool, plan, write, audit, fix and report, walked by a simulated keyboard, cursor and agent window. Written as code, a huashu-motion composition rendered frame by frame in Chrome, with a score composed in ABC notation and played by sampled instruments. Every command-line string on screen comes from real runs of a11y-loop 0.4.1 and every browser shot is a real screenshot of its demo page.
-    youtubeId: Qg5QCE_V0Pg
-    onFilmsPage: false
-    notShownReason: "not yet hosted by the site; which a11y-loop film is on show is open for Chan"
+    date: "2026-07"
+    seconds: 179
+    cuts: ["2 min 59 s", "16:9", "narrated, captions burned in"]
+    madeWith: "Remotion, figures captured from the real CLI"
+    summary: A narrated film in which every number on screen is captured from the real command-line tool and gated by an automated verify step.
+    youtubeId: HIjLTA7HS64
+    media: { poster: /work/posters/a11y-loop-poster.jpg, mp4: /work/films/a11y-loop-179s.mp4 }
+    onFilmsPage: true
 
   # NOT ON /films (Chan): made to accompany the ArchLang paper (never name the venue); unlisted on YouTube, id in youtube/channel.private.yaml. See show:.
   - id: archlang-demo

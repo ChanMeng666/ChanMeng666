@@ -7,8 +7,8 @@ status: active
 kind: open-source-tool
 repos:
   - ChanMeng666/echook
-  - ChanMeng666/echook-promo-studio
-  - ChanMeng666/echook-promo-video
+  - ChanMeng666/film-echook-terminal
+  - ChanMeng666/film-echook-first
 live: https://github.com/ChanMeng666/echook
 stack: [Python 3 standard library, Claude Code plugin hooks, Cursor hooks, Codex CLI hooks, PowerShell, afplay, mpg123/ffplay/paplay/aplay, ElevenLabs (sound generation), GitHub Actions]
 stories: 8

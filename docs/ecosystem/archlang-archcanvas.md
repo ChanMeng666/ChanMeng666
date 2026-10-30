@@ -4,7 +4,7 @@ Repo topology for the ArchLang / ArchCanvas family. The catalog is
 [`archlang-archcanvas.yaml`](./archlang-archcanvas.yaml): every repo and in-repo
 workspace with its local path, remote, visibility, role and dependencies (last
 scanned 2026-09-21; not loaded by `load-profile`, not schema-validated).
-`archlang-demo-video` (private, 2026-10-01, the narrated demo that accompanies the
+`film-archlang-narrated-demo` (private, 2026-10-01, the narrated demo that accompanies the
 paper, not shown publicly) was added after that scan and is recorded only in
 `lineage.yaml`. Career narrative stays in `data/profile/`; do not put topology
 into the shards, it would leak onto generated surfaces.
@@ -27,8 +27,8 @@ into the shards, it would leak onto generated surfaces.
   promo repo: do not invent taglines.
 - **The ArchCanvas films do not name ArchLang on screen** (Zoom Out and the studio
   replica film), on purpose.
-- **One film on show per product.** ArchCanvas shows `archcanvas-promo-studio`,
-  ArchLang shows `archlang-promo`. Film repos coexist; none replaces another. The
+- **One film on show per product.** ArchCanvas shows `film-archcanvas-studio`,
+  ArchLang shows `film-archlang-playground`. Film repos coexist; none replaces another. The
   register is `productFilms` in `data/profile/45-showcase.yaml`.
 - Do not add this machine's `D:/` paths to a product repo's `AGENTS.md`: those
   files are for every contributor.
@@ -42,5 +42,5 @@ into the shards, it would leak onto generated surfaces.
 | `"private": true` in the showcase `package.json` | Means not published to npm. The GitHub repo is public MIT |
 | `examples/` in `archlang` is the gallery | Small fixtures. Gallery sources live in `archlang-showcase`; the docs-site `/showcase` PNGs are synced copies |
 | The `.arch` keyword `paper` (sheet size) | Unrelated to the academic papers in `archlang-paper` (extracted from `archlang` 2026-08-26) |
-| `readme-showcase`, and the career-shard id `app-promo-studio` | Unrelated projects; name collisions only. The ArchCanvas film checkout is `archcanvas-promo-studio` |
+| `readme-showcase`, and the career-shard id `app-promo-studio` | Unrelated projects; name collisions only. The ArchCanvas film checkout is `film-archcanvas-studio` |
 | A sibling clone for the HuggingFace dataset | There is none: it is generated from `dataset/` inside `archlang` |

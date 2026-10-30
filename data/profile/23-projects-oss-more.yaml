@@ -2451,7 +2451,7 @@ projects:
       - { label: "Playground", url: "https://playground.archlang.uk" }
       - { label: "npm (@chanmeng666/archlang)", url: "https://www.npmjs.com/package/@chanmeng666/archlang" }
       - { label: "Showcase gallery (repo)", url: "https://github.com/ChanMeng666/archlang-showcase" }
-      - { label: "One-take film repo (three.js)", url: "https://github.com/ChanMeng666/archlang-promo-threejs" }
+      - { label: "One-take film repo (three.js)", url: "https://github.com/ChanMeng666/film-archlang-one-take" }
     techStack: ["TypeScript 5.7 (ESM, zero runtime dependencies)", "Hand-written lexer + recursive-descent parser + expression evaluator", "tsup (build)", "Biome 2.5 (lint/format)", "Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression)", "Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF)", "LSP (hover/completion/rename/signature)", "VS Code extension (ChanMeng.archlang, TextMate grammar)", "Vite + CodeMirror 6 playground (100% client-side)", "VitePress docs", "GitHub Action (renders ```arch fences to images)"]
     metrics:
       - { label: "Commits (solo)",   value: "810 (803 by Chan + 7 automated dependency bumps) (2026-06-25 → 2026-09-13); sole engineer, built with AI coding agents", source: "https://github.com/ChanMeng666/archlang (git log)", asOf: "2026-09-13" }
@@ -2868,8 +2868,8 @@ projects:
     logo: /public/brands/a11y-loop-mark.svg
     extraLinks:
       - { label: "npm package", url: "https://www.npmjs.com/package/a11y-loop" }
-      - { label: "Launch film repo (huashu-motion)", url: "https://github.com/ChanMeng666/a11y-loop-promo-film" }
-      - { label: "Earlier film repo (Remotion)", url: "https://github.com/ChanMeng666/a11y-loop-promo-video" }
+      - { label: "Launch film repo (huashu-motion)", url: "https://github.com/ChanMeng666/film-a11y-loop-launch" }
+      - { label: "Earlier film repo (Remotion)", url: "https://github.com/ChanMeng666/film-a11y-loop-narrated" }
       - { label: "Benchmark results", url: "https://github.com/ChanMeng666/a11y-loop/blob/main/evals/benchmark-results.md" }
     techStack:
       - "Claude Code Skill (Agent Skills open standard)"
@@ -3006,7 +3006,7 @@ projects:
     priority: 105
     category: creative
     tagline: A 2:59 Remotion film for a11y-loop in which nothing on screen is mocked up — every page, terminal and number is captured from the real CLI by scripts in the repo, and an automated verify step gates the render
-    repoUrl: https://github.com/ChanMeng666/a11y-loop-promo-video
+    repoUrl: https://github.com/ChanMeng666/film-a11y-loop-narrated
     techStack:
       - "Remotion 4"
       - React
@@ -3339,7 +3339,7 @@ projects:
     name: "October Rain · February Line — two code-drawn music videos"
     category: creative
     tagline: "Two music videos for Chan's own songs, drawn entirely by code: a hand-inked cel film and a one-line animation, rendered frame by frame with headless Chrome and ffmpeg."
-    repoUrl: https://github.com/ChanMeng666/october-rain-february-line-mv
+    repoUrl: https://github.com/ChanMeng666/mv-october-rain-february-line
     roles: ["Director", "Creative Coder", "Songwriter"]
     techStack: ["JavaScript (Canvas 2D)", "Headless Chrome (puppeteer-core)", "ffmpeg", "Python", "faster-whisper", "simplex-noise", "Claude Code"]
     keywords:
@@ -3400,7 +3400,7 @@ projects:
     name: "Anti-Marriage Universe (反婚宇宙) — three code-drawn music videos"
     category: creative
     tagline: "Three music videos for Chan's album 《反婚宇宙》: one blind date seen three ways, in red paper-cut, 80s cel anime and risograph print, every frame drawn in code."
-    repoUrl: https://github.com/ChanMeng666/anti-marriage-universe-mv
+    repoUrl: https://github.com/ChanMeng666/mv-anti-marriage-universe
     roles: ["Director", "Creative Coder", "Songwriter"]
     techStack: ["JavaScript (Canvas 2D)", "Lemo-Opuscar style library", "Headless Chromium", "ffmpeg", "Python", "librosa", "faster-whisper", "Claude Code"]
     keywords:
@@ -3541,7 +3541,7 @@ projects:
     name: "A Coffee for One (独身主义的咖啡) — a code-drawn music video"
     category: creative
     tagline: "A music video for Chan's song 《独身主义的咖啡》, drawn entirely by code: Python paints the watercolour layers, a web page animates them with rain on glass, and headless Chrome and ffmpeg render it frame by frame."
-    repoUrl: https://github.com/ChanMeng666/solo-coffee-mv
+    repoUrl: https://github.com/ChanMeng666/mv-a-coffee-for-one
     roles: ["Director", "Creative Coder", "Songwriter"]
     techStack: ["Python", "NumPy", "OpenCV", "Pillow", "JavaScript (Canvas 2D)", "WebGL2", "Headless Chrome (puppeteer-core)", "ffmpeg", "faster-whisper", "librosa", "Claude Code"]
     keywords:
@@ -3615,7 +3615,7 @@ projects:
     name: "Save Me a Little of Today (把今天留一小块给我) — a code-drawn music video"
     category: creative
     tagline: "A music video for Chan's song 《把今天留一小块给我》, drawn entirely by code: Python paints the watercolour layers, a web page animates them with handwriting, rain on glass and sticky-note transitions, and headless Chrome and ffmpeg render it frame by frame."
-    repoUrl: https://github.com/ChanMeng666/a-little-of-today-mv
+    repoUrl: https://github.com/ChanMeng666/mv-save-me-a-little-of-today
     roles: ["Director", "Creative Coder", "Songwriter"]
     techStack: ["Python", "NumPy", "OpenCV", "Pillow", "JavaScript (Canvas 2D)", "WebGL2", "Headless Chrome (puppeteer-core)", "ffmpeg", "faster-whisper", "librosa", "Claude Code"]
     keywords:
@@ -3684,7 +3684,7 @@ projects:
     name: "Liu Zhongjing in Watercolour — fourteen code-drawn explainer films"
     category: creative
     tagline: "Fourteen short explainer films on the thought of Liu Zhongjing, drawn entirely by code: Python paints procedural watercolour layers, WebGL animates them with ink-bleed captions, and headless Chrome and ffmpeg render them frame by frame with scores played on recorded instruments."
-    repoUrl: https://github.com/ChanMeng666/lzj-watercolor-films
+    repoUrl: https://github.com/ChanMeng666/explainer-lzj-watercolour
     roles: ["Director", "Creative Coder", "Composer"]
     techStack: ["Python", "NumPy", "OpenCV", "SciPy", "JavaScript (Canvas 2D)", "WebGL2", "Headless Chrome (playwright-core)", "ffmpeg", "OpenCC", "Claude Code"]
     keywords:
@@ -3750,7 +3750,7 @@ projects:
     name: "Liu Zhongjing's History, in Maps — eleven code-drawn map documentaries"
     category: creative
     tagline: "Eleven animated map documentaries that retell the history of the Chinese mainland, the People's Republic and the world as Liu Zhongjing reads it, drawn entirely by code: a WebGL and Canvas globe built from Natural Earth data, rendered frame by frame in headless Chrome and scored on recorded instruments."
-    repoUrl: https://github.com/ChanMeng666/lzj-history-maps
+    repoUrl: https://github.com/ChanMeng666/explainer-lzj-history-maps
     roles: ["Director", "Creative Coder", "Composer"]
     techStack: ["JavaScript (Canvas 2D)", "WebGL", "d3-geo", "TopoJSON", "Natural Earth", "mapshaper", "Python", "NumPy", "SciPy", "Headless Chrome (playwright)", "ffmpeg", "Claude Code"]
     keywords:

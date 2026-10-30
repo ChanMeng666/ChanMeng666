@@ -11,25 +11,25 @@ and chanmeng.org/films; film ids are in `data/profile/46-films.yaml`.
 To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 `npm run stage:distribution` reads this file to download the films a post needs.
 
-## ChanMeng666/a-little-of-today-mv (public)
+## ChanMeng666/mv-save-me-a-little-of-today (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `films/today/out/video.mp4` | 500 | release `masters-2026-10` › `save-me-a-little-of-today-master-1080p.mp4` |
 
-## ChanMeng666/a11y-loop-promo-film (public)
+## ChanMeng666/film-a11y-loop-launch (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `out/2026-10-promo-film-v6.mp4` | 21 | release `v1.0.0` › `a11y-loop-launch-film-2026-10.mp4` (also the README video; SHA-256 checked 2026-10-20) |
 
-## ChanMeng666/a11y-loop-promo-video (public)
+## ChanMeng666/film-a11y-loop-narrated (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `out/a11y-loop-promo.mp4` | 12 | tracked in the repo |
 
-## ChanMeng666/ai-programming-teaching-promo (public)
+## ChanMeng666/film-ai-programming (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -38,7 +38,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/masters/Film-60-landscape.mp4` | 13 | release `masters-2026-10` › `Film-60-landscape.mp4` (also the README video) |
 | `out/masters/Film-60-portrait.mp4` | 16 | release `masters-2026-10` › `Film-60-portrait.mp4` |
 
-## ChanMeng666/anti-marriage-universe-mv (public)
+## ChanMeng666/mv-anti-marriage-universe (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -46,7 +46,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `ahua/ahua.mp4` | 187 | release `v1.0.0` › `ahua.mp4` |
 | `passerby/passerby.mp4` | 386 | release `v1.0.0` › `passerby.mp4` |
 
-## ChanMeng666/archcanvas-promo-remotion (public)
+## ChanMeng666/film-archcanvas-zoom-out (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -55,7 +55,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/archcanvas-zoom-out-2026-09_square_1080x1080.mp4` | 20 | release `zoom-out-v1` › `archcanvas-zoom-out-2026-09_square_1080x1080.mp4` |
 | `out/archcanvas-zoom-out-2026-09_vertical_1080x1920.mp4` | 24 | release `zoom-out-v1` › `archcanvas-zoom-out-2026-09_vertical_1080x1920.mp4` |
 
-## ChanMeng666/archcanvas-promo-studio (public)
+## ChanMeng666/film-archcanvas-studio (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -76,7 +76,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/masters/B-daylight-forward/archcanvas-studio-2026-09_60s_landscape_1920x1080.mp4` | 16 | release `masters-2026-10` › `B-daylight-forward__archcanvas-studio-2026-09_60s_landscape_1920x1080.mp4` |
 | `out/masters/B-daylight-forward/archcanvas-studio-2026-09_60s_vertical_1080x1920.mp4` | 16 | release `masters-2026-10` › `B-daylight-forward__archcanvas-studio-2026-09_60s_vertical_1080x1920.mp4` |
 
-## ChanMeng666/archcanvas-promo-video (private)
+## ChanMeng666/film-archcanvas-hero-and-shorts (private)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -95,25 +95,25 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `renders/s6-pay-per-result-16x9.mp4` | 1 | release `v1.0` › `s6-pay-per-result-16x9.mp4` |
 | `renders/s6-pay-per-result-9x16.mp4` | 1 | release `v1.0` › `s6-pay-per-result-9x16.mp4` |
 
-## ChanMeng666/archlang-demo-video (private)
+## ChanMeng666/film-archlang-narrated-demo (private)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `out/archlang-demo-1.36.0.mp4` | 39 | release `masters-2026-10` › `archlang-demo-1.36.0.mp4` |
 
-## ChanMeng666/archlang-promo (public)
+## ChanMeng666/film-archlang-playground (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `out/archlang-promo.mp4` | 46 | release `masters-2026-10` › `archlang-promo.mp4` (also the README video) |
 
-## ChanMeng666/archlang-promo-threejs (public)
+## ChanMeng666/film-archlang-one-take (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `out/archlang-promo.mp4` | 13 | release `v1.0.0` › `archlang-promo.mp4` (also `.html`, `soundtrack.wav`, `soundtrack.m4a`, `SHA256SUMS.txt`) |
 
-## ChanMeng666/chan-meng-promo-video (private)
+## ChanMeng666/film-chan-meng-brand (private)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -130,7 +130,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/sting/web-720p.mp4` | 1 | release `masters-2026-10` › `sting__web-720p.mp4` |
 | `out/sting/web-720p.webm` | 1 | release `masters-2026-10` › `sting__web-720p.webm` |
 
-## ChanMeng666/corde-promo-studio (private)
+## ChanMeng666/film-corde-mobile (private)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -139,7 +139,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/masters/corde-mobile_60s_landscape_1920x1080.mp4` | 62 | release `masters-2026-10` › `corde-mobile_60s_landscape_1920x1080.mp4` |
 | `out/masters/corde-mobile_60s_vertical_1080x1920.mp4` | 57 | release `masters-2026-10` › `corde-mobile_60s_vertical_1080x1920.mp4` |
 
-## ChanMeng666/eatropolis-promo-film (private)
+## ChanMeng666/film-eatropolis (private)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -150,7 +150,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/masters/A-synth-market-day/Eatropolis-60-Landscape-16x9.mp4` | 20 | release `masters-2026-10` › `A-synth-market-day__Eatropolis-60-Landscape-16x9.mp4` |
 | `out/masters/A-synth-market-day/Eatropolis-60-Portrait-9x16.mp4` | 11 | release `masters-2026-10` › `A-synth-market-day__Eatropolis-60-Portrait-9x16.mp4` |
 
-## ChanMeng666/echook-promo-studio (public)
+## ChanMeng666/film-echook-terminal (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -161,13 +161,13 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/masters/echook_60s_landscape_1920x1080.mp4` | 25 | release `masters-2026-10` › `echook_60s_landscape_1920x1080.mp4` (also the README video) |
 | `out/masters/echook_60s_vertical_1080x1920.mp4` | 25 | release `masters-2026-10` › `echook_60s_vertical_1080x1920.mp4` |
 
-## ChanMeng666/echook-promo-video (public)
+## ChanMeng666/film-echook-first (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `out/promo-video.mp4` | 13 | tracked in the repo |
 
-## ChanMeng666/gavigo-promo-film (private)
+## ChanMeng666/film-gavigo-ire (private)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -176,13 +176,13 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/masters/gavigo-ire-60s-landscape.mp4` | 21 | release `masters-2026-10` › `gavigo-ire-60s-landscape.mp4` |
 | `out/masters/gavigo-ire-60s-portrait.mp4` | 19 | release `masters-2026-10` › `gavigo-ire-60s-portrait.mp4` |
 
-## ChanMeng666/genlab-promo-studio (private)
+## ChanMeng666/film-genlab-how-it-works (private)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `out/masters/genlab-how-it-works_1920x1080.mp4` | 28 | release `masters-2026-10` › `genlab-how-it-works_1920x1080.mp4` |
 
-## ChanMeng666/lzj-history-maps (public)
+## ChanMeng666/explainer-lzj-history-maps (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -198,7 +198,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/world3.mp4` | 174 | release `masters-2026-10` › `world3-the-seed-bank.mp4` |
 | `out/world4.mp4` | 252 | release `masters-2026-10` › `world4-two-bulls-and-a-frog.mp4` |
 
-## ChanMeng666/lzj-watercolor-films (public)
+## ChanMeng666/explainer-lzj-watercolour (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -217,7 +217,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/film8.mp4` | 331 | release `masters-2026-10` › `film8-blood-reward.mp4` |
 | `out/film9.mp4` | 374 | release `masters-2026-10` › `film9-the-black-box.mp4` |
 
-## ChanMeng666/memory-amber-2022-mv (private)
+## ChanMeng666/mv-memory-amber-2022 (private)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -230,7 +230,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `films/07-sheet-metal/out/video.mp4` | 1169 | release `masters-2026-10` › `07-sheet-metal.mp4` |
 | `films/08-off-season/out/video.mp4` | 439 | release `masters-2026-10` › `08-off-season.mp4` |
 
-## ChanMeng666/october-rain-february-line-mv (public)
+## ChanMeng666/mv-october-rain-february-line (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -238,7 +238,7 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `output/二月的延长线.mp4` | 191 | release `v1.0.0` › `february-line.mp4` |
 | `output/十月的微雨.mp4` | 537 | release `v1.0.0` › `october-rain.mp4` |
 
-## ChanMeng666/she-sharp-promo-studio (private)
+## ChanMeng666/film-she-sharp (private)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
@@ -256,13 +256,13 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `out/she-sharp-lesmills-2026-09-03_square_1080x1080.mp4` | 10 | tracked in the repo |
 | `out/she-sharp-lesmills-2026-09-03_vertical_1080x1920.mp4` | 12 | tracked in the repo |
 
-## ChanMeng666/solo-coffee-mv (public)
+## ChanMeng666/mv-a-coffee-for-one (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `films/solo-coffee/out/video.mp4` | 679 | release `masters-2026-10` › `a-coffee-for-one-master-1080p.mp4` |
 
-## ChanMeng666/tamaiti-promo-studio (public)
+## ChanMeng666/film-tam-ai-ti (public)
 
 | Rendered to | MB | On GitHub |
 |---|---|---|

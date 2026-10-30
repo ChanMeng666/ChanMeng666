@@ -225,6 +225,13 @@ for (const f of profile.productFilms ?? []) {
   }
 }
 
+// film repos carry their kind in their name (Chan, 2026-10-31); an org's repo is not hers to name
+for (const r of allRepos) {
+  if (!r.repo.startsWith("ChanMeng666/") || r.archived === undefined) continue;
+  const name = r.repo.split("/")[1];
+  if (["promo-film", "music-video", "explainer"].includes(r.role) && !/^(film|mv|explainer)-/.test(name)) err(`repo ${r.repo}: a film repo is named film-*, mv-* or explainer-*`);
+}
+
 // open questions
 for (const q of [...(pub.openQuestions ?? []), ...(priv?.openQuestions ?? [])])
   for (const x of q.affects ?? []) if (!repoKeys.has(x)) err(`openQuestion ${q.id}: affects unknown repo ${x}`);

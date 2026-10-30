@@ -7,7 +7,7 @@ status: active
 kind: open-source-tool
 repos:
   - ChanMeng666/a11y-loop
-  - ChanMeng666/a11y-loop-promo-video
+  - ChanMeng666/film-a11y-loop-narrated
 live: https://www.npmjs.com/package/a11y-loop
 stack: ["Claude Code Skill (Agent Skills open standard)", "Node.js >= 20", Playwright, "axe-core 4.12", "WCAG 2.2 AA", JavaScript, "GitHub Actions CI"]
 stories: 7

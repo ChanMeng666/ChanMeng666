@@ -264,3 +264,6 @@ docs/ecosystem/lineage.yaml
 
 ## [2026-10-31] decide | One marketing calendar: every date moves to the private `chanmeng-marketing` repo, a daily task opens `/today`, one message may approve several posts shown in full, no unattended posting; `build-master-calendar.mjs` removed, film drafts moved there
 docs/STATE.md, CLAUDE.md, distribution/plan.yaml, distribution/README.md, package.json, scripts/build-distribution.mjs, docs/ecosystem/lineage.yaml
+
+## [2026-10-31] decide | Film repos renamed: 26 repos to `film-`, `mv-` and `explainer-` names by the table Chan confirmed; project ids unchanged; `check:ecosystem` guards the rule; YouTube descriptions keep the old addresses, which redirect
+docs/STATE.md, docs/ecosystem/lineage.yaml, docs/ecosystem/README.md, docs/film-masters.md, data/profile/, distribution/plan.yaml, scripts/check-ecosystem.mjs

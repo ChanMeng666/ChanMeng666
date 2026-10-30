@@ -42,6 +42,8 @@ carry.
 
 - **Agent skills (Chan, 2026-10-31).** A released skill's repo and skill share one name, `chanmeng-<what-it-does>`. The list is `data/profile/47-agent-skills.yaml`; `check:ecosystem` fails when a skill repo is missing from it or lacks the prefix.
 
+- **Film repo names (Chan, 2026-10-31).** `film-<project>-<what>`, `mv-<album or song>`, `explainer-<series>`. Project ids in the shards stay as they were, so an id and its repo name may differ: the join is `films[].repo` here and `repoUrl` in the shard.
+
 ## Maintenance
 
 When you create, archive, rename, transfer or delete a repo: update `lineage.yaml`

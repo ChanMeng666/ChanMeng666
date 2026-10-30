@@ -2533,7 +2533,7 @@ text-to-speech that reads the agent's actual reply aloud, and a
 is left. Now on v7.1.0 with 795 automated tests running on
 Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source
 under MIT; runs on the Python standard library with no extra
-dependencies. A sister repo, echook-promo-video, ships an
+dependencies. A sister repo, film-echook-first, ships an
 88-second product film built entirely in code.
 
 **Impact:** A notification system for AI coding assistants — Claude Code, Cursor, and Codex — that you install and set up just by talking to the AI in plain English. It plays sounds, reads the agent's reply aloud, warns you before you hit usage limits, and shows a live status bar.
@@ -2655,7 +2655,7 @@ explicitly names *claude-code-audio-hooks* among Chan's
 preserved IP — formal recognition by a commercial
 agentic-infrastructure firm that this is portfolio-grade
 engineering, not a hobby script. The sister repo
-echook-promo-video then closed the loop on the thesis: an
+film-echook-first then closed the loop on the thesis: an
 88-second 1080p product film composed entirely in code (React +
 Remotion, with Suno-generated background music and ElevenLabs
 voice and effects — no video-editing suites and no human voice
@@ -2668,7 +2668,7 @@ integration, engineered the three-editor synchronization
 pipeline (canonical sources synced into the plugin layout via
 `build-plugin.sh`, with CI enforcement), authored the Codex
 TOML feature-flag bootstrap pattern, and executed the 5.2.1
-rebrand without breaking compatibility. On echook-promo-video:
+rebrand without breaking compatibility. On film-echook-first:
 designed the nine-section narrative arc, built the reusable
 visual primitives (TypewriterText, Terminal, SoundWave,
 GreenGrid, CounterNumber, GlowText), orchestrated the Remotion
@@ -3415,15 +3415,15 @@ Seismophone sibling.
 - Perfume 3D Viewer [tier=archive · recency=deprecated · updated=2026-10-03]
 - [Touch the World, Talk to Code](https://github.com/ChanMeng666/makey-makey-iot-slides) [tier=secondary · recency=recent · updated=2026-07-04] -- live: https://chanmeng666.github.io/makey-makey-iot-slides/#1
 - [chanmeng-app-promo-studio](https://github.com/ChanMeng666/chanmeng-app-promo-studio) [tier=secondary · recency=historical · updated=2026-10-01]
-- [a11y-loop — Promo Video](https://github.com/ChanMeng666/a11y-loop-promo-video) [tier=secondary · recency=recent · updated=2026-08-05]
+- [a11y-loop — Promo Video](https://github.com/ChanMeng666/film-a11y-loop-narrated) [tier=secondary · recency=recent · updated=2026-08-05]
 - [ArchLang Showcase](https://github.com/ChanMeng666/archlang-showcase) [tier=secondary · recency=recent · updated=2026-10-02] -- live: https://archlang.uk/showcase
-- [October Rain · February Line — two code-drawn music videos](https://github.com/ChanMeng666/october-rain-february-line-mv) [tier=secondary · recency=recent · updated=2026-10-09]
-- [Anti-Marriage Universe (反婚宇宙) — three code-drawn music videos](https://github.com/ChanMeng666/anti-marriage-universe-mv) [tier=secondary · recency=recent · updated=2026-10-09]
+- [October Rain · February Line — two code-drawn music videos](https://github.com/ChanMeng666/mv-october-rain-february-line) [tier=secondary · recency=recent · updated=2026-10-09]
+- [Anti-Marriage Universe (反婚宇宙) — three code-drawn music videos](https://github.com/ChanMeng666/mv-anti-marriage-universe) [tier=secondary · recency=recent · updated=2026-10-09]
 - Memory Amber 2022 (记忆琥珀2022) — eight code-drawn music videos [tier=secondary · recency=recent · updated=2026-10-09]
-- [A Coffee for One (独身主义的咖啡) — a code-drawn music video](https://github.com/ChanMeng666/solo-coffee-mv) [tier=secondary · recency=recent · updated=2026-10-10]
-- [Save Me a Little of Today (把今天留一小块给我) — a code-drawn music video](https://github.com/ChanMeng666/a-little-of-today-mv) [tier=secondary · recency=recent · updated=2026-10-17]
-- [Liu Zhongjing in Watercolour — fourteen code-drawn explainer films](https://github.com/ChanMeng666/lzj-watercolor-films) [tier=secondary · recency=recent · updated=2026-10-17]
-- [Liu Zhongjing's History, in Maps — eleven code-drawn map documentaries](https://github.com/ChanMeng666/lzj-history-maps) [tier=secondary · recency=recent · updated=2026-10-17]
+- [A Coffee for One (独身主义的咖啡) — a code-drawn music video](https://github.com/ChanMeng666/mv-a-coffee-for-one) [tier=secondary · recency=recent · updated=2026-10-10]
+- [Save Me a Little of Today (把今天留一小块给我) — a code-drawn music video](https://github.com/ChanMeng666/mv-save-me-a-little-of-today) [tier=secondary · recency=recent · updated=2026-10-17]
+- [Liu Zhongjing in Watercolour — fourteen code-drawn explainer films](https://github.com/ChanMeng666/explainer-lzj-watercolour) [tier=secondary · recency=recent · updated=2026-10-17]
+- [Liu Zhongjing's History, in Maps — eleven code-drawn map documentaries](https://github.com/ChanMeng666/explainer-lzj-history-maps) [tier=secondary · recency=recent · updated=2026-10-17]
 - [Polygon Heartbeat (ポリゴン・ハートビート) — a technopop song produced in code](https://github.com/ChanMeng666/polygon-heartbeat) [tier=secondary · recency=active · updated=2026-10-19]
 **ml-research:**
 - Advanced Neural Network Applications [tier=archive · recency=historical · updated=2026-10-03]
@@ -4218,7 +4218,7 @@ delivery work once AI is in the toolchain. 87 registered, 51 attended.
   - **Mintlify** — since 2024, depth `intermediate`. Her Waka teaching site and other documentation sites.
   - **Docusaurus** — since 2024, depth `intermediate`. AI programming teaching platform versioned docs + FemTech Weekend site.
   - **DigitalOcean** — since 2024, depth `intermediate`. Pre-migration GAVIGO platform host.
-  - **Remotion** — since 2026, depth `intermediate`. Programmatic video for echook-promo-video and GAVIGO IRE explainers.
+  - **Remotion** — since 2026, depth `intermediate`. Programmatic video for film-echook-first and GAVIGO IRE explainers.
   - **Typst** — since 2026, depth `learning`. Personal CV; chanmeng-typst agent.
 
 

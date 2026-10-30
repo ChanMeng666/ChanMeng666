@@ -15,6 +15,7 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `audit-assets.mjs` | Audits /public assets referenced from the data + derived-product surfaces | `npm run audit` | npm |
 | `build-brand.mjs` | Build pipeline for the personal brand design system. | `npm run build:brand` | npm |
 | `build-distribution.mjs` | Emit distribution/status.yaml and distribution/calendar.md — where every finished film is published, where it is not yet, and what is scheduled. | `npm run build:distribution`, `npm run check:distribution`, `npm run calendar` | npm |
+| `build-echook-strip.mjs` | Build the feature strip the echook README shows. | `node scripts/build-echook-strip.mjs` | named in code: `scripts/cards/echook-strip.mjs` |
 | `build-films-data.mjs` | Emit dist/films.json — the films chanmeng.org/films shows. | `npm run build:films-data` | npm |
 | `build-kb-index.mjs` | Generate docs/INDEX.md and scripts/README.md: the map of what this repo knows and the index of its scripts. | `npm run build:index`, `npm run check:index` | npm |
 | `build-linkedin-json.mjs` | Generate linkedin/linkedin-profile.json from data/profile/*.yaml. | `npm run build:linkedin` | npm |
@@ -61,7 +62,7 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 
 ## Subdirectories
 
-- `scripts/cards/` (13 modules): One module per README project card, run by `npm run build:cards`
+- `scripts/cards/` (14 modules): One module per README project card, run by `npm run build:cards`
 - `scripts/lib/` (15 modules): Shared modules: the profile and brand loaders, copy surfaces, ATS and Typst parsers, triage pages
 - `scripts/lib/svg-card/` (4 modules): The animated-card kit: shell, glyph outlining, film frames, layout plan
 - `scripts/readme-art/` (5 modules): Banners, pills, the film wall and story art, run by `npm run build:art`

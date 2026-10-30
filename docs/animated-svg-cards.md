@@ -35,7 +35,7 @@ a phone scrolls a feed and an orchestrator's log reacts.
 | She Sharp | A Slack sync, the visitor assistant's tool call, mentor matching, the mailing list's first send, the agent skills | 180 KB | 27.0 s |
 | Eatropolis | The dish browser filtered by a click, the kitchen lineup, the concierge answering | 240 KB | 21.0 s |
 | FemTech Weekend | The language switch, the summit agenda by day, an application submitted and reviewed | 242 KB | 21.4 s |
-| echook | A terminal whose events raise a sound chip, a desktop toast and a phone notification; a mute by asking; the meters | 198 KB | 21.0 s |
+| echook | A terminal whose events raise a sound chip, a desktop toast and a phone notification; the status line following a subagent; a mute by asking | 196 KB | 22.0 s |
 | Google News MCP | A chat calls the tool, article cards drop into topic groups, country and language switch | 133 KB | 21.0 s |
 | AI Programming | The version switcher, a lesson's code block, the tutor citing its lessons, the capstone showcase | 171 KB | 27.6 s |
 | a11y-loop | Write, audit across five passes, fix, re-audit, with the checks automation could not judge | 233 KB | 27.4 s |

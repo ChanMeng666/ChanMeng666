@@ -89,7 +89,7 @@ Other knowledge files:
 | `docs/stories/tam-ai-ti.md` | 374 | Story. Tam-AI-Ti: Sole developer (full-stack, AI, deployment and maintenance) | preparing an interview or cover letter about this project |
 | `linkedin/README.md` | 92 | linkedin/ — LinkedIn: account register, profile copy and visuals | anything about LinkedIn posts, profile copy or visuals |
 | `media-kit/README.md` | 18 | Speaker & Media Kit | rebuilding the speaker and media kit PDF |
-| `scripts/README.md` | 67 | scripts/ | finding which script does what, and how to run it |
+| `scripts/README.md` | 68 | scripts/ | finding which script does what, and how to run it |
 | `suno/README.md` | 64 | suno/ — Suno: the register of both accounts | anything about Chan's Suno songs, playlists or the register |
 | `x/README.md` | 80 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
 | `x/x-strategy.md` | 531 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
@@ -245,6 +245,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/audit-assets.mjs` | Audits /public assets referenced from the data + derived-product surfaces | npm |
 | `scripts/build-brand.mjs` | Build pipeline for the personal brand design system. | npm |
 | `scripts/build-distribution.mjs` | Emit distribution/status.yaml and distribution/calendar.md — where every finished film is published, where it is not yet, and what is scheduled. | npm |
+| `scripts/build-echook-strip.mjs` | Build the feature strip the echook README shows. | named in code: `scripts/cards/echook-strip.mjs` |
 | `scripts/build-films-data.mjs` | Emit dist/films.json — the films chanmeng.org/films shows. | npm |
 | `scripts/build-kb-index.mjs` | Generate docs/INDEX.md and scripts/README.md: the map of what this repo knows and the index of its scripts. | npm |
 | `scripts/build-linkedin-json.mjs` | Generate linkedin/linkedin-profile.json from data/profile/*.yaml. | npm |

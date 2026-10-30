@@ -10,9 +10,9 @@ else (L2) is opened on demand, when its "read when" matches the task.
 
 | File | Lines | Read when |
 |---|---|---|
-| `CLAUDE.md` | 161 | always: the schema, hard rules and workflow |
-| `docs/STATE.md` | 114 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 257 | to see what changed recently; append an entry after a change |
+| `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
+| `docs/STATE.md` | 116 | always: Chan's decisions and display rules, before any edit |
+| `docs/LOG.md` | 266 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -34,6 +34,7 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
 | `data/profile/45-showcase.yaml` | 455 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
 | `data/profile/46-films.yaml` | 542 | filmCollections (8), films (67) | FILMS — every finished film Chan has made, one row per film … |
+| `data/profile/47-agent-skills.yaml` | 475 | agentSkills (30) | AGENT SKILLS — every agent skill Chan has made, one row per repo or product … |
 | `data/profile/50-references.yaml` | 577 | references (27) | REFERENCES — testimonials & recommendations … |
 | `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
 | `data/profile/70-linkedin.yaml` | 1938 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
@@ -46,10 +47,10 @@ Other knowledge files:
 |---|---|---|
 | `data/brand.yaml` | 682 | Chan Meng's personal visual + verbal design system. |
 | `data/voice.yaml` | 432 | VOICE — how the chanmeng.org digital twin sounds, and what it will not say … |
-| `docs/ecosystem/lineage.yaml` | 926 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
+| `docs/ecosystem/lineage.yaml` | 930 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
 | `docs/ecosystem/archlang-archcanvas.yaml` | 271 | ArchLang × ArchCanvas ecosystem catalog … |
 | `schema/brand.schema.json` | 417 | ChanMeng666 Brand System Schema … |
-| `schema/profile.schema.json` | 1441 | ChanMeng666 Profile Data Schema … |
+| `schema/profile.schema.json` | 1467 | ChanMeng666 Profile Data Schema … |
 
 ## Guidance docs
 
@@ -61,13 +62,13 @@ Other knowledge files:
 | `cv/cover-letter/README.md` | 22 | cv/cover-letter/ — the cover-letter kit | writing a cover letter |
 | `cv/cover-letter/TEMPLATE.md` | 91 | Cover-letter template — five moves | drafting a cover letter (the five-move skeleton) |
 | `cv/exports/README.md` | 26 | cv/exports/ — manual-upload deliverables | uploading a CV to a job portal, or touching cv/exports/ |
-| `distribution/README.md` | 162 | distribution/ — where each film is published, and the posting calendar | what is due to post; drafting or publishing a film post; editing plan.yaml |
+| `distribution/README.md` | 65 | distribution/ — where each film is published, and the posting calendar | what is due to post; drafting or publishing a film post; editing plan.yaml |
 | `docs/animated-svg-cards.md` | 402 | Animated SVG project cards: a field guide | making or changing a README project card |
 | `docs/answers/2026-10-16-entries-kept-off-visitor-surfaces.md` | 73 | Entries kept off visitor-facing surfaces | — |
 | `docs/answers/README.md` | 64 | Filed answers | — |
 | `docs/answers/TEMPLATE.md` | 25 | The question, shortened to a title | — |
 | `docs/brand/DESIGN.md` | 339 | Chan Meng — Personal Brand & Design System | drawing anything in the Caldera brand system (colour, type, voice) |
-| `docs/ecosystem/README.md` | 58 | Repo lineage (ecosystem map) | a repo is created, archived, renamed, transferred or deleted; editing lineage.yaml |
+| `docs/ecosystem/README.md` | 60 | Repo lineage (ecosystem map) | a repo is created, archived, renamed, transferred or deleted; editing lineage.yaml |
 | `docs/ecosystem/archlang-archcanvas.md` | 46 | ArchLang × ArchCanvas ecosystem map | working across the ArchLang / ArchCanvas repos |
 | `docs/film-masters.md` | 274 | Film masters: where each one lives | — |
 | `docs/github-theme-aware-assets.md` | 31 | Theme-aware visual assets — this repo's status | an image may break on GitHub's light or dark canvas |
@@ -89,7 +90,7 @@ Other knowledge files:
 | `docs/stories/tam-ai-ti.md` | 374 | Story. Tam-AI-Ti: Sole developer (full-stack, AI, deployment and maintenance) | preparing an interview or cover letter about this project |
 | `linkedin/README.md` | 92 | linkedin/ — LinkedIn: account register, profile copy and visuals | anything about LinkedIn posts, profile copy or visuals |
 | `media-kit/README.md` | 18 | Speaker & Media Kit | rebuilding the speaker and media kit PDF |
-| `scripts/README.md` | 68 | scripts/ | finding which script does what, and how to run it |
+| `scripts/README.md` | 67 | scripts/ | finding which script does what, and how to run it |
 | `suno/README.md` | 64 | suno/ — Suno: the register of both accounts | anything about Chan's Suno songs, playlists or the register |
 | `x/README.md` | 80 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
 | `x/x-strategy.md` | 531 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
@@ -111,7 +112,7 @@ Rules in `.claude/rules/` load when a file matching their `paths:` is touched.
 | Rule | Lines | Applies to | Purpose |
 |---|---|---|---|
 | `.claude/rules/cv.md` | 33 | `cv/**` | Rules for the CVs and cover letters |
-| `.claude/rules/data-profile.md` | 82 | `data/profile/**` | Rules for the profile shards |
+| `.claude/rules/data-profile.md` | 83 | `data/profile/**` | Rules for the profile shards |
 | `.claude/rules/projects.md` | 47 | `data/profile/20-projects-flagship.yaml`, `data/profile/21-projects-oss-primary.yaml`, `data/profile/22-projects-oss-webapps.yaml`, `data/profile/23-projects-oss-more.yaml`, `data/profile/60-network.yaml`, `data/profile/90-meta.yaml` | Rules for projects and the README buckets |
 | `.claude/rules/readme-art.md` | 40 | `scripts/cards/**`, `scripts/readme-art/**`, `scripts/build-readme-cards.mjs`, `scripts/build-readme-art.mjs`, `public/cards/**`, `public/readme/**`, `templates/**` | Rules for README cards, banners, pills and templates |
 | `.claude/rules/recognition-linkedin.md` | 38 | `data/profile/30-recognition.yaml`, `data/profile/70-linkedin.yaml`, `data/profile/80-events.yaml` | Rules for awards, publications, LinkedIn copy and events |
@@ -171,7 +172,6 @@ Local-only overlays and working files (gitignored; may be absent on this machine
 - `linkedin/*.private.yaml`, `linkedin/capture/*.private.json`: LinkedIn impressions
 - `distribution/drafts/`: Draft post text not yet approved
 - `distribution/_staging/`: Staged video files
-- `distribution/master-calendar.md`: The merged calendar (`npm run calendar`)
 
 ## Scripts
 
@@ -199,7 +199,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `build:video-data` | `node scripts/build-video-data.mjs` |
 | `build:wiki` | `node scripts/build-wiki.mjs` |
 | `build:x` | `node scripts/build-x-register.mjs` |
-| `calendar` | `node scripts/build-distribution.mjs && node scripts/build-master-calendar.mjs` |
+| `calendar` | `node scripts/build-distribution.mjs && node ../chanmeng-marketing/scripts/cal.mjs today` |
 
 ### Check
 
@@ -252,7 +252,6 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/build-linkedin-md.mjs` | Generate human-readable markdown companions from linkedin/linkedin-profile.json. | npm |
 | `scripts/build-linkedin-register.mjs` | Build the LinkedIn post registers — every post and repost on each LinkedIn page Chan runs — from the last capture of the live page. | npm |
 | `scripts/build-llms-twin.mjs` | Emit dist/llms-twin.txt, the knowledge text of the chanmeng.org digital twin. | npm |
-| `scripts/build-master-calendar.mjs` | Write distribution/master-calendar.md — every posting calendar Chan runs, merged into one view by date: the film schedule (distribution/plan.yaml) and the calendars named under `otherCalendars` there (today: the… | npm |
 | `scripts/build-product-pills.mjs` | Draw link pills for a product repository's README, in the same capsule the profile README uses (scripts/readme-art/pills.mjs). | run by hand; named in `docs/STATE.md` |
 | `scripts/build-readme-art.mjs` | Build the README's own artwork (public/readme/*.svg): the hero, the section strips, the footer and the link pills. | npm |
 | `scripts/build-readme-cards.mjs` | Build the animated project cards for the README (public/cards/*.svg). | npm |

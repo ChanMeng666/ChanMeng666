@@ -22,7 +22,6 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `build-linkedin-md.mjs` | Generate human-readable markdown companions from linkedin/linkedin-profile.json. | `npm run build:linkedin` | npm |
 | `build-linkedin-register.mjs` | Build the LinkedIn post registers — every post and repost on each LinkedIn page Chan runs — from the last capture of the live page. | `npm run build:linkedin-register`, `npm run check:linkedin-register` | npm |
 | `build-llms-twin.mjs` | Emit dist/llms-twin.txt, the knowledge text of the chanmeng.org digital twin. | `npm run build:twin`, `npm run check:twin` | npm |
-| `build-master-calendar.mjs` | Write distribution/master-calendar.md — every posting calendar Chan runs, merged into one view by date: the film schedule (distribution/plan.yaml) and the calendars named under `otherCalendars` there (today: the… | `npm run calendar` | npm |
 | `build-product-pills.mjs` | Draw link pills for a product repository's README, in the same capsule the profile README uses (scripts/readme-art/pills.mjs). | `node scripts/build-product-pills.mjs` | run by hand; named in `docs/STATE.md` |
 | `build-readme-art.mjs` | Build the README's own artwork (public/readme/*.svg): the hero, the section strips, the footer and the link pills. | `npm run build:art` | npm |
 | `build-readme-cards.mjs` | Build the animated project cards for the README (public/cards/*.svg). | `npm run build:cards` | npm |

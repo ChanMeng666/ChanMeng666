@@ -255,3 +255,12 @@ linkedin/, x/, distribution/plan.yaml, distribution/status.yaml, distribution/ca
 
 ## [2026-10-31] change | LinkedIn followers raised from 6,502 to 6,691 (live profile, register sync 2026-10-31) under the historical-maximum rule; CVs rebuilt and chanmeng.org synced
 data/profile/00-basics.yaml, cv/sections/header.typ, templates/brand-system.html.hbs
+
+## [2026-10-31] decide | Agent skills: 15 repos and their skills renamed to `chanmeng-<what-it-does>`; product skills keep the product's name; project ids unchanged
+docs/STATE.md, data/profile/47-agent-skills.yaml (new), docs/ecosystem/lineage.yaml, data/profile/23-projects-oss-more.yaml, schema/profile.schema.json, scripts/check-ecosystem.mjs, scripts/lint-kb.mjs
+
+## [2026-10-31] fix | archlang-promo-threejs: positioning, stage and showcase filled as proposals (delegated by Chan); studio-loft X post found never published and corrected in archcanvas-growth
+docs/ecosystem/lineage.yaml
+
+## [2026-10-31] decide | One marketing calendar: every date moves to the private `chanmeng-marketing` repo, a daily task opens `/today`, one message may approve several posts shown in full, no unattended posting; `build-master-calendar.mjs` removed, film drafts moved there
+docs/STATE.md, CLAUDE.md, distribution/plan.yaml, distribution/README.md, package.json, scripts/build-distribution.mjs, docs/ecosystem/lineage.yaml

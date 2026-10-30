@@ -121,7 +121,6 @@ const LOCAL_ONLY = [
   ["linkedin/*.private.yaml, linkedin/capture/*.private.json", "LinkedIn impressions"],
   ["distribution/drafts/", "Draft post text not yet approved"],
   ["distribution/_staging/", "Staged video files"],
-  ["distribution/master-calendar.md", "The merged calendar (`npm run calendar`)"],
 ];
 
 // Subdirectories of scripts/, one line each.

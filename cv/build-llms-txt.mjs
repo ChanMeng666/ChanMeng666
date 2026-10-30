@@ -342,7 +342,7 @@ W(
   `- gradient-svg-generator (${gradientSvg.url}) — animated-SVG templates for ` +
     `READMEs · ${metric(gradientSvg, "Template count").split(" (")[0]}`,
 );
-W(`- typst-claude-skill (${proj("typst-claude-skill").repoUrl}) — a Typst skill for Claude Code (typesets this CV)`);
+W(`- chanmeng-typst (${proj("typst-claude-skill").repoUrl}) — a Typst skill for Claude Code (typesets this CV)`);
 W(`- ArchLang (${archlangP.repoUrl}) — the floor-plan language above, packaged as a standalone dev tool: .arch source in, dimensioned SVG/DXF/PDF out; agent-native CLI + LSP + VS Code extension (details under Selected work)`);
 W(`- ArchCanvas (${archcanvasP.url}) — listed here as the reference example of building a commercial product directly on a self-authored open-source engine (full write-up under Selected work)`);
 

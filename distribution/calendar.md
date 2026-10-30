@@ -11,49 +11,49 @@ A post made after those dates is not known here until its register is synced.
 
 ## The schedule
 
-### Week of 2026-10-19
-
-| Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
-|---|---|---|---|---|---|---|---|
-| 2026-10-22 | Thursday | Eatropolis website film | LinkedIn (personal) | 60 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_60s_16x9.mp4` | `drafts/eatropolis-film.yaml#linkedin` | draft |
-| 2026-10-22 | Thursday | Eatropolis website film | X | 30 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_30s_16x9.mp4` | `drafts/eatropolis-film.yaml#x` | draft |
-
-### Week of 2026-10-26
-
-| Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
-|---|---|---|---|---|---|---|---|
-| 2026-10-27 | Tuesday | echook film | LinkedIn (personal) | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#linkedin` | draft |
-| 2026-10-27 | Tuesday | echook film | X | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#x` | draft |
-| 2026-10-29 | Thursday | She Sharp product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/04-she-sharp-film/she-sharp_60s_16x9.mp4` | `drafts/she-sharp-film.yaml#linkedin` | draft |
-| 2026-10-29 | Thursday | She Sharp product film | X | 30 s, 16:9 | `_staging/04-she-sharp-film/she-sharp_30s_16x9.mp4` | `drafts/she-sharp-film.yaml#x` | draft |
-
 ### Week of 2026-11-02
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-11-03 | Tuesday | Tam-AI-Ti product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/05-tam-ai-ti-film/tam-ai-ti_60s_16x9.mp4` | `drafts/tam-ai-ti-film.yaml#linkedin` | draft |
-| 2026-11-03 | Tuesday | Tam-AI-Ti product film | X | 30 s, 16:9 | `_staging/05-tam-ai-ti-film/tam-ai-ti_30s_16x9.mp4` | `drafts/tam-ai-ti-film.yaml#x` | draft |
-| 2026-11-05 | Thursday | CORDE Mobile product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/06-corde-mobile-film/corde-mobile_60s_16x9.mp4` | `drafts/corde-mobile-film.yaml#linkedin` | draft |
-| 2026-11-05 | Thursday | CORDE Mobile product film | X | 30 s, 16:9 | `_staging/06-corde-mobile-film/corde-mobile_30s_16x9.mp4` | `drafts/corde-mobile-film.yaml#x` | draft |
+| 2026-11-03 | Tuesday | Eatropolis website film | LinkedIn (personal) | 60 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_60s_16x9.mp4` | `drafts/eatropolis-film.yaml#linkedin` | draft |
+| 2026-11-03 | Tuesday | Eatropolis website film | X | 30 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_30s_16x9.mp4` | `drafts/eatropolis-film.yaml#x` | draft |
+| 2026-11-05 | Thursday | echook film | LinkedIn (personal) | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#linkedin` | draft |
+| 2026-11-05 | Thursday | echook film | X | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#x` | draft |
 
 ### Week of 2026-11-09
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-11-10 | Tuesday | AI programming school product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_60s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#linkedin` | draft |
-| 2026-11-10 | Tuesday | AI programming school product film | X | 30 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_30s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#x` | draft |
-| 2026-11-12 | Thursday | a11y-loop launch film | X | 64 s, 16:9, as a YouTube link | none (link post) | `drafts/a11y-loop-launch-film.yaml#x` | draft |
-
-- a11y-loop launch film: The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (the LinkedIn file is staged); the draft links YouTube
+| 2026-11-10 | Tuesday | She Sharp product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/04-she-sharp-film/she-sharp_60s_16x9.mp4` | `drafts/she-sharp-film.yaml#linkedin` | draft |
+| 2026-11-10 | Tuesday | She Sharp product film | X | 30 s, 16:9 | `_staging/04-she-sharp-film/she-sharp_30s_16x9.mp4` | `drafts/she-sharp-film.yaml#x` | draft |
+| 2026-11-12 | Thursday | Tam-AI-Ti product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/05-tam-ai-ti-film/tam-ai-ti_60s_16x9.mp4` | `drafts/tam-ai-ti-film.yaml#linkedin` | draft |
+| 2026-11-12 | Thursday | Tam-AI-Ti product film | X | 30 s, 16:9 | `_staging/05-tam-ai-ti-film/tam-ai-ti_30s_16x9.mp4` | `drafts/tam-ai-ti-film.yaml#x` | draft |
 
 ### Week of 2026-11-16
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-11-17 | Tuesday | GAVIGO IRE product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#linkedin` | draft |
-| 2026-11-17 | Tuesday | GAVIGO IRE product film | X | 30 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#x` | draft |
-| 2026-11-19 | Thursday | She Sharp × Les Mills, “No Pain, All Gain” | LinkedIn (personal) | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#linkedin` | draft |
-| 2026-11-19 | Thursday | She Sharp × Les Mills, “No Pain, All Gain” | X | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#x` | draft |
+| 2026-11-17 | Tuesday | CORDE Mobile product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/06-corde-mobile-film/corde-mobile_60s_16x9.mp4` | `drafts/corde-mobile-film.yaml#linkedin` | draft |
+| 2026-11-17 | Tuesday | CORDE Mobile product film | X | 30 s, 16:9 | `_staging/06-corde-mobile-film/corde-mobile_30s_16x9.mp4` | `drafts/corde-mobile-film.yaml#x` | draft |
+| 2026-11-19 | Thursday | AI programming school product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_60s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#linkedin` | draft |
+| 2026-11-19 | Thursday | AI programming school product film | X | 30 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_30s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#x` | draft |
+
+### Week of 2026-11-23
+
+| Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
+|---|---|---|---|---|---|---|---|
+| 2026-11-24 | Tuesday | a11y-loop launch film | X | 64 s, 16:9, as a YouTube link | none (link post) | `drafts/a11y-loop-launch-film.yaml#x` | draft |
+| 2026-11-26 | Thursday | GAVIGO IRE product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#linkedin` | draft |
+| 2026-11-26 | Thursday | GAVIGO IRE product film | X | 30 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#x` | draft |
+
+- a11y-loop launch film: The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (the LinkedIn file is staged); the draft links YouTube
+
+### Week of 2026-11-30
+
+| Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
+|---|---|---|---|---|---|---|---|
+| 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | LinkedIn (personal) | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#linkedin` | draft |
+| 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | X | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#x` | draft |
 
 - She Sharp × Les Mills, “No Pain, All Gain”: Optional: the event has passed. Post it as a piece of craft, or mark it skipped
 - She Sharp × Les Mills, “No Pain, All Gain”: Optional, as above
@@ -71,14 +71,14 @@ Scheduled in another calendar:
 |---|---|---|---|---|---|---|
 | ArchCanvas studio film | published 2026-09-21 | published 2026-10-07 | published | published 2026-09-21 | published 2026-09-21 | published 2026-09-21 |
 | ArchLang film | published 2026-10-06 | — | published | to do (other calendar) | to do (other calendar) | — |
-| echook film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-10-27 | planned 2026-10-27 | — |
-| a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | planned 2026-11-12 | — |
-| GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-17 | planned 2026-11-17 | — |
-| CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-05 | planned 2026-11-05 | — |
-| She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-10-29 | planned 2026-10-29 | — |
-| Tam-AI-Ti product film | published 2026-10-06 | published 2026-10-06 | published | planned 2026-11-03 | planned 2026-11-03 | — |
-| Eatropolis website film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-10-22 | planned 2026-10-22 | — |
-| AI programming school product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-10 | planned 2026-11-10 | — |
+| echook film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-05 | planned 2026-11-05 | — |
+| a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | planned 2026-11-24 | — |
+| GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-26 | planned 2026-11-26 | — |
+| CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-17 | planned 2026-11-17 | — |
+| She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-10 | planned 2026-11-10 | — |
+| Tam-AI-Ti product film | published 2026-10-06 | published 2026-10-06 | published | planned 2026-11-12 | planned 2026-11-12 | — |
+| Eatropolis website film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-03 | planned 2026-11-03 | — |
+| AI programming school product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-19 | planned 2026-11-19 | — |
 | ArchCanvas, the 92-second film | published 2026-10-19 | — | published | — | — | — |
 | Talk to your plan | published 2026-10-19 | — | published | — | — | — |
 | The check | published 2026-10-19 | — | published | — | — | — |
@@ -92,7 +92,7 @@ Scheduled in another calendar:
 | ArchLang one-take film | published 2026-10-23 | — | published | published 2026-10-24 | published 2026-10-24 | — |
 | ArchLang narrated demo | — | — | — | — | — | — |
 | GenLAB Career Academy, how it works | — | — | — | — | — | — |
-| She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | planned 2026-11-19 | planned 2026-11-19 | — |
+| She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | planned 2026-12-01 | planned 2026-12-01 | — |
 | Chan Meng, 64-second video business card | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng monkey, brand sting | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng, showreel | published 2026-10-09 | — | published | published 2026-10-20 | published 2026-10-20 | — |

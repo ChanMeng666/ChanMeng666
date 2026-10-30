@@ -27,5 +27,5 @@ Each folder's `README.md` is the full rulebook; read it first. What follows hold
 ## Posting and distribution
 - What is posted on a platform is Chan's to change. Claude never deletes or edits a published post, answers other people or changes a setting.
 - Posting through her Chrome follows the rule in `CLAUDE.md`; each post and each platform needs its own yes (`docs/STATE.md`, Posting through Chrome row). Steps: `distribution/README.md` § Running the calendar.
-- In `distribution/`, edit only `plan.yaml`, then run `npm run calendar`. It also merges the ArchCanvas calendar into the local `master-calendar.md`.
-- `distribution/drafts/`, `distribution/_staging/` and `distribution/master-calendar.md` are local and gitignored. A commit is a publication: unapproved draft text is never committed.
+- Every date lives in the private `chanmeng-marketing/calendar.yaml`; `cal.mjs export` writes the film rows into `plan.yaml`. In `distribution/`, edit `plan.yaml` for policy and `posted`, then run `npm run build:distribution`.
+- Draft text lives in the private `chanmeng-marketing` repo, never here: a commit to this repo is a publication. `distribution/_staging/` is local and gitignored.

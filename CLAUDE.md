@@ -50,6 +50,7 @@ when you touch matching files.
 | `40-skills` | skills, domains, languages, interests |
 | `45-showcase` | showcaseCapabilities, showcase, productFilms |
 | `46-films` | filmCollections, films (source of chanmeng.org/films; read its header first) |
+| `47-agent-skills` | agentSkills (every skill she has made; read it for any skill question) |
 | `50-references` | references |
 | `60-network` | organizations, collaborators |
 | `70-linkedin` | linkedin (curated profile copy) |
@@ -142,8 +143,10 @@ badges.
   YouTube are in `x/`, `linkedin/`, `suno/`, `youtube/`; film distribution is in
   `distribution/`. Read the register before answering anything about a
   platform. What is posted there is Chan's to change: ask first.
-- **Posting through Chrome** happens only after Chan has approved the exact
-  text and said yes for that post.
+- **Marketing** runs from the private repo `chanmeng-marketing`: `calendar.yaml`
+  is the only calendar, `resources.yaml` the map, `/today` the daily run.
+- **Posting through Chrome** happens only after Chan has seen the exact text
+  and said yes in the chat that day.
 - **Repo lineage**: `docs/ecosystem/lineage.yaml` (sensitive repos only in the
   gitignored `lineage.private.yaml`). When a repo is created, archived,
   renamed, transferred or deleted, update it and run

@@ -465,7 +465,7 @@
   v(1fr)
   craft-entry("SEO & GEO", "Surfaced by Claude, confirmed by the founder",
     [When Engram's founder asked Claude Code to find an AI architect, it surfaced me. The public footprint it read — llms.txt, JSON-LD and an open-source record, all generated from one data source — is built for exactly that reader.],
-    facts: ("4,264 impressions", "llms.txt + JSON-LD", "geo-markdown-mirror skill"))
+    facts: ("4,264 impressions", "llms.txt + JSON-LD", "chanmeng-geo-markdown-mirror skill"))
   grid(columns: (128pt, 1fr), column-gutter: 22pt, align: (left + top, left + horizon),
     craft-top("/evidence/src/seo-geo/engram-founder-linkedin-post.jpg", 190pt, 1512 / 700),
     block(above: 0pt, below: 0pt, breakable: false,

@@ -18,7 +18,7 @@
 #   - A post still to make: `schedule` below.
 #
 # This repo is public. Draft post text is NOT kept in a tracked file: it lives
-# in the gitignored distribution/drafts/ until Chan has posted it, after which
+# in the private chanmeng-marketing repo until Chan has posted it, after which
 # the X or LinkedIn register holds the published text. The video files staged
 # for upload live in the gitignored distribution/_staging/.
 # =============================================================================
@@ -38,14 +38,6 @@ platforms:
 constraints:
   x: { maxVideoSeconds: 140, maxChars: 280, urlChars: 23, editable: false, note: "No Premium on the account: a film longer than 140 s goes up as a YouTube link" }
   linkedin: { linkPlacement: first-comment, note: "Upload the video natively; put links in the first comment" }
-
-# Other posting calendars, merged with the film schedule into the local
-# master-calendar.md by `npm run calendar`. Each stays the authority on its own
-# dates and checkboxes; `path` is under the lineage localRoot.
-otherCalendars:
-  - id: archcanvas-growth
-    label: ArchCanvas
-    path: archcanvas-growth/marketing/content/calendar.md
 
 # Which platforms a kind of film is meant for. First matching rule wins.
 # `reason` is shown wherever a platform is not targeted.
@@ -120,31 +112,32 @@ posted:
 # Posts still to make. One row per post. Two films a week (Chan, 2026-10-12),
 # on Tuesday and Thursday: LinkedIn's Monday, Wednesday and Friday belong to
 # the ArchCanvas calendar. X goes out the same day as LinkedIn.
-#   status: draft     text exists in distribution/drafts/, not yet approved
+#   status: draft     text exists in chanmeng-marketing/drafts/, not yet approved
 #           approved  Chan approved that exact text
 #           posted    live; move the row to `posted` above once the register
 #                     has the post (run the x-sync / linkedin-sync skill)
 #           skipped   decided against; keep the row and say why in `note`
 #   asset:  file under distribution/_staging/ (see README for how it is filled)
-#   draft:  file under distribution/drafts/ and the key inside it
+#   draft:  file under chanmeng-marketing/drafts/ and the key inside it
+# GENERATED from chanmeng-marketing/calendar.yaml (node scripts/cal.mjs export). Do not edit dates here.
 schedule:
-  - { date: "2026-10-22", film: eatropolis-film, platform: linkedin, cut: "60 s, 16:9", asset: "02-eatropolis-film/eatropolis_60s_16x9.mp4", draft: "eatropolis-film.yaml#linkedin", status: draft }
-  - { date: "2026-10-22", film: eatropolis-film, platform: x, cut: "30 s, 16:9", asset: "02-eatropolis-film/eatropolis_30s_16x9.mp4", draft: "eatropolis-film.yaml#x", status: draft }
-  - { date: "2026-10-27", film: echook-film, platform: linkedin, cut: "60 s, 16:9", asset: "03-echook-film/echook_60s_16x9.mp4", draft: "echook-film.yaml#linkedin", status: draft }
-  - { date: "2026-10-27", film: echook-film, platform: x, cut: "60 s, 16:9", asset: "03-echook-film/echook_60s_16x9.mp4", draft: "echook-film.yaml#x", status: draft }
-  - { date: "2026-10-29", film: she-sharp-film, platform: linkedin, cut: "60 s, 16:9", asset: "04-she-sharp-film/she-sharp_60s_16x9.mp4", draft: "she-sharp-film.yaml#linkedin", status: draft }
-  - { date: "2026-10-29", film: she-sharp-film, platform: x, cut: "30 s, 16:9", asset: "04-she-sharp-film/she-sharp_30s_16x9.mp4", draft: "she-sharp-film.yaml#x", status: draft }
-  - { date: "2026-11-03", film: tam-ai-ti-film, platform: linkedin, cut: "60 s, 16:9", asset: "05-tam-ai-ti-film/tam-ai-ti_60s_16x9.mp4", draft: "tam-ai-ti-film.yaml#linkedin", status: draft }
-  - { date: "2026-11-03", film: tam-ai-ti-film, platform: x, cut: "30 s, 16:9", asset: "05-tam-ai-ti-film/tam-ai-ti_30s_16x9.mp4", draft: "tam-ai-ti-film.yaml#x", status: draft }
-  - { date: "2026-11-05", film: corde-mobile-film, platform: linkedin, cut: "60 s, 16:9", asset: "06-corde-mobile-film/corde-mobile_60s_16x9.mp4", draft: "corde-mobile-film.yaml#linkedin", status: draft }
-  - { date: "2026-11-05", film: corde-mobile-film, platform: x, cut: "30 s, 16:9", asset: "06-corde-mobile-film/corde-mobile_30s_16x9.mp4", draft: "corde-mobile-film.yaml#x", status: draft }
-  - { date: "2026-11-10", film: ai-programming-school-film, platform: linkedin, cut: "60 s, 16:9", asset: "07-ai-programming-school-film/ai-programming_60s_16x9.mp4", draft: "ai-programming-school-film.yaml#linkedin", status: draft }
-  - { date: "2026-11-10", film: ai-programming-school-film, platform: x, cut: "30 s, 16:9", asset: "07-ai-programming-school-film/ai-programming_30s_16x9.mp4", draft: "ai-programming-school-film.yaml#x", status: draft }
-  - { date: "2026-11-12", film: a11y-loop-launch-film, platform: x, cut: "64 s, 16:9, as a YouTube link", asset: null, draft: "a11y-loop-launch-film.yaml#x", status: draft, note: "The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (the LinkedIn file is staged); the draft links YouTube" }
-  - { date: "2026-11-17", film: gavigo-ire-film, platform: linkedin, cut: "60 s, 16:9", asset: "08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4", draft: "gavigo-ire-film.yaml#linkedin", status: draft }
-  - { date: "2026-11-17", film: gavigo-ire-film, platform: x, cut: "30 s, 16:9", asset: "08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4", draft: "gavigo-ire-film.yaml#x", status: draft }
-  - { date: "2026-11-19", film: she-sharp-lesmills-promo, platform: linkedin, cut: "30 s, 16:9", asset: "09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4", draft: "she-sharp-lesmills-promo.yaml#linkedin", status: draft, note: "Optional: the event has passed. Post it as a piece of craft, or mark it skipped" }
-  - { date: "2026-11-19", film: she-sharp-lesmills-promo, platform: x, cut: "30 s, 16:9", asset: "09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4", draft: "she-sharp-lesmills-promo.yaml#x", status: draft, note: "Optional, as above" }
+  - {date: '2026-11-03', film: eatropolis-film, platform: linkedin, cut: '60 s, 16:9', asset: 02-eatropolis-film/eatropolis_60s_16x9.mp4, draft: eatropolis-film.yaml#linkedin, status: draft}
+  - {date: '2026-11-03', film: eatropolis-film, platform: x, cut: '30 s, 16:9', asset: 02-eatropolis-film/eatropolis_30s_16x9.mp4, draft: eatropolis-film.yaml#x, status: draft}
+  - {date: '2026-11-05', film: echook-film, platform: linkedin, cut: '60 s, 16:9', asset: 03-echook-film/echook_60s_16x9.mp4, draft: echook-film.yaml#linkedin, status: draft}
+  - {date: '2026-11-05', film: echook-film, platform: x, cut: '60 s, 16:9', asset: 03-echook-film/echook_60s_16x9.mp4, draft: echook-film.yaml#x, status: draft}
+  - {date: '2026-11-10', film: she-sharp-film, platform: linkedin, cut: '60 s, 16:9', asset: 04-she-sharp-film/she-sharp_60s_16x9.mp4, draft: she-sharp-film.yaml#linkedin, status: draft}
+  - {date: '2026-11-10', film: she-sharp-film, platform: x, cut: '30 s, 16:9', asset: 04-she-sharp-film/she-sharp_30s_16x9.mp4, draft: she-sharp-film.yaml#x, status: draft}
+  - {date: '2026-11-12', film: tam-ai-ti-film, platform: linkedin, cut: '60 s, 16:9', asset: 05-tam-ai-ti-film/tam-ai-ti_60s_16x9.mp4, draft: tam-ai-ti-film.yaml#linkedin, status: draft}
+  - {date: '2026-11-12', film: tam-ai-ti-film, platform: x, cut: '30 s, 16:9', asset: 05-tam-ai-ti-film/tam-ai-ti_30s_16x9.mp4, draft: tam-ai-ti-film.yaml#x, status: draft}
+  - {date: '2026-11-17', film: corde-mobile-film, platform: linkedin, cut: '60 s, 16:9', asset: 06-corde-mobile-film/corde-mobile_60s_16x9.mp4, draft: corde-mobile-film.yaml#linkedin, status: draft}
+  - {date: '2026-11-17', film: corde-mobile-film, platform: x, cut: '30 s, 16:9', asset: 06-corde-mobile-film/corde-mobile_30s_16x9.mp4, draft: corde-mobile-film.yaml#x, status: draft}
+  - {date: '2026-11-19', film: ai-programming-school-film, platform: linkedin, cut: '60 s, 16:9', asset: 07-ai-programming-school-film/ai-programming_60s_16x9.mp4, draft: ai-programming-school-film.yaml#linkedin, status: draft}
+  - {date: '2026-11-19', film: ai-programming-school-film, platform: x, cut: '30 s, 16:9', asset: 07-ai-programming-school-film/ai-programming_30s_16x9.mp4, draft: ai-programming-school-film.yaml#x, status: draft}
+  - {date: '2026-11-24', film: a11y-loop-launch-film, platform: x, cut: '64 s, 16:9, as a YouTube link', asset: null, draft: a11y-loop-launch-film.yaml#x, status: draft, note: The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (the LinkedIn file is staged); the draft links YouTube}
+  - {date: '2026-11-26', film: gavigo-ire-film, platform: linkedin, cut: '60 s, 16:9', asset: 08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4, draft: gavigo-ire-film.yaml#linkedin, status: draft}
+  - {date: '2026-11-26', film: gavigo-ire-film, platform: x, cut: '30 s, 16:9', asset: 08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4, draft: gavigo-ire-film.yaml#x, status: draft}
+  - {date: '2026-12-01', film: she-sharp-lesmills-promo, platform: linkedin, cut: '30 s, 16:9', asset: 09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4, draft: she-sharp-lesmills-promo.yaml#linkedin, status: draft, note: 'Optional: the event has passed. Post it as a piece of craft, or mark it skipped'}
+  - {date: '2026-12-01', film: she-sharp-lesmills-promo, platform: x, cut: '30 s, 16:9', asset: 09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4, draft: she-sharp-lesmills-promo.yaml#x, status: draft, note: 'Optional, as above'}
 
 # Where each staged file comes from: path under distribution/_staging/ ->
 # path under D:/github_repository (the film repo's own render). The staged

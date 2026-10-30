@@ -208,6 +208,23 @@ for (const f of profile.productFilms ?? []) {
       else if (repo !== p.filmRepo) err(`films: the primary film of "${p.projectId}" is from ${repo}, productFilms shows ${p.filmRepo}`);
     }
 }
+// agent skills (data/profile/47-agent-skills.yaml): every live skill repo is listed, and a released skill carries Chan's id
+{
+  const rows = profile.agentSkills ?? [];
+  const listed = new Set(rows.map((r) => r.repo));
+  for (const r of allRepos)
+    if (r.role === "skill" && !r.archived && r.repo.startsWith("ChanMeng666/") && !listed.has(r.repo) && r.ownProject !== false)
+      err(`agent skills: ${r.repo} has role skill in the catalog but no row in 47-agent-skills.yaml`);
+  for (const r of rows) {
+    if (r.scope === "released") {
+      if (!r.id.startsWith("chanmeng-") || r.repo !== `ChanMeng666/${r.id}`) err(`agent skills: released row "${r.id}" must be named chanmeng-* and match its repo`);
+      for (const s of r.skills) if (!s.startsWith("chanmeng-")) err(`agent skills: "${r.id}" holds a skill without the prefix: ${s}`);
+    }
+    if (r.scope === "product" && !r.namingException) err(`agent skills: product row "${r.id}" needs namingException`);
+    if (r.projectId && !projectIds.has(r.projectId)) err(`agent skills: "${r.id}" projectId "${r.projectId}" not in data/profile projects`);
+  }
+}
+
 // open questions
 for (const q of [...(pub.openQuestions ?? []), ...(priv?.openQuestions ?? [])])
   for (const x of q.affects ?? []) if (!repoKeys.has(x)) err(`openQuestion ${q.id}: affects unknown repo ${x}`);

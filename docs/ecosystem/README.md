@@ -40,6 +40,8 @@ carry.
   is a shared build: douyin-mall (28 percent, team capstone),
   corde-mobile-application (57), eatropolis-website (74).
 
+- **Agent skills (Chan, 2026-10-31).** A released skill's repo and skill share one name, `chanmeng-<what-it-does>`. The list is `data/profile/47-agent-skills.yaml`; `check:ecosystem` fails when a skill repo is missing from it or lacks the prefix.
+
 ## Maintenance
 
 When you create, archive, rename, transfer or delete a repo: update `lineage.yaml`

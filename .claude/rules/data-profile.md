@@ -28,6 +28,7 @@ The one list is `REF_FIELDS` in `scripts/lint-kb.mjs`; every value must resolve 
 | `domains[]` | `evidenceProjectIds` / `evidenceWorkIds` | projects / work |
 | `showcase[]` | `capability` / `relatedWorkId` / `relatedProjectId` | showcaseCapabilities / work / projects |
 | `productFilms[]` | `projectId` / `showcaseId` | projects / showcase |
+| `agentSkills[]` | `projectId` | projects |
 | `filmCollections[]` | `projectId` | projects |
 | `films[]` | `projectId` / `collection` / `showcaseId` | projects / filmCollections / showcase |
 | `organizations[].meta.x_brand` | `relatedWorkId` / `relatedVolunteerId` / `relatedEducationId` / `relatedProjectId` | work / volunteer / education / projects |

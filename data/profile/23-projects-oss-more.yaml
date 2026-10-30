@@ -1261,7 +1261,7 @@ projects:
     category: ai-apps
     tagline: Professional PDF generation via Claude Code with 9 ready-to-use templates — academic papers, resumes, slides, invoices, technical reports; full Typst CLI reference with CJK support
     logo: /public/brands/typst-claude-skill-logo.svg
-    repoUrl: https://github.com/ChanMeng666/typst-claude-skill
+    repoUrl: https://github.com/ChanMeng666/chanmeng-typst
     techStack: [Typst, "Claude Code Skill"]
     status: live
     publicSummary: |
@@ -2564,7 +2564,7 @@ projects:
     priority: 88
     category: creative
     tagline: A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 25 motion/shape/filter primitives, 4 skills, 3 subagents, snapshot-tested
-    repoUrl: https://github.com/ChanMeng666/svg-animation-studio
+    repoUrl: https://github.com/ChanMeng666/chanmeng-svg-animation-studio
     techStack: ["Node.js", JavaScript, "Next.js 15", React, Vitest, SVGO, "Claude Code skills"]
     status: active
     startDate: "2026-06"
@@ -2710,8 +2710,8 @@ projects:
     # data only.
     relatedProjectIds: [logo-as-code-skill, chan-monkey-illustrations]
     extraLinks:
-      - { label: "Generalized skill (logo-as-code)", url: "https://github.com/ChanMeng666/logo-as-code-skill" }
-      - { label: "Illustration skill starring the mark", url: "https://github.com/ChanMeng666/chan-monkey-illustrations" }
+      - { label: "Generalized skill (logo-as-code)", url: "https://github.com/ChanMeng666/chanmeng-logo-as-code" }
+      - { label: "Illustration skill starring the mark", url: "https://github.com/ChanMeng666/chanmeng-monkey-illustrations" }
     techStack: ["Python 3", "Node.js", Sharp, SVG]
     status: production
     startDate: "2026-06"
@@ -2722,11 +2722,11 @@ projects:
     tier: secondary
     recency: historical
     lastUpdated: "2026-10-01"
-    name: geo-markdown-mirror
+    name: chanmeng-geo-markdown-mirror
     priority: 97
     category: ai-apps
     tagline: A Claude Code skill that generates plain-Markdown mirror pages of a site's key pages (the neon.com/pricing.md pattern) for GEO and one-click ask-AI — framework-aware for Next.js, Docusaurus, Vite SPAs, and static HTML
-    repoUrl: https://github.com/ChanMeng666/geo-markdown-mirror
+    repoUrl: https://github.com/ChanMeng666/chanmeng-geo-markdown-mirror
     techStack: ["Claude Code Skill", "Node.js", JavaScript, turndown, Playwright]
     status: active
     startDate: "2026-06"
@@ -2741,7 +2741,7 @@ projects:
     priority: 98
     category: ai-apps
     tagline: A Claude Code skill/plugin that scaffolds professional, agent-first GitHub repo documentation from one invocation — README, LICENSE, community-health files, issue/PR templates, AGENTS.md, and llms.txt
-    repoUrl: https://github.com/ChanMeng666/professional-repo-docs-skill
+    repoUrl: https://github.com/ChanMeng666/chanmeng-professional-repo-docs
     techStack: ["Claude Code Skill", "Node.js", "Markdown templates", "gh CLI"]
     status: active
     startDate: "2026-06"
@@ -2756,7 +2756,7 @@ projects:
     priority: 99
     category: ai-apps
     tagline: A Claude Code skill for rigorous dual-lens (editorial + technical) peer review of academic papers — outputs reviewer letters or audit reports as Markdown, Typst, and PDF, with a reusable CeTZ chart library and Mermaid diagram templates
-    repoUrl: https://github.com/ChanMeng666/academic-paper-review-skill
+    repoUrl: https://github.com/ChanMeng666/chanmeng-academic-paper-review
     techStack: ["Claude Code Skill", Typst, CeTZ, "Mermaid CLI", Python, Markdown]
     status: active
     startDate: "2026-06"
@@ -2767,11 +2767,11 @@ projects:
     tier: secondary
     recency: historical
     lastUpdated: "2026-10-01"
-    name: app-promo-studio
+    name: chanmeng-app-promo-studio
     priority: 100
     category: creative
     tagline: A Claude Code plugin that generates cross-platform app promo images (App Store, Google Play, iPad, Mac, web hero, social/OG) from screenshots and headlines — exact platform sizes in PNG/JPG/WebP/AVIF plus true vector SVG
-    repoUrl: https://github.com/ChanMeng666/app-promo-studio
+    repoUrl: https://github.com/ChanMeng666/chanmeng-app-promo-studio
     techStack: ["Claude Code Plugin", "Node.js", Playwright, sharp, "@resvg/resvg-js", "HTML/CSS", SVG]
     status: active
     startDate: "2026-06"
@@ -2782,11 +2782,11 @@ projects:
     tier: secondary
     recency: recent
     lastUpdated: "2026-07-04"
-    name: linkedin-post Skill
+    name: chanmeng-linkedin-post Skill
     priority: 101
     category: ai-apps
     tagline: A Claude Code skill that turns an idea into on-brand LinkedIn and X posts (story, idea, take, recap) and gives every post a visual — a Mermaid diagram or HTML layout rendered to PNG when the content has a shape, otherwise a hand-drawn brand-monkey illustration — handed back as one markdown file; it never opens LinkedIn or X
-    repoUrl: https://github.com/ChanMeng666/linkedin-post-skill
+    repoUrl: https://github.com/ChanMeng666/chanmeng-linkedin-post
     # Its monkey-illustration route (v2.3.0, 2026-10-20) calls the
     # chan-monkey-illustrations skill. Data link only: neither is on the README.
     relatedProjectIds: [chan-monkey-illustrations]
@@ -2800,11 +2800,11 @@ projects:
     tier: secondary
     recency: historical
     lastUpdated: "2026-10-01"
-    name: logo-as-code Skill
+    name: chanmeng-logo-as-code Skill
     priority: 102
     category: branding
     tagline: A Claude Code skill that turns a hand-drawn, sketched, or scanned logo into clean, reproducible code — fitting smooth cubic Bézier curves to the real outline to generate an editable SVG, color/layout variants, and PNG/ICO/favicon exports
-    repoUrl: https://github.com/ChanMeng666/logo-as-code-skill
+    repoUrl: https://github.com/ChanMeng666/chanmeng-logo-as-code
     # Generalized from chan-meng-personal-brand-logo — that repo is the worked
     # example this skill was extracted from, not a consumer of it.
     relatedProjectIds: [chan-meng-personal-brand-logo]
@@ -2820,11 +2820,11 @@ projects:
     tier: secondary
     recency: active
     lastUpdated: "2026-10-01"
-    name: readme-showcase
+    name: chanmeng-readme-showcase
     priority: 103
     category: ai-apps
     tagline: A Claude Code skill that captures polished screenshots and a demo GIF/MP4 of a deployed web project and embeds them into its GitHub README behind an idempotent SHOWCASE marker — Playwright capture, ffmpeg GIF pipeline, reproducible scenario files
-    repoUrl: https://github.com/ChanMeng666/readme-showcase
+    repoUrl: https://github.com/ChanMeng666/chanmeng-readme-showcase
     techStack: ["Claude Code Skill", "Node.js", "playwright-core", ffmpeg, "sharp-cli"]
     status: active
     startDate: "2026-06"
@@ -3040,11 +3040,11 @@ projects:
     tier: secondary
     recency: recent
     lastUpdated: "2026-10-01"
-    name: product-reality-check
+    name: chanmeng-product-reality-check
     priority: 106
     category: ai-apps
     tagline: A Claude agent skill for validation-first market research — competitor sweeps, prior-art audits of every "first/only" claim, bottom-up sizing from named buyers, a red-team kill memo and dated evidence gates, so a side project meets reality before months go into it
-    repoUrl: https://github.com/ChanMeng666/product-reality-check
+    repoUrl: https://github.com/ChanMeng666/chanmeng-product-reality-check
     techStack:
       - "Claude Code Skill (Agent Skills open standard)"
       - "Claude Code"
@@ -3086,7 +3086,7 @@ projects:
     priority: 107
     category: ai-apps
     tagline: A Claude Code skill that reads every message in a Slack workspace and proves nothing was missed — thread-aware catch-up, a daily or weekly DM digest, drafted replies, and two audit gates that fail differently. Zero dependencies, many workspaces from one install
-    repoUrl: https://github.com/ChanMeng666/slack-waterline-skill
+    repoUrl: https://github.com/ChanMeng666/chanmeng-slack-waterline
     techStack:
       - "Claude Code Skill (Agent Skills open standard)"
       - "Node.js 18+ (zero dependencies, plain fetch against the Slack Web API)"
@@ -3170,11 +3170,11 @@ projects:
     tier: secondary
     recency: recent
     lastUpdated: "2026-10-02"
-    name: readme-theme-assets-skill
+    name: chanmeng-readme-theme-assets
     priority: 109
     category: ai-apps
     tagline: A Claude Code skill that makes README images work in GitHub's light and dark themes — four techniques, a one-question decision between them, and three scripts that check the result against GitHub's own renderer rather than by eye
-    repoUrl: https://github.com/ChanMeng666/readme-theme-assets-skill
+    repoUrl: https://github.com/ChanMeng666/chanmeng-readme-theme-assets
     techStack:
       - "Claude Code Skill (Agent Skills open standard)"
       - "Node.js"
@@ -3810,7 +3810,7 @@ projects:
     priority: 110
     category: ai-apps
     tagline: An agent skill that gives any AI agent the judgment of a senior AI product manager — turn "we want an agent" into a verified problem, choose rules, workflow, RAG or agent for the right reasons, run POCs that try to fail, build evals that produce verdicts and pass launch gates with a way back
-    repoUrl: https://github.com/ChanMeng666/ai-product-manager-skill
+    repoUrl: https://github.com/ChanMeng666/chanmeng-ai-product-manager
     techStack:
       - "Claude Code Skill (Agent Skills open standard)"
       - "Claude Code plugin marketplace"
@@ -3905,7 +3905,7 @@ projects:
     priority: 112
     category: branding
     tagline: An agent skill that turns articles and LinkedIn / X posts into hand-drawn illustrations starring Chan's brand monkey — a fresh visual metaphor for each idea, with the logo sent to the image model as a reference so the character stays on-model
-    repoUrl: https://github.com/ChanMeng666/chan-monkey-illustrations
+    repoUrl: https://github.com/ChanMeng666/chanmeng-monkey-illustrations
     # Part of the personal-brand set. The character is the mark from
     # chan-meng-personal-brand-logo (the reference image is rendered from its
     # SVG); linkedin-post-skill calls this skill for its monkey-illustration
@@ -3914,7 +3914,7 @@ projects:
     relatedProjectIds: [chan-meng-personal-brand-logo, linkedin-post-skill]
     extraLinks:
       - { label: "The mark (personal-brand logo)", url: "https://github.com/ChanMeng666/chan-meng-personal-brand-logo" }
-      - { label: "Used by linkedin-post-skill", url: "https://github.com/ChanMeng666/linkedin-post-skill" }
+      - { label: "Used by linkedin-post-skill", url: "https://github.com/ChanMeng666/chanmeng-linkedin-post" }
     techStack: ["Claude Code Skill", "Codex Skill", "Python 3", "OpenAI gpt-image-2 (Images edit)", Pillow, NumPy]
     status: active
     startDate: "2026-10"

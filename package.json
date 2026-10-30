@@ -16,7 +16,7 @@
     "build:distribution": "node scripts/build-distribution.mjs",
     "check:distribution": "node scripts/build-distribution.mjs --check",
     "stage:distribution": "node scripts/stage-distribution.mjs",
-    "calendar": "node scripts/build-distribution.mjs && node scripts/build-master-calendar.mjs",
+    "calendar": "node scripts/build-distribution.mjs && node ../chanmeng-marketing/scripts/cal.mjs today",
     "build:collages": "node scripts/render-collages.mjs",
     "build:cards": "node scripts/build-readme-cards.mjs",
     "build:art": "node scripts/build-readme-art.mjs",

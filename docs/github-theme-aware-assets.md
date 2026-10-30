@@ -1,7 +1,7 @@
 # Theme-aware visual assets — this repo's status
 
 The technique and the verification scripts live in
-[readme-theme-assets-skill](https://github.com/ChanMeng666/readme-theme-assets-skill).
+[chanmeng-readme-theme-assets](https://github.com/ChanMeng666/chanmeng-readme-theme-assets).
 This file records only what applies here.
 
 ## Status

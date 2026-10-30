@@ -312,6 +312,32 @@
       }
     },
 
+    "agentSkills": {
+      "type": "array",
+      "description": "Every agent skill Chan has made (data/profile/47-agent-skills.yaml).",
+      "items": {
+        "type": "object",
+        "required": ["id", "scope", "repo", "repoPublic", "category", "skills", "summary"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "scope": { "enum": ["released", "product", "internal"] },
+          "repo": { "type": "string" },
+          "repoPublic": { "type": "boolean" },
+          "category": { "type": "string" },
+          "skills": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "formerRepo": { "type": "string" },
+          "formerSkillNames": { "type": "array", "items": { "type": "string" } },
+          "projectId": { "type": "string" },
+          "license": { "type": ["string", "null"] },
+          "install": { "type": "string" },
+          "marketplace": { "type": "string" },
+          "localFolder": { "type": ["string", "null"] },
+          "namingException": { "type": "string" },
+          "summary": { "type": "string" }
+        }
+      }
+    },
     "filmCollections": {
       "type": "array",
       "description": "Albums and series that group rows of `films` (data/profile/46-films.yaml). repo → a film repo in docs/ecosystem/lineage.yaml, projectId → projects[].id; enforced by scripts/check-ecosystem.mjs.",

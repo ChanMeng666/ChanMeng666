@@ -10,7 +10,7 @@
 //   linkedin/company/archcanvas/posts/<year>.yaml   the ArchCanvas page
 //
 // The outputs carry no timestamp, so they change only when an input does.
-// Draft text (distribution/drafts/, gitignored) and staged video files
+// Draft text (the private chanmeng-marketing repo, drafts/) and staged video files
 // (distribution/_staging/, gitignored) are checked when present and never
 // required: CI and other machines do not have them.
 //
@@ -126,7 +126,7 @@ for (const s of plan.schedule ?? []) {
 }
 
 // ---- drafts and staged files (local only; checked when present) -------------
-const draftsDir = path.join(DIR, "drafts");
+const draftsDir = path.resolve(DIR, "..", "..", "chanmeng-marketing", "drafts");
 const stagingDir = path.join(DIR, "_staging");
 const haveDrafts = fs.existsSync(draftsDir);
 const haveStaging = fs.existsSync(stagingDir);

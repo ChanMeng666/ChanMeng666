@@ -1,0 +1,475 @@
+# =============================================================================
+# AGENT SKILLS — every agent skill Chan has made, one row per repo or product
+# =============================================================================
+# The place to answer "which skills has Chan built, what is each for, how is it
+# installed". Facts about a repo's history stay in docs/ecosystem/lineage.yaml;
+# career copy stays in the project shards (`projectId` joins them).
+#
+# NAMING (Chan, 2026-10-31): a released skill carries her id. The repo and the
+# skill share one name, `chanmeng-<what-it-does>`, with no -skill suffix: the
+# owner in the address already says GitHub, and the name is what a user sees in
+# ~/.claude/skills. A repo that holds several skills prefixes each of them. A new
+# skill is named this way from its first commit.
+#
+# scope
+#   released   its own repo, made for others to install. Must be named chanmeng-*.
+#   product    ships inside a product under the product's name, through npm and
+#              its plugin marketplace. Exempt: renaming needs an npm release,
+#              which only Chan can publish (`namingException` says why). Its
+#              marketplace already reads chanmeng-*.
+#   internal   lives in one repo's .claude/skills for that repo's own work; not
+#              offered to anyone, so no prefix.
+#
+# Not here on purpose: logo-generator-skill (a working copy of someone else's
+# skill) and paper-review (archived research).
+#
+# RULES
+#   - A link may be built from `repo` only when `repoPublic` is true.
+#   - `projectId` must be a projects[].id. `formerRepo` and `formerSkillNames`
+#     exist so an old name in a blog post, a listing or a chat can be found.
+#   - scripts/check-ecosystem.mjs fails when a skill repo in lineage.yaml is
+#     missing here, or a released row does not start with chanmeng-.
+#   - Showing a skill on a surface is decided elsewhere (docs/STATE.md,
+#     90-meta.yaml); a row here shows nothing.
+# =============================================================================
+
+agentSkills:
+  - id: chanmeng-monkey-illustrations
+    scope: released
+    repo: ChanMeng666/chanmeng-monkey-illustrations
+    repoPublic: true
+    category: brand-and-visuals
+    skills:
+      - chanmeng-monkey-illustrations
+    formerRepo: chan-monkey-illustrations
+    formerSkillNames:
+      - chan-monkey-illustrations
+    projectId: chan-monkey-illustrations
+    license: MIT
+    install: git clone https://github.com/ChanMeng666/chanmeng-monkey-illustrations into ~/.claude/skills/
+    localFolder: chanmeng-monkey-illustrations
+    summary: >-
+      Generate Chan Meng–branded inline illustrations for articles, blog posts, newsletters, LinkedIn posts,
+      docs and talks, starring Chan's brand monkey (the solid-ink monkey head from the chanmeng.org logo).
+
+  - id: chanmeng-linkedin-post
+    scope: released
+    repo: ChanMeng666/chanmeng-linkedin-post
+    repoPublic: true
+    category: content-and-marketing
+    skills:
+      - chanmeng-linkedin-post
+    formerRepo: linkedin-post-skill
+    formerSkillNames:
+      - linkedin-post
+    projectId: linkedin-post-skill
+    license: MIT
+    install: git clone https://github.com/ChanMeng666/chanmeng-linkedin-post into ~/.claude/skills/
+    localFolder: chanmeng-linkedin-post
+    summary: >-
+      Use when Chan Meng wants to turn a thought into a post for LinkedIn, X (Twitter), or both — "write a
+      LinkedIn post about…", "tweet this", "make this an X thread", "post about what I just read", "recap the
+      meetup I went to".
+
+  - id: chanmeng-ai-product-manager
+    scope: released
+    repo: ChanMeng666/chanmeng-ai-product-manager
+    repoPublic: true
+    category: product-and-strategy
+    skills:
+      - chanmeng-ai-product-manager
+    formerRepo: ai-product-manager-skill
+    formerSkillNames:
+      - ai-product-manager
+    projectId: ai-product-manager-skill
+    license: MIT
+    install: /plugin marketplace add ChanMeng666/chanmeng-ai-product-manager
+    localFolder: chanmeng-ai-product-manager
+    summary: >-
+      Think and act like a senior AI product manager, forward-deployed engineer and agent architect who has
+      shipped enterprise LLM, RAG and agent systems past the demo.
+
+  - id: chanmeng-readme-showcase
+    scope: released
+    repo: ChanMeng666/chanmeng-readme-showcase
+    repoPublic: true
+    category: github-readme
+    skills:
+      - chanmeng-readme-showcase
+    formerRepo: readme-showcase
+    formerSkillNames:
+      - readme-showcase
+    projectId: readme-showcase
+    license: MIT
+    install: git clone https://github.com/ChanMeng666/chanmeng-readme-showcase into ~/.claude/skills/
+    localFolder: chanmeng-readme-showcase
+    summary: >-
+      Capture polished screenshots and an optimized demo GIF/MP4 of a deployed web project and embed them into
+      that project's GitHub README behind an idempotent SHOWCASE marker block.
+
+  - id: chanmeng-slack-waterline
+    scope: released
+    repo: ChanMeng666/chanmeng-slack-waterline
+    repoPublic: true
+    category: knowledge-capture
+    skills:
+      - chanmeng-slack-waterline
+    formerRepo: slack-waterline-skill
+    formerSkillNames:
+      - slack-waterline
+    projectId: slack-waterline-skill
+    license: MIT
+    install: /plugin marketplace add ChanMeng666/chanmeng-slack-waterline
+    localFolder: chanmeng-slack-waterline
+    summary: >-
+      Read every message in a Slack workspace and prove nothing was missed — then write the daily or weekly
+      digest and, when asked, the reply.
+
+  - id: chanmeng-readme-theme-assets
+    scope: released
+    repo: ChanMeng666/chanmeng-readme-theme-assets
+    repoPublic: true
+    category: github-readme
+    skills:
+      - chanmeng-readme-theme-assets
+    formerRepo: readme-theme-assets-skill
+    formerSkillNames:
+      - readme-theme-assets
+    projectId: readme-theme-assets-skill
+    license: MIT
+    install: git clone https://github.com/ChanMeng666/chanmeng-readme-theme-assets into ~/.claude/skills/
+    localFolder: chanmeng-readme-theme-assets
+    summary: >-
+      Use when a README, docs page, or profile page needs images that work in BOTH GitHub light and dark
+      themes — a logo/wordmark that vanishes on dark, a diagram or chart with near-black labels on
+      transparency, an app screenshot with a baked-in 
+
+  - id: chanmeng-product-reality-check
+    scope: released
+    repo: ChanMeng666/chanmeng-product-reality-check
+    repoPublic: true
+    category: product-and-strategy
+    skills:
+      - chanmeng-product-reality-check
+    formerRepo: product-reality-check
+    formerSkillNames:
+      - product-reality-check
+    projectId: product-reality-check
+    license: MIT
+    install: git clone https://github.com/ChanMeng666/chanmeng-product-reality-check into ~/.claude/skills/
+    localFolder: chanmeng-product-reality-check
+    summary: >-
+      Adversarial market research, competitor and prior-art auditing, positioning, and product-narrative work
+      for solo developers and indie hackers — validation-first, so the deliverable is truth rather than
+      cheerleading.
+
+  - id: chanmeng-geo-markdown-mirror
+    scope: released
+    repo: ChanMeng666/chanmeng-geo-markdown-mirror
+    repoPublic: true
+    category: seo-and-geo
+    skills:
+      - chanmeng-geo-markdown-mirror
+    formerRepo: geo-markdown-mirror
+    formerSkillNames:
+      - geo-markdown-mirror
+    projectId: geo-markdown-mirror
+    license: MIT
+    install: git clone https://github.com/ChanMeng666/chanmeng-geo-markdown-mirror into ~/.claude/skills/
+    localFolder: chanmeng-geo-markdown-mirror
+    summary: >-
+      Generate plain-Markdown "mirror" pages of a web project's important pages (pricing, docs, features,
+      landing, long-form content) collected under a /llms/ folder — the neon.com/pricing.md pattern — so AI
+      agents and crawlers parse them cleanly
+
+  - id: chanmeng-professional-repo-docs
+    scope: released
+    repo: ChanMeng666/chanmeng-professional-repo-docs
+    repoPublic: true
+    category: github-readme
+    skills:
+      - chanmeng-professional-repo-docs
+    formerRepo: professional-repo-docs-skill
+    formerSkillNames:
+      - professional-repo-docs
+    projectId: professional-repo-docs-skill
+    license: MIT
+    install: /plugin marketplace add ChanMeng666/chanmeng-professional-repo-docs
+    localFolder: chanmeng-professional-repo-docs
+    summary: >-
+      Scaffold a complete set of professional, best-practice GitHub repository documentation for a project —
+      README (agent-first), LICENSE, .github/FUNDING.yml, CODE_OF_CONDUCT.md, CONTRIBUTING.md, SECURITY.md,
+      SUPPORT.md, GOVERNANCE.md, CHANGELO
+
+  - id: chanmeng-academic-paper-review
+    scope: released
+    repo: ChanMeng666/chanmeng-academic-paper-review
+    repoPublic: true
+    category: research-and-writing
+    skills:
+      - chanmeng-academic-paper-review
+    formerRepo: academic-paper-review-skill
+    formerSkillNames:
+      - academic-paper-review
+    projectId: academic-paper-review-skill
+    license: MIT
+    install: git clone https://github.com/ChanMeng666/chanmeng-academic-paper-review into ~/.claude/skills/
+    localFolder: null
+    summary: >-
+      Conduct a rigorous, two-lens peer review (editorial + technical-domain) of academic papers and produce a
+      polished deliverable as Markdown, a Typst source, and/or a compiled PDF.
+
+  - id: chanmeng-logo-as-code
+    scope: released
+    repo: ChanMeng666/chanmeng-logo-as-code
+    repoPublic: true
+    category: brand-and-visuals
+    skills:
+      - chanmeng-logo-as-code
+    formerRepo: logo-as-code-skill
+    formerSkillNames:
+      - vectorizing-handdrawn-logos
+      - logo-as-code
+    projectId: logo-as-code-skill
+    license: MIT
+    install: git clone https://github.com/ChanMeng666/chanmeng-logo-as-code into ~/.claude/skills/
+    localFolder: chanmeng-logo-as-code
+    summary: >-
+      Use when turning a hand-drawn, sketched, or scanned logo into clean reproducible code — fitting smooth
+      cubic Bézier curves to the real outline to produce an editable SVG, color/layout variants, an
+      interactive side-by-side/difference review 
+
+  - id: chanmeng-typst
+    scope: released
+    repo: ChanMeng666/chanmeng-typst
+    repoPublic: true
+    category: research-and-writing
+    skills:
+      - chanmeng-typst
+    formerRepo: typst-claude-skill
+    formerSkillNames:
+      - typst
+    projectId: typst-claude-skill
+    license: MIT
+    install: /plugin marketplace add ChanMeng666/chanmeng-typst
+    localFolder: null
+    summary: Generate professional PDF documents using the Typst typesetting system.
+
+  - id: chanmeng-app-promo-studio
+    scope: released
+    repo: ChanMeng666/chanmeng-app-promo-studio
+    repoPublic: true
+    category: brand-and-visuals
+    skills:
+      - chanmeng-app-promo-images
+    formerRepo: app-promo-studio
+    formerSkillNames:
+      - app-promo-images
+    projectId: app-promo-studio
+    license: MIT
+    install: /plugin marketplace add ChanMeng666/chanmeng-app-promo-studio
+    localFolder: null
+    summary: >-
+      Generate cross-platform app promotional / marketing images (App Store & Google Play screenshots, iPad,
+      Mac, desktop window, web landing hero, and social/Open-Graph cards) from the user's own app screenshots
+      plus a few headlines and brand co
+
+  - id: chanmeng-svg-animation-studio
+    scope: released
+    repo: ChanMeng666/chanmeng-svg-animation-studio
+    repoPublic: true
+    category: brand-and-visuals
+    skills:
+      - chanmeng-svg-add-primitive
+      - chanmeng-svg-animate
+      - chanmeng-svg-export
+      - chanmeng-svg-verify
+    formerRepo: svg-animation-studio
+    formerSkillNames:
+      - svg-add-primitive
+      - svg-animate
+      - svg-export
+      - svg-verify
+    projectId: svg-animation-studio
+    license: MIT
+    install: git clone https://github.com/ChanMeng666/chanmeng-svg-animation-studio into ~/.claude/skills/
+    localFolder: chanmeng-svg-animation-studio
+    summary: A composable SVG animation system driven by Claude Code, with four skills to animate, verify and export SVGs and add primitives.
+
+  - id: chanmeng-product-film
+    scope: released
+    repo: ChanMeng666/chanmeng-product-film
+    repoPublic: false
+    category: film-and-video
+    skills:
+      - chanmeng-product-film
+    formerRepo: product-film-skill
+    formerSkillNames:
+      - product-film
+    license: null
+    install: private repository; not for install by others
+    localFolder: chanmeng-product-film
+    summary: >-
+      Make a product promo film whose picture is a CODED REPLICA of the product's own UI — rendered with
+      Remotion, scored with SUNO music, sounded with ElevenLabs or synthesised effects, delivered in several
+      lengths (15 / 30 / 60 / 120 s) and bot
+
+  - id: a11y-loop
+    scope: product
+    repo: ChanMeng666/a11y-loop
+    repoPublic: true
+    category: engineering-quality
+    skills:
+      - a11y-loop
+    projectId: a11y-loop
+    license: MIT
+    install: npx a11y-loop, or /plugin marketplace add ChanMeng666/a11y-loop
+    marketplace: chanmeng-a11y-loop
+    localFolder: a11y-loop
+    namingException: Ships on npm as a11y-loop and is being submitted to listings under that name
+    summary: >-
+      Makes AI coding agents write accessible UI by default, then audits the rendered page and reports what it
+      could not check.
+
+  - id: echook
+    scope: product
+    repo: ChanMeng666/echook
+    repoPublic: true
+    category: engineering-quality
+    skills:
+      - audio-hooks
+    projectId: echook
+    license: MIT
+    install: /plugin marketplace add ChanMeng666/echook
+    marketplace: chanmeng-audio-hooks
+    localFolder: claude-code-audio-hooks
+    namingException: The skill is the operating manual of the echook product and is released with it
+    summary: >-
+      Sound, desktop-toast, TTS and webhook notifications plus a status line for Claude Code, Cursor and
+      Codex.
+
+  - id: archlang
+    scope: product
+    repo: ChanMeng666/archlang
+    repoPublic: true
+    category: architecture
+    skills:
+      - archlang
+      - archlang-brief-to-plan
+      - archlang-edit-plan
+      - archlang-export
+      - archlang-review-plan
+    projectId: archlang
+    license: MIT
+    install: npx skills add ChanMeng666/archlang
+    localFolder: archlang
+    namingException: Ships on npm with @chanmeng666/archlang; install counts are tracked under these names
+    summary: Five skills that let a coding agent write, edit, review and export floor plans in ArchLang.
+
+  - id: career-copy
+    scope: internal
+    repo: ChanMeng666/ChanMeng666
+    repoPublic: true
+    category: operations
+    skills:
+      - career-copy
+    summary: Keeps the CV, LinkedIn and README copies in step when a career fact changes.
+
+  - id: linkedin-sync
+    scope: internal
+    repo: ChanMeng666/ChanMeng666
+    repoPublic: true
+    category: operations
+    skills:
+      - linkedin-sync
+    summary: Syncs her LinkedIn posts into the registers from her signed-in Chrome.
+
+  - id: x-sync
+    scope: internal
+    repo: ChanMeng666/ChanMeng666
+    repoPublic: true
+    category: operations
+    skills:
+      - x-sync
+    summary: Syncs her X posts into the register from her signed-in Chrome.
+
+  - id: suno-sync
+    scope: internal
+    repo: ChanMeng666/ChanMeng666
+    repoPublic: true
+    category: operations
+    skills:
+      - suno-sync
+    summary: Syncs her Suno songs and playlists into the register.
+
+  - id: competitor-watch
+    scope: internal
+    repo: ChanMeng666/archcanvas-growth
+    repoPublic: false
+    category: operations
+    skills:
+      - competitor-watch
+    summary: Runs the standing competitor tripwires on their cadence.
+
+  - id: content-post
+    scope: internal
+    repo: ChanMeng666/archcanvas-growth
+    repoPublic: false
+    category: operations
+    skills:
+      - content-post
+    summary: Drafts a build-in-public post from real recent product work.
+
+  - id: newsletter-digest
+    scope: internal
+    repo: ChanMeng666/archcanvas-growth
+    repoPublic: false
+    category: operations
+    skills:
+      - newsletter-digest
+    summary: Manual fallback for the automated weekly newsletter.
+
+  - id: weekly-review
+    scope: internal
+    repo: ChanMeng666/archcanvas-growth
+    repoPublic: false
+    category: operations
+    skills:
+      - weekly-review
+    summary: Runs the founder's weekly growth review against the kill criteria.
+
+  - id: archcanvas-newsletter
+    scope: internal
+    repo: ChanMeng666/archcanvas
+    repoPublic: false
+    category: operations
+    skills:
+      - newsletter
+    summary: Writes and sends the ArchCanvas build-in-public newsletter.
+
+  - id: archcanvas-verify
+    scope: internal
+    repo: ChanMeng666/archcanvas
+    repoPublic: false
+    category: operations
+    skills:
+      - verify
+    summary: Verifies an ArchCanvas change with the static gates and the browser constraints.
+
+  - id: site-newsletter
+    scope: internal
+    repo: ChanMeng666/2d-portfolio
+    repoPublic: false
+    category: operations
+    skills:
+      - newsletter
+    summary: Produces the weekly issue of Chan's AI Weekly.
+
+  - id: marketing-today
+    scope: internal
+    repo: ChanMeng666/chanmeng-marketing
+    repoPublic: false
+    category: operations
+    skills:
+      - today
+    summary: Runs the day's marketing from the one calendar and publishes on her yes.

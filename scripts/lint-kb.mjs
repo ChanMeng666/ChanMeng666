@@ -282,6 +282,7 @@ const REF_FIELDS = [
   { root: "showcase", path: "relatedProjectId", to: "projects" },
   { root: "productFilms", path: "projectId", to: "projects" },
   { root: "productFilms", path: "showcaseId", to: "showcase" },
+  { root: "agentSkills", path: "projectId", to: "projects" },
   { root: "filmCollections", path: "projectId", to: "projects" },
   { root: "films", path: "projectId", to: "projects" },
   { root: "films", path: "collection", to: "filmCollections" },

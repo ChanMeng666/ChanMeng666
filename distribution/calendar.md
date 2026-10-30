@@ -6,7 +6,7 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-10-20, X 2026-10-20, LinkedIn 2026-10-20, ArchCanvas page 2026-10-20.
+Plan as of 2026-10-12. Registers read: YouTube 2026-10-30, X 2026-10-31, LinkedIn 2026-10-31, ArchCanvas page 2026-10-31.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
@@ -89,6 +89,7 @@ Scheduled in another calendar:
 | ArchCanvas «Zoom Out» | published 2026-10-19 | — | published | — | — | — |
 | echook, the first film | published 2026-10-19 | — | published | published 2026-02-13 | — | — |
 | a11y-loop, the narrated film | published 2026-07-28 | — | published | published 2026-08-11 | — | — |
+| ArchLang one-take film | published 2026-10-23 | — | published | published 2026-10-24 | published 2026-10-24 | — |
 | ArchLang narrated demo | — | — | — | — | — | — |
 | GenLAB Career Academy, how it works | — | — | — | — | — | — |
 | She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | planned 2026-11-19 | planned 2026-11-19 | — |

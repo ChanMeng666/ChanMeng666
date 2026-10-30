@@ -102,10 +102,10 @@
         },
         {
           "label": "LinkedIn followers",
-          "value": "6,502",
+          "value": "6,691",
           "source": "https://www.linkedin.com/in/chanmeng666/",
-          "asOf": "2026-10-20",
-          "note": "measured on the live profile 2026-10-20 (linkedin/account.yaml, register sync); 6,452 on 2026-10-07, 6,232 reported by Chan 2026-09-24"
+          "asOf": "2026-10-31",
+          "note": "measured on the live profile 2026-10-31 (linkedin/account.yaml, register sync); 6,502 on 2026-10-20, 6,452 on 2026-10-07, 6,232 reported by Chan 2026-09-24"
         },
         {
           "label": "LinkedIn recommendations",
@@ -7523,6 +7523,10 @@
         {
           "label": "Showcase gallery (repo)",
           "url": "https://github.com/ChanMeng666/archlang-showcase"
+        },
+        {
+          "label": "One-take film repo (three.js)",
+          "url": "https://github.com/ChanMeng666/archlang-promo-threejs"
         }
       ],
       "techStack": [
@@ -11155,6 +11159,22 @@
       }
     },
     {
+      "id": "archlang-one-take-promo-film",
+      "name": "Making a One-Take 3D Promo Film with three.js, Blender and Real Instrument Samples",
+      "tier": "secondary",
+      "recency": "active",
+      "lastUpdated": "2026-10-31",
+      "publisher": "chanmeng.org",
+      "releaseDate": "2026-10-28",
+      "url": "https://chanmeng.org/blog/archlang-one-take-promo-film",
+      "summary": "How the 32-second one-take ArchLang film was built: a compiled plan, a\nBlender-built 3D house, one three.js file where every frame is a pure\nfunction of time, a score mixed from CC0 samples on the same beat table,\nverified sync, and a frame-by-frame render with simulated motion blur.\n",
+      "meta": {
+        "x_brand": {
+          "type": "article"
+        }
+      }
+    },
+    {
       "id": "claude-code-skip-permission-confirmation",
       "name": "Claude Code Skip Permission Confirmation",
       "tier": "secondary",
@@ -12797,9 +12817,14 @@
           "filmRepo": "ChanMeng666/archlang-demo-video",
           "what": "narrated 4:47 demo of ArchLang 1.36.0",
           "reason": "made to accompany the paper, not a promo; ArchLang already shows its promo film"
+        },
+        {
+          "filmRepo": "ChanMeng666/archlang-promo-threejs",
+          "what": "32 s one-take film (three.js, Blender, sampled score)",
+          "reason": "one film per product; shown on /films, on YouTube and in its blog post"
         }
       ],
-      "lastVerified": "2026-10-06"
+      "lastVerified": "2026-10-31"
     },
     {
       "id": "echook-film",
@@ -13603,6 +13628,31 @@
       "media": {
         "poster": "/media/films/a11y-loop-179s.jpg",
         "mp4": "/media/films/a11y-loop-179s.mp4"
+      },
+      "onFilmsPage": true
+    },
+    {
+      "id": "archlang-one-take-film",
+      "kind": "product-film",
+      "primary": false,
+      "title": "ArchLang one-take film",
+      "for": "ArchLang",
+      "projectId": "archlang",
+      "repo": "ChanMeng666/archlang-promo-threejs",
+      "repoPublic": true,
+      "date": "2026-10",
+      "seconds": 32,
+      "cuts": [
+        "32 s",
+        "16:9",
+        "one take, no cuts"
+      ],
+      "madeWith": "three.js, Blender, recorded CC0 and public-domain instrument samples",
+      "summary": "One take with no cuts. Lines of code become plan lines, the plan rises into a small 3D house, the house folds back into the plan, and the take ends on the logo. The code on screen is ArchLang's laneway-house example and the plan is its real compiler output; the house was modelled in Blender from that plan's geometry, for the film. A single three.js file draws every frame, and picture and score share one beat table.",
+      "youtubeId": "yxE-t9qwO8w",
+      "media": {
+        "poster": "/media/films/archlang-one-take-32s.jpg",
+        "mp4": "/media/films/archlang-one-take-32s.mp4"
       },
       "onFilmsPage": true
     },
@@ -17048,6 +17098,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-30",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-30T11:33:26.061Z"
+    "buildTimestamp": "2026-10-30T12:28:29.839Z"
   }
 }

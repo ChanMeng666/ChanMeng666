@@ -49,10 +49,13 @@ window.__xStart = () => {
       }
       window.scrollTo(0, 0);
     };
-    for (const label of [/^Replies/, /^Posts/]) {
-      const tab = [...document.querySelectorAll('[role="tab"]')].find((a) => label.test(a.innerText));
-      if (!tab) throw new Error(`the profile has no "${label.source.slice(1)}" tab: has X changed the page?`);
-      window.__xStatus = { running: true, reading: label.source.slice(1) };
+    // By address, not label: the tab names follow the language of X's interface.
+    for (const [name, end] of [["Replies", "/with_replies"], ["Posts", `/${HANDLE}`]]) {
+      const tab = [...document.querySelectorAll('a[role="tab"]')].find((a) =>
+        new URL(a.href).pathname.toLowerCase().endsWith(end),
+      );
+      if (!tab) throw new Error(`the profile has no "${name}" tab: has X changed the page?`);
+      window.__xStatus = { running: true, reading: name };
       tab.click();
       await sleep(2500);
       await scrollToEnd();

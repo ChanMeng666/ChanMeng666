@@ -2451,6 +2451,7 @@ projects:
       - { label: "Playground", url: "https://playground.archlang.uk" }
       - { label: "npm (@chanmeng666/archlang)", url: "https://www.npmjs.com/package/@chanmeng666/archlang" }
       - { label: "Showcase gallery (repo)", url: "https://github.com/ChanMeng666/archlang-showcase" }
+      - { label: "One-take film repo (three.js)", url: "https://github.com/ChanMeng666/archlang-promo-threejs" }
     techStack: ["TypeScript 5.7 (ESM, zero runtime dependencies)", "Hand-written lexer + recursive-descent parser + expression evaluator", "tsup (build)", "Biome 2.5 (lint/format)", "Vitest 2.1 + fast-check (property tests) + pixelmatch (visual regression)", "Optional lazy add-ons: @resvg/resvg-js (PNG), clipper2-wasm (geometry), pdfkit (PDF)", "LSP (hover/completion/rename/signature)", "VS Code extension (ChanMeng.archlang, TextMate grammar)", "Vite + CodeMirror 6 playground (100% client-side)", "VitePress docs", "GitHub Action (renders ```arch fences to images)"]
     metrics:
       - { label: "Commits (solo)",   value: "810 (803 by Chan + 7 automated dependency bumps) (2026-06-25 → 2026-09-13); sole engineer, built with AI coding agents", source: "https://github.com/ChanMeng666/archlang (git log)", asOf: "2026-09-13" }

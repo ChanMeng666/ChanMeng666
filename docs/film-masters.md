@@ -107,6 +107,12 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 |---|---|---|
 | `out/archlang-promo.mp4` | 46 | release `masters-2026-10` › `archlang-promo.mp4` (also the README video) |
 
+## ChanMeng666/archlang-promo-threejs (public)
+
+| Rendered to | MB | On GitHub |
+|---|---|---|
+| `out/archlang-promo.mp4` | 13 | release `v1.0.0` › `archlang-promo.mp4` (also `.html`, `soundtrack.wav`, `soundtrack.m4a`, `SHA256SUMS.txt`) |
+
 ## ChanMeng666/chan-meng-promo-video (private)
 
 | Rendered to | MB | On GitHub |

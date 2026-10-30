@@ -243,3 +243,15 @@ linkedin/, x/, distribution/plan.yaml, distribution/status.yaml, distribution/ca
 
 ## [2026-10-21] change | LinkedIn followers raised from 6,452 to 6,502 (live profile, register sync 2026-10-20) under the historical-maximum rule; CVs rebuilt and chanmeng.org synced
 data/profile/00-basics.yaml, cv/sections/header.typ, templates/brand-system.html.hbs
+
+## [2026-10-31] add | `archlang-promo-threejs` and its 32 s one-take film (`archlang-one-take-film`, YouTube yxE-t9qwO8w): on /films from R2 as an alternative film; the 68 s film stays the one ArchLang shows; the blog post about it recorded; repo-new check found no other new repo of hers
+data/profile/46-films.yaml, data/profile/45-showcase.yaml, data/profile/23-projects-oss-more.yaml, data/profile/30-recognition.yaml, docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/film-masters.md, docs/STATE.md, distribution/plan.yaml
+
+## [2026-10-31] change | YouTube: the one-take film's title and description set in Studio at Chan's request (public since 2026-10-24, already in Product films)
+youtube/channel.yaml, youtube/videos.yaml
+
+## [2026-10-31] ingest | LinkedIn (profile and ArchCanvas page) and X registers synced; 1 profile post and 23 X threads tagged; the film's LinkedIn and X posts moved to `posted`; X capture now finds its tabs by address, not label
+linkedin/, x/, distribution/plan.yaml, distribution/status.yaml, distribution/calendar.md
+
+## [2026-10-31] change | LinkedIn followers raised from 6,502 to 6,691 (live profile, register sync 2026-10-31) under the historical-maximum rule; CVs rebuilt and chanmeng.org synced
+data/profile/00-basics.yaml, cv/sections/header.typ, templates/brand-system.html.hbs

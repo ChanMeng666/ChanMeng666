@@ -88,6 +88,9 @@ overrides:
   - film: archlang-film
     remove: [youtube-short]
     note: "One cut, 16:9: no Short"
+  - film: archlang-one-take-film
+    remove: [youtube-short]
+    note: "One cut, 16:9: no Short"
   - film: a11y-loop-launch-film
     remove: [youtube-short]
     note: "One cut, 64 s, 16:9: no Short. The a11y-loop film on show since 2026-10-20 (Chan); the 2:59 narrated film is now its earlier version, on /films"
@@ -95,6 +98,8 @@ overrides:
 # Social posts that already carry a film. `post` is the id in the platform's
 # register; `via` says how the film appears in the post.
 posted:
+  - { film: archlang-one-take-film, platform: linkedin, post: "7519520020922552320", via: native-video, cut: "32 s, 16:9" }
+  - { film: archlang-one-take-film, platform: x, post: "2113755566334247202", via: native-video, cut: "32 s, 16:9" }
   - { film: chan-meng-showreel, platform: linkedin, post: "7518257065660919809", via: native-video, cut: "112.5 s, 16:9" }
   - { film: chan-meng-showreel, platform: x, post: "2112491529579425996", via: native-video, cut: "112.5 s, 16:9", note: "Chan posted the full 112.5 s cut, not the 55 s cut the schedule named (the X register reads 112,500 ms)" }
   - { film: a11y-loop-launch-film, platform: linkedin, post: "7518202494695493632", via: native-video, cut: "64 s, 16:9", note: "Posted on 2026-10-20, ahead of its 2026-11-12 slot; links in the first comment" }

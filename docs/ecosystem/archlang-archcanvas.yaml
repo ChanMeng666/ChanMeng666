@@ -175,6 +175,18 @@ repos:
     urls:
       language: https://archlang.uk
 
+  - id: archlang-promo-threejs
+    kind: git-repo
+    gitRemote: https://github.com/ChanMeng666/archlang-promo-threejs.git
+    github: ChanMeng666/archlang-promo-threejs
+    visibility: public
+    license: MIT
+    role: A 32-second one-take ArchLang film (added 2026-10-23) — one three.js file, a Blender-built house and a score from CC0 samples on one beat table. Shown on chanmeng.org/films and YouTube; the 68-second archlang-promo stays the film on show.
+    dependsOn:
+      - { id: archlang, how: "compiles the laneway-house example for the plan on screen" }
+    urls:
+      language: https://archlang.uk
+
   - id: archlang-paper
     kind: git-repo
     localPath: "D:/github_repository/archlang-paper"

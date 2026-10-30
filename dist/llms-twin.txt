@@ -132,7 +132,7 @@ The arrangement is best described as **co-designing technical strategy with the 
 
 1. **Anthropic Claude Partner Network Learning Path — completed**, with verifiable per-course certificates recorded in `certificates[]` (Claude Code in Action, Building with the Claude API, Introduction to Model Context Protocol, Introduction to Agent Skills, all May 2026, on top of AI Fluency Framework and Claude Code in Action from Aug 2025). The **Claude Certified Architect — Foundations practice examination was sat and passed.**
 2. **Contributions to the cohort's shared agent and skill design conventions** through weekly working sessions with the founder and the rest of the architect cohort.
-3. **Cross-pollination** of Chan's pre-existing open-source agentic tooling experience (claude-code-audio-hooks, CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based media generation) into cohort discussions on production-grade agent design, including architecture discussions for Engram's own product (still in development and unreleased when she left, so no delivery outcome is claimed).
+3. **Cross-pollination** of Chan's pre-existing open-source agentic tooling experience (claude-code-audio-hooks, CopilotKit, google-news-mcp, chanmeng-typst, Remotion-based media generation) into cohort discussions on production-grade agent design, including architecture discussions for Engram's own product (still in development and unreleased when she left, so no delivery outcome is claimed).
 4. **The Partner Network goal was reached.** Chan's completed Learning Path and passed CCA-F practice exam were part of the architect credentials behind Engram's approval to join the Anthropic Partner Network. With that done, she left the cohort in July 2026 to focus on her own products.
 5. **Open-source IP preserved.** The cohort agreement explicitly carved out claude-code-audio-hooks (now **echook**) and the rest of Chan's prior work as her own property — echook has since gone on to 88 GitHub stars (2026-10-15) independently of Engram.
 
@@ -145,7 +145,7 @@ The arrangement is best described as **co-designing technical strategy with the 
 - **claude-code-audio-hooks** — audio-feedback hook system for Claude Code (explicitly named in the cohort agreement as Chan's preserved IP), with its **echook** notification daemon.
 - **CopilotKit** — active contributor to the open-source agent UI framework ([PRs](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)).
 - **google-news-mcp** — production MCP server published to the public registry.
-- **typst-claude-skill** — Claude Code skill for programmatic document generation; demonstrates skill-structure design.
+- **chanmeng-typst** — Claude Code skill for programmatic document generation; demonstrates skill-structure design.
 - **claude-code-compressed-map** — LLM-first tier/recency metadata system powering this very profile (the meta-move: optimising Chan's own data so LLMs rank it correctly — *GEO in practice*).
 - Production **LangChain** automation engines and interactive LLM systems for mobile gaming.
 - Programmatic media generation via **Remotion**.
@@ -1238,7 +1238,7 @@ GitHub profile README generator with an interactive visual editor — real-time 
 
 Professional PDF generation via Claude Code with 9 ready-to-use templates — academic papers, resumes, slides, invoices, technical reports; full Typst CLI reference with CJK support
 
-- Repository: https://github.com/ChanMeng666/typst-claude-skill
+- Repository: https://github.com/ChanMeng666/chanmeng-typst
 - Status: live
 - Tech stack: Typst, Claude Code Skill
 
@@ -1291,7 +1291,7 @@ Universal e-book template with realistic page-flip effects, chapter-based music,
 
 A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 25 motion/shape/filter primitives, 4 skills, 3 subagents, snapshot-tested
 
-- Repository: https://github.com/ChanMeng666/svg-animation-studio
+- Repository: https://github.com/ChanMeng666/chanmeng-svg-animation-studio
 - Started: June 2026
 - Status: active
 - Tech stack: Node.js, JavaScript, Next.js 15, React, Vitest, SVGO, Claude Code skills
@@ -1337,15 +1337,15 @@ Personal-brand monkey logo reconstructed from hand-drawn art into smooth cubic B
 - Started: June 2026
 - Status: production
 - Tech stack: Python 3, Node.js, Sharp, SVG
-- Related projects: logo-as-code Skill, Chan Monkey Illustrations
+- Related projects: chanmeng-logo-as-code Skill, Chan Monkey Illustrations
 
 **Impact.** A hand-drawn monkey + 'CHAN' wordmark rebuilt as mathematically fitted cubic Bézier contours with exact circular eyes — 8 ready-to-use SVG variants (four color schemes × full/monkey-only) regenerated from one archived source by a zero-dependency Python generator.
 
-### geo-markdown-mirror
+### chanmeng-geo-markdown-mirror
 
 A Claude Code skill that generates plain-Markdown mirror pages of a site's key pages (the neon.com/pricing.md pattern) for GEO and one-click ask-AI — framework-aware for Next.js, Docusaurus, Vite SPAs, and static HTML
 
-- Repository: https://github.com/ChanMeng666/geo-markdown-mirror
+- Repository: https://github.com/ChanMeng666/chanmeng-geo-markdown-mirror
 - Started: June 2026
 - Status: active
 - Tech stack: Claude Code Skill, Node.js, JavaScript, turndown, Playwright
@@ -1356,7 +1356,7 @@ A Claude Code skill that generates plain-Markdown mirror pages of a site's key p
 
 A Claude Code skill/plugin that scaffolds professional, agent-first GitHub repo documentation from one invocation — README, LICENSE, community-health files, issue/PR templates, AGENTS.md, and llms.txt
 
-- Repository: https://github.com/ChanMeng666/professional-repo-docs-skill
+- Repository: https://github.com/ChanMeng666/chanmeng-professional-repo-docs
 - Started: June 2026
 - Status: active
 - Tech stack: Claude Code Skill, Node.js, Markdown templates, gh CLI
@@ -1367,29 +1367,29 @@ A Claude Code skill/plugin that scaffolds professional, agent-first GitHub repo 
 
 A Claude Code skill for rigorous dual-lens (editorial + technical) peer review of academic papers — outputs reviewer letters or audit reports as Markdown, Typst, and PDF, with a reusable CeTZ chart library and Mermaid diagram templates
 
-- Repository: https://github.com/ChanMeng666/academic-paper-review-skill
+- Repository: https://github.com/ChanMeng666/chanmeng-academic-paper-review
 - Started: June 2026
 - Status: active
 - Tech stack: Claude Code Skill, Typst, CeTZ, Mermaid CLI, Python, Markdown
 
 **Impact.** A Claude Code skill that turns manuscripts into credible peer reviews — separating editorial and domain critique, verifying load-bearing claims against primary sources, recomputing in-manuscript statistics, and rendering evidence-rich Typst/PDF output.
 
-### app-promo-studio
+### chanmeng-app-promo-studio
 
 A Claude Code plugin that generates cross-platform app promo images (App Store, Google Play, iPad, Mac, web hero, social/OG) from screenshots and headlines — exact platform sizes in PNG/JPG/WebP/AVIF plus true vector SVG
 
-- Repository: https://github.com/ChanMeng666/app-promo-studio
+- Repository: https://github.com/ChanMeng666/chanmeng-app-promo-studio
 - Started: June 2026
 - Status: active
 - Tech stack: Claude Code Plugin, Node.js, Playwright, sharp, @resvg/resvg-js, HTML/CSS, SVG
 
 **Impact.** A config-driven Claude Code plugin that renders store-ready promo assets across 17 platform targets and 5 themes from one config — two render engines (HTML/CSS + Playwright raster, native SVG + resvg) with dimension/alpha/size-cap validation and pure-CSS device frames.
 
-### linkedin-post Skill
+### chanmeng-linkedin-post Skill
 
 A Claude Code skill that turns an idea into on-brand LinkedIn and X posts (story, idea, take, recap) and gives every post a visual — a Mermaid diagram or HTML layout rendered to PNG when the content has a shape, otherwise a hand-drawn brand-monkey illustration — handed back as one markdown file; it never opens LinkedIn or X
 
-- Repository: https://github.com/ChanMeng666/linkedin-post-skill
+- Repository: https://github.com/ChanMeng666/chanmeng-linkedin-post
 - Started: June 2026
 - Status: active
 - Tech stack: Claude Code Skill, Node.js, Playwright, Mermaid CLI, HTML/CSS, ffmpeg, OpenAI gpt-image-2 (via chan-monkey-illustrations)
@@ -1397,11 +1397,11 @@ A Claude Code skill that turns an idea into on-brand LinkedIn and X posts (story
 
 **Impact.** A Claude Code skill for Chan's LinkedIn and X posts — four modes (story, idea, take, verified-mention recap) in a studied voice, each platform written separately, one on-brand visual per post, and one handoff file she publishes herself.
 
-### logo-as-code Skill
+### chanmeng-logo-as-code Skill
 
 A Claude Code skill that turns a hand-drawn, sketched, or scanned logo into clean, reproducible code — fitting smooth cubic Bézier curves to the real outline to generate an editable SVG, color/layout variants, and PNG/ICO/favicon exports
 
-- Repository: https://github.com/ChanMeng666/logo-as-code-skill
+- Repository: https://github.com/ChanMeng666/chanmeng-logo-as-code
 - Started: June 2026
 - Status: active
 - Tech stack: Claude Code Skill, Python 3, Node.js, sharp, png-to-ico, SVG
@@ -1409,11 +1409,11 @@ A Claude Code skill that turns a hand-drawn, sketched, or scanned logo into clea
 
 **Impact.** A Claude Code skill that reconstructs a hand-drawn logo as parametric, version-controlled code — a per-contour smooth -> cubic-Bézier pipeline with exact circles, an interactive CSS diff gallery, and PNG/ICO/favicon exports. Generalizes Chan's own monkey-logo method.
 
-### readme-showcase
+### chanmeng-readme-showcase
 
 A Claude Code skill that captures polished screenshots and a demo GIF/MP4 of a deployed web project and embeds them into its GitHub README behind an idempotent SHOWCASE marker — Playwright capture, ffmpeg GIF pipeline, reproducible scenario files
 
-- Repository: https://github.com/ChanMeng666/readme-showcase
+- Repository: https://github.com/ChanMeng666/chanmeng-readme-showcase
 - Started: June 2026
 - Status: active
 - Tech stack: Claude Code Skill, Node.js, playwright-core, ffmpeg, sharp-cli
@@ -1432,11 +1432,11 @@ A 2:59 Remotion film for a11y-loop in which nothing on screen is mocked up — e
 
 **Impact.** The promo film for a11y-loop, made under the standard the tool itself argues for: every on-screen number is captured from the real CLI and gated by an automated verify step, and three design decisions changed mid-production because measuring them contradicted the estimate.
 
-### product-reality-check
+### chanmeng-product-reality-check
 
 A Claude agent skill for validation-first market research — competitor sweeps, prior-art audits of every "first/only" claim, bottom-up sizing from named buyers, a red-team kill memo and dated evidence gates, so a side project meets reality before months go into it
 
-- Repository: https://github.com/ChanMeng666/product-reality-check
+- Repository: https://github.com/ChanMeng666/chanmeng-product-reality-check
 - Started: August 2026
 - Status: active
 - Tech stack: Claude Code Skill (Agent Skills open standard), Claude Code
@@ -1447,7 +1447,7 @@ A Claude agent skill for validation-first market research — competitor sweeps,
 
 A Claude Code skill that reads every message in a Slack workspace and proves nothing was missed — thread-aware catch-up, a daily or weekly DM digest, drafted replies, and two audit gates that fail differently. Zero dependencies, many workspaces from one install
 
-- Repository: https://github.com/ChanMeng666/slack-waterline-skill
+- Repository: https://github.com/ChanMeng666/chanmeng-slack-waterline
 - Started: September 2026
 - Status: active
 - Tech stack: Claude Code Skill (Agent Skills open standard), Node.js 18+ (zero dependencies, plain fetch against the Slack Web API), node --test, GitHub Actions
@@ -1467,11 +1467,11 @@ A gallery of floor plans compiled from a few dozen lines of ArchLang source each
 
 **Impact.** Every drawing is compiled, not drawn: change a line of .arch source, recompile, get a new building — which is the fastest way to show what the ArchLang compiler does.
 
-### readme-theme-assets-skill
+### chanmeng-readme-theme-assets
 
 A Claude Code skill that makes README images work in GitHub's light and dark themes — four techniques, a one-question decision between them, and three scripts that check the result against GitHub's own renderer rather than by eye
 
-- Repository: https://github.com/ChanMeng666/readme-theme-assets-skill
+- Repository: https://github.com/ChanMeng666/chanmeng-readme-theme-assets
 - Started: August 2026
 - Status: active
 - Tech stack: Claude Code Skill (Agent Skills open standard), Node.js, Playwright, GitHub Markdown API
@@ -1482,11 +1482,11 @@ A Claude Code skill that makes README images work in GitHub's light and dark the
 
 An agent skill that turns articles and LinkedIn / X posts into hand-drawn illustrations starring Chan's brand monkey — a fresh visual metaphor for each idea, with the logo sent to the image model as a reference so the character stays on-model
 
-- Repository: https://github.com/ChanMeng666/chan-monkey-illustrations
+- Repository: https://github.com/ChanMeng666/chanmeng-monkey-illustrations
 - Started: October 2026
 - Status: active
 - Tech stack: Claude Code Skill, Codex Skill, Python 3, OpenAI gpt-image-2 (Images edit), Pillow, NumPy
-- Related projects: Chan Meng, linkedin-post Skill
+- Related projects: Chan Meng, chanmeng-linkedin-post Skill
 
 **Impact.** Gives every article and post a picture of its one idea, drawn as a physical metaphor that Chan's brand monkey acts out, with the monkey's head reproduced from the real logo instead of reinterpreted.
 
@@ -1700,7 +1700,7 @@ When Engram founder Luka Madzarac asked Claude Code to find an AI architect, it 
 
 - 4,264 impressions
 - llms.txt + JSON-LD
-- geo-markdown-mirror skill
+- chanmeng-geo-markdown-mirror skill
 
 ## Awards and recognition
 
@@ -2304,7 +2304,7 @@ AI-in-practice session with MYOB product, domain and people leads — Jean Fulop
 
 - Keywords: Claude AI, Claude Code, Cursor, OpenAI SDK, LangGraph, CopilotKit, MCP (Model Context Protocol), Vercel AI SDK
 - Claude AI (since 2024), with Anthropic SDK, Claude Sonnet 4.6, Claude Opus 4.7. Anthropic credential `Claude Code in Action` (ID JHIY9NPYTR2D, Aug 2025) + `AI Fluency Framework` (Aug 2025); Engram Architect Cohort selection (May 2026).
-- Claude Code (since 2024). 14 repos. Authored claude-code-audio-hooks (echook daemon) and typst-claude-skill; explicitly preserved as Chan's IP in the Engram cohort agreement.
+- Claude Code (since 2024). 14 repos. Authored claude-code-audio-hooks (echook daemon) and chanmeng-typst; explicitly preserved as Chan's IP in the Engram cohort agreement.
 - Cursor (since 2024). Daily pair-coding tool; teaches Cursor as an AI literacy primitive in TechNest and Forward with Her cohorts.
 - OpenAI SDK (since 2024). 6 repos — GPT-4o-mini powers She Sharp's mentor-match weighted scoring.
 - LangGraph (since 2025). fanfic-lab, hospital-roster-agent.
@@ -2334,7 +2334,7 @@ AI-in-practice session with MYOB product, domain and people leads — Jean Fulop
 - Docusaurus (since 2024). AI programming teaching platform versioned docs + FemTech Weekend site.
 - DigitalOcean (since 2024). Pre-migration GAVIGO platform host.
 - Remotion (since 2026). Programmatic video for echook-promo-video and GAVIGO IRE explainers.
-- Typst (since 2026). Personal CV; typst-claude-skill agent.
+- Typst (since 2026). Personal CV; chanmeng-typst agent.
 
 ### Domain: AI Agent Architecture
 

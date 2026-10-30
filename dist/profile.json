@@ -246,8 +246,8 @@
         "companyContext": "Engram LLC ([engram.media](https://engram.media/) /\n[LinkedIn company](https://www.linkedin.com/company/engrammedia/))\nis a New Mexico–registered AI-powered media agency founded by\n**Luka Madzarac**. The company is repositioning around\n**agent-powered media operations**: deploying agents and pipelines\nthat run a client's entire media function in-house — design, data,\ncontent, distribution — instead of outsourcing production. The\ntarget market is service businesses that need a media department\nrunning on autopilot. Engram is building its stack on Anthropic's\nClaude platform and is on a path to **certified Anthropic\npartner** status. The **Architect Cohort** is a selective\nonboarding programme through which Engram brings architect-tier\nengineers into the core team that will define the company's\nagentic-media engineering standards.\n",
         "mission": "Replace click-through software workflows with **agentic ones** —\nnatural-language intent drives downstream system orchestration\nand the agent's reasoning becomes the user-facing surface. For\nEngram specifically, that translates into autonomous media\noperations: instead of a human team manually assembling\ncampaigns, content, and analytics, agentic systems plan,\nproduce, and ship the media function for the client. The\nproduct line targets organisations that need end-to-end\nautomation rather than demo-grade AI tooling, starting with\nEngram's own internal operations and graduating to client\ndeployments.\n",
         "myMandate": "**How the engagement started.** Luka Madzarac asked Claude Code\nto surface AI architects who could help Engram reach Anthropic\nPartner status. Claude returned Chan as one of the strongest\nmatches based on her verifiable open-source agentic-tooling\nfootprint — **claude-code-audio-hooks**, **CopilotKit**\ncontributions, production LangChain automation engines,\nprogrammatic media generation with **Remotion**, and the\n\"**API-as-UI**\" design pattern she's been publishing. Luka\npublicly confirmed the sourcing path on LinkedIn:\n*\"Claude Code surfaced Chan as one of the strongest matches\nfor what we're looking for.\"*\n([announcement post](https://www.linkedin.com/posts/chanmeng666_ai-artificialintelligence-generativeai-activity-7459724144671195136-3JoV))\n\n**What the cohort engagement covered.** A 45-day Architect Cohort\nonboarding at ~10–15 hours per week, structured as a mutual\nevaluation period; the engagement ran May–July 2026.\nResponsibilities were: (1) working through Anthropic's **Claude\nPartner Network Learning Path** — building on already-held\nAnthropic credentials (**AI Fluency: Framework & Foundations**,\nAug 2025; **Claude Code in Action**, Aug 2025, credential\nID JHIY9NPYTR2D); (2) participating in weekly working sessions\nwith founder Luka Madzarac and the rest of the cohort on\nagent, skill, and MCP-integration patterns; (3) contributing\nto the cohort's emerging agentic-media engineering conventions;\n(4) maintaining presence in Engram's communication channels\nfor cross-cohort engineering discussion.\n",
-        "technicalHighlights": "The technical footprint that Claude Code surfaced to Engram —\nall carved out as Chan's own IP under the cohort agreement and\nremaining Chan's property:\n\n- **claude-code-audio-hooks** — audio-feedback hook system for\n  Claude Code (explicitly named in the cohort agreement as\n  Chan's preserved IP), with its **echook** notification daemon.\n- **CopilotKit** — active contributor to the open-source agent\n  UI framework\n  ([PRs](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)).\n- **google-news-mcp** — production MCP server published to the\n  public registry.\n- **typst-claude-skill** — Claude Code skill for programmatic\n  document generation; demonstrates skill-structure design.\n- **claude-code-compressed-map** — LLM-first tier/recency\n  metadata system powering this very profile (the meta-move:\n  optimising Chan's own data so LLMs rank it correctly —\n  *GEO in practice*).\n- Production **LangChain** automation engines and interactive\n  LLM systems for mobile gaming.\n- Programmatic media generation via **Remotion**.\n\nThe technical centre of gravity is **\"API-as-UI\"**: building\nagent surfaces where conversational intent orchestrates\ndownstream tools and the model's chain-of-reasoning becomes\nthe user interface — not a chat widget bolted onto a form.\n",
-        "impactDelivered": "The Architect Cohort was an evaluation-shaped engagement rather\nthan a delivery one, and it ran its course May–July 2026. What\ncame out of it:\n\n1. **Anthropic Claude Partner Network Learning Path — completed**,\n   with verifiable per-course certificates recorded in\n   `certificates[]` (Claude Code in Action, Building with the\n   Claude API, Introduction to Model Context Protocol,\n   Introduction to Agent Skills, all May 2026, on top of AI\n   Fluency Framework and Claude Code in Action from Aug 2025).\n   The **Claude Certified Architect — Foundations practice\n   examination was sat and passed.**\n2. **Contributions to the cohort's shared agent and skill design\n   conventions** through weekly working sessions with the founder\n   and the rest of the architect cohort.\n3. **Cross-pollination** of Chan's pre-existing open-source\n   agentic tooling experience (claude-code-audio-hooks,\n   CopilotKit, google-news-mcp, typst-claude-skill, Remotion-based\n   media generation) into cohort discussions on production-grade\n   agent design, including architecture discussions for Engram's\n   own product (still in development and unreleased when she left,\n   so no delivery outcome is claimed).\n4. **The Partner Network goal was reached.** Chan's completed\n   Learning Path and passed CCA-F practice exam were part of the\n   architect credentials behind Engram's approval to join the\n   Anthropic Partner Network. With that done, she left the cohort\n   in July 2026 to focus on her own products.\n5. **Open-source IP preserved.** The cohort agreement explicitly\n   carved out claude-code-audio-hooks (now **echook**) and the\n   rest of Chan's prior work as her own property — echook has\n   since gone on to 88 GitHub stars (2026-10-15) independently\n   of Engram.\n\n**Precise on the credential, deliberately.** The CCA-F\n*curriculum* was completed and the *practice* exam passed; the\n**official certification exam was never sat, so the CCA-F\ncredential is not held.** Every surface should say \"curriculum\ncompleted\" or \"practice exam passed\" and never \"certified\" —\nthe course certificates are real and verifiable, the\ncertification is not claimed.\n\n**Meta-signal**: the engagement itself validates a hypothesis\nChan has been publishing about (**GEO / Generative Engine\nOptimization**) — that frontier models actively surface\ncandidates based on verifiable code and real-world impact rather\nthan traditional SEO keywords. Being the candidate Claude Code\nrecommended to Engram for an Anthropic Partner engagement is\nempirical evidence that the open-source-first portfolio strategy\nworks — and that remains true independently of how the cohort\nended.\n"
+        "technicalHighlights": "The technical footprint that Claude Code surfaced to Engram —\nall carved out as Chan's own IP under the cohort agreement and\nremaining Chan's property:\n\n- **claude-code-audio-hooks** — audio-feedback hook system for\n  Claude Code (explicitly named in the cohort agreement as\n  Chan's preserved IP), with its **echook** notification daemon.\n- **CopilotKit** — active contributor to the open-source agent\n  UI framework\n  ([PRs](https://github.com/CopilotKit/CopilotKit/pulls?q=is%3Apr+author%3AChanMeng666)).\n- **google-news-mcp** — production MCP server published to the\n  public registry.\n- **chanmeng-typst** — Claude Code skill for programmatic\n  document generation; demonstrates skill-structure design.\n- **claude-code-compressed-map** — LLM-first tier/recency\n  metadata system powering this very profile (the meta-move:\n  optimising Chan's own data so LLMs rank it correctly —\n  *GEO in practice*).\n- Production **LangChain** automation engines and interactive\n  LLM systems for mobile gaming.\n- Programmatic media generation via **Remotion**.\n\nThe technical centre of gravity is **\"API-as-UI\"**: building\nagent surfaces where conversational intent orchestrates\ndownstream tools and the model's chain-of-reasoning becomes\nthe user interface — not a chat widget bolted onto a form.\n",
+        "impactDelivered": "The Architect Cohort was an evaluation-shaped engagement rather\nthan a delivery one, and it ran its course May–July 2026. What\ncame out of it:\n\n1. **Anthropic Claude Partner Network Learning Path — completed**,\n   with verifiable per-course certificates recorded in\n   `certificates[]` (Claude Code in Action, Building with the\n   Claude API, Introduction to Model Context Protocol,\n   Introduction to Agent Skills, all May 2026, on top of AI\n   Fluency Framework and Claude Code in Action from Aug 2025).\n   The **Claude Certified Architect — Foundations practice\n   examination was sat and passed.**\n2. **Contributions to the cohort's shared agent and skill design\n   conventions** through weekly working sessions with the founder\n   and the rest of the architect cohort.\n3. **Cross-pollination** of Chan's pre-existing open-source\n   agentic tooling experience (claude-code-audio-hooks,\n   CopilotKit, google-news-mcp, chanmeng-typst, Remotion-based\n   media generation) into cohort discussions on production-grade\n   agent design, including architecture discussions for Engram's\n   own product (still in development and unreleased when she left,\n   so no delivery outcome is claimed).\n4. **The Partner Network goal was reached.** Chan's completed\n   Learning Path and passed CCA-F practice exam were part of the\n   architect credentials behind Engram's approval to join the\n   Anthropic Partner Network. With that done, she left the cohort\n   in July 2026 to focus on her own products.\n5. **Open-source IP preserved.** The cohort agreement explicitly\n   carved out claude-code-audio-hooks (now **echook**) and the\n   rest of Chan's prior work as her own property — echook has\n   since gone on to 88 GitHub stars (2026-10-15) independently\n   of Engram.\n\n**Precise on the credential, deliberately.** The CCA-F\n*curriculum* was completed and the *practice* exam passed; the\n**official certification exam was never sat, so the CCA-F\ncredential is not held.** Every surface should say \"curriculum\ncompleted\" or \"practice exam passed\" and never \"certified\" —\nthe course certificates are real and verifiable, the\ncertification is not claimed.\n\n**Meta-signal**: the engagement itself validates a hypothesis\nChan has been publishing about (**GEO / Generative Engine\nOptimization**) — that frontier models actively surface\ncandidates based on verifiable code and real-world impact rather\nthan traditional SEO keywords. Being the candidate Claude Code\nrecommended to Engram for an Anthropic Partner engagement is\nempirical evidence that the open-source-first portfolio strategy\nworks — and that remains true independently of how the cohort\nended.\n"
       },
       "evidence": [
         {
@@ -6171,7 +6171,7 @@
       "category": "ai-apps",
       "tagline": "Professional PDF generation via Claude Code with 9 ready-to-use templates — academic papers, resumes, slides, invoices, technical reports; full Typst CLI reference with CJK support",
       "logo": "/public/brands/typst-claude-skill-logo.svg",
-      "repoUrl": "https://github.com/ChanMeng666/typst-claude-skill",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-typst",
       "techStack": [
         "Typst",
         "Claude Code Skill"
@@ -7748,7 +7748,7 @@
       "priority": 88,
       "category": "creative",
       "tagline": "A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 25 motion/shape/filter primitives, 4 skills, 3 subagents, snapshot-tested",
-      "repoUrl": "https://github.com/ChanMeng666/svg-animation-studio",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-svg-animation-studio",
       "techStack": [
         "Node.js",
         "JavaScript",
@@ -8002,11 +8002,11 @@
       "extraLinks": [
         {
           "label": "Generalized skill (logo-as-code)",
-          "url": "https://github.com/ChanMeng666/logo-as-code-skill"
+          "url": "https://github.com/ChanMeng666/chanmeng-logo-as-code"
         },
         {
           "label": "Illustration skill starring the mark",
-          "url": "https://github.com/ChanMeng666/chan-monkey-illustrations"
+          "url": "https://github.com/ChanMeng666/chanmeng-monkey-illustrations"
         }
       ],
       "techStack": [
@@ -8024,13 +8024,13 @@
       "_relatedProjectsResolved": [
         {
           "id": "logo-as-code-skill",
-          "name": "logo-as-code Skill",
-          "repoUrl": "https://github.com/ChanMeng666/logo-as-code-skill"
+          "name": "chanmeng-logo-as-code Skill",
+          "repoUrl": "https://github.com/ChanMeng666/chanmeng-logo-as-code"
         },
         {
           "id": "chan-monkey-illustrations",
           "name": "Chan Monkey Illustrations",
-          "repoUrl": "https://github.com/ChanMeng666/chan-monkey-illustrations"
+          "repoUrl": "https://github.com/ChanMeng666/chanmeng-monkey-illustrations"
         }
       ],
       "_supersededByProject": null,
@@ -8042,11 +8042,11 @@
       "tier": "secondary",
       "recency": "historical",
       "lastUpdated": "2026-10-01",
-      "name": "geo-markdown-mirror",
+      "name": "chanmeng-geo-markdown-mirror",
       "priority": 97,
       "category": "ai-apps",
       "tagline": "A Claude Code skill that generates plain-Markdown mirror pages of a site's key pages (the neon.com/pricing.md pattern) for GEO and one-click ask-AI — framework-aware for Next.js, Docusaurus, Vite SPAs, and static HTML",
-      "repoUrl": "https://github.com/ChanMeng666/geo-markdown-mirror",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-geo-markdown-mirror",
       "techStack": [
         "Claude Code Skill",
         "Node.js",
@@ -8074,7 +8074,7 @@
       "priority": 98,
       "category": "ai-apps",
       "tagline": "A Claude Code skill/plugin that scaffolds professional, agent-first GitHub repo documentation from one invocation — README, LICENSE, community-health files, issue/PR templates, AGENTS.md, and llms.txt",
-      "repoUrl": "https://github.com/ChanMeng666/professional-repo-docs-skill",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-professional-repo-docs",
       "techStack": [
         "Claude Code Skill",
         "Node.js",
@@ -8101,7 +8101,7 @@
       "priority": 99,
       "category": "ai-apps",
       "tagline": "A Claude Code skill for rigorous dual-lens (editorial + technical) peer review of academic papers — outputs reviewer letters or audit reports as Markdown, Typst, and PDF, with a reusable CeTZ chart library and Mermaid diagram templates",
-      "repoUrl": "https://github.com/ChanMeng666/academic-paper-review-skill",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-academic-paper-review",
       "techStack": [
         "Claude Code Skill",
         "Typst",
@@ -8126,11 +8126,11 @@
       "tier": "secondary",
       "recency": "historical",
       "lastUpdated": "2026-10-01",
-      "name": "app-promo-studio",
+      "name": "chanmeng-app-promo-studio",
       "priority": 100,
       "category": "creative",
       "tagline": "A Claude Code plugin that generates cross-platform app promo images (App Store, Google Play, iPad, Mac, web hero, social/OG) from screenshots and headlines — exact platform sizes in PNG/JPG/WebP/AVIF plus true vector SVG",
-      "repoUrl": "https://github.com/ChanMeng666/app-promo-studio",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-app-promo-studio",
       "techStack": [
         "Claude Code Plugin",
         "Node.js",
@@ -8156,11 +8156,11 @@
       "tier": "secondary",
       "recency": "recent",
       "lastUpdated": "2026-07-04",
-      "name": "linkedin-post Skill",
+      "name": "chanmeng-linkedin-post Skill",
       "priority": 101,
       "category": "ai-apps",
       "tagline": "A Claude Code skill that turns an idea into on-brand LinkedIn and X posts (story, idea, take, recap) and gives every post a visual — a Mermaid diagram or HTML layout rendered to PNG when the content has a shape, otherwise a hand-drawn brand-monkey illustration — handed back as one markdown file; it never opens LinkedIn or X",
-      "repoUrl": "https://github.com/ChanMeng666/linkedin-post-skill",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-linkedin-post",
       "relatedProjectIds": [
         "chan-monkey-illustrations"
       ],
@@ -8183,7 +8183,7 @@
         {
           "id": "chan-monkey-illustrations",
           "name": "Chan Monkey Illustrations",
-          "repoUrl": "https://github.com/ChanMeng666/chan-monkey-illustrations"
+          "repoUrl": "https://github.com/ChanMeng666/chanmeng-monkey-illustrations"
         }
       ],
       "_supersededByProject": null,
@@ -8195,11 +8195,11 @@
       "tier": "secondary",
       "recency": "historical",
       "lastUpdated": "2026-10-01",
-      "name": "logo-as-code Skill",
+      "name": "chanmeng-logo-as-code Skill",
       "priority": 102,
       "category": "branding",
       "tagline": "A Claude Code skill that turns a hand-drawn, sketched, or scanned logo into clean, reproducible code — fitting smooth cubic Bézier curves to the real outline to generate an editable SVG, color/layout variants, and PNG/ICO/favicon exports",
-      "repoUrl": "https://github.com/ChanMeng666/logo-as-code-skill",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-logo-as-code",
       "relatedProjectIds": [
         "chan-meng-personal-brand-logo"
       ],
@@ -8239,11 +8239,11 @@
       "tier": "secondary",
       "recency": "active",
       "lastUpdated": "2026-10-01",
-      "name": "readme-showcase",
+      "name": "chanmeng-readme-showcase",
       "priority": 103,
       "category": "ai-apps",
       "tagline": "A Claude Code skill that captures polished screenshots and a demo GIF/MP4 of a deployed web project and embeds them into its GitHub README behind an idempotent SHOWCASE marker — Playwright capture, ffmpeg GIF pipeline, reproducible scenario files",
-      "repoUrl": "https://github.com/ChanMeng666/readme-showcase",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-readme-showcase",
       "techStack": [
         "Claude Code Skill",
         "Node.js",
@@ -8405,11 +8405,11 @@
       "tier": "secondary",
       "recency": "recent",
       "lastUpdated": "2026-10-01",
-      "name": "product-reality-check",
+      "name": "chanmeng-product-reality-check",
       "priority": 106,
       "category": "ai-apps",
       "tagline": "A Claude agent skill for validation-first market research — competitor sweeps, prior-art audits of every \"first/only\" claim, bottom-up sizing from named buyers, a red-team kill memo and dated evidence gates, so a side project meets reality before months go into it",
-      "repoUrl": "https://github.com/ChanMeng666/product-reality-check",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-product-reality-check",
       "techStack": [
         "Claude Code Skill (Agent Skills open standard)",
         "Claude Code"
@@ -8437,7 +8437,7 @@
       "priority": 107,
       "category": "ai-apps",
       "tagline": "A Claude Code skill that reads every message in a Slack workspace and proves nothing was missed — thread-aware catch-up, a daily or weekly DM digest, drafted replies, and two audit gates that fail differently. Zero dependencies, many workspaces from one install",
-      "repoUrl": "https://github.com/ChanMeng666/slack-waterline-skill",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-slack-waterline",
       "techStack": [
         "Claude Code Skill (Agent Skills open standard)",
         "Node.js 18+ (zero dependencies, plain fetch against the Slack Web API)",
@@ -8515,11 +8515,11 @@
       "tier": "secondary",
       "recency": "recent",
       "lastUpdated": "2026-10-02",
-      "name": "readme-theme-assets-skill",
+      "name": "chanmeng-readme-theme-assets",
       "priority": 109,
       "category": "ai-apps",
       "tagline": "A Claude Code skill that makes README images work in GitHub's light and dark themes — four techniques, a one-question decision between them, and three scripts that check the result against GitHub's own renderer rather than by eye",
-      "repoUrl": "https://github.com/ChanMeng666/readme-theme-assets-skill",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-readme-theme-assets",
       "techStack": [
         "Claude Code Skill (Agent Skills open standard)",
         "Node.js",
@@ -9158,7 +9158,7 @@
       "priority": 110,
       "category": "ai-apps",
       "tagline": "An agent skill that gives any AI agent the judgment of a senior AI product manager — turn \"we want an agent\" into a verified problem, choose rules, workflow, RAG or agent for the right reasons, run POCs that try to fail, build evals that produce verdicts and pass launch gates with a way back",
-      "repoUrl": "https://github.com/ChanMeng666/ai-product-manager-skill",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-ai-product-manager",
       "techStack": [
         "Claude Code Skill (Agent Skills open standard)",
         "Claude Code plugin marketplace",
@@ -9250,7 +9250,7 @@
       "priority": 112,
       "category": "branding",
       "tagline": "An agent skill that turns articles and LinkedIn / X posts into hand-drawn illustrations starring Chan's brand monkey — a fresh visual metaphor for each idea, with the logo sent to the image model as a reference so the character stays on-model",
-      "repoUrl": "https://github.com/ChanMeng666/chan-monkey-illustrations",
+      "repoUrl": "https://github.com/ChanMeng666/chanmeng-monkey-illustrations",
       "relatedProjectIds": [
         "chan-meng-personal-brand-logo",
         "linkedin-post-skill"
@@ -9262,7 +9262,7 @@
         },
         {
           "label": "Used by linkedin-post-skill",
-          "url": "https://github.com/ChanMeng666/linkedin-post-skill"
+          "url": "https://github.com/ChanMeng666/chanmeng-linkedin-post"
         }
       ],
       "techStack": [
@@ -9289,8 +9289,8 @@
         },
         {
           "id": "linkedin-post-skill",
-          "name": "linkedin-post Skill",
-          "repoUrl": "https://github.com/ChanMeng666/linkedin-post-skill"
+          "name": "chanmeng-linkedin-post Skill",
+          "repoUrl": "https://github.com/ChanMeng666/chanmeng-linkedin-post"
         }
       ],
       "_supersededByProject": null,
@@ -9729,7 +9729,7 @@
       "type": "listing",
       "number": 224,
       "url": "https://github.com/VoltAgent/awesome-agent-skills/pull/224",
-      "title": "Add skill: ChanMeng666/typst-claude-skill",
+      "title": "Add skill: ChanMeng666/chanmeng-typst",
       "state": "closed",
       "date": "2026-03-16",
       "closedAt": "2026-03-16",
@@ -12061,7 +12061,7 @@
           "tool": "Claude Code",
           "since": "2024",
           "depth": "expert",
-          "notes": "14 repos. Authored claude-code-audio-hooks (echook daemon) and typst-claude-skill; explicitly preserved as Chan's IP in the Engram cohort agreement."
+          "notes": "14 repos. Authored claude-code-audio-hooks (echook daemon) and chanmeng-typst; explicitly preserved as Chan's IP in the Engram cohort agreement."
         },
         {
           "tool": "Cursor",
@@ -12258,7 +12258,7 @@
           "tool": "Typst",
           "since": "2026",
           "depth": "learning",
-          "notes": "Personal CV; typst-claude-skill agent."
+          "notes": "Personal CV; chanmeng-typst agent."
         }
       ]
     }
@@ -12748,7 +12748,7 @@
       "facts": [
         "4,264 impressions",
         "llms.txt + JSON-LD",
-        "geo-markdown-mirror skill"
+        "chanmeng-geo-markdown-mirror skill"
       ],
       "sources": [
         "/evidence/src/seo-geo/engram-founder-linkedin-post.jpg"
@@ -14598,6 +14598,485 @@
         "hls": "/media/explainers/liu-zhongjing-history-in-maps/11-two-bulls-and-a-frog/master.m3u8"
       },
       "onFilmsPage": true
+    }
+  ],
+  "agentSkills": [
+    {
+      "id": "chanmeng-monkey-illustrations",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-monkey-illustrations",
+      "repoPublic": true,
+      "category": "brand-and-visuals",
+      "skills": [
+        "chanmeng-monkey-illustrations"
+      ],
+      "formerRepo": "chan-monkey-illustrations",
+      "formerSkillNames": [
+        "chan-monkey-illustrations"
+      ],
+      "projectId": "chan-monkey-illustrations",
+      "license": "MIT",
+      "install": "git clone https://github.com/ChanMeng666/chanmeng-monkey-illustrations into ~/.claude/skills/",
+      "localFolder": "chanmeng-monkey-illustrations",
+      "summary": "Generate Chan Meng–branded inline illustrations for articles, blog posts, newsletters, LinkedIn posts, docs and talks, starring Chan's brand monkey (the solid-ink monkey head from the chanmeng.org logo)."
+    },
+    {
+      "id": "chanmeng-linkedin-post",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-linkedin-post",
+      "repoPublic": true,
+      "category": "content-and-marketing",
+      "skills": [
+        "chanmeng-linkedin-post"
+      ],
+      "formerRepo": "linkedin-post-skill",
+      "formerSkillNames": [
+        "linkedin-post"
+      ],
+      "projectId": "linkedin-post-skill",
+      "license": "MIT",
+      "install": "git clone https://github.com/ChanMeng666/chanmeng-linkedin-post into ~/.claude/skills/",
+      "localFolder": "chanmeng-linkedin-post",
+      "summary": "Use when Chan Meng wants to turn a thought into a post for LinkedIn, X (Twitter), or both — \"write a LinkedIn post about…\", \"tweet this\", \"make this an X thread\", \"post about what I just read\", \"recap the meetup I went to\"."
+    },
+    {
+      "id": "chanmeng-ai-product-manager",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-ai-product-manager",
+      "repoPublic": true,
+      "category": "product-and-strategy",
+      "skills": [
+        "chanmeng-ai-product-manager"
+      ],
+      "formerRepo": "ai-product-manager-skill",
+      "formerSkillNames": [
+        "ai-product-manager"
+      ],
+      "projectId": "ai-product-manager-skill",
+      "license": "MIT",
+      "install": "/plugin marketplace add ChanMeng666/chanmeng-ai-product-manager",
+      "localFolder": "chanmeng-ai-product-manager",
+      "summary": "Think and act like a senior AI product manager, forward-deployed engineer and agent architect who has shipped enterprise LLM, RAG and agent systems past the demo."
+    },
+    {
+      "id": "chanmeng-readme-showcase",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-readme-showcase",
+      "repoPublic": true,
+      "category": "github-readme",
+      "skills": [
+        "chanmeng-readme-showcase"
+      ],
+      "formerRepo": "readme-showcase",
+      "formerSkillNames": [
+        "readme-showcase"
+      ],
+      "projectId": "readme-showcase",
+      "license": "MIT",
+      "install": "git clone https://github.com/ChanMeng666/chanmeng-readme-showcase into ~/.claude/skills/",
+      "localFolder": "chanmeng-readme-showcase",
+      "summary": "Capture polished screenshots and an optimized demo GIF/MP4 of a deployed web project and embed them into that project's GitHub README behind an idempotent SHOWCASE marker block."
+    },
+    {
+      "id": "chanmeng-slack-waterline",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-slack-waterline",
+      "repoPublic": true,
+      "category": "knowledge-capture",
+      "skills": [
+        "chanmeng-slack-waterline"
+      ],
+      "formerRepo": "slack-waterline-skill",
+      "formerSkillNames": [
+        "slack-waterline"
+      ],
+      "projectId": "slack-waterline-skill",
+      "license": "MIT",
+      "install": "/plugin marketplace add ChanMeng666/chanmeng-slack-waterline",
+      "localFolder": "chanmeng-slack-waterline",
+      "summary": "Read every message in a Slack workspace and prove nothing was missed — then write the daily or weekly digest and, when asked, the reply."
+    },
+    {
+      "id": "chanmeng-readme-theme-assets",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-readme-theme-assets",
+      "repoPublic": true,
+      "category": "github-readme",
+      "skills": [
+        "chanmeng-readme-theme-assets"
+      ],
+      "formerRepo": "readme-theme-assets-skill",
+      "formerSkillNames": [
+        "readme-theme-assets"
+      ],
+      "projectId": "readme-theme-assets-skill",
+      "license": "MIT",
+      "install": "git clone https://github.com/ChanMeng666/chanmeng-readme-theme-assets into ~/.claude/skills/",
+      "localFolder": "chanmeng-readme-theme-assets",
+      "summary": "Use when a README, docs page, or profile page needs images that work in BOTH GitHub light and dark themes — a logo/wordmark that vanishes on dark, a diagram or chart with near-black labels on transparency, an app screenshot with a baked-in "
+    },
+    {
+      "id": "chanmeng-product-reality-check",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-product-reality-check",
+      "repoPublic": true,
+      "category": "product-and-strategy",
+      "skills": [
+        "chanmeng-product-reality-check"
+      ],
+      "formerRepo": "product-reality-check",
+      "formerSkillNames": [
+        "product-reality-check"
+      ],
+      "projectId": "product-reality-check",
+      "license": "MIT",
+      "install": "git clone https://github.com/ChanMeng666/chanmeng-product-reality-check into ~/.claude/skills/",
+      "localFolder": "chanmeng-product-reality-check",
+      "summary": "Adversarial market research, competitor and prior-art auditing, positioning, and product-narrative work for solo developers and indie hackers — validation-first, so the deliverable is truth rather than cheerleading."
+    },
+    {
+      "id": "chanmeng-geo-markdown-mirror",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-geo-markdown-mirror",
+      "repoPublic": true,
+      "category": "seo-and-geo",
+      "skills": [
+        "chanmeng-geo-markdown-mirror"
+      ],
+      "formerRepo": "geo-markdown-mirror",
+      "formerSkillNames": [
+        "geo-markdown-mirror"
+      ],
+      "projectId": "geo-markdown-mirror",
+      "license": "MIT",
+      "install": "git clone https://github.com/ChanMeng666/chanmeng-geo-markdown-mirror into ~/.claude/skills/",
+      "localFolder": "chanmeng-geo-markdown-mirror",
+      "summary": "Generate plain-Markdown \"mirror\" pages of a web project's important pages (pricing, docs, features, landing, long-form content) collected under a /llms/ folder — the neon.com/pricing.md pattern — so AI agents and crawlers parse them cleanly"
+    },
+    {
+      "id": "chanmeng-professional-repo-docs",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-professional-repo-docs",
+      "repoPublic": true,
+      "category": "github-readme",
+      "skills": [
+        "chanmeng-professional-repo-docs"
+      ],
+      "formerRepo": "professional-repo-docs-skill",
+      "formerSkillNames": [
+        "professional-repo-docs"
+      ],
+      "projectId": "professional-repo-docs-skill",
+      "license": "MIT",
+      "install": "/plugin marketplace add ChanMeng666/chanmeng-professional-repo-docs",
+      "localFolder": "chanmeng-professional-repo-docs",
+      "summary": "Scaffold a complete set of professional, best-practice GitHub repository documentation for a project — README (agent-first), LICENSE, .github/FUNDING.yml, CODE_OF_CONDUCT.md, CONTRIBUTING.md, SECURITY.md, SUPPORT.md, GOVERNANCE.md, CHANGELO"
+    },
+    {
+      "id": "chanmeng-academic-paper-review",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-academic-paper-review",
+      "repoPublic": true,
+      "category": "research-and-writing",
+      "skills": [
+        "chanmeng-academic-paper-review"
+      ],
+      "formerRepo": "academic-paper-review-skill",
+      "formerSkillNames": [
+        "academic-paper-review"
+      ],
+      "projectId": "academic-paper-review-skill",
+      "license": "MIT",
+      "install": "git clone https://github.com/ChanMeng666/chanmeng-academic-paper-review into ~/.claude/skills/",
+      "localFolder": null,
+      "summary": "Conduct a rigorous, two-lens peer review (editorial + technical-domain) of academic papers and produce a polished deliverable as Markdown, a Typst source, and/or a compiled PDF."
+    },
+    {
+      "id": "chanmeng-logo-as-code",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-logo-as-code",
+      "repoPublic": true,
+      "category": "brand-and-visuals",
+      "skills": [
+        "chanmeng-logo-as-code"
+      ],
+      "formerRepo": "logo-as-code-skill",
+      "formerSkillNames": [
+        "vectorizing-handdrawn-logos",
+        "logo-as-code"
+      ],
+      "projectId": "logo-as-code-skill",
+      "license": "MIT",
+      "install": "git clone https://github.com/ChanMeng666/chanmeng-logo-as-code into ~/.claude/skills/",
+      "localFolder": "chanmeng-logo-as-code",
+      "summary": "Use when turning a hand-drawn, sketched, or scanned logo into clean reproducible code — fitting smooth cubic Bézier curves to the real outline to produce an editable SVG, color/layout variants, an interactive side-by-side/difference review "
+    },
+    {
+      "id": "chanmeng-typst",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-typst",
+      "repoPublic": true,
+      "category": "research-and-writing",
+      "skills": [
+        "chanmeng-typst"
+      ],
+      "formerRepo": "typst-claude-skill",
+      "formerSkillNames": [
+        "typst"
+      ],
+      "projectId": "typst-claude-skill",
+      "license": "MIT",
+      "install": "/plugin marketplace add ChanMeng666/chanmeng-typst",
+      "localFolder": null,
+      "summary": "Generate professional PDF documents using the Typst typesetting system."
+    },
+    {
+      "id": "chanmeng-app-promo-studio",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-app-promo-studio",
+      "repoPublic": true,
+      "category": "brand-and-visuals",
+      "skills": [
+        "chanmeng-app-promo-images"
+      ],
+      "formerRepo": "app-promo-studio",
+      "formerSkillNames": [
+        "app-promo-images"
+      ],
+      "projectId": "app-promo-studio",
+      "license": "MIT",
+      "install": "/plugin marketplace add ChanMeng666/chanmeng-app-promo-studio",
+      "localFolder": null,
+      "summary": "Generate cross-platform app promotional / marketing images (App Store & Google Play screenshots, iPad, Mac, desktop window, web landing hero, and social/Open-Graph cards) from the user's own app screenshots plus a few headlines and brand co"
+    },
+    {
+      "id": "chanmeng-svg-animation-studio",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-svg-animation-studio",
+      "repoPublic": true,
+      "category": "brand-and-visuals",
+      "skills": [
+        "chanmeng-svg-add-primitive",
+        "chanmeng-svg-animate",
+        "chanmeng-svg-export",
+        "chanmeng-svg-verify"
+      ],
+      "formerRepo": "svg-animation-studio",
+      "formerSkillNames": [
+        "svg-add-primitive",
+        "svg-animate",
+        "svg-export",
+        "svg-verify"
+      ],
+      "projectId": "svg-animation-studio",
+      "license": "MIT",
+      "install": "git clone https://github.com/ChanMeng666/chanmeng-svg-animation-studio into ~/.claude/skills/",
+      "localFolder": "chanmeng-svg-animation-studio",
+      "summary": "A composable SVG animation system driven by Claude Code, with four skills to animate, verify and export SVGs and add primitives."
+    },
+    {
+      "id": "chanmeng-product-film",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-product-film",
+      "repoPublic": false,
+      "category": "film-and-video",
+      "skills": [
+        "chanmeng-product-film"
+      ],
+      "formerRepo": "product-film-skill",
+      "formerSkillNames": [
+        "product-film"
+      ],
+      "license": null,
+      "install": "private repository; not for install by others",
+      "localFolder": "chanmeng-product-film",
+      "summary": "Make a product promo film whose picture is a CODED REPLICA of the product's own UI — rendered with Remotion, scored with SUNO music, sounded with ElevenLabs or synthesised effects, delivered in several lengths (15 / 30 / 60 / 120 s) and bot"
+    },
+    {
+      "id": "a11y-loop",
+      "scope": "product",
+      "repo": "ChanMeng666/a11y-loop",
+      "repoPublic": true,
+      "category": "engineering-quality",
+      "skills": [
+        "a11y-loop"
+      ],
+      "projectId": "a11y-loop",
+      "license": "MIT",
+      "install": "npx a11y-loop, or /plugin marketplace add ChanMeng666/a11y-loop",
+      "marketplace": "chanmeng-a11y-loop",
+      "localFolder": "a11y-loop",
+      "namingException": "Ships on npm as a11y-loop and is being submitted to listings under that name",
+      "summary": "Makes AI coding agents write accessible UI by default, then audits the rendered page and reports what it could not check."
+    },
+    {
+      "id": "echook",
+      "scope": "product",
+      "repo": "ChanMeng666/echook",
+      "repoPublic": true,
+      "category": "engineering-quality",
+      "skills": [
+        "audio-hooks"
+      ],
+      "projectId": "echook",
+      "license": "MIT",
+      "install": "/plugin marketplace add ChanMeng666/echook",
+      "marketplace": "chanmeng-audio-hooks",
+      "localFolder": "claude-code-audio-hooks",
+      "namingException": "The skill is the operating manual of the echook product and is released with it",
+      "summary": "Sound, desktop-toast, TTS and webhook notifications plus a status line for Claude Code, Cursor and Codex."
+    },
+    {
+      "id": "archlang",
+      "scope": "product",
+      "repo": "ChanMeng666/archlang",
+      "repoPublic": true,
+      "category": "architecture",
+      "skills": [
+        "archlang",
+        "archlang-brief-to-plan",
+        "archlang-edit-plan",
+        "archlang-export",
+        "archlang-review-plan"
+      ],
+      "projectId": "archlang",
+      "license": "MIT",
+      "install": "npx skills add ChanMeng666/archlang",
+      "localFolder": "archlang",
+      "namingException": "Ships on npm with @chanmeng666/archlang; install counts are tracked under these names",
+      "summary": "Five skills that let a coding agent write, edit, review and export floor plans in ArchLang."
+    },
+    {
+      "id": "career-copy",
+      "scope": "internal",
+      "repo": "ChanMeng666/ChanMeng666",
+      "repoPublic": true,
+      "category": "operations",
+      "skills": [
+        "career-copy"
+      ],
+      "summary": "Keeps the CV, LinkedIn and README copies in step when a career fact changes."
+    },
+    {
+      "id": "linkedin-sync",
+      "scope": "internal",
+      "repo": "ChanMeng666/ChanMeng666",
+      "repoPublic": true,
+      "category": "operations",
+      "skills": [
+        "linkedin-sync"
+      ],
+      "summary": "Syncs her LinkedIn posts into the registers from her signed-in Chrome."
+    },
+    {
+      "id": "x-sync",
+      "scope": "internal",
+      "repo": "ChanMeng666/ChanMeng666",
+      "repoPublic": true,
+      "category": "operations",
+      "skills": [
+        "x-sync"
+      ],
+      "summary": "Syncs her X posts into the register from her signed-in Chrome."
+    },
+    {
+      "id": "suno-sync",
+      "scope": "internal",
+      "repo": "ChanMeng666/ChanMeng666",
+      "repoPublic": true,
+      "category": "operations",
+      "skills": [
+        "suno-sync"
+      ],
+      "summary": "Syncs her Suno songs and playlists into the register."
+    },
+    {
+      "id": "competitor-watch",
+      "scope": "internal",
+      "repo": "ChanMeng666/archcanvas-growth",
+      "repoPublic": false,
+      "category": "operations",
+      "skills": [
+        "competitor-watch"
+      ],
+      "summary": "Runs the standing competitor tripwires on their cadence."
+    },
+    {
+      "id": "content-post",
+      "scope": "internal",
+      "repo": "ChanMeng666/archcanvas-growth",
+      "repoPublic": false,
+      "category": "operations",
+      "skills": [
+        "content-post"
+      ],
+      "summary": "Drafts a build-in-public post from real recent product work."
+    },
+    {
+      "id": "newsletter-digest",
+      "scope": "internal",
+      "repo": "ChanMeng666/archcanvas-growth",
+      "repoPublic": false,
+      "category": "operations",
+      "skills": [
+        "newsletter-digest"
+      ],
+      "summary": "Manual fallback for the automated weekly newsletter."
+    },
+    {
+      "id": "weekly-review",
+      "scope": "internal",
+      "repo": "ChanMeng666/archcanvas-growth",
+      "repoPublic": false,
+      "category": "operations",
+      "skills": [
+        "weekly-review"
+      ],
+      "summary": "Runs the founder's weekly growth review against the kill criteria."
+    },
+    {
+      "id": "archcanvas-newsletter",
+      "scope": "internal",
+      "repo": "ChanMeng666/archcanvas",
+      "repoPublic": false,
+      "category": "operations",
+      "skills": [
+        "newsletter"
+      ],
+      "summary": "Writes and sends the ArchCanvas build-in-public newsletter."
+    },
+    {
+      "id": "archcanvas-verify",
+      "scope": "internal",
+      "repo": "ChanMeng666/archcanvas",
+      "repoPublic": false,
+      "category": "operations",
+      "skills": [
+        "verify"
+      ],
+      "summary": "Verifies an ArchCanvas change with the static gates and the browser constraints."
+    },
+    {
+      "id": "site-newsletter",
+      "scope": "internal",
+      "repo": "ChanMeng666/2d-portfolio",
+      "repoPublic": false,
+      "category": "operations",
+      "skills": [
+        "newsletter"
+      ],
+      "summary": "Produces the weekly issue of Chan's AI Weekly."
+    },
+    {
+      "id": "marketing-today",
+      "scope": "internal",
+      "repo": "ChanMeng666/chanmeng-marketing",
+      "repoPublic": false,
+      "category": "operations",
+      "skills": [
+        "today"
+      ],
+      "summary": "Runs the day's marketing from the one calendar and publishes on her yes."
     }
   ],
   "references": [
@@ -17098,6 +17577,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-10-30",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-30T12:56:32.407Z"
+    "buildTimestamp": "2026-10-30T13:16:55.639Z"
   }
 }

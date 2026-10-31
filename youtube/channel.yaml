@@ -68,8 +68,8 @@ channel:
 
 counts:
   asOf: "2026-10-09"
-  total: 339               # 331 on the Videos tab (Studio's visibility filters) plus the 8 public Shorts
-  public: 84               # 76 videos + 8 Shorts (2026-10-19 capture:youtube, +1 on 2026-10-20, +1 on 2026-10-24)
+  total: 340               # 332 on the Videos tab (Studio's visibility filters) plus the 8 public Shorts
+  public: 85               # 77 videos + 8 Shorts (capture:youtube, 2026-10-31)
   unlisted: 61             # +1 uploaded 2026-10-12, seen in Studio 2026-10-19 (channel.private.yaml)
   private: 236             # 180 of them are raw screen recordings titled by timestamp
   # 2026-10-17: the public count was read again, signed out: 73 (65 videos
@@ -86,6 +86,9 @@ counts:
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # 2026-10-31: Chan uploaded and published the motion intro (film-chan-meng-intro)
+  # and saved the title and description Claude filled in, in Brand films.
+  - { id: hT0eKa8tYOo, kind: film, published: "2026-10-31", duration: "0:53", title: "Chan Meng — one orange pixel, from an empty frame to a full stop | Motion intro", playlists: [Brand films], described: true }
   # 2026-10-24: Chan uploaded and published the 32-second one-take ArchLang
   # film (archlang-promo-threejs) under its file name, in Product films.
   # Claude set the title and description on 2026-10-31, at her request.

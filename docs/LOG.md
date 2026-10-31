@@ -288,3 +288,6 @@ data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/film-masters.md, d
 
 ## [2026-10-31] decide | `chan-meng-motion-intro` is shown on YouTube and chanmeng.org/films, not on LinkedIn Featured and not embedded in its repo README; this replaces the slot named in the two entries above
 data/profile/46-films.yaml, docs/STATE.md
+
+## [2026-10-31] fix | `film-chan-meng-intro` keeps the standard `FILM` placeholder: Chan's decision was about this profile README, so the film repo's README carries the video like any public film repo; `chan-meng-motion-intro` added to the YouTube register
+data/profile/46-films.yaml, docs/STATE.md, youtube/channel.yaml, youtube/videos.yaml

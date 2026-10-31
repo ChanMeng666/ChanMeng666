@@ -7,7 +7,7 @@
 // it to that agent's model and context; then a setting is changed by typing a
 // sentence.
 //
-// It is drawn in the product's own look, as its promo film (echook-promo-studio)
+// It is drawn in the product's own look, as its promo film (film-echook-terminal)
 // fixed it: a near-black terminal in JetBrains Mono, the brand green of the
 // product's logo as the only accent, Space Grotesk for the film's voice, and the
 // product's logo file unmodified. Every colour is read from the film's tokens.ts.
@@ -56,10 +56,10 @@ export const ECHOOK_FONTS = {
   emoji: "scripts/cards/fonts/echook/NotoEmoji-400.ttf",
 };
 export const ECHOOK_INPUTS = {
-  baked: "../echook-promo-studio/src/replica/data/product.generated.json",
-  tokens: "../echook-promo-studio/src/replica/tokens.ts",
-  copy: "../echook-promo-studio/src/copy.ts",
-  demo: "../echook-promo-studio/src/replica/demo.ts",
+  baked: "../film-echook-terminal/src/replica/data/product.generated.json",
+  tokens: "../film-echook-terminal/src/replica/tokens.ts",
+  copy: "../film-echook-terminal/src/copy.ts",
+  demo: "../film-echook-terminal/src/replica/demo.ts",
   logo: "../claude-code-audio-hooks/public/echook-logo.svg",
   readme: "../claude-code-audio-hooks/README.md",
   manifest: "../claude-code-audio-hooks/plugins/audio-hooks/.claude-plugin/plugin.json",

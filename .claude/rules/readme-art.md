@@ -20,6 +20,7 @@ Sources are `file:line` as of 2026-10-16.
 - A module's `*_INPUTS` export lists what it reads from outside this repo. When one is missing the card is skipped and its committed SVG stands (`:21-23`).
 - Build one card: `node scripts/build-readme-cards.mjs <id>`; all: `npm run build:cards`. Neither is part of `npm run build`.
 - `docs/animated-svg-cards.md` is also a published blog post: edit the file first, then republish.
+- A generic copy of that guide ships in the `chanmeng-svg-product-card` skill (`skills/chanmeng-svg-product-card/references/field-guide.md` in `chanmeng-svg-animation-studio`). When a card teaches a new rule or a new technique, port it there too. `scripts/lib/svg-card/` is this repo's own copy of that skill's kit: a kit fix found here belongs there as well.
 - Card rules about what shows beside a card on the README: `.claude/rules/projects.md`.
 
 ## Banners and pills (`public/readme/`, from `scripts/readme-art/`)

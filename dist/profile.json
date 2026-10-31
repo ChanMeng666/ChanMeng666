@@ -7743,11 +7743,11 @@
       "provenance": "personal",
       "tier": "secondary",
       "recency": "historical",
-      "lastUpdated": "2026-10-01",
+      "lastUpdated": "2026-10-31",
       "name": "SVG Animation Studio",
       "priority": 88,
       "category": "creative",
-      "tagline": "A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 25 motion/shape/filter primitives, 4 skills, 3 subagents, snapshot-tested",
+      "tagline": "A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 44 primitives, 5 skills, 3 subagents, snapshot-tested, and an installable skill for animated README product cards",
       "repoUrl": "https://github.com/ChanMeng666/chanmeng-svg-animation-studio",
       "techStack": [
         "Node.js",
@@ -7760,9 +7760,9 @@
       ],
       "status": "active",
       "startDate": "2026-06",
-      "publicSummary": "A composable SVG animation framework with 25 named primitives\n(motion, shapes, filters), preset templates, and Claude Code skills\nthat generate, verify, and ship animations — plus a Next.js preview\ngrid, snapshot tests, and an SVGO export pipeline.\n",
+      "publicSummary": "A composable SVG animation framework with 44 named primitives\n(motion, shapes, filters, decor), preset templates, and Claude Code\nskills that generate, verify, and ship animations — plus a Next.js\npreview grid, snapshot tests, an SVGO export pipeline, and a skill that\ninstalls on its own for animated README product cards.\n",
       "narrative": {
-        "impactHeadline": "A composable, Claude-Code-driven SVG animation system — 25 named primitives compose through a single assembly path, with skills and subagents that generate, visually verify, and safely extend the library; 10/10 snapshot tests.",
+        "impactHeadline": "A composable, Claude-Code-driven SVG animation system — 44 named primitives compose through a single assembly path, with skills and subagents that generate, visually verify, and safely extend the library; every preset is snapshot-tested.",
         "problem": "LLM-generated SVG animations drift in markup, IDs, and style across\nrequests instead of reusing a stable vocabulary.\n",
         "technicalApproach": "A framework-free library exposes composeSVG() as the single assembly\npath; presets compose primitives; Claude Code skills and subagents\nhandle generation, visual verification, and safe library extension.\n",
         "myRole": "Sole author of the primitive library, skills, subagents, and preview.\n"
@@ -14859,6 +14859,7 @@
         "chanmeng-svg-add-primitive",
         "chanmeng-svg-animate",
         "chanmeng-svg-export",
+        "chanmeng-svg-product-card",
         "chanmeng-svg-verify"
       ],
       "formerRepo": "svg-animation-studio",
@@ -14870,9 +14871,9 @@
       ],
       "projectId": "svg-animation-studio",
       "license": "MIT",
-      "install": "git clone https://github.com/ChanMeng666/chanmeng-svg-animation-studio into ~/.claude/skills/",
+      "install": "/plugin marketplace add ChanMeng666/chanmeng-svg-animation-studio",
       "localFolder": "chanmeng-svg-animation-studio",
-      "summary": "A composable SVG animation system driven by Claude Code, with four skills to animate, verify and export SVGs and add primitives."
+      "summary": "Animated SVG product cards for GitHub READMEs, as one skill that installs anywhere (chanmeng-svg-product-card). The other four drive the studio's own library and work in a clone of the repo: animate, verify and export SVGs, and add primitives."
     },
     {
       "id": "chanmeng-product-film",
@@ -17575,8 +17576,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-10-30",
+    "lastModified": "2026-10-31",
     "buildYear": "2026",
-    "buildTimestamp": "2026-10-30T21:22:05.805Z"
+    "buildTimestamp": "2026-10-31T02:54:13.348Z"
   }
 }

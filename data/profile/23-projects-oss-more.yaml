@@ -2559,22 +2559,23 @@ projects:
     provenance: personal
     tier: secondary
     recency: historical
-    lastUpdated: "2026-10-01"
+    lastUpdated: "2026-10-31"
     name: SVG Animation Studio
     priority: 88
     category: creative
-    tagline: A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 25 motion/shape/filter primitives, 4 skills, 3 subagents, snapshot-tested
+    tagline: A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 44 primitives, 5 skills, 3 subagents, snapshot-tested, and an installable skill for animated README product cards
     repoUrl: https://github.com/ChanMeng666/chanmeng-svg-animation-studio
     techStack: ["Node.js", JavaScript, "Next.js 15", React, Vitest, SVGO, "Claude Code skills"]
     status: active
     startDate: "2026-06"
     publicSummary: |
-      A composable SVG animation framework with 25 named primitives
-      (motion, shapes, filters), preset templates, and Claude Code skills
-      that generate, verify, and ship animations — plus a Next.js preview
-      grid, snapshot tests, and an SVGO export pipeline.
+      A composable SVG animation framework with 44 named primitives
+      (motion, shapes, filters, decor), preset templates, and Claude Code
+      skills that generate, verify, and ship animations — plus a Next.js
+      preview grid, snapshot tests, an SVGO export pipeline, and a skill that
+      installs on its own for animated README product cards.
     narrative:
-      impactHeadline: "A composable, Claude-Code-driven SVG animation system — 25 named primitives compose through a single assembly path, with skills and subagents that generate, visually verify, and safely extend the library; 10/10 snapshot tests."
+      impactHeadline: "A composable, Claude-Code-driven SVG animation system — 44 named primitives compose through a single assembly path, with skills and subagents that generate, visually verify, and safely extend the library; every preset is snapshot-tested."
       problem: |
         LLM-generated SVG animations drift in markup, IDs, and style across
         requests instead of reusing a stable vocabulary.

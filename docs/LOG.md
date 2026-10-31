@@ -267,3 +267,6 @@ docs/STATE.md, CLAUDE.md, distribution/plan.yaml, distribution/README.md, packag
 
 ## [2026-10-31] decide | Film repos renamed: 26 repos to `film-`, `mv-` and `explainer-` names by the table Chan confirmed; project ids unchanged; `check:ecosystem` guards the rule; YouTube descriptions keep the old addresses, which redirect
 docs/STATE.md, docs/ecosystem/lineage.yaml, docs/ecosystem/README.md, docs/film-masters.md, data/profile/, distribution/plan.yaml, scripts/check-ecosystem.mjs
+
+## [2026-10-31] add | `chanmeng-svg-product-card`: the animated README card method as an installable skill in `chanmeng-svg-animation-studio`, installed by `/plugin marketplace add`; corrected that project's figures to 44 primitives and five skills
+data/profile/23-projects-oss-more.yaml, data/profile/47-agent-skills.yaml, .claude/rules/readme-art.md

@@ -1289,16 +1289,16 @@ Universal e-book template with realistic page-flip effects, chapter-based music,
 
 ### SVG Animation Studio
 
-A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 25 motion/shape/filter primitives, 4 skills, 3 subagents, snapshot-tested
+A composable SVG animation system driven by Claude Code — describe an animation in natural language, get a production-ready .svg file; 44 primitives, 5 skills, 3 subagents, snapshot-tested, and an installable skill for animated README product cards
 
 - Repository: https://github.com/ChanMeng666/chanmeng-svg-animation-studio
 - Started: June 2026
 - Status: active
 - Tech stack: Node.js, JavaScript, Next.js 15, React, Vitest, SVGO, Claude Code skills
 
-A composable SVG animation framework with 25 named primitives (motion, shapes, filters), preset templates, and Claude Code skills that generate, verify, and ship animations — plus a Next.js preview grid, snapshot tests, and an SVGO export pipeline.
+A composable SVG animation framework with 44 named primitives (motion, shapes, filters, decor), preset templates, and Claude Code skills that generate, verify, and ship animations — plus a Next.js preview grid, snapshot tests, an SVGO export pipeline, and a skill that installs on its own for animated README product cards.
 
-**Impact.** A composable, Claude-Code-driven SVG animation system — 25 named primitives compose through a single assembly path, with skills and subagents that generate, visually verify, and safely extend the library; 10/10 snapshot tests.
+**Impact.** A composable, Claude-Code-driven SVG animation system — 44 named primitives compose through a single assembly path, with skills and subagents that generate, visually verify, and safely extend the library; every preset is snapshot-tested.
 
 ### Super Mario · Makey Makey Edition
 

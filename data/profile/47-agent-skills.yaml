@@ -283,6 +283,7 @@ agentSkills:
       - chanmeng-svg-add-primitive
       - chanmeng-svg-animate
       - chanmeng-svg-export
+      - chanmeng-svg-product-card
       - chanmeng-svg-verify
     formerRepo: svg-animation-studio
     formerSkillNames:
@@ -292,9 +293,12 @@ agentSkills:
       - svg-verify
     projectId: svg-animation-studio
     license: MIT
-    install: git clone https://github.com/ChanMeng666/chanmeng-svg-animation-studio into ~/.claude/skills/
+    install: /plugin marketplace add ChanMeng666/chanmeng-svg-animation-studio
     localFolder: chanmeng-svg-animation-studio
-    summary: A composable SVG animation system driven by Claude Code, with four skills to animate, verify and export SVGs and add primitives.
+    summary: >-
+      Animated SVG product cards for GitHub READMEs, as one skill that installs anywhere
+      (chanmeng-svg-product-card). The other four drive the studio's own library and work in a clone of the
+      repo: animate, verify and export SVGs, and add primitives.
 
   - id: chanmeng-product-film
     scope: released

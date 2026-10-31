@@ -33,43 +33,44 @@ account: "@chanmeng666"
 asOf: "2026-10-31"
 source: x.com web client, signed in as @chanmeng666; read with x/capture/snippet.js
 summary:
-  posts: 88
-  threads: 43
-  byKind: { thread: 12, post: 8, quote: 1, reply: 22 }
+  posts: 92
+  threads: 45
+  byKind: { thread: 14, post: 8, quote: 1, reply: 22 }
   firstPost: "2025-08-10"
-  lastPost: "2026-10-30"
-  daysSinceLastPost: 1
-  engagement: { views: 1461, likes: 10, replies: 52, reposts: 0, quotes: 0, bookmarks: 0, repliesFromOthers: 11 }
-  media: { postsWithMedia: 20, photos: 23, videos: 7, withAltText: 1 }
+  lastPost: "2026-10-31"
+  daysSinceLastPost: 0
+  engagement: { views: 1553, likes: 11, replies: 54, reposts: 0, quotes: 0, bookmarks: 0, repliesFromOthers: 11 }
+  media: { postsWithMedia: 22, photos: 24, videos: 8, withAltText: 1 }
   byMonth:
-    2026-10: { posts: 47, threadsStarted: 29, views: 691 }
-    2026-09: { posts: 9, threadsStarted: 8, views: 267 }
+    2026-10: { posts: 51, threadsStarted: 31, views: 777 }
+    2026-09: { posts: 9, threadsStarted: 8, views: 270 }
     2026-08: { posts: 6, threadsStarted: 1, views: 103 }
-    2026-07: { posts: 25, threadsStarted: 4, views: 367 }
-    2025-08: { posts: 1, threadsStarted: 1, views: 33 }
+    2026-07: { posts: 25, threadsStarted: 4, views: 369 }
+    2025-08: { posts: 1, threadsStarted: 1, views: 34 }
   byProject:
-    archlang: { threads: 27, posts: 47, views: 664 }
-    (none): { threads: 9, posts: 18, views: 442 }
-    archcanvas: { threads: 7, posts: 16, views: 344 }
+    archlang: { threads: 28, posts: 49, views: 729 }
+    (none): { threads: 9, posts: 18, views: 464 }
+    archcanvas: { threads: 7, posts: 16, views: 356 }
     sunostats: { threads: 2, posts: 17, views: 226 }
-    archlang-showcase: { threads: 2, posts: 9, views: 138 }
-    echook: { threads: 2, posts: 4, views: 116 }
-    google-news-mcp: { threads: 1, posts: 3, views: 95 }
-    a11y-loop: { threads: 1, posts: 3, views: 95 }
+    archlang-showcase: { threads: 2, posts: 9, views: 143 }
+    echook: { threads: 2, posts: 4, views: 127 }
+    google-news-mcp: { threads: 1, posts: 3, views: 105 }
+    a11y-loop: { threads: 1, posts: 3, views: 105 }
+    eatropolis-website: { threads: 1, posts: 2, views: 4 }
   byPillar:
-    P1: { threads: 2, posts: 10, views: 181 }
-    P4: { threads: 10, posts: 25, views: 415 }
-    none: { threads: 31, posts: 53, views: 865 }
+    P1: { threads: 2, posts: 10, views: 195 }
+    P4: { threads: 11, posts: 27, views: 436 }
+    none: { threads: 32, posts: 55, views: 922 }
   topByRootViews:
     - id: "2109881681016701149"
       posted: "2026-10-13"
       kind: thread
-      rootViews: 105
+      rootViews: 107
       opens: Code is the cache of the agent.
     - id: "2107777580908859706"
       posted: "2026-10-07"
       kind: thread
-      rootViews: 84
+      rootViews: 92
       opens: I'm Chan Meng — I architect AI agents and ship full-stack products, then teach others to …
     - id: "2104347025299185957"
       posted: "2026-09-28"
@@ -95,6 +96,65 @@ summary:
         - Seismophone is off every visitor-facing surface and pending archive (docs/STATE.md); this thread still links seismophone.chanmeng.org.
         - The first post links a Medium article; Medium was retired as a publishing surface on 2026-07-20.
 threads:
+  - id: "2116358676613374324"
+    url: https://x.com/chanmeng666/status/2116358676613374324
+    kind: thread
+    posted: "2026-10-31"
+    topic: product-film
+    projectIds:
+      - eatropolis-website
+    pillar: none
+    summary: "The 30-second Eatropolis film, posted natively: the festival website she built on commission, drawn as a coded replica; the reply links the site and the full film."
+    totals: { posts: 2, rootViews: 3, views: 4, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+    posts:
+      - id: "2116358676613374324"
+        at: "2026-10-31T02:36:43.000Z"
+        text: |-
+          Eatropolis, Auckland's one-day culinary festival, was on 10 October. I built its website: Next.js on Cloudflare Workers, to the NZ Government Web Accessibility Standard.
+
+          30 seconds of it. Not a screen recording: the picture is a coded replica of the site.
+        media:
+          - type: video
+            size: 1920x1080
+            seconds: 30
+            alt: null
+            src: https://pbs.twimg.com/amplify_video_thumb/2116358579917934592/img/jVb0vThDghpitP2N.jpg
+        metrics: { views: 3, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+      - id: "2116358967593250948"
+        at: "2026-10-31T02:37:52.000Z"
+        text: |-
+          The site: https://eatropolis.co.nz/
+          The one-minute film: https://youtu.be/AdelJ4bezwo
+        links:
+          - https://eatropolis.co.nz/
+          - https://youtu.be/AdelJ4bezwo
+        metrics: { views: 1, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+  - id: "2116353266950996005"
+    url: https://x.com/chanmeng666/status/2116353266950996005
+    kind: thread
+    posted: "2026-10-31"
+    topic: product
+    projectIds:
+      - archlang
+    pillar: P4
+    summary: One word on a wall sets its remodel status in ArchLang, with the drawing of one flat; the reply links the file in the playground and says how takeoff and describe treat the walls.
+    totals: { posts: 2, rootViews: 2, views: 3, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+    posts:
+      - id: "2116353266950996005"
+        at: "2026-10-31T02:15:13.000Z"
+        text: "A remodel plan has three kinds of wall: the ones that stay, the ones that go, the new ones. In ArchLang that is one word on the wall (`status existing | demolish | new`). The demolished walls draw dashed, stop enclosing rooms and drop out of the quantities. One flat, one file."
+        media:
+          - type: photo
+            size: 1817x2369
+            alt: null
+            src: https://pbs.twimg.com/media/HV7MBx3bEAA8y3u.jpg
+        metrics: { views: 2, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+      - id: "2116353640223158637"
+        at: "2026-10-31T02:16:42.000Z"
+        text: "The file: https://playground.archlang.uk/#z=lZfNbuM2EMfveoqBc9hdwEnlz41T7GG3RdFiCxRot0BvDiWOLNY0aZCjyOliH6jP0RcrhpRsSXG82ZwskfOb_3xwqFzBe3C4sxI12AKEAbEXjnZoCHyJWo9BOlEbEB6sQX6HdAdUItRCaw9UCoLc7hBsRePjQnIVVzYWPSgzBmFkWCy0IIYpglppDRmCVg8oQZmb5AoAruHek6DKg8Sd1cqX90Biix5EILMflsqwvRbmjlHKNzKl8CXKMdSKSjAW9jYv__s3uA904JeFyAkcChlkvFYEaHJtPXowlkplNmMorafOY24rQxwJ2wuH4s1QrcH6nnU0KrXaIgjzCJZKdN8HuT_-9RMUSmNwaw0o8mBrA1o8omt5jX3IXu0UBVHQOFEe7vGgPCmzuWeLTyWCs3bnWVQnwQWhi8WwbutjwayWsFWUl2jGIJVRZhNsQ220ejg-Z8gFTa5ixfcix1P9GLITykCGMmxWHvxecw0MWRDH92wgwFMlH28SLhSM3h9b6_fYciP4nABUhhOx2yUAG6ckTNI0AfC50AiTu_hkrKMSqn1YKFFWuok7AdC4QSOTBGLmlHwXOhfwQOiU5TyofGvQe5ilKXyG1-k4fQOvJ5M07f56u0z5of0ROgK-dLD7dZMljkORsqaDnkT0smUuT8g-oxRar81XGfM0PUmLD2c4_qucxbzDiQ99TiaovERZdSirblAJwBX8VjXjoOmsVx6otnE43HT8HNbNhmddDU49u561yZydT-Zh3bTxNzCPmZ31E3sFv5gYSejZVz546YZg1mHla84M1iFt00Z7-NH6SSAeMSXfubabBDUdGf68-geBK3fgeEGLDDWMPjbJ-w5-DUajYDVfpOl4NmV0xdOrTXEE93xlKJnOVm2LNr7Y_sD6Wl8f4gmOLljEeHp7dNEc7x47piVsb6Nu2JPbAfsP3jqKKFsUKsceiXu6qzKmLaAWnJLJ_IT6WWjdkNisHy33dIcT2zeGy5zptBOuoDLGGwMUVPZYFalW02rAmg5Zf5LSitoAq_jERZfWOsbJdeGsCdM_Rnvj1KYkpudoeGjXSlIJK-6nmrsjjNW4NwGwewwNnyHViC0kDNtuP_VYfPJbCWftuDcEhX1QOLvjTnb0nJIM5UVa7AZB3MRPcbdDXNh-WR4Xk_WtngPyHY1gUDhAIwdyYz2fx4f6vlgu7w5XjTLS1rGOMe83ZPdB5uIciE_CRbP5N5ppLELbLM7bLZ7YZSiDr2c3xLu6syV9yhBU3mSWyO5OCeJ0FJUziip3vAfWXpktiI1QxtNAtS0KjwQTPjjqFFIPEz640MWZeBmzuoDxZB8Q4AWY6fICpnBKbvAlmNklDIlMY5gkvG08mR0nCQ-2w-o0SD7xztHzYdlCxJE0D2PyNJJWPJG6A9cWos_pgZprAeKOMAhMXvI3k91fh7gKXfkSlAnB8WkIchcDNx9QjnrgWjjpbIZPwLF7ruPYi_CI5GtoGTruRJHotyd5zWQ5K7DP6CertDW6RkiYJT0lQ8gqVqIfTT6ofPcgtH04b7PDtXw7IGTCK_OEwIetMV-01ss0PSyG_oXnGbfeibxUBjsYnkfNHdLq6JGabJAijeFrG2Dv7N-Y07nv8bAe_pNaZ48weu_y8gdhHoRvVgQhjKbpdHk9Sa-nt_z2S_Il-R8 `arch takeoff` counts only the walls that stand after the works; `arch describe` lists each wall with its status."
+        links:
+          - https://playground.archlang.uk/#z=lZfNbuM2EMfveoqBc9hdwEnlz41T7GG3RdFiCxRot0BvDiWOLNY0aZCjyOliH6jP0RcrhpRsSXG82ZwskfOb_3xwqFzBe3C4sxI12AKEAbEXjnZoCHyJWo9BOlEbEB6sQX6HdAdUItRCaw9UCoLc7hBsRePjQnIVVzYWPSgzBmFkWCy0IIYpglppDRmCVg8oQZmb5AoAruHek6DKg8Sd1cqX90Biix5EILMflsqwvRbmjlHKNzKl8CXKMdSKSjAW9jYv__s3uA904JeFyAkcChlkvFYEaHJtPXowlkplNmMorafOY24rQxwJ2wuH4s1QrcH6nnU0KrXaIgjzCJZKdN8HuT_-9RMUSmNwaw0o8mBrA1o8omt5jX3IXu0UBVHQOFEe7vGgPCmzuWeLTyWCs3bnWVQnwQWhi8WwbutjwayWsFWUl2jGIJVRZhNsQ220ejg-Z8gFTa5ixfcix1P9GLITykCGMmxWHvxecw0MWRDH92wgwFMlH28SLhSM3h9b6_fYciP4nABUhhOx2yUAG6ckTNI0AfC50AiTu_hkrKMSqn1YKFFWuok7AdC4QSOTBGLmlHwXOhfwQOiU5TyofGvQe5ilKXyG1-k4fQOvJ5M07f56u0z5of0ROgK-dLD7dZMljkORsqaDnkT0smUuT8g-oxRar81XGfM0PUmLD2c4_qucxbzDiQ99TiaovERZdSirblAJwBX8VjXjoOmsVx6otnE43HT8HNbNhmddDU49u561yZydT-Zh3bTxNzCPmZ31E3sFv5gYSejZVz546YZg1mHla84M1iFt00Z7-NH6SSAeMSXfubabBDUdGf68-geBK3fgeEGLDDWMPjbJ-w5-DUajYDVfpOl4NmV0xdOrTXEE93xlKJnOVm2LNr7Y_sD6Wl8f4gmOLljEeHp7dNEc7x47piVsb6Nu2JPbAfsP3jqKKFsUKsceiXu6qzKmLaAWnJLJ_IT6WWjdkNisHy33dIcT2zeGy5zptBOuoDLGGwMUVPZYFalW02rAmg5Zf5LSitoAq_jERZfWOsbJdeGsCdM_Rnvj1KYkpudoeGjXSlIJK-6nmrsjjNW4NwGwewwNnyHViC0kDNtuP_VYfPJbCWftuDcEhX1QOLvjTnb0nJIM5UVa7AZB3MRPcbdDXNh-WR4Xk_WtngPyHY1gUDhAIwdyYz2fx4f6vlgu7w5XjTLS1rGOMe83ZPdB5uIciE_CRbP5N5ppLELbLM7bLZ7YZSiDr2c3xLu6syV9yhBU3mSWyO5OCeJ0FJUziip3vAfWXpktiI1QxtNAtS0KjwQTPjjqFFIPEz640MWZeBmzuoDxZB8Q4AWY6fICpnBKbvAlmNklDIlMY5gkvG08mR0nCQ-2w-o0SD7xztHzYdlCxJE0D2PyNJJWPJG6A9cWos_pgZprAeKOMAhMXvI3k91fh7gKXfkSlAnB8WkIchcDNx9QjnrgWjjpbIZPwLF7ruPYi_CI5GtoGTruRJHotyd5zWQ5K7DP6CertDW6RkiYJT0lQ8gqVqIfTT6ofPcgtH04b7PDtXw7IGTCK_OEwIetMV-01ss0PSyG_oXnGbfeibxUBjsYnkfNHdLq6JGabJAijeFrG2Dv7N-Y07nv8bAe_pNaZ48weu_y8gdhHoRvVgQhjKbpdHk9Sa-nt_z2S_Il-R8
+        metrics: { views: 1, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2116118643063116081"
     url: https://x.com/chanmeng666/status/2116118643063116081
     kind: thread
@@ -104,7 +164,7 @@ threads:
       - archlang
     pillar: P4
     summary: A 15-second clip of an ArchLang example compiling in checking order, rooms to sheet, with a playground link where a reader can change a number; a second post says the 3D preview is a separate package and ArchLang itself draws plans.
-    totals: { posts: 2, rootViews: 4, views: 7, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 2, rootViews: 10, views: 17, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2116118643063116081"
         at: "2026-10-30T10:42:54.000Z"
@@ -115,13 +175,13 @@ threads:
             seconds: 15
             alt: null
             src: https://pbs.twimg.com/amplify_video_thumb/2116118480827396096/img/IGHfV4AZ5FZkRllt.jpg
-        metrics: { views: 4, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 10, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2116119087113965623"
         at: "2026-10-30T10:44:40.000Z"
         text: "Source and a playground link where you can change a number and watch it recompile: https://playground.archlang.uk/#z=jVZLbhtHEN3PKR7IjQ1QdIsS9UlsA05iIIAFJ3BsGFlpiuwip6NhN9Hd1FAxBHiVAwQ5Qw6QI-QoPklQ3TP8SLYcroY9Va_eq990Hy_gLB9MWHvnFqjJckM3mLoYac749PEvHJ9j8e8_iBVFeCYdQEGcsPRu7mkxLPpFH69drIydo2LPMAFLF0w0zrLG5AYVWT3Ey2v2N3BLtmIpRsaKQXQg-JWFNiGSnTKodnYOKvqwtGCNhuoaj0pn8VQen4Mini5deF4-HoAT7Mys48ozPAdXX3MAzcnYEAVapDkPSjhFH49KY_FUjp-D7LRyHp8-_l0OUHZOKaCcPR6ArEasGBOK1ZMuU0syXiTUZDTcKmJyU_RRhujNshyiDCYyPiBEzxxhnY8VbsskJyS02DjMaEq6_b-sySKuvJXkfpOOtHO-6ItVayPlGaSneU0h7LyZk9dsh0VC6V20ZfzRrQL38KEAVtbEgMWiAObeaIwVdn59LMnHVLAA8oxDpRArM70aIEh1ylm9ClW5yXJNVgtRkGRprAq0GlfLAtBmEUArqWtdF8Bnk1EUyGk2-llzKdIA8DqyN84jR7ccAkZK4QMeqYF6jEenY5Uebve8mUJ82Lvzyw8nY3UPI6fwYQbZ78sYDX-NRybxee9KnrAtxY73YfY-HrUq0sPnMKRJ_wfGaEfIqIUpkCfF6Gf-sjbXLFOWCQfzO0Mc1xITNU24Ru_CXMsgP8ErE6cV2x5WgQPqfHyVD6X8MhTQrrEJsRMxpyUUGqNjhaMjIVdIL245JC0p9Ggn6ncUq54YpmBic9eNNVrGasctD27LsR3jAlm3TJo468uZdzZCOrvtSYoYSeYyz3OlIHuOYZk8QiQfEZq0z2x0yInbQ2z7KtRGi1lCbs8E-3SDfXimVDJj1DyLeyBJU0srtQlFjE82rmcbWuK5T2jCupAJL7NnKVurofqKddonn_74M7NJk17m-N7Mq1gisEx52k5kuc4llL_B1SZv5QQ94do16cVvtJh826EIlxKNW9UaZBYwMdFWCotF3qrSF-X7y59_-v7Vy7eXb969Lof7sttudtMrjvvqz_fE79BOe8VY7Zrs0M6k5Pp4m-uRUnfstjWRknR26gG78dl4g3dyz67dSRRxON7EFbMCmK28NWmRzrzRc27X8N7Xp2XuZrPAEUdSbGO3DbaFCNFddwgPQYjmL0C0s3oZjL16CGKkvggxdSsb2X-VhdRgD6KPtxXDr9KNgCzevf7h5ZuLF78OoD01FhOeOc-5Cw3nDx5FGT2rJdMmSuPmrpyR9FUCjTSpWb48uDbBTOobsY1uCU-xYi8gFlWeSRPTTSdfBfKFRPBkQwxQm6tMM90z8i2H68DpqjOAlWMQps55bSxFHu7lRYTtCO7uGxMXo1scpHE1tktMXnZnSq2PjlNDbXGynh2gKUu-WWenwyOl1ufbdfdWzHv7fSLp-QqV9JlvCY3GLaFzpdap8h34L25G-9jtfurqnrbOMI1jS2_cYWzX8T6CdxPu2CW0ll10y0xNfnv0unzJ3lyf7NB7T14L3B35lWvYtwFkr-wEyEw3ATaqz-8UoZnijkyK1TAnsGvw0y5tx0qtT-8ATCgYi_sk2hpkHjskTpRaH4_Tzogm1nKLWnr3G0_jvVtempbLyQ16L_y0uiA770FTZPRGanRyoM4ODk96uC1ui_8A The 3D preview comes from a separate package that reads the same source; ArchLang itself draws plans."
         links:
           - https://playground.archlang.uk/#z=jVZLbhtHEN3PKR7IjQ1QdIsS9UlsA05iIIAFJ3BsGFlpiuwip6NhN9Hd1FAxBHiVAwQ5Qw6QI-QoPklQ3TP8SLYcroY9Va_eq990Hy_gLB9MWHvnFqjJckM3mLoYac749PEvHJ9j8e8_iBVFeCYdQEGcsPRu7mkxLPpFH69drIydo2LPMAFLF0w0zrLG5AYVWT3Ey2v2N3BLtmIpRsaKQXQg-JWFNiGSnTKodnYOKvqwtGCNhuoaj0pn8VQen4Mini5deF4-HoAT7Mys48ozPAdXX3MAzcnYEAVapDkPSjhFH49KY_FUjp-D7LRyHp8-_l0OUHZOKaCcPR6ArEasGBOK1ZMuU0syXiTUZDTcKmJyU_RRhujNshyiDCYyPiBEzxxhnY8VbsskJyS02DjMaEq6_b-sySKuvJXkfpOOtHO-6ItVayPlGaSneU0h7LyZk9dsh0VC6V20ZfzRrQL38KEAVtbEgMWiAObeaIwVdn59LMnHVLAA8oxDpRArM70aIEh1ylm9ClW5yXJNVgtRkGRprAq0GlfLAtBmEUArqWtdF8Bnk1EUyGk2-llzKdIA8DqyN84jR7ccAkZK4QMeqYF6jEenY5Uebve8mUJ82Lvzyw8nY3UPI6fwYQbZ78sYDX-NRybxee9KnrAtxY73YfY-HrUq0sPnMKRJ_wfGaEfIqIUpkCfF6Gf-sjbXLFOWCQfzO0Mc1xITNU24Ru_CXMsgP8ErE6cV2x5WgQPqfHyVD6X8MhTQrrEJsRMxpyUUGqNjhaMjIVdIL245JC0p9Ggn6ncUq54YpmBic9eNNVrGasctD27LsR3jAlm3TJo468uZdzZCOrvtSYoYSeYyz3OlIHuOYZk8QiQfEZq0z2x0yInbQ2z7KtRGi1lCbs8E-3SDfXimVDJj1DyLeyBJU0srtQlFjE82rmcbWuK5T2jCupAJL7NnKVurofqKddonn_74M7NJk17m-N7Mq1gisEx52k5kuc4llL_B1SZv5QQ94do16cVvtJh826EIlxKNW9UaZBYwMdFWCotF3qrSF-X7y59_-v7Vy7eXb969Lof7sttudtMrjvvqz_fE79BOe8VY7Zrs0M6k5Pp4m-uRUnfstjWRknR26gG78dl4g3dyz67dSRRxON7EFbMCmK28NWmRzrzRc27X8N7Xp2XuZrPAEUdSbGO3DbaFCNFddwgPQYjmL0C0s3oZjL16CGKkvggxdSsb2X-VhdRgD6KPtxXDr9KNgCzevf7h5ZuLF78OoD01FhOeOc-5Cw3nDx5FGT2rJdMmSuPmrpyR9FUCjTSpWb48uDbBTOobsY1uCU-xYi8gFlWeSRPTTSdfBfKFRPBkQwxQm6tMM90z8i2H68DpqjOAlWMQps55bSxFHu7lRYTtCO7uGxMXo1scpHE1tktMXnZnSq2PjlNDbXGynh2gKUu-WWenwyOl1ufbdfdWzHv7fSLp-QqV9JlvCY3GLaFzpdap8h34L25G-9jtfurqnrbOMI1jS2_cYWzX8T6CdxPu2CW0ll10y0xNfnv0unzJ3lyf7NB7T14L3B35lWvYtwFkr-wEyEw3ATaqz-8UoZnijkyK1TAnsGvw0y5tx0qtT-8ATCgYi_sk2hpkHjskTpRaH4_Tzogm1nKLWnr3G0_jvVtempbLyQ16L_y0uiA770FTZPRGanRyoM4ODk96uC1ui_8A
-        metrics: { views: 3, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 7, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2115626525840252954"
     url: https://x.com/chanmeng666/status/2115626525840252954
     kind: reply
@@ -134,14 +194,14 @@ threads:
       - archlang
     pillar: none
     summary: "Follow-up to a floor-plan detection developer: how ArchLang models rooms, walls and doors, and which sample it would need to test an import."
-    totals: { posts: 1, rootViews: 6, views: 6, likes: 1, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 7, views: 7, likes: 1, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2115626525840252954"
         at: "2026-10-29T02:07:24.000Z"
         text: In ArchLang a room is a box at (x,y) in mm, walls are polylines with a thickness, and doors sit on walls. `arch takeoff` exports wall lengths as CSV and `arch describe --json` gives each room's net area. A JSON of walls and rooms from one detected plan is the sample I'd need.
         mentions:
           - SiddarthaDevops
-        metrics: { views: 6, likes: 1, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 7, likes: 1, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2115626384244855169"
     url: https://x.com/chanmeng666/status/2115626384244855169
     kind: reply
@@ -154,7 +214,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on office layouts: keep the measurements as exact text and let the AI render handle the look; names ArchLang as hers."
-    totals: { posts: 1, rootViews: 4, views: 4, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 5, views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2115626384244855169"
         at: "2026-10-29T02:06:51.000Z"
@@ -163,7 +223,7 @@ threads:
           - https://playground.archlang.uk
         mentions:
           - maietta
-        metrics: { views: 4, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2115626254540079220"
     url: https://x.com/chanmeng666/status/2115626254540079220
     kind: reply
@@ -176,7 +236,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply listing what checkable means for a floor plan: openings on walls, reachable rooms, corridor widths, net areas; names ArchLang as hers."
-    totals: { posts: 1, rootViews: 3, views: 3, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 4, views: 4, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2115626254540079220"
         at: "2026-10-29T02:06:20.000Z"
@@ -185,7 +245,7 @@ threads:
           - https://archlang.uk
         mentions:
           - kane
-        metrics: { views: 3, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 4, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2115626087439049074"
     url: https://x.com/chanmeng666/status/2115626087439049074
     kind: reply
@@ -198,7 +258,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on AI getting rooms wrong: a plan held as text makes a wrong room a one-line fix a linter can flag; names ArchLang as hers."
-    totals: { posts: 1, rootViews: 4, views: 4, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 5, views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2115626087439049074"
         at: "2026-10-29T02:05:40.000Z"
@@ -207,7 +267,7 @@ threads:
           - https://archlang.uk
         mentions:
           - beamnxw
-        metrics: { views: 4, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2115308418886209572"
     url: https://x.com/chanmeng666/status/2115308418886209572
     kind: reply
@@ -220,14 +280,14 @@ threads:
       - archlang
     pillar: none
     summary: Follow-up thanking a poster for explaining how the models read clean plans and room photos.
-    totals: { posts: 1, rootViews: 9, views: 9, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 10, views: 10, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2115308418886209572"
         at: "2026-10-28T05:03:22.000Z"
         text: Interesting, so clean plans read fine and the guessing moved to the photos. Makes sense, door swings rarely show up in a room photo. Thanks for the detail.
         mentions:
           - llamochka_agi
-        metrics: { views: 9, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 10, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2115308347285193020"
     url: https://x.com/chanmeng666/status/2115308347285193020
     kind: reply
@@ -240,14 +300,14 @@ threads:
       - archlang
     pillar: none
     summary: "Follow-up on detection output: ArchLang is text-in for now, and how masks could become .arch source."
-    totals: { posts: 1, rootViews: 11, views: 11, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 13, views: 13, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2115308347285193020"
         at: "2026-10-28T05:03:05.000Z"
         text: "Makes sense, masks for inference and vectors for takeoffs. Not yet, ArchLang is text-in for now. Masks to .arch seems doable: fit walls to mask edges, snap to a grid, rooms from closed regions. If you try it, happy to help on the format side."
         mentions:
           - SiddarthaDevops
-        metrics: { views: 11, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 13, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2115061831463276817"
     url: https://x.com/chanmeng666/status/2115061831463276817
     kind: reply
@@ -260,7 +320,7 @@ threads:
       - archlang
     pillar: none
     summary: Reply to a floor-plan segmentation developer asking which output format they target, with ArchLang disclosed as a possible export.
-    totals: { posts: 1, rootViews: 16, views: 16, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 17, views: 17, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2115061831463276817"
         at: "2026-10-27T12:43:31.000Z"
@@ -269,7 +329,7 @@ threads:
           - https://github.com/ChanMeng666/archlang
         mentions:
           - SiddarthaDevops
-        metrics: { views: 16, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 17, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2115061704497541515"
     url: https://x.com/chanmeng666/status/2115061704497541515
     kind: reply
@@ -282,7 +342,7 @@ threads:
       - archlang
     pillar: none
     summary: Reply on a to-scale floor-plan tool, offering ArchLang as an editable text form of the plan, with disclosure.
-    totals: { posts: 1, rootViews: 6, views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 7, views: 7, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2115061704497541515"
         at: "2026-10-27T12:43:00.000Z"
@@ -291,7 +351,7 @@ threads:
           - https://playground.archlang.uk
         mentions:
           - jnnywlth
-        metrics: { views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 7, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2115061592681562608"
     url: https://x.com/chanmeng666/status/2115061592681562608
     kind: reply
@@ -304,7 +364,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on verifying an AI-made PDF plan: ask for the plan as text first so a check is a diff, with ArchLang disclosed."
-    totals: { posts: 1, rootViews: 18, views: 18, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 19, views: 19, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2115061592681562608"
         at: "2026-10-27T12:42:34.000Z"
@@ -313,7 +373,7 @@ threads:
           - https://archlang.uk
         mentions:
           - glade1579857
-        metrics: { views: 18, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 19, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2114689824624124336"
     url: https://x.com/chanmeng666/status/2114689824624124336
     kind: reply
@@ -326,7 +386,7 @@ threads:
       - archlang
     pillar: none
     summary: Reply on a model comparison asking whether either misread the plan, with ArchLang disclosed.
-    totals: { posts: 1, rootViews: 13, views: 13, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 14, views: 14, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2114689824624124336"
         at: "2026-10-26T12:05:17.000Z"
@@ -335,7 +395,7 @@ threads:
           - https://github.com/ChanMeng666/archlang
         mentions:
           - llamochka_agi
-        metrics: { views: 13, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 14, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2114689699415769267"
     url: https://x.com/chanmeng666/status/2114689699415769267
     kind: reply
@@ -348,7 +408,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on AI house images: pin the layout down as text before rendering, with ArchLang disclosed."
-    totals: { posts: 1, rootViews: 6, views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 8, views: 8, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2114689699415769267"
         at: "2026-10-26T12:04:48.000Z"
@@ -357,7 +417,7 @@ threads:
           - https://playground.archlang.uk
         mentions:
           - stormItAll
-        metrics: { views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 8, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2114689543215681641"
     url: https://x.com/chanmeng666/status/2114689543215681641
     kind: reply
@@ -370,7 +430,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on floor-to-floor mismatch in image models: a shared grid in code keeps levels aligned, with ArchLang disclosed."
-    totals: { posts: 1, rootViews: 5, views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 6, views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2114689543215681641"
         at: "2026-10-26T12:04:10.000Z"
@@ -379,7 +439,7 @@ threads:
           - https://archlang.uk
         mentions:
           - 7thletterja
-        metrics: { views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2114330582771765375"
     url: https://x.com/chanmeng666/status/2114330582771765375
     kind: thread
@@ -387,7 +447,7 @@ threads:
     topic: investigation
     pillar: P1
     summary: "Five posts on a hidden trap in a job application form: an off-screen line addressed to LLMs, four honeypot fields and typing telemetry, traced to Bullhorn's Trust script."
-    totals: { posts: 5, rootViews: 21, views: 48, likes: 0, replies: 4, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 5, rootViews: 23, views: 55, likes: 0, replies: 4, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2114330582771765375"
         at: "2026-10-25T12:17:47.000Z"
@@ -402,7 +462,7 @@ threads:
             size: 3200x1800
             alt: null
             src: https://pbs.twimg.com/media/HVecPGEaEAApI-k.jpg
-        metrics: { views: 21, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 23, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2114330585632256343"
         at: "2026-10-25T12:17:48.000Z"
         text: |-
@@ -411,28 +471,28 @@ threads:
           You'd never see it. An AI agent reading the page would.
 
           If "fossilized trebuchet" turns up in your answers, they know who wrote them.
-        metrics: { views: 18, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 20, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2114330587532333429"
         at: "2026-10-25T12:17:49.000Z"
         text: |-
           The phrase changes on every visit. The script's default is "pink elephant".
 
           Beside it sit four more hidden traps: two text boxes, a checkbox and a button. No person can reach them. A bot that fills everything will.
-        metrics: { views: 3, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 4, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2114330589340074225"
         at: "2026-10-25T12:17:49.000Z"
         text: |-
           The phrase is only the obvious test. The script also watches how you type: speed, pauses between keys, pastes, and whether a real user or a script made each keystroke.
 
           It sends back numbers, not your answers.
-        metrics: { views: 3, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 4, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2114330591084924998"
         at: "2026-10-25T12:17:49.000Z"
         text: |-
           It's from Bullhorn's "Trust" script, part of their recruitment software.
 
           Skipping the hidden line is easy. Typing like a person is the real test.
-        metrics: { views: 3, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 4, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2113781689713668202"
     url: https://x.com/chanmeng666/status/2113781689713668202
     kind: reply
@@ -445,7 +505,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on a Revit MCP furniture demo: placement works because Revit holds exact room geometry; ArchLang disclosed for people without Revit."
-    totals: { posts: 1, rootViews: 3, views: 3, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 4, views: 4, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2113781689713668202"
         at: "2026-10-23T23:56:41.000Z"
@@ -454,7 +514,7 @@ threads:
           - https://archlang.uk
         mentions:
           - Solvaix
-        metrics: { views: 3, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 4, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2113781381470064939"
     url: https://x.com/chanmeng666/status/2113781381470064939
     kind: reply
@@ -467,7 +527,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on hours lost to a wrong room size in Blender: check the 2D plan first, with ArchLang disclosed."
-    totals: { posts: 1, rootViews: 9, views: 9, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 11, views: 11, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2113781381470064939"
         at: "2026-10-23T23:55:28.000Z"
@@ -476,7 +536,7 @@ threads:
           - https://archlang.uk
         mentions:
           - wcaianime
-        metrics: { views: 9, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 11, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2113780508383736122"
     url: https://x.com/chanmeng666/status/2113780508383736122
     kind: reply
@@ -489,7 +549,7 @@ threads:
       - archlang
     pillar: none
     summary: Reply congratulating an open-source release and suggesting a plan format underneath it, with ArchLang disclosed.
-    totals: { posts: 1, rootViews: 5, views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 6, views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2113780508383736122"
         at: "2026-10-23T23:51:59.000Z"
@@ -498,7 +558,7 @@ threads:
           - https://github.com/ChanMeng666/archlang
         mentions:
           - DKretyn
-        metrics: { views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2113755566334247202"
     url: https://x.com/chanmeng666/status/2113755566334247202
     kind: thread
@@ -509,7 +569,7 @@ threads:
       - archlang
     pillar: none
     summary: The 32-second one-take ArchLang film as a native video, saying a new version is on the way; her later posts in the conversation answer a reader whose feedback became public roadmap issues.
-    totals: { posts: 5, rootViews: 32, views: 103, likes: 3, replies: 5, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 5, rootViews: 33, views: 116, likes: 4, replies: 5, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2113755566334247202"
         at: "2026-10-23T22:12:53.000Z"
@@ -525,13 +585,13 @@ threads:
             seconds: 32
             alt: null
             src: https://pbs.twimg.com/amplify_video_thumb/2113755402164948992/img/ENAttU1ggv_CmbYC.jpg
-        metrics: { views: 32, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 33, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2115241920515695024"
         at: "2026-10-28T00:39:07.000Z"
         text: Hey Daniel, I'm really glad you're trying out this tool! If you have any suggestions for improvement or insights while using it, please feel free to send them to me. Thank you in advance. 😘
         mentions:
           - Daniel__Damm
-        metrics: { views: 22, likes: 1, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 23, likes: 1, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2115626686515703994"
         at: "2026-10-29T02:08:03.000Z"
         text: "Thanks again! I've turned the feedback so far into public roadmap issues #343-#347: export, import, multi-storey, validation/takeoff, and doors and furniture. A comment or a thumbs-up on the ones you'd use helps me prioritise: https://github.com/ChanMeng666/archlang/issues"
@@ -539,19 +599,19 @@ threads:
           - https://github.com/ChanMeng666/archlang/issues
         mentions:
           - Daniel__Damm
-        metrics: { views: 34, likes: 1, replies: 3, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 35, likes: 1, replies: 3, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2115799162461773998"
         at: "2026-10-29T13:33:24.000Z"
         text: Thanks Daniel — issues on zones in open rooms and non-straight stairs would help a lot. Pattern Language on top of a declarative plan is a great direction.
         mentions:
           - Daniel__Damm
-        metrics: { views: 12, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 15, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2116120962609623465"
         at: "2026-10-30T10:52:07.000Z"
         text: "Not slop at all. Each one has a plan I can paste and reproduce, and #368 even corrects its own ask. That saves me hours. 🥹🙌"
         mentions:
           - Daniel__Damm
-        metrics: { views: 3, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 10, likes: 1, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2113391056712868190"
     url: https://x.com/chanmeng666/status/2113391056712868190
     kind: reply
@@ -564,7 +624,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on code versus diffusion for plans: print wall lengths as a table before building, with ArchLang disclosed."
-    totals: { posts: 1, rootViews: 19, views: 19, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 20, views: 20, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2113391056712868190"
         at: "2026-10-22T22:04:27.000Z"
@@ -573,7 +633,7 @@ threads:
           - https://github.com/ChanMeng666/archlang
         mentions:
           - RavirajsinhGJ12
-        metrics: { views: 19, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 20, likes: 1, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2113390398572056862"
     url: https://x.com/chanmeng666/status/2113390398572056862
     kind: reply
@@ -586,7 +646,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on an image-to-AutoCAD workflow: check dimensions against the brief, with ArchLang disclosed."
-    totals: { posts: 1, rootViews: 16, views: 16, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 17, views: 17, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2113390398572056862"
         at: "2026-10-22T22:01:50.000Z"
@@ -595,7 +655,7 @@ threads:
           - https://github.com/ChanMeng666/archlang
         mentions:
           - Solvaix
-        metrics: { views: 16, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 17, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2113389767564136707"
     url: https://x.com/chanmeng666/status/2113389767564136707
     kind: reply
@@ -630,7 +690,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on three days lost to image generators: write rooms and sizes down first, with ArchLang disclosed."
-    totals: { posts: 1, rootViews: 5, views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 6, views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2113028094940602808"
         at: "2026-10-21T22:02:10.000Z"
@@ -639,7 +699,7 @@ threads:
           - https://archlang.uk
         mentions:
           - Grand_Ayatollah
-        metrics: { views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2113027661627036117"
     url: https://x.com/chanmeng666/status/2113027661627036117
     kind: reply
@@ -652,7 +712,7 @@ threads:
       - archlang
     pillar: none
     summary: "Reply on why an AI redraw moves rooms: give sizes as a list and change one number a turn, with ArchLang disclosed."
-    totals: { posts: 1, rootViews: 8, views: 8, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 9, views: 9, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2113027661627036117"
         at: "2026-10-21T22:00:27.000Z"
@@ -661,7 +721,7 @@ threads:
           - https://playground.archlang.uk
         mentions:
           - stevehou
-        metrics: { views: 8, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 9, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2112491529579425996"
     url: https://x.com/chanmeng666/status/2112491529579425996
     kind: post
@@ -669,7 +729,7 @@ threads:
     topic: brand
     pillar: none
     summary: "The showreel, posted as a native 112.5-second video: eleven projects, one print and one figure each, painted in code."
-    totals: { posts: 1, rootViews: 19, views: 19, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 20, views: 20, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2112491529579425996"
         at: "2026-10-20T10:30:03.000Z"
@@ -680,7 +740,7 @@ threads:
             seconds: 113
             alt: null
             src: https://pbs.twimg.com/amplify_video_thumb/2112491285999460352/img/vycxBxiwNNg-q4Nk.jpg
-        metrics: { views: 19, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 20, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2109881681016701149"
     url: https://x.com/chanmeng666/status/2109881681016701149
     kind: thread
@@ -688,7 +748,7 @@ threads:
     topic: technical-deep-dive
     pillar: P1
     summary: "Code is the cache of the agent: agents work a job out, code keeps the path once it repeats, infrastructure stays and applications become disposable (five posts, one image)."
-    totals: { posts: 5, rootViews: 105, views: 133, likes: 2, replies: 5, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 5, rootViews: 107, views: 140, likes: 2, replies: 5, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2109881681016701149"
         at: "2026-10-13T05:39:27.000Z"
@@ -703,35 +763,35 @@ threads:
             size: 808x1174
             alt: null
             src: https://pbs.twimg.com/media/HUfOL8kbYAAx2ek.jpg
-        metrics: { views: 105, likes: 2, replies: 2, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 107, likes: 2, replies: 2, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2109881683663282232"
         at: "2026-10-13T05:39:27.000Z"
         text: |-
           A lot of applications won't be worth keeping.
 
           Ask which customers are about to churn, and an agent can query the data, draw the view and file the follow-up tasks. That dashboard lives for thirty seconds. Nobody maintains it.
-        metrics: { views: 13, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 15, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2109881685806596473"
         at: "2026-10-13T05:39:28.000Z"
         text: |-
           What stays is what an agent can't improvise on the spot: databases, networks, identity, payments, schedulers like Kubernetes.
 
           They have to exist before the agent starts, and be the same tomorrow.
-        metrics: { views: 5, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 6, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2109881688071541031"
         at: "2026-10-13T05:39:28.000Z"
         text: |-
           My first version of this said only infrastructure survives. Too strong.
 
           Code that agents keep reusing survives too. It just stops being where the thinking happens.
-        metrics: { views: 5, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 6, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2109881690315440472"
         at: "2026-10-13T05:39:29.000Z"
         text: |-
           Infrastructure stays.
           Applications become disposable.
           Code is where a solution goes once it's worth keeping.
-        metrics: { views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2109564602585665849"
     url: https://x.com/chanmeng666/status/2109564602585665849
     kind: thread
@@ -742,7 +802,7 @@ threads:
       - archlang-showcase
     pillar: P4
     summary: "The ArchLang plan checker run on the de_dust2 map as fan art: no front door, two crate complaints, otherwise sound, with the showcase repo link and a not-affiliated note (three images)."
-    totals: { posts: 3, rootViews: 14, views: 35, likes: 0, replies: 2, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 3, rootViews: 16, views: 40, likes: 0, replies: 2, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2109564602585665849"
         at: "2026-10-12T08:39:29.000Z"
@@ -765,14 +825,14 @@ threads:
             size: 1600x1130
             alt: null
             src: https://pbs.twimg.com/media/HUatfmCaoAAjG_x.jpg
-        metrics: { views: 14, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 16, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2109564604942835883"
         at: "2026-10-12T08:39:30.000Z"
         text: |-
           793 m of exterior wall. No opening. Both teams start inside.
 
           The other two complaints are stacked crates. The suggested fix — move one — would delete the boost.
-        metrics: { views: 14, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 16, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2109564606670844280"
         at: "2026-10-12T08:39:30.000Z"
         text: |-
@@ -785,7 +845,7 @@ threads:
           https://github.com/ChanMeng666/archlang-showcase
         links:
           - https://github.com/ChanMeng666/archlang-showcase
-        metrics: { views: 7, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 8, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2107777580908859706"
     url: https://x.com/chanmeng666/status/2107777580908859706
     kind: thread
@@ -800,7 +860,7 @@ threads:
       - a11y-loop
     pillar: none
     summary: "Pinned introduction thread (v3): who Chan is, five things she builds with links, and what the feed is for. The first post carries x/media/pinned-products.png with alt text. Text source: x-pinned-tweet.md."
-    totals: { posts: 3, rootViews: 84, views: 95, likes: 0, replies: 2, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 3, rootViews: 92, views: 105, likes: 0, replies: 2, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2107777580908859706"
         at: "2026-10-07T10:18:30.000Z"
@@ -817,7 +877,7 @@ threads:
             size: 2400x1350
             alt: "What I build. ArchCanvas: describe a building, get a buildable plan. ArchLang: a text language for floor plans. echook: talk-to-configure notifications for coding agents. Google News MCP: live news for AI assistants. a11y-loop: accessible UI from AI coding agents, audited. Chan Meng."
             src: https://pbs.twimg.com/media/HUBUWMXa0AEmO73.jpg
-        metrics: { views: 84, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 92, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2107777583391871070"
         at: "2026-10-07T10:18:31.000Z"
         text: |-
@@ -838,7 +898,7 @@ threads:
           - https://github.com/ChanMeng666/echook
           - https://github.com/ChanMeng666/server-google-news
           - https://github.com/ChanMeng666/a11y-loop
-        metrics: { views: 6, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 7, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2107777585451291089"
         at: "2026-10-07T10:18:31.000Z"
         text: |-
@@ -849,7 +909,7 @@ threads:
           https://chanmeng.org/
         links:
           - https://chanmeng.org/
-        metrics: { views: 5, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 6, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2106711782249365735"
     url: https://x.com/chanmeng666/status/2106711782249365735
     kind: post
@@ -859,7 +919,7 @@ threads:
       - echook
     pillar: P4
     summary: "echook: what it does in three sentences, and that v6.7.2 is in review for Anthropic's plugin directory."
-    totals: { posts: 1, rootViews: 21, views: 21, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 22, views: 22, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2106711782249365735"
         at: "2026-10-04T11:43:24.000Z"
@@ -878,7 +938,7 @@ threads:
             size: 1272x658
             alt: null
             src: https://pbs.twimg.com/media/HTyK79SbUAADxVm.jpg
-        metrics: { views: 21, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 22, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2106693063779495942"
     url: https://x.com/chanmeng666/status/2106693063779495942
     kind: thread
@@ -886,7 +946,7 @@ threads:
     topic: personal
     pillar: none
     summary: Two posts on the experience of submitting a paper to arXiv, with a screenshot.
-    totals: { posts: 2, rootViews: 26, views: 50, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 2, rootViews: 28, views: 53, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2106693063779495942"
         at: "2026-10-04T10:29:01.000Z"
@@ -901,14 +961,14 @@ threads:
             size: 1262x662
             alt: null
             src: https://pbs.twimg.com/media/HTx5tKKaoAEomPs.jpg
-        metrics: { views: 26, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 28, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2106693389202952439"
         at: "2026-10-04T10:30:19.000Z"
         text: |-
           Six screens for one PDF. An em dash rejected as "bad characters." Logged in, then logged out, looking up a cited author's email.
 
           Click Update, skip the rest of the wizard, and the paper flips from submitted to incomplete. No warning. 🧐
-        metrics: { views: 24, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 25, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2104838939353964848"
     url: https://x.com/chanmeng666/status/2104838939353964848
     kind: post
@@ -917,7 +977,7 @@ threads:
     showcaseId: chan-meng-intro
     pillar: none
     summary: The 64-second intro film, posted as a video business card.
-    totals: { posts: 1, rootViews: 26, views: 26, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 27, views: 27, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2104838939353964848"
         at: "2026-09-29T07:41:23.000Z"
@@ -928,7 +988,7 @@ threads:
             seconds: 64
             alt: null
             src: https://pbs.twimg.com/amplify_video_thumb/2104838570997579776/img/sX2DHeek_5Zlz6SW.jpg
-        metrics: { views: 26, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 27, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2104816112890482878"
     url: https://x.com/chanmeng666/status/2104816112890482878
     kind: post
@@ -937,7 +997,7 @@ threads:
     showcaseId: chan-meng-monkey-sting
     pillar: none
     summary: The 12-second animated logo sting.
-    totals: { posts: 1, rootViews: 26, views: 26, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 27, views: 27, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2104816112890482878"
         at: "2026-09-29T06:10:41.000Z"
@@ -948,7 +1008,7 @@ threads:
             seconds: 12
             alt: null
             src: https://pbs.twimg.com/amplify_video_thumb/2104815937266536448/img/cgD6Vgj6_QTaI9HK.jpg
-        metrics: { views: 26, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 27, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2104347619799794139"
     url: https://x.com/chanmeng666/status/2104347619799794139
     kind: post
@@ -999,13 +1059,13 @@ threads:
     topic: community
     pillar: none
     summary: Quote post reacting to another builder's video.
-    totals: { posts: 1, rootViews: 28, views: 28, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 29, views: 29, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2104065794120573201"
         at: "2026-09-27T04:29:11.000Z"
         text: I started dancing to the music!
         quotes: https://x.com/pleometric/status/2103082510607610023
-        metrics: { views: 28, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 29, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "2103305460116066768"
     url: https://x.com/chanmeng666/status/2103305460116066768
     kind: post
@@ -1484,7 +1544,7 @@ threads:
       - archcanvas
     pillar: P4
     summary: "ArchLang launch thread: floor plans as text that compiles, why a compiler can check what a picture cannot, an honest status line, the playground, and ArchCanvas as what is built on top."
-    totals: { posts: 7, rootViews: 37, views: 115, likes: 0, replies: 6, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 7, rootViews: 37, views: 117, likes: 0, replies: 6, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "2077651235411554599"
         at: "2026-07-16T07:07:10.000Z"
@@ -1542,7 +1602,7 @@ threads:
           http://playground.archlang.uk
         links:
           - http://playground.archlang.uk
-        metrics: { views: 21, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 22, likes: 0, replies: 1, reposts: 0, quotes: 0, bookmarks: 0 }
       - id: "2077651254436851927"
         at: "2026-07-16T07:07:14.000Z"
         text: |-
@@ -1551,7 +1611,7 @@ threads:
           Following along as I go: http://archlang.uk
         links:
           - http://archlang.uk
-        metrics: { views: 20, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 21, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
   - id: "1954495551300653488"
     url: https://x.com/chanmeng666/status/1954495551300653488
     kind: reply
@@ -1562,7 +1622,7 @@ threads:
     topic: bug-report
     pillar: none
     summary: Reply to Napkin AI reporting that its sign-in page was failing, with the console errors. The account's only post before July 2026.
-    totals: { posts: 1, rootViews: 33, views: 33, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+    totals: { posts: 1, rootViews: 34, views: 34, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
     posts:
       - id: "1954495551300653488"
         at: "2025-08-10T10:50:26.000Z"
@@ -1571,4 +1631,4 @@ threads:
           - https://app.napkin.ai/signin
         mentions:
           - napkin_ai
-        metrics: { views: 33, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }
+        metrics: { views: 34, likes: 0, replies: 0, reposts: 0, quotes: 0, bookmarks: 0 }

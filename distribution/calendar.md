@@ -15,8 +15,6 @@ A post made after those dates is not known here until its register is synced.
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-11-03 | Tuesday | Eatropolis website film | LinkedIn (personal) | 60 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_60s_16x9.mp4` | `drafts/eatropolis-film.yaml#linkedin` | posted |
-| 2026-11-03 | Tuesday | Eatropolis website film | X | 30 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_30s_16x9.mp4` | `drafts/eatropolis-film.yaml#x` | draft |
 | 2026-11-05 | Thursday | echook film | LinkedIn (personal) | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#linkedin` | draft |
 | 2026-11-05 | Thursday | echook film | X | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#x` | draft |
 
@@ -77,7 +75,7 @@ Scheduled in another calendar:
 | CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-17 | planned 2026-11-17 | — |
 | She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-10 | planned 2026-11-10 | — |
 | Tam-AI-Ti product film | published 2026-10-06 | published 2026-10-06 | published | planned 2026-11-12 | planned 2026-11-12 | — |
-| Eatropolis website film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-03 | planned 2026-11-03 | — |
+| Eatropolis website film | published 2026-10-06 | published 2026-10-07 | published | published 2026-10-31 | published 2026-10-31 | — |
 | AI programming school product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-19 | planned 2026-11-19 | — |
 | ArchCanvas, the 92-second film | published 2026-10-19 | — | published | — | — | — |
 | Talk to your plan | published 2026-10-19 | — | published | — | — | — |

@@ -90,6 +90,10 @@ overrides:
 # Social posts that already carry a film. `post` is the id in the platform's
 # register; `via` says how the film appears in the post.
 posted:
+  - { film: eatropolis-film, platform: linkedin, post: "7522120495622770688", via: native-video, cut: "60 s, 16:9", note: "Posted on 2026-10-31, ahead of its 2026-11-03 slot; links in the first comment" }
+  - { film: eatropolis-film, platform: x, post: "2116358676613374324", via: native-video, cut: "30 s, 16:9", note: "Posted on 2026-10-31, ahead of its 2026-11-03 slot" }
+  - { film: archcanvas-studio-film, platform: linkedin-page, post: "7522121480231555072", via: native-video, cut: "15 s" }
+  - { film: archcanvas-studio-film, platform: linkedin, post: "7522122813948825600", via: reshare, cut: "15 s", note: "Reshare of the ArchCanvas page's post, not a native upload" }
   - { film: archlang-one-take-film, platform: linkedin, post: "7519520020922552320", via: native-video, cut: "32 s, 16:9" }
   - { film: archlang-one-take-film, platform: x, post: "2113755566334247202", via: native-video, cut: "32 s, 16:9" }
   - { film: chan-meng-showreel, platform: linkedin, post: "7518257065660919809", via: native-video, cut: "112.5 s, 16:9" }
@@ -121,8 +125,6 @@ posted:
 #   draft:  file under chanmeng-marketing/drafts/ and the key inside it
 # GENERATED from chanmeng-marketing/calendar.yaml (node scripts/cal.mjs export). Do not edit dates here.
 schedule:
-  - {date: '2026-11-03', film: eatropolis-film, platform: linkedin, cut: '60 s, 16:9', asset: 02-eatropolis-film/eatropolis_60s_16x9.mp4, draft: eatropolis-film.yaml#linkedin, status: posted}
-  - {date: '2026-11-03', film: eatropolis-film, platform: x, cut: '30 s, 16:9', asset: 02-eatropolis-film/eatropolis_30s_16x9.mp4, draft: eatropolis-film.yaml#x, status: draft}
   - {date: '2026-11-05', film: echook-film, platform: linkedin, cut: '60 s, 16:9', asset: 03-echook-film/echook_60s_16x9.mp4, draft: echook-film.yaml#linkedin, status: draft}
   - {date: '2026-11-05', film: echook-film, platform: x, cut: '60 s, 16:9', asset: 03-echook-film/echook_60s_16x9.mp4, draft: echook-film.yaml#x, status: draft}
   - {date: '2026-11-10', film: she-sharp-film, platform: linkedin, cut: '60 s, 16:9', asset: 04-she-sharp-film/she-sharp_60s_16x9.mp4, draft: she-sharp-film.yaml#linkedin, status: draft}

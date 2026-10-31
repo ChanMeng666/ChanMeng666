@@ -8,10 +8,10 @@ registersAsOf:
   linkedin-page: '2026-10-31'
 summary:
   films: 67
-  complete: 57
+  complete: 58
   cells:
-    published: 152
-    planned: 17
+    published: 154
+    planned: 15
     gap: 2
     skipped: 0
     not-planned: 231
@@ -29,12 +29,12 @@ summary:
       planned: 0
       gap: 0
     linkedin:
-      published: 8
-      planned: 8
+      published: 9
+      planned: 7
       gap: 1
     x:
-      published: 5
-      planned: 9
+      published: 6
+      planned: 8
       gap: 1
     linkedin-page:
       published: 1
@@ -74,6 +74,16 @@ films:
       linkedin:
         state: published
         posts:
+          - post: '7522122813948825600'
+            via: reshare
+            cut: 15 s
+            date: '2026-10-31'
+            url: https://www.linkedin.com/posts/chanmeng666_archcanvas-floorplans-selfbuild-activity-7522122813948825600-FBcL
+            counts:
+              reactions: 0
+              comments: 0
+              reposts: 0
+            note: Reshare of the ArchCanvas page's post, not a native upload
           - post: '7507678365529800704'
             via: reshare
             cut: 120 s
@@ -117,6 +127,15 @@ films:
       linkedin-page:
         state: published
         posts:
+          - post: '7522121480231555072'
+            via: native-video
+            cut: 15 s
+            date: '2026-10-31'
+            url: https://www.linkedin.com/posts/archcanvas_archcanvas-floorplans-selfbuild-activity-7522121480231555072-4JSu
+            counts:
+              reactions: 0
+              comments: 1
+              reposts: 1
           - post: '7507675519014879232'
             via: native-video
             cut: 120 s
@@ -418,18 +437,34 @@ films:
         state: published
         url: https://chanmeng.org/films
       linkedin:
-        state: planned
-        date: '2026-11-03'
-        status: posted
-        cut: 60 s, 16:9
+        state: published
+        posts:
+          - post: '7522120495622770688'
+            via: native-video
+            cut: 60 s, 16:9
+            date: '2026-10-31'
+            url: https://www.linkedin.com/posts/chanmeng666_webdevelopment-accessibility-auckland-activity-7522120495622770688-Kbo5
+            counts:
+              reactions: 1
+              comments: 2
+              reposts: 0
+            note: Posted on 2026-10-31, ahead of its 2026-11-03 slot; links in the first comment
       x:
-        state: planned
-        date: '2026-11-03'
-        status: draft
-        cut: 30 s, 16:9
+        state: published
+        posts:
+          - post: '2116358676613374324'
+            via: native-video
+            cut: 30 s, 16:9
+            date: '2026-10-31'
+            url: https://x.com/chanmeng666/status/2116358676613374324
+            counts:
+              views: 3
+              likes: 0
+              replies: 1
+            note: Posted on 2026-10-31, ahead of its 2026-11-03 slot
       linkedin-page:
         state: not-planned
-    complete: false
+    complete: true
   - film: ai-programming-school-film
     title: AI programming school product film
     kind: product-film
@@ -801,7 +836,7 @@ films:
             date: '2026-10-24'
             url: https://x.com/chanmeng666/status/2113755566334247202
             counts:
-              views: 32
+              views: 33
               likes: 1
               replies: 1
         outsidePolicy: true
@@ -921,7 +956,7 @@ films:
             date: '2026-09-29'
             url: https://x.com/chanmeng666/status/2104838939353964848
             counts:
-              views: 26
+              views: 27
               likes: 0
               replies: 0
       linkedin-page:
@@ -966,7 +1001,7 @@ films:
             date: '2026-09-29'
             url: https://x.com/chanmeng666/status/2104816112890482878
             counts:
-              views: 26
+              views: 27
               likes: 0
               replies: 0
       linkedin-page:
@@ -1011,7 +1046,7 @@ films:
             date: '2026-10-20'
             url: https://x.com/chanmeng666/status/2112491529579425996
             counts:
-              views: 19
+              views: 20
               likes: 0
               replies: 0
             note: Chan posted the full 112.5 s cut, not the 55 s cut the schedule named (the X register reads 112,500 ms)

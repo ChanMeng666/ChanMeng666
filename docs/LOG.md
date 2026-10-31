@@ -276,3 +276,9 @@ docs/STATE.md, templates/partials/featured-work.hbs, docs/ecosystem/lineage.yaml
 
 ## [2026-10-31] fix | The studio's one-line description no longer says it builds the README cover; the glyph code takes the font fix from the skill's kit
 docs/ecosystem/lineage.yaml, scripts/lib/svg-card/glyphs.mjs
+
+## [2026-10-31] decide | Film visual language: `motion.film` tokens, a film surface, Noto Sans SC Black for Chinese display, the film HUD and the second pass; the vignette and full-frame orange plates allowed in films only; no colour changed
+data/brand.yaml, schema/brand.schema.json, scripts/build-brand.mjs, docs/brand/DESIGN.md, docs/STATE.md
+
+## [2026-10-31] decide | The LinkedIn intro film is the first film in the new language; its music may be made in code from the sample libraries in `film-archlang-one-take` and `AI_MUSIC_CREATOR`
+docs/STATE.md

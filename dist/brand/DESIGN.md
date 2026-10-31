@@ -157,6 +157,7 @@ The focus ring is `--shadow-focus-ring` (`0 0 0 3px rgba(252, 80, 0, 0.40)`). Al
 - Digital Orange is NEVER a text colour on a light surface (≤2.7:1) — only a block fill, a rule, or an underline/border accent.
 - Keyboard focus is always visible via the orange focus ring (shadow.focusRing); state is never conveyed by colour alone (border-style, fill, and underline carry it too).
 - Honour prefers-reduced-motion: reduce — disable transitions and animation.
+- A film stays within motion.film.flash on its rendered master: no more than 3 general flashes a second over 25% of the frame (WCAG 2.3.1).
 
 ## Do's and Don'ts
 
@@ -193,8 +194,8 @@ Functional and abstract, with a risograph print feel. Color is rationed: flat bl
 ```css
 /* GENERATED FROM data/brand.yaml — DO NOT EDIT.
  * Regenerate with: npm run build:brand
- * Source of truth: data/brand.yaml v2.1.1
- * Last updated:    2026-06-07
+ * Source of truth: data/brand.yaml v2.2.0
+ * Last updated:    2026-10-31
  */
 
 :root {
@@ -212,6 +213,7 @@ Functional and abstract, with a risograph print feel. Color is rationed: flat bl
   --font-display: Anton, Oswald, 'Bebas Neue', Impact, sans-serif;
   --font-body-sans: 'DM Sans', Inter, 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', Consolas, ui-monospace, monospace;
+  --font-display-cjk: 'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
 
   /* Typography — scale */
   --text-display-xl: 189px;
@@ -247,6 +249,7 @@ Functional and abstract, with a risograph print feel. Color is rationed: flat bl
   --font-weight-400: 400;
   --font-weight-500: 500;
   --font-weight-700: 700;
+  --font-weight-900: 900;
 
   /* Spacing */
   --spacing-0: 0px;
@@ -296,8 +299,8 @@ Functional and abstract, with a risograph print feel. Color is rationed: flat bl
 ```css
 /* GENERATED FROM data/brand.yaml — DO NOT EDIT.
  * Regenerate with: npm run build:brand
- * Source of truth: data/brand.yaml v2.1.1
- * Last updated:    2026-06-07
+ * Source of truth: data/brand.yaml v2.2.0
+ * Last updated:    2026-10-31
  */
 
 @theme {
@@ -315,6 +318,7 @@ Functional and abstract, with a risograph print feel. Color is rationed: flat bl
   --font-display: Anton, Oswald, 'Bebas Neue', Impact, sans-serif;
   --font-body-sans: 'DM Sans', Inter, 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', Consolas, ui-monospace, monospace;
+  --font-display-cjk: 'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
 
   /* Typography — scale */
   --text-display-xl: 189px;
@@ -375,4 +379,4 @@ Functional and abstract, with a risograph print feel. Color is rationed: flat bl
 }
 ```
 
-<!-- Generated from data/brand.yaml v2.1.1 (2026-06-07). Do not edit by hand. -->
+<!-- Generated from data/brand.yaml v2.2.0 (2026-10-31). Do not edit by hand. -->

@@ -737,6 +737,10 @@ if (fs.existsSync(docPath)) {
   const motionRows = [
     ...Object.entries(brand.motion.duration).map(([n, v]) => `| \`--duration-${kebab(n)}\` | ${v}ms |`),
     ...Object.entries(brand.motion.easing).map(([n, v]) => `| \`--easing-${kebab(n)}\` | \`${v}\` |`),
+    ...Object.entries(brand.motion.film ?? {}).flatMap(([n, v]) =>
+      typeof v === "object"
+        ? Object.entries(v).map(([k, x]) => `| \`motion.film.${n}.${k}\` | \`${x}\` |`)
+        : [`| \`motion.film.${n}\` | \`${v}\` |`]),
   ].join("\n");
 
   const fenceBlocks = {

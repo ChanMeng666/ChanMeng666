@@ -56,6 +56,11 @@
       "$value": "JetBrains Mono",
       "$type": "fontFamily",
       "$description": "Data signatures only — datestamps, paths, version numbers. House extension (Caldera has no mono)."
+    },
+    "display-cjk": {
+      "$value": "Noto Sans SC",
+      "$type": "fontFamily",
+      "$description": "Chinese display type in the heaviest weight: film titles, bilibili and Chinese community material. Chinese body text keeps the surface's own face."
     }
   },
   "typography": {
@@ -316,8 +321,8 @@
     "org.chanmeng.brand": {
       "source": "data/brand.yaml",
       "reference": "Caldera — Pixelated Cyber-Playground",
-      "version": "2.1.1",
-      "generatedAt": "2026-06-07"
+      "version": "2.2.0",
+      "generatedAt": "2026-10-31"
     }
   }
 }

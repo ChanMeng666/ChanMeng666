@@ -102,6 +102,53 @@
         "easing": {
           "type": "object",
           "additionalProperties": { "type": "string", "minLength": 1 }
+        },
+        "film": {
+          "type": "object",
+          "description": "Parameters for films only. Time is counted in beats of a measured grid.",
+          "additionalProperties": false,
+          "required": ["clock", "landing", "impact", "vignette", "flash"],
+          "properties": {
+            "clock": { "type": "string", "minLength": 1 },
+            "landing": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["fromScale", "beats", "easing"],
+              "properties": {
+                "fromScale": { "type": "number", "minimum": 1 },
+                "beats":     { "type": "number", "exclusiveMinimum": 0 },
+                "easing":    { "type": "string", "minLength": 1 }
+              }
+            },
+            "impact": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["peakPx", "decayPerFrame", "frameRate"],
+              "properties": {
+                "peakPx":        { "type": "number", "minimum": 0 },
+                "decayPerFrame": { "type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 1 },
+                "frameRate":     { "type": "integer", "minimum": 1 }
+              }
+            },
+            "vignette": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["color", "maxOpacity"],
+              "properties": {
+                "color":      { "type": "string", "minLength": 1 },
+                "maxOpacity": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            },
+            "flash": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["maxPerSecond", "maxArea"],
+              "properties": {
+                "maxPerSecond": { "type": "number", "minimum": 0, "maximum": 3 },
+                "maxArea":      { "type": "number", "minimum": 0, "maximum": 0.25 }
+              }
+            }
+          }
         }
       }
     },

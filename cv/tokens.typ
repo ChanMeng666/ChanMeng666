@@ -1,7 +1,7 @@
 // GENERATED FROM data/brand.yaml — DO NOT EDIT.
 // Regenerate with: npm run build:brand
-// Source of truth: data/brand.yaml v2.1.1
-// Last updated:    2026-06-07
+// Source of truth: data/brand.yaml v2.2.0
+// Last updated:    2026-10-31
 
 // ─── Raw palette ─────────────────────────────────────────────────────────
 #let raw-basalt-canvas = rgb("#E2E2DF")
@@ -36,6 +36,7 @@
 #let font-display = ("Anton", "Oswald", "Bebas Neue", "Impact")
 #let font-body-sans = ("DM Sans", "Inter", "Segoe UI")
 #let font-mono = ("JetBrains Mono", "Consolas")
+#let font-display-cjk = ("Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei")
 
 // ─── Type scale (print sizes in pt) ──────────────────────────────────────
 #let text-display-xl-size = 48pt

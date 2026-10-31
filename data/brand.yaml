@@ -12,6 +12,8 @@
 # the OFL stand-in for PP Neue Corp Compact Ultrabold), DM Sans body, huge
 # friendly radii, and flat color-block hierarchy. v2.1.0 closes the gaps vs. the
 # reference: display font (Bebas → Anton) and the 189px hero scale.
+# v2.2.0 — film language: motion.film, the film surface, a CJK display face, the
+# film HUD and the second pass. No colour changed.
 #
 # Pipeline (see scripts/build-brand.mjs):
 #   data/brand.yaml
@@ -34,10 +36,11 @@
 #   - Orange is a BLOCK background / accent rule, never small body or link text.
 #   - Violet is decorative-only — big background shapes, never text or UI.
 #   - Flat: depth comes from solid color blocks, never shadows or gradients.
+#     One exception: a film may lay the motion.film.vignette over its plates.
 # =============================================================================
 
-version: "2.1.1"
-lastUpdated: "2026-06-07"
+version: "2.2.0"
+lastUpdated: "2026-10-31"
 
 # -----------------------------------------------------------------------------
 # IDENTITY — who the brand is, in one place. Single-paragraph summaries each.
@@ -135,6 +138,11 @@ typography:
       weights: [400, 500]
       role: "Data signatures only — datestamps, paths, version numbers. House extension (Caldera has no mono)."
       licenseNote: "JetBrains Mono is OFL. Consolas is the Windows fallback."
+    displayCjk:
+      stack: ["Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", "sans-serif"]
+      weights: [900]
+      role: "Chinese display type in the heaviest weight: film titles, bilibili and Chinese community material. Chinese body text keeps the surface's own face."
+      licenseNote: "Noto Sans SC is OFL (Google Fonts), the Black weight of Source Han Sans. It is not vendored in cv/fonts: a film repo that needs it adds the file itself."
 
   scale:
     displayXl:
@@ -231,7 +239,7 @@ typography:
     - "Display is heavy compact grotesque (Anton) — the name, every heading, and stat numbers; MIXED case (not all-caps), 0.02em tracking on display only."
     - "Orange is a BLOCK background or accent rule, never small body or link text — links and labels are ink."
     - "Violet is decorative-only — large background shapes and cards, never text or UI."
-    - "Flat by default: hierarchy comes from solid color blocks, not shadows or gradients."
+    - "Flat by default: hierarchy comes from solid color blocks, not shadows or gradients. A film may add the motion.film.vignette; no other surface may."
     - "Body never sits below 16px on web or 9pt in print; DM Sans 500 is the workhorse."
     - "Mono is reserved for data signatures — datestamps, paths, version numbers."
 
@@ -299,6 +307,27 @@ motion:
     standard: "cubic-bezier(0.2, 0, 0, 1)"
     entrance: "cubic-bezier(0.0, 0, 0.2, 1)"
     exit:     "cubic-bezier(0.4, 0, 1, 1)"
+  # Films only. Time is counted in beats of the measured grid, so nothing here
+  # is a duration in ms. landing: a word arrives this much too large and settles.
+  # impact: the red/cyan split on a hit, peakPx at 1080p, multiplied by
+  # decayPerFrame on each frame at frameRate until it is gone.
+  # flash: WCAG 2.3.1 as a release gate on the rendered master.
+  film:
+    clock: "measured-beat-grid"
+    landing:
+      fromScale: 1.16
+      beats: 0.7
+      easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+    impact:
+      peakPx: 12
+      decayPerFrame: 0.7
+      frameRate: 30
+    vignette:
+      color: "abyssalInk"
+      maxOpacity: 0.3
+    flash:
+      maxPerSecond: 3
+      maxArea: 0.25
 
 # -----------------------------------------------------------------------------
 # LAYOUT — 1200px contained, 40px rhythm. Golden split kept for the CV.
@@ -357,7 +386,7 @@ voice:
       rule: "Every claim links to one proof point (PR, repo, live URL, paper). Adjectives without links get cut."
       why: "Established by the README redesign spec; carry forward."
     - name: "Subtraction for life, addition for thought"
-      rule: "At most one orange accent per visual unit; remove decoration until what is left is the idea."
+      rule: "At most one orange accent per visual unit; remove decoration until what is left is the idea. In a film the unit is the shot, and orange may fill it as a plate."
       why: "Chan's stated personal philosophy; the brand must enact it even while the surface is bold."
     - name: "Cross-cultural fluency without translation"
       rule: "Te reo Māori, 中文, English appear in their own forms — italicised once, then treated as first-class vocabulary. No parenthetical glosses unless the audience demonstrably needs them."
@@ -610,6 +639,22 @@ signatures:
     useWhen: "The README's banners and its CTA / link pills."
     doNotUseWhen: "Inside body prose. As decoration between sibling items."
 
+  # 6. Film HUD — the crop marks of readmeArt's furniture, alive: chapter, bar,
+  #    tempo and frame in the mono face at the four corners. Every value is the
+  #    film's real one, read from its own timeline.
+  filmHud:
+    type: "motion"
+    useWhen: "Films."
+    doNotUseWhen: "Every other surface for now. An invented or decorative value."
+
+  # 7. Second pass — a film may play a sequence again with its material changed.
+  #    The change is Pixel Glare and the dither field, never a colour from
+  #    outside the palette. Glare stays out of body text.
+  filmSecondPass:
+    type: "motion"
+    useWhen: "A film that repeats its sequence after a breakdown."
+    doNotUseWhen: "Short films with one pass. A palette colour added for the variation."
+
   # External own-tools (github-visitor-counter / github-readme-suno-cards).
   visitorCounter:
     username: "ChanMeng666"
@@ -658,6 +703,7 @@ accessibility:
     - "Digital Orange is NEVER a text colour on a light surface (≤2.7:1) — only a block fill, a rule, or an underline/border accent."
     - "Keyboard focus is always visible via the orange focus ring (shadow.focusRing); state is never conveyed by colour alone (border-style, fill, and underline carry it too)."
     - "Honour prefers-reduced-motion: reduce — disable transitions and animation."
+    - "A film stays within motion.film.flash on its rendered master: no more than 3 general flashes a second over 25% of the frame (WCAG 2.3.1)."
 
 # -----------------------------------------------------------------------------
 # SURFACES — what each output surface inherits and what it overrides.
@@ -680,3 +726,8 @@ surfaces:
     fontFamilies: ["display", "bodySans"]
     signatures: ["goldEyebrow"]
     note: "Square / 1.91:1 export. Anton name + DM Sans label, one orange rule/chip."
+  film:
+    canvas: "full-frame plates: ink, ash, orange, violet"
+    fontFamilies: ["display", "displayCjk", "bodySans", "mono"]
+    signatures: ["filmHud", "filmSecondPass"]
+    note: "The one surface with the vignette. A shot is the unit for the orange rule. Cuts, plate changes and impacts land on the measured beat grid."

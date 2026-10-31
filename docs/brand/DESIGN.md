@@ -32,7 +32,7 @@ The brand is a **pixelated cyber-playground**: a muted basalt-grey canvas backdr
 
 1. **Architecture-grade vocabulary** — engineering nouns (*orchestration, dispatch, hub-and-spoke*) over marketing adjectives (*powerful, robust, world-class*). Recruiters who matter recognise the nouns.
 2. **Evidence-first** — every claim links to one proof point (PR, repo, live URL, paper). Adjectives without links get cut.
-3. **Subtraction for life, addition for thought** — at most one orange accent per visual unit. Remove decoration until what is left is the idea. (The surface is loud; the discipline is not.)
+3. **Subtraction for life, addition for thought** — at most one orange accent per visual unit. Remove decoration until what is left is the idea. (The surface is loud; the discipline is not.) In a film the unit is the shot, and orange may fill it as a plate.
 4. **Cross-cultural fluency without translation** — te reo Māori, 中文, English appear in their own forms; italicised once, then treated as first-class vocabulary. No parenthetical glosses unless the audience demonstrably needs them.
 5. **Pace by white space** — visual rhythm beats density. The 61.8 / 38.2 ratio from the CV is canonical; default to it elsewhere.
 6. **Never apologise for restraint** — no "minimal-but-", no "sorry it's plain". The confidence *is* the statement.
@@ -106,6 +106,7 @@ Two voices plus a mono house-extension. Display is a heavy compact grotesque (**
 | `--font-display` | Anton, Oswald, Bebas Neue, Impact, sans-serif | 400 | Display, headings, and stat numbers — heavy MIXED-CASE compact grotesque, tight. The magazine-cover voice. |
 | `--font-body-sans` | DM Sans, Inter, Segoe UI, system-ui, sans-serif | 400, 500, 700 | Body, navigation, labels — DM Sans 500, the workhorse. |
 | `--font-mono` | JetBrains Mono, Consolas, ui-monospace, monospace | 400, 500 | Data signatures only — datestamps, paths, version numbers. House extension (Caldera has no mono). |
+| `--font-display-cjk` | Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif | 900 | Chinese display type in the heaviest weight: film titles, bilibili and Chinese community material. Chinese body text keeps the surface's own face. |
 <!-- /AUTO:typography-families -->
 
 <!-- AUTO:typography-scale -->
@@ -127,10 +128,11 @@ Two voices plus a mono house-extension. Display is a heavy compact grotesque (**
 **Principles**
 
 - Display (Anton) is the name, every heading, and stat numbers — heavy compact, mixed case, `0.02em` tracking on display only.
+- Chinese display type is Noto Sans SC Black (`--font-display-cjk`). Anton stays the only Latin display face, in films too.
 - Eyebrow (`--text-eyebrow-*`) is an uppercased DM Sans label; the display face is set in mixed case.
 - Mono is reserved for data signatures: datestamps, paths, version numbers.
 - Body never below 16 px on web or 9 pt in print; DM Sans 500 is the workhorse.
-- Flat by default: hierarchy comes from solid color blocks, not shadows or gradients.
+- Flat by default: hierarchy comes from solid color blocks, not shadows or gradients. A film may add the vignette in `motion.film`; no other surface may.
 
 **License notes.** Anton, Bebas Neue, DM Sans, and JetBrains Mono are all OFL (free for web embed and self-host). They are **vendored at [`cv/fonts/`](../../cv/fonts/)** and loaded via `typst compile --font-path cv/fonts`, so the CV PDF renders deterministically on any machine / CI regardless of the OS font book. On the web, Google Fonts serves the same families; Segoe UI / Consolas remain system fallbacks.
 
@@ -229,7 +231,7 @@ Web layout is a **1200 px contained** flow with a **40 px section rhythm** and a
 
 Cards and content blocks use `--radius-card` (40 px). Inputs use `--radius-input` (100 px pill). Buttons use `--radius-pill` (800 px full pill). **The CV PDF deliberately does NOT inherit these** — print uses small local radii (~4–6 pt) for recruiter/ATS readability.
 
-**Motion:** durations & easing tokens exist but the system has **no animation library** — restraint applies here too.
+**Motion:** durations & easing tokens exist but the system has **no animation library** — restraint applies here too. `motion.film` holds the parameters films share; a film counts them in beats of its own measured grid.
 
 <!-- AUTO:motion -->
 | Token | Value |
@@ -240,13 +242,24 @@ Cards and content blocks use `--radius-card` (40 px). Inputs use `--radius-input
 | `--easing-standard` | `cubic-bezier(0.2, 0, 0, 1)` |
 | `--easing-entrance` | `cubic-bezier(0.0, 0, 0.2, 1)` |
 | `--easing-exit` | `cubic-bezier(0.4, 0, 1, 1)` |
+| `motion.film.clock` | `measured-beat-grid` |
+| `motion.film.landing.fromScale` | `1.16` |
+| `motion.film.landing.beats` | `0.7` |
+| `motion.film.landing.easing` | `cubic-bezier(0.16, 1, 0.3, 1)` |
+| `motion.film.impact.peakPx` | `12` |
+| `motion.film.impact.decayPerFrame` | `0.7` |
+| `motion.film.impact.frameRate` | `30` |
+| `motion.film.vignette.color` | `abyssalInk` |
+| `motion.film.vignette.maxOpacity` | `0.3` |
+| `motion.film.flash.maxPerSecond` | `3` |
+| `motion.film.flash.maxArea` | `0.25` |
 <!-- /AUTO:motion -->
 
 ---
 
 ## 8. Decorative Signatures
 
-Five micro-signatures Chan owns — every one built on assets she controls (the README's own artwork in `public/readme/`, the monogram, OpenType features). External decoration services (shields.io, trophies, wakatime, streak counters) are **forbidden**.
+Seven micro-signatures Chan owns — every one built on assets she controls (the README's own artwork in `public/readme/`, the monogram, OpenType features). External decoration services (shields.io, trophies, wakatime, streak counters) are **forbidden**.
 
 ### 8.1 Hero band (`heroBand`)
 
@@ -283,6 +296,20 @@ The story card (`story.svg`: who Chan is in seven short chapters, a photograph b
 - **Use:** the README's banners and its CTA / link pills.
 - **Do not use:** inside body prose. As decoration between sibling items.
 
+### 8.6 Film HUD (`filmHud`)
+
+The crop marks of the README plates, alive: chapter, bar, tempo and frame in the mono face at the four corners. Every value is the film's real one, read from its own timeline.
+
+- **Use:** films.
+- **Do not use:** any other surface for now. An invented or decorative value.
+
+### 8.7 Second pass (`filmSecondPass`)
+
+A film may play a sequence again with its material changed. The change is Pixel Glare and the dither field, never a colour from outside the palette.
+
+- **Use:** a film that repeats its sequence after a breakdown.
+- **Do not use:** short films with one pass. A palette colour added for the variation.
+
 ---
 
 ## 9. Surfaces — Inheritance and Overrides
@@ -293,6 +320,7 @@ The story card (`story.svg`: who Chan is in seven short chapters, a photograph b
 | **CV (PDF)** | white page (print/ATS-safe); palette via ink + orange accent rules | `--font-display` (Anton, name + headers), `--font-body-sans` (DM Sans), `--font-mono` | monoDatestamp |
 | **Webpage** | `--color-canvas-page` basalt | `--font-display`, `--font-body-sans`, `--font-mono` | All five |
 | **Social card** | `--color-canvas-page` basalt | display + sans | goldEyebrow only |
+| **Film** | full-frame plates: ink, ash, orange, violet | display, display CJK, sans, mono | filmHud, filmSecondPass |
 
 Each surface **inherits** the brand tokens and **may override** when constraints (GitHub markdown limits, print/ATS readability, single-screen real estate) demand it.
 
@@ -320,7 +348,7 @@ Each surface **inherits** the brand tokens and **may override** when constraints
 
 **Proposing a new signature.** Add it under `signatures.*` in `brand.yaml`. Update the relevant `$defs` in `schema/brand.schema.json` if it doesn't match an existing shape (e.g. `bannerSpec` now carries optional `gradientType` + `colors`). Document it in §8 with a *use when* / *do not use when* pair.
 
-**The meta-rule:** every change should make the system *smaller*, not bigger. If the next iteration adds three new tokens and removes none, stop.
+**The meta-rule:** every change should make the system *smaller*, not bigger. If the next iteration adds three new tokens and removes none, stop. `motion.film` is the one exception Chan has made (2026-10-31): it adds a surface and changes no colour.
 
 ---
 
@@ -329,7 +357,7 @@ Each surface **inherits** the brand tokens and **may override** when constraints
 What's out of scope, intentionally:
 
 - **Dark mode.** Light-only for now. A `color.semantic.dark.*` namespace can be added when there's a real surface that needs it.
-- **Motion library.** Tokens exist (`--duration-*`, `--easing-*`) but there are no `@keyframes` primitives. When the future webpage needs them, *it* defines them.
+- **Motion library.** Tokens exist (`--duration-*`, `--easing-*`) and `motion.film` holds the parameters for films, but there are no `@keyframes` primitives. When the future webpage needs them, *it* defines them.
 - **Component library.** No React Button / Card / Pill primitives in this repo. The web consumer (chanmeng.org) builds its own against `tokens.json` / `design-tokens.json`.
 - **Icon system.** `/public/tech-logos/` is an asset-management problem, not a brand-system one. Don't conflate.
 - **Multi-brand support.** No sub-brand tokens for FemTech / Whiri AI / etc. Sub-brands fork the tokens and override.

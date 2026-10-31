@@ -270,3 +270,6 @@ docs/STATE.md, docs/ecosystem/lineage.yaml, docs/ecosystem/README.md, docs/film-
 
 ## [2026-10-31] add | `chanmeng-svg-product-card`: the animated README card method as an installable skill in `chanmeng-svg-animation-studio`, installed by `/plugin marketplace add`; corrected that project's figures to 44 primitives and five skills
 data/profile/23-projects-oss-more.yaml, data/profile/47-agent-skills.yaml, .claude/rules/readme-art.md
+
+## [2026-10-31] decide | README credit line under "What I build" sends visitors to the `chanmeng-svg-animation-studio` page; worded "method and kit" because the cards build from this repo's own code
+docs/STATE.md, templates/partials/featured-work.hbs, docs/ecosystem/lineage.yaml

@@ -15,7 +15,7 @@ A post made after those dates is not known here until its register is synced.
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-11-03 | Tuesday | Eatropolis website film | LinkedIn (personal) | 60 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_60s_16x9.mp4` | `drafts/eatropolis-film.yaml#linkedin` | draft |
+| 2026-11-03 | Tuesday | Eatropolis website film | LinkedIn (personal) | 60 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_60s_16x9.mp4` | `drafts/eatropolis-film.yaml#linkedin` | posted |
 | 2026-11-03 | Tuesday | Eatropolis website film | X | 30 s, 16:9 | `_staging/02-eatropolis-film/eatropolis_30s_16x9.mp4` | `drafts/eatropolis-film.yaml#x` | draft |
 | 2026-11-05 | Thursday | echook film | LinkedIn (personal) | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#linkedin` | draft |
 | 2026-11-05 | Thursday | echook film | X | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#x` | draft |

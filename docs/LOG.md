@@ -285,3 +285,6 @@ docs/STATE.md
 
 ## [2026-10-31] add | `chan-meng-motion-intro`, the 52.5 s motion intro: public repo `film-chan-meng-intro`, master in release v1.0.0; a tile on the README film wall, not yet on chanmeng.org/films or YouTube
 data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/film-masters.md, docs/STATE.md, scripts/readme-art/assets/films/chan-meng-motion-intro.jpg, public/readme/films.svg
+
+## [2026-10-31] decide | `chan-meng-motion-intro` is shown on YouTube and chanmeng.org/films, not on LinkedIn Featured and not embedded in its repo README; this replaces the slot named in the two entries above
+data/profile/46-films.yaml, docs/STATE.md

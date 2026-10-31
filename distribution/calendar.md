@@ -58,6 +58,9 @@ A post made after those dates is not known here until its register is synced.
 
 ## Not yet published and not scheduled here
 
+- Chan Meng, motion intro: LinkedIn (personal)
+- Chan Meng, motion intro: X
+
 Scheduled in another calendar:
 
 - ArchLang film: LinkedIn (personal) (archcanvas-growth)
@@ -94,7 +97,7 @@ Scheduled in another calendar:
 | Chan Meng, 64-second video business card | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng monkey, brand sting | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng, showreel | published 2026-10-09 | — | published | published 2026-10-20 | published 2026-10-20 | — |
-| Chan Meng, motion intro | — | — | — | — | — | — |
+| Chan Meng, motion intro | published | — | published | **to do** | **to do** | — |
 | A Drizzle in October | published 2026-10-07 | — | published | — | — | — |
 | February, on an Extended Line | published 2026-10-07 | — | published | — | — | — |
 | Warrior Ah Hua | published 2026-10-07 | — | published | — | — | — |

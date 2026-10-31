@@ -8,16 +8,16 @@ registersAsOf:
   linkedin-page: '2026-10-31'
 summary:
   films: 68
-  complete: 59
+  complete: 58
   cells:
-    published: 154
+    published: 156
     planned: 15
-    gap: 2
+    gap: 4
     skipped: 0
-    not-planned: 237
+    not-planned: 233
   byPlatform:
     youtube:
-      published: 65
+      published: 66
       planned: 0
       gap: 0
     youtube-short:
@@ -25,17 +25,17 @@ summary:
       planned: 0
       gap: 0
     site:
-      published: 65
+      published: 66
       planned: 0
       gap: 0
     linkedin:
       published: 9
       planned: 7
-      gap: 1
+      gap: 2
     x:
       published: 6
       planned: 8
-      gap: 1
+      gap: 2
     linkedin-page:
       published: 1
       planned: 0
@@ -47,6 +47,10 @@ gaps:
   - film: archlang-film
     platform: x
     scheduledIn: archcanvas-growth
+  - film: chan-meng-motion-intro
+    platform: linkedin
+  - film: chan-meng-motion-intro
+    platform: x
 films:
   - film: archcanvas-studio-film
     title: ArchCanvas studio film
@@ -1057,22 +1061,24 @@ films:
     title: Chan Meng, motion intro
     kind: brand-film
     for: Chan Meng
-    policy: not-shown
+    policy: brand-film
     platforms:
       youtube:
-        state: not-planned
+        state: published
+        id: hT0eKa8tYOo
+        url: https://youtu.be/hT0eKa8tYOo
       youtube-short:
         state: not-planned
       site:
-        state: not-planned
+        state: published
+        url: https://chanmeng.org/films
       linkedin:
-        state: not-planned
+        state: gap
       x:
-        state: not-planned
+        state: gap
       linkedin-page:
         state: not-planned
-    reason: 'Recorded, shown nowhere (docs/STATE.md): the project is not public, or the film was not made as a promo'
-    complete: true
+    complete: false
   - film: a-drizzle-in-october
     title: A Drizzle in October
     kind: music-video

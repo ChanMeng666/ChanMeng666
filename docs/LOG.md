@@ -273,3 +273,6 @@ data/profile/23-projects-oss-more.yaml, data/profile/47-agent-skills.yaml, .clau
 
 ## [2026-10-31] decide | README credit line under "What I build" sends visitors to the `chanmeng-svg-animation-studio` page; worded "method and kit" because the cards build from this repo's own code
 docs/STATE.md, templates/partials/featured-work.hbs, docs/ecosystem/lineage.yaml
+
+## [2026-10-31] fix | The studio's one-line description no longer says it builds the README cover; the glyph code takes the font fix from the skill's kit
+docs/ecosystem/lineage.yaml, scripts/lib/svg-card/glyphs.mjs

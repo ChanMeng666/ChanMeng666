@@ -47,7 +47,14 @@ export class GlyphSet {
   // A character the font lacks is taken from `fallback` (same units-per-em only).
   #layout(str, key, tracking, fallback) {
     const font = this.font(key);
-    const glyphs = font.stringToGlyphs(str);
+    // opentype.js throws on GSUB lookups it does not support (Inter's ccmp is one).
+    // Such a font then loses its ligatures here, which a card never needs.
+    let glyphs;
+    try {
+      glyphs = font.stringToGlyphs(str);
+    } catch {
+      glyphs = [...str].map((c) => font.charToGlyph(c));
+    }
     const items = [];
     let x = 0;
     glyphs.forEach((g, i) => {

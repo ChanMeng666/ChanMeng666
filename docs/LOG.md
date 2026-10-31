@@ -282,3 +282,6 @@ data/brand.yaml, schema/brand.schema.json, scripts/build-brand.mjs, docs/brand/D
 
 ## [2026-10-31] decide | The LinkedIn intro film is the first film in the new language; its music may be made in code from the sample libraries in `film-archlang-one-take` and `AI_MUSIC_CREATOR`
 docs/STATE.md
+
+## [2026-10-31] add | `chan-meng-motion-intro`, the 52.5 s motion intro: public repo `film-chan-meng-intro`, master in release v1.0.0; a tile on the README film wall, not yet on chanmeng.org/films or YouTube
+data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/film-masters.md, docs/STATE.md, scripts/readme-art/assets/films/chan-meng-motion-intro.jpg, public/readme/films.svg

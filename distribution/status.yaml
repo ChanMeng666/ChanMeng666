@@ -7,14 +7,14 @@ registersAsOf:
   linkedin: '2026-10-31'
   linkedin-page: '2026-10-31'
 summary:
-  films: 67
-  complete: 58
+  films: 68
+  complete: 59
   cells:
     published: 154
     planned: 15
     gap: 2
     skipped: 0
-    not-planned: 231
+    not-planned: 237
   byPlatform:
     youtube:
       published: 65
@@ -1052,6 +1052,26 @@ films:
             note: Chan posted the full 112.5 s cut, not the 55 s cut the schedule named (the X register reads 112,500 ms)
       linkedin-page:
         state: not-planned
+    complete: true
+  - film: chan-meng-motion-intro
+    title: Chan Meng, motion intro
+    kind: brand-film
+    for: Chan Meng
+    policy: not-shown
+    platforms:
+      youtube:
+        state: not-planned
+      youtube-short:
+        state: not-planned
+      site:
+        state: not-planned
+      linkedin:
+        state: not-planned
+      x:
+        state: not-planned
+      linkedin-page:
+        state: not-planned
+    reason: 'Recorded, shown nowhere (docs/STATE.md): the project is not public, or the film was not made as a promo'
     complete: true
   - film: a-drizzle-in-october
     title: A Drizzle in October

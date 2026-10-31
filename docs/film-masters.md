@@ -113,6 +113,12 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 |---|---|---|
 | `out/archlang-promo.mp4` | 13 | release `v1.0.0` › `archlang-promo.mp4` (also `.html`, `soundtrack.wav`, `soundtrack.m4a`, `SHA256SUMS.txt`) |
 
+## ChanMeng666/film-chan-meng-intro (public)
+
+| Rendered to | MB | On GitHub |
+|---|---|---|
+| `dist/chan-meng-intro.mp4` | 21 | release `v1.0.0` › `chan-meng-motion-intro-2026-10.mp4` (also `chan-meng-motion-intro-score.wav`, `chan-meng-motion-intro-poster.jpg`, `SHA256SUMS.txt`; SHA-256 checked 2026-10-31) |
+
 ## ChanMeng666/film-chan-meng-brand (private)
 
 | Rendered to | MB | On GitHub |

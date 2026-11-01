@@ -312,3 +312,6 @@ data/profile/23-projects-oss-more.yaml, docs/STATE.md, docs/operations/README.md
 
 ## [2026-11-01] add | ArchLang in ChatGPT film: public repo, release v1.0.0, YouTube, /films; the plugin link and film repo added to ArchLang's extra links
 data/profile/46-films.yaml, data/profile/45-showcase.yaml, data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/film-masters.md, docs/STATE.md, youtube/channel.yaml, distribution/plan.yaml
+
+## [2026-11-02] change | ArchLang's film on show is now the ArchLang in ChatGPT film (82 s), delegated by Chan to Claude; the 68 s film stays on /films; two a11y-loop listing forks catalogued; registers synced after the posts of 2026-11-01
+data/profile/45-showcase.yaml, data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, distribution/plan.yaml, x/posts.yaml, linkedin/curation.yaml, linkedin/account.yaml

@@ -3183,8 +3183,8 @@ wrote every translation, built the multi-channel distribution
 Google News MCP counterpart. External contributions have been
 dependency bumps and catalog-integration commits; the tool
 design and localization are mine.
-### Github README Suno Cards — GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 37 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.
-[tier=primary · recency=active · updated=2026-07-17]
+### Github README Suno Cards — GitHub Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 37 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.
+[tier=primary · recency=active · updated=2026-11-01]
 - **URL:** https://github-readme-suno-cards.vercel.app
 - **Repository:** https://github.com/ChanMeng666/github-readme-suno-cards
 - **Tech stack:** pnpm 9.12 monorepo (apps/ + packages/ + action/), Next.js 15.1 (Vercel Edge runtime), TypeScript 5.6, @suno-cards/parser workspace package (Valibot-validated Suno oEmbed parser — shared kernel with Seismophone), @suno-cards/render workspace package (pure-function SVG renderer), Valibot (strict TypeScript schema validation against studio-api-prod.suno.com oEmbed), SVG <foreignObject> + inline HTML <span> (CJK text shaping), CSS @keyframes (equalizer-bar animation driven by HTML spans inside the SVG), GitHub Actions JavaScript action (Node 20 runtime with esbuild-bundled dist), Biome 1.9 (lint + format), Vitest (parser tests inside action/test/), Vercel Data Cache (upstream, 3600s TTL for single cards), HTTP Cache-Control headers (downstream, drives GitHub Camo proxy), esbuild (action bundle build via action/build.ts), MIT license
@@ -3246,7 +3246,7 @@ element toggles, override colors with hex codes, and copy the
 finished embed URL. **Path 2 — GitHub Action auto-sync.** Add
 `<!-- SUNO-CARDS:START -->` / `<!-- SUNO-CARDS:END -->`
 markers to your README and a workflow using
-`uses: ChanMeng666/github-readme-suno-cards@v0.2.1` on a
+`uses: ChanMeng666/github-readme-suno-cards@v0.3.0` on a
 schedule (typically every 6 hours). The Action reads any of
 its 37 inputs — a Suno handle (auto-discovery of every public
 song), a YAML manifest of song IDs, or an inline CSV; plus
@@ -3261,7 +3261,7 @@ path produced them.
 
 **Technical approach:** A pnpm monorepo with three workspaces: `apps/` (the Next.js
 15.1 frontend on Vercel), `packages/` (two reusable kernels),
-and `action/` (the GitHub Marketplace Action). The two
+and `action/` (the GitHub Action). The two
 packages are the architecturally important part.
 **`@suno-cards/parser`** is a Valibot-validated (v0.42.1)
 client for Suno's public oEmbed-style API on
@@ -3306,12 +3306,12 @@ is the clean-extract release — first commit `73f4fa8`
 "initial commit — github-readme-suno-cards v0.1" on
 2026-04-13, immediately followed by `295756e` "clean remaining
 internal reference" (the post-extraction sanitization sweep) —
-carried forward to `8f5f46f` on 2026-10-12. A 2026-07-05
+carried forward to `c9143b1` on 2026-11-01. A 2026-07-05
 health audit, recorded in `86167f4`, confirmed all three
 render surfaces against live Suno data. That audit produced
 two durable API decisions: the `/api/trending` fossil was
 quarantined out of the public parser surface, and HTTP 422 got
-its own error type. The 2026-09-17 fixes kept the profile and
+its own error type. The v0.3.0 fixes kept the profile and
 stack cards working after Suno removed badge colours and closed
 the public mp3. The shared parser kernel with Seismophone
 is the architecturally important outcome: rather than two Suno
@@ -3328,7 +3328,7 @@ wrote the Valibot schemas against Suno's oEmbed contract;
 designed the typed Suno error hierarchy (including the
 422-vs-404 split); engineered the `<foreignObject>` +
 CSS-keyframes technique that handles CJK text and animated
-equalizers in a single card; built the GitHub Marketplace
+equalizers in a single card; built the GitHub
 Action with its esbuild-bundled dist and its 37-input surface
 with three-format ID normalization; designed the
 `<!-- SUNO-CARDS:START/END -->` marker-based README
@@ -4046,7 +4046,7 @@ delivery work once AI is in the toolchain. 87 registered, 51 attended.
 - **Top 10 MCP Servers & Clients for AI Workflow Automation in 2026** -- DataCamp (2025-07-10) -- https://www.datacamp.com/blog/top-mcp-servers-and-clients [tier=secondary · recency=recent · updated=2026-10-13]
 - **Meet the FemTech Founders Redefining Women's Health at Work** -- THISDAYLIVE (2025-05-28) -- https://www.thisdaylive.com/2025/05/28/meet-the-femtech-founders-redefining-womens-health-at-work/ [tier=flagship · recency=recent · updated=2026-08-26]
 - **Weekly Pulse: Remote MCP, Images, Screen Recording** -- PulseMCP -- https://www.pulsemcp.com/posts/newsletter-remote-mcp-images-screen-recording [tier=secondary · recency=historical · updated=2026-05-18]
-- **FemTech Weekend × UN Women CSW69** -- FemTech Weekend (2025-04-16) -- https://chanmeng.org/blog/from-code-to-care-un [tier=flagship · recency=recent · updated=2026-07-21]
+- **FemTech Weekend × UN Women CSW69** -- FemTech Weekend (2025-04-16) -- https://chanmeng.org/blog/from-code-to-care-un [tier=flagship · recency=recent · updated=2026-11-01]
 - **Solved Bug: Authentication Redirect Issue in Sanicle-AI Platform** -- Vercel Community (2025-03) -- https://community.vercel.com/t/solved-bug-authentication-redirect-issue-in-sanicle-ai-platform/6818 [tier=archive · recency=historical · updated=2026-05-18]
 - **码农姐妹 — From Math Teacher to Full-Stack Developer** -- 小宇宙FM (Xiaoyuzhou) -- https://www.xiaoyuzhoufm.com/episode/67b2082405a90dfd0ddbcaa2 [tier=secondary · recency=historical · updated=2026-05-18]
 - **Femtech At Work — From Math Teacher to FemTech CTO (Greater China Edition, Ep 21)** -- Femtech At Work (2025-04-22) -- https://open.spotify.com/episode/0aNgDy0Qw6oQMXNxhszZv2 [tier=secondary · recency=historical · updated=2026-08-25]
@@ -4057,9 +4057,9 @@ delivery work once AI is in the toolchain. 87 registered, 51 attended.
 - **Decoding the Future (LinkedIn Newsletter)** -- LinkedIn Newsletter -- https://www.linkedin.com/newsletters/7359054938187984896/ [tier=secondary · recency=deprecated · updated=2026-07-21]
 - **What's Shipping in AI (Weekly AI Digest)** -- chanmeng.org/#newsletter -- https://chanmeng.org/#newsletter [tier=secondary · recency=historical · updated=2026-05-18]
 - **Reproducible Is Not Correct: Reflexive Gates and the Self-Descriptions We Ship to Language Models** -- Zenodo (preprint) (2026-09-25) -- https://doi.org/10.5281/zenodo.22958002 [tier=primary · recency=active · updated=2026-09-29]
-- **The AI Fluency Framework** -- chanmeng.org (2025-10-09) -- https://chanmeng.org/blog/ai-fluency-framework [tier=primary · recency=active · updated=2026-07-21]
-- **The Future is Small: Why Small Language Models (SLMs) Are Powering the Next Wave of AI Agents** -- chanmeng.org (2025-08-26) -- https://chanmeng.org/blog/small-language-models-next-wave-ai-agents [tier=primary · recency=active · updated=2026-07-21]
-- **CopilotKit + LangGraph.js HITL Integration Guide** -- chanmeng.org (2026-01-15) -- https://chanmeng.org/blog/copilotkit-langgraph-hitl [tier=primary · recency=active · updated=2026-07-21]
+- **The AI Fluency Framework** -- chanmeng.org (2025-10-09) -- https://chanmeng.org/blog/ai-fluency-framework [tier=primary · recency=historical · updated=2026-11-01]
+- **The Future is Small: Why Small Language Models (SLMs) Are Powering the Next Wave of AI Agents** -- chanmeng.org (2025-08-26) -- https://chanmeng.org/blog/small-language-models-next-wave-ai-agents [tier=primary · recency=historical · updated=2026-11-01]
+- **CopilotKit + LangGraph.js HITL Integration Guide** -- chanmeng.org (2026-01-15) -- https://chanmeng.org/blog/copilotkit-langgraph-hitl [tier=primary · recency=recent · updated=2026-11-01]
 - **Solution for MCP Servers Connection Issues with NVM/NPM** -- chanmeng.org (2024-11-27) -- https://chanmeng.org/blog/mcp-server-nvm-connection-fix [tier=archive · recency=historical · updated=2026-07-21]
 - **Creating a Python MCP Server: A Step-by-Step Guide** -- chanmeng.org (2024-12-30) -- https://chanmeng.org/blog/python-mcp-server-guide [tier=archive · recency=historical · updated=2026-07-21]
 - **Building an AI Dialogue System: A Comprehensive Guide** -- LinkedIn Pulse -- https://www.linkedin.com/pulse/building-ai-dialogue-system-comprehensive-guide-chan-meng-d3dsc/ [tier=archive · recency=historical · updated=2026-05-18]
@@ -4067,17 +4067,17 @@ delivery work once AI is in the toolchain. 87 registered, 51 attended.
 - **AI Conversation Implementation Tutorial** -- chanmeng.org (2025-11-24) -- https://chanmeng.org/blog/ai-conversation-implementation [tier=archive · recency=historical · updated=2026-07-21]
 - **Creating Educational Animations with Manim: From Script to Final Video** -- chanmeng.org (2025-03-04) -- https://chanmeng.org/blog/educational-animations-with-manim [tier=archive · recency=historical · updated=2026-07-21]
 - **Suno Closed Its Public MP3. The Only Audio Left Won't Identify Itself.** -- chanmeng.org (2026-09-18) -- https://chanmeng.org/blog/suno-public-mp3-closed [tier=primary · recency=active · updated=2026-09-18]
-- **The Explore Feed That Froze** -- chanmeng.org (2026-07-18) -- https://chanmeng.org/blog/suno-trending-feed-frozen [tier=primary · recency=active · updated=2026-07-21]
-- **Neon Auth Email Verification & Password Reset** -- chanmeng.org (2026-07-14) -- https://chanmeng.org/blog/neon-auth-email-verification [tier=primary · recency=active · updated=2026-07-21]
+- **The Explore Feed That Froze** -- chanmeng.org (2026-07-18) -- https://chanmeng.org/blog/suno-trending-feed-frozen [tier=primary · recency=recent · updated=2026-11-01]
+- **Neon Auth Email Verification & Password Reset** -- chanmeng.org (2026-07-14) -- https://chanmeng.org/blog/neon-auth-email-verification [tier=primary · recency=recent · updated=2026-11-01]
 - **Tokenless npm Publishing for AI Agents: The OIDC Trusted-Publishing Playbook** -- chanmeng.org (2026-07-12) -- https://chanmeng.org/blog/npm-oidc-trusted-publishing [tier=primary · recency=active · updated=2026-09-18]
-- **Neon Auth + Flask Integration Guide** -- chanmeng.org (2026-07-10) -- https://chanmeng.org/blog/neon-auth-flask-integration [tier=primary · recency=active · updated=2026-07-21]
-- **Stripe Payments + Cloudflare Workers Integration** -- chanmeng.org (2026-07-07) -- https://chanmeng.org/blog/stripe-cloudflare-workers-integration [tier=primary · recency=active · updated=2026-07-21]
-- **Migration Guide: Railway to DigitalOcean + Coolify** -- chanmeng.org (2026-07-03) -- https://chanmeng.org/blog/railway-to-digitalocean-migration [tier=primary · recency=active · updated=2026-07-21]
-- **Claude Code Audio Hooks: System Architecture** -- chanmeng.org (2026-06-30) -- https://chanmeng.org/blog/claude-code-audio-hooks-architecture [tier=primary · recency=active · updated=2026-07-21]
+- **Neon Auth + Flask Integration Guide** -- chanmeng.org (2026-07-10) -- https://chanmeng.org/blog/neon-auth-flask-integration [tier=primary · recency=recent · updated=2026-11-01]
+- **Stripe Payments + Cloudflare Workers Integration** -- chanmeng.org (2026-07-07) -- https://chanmeng.org/blog/stripe-cloudflare-workers-integration [tier=primary · recency=recent · updated=2026-11-01]
+- **Migration Guide: Railway to DigitalOcean + Coolify** -- chanmeng.org (2026-07-03) -- https://chanmeng.org/blog/railway-to-digitalocean-migration [tier=primary · recency=recent · updated=2026-11-01]
+- **Claude Code Audio Hooks: System Architecture** -- chanmeng.org (2026-06-30) -- https://chanmeng.org/blog/claude-code-audio-hooks-architecture [tier=primary · recency=recent · updated=2026-11-01]
 - **Notion API Integration Guide** -- chanmeng.org (2026-06-26) -- https://chanmeng.org/blog/notion-api-integration-guide [tier=secondary · recency=recent · updated=2026-07-21]
 - **Driving Claude Code From Your Phone Over Telegram** -- chanmeng.org (2026-06-25) -- https://chanmeng.org/blog/telegram-remote-claude-code [tier=secondary · recency=recent · updated=2026-09-18]
 - **Upgrading PowerShell 7 Without Killing Your Claude Code Session** -- chanmeng.org (2026-06-24) -- https://chanmeng.org/blog/upgrading-powershell-without-killing-claude-code [tier=secondary · recency=recent · updated=2026-09-18]
-- **Generative Engine Optimization (GEO) Strategy** -- chanmeng.org (2026-06-23) -- https://chanmeng.org/blog/generative-engine-optimization-strategy [tier=primary · recency=active · updated=2026-07-21]
+- **Generative Engine Optimization (GEO) Strategy** -- chanmeng.org (2026-06-23) -- https://chanmeng.org/blog/generative-engine-optimization-strategy [tier=primary · recency=recent · updated=2026-11-01]
 - **SVG Animation Generation: Capsule-Render Integration** -- chanmeng.org (2026-06-19) -- https://chanmeng.org/blog/svg-animation-generation [tier=secondary · recency=recent · updated=2026-07-21]
 - **Animated SVG Project Cards for a GitHub README: A Field Guide** -- chanmeng.org (2026-10-07) -- https://chanmeng.org/blog/animated-svg-project-cards [tier=secondary · recency=active · updated=2026-10-07]
 - **Making a One-Take 3D Promo Film with three.js, Blender and Real Instrument Samples** -- chanmeng.org (2026-10-28) -- https://chanmeng.org/blog/archlang-one-take-promo-film [tier=secondary · recency=active · updated=2026-10-31]

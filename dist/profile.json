@@ -2388,11 +2388,11 @@
           ]
         }
       },
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-11-01",
       "name": "Github README Suno Cards",
       "priority": 5,
       "category": "branding",
-      "tagline": "GitHub Marketplace Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 37 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.",
+      "tagline": "GitHub Action + Vercel-hosted SVG service that turns any Suno creator's catalog into auto-updating animated cards in their GitHub README — three id input formats (UUID / suno.com URL / short code), 37 GitHub Action inputs, 2 layouts x 2 presets x 3 themes (12 base combinations), CJK-safe text via SVG foreignObject + CSS keyframe equalizer. Public-extracted from a private monorepo on 2026-04-13 and now shares the @suno-cards/parser kernel with Seismophone.",
       "logo": "/public/brands/github-readme-suno-cards-mark.svg",
       "url": "https://github-readme-suno-cards.vercel.app",
       "repoUrl": "https://github.com/ChanMeng666/github-readme-suno-cards",
@@ -2441,7 +2441,7 @@
       ],
       "keywords": [
         "GitHub README enhancement",
-        "GitHub Marketplace Action",
+        "GitHub Action",
         "Suno creator tooling",
         "Animated SVG",
         "CJK-safe text rendering",
@@ -2461,11 +2461,11 @@
         },
         {
           "label": "Latest commit",
-          "value": "2026-10-12"
+          "value": "2026-11-01"
         },
         {
           "label": "Total commits",
-          "value": "47 (public repo, 2026-04-13 → 2026-10-12)"
+          "value": "48 (public repo, 2026-04-13 → 2026-11-01)"
         },
         {
           "label": "Live service",
@@ -2473,7 +2473,7 @@
         },
         {
           "label": "GitHub Action",
-          "value": "uses: ChanMeng666/github-readme-suno-cards@v0.2.1 (JavaScript action, 'music' icon, purple branding)"
+          "value": "uses: ChanMeng666/github-readme-suno-cards@v0.3.0 (JavaScript action, 'music' icon, purple branding)"
         },
         {
           "label": "Action inputs",
@@ -2509,10 +2509,10 @@
         "impactHeadline": "Turns any Suno creator's AI-generated songs into animated cards for their GitHub profile — kept up to date automatically. 12 built-in styles, correct display of Chinese/Japanese/Korean titles, and a one-line setup that syncs a whole catalog.",
         "problem": "Suno AI creators have no graceful way to surface their music\nwhere developer audiences actually gather: GitHub READMEs,\nportfolio sites, technical blog footers, project docs. The\nthree workarounds all fail. Linking out to suno.com loses the\nvisual hook and breaks if Suno changes its URL shapes.\nScreenshotting the player goes stale the moment you publish a\nnew song. Hand-editing Markdown is fine for one song and\nunmanageable past three. Worse, many Suno creators are\nbilingual and release tracks with Chinese, Japanese, or Korean\ntitles — and plain SVG `<text>` (the usual way to draw text\ninside an embeddable image) never inherited HTML's rich\ntext-shaping rules, so those titles render incorrectly. The\ngap: a service that renders animated, visually rich Suno cards\nas embeddable images, shapes CJK text correctly, supports both\nzero-setup single embeds and CI-driven auto-syncing grids, and\nworks both as a browse-and-build website and as a fully\nprogrammatic GitHub Action.\n",
         "audience": "Three concentric audiences. (1) Developer-musicians using\nSuno who want their GitHub profile README, portfolio, or\nproject docs to show a live, auto-updating catalog of their\nmusic — including CJK-named tracks. (2) Music creators more\nbroadly who keep a GitHub-shaped public presence\n(developer-relations folks, indie-game developers, bedroom\nproducers with side projects, researchers releasing music\nunder handles) and want a polished visual surface for their\nSuno output. (3) Engineers reading the project as a worked\nexample of (a) extracting a clean public repo from a larger\ninternal monorepo, (b) sharing a single validated parser\nacross two independent products, and (c) the\nSVG-`<foreignObject>`-plus-CSS-keyframes technique for\nanimated, CJK-safe cards that plain SVG can't produce.\n",
-        "productLogic": "Two complementary paths, plus stats surfaces. **Path 1 —\nDirect Embed (zero setup).** Paste one Markdown line pointing\nat the hosted card endpoint:\n`[![](https://github-readme-suno-cards.vercel.app/api/card?id=YOUR_SONG_ID)](https://suno.com/song/YOUR_SONG_ID)`.\nThe `id` accepts three formats — a raw UUID, a full\n`suno.com/song/<uuid>` URL, or a `suno.com/s/<shortcode>`\nshort code — which the parser canonicalises to one internal\nID. The hosted `/builder` lets you preview the 12 base\ncombinations (2 layouts × 2 presets × 3 themes), flip 12\nelement toggles, override colors with hex codes, and copy the\nfinished embed URL. **Path 2 — GitHub Action auto-sync.** Add\n`<!-- SUNO-CARDS:START -->` / `<!-- SUNO-CARDS:END -->`\nmarkers to your README and a workflow using\n`uses: ChanMeng666/github-readme-suno-cards@v0.2.1` on a\nschedule (typically every 6 hours). The Action reads any of\nits 37 inputs — a Suno handle (auto-discovery of every public\nsong), a YAML manifest of song IDs, or an inline CSV; plus\nsorting, tag and duration filters, layout/preset/theme/\nlanguage, and color overrides — fetches and ranks the matching\nsongs, and surgically replaces only the content between the\nmarkers. Beyond single songs, a profile summary card\n(`/api/profile`) and an auto-discovered card stack\n(`/api/cards`) render whole-catalog views. All surfaces share\none parser and one renderer, so cards look identical whichever\npath produced them.\n",
-        "technicalApproach": "A pnpm monorepo with three workspaces: `apps/` (the Next.js\n15.1 frontend on Vercel), `packages/` (two reusable kernels),\nand `action/` (the GitHub Marketplace Action). The two\npackages are the architecturally important part.\n**`@suno-cards/parser`** is a Valibot-validated (v0.42.1)\nclient for Suno's public oEmbed-style API on\n`studio-api-prod.suno.com` — anonymous, CORS-enabled,\npublic-by-design endpoints Suno advertises via the W3C oEmbed\nprotocol; no scraping, no auth, no headless browsers. The same\nparser is shared with Seismophone, a separate Suno analytics\nproduct, so a single schema definition and a single\ntyped-error hierarchy underwrite both — fix a Suno API drift\nonce, both benefit. That hierarchy now distinguishes an HTTP\n`422` malformed-request (`SunoInvalidRequestError`) from a\n`404` unknown-handle (`SunoHandleNotFoundError`), alongside\nnot-found, private, not-ready, schema, and network error\ntypes. A 2026-07 health audit also quarantined `/api/trending`\n— it turned out to be an abandoned September-2024 snapshot,\nnot a live feed. `fetchTrending` stayed out of the parser's\npublic exports, and v0.2.0 deleted it after Suno removed the\nroute on 2026-07-24.\n**`@suno-cards/render`** is the pure-function SVG engine —\ndeterministic, cacheable, and callable from both Vercel's\nEdge runtime and the Action's Node 20 runner. The\ndefining rendering technique: SVG `<foreignObject>` carries\ninline HTML `<span>`s so CJK text shapes correctly (plain SVG\n`<text>` can't), with CSS `@keyframes` animating those spans\ninto the equalizer bars — a hybrid plain SVG can't produce\ncleanly, and one that survives GitHub's Camo image proxy\nbecause CSS keyframes pass its SVG sanitization. Text ships\nlocalized in English, Chinese, and Japanese. Two-level\ncaching: Vercel's upstream data cache (3600s for single cards)\nplus downstream `Cache-Control` headers that let Camo manage\ndistribution. The Action is built by an esbuild bundle\n(`action/build.ts` → committed `action/dist/index.js`, Node\n20) so it needs no install step at workflow time. Quality:\nBiome for lint/format, Vitest suites across parser, render,\nand action.\n",
-        "outcomes": "Live production service at\ngithub-readme-suno-cards.vercel.app with `/gallery` and\n`/builder` routes and three SVG endpoints (`/api/card`,\n`/api/profile`, `/api/cards`). The current public repository\nis the clean-extract release — first commit `73f4fa8`\n\"initial commit — github-readme-suno-cards v0.1\" on\n2026-04-13, immediately followed by `295756e` \"clean remaining\ninternal reference\" (the post-extraction sanitization sweep) —\ncarried forward to `8f5f46f` on 2026-10-12. A 2026-07-05\nhealth audit, recorded in `86167f4`, confirmed all three\nrender surfaces against live Suno data. That audit produced\ntwo durable API decisions: the `/api/trending` fossil was\nquarantined out of the public parser surface, and HTTP 422 got\nits own error type. The 2026-09-17 fixes kept the profile and\nstack cards working after Suno removed badge colours and closed\nthe public mp3. The shared parser kernel with Seismophone\nis the architecturally important outcome: rather than two Suno\nintegrations drifting apart, both products are pinned to one\nValibot contract and one typed-error hierarchy. Roadmap:\nlyrics-excerpt cards, playlist cards, a JSON API, and PNG export\nvia `@resvg/resvg`. The waveform card is blocked because Suno no\nlonger serves a public mp3.\n",
-        "myRole": "Sole author across both the original internal monorepo and\nthe public v0.1 extraction. Designed the pnpm monorepo split\nwith the parser and renderer as reusable workspace packages;\nwrote the Valibot schemas against Suno's oEmbed contract;\ndesigned the typed Suno error hierarchy (including the\n422-vs-404 split); engineered the `<foreignObject>` +\nCSS-keyframes technique that handles CJK text and animated\nequalizers in a single card; built the GitHub Marketplace\nAction with its esbuild-bundled dist and its 37-input surface\nwith three-format ID normalization; designed the\n`<!-- SUNO-CARDS:START/END -->` marker-based README\nreplacement; built the visual `/builder` with live preview\nover all 12 base combinations, 12 toggles, and hex overrides;\nran the 2026-04-13 public-extract release and the 2026-07\nhealth audit that quarantined the trending fossil; and\ncoordinate parser updates across this project and its\nSeismophone sibling.\n"
+        "productLogic": "Two complementary paths, plus stats surfaces. **Path 1 —\nDirect Embed (zero setup).** Paste one Markdown line pointing\nat the hosted card endpoint:\n`[![](https://github-readme-suno-cards.vercel.app/api/card?id=YOUR_SONG_ID)](https://suno.com/song/YOUR_SONG_ID)`.\nThe `id` accepts three formats — a raw UUID, a full\n`suno.com/song/<uuid>` URL, or a `suno.com/s/<shortcode>`\nshort code — which the parser canonicalises to one internal\nID. The hosted `/builder` lets you preview the 12 base\ncombinations (2 layouts × 2 presets × 3 themes), flip 12\nelement toggles, override colors with hex codes, and copy the\nfinished embed URL. **Path 2 — GitHub Action auto-sync.** Add\n`<!-- SUNO-CARDS:START -->` / `<!-- SUNO-CARDS:END -->`\nmarkers to your README and a workflow using\n`uses: ChanMeng666/github-readme-suno-cards@v0.3.0` on a\nschedule (typically every 6 hours). The Action reads any of\nits 37 inputs — a Suno handle (auto-discovery of every public\nsong), a YAML manifest of song IDs, or an inline CSV; plus\nsorting, tag and duration filters, layout/preset/theme/\nlanguage, and color overrides — fetches and ranks the matching\nsongs, and surgically replaces only the content between the\nmarkers. Beyond single songs, a profile summary card\n(`/api/profile`) and an auto-discovered card stack\n(`/api/cards`) render whole-catalog views. All surfaces share\none parser and one renderer, so cards look identical whichever\npath produced them.\n",
+        "technicalApproach": "A pnpm monorepo with three workspaces: `apps/` (the Next.js\n15.1 frontend on Vercel), `packages/` (two reusable kernels),\nand `action/` (the GitHub Action). The two\npackages are the architecturally important part.\n**`@suno-cards/parser`** is a Valibot-validated (v0.42.1)\nclient for Suno's public oEmbed-style API on\n`studio-api-prod.suno.com` — anonymous, CORS-enabled,\npublic-by-design endpoints Suno advertises via the W3C oEmbed\nprotocol; no scraping, no auth, no headless browsers. The same\nparser is shared with Seismophone, a separate Suno analytics\nproduct, so a single schema definition and a single\ntyped-error hierarchy underwrite both — fix a Suno API drift\nonce, both benefit. That hierarchy now distinguishes an HTTP\n`422` malformed-request (`SunoInvalidRequestError`) from a\n`404` unknown-handle (`SunoHandleNotFoundError`), alongside\nnot-found, private, not-ready, schema, and network error\ntypes. A 2026-07 health audit also quarantined `/api/trending`\n— it turned out to be an abandoned September-2024 snapshot,\nnot a live feed. `fetchTrending` stayed out of the parser's\npublic exports, and v0.2.0 deleted it after Suno removed the\nroute on 2026-07-24.\n**`@suno-cards/render`** is the pure-function SVG engine —\ndeterministic, cacheable, and callable from both Vercel's\nEdge runtime and the Action's Node 20 runner. The\ndefining rendering technique: SVG `<foreignObject>` carries\ninline HTML `<span>`s so CJK text shapes correctly (plain SVG\n`<text>` can't), with CSS `@keyframes` animating those spans\ninto the equalizer bars — a hybrid plain SVG can't produce\ncleanly, and one that survives GitHub's Camo image proxy\nbecause CSS keyframes pass its SVG sanitization. Text ships\nlocalized in English, Chinese, and Japanese. Two-level\ncaching: Vercel's upstream data cache (3600s for single cards)\nplus downstream `Cache-Control` headers that let Camo manage\ndistribution. The Action is built by an esbuild bundle\n(`action/build.ts` → committed `action/dist/index.js`, Node\n20) so it needs no install step at workflow time. Quality:\nBiome for lint/format, Vitest suites across parser, render,\nand action.\n",
+        "outcomes": "Live production service at\ngithub-readme-suno-cards.vercel.app with `/gallery` and\n`/builder` routes and three SVG endpoints (`/api/card`,\n`/api/profile`, `/api/cards`). The current public repository\nis the clean-extract release — first commit `73f4fa8`\n\"initial commit — github-readme-suno-cards v0.1\" on\n2026-04-13, immediately followed by `295756e` \"clean remaining\ninternal reference\" (the post-extraction sanitization sweep) —\ncarried forward to `c9143b1` on 2026-11-01. A 2026-07-05\nhealth audit, recorded in `86167f4`, confirmed all three\nrender surfaces against live Suno data. That audit produced\ntwo durable API decisions: the `/api/trending` fossil was\nquarantined out of the public parser surface, and HTTP 422 got\nits own error type. The v0.3.0 fixes kept the profile and\nstack cards working after Suno removed badge colours and closed\nthe public mp3. The shared parser kernel with Seismophone\nis the architecturally important outcome: rather than two Suno\nintegrations drifting apart, both products are pinned to one\nValibot contract and one typed-error hierarchy. Roadmap:\nlyrics-excerpt cards, playlist cards, a JSON API, and PNG export\nvia `@resvg/resvg`. The waveform card is blocked because Suno no\nlonger serves a public mp3.\n",
+        "myRole": "Sole author across both the original internal monorepo and\nthe public v0.1 extraction. Designed the pnpm monorepo split\nwith the parser and renderer as reusable workspace packages;\nwrote the Valibot schemas against Suno's oEmbed contract;\ndesigned the typed Suno error hierarchy (including the\n422-vs-404 split); engineered the `<foreignObject>` +\nCSS-keyframes technique that handles CJK text and animated\nequalizers in a single card; built the GitHub\nAction with its esbuild-bundled dist and its 37-input surface\nwith three-format ID normalization; designed the\n`<!-- SUNO-CARDS:START/END -->` marker-based README\nreplacement; built the visual `/builder` with live preview\nover all 12 base combinations, 12 toggles, and hex overrides;\nran the 2026-04-13 public-extract release and the 2026-07\nhealth audit that quarantined the trending fossil; and\ncoordinate parser updates across this project and its\nSeismophone sibling.\n"
       },
       "_clientOrg": null,
       "_relatedProjectsResolved": [],
@@ -10575,12 +10575,12 @@
       "name": "FemTech Weekend × UN Women CSW69",
       "tier": "flagship",
       "recency": "recent",
-      "lastUpdated": "2026-07-21",
+      "lastUpdated": "2026-11-01",
       "publisher": "FemTech Weekend",
       "releaseDate": "2025-04-16",
       "url": "https://chanmeng.org/blog/from-code-to-care-un",
       "image": "/public/articles/un-women-csw69.jpeg",
-      "summary": "Feature article on Chan's UN CSW 69 Speaker presentation — Sanicle AI\nfor women's workplace health — at the Beyond Beijing 30 Conference,\nUN Headquarters NYC, March 14 2025. Article reports IBM\nrepresentatives expressed pilot-collaboration interest and the\nMinister of Gender and Children's Affairs from Sierra Leone praised\nthe platform as the first comprehensive solution connecting menstrual\ncycle data to actionable workplace policies through AI analysis.\n",
+      "summary": "Feature article on Chan's UN CSW 69 Speaker presentation — Sanicle AI\nfor women's workplace health — given by video link to the Beyond\nBeijing 30 Conference, held at UN Headquarters NYC on March 14 2025.\nArticle reports an IBM representative proposed a pilot collaboration\nand the Minister of Gender and Children's Affairs from Sierra Leone\npraised the platform as the first comprehensive solution connecting menstrual\ncycle data to actionable workplace policies through AI analysis.\n",
       "meta": {
         "x_brand": {
           "type": "press"
@@ -10792,8 +10792,8 @@
       "id": "ai-fluency-framework",
       "name": "The AI Fluency Framework",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "historical",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2025-10-09",
       "url": "https://chanmeng.org/blog/ai-fluency-framework",
@@ -10809,8 +10809,8 @@
       "id": "future-small-why-small-language",
       "name": "The Future is Small: Why Small Language Models (SLMs) Are Powering the Next Wave of AI Agents",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "historical",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2025-08-26",
       "url": "https://chanmeng.org/blog/small-language-models-next-wave-ai-agents",
@@ -10826,8 +10826,8 @@
       "id": "copilotkit-langgraph-js-hitl-integration",
       "name": "CopilotKit + LangGraph.js HITL Integration Guide",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "recent",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2026-01-15",
       "url": "https://chanmeng.org/blog/copilotkit-langgraph-hitl",
@@ -10954,8 +10954,8 @@
       "id": "explore-feed-that-froze",
       "name": "The Explore Feed That Froze",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "recent",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2026-07-18",
       "url": "https://chanmeng.org/blog/suno-trending-feed-frozen",
@@ -10970,8 +10970,8 @@
       "id": "neon-auth-email-verification-password",
       "name": "Neon Auth Email Verification & Password Reset",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "recent",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2026-07-14",
       "url": "https://chanmeng.org/blog/neon-auth-email-verification",
@@ -11002,8 +11002,8 @@
       "id": "neon-auth-flask-integration-guide",
       "name": "Neon Auth + Flask Integration Guide",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "recent",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2026-07-10",
       "url": "https://chanmeng.org/blog/neon-auth-flask-integration",
@@ -11018,8 +11018,8 @@
       "id": "stripe-payments-cloudflare-workers-integration",
       "name": "Stripe Payments + Cloudflare Workers Integration",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "recent",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2026-07-07",
       "url": "https://chanmeng.org/blog/stripe-cloudflare-workers-integration",
@@ -11034,8 +11034,8 @@
       "id": "migration-guide-railway-digitalocean-coolify",
       "name": "Migration Guide: Railway to DigitalOcean + Coolify",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "recent",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2026-07-03",
       "url": "https://chanmeng.org/blog/railway-to-digitalocean-migration",
@@ -11050,8 +11050,8 @@
       "id": "claude-code-audio-hooks-system",
       "name": "Claude Code Audio Hooks: System Architecture",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "recent",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2026-06-30",
       "url": "https://chanmeng.org/blog/claude-code-audio-hooks-architecture",
@@ -11114,8 +11114,8 @@
       "id": "generative-engine-optimization-geo-strategy",
       "name": "Generative Engine Optimization (GEO) Strategy",
       "tier": "primary",
-      "recency": "active",
-      "lastUpdated": "2026-07-21",
+      "recency": "recent",
+      "lastUpdated": "2026-11-01",
       "publisher": "chanmeng.org",
       "releaseDate": "2026-06-23",
       "url": "https://chanmeng.org/blog/generative-engine-optimization-strategy",
@@ -17600,6 +17600,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-11-01",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-01T07:20:16.024Z"
+    "buildTimestamp": "2026-11-01T08:15:20.067Z"
   }
 }

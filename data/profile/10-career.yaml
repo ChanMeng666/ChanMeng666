@@ -114,7 +114,7 @@ work:
         (2026-10-14); a hand-written, zero-runtime-dependency TypeScript
         compiler whose error system carries 139 stable diagnostic codes (92
         errors, 47 warnings), each pointing at the exact span of source it
-        refers to; 4,338 passing tests (measured 2026-09-04); and 27
+        refers to; 12,882 passing tests (measured 2026-11-02); and 27
         architecture decision records. Around the compiler I shipped a CLI, a
         language server with a VS Code extension, a browser playground, a docs
         site, an MCP server so other AI agents can write and check floor plans
@@ -175,7 +175,7 @@ work:
       agent that turns a plain-English brief into a dimensioned floor plan you
       can build from, then lets you refine it by talking. Invented ArchLang, an
       open-source floor-plan language (62 npm releases, 139 diagnostic codes,
-      4,338 tests), when drawing plans as pictures proved impossible to check —
+      12,882 tests), when drawing plans as pictures proved impossible to check —
       so every plan ArchCanvas draws can be compiled, checked and edited
       exactly.
 

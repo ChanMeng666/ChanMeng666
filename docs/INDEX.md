@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 119 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 293 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 296 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -57,7 +57,7 @@ Other knowledge files:
 | Doc | Lines | Purpose | Read when |
 |---|---|---|---|
 | `cv/README.md` | 158 | cv/ — Chan Meng's Typst-sourced CV | building a CV or changing any CV copy |
-| `cv/TYPST_PITFALLS.md` | 130 | Typst Layout Pitfalls — CV | editing any .typ file under cv/ |
+| `cv/TYPST_PITFALLS.md` | 143 | Typst Layout Pitfalls — CV | editing any .typ file under cv/ |
 | `cv/cover-letter/EVIDENCE.md` | 212 | Evidence bank | choosing source-attributed claims for a cover letter |
 | `cv/cover-letter/README.md` | 22 | cv/cover-letter/ — the cover-letter kit | writing a cover letter |
 | `cv/cover-letter/TEMPLATE.md` | 91 | Cover-letter template — five moves | drafting a cover letter (the five-move skeleton) |

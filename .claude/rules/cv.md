@@ -21,7 +21,7 @@ These also carry titles and dates; **no gate covers them yet** (audit 2026-10-16
 
 ## Typst traps
 - `check:cv` is not comment-aware. Never write `role-line` followed by `(` inside a comment in a CV `.typ` file: it is parsed as an entry.
-- A bare `~` in markup is a non-breaking space, so `~85%` loses its tilde. Write `\~85%`. Audit with `rg '~\d' cv/**/*.typ` (`cv/TYPST_PITFALLS.md:78-83`).
+- A bare `~` in markup is a non-breaking space, so `~85%` loses its tilde. Write `\~85%`. Audit with `rg '~\d' cv/**/*.typ` (`cv/TYPST_PITFALLS.md:90-95`).
 
 ## Build and site sync
 - `pwsh cv/build.ps1` (needs typst) builds the two-page CV, the extended CV and the ATS resume. It is not part of `npm run build`.

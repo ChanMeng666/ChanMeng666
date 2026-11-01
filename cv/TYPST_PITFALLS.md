@@ -1,8 +1,8 @@
 # Typst Layout Pitfalls — CV
 
 Read before editing any `.typ` under `cv/`. The compiler warns about none of
-these; each was caught on a render or an extraction. Section numbers are cited
-from other files: do not renumber.
+these except §10(a), which stops the compile; the rest were caught on a render
+or an extraction. Section numbers are cited from other files: do not renumber.
 
 ## 1. `block` margins are MAX, not SUM
 
@@ -11,12 +11,24 @@ Symptom: `above: 5pt, below: 5pt` gives 5pt between entries, not 10pt.
 Fix: one side owns the gap through a named token, the other is `0pt`
 (`block(above: 0pt, below: gap-inter-entry)`).
 
-## 2. `v(N, weak: true)` after `linebreak()` renders as zero
+## 2. `v(N)` between two lines replaces the leading, not adds to it
 
-A `linebreak()` stays inside one paragraph, so the weak `v()` has no paragraph
-margin to collapse against and vanishes.
+`v()` splits the paragraph, so the gap becomes N instead of `par.leading`. A
+small N therefore moves the lines closer. A weak `v()` at the end of a block
+is also discarded.
 Symptom: a bold title and its org/dates line look glued; spacing edits appear
 to do nothing.
+Measured gap between two 9.5pt lines at `leading: 0.55em` (Typst 0.14.2 and
+0.15.1, with or without `linebreak()`):
+
+| Between the lines | Gap |
+|---|---|
+| `linebreak()` alone | 5.2pt, the leading |
+| `v(2pt, weak: true)` | 2pt |
+| `v(8pt, weak: true)` | 8pt |
+| `v(8pt, weak: true)` ending the first line's block | 0pt |
+| `v(8pt)` ending the first line's block | 8pt |
+
 Fix: make each visual line its own `block(above: 0pt, below: …, breakable: false)`.
 
 ## 3. List `spacing` must be ≥ 1.7× the within-item leading
@@ -86,9 +98,10 @@ YAML. Audit with `rg '~\d' cv/**/*.typ`.
 
 Found by extracting the shipped PDFs. They apply to every `.typ` here.
 
-**(a) A bare `@` in markup is a label reference.** Symptom: the email address
-is lost. Fix: `chanmeng.career\@gmail.com` in markup, or `\u{0040}` inside a
-string (as `sections/header.typ` does).
+**(a) A bare `@` in markup is a label reference.** Symptom: the compile stops
+with ``label `<gmail.com>` does not exist`` (Typst 0.14.2 and 0.15.1). Fix:
+`chanmeng.career\@gmail.com` in markup. `@` is literal inside a string, so the
+`\u{0040}` in `sections/header.typ` is harmless but not required.
 
 **(b) `pdftotext` deletes a hyphen at a line end, and `hyphenate: false` does
 not prevent it.** That setting stops automatic hyphenation only; Typst still

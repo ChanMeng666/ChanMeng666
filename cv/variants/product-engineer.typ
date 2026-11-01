@@ -77,9 +77,9 @@
 // section gap. Leaving them non-zero would push the rule away from its heading
 // (block margins are max-not-sum against par.spacing).
 #show heading.where(level: 1): set block(above: 0pt, below: 3pt)
-// Attach the hairline by RE-EMITTING `it` inside a wrapper rather than
-// rebuilding the heading from its .body — the original element stays in the
-// frame, so its /H1 tag survives. breakable: false keeps a heading and its rule
+// Attach the hairline by RE-EMITTING `it` inside a wrapper, which keeps the
+// heading's own styling. Rebuilding from .body keeps the /H1 tag too (measured
+// on Typst 0.14.2 and 0.15.1). breakable: false keeps a heading and its rule
 // on the same page. Verified with pypdf (7 headings → 7 /H1 elements) after
 // every change to this rule.
 #show heading.where(level: 1): it => block(

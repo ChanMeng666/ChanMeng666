@@ -284,8 +284,8 @@
   below: gap-inter-entry,
   breakable: false,
   {
-    // ── Line 1: Title (own block so `below` is real — linebreak + v(weak)
-    //           was being collapsed inside a single paragraph). A small gap to
+    // ── Line 1: Title (own block so `below` is real — a v() between two lines
+    //           replaces par.leading, TYPST_PITFALLS §2). A small gap to
     //           its org·dates subtitle — distinct lines, not crammed. ───────
     block(above: 0pt, below: 4pt, breakable: false, {
       text(weight: "bold", size: size-entry, fill: ink, title)

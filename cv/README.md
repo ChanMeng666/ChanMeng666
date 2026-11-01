@@ -94,9 +94,9 @@ production` verbatim for the same reason.
 - **Only the seven section names a parser's lexicon knows** (listed in
   `EXPECT.headings`, `scripts/lib/parse-ats-resume.mjs`); anything else is
   absorbed into the neighbouring section.
-- **Native `= HEADING`, and a transforming show rule must re-emit `it`**, not
-  rebuild from `it.body`, or the `/H1` tag is lost. Re-check the `/H1` count
-  with pypdf after touching that rule.
+- **Native `= HEADING`.** A show rule may re-emit `it` or rebuild from
+  `it.body`: both keep the `/H1` tag (measured on Typst 0.14.2 and 0.15.1).
+  Re-check the `/H1` count with pypdf after touching that rule.
 - **Escape `\@` and `\~`** ([`TYPST_PITFALLS.md`](./TYPST_PITFALLS.md) §9, §10).
 
 **Two pages is the budget.** One sentence per bullet; if a bullet grows, split

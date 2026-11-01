@@ -291,3 +291,6 @@ data/profile/46-films.yaml, docs/STATE.md
 
 ## [2026-10-31] fix | `film-chan-meng-intro` keeps the standard `FILM` placeholder: Chan's decision was about this profile README, so the film repo's README carries the video like any public film repo; `chan-meng-motion-intro` added to the YouTube register
 data/profile/46-films.yaml, docs/STATE.md, youtube/channel.yaml, youtube/videos.yaml
+
+## [2026-11-01] fix | Typst pitfall notes corrected after measuring on 0.14.2 and 0.15.1: §2 cause, §10(a) symptom, /H1 rule
+cv/TYPST_PITFALLS.md, cv/README.md, .claude/rules/cv.md, comments in cv/*.typ and cv/variants/*.typ

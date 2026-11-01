@@ -60,8 +60,8 @@
 // ─── Section heading ─────────────────────────────────────────────────────────
 // Not a helper: the entry point uses native `= HEADING` so Typst emits a real
 // /H1 structure element into the PDF tag tree. The rule underneath is attached
-// by a show rule there that RE-EMITS `it` rather than rebuilding the heading,
-// which keeps the /H1 tag. Verified with pypdf after every change.
+// by a show rule there that RE-EMITS `it`, which keeps the heading's own
+// styling. Verified with pypdf after every change.
 
 // ─── Employment entry ────────────────────────────────────────────────────────
 // Renders as three stacked lines, never a grid:

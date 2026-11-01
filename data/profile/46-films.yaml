@@ -138,9 +138,26 @@ films:
     media: { poster: /work/posters/archcanvas-poster.jpg, mp4: /media/films/archcanvas-studio-120s.mp4 }
     onFilmsPage: true
 
-  - id: archlang-film
+  - id: archlang-in-chatgpt-film
     kind: product-film
     primary: true
+    title: ArchLang in ChatGPT film
+    for: ArchLang
+    projectId: archlang
+    repo: ChanMeng666/film-archlang-in-chatgpt
+    repoPublic: true
+    date: "2026-11"
+    seconds: 82
+    cuts: ["82 s", "16:9"]
+    madeWith: "Remotion, real compiler output, recorded instrument samples and a SoundFont"
+    summary: A coded replica of ChatGPT and the Playground with a simulated cursor. It goes from the plugin page to a checked floor plan, a one-room edit, an A3 sheet, a PDF and the 3D preview. Drawings and numbers are real compiler output, and each sped-up run shows its real length.
+    youtubeId: O3vJu4MtpkU
+    media: { poster: /work/posters/archlang-in-chatgpt-poster.jpg, mp4: /work/films/archlang-in-chatgpt-82s.mp4 }
+    onFilmsPage: true
+
+  - id: archlang-film
+    kind: product-film
+    primary: false
     title: ArchLang film
     for: ArchLang
     projectId: archlang
@@ -388,23 +405,6 @@ films:
     summary: One take with no cuts. Lines of code become plan lines, the plan rises into a small 3D house, the house folds back into the plan, and the take ends on the logo. The code on screen is ArchLang's laneway-house example and the plan is its real compiler output; the house was modelled in Blender from that plan's geometry, for the film. A single three.js file draws every frame, and picture and score share one beat table.
     youtubeId: yxE-t9qwO8w
     media: { poster: /media/films/archlang-one-take-32s.jpg, mp4: /media/films/archlang-one-take-32s.mp4 }
-    onFilmsPage: true
-
-  - id: archlang-in-chatgpt-film
-    kind: product-film
-    primary: false
-    title: ArchLang in ChatGPT film
-    for: ArchLang
-    projectId: archlang
-    repo: ChanMeng666/film-archlang-in-chatgpt
-    repoPublic: true
-    date: "2026-11"
-    seconds: 82
-    cuts: ["82 s", "16:9"]
-    madeWith: "Remotion, real compiler output, recorded instrument samples and a SoundFont"
-    summary: A coded replica of ChatGPT and the Playground with a simulated cursor. It goes from the plugin page to a checked floor plan, a one-room edit, an A3 sheet, a PDF and the 3D preview. Drawings and numbers are real compiler output, and each sped-up run shows its real length.
-    youtubeId: O3vJu4MtpkU
-    media: { poster: /media/films/archlang-in-chatgpt-82s.jpg, mp4: /media/films/archlang-in-chatgpt-82s.mp4 }
     onFilmsPage: true
 
   # NOT ON /films (Chan): made to accompany the ArchLang paper (never name the venue); unlisted on YouTube, id in youtube/channel.private.yaml. See show:.

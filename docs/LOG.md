@@ -315,3 +315,6 @@ data/profile/46-films.yaml, data/profile/45-showcase.yaml, data/profile/23-proje
 
 ## [2026-11-02] change | ArchLang's film on show is now the ArchLang in ChatGPT film (82 s), delegated by Chan to Claude; the 68 s film stays on /films; two a11y-loop listing forks catalogued; registers synced after the posts of 2026-11-01
 data/profile/45-showcase.yaml, data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, distribution/plan.yaml, x/posts.yaml, linkedin/curation.yaml, linkedin/account.yaml
+
+## [2026-11-02] change | LinkedIn followers raised from 6,691 to 6,697 (live profile, register sync 2026-11-02) under the historical-maximum rule; ArchLang tests raised from 4,338 to 12,882 passing (2 skipped, 445 files, `npx vitest run` on main at 18127701); CVs rebuilt and chanmeng.org synced
+data/profile/00-basics.yaml, data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml, data/profile/70-linkedin.yaml, cv/sections/header.typ, templates/brand-system.html.hbs, docs/stories/archlang.md

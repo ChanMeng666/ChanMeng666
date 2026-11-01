@@ -33,7 +33,7 @@ doors and windows in plain text, and it produces a precise, dimensioned drawing;
 one number and exactly one thing moves. It also checks whether a plan is livable (can
 you reach the bathroom, does the bedroom have a window). I invented it and wrote all of
 it, published it free on npm, and it is the engine inside my AI design product,
-ArchCanvas. It has reached v1.43.0 over 62 published versions (2026-10-14), with 4,338 passing tests.
+ArchCanvas. It has reached v1.43.0 over 62 published versions (2026-10-14), with 12,882 passing tests (measured 2026-11-02).
 
 ## The problem
 
@@ -309,7 +309,7 @@ plan is a separate, explicit command.
 | Figure | Source |
 |---|---|
 | v1.43.0, 62 published npm versions through 2026-10-14 | `23-projects-oss-more.yaml` › archlang › metrics |
-| 4,338 passing tests across 216 test files (measured 2026-09-04) | same |
+| 12,882 passing tests across 445 test files (measured 2026-11-02) | same |
 | 139 diagnostic codes: 92 errors, 47 warnings | same |
 | 27 architecture decision records | same |
 | 15 element kinds (read from the registry 2026-10-15), 5 export formats, 8 lint-rule modules | same |

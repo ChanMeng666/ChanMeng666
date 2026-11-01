@@ -7525,8 +7525,16 @@
           "url": "https://github.com/ChanMeng666/archlang-showcase"
         },
         {
+          "label": "Try it in ChatGPT",
+          "url": "https://chatgpt.com/plugins/plugin_asdk_app_6acf8381cca08191bfb3eb7305fb6970"
+        },
+        {
           "label": "One-take film repo (three.js)",
           "url": "https://github.com/ChanMeng666/film-archlang-one-take"
+        },
+        {
+          "label": "ChatGPT film repo",
+          "url": "https://github.com/ChanMeng666/film-archlang-in-chatgpt"
         }
       ],
       "techStack": [
@@ -12822,6 +12830,11 @@
           "filmRepo": "ChanMeng666/film-archlang-one-take",
           "what": "32 s one-take film (three.js, Blender, sampled score)",
           "reason": "one film per product; shown on /films, on YouTube and in its blog post"
+        },
+        {
+          "filmRepo": "ChanMeng666/film-archlang-in-chatgpt",
+          "what": "82 s film of ArchLang inside ChatGPT (Remotion, replica of the real pages, sampled score)",
+          "reason": "one film per product; shown on /films and on YouTube"
         }
       ],
       "lastVerified": "2026-10-31"
@@ -13653,6 +13666,30 @@
       "media": {
         "poster": "/media/films/archlang-one-take-32s.jpg",
         "mp4": "/media/films/archlang-one-take-32s.mp4"
+      },
+      "onFilmsPage": true
+    },
+    {
+      "id": "archlang-in-chatgpt-film",
+      "kind": "product-film",
+      "primary": false,
+      "title": "ArchLang in ChatGPT film",
+      "for": "ArchLang",
+      "projectId": "archlang",
+      "repo": "ChanMeng666/film-archlang-in-chatgpt",
+      "repoPublic": true,
+      "date": "2026-11",
+      "seconds": 82,
+      "cuts": [
+        "82 s",
+        "16:9"
+      ],
+      "madeWith": "Remotion, real compiler output, recorded instrument samples and a SoundFont",
+      "summary": "A coded replica of ChatGPT and the Playground with a simulated cursor. It goes from the plugin page to a checked floor plan, a one-room edit, an A3 sheet, a PDF and the 3D preview. Drawings and numbers are real compiler output, and each sped-up run shows its real length.",
+      "youtubeId": "O3vJu4MtpkU",
+      "media": {
+        "poster": "/media/films/archlang-in-chatgpt-82s.jpg",
+        "mp4": "/media/films/archlang-in-chatgpt-82s.mp4"
       },
       "onFilmsPage": true
     },
@@ -17600,6 +17637,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-11-01",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-01T08:28:49.217Z"
+    "buildTimestamp": "2026-11-01T10:57:06.270Z"
   }
 }

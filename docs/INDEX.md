@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 121 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 311 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 314 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -28,12 +28,12 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1199 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
-| `data/profile/23-projects-oss-more.yaml` | 3944 | projects (94) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
+| `data/profile/23-projects-oss-more.yaml` | 3946 | projects (94) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
 | `data/profile/30-recognition.yaml` | 1873 | awards (7), certificates (53), publications (77) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
-| `data/profile/45-showcase.yaml` | 455 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
-| `data/profile/46-films.yaml` | 559 | filmCollections (8), films (68) | FILMS — every finished film Chan has made, one row per film … |
+| `data/profile/45-showcase.yaml` | 456 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
+| `data/profile/46-films.yaml` | 576 | filmCollections (8), films (69) | FILMS — every finished film Chan has made, one row per film … |
 | `data/profile/47-agent-skills.yaml` | 479 | agentSkills (30) | AGENT SKILLS — every agent skill Chan has made, one row per repo or product … |
 | `data/profile/50-references.yaml` | 577 | references (27) | REFERENCES — testimonials & recommendations … |
 | `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
@@ -47,8 +47,8 @@ Other knowledge files:
 |---|---|---|
 | `data/brand.yaml` | 733 | Chan Meng's personal visual + verbal design system. |
 | `data/voice.yaml` | 432 | VOICE — how the chanmeng.org digital twin sounds, and what it will not say … |
-| `docs/ecosystem/lineage.yaml` | 935 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
-| `docs/ecosystem/archlang-archcanvas.yaml` | 271 | ArchLang × ArchCanvas ecosystem catalog … |
+| `docs/ecosystem/lineage.yaml` | 939 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
+| `docs/ecosystem/archlang-archcanvas.yaml` | 284 | ArchLang × ArchCanvas ecosystem catalog … |
 | `schema/brand.schema.json` | 464 | ChanMeng666 Brand System Schema … |
 | `schema/profile.schema.json` | 1467 | ChanMeng666 Profile Data Schema … |
 
@@ -70,7 +70,7 @@ Other knowledge files:
 | `docs/brand/DESIGN.md` | 367 | Chan Meng — Personal Brand & Design System | drawing anything in the Caldera brand system (colour, type, voice) |
 | `docs/ecosystem/README.md` | 62 | Repo lineage (ecosystem map) | a repo is created, archived, renamed, transferred or deleted; editing lineage.yaml |
 | `docs/ecosystem/archlang-archcanvas.md` | 46 | ArchLang × ArchCanvas ecosystem map | working across the ArchLang / ArchCanvas repos |
-| `docs/film-masters.md` | 280 | Film masters: where each one lives | — |
+| `docs/film-masters.md` | 286 | Film masters: where each one lives | — |
 | `docs/github-theme-aware-assets.md` | 31 | Theme-aware visual assets — this repo's status | an image may break on GitHub's light or dark canvas |
 | `docs/operations/README.md` | 142 | Repo lifecycle and hosting operations | archiving, deleting or making a repo private; retiring a hosted site; npm publishing |
 | `docs/stories/README.md` | 157 | Project stories | writing or editing a project story |

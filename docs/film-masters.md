@@ -113,6 +113,12 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 |---|---|---|
 | `out/archlang-promo.mp4` | 13 | release `v1.0.0` › `archlang-promo.mp4` (also `.html`, `soundtrack.wav`, `soundtrack.m4a`, `SHA256SUMS.txt`) |
 
+## ChanMeng666/film-archlang-in-chatgpt (public)
+
+| Rendered to | MB | On GitHub |
+|---|---|---|
+| `out/archlang-in-chatgpt.mp4` | 25 | release `v1.0.0` › `archlang-in-chatgpt-film-2026-11.mp4` (also the README video; `soundtrack.wav`, `archlang-in-chatgpt-poster.jpg`, `SHA256SUMS.txt`) |
+
 ## ChanMeng666/film-chan-meng-intro (public)
 
 | Rendered to | MB | On GitHub |

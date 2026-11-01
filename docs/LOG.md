@@ -309,3 +309,6 @@ data/profile/21-projects-oss-primary.yaml, data/profile/30-recognition.yaml
 
 ## [2026-11-01] change | chanmeng-typst entry matched to v0.6.0 and the renamed paths; recency back to recent after the release; publication recency rule recorded
 data/profile/23-projects-oss-more.yaml, docs/STATE.md, docs/operations/README.md, docs/ecosystem/lineage.yaml, .claude/rules/recognition-linkedin.md, .claude/rules/projects.md
+
+## [2026-11-01] add | ArchLang in ChatGPT film: public repo, release v1.0.0, YouTube, /films; the plugin link and film repo added to ArchLang's extra links
+data/profile/46-films.yaml, data/profile/45-showcase.yaml, data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/film-masters.md, docs/STATE.md, youtube/channel.yaml, distribution/plan.yaml

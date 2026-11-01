@@ -187,6 +187,19 @@ repos:
     urls:
       language: https://archlang.uk
 
+  - id: archlang-in-chatgpt-film
+    kind: git-repo
+    localPath: "D:/github_repository/film-archlang-in-chatgpt"
+    gitRemote: https://github.com/ChanMeng666/film-archlang-in-chatgpt.git
+    github: ChanMeng666/film-archlang-in-chatgpt
+    visibility: public
+    license: MIT
+    role: An 82-second film of the ArchLang plugin in ChatGPT (added 2026-11-01) — a coded replica of the real pages in Remotion and an original score
+    dependsOn:
+      - { id: archlang, how: "compiles ChatGPT's real plans for every drawing and number on screen" }
+    urls:
+      language: https://archlang.uk
+
   - id: archlang-paper
     kind: git-repo
     localPath: "D:/github_repository/archlang-paper"

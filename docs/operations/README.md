@@ -134,7 +134,7 @@ items exist (location in the private file).
 
 ## Pending
 
-As of 2026-10-15 (checked against docs/STATE.md § Open items).
+As of 2026-11-01 (checked against docs/STATE.md § Open items).
 
 | Item | Due |
 |---|---|

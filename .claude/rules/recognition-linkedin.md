@@ -21,6 +21,8 @@ Sources are `file:line` as of 2026-10-16. If a line has drifted, grep the quoted
 ## Publications
 - The research papers' repo is private: never link it (`30-recognition.yaml:986`).
 - Papers under review are never added here (`30-recognition.yaml:987-989`). The venue rule is in `CLAUDE.md`.
+- A published article is finished work: `recent` for about 12 months, then `historical`, never `active` (2026-11-01). `active` caps its review at 3 months for nothing.
+- A summary that says "Article reports" must match the article. Check the live page; a wider claim needs its own source.
 
 ## LinkedIn copy (`linkedin:` in 70-linkedin.yaml)
 - `linkedin/linkedin-profile.json` and `linkedin/*.md` are generated from this block (`70-linkedin.yaml:12-14`).

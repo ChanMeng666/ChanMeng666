@@ -306,3 +306,6 @@ data/profile/30-recognition.yaml
 
 ## [2026-11-01] fix | Suno cards: Action pinned to the new v0.3.0 tag; "GitHub Marketplace" dropped because no listing was found; FemTech summary says video link and one IBM representative
 data/profile/21-projects-oss-primary.yaml, data/profile/30-recognition.yaml
+
+## [2026-11-01] change | chanmeng-typst entry matched to v0.6.0 and the renamed paths; recency back to recent after the release; publication recency rule recorded
+data/profile/23-projects-oss-more.yaml, docs/STATE.md, docs/operations/README.md, docs/ecosystem/lineage.yaml, .claude/rules/recognition-linkedin.md, .claude/rules/projects.md

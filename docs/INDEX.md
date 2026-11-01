@@ -11,8 +11,8 @@ else (L2) is opened on demand, when its "read when" matches the task.
 | File | Lines | Read when |
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
-| `docs/STATE.md` | 119 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 308 | to see what changed recently; append an entry after a change |
+| `docs/STATE.md` | 121 | always: Chan's decisions and display rules, before any edit |
+| `docs/LOG.md` | 311 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -28,7 +28,7 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1199 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
-| `data/profile/23-projects-oss-more.yaml` | 3940 | projects (94) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
+| `data/profile/23-projects-oss-more.yaml` | 3944 | projects (94) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
 | `data/profile/30-recognition.yaml` | 1873 | awards (7), certificates (53), publications (77) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
@@ -47,7 +47,7 @@ Other knowledge files:
 |---|---|---|
 | `data/brand.yaml` | 733 | Chan Meng's personal visual + verbal design system. |
 | `data/voice.yaml` | 432 | VOICE — how the chanmeng.org digital twin sounds, and what it will not say … |
-| `docs/ecosystem/lineage.yaml` | 934 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
+| `docs/ecosystem/lineage.yaml` | 935 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
 | `docs/ecosystem/archlang-archcanvas.yaml` | 271 | ArchLang × ArchCanvas ecosystem catalog … |
 | `schema/brand.schema.json` | 464 | ChanMeng666 Brand System Schema … |
 | `schema/profile.schema.json` | 1467 | ChanMeng666 Profile Data Schema … |
@@ -113,9 +113,9 @@ Rules in `.claude/rules/` load when a file matching their `paths:` is touched.
 |---|---|---|---|
 | `.claude/rules/cv.md` | 33 | `cv/**` | Rules for the CVs and cover letters |
 | `.claude/rules/data-profile.md` | 83 | `data/profile/**` | Rules for the profile shards |
-| `.claude/rules/projects.md` | 47 | `data/profile/20-projects-flagship.yaml`, `data/profile/21-projects-oss-primary.yaml`, `data/profile/22-projects-oss-webapps.yaml`, `data/profile/23-projects-oss-more.yaml`, `data/profile/60-network.yaml`, `data/profile/90-meta.yaml` | Rules for projects and the README buckets |
+| `.claude/rules/projects.md` | 48 | `data/profile/20-projects-flagship.yaml`, `data/profile/21-projects-oss-primary.yaml`, `data/profile/22-projects-oss-webapps.yaml`, `data/profile/23-projects-oss-more.yaml`, `data/profile/60-network.yaml`, `data/profile/90-meta.yaml` | Rules for projects and the README buckets |
 | `.claude/rules/readme-art.md` | 41 | `scripts/cards/**`, `scripts/readme-art/**`, `scripts/build-readme-cards.mjs`, `scripts/build-readme-art.mjs`, `public/cards/**`, `public/readme/**`, `templates/**` | Rules for README cards, banners, pills and templates |
-| `.claude/rules/recognition-linkedin.md` | 38 | `data/profile/30-recognition.yaml`, `data/profile/70-linkedin.yaml`, `data/profile/80-events.yaml` | Rules for awards, publications, LinkedIn copy and events |
+| `.claude/rules/recognition-linkedin.md` | 40 | `data/profile/30-recognition.yaml`, `data/profile/70-linkedin.yaml`, `data/profile/80-events.yaml` | Rules for awards, publications, LinkedIn copy and events |
 | `.claude/rules/registers.md` | 31 | `x/**`, `linkedin/**`, `suno/**`, `youtube/**`, `distribution/**` | Rules for the platform registers and film distribution |
 | `.claude/rules/twin.md` | 17 | `data/voice.yaml`, `scripts/build-voice.mjs`, `scripts/build-llms-twin.mjs`, `scripts/check-llms-twin.mjs`, `scripts/lib/twin-guards.mjs` | Rules for the digital twin's voice and knowledge |
 

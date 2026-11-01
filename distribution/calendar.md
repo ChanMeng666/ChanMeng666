@@ -6,17 +6,10 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-10-30, X 2026-10-31, LinkedIn 2026-10-31, ArchCanvas page 2026-10-31.
+Plan as of 2026-10-12. Registers read: YouTube 2026-10-31, X 2026-10-31, LinkedIn 2026-10-31, ArchCanvas page 2026-10-31.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
-
-### Week of 2026-11-02
-
-| Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
-|---|---|---|---|---|---|---|---|
-| 2026-11-05 | Thursday | echook film | LinkedIn (personal) | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#linkedin` | draft |
-| 2026-11-05 | Thursday | echook film | X | 60 s, 16:9 | `_staging/03-echook-film/echook_60s_16x9.mp4` | `drafts/echook-film.yaml#x` | draft |
 
 ### Week of 2026-11-09
 
@@ -50,16 +43,16 @@ A post made after those dates is not known here until its register is synced.
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | LinkedIn (personal) | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#linkedin` | draft |
-| 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | X | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#x` | draft |
+| 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | LinkedIn (personal) | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#linkedin` | skipped |
+| 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | X | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#x` | skipped |
 
 - She Sharp × Les Mills, “No Pain, All Gain”: Optional: the event has passed. Post it as a piece of craft, or mark it skipped
 - She Sharp × Les Mills, “No Pain, All Gain”: Optional, as above
 
 ## Not yet published and not scheduled here
 
-- Chan Meng, motion intro: LinkedIn (personal)
-- Chan Meng, motion intro: X
+- echook film: LinkedIn (personal)
+- echook film: X
 
 Scheduled in another calendar:
 
@@ -72,7 +65,7 @@ Scheduled in another calendar:
 |---|---|---|---|---|---|---|
 | ArchCanvas studio film | published 2026-09-21 | published 2026-10-07 | published | published 2026-09-21 | published 2026-09-21 | published 2026-09-21 |
 | ArchLang film | published 2026-10-06 | — | published | to do (other calendar) | to do (other calendar) | — |
-| echook film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-05 | planned 2026-11-05 | — |
+| echook film | published 2026-10-06 | published 2026-10-07 | published | **to do** | **to do** | — |
 | a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | planned 2026-11-24 | — |
 | GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-26 | planned 2026-11-26 | — |
 | CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-17 | planned 2026-11-17 | — |
@@ -93,11 +86,11 @@ Scheduled in another calendar:
 | ArchLang one-take film | published 2026-10-23 | — | published | published 2026-10-24 | published 2026-10-24 | — |
 | ArchLang narrated demo | — | — | — | — | — | — |
 | GenLAB Career Academy, how it works | — | — | — | — | — | — |
-| She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | planned 2026-12-01 | planned 2026-12-01 | — |
+| She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | skipped | skipped | — |
 | Chan Meng, 64-second video business card | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng monkey, brand sting | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng, showreel | published 2026-10-09 | — | published | published 2026-10-20 | published 2026-10-20 | — |
-| Chan Meng, motion intro | published | — | published | **to do** | **to do** | — |
+| Chan Meng, motion intro | published 2026-10-31 | — | published | — | — | — |
 | A Drizzle in October | published 2026-10-07 | — | published | — | — | — |
 | February, on an Extended Line | published 2026-10-07 | — | published | — | — | — |
 | Warrior Ah Hua | published 2026-10-07 | — | published | — | — | — |

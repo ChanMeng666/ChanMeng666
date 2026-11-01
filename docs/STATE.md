@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-10-31.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-11-01.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -116,4 +116,6 @@ asking, unless she delegates again. `showcase: flagship` requires
 | LinkedIn, by hand | Chan: the live FreePeriod experience bullet still says "FemTech Weekend Challenge"; change it to FemTech China's Women's Health Technology Challenge, as in `70-linkedin.yaml:486` |
 | LinkedIn Featured video slot | The slot in `70-linkedin.yaml` stays a held-open placeholder. `chan-meng-motion-intro` is not for it (Chan, 2026-10-31): that film is shown on YouTube and chanmeng.org/films |
 | Delete the five listing forks | Their PRs closing, or 2026-11-14 |
+| CSW 69 wording | Chan: the blog article says one IBM representative, but `awards[un-csw69-speaker-2025]` says "representatives". Its source may be the WeChat original, which scripts cannot read |
+| Remaining `recency: active` articles | The next review: six published articles still carry it; move each to `recent` or `historical` then |
 | Google OAuth client and Resend key used by Te Pā Tiaki | Chan: revoke if they were dedicated to the game |

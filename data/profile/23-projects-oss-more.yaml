@@ -1254,8 +1254,8 @@ projects:
   - id: typst-claude-skill
     provenance: personal
     tier: secondary
-    recency: historical
-    lastUpdated: "2026-10-01"
+    recency: recent
+    lastUpdated: "2026-11-01"
     name: Typst Skill for Claude Code
     priority: 10
     category: ai-apps
@@ -1289,20 +1289,20 @@ projects:
         scripts).
       productLogic: |
         Install the skill once (four supported methods: marketplace
-        plugin, git clone, manual ZIP, or per-project `.claude/skills/typst/`
+        plugin, git clone, manual ZIP, or per-project `.claude/skills/chanmeng-typst/`
         deployment), then describe the document in plain English. The
         skill matches intent to one of nine bundled templates — general
         document, CJK document, academic paper, simple resume,
         typographic two-column resume, letter, technical report,
         presentation slides, invoice — fills the template parameters
-        from the conversation, and runs `typst compile` to produce the
-        PDF. A `references/` folder holds the Typst language reference,
-        CLI documentation, template patterns, and design system; the
-        skill loads them on demand rather than dumping everything into
+        from the conversation, runs `typst compile`, then checks the PDF
+        itself before reporting it done. A `references/` folder holds the Typst language reference,
+        CLI documentation, template patterns, design system, silent
+        pitfalls and ATS resume rules; the skill loads them on demand rather than dumping everything into
         context.
       technicalApproach: |
         Skill structure is the differentiator. The repository root
-        contains `skills/typst/` as the actual loadable artefact,
+        contains `skills/chanmeng-typst/` as the actual loadable artefact,
         enabling **both** marketplace plugin distribution **and** direct
         skill-folder installation without code duplication. `SKILL.md`
         is the decision tree + workflow patterns + recovery procedures
@@ -1312,12 +1312,16 @@ projects:
         relevant slice. `scripts/verify-typst.sh` runs as a precondition
         check (Typst v0.14+, CJK font availability) so the skill fails
         loudly and early rather than half-way through compilation.
+        `scripts/check-pdf.py` runs after compiling and catches what a
+        clean compile misses: wrong page count, lost hyphens, unembedded
+        fonts and CJK bold that does not show.
         Advanced patterns embedded: theme systems with cascading defaults,
         scope-based show rules, modular component functions, multi-column
         layouts, circular image clipping, typography hierarchy, native
         CJK fallback chains.
       outcomes: |
-        Released v0.3.0 in April 2026; adoption not re-measured since.
+        Released v0.6.0 on 2026-11-01, tested on Typst 0.15.1, with CI
+        compiling all nine templates. Adoption has not been re-measured.
         The deeper value isn't downloads — it's that this is the worked
         example of "how to structure a Claude Code skill" that Chan
         brought into the Engram Architect Cohort agent-design discussions

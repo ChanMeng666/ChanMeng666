@@ -73,7 +73,7 @@ projects:
       - { label: "Public v0.1 commit",    value: "2026-04-13 (commit 73f4fa8 — 'initial commit github-readme-suno-cards v0.1', extracted as a clean public-facing repo)" }
       - { label: "Internal cleanup",      value: "2026-04-13 commit 295756e — 'clean remaining internal reference' (post-extraction sanitization)" }
       - { label: "Latest commit",         value: "2026-11-01" }
-      - { label: "Total commits",         value: "48 (public repo, 2026-04-13 → 2026-11-01)" }
+      - { label: "Total commits",         value: "49 (public repo, 2026-04-13 → 2026-11-01)" }
       - { label: "Live service",          value: "https://github-readme-suno-cards.vercel.app (Vercel Edge runtime)" }
       - { label: "GitHub Action",         value: "uses: ChanMeng666/github-readme-suno-cards@v0.3.0 (JavaScript action, 'music' icon, purple branding)" }
       - { label: "Action inputs",         value: "37 (handle, manifest_path, song_ids, sort, max, include_tags, exclude_tags, min/max_duration)" }
@@ -202,7 +202,7 @@ projects:
         "initial commit — github-readme-suno-cards v0.1" on
         2026-04-13, immediately followed by `295756e` "clean remaining
         internal reference" (the post-extraction sanitization sweep) —
-        carried forward to `c9143b1` on 2026-11-01. A 2026-07-05
+        carried forward to `fcf2277` on 2026-11-01. A 2026-07-05
         health audit, recorded in `86167f4`, confirmed all three
         render surfaces against live Suno data. That audit produced
         two durable API decisions: the `/api/trending` fossil was

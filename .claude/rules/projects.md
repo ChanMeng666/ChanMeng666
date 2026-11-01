@@ -43,5 +43,6 @@ Derived from current membership 2026-10-16; Chan may overrule.
 - "Featured by" / "Listed on" lines come from `meta.x_brand.proofStrips`, each backed by a row in that project's `reach` register (`docs/STATE.md`).
 
 ## Narrative copy
+- GitHub README Suno Cards: the local folder is the private repo. Take public facts from `ChanMeng666/github-readme-suno-cards`, because its tags and commits differ. Say "GitHub Action": no Marketplace listing was found on 2026-11-01.
 - Copy limits (no pricing, no dev stats, no private-repo links) are in `CLAUDE.md`. The CORDE commit share is a decided exception, with its basis stated (`docs/STATE.md`, CORDE row).
 - A private repo is recorded without `repoUrl`, with a guard that says why (example `20-projects-flagship.yaml:35`).

@@ -1224,9 +1224,10 @@ publications:
     releaseDate: "2026-07-18"
     url: https://chanmeng.org/blog/suno-trending-feed-frozen
     summary: |
-      Investigative data piece: Suno's public /api/trending endpoint has
+      Investigative data piece: Suno's public /api/trending endpoint
       returned the same 49 songs — all created in mid-September 2024 — for
-      roughly 22 months. Evidenced by 84 consecutive daily automated captures
+      roughly 22 months, until Suno removed the route on 2026-07-24.
+      Evidenced by 84 consecutive daily automated captures
       collected from 2026-04-12 while building github-readme-suno-cards.
     meta: { x_brand: { type: article } }
 
@@ -1314,7 +1315,7 @@ publications:
     releaseDate: "2026-06-30"
     url: https://chanmeng.org/blog/claude-code-audio-hooks-architecture
     summary: |
-      The architecture of claude-code-audio-hooks — an event-driven
+      The architecture of claude-code-audio-hooks, since renamed echook — an event-driven
       notification system designed to be operated by an AI agent rather than
       a human: no interactive prompts, NDJSON logs, single-shot config.
     meta: { x_brand: { type: article } }

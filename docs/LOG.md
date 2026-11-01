@@ -294,3 +294,15 @@ data/profile/46-films.yaml, docs/STATE.md, youtube/channel.yaml, youtube/videos.
 
 ## [2026-11-01] fix | Typst pitfall notes corrected after measuring on 0.14.2 and 0.15.1: §2 cause, §10(a) symptom, /H1 rule
 cv/TYPST_PITFALLS.md, cv/README.md, .claude/rules/cv.md, comments in cv/*.typ and cv/variants/*.typ
+
+## [2026-11-01] fix | github-readme-suno-cards entry matched to its repo (commits, Action inputs, toggles, runtime, Action type and tag, roadmap, trending timeline); explore-feed and echook summaries updated
+data/profile/21-projects-oss-primary.yaml, data/profile/30-recognition.yaml
+
+## [2026-11-01] change | Review of 12 overdue entries delegated by Chan to Claude, checked against the live articles and repos by keyword match; lastUpdated set on that basis
+data/profile/21-projects-oss-primary.yaml, data/profile/30-recognition.yaml
+
+## [2026-11-01] change | 10 published articles moved off recency active: they are finished work (8 recent, 2 historical)
+data/profile/30-recognition.yaml
+
+## [2026-11-01] fix | Suno cards: Action pinned to the new v0.3.0 tag; "GitHub Marketplace" dropped because no listing was found; FemTech summary says video link and one IBM representative
+data/profile/21-projects-oss-primary.yaml, data/profile/30-recognition.yaml

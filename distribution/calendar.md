@@ -6,7 +6,7 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-10-31, X 2026-10-31, LinkedIn 2026-10-31, ArchCanvas page 2026-10-31.
+Plan as of 2026-10-12. Registers read: YouTube 2026-10-31, X 2026-11-01, LinkedIn 2026-11-01, ArchCanvas page 2026-11-01.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
@@ -51,9 +51,6 @@ A post made after those dates is not known here until its register is synced.
 
 ## Not yet published and not scheduled here
 
-- echook film: LinkedIn (personal)
-- echook film: X
-
 Scheduled in another calendar:
 
 - ArchLang film: LinkedIn (personal) (archcanvas-growth)
@@ -65,7 +62,7 @@ Scheduled in another calendar:
 |---|---|---|---|---|---|---|
 | ArchCanvas studio film | published 2026-09-21 | published 2026-10-07 | published | published 2026-09-21 | published 2026-09-21 | published 2026-09-21 |
 | ArchLang film | published 2026-10-06 | — | published | to do (other calendar) | to do (other calendar) | — |
-| echook film | published 2026-10-06 | published 2026-10-07 | published | **to do** | **to do** | — |
+| echook film | published 2026-10-06 | published 2026-10-07 | published | published 2026-11-01 | published 2026-11-01 | — |
 | a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | planned 2026-11-24 | — |
 | GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-26 | planned 2026-11-26 | — |
 | CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-17 | planned 2026-11-17 | — |

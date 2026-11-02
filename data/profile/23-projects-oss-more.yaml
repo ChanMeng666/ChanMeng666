@@ -3944,3 +3944,49 @@ projects:
         Claude Code. MIT. The workflow is adapted from Ian's open-source
         ian-xiaohei-illustrations skill (MIT), credited in the repo's
         NOTICE.md; its character, images and style are not used.
+
+  # Added 2026-11-02: private repo created the same day. Recorded only: no 90-meta
+  # bucket and no show: key until Chan decides where it appears.
+  # repoUrl omitted — repository is private (ChanMeng666/digital-avatar); do not re-add.
+  - id: digital-avatar
+    provenance: personal
+    tier: secondary
+    recency: active
+    name: "Digital Avatar — talking-head videos without lip-sync"
+    priority: 113
+    category: creative
+    tagline: "A personal pipeline for short talking-head videos with no lip-sync model: a cloned voice reads the script, Chan films a silent reaction take while listening, and Remotion composes the result with word-level captions and B-roll."
+    roles: ["Creative Coder", "Video Producer"]
+    techStack: ["TypeScript", "Remotion", "React", "ffmpeg", "ElevenLabs", "SiliconFlow IndexTTS-2", "Whisper", "Claude Code"]
+    keywords:
+      - "Voice cloning"
+      - "Talking-head video"
+      - "Word-level captions"
+      - "Audio clap sync"
+      - "Video produced in code"
+    status: active
+    startDate: "2026-11"
+    publicSummary: |
+      A pipeline that turns a Markdown script into a finished talking-head
+      video without a lip-sync model. The script is narrated in a cloned
+      voice with word timings; Chan records a silent reaction take
+      (expressions and gestures only) while listening on headphones;
+      the take is aligned to the narration and Remotion renders it in
+      three layouts with captions, titles and B-roll.
+    narrative:
+      impactHeadline: "A talking-head video from a text script and one silent take, with no lip-sync model."
+      technicalApproach: |
+        The script is plain Markdown, one spoken sentence per line, with
+        emotion tags for the teleprompter and `>` lines for on-screen
+        titles, bullets and code. Narration comes from ElevenLabs,
+        SiliconFlow IndexTTS-2 or a mock provider, with word timings from
+        an estimate or Whisper. The tool writes a headphone playback track
+        (countdown and clap cue) and a scrolling teleprompter page; a clap
+        detector aligns the take with the narration, the take's own audio
+        is removed, a long take is trimmed and a short one holds its last
+        frame. Remotion renders split (vertical, top and bottom), corner
+        (picture in picture) and fullscreen layouts.
+      myRole: |
+        Sole author, built with Claude Code. First used for her instructor
+        message for TechNest Community's second anniversary; that
+        production package is a separate private repository.

@@ -459,6 +459,23 @@ films:
     media: { poster: /work/posters/lesmills-poster-landscape.jpg, mp4: /work/films/she-sharp-lesmills-30s.mp4 }
     onFilmsPage: true
 
+  # Shown on YouTube and chanmeng.org/films (Chan, 2026-11-02). The repo and the
+  # pipeline that made it (digital-avatar) stay private and are not shown.
+  - id: technest-anniversary-message
+    kind: event-promo
+    title: "TechNest Community turns two, a message from its AI instructor"
+    for: TechNest Community
+    repo: ChanMeng666/film-technest-anniversary
+    repoPublic: false
+    date: "2026-11"
+    seconds: 92.4
+    cuts: ["92 s", "9:16"]
+    madeWith: "Remotion, a cloned voice, one silent take"
+    summary: Chan's message for TechNest Community's second birthday, as the AI instructor and a mentor of its 2026 cohort, from how the class began to the capstone apps her students built. Narrated in her cloned voice over a silent take she filmed to it, with captions and clips from the course laid out in code.
+    youtubeId: OhJmWsi1l4Y
+    media: { poster: /media/films/technest-anniversary-92s.jpg, mp4: /media/films/technest-anniversary-92s.mp4 }
+    onFilmsPage: true
+
   # ── Brand films ────────────────────────────────────────────────────────────
   - id: chan-meng-intro
     kind: brand-film

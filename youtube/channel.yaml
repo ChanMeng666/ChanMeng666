@@ -28,7 +28,7 @@ channel:
   handle: "@ChanMeng666"
   id: UCNfqqzosj2J6bBRVgz7qbJQ
   url: https://www.youtube.com/@ChanMeng666
-  asOf: "2026-11-01"
+  asOf: "2026-11-02"
   subscribers: 24          # historical maximum; never lower it
   description: |
     I'm Chan Meng, an AI agent architect and full-stack engineer based in Auckland, New Zealand.
@@ -86,6 +86,11 @@ counts:
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # 2026-11-02: Chan uploaded and published the TechNest second-anniversary
+  # message (film-technest-anniversary, the 9:16 split cut, a Short) under its
+  # file name. Claude set the title and description she approved in chat and
+  # added it to Brand films the same day, at her request.
+  - { id: OhJmWsi1l4Y, kind: short, published: "2026-11-02", duration: "1:33", title: "TechNest Community turns two — a message from its AI instructor | Anniversary message", playlists: [Brand films], described: true }
   # 2026-11-01: Chan uploaded and published the ArchLang in ChatGPT film
   # (film-archlang-in-chatgpt) under its file name. Claude set the title,
   # description, custom thumbnail and Product films the same day, at her request.
@@ -257,7 +262,8 @@ playlists:
     # Order set 2026-10-10: the intro, the showreel, its short cut, the sting.
     # The all-in-one film was added 2026-10-16, at the end.
     # The April 2025 self-introduction was added 2026-10-17, at the end.
-    videos: [QC2fqBGp4Xg, qoYcFszDnHA, 8n--dCv4tSQ, PoAYhd0KI4c, "-RsnZLNrKf0", erXRl-PPBC8]
+    # The TechNest anniversary message was added 2026-11-02, at the end.
+    videos: [QC2fqBGp4Xg, qoYcFszDnHA, 8n--dCv4tSQ, PoAYhd0KI4c, "-RsnZLNrKf0", erXRl-PPBC8, OhJmWsi1l4Y]
   - title: Music videos
     id: PLUfF7nx_5Rg4
     onHomeTab: true

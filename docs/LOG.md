@@ -318,3 +318,12 @@ data/profile/45-showcase.yaml, data/profile/46-films.yaml, docs/ecosystem/lineag
 
 ## [2026-11-02] change | LinkedIn followers raised from 6,691 to 6,697 (live profile, register sync 2026-11-02) under the historical-maximum rule; ArchLang tests raised from 4,338 to 12,882 passing (2 skipped, 445 files, `npx vitest run` on main at 18127701); CVs rebuilt and chanmeng.org synced
 data/profile/00-basics.yaml, data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml, data/profile/70-linkedin.yaml, cv/sections/header.typ, templates/brand-system.html.hbs, docs/stories/archlang.md
+
+## [2026-11-02] add | `digital-avatar` (private talking-head video pipeline, recorded only: no bucket, no repoUrl) to the projects; `digital-avatar` and `technest-anniversary-video` to the repo catalog
+data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-11-02] add | TechNest second-anniversary film (`technest-anniversary-message`, YouTube OhJmWsi1l4Y) on chanmeng.org/films and the README film wall; repo `technest-anniversary-video` renamed `film-technest-anniversary` and kept private
+data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md, docs/film-masters.md, scripts/readme-art/assets/films/technest-anniversary-message.jpg, public/readme/films.svg
+
+## [2026-11-02] change | YouTube OhJmWsi1l4Y titled and described (text approved by Chan in chat) and added to Brand films; local working folder of film-archlang-one-take deleted after its film and code were checked against GitHub
+youtube/channel.yaml, youtube/videos.yaml

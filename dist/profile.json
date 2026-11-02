@@ -9346,6 +9346,49 @@
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "a11y-loop-archive",
+      "show": {
+        "readme": false,
+        "site": false,
+        "cv": false,
+        "linkedin": false,
+        "llms": false
+      },
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "active",
+      "name": "a11y-loop archive — the working material behind a11y-loop",
+      "priority": 114,
+      "category": "tools",
+      "tagline": "The private archive behind a11y-loop: strategy drafts, raw benchmark and plugin-eval output, review repros, gate tests and recovered session work, kept so each figure and decision in the product docs traces back to its source.",
+      "roles": [
+        "Maintainer"
+      ],
+      "techStack": [
+        "Node.js",
+        "Python",
+        "IBM Equal Access",
+        "Lighthouse",
+        "Claude Code"
+      ],
+      "relatedProjectIds": [
+        "a11y-loop"
+      ],
+      "status": "active",
+      "startDate": "2026-08",
+      "publicSummary": "A private archive of the working material behind a11y-loop, August to\nOctober 2026: strategy and research drafts, the raw benchmark runs\nwith their IBM Equal Access and Lighthouse oracle output, plugin-eval\nreports, the repro pages for two pull-request reviews, the\nagent-gates tests and recovered session work. Each folder names the\nfile in the a11y-loop repository it backs.\n",
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [
+        {
+          "id": "a11y-loop",
+          "name": "a11y-loop",
+          "repoUrl": "https://github.com/ChanMeng666/a11y-loop"
+        }
+      ],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -17703,6 +17746,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-11-02",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-02T10:06:01.739Z"
+    "buildTimestamp": "2026-11-02T10:16:23.320Z"
   }
 }

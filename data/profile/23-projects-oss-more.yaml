@@ -3990,3 +3990,28 @@ projects:
         Sole author, built with Claude Code. First used for her instructor
         message for TechNest Community's second anniversary; that
         production package is a separate private repository.
+
+  # Added 2026-11-02: private repo created the same day. Recorded only, shown
+  # nowhere (Chan, 2026-11-02). See show:.
+  # repoUrl omitted — repository is private (ChanMeng666/a11y-loop-archive); do not re-add.
+  - id: a11y-loop-archive
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
+    provenance: personal
+    tier: secondary
+    recency: active
+    name: "a11y-loop archive — the working material behind a11y-loop"
+    priority: 114
+    category: tools
+    tagline: "The private archive behind a11y-loop: strategy drafts, raw benchmark and plugin-eval output, review repros, gate tests and recovered session work, kept so each figure and decision in the product docs traces back to its source."
+    roles: ["Maintainer"]
+    techStack: ["Node.js", "Python", "IBM Equal Access", "Lighthouse", "Claude Code"]
+    relatedProjectIds: [a11y-loop]
+    status: active
+    startDate: "2026-08"
+    publicSummary: |
+      A private archive of the working material behind a11y-loop, August to
+      October 2026: strategy and research drafts, the raw benchmark runs
+      with their IBM Equal Access and Lighthouse oracle output, plugin-eval
+      reports, the repro pages for two pull-request reviews, the
+      agent-gates tests and recovered session work. Each folder names the
+      file in the a11y-loop repository it backs.

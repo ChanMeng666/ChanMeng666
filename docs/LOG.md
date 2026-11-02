@@ -327,3 +327,6 @@ data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md, docs/fil
 
 ## [2026-11-02] change | YouTube OhJmWsi1l4Y titled and described (text approved by Chan in chat) and added to Brand films; local working folder of film-archlang-one-take deleted after its film and code were checked against GitHub
 youtube/channel.yaml, youtube/videos.yaml
+
+## [2026-11-02] add | `a11y-loop-archive` (private repository of a11y-loop working material) to the projects, recorded only and shown nowhere, and to the repo catalog
+data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md

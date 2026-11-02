@@ -125,6 +125,14 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 |---|---|---|
 | `dist/chan-meng-intro.mp4` | 21 | release `v1.0.0` › `chan-meng-motion-intro-2026-10.mp4` (also `chan-meng-motion-intro-score.wav`, `chan-meng-motion-intro-poster.jpg`, `SHA256SUMS.txt`; SHA-256 checked 2026-10-31) |
 
+## ChanMeng666/film-technest-anniversary (private)
+
+| Rendered to | MB | On GitHub |
+|---|---|---|
+| `video/technest-anniversary-split.mp4` (rendered in digital-avatar's `out/`) | 58 | release `v1.0.0` › same name; the cut on YouTube and chanmeng.org/films |
+| `video/technest-anniversary-corner.mp4` | 29 | release `v1.0.0` › same name |
+| `video/technest-anniversary-fullscreen.mp4` | 74 | release `v1.0.0` › same name |
+
 ## ChanMeng666/film-chan-meng-brand (private)
 
 | Rendered to | MB | On GitHub |

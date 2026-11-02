@@ -1563,6 +1563,18 @@ GAVIGO Inc.'s public marketing and investor-readiness website at gavigo.com — 
 
 **My role.** Sole developer and maintainer of the site end-to-end — the Next.js build, the Markdown/MDX content pipeline, the Motion brand animation, the Resend + Neon lead-capture backend, and the Google Cloud Run deployment — as GAVIGO's founding principal engineer (the same role under which I lead the flagship IRE platform).
 
+### Digital Avatar
+
+A personal pipeline for short talking-head videos with no lip-sync model: a cloned voice reads the script, Chan films a silent reaction take while listening, and Remotion composes the result with word-level captions and B-roll.
+
+- Started: November 2026
+- Status: active
+- Tech stack: TypeScript, Remotion, React, ffmpeg, ElevenLabs, SiliconFlow IndexTTS-2, Whisper, Claude Code
+
+A pipeline that turns a Markdown script into a finished talking-head video without a lip-sync model. The script is narrated in a cloned voice with word timings; Chan records a silent reaction take (expressions and gestures only) while listening on headphones; the take is aligned to the narration and Remotion renders it in three layouts with captions, titles and B-roll.
+
+**Impact.** A talking-head video from a text script and one silent take, with no lip-sync model.
+
 ### She Sharp 2026 Half-Year Report
 
 - Kind: pdf-report
@@ -2647,7 +2659,7 @@ Context: Mentee
 
 ## Films
 
-Every finished film I've made is on https://chanmeng.org/films: 67 films, about 157 minutes in all. 22 are product films, 5 are brand and event films, and 15 are music videos in 5 collections. They are made in code: the product films in Remotion or HyperFrames, the brand films in p5.js, and the music videos for my own songs drawn frame by frame in code rather than with a video generation model.
+Every finished film I've made is on https://chanmeng.org/films: 68 films, about 158 minutes in all. 22 are product films, 6 are brand and event films, and 15 are music videos in 5 collections. They are made in code: the product films in Remotion or HyperFrames, the brand films in p5.js, and the music videos for my own songs drawn frame by frame in code rather than with a video generation model.
 
 ### Product films
 
@@ -2666,6 +2678,7 @@ Every finished film I've made is on https://chanmeng.org/films: 67 films, about 
 ### Brand and event films
 
 - She Sharp × Les Mills, “No Pain, All Gain” (0:30): An event promo rebuilt from photographs of the May 2024 Les Mills evening, with a Suno score cut on the beat.
+- Narrated in her cloned voice over a silent take she filmed to it, with captions and clips from the course laid out in code.
 - Chan Meng, 64-second video business card (1:04): The brand monkey escorts eight on-screen facts about Chan's work, each one traced to the career database, painted in the sting's world and cut to a code-synthesised score.
 - Chan Meng monkey, brand sting (0:12): A wordless sting for Chan's own mark. One orange pixel circles the monkey, bursts, and swirls back into a disc as the monkey settles into the exact logo. Every frame is a pure function of time.
 - Chan Meng, showreel (1:53): Eleven projects, one print and one figure each. The brand monkey's pixel pins up a print in which the project's own finished film plays (for the two projects without a film, its animated README card or a screen capture of its site) and stamps one figure traced to the career database. Painted in the intro's world; the short cut shows the first five.

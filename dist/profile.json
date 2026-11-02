@@ -9303,6 +9303,49 @@
       ],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "digital-avatar",
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "active",
+      "name": "Digital Avatar — talking-head videos without lip-sync",
+      "priority": 113,
+      "category": "creative",
+      "tagline": "A personal pipeline for short talking-head videos with no lip-sync model: a cloned voice reads the script, Chan films a silent reaction take while listening, and Remotion composes the result with word-level captions and B-roll.",
+      "roles": [
+        "Creative Coder",
+        "Video Producer"
+      ],
+      "techStack": [
+        "TypeScript",
+        "Remotion",
+        "React",
+        "ffmpeg",
+        "ElevenLabs",
+        "SiliconFlow IndexTTS-2",
+        "Whisper",
+        "Claude Code"
+      ],
+      "keywords": [
+        "Voice cloning",
+        "Talking-head video",
+        "Word-level captions",
+        "Audio clap sync",
+        "Video produced in code"
+      ],
+      "status": "active",
+      "startDate": "2026-11",
+      "publicSummary": "A pipeline that turns a Markdown script into a finished talking-head\nvideo without a lip-sync model. The script is narrated in a cloned\nvoice with word timings; Chan records a silent reaction take\n(expressions and gestures only) while listening on headphones;\nthe take is aligned to the narration and Remotion renders it in\nthree layouts with captions, titles and B-roll.\n",
+      "narrative": {
+        "impactHeadline": "A talking-head video from a text script and one silent take, with no lip-sync model.",
+        "technicalApproach": "The script is plain Markdown, one spoken sentence per line, with\nemotion tags for the teleprompter and `>` lines for on-screen\ntitles, bullets and code. Narration comes from ElevenLabs,\nSiliconFlow IndexTTS-2 or a mock provider, with word timings from\nan estimate or Whisper. The tool writes a headphone playback track\n(countdown and clap cue) and a scrolling teleprompter page; a clap\ndetector aligns the take with the narration, the take's own audio\nis removed, a long take is trimmed and a short one holds its last\nframe. Remotion renders split (vertical, top and bottom), corner\n(picture in picture) and fullscreen layouts.\n",
+        "myRole": "Sole author, built with Claude Code. First used for her instructor\nmessage for TechNest Community's second anniversary; that\nproduction package is a separate private repository.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -13768,6 +13811,28 @@
       "onFilmsPage": true
     },
     {
+      "id": "technest-anniversary-message",
+      "kind": "event-promo",
+      "title": "TechNest Community turns two, a message from its AI instructor",
+      "for": "TechNest Community",
+      "repo": "ChanMeng666/film-technest-anniversary",
+      "repoPublic": false,
+      "date": "2026-11",
+      "seconds": 92.4,
+      "cuts": [
+        "92 s",
+        "9:16"
+      ],
+      "madeWith": "Remotion, a cloned voice, one silent take",
+      "summary": "Chan's message for TechNest Community's second birthday, as the AI instructor and a mentor of its 2026 cohort, from how the class began to the capstone apps her students built. Narrated in her cloned voice over a silent take she filmed to it, with captions and clips from the course laid out in code.",
+      "youtubeId": "OhJmWsi1l4Y",
+      "media": {
+        "poster": "/media/films/technest-anniversary-92s.jpg",
+        "mp4": "/media/films/technest-anniversary-92s.mp4"
+      },
+      "onFilmsPage": true
+    },
+    {
       "id": "chan-meng-intro",
       "kind": "brand-film",
       "title": "Chan Meng, 64-second video business card",
@@ -17636,8 +17701,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-11-01",
+    "lastModified": "2026-11-02",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-01T20:57:06.474Z"
+    "buildTimestamp": "2026-11-02T10:04:56.208Z"
   }
 }

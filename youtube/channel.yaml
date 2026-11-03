@@ -28,7 +28,7 @@ channel:
   handle: "@ChanMeng666"
   id: UCNfqqzosj2J6bBRVgz7qbJQ
   url: https://www.youtube.com/@ChanMeng666
-  asOf: "2026-11-02"
+  asOf: "2026-11-03"
   subscribers: 24          # historical maximum; never lower it
   description: |
     I'm Chan Meng, an AI agent architect and full-stack engineer based in Auckland, New Zealand.
@@ -69,7 +69,7 @@ channel:
 counts:
   asOf: "2026-10-09"
   total: 340               # 332 on the Videos tab (Studio's visibility filters) plus the 8 public Shorts
-  public: 85               # 77 videos + 8 Shorts (capture:youtube, 2026-10-31)
+  public: 91               # 78 videos + 13 Shorts (capture:youtube, 2026-11-03)
   unlisted: 61             # +1 uploaded 2026-10-12, seen in Studio 2026-10-19 (channel.private.yaml)
   private: 236             # 180 of them are raw screen recordings titled by timestamp
   # 2026-10-17: the public count was read again, signed out: 73 (65 videos
@@ -86,6 +86,16 @@ counts:
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # 2026-11-03: Chan had uploaded the ArchCanvas vertical cuts as drafts under
+  # their file names (the 92-second film, feature shorts 1 and 2, «Zoom Out»;
+  # also «Zoom Out» in 4:5 and 1:1). Claude filled title, description, not made
+  # for kids, Science & Technology and Product shorts with the text Chan
+  # approved in chat; she chose the four 9:16 cuts public and the 4:5 and 1:1
+  # cuts private (ids in channel.private.yaml), and published them that day.
+  - { id: WSWiYRATxZw, kind: short, published: "2026-11-03", duration: "1:32", title: "ArchCanvas — the 92-second film #Shorts", projectId: archcanvas, playlists: [Product shorts], described: true, note: "9:16 cut of MB4eGPWtgNo" }
+  - { id: fRkM-ggKCSU, kind: short, published: "2026-11-03", duration: "0:29", title: "ArchCanvas — Talk to your plan #Shorts", projectId: archcanvas, playlists: [Product shorts], described: true, note: "9:16 cut of omcd23TWvd0" }
+  - { id: KLOgsdmeIOI, kind: short, published: "2026-11-03", duration: "0:26", title: "ArchCanvas — The check #Shorts", projectId: archcanvas, playlists: [Product shorts], described: true, note: "9:16 cut of 4grKmyUPwMk" }
+  - { id: H_XkqGZRkt0, kind: short, published: "2026-11-03", duration: "1:13", title: "ArchCanvas «Zoom Out» — one continuous zoom across the canvas #Shorts", projectId: archcanvas, playlists: [Product shorts], described: true, note: "9:16 cut of KuCYju-jY0w" }
   # 2026-11-02: Chan uploaded and published the TechNest second-anniversary
   # message (film-technest-anniversary, the 9:16 split cut, a Short) under its
   # file name. Claude set the title and description she approved in chat and
@@ -289,8 +299,9 @@ playlists:
   - title: Product shorts
     id: PLLUAf0PEf-xQ
     onHomeTab: false   # the home tab already has its own Short videos row
-    # The 30-second vertical cuts of the product films, newest first.
-    videos: [M3mGpMDDO9I, PXR3I_47At4, zrxlw5Kh3vI, zf2mAMVHoT0, k7xBJ6DXMnc, OUgDbZG6-Hg, 3GrW5o63p5I, lKPR3rNw7Ng]
+    # The vertical cuts of the product films. The four ArchCanvas cuts of
+    # 2026-11-03 sit at the top (their order among themselves not re-read).
+    videos: [WSWiYRATxZw, fRkM-ggKCSU, KLOgsdmeIOI, H_XkqGZRkt0, M3mGpMDDO9I, PXR3I_47At4, zrxlw5Kh3vI, zf2mAMVHoT0, k7xBJ6DXMnc, OUgDbZG6-Hg, 3GrW5o63p5I, lKPR3rNw7Ng]
   - title: ArchCanvas feature shorts
     id: PLXWXSlesO_IM
     onHomeTab: false
@@ -310,8 +321,9 @@ playlists:
 # live; ArchLang and a11y-loop have no vertical cut. The earlier and
 # alternative films that chanmeng.org/films shows (the ArchCanvas 92-second
 # film, its six feature shorts, «Zoom Out» and the first echook film) were held
-# back until 2026-10-19, when Chan uploaded them (16:9 only; their 9:16 cuts
-# are not on the channel). The Short convention:
+# back until 2026-10-19, when Chan uploaded them in 16:9. On 2026-11-03
+# the 9:16 cuts of the 92-second film, feature shorts 1 and 2 and «Zoom Out»
+# followed as Shorts; shorts 3 to 6 have no vertical cut on the channel. The Short convention:
 # title = the film's title with "| Product film" replaced by "#Shorts";
 # description = "A 30-second cut of the <product> product film. The full film
 # is on this channel, in the Product films playlist.", the sign-off line and a

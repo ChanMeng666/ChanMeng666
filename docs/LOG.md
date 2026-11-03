@@ -333,3 +333,6 @@ data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/STATE.
 
 ## [2026-11-03] add | YouTube: four ArchCanvas vertical cuts published as Shorts in Product shorts (the 92-second film, Talk to your plan, The check, «Zoom Out»), text approved by Chan in chat; its 4:5 and 1:1 cuts kept private
 youtube/channel.yaml, youtube/videos.yaml
+
+## [2026-11-04] fix | JSON-LD sameAs takes identity profiles only: mail, CV download, Discord invite, newsletter anchor, booking and tip links are dropped (shared rule in scripts/lib/same-as.mjs)
+scripts/lib/same-as.mjs, scripts/build.mjs, cv/build-jsonld.mjs, public/cv.jsonld

@@ -9,6 +9,7 @@
 // parse this file. JSON-LD bypasses LLM inference entirely.
 
 import { readFileSync, statSync, writeFileSync } from "node:fs";
+import { isSameAsProfile } from "../scripts/lib/same-as.mjs";
 import yaml from "js-yaml";
 
 const args = process.argv.slice(2);
@@ -35,8 +36,8 @@ const profile = statSync(argv[0]).isDirectory()
 const b = profile.basics ?? {};
 
 const sameAs = (b.profiles ?? [])
-  .map((p) => p.url)
-  .filter(Boolean);
+  .filter(isSameAsProfile)
+  .map((p) => p.url);
 
 const workExperience = (profile.work ?? [])
   .filter((w) => !w.archive)

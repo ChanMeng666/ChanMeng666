@@ -12,6 +12,7 @@ import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { loadProfile } from "./lib/load-profile.mjs";
 import { expandOrgContexts } from "./lib/org-context.mjs";
+import { isSameAsProfile } from "./lib/same-as.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -564,7 +565,7 @@ data._primaryBadges = (data.meta?.x_brand?.primarySocialBadges ?? []).map(
 // All sameAs URLs for JSON-LD (basics.profiles + meta.x_brand.additionalSameAs)
 const sameAsSet = new Set();
 for (const p of data.basics?.profiles ?? []) {
-  if (p.url && !p.url.startsWith("mailto:")) sameAsSet.add(p.url);
+  if (isSameAsProfile(p)) sameAsSet.add(p.url);
 }
 for (const u of data.meta?.x_brand?.additionalSameAs ?? []) sameAsSet.add(u);
 data._sameAs = [...sameAsSet];

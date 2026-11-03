@@ -62,6 +62,6 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 ## Subdirectories
 
 - `scripts/cards/` (14 modules): One module per README project card, run by `npm run build:cards`
-- `scripts/lib/` (15 modules): Shared modules: the profile and brand loaders, copy surfaces, ATS and Typst parsers, triage pages
+- `scripts/lib/` (16 modules): Shared modules: the profile and brand loaders, copy surfaces, ATS and Typst parsers, triage pages
 - `scripts/lib/svg-card/` (4 modules): The animated-card kit: shell, glyph outlining, film frames, layout plan
 - `scripts/readme-art/` (5 modules): Banners, pills, the film wall and story art, run by `npm run build:art`

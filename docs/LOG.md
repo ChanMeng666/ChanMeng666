@@ -330,3 +330,6 @@ youtube/channel.yaml, youtube/videos.yaml
 
 ## [2026-11-02] add | `a11y-loop-archive` (private repository of a11y-loop working material) to the projects, recorded only and shown nowhere, and to the repo catalog
 data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md
+
+## [2026-11-03] add | YouTube: four ArchCanvas vertical cuts published as Shorts in Product shorts (the 92-second film, Talk to your plan, The check, «Zoom Out»), text approved by Chan in chat; its 4:5 and 1:1 cuts kept private
+youtube/channel.yaml, youtube/videos.yaml

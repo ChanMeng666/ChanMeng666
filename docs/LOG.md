@@ -336,3 +336,6 @@ youtube/channel.yaml, youtube/videos.yaml
 
 ## [2026-11-04] fix | JSON-LD sameAs takes identity profiles only: mail, CV download, Discord invite, newsletter anchor, booking and tip links are dropped (shared rule in scripts/lib/same-as.mjs)
 scripts/lib/same-as.mjs, scripts/build.mjs, cv/build-jsonld.mjs, public/cv.jsonld
+
+## [2026-11-04] change | `serpdata-api-test` recorded as not archived (matches GitHub), stays private
+docs/ecosystem/lineage.yaml

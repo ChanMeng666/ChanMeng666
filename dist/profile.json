@@ -14784,7 +14784,8 @@
       ],
       "projectId": "chan-monkey-illustrations",
       "license": "MIT",
-      "install": "git clone https://github.com/ChanMeng666/chanmeng-monkey-illustrations into ~/.claude/skills/",
+      "install": "/plugin install chanmeng-monkey-illustrations --marketplace ChanMeng666/chanmeng-monkey-illustrations",
+      "marketplace": "chanmeng-monkey-illustrations",
       "localFolder": "chanmeng-monkey-illustrations",
       "summary": "Generate Chan Meng–branded inline illustrations for articles, blog posts, newsletters, LinkedIn posts, docs and talks, starring Chan's brand monkey (the solid-ink monkey head from the chanmeng.org logo)."
     },
@@ -14803,7 +14804,8 @@
       ],
       "projectId": "linkedin-post-skill",
       "license": "MIT",
-      "install": "git clone https://github.com/ChanMeng666/chanmeng-linkedin-post into ~/.claude/skills/",
+      "install": "/plugin install chanmeng-linkedin-post --marketplace ChanMeng666/chanmeng-linkedin-post",
+      "marketplace": "chanmeng-linkedin-post",
       "localFolder": "chanmeng-linkedin-post",
       "summary": "Use when Chan Meng wants to turn a thought into a post for LinkedIn, X (Twitter), or both — \"write a LinkedIn post about…\", \"tweet this\", \"make this an X thread\", \"post about what I just read\", \"recap the meetup I went to\"."
     },
@@ -14822,7 +14824,8 @@
       ],
       "projectId": "ai-product-manager-skill",
       "license": "MIT",
-      "install": "/plugin marketplace add ChanMeng666/chanmeng-ai-product-manager",
+      "install": "/plugin install chanmeng-ai-product-manager --marketplace ChanMeng666/chanmeng-ai-product-manager",
+      "marketplace": "chanmeng-ai-product-manager",
       "localFolder": "chanmeng-ai-product-manager",
       "summary": "Think and act like a senior AI product manager, forward-deployed engineer and agent architect who has shipped enterprise LLM, RAG and agent systems past the demo."
     },
@@ -14841,7 +14844,8 @@
       ],
       "projectId": "readme-showcase",
       "license": "MIT",
-      "install": "git clone https://github.com/ChanMeng666/chanmeng-readme-showcase into ~/.claude/skills/",
+      "install": "/plugin install chanmeng-readme-showcase --marketplace ChanMeng666/chanmeng-readme-showcase",
+      "marketplace": "chanmeng-readme-showcase",
       "localFolder": "chanmeng-readme-showcase",
       "summary": "Capture polished screenshots and an optimized demo GIF/MP4 of a deployed web project and embed them into that project's GitHub README behind an idempotent SHOWCASE marker block."
     },
@@ -14860,7 +14864,8 @@
       ],
       "projectId": "slack-waterline-skill",
       "license": "MIT",
-      "install": "/plugin marketplace add ChanMeng666/chanmeng-slack-waterline",
+      "install": "/plugin install chanmeng-slack-waterline --marketplace ChanMeng666/chanmeng-slack-waterline",
+      "marketplace": "chanmeng-slack-waterline",
       "localFolder": "chanmeng-slack-waterline",
       "summary": "Read every message in a Slack workspace and prove nothing was missed — then write the daily or weekly digest and, when asked, the reply."
     },
@@ -14879,7 +14884,8 @@
       ],
       "projectId": "readme-theme-assets-skill",
       "license": "MIT",
-      "install": "git clone https://github.com/ChanMeng666/chanmeng-readme-theme-assets into ~/.claude/skills/",
+      "install": "/plugin install chanmeng-readme-theme-assets --marketplace ChanMeng666/chanmeng-readme-theme-assets",
+      "marketplace": "chanmeng-readme-theme-assets",
       "localFolder": "chanmeng-readme-theme-assets",
       "summary": "Use when a README, docs page, or profile page needs images that work in BOTH GitHub light and dark themes — a logo/wordmark that vanishes on dark, a diagram or chart with near-black labels on transparency, an app screenshot with a baked-in "
     },
@@ -14898,7 +14904,8 @@
       ],
       "projectId": "product-reality-check",
       "license": "MIT",
-      "install": "git clone https://github.com/ChanMeng666/chanmeng-product-reality-check into ~/.claude/skills/",
+      "install": "/plugin install chanmeng-product-reality-check --marketplace ChanMeng666/chanmeng-product-reality-check",
+      "marketplace": "chanmeng-product-reality-check",
       "localFolder": "chanmeng-product-reality-check",
       "summary": "Adversarial market research, competitor and prior-art auditing, positioning, and product-narrative work for solo developers and indie hackers — validation-first, so the deliverable is truth rather than cheerleading."
     },
@@ -14917,7 +14924,8 @@
       ],
       "projectId": "geo-markdown-mirror",
       "license": "MIT",
-      "install": "git clone https://github.com/ChanMeng666/chanmeng-geo-markdown-mirror into ~/.claude/skills/",
+      "install": "/plugin install chanmeng-geo-markdown-mirror --marketplace ChanMeng666/chanmeng-geo-markdown-mirror",
+      "marketplace": "chanmeng-geo-markdown-mirror",
       "localFolder": "chanmeng-geo-markdown-mirror",
       "summary": "Generate plain-Markdown \"mirror\" pages of a web project's important pages (pricing, docs, features, landing, long-form content) collected under a /llms/ folder — the neon.com/pricing.md pattern — so AI agents and crawlers parse them cleanly"
     },
@@ -14936,7 +14944,8 @@
       ],
       "projectId": "professional-repo-docs-skill",
       "license": "MIT",
-      "install": "/plugin marketplace add ChanMeng666/chanmeng-professional-repo-docs",
+      "install": "/plugin install chanmeng-professional-repo-docs --marketplace ChanMeng666/chanmeng-professional-repo-docs",
+      "marketplace": "chanmeng-professional-repo-docs",
       "localFolder": "chanmeng-professional-repo-docs",
       "summary": "Scaffold a complete set of professional, best-practice GitHub repository documentation for a project — README (agent-first), LICENSE, .github/FUNDING.yml, CODE_OF_CONDUCT.md, CONTRIBUTING.md, SECURITY.md, SUPPORT.md, GOVERNANCE.md, CHANGELO"
     },
@@ -14955,7 +14964,8 @@
       ],
       "projectId": "academic-paper-review-skill",
       "license": "MIT",
-      "install": "git clone https://github.com/ChanMeng666/chanmeng-academic-paper-review into ~/.claude/skills/",
+      "install": "/plugin install chanmeng-academic-paper-review --marketplace ChanMeng666/chanmeng-academic-paper-review",
+      "marketplace": "chanmeng-academic-paper-review",
       "localFolder": null,
       "summary": "Conduct a rigorous, two-lens peer review (editorial + technical-domain) of academic papers and produce a polished deliverable as Markdown, a Typst source, and/or a compiled PDF."
     },
@@ -14975,7 +14985,8 @@
       ],
       "projectId": "logo-as-code-skill",
       "license": "MIT",
-      "install": "git clone https://github.com/ChanMeng666/chanmeng-logo-as-code into ~/.claude/skills/",
+      "install": "/plugin install chanmeng-logo-as-code --marketplace ChanMeng666/chanmeng-logo-as-code",
+      "marketplace": "chanmeng-logo-as-code",
       "localFolder": "chanmeng-logo-as-code",
       "summary": "Use when turning a hand-drawn, sketched, or scanned logo into clean reproducible code — fitting smooth cubic Bézier curves to the real outline to produce an editable SVG, color/layout variants, an interactive side-by-side/difference review "
     },
@@ -14994,7 +15005,8 @@
       ],
       "projectId": "typst-claude-skill",
       "license": "MIT",
-      "install": "/plugin marketplace add ChanMeng666/chanmeng-typst",
+      "install": "/plugin install chanmeng-typst --marketplace ChanMeng666/chanmeng-typst",
+      "marketplace": "chanmeng-typst",
       "localFolder": null,
       "summary": "Generate professional PDF documents using the Typst typesetting system."
     },
@@ -15005,15 +15017,17 @@
       "repoPublic": true,
       "category": "brand-and-visuals",
       "skills": [
-        "chanmeng-app-promo-images"
+        "chanmeng-app-promo-studio"
       ],
       "formerRepo": "app-promo-studio",
       "formerSkillNames": [
-        "app-promo-images"
+        "app-promo-images",
+        "chanmeng-app-promo-images"
       ],
       "projectId": "app-promo-studio",
       "license": "MIT",
-      "install": "/plugin marketplace add ChanMeng666/chanmeng-app-promo-studio",
+      "install": "/plugin install chanmeng-app-promo-studio --marketplace ChanMeng666/chanmeng-app-promo-studio",
+      "marketplace": "chanmeng-app-promo-studio",
       "localFolder": null,
       "summary": "Generate cross-platform app promotional / marketing images (App Store & Google Play screenshots, iPad, Mac, desktop window, web landing hero, and social/Open-Graph cards) from the user's own app screenshots plus a few headlines and brand co"
     },
@@ -15039,7 +15053,8 @@
       ],
       "projectId": "svg-animation-studio",
       "license": "MIT",
-      "install": "/plugin marketplace add ChanMeng666/chanmeng-svg-animation-studio",
+      "install": "/plugin install chanmeng-svg-animation-studio --marketplace ChanMeng666/chanmeng-svg-animation-studio",
+      "marketplace": "chanmeng-svg-animation-studio",
       "localFolder": "chanmeng-svg-animation-studio",
       "summary": "Animated SVG product cards for GitHub READMEs, as one skill that installs anywhere (chanmeng-svg-product-card). The other four drive the studio's own library and work in a clone of the repo: animate, verify and export SVGs, and add primitives."
     },
@@ -15072,7 +15087,7 @@
       ],
       "projectId": "a11y-loop",
       "license": "MIT",
-      "install": "npx a11y-loop, or /plugin marketplace add ChanMeng666/a11y-loop",
+      "install": "npx a11y-loop, or /plugin install a11y-loop --marketplace ChanMeng666/a11y-loop",
       "marketplace": "chanmeng-a11y-loop",
       "localFolder": "a11y-loop",
       "namingException": "Ships on npm as a11y-loop and is being submitted to listings under that name",
@@ -15089,7 +15104,7 @@
       ],
       "projectId": "echook",
       "license": "MIT",
-      "install": "/plugin marketplace add ChanMeng666/echook",
+      "install": "/plugin install audio-hooks --marketplace ChanMeng666/echook",
       "marketplace": "chanmeng-audio-hooks",
       "localFolder": "claude-code-audio-hooks",
       "namingException": "The skill is the operating manual of the echook product and is released with it",
@@ -17744,8 +17759,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-11-03",
+    "lastModified": "2026-11-04",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-03T22:11:37.507Z"
+    "buildTimestamp": "2026-11-04T05:36:33.712Z"
   }
 }

@@ -46,7 +46,8 @@ agentSkills:
       - chan-monkey-illustrations
     projectId: chan-monkey-illustrations
     license: MIT
-    install: git clone https://github.com/ChanMeng666/chanmeng-monkey-illustrations into ~/.claude/skills/
+    install: /plugin install chanmeng-monkey-illustrations --marketplace ChanMeng666/chanmeng-monkey-illustrations
+    marketplace: chanmeng-monkey-illustrations
     localFolder: chanmeng-monkey-illustrations
     summary: >-
       Generate Chan Meng–branded inline illustrations for articles, blog posts, newsletters, LinkedIn posts,
@@ -64,7 +65,8 @@ agentSkills:
       - linkedin-post
     projectId: linkedin-post-skill
     license: MIT
-    install: git clone https://github.com/ChanMeng666/chanmeng-linkedin-post into ~/.claude/skills/
+    install: /plugin install chanmeng-linkedin-post --marketplace ChanMeng666/chanmeng-linkedin-post
+    marketplace: chanmeng-linkedin-post
     localFolder: chanmeng-linkedin-post
     summary: >-
       Use when Chan Meng wants to turn a thought into a post for LinkedIn, X (Twitter), or both — "write a
@@ -83,7 +85,8 @@ agentSkills:
       - ai-product-manager
     projectId: ai-product-manager-skill
     license: MIT
-    install: /plugin marketplace add ChanMeng666/chanmeng-ai-product-manager
+    install: /plugin install chanmeng-ai-product-manager --marketplace ChanMeng666/chanmeng-ai-product-manager
+    marketplace: chanmeng-ai-product-manager
     localFolder: chanmeng-ai-product-manager
     summary: >-
       Think and act like a senior AI product manager, forward-deployed engineer and agent architect who has
@@ -101,7 +104,8 @@ agentSkills:
       - readme-showcase
     projectId: readme-showcase
     license: MIT
-    install: git clone https://github.com/ChanMeng666/chanmeng-readme-showcase into ~/.claude/skills/
+    install: /plugin install chanmeng-readme-showcase --marketplace ChanMeng666/chanmeng-readme-showcase
+    marketplace: chanmeng-readme-showcase
     localFolder: chanmeng-readme-showcase
     summary: >-
       Capture polished screenshots and an optimized demo GIF/MP4 of a deployed web project and embed them into
@@ -119,7 +123,8 @@ agentSkills:
       - slack-waterline
     projectId: slack-waterline-skill
     license: MIT
-    install: /plugin marketplace add ChanMeng666/chanmeng-slack-waterline
+    install: /plugin install chanmeng-slack-waterline --marketplace ChanMeng666/chanmeng-slack-waterline
+    marketplace: chanmeng-slack-waterline
     localFolder: chanmeng-slack-waterline
     summary: >-
       Read every message in a Slack workspace and prove nothing was missed — then write the daily or weekly
@@ -137,7 +142,8 @@ agentSkills:
       - readme-theme-assets
     projectId: readme-theme-assets-skill
     license: MIT
-    install: git clone https://github.com/ChanMeng666/chanmeng-readme-theme-assets into ~/.claude/skills/
+    install: /plugin install chanmeng-readme-theme-assets --marketplace ChanMeng666/chanmeng-readme-theme-assets
+    marketplace: chanmeng-readme-theme-assets
     localFolder: chanmeng-readme-theme-assets
     summary: >-
       Use when a README, docs page, or profile page needs images that work in BOTH GitHub light and dark
@@ -156,7 +162,8 @@ agentSkills:
       - product-reality-check
     projectId: product-reality-check
     license: MIT
-    install: git clone https://github.com/ChanMeng666/chanmeng-product-reality-check into ~/.claude/skills/
+    install: /plugin install chanmeng-product-reality-check --marketplace ChanMeng666/chanmeng-product-reality-check
+    marketplace: chanmeng-product-reality-check
     localFolder: chanmeng-product-reality-check
     summary: >-
       Adversarial market research, competitor and prior-art auditing, positioning, and product-narrative work
@@ -175,7 +182,8 @@ agentSkills:
       - geo-markdown-mirror
     projectId: geo-markdown-mirror
     license: MIT
-    install: git clone https://github.com/ChanMeng666/chanmeng-geo-markdown-mirror into ~/.claude/skills/
+    install: /plugin install chanmeng-geo-markdown-mirror --marketplace ChanMeng666/chanmeng-geo-markdown-mirror
+    marketplace: chanmeng-geo-markdown-mirror
     localFolder: chanmeng-geo-markdown-mirror
     summary: >-
       Generate plain-Markdown "mirror" pages of a web project's important pages (pricing, docs, features,
@@ -194,7 +202,8 @@ agentSkills:
       - professional-repo-docs
     projectId: professional-repo-docs-skill
     license: MIT
-    install: /plugin marketplace add ChanMeng666/chanmeng-professional-repo-docs
+    install: /plugin install chanmeng-professional-repo-docs --marketplace ChanMeng666/chanmeng-professional-repo-docs
+    marketplace: chanmeng-professional-repo-docs
     localFolder: chanmeng-professional-repo-docs
     summary: >-
       Scaffold a complete set of professional, best-practice GitHub repository documentation for a project —
@@ -213,7 +222,8 @@ agentSkills:
       - academic-paper-review
     projectId: academic-paper-review-skill
     license: MIT
-    install: git clone https://github.com/ChanMeng666/chanmeng-academic-paper-review into ~/.claude/skills/
+    install: /plugin install chanmeng-academic-paper-review --marketplace ChanMeng666/chanmeng-academic-paper-review
+    marketplace: chanmeng-academic-paper-review
     localFolder: null
     summary: >-
       Conduct a rigorous, two-lens peer review (editorial + technical-domain) of academic papers and produce a
@@ -232,7 +242,8 @@ agentSkills:
       - logo-as-code
     projectId: logo-as-code-skill
     license: MIT
-    install: git clone https://github.com/ChanMeng666/chanmeng-logo-as-code into ~/.claude/skills/
+    install: /plugin install chanmeng-logo-as-code --marketplace ChanMeng666/chanmeng-logo-as-code
+    marketplace: chanmeng-logo-as-code
     localFolder: chanmeng-logo-as-code
     summary: >-
       Use when turning a hand-drawn, sketched, or scanned logo into clean reproducible code — fitting smooth
@@ -251,7 +262,8 @@ agentSkills:
       - typst
     projectId: typst-claude-skill
     license: MIT
-    install: /plugin marketplace add ChanMeng666/chanmeng-typst
+    install: /plugin install chanmeng-typst --marketplace ChanMeng666/chanmeng-typst
+    marketplace: chanmeng-typst
     localFolder: null
     summary: Generate professional PDF documents using the Typst typesetting system.
 
@@ -261,13 +273,15 @@ agentSkills:
     repoPublic: true
     category: brand-and-visuals
     skills:
-      - chanmeng-app-promo-images
+      - chanmeng-app-promo-studio
     formerRepo: app-promo-studio
     formerSkillNames:
       - app-promo-images
+      - chanmeng-app-promo-images
     projectId: app-promo-studio
     license: MIT
-    install: /plugin marketplace add ChanMeng666/chanmeng-app-promo-studio
+    install: /plugin install chanmeng-app-promo-studio --marketplace ChanMeng666/chanmeng-app-promo-studio
+    marketplace: chanmeng-app-promo-studio
     localFolder: null
     summary: >-
       Generate cross-platform app promotional / marketing images (App Store & Google Play screenshots, iPad,
@@ -293,7 +307,8 @@ agentSkills:
       - svg-verify
     projectId: svg-animation-studio
     license: MIT
-    install: /plugin marketplace add ChanMeng666/chanmeng-svg-animation-studio
+    install: /plugin install chanmeng-svg-animation-studio --marketplace ChanMeng666/chanmeng-svg-animation-studio
+    marketplace: chanmeng-svg-animation-studio
     localFolder: chanmeng-svg-animation-studio
     summary: >-
       Animated SVG product cards for GitHub READMEs, as one skill that installs anywhere
@@ -327,7 +342,7 @@ agentSkills:
       - a11y-loop
     projectId: a11y-loop
     license: MIT
-    install: npx a11y-loop, or /plugin marketplace add ChanMeng666/a11y-loop
+    install: npx a11y-loop, or /plugin install a11y-loop --marketplace ChanMeng666/a11y-loop
     marketplace: chanmeng-a11y-loop
     localFolder: a11y-loop
     namingException: Ships on npm as a11y-loop and is being submitted to listings under that name
@@ -344,7 +359,7 @@ agentSkills:
       - audio-hooks
     projectId: echook
     license: MIT
-    install: /plugin marketplace add ChanMeng666/echook
+    install: /plugin install audio-hooks --marketplace ChanMeng666/echook
     marketplace: chanmeng-audio-hooks
     localFolder: claude-code-audio-hooks
     namingException: The skill is the operating manual of the echook product and is released with it

@@ -15,7 +15,7 @@ gitignored `docs/STATE.private.md`. Read it when present; never copy from it.
 | Priority | What | Notes |
 |---|---|---|
 | **Main focus** | See the private state file | Weigh every "where should effort go" question against it |
-| Own product | **ArchCanvas + ArchLang** | Her decision, 2026-10-07: keep developing. Do not re-argue it; help validate (user interviews, launch) |
+| Own product | **ArchCanvas + ArchLang** | Her decisions: keep developing (2026-10-07); ArchCanvas stays live and operating but is thinned over time, and development centres on ArchLang (2026-11-04). Do not re-argue it; no copy says a launch is planned |
 | Client work | **GenLAB Career Academy** for NZiFOCUS, in development | Lead developer, not the sole decision-maker: the pace follows the client |
 | Role | **FemTech Weekend** CTO; the **LYZEN** company site (repo `femtech-weekend-redthread`) is in founder review | Pace set by the founder |
 | Maintenance only | echook, a11y-loop, the Google News and Google Jobs MCP servers, the agent skills | Free open-source tools. Never propose paid tiers. Keep them healthy, add no features |

@@ -351,3 +351,6 @@ docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/ecosy
 
 ## [2026-11-04] fix | ArchLang paper status: arXiv declined the preprint on 2026-10-06 and the two conference cuts were never submitted; "submitted to arXiv" removed
 data/profile/10-career.yaml, data/profile/30-recognition.yaml, data/voice.yaml
+
+## [2026-11-04] change | ArchCanvas status: live and maintained, thinned over time; development centres on ArchLang; no planned-launch wording
+data/profile/10-career.yaml, cv/variants/*.typ, docs/STATE.md

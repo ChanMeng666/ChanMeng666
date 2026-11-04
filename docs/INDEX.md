@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 123 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 344 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 347 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -47,7 +47,7 @@ Other knowledge files:
 |---|---|---|
 | `data/brand.yaml` | 733 | Chan Meng's personal visual + verbal design system. |
 | `data/voice.yaml` | 432 | VOICE — how the chanmeng.org digital twin sounds, and what it will not say … |
-| `docs/ecosystem/lineage.yaml` | 967 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
+| `docs/ecosystem/lineage.yaml` | 968 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
 | `docs/ecosystem/archlang-archcanvas.yaml` | 284 | ArchLang × ArchCanvas ecosystem catalog … |
 | `schema/brand.schema.json` | 464 | ChanMeng666 Brand System Schema … |
 | `schema/profile.schema.json` | 1467 | ChanMeng666 Profile Data Schema … |

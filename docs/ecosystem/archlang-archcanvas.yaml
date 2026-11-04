@@ -207,9 +207,33 @@ repos:
     github: ChanMeng666/archlang-paper
     visibility: private
     license: none-stated
-    role: Academic papers plus reproduction scripts for ArchLang. Must stay private until acceptance.
+    role: Academic papers plus reproduction scripts for ArchLang. Private; the ICSE 2027 cuts were never submitted (2026-11-04).
     dependsOn:
       - { id: archlang, how: "path — tooling reads sibling ../archlang" }
+    urls: {}
+
+  - id: archlang-lab
+    kind: git-repo
+    localPath: "D:/github_repository/archlang-lab"
+    gitRemote: https://github.com/ChanMeng666/archlang-lab.git
+    github: ChanMeng666/archlang-lab
+    visibility: private
+    license: none-stated
+    role: Closed ArchLang programme research, audits, spikes and research scripts, moved out of archlang docs/plans on 2026-11-04. A record only; archlang tests read their own copies in test/plans/.
+    dependsOn:
+      - { id: archlang, how: "record of archlang programmes; nothing in archlang reads it" }
+    urls: {}
+
+  - id: archcanvas-lab
+    kind: git-repo
+    localPath: "D:/github_repository/archcanvas-lab"
+    gitRemote: https://github.com/ChanMeng666/archcanvas-lab.git
+    github: ChanMeng666/archcanvas-lab
+    visibility: private
+    license: none-stated
+    role: ArchCanvas recorded eval runs (benchmarks/data) and the append-only dated decision records (specs), moved out of archcanvas on 2026-11-04. archcanvas tests read their own copies in tests/fixtures/bench/.
+    dependsOn:
+      - { id: archcanvas, how: "path — archcanvas eval and diagnostics scripts read and write sibling ../archcanvas-lab (or $ARCHCANVAS_LAB)" }
     urls: {}
 
   - id: archlang-showcase

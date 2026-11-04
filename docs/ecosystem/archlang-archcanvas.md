@@ -15,10 +15,11 @@ into the shards, it would leak onto generated surfaces.
   ArchCanvas first commit 2026-04-08, drawing plans as freehand SVG. ArchLang npm
   `0.1.0` followed on 2026-06-24 and replaced the freehand engine on 2026-06-25.
   Never write "first invented the language, then built the product".
-- **Never link** `ChanMeng666/archcanvas`, `ChanMeng666/archcanvas-growth`, or the
+- **Never link** `ChanMeng666/archcanvas`, `ChanMeng666/archcanvas-growth`, the two lab repos, or the
   promo, demo and paper remotes in public copy. The only public GitHub links are
   `github.com/ChanMeng666/archlang` and `github.com/archcanvas/archcanvas`.
-- **`archlang-paper` stays private until acceptance.**
+- **`archlang-paper` stays private.** Its ICSE 2027 cuts were never submitted (2026-11-04); the flagship is public only as a Zenodo preprint.
+- **`archlang-lab` and `archcanvas-lab` are private records** (2026-11-04): closed ArchLang research, and ArchCanvas eval data plus dated specs. Never link them; tests in the product repos never read them.
 - **No traction claims** unless the career shards have been re-read and updated.
 - **Truth ownership.** Language behaviour lives in `archlang`, product behaviour
   in `archcanvas`, strategy and launch copy in `archcanvas-growth`. Growth holds

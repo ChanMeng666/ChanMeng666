@@ -345,3 +345,6 @@ data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
 
 ## [2026-11-04] change | `digital-avatar` moves to lineage family `marketing-tools`
 docs/ecosystem/lineage.yaml
+
+## [2026-11-04] add | `archlang-lab` and `archcanvas-lab` in lineage family `archlang-archcanvas` (private, shown nowhere)
+docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/ecosystem/archlang-archcanvas.md

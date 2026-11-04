@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 123 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 350 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 356 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -24,7 +24,7 @@ against `schema/profile.schema.json`. Find an entry with
 | Shard | Lines | Top-level keys (entries) | Purpose |
 |---|---|---|---|
 | `data/profile/00-basics.yaml` | 143 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
-| `data/profile/10-career.yaml` | 2831 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
+| `data/profile/10-career.yaml` | 2832 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1199 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |

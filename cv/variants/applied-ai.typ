@@ -174,7 +174,7 @@ LangGraph, with evaluation harnesses and typed outputs.
   location: "Auckland, New Zealand",
   arrangement: "Remote",
   bullets: (
-    [Scope: solo founder and engineer; live with payments, ahead of public launch. Building an AI design agent for architects and self-builders; invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (62 npm releases, 139 diagnostic codes), so every plan is checked and an edit is exact; live at archcanvas.uk and archlang.uk.],
+    [Scope: solo founder and engineer; live with payments and maintained. Building an AI design agent for architects and self-builders; invented ArchLang, the open-source language that compiles a floor plan into a dimensioned drawing (62 npm releases, 139 diagnostic codes), so every plan is checked and an edit is exact; live at archcanvas.uk and archlang.uk.],
   ),
 )
 

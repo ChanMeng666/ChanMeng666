@@ -6,7 +6,7 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-11-01, X 2026-11-02, LinkedIn 2026-11-02, ArchCanvas page 2026-11-01.
+Plan as of 2026-10-12. Registers read: YouTube 2026-11-03, X 2026-11-02, LinkedIn 2026-11-02, ArchCanvas page 2026-11-01.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
@@ -45,6 +45,8 @@ A post made after those dates is not known here until its register is synced.
 |---|---|---|---|---|---|---|---|
 | 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | LinkedIn (personal) | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#linkedin` | skipped |
 | 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | X | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#x` | skipped |
+| 2026-12-03 | Thursday | TechNest Community turns two, a message from its AI instructor | LinkedIn (personal) | 92 s, 9:16 | `_staging/12-technest-anniversary/technest-anniversary-split.mp4` |  | draft |
+| 2026-12-03 | Thursday | TechNest Community turns two, a message from its AI instructor | X | 92 s, 9:16 | `_staging/12-technest-anniversary/technest-anniversary-split.mp4` |  | draft |
 
 - She Sharp × Les Mills, “No Pain, All Gain”: Optional: the event has passed. Post it as a piece of craft, or mark it skipped
 - She Sharp × Les Mills, “No Pain, All Gain”: Optional, as above
@@ -82,6 +84,7 @@ A post made after those dates is not known here until its register is synced.
 | ArchLang narrated demo | — | — | — | — | — | — |
 | GenLAB Career Academy, how it works | — | — | — | — | — | — |
 | She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | skipped | skipped | — |
+| TechNest Community turns two, a message from its AI instructor | published 2026-11-02 | — | published | planned 2026-12-03 | planned 2026-12-03 | — |
 | Chan Meng, 64-second video business card | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng monkey, brand sting | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng, showreel | published 2026-10-09 | — | published | published 2026-10-20 | published 2026-10-20 | — |

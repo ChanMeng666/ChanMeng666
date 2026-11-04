@@ -24,13 +24,13 @@ against `schema/profile.schema.json`. Find an entry with
 | Shard | Lines | Top-level keys (entries) | Purpose |
 |---|---|---|---|
 | `data/profile/00-basics.yaml` | 143 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
-| `data/profile/10-career.yaml` | 2833 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
+| `data/profile/10-career.yaml` | 2831 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1199 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
 | `data/profile/23-projects-oss-more.yaml` | 4064 | projects (97) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
-| `data/profile/30-recognition.yaml` | 1873 | awards (7), certificates (53), publications (77) | RECOGNITION — awards, certificates, publications & media … |
+| `data/profile/30-recognition.yaml` | 1872 | awards (7), certificates (53), publications (77) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
 | `data/profile/45-showcase.yaml` | 457 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
 | `data/profile/46-films.yaml` | 593 | filmCollections (8), films (70) | FILMS — every finished film Chan has made, one row per film … |

@@ -348,3 +348,6 @@ docs/ecosystem/lineage.yaml
 
 ## [2026-11-04] add | `archlang-lab` and `archcanvas-lab` in lineage family `archlang-archcanvas` (private, shown nowhere)
 docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/ecosystem/archlang-archcanvas.md
+
+## [2026-11-04] fix | ArchLang paper status: arXiv declined the preprint on 2026-10-06 and the two conference cuts were never submitted; "submitted to arXiv" removed
+data/profile/10-career.yaml, data/profile/30-recognition.yaml, data/voice.yaml

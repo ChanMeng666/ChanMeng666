@@ -342,3 +342,6 @@ docs/ecosystem/lineage.yaml
 
 ## [2026-11-04] add | `chanmeng-chat-story-video`: private chat-story video template, new lineage family `marketing-tools`; recorded, shown nowhere
 data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-11-04] change | `digital-avatar` moves to lineage family `marketing-tools`
+docs/ecosystem/lineage.yaml

@@ -4015,3 +4015,50 @@ projects:
       reports, the repro pages for two pull-request reviews, the
       agent-gates tests and recovered session work. Each folder names the
       file in the a11y-loop repository it backs.
+
+  # Added 2026-11-04: private repo created the same day. Recorded only, shown
+  # nowhere (Chan, 2026-11-04): a marketing tool, not a portfolio piece. See show:.
+  # repoUrl omitted — repository is private (ChanMeng666/chanmeng-chat-story-video); do not re-add.
+  - id: chanmeng-chat-story-video
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
+    provenance: personal
+    tier: secondary
+    recency: active
+    name: "Chat Story Video — text-message stories as a real iPhone screen recording"
+    priority: 115
+    category: creative
+    tagline: "A Remotion template that turns a YAML chat script into a video that reads as a real iPhone screen recording of Messages, for self-promotion, product stories and short entertaining chats."
+    roles: ["Creative Coder", "Video Producer"]
+    techStack: ["TypeScript", "Remotion", "React", "YAML", "ffmpeg", "Claude Code"]
+    keywords:
+      - "Chat story video"
+      - "Screen-recording simulation"
+      - "Short-form video"
+      - "Video produced in code"
+    status: active
+    startDate: "2026-11"
+    publicSummary: |
+      A template for text-message story videos. A story is a YAML script
+      of chats and messages; the renderer draws the whole phone in code
+      (status bar, header, bubbles, keyboard, receipts, tapbacks,
+      notification banner, iOS push between chats) and paces it like a
+      real person: uneven typing with corrected slips, typing dots that
+      stop and restart, Delivered turning into Read. Interface sounds
+      only: no captions, cards, narration or music, so the video stays
+      believable as a screen recording. Finished videos are archived as
+      release assets of the repository.
+    narrative:
+      impactHeadline: "A chat story written in YAML becomes a believable phone screen recording."
+      technicalApproach: |
+        A Node loader normalises the YAML and passes it to Remotion as
+        props; a timeline module turns it into frames, generating seeded
+        keystrokes per message (word and punctuation pauses, a neighbour-
+        key slip fixed with backspace, slower pinyin pacing for Chinese)
+        and typing hesitation for the other side. Bubble heights are
+        measured once, the thread scrolls with the keyboard, the iMessage
+        gradient depends on screen position, and the interface sounds are
+        synthesised with ffmpeg. Renders at 1080×1920, 1080×2340 (a real
+        recording's shape) or 1080×1350.
+      myRole: |
+        Concept and the realism rule are mine; built with Claude Code.
+        Used for my own marketing videos; not shown publicly.

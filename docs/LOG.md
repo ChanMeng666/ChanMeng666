@@ -339,3 +339,6 @@ scripts/lib/same-as.mjs, scripts/build.mjs, cv/build-jsonld.mjs, public/cv.jsonl
 
 ## [2026-11-04] change | `serpdata-api-test` recorded as not archived (matches GitHub), stays private
 docs/ecosystem/lineage.yaml
+
+## [2026-11-04] add | `chanmeng-chat-story-video`: private chat-story video template, new lineage family `marketing-tools`; recorded, shown nowhere
+data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml

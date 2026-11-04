@@ -9389,6 +9389,53 @@
       ],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "chanmeng-chat-story-video",
+      "show": {
+        "readme": false,
+        "site": false,
+        "cv": false,
+        "linkedin": false,
+        "llms": false
+      },
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "active",
+      "name": "Chat Story Video — text-message stories as a real iPhone screen recording",
+      "priority": 115,
+      "category": "creative",
+      "tagline": "A Remotion template that turns a YAML chat script into a video that reads as a real iPhone screen recording of Messages, for self-promotion, product stories and short entertaining chats.",
+      "roles": [
+        "Creative Coder",
+        "Video Producer"
+      ],
+      "techStack": [
+        "TypeScript",
+        "Remotion",
+        "React",
+        "YAML",
+        "ffmpeg",
+        "Claude Code"
+      ],
+      "keywords": [
+        "Chat story video",
+        "Screen-recording simulation",
+        "Short-form video",
+        "Video produced in code"
+      ],
+      "status": "active",
+      "startDate": "2026-11",
+      "publicSummary": "A template for text-message story videos. A story is a YAML script\nof chats and messages; the renderer draws the whole phone in code\n(status bar, header, bubbles, keyboard, receipts, tapbacks,\nnotification banner, iOS push between chats) and paces it like a\nreal person: uneven typing with corrected slips, typing dots that\nstop and restart, Delivered turning into Read. Interface sounds\nonly: no captions, cards, narration or music, so the video stays\nbelievable as a screen recording. Finished videos are archived as\nrelease assets of the repository.\n",
+      "narrative": {
+        "impactHeadline": "A chat story written in YAML becomes a believable phone screen recording.",
+        "technicalApproach": "A Node loader normalises the YAML and passes it to Remotion as\nprops; a timeline module turns it into frames, generating seeded\nkeystrokes per message (word and punctuation pauses, a neighbour-\nkey slip fixed with backspace, slower pinyin pacing for Chinese)\nand typing hesitation for the other side. Bubble heights are\nmeasured once, the thread scrolls with the keyboard, the iMessage\ngradient depends on screen position, and the interface sounds are\nsynthesised with ffmpeg. Renders at 1080×1920, 1080×2340 (a real\nrecording's shape) or 1080×1350.\n",
+        "myRole": "Concept and the realism rule are mine; built with Claude Code.\nUsed for my own marketing videos; not shown publicly.\n"
+      },
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -17761,6 +17808,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-11-04",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-04T05:38:06.577Z"
+    "buildTimestamp": "2026-11-04T06:33:30.638Z"
   }
 }

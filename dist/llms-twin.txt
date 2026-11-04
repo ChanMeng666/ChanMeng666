@@ -56,7 +56,7 @@ Founder and sole engineer of ArchCanvas (archcanvas.uk), an AI design agent that
 
 **Where it stands.** Live at archcanvas.uk with real payments wired, and pre-launch: the public launch is planned for October 2026, and the commercial test that decides the next step is written down with its pass and stop thresholds before the result is known. Among the early testers was **Knight Hou, Co-Founder of Relab**, a PropTech SaaS company, who took a close interest in the product and where it could be applied.
 
-**The research write-up.** Building ArchLang with AI coding agents turned into a software-engineering paper, *Reproducible Is Not Correct: Reflexive Gates and the Self-Descriptions We Ship to Language Models* — a census of the npm packages behind the Model Context Protocol registry, with ArchLang as its depth study. Published as a preprint on Zenodo on 2026-09-25 ([doi.org/10.5281/zenodo.22958002](https://doi.org/10.5281/zenodo.22958002)) and submitted to arXiv (cs.SE) the same day, awaiting announcement.
+**The research write-up.** Building ArchLang with AI coding agents turned into a software-engineering paper, *Reproducible Is Not Correct: Reflexive Gates and the Self-Descriptions We Ship to Language Models* — a census of the npm packages behind the Model Context Protocol registry, with ArchLang as its depth study. Published as a preprint on Zenodo on 2026-09-25 ([doi.org/10.5281/zenodo.22958002](https://doi.org/10.5281/zenodo.22958002)).
 
 **Technical highlights.** ArchCanvas: Next.js 15 + React 19 + TypeScript strict, Tailwind 4, Vercel AI SDK v4 over OpenAI models for design and GPT Image for rendering, Neon Postgres with Drizzle ORM and Neon Auth, Stripe, Cloudinary. Shipped as a Docker image through GitHub Actions and GHCR with a canary-then-swap deploy (boot the new container, poll its health endpoint, swap only if healthy) onto a DigitalOcean server behind Cloudflare.
 
@@ -1827,7 +1827,7 @@ Every Monday — curated picks from the hottest new AI tools on Product Hunt. A 
 - Date: 2026-09-25
 - URL: https://doi.org/10.5281/zenodo.22958002
 
-Sole-authored software-engineering paper (cs.SE; CC BY 4.0). Software now ships descriptions of itself written for language models — schemas, grammars, context files, a server's self-reported identity — and the gate usually guarding them only proves the file regenerates, not that it is true. The paper names the precondition that makes that gate sound, and measures what happens without it: a census of the npm packages behind the Model Context Protocol registry, third-party compiler cases, and a depth study of ArchLang, the floor-plan language Chan built. Preprint published on Zenodo 2026-09-25 (software archive DOI 10.5281/zenodo.22950936); submitted to arXiv the same day, awaiting announcement as of 2026-09-29.
+Sole-authored software-engineering paper (cs.SE; CC BY 4.0). Software now ships descriptions of itself written for language models — schemas, grammars, context files, a server's self-reported identity — and the gate usually guarding them only proves the file regenerates, not that it is true. The paper names the precondition that makes that gate sound, and measures what happens without it: a census of the npm packages behind the Model Context Protocol registry, third-party compiler cases, and a depth study of ArchLang, the floor-plan language Chan built. Preprint published on Zenodo 2026-09-25 (software archive DOI 10.5281/zenodo.22950936).
 
 ### The AI Fluency Framework
 

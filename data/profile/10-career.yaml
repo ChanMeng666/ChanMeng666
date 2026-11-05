@@ -111,11 +111,11 @@ work:
         it into a dimensioned drawing, and the edits are exact and replayable.
 
         **ArchLang — an original programming language, published and
-        maintained.** 62 published npm versions through v1.43.0
-        (2026-10-14); a hand-written, zero-runtime-dependency TypeScript
-        compiler whose error system carries 139 stable diagnostic codes (92
-        errors, 47 warnings), each pointing at the exact span of source it
-        refers to; 12,882 passing tests (measured 2026-11-02); and 27
+        maintained.** Published on npm
+        (`@chanmeng666/archlang`); a hand-written, zero-runtime-dependency
+        TypeScript compiler whose error system carries 139 stable diagnostic
+        codes (92 errors, 47 warnings), each pointing at the exact span of
+        source it refers to; and its design decisions written down as
         architecture decision records. Around the compiler I shipped a CLI, a
         language server with a VS Code extension, a browser playground, a docs
         site, an MCP server so other AI agents can write and check floor plans
@@ -173,8 +173,8 @@ work:
       Founder and sole engineer of ArchCanvas (archcanvas.uk), an AI design
       agent that turns a plain-English brief into a dimensioned floor plan you
       can build from, then lets you refine it by talking. Invented ArchLang, an
-      open-source floor-plan language (62 npm releases, 139 diagnostic codes,
-      12,882 tests), when drawing plans as pictures proved impossible to check —
+      open-source floor-plan language (published on npm, 139 diagnostic codes),
+      when drawing plans as pictures proved impossible to check —
       so every plan ArchCanvas draws can be compiled, checked and edited
       exactly.
 

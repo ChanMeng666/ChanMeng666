@@ -357,3 +357,6 @@ data/profile/10-career.yaml, cv/variants/*.typ, docs/STATE.md
 
 ## [2026-11-06] remove | Vitex site recorded as retired (no live url, status archived); GHCR packages `easy-resume/web` and `sunostats/web` deleted
 data/profile/23-projects-oss-more.yaml, docs/operations/README.md, docs/ecosystem/lineage.yaml
+
+## [2026-11-06] fix | ArchLang: stale snapshot counts (versions, tests, commits, ADRs) dropped or dated; canonical tagline; hosted MCP and skills.sh links; wiki lists external links
+data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml, data/profile/70-linkedin.yaml, scripts/build-wiki.mjs, scripts/build-video-data.mjs

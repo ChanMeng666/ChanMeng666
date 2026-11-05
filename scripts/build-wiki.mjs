@@ -422,7 +422,11 @@ for (const [key, m] of meta) {
 
   const fw = forward.get(key) ?? [];
   out.push("## Links", "");
-  if (fw.length === 0) out.push("None.");
+  const ext = [];
+  for (const [k, label] of [["url", "Site"], ["repoUrl", "Repository"]]) if (typeof e[k] === "string") ext.push(`- ${label}: ${e[k]}`);
+  if (Array.isArray(e.extraLinks)) for (const l of e.extraLinks) if (l && l.url) ext.push(`- ${l.label ?? "Link"}: ${l.url}`);
+  for (const line of ext) out.push(line);
+  if (fw.length === 0 && ext.length === 0) out.push("None.");
   for (const r of fw) {
     if (r.target) out.push(`- ${r.field}: [[${r.target}]]${r.note ? ` (${r.note})` : ""}`);
     else out.push(`- ${r.field}: ${r.raw} (unresolved: ${r.note})`);

@@ -29,7 +29,7 @@ a phone scrolls a feed and an orchestrator's log reacts.
 
 | Card | What the stage shows | Size | Loop |
 |---|---|---|---|
-| ArchLang | Code typed beside the plan it compiles, one number scrubbed, a lint finding raised and cleared | 313 KB | 30.0 s |
+| ArchLang | A real brief from the agent gallery, the ArchLang the agent wrote streaming in as the plan draws, the areas describe() computes, one number scrubbed, a lint finding raised and cleared | 208 KB | 24.0 s |
 | ArchCanvas | One studio session: brief, draft in passes, an edit in plain words, the agent's own advisory, render and export | 197 KB | 29.2 s |
 | GAVIGO IRE | A phone playing the feed’s real videos and gameplay beside the orchestration log, each reacting to the other | 466 KB | 21.0 s |
 | She Sharp | A Slack sync, the visitor assistant's tool call, mentor matching, the mailing list's first send, the agent skills | 180 KB | 27.0 s |

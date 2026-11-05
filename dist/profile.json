@@ -7588,7 +7588,9 @@
         },
         {
           "label": "Downstream",
-          "value": "the compiler engine behind ArchCanvas, which consumes frozen-API contracts (data-arch-id anchors, diffPlans()) verbatim"
+          "value": "the compiler engine behind ArchCanvas, which consumes frozen-API contracts (data-arch-id anchors, diffPlans()) verbatim",
+          "source": "https://github.com/ChanMeng666/archlang (src/index.ts)",
+          "asOf": "2026-11-06"
         }
       ],
       "status": "production",
@@ -7626,7 +7628,7 @@
       "_contextLogo": [],
       "_card": {
         "src": "/public/cards/archlang.svg",
-        "alt": "ArchLang is an open-source language that compiles plain-text source into floor plans. The card shows source being typed and the drawing compiling beside it: five example plans, one constant changed, and a lint finding raised and cleared."
+        "alt": "ArchLang is an open-source language that compiles plain-text source into floor plans. The card shows a brief given to Claude Fable and the ArchLang it wrote compiling into a dimensioned plan: 3 rooms, 31.97 m² net. Then one number is changed and the plan redraws, and a lint finding is raised and cleared. Output: SVG, PDF, DXF, PNG."
       },
       "_film": {
         "url": "https://youtu.be/O3vJu4MtpkU",
@@ -17797,6 +17799,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-11-05",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-05T12:35:11.393Z"
+    "buildTimestamp": "2026-11-05T18:17:39.253Z"
   }
 }

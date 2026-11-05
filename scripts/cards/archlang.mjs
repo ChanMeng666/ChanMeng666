@@ -5,20 +5,26 @@
 // Amber is the playground's advisory colour and appears only on a lint finding;
 // redline is not used because nothing here is an error.
 //
-// The stage is the playground at work: source is typed in the editor and the
-// sheet answers. Five sheets, each a different thing the language does:
-//   A-101, A-104  a line is typed and the layer that kind of statement draws arrives
-//   A-106         each furniture line drops its own symbol onto the plan
-//   one number    a constant is scrubbed and every frame is its own compile
-//   lint          a finding is raised, one line is typed, the finding clears
+// The stage tells one story, brief → plan → change → check (archlang
+// docs/plans/public-surfaces, PS-D8), in six scenes on one 24 s loop:
+//   brief     a real brief from the agent gallery arrives in a chat bubble
+//   plan      the agent's ArchLang streams in and the sheet draws as it does
+//   figure    the rooms and their areas, as describe() computes them
+//   change    a constant is scrubbed and every frame is its own compile
+//   check     a lint finding is raised, one line is typed, the finding clears
+//   outputs   the brief, the drawing, the formats; this is also the still frame
 //
-// Nothing on the sheet is drawn by hand. Each plan is an example shipped inside
-// the npm package (@chanmeng666/archlang/examples), compiled by the real compiler
-// at build time; the build fails if one reports an error. The code is cut from
-// that same file and keeps its line numbers. A symbol is tied to its line by
-// compiling the plan without that line and taking the difference. The figures
-// under the sheet are describe()'s totals and the finding is lint()'s own output.
+// Nothing on the sheet is drawn by hand. The brief and the plan are a pair from
+// the ArchLang repo's agent gallery (docs/gallery/: the brief as given, the plan as
+// the agent delivered it), read from the sibling checkout; the other two plans are
+// examples shipped inside the npm package. All are compiled by the real compiler at
+// build time, and the build fails if one reports an error. Every line in the editor
+// is cut from the file it names and keeps its line number. While the plan streams,
+// each element of the drawing appears with the line whose prefix of the file first
+// compiles to it (and keeps it), the way the docs home's hero paints the sheet from
+// each prefix that compiles. The figures are describe()'s and the finding is lint()'s.
 import { readFileSync } from "node:fs";
+import path from "node:path";
 import { compile, describe, lint } from "@chanmeng666/archlang";
 
 import { outlineTextElements } from "../lib/svg-card/glyphs.mjs";
@@ -29,59 +35,29 @@ export const ARCHLANG_FONTS = {
   displayMid: "scripts/cards/fonts/archlang/Archivo-600.ttf",
   displayReg: "scripts/cards/fonts/archlang/Archivo-400.ttf",
   mono: "scripts/cards/fonts/archlang/IBMPlexMono-400.ttf",
-  symbols: "cv/fonts/JetBrainsMono-Regular.ttf", // only for a glyph the others lack (φ on a diameter, the lint tick)
+  symbols: "cv/fonts/JetBrainsMono-Regular.ttf", // only for a glyph the others lack (→, the lint tick)
 };
 
-// no/tag   the sheet as archlang.uk names it (docs-site/.vitepress/theme/SheetGrid.vue);
-//          the last two are not numbered sheets on the site and carry a tag only
-// view     "fit": the drawing sits whole on the sheet · "y": it is as wide as the sheet and travels down it
-// dims     keep the dimension layer
-// steps    [first-line pattern, statement lines to take, compiler layers those lines draw]
-// pieces   blocks of furniture lines; each line reveals the symbol it places
-// scrub    one constant stepped through a range, a compile per value
-// fix      the line held back, so that lint() has something to say until it is typed
-const SCENES = [
-  {
-    no: "A-101", tag: "Showpiece", file: "hillside-villa", view: "fit",
-    steps: [
-      [/wall id=w_util partition/, 1, ["A-WALL"]],
-      [/room id=r_office polygon/, 3, ["A-FLOR", "A-ANNO-TEXT"]],
-      [/door id=d_garage garage/, 1, ["A-DOOR"]],
-      [/window on shell at 11800/, 1, ["A-GLAZ"]],
-      [/stair id=stair/, 1, ["A-FLOR-STRS"]],
-      [/furniture piano/, 1, []],
-      [/furniture car /, 1, ["A-FURN"]],
-    ],
-  },
-  {
-    no: "A-104", tag: "Geometry", file: "hexagon-pavilion", view: "fit", dims: true,
-    steps: [
-      [/wall id=drum/, 5, ["A-WALL"]],
-      [/room id=rotunda circle/, 1, ["A-FLOR", "A-ANNO-TEXT"]],
-      [/door id=d_main/, 1, ["A-DOOR"]],
-      [/window id=win_n /, 1, ["A-GLAZ"]],
-      [/furniture id=f_tea/, 1, ["A-FURN"]],
-      [/dim diameter rotunda/, 1, ["A-ANNO-DIMS"]],
-    ],
-  },
-  {
-    no: "A-106", tag: "Fixtures", file: "furnished-flat", view: "y",
-    pieces: [
-      [/furniture sofa_l/, /furniture piano/, /furniture dining_table/, /furniture island/],
-      [/furniture shower/, /furniture basin/, /furniture wc /, /furniture bathtub/],
-    ],
-  },
-  {
-    tag: "Change one number", file: "parametric", view: "fit", dims: true,
-    scrub: { param: "H", from: 5000, to: 6000, step: 200 },
-    excerpt: [[/^\s*let WALL/, 3], [/^\s*for i in/, 4]],
-  },
-  {
-    tag: "Lint · soundness check", file: "laneway-house", view: "fit",
-    fix: /window on w_garden at 5850/,
-    excerpt: [[/^\s*strip down/, 4], [/window on w_west/, 2]],
-  },
-];
+// The gallery pair, from the ArchLang checkout beside this repo. `studio` is the
+// docs home's hero pair too: three rooms read at card size, and its brief is one
+// short paragraph.
+const PAIR = "studio";
+const GALLERY = "../archlang/docs/gallery";
+export const ARCHLANG_INPUTS = {
+  brief: `${GALLERY}/${PAIR}.brief.txt`,
+  plan: `${GALLERY}/${PAIR}.arch`,
+  list: `${GALLERY}/gallery.json`,
+};
+
+// Lines of the plan typed at reading speed; every other statement line streams in whole.
+const KEY_LINES = [/room id=r_main /, /wall id=w_north /, /door id=d_front /, /furniture bed /];
+const SCRUB = { file: "parametric", param: "H", from: 5000, to: 6000, step: 250, excerpt: [[/^\s*let WALL/, 3], [/^\s*for i in/, 4]] };
+const CHECK = { file: "laneway-house", dims: false, fix: /window on w_garden at 5850/, excerpt: [[/^\s*strip down/, 4], [/window on w_west/, 2]] };
+
+// Scene windows, in seconds of the loop.
+const T = 24;
+const SC = { brief: [0, 3], plan: [3, 10], figure: [10, 12.5], change: [12.5, 16.5], check: [16.5, 21], outputs: [21, 24] };
+const ORDER = ["brief", "plan", "figure", "change", "check", "outputs"];
 
 // Compiler layers a card draws. The schedule, legend, axis grid, title block,
 // north arrow and scale bar belong to the issued sheet and cannot be read here.
@@ -97,14 +73,29 @@ const PLUM_LIGHT_SURFACE = "#6a3df0"; // the mark on a light ground
 const OK = "#2e7d32";
 const WARN = "#7a6000"; // advisory amber: the playground's lint row
 const SYN = { keyword: "#6b3ae0", property: "#14602a", atom: "#0b57d0", number: "#0f6f7a", string: "#8a5a00", comment: "#5a616e", operator: "#464d59", name: SRC.fg };
-const PROPERTIES = new Set(["at", "size", "label", "width", "thickness", "offset", "close", "x", "in", "on", "rotate", "radius", "against", "as", "mirror", "uses", "circle", "polygon", "arc", "material", "scale", "angle", "street", "hemisphere", "dir", "wall", "hinge", "swing", "slide", "gap", "into", "diameter"]);
-const ATOMS = new Set(["exterior", "partition", "north", "south", "east", "west", "landscape", "portrait", "auto", "all", "rooms", "concrete", "brick", "insulation", "tile", "none", "up", "down", "left", "right", "garage", "sliding", "pocket", "bath", "bedroom", "office", "hall"]);
+const PROPERTIES = new Set(["at", "size", "label", "width", "thickness", "offset", "close", "x", "in", "on", "rotate", "radius", "against", "as", "mirror", "uses", "circle", "polygon", "arc", "material", "scale", "angle", "street", "hemisphere", "dir", "wall", "hinge", "swing", "slide", "gap", "into", "diameter", "anchor", "inset", "flush", "sill"]);
+const ATOMS = new Set(["exterior", "partition", "north", "south", "east", "west", "landscape", "portrait", "auto", "all", "rooms", "concrete", "brick", "insulation", "tile", "none", "up", "down", "left", "right", "garage", "sliding", "pocket", "bath", "bedroom", "office", "hall", "living", "kitchen", "entry", "mm", "overall", "near", "start", "end", "bottom-left", "bottom-right"]);
+
+// Interface strings, each from an ArchLang surface that already says it.
+const COPY = {
+  identity: "Floor plans as code.", // the identity line (PS-D1)
+  briefFrom: (model) => `The brief, as given to ${model}`, // docs home hero (CompileSeam.vue)
+  writtenBy: (file, model) => `${file} · written by ${model}`, // docs home hero
+  reading: "reading the brief", // docs home hero, sheet status
+  compiling: "compiling", // docs home hero, sheet status
+  figure: "Computed, not estimated", // PS-D1 "Exact" card
+  change: "Change one number",
+  check: "It checks itself", // PS-D1 card title
+  output: "SVG · PDF · DXF · PNG", // docs home "How it works", step 3
+  caption: "You get a dimensioned drawing, and the same text gives the same file every time.", // docs home "How it works", step 3
+  clean: "No soundness warnings — every room is reachable, bedrooms have windows, the building has an entrance.", // playground lint-panel.ts
+};
 
 function tokenize(line) {
   const out = [];
   let col = 0;
   let first = true;
-  for (const [text] of line.matchAll(/\s+|"[^"]*"|#.*$|\d+(?:\.\d+)?%?|[A-Za-z_]\w*|./g)) {
+  for (const [text] of line.matchAll(/\s+|"[^"]*"|#.*$|\d+(?:\.\d+)?%?|[A-Za-z_][\w-]*|./g)) {
     if (text.trim()) {
       let kind = "operator";
       if (text[0] === "#") kind = "comment";
@@ -119,15 +110,15 @@ function tokenize(line) {
   return out;
 }
 
+const statement = (l) => l.trim() && !l.trim().startsWith("#");
+
 // Statement lines of the source starting at the first match of `pattern`, each
 // with its line number in the file. Blank and comment-only lines are skipped.
 function linesAt(all, pattern, count, file) {
-  const at = all.findIndex((l) => !l.trim().startsWith("#") && pattern.test(l.replace(/ {2,}/g, " "))); // the files align their columns
-  if (at < 0) throw new Error(`archlang card: ${file}.arch no longer has a line matching ${pattern}`);
+  const at = all.findIndex((l) => statement(l) && pattern.test(l.replace(/ {2,}/g, " "))); // the files align their columns
+  if (at < 0) throw new Error(`archlang card: ${file} no longer has a line matching ${pattern}`);
   const out = [];
-  for (let i = at; i < all.length && out.length < count; i++) {
-    if (all[i].trim() && !all[i].trim().startsWith("#")) out.push({ no: i + 1, raw: all[i] });
-  }
+  for (let i = at; i < all.length && out.length < count; i++) if (statement(all[i])) out.push({ no: i + 1, raw: all[i] });
   return out;
 }
 
@@ -151,15 +142,20 @@ function compiled(source, what) {
   return res.svg;
 }
 
-// Elements of `full` that `part` does not have, as a multiset difference.
-function added(full, part) {
-  const left = new Map();
-  for (const el of part) left.set(el, (left.get(el) || 0) + 1);
-  return full.filter((el) => {
-    const n = left.get(el) || 0;
-    if (n) left.set(el, n - 1);
-    return !n;
-  });
+// The playground's facts line (playground/src/room-facts.ts `factsLine`, `areaText`, `sourceLines`).
+function factsLine(source, totals) {
+  const n = source === "" ? 0 : source.split(/\r\n|\r|\n/).length - (/[\r\n]$/.test(source) ? 1 : 0);
+  const area = totals.net_floor_area_m2 !== undefined ? `${totals.net_floor_area_m2} m² (net)` : `${totals.floor_area_m2} m² (centreline)`;
+  return `${n} line${n === 1 ? "" : "s"} of ArchLang → ${totals.rooms} room${totals.rooms === 1 ? "" : "s"} · ${area}`;
+}
+
+// A drawing at card size: one model unit is a twentieth of a pixel or less, so the
+// compiler's decimals are dropped from geometry (a text's size is kept).
+const GEOM = /\b(points|d|x|y|x1|y1|x2|y2|cx|cy|r|rx|ry|width|height|stroke-width|transform)="([^"]*)"/g;
+const whole = (s) => s.replace(/-?\d*\.\d+/g, (v) => String(Math.round(Number(v)) || 0));
+function coarse(el) {
+  if (el.startsWith("<text")) return el.replace(/^<text\b[^>]*>/, (open) => open.replace(/ (x|y)="([^"]*)"/g, (_, k, v) => ` ${k}="${whole(v)}"`));
+  return el.replace(GEOM, (_, k, v) => `${k}="${whole(v)}"`);
 }
 
 // A group of compiler elements, re-encoded without touching the geometry: a
@@ -201,19 +197,53 @@ function group(attrs, elements) {
     }
     body += shared ? `<g${sig}>${out}</g>` : out;
   }
-  body = body.replace(/ d="([^"]+)"/g, (_, d) => ` d="${d.replace(/\s*([A-Za-z])\s*/g, "$1")}"`);
+  body = body.replace(/ d="([^"]+)"/g, (_, d) => ` d="${d.replace(/\s*([A-Za-z])\s*/g, "$1").replace(/ ?, ?/g, ",")}"`);
   return `<g${attrs ? ` ${attrs}` : ""}${own}>${body}</g>`;
+}
+
+// Glyph outlines rewritten with relative commands: the same points, about a third
+// fewer bytes. GlyphSet writes absolute integer M/L/Q/C/Z in font units.
+function relativeGlyphs(defs) {
+  const num = (v) => String(v);
+  const join = (vs) => vs.map(num).reduce((s, v, i) => s + (i && !v.startsWith("-") ? " " : "") + v, "");
+  return defs.replace(/ d="([^"]*)"/g, (_, d) => {
+    let x = 0, y = 0, sx = 0, sy = 0, out = "", last = "";
+    for (const [, cmd, args] of d.matchAll(/([MLQCZ])([^MLQCZ]*)/g)) {
+      const v = args.trim() ? args.trim().split(/[\s,]+/).map(Number) : [];
+      let op, vals;
+      if (cmd === "Z") {
+        op = "z"; vals = []; x = sx; y = sy;
+      } else if (cmd === "M") {
+        op = "m"; vals = [v[0] - x, v[1] - y]; x = sx = v[0]; y = sy = v[1];
+      } else if (cmd === "L") {
+        if (v[1] === y) { op = "h"; vals = [v[0] - x]; }
+        else if (v[0] === x) { op = "v"; vals = [v[1] - y]; }
+        else { op = "l"; vals = [v[0] - x, v[1] - y]; }
+        x = v[0]; y = v[1];
+      } else {
+        op = cmd.toLowerCase();
+        vals = v.map((n, i) => n - (i % 2 ? y : x));
+        x = v[v.length - 2]; y = v[v.length - 1];
+      }
+      const body = join(vals);
+      // a repeated command letter may be left out (never after z, never for m)
+      if (op === last && op !== "z" && op !== "m") out += (body.startsWith("-") ? "" : " ") + body;
+      else out += op + body;
+      last = op;
+    }
+    return ` d="${out}"`;
+  });
 }
 
 export function buildArchlangCard({ glyphs, root }) {
   const examples = `${root}/node_modules/@chanmeng666/archlang/examples`;
+  const at = (f) => (path.isAbsolute(f) ? f : path.join(root, f));
+  const model = JSON.parse(readFileSync(at(ARCHLANG_INPUTS.list), "utf8")).find((e) => e.id === PAIR)?.model;
+  if (!model) throw new Error(`archlang card: gallery.json has no "${PAIR}" entry`);
+  const brief = readFileSync(at(ARCHLANG_INPUTS.brief), "utf8").trim();
 
   // ── Timeline ───────────────────────────────────────────────────────────────
-  const D = 6; // seconds a scene holds the stage
-  const T = D * SCENES.length;
-  const p = (t) => pct(t, T, 3);
-  const IN = 0.35;
-  const OUT = D - 0.45;
+  const p = (t) => pct(t, T, 2);
   // one rule per distinct animation, however many elements share it
   const rules = new Map();
   const rule = (frames, base = "") => {
@@ -226,7 +256,20 @@ export function buildArchlangCard({ glyphs, root }) {
   // shown only between a and b
   const span = (a, b, fadeIn = 0.3, fadeOut = 0.3) => `class="${rule(`0%,${p(a)}{opacity:0}${p(a + fadeIn)},${p(b)}{opacity:1}${p(b + fadeOut)},100%{opacity:0}`)}" opacity="0"`;
   // shown only between a and b, cut hard: a frame of a compile, not a fade
-  const cut = (a, b) => `class="${rule(`0%{opacity:0;animation-timing-function:step-end}${p(a)}{opacity:1;animation-timing-function:step-end}${p(b)},100%{opacity:0}`)}"`;
+  const cut = (a, b) => `class="${rule(`0%{opacity:0;animation-timing-function:step-end}${p(a)}{opacity:1;animation-timing-function:step-end}${p(b)},100%{opacity:0}`)}"${b >= T ? "" : ' opacity="0"'}`;
+  // shown in each window [a, b], fading in after a and out before b; a window
+  // that runs to the end of the loop is part of the still frame
+  const shown = (wins, f = 0.3) => {
+    const pts = [];
+    if (wins[0][0] > 0) pts.push([0, 0]);
+    for (const [a, b] of wins) {
+      pts.push(...(a > 0 ? [[a, 0], [a + f, 1]] : [[0, 1]]));
+      pts.push(...(b < T ? [[b - f, 1], [b, 0]] : [[T, 1]]));
+    }
+    if (pts[pts.length - 1][0] < T) pts.push([T, 0]);
+    const still = wins[wins.length - 1][1] >= T;
+    return `class="${rule(pts.map(([t, o]) => `${p(t)}{opacity:${o}}`).join(""))}"${still ? "" : ' opacity="0"'}`;
+  };
 
   // ── Layout ─────────────────────────────────────────────────────────────────
   const SEAM = 800;
@@ -238,304 +281,372 @@ export function buildArchlangCard({ glyphs, root }) {
   const COL = Number((SIZE / (glyphs.font("mono").unitsPerEm * ADV)).toFixed(7)); // font units → columns
   const LH = 19;
   const codeX = E.x + 42;
-  const codeTop = E.y + E.head + 50;
+  const labelY = E.y + E.head + 24;
+  const codeTop = labelY + 26;
   const codeW = E.x + E.w - codeX;
   const FIT = Math.floor((codeW - 8) / ADV); // characters a row shows before the pane's edge
   // Code is most of the card's text. GlyphSet places a glyph in font units; the
   // face is monospaced, so each glyph is aliased once at one-column scale and a
   // character costs `<use href="#m4" x="12"/>`.
   const alias = new Map();
-  const mono = (text, x, y, fill) => {
-    let uses = "";
+  const uses = (text, from = 0) => {
+    let out = "";
     [...text].forEach((ch, col) => {
       if (ch === " ") return;
       if (!alias.has(ch)) alias.set(ch, { id: `m${alias.size.toString(36)}`, glyph: glyphs.text(ch, { font: "mono", size: SIZE }).match(/href="#([^"]+)"/)[1] });
-      uses += `<use href="#${alias.get(ch).id}"${col ? ` x="${col}"` : ""}/>`;
+      out += `<use href="#${alias.get(ch).id}"${col + from ? ` x="${col + from}"` : ""}/>`;
     });
-    return `<g fill="${fill}" transform="translate(${Number(x.toFixed(2))} ${y}) scale(${ADV})">${uses}</g>`;
+    return out;
   };
+  const at1 = (x, y) => `transform="translate(${Number(x.toFixed(2))} ${y}) scale(${ADV})"`;
+  const mono = (text, x, y, fill) => `<g fill="${fill}" ${at1(x, y)}>${uses(text)}</g>`;
   const outline = (body) => outlineTextElements(body, glyphs, { regular: "displayReg", bold: "displayMid", fallback: "symbols" });
-
-  // Lines typed one after another between `from` and `to`, each for a time in
-  // proportion to its length. → [{ at, dur }]
-  const schedule = (lines, from, to) => {
-    const PAUSE = 10; // the breath between lines, in characters
-    const total = lines.reduce((a, l) => a + l.text.length + PAUSE, 0);
-    let t = from;
-    return lines.map((l) => {
-      const slot = { at: t, dur: ((to - from) * l.text.length) / total };
-      t += ((to - from) * (l.text.length + PAUSE)) / total;
-      return slot;
-    });
+  const wrap = (text, width, style) => {
+    const lines = [];
+    for (const word of text.split(/\s+/)) {
+      const next = lines.length && `${lines[lines.length - 1]} ${word}`;
+      if (next && glyphs.measure(next, style) <= width) lines[lines.length - 1] = next;
+      else lines.push(word);
+    }
+    return lines;
   };
 
-  // One row of the editor. `typed` = { at, dur }: a cover the colour of the page
-  // steps off the row a character at a time.
-  const row = (line, n, typed, swap) => {
-    const y = codeTop + n * LH;
+  // One row of the editor at baseline y. `typed` = { at, dur }: a cover the
+  // colour of the pane steps off the row a character at a time; `shownAt` alone:
+  // the row arrives whole, as a streamed line does.
+  const row = (line, y, { typed, shownAt, swap } = {}) => {
     const out = [];
-    const number = mono(String(line.no), codeX - 12 - String(line.no).length * ADV, y, "#9aa1ad");
-    out.push(typed ? `<g ${on(typed.at, 0.1)}>${number}</g>` : number);
-    // one run per colour: the face is monospaced, so a blank holds a column
-    const runs = new Map();
+    // one run per colour, all in one column grid: the face is monospaced, so a blank holds a column
+    const no = String(line.no);
+    const runs = new Map([["#9aa1ad", uses(no, -12 / ADV - no.length)]]);
     for (const tok of tokenize(line.text)) {
       if (tok.col > FIT) continue; // past the pane's edge
       if (swap && tok.col === swap.col) out.push(swap.svg(codeX + tok.col * ADV, y));
-      else runs.set(tok.kind, (runs.get(tok.kind) || "").padEnd(tok.col) + tok.text);
+      else runs.set(SYN[tok.kind], (runs.get(SYN[tok.kind]) || "") + uses(tok.text.slice(0, FIT + 1 - tok.col), tok.col));
     }
-    for (const [kind, text] of runs) out.push(mono(text, codeX, y, SYN[kind]));
+    out.unshift(`<g ${at1(codeX, y)}>${[...runs].map(([fill, u]) => `<g fill="${fill}">${u}</g>`).join("")}</g>`);
     if (typed) {
-      const chars = Math.min(line.text.length, FIT + 2);
+      const chars = Math.min(line.text.length, FIT + 1);
       const w = (chars * ADV).toFixed(1);
       const name = rule(`0%,${p(typed.at)}{transform:translateX(0);animation-timing-function:steps(${chars},end)}${p(typed.at + typed.dur)},100%{transform:translateX(${w}px)}`, `transform:translateX(${w}px);`);
       out.push(`<rect class="${name}" x="${(codeX - 1).toFixed(1)}" y="${y - 13}" width="${codeW}" height="${LH}" fill="${SRC.surface}"/>`);
     }
-    return out.join("");
+    return typed ? `<g ${on(typed.at, 0.1)}>${out.join("")}</g>` : out.join("");
   };
 
-  // The caret: one bar that steps along each typed row in turn.
-  const caret = (rows) => {
-    const typed = rows.filter((r) => r.typed);
-    if (!typed.length) return "";
-    const stops = typed.map(({ n, line, typed: t }) => {
-      const chars = Math.min(line.text.length, FIT + 2);
-      const y = n * LH;
-      return `${p(t.at)}{transform:translate(0,${y}px);animation-timing-function:steps(${chars},end)}${p(t.at + t.dur)}{transform:translate(${(chars * ADV).toFixed(1)}px,${y}px);animation-timing-function:step-end}`;
-    });
-    const last = typed[typed.length - 1];
-    const name = rule(`0%{transform:translate(0,0);animation-timing-function:step-end}${stops.join("")}100%{transform:translate(0,${last.n * LH}px)}`);
-    return `<g ${cut(typed[0].typed.at, last.typed.at + last.typed.dur + 0.5)} opacity="0"><rect class="${name}" x="${codeX}" y="${codeTop - 11}" width="1.5" height="14" fill="${SRC.fg}"/></g>`;
-  };
-
-  // Where a drawing sits on the sheet, and how far it travels.
-  const place = (view, box) => {
+  // Where a drawing sits on the sheet.
+  const place = (box) => {
     const m = SHEET.margin;
     const availW = SHEET.w - m * 2;
     const availH = footY - m * 2;
-    let k, tx, ty, dy = 0;
-    if (view === "y") {
-      k = availW / box.w;
-      tx = SHEET.x + m;
-      ty = SHEET.y + m;
-      dy = -Math.max(0, box.h * k - availH);
-    } else {
-      k = Math.min(availW / box.w, availH / box.h);
-      tx = SHEET.x + m + (availW - box.w * k) / 2;
-      ty = SHEET.y + m + (availH - box.h * k) / 2;
-    }
-    return { k, dy, transform: `translate(${(tx - box.x * k).toFixed(2)} ${(ty - box.y * k).toFixed(2)}) scale(${k.toFixed(5)})` };
+    const k = Math.min(availW / box.w, availH / box.h);
+    const tx = SHEET.x + m + (availW - box.w * k) / 2;
+    const ty = SHEET.y + m + (availH - box.h * k) / 2;
+    return { k, transform: `translate(${(tx - box.x * k).toFixed(1)} ${(ty - box.y * k).toFixed(1)}) scale(${k.toFixed(5)})` };
   };
-
-  // The playground's plan-facts strip (playground/src/facts-strip.ts): describe()'s totals.
-  const FACTS = [["Rooms", "rooms", 84], ["Doors", "doors", 84], ["Windows", "windows", 98], ["Floor area", "floor_area_m2", 0]];
-  const factsStrip = (values) => {
-    const out = [];
-    let x = SHEET.x + 18;
-    FACTS.forEach(([label, key, w], n) => {
-      if (n) out.push(`<path d="M${x - 12} ${footY + 9}v15" stroke="${SHEET_T.hairline}"/>`);
-      out.push(glyphs.text(label.toUpperCase(), { font: "displayMid", size: 9, x, y: footY + 20, fill: SHEET_T.muted, tracking: 0.08 }));
-      const vx = x + glyphs.measure(label.toUpperCase(), { font: "displayMid", size: 9, tracking: 0.08 }) + 7;
-      out.push(values(key, (v) => glyphs.text(key === "floor_area_m2" ? `${v} m²` : String(v), { font: "mono", size: 10.5, x: vx, y: footY + 20, fill: SHEET_T.ink })));
-      x += w;
-    });
-    return out.join("");
-  };
+  const sheetGroup = (attrs, box, inner) => `<g ${attrs}><g clip-path="url(#sheet)"><g transform="${place(box).transform}">${inner(place(box).k)}</g></g></g>`;
+  const footText = (text, fill = SHEET_T.ink) => glyphs.text(text, { font: "mono", size: 10.5, x: SHEET.x + 18, y: footY + 20, fill, fallback: "symbols" });
 
   const defs = [
     `<clipPath id="ed"><rect x="${E.x + 1}" y="${E.y + E.head + 1}" width="${E.w - 2}" height="${E.h - E.head - 2}"/></clipPath>`,
+    // the streaming pane scrolls: a row leaving the top is cut at the line above the newest rows
+    `<clipPath id="edp"><rect x="${E.x + 1}" y="${E.y + E.head + 10}" width="${E.w - 2}" height="${E.h - E.head - 11}"/></clipPath>`,
     `<clipPath id="sheet"><rect x="${SHEET.x}" y="${SHEET.y}" width="${SHEET.w}" height="${footY}"/></clipPath>`,
     // long statements run off the pane; they fade out rather than stop dead
     `<linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="${SRC.surface}" stop-opacity="0"/><stop offset="1" stop-color="${SRC.surface}"/></linearGradient>`,
   ];
+  // `dims`: false drops the dimension layer (a plan whose dimensions would crowd the sheet at card size)
+  const kept = (svg, prefix, dims = true) => {
+    const split = splitLayers(svg, prefix);
+    return { defs: split.defs, layers: split.layers.filter((l) => DRAWN.has(l.id) && (dims || l.id !== "A-ANNO-DIMS")).map((l) => ({ id: l.id, elements: l.elements.map(coarse) })) };
+  };
+  const boxOf = (layers) => extentOf(layers.filter((l) => EXTENT.has(l.id)).map((l) => ({ body: l.elements.join("") })));
 
   const sheets = [];
   const panes = [];
-  const summary = [];
-  SCENES.forEach((scene, i) => {
-    const S = i * D; // every time below is on the loop's own clock
-    const all = readFileSync(`${examples}/${scene.file}.arch`, "utf8").split("\n");
-    const source = all.join("\n");
-    const what = `${scene.file}.arch`;
-    const kept = (svg) => splitLayers(svg, `s${i}`).layers.filter((l) => DRAWN.has(l.id) && (l.id !== "A-ANNO-DIMS" || scene.dims));
-    const whole = compiled(source, what);
-    const final = kept(whole);
-    const totals = describe(source).totals;
-    defs.push(splitLayers(whole, `s${i}`).defs);
+  const foots = [];
+  const header = (text, attrs) => `<g ${attrs}>${glyphs.text(text, { font: "mono", size: 10.5, x: E.x + 16, y: E.y + 19.5, fill: SRC.muted })}</g>`;
+  const label = (text) => glyphs.text(text.toUpperCase(), { font: "mono", size: 10.5, x: E.x + 16, y: labelY, fill: PLUM_DEEP, tracking: 0.1 });
 
-    let rows; // [{ line, n, typed }]
-    let drawing; // the layers, in the compiler's order
-    let box = extentOf(final.filter((l) => EXTENT.has(l.id)));
-    let facts = (key, draw) => `<g ${on(S + 3.9)}>${draw(totals[key])}</g>`;
-    let move = null; // [start, end] of the drawing's travel down the sheet
-    const extra = { pane: "", room: null };
+  // ══ The gallery pair: brief → plan → figure, and the still frame ══════════
+  const planFile = `${PAIR}.arch`;
+  const planSrc = readFileSync(at(ARCHLANG_INPUTS.plan), "utf8");
+  const all = planSrc.split("\n");
+  const studio = kept(compiled(planSrc, planFile), "s0");
+  defs.push(studio.defs);
+  const studioFacts = describe(planSrc);
+  const studioBox = boxOf(studio.layers);
+  const studioWins = [[SC.brief[0], SC.figure[1]], [SC.outputs[0], T]];
 
-    if (scene.steps) {
-      // ── a statement is typed; the layer that kind of statement draws arrives ──
-      const groups = scene.steps.map(([pattern, count, layers]) => ({ lines: linesAt(all, pattern, count, scene.file), layers }));
-      const lines = display(groups.flatMap((g) => g.lines));
-      const slots = schedule(lines, S + 0.45, S + 3.75);
-      rows = lines.map((line, n) => ({ line, n, typed: slots[n] }));
-      const arrives = new Map();
-      let n = 0;
-      for (const g of groups) {
-        n += g.lines.length;
-        for (const id of g.layers) arrives.set(id, slots[n - 1].at + slots[n - 1].dur);
+  // ── 1 · the brief, typed into a chat bubble ─────────────────────────────────
+  const BUB = { x: E.x + 14, y: labelY + 10, w: E.w - 28, pad: 12, lh: 16.5 };
+  const BODY = { font: "displayReg", size: 12 };
+  const briefLines = wrap(brief, BUB.w - BUB.pad * 2, BODY);
+  BUB.h = BUB.pad * 2 + briefLines.length * BUB.lh - 4;
+  if (BUB.y + BUB.h > E.y + E.h - 92) throw new Error(`archlang card: the ${PAIR} brief no longer fits the bubble (${briefLines.length} lines)`);
+  defs.push(`<clipPath id="bub"><rect x="${BUB.x}" y="${BUB.y}" width="${BUB.w}" height="${BUB.h}"/></clipPath>`);
+  const r = 12;
+  const bubble = `M${BUB.x + r} ${BUB.y}H${BUB.x + BUB.w - r}a${r} ${r} 0 0 1 ${r} ${r}V${BUB.y + BUB.h - 4}a4 4 0 0 1-4 4H${BUB.x + r}a${r} ${r} 0 0 1-${r}-${r}V${BUB.y + r}a${r} ${r} 0 0 1 ${r}-${r}Z`;
+  const TYPE = [SC.brief[0] + 0.35, SC.brief[1] - 0.45];
+  const perChar = (TYPE[1] - TYPE[0]) / briefLines.reduce((a, l) => a + l.length, 0);
+  let tb = TYPE[0];
+  const briefCovers = briefLines.map((l, n) => {
+    const y = BUB.y + BUB.pad + 9 + n * BUB.lh;
+    const w = (glyphs.measure(l, BODY) + 2).toFixed(1);
+    const name = rule(`0%,${p(tb)}{transform:translateX(0);animation-timing-function:steps(${l.length},end)}${p(tb + l.length * perChar)},100%{transform:translateX(${w}px)}`, `transform:translateX(${w}px);`);
+    tb += l.length * perChar;
+    return `<rect class="${name}" x="${BUB.x + BUB.pad - 1}" y="${y - 12}" width="${BUB.w - BUB.pad}" height="${BUB.lh}" fill="${SHEET_T.panel}"/>`;
+  });
+  panes.push(
+    `<g ${shown([SC.brief, SC.outputs])}>` +
+      glyphs.text(COPY.briefFrom(model).toUpperCase(), { font: "displayMid", size: 9.5, x: E.x + E.w - 14, y: labelY - 2, fill: SRC.muted, tracking: 0.12, anchor: "end" }) +
+      `<path d="${bubble}" fill="${SHEET_T.panel}" stroke="${SHEET_T.hairline}"/>` +
+      briefLines.map((l, n) => glyphs.text(l, { ...BODY, x: BUB.x + BUB.pad, y: BUB.y + BUB.pad + 9 + n * BUB.lh, fill: SHEET_T.ink })).join("") +
+      `<g clip-path="url(#bub)">${briefCovers.join("")}</g>` +
+      "</g>",
+  );
+  panes.push(header(`${PAIR}.brief.txt`, shown([SC.brief])));
+  foots.push(`<g ${shown([[SC.brief[0], SC.brief[1]]])}>${footText(COPY.reading, SHEET_T.muted)}</g>`);
+
+  // ── 2 · the plan streams in; the sheet draws from each prefix that compiles ──
+  const start = all.findIndex((l) => /^plan\b/.test(l));
+  const stop = all.findIndex((l, i) => i > start && /^\s*title\b/.test(l));
+  if (start < 0 || stop < 0) throw new Error(`archlang card: ${planFile} no longer has a plan block with a title`);
+  const planRows = display(all.slice(start, stop).map((raw, i) => ({ no: start + i + 1, raw })).filter((l) => statement(l.raw)));
+  if (!KEY_LINES.every((re) => planRows.some((l) => re.test(l.text)))) throw new Error(`archlang card: a key line is missing from ${planFile}`);
+  // a key line takes reading time; a streamed one a tenth of a second
+  const KEY = 0.9;
+  const FAST = 0.1;
+  const weights = planRows.map((l) => (KEY_LINES.some((re) => re.test(l.text)) ? KEY : FAST));
+  const PLAN = [SC.plan[0] + 0.35, SC.plan[1] - 0.6];
+  const unit = (PLAN[1] - PLAN[0]) / weights.reduce((a, w) => a + w, 0);
+  let tp = PLAN[0];
+  const slots = weights.map((w) => {
+    const slot = w === KEY ? { at: tp, dur: (KEY - 0.2) * unit, key: true } : { at: tp, dur: 0 };
+    tp += w * unit;
+    return slot;
+  });
+  const done = (n) => slots[n].at + slots[n].dur;
+  const planDone = done(planRows.length - 1);
+
+  // the drawing after each row: the file up to that line, its plan block closed
+  const counts = planRows.map((l) => {
+    const res = compile(`${all.slice(0, l.no).join("\n")}\n}\n`);
+    if (res.errors.length) return null; // a prefix that does not compile paints nothing new
+    const tally = new Map();
+    for (const layer of kept(res.svg, "s0").layers) for (const el of layer.elements) tally.set(`${layer.id}|${el}`, (tally.get(`${layer.id}|${el}`) || 0) + 1);
+    return tally;
+  });
+  const lastClean = counts.findLastIndex(Boolean);
+  // each copy of an element arrives with the first row from which every later clean prefix has it
+  const drawing = studio.layers.map((layer) => {
+    const seen = new Map();
+    const arrivals = layer.elements.map((el) => {
+      const key = `${layer.id}|${el}`;
+      const copy = seen.get(key) || 0;
+      seen.set(key, copy + 1);
+      let from = -1;
+      for (let n = lastClean; n >= 0; n--) {
+        if (!counts[n]) continue;
+        if ((counts[n].get(key) || 0) > copy) from = n;
+        else break;
       }
-      const unclaimed = final.filter((l) => !arrives.has(l.id)).map((l) => l.id);
-      if (unclaimed.length) throw new Error(`archlang card: ${what} draws ${unclaimed.join(", ")} and no typed line accounts for it`);
-      drawing = final.map((l) => outline(group(on(arrives.get(l.id), 0.35), l.elements))).join("");
-    } else if (scene.pieces) {
-      // ── each furniture line drops the symbol it places ──────────────────────
-      const blocks = scene.pieces.map((block) => display(block.map((pattern) => linesAt(all, pattern, 1, scene.file)[0])));
-      const slots = [...schedule(blocks[0], S + 0.45, S + 2.05), ...schedule(blocks[1], S + 3.0, S + 4.6)];
-      rows = blocks.flat().map((line, n) => ({ line, n: n + (n >= blocks[0].length ? 1 : 0), typed: slots[n] }));
-      const furn = final.find((l) => l.id === "A-FURN");
-      const symbols = rows.map(({ line, typed }) => {
-        const part = kept(compiled(without(all, line.no), `${what} without line ${line.no}`));
-        // only the symbol is taken: a room label may also shift to clear a piece, and stays where the full plan puts it
-        const els = added(furn.elements, part.find((l) => l.id === "A-FURN").elements);
-        if (!els.length) throw new Error(`archlang card: line ${line.no} of ${what} no longer places a symbol`);
-        return { els, at: typed.at + typed.dur };
-      });
-      const placed = new Set(symbols.flatMap((s) => s.els));
-      drawing = final
-        .map((l) => outline(l.id === "A-FURN" ? group("", l.elements.filter((el) => !placed.has(el))) + symbols.map((s) => group(on(s.at, 0.25), s.els)).join("") : group("", l.elements)))
-        .join("");
-      move = [S + 2.1, S + 3.0];
-      facts = (key, draw) => draw(totals[key]);
-    } else {
-      // ── frames: every state of the drawing is its own compile ───────────────
-      const lines = display(scene.excerpt.flatMap(([pattern, count]) => linesAt(all, pattern, count, scene.file)), Boolean(scene.scrub));
-      let frames; // [{ layers, from, to, totals }]
-      let swap = null;
-      rows = lines.map((line, n) => ({ line, n: n + (n >= scene.excerpt[0][1] ? 1 : 0) }));
-
-      if (scene.scrub) {
-        const { param, from, to, step } = scene.scrub;
-        const LET = new RegExp(`^(\\s*let ${param}\\s*= )${from}\\b`, "m");
-        if (!LET.test(source)) throw new Error(`archlang card: ${what} no longer declares "let ${param} = ${from}"`);
-        const START = S + 1.7;
-        const STEP = 0.32;
-        frames = [];
-        for (let v = from; v <= to; v += step) {
-          const src = source.replace(LET, `$1${v}`);
-          const n = frames.length;
-          frames.push({ value: v, layers: kept(compiled(src, `${what} at ${param} = ${v}`)), totals: describe(src).totals, from: n ? START + n * STEP : S, to: v === to ? S + D : START + (n + 1) * STEP });
-        }
-        // the number in the editor is the number that was compiled
-        const target = rows.find((r) => new RegExp(`^let ${param} = ${from}\\b`).test(r.line.text));
-        const col = target.line.text.indexOf(String(from));
-        const w = String(from).length * ADV;
-        swap = { no: target.line.no, col, svg: (x, y) => `<rect ${on(S + 1.0, 0.2)} x="${(x - 2).toFixed(1)}" y="${y - 12}" width="${(w + 4).toFixed(1)}" height="16" fill="${PLUM}" fill-opacity=".26"/>` + frames.map((f) => `<g ${cut(f.from, f.to)}>${mono(String(f.value), x, y, SYN.number)}</g>`).join("") };
-        facts = (key, draw) => (frames.every((f) => f.totals[key] === totals[key]) ? draw(totals[key]) : frames.map((f) => `<g ${cut(f.from, f.to)}>${draw(f.totals[key])}</g>`).join(""));
-      } else {
-        // the plan as first written, one line short, and what lint() says about it
-        const held = linesAt(all, scene.fix, 1, scene.file)[0];
-        const draft = without(all, held.no);
-        const findings = lint(draft);
-        if (lint(source).length !== 0 || findings.length !== 1) throw new Error(`archlang card: ${what} should lint clean, and raise one finding without line ${held.no}`);
-        const [finding] = findings;
-        const LINT_AT = S + 0.9;
-        const TYPE_AT = S + 2.7;
-        const FIX_AT = S + 3.35;
-        frames = [
-          { layers: kept(compiled(draft, `${what} without line ${held.no}`)), totals: describe(draft).totals, from: S, to: FIX_AT },
-          { layers: final, totals, from: FIX_AT, to: S + D },
-        ];
-        facts = (key, draw) => (frames[0].totals[key] === totals[key] ? draw(totals[key]) : frames.map((f) => `<g ${cut(f.from, f.to)}>${draw(f.totals[key])}</g>`).join(""));
-        const typedRow = { line: display([...lines, held]).pop(), n: rows[rows.length - 1].n + 1, typed: { at: TYPE_AT, dur: FIX_AT - TYPE_AT - 0.1 } };
-        rows.push(typedRow);
-
-        // the statement the finding points at, underlined in the editor and outlined on the sheet
-        const flagged = draft.slice(0, finding.span.start).split("\n").length;
-        const at = rows.find((r) => r.line.no === flagged);
-        const room = describe(draft).rooms.find((r) => r.id === (draft.slice(finding.span.start, finding.span.end).match(/\bid=(\w+)/) || [])[1]);
-        if (!at || !room) throw new Error(`archlang card: the ${finding.code} finding no longer points at a room the excerpt shows`);
-        const uy = codeTop + at.n * LH + 4.5;
-        const lead = at.line.text.match(/^\s*/)[0].length;
-        extra.pane += `<path ${span(LINT_AT, FIX_AT, 0.25, 0.2)} d="M${(codeX + lead * ADV).toFixed(1)} ${uy}H${(codeX + Math.min(at.line.text.length, FIT) * ADV).toFixed(1)}" stroke="${WARN}" stroke-width="1.5" stroke-dasharray="3 2"/>`;
-        extra.room = (k) => `<rect ${span(LINT_AT, FIX_AT, 0.25, 0.2)} x="${room.bbox.x}" y="${room.bbox.y}" width="${room.bbox.w}" height="${room.bbox.h}" fill="${WARN}" fill-opacity=".1" stroke="${WARN}" stroke-width="${(1.6 / k).toFixed(1)}" stroke-dasharray="${(5 / k).toFixed(0)} ${(3 / k).toFixed(0)}"/>`;
-
-        // the playground's lint row (lint-panel.ts): code, message, first hint; then its clean verdict
-        const R = { x: E.x + 14, y: codeTop + (typedRow.n + 1) * LH + 2, w: E.w - 28, h: 52 };
-        const hint = finding.hints[0];
-        const CLEAN = "No soundness warnings — every room is reachable, bedrooms have windows, the building has an entrance.";
-        const wrapped = [];
-        for (const word of CLEAN.split(" ")) {
-          const next = wrapped.length && `${wrapped[wrapped.length - 1]} ${word}`;
-          if (next && glyphs.measure(next, { font: "displayReg", size: 11 }) <= R.w - 30) wrapped[wrapped.length - 1] = next;
-          else wrapped.push(word);
-        }
-        if (glyphs.measure(finding.message, { font: "displayReg", size: 11 }) > R.w - 26 || glyphs.measure(hint, { font: "displayReg", size: 10.5 }) > R.w - 26) throw new Error(`archlang card: the ${finding.code} row no longer fits the pane`);
-        extra.pane +=
-          `<g ${span(LINT_AT, FIX_AT + 0.15, 0.25, 0.2)}>` +
-          // 6% amber on the sheet's panel colour, as the playground mixes it
-          `<rect x="${R.x}" y="${R.y}" width="${R.w}" height="${R.h + 16}" rx="3" fill="#f3f1e6" stroke="${SHEET_T.hairline}"/>` +
-          `<rect x="${R.x}" y="${R.y}" width="3" height="${R.h + 16}" fill="${WARN}"/>` +
-          glyphs.text(finding.code, { font: "mono", size: 10, x: R.x + 14, y: R.y + 19, fill: WARN }) +
-          glyphs.text(finding.message, { font: "displayReg", size: 11, x: R.x + 14, y: R.y + 37, fill: SHEET_T.ink }) +
-          glyphs.text(hint, { font: "displayReg", size: 10.5, x: R.x + 14, y: R.y + 55, fill: SHEET_T.muted }) +
-          "</g>" +
-          `<g ${on(FIX_AT + 0.35)}>` +
-          glyphs.text("✓", { font: "symbols", size: 11, x: R.x + 2, y: R.y + 19, fill: OK }) +
-          wrapped.map((l, n) => glyphs.text(l, { font: "displayReg", size: 11, x: R.x + 18, y: R.y + 19 + n * 16, fill: OK })).join("") +
-          "</g>";
-      }
-
-      // an element every frame has is stored once; the rest go in one group per frame
-      const first = frames[0].layers;
-      if (frames.some((f) => f.layers.map((l) => l.id).join() !== first.map((l) => l.id).join())) throw new Error(`archlang card: a frame of ${what} changed the layer list`);
-      drawing = first
-        .map((_, li) => {
-          const sets = frames.map((f) => new Set(f.layers[li].elements));
-          const shared = first[li].elements.filter((el) => sets.every((s) => s.has(el)));
-          const each = frames.map((f, n) => {
-            const own = f.layers[li].elements.filter((el) => !shared.includes(el));
-            return own.length ? outline(group(`${cut(f.from, f.to)}${n === frames.length - 1 ? "" : ' opacity="0"'}`, own)) : "";
-          });
-          return outline(group("", shared)) + each.join("");
-        })
-        .join("");
-      // the sheet is sized for the largest frame, so nothing re-fits while the number moves
-      const boxes = frames.map((f) => extentOf(f.layers.filter((l) => EXTENT.has(l.id))));
-      const x0 = Math.min(...boxes.map((b) => b.x)), y0 = Math.min(...boxes.map((b) => b.y));
-      box = { x: x0, y: y0, w: Math.max(...boxes.map((b) => b.x + b.w)) - x0, h: Math.max(...boxes.map((b) => b.y + b.h)) - y0 };
-      if (swap) rows = rows.map((r) => (r.line.no === swap.no ? { ...r, swap } : r));
+      if (from < 0) throw new Error(`archlang card: ${planFile} draws ${layer.id} and no streamed line accounts for it`);
+      return done(from);
+    });
+    // runs of elements that arrive together, in the compiler's order
+    let out = "";
+    for (let i = 0, j; i < layer.elements.length; i = j) {
+      for (j = i + 1; j < layer.elements.length && arrivals[j] === arrivals[i]; j++);
+      out += outline(group(on(arrivals[i], 0.25), layer.elements.slice(i, j)));
     }
-
-    // ── the sheet ────────────────────────────────────────────────────────────
-    const at = place(scene.view, box);
-    let moving = "";
-    if (at.dy) {
-      const name = rule(`0%,${p(move[0])}{transform:translateY(0);animation-timing-function:cubic-bezier(.45,0,.3,1)}${p(move[1])},100%{transform:translateY(${at.dy.toFixed(1)}px)}`);
-      moving = ` class="${name}"`;
-    }
-    const scn = `class="${rule(`0%,${p(S)}{opacity:0}${p(S + IN)},${p(S + OUT)}{opacity:1}${p(S + D)},100%{opacity:0}`)}"${i === 0 ? "" : ' opacity="0"'}`; // the still frame is scene one
-    sheets.push(
-      `<g ${scn}>` +
-        `<g clip-path="url(#sheet)"><g${moving}><g transform="${at.transform}">${drawing}${extra.room ? extra.room(at.k) : ""}</g></g></g>` +
-        factsStrip(facts) +
-        "</g>",
-    );
-
-    // ── its source ───────────────────────────────────────────────────────────
-    const label = scene.no ? `${scene.no} · ${scene.tag.toUpperCase()}` : scene.tag.toUpperCase();
-    const gaps = rows.filter((r, n) => n && r.n - rows[n - 1].n > 1).map((r) => `<g ${r.typed ? on(r.typed.at - 0.2, 0.15) : ""}>` + glyphs.text("…", { font: "mono", size: SIZE, x: codeX - 12, y: codeTop + (r.n - 1) * LH, fill: "#9aa1ad", anchor: "end" }) + "</g>");
-    panes.push(
-      `<g ${scn}>` +
-        glyphs.text(`${scene.file}.arch`, { font: "mono", size: 10.5, x: E.x + 16, y: E.y + 19.5, fill: SRC.muted }) +
-        glyphs.text(label, { font: "mono", size: 10.5, x: E.x + 16, y: E.y + E.head + 24, fill: PLUM_DEEP, tracking: 0.1 }) +
-        `<g clip-path="url(#ed)">${rows.map((r) => row(r.line, r.n, r.typed, r.swap)).join("")}${gaps.join("")}` +
-        `<rect x="${E.x + E.w - 34}" y="${codeTop - 14}" width="33" height="${10 * LH}" fill="url(#fade)"/>${caret(rows)}</g>` +
-        extra.pane +
-        // which sheet of the set is up
-        `<rect x="${E.x + E.w - 16 - (SCENES.length - i) * 13}" y="${E.y + 14}" width="10" height="3" fill="${PLUM}"/>` +
-        "</g>",
-    );
-    summary.push(`${scene.no || scene.tag} ${scene.file}`);
+    return out;
   });
 
-  const ticks = SCENES.map((_, i) => `<rect x="${E.x + E.w - 16 - (SCENES.length - i) * 13}" y="${E.y + 14}" width="10" height="3" fill="${SRC.rule}" opacity=".35"/>`).join("");
+  // the editor: rows stream in and the pane scrolls to keep the newest in view
+  const planTop = labelY;
+  const VIS = Math.floor((E.y + E.h - 8 - planTop) / LH) + 1;
+  const stops = [];
+  planRows.forEach((_, n) => {
+    if (n >= VIS) stops.push(`${p(slots[n].at)}{transform:translateY(${-(n - VIS + 1) * LH}px);animation-timing-function:step-end}`);
+  });
+  const scroll = rule(`0%{transform:translateY(0);animation-timing-function:step-end}${stops.join("")}`);
+  // a cover the colour of the pane sits below the newest row and steps down as each arrives
+  const veil = rule(`0%{transform:translateY(0);animation-timing-function:step-end}${planRows.map((_, n) => `${p(slots[n].at)}{transform:translateY(${(n + 1) * LH}px);animation-timing-function:step-end}`).join("")}100%{transform:translateY(${planRows.length * LH}px)}`, `transform:translateY(${planRows.length * LH}px);`);
+  panes.push(
+    `<g ${shown([SC.plan])}>` +
+      `<g clip-path="url(#edp)"><g class="${scroll}">` +
+      planRows.map((l, n) => row(l, planTop + n * LH, slots[n].key ? { typed: slots[n] } : {})).join("") +
+      `<rect class="${veil}" x="${E.x + 1}" y="${planTop - 14}" width="${E.w - 2}" height="${planRows.length * LH + 20}" fill="${SRC.surface}"/>` +
+      `</g><rect x="${E.x + E.w - 34}" y="${E.y + E.head + 1}" width="33" height="${E.h - E.head - 2}" fill="url(#fade)"/></g>` +
+      "</g>",
+  );
+  panes.push(header(COPY.writtenBy(planFile, model), shown([[SC.plan[0], SC.figure[1]], SC.outputs])));
+  foots.push(`<g ${shown([[SC.plan[0], planDone + 0.3]])}>${footText(COPY.compiling, SHEET_T.muted)}</g>`);
+  foots.push(`<g ${shown([[planDone + 0.3, SC.figure[1]], SC.outputs])}>${footText(factsLine(planSrc, studioFacts.totals))}</g>`);
+
+  // ── 3 · the figure: describe()'s rooms, centreline and net ──────────────────
+  const rooms = studioFacts.rooms;
+  const t3 = SC.figure[0];
+  const nameW = Math.max(...rooms.map((rm) => rm.label.length)) + 2;
+  const fig = [["ROOM".padEnd(nameW) + "CENTRELINE".padStart(12) + "NET".padStart(12), SRC.muted, t3 + 0.1]];
+  rooms.forEach((rm, n) => fig.push([rm.label.padEnd(nameW) + `${rm.area_m2} m²`.padStart(12) + `${rm.net_area_m2} m²`.padStart(12), SRC.fg, t3 + 0.35 + n * 0.3]));
+  const tot = studioFacts.totals;
+  fig.push([`${tot.rooms} rooms`.padEnd(nameW) + `${tot.floor_area_m2} m²`.padStart(12) + `${tot.net_floor_area_m2} m²`.padStart(12), PLUM_DEEP, t3 + 0.45 + rooms.length * 0.3]);
+  if (fig.some(([text]) => text.length > FIT + 6)) throw new Error("archlang card: the room table no longer fits the pane");
+  const figX = E.x + 18;
+  const figY = (n) => codeTop + 6 + n * LH + (n === fig.length - 1 ? 8 : 0);
+  panes.push(
+    `<g ${shown([SC.figure])}>` +
+      label(COPY.figure) +
+      fig.map(([text, fill, t], n) => `<g ${on(t, 0.2)}>${mono(text, figX, figY(n), fill)}</g>`).join("") +
+      `<path ${on(fig[fig.length - 1][2], 0.2)} d="M${figX} ${figY(fig.length - 1) - 16}h${(nameW + 24) * ADV}" stroke="${SRC.rule}" stroke-opacity=".5"/>` +
+      "</g>",
+  );
+
+  sheets.push(
+    sheetGroup(shown(studioWins), studioBox, (k) =>
+      drawing.join("") +
+      // each room outlined as its row of the table arrives
+      rooms
+        .map((rm, n) => `<rect ${span(t3 + 0.35 + n * 0.3, SC.figure[1] - 0.35, 0.2, 0.25)} x="${rm.bbox.x}" y="${rm.bbox.y}" width="${rm.bbox.w}" height="${rm.bbox.h}" fill="${PLUM}" fill-opacity=".1" stroke="${PLUM}" stroke-width="${Math.round(1.6 / k)}"/>`)
+        .join(""),
+    ),
+  );
+
+  // ── 6 · outputs (the still frame): the brief above, the formats, a caption ──
+  const OUT = { y: BUB.y + BUB.h + 34 };
+  panes.push(
+    `<g ${shown([SC.outputs])}>` +
+      glyphs.text("OUTPUT", { font: "mono", size: 9, x: E.x + 16, y: OUT.y, fill: SRC.muted, tracking: 0.14 }) +
+      glyphs.text(COPY.output, { font: "displayMid", size: 17, x: E.x + 16, y: OUT.y + 24, fill: SHEET_T.ink }) +
+      wrap(COPY.caption, E.w - 32, { font: "displayReg", size: 11.5 })
+        .map((l, n) => glyphs.text(l, { font: "displayReg", size: 11.5, x: E.x + 16, y: OUT.y + 50 + n * 16, fill: SRC.muted }))
+        .join("") +
+      "</g>",
+  );
+
+  // ══ 4 · change one number, 5 · it checks itself: frames of real compiles ══
+  for (const [i, scene] of [SCRUB, CHECK].entries()) {
+    const [S, END] = scene === SCRUB ? SC.change : SC.check;
+    const what = `${scene.file}.arch`;
+    const lines = readFileSync(`${examples}/${what}`, "utf8").split("\n");
+    const source = lines.join("\n");
+    const prefix = `s${i + 1}`;
+    const final = kept(compiled(source, what), prefix, scene.dims !== false);
+    defs.push(final.defs);
+    const totals = describe(source).totals;
+    const excerpt = display(scene.excerpt.flatMap(([pattern, count]) => linesAt(lines, pattern, count, what)), scene === SCRUB);
+    let rows = excerpt.map((line, n) => ({ line, n: n + (n >= scene.excerpt[0][1] ? 1 : 0) }));
+    let frames; // [{ layers, from, to, facts }]
+    let swap = null;
+    let pane = "";
+    let room = null;
+
+    if (scene === SCRUB) {
+      const { param, from, to, step } = scene;
+      const LET = new RegExp(`^(\\s*let ${param}\\s*= )${from}\\b`, "m");
+      if (!LET.test(source)) throw new Error(`archlang card: ${what} no longer declares "let ${param} = ${from}"`);
+      const START = S + 1.0;
+      const STEP = 0.5;
+      frames = [];
+      for (let v = from; v <= to; v += step) {
+        const src = source.replace(LET, `$1${v}`);
+        const n = frames.length;
+        frames.push({ value: v, layers: kept(compiled(src, `${what} at ${param} = ${v}`), prefix, scene.dims !== false).layers, facts: factsLine(src, describe(src).totals), from: n ? START + n * STEP : S, to: v === to ? END : START + (n + 1) * STEP });
+      }
+      // the number in the editor is the number that was compiled
+      const target = rows.find((rw) => new RegExp(`^let ${param} = ${from}\\b`).test(rw.line.text));
+      const col = target.line.text.indexOf(String(from));
+      const w = String(from).length * ADV;
+      swap = { no: target.line.no, col, svg: (x, y) => `<rect ${on(S + 0.6, 0.2)} x="${(x - 2).toFixed(1)}" y="${y - 12}" width="${(w + 4).toFixed(1)}" height="16" fill="${PLUM}" fill-opacity=".26"/>` + frames.map((f) => `<g ${cut(f.from, f.to)}>${mono(String(f.value), x, y, SYN.number)}</g>`).join("") };
+      rows = rows.map((rw) => (rw.line.no === swap.no ? { ...rw, swap } : rw));
+    } else {
+      // the plan as first written, one line short, and what lint() says about it
+      const held = linesAt(lines, scene.fix, 1, what)[0];
+      const draft = without(lines, held.no);
+      const findings = lint(draft);
+      if (lint(source).length !== 0 || findings.length !== 1) throw new Error(`archlang card: ${what} should lint clean, and raise one finding without line ${held.no}`);
+      const [finding] = findings;
+      const LINT_AT = S + 0.6;
+      const TYPE_AT = S + 1.9;
+      const FIX_AT = S + 2.55;
+      frames = [
+        { layers: kept(compiled(draft, `${what} without line ${held.no}`), prefix, scene.dims !== false).layers, facts: factsLine(draft, describe(draft).totals), from: S, to: FIX_AT },
+        { layers: final.layers, facts: factsLine(source, totals), from: FIX_AT, to: END },
+      ];
+      const typedRow = { line: display([...excerpt, held]).pop(), n: rows[rows.length - 1].n + 1, typed: { at: TYPE_AT, dur: FIX_AT - TYPE_AT - 0.1 } };
+      rows.push(typedRow);
+
+      // the statement the finding points at, underlined in the editor and outlined on the sheet
+      const flagged = draft.slice(0, finding.span.start).split("\n").length;
+      const hit = rows.find((rw) => rw.line.no === flagged);
+      const rm = describe(draft).rooms.find((x) => x.id === (draft.slice(finding.span.start, finding.span.end).match(/\bid=(\w+)/) || [])[1]);
+      if (!hit || !rm) throw new Error(`archlang card: the ${finding.code} finding no longer points at a room the excerpt shows`);
+      const uy = codeTop + hit.n * LH + 4.5;
+      const lead = hit.line.text.match(/^\s*/)[0].length;
+      pane += `<path ${span(LINT_AT, FIX_AT, 0.25, 0.2)} d="M${(codeX + lead * ADV).toFixed(1)} ${uy}H${(codeX + Math.min(hit.line.text.length, FIT) * ADV).toFixed(1)}" stroke="${WARN}" stroke-width="1.5" stroke-dasharray="3 2"/>`;
+      room = (k) => `<rect ${span(LINT_AT, FIX_AT, 0.25, 0.2)} x="${rm.bbox.x}" y="${rm.bbox.y}" width="${rm.bbox.w}" height="${rm.bbox.h}" fill="${WARN}" fill-opacity=".1" stroke="${WARN}" stroke-width="${(1.6 / k).toFixed(0)}" stroke-dasharray="${(5 / k).toFixed(0)} ${(3 / k).toFixed(0)}"/>`;
+
+      // the playground's lint row (lint-panel.ts): code, message, first hint; then its clean verdict
+      const R = { x: E.x + 14, y: codeTop + (typedRow.n + 1) * LH + 2, w: E.w - 28, h: 52 };
+      const hint = finding.hints[0];
+      const wrapped = wrap(COPY.clean, R.w - 30, { font: "displayReg", size: 11 });
+      if (glyphs.measure(finding.message, { font: "displayReg", size: 11 }) > R.w - 26 || glyphs.measure(hint, { font: "displayReg", size: 10.5 }) > R.w - 26) throw new Error(`archlang card: the ${finding.code} row no longer fits the pane`);
+      pane +=
+        `<g ${span(LINT_AT, FIX_AT + 0.15, 0.25, 0.2)}>` +
+        // 6% amber on the sheet's panel colour, as the playground mixes it
+        `<rect x="${R.x}" y="${R.y}" width="${R.w}" height="${R.h + 16}" rx="3" fill="#f3f1e6" stroke="${SHEET_T.hairline}"/>` +
+        `<rect x="${R.x}" y="${R.y}" width="3" height="${R.h + 16}" fill="${WARN}"/>` +
+        glyphs.text(finding.code, { font: "mono", size: 10, x: R.x + 14, y: R.y + 19, fill: WARN }) +
+        glyphs.text(finding.message, { font: "displayReg", size: 11, x: R.x + 14, y: R.y + 37, fill: SHEET_T.ink }) +
+        glyphs.text(hint, { font: "displayReg", size: 10.5, x: R.x + 14, y: R.y + 55, fill: SHEET_T.muted }) +
+        "</g>" +
+        `<g ${on(FIX_AT + 0.35)}>` +
+        glyphs.text("✓", { font: "symbols", size: 11, x: R.x + 2, y: R.y + 19, fill: OK }) +
+        wrapped.map((l, n) => glyphs.text(l, { font: "displayReg", size: 11, x: R.x + 18, y: R.y + 19 + n * 16, fill: OK })).join("") +
+        "</g>";
+    }
+
+    // an element every frame has is stored once; the rest go in one group per frame
+    const first = frames[0].layers;
+    if (frames.some((f) => f.layers.map((l) => l.id).join() !== first.map((l) => l.id).join())) throw new Error(`archlang card: a frame of ${what} changed the layer list`);
+    const body = first
+      .map((_, li) => {
+        const sets = frames.map((f) => new Set(f.layers[li].elements));
+        const shared = first[li].elements.filter((el) => sets.every((s) => s.has(el)));
+        const each = frames.map((f) => {
+          const own = f.layers[li].elements.filter((el) => !shared.includes(el));
+          return own.length ? outline(group(cut(f.from, f.to), own)) : "";
+        });
+        return outline(group("", shared)) + each.join("");
+      })
+      .join("");
+    // the sheet is sized for the largest frame, so nothing re-fits while the number moves
+    const boxes = frames.map((f) => boxOf(f.layers));
+    const x0 = Math.min(...boxes.map((b) => b.x)), y0 = Math.min(...boxes.map((b) => b.y));
+    const box = { x: x0, y: y0, w: Math.max(...boxes.map((b) => b.x + b.w)) - x0, h: Math.max(...boxes.map((b) => b.y + b.h)) - y0 };
+    sheets.push(sheetGroup(shown([[S, END]]), box, (k) => body + (room ? room(k) : "")));
+    const factsSvg = frames.every((f) => f.facts === frames[0].facts) ? footText(frames[0].facts) : frames.map((f) => `<g ${cut(f.from, f.to)}>${footText(f.facts)}</g>`).join("");
+    foots.push(`<g ${shown([[S, END]])}>${factsSvg}</g>`);
+
+    const gaps = rows.filter((rw, n) => n && rw.n - rows[n - 1].n > 1).map((rw) => glyphs.text("…", { font: "mono", size: SIZE, x: codeX - 12, y: codeTop + (rw.n - 1) * LH, fill: "#9aa1ad", anchor: "end" }));
+    panes.push(header(what, shown([[S, END]])));
+    panes.push(
+      `<g ${shown([[S, END]])}>` +
+        label(scene === SCRUB ? COPY.change : COPY.check) +
+        `<g clip-path="url(#ed)">${rows.map((rw) => row(rw.line, codeTop + rw.n * LH, { typed: rw.typed, swap: rw.swap })).join("")}${gaps.join("")}` +
+        `<rect x="${E.x + E.w - 34}" y="${codeTop - 14}" width="33" height="${10 * LH}" fill="url(#fade)"/></g>` +
+        pane +
+        "</g>",
+    );
+  }
+
+  // which scene is up: a row of ticks in the pane's header
+  const tickX = (i) => E.x + E.w - 16 - (ORDER.length - i) * 13;
+  const ticks =
+    ORDER.map((_, i) => `<rect x="${tickX(i)}" y="${E.y + 14}" width="10" height="3" fill="${SRC.rule}" opacity=".35"/>`).join("") +
+    ORDER.map((s, i) => `<rect ${shown([SC[s]], 0.15)} x="${tickX(i)}" y="${E.y + 14}" width="10" height="3" fill="${PLUM}"/>`).join("");
 
   // the fine drafting grid of the sheet world
   let grid = "";
@@ -552,21 +663,24 @@ export function buildArchlangCard({ glyphs, root }) {
   const word = inner.slice(markEnd).replace(/#111111/g, SHEET_T.ink);
   const WM = 0.25; // 1420×198 → 355×49.5
   const HEAD = { font: "displayMid", size: 38 };
-  if (40 + glyphs.measure("Floor plans as code.", HEAD) > E.x - 24) throw new Error("archlang card: the headline no longer fits the identity panel");
+  if (40 + glyphs.measure(COPY.identity, HEAD) > E.x - 24) throw new Error("archlang card: the headline no longer fits the identity panel");
   const identity = [
     glyphs.text("OPEN-SOURCE LANGUAGE", { font: "mono", size: 11.5, x: 40, y: 56, fill: SRC.muted, tracking: 0.16 }),
     `<g transform="translate(38 86) scale(${WM})">${mark}${word}</g>`,
-    glyphs.text("Floor plans as code.", { ...HEAD, x: 40, y: 206, fill: SHEET_T.ink }),
+    glyphs.text(COPY.identity, { ...HEAD, x: 40, y: 206, fill: SHEET_T.ink }),
   ];
   // a drawing's title block, the way the site signs its pages
-  const cells = [["LICENSE", "MIT", 84], ["OUTPUT", "SVG · DXF · PDF", 156], ["DOCS", "archlang.uk", 124]];
-  let cx = 40;
+  const CELL = { font: "displayMid", size: 13.5 };
+  const cells = [["LICENSE", "MIT"], ["DOCS", "archlang.uk"], ["PLAYGROUND", "playground.archlang.uk"]].map(([l, v]) => [l, v, Math.ceil(Math.max(glyphs.measure(v, CELL), glyphs.measure(l, { font: "mono", size: 9, tracking: 0.14 }))) + 26]);
   const TB = { y: 284, h: 48 };
-  identity.push(`<rect x="40" y="${TB.y}" width="${cells.reduce((a, c) => a + c[2], 0)}" height="${TB.h}" fill="none" stroke="${SRC.rule}" stroke-opacity=".55"/>`);
-  cells.forEach(([label, value, w], n) => {
+  const tbW = cells.reduce((a, c) => a + c[2], 0);
+  if (40 + tbW > E.x - 12) throw new Error("archlang card: the title block no longer fits the identity panel");
+  let cx = 40;
+  identity.push(`<rect x="40" y="${TB.y}" width="${tbW}" height="${TB.h}" fill="none" stroke="${SRC.rule}" stroke-opacity=".55"/>`);
+  cells.forEach(([lab, value, w], n) => {
     if (n) identity.push(`<path d="M${cx} ${TB.y}v${TB.h}" stroke="${SRC.rule}" stroke-opacity=".55"/>`);
-    identity.push(glyphs.text(label, { font: "mono", size: 9, x: cx + 12, y: TB.y + 18, fill: SRC.muted, tracking: 0.14 }));
-    identity.push(glyphs.text(value, { font: "displayMid", size: 13.5, x: cx + 12, y: TB.y + 37, fill: label === "DOCS" ? PLUM_DEEP : SHEET_T.ink }));
+    identity.push(glyphs.text(lab, { font: "mono", size: 9, x: cx + 12, y: TB.y + 18, fill: SRC.muted, tracking: 0.14 }));
+    identity.push(glyphs.text(value, { ...CELL, x: cx + 12, y: TB.y + 37, fill: lab === "LICENSE" ? SHEET_T.ink : PLUM_DEEP }));
     cx += w;
   });
 
@@ -581,19 +695,20 @@ export function buildArchlangCard({ glyphs, root }) {
     `<rect x="${SHEET.x}" y="0" width="${SHEET.w}" height="${footY}" fill="${SHEET_T.paper}"/><path d="${grid}" stroke="${SHEET_T.grid}" fill="none"/>` +
     sheets.join("") +
     `<path d="M${SHEET.x} ${footY + 0.5}h${SHEET.w}" stroke="${SHEET_T.hairline}"/>` +
+    foots.join("") +
     // the compile seam: a solid plum rule, never a glow
     `<rect x="${SEAM - 1}" width="2" height="360" fill="${PLUM}"/>`;
 
-  const css = `[class]{animation:${T}s linear infinite}` + [...rules.values()].map((r) => `@keyframes ${r.name}{${r.frames}}.${r.name}{${r.base}animation-name:${r.name}}`).join("");
+  const css = `[class]{animation:${T}s linear infinite}` + [...rules.values()].map((x) => `@keyframes ${x.name}{${x.frames}}.${x.name}{${x.base}animation-name:${x.name}}`).join("");
 
   return {
     svg: card({
-      title: "ArchLang is an open-source language that compiles plain-text source into floor plans. The card shows source being typed and the drawing compiling beside it: five example plans, one constant changed, and a lint finding raised and cleared.",
+      title: `ArchLang is an open-source language that compiles plain-text source into floor plans. The card shows a brief given to ${model} and the ArchLang it wrote compiling into a dimensioned plan: ${tot.rooms} rooms, ${tot.net_floor_area_m2} m² net. Then one number is changed and the plan redraws, and a lint finding is raised and cleared. Output: SVG, PDF, DXF, PNG.`,
       css,
-      defs: `${glyphs.defs()}${[...alias.values()].map((a) => `<use id="${a.id}" href="#${a.glyph}" transform="scale(${COL} ${-COL})"/>`).join("")}${defs.join("")}`,
+      defs: `${relativeGlyphs(glyphs.defs())}${[...alias.values()].map((a) => `<use id="${a.id}" href="#${a.glyph}" transform="scale(${COL} ${-COL})"/>`).join("")}${defs.join("")}`,
       body,
       radius: 10,
     }),
-    facts: { scenes: summary.join(", "), loop: `${T.toFixed(1)}s` },
+    facts: { pair: `${PAIR} (${model})`, rows: planRows.length, scenes: ORDER.map((s) => `${s} ${SC[s][0]}–${SC[s][1]}s`).join(", "), loop: `${T}s` },
   };
 }

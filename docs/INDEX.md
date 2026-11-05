@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 123 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 356 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 362 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -28,7 +28,7 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1199 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
-| `data/profile/23-projects-oss-more.yaml` | 4064 | projects (97) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
+| `data/profile/23-projects-oss-more.yaml` | 4062 | projects (97) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
 | `data/profile/30-recognition.yaml` | 1872 | awards (7), certificates (53), publications (77) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |

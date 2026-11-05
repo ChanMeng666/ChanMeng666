@@ -1,6 +1,6 @@
 # ATS resume variants (tier-matched)
 
-Five two-page ATS resumes cut from `cv/chan-meng-cv-ats.typ` for the job-search tiers in the private
+Six two-page ATS resumes cut from `cv/chan-meng-cv-ats.typ` for the job-search tiers in the private
 `nz-job-immigration-strategy` repo (tk-032, dec-034). Same hard rules as the base ATS resume
 (`cv/README.md` "ATS variant — hard rules"); same helpers (`cv/ats-components.typ`).
 
@@ -15,7 +15,7 @@ word, so one file serves both intermediate and senior postings.
 | `applied-ai` | Applied AI & Full-stack Engineer: LLM applications, agents, MCP | NZ and remote applied AI / agent roles with real software delivery |
 | `frontend-platform` | Frontend & Full-stack Engineer, accessibility (WCAG 2.2) | Frontend and design-system roles |
 | `platform` | Platform Engineer: Go, Kubernetes (GKE), Google Cloud | Platform / DevOps / SRE roles with engineering duties |
-| `solutions-fde` | Forward-Deployed & Founding Product Engineer | Solutions / FDE roles; overseas early-stage founding roles that are customer-facing |
+| `product-owner-web` | Web Product & Full-stack Engineer: accessibility (WCAG 2.2 AA), SEO, AI | Web / digital product owner roles; Eatropolis as lead project (cut from product-engineer, 2026-11-05) |
 
 ## Rules
 

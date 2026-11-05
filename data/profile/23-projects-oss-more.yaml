@@ -11,6 +11,7 @@
 
 projects:
   # AI Applications & Agents
+  # Live deployment (vitex.org.nz) retired (Chan, confirmed 2026-11-06); source repo is private and archived: no live url, no repo link.
   - id: vitex
     provenance: personal
     tier: archive
@@ -19,14 +20,11 @@ projects:
       x_brand:
         featuredStack: [vercel-ai-sdk, typst, stripe, digitalocean, docker]
     lastUpdated: "2026-10-03"
-    name: Vitex — AI Career Agent (vitex.org.nz)
+    name: Vitex — AI Career Agent
     priority: 16
     category: ai-apps
-    tagline: "Agent-ready AI career agent (vitex.org.nz) — turns a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product is reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions"
+    tagline: "Agent-ready AI career agent (retired) — turned a job description + free-text background into a tailored, ATS-optimized resume PDF + cover letter in ~30s via an 8-step pipeline. The whole product was reachable over an authenticated public HTTP API, plus a vitex-cli and a stdio MCP server (Claude Desktop/Code, Cursor); a DB partial-unique index makes each generation idempotent, so an SSE reconnect or a concurrent retry never re-runs the pipeline. Vercel AI SDK + gpt-5.5 (reasoning) / gpt-5.4-mini (extract) + Typst local compile (<100ms), on a DigitalOcean VPS via Docker + Traefik + GitHub Actions"
     logo: /public/brands/vitex-mark.svg
-    url: https://www.vitex.org.nz/
-    extraLinks:
-      - { label: "Live product", url: "https://www.vitex.org.nz/" }
     techStack:
       - "Next.js 15"
       - "React 19"
@@ -51,7 +49,7 @@ projects:
       - "Traefik"
       - "DigitalOcean VPS"
       - "GitHub Actions CI/CD"
-    status: live
+    status: archived
     metrics:
       - { label: "Commits (solo)",  value: "379 (2025-01-11 → 2026-07-14, ~18 months); essentially sole author" }
       - { label: "Surfaces",        value: "11 pages · 30 API route handlers · 25 components · 232 source files (~30k LOC)" }
@@ -63,13 +61,13 @@ projects:
       - { label: "PDF engine",      value: "local Typst binary compile <100ms, SHA-256-cached; no external document API" }
       - { label: "Tests",          value: "49 test files / 437 tests" }
     publicSummary: |
-      AI career agent live at **vitex.org.nz**. Paste a job ad and describe your background in plain text, and an 8-step AI pipeline writes a resume and cover letter tailored to that specific job, then compiles them into a polished, ATS-ready PDF in about 30 seconds across 7 auto-selected templates — no document is rendered by an outside service. Vitex is **agent-ready**: everything the website does is also reachable over a public API, a command-line tool, and an MCP server, so a terminal or an AI assistant (Claude, Cursor, ChatGPT) can drive the whole product without a browser.
+      AI career agent, formerly live at vitex.org.nz (now retired). Paste a job ad and describe your background in plain text, and an 8-step AI pipeline writes a resume and cover letter tailored to that specific job, then compiles them into a polished, ATS-ready PDF in about 30 seconds across 7 auto-selected templates — no document is rendered by an outside service. Vitex is **agent-ready**: everything the website does is also reachable over a public API, a command-line tool, and an MCP server, so a terminal or an AI assistant (Claude, Cursor, ChatGPT) can drive the whole product without a browser.
     narrative:
       impactHeadline: "Paste a job ad and describe your background — it writes a resume and cover letter tailored to that job and builds them into a polished PDF in about 30 seconds. Works from a browser, the command line, or inside an AI assistant."
       problem: |
         Most AI resume tools fail in one of two ways: (a) a thin chatbot wrapper that hands you a paragraph and calls it a resume — no PDF, no ATS-aware structure, no template intelligence; or (b) a form-filling site that spends a minute-plus rendering the same generic template every other user gets. Both miss the real job: the resume has to be tailored to the *specific* job ad, the document has to survive automated applicant-tracking (ATS) parsing, the visual template has to fit the target industry, and the whole round-trip has to feel instant. None of that is true of "paste your CV into ChatGPT."
       audience: |
-        Three groups. **Job seekers in live applications** — especially in the NZ / Australia / Asia-Pacific markets where Chan personally needed the tool and where vitex.org.nz deliberately lives. **Career-changers** who have to re-tailor every application — the people for whom rewriting a resume per job ad is the actual bottleneck. And **AI-engineering reviewers** assessing Chan's ability to ship a production multi-step AI agent with real users, real billing, and real operations — not a demo.
+        Three groups. **Job seekers in live applications** — especially in the NZ / Australia / Asia-Pacific markets where Chan personally needed the tool and where Vitex was deliberately based. **Career-changers** who have to re-tailor every application — the people for whom rewriting a resume per job ad is the actual bottleneck. And **AI-engineering reviewers** assessing Chan's ability to ship a production multi-step AI agent with real users, real billing, and real operations — not a demo.
       productLogic: |
         The flow is deliberately short. (1) **Homepage** — paste a job ad and describe your background in free text; no CV upload, no field-by-field form. (2) **Generate** — click run and the 8-step pipeline streams its progress live (reading the job ad → reading your background → matching → tailoring → ATS scoring → cover letter → building the PDF), so you watch each stage finish instead of staring at a spinner, then land in the **Editor** with a PDF preview, an ATS score with concrete feedback, and the matching cover letter. (3) **Refine & export** — a plain-English box ("make the leadership section stronger", "shorten the intro") re-does just that slice rather than regenerating everything; then download the PDF or publish a share link. A dashboard keeps a searchable history for signed-in users.
       businessLogic: |
@@ -95,7 +93,7 @@ projects:
 
         **Deployment + hardening.** Production runs as a single **Docker container** on a **DigitalOcean VPS** behind **Traefik** (reverse proxy + automatic TLS), shipped by **GitHub Actions** with **health-gated rolling deploys** and automatic database migrations. Recent hardening added site-wide security headers (Content-Security-Policy + HSTS in production), request rate-limiting on the API-key/credit/billing routes, and auth + rate-limiting + sandboxing on the PDF-compile endpoint. Two earlier platform migrations (Railway → CF Workers → VPS) and the LaTeX → Typst swap all shipped without an outage.
       outcomes: |
-        Live and operational at **vitex.org.nz**, serving real users end-to-end from a pasted job ad to a compiled PDF. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.
+        Ran in production at vitex.org.nz, serving real users end-to-end from a pasted job ad to a compiled PDF, until the deployment was retired. **379 commits over ~18 months** (2025-01-11 → 2026-07-14), essentially sole-authored. Two platform migrations and a LaTeX → Typst engine swap shipped without a service outage, each step captured in the commit log (the `xz-utils`/`curl` Dockerfile fixes, FontAwesome package pre-cache, the OpenAI strict-JSON-schema regression, the `sessionStorage` move for sensitive input). A 2026 UI pass replaced Neobrutalism with the Phantom design system; a subsequent security/ops wave added production CSP + HSTS, rate limits on the billing and API-key routes, a sandboxed compile endpoint, health-gated rolling deploys, and a production runbook. Backed by **49 test files / 437 tests**.
       myRole: |
         Sole engineer, sole designer, sole product owner. Designed the 8-step agent pipeline with Zod-validated stages (migrating the editor from CopilotKit to the Vercel AI SDK agent chat along the way), wrote every API route, built the Stripe credit system, set up Stack Auth, designed the Drizzle schema for resumes / credits / share tokens, ran both platform migrations (Railway → CF Workers → DigitalOcean VPS), executed the LaTeX → Typst engine swap (including the Dockerfile fixes and the FontAwesome package pre-cache), designed the Phantom UI that replaced the earlier Neobrutalism treatment, built the plain-English refinement loop in the Editor, upgraded the model routing to gpt-5.5 / gpt-5.4-mini with per-tier reasoning-effort control, and hardened production (CSP + HSTS, rate limits, sandboxed compile, health-gated rolling deploys). I continue to operate the live service.
   - id: fanfic-lab

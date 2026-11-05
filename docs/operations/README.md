@@ -89,7 +89,7 @@ bump, `npm pack --dry-run`), then she runs `npm publish` herself.
 | Cloudflare Pages | `2d-portfolio` (chanmeng.org; push to `main` deploys), `ai-programming-teaching-project` (programming.chanmeng.org), `femtech-weekend-website` |
 | Cloudflare Workers | `sunostats` (seismophone.chanmeng.org, with crons; pending archive), `archlang-docs` (archlang.uk), `archlang-playground`, `ai-chat-worker` (programming-api.chanmeng.org) |
 | Vercel (personal scope) | `gradient-svg-generator`, `github-readme-suno-cards`, `github-visitor-counter` |
-| One DigitalOcean droplet | ArchCanvas and Vitex, run through Coolify behind Traefik. www.vitex.org.nz stays live although the Vitex repo is archived and private |
+| One DigitalOcean droplet | ArchCanvas, run through Coolify behind Traefik. Vitex (www.vitex.org.nz) is retired; its GHCR image was deleted 2026-11-06 |
 | GitHub Pages | none on any archived repo |
 
 There is no Railway. libraryos.live, fanfic-lab.tech and

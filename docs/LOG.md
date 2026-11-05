@@ -354,3 +354,6 @@ data/profile/10-career.yaml, data/profile/30-recognition.yaml, data/voice.yaml
 
 ## [2026-11-04] change | ArchCanvas status: live and maintained, thinned over time; development centres on ArchLang; no planned-launch wording
 data/profile/10-career.yaml, cv/variants/*.typ, docs/STATE.md
+
+## [2026-11-06] remove | Vitex site recorded as retired (no live url, status archived); GHCR packages `easy-resume/web` and `sunostats/web` deleted
+data/profile/23-projects-oss-more.yaml, docs/operations/README.md, docs/ecosystem/lineage.yaml

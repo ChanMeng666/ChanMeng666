@@ -354,3 +354,6 @@ data/profile/10-career.yaml, data/profile/30-recognition.yaml, data/voice.yaml
 
 ## [2026-11-04] change | ArchCanvas status: live and maintained, thinned over time; development centres on ArchLang; no planned-launch wording
 data/profile/10-career.yaml, cv/variants/*.typ, docs/STATE.md
+
+## [2026-11-06] fix | ArchLang: stale snapshot counts (versions, tests, commits, ADRs) dropped or dated; canonical tagline; hosted MCP and skills.sh links; wiki lists external links
+data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml, data/profile/70-linkedin.yaml, scripts/build-wiki.mjs, scripts/build-video-data.mjs

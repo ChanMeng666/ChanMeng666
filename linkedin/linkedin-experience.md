@@ -17,7 +17,7 @@ Type a brief in plain English and get back one strong, checkable, dimensioned fl
 
 • Edits stay precise and re-editable, because every plan is real parametric ArchLang under the hood rather than pixels — nudge a wall, tweak a parameter, or have the AI review circulation and pin the fixes in place.
 • Anyone can build on the language, not only my product: ArchLang is published open-source to npm as @chanmeng666/archlang — a hand-written compiler (lexer + recursive-descent parser, zero runtime dependencies) with architectural-soundness linting, a CLI, LSP + VS Code tooling, and a client-side playground.
-• I built the product first and the language when the product needed it: drawing plans as pictures could not be checked, so eleven weeks in I wrote a compiler instead. ArchLang now has 62 npm releases, 139 diagnostic codes and 12,882 tests. Sole engineer on both, working with AI coding agents, built in public.
+• I built the product first and the language when the product needed it: drawing plans as pictures could not be checked, so eleven weeks in I wrote a compiler instead. ArchLang is published on npm (@chanmeng666/archlang) with 139 diagnostic codes. Sole engineer on both, working with AI coding agents, built in public.
 
 Links: archcanvas.uk · github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang
 ```

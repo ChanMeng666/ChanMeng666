@@ -47,15 +47,7 @@ const errors = [];
  */
 const FACTS = [
   // — beat 03, ArchLang —
-  { key: "archlang.commits", project: "archlang", metric: "Commits (solo)",
-    rule: /^(\d[\d,]*)/, cast: "int" },
-  { key: "archlang.version", project: "archlang", metric: "npm package",
-    rule: /(v\d+\.\d+\.\d+)/, cast: "string" },
-  // 2026-09-16: the count is npm's (`npm view @chanmeng666/archlang versions`,
-  // 53 through v1.36.0), which is what "releases" means on screen; the metric
-  // now says "published versions", so the rule follows the claim.
-  { key: "archlang.releases", project: "archlang", metric: "npm package",
-    rule: /\((\d+) published versions/, cast: "int" },
+  // Commit, version and release counts were dropped 2026-11-06: they rot, and the version comes from npm, not a document.
   { key: "archlang.diagnostics", project: "archlang", metric: "Diagnostics",
     rule: /^(\d+)/, cast: "int" },
   { key: "archlang.exportFormats", project: "archlang", metric: "Export formats",

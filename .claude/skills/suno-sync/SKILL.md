@@ -5,6 +5,8 @@ description: >-
   @chanmeng) into the suno/ register, or before answering anything about her
   songs or albums when the register is older than her latest song. Not for
   making or publishing songs, nor for the README Suno cards.
+metadata:
+  internal: true
 ---
 
 # Suno sync

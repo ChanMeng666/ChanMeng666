@@ -6,6 +6,8 @@ description: >-
   Chrome, or before answering how her posts did when the register is older
   than her latest post. Not for writing posts or the profile copy (that is
   career-copy).
+metadata:
+  internal: true
 ---
 
 # LinkedIn sync

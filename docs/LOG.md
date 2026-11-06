@@ -363,3 +363,6 @@ data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml, data/profil
 
 ## [2026-11-06] add | `film-archlang-explainer-and-shorts`: public ArchLang explainer (91 s plus cutdowns), recorded in lineage family `archlang-archcanvas`; not yet on chanmeng.org/films or YouTube
 docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/ecosystem/archlang-archcanvas.md, data/profile/46-films.yaml, docs/film-masters.md, docs/STATE.md
+
+## [2026-11-06] change | Every public skill installs with `npx skills add ChanMeng666/<repo>` first (the install that lists it on skills.sh); repo-only skills here and in chanmeng-svg-animation-studio marked `metadata.internal`
+data/profile/47-agent-skills.yaml, .claude/skills/*/SKILL.md

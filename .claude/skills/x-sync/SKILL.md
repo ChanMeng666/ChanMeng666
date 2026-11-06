@@ -5,6 +5,8 @@ description: >-
   register from her signed-in Chrome, or before answering how her X posts did
   when the register is older than her latest post. Not for writing, posting or
   deleting posts, nor for the profile copy or strategy.
+metadata:
+  internal: true
 ---
 
 # X sync

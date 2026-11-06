@@ -5,6 +5,8 @@ description: >-
   project, metric, title, date, award, recommendation), to strengthen or audit
   CV, ATS resume, LinkedIn profile or cover-letter copy, or to judge whether a
   claim is safe to make. Not for visuals or the code that renders surfaces.
+metadata:
+  internal: true
 ---
 
 # Career copy

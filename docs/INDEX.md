@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 123 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 365 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 368 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -102,10 +102,10 @@ Skills hold procedures and load when their description matches the task.
 
 | Skill | Lines | Use when | Also in the folder |
 |---|---|---|---|
-| `career-copy` (`.claude/skills/career-copy/SKILL.md`) | 85 | Use when a career fact changes and copy must change with it (new role, project, metric, title, date, award, recommendation), to strengthen or audit CV, ATS resume, LinkedIn profile or cover-letter copy, or to judge whether a claim is safe to make. Not for visuals or the code that renders surfaces. | references/surfaces.md (87) |
-| `linkedin-sync` (`.claude/skills/linkedin-sync/SKILL.md`) | 90 | Use to sync or refresh Chan's LinkedIn posts (her profile, the ArchCanvas company page, or both) into the linkedin/ registers from her signed-in Chrome, or before answering how her posts did when the register is older than her latest post. Not for writing posts or the profile copy (that is career-copy). | — |
-| `suno-sync` (`.claude/skills/suno-sync/SKILL.md`) | 37 | Use to sync or refresh Chan's Suno songs and playlists (@chanmeng666 and @chanmeng) into the suno/ register, or before answering anything about her songs or albums when the register is older than her latest song. Not for making or publishing songs, nor for the README Suno cards. | — |
-| `x-sync` (`.claude/skills/x-sync/SKILL.md`) | 82 | Use to sync or refresh Chan's X (Twitter) posts (@chanmeng666) into the x/ register from her signed-in Chrome, or before answering how her X posts did when the register is older than her latest post. Not for writing, posting or deleting posts, nor for the profile copy or strategy. | — |
+| `career-copy` (`.claude/skills/career-copy/SKILL.md`) | 87 | Use when a career fact changes and copy must change with it (new role, project, metric, title, date, award, recommendation), to strengthen or audit CV, ATS resume, LinkedIn profile or cover-letter copy, or to judge whether a claim is safe to make. Not for visuals or the code that renders surfaces. | references/surfaces.md (87) |
+| `linkedin-sync` (`.claude/skills/linkedin-sync/SKILL.md`) | 92 | Use to sync or refresh Chan's LinkedIn posts (her profile, the ArchCanvas company page, or both) into the linkedin/ registers from her signed-in Chrome, or before answering how her posts did when the register is older than her latest post. Not for writing posts or the profile copy (that is career-copy). | — |
+| `suno-sync` (`.claude/skills/suno-sync/SKILL.md`) | 39 | Use to sync or refresh Chan's Suno songs and playlists (@chanmeng666 and @chanmeng) into the suno/ register, or before answering anything about her songs or albums when the register is older than her latest song. Not for making or publishing songs, nor for the README Suno cards. | — |
+| `x-sync` (`.claude/skills/x-sync/SKILL.md`) | 84 | Use to sync or refresh Chan's X (Twitter) posts (@chanmeng666) into the x/ register from her signed-in Chrome, or before answering how her X posts did when the register is older than her latest post. Not for writing, posting or deleting posts, nor for the profile copy or strategy. | — |
 
 Rules in `.claude/rules/` load when a file matching their `paths:` is touched.
 

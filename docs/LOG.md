@@ -360,3 +360,6 @@ data/profile/23-projects-oss-more.yaml, docs/operations/README.md, docs/ecosyste
 
 ## [2026-11-06] fix | ArchLang: stale snapshot counts (versions, tests, commits, ADRs) dropped or dated; canonical tagline; hosted MCP and skills.sh links; wiki lists external links
 data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml, data/profile/70-linkedin.yaml, scripts/build-wiki.mjs, scripts/build-video-data.mjs
+
+## [2026-11-06] add | `film-archlang-explainer-and-shorts`: public ArchLang explainer (91 s plus cutdowns), recorded in lineage family `archlang-archcanvas`; not yet on chanmeng.org/films or YouTube
+docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/ecosystem/archlang-archcanvas.md, data/profile/46-films.yaml, docs/film-masters.md, docs/STATE.md

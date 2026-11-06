@@ -6,7 +6,9 @@ workspace with its local path, remote, visibility, role and dependencies (last
 scanned 2026-09-21; not loaded by `load-profile`, not schema-validated).
 `film-archlang-narrated-demo` (private, 2026-10-01, the narrated demo that accompanies the
 paper, not shown publicly) was added after that scan and is recorded only in
-`lineage.yaml`. Career narrative stays in `data/profile/`; do not put topology
+`lineage.yaml`. `film-archlang-explainer-and-shorts` (public, 2026-11-06, a 91-second
+explainer plus cutdowns; briefly named archlang-spectacle) is recorded in the family
+catalog and in `lineage.yaml`. Career narrative stays in `data/profile/`; do not put topology
 into the shards, it would leak onto generated surfaces.
 
 ## Rules

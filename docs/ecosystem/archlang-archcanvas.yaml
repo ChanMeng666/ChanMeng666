@@ -200,6 +200,18 @@ repos:
     urls:
       language: https://archlang.uk
 
+  - id: archlang-explainer-and-shorts
+    kind: git-repo
+    gitRemote: https://github.com/ChanMeng666/film-archlang-explainer-and-shorts.git
+    github: ChanMeng666/film-archlang-explainer-and-shorts
+    visibility: public
+    license: MIT
+    role: A 91-second explainer of ArchLang (added 2026-11-06) — Python motion compositor and ffmpeg, real compiler and archlang-3d output, plus 27 s, 28.5 s and 25 s cutdowns. Briefly named archlang-spectacle the same day. Masters in release v1.0.0; not yet the film on show.
+    dependsOn:
+      - { id: archlang, how: "compiles the plans and 3D on screen from real ArchLang and archlang-3d output" }
+    urls:
+      language: https://archlang.uk
+
   - id: archlang-paper
     kind: git-repo
     localPath: "D:/github_repository/archlang-paper"

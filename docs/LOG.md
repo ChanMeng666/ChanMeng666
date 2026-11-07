@@ -366,3 +366,6 @@ docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/ecosy
 
 ## [2026-11-06] change | Every public skill installs with `npx skills add ChanMeng666/<repo>` first (the install that lists it on skills.sh); repo-only skills here and in chanmeng-svg-animation-studio marked `metadata.internal`
 data/profile/47-agent-skills.yaml, .claude/skills/*/SKILL.md
+
+## [2026-11-07] add | Two public ArchLang film repos recorded: `film-archlang-drawing-stands-up` (renamed from `archlang-cinematic` under the film repo naming rule) and `film-archlang-2d-3d`; five listing-submission forks of 2026-11-06 recorded as not her projects; not yet on chanmeng.org/films or YouTube
+docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/ecosystem/archlang-archcanvas.md, data/profile/46-films.yaml, docs/film-masters.md, docs/STATE.md

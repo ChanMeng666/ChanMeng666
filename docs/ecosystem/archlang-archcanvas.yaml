@@ -212,6 +212,32 @@ repos:
     urls:
       language: https://archlang.uk
 
+  - id: archlang-drawing-stands-up
+    kind: git-repo
+    localPath: "D:/github_repository/film-archlang-drawing-stands-up"
+    gitRemote: https://github.com/ChanMeng666/film-archlang-drawing-stands-up.git
+    github: ChanMeng666/film-archlang-drawing-stands-up
+    visibility: public
+    license: MIT
+    role: Blender-rendered ArchLang films and stills (added 2026-11-06 as archlang-cinematic, renamed 2026-11-07) — the 32 s hero film The drawing stands up in 16:9 and 9:16, a 12 s code-to-form clip, five stills in three aspects. Masters in release v0.4.0; not yet the film on show.
+    dependsOn:
+      - { id: archlang, how: "every wall comes from archlang compile and archlang3d build; Blender adds no geometry" }
+    urls:
+      language: https://archlang.uk
+
+  - id: archlang-2d-3d
+    kind: git-repo
+    localPath: "D:/github_repository/film-archlang-2d-3d"
+    gitRemote: https://github.com/ChanMeng666/film-archlang-2d-3d.git
+    github: ChanMeng666/film-archlang-2d-3d
+    visibility: public
+    license: MIT
+    role: A 196-second feature explainer of ArchLang (added 2026-11-07) — Remotion, the real compiler and archlang-3d, English voice-over, 30 s cuts in 16:9 and 9:16. Masters in release v1.0.0; not yet the film on show.
+    dependsOn:
+      - { id: archlang, how: "bakes every drawing and 3D frame from the pinned compiler and archlang-3d" }
+    urls:
+      language: https://archlang.uk
+
   - id: archlang-paper
     kind: git-repo
     localPath: "D:/github_repository/archlang-paper"

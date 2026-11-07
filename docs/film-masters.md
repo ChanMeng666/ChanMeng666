@@ -128,6 +128,29 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `output/v5/agent-cutdown-1080p.mp4` | 2 | release `v1.0.0` › `agent-cutdown-1080p.mp4` |
 | `output/v5/vertical-9x16.mp4` | 5 | release `v1.0.0` › `vertical-9x16.mp4` |
 
+## ChanMeng666/film-archlang-drawing-stands-up (public)
+
+Created as archlang-cinematic; the release file names keep that name.
+
+| Rendered to | MB | On GitHub |
+|---|---|---|
+| hero 16:9 1080p | 16 | release `v0.4.0` › `archlang-cinematic-hero-16x9-1080p.mp4` |
+| hero 9:16 1080p | 13 | release `v0.4.0` › `archlang-cinematic-hero-9x16-1080p.mp4` |
+| code to form 16:9 | 5 | release `v0.4.0` › `archlang-cinematic-code-to-form-16x9-1080p.mp4` |
+| code to form 9:16 | 4 | release `v0.4.0` › `archlang-cinematic-code-to-form-9x16-1080p.mp4` |
+
+Stills (`*-social`, `*-clean`, three aspects) are in the same release.
+
+## ChanMeng666/film-archlang-2d-3d (public)
+
+| Rendered to | MB | On GitHub |
+|---|---|---|
+| 196 s film, English | 39 | release `v1.0.0` › `archlang-2d-3d-en-16x9.mp4` (with `archlang-2d-3d-en.srt`) |
+| 30 s cut 16:9 | 12 | release `v1.0.0` › `archlang-2d-3d-cut-30s-16x9.mp4` (with `archlang-2d-3d-cut-30s.srt`) |
+| 30 s cut 9:16 | 12 | release `v1.0.0` › `archlang-2d-3d-cut-30s-9x16.mp4` |
+
+Poster, thumbnail and `SHA256SUMS.txt` are in the same release.
+
 ## ChanMeng666/film-chan-meng-intro (public)
 
 | Rendered to | MB | On GitHub |

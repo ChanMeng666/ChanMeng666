@@ -381,3 +381,6 @@ data/profile/46-films.yaml, youtube/channel.yaml, youtube/videos.yaml, distribut
 
 ## [2026-11-07] display | ArchLang narrated demo (HVRRvgif8cQ) public on YouTube (Chan); still off chanmeng.org/films. Chat-story Short S1iHLvz4V_Q recorded in the channel register
 data/profile/46-films.yaml, docs/STATE.md, youtube/channel.yaml, youtube/videos.yaml
+
+## [2026-11-08] display | ArchLang shows `ArchLang, from plan to 3D` (film-archlang-2d-3d) instead of the ChatGPT film: productFilms, README pill and film wall, chanmeng.org tools stage (30 s cut), archlang.uk, archlang README, YouTube playlist order
+data/profile/45-showcase.yaml, data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md, public/readme/films.svg

@@ -7631,7 +7631,7 @@
         "alt": "ArchLang is an open-source language that compiles plain-text source into floor plans. The card shows a brief given to Claude Fable and the ArchLang it wrote compiling into a dimensioned plan: 3 rooms, 31.97 m² net. Then one number is changed and the plan redraws, and a lint finding is raised and cleared. Output: SVG, PDF, DXF, PNG."
       },
       "_film": {
-        "url": "https://youtu.be/O3vJu4MtpkU",
+        "url": "https://youtu.be/oCg3tBTlVvI",
         "label": "Watch on YouTube"
       },
       "_affiliationOrgs": [],
@@ -12932,20 +12932,35 @@
       "id": "archlang-film",
       "projectId": "archlang",
       "kind": "product",
-      "title": "ArchLang in ChatGPT film",
-      "filmRepo": "ChanMeng666/film-archlang-in-chatgpt",
-      "watchUrl": "https://youtu.be/O3vJu4MtpkU",
+      "title": "ArchLang, from plan to 3D",
+      "filmRepo": "ChanMeng666/film-archlang-2d-3d",
+      "watchUrl": "https://youtu.be/oCg3tBTlVvI",
       "displayedOn": [
         {
           "surface": "chanmeng.org",
           "page": "/",
           "slot": "home tools stage",
           "cuts": [
-            "82 s 16:9"
+            "30 s 16:9"
           ]
         }
       ],
       "notDisplayed": [
+        {
+          "filmRepo": "ChanMeng666/film-archlang-in-chatgpt",
+          "what": "82 s film of ArchLang inside ChatGPT (Remotion, replica of the real pages, sampled score)",
+          "reason": "one film per product; replaced on 2026-11-08, shown on /films and on YouTube"
+        },
+        {
+          "filmRepo": "ChanMeng666/film-archlang-explainer-and-shorts",
+          "what": "91 s explainer with cutdowns",
+          "reason": "one film per product; shown on /films and on YouTube"
+        },
+        {
+          "filmRepo": "ChanMeng666/film-archlang-drawing-stands-up",
+          "what": "32 s Blender film and stills",
+          "reason": "one film per product; shown on /films and on YouTube"
+        },
         {
           "filmRepo": "ChanMeng666/film-archlang-narrated-demo",
           "what": "narrated 4:47 demo of ArchLang 1.36.0",
@@ -12962,7 +12977,7 @@
           "reason": "one film per product; shown on /films and on YouTube"
         }
       ],
-      "lastVerified": "2026-11-02"
+      "lastVerified": "2026-11-08"
     },
     {
       "id": "echook-film",
@@ -13306,9 +13321,35 @@
       "onFilmsPage": true
     },
     {
-      "id": "archlang-in-chatgpt-film",
+      "id": "archlang-plan-to-3d",
       "kind": "product-film",
       "primary": true,
+      "title": "ArchLang, from plan to 3D",
+      "for": "ArchLang",
+      "projectId": "archlang",
+      "repo": "ChanMeng666/film-archlang-2d-3d",
+      "repoPublic": true,
+      "date": "2026-11",
+      "seconds": 196,
+      "cuts": [
+        "196 s",
+        "30 s 16:9",
+        "30 s 9:16"
+      ],
+      "madeWith": "Remotion, real compiler and archlang-3d output, ElevenLabs voice-over in Chan's cloned voice",
+      "summary": "A feature explainer in English with subtitles. One .arch text file becomes a dimensioned floor plan that checks itself, then a 3D preview; one scene is a labelled reenactment of an agent session whose every command and output is a real run of the pinned CLI.",
+      "youtubeId": "oCg3tBTlVvI",
+      "shortYoutubeId": "fBV-tr0gLuU",
+      "media": {
+        "poster": "/media/films/archlang-plan-to-3d-196s.jpg",
+        "mp4": "/media/films/archlang-plan-to-3d-196s.mp4"
+      },
+      "onFilmsPage": true
+    },
+    {
+      "id": "archlang-in-chatgpt-film",
+      "kind": "product-film",
+      "primary": false,
       "title": "ArchLang in ChatGPT film",
       "for": "ArchLang",
       "projectId": "archlang",
@@ -13868,32 +13909,6 @@
       "media": {
         "poster": "/media/films/archlang-drawing-stands-up-32s.jpg",
         "mp4": "/media/films/archlang-drawing-stands-up-32s.mp4"
-      },
-      "onFilmsPage": true
-    },
-    {
-      "id": "archlang-plan-to-3d",
-      "kind": "product-film",
-      "primary": false,
-      "title": "ArchLang, from plan to 3D",
-      "for": "ArchLang",
-      "projectId": "archlang",
-      "repo": "ChanMeng666/film-archlang-2d-3d",
-      "repoPublic": true,
-      "date": "2026-11",
-      "seconds": 196,
-      "cuts": [
-        "196 s",
-        "30 s 16:9",
-        "30 s 9:16"
-      ],
-      "madeWith": "Remotion, real compiler and archlang-3d output, ElevenLabs voice-over in Chan's cloned voice",
-      "summary": "A feature explainer in English with subtitles. One .arch text file becomes a dimensioned floor plan that checks itself, then a 3D preview; one scene is a labelled reenactment of an agent session whose every command and output is a real run of the pinned CLI.",
-      "youtubeId": "oCg3tBTlVvI",
-      "shortYoutubeId": "fBV-tr0gLuU",
-      "media": {
-        "poster": "/media/films/archlang-plan-to-3d-196s.jpg",
-        "mp4": "/media/films/archlang-plan-to-3d-196s.mp4"
       },
       "onFilmsPage": true
     },
@@ -17879,6 +17894,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-11-07",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-07T11:25:22.872Z"
+    "buildTimestamp": "2026-11-07T11:32:53.029Z"
   }
 }

@@ -336,16 +336,20 @@ productFilms:
   - id: archlang-film
     projectId: archlang
     kind: product
-    title: ArchLang in ChatGPT film
-    filmRepo: ChanMeng666/film-archlang-in-chatgpt
-    watchUrl: "https://youtu.be/O3vJu4MtpkU"
+    title: "ArchLang, from plan to 3D"
+    # Also on the product's own surfaces (Chan, 2026-11-08): archlang.uk (/ and /start) and the archlang README.
+    filmRepo: ChanMeng666/film-archlang-2d-3d
+    watchUrl: "https://youtu.be/oCg3tBTlVvI"
     displayedOn:
-      - { surface: chanmeng.org, page: "/", slot: "home tools stage", cuts: ["82 s 16:9"] }
+      - { surface: chanmeng.org, page: "/", slot: "home tools stage", cuts: ["30 s 16:9"] }
     notDisplayed:
+      - { filmRepo: ChanMeng666/film-archlang-in-chatgpt, what: "82 s film of ArchLang inside ChatGPT (Remotion, replica of the real pages, sampled score)", reason: "one film per product; replaced on 2026-11-08, shown on /films and on YouTube" }
+      - { filmRepo: ChanMeng666/film-archlang-explainer-and-shorts, what: "91 s explainer with cutdowns", reason: "one film per product; shown on /films and on YouTube" }
+      - { filmRepo: ChanMeng666/film-archlang-drawing-stands-up, what: "32 s Blender film and stills", reason: "one film per product; shown on /films and on YouTube" }
       - { filmRepo: ChanMeng666/film-archlang-narrated-demo, what: "narrated 4:47 demo of ArchLang 1.36.0", reason: "made to accompany the paper, not a promo; ArchLang already shows its promo film" }
       - { filmRepo: ChanMeng666/film-archlang-one-take, what: "32 s one-take film (three.js, Blender, sampled score)", reason: "one film per product; shown on /films, on YouTube and in its blog post" }
       - { filmRepo: ChanMeng666/film-archlang-playground, what: "68 s coded replica of the Playground", reason: "one film per product; shown on /films and on YouTube" }
-    lastVerified: "2026-11-02"
+    lastVerified: "2026-11-08"
 
   - id: echook-film
     projectId: echook

@@ -1,11 +1,11 @@
 {
   "source": "data/profile/46-films.yaml",
   "counts": {
-    "films": 71,
-    "productFilms": 25,
+    "films": 72,
+    "productFilms": 26,
     "musicVideos": 15,
     "explainers": 25,
-    "minutes": 163
+    "minutes": 168
   },
   "productFilms": [
     {
@@ -380,6 +380,26 @@
         "media": {
           "poster": "/media/films/archlang-drawing-stands-up-32s.jpg",
           "mp4": "/media/films/archlang-drawing-stands-up-32s.mp4"
+        }
+      },
+      {
+        "id": "archlang-demo",
+        "title": "ArchLang narrated demo",
+        "for": "ArchLang",
+        "date": "2026-10",
+        "seconds": 287,
+        "duration": "4:47",
+        "cuts": [
+          "4 min 47 s",
+          "16:9",
+          "narrated"
+        ],
+        "madeWith": "Remotion",
+        "summary": "A narrated demo of ArchLang 1.36.0, built as code.",
+        "youtube": "https://youtu.be/HVRRvgif8cQ",
+        "media": {
+          "poster": "/media/films/archlang-demo-287s.jpg",
+          "mp4": "/media/films/archlang-demo-287s.mp4"
         }
       }
     ],

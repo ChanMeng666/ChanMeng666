@@ -384,3 +384,6 @@ data/profile/46-films.yaml, docs/STATE.md, youtube/channel.yaml, youtube/videos.
 
 ## [2026-11-08] display | ArchLang shows `ArchLang, from plan to 3D` (film-archlang-2d-3d) instead of the ChatGPT film: productFilms, README pill and film wall, chanmeng.org tools stage (30 s cut), archlang.uk, archlang README, YouTube playlist order
 data/profile/45-showcase.yaml, data/profile/46-films.yaml, docs/ecosystem/lineage.yaml, docs/STATE.md, public/readme/films.svg
+
+## [2026-11-08] display | ArchLang narrated demo (`archlang-demo`) on chanmeng.org/films (Chan): 720p MP4 on R2; its repo stays private
+data/profile/46-films.yaml, docs/STATE.md

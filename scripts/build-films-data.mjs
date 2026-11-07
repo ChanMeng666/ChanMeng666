@@ -62,7 +62,9 @@ const group = (id) => {
 // A collection whose films are all off the page is left out, not shown empty.
 const shown = (g) => g.films.length > 0;
 
-const product = films.filter((f) => f.kind === "product-film");
+// A demo film (narrated, made for a paper or a talk) sits with its product's other versions;
+// it is never primary, so it never takes the product's slot.
+const product = films.filter((f) => f.kind === "product-film" || f.kind === "demo-film");
 const out = {
   source: "data/profile/46-films.yaml",
   counts: {

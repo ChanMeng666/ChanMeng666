@@ -372,3 +372,6 @@ docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/ecosy
 
 ## [2026-11-07] display | Three ArchLang films on chanmeng.org/films: `archlang-explainer-film`, `archlang-drawing-stands-up`, `archlang-plan-to-3d` (720p MP4 on R2); not on YouTube yet. Fork `awesome-ai-plugins` deleted after its PR merged
 data/profile/46-films.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-11-07] remove | Listing forks `Awesome-AECO` and `awesome-accessibility` deleted after their PRs merged; STATE and operations notes on listing forks corrected
+docs/ecosystem/lineage.yaml, docs/STATE.md, docs/operations/README.md

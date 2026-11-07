@@ -108,9 +108,10 @@ items exist (location in the private file).
   Chan's.
 - **No links to private repos** anywhere public, and never suggest making one
   public.
-- **Listing forks.** `awesome-aec-mcp`, `Awesome-AECO`, `awesome-generative-ai`,
-  `awesome-mcp-servers`, `awesome-typescript` exist only to submit ArchLang
-  listings (PRs opened 2026-09-14). Delete each fork once its PR is merged or
+- **Listing forks.** Every `listing-submission` row in `lineage.yaml` (today
+  `awesome-aec-mcp`, `awesome-generative-ai`, `awesome-mcp-servers`,
+  `awesome-typescript`, `awesome-a11y` and the four of 2026-11-06) exists only
+  to submit her project for listing. Delete each fork once its PR is merged or
   closed, or all of them on **2026-11-14**, in one confirmation. `reveal.js` is a
   real customised fork: keep.
 - **Never delete the Coolify deploy SSH key.** Its comment says it was formerly a

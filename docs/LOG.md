@@ -378,3 +378,6 @@ docs/ecosystem/lineage.yaml, docs/STATE.md, docs/operations/README.md
 
 ## [2026-11-07] display | Three ArchLang films and their 9:16 cuts on YouTube (Product films, Product shorts): youtubeId and shortYoutubeId recorded; titles, descriptions, thumbnails and subtitles set in Studio with the text Chan approved
 data/profile/46-films.yaml, youtube/channel.yaml, youtube/videos.yaml, distribution/
+
+## [2026-11-07] display | ArchLang narrated demo (HVRRvgif8cQ) public on YouTube (Chan); still off chanmeng.org/films. Chat-story Short S1iHLvz4V_Q recorded in the channel register
+data/profile/46-films.yaml, docs/STATE.md, youtube/channel.yaml, youtube/videos.yaml

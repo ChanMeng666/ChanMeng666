@@ -467,7 +467,7 @@ films:
     media: { poster: /media/films/archlang-plan-to-3d-196s.jpg, mp4: /media/films/archlang-plan-to-3d-196s.mp4 }
     onFilmsPage: true
 
-  # NOT ON /films (Chan): made to accompany the ArchLang paper (never name the venue); unlisted on YouTube, id in youtube/channel.private.yaml. See show:.
+  # NOT ON /films (Chan): made to accompany the ArchLang paper (never name the venue). Public on YouTube since 2026-11-07 (Chan); it stays off /films. See show:.
   - id: archlang-demo
     show: { site: false }
     kind: demo-film
@@ -481,6 +481,7 @@ films:
     cuts: ["4 min 47 s", "16:9", narrated]
     madeWith: Remotion
     summary: A narrated demo of ArchLang 1.36.0, built as code.
+    youtubeId: HVRRvgif8cQ
     onFilmsPage: false
     notShownReason: "made to accompany the paper, not a promo"
 

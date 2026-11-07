@@ -375,3 +375,6 @@ data/profile/46-films.yaml, docs/ecosystem/lineage.yaml
 
 ## [2026-11-07] remove | Listing forks `Awesome-AECO` and `awesome-accessibility` deleted after their PRs merged; STATE and operations notes on listing forks corrected
 docs/ecosystem/lineage.yaml, docs/STATE.md, docs/operations/README.md
+
+## [2026-11-07] display | Three ArchLang films and their 9:16 cuts on YouTube (Product films, Product shorts): youtubeId and shortYoutubeId recorded; titles, descriptions, thumbnails and subtitles set in Studio with the text Chan approved
+data/profile/46-films.yaml, youtube/channel.yaml, youtube/videos.yaml, distribution/

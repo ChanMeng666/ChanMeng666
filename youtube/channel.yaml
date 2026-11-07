@@ -86,6 +86,18 @@ counts:
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # 2026-11-07: Chan uploaded and published three ArchLang films and their
+  # vertical cuts under their file names. Claude set the titles, descriptions,
+  # tags, Science & Technology, custom thumbnails (films), related videos
+  # (Shorts), English subtitles (plan to 3D, both cuts; altered or synthetic
+  # content Yes for the cloned voice) and the playlists the same day, with the
+  # text she approved in chat.
+  - { id: oCg3tBTlVvI, kind: film, published: "2026-11-07", duration: "3:17", title: "ArchLang, from plan to 3D — a floor plan that checks itself, then stands up | Product film", projectId: archlang, playlists: [Product films], described: true }
+  - { id: HfYH5PnbhrA, kind: film, published: "2026-11-07", duration: "0:33", title: "ArchLang — the drawing stands up: compiled floor plans rising into 3D | Product film", projectId: archlang, playlists: [Product films], described: true }
+  - { id: mTV9Cv4b354, kind: film, published: "2026-11-07", duration: "1:32", title: "ArchLang — one text file becomes a dimensioned plan, then rises into 3D | Product film", projectId: archlang, playlists: [Product films], described: true }
+  - { id: fBV-tr0gLuU, kind: short, published: "2026-11-07", duration: "0:32", title: "ArchLang, from plan to 3D — a floor plan that checks itself, then stands up #Shorts", projectId: archlang, playlists: [Product shorts], described: true, note: "9:16 cut of oCg3tBTlVvI" }
+  - { id: X6jjnmP9iXw, kind: short, published: "2026-11-07", duration: "0:33", title: "ArchLang — the drawing stands up: compiled floor plans rising into 3D #Shorts", projectId: archlang, playlists: [Product shorts], described: true, note: "9:16 cut of HfYH5PnbhrA" }
+  - { id: QiSU5E0QZYw, kind: short, published: "2026-11-07", duration: "0:26", title: "ArchLang — one text file becomes a dimensioned plan, then rises into 3D #Shorts", projectId: archlang, playlists: [Product shorts], described: true, note: "9:16 cut of mTV9Cv4b354" }
   # 2026-11-03: Chan had uploaded the ArchCanvas vertical cuts as drafts under
   # their file names (the 92-second film, feature shorts 1 and 2, «Zoom Out»;
   # also «Zoom Out» in 4:5 and 1:1). Claude filled title, description, not made

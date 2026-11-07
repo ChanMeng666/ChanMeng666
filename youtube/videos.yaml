@@ -9,17 +9,164 @@
 # be one day behind the Auckland date in channel.yaml. `views` never goes down.
 # =============================================================================
 
-asOf: '2026-11-03'
+asOf: '2026-11-07'
 counts:
-  videos: 78
-  shorts: 13
+  videos: 82
+  shorts: 17
 videos:
+  - id: oCg3tBTlVvI
+    tab: videos
+    title: ArchLang, from plan to 3D — a floor plan that checks itself, then stands up | Product film
+    uploadedUtc: '2026-11-07'
+    seconds: 197
+    views: 0
+    links:
+      - https://chatgpt.com/plugins/plugin_asdk_app_6acf8381cca08191bfb3eb7305fb6970
+      - https://archlang.uk/
+      - https://playground.archlang.uk
+      - https://github.com/ChanMeng666/archlang
+      - https://www.npmjs.com/package/@chanmeng666/archlang
+      - https://archcanvas.uk/
+      - https://github.com/ChanMeng666/film-archlang-2d-3d
+      - https://chanmeng.org/films
+      - https://chanmeng.org
+      - https://github.com/ChanMeng666
+    description: |-
+      ArchLang is a language for floor plans. You, or your AI, write the rooms, walls, doors and windows as plain text, and the compiler turns that text into a dimensioned drawing. It is free and open source (MIT), published to npm, and is the compiler engine behind ArchCanvas.
+
+      In this film one text file becomes a floor plan that checks itself, then a 3D preview. 45 lines give 4 rooms and 54 m² of floor, with every area computed from the walls. A bedroom with no door and a wardrobe in front of a window each come back with a code, the exact line and a suggested fix. Change one number and everything that depends on it follows; one command completes the sheet; the same file switches to a 3D preview and exports to SVG, DXF, PDF, PNG and GLB. Reachability and areas are measured, and the other checks are advice. These are concept plans to think and decide with, not permit drawings.
+
+      Every plan on screen was compiled by @chanmeng666/archlang 1.57.0, and every 3D frame comes from @chanmeng666/archlang-3d 0.4.0. The editor, terminal and agent windows are a coded replica built in Remotion, and they draw the real compiler output. The agent session is a labelled reenactment: every command and every line it prints is a real run of the pinned CLI. The voice-over is my own voice, made with an ElevenLabs voice clone, and English subtitles are available. Music: "Discover" by Eugenio Mininni via Mixkit. Sound effects: Mixkit and Kenney (CC0). ChatGPT, Claude and Visual Studio Code appear by name in plain text; their owners did not make or endorse this film.
+
+      Chapters
+      0:00 One text file, a plan, then 3D
+      0:11 A plan that looks right, and isn't
+      0:28 What ArchLang is
+      0:46 Exact numbers
+      1:02 Change one number
+      1:19 It checks itself
+      1:36 Finish the sheet, pick a look
+      1:48 Into 3D
+      2:15 Take it anywhere: SVG, DXF, PDF, PNG, GLB
+      2:28 Use it inside your AI
+      2:53 37 example plans
+      3:03 Concept plans, not permit drawings
+
+      I'm Chan Meng, an AI agent architect and full-stack engineer in Auckland, New Zealand.
+
+      Links
+      Try it in ChatGPT: https://chatgpt.com/plugins/plugin_asdk_app_6acf8381cca08191bfb3eb7305fb6970
+      ArchLang: https://archlang.uk/
+      Playground: https://playground.archlang.uk
+      Source: https://github.com/ChanMeng666/archlang
+      npm: https://www.npmjs.com/package/@chanmeng666/archlang
+      ArchCanvas: https://archcanvas.uk/
+      How this film was made: https://github.com/ChanMeng666/film-archlang-2d-3d
+      More films: https://chanmeng.org/films
+      Portfolio and CV: https://chanmeng.org
+      GitHub: https://github.com/ChanMeng666
+  - id: HfYH5PnbhrA
+    tab: videos
+    title: 'ArchLang — the drawing stands up: compiled floor plans rising into 3D | Product film'
+    uploadedUtc: '2026-11-07'
+    seconds: 32
+    views: 0
+    links:
+      - https://archlang.uk/
+      - https://playground.archlang.uk
+      - https://github.com/ChanMeng666/archlang
+      - https://www.npmjs.com/package/@chanmeng666/archlang
+      - https://archcanvas.uk/
+      - https://github.com/ChanMeng666/film-archlang-drawing-stands-up
+      - https://chanmeng.org/films
+      - https://chanmeng.org
+      - https://github.com/ChanMeng666
+    description: |-
+      ArchLang is a declarative language for floor plans, and it lets AI write them as code. You write a .arch file and the compiler turns it into a dimensioned drawing; archlang-3d turns the same file into a checked 3D GLB. It is open source, published to npm, and is the compiler engine behind ArchCanvas.
+
+      In this film a compiled floor plan stands up. The camera starts straight down on the sheet while its .arch source types itself in, and the walls rise out of the ink lines in the compiler's own build order. A courtyard house of 99 lines, 11 rooms and 163 m² lights up room by room at dusk, the camera cranes over 13 compiled buildings at night, and a two-storey villa separates into its layers. Every wall, door, window, room and piece of furniture comes from the compiler; Blender adds only camera, light, materials and motion, and invents no geometry. Music: "A New Life" by Eugenio Mininni via Mixkit. Sound effects: Mixkit and Kenney (CC0).
+
+      I'm Chan Meng, an AI agent architect and full-stack engineer in Auckland, New Zealand.
+
+      Links
+      ArchLang: https://archlang.uk/
+      Playground: https://playground.archlang.uk
+      Source: https://github.com/ChanMeng666/archlang
+      npm: https://www.npmjs.com/package/@chanmeng666/archlang
+      ArchCanvas: https://archcanvas.uk/
+      How this film was made: https://github.com/ChanMeng666/film-archlang-drawing-stands-up
+      More films: https://chanmeng.org/films
+      Portfolio and CV: https://chanmeng.org
+      GitHub: https://github.com/ChanMeng666
+  - id: mTV9Cv4b354
+    tab: videos
+    title: ArchLang — one text file becomes a dimensioned plan, then rises into 3D | Product film
+    uploadedUtc: '2026-11-07'
+    seconds: 91
+    views: 0
+    links:
+      - https://archlang.uk/
+      - https://playground.archlang.uk
+      - https://github.com/ChanMeng666/archlang
+      - https://www.npmjs.com/package/@chanmeng666/archlang
+      - https://archcanvas.uk/
+      - https://github.com/ChanMeng666/film-archlang-explainer-and-shorts
+      - https://chanmeng.org/films
+      - https://chanmeng.org
+      - https://github.com/ChanMeng666
+    description: |-
+      ArchLang is a declarative language for floor plans, and it lets AI write them as code. You write a .arch file and the compiler turns it into a dimensioned drawing. It is open source, published to npm, and is the compiler engine behind ArchCanvas.
+
+      This film walks through one .arch file in twelve chapters. It writes the source, compiles a dimensioned plan, restyles it with themes, describes it as data, lints it and catches a missing window, applies the fix, changes one COUNT so a loop writes the row, raises the walls in daylight 3D, exports SVG, DXF, PDF, PNG and GLB, and ends on the MCP agent interface. Every drawing and 3D frame on screen is real output of the ArchLang compiler and archlang-3d; a Python motion compositor and ffmpeg put the film together. Music: "Valley Sunset" by Alejandro Magaña via Mixkit. Sound effects: Kenney Interface Sounds (CC0) and Mixkit.
+
+      Chapters
+      0:00 A language for floor plans, written as text
+      0:17 Compile it, then restyle it
+      0:31 Describe and lint: facts, and a missing window
+      0:45 Fix it, then change one number
+      0:59 The plan draws itself in 3D
+      1:11 Five export formats, and the agent interface
+
+      I'm Chan Meng, an AI agent architect and full-stack engineer in Auckland, New Zealand.
+
+      Links
+      ArchLang: https://archlang.uk/
+      Playground: https://playground.archlang.uk
+      Source: https://github.com/ChanMeng666/archlang
+      npm: https://www.npmjs.com/package/@chanmeng666/archlang
+      ArchCanvas: https://archcanvas.uk/
+      How this film was made: https://github.com/ChanMeng666/film-archlang-explainer-and-shorts
+      More films: https://chanmeng.org/films
+      Portfolio and CV: https://chanmeng.org
+      GitHub: https://github.com/ChanMeng666
+  - id: HVRRvgif8cQ
+    tab: videos
+    title: 'ArchLang 1.36.0: a deterministic floor-plan compiler with an agent-facing diagnostic protocol'
+    uploadedUtc: '2026-11-06'
+    seconds: 287
+    views: 6
+    links:
+      - https://archlang.uk
+      - https://playground.archlang.uk
+    description: |-
+      A 4:47 tool demonstration of ArchLang 1.36.0, a deterministic floor-plan compiler.
+      The drawing is the easy part. This demo is about what the compiler tells the program that wrote the plan:
+      - catalogued diagnostics with byte spans and structured fixes
+      - a bounded fix loop with a postcondition
+      - display filters that never change the verdict
+      - determinism as a contract
+
+      Every tool frame is a real run of ArchLang 1.36.0: the CLI, the playground, the VS Code extension and the MCP server.
+
+      Co-authored with Claude Code agents under human direction.
+      Voice: ElevenLabs (elevenlabs.io)
+      ArchLang: https://archlang.uk · playground: https://playground.archlang.uk
   - id: O3vJu4MtpkU
     tab: videos
     title: ArchLang in ChatGPT — from one sentence to a checked floor plan | Product film
     uploadedUtc: '2026-11-01'
     seconds: 82
-    views: 4
+    views: 16
     links:
       - https://chatgpt.com/plugins/plugin_asdk_app_6acf8381cca08191bfb3eb7305fb6970
       - https://archlang.uk/
@@ -54,7 +201,7 @@ videos:
     title: Chan Meng — one orange pixel, from an empty frame to a full stop | Motion intro
     uploadedUtc: '2026-10-31'
     seconds: 53
-    views: 12
+    views: 15
     links:
       - https://github.com/ChanMeng666/film-chan-meng-intro
       - https://www.linkedin.com/in/chanmeng666/
@@ -79,7 +226,7 @@ videos:
     title: ArchLang — floor plans written as code, in one 32-second take | Product film
     uploadedUtc: '2026-10-23'
     seconds: 32
-    views: 19
+    views: 21
     links:
       - https://archlang.uk/
       - https://playground.archlang.uk
@@ -112,7 +259,7 @@ videos:
     title: 'a11y-loop — one full loop: plan, write, audit, fix, report | Product film'
     uploadedUtc: '2026-10-20'
     seconds: 64
-    views: 83
+    views: 84
     links:
       - https://github.com/ChanMeng666/a11y-loop
       - https://www.npmjs.com/package/a11y-loop
@@ -139,7 +286,7 @@ videos:
     title: ArchCanvas «Zoom Out» — one continuous zoom across the canvas | Product film
     uploadedUtc: '2026-10-19'
     seconds: 73
-    views: 5
+    views: 9
     links:
       - https://archcanvas.uk/
       - https://archlang.uk/
@@ -338,7 +485,7 @@ videos:
     title: ArchCanvas — the 92-second film | Product film
     uploadedUtc: '2026-10-19'
     seconds: 92
-    views: 18
+    views: 21
     links:
       - https://archcanvas.uk/
       - https://archlang.uk/
@@ -363,7 +510,7 @@ videos:
     title: echook — the first film, from when it was Claude Code Audio Hooks | Product film
     uploadedUtc: '2026-10-19'
     seconds: 89
-    views: 25
+    views: 26
     links:
       - https://github.com/ChanMeng666/echook
       - https://github.com/ChanMeng666/echook-promo-video
@@ -444,7 +591,7 @@ videos:
     title: 內亞海洋 · The Inner Asian Ocean｜劉仲敬史觀地圖紀錄片 · 世界 2
     uploadedUtc: '2026-10-17'
     seconds: 139
-    views: 26
+    views: 27
     links:
       - https://chanmeng.org/films
     description: |-
@@ -472,7 +619,7 @@ videos:
     title: 起火點 · Where the Fire Started｜劉仲敬史觀地圖紀錄片 · 世界 1
     uploadedUtc: '2026-10-17'
     seconds: 150
-    views: 108
+    views: 109
     links:
       - https://chanmeng.org/films
     description: |-
@@ -500,7 +647,7 @@ videos:
     title: 中間那一節 · The Missing Middle｜劉仲敬史觀地圖紀錄片 · 共和國 3
     uploadedUtc: '2026-10-17'
     seconds: 135
-    views: 16
+    views: 20
     links:
       - https://chanmeng.org/films
     description: |-
@@ -528,7 +675,7 @@ videos:
     title: 大禮包與無底洞 · Gift Box and Bottomless Pit｜劉仲敬史觀地圖紀錄片 · 共和國 2
     uploadedUtc: '2026-10-17'
     seconds: 135
-    views: 23
+    views: 25
     links:
       - https://chanmeng.org/films
     description: |-
@@ -556,7 +703,7 @@ videos:
     title: 支部 · The Branch｜劉仲敬史觀地圖紀錄片 · 共和國 1
     uploadedUtc: '2026-10-17'
     seconds: 150
-    views: 23
+    views: 26
     links:
       - https://chanmeng.org/films
     description: |-
@@ -584,7 +731,7 @@ videos:
     title: 諸夏發聲 · The Xia States Speak｜劉仲敬史觀地圖紀錄片 · 這片土地 4
     uploadedUtc: '2026-10-17'
     seconds: 162
-    views: 20
+    views: 24
     links:
       - https://chanmeng.org/films
     description: |-
@@ -640,7 +787,7 @@ videos:
     title: 秦政 · The Qin System｜劉仲敬史觀地圖紀錄片 · 這片土地 2
     uploadedUtc: '2026-10-17'
     seconds: 137
-    views: 20
+    views: 22
     links:
       - https://chanmeng.org/films
     description: |-
@@ -668,7 +815,7 @@ videos:
     title: 諸夏之黎明 · Dawn of the Xia States｜劉仲敬史觀地圖紀錄片 · 這片土地 1
     uploadedUtc: '2026-10-17'
     seconds: 133
-    views: 1453
+    views: 1454
     links:
       - https://chanmeng.org/films
     description: |-
@@ -721,7 +868,7 @@ videos:
     title: 宗族 · The Clan｜劉仲敬思想水彩動畫 13
     uploadedUtc: '2026-10-17'
     seconds: 162
-    views: 25
+    views: 27
     links:
       - https://chanmeng.org/films
     description: |-
@@ -746,7 +893,7 @@ videos:
     title: 梯子 · The Ladder｜劉仲敬思想水彩動畫 12
     uploadedUtc: '2026-10-17'
     seconds: 159
-    views: 17
+    views: 19
     links:
       - https://chanmeng.org/films
     description: |-
@@ -921,7 +1068,7 @@ videos:
     title: 散沙 · Scattered Sand｜劉仲敬思想水彩動畫 05
     uploadedUtc: '2026-10-17'
     seconds: 154
-    views: 7
+    views: 8
     links:
       - https://chanmeng.org/films
     description: |-
@@ -1021,7 +1168,7 @@ videos:
     title: 根 · Roots｜劉仲敬思想水彩動畫 01
     uploadedUtc: '2026-10-17'
     seconds: 106
-    views: 11
+    views: 13
     links:
       - https://chanmeng.org/films
     description: |-
@@ -1080,7 +1227,7 @@ videos:
     title: Chan Meng — who I am, what I've built, who vouches for me | All-in-one film
     uploadedUtc: '2026-10-15'
     seconds: 201
-    views: 47
+    views: 48
     links:
       - https://youtu.be/QC2fqBGp4Xg
       - https://youtu.be/qoYcFszDnHA
@@ -1154,7 +1301,7 @@ videos:
     title: Chan Meng — eleven projects, each playing in its own film | Showreel
     uploadedUtc: '2026-10-09'
     seconds: 113
-    views: 11
+    views: 12
     links:
       - https://youtu.be/QC2fqBGp4Xg
       - https://youtu.be/8n--dCv4tSQ
@@ -1181,7 +1328,7 @@ videos:
     title: 独身主义的咖啡 · A Coffee for One | Music video drawn entirely by code
     uploadedUtc: '2026-10-09'
     seconds: 252
-    views: 157
+    views: 166
     links:
       - https://github.com/lemomo-ai/lemo-opuscar
       - https://suno.com/song/842161e3-d695-4bb2-91aa-38fcab03df5d
@@ -1325,7 +1472,7 @@ videos:
     title: 反季 · Off Season | Music video drawn entirely by code
     uploadedUtc: '2026-10-08'
     seconds: 215
-    views: 78
+    views: 81
     links:
       - https://youtu.be/TCNJ5v6AoOw
       - https://youtu.be/al6Ybmsnn2A
@@ -1545,7 +1692,7 @@ videos:
     title: 锁芯的灰尘 · Dust in the Lock | Music video drawn entirely by code
     uploadedUtc: '2026-10-08'
     seconds: 175
-    views: 41
+    views: 42
     links:
       - https://youtu.be/TCNJ5v6AoOw
       - https://youtu.be/al6Ybmsnn2A
@@ -1600,7 +1747,7 @@ videos:
     title: 云端的梦游者 · Sleepwalker in the Clouds | Music video drawn entirely by code
     uploadedUtc: '2026-10-08'
     seconds: 306
-    views: 68
+    views: 70
     links:
       - https://youtu.be/TCNJ5v6AoOw
       - https://youtu.be/al6Ybmsnn2A
@@ -1878,7 +2025,7 @@ videos:
     title: AI Programming Education Platform — a bilingual course site with its own AI assistant | Product film
     uploadedUtc: '2026-10-06'
     seconds: 60
-    views: 5
+    views: 6
     links:
       - https://github.com/ChanMeng666/ai-programming-teaching-project
       - https://programming.chanmeng.org/
@@ -1948,7 +2095,7 @@ videos:
     title: ArchLang — a language that compiles to dimensioned floor plans | Product film
     uploadedUtc: '2026-10-06'
     seconds: 68
-    views: 39
+    views: 42
     links:
       - https://archlang.uk/
       - https://playground.archlang.uk
@@ -2003,7 +2150,7 @@ videos:
     title: GAVIGO IRE — Instant Reality Exchange | Product film
     uploadedUtc: '2026-10-06'
     seconds: 60
-    views: 9
+    views: 10
     links:
       - https://ire.gavigo.com/
       - https://gavigo.com/
@@ -2076,7 +2223,7 @@ videos:
     title: Chan Meng — AI Agent Architect & Full-Stack Engineer | 64-second intro
     uploadedUtc: '2026-09-29'
     seconds: 64
-    views: 146
+    views: 152
     links:
       - https://www.linkedin.com/in/chanmeng666/
       - https://chanmeng.org/films
@@ -2105,7 +2252,7 @@ videos:
     title: Closing Karakia - Chan Meng
     uploadedUtc: '2026-09-29'
     seconds: 21
-    views: 6
+    views: 7
     links: []
     description: 2025 11 04 14 02 28
   - id: PoAYhd0KI4c
@@ -2113,7 +2260,7 @@ videos:
     title: My logo learned to move | Chan Meng brand sting
     uploadedUtc: '2026-09-29'
     seconds: 12
-    views: 27
+    views: 32
     links:
       - https://p5js.org/
       - https://github.com/acamposuribe/p5.brush
@@ -2328,12 +2475,121 @@ videos:
       Links
       Portfolio and CV: https://chanmeng.org
       GitHub: https://github.com/ChanMeng666
+  - id: fBV-tr0gLuU
+    tab: shorts
+    title: 'ArchLang, from plan to 3D — a floor plan that checks itself, then stands up #Shorts'
+    uploadedUtc: '2026-11-07'
+    seconds: 32
+    views: 4
+    links:
+      - https://youtu.be/oCg3tBTlVvI
+      - https://playground.archlang.uk
+      - https://archlang.uk/
+      - https://github.com/ChanMeng666/archlang
+      - https://github.com/ChanMeng666/film-archlang-2d-3d
+      - https://chanmeng.org/films
+      - https://chanmeng.org
+      - https://github.com/ChanMeng666
+    description: |-
+      The 30-second vertical cut of ArchLang, from plan to 3D. One text file compiles to a dimensioned floor plan; when something is wrong you get a code, the exact line and a suggested fix; then the same file stands up as a 3D preview. Concept plans to think and decide with, not permit drawings. The full film is on this channel, in the Product films playlist. The voice-over is my own voice, made with an ElevenLabs voice clone. Music: "Discover" by Eugenio Mininni via Mixkit.
+
+      ArchLang is a language for floor plans. You, or your AI, write the rooms, walls, doors and windows as plain text, and the compiler turns that text into a dimensioned drawing. It is free and open source (MIT), published to npm, and is the compiler engine behind ArchCanvas.
+
+      I'm Chan Meng, an AI agent architect and full-stack engineer in Auckland, New Zealand. ArchLang and ArchCanvas are my own products.
+
+      Links
+      The full film: https://youtu.be/oCg3tBTlVvI
+      Playground: https://playground.archlang.uk
+      ArchLang: https://archlang.uk/
+      Source: https://github.com/ChanMeng666/archlang
+      How this film was made: https://github.com/ChanMeng666/film-archlang-2d-3d
+      More films: https://chanmeng.org/films
+      Portfolio and CV: https://chanmeng.org
+      GitHub: https://github.com/ChanMeng666
+  - id: X6jjnmP9iXw
+    tab: shorts
+    title: 'ArchLang — the drawing stands up: compiled floor plans rising into 3D #Shorts'
+    uploadedUtc: '2026-11-07'
+    seconds: 32
+    views: 4
+    links:
+      - https://youtu.be/HfYH5PnbhrA
+      - https://archlang.uk/
+      - https://playground.archlang.uk
+      - https://github.com/ChanMeng666/archlang
+      - https://github.com/ChanMeng666/film-archlang-drawing-stands-up
+      - https://chanmeng.org/films
+      - https://chanmeng.org
+      - https://github.com/ChanMeng666
+    description: |-
+      The vertical cut of The drawing stands up, re-framed shot by shot in Blender rather than cropped from the 16:9 film. A house of 99 lines of text compiles to a dimensioned plan, then the same file stands up in 3D: 13 buildings in this film, none drawn by hand. Every wall, door and window comes from the ArchLang compiler. The full film is on this channel, in the Product films playlist. Music: "A New Life" by Eugenio Mininni via Mixkit.
+
+      ArchLang is a declarative language for floor plans, and it lets AI write them as code. You write a .arch file and the compiler turns it into a dimensioned drawing. It is open source, published to npm, and is the compiler engine behind ArchCanvas.
+
+      I'm Chan Meng, an AI agent architect and full-stack engineer in Auckland, New Zealand. ArchLang and ArchCanvas are my own products.
+
+      Links
+      The full film: https://youtu.be/HfYH5PnbhrA
+      ArchLang: https://archlang.uk/
+      Playground: https://playground.archlang.uk
+      Source: https://github.com/ChanMeng666/archlang
+      How this film was made: https://github.com/ChanMeng666/film-archlang-drawing-stands-up
+      More films: https://chanmeng.org/films
+      Portfolio and CV: https://chanmeng.org
+      GitHub: https://github.com/ChanMeng666
+  - id: QiSU5E0QZYw
+    tab: shorts
+    title: 'ArchLang — one text file becomes a dimensioned plan, then rises into 3D #Shorts'
+    uploadedUtc: '2026-11-07'
+    seconds: 25
+    views: 1
+    links:
+      - https://youtu.be/mTV9Cv4b354
+      - https://archlang.uk/
+      - https://playground.archlang.uk
+      - https://github.com/ChanMeng666/archlang
+      - https://github.com/ChanMeng666/film-archlang-explainer-and-shorts
+      - https://chanmeng.org/films
+      - https://chanmeng.org
+      - https://github.com/ChanMeng666
+    description: |-
+      The vertical cut of the ArchLang explainer film: one .arch file is written, compiles to a dimensioned plan, and its walls rise in daylight 3D. Every drawing and 3D frame is real output of the ArchLang compiler and archlang-3d. The full 91-second film is on this channel, in the Product films playlist. Music: "Valley Sunset" by Alejandro Magaña via Mixkit.
+
+      ArchLang is a declarative language for floor plans, and it lets AI write them as code. You write a .arch file and the compiler turns it into a dimensioned drawing. It is open source, published to npm, and is the compiler engine behind ArchCanvas.
+
+      I'm Chan Meng, an AI agent architect and full-stack engineer in Auckland, New Zealand. ArchLang and ArchCanvas are my own products.
+
+      Links
+      The full film: https://youtu.be/mTV9Cv4b354
+      ArchLang: https://archlang.uk/
+      Playground: https://playground.archlang.uk
+      Source: https://github.com/ChanMeng666/archlang
+      How this film was made: https://github.com/ChanMeng666/film-archlang-explainer-and-shorts
+      More films: https://chanmeng.org/films
+      Portfolio and CV: https://chanmeng.org
+      GitHub: https://github.com/ChanMeng666
+  - id: S1iHLvz4V_Q
+    tab: shorts
+    title: The third bedroom has no window (and the bathroom is through it)
+    uploadedUtc: '2026-11-04'
+    seconds: 92
+    views: 112
+    links:
+      - https://playground.archlang.uk/#z=lZVBb9swDIXv_hVEelmBNpXtuE0H7NLDMGA77j4osRwJlaVAoutsQ__7QEmuHSfpttzi8H165KOcK_guBWjlUZkdKAMerVPC33G3lZqb3R1K5erbjaidte3yJ2_1R-CA0gkxPIVGc4ReWi-yKwgCGH7yCj1sBPZCGEApYMNRAjd1-CK51jfQK5RgLNgOvaoF9FzrZbbX3MCihCdRw2fNcQG_M4DOELBtM4CdUzVULAMw1qGEbp8B1Kr1wDu0YF-E41pnGUBwoupPWr1Qm8ARPrAbdg3x49UvAauKscOKMQaab4SGxbdQvKCCzgsPUTyhPSvcSmHAqZ3EW9ukiogr2Qz3NVYvEi2JJziaBR0WzZH0-s3cA5nLi5H2hWu9iO4DjsQT1kbU-ciqiimrLBg7lKuR9ZSiyheRlaI7xpUDjuSJGHAFNVqUp7jyMo5WYIqj9qa4PJ_gOMpppyQ-tlYMrGpurbzQaXFijVbOQ-NsG8gexAGFU9aRIdhzhwqVNUDGaA0B7F6Yt8VOydNaj8FerklpvdJu1tY6sCY8W4ZVol62wqBw0KsaJTwyBr6PFxTtoA7CAR6Wh9AheY6wZiy245E7TKD1MYhq3wOVBKqqfwKVc1DUEyhceITqnKOHGSiGe9FR8R-tFTTdXpna9jTfOP4l2n1S5GvGzlVo0QzQvJqVpHCnlGJWQkM9YqxOC4oU9KQiA2g6ZxR2TlAJvYvTCLfSOkC7vw3URndexv1-pKvyGPCjtrbdRosfIyIfEBuLaNsTCjV5oGv3PqaYYWIHf-Wkif3wyjwTaXhpjm1NGWvGDvczgkf7Is5ITwzcnxFvbRcu0ql8PgZSp5UY5Y1T9e7c4ZeGEDxUswak7aOF9N933j6lOQ-z385lc9srxg4P84nZhpPu7Y3zXvxFkc59zf4A
+      - https://archlang.uk
+    description: |-
+      A made-up chat between two friends flat hunting. The floor plan is real: written in ArchLang, an open-source language for floor plans, and every problem in the chat comes from its checker (10 warnings on this plan).
+
+      Open the exact plan: https://playground.archlang.uk/#z=lZVBb9swDIXv_hVEelmBNpXtuE0H7NLDMGA77j4osRwJlaVAoutsQ__7QEmuHSfpttzi8H165KOcK_guBWjlUZkdKAMerVPC33G3lZqb3R1K5erbjaidte3yJ2_1R-CA0gkxPIVGc4ReWi-yKwgCGH7yCj1sBPZCGEApYMNRAjd1-CK51jfQK5RgLNgOvaoF9FzrZbbX3MCihCdRw2fNcQG_M4DOELBtM4CdUzVULAMw1qGEbp8B1Kr1wDu0YF-E41pnGUBwoupPWr1Qm8ARPrAbdg3x49UvAauKscOKMQaab4SGxbdQvKCCzgsPUTyhPSvcSmHAqZ3EW9ukiogr2Qz3NVYvEi2JJziaBR0WzZH0-s3cA5nLi5H2hWu9iO4DjsQT1kbU-ciqiimrLBg7lKuR9ZSiyheRlaI7xpUDjuSJGHAFNVqUp7jyMo5WYIqj9qa4PJ_gOMpppyQ-tlYMrGpurbzQaXFijVbOQ-NsG8gexAGFU9aRIdhzhwqVNUDGaA0B7F6Yt8VOydNaj8FerklpvdJu1tY6sCY8W4ZVol62wqBw0KsaJTwyBr6PFxTtoA7CAR6Wh9AheY6wZiy245E7TKD1MYhq3wOVBKqqfwKVc1DUEyhceITqnKOHGSiGe9FR8R-tFTTdXpna9jTfOP4l2n1S5GvGzlVo0QzQvJqVpHCnlGJWQkM9YqxOC4oU9KQiA2g6ZxR2TlAJvYvTCLfSOkC7vw3URndexv1-pKvyGPCjtrbdRosfIyIfEBuLaNsTCjV5oGv3PqaYYWIHf-Wkif3wyjwTaXhpjm1NGWvGDvczgkf7Is5ITwzcnxFvbRcu0ql8PgZSp5UY5Y1T9e7c4ZeGEDxUswak7aOF9N933j6lOQ-z385lc9srxg4P84nZhpPu7Y3zXvxFkc59zf4A
+      ArchLang: https://archlang.uk
+
+      #Shorts #FloorPlan #FlatHunting
   - id: H_XkqGZRkt0
     tab: shorts
     title: 'ArchCanvas «Zoom Out» — one continuous zoom across the canvas #Shorts'
     uploadedUtc: '2026-11-03'
     seconds: 73
-    views: 0
+    views: 21
     links:
       - https://youtu.be/KuCYju-jY0w
       - https://archcanvas.uk/
@@ -2362,7 +2618,7 @@ videos:
     title: 'ArchCanvas — The check #Shorts'
     uploadedUtc: '2026-11-03'
     seconds: 26
-    views: 1
+    views: 14
     links:
       - https://youtu.be/4grKmyUPwMk
       - https://youtu.be/MB4eGPWtgNo
@@ -2393,7 +2649,7 @@ videos:
     title: 'ArchCanvas — Talk to your plan #Shorts'
     uploadedUtc: '2026-11-03'
     seconds: 29
-    views: 0
+    views: 13
     links:
       - https://youtu.be/omcd23TWvd0
       - https://youtu.be/MB4eGPWtgNo
@@ -2424,7 +2680,7 @@ videos:
     title: 'ArchCanvas — the 92-second film #Shorts'
     uploadedUtc: '2026-11-03'
     seconds: 92
-    views: 0
+    views: 10
     links:
       - https://youtu.be/MB4eGPWtgNo
       - https://archcanvas.uk/
@@ -2451,7 +2707,7 @@ videos:
     title: TechNest Community turns two — a message from its AI instructor | Anniversary message
     uploadedUtc: '2026-11-02'
     seconds: 92
-    views: 18
+    views: 22
     links:
       - https://www.technestcommunity.com/
       - https://programming.chanmeng.org/
@@ -2501,7 +2757,7 @@ videos:
     title: 'AI Programming Education Platform — a bilingual course site with its own AI assistant #Shorts'
     uploadedUtc: '2026-10-07'
     seconds: 30
-    views: 78
+    views: 80
     links:
       - https://youtu.be/DKCzZCQTQgA
       - https://programming.chanmeng.org/
@@ -2593,7 +2849,7 @@ videos:
     title: 'GAVIGO IRE — Instant Reality Exchange #Shorts'
     uploadedUtc: '2026-10-07'
     seconds: 30
-    views: 20
+    views: 22
     links:
       - https://youtu.be/qoTYuK0Xdsk
       - https://ire.gavigo.com/

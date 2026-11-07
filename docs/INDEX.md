@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 123 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 377 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 380 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -33,7 +33,7 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/30-recognition.yaml` | 1872 | awards (7), certificates (53), publications (77) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
 | `data/profile/45-showcase.yaml` | 457 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
-| `data/profile/46-films.yaml` | 648 | filmCollections (8), films (73) | FILMS — every finished film Chan has made, one row per film … |
+| `data/profile/46-films.yaml` | 654 | filmCollections (8), films (73) | FILMS — every finished film Chan has made, one row per film … |
 | `data/profile/47-agent-skills.yaml` | 494 | agentSkills (30) | AGENT SKILLS — every agent skill Chan has made, one row per repo or product … |
 | `data/profile/50-references.yaml` | 577 | references (27) | REFERENCES — testimonials & recommendations … |
 | `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |

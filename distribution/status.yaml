@@ -7,14 +7,14 @@ registersAsOf:
   linkedin: '2026-11-02'
   linkedin-page: '2026-11-01'
 summary:
-  films: 70
-  complete: 62
+  films: 73
+  complete: 65
   cells:
-    published: 164
+    published: 167
     planned: 13
     gap: 1
     skipped: 2
-    not-planned: 240
+    not-planned: 255
   byPlatform:
     youtube:
       published: 68
@@ -25,7 +25,7 @@ summary:
       planned: 0
       gap: 1
     site:
-      published: 68
+      published: 71
       planned: 0
       gap: 0
     linkedin:
@@ -899,6 +899,69 @@ films:
               likes: 1
               replies: 1
         outsidePolicy: true
+      linkedin-page:
+        state: not-planned
+    reason: One film on show per product; earlier and alternative versions are on chanmeng.org/films only
+    complete: true
+  - film: archlang-explainer-film
+    title: ArchLang explainer film
+    kind: product-film
+    for: ArchLang
+    policy: earlier-version
+    platforms:
+      youtube:
+        state: not-planned
+      youtube-short:
+        state: not-planned
+      site:
+        state: published
+        url: https://chanmeng.org/films
+      linkedin:
+        state: not-planned
+      x:
+        state: not-planned
+      linkedin-page:
+        state: not-planned
+    reason: One film on show per product; earlier and alternative versions are on chanmeng.org/films only
+    complete: true
+  - film: archlang-drawing-stands-up
+    title: 'ArchLang: The drawing stands up'
+    kind: product-film
+    for: ArchLang
+    policy: earlier-version
+    platforms:
+      youtube:
+        state: not-planned
+      youtube-short:
+        state: not-planned
+      site:
+        state: published
+        url: https://chanmeng.org/films
+      linkedin:
+        state: not-planned
+      x:
+        state: not-planned
+      linkedin-page:
+        state: not-planned
+    reason: One film on show per product; earlier and alternative versions are on chanmeng.org/films only
+    complete: true
+  - film: archlang-plan-to-3d
+    title: ArchLang, from plan to 3D
+    kind: product-film
+    for: ArchLang
+    policy: earlier-version
+    platforms:
+      youtube:
+        state: not-planned
+      youtube-short:
+        state: not-planned
+      site:
+        state: published
+        url: https://chanmeng.org/films
+      linkedin:
+        state: not-planned
+      x:
+        state: not-planned
       linkedin-page:
         state: not-planned
     reason: One film on show per product; earlier and alternative versions are on chanmeng.org/films only

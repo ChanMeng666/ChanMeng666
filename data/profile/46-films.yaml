@@ -407,8 +407,8 @@ films:
     media: { poster: /media/films/archlang-one-take-32s.jpg, mp4: /media/films/archlang-one-take-32s.mp4 }
     onFilmsPage: true
 
-  # Finished, not shipped yet: no upload, no media on the site. An alternative
-  # ArchLang film; the film on show remains the ArchLang in ChatGPT film.
+  # On /films (Chan, 2026-11-07); not on YouTube yet. An alternative ArchLang
+  # film; the film on show remains the ArchLang in ChatGPT film.
   - id: archlang-explainer-film
     kind: product-film
     primary: false
@@ -422,11 +422,11 @@ films:
     cuts: ["91 s", "27 s wow cutdown", "28.5 s agent cutdown", "25 s 9:16"]
     madeWith: "Python motion compositor, ffmpeg, real compiler and archlang-3d output"
     summary: A twelve-chapter walkthrough of one .arch file. It writes the source, compiles a dimensioned plan, shows themes, describe, lint, a missing-window fix, a parametric COUNT change, walls rising in daylight 3D, export to SVG, DXF, PDF, PNG and GLB, and the MCP agent interface. Every drawing and model on screen is real compiler and official archlang-3d output; shorter 16:9 and 9:16 cuts come from the same session.
-    onFilmsPage: false
-    notShownReason: Finished on 2026-11-06; its media is not on the site yet.
+    media: { poster: /media/films/archlang-explainer-91s.jpg, mp4: /media/films/archlang-explainer-91s.mp4 }
+    onFilmsPage: true
 
-  # Finished, not shipped yet: no upload, no media on the site. An alternative
-  # ArchLang film; the film on show remains the ArchLang in ChatGPT film.
+  # On /films (Chan, 2026-11-07); not on YouTube yet. An alternative ArchLang
+  # film; the film on show remains the ArchLang in ChatGPT film.
   - id: archlang-drawing-stands-up
     kind: product-film
     primary: false
@@ -440,11 +440,11 @@ films:
     cuts: ["32 s 16:9", "32 s 9:16", "12 s code to form"]
     madeWith: "Blender (EEVEE), real compiler and archlang3d output"
     summary: A compiled floor plan stands up in 3D. The camera starts on the sheet while its .arch source types itself, the walls rise in the compiler's build order, a courtyard house lights room by room at dusk, thirteen compiled buildings form a city, and a villa separates into its layers. Every wall, door, window and piece of furniture comes from the compiler; Blender adds only camera, light, materials and motion. Five stills in 16:9, 9:16 and 1:1 come with it.
-    onFilmsPage: false
-    notShownReason: Finished on 2026-11-07; its media is not on the site yet.
+    media: { poster: /media/films/archlang-drawing-stands-up-32s.jpg, mp4: /media/films/archlang-drawing-stands-up-32s.mp4 }
+    onFilmsPage: true
 
-  # Finished, not shipped yet: no upload, no media on the site. An alternative
-  # ArchLang film; the film on show remains the ArchLang in ChatGPT film.
+  # On /films (Chan, 2026-11-07); not on YouTube yet. An alternative ArchLang
+  # film; the film on show remains the ArchLang in ChatGPT film.
   - id: archlang-plan-to-3d
     kind: product-film
     primary: false
@@ -458,8 +458,8 @@ films:
     cuts: ["196 s", "30 s 16:9", "30 s 9:16"]
     madeWith: "Remotion, real compiler and archlang-3d output, ElevenLabs voice-over in Chan's cloned voice"
     summary: A feature explainer in English with subtitles. One .arch text file becomes a dimensioned floor plan that checks itself, then a 3D preview; one scene is a labelled reenactment of an agent session whose every command and output is a real run of the pinned CLI.
-    onFilmsPage: false
-    notShownReason: Finished on 2026-11-07; its media is not on the site yet.
+    media: { poster: /media/films/archlang-plan-to-3d-196s.jpg, mp4: /media/films/archlang-plan-to-3d-196s.mp4 }
+    onFilmsPage: true
 
   # NOT ON /films (Chan): made to accompany the ArchLang paper (never name the venue); unlisted on YouTube, id in youtube/channel.private.yaml. See show:.
   - id: archlang-demo

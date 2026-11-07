@@ -1,11 +1,11 @@
 {
   "source": "data/profile/46-films.yaml",
   "counts": {
-    "films": 68,
-    "productFilms": 22,
+    "films": 71,
+    "productFilms": 25,
     "musicVideos": 15,
     "explainers": 25,
-    "minutes": 158
+    "minutes": 163
   },
   "productFilms": [
     {
@@ -319,6 +319,64 @@
         "media": {
           "poster": "/media/films/archlang-one-take-32s.jpg",
           "mp4": "/media/films/archlang-one-take-32s.mp4"
+        }
+      },
+      {
+        "id": "archlang-explainer-film",
+        "title": "ArchLang explainer film",
+        "for": "ArchLang",
+        "date": "2026-11",
+        "seconds": 91,
+        "duration": "1:31",
+        "cuts": [
+          "91 s",
+          "27 s wow cutdown",
+          "28.5 s agent cutdown",
+          "25 s 9:16"
+        ],
+        "madeWith": "Python motion compositor, ffmpeg, real compiler and archlang-3d output",
+        "summary": "A twelve-chapter walkthrough of one .arch file. It writes the source, compiles a dimensioned plan, shows themes, describe, lint, a missing-window fix, a parametric COUNT change, walls rising in daylight 3D, export to SVG, DXF, PDF, PNG and GLB, and the MCP agent interface. Every drawing and model on screen is real compiler and official archlang-3d output; shorter 16:9 and 9:16 cuts come from the same session.",
+        "media": {
+          "poster": "/media/films/archlang-explainer-91s.jpg",
+          "mp4": "/media/films/archlang-explainer-91s.mp4"
+        }
+      },
+      {
+        "id": "archlang-drawing-stands-up",
+        "title": "ArchLang: The drawing stands up",
+        "for": "ArchLang",
+        "date": "2026-11",
+        "seconds": 32,
+        "duration": "0:32",
+        "cuts": [
+          "32 s 16:9",
+          "32 s 9:16",
+          "12 s code to form"
+        ],
+        "madeWith": "Blender (EEVEE), real compiler and archlang3d output",
+        "summary": "A compiled floor plan stands up in 3D. The camera starts on the sheet while its .arch source types itself, the walls rise in the compiler's build order, a courtyard house lights room by room at dusk, thirteen compiled buildings form a city, and a villa separates into its layers. Every wall, door, window and piece of furniture comes from the compiler; Blender adds only camera, light, materials and motion. Five stills in 16:9, 9:16 and 1:1 come with it.",
+        "media": {
+          "poster": "/media/films/archlang-drawing-stands-up-32s.jpg",
+          "mp4": "/media/films/archlang-drawing-stands-up-32s.mp4"
+        }
+      },
+      {
+        "id": "archlang-plan-to-3d",
+        "title": "ArchLang, from plan to 3D",
+        "for": "ArchLang",
+        "date": "2026-11",
+        "seconds": 196,
+        "duration": "3:16",
+        "cuts": [
+          "196 s",
+          "30 s 16:9",
+          "30 s 9:16"
+        ],
+        "madeWith": "Remotion, real compiler and archlang-3d output, ElevenLabs voice-over in Chan's cloned voice",
+        "summary": "A feature explainer in English with subtitles. One .arch text file becomes a dimensioned floor plan that checks itself, then a 3D preview; one scene is a labelled reenactment of an agent session whose every command and output is a real run of the pinned CLI.",
+        "media": {
+          "poster": "/media/films/archlang-plan-to-3d-196s.jpg",
+          "mp4": "/media/films/archlang-plan-to-3d-196s.mp4"
         }
       }
     ],

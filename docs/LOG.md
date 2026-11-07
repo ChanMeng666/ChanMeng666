@@ -369,3 +369,6 @@ data/profile/47-agent-skills.yaml, .claude/skills/*/SKILL.md
 
 ## [2026-11-07] add | Two public ArchLang film repos recorded: `film-archlang-drawing-stands-up` (renamed from `archlang-cinematic` under the film repo naming rule) and `film-archlang-2d-3d`; five listing-submission forks of 2026-11-06 recorded as not her projects; not yet on chanmeng.org/films or YouTube
 docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-archcanvas.yaml, docs/ecosystem/archlang-archcanvas.md, data/profile/46-films.yaml, docs/film-masters.md, docs/STATE.md
+
+## [2026-11-07] display | Three ArchLang films on chanmeng.org/films: `archlang-explainer-film`, `archlang-drawing-stands-up`, `archlang-plan-to-3d` (720p MP4 on R2); not on YouTube yet. Fork `awesome-ai-plugins` deleted after its PR merged
+data/profile/46-films.yaml, docs/ecosystem/lineage.yaml

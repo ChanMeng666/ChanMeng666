@@ -391,5 +391,5 @@ data/profile/46-films.yaml, docs/STATE.md
 ## [2026-11-10] add | Guest episode of Women of the Island (小岛的女人们, YouTube Zxd1W4E0SUk) in publications[], first in the README hero line, now six names (Chan); project women-of-the-island-episode-kit for the two private repos made for it; new uploads to her channel recorded in the private YouTube register
 data/profile/30-recognition.yaml, data/profile/23-projects-oss-more.yaml, templates/partials/hero.hbs, scripts/build.mjs, .claude/rules/data-profile.md, docs/STATE.md
 
-## [2026-11-10] display | Women of the Island episode: blog post on chanmeng.org (2d-portfolio 30a4b43), posted on LinkedIn (post and first comment) and X with the text Chan approved that day
+## [2026-11-10] display | Women of the Island episode: blog post on chanmeng.org (2d-portfolio 30a4b43), posted on X with the text Chan approved that day. On LinkedIn Claude first posted it as text with the link in a first comment; Chan replaced that by hand with a share from the YouTube video (link card, same text without the link line)
 docs/STATE.md

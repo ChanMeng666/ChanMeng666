@@ -80,8 +80,8 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 
 | Rendered to | MB | On GitHub |
 |---|---|---|
-| `renders/hero-16x9.mp4` | 12 | release `v1.0` › `hero-16x9.mp4` |
-| `renders/hero-9x16.mp4` | 10 | release `v1.0` › `hero-9x16.mp4` |
+| `renders/hero-16x9.mp4` | 12 | release `v1.1` › `hero-16x9.mp4` |
+| `renders/hero-9x16.mp4` | 9 | release `v1.1` › `hero-9x16.mp4` |
 | `renders/s1-talk-to-your-plan-16x9.mp4` | 2 | release `v1.0` › `s1-talk-to-your-plan-16x9.mp4` |
 | `renders/s1-talk-to-your-plan-9x16.mp4` | 2 | release `v1.0` › `s1-talk-to-your-plan-9x16.mp4` |
 | `renders/s2-the-check-16x9.mp4` | 1 | release `v1.0` › `s2-the-check-16x9.mp4` |
@@ -92,8 +92,8 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 | `renders/s4-tweaks-9x16.mp4` | 2 | release `v1.0` › `s4-tweaks-9x16.mp4` |
 | `renders/s5-grounded-rendering-16x9.mp4` | 2 | release `v1.0` › `s5-grounded-rendering-16x9.mp4` |
 | `renders/s5-grounded-rendering-9x16.mp4` | 2 | release `v1.0` › `s5-grounded-rendering-9x16.mp4` |
-| `renders/s6-pay-per-result-16x9.mp4` | 1 | release `v1.0` › `s6-pay-per-result-16x9.mp4` |
-| `renders/s6-pay-per-result-9x16.mp4` | 1 | release `v1.0` › `s6-pay-per-result-9x16.mp4` |
+| `renders/s6-pay-per-result-16x9.mp4` | 1 | release `v1.1` › `s6-pay-per-result-16x9.mp4` |
+| `renders/s6-pay-per-result-9x16.mp4` | 1 | release `v1.1` › `s6-pay-per-result-9x16.mp4` |
 
 ## ChanMeng666/film-archlang-narrated-demo (private)
 

@@ -802,10 +802,34 @@ publications:
   # Chan was the subject. These rank highest for GEO third-party-brand-mention
   # multiplier (~6.5x per Airops 2026).
   # ============================================================================
-  # The README hero's "Featured in" line shows the first five press, interview
+  # The README hero's "Featured in" line shows the first six press, interview
   # and podcast entries in file order (five since 2026-10-13, when Chan added
-  # DataCamp without dropping any of the four already there). The evidence for
-  # this entry is on the project: projects[google-news-mcp].meta.x_brand.reach.
+  # DataCamp without dropping any of the four already there; six since
+  # 2026-11-10, when she put Women of the Island first and kept all five).
+  # Added 2026-11-10. A guest episode, published by the show on its own YouTube
+  # channel (@WomenOfTheIsland) on 2026-11-08. Chan asked on 2026-11-10 for it
+  # to be promoted: her own shows are discontinued, guest episodes are not.
+  # Chan made the episode's own cuts and the show's brand kit (project
+  # women-of-the-island-episode-kit); the published 22-minute episode is the show's edit.
+  # First in this list on Chan's call (2026-11-10), so it leads the hero line.
+  - id: women-of-the-island-chan-meng
+    name: "小岛的女人们 (Women of the Island) — 从豆瓣网红到 AI Native：一个极简主义者对 AI 时代创作的思考"
+    tier: secondary
+    recency: recent
+    publisher: 小岛的女人们 (Women of the Island)
+    releaseDate: "2026-11-08"
+    url: https://www.youtube.com/watch?v=Zxd1W4E0SUk
+    summary: |
+      Guest episode (22 minutes, in Chinese) of Women of the Island, a
+      podcast about women living in New Zealand. Host Gong Xiaoyu (龚小鱼)
+      talks with Chan about minimalism, order in daily life and personal
+      choice, and about whether we still need to make things ourselves
+      when AI can write code, animate and edit video. Recorded on
+      2026-10-01 at One Tree Hill (Cornwall Park), Auckland, after an
+      online pre-interview on 2026-09-26.
+    meta: { x_brand: { type: podcastEpisode } }
+
+  # The evidence for this entry is on the project: projects[google-news-mcp].meta.x_brand.reach.
   - id: datacamp-top-mcp-servers
     name: "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026"
     tier: secondary

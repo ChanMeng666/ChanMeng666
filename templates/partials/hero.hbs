@@ -34,7 +34,7 @@
 
 {{#if _engagementAvailability}}**{{_engagementAvailability.current}}**{{#if _engagementAvailability.cta.primary}} <a href="{{_engagementAvailability.cta.primary.url}}">{{pill _engagementAvailability.cta.primary.label}}</a>{{/if}}
 
-{{/if}}{{#if _mediaAppearances.length}}<sub>Featured in {{#each (slice _mediaAppearances 0 5)}}[{{publisher}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
+{{/if}}{{#if _mediaAppearances.length}}<sub>Featured in {{#each (slice _mediaAppearances 0 6)}}[{{publisher}}]({{url}}){{#unless @last}} &nbsp;·&nbsp; {{/unless}}{{/each}}.</sub>
 {{/if}}
 
 <p>

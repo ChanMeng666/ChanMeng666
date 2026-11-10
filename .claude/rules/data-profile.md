@@ -57,7 +57,7 @@ The two polymorphic references found on 2026-10-16 are fixed: `organizations[lin
 
 | Surface | Default (key absent) | Where it is decided |
 |---|---|---|
-| `readme` | Projects: shown when in a `90-meta.yaml` display bucket, or as a sub-project link through a shown parent's `relatedProjectIds`. Organisations: in the band when the `logo` file exists. Collaborators: when `publicListing` is not false. Films: the film wall takes every primary product film, brand and event film and music video. Publications: the hero shows the first five press, interview and podcast-episode entries | `90-meta.yaml` buckets, `scripts/build.mjs`, `scripts/build-readme-art.mjs` |
+| `readme` | Projects: shown when in a `90-meta.yaml` display bucket, or as a sub-project link through a shown parent's `relatedProjectIds`. Organisations: in the band when the `logo` file exists. Collaborators: when `publicListing` is not false. Films: the film wall takes every primary product film, brand and event film and music video. Publications: the hero shows the first six press, interview and podcast-episode entries | `90-meta.yaml` buckets, `scripts/build.mjs`, `scripts/build-readme-art.mjs` |
 | `site` | Not shown unless the 2d-portfolio repo's own source names it (hand-written pages). Films: shown on /films when `onFilmsPage: true`. Blog posts (`content/*.mdx`) are a dated record and outside `show.site` (`docs/STATE.md`, Chan, 2026-10-16) | `2d-portfolio/src/data/*`; `dist/films.json` (`scripts/build-films-data.mjs`) |
 | `cv` | Not shown unless written into the hand-curated CV sources | `cv/sections/*.typ`, `cv/extended.typ`, `cv/chan-meng-cv-ats.typ` |
 | `linkedin` | Not shown unless written into the `linkedin:` copy | `70-linkedin.yaml` → `linkedin/linkedin-*.md` |

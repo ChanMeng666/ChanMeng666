@@ -4060,3 +4060,43 @@ projects:
       myRole: |
         Concept and the realism rule are mine; built with Claude Code.
         Used for my own marketing videos; not shown publicly.
+
+  # Added 2026-11-10: two private repos created 2026-11-09 for Chan's guest
+  # episode of the podcast Women of the Island (publications[]
+  # women-of-the-island-chan-meng). Recorded only, shown nowhere, like her other
+  # private workspaces (2026-11-10, pending Chan's word). See show:.
+  # repoUrl omitted — both repositories are private (ChanMeng666/women-of-the-island,
+  # ChanMeng666/women-of-the-island-brand); do not re-add.
+  - id: women-of-the-island-episode-kit
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
+    provenance: personal
+    tier: secondary
+    recency: active
+    name: "Women of the Island — episode post-production and brand kit"
+    priority: 116
+    category: creative
+    tagline: "The edited cuts, full transcripts and brand kit for Chan's guest episode of the Chinese podcast Women of the Island (小岛的女人们), every piece rebuilt from code."
+    roles: ["Video Producer", "Brand Designer", "Creative Coder"]
+    techStack: ["Python", "Remotion", "FunASR", "faster-whisper", "OpenCV", "ffmpeg", "SVG", "Claude Code"]
+    keywords:
+      - "Podcast post-production"
+      - "Scripted video editing"
+      - "Speech recognition"
+      - "Brand design system"
+    status: active
+    startDate: "2026-11"
+    publicSummary: |
+      Two private repositories made for Chan's guest episode of Women of
+      the Island, a Chinese-language podcast about women living in New
+      Zealand. The post-production repo turns two raw recordings into
+      subtitled cuts with a scripted pipeline: FunASR Paraformer with
+      speaker diarisation, proofreading passes, face tracking, an EDL and
+      audio mix built in Python, and Remotion for the picture. It holds an
+      8:23 episode cut (Beauty in Emptiness, 以空为美) in a first and a
+      brand edition, a 15-minute edit of the 2 h 36 min pre-interview, and
+      full speaker-labelled transcripts of both recordings. The brand repo
+      is the show's "Crayon Island" design system, built from its
+      hand-drawn logo: colours sampled from the logo and checked against
+      WCAG 2.2 AA, the logo vectorised into cubic Béziers, CSS-animated SVG
+      motion and covers. The episode the show published is its own
+      22-minute edit.

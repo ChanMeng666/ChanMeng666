@@ -163,6 +163,14 @@ const NARROW_TERMS = {
     { term: "Decoding the Future podcast", kind: "name" },
     { term: "0PDYYnZhKwV7PdWHeK7nbj", kind: "name" },
   ],
+  // The guest episode publications/women-of-the-island-chan-meng is shown
+  // (README hero, Chan 2026-11-10) under the show's name; the hidden project is
+  // the private post-production and brand kit behind it, so match only its id
+  // and its own wording.
+  "projects/women-of-the-island-episode-kit": [
+    { term: "women-of-the-island-episode-kit", kind: "id" },
+    { term: "episode post-production and brand kit", kind: "name" },
+  ],
 };
 const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 function termRe({ term, kind }) {

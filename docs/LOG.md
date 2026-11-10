@@ -387,3 +387,9 @@ data/profile/45-showcase.yaml, data/profile/46-films.yaml, docs/ecosystem/lineag
 
 ## [2026-11-08] display | ArchLang narrated demo (`archlang-demo`) on chanmeng.org/films (Chan): 720p MP4 on R2; its repo stays private
 data/profile/46-films.yaml, docs/STATE.md
+
+## [2026-11-10] add | Guest episode of Women of the Island (小岛的女人们, YouTube Zxd1W4E0SUk) in publications[], first in the README hero line, now six names (Chan); project women-of-the-island-episode-kit for the two private repos made for it; new uploads to her channel recorded in the private YouTube register
+data/profile/30-recognition.yaml, data/profile/23-projects-oss-more.yaml, templates/partials/hero.hbs, scripts/build.mjs, .claude/rules/data-profile.md, docs/STATE.md
+
+## [2026-11-10] display | Women of the Island episode: blog post on chanmeng.org (2d-portfolio 30a4b43), posted on LinkedIn (post and first comment) and X with the text Chan approved that day
+docs/STATE.md

@@ -494,7 +494,7 @@ data._certsByCategory = ["microsoft", "other", "hackerrank"]
   }));
 
 // Media Appearances — only third-party press / interviews / podcast episodes
-// where Chan is the SUBJECT (hero.hbs renders the first 4 as a "Featured in"
+// where Chan is the SUBJECT (hero.hbs renders the first 6 as a "Featured in"
 // row). Deliberately excludes everything Chan authored or hosts: the ~46
 // `type: article` entries (those go to _writingFeatured below), the 4
 // podcastShow entries, and the 2 newsletter entries. None of those three

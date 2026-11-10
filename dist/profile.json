@@ -9427,6 +9427,51 @@
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "women-of-the-island-episode-kit",
+      "show": {
+        "readme": false,
+        "site": false,
+        "cv": false,
+        "linkedin": false,
+        "llms": false
+      },
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "active",
+      "name": "Women of the Island — episode post-production and brand kit",
+      "priority": 116,
+      "category": "creative",
+      "tagline": "The edited cuts, full transcripts and brand kit for Chan's guest episode of the Chinese podcast Women of the Island (小岛的女人们), every piece rebuilt from code.",
+      "roles": [
+        "Video Producer",
+        "Brand Designer",
+        "Creative Coder"
+      ],
+      "techStack": [
+        "Python",
+        "Remotion",
+        "FunASR",
+        "faster-whisper",
+        "OpenCV",
+        "ffmpeg",
+        "SVG",
+        "Claude Code"
+      ],
+      "keywords": [
+        "Podcast post-production",
+        "Scripted video editing",
+        "Speech recognition",
+        "Brand design system"
+      ],
+      "status": "active",
+      "startDate": "2026-11",
+      "publicSummary": "Two private repositories made for Chan's guest episode of Women of\nthe Island, a Chinese-language podcast about women living in New\nZealand. The post-production repo turns two raw recordings into\nsubtitled cuts with a scripted pipeline: FunASR Paraformer with\nspeaker diarisation, proofreading passes, face tracking, an EDL and\naudio mix built in Python, and Remotion for the picture. It holds an\n8:23 episode cut (Beauty in Emptiness, 以空为美) in a first and a\nbrand edition, a 15-minute edit of the 2 h 36 min pre-interview, and\nfull speaker-labelled transcripts of both recordings. The brand repo\nis the show's \"Crayon Island\" design system, built from its\nhand-drawn logo: colours sampled from the logo and checked against\nWCAG 2.2 AA, the logo vectorised into cubic Béziers, CSS-animated SVG\nmotion and covers. The episode the show published is its own\n22-minute edit.\n",
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -10654,6 +10699,21 @@
     }
   ],
   "publications": [
+    {
+      "id": "women-of-the-island-chan-meng",
+      "name": "小岛的女人们 (Women of the Island) — 从豆瓣网红到 AI Native：一个极简主义者对 AI 时代创作的思考",
+      "tier": "secondary",
+      "recency": "recent",
+      "publisher": "小岛的女人们 (Women of the Island)",
+      "releaseDate": "2026-11-08",
+      "url": "https://www.youtube.com/watch?v=Zxd1W4E0SUk",
+      "summary": "Guest episode (22 minutes, in Chinese) of Women of the Island, a\npodcast about women living in New Zealand. Host Gong Xiaoyu (龚小鱼)\ntalks with Chan about minimalism, order in daily life and personal\nchoice, and about whether we still need to make things ourselves\nwhen AI can write code, animate and edit video. Recorded on\n2026-10-01 at One Tree Hill (Cornwall Park), Auckland, after an\nonline pre-interview on 2026-09-26.\n",
+      "meta": {
+        "x_brand": {
+          "type": "podcastEpisode"
+        }
+      }
+    },
     {
       "id": "datacamp-top-mcp-servers",
       "name": "Top 10 MCP Servers & Clients for AI Workflow Automation in 2026",
@@ -17894,6 +17954,6 @@
     "version": "v1.0.0",
     "lastModified": "2026-11-10",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-10T00:32:00.169Z"
+    "buildTimestamp": "2026-11-10T04:05:12.673Z"
   }
 }

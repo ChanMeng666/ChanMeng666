@@ -393,3 +393,6 @@ data/profile/30-recognition.yaml, data/profile/23-projects-oss-more.yaml, templa
 
 ## [2026-11-10] display | Women of the Island episode: blog post on chanmeng.org (2d-portfolio 30a4b43), posted on X with the text Chan approved that day. On LinkedIn Claude first posted it as text with the link in a first comment; Chan replaced that by hand with a share from the YouTube video (link card, same text without the link line)
 docs/STATE.md
+
+## [2026-11-10] fact | LinkedIn followers raised to 6,735 (live, register sync), historical-maximum rule: shard, two-page CV header, brand-system page, chanmeng.org showcase stat; CVs rebuilt and synced to the site (PREVIEW_V 28)
+data/profile/00-basics.yaml, cv/sections/header.typ, templates/brand-system.html.hbs

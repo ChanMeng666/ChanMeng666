@@ -35,35 +35,36 @@
 # =============================================================================
 
 account: linkedin.com/company/archcanvas
-asOf: "2026-11-01"
+asOf: "2026-11-10"
 source: linkedin.com web client, signed in as chanmeng666; the ArchCanvas page read with linkedin/capture/snippet.js
 summary:
-  posts: 11
+  posts: 12
   reposts: 0
-  byKind: { post: 11 }
+  byKind: { post: 12 }
   firstPost: "2026-07-23"
-  lastPost: "2026-10-31"
-  daysSinceLastPost: 1
-  cadence: { last30Days: 2, last90Days: 9, last365Days: 11 }
-  engagement: { reactions: 12, comments: 6, reposts: 6, medianReactions: 1, postsWithComments: 4 }
-  length: { medianChars: 562, longestChars: 1086 }
+  lastPost: "2026-11-10"
+  daysSinceLastPost: 0
+  cadence: { last30Days: 3, last90Days: 10, last365Days: 12 }
+  engagement: { reactions: 12, comments: 7, reposts: 6, medianReactions: 1, postsWithComments: 5 }
+  length: { medianChars: 554, longestChars: 1086 }
   byFormat:
     image: { posts: 7, reactions: 10, comments: 4, medianReactions: 1 }
-    video: { posts: 4, reactions: 2, comments: 2, medianReactions: 1 }
+    video: { posts: 5, reactions: 2, comments: 3, medianReactions: 0 }
   byYear:
-    "2026": { posts: 11, reactions: 12, comments: 6, medianReactions: 1 }
+    "2026": { posts: 12, reactions: 12, comments: 7, medianReactions: 1 }
   byMonth:
+    2026-11: { posts: 1, reactions: 0, comments: 1 }
     2026-10: { posts: 2, reactions: 1, comments: 1 }
     2026-09: { posts: 6, reactions: 6, comments: 1 }
     2026-08: { posts: 1, reactions: 1, comments: 0 }
     2026-07: { posts: 2, reactions: 4, comments: 4 }
   byTopic:
     launch: { posts: 10, reactions: 11, comments: 6, medianReactions: 1 }
-    build-log: { posts: 1, reactions: 1, comments: 0, medianReactions: 1 }
+    build-log: { posts: 2, reactions: 1, comments: 1, medianReactions: 1 }
   byProject:
-    archcanvas: { posts: 10, reactions: 11, comments: 6 }
+    archcanvas: { posts: 11, reactions: 11, comments: 7 }
     archlang: { posts: 1, reactions: 1, comments: 0 }
-  topHashtags: { "#ArchCanvas": 9, "#FloorPlans": 9, "#SelfBuild": 4, "#HomeDesign": 2, "#SmallSpaces": 1, "#GardenOffice": 1, "#Architecture": 1 }
+  topHashtags: { "#ArchCanvas": 10, "#FloorPlans": 10, "#SelfBuild": 4, "#HomeDesign": 2, "#CAD": 1, "#SmallSpaces": 1, "#GardenOffice": 1, "#Architecture": 1 }
   topMentions: {}
   resharedAuthors: {}
   repostedAuthors: {}
@@ -77,9 +78,10 @@ summary:
     - {id: "7509068305861672961", posted: "2026-09-25", format: video, reactions: 1, comments: 0, reposts: 0, opens: "Getting a first plan is the easy half. This minute is mostly about the other half: changi…"}
     - {id: "7507675519014879232", posted: "2026-09-21", format: video, reactions: 1, comments: 1, reposts: 1, opens: "Two minutes, one house, start to finish."}
     - {id: "7498167518084386816", posted: "2026-08-26", format: image, reactions: 1, comments: 0, reposts: 1, opens: Curved walls are where a lot of drawing software quietly cheats. You get a many-sided pol…}
-    - {id: "7522121480231555072", posted: "2026-10-31", format: video, reactions: 0, comments: 1, reposts: 1, opens: Type the house you want. A measured floor plan comes back.}
+    - {id: "7525713346122125312", posted: "2026-11-10", format: video, reactions: 0, comments: 1, reposts: 0, opens: "A plan you keep exports to DXF, PDF and SVG. The second half of this clip is LibreCAD, a …"}
   flagged: []
 posts:
+  - {id: "7525713346122125312", posted: "2026-11-10", kind: post, format: video, reactions: 0, comments: 1, reposts: 0, chars: 312, projectIds: [archcanvas], topic: build-log, opens: "A plan you keep exports to DXF, PDF and SVG. The second half of this clip is LibreCAD, a free CAD program, op…"}
   - {id: "7522121480231555072", posted: "2026-10-31", kind: post, format: video, reactions: 0, comments: 1, reposts: 1, chars: 156, projectIds: [archcanvas], topic: launch, opens: Type the house you want. A measured floor plan comes back.}
   - {id: "7515328777204314113", posted: "2026-10-12", kind: post, format: image, images: 3, reactions: 1, comments: 0, reposts: 0, chars: 619, projectIds: [archcanvas], topic: launch, opens: 𝗧𝘄𝗼 𝗳𝗹𝗼𝗼𝗿𝘀. 𝗢𝗻𝗲 𝗺𝗲𝗮𝘀𝘂𝗿𝗲𝗱 𝘀𝗵𝗲𝗲𝘁 𝗳𝗼𝗿 𝗲𝗮𝗰𝗵.}
   - {id: "7510152646956089344", posted: "2026-09-28", kind: post, format: image, images: 3, reactions: 1, comments: 0, reposts: 0, chars: 423, projectIds: [archcanvas], topic: launch, opens: The whole flat is 6 metres by 7.6.}

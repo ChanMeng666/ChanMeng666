@@ -316,8 +316,15 @@ meta:
     # Same kind of writing (original dated-capture investigation), fresher
     # evidence; the range across the five stays intact. The predecessor is
     # still fully catalogued and still reaches the LLM surfaces via _writingAll.
+    #
+    # 2026-11-12: the table now opens with the newest posts, picked by date and
+    # not by hand (_writingLatest in scripts/build.mjs, from
+    # blog/capture/latest.json), so a post published on chanmeng.org reaches the
+    # README on the next daily CI build. latestArticleCount sets how many; 0
+    # turns the automatic rows off. The five below stay the curated picks.
+    latestArticleCount: 3
     featuredArticleIds:
-      - suno-public-mp3-closed                 # sequel to the trending-feed dig; fresher dated evidence
+      - suno-public-mp3-closed                # sequel to the trending-feed dig; fresher dated evidence
       - claude-code-audio-hooks-architecture   # system designed for an AI operator
       - copilotkit-langgraph-hitl              # the failed-approaches write-up
       - stripe-cloudflare-workers-integration  # payments on an edge runtime

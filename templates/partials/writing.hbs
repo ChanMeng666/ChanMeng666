@@ -1,6 +1,10 @@
 {{!-- ═══════════════════════════════════════════════════════════════════════
-     Writing — curated subset of the self-hosted articles at chanmeng.org/blog.
-     Driven by meta.x_brand.featuredArticleIds (blog slugs; a typo fails the
+     Writing — the newest posts on chanmeng.org/blog, then a curated subset.
+     _writingLatest is automatic: the newest meta.x_brand.latestArticleCount
+     posts (default 3) not already featured, from the publications entries
+     plus blog/capture/latest.json, so a post published on the site appears
+     here on the next CI build with no hand edit.
+     The curated rows are driven by meta.x_brand.featuredArticleIds (blog slugs; a typo fails the
      build in scripts/build.mjs, same policy as spotlightProjectIds).
      The full catalogue reaches LLM consumers via _writingAll in llms.txt /
      llms-full.txt, so trimming this list never hides an article from them.
@@ -16,7 +20,13 @@
     <col style="width:110px">
     <col>
   </colgroup>
-{{#each _writingFeatured}}  <tr>
+{{#if _writingLatest.length}}  <tr><td colspan="2"><sub><b>LATEST</b></sub></td></tr>
+{{#each _writingLatest}}  <tr>
+    <td valign="top"><sub>{{formatDate releaseDate}}</sub></td>
+    <td><strong><a href="{{url}}">{{name}}</a></strong>{{#if summary}}<br><sub>{{firstSentences (flatten summary) 1}}</sub>{{/if}}</td>
+  </tr>
+{{/each}}  <tr><td colspan="2"><sub><b>SELECTED</b></sub></td></tr>
+{{/if}}{{#each _writingFeatured}}  <tr>
     <td valign="top"><sub>{{formatDate releaseDate}}</sub></td>
     <td><strong><a href="{{url}}">{{name}}</a></strong>{{#if summary}}<br><sub>{{firstSentences (flatten summary) 1}}</sub>{{/if}}</td>
   </tr>

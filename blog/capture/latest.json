@@ -1,0 +1,643 @@
+{
+  "source": "https://chanmeng.org/blog/feed.xml",
+  "capturedAt": "2026-11-12T04:03:07.307Z",
+  "posts": [
+    {
+      "slug": "women-of-the-island-podcast",
+      "title": "On Women of the Island: Minimalism and Making Things in the Age of AI",
+      "url": "https://chanmeng.org/blog/women-of-the-island-podcast",
+      "publishedAt": "2026-11-10",
+      "summary": "I was a guest on Women of the Island (小岛的女人们), a Chinese-language podcast about women living in New Zealand. We talked about minimalism, and about whether we still need to make things ourselves when AI can write code, animate and edit video.",
+      "tags": [
+        "Minimalism",
+        "Career"
+      ]
+    },
+    {
+      "slug": "claude-code-notification-sound",
+      "title": "How to Get a Sound or Notification When Claude Code Finishes",
+      "url": "https://chanmeng.org/blog/claude-code-notification-sound",
+      "publishedAt": "2026-11-04",
+      "summary": "Two ways to hear when Claude Code, Cursor or Codex stops or asks for permission: a five-line hook you write yourself, and echook, the open-source tool I built when the five-line version stopped being enough.",
+      "tags": [
+        "Claude Code",
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "personal-site-geo-case-study",
+      "title": "An AI Agent Found Me: What a Personal Site Needs for Generative Search",
+      "url": "https://chanmeng.org/blog/personal-site-geo-case-study",
+      "publishedAt": "2026-11-04",
+      "summary": "A founder asked Claude Code to find an AI architect and it named me. What the site does for AI readers, what a SERP study later showed it was still missing, and the fixes: a name in the title, sameAs, Search Console and independent sources.",
+      "tags": [
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "archlang-one-take-promo-film",
+      "title": "Making a One-Take 3D Promo Film with three.js, Blender and Real Instrument Samples",
+      "url": "https://chanmeng.org/blog/archlang-one-take-promo-film",
+      "publishedAt": "2026-10-28",
+      "summary": "How a 32-second, single-shot promo film for archlang was built: archlang code compiled to a plan, a Blender-built 3D house, one three.js html file where every frame is a pure function of time, a score mixed from CC0 instrument samples on the same beat table, verified sync, and a frame-by-frame render with simulated motion blur. Plus how I ran the whole project with an AI desktop assistant.",
+      "tags": [
+        "Frontend",
+        "Open Source",
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "iphone-restore-error-1109-windows-11",
+      "title": "A New iPhone Stuck at 1%: Error 1109, Apple Devices on Windows 11, and the iTunes Workaround",
+      "url": "https://chanmeng.org/blog/iphone-restore-error-1109-windows-11",
+      "publishedAt": "2026-10-23",
+      "summary": "A brand-new iPhone 17e got stuck on the Apple logo at 1% when I updated it through the Apple Devices app on Windows 11. The log showed error 1109, a failed WKMS key fetch, and the restore-mode USB network interface failing to start. Reinstalling with classic iTunes fixed it in 14 minutes.",
+      "tags": [
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "agent-friendly-organisational-knowledge-base",
+      "title": "An Agent-Friendly Knowledge Base for an Organisation: From Slack Exports to a Role-Gated Repo",
+      "url": "https://chanmeng.org/blog/agent-friendly-organisational-knowledge-base",
+      "publishedAt": "2026-10-16",
+      "summary": "A method for turning an organisation's Slack and platform exports into a private, role-gated repo that coding agents can read, cite and maintain without leaking data or obeying chat text.",
+      "tags": [
+        "AI Engineering",
+        "Claude Code"
+      ]
+    },
+    {
+      "slug": "animated-svg-project-cards",
+      "title": "Animated SVG Project Cards for a GitHub README: A Field Guide",
+      "url": "https://chanmeng.org/blog/animated-svg-project-cards",
+      "publishedAt": "2026-10-07",
+      "summary": "How to build a self-contained animated SVG that plays inside a GitHub README and shows a product doing its job: glyph-subset text, build-time evidence, shared keyframes, an interface redrawn in vectors, the product's own design system, and how to verify it.",
+      "tags": [
+        "Frontend",
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "suno-public-mp3-closed",
+      "title": "Suno Closed Its Public MP3. The Only Audio Left Won't Identify Itself.",
+      "url": "https://chanmeng.org/blog/suno-public-mp3-closed",
+      "publishedAt": "2026-09-18",
+      "summary": "In August every Suno song advertised two audio files: the familiar public MP3 and a second one I fetched, examined and could not identify. Three weeks later the MP3 is gone for every client I tried, and the manifest lists one entry. Here is the dated record from daily captures, what I got wrong along the way, and where I stopped.",
+      "tags": [
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "suno-trending-feed-frozen",
+      "title": "The Explore Feed That Froze",
+      "url": "https://chanmeng.org/blog/suno-trending-feed-frozen",
+      "publishedAt": "2026-07-18",
+      "summary": "Suno's public /api/trending endpoint has returned the same 49 songs, all created in mid-September 2024, for roughly 22 months. This is the evidence from 84 consecutive daily automated captures, and what it says about the platform.",
+      "tags": [
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "neon-auth-email-verification",
+      "title": "Neon Auth Email Verification & Password Reset",
+      "url": "https://chanmeng.org/blog/neon-auth-email-verification",
+      "publishedAt": "2026-07-14",
+      "summary": "Wiring Neon Auth's email-OTP verification and password-reset flows into a React + TypeScript frontend — the part Neon's dashboard enables but does not document, covering the type gap, the form state machine, and gating on emailVerified.",
+      "tags": [
+        "Integrations",
+        "Frontend"
+      ]
+    },
+    {
+      "slug": "npm-oidc-trusted-publishing",
+      "title": "Tokenless npm Publishing for AI Agents: The OIDC Trusted-Publishing Playbook",
+      "url": "https://chanmeng.org/blog/npm-oidc-trusted-publishing",
+      "publishedAt": "2026-07-12",
+      "summary": "How to let a coding agent own the whole npm release lifecycle — version, tag, publish, verify — with no stored token and no 2FA prompt on any publish, using npm's trusted publishing over GitHub Actions OIDC.",
+      "tags": [
+        "DevOps",
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "neon-auth-flask-integration",
+      "title": "Neon Auth + Flask Integration Guide",
+      "url": "https://chanmeng.org/blog/neon-auth-flask-integration",
+      "publishedAt": "2026-07-10",
+      "summary": "Integrating Neon Auth (Better Auth) with a Flask backend: session-token handling when the token is not a JWT, multi-tenant post-auth routing, and the pitfalls hit during a production deployment.",
+      "tags": [
+        "Integrations"
+      ]
+    },
+    {
+      "slug": "stripe-cloudflare-workers-integration",
+      "title": "Stripe Payments + Cloudflare Workers Integration",
+      "url": "https://chanmeng.org/blog/stripe-cloudflare-workers-integration",
+      "publishedAt": "2026-07-07",
+      "summary": "Running Stripe checkout, subscriptions, webhooks, and the billing portal in a Next.js app deployed to Cloudflare Workers via OpenNext — including the server-side Stripe client changes Workers forces and the two-layer environment-variable setup.",
+      "tags": [
+        "Integrations",
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "railway-to-digitalocean-migration",
+      "title": "Migration Guide: Railway to DigitalOcean + Coolify",
+      "url": "https://chanmeng.org/blog/railway-to-digitalocean-migration",
+      "publishedAt": "2026-07-03",
+      "summary": "A complete record of moving a two-container Dockerized app (Next.js + LangGraph agent) off Railway onto a DigitalOcean droplet running Coolify, written as a reusable playbook: DNS and SSL, lessons learned, and a troubleshooting reference.",
+      "tags": [
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "claude-code-audio-hooks-architecture",
+      "title": "Claude Code Audio Hooks: System Architecture",
+      "url": "https://chanmeng.org/blog/claude-code-audio-hooks-architecture",
+      "publishedAt": "2026-06-30",
+      "summary": "The architecture of claude-code-audio-hooks — an event-driven notification system designed to be operated by an AI agent rather than a human: no interactive prompts, NDJSON logs, and single-shot config.",
+      "tags": [
+        "Claude Code",
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "notion-api-integration-guide",
+      "title": "Notion API Integration Guide",
+      "url": "https://chanmeng.org/blog/notion-api-integration-guide",
+      "publishedAt": "2026-06-26",
+      "summary": "How to use a Notion database as the backend for a community FAQ with voting and view analytics: schema, API routes, client-side implementation, caching, and a graceful fallback when Notion is unavailable.",
+      "tags": [
+        "Integrations"
+      ]
+    },
+    {
+      "slug": "telegram-remote-claude-code",
+      "title": "Driving Claude Code From Your Phone Over Telegram",
+      "url": "https://chanmeng.org/blog/telegram-remote-claude-code",
+      "publishedAt": "2026-06-25",
+      "summary": "Send a message from Telegram, have Claude Code execute it against the real files on your desktop, and get the result back on your phone — using Anthropic's official Channels plugin. Setup, the three rules that keep it working, and the silent failure that costs the most time.",
+      "tags": [
+        "Claude Code",
+        "Integrations"
+      ]
+    },
+    {
+      "slug": "upgrading-powershell-without-killing-claude-code",
+      "title": "Upgrading PowerShell 7 Without Killing Your Claude Code Session",
+      "url": "https://chanmeng.org/blog/upgrading-powershell-without-killing-claude-code",
+      "publishedAt": "2026-06-24",
+      "summary": "Installing a PowerShell 7 update from inside a Claude Code session force-closes the session, and opening a second terminal does not help. Why Windows Restart Manager does this, and three ways around it.",
+      "tags": [
+        "Claude Code",
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "generative-engine-optimization-strategy",
+      "title": "Generative Engine Optimization (GEO) Strategy",
+      "url": "https://chanmeng.org/blog/generative-engine-optimization-strategy",
+      "publishedAt": "2026-06-23",
+      "summary": "The GEO strategy I designed for a static portfolio site — an audit of what AI answer engines could and couldn't see, then llms.txt and crawler infrastructure, page-level directives, structured data, and a plan for measuring any of it. Design, not results.",
+      "tags": [
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "svg-animation-generation",
+      "title": "SVG Animation Generation: Capsule-Render Integration",
+      "url": "https://chanmeng.org/blog/svg-animation-generation",
+      "publishedAt": "2026-06-19",
+      "summary": "Techniques borrowed from capsule-render and rebuilt into Chromaflow's SVG generator: CSS-based text animation types, additional background styles, and the API surface that exposes them.",
+      "tags": [
+        "Frontend",
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "claude-code-skip-permission-confirmation",
+      "title": "Claude Code Skip Permission Confirmation",
+      "url": "https://chanmeng.org/blog/claude-code-skip-permission-confirmation",
+      "publishedAt": "2026-06-16",
+      "summary": "The options for reducing Claude Code's permission prompts — the per-session flags, fine-grained pre-authorisation in settings.json, and what a global bypass actually turns off.",
+      "tags": [
+        "Claude Code"
+      ]
+    },
+    {
+      "slug": "canvas-game-mobile-optimization",
+      "title": "Making a Canvas Game Playable on Phones",
+      "url": "https://chanmeng.org/blog/canvas-game-mobile-optimization",
+      "publishedAt": "2026-06-11",
+      "summary": "Three things a desktop-built Canvas game needs before it works on a phone: a canvas that picks its resolution from the screen, touch coordinates corrected for canvas scaling, and a particle budget that scales down with the device.",
+      "tags": [
+        "Frontend"
+      ]
+    },
+    {
+      "slug": "youtube-github-actions-automation",
+      "title": "Automating a YouTube Video Showcase in a Profile README",
+      "url": "https://chanmeng.org/blog/youtube-github-actions-automation",
+      "publishedAt": "2026-06-09",
+      "summary": "A GitHub Actions workflow that regenerates the video cards in a profile README on a schedule, so the showcase never goes stale: channel ID, marker comments, card options, and the permission settings that trip people up.",
+      "tags": [
+        "DevOps",
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "vercel-blob-upload-debugging",
+      "title": "Four Bugs in One Vercel Blob Integration — Including a Firewall",
+      "url": "https://chanmeng.org/blog/vercel-blob-upload-debugging",
+      "publishedAt": "2026-05-24",
+      "summary": "Adding image uploads to a Next.js comment system produced four distinct bugs across several deploys, including one that only reproduces from mainland China. What the documented happy path leaves out, and why server-side put() beat the SDK's recommended client upload.",
+      "tags": [
+        "Integrations",
+        "Frontend"
+      ]
+    },
+    {
+      "slug": "aws-ses-bulk-email-setup",
+      "title": "The Developer's Guide: Configuring AWS SES for Bulk Email",
+      "url": "https://chanmeng.org/blog/aws-ses-bulk-email-setup",
+      "publishedAt": "2026-01-16",
+      "summary": "Setting up bulk email sending on Amazon SES with Cloudflare DNS: creating the identity and DKIM records, configuring a custom MAIL FROM domain, obtaining SMTP credentials, and exiting the SES sandbox for production access.",
+      "tags": [
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "copilotkit-langgraph-hitl",
+      "title": "CopilotKit + LangGraph.js HITL Integration Guide",
+      "url": "https://chanmeng.org/blog/copilotkit-langgraph-hitl",
+      "publishedAt": "2026-01-15",
+      "summary": "A field report on wiring human-in-the-loop approval flows between CopilotKit and LangGraph.js, including the snake_case/camelCase tool-call-id mismatch that breaks them, the approaches that failed, and the working solution.",
+      "tags": [
+        "AI Engineering",
+        "Integrations"
+      ]
+    },
+    {
+      "slug": "docusaurus-navbar-styling",
+      "title": "Docusaurus Navbar Styling Guide: Lessons Learned",
+      "url": "https://chanmeng.org/blog/docusaurus-navbar-styling",
+      "publishedAt": "2026-01-15",
+      "summary": "A debugging record: a single backdrop-filter CSS property broke mobile sidebar navigation on a Docusaurus 3.8.1 site. Covers the root-cause analysis, the git bisect that found it, the fix, and the navbar and sidebar styles restored around it.",
+      "tags": [
+        "Docusaurus"
+      ]
+    },
+    {
+      "slug": "ai-conversation-implementation",
+      "title": "AI Conversation Implementation Tutorial",
+      "url": "https://chanmeng.org/blog/ai-conversation-implementation",
+      "publishedAt": "2025-11-24",
+      "summary": "Two working approaches to AI voice conversation compared side by side: sequential record-then-respond, and the OpenAI Realtime API with streaming. Covers the architecture of each, a comparison matrix, and setup guides for both.",
+      "tags": [
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "nextjs-google-fonts-fix",
+      "title": "Fixing Google Fonts in Next.js 13+: A Pixel-Perfect Guide",
+      "url": "https://chanmeng.org/blog/nextjs-google-fonts-fix",
+      "publishedAt": "2025-10-30",
+      "summary": "Why CSS @import fails to load Google Fonts in Next.js 13+ and what to use instead: next/font/google in the root layout, font variables applied to the html element, and CSS updated to consume them.",
+      "tags": [
+        "Frontend"
+      ]
+    },
+    {
+      "slug": "ai-fluency-framework",
+      "title": "The AI Fluency Framework",
+      "url": "https://chanmeng.org/blog/ai-fluency-framework",
+      "publishedAt": "2025-10-09",
+      "summary": "A walkthrough of the 4D framework for working well with AI — Delegation, Description, Discernment, Diligence — together with the three modes of human-AI interaction, prompt-engineering techniques, and where generative AI currently falls short.",
+      "tags": [
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "small-language-models-next-wave-ai-agents",
+      "title": "The Future is Small: Why Small Language Models (SLMs) Are Powering the Next Wave of AI Agents",
+      "url": "https://chanmeng.org/blog/small-language-models-next-wave-ai-agents",
+      "publishedAt": "2025-08-26",
+      "summary": "The argument that small language models, not frontier LLMs, will power most agentic AI: why SLMs suit the narrow repetitive calls agents actually make, the shift already underway, and how existing agents could be converted.",
+      "tags": [
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "linear-brand-secrets",
+      "title": "Steal these Brand Secrets from Linear's CEO",
+      "url": "https://chanmeng.org/blog/linear-brand-secrets",
+      "publishedAt": "2025-08-10",
+      "summary": "Four brand-building lessons from Linear co-founder and CEO Karri Saarinen: be authentic rather than polished, speak your customer's language, let the brand evolve, and differentiate through design and detail.",
+      "tags": [
+        "Career"
+      ]
+    },
+    {
+      "slug": "ai-chatbot-website-integration",
+      "title": "AI Chatbot Integration Guide for Website",
+      "url": "https://chanmeng.org/blog/ai-chatbot-website-integration",
+      "publishedAt": "2025-08-01",
+      "summary": "How an AI chatbot was integrated into the She Sharp non-profit website — component structure, the streaming API route, preset questions and chat-history persistence — plus the TypeScript and UX problems hit along the way.",
+      "tags": [
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "docusaurus-notion-pdf-download-form",
+      "title": "Building a PDF Download Form with Notion Integration in Docusaurus",
+      "url": "https://chanmeng.org/blog/docusaurus-notion-pdf-download-form",
+      "publishedAt": "2025-05-28",
+      "summary": "Building a gated PDF download form in Docusaurus that stores submissions in a Notion database — working through five challenges covering the Docusaurus API route system, CORS, the dev API server, the Notion integration, and local/production parity.",
+      "tags": [
+        "Docusaurus"
+      ]
+    },
+    {
+      "slug": "docusaurus-internationalization",
+      "title": "Implementing Internationalization in a Docusaurus Website",
+      "url": "https://chanmeng.org/blog/docusaurus-internationalization",
+      "publishedAt": "2025-05-14",
+      "summary": "Getting Chinese/English switching working on a Docusaurus showcase page: the two standard i18n approaches that did not work, the file structure that did, and the translation-loading and debugging problems met on the way.",
+      "tags": [
+        "Docusaurus"
+      ]
+    },
+    {
+      "slug": "docusaurus-algolia-docsearch",
+      "title": "Setting Up Algolia DocSearch in Docusaurus",
+      "url": "https://chanmeng.org/blog/docusaurus-algolia-docsearch",
+      "publishedAt": "2025-05-09",
+      "summary": "Setting up Algolia DocSearch on a Docusaurus site: signing up, configuring docusaurus.config, verifying domain ownership, creating and running the crawler, and troubleshooting empty indexes and broken result links.",
+      "tags": [
+        "Docusaurus"
+      ]
+    },
+    {
+      "slug": "getting-started-with-minimalism",
+      "title": "Getting Started with Minimalism — A Beginner's Guide",
+      "url": "https://chanmeng.org/blog/getting-started-with-minimalism",
+      "publishedAt": "2025-04-23",
+      "summary": "A beginner's guide to minimalist living: the mindset to start from, the first declutter, the one-in-one-out rule, and honest handling of the usual sticking points — sentimental items, just-in-case items, and guilt about waste.",
+      "tags": [
+        "Minimalism"
+      ]
+    },
+    {
+      "slug": "digital-minimalism",
+      "title": "Digital Minimalism - Technology as a Tool, Not a Master",
+      "url": "https://chanmeng.org/blog/digital-minimalism",
+      "publishedAt": "2025-04-20",
+      "summary": "Exploring how to create a more intentional relationship with technology through digital minimalism principles and practical implementation strategies.",
+      "tags": [
+        "Minimalism"
+      ]
+    },
+    {
+      "slug": "minimalist-living-space",
+      "title": "Creating a Minimalist Living Space — Lessons from The Art of Discarding",
+      "url": "https://chanmeng.org/blog/minimalist-living-space",
+      "publishedAt": "2025-04-20",
+      "summary": "Ideas from Yamashita Eiko's The Art of Discarding applied to a home: the philosophy of letting go, the three-space principle, mindful selection over indiscriminate discarding, and how to keep the balance once you have it.",
+      "tags": [
+        "Minimalism"
+      ]
+    },
+    {
+      "slug": "from-code-to-care-un",
+      "title": "From Code to Care: How My AI Solution for Women’s Workplace Health Made It to the United Nations",
+      "url": "https://chanmeng.org/blog/from-code-to-care-un",
+      "publishedAt": "2025-04-16",
+      "summary": "How “Sani”, an AI health assistant for women’s workplace wellbeing built at a FemTech Weekend hackathon, was featured at the UN Commission on the Status of Women and Columbia University.",
+      "tags": [
+        "Career"
+      ]
+    },
+    {
+      "slug": "nextjs-language-switching",
+      "title": "Solving Language Switching in Next.js: Client-Server Component Architecture",
+      "url": "https://chanmeng.org/blog/nextjs-language-switching",
+      "publishedAt": "2025-04-03",
+      "summary": "A case study in getting language switching working on a Next.js blog page backed by Notion: four errors involving the use client directive, revalidation, data fetching, and passing functions across the server/client boundary, and the component split that resolved them.",
+      "tags": [
+        "Frontend"
+      ]
+    },
+    {
+      "slug": "notion-backed-website",
+      "title": "Building a Website with Notion Integration: Form Submission and Content Display",
+      "url": "https://chanmeng.org/blog/notion-backed-website",
+      "publishedAt": "2025-04-02",
+      "summary": "A long-form tutorial on using Notion as both a form-submission store and a CMS for a Next.js site: creating the integration and databases, the submission and image-upload API routes, the form component, and rendering Notion pages as blog posts.",
+      "tags": [
+        "Docusaurus"
+      ]
+    },
+    {
+      "slug": "educational-animations-with-manim",
+      "title": "Creating Educational Animations with Manim: From Script to Final Video",
+      "url": "https://chanmeng.org/blog/educational-animations-with-manim",
+      "publishedAt": "2025-03-04",
+      "summary": "The full process of turning a written transcript into a finished educational animation with Manim: environment setup, modular scene code, per-scene and batch rendering, merging with FFmpeg, and the errors encountered at each stage.",
+      "tags": [
+        "AI Engineering"
+      ]
+    },
+    {
+      "slug": "minimalist-lifestyle-journey",
+      "title": "My Minimalist Journey: A Before & After Look [2018–2025]",
+      "url": "https://chanmeng.org/blog/minimalist-lifestyle-journey",
+      "publishedAt": "2025-02-15",
+      "summary": "A year-by-year photo essay tracing six years of extreme minimalism — the evolution of my living spaces and personal appearance from 2018 to 2025, before and after.",
+      "tags": [
+        "Minimalism"
+      ]
+    },
+    {
+      "slug": "spring-boot-database-configuration",
+      "title": "Spring Boot Project Database Configuration for Local and Cloud",
+      "url": "https://chanmeng.org/blog/spring-boot-database-configuration",
+      "publishedAt": "2025-01-23",
+      "summary": "Configuring MySQL and Redis for a Spring Boot application in both local and cloud-server environments: installation, connection configuration, a Redis test endpoint, entity-class changes, and start-up verification.",
+      "tags": [
+        "Integrations"
+      ]
+    },
+    {
+      "slug": "conventional-commits-guide",
+      "title": "Conventional Commits: A Comprehensive Guide",
+      "url": "https://chanmeng.org/blog/conventional-commits-guide",
+      "publishedAt": "2025-01-22",
+      "summary": "A reference for the Conventional Commits specification: the message format, all eight commit types explained, scope guidelines, title/body/footer requirements, breaking changes, worked examples, and common mistakes.",
+      "tags": [
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "git-branch-management-and-project-init",
+      "title": "Git Branch Management and Project Initialization",
+      "url": "https://chanmeng.org/blog/git-branch-management-and-project-init",
+      "publishedAt": "2025-01-22",
+      "summary": "A practical case study of merging two divergent branches (main and master) with unrelated histories: the merge commands, conflict identification and resolution, opening the pull request, and the branch-management practices drawn from it.",
+      "tags": [
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "apifox-api-testing-guide",
+      "title": "Apifox API Testing Tool Guide: From Beginner to Practitioner",
+      "url": "https://chanmeng.org/blog/apifox-api-testing-guide",
+      "publishedAt": "2025-01-18",
+      "summary": "Using Apifox to design and test an API, worked through a user registration and login system: installation and configuration, defining request parameters and response structures, running the tests, and resolving response-structure mismatches.",
+      "tags": [
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "publishing-your-first-npm-package",
+      "title": "A Complete Guide to Publishing Your First npm Package",
+      "url": "https://chanmeng.org/blog/publishing-your-first-npm-package",
+      "publishedAt": "2025-01-01",
+      "summary": "Publishing a first package to npm, using a real Google News MCP Server release as the example: package.json preparation, account setup, scoped-package access flags, versioning, updates, and the errors that trip people up.",
+      "tags": [
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "python-mcp-server-guide",
+      "title": "Creating a Python MCP Server: A Step-by-Step Guide",
+      "url": "https://chanmeng.org/blog/python-mcp-server-guide",
+      "publishedAt": "2024-12-30",
+      "summary": "A short step-by-step for scaffolding a Python MCP server with uvx — installation, virtual environment and dependencies, and what the generated project structure contains.",
+      "tags": [
+        "MCP"
+      ]
+    },
+    {
+      "slug": "file-list-documentation-system",
+      "title": "Creating a Comprehensive File List Documentation System",
+      "url": "https://chanmeng.org/blog/file-list-documentation-system",
+      "publishedAt": "2024-12-29",
+      "summary": "A method for documenting a project's file structure as a text file — two approaches using shell redirection and PowerShell formatting — intended for testing, documentation, and version-control use.",
+      "tags": [
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "protecting-open-source-from-plagiarism",
+      "title": "Protecting Your Open Source Project: Combating Code Plagiarism",
+      "url": "https://chanmeng.org/blog/protecting-open-source-from-plagiarism",
+      "publishedAt": "2024-12-27",
+      "summary": "What code plagiarism looks like in open source and what to do about it: preventive measures like clear licensing and documentation, and a three-level escalation path from platform reporting to DMCA takedown to legal action.",
+      "tags": [
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "hello-world",
+      "title": "Experience Sharing | The Minimalist Learning Method",
+      "url": "https://chanmeng.org/blog/hello-world",
+      "publishedAt": "2024-12-06",
+      "summary": "A comprehensive guide to minimalist teaching and learning techniques, focusing on efficiency and clarity in education and personal growth.",
+      "tags": [
+        "Minimalism",
+        "Career"
+      ]
+    },
+    {
+      "slug": "professional-github-repository-files",
+      "title": "Essential Files for a Professional GitHub Repository",
+      "url": "https://chanmeng.org/blog/professional-github-repository-files",
+      "publishedAt": "2024-12-06",
+      "summary": "A checklist of the files a professional GitHub repository should carry — README, LICENSE, CODE_OF_CONDUCT, CONTRIBUTING, CHANGELOG, SECURITY, SUPPORT, and the .github directory's issue/PR templates and workflows — with the purpose of each.",
+      "tags": [
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "mcp-server-nvm-connection-fix",
+      "title": "Solution for MCP Servers Connection Issues with NVM/NPM",
+      "url": "https://chanmeng.org/blog/mcp-server-nvm-connection-fix",
+      "publishedAt": "2024-11-27",
+      "summary": "Why MCP servers fail to connect in Claude Desktop on Windows when Node is managed by NVM, and the fix: replace the npx-based config with absolute Node and npm paths, installing the server packages globally first.",
+      "tags": [
+        "MCP"
+      ]
+    },
+    {
+      "slug": "download-tencent-meeting-recordings",
+      "title": "Tencent Meeting Screen Recording Download Guide",
+      "url": "https://chanmeng.org/blog/download-tencent-meeting-recordings",
+      "publishedAt": "2024-11-24",
+      "summary": "A non-programmer's guide to downloading a Tencent Meeting screen recording: installing the tooling, retrieving the download command from the browser, why the Range field must be removed before it will work, and an FAQ of common failures.",
+      "tags": [
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "github-contribution-snake",
+      "title": "How to Add a GitHub Contribution Snake to Your Profile README",
+      "url": "https://chanmeng.org/blog/github-contribution-snake",
+      "publishedAt": "2024-11-18",
+      "summary": "How to add the contribution-snake animation to a GitHub profile README: creating and configuring the Actions workflow, enabling Actions, running it, and wiring the output into the README.",
+      "tags": [
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "douban-group-web-scraper",
+      "title": "Building a Web Scraper for Douban Group Posts",
+      "url": "https://chanmeng.org/blog/douban-group-web-scraper",
+      "publishedAt": "2024-10-30",
+      "summary": "Building a Python scraper that downloads featured posts — text and images — from a Douban group into per-post folders: the scraper class, the save logic, the entry-point script, and the scraping problems handled.",
+      "tags": [
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "react-index-files-code-organization",
+      "title": "The Power of Index Files: Better Code Organization in React Projects",
+      "url": "https://chanmeng.org/blog/react-index-files-code-organization",
+      "publishedAt": "2024-10-25",
+      "summary": "How index files improve structure in a growing React codebase, illustrated with components, assets, and constants indexes from a 3D portfolio project — plus the practices and rollout strategy that keep them useful at scale.",
+      "tags": [
+        "Frontend"
+      ]
+    },
+    {
+      "slug": "deploy-react-to-vercel",
+      "title": "How to Deploy Your React Project to Vercel",
+      "url": "https://chanmeng.org/blog/deploy-react-to-vercel",
+      "publishedAt": "2024-10-24",
+      "summary": "Deploying a React application to Vercel end to end: the initial deployment, automatic deploys on push, custom domain configuration, continuous-deployment practices, and monitoring and troubleshooting.",
+      "tags": [
+        "DevOps"
+      ]
+    },
+    {
+      "slug": "threw-away-my-old-name",
+      "title": "To the Extreme of Minimalism: I Threw Away My Old Name",
+      "url": "https://chanmeng.org/blog/threw-away-my-old-name",
+      "publishedAt": "2024-10-18",
+      "summary": "A translated interview on taking minimalism to its limit — an empty room, a foam mat for a bed, cutting family ties, and legally discarding an old name to rebuild an identity from scratch.",
+      "tags": [
+        "Minimalism"
+      ]
+    },
+    {
+      "slug": "git-log-team-contribution-analysis",
+      "title": "From Git Log to Insights: Evaluating Team Contributions in GitHub Projects",
+      "url": "https://chanmeng.org/blog/git-log-team-contribution-analysis",
+      "publishedAt": "2024-10-04",
+      "summary": "Turning raw git log output into a picture of who contributed what: extracting commit data from the command line, processing it with Python, and reading the result for commit counts and code volume per team member.",
+      "tags": [
+        "Open Source"
+      ]
+    }
+  ]
+}

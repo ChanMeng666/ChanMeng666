@@ -47,7 +47,8 @@
     "refresh-metrics": "node scripts/refresh-github-metrics.mjs",
     "build:index": "node scripts/build-kb-index.mjs",
     "check:index": "node scripts/build-kb-index.mjs --check",
-    "check:twin": "node scripts/build-voice.mjs --check && node scripts/build-llms-twin.mjs --check && node scripts/check-llms-twin.mjs"
+    "check:twin": "node scripts/build-voice.mjs --check && node scripts/build-llms-twin.mjs --check && node scripts/check-llms-twin.mjs",
+    "capture:blog": "node scripts/capture-blog.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",

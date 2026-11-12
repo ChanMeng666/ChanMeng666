@@ -396,3 +396,6 @@ docs/STATE.md
 
 ## [2026-11-10] fact | LinkedIn followers raised to 6,735 (live, register sync), historical-maximum rule: shard, two-page CV header, brand-system page, chanmeng.org showcase stat; CVs rebuilt and synced to the site (PREVIEW_V 28)
 data/profile/00-basics.yaml, cv/sections/header.typ, templates/brand-system.html.hbs
+
+## [2026-11-12] display | README Writing opens with the 3 newest chanmeng.org posts, picked by date (`meta.x_brand.latestArticleCount`), ahead of the five curated picks; `npm run capture:blog` reads the site's RSS into blog/capture/latest.json in the daily CI build, so a post published on the site needs no hand edit here; a post with no publications[] entry is filled in from the feed (count 55 → 62)
+scripts/capture-blog.mjs, scripts/build.mjs, templates/partials/writing.hbs, data/profile/90-meta.yaml, .github/workflows/build-readme.yml, package.json

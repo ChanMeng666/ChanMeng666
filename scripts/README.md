@@ -33,6 +33,7 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `build-wiki.mjs` | Generate wiki/: a local, Obsidian-browsable view of the profile shards, one page per entity. | `npm run build:wiki` | npm |
 | `build-x-register.mjs` | Build x/posts.yaml — the register of every post on @chanmeng666 — from the last capture of the live account. | `npm run build:x`, `npm run check:x` | npm |
 | `build.mjs` | Build pipeline: data/profile/*.yaml -> README.md, llms.txt, llms-full.txt, dist/profile.json. | `npm run build` | npm |
+| `capture-blog.mjs` | Capture the published posts on chanmeng.org/blog from its RSS feed, into blog/capture/latest.json. | `npm run capture:blog` | npm |
 | `capture-linkedin-screenshots.mjs` | Capture production screenshots of Chan's live projects for manual upload to the matching LinkedIn project sections. | `node scripts/capture-linkedin-screenshots.mjs` | run by hand; named in `linkedin/screenshots/README.md` |
 | `capture-suno.mjs` | Capture Chan's two Suno accounts as Suno's public API shows them, into … | `npm run capture:suno` | npm |
 | `capture-youtube.mjs` | Read what the YouTube channel publicly shows and write youtube/videos.yaml. | `npm run capture:youtube` | npm |

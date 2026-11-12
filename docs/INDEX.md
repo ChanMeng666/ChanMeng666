@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 124 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 395 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 401 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -39,7 +39,7 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
 | `data/profile/70-linkedin.yaml` | 1938 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
 | `data/profile/80-events.yaml` | 915 | events (23) | EVENTS — offline / in-person activities: talks, panels, hackathons mentored, workshops taught, community appearances. |
-| `data/profile/90-meta.yaml` | 758 | meta (4 keys) | META — build metadata, x_brand display configuration … |
+| `data/profile/90-meta.yaml` | 765 | meta (4 keys) | META — build metadata, x_brand display configuration … |
 
 Other knowledge files:
 
@@ -90,7 +90,7 @@ Other knowledge files:
 | `docs/stories/tam-ai-ti.md` | 374 | Story. Tam-AI-Ti: Sole developer (full-stack, AI, deployment and maintenance) | preparing an interview or cover letter about this project |
 | `linkedin/README.md` | 92 | linkedin/ — LinkedIn: account register, profile copy and visuals | anything about LinkedIn posts, profile copy or visuals |
 | `media-kit/README.md` | 18 | Speaker & Media Kit | rebuilding the speaker and media kit PDF |
-| `scripts/README.md` | 67 | scripts/ | finding which script does what, and how to run it |
+| `scripts/README.md` | 68 | scripts/ | finding which script does what, and how to run it |
 | `suno/README.md` | 64 | suno/ — Suno: the register of both accounts | anything about Chan's Suno songs, playlists or the register |
 | `x/README.md` | 80 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
 | `x/x-strategy.md` | 531 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
@@ -160,7 +160,7 @@ capture by hand. Local-only paths are gitignored: nothing in them goes into a tr
 | `evidence/` | tracked | Collage sources rendered into public/evidence/collages/ |
 | `linkedin/screenshots/` | tracked | Production screenshots for LinkedIn project sections |
 | `x/screenshots/` | tracked | Screenshots of the X profile |
-| `*/capture/latest.json` | tracked (4 files) | Last capture of each live platform; registers are built from it |
+| `*/capture/latest.json` | tracked (5 files) | Last capture of each live platform; registers are built from it |
 | `archive/` | nothing tracked | Archived material |
 
 Local-only overlays and working files (gitignored; may be absent on this machine):
@@ -227,6 +227,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 
 | npm script | Runs |
 |---|---|
+| `capture:blog` | `node scripts/capture-blog.mjs` |
 | `capture:suno` | `node scripts/capture-suno.mjs` |
 | `capture:youtube` | `node scripts/capture-youtube.mjs` |
 | `refresh-metrics` | `node scripts/refresh-github-metrics.mjs` |
@@ -263,6 +264,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/build-wiki.mjs` | Generate wiki/: a local, Obsidian-browsable view of the profile shards, one page per entity. | npm |
 | `scripts/build-x-register.mjs` | Build x/posts.yaml — the register of every post on @chanmeng666 — from the last capture of the live account. | npm |
 | `scripts/build.mjs` | Build pipeline: data/profile/*.yaml -> README.md, llms.txt, llms-full.txt, dist/profile.json. | npm |
+| `scripts/capture-blog.mjs` | Capture the published posts on chanmeng.org/blog from its RSS feed, into blog/capture/latest.json. | npm |
 | `scripts/capture-linkedin-screenshots.mjs` | Capture production screenshots of Chan's live projects for manual upload to the matching LinkedIn project sections. | run by hand; named in `linkedin/screenshots/README.md` |
 | `scripts/capture-suno.mjs` | Capture Chan's two Suno accounts as Suno's public API shows them, into … | npm |
 | `scripts/capture-youtube.mjs` | Read what the YouTube channel publicly shows and write youtube/videos.yaml. | npm |

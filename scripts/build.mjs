@@ -516,7 +516,27 @@ const BLOG_PREFIX = "https://chanmeng.org/blog/";
 const articles = (data.publications ?? []).filter(
   (p) => p?.meta?.x_brand?.type === "article" && (p.url ?? "").startsWith(BLOG_PREFIX),
 );
-const bySlug = new Map(articles.map((a) => [a.url.slice(BLOG_PREFIX.length), a]));
+const bySlug = new Map(articles.map((a) => [a.url.slice(BLOG_PREFIX.length), { ...a, slug: a.url.slice(BLOG_PREFIX.length) }]));
+
+// Posts published on the site since their last hand-written entry: blog/capture/latest.json
+// (`npm run capture:blog`, run by CI before every build) lists every live post. One with no
+// `publications[]` entry is filled in from the feed, so publishing on chanmeng.org is enough for
+// it to reach the README, the count and llms.txt. A hand-written entry, when one exists, wins.
+const blogCapturePath = path.join(repoRoot, "blog", "capture", "latest.json");
+if (fs.existsSync(blogCapturePath)) {
+  for (const post of JSON.parse(fs.readFileSync(blogCapturePath, "utf8")).posts ?? []) {
+    if (bySlug.has(post.slug)) continue;
+    bySlug.set(post.slug, {
+      slug: post.slug,
+      name: post.title,
+      publisher: "chanmeng.org",
+      releaseDate: post.publishedAt,
+      url: post.url,
+      summary: post.summary,
+      _fromBlogFeed: true,
+    });
+  }
+}
 
 const featuredArticleIds = data.meta?.x_brand?.featuredArticleIds ?? [];
 const missingArticles = featuredArticleIds.filter((id) => !bySlug.has(id));
@@ -524,9 +544,18 @@ if (missingArticles.length) {
   console.error(`✗ meta.x_brand.featuredArticleIds reference unknown blog slug(s): ${missingArticles.join(", ")}`);
   process.exit(1);
 }
-data._writingFeatured = featuredArticleIds.map((id) => ({ ...bySlug.get(id), slug: id }));
+data._writingFeatured = featuredArticleIds.map((id) => bySlug.get(id));
 // Every self-hosted article, newest first — the LLM surfaces take the lot.
-data._writingAll = [...articles].sort((a, b) => (b.releaseDate ?? "").localeCompare(a.releaseDate ?? ""));
+data._writingAll = [...bySlug.values()].sort(
+  (a, b) => (b.releaseDate ?? "").localeCompare(a.releaseDate ?? "") || a.slug.localeCompare(b.slug),
+);
+// The newest posts lead the README Writing table automatically, ahead of the curated picks;
+// meta.x_brand.latestArticleCount sets how many (0 turns it off).
+const latestArticleCount = data.meta?.x_brand?.latestArticleCount ?? 3;
+const featuredSet = new Set(featuredArticleIds);
+data._writingLatest = data._writingAll
+  .filter((a) => !featuredSet.has(a.slug) && a.show?.readme !== false)
+  .slice(0, latestArticleCount);
 data._writingIndexUrl = "https://chanmeng.org/blog";
 
 // Featured testimonials. recognition.hbs renders only the FIRST of these, and

@@ -6,19 +6,10 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-11-07, X 2026-11-02, LinkedIn 2026-11-02, ArchCanvas page 2026-11-01.
+Plan as of 2026-10-12. Registers read: YouTube 2026-11-07, X 2026-11-13, LinkedIn 2026-11-13, ArchCanvas page 2026-11-10.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
-
-### Week of 2026-11-09
-
-| Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
-|---|---|---|---|---|---|---|---|
-| 2026-11-10 | Tuesday | She Sharp product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/04-she-sharp-film/she-sharp_60s_16x9.mp4` | `drafts/she-sharp-film.yaml#linkedin` | draft |
-| 2026-11-10 | Tuesday | She Sharp product film | X | 30 s, 16:9 | `_staging/04-she-sharp-film/she-sharp_30s_16x9.mp4` | `drafts/she-sharp-film.yaml#x` | draft |
-| 2026-11-12 | Thursday | Tam-AI-Ti product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/05-tam-ai-ti-film/tam-ai-ti_60s_16x9.mp4` | `drafts/tam-ai-ti-film.yaml#linkedin` | draft |
-| 2026-11-12 | Thursday | Tam-AI-Ti product film | X | 30 s, 16:9 | `_staging/05-tam-ai-ti-film/tam-ai-ti_30s_16x9.mp4` | `drafts/tam-ai-ti-film.yaml#x` | draft |
 
 ### Week of 2026-11-16
 
@@ -43,31 +34,27 @@ A post made after those dates is not known here until its register is synced.
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | LinkedIn (personal) | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#linkedin` | skipped |
-| 2026-12-01 | Tuesday | She Sharp × Les Mills, “No Pain, All Gain” | X | 30 s, 16:9 | `_staging/09-she-sharp-lesmills-promo/lesmills_30s_16x9.mp4` | `drafts/she-sharp-lesmills-promo.yaml#x` | skipped |
 | 2026-12-03 | Thursday | TechNest Community turns two, a message from its AI instructor | LinkedIn (personal) | 92 s, 9:16 | `_staging/12-technest-anniversary/technest-anniversary-split.mp4` |  | draft |
 | 2026-12-03 | Thursday | TechNest Community turns two, a message from its AI instructor | X | 92 s, 9:16 | `_staging/12-technest-anniversary/technest-anniversary-split.mp4` |  | draft |
 
-- She Sharp × Les Mills, “No Pain, All Gain”: Optional: the event has passed. Post it as a piece of craft, or mark it skipped
-- She Sharp × Les Mills, “No Pain, All Gain”: Optional, as above
-
 ## Not yet published and not scheduled here
 
-- ArchLang in ChatGPT film: YouTube Shorts
+- ArchLang, from plan to 3D: LinkedIn (personal)
 
 ## Where each film stands
 
 | Film | YouTube | YouTube Shorts | chanmeng.org/films | LinkedIn (personal) | X | LinkedIn (ArchCanvas page) |
 |---|---|---|---|---|---|---|
 | ArchCanvas studio film | published 2026-09-21 | published 2026-10-07 | published | published 2026-09-21 | published 2026-09-21 | published 2026-09-21 |
-| ArchLang in ChatGPT film | published 2026-11-01 | **to do** | published | published 2026-11-01 | published 2026-11-01 | — |
+| ArchLang, from plan to 3D | published 2026-11-07 | published 2026-11-07 | published | **to do** | published 2026-11-13 | — |
+| ArchLang in ChatGPT film | published 2026-11-01 | — | published | published 2026-11-01 | published 2026-11-01 | — |
 | ArchLang film | published 2026-10-06 | — | published | — | — | — |
 | echook film | published 2026-10-06 | published 2026-10-07 | published | published 2026-11-01 | published 2026-11-01 | — |
 | a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | planned 2026-11-24 | — |
 | GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-26 | planned 2026-11-26 | — |
 | CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-17 | planned 2026-11-17 | — |
-| She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-10 | planned 2026-11-10 | — |
-| Tam-AI-Ti product film | published 2026-10-06 | published 2026-10-06 | published | planned 2026-11-12 | planned 2026-11-12 | — |
+| She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | — | — | — |
+| Tam-AI-Ti product film | published 2026-10-06 | published 2026-10-06 | published | published 2026-11-10 | published 2026-11-10 | — |
 | Eatropolis website film | published 2026-10-06 | published 2026-10-07 | published | published 2026-10-31 | published 2026-10-31 | — |
 | AI programming school product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-19 | planned 2026-11-19 | — |
 | ArchCanvas, the 92-second film | published 2026-10-19 | — | published | — | — | — |
@@ -83,10 +70,9 @@ A post made after those dates is not known here until its register is synced.
 | ArchLang one-take film | published 2026-10-23 | — | published | published 2026-10-24 | published 2026-10-24 | — |
 | ArchLang explainer film | published 2026-11-07 | published 2026-11-07 | published | — | — | — |
 | ArchLang: The drawing stands up | published 2026-11-07 | published 2026-11-07 | published | — | — | — |
-| ArchLang, from plan to 3D | published 2026-11-07 | published 2026-11-07 | published | — | — | — |
-| ArchLang narrated demo | — | — | — | — | — | — |
+| ArchLang narrated demo | published 2026-11-06 | — | published | — | — | — |
 | GenLAB Career Academy, how it works | — | — | — | — | — | — |
-| She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | skipped | skipped | — |
+| She Sharp × Les Mills, “No Pain, All Gain” | published 2026-10-06 | — | published | — | — | — |
 | TechNest Community turns two, a message from its AI instructor | published 2026-11-02 | — | published | planned 2026-12-03 | planned 2026-12-03 | — |
 | Chan Meng, 64-second video business card | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |
 | Chan Meng monkey, brand sting | published 2026-09-29 | — | published | published 2026-09-29 | published 2026-09-29 | — |

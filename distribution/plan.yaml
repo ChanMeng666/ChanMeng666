@@ -54,6 +54,10 @@ policy:
     match: { kind: explainer }
     targets: [youtube, site]
     reason: "The Liu Zhongjing explainer films (watercolour and maps) are shown on chanmeng.org/films and YouTube (Chan uploaded all 25, 2026-10-17)"
+  - id: demo-film
+    match: { kind: demo-film }
+    targets: [youtube, site]
+    reason: "The ArchLang narrated demo is public on YouTube and on chanmeng.org/films since 2026-11-07 (Chan, docs/STATE.md); not a product film, and no LinkedIn or X post has been decided for it"
   - id: earlier-version
     match: { kind: product-film, primary: false }
     targets: [site]
@@ -89,10 +93,17 @@ overrides:
   - film: chan-meng-motion-intro
     remove: [linkedin, x]
     note: "Shown on YouTube and chanmeng.org/films only (Chan, 2026-10-31)"
+  - film: she-sharp-film
+    remove: [linkedin, x]
+    note: "Chan left the She Sharp team; no marketing mentions it from 2026-11-10 (Chan). Its LinkedIn and X rows were taken off the calendar that day"
+  - film: she-sharp-lesmills-promo
+    remove: [linkedin, x]
+    note: "Chan left the She Sharp team; no marketing mentions it from 2026-11-10 (Chan). Its LinkedIn and X rows were taken off the calendar that day"
 
 # Social posts that already carry a film. `post` is the id in the platform's
 # register; `via` says how the film appears in the post.
 posted:
+  - { film: archlang-plan-to-3d, platform: x, post: "2121084644208869652", via: native-video, cut: "196 s, 16:9", note: "Posted by hand on 2026-11-13 and pinned. A 196.5 s native upload, although `constraints.x` says over 140 s goes as a YouTube link: re-check that constraint" }
   - { film: tam-ai-ti-film, platform: linkedin, post: "7525711912052080640", via: native-video, cut: "60 s, 16:9", note: "Posted on 2026-11-10, ahead of its 2026-11-12 slot; links in the first comment" }
   - { film: tam-ai-ti-film, platform: x, post: "2119946791118618759", via: native-video, cut: "30 s, 16:9", note: "Posted on 2026-11-10, ahead of its 2026-11-12 slot; links in a reply" }
   - { film: archlang-in-chatgpt-film, platform: linkedin, post: "7522604250691129344", via: native-video, cut: "82 s, 16:9", note: "Posted on 2026-11-01 on her word, a second post that day" }

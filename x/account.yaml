@@ -29,7 +29,7 @@ account:
   website: https://chanmeng.org/
   header: x/header/x-header.png      # uploaded 2026-07-19
   avatar: profile photo              # replaced on X around 2026-10-05
-  pinned: "2107777580908859706"      # intro thread v3, posted and pinned 2026-10-07
+  pinned: "2107777580908859706"      # capture still has the 2026-10-07 intro; Chan pinned a new ArchLang post on 2026-11-13 (see openItems)
   counts:
     followers: 9             # historical maximum; never lower it
     following: 86
@@ -80,6 +80,10 @@ openItems:
     what: "x-strategy.md §8 asks for each post to be tagged P1–P4. No thread carried `pillar`."
     decision: "All 18 threads tagged in posts.yaml: 9 are P4, 9 serve no pillar, and P1, P2 and P3 have none. That gap is the finding; it is in the 2026-10 review in x-strategy.md."
     status: done
+  - id: pinned-archlang-2026-11-13
+    what: "On 2026-11-13 Chan set the bio to \"Floor plans as code. ArchLang (archlang.uk): .arch → dimensioned plan + 3D. ArchCanvas is the AI agent on top. Auckland NZ\" and pinned a new post (ArchLang, floor plans as code, linking archlang.uk and npm) with distribution/_staging/15-archlang-plan-to-3d/archlang-2d-3d-en-16x9.mp4. account.bio and pinned still match the 2026-11-10 capture, which predates both."
+    decision: "Do not edit the capture by hand and do not invent the new pin's status id. Next x-sync writes the bio, the pin and the post count."
+    status: hers
   - id: strategy-doc-stale
     what: "x-strategy.md carried a Vitex launch playbook and Vitex examples, and old follower and star counts."
     decision: "Revised: Vitex removed throughout (§5.3 retired), counts brought to the profile data, the alt-text rule added, and the first monthly review appended from the register."

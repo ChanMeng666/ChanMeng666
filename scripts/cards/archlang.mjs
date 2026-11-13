@@ -5,14 +5,26 @@
 // Amber is the playground's advisory colour and appears only on a lint finding;
 // redline is not used because nothing here is an error.
 //
-// The stage tells one story, brief → plan → change → check (archlang
-// docs/plans/public-surfaces, PS-D8), in six scenes on one 24 s loop:
+// The stage tells one story, brief → plan → change → check → 3D (archlang
+// docs/plans/public-surfaces, PS-D8, plus the playground's Plan | 3D switch),
+// in seven scenes on one 37 s loop:
 //   brief     a real brief from the agent gallery arrives in a chat bubble
 //   plan      the agent's ArchLang streams in and the sheet draws as it does
 //   figure    the rooms and their areas, as describe() computes them
 //   change    a constant is scrubbed and every frame is its own compile
 //   check     a lint finding is raised, one line is typed, the finding clears
-//   outputs   the brief, the drawing, the formats; this is also the still frame
+//   model     the stage switches to 3D: the same plan rises in @chanmeng666/archlang-3d's
+//             own viewer and turns a full circle, while the pane builds the GLB with
+//             the package's CLI and its four checks pass
+//   outputs   the formats; the 3D end view stays. This is the still frame
+//
+// The 3D picture is the only raster on the card, because a rendered building is a
+// picture by nature: frames the package's viewer drew (archlang-3d-frames.mjs). The
+// rise dissolves frame into frame; the turn, a frame every 5°, is a filmstrip cut from
+// frame to frame under one slow eased push-in. They are moved and scaled, never redrawn: the viewer's
+// orbit pivots off the building's centre, so each turn frame is shifted to hold it
+// still, and the rise is scaled to the turn's first frame (one press of the viewer's
+// zoom out) so the one runs into the other. Each frame's edges fade into the paper.
 //
 // Nothing on the sheet is drawn by hand. The brief and the plan are a pair from
 // the ArchLang repo's agent gallery (docs/gallery/: the brief as given, the plan as
@@ -23,13 +35,16 @@
 // each element of the drawing appears with the line whose prefix of the file first
 // compiles to it (and keeps it), the way the docs home's hero paints the sheet from
 // each prefix that compiles. The figures are describe()'s and the finding is lint()'s.
+import { execFileSync, spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
 import path from "node:path";
 import { compile, describe, lint } from "@chanmeng666/archlang";
 
 import { outlineTextElements } from "../lib/svg-card/glyphs.mjs";
 import { extentOf, splitLayers } from "../lib/svg-card/plan.mjs";
 import { card, pct } from "../lib/svg-card/shell.mjs";
+import { FRAMES_DIR, sha, VIEW } from "./archlang-3d-frames.mjs";
 
 export const ARCHLANG_FONTS = {
   displayMid: "scripts/cards/fonts/archlang/Archivo-600.ttf",
@@ -47,6 +62,8 @@ export const ARCHLANG_INPUTS = {
   brief: `${GALLERY}/${PAIR}.brief.txt`,
   plan: `${GALLERY}/${PAIR}.arch`,
   list: `${GALLERY}/gallery.json`,
+  cli3d: "../archlang/packages/archlang-3d/dist/cli.js",
+  pkg3d: "../archlang/packages/archlang-3d/package.json",
 };
 
 // Lines of the plan typed at reading speed; every other statement line streams in whole.
@@ -55,9 +72,12 @@ const SCRUB = { file: "parametric", param: "H", from: 5000, to: 6000, step: 250,
 const CHECK = { file: "laneway-house", dims: false, fix: /window on w_garden at 5850/, excerpt: [[/^\s*strip down/, 4], [/window on w_west/, 2]] };
 
 // Scene windows, in seconds of the loop.
-const T = 24;
-const SC = { brief: [0, 3], plan: [3, 10], figure: [10, 12.5], change: [12.5, 16.5], check: [16.5, 21], outputs: [21, 24] };
-const ORDER = ["brief", "plan", "figure", "change", "check", "outputs"];
+const T = 37;
+const SC = { brief: [0, 3], plan: [3, 10], figure: [10, 12.5], change: [12.5, 16.5], check: [16.5, 21], model: [21, 33], outputs: [33, 37] };
+const ORDER = ["brief", "plan", "figure", "change", "check", "model", "outputs"];
+// Inside `model`: the rise plays to here, one press of the viewer's zoom out, then the turn.
+const RISEN = 24.3;
+const TURN_FROM = 24.75;
 
 // Compiler layers a card draws. The schedule, legend, axis grid, title block,
 // north arrow and scale bar belong to the issued sheet and cannot be read here.
@@ -86,8 +106,18 @@ const COPY = {
   figure: "Computed, not estimated", // PS-D1 "Exact" card
   change: "Change one number",
   check: "It checks itself", // PS-D1 card title
-  output: "SVG · PDF · DXF · PNG", // docs home "How it works", step 3
+  output: "SVG · PDF · DXF · PNG · GLB", // the film: "Export to SVG, DXF, PDF or PNG, and GLB for the 3D preview."
   caption: "You get a dimensioned drawing, and the same text gives the same file every time.", // docs home "How it works", step 3
+  rise: "3D preview", // @chanmeng666/archlang-3d, the package description's own words
+  riseFoot: "Same source, plan and 3D preview.", // packages/archlang-3d/README.md
+  views: ["Plan", "3D"], // playground index.html, the stage's Plan | 3D switch
+  // What each check holds the GLB to (archlang-3d replay/payload.ts and the playground's GLB note).
+  checks: {
+    "V-SCH-01": () => "every element from the plan",
+    "V-GEO-02": (f) => `${f.shells} shells, every one closed`,
+    "V-GLTF-01": (f) => `Khronos validator, ${f.errors} errors`,
+    "V-GLTF-02": (f) => `${f.nodes} nodes, named kind:id`,
+  },
   clean: "No soundness warnings — every room is reachable, bedrooms have windows, the building has an entrance.", // playground lint-panel.ts
 };
 
@@ -235,7 +265,7 @@ function relativeGlyphs(defs) {
   });
 }
 
-export function buildArchlangCard({ glyphs, root }) {
+export async function buildArchlangCard({ glyphs, root }) {
   const examples = `${root}/node_modules/@chanmeng666/archlang/examples`;
   const at = (f) => (path.isAbsolute(f) ? f : path.join(root, f));
   const model = JSON.parse(readFileSync(at(ARCHLANG_INPUTS.list), "utf8")).find((e) => e.id === PAIR)?.model;
@@ -376,7 +406,7 @@ export function buildArchlangCard({ glyphs, root }) {
   defs.push(studio.defs);
   const studioFacts = describe(planSrc);
   const studioBox = boxOf(studio.layers);
-  const studioWins = [[SC.brief[0], SC.figure[1]], [SC.outputs[0], T]];
+  const studioWins = [[SC.brief[0], SC.figure[1]]];
 
   // ── 1 · the brief, typed into a chat bubble ─────────────────────────────────
   const BUB = { x: E.x + 14, y: labelY + 10, w: E.w - 28, pad: 12, lh: 16.5 };
@@ -481,9 +511,9 @@ export function buildArchlangCard({ glyphs, root }) {
       `</g><rect x="${E.x + E.w - 34}" y="${E.y + E.head + 1}" width="33" height="${E.h - E.head - 2}" fill="url(#fade)"/></g>` +
       "</g>",
   );
-  panes.push(header(COPY.writtenBy(planFile, model), shown([[SC.plan[0], SC.figure[1]], SC.outputs])));
+  panes.push(header(COPY.writtenBy(planFile, model), shown([[SC.plan[0], SC.figure[1]]])));
   foots.push(`<g ${shown([[SC.plan[0], planDone + 0.3]])}>${footText(COPY.compiling, SHEET_T.muted)}</g>`);
-  foots.push(`<g ${shown([[planDone + 0.3, SC.figure[1]], SC.outputs])}>${footText(factsLine(planSrc, studioFacts.totals))}</g>`);
+  foots.push(`<g ${shown([[planDone + 0.3, SC.figure[1]]])}>${footText(factsLine(planSrc, studioFacts.totals))}</g>`);
 
   // ── 3 · the figure: describe()'s rooms, centreline and net ──────────────────
   const rooms = studioFacts.rooms;
@@ -642,6 +672,166 @@ export function buildArchlangCard({ glyphs, root }) {
     );
   }
 
+  // ══ 6 · model: the same plan in archlang-3d's own viewer, and its GLB ═══════
+  const [MS, ME] = SC.model;
+  const manifest = JSON.parse(readFileSync(path.join(FRAMES_DIR, "manifest.json"), "utf8"));
+  const pkg3d = JSON.parse(readFileSync(at(ARCHLANG_INPUTS.pkg3d), "utf8")).version;
+  if (manifest.planSha !== sha(planSrc) || manifest.archlang3d !== pkg3d)
+    throw new Error("archlang card: the 3D frames were rendered from another studio.arch or archlang-3d; run node scripts/cards/archlang-3d-frames.mjs");
+  const rise = manifest.frames.filter((f) => f.pass === "rise");
+  const turn = manifest.frames.filter((f) => f.pass === "turn");
+  const near = (a, b) => ["x", "y", "w", "h"].every((k) => Math.abs(a[k] - b[k]) <= 3);
+  if (!rise.length || turn.length < 3 || !near(turn[0].box, turn[turn.length - 1].box))
+    throw new Error("archlang card: the 3D turn no longer closes its circle");
+  const frames3d = [...rise, ...turn];
+  // When each rise frame starts to dissolve in, and when the turn cuts to each of its
+  // frames: from rest and back to rest (half linear, half smoothstep) by the end of the scene.
+  const ease = (u) => 0.5 * u + 0.5 * u * u * (3 - 2 * u);
+  const steps = turn.length - 1;
+  const TURN_TO = ME - 0.6;
+  const riseAt = rise.map((_, i) => MS + (i * (RISEN - MS)) / rise.length);
+  const turnAt = turn.map((_, i) => (i ? TURN_FROM + ease((i - 1) / (steps - 1)) * (TURN_TO - TURN_FROM) : RISEN));
+  const mid = (b) => [b.x + b.w / 2, b.y + b.h / 2];
+  const [hx, hy] = mid(turn[0].box);
+  // the rise's last frame and the turn's first are one view a zoom step apart
+  const zoom = turn[0].box.w / rise[rise.length - 1].box.w;
+  const [rx, ry] = mid(rise[rise.length - 1].box);
+  const at3d = (f) => {
+    const s = f.pass === "rise" ? zoom : 1;
+    const [ax, ay] = f.pass === "rise" ? [rx, ry] : mid(f.box);
+    // frame pixels → card: the anchor lands where turn-00's building centre is
+    const x = SHEET.x + (hx - ax * s) / VIEW.scale;
+    const y = (hy - ay * s) / VIEW.scale;
+    return { x, y, w: (VIEW.w * s), h: (VIEW.h * s) };
+  };
+  const image = (f, g, attrs = "") =>
+    `<image${attrs} mask="url(#soft3d)" x="${g.x.toFixed(1)}" y="${g.y.toFixed(1)}" width="${g.w.toFixed(1)}" height="${g.h.toFixed(1)}" preserveAspectRatio="none" href="data:image/webp;base64,${readFileSync(path.join(FRAMES_DIR, f.file)).toString("base64")}"/>`;
+  // The rise keeps one camera, so its frames dissolve one into the next; each is dropped
+  // once the next covers it, the last as the turn's first frame (the same view) cuts in.
+  const riseSvg = rise
+    .map((f, i) => {
+      const a = riseAt[i];
+      const next = riseAt[i + 1] ?? RISEN;
+      const fade = Math.min(0.28, (next - a) * 0.85);
+      const drop = i === rise.length - 1 ? next + 0.05 : next + fade + 0.02;
+      return image(f, at3d(f), ` class="${rule(`0%,${p(a)}{opacity:0}${p(a + fade)},${p(drop - 0.01)}{opacity:1}${p(drop)},100%{opacity:0}`)}" opacity="0"`);
+    })
+    .join("");
+  // The turn is a filmstrip: every frame in one column, PITCH apart so no neighbour shows
+  // through the sheet, the column cut from frame to frame (no dissolve, so no double image).
+  const PITCH = VIEW.h + 80;
+  const lift = (i) => `transform:translateY(${-i * PITCH}px)`;
+  const stripBody =
+    turnAt.map((t, i) => `${i ? p(t) : "0%"}{${lift(i)};animation-timing-function:step-end}`).join("") + `100%{${lift(steps)}}`;
+  const turnSvg =
+    `<g ${cut(RISEN, T)}><g class="${rule(stripBody, `${lift(steps)};`)}">` +
+    turn.map((f, i) => {
+      const g = at3d(f);
+      return image(f, { ...g, y: g.y + i * PITCH });
+    }).join("") +
+    "</g></g>";
+  // Over the stepped turn, one continuous eased move, as the feed's swipes run over the
+  // footage on the GAVIGO card: the camera closes in on the building while it turns.
+  const PUSH = 1.06;
+  const [ox, oy] = [SHEET.x + hx / VIEW.scale, hy / VIEW.scale];
+  const push = rule(
+    `0%,${p(TURN_FROM - 0.2)}{transform:scale(1);animation-timing-function:cubic-bezier(.45,0,.4,1)}${p(TURN_TO + 0.3)},100%{transform:scale(${PUSH})}`,
+    `transform-box:view-box;transform-origin:${ox.toFixed(1)}px ${oy.toFixed(1)}px;transform:scale(${PUSH});`,
+  );
+  const images = [`<g class="${push}">${riseSvg}${turnSvg}</g>`];
+  // A frame's edges fade into the paper, so a shifted or scaled frame never shows its border.
+  const EDGE = 0.07;
+  defs.push(
+    `<linearGradient id="soft3dx"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="${EDGE}" stop-color="#fff"/><stop offset="${1 - EDGE}" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
+    `<linearGradient id="soft3dy" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="${EDGE * 1.4}" stop-color="#fff"/><stop offset="${1 - EDGE * 1.4}" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
+    `<mask id="soft3dv" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#soft3dy)"/></mask>`,
+    `<mask id="soft3d" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#soft3dx)" mask="url(#soft3dv)"/></mask>`,
+  );
+  // The playground's Plan | 3D switch over the stage (chrome.css .stage-switch), pressed to 3D.
+  const SW_FONT = { font: "displayMid", size: 11, tracking: 0.07 };
+  const btnW = COPY.views.map((v) => Math.max(44, Math.ceil(glyphs.measure(v.toUpperCase(), SW_FONT)) + 20));
+  const SW = { x: SHEET.x + 10, y: 10, pad: 3, gap: 2, h: 26 };
+  const swW = SW.pad * 2 + btnW.reduce((a, w) => a + w, 0) + SW.gap;
+  const PRESS = MS + 0.3;
+  let bx = SW.x + SW.pad;
+  const switchSvg =
+    `<rect x="${SW.x}" y="${SW.y + 1}" width="${swW}" height="${SW.h + SW.pad * 2}" rx="3" fill="#1c2430" fill-opacity=".06"/>` +
+    `<rect x="${SW.x + 0.5}" y="${SW.y + 0.5}" width="${swW - 1}" height="${SW.h + SW.pad * 2 - 1}" rx="3" fill="${SHEET_T.panel}" fill-opacity=".92" stroke="${SHEET_T.hairline}"/>` +
+    COPY.views
+      .map((v, n) => {
+        const w = btnW[n];
+        const tx = bx + (w - glyphs.measure(v.toUpperCase(), SW_FONT)) / 2;
+        const ty = SW.y + SW.pad + 17.5;
+        const pressed = n === 0 ? `class="${rule(`0%,${p(PRESS)}{opacity:1}${p(PRESS + 0.15)},100%{opacity:0}`)}" opacity="0"` : on(PRESS, 0.15);
+        const out =
+          glyphs.text(v.toUpperCase(), { ...SW_FONT, x: tx, y: ty, fill: SHEET_T.ink }) +
+          `<g ${pressed}><rect x="${bx}" y="${SW.y + SW.pad}" width="${w}" height="${SW.h}" rx="2" fill="${SHEET_T.ink}"/>` +
+          glyphs.text(v.toUpperCase(), { ...SW_FONT, x: tx, y: ty, fill: "#f5f2ea" }) +
+          "</g>";
+        bx += w + SW.gap;
+        return out;
+      })
+      .join("");
+  sheets.push(
+    `<g ${shown([[MS, T]])} clip-path="url(#sheet)"><rect x="${SHEET.x}" y="0" width="${SHEET.w}" height="${footY}" fill="${frames3d[0].box.ground}"/>${images.join("")}</g>` +
+      `<g ${shown([[MS, T]], 0.2)}>${switchSvg}</g>`,
+  );
+  foots.push(`<g ${shown([[MS, T]])}>${footText(COPY.riseFoot)}</g>`);
+
+  // The pane: the package's CLI writes the GLB of the same file and checks it.
+  const glbName = `${PAIR}.glb`;
+  const cliArgs = [at(ARCHLANG_INPUTS.cli3d), "build", at(ARCHLANG_INPUTS.plan), "-o", glbName];
+  const ran = spawnSync(process.execPath, cliArgs, { cwd: tmpdir(), encoding: "utf8" });
+  const said = `${ran.stdout}${ran.stderr}`.trim();
+  const report = JSON.parse(execFileSync(process.execPath, [...cliArgs, "--json"], { cwd: tmpdir(), encoding: "utf8" }));
+  const wrote = said.match(new RegExp(`^(archlang3d: wrote ${glbName.replace(".", "\\.")}) (\\(\\d+ bytes, (\\d+) checks passed\\))$`));
+  if (!wrote || !report.ok || report.verify.failed !== 0 || Number(wrote[3]) !== report.verify.passed)
+    throw new Error(`archlang card: archlang3d build no longer reports what the pane quotes: ${said}`);
+  const results = report.verify.results;
+  if (results.some((r) => !r.ok || !COPY.checks[r.id])) throw new Error("archlang card: archlang3d build reports a check the pane has no words for");
+  const command = [["$ ", SRC.muted], ["archlang3d", PLUM_DEEP], [" build", SYN.property], [` ${planFile} -o ${glbName}`, SRC.fg]];
+  const cmdText = command.map(([s]) => s).join("");
+  const CX = E.x + 16;
+  const TYPE3 = [MS + 0.35, MS + 1.35];
+  const cmdW = (cmdText.length * ADV + 4).toFixed(1);
+  const cmdCover = rule(
+    `0%,${p(TYPE3[0])}{transform:translateX(0);animation-timing-function:steps(${cmdText.length},end)}${p(TYPE3[1])},100%{transform:translateX(${cmdW}px)}`,
+    `transform:translateX(${cmdW}px);`,
+  );
+  let cmdX = CX;
+  const cmdSvg = command
+    .map(([s, fill]) => {
+      const out = mono(s, cmdX, codeTop, fill);
+      cmdX += s.length * ADV;
+      return out;
+    })
+    .join("");
+  const OUT_AT = TYPE3[1] + 0.3;
+  const CHECK_AT = OUT_AT + 0.45;
+  const checkY = (n) => codeTop + 3 * LH + 14 + n * (LH + 3);
+  const idW = Math.max(...results.map((r) => r.id.length)) + 2;
+  panes.push(header(planFile, shown([SC.model])));
+  panes.push(
+    `<g ${shown([SC.model])}>` +
+      label(COPY.rise) +
+      `<g clip-path="url(#ed)">${cmdSvg}<rect class="${cmdCover}" x="${CX - 1}" y="${codeTop - 13}" width="${E.w - 20}" height="${LH}" fill="${SRC.surface}"/></g>` +
+      `<g ${on(OUT_AT, 0.2)}>${mono(wrote[1], CX, codeTop + LH + 4, SRC.muted)}${mono(wrote[2], CX, codeTop + 2 * LH + 4, SRC.muted)}</g>` +
+      `<path ${on(CHECK_AT - 0.1, 0.2)} d="M${CX} ${checkY(0) - 17}h${E.w - 32}" stroke="${SRC.rule}" stroke-opacity=".35"/>` +
+      results
+        .map(
+          (r, n) =>
+            `<g ${on(CHECK_AT + n * 0.3, 0.2)}>` +
+            glyphs.text("✓", { font: "symbols", size: 11, x: CX, y: checkY(n), fill: OK }) +
+            mono(r.id, CX + 16, checkY(n), SRC.fg) +
+            glyphs.text(COPY.checks[r.id](r.facts ?? {}), { font: "displayReg", size: 11.5, x: CX + 16 + idW * ADV, y: checkY(n), fill: SRC.muted }) +
+            "</g>",
+        )
+        .join("") +
+      "</g>",
+  );
+  if (CX + 16 + idW * ADV + Math.max(...results.map((r) => glyphs.measure(COPY.checks[r.id](r.facts ?? {}), { font: "displayReg", size: 11.5 }))) > E.x + E.w - 10)
+    throw new Error("archlang card: a check row no longer fits the pane");
+
   // which scene is up: a row of ticks in the pane's header
   const tickX = (i) => E.x + E.w - 16 - (ORDER.length - i) * 13;
   const ticks =
@@ -703,12 +893,12 @@ export function buildArchlangCard({ glyphs, root }) {
 
   return {
     svg: card({
-      title: `ArchLang is an open-source language that compiles plain-text source into floor plans. The card shows a brief given to ${model} and the ArchLang it wrote compiling into a dimensioned plan: ${tot.rooms} rooms, ${tot.net_floor_area_m2} m² net. Then one number is changed and the plan redraws, and a lint finding is raised and cleared. Output: SVG, PDF, DXF, PNG.`,
+      title: `ArchLang is an open-source language that compiles plain-text source into floor plans. The card shows a brief given to ${model} and the ArchLang it wrote compiling into a dimensioned plan: ${tot.rooms} rooms${tot.net_floor_area_m2 !== undefined ? `, ${tot.net_floor_area_m2} m² net` : tot.floor_area_m2 !== undefined ? `, ${tot.floor_area_m2} m²` : ""}. Then one number is changed and the plan redraws, and a lint finding is raised and cleared. Last, the stage switches to 3D: the same source rises in the archlang-3d viewer and turns a full circle so every room can be seen from inside, while its command line writes the GLB and passes ${report.verify.passed} checks. Output: SVG, PDF, DXF, PNG, GLB.`,
       css,
       defs: `${relativeGlyphs(glyphs.defs())}${[...alias.values()].map((a) => `<use id="${a.id}" href="#${a.glyph}" transform="scale(${COL} ${-COL})"/>`).join("")}${defs.join("")}`,
       body,
       radius: 10,
     }),
-    facts: { pair: `${PAIR} (${model})`, rows: planRows.length, scenes: ORDER.map((s) => `${s} ${SC[s][0]}–${SC[s][1]}s`).join(", "), loop: `${T}s` },
+    facts: { pair: `${PAIR} (${model})`, rows: planRows.length, frames3d: `${rise.length} rise + ${turn.length} turn (archlang-3d ${pkg3d})`, scenes: ORDER.map((s) => `${s} ${SC[s][0]}–${SC[s][1]}s`).join(", "), loop: `${T}s` },
   };
 }

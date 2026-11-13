@@ -61,7 +61,7 @@ for (const id of ids) {
   if (!project) throw new Error(`build-readme-cards: "${id}" is not a projects[].id in data/profile`);
 
   const glyphs = new GlyphSet(Object.fromEntries(Object.entries(fonts).map(([k, f]) => [k, at(f)])));
-  const { svg, facts } = build({ glyphs, root, project });
+  const { svg, facts } = await build({ glyphs, root, project });
   const file = path.join(outDir, `${id}.svg`);
   fs.writeFileSync(file, svg);
   console.log(`✓ public/cards/${id}.svg  ${(svg.length / 1024).toFixed(1)} KB  ${JSON.stringify(facts)}`);

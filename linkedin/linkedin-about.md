@@ -6,13 +6,14 @@
 ```
 Most AI projects demo beautifully and fall over in production. I'm the engineer you bring in so that doesn't happen: I design the agent architecture, build the platform around it, and leave your team able to keep shipping after I've gone.
 
-I do my best work for founders who need speed, teams who need depth, and products built for people who aren't the Silicon Valley default. Right now I'm also my own client, as founder of ArchCanvas + ArchLang.
+I do my best work for founders who need speed, teams who need depth, and products built for people who aren't the Silicon Valley default. Right now I'm also my own client, as founder of ArchLang + ArchCanvas.
 ```
 
-## 🏗️ Founder — ArchCanvas + ArchLang
+## 🏗️ Founder — ArchLang + ArchCanvas
 
 ```
-Proof rather than claims — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that compiles a floor plan written as .arch source into dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture". ArchCanvas is the AI architectural designer built on top of it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you keep refining by talking to it (archcanvas.uk).
+ArchLang — open-source language for floor plans: write .arch, get a dimensioned drawing, architectural lint, and a 3D preview (@chanmeng666/archlang + archlang-3d). Playground: playground.archlang.uk.
+ArchCanvas — the AI architectural designer I built on that language (archcanvas.uk): brief → one checkable plan you refine by talking.
 ```
 
 ## 🤖 AI Agent Engineering

@@ -40,12 +40,12 @@
     "websiteUrl": "https://chanmeng.org/"
   },
   "about": {
-    "lead": "Most AI projects demo beautifully and fall over in production. I'm the engineer you bring in so that doesn't happen: I design the agent architecture, build the platform around it, and leave your team able to keep shipping after I've gone.\n\nI do my best work for founders who need speed, teams who need depth, and products built for people who aren't the Silicon Valley default. Right now I'm also my own client, as founder of ArchCanvas + ArchLang.",
+    "lead": "Most AI projects demo beautifully and fall over in production. I'm the engineer you bring in so that doesn't happen: I design the agent architecture, build the platform around it, and leave your team able to keep shipping after I've gone.\n\nI do my best work for founders who need speed, teams who need depth, and products built for people who aren't the Silicon Valley default. Right now I'm also my own client, as founder of ArchLang + ArchCanvas.",
     "sections": [
       {
         "emoji": "🏗️",
-        "heading": "Founder — ArchCanvas + ArchLang",
-        "body": "Proof rather than claims — sole author, every commit mine, building in public. ArchLang is an open-source declarative language that compiles a floor plan written as .arch source into dimensioned SVG/DXF/PDF — \"Typst/LaTeX for architecture\". ArchCanvas is the AI architectural designer built on top of it: a plain-English brief becomes one strong, checkable floor plan — parametric, not pixels — that you keep refining by talking to it (archcanvas.uk)."
+        "heading": "Founder — ArchLang + ArchCanvas",
+        "body": "ArchLang — open-source language for floor plans: write .arch, get a dimensioned drawing, architectural lint, and a 3D preview (@chanmeng666/archlang + archlang-3d). Playground: playground.archlang.uk.\nArchCanvas — the AI architectural designer I built on that language (archcanvas.uk): brief → one checkable plan you refine by talking."
       },
       {
         "emoji": "🤖",
@@ -99,24 +99,6 @@
     },
     {
       "type": "Link",
-      "title": "ArchCanvas — describe a building, get a floor plan you can build from",
-      "site": "archcanvas.uk",
-      "url": "https://archcanvas.uk/"
-    },
-    {
-      "type": "Link",
-      "title": "ArchLang — the open-source compiler underneath. Run it in your browser",
-      "site": "playground.archlang.uk",
-      "url": "https://playground.archlang.uk"
-    },
-    {
-      "type": "Link",
-      "title": "⏳ TODO — intro / product demo video (not yet produced)",
-      "site": "YouTube",
-      "url": "https://www.youtube.com/@ChanMeng666"
-    },
-    {
-      "type": "Link",
       "title": "The code behind all of it",
       "site": "GitHub",
       "url": "https://github.com/ChanMeng666"
@@ -143,7 +125,7 @@
           "dateRange": "Apr 2026 - Present",
           "duration": "4 mos",
           "location": "Auckland, New Zealand · Remote",
-          "description": "Type a brief in plain English and get back one strong, checkable, dimensioned floor plan you can actually build from — then refine it conversationally on an infinite zoomable canvas. That is ArchCanvas, an AI architectural designer I founded and engineer alone. Underneath it sits ArchLang, the open-source declarative floor-plan language I also wrote solo and that ArchCanvas compiles on: write a plan as .arch source and it compiles to dimensioned SVG/DXF/PDF — \"Typst/LaTeX for architecture.\"\n\n• Edits stay precise and re-editable, because every plan is real parametric ArchLang under the hood rather than pixels — nudge a wall, tweak a parameter, or have the AI review circulation and pin the fixes in place.\n• Anyone can build on the language, not only my product: ArchLang is published open-source to npm as @chanmeng666/archlang — a hand-written compiler (lexer + recursive-descent parser, zero runtime dependencies) with architectural-soundness linting, a CLI, LSP + VS Code tooling, and a client-side playground.\n• I built the product first and the language when the product needed it: drawing plans as pictures could not be checked, so eleven weeks in I wrote a compiler instead. ArchLang is published on npm (@chanmeng666/archlang) with 139 diagnostic codes. Sole engineer on both, working with AI coding agents, built in public.\n\nLinks: archcanvas.uk · github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang",
+          "description": "I wrote ArchLang, an open-source language for floor plans, and I am the sole engineer of ArchCanvas, the AI architectural designer that runs on it. Write a plan as .arch and the compiler returns a dimensioned drawing, architectural lint, and a 3D preview (@chanmeng666/archlang and @chanmeng666/archlang-3d; playground.archlang.uk). ArchCanvas (archcanvas.uk) turns a plain-English brief into one checkable plan, then lets you refine it by talking.\n\n• Edits stay precise and re-editable, because every plan is real parametric ArchLang rather than pixels — nudge a wall, tweak a parameter, or have the AI review circulation and pin the fixes in place.\n• Anyone can build on the language, not only my product: ArchLang is published open-source to npm as @chanmeng666/archlang — a hand-written compiler (lexer + recursive-descent parser, zero runtime dependencies) with architectural-soundness linting, a CLI, LSP + VS Code tooling, and a client-side playground.\n• I built the product first and the language when the product needed it: drawing plans as pictures could not be checked, so eleven weeks in I wrote a compiler instead. ArchLang is published on npm (@chanmeng666/archlang) with 139 diagnostic codes. Sole engineer on both, working with AI coding agents, built in public.\n\nLinks: archcanvas.uk · github.com/ChanMeng666/archlang · playground.archlang.uk · npm @chanmeng666/archlang",
           "skills": [
             "AI Agent Architecture",
             "Programming Language Design",
@@ -1717,7 +1699,7 @@
     {
       "name": "ArchLang — A Programming Language I Invented That Compiles to Professional Floor Plans",
       "dateRange": "Jun 2026 – Present",
-      "description": "ArchLang is a programming language I designed for architecture: you write a floor plan as code — walls, rooms, doors, windows, fixtures, dimensions — and it compiles to deterministic, professional SVG (also DXF, PDF, PNG, text). Think Typst or LaTeX, but for building plans instead of documents.\n\n• Hand-written lexer + recursive-descent parser in pure TypeScript with zero runtime dependencies — the same compiler runs in Node and in the browser.\n• Exports structured diagnostics instead of throwing, with lint / describe / repair pipelines for architectural-soundness checking and circulation analysis.\n• Ships a CLI with JSON output built for AI agents, plus VS Code / LSP tooling and a live browser playground.\n• Published to npm as @chanmeng666/archlang with its own documentation site.\n\nStack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.",
+      "description": "ArchLang is a programming language I designed for architecture: you write a floor plan as code — walls, rooms, doors, windows, fixtures, dimensions — and it compiles to deterministic, professional SVG (also DXF, PDF, PNG, text). Think Typst or LaTeX, but for building plans instead of documents.\n\n• Hand-written lexer + recursive-descent parser in pure TypeScript with zero runtime dependencies — the same compiler runs in Node and in the browser.\n• Exports structured diagnostics instead of throwing, with lint / describe / repair pipelines for architectural-soundness checking and circulation analysis.\n• Ships a CLI with JSON output built for AI agents, plus VS Code / LSP tooling and a live browser playground.\n• Published to npm as @chanmeng666/archlang with its own documentation site. A separate package, @chanmeng666/archlang-3d, raises the same source into a 3D preview — walls, openings, floors, stairs and furniture — and the playground switches to it with Plan | 3D.\n\nStack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.",
       "skills": [
         "TypeScript",
         "Programming Language Design",

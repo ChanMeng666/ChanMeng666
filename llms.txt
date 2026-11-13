@@ -2,9 +2,10 @@
 
 > AI agent architect, full-stack engineer, and minimalist living advocate
 building at the intersection of AI, cultural technology, and women's
-health. Current flagship build: ArchCanvas — an AI architectural designer
-for floor plans — on ArchLang, the open-source declarative floor-plan language she
-wrote that compiles source to dimensioned drawings. Based in Auckland, New
+health. Current flagship build: ArchLang, the open-source floor-plan language
+she wrote — .arch source compiles to a dimensioned drawing and a 3D preview.
+ArchCanvas, the AI architectural designer, is the agent on top of that language.
+Based in Auckland, New
 Zealand. Holds a Master of Applied Computing with Distinction from Lincoln
 University, New Zealand. Featured in multiple media interviews for her
 minimalist lifestyle philosophy — "Subtraction for life, addition for
@@ -14,7 +15,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 530+ GitHub stars · Master's with Distinction
 
-Last updated: 2026-11-12
+Last updated: 2026-11-13
 Canonical: https://chanmeng.org/
 Preferred citation: "Chan Meng, full-stack engineer and CTO"
 
@@ -83,7 +84,7 @@ Email: mailto:chanmeng.dev@gmail.com
 
 ## Featured Work (case studies)
 
-1. **ArchLang** -- ArchLang is a small language for floor plans: you describe walls, rooms, doors, windows, and furniture in plain text, and it compiles to a precise, dimensioned drawing — SVG, DXF, PDF, PNG, or a text-only plan. The same source always produces the identical drawing, so widening a bedroom is a one-number edit instead of re-drawing. It also checks whether a plan is actually livable (can you reach the bathroom? does a bedroom have a window?), and is the floor-plan engine behind the AI design agent ArchCanvas. (https://archlang.uk/)
+1. **ArchLang** -- ArchLang is a small language for floor plans: you describe walls, rooms, doors, windows, and furniture in plain text, and it compiles to a precise, dimensioned drawing — SVG, DXF, PDF, PNG, or a text-only plan. The same source always produces the identical drawing, so widening a bedroom is a one-number edit instead of re-drawing. It also checks whether a plan is actually livable (can you reach the bathroom? does a bedroom have a window?), raises that source into a 3D preview, and is the floor-plan engine behind the AI design agent ArchCanvas. (https://archlang.uk/)
 2. **ArchCanvas** -- ArchCanvas is an AI design agent for architects and self-builders. Describe a building in plain language and it asks a few questions, then designs one dimensioned floor plan you can actually build from — with room labels and measurements — alongside a realistic AI rendering of it. From there it stays conversational: on an infinite zoomable canvas you refine the plan by talking to it, scrub through every past version, and export the whole design as files or as a full change history. (https://archcanvas.uk/)
 
 ## AI Mentor & Educator
@@ -117,7 +118,7 @@ A. GAVIGO IRE (Oct 2025 — Oct 2026) — 471 of 488 non-merge commits (96.5%) s
 
 ## Notable Open Source
 
-- **ArchLang** -- ArchLang is a small language for floor plans: you describe walls, rooms, doors, windows, and furniture in plain text, and it compiles to a precise, dimensioned drawing — SVG, DXF, PDF, PNG, or a text-only plan. The same source always produces the identical drawing, so widening a bedroom is a one-number edit instead of re-drawing. It also checks whether a plan is actually livable (can you reach the bathroom? does a bedroom have a window?), and is the floor-plan engine behind the AI design agent ArchCanvas. (https://archlang.uk/)
+- **ArchLang** -- ArchLang is a small language for floor plans: you describe walls, rooms, doors, windows, and furniture in plain text, and it compiles to a precise, dimensioned drawing — SVG, DXF, PDF, PNG, or a text-only plan. The same source always produces the identical drawing, so widening a bedroom is a one-number edit instead of re-drawing. It also checks whether a plan is actually livable (can you reach the bathroom? does a bedroom have a window?), raises that source into a 3D preview, and is the floor-plan engine behind the AI design agent ArchCanvas. (https://archlang.uk/)
 - **echook** -- An audio-and-status notification system for Claude Code, Cursor IDE, and Codex CLI. The core idea: you never have to learn the tool. You talk to your AI agent in plain English — "install audio-hooks," "switch to chimes," "snooze for 30 minutes," "send alerts to my Slack" — and the agent runs the commands, reads the results, and reports back. It ships 39 hook events (3 on by default), two audio themes, warnings before you hit your 5-hour and 7-day usage limits, webhooks to Slack/Discord/Teams/ntfy, text-to-speech that reads the agent's actual reply aloud, and a 33-segment status bar that tracks how much of the context window is left. Now on v7.1.0 with 795 automated tests running on Ubuntu, Windows, and macOS across Python 3.9–3.13. Open source under MIT; runs on the Python standard library with no extra dependencies. A sister repo, film-echook-first, ships an 88-second product film built entirely in code. (https://github.com/ChanMeng666/echook)
 - **Google News MCP Server** -- An early Model Context Protocol server — the open standard Anthropic launched in November 2024 to connect AI assistants to outside tools. Its first commit landed 35 days after that launch. It lets assistants like Claude, Cursor, and Cline search live Google News through SerpAPI, automatically sorted into topics (technology, business, science, health) and offered in 10 languages. Published on npm as `@chanmeng666/google-news-server`, it carries a PulseMCP "Top Pick" badge. (https://github.com/ChanMeng666/server-google-news)
 - **AI Programming Education Platform** -- Production teaching platform at programming.chanmeng.org where beginners learn to build real software with AI tools, taught across three years of cohorts. Five course versions stay online side by side — from the 2024 class to three separate 2026 tracks (TechNest, Peyvand Academy, Her Waka) — each with video lessons, lab guides, and downloadable Typst-generated PDF notes. A built-in AI tutor (a RAG assistant on Cloudflare Workers AI, Llama 3.1 8B) answers questions from a student's own cohort material, and a Demo Day page publishes the projects students shipped. Bilingual EN + 简体中文. Actively maintained through the 2026 TechNest cohort. (https://programming.chanmeng.org/)

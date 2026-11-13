@@ -8,7 +8,7 @@
     "image": "/public/brands/chan-monkey-logo-black.svg",
     "email": "chanmeng.career@gmail.com",
     "url": "https://chanmeng.org/",
-    "summary": "AI agent architect, full-stack engineer, and minimalist living advocate\nbuilding at the intersection of AI, cultural technology, and women's\nhealth. Current flagship build: ArchCanvas — an AI architectural designer\nfor floor plans — on ArchLang, the open-source declarative floor-plan language she\nwrote that compiles source to dimensioned drawings. Based in Auckland, New\nZealand. Holds a Master of Applied Computing with Distinction from Lincoln\nUniversity, New Zealand. Featured in multiple media interviews for her\nminimalist lifestyle philosophy — \"Subtraction for life, addition for\nthought.\"\n",
+    "summary": "AI agent architect, full-stack engineer, and minimalist living advocate\nbuilding at the intersection of AI, cultural technology, and women's\nhealth. Current flagship build: ArchLang, the open-source floor-plan language\nshe wrote — .arch source compiles to a dimensioned drawing and a 3D preview.\nArchCanvas, the AI architectural designer, is the agent on top of that language.\nBased in Auckland, New\nZealand. Holds a Master of Applied Computing with Distinction from Lincoln\nUniversity, New Zealand. Featured in multiple media interviews for her\nminimalist lifestyle philosophy — \"Subtraction for life, addition for\nthought.\"\n",
     "location": {
       "region": "Auckland, New Zealand",
       "countryCode": "NZ",
@@ -7591,11 +7591,17 @@
           "value": "the compiler engine behind ArchCanvas, which consumes frozen-API contracts (data-arch-id anchors, diffPlans()) verbatim",
           "source": "https://github.com/ChanMeng666/archlang (src/index.ts)",
           "asOf": "2026-11-06"
+        },
+        {
+          "label": "3D preview",
+          "value": "Separate package @chanmeng666/archlang-3d 0.7.0: the same .arch source raised into a preview (walls, openings, floors, stairs, furniture), checked against the plan; playground Plan | 3D switch; GLB export",
+          "source": "https://www.npmjs.com/package/@chanmeng666/archlang-3d",
+          "asOf": "2026-11-13"
         }
       ],
       "status": "production",
       "startDate": "2026-06",
-      "publicSummary": "ArchLang is a small language for floor plans: you describe walls, rooms, doors, windows, and furniture in plain text, and it compiles to a precise, dimensioned drawing — SVG, DXF, PDF, PNG, or a text-only plan. The same source always produces the identical drawing, so widening a bedroom is a one-number edit instead of re-drawing. It also checks whether a plan is actually livable (can you reach the bathroom? does a bedroom have a window?), and is the floor-plan engine behind the AI design agent ArchCanvas.\n",
+      "publicSummary": "ArchLang is a small language for floor plans: you describe walls, rooms, doors, windows, and furniture in plain text, and it compiles to a precise, dimensioned drawing — SVG, DXF, PDF, PNG, or a text-only plan. The same source always produces the identical drawing, so widening a bedroom is a one-number edit instead of re-drawing. It also checks whether a plan is actually livable (can you reach the bathroom? does a bedroom have a window?), raises that source into a 3D preview, and is the floor-plan engine behind the AI design agent ArchCanvas.\n",
       "narrative": {
         "impactHeadline": "Describe a floor plan in plain text — walls, rooms, doors, windows — and get a precise, dimensioned architectural drawing back. Change one number and exactly one thing moves. It also checks that a plan is actually livable, and powers ArchCanvas, an AI design agent.",
         "problem": "Floor plans live in two unsatisfying states: hand-drawn in heavy CAD tools, or generated as raster images. Both make the thing you most want to do — a precise, parametric edit — expensive: widening a bedroom means re-drawing, or re-rolling an image and hoping the rest survives. Neither is authorable by an AI agent, because there is no deterministic text representation an agent can write, verify, and tweak. And an image never *knows* whether the plan it depicts is actually habitable — whether a bathroom is reachable only through a bedroom, whether a door swings into another door, whether a bedroom has a window. ArchLang exists to make a floor plan a **program**: exact, deterministic, diff-able, agent-authorable, and checkable for architectural soundness.\n",
@@ -7628,7 +7634,7 @@
       "_contextLogo": [],
       "_card": {
         "src": "/public/cards/archlang.svg",
-        "alt": "ArchLang is an open-source language that compiles plain-text source into floor plans. The card shows a brief given to Claude Fable and the ArchLang it wrote compiling into a dimensioned plan: 3 rooms, 31.97 m² net. Then one number is changed and the plan redraws, and a lint finding is raised and cleared. Output: SVG, PDF, DXF, PNG."
+        "alt": "ArchLang is an open-source language that compiles plain-text source into floor plans. The card shows a brief given to Claude Fable and the ArchLang it wrote compiling into a dimensioned plan: 3 rooms, 35 m². Then one number is changed and the plan redraws, and a lint finding is raised and cleared. Last, the stage switches to 3D: the same source rises in the archlang-3d viewer and turns a full circle so every room can be seen from inside, while its command line writes the GLB and passes 4 checks. Output: SVG, PDF, DXF, PNG, GLB."
       },
       "_film": {
         "url": "https://youtu.be/oCg3tBTlVvI",
@@ -17952,8 +17958,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-11-12",
+    "lastModified": "2026-11-13",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-12T22:33:15.586Z"
+    "buildTimestamp": "2026-11-13T05:34:38.105Z"
   }
 }

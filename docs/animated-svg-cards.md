@@ -29,7 +29,7 @@ a phone scrolls a feed and an orchestrator's log reacts.
 
 | Card | What the stage shows | Size | Loop |
 |---|---|---|---|
-| ArchLang | A real brief from the agent gallery, the ArchLang the agent wrote streaming in as the plan draws, the areas describe() computes, one number scrubbed, a lint finding raised and cleared | 208 KB | 24.0 s |
+| ArchLang | A real brief from the agent gallery, the ArchLang the agent wrote streaming in as the plan draws, the areas describe() computes, one number scrubbed, a lint finding raised and cleared, then the stage switches to 3D: frames from archlang-3d's own viewer raise the same source and turn it a full circle (a filmstrip of 72 frames, 5° apart, cut under one slow eased push-in), while `archlang3d build` writes the GLB and its four checks pass | 608 KB | 37.0 s |
 | ArchCanvas | One studio session: brief, draft in passes, an edit in plain words, the agent's own advisory, render and export | 197 KB | 29.2 s |
 | GAVIGO IRE | A phone playing the feed’s real videos and gameplay beside the orchestration log, each reacting to the other | 466 KB | 21.0 s |
 | She Sharp | A Slack sync, the visitor assistant's tool call, mentor matching, the mailing list's first send, the agent skills | 180 KB | 27.0 s |
@@ -55,7 +55,20 @@ profile on 2026-10-07, light and dark:
 | A nested `<svg>` with its own `viewBox` | Hover or click interaction |
 | `<image href="data:image/jpeg;base64,…">` | |
 | `@media (prefers-reduced-motion: reduce)` | |
-| Files of at least 619 KB (the largest card is now 313 KB) | |
+| Files of at least 619 KB (the largest card is now 608 KB) | |
+
+`data:image/webp` is not yet in the table: the ArchLang card's 3D scene is the
+first card to use it (frames rendered by `scripts/cards/archlang-3d-frames.mjs`
+from archlang-3d's own viewer, WebP because the same frames as JPEG did not fit).
+Build the sibling checkout's `dist` (core and `packages/archlang-3d`) before
+rendering them: the renderer imports the built viewer, and a stale build renders
+the old viewer.
+
+Raster motion reads smooth the way the GAVIGO card's phone does: many small, low-quality
+frames cut hard (a filmstrip moved by one `steps()` or `step-end` animation, never a
+dissolve between frames from different views, which doubles the picture), with one
+continuous eased vector move over them for the eye to follow.
+Move it into the left column once that card is seen playing on the live profile.
 
 Three consequences shape everything below: text must be outlines, pictures must be
 inlined, and every moving thing must be a CSS animation with its timing written

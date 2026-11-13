@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 124 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 401 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 419 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -23,12 +23,12 @@ against `schema/profile.schema.json`. Find an entry with
 
 | Shard | Lines | Top-level keys (entries) | Purpose |
 |---|---|---|---|
-| `data/profile/00-basics.yaml` | 143 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
+| `data/profile/00-basics.yaml` | 144 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
 | `data/profile/10-career.yaml` | 2832 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1199 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
-| `data/profile/23-projects-oss-more.yaml` | 4102 | projects (98) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
+| `data/profile/23-projects-oss-more.yaml` | 4103 | projects (98) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
 | `data/profile/30-recognition.yaml` | 1896 | awards (7), certificates (53), publications (78) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
@@ -37,7 +37,7 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/47-agent-skills.yaml` | 494 | agentSkills (30) | AGENT SKILLS — every agent skill Chan has made, one row per repo or product … |
 | `data/profile/50-references.yaml` | 577 | references (27) | REFERENCES — testimonials & recommendations … |
 | `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
-| `data/profile/70-linkedin.yaml` | 1938 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
+| `data/profile/70-linkedin.yaml` | 1926 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
 | `data/profile/80-events.yaml` | 915 | events (23) | EVENTS — offline / in-person activities: talks, panels, hackathons mentored, workshops taught, community appearances. |
 | `data/profile/90-meta.yaml` | 765 | meta (4 keys) | META — build metadata, x_brand display configuration … |
 
@@ -63,7 +63,7 @@ Other knowledge files:
 | `cv/cover-letter/TEMPLATE.md` | 91 | Cover-letter template — five moves | drafting a cover letter (the five-move skeleton) |
 | `cv/exports/README.md` | 26 | cv/exports/ — manual-upload deliverables | uploading a CV to a job portal, or touching cv/exports/ |
 | `distribution/README.md` | 65 | distribution/ — where each film is published, and the posting calendar | what is due to post; drafting or publishing a film post; editing plan.yaml |
-| `docs/animated-svg-cards.md` | 402 | Animated SVG project cards: a field guide | making or changing a README project card |
+| `docs/animated-svg-cards.md` | 415 | Animated SVG project cards: a field guide | making or changing a README project card |
 | `docs/answers/2026-10-16-entries-kept-off-visitor-surfaces.md` | 73 | Entries kept off visitor-facing surfaces | — |
 | `docs/answers/README.md` | 64 | Filed answers | — |
 | `docs/answers/TEMPLATE.md` | 25 | The question, shortened to a title | — |

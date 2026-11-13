@@ -13,9 +13,9 @@
 **Location:** Auckland, New Zealand · Remote
 
 ```
-Type a brief in plain English and get back one strong, checkable, dimensioned floor plan you can actually build from — then refine it conversationally on an infinite zoomable canvas. That is ArchCanvas, an AI architectural designer I founded and engineer alone. Underneath it sits ArchLang, the open-source declarative floor-plan language I also wrote solo and that ArchCanvas compiles on: write a plan as .arch source and it compiles to dimensioned SVG/DXF/PDF — "Typst/LaTeX for architecture."
+I wrote ArchLang, an open-source language for floor plans, and I am the sole engineer of ArchCanvas, the AI architectural designer that runs on it. Write a plan as .arch and the compiler returns a dimensioned drawing, architectural lint, and a 3D preview (@chanmeng666/archlang and @chanmeng666/archlang-3d; playground.archlang.uk). ArchCanvas (archcanvas.uk) turns a plain-English brief into one checkable plan, then lets you refine it by talking.
 
-• Edits stay precise and re-editable, because every plan is real parametric ArchLang under the hood rather than pixels — nudge a wall, tweak a parameter, or have the AI review circulation and pin the fixes in place.
+• Edits stay precise and re-editable, because every plan is real parametric ArchLang rather than pixels — nudge a wall, tweak a parameter, or have the AI review circulation and pin the fixes in place.
 • Anyone can build on the language, not only my product: ArchLang is published open-source to npm as @chanmeng666/archlang — a hand-written compiler (lexer + recursive-descent parser, zero runtime dependencies) with architectural-soundness linting, a CLI, LSP + VS Code tooling, and a client-side playground.
 • I built the product first and the language when the product needed it: drawing plans as pictures could not be checked, so eleven weeks in I wrote a compiler instead. ArchLang is published on npm (@chanmeng666/archlang) with 139 diagnostic codes. Sole engineer on both, working with AI coding agents, built in public.
 

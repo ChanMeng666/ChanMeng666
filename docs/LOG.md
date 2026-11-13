@@ -399,3 +399,21 @@ data/profile/00-basics.yaml, cv/sections/header.typ, templates/brand-system.html
 
 ## [2026-11-12] display | README Writing opens with the 3 newest chanmeng.org posts, picked by date (`meta.x_brand.latestArticleCount`), ahead of the five curated picks; `npm run capture:blog` reads the site's RSS into blog/capture/latest.json in the daily CI build, so a post published on the site needs no hand edit here; a post with no publications[] entry is filled in from the feed (count 55 → 62)
 scripts/capture-blog.mjs, scripts/build.mjs, templates/partials/writing.hbs, data/profile/90-meta.yaml, .github/workflows/build-readme.yml, package.json
+
+## [2026-11-13] change | ArchLang leads the public line: basics summary, LinkedIn About and the ArchCanvas experience, LinkedIn Featured cut to CV / GitHub / Cal
+data/profile/00-basics.yaml, data/profile/70-linkedin.yaml, data/profile/23-projects-oss-more.yaml, x/account.yaml
+
+## [2026-11-13] build | ArchLang README card adds the 3D preview: the same gallery plan, raised by @chanmeng666/archlang-3d, is the still frame
+scripts/cards/archlang.mjs, scripts/cards/archlang-preview.mjs, public/cards/archlang.svg, docs/animated-svg-cards.md
+
+## [2026-11-13] fix | ArchLang README card's 3D preview uses the archlang-3d end camera (45°, lens 30°) and turns through a full circle, last frame held; roof stays hidden, as in the preview
+scripts/cards/archlang-preview.mjs, scripts/cards/archlang.mjs, public/cards/archlang.svg, docs/animated-svg-cards.md
+
+## [2026-11-13] build | ArchLang README card redesigned: a Plan | 3D switch opens a scene of frames from @chanmeng666/archlang-3d's own viewer (the plan rises, then turns a full circle) beside `archlang3d build` writing the GLB and its four checks; the vector projector is removed; loop 35 s
+scripts/cards/archlang-3d-frames.mjs, scripts/cards/assets/archlang-3d/, scripts/cards/archlang.mjs, scripts/cards/archlang-preview.mjs (removed), public/cards/archlang.svg, docs/animated-svg-cards.md
+
+## [2026-11-13] fix | ArchLang README card's 3D frames re-rendered from the current archlang-3d build (door and window outlines only round the reveal, ground plane, opening trim); the turn is a frame every 10°, eased in and out, with the rise scaled into its first frame; loop 37 s
+scripts/cards/archlang-3d-frames.mjs, scripts/cards/assets/archlang-3d/, scripts/cards/archlang.mjs, public/cards/archlang.svg, docs/animated-svg-cards.md
+
+## [2026-11-13] build | ArchLang README card's 3D turn plays as the GAVIGO card's phone does: 72 frames 5° apart at low WebP quality, cut hard as one filmstrip, under a slow eased push-in; card 608 KB
+scripts/cards/archlang-3d-frames.mjs, scripts/cards/assets/archlang-3d/, scripts/cards/archlang.mjs, public/cards/archlang.svg, docs/animated-svg-cards.md

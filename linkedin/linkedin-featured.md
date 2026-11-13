@@ -9,31 +9,13 @@
 **Site:** chanmeng.org
 **URL:** https://chanmeng.org/cv
 
-## 2. ArchCanvas — describe a building, get a floor plan you can build from
-
-**Type:** Link
-**Site:** archcanvas.uk
-**URL:** https://archcanvas.uk/
-
-## 3. ArchLang — the open-source compiler underneath. Run it in your browser
-
-**Type:** Link
-**Site:** playground.archlang.uk
-**URL:** https://playground.archlang.uk
-
-## 4. ⏳ TODO — intro / product demo video (not yet produced)
-
-**Type:** Link
-**Site:** YouTube
-**URL:** https://www.youtube.com/@ChanMeng666
-
-## 5. The code behind all of it
+## 2. The code behind all of it
 
 **Type:** Link
 **Site:** GitHub
 **URL:** https://github.com/ChanMeng666
 
-## 6. Book 30 minutes with me
+## 3. Book 30 minutes with me
 
 **Type:** Link
 **Site:** Cal.com

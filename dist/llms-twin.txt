@@ -4,7 +4,7 @@ I'm Chan Meng (she/her), an AI agent architect and full-stack engineer based in 
 
 Most AI projects demo beautifully and fall over in production. I'm the engineer you bring in so that doesn't happen: I design the agent architecture, build the platform around it, and leave your team able to keep shipping after I've gone.
 
-I do my best work for founders who need speed, teams who need depth, and products built for people who aren't the Silicon Valley default. Right now I'm also my own client, as founder of ArchCanvas + ArchLang.
+I do my best work for founders who need speed, teams who need depth, and products built for people who aren't the Silicon Valley default. Right now I'm also my own client, as founder of ArchLang + ArchCanvas.
 
 Right now I am Founder & Sole Engineer at ArchCanvas (since April 2026), and Chief Technology Officer at FemTech Weekend (since March 2025). ArchCanvas is an AI architectural designer: you describe a building in plain English and it produces a dimensioned floor plan that you refine by talking to it, live at archcanvas.uk. Underneath it is ArchLang, the open-source declarative floor-plan language I wrote, which compiles source into dimensioned drawings so every plan can be checked and edited exactly.
 
@@ -569,8 +569,9 @@ Floor plans as code. Your AI writes ArchLang; the compiler draws a precise, dime
 - Lint rules: 8 architectural-soundness rule modules (reachability, door-swing collision, windowless bedroom, wet-room enclosure, circulation)
 - CLI: ~20 subcommands, all with --json + deterministic exit codes (0 ok / 1 IO / 2 source / 3 usage)
 - Downstream: the compiler engine behind ArchCanvas, which consumes frozen-API contracts (data-arch-id anchors, diffPlans()) verbatim
+- 3D preview: Separate package @chanmeng666/archlang-3d 0.7.0: the same .arch source raised into a preview (walls, openings, floors, stairs, furniture), checked against the plan; playground Plan | 3D switch; GLB export
 
-ArchLang is a small language for floor plans: you describe walls, rooms, doors, windows, and furniture in plain text, and it compiles to a precise, dimensioned drawing — SVG, DXF, PDF, PNG, or a text-only plan. The same source always produces the identical drawing, so widening a bedroom is a one-number edit instead of re-drawing. It also checks whether a plan is actually livable (can you reach the bathroom? does a bedroom have a window?), and is the floor-plan engine behind the AI design agent ArchCanvas.
+ArchLang is a small language for floor plans: you describe walls, rooms, doors, windows, and furniture in plain text, and it compiles to a precise, dimensioned drawing — SVG, DXF, PDF, PNG, or a text-only plan. The same source always produces the identical drawing, so widening a bedroom is a one-number edit instead of re-drawing. It also checks whether a plan is actually livable (can you reach the bathroom? does a bedroom have a window?), raises that source into a 3D preview, and is the floor-plan engine behind the AI design agent ArchCanvas.
 
 **Impact.** Describe a floor plan in plain text — walls, rooms, doors, windows — and get a precise, dimensioned architectural drawing back. Change one number and exactly one thing moves. It also checks that a plan is actually livable, and powers ArchCanvas, an AI design agent.
 

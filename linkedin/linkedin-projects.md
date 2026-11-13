@@ -54,7 +54,7 @@ ArchLang is a programming language I designed for architecture: you write a floo
 • Hand-written lexer + recursive-descent parser in pure TypeScript with zero runtime dependencies — the same compiler runs in Node and in the browser.
 • Exports structured diagnostics instead of throwing, with lint / describe / repair pipelines for architectural-soundness checking and circulation analysis.
 • Ships a CLI with JSON output built for AI agents, plus VS Code / LSP tooling and a live browser playground.
-• Published to npm as @chanmeng666/archlang with its own documentation site.
+• Published to npm as @chanmeng666/archlang with its own documentation site. A separate package, @chanmeng666/archlang-3d, raises the same source into a 3D preview — walls, openings, floors, stairs and furniture — and the playground switches to it with Plan | 3D.
 
 Stack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.
 ```

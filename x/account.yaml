@@ -20,22 +20,22 @@ account:
   handle: "@chanmeng666"
   id: "1872396440271777792"
   url: https://x.com/chanmeng666
-  asOf: "2026-11-10"
+  asOf: "2026-11-13"
   joined: "2024-12-26"
   verified: false            # no X Premium: 280-character posts, no analytics page
   displayName: "Chan Meng — AI Agent Architect"
-  bio: "AI agent architect & full-stack engineer. ArchCanvas (archcanvas.uk): describe a building → buildable floor plan."
+  bio: "Floor plans as code. ArchLang (archlang.uk): .arch → dimensioned plan + 3D. ArchCanvas is the AI agent on top."
   location: "Auckland, New Zealand"
   website: https://chanmeng.org/
   header: x/header/x-header.png      # uploaded 2026-07-19
   avatar: profile photo              # replaced on X around 2026-10-05
-  pinned: "2107777580908859706"      # capture still has the 2026-10-07 intro; Chan pinned a new ArchLang post on 2026-11-13 (see openItems)
+  pinned: "2121084644208869652"      # ArchLang, floor plans as code, with the plan-to-3D film; pinned 2026-11-13 (replaced the 2026-10-07 intro thread)
   counts:
-    followers: 9             # historical maximum; never lower it
-    following: 86
-    posts: 117                # X's own count: every post, reply and quote
-    mediaPosts: 30
-    likesGiven: 76
+    followers: 15             # historical maximum; never lower it
+    following: 91
+    posts: 152                # X's own count: every post, reply and quote
+    mediaPosts: 37
+    likesGiven: 84
 
 # -----------------------------------------------------------------------------
 # How the account has been run so far (facts from x/posts.yaml › summary;
@@ -83,7 +83,8 @@ openItems:
   - id: pinned-archlang-2026-11-13
     what: "On 2026-11-13 Chan set the bio to \"Floor plans as code. ArchLang (archlang.uk): .arch → dimensioned plan + 3D. ArchCanvas is the AI agent on top. Auckland NZ\" and pinned a new post (ArchLang, floor plans as code, linking archlang.uk and npm) with distribution/_staging/15-archlang-plan-to-3d/archlang-2d-3d-en-16x9.mp4. account.bio and pinned still match the 2026-11-10 capture, which predates both."
     decision: "Do not edit the capture by hand and do not invent the new pin's status id. Next x-sync writes the bio, the pin and the post count."
-    status: hers
+    status: done
+    next: "Synced 2026-11-13: pin 2121084644208869652. The live bio has no \"Auckland NZ\" at the end (location is its own field). The pinned post has no alt text on its video, and X cannot add it after posting."
   - id: strategy-doc-stale
     what: "x-strategy.md carried a Vitex launch playbook and Vitex examples, and old follower and star counts."
     decision: "Revised: Vitex removed throughout (§5.3 retired), counts brought to the profile data, the alt-text rule added, and the first monthly review appended from the register."

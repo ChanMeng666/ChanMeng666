@@ -39,14 +39,14 @@ A post made after those dates is not known here until its register is synced.
 
 ## Not yet published and not scheduled here
 
-- ArchLang, from plan to 3D: LinkedIn (personal)
+Nothing: every film is published or scheduled on every platform it is meant for.
 
 ## Where each film stands
 
 | Film | YouTube | YouTube Shorts | chanmeng.org/films | LinkedIn (personal) | X | LinkedIn (ArchCanvas page) |
 |---|---|---|---|---|---|---|
 | ArchCanvas studio film | published 2026-09-21 | published 2026-10-07 | published | published 2026-09-21 | published 2026-09-21 | published 2026-09-21 |
-| ArchLang, from plan to 3D | published 2026-11-07 | published 2026-11-07 | published | **to do** | published 2026-11-13 | — |
+| ArchLang, from plan to 3D | published 2026-11-07 | published 2026-11-07 | published | published 2026-11-13 | published 2026-11-13 | — |
 | ArchLang in ChatGPT film | published 2026-11-01 | — | published | published 2026-11-01 | published 2026-11-01 | — |
 | ArchLang film | published 2026-10-06 | — | published | — | — | — |
 | echook film | published 2026-10-06 | published 2026-10-07 | published | published 2026-11-01 | published 2026-11-01 | — |

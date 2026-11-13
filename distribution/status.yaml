@@ -8,11 +8,11 @@ registersAsOf:
   linkedin-page: '2026-11-10'
 summary:
   films: 73
-  complete: 67
+  complete: 68
   cells:
-    published: 178
+    published: 179
     planned: 9
-    gap: 1
+    gap: 0
     skipped: 0
     not-planned: 250
   byPlatform:
@@ -29,9 +29,9 @@ summary:
       planned: 0
       gap: 0
     linkedin:
-      published: 12
+      published: 13
       planned: 4
-      gap: 1
+      gap: 0
     x:
       published: 10
       planned: 5
@@ -40,9 +40,7 @@ summary:
       published: 1
       planned: 0
       gap: 0
-gaps:
-  - film: archlang-plan-to-3d
-    platform: linkedin
+gaps: []
 films:
   - film: archcanvas-studio-film
     title: ArchCanvas studio film
@@ -185,7 +183,18 @@ films:
         state: published
         url: https://chanmeng.org/films
       linkedin:
-        state: gap
+        state: published
+        posts:
+          - post: '7526950702426800130'
+            via: native-video
+            cut: 196 s, 16:9
+            date: '2026-11-13'
+            url: https://www.linkedin.com/posts/chanmeng666_floorplan-opensource-architecture-activity-7526950702426800130-zWmu
+            counts:
+              reactions: 0
+              comments: 1
+              reposts: 0
+            note: Posted on 2026-11-13 on her word, ahead of its 2026-12-10 slot and a third LinkedIn post that day; subtitles uploaded with the video, links in the first comment
       x:
         state: published
         posts:
@@ -201,7 +210,7 @@ films:
             note: 'Posted by hand on 2026-11-13 and pinned. A 196.5 s native upload, although `constraints.x` says over 140 s goes as a YouTube link: re-check that constraint'
       linkedin-page:
         state: not-planned
-    complete: false
+    complete: true
   - film: archlang-in-chatgpt-film
     title: ArchLang in ChatGPT film
     kind: product-film

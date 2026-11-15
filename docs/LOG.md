@@ -417,3 +417,9 @@ scripts/cards/archlang-3d-frames.mjs, scripts/cards/assets/archlang-3d/, scripts
 
 ## [2026-11-13] build | ArchLang README card's 3D turn plays as the GAVIGO card's phone does: 72 frames 5° apart at low WebP quality, cut hard as one filmstrip, under a slow eased push-in; card 608 KB
 scripts/cards/archlang-3d-frames.mjs, scripts/cards/assets/archlang-3d/, scripts/cards/archlang.mjs, public/cards/archlang.svg, docs/animated-svg-cards.md
+
+## [2026-11-15] add | chanmeng-video-podcast-editor (private skill repo, created 2026-11-13) recorded as a project and an agent skill, shown nowhere; listing forks awesome-remote-mcp-servers and awesome-cad catalogued as listing submissions for ArchLang
+data/profile/23-projects-oss-more.yaml, data/profile/47-agent-skills.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-11-15] decide | chanmeng-video-podcast-editor is a private skill for her own use: stays private, on no visitor-facing surface; positioning, stage and showcase delegated and set (stage maintained, showcase hidden)
+docs/STATE.md, data/profile/23-projects-oss-more.yaml, data/profile/47-agent-skills.yaml, docs/ecosystem/lineage.yaml

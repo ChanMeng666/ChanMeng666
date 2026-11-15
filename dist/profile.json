@@ -9478,6 +9478,56 @@
       "_relatedProjectsResolved": [],
       "_supersededByProject": null,
       "_supersedesProjects": []
+    },
+    {
+      "id": "chanmeng-video-podcast-editor",
+      "show": {
+        "readme": false,
+        "site": false,
+        "cv": false,
+        "linkedin": false,
+        "llms": false
+      },
+      "provenance": "personal",
+      "tier": "secondary",
+      "recency": "active",
+      "name": "Video-Podcast Editor — an agent skill for interview post-production",
+      "priority": 117,
+      "category": "creative",
+      "tagline": "An agent skill that directs a video-podcast or interview edit from raw camera files to a finished film with proofread subtitles, a clean mix, motion graphics, covers, chapters and Shorts.",
+      "roles": [
+        "Creative Coder",
+        "Video Producer"
+      ],
+      "techStack": [
+        "Python",
+        "ffmpeg",
+        "Playwright",
+        "FunASR",
+        "faster-whisper",
+        "Claude Code"
+      ],
+      "keywords": [
+        "Podcast post-production",
+        "Agent skill",
+        "Speech recognition",
+        "Video produced in code"
+      ],
+      "status": "active",
+      "startDate": "2026-11",
+      "relatedProjectIds": [
+        "women-of-the-island-episode-kit"
+      ],
+      "publicSummary": "A Claude Code skill that runs the post-production of a two-person\ninterview or video podcast. The main model acts as director: it\nmakes the editorial and visual calls with the owner and writes\nbriefs, while subagents run a config-driven pipeline (speech\nrecognition with speaker labels, content map, cue-level fine cut,\nproofread subtitles, audio clean-up and mix, branded graphics,\ncovers, chapters, QC). Optional editions: an uncut cut with\non-screen fact-checks, a fast cut and vertical Shorts. One timeline\nfile drives picture, graphics and sound; a headless browser draws\neach graphic frame and ffmpeg composites cached segments, so it runs\non a laptop without a GPU. Generalised from the method of one full\nproduction, her Women of the Island episode.\n",
+      "_clientOrg": null,
+      "_relatedProjectsResolved": [
+        {
+          "id": "women-of-the-island-episode-kit",
+          "name": "Women of the Island — episode post-production and brand kit"
+        }
+      ],
+      "_supersededByProject": null,
+      "_supersedesProjects": []
     }
   ],
   "openSourceContributions": [
@@ -15276,6 +15326,21 @@
       "summary": "Make a product promo film whose picture is a CODED REPLICA of the product's own UI — rendered with Remotion, scored with SUNO music, sounded with ElevenLabs or synthesised effects, delivered in several lengths (15 / 30 / 60 / 120 s) and bot"
     },
     {
+      "id": "chanmeng-video-podcast-editor",
+      "scope": "released",
+      "repo": "ChanMeng666/chanmeng-video-podcast-editor",
+      "repoPublic": false,
+      "category": "film-and-video",
+      "skills": [
+        "chanmeng-video-podcast-editor"
+      ],
+      "projectId": "chanmeng-video-podcast-editor",
+      "license": "MIT",
+      "install": "private repository for Chan's own use; not for install by others (Chan, 2026-11-15)",
+      "localFolder": "chanmeng-video-podcast-editor",
+      "summary": "Directs the post-production of a video-podcast or interview recording from raw camera files to finished films: speech recognition with speaker labels, cue-level fine cut, proofread subtitles, audio mix, branded motion graphics, covers, SRT and chapters, QC, and optional uncut, fast-cut and Shorts editions, on a config-driven ffmpeg and headless-browser pipeline that runs without a GPU."
+    },
+    {
       "id": "a11y-loop",
       "scope": "product",
       "repo": "ChanMeng666/a11y-loop",
@@ -17958,8 +18023,8 @@
   "meta": {
     "canonical": "https://chanmeng.org/",
     "version": "v1.0.0",
-    "lastModified": "2026-11-14",
+    "lastModified": "2026-11-15",
     "buildYear": "2026",
-    "buildTimestamp": "2026-11-14T21:04:59.401Z"
+    "buildTimestamp": "2026-11-15T05:26:42.384Z"
   }
 }

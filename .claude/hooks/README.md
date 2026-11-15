@@ -9,7 +9,7 @@ script that rebuilds it. The list is the `RULES` table at the top of the script:
 README.md, llms.txt, llms-full.txt, dist/** (the twin's dist/voice.json and
 dist/llms-twin.txt name their own sources), linkedin/linkedin-*.md,
 linkedin/linkedin-profile.json, public/cv-llms.txt, public/cv.jsonld,
-cv/tokens.typ, cv/exports/*.{docx,txt,pdf}, docs/INDEX.md, scripts/README.md,
+cv/tokens.typ, cv/exports/*.{docx,txt,pdf}, docs/INDEX.md, docs/ecosystem/archlang-context.md, scripts/README.md,
 wiki/**, and the generated platform registers (linkedin and company post
 registers, suno/songs.yaml, suno/words.yaml, distribution/status.yaml,
 distribution/calendar.md). x/posts.yaml is not blocked: its curated keys are

@@ -10,7 +10,8 @@ carry.
 - **Private overlay.** Repos with sensitive names live only in the local-only,
   gitignored `docs/ecosystem/lineage.private.yaml`. Read it when present; never
   copy its contents or repo names into tracked files.
-- **ArchLang / ArchCanvas family:** [archlang-archcanvas.md](archlang-archcanvas.md).
+- **ArchLang / ArchCanvas family:** [archlang-context.md](archlang-context.md), generated
+  (`npm run build:archlang-context`); hand it to the agent for ArchLang work.
 - **Repo lifecycle procedures:** `docs/operations/README.md`. Priorities and
   display rules: `docs/STATE.md`.
 
@@ -48,7 +49,8 @@ carry.
 
 When you create, archive, rename, transfer or delete a repo: update `lineage.yaml`
 (or the overlay if the name is sensitive), then run
-`npm run check:ecosystem -- --live` and fix any drift. Run `--live` on the machine
+`npm run check:ecosystem -- --live` and fix any drift. If the repo touches ArchLang or
+ArchCanvas, also run `npm run build:archlang-context`. Run `--live` on the machine
 that has the overlay: without it the overlay repos are reported as uncovered.
 
 ## Notes the catalog does not carry

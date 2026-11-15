@@ -22,6 +22,7 @@ const RULES = [
   [/^cv\/tokens\.typ$/, "data/brand.yaml", "npm run build:brand"],
   [/^cv\/exports\/[^/]+\.(docx|txt|pdf)$/, "cv/chan-meng-cv-ats.typ", "pwsh cv/build.ps1 (docx/txt alone: npm run build:ats-exports)"],
   [/^docs\/INDEX\.md$/, "shard headers, doc headings and package.json", "npm run build:index"],
+  [/^docs\/ecosystem\/archlang-context\.md$/, "docs/ecosystem/lineage.yaml, productFilms in 45-showcase.yaml, or the rules in scripts/build-archlang-context.mjs", "npm run build:archlang-context"],
   [/^scripts\/README\.md$/, "each script's header comment and package.json", "npm run build:index"],
   [/^wiki\//, "data/profile/*.yaml and docs/stories/*.md", "the wiki build script (see docs/INDEX.md)"],
   [/^linkedin\/posts\.yaml$/, "linkedin/capture/latest.json (re-capture with the linkedin-sync skill)", "npm run build:linkedin-register"],

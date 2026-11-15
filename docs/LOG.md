@@ -423,3 +423,9 @@ data/profile/23-projects-oss-more.yaml, data/profile/47-agent-skills.yaml, docs/
 
 ## [2026-11-15] decide | chanmeng-video-podcast-editor is a private skill for her own use: stays private, on no visitor-facing surface; positioning, stage and showcase delegated and set (stage maintained, showcase hidden)
 docs/STATE.md, data/profile/23-projects-oss-more.yaml, data/profile/47-agent-skills.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-11-15] build | docs/ecosystem/archlang-context.md: the ArchLang repo graph for agents (rules, mermaid, local paths, GitHub repos, workspaces, npm consumers, every edge), generated from lineage.yaml and the local checkouts; two stale localFolder values cleared
+scripts/build-archlang-context.mjs, package.json, docs/ecosystem/archlang-context.md, docs/ecosystem/lineage.yaml, data/profile/47-agent-skills.yaml, docs/ecosystem/archlang-archcanvas.md, docs/ecosystem/README.md, scripts/build-kb-index.mjs
+
+## [2026-11-15] remove | docs/ecosystem/archlang-archcanvas.md and archlang-archcanvas.yaml retired; their rules, traps, path coupling and licences moved into the generated archlang-context.md, now the family's detail file
+docs/ecosystem/lineage.yaml, docs/ecosystem/README.md, scripts/build-archlang-context.mjs, scripts/build-kb-index.mjs, docs/ecosystem/archlang-context.md

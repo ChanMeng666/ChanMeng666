@@ -56,7 +56,8 @@ const READ_WHEN = {
   "docs/brand/DESIGN.md": "drawing anything in the Caldera brand system (colour, type, voice)",
   "docs/ecosystem/README.md":
     "a repo is created, archived, renamed, transferred or deleted; editing lineage.yaml",
-  "docs/ecosystem/archlang-archcanvas.md": "working across the ArchLang / ArchCanvas repos",
+  "docs/ecosystem/archlang-context.md":
+    "working across the ArchLang / ArchCanvas repos; hand it to the agent for ArchLang work (generated)",
   "docs/github-theme-aware-assets.md": "an image may break on GitHub's light or dark canvas",
   "docs/operations/README.md":
     "archiving, deleting or making a repo private; retiring a hosted site; npm publishing",
@@ -282,7 +283,6 @@ const otherData = [
   "data/brand.yaml",
   "data/voice.yaml",
   "docs/ecosystem/lineage.yaml",
-  "docs/ecosystem/archlang-archcanvas.yaml",
   ...under("schema/").filter((f) => f.endsWith(".json")),
 ]
   .filter(has)

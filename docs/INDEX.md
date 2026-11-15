@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 125 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 425 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 431 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -47,8 +47,7 @@ Other knowledge files:
 |---|---|---|
 | `data/brand.yaml` | 733 | Chan Meng's personal visual + verbal design system. |
 | `data/voice.yaml` | 432 | VOICE — how the chanmeng.org digital twin sounds, and what it will not say … |
-| `docs/ecosystem/lineage.yaml` | 1013 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
-| `docs/ecosystem/archlang-archcanvas.yaml` | 346 | ArchLang × ArchCanvas ecosystem catalog … |
+| `docs/ecosystem/lineage.yaml` | 1015 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
 | `schema/brand.schema.json` | 464 | ChanMeng666 Brand System Schema … |
 | `schema/profile.schema.json` | 1467 | ChanMeng666 Profile Data Schema … |
 
@@ -68,8 +67,8 @@ Other knowledge files:
 | `docs/answers/README.md` | 64 | Filed answers | — |
 | `docs/answers/TEMPLATE.md` | 25 | The question, shortened to a title | — |
 | `docs/brand/DESIGN.md` | 367 | Chan Meng — Personal Brand & Design System | drawing anything in the Caldera brand system (colour, type, voice) |
-| `docs/ecosystem/README.md` | 62 | Repo lineage (ecosystem map) | a repo is created, archived, renamed, transferred or deleted; editing lineage.yaml |
-| `docs/ecosystem/archlang-archcanvas.md` | 52 | ArchLang × ArchCanvas ecosystem map | working across the ArchLang / ArchCanvas repos |
+| `docs/ecosystem/README.md` | 64 | Repo lineage (ecosystem map) | a repo is created, archived, renamed, transferred or deleted; editing lineage.yaml |
+| `docs/ecosystem/archlang-context.md` | 187 | ArchLang project graph (agent context) | working across the ArchLang / ArchCanvas repos; hand it to the agent for ArchLang work (generated) |
 | `docs/film-masters.md` | 326 | Film masters: where each one lives | — |
 | `docs/github-theme-aware-assets.md` | 31 | Theme-aware visual assets — this repo's status | an image may break on GitHub's light or dark canvas |
 | `docs/operations/README.md` | 143 | Repo lifecycle and hosting operations | archiving, deleting or making a repo private; retiring a hosted site; npm publishing |
@@ -90,7 +89,7 @@ Other knowledge files:
 | `docs/stories/tam-ai-ti.md` | 374 | Story. Tam-AI-Ti: Sole developer (full-stack, AI, deployment and maintenance) | preparing an interview or cover letter about this project |
 | `linkedin/README.md` | 92 | linkedin/ — LinkedIn: account register, profile copy and visuals | anything about LinkedIn posts, profile copy or visuals |
 | `media-kit/README.md` | 18 | Speaker & Media Kit | rebuilding the speaker and media kit PDF |
-| `scripts/README.md` | 68 | scripts/ | finding which script does what, and how to run it |
+| `scripts/README.md` | 69 | scripts/ | finding which script does what, and how to run it |
 | `suno/README.md` | 64 | suno/ — Suno: the register of both accounts | anything about Chan's Suno songs, playlists or the register |
 | `x/README.md` | 80 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
 | `x/x-strategy.md` | 531 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
@@ -183,6 +182,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | npm script | Runs |
 |---|---|
 | `build` | `npm run build:brand && node scripts/build.mjs && npm run build:linkedin && npm run build:video-data && npm run build:films-data && npm run build:twin && npm run build:cv-geo && npm run build:index` |
+| `build:archlang-context` | `node scripts/build-archlang-context.mjs` |
 | `build:art` | `node scripts/build-readme-art.mjs` |
 | `build:ats-exports` | `node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --docx cv/exports/chan-meng-cv-ats.docx --txt cv/exports/chan-meng-cv-ats.txt` |
 | `build:brand` | `node scripts/build-brand.mjs` |
@@ -244,6 +244,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | File | What it does | Status |
 |---|---|---|
 | `scripts/audit-assets.mjs` | Audits /public assets referenced from the data + derived-product surfaces | npm |
+| `scripts/build-archlang-context.mjs` | Builds docs/ecosystem/archlang-context.md: the ArchLang / ArchCanvas repo graph as one file an agent can be handed at the start of ArchLang work. | npm |
 | `scripts/build-brand.mjs` | Build pipeline for the personal brand design system. | npm |
 | `scripts/build-distribution.mjs` | Emit distribution/status.yaml and distribution/calendar.md — where every finished film is published, where it is not yet, and what is scheduled. | npm |
 | `scripts/build-echook-strip.mjs` | Build the feature strip the echook README shows. | named in code: `scripts/cards/echook-strip.mjs` |

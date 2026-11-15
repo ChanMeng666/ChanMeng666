@@ -13,6 +13,7 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | Script | What it does | Run with | Status |
 |---|---|---|---|
 | `audit-assets.mjs` | Audits /public assets referenced from the data + derived-product surfaces | `npm run audit` | npm |
+| `build-archlang-context.mjs` | Builds docs/ecosystem/archlang-context.md: the ArchLang / ArchCanvas repo graph as one file an agent can be handed at the start of ArchLang work. | `npm run build:archlang-context` | npm |
 | `build-brand.mjs` | Build pipeline for the personal brand design system. | `npm run build:brand` | npm |
 | `build-distribution.mjs` | Emit distribution/status.yaml and distribution/calendar.md — where every finished film is published, where it is not yet, and what is scheduled. | `npm run build:distribution`, `npm run check:distribution`, `npm run calendar` | npm |
 | `build-echook-strip.mjs` | Build the feature strip the echook README shows. | `node scripts/build-echook-strip.mjs` | named in code: `scripts/cards/echook-strip.mjs` |

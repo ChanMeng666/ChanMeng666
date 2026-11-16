@@ -62,6 +62,14 @@ capture. Rules for the files: `x/README.md` § "The account register".
    difference of a few is not a finding; say when a post is too new to judge.
 7. Commit `x/capture/latest.json`, `x/posts.yaml` and `x/account.yaml`
    together. Push only if she asks.
+8. Optional, read only: if her private growth repository (`archcanvas-growth`)
+   is checked out next to this one, run from there
+   `node scripts/interactions.mjs reconcile-x --personal <path to this repo>`.
+   It prints ids and counts of ArchLang posts that are in this register but
+   not in that repository's interaction ledger, and the reverse; it writes
+   nothing in either repository. Tell her the two numbers. Copy nothing from
+   the ledger into this repo; skip the step when the other repository is
+   absent.
 
 The account is not Premium: no profile visits, link clicks or per-post
 analytics. `replies` includes her own thread continuations;

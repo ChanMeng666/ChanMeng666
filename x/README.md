@@ -39,6 +39,7 @@ Rules:
   deletions.
 - **What it cannot see:** X shows profile visits and link taps only to Premium accounts, so
   the register holds the public counts: views, likes, replies, reposts, quotes, bookmarks.
+- **Reconcile (optional, read only):** after a sync, `x-sync` step 8 can compare this register with her private interaction ledger by id; it prints counts and ids and writes nothing here. No ledger content, DM or counterpart text ever enters this folder.
 
 ### Topics
 

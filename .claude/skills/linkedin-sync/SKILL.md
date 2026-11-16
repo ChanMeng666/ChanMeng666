@@ -66,6 +66,14 @@ Steps 1 to 3 for one page, then the other, **in the same tab**.
    `note:` lines. Say when a post is too new to judge.
 7. Commit the tracked files of both registers together; confirm no
    `*.private.*` file is staged. Push only if she asks.
+8. Optional, read only: if her private growth repository (`archcanvas-growth`)
+   is checked out next to this one, run from there
+   `node scripts/interactions.mjs reconcile-linkedin --personal <path to this repo>`.
+   It prints ids and counts of ArchLang or ArchCanvas posts that are in the
+   personal register but not in that repository's interaction ledger, and the
+   reverse; it writes nothing in either repository. Tell her the two numbers.
+   Copy nothing from the ledger into this repo; skip the step when the other
+   repository is absent.
 
 Build notes: a follower count above `00-basics.yaml` is also on the CV and the
 site, so tell her and use `career-copy` if she wants it raised. A live headline

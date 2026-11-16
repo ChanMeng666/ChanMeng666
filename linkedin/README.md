@@ -57,6 +57,7 @@ Rules:
   only.
 - A post that has gone from LinkedIn stays in the register, marked `deletedSeen`. A capture
   that did not reach the end of the feed fails the build instead of being read as deletions.
+- **Reconcile (optional, read only):** after a sync, `linkedin-sync` step 8 can compare these registers with her private interaction ledger by id; it prints counts and ids and writes nothing here. No ledger content, DM or counterpart text ever enters this folder.
 
 ## Profile copy
 

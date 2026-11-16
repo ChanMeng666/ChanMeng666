@@ -12,6 +12,8 @@ metadata:
 
 # LinkedIn sync (moved)
 
+**Paused until 2026-12-01, then at most weekly** (LinkedIn account warning, 2026-11-17): read `docs/LINKEDIN-LIMITS.md` in `chanmeng-social-ledger` before running anything.
+
 Since 2026-11-16 the LinkedIn captures (profile and ArchCanvas page), the tags and
 the publish of the `linkedin/` registers are done in the **private repo
 `chanmeng-social-ledger`** (laptop: `D:\github_repository\chanmeng-social-ledger`),

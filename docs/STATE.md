@@ -81,7 +81,7 @@ LinkedIn copy.
 |---|---|---|
 | YouTube | `youtube/channel.yaml` (+ gitignored `channel.private.yaml`); published titles and descriptions in `youtube/videos.yaml` | Hand, after each change in Studio; then `npm run capture:youtube` |
 | X | `x/account.yaml`, then `x/posts.yaml` (`summary` first); generated | `x-sync` skill, in the private repo `chanmeng-social-ledger`; its gated `publish-export` writes these files |
-| LinkedIn profile | `linkedin/account.yaml`, `linkedin/posts.yaml`; full text in `posts/<year>.yaml`; generated | `linkedin-sync` skill, same repo and publish |
+| LinkedIn profile | `linkedin/account.yaml`, `linkedin/posts.yaml`; full text in `posts/<year>.yaml`; generated | `linkedin-sync` skill, same repo and publish (paused until 2026-12-01: ledger repo `docs/LINKEDIN-LIMITS.md`) |
 | LinkedIn, ArchCanvas page | `linkedin/company/archcanvas/`; generated | `linkedin-sync` skill, same repo and publish |
 | Suno (two accounts) | `suno/accounts.yaml`, `suno/songs.yaml`; lyrics in `suno/words.yaml` | `suno-sync` skill |
 

@@ -391,20 +391,21 @@ clauses, that is the answer: I read the clause, and I ask for the carve-out up f
 
 ## Evidence
 
-Public items only, quoted briefly. Everything here is on a public page; the full set, with
+Public items only. Other people's comments are paraphrased, not quoted; published documents
+are quoted briefly. Everything here is on a public page; the full set, with
 captured copies, is in the private layer.
 
 - **Users on the repository**:
-  - Issue [#3](https://github.com/ChanMeng666/echook/issues/3) "Good job!", opened by
-    jesseqin-kamiwaza only to say: "I am using it, thanks for creating this tool." Three more
-    users added thanks in the thread: "very useful, great!", "very cool indeed!", "Amazing !"
-  - Issue [#4](https://github.com/ChanMeng666/echook/issues/4), padixa after the macOS fix:
-    "Thanks a lot. Now I have the sound." The same user's next two issues (#5, #6) became two
-    releases within four days.
-  - Issue [#7](https://github.com/ChanMeng666/echook/issues/7), roganhope: "this is an amazing
-    repo thank you for sharing" (the request became the snooze feature in v4.4.0). On PR
-    [#9](https://github.com/ChanMeng666/echook/pull/9): "I have never had the need to (try) to
-    contribute to an open source project." (closed by its author, not merged)
+  - Issue [#3](https://github.com/ChanMeng666/echook/issues/3) was opened by a user only to
+    say they were using the tool and to thank me for it; three more users added their thanks
+    in the thread.
+  - Issue [#4](https://github.com/ChanMeng666/echook/issues/4): after the macOS fix the
+    reporter confirmed the sound now worked. The same user's next two issues (#5, #6) became
+    two releases within four days.
+  - Issue [#7](https://github.com/ChanMeng666/echook/issues/7): a user who praised the repo
+    asked for a way to pause sounds; the request became the snooze feature in v4.4.0. The
+    same user opened PR [#9](https://github.com/ChanMeng666/echook/pull/9), their first
+    attempt at contributing to an open-source project (closed by its author, not merged).
   - External bug reports with root cause and patch: [#1](https://github.com/ChanMeng666/echook/issues/1)
     (fix integrated with credit in v3.3.3), [#10](https://github.com/ChanMeng666/echook/issues/10),
     [#14](https://github.com/ChanMeng666/echook/issues/14).
@@ -426,7 +427,7 @@ captured copies, is in the private layer.
     "The claude-code-audio-hooks project demonstrates significant demand for this".
   - A comparison of Claude Code hook READMEs in
     [jasonrundell/back-to-you#4](https://github.com/jasonrundell/back-to-you/issues/4#issuecomment-5098147711)
-    described it as "Maximalist; 39 hook events, TTS, webhooks, statusline".
+    placed it at the maximal end: 39 hook events, TTS, webhooks and a status line.
   - A code-to-video research project used the echook promo film as one of the reference films
     it replicated ([USTChandsomeboy/video-result](https://github.com/USTChandsomeboy/video-result)).
   - Not all of it is praise: a landscape review in [jlynshue/earshot](https://github.com/jlynshue/earshot)

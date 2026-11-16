@@ -5,8 +5,9 @@ merged in filename order by `scripts/lib/load-profile.mjs`) plus
 `data/brand.yaml` (design tokens). README.md, llms.txt, llms-full.txt, `dist/`,
 `linkedin/linkedin-*.md`, `linkedin/linkedin-profile.json`, `public/cv-llms.txt`,
 `public/cv.jsonld`, `cv/tokens.typ`, `cv/exports/*.{docx,txt}` and the platform
-registers (`*/posts.yaml`, `suno/songs.yaml`, `suno/words.yaml`) are
-**generated**: edit the source, then build.
+registers (`x/` and `linkedin/` posts and account files, generated from the private
+repo `chanmeng-social-ledger` and listed in `export-manifest.json`; `suno/songs.yaml`,
+`suno/words.yaml`) are **generated**: edit the source, then build.
 
 **Read `docs/STATE.md` first**: what Chan has decided and which projects must
 not be shown where. Its candid half is the gitignored `docs/STATE.private.md`.
@@ -27,11 +28,11 @@ when you touch matching files.
 
 ## Knowledge base layout
 
-- **Raw sources**, immutable: `evidence/`, `*/capture/latest.json`, screenshots,
+- **Raw sources**, immutable: `evidence/`, `suno/capture/*.json`, screenshots,
   and the local-only `docs/stories/_private/`. Never edit or move them.
 - **Knowledge**, edited by hand or by an agent: the shards, `data/brand.yaml`,
   `docs/stories/*.md`, `docs/ecosystem/lineage.yaml`, the hand-kept register
-  files (`account.yaml`, `curation.yaml`, `youtube/channel.yaml`,
+  files (`suno/curation.yaml`, `suno/accounts.yaml`, `youtube/channel.yaml`,
   `distribution/plan.yaml`), the hand-written CV `.typ` files.
 - **Derived**, generated: everything in the first paragraph above. Never edit it.
 - `npm run build:wiki` writes `wiki/`, a local, gitignored Obsidian view of

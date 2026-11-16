@@ -10,9 +10,9 @@ else (L2) is opened on demand, when its "read when" matches the task.
 
 | File | Lines | Read when |
 |---|---|---|
-| `CLAUDE.md` | 164 | always: the schema, hard rules and workflow |
+| `CLAUDE.md` | 165 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 125 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 431 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 440 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -87,11 +87,11 @@ Other knowledge files:
 | `docs/stories/narrative.md` | 144 | The threads through Chan Meng's engineering work | preparing an interview or cover letter: the threads across all projects |
 | `docs/stories/she-sharp.md` | 496 | Story. She Sharp: Senior Full Stack Engineer & Website Team Lead | preparing an interview or cover letter about this project |
 | `docs/stories/tam-ai-ti.md` | 374 | Story. Tam-AI-Ti: Sole developer (full-stack, AI, deployment and maintenance) | preparing an interview or cover letter about this project |
-| `linkedin/README.md` | 92 | linkedin/ — LinkedIn: account register, profile copy and visuals | anything about LinkedIn posts, profile copy or visuals |
+| `linkedin/README.md` | 96 | linkedin/ — LinkedIn: account register, profile copy and visuals | anything about LinkedIn posts, profile copy or visuals |
 | `media-kit/README.md` | 18 | Speaker & Media Kit | rebuilding the speaker and media kit PDF |
-| `scripts/README.md` | 69 | scripts/ | finding which script does what, and how to run it |
+| `scripts/README.md` | 68 | scripts/ | finding which script does what, and how to run it |
 | `suno/README.md` | 64 | suno/ — Suno: the register of both accounts | anything about Chan's Suno songs, playlists or the register |
-| `x/README.md` | 80 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
+| `x/README.md` | 84 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
 | `x/x-strategy.md` | 531 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
 | `youtube/README.md` | 116 | youtube/ — YouTube channel: register and banner | changing a YouTube title, description, playlist or the banner |
 
@@ -102,9 +102,9 @@ Skills hold procedures and load when their description matches the task.
 | Skill | Lines | Use when | Also in the folder |
 |---|---|---|---|
 | `career-copy` (`.claude/skills/career-copy/SKILL.md`) | 87 | Use when a career fact changes and copy must change with it (new role, project, metric, title, date, award, recommendation), to strengthen or audit CV, ATS resume, LinkedIn profile or cover-letter copy, or to judge whether a claim is safe to make. Not for visuals or the code that renders surfaces. | references/surfaces.md (87) |
-| `linkedin-sync` (`.claude/skills/linkedin-sync/SKILL.md`) | 92 | Use to sync or refresh Chan's LinkedIn posts (her profile, the ArchCanvas company page, or both) into the linkedin/ registers from her signed-in Chrome, or before answering how her posts did when the register is older than her latest post. Not for writing posts or the profile copy (that is career-copy). | — |
+| `linkedin-sync` (`.claude/skills/linkedin-sync/SKILL.md`) | 31 | Use to sync or refresh Chan's LinkedIn posts (her profile or the ArchCanvas company page) or before answering how her posts did when the register is older than her latest post. The procedure lives in the private repo chanmeng-social-ledger; this stub only says where. Not for writing posts or the profile copy (that is career-copy). | — |
 | `suno-sync` (`.claude/skills/suno-sync/SKILL.md`) | 39 | Use to sync or refresh Chan's Suno songs and playlists (@chanmeng666 and @chanmeng) into the suno/ register, or before answering anything about her songs or albums when the register is older than her latest song. Not for making or publishing songs, nor for the README Suno cards. | — |
-| `x-sync` (`.claude/skills/x-sync/SKILL.md`) | 84 | Use to sync or refresh Chan's X (Twitter) posts (@chanmeng666) into the x/ register from her signed-in Chrome, or before answering how her X posts did when the register is older than her latest post. Not for writing, posting or deleting posts, nor for the profile copy or strategy. | — |
+| `x-sync` (`.claude/skills/x-sync/SKILL.md`) | 28 | Use to sync or refresh Chan's X (Twitter) posts (@chanmeng666) or before answering how her X posts did when the register is older than her latest post. The procedure lives in the private repo chanmeng-social-ledger; this stub only says where. Not for writing, posting or deleting posts. | — |
 
 Rules in `.claude/rules/` load when a file matching their `paths:` is touched.
 
@@ -127,23 +127,21 @@ Chan's to change. Generated registers are rebuilt by their sync skill or npm scr
 |---|---|---|
 | `distribution/plan.yaml` | hand-edited | FILM DISTRIBUTION PLAN — where each finished film is published, and when … |
 | `distribution/status.yaml` | generated | GENERATED by npm run build:distribution. |
-| `linkedin/account.yaml` | hand-edited | LinkedIn account register — linkedin.com/in/chanmeng666 … |
-| `linkedin/company/archcanvas/account.yaml` | hand-edited | LinkedIn page register — linkedin.com/company/archcanvas … |
-| `linkedin/company/archcanvas/curation.yaml` | hand-edited | Tags for the posts of the ArchCanvas page, keyed by post id. |
-| `linkedin/company/archcanvas/posts.yaml` | generated | LinkedIn post register — linkedin.com/company/archcanvas … |
-| `linkedin/company/archcanvas/posts/2026.yaml` | generated | LinkedIn posts in full — 2026 … |
-| `linkedin/curation.yaml` | hand-edited | Tags for the posts on linkedin.com/in/chanmeng666, keyed by post id, newest first. |
-| `linkedin/posts.yaml` | generated | LinkedIn post register — linkedin.com/in/chanmeng666 … |
-| `linkedin/posts/2023.yaml` | generated | LinkedIn posts in full — 2023 … |
-| `linkedin/posts/2024.yaml` | generated | LinkedIn posts in full — 2024 … |
-| `linkedin/posts/2025.yaml` | generated | LinkedIn posts in full — 2025 … |
-| `linkedin/posts/2026.yaml` | generated | LinkedIn posts in full — 2026 … |
+| `linkedin/account.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
+| `linkedin/company/archcanvas/account.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
+| `linkedin/company/archcanvas/posts.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
+| `linkedin/company/archcanvas/posts/2026.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
+| `linkedin/posts.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
+| `linkedin/posts/2023.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
+| `linkedin/posts/2024.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
+| `linkedin/posts/2025.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
+| `linkedin/posts/2026.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
 | `suno/accounts.yaml` | hand-edited | Suno account register — @chanmeng666 and @chanmeng … |
 | `suno/curation.yaml` | hand-edited | Suno curation — the hand-edited tags `npm run build:suno` merges into suno/songs.yaml. |
 | `suno/songs.yaml` | generated | Suno song register — @chanmeng666 and @chanmeng … |
 | `suno/words.yaml` | generated | Suno words — captions, lyrics and playlist descriptions … |
-| `x/account.yaml` | hand-edited | X account register — @chanmeng666 … |
-| `x/posts.yaml` | generated | X post register — @chanmeng666 … |
+| `x/account.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
+| `x/posts.yaml` | generated | GENERATED from chanmeng-social-ledger@f0769d26521d by export-public. |
 | `youtube/channel.yaml` | hand-edited | YouTube channel register — @ChanMeng666 … |
 | `youtube/videos.yaml` | generated | YouTube public videos — @ChanMeng666 — titles and descriptions as published … |
 
@@ -159,7 +157,7 @@ capture by hand. Local-only paths are gitignored: nothing in them goes into a tr
 | `evidence/` | tracked | Collage sources rendered into public/evidence/collages/ |
 | `linkedin/screenshots/` | tracked | Production screenshots for LinkedIn project sections |
 | `x/screenshots/` | tracked | Screenshots of the X profile |
-| `*/capture/latest.json` | tracked (5 files) | Last capture of each live platform; registers are built from it |
+| `*/capture/latest.json` | tracked (2 files) | Last capture of each live platform; registers are built from it |
 | `archive/` | nothing tracked | Archived material |
 
 Local-only overlays and working files (gitignored; may be absent on this machine):
@@ -193,12 +191,10 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `build:films-data` | `node scripts/build-films-data.mjs` |
 | `build:index` | `node scripts/build-kb-index.mjs` |
 | `build:linkedin` | `node scripts/build-linkedin-json.mjs && node scripts/build-linkedin-md.mjs` |
-| `build:linkedin-register` | `node scripts/build-linkedin-register.mjs` |
 | `build:suno` | `node scripts/build-suno-register.mjs` |
 | `build:twin` | `node scripts/build-voice.mjs --offline && node scripts/build-llms-twin.mjs` |
 | `build:video-data` | `node scripts/build-video-data.mjs` |
 | `build:wiki` | `node scripts/build-wiki.mjs` |
-| `build:x` | `node scripts/build-x-register.mjs` |
 | `calendar` | `node scripts/build-distribution.mjs && node ../chanmeng-marketing/scripts/cal.mjs today` |
 
 ### Check
@@ -206,20 +202,19 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | npm script | Runs |
 |---|---|
 | `audit` | `node scripts/audit-assets.mjs` |
-| `check` | `npm run validate && npm run lint:kb -- --strict-provenance && npm run check:twin && npm run check:wikilinks && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:x && npm run check:linkedin-register && npm run check:suno && npm run build && npm run audit` |
+| `check` | `npm run validate && npm run lint:kb -- --strict-provenance && npm run check:twin && npm run check:wikilinks && npm run check:freshness && npm run check:cv && npm run check:ats && npm run check:copy && npm run check:export && npm run check:suno && npm run build && npm run audit` |
 | `check:ats` | `node cv/build-ats-exports.mjs cv/chan-meng-cv-ats.typ --check` |
 | `check:copy` | `node scripts/check-copy.mjs` |
 | `check:cv` | `node scripts/check-cv-sync.mjs` |
 | `check:distribution` | `node scripts/build-distribution.mjs --check` |
 | `check:ecosystem` | `node scripts/check-ecosystem.mjs` |
+| `check:export` | `node scripts/check-export.mjs` |
 | `check:freshness` | `node scripts/check-freshness.mjs` |
 | `check:index` | `node scripts/build-kb-index.mjs --check` |
-| `check:linkedin-register` | `node scripts/build-linkedin-register.mjs --check` |
 | `check:links` | `node scripts/check-links.mjs` |
 | `check:suno` | `node scripts/build-suno-register.mjs --check` |
 | `check:twin` | `node scripts/build-voice.mjs --check && node scripts/build-llms-twin.mjs --check && node scripts/check-llms-twin.mjs` |
 | `check:wikilinks` | `node scripts/check-wikilinks.mjs` |
-| `check:x` | `node scripts/build-x-register.mjs --check` |
 | `lint:kb` | `node scripts/lint-kb.mjs` |
 | `validate` | `node scripts/validate.mjs && node scripts/validate-brand.mjs && node scripts/check-linkedin-sync.mjs && node scripts/check-ecosystem.mjs` |
 
@@ -252,7 +247,6 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/build-kb-index.mjs` | Generate docs/INDEX.md and scripts/README.md: the map of what this repo knows and the index of its scripts. | npm |
 | `scripts/build-linkedin-json.mjs` | Generate linkedin/linkedin-profile.json from data/profile/*.yaml. | npm |
 | `scripts/build-linkedin-md.mjs` | Generate human-readable markdown companions from linkedin/linkedin-profile.json. | npm |
-| `scripts/build-linkedin-register.mjs` | Build the LinkedIn post registers — every post and repost on each LinkedIn page Chan runs — from the last capture of the live page. | npm |
 | `scripts/build-llms-twin.mjs` | Emit dist/llms-twin.txt, the knowledge text of the chanmeng.org digital twin. | npm |
 | `scripts/build-product-pills.mjs` | Draw link pills for a product repository's README, in the same capsule the profile README uses (scripts/readme-art/pills.mjs). | run by hand; named in `docs/STATE.md` |
 | `scripts/build-readme-art.mjs` | Build the README's own artwork (public/readme/*.svg): the hero, the section strips, the footer and the link pills. | npm |
@@ -263,7 +257,6 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/build-video-data.mjs` | Emit dist/video-data.json — the curated slice the promo film renders from. | npm |
 | `scripts/build-voice.mjs` | Validate data/voice.yaml and emit dist/voice.json, the voice pack the chanmeng.org digital twin reads. | npm |
 | `scripts/build-wiki.mjs` | Generate wiki/: a local, Obsidian-browsable view of the profile shards, one page per entity. | npm |
-| `scripts/build-x-register.mjs` | Build x/posts.yaml — the register of every post on @chanmeng666 — from the last capture of the live account. | npm |
 | `scripts/build.mjs` | Build pipeline: data/profile/*.yaml -> README.md, llms.txt, llms-full.txt, dist/profile.json. | npm |
 | `scripts/capture-blog.mjs` | Capture the published posts on chanmeng.org/blog from its RSS feed, into blog/capture/latest.json. | npm |
 | `scripts/capture-linkedin-screenshots.mjs` | Capture production screenshots of Chan's live projects for manual upload to the matching LinkedIn project sections. | run by hand; named in `linkedin/screenshots/README.md` |
@@ -272,6 +265,7 @@ is editing the tree. The per-script index, with how to run each one, is `scripts
 | `scripts/check-copy.mjs` | Career-copy linter — the prose gate. | npm |
 | `scripts/check-cv-sync.mjs` | CV anchor-fact drift guard. | npm |
 | `scripts/check-ecosystem.mjs` | Repo-lineage gate: docs/ecosystem/lineage.yaml (+ optional local-only lineage.private.yaml overlay). | npm |
+| `scripts/check-export.mjs` | Check:export - verifies the generated public registers. | npm |
 | `scripts/check-freshness.mjs` | Staleness budget / review-SLA checker for the profile data. | npm |
 | `scripts/check-linkedin-sync.mjs` | Drift guard for the LinkedIn data store. | npm |
 | `scripts/check-links.mjs` | Link-liveness checker for every URL in the data/profile/*.yaml shards. | npm |

@@ -20,6 +20,10 @@ on:
       - "cv/chan-meng-cv-ats.typ"
       - "cv/*.mjs"
       - "package.json"
+      # The generated X and LinkedIn registers (check:export).
+      - "x/**"
+      - "linkedin/**"
+      - "export-*.json"
       - "package-lock.json"
 
 jobs:
@@ -40,6 +44,9 @@ jobs:
       - run: npm run lint:kb -- --strict-provenance
       # [[list/id]] links in docs/ must resolve.
       - run: npm run check:wikilinks
+      # The X and LinkedIn registers are generated from the private chanmeng-social-ledger repo: every file must match
+      # export-manifest.json, carry the GENERATED header, use only allowlisted keys and hold no third-party text.
+      - run: npm run check:export
       # Freshness SLA: deterministic logic errors always fail; under --strict an
       # overdue flagship/active entry also fails — you're already editing the
       # data, review the overdue item (npm run reviewed -- "<section.key>").

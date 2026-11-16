@@ -21,7 +21,6 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `build-kb-index.mjs` | Generate docs/INDEX.md and scripts/README.md: the map of what this repo knows and the index of its scripts. | `npm run build:index`, `npm run check:index` | npm |
 | `build-linkedin-json.mjs` | Generate linkedin/linkedin-profile.json from data/profile/*.yaml. | `npm run build:linkedin` | npm |
 | `build-linkedin-md.mjs` | Generate human-readable markdown companions from linkedin/linkedin-profile.json. | `npm run build:linkedin` | npm |
-| `build-linkedin-register.mjs` | Build the LinkedIn post registers — every post and repost on each LinkedIn page Chan runs — from the last capture of the live page. | `npm run build:linkedin-register`, `npm run check:linkedin-register` | npm |
 | `build-llms-twin.mjs` | Emit dist/llms-twin.txt, the knowledge text of the chanmeng.org digital twin. | `npm run build:twin`, `npm run check:twin` | npm |
 | `build-product-pills.mjs` | Draw link pills for a product repository's README, in the same capsule the profile README uses (scripts/readme-art/pills.mjs). | `node scripts/build-product-pills.mjs` | run by hand; named in `docs/STATE.md` |
 | `build-readme-art.mjs` | Build the README's own artwork (public/readme/*.svg): the hero, the section strips, the footer and the link pills. | `npm run build:art` | npm |
@@ -32,7 +31,6 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `build-video-data.mjs` | Emit dist/video-data.json — the curated slice the promo film renders from. | `npm run build:video-data` | npm |
 | `build-voice.mjs` | Validate data/voice.yaml and emit dist/voice.json, the voice pack the chanmeng.org digital twin reads. | `npm run build:twin`, `npm run check:twin` | npm |
 | `build-wiki.mjs` | Generate wiki/: a local, Obsidian-browsable view of the profile shards, one page per entity. | `npm run build:wiki` | npm |
-| `build-x-register.mjs` | Build x/posts.yaml — the register of every post on @chanmeng666 — from the last capture of the live account. | `npm run build:x`, `npm run check:x` | npm |
 | `build.mjs` | Build pipeline: data/profile/*.yaml -> README.md, llms.txt, llms-full.txt, dist/profile.json. | `npm run build` | npm |
 | `capture-blog.mjs` | Capture the published posts on chanmeng.org/blog from its RSS feed, into blog/capture/latest.json. | `npm run capture:blog` | npm |
 | `capture-linkedin-screenshots.mjs` | Capture production screenshots of Chan's live projects for manual upload to the matching LinkedIn project sections. | `node scripts/capture-linkedin-screenshots.mjs` | run by hand; named in `linkedin/screenshots/README.md` |
@@ -41,6 +39,7 @@ workflow (it may be run or only mentioned there); **run by hand** is named only 
 | `check-copy.mjs` | Career-copy linter — the prose gate. | `npm run check:copy` | npm |
 | `check-cv-sync.mjs` | CV anchor-fact drift guard. | `npm run check:cv` | npm |
 | `check-ecosystem.mjs` | Repo-lineage gate: docs/ecosystem/lineage.yaml (+ optional local-only lineage.private.yaml overlay). | `npm run validate`, `npm run check:ecosystem` | npm |
+| `check-export.mjs` | Check:export - verifies the generated public registers. | `npm run check:export` | npm |
 | `check-freshness.mjs` | Staleness budget / review-SLA checker for the profile data. | `npm run check:freshness` | npm |
 | `check-linkedin-sync.mjs` | Drift guard for the LinkedIn data store. | `npm run validate` | npm |
 | `check-links.mjs` | Link-liveness checker for every URL in the data/profile/*.yaml shards. | `npm run check:links` | npm |

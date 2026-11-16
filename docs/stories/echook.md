@@ -410,11 +410,11 @@ captured copies, is in the private layer.
     [#14](https://github.com/ChanMeng666/echook/issues/14).
 - **Recommended by strangers on Reddit**:
   - An early tester on Chan's launch post reported macOS bash bugs, saw them fixed within a
-    day, then wrote: "Perfect! I can now annoy all my collegues as I work :-)"
+    day, and then said the sound worked for them
     ([r/ClaudeCode](https://www.reddit.com/r/ClaudeCode/comments/1oo1olq/enable_claude_code_to_automatically_play_sound/), 2025-11).
-  - Answers to other people's requests for a notification sound, linking the repo:
-    "Here you go." ([r/ClaudeCode](https://www.reddit.com/r/ClaudeCode/comments/1s0j7hz/we_need_a_notification_sound_in_claude_code/), 2026-03)
-    and "Something like this project maybe?" ([r/cursor](https://www.reddit.com/r/cursor/comments/1r4xm8i/claude_code_terminal_or_chat_not_giving_sound/), 2026-02).
+  - Two answers to other people's requests for a notification sound that linked the repo
+    ([r/ClaudeCode](https://www.reddit.com/r/ClaudeCode/comments/1s0j7hz/we_need_a_notification_sound_in_claude_code/), 2026-03;
+    [r/cursor](https://www.reddit.com/r/cursor/comments/1r4xm8i/claude_code_terminal_or_chat_not_giving_sound/), 2026-02).
 - **Other developers' research and code**:
   - A TTS best-practices report in benbrastmckie/nvim reviewed several Claude Code TTS
     projects: "**echook** (ChanMeng666): Most sophisticated." It then adopted echook's pattern

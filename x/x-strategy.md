@@ -484,7 +484,7 @@ post and find it honest, clear, and credible.
   github-readme-suno-cards). No shields.io badges,
   trophy graphics, wakatime, or third-party chrome.
 - **Alt text on every image and video.** Written before posting, because X cannot
-  add it afterwards. `npm run build:x` lists any post from 2026-10-08 on that has
+  add it afterwards. the capture build (ledger repo) lists any post from 2026-10-08 on that has
   media without it.
 - **Honest metrics only.** Every number must be backed by `data/profile/*.yaml` or a
   cited source. Round *down* when hand-typing (530+ stars, not a precise figure that

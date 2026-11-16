@@ -1,7 +1,9 @@
 # `linkedin/` — LinkedIn: account register, profile copy and visuals
 
-Hand-edited here: `account.yaml`, `curation.yaml`, `capture/snippet.js` and the HTML in
-`linkedin-services/`. Everything else is generated or captured.
+Hand-edited here: the profile copy (`linkedin-*.md` come from `data/profile/70-linkedin.yaml`) and the HTML in
+`linkedin-services/`. The registers (`account.yaml`, `posts.yaml`, `posts/<year>.yaml`, and the company page's) are
+**generated since 2026-11-16** from the private repo `chanmeng-social-ledger`; the captures, `curation.yaml` files
+and the snippet moved there.
 
 | Page | Folder |
 |---|---|
@@ -12,17 +14,19 @@ Hand-edited here: `account.yaml`, `curation.yaml`, `capture/snippet.js` and the 
 
 Read a page's folder in this order: `account.yaml` (reach, how the account has been run,
 `openItems`), `posts.yaml` (the `summary` block, then one line per post), `posts/<year>.yaml`
-(full text; `grep` the `id`), and `posts.private.yaml` when present (impressions, local only).
+(full text; `grep` the `id`), (`posts.private.yaml`, impressions, no longer exists here: impressions stay in the private ledger repo).
 
-To bring it up to date, use the **`linkedin-sync` skill** (`.claude/skills/linkedin-sync/`): it
-is the whole procedure, including adding a company page. Refresh after a posting session or
+To bring it up to date, use the **`linkedin-sync` skill** of the private repo `chanmeng-social-ledger`
+(the stub [`.claude/skills/linkedin-sync/`](../.claude/skills/linkedin-sync/SKILL.md) here points to it):
+it is the whole procedure, including adding a company page. Refresh after a posting session or
 before a review, no more often; never loop or schedule the capture.
 
 Rules:
 
-- **The post files are generated** by `npm run build:linkedin-register` from
-  `capture/latest.json`. Never edit them.
-- **Tags go in `curation.yaml`**, keyed by post id: `"<id>": { topic, projectIds, flags, note }`.
+- **The registers are generated** by `export-public` in the ledger repo from the capture, and
+  `npm run check:export` here fails on a hand edit. Never edit them.
+- **Tags go in the ledger repo's `curation/linkedin.yaml`** (company page:
+  `curation/linkedin-company-archcanvas.yaml`), keyed by post id: `"<id>": { topic, projectIds, flags, note }`.
   Every post was read and tagged on 2026-10-08. Chan delegated the tagging, so the tags are
   Claude's and she may overrule any of them. `projectIds` must exist in `data/profile/` and
   `topic` must be one of the ten below, or the build fails. A post with no line gets no topic,
@@ -41,14 +45,13 @@ Rules:
   | `boost` | someone else's post, job, event or product passed on with her comment |
   | `reflection` | a personal reflection, an opinion, a way of living |
   | `other` | none of these |
-- **`account.yaml` is hand-maintained and checked.** The build fails when its name, headline,
-  `asOf` or follower count disagree with the capture.
+- **`account.yaml` is generated** from the ledger repo's `curation/accounts/*.yaml`; the export fails when
+  its name, headline, `asOf` or follower count disagree with the capture.
 - **Counts are historical maximums**: a rebuild never lowers a post's reactions, comments,
   reposts or impressions, and `followers` is never lowered by hand.
 - **Public and private are kept apart.** Reactions, comments and reposts are on the public
-  page and are tracked. Impressions are shown to the author only: they live in
-  `capture/latest.private.json` and `posts.private.yaml`, both gitignored. Never copy a figure
-  from them into a tracked file, a commit message or generated output. No messages, drafts,
+  page and are tracked. Impressions are shown to the author only: they stay in the private ledger repo and the export
+  never writes one. Never copy a figure from them into a tracked file, a commit message or generated output. No messages, drafts,
   analytics exports or connection lists in this folder, tracked or not.
 - **`flags` and `openItems` are observations, not instructions.** Editing or deleting a post
   and changing the profile are Chan's decisions. Ask before doing any of them.
@@ -57,7 +60,7 @@ Rules:
   only.
 - A post that has gone from LinkedIn stays in the register, marked `deletedSeen`. A capture
   that did not reach the end of the feed fails the build instead of being read as deletions.
-- **Reconcile (optional, read only):** after a sync, `linkedin-sync` step 8 can compare these registers with her private interaction ledger by id; it prints counts and ids and writes nothing here. No ledger content, DM or counterpart text ever enters this folder.
+- **Other people's words are not published here.** A reshare keeps the original post's link and author; the export never writes the opening line of someone else's post (`original.opens`; the 69 that were published before 2026-11-16 were removed from the current files, history is unchanged). No DM, inbound comment or ledger content enters this folder.
 
 ## Profile copy
 

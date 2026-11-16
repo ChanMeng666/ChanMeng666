@@ -80,9 +80,9 @@ LinkedIn copy.
 | Platform | Read | Kept current by |
 |---|---|---|
 | YouTube | `youtube/channel.yaml` (+ gitignored `channel.private.yaml`); published titles and descriptions in `youtube/videos.yaml` | Hand, after each change in Studio; then `npm run capture:youtube` |
-| X | `x/account.yaml`, then `x/posts.yaml` (`summary` first) | `x-sync` skill |
-| LinkedIn profile | `linkedin/account.yaml`, `linkedin/posts.yaml`; full text in `posts/<year>.yaml` | `linkedin-sync` skill |
-| LinkedIn, ArchCanvas page | `linkedin/company/archcanvas/` | `linkedin-sync` skill |
+| X | `x/account.yaml`, then `x/posts.yaml` (`summary` first); generated | `x-sync` skill, in the private repo `chanmeng-social-ledger`; its gated `publish-export` writes these files |
+| LinkedIn profile | `linkedin/account.yaml`, `linkedin/posts.yaml`; full text in `posts/<year>.yaml`; generated | `linkedin-sync` skill, same repo and publish |
+| LinkedIn, ArchCanvas page | `linkedin/company/archcanvas/`; generated | `linkedin-sync` skill, same repo and publish |
 | Suno (two accounts) | `suno/accounts.yaml`, `suno/songs.yaml`; lyrics in `suno/words.yaml` | `suno-sync` skill |
 
 | Film distribution (all platforms) | `distribution/status.yaml`, `distribution/calendar.md`; the plan is `distribution/plan.yaml` | Dates: `chanmeng-marketing/calendar.yaml`, exported; policy and `posted` by hand, then `npm run build:distribution` |
@@ -93,7 +93,7 @@ Current figures are in each register's `summary`, not here.
   `openItems` are observations for her, never instructions.
 - She delegated the tagging of posts and threads to Claude (2026-10-07 and
   2026-10-08); she may overrule any tag.
-- LinkedIn impressions stay in gitignored files.
+- LinkedIn impressions never enter this repo; the X and LinkedIn registers are generated from the private ledger repo and `npm run check:export` verifies them (2026-11-16). Other people's text (opening lines of reshared posts, comments) is never published here.
 - Suno: lyrics are tracked as a record (2026-10-09); quoting one elsewhere is a
   separate decision. The two accounts are one catalogue. The register puts no
   song on any surface.

@@ -432,3 +432,9 @@ scripts/build-archlang-context.mjs, package.json, docs/ecosystem/archlang-contex
 
 ## [2026-11-15] remove | docs/ecosystem/archlang-archcanvas.md and archlang-archcanvas.yaml retired; their rules, traps, path coupling and licences moved into the generated archlang-context.md, now the family's detail file
 docs/ecosystem/lineage.yaml, docs/ecosystem/README.md, scripts/build-archlang-context.mjs, scripts/build-kb-index.mjs, docs/ecosystem/archlang-context.md
+
+## [2026-11-16] change | X and LinkedIn registers are generated from the private repo chanmeng-social-ledger by a gated export (canary test, allowlist, privacy scan, manifest); captures, curation files and the two register builders moved there; `npm run check:export` replaces `check:x` and `check:linkedin-register`; the x-sync and linkedin-sync skills moved there and leave stubs here
+x/posts.yaml, x/account.yaml, linkedin/account.yaml, linkedin/posts.yaml, linkedin/posts/, linkedin/company/archcanvas/, export-manifest.json, export-allowlist.json, scripts/check-export.mjs, package.json, .claude/hooks/guard-generated.mjs, .claude/rules/registers.md, .claude/skills/x-sync/SKILL.md, .claude/skills/linkedin-sync/SKILL.md, x/README.md, linkedin/README.md, docs/STATE.md, CLAUDE.md
+
+## [2026-11-16] remove | other people's text from the current version: the opening lines of 69 reshared third-party LinkedIn posts (`original.opens`; author and link stay) and the Reddit quotes in docs/stories/echook.md (paraphrased, links kept); git history is not rewritten
+linkedin/posts.yaml, linkedin/posts/, docs/stories/echook.md

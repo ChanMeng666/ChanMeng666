@@ -12,18 +12,21 @@ Read `account.yaml` first (what the profile shows, how the account has been run,
 `openItems`: where something live on X disagrees with a decision made since), then
 `posts.yaml` (the `summary` block, then every thread in full, newest first).
 
-To bring it up to date, use the **`x-sync` skill**
-([`.claude/skills/x-sync/`](../.claude/skills/x-sync/SKILL.md)): it is the whole procedure.
+**`account.yaml` and `posts.yaml` are generated** (since 2026-11-16) from the private repo
+`chanmeng-social-ledger`: capture, tags and the gated publish all happen there, in its **`x-sync`
+skill** (the stub [`.claude/skills/x-sync/`](../.claude/skills/x-sync/SKILL.md) here points to it).
 Sync after a posting session and before each monthly review (`x-strategy.md` §8).
 
 Rules:
 
-- **`posts.yaml` is generated** by `npm run build:x` from `capture/latest.json`. Never
-  hand-edit what X reports. The curated keys on a thread (`topic`, `projectIds`, `showcaseId`,
-  `pillar`, `summary`, `flags`, `note`) are edited in `posts.yaml` itself and survive a
-  rebuild. `projectIds` and `showcaseId` must exist in `data/profile/`, or the build fails.
-- **`account.yaml` is hand-maintained and checked.** The build fails when its name, bio,
-  location, website, pinned post or counts disagree with the capture.
+- **`posts.yaml` and `account.yaml` are generated** by `export-public` in the ledger repo from
+  the capture, and `npm run check:export` here fails on a hand edit. Never edit either file,
+  and never hand-edit what X reports. The curated keys on a thread (`topic`, `projectIds`,
+  `showcaseId`, `pillar`, `summary`, `flags`, `note`) are set in the ledger repo
+  (`node scripts/tag-x-thread.mjs`) and exported. `projectIds` and `showcaseId` must exist in
+  `data/profile/`. The export fails when the account block (name, bio, location, website,
+  pinned post or counts) disagrees with the capture; the fix is in the ledger repo's
+  `curation/accounts/x.yaml`.
 - **Counts are historical maximums**: a rebuild never lowers a post's views or likes, and
   `followers` is never lowered by hand.
 - **`pillar` is P1–P4 (`x-strategy.md` §2) or `none`.** Chan delegated the tagging on
@@ -39,7 +42,7 @@ Rules:
   deletions.
 - **What it cannot see:** X shows profile visits and link taps only to Premium accounts, so
   the register holds the public counts: views, likes, replies, reposts, quotes, bookmarks.
-- **Reconcile (optional, read only):** after a sync, `x-sync` step 8 can compare this register with her private interaction ledger by id; it prints counts and ids and writes nothing here. No ledger content, DM or counterpart text ever enters this folder.
+- **Nothing from the ledger but the register.** No DM, no inbound comment and no other person's words are published here; the export's allowlist, canary test and privacy scan enforce it (`docs/STATE.md`).
 
 ### Topics
 
@@ -71,7 +74,7 @@ Rules:
      public source. Tam-AI-Ti and GAVIGO IRE are also private: link the live product, never
      the repo.
    - Every image and video is posted with alt text. X cannot add it afterwards;
-     `npm run build:x` lists any post from 2026-10-08 on that has media without it.
+     the capture build (ledger repo) lists any post from 2026-10-08 on that has media without it.
    - Visuals only from Chan's own tools / the Caldera brand.
 3. **Character limits are verified by command**, not by eye. `x-profile.md` (display name ≤50,
    bio ≤160) and `x-pinned-tweet.md` (≤280/tweet, every URL = 23 chars) each carry a

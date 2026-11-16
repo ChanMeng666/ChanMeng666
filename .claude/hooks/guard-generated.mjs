@@ -25,9 +25,9 @@ const RULES = [
   [/^docs\/ecosystem\/archlang-context\.md$/, "docs/ecosystem/lineage.yaml, productFilms in 45-showcase.yaml, or the rules in scripts/build-archlang-context.mjs", "npm run build:archlang-context"],
   [/^scripts\/README\.md$/, "each script's header comment and package.json", "npm run build:index"],
   [/^wiki\//, "data/profile/*.yaml and docs/stories/*.md", "the wiki build script (see docs/INDEX.md)"],
-  [/^linkedin\/posts\.yaml$/, "linkedin/capture/latest.json (re-capture with the linkedin-sync skill)", "npm run build:linkedin-register"],
-  [/^linkedin\/posts\/[^/]+\.yaml$/, "linkedin/capture/latest.json (re-capture with the linkedin-sync skill)", "npm run build:linkedin-register"],
-  [/^linkedin\/company\/[^/]+\/posts(\.yaml|\/[^/]+\.yaml)$/, "linkedin/company/<page>/capture/ (linkedin-sync skill)", "npm run build:linkedin-register"],
+  // Generated from the private ledger repo (2026-11-16): the manifest lists every one of these files.
+  [/^(x\/(posts|account)|linkedin\/(posts|account)|linkedin\/posts\/[^/]+|linkedin\/company\/[^/]+\/(posts|account)|linkedin\/company\/[^/]+\/posts\/[^/]+)\.yaml$/, "the private repo chanmeng-social-ledger: sources/ (captures), curation/ and export/state/ (see docs/STATE.md, Platform registers)", "node scripts/publish-export.mjs --target <this checkout>, run in the ledger repo"],
+  [/^(export-manifest|export-allowlist)\.json$|^scripts\/check-export\.mjs$/, "the private repo chanmeng-social-ledger (export/allowlist.json, scripts/export/check-export-public.mjs)", "node scripts/publish-export.mjs --target <this checkout>, run in the ledger repo"],
   [/^suno\/(songs|words)\.yaml$/, "suno/capture/*.json; tags in suno/curation.yaml", "npm run build:suno"],
   [/^distribution\/(status\.yaml|calendar\.md)$/, "distribution/plan.yaml", "npm run build:distribution (or npm run calendar)"],
 ];

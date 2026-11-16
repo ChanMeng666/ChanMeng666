@@ -438,3 +438,6 @@ x/posts.yaml, x/account.yaml, linkedin/account.yaml, linkedin/posts.yaml, linked
 
 ## [2026-11-16] remove | other people's text from the current version: the opening lines of 69 reshared third-party LinkedIn posts (`original.opens`; author and link stay) and the Reddit quotes in docs/stories/echook.md (paraphrased, links kept); git history is not rewritten
 linkedin/posts.yaml, linkedin/posts/, docs/stories/echook.md
+
+## [2026-11-17] change | ArchCanvas development restarted (2026-11-16): plan quality, keeping up with the ArchLang core, the 3D preview, renderings made from it, sign-up attribution; ArchLang development continues; no copy says a launch is planned. The archcanvas → archlang edge cites ^1.62.0 and archlang-3d ^0.8.1
+docs/STATE.md, scripts/build-archlang-context.mjs, docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-context.md

@@ -2,13 +2,13 @@
 
 # ArchLang project graph (agent context)
 
-Hand this file to an agent at the start of ArchLang work. Catalog verified 2026-11-15; local checkouts read at build time. Topology only: career facts live in `data/profile/`, decisions in `docs/STATE.md`.
+Hand this file to an agent at the start of ArchLang work. Catalog verified 2026-11-17; local checkouts read at build time. Topology only: career facts live in `data/profile/`, decisions in `docs/STATE.md`.
 
 Read in this order: §1 rules, §2 the graph, §3 where each repo is, §4 what is inside archlang, §5 who consumes it, §6 every edge.
 
 ## 1. Rules for working in these repos
 
-- **Priorities (Chan, 2026-11-04).** Development centres on ArchLang. ArchCanvas stays live and operating but is thinned over time. No copy says a launch is planned.
+- **Priorities (Chan, 2026-11-16).** ArchCanvas development restarted: plan quality, keeping up with the ArchLang core, the 3D preview, renderings made from it, and sign-up attribution. ArchLang development continues. ArchCanvas is an AI architectural designer, never an "AI architect"; the 3D is the "3D preview" and an AI image is a "rendering". No copy says a launch is planned.
 - **Origin order.** ArchCanvas came first (first commit 2026-04-08, freehand SVG plans); ArchLang npm 0.1.0 followed on 2026-06-24 and replaced that engine on 2026-06-25. Never write that the language came first.
 - **Truth ownership.** Language behaviour lives in `archlang`; product behaviour in `archcanvas`; strategy, decisions and launch copy in `archcanvas-growth`. Growth holds no product truth; never edit a product repo from growth.
 - **Links.** Public copy links only `github.com/ChanMeng666/archlang`, `github.com/ChanMeng666/archlang-showcase`, `github.com/archcanvas/archcanvas` and the public film repos. A private repo is named, never linked.
@@ -121,7 +121,7 @@ Change a public API and these break. Ranges as written in each package.json.
 
 | Local folder | Repo | Depends on |
 |---|---|---|
-| `D:/github_repository/archcanvas` | ChanMeng666/archcanvas 🔒 | `@chanmeng666/archlang@^1.48.0` |
+| `D:/github_repository/archcanvas` | ChanMeng666/archcanvas 🔒 | `@chanmeng666/archlang@^1.62.0`, `@chanmeng666/archlang-3d@^0.8.1` |
 | `D:/github_repository/archlang-showcase` | ChanMeng666/archlang-showcase | `@chanmeng666/archlang@^1.55.0` |
 | `D:/github_repository/ChanMeng666` | ChanMeng666/ChanMeng666 | `@chanmeng666/archlang@^1.55.0` |
 | `D:/github_repository/film-archlang-2d-3d` | ChanMeng666/film-archlang-2d-3d | `@chanmeng666/archlang@1.57.0`, `@chanmeng666/archlang-3d@0.4.0` |
@@ -132,7 +132,7 @@ Change a public API and these break. Ranges as written in each package.json.
 One line per relation, `from --type--> to`, with its evidence.
 
 ```text
-archcanvas --depends-on--> archlang   # package.json @chanmeng666/archlang (docs/ecosystem yaml; shard cites ^1.18.0)
+archcanvas --depends-on--> archlang   # package.json @chanmeng666/archlang ^1.62.0 and @chanmeng666/archlang-3d ^0.8.1 (2026-11-16)
 archlang --powers--> archcanvas   # ArchLang compiler is the plan engine; replaced the freehand engine 2026-06-25
 archcanvas/archcanvas --companion-of--> archcanvas   # public product home; the app source stays private
 archcanvas/.github --documents--> archcanvas/archcanvas   # org profile README links product, public repo and language

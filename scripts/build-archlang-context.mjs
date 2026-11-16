@@ -211,7 +211,7 @@ L.push("");
 function RULES(films) {
   const show = films.map((f) => `${f.id ?? f.projectId}: \`${short(f.filmRepo)}\``).join("; ");
   return [
-    "- **Priorities (Chan, 2026-11-04).** Development centres on ArchLang. ArchCanvas stays live and operating but is thinned over time. No copy says a launch is planned.",
+    "- **Priorities (Chan, 2026-11-16).** ArchCanvas development restarted: plan quality, keeping up with the ArchLang core, the 3D preview, renderings made from it, and sign-up attribution. ArchLang development continues. ArchCanvas is an AI architectural designer, never an \"AI architect\"; the 3D is the \"3D preview\" and an AI image is a \"rendering\". No copy says a launch is planned.",
     "- **Origin order.** ArchCanvas came first (first commit 2026-04-08, freehand SVG plans); ArchLang npm 0.1.0 followed on 2026-06-24 and replaced that engine on 2026-06-25. Never write that the language came first.",
     "- **Truth ownership.** Language behaviour lives in `archlang`; product behaviour in `archcanvas`; strategy, decisions and launch copy in `archcanvas-growth`. Growth holds no product truth; never edit a product repo from growth.",
     "- **Links.** Public copy links only `github.com/ChanMeng666/archlang`, `github.com/ChanMeng666/archlang-showcase`, `github.com/archcanvas/archcanvas` and the public film repos. A private repo is named, never linked.",

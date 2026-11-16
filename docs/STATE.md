@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-11-01.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-11-17.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -15,7 +15,7 @@ gitignored `docs/STATE.private.md`. Read it when present; never copy from it.
 | Priority | What | Notes |
 |---|---|---|
 | **Main focus** | See the private state file | Weigh every "where should effort go" question against it |
-| Own product | **ArchCanvas + ArchLang** | Her decisions: keep developing (2026-10-07); ArchCanvas stays live and operating but is thinned over time, and development centres on ArchLang (2026-11-04). Do not re-argue it; no copy says a launch is planned |
+| Own product | **ArchCanvas + ArchLang** | Her decisions: keep developing (2026-10-07); ArchCanvas development restarted (2026-11-16): plan quality, keeping up with the ArchLang core, the 3D preview, renderings made from it, and sign-up attribution; ArchLang development continues. Do not re-argue it; no copy says a launch is planned |
 | Client work | **GenLAB Career Academy** for NZiFOCUS, in development | Lead developer, not the sole decision-maker: the pace follows the client |
 | Role | **FemTech Weekend** CTO; the **LYZEN** company site (repo `femtech-weekend-redthread`) is in founder review | Pace set by the founder |
 | Maintenance only | echook, a11y-loop, the Google News and Google Jobs MCP servers, the agent skills | Free open-source tools. Never propose paid tiers. Keep them healthy, add no features |

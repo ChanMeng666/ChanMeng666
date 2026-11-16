@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 165 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 125 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 440 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 443 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -79,7 +79,7 @@ Other knowledge files:
 | `docs/stories/archlang.md` | 355 | Story. ArchLang: Creator and sole developer | preparing an interview or cover letter about this project |
 | `docs/stories/corde-mobile-application.md` | 373 | Story. CORDE Field-Operations Mobile App: Full Stack Developer and Lead Documenter (Lincoln University COMP693 industry placement) | preparing an interview or cover letter about this project |
 | `docs/stories/eatropolis-website.md` | 461 | Story. Eatropolis website: Sole freelance developer | preparing an interview or cover letter about this project |
-| `docs/stories/echook.md` | 454 | Story. echook: Creator and maintainer | preparing an interview or cover letter about this project |
+| `docs/stories/echook.md` | 455 | Story. echook: Creator and maintainer | preparing an interview or cover letter about this project |
 | `docs/stories/femtech-weekend-website.md` | 387 | Story. FemTech Weekend website: Chief Technology Officer and sole engineer | preparing an interview or cover letter about this project |
 | `docs/stories/gavigo-ire.md` | 387 | Story. GAVIGO IRE: Founding Principal Engineer, Activation, Execution & AI Systems (prev. Core Engineer) | preparing an interview or cover letter about this project |
 | `docs/stories/google-news-mcp.md` | 386 | Story. Google News MCP Server: Creator and maintainer | preparing an interview or cover letter about this project |

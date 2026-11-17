@@ -11,8 +11,8 @@ summary:
   complete: 68
   cells:
     published: 179
-    planned: 7
-    gap: 2
+    planned: 6
+    gap: 3
     skipped: 0
     not-planned: 250
   byPlatform:
@@ -30,8 +30,8 @@ summary:
       gap: 0
     linkedin:
       published: 13
-      planned: 3
-      gap: 1
+      planned: 2
+      gap: 2
     x:
       published: 10
       planned: 4
@@ -45,6 +45,8 @@ gaps:
     platform: linkedin
   - film: corde-mobile-film
     platform: x
+  - film: ai-programming-school-film
+    platform: linkedin
 films:
   - film: archcanvas-studio-film
     title: ArchCanvas studio film
@@ -610,10 +612,7 @@ films:
         state: published
         url: https://chanmeng.org/films
       linkedin:
-        state: planned
-        date: '2026-11-19'
-        status: draft
-        cut: 60 s, 16:9
+        state: gap
       x:
         state: planned
         date: '2026-11-19'

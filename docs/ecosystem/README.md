@@ -29,8 +29,9 @@ carry.
   else's project) is never counted as one of her repos, projects or contributions.
 - **Judgement fields** (`positioning`, `stage`, `showcase`). Most values are
   Claude's proposals that Chan may overrule; only the `resolved:` entries that
-  quote her are her own words. Never fill them in for a new repo without asking
-  her.
+  quote her are her own words. Since 2026-11-17 (q55) Claude fills all three
+  for every repo, new or existing, without asking her: follow `docs/STATE.md`'s
+  display rules and the values used for repos of the same role.
 - **Promo films (Chan, 2026-10-06).** A film repo is filed under the family of the
   product it promotes, never as a film series. Several film repos of one product
   coexist: no `successor-of` between them unless Chan says so. Which film a

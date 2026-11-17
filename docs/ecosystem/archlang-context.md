@@ -46,8 +46,10 @@ flowchart LR
   end
   films_ChanMeng666_archcanvas["archcanvas films (3):<br/>archcanvas-hero-and-shorts 🔒<br/>archcanvas-zoom-out<br/>archcanvas-studio"]
   films_ChanMeng666_archlang["archlang films (7):<br/>archlang-narrated-demo 🔒<br/>archlang-one-take<br/>archlang-in-chatgpt<br/>archlang-explainer-and-shorts<br/>archlang-drawing-stands-up<br/>archlang-2d-3d<br/>archlang-playground"]
+  ChanMeng666_chanmeng_social_ledger["chanmeng-social-ledger 🔒"]
   ChanMeng666_chanmeng_product_film["chanmeng-product-film 🔒"]
   ChanMeng666_2d_portfolio["2d-portfolio 🔒"]
+  ChanMeng666_chanmeng_social_ledger -->|data-for| ChanMeng666_archcanvas_growth
   ChanMeng666_archcanvas -->|depends-on| ChanMeng666_archlang
   ChanMeng666_archlang -->|powers| ChanMeng666_archcanvas
   archcanvas_archcanvas -->|companion-of| ChanMeng666_archcanvas
@@ -78,7 +80,7 @@ flowchart LR
 | archcanvas | `D:/github_repository/archcanvas` | `ChanMeng666/archcanvas` (private: never link) | product | building | Closed-source ArchCanvas AI floor-plan app (Next.js); consumes ArchLang via npm Live: https://archcanvas.uk |
 | film-archlang-playground | not cloned | [ChanMeng666/film-archlang-playground](https://github.com/ChanMeng666/film-archlang-playground) | promo-film | done | ArchLang promo film: 68 s Remotion video, coded replica of the playground, plans compiled in-render by the real compiler Live: https://chanmeng.org/ |
 | archcanvas-growth | `D:/github_repository/archcanvas-growth` | `ChanMeng666/archcanvas-growth` (private: never link) | growth | building | Private growth/strategy HQ for ArchCanvas and ArchLang; editorial authority for the promo repos |
-| film-archcanvas-hero-and-shorts | not cloned | `ChanMeng666/film-archcanvas-hero-and-shorts` (private: never link) | promo-film | done | First ArchCanvas promo: 92 s HyperFrames film plus six shorts (14 masters) |
+| film-archcanvas-hero-and-shorts | `D:/github_repository/film-archcanvas-hero-and-shorts` | `ChanMeng666/film-archcanvas-hero-and-shorts` (private: never link) | promo-film | done | First ArchCanvas promo: 92 s HyperFrames film plus six shorts (14 masters) |
 | film-archcanvas-zoom-out | not cloned | [ChanMeng666/film-archcanvas-zoom-out](https://github.com/ChanMeng666/film-archcanvas-zoom-out) | promo-film | done | Second ArchCanvas promo: Remotion Zoom Out in four aspect ratios |
 | film-archcanvas-studio | not cloned | [ChanMeng666/film-archcanvas-studio](https://github.com/ChanMeng666/film-archcanvas-studio) | promo-film | done | Third ArchCanvas promo: Remotion film from a coded replica of the studio UI, 4 cuts x 2 ratios |
 | archlang-paper | `D:/github_repository/archlang-paper` | `ChanMeng666/archlang-paper` (private: never link) | paper | building | ArchLang papers plus reproduction scripts; private until acceptance |
@@ -90,9 +92,10 @@ flowchart LR
 | archcanvas/.github | `D:/github_repository/archcanvas-org-profile` | [archcanvas/.github](https://github.com/archcanvas/.github) | docs | done | GitHub org profile README for the archcanvas organisation |
 | film-archlang-one-take | not cloned | [ChanMeng666/film-archlang-one-take](https://github.com/ChanMeng666/film-archlang-one-take) | promo-film | done | 32 s one-take film for ArchLang: one three.js file, a Blender-built house and a score from CC0 instrument samples on one beat table; master in release v1.0.0 |
 | film-archlang-in-chatgpt | not cloned | [ChanMeng666/film-archlang-in-chatgpt](https://github.com/ChanMeng666/film-archlang-in-chatgpt) | promo-film | done | 82 s film of ArchLang inside ChatGPT: a coded replica of the real pages in Remotion, real compiler output and an original sampled score; master in release v1.0.0 |
-| film-archlang-explainer-and-shorts | not cloned | [ChanMeng666/film-archlang-explainer-and-shorts](https://github.com/ChanMeng666/film-archlang-explainer-and-shorts) | promo-film | — | 91 s explainer film for ArchLang, with 27 s, 28.5 s and 25 s cutdowns: Python motion compositor and ffmpeg, real compiler and archlang-3d output; masters in release v1.0.0 |
-| film-archlang-drawing-stands-up | `D:/github_repository/film-archlang-drawing-stands-up` | [ChanMeng666/film-archlang-drawing-stands-up](https://github.com/ChanMeng666/film-archlang-drawing-stands-up) | promo-film | — | Blender-rendered ArchLang films and stills: the 32 s hero film The drawing stands up (16:9 and 9:16), a 12 s code-to-form clip and five stills in three aspects; all geometry from the compiler and archlang3d; masters in release v0.4.0 |
-| film-archlang-2d-3d | `D:/github_repository/film-archlang-2d-3d` | [ChanMeng666/film-archlang-2d-3d](https://github.com/ChanMeng666/film-archlang-2d-3d) | promo-film | — | 196 s feature explainer of ArchLang, from one .arch file to a self-checking dimensioned plan and a 3D preview: Remotion, real compiler and archlang-3d, English voice-over, 30 s cuts in 16:9 and 9:16; masters in release v1.0.0 Live: https://chanmeng.org/, https://archlang.uk/ |
+| film-archlang-explainer-and-shorts | not cloned | [ChanMeng666/film-archlang-explainer-and-shorts](https://github.com/ChanMeng666/film-archlang-explainer-and-shorts) | promo-film | done | 91 s explainer film for ArchLang, with 27 s, 28.5 s and 25 s cutdowns: Python motion compositor and ffmpeg, real compiler and archlang-3d output; masters in release v1.0.0 |
+| film-archlang-drawing-stands-up | `D:/github_repository/film-archlang-drawing-stands-up` | [ChanMeng666/film-archlang-drawing-stands-up](https://github.com/ChanMeng666/film-archlang-drawing-stands-up) | promo-film | done | Blender-rendered ArchLang films and stills: the 32 s hero film The drawing stands up (16:9 and 9:16), a 12 s code-to-form clip and five stills in three aspects; all geometry from the compiler and archlang3d; masters in release v0.4.0 |
+| film-archlang-2d-3d | `D:/github_repository/film-archlang-2d-3d` | [ChanMeng666/film-archlang-2d-3d](https://github.com/ChanMeng666/film-archlang-2d-3d) | promo-film | done | 196 s feature explainer of ArchLang, from one .arch file to a self-checking dimensioned plan and a 3D preview: Remotion, real compiler and archlang-3d, English voice-over, 30 s cuts in 16:9 and 9:16; masters in release v1.0.0 Live: https://chanmeng.org/, https://archlang.uk/ |
+| chanmeng-social-ledger | `D:/github_repository/chanmeng-social-ledger` | `ChanMeng666/chanmeng-social-ledger` (private: never link) | data-export | maintained | Private source of truth for her social-media data (own posts, comments, replies and DMs across X, LinkedIn, Reddit, GitHub, Hacker News and dev.to), with the capture tools, raw archives and the privacy-gated export of her own posts to the x/ and linkedin/ registers here; home of the x-sync and linkedin-sync skills |
 | chanmeng-product-film | not cloned | `ChanMeng666/chanmeng-product-film` (private: never link) | skill | maintained | Skill for coded-UI-replica product promo films (Remotion, Suno, ElevenLabs); case study is ArchCanvas |
 | 2d-portfolio | `D:/github_repository/2d-portfolio` | `ChanMeng666/2d-portfolio` (private: never link) | product | maintained | Next.js portfolio site serving chanmeng.org (also /cv and /blog) Live: https://chanmeng.org/ |
 
@@ -132,6 +135,7 @@ Change a public API and these break. Ranges as written in each package.json.
 One line per relation, `from --type--> to`, with its evidence.
 
 ```text
+chanmeng-social-ledger --data-for--> archcanvas-growth   # mounted read-only as a git submodule at ledger/; holds the growth repo's pre-ledger trackers in archive/growth-legacy/
 archcanvas --depends-on--> archlang   # package.json @chanmeng666/archlang ^1.62.0 and @chanmeng666/archlang-3d ^0.9.0 (2026-11-17)
 archlang --powers--> archcanvas   # ArchLang compiler is the plan engine; replaced the freehand engine 2026-06-25
 archcanvas/archcanvas --companion-of--> archcanvas   # public product home; the app source stays private
@@ -172,6 +176,7 @@ Listing forks (`ownProject: false`, never her projects; each kept only for its P
 
 Relation types used here:
 
+- `data-for`: export/archive that feeds to
 - `depends-on`: code/package dependency (from consumes to)
 - `powers`: from is the engine/runtime of to
 - `companion-of`: sibling product repos meant to be used together
@@ -179,7 +184,6 @@ Relation types used here:
 - `markets`: growth / go-to-market workspace for to
 - `promotes`: promo film / marketing asset for to
 - `successor-of`: from (newer generation) replaces to
-- `data-for`: export/archive that feeds to
 - `showcases`: demo or examples of to
 - `deployed-as`: from is deployed at url:... (live domain)
 - `derived-from-template`: from was generated or generalised from to

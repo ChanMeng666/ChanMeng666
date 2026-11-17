@@ -151,8 +151,9 @@ badges.
 - **Repo lineage**: `docs/ecosystem/lineage.yaml` (sensitive repos only in the
   gitignored `lineage.private.yaml`). When a repo is created, archived,
   renamed, transferred or deleted, update it and run
-  `npm run check:ecosystem -- --live`. `positioning`, `stage` and `showcase`
-  are Chan's judgement: never fill them in for her.
+  `npm run check:ecosystem -- --live`. Fill `positioning`, `stage` and
+  `showcase` yourself for every repo, without asking her (delegated
+  2026-11-17); a `resolved:` entry quoting her wins.
 - **Repo and hosting operations**: `docs/operations/README.md` (specifics in the
   gitignored `hosting.private.md`). Chan decides, through the triage page
   (`node scripts/build-triage-page.mjs`), with nothing preselected.

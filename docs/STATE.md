@@ -101,11 +101,12 @@ Current figures are in each register's `summary`, not here.
 
 ## Lineage judgement fields
 
-`positioning`, `stage` and `showcase` on each repo row are Claude's proposals
-from a delegated pass (2026-10-06), which Chan may overrule, **except** where an
-entry under `resolved:` in `lineage.yaml` quotes her. Read `resolved:` to tell
-her words from a proposal. Do not fill these fields for a new repo without
-asking, unless she delegates again. `showcase: flagship` requires
+`positioning`, `stage` and `showcase` on each repo row are Claude's proposals,
+which Chan may overrule, **except** where an entry under `resolved:` in
+`lineage.yaml` quotes her. Read `resolved:` to tell her words from a proposal.
+Delegated for good (Chan, 2026-11-17, q55): Claude fills all three for every repo,
+new or existing, without asking her, following the display rules above and the
+values already used for repos of the same role; she is not asked to sort them. `showcase: flagship` requires
 `tier: flagship` in the shard; the shard is the authority on tier.
 
 ## Open items

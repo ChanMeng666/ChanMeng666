@@ -447,3 +447,9 @@ data/profile/21-projects-oss-primary.yaml, data/profile/22-projects-oss-webapps.
 
 ## [2026-11-17] change | ArchLang 1.63.0 and archlang-3d 0.9.0 released; ArchCanvas depends on archlang-3d ^0.9.0 (its "Download GLB") and keeps archlang ^1.62.0
 docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-context.md
+
+## [2026-11-17] add | chanmeng-social-ledger in the repo lineage (private data-export repo, three relations); x-sync and linkedin-sync skills point at it; three film folders get their localFolder
+docs/ecosystem/lineage.yaml, data/profile/47-agent-skills.yaml
+
+## [2026-11-17] decide | Claude fills positioning, stage and showcase for every repo without asking (q55); filled for 107 rows that lacked them; chanmeng-social-ledger stays private
+docs/STATE.md, docs/ecosystem/README.md, docs/ecosystem/lineage.yaml, CLAUDE.md

@@ -441,3 +441,6 @@ linkedin/posts.yaml, linkedin/posts/, docs/stories/echook.md
 
 ## [2026-11-17] change | ArchCanvas development restarted (2026-11-16): plan quality, keeping up with the ArchLang core, the 3D preview, renderings made from it, sign-up attribution; ArchLang development continues; no copy says a launch is planned. The archcanvas → archlang edge cites ^1.62.0 and archlang-3d ^0.8.1
 docs/STATE.md, scripts/build-archlang-context.mjs, docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-context.md
+
+## [2026-11-17] archive | Seismophone (`sunostats`) shut down: site, Worker, R2 cache and database deleted, repo archived; shard set to status archived, recency deprecated, no live url; README-cards companion link removed
+data/profile/21-projects-oss-primary.yaml, data/profile/22-projects-oss-webapps.yaml, docs/STATE.md, docs/operations/README.md, docs/ecosystem/lineage.yaml, cv/assets/extended/SHOT-LIST.md

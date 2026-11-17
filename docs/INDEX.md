@@ -11,8 +11,8 @@ else (L2) is opened on demand, when its "read when" matches the task.
 | File | Lines | Read when |
 |---|---|---|
 | `CLAUDE.md` | 165 | always: the schema, hard rules and workflow |
-| `docs/STATE.md` | 125 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 443 | to see what changed recently; append an entry after a change |
+| `docs/STATE.md` | 124 | always: Chan's decisions and display rules, before any edit |
+| `docs/LOG.md` | 446 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -26,8 +26,8 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/00-basics.yaml` | 144 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
 | `data/profile/10-career.yaml` | 2832 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
-| `data/profile/21-projects-oss-primary.yaml` | 1199 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
-| `data/profile/22-projects-oss-webapps.yaml` | 1498 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
+| `data/profile/21-projects-oss-primary.yaml` | 1198 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
+| `data/profile/22-projects-oss-webapps.yaml` | 1496 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
 | `data/profile/23-projects-oss-more.yaml` | 4141 | projects (99) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
 | `data/profile/30-recognition.yaml` | 1896 | awards (7), certificates (53), publications (78) | RECOGNITION — awards, certificates, publications & media … |
@@ -47,7 +47,7 @@ Other knowledge files:
 |---|---|---|
 | `data/brand.yaml` | 733 | Chan Meng's personal visual + verbal design system. |
 | `data/voice.yaml` | 432 | VOICE — how the chanmeng.org digital twin sounds, and what it will not say … |
-| `docs/ecosystem/lineage.yaml` | 1015 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
+| `docs/ecosystem/lineage.yaml` | 1017 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
 | `schema/brand.schema.json` | 464 | ChanMeng666 Brand System Schema … |
 | `schema/profile.schema.json` | 1467 | ChanMeng666 Profile Data Schema … |
 
@@ -71,7 +71,7 @@ Other knowledge files:
 | `docs/ecosystem/archlang-context.md` | 187 | ArchLang project graph (agent context) | working across the ArchLang / ArchCanvas repos; hand it to the agent for ArchLang work (generated) |
 | `docs/film-masters.md` | 326 | Film masters: where each one lives | — |
 | `docs/github-theme-aware-assets.md` | 31 | Theme-aware visual assets — this repo's status | an image may break on GitHub's light or dark canvas |
-| `docs/operations/README.md` | 143 | Repo lifecycle and hosting operations | archiving, deleting or making a repo private; retiring a hosted site; npm publishing |
+| `docs/operations/README.md` | 142 | Repo lifecycle and hosting operations | archiving, deleting or making a repo private; retiring a hosted site; npm publishing |
 | `docs/stories/README.md` | 157 | Project stories | writing or editing a project story |
 | `docs/stories/a11y-loop.md` | 392 | Story. a11y-loop: Creator and sole developer | preparing an interview or cover letter about this project |
 | `docs/stories/ai-programming-teaching-project.md` | 370 | Story. AI Programming Education Platform: Creator, developer and instructor | preparing an interview or cover letter about this project |
@@ -102,7 +102,7 @@ Skills hold procedures and load when their description matches the task.
 | Skill | Lines | Use when | Also in the folder |
 |---|---|---|---|
 | `career-copy` (`.claude/skills/career-copy/SKILL.md`) | 87 | Use when a career fact changes and copy must change with it (new role, project, metric, title, date, award, recommendation), to strengthen or audit CV, ATS resume, LinkedIn profile or cover-letter copy, or to judge whether a claim is safe to make. Not for visuals or the code that renders surfaces. | references/surfaces.md (87) |
-| `linkedin-sync` (`.claude/skills/linkedin-sync/SKILL.md`) | 31 | Use to sync or refresh Chan's LinkedIn posts (her profile or the ArchCanvas company page) or before answering how her posts did when the register is older than her latest post. The procedure lives in the private repo chanmeng-social-ledger; this stub only says where. Not for writing posts or the profile copy (that is career-copy). | — |
+| `linkedin-sync` (`.claude/skills/linkedin-sync/SKILL.md`) | 33 | Use to sync or refresh Chan's LinkedIn posts (her profile or the ArchCanvas company page) or before answering how her posts did when the register is older than her latest post. The procedure lives in the private repo chanmeng-social-ledger; this stub only says where. Not for writing posts or the profile copy (that is career-copy). | — |
 | `suno-sync` (`.claude/skills/suno-sync/SKILL.md`) | 39 | Use to sync or refresh Chan's Suno songs and playlists (@chanmeng666 and @chanmeng) into the suno/ register, or before answering anything about her songs or albums when the register is older than her latest song. Not for making or publishing songs, nor for the README Suno cards. | — |
 | `x-sync` (`.claude/skills/x-sync/SKILL.md`) | 28 | Use to sync or refresh Chan's X (Twitter) posts (@chanmeng666) or before answering how her X posts did when the register is older than her latest post. The procedure lives in the private repo chanmeng-social-ledger; this stub only says where. Not for writing, posting or deleting posts. | — |
 

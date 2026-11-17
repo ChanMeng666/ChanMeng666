@@ -1216,8 +1216,9 @@ projects:
         Vercel -> Cloudflare Workers migration with GitHub Actions
         auto-deploy; authored the README, TUTORIAL.md, and GEO
         metadata. Maintains the live deployment today.
-  # PENDING ARCHIVE (Chan, 2026-10-07): online, but off every visitor-facing surface and cv-llms.txt. See show:.
-  # On her word: runbook in docs/operations/README.md, then status: archived + recency: deprecated (until then the values below are true).
+  # SHUT DOWN 2026-11-17 (Chan): the site, its Worker, R2 cache and Neon database were deleted and the repo
+  # archived; no live url, no repo link. Off every visitor-facing surface since 2026-10-07 (see show:).
+  # Figures below describe the project as it ran (2026-04 to 2026-11).
   - id: sunostats
     show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
     provenance: personal
@@ -1228,8 +1229,8 @@ projects:
     # entry in llms-full.txt rather than a full narrative. If that matters later,
     # the fix is to put it back in flagshipProjectIds, not to fake a repoUrl.
     tier: secondary
-    recency: recent
-    lastUpdated: "2026-10-07"
+    recency: deprecated
+    lastUpdated: "2026-11-17"
     meta:
       x_brand:
         featuredStack: [nextjs, react, drizzle, neon, stripe]
@@ -1237,13 +1238,9 @@ projects:
     priority: 18
     category: web-apps
     tagline: "Seismophone — 'the independent observatory for AI music,' publishing ecosystem readings the platforms don't. Discovered that Suno's public API serializer skips its lineage-UUID redaction pass on exactly two response shapes, and turned that into the industry's first public Suno remix-lineage explorer; also proved Suno's 'trending' feed is a frozen 2024 fossil and built a fossil-watch pulse around it. Open public creator portfolios (/@handle) + observatory pages; seven deterministic single-purchase insight reports over a creator's own catalog. Trilingual EN/简中/日本語, solo-built, self-hosted on a Docker+Traefik VPS, with a read-only MCP server for AI agents."
-    url: https://seismophone.chanmeng.org/
+    # url omitted: the site was shut down on 2026-11-17 and the domain no longer resolves.
     # repoUrl omitted — repository is private (owner decision 2026-06-12); do not re-add.
     logo: /public/brands/seismophone-mark.svg
-    extraLinks:
-      - { label: "Live app",                url: "https://seismophone.chanmeng.org/" }
-      - { label: "Public trending (no auth)", url: "https://seismophone.chanmeng.org/trending" }
-      - { label: "Data sources & compliance", url: "https://seismophone.chanmeng.org/legal/data-sources" }
     techStack:
       - "Next.js 16.2 (App Router, Webpack pin)"
       - "React 19.2"
@@ -1280,7 +1277,7 @@ projects:
       - "Observability + ops hardening"
     metrics:
       - { label: "Commits (solo)",      value: "99 (2026-04-12 → 2026-07-10, ~3 months active); sole author" }
-      - { label: "Live URL",            value: "https://seismophone.chanmeng.org (legacy sunostats.chanmeng.org 301-redirects to it)" }
+      - { label: "Ran at",              value: "seismophone.chanmeng.org, 2026-04 to 2026-11 (shut down 2026-11-17)" }
       - { label: "Surfaces",            value: "19 pages · 28 API route handlers · 57 React components · 193 TS/TSX files in src" }
       - { label: "Database",            value: "17 Drizzle tables on Neon Postgres; append-only daily snapshots + credit ledger" }
       - { label: "Open surface",        value: "Public creator portfolio at /@handle, lineage explorer, observatory pages (/pulse, /trending, who-remixes-whom), up to 10 watched playlists — no account needed for observatory reads" }
@@ -1293,8 +1290,9 @@ projects:
       - { label: "Locales",             value: "3 (EN / 简体中文 / 日本語) with TypeScript-enforced dictionary completeness — build fails on a missing key" }
       - { label: "Classifiers",         value: "9-bucket tag classifier + 10-value method-mix enum (Suno metadata.type)" }
       - { label: "Deployment",          value: "Docker multi-stage (Node 20 slim, non-root) on a VPS behind Traefik + Let's Encrypt; GHCR image; GitHub Actions CI/CD; 5 daily/weekly cron pipelines" }
-    status: live
+    status: archived
     startDate: "2026-04"
+    endDate: "2026-11"
     publicSummary: |
       Seismophone (codebase: sunostats) is an independent, third-party observatory for AI-generated music, instrumented deepest on Suno. It captures Suno's public data daily and publishes free readings the platform itself hides — forensic proof that Suno's "trending" chart froze in 2024, a daily pulse on Suno's live curated Explore shelves, and a rare map of who remixes whom, recovered from a since-closed gap in Suno's own data. Point the same instruments at your own catalog and they produce a free public portfolio at /@handle plus seven single-purchase insight reports; solo-built on Next.js 16 + Neon Postgres, trilingual (EN / 简中 / 日本語), self-hosted on a Docker + Traefik server with a read-only MCP server for AI agents.
     narrative:
@@ -1318,7 +1316,7 @@ projects:
 
         **Money-path and reverse-engineered-API correctness are hardened deliberately.** Concurrent double-charges are blocked by a partial unique index over in-flight report claims; balances debit via optimistic `UPDATE … RETURNING` with a sub-zero rollback; Stripe idempotency is enforced two ways (a unique ledger index plus a processed-events dedupe log); generator failures auto-refund. Because the whole product depends on Suno's unofficial response shapes, a weekly schema-drift canary alerts when they change, and a daily editorial-shelf staleness sentinel flags when a tracked shelf freezes (its UUID rotated away); a durable cron-runs table provides leasing and observability that Neon's HTTP driver can't. The app self-hosts as a multi-stage Docker image (Node 20 slim, non-root) behind Traefik + Let's Encrypt, shipped via GHCR and GitHub Actions, with five daily/weekly cron pipelines; the trilingual dictionaries are TypeScript-checked so a missing translation key fails the build.
       outcomes: |
-        Live at seismophone.chanmeng.org, solo-built across 99 commits over roughly three months (2026-04-12 → 2026-07-10). The apparatus runs 19 pages, 28 API route handlers, 57 components, and five cron pipelines over a 17-table schema, plus a 7-tool read-only MCP server. Its signature result is the sealed remix-lineage archive — ~102 real parent→child edges recovered in a single 2026-05-09 backfill before Suno closed the redaction gap — which makes the public lineage explorer a dataset that, by construction, cannot be collected again. The forensic teardown of Suno's frozen `/api/trending` fossil is itself a published finding; when that feed proved dead, the observatory added a live pulse on Suno's real curated Explore shelves as the forward-looking replacement. The build also went through structured hardening waves (Codex-reviewed) covering credits, privacy, query performance, observability, and the schema-drift and editorial-shelf sentinels.
+        Ran at seismophone.chanmeng.org from April to November 2026 (shut down 2026-11-17), solo-built across 99 commits over roughly three months (2026-04-12 → 2026-07-10). The apparatus runs 19 pages, 28 API route handlers, 57 components, and five cron pipelines over a 17-table schema, plus a 7-tool read-only MCP server. Its signature result is the sealed remix-lineage archive — ~102 real parent→child edges recovered in a single 2026-05-09 backfill before Suno closed the redaction gap — which makes the public lineage explorer a dataset that, by construction, cannot be collected again. The forensic teardown of Suno's frozen `/api/trending` fossil is itself a published finding; when that feed proved dead, the observatory added a live pulse on Suno's real curated Explore shelves as the forward-looking replacement. The build also went through structured hardening waves (Codex-reviewed) covering credits, privacy, query performance, observability, and the schema-drift and editorial-shelf sentinels.
       myRole: |
         I built the entire system solo — product concept and "observatory" positioning, the lineage-harvest discovery and parser, the 17-table schema and daily ingestion pipeline, the fossil-watch teardown and the live editorial-shelf pulse, all seven insight engines, the Stripe credit ledger and its concurrency hardening, the recursive-CTE lineage graph and SVG explorer, the read-only MCP server, the trilingual i18n system, and the self-hosted Docker + Traefik deployment with its cron and observability tooling. 99 of 99 commits are mine.
   - id: douyin-mall-java-template

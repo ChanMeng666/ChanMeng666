@@ -87,7 +87,7 @@ bump, `npm pack --dry-run`), then she runs `npm publish` herself.
 | Platform | What |
 |---|---|
 | Cloudflare Pages | `2d-portfolio` (chanmeng.org; push to `main` deploys), `ai-programming-teaching-project` (programming.chanmeng.org), `femtech-weekend-website` |
-| Cloudflare Workers | `sunostats` (seismophone.chanmeng.org, with crons; pending archive), `archlang-docs` (archlang.uk), `archlang-playground`, `ai-chat-worker` (programming-api.chanmeng.org) |
+| Cloudflare Workers | `archlang-docs` (archlang.uk), `archlang-playground`, `ai-chat-worker` (programming-api.chanmeng.org) |
 | Vercel (personal scope) | `gradient-svg-generator`, `github-readme-suno-cards`, `github-visitor-counter` |
 | One DigitalOcean droplet | ArchCanvas, run through Coolify behind Traefik. Vitex (www.vitex.org.nz) is retired; its GHCR image was deleted 2026-11-06 |
 | GitHub Pages | none on any archived repo |
@@ -135,9 +135,8 @@ items exist (location in the private file).
 
 ## Pending
 
-As of 2026-11-01 (checked against docs/STATE.md § Open items).
+As of 2026-11-17 (checked against docs/STATE.md § Open items). Seismophone was shut down on 2026-11-17 (Worker, R2 cache and Neon project deleted; repo archived).
 
 | Item | Due |
 |---|---|
 | Delete the five listing forks once their PRs close (or all at once, one confirmation) | by 2026-11-14 |
-| **Archive Seismophone** (`sunostats`, seismophone.chanmeng.org). Left online for now at Chan's request; already off every visitor-facing surface (2026-10-07). When Chan says go: (1) export the data that cannot be collected again from its database (the lineage edges and the trending snapshots) and archive it; (2) move the published and unpublished observatory reports to chanmeng.org/blog; (3) stop sign-in, sync, the scheduled jobs, the MCP endpoint and the database; (4) leave a static page on the domain that says the project is archived and keeps `/legal/data-sources` alive, because the Suno probe's User-Agent contact URL points there; (5) repoint the README-cards links that lead to Seismophone; (6) set the shard to `status: archived` + `recency: deprecated`, archive the repo and its growth repo, update lineage. The probe and the README cards keep running | when Chan gives the word |

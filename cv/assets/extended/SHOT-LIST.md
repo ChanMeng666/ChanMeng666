@@ -107,7 +107,7 @@ the eleven**. Nothing here is a placeholder: the chapter is complete as it stand
 | p10 | **Eatropolis festival website** | `eatropolis-mark.svg` | client |
 | p11 | **echook** | `echook-logo.svg` | own product |
 | p11 | **Google News MCP Server** | `server-google-news.svg` | own product |
-| p12 | **Seismophone** | `seismophone-logo.svg` | own product |
+| p12 | ~~**Seismophone**~~ | `seismophone-logo.svg` | own product; tile replaced 2026-10-07, site shut down 2026-11-17 |
 | p12 | **a11y-loop** | `a11y-loop-logo.svg` | own product |
 | p13 | **AI Programming Education Platform** | `ai-programming-logo.svg` | own product; page also holds the chapter's closing pull-quote |
 
@@ -133,7 +133,7 @@ the intended design, and a mismatched frame on one tile breaks the uniform pair.
 | **GAVIGO IRE**, **She Sharp**, **FemTech Weekend**, **Eatropolis** | p9-p10 | org marks | **None exist.** Client sites; a screenshot needs the client's OK and a live-page capture | Landscape 16:10 |
 | **echook** | p11 | `echook-logo.svg` | The context-window status bar / a webhook alert in Slack | Landscape 16:10 |
 | **Google News MCP Server** | p11 | `server-google-news.svg` | A PulseMCP "Top Pick" listing, or Claude calling the tool | Landscape 16:10 |
-| **Seismophone** | p12 | `seismophone-logo.svg` | The live app mid-event (seismophone.chanmeng.org) | Landscape 16:10 |
+| ~~**Seismophone**~~ | p12 | `seismophone-logo.svg` | None: the site was shut down on 2026-11-17 and cannot be captured | n/a |
 | **a11y-loop** | p12 | `a11y-loop-logo.svg` | A terminal run showing the audit-fix loop | Landscape 16:10 |
 | **AI Programming Education Platform** | p13 | `ai-programming-logo.svg` | The site with the in-site AI tutor answering | Landscape 16:10 |
 

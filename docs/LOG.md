@@ -444,3 +444,6 @@ docs/STATE.md, scripts/build-archlang-context.mjs, docs/ecosystem/lineage.yaml, 
 
 ## [2026-11-17] archive | Seismophone (`sunostats`) shut down: site, Worker, R2 cache and database deleted, repo archived; shard set to status archived, recency deprecated, no live url; README-cards companion link removed
 data/profile/21-projects-oss-primary.yaml, data/profile/22-projects-oss-webapps.yaml, docs/STATE.md, docs/operations/README.md, docs/ecosystem/lineage.yaml, cv/assets/extended/SHOT-LIST.md
+
+## [2026-11-17] change | ArchLang 1.63.0 and archlang-3d 0.9.0 released; ArchCanvas depends on archlang-3d ^0.9.0 (its "Download GLB") and keeps archlang ^1.62.0
+docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-context.md

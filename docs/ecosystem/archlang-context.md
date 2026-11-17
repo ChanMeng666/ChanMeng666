@@ -100,16 +100,16 @@ flowchart LR
 
 ## 4. Inside the archlang monorepo
 
-`D:/github_repository/archlang`, package `@chanmeng666/archlang` 1.62.0. Pushing `main` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).
+`D:/github_repository/archlang`, package `@chanmeng666/archlang` 1.63.0. Pushing `main` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).
 
 | Workspace | Package | Version | On npm |
 |---|---|---|---|
-| `editors/vscode` | `archlang` | 0.50.0 | no (private) |
+| `editors/vscode` | `archlang` | 0.51.0 | no (private) |
 | `playground` | `archlang-playground` | 0.0.0 | no (private) |
 | `docs-site` | `archlang-docs` | 0.0.0 | no (private) |
-| `packages/archlang-3d` | `@chanmeng666/archlang-3d` | 0.8.1 | yes |
+| `packages/archlang-3d` | `@chanmeng666/archlang-3d` | 0.9.0 | yes |
 | `packages/font-cjk` | `@chanmeng666/archlang-font-cjk` | 1.0.0 | yes |
-| `packages/mcp` | `@chanmeng666/archlang-mcp` | 0.2.45 | yes |
+| `packages/mcp` | `@chanmeng666/archlang-mcp` | 0.2.46 | yes |
 | `packages/mcp-worker` | `archlang-mcp-worker` | 0.1.0 | no (private) |
 | `packages/web-component` | `@chanmeng666/arch-plan` | 0.1.2 | yes |
 
@@ -121,7 +121,7 @@ Change a public API and these break. Ranges as written in each package.json.
 
 | Local folder | Repo | Depends on |
 |---|---|---|
-| `D:/github_repository/archcanvas` | ChanMeng666/archcanvas 🔒 | `@chanmeng666/archlang@^1.62.0`, `@chanmeng666/archlang-3d@^0.8.1` |
+| `D:/github_repository/archcanvas` | ChanMeng666/archcanvas 🔒 | `@chanmeng666/archlang@^1.62.0`, `@chanmeng666/archlang-3d@^0.9.0` |
 | `D:/github_repository/archlang-showcase` | ChanMeng666/archlang-showcase | `@chanmeng666/archlang@^1.55.0` |
 | `D:/github_repository/ChanMeng666` | ChanMeng666/ChanMeng666 | `@chanmeng666/archlang@^1.55.0` |
 | `D:/github_repository/film-archlang-2d-3d` | ChanMeng666/film-archlang-2d-3d | `@chanmeng666/archlang@1.57.0`, `@chanmeng666/archlang-3d@0.4.0` |
@@ -132,7 +132,7 @@ Change a public API and these break. Ranges as written in each package.json.
 One line per relation, `from --type--> to`, with its evidence.
 
 ```text
-archcanvas --depends-on--> archlang   # package.json @chanmeng666/archlang ^1.62.0 and @chanmeng666/archlang-3d ^0.8.1 (2026-11-16)
+archcanvas --depends-on--> archlang   # package.json @chanmeng666/archlang ^1.62.0 and @chanmeng666/archlang-3d ^0.9.0 (2026-11-17)
 archlang --powers--> archcanvas   # ArchLang compiler is the plan engine; replaced the freehand engine 2026-06-25
 archcanvas/archcanvas --companion-of--> archcanvas   # public product home; the app source stays private
 archcanvas/.github --documents--> archcanvas/archcanvas   # org profile README links product, public repo and language

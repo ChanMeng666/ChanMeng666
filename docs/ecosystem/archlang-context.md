@@ -75,7 +75,7 @@ flowchart LR
   films_ChanMeng666_archlang -->|companion-of| ChanMeng666_archlang_paper
   ChanMeng666_chanmeng_product_film -->|derived-from-template| films_ChanMeng666_archcanvas
   archcanvas_archcanvas -->|companion-of| ChanMeng666_archlang
-  forks["10 listing forks (not her projects)"]
+  forks["9 listing forks (not her projects)"]
   forks -.->|listing-submission-for| ChanMeng666_archlang
 ```
 
@@ -190,7 +190,7 @@ film-archcanvas-studio --data-for--> 2d-portfolio   # archcanvas-studio-30s.mp4 
 archcanvas/archcanvas --companion-of--> archlang   # README links the ArchLang repo and npm package @chanmeng666/archlang (README scan 2026-10-03); the ArchLang README calls itself the floor-plan engine behind ArchCanvas
 ```
 
-Listing forks (`ownProject: false`, never her projects; each kept only for its PR, deleted once the PR closes): awesome-openclaw-skills → archlang; Awesome-AIGC4AEC → archlang; awesome-claude-skills → archlang; mcp-registry → archlang; awesome-aec-mcp → archlang; awesome-generative-ai → archlang; awesome-typescript → archlang; awesome-mcp-servers → archlang; awesome-remote-mcp-servers → archlang; awesome-cad → archlang.
+Listing forks (`ownProject: false`, never her projects; each kept only for its PR, deleted once the PR closes): awesome-openclaw-skills → archlang; Awesome-AIGC4AEC → archlang; awesome-claude-skills → archlang; mcp-registry → archlang; awesome-aec-mcp → archlang; awesome-generative-ai → archlang; awesome-typescript → archlang; awesome-remote-mcp-servers → archlang; awesome-cad → archlang.
 
 Relation types used here:
 

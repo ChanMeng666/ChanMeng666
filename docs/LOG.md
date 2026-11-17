@@ -456,3 +456,6 @@ docs/STATE.md, docs/ecosystem/README.md, docs/ecosystem/lineage.yaml, CLAUDE.md
 
 ## [2026-11-17] fix | ArchLang/ArchCanvas family map: two successor-of edges between ArchCanvas film repos removed (q31: they coexist); ten missing edges added (films on /films, README cards, marketing, SERP study); family summary corrected
 docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-context.md
+
+## [2026-11-17] remove | Listing fork awesome-mcp-servers deleted after its PRs merged (ArchLang #14383, Google News #163); the other nine forks wait for their PRs, no deadline
+docs/ecosystem/lineage.yaml, docs/STATE.md

@@ -465,3 +465,9 @@ docs/ecosystem/lineage.yaml
 
 ## [2026-11-17] archive | suno-research-private archived read-only (Chan); stage paused → done
 docs/ecosystem/lineage.yaml
+
+## [2026-11-18] fix | suno-research-private archive checklist completed: two bot PRs closed, last Actions cache deleted, re-archived; STATE no longer says the Suno probe keeps running
+docs/ecosystem/lineage.yaml, docs/STATE.md
+
+## [2026-11-18] decide | GitHub Actions spending capped by a monthly Actions budget that stops usage at its limit; no self-hosted runner for now; ArchCanvas CI cut to three billed jobs with drafts running none (archcanvas PR #323)
+docs/operations/README.md, docs/STATE.md

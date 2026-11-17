@@ -124,6 +124,7 @@ families:
       - {date: "2026-11-17", event: "Seismophone shut down: site, Worker, R2 cache and Neon database deleted, sunostats archived; the README cards dropped their Seismophone links (public PR #8) and the probe's User-Agent moved off the dead domain", repos: [ChanMeng666/sunostats, ChanMeng666/github-readme-suno-cards, ChanMeng666/suno-research-private]}
       - {date: "2026-11-17", event: "suno-research-private paused by Chan: no further development or maintenance; all five of its workflows (daily smoke probe, weekly audio and schema watches, CI) disabled. The public README cards are unaffected", repos: [ChanMeng666/suno-research-private]}
       - {date: "2026-11-17", event: "suno-research-private archived (read-only) by Chan; its two open auto-refresh PRs and five issues stay frozen with it", repos: [ChanMeng666/suno-research-private]}
+      - {date: "2026-11-18", event: "suno-research-private archive checklist completed: unarchived briefly to close its two bot PRs (#23, #24, branches deleted) and delete its last Actions cache, then re-archived. No secrets, variables, webhooks or artifacts remained; its five issues stay open, frozen. The public cards deploy to Vercel from github-readme-suno-cards, not from this repo", repos: [ChanMeng666/suno-research-private]}
   - id: echook
     entity: echook
     name: echook

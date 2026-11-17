@@ -26,12 +26,19 @@ apply them with `gh`, then follow the checklists.
 
 1. Disable user-written workflows, then delete Actions secrets, remove webhooks,
    remove Dependabot config and PRs, clear artifacts and caches. Do this **before**
-   archiving: archived repos are read-only.
+   archiving: archived repos are read-only. Bot PRs include the ones a repo's own
+   workflows open (author `app/github-actions`), not only Dependabot's. Audit:
+   `gh api repos/<r>/actions/{secrets,variables,artifacts,caches}`,
+   `gh api repos/<r>/hooks`, `gh pr list -R <r>`.
 2. Unpublish GitHub Pages and retire any hosting (see "Retire a deployment").
 3. Strip links in all four fact places plus the site (below).
 4. `gh repo archive`.
 5. Update `docs/ecosystem/lineage.yaml` (or the private overlay) and run
-   `npm run check:ecosystem -- --live`.
+   `npm run check:ecosystem -- --live`. Edit the repo's row by its
+   `repo: ChanMeng666/<name>,` key: field values such as
+   `role: research, visibility: private, archived: false` repeat across rows, and a
+   replace on them alone flips another repo (it happened on 2026-11-17; the live
+   check caught it).
 
 Settings changes on an already-archived repo need unarchive, change, re-archive.
 GitHub can answer 422 right after a state flip: retry after a short wait.
@@ -95,6 +102,35 @@ bump, `npm pack --dry-run`), then she runs `npm publish` herself.
 There is no Railway. libraryos.live, fanfic-lab.tech and
 towerdefense.chanmeng.org are retired on purpose. Local backups of the retired
 items exist (location in the private file).
+
+## GitHub Actions minutes and budgets
+
+- The account's plan includes 3,000 Actions minutes a month (reset on the 1st).
+  **Only private repos count**; public repos run free. Each job is billed
+  separately, rounded up to the minute; Windows and macOS runners cost more.
+- In November 2026 the private total was almost all ArchCanvas PR CI. ArchLang
+  ran over 120,000 minutes that month and none of them counted (public).
+- Budgets (Billing → Budgets and alerts) are set per product. Actions has a
+  monthly budget with **"stop usage when the limit is reached"** and alerts at
+  75 / 90 / 100 %, so spending can never pass it; every other product is at $0
+  (blocked). Amounts and the payment method: the private file.
+- When the included minutes and the budget are both used up, private-repo jobs
+  do not start. For ArchCanvas that means no `checks`, so no merge, and no deploy.
+  That is billing, not code: tell Chan, do not rewrite CI to get around it.
+- ArchCanvas CI is built to spend little (`docs/OPERATIONS.md` in that repo): three
+  billed jobs per run (~17 minutes), and draft PRs run none. Open PRs as drafts
+  while still pushing.
+- **No self-hosted runner for now** (Claude's assessment, 2026-11-18; Chan asked
+  for it only if her computer stays usable). A run would slow
+  her computer badly (`next build` plus Vitest), the timing tests would flake,
+  and CI would stop whenever the computer is off. If the budget is ever reached, the fallback is
+  a repository variable that switches ArchCanvas CI between `ubuntu-latest` and a
+  memory-capped local runner, built only then.
+- Per-repo usage for a month (Linux and Windows minutes, gross cost):
+  `gh api "/users/ChanMeng666/settings/billing/usage?year=YYYY&month=M"`, then
+  sum `quantity` where `product == "actions"` and `unitType == "Minutes"`,
+  grouped by `repositoryName`, and keep only private repos
+  (`gh repo list ChanMeng666 --limit 400 --json name,visibility`).
 
 ## Standing policies
 

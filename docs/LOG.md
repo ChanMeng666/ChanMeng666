@@ -459,3 +459,6 @@ docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-context.md
 
 ## [2026-11-17] remove | Listing fork awesome-mcp-servers deleted after its PRs merged (ArchLang #14383, Google News #163); the other nine forks wait for their PRs, no deadline
 docs/ecosystem/lineage.yaml, docs/STATE.md
+
+## [2026-11-17] change | suno-research-private paused (Chan): no further development; its five workflows disabled, stage maintained → paused
+docs/ecosystem/lineage.yaml

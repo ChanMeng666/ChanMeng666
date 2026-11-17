@@ -15,8 +15,6 @@ A post made after those dates is not known here until its register is synced.
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-11-17 | Tuesday | CORDE Mobile product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/06-corde-mobile-film/corde-mobile_60s_16x9.mp4` | `drafts/corde-mobile-film.yaml#linkedin` | draft |
-| 2026-11-17 | Tuesday | CORDE Mobile product film | X | 30 s, 16:9 | `_staging/06-corde-mobile-film/corde-mobile_30s_16x9.mp4` | `drafts/corde-mobile-film.yaml#x` | draft |
 | 2026-11-19 | Thursday | AI programming school product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_60s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#linkedin` | draft |
 | 2026-11-19 | Thursday | AI programming school product film | X | 30 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_30s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#x` | draft |
 
@@ -39,7 +37,8 @@ A post made after those dates is not known here until its register is synced.
 
 ## Not yet published and not scheduled here
 
-Nothing: every film is published or scheduled on every platform it is meant for.
+- CORDE Mobile product film: LinkedIn (personal)
+- CORDE Mobile product film: X
 
 ## Where each film stands
 
@@ -52,7 +51,7 @@ Nothing: every film is published or scheduled on every platform it is meant for.
 | echook film | published 2026-10-06 | published 2026-10-07 | published | published 2026-11-01 | published 2026-11-01 | — |
 | a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | planned 2026-11-24 | — |
 | GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-26 | planned 2026-11-26 | — |
-| CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-17 | planned 2026-11-17 | — |
+| CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | **to do** | **to do** | — |
 | She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | — | — | — |
 | Tam-AI-Ti product film | published 2026-10-06 | published 2026-10-06 | published | published 2026-11-10 | published 2026-11-10 | — |
 | Eatropolis website film | published 2026-10-06 | published 2026-10-07 | published | published 2026-10-31 | published 2026-10-31 | — |

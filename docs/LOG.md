@@ -453,3 +453,6 @@ docs/ecosystem/lineage.yaml, data/profile/47-agent-skills.yaml
 
 ## [2026-11-17] decide | Claude fills positioning, stage and showcase for every repo without asking (q55); filled for 107 rows that lacked them; chanmeng-social-ledger stays private
 docs/STATE.md, docs/ecosystem/README.md, docs/ecosystem/lineage.yaml, CLAUDE.md
+
+## [2026-11-17] fix | ArchLang/ArchCanvas family map: two successor-of edges between ArchCanvas film repos removed (q31: they coexist); ten missing edges added (films on /films, README cards, marketing, SERP study); family summary corrected
+docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-context.md

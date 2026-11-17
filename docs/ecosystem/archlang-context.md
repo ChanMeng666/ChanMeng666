@@ -47,8 +47,11 @@ flowchart LR
   films_ChanMeng666_archcanvas["archcanvas films (3):<br/>archcanvas-hero-and-shorts 🔒<br/>archcanvas-zoom-out<br/>archcanvas-studio"]
   films_ChanMeng666_archlang["archlang films (7):<br/>archlang-narrated-demo 🔒<br/>archlang-one-take<br/>archlang-in-chatgpt<br/>archlang-explainer-and-shorts<br/>archlang-drawing-stands-up<br/>archlang-2d-3d<br/>archlang-playground"]
   ChanMeng666_chanmeng_social_ledger["chanmeng-social-ledger 🔒"]
-  ChanMeng666_chanmeng_product_film["chanmeng-product-film 🔒"]
   ChanMeng666_2d_portfolio["2d-portfolio 🔒"]
+  ChanMeng666_ChanMeng666["ChanMeng666"]
+  ChanMeng666_chanmeng_marketing["chanmeng-marketing 🔒"]
+  ChanMeng666_serpdata_api_test["serpdata-api-test 🔒"]
+  ChanMeng666_chanmeng_product_film["chanmeng-product-film 🔒"]
   ChanMeng666_chanmeng_social_ledger -->|data-for| ChanMeng666_archcanvas_growth
   ChanMeng666_archcanvas -->|depends-on| ChanMeng666_archlang
   ChanMeng666_archlang -->|powers| ChanMeng666_archcanvas
@@ -57,6 +60,12 @@ flowchart LR
   ChanMeng666_archcanvas_growth -->|markets| ChanMeng666_archcanvas
   ChanMeng666_archcanvas_growth -->|markets| ChanMeng666_archlang
   films_ChanMeng666_archcanvas -->|promotes| ChanMeng666_archcanvas
+  films_ChanMeng666_archcanvas -->|data-for| ChanMeng666_2d_portfolio
+  films_ChanMeng666_archlang -->|data-for| ChanMeng666_2d_portfolio
+  ChanMeng666_ChanMeng666 -->|depends-on| ChanMeng666_archlang
+  ChanMeng666_chanmeng_marketing -->|companion-of| ChanMeng666_archcanvas_growth
+  ChanMeng666_serpdata_api_test -->|documents| ChanMeng666_archlang
+  ChanMeng666_serpdata_api_test -->|documents| ChanMeng666_archcanvas
   ChanMeng666_archcanvas_growth -->|companion-of| films_ChanMeng666_archcanvas
   ChanMeng666_archlang_paper -->|documents| ChanMeng666_archlang
   ChanMeng666_archlang_lab -->|documents| ChanMeng666_archlang
@@ -65,8 +74,6 @@ flowchart LR
   films_ChanMeng666_archlang -->|promotes| ChanMeng666_archlang
   films_ChanMeng666_archlang -->|companion-of| ChanMeng666_archlang_paper
   ChanMeng666_chanmeng_product_film -->|derived-from-template| films_ChanMeng666_archcanvas
-  films_ChanMeng666_archlang -->|data-for| ChanMeng666_2d_portfolio
-  films_ChanMeng666_archcanvas -->|data-for| ChanMeng666_2d_portfolio
   archcanvas_archcanvas -->|companion-of| ChanMeng666_archlang
   forks["10 listing forks (not her projects)"]
   forks -.->|listing-submission-for| ChanMeng666_archlang
@@ -96,8 +103,11 @@ flowchart LR
 | film-archlang-drawing-stands-up | `D:/github_repository/film-archlang-drawing-stands-up` | [ChanMeng666/film-archlang-drawing-stands-up](https://github.com/ChanMeng666/film-archlang-drawing-stands-up) | promo-film | done | Blender-rendered ArchLang films and stills: the 32 s hero film The drawing stands up (16:9 and 9:16), a 12 s code-to-form clip and five stills in three aspects; all geometry from the compiler and archlang3d; masters in release v0.4.0 |
 | film-archlang-2d-3d | `D:/github_repository/film-archlang-2d-3d` | [ChanMeng666/film-archlang-2d-3d](https://github.com/ChanMeng666/film-archlang-2d-3d) | promo-film | done | 196 s feature explainer of ArchLang, from one .arch file to a self-checking dimensioned plan and a 3D preview: Remotion, real compiler and archlang-3d, English voice-over, 30 s cuts in 16:9 and 9:16; masters in release v1.0.0 Live: https://chanmeng.org/, https://archlang.uk/ |
 | chanmeng-social-ledger | `D:/github_repository/chanmeng-social-ledger` | `ChanMeng666/chanmeng-social-ledger` (private: never link) | data-export | maintained | Private source of truth for her social-media data (own posts, comments, replies and DMs across X, LinkedIn, Reddit, GitHub, Hacker News and dev.to), with the capture tools, raw archives and the privacy-gated export of her own posts to the x/ and linkedin/ registers here; home of the x-sync and linkedin-sync skills |
-| chanmeng-product-film | not cloned | `ChanMeng666/chanmeng-product-film` (private: never link) | skill | maintained | Skill for coded-UI-replica product promo films (Remotion, Suno, ElevenLabs); case study is ArchCanvas |
 | 2d-portfolio | `D:/github_repository/2d-portfolio` | `ChanMeng666/2d-portfolio` (private: never link) | product | maintained | Next.js portfolio site serving chanmeng.org (also /cv and /blog) Live: https://chanmeng.org/ |
+| ChanMeng666 | `D:/github_repository/ChanMeng666` | [ChanMeng666/ChanMeng666](https://github.com/ChanMeng666/ChanMeng666) | profile | maintained | GitHub profile README repo, now Chan's generated career database (shards to README, llms.txt, CVs, LinkedIn copy) Live: https://chanmeng.org/ |
+| chanmeng-marketing | `D:/github_repository/chanmeng-marketing` | `ChanMeng666/chanmeng-marketing` (private: never link) | growth | maintained | The one marketing calendar and resource index, with the daily /today run |
+| serpdata-api-test | `D:/github_repository/serpdata-api-test` | `ChanMeng666/serpdata-api-test` (private: never link) | experiment | paused | Test/demo project for the SerpData Google SERP API |
+| chanmeng-product-film | not cloned | `ChanMeng666/chanmeng-product-film` (private: never link) | skill | maintained | Skill for coded-UI-replica product promo films (Remotion, Suno, ElevenLabs); case study is ArchCanvas |
 
 "not cloned": no local checkout; clone it under `D:/github_repository/` when needed. Film masters are release assets of each film repo.
 
@@ -143,9 +153,17 @@ archcanvas/.github --documents--> archcanvas/archcanvas   # org profile README l
 archcanvas-growth --markets--> archcanvas   # growth HQ for both products
 archcanvas-growth --markets--> archlang   # growth HQ for both products
 film-archcanvas-hero-and-shorts --promotes--> archcanvas   # stages assets from ../archcanvas
-film-archcanvas-zoom-out --successor-of--> film-archcanvas-hero-and-shorts   # npm run sync:assets from ../archcanvas-promo-video
+film-archcanvas-hero-and-shorts --data-for--> film-archcanvas-zoom-out   # zoom-out's npm run sync:assets copies from ../archcanvas-promo-video (this repo's old name); the films coexist (q31), neither replaces the other
+film-archcanvas-hero-and-shorts --data-for--> 2d-portfolio   # the 92 s film and six shorts are rows of 46-films.yaml, shown on chanmeng.org/films
+film-archcanvas-zoom-out --data-for--> 2d-portfolio   # archcanvas-zoom-out is a row of 46-films.yaml, shown on chanmeng.org/films
+film-archlang-explainer-and-shorts --data-for--> 2d-portfolio   # archlang-explainer-film is a row of 46-films.yaml, shown on chanmeng.org/films
+film-archlang-drawing-stands-up --data-for--> 2d-portfolio   # archlang-drawing-stands-up is a row of 46-films.yaml, shown on chanmeng.org/films
+film-archlang-narrated-demo --data-for--> 2d-portfolio   # archlang-demo is a row of 46-films.yaml; on chanmeng.org/films since 2026-11-07 (docs/STATE.md)
+ChanMeng666 --depends-on--> archlang   # package.json @chanmeng666/archlang ^1.55.0; scripts/cards/archlang.mjs and archcanvas.mjs compile real plans for the README cards
+chanmeng-marketing --companion-of--> archcanvas-growth   # resources.yaml entry archcanvas-archlang points its strategy, plan, voice, copy, messaging, brand and launches at archcanvas-growth; the dates live in chanmeng-marketing/calendar.yaml
+serpdata-api-test --documents--> archlang   # scripts/analyze-arch-projects.js: SERP and AI Overview study of archlang.uk and archcanvas.uk (reports/arch-projects-analysis.md, 2026-11-03)
+serpdata-api-test --documents--> archcanvas   # same study, archcanvas.uk half
 film-archcanvas-zoom-out --promotes--> archcanvas   # Zoom Out film of the canvas
-film-archcanvas-studio --successor-of--> film-archcanvas-zoom-out   # third promo film (created 2026-09-19); ecosystem map orders them first/second/third
 film-archcanvas-studio --promotes--> archcanvas   # npm run sync:replica from ../archcanvas, checksum-locked
 archcanvas-growth --companion-of--> film-archcanvas-studio   # editorial authority for all three promo repos
 archlang-paper --documents--> archlang   # tooling reads sibling ../archlang
@@ -183,7 +201,6 @@ Relation types used here:
 - `documents`: paper, docs or report for to
 - `markets`: growth / go-to-market workspace for to
 - `promotes`: promo film / marketing asset for to
-- `successor-of`: from (newer generation) replaces to
 - `showcases`: demo or examples of to
 - `deployed-as`: from is deployed at url:... (live domain)
 - `derived-from-template`: from was generated or generalised from to

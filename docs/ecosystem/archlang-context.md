@@ -8,7 +8,7 @@ Read in this order: §1 rules, §2 the graph, §3 where each repo is, §4 what i
 
 ## 1. Rules for working in these repos
 
-- **Priorities (Chan, 2026-11-16).** ArchCanvas development restarted: plan quality, keeping up with the ArchLang core, the 3D preview, renderings made from it, and sign-up attribution. ArchLang development continues. ArchCanvas is an AI architectural designer, never an "AI architect"; the 3D is the "3D preview" and an AI image is a "rendering". No copy says a launch is planned.
+- **Priorities (Chan, 2026-11-18).** ArchLang builds by roadmap v3 (`archlang/docs/plans/product-roadmap/v3.md`, the one build order; started by RM-D65): numbers said right, checker recall, edits, handover; 1.64.0 shipped 2026-11-18. ArchCanvas is ArchLang's test bench plus a niche product for self-builders (growth ruling 2026-11-18); its plan is `archcanvas-lab/specs/2026-11-18-archcanvas-plan-after-demand-synthesis.md`, and its stage 2 bumps the compiler to 1.64. ArchCanvas is an AI architectural designer, never an "AI architect"; the 3D is the "3D preview" and an AI image is a "rendering". No copy says a launch is planned.
 - **Origin order.** ArchCanvas came first (first commit 2026-04-08, freehand SVG plans); ArchLang npm 0.1.0 followed on 2026-06-24 and replaced that engine on 2026-06-25. Never write that the language came first.
 - **Truth ownership.** Language behaviour lives in `archlang`; product behaviour in `archcanvas`; strategy, decisions and launch copy in `archcanvas-growth`. Growth holds no product truth; never edit a product repo from growth.
 - **Links.** Public copy links only `github.com/ChanMeng666/archlang`, `github.com/ChanMeng666/archlang-showcase`, `github.com/archcanvas/archcanvas` and the public film repos. A private repo is named, never linked.
@@ -113,16 +113,16 @@ flowchart LR
 
 ## 4. Inside the archlang monorepo
 
-`D:/github_repository/archlang`, package `@chanmeng666/archlang` 1.63.0. Pushing `main` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).
+`D:/github_repository/archlang`, package `@chanmeng666/archlang` 1.64.0. Pushing `main` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).
 
 | Workspace | Package | Version | On npm |
 |---|---|---|---|
-| `editors/vscode` | `archlang` | 0.51.0 | no (private) |
+| `editors/vscode` | `archlang` | 0.52.0 | no (private) |
 | `playground` | `archlang-playground` | 0.0.0 | no (private) |
 | `docs-site` | `archlang-docs` | 0.0.0 | no (private) |
 | `packages/archlang-3d` | `@chanmeng666/archlang-3d` | 0.9.0 | yes |
 | `packages/font-cjk` | `@chanmeng666/archlang-font-cjk` | 1.0.0 | yes |
-| `packages/mcp` | `@chanmeng666/archlang-mcp` | 0.2.46 | yes |
+| `packages/mcp` | `@chanmeng666/archlang-mcp` | 0.2.47 | yes |
 | `packages/mcp-worker` | `archlang-mcp-worker` | 0.1.0 | no (private) |
 | `packages/web-component` | `@chanmeng666/arch-plan` | 0.1.2 | yes |
 

@@ -471,3 +471,6 @@ docs/ecosystem/lineage.yaml, docs/STATE.md
 
 ## [2026-11-18] decide | GitHub Actions spending capped by a monthly Actions budget that stops usage at its limit; no self-hosted runner for now; ArchCanvas CI cut to three billed jobs with drafts running none (archcanvas PR #323)
 docs/operations/README.md, docs/STATE.md
+
+## [2026-11-18] change | ArchCanvas CI: prose-only PRs run one small leg (~1.7 min vs ~18), docs/tests-only merges start no deploy, node_modules cache seeded from main, one CI run per PR (archcanvas PRs #331-#333)
+docs/operations/README.md

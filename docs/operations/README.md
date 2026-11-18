@@ -117,9 +117,15 @@ items exist (location in the private file).
 - When the included minutes and the budget are both used up, private-repo jobs
   do not start. For ArchCanvas that means no `checks`, so no merge, and no deploy.
   That is billing, not code: tell Chan, do not rewrite CI to get around it.
-- ArchCanvas CI is built to spend little (`docs/OPERATIONS.md` in that repo): three
-  billed jobs per run (~17 minutes), and draft PRs run none. Open PRs as drafts
-  while still pushing.
+- ArchCanvas CI is built to spend little (`docs/OPERATIONS.md` in that repo). A code
+  PR runs three billed legs with `node_modules` restored from a cache seeded on
+  `main` (cold: ~17 minutes; warm cost not measured yet, expected ~13-15). A PR that
+  changes only prose (docs, root `*.md`, agent rule files) runs one small leg: 1
+  standard minute plus two 1-vCPU (`ubuntu-slim`) minutes, ~1.7 standard-minute
+  equivalents, against ~18 before. A merge that changes only docs, tests, `.claude`,
+  `.github` (not the deploy workflow) or root `*.md` starts no deploy run. Draft PRs
+  run no leg (one slim minute for the intentionally red `checks`). One CI run per PR:
+  review and fix on the draft, merge `main` in, then mark ready.
 - **No self-hosted runner for now** (Claude's assessment, 2026-11-18; Chan asked
   for it only if her computer stays usable). A run would slow
   her computer badly (`next build` plus Vitest), the timing tests would flake,

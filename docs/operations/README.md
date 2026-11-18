@@ -119,13 +119,22 @@ items exist (location in the private file).
   That is billing, not code: tell Chan, do not rewrite CI to get around it.
 - ArchCanvas CI is built to spend little (`docs/OPERATIONS.md` in that repo). A code
   PR runs three billed legs with `node_modules` restored from a cache seeded on
-  `main` (cold: ~17 minutes; warm cost not measured yet, expected ~13-15). A PR that
+  `main`; its two heavy legs run on arm64 runners (`ubuntu-26.04-arm`, since
+  archcanvas PR #339), ~10.3 standard-minute equivalents per warm run against ~14.4
+  on x64 and ~18 before. A dependency PR (one that changes the package files) still
+  runs on x64. Before pushing, `node scripts/ci/guard-tests.mjs` in that repo lists
+  the corpus-wide guard tests to run one by one, so a guard does not first go red in
+  CI and cost a second run. A PR that
   changes only prose (docs, root `*.md`, agent rule files) runs one small leg: 1
   standard minute plus two 1-vCPU (`ubuntu-slim`) minutes, ~1.7 standard-minute
   equivalents, against ~18 before. A merge that changes only docs, tests, `.claude`,
   `.github` (not the deploy workflow) or root `*.md` starts no deploy run. Draft PRs
   run no leg (one slim minute for the intentionally red `checks`). One CI run per PR:
   review and fix on the draft, merge `main` in, then mark ready.
+- November 2026's included minutes were used up on 2026-11-18, so private-repo
+  jobs now draw on the Actions budget until the 1st. With CI this small, ArchCanvas
+  deploys (one per code merge) are the largest single cost lever left; the measured
+  next steps are in that repo's `docs/TODO.md` § Tests.
 - **No self-hosted runner for now** (Claude's assessment, 2026-11-18; Chan asked
   for it only if her computer stays usable). A run would slow
   her computer badly (`next build` plus Vitest), the timing tests would flake,

@@ -11,12 +11,6 @@ A post made after those dates is not known here until its register is synced.
 
 ## The schedule
 
-### Week of 2026-11-16
-
-| Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
-|---|---|---|---|---|---|---|---|
-| 2026-11-19 | Thursday | AI programming school product film | X | 30 s, 16:9 | `_staging/07-ai-programming-school-film/ai-programming_30s_16x9.mp4` | `drafts/ai-programming-school-film.yaml#x` | draft |
-
 ### Week of 2026-11-23
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
@@ -39,6 +33,7 @@ A post made after those dates is not known here until its register is synced.
 - CORDE Mobile product film: LinkedIn (personal)
 - CORDE Mobile product film: X
 - AI programming school product film: LinkedIn (personal)
+- AI programming school product film: X
 
 ## Where each film stands
 
@@ -55,7 +50,7 @@ A post made after those dates is not known here until its register is synced.
 | She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | — | — | — |
 | Tam-AI-Ti product film | published 2026-10-06 | published 2026-10-06 | published | published 2026-11-10 | published 2026-11-10 | — |
 | Eatropolis website film | published 2026-10-06 | published 2026-10-07 | published | published 2026-10-31 | published 2026-10-31 | — |
-| AI programming school product film | published 2026-10-06 | published 2026-10-07 | published | **to do** | planned 2026-11-19 | — |
+| AI programming school product film | published 2026-10-06 | published 2026-10-07 | published | **to do** | **to do** | — |
 | ArchCanvas, the 92-second film | published 2026-10-19 | — | published | — | — | — |
 | Talk to your plan | published 2026-10-19 | — | published | — | — | — |
 | The check | published 2026-10-19 | — | published | — | — | — |

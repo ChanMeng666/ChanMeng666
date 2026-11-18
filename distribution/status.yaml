@@ -11,8 +11,8 @@ summary:
   complete: 68
   cells:
     published: 179
-    planned: 6
-    gap: 3
+    planned: 5
+    gap: 4
     skipped: 0
     not-planned: 250
   byPlatform:
@@ -34,8 +34,8 @@ summary:
       gap: 2
     x:
       published: 10
-      planned: 4
-      gap: 1
+      planned: 3
+      gap: 2
     linkedin-page:
       published: 1
       planned: 0
@@ -47,6 +47,8 @@ gaps:
     platform: x
   - film: ai-programming-school-film
     platform: linkedin
+  - film: ai-programming-school-film
+    platform: x
 films:
   - film: archcanvas-studio-film
     title: ArchCanvas studio film
@@ -614,10 +616,7 @@ films:
       linkedin:
         state: gap
       x:
-        state: planned
-        date: '2026-11-19'
-        status: draft
-        cut: 30 s, 16:9
+        state: gap
       linkedin-page:
         state: not-planned
     complete: false

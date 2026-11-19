@@ -60,7 +60,7 @@ const READ_WHEN = {
     "working across the ArchLang / ArchCanvas repos; hand it to the agent for ArchLang work (generated)",
   "docs/github-theme-aware-assets.md": "an image may break on GitHub's light or dark canvas",
   "docs/operations/README.md":
-    "archiving, deleting or making a repo private; retiring a hosted site; npm publishing; a vendor account shared across projects (OpenAI, Stripe, Cloudinary, GitHub)",
+    "archiving, deleting or making a repo private; retiring a hosted site; npm publishing; a vendor account shared across projects (OpenAI, Stripe, vendor dashboards)",
   "docs/stories/README.md": "writing or editing a project story",
   "docs/stories/narrative.md":
     "preparing an interview or cover letter: the threads across all projects",

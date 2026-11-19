@@ -150,36 +150,17 @@ items exist (location in the private file).
 ## Vendor accounts shared across projects
 
 A fact about an account holds for every project that uses that account, not only
-for the project where it was found. Detail and sources for each item: the private
-archcanvas repo's `docs/COMPLIANCE.md` (§ 1 and § 4); amounts and account specifics:
-the private file.
+for the project where it was found. Specifics: the private file.
 
-- **OpenAI organisation (observed and decided 2026-11-19).** The organisation has
-  one project, and "Share inputs and outputs with OpenAI" is enabled for all
-  projects, in return for complimentary daily tokens (up to 250 thousand tokens a
-  day across the large models and 2.5 million across the mini and nano models;
-  standard rates beyond that). OpenAI's own description: shared traffic is used to
-  improve and train its models. Chan's decision for ArchCanvas: keep it on and
-  disclose it in that product's privacy policy (done, archcanvas PR #354). **Any
-  other project that sends user data through this organisation is covered by the
-  same switch**, and its privacy text has to be checked against it (open, Chan's:
-  `docs/STATE.md` § Open items). Switching it off ends the free allowance for every
-  project at once; for ArchCanvas the same-day cap cut-over is in that repo's
-  `docs/OPERATIONS.md` § Text-model budget.
-- **Stripe (2026-11-19).** Business website, industry, product description and
-  public details are stored per merchant account; the legal-entity data is shared
-  by accounts of one entity (Stripe's docs, and a before/after re-read). The
-  "Shared legal entity" banner on the edit form is not evidence about each field.
-  The ArchCanvas account's website, product description and public details were
-  corrected on 2026-11-19 on Chan's word. Stripe Tax is off.
-- **Processor contracts (2026-11-19, on the evidence).** Cloudinary: the
-  self-serve account's terms incorporate no DPA, so none is in force; Cloudinary
-  was asked by email on 2026-11-19 and the reply is awaited. GitHub: no DPA covers
-  a personal account. Both hold for every project that sends personal data to
-  those accounts.
-- **ArchCanvas tax and data-protection registrations.** Chan decided on
-  2026-11-19; the decision, what it means and when it is reopened are in
-  archcanvas `docs/COMPLIANCE.md` § 4 ("Deferred 2026-11-19").
+- **OpenAI organisation (2026-11-19).** The OpenAI organisation has data sharing
+  switched on in return for complimentary daily tokens (Chan's decision,
+  2026-11-19). ArchCanvas discloses this in its privacy policy. Switching it changes
+  both cost and what each product's privacy text must say; details are in the
+  private ops file.
+- **Stripe accounts that share a legal entity.** Business website, industry,
+  product description and public details are stored per account; the legal-entity
+  data is shared. The "Shared legal entity" banner on the edit form is not evidence
+  about each field.
 - **Vendor dashboards (working rule, 2026-11-19).** An agent may read a vendor
   dashboard in Chan's signed-in browser, and changes a setting only on her word for
   that specific change. On payment and account pages it uses targeted reads, never

@@ -15,7 +15,7 @@
 **Activities and societies:**
 
 ```
-Alongside the degree: Full Stack Developer and Lead Documenter on CORDE Mobile, the offline-first React Native field-operations app in use by the water and civil crews of CORDE (NZ infrastructure & civil construction); see Experience.
+Alongside the degree: Full Stack Developer and Lead Documenter on CORDE Mobile (Jun – Oct 2024), a commercial offline-first React Native field-operations app in active use by the water and civil crews of CORDE (NZ infrastructure & civil construction); see Experience.
 ```
 
 **Description:**

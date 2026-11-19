@@ -495,3 +495,6 @@ cv/sections/experience.typ, cv/extended.typ, data/profile/10-career.yaml, data/p
 
 ## [2026-11-19] fix | The engagement CTA email (engagementAvailability.cta.secondary, printed in llms.txt and llms-full.txt) is hello@chanmeng.org, the one public contact address; it was chanmeng.dev@gmail.com
 data/profile/90-meta.yaml
+
+## [2026-11-19] fix | LinkedIn CORDE copy checked against work[corde] and the ruling: the Lincoln University activities line gives the dates (Jun – Oct 2024) and says "a commercial ... app in active use"; the CORDE experience title is the full work title, Full Stack Developer & Lead Documenter
+data/profile/70-linkedin.yaml

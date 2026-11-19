@@ -331,7 +331,7 @@ Later ByteDance Youth Training Camp cohorts now scaffold their projects on two t
 ## CORDE
 **Links:** <https://corde.nz/>
 
-### Full Stack Developer
+### Full Stack Developer & Lead Documenter
 
 **Dates:** Jun 2024 - Oct 2024 · 6 mos
 **Location:** Canterbury, New Zealand · Hybrid

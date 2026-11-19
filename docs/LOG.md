@@ -492,3 +492,6 @@ data/profile/20-projects-flagship.yaml, data/profile/23-projects-oss-more.yaml, 
 
 ## [2026-11-19] fix | ArchCanvas copy law applied to the remaining sources: no "buildable" or "a plan you can actually build from"; it is an AI architectural designer that produces a dimensioned floor plan
 cv/sections/experience.typ, cv/extended.typ, data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml
+
+## [2026-11-19] fix | The engagement CTA email (engagementAvailability.cta.secondary, printed in llms.txt and llms-full.txt) is hello@chanmeng.org, the one public contact address; it was chanmeng.dev@gmail.com
+data/profile/90-meta.yaml

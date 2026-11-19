@@ -39,7 +39,7 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/60-network.yaml` | 1265 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
 | `data/profile/70-linkedin.yaml` | 1939 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
 | `data/profile/80-events.yaml` | 915 | events (23) | EVENTS — offline / in-person activities: talks, panels, hackathons mentored, workshops taught, community appearances. |
-| `data/profile/90-meta.yaml` | 772 | meta (4 keys) | META — build metadata, x_brand display configuration … |
+| `data/profile/90-meta.yaml` | 773 | meta (4 keys) | META — build metadata, x_brand display configuration … |
 
 Other knowledge files:
 

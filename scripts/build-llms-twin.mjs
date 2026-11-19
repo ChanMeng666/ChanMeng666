@@ -240,7 +240,7 @@ if (teaching.cohortCount) {
   para(`I have taught ${teaching.cohortCount} AI-programming cohorts since 2024 (${teaching.learnerReachClaim}), and received the ${teaching.flagshipAwardClaim}. The course material is public at https://programming.chanmeng.org.`);
 }
 para(`I speak ${langLine}. I have practised minimalism since 2018: "${basics.taglines?.secondary?.replace(/^A minimalist\.\s*/, "") ?? "Subtraction for life, addition for thought."}"`);
-out.push(`Contact: hello@chanmeng.org`, "");
+out.push(`Contact: ${basics.publicEmail}`, "");
 out.push(`Elsewhere: ${profileLinks.join(" · ")}`, "");
 
 // ---------------------------------------------------------------------------

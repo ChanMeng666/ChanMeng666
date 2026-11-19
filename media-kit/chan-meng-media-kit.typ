@@ -18,6 +18,10 @@
 
 #show: mk-doc
 
+// The one public contact address (docs/STATE.md, 2026-11-19): the kit is not a
+// CV, so it reads basics.publicEmail, never the CVs' job-application address.
+#let public-email = yaml("/data/profile/00-basics.yaml").basics.publicEmail
+
 // ─── Shared asset paths ──────────────────────────────────────────────────────
 #let logo-black  = "/public/brands/chan-meng-monkey-black-transparent.svg"
 #let logo-white  = "/public/brands/chan-meng-monkey-white-transparent.svg"
@@ -74,7 +78,7 @@
           [ ]
           svg-chip("/cv/icons/github.svg", "ChanMeng666", "https://github.com/ChanMeng666")
           [ ]
-          svg-chip("/cv/icons/mail.svg", "chanmeng.career@gmail.com", "mailto:chanmeng.career@gmail.com")
+          svg-chip("/cv/icons/mail.svg", public-email, "mailto:" + public-email)
         }),
       ),
     ),
@@ -333,7 +337,7 @@
           v(16pt)
           block({
             set par(leading: 2.1em)
-            dark-chip("/cv/icons/mail.svg", "chanmeng.career@gmail.com", "mailto:chanmeng.career@gmail.com")
+            dark-chip("/cv/icons/mail.svg", public-email, "mailto:" + public-email)
             [ ]
             dark-chip("/cv/icons/calendar.svg", "Book a 30-min call", "https://cal.com/chan-meng/30min")
             [ ]

@@ -1002,7 +1002,7 @@ data._jsonldProfilePage = {
     jobTitle: data.basics?.label,
     description: data._basicsSummaryFlat,
     url: data.basics?.url,
-    email: data.basics?.email,
+    email: data.basics?.publicEmail,
     sameAs: data._sameAs,
     hasCredential: [
       {

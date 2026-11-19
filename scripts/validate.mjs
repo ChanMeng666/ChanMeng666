@@ -62,6 +62,23 @@ if (dupErrors.length) {
   process.exit(1);
 }
 
+// One public contact address (docs/STATE.md, 2026-11-19): every mailto a
+// non-CV surface prints is basics.publicEmail. basics.email is the CVs' own.
+const publicMailto = `mailto:${data.basics.publicEmail}`;
+const contactErrors = [];
+for (const p of data.basics.profiles ?? []) {
+  if (p.network === "Email" && p.url !== publicMailto) contactErrors.push(`  basics.profiles Email: ${p.url} (want ${publicMailto})`);
+}
+const ctaMail = data.meta?.x_brand?.engagementAvailability?.cta?.secondary?.url;
+if (ctaMail?.startsWith("mailto:") && ctaMail !== publicMailto) {
+  contactErrors.push(`  meta.x_brand.engagementAvailability.cta.secondary: ${ctaMail} (want ${publicMailto})`);
+}
+if (contactErrors.length) {
+  console.error("✗ a public mailto is not basics.publicEmail:");
+  for (const m of contactErrors) console.error(m);
+  process.exit(1);
+}
+
 console.log(`✓ data/profile/*.yaml is valid against schema/profile.schema.json`);
 console.log(`  ids unique within  = ${listsWithIds} lists`);
 console.log(`  basics.name        = ${data.basics.name}`);

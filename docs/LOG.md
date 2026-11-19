@@ -507,3 +507,6 @@ x/x-profile.md, x/x-pinned-tweet.md, x/x-strategy.md, x/media/pinned-products.ht
 
 ## [2026-11-19] change | YouTube staged for the 2026-11-19 rulings: channel link ?ref=youtube, contact email hello@chanmeng.org, new video Links blocks use ?ref=youtube; the CORDE film and all-in-one film descriptions to be edited in Studio (text in the apply sheet), then capture:youtube
 youtube/channel.yaml, youtube/README.md
+
+## [2026-11-19] decide | hello@chanmeng.org is the one public contact address, CVs excepted: new basics.publicEmail feeds the Email profile, README, llms files, dist/, twin, media kit and LinkedIn cover; basics.email (chanmeng.career@gmail.com) stays the CVs' own
+data/profile/00-basics.yaml, schema/profile.schema.json, scripts/validate.mjs, scripts/build.mjs, scripts/build-llms-twin.mjs, templates/partials/jsonld-block.hbs, media-kit/chan-meng-media-kit.typ, linkedin/linkedin-services/cover.html, docs/STATE.md

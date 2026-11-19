@@ -11,8 +11,8 @@ else (L2) is opened on demand, when its "read when" matches the task.
 | File | Lines | Read when |
 |---|---|---|
 | `CLAUDE.md` | 166 | always: the schema, hard rules and workflow |
-| `docs/STATE.md` | 126 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 509 | to see what changed recently; append an entry after a change |
+| `docs/STATE.md` | 127 | always: Chan's decisions and display rules, before any edit |
+| `docs/LOG.md` | 512 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -23,7 +23,7 @@ against `schema/profile.schema.json`. Find an entry with
 
 | Shard | Lines | Top-level keys (entries) | Purpose |
 |---|---|---|---|
-| `data/profile/00-basics.yaml` | 148 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
+| `data/profile/00-basics.yaml` | 157 | basics (14 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
 | `data/profile/10-career.yaml` | 2835 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
 | `data/profile/20-projects-flagship.yaml` | 1397 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1198 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
@@ -49,7 +49,7 @@ Other knowledge files:
 | `data/voice.yaml` | 432 | VOICE — how the chanmeng.org digital twin sounds, and what it will not say … |
 | `docs/ecosystem/lineage.yaml` | 1036 | Repo lineage catalog - topology only (NOT career copy; not loaded by load-profile). |
 | `schema/brand.schema.json` | 464 | ChanMeng666 Brand System Schema … |
-| `schema/profile.schema.json` | 1467 | ChanMeng666 Profile Data Schema … |
+| `schema/profile.schema.json` | 1468 | ChanMeng666 Profile Data Schema … |
 
 ## Guidance docs
 

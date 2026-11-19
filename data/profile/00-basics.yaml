@@ -30,7 +30,16 @@ basics:
   # PRIOR (183, 2026-09-02 to 2026-11-19): I help founders and teams ship AI agents that survive production | Founder, ArchCanvas + ArchLang | AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Auckland, NZ
   headline: I build AI products and the checks that keep them honest | Founder, ArchCanvas + ArchLang | AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Auckland, NZ
   image: /public/brands/chan-monkey-logo-black.svg
+  # Two addresses on purpose (2026-11-19, docs/STATE.md Contact addresses):
+  # `email` is the job-application address and is read by the CVs only (the
+  # three PDFs, cv/**, public/cv.jsonld, public/cv-llms.txt, the ATS exports).
+  # `publicEmail` is the one public contact address on every other surface:
+  # the README, llms.txt, llms-full.txt, dist/, the twin, LinkedIn/X/YouTube
+  # copy, the media kit. The Email profile below and meta.x_brand
+  # engagementAvailability.cta.secondary must be mailto:<publicEmail>
+  # (scripts/validate.mjs fails otherwise).
   email: chanmeng.career@gmail.com
+  publicEmail: hello@chanmeng.org
   url: https://chanmeng.org/
   summary: |
     AI agent architect, full-stack engineer, and minimalist living advocate
@@ -59,7 +68,7 @@ basics:
     - { network: Portfolio,   url: "https://chanmeng.org/" }
     - { network: LinkedIn,    username: chanmeng666,    url: "https://www.linkedin.com/in/chanmeng666/" }
     - { network: GitHub,      username: ChanMeng666,    url: "https://github.com/ChanMeng666" }
-    - { network: Email,       url: "mailto:chanmeng.career@gmail.com" }
+    - { network: Email,       url: "mailto:hello@chanmeng.org" }   # = mailto:<basics.publicEmail> (2026-11-19). PRIOR: mailto:chanmeng.career@gmail.com
     - { network: Resume,      label: "Resume (HackerRank PDF)", url: "https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/27897555/Mjc4OTc1NTU=.pdf" }
     - { network: X,           username: chanmeng666,    url: "https://x.com/chanmeng666",                 label: "Twitter / X" }
     - { network: ORCID,       username: "0009-0002-1446-778X", url: "https://orcid.org/0009-0002-1446-778X", label: "Lincoln University NZ alumna" }

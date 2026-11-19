@@ -1,6 +1,6 @@
 # Current state and standing decisions
 
-**As of 2026-11-18.** What Chan has decided, so nobody re-asks her or re-argues a
+**As of 2026-11-19.** What Chan has decided, so nobody re-asks her or re-argues a
 settled point. Decisions and pointers only: facts live in `data/profile/`, repo
 topology in `docs/ecosystem/lineage.yaml`, procedures in
 `docs/operations/README.md`. When this file disagrees with one of those, this
@@ -19,7 +19,7 @@ gitignored `docs/STATE.private.md`. Read it when present; never copy from it.
 | Client work | **GenLAB Career Academy** for NZiFOCUS, in development | Lead developer, not the sole decision-maker: the pace follows the client |
 | Role | **FemTech Weekend** CTO; the **LYZEN** company site (repo `femtech-weekend-redthread`) is in founder review | Pace set by the founder |
 | Maintenance only | echook, a11y-loop, the Google News and Google Jobs MCP servers, the agent skills | Free open-source tools. Never propose paid tiers. Keep them healthy, add no features |
-| Ended | GAVIGO (left 2026-10, last working day 2026-10-05; access withdrawn), She Sharp (handed over 2026-09), CORDE (handed over 2024) | Still shown as case studies. CORDE is stated in its placement title, Full Stack Developer and Lead Documenter, in copy and in interviews (Chan, 2026-10-15) |
+| Ended | GAVIGO (left 2026-10, last working day 2026-10-05; access withdrawn), She Sharp (handed over 2026-09), CORDE (handed over 2024) | Still shown as case studies. CORDE's title is Full Stack Developer and Lead Documenter, in copy and in interviews (Chan, 2026-10-15) |
 
 ## Display rules
 
@@ -61,7 +61,7 @@ LinkedIn copy.
 | **Films on the README** | Not embedded since 2026-10-10. The film wall (`public/readme/films.svg`) stands open under "What I make beyond code", with one line and two links: chanmeng.org/films and YouTube. One tile per film: each product's primary film, the brand and event films, the music videos |
 | **chanmeng.org/films** | Every finished film. The ArchLang narrated demo is on it too, and public on YouTube, since 2026-11-07 (Chan; it was unlisted and off /films before); its repo stays private. Screen-recorded demos are not films and stay on YouTube. Source `46-films.yaml` → `dist/films.json` → the site's `scripts/sync-films.mjs` |
 | **GAVIGO** | Only its three approved figures (78%, 4.45s → 1.00s, ~140ms), under its labels, with the boundary note ("controlled", "not a production SLA"). No internal timings, no "instant" or "no wait". Google for Startups and NVIDIA Inception are programme participation, never validation (Chan, 2026-10-07) |
-| **CORDE** | On the README since 2026-10-08. Its commit share is counted on the original repository (236 of 413), with that basis beside the figure on every surface |
+| **CORDE** | On the README since 2026-10-08. CORDE Mobile is a commercial project in active use by CORDE's water and civil crews (Chan, 2026-11-19, superseding the 2026-10 film note to say no more about its use than the handover): every surface and generated file says so, and none uses "industry placement", coursework or student-project wording; how the project began stays in its story file. CORDE uses the app but does not endorse the film, and the film's names and places are fictional. Its commit share is counted on the original repository (236 of 413), with that basis beside the figure on every surface |
 | **Google Jobs MCP Server**, **GitHub README Suno Cards** | Taken off the README on 2026-10-08 (a second MCP server repeats Google News; the "Sound I make" block already shows the cards). Both keep their llms narrative. The two MCP servers are independent products: never describe one as part of the other |
 | **Extended CV, Chapter 3** | Ten tiles. The eleventh slot is closed: Seismophone, Chromaflow and a second MCP server were each turned down for it |
 | **FemTech China and FemTech Weekend** | Two unrelated organisations (Chan, 2026-10-16). FreePeriod's Best Social Media Award and the 2024 Excellence Award came from FemTech China; never describe either as a FemTech Weekend award or the two bodies as related |

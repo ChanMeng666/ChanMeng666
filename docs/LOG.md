@@ -483,3 +483,6 @@ data/profile/90-meta.yaml, data/profile/00-basics.yaml, data/profile/70-linkedin
 
 ## [2026-11-19] decide | Availability reads "Open to founding-team and senior AI engineering roles, client projects, and AI-tooling advice." (Chan, with the chanmeng.org redesign); the engagement roles, scopes and proof projects are unchanged
 data/profile/90-meta.yaml, data/profile/70-linkedin.yaml, data/voice.yaml, scripts/build-llms-twin.mjs
+
+## [2026-11-19] decide | CORDE Mobile is a commercial project in active use by CORDE's water and civil crews (Chan), superseding the films note to say no more about its use; no placement, coursework or student-project wording on any surface or generated file; the work title loses "(Lincoln University COMP693 Industry Placement)"; CORDE does not endorse the film and its names and places stay fictional
+docs/STATE.md, data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, data/profile/60-network.yaml, data/profile/70-linkedin.yaml, data/profile/90-meta.yaml, data/voice.yaml, templates/partials/experience.hbs, cv/extended.typ, docs/stories/corde-mobile-application.md (front matter), docs/ecosystem/lineage.yaml (chanRole; end month 2024-10 to match work[corde])

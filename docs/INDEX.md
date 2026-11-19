@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 166 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 125 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 485 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 488 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -24,20 +24,20 @@ against `schema/profile.schema.json`. Find an entry with
 | Shard | Lines | Top-level keys (entries) | Purpose |
 |---|---|---|---|
 | `data/profile/00-basics.yaml` | 148 | basics (13 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
-| `data/profile/10-career.yaml` | 2832 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
+| `data/profile/10-career.yaml` | 2835 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
 | `data/profile/20-projects-flagship.yaml` | 1396 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1198 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1496 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
-| `data/profile/23-projects-oss-more.yaml` | 4141 | projects (99) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
+| `data/profile/23-projects-oss-more.yaml` | 4143 | projects (99) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |
 | `data/profile/25-contributions.yaml` | 577 | openSourceContributions (23) | OPEN SOURCE CONTRIBUTIONS — PRs, issues, upstream work … |
 | `data/profile/30-recognition.yaml` | 1896 | awards (7), certificates (53), publications (78) | RECOGNITION — awards, certificates, publications & media … |
 | `data/profile/40-skills.yaml` | 401 | skills (6), domains (5), languages (4), interests (3) | SKILLS — technical stack, problem domains, languages, interests … |
 | `data/profile/45-showcase.yaml` | 461 | showcaseCapabilities (7), showcase (11), productFilms (13) | SHOWCASE — craft evidence beyond code … |
-| `data/profile/46-films.yaml` | 657 | filmCollections (8), films (73) | FILMS — every finished film Chan has made, one row per film … |
+| `data/profile/46-films.yaml` | 660 | filmCollections (8), films (73) | FILMS — every finished film Chan has made, one row per film … |
 | `data/profile/47-agent-skills.yaml` | 511 | agentSkills (31) | AGENT SKILLS — every agent skill Chan has made, one row per repo or product … |
 | `data/profile/50-references.yaml` | 577 | references (27) | REFERENCES — testimonials & recommendations … |
-| `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
-| `data/profile/70-linkedin.yaml` | 1933 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
+| `data/profile/60-network.yaml` | 1265 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
+| `data/profile/70-linkedin.yaml` | 1939 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
 | `data/profile/80-events.yaml` | 915 | events (23) | EVENTS — offline / in-person activities: talks, panels, hackathons mentored, workshops taught, community appearances. |
 | `data/profile/90-meta.yaml` | 772 | meta (4 keys) | META — build metadata, x_brand display configuration … |
 
@@ -77,7 +77,7 @@ Other knowledge files:
 | `docs/stories/ai-programming-teaching-project.md` | 370 | Story. AI Programming Education Platform: Creator, developer and instructor | preparing an interview or cover letter about this project |
 | `docs/stories/archcanvas.md` | 376 | Story. ArchCanvas: Founder and sole engineer | preparing an interview or cover letter about this project |
 | `docs/stories/archlang.md` | 355 | Story. ArchLang: Creator and sole developer | preparing an interview or cover letter about this project |
-| `docs/stories/corde-mobile-application.md` | 373 | Story. CORDE Field-Operations Mobile App: Full Stack Developer and Lead Documenter (Lincoln University COMP693 industry placement) | preparing an interview or cover letter about this project |
+| `docs/stories/corde-mobile-application.md` | 373 | Story. CORDE Field-Operations Mobile App: Full Stack Developer and Lead Documenter | preparing an interview or cover letter about this project |
 | `docs/stories/eatropolis-website.md` | 461 | Story. Eatropolis website: Sole freelance developer | preparing an interview or cover letter about this project |
 | `docs/stories/echook.md` | 455 | Story. echook: Creator and maintainer | preparing an interview or cover letter about this project |
 | `docs/stories/femtech-weekend-website.md` | 387 | Story. FemTech Weekend website: Chief Technology Officer and sole engineer | preparing an interview or cover letter about this project |

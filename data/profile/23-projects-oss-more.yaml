@@ -1689,10 +1689,12 @@ projects:
     category: web-apps
     clientOrgId: corde
     relatedWorkId: corde
-    tagline: "Offline-first React Native field-data-collection app for CORDE's Canterbury water- and civil-infrastructure crews — capture text, photos, and GPS on the device and sync back to CORDE's Workbench platform when connectivity returns. Lincoln University COMP693 industry-placement capstone; Chan was the #1-most-prolific contributor (57% of the 413 commits in the original repository) and documentation lead."
-    # repoUrl omitted — private/removed client capstone repository (404s publicly); do not re-add.
+    tagline: "Offline-first React Native field-data-collection app for CORDE's Canterbury water- and civil-infrastructure crews — capture text, photos, and GPS on the device and sync back to CORDE's Workbench platform when connectivity returns. A commercial project in active use by CORDE's water and civil crews; Chan was the #1-most-prolific contributor (57% of the 413 commits in the original repository) and documentation lead."
+    # repoUrl omitted — private/removed client repository (404s publicly); do not re-add.
+    # Commercial project in active use by CORDE's water and civil crews (Chan,
+    # 2026-11-19): no placement, coursework or student-project wording here.
     url: https://corde-mobile-application-4yw7mtt.gamma.site/
-    entity: "CORDE (Canterbury NZ infrastructure & civil-construction company) — Lincoln University COMP693 capstone"
+    entity: "CORDE (Canterbury NZ infrastructure & civil-construction company) — field-operations app in active use by its crews"
     roles: ["Full Stack Developer", "Lead Documenter"]
     # 2026-10-15: ArcGIS was evaluated in June 2024 and dropped (maps are
     # react-native-maps with Google); Jest held only the default render test.
@@ -1703,7 +1705,7 @@ projects:
       - "GPS + photo + text capture stored on the device"
       - "Per-log sync status and timed retries to a central Workbench platform"
       - "NZ infrastructure / civil construction"
-      - "Lincoln University COMP693 industry-placement capstone"
+      - "Commercial app in active use by CORDE's water and civil crews"
     # 2026-10-08 (Chan): the commit share is counted on the ORIGINAL repository
     # (236 of 413, 57%), not on the teammate's later fork (227 of 541). Recounted
     # from the repository that day. Keep the basis ("in the original repository")
@@ -1717,7 +1719,7 @@ projects:
     narrative:
       # 2026-10-08: on the README as a big card since this date, so the headline
       # leads with what the app does; the commit figures stay in metrics and the tagline.
-      impactHeadline: "An offline-first React Native app for CORDE's field crews in rural Canterbury: capture text, photos and GPS with no signal, then sync when coverage returns. Built in a university placement team of three, where I wrote the largest share of the code and led the documentation."
+      impactHeadline: "An offline-first React Native app in use by CORDE's water and civil crews in rural Canterbury: capture text, photos and GPS with no signal, then sync when coverage returns. Built by a team of three; I wrote the largest share of the code and led the documentation."
   - id: portfolio-v2
     provenance: personal
     tier: secondary

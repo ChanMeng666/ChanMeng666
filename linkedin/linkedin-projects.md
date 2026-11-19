@@ -235,7 +235,7 @@ A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Cant
 
 • #1-most-prolific contributor on the codebase: 236 of 413 commits in the original repository (57%), ahead of teammates Xue Zheng (32.7%) and Luke Shi (10.2%).
 • Sole author of the team documentation repository (140 of 143 commits, 97.9%), built against the Workbench API documents written by CORDE's Business System Analyst, Kullum Ladley.
-• Handed over in October 2024, with a project-structure guide and a release-packaging guide, to a teammate who has carried it on for CORDE since.
+• Handed over in October 2024, with a project-structure guide and a release-packaging guide, to a teammate who has carried it on for CORDE since; CORDE's water and civil crews use it today.
 
 Stack: React Native 0.74, TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.
 ```

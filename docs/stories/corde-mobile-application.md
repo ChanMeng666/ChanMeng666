@@ -1,7 +1,7 @@
 ---
 id: corde-mobile-application
 title: CORDE Field-Operations Mobile App
-role: Full Stack Developer and Lead Documenter (Lincoln University COMP693 industry placement)
+role: Full Stack Developer and Lead Documenter
 period: "2024-06 – 2024-10"
 status: production
 kind: client

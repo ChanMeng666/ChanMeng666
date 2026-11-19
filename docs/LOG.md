@@ -498,3 +498,6 @@ data/profile/90-meta.yaml
 
 ## [2026-11-19] fix | LinkedIn CORDE copy checked against work[corde] and the ruling: the Lincoln University activities line gives the dates (Jun – Oct 2024) and says "a commercial ... app in active use"; the CORDE experience title is the full work title, Full Stack Developer & Lead Documenter
 data/profile/70-linkedin.yaml
+
+## [2026-11-19] decide | Visit attribution: the primary chanmeng.org link on each surface carries ?ref=github (README hero), ?ref=linkedin (LinkedIn website field), ?ref=x (X website field, pinned thread) or ?ref=youtube (channel description and links, new video Links blocks); CV PDFs, JSON-LD and llms files stay bare
+docs/STATE.md, templates/partials/hero.hbs, data/profile/70-linkedin.yaml

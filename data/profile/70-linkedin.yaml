@@ -55,7 +55,9 @@ linkedin:
     websiteLabel: My Website
     connections: 500+
     openToWork: true
-    websiteUrl: https://chanmeng.org/
+    # 2026-11-19: ?ref=linkedin so the site can tell a visit came from LinkedIn
+    # (docs/STATE.md, Visit attribution). PRIOR live value: https://chanmeng.org/
+    websiteUrl: https://chanmeng.org/?ref=linkedin
   about:
     # 2026-11-19 (Chan, with the chanmeng.org redesign): the About opens on the
     # positioning sentence (meta.x_brand.valueProposition.tagline). Second

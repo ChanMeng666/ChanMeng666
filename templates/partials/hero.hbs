@@ -17,11 +17,14 @@
      Both SVGs are VENDORED from the chan-meng-logo repo (assets/anime/), which
      owns the artwork and the derivation — do not edit or regenerate them here.
      Upstream: `npm run build:on-white`, then copy the result over.
+     2026-11-19: the two primary chanmeng.org links (the mark and the Portfolio
+     pill) carry ?ref=github so the site can tell a visit came from this README
+     (docs/STATE.md, Visit attribution). Only these two; other links stay bare.
      ═══════════════════════════════════════════════════════════════════════ --}}
 
 {{> banner decorations.banners.hero}}
 
-<a href="{{basics.url}}"><picture><source media="(prefers-color-scheme: dark)" srcset="/public/brands/chan-monkey-live-on-white.svg"><img src="/public/brands/chan-monkey-live.svg" align="right" width="160" alt="{{basics.name}} — {{basics.label}} · {{default basics.location.region "Auckland, New Zealand"}}"></picture></a>
+<a href="{{basics.url}}?ref=github"><picture><source media="(prefers-color-scheme: dark)" srcset="/public/brands/chan-monkey-live-on-white.svg"><img src="/public/brands/chan-monkey-live.svg" align="right" width="160" alt="{{basics.name}} — {{basics.label}} · {{default basics.location.region "Auckland, New Zealand"}}"></picture></a>
 
 *{{#each (split basics.taglines.heroLabel "|")}}{{trim this}}{{#unless @last}} · {{/unless}}{{/each}}.*
 *{{default basics.location.region "Auckland, New Zealand"}}.*
@@ -38,7 +41,7 @@
 {{/if}}
 
 <p>
-{{#each _primaryBadges}}{{#if (eq network "Portfolio")}}<a href="{{url}}">{{pill network}}</a>{{/if}}{{#if (eq network "LinkedIn")}}<a href="{{url}}">{{pill network}}</a>{{/if}}{{#if (eq network "Email")}}<a href="{{url}}">{{pill network}}</a>{{/if}}{{#unless @last}} {{/unless}}{{/each}}
+{{#each _primaryBadges}}{{#if (eq network "Portfolio")}}<a href="{{url}}?ref=github">{{pill network}}</a>{{/if}}{{#if (eq network "LinkedIn")}}<a href="{{url}}">{{pill network}}</a>{{/if}}{{#if (eq network "Email")}}<a href="{{url}}">{{pill network}}</a>{{/if}}{{#unless @last}} {{/unless}}{{/each}}
 </p>
 
 <br clear="all">

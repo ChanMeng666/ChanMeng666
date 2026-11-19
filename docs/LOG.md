@@ -530,3 +530,6 @@ data/profile/10-career.yaml, docs/ecosystem/lineage.yaml, cv/chan-meng-cv-ats.ty
 
 ## [2026-11-19] fix | CORDE figures recounted from the repositories: commits 227 of 541 in the production repository (42%; Luke Shi 32.3%, Xue Zheng 25.7%), replacing LinkedIn's 539 and confirming the 2026-10-08 reading of 541; React Native 0.74.2 at handover, 0.83.1 in the fork today; API documents 14 on eight topics plus one priority list (15 files); LinkedIn copy corrected and waiting for Chan to apply
 data/profile/23-projects-oss-more.yaml, data/profile/10-career.yaml, data/profile/70-linkedin.yaml, data/profile/90-meta.yaml, cv/sections/experience.typ, docs/stories/corde-mobile-application.md, docs/STATE.md
+
+## [2026-11-19] fix | The 15 YouTube videos registered that day, confirmed signed out with yt-dlp: Auckland publish dates (dPNgGUzUA0U 2026-11-18, the other fourteen 2026-11-17), playlists (the two Women of the Island long cuts in Chan's public playlist "Chan Meng's Video Podcasts · Edited Entirely by AI", now registered; the thirteen Shorts in none), and the two long cuts given the new register kind podcast-cut; no "to be confirmed" left on them
+youtube/channel.yaml, docs/STATE.md

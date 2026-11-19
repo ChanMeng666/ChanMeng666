@@ -71,7 +71,7 @@ Other knowledge files:
 | `docs/ecosystem/archlang-context.md` | 208 | ArchLang project graph (agent context) | working across the ArchLang / ArchCanvas repos; hand it to the agent for ArchLang work (generated) |
 | `docs/film-masters.md` | 326 | Film masters: where each one lives | — |
 | `docs/github-theme-aware-assets.md` | 31 | Theme-aware visual assets — this repo's status | an image may break on GitHub's light or dark canvas |
-| `docs/operations/README.md` | 232 | Repo lifecycle and hosting operations | archiving, deleting or making a repo private; retiring a hosted site; npm publishing |
+| `docs/operations/README.md` | 232 | Repo lifecycle and hosting operations | archiving, deleting or making a repo private; retiring a hosted site; npm publishing; a vendor account shared across projects (OpenAI, Stripe, Cloudinary, GitHub) |
 | `docs/stories/README.md` | 157 | Project stories | writing or editing a project story |
 | `docs/stories/a11y-loop.md` | 392 | Story. a11y-loop: Creator and sole developer | preparing an interview or cover letter about this project |
 | `docs/stories/ai-programming-teaching-project.md` | 370 | Story. AI Programming Education Platform: Creator, developer and instructor | preparing an interview or cover letter about this project |

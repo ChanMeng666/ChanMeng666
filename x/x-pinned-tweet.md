@@ -15,15 +15,25 @@ and must never be linked or mentioned.
 
 ## The pinned thread (3 tweets)
 
-> **Live status (v3, 2026-10-07):** posted and pinned, root status id
-> `2107777580908859706`. Tweet 1 carries `x/media/pinned-products.png` with the
-> alt text below; the auto link cards were removed from tweets 2 and 3. It
-> replaced v2 (root `2078727381859389815`, 2026-07-19), which named Vitex and
-> an older star count; Chan deleted it on 2026-10-08. What is live is
-> recorded in [`account.yaml`](./account.yaml).
+> **Status (v4, written 2026-11-19, not posted):** the text below carries the
+> 2026-11-19 rulings (positioning "I build AI products and the checks that keep
+> them honest.", the availability sentence, ArchCanvas as an "AI architectural
+> designer" producing a dimensioned floor plan) and `?ref=x` on the chanmeng.org
+> links. X cannot edit a posted tweet, so v4 goes up as a new thread; pinning it
+> and what happens to v3 are Chan's calls. Tweet 1 carries
+> `x/media/pinned-products.png` (re-rendered 2026-11-19) with the alt text below;
+> remove the auto link cards from tweets 2 and 3.
+>
+> **What is live** (recorded in [`account.yaml`](./account.yaml)): since
+> 2026-11-13 the pinned post is the ArchLang plan-to-3D post
+> `2121084644208869652`. The v3 intro thread (root `2107777580908859706`,
+> posted and pinned 2026-10-07) is still on the timeline, unpinned; its text is
+> in `posts.yaml` and it still says "an AI architect", "teach others to do the
+> same" and "a buildable plan" (image alt text). v3 replaced v2 (root
+> `2078727381859389815`, 2026-07-19), which Chan deleted on 2026-10-08.
 
 A pin shows only the first tweet, so Tweet 1 stands fully on its own: who Chan
-is, the human-stakes value, and the compressed proof (530+ GitHub stars, from
+is, the positioning sentence, and the compressed proof (530+ GitHub stars, from
 `00-basics.yaml`). Tweets 2 and 3 continue for anyone who expands the thread.
 Tweet 1 carries `x/media/pinned-products.png`, whose five rows are the five
 products of Tweet 2 in the same order.
@@ -31,46 +41,47 @@ products of Tweet 2 in the same order.
 **Tweet 1** — standalone intro + proof
 
 ```
-I'm Chan Meng — I architect AI agents and ship full-stack products, then teach others to do the same.
+I'm Chan Meng. I build AI products and the checks that keep them honest, and teach others to.
 
-530+ GitHub stars across AI tools I've built: MCP servers, coding-agent plugins, a floor-plan language and an AI architect on top.
+530+ GitHub stars across AI tools I've built: MCP servers, coding-agent plugins, a floor-plan language and an AI architectural designer on top.
 
-Auckland, NZ → https://chanmeng.org/
+Auckland, NZ → https://chanmeng.org/?ref=x
 ```
 
 **Alt text for the image on Tweet 1** (X allows 1,000 characters; it cannot be
 added after posting)
 
 ```
-What I build. ArchCanvas: describe a building, get a buildable plan. ArchLang: a text language for floor plans. echook: talk-to-configure notifications for coding agents. Google News MCP: live news for AI assistants. a11y-loop: accessible UI from AI coding agents, audited. Chan Meng.
+What I build. ArchCanvas: describe a building, get a dimensioned floor plan. ArchLang: a text language for floor plans. echook: talk-to-configure notifications for coding agents. Google News MCP: live news for AI assistants. a11y-loop: accessible UI from AI coding agents, audited. Chan Meng.
 ```
 
 **Tweet 2** — product rollcall with links
 
 ```
-Five I build:
+I build:
 
-ArchCanvas AI architect https://archcanvas.uk
+ArchCanvas AI architectural designer https://archcanvas.uk
 
-ArchLang floor-plan language https://playground.archlang.uk
+ArchLang plan language https://playground.archlang.uk
 
 echook for coding agents https://github.com/ChanMeng666/echook
 
 Google News MCP (PulseMCP Top Pick) https://github.com/ChanMeng666/server-google-news
 
-a11y-loop, accessible UI https://github.com/ChanMeng666/a11y-loop
+a11y-loop accessible UI https://github.com/ChanMeng666/a11y-loop
 ```
 
-**Tweet 3** — what this feed does + CTA
+**Tweet 3** — what this feed does + availability + CTA
 
 ```
-What this feed is: building in public — AI agent architecture, full-stack shipping, and notes from the teaching cohorts I run.
+What this feed is: building in public — AI products, the checks behind them, and notes from the teaching cohorts I run.
 
-Follow for the work as it ships. Everything in one place:
+Open to founding-team and senior AI engineering roles, client projects, and AI-tooling advice.
 
-https://chanmeng.org/
+Everything in one place: https://chanmeng.org/?ref=x
 ```
 
+The v3 text (2026-10-07) is in `posts.yaml` under thread `2107777580908859706`.
 The v2 text (2026-07-19) is in `posts.yaml` under thread `2078727381859389815`.
 
 ---
@@ -83,7 +94,7 @@ Use this instead of the thread if you'd rather pin one tweet. Self-sufficient;
 no follow-on required.
 
 ```
-I'm Chan Meng — AI Agent Architect & full-stack engineer in Auckland, NZ. I architect AI agents, ship products end-to-end, and teach others to do the same. 530+ GitHub stars across tools I've built. Work + writing: https://chanmeng.org/
+I'm Chan Meng, an AI agent architect and full-stack engineer in Auckland, NZ. I build AI products and the checks that keep them honest, and teach others to. 530+ GitHub stars across tools I've built. Work + writing: https://chanmeng.org/?ref=x
 ```
 
 **Every image and video gets alt text**, written before posting (rule adopted
@@ -157,14 +168,14 @@ const len = (s) => [...s.replace(urlRe, "x".repeat(23))].reduce((n, ch) => n + (
 // len(tweet) run for each of T1, T2, T3, and Alternate (a)
 ```
 
-Actual output for the three thread tweets and alternate (a):
+Actual output for the v4 thread tweets and alternate (a), run 2026-11-19:
 
 ```
-T1: 274 OK
-T2: 277 OK
-T3: 210 OK
-ALT-a: 238 OK
-Image alt text: 284 OK (limit 1,000)
+T1: 279 OK
+T2: 278 OK
+T3: 265 OK
+ALT-a: 239 OK
+Image alt text: 292 OK (limit 1,000)
 ```
 
 All ≤ 280. Templates (b)/(c)/(d) contain `<slots>` and carry budget notes

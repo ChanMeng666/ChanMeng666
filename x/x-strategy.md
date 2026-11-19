@@ -12,8 +12,10 @@ meant to be filled in, edited, and appended to as you go.
 - **Source of truth for facts:** `data/profile/*.yaml`. Never post a number this
   doc or the shards can't back. When a metric changes, fix the shard first.
 
-> **One-line positioning:** *I build AI agents in public — the floor-plan compiler,
-> the career agent, the MCP servers — and show the engineering, not just the demo.*
+> **One-line positioning** (Chan, 2026-11-19; `meta.x_brand.valueProposition.tagline`):
+> *I build AI products and the checks that keep them honest.* On X that means building
+> them in public — the floor-plan compiler, the MCP servers, the coding-agent tools —
+> and showing the check, not just the demo.
 
 ---
 
@@ -291,10 +293,11 @@ launched the protocol — now a PulseMCP Top Pick listed across 15+ catalogs.
   screenshot whenever MCP trends; quote-repost Anthropic/MCP ecosystem news with "I
   was in the first month of this" as earned context (not bragging — proof).
 
-### 5.5 ArchCanvas — *describe a building → a buildable plan*
-**Hook:** describe a building in plain language → one strong, dimensioned floor plan
-you can actually build from, plus a grounded AI rendering — then refine it by talking,
-on an infinite zoomable canvas.
+### 5.5 ArchCanvas — *describe a building → a dimensioned floor plan*
+**Hook:** an AI architectural designer: describe a building in plain language → one
+strong, dimensioned floor plan, plus a grounded AI rendering — then refine it by
+talking, on an infinite zoomable canvas. Copy law: never "buildable", "permit-ready",
+"code-compliant", "in seconds" or "AI architect".
 
 > **Repo is private. Link `archcanvas.uk` only.** Never post a GitHub link, never say
 > "source coming" — the product page is the single destination.
@@ -303,9 +306,8 @@ on an infinite zoomable canvas.
   a dashed ghost, a diff chip shows what changed. Caption: "It refines the plan. It
   never regenerates it."
 - **Launch-day thread skeleton:**
-  1. Hook — "Describe a house in plain words. Get a dimensioned floor plan you can
-     *build from*, plus a real rendering. Then refine it by talking. archcanvas.uk."
-     + clip.
+  1. Hook — "Describe a house in plain words. Get a dimensioned floor plan, plus a
+     real rendering. Then refine it by talking. archcanvas.uk." + clip.
   2. Problem — AI floor-plan tools make pretty pictures you can't build from and
      can't precisely edit; CAD is powerful but slow and expert-only.
   3. Act I — describe your build, the agent asks 2–5 questions, then generates ONE
@@ -399,7 +401,7 @@ by everything else. Current reach to route through the loop:
   the repo; a star is a durable proof signal the next recruiter sees.
 - **Pinned post = current best proof.** Keep one flagship launch thread pinned;
   rotate it when a stronger one ships (see §8 review).
-- **Profile → hub.** Bio links to chanmeng.org; the feed's job is to make a stranger
+- **Profile → hub.** The Website field links to chanmeng.org/?ref=x (the `?ref=x` tells the site the visit came from X); the feed's job is to make a stranger
   curious enough to click through to the whole story.
 
 ### Direction of each edge (quick reference)

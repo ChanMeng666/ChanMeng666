@@ -501,3 +501,6 @@ data/profile/70-linkedin.yaml
 
 ## [2026-11-19] decide | Visit attribution: the primary chanmeng.org link on each surface carries ?ref=github (README hero), ?ref=linkedin (LinkedIn website field), ?ref=x (X website field, pinned thread) or ?ref=youtube (channel description and links, new video Links blocks); CV PDFs, JSON-LD and llms files stay bare
 docs/STATE.md, templates/partials/hero.hbs, data/profile/70-linkedin.yaml
+
+## [2026-11-19] change | X copy and both banners carry the 2026-11-19 rulings: bio v4 and pinned thread v4 (positioning, availability, ArchCanvas as an AI architectural designer, ?ref=x), the pinned image says "a dimensioned floor plan", the X header and YouTube banner tagline is the positioning sentence; written and rendered, not yet applied on X or YouTube
+x/x-profile.md, x/x-pinned-tweet.md, x/x-strategy.md, x/media/pinned-products.html, x/header/header.html, youtube/banner/banner.html

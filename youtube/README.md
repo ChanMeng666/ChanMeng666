@@ -31,7 +31,12 @@ question about the channel.
   order: the product's own links (the `url`, `repoUrl` and `extraLinks` of its
   entry in `data/profile/`), `More films: https://chanmeng.org/films` on a
   film, then `Portfolio and CV: https://chanmeng.org/?ref=youtube` (the `?ref` since 2026-11-19, `docs/STATE.md` Visit attribution; descriptions written before keep the bare link until edited) and
-  `GitHub: https://github.com/ChanMeng666`. A Short's block starts with the
+  `GitHub: https://github.com/ChanMeng666`. No backfill (decided 2026-11-19):
+  the `?ref=youtube` link goes into new descriptions and into a description
+  when it is edited for another reason; the other public videos keep the bare
+  link. This repo has no YouTube Data API write access (`capture:youtube` reads
+  with yt-dlp and no credentials; no OAuth client or token is kept), and a
+  bulk edit by hand in Studio is not worth one visit a week. A Short's block starts with the
   full film. A music video's block has the song on Suno and its album's anchor
   on chanmeng.org/films, and its credits link the style library; it carries no
   lyrics, because the Suno link has the song and its lyrics. Hashtags stay

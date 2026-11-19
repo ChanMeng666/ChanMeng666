@@ -510,3 +510,6 @@ youtube/channel.yaml, youtube/README.md
 
 ## [2026-11-19] decide | hello@chanmeng.org is the one public contact address, CVs excepted: new basics.publicEmail feeds the Email profile, README, llms files, dist/, twin, media kit and LinkedIn cover; basics.email (chanmeng.career@gmail.com) stays the CVs' own
 data/profile/00-basics.yaml, schema/profile.schema.json, scripts/validate.mjs, scripts/build.mjs, scripts/build-llms-twin.mjs, templates/partials/jsonld-block.hbs, media-kit/chan-meng-media-kit.typ, linkedin/linkedin-services/cover.html, docs/STATE.md
+
+## [2026-11-19] decide | No ?ref=youtube backfill on existing video descriptions (no API write access; new and edited descriptions only); the two ArchCanvas titles (rUZAiXgt9JY, 3GrW5o63p5I) staged as "your AI architectural designer", to be applied in Studio by hand
+youtube/README.md, youtube/channel.yaml

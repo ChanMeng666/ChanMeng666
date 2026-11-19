@@ -12,5 +12,5 @@
 **Headline:**
 
 ```
-I help founders and teams ship AI agents that survive production | Founder, ArchCanvas + ArchLang | AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Auckland, NZ
+I build AI products and the checks that keep them honest | Founder, ArchCanvas + ArchLang | AI Agent Architect & Full-Stack Engineer | Anthropic Partner Network | Auckland, NZ
 ```

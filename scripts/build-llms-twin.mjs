@@ -210,8 +210,10 @@ const profileLinks = (basics.profiles ?? [])
   .map((p) => `${p.network === "X" ? "X" : p.network}: ${p.url}`);
 
 h2("Who I am");
-para(`I'm ${basics.name} (${String(basics.pronouns ?? "she/her").toLowerCase()}), an AI agent architect and full-stack engineer based in ${basics.location?.region ?? "Auckland, New Zealand"}. ${xb.valueProposition?.tagline ?? ""}`);
-for (const p of lead.split(/\n\s*\n/)) para(p);
+const tagline = xb.valueProposition?.tagline ?? "";
+para(`I'm ${basics.name} (${String(basics.pronouns ?? "she/her").toLowerCase()}), an AI agent architect and full-stack engineer based in ${basics.location?.region ?? "Auckland, New Zealand"}. ${tagline}`);
+// The LinkedIn About opens on the same sentence (2026-11-19): say it once.
+for (const p of lead.split(/\n\s*\n/)) para(tagline && p.startsWith(tagline) ? p.slice(tagline.length).trim() : p);
 para(
   `Right now I am ${current.map((w) => `${w.position} at ${w.name} (since ${month(w.startDate)})`).join(", and ")}. ` +
     `ArchCanvas is an AI architectural designer: you describe a building in plain English and it produces a dimensioned floor plan that you refine by talking to it, live at archcanvas.uk. ` +

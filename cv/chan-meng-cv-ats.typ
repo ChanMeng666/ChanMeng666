@@ -74,7 +74,7 @@
   // that would split one fact across two files and make a bare `typst compile`
   // produce a different PDF. cv/build-ats-exports.mjs PARSES this line and
   // reuses it for the .docx core properties, so it stays one fact in one file.
-  date: datetime(year: 2026, month: 10, day: 15),
+  date: datetime(year: 2026, month: 11, day: 19),
   // NO keywords: on purpose. The 70-term list in chan-meng-cv.typ is plainly
   // legible in `pdfinfo` and reads as keyword stuffing to an AI screener —
   // the same class of anti-pattern cv/README.md already bans. Everything that
@@ -175,11 +175,12 @@
 // is. Same rule drives every heading in this file.
 = PROFESSIONAL SUMMARY
 
-AI and full-stack engineer who has shipped MCP servers, sub-agents, and agent
-skills to production, behind paying customers, private health data, and
-regulated work, not demos. Has run five concurrent engineering and CTO-level
-roles across four countries through 2026. Works AI-native by default, directing
-coding agents and building on the Claude Agent SDK.
+AI and full-stack engineer who builds AI products and the checks that keep them
+honest, with MCP servers, sub-agents, and agent skills shipped to production
+behind paying customers, private health data, and regulated work. Has run five
+concurrent engineering and CTO-level roles across four countries through 2026.
+Works AI-native by default, directing coding agents and building on the Claude
+Agent SDK.
 
 // ═══ SKILLS ══════════════════════════════════════════════════════════════════
 // The designed CV splits this across three custom-named sidebar sections

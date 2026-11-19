@@ -477,3 +477,6 @@ docs/operations/README.md
 
 ## [2026-11-19] change | ArchCanvas on ArchLang 1.64.0 (1.65.0 not yet consumed) and its state read from the newest archcanvas-lab handoff; CI heavy legs on arm64 (~10.3 min per code PR), dependency PRs on x64, guard-tests before push, November's included minutes used up 2026-11-18, deploys now the largest lever (archcanvas PRs #337, #339, #343)
 docs/operations/README.md, docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-context.md, scripts/build-archlang-context.mjs
+
+## [2026-11-19] decide | Positioning sentence is "I build AI products and the checks that keep them honest." (Chan, with the chanmeng.org redesign): canonical tagline, LinkedIn headline and About opening, twin intros, FAQ specialty answer, ATS summary and cv-llms positioning carry it; "survive production" and "not demos" framings retired
+data/profile/90-meta.yaml, data/profile/00-basics.yaml, data/profile/70-linkedin.yaml, data/voice.yaml, cv/chan-meng-cv-ats.typ, cv/build-llms-txt.mjs, scripts/build-llms-twin.mjs, templates/brand-system.html.hbs

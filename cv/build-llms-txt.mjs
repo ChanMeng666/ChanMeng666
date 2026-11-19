@@ -145,7 +145,10 @@ sect("Positioning");
 W(`- ${b.label}`);
 // HARDCODED: production-posture and working-method claims. These describe how
 // Chan works rather than what she has shipped, and have no shard analogue.
-W("- Ships MCP servers, sub-agents, and agent skills to production — behind paying customers, private health data, and regulated work, not demos.");
+// The positioning sentence (valueProposition.tagline, first person) in this
+// file's third person.
+W(`- ${String(profile.meta?.x_brand?.valueProposition?.tagline ?? "").replace(/^I build\b/, "Builds")}`);
+W("- Ships MCP servers, sub-agents, and agent skills to production — behind paying customers, private health data, and regulated work.");
 W("- Works AI-native by default — directs coding agents (Claude Code, Codex) and builds on the Claude Agent SDK, shipping these as open-source reference implementations, while keeping the call on what actually ships a human one.");
 if (profile.domains?.length) {
   const focus = profile.domains

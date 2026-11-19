@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 166 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 126 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 503 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 509 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -92,7 +92,7 @@ Other knowledge files:
 | `scripts/README.md` | 68 | scripts/ | finding which script does what, and how to run it |
 | `suno/README.md` | 64 | suno/ — Suno: the register of both accounts | anything about Chan's Suno songs, playlists or the register |
 | `x/README.md` | 84 | x/ — X (Twitter): account register and brand package | anything about the X account, its register or its brand package |
-| `x/x-strategy.md` | 531 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
+| `x/x-strategy.md` | 533 | X (Twitter) Build-in-Public Strategy — @chanmeng666 | planning X content or running the monthly X review |
 | `youtube/README.md` | 116 | youtube/ — YouTube channel: register and banner | changing a YouTube title, description, playlist or the banner |
 
 ## Skills and rules

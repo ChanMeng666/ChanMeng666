@@ -524,3 +524,9 @@ youtube/channel.yaml, docs/STATE.md
 data/profile/70-linkedin.yaml, data/profile/23-projects-oss-more.yaml, data/profile/10-career.yaml, data/profile/90-meta.yaml, cv/sections/experience.typ, docs/stories/corde-mobile-application.md, docs/STATE.md
 ## [2026-11-19] decide | X: bio replaced with the v4 text and the three-post v4 intro thread posted (root 2123278924406997084), deliberately not pinned; the ArchLang post 2121084644208869652 stays pinned (Chan); X sources call it the intro thread
 x/x-pinned-tweet.md, x/x-profile.md, x/README.md, docs/STATE.md
+
+## [2026-11-19] fix | CORDE ended in November 2024 (Chan, final; supersedes the same day's "October" and the 2026-10-15 October end): work[corde] endDate 2024-11, lineage chanRole, the ATS CV and six CV variants, the extended CV comment, the LinkedIn project range (Jun – Nov 2024) and experience duration (6 mos), the Barry Clark claim, the story period; the handover stays in October 2024
+data/profile/10-career.yaml, docs/ecosystem/lineage.yaml, cv/chan-meng-cv-ats.typ, cv/variants/*.typ, cv/extended.typ, data/profile/70-linkedin.yaml, data/profile/90-meta.yaml, docs/stories/corde-mobile-application.md, docs/STATE.md
+
+## [2026-11-19] fix | CORDE figures recounted from the repositories: commits 227 of 541 in the production repository (42%; Luke Shi 32.3%, Xue Zheng 25.7%), replacing LinkedIn's 539 and confirming the 2026-10-08 reading of 541; React Native 0.74.2 at handover, 0.83.1 in the fork today; API documents 14 on eight topics plus one priority list (15 files); LinkedIn copy corrected and waiting for Chan to apply
+data/profile/23-projects-oss-more.yaml, data/profile/10-career.yaml, data/profile/70-linkedin.yaml, data/profile/90-meta.yaml, cv/sections/experience.typ, docs/stories/corde-mobile-application.md, docs/STATE.md

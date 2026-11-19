@@ -100,7 +100,7 @@
   // from data/profile/10-career.yaml: the Lincoln Master of Applied Computing
   // starts 2023-11 (the photo's own burned-in date stamp reads 2023/11/16);
   // CORDE: Full Stack Developer & Lead Documenter on CORDE Mobile, Canterbury,
-  // 2024-06→2024-10, a commercial app in active use by CORDE's crews (Chan,
+  // 2024-06→2024-11, a commercial app in active use by CORDE's crews (Chan,
   // 2026-11-19: never placement or coursework wording);
   // Nanning is Chan's hometown — she lived there from age 2 to 18, kindergarten
   // through high school (per Chan, 2026-07-26; the shard records only the high

@@ -276,7 +276,7 @@ software onto infrastructure it owns, migrating a 1,549-person mailing list with
   title: "Full Stack Developer & Lead Documenter",
   org: "CORDE",
   org-url: "https://corde.nz/",
-  dates: "Jun 2024 - Oct 2024",
+  dates: "Jun 2024 - Nov 2024",
   location: "Canterbury, New Zealand",
   compact: true,
 )

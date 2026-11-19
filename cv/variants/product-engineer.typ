@@ -276,7 +276,7 @@ used to owning a product end to end with a founder at an early-stage startup.
   title: "Full Stack Developer & Lead Documenter",
   org: "CORDE",
   org-url: "https://corde.nz/",
-  dates: "Jun 2024 - Oct 2024",
+  dates: "Jun 2024 - Nov 2024",
   location: "Canterbury, New Zealand",
   compact: true,
 )

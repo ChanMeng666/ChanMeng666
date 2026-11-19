@@ -542,23 +542,28 @@ linkedin:
         # requires in copy (Chan, 2026-10-15). PRIOR live title: Full Stack Developer
         # 2026-11-19 (Chan: the database follows the live LinkedIn CORDE text):
         # description copied verbatim from the live Experience form, trailing
-        # spaces included (1,275 characters). The live end date became October
-        # 2024 the same day, so the duration reads 5 mos. PRIOR description: git
-        # history of this file before 2026-11-19 (236 of 413 in the original
-        # repository, weekly on-site sprint meetings, React Native 0.74).
+        # spaces included (1,275 characters). PRIOR description: git history of
+        # this file before 2026-11-19 (236 of 413 in the original repository,
+        # weekly on-site sprint meetings, React Native 0.74).
+        # 2026-11-19, later: CORDE ended in November 2024 (Chan, final), so the
+        # range is Jun - Nov 2024 and the duration 6 mos again. Two lines differ
+        # from the live text, as the recount of that day settled them: 227 of
+        # 541 (live: 539) and the Stack line's React Native 0.74 at handover,
+        # 0.83 today (live: 0.83). Waiting for Chan to apply by hand
+        # (docs/STATE.md, Open items).
         - title: Full Stack Developer & Lead Documenter
-          duration: 5 mos
+          duration: 6 mos
           location: Canterbury, New Zealand · Hybrid
           description: |-
             I built CORDE's field crews an offline-first React Native app. Their work is in rural Canterbury, where mobile coverage drops out, while the company's central operations platform assumes connectivity: the tablet in the worker's hand had to become the system of record for the moment of work, then reconcile cleanly when the signal came back.  
 
             • A crew member captures text, photos, and GPS coordinates simultaneously with no signal, stored locally with integrity guarantees and synced back to Workbench on reconnection — including the cases that actually break field apps: duplicate IDs, partial sync, mid-batch connectivity drops. 
-            • #1-most-prolific contributor on the build — 227 of 539 commits (42%). 
+            • #1-most-prolific contributor on the build — 227 of 541 commits (42%).
             • Left the team a documentation repository they could hand to the next developer — effectively sole author, 140 of 143 commits (97.9%).  
 
             Five months on-site at CORDE's Rolleston head office, reporting to Barry Clark (business sponsor), with Kullum Ladley as Workbench API specification author. CORDE is a 30+-year-old, 164-staff Canterbury infrastructure and civil-construction company — CCNZ Canterbury Contractor of the Year; Construction Excellence National Award.  
 
-            Stack: React Native 0.83 + TypeScript + Native Base + SQLite + native geolocation/camera/maps.
+            Stack: React Native 0.74 at handover (0.83 today) + TypeScript + Native Base + SQLite + native geolocation/camera/maps.
           skills:
             - React Native
             - TypeScript
@@ -1487,21 +1492,30 @@ linkedin:
         - 2024-12-30 021524.png
       mediaTotal: 5
     - name: CORDE Mobile — Offline-First Field-Operations App (React Native)
-      dateRange: Jun 2024 – Oct 2024
+      # 2026-11-19, later: CORDE ended in November 2024 (Chan, final).
+      dateRange: Jun 2024 – Nov 2024
       associatedWith: CORDE
       # 2026-11-19 (Chan): the live project description is the newer text and
       # the database follows it; copied verbatim from the live form (1,016
       # characters). PRIOR: 236 of 413 in the original repository (57%), Xue
       # Zheng 32.7%, Luke Shi 10.2%, a "Handed over in October 2024" bullet,
       # React Native 0.74.
+      # 2026-11-19, later: three lines differ from the live text, as the recount
+      # of that day settled them: 227 of 541 with Luke Shi 32.3% and Xue Zheng
+      # 25.7% (live: 539, 28.6%, 25.8%); 14 Workbench API specifications (live:
+      # 15; the fifteenth file is a priority list), with "Effectively sole
+      # author" for "Sole author" in the same sentence (3 of the 143 commits are
+      # teammates'; the 2026-11-19 ruling: never claim sole authorship); the
+      # Stack line's React Native 0.74 at handover, 0.83 today (live: 0.83).
+      # Waiting for Chan to apply by hand (docs/STATE.md, Open items).
       description: |-
         A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Canterbury civil-construction contractor whose crews work in rural areas where mobile coverage drops out. The tablet becomes the system of record at the moment of work: text + photos + GPS + timestamps captured locally, integrity-checked, and reconciled to CORDE's central Workbench platform on reconnection — including the awkward cases: duplicate IDs, partial sync, mid-batch drops.
 
-        • #1-most-prolific contributor on the codebase: 227 of 539 commits (42%), ahead of teammates Luke Shi (28.6%) and Xue Zheng (25.8%).
-        • Sole author of the team documentation repository (140 of 143 commits, 97.9%), built against 15 Workbench API specifications authored by Kullum Ladley.
+        • #1-most-prolific contributor on the codebase: 227 of 541 commits (42%), ahead of teammates Luke Shi (32.3%) and Xue Zheng (25.7%).
+        • Effectively sole author of the team documentation repository (140 of 143 commits, 97.9%), built against 14 Workbench API specifications authored by Kullum Ladley.
         • Still in active use today by CORDE's field crews; kept current through React Native upgrades and Android 16 KB page-size compliance.
 
-        Stack: React Native 0.83, TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.
+        Stack: React Native 0.74 at handover (0.83 today), TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.
       skills:
         - React Native
         - Offline-First Architecture

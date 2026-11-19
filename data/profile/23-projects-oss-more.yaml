@@ -1689,7 +1689,7 @@ projects:
     category: web-apps
     clientOrgId: corde
     relatedWorkId: corde
-    tagline: "Offline-first React Native field-data-collection app for CORDE's Canterbury water- and civil-infrastructure crews — capture text, photos, and GPS on the device and sync back to CORDE's Workbench platform when connectivity returns. A commercial project in active use by CORDE's water and civil crews; Chan was the #1-most-prolific contributor (227 of 539 commits in the production repository, 42%) and documentation lead."
+    tagline: "Offline-first React Native field-data-collection app for CORDE's Canterbury water- and civil-infrastructure crews — capture text, photos, and GPS on the device and sync back to CORDE's Workbench platform when connectivity returns. A commercial project in active use by CORDE's water and civil crews; Chan was the #1-most-prolific contributor (227 of 541 commits in the production repository, 42%) and documentation lead."
     # repoUrl omitted — private/removed client repository (404s publicly); do not re-add.
     # Commercial project in active use by CORDE's water and civil crews (Chan,
     # 2026-11-19): no placement, coursework or student-project wording here.
@@ -1706,17 +1706,16 @@ projects:
       - "Per-log sync status and timed retries to a central Workbench platform"
       - "NZ infrastructure / civil construction"
       - "Commercial app in active use by CORDE's water and civil crews"
-    # 2026-11-19 (Chan): the database follows the live LinkedIn project text, so
-    # the commit share is the one it states: 227 of 539 (42%), ahead of Luke Shi
-    # (28.6%) and Xue Zheng (25.8%), counted on the repository CORDE's production
-    # runs (the teammate's fork, which carries the original history). This
-    # supersedes the 2026-10-08 basis (the original repository, 236 of 413, 57%).
-    # Keep the basis ("in the production repository") beside the figure on every
-    # surface except the LinkedIn text, which is hers as written.
+    # 2026-11-19: the commit share is counted on the repository CORDE's
+    # production runs (the teammate's fork, which carries the original history),
+    # as Chan chose that day; the figures are the recount of that day, which
+    # replaces both LinkedIn's 539 and the 2026-10-08 reading (history in the
+    # note). Keep the basis ("in the production repository") beside the figure
+    # on every surface except the LinkedIn text.
     metrics:
-      - { label: "Commits", value: "227 of 539 in the production repository (42%), the largest share of three contributors, ahead of Luke Shi (28.6%) and Xue Zheng (25.8%)", source: "Chan's live LinkedIn project text, read 2026-11-19 (data/profile/70-linkedin.yaml); the production repository's git log is private (not linked)", asOf: "2026-11-19", note: "The production repository is the teammate's fork, which CORDE's production runs. Earlier counts: on 2026-10-08 the fork read 541 commits (227 of them Chan's); the original repository, where the app was first built, has 413 commits, 236 of them Chan's (57%; Xue Zheng 32.7%, Luke Shi 10.2%), the basis used from 2026-10-08 to 2026-11-19." }
+      - { label: "Commits", value: "227 of 541 in the production repository (42%), the largest share of three contributors, ahead of Luke Shi (32.3%) and Xue Zheng (25.7%)", source: "private: the production repository (the teammate's fork that CORDE's production runs), git log of its main branch at 94d6bef (2026-06-26), recounted 2026-11-19 (not linked)", asOf: "2026-11-19", note: "Recounted 2026-11-19 in a read-only clone: git rev-list --count main = 541; git shortlog -sne main: Chan 227 (Chan Meng <Chan.Meng@lincolnuni.ac.nz> 217 plus her two GitHub no-reply identities 10), Luke Shi 175 (identities Luke Shi, Luke and szz, gentoo111's no-reply), Xue Zheng 139 (two identities); GitHub's contributors API gives the same 227, 175 and 139. Merge commits included, as in every earlier count. History: 2026-10-08 read the fork at 541 commits, 227 of them Chan's (the same as today: no commit since 2026-06-26). LinkedIn's 227 of 539 (Luke Shi 28.6%, Xue Zheng 25.8%), in the database from 2026-11-19 until this recount, is the fork as it stood from 2026-02-10 to 2026-05-18 (539 commits), with Luke's 19 szz commits left out of his share. The original repository, where the app was first built, has 413 commits, 236 of them Chan's (57%; Xue Zheng 32.7%, Luke Shi 10.2%), recounted 2026-11-19 unchanged; it was the basis from 2026-10-08 to 2026-11-19." }
       - { label: "Documentation", value: "140 of 143 commits in the team's documentation repository (97.9%)", source: "private: the team's documentation repository, archived 2024, git log (not linked)", asOf: "2026-10-08" }
-      - { label: "API documents", value: "15 files from CORDE's Business System Analyst: 14 API documents on eight topics, revisions included, and one priority list", note: "Counted 2026-10-15 in the API/ folder of the team's documentation repository." }
+      - { label: "API documents", value: "15 files from CORDE's Business System Analyst: 14 API documents on eight topics, revisions included (nine .docx, five .pdf), and one weekly priority list (.pdf)", source: "private: the team's documentation repository, API/ folder (not linked)", asOf: "2026-11-19", note: "Recounted 2026-11-19 with git ls-tree on its main branch (d17f7d0); first counted 2026-10-15. Every file is prefixed YYYYMMDD_Kullum_ (2024-06-19 to 2024-09-04). The eight topics: Workbench API calls for the mobile app (two revisions), reading log information, creating a log (two), authentication (two), log extension fields (two), file upload (two), log completion (two), the group completion workflow. The fifteenth file is the 2024-09-04 This Week's Priorities list, not an API document, so '15 API specifications' overstates it." }
     status: production
     startDate: "2024-06"
     narrative:

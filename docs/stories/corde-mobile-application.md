@@ -2,7 +2,7 @@
 id: corde-mobile-application
 title: CORDE Field-Operations Mobile App
 role: Full Stack Developer and Lead Documenter
-period: "2024-06 – 2024-10"
+period: "2024-06 – 2024-11"
 status: production
 kind: client
 repos:
@@ -322,10 +322,11 @@ Business System Analyst.
 
 | Figure | Source |
 |---|---|
-| Five months, June to October 2024 | `data/profile/10-career.yaml` › `work[corde]` |
+| Five months, June to November 2024 | `data/profile/10-career.yaml` › `work[corde]` |
 | CORDE: 30+ years of operations, about 164 staff | `data/profile/10-career.yaml` › `work[corde].narrative.companyContext` |
-| 14 API documents on eight topics (revisions included) and one priority list from CORDE's Business System Analyst | `data/profile/23-projects-oss-more.yaml` › `projects[corde-mobile-application].metrics` |
+| 14 API documents on eight topics (revisions included) and one priority list from CORDE's Business System Analyst: 15 files, recounted 2026-11-19 | `data/profile/23-projects-oss-more.yaml` › `projects[corde-mobile-application].metrics` |
 | Commit share on the code: say it only together with its basis ("in the production repository", since 2026-11-19), exactly as worded in the shard metric, or not at all | `data/profile/23-projects-oss-more.yaml` › `projects[corde-mobile-application].metrics` |
+| React Native 0.74 is what I built on and handed over; the app runs 0.83 today, after the teammate's upgrade of January 2026 | `data/profile/10-career.yaml` › `work[corde].narrative` (comment above `technicalHighlights`) |
 | Promo film: 30 s and 60 s cuts, 16:9 and 9:16 | `data/profile/46-films.yaml` › `corde-mobile-film`; https://youtu.be/RiL7m159I7w |
 
 ## In hindsight
@@ -363,9 +364,11 @@ Business System Analyst.
 
 ## Open questions
 
-Settled on 2026-10-15: the client work ended in October 2024, with the last
-client build and the teammate's takeover; the period and `work[corde]` now end
-2024-10.
+Settled on 2026-11-19 (Chan, final): the role and the project ended in
+November 2024; the period and `work[corde]` end 2024-11. This supersedes the
+2026-10-15 reading (October), which went by the end of the team's records in
+mid-October: the last client build and the teammate's takeover. Those mark the
+handover, not the end of the role.
 
 - **Written praise.** The team's records hold no email, chat, supervisor
   feedback or grade. A reference from CORDE would have to be asked for

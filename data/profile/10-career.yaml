@@ -2448,9 +2448,12 @@ work:
     name: CORDE (NZ infrastructure & civil construction)
     position: Full Stack Developer & Lead Documenter
     startDate: "2024-06"
-    # The client work ended in October 2024 (Chan, 2026-10-15): last client
-    # build and the teammate's takeover are both mid-October. Not November.
-    endDate: "2024-10"
+    # The role and the project ended in November 2024 (Chan, 2026-11-19,
+    # final; supersedes the 2026-10-15 "October" and that day's earlier
+    # reading). The handover is a separate fact and stays in October: the
+    # teammate's fork was created 2024-10-12 and the team's last code commit is
+    # 2024-10-17.
+    endDate: "2024-11"
     location: Canterbury, New Zealand
     url: "https://corde.nz/"
     logo: /public/organizations/corde-logo.jpg
@@ -2470,7 +2473,7 @@ work:
       - Android
       - Apifox
     narrative:
-      impactHeadline: "#1-most-prolific contributor (227 of 539 commits in the production repository, 42%) on CORDE's offline-first React Native field-operations app, built for CORDE's water/civil-infrastructure crews. Also owned 97.9% of the documentation track end-to-end."
+      impactHeadline: "#1-most-prolific contributor (227 of 541 commits in the production repository, 42%) on CORDE's offline-first React Native field-operations app, built for CORDE's water/civil-infrastructure crews. Also owned 97.9% of the documentation track end-to-end."
       companyContext: |
         **CORDE** is a Canterbury-based **New Zealand infrastructure
         and civil-construction company** — 30+ years of operations,
@@ -2499,7 +2502,7 @@ work:
         processes (Azure DevOps for project management, Figma for
         design hand-off, Apifox + Swagger for API contract testing)
         governing how the work shipped. Five months from June 2024
-        kickoff to October 2024 delivery. The app, CORDE Mobile, is a
+        kickoff to November 2024 delivery. The app, CORDE Mobile, is a
         commercial project in active use by CORDE's water and civil
         crews.
       mission: |
@@ -2544,10 +2547,10 @@ work:
         workflow. The production repository, the one CORDE's
         production runs (Luke Shi's fork under his GitHub handle
         gentoo111, made to take the project over, which carries the
-        original history), has **539 commits; my 227 make me the
+        original history), has **541 commits; my 227 make me the
         #1-most-prolific contributor — 42%** — ahead of Luke Shi on
-        28.6% and Xue Zheng on 25.8% (Chan, 2026-11-19, as on her
-        LinkedIn). In the original repository, where the main body
+        32.3% and Xue Zheng on 25.7% (recounted 2026-11-19 on its
+        main branch). In the original repository, where the main body
         of the app was built, my 236 of its 413 commits are 57%,
         with Xue Zheng on 32.7% and Luke Shi on 10.2%. The app integrates with CORDE's
         Workbench central operations platform via the API contract
@@ -2599,10 +2602,17 @@ work:
         Android 16 KB page-size compliance, pre-commit hooks) are
         his work, not mine; my later commits to the original
         repository are documentation only.
+      # React Native versions, read 2026-11-19 from package.json in read-only
+      # clones: 0.74.2 on main when the fork was created (ca8bf66, 2024-10-12)
+      # and at the team's last code commit (5739304, 2024-10-17); 0.83.1 on the
+      # fork's main today (94d6bef, 2026-06-26), raised from 0.74.2 in one
+      # commit by Luke Shi (8c9d819, 2026-01-29). Name the version with which
+      # one it is: 0.74 = built on and handed over, 0.83 = what the app runs today.
       technicalHighlights: |
         **React Native 0.74 + TypeScript + Native Base** on the
-        client (the version at handover; the fork is on 0.83 today,
-        after Luke's upgrades), deliberately chosen over Expo because the project's
+        client (0.74.2, the version I built on and handed over; the
+        fork runs 0.83.1 today, after Luke's upgrade of January
+        2026), deliberately chosen over Expo because the project's
         offline-first requirements pushed against Expo's managed
         workflow (and over React Native Elements because Native
         Base shipped a Figma component library that let the team
@@ -2662,8 +2672,8 @@ work:
       CCNZ Canterbury Contractor of the Year). Reported directly to Barry
       Clark on CORDE's side with Kullum Ladley as the Workbench API
       specification author. **#1-most-prolific contributor on the code repo**
-      (227 of 539 commits in the production repository, 42%, ahead of
-      teammates Luke Shi at 28.6% and Xue Zheng at 25.8%) and
+      (227 of 541 commits in the production repository, 42%, ahead of
+      teammates Luke Shi at 32.3% and Xue Zheng at 25.7%) and
       effectively sole author of the team documentation repo (140 of 143
       commits, 97.9%). It led directly into the ByteDance + FreePeriod +
       Sanicle CTO sequence.

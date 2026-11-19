@@ -517,8 +517,5 @@ youtube/README.md, youtube/channel.yaml
 ## [2026-11-19] change | Copy rulings applied live by hand: YouTube (channel description, link, email, banner, two video descriptions, two ArchCanvas titles), LinkedIn (headline, About, website `?ref=linkedin`, Services overview, CORDE title, Lincoln activities line, cover), X (website `?ref=x`, header); X bio and pinned post left as they are; LinkedIn CORDE project description left as is (live text newer: known drift); CORDE end date on LinkedIn (Jun–Nov 2024 vs `work[corde]` 2024-10) an open question
 youtube/channel.yaml, youtube/videos.yaml, docs/STATE.md
 
-## [2026-11-19] change | Vendor accounts shared across projects: OpenAI organisation data sharing on in return for complimentary daily tokens (disclosed by ArchCanvas), Stripe per-account fields vs shared legal entity, vendor-dashboard working rule; ArchCanvas state line at main 677b99b, core 1.64.0
-docs/operations/README.md, docs/STATE.md, scripts/build-archlang-context.mjs, docs/ecosystem/archlang-context.md, scripts/build-kb-index.mjs, docs/INDEX.md
-
-## [2026-11-19] change | Vendor accounts section narrowed to the public scope; account specifics in the private ops file; the entry above restated to match; ArchCanvas handoff pointer names the 2026-11-19 addendum 2
-docs/operations/README.md, docs/STATE.md, docs/LOG.md, scripts/build-kb-index.mjs, docs/INDEX.md, scripts/build-archlang-context.mjs, docs/ecosystem/archlang-context.md
+## [2026-11-19] add | 15 public YouTube videos registered from the day's capture (Chan): the ArchLang chat-story Short dPNgGUzUA0U and fourteen Women of the Island uploads (the AI-edited fast cut, the pre-interview highlights, twelve Shorts); public count 114 (84 videos + 30 Shorts); none added to films
+youtube/channel.yaml, docs/STATE.md

@@ -76,7 +76,7 @@ channel:
 counts:
   asOf: "2026-10-09"
   total: 340               # 332 on the Videos tab (Studio's visibility filters) plus the 8 public Shorts
-  public: 91               # 78 videos + 13 Shorts (capture:youtube, 2026-11-03)
+  public: 114              # 84 videos + 30 Shorts (capture:youtube, 2026-11-19), all in `videos` below
   unlisted: 60             # +1 uploaded 2026-10-12, seen in Studio 2026-10-19; -1 when the ArchLang demo went public, 2026-11-07 (channel.private.yaml)
   private: 236             # 180 of them are raw screen recordings titled by timestamp
   # 2026-10-17: the public count was read again, signed out: 73 (65 videos
@@ -93,6 +93,31 @@ counts:
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # Registered 2026-11-19 (Chan: "register them"), from that day's capture:
+  # fifteen public videos that were not in this file. Every field comes from
+  # videos.yaml; `published` is its uploadedUtc date, so the Auckland date may
+  # be one day later (not read). Playlists were not read. "to be confirmed" in
+  # a note marks a field the capture cannot settle.
+  # An ArchLang chat-story Short (chanmeng-chat-story-video), like S1iHLvz4V_Q.
+  - { id: dPNgGUzUA0U, kind: short, published: "2026-11-17", duration: "1:31", title: "It fits. You don't. (a 2.8 m sofa in a 3.2 m lounge)", projectId: archlang, described: true, note: "chat-story video; playlists not read" }
+  # Women of the Island (publications[] women-of-the-island-chan-meng): two
+  # cuts directed and post-produced by AI (Claude Code) from the episode's raw
+  # footage, and twelve vertical Shorts from it, Mandarin with Chinese
+  # subtitles. The show's own edit (Zxd1W4E0SUk) is on the show's channel.
+  - { id: zSQQZ4j3W8A, kind: personal, published: "2026-11-16", duration: "18:19", title: "I Don't Even Have a Bucket: Chan Meng on Minimalism, 6B4T & AI | Fully AI-Edited Cut", projectId: women-of-the-island-episode-kit, described: true, note: "the AI-edited fast cut of the episode; kind to be confirmed (an interview cut: no kind in this list fits); playlists not read" }
+  - { id: V56z9t2dOUs, kind: personal, published: "2026-11-16", duration: "15:24", title: "Before the Cameras Rolled: Pre-Interview Highlights with Chan Meng | Fully AI-Edited", projectId: women-of-the-island-episode-kit, described: true, note: "the 15-minute edit of the 2 h 36 min pre-interview; kind to be confirmed (an interview cut: no kind in this list fits); playlists not read" }
+  - { id: XeJJln01sgg, kind: short, published: "2026-11-16", duration: "0:49", title: "Content matters, but so does the feeling of the moment: Xiaoyu on editing #AIEditing", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: YY4Az9DwCEQ, kind: short, published: "2026-11-16", duration: "0:49", title: "Tossing a hair clip is nothing; dropping ten intangibles changes your life #6B4T", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: CA7b-01MXS0, kind: short, published: "2026-11-16", duration: "0:50", title: "Minimalists need clear boundaries; maximalists find warmth in collision #Minimalism", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: "0vXthBVndTs", kind: short, published: "2026-11-16", duration: "0:50", title: "Hair is always there, always taking up your peripheral vision #Minimalism", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: eQsOrC2MBpo, kind: short, published: "2026-11-16", duration: "0:47", title: "The mouse goes, the keyboard barely matters, all you need is a mouth #AINative", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: oZusSz2zoyk, kind: short, published: "2026-11-16", duration: "0:45", title: "Chan admits AI beats her in depth, intellect, even emotional intelligence #AI", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: PNFKZIBDM7c, kind: short, published: "2026-11-16", duration: "0:48", title: "Cameron waited for the light; Xiaoyu cares about the process #ContentCreation #AI", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: SD9sVd9Y-Dg, kind: short, published: "2026-11-16", duration: "0:44", title: "A high fever, alone in quarantine, she opened a world map #Travel #LeavingHome", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: QsmpeCwytzI, kind: short, published: "2026-11-16", duration: "0:50", title: "A fingernail of hand soap to wash her head: it's about upkeep cost #Minimalism", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: jG3YiFPUjG0, kind: short, published: "2026-11-16", duration: "0:53", title: 'Her interview was retitled "The Genderless Girl on the Mattress" #Minimalism #Gender', projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: zwHdxuFgEX8, kind: short, published: "2026-11-16", duration: "0:38", title: "The day she left for Cebu: a T-shirt, shorts and Crocs #Minimalism #Travel", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
+  - { id: Y-P4lx8vb6I, kind: short, published: "2026-11-16", duration: "0:52", title: "Skirts, black tights, heels: to her, it's all beauty labour #Minimalism #Feminism", projectId: women-of-the-island-episode-kit, described: true, note: "vertical Short from the episode; playlists not read" }
   # 2026-11-07: Chan uploaded and published three ArchLang films and their
   # vertical cuts under their file names. Claude set the titles, descriptions,
   # tags, Science & Technology, custom thumbnails (films), related videos

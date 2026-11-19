@@ -30,7 +30,7 @@ question about the channel.
   every description ends in a `Links` block, one `Label: URL` per line. In
   order: the product's own links (the `url`, `repoUrl` and `extraLinks` of its
   entry in `data/profile/`), `More films: https://chanmeng.org/films` on a
-  film, then `Portfolio and CV: https://chanmeng.org` and
+  film, then `Portfolio and CV: https://chanmeng.org/?ref=youtube` (the `?ref` since 2026-11-19, `docs/STATE.md` Visit attribution; descriptions written before keep the bare link until edited) and
   `GitHub: https://github.com/ChanMeng666`. A Short's block starts with the
   full film. A music video's block has the song on Suno and its album's anchor
   on chanmeng.org/films, and its credits link the style library; it carries no

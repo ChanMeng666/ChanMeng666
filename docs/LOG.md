@@ -504,3 +504,6 @@ docs/STATE.md, templates/partials/hero.hbs, data/profile/70-linkedin.yaml
 
 ## [2026-11-19] change | X copy and both banners carry the 2026-11-19 rulings: bio v4 and pinned thread v4 (positioning, availability, ArchCanvas as an AI architectural designer, ?ref=x), the pinned image says "a dimensioned floor plan", the X header and YouTube banner tagline is the positioning sentence; written and rendered, not yet applied on X or YouTube
 x/x-profile.md, x/x-pinned-tweet.md, x/x-strategy.md, x/media/pinned-products.html, x/header/header.html, youtube/banner/banner.html
+
+## [2026-11-19] change | YouTube staged for the 2026-11-19 rulings: channel link ?ref=youtube, contact email hello@chanmeng.org, new video Links blocks use ?ref=youtube; the CORDE film and all-in-one film descriptions to be edited in Studio (text in the apply sheet), then capture:youtube
+youtube/channel.yaml, youtube/README.md

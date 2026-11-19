@@ -486,3 +486,6 @@ data/profile/90-meta.yaml, data/profile/70-linkedin.yaml, data/voice.yaml, scrip
 
 ## [2026-11-19] decide | CORDE Mobile is a commercial project in active use by CORDE's water and civil crews (Chan), superseding the films note to say no more about its use; no placement, coursework or student-project wording on any surface or generated file; the work title loses "(Lincoln University COMP693 Industry Placement)"; CORDE does not endorse the film and its names and places stay fictional
 docs/STATE.md, data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml, data/profile/46-films.yaml, data/profile/60-network.yaml, data/profile/70-linkedin.yaml, data/profile/90-meta.yaml, data/voice.yaml, templates/partials/experience.hbs, cv/extended.typ, docs/stories/corde-mobile-application.md (front matter), docs/ecosystem/lineage.yaml (chanRole; end month 2024-10 to match work[corde])
+
+## [2026-11-19] fix | GAVIGO ran Oct 2025 – Oct 2026 everywhere: the gavigo-ire role narrative said she "stepped down Sep 1 2026" (that was the notice; last working day 2026-10-05), the cover-letter evidence and two comments said Sep 2026
+data/profile/20-projects-flagship.yaml, data/profile/23-projects-oss-more.yaml, cv/cover-letter/EVIDENCE.md, cv/chan-meng-cv-ats.typ

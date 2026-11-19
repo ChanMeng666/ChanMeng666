@@ -94,7 +94,7 @@ Every number here carries its measurement basis; keep the basis in the sentence.
 Always with the denominator. "Solo" without a denominator is an adjective; with
 one it is evidence.
 
-- 471 of 488 non-merge commits on GAVIGO's platform (Oct 2025 — Sep 2026);
+- 471 of 488 non-merge commits on GAVIGO's platform (Oct 2025 — Oct 2026);
   promoted Core Engineer → Founding Principal Engineer across three contract
   iterations, with a contractually defined protected technical domain.
   — `work[gavigo]`
@@ -158,8 +158,8 @@ agentic practice rather than just receive it.
 - Ran five concurrent engineering and CTO-level roles across four countries
   (NZ, China, the United States, Canada) through 2026, peaking May–Jul 2026.
   Two are current, across NZ and China — keep the tense honest: only
-  ArchCanvas and FemTech Weekend have no end date. She Sharp and GAVIGO both
-  ended Sep 2026; write them in the past tense. — `10-career.yaml`
+  ArchCanvas and FemTech Weekend have no end date. She Sharp ended Sep 2026
+  and GAVIGO Oct 2026; write them in the past tense. — `10-career.yaml`
 
 ## Theme G — open source and early-protocol work
 

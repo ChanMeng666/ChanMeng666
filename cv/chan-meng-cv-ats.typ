@@ -9,8 +9,8 @@
 // the company/project name, so the extracted text stream is unchanged.
 //
 // ORDER: roles Chan is STILL DOING come first, ranked by importance, then the
-// ended ones. ArchCanvas (her own company) leads; She Sharp and GAVIGO both
-// ended Sep 2026.
+// ended ones. ArchCanvas (her own company) leads; She Sharp ended Sep 2026
+// and GAVIGO Oct 2026.
 //
 // TWO PAGES IS THE BUDGET. Everything here is sized to it:
 //   • Seven roles carry bullets — one each, except She Sharp, which carries

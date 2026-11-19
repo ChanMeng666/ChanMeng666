@@ -516,3 +516,6 @@ youtube/README.md, youtube/channel.yaml
 
 ## [2026-11-19] change | Copy rulings applied live by hand: YouTube (channel description, link, email, banner, two video descriptions, two ArchCanvas titles), LinkedIn (headline, About, website `?ref=linkedin`, Services overview, CORDE title, Lincoln activities line, cover), X (website `?ref=x`, header); X bio and pinned post left as they are; LinkedIn CORDE project description left as is (live text newer: known drift); CORDE end date on LinkedIn (Jun–Nov 2024 vs `work[corde]` 2024-10) an open question
 youtube/channel.yaml, youtube/videos.yaml, docs/STATE.md
+
+## [2026-11-19] change | Vendor accounts shared across projects: OpenAI organisation shares inputs and outputs with OpenAI for all projects (kept on and disclosed for ArchCanvas; other projects' privacy text an open item for Chan), Stripe fields per account vs shared legal entity (ArchCanvas account corrected; Stripe Tax off), no DPA in force for Cloudinary self-serve or a GitHub personal account, ArchCanvas registrations decision pointed at its COMPLIANCE.md, vendor-dashboard working rule; ArchCanvas state line at main 677b99b, core 1.64.0, handoff via the archcanvas-lab specs index
+docs/operations/README.md, docs/STATE.md, scripts/build-archlang-context.mjs, docs/ecosystem/archlang-context.md, scripts/build-kb-index.mjs, docs/INDEX.md

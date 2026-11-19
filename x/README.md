@@ -1,8 +1,8 @@
 # `x/` — X (Twitter): account register and brand package
 
 [@chanmeng666](https://x.com/chanmeng666). Besides the register: `x-profile.md` (profile-field
-copy and the previous-live-state rollback table), `x-pinned-tweet.md` (the pinned thread and
-tweet templates), `x-strategy.md` (the operating playbook; monthly reviews append to its log),
+copy and the previous-live-state rollback table), `x-pinned-tweet.md` (the intro thread, deliberately
+unpinned since 2026-11-19, and tweet templates), `x-strategy.md` (the operating playbook; monthly reviews append to its log),
 `header/header.html` (source of the rendered `header/x-header.png`) and `screenshots/`
 (confirmation screenshots of the live profile).
 
@@ -50,7 +50,7 @@ Rules:
 
 | Topic | Use it for |
 |---|---|
-| `intro` | Who Chan is and what the feed is for (the pinned thread) |
+| `intro` | Who Chan is and what the feed is for (the intro thread) |
 | `launch` | The first announcement of a product or a major release |
 | `product` | What a product does, shown with an example or a status update |
 | `product-film` | A post whose point is a promo film or a cut of one |

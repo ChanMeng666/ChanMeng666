@@ -1,6 +1,7 @@
-# Pinned tweet kit — @chanmeng666
+# Intro thread kit — @chanmeng666
 
-Copy-paste-ready pinned intro thread plus reusable tweet templates for Chan
+The file keeps its old name (`x-pinned-tweet.md`); since 2026-11-19 the intro
+thread it holds is deliberately **not** pinned (Chan). Copy-paste-ready intro thread plus reusable tweet templates for Chan
 Meng (@chanmeng666). All copy is English. Voice: flat, editorial, confident;
 0–1 emoji per tweet, at most one hashtag and only when it genuinely helps.
 
@@ -13,26 +14,29 @@ and must never be linked or mentioned.
 
 ---
 
-## The pinned thread (3 tweets)
+## The intro thread (3 tweets, v4, deliberately unpinned)
 
-> **Status (v4, written 2026-11-19, not posted):** the text below carries the
-> 2026-11-19 rulings (positioning "I build AI products and the checks that keep
-> them honest.", the availability sentence, ArchCanvas as an "AI architectural
-> designer" producing a dimensioned floor plan) and `?ref=x` on the chanmeng.org
-> links. X cannot edit a posted tweet, so v4 goes up as a new thread; pinning it
-> and what happens to v3 are Chan's calls. Tweet 1 carries
-> `x/media/pinned-products.png` (re-rendered 2026-11-19) with the alt text below;
-> remove the auto link cards from tweets 2 and 3.
+> **Status (v4, posted 2026-11-19, not pinned):** Chan approved the text on
+> 2026-11-19 on one condition: the thread is **not** pinned, and the ArchLang
+> post stays pinned. It went up that day (04:55 UTC) as a new three-post thread,
+> root `2123278924406997084`, then `2123278927682806163` and
+> `2123278930132267312`. Tweet 1 carries `x/media/pinned-products.png`
+> (re-rendered 2026-11-19) with the alt text below; the link cards were removed
+> from tweets 2 and 3. The text carries the 2026-11-19 rulings (positioning "I
+> build AI products and the checks that keep them honest.", the availability
+> sentence, ArchCanvas as an "AI architectural designer" producing a dimensioned
+> floor plan) and `?ref=x` on the chanmeng.org links. Views and likes come in
+> with the next `x-sync` (ledger repo), which adds the thread to `posts.yaml`.
 >
-> **What is live** (recorded in [`account.yaml`](./account.yaml)): since
-> 2026-11-13 the pinned post is the ArchLang plan-to-3D post
-> `2121084644208869652`. The v3 intro thread (root `2107777580908859706`,
-> posted and pinned 2026-10-07) is still on the timeline, unpinned; its text is
+> **What is pinned** (recorded in [`account.yaml`](./account.yaml)): since
+> 2026-11-13 the ArchLang plan-to-3D post `2121084644208869652`, kept pinned on
+> purpose (Chan, 2026-11-19). The v3 intro thread (root `2107777580908859706`,
+> posted and pinned 2026-10-07) was left on the timeline, unpinned; its text is
 > in `posts.yaml` and it still says "an AI architect", "teach others to do the
 > same" and "a buildable plan" (image alt text). v3 replaced v2 (root
 > `2078727381859389815`, 2026-07-19), which Chan deleted on 2026-10-08.
 
-A pin shows only the first tweet, so Tweet 1 stands fully on its own: who Chan
+A timeline shows only the first tweet, so Tweet 1 stands fully on its own: who Chan
 is, the positioning sentence, and the compressed proof (530+ GitHub stars, from
 `00-basics.yaml`). Tweets 2 and 3 continue for anyone who expands the thread.
 Tweet 1 carries `x/media/pinned-products.png`, whose five rows are the five
@@ -90,7 +94,7 @@ The v2 text (2026-07-19) is in `posts.yaml` under thread `2078727381859389815`.
 
 ### (a) Single-tweet intro variant
 
-Use this instead of the thread if you'd rather pin one tweet. Self-sufficient;
+Use this instead of the thread when one tweet is wanted (pinned or not). Self-sufficient;
 no follow-on required.
 
 ```

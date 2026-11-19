@@ -15,7 +15,7 @@ Copy for the X (Twitter) profile fields — display name, bio, location, website
 
 ## Fields to set
 
-_v4, written 2026-11-19 for the rulings of that day (positioning "I build AI products and the checks that keep them honest.", ArchCanvas as an "AI architectural designer"; never "buildable", "permit-ready", "code-compliant" or "in seconds"), not yet applied on X. What is live is [`account.yaml`](./account.yaml)._
+_v4, written 2026-11-19 for the rulings of that day (positioning "I build AI products and the checks that keep them honest.", ArchCanvas as an "AI architectural designer"; never "buildable", "permit-ready", "code-compliant" or "in seconds"). The bio was applied on X by hand on 2026-11-19 (Chan's approval that day); X stores it with `http://` before the two domains, its own auto-link normalisation, and displays the text below. The pinned post stays the ArchLang post `2121084644208869652` (Chan, 2026-11-19): the new intro thread in `x-pinned-tweet.md` is deliberately unpinned. What is live is [`account.yaml`](./account.yaml), current from the next `x-sync`._
 
 **Display name** (≤50 chars) — unchanged: `Chan Meng — AI Agent Architect` (30 chars)
 
@@ -27,7 +27,7 @@ Pattern `Chan Meng — <short role descriptor>`. "AI Agent Architect" is the lea
 
 (157 chars.) Opens on the positioning sentence verbatim (`meta.x_brand.valueProposition.tagline`), then the two own products, each with its live link as a bare domain: **ArchLang** (`archlang.uk`, the floor-plan language; "floor plans as code" is the live bio's own phrase) and **ArchCanvas** (`archcanvas.uk`, the AI architectural designer built on it). X bios count plain characters and are NOT t.co-wrapped, and X auto-links bare domains. No `chanmeng.org`: the Website field carries it.
 
-_Live since about 2026-11-13 (`account.yaml`, read 2026-11-13), replaced by v4 when Chan applies it:_
+_Live from about 2026-11-13 (`account.yaml`, read 2026-11-13) until v4 replaced it on 2026-11-19:_
 
 > Floor plans as code. ArchLang (archlang.uk): .arch → dimensioned plan + 3D. ArchCanvas is the AI agent on top.
 
@@ -47,7 +47,7 @@ Reasoning: X's Professional Account category taxonomy has no "software engineer"
 
 > I build AI products and the checks that keep them honest. Open to founding-team and senior AI engineering roles, client projects, and AI-tooling advice.
 
-_When to use:_ during an active job search or recruiter-heavy period. Both sentences are the 2026-11-19 rulings verbatim; the products are left to the pinned thread and the Website field.
+_When to use:_ during an active job search or recruiter-heavy period. Both sentences are the 2026-11-19 rulings verbatim; the products are left to the intro thread and the Website field.
 
 **Alternate 2** (137 chars) — builder / open-source-leaning, closest to the live bio:
 

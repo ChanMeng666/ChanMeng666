@@ -2470,7 +2470,7 @@ work:
       - Android
       - Apifox
     narrative:
-      impactHeadline: "#1-most-prolific contributor (57% of the 413 commits in the original repository) on CORDE's offline-first React Native field-operations app, built for CORDE's water/civil-infrastructure crews. Also owned 97.9% of the documentation track end-to-end."
+      impactHeadline: "#1-most-prolific contributor (227 of 539 commits in the production repository, 42%) on CORDE's offline-first React Native field-operations app, built for CORDE's water/civil-infrastructure crews. Also owned 97.9% of the documentation track end-to-end."
       companyContext: |
         **CORDE** is a Canterbury-based **New Zealand infrastructure
         and civil-construction company** — 30+ years of operations,
@@ -2541,15 +2541,15 @@ work:
       impactDelivered: |
         **Shipped a production-quality React Native offline-data-
         collection mobile app** for CORDE's field-operations
-        workflow. The original repository, where the main body of
-        the app was built, carries **413 commits across three
-        contributors**; **my 236 commits (combining the Chan Meng
-        and Chan handles) make me the #1-most-prolific contributor
-        — 57% of that commit history** — with Xue Zheng on 32.7%
-        and Luke Shi on 10.2%. (Luke later forked the repository
-        under his GitHub handle gentoo111 to take the project over;
-        that fork has since grown to 541 commits, of which 227 are
-        mine.) The app integrates with CORDE's
+        workflow. The production repository, the one CORDE's
+        production runs (Luke Shi's fork under his GitHub handle
+        gentoo111, made to take the project over, which carries the
+        original history), has **539 commits; my 227 make me the
+        #1-most-prolific contributor — 42%** — ahead of Luke Shi on
+        28.6% and Xue Zheng on 25.8% (Chan, 2026-11-19, as on her
+        LinkedIn). In the original repository, where the main body
+        of the app was built, my 236 of its 413 commits are 57%,
+        with Xue Zheng on 32.7% and Luke Shi on 10.2%. The app integrates with CORDE's
         Workbench central operations platform via the API contract
         Kullum Ladley documented: **14 API documents on eight
         topics, revisions included**, plus one written priority list
@@ -2601,7 +2601,8 @@ work:
         repository are documentation only.
       technicalHighlights: |
         **React Native 0.74 + TypeScript + Native Base** on the
-        client (the version at handover), deliberately chosen over Expo because the project's
+        client (the version at handover; the fork is on 0.83 today,
+        after Luke's upgrades), deliberately chosen over Expo because the project's
         offline-first requirements pushed against Expo's managed
         workflow (and over React Native Elements because Native
         Base shipped a Figma component library that let the team
@@ -2661,8 +2662,8 @@ work:
       CCNZ Canterbury Contractor of the Year). Reported directly to Barry
       Clark on CORDE's side with Kullum Ladley as the Workbench API
       specification author. **#1-most-prolific contributor on the code repo**
-      (236 of 413 commits in the original repository, 57%, ahead of
-      teammate Xue Zheng at 32.7%) and
+      (227 of 539 commits in the production repository, 42%, ahead of
+      teammates Luke Shi at 28.6% and Xue Zheng at 25.8%) and
       effectively sole author of the team documentation repo (140 of 143
       commits, 97.9%). It led directly into the ByteDance + FreePeriod +
       Sanicle CTO sequence.

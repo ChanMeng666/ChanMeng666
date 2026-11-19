@@ -333,19 +333,19 @@ Later ByteDance Youth Training Camp cohorts now scaffold their projects on two t
 
 ### Full Stack Developer & Lead Documenter
 
-**Dates:** Jun 2024 - Oct 2024 · 6 mos
+**Dates:** Jun 2024 - Oct 2024 · 5 mos
 **Location:** Canterbury, New Zealand · Hybrid
 
 ```
-I built CORDE's field crews an offline-first React Native app. Their work is in rural Canterbury, where mobile coverage drops out, while the company's central operations platform assumes connectivity: the tablet in the worker's hand had to become the system of record for the moment of work, then sync when the signal came back.
+I built CORDE's field crews an offline-first React Native app. Their work is in rural Canterbury, where mobile coverage drops out, while the company's central operations platform assumes connectivity: the tablet in the worker's hand had to become the system of record for the moment of work, then reconcile cleanly when the signal came back.  
 
-• A crew member captures text, photos, and GPS coordinates with no signal; the log is stored on the device and uploaded to Workbench on reconnection. Each log keeps its own sync status, retries on timers, and a local id apart from the server's, so offline logs never collide.
-• #1-most-prolific contributor on the build — 236 of 413 commits in the original repository (57%).
-• Left the team a documentation repository they could hand to the next developer — effectively sole author, 140 of 143 commits (97.9%).
+• A crew member captures text, photos, and GPS coordinates simultaneously with no signal, stored locally with integrity guarantees and synced back to Workbench on reconnection — including the cases that actually break field apps: duplicate IDs, partial sync, mid-batch connectivity drops. 
+• #1-most-prolific contributor on the build — 227 of 539 commits (42%). 
+• Left the team a documentation repository they could hand to the next developer — effectively sole author, 140 of 143 commits (97.9%).  
 
-Five months with weekly on-site sprint meetings at CORDE and remote development in between, reporting to Barry Clark (Digital Development Manager, business sponsor), with Kullum Ladley (Business System Analyst) writing the Workbench API documents. CORDE is a 30+-year-old, 164-staff Canterbury infrastructure and civil-construction company — CCNZ Canterbury Contractor of the Year; Construction Excellence National Award.
+Five months on-site at CORDE's Rolleston head office, reporting to Barry Clark (business sponsor), with Kullum Ladley as Workbench API specification author. CORDE is a 30+-year-old, 164-staff Canterbury infrastructure and civil-construction company — CCNZ Canterbury Contractor of the Year; Construction Excellence National Award.  
 
-Stack: React Native 0.74 + TypeScript + Native Base + SQLite + native geolocation/camera/maps.
+Stack: React Native 0.83 + TypeScript + Native Base + SQLite + native geolocation/camera/maps.
 ```
 
 **Skills:** React Native, TypeScript, Offline-First Architecture, Native Base, SQLite, Mobile Application Development

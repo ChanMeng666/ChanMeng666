@@ -519,3 +519,6 @@ youtube/channel.yaml, youtube/videos.yaml, docs/STATE.md
 
 ## [2026-11-19] add | 15 public YouTube videos registered from the day's capture (Chan): the ArchLang chat-story Short dPNgGUzUA0U and fourteen Women of the Island uploads (the AI-edited fast cut, the pre-interview highlights, twelve Shorts); public count 114 (84 videos + 30 Shorts); none added to films
 youtube/channel.yaml, docs/STATE.md
+
+## [2026-11-19] change | CORDE follows the live LinkedIn text (Chan): LinkedIn project and Experience descriptions copied verbatim from the live forms; commit share 227 of 539 in the production repository (42%), Luke Shi 28.6%, Xue Zheng 25.8%, superseding the original-repository basis (236 of 413, kept in the metric note); the fork on React Native 0.83 today (0.74 at handover kept); story follow-up says the app is in active use; CORDE end date 2024-10 confirmed and both CORDE open items closed
+data/profile/70-linkedin.yaml, data/profile/23-projects-oss-more.yaml, data/profile/10-career.yaml, data/profile/90-meta.yaml, cv/sections/experience.typ, docs/stories/corde-mobile-application.md, docs/STATE.md

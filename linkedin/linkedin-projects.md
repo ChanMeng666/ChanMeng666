@@ -231,13 +231,13 @@ Stack: TypeScript + Node.js + @modelcontextprotocol/sdk + SerpAPI; published as 
 **Other contributors:** yes
 
 ```
-A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Canterbury civil-construction contractor whose crews work in rural areas where mobile coverage drops out. The tablet becomes the system of record at the moment of work: text + photos + GPS + timestamps captured on the device and uploaded to CORDE's central Workbench platform on reconnection. Each log keeps its own sync status and timed retries, and a local id apart from the server's, so offline logs never collide.
+A React Native field-operations app for CORDE — a 30+-year-old, 164-staff Canterbury civil-construction contractor whose crews work in rural areas where mobile coverage drops out. The tablet becomes the system of record at the moment of work: text + photos + GPS + timestamps captured locally, integrity-checked, and reconciled to CORDE's central Workbench platform on reconnection — including the awkward cases: duplicate IDs, partial sync, mid-batch drops.
 
-• #1-most-prolific contributor on the codebase: 236 of 413 commits in the original repository (57%), ahead of teammates Xue Zheng (32.7%) and Luke Shi (10.2%).
-• Sole author of the team documentation repository (140 of 143 commits, 97.9%), built against the Workbench API documents written by CORDE's Business System Analyst, Kullum Ladley.
-• Handed over in October 2024, with a project-structure guide and a release-packaging guide, to a teammate who has carried it on for CORDE since; CORDE's water and civil crews use it today.
+• #1-most-prolific contributor on the codebase: 227 of 539 commits (42%), ahead of teammates Luke Shi (28.6%) and Xue Zheng (25.8%).
+• Sole author of the team documentation repository (140 of 143 commits, 97.9%), built against 15 Workbench API specifications authored by Kullum Ladley.
+• Still in active use today by CORDE's field crews; kept current through React Native upgrades and Android 16 KB page-size compliance.
 
-Stack: React Native 0.74, TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.
+Stack: React Native 0.83, TypeScript, Native Base, SQLite, native geolocation / camera / image-picker / file-system / secure keychain.
 ```
 
 **Skills:** React Native, Offline-First Architecture, TypeScript, Native Base, SQLite, Mobile Application Development

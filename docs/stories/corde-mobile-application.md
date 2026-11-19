@@ -311,9 +311,10 @@ Business System Analyst.
 - **Plain version**: I wrote down how everything worked and how to build it,
   so the app could keep going after I left.
 - **Follow-ups**:
-  - *Is the app still in use?* It is still maintained and released for CORDE
-    by the teammate who took it over; how widely crews use it today is CORDE's
-    to say.
+  - *Is the app still in use?* Yes: it is in active use by CORDE's water and
+    civil crews, and still maintained and released for CORDE by the teammate
+    who took it over (React Native upgrades, Android 16 KB page-size
+    compliance).
   - *Have you worked on it since?* Only on the documentation in my copy of the
     repository; the code since 2024 is theirs.
 
@@ -324,7 +325,7 @@ Business System Analyst.
 | Five months, June to October 2024 | `data/profile/10-career.yaml` › `work[corde]` |
 | CORDE: 30+ years of operations, about 164 staff | `data/profile/10-career.yaml` › `work[corde].narrative.companyContext` |
 | 14 API documents on eight topics (revisions included) and one priority list from CORDE's Business System Analyst | `data/profile/23-projects-oss-more.yaml` › `projects[corde-mobile-application].metrics` |
-| Commit share on the code: say it only together with its basis ("counted on the original repository"), exactly as worded in the shard metric, or not at all | `data/profile/23-projects-oss-more.yaml` › `projects[corde-mobile-application].metrics` |
+| Commit share on the code: say it only together with its basis ("in the production repository", since 2026-11-19), exactly as worded in the shard metric, or not at all | `data/profile/23-projects-oss-more.yaml` › `projects[corde-mobile-application].metrics` |
 | Promo film: 30 s and 60 s cuts, 16:9 and 9:16 | `data/profile/46-films.yaml` › `corde-mobile-film`; https://youtu.be/RiL7m159I7w |
 
 ## In hindsight

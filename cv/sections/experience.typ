@@ -47,7 +47,7 @@
     org-url: "https://archcanvas.uk/",
     dates: "Apr 2026 — Present",
     location: [Auckland, New Zealand · *Remote*],
-    summary: [Architects and self-builders describe a building in plain words and get back a dimensioned, buildable floor plan. When plans drawn as pictures proved impossible to check, invented *#link("https://github.com/ChanMeng666/archlang")[ArchLang]*, the open-source language that compiles a plan into a precise drawing (*62 npm releases*, *139 diagnostic codes*), and rebuilt the product on it — so an edit is exact, not regenerated.],
+    summary: [Architects and self-builders describe a building in plain words and get back a dimensioned floor plan. When plans drawn as pictures proved impossible to check, invented *#link("https://github.com/ChanMeng666/archlang")[ArchLang]*, the open-source language that compiles a plan into a precise drawing (*62 npm releases*, *139 diagnostic codes*), and rebuilt the product on it — so an edit is exact, not regenerated.],
     built: [#link("https://archcanvas.uk/")[archcanvas.uk] · #link("https://archlang.uk/")[archlang.uk]],
   )
   role-line(

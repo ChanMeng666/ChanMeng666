@@ -489,3 +489,6 @@ docs/STATE.md, data/profile/10-career.yaml, data/profile/23-projects-oss-more.ya
 
 ## [2026-11-19] fix | GAVIGO ran Oct 2025 – Oct 2026 everywhere: the gavigo-ire role narrative said she "stepped down Sep 1 2026" (that was the notice; last working day 2026-10-05), the cover-letter evidence and two comments said Sep 2026
 data/profile/20-projects-flagship.yaml, data/profile/23-projects-oss-more.yaml, cv/cover-letter/EVIDENCE.md, cv/chan-meng-cv-ats.typ
+
+## [2026-11-19] fix | ArchCanvas copy law applied to the remaining sources: no "buildable" or "a plan you can actually build from"; it is an AI architectural designer that produces a dimensioned floor plan
+cv/sections/experience.typ, cv/extended.typ, data/profile/10-career.yaml, data/profile/23-projects-oss-more.yaml

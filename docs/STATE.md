@@ -100,6 +100,7 @@ Current figures are in each register's `summary`, not here.
   separate decision. The two accounts are one catalogue. The register puts no
   song on any surface.
 - The LinkedIn profile copy is a separate matter: `data/profile/70-linkedin.yaml`.
+- Applied live by hand on 2026-11-19 (copy rulings of that day): YouTube channel description, "Portfolio & CV" link (`?ref=youtube`), contact email, banner, the descriptions of `RiL7m159I7w` and `-RsnZLNrKf0`, the titles of `rUZAiXgt9JY` and `3GrW5o63p5I`; LinkedIn headline, About, website link (`?ref=linkedin`), Services overview (496 characters), CORDE experience title, Lincoln "Activities and societies" line and cover image; X website link (`?ref=x`) and header image. The X bio and pinned post were left as they are on purpose.
 
 ## Lineage judgement fields
 
@@ -125,3 +126,5 @@ values already used for repos of the same role; she is not asked to sort them. `
 | Remaining `recency: active` articles | The next review: six published articles still carry it; move each to `recent` or `historical` then |
 | ArchCanvas films on YouTube carry the old end card | Chan, when she chooses to replace them (2026-11-10: record only, do not replace yet). The 92-second film `MB4eGPWtgNo`, its 9:16 Short `WSWiYRATxZw` and the Pay per result short `D9sN1d7hWlw` still say "Pay only when you get a plan worth keeping", which overstates the pricing; `D9sN1d7hWlw` also shows a second, full-size copy of the screen recording outside the screen box. Release `v1.1` of `film-archcanvas-hero-and-shorts` has the corrected masters (`docs/film-masters.md`). A replacement is a new upload: YouTube cannot swap a video file |
 | Google OAuth client and Resend key used by Te Pā Tiaki | Chan: revoke if they were dedicated to the game |
+| LinkedIn project "CORDE Mobile", next LinkedIn sync | Known drift, left as is on 2026-11-19: the live description is newer than the repo's (live: "227 of 539 commits (42%)", React Native 0.83, "Still in active use today"; repo: 236 of 413, 0.74). Reconcile at the next sync; do not paste the repo text over the live one |
+| CORDE end date on LinkedIn | Chan: the live LinkedIn shows CORDE as Jun–Nov 2024 while `work[corde]` ends 2024-10. Neither changed; which is right? |

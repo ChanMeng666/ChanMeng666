@@ -513,3 +513,6 @@ data/profile/00-basics.yaml, schema/profile.schema.json, scripts/validate.mjs, s
 
 ## [2026-11-19] decide | No ?ref=youtube backfill on existing video descriptions (no API write access; new and edited descriptions only); the two ArchCanvas titles (rUZAiXgt9JY, 3GrW5o63p5I) staged as "your AI architectural designer", to be applied in Studio by hand
 youtube/README.md, youtube/channel.yaml
+
+## [2026-11-19] change | Copy rulings applied live by hand: YouTube (channel description, link, email, banner, two video descriptions, two ArchCanvas titles), LinkedIn (headline, About, website `?ref=linkedin`, Services overview, CORDE title, Lincoln activities line, cover), X (website `?ref=x`, header); X bio and pinned post left as they are; LinkedIn CORDE project description left as is (live text newer: known drift); CORDE end date on LinkedIn (Jun–Nov 2024 vs `work[corde]` 2024-10) an open question
+youtube/channel.yaml, youtube/videos.yaml, docs/STATE.md

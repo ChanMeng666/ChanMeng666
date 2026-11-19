@@ -37,7 +37,7 @@ If your users aren't the default persona, this is why you'd call me. Tam-AI-Ti �
 ## 🤝 Work With Me — and Who to Send My Way
 
 ```
-Send someone my way if they're a founder who needs an AI product built properly the first time, a team that needs agent architecture they can still maintain once I'm gone, or an organisation that wants its engineers taught to build with AI rather than around it. Auckland-based, remote or in person. Master of Applied Computing with Distinction (Lincoln University NZ). Open to founding-team, staff-IC, AI-architecture and AI-engineering-instruction work. Fastest way in: cal.com/chan-meng/30min
+Send someone my way if they're a founder who needs an AI product built properly the first time, a team that needs agent architecture they can still maintain once I'm gone, or an organisation that wants its engineers taught to build with AI rather than around it. Auckland-based, remote or in person. Master of Applied Computing with Distinction (Lincoln University NZ). Open to founding-team and senior AI engineering roles, client projects, and AI-tooling advice. Fastest way in: cal.com/chan-meng/30min
 ```
 
 **Top skills:** AI Agent Architecture • Model Context Protocol (MCP) • Multi-agent Systems • AI Integration • Kubernetes

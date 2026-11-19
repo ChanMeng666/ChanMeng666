@@ -224,7 +224,8 @@ out.push("What I take on:", "");
 for (const r of xb.engagementRoles ?? []) out.push(`- ${scrubText(`${r.title}: ${r.scope}`)}`);
 out.push("");
 para(
-  "I'm open to founding-team, staff IC, AI-architecture and AI-engineering-instruction work, and to selected contract builds for founders. " +
+  // The availability sentence (Chan, 2026-11-19), as engagementAvailability.current says it.
+  "I'm open to founding-team and senior AI engineering roles, client projects, and AI-tooling advice. " +
     "I'm based in Auckland and work remotely or in person, including with teams in other time zones. " +
     "Pricing depends on scope: write to me with what you need and I'll come back with a scope and a quote. " +
     "The fastest way in is email, or a 30-minute call at https://cal.com/chan-meng/30min."

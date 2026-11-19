@@ -480,3 +480,6 @@ docs/operations/README.md, docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-
 
 ## [2026-11-19] decide | Positioning sentence is "I build AI products and the checks that keep them honest." (Chan, with the chanmeng.org redesign): canonical tagline, LinkedIn headline and About opening, twin intros, FAQ specialty answer, ATS summary and cv-llms positioning carry it; "survive production" and "not demos" framings retired
 data/profile/90-meta.yaml, data/profile/00-basics.yaml, data/profile/70-linkedin.yaml, data/voice.yaml, cv/chan-meng-cv-ats.typ, cv/build-llms-txt.mjs, scripts/build-llms-twin.mjs, templates/brand-system.html.hbs
+
+## [2026-11-19] decide | Availability reads "Open to founding-team and senior AI engineering roles, client projects, and AI-tooling advice." (Chan, with the chanmeng.org redesign); the engagement roles, scopes and proof projects are unchanged
+data/profile/90-meta.yaml, data/profile/70-linkedin.yaml, data/voice.yaml, scripts/build-llms-twin.mjs

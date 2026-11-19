@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 166 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 125 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 482 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 485 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -39,7 +39,7 @@ against `schema/profile.schema.json`. Find an entry with
 | `data/profile/60-network.yaml` | 1264 | organizations (35), collaborators (15) | NETWORK — organizations roster, collaborator graph … |
 | `data/profile/70-linkedin.yaml` | 1933 | linkedin (14 keys) | LINKEDIN — curated snapshot of the live LinkedIn profile … |
 | `data/profile/80-events.yaml` | 915 | events (23) | EVENTS — offline / in-person activities: talks, panels, hackathons mentored, workshops taught, community appearances. |
-| `data/profile/90-meta.yaml` | 770 | meta (4 keys) | META — build metadata, x_brand display configuration … |
+| `data/profile/90-meta.yaml` | 772 | meta (4 keys) | META — build metadata, x_brand display configuration … |
 
 Other knowledge files:
 

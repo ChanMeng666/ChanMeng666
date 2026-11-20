@@ -6,7 +6,7 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-11-07, X 2026-11-13, LinkedIn 2026-11-13, ArchCanvas page 2026-11-10.
+Plan as of 2026-10-12. Registers read: YouTube 2026-11-19, X 2026-11-13, LinkedIn 2026-11-13, ArchCanvas page 2026-11-10.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule

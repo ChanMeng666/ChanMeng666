@@ -533,3 +533,6 @@ data/profile/23-projects-oss-more.yaml, data/profile/10-career.yaml, data/profil
 
 ## [2026-11-19] fix | The 15 YouTube videos registered that day, confirmed signed out with yt-dlp: Auckland publish dates (dPNgGUzUA0U 2026-11-18, the other fourteen 2026-11-17), playlists (the two Women of the Island long cuts in Chan's public playlist "Chan Meng's Video Podcasts · Edited Entirely by AI", now registered; the thirteen Shorts in none), and the two long cuts given the new register kind podcast-cut; no "to be confirmed" left on them
 youtube/channel.yaml, docs/STATE.md
+
+## [2026-11-21] change | ArchCanvas state after the 2026-11-20 release: the rebuilt public site and first-run flow went live; the next stage is judged by time to a first design and the share of first designs passing the checks (no targets set); agent context now reads archcanvas main 976d284 and points at the archcanvas-lab handoff 2026-11-21-handoff-public-pages-and-first-run.md
+scripts/build-archlang-context.mjs, docs/ecosystem/archlang-context.md

@@ -545,3 +545,6 @@ data/profile/23-projects-oss-more.yaml, data/profile/10-career.yaml, data/profil
 
 ## [2026-11-22] change | ArchCanvas studio film on chanmeng.org/films plays the 2026-11 re-cut (3D preview in place of the AI rendering) from the new R2 key `films/archcanvas-studio-120s-2026-11.mp4`; a note says the YouTube uploads are the September 2026 cut
 data/profile/46-films.yaml
+
+## [2026-11-23] change | The newsletter link is chanmeng.org/newsletter everywhere; the home-page anchor `/#newsletter` left the site on 2026-11-23
+data/profile/00-basics.yaml, 23-projects-oss-more.yaml, 30-recognition.yaml, 70-linkedin.yaml, 90-meta.yaml, cv/extended.typ, x/x-strategy.md, docs/STATE.md; generated files rebuilt

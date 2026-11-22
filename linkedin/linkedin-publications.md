@@ -14,7 +14,7 @@ Curated subset (9) — grouped for reference; LinkedIn shows them flat, date-ord
 **Publication/Publisher:** Chan's Weekly AI Newsletter
 **Publication date:** Apr 6, 2026
 **Author:** Chan Meng (author)
-**URL:** <https://chanmeng.org/#newsletter>
+**URL:** <https://chanmeng.org/newsletter>
 
 ```
 A weekly newsletter I write — every Monday, curated picks from the hottest new AI tools on Product Hunt, condensed into a three-minute read that keeps subscribers current on what's trending in AI.

@@ -701,7 +701,7 @@
   backcover-links((
     ("globe",    "https://chanmeng.org/",                 "chanmeng.org"),
     ("feather",  "https://chanmeng.org/blog",             "chanmeng.org/blog"),
-    ("mail",     "https://chanmeng.org/#newsletter",      "Newsletter"),
+    ("mail",     "https://chanmeng.org/newsletter",      "Newsletter"),
     ("linkedin", "https://www.linkedin.com/in/chanmeng666/", "linkedin.com/in/chanmeng666"),
     ("github",   "https://github.com/ChanMeng666",        "github.com/ChanMeng666"),
     ("youtube",  "https://www.youtube.com/@ChanMeng666",  "youtube.com/@ChanMeng666"),

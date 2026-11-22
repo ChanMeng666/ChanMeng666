@@ -381,7 +381,7 @@ X is the fast, public, dev-facing top of the funnel. It should both feed and be 
 by everything else. Current reach to route through the loop:
 
 - **LinkedIn — 6,232 followers** (recruiter / founder / professional audience)
-- **Newsletter — 1,103 subscribers** (chanmeng.org/#newsletter; depth audience)
+- **Newsletter — 1,103 subscribers** (chanmeng.org/newsletter; depth audience)
 - **GitHub — 237 followers / 530+ stars** (proof-of-work; where devs verify you)
 - **chanmeng.org** (the hub every link should ultimately serve)
 
@@ -395,7 +395,7 @@ by everything else. Current reach to route through the loop:
   round-up.** The commit log is the content pipeline; X is the real-time layer, the
   newsletter is the digest layer.
 - **X → newsletter capture.** Roughly once a week, a post's CTA should be
-  "I go deeper on this in the newsletter: chanmeng.org/#newsletter" — convert
+  "I go deeper on this in the newsletter: chanmeng.org/newsletter" — convert
   fast-followers into owned audience you don't rent from an algorithm.
 - **X → GitHub.** Product/tooling posts (ArchLang, echook, Google News MCP) drive to
   the repo; a star is a durable proof signal the next recruiter sees.

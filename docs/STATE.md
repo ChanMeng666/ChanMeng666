@@ -15,7 +15,7 @@ gitignored `docs/STATE.private.md`. Read it when present; never copy from it.
 | Priority | What | Notes |
 |---|---|---|
 | **Main focus** | See the private state file | Weigh every "where should effort go" question against it |
-| Own product | **ArchCanvas + ArchLang** | Her decisions: keep developing (2026-10-07); ArchCanvas development restarted (2026-11-16): plan quality, keeping up with the ArchLang core, the 3D preview, renderings made from it, and sign-up attribution; ArchLang development continues. Do not re-argue it; no copy says a launch is planned. ArchCanvas is private, so its CI spends the account's Actions minutes: open its PRs as drafts while pushing (`docs/operations/README.md` § GitHub Actions minutes and budgets) |
+| Own product | **ArchCanvas + ArchLang** | Her decisions: keep developing (2026-10-07); ArchCanvas development restarted (2026-11-16): plan quality, keeping up with the ArchLang core, the 3D preview, renderings made from it, and sign-up attribution; ArchLang development continues. Amended 2026-11-22 (her ruling): AI renderings were removed and the 3D preview is the only picture, and a stranger's first design starts before sign-up; copy may say in the past tense that she built the rendering chain. Do not re-argue it; no copy says a launch is planned. ArchCanvas is private, so its CI spends the account's Actions minutes: open its PRs as drafts while pushing (`docs/operations/README.md` § GitHub Actions minutes and budgets) |
 | Client work | **GenLAB Career Academy** for NZiFOCUS, in development | Lead developer, not the sole decision-maker: the pace follows the client |
 | Role | **FemTech Weekend** CTO; the **LYZEN** company site (repo `femtech-weekend-redthread`) is in founder review | Pace set by the founder |
 | Maintenance only | echook, a11y-loop, the Google News and Google Jobs MCP servers, the agent skills | Free open-source tools. Never propose paid tiers. Keep them healthy, add no features |
@@ -117,6 +117,7 @@ values already used for repos of the same role; she is not asked to sort them. `
 | Item | Waiting on |
 |---|---|
 | LinkedIn, by hand | Chan: the CORDE Experience entry and the CORDE Mobile project: end date back to November 2024, and the lines the 2026-11-19 recount corrected (227 of 541, the shares, 14 API specifications, React Native 0.74 at handover with 0.83 today). The exact old and new text is in `70-linkedin.yaml`'s comments and the day's hand-off file |
+| LinkedIn, by hand | Chan: replace the ArchCanvas project's description with the 2026-11-22 text in `70-linkedin.yaml` (no renderings, the 3D preview, first design before sign-up, Cloudflare R2; the git-repo export bullet is gone) |
 | LinkedIn, by hand | Chan: delete the Seismophone entry under Projects and its association on three skills (PostgreSQL Recursive CTEs, Reverse Engineering, Internationalization) |
 | LinkedIn, by hand | Chan: delete the two podcast entries under Publications (Decoding the Future, Future Turing) |
 | LinkedIn, by hand | Chan: update the FemTech China award description (`70-linkedin.yaml:1667` and `:1673`): the challenge name in the first sentence and the last sentence |

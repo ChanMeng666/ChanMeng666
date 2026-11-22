@@ -9,7 +9,7 @@ repos:
   - private
   - archcanvas/archcanvas
 live: https://archcanvas.uk
-stack: [Next.js 15, React 19, TypeScript, Vercel AI SDK, OpenAI, GPT Image, ArchLang, Neon Postgres, Drizzle ORM, Neon Auth, Stripe, Cloudinary, Docker, GitHub Actions, GHCR, Traefik, Cloudflare, DigitalOcean]
+stack: [Next.js 15, React 19, TypeScript, Vercel AI SDK, OpenAI, ArchLang, ArchLang 3D, Neon Postgres, Drizzle ORM, Neon Auth, Stripe, Cloudflare R2, Docker, GitHub Actions, GHCR, Traefik, Cloudflare, DigitalOcean]
 stories: 8
 publicEvidence: []
 privateEvidence: 0
@@ -29,8 +29,9 @@ sources:
 ## In one breath
 
 ArchCanvas is an AI architectural designer: you describe a home in plain English and it
-draws one dimensioned floor plan, with a realistic rendering of that same plan, which you
-then refine by talking to it on a zoomable canvas. I founded it and I am its sole
+draws one dimensioned, checked floor plan with a 3D preview of that same plan, which you
+then refine by talking to it, for free, on a zoomable canvas. A stranger can start a
+design before signing up; a one-step account keeps it. I founded it and I am its sole
 engineer, working with AI coding agents. It is live at archcanvas.uk with real payments,
 and on my own offline benchmark of 26 briefs every plan passed every check.
 
@@ -54,14 +55,18 @@ repairs and checks every candidate before anything is saved or charged.
 
 - **Two-act studio**: a briefing conversation that produces one plan, then a canvas
   where every edit morphs the plan in place and is stored as a new version.
-- **Agent**: nine tools, five on the live path (ask design questions, generate a plan,
-  edit it with a minimal diff, render it, critique it).
+- **Agent**: eight tools, four on the live path (ask design questions, generate a plan,
+  edit it with a minimal diff, critique it).
 - **Designer loop**: write, check, fix, ship the best, bounded by calls, tokens,
   wall-clock time and a per-call timeout.
 - **Model-free edits**: parametric sliders and one-click actions rewrite a variable and
   recompile, with no model call.
-- **Grounded rendering**: the compiled plan is rasterised and given to the image model,
-  so the picture shows the building on the drawing.
+- **3D preview**: the same compiled source raised into 3D (orbit, storeys, interior and
+  street eye-level views, GLB export). Until 2026-11-22 there was also a grounded
+  rendering, the compiled plan rasterised and given to an image model so the picture
+  showed the building on the drawing; it was retired in favour of the 3D preview.
+- **First design before sign-up**: a signed-out visitor's design runs as a guest turn,
+  and a one-step account (Google or an emailed code) keeps it for one credit.
 - **Billing**: credit packs through Stripe, one credit per new design, free edits,
   idempotent refunds.
 - **Delivery**: GitHub Actions to GHCR, then a canary container that must pass health,
@@ -338,7 +343,7 @@ repairs and checks every candidate before anything is saved or charged.
 | Figure | Source |
 |---|---|
 | Started 2026-04-08; ArchLang 0.1.0 on npm 2026-06-24, replaced the freehand engine 2026-06-25 | `data/profile/10-career.yaml` › `work[archcanvas]` |
-| 9 agent tools, 5 on the live path | `data/profile/10-career.yaml` › `impactDelivered` |
+| 8 agent tools, 4 on the live path | `data/profile/10-career.yaml` › `impactDelivered` |
 | 26 of 26 briefs passed every check, median one design round at 33 s (founder-run, offline, 2026-09-07) | `data/profile/10-career.yaml` › `impactDelivered` |
 | Live at archcanvas.uk with real payments, pre-launch | `data/profile/10-career.yaml` › `impactDelivered` |
 

@@ -539,3 +539,6 @@ scripts/build-archlang-context.mjs, docs/ecosystem/archlang-context.md
 
 ## [2026-11-22] change | ArchCanvas card: the Render chapter is now a 3D preview chapter (a still of the product's own 3D preview of the demo townhouse replaces the AI rendering; step label "3D preview"; title and alt text say "shows it in a 3D preview")
 scripts/cards/archcanvas.mjs, scripts/cards/assets/archcanvas/, public/cards/archcanvas.svg, docs/animated-svg-cards.md
+
+## [2026-11-22] change | ArchCanvas copy true after the 2026-11-22 round: no AI renderings (the 3D preview is the only picture; the rendering chain told in the past tense), a first design before sign-up kept by a one-step account, users' images in Cloudflare R2, 8 agent tools, 18 tables, a generation is a plan plus a background critique, the git-repo export (retired 2026-08-22) dropped; STATE.md records her 2026-11-22 ruling and a LinkedIn by-hand item
+data/profile/23-projects-oss-more.yaml, data/profile/10-career.yaml, data/profile/70-linkedin.yaml, cv/extended.typ, docs/stories/archcanvas.md, docs/STATE.md

@@ -66,14 +66,15 @@ Stack: TypeScript, Node.js, Vite, CodeMirror 6, LSP, Vitest.
 **Dates:** Jun 2026 – Present
 
 ```
-ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it generates real SVG floor plans through the ArchLang compiler plus GPT-5.6 orchestration + GPT Image 2 renderings grounded on the compiled plan, then lets you iterate on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.
+ArchCanvas turns my ArchLang language into a product for architects. Describe a brief (or drop in reference images) and it designs one dimensioned floor plan through the ArchLang compiler and GPT-5.6 orchestration, checks it, and shows it in a 3D preview you can orbit and step inside. Then you refine it by talking, for free, on an infinite zoomable canvas with an AI review mode that leaves anchored findings you can fix in one click.
 
 • Sister product to my ArchLang language — consumes @chanmeng666/archlang as a package, so it produces editable parametric plans, not just images.
+• A stranger can start a design before signing up; a one-step account (Google or an emailed code) keeps it.
 • AI review mode surfaces anchored findings directly on the canvas with one-click "have AI fix".
-• Export any project as a real git repo (isomorphic-git + memfs).
-• Refinement mutates the plan in place — edits, parametric tweaks and re-renders never regenerate it from scratch.
+• Refinement mutates the plan in place — edits and parametric tweaks never regenerate it from scratch.
+• Earlier I built a grounded GPT Image rendering chain; I retired it in favour of the 3D preview.
 
-Stack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-5.6 + GPT Image 2), @chanmeng666/archlang, Neon Postgres + Drizzle, Stripe, Cloudinary.
+Stack: Next.js, React 19, Vercel AI SDK + OpenAI (GPT-5.6), @chanmeng666/archlang + archlang-3d, Neon Postgres + Drizzle, Stripe, Cloudflare R2.
 ```
 
 **Skills:** Vercel AI SDK, AI Agent Architecture, Next.js, React, OpenAI API, Neon Postgres, Drizzle ORM, Stripe, Cloudinary

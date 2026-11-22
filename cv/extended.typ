@@ -241,8 +241,8 @@
   })
   v(1fr)
   product-tile("/public/brands/archcanvas-logo.svg", [ArchCanvas],
-    [An AI design agent for architects and self-builders: describe a building and it draws a dimensioned floor plan, plus a realistic rendering.],
-    [Refine it by talking, on an infinite zoomable canvas; every plan is real ArchLang underneath, exportable as a full git history.],
+    [An AI architectural designer for architects and self-builders: describe a building and it draws a dimensioned floor plan, checked, with a 3D preview.],
+    [Refine it by talking, for free, on an infinite zoomable canvas; every plan is real ArchLang underneath, exportable as DXF, PDF or GLB.],
     "https://archcanvas.uk/", "archcanvas.uk", logo-h: build-logo-h)
   v(1fr)
   product-tile("/public/brands/archlang-logo.svg", [ArchLang],

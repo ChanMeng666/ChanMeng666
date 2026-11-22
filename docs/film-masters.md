@@ -57,6 +57,29 @@ To fetch one: `gh release download <tag> -R <owner>/<repo> -p <file>`.
 
 ## ChanMeng666/film-archcanvas-studio (public)
 
+**2026-11 re-cut (latest):** the studio's last chapter is the plan's 3D preview (ArchCanvas no longer makes AI renderings, 2026-11-22). chanmeng.org plays the B 120 s landscape as `films/archcanvas-studio-120s-2026-11`; YouTube keeps the 2026-09 cut.
+
+| Rendered to | MB | On GitHub |
+|---|---|---|
+| `out/masters/A-confident-arrival/archcanvas-studio-2026-11_120s_landscape_1920x1080.mp4` | 27 | release `masters-2026-11` › `A-confident-arrival__archcanvas-studio-2026-11_120s_landscape_1920x1080.mp4` |
+| `out/masters/A-confident-arrival/archcanvas-studio-2026-11_120s_vertical_1080x1920.mp4` | 29 | release `masters-2026-11` › `A-confident-arrival__archcanvas-studio-2026-11_120s_vertical_1080x1920.mp4` |
+| `out/masters/A-confident-arrival/archcanvas-studio-2026-11_15s_landscape_1920x1080.mp4` | 3 | release `masters-2026-11` › `A-confident-arrival__archcanvas-studio-2026-11_15s_landscape_1920x1080.mp4` |
+| `out/masters/A-confident-arrival/archcanvas-studio-2026-11_15s_vertical_1080x1920.mp4` | 3 | release `masters-2026-11` › `A-confident-arrival__archcanvas-studio-2026-11_15s_vertical_1080x1920.mp4` |
+| `out/masters/A-confident-arrival/archcanvas-studio-2026-11_30s_landscape_1920x1080.mp4` | 7 | release `masters-2026-11` › `A-confident-arrival__archcanvas-studio-2026-11_30s_landscape_1920x1080.mp4` |
+| `out/masters/A-confident-arrival/archcanvas-studio-2026-11_30s_vertical_1080x1920.mp4` | 8 | release `masters-2026-11` › `A-confident-arrival__archcanvas-studio-2026-11_30s_vertical_1080x1920.mp4` |
+| `out/masters/A-confident-arrival/archcanvas-studio-2026-11_60s_landscape_1920x1080.mp4` | 14 | release `masters-2026-11` › `A-confident-arrival__archcanvas-studio-2026-11_60s_landscape_1920x1080.mp4` |
+| `out/masters/A-confident-arrival/archcanvas-studio-2026-11_60s_vertical_1080x1920.mp4` | 15 | release `masters-2026-11` › `A-confident-arrival__archcanvas-studio-2026-11_60s_vertical_1080x1920.mp4` |
+| `out/masters/B-daylight-forward/archcanvas-studio-2026-11_120s_landscape_1920x1080.mp4` | 26 | release `masters-2026-11` › `B-daylight-forward__archcanvas-studio-2026-11_120s_landscape_1920x1080.mp4` |
+| `out/masters/B-daylight-forward/archcanvas-studio-2026-11_120s_vertical_1080x1920.mp4` | 29 | release `masters-2026-11` › `B-daylight-forward__archcanvas-studio-2026-11_120s_vertical_1080x1920.mp4` |
+| `out/masters/B-daylight-forward/archcanvas-studio-2026-11_15s_landscape_1920x1080.mp4` | 3 | release `masters-2026-11` › `B-daylight-forward__archcanvas-studio-2026-11_15s_landscape_1920x1080.mp4` |
+| `out/masters/B-daylight-forward/archcanvas-studio-2026-11_15s_vertical_1080x1920.mp4` | 3 | release `masters-2026-11` › `B-daylight-forward__archcanvas-studio-2026-11_15s_vertical_1080x1920.mp4` |
+| `out/masters/B-daylight-forward/archcanvas-studio-2026-11_30s_landscape_1920x1080.mp4` | 7 | release `masters-2026-11` › `B-daylight-forward__archcanvas-studio-2026-11_30s_landscape_1920x1080.mp4` |
+| `out/masters/B-daylight-forward/archcanvas-studio-2026-11_30s_vertical_1080x1920.mp4` | 7 | release `masters-2026-11` › `B-daylight-forward__archcanvas-studio-2026-11_30s_vertical_1080x1920.mp4` |
+| `out/masters/B-daylight-forward/archcanvas-studio-2026-11_60s_landscape_1920x1080.mp4` | 14 | release `masters-2026-11` › `B-daylight-forward__archcanvas-studio-2026-11_60s_landscape_1920x1080.mp4` |
+| `out/masters/B-daylight-forward/archcanvas-studio-2026-11_60s_vertical_1080x1920.mp4` | 15 | release `masters-2026-11` › `B-daylight-forward__archcanvas-studio-2026-11_60s_vertical_1080x1920.mp4` |
+
+**2026-09 cut:**
+
 | Rendered to | MB | On GitHub |
 |---|---|---|
 | `out/masters/A-confident-arrival/archcanvas-studio-2026-09_120s_landscape_1920x1080.mp4` | 30 | release `masters-2026-10` › `A-confident-arrival__archcanvas-studio-2026-09_120s_landscape_1920x1080.mp4` |

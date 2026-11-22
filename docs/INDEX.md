@@ -69,7 +69,7 @@ Other knowledge files:
 | `docs/brand/DESIGN.md` | 367 | Chan Meng — Personal Brand & Design System | drawing anything in the Caldera brand system (colour, type, voice) |
 | `docs/ecosystem/README.md` | 65 | Repo lineage (ecosystem map) | a repo is created, archived, renamed, transferred or deleted; editing lineage.yaml |
 | `docs/ecosystem/archlang-context.md` | 208 | ArchLang project graph (agent context) | working across the ArchLang / ArchCanvas repos; hand it to the agent for ArchLang work (generated) |
-| `docs/film-masters.md` | 326 | Film masters: where each one lives | — |
+| `docs/film-masters.md` | 349 | Film masters: where each one lives | — |
 | `docs/github-theme-aware-assets.md` | 31 | Theme-aware visual assets — this repo's status | an image may break on GitHub's light or dark canvas |
 | `docs/operations/README.md` | 213 | Repo lifecycle and hosting operations | archiving, deleting or making a repo private; retiring a hosted site; npm publishing; a vendor account shared across projects (OpenAI, Stripe, vendor dashboards) |
 | `docs/stories/README.md` | 157 | Project stories | writing or editing a project story |

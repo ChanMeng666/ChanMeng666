@@ -1,7 +1,7 @@
 // ArchCanvas card. ArchCanvas is an AI architectural designer — an agent — so
 // the stage shows the agent at work, not a drawing: it drafts in passes, takes an
-// edit in plain words, reviews its own plan in writing, renders it and exports
-// it. Nothing on this card shows source code; to the person using ArchCanvas the
+// edit in plain words, reviews its own plan in writing, shows it in a 3D preview
+// and exports it. Nothing on this card shows source code; to the person using ArchCanvas the
 // language underneath is invisible.
 //
 // It is drawn in the product's own design system (the app tokens of its
@@ -20,7 +20,11 @@
 // The demo's two plan sources are NOT in this repo. They are read from the
 // product's own checkout beside it (ARCHCANVAS_INPUTS); where that checkout is
 // absent the card is not rebuilt and the committed public/cards/archcanvas.svg
-// stands. Only the rendering, which the product publishes, is kept here.
+// stands. Only one still of the product's own 3D preview is kept here
+// (scripts/cards/assets/archcanvas/townhouse-3d-preview.webp): the
+// three-quarter view of the same townhouse, which archcanvas.uk publishes as
+// public/showcase/3d/two-storey-townhouse-three-quarter.webp, cropped to the
+// building and shrunk to 384 x 300. Re-cut it when that still is re-captured.
 import { readFileSync } from "node:fs";
 import { compile, describe, lint } from "@chanmeng666/archlang";
 
@@ -122,7 +126,7 @@ export function buildArchcanvasCard({ glyphs, root }) {
   const title = describe(base.src).plan;
 
   // ── Timeline (seconds, one continuous session) ─────────────────────────────
-  const AT = { brief: 0, draw: 5.0, edit: 11.4, review: 16.6, render: 22.0, exp: 23.8, out: 28.2, gone: 28.7 };
+  const AT = { brief: 0, draw: 5.0, edit: 11.4, review: 16.6, view3d: 22.0, exp: 23.8, out: 28.2, gone: 28.7 };
   const T = 29.2;
   const EDIT_AT = AT.edit + 3.7; // the edited plan lands
   const p = (t) => pct(t, T, 3);
@@ -383,17 +387,20 @@ export function buildArchcanvasCard({ glyphs, root }) {
     rows.join("") +
     "</g>";
 
-  // ── Render: the demo plan's own rendering, beside the list ─────────────────
-  const RD = { x: RV.x + RV.w + 14, y: R.y, w: R.w - RV.w - 14 };
-  RD.h = Math.round((RD.w * 2) / 3); // the rendering is 3:2
-  defs.push(`<clipPath id="rd"><rect x="${RD.x}" y="${RD.y}" width="${RD.w}" height="${RD.h}" rx="8"/></clipPath>`);
-  rule("rd", `0%,${p(AT.render + 0.2)}{opacity:0;transform:translateY(8px)}${p(AT.render + 0.65)},100%{opacity:1;transform:none}`);
-  const pillW = glyphs.measure("AI-generated", { font: "mono", size: 9.5 }) + 16;
-  const render =
-    `<g class="rd"><image clip-path="url(#rd)" x="${RD.x}" y="${RD.y}" width="${RD.w}" height="${RD.h}" preserveAspectRatio="xMidYMid slice" href="data:image/jpeg;base64,${readFileSync(`${dir}/townhouse-exterior.jpg`).toString("base64")}"/>` +
-    `<rect x="${RD.x + 0.5}" y="${RD.y + 0.5}" width="${RD.w - 1}" height="${RD.h - 1}" rx="7.5" fill="none" stroke="${APP.hairline}"/>` +
-    `<rect x="${RD.x + 8}" y="${RD.y + RD.h - 27}" width="${pillW.toFixed(1)}" height="19" rx="9.5" fill="${APP.card}" fill-opacity=".92"/>` +
-    `${glyphs.text("AI-generated", { font: "mono", size: 9.5, x: RD.x + 16, y: RD.y + RD.h - 14, fill: APP.ink })}</g>`;
+  // ── 3D preview: the product's own 3D preview of the plan, beside the list ──
+  const V3 = { x: RV.x + RV.w + 14, y: R.y, w: R.w - RV.w - 14 };
+  V3.h = Math.round((V3.w * 300) / 384); // the still is 384 x 300
+  if (V3.y + V3.h > IN.y - 8) throw new Error("archcanvas card: the 3D preview runs into the command bar");
+  defs.push(`<clipPath id="v3"><rect x="${V3.x}" y="${V3.y}" width="${V3.w}" height="${V3.h}" rx="8"/></clipPath>`);
+  rule("v3", `0%,${p(AT.view3d + 0.2)}{opacity:0;transform:translateY(8px)}${p(AT.view3d + 0.65)},100%{opacity:1;transform:none}`);
+  const pillStyle = { font: "mono", size: 9.5 };
+  const pillW = glyphs.measure("3D preview", pillStyle) + 16;
+  const view3d =
+    `<g class="v3"><rect x="${V3.x}" y="${V3.y}" width="${V3.w}" height="${V3.h}" rx="8" fill="${APP.page}"/>` +
+    `<image clip-path="url(#v3)" x="${V3.x}" y="${V3.y}" width="${V3.w}" height="${V3.h}" preserveAspectRatio="xMidYMid slice" href="data:image/webp;base64,${readFileSync(`${dir}/townhouse-3d-preview.webp`).toString("base64")}"/>` +
+    `<rect x="${V3.x + 0.5}" y="${V3.y + 0.5}" width="${V3.w - 1}" height="${V3.h - 1}" rx="7.5" fill="none" stroke="${APP.hairline}"/>` +
+    `<rect x="${V3.x + 8}" y="${V3.y + V3.h - 27}" width="${pillW.toFixed(1)}" height="19" rx="9.5" fill="${APP.card}" fill-opacity=".92" stroke="${APP.hairline}" stroke-width="1.1"/>` +
+    `${glyphs.text("3D preview", { ...pillStyle, x: V3.x + 16, y: V3.y + V3.h - 14, fill: APP.ink })}</g>`;
 
   // ── Export: the menu under the artboard's Export button. It closes with the
   // session, so the still frame keeps the whole plan in view ─────────────────
@@ -470,7 +477,7 @@ export function buildArchcanvasCard({ glyphs, root }) {
     `<g class="cur" opacity="0"><path transform="translate(${DXF[0].toFixed(1)} ${DXF[1].toFixed(1)})" d="M0 0v16.2l4.2-4 3 6.2 2.5-1.2-3-6.1 5.7-.5z" fill="${APP.ink}" stroke="#fff" stroke-width="1"/></g>`;
 
   // ── Progress: the session's chapters, each lit as the stage reaches it ─────
-  const steps = [["Brief", AT.brief], ["Draw", AT.draw], ["Edit", AT.edit], ["Review", AT.review], ["Render", AT.render], ["Export", AT.exp]];
+  const steps = [["Brief", AT.brief], ["Draw", AT.draw], ["Edit", AT.edit], ["Review", AT.review], ["3D preview", AT.view3d], ["Export", AT.exp]];
   const stepStyle = { font: "mono", size: 10.5 };
   let sx = W.x + 4;
   const progress = steps.map(([step, t], i) => {
@@ -483,13 +490,13 @@ export function buildArchcanvasCard({ glyphs, root }) {
   const body =
     `<rect width="1300" height="360" fill="${APP.page}"/>` +
     identity.join("") +
-    `<g clip-path="url(#win)">${chrome.join("")}<g class="all">${composer}${artboard}${drafting}${command}${review}${render}${menu}${pointer}</g></g>` +
+    `<g clip-path="url(#win)">${chrome.join("")}<g class="all">${composer}${artboard}${drafting}${command}${review}${view3d}${menu}${pointer}</g></g>` +
     `<rect x="${W.x + 0.5}" y="${W.y + 0.5}" width="${W.w - 1}" height="${W.h - 1}" rx="11.5" fill="none" stroke="${APP.hairline}"/>` +
     progress.join("");
 
   return {
     svg: card({
-      title: "ArchCanvas, an AI architectural designer: describe your home and get a dimensioned floor plan. The studio takes a brief, drafts the plan in passes, moves a wall from an edit in plain words, lists what it could not get right, then renders and exports it.",
+      title: "ArchCanvas, an AI architectural designer: describe your home and get a dimensioned floor plan. The studio takes a brief, drafts the plan in passes, moves a wall from an edit in plain words, lists what it could not get right, then shows it in a 3D preview and exports it.",
       css: css.join(""),
       defs: `${glyphs.defs()}${defs.join("")}`,
       body,

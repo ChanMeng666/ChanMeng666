@@ -30,7 +30,7 @@ a phone scrolls a feed and an orchestrator's log reacts.
 | Card | What the stage shows | Size | Loop |
 |---|---|---|---|
 | ArchLang | A real brief from the agent gallery, the ArchLang the agent wrote streaming in as the plan draws, the areas describe() computes, one number scrubbed, a lint finding raised and cleared, then the stage switches to 3D: frames from archlang-3d's own viewer raise the same source and turn it a full circle (a filmstrip of 72 frames, 5° apart, cut under one slow eased push-in), while `archlang3d build` writes the GLB and its four checks pass | 608 KB | 37.0 s |
-| ArchCanvas | One studio session: brief, draft in passes, an edit in plain words, the agent's own advisory, render and export | 197 KB | 29.2 s |
+| ArchCanvas | One studio session: brief, draft in passes, an edit in plain words, the agent's own advisory, a still of the product's 3D preview, and export | 179 KB | 29.2 s |
 | GAVIGO IRE | A phone playing the feed’s real videos and gameplay beside the orchestration log, each reacting to the other | 466 KB | 21.0 s |
 | She Sharp | A Slack sync, the visitor assistant's tool call, mentor matching, the mailing list's first send, the agent skills | 180 KB | 27.0 s |
 | Eatropolis | The dish browser filtered by a click, the kitchen lineup, the concierge answering | 240 KB | 21.0 s |
@@ -407,7 +407,7 @@ Looking at one frame in a browser is not verification.
 | `scripts/lib/svg-card/plan.mjs` | Splitting compiler output into layers, extents |
 | `scripts/lib/svg-card/film.mjs` | Word wrap; stills from a film with ffmpeg |
 | `scripts/cards/fonts/` | Each product's typefaces, with their sources |
-| `scripts/cards/assets/` | Committed inputs: the few pictures a card keeps (dish photographs, a rendering) |
+| `scripts/cards/assets/` | Committed inputs: the few pictures a card keeps (dish photographs, a 3D-preview still) |
 | `public/cards/<id>.svg` | The committed cards the README shows |
 
 The reference that set the bar was the profile README of

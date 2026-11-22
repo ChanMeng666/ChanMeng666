@@ -536,3 +536,6 @@ youtube/channel.yaml, docs/STATE.md
 
 ## [2026-11-21] change | ArchCanvas state after the 2026-11-20 release: the rebuilt public site and first-run flow went live; the next stage is judged by time to a first design and the share of first designs passing the checks (no targets set); agent context now reads archcanvas main 976d284 and points at the archcanvas-lab handoff 2026-11-21-handoff-public-pages-and-first-run.md
 scripts/build-archlang-context.mjs, docs/ecosystem/archlang-context.md
+
+## [2026-11-22] change | ArchCanvas card: the Render chapter is now a 3D preview chapter (a still of the product's own 3D preview of the demo townhouse replaces the AI rendering; step label "3D preview"; title and alt text say "shows it in a 3D preview")
+scripts/cards/archcanvas.mjs, scripts/cards/assets/archcanvas/, public/cards/archcanvas.svg, docs/animated-svg-cards.md

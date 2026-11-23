@@ -8,7 +8,7 @@ Read in this order: §1 rules, §2 the graph, §3 where each repo is, §4 what i
 
 ## 1. Rules for working in these repos
 
-- **Priorities (Chan, 2026-11-18 and 2026-11-20).** ArchLang builds by roadmap v3 (`archlang/docs/plans/product-roadmap/v3.md`, the one build order; started by RM-D65): numbers said right, checker recall, edits, handover; 1.64.0 shipped 2026-11-18. ArchCanvas is ArchLang's test bench plus a niche product for self-builders (growth ruling 2026-11-18); its plan is `archcanvas-lab/specs/2026-11-18-archcanvas-plan-after-demand-synthesis.md`; its stages 1 and 2 shipped by 2026-11-19, its rebuilt public site went live on 2026-11-20, and on 2026-11-22 it dropped AI renderings (the 3D preview is the only picture of the building) and let a stranger's first design start before sign-up (a one-step account, Google or an emailed code, keeps it for one credit; a new account's free one). Chan ruled on 2026-11-20 that ArchCanvas's next stage is judged by the time to a first design and the share of first designs that pass the checks, through the plan-quality and compiler line; no targets or levers are chosen yet (as of 2026-11-23: archcanvas `main` `7cf12c75`, core `@chanmeng666/archlang` 1.68.1 and `@chanmeng666/archlang-3d` 0.9.2, consumed the day they shipped; a fix to the overall dimension of arc-edged rooms is on archlang `main`, unreleased; the public product home `archcanvas/archcanvas` was updated 2026-11-22). ArchCanvas's current state is the newest dated handoff in `archcanvas-lab/specs/` (2026-11-22: `2026-11-22-handoff-minimal-ux-round.md`; index `specs/README.md`); ArchLang's is `archlang/docs/plans/product-roadmap/handoff.md`. ArchCanvas is an AI architectural designer, never an "AI architect"; the 3D is the "3D preview" (ArchCanvas makes no AI images since 2026-11-22). No copy says a launch is planned.
+- **Priorities (Chan, 2026-11-18 and 2026-11-20).** ArchLang builds by roadmap v3 (`archlang/docs/plans/product-roadmap/v3.md`, the one build order; started by RM-D65): numbers said right, checker recall, edits, handover; 1.64.0 shipped 2026-11-18. ArchCanvas is ArchLang's test bench plus a niche product for self-builders (growth ruling 2026-11-18); its plan is `archcanvas-lab/specs/2026-11-18-archcanvas-plan-after-demand-synthesis.md`; its stages 1 and 2 shipped by 2026-11-19, its rebuilt public site went live on 2026-11-20, and on 2026-11-22 it dropped AI renderings (the 3D preview is the only picture of the building) and let a stranger's first design start before sign-up (a one-step account, Google or an emailed code, keeps it for one credit; a new account's free one). Chan ruled on 2026-11-20 that ArchCanvas's next stage is judged by the time to a first design and the share of first designs that pass the checks, through the plan-quality and compiler line; no targets or levers are chosen yet (as of 2026-11-24: archcanvas `main` `08d948ce`, core `@chanmeng666/archlang` 1.68.2 and `@chanmeng666/archlang-3d` 0.9.2, consumed the day they shipped; the public product home `archcanvas/archcanvas` was updated 2026-11-22). ArchCanvas's current state is the newest dated handoff in `archcanvas-lab/specs/` (2026-11-22: `2026-11-22-handoff-minimal-ux-round.md`; index `specs/README.md`); ArchLang's is `archlang/docs/plans/product-roadmap/handoff.md`. ArchCanvas is an AI architectural designer, never an "AI architect"; the 3D is the "3D preview" (ArchCanvas makes no AI images since 2026-11-22). No copy says a launch is planned.
 - **Origin order.** ArchCanvas came first (first commit 2026-04-08, freehand SVG plans); ArchLang npm 0.1.0 followed on 2026-06-24 and replaced that engine on 2026-06-25. Never write that the language came first.
 - **Truth ownership.** Language behaviour lives in `archlang`; product behaviour in `archcanvas`; strategy, decisions and launch copy in `archcanvas-growth`. Growth holds no product truth; never edit a product repo from growth.
 - **Links.** Public copy links only `github.com/ChanMeng666/archlang`, `github.com/ChanMeng666/archlang-showcase`, `github.com/archcanvas/archcanvas` and the public film repos. A private repo is named, never linked.
@@ -113,16 +113,16 @@ flowchart LR
 
 ## 4. Inside the archlang monorepo
 
-`D:/github_repository/archlang`, package `@chanmeng666/archlang` 1.68.1 (2026-11-23). Pushing `main` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).
+`D:/github_repository/archlang`, package `@chanmeng666/archlang` 1.68.2 (2026-11-24). Pushing `main` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).
 
 | Workspace | Package | Version | On npm |
 |---|---|---|---|
-| `editors/vscode` | `archlang` | 0.56.1 | no (private; published to the VS Code Marketplace and Open VSX) |
+| `editors/vscode` | `archlang` | 0.56.2 | no (private; published to the VS Code Marketplace and Open VSX) |
 | `playground` | `archlang-playground` | 0.0.0 | no (private) |
 | `docs-site` | `archlang-docs` | 0.0.0 | no (private) |
 | `packages/archlang-3d` | `@chanmeng666/archlang-3d` | 0.9.2 | yes |
 | `packages/font-cjk` | `@chanmeng666/archlang-font-cjk` | 1.0.0 | yes |
-| `packages/mcp` | `@chanmeng666/archlang-mcp` | 0.2.52 | yes |
+| `packages/mcp` | `@chanmeng666/archlang-mcp` | 0.2.53 | yes |
 | `packages/mcp-worker` | `archlang-mcp-worker` | 0.1.0 | no (private) |
 | `packages/web-component` | `@chanmeng666/arch-plan` | 0.1.2 | yes |
 
@@ -134,7 +134,7 @@ Change a public API and these break. Ranges as written in each package.json.
 
 | Local folder | Repo | Depends on |
 |---|---|---|
-| `D:/github_repository/archcanvas` | ChanMeng666/archcanvas 🔒 | `@chanmeng666/archlang@^1.68.1`, `@chanmeng666/archlang-3d@^0.9.2` |
+| `D:/github_repository/archcanvas` | ChanMeng666/archcanvas 🔒 | `@chanmeng666/archlang@^1.68.2`, `@chanmeng666/archlang-3d@^0.9.2` |
 | `D:/github_repository/archlang-showcase` | ChanMeng666/archlang-showcase | `@chanmeng666/archlang@^1.55.0` |
 | `D:/github_repository/ChanMeng666` | ChanMeng666/ChanMeng666 | `@chanmeng666/archlang@^1.55.0` |
 | `D:/github_repository/film-archlang-2d-3d` | ChanMeng666/film-archlang-2d-3d | `@chanmeng666/archlang@1.57.0`, `@chanmeng666/archlang-3d@0.4.0` |
@@ -146,7 +146,7 @@ One line per relation, `from --type--> to`, with its evidence.
 
 ```text
 chanmeng-social-ledger --data-for--> archcanvas-growth   # mounted read-only as a git submodule at ledger/; holds the growth repo's pre-ledger trackers in archive/growth-legacy/
-archcanvas --depends-on--> archlang   # package.json @chanmeng666/archlang ^1.68.1 and @chanmeng666/archlang-3d ^0.9.2 (2026-11-23, archcanvas PR #406; 1.62 to 1.64.0 in PR #337, 2026-11-18)
+archcanvas --depends-on--> archlang   # package.json @chanmeng666/archlang ^1.68.2 and @chanmeng666/archlang-3d ^0.9.2 (2026-11-24, archcanvas PR #411; 1.68.1 in PR #406; 1.62 to 1.64.0 in PR #337, 2026-11-18)
 archlang --data-for--> archcanvas-growth   # weekly data/web-traffic.csv: Web Analytics page loads, share-link events, and the catalogued diagnostic codes the hosted MCP and the playground count (no content), since 2026-11-22/23
 archcanvas --data-for--> archlang   # generation_attempts records each generation's catalogued diagnostic codes (2026-11-23), the signal that picks archlang's next spec, error and fix work
 archlang --powers--> archcanvas   # ArchLang compiler is the plan engine; replaced the freehand engine 2026-06-25

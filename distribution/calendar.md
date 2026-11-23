@@ -6,7 +6,7 @@ What to post, where, on which day. Chan posts by hand; nothing here is posted fo
 How to run it with Claude Code, and what each column means: [README.md](./README.md).
 Where every film stands on every platform: [status.yaml](./status.yaml).
 
-Plan as of 2026-10-12. Registers read: YouTube 2026-11-19, X 2026-11-13, LinkedIn 2026-11-13, ArchCanvas page 2026-11-10.
+Plan as of 2026-10-12. Registers read: YouTube 2026-11-23, X 2026-11-13, LinkedIn 2026-11-13, ArchCanvas page 2026-11-10.
 A post made after those dates is not known here until its register is synced.
 
 ## The schedule
@@ -15,11 +15,8 @@ A post made after those dates is not known here until its register is synced.
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
-| 2026-11-24 | Tuesday | a11y-loop launch film | X | 64 s, 16:9, as a YouTube link | none (link post) | `drafts/a11y-loop-launch-film.yaml#x` | draft |
 | 2026-11-26 | Thursday | GAVIGO IRE product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#linkedin` | draft |
 | 2026-11-26 | Thursday | GAVIGO IRE product film | X | 30 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#x` | draft |
-
-- a11y-loop launch film: The launch film replaced the 2:59 film on show (2026-10-20). 64 s fits X as a native upload too (the LinkedIn file is staged); the draft links YouTube
 
 ### Week of 2026-11-30
 
@@ -30,6 +27,7 @@ A post made after those dates is not known here until its register is synced.
 
 ## Not yet published and not scheduled here
 
+- a11y-loop launch film: X
 - CORDE Mobile product film: LinkedIn (personal)
 - CORDE Mobile product film: X
 - AI programming school product film: LinkedIn (personal)
@@ -44,7 +42,7 @@ A post made after those dates is not known here until its register is synced.
 | ArchLang in ChatGPT film | published 2026-11-01 | — | published | published 2026-11-01 | published 2026-11-01 | — |
 | ArchLang film | published 2026-10-06 | — | published | — | — | — |
 | echook film | published 2026-10-06 | published 2026-10-07 | published | published 2026-11-01 | published 2026-11-01 | — |
-| a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | planned 2026-11-24 | — |
+| a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | **to do** | — |
 | GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-26 | planned 2026-11-26 | — |
 | CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | **to do** | **to do** | — |
 | She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | — | — | — |

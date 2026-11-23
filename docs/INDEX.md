@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 166 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 130 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 550 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 553 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -68,7 +68,7 @@ Other knowledge files:
 | `docs/answers/TEMPLATE.md` | 25 | The question, shortened to a title | — |
 | `docs/brand/DESIGN.md` | 367 | Chan Meng — Personal Brand & Design System | drawing anything in the Caldera brand system (colour, type, voice) |
 | `docs/ecosystem/README.md` | 65 | Repo lineage (ecosystem map) | a repo is created, archived, renamed, transferred or deleted; editing lineage.yaml |
-| `docs/ecosystem/archlang-context.md` | 208 | ArchLang project graph (agent context) | working across the ArchLang / ArchCanvas repos; hand it to the agent for ArchLang work (generated) |
+| `docs/ecosystem/archlang-context.md` | 210 | ArchLang project graph (agent context) | working across the ArchLang / ArchCanvas repos; hand it to the agent for ArchLang work (generated) |
 | `docs/film-masters.md` | 349 | Film masters: where each one lives | — |
 | `docs/github-theme-aware-assets.md` | 31 | Theme-aware visual assets — this repo's status | an image may break on GitHub's light or dark canvas |
 | `docs/operations/README.md` | 213 | Repo lifecycle and hosting operations | archiving, deleting or making a repo private; retiring a hosted site; npm publishing; a vendor account shared across projects (OpenAI, Stripe, vendor dashboards) |

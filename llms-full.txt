@@ -15,7 +15,7 @@ thought."
 
 12 companies · 5 teaching cohorts · 530+ GitHub stars · Master's with Distinction
 
-**Last updated:** 2026-11-22
+**Last updated:** 2026-11-23
 **Canonical entity URL:** https://chanmeng.org/
 **Preferred citation:** "Chan Meng, full-stack engineer and CTO"
 **Stable entity identifier:** https://chanmeng.org/#person
@@ -2479,7 +2479,7 @@ Compilation is a returned value, not a side effect: `compile()` hands back `{ sv
 
 **Audience:** Architects and designers who want to move fast from brief to a credible dimensioned plan, and self-builders / renovators who have a vision but not CAD skills and need a dimensioned plan they can read and refine. Because every plan is a real floor-plan program underneath, the same product serves a careful professional nudging a wall thickness with a slider and a first-timer who just wants to describe their dream house and see it — and refine it — in plain language.
 
-**Product logic:** The studio runs in two acts. **Act I** is a full-screen briefing conversation: the user picks a typology (residential, accessible clinic, open-plan office, passive house) and describes the build; for a thin brief the agent asks two-to-five clarifying questions inline, then generates ONE plan — deliberately not a grid of options — as parametric ArchLang, compiles it to a dimensioned SVG with `data-arch-id` anchors, and starts a critique in the background. That single turn is the only point at which the agent is asked for a brand-new plan. A signed-out visitor gets that first turn too, with no questions: the design starts before sign-up, and a one-step account (Google or an emailed code) keeps it for one credit — for a new account, its free one.
+**Product logic:** The studio runs in two acts. **Act I** is a full-screen briefing conversation: the user picks a typology (residential, accessible clinic, open-plan office, passive house) and describes the build; for a thin brief the agent asks two-to-five clarifying questions inline, then generates ONE plan — deliberately not a grid of options — as parametric ArchLang, compiles it to a dimensioned SVG with `data-arch-id` anchors, and starts a critique in the background. That single turn is the only point at which the agent is asked for a brand-new plan. A signed-out visitor gets that first turn too, with no questions: the design starts before sign-up, and a one-step account (Google or an emailed code) keeps it for one credit — for a person's first account, its free one (given once per person since 2026-11-23).
 
 **Act II** is a canvas-first studio, and nothing in it regenerates. Edits are conversational and **morph the plan in place** — the parent geometry fades to a dashed ghost, a semantic-diff chip shows what changed, and a version-lineage timeline lets you scrub the history. **Select-to-act**: click a room, door, or window and a floating action bar offers verb chips (Enlarge / Shrink / Widen / Move) plus agent-suggested scoped edits. A **Parametric Tweaks** panel turns the plan's own variables (room sizes, counts, wall thickness) into live sliders that recompile instantly with no AI call at all. **Review mode** toggles a walking-circulation overlay (routes, pinch points) and pins anchored critique findings, each with a one-click "have AI fix" — display-only, never auto-applied. A **3D preview** raises the same plan into 3D: orbit it, step through its storeys, or stand at eye level in a room or on the street. The design exports as SVG/PNG/DXF/PDF, as GLB from the 3D preview, or as its editable ArchLang source.
 

@@ -548,3 +548,6 @@ data/profile/46-films.yaml
 
 ## [2026-11-23] change | The newsletter link is chanmeng.org/newsletter everywhere; the home-page anchor `/#newsletter` left the site on 2026-11-23
 data/profile/00-basics.yaml, 23-projects-oss-more.yaml, 30-recognition.yaml, 70-linkedin.yaml, 90-meta.yaml, cv/extended.typ, x/x-strategy.md, docs/STATE.md; generated files rebuilt
+
+## [2026-11-24] change | ArchCanvas copy: the free design is a person's first account's, given once per person and per browser since 2026-11-23; ecosystem context points to the 2026-11-24 handoff
+data/profile/23-projects-oss-more.yaml, docs/ecosystem/archlang-context.md

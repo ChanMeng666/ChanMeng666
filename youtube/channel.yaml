@@ -28,8 +28,8 @@ channel:
   handle: "@ChanMeng666"
   id: UCNfqqzosj2J6bBRVgz7qbJQ
   url: https://www.youtube.com/@ChanMeng666
-  asOf: "2026-11-19"
-  subscribers: 24          # historical maximum; never lower it
+  asOf: "2026-11-23"
+  subscribers: 48          # historical maximum; never lower it (48 read on the watch page, 2026-11-23)
   # Applied in Studio by hand on 2026-11-19 and read back on the public channel
   # (capture:youtube, About page): the description's and the "Portfolio & CV"
   # link's ?ref=youtube (docs/STATE.md, Visit attribution), contactEmail
@@ -76,7 +76,7 @@ channel:
 counts:
   asOf: "2026-10-09"
   total: 340               # 332 on the Videos tab (Studio's visibility filters) plus the 8 public Shorts
-  public: 114              # 84 videos + 30 Shorts (capture:youtube, 2026-11-19), all in `videos` below
+  public: 120              # 85 videos + 35 Shorts (2026-11-23: +1 podcast cut, +5 Shorts of the Liwa Gu episode), all in `videos` below
   unlisted: 60             # +1 uploaded 2026-10-12, seen in Studio 2026-10-19; -1 when the ArchLang demo went public, 2026-11-07 (channel.private.yaml)
   private: 236             # 180 of them are raw screen recordings titled by timestamp
   # 2026-10-17: the public count was read again, signed out: 73 (65 videos
@@ -95,6 +95,21 @@ counts:
 # lives on YouTube, the wording rules in youtube/README.md.
 # -----------------------------------------------------------------------------
 videos:
+  # Chan Meng × Liwa Gu, 「闲暇之余，灵光一闪」 (2026-11-23): a conversation recorded on
+  # Google Meet on 2026-11-19, directed and post-produced entirely by AI (Claude
+  # Code with the chanmeng-video-podcast-editor skill, hence the projectId),
+  # Mandarin with Chinese subtitles. Chan uploaded the files; Claude filled the
+  # forms in Studio and published them the same day (Chan's request). Liwa Gu
+  # agreed to publication. A collaborator invite to Liwa Gu (@guliwa) was sent on
+  # the long cut and on the three Shorts she speaks in (s1, s2, s4); it waits for
+  # her acceptance. The long cut is also in a private playlist of Chan's.
+  # Published times read signed out with yt-dlp, converted to Auckland (NZDT).
+  - { id: KKmqu4ZYKoo, kind: podcast-cut, published: "2026-11-23", duration: "34:58", title: "闲暇之余，灵光一闪: Chan Meng × Liwa Gu on AI Editing, Hackathons & Glue Code | Fully AI-Edited", projectId: chanmeng-video-podcast-editor, playlists: ["Chan Meng's Video Podcasts · Edited Entirely by AI"], described: true, note: "the 35-minute episode, 10 chapters; published 16:14 NZDT; collaborator invite to Liwa Gu pending" }
+  - { id: H9BHZ1sTqsU, kind: short, published: "2026-11-23", duration: "0:50", title: "Most hackathon projects are toys; what you keep is the people #Hackathon #VideoPodcast", projectId: chanmeng-video-podcast-editor, playlists: [], described: true, note: "vertical Short from chapter 4; published 16:33 NZDT; in no public playlist; collaborator invite to Liwa Gu pending" }
+  - { id: y2CHQsBeVPA, kind: short, published: "2026-11-23", duration: "0:46", title: "Sales automation for a team: the tech is all glue code #AIAutomation #VideoPodcast", projectId: chanmeng-video-podcast-editor, playlists: [], described: true, note: "vertical Short from chapter 5; published 16:33 NZDT; in no public playlist; collaborator invite to Liwa Gu pending" }
+  - { id: 28U-cCCzWBc, kind: short, published: "2026-11-23", duration: "0:40", title: "Chase monetisation and a lot of what you do bends out of shape #Creativity #VideoPodcast", projectId: chanmeng-video-podcast-editor, playlists: [], described: true, note: "vertical Short from chapter 8; published 16:33 NZDT; in no public playlist" }
+  - { id: Rk59rL9rF58, kind: short, published: "2026-11-23", duration: "0:48", title: "The brain in Silicon Valley, the factory in Shenzhen: AI hardware's split #AIHardware #Shenzhen", projectId: chanmeng-video-podcast-editor, playlists: [], described: true, note: "vertical Short from chapter 7; published 16:32 NZDT; in no public playlist; collaborator invite to Liwa Gu pending" }
+  - { id: _bzLFnQSJ6s, kind: short, published: "2026-11-23", duration: "0:48", title: "Record it and forget it: AI runs the whole podcast edit #AIEditing #ClaudeCode", projectId: chanmeng-video-podcast-editor, playlists: [], described: true, note: "vertical Short from chapter 3; published 16:32 NZDT; in no public playlist" }
   # Registered 2026-11-19 (Chan: "register them"), from that day's capture:
   # fifteen public videos that were not in this file. Titles and durations
   # come from videos.yaml. Confirmed the same day, signed out, with yt-dlp:
@@ -384,7 +399,8 @@ playlists:
     # two members are the Women of the Island cuts, in this order. Whether it
     # is a home-tab section was not read (the signed-out home tab lists it
     # among its playlists; the sections above were last read in Studio).
-    videos: [V56z9t2dOUs, zSQQZ4j3W8A]
+    # 2026-11-23: KKmqu4ZYKoo (Liwa Gu episode) added; read signed out, it is first.
+    videos: [KKmqu4ZYKoo, V56z9t2dOUs, zSQQZ4j3W8A]
 
 # Nothing is waiting to be uploaded (checked against 46-films.yaml and the film
 # folders on 2026-10-10): all fourteen music videos and every product's film

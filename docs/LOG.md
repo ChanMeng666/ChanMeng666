@@ -554,3 +554,6 @@ data/profile/23-projects-oss-more.yaml, docs/ecosystem/archlang-context.md
 
 ## [2026-11-24] add | `chanmeng-video-podcast-episodes`: Chan's three AI-directed video-podcast productions, recorded only and shown nowhere; ecosystem catalog verified against GitHub and the local folders
 data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
+
+## [2026-11-24] change | Staged film copies: finals of the film repos removed from the local workspace kept in `_staging`; staged copies of fully posted films dropped; every staged file named in `assets`
+distribution/plan.yaml

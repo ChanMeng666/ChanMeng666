@@ -12,7 +12,7 @@ else (L2) is opened on demand, when its "read when" matches the task.
 |---|---|---|
 | `CLAUDE.md` | 166 | always: the schema, hard rules and workflow |
 | `docs/STATE.md` | 130 | always: Chan's decisions and display rules, before any edit |
-| `docs/LOG.md` | 559 | to see what changed recently; append an entry after a change |
+| `docs/LOG.md` | 562 | to see what changed recently; append an entry after a change |
 | `docs/INDEX.md` | this file | always: to find which file to read next |
 
 ## Data
@@ -25,7 +25,7 @@ against `schema/profile.schema.json`. Find an entry with
 |---|---|---|---|
 | `data/profile/00-basics.yaml` | 157 | basics (14 keys), builderTools (3) | BASICS — identity, summary, social profiles, builder tools … |
 | `data/profile/10-career.yaml` | 2851 | work (13), volunteer (4), education (3) | CAREER — work roles, volunteer roles, education … |
-| `data/profile/20-projects-flagship.yaml` | 1397 | projects (4) | PROJECTS 1/4 — flagship band … |
+| `data/profile/20-projects-flagship.yaml` | 1398 | projects (4) | PROJECTS 1/4 — flagship band … |
 | `data/profile/21-projects-oss-primary.yaml` | 1198 | projects (7) | PROJECTS 2/4 — open source, primary band (visible in README table) … |
 | `data/profile/22-projects-oss-webapps.yaml` | 1496 | projects (15) | PROJECTS 3/4 — open source, collapsible: web applications … |
 | `data/profile/23-projects-oss-more.yaml` | 4186 | projects (100) | PROJECTS 4/4 — open source, collapsible: AI / creative / ML / branding / games + commissioned tail … |

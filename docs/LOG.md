@@ -557,3 +557,6 @@ data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
 
 ## [2026-11-24] change | Staged film copies: finals of the film repos removed from the local workspace kept in `_staging`; staged copies of fully posted films dropped; every staged file named in `assets`
 distribution/plan.yaml
+
+## [2026-11-24] change | Review queue 2026-11 (#35): server-google-jobs 26 stars; latest-commit dates for github-readme-suno-cards and gradient-svg-generator; withdrawn google-news listings kept as records without a link
+data/profile/20-projects-flagship.yaml, data/profile/21-projects-oss-primary.yaml

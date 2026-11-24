@@ -1201,13 +1201,14 @@ projects:
           redistributions:
             - { name: "@iflow-mcp/google-news-server", url: "https://www.npmjs.com/package/@iflow-mcp/google-news-server", note: "A third party republished the server on npm (2025-08-08)" }
             - { name: mcp-get, url: "https://github.com/michaellatman/mcp-get/pull/62", note: "Registered by merged PR, 2025-01-01" }
-          # Checked on measuredOn and no longer resolving. Do not cite these.
+          # Checked on measuredOn and no longer resolving. Do not cite these. URLs are
+          # written without a scheme so the monthly link probe does not re-report them.
           gone:
-            - { name: Playbooks, url: "https://playbooks.com/mcp/chanmeng666-google-news", status: 404 }
-            - { name: MCP Archive, url: "https://mcp-archive.com/server/server-google-news", status: 404 }
-            - { name: MagicSlides, url: "https://www.magicslides.app/mcps/chanmeng666-google-news", status: "error page" }
+            - { name: Playbooks, url: "playbooks.com/mcp/chanmeng666-google-news", status: 404 }
+            - { name: MCP Archive, url: "mcp-archive.com/server/server-google-news", status: 404 }
+            - { name: MagicSlides, url: "www.magicslides.app/mcps/chanmeng666-google-news", status: "error page" }
             - { name: mcpnow.io, status: "domain does not resolve" }
-            - { name: Smithery, url: "https://smithery.ai/server/@chanmeng666/google-news-server", status: 404, note: "Listing withdrawn; the page and Smithery's registry API both report it gone (checked 2026-10-15). Taken off every surface that day" }
+            - { name: Smithery, url: "smithery.ai/server/@chanmeng666/google-news-server", status: 404, note: "Listing withdrawn; the page and Smithery's registry API both report it gone (checked 2026-10-15). Taken off every surface that day" }
           # skywork.ai/skypage/en/google-news-ai-engineer-dive/1978706891771256832
           # was recorded here as a second review until 2026-10-13. It is about
           # a different project (jmanek/google-news-trends-mcp): never cite it.

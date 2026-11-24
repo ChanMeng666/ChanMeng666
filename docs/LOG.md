@@ -552,5 +552,8 @@ data/profile/00-basics.yaml, 23-projects-oss-more.yaml, 30-recognition.yaml, 70-
 ## [2026-11-24] change | ArchCanvas copy: the free design is a person's first account's, given once per person and per browser since 2026-11-23; ecosystem context points to the 2026-11-24 handoff
 data/profile/23-projects-oss-more.yaml, docs/ecosystem/archlang-context.md
 
+## [2026-11-24] add | `chanmeng-video-podcast-episodes`: Chan's three AI-directed video-podcast productions, recorded only and shown nowhere; ecosystem catalog verified against GitHub and the local folders
+data/profile/23-projects-oss-more.yaml, docs/ecosystem/lineage.yaml
+
 ## [2026-11-24] change | Staged film copies: finals of the film repos removed from the local workspace kept in `_staging`; staged copies of fully posted films dropped; every staged file named in `assets`
 distribution/plan.yaml

@@ -4129,7 +4129,7 @@ projects:
       - "Video produced in code"
     status: active
     startDate: "2026-11"
-    relatedProjectIds: [women-of-the-island-episode-kit]
+    relatedProjectIds: [women-of-the-island-episode-kit, chanmeng-video-podcast-episodes]
     publicSummary: |
       A Claude Code skill that runs the post-production of a two-person
       interview or video podcast. The main model acts as director: it
@@ -4143,3 +4143,44 @@ projects:
       each graphic frame and ffmpeg composites cached segments, so it runs
       on a laptop without a GPU. Generalised from the method of one full
       production, her Women of the Island episode.
+
+  # Added 2026-11-24: three private production repos (created 2026-11-20 and
+  # 2026-11-21), one per video-podcast conversation Chan hosted, each cut with
+  # chanmeng-video-podcast-editor. Recorded only, shown nowhere, like her other
+  # private workspaces (2026-11-24, pending Chan's word). See show:.
+  # Only the episode already public on her YouTube channel (2026-11-23) is named
+  # here; the other two are unpublished and their guests are not named in any
+  # tracked file.
+  # repoUrl omitted — all three repositories are private; do not re-add.
+  - id: chanmeng-video-podcast-episodes
+    show: { readme: false, site: false, cv: false, linkedin: false, llms: false }
+    provenance: personal
+    tier: secondary
+    recency: active
+    name: "Chan Meng video podcasts — AI-directed episode productions"
+    priority: 118
+    category: creative
+    tagline: "Three Mandarin conversations Chan hosted, each cut from a call recording into a finished, subtitled episode with covers, chapters and Shorts by an AI director."
+    roles: ["Host", "Video Producer", "Creative Coder"]
+    techStack: ["Python", "ffmpeg", "Playwright", "FunASR", "Claude Code"]
+    keywords:
+      - "Video podcast"
+      - "Podcast post-production"
+      - "AI-directed editing"
+      - "Brand design system"
+    status: active
+    startDate: "2026-11"
+    relatedProjectIds: [chanmeng-video-podcast-editor, women-of-the-island-episode-kit]
+    publicSummary: |
+      Three private production repositories, one per conversation, each
+      made with the chanmeng-video-podcast-editor skill: the AI director
+      maps the content, makes the fine cut, proofreads the subtitles,
+      mixes the audio and draws the titles, covers and end card in Chan's
+      Caldera brand. The finished films, audio, subtitles and covers are
+      attached to each repository's release; media is kept out of git.
+      One episode is published: Chan Meng × Liwa Gu, 闲暇之余，灵光一闪
+      (34:58 and five Shorts, cut from an 81-minute Google Meet call and
+      published on her YouTube channel on 2026-11-23). The other two, a
+      19-minute conversation on job hunting in New Zealand tech and a
+      58-minute conversation with a 2 h 53 min annotated complete
+      edition, are unpublished.

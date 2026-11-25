@@ -11,19 +11,19 @@ A post made after those dates is not known here until its register is synced.
 
 ## The schedule
 
-### Week of 2026-11-23
-
-| Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
-|---|---|---|---|---|---|---|---|
-| 2026-11-26 | Thursday | GAVIGO IRE product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#linkedin` | draft |
-| 2026-11-26 | Thursday | GAVIGO IRE product film | X | 30 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#x` | draft |
-
 ### Week of 2026-11-30
 
 | Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
 |---|---|---|---|---|---|---|---|
 | 2026-12-03 | Thursday | TechNest Community turns two, a message from its AI instructor | LinkedIn (personal) | 92 s, 9:16 | `_staging/12-technest-anniversary/technest-anniversary-split.mp4` |  | draft |
 | 2026-12-03 | Thursday | TechNest Community turns two, a message from its AI instructor | X | 92 s, 9:16 | `_staging/12-technest-anniversary/technest-anniversary-split.mp4` |  | draft |
+
+### Week of 2026-12-14
+
+| Date | Day | Film | Platform | Cut | File to upload | Draft | Status |
+|---|---|---|---|---|---|---|---|
+| 2026-12-15 | Tuesday | GAVIGO IRE product film | LinkedIn (personal) | 60 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_60s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#linkedin` | draft |
+| 2026-12-15 | Tuesday | GAVIGO IRE product film | X | 30 s, 16:9 | `_staging/08-gavigo-ire-film/gavigo-ire_30s_16x9.mp4` | `drafts/gavigo-ire-film.yaml#x` | draft |
 
 ## Not yet published and not scheduled here
 
@@ -43,7 +43,7 @@ A post made after those dates is not known here until its register is synced.
 | ArchLang film | published 2026-10-06 | — | published | — | — | — |
 | echook film | published 2026-10-06 | published 2026-10-07 | published | published 2026-11-01 | published 2026-11-01 | — |
 | a11y-loop launch film | published 2026-10-20 | — | published | published 2026-10-20 | **to do** | — |
-| GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-11-26 | planned 2026-11-26 | — |
+| GAVIGO IRE product film | published 2026-10-06 | published 2026-10-07 | published | planned 2026-12-15 | planned 2026-12-15 | — |
 | CORDE Mobile product film | published 2026-10-06 | published 2026-10-07 | published | **to do** | **to do** | — |
 | She Sharp product film | published 2026-10-06 | published 2026-10-07 | published | — | — | — |
 | Tam-AI-Ti product film | published 2026-10-06 | published 2026-10-06 | published | published 2026-11-10 | published 2026-11-10 | — |

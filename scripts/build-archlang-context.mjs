@@ -66,6 +66,14 @@ for (const d of fs.readdirSync(localRoot, { withFileTypes: true })) {
 // archlang workspaces
 const archDir = `${localRoot}/archlang`;
 const archPkg = readJson(`${archDir}/package.json`);
+// The core version's release date, from its CHANGELOG heading "## [x.y.z] - YYYY-MM-DD" (null if absent).
+const archReleased = (() => {
+  if (!archPkg?.version) return null;
+  let log = "";
+  try { log = fs.readFileSync(`${archDir}/CHANGELOG.md`, "utf8"); } catch { return null; }
+  const head = log.split(/\r?\n/).find((l) => l.startsWith(`## [${archPkg.version}] - `));
+  return head ? head.slice(`## [${archPkg.version}] - `.length, `## [${archPkg.version}] - `.length + 10) : null;
+})();
 const workspaces = [];
 if (archPkg) {
   for (const pattern of archPkg.workspaces ?? []) {
@@ -74,7 +82,8 @@ if (archPkg) {
       : [pattern];
     for (const w of dirs) {
       const pj = readJson(`${archDir}/${w}/package.json`);
-      if (pj) workspaces.push({ dir: w, name: pj.name, version: pj.version, published: !pj.private });
+      // An editor extension (a `publisher` and `engines.vscode`) ships to the marketplaces, not npm.
+      if (pj) workspaces.push({ dir: w, name: pj.name, version: pj.version, published: !pj.private, marketplace: Boolean(pj.publisher && pj.engines?.vscode) });
     }
   }
 }
@@ -175,11 +184,11 @@ L.push(`"not cloned": no local checkout; clone it under \`${localRoot}/\` when n
 L.push("");
 L.push("## 4. Inside the archlang monorepo");
 L.push("");
-L.push(`\`${archDir}\`, package \`${archPkg?.name}\` ${archPkg?.version}. Pushing \`main\` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).`);
+L.push(`\`${archDir}\`, package \`${archPkg?.name}\` ${archPkg?.version}${archReleased ? ` (${archReleased})` : ""}. Pushing \`main\` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).`);
 L.push("");
 L.push("| Workspace | Package | Version | On npm |");
 L.push("|---|---|---|---|");
-for (const w of workspaces) L.push(`| \`${w.dir}\` | \`${w.name}\` | ${w.version} | ${w.published ? "yes" : "no (private)"} |`);
+for (const w of workspaces) L.push(`| \`${w.dir}\` | \`${w.name}\` | ${w.version} | ${w.published ? "yes" : w.marketplace ? "no (private; published to the VS Code Marketplace and Open VSX)" : "no (private)"} |`);
 L.push("");
 const skillDirs = exists(`${archDir}/skills`) ? fs.readdirSync(`${archDir}/skills`).filter((n) => exists(`${archDir}/skills/${n}/SKILL.md`)) : [];
 L.push(`Also in the repo, not workspaces: \`skills/\` (${skillDirs.map((n) => `\`${n}\``).join(", ")}), \`plugins/\`, \`integrations/\`, \`dataset/\` (source of the Hugging Face dataset; there is no separate clone), \`examples/\` (small fixtures, not the gallery).`);
@@ -211,7 +220,7 @@ L.push("");
 function RULES(films) {
   const show = films.map((f) => `${f.id ?? f.projectId}: \`${short(f.filmRepo)}\``).join("; ");
   return [
-    "- **Priorities (Chan, 2026-11-18 and 2026-11-20).** ArchLang builds by roadmap v3 (`archlang/docs/plans/product-roadmap/v3.md`, the one build order; started by RM-D65): numbers said right, checker recall, edits, handover; 1.64.0 shipped 2026-11-18. ArchCanvas is ArchLang's test bench plus a niche product for self-builders (growth ruling 2026-11-18); its plan is `archcanvas-lab/specs/2026-11-18-archcanvas-plan-after-demand-synthesis.md`; its stages 1 and 2 shipped by 2026-11-19, its rebuilt public site went live on 2026-11-20, and on 2026-11-22 it dropped AI renderings (the 3D preview is the only picture of the building) and let a stranger's first design start before sign-up (a one-step account, Google or an emailed code, keeps it for one credit; a new account's free one). Chan ruled on 2026-11-20 that ArchCanvas's next stage is judged by the time to a first design and the share of first designs that pass the checks, through the plan-quality and compiler line; no targets or levers are chosen yet (as of 2026-11-22: archcanvas `main` `e657df8b`, core `@chanmeng666/archlang` 1.64.0; 1.66.0 is released upstream and not yet consumed, and that version work runs in a separate session; the public product home `archcanvas/archcanvas` was updated 2026-11-22). ArchCanvas's current state is the newest dated handoff in `archcanvas-lab/specs/` (2026-11-22: `2026-11-22-handoff-minimal-ux-round.md`; index `specs/README.md`); ArchLang's is `archlang/docs/plans/product-roadmap/handoff.md`. ArchCanvas is an AI architectural designer, never an \"AI architect\"; the 3D is the \"3D preview\" (ArchCanvas makes no AI images since 2026-11-22). No copy says a launch is planned.",
+    "- **Priorities (Chan, 2026-11-18 and 2026-11-20).** ArchLang builds by roadmap v3 (`archlang/docs/plans/product-roadmap/v3.md`, the one build order; started by RM-D65): numbers said right, checker recall, edits, handover; 1.64.0 shipped 2026-11-18. ArchCanvas is ArchLang's test bench plus a niche product for self-builders (growth ruling 2026-11-18); its plan is `archcanvas-lab/specs/2026-11-18-archcanvas-plan-after-demand-synthesis.md`; its stages 1 and 2 shipped by 2026-11-19, its rebuilt public site went live on 2026-11-20, and on 2026-11-22 it dropped AI renderings (the 3D preview is the only picture of the building) and let a stranger's first design start before sign-up (a one-step account, Google or an emailed code, keeps it for one credit; a person's first account's free one, since 2026-11-23 given once per person and per browser). Chan ruled on 2026-11-20 that ArchCanvas's next stage is judged by the time to a first design and the share of first designs that pass the checks, through the plan-quality and compiler line; no targets or levers are chosen yet (as of 2026-11-24: archcanvas `main` `a9600223`, core `@chanmeng666/archlang` 1.68.2 and `@chanmeng666/archlang-3d` 0.9.2, consumed the day they shipped; the public product home `archcanvas/archcanvas` was updated 2026-11-22). ArchCanvas's current state is the newest dated handoff in `archcanvas-lab/specs/` (2026-11-24: `2026-11-24-handoff-signup-audit-round.md`; index `specs/README.md`); ArchLang's is `archlang/docs/plans/product-roadmap/handoff.md`. ArchCanvas is an AI architectural designer, never an \"AI architect\"; the 3D is the \"3D preview\" (ArchCanvas makes no AI images since 2026-11-22). No copy says a launch is planned.",
     "- **Origin order.** ArchCanvas came first (first commit 2026-04-08, freehand SVG plans); ArchLang npm 0.1.0 followed on 2026-06-24 and replaced that engine on 2026-06-25. Never write that the language came first.",
     "- **Truth ownership.** Language behaviour lives in `archlang`; product behaviour in `archcanvas`; strategy, decisions and launch copy in `archcanvas-growth`. Growth holds no product truth; never edit a product repo from growth.",
     "- **Links.** Public copy links only `github.com/ChanMeng666/archlang`, `github.com/ChanMeng666/archlang-showcase`, `github.com/archcanvas/archcanvas` and the public film repos. A private repo is named, never linked.",

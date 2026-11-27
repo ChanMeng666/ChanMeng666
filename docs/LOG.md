@@ -560,3 +560,9 @@ distribution/plan.yaml
 
 ## [2026-11-24] change | Review queue 2026-11 (#35): server-google-jobs 26 stars; latest-commit dates for github-readme-suno-cards and gradient-svg-generator; withdrawn google-news listings kept as records without a link
 data/profile/20-projects-flagship.yaml, data/profile/21-projects-oss-primary.yaml
+
+## [2026-11-27] change | serpdata-api-test: its ArchLang/ArchCanvas SERP studies keep reports and data in archcanvas-growth (research/<date>-serp-study/, data/serp-rankings-history.csv); stage maintained
+docs/ecosystem/lineage.yaml, docs/ecosystem/archlang-context.md
+
+## [2026-11-27] fix | archlang-context.md is generated again: the hand edits of 2026-11-23/24 moved into lineage.yaml (two data-for edges, the archcanvas pin) and the generator (priorities, release date from the archlang CHANGELOG, editor-extension note); four film checkouts recorded as not cloned
+docs/ecosystem/lineage.yaml, scripts/build-archlang-context.mjs, docs/ecosystem/archlang-context.md

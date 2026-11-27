@@ -2,7 +2,7 @@
 
 # ArchLang project graph (agent context)
 
-Hand this file to an agent at the start of ArchLang work. Catalog verified 2026-11-17; local checkouts read at build time. Topology only: career facts live in `data/profile/`, decisions in `docs/STATE.md`.
+Hand this file to an agent at the start of ArchLang work. Catalog verified 2026-11-24; local checkouts read at build time. Topology only: career facts live in `data/profile/`, decisions in `docs/STATE.md`.
 
 Read in this order: §1 rules, §2 the graph, §3 where each repo is, §4 what is inside archlang, §5 who consumes it, §6 every edge.
 
@@ -54,6 +54,8 @@ flowchart LR
   ChanMeng666_chanmeng_product_film["chanmeng-product-film 🔒"]
   ChanMeng666_chanmeng_social_ledger -->|data-for| ChanMeng666_archcanvas_growth
   ChanMeng666_archcanvas -->|depends-on| ChanMeng666_archlang
+  ChanMeng666_archlang -->|data-for| ChanMeng666_archcanvas_growth
+  ChanMeng666_archcanvas -->|data-for| ChanMeng666_archlang
   ChanMeng666_archlang -->|powers| ChanMeng666_archcanvas
   archcanvas_archcanvas -->|companion-of| ChanMeng666_archcanvas
   archcanvas__github -->|documents| archcanvas_archcanvas
@@ -66,6 +68,7 @@ flowchart LR
   ChanMeng666_chanmeng_marketing -->|companion-of| ChanMeng666_archcanvas_growth
   ChanMeng666_serpdata_api_test -->|documents| ChanMeng666_archlang
   ChanMeng666_serpdata_api_test -->|documents| ChanMeng666_archcanvas
+  ChanMeng666_serpdata_api_test -->|data-for| ChanMeng666_archcanvas_growth
   ChanMeng666_archcanvas_growth -->|companion-of| films_ChanMeng666_archcanvas
   ChanMeng666_archlang_paper -->|documents| ChanMeng666_archlang
   ChanMeng666_archlang_lab -->|documents| ChanMeng666_archlang
@@ -87,7 +90,7 @@ flowchart LR
 | archcanvas | `D:/github_repository/archcanvas` | `ChanMeng666/archcanvas` (private: never link) | product | building | Closed-source ArchCanvas AI floor-plan app (Next.js); consumes ArchLang via npm Live: https://archcanvas.uk |
 | film-archlang-playground | not cloned | [ChanMeng666/film-archlang-playground](https://github.com/ChanMeng666/film-archlang-playground) | promo-film | done | ArchLang promo film: 68 s Remotion video, coded replica of the playground, plans compiled in-render by the real compiler Live: https://chanmeng.org/ |
 | archcanvas-growth | `D:/github_repository/archcanvas-growth` | `ChanMeng666/archcanvas-growth` (private: never link) | growth | building | Private growth/strategy HQ for ArchCanvas and ArchLang; editorial authority for the promo repos |
-| film-archcanvas-hero-and-shorts | `D:/github_repository/film-archcanvas-hero-and-shorts` | `ChanMeng666/film-archcanvas-hero-and-shorts` (private: never link) | promo-film | done | First ArchCanvas promo: 92 s HyperFrames film plus six shorts (14 masters) |
+| film-archcanvas-hero-and-shorts | not cloned | `ChanMeng666/film-archcanvas-hero-and-shorts` (private: never link) | promo-film | done | First ArchCanvas promo: 92 s HyperFrames film plus six shorts (14 masters) |
 | film-archcanvas-zoom-out | not cloned | [ChanMeng666/film-archcanvas-zoom-out](https://github.com/ChanMeng666/film-archcanvas-zoom-out) | promo-film | done | Second ArchCanvas promo: Remotion Zoom Out in four aspect ratios |
 | film-archcanvas-studio | not cloned | [ChanMeng666/film-archcanvas-studio](https://github.com/ChanMeng666/film-archcanvas-studio) | promo-film | done | Third ArchCanvas promo: Remotion film from a coded replica of the studio UI, 4 cuts x 2 ratios |
 | archlang-paper | `D:/github_repository/archlang-paper` | `ChanMeng666/archlang-paper` (private: never link) | paper | building | ArchLang papers plus reproduction scripts; private until acceptance |
@@ -100,20 +103,20 @@ flowchart LR
 | film-archlang-one-take | not cloned | [ChanMeng666/film-archlang-one-take](https://github.com/ChanMeng666/film-archlang-one-take) | promo-film | done | 32 s one-take film for ArchLang: one three.js file, a Blender-built house and a score from CC0 instrument samples on one beat table; master in release v1.0.0 |
 | film-archlang-in-chatgpt | not cloned | [ChanMeng666/film-archlang-in-chatgpt](https://github.com/ChanMeng666/film-archlang-in-chatgpt) | promo-film | done | 82 s film of ArchLang inside ChatGPT: a coded replica of the real pages in Remotion, real compiler output and an original sampled score; master in release v1.0.0 |
 | film-archlang-explainer-and-shorts | not cloned | [ChanMeng666/film-archlang-explainer-and-shorts](https://github.com/ChanMeng666/film-archlang-explainer-and-shorts) | promo-film | done | 91 s explainer film for ArchLang, with 27 s, 28.5 s and 25 s cutdowns: Python motion compositor and ffmpeg, real compiler and archlang-3d output; masters in release v1.0.0 |
-| film-archlang-drawing-stands-up | `D:/github_repository/film-archlang-drawing-stands-up` | [ChanMeng666/film-archlang-drawing-stands-up](https://github.com/ChanMeng666/film-archlang-drawing-stands-up) | promo-film | done | Blender-rendered ArchLang films and stills: the 32 s hero film The drawing stands up (16:9 and 9:16), a 12 s code-to-form clip and five stills in three aspects; all geometry from the compiler and archlang3d; masters in release v0.4.0 |
-| film-archlang-2d-3d | `D:/github_repository/film-archlang-2d-3d` | [ChanMeng666/film-archlang-2d-3d](https://github.com/ChanMeng666/film-archlang-2d-3d) | promo-film | done | 196 s feature explainer of ArchLang, from one .arch file to a self-checking dimensioned plan and a 3D preview: Remotion, real compiler and archlang-3d, English voice-over, 30 s cuts in 16:9 and 9:16; masters in release v1.0.0 Live: https://chanmeng.org/, https://archlang.uk/ |
+| film-archlang-drawing-stands-up | not cloned | [ChanMeng666/film-archlang-drawing-stands-up](https://github.com/ChanMeng666/film-archlang-drawing-stands-up) | promo-film | done | Blender-rendered ArchLang films and stills: the 32 s hero film The drawing stands up (16:9 and 9:16), a 12 s code-to-form clip and five stills in three aspects; all geometry from the compiler and archlang3d; masters in release v0.4.0 |
+| film-archlang-2d-3d | not cloned | [ChanMeng666/film-archlang-2d-3d](https://github.com/ChanMeng666/film-archlang-2d-3d) | promo-film | done | 196 s feature explainer of ArchLang, from one .arch file to a self-checking dimensioned plan and a 3D preview: Remotion, real compiler and archlang-3d, English voice-over, 30 s cuts in 16:9 and 9:16; masters in release v1.0.0 Live: https://chanmeng.org/, https://archlang.uk/ |
 | chanmeng-social-ledger | `D:/github_repository/chanmeng-social-ledger` | `ChanMeng666/chanmeng-social-ledger` (private: never link) | data-export | maintained | Private source of truth for her social-media data (own posts, comments, replies and DMs across X, LinkedIn, Reddit, GitHub, Hacker News and dev.to), with the capture tools, raw archives and the privacy-gated export of her own posts to the x/ and linkedin/ registers here; home of the x-sync and linkedin-sync skills |
 | 2d-portfolio | `D:/github_repository/2d-portfolio` | `ChanMeng666/2d-portfolio` (private: never link) | product | maintained | Next.js portfolio site serving chanmeng.org (also /cv and /blog) Live: https://chanmeng.org/ |
 | ChanMeng666 | `D:/github_repository/ChanMeng666` | [ChanMeng666/ChanMeng666](https://github.com/ChanMeng666/ChanMeng666) | profile | maintained | GitHub profile README repo, now Chan's generated career database (shards to README, llms.txt, CVs, LinkedIn copy) Live: https://chanmeng.org/ |
 | chanmeng-marketing | `D:/github_repository/chanmeng-marketing` | `ChanMeng666/chanmeng-marketing` (private: never link) | growth | maintained | The one marketing calendar and resource index, with the daily /today run |
-| serpdata-api-test | `D:/github_repository/serpdata-api-test` | `ChanMeng666/serpdata-api-test` (private: never link) | experiment | paused | Test/demo project for the SerpData Google SERP API |
+| serpdata-api-test | `D:/github_repository/serpdata-api-test` | `ChanMeng666/serpdata-api-test` (private: never link) | experiment | maintained | Test/demo project for the SerpData Google SERP API; the SERP probe whose ArchLang/ArchCanvas studies write into archcanvas-growth |
 | chanmeng-product-film | not cloned | `ChanMeng666/chanmeng-product-film` (private: never link) | skill | maintained | Skill for coded-UI-replica product promo films (Remotion, Suno, ElevenLabs); case study is ArchCanvas |
 
 "not cloned": no local checkout; clone it under `D:/github_repository/` when needed. Film masters are release assets of each film repo.
 
 ## 4. Inside the archlang monorepo
 
-`D:/github_repository/archlang`, package `@chanmeng666/archlang` 1.68.2 (2026-11-24). Pushing `main` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).
+`D:/github_repository/archlang`, package `@chanmeng666/archlang` 1.68.2 (2026-11-23). Pushing `main` deploys the docs site (archlang.uk) and the playground (playground.archlang.uk).
 
 | Workspace | Package | Version | On npm |
 |---|---|---|---|
@@ -137,8 +140,6 @@ Change a public API and these break. Ranges as written in each package.json.
 | `D:/github_repository/archcanvas` | ChanMeng666/archcanvas 🔒 | `@chanmeng666/archlang@^1.68.2`, `@chanmeng666/archlang-3d@^0.9.2` |
 | `D:/github_repository/archlang-showcase` | ChanMeng666/archlang-showcase | `@chanmeng666/archlang@^1.55.0` |
 | `D:/github_repository/ChanMeng666` | ChanMeng666/ChanMeng666 | `@chanmeng666/archlang@^1.55.0` |
-| `D:/github_repository/film-archlang-2d-3d` | ChanMeng666/film-archlang-2d-3d | `@chanmeng666/archlang@1.57.0`, `@chanmeng666/archlang-3d@0.4.0` |
-| `D:/github_repository/film-archlang-drawing-stands-up` | ChanMeng666/film-archlang-drawing-stands-up | `@chanmeng666/archlang@1.56.0`, `@chanmeng666/archlang-3d@0.3.0` |
 
 ## 6. Every edge
 
@@ -163,8 +164,9 @@ film-archlang-drawing-stands-up --data-for--> 2d-portfolio   # archlang-drawing-
 film-archlang-narrated-demo --data-for--> 2d-portfolio   # archlang-demo is a row of 46-films.yaml; on chanmeng.org/films since 2026-11-07 (docs/STATE.md)
 ChanMeng666 --depends-on--> archlang   # package.json @chanmeng666/archlang ^1.55.0; scripts/cards/archlang.mjs and archcanvas.mjs compile real plans for the README cards
 chanmeng-marketing --companion-of--> archcanvas-growth   # resources.yaml entry archcanvas-archlang points its strategy, plan, voice, copy, messaging, brand and launches at archcanvas-growth; the dates live in chanmeng-marketing/calendar.yaml
-serpdata-api-test --documents--> archlang   # scripts/analyze-arch-projects.js: SERP and AI Overview study of archlang.uk and archcanvas.uk (reports/arch-projects-analysis.md, 2026-11-03)
-serpdata-api-test --documents--> archcanvas   # same study, archcanvas.uk half
+serpdata-api-test --documents--> archlang   # SERP and AI Overview studies of archlang.uk and archcanvas.uk: scripts/analyze-arch-projects.js (2026-11-03) and scripts/arch-study/ (2026-11-27); reports and data live in archcanvas-growth research/ (2026-11-03-serp-visibility-study.md, 2026-11-27-serp-study/), Chinese reading copies in reports/
+serpdata-api-test --documents--> archcanvas   # same studies, archcanvas.uk half
+serpdata-api-test --data-for--> archcanvas-growth   # scripts/arch-study/ writes each study's raw SerpData responses, tables and the cross-run tracker data/serp-rankings-history.csv into archcanvas-growth (research/<date>-serp-study/), CJK-escaped for that repo's English-only rule; first run 2026-11-27
 film-archcanvas-zoom-out --promotes--> archcanvas   # Zoom Out film of the canvas
 film-archcanvas-studio --promotes--> archcanvas   # npm run sync:replica from ../archcanvas, checksum-locked
 archcanvas-growth --companion-of--> film-archcanvas-studio   # editorial authority for all three promo repos
